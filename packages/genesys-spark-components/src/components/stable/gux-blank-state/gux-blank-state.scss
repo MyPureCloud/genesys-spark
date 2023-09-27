@@ -46,9 +46,9 @@
   align-items: center;
   justify-content: center;
   padding: var(--gse-ui-blankState-padding);
-  border-radius: var(--gse-ui-blankState-borderRadius);
   color: var(--gse-ui-blankState-foregroundColor);
   background-color: var(--gse-ui-blankState-backgroundColor);
+  border-radius: var(--gse-ui-blankState-borderRadius);
 
   .gux-image {
     padding-bottom: var(--gse-ui-blankState-gapMain);
@@ -69,10 +69,11 @@
   }
 
   slot[name='primary-message'] {
-    color: var(--gse-ui-blankState-foregroundColor);
-    text-align: center;
     font-family: var(
       --gse-ui-progressAndLoading-blankState-large-header-fontFamily
+    );
+    font-size: var(
+      --gse-ui-progressAndLoading-blankState-large-header-fontSize
     );
     font-weight: var(
       --gse-ui-progressAndLoading-blankState-large-header-fontWeight
@@ -80,16 +81,16 @@
     line-height: var(
       --gse-ui-progressAndLoading-blankState-large-header-lineHeight
     );
-    font-size: var(
-      --gse-ui-progressAndLoading-blankState-large-header-fontSize
-    );
+    color: var(--gse-ui-blankState-foregroundColor);
+    text-align: center;
   }
 
   slot[name='additional-guidance'] {
-    color: var(--gse-ui-blankState-foregroundColor);
-    text-align: center;
     font-family: var(
       --gse-ui-progressAndLoading-blankState-large-subheader-fontFamily
+    );
+    font-size: var(
+      --gse-ui-progressAndLoading-blankState-large-subheader-fontSize
     );
     font-weight: var(
       --gse-ui-progressAndLoading-blankState-large-subheader-fontWeight
@@ -97,9 +98,8 @@
     line-height: var(
       --gse-ui-progressAndLoading-blankState-large-subheader-lineHeight
     );
-    font-size: var(
-      --gse-ui-progressAndLoading-blankState-large-subheader-fontSize
-    );
+    color: var(--gse-ui-blankState-foregroundColor);
+    text-align: center;
   }
 }
 
@@ -115,14 +115,14 @@
       font-family: var(
         --gse-ui-progressAndLoading-blankState-small-header-fontFamily
       );
+      font-size: var(
+        --gse-ui-progressAndLoading-blankState-small-header-fontSize
+      );
       font-weight: var(
         --gse-ui-progressAndLoading-blankState-small-header-fontWeight
       );
       line-height: var(
         --gse-ui-progressAndLoading-blankState-small-header-lineHeight
-      );
-      font-size: var(
-        --gse-ui-progressAndLoading-blankState-small-header-fontSize
       );
     }
 
@@ -130,14 +130,14 @@
       font-family: var(
         --gse-ui-progressAndLoading-blankState-small-subheader-fontFamily
       );
+      font-size: var(
+        --gse-ui-progressAndLoading-blankState-small-subheader-fontSize
+      );
       font-weight: var(
         --gse-ui-progressAndLoading-blankState-small-subheader-fontWeight
       );
       line-height: var(
         --gse-ui-progressAndLoading-blankState-small-subheader-lineHeight
-      );
-      font-size: var(
-        --gse-ui-progressAndLoading-blankState-small-subheader-fontSize
       );
     }
   }

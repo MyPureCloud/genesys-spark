@@ -9,26 +9,21 @@
 
 ::slotted(input) {
   box-sizing: border-box;
+  flex-basis: 100%;
+  flex-shrink: 1;
   width: 100%;
   font-family: var(--gse-ui-search-counter-text-fontFamily);
   font-size: var(--gse-ui-search-counter-text-fontSize);
   font-weight: var(--gse-ui-search-counter-text-fontWeight);
   line-height: var(--gse-ui-search-counter-text-lineHeight);
   background-image: none;
+  border: 0;
+  border-radius: 0;
+  outline: none;
 
   &::placeholder {
     color: var(--gse-ui-formControl-input-placeholderColor);
   }
-
-  flex-basis: 100%;
-  flex-shrink: 1;
-  min-width: 0;
-  padding: 0;
-  color: var(--gse-ui-formControl-input-populatedColor);
-  background-color: var(--gse-ui-formControl-input-backgroundColor);
-  border: 0;
-  border-radius: 0;
-  outline: none;
 
   &.gux-focused,
   &:focus,
@@ -43,8 +38,8 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  width: 100%;
   gap: var(--gse-ui-formControl-input-gap);
+  width: 100%;
   height: var(--gse-ui-formControl-input-textfield-height);
   padding: var(--gse-ui-formControl-textarea-padding);
   background-color: var(--gse-ui-formControl-input-backgroundColor);
@@ -62,13 +57,13 @@
 
   &:focus-visible,
   &:focus-within {
-    outline: var(--gse-ui-formControl-input-focus-border-width)
-      var(--gse-ui-formControl-input-focus-border-style)
-      var(--gse-ui-formControl-input-focus-border-color);
     border: var(--gse-ui-formControl-input-active-border-width)
       var(--gse-ui-formControl-input-active-border-style)
       var(--gse-ui-formControl-input-active-border-color);
     border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+    outline: var(--gse-ui-formControl-input-focus-border-width)
+      var(--gse-ui-formControl-input-focus-border-style)
+      var(--gse-ui-formControl-input-focus-border-color);
   }
 
   &:not(:disabled):hover {
@@ -100,10 +95,10 @@
     display: flex;
     flex-grow: 1;
     flex-shrink: 0;
+    gap: var(--gse-ui-formControl-input-gap);
     align-content: center;
     align-items: center;
     justify-content: flex-end;
-    gap: var(--gse-ui-formControl-input-gap);
     padding: 0;
 
     gux-icon {
@@ -163,9 +158,9 @@
       .gux-navigation-divider {
         width: 1px; // TODO COMUI-2310 - missing token for divider width.
         height: 16px; // TODO COMUI-2310 - missing token for divider height
+        background-color: #c6c8ce; // TODO COMUI-2310 - missing token for divider background color.
         border: 1px var(--gse-ui-search-counter-divider-border-style)
           var(--gse-ui-search-counter-divider-border-color);
-        background-color: #c6c8ce; // TODO COMUI-2310 - missing token for divider background color.
       }
 
       .gux-navigation-buttons {

@@ -6,38 +6,38 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: var(--gse-ui-dataTableItems-tablePagination-padding);
-  border-top: var(--gse-ui-dataTableItems-tablePagination-divider-width)
-    var(--gse-ui-dataTableItems-tablePagination-divider-style)
-    var(--gse-ui-dataTableItems-tablePagination-divider-color);
-  background-color: var(
-    --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor
-  );
-  color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
   font-family: var(
     --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
-  );
-  line-height: var(
-    --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
   );
   font-size: var(--gse-ui-dataTableItems-tablePagination-defaultText-fontSize);
   font-weight: var(
     --gse-ui-dataTableItems-tablePagination-defaultText-fontWeight
   );
+  line-height: var(
+    --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
+  );
+  color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
+  background-color: var(
+    --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor
+  );
+  border-top: var(--gse-ui-dataTableItems-tablePagination-divider-width)
+    var(--gse-ui-dataTableItems-tablePagination-divider-style)
+    var(--gse-ui-dataTableItems-tablePagination-divider-color);
 
   .gux-pagination-button-container {
     display: flex;
     flex-wrap: nowrap;
-    align-content: center;
     gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+    align-content: center;
   }
 
   .gux-button-align-content {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: var(--gse-ui-button-gap);
     align-content: center;
     align-items: center;
-    gap: var(--gse-ui-button-gap);
 
     > * {
       flex: 0 1 auto;

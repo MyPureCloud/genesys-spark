@@ -1,9 +1,9 @@
-@import '../../../style/focus.scss';
-@import '../../../style/zindex.scss';
+@use '../../../style/focus.scss';
+@use '../../../style/zindex.scss';
 
 // Style
 :host {
-  z-index: var(--gux-zindex-popover);
+  z-index: var(--gux-zindex-popover, zindex.$gux-zindex-popover);
   color: var(--gse-ui-menu-option-label-foregroundColor);
   cursor: default;
 }
@@ -13,7 +13,7 @@
 }
 
 :host(:focus-visible) {
-  @include gux-focus-ring;
+  @include focus.gux-focus-ring;
 }
 
 .gux-flyout-menu-content {

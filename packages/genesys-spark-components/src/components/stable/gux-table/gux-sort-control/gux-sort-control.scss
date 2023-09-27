@@ -29,8 +29,8 @@
       float: right;
       width: var(--gse-ui-icon-size-sm);
       height: var(--gse-ui-icon-size-sm);
-      color: var(--gse-ui-dataTableItems-header-sort-foregroundColor);
       margin: 0 var(--gse-ui-dataTableItems-header-gap);
+      color: var(--gse-ui-dataTableItems-header-sort-foregroundColor);
 
       &.gux-left {
         float: left;

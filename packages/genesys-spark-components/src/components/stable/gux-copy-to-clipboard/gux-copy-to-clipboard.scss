@@ -43,13 +43,13 @@ button {
 
     ::slotted(*) {
       padding: var(--gse-ui-copyToClipboard-label-padding);
-      border-radius: var(--gse-ui-copyToClipboard-label-borderRadius);
       font-family: var(--gse-ui-copyToClipboard-label-text-fontFamily);
+      font-size: var(--gse-ui-copyToClipboard-label-text-fontSize);
       font-weight: var(--gse-ui-copyToClipboard-label-text-fontWeight);
       line-height: var(--gse-ui-copyToClipboard-label-text-lineHeight);
-      font-size: var(--gse-ui-copyToClipboard-label-text-fontSize);
-      text-decoration: var(--gse-ui-copyToClipboard-label-text-textDecoration);
       color: var(--gse-ui-copyToClipboard-label-foregroundColor);
+      text-decoration: var(--gse-ui-copyToClipboard-label-text-textDecoration);
+      border-radius: var(--gse-ui-copyToClipboard-label-borderRadius);
     }
 
     &:hover {
@@ -71,6 +71,7 @@ button {
 
   &:focus-visible {
     outline: none;
+
     @include focus-and-hover-copy-content;
   }
 

@@ -8,20 +8,20 @@ gux-button-slot {
   }
 
   .gux-icon-container {
-    width: 8px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
     align-content: stretch;
     align-items: center;
+    justify-content: center;
+    width: 8px;
 
     gux-icon {
-      width: 16px;
-      height: 16px;
-      order: 0;
       flex: 0 0 auto;
       align-self: auto;
+      order: 0;
+      width: 16px;
+      height: 16px;
       color: var(--gse-ui-toast-closeButtonColor); // TODO: COMUI-2205
     }
   }

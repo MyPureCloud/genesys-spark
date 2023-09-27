@@ -9,7 +9,12 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.scss'],
-      customSyntax: 'postcss-scss'
+      customSyntax: 'postcss-scss',
+      plugins: ['stylelint-scss'],
+      rules: {
+        'at-rule-no-unknown': null,
+        'scss/at-rule-no-unknown': true
+      }
     },
     {
       files: ['**/*.less'],
@@ -44,6 +49,7 @@ module.exports = {
       {
         ignoreShorthands: ['flex-flow', 'grid-column', 'grid-row', 'grid-area']
       }
-    ]
+    ],
+    'custom-property-pattern': '^([a-z][a-z0-9]*)(-[a-zA-Z0-9]+)*$'
   }
 };

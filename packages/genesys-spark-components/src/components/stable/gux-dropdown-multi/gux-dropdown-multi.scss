@@ -1,9 +1,9 @@
-@import '../../../style/focus.scss';
-@import '../../../style/_mixins.scss';
+@use '../../../style/focus.scss';
+@use '../../../style/mixins.scss';
 
 :host {
-  color: var(--gse-ui-formControl-input-populatedColor);
   box-sizing: border-box;
+  color: var(--gse-ui-formControl-input-populatedColor);
 }
 
 .gux-dropdown-container {
@@ -42,8 +42,8 @@
   height: var(--gse-ui-formControl-input-textfield-height);
   font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
-  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
+  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   cursor: pointer;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
 }
@@ -91,7 +91,7 @@
       white-space: nowrap;
 
       .gux-sr-only {
-        @include gux-sr-only-clip;
+        @include mixins.gux-sr-only-clip;
       }
     }
 
@@ -115,7 +115,7 @@
         }
 
         .gux-filter-suggestion {
-          opacity: 50%; // missing token ticket: COMUI-2285
+          opacity: 0.5; // missing token ticket: COMUI-2285
         }
       }
 
@@ -149,7 +149,7 @@
 
   &:focus-visible,
   &:focus-within {
-    @include gux-focus-ring;
+    @include focus.gux-focus-ring;
   }
 
   .gux-filter-input {
@@ -188,7 +188,7 @@
 
   &:focus-visible,
   &:focus-within {
-    @include gux-focus-ring;
+    @include focus.gux-focus-ring;
   }
 }
 

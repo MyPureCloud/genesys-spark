@@ -1,20 +1,20 @@
-@use '../../../../style/_mixins.scss';
+@use '../../../../style/mixins.scss';
 
 :host {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  gap: var(--gse-ui-menu-option-gap);
   align-content: stretch;
   align-items: center;
   min-height: var(--gse-ui-menu-option-height);
   padding: var(--gse-ui-menu-option-padding);
   font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
+  font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
   font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
   line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
-  font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
   color: var(--gse-ui-menu-option-label-foregroundColor);
-  gap: var(--gse-ui-menu-option-gap);
   word-wrap: break-word;
   cursor: pointer;
 
@@ -40,9 +40,9 @@
 
   &:host(.gux-selected) {
     font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
+    font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
     font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
     line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
-    font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
     background-color: var(--gse-ui-menu-option-selected-backgroundColor);
 
     .gux-checkbox-container > path {
@@ -51,10 +51,10 @@
   }
 
   &:host(.gux-active) {
+    border-radius: var(--gse-semantic-focusRing-cornerRadius);
     outline: var(--gse-ui-menu-option-focus-border-width)
       var(--gse-ui-menu-option-focus-border-style)
       var(--gse-ui-menu-option-focus-border-color);
-    border-radius: var(--gse-semantic-focusRing-cornerRadius);
   }
 
   &:host(.gux-hovered:not([disabled])) {

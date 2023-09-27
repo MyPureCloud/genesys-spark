@@ -14,11 +14,11 @@
 * @prop --gse-ui-checkbox-focus-borderRadius
 */
 
-@import '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
-@import '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+@use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
+@use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
 
-@include GuxFormFieldErrorStyle;
-@include GuxFormFieldHelpStyle;
+@include gux-form-field-error.GuxFormFieldErrorStyle;
+@include gux-form-field-help.GuxFormFieldHelpStyle;
 
 $gux-icon-checkbox-unchecked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' %3E%3Cpath d='M13.7143 0C14.975 0 16 1.02321 16 2.28571V13.7143C16 14.975 14.975 16 13.7143 16H2.28571C1.02321 16 0 14.975 0 13.7143V2.28571C0 1.02321 1.02321 0 2.28571 0H13.7143ZM13.7143 1.71429H2.28571C1.97 1.71429 1.71429 1.97 1.71429 2.28571V13.7143C1.71429 14.0286 1.97 14.2857 2.28571 14.2857H13.7143C14.0286 14.2857 14.2857 14.0286 14.2857 13.7143V2.28571C14.2857 1.97 14.0286 1.71429 13.7143 1.71429Z' /%3E%3C/svg%3E";
 $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' %3E%3Cpath d='M2.28571 0C1.025 0 0 1.025 0 2.28571V13.7143C0 14.975 1.025 16 2.28571 16H13.7143C14.975 16 16 14.975 16 13.7143V2.28571C16 1.025 14.975 0 13.7143 0H2.28571ZM12.0357 6.32143L7.46429 10.8929C7.12857 11.2286 6.58571 11.2286 6.25357 10.8929L3.96786 8.60714C3.63214 8.27143 3.63214 7.72857 3.96786 7.39643C4.30357 7.06429 4.84643 7.06071 5.17857 7.39643L6.85714 9.075L10.8214 5.10714C11.1571 4.77143 11.7 4.77143 12.0321 5.10714C12.3643 5.44286 12.3679 5.98571 12.0321 6.31786L12.0357 6.32143Z' /%3E%3C/svg%3E";

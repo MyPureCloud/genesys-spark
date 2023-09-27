@@ -11,8 +11,8 @@ const basePath = path.resolve(
 );
 
 const flagDir = `${basePath}/region-flags`;
-const constantPath = `${basePath}/generate-sprites.ts`;
-const styleSheetPath = `${basePath}/generate-sprites.scss`;
+const constantPath = `${basePath}/sprites.generated.ts`;
+const styleSheetPath = `${basePath}/sprites.generated.scss`;
 
 const src = fs.readdirSync(flagDir).map(file => `${flagDir}/${file}`);
 

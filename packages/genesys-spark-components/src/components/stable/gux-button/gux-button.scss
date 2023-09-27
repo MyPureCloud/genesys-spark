@@ -1,4 +1,4 @@
-@import '../../../style/focus.scss';
+@use '../../../style/focus.scss';
 
 // COMUI-2156 add missing button tokens
 $temp-slotted-padding-left: 8px;
@@ -6,8 +6,8 @@ $temp-slotted-first-child-padding: 0;
 
 @mixin button-text {
   font-family: var(--gse-ui-button-text-fontFamily);
-  font-weight: var(--gse-ui-button-text-fontWeight);
   font-size: var(--gse-ui-button-text-fontSize);
+  font-weight: var(--gse-ui-button-text-fontWeight);
   line-height: var(--gse-ui-button-text-lineHeight);
 }
 
@@ -44,23 +44,24 @@ $temp-slotted-first-child-padding: 0;
 
 button {
   @include button-text;
-  color: var(--gse-ui-button-secondary-default-foregroundColor);
-  background-color: var(--gse-ui-button-secondary-default-backgroundColor);
+
   width: 100%;
   min-width: var(--gse-ui-button-icon-only-width);
   height: var(--gse-ui-button-height);
   padding: var(--gse-ui-button-padding);
   overflow: hidden;
+  color: var(--gse-ui-button-secondary-default-foregroundColor);
   text-overflow: ellipsis;
   white-space: nowrap;
   pointer-events: auto;
   cursor: pointer;
+  background-color: var(--gse-ui-button-secondary-default-backgroundColor);
   border: none;
   border-radius: var(--gse-ui-button-borderRadius);
 
   &[disabled] {
-    opacity: var(--gse-ui-button-disabled-opacity);
     cursor: default;
+    opacity: var(--gse-ui-button-disabled-opacity);
   }
 
   &:hover:enabled {
@@ -74,7 +75,7 @@ button {
   }
 
   &:focus-visible:enabled {
-    @include gux-focus-ring;
+    @include focus.gux-focus-ring;
   }
 
   &.gux-primary {
@@ -95,9 +96,9 @@ button {
   &.gux-tertiary {
     color: var(--gse-ui-button-tertiary-default-foregroundColor);
     background-color: var(--gse-ui-button-tertiary-default-backgroundColor);
-    border-width: var(--gse-ui-button-tertiary-default-border-width);
-    border-style: var(--gse-ui-button-tertiary-default-border-style);
     border-color: var(--gse-ui-button-tertiary-default-border-color);
+    border-style: var(--gse-ui-button-tertiary-default-border-style);
+    border-width: var(--gse-ui-button-tertiary-default-border-width);
 
     &:hover:enabled {
       color: var(--gse-ui-button-tertiary-hover-foregroundColor);
@@ -153,14 +154,14 @@ button {
     }
 
     &:hover:enabled {
-      text-decoration: underline;
       color: var(--gse-ui-link-hover-color);
+      text-decoration: underline;
       background: none;
     }
 
     &:active:enabled {
-      text-decoration: underline;
       color: var(--gse-ui-link-active-color);
+      text-decoration: underline;
       background: none;
     }
   }

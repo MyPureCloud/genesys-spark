@@ -1,6 +1,6 @@
-@import '../option-defaults';
+@use '../option-defaults';
 
-@include gux-option-default;
+@include option-defaults.gux-option-default;
 
 :host {
   gux-icon {

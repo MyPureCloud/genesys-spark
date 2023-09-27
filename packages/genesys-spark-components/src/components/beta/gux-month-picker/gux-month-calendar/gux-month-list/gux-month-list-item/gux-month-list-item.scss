@@ -11,8 +11,8 @@
 }
 
 .gux-container {
-  padding-left: var(--gse-ui-calendarMenu-monthBody-gap);
   padding-right: var(--gse-ui-calendarMenu-monthBody-gap);
+  padding-left: var(--gse-ui-calendarMenu-monthBody-gap);
 
   button {
     all: unset;
@@ -32,11 +32,11 @@
     }
 
     &:focus-visible:not(:disabled) {
+      border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
       outline: var(--gse-ui-monthPicker-calendarStates-focus-border-width)
         var(--gse-ui-monthPicker-calendarStates-focus-border-style)
         var(--gse-ui-monthPicker-calendarStates-focus-border-color);
       outline-offset: var(--gse-semantic-focusRing-offset);
-      border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
     }
 
     &:hover:not(:disabled) {
@@ -44,8 +44,8 @@
     }
 
     &:disabled {
-      opacity: var(--gse-ui-calendarMenu-disabled-opacity);
       cursor: default;
+      opacity: var(--gse-ui-calendarMenu-disabled-opacity);
     }
   }
 }

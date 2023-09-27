@@ -1,26 +1,31 @@
-@import './typography.scss';
-@import './focus.scss';
+@use './typography.scss';
 
 body {
-  @include body-font;
+  @include typography.body-font;
 }
 
 /* Headings */
 
 h1 {
-  @include h1;
+  @include typography.h1;
 }
 
 h2 {
-  @include h2;
+  @include typography.h2;
 }
 
 h3 {
-  @include h3;
+  @include typography.h3;
 }
 
 h4,
 h5,
 h6 {
-  @include h4-6;
+  @include typography.h4-6;
+}
+
+.gux-icon-anchor {
+  gux-icon {
+    padding-right: var(--gse-ui-links-inLine-padding);
+  }
 }

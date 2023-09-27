@@ -1,39 +1,37 @@
-@import '../../../../../style/focus.scss';
-
-@import '../../../../../style/typography.scss';
-@import '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
-@import '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
-@import '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
-@import '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+@use '../../../../../style/typography.scss';
+@use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
+@use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
+@use '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
+@use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
 
 @mixin gux-textarea-sizing-properties {
   padding: var(--gse-ui-formControl-textarea-padding);
   margin: 0;
 }
 
-@include GuxFormFieldContainerStyle;
-@include GuxFormFieldErrorStyle;
-@include GuxFormFieldLabelStyle;
-@include GuxFormFieldHelpStyle;
+@include gux-form-field-container.GuxFormFieldContainerStyle;
+@include gux-form-field-error.GuxFormFieldErrorStyle;
+@include gux-form-field-label.GuxFormFieldLabelStyle;
+@include gux-form-field-help.GuxFormFieldHelpStyle;
 
 :host {
   display: block;
 }
 
 ::slotted(label) {
-  @include gse-ui-formControl-label;
+  @include typography.gse-ui-formControl-label;
 }
 
 ::slotted(textarea) {
   flex: 1 1 auto;
   align-self: auto;
   order: 0;
-  color: var(--gse-ui-formControl-input-populatedColor);
   font-family: inherit;
   font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
-  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
+  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
+  color: var(--gse-ui-formControl-input-populatedColor);
   resize: vertical;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   background-image: none;
@@ -66,13 +64,13 @@
     outline: none;
 
     &:focus-within {
-      outline: var(--gse-ui-formControl-input-focus-border-width)
-        var(--gse-ui-formControl-input-focus-border-style)
-        var(--gse-ui-formControl-input-focus-border-color);
       border: var(--gse-ui-formControl-input-active-border-width)
         var(--gse-ui-formControl-input-active-border-style)
         var(--gse-ui-formControl-input-active-border-color);
       border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+      outline: var(--gse-ui-formControl-input-focus-border-width)
+        var(--gse-ui-formControl-input-focus-border-style)
+        var(--gse-ui-formControl-input-focus-border-color);
     }
 
     &:hover:not(.gux-disabled) {
@@ -122,6 +120,7 @@
 
         /* Note the weird space! Needed to preventy jumpy behavior */
         content: attr(data-replicated-value) ' ';
+
         @include gux-textarea-sizing-properties;
       }
 

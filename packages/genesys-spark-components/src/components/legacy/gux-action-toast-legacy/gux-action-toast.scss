@@ -1,5 +1,4 @@
-@import '../../../style/typography.scss';
-@import '../../../style/_mixins.scss';
+@use '../../../style/typography.scss';
 
 :host {
   display: flex;
@@ -31,7 +30,7 @@
   justify-content: flex-start;
   order: 0;
 
-  @include h2;
+  @include typography.h2;
 
   .gux-icon {
     flex: 0 1 auto;
@@ -58,7 +57,8 @@
   align-self: auto;
   order: 0;
   margin: 16px 0;
-  @include body-font;
+
+  @include typography.body-font;
 
   ::slotted(dl) {
     display: flex;

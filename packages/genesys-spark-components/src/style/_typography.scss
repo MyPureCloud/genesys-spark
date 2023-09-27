@@ -1,4 +1,4 @@
-@import './focus.scss';
+@use './focus.scss';
 
 /*
  * Typography styles and mixins.
@@ -25,6 +25,7 @@
 
 @mixin body-font {
   @include base-font;
+
   font-size: var(--gse-core-fontSize-xs);
   line-height: var(--gse-core-lineHeight-xs);
 }
@@ -39,31 +40,32 @@
 @mixin h1 {
   font-family: var(--gse-core-fontFamily-heading),
     var(--gse-core-fontFamily-body), sans-serif;
-  font-weight: var(--gse-core-fontWeight-bold);
   font-size: var(--gse-core-fontSize-xl);
+  font-weight: var(--gse-core-fontWeight-bold);
   line-height: var(--gse-core-lineHeight-xl);
 }
 
 @mixin h2 {
   font-family: var(--gse-core-fontFamily-heading),
     var(--gse-core-fontFamily-body), sans-serif;
-  font-weight: var(--gse-core-fontWeight-semiBold);
   font-size: var(--gse-core-fontSize-lg);
+  font-weight: var(--gse-core-fontWeight-semiBold);
   line-height: var(--gse-lineHeight-md);
 }
+
 @mixin h3 {
   font-family: var(--gse-core-fontFamily-heading),
     var(--gse-core-fontFamily-body), sans-serif;
-  font-weight: var(--gse-core-fontWeight-semiBold);
   font-size: var(--gse-core-fontSize-md);
+  font-weight: var(--gse-core-fontWeight-semiBold);
   line-height: var(--gse-core-lineHeight-md);
 }
 
 @mixin h4-6 {
   font-family: var(--gse-core-fontFamily-heading),
     var(--gse-core-fontFamily-body), sans-serif;
-  font-weight: var(--gse-core-fontWeight-semiBold);
   font-size: var(--gse-core-fontSize-sm);
+  font-weight: var(--gse-core-fontWeight-semiBold);
   line-height: var(--gse-core-lineHeight-sm);
 }
 
@@ -86,7 +88,7 @@
   }
 
   &:focus-visible {
-    @include gux-focus-ring;
+    @include focus.gux-focus-ring;
   }
 }
 
@@ -94,12 +96,6 @@
   @include gux-anchor;
 
   text-decoration: none;
-}
-
-.gux-icon-anchor {
-  gux-icon {
-    padding-right: var(--gse-ui-links-inLine-padding);
-  }
 }
 
 /* Custom Styles */
@@ -120,8 +116,8 @@
 
 @mixin gse-ui-formControl-label {
   font-family: var(--gse-ui-formControl-label-text-fontFamily);
-  line-height: var(--gse-ui-formControl-label-text-lineHeight);
   font-size: var(--gse-ui-formControl-label-text-fontSize);
-  color: var(--gse-ui-formControl-label-labelColor);
   font-weight: var(--gse-ui-formControl-label-text-fontWeight);
+  line-height: var(--gse-ui-formControl-label-text-lineHeight);
+  color: var(--gse-ui-formControl-label-labelColor);
 }

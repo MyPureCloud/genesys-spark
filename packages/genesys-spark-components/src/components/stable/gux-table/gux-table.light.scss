@@ -9,13 +9,13 @@ gux-table {
     border-spacing: 0;
 
     td {
+      height: var(--gse-ui-dataTableItems-cell-default-height);
+      padding: var(--gse-ui-dataTableItems-cell-padding);
       font-family: var(--gse-ui-dataTableItems-cell-text-fontFamily);
       font-size: var(--gse-ui-dataTableItems-cell-text-fontSize);
       font-weight: var(--gse-ui-dataTableItems-cell-text-fontWeight);
       line-height: var(--gse-ui-dataTableItems-cell-text-lineHeight);
-      height: var(--gse-ui-dataTableItems-cell-default-height);
       color: var(--gse-ui-dataTableItems-cell-foregroundColor);
-      padding: var(--gse-ui-dataTableItems-cell-padding);
       text-align: left;
 
       &:hover {
@@ -30,14 +30,14 @@ gux-table {
     }
 
     th {
-      background: var(--gse-ui-dataTableItems-header-defaultBackgroundColor);
+      height: var(--gse-ui-dataTableItems-header-default-height);
+      padding: var(--gse-ui-dataTableItems-header-padding);
       font-family: var(--gse-ui-dataTableItems-header-text-fontFamily);
       font-size: var(--gse-ui-dataTableItems-header-text-fontSize);
       font-weight: var(--gse-ui-dataTableItems-header-text-fontWeight);
       line-height: var(--gse-ui-dataTableItems-header-text-lineHeight);
       color: var(--gse-ui-dataTableItems-header-foregroundColor);
-      height: var(--gse-ui-dataTableItems-header-default-height);
-      padding: var(--gse-ui-dataTableItems-header-padding);
+      background: var(--gse-ui-dataTableItems-header-defaultBackgroundColor);
 
       &:has(gux-all-row-select) {
         width: var(--gse-ui-dataTableItems-header-multiselect-default-width);

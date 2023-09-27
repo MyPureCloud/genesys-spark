@@ -1,15 +1,13 @@
-@import '../../../../style/focus.scss';
-
 gux-table-select-menu {
   display: inline-flex;
   font-family: var(--gse-ui-popover-body-text-fontFamily);
+  font-size: var(--gse-ui-popover-body-text-fontSize);
   font-weight: var(--gse-ui-popover-body-text-fontWeight);
   line-height: var(--gse-ui-popover-body-text-lineHeight);
-  font-size: var(--gse-ui-popover-body-text-fontSize);
 
   .gux-select-menu-button {
-    margin-left: var(--gse-ui-dataTableItems-header-gap);
     padding: 0;
+    margin-left: var(--gse-ui-dataTableItems-header-gap);
     color: var(--gse-ui-dataTableItems-cell-chevron-foregroundColor);
     background-color: inherit;
     border: none;
@@ -17,10 +15,10 @@ gux-table-select-menu {
 
     &:focus-visible {
       gux-icon {
+        border-radius: var(--gse-semantic-focusRing-cornerRadius);
         outline: var(--gse-semantic-focusRing-width) solid
           var(--gse-semantic-color-focus);
         outline-offset: var(--gse-semantic-focusRing-offset);
-        border-radius: var(--gse-semantic-focusRing-cornerRadius);
       }
     }
 

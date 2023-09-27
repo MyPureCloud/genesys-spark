@@ -30,39 +30,36 @@ button {
 
 .gux-container {
   height: var(--gse-ui-segmentedControl-height);
+  border-color: #a3a7b0; //TODO https://inindca.atlassian.net/browse/COMUI-2294
+  border-style: var(
+    --gse-ui-segmentedControl-border-style
+  ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
 
   border-width: var(
     --gse-ui-segmentedControl-border-width
   ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
-  border-style: var(
-    --gse-ui-segmentedControl-border-style
-  ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
-  border-color: #a3a7b0; //TODO https://inindca.atlassian.net/browse/COMUI-2294
 
-  border-radius: var(--gse-ui-segmentedControl-button-middle-borderRadius);
+  border-right: none;
   border-left-color: var(
     --gse-ui-segmentedControl-button-active-backgroundColor
   ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
-  border-right: none;
+
+  border-radius: var(--gse-ui-segmentedControl-button-middle-borderRadius);
 
   &.gux-start {
+    border-left-color: #a3a7b0; //TODO https://inindca.atlassian.net/browse/COMUI-2294
     border-radius: var(
       --gse-ui-segmentedControl-button-start-borderRadius
     ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
-    border-left-color: #a3a7b0; //TODO https://inindca.atlassian.net/browse/COMUI-2294
   }
 
   &.gux-end {
+    border-right: var(--gse-ui-segmentedControl-border-width)
+      var(--gse-ui-segmentedControl-border-style) #a3a7b0; //TODO https://inindca.atlassian.net/browse/COMUI-2294 //TODO https://inindca.atlassian.net/browse/COMUI-2294 //TODO https://inindca.atlassian.net/browse/COMUI-2294
+
     border-radius: var(
       --gse-ui-segmentedControl-button-end-borderRadius
     ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
-    border-right-width: var(
-      --gse-ui-segmentedControl-border-width
-    ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
-    border-right-style: var(
-      --gse-ui-segmentedControl-border-style
-    ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
-    border-right-color: #a3a7b0; //TODO https://inindca.atlassian.net/browse/COMUI-2294
   }
 
   &.gux-start.gux-end {
@@ -70,19 +67,19 @@ button {
   }
 
   .gux-segmented-control-item {
-    padding: var(--gse-ui-segmentedControl-button-padding);
-    height: 100%;
-    background-color: var(
-      --gse-ui-segmentedControl-button-default-backgroundColor
-    );
-    color: var(--gse-ui-segmentedControl-button-default-foregroundColor);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    gap: var(--gse-ui-segmentedControl-button-gap);
     align-content: stretch;
     align-items: center;
-    gap: var(--gse-ui-segmentedControl-button-gap);
+    justify-content: flex-start;
+    height: 100%;
+    padding: var(--gse-ui-segmentedControl-button-padding);
+    color: var(--gse-ui-segmentedControl-button-default-foregroundColor);
+    background-color: var(
+      --gse-ui-segmentedControl-button-default-backgroundColor
+    );
 
     &.gux-icon-only {
       padding: 0 8px; //TODO https://inindca.atlassian.net/browse/COMUI-2294 --gse-ui-segmentedControl-iconOnly-width
@@ -95,27 +92,26 @@ button {
     }
 
     &:hover {
+      color: var(--gse-ui-segmentedControl-button-hover-foregroundColor);
       background-color: var(
         --gse-ui-segmentedControl-button-hover-backgroundColor
       );
-      color: var(--gse-ui-segmentedControl-button-hover-foregroundColor);
     }
 
     &[disabled] {
+      color: var(--gse-ui-segmentedControl-button-disabled-foregroundColor);
       pointer-events: none;
-      opacity: var(--gse-ui-segmentedControl-button-disabled-opacity);
-
       background-color: var(
         --gse-ui-segmentedControl-button-disabled-backgroundColor
       );
-      color: var(--gse-ui-segmentedControl-button-disabled-foregroundColor);
+      opacity: var(--gse-ui-segmentedControl-button-disabled-opacity);
     }
 
     &.gux-selected {
+      color: var(--gse-ui-segmentedControl-button-active-foregroundColor);
       background-color: var(
         --gse-ui-segmentedControl-button-active-backgroundColor
       );
-      color: var(--gse-ui-segmentedControl-button-active-foregroundColor);
       border-color: var(
         --gse-ui-segmentedControl-button-active-backgroundColor
       ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
@@ -125,8 +121,10 @@ button {
       position: relative;
       z-index: 1;
       border-radius: var(--gse-ui-segmentedControl-borderRadius);
+
       @include focus.gux-focus-ring;
-      outline-offset: 0px; //TODO https://inindca.atlassian.net/browse/COMUI-2294
+
+      outline-offset: 0; //TODO https://inindca.atlassian.net/browse/COMUI-2294
     }
 
     .gux-icon {

@@ -2,20 +2,20 @@ gux-pagination-item-counts-legacy {
   .gux-pagination-item-counts-container {
     display: flex;
     flex-direction: row;
-    white-space: nowrap;
     gap: var(--gse-ui-dataTableItems-tablePagination-countDisplay-gap);
     font-family: var(
       --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
     );
-    color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
     font-size: var(
       --gse-ui-dataTableItems-tablePagination-defaultText-fontSize
-    );
-    line-height: var(
-      --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
     );
     font-weight: var(
       --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
     );
+    line-height: var(
+      --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
+    );
+    color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
+    white-space: nowrap;
   }
 }
