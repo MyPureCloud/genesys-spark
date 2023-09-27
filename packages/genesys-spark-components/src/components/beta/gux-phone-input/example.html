@@ -17,7 +17,7 @@
   <p>
     Sets the initial region if no value is specified. Also gives priority to
     that region when parsing a region from a value (if more than one region has
-    the same code).
+    the same code) and default placeholder if no region is selected.
   </p>
   <div class="flex-container">
     <div class="flex-example">
@@ -230,7 +230,7 @@
 <section id="get-region">
   <h3>getRegion</h3>
   <code
-    >getRegion() =&gt; Promise&lt;{ alphaCode: string; dialCode: string; } |
+    >getRegion() =&gt; Promise&lt;{ alpha2Code: string; dialCode: string; } |
     null&gt;</code
   >
   <p>
@@ -298,8 +298,8 @@
 </section>
 
 <section>
-  <h3>setRegionAlphaCode</h3>
-  <code>setRegionAlphaCode(regionCode: string) =&gt; Promise&lt;void&gt;</code>
+  <h3>setRegionAlpha2Code</h3>
+  <code>setRegionAlpha2Code(alpha2Code: string) =&gt; Promise&lt;void&gt;</code>
   <p>Sets the region select by 2 digit alpha code.</p>
   <div class="flex-container">
     <input id="set-region-alpha-input" class="flex-example" value="US" />
@@ -381,7 +381,7 @@
     getRegionExample.addEventListener('input', (e) => {
       e.target.getRegion()
       .then((region) => {
-        getRegionAlphaDisplay.value = region?.alphaCode || '';
+        getRegionAlphaDisplay.value = region?.alpha2Code || '';
         getRegionDialDisplay.value = region?.dialCode || '';
       });
     });
@@ -389,7 +389,7 @@
     getRegionExample.addEventListener('guxregionselect', (e) => {
       e.target.getRegion()
       .then((region) => {
-        getRegionAlphaDisplay.value = region?.alphaCode || '';
+        getRegionAlphaDisplay.value = region?.alpha2Code || '';
         getRegionDialDisplay.value = region?.dialCode || '';
       });
     });
@@ -436,7 +436,7 @@
     const setRegionAlphaExample = document.getElementById('set-region-alpha-example');
 
     setRegionAlphaInput.addEventListener('input', (e) => {
-      setRegionAlphaExample.setRegionAlphaCode(e.target.value);
+      setRegionAlphaExample.setRegionAlpha2Code(e.target.value);
     });
 
 

@@ -77,7 +77,7 @@ Type: `Promise<boolean>`
 
 
 
-### `setRegionAlphaCode(regionCode: RegionCode) => Promise<void>`
+### `setRegionAlpha2Code(alpha2Code: Alpha2Code) => Promise<void>`
 
 
 

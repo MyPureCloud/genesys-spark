@@ -1,6 +1,7 @@
-import { RegionCode, regionCountryCodeMap } from './RegionCountryCodeMap';
+import { regionCountryCodeMap } from './RegionCountryCodeMap';
 import { GetI18nValue } from '../../../../i18n';
 import libphonenumber from 'google-libphonenumber';
+import { Alpha2Code, RegionObject } from '../gux-phone.types';
 
 export function getRegionObjects(
   locale: string,
@@ -10,21 +11,15 @@ export function getRegionObjects(
   let regionObjects: RegionObject[] = [];
   for (const [key, val] of Object.entries(regionCountryCodeMap)) {
     regionObjects.push({
-      code: key as RegionCode,
+      alpha2Code: key as Alpha2Code,
       name: i18n(key),
-      countryCode: val
+      dialCode: val
     });
   }
   regionObjects = regionObjects.filter(r =>
-    phoneUtil.getSupportedRegions().includes(r.code)
+    phoneUtil.getSupportedRegions().includes(r.alpha2Code)
   );
   regionObjects.sort((a, b) => a.name.localeCompare(b.name, locale));
 
   return regionObjects;
-}
-
-export interface RegionObject {
-  code: RegionCode;
-  name: string;
-  countryCode: string;
 }

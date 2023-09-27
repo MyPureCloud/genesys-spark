@@ -56,7 +56,7 @@ describe('gux-phone-input', () => {
 
     const region = await component.callMethod('getRegion');
 
-    expect(region.alphaCode).toBe('AF');
+    expect(region.alpha2Code).toBe('AF');
     expect(await component.getProperty('value')).toBe('1');
     expect(dropdownButton.getAttribute('aria-expanded')).toBe('false');
   });
@@ -83,7 +83,7 @@ describe('gux-phone-input', () => {
 
     const region = await component.callMethod('getRegion');
 
-    expect(region.alphaCode).toBe('AD');
+    expect(region.alpha2Code).toBe('AD');
     expect(await component.getProperty('value')).toBe('+376');
     expect(dropdownButton.getAttribute('aria-expanded')).toBe('false');
   });
@@ -99,7 +99,7 @@ describe('gux-phone-input', () => {
 
     const region = await component.callMethod('getRegion');
 
-    expect(region.alphaCode).toBe('US');
+    expect(region.alpha2Code).toBe('US');
     expect(dropdownButtonIcon.getAttribute('screenreader-text')).toBe(
       'United States'
     );

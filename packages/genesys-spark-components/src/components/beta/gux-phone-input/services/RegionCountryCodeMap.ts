@@ -246,5 +246,3 @@ export const regionCountryCodeMap = {
   ZM: '+260',
   ZW: '+263'
 };
-
-export type RegionCode = keyof typeof regionCountryCodeMap;
