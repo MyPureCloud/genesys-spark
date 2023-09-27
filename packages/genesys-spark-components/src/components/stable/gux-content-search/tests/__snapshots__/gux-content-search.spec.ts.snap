@@ -47,6 +47,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -77,6 +78,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -107,6 +109,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -137,6 +140,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -167,6 +171,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -197,6 +202,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -227,6 +233,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -257,6 +264,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -287,6 +295,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -317,6 +326,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -347,6 +357,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -377,6 +388,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -407,6 +419,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
@@ -437,6 +450,7 @@ exports[`gux-content-search #render should render default control with all props
           <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
             <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
           </button>
+          <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>

@@ -3,30 +3,29 @@
 
 :host {
   display: inline-block;
-  width: 300px;
+  width: 300px; // TODO : COMUI-2310 according to figma this should be a 320px token ?
   min-width: 300px;
-  color: #596373;
 }
 
 ::slotted(input) {
   box-sizing: border-box;
   width: 100%;
-  font-family: inherit;
-  font-size: 12px;
-  line-height: 1.6667;
+  font-family: var(--gse-ui-search-counter-text-fontFamily);
+  font-size: var(--gse-ui-search-counter-text-fontSize);
+  font-weight: var(--gse-ui-search-counter-text-fontWeight);
+  line-height: var(--gse-ui-search-counter-text-lineHeight);
   background-image: none;
 
   &::placeholder {
-    color: #596373;
+    color: var(--gse-ui-formControl-input-placeholderColor);
   }
 
   flex-basis: 100%;
   flex-shrink: 1;
   min-width: 0;
-  height: 22px;
   padding: 0;
-  color: #2e394c;
-  background-color: #f6f7f9;
+  color: var(--gse-ui-formControl-input-populatedColor);
+  background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: 0;
   border-radius: 0;
   outline: none;
@@ -45,43 +44,55 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 32px;
-  padding: 4px 0;
-  margin: 4px 0;
-  background-color: #f6f7f9;
+  gap: var(--gse-ui-formControl-input-gap);
+  height: var(--gse-ui-formControl-input-textfield-height);
+  padding: var(--gse-ui-formControl-textarea-padding);
+  margin: 4px 0; // TODO COMUI-2310 - is margin above and below component still required ?
+  background-color: var(--gse-ui-formControl-input-backgroundColor);
   background-image: none;
-  border: 1px solid #6b7585;
-  border-radius: 4px;
-  box-shadow: inset 0 0 4px rgba(#202937, 16%);
+  border: var(--gse-ui-formControl-input-default-border-width)
+    var(--gse-ui-formControl-input-default-border-style)
+    var(--gse-ui-formControl-input-default-border-color);
+  border-radius: var(--gse-ui-formControl-input-borderRadius);
 
   &.gux-disabled {
     pointer-events: none;
     cursor: default;
-    opacity: 0.5;
+    opacity: var(--gse-ui-formControl-input-disabled-opacity);
   }
 
   &:focus-visible,
   &:focus-within {
-    border: 1px solid #2a60c8;
-    outline: none;
-    box-shadow: 0 0 4px #75a8ff;
+    outline: var(--gse-ui-formControl-input-focus-border-width)
+      var(--gse-ui-formControl-input-focus-border-style)
+      var(--gse-ui-formControl-input-focus-border-color);
+    border: var(--gse-ui-formControl-input-active-border-width)
+      var(--gse-ui-formControl-input-active-border-style)
+      var(--gse-ui-formControl-input-active-border-color);
+    border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+  }
+
+  &:not(:disabled):hover {
+    border: var(--gse-ui-formControl-input-hover-border-width)
+      var(--gse-ui-formControl-input-hover-border-style)
+      var(--gse-ui-formControl-input-hover-border-color);
   }
 
   .gux-search-icon {
     display: flex;
     flex-shrink: 0;
     align-items: center;
-    padding: 0 4px 0 8px;
 
     &:disabled {
       pointer-events: none;
       cursor: default;
-      opacity: 0.5;
+      opacity: var(--gse-ui-formControl-input-disabled-opacity);
     }
 
     gux-icon {
-      width: 16px;
-      height: 16px;
+      width: var(--gse-ui-search-counter-icon-width);
+      height: var(--gse-ui-search-counter-icon-height);
+      color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
     }
   }
 
@@ -93,35 +104,34 @@
     align-content: center;
     align-items: center;
     justify-content: flex-end;
-    height: 22px;
+    gap: var(--gse-ui-formControl-input-gap);
     padding: 0;
-    line-height: 1.6667;
 
     gux-icon {
-      width: 16px;
-      height: 16px;
+      width: var(--gse-ui-icon-size-sm);
+      height: var(--gse-ui-icon-size-sm);
     }
 
     button {
       display: block;
       align-items: center;
       overflow: hidden;
-      color: #596373;
+      color: var(--gse-ui-search-counter-default-foregroundColor);
       cursor: pointer;
       background: none;
       border: none;
-      border-radius: 4px;
+      border-radius: var(--gse-ui-button-borderRadius);
       outline: none;
 
       &:disabled {
         pointer-events: none;
         cursor: default;
-        opacity: 0.5;
+        opacity: var(--gse-ui-formControl-input-disabled-opacity);
       }
 
       &:not(:disabled):hover,
       &:not(:disabled):focus-visible {
-        color: #2e394c;
+        color: var(--gse-ui-search-counter-hover-foregroundColor);
       }
 
       &:not(.gux-clear-button):focus-visible:enabled {
@@ -133,12 +143,10 @@
         align-items: center;
         padding-right: 0;
         padding-left: 0;
-        margin-right: 8px;
-        margin-left: 8px;
 
         gux-icon {
-          width: 16px;
-          height: 16px;
+          width: var(--gse-ui-icon-size-sm);
+          height: var(--gse-ui-icon-size-sm);
         }
       }
     }
@@ -146,7 +154,7 @@
     .gux-navigation-disabled {
       pointer-events: auto;
       cursor: default;
-      opacity: 0.5;
+      opacity: var(--gse-ui-formControl-input-disabled-opacity);
     }
 
     .gux-navigation-panel {
@@ -154,13 +162,18 @@
       align-content: center;
       align-items: center;
       justify-content: flex-end;
-      border-right: 1px solid #596373;
+      gap: var(--gse-ui-search-counter-gap);
+
+      .gux-navigation-divider {
+        width: 1px; // TODO COMUI-2310 - missing token for divider width.
+        height: 16px; // TODO COMUI-2310 - missing token for divider height
+        border: 1px var(--gse-ui-search-counter-divider-border-style)
+          var(--gse-ui-search-counter-divider-border-color);
+        background-color: #c6c8ce; // TODO COMUI-2310 - missing token for divider background color.
+      }
 
       .gux-navigation-result {
         align-items: center;
-        padding-left: 8px;
-        font-family: inherit;
-        font-size: 12px;
         white-space: nowrap;
       }
 
@@ -169,7 +182,6 @@
         align-items: center;
         padding-right: 0;
         padding-left: 0;
-        margin-left: 4px;
       }
 
       .gux-next-button {
@@ -177,7 +189,6 @@
         align-items: center;
         padding-right: 0;
         padding-left: 0;
-        margin-right: 4px;
       }
     }
   }

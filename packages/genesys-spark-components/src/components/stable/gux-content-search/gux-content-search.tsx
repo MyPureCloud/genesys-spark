@@ -154,6 +154,7 @@ export class GuxContentSearch {
             >
               <gux-icon decorative icon-name="arrow-solid-down"></gux-icon>
             </button>
+            <div class="gux-navigation-divider" />
           </div>
           <button
             class="gux-clear-button"
