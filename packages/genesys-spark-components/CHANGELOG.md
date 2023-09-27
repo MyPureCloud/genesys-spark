@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.33](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.32...v4.0.0-beta.33) (2023-09-27)
+
+
+### Features
+
+* **gux-modal:** v4 upgrade ([e9736c3](https://github.com/MyPureCloud/genesys-webcomponents/commit/e9736c39036592ae3551e887baa729f6011c7389))
+
+
+### Bug Fixes
+
+* **gux-popup:** add property to gux-popup to specify popup container width strategy ([13cd6ff](https://github.com/MyPureCloud/genesys-webcomponents/commit/13cd6ffc997ffc0a93cd3c9c7dfc031a2b6bba69))
+
 ## [4.0.0-beta.32](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.31...v4.0.0-beta.32) (2023-09-26)
 
 
