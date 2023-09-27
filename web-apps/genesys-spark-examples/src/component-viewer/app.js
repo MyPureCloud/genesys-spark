@@ -9,8 +9,6 @@ import { toHTML } from '../utils/to-html';
 import '../styles/component-viewer.scss';
 import * as SparkLinks from './components/links.json';
 
-registerSparkComponents();
-
 window.toHTML = toHTML;
 window.webcomponentsDocsMain = (example = '', renderCallback = () => {}) =>
   bootstrap(example.trim(), renderCallback);
@@ -116,7 +114,9 @@ function setNewTheme(theme, panel, button, buttons) {
   button.classList.add('active');
 }
 
-export const bootstrap = (exampleCode, callback) => {
+export async function bootstrap(exampleCode, callback) {
+  await registerSparkComponents();
+
   const {
     inheritedThemeButton,
     lightThemeButton,
@@ -182,4 +182,4 @@ export const bootstrap = (exampleCode, callback) => {
   });
 
   updateCode(exampleCode);
-};
+}

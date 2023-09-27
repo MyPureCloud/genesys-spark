@@ -3,8 +3,8 @@ import { componentSpecs, getComponentSpec } from '../component-specs.js';
 import { registerSparkComponents } from 'genesys-spark';
 import '../styles/component-listing.scss';
 
-export function bootstrap() {
-  registerSparkComponents();
+export async function bootstrap() {
+  await registerSparkComponents();
   let components = Object.keys(componentSpecs)
     .filter(component => !componentSpecs[component].hidePage)
     .sort((a, b) => {

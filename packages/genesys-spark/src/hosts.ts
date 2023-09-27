@@ -27,10 +27,10 @@ const DOMAIN_LIST = [
 ];
 
 /**
- * Returns the host that web component assets should be loaded from.
+ * Returns the origin that web component assets should be loaded from.
  * Will use the domain of the current window if it matches a Genesys domain.
  */
-export function getAssetsHost(): string {
+export function getAssetsOrigin(): string {
     if (IS_DEV_MODE == true) {
       // This conditional is optimized out in production due to @rollup/plugin-replace
       // and rollup's dead code elimination
@@ -42,5 +42,5 @@ export function getAssetsHost(): string {
       pageHost.endsWith(regionDomain)
     );
   
-    return `app.${matchedDomain || DEFAULT_DOMAIN}`;
+    return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
   }
