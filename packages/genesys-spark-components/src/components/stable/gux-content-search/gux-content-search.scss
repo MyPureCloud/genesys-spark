@@ -47,7 +47,6 @@
   gap: var(--gse-ui-formControl-input-gap);
   height: var(--gse-ui-formControl-input-textfield-height);
   padding: var(--gse-ui-formControl-textarea-padding);
-  margin: 4px 0; // TODO COMUI-2310 - is margin above and below component still required ?
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   background-image: none;
   border: var(--gse-ui-formControl-input-default-border-width)
@@ -159,9 +158,6 @@
 
     .gux-navigation-panel {
       display: flex;
-      align-content: center;
-      align-items: center;
-      justify-content: flex-end;
       gap: var(--gse-ui-search-counter-gap);
 
       .gux-navigation-divider {
