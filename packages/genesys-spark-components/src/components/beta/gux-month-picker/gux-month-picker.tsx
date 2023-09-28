@@ -370,7 +370,11 @@ export class GuxMonthPicker {
 
   render(): JSX.Element {
     return (
-      <gux-popup-beta expanded={this.expanded} disabled={this.disabled}>
+      <gux-popup-beta
+        expanded={this.expanded}
+        disabled={this.disabled}
+        exceedTargetWidth
+      >
         {this.renderTarget()}
         {this.renderPopup()}
       </gux-popup-beta>
