@@ -134,6 +134,7 @@ export type GuxIconIconName =
   | 'custom/carousel'
   | 'custom/clipboard-list-slash-regular'
   | 'custom/co-browse'
+  | 'custom/face-smile-hearts-regular'
   | 'custom/file-pen-question'
   | 'custom/filter-notification'
   | 'custom/font-regular-highlight'
