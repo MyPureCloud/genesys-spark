@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.105.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.105.1...v3.105.2) (2023-09-29)
+
+
+### Bug Fixes
+
+* **gux-popup:** use exceed target width property for all applicable components ([873ed79](https://github.com/MyPureCloud/genesys-webcomponents/commit/873ed79f0d3a7a4882662e0027b3d5c0a123599f))
+
 ### [3.105.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.105.0...v3.105.1) (2023-09-28)
 
 
