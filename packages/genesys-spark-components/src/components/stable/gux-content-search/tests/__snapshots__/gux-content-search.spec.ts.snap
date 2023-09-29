@@ -41,12 +41,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result">
             1 of 10
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -72,12 +74,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result gux-navigation-result-disabled">
             10 of 10
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -103,12 +107,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result gux-navigation-result-disabled">
             1 of 1
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -134,12 +140,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result gux-navigation-result-disabled">
             10,000 of 100,000,000
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -165,12 +173,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result gux-navigation-result-disabled">
             1 of 1
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -196,12 +206,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result gux-navigation-result-disabled">
             1,100 of 100,000,001
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -227,12 +239,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result gux-navigation-result-disabled">
             0 of 0
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -258,12 +272,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result gux-navigation-result-disabled">
             0 of 0
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -289,12 +305,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result">
             0 of 100
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -320,12 +338,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result">
             1 of 1
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -351,12 +371,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result">
             1,000 of 100,000
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -382,12 +404,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result gux-navigation-result-disabled">
             0 of 0
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -413,12 +437,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result gux-navigation-result-disabled">
             0 of 0
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
@@ -444,12 +470,14 @@ exports[`gux-content-search #render should render default control with all props
           <span class="gux-navigation-result">
             1,000 of 100,000
           </span>
-          <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
-          </button>
-          <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-            <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
-          </button>
+          <div class="gux-navigation-buttons">
+            <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+            </button>
+            <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
+              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+            </button>
+          </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">

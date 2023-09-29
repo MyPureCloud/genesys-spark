@@ -168,6 +168,11 @@
         background-color: #c6c8ce; // TODO COMUI-2310 - missing token for divider background color.
       }
 
+      .gux-navigation-buttons {
+        display: flex;
+        flex-direction: row;
+      }
+
       .gux-navigation-result {
         align-items: center;
         white-space: nowrap;
