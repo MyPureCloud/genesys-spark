@@ -371,6 +371,8 @@
   },
   "gux-time-zone-picker": {
     "selectZone": "Search by region, country, or city",
+    "default": "Default",
+    "all": "All",
     "timeZones": "Time zones",
     "workspaceDefault": "(Workspace default)",
     "localDefault": "(Local)",
@@ -888,7 +890,7 @@
     "disableNewTab": "Maximum number of tabs created has been reached"
   },
   "gux-action-button": {
-    "actionButtonDropdown": "Dropdown for {buttonTitle}"
+    "moreOptions": "More options"
   },
   "gux-advanced-dropdown": {
     "searchAria": "Search"

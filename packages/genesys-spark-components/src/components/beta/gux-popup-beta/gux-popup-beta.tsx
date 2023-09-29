@@ -12,7 +12,7 @@ import {
   autoUpdate,
   computePosition,
   flip,
-  MiddlewareArguments,
+  MiddlewareState,
   offset,
   size,
   shift,
@@ -73,7 +73,6 @@ export class GuxPopupBeta {
 
   private updatePosition(): void {
     if (this.targetElementContainer && this.popupElementContainer) {
-      const popupElementContainer = this.popupElementContainer;
       const assignMinWidth = this.exceedTargetWidth;
       void computePosition(
         this.targetElementContainer,
@@ -85,14 +84,21 @@ export class GuxPopupBeta {
             offset(2),
             flip(),
             size({
-              apply({ rects }: MiddlewareArguments) {
+              apply({
+                rects,
+                elements
+              }: MiddlewareState & {
+                availableWidth: number;
+                availableHeight: number;
+              }) {
                 if (assignMinWidth) {
-                  Object.assign(popupElementContainer.style, {
+                  Object.assign(elements.floating.style, {
                     minWidth: `${rects.reference.width}px`
                   });
                 } else {
-                  Object.assign(popupElementContainer.style, {
-                    width: `${rects.reference.width}px`
+                  Object.assign(elements.floating.style, {
+                    width: `${rects.reference.width}px`,
+                    overflow: 'hidden'
                   });
                 }
               }

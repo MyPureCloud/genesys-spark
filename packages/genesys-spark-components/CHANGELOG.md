@@ -2,6 +2,55 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.105.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.105.1...v3.105.2) (2023-09-29)
+
+
+### Bug Fixes
+
+* **gux-popup:** use exceed target width property for all applicable components ([873ed79](https://github.com/MyPureCloud/genesys-webcomponents/commit/873ed79f0d3a7a4882662e0027b3d5c0a123599f))
+
+### [3.105.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.105.0...v3.105.1) (2023-09-28)
+
+
+### Bug Fixes
+
+* **gux-time-zone-picker:** default zones shoult not require 2 clicks to select ([d3590e1](https://github.com/MyPureCloud/genesys-webcomponents/commit/d3590e10f6be1fdebd50a779e462d3060d55bd37))
+
+## [3.105.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.104.2...v3.105.0) (2023-09-22)
+
+
+### Features
+
+* **action-button:** added title slot ([fc4759b](https://github.com/MyPureCloud/genesys-webcomponents/commit/fc4759b5fc5f99b000cf1dc2d5ec8fa004bf1172))
+
+### [3.104.2](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.104.1...v3.104.2) (2023-09-21)
+
+
+### Bug Fixes
+
+* **gux-timezone-picker:** don't duplicate explanatory text for time zone defaults ([50e36b7](https://github.com/MyPureCloud/genesys-webcomponents/commit/50e36b7e4336549af4cf6321aed034a0ed1a6ceb))
+
+### [3.104.1](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.104.0...v3.104.1) (2023-09-20)
+
+
+### Bug Fixes
+
+* **gux-table:** fix gux-table overflow issue in firefox ([2c0e641](https://github.com/MyPureCloud/genesys-webcomponents/commit/2c0e6417b7a948683abd6058dbdc30ded17e55a6))
+
+## [3.104.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.103.0...v3.104.0) (2023-09-15)
+
+
+### Features
+
+* **tabs:** match font size with designs ([a79c1a9](https://github.com/MyPureCloud/genesys-webcomponents/commit/a79c1a98dd9ecd3aee29489c5c4833365da0618e))
+
+## [3.103.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.102.0...v3.103.0) (2023-09-08)
+
+
+### Features
+
+* **icon:** requested icons for sprint gds23-4 ([dfa2c4a](https://github.com/MyPureCloud/genesys-webcomponents/commit/dfa2c4a8a1b1d7cb110f2c7872c932b0d25fe0ff))
+
 ## [3.102.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.101.1...v3.102.0) (2023-09-01)
 
 
