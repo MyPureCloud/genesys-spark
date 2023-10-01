@@ -91,6 +91,10 @@ webappPipeline {
                     sh(script: "npm publish --workspace=packages/genesys-spark-components ${publishOptions}",
                         label: 'Publish Components')
 
+                    sh(script: "npm publish --workspace=packages/genesys-spark ${publishOptions}",
+                        label: 'Publish Main Package'
+                    )
+
                     sh(script: '''
                             RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
                             npm install --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react
