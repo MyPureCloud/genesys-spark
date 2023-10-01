@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxTable } from '../gux-table';
 import MutationObserver from 'mutation-observer';
 

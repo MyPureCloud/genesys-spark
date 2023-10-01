@@ -3,7 +3,7 @@ jest.mock('../../../../utils/decorator/on-resize', () => ({
   OnResize: jest.fn()
 }));
 
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxTableToolbar } from '../gux-table-toolbar';
 import { GuxTableToolbarAction } from '../gux-table-toolbar-action/gux-table-toolbar-action';
 import { GuxTableToolbarMenuButton } from '../gux-table-toolbar-menu-button/gux-table-toolbar-menu-button';

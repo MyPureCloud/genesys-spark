@@ -1,17 +1,10 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxTabList } from '../gux-tab-list';
-import MutationObserver from 'mutation-observer';
 
 describe('gux-tab-list', () => {
   let component: GuxTabList;
 
   beforeEach(async () => {
-    (
-      global as NodeJS.Global & {
-        MutationObserver: any;
-      }
-    ).MutationObserver = MutationObserver;
-
     const page = await newSpecPage({
       components: [GuxTabList],
       html: `<gux-tab-list></gux-tab-list>`,

@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxListItem } from '../gux-list-item';
 
 const components = [GuxListItem];

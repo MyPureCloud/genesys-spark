@@ -117,7 +117,7 @@ describe('gux-rating', () => {
           const starElements = starContainer.children;
           const ratingElement = starElements[
             ratingElementIndex
-          ].shadowRoot.querySelector('.gux-icon-container');
+          ].shadowRoot.querySelector<HTMLElement>('.gux-icon-container');
 
           ratingElement.click();
         }, position - 1);

@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxPieChart } from '../gux-chart-pie';
 
 const components = [GuxPieChart];

@@ -1,5 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
-import MutationObserver from 'mutation-observer';
+import { newSpecPage } from '@test/specTestUtils';
 
 import { GuxFormFieldRadio } from '../gux-form-field-radio';
 
@@ -7,14 +6,6 @@ const components = [GuxFormFieldRadio];
 const language = 'en';
 
 describe('gux-form-field-radio', () => {
-  beforeEach(async () => {
-    (
-      global as NodeJS.Global & {
-        MutationObserver: any;
-      }
-    ).MutationObserver = MutationObserver;
-  });
-
   it('should build', async () => {
     const html = `
       <gux-form-field-radio>

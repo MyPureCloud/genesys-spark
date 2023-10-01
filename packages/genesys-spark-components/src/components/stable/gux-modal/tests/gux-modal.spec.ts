@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxButton } from '../../gux-button/gux-button';
 import { GuxModal } from '../gux-modal';
 import { GuxDismissButton } from '../../../stable/gux-dismiss-button/gux-dismiss-button';

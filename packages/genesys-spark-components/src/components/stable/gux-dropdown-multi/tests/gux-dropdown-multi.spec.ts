@@ -1,5 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
-import MutationObserver from 'mutation-observer';
+import { newSpecPage } from '@test/specTestUtils';
 
 import { GuxDropdownMulti } from '../gux-dropdown-multi';
 import { GuxListboxMulti } from '../../gux-listbox-multi/gux-listbox-multi';
@@ -18,14 +17,6 @@ const html = `
 const language = 'en';
 
 describe('gux-dropdown', () => {
-  beforeEach(() => {
-    (
-      global as NodeJS.Global & {
-        MutationObserver: any;
-      }
-    ).MutationObserver = MutationObserver;
-  });
-
   describe('#render', () => {
     it(`should render as expected`, async () => {
       const page = await newSpecPage({ components, html, language });

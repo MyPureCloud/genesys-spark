@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxTimeZonePickerBeta } from '../gux-time-zone-picker';
 
 const components = [GuxTimeZonePickerBeta];

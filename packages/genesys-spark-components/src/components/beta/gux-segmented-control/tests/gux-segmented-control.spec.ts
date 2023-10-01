@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 
 import { GuxSegmentedControl } from '../gux-segmented-control';
 import { GuxSegmentedControlItem } from '../gux-segmented-control-item/gux-segmented-control-item';
@@ -26,14 +26,6 @@ const html = `
 const language = 'en';
 
 describe('gux-segmented-control-beta', () => {
-  beforeAll(async () => {
-    (
-      global as NodeJS.Global & {
-        InputEvent: typeof Event;
-      }
-    ).InputEvent = Event;
-  });
-
   describe('#render', () => {
     it(`should render as expected`, async () => {
       const page = await newSpecPage({ components, html, language });

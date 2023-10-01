@@ -1,5 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
-import MutationObserver from 'mutation-observer';
+import { newSpecPage } from '@test/specTestUtils';
 
 import { GuxFormFieldTimePicker } from '../gux-form-field-time-picker';
 import { GuxScreenReader } from '../../../../../beta/gux-screen-reader/gux-screen-reader';
@@ -8,14 +7,6 @@ const components = [GuxFormFieldTimePicker, GuxScreenReader];
 const language = 'en';
 
 describe('gux-form-field-time-picker', () => {
-  beforeEach(async () => {
-    (
-      global as NodeJS.Global & {
-        MutationObserver: any;
-      }
-    ).MutationObserver = MutationObserver;
-  });
-
   it('should build', async () => {
     const html = `
       <gux-form-field-time-picker>

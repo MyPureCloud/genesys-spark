@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxButtonMulti } from '../gux-button-multi';
 
 describe('gux-button-multi', () => {

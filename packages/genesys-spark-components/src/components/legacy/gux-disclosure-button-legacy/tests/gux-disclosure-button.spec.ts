@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxDisclosureButtonLegacy } from '../gux-disclosure-button';
 
 const components = [GuxDisclosureButtonLegacy];

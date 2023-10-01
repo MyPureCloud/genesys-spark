@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxAccordion } from '../gux-accordion';
 import { GuxAccordionSection } from '../gux-accordion-section/gux-accordion-section';
 

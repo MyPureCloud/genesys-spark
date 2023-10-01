@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxDismissButton } from '../gux-dismiss-button';
 
 const components = [GuxDismissButton];

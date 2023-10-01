@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxAlert } from '../gux-inline-alert';
 
 const components = [GuxAlert];
