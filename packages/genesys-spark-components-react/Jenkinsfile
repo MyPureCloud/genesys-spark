@@ -17,7 +17,7 @@ node(nodelabels.getCombinedExecutorLabelForEnv('dev')) {
             currentBuild.description = publishedVersion
 
 
-            sh(script: 'source ./npm-utils/scripts/install-node.sh 16.18.0',
+            sh(script: 'source ./npm-utils/scripts/install-node.sh 18.16.1',
                 label: 'Set up node')
 
             sh(script: 'npm ci',

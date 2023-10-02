@@ -63,6 +63,6 @@
   },
   "prettier": "prettier-config-genesys-spark-components",
   "volta": {
-    "node": "16.18.0"
+    "node": "18.16.1"
   }
 }
