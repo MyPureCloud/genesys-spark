@@ -1,5 +1,4 @@
 @use '../../../../../style/focus.scss';
-@import '../../../../../style/typography.scss';
 
 // Variables part
 $range-active: var(--gse-ui-slider-bar-selected-backgroundColor);
@@ -45,13 +44,13 @@ gux-form-field-range {
     }
 
     &::-webkit-slider-runnable-track {
-      @include gux-track();
+      @include gux-track;
 
       background: transparent;
     }
 
     &::-webkit-slider-thumb {
-      @include gux-thumb();
+      @include gux-thumb;
 
       margin-top: calc(calc($track-height / 2) - calc($thumb-diameter / 2));
       -webkit-appearance: none;
@@ -63,20 +62,20 @@ gux-form-field-range {
     }
 
     &::-moz-range-track {
-      @include gux-track();
+      @include gux-track;
 
       background: transparent;
     }
 
     &::-moz-range-thumb {
-      @include gux-thumb();
+      @include gux-thumb;
 
       margin-top: calc(calc($track-height / 2) - calc($thumb-diameter / 2));
       border: 0 solid $range-active; // For firefox
     }
 
     &::-ms-track {
-      @include gux-track();
+      @include gux-track;
 
       color: transparent;
       background: transparent;
@@ -93,7 +92,7 @@ gux-form-field-range {
     }
 
     &::-ms-thumb {
-      @include gux-thumb();
+      @include gux-thumb;
 
       border: 0 solid $range-active; // For firefox
     }
@@ -111,19 +110,19 @@ gux-form-field-range {
     input[type='range'],
     input[type='range']:hover {
       &::-webkit-slider-thumb {
-        @include gux-focus-ring();
+        @include focus.gux-focus-ring;
 
         background-color: $handle-active-background;
       }
 
       &::-moz-range-thumb {
-        @include gux-focus-ring();
+        @include focus.gux-focus-ring;
 
         background-color: $handle-active-background;
       }
 
       &::-ms-thumb {
-        @include gux-focus-ring();
+        @include focus.gux-focus-ring;
 
         background-color: $handle-active-background;
       }

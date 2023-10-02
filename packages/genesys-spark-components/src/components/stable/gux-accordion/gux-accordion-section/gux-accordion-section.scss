@@ -1,6 +1,3 @@
-@import '../../../..//style/focus.scss';
-@import '../../../../style/typography.scss';
-
 :host {
   -webkit-user-select: none;
   user-select: none;
@@ -43,9 +40,9 @@ section.gux-disabled {
   .gux-header-text {
     flex: 1 1 auto;
     align-self: auto;
-    text-align: left;
+    font-weight: (--gse-ui-accordion-header-label-defaulttext-fontweight);
     color: var(--gse-ui-accordion-header-default-foreground-labelColor);
-    font-weight: (--gse-ui-accordion-header-label-defaultText-fontWeight);
+    text-align: left;
   }
 
   &.gux-reverse-headings {
@@ -118,16 +115,16 @@ section.gux-disabled {
     }
 
     &.gux-expanded {
-      transform: rotate(-180deg);
       color: var(--gse-ui-accordion-header-default-foreground-chevronIcon-open);
+      transform: rotate(-180deg);
     }
   }
 
   &:focus-visible {
+    border-radius: var(--gse-ui-accordion-menuItem-focus-borderRadius);
     outline: var(--gse-ui-accordion-focusBorder-width)
       var(--gse-ui-accordion-focusBorder-style)
       var(--gse-ui-accordion-focusBorder-color);
-    border-radius: var(--gse-ui-accordion-menuItem-focus-borderRadius);
     outline-offset: var(--gse-ui-accordion-focus-offset-gap);
   }
 

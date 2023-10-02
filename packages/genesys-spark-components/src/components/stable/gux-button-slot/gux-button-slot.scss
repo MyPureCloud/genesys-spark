@@ -1,9 +1,9 @@
-@import '../../../style/focus.scss';
+@use '../../../style/focus.scss';
 
 @mixin button-text {
   font-family: var(--gse-ui-button-text-fontFamily);
-  font-weight: var(--gse-ui-button-text-fontWeight);
   font-size: var(--gse-ui-button-text-fontSize);
+  font-weight: var(--gse-ui-button-text-fontWeight);
   line-height: var(--gse-ui-button-text-lineHeight);
 }
 
@@ -16,17 +16,18 @@
 ::slotted(input[type='submit']),
 ::slotted(button) {
   @include button-text;
-  color: var(--gse-ui-button-secondary-default-foregroundColor);
-  background-color: var(--gse-ui-button-secondary-default-backgroundColor);
+
   width: 100%;
   min-width: var(--gse-ui-button-icon-only-width);
   height: var(--gse-ui-button-height);
   padding: var(--gse-ui-button-padding);
   overflow: hidden;
+  color: var(--gse-ui-button-secondary-default-foregroundColor);
   text-overflow: ellipsis;
   white-space: nowrap;
   pointer-events: auto;
   cursor: pointer;
+  background-color: var(--gse-ui-button-secondary-default-backgroundColor);
   border: none;
   border-radius: var(--gse-ui-button-borderRadius);
 }
@@ -34,8 +35,8 @@
 ::slotted(input[type='button'][disabled]),
 ::slotted(input[type='submit'][disabled]),
 ::slotted(button[disabled]) {
-  opacity: var(--gse-ui-button-disabled-opacity);
   cursor: default;
+  opacity: var(--gse-ui-button-disabled-opacity);
 }
 
 ::slotted(input[type='button']:focus),
@@ -47,7 +48,7 @@
 ::slotted(input[type='button']:focus-visible:enabled),
 ::slotted(input[type='submit']:focus-visible:enabled),
 ::slotted(button:focus-visible:enabled) {
-  @include gux-focus-ring;
+  @include focus.gux-focus-ring;
 }
 
 ::slotted(input[type='button']:hover:enabled),
@@ -93,9 +94,9 @@
   ::slotted(button) {
     color: var(--gse-ui-button-tertiary-default-foregroundColor);
     background-color: var(--gse-ui-button-tertiary-default-backgroundColor);
-    border-width: var(--gse-ui-button-tertiary-default-border-width);
-    border-style: var(--gse-ui-button-tertiary-default-border-style);
     border-color: var(--gse-ui-button-tertiary-default-border-color);
+    border-style: var(--gse-ui-button-tertiary-default-border-style);
+    border-width: var(--gse-ui-button-tertiary-default-border-width);
   }
 
   ::slotted(input[type='button']:hover:enabled),
@@ -181,16 +182,16 @@
   ::slotted(input[type='button']:hover:enabled),
   ::slotted(input[type='submit']:hover:enabled),
   ::slotted(button:hover:enabled) {
-    text-decoration: underline;
     color: var(--gse-ui-link-hover-color);
+    text-decoration: underline;
     background: none;
   }
 
   ::slotted(input[type='button']:active:enabled),
   ::slotted(input[type='submit']:active:enabled),
   ::slotted(button:active:enabled) {
-    text-decoration: underline;
     color: var(--gse-ui-link-active-color);
+    text-decoration: underline;
     background: none;
   }
 }

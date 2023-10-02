@@ -1,5 +1,4 @@
 import { Config } from '@stencil/core';
-import { less as stencilLess } from '@stencil/less';
 import { sass } from '@stencil/sass';
 import copy from 'rollup-plugin-copy';
 import generateMetadata from './scripts/generate-component-data';
@@ -26,7 +25,7 @@ export const config: Config = {
         '../genesys-spark-components-react/stencil-generated/index.ts'
     })
   ],
-  plugins: [stencilLess(), sass()],
+  plugins: [sass()],
   rollupPlugins: {
     after: [
       copy({

@@ -1,11 +1,11 @@
 @mixin gse-ui-focus {
-  outline: var(--gse-ui-formControl-input-focus-border-width)
-    var(--gse-ui-formControl-input-focus-border-style)
-    var(--gse-ui-formControl-input-focus-border-color);
   border: var(--gse-ui-formControl-input-active-border-width)
     var(--gse-ui-formControl-input-active-border-style)
     var(--gse-ui-formControl-input-active-border-color);
   border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+  outline: var(--gse-ui-formControl-input-focus-border-width)
+    var(--gse-ui-formControl-input-focus-border-style)
+    var(--gse-ui-formControl-input-focus-border-color);
 }
 
 .gux-time-picker {
@@ -27,7 +27,6 @@
     align-content: stretch;
     align-items: center;
     justify-content: center;
-    white-space: nowrap;
     width: 100%;
     height: var(--gse-ui-formControl-input-textfield-height);
     padding: var(--gse-ui-formControl-input-padding);
@@ -35,6 +34,7 @@
     font-size: var(--gse-ui-formControl-input-contentText-fontSize);
     line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
     color: var(--gse-ui-formControl-input-populatedColor);
+    white-space: nowrap;
     background-color: var(--gse-ui-formControl-input-backgroundColor);
     background-image: none;
     border: var(--gse-ui-formControl-input-default-border-width)
@@ -74,8 +74,8 @@
       padding: 0;
       font-family: var(--gse-ui-formControl-input-prefixSufix-text-fontFamily);
       font-size: var(--gse-ui-formControl-input-prefixSufix-text-fontSize);
-      line-height: var(--gse-ui-formControl-input-prefixSufix-text-lineHeight);
       font-weight: var(--gse-ui-formControl-input-prefixSufix-text-fontWeight);
+      line-height: var(--gse-ui-formControl-input-prefixSufix-text-lineHeight);
       color: var(--gse-ui-formControl-input-populatedColor);
       background: transparent;
       border: none;
@@ -139,12 +139,12 @@
     margin: 0;
     overflow-y: scroll;
     list-style: none;
+    background-color: var(--gse-ui-menu-backgroundColor);
     border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
       var(--gse-ui-menu-border-color);
-    background-color: var(--gse-ui-menu-backgroundColor);
+    border-radius: var(--gse-ui-menu-borderRadius);
     box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
       var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
       var(--gse-ui-menu-boxShadow-color);
-    border-radius: var(--gse-ui-menu-borderRadius);
   }
 }

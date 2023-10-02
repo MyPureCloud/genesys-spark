@@ -2,27 +2,26 @@
  * This file combines all the exported library styles into a single stylesheet for consumption by applications.
  */
 
-@import '~genesys-spark-tokens/dist/css/gse-semantic.css';
-@import '~genesys-spark-tokens/dist/css/gse-ui-actions.css';
-@import '~genesys-spark-tokens/dist/css/gse-ui-dataDisplay.css';
-@import '~genesys-spark-tokens/dist/css/gse-ui-feedback.css';
-@import '~genesys-spark-tokens/dist/css/gse-ui-formControl.css';
-@import '~genesys-spark-tokens/dist/css/gse-ui-formsAndInputs.css';
-@import '~genesys-spark-tokens/dist/css/gse-ui-layoutContainer.css';
-@import '~genesys-spark-tokens/dist/css/gse-ui-navigation.css';
-@import '~genesys-spark-tokens/dist/css/gse-ui-searchAndFilter.css';
-@import '~genesys-spark-tokens/dist/css/gse-ui.css';
-@import '~genesys-spark-tokens/dist/css/gse-core.css';
-@import 'typography.scss';
-@import 'focus.scss';
-@import 'style-reset-typography.scss';
-@import 'style-reset-focusable.scss';
-@import '../components/stable/gux-action-button/gux-action-button.light.scss';
-@import '../components/stable/gux-button-multi/gux-button-multi.light.scss';
-@import '../components/stable/gux-form-field/gux-form-field.light.scss';
-@import '../components/stable/gux-table/gux-table.light.scss';
-@import '../components/beta/gux-calendar-beta/gux-calendar.light.scss';
-// @import 'css-custom-properties.less';
+@use '~genesys-spark-tokens/dist/css/gse-core.css';
+@use '~genesys-spark-tokens/dist/css/gse-semantic.css';
+@use '~genesys-spark-tokens/dist/css/gse-ui-actions.css';
+@use '~genesys-spark-tokens/dist/css/gse-ui-dataDisplay.css';
+@use '~genesys-spark-tokens/dist/css/gse-ui-feedback.css';
+@use '~genesys-spark-tokens/dist/css/gse-ui-formControl.css';
+@use '~genesys-spark-tokens/dist/css/gse-ui-formsAndInputs.css';
+@use '~genesys-spark-tokens/dist/css/gse-ui-layoutContainer.css';
+@use '~genesys-spark-tokens/dist/css/gse-ui-navigation.css';
+@use '~genesys-spark-tokens/dist/css/gse-ui-searchAndFilter.css';
+@use '~genesys-spark-tokens/dist/css/gse-ui.css';
+@use 'focus.scss';
+@use 'style-reset-focusable.scss';
+@use 'style-reset-typography.scss';
+@use 'typography.scss';
+@use '../components/beta/gux-calendar-beta/gux-calendar.light.scss';
+@use '../components/stable/gux-action-button/gux-action-button.light.scss';
+@use '../components/stable/gux-button-multi/gux-button-multi.light.scss';
+@use '../components/stable/gux-form-field/gux-form-field.light.scss';
+@use '../components/stable/gux-table/gux-table.light.scss';
 
 gux-action-toast-legacy {
   dl {
@@ -32,7 +31,8 @@ gux-action-toast-legacy {
       order: 0;
       margin: 0;
       color: #2e394c;
-      @include bold-font;
+
+      @include typography.bold-font;
     }
 
     dd {

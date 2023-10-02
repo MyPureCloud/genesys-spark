@@ -1,4 +1,4 @@
-@import '../../../style/zindex.scss';
+@use '../../../style/zindex.scss';
 
 /**
   * @prop --gse-ui-tooltip-light-border-color
@@ -26,19 +26,19 @@
   * @prop --gse-ui-tooltip-text-lineHeight
   * @prop --gse-ui-tooltip-text-fontSize
   * @prop --gse-ui-tooltip-text-fontWeight
-  
+
   */
 
 :host {
   position: fixed;
-  z-index: var(--gux-zindex-tooltip, $gux-zindex-tooltip);
+  z-index: var(--gux-zindex-tooltip, zindex.$gux-zindex-tooltip);
   display: none;
   width: max-content;
   max-width: 250px;
-  opacity: 0;
   box-shadow: var(--gse-ui-tooltip-boxShadow-x)
     var(--gse-ui-tooltip-boxShadow-y) var(--gse-ui-tooltip-boxShadow-blur)
     var(--gse-ui-tooltip-boxShadow-spread) var(--gse-ui-tooltip-boxShadow-color);
+  opacity: 0;
 }
 
 :host(.gux-show) {
@@ -50,25 +50,24 @@
 }
 
 .gux-container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
   gap: var(--gse-ui-tooltip-gap);
-  box-sizing: border-box;
+  align-content: center;
+  justify-content: flex-start;
   padding: var(--gse-ui-tooltip-padding);
-  pointer-events: none;
-  border-radius: var(--gse-ui-tooltip-borderRadius);
   font-family: var(--gse-ui-tooltip-text-fontFamily);
+  font-size: var(--gse-ui-tooltip-text-fontSize);
   font-weight: var(--gse-ui-tooltip-text-fontWeight);
   line-height: var(--gse-ui-tooltip-text-lineHeight);
-  font-size: var(--gse-ui-tooltip-text-fontSize);
-
+  color: var(--gse-ui-tooltip-light-foregroundColor);
+  pointer-events: none;
   background-color: var(--gse-ui-tooltip-light-backgroundColor);
   border: var(--gse-ui-tooltip-light-border-width)
     var(--gse-ui-tooltip-light-border-style)
     var(--gse-ui-tooltip-light-border-color);
-  color: var(--gse-ui-tooltip-light-foregroundColor);
+  border-radius: var(--gse-ui-tooltip-borderRadius);
 
   &[data-placement='bottom'],
   &[data-placement='bottom-start'],
@@ -127,21 +126,21 @@
     //These dimensions give the arrows the best alignment.
     width: 13px;
     height: 13px;
-    border-radius: var(--gse-ui-tooltip-borderRadius);
     background: inherit;
+    border-radius: var(--gse-ui-tooltip-borderRadius);
   }
 
   ::slotted(gux-icon) {
+    align-self: center;
     width: var(--gse-ui-icon-size-sm);
     height: var(--gse-ui-icon-size-sm);
     color: var(--gse-ui-tooltip-light-iconColor);
-    align-self: center;
   }
 
   &.gux-dark {
+    color: var(--gse-ui-tooltip-dark-foregroundColor);
     background-color: var(--gse-ui-tooltip-dark-backgroundColor);
     border-color: var(--gse-ui-tooltip-dark-border-color);
-    color: var(--gse-ui-tooltip-dark-foregroundColor);
 
     &[data-placement='bottom'],
     &[data-placement='bottom-start'],
@@ -196,10 +195,10 @@
     }
 
     ::slotted(gux-icon) {
+      align-self: center;
       width: var(--gse-ui-icon-size-sm);
       height: var(--gse-ui-icon-size-sm);
       color: var(--gse-ui-tooltip-dark-iconColor);
-      align-self: center;
     }
   }
 }

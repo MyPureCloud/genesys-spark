@@ -63,6 +63,7 @@ gux-form-field-checkbox {
       -webkit-mask-image: url($gux-icon-checkbox-unchecked-error);
       mask-image: url($gux-icon-checkbox-unchecked-error);
     }
+
     input[type='checkbox']:checked::before {
       background: #e22245; // TODO  COMUI-2306 missing token for checkbox error.
       -webkit-mask-image: url($gux-icon-checkbox-checked-error);

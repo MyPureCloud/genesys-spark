@@ -2,7 +2,7 @@ import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
 
-import { spritesheetDataUrl } from './sprite-utils/generate-sprites';
+import { spritesheetDataUrl } from './sprite-utils/sprites.generated';
 
 @Component({
   styleUrl: 'gux-region-icon.scss',

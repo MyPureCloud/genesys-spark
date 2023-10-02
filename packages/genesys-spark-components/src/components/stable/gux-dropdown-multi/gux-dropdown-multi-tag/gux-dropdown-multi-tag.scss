@@ -1,5 +1,5 @@
-@import '../../../../style/focus.scss';
-@import '../../../../style/_mixins.scss';
+@use '../../../../style/focus.scss';
+@use '../../../../style/mixins.scss';
 
 // Style
 :host {
@@ -23,7 +23,7 @@
   border-radius: var(--gse-ui-tag-borderRadius);
 
   .gux-sr-only {
-    @include gux-sr-only-clip;
+    @include mixins.gux-sr-only-clip;
   }
 
   .gux-tag-remove-button {
@@ -45,7 +45,7 @@
 
     &:focus-within {
       .gux-tag-remove-icon {
-        @include gux-focus-ring-small;
+        @include focus.gux-focus-ring-small;
       }
     }
   }

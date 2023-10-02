@@ -9,10 +9,10 @@
   border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
     var(--gse-ui-menu-border-color);
   border-radius: var(--gse-ui-menu-borderRadius);
+  outline: none;
   box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
     var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
     var(--gse-ui-menu-boxShadow-color);
-  outline: none;
 }
 
 :host(:focus) {
@@ -36,13 +36,13 @@
     font-family: var(
       --gse-ui-dropdown-menu-emptyState-subheader-text-fontFamily
     );
+    font-size: var(--gse-ui-dropdown-menu-emptyState-subheader-text-fontSize);
     font-weight: var(
       --gse-ui-dropdown-menu-emptyState-subheader-text-fontWeight
     );
     line-height: var(
       --gse-ui-dropdown-menu-emptyState-subheader-text-lineHeight
     );
-    font-size: var(--gse-ui-dropdown-menu-emptyState-subheader-text-fontSize);
     color: var(--gse-ui-dropdown-menu-emptyState-subheader-foregroundColor);
   }
 }

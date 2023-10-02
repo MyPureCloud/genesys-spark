@@ -34,23 +34,23 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
 @mixin spin($name, $circumference) {
   @keyframes #{$name}Spin {
     0% {
-      transform: rotate(0deg);
       stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      transform: rotate(0deg);
     }
 
     7.5% {
-      transform: rotate(0deg);
       stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      transform: rotate(0deg);
     }
 
     20% {
-      transform: rotate(90deg);
       stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      transform: rotate(90deg);
     }
 
     30% {
-      transform: rotate(180deg);
       stroke-dasharray: math.div($circumference, 4);
+      transform: rotate(180deg);
     }
 
     40% {
@@ -58,23 +58,23 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
     }
 
     50% {
-      transform: rotate(450deg);
       stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      transform: rotate(450deg);
     }
 
     57.5% {
-      transform: rotate(450deg);
       stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      transform: rotate(450deg);
     }
 
     70% {
-      transform: rotate(540deg);
       stroke-dasharray: math.div($circumference, 4);
+      transform: rotate(540deg);
     }
 
     80% {
-      transform: rotate(630deg);
       stroke-dasharray: math.div($circumference, 4);
+      transform: rotate(630deg);
     }
 
     90% {
@@ -82,8 +82,8 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
     }
 
     100% {
-      transform: rotate(900deg);
       stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      transform: rotate(900deg);
     }
   }
 }
@@ -96,8 +96,8 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
   div[role='progressbar'] {
     .gux-svg-container {
       display: block;
-      height: var(--gse-ui-progressAndLoading-spinner-large);
       width: var(--gse-ui-progressAndLoading-spinner-large);
+      height: var(--gse-ui-progressAndLoading-spinner-large);
 
       .gux-dynamic-circle,
       .gux-dynamic-circle-mask {
@@ -105,11 +105,10 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
         stroke: var(--gse-ui-progressAndLoading-spinner-foreground);
         stroke-width: $largeSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
         transform-origin: 50% 50%;
-
         animation-name: largeSpin;
         animation-duration: 2s;
-        animation-iteration-count: infinite, infinite;
         animation-timing-function: linear;
+        animation-iteration-count: infinite, infinite;
       }
 
       .gux-dynamic-circle-mask {
@@ -139,19 +138,18 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
 
     &.gux-input {
       .gux-svg-container {
-        height: var(--gse-ui-progressAndLoading-spinner-small);
         width: var(--gse-ui-progressAndLoading-spinner-small);
+        height: var(--gse-ui-progressAndLoading-spinner-small);
 
         .gux-dynamic-circle {
           fill: none;
           stroke: var(--gse-ui-progressAndLoading-spinner-foreground);
           stroke-width: $smallSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
           transform-origin: 50% 50%;
-
           animation-name: smallSpin;
           animation-duration: 2s;
-          animation-iteration-count: infinite, infinite;
           animation-timing-function: linear;
+          animation-iteration-count: infinite, infinite;
         }
 
         .gux-static-circle {

@@ -25,18 +25,17 @@
 @prop gse-ui-icon-size-sm
 */
 
-@import '../../../style/focus.scss';
-@import '../../../style/zindex.scss';
-@import '../../../style/_mixins.scss';
+@use '../../../style/zindex.scss';
+@use '../../../style/mixins.scss';
 
 @mixin gse-ui-focus {
-  outline: var(--gse-ui-formControl-input-focus-border-width)
-    var(--gse-ui-formControl-input-focus-border-style)
-    var(--gse-ui-formControl-input-focus-border-color);
   border: var(--gse-ui-formControl-input-active-border-width)
     var(--gse-ui-formControl-input-active-border-style)
     var(--gse-ui-formControl-input-active-border-color);
   border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+  outline: var(--gse-ui-formControl-input-focus-border-width)
+    var(--gse-ui-formControl-input-focus-border-style)
+    var(--gse-ui-formControl-input-focus-border-color);
 }
 
 :host {
@@ -100,7 +99,6 @@
       align-content: stretch;
       align-items: center;
       justify-content: center;
-      white-space: nowrap;
       width: 100%;
       height: var(--gse-ui-formControl-input-textfield-height);
       padding: var(--gse-ui-formControl-input-padding);
@@ -108,6 +106,7 @@
       font-size: var(--gse-ui-formControl-input-contentText-fontSize);
       line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
       color: var(--gse-ui-formControl-input-populatedColor);
+      white-space: nowrap;
       background-color: var(--gse-ui-formControl-input-backgroundColor);
       background-image: none;
       border: var(--gse-ui-formControl-input-default-border-width)
@@ -181,7 +180,7 @@
 
       gux-calendar {
         position: fixed;
-        z-index: var(--gux-zindex-popup, $gux-zindex-popup);
+        z-index: var(--gux-zindex-popup, zindex.$gux-zindex-popup);
         display: none;
       }
     }
@@ -210,5 +209,5 @@
 }
 
 .gux-sr-only {
-  @include gux-sr-only;
+  @include mixins.gux-sr-only;
 }

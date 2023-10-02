@@ -3,19 +3,19 @@ gux-pagination-item-counts {
     display: flex;
     flex-direction: row;
     gap: var(--gse-ui-dataTableItems-tablePagination-countDisplay-gap);
-    white-space: nowrap;
     font-family: var(
       --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
     );
-    color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
     font-size: var(
       --gse-ui-dataTableItems-tablePagination-defaultText-fontSize
-    );
-    line-height: var(
-      --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
     );
     font-weight: var(
       --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
     );
+    line-height: var(
+      --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
+    );
+    color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
+    white-space: nowrap;
   }
 }

@@ -35,6 +35,7 @@ gux-tab-advanced-list-legacy {
           align-items: center;
           padding: 0 12px;
           white-space: nowrap;
+
           @include typography.body-font-bold;
 
           gux-icon {
