@@ -21,7 +21,7 @@ import { trackComponent } from '@utils/tracking/usage';
  */
 
 @Component({
-  styleUrl: 'gux-tabs-advanced.less',
+  styleUrl: 'gux-tabs-advanced.scss',
   tag: 'gux-tabs-advanced',
   shadow: true
 })

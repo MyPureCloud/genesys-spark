@@ -33,13 +33,13 @@ const DOMAIN_LIST = [
   'usw2.pure.cloud'
 ];
 
-export async function registerElements() {
+export function registerElements() {
   if (CDN_URL) {
-    await defineCustomElements(window, {
+    defineCustomElements(window, {
       resourcesUrl: `https://${getDomain() + CDN_URL}`
     });
   } else {
-    await defineCustomElements();
+    defineCustomElements();
   }
 }
 

@@ -32,7 +32,7 @@
   * @prop --gse-ui-alert-text-fontWeight
   */
 
-@import '../../../style/mixins';
+@use '../../../style/mixins';
 
 :host {
   display: block;
@@ -63,9 +63,9 @@
 
   .gux-message-wrapper {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     gap: var(--gse-ui-alert-gap);
+    align-items: center;
+    justify-content: flex-start;
     font-family: var(--gse-ui-alert-text-fontFamily);
     font-size: var(--gse-ui-alert-text-fontSize);
     font-weight: var(--gse-ui-alert-text-fontWeight);
@@ -73,7 +73,7 @@
   }
 
   .gux-sr-only {
-    @include gux-sr-only-clip;
+    @include mixins.gux-sr-only-clip;
   }
 
   &.gux-info {
@@ -82,6 +82,7 @@
     border: var(--gse-ui-alert-info-border-width)
       var(--gse-ui-alert-info-border-style)
       var(--gse-ui-alert-info-border-color);
+
     gux-icon {
       color: var(--gse-ui-alert-info-iconColor);
     }
@@ -93,6 +94,7 @@
     border: var(--gse-ui-alert-error-border-width)
       var(--gse-ui-alert-error-border-style)
       var(--gse-ui-alert-error-border-color);
+
     gux-icon {
       color: var(--gse-ui-alert-error-iconColor);
     }
@@ -104,6 +106,7 @@
     border: var(--gse-ui-alert-warning-border-width)
       var(--gse-ui-alert-warning-border-style)
       var(--gse-ui-alert-warning-border-color);
+
     gux-icon {
       color: var(--gse-ui-alert-warning-iconColor);
     }
@@ -115,6 +118,7 @@
     border: var(--gse-ui-alert-success-border-width)
       var(--gse-ui-alert-success-border-style)
       var(--gse-ui-alert-success-border-color);
+
     gux-icon {
       color: var(--gse-ui-alert-success-iconColor);
     }

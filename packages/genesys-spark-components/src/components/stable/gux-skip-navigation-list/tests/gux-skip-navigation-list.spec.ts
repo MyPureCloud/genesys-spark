@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxSkipNavigationList } from '../gux-skip-navigation-list';
 import { GuxSkipNavigationItem } from '../gux-skip-navigation-item/gux-skip-navigation-item';
 

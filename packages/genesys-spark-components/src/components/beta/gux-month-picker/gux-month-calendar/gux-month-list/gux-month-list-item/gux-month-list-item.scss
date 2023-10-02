@@ -1,0 +1,51 @@
+:host {
+  flex: 0 0 33.3%; //TODO: COMUI-2256.
+}
+
+:host([disabled]) {
+  pointer-events: none;
+}
+
+:host([disabled='false']) {
+  pointer-events: auto;
+}
+
+.gux-container {
+  padding-right: var(--gse-ui-calendarMenu-monthBody-gap);
+  padding-left: var(--gse-ui-calendarMenu-monthBody-gap);
+
+  button {
+    all: unset;
+    box-sizing: border-box;
+    width: 100%;
+    height: var(--gse-ui-calendarMenu-month-monthCell-height);
+    text-align: center;
+    word-wrap: break-word;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
+    outline: none;
+
+    &.gux-selected {
+      color: var(--gse-ui-calendarMenu-month-selected-foregroundColor);
+      background: var(--gse-ui-calendarMenu-month-selected-backgroundColor);
+    }
+
+    &:focus-visible:not(:disabled) {
+      border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
+      outline: var(--gse-ui-monthPicker-calendarStates-focus-border-width)
+        var(--gse-ui-monthPicker-calendarStates-focus-border-style)
+        var(--gse-ui-monthPicker-calendarStates-focus-border-color);
+      outline-offset: var(--gse-semantic-focusRing-offset);
+    }
+
+    &:hover:not(:disabled) {
+      background: var(--gse-ui-calendarMenu-month-hover-backgroundColor);
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: var(--gse-ui-calendarMenu-disabled-opacity);
+    }
+  }
+}

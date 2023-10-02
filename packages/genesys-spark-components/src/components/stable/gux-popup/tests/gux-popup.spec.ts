@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import * as floatingUi from '@floating-ui/dom';
 import { GuxPopup } from '../gux-popup';
 import MutationObserver from 'mutation-observer';

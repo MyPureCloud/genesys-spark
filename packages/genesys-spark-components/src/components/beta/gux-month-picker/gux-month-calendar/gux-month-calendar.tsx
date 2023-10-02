@@ -26,7 +26,7 @@ import {
 import translationResources from './i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-month-calendar.less',
+  styleUrl: 'gux-month-calendar.scss',
   tag: 'gux-month-calendar',
   shadow: { delegatesFocus: true }
 })
@@ -121,6 +121,13 @@ export class GuxMonthCalendar {
     this.updateValue(value);
   }
 
+  private isCurrentMonth(month: string): boolean {
+    return (
+      getYearMonthObject(getCurrentISOYearMonth()).year == this.year &&
+      getYearMonthObject(getCurrentISOYearMonth()).month == month
+    );
+  }
+
   private getMonthAriaLabel(value: GuxISOYearMonth): string {
     const { year, month } = getYearMonthObject(value);
 
@@ -209,7 +216,7 @@ export class GuxMonthCalendar {
             })}
           ></gux-icon>
         </button>
-        <div class="gux-year">{this.getYearLabel(this.year)}</div>
+        <div>{this.getYearLabel(this.year)}</div>
         <button
           type="button"
           class="gux-year-change"
@@ -237,6 +244,7 @@ export class GuxMonthCalendar {
 
       return (
         <gux-month-list-item
+          class={{ 'gux-current-month': this.isCurrentMonth(month) }}
           value={value}
           selected={this.isSelectedMonth(value)}
           aria-selected={this.isAriaSelectedMonth(value)}

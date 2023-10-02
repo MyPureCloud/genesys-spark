@@ -11,7 +11,7 @@ describe('tracking/usage', () => {
 
   beforeEach(() => {
     addPageAction.mockClear();
-    window.newrelic = {
+    (window.newrelic as any) = {
       addPageAction
     };
     window.document.contains = jest.fn().mockReturnValue(true);

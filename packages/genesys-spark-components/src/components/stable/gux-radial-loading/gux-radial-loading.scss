@@ -1,7 +1,7 @@
-@import './gux-radial-loading.functional.scss';
+@use './gux-radial-loading.functional.scss';
 
 :host {
   display: inline-block;
 }
 
-@include gux-spinner-state-style;
+@include gux-radial-loading.gux-spinner-state-style;

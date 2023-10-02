@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-examples",
-  "version": "4.0.0-beta.30",
+  "version": "4.0.0-beta.35",
   "license": "MIT",
   "scripts": {
     "prebuild": "npm run clean",
@@ -49,12 +49,14 @@
     "prettier-package-json": "^2.8.0",
     "sass": "^1.67.0",
     "sass-loader": "^13.3.2",
+    "semver": "^7.5.4",
     "style-loader": "^3.3.3",
     "stylelint": "^15.10.1",
     "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^4.3.0",
     "stylelint-config-standard": "^34.0.0",
+    "stylelint-scss": "^5.2.1",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.0"

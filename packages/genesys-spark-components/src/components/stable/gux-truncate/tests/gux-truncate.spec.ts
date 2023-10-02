@@ -4,7 +4,7 @@ jest.mock('../../../../utils/decorator/on-resize', () => ({
 }));
 
 import MutationObserver from 'mutation-observer';
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxTruncate } from '../gux-truncate';
 
 const components = [GuxTruncate];

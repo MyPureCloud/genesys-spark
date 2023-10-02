@@ -3,10 +3,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  gap: var(--gse-ui-toast-gap);
   align-content: stretch;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: var(--gse-ui-toast-gap);
   width: var(--gse-ui-toast-wrappingWidth);
   padding: var(--gse-ui-toast-margin);
   margin-bottom: var(--gse-ui-toast-stacking-gap);
@@ -52,12 +52,12 @@
     flex: 1 1 auto;
     flex-direction: column;
     flex-wrap: nowrap;
+    gap: var(--gse-ui-toast-gapButton);
     align-content: stretch;
     align-items: flex-start;
     align-self: auto;
     justify-content: flex-start;
     order: 0;
-    gap: var(--gse-ui-toast-gapButton);
 
     .gux-message {
       display: flex;
@@ -66,15 +66,15 @@
 
       .gux-message-title {
         font-family: var(--gse-ui-toast-heading-fontFamily);
-        line-height: var(--gse-ui-toast-heading-lineHeight);
         font-size: var(--gse-ui-toast-heading-fontSize);
         font-weight: var(--gse-ui-toast-heading-fontWeight);
+        line-height: var(--gse-ui-toast-heading-lineHeight);
       }
 
       .gux-message-body {
         font-family: var(--gse-ui-toast-text-fontFamily);
-        line-height: var(--gse-ui-toast-text-lineHeight);
         font-size: var(--gse-ui-toast-text-fontSize);
+        line-height: var(--gse-ui-toast-text-lineHeight);
       }
     }
 
@@ -82,8 +82,8 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      justify-content: flex-start;
       gap: var(--gse-ui-toast-buttonBar-gap);
+      justify-content: flex-start;
     }
   }
 

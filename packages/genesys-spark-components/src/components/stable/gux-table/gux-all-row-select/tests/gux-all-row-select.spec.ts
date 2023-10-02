@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxAllRowSelect } from '../gux-all-row-select';
 
 const components = [GuxAllRowSelect];

@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxButton } from '../../gux-button/gux-button';
 
 const components = [GuxButton];

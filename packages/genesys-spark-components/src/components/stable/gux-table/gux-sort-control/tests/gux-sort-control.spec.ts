@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import MutationObserver from 'mutation-observer';
 
 import { GuxSortControl } from '../gux-sort-control';
@@ -48,7 +48,7 @@ describe('gux-sort-control', () => {
           const sortControl = document.querySelector(
             'th[data-column-name="c1"] > gux-sort-control'
           );
-          const sortButton = sortControl.shadowRoot.querySelector(
+          const sortButton = sortControl.shadowRoot.querySelector<HTMLElement>(
             'button.gux-sort-button'
           );
           sortButton.click();

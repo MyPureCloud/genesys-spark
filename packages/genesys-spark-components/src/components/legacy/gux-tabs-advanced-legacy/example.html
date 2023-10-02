@@ -1,0 +1,380 @@
+<h1>gux-tabs-advanced-legacy</h1>
+<h2>Example 1 - no add tab button</h2>
+<gux-tabs-advanced-legacy>
+  <gux-tab-advanced-list-legacy slot="tab-list" show-new-tab-button="false">
+    <gux-tab-advanced-legacy tab-id="1-1">
+      <span id="tabTitle1">Tab Header 1</span>
+    </gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="1-2">Tab Header 2</gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="1-3">Tab Header 3</gux-tab-advanced-legacy>
+  </gux-tab-advanced-list-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="1-1">
+    <span>Tab content 1</span>
+    <div>The current time is: <span id="currentTime"></span></div>
+    <div>
+      The current selected panel tab-id is: <span id="currenttab-id"></span>
+    </div>
+    <gux-button id="changeTabTitle">Change Tab Name</gux-button>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="1-2">
+    <span>Tab content 2</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="1-3">
+    <span>Tab content 3</span>
+  </gux-tab-advanced-panel-legacy>
+</gux-tabs-advanced-legacy>
+
+<h2>Example 2 - add tab button (with text)</h2>
+<gux-tabs-advanced-legacy>
+  <gux-tab-advanced-list-legacy slot="tab-list" tab-limit="10">
+    <gux-tab-advanced-legacy tab-id="2-1">Tab Header 1</gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="2-2">
+      <span
+        >Tab Header 2 really long long long long long long long long long long
+        long long long</span
+      >
+    </gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="2-3">Tab Header 3</gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="2-4">Tab Header 4</gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="2-5">Tab Header 5</gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="2-6">Tab Header 6</gux-tab-advanced-legacy>
+    <div slot="add-tab">
+      <gux-icon icon-name="add" decorative></gux-icon>
+      Add Tab
+    </div>
+  </gux-tab-advanced-list-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="2-1">
+    <span>Tab content 1</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="2-2">
+    <span>Tab content 2</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="2-3">
+    <span>Tab content 3</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="2-4">
+    <span>Tab content 4</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="2-5">
+    <span>Tab content 5</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="2-6">
+    <span>Tab content 6</span>
+  </gux-tab-advanced-panel-legacy>
+</gux-tabs-advanced-legacy>
+
+<h2>Example 3 - tab overflow</h2>
+<div
+  style="width: 300px; overflow: auto; resize: both; border: 1px dotted black"
+>
+  <gux-tabs-advanced-legacy>
+    <gux-tab-advanced-list-legacy slot="tab-list">
+      <gux-tab-advanced-legacy tab-id="3-1">
+        Tab Header 1
+      </gux-tab-advanced-legacy>
+      <gux-tab-advanced-legacy tab-id="3-2">
+        Tab Header 2
+      </gux-tab-advanced-legacy>
+      <gux-tab-advanced-legacy tab-id="3-3">
+        Tab Header 3
+      </gux-tab-advanced-legacy>
+    </gux-tab-advanced-list-legacy>
+    <gux-tab-advanced-panel-legacy tab-id="3-1">
+      <span>Tab content 1</span>
+    </gux-tab-advanced-panel-legacy>
+    <gux-tab-advanced-panel-legacy tab-id="3-2">
+      <span>Tab content 2</span>
+    </gux-tab-advanced-panel-legacy>
+    <gux-tab-advanced-panel-legacy tab-id="3-3">
+      <span>Tab content 3</span>
+    </gux-tab-advanced-panel-legacy>
+  </gux-tabs-advanced-legacy>
+</div>
+
+<h2>Example 4 - dropdown options</h2>
+<gux-tabs-advanced-legacy>
+  <gux-tab-advanced-list-legacy
+    slot="tab-list"
+    allow-sort="true"
+    show-new-tab-button="true"
+    tab-limit="5"
+  >
+    <gux-tab-advanced-legacy tab-id="4-1">
+      Tab Header 1
+      <gux-list slot="dropdown-options">
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="edit" decorative="true"></gux-icon>
+          Edit
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="clone" decorative="true"></gux-icon>
+          Clone
+        </gux-list-item>
+        <gux-list-item option-id="3" icon-name="share" onclick="notify(event)">
+          <gux-icon icon-name="share" decorative="true"></gux-icon>
+          Share
+        </gux-list-item>
+        <gux-list-item
+          option-id="4"
+          icon-name="download"
+          onclick="notify(event)"
+        >
+          <gux-icon icon-name="download" decorative="true"></gux-icon>
+          Download
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
+          Close
+        </gux-list-item>
+      </gux-list>
+    </gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="4-2">
+      Tab Header 2
+      <gux-list slot="dropdown-options">
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="edit" decorative="true"></gux-icon>
+          Edit
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="clone" decorative="true"></gux-icon>
+          Clone
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="share" decorative="true"></gux-icon>
+          Share
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="download" decorative="true"></gux-icon>
+          Download
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
+          Close
+        </gux-list-item>
+      </gux-list>
+    </gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="4-3">
+      Tab Header 3
+      <gux-list slot="dropdown-options">
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="edit" decorative="true"></gux-icon>
+          Edit
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="clone" decorative="true"></gux-icon>
+          Clone
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="share" decorative="true"></gux-icon>
+          Share
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="download" decorative="true"></gux-icon>
+          Download
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
+          Close
+        </gux-list-item>
+      </gux-list>
+    </gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy gux-disabled tab-id="4-4">
+      Tab Header 4
+      <gux-list slot="dropdown-options">
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="edit" decorative="true"></gux-icon>
+          Edit
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="clone" decorative="true"></gux-icon>
+          Clone
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="share" decorative="true"></gux-icon>
+          Share
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="download" decorative="true"></gux-icon>
+          Download
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
+          Close
+        </gux-list-item>
+      </gux-list>
+    </gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy gux-disabled tab-id="4-5">
+      Tab Header 5
+      <gux-list slot="dropdown-options">
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="edit" decorative="true"></gux-icon>
+          Edit
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="clone" decorative="true"></gux-icon>
+          Clone
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="share" decorative="true"></gux-icon>
+          Share
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="download" decorative="true"></gux-icon>
+          Download
+        </gux-list-item>
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
+          Close
+        </gux-list-item>
+      </gux-list>
+    </gux-tab-advanced-legacy>
+  </gux-tab-advanced-list-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="4-1">
+    <span>Tab content 1</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="4-2">
+    <span>Tab content 2</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="4-3">
+    <span>Tab content 3</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="4-4">
+    <span>Tab content 4</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="4-5">
+    <span>Tab content 5</span>
+  </gux-tab-advanced-panel-legacy>
+</gux-tabs-advanced-legacy>
+
+<h2>Example 5 - label with icon</h2>
+<gux-tabs-advanced-legacy>
+  <gux-tab-advanced-list-legacy
+    slot="tab-list"
+    allow-sort="false"
+    show-new-tab-button="true"
+    tab-limit="10"
+  >
+    <gux-tab-advanced-legacy tab-id="5-1">
+      <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+      Lock
+    </gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="5-2">
+      <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+      Email
+      <gux-list slot="dropdown-options">
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
+          Close
+        </gux-list-item>
+      </gux-list>
+    </gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy gux-disabled tab-id="5-3">
+      <gux-icon icon-name="user-directory" decorative="true"></gux-icon>
+      Phone
+    </gux-tab-advanced-legacy>
+
+    <gux-tab-advanced-legacy tab-id="5-4">
+      <gux-icon icon-name="attachment" decorative="true"></gux-icon>
+      Attachment
+      <gux-list slot="dropdown-options">
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
+          Close
+        </gux-list-item>
+      </gux-list>
+    </gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="5-5">
+      <gux-icon icon-name="export" decorative="true"></gux-icon>
+      Export
+    </gux-tab-advanced-legacy>
+    <div slot="add-tab">
+      <gux-icon icon-name="file-preview" decorative></gux-icon>
+      Add View
+    </div>
+  </gux-tab-advanced-list-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="5-1">
+    <span>Tab content 1</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="5-2">
+    <span>Tab content 2</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="5-3">
+    <span>Tab content 3</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="5-4">
+    <span>Tab content 4</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="5-5">
+    <span>Tab content 5</span>
+  </gux-tab-advanced-panel-legacy>
+</gux-tabs-advanced-legacy>
+
+<h2>Example 6 - dropdown options and no dropdown options</h2>
+<gux-tabs-advanced-legacy>
+  <gux-tab-advanced-list-legacy
+    slot="tab-list"
+    allow-sort="false"
+    show-new-tab-button="true"
+    tab-limit="10"
+  >
+    <gux-tab-advanced-legacy tab-id="6-1">
+      Tab Header 1 long long
+    </gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="6-2">
+      <span
+        >Tab Header 2
+        longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong</span
+      >
+      <gux-list slot="dropdown-options">
+        <gux-list-item onclick="notify(event)">
+          <gux-icon icon-name="close" decorative="true"></gux-icon>
+          Close
+        </gux-list-item>
+      </gux-list>
+    </gux-tab-advanced-legacy>
+    <gux-tab-advanced-legacy tab-id="6-3">
+      Tab Header 3
+    </gux-tab-advanced-legacy>
+  </gux-tab-advanced-list-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="6-1">
+    <span>Tab content 1</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="6-2">
+    <span>Tab content 2</span>
+  </gux-tab-advanced-panel-legacy>
+  <gux-tab-advanced-panel-legacy tab-id="6-3">
+    <span>Tab content 3</span>
+  </gux-tab-advanced-panel-legacy>
+</gux-tabs-advanced-legacy>
+
+<style
+  onload="(function () {
+    document.querySelector(`gux-tab-advanced-panel-legacy[tab-id='1-1']`).addEventListener('guxactivepanelchange',
+    (event) => {
+      const currentTime = new Date().toLocaleTimeString();
+      document.querySelector('#currentTime').innerHTML = currentTime;
+      document.querySelector('#currenttab-id').innerHTML = event.detail;
+    })
+    document.querySelectorAll(`gux-tab-advanced-list-legacy`).forEach(el =>
+        el.addEventListener('sortChanged', event => {
+          notify(event);
+        })
+      );
+    document.querySelector(`#changeTabTitle`).addEventListener('click',
+    () => {
+      const tabTitle1 = document.querySelector(`#tabTitle1`);
+      if (tabTitle1.innerText === 'Tab Header 1') {
+        tabTitle1.innerText = 'Long title long title long title long title'
+      } else if (tabTitle1.innerText === 'Long title long title long title long title') {
+        tabTitle1.innerText = 'Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1 Tab 1'
+      } else {
+        tabTitle1.innerText = 'Tab Header 1'
+      }
+    })
+  }
+  )()"
+>
+  .not-used {
+    -custom-noop: noop;
+  }
+</style>

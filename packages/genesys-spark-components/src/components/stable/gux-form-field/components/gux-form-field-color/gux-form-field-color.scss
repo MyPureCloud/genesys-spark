@@ -1,22 +1,20 @@
-@import '../../../../../style/mixins.scss';
-@import '../../../../../style/focus.scss';
-@import '../../../../../style/typography.scss';
-@import '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
-@import '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
-@import '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
-@import '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+@use '../../../../../style/typography.scss';
+@use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
+@use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
+@use '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
+@use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
 
-@include GuxFormFieldContainerStyle;
-@include GuxFormFieldErrorStyle;
-@include GuxFormFieldLabelStyle;
-@include GuxFormFieldHelpStyle;
+@include gux-form-field-container.GuxFormFieldContainerStyle;
+@include gux-form-field-error.GuxFormFieldErrorStyle;
+@include gux-form-field-label.GuxFormFieldLabelStyle;
+@include gux-form-field-help.GuxFormFieldHelpStyle;
 
 :host {
   display: block;
 }
 
 ::slotted(label) {
-  @include gse-ui-formControl-label;
+  @include typography.gse-ui-formControl-label;
 }
 
 ::slotted(input) {
@@ -56,11 +54,11 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
+      gap: var(--gse-ui-formControl-input-gap);
       align-content: stretch;
       align-items: center;
       align-self: auto;
       justify-content: center;
-      gap: var(--gse-ui-formControl-input-gap);
       order: 0;
       height: var(--gse-ui-formControl-input-textfield-height);
       font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
@@ -76,13 +74,13 @@
       }
 
       &:focus-within {
-        outline: var(--gse-ui-formControl-input-focus-border-width)
-          var(--gse-ui-formControl-input-focus-border-style)
-          var(--gse-ui-formControl-input-focus-border-color);
         border: var(--gse-ui-formControl-input-active-border-width)
           var(--gse-ui-formControl-input-active-border-style)
           var(--gse-ui-formControl-input-active-border-color);
         border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+        outline: var(--gse-ui-formControl-input-focus-border-width)
+          var(--gse-ui-formControl-input-focus-border-style)
+          var(--gse-ui-formControl-input-focus-border-color);
       }
 
       &.gux-input-error {

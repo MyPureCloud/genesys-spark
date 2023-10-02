@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-segmented-control-beta #render should render as expected 1`] = `
+<gux-segmented-control-beta role="group" value="day">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <gux-segmented-control-item value="month">
+    <mock:shadow-root>
+      <div class="gux-container gux-start">
+        <button class="gux-segmented-control-item" type="button">
+          <div class="gux-text">
+            <slot name="text"></slot>
+          </div>
+        </button>
+      </div>
+    </mock:shadow-root>
+    <div slot="text">
+      Month
+    </div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item value="week">
+    <mock:shadow-root>
+      <div class="gux-container">
+        <button class="gux-segmented-control-item" type="button">
+          <div class="gux-text">
+            <slot name="text"></slot>
+          </div>
+        </button>
+      </div>
+    </mock:shadow-root>
+    <div slot="text">
+      Week
+    </div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item value="day">
+    <mock:shadow-root>
+      <div class="gux-container">
+        <button class="gux-segmented-control-item" type="button">
+          <div class="gux-text">
+            <slot name="text"></slot>
+          </div>
+        </button>
+      </div>
+    </mock:shadow-root>
+    <div slot="text">
+      Day
+    </div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item disabled="" value="hour">
+    <mock:shadow-root>
+      <div class="gux-container">
+        <button class="gux-segmented-control-item" disabled="" type="button">
+          <div class="gux-text">
+            <slot name="text"></slot>
+          </div>
+        </button>
+      </div>
+    </mock:shadow-root>
+    <div slot="text">
+      Hour
+    </div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item value="minute">
+    <mock:shadow-root>
+      <div class="gux-container gux-end">
+        <button class="gux-segmented-control-item" type="button">
+          <div class="gux-text">
+            <slot name="text"></slot>
+          </div>
+        </button>
+      </div>
+    </mock:shadow-root>
+    <div slot="text">
+      Minute
+    </div>
+  </gux-segmented-control-item>
+</gux-segmented-control-beta>
+`;
+
+exports[`gux-segmented-control-beta onSlotchange should set selected items as expected 1`] = `
+<gux-segmented-control-beta role="group" value="day">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <gux-segmented-control-item value="month">
+    <mock:shadow-root>
+      <div class="gux-container gux-start">
+        <button class="gux-segmented-control-item" type="button">
+          <div class="gux-text">
+            <slot name="text"></slot>
+          </div>
+        </button>
+      </div>
+    </mock:shadow-root>
+    <div slot="text">
+      Month
+    </div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item value="week">
+    <mock:shadow-root>
+      <div class="gux-container">
+        <button class="gux-segmented-control-item" type="button">
+          <div class="gux-text">
+            <slot name="text"></slot>
+          </div>
+        </button>
+      </div>
+    </mock:shadow-root>
+    <div slot="text">
+      Week
+    </div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item value="day">
+    <mock:shadow-root>
+      <div class="gux-container">
+        <button class="gux-segmented-control-item" type="button">
+          <div class="gux-text">
+            <slot name="text"></slot>
+          </div>
+        </button>
+      </div>
+    </mock:shadow-root>
+    <div slot="text">
+      Day
+    </div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item disabled="" value="hour">
+    <mock:shadow-root>
+      <div class="gux-container">
+        <button class="gux-segmented-control-item" disabled="" type="button">
+          <div class="gux-text">
+            <slot name="text"></slot>
+          </div>
+        </button>
+      </div>
+    </mock:shadow-root>
+    <div slot="text">
+      Hour
+    </div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item value="minute">
+    <mock:shadow-root>
+      <div class="gux-container gux-end">
+        <button class="gux-segmented-control-item" type="button">
+          <div class="gux-text">
+            <slot name="text"></slot>
+          </div>
+        </button>
+      </div>
+    </mock:shadow-root>
+    <div slot="text">
+      Minute
+    </div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item value="second">
+    <mock:shadow-root>
+      <div class="gux-container gux-end">
+        <button class="gux-segmented-control-item" type="button">
+          <div class="gux-text">
+            <slot name="text"></slot>
+          </div>
+        </button>
+      </div>
+    </mock:shadow-root>
+    Second
+  </gux-segmented-control-item>
+</gux-segmented-control-beta>
+`;

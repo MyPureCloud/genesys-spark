@@ -1,0 +1,141 @@
+<h1>gux-segmented-control</h1>
+
+<h2>Icon</h2>
+
+<div>
+  <gux-segmented-control-beta
+    value="align-left"
+    onchange="notify(event)"
+    oninput="notify(event)"
+  >
+    <gux-segmented-control-item value="align-left" icon-only>
+      <gux-icon
+        slot="icon"
+        icon-name="fa/align-left-regular"
+        decorative
+      ></gux-icon>
+      <div slot="text">Align left</div>
+    </gux-segmented-control-item>
+
+    <gux-segmented-control-item value="align-center" icon-only>
+      <gux-icon
+        slot="icon"
+        icon-name="fa/align-center-regular"
+        decorative
+      ></gux-icon>
+      <div slot="text">Align center</div>
+    </gux-segmented-control-item>
+
+    <gux-segmented-control-item value="align-right" icon-only disabled>
+      <gux-icon
+        slot="icon"
+        icon-name="fa/align-right-regular"
+        decorative
+      ></gux-icon>
+      <div slot="text">Align right</div>
+    </gux-segmented-control-item>
+
+    <gux-segmented-control-item value="align-justify" icon-only>
+      <gux-icon
+        slot="icon"
+        icon-name="fa/align-justify-regular"
+        decorative
+      ></gux-icon>
+      <div slot="text">Justify</div>
+    </gux-segmented-control-item>
+  </gux-segmented-control-beta>
+</div>
+
+<h2>Text</h2>
+
+<div>
+  <gux-segmented-control-beta
+    value="day"
+    onchange="notify(event)"
+    oninput="notify(event)"
+  >
+    <gux-segmented-control-item value="month">
+      <div slot="text">Month</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="week">
+      <div slot="text">Week</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="day">
+      <div slot="text">Day</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="hour" disabled>
+      <div slot="text">Hour</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="minute">
+      <div slot="text">Minute</div>
+    </gux-segmented-control-item>
+  </gux-segmented-control-beta>
+</div>
+
+<h2>Icon and Text</h2>
+
+<div>
+  <gux-segmented-control-beta
+    value="collapse"
+    onchange="notify(event)"
+    oninput="notify(event)"
+  >
+    <gux-segmented-control-item value="collapse">
+      <gux-icon slot="icon" icon-name="collapse" decorative></gux-icon>
+      <div slot="text">Collapse</div>
+    </gux-segmented-control-item>
+
+    <gux-segmented-control-item value="expand">
+      <gux-icon slot="icon" icon-name="expand" decorative></gux-icon>
+      <div slot="text">Expand</div>
+    </gux-segmented-control-item>
+  </gux-segmented-control-beta>
+</div>
+
+<div>
+  <gux-segmented-control-beta
+    value="collapse"
+    onchange="notify(event)"
+    oninput="notify(event)"
+  >
+    <gux-segmented-control-item value="expand">
+      <gux-icon slot="icon" icon-name="expand" decorative></gux-icon>
+      <div slot="text">Expand</div>
+    </gux-segmented-control-item>
+  </gux-segmented-control-beta>
+</div>
+
+<h2>Get value</h2>
+
+<gux-segmented-control-beta id="get-value" value="day">
+  <gux-segmented-control-item value="month">
+    <div slot="text">Month</div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item value="week">
+    <div slot="text">Week</div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item value="day">
+    <div slot="text">Day</div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item value="hour" disabled>
+    <div slot="text">Hour</div>
+  </gux-segmented-control-item>
+  <gux-segmented-control-item value="minute">
+    <div slot="text">Minute</div>
+  </gux-segmented-control-item>
+</gux-segmented-control-beta>
+
+<div>
+  Last retrieved value from gux-segmented-control:
+  <span id="value-output">N/A</span>
+</div>
+
+<gux-button
+  onclick="(function() {
+  const guxSegmentedControl = document.getElementById('get-value');
+  const valueOutput = document.getElementById('value-output');
+
+  valueOutput.textContent = guxSegmentedControl.value;
+})()"
+  >Get Value</gux-button
+>

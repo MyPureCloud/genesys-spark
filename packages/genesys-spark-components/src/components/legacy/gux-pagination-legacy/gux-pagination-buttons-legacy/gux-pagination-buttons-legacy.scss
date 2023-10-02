@@ -2,14 +2,14 @@
   font-family: var(
     --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
   );
-  color: var(--gse-ui-button-ghost-default-foregroundColor);
   font-size: var(--gse-ui-dataTableItems-tablePagination-defaultText-fontSize);
-  line-height: var(
-    --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
-  );
   font-weight: var(
     --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
   );
+  line-height: var(
+    --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
+  );
+  color: var(--gse-ui-button-ghost-default-foregroundColor);
 }
 
 gux-pagination-buttons-legacy {
@@ -17,8 +17,8 @@ gux-pagination-buttons-legacy {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: stretch;
     gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+    align-content: stretch;
     align-items: center;
     justify-content: flex-end;
     margin-left: var(
@@ -43,10 +43,10 @@ gux-pagination-buttons-legacy {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
+      gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
       align-content: stretch;
       align-items: center;
       justify-content: center;
-      gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
 
       & > div {
         flex: 0 1 auto;
@@ -69,51 +69,53 @@ gux-pagination-buttons-legacy {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
+      gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
       align-content: stretch;
       align-items: center;
-      gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
       justify-content: center;
 
       .gux-pagination-buttons-list-button {
         height: 32px;
-        padding-left: var(
-          --gse-ui-dataTableItems-tablePagination-countDisplay-gap
-        );
         padding-right: var(
           --gse-ui-dataTableItems-tablePagination-countDisplay-gap
         );
-        margin-left: var(
+        padding-left: var(
           --gse-ui-dataTableItems-tablePagination-countDisplay-gap
         );
         margin-right: var(
+          --gse-ui-dataTableItems-tablePagination-countDisplay-gap
+        );
+        margin-left: var(
           --gse-ui-dataTableItems-tablePagination-countDisplay-gap
         );
         background: inherit;
         border: none;
 
         &:focus-visible {
-          outline: var(--gse-semantic-focusRing-width) solid
-            var(--gse-semantic-color-focus);
-          outline-offset: var(--gse-semantic-focusRing-offset);
           border-radius: calc(
             var(--gse-semantic-focusRing-cornerRadius) -
               var(--gse-semantic-focusRing-offset)
           );
+          outline: var(--gse-semantic-focusRing-width) solid
+            var(--gse-semantic-color-focus);
+          outline-offset: var(--gse-semantic-focusRing-offset);
         }
 
         &.gux-current {
+          padding-right: var(--gse-ui-dataTableItems-tablePagination-padding);
+          padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
           background-color: var(--gse-ui-button-ghost-active-backgroundColor);
           border-radius: var(--gse-ui-button-borderRadius);
-          padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
-          padding-right: var(--gse-ui-dataTableItems-tablePagination-padding);
-          @include gse-ui-dataTableItems-tablePagination-typography();
+
+          @include gse-ui-dataTableItems-tablePagination-typography;
         }
 
         &.gux-target {
-          padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
           padding-right: var(--gse-ui-dataTableItems-tablePagination-padding);
-          @include gse-ui-dataTableItems-tablePagination-typography();
+          padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
           cursor: pointer;
+
+          @include gse-ui-dataTableItems-tablePagination-typography;
 
           &:hover {
             color: var(--gse-ui-button-ghost-hover-foregroundColor);

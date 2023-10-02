@@ -1,0 +1,110 @@
+gux-tabs {
+  &[orientation='vertical'] {
+    height: 100%;
+
+    > gux-tab-list {
+      .gux-tab-container {
+        display: flex;
+        flex-direction: column;
+        width: 160px;
+        max-width: 160px;
+        height: 100%;
+        margin-right: 16px;
+        border-right: 1px solid #d7dce5;
+
+        .gux-scroll-button-container {
+          width: 100%;
+
+          button {
+            width: 100%;
+          }
+        }
+
+        .gux-scrollable-section {
+          flex-direction: column;
+          height: 100%;
+          overflow-y: auto;
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none; /* Internet Explorer 10+ */
+          scroll-behavior: smooth;
+
+          &::-webkit-scrollbar {
+            /* WebKit */
+            width: 0;
+            height: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &:not([orientation='vertical']) {
+    > gux-tab-list {
+      .gux-tab-container {
+        height: 40px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #d7dce5;
+      }
+
+      .gux-scrollable-section {
+        overflow-x: auto;
+      }
+    }
+  }
+
+  .gux-tab-container {
+    box-sizing: content-box;
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #fff;
+  }
+
+  .gux-scrollable-section {
+    display: flex;
+    flex: 1 1 auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+
+  .gux-scroll-button-container {
+    display: flex;
+    border-radius: 4px;
+
+    .gux-scroll-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 40px;
+      color: #202937;
+      cursor: pointer;
+      background-color: #e2e6ee;
+      border: none;
+      border-radius: 4px;
+
+      gux-icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      &:hover:not(:disabled) {
+        background-color: #d7dce5;
+      }
+
+      &:active:not(:disabled) {
+        background-color: darken(#e2e6ee, 5%);
+      }
+
+      &:disabled {
+        cursor: default;
+        opacity: 0.5;
+      }
+    }
+  }
+}

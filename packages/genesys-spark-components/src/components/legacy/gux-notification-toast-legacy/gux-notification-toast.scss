@@ -1,5 +1,5 @@
 // Variables part
-@import '../../../style/typography';
+@use '../../../style/typography';
 
 :host {
   position: relative;
@@ -70,6 +70,6 @@
   }
 
   .gux-title {
-    @include h4-6;
+    @include typography.h4-6;
   }
 }

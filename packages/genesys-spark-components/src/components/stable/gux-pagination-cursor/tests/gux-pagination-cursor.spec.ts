@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxPaginationCursor } from '../gux-pagination-cursor';
 
 const components = [GuxPaginationCursor];

@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxLoadingMessage } from '../gux-loading-message';
 
 const components = [GuxLoadingMessage];

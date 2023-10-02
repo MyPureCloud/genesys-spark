@@ -7,6 +7,7 @@ button[disabled] {
 
 .gux-sr-only {
   display: flex;
+
   @include mixins.gux-sr-only-clip;
 }
 

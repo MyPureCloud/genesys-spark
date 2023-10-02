@@ -1,12 +1,12 @@
-@import '../../../style/zindex.scss';
+@use '../../../style/zindex.scss';
 
 .gux-popover-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 280px;
-  z-index: var(--gux-zindex-popover, $gux-zindex-popover);
+  z-index: var(--gux-zindex-popover, zindex.$gux-zindex-popover);
   display: inline-block;
+  min-width: 280px;
   padding: var(--gse-ui-popover-gap);
   background-color: var(--gse-ui-popover-backgroundColor);
   border-radius: var(--gse-ui-popover-borderRadius);
@@ -26,17 +26,17 @@
   }
 
   .gux-popover-header {
-    font-family: var(--gse-ui-popover-title-text-fontFamily);
-    font-size: var(--gse-ui-popover-title-text-fontSize);
-    font-weight: var(--gse-ui-popover-title-text-fontWeight);
-    line-height: var(--gse-ui-popover-title-text-lineHeight);
-    color: (--gse-ui-popover-headerColor);
     display: flex;
     flex-direction: row;
     align-content: center;
     align-items: center;
     justify-content: space-between;
     padding-bottom: var(--gse-ui-popover-gap);
+    font-family: var(--gse-ui-popover-title-text-fontFamily);
+    font-size: var(--gse-ui-popover-title-text-fontSize);
+    font-weight: var(--gse-ui-popover-title-text-fontWeight);
+    line-height: var(--gse-ui-popover-title-text-lineHeight);
+    color: (--gse-ui-popover-headercolor);
   }
 
   gux-dismiss-button {

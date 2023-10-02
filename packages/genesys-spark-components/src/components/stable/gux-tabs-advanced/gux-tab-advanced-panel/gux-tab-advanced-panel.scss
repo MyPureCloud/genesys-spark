@@ -1,0 +1,13 @@
+@use '../../../../style/focus';
+
+gux-tab-advanced-panel {
+  div[role='tabpanel'] {
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      @include focus.gux-focus-ring;
+    }
+  }
+}

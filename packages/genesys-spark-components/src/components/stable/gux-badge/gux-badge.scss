@@ -1,4 +1,4 @@
-@import '../../../style/mixins';
+@use '../../../style/mixins';
 
 /**
   * @prop --gse-ui-badge-height
@@ -36,16 +36,16 @@
 .gux-badge {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  gap: var(--gse-ui-badge-gap);
   align-items: center;
+  justify-content: center;
   height: var(--gse-ui-badge-height);
   padding: var(--gse-ui-badge-padding);
-  border-radius: var(--gse-ui-badge-borderRadius);
-  gap: var(--gse-ui-badge-gap);
   font-family: var(--gse-ui-badge-text-fontFamily);
   font-size: var(--gse-ui-badge-text-fontSize);
   font-weight: var(--gse-ui-badge-text-fontWeight, 600);
   line-height: var(--gse-ui-badge-text-lineHeight);
+  border-radius: var(--gse-ui-badge-borderRadius);
 
   gux-tooltip-title {
     white-space: nowrap;
@@ -57,7 +57,7 @@
   }
 
   .gux-sr-only {
-    @include gux-sr-only-clip;
+    @include mixins.gux-sr-only-clip;
   }
 
   &.gux-info {

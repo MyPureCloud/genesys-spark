@@ -2,6 +2,53 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.35](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.34...v4.0.0-beta.35) (2023-09-29)
+
+
+### Features
+
+* **icon:** custom empathy icon ([3260185](https://github.com/MyPureCloud/genesys-webcomponents/commit/3260185395985b1fdb2ed4a385e4538d69d56058))
+
+## [4.0.0-beta.34](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.33...v4.0.0-beta.34) (2023-09-28)
+
+## [4.0.0-beta.33](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.32...v4.0.0-beta.33) (2023-09-27)
+
+
+### Features
+
+* **gux-modal:** v4 upgrade ([e9736c3](https://github.com/MyPureCloud/genesys-webcomponents/commit/e9736c39036592ae3551e887baa729f6011c7389))
+
+
+### Bug Fixes
+
+* **gux-popup:** add property to gux-popup to specify popup container width strategy ([13cd6ff](https://github.com/MyPureCloud/genesys-webcomponents/commit/13cd6ffc997ffc0a93cd3c9c7dfc031a2b6bba69))
+
+## [4.0.0-beta.32](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.31...v4.0.0-beta.32) (2023-09-26)
+
+
+### Features
+
+* **gux-datepicker:** token adoption ([8876094](https://github.com/MyPureCloud/genesys-webcomponents/commit/88760940a83d2a10a913b00ce261882fc4175138))
+* **segment-control:** added segment control component ([39a0c29](https://github.com/MyPureCloud/genesys-webcomponents/commit/39a0c297ebfc1667d00aaa402c8775c1fea1a753))
+
+
+### Bug Fixes
+
+* **sass:** fixed sass build warnings ([d757b11](https://github.com/MyPureCloud/genesys-webcomponents/commit/d757b11a7404435d95c13d1ab97606aa8bb4c346))
+
+## [4.0.0-beta.31](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.30...v4.0.0-beta.31) (2023-09-23)
+
+
+### Features
+
+* **action-button:** removed title property from action button ([8b6015a](https://github.com/MyPureCloud/genesys-webcomponents/commit/8b6015ae8771794f37eea79e523d069bead7008e))
+* **gux-context-menu:** add compact property for use with compact gux-tables ([df0a726](https://github.com/MyPureCloud/genesys-webcomponents/commit/df0a726b8b24af8d59e05a759f0072b364b9ca79))
+
+
+### Bug Fixes
+
+* **versions:** removed prerelease versions from generated versions file ([876f72c](https://github.com/MyPureCloud/genesys-webcomponents/commit/876f72c91813d7a8db0a02379522456ec515b2a0))
+
 ## [4.0.0-beta.30](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.29...v4.0.0-beta.30) (2023-09-22)
 
 

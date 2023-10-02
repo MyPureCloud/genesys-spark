@@ -33,7 +33,8 @@ async function keypressOnListItemButton(
 
 describe('gux-action-button', () => {
   const html = `
-  <gux-action-button lang="en" text="Primary" accent="primary">
+  <gux-action-button lang="en" accent="primary">
+    <div slot="title">Primary</div>
     <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
     <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
     <gux-list-item onclick="notify(event)">Test 3</gux-list-item>

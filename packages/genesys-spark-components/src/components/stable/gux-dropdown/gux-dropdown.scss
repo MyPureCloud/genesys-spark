@@ -6,8 +6,8 @@
 }
 
 :host {
-  color: var(--gse-ui-formControl-input-populatedColor);
   box-sizing: border-box;
+  color: var(--gse-ui-formControl-input-populatedColor);
 }
 
 .gux-field,
@@ -24,8 +24,8 @@
   height: var(--gse-ui-formControl-input-textfield-height);
   font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
-  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
+  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   cursor: pointer;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
 }
@@ -114,7 +114,7 @@
         }
 
         .gux-filter-suggestion {
-          opacity: 50%; // missing token ticket: COMUI-2285
+          opacity: 0.5; // missing token ticket: COMUI-2285
         }
       }
 
@@ -194,10 +194,6 @@
 .gux-listbox-container {
   box-sizing: border-box;
   margin: 0;
-}
-
-gux-popup::part(gux-popup-container) {
-  width: inherit;
 }
 
 // Selected option styles

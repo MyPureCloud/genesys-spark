@@ -21,11 +21,11 @@
 @prop --gse-ui-radioButton-focus-offset
 */
 
-@import '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
-@import '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+@use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
+@use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
 
-@include GuxFormFieldErrorStyle;
-@include GuxFormFieldHelpStyle;
+@include gux-form-field-error.GuxFormFieldErrorStyle;
+@include gux-form-field-help.GuxFormFieldHelpStyle;
 
 $gux-icon-radio-unchecked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40937 1.5 1.5 4.40937 1.5 8C1.5 11.5906 4.40937 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40937 11.5906 1.5 8 1.5Z' fill-rule='evenodd' clip-rule='evenodd' fill='%23767C8D'/%3E%3C/svg%3E";
 $gux-icon-radio-unchecked-hover: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40937 1.5 1.5 4.40937 1.5 8C1.5 11.5906 4.40937 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40937 11.5906 1.5 8 1.5Z' fill-rule='evenodd' clip-rule='evenodd' fill='%233742A2'/%3E%3C/svg%3E";
@@ -57,8 +57,8 @@ $gux-icon-radio-checked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xm
   }
 
   .gux-form-field-error {
-    color: var(--gse-ui-radioButton-icon-error-foregroundColor);
     font-family: var(--gse-ui-formControl-helper-helperText-fontFamily);
+    color: var(--gse-ui-radioButton-icon-error-foregroundColor);
   }
 }
 
@@ -78,7 +78,8 @@ $gux-icon-radio-checked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xm
   display: inline-grid;
   width: var(--gse-ui-radioButton-icon-width);
   height: var(--gse-ui-radioButton-icon-height);
-  margin: 1px var(--gse-ui-radioButton-helper-gap) 0px 0px;
+  margin: 1px var(--gse-ui-radioButton-helper-gap) 0 0;
+  color: var(--gse-ui-radioButton-icon-default-unselectedForegroundColor);
   text-align: center;
   vertical-align: middle;
   -webkit-appearance: none;
@@ -86,7 +87,6 @@ $gux-icon-radio-checked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xm
   cursor: pointer;
   border: 0;
   outline: none;
-  color: var(--gse-ui-radioButton-icon-default-unselectedForegroundColor);
 }
 
 ::slotted(input[type='radio'])::before {
@@ -126,10 +126,10 @@ $gux-icon-radio-checked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xm
 
 ::slotted(label) {
   display: inline-block;
-  font-size: var(--gse-ui-formControl-label-text-fontSize);
-  line-height: var(--gse-ui-radioButton-label-text-lineHeight);
-  vertical-align: middle;
-  font-weight: var(--gse-ui-radioButton-label-text-fontWeight);
-  color: var(--gse-ui-radioButton-label-foregroundColor);
   font-family: var(--gse-ui-radioButton-label-text-fontFamily);
+  font-size: var(--gse-ui-formControl-label-text-fontSize);
+  font-weight: var(--gse-ui-radioButton-label-text-fontWeight);
+  line-height: var(--gse-ui-radioButton-label-text-lineHeight);
+  color: var(--gse-ui-radioButton-label-foregroundColor);
+  vertical-align: middle;
 }

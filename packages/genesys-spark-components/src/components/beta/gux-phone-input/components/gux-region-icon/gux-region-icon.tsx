@@ -1,10 +1,12 @@
-import { Component, Element, getAssetPath, h, JSX, Prop } from '@stencil/core';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
+
 import { trackComponent } from '@utils/tracking/usage';
 
+import { spritesheetDataUrl } from './sprite-utils/sprites.generated';
+
 @Component({
+  styleUrl: 'gux-region-icon.scss',
   tag: 'gux-region-icon',
-  assetsDirs: ['assets'],
-  styleUrls: ['assets/sprites/region-flags.less'],
   shadow: true
 })
 export class GuxRegionIcon {
@@ -22,12 +24,11 @@ export class GuxRegionIcon {
   }
 
   render(): JSX.Element {
-    const regionFlagImgPath = getAssetPath('assets/sprites/region-flags.png');
     return (
       <span
         role={this.screenreaderText ? 'img' : ''}
-        class={'flag flag-' + this.region?.toLowerCase()}
-        style={{ backgroundImage: `url(${regionFlagImgPath})` }}
+        class={'gux-flag-' + this.region?.toLowerCase()}
+        style={{ backgroundImage: `url(${spritesheetDataUrl})` }}
         aria-label={this.screenreaderText}
       />
     ) as JSX.Element;

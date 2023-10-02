@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxScreenReader } from '../gux-screen-reader';
 
 const components = [GuxScreenReader];

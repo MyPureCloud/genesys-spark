@@ -1,0 +1,99 @@
+gux-tabs[orientation='vertical'] > gux-tab-list {
+  .gux-tab {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 16px;
+
+    &.gux-active {
+      padding-right: 16px - 2px;
+      border-right: 2px solid #2a60c8;
+    }
+
+    &:hover:not(.gux-active):not(.gux-disabled) {
+      padding-right: 16px - 2px;
+      border-right: 2px solid #8a97ad;
+    }
+  }
+}
+
+gux-tabs:not([orientation='vertical']) > gux-tab-list {
+  .gux-tab {
+    box-sizing: border-box;
+    padding-bottom: 2px;
+
+    &.gux-active {
+      padding-bottom: 0;
+      border-bottom: 2px solid #2a60c8;
+    }
+
+    &:hover:not(.gux-active):not(.gux-disabled) {
+      padding-bottom: 0;
+      border-bottom: 2px solid #8a97ad;
+    }
+
+    gux-tooltip-title {
+      margin: auto;
+    }
+  }
+}
+
+gux-tabs[alignment='center'] > gux-tab-list {
+  .gux-scrollable-section {
+    justify-content: center;
+  }
+}
+
+gux-tabs[alignment='full-width'] > gux-tab-list {
+  .gux-scrollable-section {
+    flex-grow: 1;
+  }
+
+  gux-tab {
+    width: 100%;
+    max-width: 100%;
+
+    .gux-tab {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+gux-tab {
+  display: flex;
+  max-width: 160px;
+
+  .gux-tab {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 160px;
+    height: 40px;
+    padding: 0 16px;
+    font-size: 14px;
+    color: #2e394c;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+
+    &.gux-disabled {
+      cursor: default;
+
+      gux-tooltip-title {
+        color: rgba(#2e394c, 50%);
+      }
+    }
+
+    &:focus-visible {
+      padding: 0 13px 3px;
+      border: 3px solid #aac9ff;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    gux-tooltip-title {
+      max-width: 160px;
+      white-space: nowrap;
+    }
+  }
+}

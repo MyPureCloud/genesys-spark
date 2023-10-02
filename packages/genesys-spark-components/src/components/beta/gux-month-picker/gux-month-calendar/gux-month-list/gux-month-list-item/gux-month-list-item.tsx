@@ -4,7 +4,7 @@ import { GuxISOYearMonth } from '../../../../../../utils/date/year-month-values'
 import { getClosestElement } from '../../../../../../utils/dom/get-closest-element';
 
 @Component({
-  styleUrl: 'gux-month-list-item.less',
+  styleUrl: 'gux-month-list-item.scss',
   tag: 'gux-month-list-item',
   shadow: { delegatesFocus: true }
 })

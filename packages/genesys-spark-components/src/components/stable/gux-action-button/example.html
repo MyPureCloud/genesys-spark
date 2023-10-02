@@ -1,27 +1,21 @@
 <h1>gux-action-button</h1>
 <div id="example" class="layout">
   <div class="row">
-    <div class="overlap">
+    <div>
       <h2>Primary</h2>
-      <gux-action-button text="Primary" accent="primary" is-open="true">
+      <gux-action-button accent="primary">
+        <div slot="title">Primary</div>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
         <gux-list-divider></gux-list-divider>
         <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
       </gux-action-button>
-
-      <gux-action-button text="Primary" accent="primary">
-        <gux-list-item onclick="notify(event)" disabled>Test 1</gux-list-item>
-        <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
-        <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
-        <gux-list-divider></gux-list-divider>
-        <gux-list-item onclick="notify(event)" disabled>Test 4</gux-list-item>
-      </gux-action-button>
     </div>
     <div>
       <h2>Secondary</h2>
-      <gux-action-button text="Secondary" accent="secondary">
+      <gux-action-button accent="secondary">
+        <div slot="title">Secondary</div>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -31,7 +25,8 @@
     </div>
     <div>
       <h2>Tertiary</h2>
-      <gux-action-button text="Tertiary" accent="tertiary">
+      <gux-action-button accent="tertiary">
+        <div slot="title">Tertiary</div>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -41,7 +36,8 @@
     </div>
     <div>
       <h2>Danger</h2>
-      <gux-action-button text="Danger" accent="danger">
+      <gux-action-button accent="danger">
+        <div slot="title">Danger</div>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -52,7 +48,8 @@
 
     <div>
       <h2>Invalid</h2>
-      <gux-action-button text="Invalid" accent="inline">
+      <gux-action-button accent="invalid">
+        <div slot="title">Invalid</div>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -63,7 +60,115 @@
 
     <div>
       <h2>Disabled</h2>
-      <gux-action-button class="disable-toggle" text="Disabled" disabled>
+      <gux-action-button class="disable-toggle" disabled>
+        <div slot="title">Disabled</div>
+        <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+        <gux-list-divider></gux-list-divider>
+        <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+      </gux-action-button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <h2>Primary</h2>
+      <gux-action-button accent="primary">
+        <div slot="title">
+          <gux-icon
+            icon-name="generic"
+            screenreader-text="This will be read by a screen reader"
+          ></gux-icon>
+          Primary
+        </div>
+        <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+        <gux-list-divider></gux-list-divider>
+        <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+      </gux-action-button>
+    </div>
+    <div>
+      <h2>Secondary</h2>
+      <gux-action-button accent="secondary">
+        <div slot="title">
+          <gux-icon
+            icon-name="generic"
+            screenreader-text="This will be read by a screen reader"
+          ></gux-icon>
+          Secondary
+        </div>
+        <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+        <gux-list-divider></gux-list-divider>
+        <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+      </gux-action-button>
+    </div>
+    <div>
+      <h2>Tertiary</h2>
+      <gux-action-button accent="tertiary">
+        <div slot="title">
+          <gux-icon
+            icon-name="generic"
+            screenreader-text="This will be read by a screen reader"
+          ></gux-icon>
+          Tertiary
+        </div>
+        <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+        <gux-list-divider></gux-list-divider>
+        <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+      </gux-action-button>
+    </div>
+    <div>
+      <h2>Danger</h2>
+      <gux-action-button accent="danger">
+        <div slot="title">
+          <gux-icon
+            icon-name="generic"
+            screenreader-text="This will be read by a screen reader"
+          ></gux-icon>
+          Danger
+        </div>
+        <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+        <gux-list-divider></gux-list-divider>
+        <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+      </gux-action-button>
+    </div>
+
+    <div>
+      <h2>Invalid</h2>
+      <gux-action-button accent="invalid">
+        <div slot="title">
+          <gux-icon
+            icon-name="generic"
+            screenreader-text="This will be read by a screen reader"
+          ></gux-icon>
+          Invalid
+        </div>
+        <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+        <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+        <gux-list-divider></gux-list-divider>
+        <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+      </gux-action-button>
+    </div>
+
+    <div>
+      <h2>Disabled</h2>
+      <gux-action-button class="disable-toggle" disabled>
+        <div slot="title">
+          <gux-icon
+            icon-name="generic"
+            screenreader-text="This will be read by a screen reader"
+          ></gux-icon>
+          Disabled
+        </div>
         <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
         <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -105,10 +210,6 @@
       align-items: flex-start;
       justify-content: space-around;
       width: 100%;
-    }
-
-    .overlap gux-action-button {
-      margin-bottom: 4px;
     }
   </style>
 </div>

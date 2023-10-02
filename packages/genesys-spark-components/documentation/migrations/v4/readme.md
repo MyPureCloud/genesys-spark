@@ -115,13 +115,14 @@ An `is-open` prop has been added to control showing and hiding the component. Th
 
 ## V3 Stable Components Archived to Legacy in V4
 
-| V3 tag name            | V4 tag name                   | V4 stable equivalent (requires API changes) | Migration Guide                            |
-| ---------------------- | ----------------------------- | ------------------------------------------- | ------------------------------------------ |
-| gux-action-toast       | gux-action-toast-legacy       | gux-toast                                   | [link](./gux-action-toast-legacy.md)       |
-| gux-notification-toast | gux-notification-toast-legacy | gux-toast                                   | [link](./gux-notification-toast-legacy.md) |
-| gux-simple-toast       | gux-simple-toast-legacy       | gux-toast                                   | [link](./gux-simple-toast-legacy.md)       |
-| gux-pagination         | gux-pagination-legacy         | gux-pagination                              | [link](./gux-pagination-legacy.md)         |
-| gux-disclosure-button  | gux-disclosure-button-legacy  | none                                        | Contact the Design System UX Team          |
+| V3 tag name              | V4 tag name                     | V4 stable equivalent (requires API changes)    | Migration Guide                            |
+| ------------------------ | ------------------------------- | ---------------------------------------------- | ------------------------------------------ |
+| `gux-action-toast`       | `gux-action-toast-legacy`       | `gux-toast`                                    | [link](./gux-action-toast-legacy.md)       |
+| `gux-disclosure-button`  | `gux-disclosure-button-legacy`  | none                                           | Contact the Design System UX Team          |
+| `gux-notification-toast` | `gux-notification-toast-legacy` | `gux-toast`                                    | [link](./gux-notification-toast-legacy.md) |
+| `gux-pagination`         | `gux-pagination-legacy`         | `gux-pagination` (`gux-pagination-beta` in v3) | [link](./gux-pagination-legacy.md)         |
+| `gux-simple-toast`       | `gux-simple-toast-legacy`       | `gux-toast`                                    | [link](./gux-simple-toast-legacy.md)       |
+| `gux-switch`             | `gux-switch-legacy`             | `gux-segmented-control-beta` (or `gux-tabs`)   | [link](./gux-switch-legacy.md)             |
 
 Action: _(required)_ add `-legacy` to the tag name of the component.
 
@@ -253,6 +254,19 @@ The `scale` property has been removed. The displayed percentage will now always 
 ### gux-tab-panel
 
 This component now uses a shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
+
+### gux-action-button
+
+The `title` prop has been removed. Instead, slot in a `span` or `div` with a slot name of `title`.
+
+```diff
+- <gux-action-button title="Primary" accent="primary" is-open="true">
++ <gux-action-button accent="primary" is-open="true">
++   <span slot="title">Primary</span>
+    <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+    <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+  </gux-action-button>
+```
 
 ### gux-button-multi
 

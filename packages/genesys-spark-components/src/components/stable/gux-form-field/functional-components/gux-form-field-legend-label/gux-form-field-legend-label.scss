@@ -1,4 +1,4 @@
-@import '../../../../../style/mixins';
+@use '../../../../../style/mixins';
 
 /* stylelint-disable-next-line selector-class-pattern */
 @mixin GuxFormFieldLegendLabelStyle {
@@ -24,7 +24,7 @@
     }
 
     &.gux-screenreader {
-      @include gux-sr-only;
+      @include mixins.gux-sr-only;
     }
   }
 }

@@ -1,0 +1,137 @@
+@use '../../../../style/mixins';
+@use '../../../../style/focus';
+
+/**
+  * @prop --gse-ui-segmentedControl-button-padding
+  * @prop --gse-ui-segmentedControl-border-color : //TODO https://inindca.atlassian.net/browse/COMUI-2294
+  * @prop --gse-ui-segmentedControl-border-style
+  * @prop --gse-ui-segmentedControl-border-width
+  * @prop --gse-ui-segmentedControl-borderRadius
+  * @prop --gse-ui-segmentedControl-button-active-backgroundColor
+  * @prop --gse-ui-segmentedControl-button-active-foregroundColor
+  * @prop --gse-ui-segmentedControl-button-default-backgroundColor
+  * @prop --gse-ui-segmentedControl-button-default-foregroundColor
+  * @prop --gse-ui-segmentedControl-button-disabled-backgroundColor
+  * @prop --gse-ui-segmentedControl-button-disabled-foregroundColor
+  * @prop --gse-ui-segmentedControl-button-disabled-opacity
+  * @prop --gse-ui-segmentedControl-button-end-borderRadius //TODO https://inindca.atlassian.net/browse/COMUI-2294
+  * @prop --gse-ui-segmentedControl-button-gap
+  * @prop --gse-ui-segmentedControl-button-hover-backgroundColor:
+  * @prop --gse-ui-segmentedControl-button-hover-foregroundColor
+  * @prop --gse-ui-segmentedControl-button-middle-borderRadius //TODO https://inindca.atlassian.net/browse/COMUI-2294
+  * @prop --gse-ui-segmentedControl-button-start-borderRadius //TODO https://inindca.atlassian.net/browse/COMUI-2294
+  * @prop --gse-ui-segmentedControl-height
+  * @prop --gse-ui-segmentedControl-iconOnly-width : //TODO https://inindca.atlassian.net/browse/COMUI-2294
+  */
+
+button {
+  all: unset;
+}
+
+.gux-container {
+  height: var(--gse-ui-segmentedControl-height);
+  border-color: #a3a7b0; //TODO https://inindca.atlassian.net/browse/COMUI-2294
+  border-style: var(
+    --gse-ui-segmentedControl-border-style
+  ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
+
+  border-width: var(
+    --gse-ui-segmentedControl-border-width
+  ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
+
+  border-right: none;
+  border-left-color: var(
+    --gse-ui-segmentedControl-button-active-backgroundColor
+  ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
+
+  border-radius: var(--gse-ui-segmentedControl-button-middle-borderRadius);
+
+  &.gux-start {
+    border-left-color: #a3a7b0; //TODO https://inindca.atlassian.net/browse/COMUI-2294
+    border-radius: var(
+      --gse-ui-segmentedControl-button-start-borderRadius
+    ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
+  }
+
+  &.gux-end {
+    border-right: var(--gse-ui-segmentedControl-border-width)
+      var(--gse-ui-segmentedControl-border-style) #a3a7b0; //TODO https://inindca.atlassian.net/browse/COMUI-2294 //TODO https://inindca.atlassian.net/browse/COMUI-2294 //TODO https://inindca.atlassian.net/browse/COMUI-2294
+
+    border-radius: var(
+      --gse-ui-segmentedControl-button-end-borderRadius
+    ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
+  }
+
+  &.gux-start.gux-end {
+    border-radius: 4px; //TODO https://inindca.atlassian.net/browse/COMUI-2294
+  }
+
+  .gux-segmented-control-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--gse-ui-segmentedControl-button-gap);
+    align-content: stretch;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: var(--gse-ui-segmentedControl-button-padding);
+    color: var(--gse-ui-segmentedControl-button-default-foregroundColor);
+    background-color: var(
+      --gse-ui-segmentedControl-button-default-backgroundColor
+    );
+
+    &.gux-icon-only {
+      padding: 0 8px; //TODO https://inindca.atlassian.net/browse/COMUI-2294 --gse-ui-segmentedControl-iconOnly-width
+
+      .gux-text {
+        &.gux-icon-only {
+          @include mixins.gux-sr-only-clip;
+        }
+      }
+    }
+
+    &:hover {
+      color: var(--gse-ui-segmentedControl-button-hover-foregroundColor);
+      background-color: var(
+        --gse-ui-segmentedControl-button-hover-backgroundColor
+      );
+    }
+
+    &[disabled] {
+      color: var(--gse-ui-segmentedControl-button-disabled-foregroundColor);
+      pointer-events: none;
+      background-color: var(
+        --gse-ui-segmentedControl-button-disabled-backgroundColor
+      );
+      opacity: var(--gse-ui-segmentedControl-button-disabled-opacity);
+    }
+
+    &.gux-selected {
+      color: var(--gse-ui-segmentedControl-button-active-foregroundColor);
+      background-color: var(
+        --gse-ui-segmentedControl-button-active-backgroundColor
+      );
+      border-color: var(
+        --gse-ui-segmentedControl-button-active-backgroundColor
+      ); //TODO https://inindca.atlassian.net/browse/COMUI-2294
+    }
+
+    &:focus-visible {
+      position: relative;
+      z-index: 1;
+      border-radius: var(--gse-ui-segmentedControl-borderRadius);
+
+      @include focus.gux-focus-ring;
+
+      outline-offset: 0; //TODO https://inindca.atlassian.net/browse/COMUI-2294
+    }
+
+    .gux-icon {
+      slot[name='icon']::slotted(gux-icon) {
+        width: var(--gse-ui-icon-size-sm);
+        height: var(--gse-ui-icon-size-sm);
+      }
+    }
+  }
+}

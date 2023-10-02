@@ -23,7 +23,7 @@ import { GuxTabsOrientation, GuxTabsAlignment } from './gux-tabs-types';
  */
 
 @Component({
-  styleUrl: 'gux-tabs.less',
+  styleUrl: 'gux-tabs.scss',
   tag: 'gux-tabs',
   shadow: true
 })

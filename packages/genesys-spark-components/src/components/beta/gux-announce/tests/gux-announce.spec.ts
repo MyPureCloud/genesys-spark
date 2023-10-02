@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxAnnounce } from '../gux-announce';
 
 const components = [GuxAnnounce];

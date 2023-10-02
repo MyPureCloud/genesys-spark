@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxPaginationItemCounts } from '../gux-pagination-item-counts';
 
 const components = [GuxPaginationItemCounts];

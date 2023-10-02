@@ -3,10 +3,10 @@ gux-pagination-items-per-page-legacy {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
     align-content: stretch;
     align-items: center;
     justify-content: center;
-    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
 
     & > div {
       flex: 0 1 auto;
@@ -26,16 +26,16 @@ gux-pagination-items-per-page-legacy {
       font-family: var(
         --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
       );
-      color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
       font-size: var(
         --gse-ui-dataTableItems-tablePagination-defaultText-fontSize
-      );
-      line-height: var(
-        --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
       );
       font-weight: var(
         --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
       );
+      line-height: var(
+        --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
+      );
+      color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
     }
   }
 }

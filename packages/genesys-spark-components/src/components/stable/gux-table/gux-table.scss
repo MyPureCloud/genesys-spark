@@ -1,4 +1,4 @@
-@import '../../../style/typography.scss';
+@use '../../../style/typography.scss';
 
 :host {
   display: block;
@@ -28,6 +28,7 @@
     height: calc(100% - var(--gse-ui-dataTableItems-header-default-height));
     color: #596373;
     background: #fdfdfd;
-    @include h2;
+
+    @include typography.h2;
   }
 }

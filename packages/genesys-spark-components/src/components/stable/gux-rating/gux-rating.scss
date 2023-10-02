@@ -20,11 +20,11 @@
 }
 
 .gux-rating-star-container {
-  color: var(--gse-ui-ui--rating-default-color);
+  color: var(--gse-ui-rating-default-color);
 
   &.gux-disabled {
-    pointer-events: none;
     color: var(--gse-ui-rating-disabled-color);
+    pointer-events: none;
     opacity: var(--gse-ui-rating-disabled-opacity);
   }
 

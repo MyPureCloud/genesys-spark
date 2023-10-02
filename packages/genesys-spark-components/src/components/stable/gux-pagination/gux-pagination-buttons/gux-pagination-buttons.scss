@@ -3,9 +3,9 @@ gux-pagination-buttons {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
     align-content: stretch;
     align-items: center;
-    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
     justify-content: flex-end;
     margin-left: var(
       --gse-ui-dataTableItems-tablePagination-recordsetControls-gap
@@ -29,8 +29,8 @@ gux-pagination-buttons {
       flex-direction: row;
       flex-shrink: 0;
       flex-wrap: nowrap;
-      align-content: stretch;
       gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+      align-content: stretch;
       align-items: center;
       justify-content: center;
 
@@ -38,33 +38,33 @@ gux-pagination-buttons {
       .gux-pagination-buttons-list-target {
         min-width: 28px;
         min-height: 24px;
-        padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
         padding-right: var(--gse-ui-dataTableItems-tablePagination-padding);
+        padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
         margin: 0;
-        background: inherit;
-        border: none;
         font-family: var(
           --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
         );
-        color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
         font-size: var(
           --gse-ui-dataTableItems-tablePagination-defaultText-fontSize
-        );
-        line-height: var(
-          --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
         );
         font-weight: var(
           --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
         );
+        line-height: var(
+          --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
+        );
+        color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
+        background: inherit;
+        border: none;
 
         &:focus-visible {
-          outline: var(--gse-semantic-focusRing-width) solid
-            var(--gse-semantic-color-focus);
-          outline-offset: var(--gse-semantic-focusRing-offset);
           border-radius: calc(
             var(--gse-semantic-focusRing-cornerRadius) -
               var(--gse-semantic-focusRing-offset)
           );
+          outline: var(--gse-semantic-focusRing-width) solid
+            var(--gse-semantic-color-focus);
+          outline-offset: var(--gse-semantic-focusRing-offset);
         }
       }
 

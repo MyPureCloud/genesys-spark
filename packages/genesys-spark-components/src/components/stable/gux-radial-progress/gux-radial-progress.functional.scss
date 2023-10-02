@@ -17,8 +17,8 @@
   div[role='progressbar'] {
     .gux-svg-container {
       display: block;
-      height: var(--gse-ui-progressAndLoading-spinner-large);
       width: var(--gse-ui-progressAndLoading-spinner-large);
+      height: var(--gse-ui-progressAndLoading-spinner-large);
 
       .gux-dynamic-circle {
         fill: none;
@@ -36,11 +36,11 @@
 
       .gux-percentage {
         font-family: var(--gse-ui-progressAndLoading-spinner-text-fontFamily);
+        font-size: var(--gse-ui-progressAndLoading-spinner-text-fontSize);
         font-weight: var(--gse-ui-progressAndLoading-spinner-text-fontWeight);
         line-height: var(--gse-ui-progressAndLoading-spinner-text-lineHeight);
-        font-size: var(--gse-ui-progressAndLoading-spinner-text-fontSize);
-        fill: var(--gse-ui-progressAndLoading-textColor);
         text-anchor: middle;
+        fill: var(--gse-ui-progressAndLoading-textColor);
       }
     }
   }

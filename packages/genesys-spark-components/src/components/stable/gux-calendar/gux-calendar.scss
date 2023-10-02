@@ -1,0 +1,264 @@
+/**
+@prop gse-ui-calendarMenu-day-headerText-fontFamily
+@prop gse-ui-calendarMenu-day-headerText-lineHeight
+@prop gse-ui-calendarMenu-day-headerText-fontSize
+@prop gse-ui-calendarMenu-day-headerText-fontWeight
+@prop gse-ui-calendarMenu-day-date-size
+@prop gse-ui-calendarMenu-month-headerText-fontFamily
+@prop gse-ui-calendarMenu-month-headerText-lineHeight
+@prop gse-ui-calendarMenu-month-headerText-fontSize
+@prop gse-ui-calendarMenu-month-single-header-height
+@prop gse-ui-calendarMenu-month-focusBorderRadius
+@prop gse-ui-calendarMenu-dateBody-padding
+@prop gse-ui-calendarMenu-header-backgroundColor
+@prop gse-ui-calendarMenu-header-foregroundColor
+@prop gse-ui-calendarMenu-header-gap
+@prop gse-ui-calendarMenu-header-padding
+@prop gse-ui-calendarMenu-backgroundColor
+@prop gse-ui-calendarMenu-date-defaultText-fontFamily
+@prop gse-ui-calendarMenu-date-defaultText-lineHeight
+@prop gse-ui-calendarMenu-date-defaultText-fontSize
+@prop gse-ui-calendarMenu-date-defaultText-fontWeight
+@prop gse-ui-calendarMenu-date-currentText-fontFamily
+@prop gse-ui-calendarMenu-date-currentText-lineHeight
+@prop gse-ui-calendarMenu-date-currentText-fontSize
+@prop gse-ui-calendarMenu-date-currentText-fontWeight
+@prop gse-ui-calendarMenu-date-selected-foregroundColor
+@prop gse-ui-calendarMenu-date-selected-backgroundColor
+@prop gse-ui-calendarMenu-date-selected-hoverBackgroundColor
+@prop gse-ui-calendarMenu-date-hover-backgroundColor
+@prop gse-ui-calendarMenu-date-range-backgroundColor
+@prop gse-ui-calendarMenu-date-default-foregroundColor
+@prop gse-ui-calendarMenu-single-header-borderRadius
+@prop gse-ui-calendarMenu-single-body-borderRadius
+@prop gse-ui-calendarMenu-disabled-opacity
+@prop gse-ui-calendarMenu-boxShadow-color
+@prop gse-ui-calendarMenu-boxShadow-type
+@prop gse-ui-calendarMenu-boxShadow-x
+@prop gse-ui-calendarMenu-boxShadow-y
+@prop gse-ui-calendarMenu-boxShadow-blur
+@prop gse-ui-calendarMenu-boxShadow-spread
+@prop gse-ui-calendarMenu-day-range-height - Not used since this value is already calculated from using other tokens
+@prop gse-ui-calendarMenu-day-input-height - Not used since this value is already calculated from using other tokens
+*/
+
+@use '../../../style/mixins.scss';
+
+// Style
+:host {
+  display: inline-block;
+}
+
+.gux-calendar {
+  margin-top: 2px;
+  border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
+  box-shadow: var(--gse-ui-calendarMenu-boxShadow-x)
+    var(--gse-ui-calendarMenu-boxShadow-y)
+    var(--gse-ui-calendarMenu-boxShadow-blur)
+    var(--gse-ui-calendarMenu-boxShadow-spread)
+    var(--gse-ui-calendarMenu-boxShadow-color);
+
+  .gux-header {
+    position: relative;
+    display: flex;
+    gap: var(--gse-ui-calendarMenu-header-gap);
+    align-items: center;
+    justify-content: space-between;
+    height: var(--gse-ui-calendarMenu-month-single-header-height);
+    padding: var(--gse-ui-calendarMenu-header-padding);
+    font-weight: var(--gse-ui-calendarMenu-month-currentText-fontWeight);
+    color: var(--gse-ui-calendarMenu-header-foregroundColor);
+    background-color: var(--gse-ui-calendarMenu-header-backgroundColor);
+    border-radius: var(--gse-ui-calendarMenu-single-header-borderRadius);
+
+    button {
+      position: absolute;
+      color: var(--gse-ui-calendarMenu-month-monthHeader-foregroundColor);
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
+
+      &:focus-visible {
+        outline: var(--gse-ui-formControl-input-focus-border-width)
+          var(--gse-ui-formControl-input-focus-border-style)
+          var(--gse-ui-formControl-input-focus-border-color);
+      }
+
+      &.gux-left {
+        left: 18px;
+      }
+
+      &.gux-right {
+        right: 18px;
+      }
+
+      gux-icon {
+        width: var(--gse-ui-icon-size-sm);
+        height: var(--gse-ui-icon-size-sm);
+        pointer-events: none;
+      }
+    }
+
+    .gux-month-list {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-family: var(--gse-ui-calendarMenu-month-headerText-fontFamily);
+      font-size: var(--gse-ui-calendarMenu-month-headerText-fontSize);
+      line-height: var(--gse-ui-calendarMenu-month-headerText-lineHeight);
+
+      label {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .gux-content {
+    display: flex;
+    align-items: flex-start;
+    padding: var(--gse-ui-calendarMenu-dateBody-padding);
+    color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
+    background-color: var(--gse-ui-calendarMenu-backgroundColor);
+    border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
+
+    table {
+      width: var(--gse-ui-calendarMenu-day-input-width);
+      text-align: left;
+      table-layout: fixed;
+      border-spacing: 0;
+      -ms-user-select: none;
+      user-select: none;
+
+      &:not(:last-child) {
+        padding-right: 24px; // TODO: use token?
+      }
+
+      tr {
+        height: var(--gse-ui-calendarMenu-day-input-height);
+
+        &:empty {
+          display: none;
+        }
+
+        th,
+        td {
+          width: var(--gse-ui-calendarMenu-day-date-size);
+          height: var(--gse-ui-calendarMenu-day-date-size);
+          padding: 0;
+          margin: 0;
+          text-align: center;
+        }
+
+        th {
+          font-family: var(--gse-ui-calendarMenu-day-headerText-fontFamily);
+          font-size: var(--gse-ui-calendarMenu-day-headerText-fontSize);
+          font-weight: var(--gse-ui-calendarMenu-day-headerText-fontWeight);
+          line-height: var(--gse-ui-calendarMenu-day-headerText-lineHeight);
+        }
+
+        td {
+          font-family: var(--gse-ui-calendarMenu-date-defaultText-fontFamily);
+          font-size: var(--gse-ui-calendarMenu-date-defaultText-fontSize);
+          font-weight: var(--gse-ui-calendarMenu-date-defaultText-fontWeight);
+          line-height: var(--gse-ui-calendarMenu-date-defaultText-lineHeight);
+          color: var(--gse-ui-calendarMenu-date-default-foregroundColor);
+          cursor: pointer;
+
+          &.gux-hovered {
+            background-color: var(
+              --gse-ui-calendarMenu-date-range-backgroundColor
+            );
+          }
+
+          &.gux-selected {
+            color: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
+            background-color: var(
+              --gse-ui-calendarMenu-date-selected-backgroundColor
+            );
+            border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
+
+            &:hover:not(&.gux-start-date):not(&.gux-end-date) {
+              background-color: var(
+                --gse-ui-calendarMenu-date-selected-hoverBackgroundColor
+              );
+            }
+          }
+
+          &.gux-start-date,
+          &.gux-end-date {
+            background-color: var(
+              --gse-ui-calendarMenu-date-range-backgroundColor
+            );
+
+            .gux-date {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: var(--gse-ui-calendarMenu-day-date-size);
+              height: var(--gse-ui-calendarMenu-day-date-size);
+              background-color: var(
+                --gse-ui-calendarMenu-date-selected-backgroundColor
+              );
+              border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
+
+              &:hover {
+                background-color: var(
+                  --gse-ui-calendarMenu-date-selected-hoverBackgroundColor
+                );
+              }
+            }
+          }
+
+          &.gux-start-date {
+            border-radius: 16px 0 0 16px; // TODO: COMUI-2299
+          }
+
+          &.gux-end-date {
+            border-radius: 0 16px 16px 0; // TODO: COMUI-2299
+          }
+
+          &:hover:not(&.gux-start-date):not(&.gux-end-date):not(
+              &.gux-hovered
+            ):not(&.gux-selected) {
+            background-color: var(
+              --gse-ui-calendarMenu-date-hover-backgroundColor
+            );
+            border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
+          }
+
+          &.gux-disabled {
+            pointer-events: none;
+            opacity: var(--gse-ui-calendarMenu-disabled-opacity);
+          }
+
+          &.gux-not-in-month {
+            opacity: var(--gse-ui-calendarMenu-disabled-opacity);
+
+            &:hover {
+              background-color: var(
+                --gse-ui-calendarMenu-date-hover-backgroundColor
+              );
+            }
+
+            &.gux-hidden {
+              visibility: hidden;
+            }
+          }
+
+          &.gux-current-date {
+            font-family: var(--gse-ui-calendarMenu-date-currentText-fontFamily);
+            font-size: var(--gse-ui-calendarMenu-date-currentText-fontSize);
+            font-weight: var(--gse-ui-calendarMenu-date-currentText-fontWeight);
+            line-height: var(--gse-ui-calendarMenu-date-currentText-lineHeight);
+          }
+        }
+      }
+    }
+  }
+}
+
+.gux-sr-only {
+  @include mixins.gux-sr-only;
+}

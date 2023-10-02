@@ -1,16 +1,4 @@
 # gux-action-button
-An action button. In order to use this element toggle children must be slotted in.
-
-Example usage
-```html
-  <gux-action-button text="Primary" accent="primary">
-    <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
-    <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
-    <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
-    <gux-list-divider></gux-list-divider>
-    <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
-  </gux-action-button>
-```
 
 <!-- Auto Generated Below -->
 
@@ -22,7 +10,6 @@ Example usage
 | `accent`   | `accent`   |                                     | `"danger" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
 | `disabled` | `disabled` | Disables the action button.         | `boolean`                                            | `false`       |
 | `isOpen`   | `is-open`  | It is used to open or not the list. | `boolean`                                            | `false`       |
-| `text`     | `text`     | The component text.                 | `string`                                             | `undefined`   |
 | `type`     | `type`     | The component button type           | `"button" \| "reset" \| "submit"`                    | `'button'`    |
 
 
@@ -33,6 +20,13 @@ Example usage
 | `actionClick` | Triggered when the action button is clicked | `CustomEvent<any>` |
 | `close`       | Triggered when the menu is close            | `CustomEvent<any>` |
 | `open`        | Triggered when the menu is open             | `CustomEvent<any>` |
+
+
+## Slots
+
+| Slot      | Description                   |
+| --------- | ----------------------------- |
+| `"title"` | slot for icon and button text |
 
 
 ## Dependencies

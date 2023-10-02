@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxActionButton } from '../gux-action-button';
 import { GuxList } from '../../gux-list/gux-list';
 import { GuxListDivider } from '../../gux-list/gux-list-divider/gux-list-divider';
@@ -6,7 +6,8 @@ import { GuxListItem } from '../../gux-list/gux-list-item/gux-list-item';
 
 const components = [GuxActionButton, GuxList, GuxListDivider, GuxListItem];
 const html = `
-<gux-action-button lang="en" text="Primary" accent="primary">
+<gux-action-button lang="en" accent="primary">
+  <div slot="title">Primary</div>
   <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
   <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
   <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -36,7 +37,7 @@ describe('gux-action-button', () => {
     page.win.addEventListener('actionClick', actionClickSpy);
 
     const element = document.querySelector('gux-action-button');
-    const actionButton = element.shadowRoot.querySelector(
+    const actionButton = element.shadowRoot.querySelector<HTMLElement>(
       '.gux-action-button > button'
     );
 
@@ -47,7 +48,8 @@ describe('gux-action-button', () => {
 
   it('should not fire actionClick event if disabled', async () => {
     const disableHtml = `
-    <gux-action-button lang="en" text="Primary" accent="primary" disabled>
+    <gux-action-button lang="en" accent="primary" disabled>
+      <div slot="title">Primary</div>
       <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
       <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
       <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -61,7 +63,7 @@ describe('gux-action-button', () => {
     page.win.addEventListener('actionClick', actionClickSpy);
 
     const element = document.querySelector('gux-action-button');
-    const actionButton = element.shadowRoot.querySelector(
+    const actionButton = element.shadowRoot.querySelector<HTMLElement>(
       '.gux-action-button > button'
     );
 
@@ -106,7 +108,8 @@ describe('gux-action-button', () => {
 
   it('should not fire open event if disabled', async () => {
     const disableHtml = `
-    <gux-action-button lang="en" text="Primary" accent="primary" disabled>
+    <gux-action-button lang="en" accent="primary" disabled>
+      <div slot="title">Primary</div>
       <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
       <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
       <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
@@ -120,7 +123,7 @@ describe('gux-action-button', () => {
     page.win.addEventListener('open', openSpy);
 
     const element = document.querySelector('gux-action-button');
-    const dropdownButton = element.shadowRoot.querySelector(
+    const dropdownButton = element.shadowRoot.querySelector<HTMLElement>(
       '.gux-dropdown-button > button'
     );
 

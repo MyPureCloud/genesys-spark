@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxMonthPicker } from '../gux-month-picker';
 import { GuxMonthCalendar } from '../gux-month-calendar/gux-month-calendar';
 import { GuxMonthList } from '../gux-month-calendar/gux-month-list/gux-month-list';

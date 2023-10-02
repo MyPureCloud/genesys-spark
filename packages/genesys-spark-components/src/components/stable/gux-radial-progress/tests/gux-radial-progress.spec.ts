@@ -3,7 +3,7 @@ jest.mock('../../../../utils/error/log-error', () => ({
   logWarn: jest.fn()
 }));
 
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxRadialProgress } from '../gux-radial-progress';
 
 import { logWarn } from '../../../../utils/error/log-error';

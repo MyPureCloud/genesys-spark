@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxTableSelectMenu } from '../gux-table-select-menu';
 
 const components = [GuxTableSelectMenu];

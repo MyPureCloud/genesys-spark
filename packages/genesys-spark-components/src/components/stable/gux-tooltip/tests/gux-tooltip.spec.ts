@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxTooltip } from '../gux-tooltip';
 
 const components = [GuxTooltip];

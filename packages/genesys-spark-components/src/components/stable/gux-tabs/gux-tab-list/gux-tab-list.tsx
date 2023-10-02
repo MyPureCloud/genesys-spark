@@ -18,7 +18,7 @@ import { OnMutation } from '../../../../utils/decorator/on-mutation';
 import tabsResources from '../i18n/en.json';
 
 @Component({
-  styleUrl: 'gux-tab-list.less',
+  styleUrl: 'gux-tab-list.scss',
   tag: 'gux-tab-list',
   shadow: false
 })

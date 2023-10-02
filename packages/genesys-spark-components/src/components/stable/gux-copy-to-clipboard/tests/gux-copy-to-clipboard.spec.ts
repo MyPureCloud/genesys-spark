@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import MutationObserver from 'mutation-observer';
 import { GuxCopyToClipboard } from '../gux-copy-to-clipboard';
 
@@ -28,7 +28,6 @@ describe('gux-copy-to-clipboard', () => {
 
   describe('private', () => {
     it('should copy to clipboard successfully', async () => {
-      const page = await newSpecPage({ components, html, language });
       const component = new GuxCopyToClipboard();
 
       Object.assign(window.navigator, {
@@ -37,15 +36,13 @@ describe('gux-copy-to-clipboard', () => {
         }
       });
 
-      component.onCopyToClipboard();
-      await page.waitForChanges();
+      await (component as any).onCopyToClipboard();
 
       expect(component.tooltipContent).toEqual('copySuccess');
       expect(window.navigator.clipboard.writeText).toHaveBeenCalled();
     });
 
     it('should copy to clipboard with error', async () => {
-      const page = await newSpecPage({ components, html, language });
       const component = new GuxCopyToClipboard();
 
       Object.assign(window.navigator, {
@@ -54,8 +51,7 @@ describe('gux-copy-to-clipboard', () => {
         }
       });
 
-      component.onCopyToClipboard();
-      await page.waitForChanges();
+      await (component as any).onCopyToClipboard();
 
       expect(component.tooltipContent).toEqual('copyFailure');
       expect(window.navigator.clipboard.writeText).toHaveBeenCalled();

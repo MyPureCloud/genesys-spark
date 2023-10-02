@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxTabPanel } from '../gux-tab-panel';
 
 describe('gux-tab-panel', () => {

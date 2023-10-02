@@ -1,0 +1,213 @@
+/*
+@prop gse-ui-formControl-input-focus-border-width
+@prop gse-ui-formControl-input-focus-border-style
+@prop gse-ui-formControl-input-focus-border-color
+@prop gse-ui-formControl-input-active-border-width
+@prop gse-ui-formControl-input-active-border-style
+@prop gse-ui-formControl-input-active-border-color
+@prop gse-ui-formControl-focusRing-borderRadius
+@prop gse-ui-datePicker-disabled-opacity
+@prop gse-ui-formControl-label-text-fontSize
+@prop gse-ui-formControl-input-textfield-height
+@prop gse-ui-formControl-input-padding
+@prop gse-ui-formControl-input-contentText-fontFamily
+@prop gse-ui-formControl-input-contentText-fontSize
+@prop gse-ui-formControl-input-contentText-lineHeight
+@prop gse-ui-formControl-input-populatedColor
+@prop gse-ui-formControl-input-backgroundColor
+@prop gse-ui-formControl-input-default-border-width
+@prop gse-ui-formControl-input-default-border-style
+@prop gse-ui-formControl-input-default-border-color
+@prop gse-ui-formControl-input-borderRadius
+@prop gse-ui-calendarMenu-day-input-width
+@prop gse-ui-formControl-input-inputIcon-iconEndColor
+@prop gse-ui-actionButton-borderRadius
+@prop gse-ui-icon-size-sm
+*/
+
+@use '../../../style/zindex.scss';
+@use '../../../style/mixins.scss';
+
+@mixin gse-ui-focus {
+  border: var(--gse-ui-formControl-input-active-border-width)
+    var(--gse-ui-formControl-input-active-border-style)
+    var(--gse-ui-formControl-input-active-border-color);
+  border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+  outline: var(--gse-ui-formControl-input-focus-border-width)
+    var(--gse-ui-formControl-input-focus-border-style)
+    var(--gse-ui-formControl-input-focus-border-color);
+}
+
+:host {
+  display: block;
+}
+
+.gux-datepicker {
+  display: inline-block;
+
+  &.gux-disabled {
+    pointer-events: none;
+    cursor: default;
+
+    .gux-datepicker-field {
+      .gux-datepicker-field-input {
+        opacity: var(--gse-ui-datePicker-disabled-opacity);
+      }
+    }
+  }
+
+  .gux-datepicker-field {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: flex-start;
+
+    ~ .gux-datepicker-field {
+      margin-left: 20px; // TODO: COMUI-2299
+    }
+
+    &.gux-above {
+      flex-direction: column;
+      align-items: self-start;
+
+      .gux-datepicker-field-input {
+        margin-top: 0;
+      }
+
+      .gux-datepicker-field-label {
+        margin-right: 0;
+      }
+    }
+
+    .gux-datepicker-field-label {
+      flex: 0 1 auto;
+      align-self: auto;
+      order: 0;
+      margin-right: var(--gse-ui-formControl-label-gap);
+      font-size: var(--gse-ui-formControl-label-text-fontSize);
+      font-weight: var(--gse-ui-formControl-label-text-fontWeight);
+    }
+
+    .gux-datepicker-field-input {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: var(--gse-ui-formControl-input-gap);
+      align-content: stretch;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: var(--gse-ui-formControl-input-textfield-height);
+      padding: var(--gse-ui-formControl-input-padding);
+      font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
+      font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+      line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
+      color: var(--gse-ui-formControl-input-populatedColor);
+      white-space: nowrap;
+      background-color: var(--gse-ui-formControl-input-backgroundColor);
+      background-image: none;
+      border: var(--gse-ui-formControl-input-default-border-width)
+        var(--gse-ui-formControl-input-default-border-style)
+        var(--gse-ui-formControl-input-default-border-color);
+      border-radius: var(--gse-ui-formControl-input-borderRadius);
+
+      &:focus-within {
+        @include gse-ui-focus;
+      }
+
+      .gux-datepicker-field-text-input {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        input {
+          flex: 1 1 auto;
+          align-self: auto;
+          order: 0;
+          width: var(--gse-ui-calendarMenu-day-input-width);
+          overflow: hidden;
+          color: var(--gse-ui-formControl-input-populatedColor);
+          border: none;
+          outline: none;
+
+          &::placeholder {
+            color: var(--gse-ui-formControl-input-placeholderColor);
+            opacity: 1;
+          }
+
+          &::-webkit-search-cancel-button,
+          &::-webkit-search-results-button,
+          &::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+          }
+        }
+
+        button {
+          // Also make the button itself a flex container to ensure vertical centering.
+          display: flex;
+          flex: 0 1 auto;
+          align-items: center;
+          align-self: auto;
+          justify-content: center;
+          order: 0;
+          color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
+          background: transparent;
+          border: none;
+          border-radius: var(--gse-ui-actionButton-borderRadius);
+          outline: none;
+
+          &:focus-within {
+            @include gse-ui-focus;
+          }
+
+          &:not(:disabled):focus-visible,
+          &:not(:disabled):hover {
+            color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
+            cursor: pointer;
+          }
+
+          gux-icon {
+            width: var(--gse-ui-icon-size-sm);
+            height: var(--gse-ui-icon-size-sm);
+          }
+        }
+      }
+
+      gux-calendar {
+        position: fixed;
+        z-index: var(--gux-zindex-popup, zindex.$gux-zindex-popup);
+        display: none;
+      }
+    }
+  }
+
+  &.gux-active {
+    .gux-datepicker-field {
+      .gux-datepicker-field-input {
+        .gux-datepicker-field-text-input {
+          button {
+            color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
+
+            &:not(:disabled):focus-visible,
+            &:not(:disabled):hover {
+              color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
+            }
+          }
+        }
+
+        gux-calendar {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.gux-sr-only {
+  @include mixins.gux-sr-only;
+}

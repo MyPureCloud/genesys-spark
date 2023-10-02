@@ -1,0 +1,12 @@
+gux-action-button {
+  [slot='title'] {
+    display: inline-flex;
+    align-items: center;
+
+    gux-icon {
+      width: var(--gse-ui-button-icon-size);
+      height: var(--gse-ui-button-icon-size);
+      padding-right: var(--gse-ui-button-gap);
+    }
+  }
+}

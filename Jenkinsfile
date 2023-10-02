@@ -38,7 +38,7 @@ webappPipeline {
     team = 'Core UI'
     mailer = 'matthew.cheely@genesys.com, daragh.king@genesys.com, jordan.stith@genesys.com, thomas.dillon@genesys.com, katie.bobbe@genesys.com, gavin.everett@genesys.com, jason.evans@genesys.com'
     chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
-    nodeVersion = '16.18.0'
+    nodeVersion = '18.16.1'
     testJob = 'no-tests'
     deployConfig = [:]
     manifest = customManifest('./packages/genesys-spark-components/dist') {
@@ -94,7 +94,7 @@ webappPipeline {
 
                     sh(script: '''
                             RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
-                            npm install --legacy-peer-deps --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react
+                            npm install --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react
                         ''',
                         label: 'Set exact version dependency in React Components')
 

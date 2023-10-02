@@ -1,5 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
-import MutationObserver from 'mutation-observer';
+import { newSpecPage } from '@test/specTestUtils';
 
 import { GuxTabs } from '../gux-tabs';
 import { GuxTab } from '../gux-tab/gux-tab';
@@ -33,13 +32,6 @@ const tabsHtml = `
 const language = 'en';
 
 describe('gux-tabs', () => {
-  beforeEach(async () => {
-    (
-      global as NodeJS.Global & {
-        MutationObserver: any;
-      }
-    ).MutationObserver = MutationObserver;
-  });
   describe('#render', () => {
     it(`should render as expected`, async () => {
       const html = tabsHtml;

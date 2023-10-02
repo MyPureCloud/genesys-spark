@@ -61,11 +61,11 @@ $temp-focus-ring-corner-radius: 4px;
 }
 
 @mixin link-breadcrumb-primary-separator {
+  padding: var(--gse-ui-breadcrumbs-separator-padding-primary);
   font-family: var(--gse-ui-breadcrumbs-separator-primary-fontFamily);
+  font-size: var(--gse-ui-breadcrumbs-separator-primary-fontSize);
   font-weight: var(--gse-ui-breadcrumbs-separator-primary-fontWeight);
   line-height: var(--gse-ui-breadcrumbs-separator-primary-lineHeight);
-  font-size: var(--gse-ui-breadcrumbs-separator-primary-fontSize);
-  padding: var(--gse-ui-breadcrumbs-separator-padding-primary);
 }
 
 @mixin link-breadcrumb-secondary-default {
@@ -87,11 +87,11 @@ $temp-focus-ring-corner-radius: 4px;
 }
 
 @mixin link-breadcrumb-secondary-separator {
+  padding: var(--gse-ui-breadcrumbs-separator-padding-secondary);
   font-family: var(--gse-ui-breadcrumbs-separator-secondary-fontFamily);
+  font-size: var(--gse-ui-breadcrumbs-separator-secondary-fontSize);
   font-weight: var(--gse-ui-breadcrumbs-separator-secondary-fontWeight);
   line-height: var(--gse-ui-breadcrumbs-separator-secondary-lineHeight);
-  font-size: var(--gse-ui-breadcrumbs-separator-secondary-fontSize);
-  padding: var(--gse-ui-breadcrumbs-separator-padding-secondary);
 }
 
 .gux-breadcrumb-generation {
@@ -105,6 +105,7 @@ $temp-focus-ring-corner-radius: 4px;
 
   .gux-breadcrumb-content {
     @include link-breadcrumb-secondary-default;
+
     color: var(--gse-ui-link-default-color);
     pointer-events: none;
 
@@ -133,17 +134,18 @@ $temp-focus-ring-corner-radius: 4px;
       }
 
       &:focus-visible {
-        outline: $temp-focus-ring-width solid var(--gse-semantic-color-focus);
-        outline-offset: $temp-focus-ring-offset;
         border-radius: calc(
           $temp-focus-ring-corner-radius - $temp-focus-ring-offset
         );
+        outline: $temp-focus-ring-width solid var(--gse-semantic-color-focus);
+        outline-offset: $temp-focus-ring-offset;
       }
     }
   }
 
   .gux-breadcrumb-separator {
     @include link-breadcrumb-secondary-separator;
+
     color: var(--gse-ui-breadcrumbs-separator-color);
   }
 

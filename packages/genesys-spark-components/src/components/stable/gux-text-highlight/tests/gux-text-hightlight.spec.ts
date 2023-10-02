@@ -1,4 +1,4 @@
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxTextHighlight } from '../gux-text-highlight';
 
 const components = [GuxTextHighlight];

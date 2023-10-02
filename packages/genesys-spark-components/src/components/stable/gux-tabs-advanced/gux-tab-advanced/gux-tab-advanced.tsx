@@ -26,7 +26,7 @@ import tabsResources from '../i18n/en.json';
  */
 
 @Component({
-  styleUrl: 'gux-tab-advanced.less',
+  styleUrl: 'gux-tab-advanced.scss',
   tag: 'gux-tab-advanced'
 })
 export class GuxTabAdvanced {
