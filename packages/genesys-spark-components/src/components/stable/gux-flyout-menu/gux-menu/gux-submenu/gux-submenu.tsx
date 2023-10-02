@@ -215,7 +215,10 @@ export class GuxSubmenu {
       <Host>
         <button
           type="button"
-          class="gux-submenu-button"
+          class={{
+            'gux-submenu-button': true,
+            'gux-submenu-button-active': this.isShown
+          }}
           role="menuitem"
           tabIndex={-1}
           ref={el => (this.buttonElement = el)}
