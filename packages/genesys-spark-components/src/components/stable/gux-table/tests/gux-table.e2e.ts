@@ -506,7 +506,7 @@ describe('gux-table', () => {
 
     expect(inputElement.getProperty('checked')).toBeTruthy();
   });
-  it('should open and close the table select menu', async () => {
+  it('should display the table-select-menu in a closed state and then open when select menu button is clicked', async () => {
     const html = `
       <gux-table>
         <table slot="data">
@@ -573,15 +573,26 @@ describe('gux-table', () => {
     const tableSelectMenuButton = await tableSelectMenuElement.find(
       '.gux-select-menu-button'
     );
-    const tableSelectPopover = await tableSelectMenuElement.find(
-      'gux-table-select-popover'
+    const popoverComponent = await tableSelectMenuElement.find(
+      'gux-popover-list'
     );
 
-    expect(tableSelectPopover.getAttribute('hidden')).toBe('');
+    const popoverList = popoverComponent.shadowRoot.querySelector(
+      'div.gux-popover-wrapper'
+    );
 
-    await tableSelectMenuButton.click();
     await page.waitForChanges();
 
-    expect(tableSelectPopover.getAttribute('hidden')).toBe(null);
+    expect(popoverList).toHaveClass('gux-hidden');
+
+    await tableSelectMenuButton.click();
+
+    await page.waitForChanges();
+
+    const updatedPopoverList = popoverComponent.shadowRoot.querySelector(
+      'div.gux-popover-wrapper'
+    );
+
+    expect(updatedPopoverList).not.toHaveClass('gux-hidden');
   });
 });
