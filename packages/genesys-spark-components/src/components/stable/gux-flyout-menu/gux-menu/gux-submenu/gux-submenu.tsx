@@ -168,6 +168,7 @@ export class GuxSubmenu {
     if (this.submenuElement) {
       void computePosition(this.buttonElement, this.submenuElement, {
         placement: 'right-start',
+        strategy: 'fixed',
         middleware: []
       }).then(({ x, y }) => {
         Object.assign(this.submenuElement.style, {
