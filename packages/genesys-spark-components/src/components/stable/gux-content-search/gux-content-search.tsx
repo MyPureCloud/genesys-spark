@@ -134,26 +134,29 @@ export class GuxContentSearch {
             >
               {this.matchCountResult()}
             </span>
-            <button
-              type="button"
-              class="gux-previous-button"
-              title={this.i18n('navigatePreviousBtn')}
-              aria-label={this.i18n('navigatePreviousBtn')}
-              onClick={() => this.previousClick()}
-              disabled={disableNavigationPanel}
-            >
-              <gux-icon decorative icon-name="arrow-solid-up"></gux-icon>
-            </button>
-            <button
-              type="button"
-              class="gux-next-button"
-              title={this.i18n('navigateNextBtn')}
-              aria-label={this.i18n('navigateNextBtn')}
-              onClick={() => this.nextClick()}
-              disabled={disableNavigationPanel}
-            >
-              <gux-icon decorative icon-name="arrow-solid-down"></gux-icon>
-            </button>
+            <div class="gux-navigation-buttons">
+              <button
+                type="button"
+                class="gux-previous-button"
+                title={this.i18n('navigatePreviousBtn')}
+                aria-label={this.i18n('navigatePreviousBtn')}
+                onClick={() => this.previousClick()}
+                disabled={disableNavigationPanel}
+              >
+                <gux-icon decorative icon-name="arrow-solid-up"></gux-icon>
+              </button>
+              <button
+                type="button"
+                class="gux-next-button"
+                title={this.i18n('navigateNextBtn')}
+                aria-label={this.i18n('navigateNextBtn')}
+                onClick={() => this.nextClick()}
+                disabled={disableNavigationPanel}
+              >
+                <gux-icon decorative icon-name="arrow-solid-down"></gux-icon>
+              </button>
+            </div>
+            <div class="gux-navigation-divider" />
           </div>
           <button
             class="gux-clear-button"
