@@ -33,8 +33,7 @@ jobs:
         with:
           node-version: '16'
       # Can't use npm ci, because it fails on missing optional dependencies
-      # Using --legacy-peer-deps because @stencil/less is unsupported and has an out of date peer dependency on @stencil/core@1
-      - run: npm install --legacy-peer-deps
+      - run: npm install
 
       # This creates the design token exports that are needed for the components
       - name: Tokens

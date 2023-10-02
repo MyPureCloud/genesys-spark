@@ -94,7 +94,7 @@ webappPipeline {
 
                     sh(script: '''
                             RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
-                            npm install --legacy-peer-deps --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react
+                            npm install --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react
                         ''',
                         label: 'Set exact version dependency in React Components')
 
