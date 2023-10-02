@@ -29,6 +29,8 @@
 
 .gux-flyout-menu-content {
   position: fixed;
+  border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
+    var(--gse-ui-menu-border-color);
   display: none;
 
   &.gux-shown {
