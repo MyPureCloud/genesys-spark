@@ -39,6 +39,50 @@
         "width": "2px",
         "style": "solid"
       },
+      "border_radius": "16px",
+      "offset": "1px"
+    }
+  },
+  "checkbox": {
+    "icon": {
+      "default": {
+        "unselected_foreground_color": "#767c8d",
+        "selected_foreground_color": "#4856CB"
+      },
+      "hover": {
+        "foreground_color": "#3742A2"
+      },
+      "active": {
+        "foreground_color": "#252E78"
+      },
+      "error": {
+        "foreground_color": "#e22245"
+      },
+      "height": "16px",
+      "width": "16px"
+    },
+    "label": {
+      "foreground_color": "#1b2c48",
+      "text": {
+        "fontFamily": "Noto Sans",
+        "fontWeight": 400,
+        "lineHeight": "18px"
+      }
+    },
+    "helper": {
+      "padding": "4px 0 0 24px",
+      "gap": "8px"
+    },
+    "gap": "8px",
+    "disabled": {
+      "opacity": 0.5
+    },
+    "focus": {
+      "border": {
+        "color": "#7B88F7",
+        "width": "2px",
+        "style": "solid"
+      },
       "border_radius": "5.5px",
       "offset": "1px"
     }
@@ -580,6 +624,13 @@
       "border": {
         "color": "#7B88F7",
         "width": "2px",
+        "style": "solid"
+      }
+    },
+    "focus_time": {
+      "border": {
+        "color": "#7B88F7",
+        "width": "3px",
         "style": "solid"
       }
     }
