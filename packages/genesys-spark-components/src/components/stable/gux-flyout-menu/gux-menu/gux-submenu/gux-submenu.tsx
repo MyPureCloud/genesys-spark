@@ -9,7 +9,7 @@ import {
   Prop,
   State
 } from '@stencil/core';
-import { autoUpdate, computePosition } from '@floating-ui/dom';
+import { autoUpdate, computePosition, offset } from '@floating-ui/dom';
 
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
@@ -169,7 +169,8 @@ export class GuxSubmenu {
       void computePosition(this.buttonElement, this.submenuElement, {
         placement: 'right-start',
         strategy: 'fixed',
-        middleware: []
+        // gse-ui-flyoutMenu-parenting-gap
+        middleware: [offset(4)]
       }).then(({ x, y }) => {
         Object.assign(this.submenuElement.style, {
           left: `${x}px`,

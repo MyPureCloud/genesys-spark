@@ -10,7 +10,7 @@
   .gux-arrow {
     position: absolute;
     width: var(--gse-ui-popover-anchor-width);
-    height: var(--gse-ui-popover-anchor-width);
+    height: var(--gse-ui-popover-anchor-height);
     background: var(--gse-ui-popover-backgroundColor);
     border-top: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
       var(--gse-ui-menu-border-color);
@@ -29,6 +29,7 @@
 
 .gux-flyout-menu-content {
   position: fixed;
+  border-radius: var(--gse-ui-menu-borderRadius);
   border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
     var(--gse-ui-menu-border-color);
   display: none;
