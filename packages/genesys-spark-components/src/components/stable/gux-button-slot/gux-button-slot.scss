@@ -168,7 +168,7 @@
   ::slotted(button) {
     height: initial;
     padding: 0;
-    color: var(--gse-ui-link-default-color);
+    color: var(--gse-ui-link-default-foregroundColor);
     background: none;
     border: none;
   }
@@ -176,13 +176,13 @@
   ::slotted(input[type='button'][disabled]),
   ::slotted(input[type='submit'][disabled]),
   ::slotted(button[disabled]) {
-    color: var(--gse-ui-link-disabled-color);
+    color: var(--gse-ui-link-disabled-foregroundColor);
   }
 
   ::slotted(input[type='button']:hover:enabled),
   ::slotted(input[type='submit']:hover:enabled),
   ::slotted(button:hover:enabled) {
-    color: var(--gse-ui-link-hover-color);
+    color: var(--gse-ui-link-hover-foregroundColor);
     text-decoration: underline;
     background: none;
   }
@@ -190,7 +190,7 @@
   ::slotted(input[type='button']:active:enabled),
   ::slotted(input[type='submit']:active:enabled),
   ::slotted(button:active:enabled) {
-    color: var(--gse-ui-link-active-color);
+    color: var(--gse-ui-link-active-foregroundColor);
     text-decoration: underline;
     background: none;
   }

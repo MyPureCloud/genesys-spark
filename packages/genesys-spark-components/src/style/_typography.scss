@@ -71,20 +71,20 @@
 
 /* Anchor */
 @mixin gux-anchor {
-  color: var(--gse-ui-link-default-color);
+  color: var(--gse-ui-link-default-foregroundColor);
   text-decoration: underline;
   border-radius: var(--gse-ui-links-borderRadius);
 
   &:hover {
-    color: var(--gse-ui-link-hover-color);
+    color: var(--gse-ui-link-hover-foregroundColor);
   }
 
   &:active {
-    color: var(--gse-ui-link-active-color);
+    color: var(--gse-ui-link-active-foregroundColor);
   }
 
   &:visited {
-    color: var(--gse-ui-link-visited-color);
+    color: var(--gse-ui-link-visited-foregroundColor);
   }
 
   &:focus-visible {

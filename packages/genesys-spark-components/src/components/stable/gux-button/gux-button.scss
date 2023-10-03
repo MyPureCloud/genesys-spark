@@ -145,22 +145,22 @@ button {
     min-width: initial;
     height: initial;
     padding: 0;
-    color: var(--gse-ui-link-default-color);
+    color: var(--gse-ui-link-default-foregroundColor);
     background: none;
     border: none;
 
     &[disabled] {
-      color: var(--gse-ui-link-disabled-color);
+      color: var(--gse-ui-link-disabled-foregroundColor);
     }
 
     &:hover:enabled {
-      color: var(--gse-ui-link-hover-color);
+      color: var(--gse-ui-link-hover-foregroundColor);
       text-decoration: underline;
       background: none;
     }
 
     &:active:enabled {
-      color: var(--gse-ui-link-active-color);
+      color: var(--gse-ui-link-active-foregroundColor);
       text-decoration: underline;
       background: none;
     }

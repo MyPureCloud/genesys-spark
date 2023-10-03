@@ -30,7 +30,7 @@
 @use '../../../style/zindex.scss';
 
 ::slotted(button:active:enabled) {
-  color: var(--gse-ui-link-active-color);
+  color: var(--gse-ui-link-active-foregroundColor);
   text-decoration: underline;
   background: none;
 }
