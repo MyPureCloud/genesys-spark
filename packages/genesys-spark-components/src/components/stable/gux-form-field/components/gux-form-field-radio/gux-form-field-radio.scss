@@ -25,8 +25,8 @@
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
 
-@include gux-form-field-error.GuxFormFieldErrorStyle;
-@include gux-form-field-help.GuxFormFieldHelpStyle;
+@include gux-form-field-error.Style;
+@include gux-form-field-help.Style;
 
 :host {
   display: block;

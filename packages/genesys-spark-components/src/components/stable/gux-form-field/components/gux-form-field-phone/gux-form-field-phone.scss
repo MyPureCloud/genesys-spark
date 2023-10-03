@@ -3,9 +3,9 @@
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-legend-label/gux-form-field-legend-label.scss';
 
-@include gux-form-field-fieldset-container.GuxFormFieldFieldsetContainerStyle;
-@include gux-form-field-error.GuxFormFieldErrorStyle;
-@include gux-form-field-legend-label.GuxFormFieldLegendLabelStyle;
+@include gux-form-field-fieldset-container.Style;
+@include gux-form-field-error.Style;
+@include gux-form-field-legend-label.Style;
 
 ::slotted(label) {
   @include typography.gse-ui-formControl-label;

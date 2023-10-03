@@ -1,7 +1,7 @@
 @use '../../../../../style/mixins';
 
 /* stylelint-disable-next-line selector-class-pattern */
-@mixin GuxFormFieldLabelStyle {
+@mixin Style {
   .gux-form-field-label {
     &.gux-required {
       &::after {
