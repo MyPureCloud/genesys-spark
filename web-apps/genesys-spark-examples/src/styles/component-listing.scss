@@ -88,6 +88,10 @@ nav {
     border-top: 1px solid #e8ecf2;
     border-bottom: 1px solid #e8ecf2;
 
+    &:visited {
+      color: #33383d;
+    }
+
     &.active-component {
       color: #fdfdfd;
       background-color: #2a60c8;

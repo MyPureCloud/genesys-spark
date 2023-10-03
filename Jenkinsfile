@@ -15,6 +15,9 @@ Boolean isPublicBranch = isReleaseBranch || isFeatureBranch || isBetaBranch
 String releaseOptions = isBetaBranch ? '--prerelease beta' : ''
 String publishOptions = isBetaBranch ? '--tag beta' : ''
 
+// We track this globally because it will later be passed to the documentation build
+String componentAssetsPath = ''
+
 webappPipeline {
     projectName = 'spark-components'
     versionClosure = {
@@ -71,15 +74,11 @@ webappPipeline {
         sh('npm run lint')
     }
     buildStep = { assetPrefix ->
-        String cdnUrl = assetPrefix
-        // This is a bit of a kludge, but the build pipeline is intended for apps, which
-        // can use relative URLs to load assets. Because the components are running inside
-        // apps, they have to load their assets from a full URL on the new UI hosting stack.
-        if (assetPrefix.startsWith('/')) {
-            cdnUrl = "${assetPrefix}genesys-webcomponents/"
-        }
+        // All of the useful stencil output lives under /genesys-webcomponents, so
+        // we add it to the loading path here to simplify internal code
+        componentAssetsPath = "${assetPrefix}genesys-webcomponents/"
 
-        env.CDN_URL = cdnUrl
+        env.COMPONENT_ASSETS_PATH = componentAssetsPath
 
         sh('npm run build')
     }
@@ -91,6 +90,10 @@ webappPipeline {
                 ]) {
                     sh(script: "npm publish --workspace=packages/genesys-spark-components ${publishOptions}",
                         label: 'Publish Components')
+
+                    sh(script: "npm publish --workspace=packages/genesys-spark ${publishOptions}",
+                        label: 'Publish Main Package'
+                    )
 
                     sh(script: '''
                             RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
@@ -117,7 +120,10 @@ webappPipeline {
         stage('Run Docs Build') {
             if (isPublicBranch) {
                 build(job: 'spark-monorepo-examples',
-               parameters: [string(name: 'BRANCH_NAME', value: env.BRANCH_NAME)],
+               parameters: [
+                string(name: 'BRANCH_NAME', value: env.BRANCH_NAME),
+                string(name: 'COMPONENT_ASSETS_PATH', value: componentAssetsPath)
+               ],
                 propagate: false,
                      wait: false)
             }

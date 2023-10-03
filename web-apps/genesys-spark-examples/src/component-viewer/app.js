@@ -1,5 +1,6 @@
 import { parseFragment, serialize } from 'parse5';
 
+import { registerSparkComponents } from 'genesys-spark';
 import AttributesPanel from './panels/attributes';
 import { createPreview } from './panels/preview';
 import { createEditor } from './panels/editor';
@@ -113,7 +114,9 @@ function setNewTheme(theme, panel, button, buttons) {
   button.classList.add('active');
 }
 
-export const bootstrap = (exampleCode, callback) => {
+export async function bootstrap(exampleCode, callback) {
+  await registerSparkComponents();
+
   const {
     inheritedThemeButton,
     lightThemeButton,
@@ -179,4 +182,4 @@ export const bootstrap = (exampleCode, callback) => {
   });
 
   updateCode(exampleCode);
-};
+}

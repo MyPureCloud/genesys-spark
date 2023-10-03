@@ -5,11 +5,11 @@ const path = require('path');
 const fs = require('fs');
 const proc = require('child_process');
 
-const CDN_URL = process.env.CDN_URL || '';
+const COMPONENT_ASSETS_PATH = process.env.COMPONENT_ASSETS_PATH || '';
 
 console.log(`Wrapping stencil loader.`);
-if (CDN_URL.length > 0) {
-  console.log(`  Embedded CDN URL will be: ${CDN_URL}`);
+if (COMPONENT_ASSETS_PATH.length > 0) {
+  console.log(`  Embedded CDN URL will be: ${COMPONENT_ASSETS_PATH}`);
 } else {
   console.log(`  No CDN URL specified.`);
 }
@@ -23,7 +23,7 @@ const typesDir = path.join(distDir, 'types');
 const typesFile = path.join(typesDir, 'index.d.ts');
 const template = Handlebars.compile(fs.readFileSync(templateFile, 'utf8'));
 
-const source = template({ cdn_url: CDN_URL });
+const source = template({ component_assets_path: COMPONENT_ASSETS_PATH });
 
 if (!fs.existsSync(sourceOutputFolder)) {
   fs.mkdirSync(sourceOutputFolder, { recursive: true });

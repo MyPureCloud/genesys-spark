@@ -1,14 +1,15 @@
 {
+  "private": true,
   "name": "vue-2",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve"
   },
   "dependencies": {
     "core-js": "^3.27.1",
+    "genesys-spark": "file:../../packages/genesys-spark",
     "vue": "^2.7.14"
   },
   "devDependencies": {
@@ -21,6 +22,11 @@
     "genesys-spark-components": "^3.53.3",
     "vue-template-compiler": "^2.7.14"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "eslintConfig": {
     "root": true,
     "env": {
@@ -35,9 +41,7 @@
     },
     "rules": {}
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  "volta": {
+    "node": "16.20.2"
+  }
 }
