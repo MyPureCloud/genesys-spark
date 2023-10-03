@@ -12,7 +12,7 @@ import {
 } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
-import { randomHTMLId } from '../../../utils/dom/random-html-id';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import translationResources from './i18n/en.json';

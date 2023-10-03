@@ -7,8 +7,8 @@ import {
   Method,
   State
 } from '@stencil/core';
-import { logWarn } from '../../../utils/error/log-error';
-import { OnMutation } from '../../../utils/decorator/on-mutation';
+import { logWarn } from '@utils/error/log-error';
+import { OnMutation } from '@utils/decorator/on-mutation';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 @Component({

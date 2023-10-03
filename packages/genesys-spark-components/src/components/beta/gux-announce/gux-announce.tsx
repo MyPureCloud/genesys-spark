@@ -1,7 +1,7 @@
 import { Component, Element, h, Host, JSX, Method, Prop } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
-import { afterNextRender } from '../../../utils/dom/after-next-render';
+import { afterNextRender } from '@utils/dom/after-next-render';
 
 import { GuxAnnouncePoliteness } from './gux-announce.types';
 

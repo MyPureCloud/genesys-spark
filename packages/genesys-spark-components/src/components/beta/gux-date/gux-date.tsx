@@ -6,7 +6,7 @@ import {
 } from '../../../i18n/DateTimeFormatter';
 import { getDesiredLocale } from '../../../i18n/index';
 import { GuxTimeZoneIdentifier } from '../../../i18n/time-zone/types';
-import { getValidTimezone } from '../../../utils/date/get-valid-timezone';
+import { getValidTimezone } from '@utils/date/get-valid-timezone';
 
 @Component({
   tag: 'gux-date-beta',

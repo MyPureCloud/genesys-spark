@@ -3,7 +3,7 @@ import { getTimeZones } from '@vvo/tzdb';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
 import { trackComponent } from '@utils/tracking/usage';
-import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import {
   GuxTimeZoneListing,
   GuxTimeZoneOption

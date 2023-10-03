@@ -8,9 +8,9 @@ import {
   Prop
 } from '@stencil/core';
 
-import { OnMutation } from '../../../utils/decorator/on-mutation';
-import { OnResize } from '../../../utils/decorator/on-resize';
-import { getTextContentFromNodes } from '../../../utils/dom/get-text-content-from-nodes';
+import { OnMutation } from '@utils/decorator/on-mutation';
+import { OnResize } from '@utils/decorator/on-resize';
+import { getTextContentFromNodes } from '@utils/dom/get-text-content-from-nodes';
 
 /**
  * @slot - text node or element containing text to truncate

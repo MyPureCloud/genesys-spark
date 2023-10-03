@@ -12,7 +12,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import translationResources from '../../i18n/en.json';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { logError } from '@utils/error/log-error';
-import simulateNativeEvent from '../../../../../utils/dom/simulate-native-event';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
 
 @Component({
   styleUrl: 'gux-calendar.scss',

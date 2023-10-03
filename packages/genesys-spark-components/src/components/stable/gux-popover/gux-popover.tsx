@@ -17,7 +17,7 @@ import {
   shift
 } from '@floating-ui/dom';
 
-import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
 import { getSlot } from '@utils/dom/get-slot';
 import { findElementById } from '@utils/dom/find-element-by-id';

@@ -11,20 +11,21 @@ import {
 } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
-import { OnClickOutside } from '../../../utils/decorator/on-click-outside';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import {
   buildI18nForComponent,
   GetI18nValue,
   getDesiredLocale
 } from '../../../i18n';
-import simulateNativeEvent from '../../../utils/dom/simulate-native-event';
-import { afterNextRender } from '../../../utils/dom/after-next-render';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
+import { afterNextRender } from '@utils/dom/after-next-render';
 import {
-  GuxISOYearMonth,
   getCurrentISOYearMonth,
   getISOYearMonth,
   getYearMonthObject
-} from '../../../utils/date/year-month-values';
+} from '@utils/date/year-month-values';
+
+import { GuxISOYearMonth } from '../../../utils/date/year-month-values';
 
 import translationResources from './i18n/en.json';
 

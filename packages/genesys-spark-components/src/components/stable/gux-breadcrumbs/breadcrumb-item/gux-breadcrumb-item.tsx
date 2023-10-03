@@ -1,6 +1,6 @@
 import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
 
-import { logError } from '../../../../utils/error/log-error';
+import { logError } from '@utils/error/log-error';
 
 import { GuxBreadcrumbAccent } from '../gux-breadcrumbs.types';
 
