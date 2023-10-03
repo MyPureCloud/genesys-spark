@@ -48,6 +48,7 @@
  - [gux-form-field-text-like](../gux-form-field/components/gux-form-field-text-like)
  - [gux-form-field-textarea](../gux-form-field/components/gux-form-field-textarea)
  - [gux-form-field-time-picker](../gux-form-field/components/gux-form-field-time-picker)
+ - [gux-form-field-time-zone-picker](../gux-form-field/components/gux-form-field-time-zone-picker)
  - [gux-inline-alert](../gux-alert)
  - [gux-month-calendar](../../beta/gux-month-picker/gux-month-calendar)
  - [gux-month-picker-beta](../../beta/gux-month-picker)
@@ -105,6 +106,7 @@ graph TD;
   gux-form-field-text-like --> gux-icon
   gux-form-field-textarea --> gux-icon
   gux-form-field-time-picker --> gux-icon
+  gux-form-field-time-zone-picker --> gux-icon
   gux-inline-alert --> gux-icon
   gux-month-calendar --> gux-icon
   gux-month-picker-beta --> gux-icon
