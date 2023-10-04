@@ -4,7 +4,3 @@
 @use './components/gux-form-field-range/gux-form-field-range.light.scss';
 @use './components/gux-form-field-search/gux-form-field-search.light.scss';
 @use './components/gux-form-field-text-like/gux-form-field-text-like.light.scss';
-
-input:focus-visible {
-  outline: none;
-}
