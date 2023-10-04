@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.37](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.36...v4.0.0-beta.37) (2023-10-04)
+
+
+### Features
+
+* add a new default package with proof-of-concept CDN component loading ([c975326](https://github.com/MyPureCloud/genesys-webcomponents/commit/c9753263f750ed708206c13d483f399f1934e8d0))
+* **genesys-spark:** add asset domain discovery ([ea196ff](https://github.com/MyPureCloud/genesys-webcomponents/commit/ea196ff88a505f76ff452231ce9cd23ad36ca575))
+
+
+### Bug Fixes
+
+* **genesys-spark:** make registering components wait for both js and css to indicate it's ready ([87de078](https://github.com/MyPureCloud/genesys-webcomponents/commit/87de078ced279efa5f35dc33d9cba2ffe05aa89b))
+
 ## [4.0.0-beta.36](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.35...v4.0.0-beta.36) (2023-10-03)
 
 
