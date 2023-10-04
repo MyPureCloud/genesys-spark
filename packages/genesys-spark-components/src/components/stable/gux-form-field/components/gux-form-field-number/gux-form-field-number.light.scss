@@ -10,5 +10,8 @@ gux-form-field-number {
     &[type='number'] {
       -moz-appearance: textfield;
     }
+    &:focus-visible {
+      outline: none;
+    }
   }
 }
