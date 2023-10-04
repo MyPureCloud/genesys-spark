@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#render  should render component as expected (1) 1`] = `
+<gux-time-zone-beta value="Etc/GMT+1">
+  <mock:shadow-root>
+    <span></span>
+  </mock:shadow-root>
+  <gux-time-zone-beta>
+    <mock:shadow-root>
+      <span></span>
+    </mock:shadow-root>
+  </gux-time-zone-beta>
+</gux-time-zone-beta>
+`;
+
+exports[`#render  should render component as expected (2) 1`] = `
+<gux-time-zone-beta show-offset="true" value="Etc/GMT+1">
+  <mock:shadow-root>
+    <span></span>
+  </mock:shadow-root>
+  <gux-time-zone-beta>
+    <mock:shadow-root>
+      <span></span>
+    </mock:shadow-root>
+  </gux-time-zone-beta>
+</gux-time-zone-beta>
+`;
+
+exports[`#render  should render component as expected (3) 1`] = `
+<gux-time-zone-beta parentheses-location="offset" show-offset="true" time-zone-id="Antarctica/Vostok">
+  <mock:shadow-root>
+    <span>
+      Antarctica/Vostok
+    </span>
+  </mock:shadow-root>
+</gux-time-zone-beta>
+`;
+
+exports[`#render  should render component as expected (4) 1`] = `
+<gux-time-zone-beta parentheses-location="all" show-offset="true" time-zone-id="Antarctica/Vostok">
+  <mock:shadow-root>
+    <span>
+      Antarctica/Vostok
+    </span>
+  </mock:shadow-root>
+</gux-time-zone-beta>
+`;
+
+exports[`#render  should render component as expected (5) 1`] = `
+<gux-time-zone-beta shorten="true" time-zone-id="Antarctica/Vostok">
+  <mock:shadow-root>
+    <span>
+      Vostok
+    </span>
+  </mock:shadow-root>
+</gux-time-zone-beta>
+`;

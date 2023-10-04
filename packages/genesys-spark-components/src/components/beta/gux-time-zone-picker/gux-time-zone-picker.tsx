@@ -1,5 +1,4 @@
 import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
-import { getTimeZones } from '@vvo/tzdb';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
 import { trackComponent } from '@utils/tracking/usage';
@@ -8,8 +7,7 @@ import {
   GuxTimeZoneListing,
   GuxTimeZoneOption
 } from './gux-time-zone-picker.types';
-
-import { genericTimeZones } from './generic-zones';
+import { getTimeZoneList, formatOffset } from '../../../utils/date/time-zone';
 
 @Component({
   styleUrl: 'gux-time-zone-picker.less',
@@ -53,7 +51,7 @@ export class GuxTimeZonePickerBeta {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-    this.timeZoneList = this.getTimeZoneList();
+    this.timeZoneList = this.getTimeZoneOptionsList();
     this.filteredZoneList = this.timeZoneList;
     this.timeZoneOptionElements = this.renderTimeZones(this.filteredZoneList);
   }
@@ -65,49 +63,6 @@ export class GuxTimeZonePickerBeta {
       const selectedValue = selectedElement?.value;
       this.value = selectedValue;
       simulateNativeEvent(this.root, 'change');
-    });
-  }
-
-  /**
-   * @desc create a formatted offset string
-   * @param {number} offset timezone offset in minutes
-   * @returns {string} formatted offset string
-   * @example '+HH:mm' or '-HH:mm'
-   */
-  private formatOffset(offset?: number) {
-    const isValidOffset = typeof offset === 'number';
-
-    if (!isValidOffset) {
-      return '';
-    }
-
-    const mins = Math.abs(offset) % 60;
-    const stringMins = mins.toString().padStart(2, '0');
-
-    const hrs = Math.floor(Math.abs(offset) / 60);
-    const stringHrs = hrs.toString().padStart(2, '0');
-
-    if (offset >= 0) {
-      return `+${stringHrs}:${stringMins}`;
-    }
-
-    return `-${stringHrs}:${stringMins}`;
-  }
-
-  /**
-   * @desc Adds 'group' zones that are the same as other zones to the top-level list. Modifies the original list.
-   * @param GuxTimeZoneListing[] timeZoneList base list of timezones. Group zones found in this list will be added to it.
-   */
-  private addGroupZonesToList(timeZoneList: GuxTimeZoneListing[]) {
-    timeZoneList.forEach(zone => {
-      zone.group.forEach(groupZone => {
-        const existing = timeZoneList.find(zone => zone.name === groupZone);
-        if (!existing && groupZone !== zone.name) {
-          const groupZoneItem = Object.assign({}, zone);
-          groupZoneItem.name = groupZone;
-          timeZoneList.push(groupZoneItem);
-        }
-      });
     });
   }
 
@@ -125,9 +80,7 @@ export class GuxTimeZonePickerBeta {
     if (!localizedName) {
       return;
     }
-    const formattedOffset = this.formatOffset(
-      timeZone.currentTimeOffsetInMinutes
-    );
+    const formattedOffset = formatOffset(timeZone.currentTimeOffsetInMinutes);
     const localizedUTC = this.i18n('UTC');
     const displayTextName = `${localizedName}`;
     const displayTextOffset = ` (${localizedUTC}${formattedOffset})`;
@@ -141,22 +94,19 @@ export class GuxTimeZonePickerBeta {
       baseDisplayOffsetText
     };
   }
-  private getTimeZoneList(): GuxTimeZoneOption[] {
-    const moduleTimeZones = getTimeZones();
-    const allTimeZones = [...genericTimeZones, ...moduleTimeZones];
-    this.addGroupZonesToList(allTimeZones);
-
-    const timeZoneList: GuxTimeZoneOption[] = [];
+  private getTimeZoneOptionsList(): GuxTimeZoneOption[] {
+    const allTimeZones = getTimeZoneList();
+    const timeZoneOptionsList: GuxTimeZoneOption[] = [];
     allTimeZones.forEach(timeZone => {
       const zone = this.getTimeZoneOption(timeZone);
       //Filter out zones we don't have a translation for; helps filter out deprecated module zones we don't want to use.
       if (!zone) {
         return;
       }
-      timeZoneList.push(zone);
+      timeZoneOptionsList.push(zone);
     });
 
-    return timeZoneList.sort((a, b) => {
+    return timeZoneOptionsList.sort((a, b) => {
       return a.displayTextName?.localeCompare(b.displayTextName) || 0;
     });
   }
