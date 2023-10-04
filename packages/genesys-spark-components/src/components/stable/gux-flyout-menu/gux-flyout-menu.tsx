@@ -1,15 +1,12 @@
+import { Component, Element, h, Host, JSX, Listen, State } from '@stencil/core';
 import {
-  Component,
-  Element,
-  h,
-  Host,
-  JSX,
-  Listen,
-  State,
-  Watch
-} from '@stencil/core';
-import { createPopper, Instance } from '@popperjs/core';
-
+  autoUpdate,
+  computePosition,
+  arrow,
+  flip,
+  offset,
+  shift
+} from '@floating-ui/dom';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 import { trackComponent } from '@utils/tracking/usage';
@@ -28,25 +25,16 @@ import { HTMLGuxMenuItemElement, hideDelay } from './gux-menu/gux-menu.common';
 })
 export class GuxFlyoutMenu {
   private hideDelayTimeout: ReturnType<typeof setTimeout>;
-  private popperInstance: Instance;
   private targetElement: HTMLSpanElement;
+  private arrowElement: HTMLDivElement;
   private menuContentElement: HTMLDivElement;
+  private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
 
   @Element()
   private root: HTMLElement;
 
   @State()
   private isShown: boolean = false;
-
-  @Watch('isShown')
-  forceUpdate(isShown: boolean) {
-    if (isShown) {
-      if (this.popperInstance) {
-        void this.popperInstance.update();
-      }
-    }
-  }
-
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
     event.stopPropagation();
@@ -132,34 +120,70 @@ export class GuxFlyoutMenu {
     }
   }
 
-  private runPopper(): void {
-    this.popperInstance = createPopper(
-      this.targetElement,
-      document.querySelector('gux-menu'),
-      {
-        modifiers: [
-          {
-            name: 'offset',
-            options: {
-              offset: [0, 16]
-            }
-          },
-          {
-            name: 'arrow',
-            options: {
-              padding: 16 // 16px from the edges of the popper
-            }
-          }
-        ],
-        placement: 'bottom-start'
-      }
-    );
+  private runUpdatePosition(): void {
+    if (this.root.isConnected) {
+      this.cleanupUpdatePosition = autoUpdate(
+        this.targetElement,
+        this.menuContentElement,
+        () => this.updatePosition(),
+        {
+          ancestorScroll: true,
+          elementResize: true,
+          animationFrame: true,
+          ancestorResize: true
+        }
+      );
+    } else {
+      this.disconnectedCallback();
+    }
   }
 
-  private destroyPopper(): void {
-    if (this.popperInstance) {
-      this.popperInstance.destroy();
-      this.popperInstance = null;
+  private updatePosition(): void {
+    // This is 13 because this makes the arrow look aligned
+    const arrowLen = 13;
+    const borderWidth = 1;
+
+    if (this.root) {
+      void computePosition(this.targetElement, this.menuContentElement, {
+        placement: 'bottom-start',
+        strategy: 'fixed',
+        middleware: [
+          offset(16),
+          flip(),
+          shift(),
+          arrow({
+            element: this.arrowElement,
+            padding: 16
+          })
+        ]
+      }).then(({ x, y, middlewareData, placement }) => {
+        Object.assign(this.menuContentElement.style, {
+          left: `${x}px`,
+          top: `${y}px`
+        });
+
+        const side = placement.split('-')[0];
+
+        const staticSide = {
+          top: 'bottom',
+          right: 'left',
+          bottom: 'top',
+          left: 'right'
+        }[side];
+
+        if (middlewareData.arrow) {
+          const { x, y } = middlewareData.arrow;
+
+          Object.assign(this.arrowElement?.style, {
+            left: x != null ? `${x}px` : '',
+            top: y != null ? `${y}px` : '',
+            right: '',
+            bottom: '',
+            [staticSide]: `${-arrowLen / 2 - borderWidth}px`,
+            transform: 'rotate(-45deg)'
+          });
+        }
+      });
     }
   }
 
@@ -180,11 +204,23 @@ export class GuxFlyoutMenu {
   }
 
   componentDidLoad(): void {
-    this.runPopper();
+    if (this.isShown) {
+      this.runUpdatePosition();
+    }
+  }
+
+  componentDidUpdate(): void {
+    if (this.isShown) {
+      this.runUpdatePosition();
+    } else if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
   }
 
   disconnectedCallback(): void {
-    this.destroyPopper();
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
   }
 
   render(): JSX.Element {
@@ -200,6 +236,10 @@ export class GuxFlyoutMenu {
           }}
           ref={el => (this.menuContentElement = el)}
         >
+          <div
+            ref={(el: HTMLDivElement) => (this.arrowElement = el)}
+            class="gux-arrow"
+          ></div>
           <slot name="menu" />
         </div>
       </Host>

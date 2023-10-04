@@ -16,11 +16,17 @@ gux-submenu {
     padding: var(--gse-ui-menu-option-padding);
     line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
     color: var(--gse-ui-menu-option-label-foregroundColor);
-    background-color: #fdfdfd; //TODO COMUI-2307
+    background-color: var(--gse-ui-menu-option-default-backgroundColor);
 
     &:focus-within,
     &:hover {
       background-color: var(--gse-ui-menu-option-hover-backgroundColor);
+    }
+
+    &.gux-submenu-button-active {
+      color: var(--gse-ui-menu-option-shortcut-selected-foregroundColor);
+      background-color: var(--gse-ui-menu-option-selected-backgroundColor);
+      font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
     }
 
     .gux-submenu-button-text {
@@ -43,7 +49,7 @@ gux-submenu {
   }
 
   .gux-submenu-wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     flex-direction: column;

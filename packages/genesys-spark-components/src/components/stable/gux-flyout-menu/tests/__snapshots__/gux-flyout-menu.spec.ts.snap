@@ -7,13 +7,14 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
       <slot name="target"></slot>
     </span>
     <div class="gux-flyout-menu-content">
+      <div class="gux-arrow"></div>
       <slot name="menu"></slot>
     </div>
   </mock:shadow-root>
   <span slot="target">
     Example Target Element
   </span>
-  <gux-menu data-popper-placement="bottom-start" data-popper-reference-hidden role="menu" slot="menu" style="position: absolute; left: 0; top: 0; margin: 0; right: auto; bottom: auto; transform: translate(0px, 0px);">
+  <gux-menu role="menu" slot="menu">
     <!---->
     <gux-menu-option>
       <!---->
@@ -229,7 +230,6 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
         </div>
       </div>
     </gux-submenu>
-    <div class="gux-arrow" data-popper-arrow style="position: absolute;"></div>
   </gux-menu>
 </gux-flyout-menu>
 `;
