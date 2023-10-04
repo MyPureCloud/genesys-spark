@@ -6,10 +6,10 @@
 
 $gux-form-field-number-step-button-size: 14px;
 
-@include gux-form-field-container.GuxFormFieldContainerStyle;
-@include gux-form-field-error.GuxFormFieldErrorStyle;
-@include gux-form-field-label.GuxFormFieldLabelStyle;
-@include gux-form-field-help.GuxFormFieldHelpStyle;
+@include gux-form-field-container.Style;
+@include gux-form-field-error.Style;
+@include gux-form-field-label.Style;
+@include gux-form-field-help.Style;
 
 :host {
   display: block;
