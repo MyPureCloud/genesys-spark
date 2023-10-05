@@ -35,12 +35,15 @@ export class GuxToggleSlider {
   }
 
   render(): JSX.Element {
+    const isError = this.errorId.length > 0;
+
     return (
       <div
         class={{
           'gux-toggle-slider': true,
           'gux-checked': this.checked,
-          'gux-disabled': this.disabled
+          'gux-disabled': this.disabled,
+          'gux-error': isError
         }}
         role="checkbox"
         aria-checked={this.checked.toString()}
@@ -50,7 +53,7 @@ export class GuxToggleSlider {
       >
         <div class="gux-slider">
           <div class="gux-switch">
-            <gux-icon icon-name="checkmark" decorative></gux-icon>
+            {!isError && <gux-icon icon-name="checkmark" decorative></gux-icon>}
           </div>
         </div>
       </div>
