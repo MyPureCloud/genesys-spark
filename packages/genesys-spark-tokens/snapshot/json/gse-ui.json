@@ -382,19 +382,19 @@
   },
   "link": {
     "default": {
-      "color": "#4856CB"
+      "foregroundColor": "#4856CB"
     },
     "disabled": {
-      "color": "#4856CB"
+      "foregroundColor": "#4856CB"
     },
     "hover": {
-      "color": "#3742A2"
+      "foregroundColor": "#3742A2"
     },
     "active": {
-      "color": "#252E78"
+      "foregroundColor": "#252E78"
     },
     "visited": {
-      "color": "#6e5ddb"
+      "foregroundColor": "#6e5ddb"
     },
     "as_button": {
       "text": {
@@ -446,28 +446,30 @@
   },
   "breadcrumbs": {
     "primary": {
-      "height": "20px"
+      "height": "20px",
+      "separator": {
+        "padding": "0 12px",
+        "typography": {
+          "fontFamily": "Noto Sans",
+          "lineHeight": "20px",
+          "fontSize": "16px",
+          "fontWeight": 700
+        }
+      }
     },
     "secondary": {
-      "height": "18px"
+      "height": "18px",
+      "separator": {
+        "padding": "0 8px",
+        "typography": {
+          "fontFamily": "Noto Sans",
+          "lineHeight": "18px",
+          "fontSize": "14px",
+          "fontWeight": 700
+        }
+      }
     },
     "separator": {
-      "padding": {
-        "primary": "0 12px",
-        "secondary": "0 8px"
-      },
-      "primary": {
-        "fontFamily": "Noto Sans",
-        "lineHeight": "24px",
-        "fontSize": "16px",
-        "fontWeight": 700
-      },
-      "secondary": {
-        "fontFamily": "Noto Sans",
-        "lineHeight": "20px",
-        "fontSize": "14px",
-        "fontWeight": 700
-      },
       "color": "#a3a7b0"
     },
     "border_radius": 0

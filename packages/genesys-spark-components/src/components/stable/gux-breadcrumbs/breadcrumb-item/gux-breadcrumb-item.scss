@@ -4,22 +4,23 @@ $temp-focus-ring-offset: 3px;
 $temp-focus-ring-corner-radius: 4px;
 
 /**
+  * @prop --gse-semantic-color-focus : //TODO https://inindca.atlassian.net/browse/COMUI-2115
   * @prop --gse-ui-breadcrumbs-primary-height
+  * @prop --gse-ui-breadcrumbs-primary-separator-padding
+  * @prop --gse-ui-breadcrumbs-primary-separator-typography-fontFamily
+  * @prop --gse-ui-breadcrumbs-primary-separator-typography-fontSize
+  * @prop --gse-ui-breadcrumbs-primary-separator-typography-fontWeight
+  * @prop --gse-ui-breadcrumbs-primary-separator-typography-lineHeight
   * @prop --gse-ui-breadcrumbs-secondary-height
+  * @prop --gse-ui-breadcrumbs-secondary-separator-padding
+  * @prop --gse-ui-breadcrumbs-secondary-separator-typography-fontFamily
+  * @prop --gse-ui-breadcrumbs-secondary-separator-typography-fontSize
+  * @prop --gse-ui-breadcrumbs-secondary-separator-typography-fontWeight
+  * @prop --gse-ui-breadcrumbs-secondary-separator-typography-lineHeight
   * @prop --gse-ui-breadcrumbs-separator-color
-  * @prop --gse-ui-breadcrumbs-separator-padding-primary : //TODO https://inindca.atlassian.net/browse/COMUI-2115
-  * @prop --gse-ui-breadcrumbs-separator-padding-secondary : //TODO https://inindca.atlassian.net/browse/COMUI-2115
-  * @prop --gse-ui-breadcrumbs-separator-primary-fontFamily
-  * @prop --gse-ui-breadcrumbs-separator-primary-fontSize
-  * @prop --gse-ui-breadcrumbs-separator-primary-fontWeight
-  * @prop --gse-ui-breadcrumbs-separator-primary-lineHeight : //TODO https://inindca.atlassian.net/browse/COMUI-2115
-  * @prop --gse-ui-breadcrumbs-separator-secondary-fontFamily
-  * @prop --gse-ui-breadcrumbs-separator-secondary-fontSize
-  * @prop --gse-ui-breadcrumbs-separator-secondary-fontWeight
-  * @prop --gse-ui-breadcrumbs-separator-secondary-lineHeight : //TODO https://inindca.atlassian.net/browse/COMUI-2115
-  * @prop --gse-ui-link-active-color : //TODO https://inindca.atlassian.net/browse/COMUI-2115
-  * @prop --gse-ui-link-default-color : //TODO https://inindca.atlassian.net/browse/COMUI-2115
-  * @prop --gse-ui-link-hover-color : //TODO https://inindca.atlassian.net/browse/COMUI-2115
+  * @prop --gse-ui-link-active-foregroundColor
+  * @prop --gse-ui-link-default-foregroundColor
+  * @prop --gse-ui-link-hover-foregroundColor
   * @prop --gse-ui-link-inLine-medium-text-fontFamily
   * @prop --gse-ui-link-inLine-medium-text-fontSize
   * @prop --gse-ui-link-inLine-medium-text-fontWeight
@@ -38,8 +39,7 @@ $temp-focus-ring-corner-radius: 4px;
   * @prop --gse-ui-link-inLine-small-underlinedText-fontWeight
   * @prop --gse-ui-link-inLine-small-underlinedText-lineHeight
   * @prop --gse-ui-link-inLine-small-underlinedText-textDecoration
-  * @prop --gse-ui-link-visited-color : //TODO https://inindca.atlassian.net/browse/COMUI-2115
-  * @prop --gse-semantic-color-focus : //TODO https://inindca.atlassian.net/browse/COMUI-2115
+  * @prop --gse-ui-link-visited-foregroundColor
   */
 
 @mixin link-breadcrumb-primary-default {
@@ -61,11 +61,17 @@ $temp-focus-ring-corner-radius: 4px;
 }
 
 @mixin link-breadcrumb-primary-separator {
-  padding: var(--gse-ui-breadcrumbs-separator-padding-primary);
-  font-family: var(--gse-ui-breadcrumbs-separator-primary-fontFamily);
-  font-size: var(--gse-ui-breadcrumbs-separator-primary-fontSize);
-  font-weight: var(--gse-ui-breadcrumbs-separator-primary-fontWeight);
-  line-height: var(--gse-ui-breadcrumbs-separator-primary-lineHeight);
+  padding: var(--gse-ui-breadcrumbs-primary-separator-padding);
+  font-family: var(
+    --gse-ui-breadcrumbs-primary-separator-typography-fontFamily
+  );
+  font-size: var(--gse-ui-breadcrumbs-primary-separator-typography-fontSize);
+  font-weight: var(
+    --gse-ui-breadcrumbs-primary-separator-typography-fontWeight
+  );
+  line-height: var(
+    --gse-ui-breadcrumbs-primary-separator-typography-lineHeight
+  );
 }
 
 @mixin link-breadcrumb-secondary-default {
@@ -87,11 +93,17 @@ $temp-focus-ring-corner-radius: 4px;
 }
 
 @mixin link-breadcrumb-secondary-separator {
-  padding: var(--gse-ui-breadcrumbs-separator-padding-secondary);
-  font-family: var(--gse-ui-breadcrumbs-separator-secondary-fontFamily);
-  font-size: var(--gse-ui-breadcrumbs-separator-secondary-fontSize);
-  font-weight: var(--gse-ui-breadcrumbs-separator-secondary-fontWeight);
-  line-height: var(--gse-ui-breadcrumbs-separator-secondary-lineHeight);
+  padding: var(--gse-ui-breadcrumbs-secondary-separator-padding);
+  font-family: var(
+    --gse-ui-breadcrumbs-secondary-separator-typography-fontFamily
+  );
+  font-size: var(--gse-ui-breadcrumbs-secondary-separator-typography-fontSize);
+  font-weight: var(
+    --gse-ui-breadcrumbs-secondary-separator-typography-fontWeight
+  );
+  line-height: var(
+    --gse-ui-breadcrumbs-secondary-separator-typography-lineHeight
+  );
 }
 
 .gux-breadcrumb-generation {
@@ -106,15 +118,15 @@ $temp-focus-ring-corner-radius: 4px;
   .gux-breadcrumb-content {
     @include link-breadcrumb-secondary-default;
 
-    color: var(--gse-ui-link-default-color);
+    color: var(--gse-ui-link-default-foregroundColor);
     pointer-events: none;
 
     &.gux-active {
-      color: var(--gse-ui-link-active-color);
+      color: var(--gse-ui-link-active-foregroundColor);
     }
 
     &.gux-link {
-      color: var(--gse-ui-link-default-color);
+      color: var(--gse-ui-link-default-foregroundColor);
       pointer-events: initial;
 
       &:hover {
@@ -122,15 +134,15 @@ $temp-focus-ring-corner-radius: 4px;
       }
 
       &:visited {
-        color: var(--gse-ui-link-visited-color);
+        color: var(--gse-ui-link-visited-foregroundColor);
       }
 
       &:hover {
-        color: var(--gse-ui-link-hover-color);
+        color: var(--gse-ui-link-hover-foregroundColor);
       }
 
       &:active {
-        color: var(--gse-ui-link-active-color);
+        color: var(--gse-ui-link-active-foregroundColor);
       }
 
       &:focus-visible {
