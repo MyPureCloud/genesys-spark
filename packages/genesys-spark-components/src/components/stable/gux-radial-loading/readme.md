@@ -18,24 +18,15 @@ Otherwise, if the loading is unknown, and no percentage is provided, it instead 
 
 ## CSS Custom Properties
 
-| Name                                             | Description                                            |
-| ------------------------------------------------ | ------------------------------------------------------ |
-| `--gse-ui-progressAndLoading-largeBorder`        | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-largeBorder-0`      | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-largeBorder-1`      | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-largeBorder-2`      | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-smallBorder`        | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-smallBorder-0`      | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-smallBorder-1`      | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-smallBorder-2`      | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-spinner-base`       |                                                        |
-| `--gse-ui-progressAndLoading-spinner-foreground` |                                                        |
-| `--gse-ui-progressAndLoading-spinner-large`      | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-spinner-small`      | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-thinBorder`         | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-thinBorder-0`       | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-thinBorder-1`       | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-thinBorder-2`       | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
+| Name                                                     | Description                               |
+| -------------------------------------------------------- | ----------------------------------------- |
+| `--gse-ui-progressAndLoading-largeBorder //TODO https`   | //inindca.atlassian.net/browse/COMUI-2226 |
+| `--gse-ui-progressAndLoading-smallBorder //TODO https`   | //inindca.atlassian.net/browse/COMUI-2226 |
+| `--gse-ui-progressAndLoading-spinner-base`               |                                           |
+| `--gse-ui-progressAndLoading-spinner-foreground`         |                                           |
+| `--gse-ui-progressAndLoading-spinner-large //TODO https` | //inindca.atlassian.net/browse/COMUI-2226 |
+| `--gse-ui-progressAndLoading-spinner-small //TODO https` | //inindca.atlassian.net/browse/COMUI-2226 |
+| `--gse-ui-progressAndLoading-thinBorder //TODO https`    | //inindca.atlassian.net/browse/COMUI-2226 |
 
 
 ## Dependencies
