@@ -7,6 +7,7 @@
     "build": "npm run build --workspaces --if-present",
     "commit": "git-cz",
     "commitlint": "commitlint --from 30e62e0c73aa2f57776b8932e93750c04957b71f",
+    "current-version": "cross-var \"echo $npm_package_version\"",
     "dev": "npx concurrently  \"npm run dev.gsc\" \"npm run dev.spark\" \"npm run dev.examples\"",
     "dev.examples": "npm run dev --workspace=web-apps/genesys-spark-examples",
     "dev.gsc": "npm run dev --workspace=packages/genesys-spark-components",
@@ -28,11 +29,10 @@
     "prettier-package-json.workspaces": "npm run prettier-package-json --workspaces --if-present",
     "prettier.root": "prettier --log-level silent --ignore-unknown --write .",
     "prettier.workspaces": "npm run prettier --workspaces --if-present",
+    "release": "standard-version",
     "test": "npm run test --workspaces --if-present",
     "test.ci": "npm run test.ci --workspaces --if-present",
-    "version-sync": "npm-run-all \"version-sync.* -- {@}\" --",
-    "version-sync.root": "npm version --no-git-tag-version --allow-same-version",
-    "version-sync.workspaces": "npm run version-sync --workspaces --if-present"
+    "version-sync": "npm run version-sync --workspaces --if-present"
   },
   "config": {
     "commitizen": {
@@ -52,6 +52,7 @@
     "@commitlint/config-conventional": "^17.6.6",
     "commitizen": "^4.3.0",
     "concurrently": "^8.2.0",
+    "cross-var": "^1.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.44.0",
     "eslint-config-genesys-spark-components": "file:./shared-configs/eslint-config-genesys-spark-components",
@@ -60,9 +61,15 @@
     "lint-staged": "^13.2.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.0",
-    "prettier-config-genesys-spark-components": "file:./shared-configs/prettier-config-genesys-spark-components"
+    "prettier-config-genesys-spark-components": "file:./shared-configs/prettier-config-genesys-spark-components",
+    "standard-version": "^9.5.0"
   },
   "prettier": "prettier-config-genesys-spark-components",
+  "standard-version": {
+    "skip": {
+      "tag": true
+    }
+  },
   "volta": {
     "node": "18.16.1"
   }
