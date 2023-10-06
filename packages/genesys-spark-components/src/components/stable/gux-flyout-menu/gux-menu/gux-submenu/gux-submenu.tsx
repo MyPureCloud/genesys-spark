@@ -25,7 +25,8 @@ import {
 
 @Component({
   styleUrl: 'gux-submenu.scss',
-  tag: 'gux-submenu'
+  tag: 'gux-submenu',
+  shadow: true
 })
 export class GuxSubmenu {
   private hideDelayTimeout: ReturnType<typeof setTimeout>;
@@ -76,10 +77,9 @@ export class GuxSubmenu {
 
       case 'ArrowLeft':
       case 'Escape':
-        if (this.submenuContentElement.contains(event.target as Node)) {
+        if (!(this.root === event.target)) {
           event.stopPropagation();
         }
-
         void this.guxFocus();
         break;
     }
@@ -91,14 +91,10 @@ export class GuxSubmenu {
   onKeyup(event: KeyboardEvent): void {
     switch (event.key) {
       case ' ':
-        event.stopPropagation();
-        if (this.submenuContentElement.contains(document.activeElement)) {
-          this.root.focus();
-        } else {
-          this.hideDelayTimeout = afterNextRenderTimeout(() => {
-            this.focusOnSubmenu();
-          });
-        }
+        this.hideDelayTimeout = afterNextRenderTimeout(() => {
+          this.focusOnSubmenu();
+        });
+        void this.guxFocus();
         break;
     }
   }
@@ -115,7 +111,7 @@ export class GuxSubmenu {
 
   @Listen('click')
   onClick(event: MouseEvent) {
-    if (this.submenuContentElement.contains(event.target as Node)) {
+    if ((event.target as Node).nodeName === 'GUX-MENU-OPTION') {
       this.hide();
       return;
     }
@@ -184,8 +180,8 @@ export class GuxSubmenu {
     if (this.submenuContentElement.contains(document.activeElement)) {
       return;
     }
+    const menuItems = Array.from(this.root.children);
 
-    const menuItems = Array.from(this.submenuContentElement.children);
     const nextFocusableElement = menuItems[0] as HTMLGuxMenuItemElement;
 
     void nextFocusableElement.guxFocus();
