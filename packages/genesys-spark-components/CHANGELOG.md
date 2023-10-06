@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.107.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.106.0...v3.107.0) (2023-10-06)
+
+
+### Features
+
+* **icon:** Added icons ([65a1aaf](https://github.com/MyPureCloud/genesys-webcomponents/commit/65a1aaf74b71a3a4a8224dcb169c30a06226782f))
+
+
+### Bug Fixes
+
+* **form-field-dropdown:** value truncates if longer than space available ([8ad9f55](https://github.com/MyPureCloud/genesys-webcomponents/commit/8ad9f55f0b1e097c37359b8e40e352879d21d6e3))
+
 ## [3.106.0](https://github.com/MyPureCloud/genesys-webcomponents/compare/v3.105.2...v3.106.0) (2023-10-05)
 
 
