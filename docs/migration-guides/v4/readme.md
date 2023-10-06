@@ -29,7 +29,6 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | V3 tag name                   | V4 tag name              |
 | ----------------------------- | ------------------------ |
 | gux-blank-state-beta          | gux-blank-state          |
-| gux-button-slot-beta          | gux-button-slot          |
 | gux-column-manager-beta       | gux-column-manager       |
 | gux-context-menu-beta         | gux-context-menu         |
 | gux-inline-alert-beta         | gux-inline-alert         |
@@ -48,8 +47,9 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | V3 tag name               | V4 tag name          | Migration Guide             |
 | ------------------------- | -------------------- | --------------------------- |
 | `gux-badge-beta`          | `gux-badge`          | [link](#gux-badge)          |
-| `gux-tag-beta`            | `gux-tag`            | [link](#gux-tag)            |
+| `gux-button-slot-beta`    | `gux-button-slot`    | [link](#gux-button-slot)    |
 | `gux-dropdown-multi-beta` | `gux-dropdown-multi` | [link](#gux-dropdown-multi) |
+| `gux-tag-beta`            | `gux-tag`            | [link](#gux-tag)            |
 
 #### gux-badge
 
@@ -112,6 +112,10 @@ An `is-open` prop has been added to control showing and hiding the component. Th
     ...
   </gux-dropdown-multi>
 ```
+
+#### gux-button-slot
+
+An `icon-only` only prop has been added. This should be used when the slotted button only contains an icon. This will allow the component to be styled correctly.
 
 ## V3 Stable Components Archived to Legacy in V4
 

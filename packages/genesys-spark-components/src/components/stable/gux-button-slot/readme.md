@@ -4,9 +4,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                                                                        | Default       |
-| -------- | --------- | ----------- | --------------------------------------------------------------------------- | ------------- |
-| `accent` | `accent`  |             | `"danger" \| "ghost" \| "inline" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
+| Property   | Attribute   | Description | Type                                                                        | Default       |
+| ---------- | ----------- | ----------- | --------------------------------------------------------------------------- | ------------- |
+| `accent`   | `accent`    |             | `"danger" \| "ghost" \| "inline" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
+| `iconOnly` | `icon-only` |             | `boolean`                                                                   | `undefined`   |
 
 
 ## Slots

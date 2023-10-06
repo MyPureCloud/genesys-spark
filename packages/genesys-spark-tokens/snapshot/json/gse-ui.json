@@ -280,6 +280,7 @@
       "fontWeight": 700
     },
     "padding": "0 12px",
+    "padding_icon_only": "8px",
     "height": "32px",
     "border_radius": "4px",
     "icon_only": {
