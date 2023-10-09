@@ -21,10 +21,7 @@ Otherwise, if the progress is unknown, and no percentage is provided, it instead
 
 | Name                                                  | Description                                            |
 | ----------------------------------------------------- | ------------------------------------------------------ |
-| `--gse-ui-progressAndLoading-largeBorder`             | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-largeBorder-0`           | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-largeBorder-1`           | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-largeBorder-2`           | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
+| `--gse-ui-progressAndLoading-largeBorder`             |                                                        |
 | `--gse-ui-progressAndLoading-spinner-base`            |                                                        |
 | `--gse-ui-progressAndLoading-spinner-foreground`      |                                                        |
 | `--gse-ui-progressAndLoading-spinner-large`           | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
