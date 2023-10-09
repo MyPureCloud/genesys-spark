@@ -1,0 +1,20 @@
+<h1>gux-dialog-beta</h1>
+
+<gux-dialog-beta id="example1">
+  <div slot="title">Dialog Title</div>
+  <div slot="content">This contains the dialog content</div>
+  <div slot="start-align-buttons">
+    <gux-button type="button" accent="primary">Accept</gux-button>
+  </div>
+  <div slot="end-align-buttons">
+    <gux-button
+      onclick="document.getElementById('example1').hideModal()"
+      id="cancel-button"
+      type="button"
+      >Cancel</gux-button
+    >
+  </div>
+</gux-dialog-beta>
+<gux-button onclick="document.getElementById('example1').showModal()"
+  >Show</gux-button
+>
