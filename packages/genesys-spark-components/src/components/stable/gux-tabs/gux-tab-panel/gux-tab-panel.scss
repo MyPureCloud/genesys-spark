@@ -1,9 +1,9 @@
 @use '../../../../style/focus.scss';
 
-$tabListHeight: 40px;
-$tabListBorderBottomWidth: 1px;
-$tabListMarginBottom: 16px;
-$tabPanelHeightOffset: $tabListHeight + $tabListBorderBottomWidth +
+$tabListHeight: 40px; // COMUI-2327 - Need a tabs-set height token.
+$tabListBorderBottomHeight: var(--gse-ui-tabs-set-divider-horizontal-height);
+$tabListMarginBottom: 16px; //COMUI-2327
+$tabPanelHeightOffset: $tabListHeight + $tabListBorderBottomHeight +
   $tabListMarginBottom;
 
 :host {

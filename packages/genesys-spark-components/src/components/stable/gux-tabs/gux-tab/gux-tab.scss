@@ -2,33 +2,37 @@ gux-tabs[orientation='vertical'] > gux-tab-list {
   .gux-tab {
     display: flex;
     justify-content: flex-end;
-    padding: 12px 16px;
+    height: var(--gse-ui-tabs-item-vertical-fixedHeight);
+    padding: var(--gse-ui-tabs-item-vertical-padding);
+    border-right: var(--gse-ui-tabs-item-divider-vertical-width) solid
+      var(--gse-ui-tabs-item-divider-dividerColor); //TODO: COMUI-2327. -- replace vertical-width with vertical-height when token created.
 
     &.gux-active {
-      padding-right: 16px - 2px;
-      border-right: 2px solid #2a60c8;
+      border-right: var(--gse-ui-tabs-item-indicator-vertical-width) solid
+        var(--gse-ui-tabs-item-indicator-activeColor); // TODO COMUI-2327 : Missing 2px height token for highlight.
     }
 
     &:hover:not(.gux-active):not(.gux-disabled) {
-      padding-right: 16px - 2px;
-      border-right: 2px solid #8a97ad;
+      border-right: var(--gse-ui-tabs-item-indicator-vertical-width) solid
+        var(--gse-ui-tabs-item-indicator-hoverColor);
     }
   }
 }
 
 gux-tabs:not([orientation='vertical']) > gux-tab-list {
   .gux-tab {
+    height: 40px; // TODO: COMUI-2327. Token needs to be updated to 40px.
     box-sizing: border-box;
-    padding-bottom: 2px;
+    padding: var(--gse-ui-tabs-item-horizontal-padding);
 
     &.gux-active {
-      padding-bottom: 0;
-      border-bottom: 2px solid #2a60c8;
+      border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
+        var(--gse-ui-tabs-item-indicator-activeColor); // TODO COMUI-2327 : Missing 2px height token for highlight.
     }
 
     &:hover:not(.gux-active):not(.gux-disabled) {
-      padding-bottom: 0;
-      border-bottom: 2px solid #8a97ad;
+      border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
+        var(--gse-ui-tabs-item-indicator-hoverColor);
     }
 
     gux-tooltip-title {
@@ -61,33 +65,37 @@ gux-tabs[alignment='full-width'] > gux-tab-list {
 
 gux-tab {
   display: flex;
+  width: var(--gse-ui-tabs-item-fixedWidth);
   max-width: 160px;
 
   .gux-tab {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: var(--gse-ui-tabs-item-fixedWidth);
     max-width: 160px;
-    height: 40px;
-    padding: 0 16px;
-    font-size: 14px;
-    color: #2e394c;
+    height: var(--gse-ui-tabs-item-height);
+    font-family: var(--gse-ui-tabs-item-itemText-fontFamily);
+    line-height: var(--gse-ui-tabs-item-itemText-lineHeight);
+    font-size: var(--gse-ui-tabs-item-itemText-fontSize);
+    font-weight: var(--gse-ui-tabs-item-itemText-fontWeight);
+    color: var(--gse-ui-tabs-item-itemTextColor);
     cursor: pointer;
-    background-color: #fff;
     border: none;
+    background-color: transparent; //TODO: COMUI-2327
 
     &.gux-disabled {
       cursor: default;
 
       gux-tooltip-title {
-        color: rgba(#2e394c, 50%);
+        opacity: var(--gse-ui-tabs-item-disableOpacity);
       }
     }
 
     &:focus-visible {
-      padding: 0 13px 3px;
-      border: 3px solid #aac9ff;
-      border-radius: 5px;
+      border: var(--gse-semantic-focusRing-default-border-width)
+        var(--gse-semantic-focusRing-default-border-style)
+        var(--gse-semantic-focusRing-default-border-color); //TODO: COMUI-2327
+      border-radius: 4px; // TODO:COMUI-2327
       outline: none;
     }
 
