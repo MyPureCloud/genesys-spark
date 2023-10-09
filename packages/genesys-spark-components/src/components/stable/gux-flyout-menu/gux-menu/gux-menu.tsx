@@ -6,7 +6,8 @@ import { Component, h, Host, JSX } from '@stencil/core';
 
 @Component({
   styleUrl: 'gux-menu.scss',
-  tag: 'gux-menu'
+  tag: 'gux-menu',
+  shadow: true
 })
 export class GuxMenu {
   render(): JSX.Element {

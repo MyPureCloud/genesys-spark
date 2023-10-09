@@ -68,11 +68,11 @@ export class GuxFlyoutMenu {
     event.stopPropagation();
     switch (event.key) {
       case ' ':
-        if (this.menuContentElement.contains(document.activeElement)) {
-          this.root.focus();
+        if (this.root === event.target) {
+          this.focusOnMenu();
         } else {
           this.hideDelayTimeout = afterNextRenderTimeout(() => {
-            this.focusOnMenu();
+            this.root.focus();
           });
         }
         return;

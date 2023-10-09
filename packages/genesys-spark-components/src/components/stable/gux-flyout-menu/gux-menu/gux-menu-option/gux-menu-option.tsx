@@ -8,7 +8,8 @@ import { menuNavigation } from '../gux-menu.common';
 
 @Component({
   styleUrl: 'gux-menu-option.scss',
-  tag: 'gux-menu-option'
+  tag: 'gux-menu-option',
+  shadow: true
 })
 export class GuxMenuOption {
   private buttonElement: HTMLButtonElement;
@@ -33,7 +34,15 @@ export class GuxMenuOption {
       case 'ArrowRight':
       case 'Enter':
         event.stopPropagation();
+        break;
+    }
+  }
 
+  @Listen('keyup')
+  onKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case ' ':
+        event.stopPropagation();
         break;
     }
   }

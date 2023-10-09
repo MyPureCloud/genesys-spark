@@ -15,35 +15,179 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
     Example Target Element
   </span>
   <gux-menu role="menu" slot="menu">
-    <!---->
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
     <gux-menu-option>
-      <!---->
-      <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-        <span class="gux-menu-option-button-text">
-          Option One
-        </span>
-      </button>
+      <mock:shadow-root>
+        <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+          <span class="gux-menu-option-button-text">
+            <slot></slot>
+          </span>
+        </button>
+      </mock:shadow-root>
+      Option One
     </gux-menu-option>
     <gux-submenu label="Submenu Two">
-      <!---->
-      <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
-        <span class="gux-submenu-button-text">
-          Submenu Two
-        </span>
-        <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
-      </button>
-      <div class="gux-submenu-wrapper">
-        <div class="gux-submenu-content" role="menu">
-          <gux-menu-option>
-            <!---->
+      <mock:shadow-root>
+        <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
+          <span class="gux-submenu-button-text">
+            Submenu Two
+          </span>
+          <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+        <div class="gux-submenu-wrapper">
+          <div class="gux-submenu-content" role="menu">
+            <slot></slot>
+          </div>
+        </div>
+      </mock:shadow-root>
+      <gux-menu-option>
+        <mock:shadow-root>
+          <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+            <span class="gux-menu-option-button-text">
+              <slot></slot>
+            </span>
+          </button>
+        </mock:shadow-root>
+        Option One
+      </gux-menu-option>
+      <gux-submenu label="Submenu Two">
+        <mock:shadow-root>
+          <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
+            <span class="gux-submenu-button-text">
+              Submenu Two
+            </span>
+            <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
+          </button>
+          <div class="gux-submenu-wrapper">
+            <div class="gux-submenu-content" role="menu">
+              <slot></slot>
+            </div>
+          </div>
+        </mock:shadow-root>
+        <gux-menu-option>
+          <mock:shadow-root>
             <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
               <span class="gux-menu-option-button-text">
-                Option One
+                <slot></slot>
               </span>
             </button>
-          </gux-menu-option>
-          <gux-submenu label="Submenu Two">
-            <!---->
+          </mock:shadow-root>
+          Option One
+        </gux-menu-option>
+        <gux-menu-option>
+          <mock:shadow-root>
+            <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+              <span class="gux-menu-option-button-text">
+                <slot></slot>
+              </span>
+            </button>
+          </mock:shadow-root>
+          Option Two
+        </gux-menu-option>
+        <gux-menu-option>
+          <mock:shadow-root>
+            <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+              <span class="gux-menu-option-button-text">
+                <slot></slot>
+              </span>
+            </button>
+          </mock:shadow-root>
+          Option Three
+        </gux-menu-option>
+      </gux-submenu>
+      <gux-menu-option>
+        <mock:shadow-root>
+          <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+            <span class="gux-menu-option-button-text">
+              <slot></slot>
+            </span>
+          </button>
+        </mock:shadow-root>
+        Option Three
+      </gux-menu-option>
+    </gux-submenu>
+    <gux-menu-option>
+      <mock:shadow-root>
+        <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+          <span class="gux-menu-option-button-text">
+            <slot></slot>
+          </span>
+        </button>
+      </mock:shadow-root>
+      Option Three
+    </gux-menu-option>
+    <gux-menu-option>
+      <mock:shadow-root>
+        <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+          <span class="gux-menu-option-button-text">
+            <slot></slot>
+          </span>
+        </button>
+      </mock:shadow-root>
+      Option Four
+    </gux-menu-option>
+    <gux-submenu label="Submenu Five">
+      <mock:shadow-root>
+        <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
+          <span class="gux-submenu-button-text">
+            Submenu Five
+          </span>
+          <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
+        </button>
+        <div class="gux-submenu-wrapper">
+          <div class="gux-submenu-content" role="menu">
+            <slot></slot>
+          </div>
+        </div>
+      </mock:shadow-root>
+      <gux-menu-option>
+        <mock:shadow-root>
+          <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+            <span class="gux-menu-option-button-text">
+              <slot></slot>
+            </span>
+          </button>
+        </mock:shadow-root>
+        Option One
+      </gux-menu-option>
+      <gux-menu-option>
+        <mock:shadow-root>
+          <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+            <span class="gux-menu-option-button-text">
+              <slot></slot>
+            </span>
+          </button>
+        </mock:shadow-root>
+        Option Two
+      </gux-menu-option>
+      <gux-submenu label="Submenu Three">
+        <mock:shadow-root>
+          <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
+            <span class="gux-submenu-button-text">
+              Submenu Three
+            </span>
+            <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
+          </button>
+          <div class="gux-submenu-wrapper">
+            <div class="gux-submenu-content" role="menu">
+              <slot></slot>
+            </div>
+          </div>
+        </mock:shadow-root>
+        <gux-menu-option>
+          <mock:shadow-root>
+            <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+              <span class="gux-menu-option-button-text">
+                <slot></slot>
+              </span>
+            </button>
+          </mock:shadow-root>
+          Option One
+        </gux-menu-option>
+        <gux-submenu label="Submenu Two">
+          <mock:shadow-root>
             <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
               <span class="gux-submenu-button-text">
                 Submenu Two
@@ -52,183 +196,87 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
             </button>
             <div class="gux-submenu-wrapper">
               <div class="gux-submenu-content" role="menu">
-                <gux-menu-option>
-                  <!---->
-                  <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-                    <span class="gux-menu-option-button-text">
-                      Option One
-                    </span>
-                  </button>
-                </gux-menu-option>
-                <gux-menu-option>
-                  <!---->
-                  <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-                    <span class="gux-menu-option-button-text">
-                      Option Two
-                    </span>
-                  </button>
-                </gux-menu-option>
-                <gux-menu-option>
-                  <!---->
-                  <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-                    <span class="gux-menu-option-button-text">
-                      Option Three
-                    </span>
-                  </button>
-                </gux-menu-option>
+                <slot></slot>
               </div>
             </div>
+          </mock:shadow-root>
+          <gux-menu-option>
+            <mock:shadow-root>
+              <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                <span class="gux-menu-option-button-text">
+                  <slot></slot>
+                </span>
+              </button>
+            </mock:shadow-root>
+            Option One
+          </gux-menu-option>
+          <gux-submenu label="Submenu Two">
+            <mock:shadow-root>
+              <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
+                <span class="gux-submenu-button-text">
+                  Submenu Two
+                </span>
+                <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
+              </button>
+              <div class="gux-submenu-wrapper">
+                <div class="gux-submenu-content" role="menu">
+                  <slot></slot>
+                </div>
+              </div>
+            </mock:shadow-root>
+            <gux-menu-option>
+              <mock:shadow-root>
+                <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                  <span class="gux-menu-option-button-text">
+                    <slot></slot>
+                  </span>
+                </button>
+              </mock:shadow-root>
+              Option One
+            </gux-menu-option>
+            <gux-menu-option>
+              <mock:shadow-root>
+                <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                  <span class="gux-menu-option-button-text">
+                    <slot></slot>
+                  </span>
+                </button>
+              </mock:shadow-root>
+              Option Two
+            </gux-menu-option>
+            <gux-menu-option>
+              <mock:shadow-root>
+                <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                  <span class="gux-menu-option-button-text">
+                    <slot></slot>
+                  </span>
+                </button>
+              </mock:shadow-root>
+              Option Three
+            </gux-menu-option>
           </gux-submenu>
           <gux-menu-option>
-            <!---->
+            <mock:shadow-root>
+              <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
+                <span class="gux-menu-option-button-text">
+                  <slot></slot>
+                </span>
+              </button>
+            </mock:shadow-root>
+            Option Three
+          </gux-menu-option>
+        </gux-submenu>
+        <gux-menu-option>
+          <mock:shadow-root>
             <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
               <span class="gux-menu-option-button-text">
-                Option Three
+                <slot></slot>
               </span>
             </button>
-          </gux-menu-option>
-        </div>
-      </div>
-    </gux-submenu>
-    <gux-menu-option>
-      <!---->
-      <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-        <span class="gux-menu-option-button-text">
+          </mock:shadow-root>
           Option Three
-        </span>
-      </button>
-    </gux-menu-option>
-    <gux-menu-option>
-      <!---->
-      <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-        <span class="gux-menu-option-button-text">
-          Option Four
-        </span>
-      </button>
-    </gux-menu-option>
-    <gux-submenu label="Submenu Five">
-      <!---->
-      <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
-        <span class="gux-submenu-button-text">
-          Submenu Five
-        </span>
-        <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
-      </button>
-      <div class="gux-submenu-wrapper">
-        <div class="gux-submenu-content" role="menu">
-          <gux-menu-option>
-            <!---->
-            <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-              <span class="gux-menu-option-button-text">
-                Option One
-              </span>
-            </button>
-          </gux-menu-option>
-          <gux-menu-option>
-            <!---->
-            <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-              <span class="gux-menu-option-button-text">
-                Option Two
-              </span>
-            </button>
-          </gux-menu-option>
-          <gux-submenu label="Submenu Three">
-            <!---->
-            <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
-              <span class="gux-submenu-button-text">
-                Submenu Three
-              </span>
-              <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
-            </button>
-            <div class="gux-submenu-wrapper">
-              <div class="gux-submenu-content" role="menu">
-                <gux-menu-option>
-                  <!---->
-                  <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-                    <span class="gux-menu-option-button-text">
-                      Option One
-                    </span>
-                  </button>
-                </gux-menu-option>
-                <gux-submenu label="Submenu Two">
-                  <!---->
-                  <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
-                    <span class="gux-submenu-button-text">
-                      Submenu Two
-                    </span>
-                    <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
-                  </button>
-                  <div class="gux-submenu-wrapper">
-                    <div class="gux-submenu-content" role="menu">
-                      <gux-menu-option>
-                        <!---->
-                        <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-                          <span class="gux-menu-option-button-text">
-                            Option One
-                          </span>
-                        </button>
-                      </gux-menu-option>
-                      <gux-submenu label="Submenu Two">
-                        <!---->
-                        <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
-                          <span class="gux-submenu-button-text">
-                            Submenu Two
-                          </span>
-                          <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
-                        </button>
-                        <div class="gux-submenu-wrapper">
-                          <div class="gux-submenu-content" role="menu">
-                            <gux-menu-option>
-                              <!---->
-                              <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-                                <span class="gux-menu-option-button-text">
-                                  Option One
-                                </span>
-                              </button>
-                            </gux-menu-option>
-                            <gux-menu-option>
-                              <!---->
-                              <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-                                <span class="gux-menu-option-button-text">
-                                  Option Two
-                                </span>
-                              </button>
-                            </gux-menu-option>
-                            <gux-menu-option>
-                              <!---->
-                              <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-                                <span class="gux-menu-option-button-text">
-                                  Option Three
-                                </span>
-                              </button>
-                            </gux-menu-option>
-                          </div>
-                        </div>
-                      </gux-submenu>
-                      <gux-menu-option>
-                        <!---->
-                        <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-                          <span class="gux-menu-option-button-text">
-                            Option Three
-                          </span>
-                        </button>
-                      </gux-menu-option>
-                    </div>
-                  </div>
-                </gux-submenu>
-                <gux-menu-option>
-                  <!---->
-                  <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
-                    <span class="gux-menu-option-button-text">
-                      Option Three
-                    </span>
-                  </button>
-                </gux-menu-option>
-              </div>
-            </div>
-          </gux-submenu>
-        </div>
-      </div>
+        </gux-menu-option>
+      </gux-submenu>
     </gux-submenu>
   </gux-menu>
 </gux-flyout-menu>
