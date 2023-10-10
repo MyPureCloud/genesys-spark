@@ -563,7 +563,11 @@ export class GuxPhoneInput {
 
   render(): JSX.Element {
     return (
-      <gux-popup-beta expanded={this.expanded} disabled={this.disabled}>
+      <gux-popup-beta
+        expanded={this.expanded}
+        disabled={this.disabled}
+        exceed-target-width
+      >
         {this.renderTarget()}
         {this.renderPopup()}
       </gux-popup-beta>
