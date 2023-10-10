@@ -122,16 +122,16 @@ export class GuxTableSelectMenu {
             screenreader-text={this.i18n('tableOptions')}
           ></gux-icon>
         </button>,
-        <gux-table-select-popover
+        <gux-popover-list
           for={this.dropdownOptionsButtonId}
-          hidden={this.popoverHidden}
+          isOpen={!this.popoverHidden}
           closeOnClickOutside={true}
           onGuxdismiss={() => (this.popoverHidden = true)}
         >
           <div>
             <slot name="select-menu-options" />
           </div>
-        </gux-table-select-popover>
+        </gux-popover-list>
       ] as JSX.Element;
     }
   }
