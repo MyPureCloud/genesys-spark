@@ -18,8 +18,12 @@ describe('gux-phone-input', () => {
         html: `<gux-phone-input-beta value="+13175971660"></gux-phone-input-beta>`
       },
       {
-        description: 'should render with format',
+        description: 'should render with e164 format',
         html: `<gux-phone-input-beta phone-number-format="E164"></gux-phone-input-beta>`
+      },
+      {
+        description: 'should render with international format',
+        html: `<gux-phone-input-beta phone-number-format="INTERNATIONAL"></gux-phone-input-beta>`
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
@@ -29,42 +33,76 @@ describe('gux-phone-input', () => {
         await a11yCheck(page);
       });
     });
+  });
 
-    it('open country dropdown and select option', async () => {
-      const page = await newSparkE2EPage({
-        html: `<gux-phone-input-beta></gux-phone-input-beta>`
-      });
-      const dropdownButton = await page.find('pierce/.gux-field-button');
-      const inputField = await page.find('pierce/#tel-input');
-
-      const inputEventSpy = await page.spyOnEvent('input');
-
-      await dropdownButton.press('Enter');
-      expect(dropdownButton.getAttribute('aria-expanded')).toBe('true');
-      await page.waitForChanges();
-      await a11yCheck(page);
-
-      await page.keyboard.press('ArrowDown');
-      await page.keyboard.press('Enter');
-      await page.waitForChanges();
-
-      expect(await inputField.getProperty('value')).toBe('+93');
-      expect(inputEventSpy).toHaveReceivedEventDetail('+93');
-      expect(dropdownButton.getAttribute('aria-expanded')).toBe('false');
+  it('open country dropdown and select option with value not starting with +', async () => {
+    const page = await newSparkE2EPage({
+      html: `<gux-phone-input-beta></gux-phone-input-beta>`
     });
+    const dropdownButton = await page.find('pierce/.gux-field-button');
+    const inputField = await page.find('pierce/#tel-input');
+    const component = await page.find('gux-phone-input-beta');
+
+    await inputField.press('1');
+
+    await dropdownButton.press('Enter');
+    expect(dropdownButton.getAttribute('aria-expanded')).toBe('true');
+    await page.waitForChanges();
+    await a11yCheck(page);
+
+    await page.keyboard.press('ArrowDown');
+    await page.keyboard.press('Enter');
+    await page.waitForChanges();
+
+    const region = await component.callMethod('getRegion');
+
+    expect(region.alpha2Code).toBe('AF');
+    expect(await component.getProperty('value')).toBe('1');
+    expect(dropdownButton.getAttribute('aria-expanded')).toBe('false');
+  });
+
+  it('open country dropdown and select option with value starting with +', async () => {
+    const page = await newSparkE2EPage({
+      html: `<gux-phone-input-beta></gux-phone-input-beta>`
+    });
+    const dropdownButton = await page.find('pierce/.gux-field-button');
+    const inputField = await page.find('pierce/#tel-input');
+    const component = await page.find('gux-phone-input-beta');
+
+    await inputField.press('+');
+    await inputField.press('1');
+
+    await dropdownButton.press('Enter');
+    expect(dropdownButton.getAttribute('aria-expanded')).toBe('true');
+    await page.waitForChanges();
+    await a11yCheck(page);
+
+    await page.keyboard.press('ArrowDown');
+    await page.keyboard.press('Enter');
+    await page.waitForChanges();
+
+    const region = await component.callMethod('getRegion');
+
+    expect(region.alpha2Code).toBe('AD');
+    expect(await component.getProperty('value')).toBe('+376');
+    expect(dropdownButton.getAttribute('aria-expanded')).toBe('false');
   });
 
   it('region is set when initialized with value', async () => {
     const page = await newSparkE2EPage({
       html: `<gux-phone-input-beta value="+13175971660"></gux-phone-input-beta>`
     });
-    const dropdownButton = await page.find('pierce/.gux-field-button');
-    await dropdownButton.click();
-    await page.waitForChanges();
+    const dropdownButtonIcon = await page.find(
+      'pierce/.gux-field-button gux-region-icon'
+    );
+    const component = await page.find('gux-phone-input-beta');
 
-    const selected = await page.find('pierce/.gux-selected');
+    const region = await component.callMethod('getRegion');
 
-    expect(selected.textContent).toEqual('United States+1');
+    expect(region.alpha2Code).toBe('US');
+    expect(dropdownButtonIcon.getAttribute('screenreader-text')).toBe(
+      'United States'
+    );
   });
 
   it('region is set when typing in country code', async () => {
@@ -83,24 +121,5 @@ describe('gux-phone-input', () => {
     const selected = await page.find('pierce/.gux-selected');
 
     expect(selected.textContent).toEqual('Switzerland+41');
-  });
-
-  it('phone validation error is sent as true', async () => {
-    const page = await newSparkE2EPage({
-      html: `<gux-phone-input-beta></gux-phone-input-beta>
-            <input type="text" id="focus-input">`
-    });
-    const element = await page.find('gux-phone-input-beta');
-    const inputField = await page.find('pierce/#tel-input');
-
-    const validationEventSpy = await page.spyOnEvent('phoneValidationError');
-
-    await inputField.focus();
-    await inputField.type('+1317');
-    await page.waitForChanges();
-    element.triggerEvent('focusout');
-    await page.waitForChanges();
-
-    expect(validationEventSpy).toHaveReceivedEventDetail(true);
   });
 });

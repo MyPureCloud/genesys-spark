@@ -1,22 +1,337 @@
-<h1>
-  Phone Input with Country Selector - recommended to be used with
-  form-field-phone
-</h1>
+<h1>gux-phone-input-beta</h1>
+<h2>Summary</h2>
+<p>
+  Phone input with country selector. It is recommended to use this component
+  with form-field-phone.
+</p>
 
-<h2>Without default region</h2>
-<gux-phone-input-beta> </gux-phone-input-beta>
+<section>
+  <h3>Default Behavior</h3>
+  <gux-phone-input-beta> </gux-phone-input-beta>
+</section>
 
-<h2>With default region</h2>
-<gux-phone-input-beta default-region="JP"> </gux-phone-input-beta>
+<h2>Properties</h2>
 
-<h2>Disabled</h2>
-<gux-phone-input-beta disabled="true"> </gux-phone-input-beta>
+<section>
+  <h3>default-region</h3>
+  <p>
+    Sets the initial region if no value is specified. Also gives priority to
+    that region when parsing a region from a value (if more than one region has
+    the same code) and default placeholder if no region is selected.
+  </p>
+  <div class="flex-container">
+    <div class="flex-example">
+      <h4 class="flex-header">JP</h4>
+      <gux-phone-input-beta default-region="JP"></gux-phone-input-beta>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">US</h4>
+      <gux-phone-input-beta default-region="US"></gux-phone-input-beta>
+    </div>
+  </div>
+</section>
 
-<h2>Display Format - E164</h2>
-<gux-phone-input-beta phone-number-format="E164"> </gux-phone-input-beta>
+<section>
+  <h3>disabled</h3>
+  <p>
+    Applies styling to indicate the component is disabled. Also prevents the
+    user from interacting with the component.
+  </p>
+  <div class="flex-container">
+    <div class="flex-example">
+      <h4 class="flex-header">true</h4>
+      <gux-phone-input-beta disabled="true"></gux-phone-input-beta>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">false</h4>
+      <gux-phone-input-beta disabled="false"></gux-phone-input-beta>
+    </div>
+  </div>
+</section>
 
-<h2>Languages</h2>
-<div id="languages-container"></div>
+<section>
+  <h3>has-error</h3>
+  <p>
+    Applies styling to indicate an error or phone number that failed to
+    validate. This is set automatically when used by the form-field-phone
+    component.
+  </p>
+  <div class="flex-container">
+    <div class="flex-example">
+      <h4 class="flex-header">true</h4>
+      <gux-phone-input-beta has-error="true"></gux-phone-input-beta>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">false</h4>
+      <gux-phone-input-beta has-error="false"></gux-phone-input-beta>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>phone-number-format</h3>
+  <p>
+    Indicates the format text value of the phone number in the placeholder,
+    initial rendered value, and the results of the
+    <a href="#get-formatted-number">getFormattedNumber</a> method.
+  </p>
+  <div class="flex-container">
+    <div class="flex-example">
+      <h4 class="flex-header">E164</h4>
+      <gux-phone-input-beta phone-number-format="E164"></gux-phone-input-beta>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">International</h4>
+      <gux-phone-input-beta
+        phone-number-format="INTERNATIONAL"
+      ></gux-phone-input-beta>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">National (Default)</h4>
+      <gux-phone-input-beta
+        phone-number-format="NATIONAL"
+      ></gux-phone-input-beta>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>value</h3>
+  <p>
+    The text value of the internal input. If the value is in a national format,
+    it will not include the region code. If the value is prefaced with a +, the
+    number will be parsed and the region will attempt to update. In order to
+    account for various formats, you will want to use either the
+    <a href="#get-region">getRegion</a> or
+    <a href="#get-formatted-number">getFormattedNumber</a> method.
+  </p>
+  <div class="flex-container">
+    <div class="flex-example">
+      <h4 class="flex-header">E164</h4>
+      <gux-phone-input-beta
+        phone-number-format="E164"
+        value="+12015550123"
+      ></gux-phone-input-beta>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">National with Region</h4>
+      <gux-phone-input-beta value="+12015550123"></gux-phone-input-beta>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">National</h4>
+      <gux-phone-input-beta
+        default-region="US"
+        value="2015550123"
+      ></gux-phone-input-beta>
+    </div>
+  </div>
+  <p>
+    Note: the change in format in the second example only happens on initial
+    render. Modifying the value afterwards will not result in any further
+    formatting/parsing.
+  </p>
+</section>
+
+<h2>Events</h2>
+
+<section>
+  <h3>input</h3>
+  <code>
+    <pre>
+{
+  data: string,
+  inputType: string,
+  target: gux-phone-input-beta
+  ...
+}</pre
+    >
+  </code>
+  <p>
+    Native input event emitted when the user edits the text in the component.
+  </p>
+</section>
+
+<section>
+  <h3>change</h3>
+  <code>
+    <pre>
+{
+  target: gux-phone-input-beta
+  ...
+}</pre
+    >
+  </code>
+  <p>
+    Simulated native input event emitted when the focus leaves the component and
+    either the text or selected region has changed.
+  </p>
+</section>
+
+<section>
+  <h3>guxregionselect</h3>
+  <code>
+    <pre>
+{
+  detail: string,
+  target: gux-phone-input-beta
+  ...
+}</pre
+    >
+  </code>
+  <p>
+    Emits the region alpha code when the user selects a region from the listbox.
+  </p>
+</section>
+
+<h2>Methods</h2>
+
+<section>
+  <h3>getExtension</h3>
+  <code>getExtension() => Promise&lt;string&gt;</code>
+  <p>
+    Attempts to parse the current value and region and, if successful, returns
+    the extension.
+  </p>
+  <div class="flex-container">
+    <gux-phone-input-beta
+      id="extension-example"
+      value="+12015550123x123"
+      class="flex-example"
+    ></gux-phone-input-beta>
+    <input id="extension-display" value="123" class="flex-example" disabled />
+  </div>
+</section>
+
+<section id="get-formatted-number">
+  <h3>getFormattedNumber</h3>
+  <code
+    >getFormattedNumber(format?: 'E164' | 'INTERNATIONAL' | 'NATIONAL' = 'E164')
+    => Promise&lt;string&gt;</code
+  >
+  <p>
+    Attempts to parse the current value and region and, if successful, returns
+    the number in the requested format.
+  </p>
+  <div class="flex-container">
+    <gux-phone-input-beta
+      id="get-formatted-number-example"
+      value="+12015550123"
+      class="flex-example"
+    ></gux-phone-input-beta>
+    <input
+      id="get-formatted-number-display"
+      value="+12015550123"
+      class="flex-example"
+      disabled
+    />
+  </div>
+</section>
+
+<section id="get-region">
+  <h3>getRegion</h3>
+  <code
+    >getRegion() =&gt; Promise&lt;{ alpha2Code: string; dialCode: string; } |
+    null&gt;</code
+  >
+  <p>
+    Returns an object with the selected region's alpha and dial code or null if
+    region is unknown.
+  </p>
+  <div class="flex-container">
+    <gux-phone-input-beta
+      id="get-region-example"
+      value="+12015550123"
+      class="flex-example"
+    ></gux-phone-input-beta>
+    <input
+      id="get-region-alpha-display"
+      value="US"
+      class="flex-example"
+      disabled
+    />
+    <input
+      id="get-region-dial-display"
+      value="+1"
+      class="flex-example"
+      disabled
+    />
+  </div>
+</section>
+
+<section>
+  <h3>isPossibleNumber</h3>
+  <code>isPossibleNumber() =&gt; Promise&lt;boolean&gt;</code>
+  <p>
+    Recommended way to validate phone number. Uses validation rules mostly based
+    on length of the number.
+  </p>
+  <div class="flex-container">
+    <gux-phone-input-beta
+      id="is-possible-example"
+      value="+12015550123"
+      class="flex-example"
+    ></gux-phone-input-beta>
+    <input
+      id="is-possible-display"
+      value="true"
+      class="flex-example"
+      disabled
+    />
+  </div>
+</section>
+
+<section>
+  <h3>isValidNumber</h3>
+  <code>isValidNumber() =&gt; Promise&lt;boolean&gt;</code>
+  <p>
+    Uses strict validation rules to validate the phone number. isPossibleNumber
+    is recommended for most applications.
+  </p>
+  <div class="flex-container">
+    <gux-phone-input-beta
+      id="is-valid-example"
+      value="+12015550123"
+      class="flex-example"
+    ></gux-phone-input-beta>
+    <input id="is-valid-display" value="true" class="flex-example" disabled />
+  </div>
+</section>
+
+<section>
+  <h3>setRegionAlpha2Code</h3>
+  <code>setRegionAlpha2Code(alpha2Code: string) =&gt; Promise&lt;void&gt;</code>
+  <p>Sets the region select by 2 digit alpha code.</p>
+  <div class="flex-container">
+    <input id="set-region-alpha-input" class="flex-example" value="US" />
+    <gux-phone-input-beta
+      id="set-region-alpha-example"
+      class="flex-example"
+      value="+12015550123"
+    ></gux-phone-input-beta>
+  </div>
+</section>
+
+<section>
+  <h3>setRegionDialCode</h3>
+  <code>setRegionDialCode(dialCode: string) =&gt; Promise&lt;void&gt;</code>
+  <p>
+    Sets the region using dial code. Some regions share dial codes so using the
+    alpha code is preferable when possible.
+  </p>
+  <div class="flex-container">
+    <input id="set-region-dial-input" class="flex-example" value="+44" />
+    <gux-phone-input-beta
+      id="set-region-dial-example"
+      class="flex-example"
+      value="+441212345678"
+    ></gux-phone-input-beta>
+  </div>
+</section>
+
+<section>
+  <h2>Localization</h2>
+  <div id="languages-container" class="flex-container"></div>
+</section>
 
 <style
   onload="(function () {
@@ -28,25 +343,134 @@
       'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
     ].forEach((lang) => {
       const html = window.toHTML([
-        '<div class=language lang=' + lang + '>',
-          '<h3>' + lang + '</h3>',
+        '<div class=flex-example lang=' + lang + '>',
+          '<h3 class=flex-header>' + lang + '</h3>',
           '<gux-phone-input-beta> </gux-phone-input-beta',
         '</div>'
       ].join(''));
 
       languagesContainer.appendChild(html);
     });
+
+    const extensionExample = document.getElementById('extension-example');
+    const extensionDisplay = document.getElementById('extension-display');
+
+    extensionExample.addEventListener('input', (e) => {
+      e.target.getExtension()
+      .then((ext) => {extensionDisplay.value = ext});
+    });
+
+    const getFormattedNumberExample = document.getElementById('get-formatted-number-example');
+    const getFormattedNumberDisplay = document.getElementById('get-formatted-number-display');
+
+    getFormattedNumberExample.addEventListener('input', (e) => {
+      e.target.getFormattedNumber()
+      .then((num) => {getFormattedNumberDisplay.value = num});
+    });
+
+    getFormattedNumberExample.addEventListener('guxregionselect', (e) => {
+      e.target.getFormattedNumber()
+      .then((num) => {getFormattedNumberDisplay.value = num});
+    });
+
+
+    const getRegionExample = document.getElementById('get-region-example');
+    const getRegionAlphaDisplay = document.getElementById('get-region-alpha-display');
+    const getRegionDialDisplay = document.getElementById('get-region-dial-display');
+
+    getRegionExample.addEventListener('input', (e) => {
+      e.target.getRegion()
+      .then((region) => {
+        getRegionAlphaDisplay.value = region?.alpha2Code || '';
+        getRegionDialDisplay.value = region?.dialCode || '';
+      });
+    });
+
+    getRegionExample.addEventListener('guxregionselect', (e) => {
+      e.target.getRegion()
+      .then((region) => {
+        getRegionAlphaDisplay.value = region?.alpha2Code || '';
+        getRegionDialDisplay.value = region?.dialCode || '';
+      });
+    });
+
+    const isPossibleExample = document.getElementById('is-possible-example');
+    const isPossibleDisplay = document.getElementById('is-possible-display');
+
+    isPossibleExample.addEventListener('input', (e) => {
+      e.target.isPossibleNumber()
+      .then((isPossible) => {
+        isPossibleDisplay.value = isPossible;
+        isPossibleExample.hasError = !isPossible;
+      });
+    });
+
+    isPossibleExample.addEventListener('guxregionselect', (e) => {
+      e.target.isPossibleNumber()
+      .then((isPossible) => {
+        isPossibleDisplay.value = isPossible;
+        isPossibleExample.hasError = !isPossible;
+      });
+    });
+
+    const isValidExample = document.getElementById('is-valid-example');
+    const isValidDisplay = document.getElementById('is-valid-display');
+
+    isValidExample.addEventListener('input', (e) => {
+      e.target.isValidNumber()
+      .then((isValid) => {
+        isValidDisplay.value = isValid;
+        isValidExample.hasError = !isValid;
+      });
+    });
+
+    isValidExample.addEventListener('guxregionselect', (e) => {
+      e.target.isValidNumber()
+      .then((isValid) => {
+        isValidDisplay.value = isValid;
+        isValidExample.hasError = !isValid;
+      });
+    });
+
+    const setRegionAlphaInput = document.getElementById('set-region-alpha-input');
+    const setRegionAlphaExample = document.getElementById('set-region-alpha-example');
+
+    setRegionAlphaInput.addEventListener('input', (e) => {
+      setRegionAlphaExample.setRegionAlpha2Code(e.target.value);
+    });
+
+
+    const setRegionDialInput = document.getElementById('set-region-dial-input');
+    const setRegionDialExample = document.getElementById('set-region-dial-example');
+
+    setRegionDialInput.addEventListener('input', (e) => {
+      setRegionDialExample.setRegionDialCode(e.target.value);
+    });
 })()"
 >
-  #languages-container {
+  section {
+    margin-bottom: 40px;
+  }
+
+  pre {
+    margin: 0;
+  }
+
+  .flex-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
   }
 
-  .language {
-    width: 200px;
-    min-width: 200px;
+  .flex-example {
+    width: 250px;
+    min-width: 250px;
+  }
+
+  .flex-header {
+    width: fit-content;
+    margin: auto;
+    font-weight: 400;
   }
 </style>
