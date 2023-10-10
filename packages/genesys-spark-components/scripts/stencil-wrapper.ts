@@ -17,13 +17,16 @@ const DEFAULT_DOMAIN = 'mypurecloud.com';
 // List of Genesys UI domains
 const DOMAIN_LIST = [
   'apne2.pure.cloud',
+  'apne3.pure.cloud',
   'aps1.pure.cloud',
   'cac1.pure.cloud',
+  'euc2.pure.cloud',
   'euw2.pure.cloud',
   'inindca.com',
   'inintca.com',
-  'mypurecloud.com.au',
+  'mec1.pure.cloud',
   'mypurecloud.com',
+  'mypurecloud.com.au',
   'mypurecloud.de',
   'mypurecloud.ie',
   'mypurecloud.jp',
@@ -48,10 +51,18 @@ export async function registerElements() {
  * Will use the domain of the current window if it matches a Genesys domain.
  */
 function getDomain(): string {
-  const domain = window.location.hostname;
+  const hostname = window.location.hostname;
   const matchedDomain = DOMAIN_LIST.find(regionDomain =>
-    domain.endsWith(regionDomain)
+    hostname.endsWith(regionDomain)
   );
 
-  return `app.${matchedDomain || DEFAULT_DOMAIN}`;
+  if (matchedDomain) {
+    return `app.${matchedDomain}`;
+  }
+
+  if (hostname.endsWith('.pure.cloud')) {
+    return `app.${hostname.split('.').slice(-3).join('.')}`;
+  }
+
+  return DEFAULT_DOMAIN;
 }
