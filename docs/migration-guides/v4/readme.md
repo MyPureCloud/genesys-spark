@@ -12,6 +12,11 @@ _This migration guide is open to anyone to edit. If you have migrated a componen
 - [Stable component changes](#stable-component-changes):
   - TODO
 
+## Other changes at a glance
+
+- Components now use Spark Flare 4.0 styles.
+- PopperJS dependency removed. All instances of PopperJS have been replaced with Floating UI. We do not expect this to effect component usage.
+
 ## V3 Beta Components Promoted to Stable in V4
 
 Action: _(required)_ remove `-beta` from the tag name of the component.

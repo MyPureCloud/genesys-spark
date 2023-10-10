@@ -34,6 +34,7 @@
 
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-table-select-menu](../gux-table/gux-table-select-menu)
+
 ### Depends on
 
 - [gux-dismiss-button](../gux-dismiss-button)
