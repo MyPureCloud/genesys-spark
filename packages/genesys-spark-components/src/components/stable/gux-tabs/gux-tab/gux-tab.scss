@@ -21,8 +21,8 @@ gux-tabs[orientation='vertical'] > gux-tab-list {
 
 gux-tabs:not([orientation='vertical']) > gux-tab-list {
   .gux-tab {
-    height: 40px; // TODO: COMUI-2327. Token needs to be updated to 40px.
     box-sizing: border-box;
+    height: 40px; // TODO: COMUI-2327. Token needs to be updated to 40px.
     padding: var(--gse-ui-tabs-item-horizontal-padding);
 
     &.gux-active {
@@ -75,13 +75,13 @@ gux-tab {
     max-width: 160px;
     height: var(--gse-ui-tabs-item-height);
     font-family: var(--gse-ui-tabs-item-itemText-fontFamily);
-    line-height: var(--gse-ui-tabs-item-itemText-lineHeight);
     font-size: var(--gse-ui-tabs-item-itemText-fontSize);
     font-weight: var(--gse-ui-tabs-item-itemText-fontWeight);
+    line-height: var(--gse-ui-tabs-item-itemText-lineHeight);
     color: var(--gse-ui-tabs-item-itemTextColor);
     cursor: pointer;
-    border: none;
     background-color: transparent; //TODO: COMUI-2327
+    border: none;
 
     &.gux-disabled {
       cursor: default;
@@ -95,6 +95,7 @@ gux-tab {
       border: var(--gse-semantic-focusRing-default-border-width)
         var(--gse-semantic-focusRing-default-border-style)
         var(--gse-semantic-focusRing-default-border-color); //TODO: COMUI-2327
+
       border-radius: 4px; // TODO:COMUI-2327
       outline: none;
     }

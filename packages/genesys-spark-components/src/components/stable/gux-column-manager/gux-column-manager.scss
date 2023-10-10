@@ -26,10 +26,10 @@
   }
 
   .gux-select {
+    padding: var(--gse-ui-dataTableItems-editColumn-editColumnContent-padding);
     margin-left: (
       16px + 8px
     ); //TODO https://inindca.atlassian.net/browse/COMUI-2314
-    padding: var(--gse-ui-dataTableItems-editColumn-editColumnContent-padding);
   }
 }
 

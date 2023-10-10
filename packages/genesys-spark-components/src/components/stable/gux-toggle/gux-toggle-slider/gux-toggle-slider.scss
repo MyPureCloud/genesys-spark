@@ -79,8 +79,8 @@ gux-toggle-slider {
     &.gux-disabled {
       pointer-events: none;
       cursor: default;
-      opacity: var(--gse-ui-toggle-disabled-opacity);
       background-color: var(--gse-ui-toggle-track-disabled-off-backgroundColor);
+      opacity: var(--gse-ui-toggle-disabled-opacity);
     }
 
     &:focus-visible {
@@ -108,14 +108,14 @@ gux-toggle-slider {
         left: calc(($toggle-height - $slider-diameter) / 2);
         width: calc($slider-diameter - 4px);
         height: calc(var(--gse-ui-toggle-handle-height) - 4px);
+        color: var(--gse-ui-toggle-handle-foregroundColor);
         content: '';
         background-color: var(--gse-ui-toggle-handle-backgroundColor);
-        color: var(--gse-ui-toggle-handle-foregroundColor);
-        border-radius: var(--gse-ui-toggle-handle-borderRadius);
-        transition: $slider-transition-duration;
         border: var(--gse-ui-toggle-handle-enabled-border-width)
           var(--gse-ui-toggle-handle-enabled-border-style)
           var(--gse-ui-toggle-handle-enabled-border-color);
+        border-radius: var(--gse-ui-toggle-handle-borderRadius);
+        transition: $slider-transition-duration;
 
         gux-icon {
           position: absolute;

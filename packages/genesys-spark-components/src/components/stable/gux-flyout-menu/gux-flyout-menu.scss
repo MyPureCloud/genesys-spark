@@ -29,10 +29,10 @@
 
 .gux-flyout-menu-content {
   position: fixed;
-  border-radius: var(--gse-ui-menu-borderRadius);
+  display: none;
   border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
     var(--gse-ui-menu-border-color);
-  display: none;
+  border-radius: var(--gse-ui-menu-borderRadius);
 
   &.gux-shown {
     display: flex;

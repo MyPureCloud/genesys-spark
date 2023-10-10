@@ -24,9 +24,9 @@
     }
 
     &.gux-submenu-button-active {
+      font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
       color: var(--gse-ui-menu-option-shortcut-selected-foregroundColor);
       background-color: var(--gse-ui-menu-option-selected-backgroundColor);
-      font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
     }
 
     .gux-submenu-button-text {
