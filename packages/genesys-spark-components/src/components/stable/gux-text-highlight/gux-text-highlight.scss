@@ -1,5 +1,9 @@
-mark {
-  background-color: var(--gse-ui-search-match-firstLevel-backgroundColor);
+span {
+  color: var(--gse-ui-formControl-input-populatedColor); // TODO: COMUI-2347
+
+  mark {
+    background-color: var(--gse-ui-search-match-firstLevel-backgroundColor);
+  }
 }
 
 .gux-dimmed {
