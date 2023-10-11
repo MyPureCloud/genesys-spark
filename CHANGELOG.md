@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.40](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.39...v4.0.0-beta.40) (2023-10-11)
+
+
+### Bug Fixes
+
+* **build:** fixed version number ([e3fead3](https://github.com/MyPureCloud/genesys-webcomponents/commit/e3fead33b04d7f73ea27abb96c6ad0e0a1246b42))
+* **button:** addressed UX review comments ([06f4846](https://github.com/MyPureCloud/genesys-webcomponents/commit/06f48467b551e803debf1abc6544f5a582e2d750))
+* **tokens:** updating to latest tokens ([37b9140](https://github.com/MyPureCloud/genesys-webcomponents/commit/37b9140053383c964049045e71d29a2d5e983190))
+* **translations:** added missing translations ([fa07800](https://github.com/MyPureCloud/genesys-webcomponents/commit/fa07800724ad6b4873e1a4f33f9d9fa92bdb77d5))
+
 ## [4.0.0-beta.39](https://github.com/MyPureCloud/genesys-webcomponents/compare/v4.0.0-beta.38...v4.0.0-beta.39) (2023-10-06)
 
 
