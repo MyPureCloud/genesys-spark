@@ -40,10 +40,10 @@
   align-items: center;
   justify-content: center;
   height: var(--gse-ui-badge-height);
-  padding: var(--gse-ui-badge-padding);
+  padding: 2px 12px; //COMUI-2355 . Missing token 2px top and bottom and 12px for left and right paddings.
   font-family: var(--gse-ui-badge-text-fontFamily);
   font-size: var(--gse-ui-badge-text-fontSize);
-  font-weight: var(--gse-ui-badge-text-fontWeight, 600);
+  font-weight: var(--gse-ui-badge-text-fontWeight);
   line-height: var(--gse-ui-badge-text-lineHeight);
   border-radius: var(--gse-ui-badge-borderRadius);
 
