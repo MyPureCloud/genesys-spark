@@ -53,19 +53,19 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: var(--gse-ui-toggle-gap);
     align-content: stretch;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: var(--gse-ui-toggle-gap);
 
     .gux-toggle-label {
       position: relative;
       display: inline-block;
       padding: 0 4px; // TODO: COMUI-2332 missing token
       font-family: var(--gse-ui-toggle-label-fontFamily);
-      font-weight: var(--gse-ui-toggle-label-fontWeight);
       // line-height: var(--gse-ui-toggle-label-lineHeight); // TODO: COMUI-2332 adding this line height shifts up the label so it's not vertically centered anymore
       font-size: var(--gse-ui-toggle-label-fontSize);
+      font-weight: var(--gse-ui-toggle-label-fontWeight);
 
       .gux-toggle-label-text {
         display: grid;

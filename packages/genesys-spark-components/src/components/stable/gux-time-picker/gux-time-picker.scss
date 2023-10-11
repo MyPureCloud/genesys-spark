@@ -81,15 +81,16 @@
       outline: none;
 
       &:focus-visible {
-        outline: var(--gse-ui-formControl-input-focus-border-width)
-          var(--gse-ui-formControl-input-focus-border-style)
-          var(--gse-ui-formControl-input-focus-border-color);
         border: var(--gse-ui-formControl-input-active-border-width)
           var(--gse-ui-formControl-input-active-border-style)
           var(--gse-ui-formControl-input-active-border-color);
         border-radius: var(
           --gse-ui-formControl-focusRing-borderRadius
         ); // COMUI-2311 : This focus styling is incorrect.
+
+        outline: var(--gse-ui-formControl-input-focus-border-width)
+          var(--gse-ui-formControl-input-focus-border-style)
+          var(--gse-ui-formControl-input-focus-border-color);
       }
 
       .gux-meridiem {
