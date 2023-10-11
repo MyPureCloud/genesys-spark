@@ -156,7 +156,21 @@
         "lineHeight": "44px",
         "fontSize": "36px",
         "fontWeight": 700
+      },
+      "overline": {
+        "fontFamily": "Urbanist",
+        "fontWeight": 600,
+        "lineHeight": "16px",
+        "fontSize": "12px",
+        "letterSpacing": "1.5px",
+        "textCase": "uppercase"
       }
+    },
+    "subheading": {
+      "fontFamily": "Urbanist",
+      "fontWeight": 700,
+      "lineHeight": "20px",
+      "fontSize": "14px"
     }
   },
   "elevation": {

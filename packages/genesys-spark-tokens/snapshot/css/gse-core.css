@@ -113,6 +113,16 @@
   --gse-core-typography-heading-xl-lineHeight: 44px;
   --gse-core-typography-heading-xl-fontSize: 36px;
   --gse-core-typography-heading-xl-fontWeight: 700;
+  --gse-core-typography-heading-overline-fontFamily: Urbanist;
+  --gse-core-typography-heading-overline-fontWeight: 600;
+  --gse-core-typography-heading-overline-lineHeight: 16px;
+  --gse-core-typography-heading-overline-fontSize: 12px;
+  --gse-core-typography-heading-overline-letterSpacing: 1.5px;
+  --gse-core-typography-heading-overline-textCase: uppercase;
+  --gse-core-typography-subheading-fontFamily: Urbanist;
+  --gse-core-typography-subheading-fontWeight: 700;
+  --gse-core-typography-subheading-lineHeight: 20px;
+  --gse-core-typography-subheading-fontSize: 14px;
   --gse-core-elevation-low-x: 0;
   --gse-core-elevation-low-y: 2px;
   --gse-core-elevation-low-blur: 4px;
