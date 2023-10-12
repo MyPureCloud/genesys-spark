@@ -33,7 +33,7 @@ webappPipeline {
             ).trim()
             sh("npm run version-sync ${releaseVersion}")
             sh('npm install --package-lock-only')
-            sh('git add . && git commit --amend --no-edit --no-verify')
+            sh('git add git add packages/**/package.json web-apps/**/package.json package-lock.json && git commit --amend --no-edit --no-verify')
             sh("git tag -a \"v${releaseVersion}\" -m \"chore(release): ${releaseVersion}\"")
         }
         return readJSON(file: 'package.json').version
