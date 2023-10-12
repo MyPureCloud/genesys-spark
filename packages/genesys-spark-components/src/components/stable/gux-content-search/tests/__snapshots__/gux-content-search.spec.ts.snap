@@ -7,7 +7,9 @@ exports[`gux-content-search #render should render default control no props 1`] =
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
     </div>
   </mock:shadow-root>
   <input type="text">
@@ -21,7 +23,9 @@ exports[`gux-content-search #render should render default control no props With 
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
     </div>
   </mock:shadow-root>
   <input placeholder="Search" type="text">
@@ -35,7 +39,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-panel">
           <span class="gux-navigation-result">
@@ -68,7 +74,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-disabled gux-navigation-panel">
           <span class="gux-navigation-result gux-navigation-result-disabled">
@@ -84,7 +92,7 @@ exports[`gux-content-search #render should render default control with all props
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
+        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
         </button>
       </div>
@@ -101,7 +109,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-disabled gux-navigation-panel">
           <span class="gux-navigation-result gux-navigation-result-disabled">
@@ -117,7 +127,7 @@ exports[`gux-content-search #render should render default control with all props
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
+        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
         </button>
       </div>
@@ -134,7 +144,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-disabled gux-navigation-panel">
           <span class="gux-navigation-result gux-navigation-result-disabled">
@@ -150,7 +162,7 @@ exports[`gux-content-search #render should render default control with all props
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
+        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
         </button>
       </div>
@@ -167,7 +179,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-disabled gux-navigation-panel">
           <span class="gux-navigation-result gux-navigation-result-disabled">
@@ -183,7 +197,7 @@ exports[`gux-content-search #render should render default control with all props
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
+        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
         </button>
       </div>
@@ -200,7 +214,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-disabled gux-navigation-panel">
           <span class="gux-navigation-result gux-navigation-result-disabled">
@@ -216,7 +232,7 @@ exports[`gux-content-search #render should render default control with all props
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
+        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
         </button>
       </div>
@@ -233,7 +249,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-disabled gux-navigation-panel">
           <span class="gux-navigation-result gux-navigation-result-disabled">
@@ -249,7 +267,7 @@ exports[`gux-content-search #render should render default control with all props
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
+        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
         </button>
       </div>
@@ -266,7 +284,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-disabled gux-navigation-panel">
           <span class="gux-navigation-result gux-navigation-result-disabled">
@@ -282,7 +302,7 @@ exports[`gux-content-search #render should render default control with all props
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
+        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
         </button>
       </div>
@@ -299,7 +319,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-panel">
           <span class="gux-navigation-result">
@@ -332,7 +354,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-panel">
           <span class="gux-navigation-result">
@@ -365,7 +389,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-panel">
           <span class="gux-navigation-result">
@@ -398,7 +424,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-disabled gux-navigation-panel">
           <span class="gux-navigation-result gux-navigation-result-disabled">
@@ -414,7 +442,7 @@ exports[`gux-content-search #render should render default control with all props
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
+        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
         </button>
       </div>
@@ -431,7 +459,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-disabled gux-navigation-panel">
           <span class="gux-navigation-result gux-navigation-result-disabled">
@@ -447,7 +477,7 @@ exports[`gux-content-search #render should render default control with all props
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
-        <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
+        <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
           <gux-icon decorative="" icon-name="close"></gux-icon>
         </button>
       </div>
@@ -464,7 +494,9 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <slot></slot>
+      <gux-truncate max-lines="1">
+        <slot></slot>
+      </gux-truncate>
       <div class="gux-content-control-panel">
         <div class="gux-navigation-panel">
           <span class="gux-navigation-result">

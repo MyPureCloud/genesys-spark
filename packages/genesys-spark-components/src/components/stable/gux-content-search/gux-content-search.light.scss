@@ -1,0 +1,7 @@
+gux-content-search {
+  // Hide focus ring on input field since there is a focus ring rendering on the outer component element
+  input:focus-visible {
+    border: 0;
+    outline: none;
+  }
+}
