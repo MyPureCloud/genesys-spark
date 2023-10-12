@@ -7,11 +7,16 @@
   min-width: 300px;
 }
 
+::slotted(input[disabled]) {
+  color: var(--gse-ui-formControl-input-populatedColor);
+  opacity: var(--gse-ui-formControl-input-disabled-opacity);
+}
+
 ::slotted(input) {
   box-sizing: border-box;
   flex-basis: 100%;
   flex-shrink: 1;
-  width: 100%;
+  width: 132px;
   font-family: var(--gse-ui-search-counter-text-fontFamily);
   font-size: var(--gse-ui-search-counter-text-fontSize);
   font-weight: var(--gse-ui-search-counter-text-fontWeight);
@@ -20,9 +25,13 @@
   border: 0;
   border-radius: 0;
   outline: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: var(--gse-ui-formControl-input-backgroundColor);
 
   &::placeholder {
-    color: var(--gse-ui-formControl-input-placeholderColor);
+    color: var(--gse-ui-formControl-input-populatedColor);
   }
 
   &.gux-focused,
@@ -156,11 +165,11 @@
       gap: var(--gse-ui-search-counter-gap);
 
       .gux-navigation-divider {
-        width: 1px; // TODO COMUI-2310 - missing token for divider width.
         height: 16px; // TODO COMUI-2310 - missing token for divider height
         background-color: #c6c8ce; // TODO COMUI-2310 - missing token for divider background color.
         border: 1px var(--gse-ui-search-counter-divider-border-style)
           var(--gse-ui-search-counter-divider-border-color);
+        color: var(--gse-ui-search-counter-default-foregroundColor);
       }
 
       .gux-navigation-buttons {
@@ -171,6 +180,7 @@
       .gux-navigation-result {
         align-items: center;
         white-space: nowrap;
+        color: var(--gse-ui-search-counter-default-foregroundColor);
       }
 
       .gux-previous-button {

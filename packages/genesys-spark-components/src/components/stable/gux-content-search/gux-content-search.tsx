@@ -164,6 +164,7 @@ export class GuxContentSearch {
             type="button"
             title={this.i18n('clear')}
             onClick={() => void this.clear()}
+            disabled={disableNavigationPanel}
           >
             <gux-icon icon-name="close" decorative></gux-icon>
           </button>
