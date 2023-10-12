@@ -1,7 +1,7 @@
 <h1>gux-dialog-beta</h1>
 
-<gux-dialog-beta id="example1">
-  <div slot="title">Dialog Title</div>
+<gux-dialog-beta is-open id="example1">
+  <div slot="title">Dialog Title 1</div>
   <div slot="content">This contains the dialog content</div>
   <div slot="start-align-buttons">
     <gux-button type="button" accent="primary">Accept</gux-button>
@@ -16,5 +16,28 @@
   </div>
 </gux-dialog-beta>
 <gux-button onclick="document.getElementById('example1').showModal()"
+  >Show</gux-button
+>
+
+<gux-dialog-beta id="example2">
+  <div slot="title">Dialog Title 2</div>
+  <div slot="content">This contains the dialog content</div>
+  <div slot="start-align-buttons">
+    <gux-button-slot accent="primary">
+      <button autofocus type="button">Accept</button>
+    </gux-button-slot>
+  </div>
+  <div slot="end-align-buttons">
+    <gux-button-slot>
+      <button
+        onclick="document.getElementById('example2').hideModal()"
+        type="button"
+      >
+        Cancel
+      </button>
+    </gux-button-slot>
+  </div>
+</gux-dialog-beta>
+<gux-button onclick="document.getElementById('example2').showModal()"
   >Show</gux-button
 >

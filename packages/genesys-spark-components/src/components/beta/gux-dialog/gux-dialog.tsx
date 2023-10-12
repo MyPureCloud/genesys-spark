@@ -5,7 +5,6 @@ import {
   EventEmitter,
   h,
   JSX,
-  Listen,
   Prop,
   Method
 } from '@stencil/core';
@@ -28,7 +27,7 @@ export class GuxDialog {
    * Indicates if the modal is initially shown
    */
   @Prop()
-  isOpen: boolean = true;
+  isOpen: boolean = false;
 
   /**
    * Indicates the size of the modal (small, medium or large)
@@ -60,15 +59,8 @@ export class GuxDialog {
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async hideModal(): Promise<void> {
-    this.guxdismiss.emit();
+    // this.guxdismiss.emit();
     this.dialogElement.close();
-  }
-
-  @Listen('keydown')
-  onKeyDown(event: KeyboardEvent): void {
-    if (event.key === 'Escape') {
-      this.guxdismiss.emit();
-    }
   }
 
   componentWillLoad(): void {
@@ -83,7 +75,10 @@ export class GuxDialog {
 
   render(): JSX.Element {
     return (
-      <dialog ref={el => (this.dialogElement = el)}>
+      <dialog
+        onClose={this.onCloseHandler.bind(this)}
+        ref={el => (this.dialogElement = el)}
+      >
         <gux-dismiss-button
           onClick={this.onDismissHandler.bind(this)}
         ></gux-dismiss-button>
@@ -104,12 +99,11 @@ export class GuxDialog {
     ) as JSX.Element;
   }
 
-  private onDismissHandler(event: Event): void {
-    event.stopPropagation();
+  private onCloseHandler(): void {
+    this.guxdismiss.emit();
+  }
 
-    const dismissEvent = this.guxdismiss.emit();
-    if (!dismissEvent.defaultPrevented) {
-      this.dialogElement.close();
-    }
+  private onDismissHandler(): void {
+    this.dialogElement.close();
   }
 }

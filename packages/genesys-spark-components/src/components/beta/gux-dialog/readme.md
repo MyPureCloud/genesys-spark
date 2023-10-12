@@ -8,7 +8,7 @@
 | Property       | Attribute       | Description                                                                                                   | Type                                          | Default     |
 | -------------- | --------------- | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ----------- |
 | `initialFocus` | `initial-focus` | Query selector for the element to initially focus when the modal opens Defaults to the first tabbable element | `string`                                      | `undefined` |
-| `isOpen`       | `is-open`       | Indicates if the modal is initially shown                                                                     | `boolean`                                     | `true`      |
+| `isOpen`       | `is-open`       | Indicates if the modal is initially shown                                                                     | `boolean`                                     | `false`     |
 | `size`         | `size`          | Indicates the size of the modal (small, medium or large)                                                      | `"dynamic" \| "large" \| "medium" \| "small"` | `'dynamic'` |
 
 
