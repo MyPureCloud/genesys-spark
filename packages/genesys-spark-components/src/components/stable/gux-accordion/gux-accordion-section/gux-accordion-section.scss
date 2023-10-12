@@ -55,6 +55,9 @@ section.gux-disabled {
   ::slotted([slot='header']) {
     padding: 0;
     margin: 0;
+    font-family: var(
+      --gse-ui-accordion-header-label-defaultText-fontFamily
+    ) !important;
     font-size: var(
       --gse-ui-accordion-header-label-defaultText-fontFamily
     ) !important;
@@ -64,11 +67,16 @@ section.gux-disabled {
     line-height: var(
       --gse-ui-accordion-header-label-defaultText-lineHeight
     ) !important;
+    color: var(--gse-ui-accordion-header-default-foreground-labelColor);
   }
 
   ::slotted([slot='subheader']) {
+    // TODO COMUI-2370. Missing tokens for subheaders text styling.
     padding: 0;
     margin: var(--gux-spacing-3xs) 0 0;
+    font-family: var(
+      --gse-ui-accordion-contentItem-defaultText-fontFamily
+    ) !important;
     font-size: var(
       --gse-ui-accordion-contentItem-defaultText-fontSize
     ) !important;
@@ -76,6 +84,9 @@ section.gux-disabled {
       --gse-ui-accordion-contentItem-defaultText-fontWeight
     ) !important;
     color: var(--gse-ui-accordion-contentItem-foregroundColor);
+    line-height: var(
+      --gse-ui-accordion-contentItem-defaultText-lineHeight
+    ) !important;
 
     .gux-reverse-headings {
       margin: 0 0 var(--gux-spacing-3xs) 0; // missing token COMUI-1678
@@ -150,5 +161,9 @@ section.gux-disabled {
 
   &.gux-text-content-layout {
     padding: var(--gse-ui-accordion-contentItem-padding);
+  }
+
+  ::slotted([slot='content']) {
+    margin: 0;
   }
 }

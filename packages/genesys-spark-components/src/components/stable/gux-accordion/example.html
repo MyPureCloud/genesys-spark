@@ -214,3 +214,40 @@
     </div>
   </gux-accordion-section>
 </gux-accordion>
+
+<h2>With content text stylings</h2>
+
+<gux-accordion>
+  <gux-accordion-section disabled>
+    <h2 slot="header">First Section</h2>
+    <div slot="content" class="gux-content-text">
+      <span>I'm a span in a div.</span>
+      <button>I'm the button.</button>
+    </div>
+  </gux-accordion-section>
+  <gux-accordion-section>
+    <h2 slot="header">Second Section</h2>
+    <p slot="content" class="gux-content-text">I'm a p.</p>
+  </gux-accordion-section>
+  <gux-accordion-section>
+    <h2 slot="header">Third Section</h2>
+    <span slot="content" class="gux-content-text">I'm a span.</span>
+  </gux-accordion-section>
+  <gux-accordion-section>
+    <h2 slot="header">
+      Fourth Section has a really really long title to see what it looks like
+      when the title overflows
+    </h2>
+    <span slot="content" class="gux-content-text">I'm a span.</span>
+  </gux-accordion-section>
+</gux-accordion>
+
+<style>
+  .gux-content-text {
+    font-family: var(--gse-ui-accordion-contentItem-defaultText-fontFamily);
+    font-size: var(--gse-ui-accordion-contentItem-defaultText-fontSize);
+    font-weight: var(--gse-ui-accordion-contentItem-defaultText-fontWeight);
+    line-height: var(--gse-ui-accordion-contentItem-defaultText-lineHeight);
+    color: var(--gse-ui-accordion-contentItem-foregroundColor);
+  }
+</style>
