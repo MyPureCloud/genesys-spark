@@ -573,9 +573,8 @@ describe('gux-table', () => {
     const tableSelectMenuButton = await tableSelectMenuElement.find(
       '.gux-select-menu-button'
     );
-    const popoverComponent = await tableSelectMenuElement.find(
-      'gux-popover-list'
-    );
+    const popoverComponent =
+      await tableSelectMenuElement.find('gux-popover-list');
 
     const popoverList = popoverComponent.shadowRoot.querySelector(
       'div.gux-popover-wrapper'
