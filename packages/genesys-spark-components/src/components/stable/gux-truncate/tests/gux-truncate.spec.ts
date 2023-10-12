@@ -3,17 +3,14 @@ jest.mock('../../../../utils/decorator/on-resize', () => ({
   OnResize: jest.fn()
 }));
 
-import MutationObserver from 'mutation-observer';
 import { newSpecPage } from '@test/specTestUtils';
+
 import { GuxTruncate } from '../gux-truncate';
 
 const components = [GuxTruncate];
 const language = 'en';
 
 describe('gux-truncate', () => {
-  beforeEach(async () => {
-    global.MutationObserver = MutationObserver;
-  });
   describe('#render', () => {
     [
       '<gux-truncate>Some text to truncate</gux-truncate>',

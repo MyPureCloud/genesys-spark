@@ -1,5 +1,4 @@
 import { newSpecPage } from '@test/specTestUtils';
-import MutationObserver from 'mutation-observer';
 
 import { GuxPaginationItemsPerPage } from '../gux-pagination-items-per-page';
 import { GuxDropdown } from '../../../gux-dropdown/gux-dropdown';
@@ -15,10 +14,6 @@ const components = [
 const language = 'en';
 
 describe('gux-pagination-items-per-page', () => {
-  beforeEach(async () => {
-    global.MutationObserver = MutationObserver;
-  });
-
   describe('#render', () => {
     [
       { itemsPerPage: 25 },

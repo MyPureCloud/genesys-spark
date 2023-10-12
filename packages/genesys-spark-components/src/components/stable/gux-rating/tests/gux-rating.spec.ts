@@ -1,7 +1,3 @@
-jest.mock('../../../../utils/dom/random-html-id', () => ({
-  randomHTMLId: () => 'random'
-}));
-
 import { newSpecPage } from '@test/specTestUtils';
 import { GuxRating } from '../gux-rating';
 

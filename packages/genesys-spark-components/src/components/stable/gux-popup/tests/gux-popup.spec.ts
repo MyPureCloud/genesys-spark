@@ -1,7 +1,7 @@
 import { newSpecPage } from '@test/specTestUtils';
 import * as floatingUi from '@floating-ui/dom';
+
 import { GuxPopup } from '../gux-popup';
-import MutationObserver from 'mutation-observer';
 
 const components = [GuxPopup];
 const language = 'en';
@@ -20,13 +20,10 @@ function getGuxPopupHtml(expanded: boolean, disabled: boolean): string {
 }
 
 describe('gux-popup', () => {
-  beforeEach(async () => {
-    global.MutationObserver = MutationObserver;
-  });
-
   afterEach(async () => {
     jest.spyOn(floatingUi, 'autoUpdate').mockRestore();
   });
+
   describe('#render', () => {
     [
       { expanded: false, disabled: false },

@@ -17,7 +17,9 @@ export function getRegionObjects(
     });
   }
   regionObjects = regionObjects.filter(r =>
-    phoneUtil.getSupportedRegions().includes(r.alpha2Code)
+    phoneUtil
+      .getSupportedRegions()
+      .includes(r.alpha2Code as libphonenumber.RegionCode)
   );
   regionObjects.sort((a, b) => a.name.localeCompare(b.name, locale));
 

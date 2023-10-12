@@ -1,5 +1,4 @@
 import { newSpecPage } from '@test/specTestUtils';
-import MutationObserver from 'mutation-observer';
 
 import { GuxSortControl } from '../gux-sort-control';
 
@@ -9,10 +8,6 @@ const components = [GuxSortControl];
 const language = 'en';
 
 describe('gux-sort-control', () => {
-  beforeEach(async () => {
-    global.MutationObserver = MutationObserver;
-  });
-
   describe('#render', () => {
     [
       markup.notSorted,
