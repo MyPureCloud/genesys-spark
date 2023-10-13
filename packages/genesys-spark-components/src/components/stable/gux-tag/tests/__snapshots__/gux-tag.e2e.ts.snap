@@ -8,6 +8,6 @@ exports[`gux-tag #render should render component as expected (3) 1`] = `"<gux-ta
 
 exports[`gux-tag #render should render component as expected (4) 1`] = `"<gux-tag lang=\\"en\\" accent=\\"1\\" hydrated=\\"\\"><gux-icon icon-name=\\"bolt\\" decorative=\\"true\\" hydrated=\\"\\"></gux-icon>navy</gux-tag>"`;
 
-exports[`gux-tag #render should render component as expected (5) 1`] = `"<gux-tag lang=\\"en\\" accent=\\"1\\" value=\\"3\\" removable=\\"\\" hydrated=\\"\\"><gux-icon icon-name=\\"bolt\\" decorative=\\"true\\" hydrated=\\"\\"></gux-icon>navy</gux-tag>"`;
+exports[`gux-tag #render should render component as expected (5) 1`] = `"<gux-tag lang=\\"en\\" accent=\\"1\\" removable=\\"\\" hydrated=\\"\\"><gux-icon icon-name=\\"bolt\\" decorative=\\"true\\" hydrated=\\"\\"></gux-icon>navy</gux-tag>"`;
 
-exports[`gux-tag #render should render component as expected (6) 1`] = `"<gux-tag lang=\\"en\\" accent=\\"1\\" value=\\"3\\" removable=\\"\\" disabled=\\"\\" hydrated=\\"\\"><gux-icon icon-name=\\"bolt\\" decorative=\\"true\\" hydrated=\\"\\"></gux-icon>navy</gux-tag>"`;
+exports[`gux-tag #render should render component as expected (6) 1`] = `"<gux-tag lang=\\"en\\" accent=\\"1\\" removable=\\"\\" disabled=\\"\\" hydrated=\\"\\"><gux-icon icon-name=\\"bolt\\" decorative=\\"true\\" hydrated=\\"\\"></gux-icon>navy</gux-tag>"`;

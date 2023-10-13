@@ -31,12 +31,6 @@ export class GuxTag {
   @Element()
   root: HTMLElement;
 
-  /**
-   * Index for remove tag
-   */
-  @Prop()
-  value: string;
-
   @Prop()
   accent: GuxTagAccent = 'default';
 
@@ -66,7 +60,7 @@ export class GuxTag {
       return;
     }
 
-    this.guxdelete.emit(this.value);
+    this.guxdelete.emit();
   }
 
   private onSlotChange(event: Event) {

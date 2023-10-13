@@ -93,6 +93,16 @@ The `color` property has been removed. All uses of the `color` property can be m
 + <gux-tag accent="1">Text</gux-tag>
 ```
 
+- The `value` property has been removed.
+  - This change also effects the `guxdelete` event. The event no longer contains the `value` in the `detail` field.
+  - You should now remove the element using the events `target` to get a reference to the element.
+
+```javascript
+document.querySelector('gux-tag').addEventListener('guxdelete', event => {
+  event.target.remove();
+});
+```
+
 #### gux-calendar
 
 The `input` event has been renamed `calendarSelect`
