@@ -1,18 +1,18 @@
 import { newSpecPage } from '@test/specTestUtils';
-import { GuxButton } from '../../gux-button/gux-button';
-import { GuxModal } from '../gux-modal';
+import { GuxButton } from '../../../stable/gux-button/gux-button';
+import { GuxModalLegacy } from '../gux-modal-legacy';
 import { GuxDismissButton } from '../../../stable/gux-dismiss-button/gux-dismiss-button';
 
-const components = [GuxButton, GuxModal, GuxDismissButton];
+const components = [GuxButton, GuxModalLegacy, GuxDismissButton];
 const language = 'en';
 
-describe('gux-modal', () => {
+describe('gux-modal-legacy', () => {
   describe('#render', () => {
     [
       {
         description: 'should render small modal',
         html: `
-          <gux-modal size="small">
+          <gux-modal-legacy size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
@@ -21,13 +21,13 @@ describe('gux-modal', () => {
             <div slot="right-align-buttons">
               <gux-button accent='primary'>Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render medium modal',
         html: `
-          <gux-modal size="medium">
+          <gux-modal-legacy size="medium">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
@@ -36,13 +36,13 @@ describe('gux-modal', () => {
             <div slot="right-align-buttons">
               <gux-button accent='primary'>Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render large modal',
         html: `
-          <gux-modal size="large">
+          <gux-modal-legacy size="large">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
@@ -51,13 +51,13 @@ describe('gux-modal', () => {
             <div slot="right-align-buttons">
               <gux-button accent='primary'>Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render modal without a title',
         html: `
-          <gux-modal size="large">
+          <gux-modal-legacy size="large">
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
                 <gux-button>Cancel</gux-button>
@@ -65,47 +65,47 @@ describe('gux-modal', () => {
             <div slot="right-align-buttons">
               <gux-button accent='primary'>Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render modal without buttons',
         html: `
-          <gux-modal size="small">
+          <gux-modal-legacy size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render modal with just left align buttons',
         html: `
-          <gux-modal size="small">
+          <gux-modal-legacy size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
                 <gux-button>Cancel</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render modal with just right align buttons',
         html: `
-          <gux-modal size="small">
+          <gux-modal-legacy size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="right-align-buttons">
               <gux-button accent='primary'>Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description:
           'should render modal with a specified initial focus element',
         html: `
-          <gux-modal initial-focus="#cancelButton">
+          <gux-modal-legacy initial-focus="#cancelButton">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
@@ -114,13 +114,13 @@ describe('gux-modal', () => {
             <div slot="right-align-buttons">
               <gux-button accent='primary'>Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render small modal by default',
         html: `
-          <gux-modal>
+          <gux-modal-legacy>
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
@@ -129,18 +129,18 @@ describe('gux-modal', () => {
             <div slot="right-align-buttons">
               <gux-button accent='primary'>Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
         const page = await newSpecPage({ components, html, language });
 
-        expect(page.rootInstance).toBeInstanceOf(GuxModal);
+        expect(page.rootInstance).toBeInstanceOf(GuxModalLegacy);
 
         expect(page.root).toMatchSnapshot();
 
-        (page.rootInstance as HTMLGuxModalElement).hidden = true;
+        (page.rootInstance as HTMLGuxModalLegacyElement).hidden = true;
         await page.waitForChanges();
 
         expect(page.root).toMatchSnapshot();
@@ -154,7 +154,7 @@ describe('gux-modal', () => {
   describe('dismiss', () => {
     it('click dismiss button', async () => {
       const html = `
-        <gux-modal size="small">
+        <gux-modal-legacy size="small">
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
@@ -163,7 +163,7 @@ describe('gux-modal', () => {
           <div slot="right-align-buttons">
             <gux-button accent='primary'>Accept</gux-button>
           </div>
-        </gux-modal>
+        </gux-modal-legacy>
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;
@@ -188,7 +188,7 @@ describe('gux-modal', () => {
 
     it('click dismiss button and prevent default', async () => {
       const html = `
-        <gux-modal size="small">
+        <gux-modal-legacy size="small">
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
@@ -197,7 +197,7 @@ describe('gux-modal', () => {
           <div slot="right-align-buttons">
             <gux-button accent='primary'>Accept</gux-button>
           </div>
-        </gux-modal>
+        </gux-modal-legacy>
       `;
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLElement;

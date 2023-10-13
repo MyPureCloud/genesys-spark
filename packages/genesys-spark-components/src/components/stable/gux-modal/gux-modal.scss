@@ -1,139 +1,28 @@
-/*
-@prop $gse-ui-modal-closeButtonColor // TODO: COMUI-2300 - follow up later when dismiss button has been tokenized
-@prop $gse-ui-modal-headerColor
-@prop $gse-ui-modal-backgroundColor
-@prop $gse-ui-modal-shroudColor
-@prop $gse-ui-modal-header-gap
-@prop $gse-ui-modal-padding
-@prop $gse-ui-modal-gap
-@prop $gse-ui-modal-heading-fontFamily
-@prop $gse-ui-modal-heading-lineHeight
-@prop $gse-ui-modal-heading-fontSize
-@prop $gse-ui-modal-heading-fontWeight
-@prop $gse-ui-modal-heading-letterSpacing
-@prop $gse-ui-modal-icon // TODO: COMUI-2300 - follow up later when dismiss button has been tokenized
-@prop $gse-ui-modal-small-width
-@prop $gse-ui-modal-medium-width
-@prop $gse-ui-modal-large-width
-@prop $gse-ui-modal-buttonBar-gap
-@prop $gse-ui-modal-boxShadow-x
-@prop $gse-ui-modal-boxShadow-y
-@prop $gse-ui-modal-boxShadow-blur
-@prop $gse-ui-modal-boxShadow-spread
-@prop $gse-ui-modal-boxShadow-color
-@prop $gse-ui-modal-boxShadow-type
-@prop $gse-ui-modal-borderRadius
-@prop $gse-ui-modal-opacity - Skipped (this is incoporated into the gse-ui-modal-shroudColor token and is no longer needed. Thinking about asking design team to remove this token to avoid confusion)
-*/
-
 @use '../../../style/typography.scss';
-@use '../../../style/zindex.scss';
 
-::slotted(button:active:enabled) {
-  color: var(--gse-ui-link-active-foregroundColor);
-  text-decoration: underline;
-  background: none;
-}
-
-slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
-  display: flex;
-  flex-direction: row;
-  gap: var(--gse-ui-modal-buttonBar-gap);
-  align-content: flex-start;
-  align-items: center;
-}
-
-// Style
 :host {
-  // TODO: COMUI-2301 - fix focus/hover for dismiss button
+  dialog {
+    border: 1px solid #b4bccb; // TODO: COMUI-2300
+    border-radius: var(--gse-ui-modal-borderRadius);
+    box-shadow: var(--gse-ui-modal-boxShadow-x) var(--gse-ui-modal-boxShadow-y)
+      var(--gse-ui-modal-boxShadow-blur) var(--gse-ui-modal-boxShadow-spread)
+      var(--gse-ui-modal-boxShadow-color);
 
-  .gux-modal {
-    position: fixed;
-    inset: 0;
-    z-index: var(--gux-zindex-modal, zindex.$gux-zindex-modal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2e394c; // TODO: COMUI-2300
-    background: var(--gse-ui-modal-shroudColor);
-
-    .gux-modal-container {
-      position: relative;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: var(--gse-ui-modal-padding);
-      background: var(--gse-ui-modal-backgroundColor);
-      border: 1px solid #b4bccb; // TODO: COMUI-2300
-      border-radius: var(--gse-ui-modal-borderRadius);
-      box-shadow: var(--gse-ui-modal-boxShadow-x)
-        var(--gse-ui-modal-boxShadow-y) var(--gse-ui-modal-boxShadow-blur)
-        var(--gse-ui-modal-boxShadow-spread) var(--gse-ui-modal-boxShadow-color);
-
-      &.gux-small {
-        width: var(--gse-ui-modal-small-width);
-        max-height: min(368px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
-      }
-
-      &.gux-medium {
-        width: var(--gse-ui-modal-medium-width);
-        max-height: min(640px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
-      }
-
-      &.gux-large {
-        width: var(--gse-ui-modal-large-width);
-        max-height: min(640px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
-      }
-
-      &.gux-dynamic {
-        max-width: calc(100vw - 2 * 24px); // TODO: COMUI-2300
-        max-height: calc(100vh - 2 * 24px); // TODO: COMUI-2300
-
-        .gux-modal-content {
-          max-height: none;
-        }
-      }
-
-      .gux-modal-header {
-        margin: 0;
-        font-family: var(--gse-ui-modal-heading-fontFamily);
-        font-size: var(--gse-ui-modal-heading-fontSize);
-        font-weight: var(--gse-ui-modal-heading-fontWeight);
-        line-height: var(--gse-ui-modal-heading-fontFamily);
-        color: var(--gse-ui-modal-headerColor);
-        letter-spacing: var(--gse-ui-modal-heading-letterSpacing);
-
-        @include typography.h1;
-      }
-
-      .gux-modal-content {
-        max-height: 432px; // TODO: COMUI-2300
-        margin-top: var(--gse-ui-modal-gap);
-        margin-bottom: var(--gse-ui-modal-gap);
-        overflow-y: auto;
-
-        &.gux-no-buttons {
-          margin-bottom: 0;
-        }
-      }
-
-      .gux-button-footer {
-        display: flex;
-        justify-content: space-between;
-      }
+    &::backdrop {
+      // background: var(--gse-ui-modal-shroudColor);
+      background: #4d6182cc;
     }
 
-    .gux-modal-container {
-      @media (max-width: 416px) {
-        // TODO: COMUI-2300
-        &.gux-small,
-        &.gux-medium,
-        &.gux-large {
-          width: 100%;
-          height: 100%;
-        }
-      }
+    .gux-modal-header {
+      margin: 0;
+      font-family: var(--gse-ui-modal-heading-fontFamily);
+      font-size: var(--gse-ui-modal-heading-fontSize);
+      font-weight: var(--gse-ui-modal-heading-fontWeight);
+      line-height: var(--gse-ui-modal-heading-fontFamily);
+      color: var(--gse-ui-modal-headerColor);
+      letter-spacing: var(--gse-ui-modal-heading-letterSpacing);
+
+      @include typography.h1;
     }
   }
 }

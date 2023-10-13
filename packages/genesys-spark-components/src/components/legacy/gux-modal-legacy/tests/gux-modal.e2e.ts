@@ -1,13 +1,13 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 import { E2EPage } from '@stencil/core/testing';
 
-describe('gux-modal', () => {
+describe('gux-modal-legacy', () => {
   describe('#render', () => {
     [
       {
         description: 'should render small modal',
         html: `
-          <gux-modal lang="en" size="small">
+          <gux-modal-legacy lang="en" size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
@@ -16,13 +16,13 @@ describe('gux-modal', () => {
             <div slot="right-align-buttons">
               <gux-button accent="primary">Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render medium modal',
         html: `
-          <gux-modal lang="en" size="medium">
+          <gux-modal-legacy lang="en" size="medium">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
@@ -31,13 +31,13 @@ describe('gux-modal', () => {
             <div slot="right-align-buttons">
               <gux-button accent="primary">Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render large modal',
         html: `
-          <gux-modal lang="en" size="large">
+          <gux-modal-legacy lang="en" size="large">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
@@ -46,13 +46,13 @@ describe('gux-modal', () => {
             <div slot="right-align-buttons">
               <gux-button accent="primary">Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render modal without a title',
         html: `
-          <gux-modal lang="en" size="large">
+          <gux-modal-legacy lang="en" size="large">
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
                 <gux-button>Cancel</gux-button>
@@ -60,46 +60,46 @@ describe('gux-modal', () => {
             <div slot="right-align-buttons">
               <gux-button accent="primary">Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render modal without buttons',
         html: `
-          <gux-modal lang="en" size="small">
+          <gux-modal-legacy lang="en" size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render modal with just left align buttons',
         html: `
-          <gux-modal lang="en" size="small">
+          <gux-modal-legacy lang="en" size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
                 <gux-button>Cancel</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render modal with just right align buttons',
         html: `
-          <gux-modal lang="en" size="small">
+          <gux-modal-legacy lang="en" size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="right-align-buttons">
               <gux-button accent="primary">Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       },
       {
         description: 'should render small modal by default',
         html: `
-          <gux-modal lang="en">
+          <gux-modal-legacy lang="en">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="left-align-buttons">
@@ -108,13 +108,13 @@ describe('gux-modal', () => {
             <div slot="right-align-buttons">
               <gux-button accent="primary">Accept</gux-button>
             </div>
-          </gux-modal>
+          </gux-modal-legacy>
         `
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
         const page = await newSparkE2EPage({ html });
-        const element = await page.find('gux-modal');
+        const element = await page.find('gux-modal-legacy');
 
         expect(element.outerHTML).toMatchSnapshot();
 
@@ -130,7 +130,7 @@ describe('gux-modal', () => {
   describe('dismiss', () => {
     it('click dismiss button', async () => {
       const html = `
-        <gux-modal lang="en" size="small">
+        <gux-modal-legacy lang="en" size="small">
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
@@ -139,10 +139,10 @@ describe('gux-modal', () => {
           <div slot="right-align-buttons">
             <gux-button accent="primary">Accept</gux-button>
           </div>
-        </gux-modal>
+        </gux-modal-legacy>
       `;
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-modal');
+      const element = await page.find('gux-modal-legacy');
       const dismissButtonElement = await element.find(
         'pierce/gux-dismiss-button'
       );
@@ -152,19 +152,19 @@ describe('gux-modal', () => {
 
       expect(guxdismissSpy).not.toHaveReceivedEvent();
       expect(clickSpy).not.toHaveReceivedEvent();
-      expect(await page.find('gux-modal')).not.toBeNull();
+      expect(await page.find('gux-modal-legacy')).not.toBeNull();
 
       await dismissButton.click();
       await page.waitForChanges();
 
       expect(guxdismissSpy).toHaveReceivedEvent();
       expect(clickSpy).not.toHaveReceivedEvent();
-      expect(await page.find('gux-modal')).toBeNull();
+      expect(await page.find('gux-modal-legacy')).toBeNull();
     });
 
     it('click dismiss button and prevent default', async () => {
       const html = `
-        <gux-modal lang="en" size="small">
+        <gux-modal-legacy lang="en" size="small">
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
@@ -173,10 +173,10 @@ describe('gux-modal', () => {
           <div slot="right-align-buttons">
             <gux-button accent="primary">Accept</gux-button>
           </div>
-        </gux-modal>
+        </gux-modal-legacy>
       `;
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-modal');
+      const element = await page.find('gux-modal-legacy');
       const dismissButtonElement = await element.find(
         'pierce/gux-dismiss-button'
       );
@@ -192,19 +192,19 @@ describe('gux-modal', () => {
 
       expect(guxdismissSpy).not.toHaveReceivedEvent();
       expect(clickSpy).not.toHaveReceivedEvent();
-      expect(await page.find('gux-modal')).not.toBeNull();
+      expect(await page.find('gux-modal-legacy')).not.toBeNull();
 
       await dismissButton.click();
       await page.waitForChanges();
 
       expect(guxdismissSpy).toHaveReceivedEvent();
       expect(clickSpy).not.toHaveReceivedEvent();
-      expect(await page.find('gux-modal')).not.toBeNull();
+      expect(await page.find('gux-modal-legacy')).not.toBeNull();
     });
 
     it('escape key dismiss', async () => {
       const html = `
-        <gux-modal lang="en" size="small">
+        <gux-modal-legacy lang="en" size="small">
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="left-align-buttons">
@@ -213,10 +213,10 @@ describe('gux-modal', () => {
           <div slot="right-align-buttons">
             <gux-button accent="primary">Accept</gux-button>
           </div>
-        </gux-modal>
+        </gux-modal-legacy>
       `;
       const page = await newSparkE2EPage({ html });
-      const modalEl = await page.find('gux-modal');
+      const modalEl = await page.find('gux-modal-legacy');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
 
       expect(guxdismissSpy).not.toHaveReceivedEvent();
@@ -226,13 +226,13 @@ describe('gux-modal', () => {
       await page.waitForChanges();
 
       expect(guxdismissSpy).toHaveReceivedEvent();
-      expect(await page.find('gux-modal')).toBeNull();
+      expect(await page.find('gux-modal-legacy')).toBeNull();
     });
   });
 
   describe('focus', () => {
     const focusModalHtml = (props = '') => `
-      <gux-modal lang="en" size="small" trap-focus="true" ${props}>
+      <gux-modal-legacy lang="en" size="small" trap-focus="true" ${props}>
         <div slot="title">Modal Title</div>
         <div slot="content">This contains the modal content.</div>
         <div slot="left-align-buttons">
@@ -241,7 +241,7 @@ describe('gux-modal', () => {
         <div slot="right-align-buttons">
           <gux-button id="accept-button" accent="primary">Accept</gux-button>
         </div>
-      </gux-modal>
+      </gux-modal-legacy>
     `;
     const modalContainerHtml = `
       <div id="modal-container"></div>
@@ -267,13 +267,14 @@ describe('gux-modal', () => {
     const getFocusedShadowElementText = (page: E2EPage) =>
       page.evaluate(
         () =>
-          document.querySelector('gux-modal').shadowRoot.activeElement
+          document.querySelector('gux-modal-legacy').shadowRoot.activeElement
             .textContent
       );
     const getFocusedShadowElementTagName = (page: E2EPage) =>
       page.evaluate(
         () =>
-          document.querySelector('gux-modal').shadowRoot.activeElement.tagName
+          document.querySelector('gux-modal-legacy').shadowRoot.activeElement
+            .tagName
       );
 
     it('focuses the dismiss button by defualt', async () => {
@@ -281,7 +282,7 @@ describe('gux-modal', () => {
       await page.click('#modal-trigger');
       await page.waitForChanges();
 
-      expect(await page.find('gux-modal')).not.toBeNull();
+      expect(await page.find('gux-modal-legacy')).not.toBeNull();
       expect(await getFocusedShadowElementText(page)).toBe('');
       expect(await getFocusedShadowElementTagName(page)).toBe(
         'GUX-DISMISS-BUTTON'
@@ -295,20 +296,20 @@ describe('gux-modal', () => {
       await page.click('#modal-trigger');
       await page.waitForChanges();
 
-      expect(await page.find('gux-modal')).not.toBeNull();
+      expect(await page.find('gux-modal-legacy')).not.toBeNull();
       expect(await getFocusedElementText(page)).toBe('Accept');
     });
 
     test('focuses the dismiss button if there are no other focusable elements', async () => {
       const page = await setupContainerPage(`
-        <gux-modal lang="en" size="small">
+        <gux-modal-legacy lang="en" size="small">
           <div slot="content">This contains the modal content.</div>
-        </gux-modal>
+        </gux-modal-legacy>
       `);
       await page.click('#modal-trigger');
       await page.waitForChanges();
 
-      expect(await page.find('gux-modal')).not.toBeNull();
+      expect(await page.find('gux-modal-legacy')).not.toBeNull();
       expect(await getFocusedShadowElementText(page)).toBe('');
       expect(await getFocusedShadowElementTagName(page)).toBe(
         'GUX-DISMISS-BUTTON'
