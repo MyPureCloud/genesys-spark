@@ -38,7 +38,8 @@
     @include mixins.gux-disabled-pointer;
   }
 
-  &:host(.gux-selected) {
+  &:host(.gux-selected),
+  &:host(:active) {
     font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
     font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
     font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
@@ -52,7 +53,7 @@
 
   &:host(.gux-active) {
     border-radius: var(--gse-semantic-focusRing-cornerRadius);
-    outline: var(--gse-ui-menu-option-focus-border-width)
+    border: var(--gse-ui-menu-option-focus-border-width)
       var(--gse-ui-menu-option-focus-border-style)
       var(--gse-ui-menu-option-focus-border-color);
   }
