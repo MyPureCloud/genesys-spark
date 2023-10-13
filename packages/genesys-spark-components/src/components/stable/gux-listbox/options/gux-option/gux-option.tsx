@@ -1,13 +1,4 @@
-import {
-  Component,
-  Element,
-  h,
-  Host,
-  JSX,
-  Listen,
-  Prop,
-  Watch
-} from '@stencil/core';
+import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
 
@@ -40,19 +31,6 @@ export class GuxOption {
   @Prop()
   filtered: boolean = false;
 
-  @Prop({ mutable: true })
-  hovered: boolean = false;
-
-  @Listen('mouseenter')
-  onmouseenter() {
-    this.hovered = true;
-  }
-
-  @Listen('mouseleave')
-  onMouseleave() {
-    this.hovered = false;
-  }
-
   @Watch('active')
   handleActive(active: boolean) {
     if (active) {
@@ -82,7 +60,6 @@ export class GuxOption {
           'gux-active': this.active,
           'gux-disabled': this.disabled,
           'gux-filtered': this.filtered,
-          'gux-hovered': this.hovered,
           'gux-selected': this.selected
         }}
         aria-selected={this.getAriaSelected()}

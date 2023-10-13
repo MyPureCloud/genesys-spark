@@ -38,8 +38,14 @@
     @include mixins.gux-disabled-pointer;
   }
 
-  &:host(.gux-selected),
   &:host(:active) {
+    font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
+    font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
+    font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
+    line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
+  }
+
+  &:host(.gux-selected) {
     font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
     font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
     font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
