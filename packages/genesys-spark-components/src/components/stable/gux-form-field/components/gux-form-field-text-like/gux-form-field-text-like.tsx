@@ -142,6 +142,7 @@ export class GuxFormFieldTextLike {
         </GuxFormFieldLabel>
         <div class="gux-input-and-error-container">
           <div
+            tabIndex={1}
             class={{
               'gux-input': true,
               'gux-input-error': this.hasError

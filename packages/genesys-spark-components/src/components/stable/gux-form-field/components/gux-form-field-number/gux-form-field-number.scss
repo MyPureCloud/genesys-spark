@@ -49,6 +49,16 @@ $gux-form-field-number-step-button-size: 14px;
     align-items: center;
     width: 100%;
 
+    &:focus-visible {
+      border: var(--gse-ui-formControl-input-default-border-width)
+        var(--gse-ui-formControl-input-default-border-style)
+        var(--gse-ui-formControl-input-default-border-color);
+      border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+      outline: var(--gse-ui-formControl-input-focus-border-width)
+        var(--gse-ui-formControl-input-focus-border-style)
+        var(--gse-ui-formControl-input-focus-border-color);
+    }
+
     .gux-input-container {
       box-sizing: border-box;
       display: flex;
@@ -87,10 +97,6 @@ $gux-form-field-number-step-button-size: 14px;
         border: var(--gse-ui-formControl-input-active-border-width)
           var(--gse-ui-formControl-input-active-border-style)
           var(--gse-ui-formControl-input-active-border-color);
-        border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
-        outline: var(--gse-ui-formControl-input-focus-border-width)
-          var(--gse-ui-formControl-input-focus-border-style)
-          var(--gse-ui-formControl-input-focus-border-color);
       }
     }
 
