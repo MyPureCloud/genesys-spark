@@ -1,0 +1,1081 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-modal-legacy #render should render large modal 1`] = `
+<gux-modal-legacy size="large">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-large gux-modal-container">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render large modal 2`] = `
+<gux-modal-legacy size="large">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-large gux-modal-container">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render medium modal 1`] = `
+<gux-modal-legacy size="medium">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-medium gux-modal-container">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render medium modal 2`] = `
+<gux-modal-legacy size="medium">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-medium gux-modal-container">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render modal with a specified initial focus element 1`] = `
+<gux-modal-legacy initial-focus="#cancelButton">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-dynamic gux-modal-container">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button id="cancelButton">
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render modal with a specified initial focus element 2`] = `
+<gux-modal-legacy initial-focus="#cancelButton">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-dynamic gux-modal-container">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button id="cancelButton">
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render modal with just left align buttons 1`] = `
+<gux-modal-legacy size="small">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-modal-container gux-small">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render modal with just left align buttons 2`] = `
+<gux-modal-legacy size="small">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-modal-container gux-small">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render modal with just right align buttons 1`] = `
+<gux-modal-legacy size="small">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-modal-container gux-small">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render modal with just right align buttons 2`] = `
+<gux-modal-legacy size="small">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-modal-container gux-small">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render modal without a title 1`] = `
+<gux-modal-legacy size="large">
+  <mock:shadow-root>
+    <div aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-large gux-modal-container">
+        <span tabindex="0"></span>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render modal without a title 2`] = `
+<gux-modal-legacy size="large">
+  <mock:shadow-root>
+    <div aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-large gux-modal-container">
+        <span tabindex="0"></span>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render modal without buttons 1`] = `
+<gux-modal-legacy size="small">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-modal-container gux-small">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content gux-no-buttons">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render modal without buttons 2`] = `
+<gux-modal-legacy size="small">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-modal-container gux-small">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content gux-no-buttons">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render small modal 1`] = `
+<gux-modal-legacy size="small">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-modal-container gux-small">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render small modal 2`] = `
+<gux-modal-legacy size="small">
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-modal-container gux-small">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render small modal by default 1`] = `
+<gux-modal-legacy>
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-dynamic gux-modal-container">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;
+
+exports[`gux-modal-legacy #render should render small modal by default 2`] = `
+<gux-modal-legacy>
+  <mock:shadow-root>
+    <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
+      <div class="gux-dynamic gux-modal-container">
+        <span tabindex="0"></span>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <gux-dismiss-button>
+          <mock:shadow-root>
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </mock:shadow-root>
+        </gux-dismiss-button>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-left-align-buttons">
+            <slot name="left-align-buttons"></slot>
+          </div>
+          <div class="gux-right-align-buttons">
+            <slot name="right-align-buttons"></slot>
+          </div>
+        </div>
+        <span tabindex="0"></span>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="left-align-buttons">
+    <gux-button>
+      <mock:shadow-root>
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Cancel
+    </gux-button>
+  </div>
+  <div slot="right-align-buttons">
+    <gux-button accent="primary">
+      <mock:shadow-root>
+        <button class="gux-primary" type="button">
+          <slot></slot>
+        </button>
+      </mock:shadow-root>
+      Accept
+    </gux-button>
+  </div>
+</gux-modal-legacy>
+`;

@@ -1,7 +1,21 @@
 @use '../../../style/typography.scss';
+::slotted(button:active:enabled) {
+  color: var(--gse-ui-link-active-foregroundColor);
+  text-decoration: underline;
+  background: none;
+}
 
+slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gse-ui-modal-buttonBar-gap);
+  align-content: flex-start;
+  align-items: center;
+}
 :host {
   dialog {
+    box-sizing: border-box;
+    justify-content: space-between;
     border: 1px solid #b4bccb; // TODO: COMUI-2300
     border-radius: var(--gse-ui-modal-borderRadius);
     box-shadow: var(--gse-ui-modal-boxShadow-x) var(--gse-ui-modal-boxShadow-y)
@@ -9,20 +23,78 @@
       var(--gse-ui-modal-boxShadow-color);
 
     &::backdrop {
+      // token isn't working?
       // background: var(--gse-ui-modal-shroudColor);
       background: #4d6182cc;
     }
 
-    .gux-modal-header {
-      margin: 0;
-      font-family: var(--gse-ui-modal-heading-fontFamily);
-      font-size: var(--gse-ui-modal-heading-fontSize);
-      font-weight: var(--gse-ui-modal-heading-fontWeight);
-      line-height: var(--gse-ui-modal-heading-fontFamily);
-      color: var(--gse-ui-modal-headerColor);
-      letter-spacing: var(--gse-ui-modal-heading-letterSpacing);
+    .gux-modal-container {
+      display: flex;
+      flex-direction: column;
+      padding: var(--gse-ui-modal-padding);
 
-      @include typography.h1;
+      &.gux-small {
+        width: var(--gse-ui-modal-small-width);
+        max-height: min(368px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
+      }
+      &.gux-medium {
+        width: var(--gse-ui-modal-medium-width);
+        max-height: min(640px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
+      }
+
+      &.gux-large {
+        width: var(--gse-ui-modal-large-width);
+        max-height: min(640px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
+      }
+
+      &.gux-dynamic {
+        max-width: calc(100vw - 2 * 24px); // TODO: COMUI-2300
+        max-height: calc(100vh - 2 * 24px); // TODO: COMUI-2300
+
+        .gux-modal-content {
+          max-height: none;
+        }
+      }
+
+      .gux-modal-header {
+        margin: 0;
+        font-family: var(--gse-ui-modal-heading-fontFamily);
+        font-size: var(--gse-ui-modal-heading-fontSize);
+        font-weight: var(--gse-ui-modal-heading-fontWeight);
+        line-height: var(--gse-ui-modal-heading-fontFamily);
+        color: var(--gse-ui-modal-headerColor);
+        letter-spacing: var(--gse-ui-modal-heading-letterSpacing);
+
+        @include typography.h1;
+      }
+
+      .gux-modal-content {
+        max-height: 432px; // TODO: COMUI-2300
+        margin-top: var(--gse-ui-modal-gap);
+        margin-bottom: var(--gse-ui-modal-gap);
+        overflow-y: auto;
+
+        &.gux-no-buttons {
+          margin-bottom: 0;
+        }
+      }
+
+      .gux-button-footer {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .gux-modal-container {
+      @media (max-width: 416px) {
+        // TODO: COMUI-2300
+        &.gux-small,
+        &.gux-medium,
+        &.gux-large {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 }
