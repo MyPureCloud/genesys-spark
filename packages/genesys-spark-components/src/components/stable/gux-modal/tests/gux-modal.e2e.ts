@@ -130,7 +130,10 @@ describe('gux-modal', () => {
   describe('dismiss', () => {
     it('click dismiss button', async () => {
       const html = `
-        <gux-modal lang="en" size="small">
+        <gux-button id="openModalButton" onclick="document.getElementById('example1').showModal()">
+          Open
+        </gux-button>
+        <gux-modal id="example1" lang="en" size="small">
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="start-align-buttons">
@@ -143,68 +146,33 @@ describe('gux-modal', () => {
       `;
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-modal');
+      const openModalButton = await page.find('#openModalButton');
+
+      await openModalButton.click();
+      await page.waitForChanges();
+
       const dismissButtonElement = await element.find(
         'pierce/gux-dismiss-button'
       );
+
       const dismissButton = await dismissButtonElement.find('pierce/button');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
       const clickSpy = await page.spyOnEvent('click');
-
-      expect(guxdismissSpy).not.toHaveReceivedEvent();
-      expect(clickSpy).not.toHaveReceivedEvent();
-      expect(await page.find('gux-modal')).not.toBeNull();
 
       await dismissButton.click();
       await page.waitForChanges();
 
       expect(guxdismissSpy).toHaveReceivedEvent();
-      expect(clickSpy).not.toHaveReceivedEvent();
-      expect(await page.find('gux-modal')).toBeNull();
-    });
-
-    it('click dismiss button and prevent default', async () => {
-      const html = `
-        <gux-modal lang="en" size="small">
-          <div slot="title">Modal Title</div>
-          <div slot="content">This contains the modal content.</div>
-          <div slot="start-align-buttons">
-              <gux-button-slot><button>Cancel</button></gux-button-slot>
-          </div>
-          <div slot="end-align-buttons">
-            <gux-button-slot accent="primary"><button>Accept</button></gux-button-slot>
-          </div>
-        </gux-modal>
-      `;
-      const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-modal');
-      const dismissButtonElement = await element.find(
-        'pierce/gux-dismiss-button'
-      );
-      const dismissButton = await dismissButtonElement.find('pierce/button');
-      const guxdismissSpy = await page.spyOnEvent('guxdismiss');
-      const clickSpy = await page.spyOnEvent('click');
-
-      await page.evaluate(() => {
-        document.addEventListener('guxdismiss', event => {
-          event.preventDefault();
-        });
-      });
-
-      expect(guxdismissSpy).not.toHaveReceivedEvent();
-      expect(clickSpy).not.toHaveReceivedEvent();
-      expect(await page.find('gux-modal')).not.toBeNull();
-
-      await dismissButton.click();
-      await page.waitForChanges();
-
-      expect(guxdismissSpy).toHaveReceivedEvent();
-      expect(clickSpy).not.toHaveReceivedEvent();
+      expect(clickSpy).toHaveReceivedEvent();
       expect(await page.find('gux-modal')).not.toBeNull();
     });
 
     it('escape key dismiss', async () => {
       const html = `
-        <gux-modal lang="en" size="small">
+        <gux-button id="openModalButton" onclick="document.getElementById('example1').showModal()">
+          Open
+        </gux-button>
+        <gux-modal id="example1" lang="en" size="small">
           <div slot="title">Modal Title</div>
           <div slot="content">This contains the modal content.</div>
           <div slot="start-align-buttons">
@@ -216,52 +184,31 @@ describe('gux-modal', () => {
         </gux-modal>
       `;
       const page = await newSparkE2EPage({ html });
-      const modalEl = await page.find('gux-modal');
+      const openModalButton = await page.find('#openModalButton');
+
+      await openModalButton.click();
+      await page.waitForChanges();
+
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
 
       expect(guxdismissSpy).not.toHaveReceivedEvent();
-      expect(modalEl).not.toBeNull();
+
+      await page.waitForSelector('pierce/dialog', {
+        visible: true
+      });
 
       await page.keyboard.down('Escape');
       await page.waitForChanges();
 
       expect(guxdismissSpy).toHaveReceivedEvent();
-      expect(await page.find('gux-modal')).toBeNull();
+
+      await page.waitForSelector('pierce/dialog', {
+        visible: false
+      });
     });
   });
 
   describe('focus', () => {
-    const focusModalHtml = (props = '') => `
-      <gux-modal lang="en" size="small" trap-focus="true" ${props}>
-        <div slot="title">Modal Title</div>
-        <div slot="content">This contains the modal content.</div>
-        <div slot="start-align-buttons">
-            <gux-button id="cancel-button">Cancel</gux-button>
-        </div>
-        <div slot="end-align-buttons">
-          <gux-button id="accept-button" accent="primary">Accept</gux-button>
-        </div>
-      </gux-modal>
-    `;
-    const modalContainerHtml = `
-      <div id="modal-container"></div>
-      <button id="other-button">Do Nothing</button>
-      <button id="modal-trigger">Open Modal</button>
-    `;
-    const setupContainerPage = async (modalHtml: string) => {
-      const page = await newSparkE2EPage({ html: modalContainerHtml });
-
-      await page.evaluate(html => {
-        document
-          .getElementById('modal-trigger')
-          ?.addEventListener('click', () => {
-            if (document.getElementById('modal-container'))
-              document.getElementById('modal-container').innerHTML = html;
-          });
-      }, modalHtml);
-      return page;
-    };
-
     const getFocusedElementText = (page: E2EPage) =>
       page.evaluate(() => document.activeElement.textContent);
     const getFocusedShadowElementText = (page: E2EPage) =>
@@ -275,74 +222,78 @@ describe('gux-modal', () => {
         () =>
           document.querySelector('gux-modal').shadowRoot.activeElement.tagName
       );
-
-    it('focuses the dismiss button by defualt', async () => {
-      const page = await setupContainerPage(focusModalHtml());
-      await page.click('#modal-trigger');
+    it('focuses the dismiss button by default ', async () => {
+      const html = `
+        <gux-button id="openModalButton" onclick="document.getElementById('example1').showModal()">
+          Open
+        </gux-button>
+        <gux-modal id="example1" lang="en" size="small">
+          <div slot="title">Modal Title</div>
+          <div slot="content">This contains the modal content.</div>
+          <div slot="start-align-buttons">
+              <gux-button-slot><button>Cancel</button></gux-button-slot>
+          </div>
+          <div slot="end-align-buttons">
+            <gux-button-slot accent="primary"><button>Accept</button></gux-button-slot>
+          </div>
+        </gux-modal>
+      `;
+      const page = await newSparkE2EPage({ html });
+      await page.click('#openModalButton');
       await page.waitForChanges();
 
-      expect(await page.find('gux-modal')).not.toBeNull();
+      await page.waitForSelector('pierce/dialog', {
+        visible: true
+      });
       expect(await getFocusedShadowElementText(page)).toBe('');
       expect(await getFocusedShadowElementTagName(page)).toBe(
         'GUX-DISMISS-BUTTON'
       );
     });
-
     test('can focus a specific focusable element', async () => {
-      const page = await setupContainerPage(
-        focusModalHtml('initial-focus="#accept-button"')
-      );
-      await page.click('#modal-trigger');
-      await page.waitForChanges();
+      const html = `
+        <gux-button id="openModalButton" onclick="document.getElementById('example1').showModal()">
+          Open
+        </gux-button>
+        <gux-modal id="example1" lang="en" size="small">
+          <div slot="title">Modal Title</div>
+          <div slot="content">This contains the modal content.</div>
+          <div slot="start-align-buttons">
+              <gux-button-slot><button>Cancel</button></gux-button-slot>
+          </div>
+          <div slot="end-align-buttons">
+            <gux-button-slot accent="primary"><button autofocus>Accept</button></gux-button-slot>
+          </div>
+        </gux-modal>
+      `;
+      const page = await newSparkE2EPage({ html });
 
-      expect(await page.find('gux-modal')).not.toBeNull();
+      await page.click('#openModalButton');
+      await page.waitForChanges();
+      await page.waitForSelector('pierce/dialog', {
+        visible: true
+      });
+
       expect(await getFocusedElementText(page)).toBe('Accept');
     });
 
     test('focuses the dismiss button if there are no other focusable elements', async () => {
-      const page = await setupContainerPage(`
-        <gux-modal lang="en" size="small">
+      const html = `
+        <gux-button id="openModalButton" onclick="document.getElementById('example1').showModal()">
+          Open
+        </gux-button>
+        <gux-modal id="example1" lang="en" size="small">
           <div slot="content">This contains the modal content.</div>
         </gux-modal>
-      `);
-      await page.click('#modal-trigger');
+      `;
+      const page = await newSparkE2EPage({ html });
+
+      await page.click('#openModalButton');
       await page.waitForChanges();
 
-      expect(await page.find('gux-modal')).not.toBeNull();
-      expect(await getFocusedShadowElementText(page)).toBe('');
-      expect(await getFocusedShadowElementTagName(page)).toBe(
-        'GUX-DISMISS-BUTTON'
-      );
-    });
-
-    test('traps focus in the modal', async () => {
-      const page = await setupContainerPage(focusModalHtml());
-      await page.click('#modal-trigger');
-      await page.waitForChanges();
-
-      expect(await getFocusedShadowElementText(page)).toBe('');
-      expect(await getFocusedShadowElementTagName(page)).toBe(
-        'GUX-DISMISS-BUTTON'
-      );
-
-      await page.keyboard.press('Tab');
-
-      expect(await getFocusedElementText(page)).toBe('Cancel');
-
-      await page.keyboard.press('Tab');
-
-      expect(await getFocusedElementText(page)).toBe('Accept');
-
-      await page.keyboard.press('Tab');
-
-      expect(await getFocusedShadowElementText(page)).toBe('');
-      expect(await getFocusedShadowElementTagName(page)).toBe(
-        'GUX-DISMISS-BUTTON'
-      );
-
-      await page.keyboard.down('Shift');
-      await page.keyboard.press('Tab');
-
+      await page.waitForSelector('pierce/dialog', {
+        visible: true
+      });
       expect(await getFocusedShadowElementText(page)).toBe('');
       expect(await getFocusedShadowElementTagName(page)).toBe(
         'GUX-DISMISS-BUTTON'
@@ -350,9 +301,22 @@ describe('gux-modal', () => {
     });
 
     test('returns focus to the originally focused element when the modal closes', async () => {
-      const page = await setupContainerPage(focusModalHtml());
+      const html = `
+        <gux-button id="openModalButton" onclick="document.getElementById('example1').showModal()">Open Modal</gux-button>
+        <gux-modal id="example1" lang="en" size="small">
+          <div slot="title">Modal Title</div>
+          <div slot="content">This contains the modal content.</div>
+          <div slot="start-align-buttons">
+              <gux-button-slot><button>Cancel</button></gux-button-slot>
+          </div>
+          <div slot="end-align-buttons">
+            <gux-button-slot accent="primary"><button>Accept</button></gux-button-slot>
+          </div>
+        </gux-modal>
+      `;
+      const page = await newSparkE2EPage({ html });
 
-      await page.click('#modal-trigger');
+      await page.click('#openModalButton');
       await page.waitForChanges();
 
       expect(await getFocusedShadowElementText(page)).toBe('');

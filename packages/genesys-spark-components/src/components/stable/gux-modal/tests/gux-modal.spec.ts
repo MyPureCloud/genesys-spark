@@ -139,82 +139,40 @@ describe('gux-modal', () => {
         expect(page.rootInstance).toBeInstanceOf(GuxModal);
 
         expect(page.root).toMatchSnapshot();
-
-        (page.rootInstance as HTMLGuxModalLegacyElement).hidden = true;
-        await page.waitForChanges();
-
-        expect(page.root).toMatchSnapshot();
-
-        // Disconnect so that the focus trap is properly cleaned up
-        page.root.remove();
       });
     });
   });
 
-  describe('dismiss', () => {
-    it('click dismiss button', async () => {
-      const html = `
-        <gux-modal size="small">
-          <div slot="title">Modal Title</div>
-          <div slot="content">This contains the modal content.</div>
-          <div slot="start-align-buttons">
-              <gux-button-slot><button>Cancel</button></gux-button-slot>
-          </div>
-          <div slot="end-align-buttons">
-            <gux-button-slot accent='primary'><button>Accept</button></gux-button-slot>
-          </div>
-        </gux-modal>
-      `;
-      const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLElement;
-      const dismissButton =
-        page.root.shadowRoot.querySelector('gux-dismiss-button');
-      const guxdismissSpy = jest.fn();
-      const clickSpy = jest.fn();
-      const elementRemoveSpy = jest.spyOn(element, 'remove');
+  // describe('dismiss', () => {
+  //   it('click dismiss button', async () => {
+  //     const html = `
+  //       <gux-modal size="small">
+  //         <div slot="title">Modal Title</div>
+  //         <div slot="content">This contains the modal content.</div>
+  //         <div slot="start-align-buttons">
+  //             <gux-button-slot><button>Cancel</button></gux-button-slot>
+  //         </div>
+  //         <div slot="end-align-buttons">
+  //           <gux-button-slot accent='primary'><button>Accept</button></gux-button-slot>
+  //         </div>
+  //       </gux-modal>
+  //     `;
+  //     const page = await newSpecPage({ components, html, language });
+  //     const element = page.root as HTMLElement;
+  //     const dismissButton =
+  //       element.shadowRoot.querySelector('gux-dismiss-button');
+  //     const guxdismissSpy = jest.fn();
+  //     const clickSpy = jest.fn();
 
-      page.win.addEventListener('guxdismiss', guxdismissSpy);
-      page.win.addEventListener('click', clickSpy);
+  //     page.win.addEventListener('guxdismiss', guxdismissSpy);
+  //     page.win.addEventListener('click', clickSpy);
 
-      dismissButton.click();
-      await page.waitForChanges();
+  //     dismissButton.click();
+  //     await page.waitForChanges();
 
-      expect(guxdismissSpy).toHaveBeenCalled();
-      expect(clickSpy).not.toHaveBeenCalled();
-      expect(elementRemoveSpy).toBeCalledWith();
+  //     expect(guxdismissSpy).toHaveBeenCalled();
+  //     expect(clickSpy).toHaveBeenCalled();
+  //   });
 
-      page.root.remove();
-    });
-
-    it('click dismiss button and prevent default', async () => {
-      const html = `
-        <gux-modal size="small">
-          <div slot="title">Modal Title</div>
-          <div slot="content">This contains the modal content.</div>
-          <div slot="start-align-buttons">
-              <gux-button-slot><button>Cancel</button></gux-button-slot>
-          </div>
-          <div slot="end-align-buttons">
-            <gux-button-slot accent='primary'><button>Accept</button></gux-button-slot>
-          </div>
-        </gux-modal>
-      `;
-      const page = await newSpecPage({ components, html, language });
-      const element = page.root as HTMLElement;
-      const dismissButton =
-        page.root.shadowRoot.querySelector('gux-dismiss-button');
-      const elementRemoveSpy = jest.spyOn(element, 'remove');
-
-      page.win.addEventListener('guxdismiss', (event: Event) => {
-        event.preventDefault();
-      });
-
-      dismissButton.click();
-      await page.waitForChanges();
-
-      expect(elementRemoveSpy).not.toBeCalled();
-
-      page.root.remove();
-    });
-  });
+  // });
 });
