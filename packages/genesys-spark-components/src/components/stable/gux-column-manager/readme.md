@@ -19,6 +19,14 @@
 |      | slot for gux-column-manager-item's |
 
 
+## CSS Custom Properties
+
+| Name                                                           | Description |
+| -------------------------------------------------------------- | ----------- |
+| `--gse-ui-dataTableItems-editColumn-editColumnContent-gap`     |             |
+| `--gse-ui-dataTableItems-editColumn-editColumnContent-padding` |             |
+
+
 ## Dependencies
 
 ### Depends on

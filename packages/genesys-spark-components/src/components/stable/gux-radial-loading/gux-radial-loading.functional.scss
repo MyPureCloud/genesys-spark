@@ -1,22 +1,13 @@
 @use 'sass:math';
 
 /**
-  * @prop --gse-ui-progressAndLoading-largeBorder : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-largeBorder-0 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-largeBorder-1 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-largeBorder-2 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-smallBorder : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-smallBorder-0 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-smallBorder-1 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-smallBorder-2 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-thinBorder : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-thinBorder-0 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-thinBorder-1 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-thinBorder-2 : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-largeBorder //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-smallBorder //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-thinBorder //TODO https://inindca.atlassian.net/browse/COMUI-2226
   * @prop --gse-ui-progressAndLoading-spinner-base
   * @prop --gse-ui-progressAndLoading-spinner-foreground
-  * @prop --gse-ui-progressAndLoading-spinner-large : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-spinner-small : //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-spinner-large //TODO https://inindca.atlassian.net/browse/COMUI-2226
+  * @prop --gse-ui-progressAndLoading-spinner-small //TODO https://inindca.atlassian.net/browse/COMUI-2226
 */
 
 $largeSpinnerSize: 48; // Linked to --gse-ui-progressAndLoading-spinner-large
@@ -103,7 +94,7 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
       .gux-dynamic-circle-mask {
         fill: none;
         stroke: var(--gse-ui-progressAndLoading-spinner-foreground);
-        stroke-width: $largeSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+        stroke-width: $largeSpinnerBorder;
         transform-origin: 50% 50%;
         animation-name: largeSpin;
         animation-duration: 2s;
@@ -114,13 +105,13 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
       .gux-dynamic-circle-mask {
         display: none;
         stroke: white;
-        stroke-width: $largeSpinnerBorder - $thinSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+        stroke-width: $largeSpinnerBorder - $thinSpinnerBorder;
       }
 
       .gux-static-circle {
         fill: none;
         stroke: var(--gse-ui-progressAndLoading-spinner-base);
-        stroke-width: $largeSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+        stroke-width: $largeSpinnerBorder;
       }
     }
 
@@ -144,7 +135,7 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
         .gux-dynamic-circle {
           fill: none;
           stroke: var(--gse-ui-progressAndLoading-spinner-foreground);
-          stroke-width: $smallSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+          stroke-width: $smallSpinnerBorder;
           transform-origin: 50% 50%;
           animation-name: smallSpin;
           animation-duration: 2s;
@@ -154,7 +145,7 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
 
         .gux-static-circle {
           stroke: var(--gse-ui-progressAndLoading-spinner-base);
-          stroke-width: $smallSpinnerBorder; //TODO https://inindca.atlassian.net/browse/COMUI-2226
+          stroke-width: $smallSpinnerBorder;
         }
       }
     }

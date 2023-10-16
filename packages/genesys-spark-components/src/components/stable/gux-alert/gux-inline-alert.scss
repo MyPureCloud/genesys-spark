@@ -39,7 +39,7 @@
 }
 
 .gux-inline-alert {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: var(--gse-ui-alert-gap);

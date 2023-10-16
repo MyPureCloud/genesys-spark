@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.0.0-beta.39",
+  "version": "4.0.0-beta.42",
   "description": "Common webcomponents",
   "license": "MIT",
   "main": "dist/stencil-wrapper.js",
@@ -14,7 +14,6 @@
     "check-a11y": "node ./scripts/check-a11y.mjs",
     "check-readmes": "./scripts/check-readmes.sh",
     "clean": "rm -r ./dist ./build || true",
-    "current-version": "cross-var \"echo $npm_package_version\"",
     "predev": "npm run i18n && npm run generate-gux-icon-types-file ",
     "dev": "npm run stencil.dev",
     "eslint": "eslint --fix .",
@@ -34,7 +33,6 @@
     "prepare": "npm run i18n",
     "prettier": "prettier --log-level silent --ignore-unknown --write .",
     "prettier-package-json": "prettier-package-json --write ./package.json",
-    "release": "standard-version",
     "stencil": "stencil build --prod",
     "stencil.dev": "stencil build --dev --watch --serve --no-open --docs",
     "stylelint": "stylelint --fix \"**/*.{css,html,scss}\"",
@@ -61,7 +59,6 @@
   "types": "dist/types/index.d.ts",
   "dependencies": {
     "@floating-ui/dom": "1.4.3",
-    "@popperjs/core": "^2.11.8",
     "@vvo/tzdb": "^6.108.0",
     "google-libphonenumber": "^3.2.32",
     "intl-messageformat": "^10.3.5",
@@ -85,7 +82,6 @@
     "@typescript-eslint/parser": "^6.0.0",
     "axe-core": "4.4.2",
     "axe-live": "^1.0.1",
-    "cross-var": "^1.1.0",
     "eslint": "^8.44.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "eslint-config-prettier": "^8.8.0",
@@ -117,7 +113,6 @@
     "semver-sort": "^1.0.0",
     "spritesheet-templates": "^10.5.2",
     "spritesmith": "^3.4.1",
-    "standard-version": "^9.5.0",
     "stylelint": "^15.10.1",
     "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",
     "stylelint-config-html": "^1.1.0",
@@ -135,11 +130,6 @@
   },
   "collection": "dist/collection/collection-manifest.json",
   "prettier": "prettier-config-genesys-spark-components",
-  "standard-version": {
-    "skip": {
-      "tag": true
-    }
-  },
   "volta": {
     "node": "18.16.1"
   }

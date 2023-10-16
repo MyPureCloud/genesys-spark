@@ -146,5 +146,45 @@
         "width": "920px"
       }
     }
+  },
+  "global_nav": {
+    "focus": {
+      "border": {
+        "color": "#7B88F7",
+        "width": "3px",
+        "style": "solid"
+      }
+    },
+    "menu_option": {
+      "height": "32px",
+      "width": "248px",
+      "padding": "0px 12px",
+      "gap": "8px",
+      "default": {
+        "foreground_color": "#ffffff"
+      },
+      "hover": {
+        "background_color": "#252E78",
+        "foreground_color": "#ffffff"
+      },
+      "selected": {
+        "background_color": "#4856CB",
+        "foreground_color": "#ffffff"
+      },
+      "disabled": {
+        "background_color": "#ffffff"
+      },
+      "focus": {
+        "border_radius": "8px"
+      },
+      "border_radius": "4px",
+      "disable_opacity": 0.5
+    },
+    "button_return": {
+      "height": "48px",
+      "width": "280px",
+      "padding": "16px 28px",
+      "gap": "12px"
+    }
   }
 }

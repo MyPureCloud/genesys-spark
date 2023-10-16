@@ -211,7 +211,6 @@ export class GuxColumnManagerItem {
         }
         case 'End': {
           event.preventDefault();
-          console.log('End');
           this.internal_keyboard_reorder_move.emit({
             delta: Infinity,
             column: this.text

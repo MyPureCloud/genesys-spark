@@ -51,7 +51,7 @@
     "small": {
       "border": {
         "color": "#7B88F7",
-        "width": "3px",
+        "width": "2px",
         "style": "solid"
       }
     }

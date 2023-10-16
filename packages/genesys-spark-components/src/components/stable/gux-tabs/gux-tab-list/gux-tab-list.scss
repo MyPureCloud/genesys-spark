@@ -6,11 +6,12 @@ gux-tabs {
       .gux-tab-container {
         display: flex;
         flex-direction: column;
-        width: 160px;
+        width: 98px; // COMUI-2327 missing a tabs-set fixedWidth token of 98px.
         max-width: 160px;
         height: 100%;
-        margin-right: 16px;
-        border-right: 1px solid #d7dce5;
+        margin-right: 16px; // TODO: COMUI-2327
+        border-right: var(--gse-ui-tabs-item-divider-horizontal-height) solid
+          var(--gse-ui-tabs-item-divider-dividerColor); //TODO: COMUI-2327.
 
         .gux-scroll-button-container {
           width: 100%;
@@ -41,9 +42,10 @@ gux-tabs {
   &:not([orientation='vertical']) {
     > gux-tab-list {
       .gux-tab-container {
-        height: 40px;
-        margin-bottom: 16px;
-        border-bottom: 1px solid #d7dce5;
+        height: 40px; //TODO : COMUI-2327 - missing tab-set token height.
+        margin-bottom: 16px; // TODO : COMUI-2237
+        border-bottom: var(--gse-ui-tabs-item-divider-horizontal-height) solid
+          var(--gse-ui-tabs-item-divider-dividerColor); //TODO: COMUI-2327.
       }
 
       .gux-scrollable-section {
@@ -58,7 +60,7 @@ gux-tabs {
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
-    background-color: #fff;
+    background-color: transparent; //TODO: COMUI-2327.
   }
 
   .gux-scrollable-section {
@@ -74,7 +76,7 @@ gux-tabs {
 
   .gux-scroll-button-container {
     display: flex;
-    border-radius: 4px;
+    border-radius: 4px; // TODO: COMUI-2341. Should we use button tokens here ?
 
     .gux-scroll-button {
       display: flex;

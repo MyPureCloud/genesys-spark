@@ -26,9 +26,9 @@ webappPipeline {
         // it may protect against problems if the pipeline behavior changes in the future.
         if (isReleaseBranch) {
             sh('npm ci')
-            sh("npm run release --workspace=packages/genesys-spark-components -- ${releaseOptions}")
+            sh("npm run release -- ${releaseOptions}")
             String releaseVersion = sh(
-                script: 'npm run --silent current-version --workspace=packages/genesys-spark-components',
+                script: 'npm run --silent current-version',
                 returnStdout: true
             ).trim()
             sh("npm run version-sync ${releaseVersion}")
@@ -96,7 +96,7 @@ webappPipeline {
                     )
 
                     sh(script: '''
-                            RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
+                            RELEASE_VERSION="$(npm run --silent current-version)"
                             npm install --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react
                         ''',
                         label: 'Set exact version dependency in React Components')

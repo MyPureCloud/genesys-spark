@@ -12,6 +12,11 @@ _This migration guide is open to anyone to edit. If you have migrated a componen
 - [Stable component changes](#stable-component-changes):
   - TODO
 
+## Other changes at a glance
+
+- Components now use Spark Flare 4.0 styles.
+- PopperJS dependency removed. All instances of PopperJS have been replaced with Floating UI. We do not expect this to effect component usage.
+
 ## V3 Beta Components Promoted to Stable in V4
 
 Action: _(required)_ remove `-beta` from the tag name of the component.
@@ -29,7 +34,6 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | V3 tag name                   | V4 tag name              |
 | ----------------------------- | ------------------------ |
 | gux-blank-state-beta          | gux-blank-state          |
-| gux-button-slot-beta          | gux-button-slot          |
 | gux-column-manager-beta       | gux-column-manager       |
 | gux-context-menu-beta         | gux-context-menu         |
 | gux-inline-alert-beta         | gux-inline-alert         |
@@ -48,8 +52,9 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | V3 tag name               | V4 tag name          | Migration Guide             |
 | ------------------------- | -------------------- | --------------------------- |
 | `gux-badge-beta`          | `gux-badge`          | [link](#gux-badge)          |
-| `gux-tag-beta`            | `gux-tag`            | [link](#gux-tag)            |
+| `gux-button-slot-beta`    | `gux-button-slot`    | [link](#gux-button-slot)    |
 | `gux-dropdown-multi-beta` | `gux-dropdown-multi` | [link](#gux-dropdown-multi) |
+| `gux-tag-beta`            | `gux-tag`            | [link](#gux-tag)            |
 
 #### gux-badge
 
@@ -88,6 +93,16 @@ The `color` property has been removed. All uses of the `color` property can be m
 + <gux-tag accent="1">Text</gux-tag>
 ```
 
+- The `value` property has been removed.
+  - This change also effects the `guxdelete` event. The event no longer contains the `value` in the `detail` field.
+  - You should now remove the element using the events `target` to get a reference to the element.
+
+```javascript
+document.querySelector('gux-tag').addEventListener('guxdelete', event => {
+  event.target.remove();
+});
+```
+
 #### gux-calendar
 
 The `input` event has been renamed `calendarSelect`
@@ -112,6 +127,10 @@ An `is-open` prop has been added to control showing and hiding the component. Th
     ...
   </gux-dropdown-multi>
 ```
+
+#### gux-button-slot
+
+An `icon-only` only prop has been added. This should be used when the slotted button only contains an icon. This will allow the component to be styled correctly.
 
 ## V3 Stable Components Archived to Legacy in V4
 

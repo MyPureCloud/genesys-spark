@@ -1,7 +1,7 @@
 gux-button-slot {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 16px; // TODO : COMUI-2352
+  right: 8px; //TODO : COMUI-2352
 
   &.gux-inherit {
     position: inherit;

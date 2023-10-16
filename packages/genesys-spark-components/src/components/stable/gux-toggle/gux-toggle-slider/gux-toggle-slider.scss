@@ -1,11 +1,46 @@
-@use 'sass:math';
-@use '../../../../style/focus';
+/**
+ * @prop --gse-ui-toggle-track-width
+ * @prop --gse-ui-toggle-track-height
+ * @prop --gse-ui-toggle-track-enabled-off-backgroundColor
+ * @prop --gse-ui-toggle-track-enabled-on-backgroundColor
+ * @prop --gse-ui-toggle-track-disabled-off-backgroundColor
+ * @prop --gse-ui-toggle-track-disabled-on-backgroundColor
+ * @prop --gse-ui-toggle-track-error-off-backgroundColor
+ * @prop --gse-ui-toggle-track-error-on-backgroundColor
+ * @prop --gse-ui-toggle-track-hover-off-backgroundColor
+ * @prop --gse-ui-toggle-track-hover-on-backgroundColor
+ * @prop --gse-ui-toggle-track-borderRadius
+ * @prop --gse-ui-toggle-handle-width
+ * @prop --gse-ui-toggle-handle-height
+ * @prop --gse-ui-toggle-handle-hover-border-width
+ * @prop --gse-ui-toggle-handle-hover-border-style
+ * @prop --gse-ui-toggle-handle-hover-border-color
+ * @prop --gse-ui-toggle-handle-enabled-border-width
+ * @prop --gse-ui-toggle-handle-enabled-border-color
+ * @prop --gse-ui-toggle-handle-enabled-border-style
+ * @prop --gse-ui-toggle-handle-disabled-border-width
+ * @prop --gse-ui-toggle-handle-disabled-border-color
+ * @prop --gse-ui-toggle-handle-disabled-border-style
+ * @prop --gse-ui-toggle-handle-error-border-color
+ * @prop --gse-ui-toggle-handle-error-border-width
+ * @prop --gse-ui-toggle-handle-error-border-style
+ * @prop --gse-ui-toggle-handle-backgroundColor
+ * @prop --gse-ui-toggle-handle-foregroundColor
+ * @prop --gse-ui-toggle-handle-borderRadius
+ * @prop --gse-ui-toggle-focus-border-color;
+ * @prop --gse-ui-toggle-focus-border-width
+ * @prop --gse-ui-toggle-focus-border-style
+ * @prop --gse-ui-toggle-focus-borderRadius
+ * @prop --gse-ui-toggle-focus-offset
+ */
 
-$toggle-height: 16px;
-$toggle-width: 30px;
-$slider-diameter: $toggle-height - 2px;
-$slider-transition: $toggle-width - $toggle-height;
-$slider-transition-duration: 0.5s;
+@use 'sass:math';
+
+$toggle-height: var(--gse-ui-toggle-track-height);
+$toggle-width: var(--gse-ui-toggle-track-width);
+$slider-diameter: calc(var(--gse-ui-toggle-handle-width));
+$slider-transition: calc($toggle-width - $toggle-height);
+$slider-transition-duration: 0.5s; // TODO: COMUI-2332 missing token
 
 gux-toggle-slider {
   display: flex;
@@ -21,46 +56,75 @@ gux-toggle-slider {
     order: 0;
     width: $toggle-width;
     height: $toggle-height;
-    border-radius: math.div($toggle-height, 2);
+    border-radius: var(--gse-ui-toggle-track-borderRadius);
+
+    &.gux-error {
+      .gux-slider {
+        background-color: var(--gse-ui-toggle-track-error-off-backgroundColor);
+
+        .gux-switch {
+          border: var(--gse-ui-toggle-handle-error-border-width)
+            var(--gse-ui-toggle-handle-error-border-style)
+            var(--gse-ui-toggle-handle-error-border-color);
+        }
+      }
+
+      &.gux-checked {
+        .gux-slider {
+          background-color: var(--gse-ui-toggle-track-error-on-backgroundColor);
+        }
+      }
+    }
 
     &.gux-disabled {
       pointer-events: none;
       cursor: default;
-      opacity: 0.5;
+      background-color: var(--gse-ui-toggle-track-disabled-off-backgroundColor);
+      opacity: var(--gse-ui-toggle-disabled-opacity);
     }
 
     &:focus-visible {
-      outline: none;
-
-      @include focus.gux-focus-ring;
+      border-radius: var(--gse-ui-toggle-focus-borderRadius);
+      outline: var(--gse-ui-toggle-focus-border-width)
+        var(--gse-ui-toggle-focus-border-style)
+        var(--gse-ui-toggle-focus-border-color);
+      outline-offset: var(--gse-ui-toggle-focus-offset);
     }
 
     .gux-slider {
       position: absolute;
       inset: 0;
-      background-color: #6b7585;
-      border-radius: math.div($toggle-height, 2);
+      background-color: var(--gse-ui-toggle-track-enabled-off-backgroundColor);
+      border-radius: calc($toggle-height / 2);
       transition: background-color $slider-transition-duration ease;
+
+      &:hover {
+        background-color: var(--gse-ui-toggle-track-hover-off-backgroundColor);
+      }
 
       .gux-switch {
         position: absolute;
-        bottom: calc(($toggle-height - $slider-diameter) / 2);
+        bottom: calc(calc($toggle-height - $slider-diameter) / 2);
         left: calc(($toggle-height - $slider-diameter) / 2);
-        width: $slider-diameter;
-        height: $slider-diameter;
+        width: calc($slider-diameter - 4px);
+        height: calc(var(--gse-ui-toggle-handle-height) - 4px);
+        color: var(--gse-ui-toggle-handle-foregroundColor);
         content: '';
-        background-color: #fdfdfd;
-        border-radius: 50%;
+        background-color: var(--gse-ui-toggle-handle-backgroundColor);
+        border: var(--gse-ui-toggle-handle-enabled-border-width)
+          var(--gse-ui-toggle-handle-enabled-border-style)
+          var(--gse-ui-toggle-handle-enabled-border-color);
+        border-radius: var(--gse-ui-toggle-handle-borderRadius);
         transition: $slider-transition-duration;
 
         gux-icon {
           position: absolute;
           inset: 0;
-          width: $slider-diameter - 2;
-          height: $slider-diameter - 2;
-          padding: 1px;
-          color: #fdfdfd;
-          opacity: 0;
+          width: calc($slider-diameter - 2);
+          height: calc($slider-diameter - 2);
+          padding: 1px; // TODO: COMUI-2332 missing token
+          color: #fdfdfd; // TODO: COMUI-2332 missing token
+          opacity: 0; // TODO: COMUI-2332 missing token
           transition: color $slider-transition-duration linear;
         }
       }
@@ -68,14 +132,36 @@ gux-toggle-slider {
 
     &.gux-checked {
       .gux-slider {
-        background-color: #2a60c8;
+        background-color: var(--gse-ui-toggle-track-enabled-on-backgroundColor);
+
+        &.gux-disabled {
+          background-color: var(
+            --gse-ui-toggle-track-disabled-on-backgroundColor
+          );
+
+          .gux-switch {
+            border: var(--gse-ui-toggle-handle-hover-disabled-border-width)
+              var(--gse-ui-toggle-handle-hover-disabled-border-style)
+              var(--gse-ui-toggle-handle-hover-disabled-border-color);
+          }
+        }
+
+        &:hover {
+          background-color: var(--gse-ui-toggle-track-hover-on-backgroundColor);
+
+          .gux-switch {
+            border: var(--gse-ui-toggle-handle-hover-border-width)
+              var(--gse-ui-toggle-handle-hover-border-style)
+              var(--gse-ui-toggle-handle-hover-border-color);
+          }
+        }
 
         .gux-switch {
           transform: translateX($slider-transition);
 
           gux-icon {
-            color: #2a60c8;
-            opacity: 1;
+            color: #2a60c8; // TODO: COMUI-2332 missing token
+            opacity: 1; // TODO: COMUI-2332 missing token
             transition: opacity math.div($slider-transition-duration, 2) linear;
             transition-delay: math.div($slider-transition-duration, 2);
           }

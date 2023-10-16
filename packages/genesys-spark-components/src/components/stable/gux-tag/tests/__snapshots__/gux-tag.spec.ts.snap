@@ -74,7 +74,7 @@ exports[`gux-tag #render should render component as expected (4) 1`] = `
 `;
 
 exports[`gux-tag #render should render component as expected (5) 1`] = `
-<gux-tag accent="1" removable="" value="3">
+<gux-tag accent="1" removable="">
   <mock:shadow-root>
     <div aria-disabled="false" class="gux-accent-1 gux-tag">
       <gux-tooltip-title>
@@ -96,7 +96,7 @@ exports[`gux-tag #render should render component as expected (5) 1`] = `
 `;
 
 exports[`gux-tag #render should render component as expected (6) 1`] = `
-<gux-tag accent="1" disabled="" removable="" value="3">
+<gux-tag accent="1" disabled="" removable="">
   <mock:shadow-root>
     <div aria-disabled="true" class="gux-accent-1 gux-disabled gux-tag">
       <gux-tooltip-title>

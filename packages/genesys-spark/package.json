@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark",
-  "version": "4.0.0-beta.39",
+  "version": "4.0.0-beta.42",
   "description": "",
   "license": "ISC",
   "author": "",
@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c --watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No test specified\"",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "dependencies": {

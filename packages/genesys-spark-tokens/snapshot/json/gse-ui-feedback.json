@@ -161,21 +161,6 @@
       }
     },
     "text_color": "#1b2c48",
-    "large_border": {
-      "0": "4",
-      "1": "p",
-      "2": "x"
-    },
-    "small_border": {
-      "0": "2",
-      "1": "p",
-      "2": "x"
-    },
-    "thin_border": {
-      "0": "1",
-      "1": "p",
-      "2": "x"
-    },
     "loading_state": {
       "large": {
         "header": {
@@ -267,7 +252,10 @@
           "fontSize": "12px"
         }
       }
-    }
+    },
+    "large_border": "4px",
+    "small_border": "2px",
+    "thin_border": "1px"
   },
   "blank_state": {
     "small": {

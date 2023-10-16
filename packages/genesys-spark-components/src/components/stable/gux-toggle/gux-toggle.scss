@@ -1,3 +1,11 @@
+/**
+ * @prop --gse-ui-toggle-label-fontFamily
+ * @prop --gse-ui-toggle-label-fontWeight
+ * @prop --gse-ui-toggle-label-lineHeight
+ * @prop --gse-ui-toggle-label-fontSize
+ * @prop --gse-ui-toggle-gap
+ */
+
 :host {
   display: block;
   margin: 2px;
@@ -19,7 +27,7 @@
     .gux-toggle-input {
       .gux-toggle-label {
         .gux-toggle-label-text {
-          opacity: 0.5;
+          opacity: var(--gse-ui-toggle-disabled-opacity);
         }
       }
     }
@@ -45,6 +53,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: var(--gse-ui-toggle-gap);
     align-content: stretch;
     align-items: flex-start;
     justify-content: flex-start;
@@ -52,12 +61,17 @@
     .gux-toggle-label {
       position: relative;
       display: inline-block;
-      padding: 0 4px;
+      padding: 0 4px; // TODO: COMUI-2332 missing token
+      font-family: var(--gse-ui-toggle-label-fontFamily);
+      // line-height: var(--gse-ui-toggle-label-lineHeight); // TODO: COMUI-2332 adding this line height shifts up the label so it's not vertically centered anymore
+      font-size: var(--gse-ui-toggle-label-fontSize);
+      font-weight: var(--gse-ui-toggle-label-fontWeight);
 
       .gux-toggle-label-text {
         display: grid;
         grid-template-areas: 'inner-div';
         place-items: start;
+        font-family: var(--gse-ui-toggle-label-fontWeight);
 
         .gux-toggle-label-text-inner {
           position: relative;
@@ -90,17 +104,17 @@
       align-content: stretch;
       align-items: flex-start;
       justify-content: flex-start;
-      font-size: 11px;
-      color: #2e394c;
+      font-size: var(--gse-ui-toggle-label-fontSize);
+      color: var(--gse-ui-formControl-helper-errorColor);
 
       gux-icon {
         flex: 0 1 auto;
         align-self: auto;
         order: 0;
-        width: 16px;
-        height: 16px;
-        margin: 0 4px;
-        color: #ea0b0b;
+        width: var(--gse-ui-button-icon-size);
+        height: var(--gse-ui-button-icon-size);
+        margin: 0 4px; // TODO: COMUI-2332 missing token
+        color: var(--gse-ui-formControl-helper-errorColor);
       }
 
       .gux-toggle-error-message {

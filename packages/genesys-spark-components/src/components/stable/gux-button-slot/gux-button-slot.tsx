@@ -18,6 +18,9 @@ export class GuxButtonSlot {
   @Prop()
   accent: GuxButtonAccent = 'secondary';
 
+  @Prop()
+  iconOnly: boolean;
+
   private validateSlotContent(): void {
     let slottedElement = this.root.children[0];
     let slottedTagName = slottedElement.tagName;
@@ -53,7 +56,7 @@ export class GuxButtonSlot {
 
   render(): JSX.Element {
     return (
-      <Host accent={this.accent}>
+      <Host accent={this.accent} icon-only={this.iconOnly}>
         <slot />
       </Host>
     ) as JSX.Element;

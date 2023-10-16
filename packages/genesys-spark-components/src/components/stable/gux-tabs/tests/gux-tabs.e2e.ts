@@ -70,6 +70,8 @@ describe('gux-tabs', () => {
     }
   ].forEach(({ description, html }) => {
     describe(`#render ${description}`, () => {
+      const restrictedWidthHtml = `<div style="width: 200px">${html}</div>`;
+
       it('renders', async () => {
         const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-tabs');
@@ -78,7 +80,6 @@ describe('gux-tabs', () => {
       });
 
       it('renders i18n strings', async () => {
-        const restrictedWidthHtml = `<div style="width: 500px">${html}</div>`;
         const page = await newNonrandomE2EPage(
           { html: restrictedWidthHtml },
           'ja'
@@ -97,7 +98,6 @@ describe('gux-tabs', () => {
       });
 
       it('renders scroll buttons when tabs overflow container', async () => {
-        const restrictedWidthHtml = `<div style="width: 500px">${html}</div>`;
         const page = await newNonrandomE2EPage({ html: restrictedWidthHtml });
         const scrollButtons = await page.findAll('.gux-scroll-button');
         await a11yCheck(page);

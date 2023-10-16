@@ -7,8 +7,8 @@ describe('gux-tag', () => {
       '<gux-tag lang="en" accent="default">default (explicit)</gux-tag>',
       '<gux-tag lang="en" accent="1">navy</gux-tag>',
       '<gux-tag lang="en" accent="1"><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
-      '<gux-tag lang="en" accent="1" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
-      '<gux-tag lang="en" accent="1" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>'
+      '<gux-tag lang="en" accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
+      '<gux-tag lang="en" accent="1" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSparkE2EPage({ html });
@@ -24,7 +24,7 @@ describe('gux-tag', () => {
   describe('delete', () => {
     describe('click', () => {
       it('should not have a delete button if tag is not removable', async () => {
-        const html = `<gux-tag lang="en" accent="1" value="3"><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>`;
+        const html = `<gux-tag lang="en" accent="1"><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag');
         const deleteButton = await element.find(
@@ -35,7 +35,7 @@ describe('gux-tag', () => {
       });
 
       it('should emit guxdelete if tag is removable and not disabled', async () => {
-        const html = `<gux-tag lang="en" accent="1" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>`;
+        const html = `<gux-tag lang="en" accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag');
         const deleteButton = await element.find(
@@ -50,7 +50,7 @@ describe('gux-tag', () => {
       });
 
       it('should not emit guxdelete if tag is removable and disabled', async () => {
-        const html = `<gux-tag lang="en" accent="1" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>`;
+        const html = `<gux-tag lang="en" accent="1" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag');
         const deleteButton = await element.find(
@@ -67,7 +67,7 @@ describe('gux-tag', () => {
 
     describe('keypress', () => {
       it('should emit guxdelete if tag is focused and removable and "Delete" is pressed', async () => {
-        const html = `<gux-tag lang="en" accent="1" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>`;
+        const html = `<gux-tag lang="en" accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag');
         const deleteButton = await element.find(
@@ -82,7 +82,7 @@ describe('gux-tag', () => {
       });
 
       it('should emit guxdelete if tag is focused and removable and "Backspace" is pressed', async () => {
-        const html = `<gux-tag lang="en" accent="1" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>`;
+        const html = `<gux-tag lang="en" accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag');
         const deleteButton = await element.find(
@@ -101,7 +101,7 @@ describe('gux-tag', () => {
   describe('tooltip', () => {
     describe('hover', () => {
       it('should show the tooltip on hover for tags with overflow text', async () => {
-        const html = `<gux-tag style="width:100px" lang="en" accent="1" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>Long long long long long long long</gux-tag>`;
+        const html = `<gux-tag style="width:100px" lang="en" accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>Long long long long long long long</gux-tag>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag');
         const deleteButton = await element.find(
@@ -123,7 +123,7 @@ describe('gux-tag', () => {
       });
 
       it('should show the tooltip on hover for tags with icon only', async () => {
-        const html = `<gux-tag lang="en" accent="1" value="3" removable><gux-icon icon-name="bolt" screenreader-text="test tag"></gux-icon></gux-tag>`;
+        const html = `<gux-tag lang="en" accent="1" removable><gux-icon icon-name="bolt" screenreader-text="test tag"></gux-icon></gux-tag>`;
         const page = await newSparkE2EPage({ html });
         const element = await page.find('gux-tag');
         const deleteButton = await element.find(
@@ -147,15 +147,15 @@ describe('gux-tag', () => {
   describe('a11y', () => {
     ['default', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'].forEach(
       accent => {
-        it(`should be accessible when acent is "${accent}"`, async () => {
-          const html = `<gux-tag lang="en" accent="${accent}" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>tag</gux-tag>`;
+        it(`should be accessible when accent is "${accent}"`, async () => {
+          const html = `<gux-tag lang="en" accent="${accent}" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>tag</gux-tag>`;
           const page = await newSparkE2EPage({ html });
 
           await a11yCheck(page);
         });
 
         it(`should be accessible when disabled and accent is "${accent}"`, async () => {
-          const html = `<gux-tag lang="en" accent="${accent}" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>tag</gux-tag>`;
+          const html = `<gux-tag lang="en" accent="${accent}" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>tag</gux-tag>`;
           const page = await newSparkE2EPage({ html });
 
           await a11yCheck(page);
@@ -163,13 +163,13 @@ describe('gux-tag', () => {
       }
     );
     it('should be accessible when the text overflows the tag', async () => {
-      const html = `<gux-tag style="width:100px" lang="en" accent="1" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>Long long long long long long long</gux-tag>`;
+      const html = `<gux-tag style="width:100px" lang="en" accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>Long long long long long long long</gux-tag>`;
       const page = await newSparkE2EPage({ html });
 
       await a11yCheck(page);
     });
     it('should be accessible when there is an icon only tag', async () => {
-      const html = `<gux-tag lang="en" accent="1" value="3" removable><gux-icon icon-name="bolt" screenreader-text="test tag"></gux-icon></gux-tag>`;
+      const html = `<gux-tag lang="en" accent="1" removable><gux-icon icon-name="bolt" screenreader-text="test tag"></gux-icon></gux-tag>`;
       const page = await newSparkE2EPage({ html });
 
       await a11yCheck(page);

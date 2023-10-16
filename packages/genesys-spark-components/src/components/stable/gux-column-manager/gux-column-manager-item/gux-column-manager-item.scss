@@ -1,15 +1,19 @@
 @use '../../../../style/mixins';
 @use '../../../../style/focus';
 
+/**
+  * @prop --gse-ui-dataTableItems-editColumn-editColumnItem-gap
+  */
+
 :host([gs-reorder-indicator='above']) {
   .gux-container {
-    border-top-color: #aac9ff;
+    border-top-color: #aac9ff; //TODO https://inindca.atlassian.net/browse/COMUI-2314
   }
 }
 
 :host([gs-reorder-indicator='below']) {
   .gux-container {
-    border-bottom-color: #aac9ff;
+    border-bottom-color: #aac9ff; //TODO https://inindca.atlassian.net/browse/COMUI-2314
   }
 }
 
@@ -17,25 +21,26 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  gap: var(--gse-ui-dataTableItems-editColumn-editColumnItem-gap);
   align-content: stretch;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: -2px;
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent;
+  margin-bottom: -2px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+  border-top: 2px solid transparent; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+  border-bottom: 2px solid transparent; //TODO https://inindca.atlassian.net/browse/COMUI-2314
 
   &.gux-drop-above {
-    border-top-color: #aac9ff;
+    border-top-color: #aac9ff; //TODO https://inindca.atlassian.net/browse/COMUI-2314
   }
 
   &.gux-drop-below {
-    border-bottom-color: #aac9ff;
+    border-bottom-color: #aac9ff; //TODO https://inindca.atlassian.net/browse/COMUI-2314
   }
 
   &.gux-dragging {
     border-top-color: transparent;
     border-bottom-color: transparent;
-    opacity: 0.4;
+    opacity: 0.4; //TODO https://inindca.atlassian.net/browse/COMUI-2314
   }
 
   .gux-reorder {
@@ -43,15 +48,19 @@
     flex: 0 1 auto;
     align-self: auto;
     order: 0;
-    margin-right: 4px;
-    color: #596373;
+    color: #596373; //TODO https://inindca.atlassian.net/browse/COMUI-2314
     cursor: grab;
-    border-radius: 4px;
+    border-radius: 4px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+
+    gux-icon {
+      width: var(--gse-ui-icon-size-sm);
+      height: var(--gse-ui-icon-size-sm);
+    }
 
     &.gux-reordering {
       &:focus-visible {
         gux-icon {
-          color: #2a60c8; //TODO
+          color: #2a60c8; //TODO https://inindca.atlassian.net/browse/COMUI-2314
         }
       }
     }
@@ -66,7 +75,7 @@
       @include focus.gux-focus-ring-small;
 
       gux-icon {
-        color: #2a60c8;
+        color: #2a60c8; //TODO https://inindca.atlassian.net/browse/COMUI-2314
       }
     }
   }
@@ -79,8 +88,9 @@
 
     gux-text-highlight {
       position: absolute;
-      top: 2px;
-      left: 24px;
+      top: 0;
+      left: 26px + 5px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+      color: transparent;
       pointer-events: none;
     }
   }

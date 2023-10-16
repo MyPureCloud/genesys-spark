@@ -1,9 +1,5 @@
 @use '../../../style/focus.scss';
 
-// COMUI-2156 add missing button tokens
-$temp-slotted-padding-left: 8px;
-$temp-slotted-first-child-padding: 0;
-
 @mixin button-text {
   font-family: var(--gse-ui-button-text-fontFamily);
   font-size: var(--gse-ui-button-text-fontSize);
@@ -34,12 +30,15 @@ $temp-slotted-first-child-padding: 0;
 }
 
 ::slotted(*) {
-  padding-left: $temp-slotted-padding-left;
+  padding-left: var(
+    --gse-core-spacing-3xs
+  ); // COMUI-2156 add missing button tokens
+
   vertical-align: middle;
 }
 
 ::slotted(*:first-child) {
-  padding: $temp-slotted-first-child-padding;
+  padding: 0;
 }
 
 button {
@@ -58,6 +57,10 @@ button {
   background-color: var(--gse-ui-button-secondary-default-backgroundColor);
   border: none;
   border-radius: var(--gse-ui-button-borderRadius);
+
+  &.gux-icon-only {
+    padding: var(--gse-ui-button-paddingIconOnly);
+  }
 
   &[disabled] {
     cursor: default;

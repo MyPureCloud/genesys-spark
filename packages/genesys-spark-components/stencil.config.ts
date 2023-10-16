@@ -4,6 +4,11 @@ import copy from 'rollup-plugin-copy';
 import generateMetadata from './scripts/generate-component-data';
 import { reactOutputTarget } from '@stencil/react-output-target';
 
+const testConsoleReporter =
+  process.env.DEFAULT_TEST_REPORTER === 'true'
+    ? 'default'
+    : ['jest-silent-reporter', { useDots: true }];
+
 export const config: Config = {
   namespace: 'genesys-webcomponents',
   globalStyle: 'src/style/style.scss',
@@ -68,7 +73,7 @@ export const config: Config = {
       '<rootDir>/src/test/setupAxeTests.js'
     ],
     reporters: [
-      ['jest-silent-reporter', { useDots: true }],
+      testConsoleReporter,
       [
         'jest-junit',
         {

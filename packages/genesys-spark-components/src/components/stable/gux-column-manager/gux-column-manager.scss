@@ -1,8 +1,14 @@
 @use '../../../style/mixins';
 
+/**
+  * @prop --gse-ui-dataTableItems-editColumn-editColumnContent-gap
+  * @prop --gse-ui-dataTableItems-editColumn-editColumnContent-padding
+  */
+
 .gux-container {
-  width: 320px;
-  min-width: 320px;
+  width: 320px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+  min-width: 320px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+  padding: var(--gse-ui-dataTableItems-editColumn-editColumnContent-padding);
 
   .gux-search {
     gux-content-search {
@@ -20,11 +26,10 @@
   }
 
   .gux-select {
-    padding: 8px 0 8px 16px;
-    margin: 4px 0;
-    color: #596373;
-    background-color: #f6f7f9;
-    border-radius: 4px;
+    padding: var(--gse-ui-dataTableItems-editColumn-editColumnContent-padding);
+    margin-left: (
+      16px + 8px
+    ); //TODO https://inindca.atlassian.net/browse/COMUI-2314
   }
 }
 

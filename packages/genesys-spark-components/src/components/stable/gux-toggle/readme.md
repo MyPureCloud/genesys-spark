@@ -31,6 +31,17 @@ A check event is triggered when the state of the component changed.
 | `check` |             | `CustomEvent<boolean>` |
 
 
+## CSS Custom Properties
+
+| Name                               | Description |
+| ---------------------------------- | ----------- |
+| `--gse-ui-toggle-gap`              |             |
+| `--gse-ui-toggle-label-fontFamily` |             |
+| `--gse-ui-toggle-label-fontSize`   |             |
+| `--gse-ui-toggle-label-fontWeight` |             |
+| `--gse-ui-toggle-label-lineHeight` |             |
+
+
 ## Dependencies
 
 ### Depends on

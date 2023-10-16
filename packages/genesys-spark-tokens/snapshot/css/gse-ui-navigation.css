@@ -69,4 +69,24 @@
   --gse-ui-advancedTabs-button-arrow-height: 48px;
   --gse-ui-advancedTabs-set-backgroundColor: #f3f5fb;
   --gse-ui-advancedTabs-set-standard-width: 920px;
+  --gse-ui-globalNav-focus-border-color: #7b88f7;
+  --gse-ui-globalNav-focus-border-width: 3px;
+  --gse-ui-globalNav-focus-border-style: solid;
+  --gse-ui-globalNav-menuOption-height: 32px;
+  --gse-ui-globalNav-menuOption-width: 248px;
+  --gse-ui-globalNav-menuOption-padding: 0px 12px;
+  --gse-ui-globalNav-menuOption-gap: 8px;
+  --gse-ui-globalNav-menuOption-default-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-hover-backgroundColor: #252e78;
+  --gse-ui-globalNav-menuOption-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-selected-backgroundColor: #4856cb;
+  --gse-ui-globalNav-menuOption-selected-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-disabled-backgroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-focus-borderRadius: 8px;
+  --gse-ui-globalNav-menuOption-borderRadius: 4px;
+  --gse-ui-globalNav-menuOption-disableOpacity: 0.5;
+  --gse-ui-globalNav-buttonReturn-height: 48px;
+  --gse-ui-globalNav-buttonReturn-width: 280px;
+  --gse-ui-globalNav-buttonReturn-padding: 16px 28px;
+  --gse-ui-globalNav-buttonReturn-gap: 12px;
 }

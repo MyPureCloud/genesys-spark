@@ -32,6 +32,14 @@
   border-radius: var(--gse-ui-button-borderRadius);
 }
 
+:host([icon-only]) {
+  ::slotted(input[type='button']),
+  ::slotted(input[type='submit']),
+  ::slotted(button) {
+    padding: var(--gse-ui-button-paddingIconOnly);
+  }
+}
+
 ::slotted(input[type='button'][disabled]),
 ::slotted(input[type='submit'][disabled]),
 ::slotted(button[disabled]) {

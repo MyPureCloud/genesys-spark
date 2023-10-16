@@ -33,6 +33,7 @@
 ### Used by
 
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
+ - [gux-table-select-menu](../gux-table/gux-table-select-menu)
 
 ### Depends on
 
@@ -45,6 +46,7 @@ graph TD;
   gux-dismiss-button --> gux-button-slot
   gux-dismiss-button --> gux-icon
   gux-tab-advanced --> gux-popover-list
+  gux-table-select-menu --> gux-popover-list
   style gux-popover-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

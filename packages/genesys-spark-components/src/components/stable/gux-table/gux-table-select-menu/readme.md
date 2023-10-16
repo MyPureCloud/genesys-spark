@@ -25,13 +25,16 @@
 ### Depends on
 
 - [gux-icon](../../gux-icon)
-- [gux-table-select-popover](gux-table-select-popover)
+- [gux-popover-list](../../gux-popover-list)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-table-select-menu --> gux-icon
-  gux-table-select-menu --> gux-table-select-popover
+  gux-table-select-menu --> gux-popover-list
+  gux-popover-list --> gux-dismiss-button
+  gux-dismiss-button --> gux-button-slot
+  gux-dismiss-button --> gux-icon
   style gux-table-select-menu fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
