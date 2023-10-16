@@ -51,6 +51,6 @@
   }
 
   &.gux-disabled {
-    opacity: 0.5; // missing token ticket: COMUI-2287
+    opacity: var(--gse-ui-tag-disabled-opacity);
   }
 }
