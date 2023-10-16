@@ -6,7 +6,6 @@ import {
   h,
   Host,
   JSX,
-  Listen,
   Prop,
   Watch
 } from '@stencil/core';
@@ -46,21 +45,8 @@ export class GuxOptionMulti {
   @Prop()
   filtered: boolean = false;
 
-  @Prop({ mutable: true })
-  hovered: boolean = false;
-
   @Prop()
   custom: boolean = false;
-
-  @Listen('mouseenter')
-  onmouseenter() {
-    this.hovered = true;
-  }
-
-  @Listen('mouseleave')
-  onMouseleave() {
-    this.hovered = false;
-  }
 
   @Event()
   guxremovecustomoption: EventEmitter<string>;
@@ -140,7 +126,6 @@ export class GuxOptionMulti {
           'gux-active': this.active,
           'gux-disabled': this.disabled,
           'gux-filtered': this.filtered,
-          'gux-hovered': this.hovered,
           'gux-selected': this.selected
         }}
         aria-selected={this.selected.toString()}
