@@ -33,7 +33,8 @@
     var(--gse-ui-formControl-input-active-border-style)
     var(--gse-ui-formControl-input-active-border-color);
   border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
-  outline: var(--gse-ui-formControl-input-focus-border-width)
+  outline: 2px
+    // TODO: COMUI-2299 - Design needs to update --gse-ui-formControl-input-focus-border-width token to be 2px instead of 3px
     var(--gse-ui-formControl-input-focus-border-style)
     var(--gse-ui-formControl-input-focus-border-color);
 }
@@ -114,7 +115,17 @@
         var(--gse-ui-formControl-input-default-border-color);
       border-radius: var(--gse-ui-formControl-input-borderRadius);
 
+      &:hover {
+        border: var(--gse-ui-formControl-input-hover-border-width)
+          var(--gse-ui-formControl-input-hover-border-style)
+          var(--gse-ui-formControl-input-hover-border-color);
+      }
+
       &:focus-within {
+        @include gse-ui-focus;
+      }
+
+      &.gux-active {
         @include gse-ui-focus;
       }
 
@@ -160,6 +171,7 @@
           border: none;
           border-radius: var(--gse-ui-actionButton-borderRadius);
           outline: none;
+          padding: 2; // TODO: COMUI-2299
 
           &:focus-within {
             @include gse-ui-focus;
