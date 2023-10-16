@@ -27,7 +27,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (1)
                 <slot name="label"></slot>
               </div>
               <div class="gux-input-and-error-container">
-                <div class="gux-input">
+                <div class="gux-input" tabindex="1">
                   <div class="gux-input-container">
                     <slot name="prefix"></slot>
                     <slot name="input"></slot>
@@ -101,7 +101,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (2)
                 <slot name="label"></slot>
               </div>
               <div class="gux-input-and-error-container">
-                <div class="gux-input">
+                <div class="gux-input" tabindex="1">
                   <div class="gux-input-container">
                     <slot name="prefix"></slot>
                     <slot name="input"></slot>
@@ -175,7 +175,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (3)
                 <slot name="label"></slot>
               </div>
               <div class="gux-input-and-error-container">
-                <div class="gux-input">
+                <div class="gux-input" tabindex="1">
                   <div class="gux-input-container">
                     <slot name="prefix"></slot>
                     <slot name="input"></slot>
