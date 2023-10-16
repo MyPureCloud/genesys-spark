@@ -95,19 +95,11 @@
 
 <style
   onload="(function() {
-const removeTagElements = document.getElementsByClassName('remove-tag');
+const tagElements = document.getElementsByTagName('gux-tag');
 
-Array.from(removeTagElements).forEach(function(removeTagElement) {
-  removeTagElement.addEventListener('guxdelete', (event) => {
-    const valueToRemove = event.detail;
-
-    Array.from(
-      removeTagElement.querySelectorAll('gux-tag')
-    ).forEach((tag) => {
-      if (tag.value === valueToRemove) {
-        tag.remove();
-      }
-    });
+Array.from(tagElements).forEach(function(tagElement) {
+  tagElement.addEventListener('guxdelete', (event) => {
+    event.target.remove();
   })
 });
 })()"
