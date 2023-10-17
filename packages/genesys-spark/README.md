@@ -8,9 +8,9 @@ Use your package manager of choice to install the package in your project.
 
 `npm install genesys-spark`
 
-## Setup
+### Loading the components
 
-When initializing your app/page, call `registerSparkCompnents`, which will inject
+When initializing your app/page, call `registerSparkComponents`, which will inject
 the script and style tags into your page that define the main Spark custom elements:
 
 ```js

@@ -37,10 +37,27 @@ export function getAssetsOrigin(): string {
       return "http://localhost:3333";
     }
 
+    const matchedDomain = getRegionDomain();
+    return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
+  }
+
+  export function getFontOrigin(): string {
+    if (IS_DEV_MODE == true) {
+      return "http://app.inindca.com"
+    }
+
+    if (getRegionDomain()) {
+      // Use a domain-relative path because that is most likely to match what an
+      // app would do to statically include the fonts in their build
+      return ""
+    } else {
+      return `https://app.${DEFAULT_DOMAIN}`
+    }
+  }
+
+  function getRegionDomain() {
     const pageHost = window.location.hostname;
-    const matchedDomain = DOMAIN_LIST.find(regionDomain =>
+    return DOMAIN_LIST.find(regionDomain =>
       pageHost.endsWith(regionDomain)
     );
-  
-    return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
   }

@@ -1,11 +1,17 @@
-import { getAssetsOrigin } from "./hosts";
+import { getAssetsOrigin, getFontOrigin } from "./hosts";
 
 const ASSET_PREFIX = "__ASSET_PREFIX__";
 const SCRIPT_PATH = "genesys-webcomponents.esm.js";
 const STYLE_PATH = "genesys-webcomponents.css";
 
-const SCRIPT_SRC = `${getAssetsOrigin()}${ASSET_PREFIX}${SCRIPT_PATH}`;
-const STYLE_HREF = `${getAssetsOrigin()}${ASSET_PREFIX}${STYLE_PATH}`;
+const assetsOrigin = getAssetsOrigin();
+const SCRIPT_SRC = `${assetsOrigin}${ASSET_PREFIX}${SCRIPT_PATH}`;
+const STYLE_HREF = `${assetsOrigin}${ASSET_PREFIX}${STYLE_PATH}`;
+const fontOrigin = getFontOrigin();
+const FONT_STYLE_HREFS = [
+    `${fontOrigin}/webfonts/urbanist.css`,
+    `${fontOrigin}/webfonts/noto-sans.css`
+]
 
 
 /**
@@ -16,7 +22,8 @@ const STYLE_HREF = `${getAssetsOrigin()}${ASSET_PREFIX}${STYLE_PATH}`;
 export function registerSparkComponents() : Promise<void> {
     return Promise.all([
         checkAndLoadScript(SCRIPT_SRC),
-        checkAndLoadStyle(STYLE_HREF)
+        checkAndLoadStyle(STYLE_HREF),
+        ...(FONT_STYLE_HREFS.map(checkAndLoadStyle))
     ]).then()
 }
 
