@@ -469,11 +469,7 @@ export class GuxDropdown {
   }
 
   private renderPopup(): JSX.Element {
-    return (
-      <div slot="popup" class="gux-listbox-container">
-        <slot></slot>
-      </div>
-    ) as JSX.Element;
+    return (<slot slot="popup"></slot>) as JSX.Element;
   }
 
   private renderTarget(): JSX.Element {

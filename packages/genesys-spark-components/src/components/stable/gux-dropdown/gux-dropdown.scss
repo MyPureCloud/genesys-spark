@@ -191,9 +191,8 @@
   }
 }
 
-.gux-listbox-container {
-  box-sizing: border-box;
-  margin: 0;
+::slotted(gux-listbox) {
+  outline: none;
 }
 
 // Selected option styles
