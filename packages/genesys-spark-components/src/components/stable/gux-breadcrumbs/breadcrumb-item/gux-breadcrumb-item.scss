@@ -129,15 +129,12 @@ $temp-focus-ring-corner-radius: 4px;
       color: var(--gse-ui-link-default-foregroundColor);
       pointer-events: initial;
 
-      &:hover {
-        @include link-breadcrumb-secondary-underline;
-      }
-
       &:visited {
         color: var(--gse-ui-link-visited-foregroundColor);
       }
 
       &:hover {
+        @include link-breadcrumb-secondary-underline;
         color: var(--gse-ui-link-hover-foregroundColor);
       }
 
