@@ -2,8 +2,12 @@
 
 [Back to main guide](./readme.md)
 
-The `gux-pagination` component is now becoming `legacy` and will be replaced by the `gux-pagination-beta` component which will now become `stable`. The new stable `gux-pagination` component
-has a new refreshed design and includes extra functionality including `go-to-page` to allow a user to search for a page. For more information of how to migrate to the `stable` version click [here](./readme.md)
+In `v4` we will transition the `gux-pagination` component to a `legacy` status while promoting the `gux-pagination-beta` to a `stable` status.
+
+## Overview
+
+- `gux-pagination` is transitioning to `gux-pagination-legacy`
+- `gux-pagination-beta` is transitioning to `gux-pagination` which will have a new refreshed design and includes a new property `go-to-page` which allows a user to search for a page.
 
 ## V3 gux-pagination example
 
