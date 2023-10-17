@@ -142,37 +142,4 @@ describe('gux-modal', () => {
       });
     });
   });
-
-  // describe('dismiss', () => {
-  //   it('click dismiss button', async () => {
-  //     const html = `
-  //       <gux-modal size="small">
-  //         <div slot="title">Modal Title</div>
-  //         <div slot="content">This contains the modal content.</div>
-  //         <div slot="start-align-buttons">
-  //             <gux-button-slot><button>Cancel</button></gux-button-slot>
-  //         </div>
-  //         <div slot="end-align-buttons">
-  //           <gux-button-slot accent='primary'><button>Accept</button></gux-button-slot>
-  //         </div>
-  //       </gux-modal>
-  //     `;
-  //     const page = await newSpecPage({ components, html, language });
-  //     const element = page.root as HTMLElement;
-  //     const dismissButton =
-  //       element.shadowRoot.querySelector('gux-dismiss-button');
-  //     const guxdismissSpy = jest.fn();
-  //     const clickSpy = jest.fn();
-
-  //     page.win.addEventListener('guxdismiss', guxdismissSpy);
-  //     page.win.addEventListener('click', clickSpy);
-
-  //     dismissButton.click();
-  //     await page.waitForChanges();
-
-  //     expect(guxdismissSpy).toHaveBeenCalled();
-  //     expect(clickSpy).toHaveBeenCalled();
-  //   });
-
-  // });
 });

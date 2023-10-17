@@ -355,14 +355,6 @@ exports[`gux-modal #render should render modal without buttons 1`] = `
             <slot name="content"></slot>
           </p>
         </div>
-        <div class="gux-button-footer">
-          <div class="gux-start-align-buttons">
-            <slot name="start-align-buttons"></slot>
-          </div>
-          <div class="gux-end-align-buttons">
-            <slot name="end-align-buttons"></slot>
-          </div>
-        </div>
       </div>
     </dialog>
   </mock:shadow-root>

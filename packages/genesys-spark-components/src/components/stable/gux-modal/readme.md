@@ -19,7 +19,7 @@
 
 ## Methods
 
-### `hideModal() => Promise<void>`
+### `close() => Promise<void>`
 
 
 

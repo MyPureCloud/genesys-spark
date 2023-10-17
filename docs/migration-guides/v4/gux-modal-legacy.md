@@ -54,6 +54,8 @@ Steps:
 - Rename the `right-align-buttons` slot `end-align-buttons`
 - Use `gux-button-slot` components instead of `gux-button`
 - Remove the `initial-focus` attribute from the `gux-modal` element. Instead, place the `autofocus` attribute on the element that you wish to focus first
+- Remove the `trap-focus` attribute from the `gux-modal` element. The gux-modal uses the [dialog HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) internally, which manages trap focus within the modal
+- Instead of adding and removing the `gux-modal` component from the DOM, use the `showModal` and `close` methods on the `gux-modal` component to hide and show the modal.
 
 ```diff
 -<gux-modal initial-focus="#cancel-button" size="small">

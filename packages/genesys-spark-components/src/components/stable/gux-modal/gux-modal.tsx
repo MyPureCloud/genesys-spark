@@ -17,7 +17,7 @@ import { GuxModalSize } from './gux-modal.types';
 @Component({
   styleUrl: 'gux-modal.scss',
   tag: 'gux-modal',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxModal {
   private dialogElement: HTMLDialogElement;
@@ -28,7 +28,6 @@ export class GuxModal {
   /**
    * Indicates the size of the modal (small, medium or large)
    */
-  // not yet implemented
   @Prop()
   size: GuxModalSize = 'dynamic';
 
@@ -46,7 +45,7 @@ export class GuxModal {
 
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
-  async hideModal(): Promise<void> {
+  async close(): Promise<void> {
     this.dialogElement.close();
   }
 
@@ -81,11 +80,7 @@ export class GuxModal {
             onClick={this.onDismissHandler.bind(this)}
           ></gux-dismiss-button>
 
-          {hasModalTitleSlot && (
-            <h1 class="gux-modal-header" id={titleID}>
-              <slot name="title" />
-            </h1>
-          )}
+          {hasModalTitleSlot && this.renderTitle(titleID)}
 
           <div
             class={{
@@ -97,20 +92,33 @@ export class GuxModal {
               <slot name="content" />
             </p>
           </div>
-          <div class="gux-button-footer">
-            <div class="gux-start-align-buttons">
-              <slot name="start-align-buttons" />
-            </div>
-
-            <div class="gux-end-align-buttons">
-              <slot name="end-align-buttons" />
-            </div>
-          </div>
+          {hasFooterButtons && this.renderButtonFooter()}
         </div>
       </dialog>
     ) as JSX.Element;
   }
 
+  private renderTitle(titleID: string): JSX.Element {
+    return (
+      <h1 class="gux-modal-header" id={titleID}>
+        <slot name="title" />
+      </h1>
+    ) as JSX.Element;
+  }
+
+  private renderButtonFooter(): JSX.Element {
+    return (
+      <div class="gux-button-footer">
+        <div class="gux-start-align-buttons">
+          <slot name="start-align-buttons" />
+        </div>
+
+        <div class="gux-end-align-buttons">
+          <slot name="end-align-buttons" />
+        </div>
+      </div>
+    ) as JSX.Element;
+  }
   private onCloseHandler(): void {
     this.guxdismiss.emit();
   }
