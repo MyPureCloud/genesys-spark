@@ -299,3 +299,7 @@ The `title` prop has been removed. Instead, slot in a `span` or `div` with a slo
     <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
   </gux-button-multi>
 ```
+
+### gux-tabs
+
+The `use-flexbox` prop has been removed, and the tabs component now uses flexbox positioning by default.
