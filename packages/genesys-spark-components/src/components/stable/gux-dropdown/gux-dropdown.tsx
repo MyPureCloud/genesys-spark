@@ -25,7 +25,8 @@ import translationResources from './i18n/en.json';
 
 import {
   getSearchOption,
-  getListOptions
+  getListOptions,
+  setInitialActiveOption
 } from '../gux-listbox/gux-listbox.service';
 import {
   ListboxOptionElement,
@@ -126,6 +127,7 @@ export class GuxDropdown {
         if (this.activeElementNotListbox()) {
           event.preventDefault();
           this.expanded = true;
+          setInitialActiveOption(this.listboxElement);
         }
         return;
     }
