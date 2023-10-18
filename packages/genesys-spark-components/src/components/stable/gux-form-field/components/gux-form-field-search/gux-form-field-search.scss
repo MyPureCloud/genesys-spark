@@ -25,6 +25,7 @@
   overflow: hidden;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   text-overflow: ellipsis;
+  color: var(--gse-ui-formControl-input-populatedColor);
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
   outline: none;
@@ -93,6 +94,12 @@
         outline: var(--gse-ui-formControl-input-focus-border-width)
           var(--gse-ui-formControl-input-focus-border-style)
           var(--gse-ui-formControl-input-focus-border-color);
+      }
+
+      &:hover:not(.gux-disabled) {
+        border: var(--gse-ui-formControl-input-hover-border-width)
+          var(--gse-ui-formControl-input-hover-border-style)
+          var(--gse-ui-formControl-input-hover-border-color);
       }
     }
 

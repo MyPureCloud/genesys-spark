@@ -105,6 +105,9 @@
   "gux-form-field-time-picker": {
     "required": "Required"
   },
+  "gux-form-field-time-zone-picker": {
+    "required": "Required"
+  },
   "gux-listbox": {
     "noMatches": "No matches",
     "loading": "Loading..."

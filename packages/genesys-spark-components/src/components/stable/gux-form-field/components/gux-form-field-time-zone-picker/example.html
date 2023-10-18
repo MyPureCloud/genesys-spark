@@ -1,0 +1,50 @@
+<h1>gux-form-field-time-zone-picker</h1>
+
+<p>
+  slot a gux-time-zone-picker-beta element into a
+  gux-form-field-time-zone-picker element
+</p>
+
+<h2>Examples</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>Label Above</legend>
+    <gux-form-field-time-zone-picker label-position="above">
+      <gux-time-zone-picker-beta
+        value="Etc/GMT+1"
+        workspace-default="Etc/GMT"
+        local-default="America/Detroit"
+      >
+      </gux-time-zone-picker-beta>
+      <label slot="label">Select Time Zone</label>
+    </gux-form-field-time-zone-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>Disabled</legend>
+    <gux-form-field-time-zone-picker label-position="above">
+      <gux-time-zone-picker-beta
+        disabled
+        value="Etc/GMT+1"
+        workspace-default="Etc/GMT"
+        local-default="America/Detroit"
+      >
+      </gux-time-zone-picker-beta>
+      <label slot="label">Select Time Zone</label>
+    </gux-form-field-time-zone-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>Error</legend>
+    <gux-form-field-time-zone-picker label-position="above">
+      <gux-time-zone-picker-beta
+        value="Etc/GMT+1"
+        workspace-default="Etc/GMT"
+        local-default="America/Detroit"
+      >
+      </gux-time-zone-picker-beta>
+      <label slot="label">Select Time Zone</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-time-zone-picker>
+  </fieldset>
+</form>

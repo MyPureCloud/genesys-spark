@@ -31,6 +31,15 @@ export class GuxTimeZonePickerBeta {
   @Prop()
   public localDefault: string;
 
+  @Prop()
+  hasError: boolean = false;
+
+  @Prop()
+  disabled: boolean = false;
+
+  @Prop()
+  required: boolean = false;
+
   @State()
   private searchString: string = '';
 
@@ -232,6 +241,8 @@ export class GuxTimeZonePickerBeta {
         filter-type="custom"
         placeholder={this.i18n('selectZone')}
         value={this.value}
+        hasError={this.hasError}
+        disabled={this.disabled}
       >
         <gux-listbox aria-label={this.i18n('timeZones')}>
           {this.renderDefaultsList()}

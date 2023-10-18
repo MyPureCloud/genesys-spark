@@ -11,8 +11,8 @@ describe('gux-tag', () => {
       '<gux-tag accent="default">default (explicit)</gux-tag>',
       '<gux-tag accent="1">navy</gux-tag>',
       '<gux-tag accent="1"><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
-      '<gux-tag accent="1" value="3" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
-      '<gux-tag accent="1" value="3" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>'
+      '<gux-tag accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
+      '<gux-tag accent="1" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });
@@ -26,7 +26,7 @@ describe('gux-tag', () => {
     describe('click', () => {
       it('should not have a delete button if tag is not removable', async () => {
         const html = `
-          <gux-tag accent="1" value="3">
+          <gux-tag accent="1">
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
           </gux-tag>
@@ -41,7 +41,7 @@ describe('gux-tag', () => {
 
       it('should emit guxdelete if tag is removable and not disabled', async () => {
         const html = `
-          <gux-tag accent="1" value="3" removable>
+          <gux-tag accent="1" removable>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
           </gux-tag>
@@ -57,14 +57,12 @@ describe('gux-tag', () => {
         deleteButton.click();
         await page.waitForChanges();
 
-        expect(guxdeleteSpy).toHaveBeenCalledWith(
-          expect.objectContaining({ detail: '3' })
-        );
+        expect(guxdeleteSpy).toHaveBeenCalled();
       });
 
       it('should not emit guxdelete if tag is removable and disabled', async () => {
         const html = `
-          <gux-tag accent="1" value="3" removable disabled>
+          <gux-tag accent="1" removable disabled>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
           </gux-tag>
@@ -87,7 +85,7 @@ describe('gux-tag', () => {
     describe('keypress', () => {
       it('should emit guxdelete if tag is focused and removable and "Delete" is pressed', async () => {
         const html = `
-          <gux-tag accent="1" value="3" removable>
+          <gux-tag accent="1" removable>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
           </gux-tag>
@@ -101,14 +99,12 @@ describe('gux-tag', () => {
         element.dispatchEvent(new KeyboardEvent('keydown', { key: 'Delete' }));
         await page.waitForChanges();
 
-        expect(guxdeleteSpy).toHaveBeenCalledWith(
-          expect.objectContaining({ detail: '3' })
-        );
+        expect(guxdeleteSpy).toHaveBeenCalled();
       });
 
       it('should emit guxdelete if tag is focused and removable and "Backspace" is pressed', async () => {
         const html = `
-          <gux-tag accent="1" value="3" removable>
+          <gux-tag accent="1" removable>
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
           </gux-tag>`;
@@ -123,14 +119,12 @@ describe('gux-tag', () => {
         );
         await page.waitForChanges();
 
-        expect(guxdeleteSpy).toHaveBeenCalledWith(
-          expect.objectContaining({ detail: '3' })
-        );
+        expect(guxdeleteSpy).toHaveBeenCalled();
       });
 
       it('should not emit guxdelete if tag is focused and not removable and "Delete" is pressed', async () => {
         const html = `
-          <gux-tag accent="1" value="3">
+          <gux-tag accent="1">
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
           </gux-tag>
@@ -149,7 +143,7 @@ describe('gux-tag', () => {
 
       it('should not emit guxdelete if tag is focused and not removable and "Backspace" is pressed', async () => {
         const html = `
-          <gux-tag accent="1" value="3">
+          <gux-tag accent="1">
             <gux-icon icon-name="bolt" decorative="true"></gux-icon>
             navy
           </gux-tag>

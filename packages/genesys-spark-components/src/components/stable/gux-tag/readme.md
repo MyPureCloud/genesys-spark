@@ -7,12 +7,11 @@
 
 ## Properties
 
-| Property    | Attribute   | Description          | Type                                                                                            | Default     |
-| ----------- | ----------- | -------------------- | ----------------------------------------------------------------------------------------------- | ----------- |
-| `accent`    | `accent`    |                      | `"1" \| "10" \| "2" \| "3" \| "4" \| "5" \| "6" \| "7" \| "8" \| "9" \| "default" \| "inherit"` | `'default'` |
-| `disabled`  | `disabled`  |                      | `boolean`                                                                                       | `false`     |
-| `removable` | `removable` |                      | `boolean`                                                                                       | `false`     |
-| `value`     | `value`     | Index for remove tag | `string`                                                                                        | `undefined` |
+| Property    | Attribute   | Description | Type                                                                                            | Default     |
+| ----------- | ----------- | ----------- | ----------------------------------------------------------------------------------------------- | ----------- |
+| `accent`    | `accent`    |             | `"1" \| "10" \| "2" \| "3" \| "4" \| "5" \| "6" \| "7" \| "8" \| "9" \| "default" \| "inherit"` | `'default'` |
+| `disabled`  | `disabled`  |             | `boolean`                                                                                       | `false`     |
+| `removable` | `removable` |             | `boolean`                                                                                       | `false`     |
 
 
 ## Events
