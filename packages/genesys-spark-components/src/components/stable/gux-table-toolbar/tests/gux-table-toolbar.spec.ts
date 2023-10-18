@@ -4,10 +4,10 @@ jest.mock('../../../../utils/decorator/on-resize', () => ({
 }));
 
 import { newSpecPage } from '@test/specTestUtils';
+
 import { GuxTableToolbar } from '../gux-table-toolbar';
 import { GuxTableToolbarAction } from '../gux-table-toolbar-action/gux-table-toolbar-action';
 import { GuxTableToolbarMenuButton } from '../gux-table-toolbar-menu-button/gux-table-toolbar-menu-button';
-import MutationObserver from 'mutation-observer';
 import { GuxTableToolbarCustomAction } from '../gux-table-toolbar-custom-action/gux-table-toolbar-custom-action';
 
 const components = [
@@ -17,11 +17,6 @@ const components = [
   GuxTableToolbarMenuButton
 ];
 const language = 'en';
-
-beforeEach(async () => {
-  global.MutationObserver = MutationObserver;
-});
-
 const html = `<gux-table-toolbar>
 <div slot="search-and-filter">
   <gux-form-field-search label-position="screenreader">

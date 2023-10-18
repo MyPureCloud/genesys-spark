@@ -1,14 +1,11 @@
 import { newSpecPage } from '@test/specTestUtils';
+
 import { GuxTable } from '../gux-table';
-import MutationObserver from 'mutation-observer';
 
 const components = [GuxTable];
 const language = 'en';
 
 describe('gux-table', () => {
-  beforeEach(async () => {
-    global.MutationObserver = MutationObserver;
-  });
   it('should build', async () => {
     const html = `
       <gux-table>

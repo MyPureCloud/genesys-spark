@@ -3,16 +3,12 @@ jest.mock('../../../../utils/decorator/on-resize', () => ({
   OnResize: jest.fn()
 }));
 
-import MutationObserver from 'mutation-observer';
 import { newSpecPage } from '@test/specTestUtils';
+
 import { GuxBlankState } from '../gux-blank-state';
 
 const components = [GuxBlankState];
 const language = 'en';
-
-beforeEach(async () => {
-  global.MutationObserver = MutationObserver;
-});
 
 describe('gux-blank-state', () => {
   it(`should render the component as expected`, async () => {

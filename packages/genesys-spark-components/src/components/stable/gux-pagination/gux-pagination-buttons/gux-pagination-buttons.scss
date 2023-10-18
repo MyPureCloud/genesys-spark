@@ -59,8 +59,9 @@ gux-pagination-buttons {
 
         &:focus-visible {
           border-radius: calc(
-            var(--gse-semantic-focusRing-cornerRadius) -
-              var(--gse-semantic-focusRing-offset)
+            var(--gse-semantic-focusRing-cornerRadius) - var(
+                --gse-semantic-focusRing-offset
+              )
           );
           outline: var(--gse-semantic-focusRing-width) solid
             var(--gse-semantic-color-focus);

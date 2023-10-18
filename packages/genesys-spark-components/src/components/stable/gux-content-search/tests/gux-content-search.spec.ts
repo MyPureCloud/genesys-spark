@@ -1,15 +1,11 @@
 import { newSpecPage } from '@test/specTestUtils';
-import MutationObserver from 'mutation-observer';
+
 import { GuxContentSearch } from '../gux-content-search';
 
 const components = [GuxContentSearch];
 const language = 'en';
 
 describe('gux-content-search', () => {
-  beforeEach(async () => {
-    (global as any).MutationObserver = MutationObserver;
-  });
-
   describe('#render', () => {
     [
       {

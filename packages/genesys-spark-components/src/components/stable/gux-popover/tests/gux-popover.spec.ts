@@ -1,6 +1,6 @@
 import { newSpecPage } from '@test/specTestUtils';
 import * as floatingUi from '@floating-ui/dom';
-import MutationObserver from 'mutation-observer';
+
 import { GuxPopover } from '../gux-popover';
 
 const components = [GuxPopover];
@@ -17,10 +17,6 @@ const html = `
   </div>`;
 
 describe('gux-popover', () => {
-  beforeEach(async () => {
-    global.MutationObserver = MutationObserver;
-  });
-
   afterEach(async () => {
     jest.spyOn(floatingUi, 'autoUpdate').mockRestore();
   });
@@ -35,6 +31,7 @@ describe('gux-popover', () => {
       expect(page.root).toMatchSnapshot();
     });
   });
+
   describe('#interaction', () => {
     it('should open and close', async () => {
       const cleanupSpy = jest.fn();
