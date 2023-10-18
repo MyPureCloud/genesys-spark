@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.44](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.43...v4.0.0-beta.44) (2023-10-18)
+
+
+### Features
+
+* **form-field-time-zone-picker:** addition of form-field-time-zone-picker ([5b14a87](https://github.com/MyPureCloud/genesys-spark/commit/5b14a877e15bcebf8762d3b3147b075be1573194))
+
 ## [4.0.0-beta.43](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.42...v4.0.0-beta.43) (2023-10-17)
 
 
