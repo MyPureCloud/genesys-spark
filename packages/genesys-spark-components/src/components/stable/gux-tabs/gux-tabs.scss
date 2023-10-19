@@ -1,23 +1,18 @@
-:host(.gux-flex) {
+:host {
   display: flex;
   flex-direction: column;
 
   .gux-tabs {
     display: flex;
-    flex-direction: column;
     height: 100%;
+    &:not(.gux-vertical) {
+      flex-direction: column;
+    }
   }
 
   .gux-panel-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
-  }
-}
-
-.gux-tabs {
-  &.gux-vertical {
-    display: flex;
     height: 100%;
   }
 }
