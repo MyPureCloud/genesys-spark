@@ -8,7 +8,7 @@
     "commit": "git-cz",
     "commitlint": "commitlint --from 30e62e0c73aa2f57776b8932e93750c04957b71f",
     "current-version": "cross-var \"echo $npm_package_version\"",
-    "dev": "npx concurrently  \"npm run dev.gsc\" \"npm run dev.spark\" \"npm run dev.examples\"",
+    "dev": "run-pty  % npm run dev.gsc % npm run dev.spark % npm run dev.examples",
     "dev.examples": "npm run dev --workspace=web-apps/genesys-spark-examples",
     "dev.gsc": "npm run dev --workspace=packages/genesys-spark-components",
     "dev.spark": "npm run dev --workspace=packages/genesys-spark",
@@ -62,6 +62,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
     "prettier-config-genesys-spark-components": "^0.0.1",
+    "run-pty": "^4.1.0",
     "standard-version": "^9.5.0"
   },
   "prettier": "prettier-config-genesys-spark-components",

@@ -16,6 +16,6 @@ export default {
 			},
 			preventAssignment: true
 		}),
-		typescript()
+		typescript({noEmitOnError: false})
 	]
 };

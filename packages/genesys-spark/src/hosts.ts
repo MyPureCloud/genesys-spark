@@ -43,16 +43,10 @@ export function getAssetsOrigin(): string {
 
   export function getFontOrigin(): string {
     if (IS_DEV_MODE == true) {
+      // Fonts aren't locally hosted during dev mode
       return "http://app.inindca.com"
     }
-
-    if (getRegionDomain()) {
-      // Use a domain-relative path because that is most likely to match what an
-      // app would do to statically include the fonts in their build
-      return ""
-    } else {
-      return `https://app.${DEFAULT_DOMAIN}`
-    }
+    return getAssetsOrigin();
   }
 
   function getRegionDomain() {
