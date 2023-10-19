@@ -142,6 +142,7 @@ An `icon-only` only prop has been added. This should be used when the slotted bu
 | `gux-pagination`         | `gux-pagination-legacy`         | `gux-pagination` (`gux-pagination-beta` in v3) | [link](./gux-pagination-legacy.md)         |
 | `gux-simple-toast`       | `gux-simple-toast-legacy`       | `gux-toast`                                    | [link](./gux-simple-toast-legacy.md)       |
 | `gux-switch`             | `gux-switch-legacy`             | `gux-segmented-control-beta` (or `gux-tabs`)   | [link](./gux-switch-legacy.md)             |
+| `gux-modal`              | `gux-modal-legacy`              | `gux-modal`                                    | [link](./gux-modal-legacy.md)              |
 
 Action: _(required)_ add `-legacy` to the tag name of the component.
 

@@ -1,42 +1,81 @@
+/*
+@prop $gse-ui-modal-closeButtonColor // TODO: COMUI-2300 - follow up later when dismiss button has been tokenized
+@prop $gse-ui-modal-headerColor
+@prop $gse-ui-modal-backgroundColor
+@prop $gse-ui-modal-shroudColor
+@prop $gse-ui-modal-header-gap
+@prop $gse-ui-modal-padding
+@prop $gse-ui-modal-gap
+@prop $gse-ui-modal-heading-fontFamily
+@prop $gse-ui-modal-heading-lineHeight
+@prop $gse-ui-modal-heading-fontSize
+@prop $gse-ui-modal-heading-fontWeight
+@prop $gse-ui-modal-heading-letterSpacing
+@prop $gse-ui-modal-icon // TODO: COMUI-2300 - follow up later when dismiss button has been tokenized
+@prop $gse-ui-modal-small-width
+@prop $gse-ui-modal-medium-width
+@prop $gse-ui-modal-large-width
+@prop $gse-ui-modal-buttonBar-gap
+@prop $gse-ui-modal-boxShadow-x
+@prop $gse-ui-modal-boxShadow-y
+@prop $gse-ui-modal-boxShadow-blur
+@prop $gse-ui-modal-boxShadow-spread
+@prop $gse-ui-modal-boxShadow-color
+@prop $gse-ui-modal-boxShadow-type
+@prop $gse-ui-modal-borderRadius
+@prop $gse-ui-modal-opacity - Skipped (this is incoporated into the gse-ui-modal-shroudColor token and is no longer needed. Thinking about asking design team to remove this token to avoid confusion)
+*/
+
 @use '../../../style/typography.scss';
+@use '../../../style/zindex.scss';
+
 ::slotted(button:active:enabled) {
   color: var(--gse-ui-link-active-foregroundColor);
   text-decoration: underline;
   background: none;
 }
 
-slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
+slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
   display: flex;
   flex-direction: row;
   gap: var(--gse-ui-modal-buttonBar-gap);
   align-content: flex-start;
   align-items: center;
 }
-:host {
-  dialog {
-    box-sizing: border-box;
-    justify-content: space-between;
-    border: 1px solid #b4bccb; // TODO: COMUI-2300
-    border-radius: var(--gse-ui-modal-borderRadius);
-    box-shadow: var(--gse-ui-modal-boxShadow-x) var(--gse-ui-modal-boxShadow-y)
-      var(--gse-ui-modal-boxShadow-blur) var(--gse-ui-modal-boxShadow-spread)
-      var(--gse-ui-modal-boxShadow-color);
 
-    &::backdrop {
-      // token isn't working?
-      // background: var(--gse-ui-modal-shroudColor);
-      background: #4d6182cc;
-    }
+// Style
+:host {
+  // TODO: COMUI-2301 - fix focus/hover for dismiss button
+
+  .gux-modal {
+    position: fixed;
+    inset: 0;
+    z-index: var(--gux-zindex-modal, zindex.$gux-zindex-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e394c; // TODO: COMUI-2300
+    background: var(--gse-ui-modal-shroudColor);
 
     .gux-modal-container {
+      position: relative;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       padding: var(--gse-ui-modal-padding);
+      background: var(--gse-ui-modal-backgroundColor);
+      border: 1px solid #b4bccb; // TODO: COMUI-2300
+      border-radius: var(--gse-ui-modal-borderRadius);
+      box-shadow: var(--gse-ui-modal-boxShadow-x)
+        var(--gse-ui-modal-boxShadow-y) var(--gse-ui-modal-boxShadow-blur)
+        var(--gse-ui-modal-boxShadow-spread) var(--gse-ui-modal-boxShadow-color);
 
       &.gux-small {
         width: var(--gse-ui-modal-small-width);
         max-height: min(368px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
       }
+
       &.gux-medium {
         width: var(--gse-ui-modal-medium-width);
         max-height: min(640px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
