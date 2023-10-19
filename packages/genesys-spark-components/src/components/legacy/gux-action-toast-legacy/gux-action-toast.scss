@@ -30,7 +30,7 @@
   justify-content: flex-start;
   order: 0;
 
-  @include typography.h2;
+  @include typography.heading-lg;
 
   .gux-icon {
     flex: 0 1 auto;
@@ -58,7 +58,7 @@
   order: 0;
   margin: 16px 0;
 
-  @include typography.body-font;
+  @include typography.body-sm-regular;
 
   ::slotted(dl) {
     display: flex;

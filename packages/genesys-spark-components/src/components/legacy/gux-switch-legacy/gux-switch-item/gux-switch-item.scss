@@ -8,7 +8,7 @@ $active-tab: #75a8ff;
 
 gux-switch-item {
   > .gux-switch-item {
-    @include typography.body-font;
+    @include typography.body-sm-regular;
 
     font: unset;
     color: #2e394c;
@@ -30,7 +30,7 @@ gux-switch-item {
   }
 
   &.gux-selected {
-    @include typography.bold-font;
+    @include typography.body-sm-bold;
   }
 }
 
@@ -77,7 +77,7 @@ gux-switch-legacy {
   &.gux-small {
     > gux-switch-item {
       .gux-switch-item {
-        @include typography.gux-small-text;
+        @include typography.body-sm-regular;
 
         padding: 0 4px;
         border-bottom: 1px solid $inactive-small;

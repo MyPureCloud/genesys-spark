@@ -1,4 +1,4 @@
-@use '../../../../../style/typography.scss';
+@use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
@@ -14,7 +14,7 @@
 }
 
 ::slotted(label) {
-  @include typography.gse-ui-formControl-label;
+  @include gux-form-field.gse-ui-formControl-label;
 }
 
 ::slotted(select) {
