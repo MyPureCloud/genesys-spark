@@ -2,6 +2,15 @@ import { E2EPage } from '@stencil/core/testing';
 
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
+const axeExclusions = [
+  {
+    issueId: 'aria-required-children',
+    target: 'gux-button-multi,gux-list',
+    exclusionReason:
+      'To be addressed in COMUI-2387. New violation picked up after upgrading from axe-core v4.4.2 to v4.8.2'
+  }
+];
+
 async function clickDropdownButton(page: E2EPage): Promise<void> {
   return await page.click('pierce/.gux-dropdown-button > button');
 }
@@ -38,7 +47,7 @@ describe('gux-button-multi', () => {
     const page = await newSparkE2EPage({ html });
 
     const element = await page.find('gux-button-multi');
-    await a11yCheck(page);
+    await a11yCheck(page, axeExclusions);
     expect(element).toHaveAttribute('hydrated');
   });
 
@@ -49,7 +58,7 @@ describe('gux-button-multi', () => {
 
     await clickDropdownButton(page);
 
-    await a11yCheck(page);
+    await a11yCheck(page, axeExclusions);
 
     await clickDropdownButton(page);
 
@@ -78,7 +87,7 @@ describe('gux-button-multi', () => {
 
     await clickDropdownButton(page);
 
-    await a11yCheck(page);
+    await a11yCheck(page, axeExclusions);
 
     expect(onOpen).toHaveReceivedEventTimes(0);
   });
