@@ -56,7 +56,7 @@ export class GuxAllRowSelect {
 
   render(): JSX.Element {
     return (
-      <gux-form-field-checkbox>
+      <gux-form-field-checkbox label-position="screenreader">
         <input
           ref={el => (this.inputElement = el)}
           slot="input"
@@ -66,7 +66,7 @@ export class GuxAllRowSelect {
         />
         <label slot="label" htmlFor={this.id}>
           &#8203;
-          <span class="gux-label-text">{this.i18n('selectAllTableRows')}</span>
+          <span>{this.i18n('selectAllTableRows')}</span>
         </label>
       </gux-form-field-checkbox>
     ) as JSX.Element;

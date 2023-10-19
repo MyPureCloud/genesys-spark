@@ -201,6 +201,21 @@ Below are the components where the internal margins have been removed for v4:
 6. gux-form-field-text-like
 7. gux-form-field-textarea
 
+#### gux-form-field-checkbox
+
+The `label-position` property has now been added to `gux-form-field-checkbox`. The property can be used to change the position of the label.
+
+- Addition of `label-position` property.
+  - The positions `beside` and `screenreader` are currently available to use. The default `label-position` is `beside`.
+  ```diff
+  + <gux-form-field-checkbox label-position="beside">
+    ...
+    </gux-form-field-checkbox>
+  + <gux-form-field-checkbox label-position="screenreader">
+    ...
+    </gux-form-field-checkbox>
+  ```
+
 ### gux-icon
 
 #### legacy icons
