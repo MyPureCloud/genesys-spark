@@ -1,5 +1,14 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
+const axeExclusions = [
+  {
+    issueId: 'aria-required-children',
+    target: 'gux-list',
+    exclusionReason:
+      'To be addressed in COMUI-2390. New violation picked up after upgrading from axe-core v4.4.2 to v4.8.2'
+  }
+];
+
 describe('gux-list', () => {
   describe('#render', () => {
     it('should render component as expected', async () => {
@@ -14,7 +23,7 @@ describe('gux-list', () => {
       `;
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-list');
-      await a11yCheck(page);
+      await a11yCheck(page, axeExclusions);
 
       expect(element.outerHTML).toMatchSnapshot();
     });
