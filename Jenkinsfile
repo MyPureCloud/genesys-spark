@@ -53,8 +53,9 @@ webappPipeline {
                 label: 'Check for untracked / unexpected changes',
                 script: 'git status --porcelain',
                 returnStdout: true
-            )
-            if (unexpectedChanges.split('\n').size() > 0) {
+            ).trim()
+
+            if (unexpectedChanges != "") {
                 error("I found uncommited changes that should not exist:\n${unexpectedChanges}")
             }
         }
