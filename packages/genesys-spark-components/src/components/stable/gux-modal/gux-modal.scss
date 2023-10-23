@@ -1,4 +1,5 @@
 @use '../../../style/typography.scss';
+
 ::slotted(button:active:enabled) {
   color: var(--gse-ui-link-active-foregroundColor);
   text-decoration: underline;
@@ -12,6 +13,7 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
   align-content: flex-start;
   align-items: center;
 }
+
 :host {
   dialog {
     box-sizing: border-box;
@@ -37,6 +39,7 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
         width: var(--gse-ui-modal-small-width);
         max-height: min(368px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
       }
+
       &.gux-medium {
         width: var(--gse-ui-modal-medium-width);
         max-height: min(640px, 100vh - 2 * #{24px}); // TODO: COMUI-2300

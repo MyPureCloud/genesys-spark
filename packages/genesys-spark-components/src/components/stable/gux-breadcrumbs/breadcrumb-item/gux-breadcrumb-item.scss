@@ -135,6 +135,7 @@ $temp-focus-ring-corner-radius: 4px;
 
       &:hover {
         @include link-breadcrumb-secondary-underline;
+
         color: var(--gse-ui-link-hover-foregroundColor);
       }
 

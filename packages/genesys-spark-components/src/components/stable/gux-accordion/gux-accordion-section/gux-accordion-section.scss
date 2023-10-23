@@ -83,10 +83,10 @@ section.gux-disabled {
     font-weight: var(
       --gse-ui-accordion-contentItem-defaultText-fontWeight
     ) !important;
-    color: var(--gse-ui-accordion-contentItem-foregroundColor);
     line-height: var(
       --gse-ui-accordion-contentItem-defaultText-lineHeight
     ) !important;
+    color: var(--gse-ui-accordion-contentItem-foregroundColor);
 
     .gux-reverse-headings {
       margin: 0 0 var(--gux-spacing-3xs) 0; // missing token COMUI-1678
