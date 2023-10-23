@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property        | Attribute        | Description | Type                         | Default    |
+| --------------- | ---------------- | ----------- | ---------------------------- | ---------- |
+| `labelPosition` | `label-position` |             | `"beside" \| "screenreader"` | `'beside'` |
+
+
 ## Slots
 
 | Slot      | Description                     |

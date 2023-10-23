@@ -1,4 +1,4 @@
-import { Component, Element, h, Host, JSX, State } from '@stencil/core';
+import { Component, Element, h, Host, JSX, State, Prop } from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
@@ -32,6 +32,9 @@ export class GuxFormFieldCheckbox {
   @Element()
   private root: HTMLElement;
 
+  @Prop()
+  labelPosition: 'beside' | 'screenreader' = 'beside';
+
   @State()
   private disabled: boolean;
 
@@ -53,7 +56,7 @@ export class GuxFormFieldCheckbox {
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
 
-    trackComponent(this.root);
+    trackComponent(this.root, { variant: this.variant });
   }
 
   disconnectedCallback(): void {
@@ -75,7 +78,7 @@ export class GuxFormFieldCheckbox {
             <div class="gux-input">
               <slot name="input" onSlotchange={() => this.setInput()} />
             </div>
-            <div class="gux-label">
+            <div class={`gux-label-${this.labelPosition}`}>
               <slot name="label" />
               <GuxFormFieldError show={this.hasError}>
                 <slot name="error" />
@@ -88,6 +91,10 @@ export class GuxFormFieldCheckbox {
         </div>
       </Host>
     ) as JSX.Element;
+  }
+
+  private get variant(): string {
+    return this.labelPosition.toLowerCase();
   }
 
   private setInput(): void {
