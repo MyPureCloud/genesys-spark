@@ -252,6 +252,7 @@ export class GuxListboxMulti {
       );
       if (this.filterType !== 'custom') {
         listboxOption.filtered = !listboxOption.textContent
+          .trim()
           .toLowerCase()
           .startsWith(this.textInput.toLowerCase());
       }
