@@ -57,11 +57,27 @@ describe('gux-form-field-radio', () => {
           <span slot="error">Error message</span>
         </gux-form-field-radio>
       `,
-      `<gux-form-field-radio>
-      <input slot="input" type="radio" name="food-1" value="spaghetti" />
-      <label slot="label">Spaghetti</label>
-      <span slot="help">This is a help message</span>
-    </gux-form-field-radio>`
+      `
+        <gux-form-field-radio>
+          <input slot="input" type="radio" name="food-1" value="pizza" disabled/>
+          <label slot="label">Pizza</label>
+          <span slot="error">Error message</span>
+        </gux-form-field-radio>
+      `,
+      `
+        <gux-form-field-radio>
+          <input slot="input" type="radio" name="food-1" value="spaghetti" />
+          <label slot="label">Spaghetti</label>
+          <span slot="help">This is a help message</span>
+        </gux-form-field-radio>
+      `,
+      `
+        <gux-form-field-radio>
+          <input slot="input" type="radio" name="food-1" value="spaghetti" disabled/>
+          <label slot="label">Spaghetti</label>
+          <span slot="help">This is a help message</span>
+        </gux-form-field-radio>
+      `
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newNonrandomE2EPage({ html });
