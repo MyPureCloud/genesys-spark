@@ -17,6 +17,7 @@ This component is meant for use in other components as a dismiss button.
 ### Used by
 
  - [gux-modal](../gux-modal)
+ - [gux-modal-legacy](../../legacy/gux-modal-legacy)
  - [gux-notification-toast-legacy](../../legacy/gux-notification-toast-legacy)
  - [gux-popover](../gux-popover)
  - [gux-popover-list](../gux-popover-list)
@@ -34,6 +35,7 @@ graph TD;
   gux-dismiss-button --> gux-button-slot
   gux-dismiss-button --> gux-icon
   gux-modal --> gux-dismiss-button
+  gux-modal-legacy --> gux-dismiss-button
   gux-notification-toast-legacy --> gux-dismiss-button
   gux-popover --> gux-dismiss-button
   gux-popover-list --> gux-dismiss-button

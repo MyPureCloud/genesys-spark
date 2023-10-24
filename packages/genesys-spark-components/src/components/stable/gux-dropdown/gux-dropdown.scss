@@ -147,7 +147,7 @@
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
   &:focus-visible,
-  &:focus-within {
+  &:focus-within:has(:focus-visible) {
     @include gux-input-focus-border;
   }
 
@@ -186,14 +186,13 @@
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
   &:focus-visible,
-  &:focus-within {
+  &:focus-within:has(:focus-visible) {
     @include gux-input-focus-border;
   }
 }
 
-.gux-listbox-container {
-  box-sizing: border-box;
-  margin: 0;
+::slotted(gux-listbox) {
+  outline: none;
 }
 
 // Selected option styles

@@ -1,4 +1,4 @@
-# gux-modal manual accessibility testing status
+# gux-modal-legacy manual accessibility testing status
 **Last Updated:** Wed Dec 15 2021 15:32:10 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |

@@ -7,22 +7,30 @@
   min-width: 300px;
 }
 
+::slotted(input[disabled]) {
+  opacity: var(--gse-ui-formControl-input-disabled-opacity);
+}
+
 ::slotted(input) {
   box-sizing: border-box;
   flex-basis: 100%;
   flex-shrink: 1;
-  width: 100%;
+  width: 120px;
+  overflow: hidden;
   font-family: var(--gse-ui-search-counter-text-fontFamily);
   font-size: var(--gse-ui-search-counter-text-fontSize);
   font-weight: var(--gse-ui-search-counter-text-fontWeight);
   line-height: var(--gse-ui-search-counter-text-lineHeight);
+  color: var(--gse-ui-formControl-input-populatedColor);
+  text-overflow: ellipsis;
+  white-space: nowrap;
   background-image: none;
   border: 0;
   border-radius: 0;
   outline: none;
 
   &::placeholder {
-    color: var(--gse-ui-formControl-input-placeholderColor);
+    color: var(--gse-ui-formControl-input-populatedColor);
   }
 
   &.gux-focused,
@@ -49,6 +57,11 @@
     var(--gse-ui-formControl-input-default-border-color);
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
+  gux-truncate {
+    display: flex;
+    align-items: center;
+  }
+
   &.gux-disabled {
     pointer-events: none;
     cursor: default;
@@ -66,7 +79,7 @@
       var(--gse-ui-formControl-input-focus-border-color);
   }
 
-  &:not(:disabled):hover {
+  &:not(:disabled):not(.gux-disabled):hover {
     border: var(--gse-ui-formControl-input-hover-border-width)
       var(--gse-ui-formControl-input-hover-border-style)
       var(--gse-ui-formControl-input-hover-border-color);
@@ -156,8 +169,8 @@
       gap: var(--gse-ui-search-counter-gap);
 
       .gux-navigation-divider {
-        width: 1px; // TODO COMUI-2310 - missing token for divider width.
         height: 16px; // TODO COMUI-2310 - missing token for divider height
+        color: var(--gse-ui-search-counter-default-foregroundColor);
         background-color: #c6c8ce; // TODO COMUI-2310 - missing token for divider background color.
         border: 1px var(--gse-ui-search-counter-divider-border-style)
           var(--gse-ui-search-counter-divider-border-color);
@@ -170,6 +183,7 @@
 
       .gux-navigation-result {
         align-items: center;
+        color: var(--gse-ui-search-counter-default-foregroundColor);
         white-space: nowrap;
       }
 

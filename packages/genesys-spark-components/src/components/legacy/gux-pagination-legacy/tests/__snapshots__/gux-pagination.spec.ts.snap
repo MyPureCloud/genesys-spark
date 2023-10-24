@@ -33,9 +33,7 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -167,9 +165,7 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -301,9 +297,7 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -435,9 +429,7 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -569,9 +561,7 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -703,9 +693,7 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -837,9 +825,7 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -971,9 +957,7 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -1105,9 +1089,7 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -1291,9 +1273,7 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -1425,9 +1405,7 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -1559,9 +1537,7 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
                         <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
                       </button>
                     </div>
-                    <div class="gux-listbox-container" slot="popup">
-                      <slot></slot>
-                    </div>
+                    <slot slot="popup"></slot>
                   </gux-popup>
                 </mock:shadow-root>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">

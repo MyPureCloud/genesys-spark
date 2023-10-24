@@ -142,6 +142,7 @@ An `icon-only` only prop has been added. This should be used when the slotted bu
 | `gux-pagination`         | `gux-pagination-legacy`         | `gux-pagination` (`gux-pagination-beta` in v3) | [link](./gux-pagination-legacy.md)         |
 | `gux-simple-toast`       | `gux-simple-toast-legacy`       | `gux-toast`                                    | [link](./gux-simple-toast-legacy.md)       |
 | `gux-switch`             | `gux-switch-legacy`             | `gux-segmented-control-beta` (or `gux-tabs`)   | [link](./gux-switch-legacy.md)             |
+| `gux-modal`              | `gux-modal-legacy`              | `gux-modal`                                    | [link](./gux-modal-legacy.md)              |
 
 Action: _(required)_ add `-legacy` to the tag name of the component.
 
@@ -199,6 +200,21 @@ Below are the components where the internal margins have been removed for v4:
 5. gux-form-field-select
 6. gux-form-field-text-like
 7. gux-form-field-textarea
+
+#### gux-form-field-checkbox
+
+The `label-position` property has now been added to `gux-form-field-checkbox`. The property can be used to change the position of the label.
+
+- Addition of `label-position` property.
+  - The positions `beside` and `screenreader` are currently available to use. The default `label-position` is `beside`.
+  ```diff
+  + <gux-form-field-checkbox label-position="beside">
+    ...
+    </gux-form-field-checkbox>
+  + <gux-form-field-checkbox label-position="screenreader">
+    ...
+    </gux-form-field-checkbox>
+  ```
 
 ### gux-icon
 
@@ -299,3 +315,7 @@ The `title` prop has been removed. Instead, slot in a `span` or `div` with a slo
     <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
   </gux-button-multi>
 ```
+
+### gux-tabs
+
+The `use-flexbox` prop has been removed, and the tabs component now uses flexbox positioning by default.

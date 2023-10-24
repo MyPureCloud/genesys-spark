@@ -15,12 +15,6 @@
   scrollbar-color: var(--gse-ui-menu-scrollbar-foregroundColor);
 }
 
-:host(:focus-visible) {
-  outline: var(--gse-semantic-focusRing-width) solid
-    var(--gse-semantic-color-focus);
-  outline-offset: var(--gse-semantic-focusRing-offset);
-}
-
 .gux-message-container {
   display: flex;
   flex-direction: column;

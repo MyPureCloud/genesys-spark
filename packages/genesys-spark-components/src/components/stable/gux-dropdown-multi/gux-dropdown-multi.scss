@@ -148,7 +148,7 @@
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
   &:focus-visible,
-  &:focus-within {
+  &:focus-within:has(:focus-visible) {
     @include focus.gux-focus-ring;
   }
 
@@ -187,7 +187,7 @@
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
   &:focus-visible,
-  &:focus-within {
+  &:focus-within:has(:focus-visible) {
     @include focus.gux-focus-ring;
   }
 }
