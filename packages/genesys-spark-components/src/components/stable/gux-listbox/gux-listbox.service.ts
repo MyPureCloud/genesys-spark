@@ -8,12 +8,6 @@ export function getListOptions(
   });
 }
 
-function getHoveredOption(list: HTMLGuxListboxElement): ListboxOptionElement {
-  return getListOptions(list).find(
-    option => option.hovered && !option.disabled && !option.filtered
-  );
-}
-
 function getFirstSelectedOption(
   list: HTMLGuxListboxElement
 ): ListboxOptionElement {
@@ -100,7 +94,7 @@ function getLastOption(list: HTMLGuxListboxElement): ListboxOptionElement {
   return lastOption;
 }
 
-function hasActiveOption(list: HTMLGuxListboxElement): boolean {
+export function hasActiveOption(list: HTMLGuxListboxElement): boolean {
   return Boolean(getActiveOption(list));
 }
 
@@ -134,12 +128,7 @@ export function clearActiveOptions(list: HTMLGuxListboxElement): void {
 }
 
 export function setInitialActiveOption(list: HTMLGuxListboxElement) {
-  setActiveOption(
-    list,
-    getHoveredOption(list) ||
-      getFirstSelectedOption(list) ||
-      getFirstOption(list)
-  );
+  setActiveOption(list, getFirstSelectedOption(list) || getFirstOption(list));
 }
 
 export function hasPreviousOption(list: HTMLGuxListboxElement): boolean {

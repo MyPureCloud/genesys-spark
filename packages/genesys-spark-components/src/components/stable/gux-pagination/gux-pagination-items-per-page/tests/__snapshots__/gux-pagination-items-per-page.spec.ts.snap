@@ -19,9 +19,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
                 <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
-            <div class="gux-listbox-container" slot="popup">
-              <slot></slot>
-            </div>
+            <slot slot="popup"></slot>
           </gux-popup>
         </mock:shadow-root>
         <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -89,9 +87,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
                 <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
-            <div class="gux-listbox-container" slot="popup">
-              <slot></slot>
-            </div>
+            <slot slot="popup"></slot>
           </gux-popup>
         </mock:shadow-root>
         <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -159,9 +155,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
                 <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
-            <div class="gux-listbox-container" slot="popup">
-              <slot></slot>
-            </div>
+            <slot slot="popup"></slot>
           </gux-popup>
         </mock:shadow-root>
         <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
@@ -229,9 +223,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
                 <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
-            <div class="gux-listbox-container" slot="popup">
-              <slot></slot>
-            </div>
+            <slot slot="popup"></slot>
           </gux-popup>
         </mock:shadow-root>
         <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">

@@ -5,6 +5,7 @@
   padding: var(--gse-ui-menu-padding);
   margin: 0;
   overflow-y: auto;
+  overflow-x: visible;
   background: var(--gse-ui-menu-backgroundColor);
   border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
     var(--gse-ui-menu-border-color);
@@ -15,7 +16,7 @@
     var(--gse-ui-menu-boxShadow-color);
 }
 
-:host(:focus) {
+:host(:focus-visible:not(:host-context(gux-dropdown))) {
   outline: var(--gse-semantic-focusRing-width) solid
     var(--gse-semantic-color-focus);
   outline-offset: var(--gse-semantic-focusRing-offset);

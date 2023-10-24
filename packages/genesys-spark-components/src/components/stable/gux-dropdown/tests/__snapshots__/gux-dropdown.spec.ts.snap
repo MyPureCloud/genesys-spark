@@ -14,9 +14,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
           <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
         </button>
       </div>
-      <div class="gux-listbox-container" slot="popup">
-        <slot></slot>
-      </div>
+      <slot slot="popup"></slot>
     </gux-popup>
   </mock:shadow-root>
   <gux-listbox aria-label="Animals" role="listbox" tabindex="0">
@@ -113,9 +111,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-icon 1`]
           <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
         </button>
       </div>
-      <div class="gux-listbox-container" slot="popup">
-        <slot></slot>
-      </div>
+      <slot slot="popup"></slot>
     </gux-popup>
   </mock:shadow-root>
   <gux-listbox aria-label="Animals" role="listbox" tabindex="0">

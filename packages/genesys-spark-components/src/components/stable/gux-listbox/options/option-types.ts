@@ -28,7 +28,6 @@ export interface ListboxOptionElement extends HTMLElement {
   active: boolean;
   disabled: boolean;
   filtered: boolean;
-  hovered: boolean;
   selected: boolean;
   value: string;
 }

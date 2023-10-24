@@ -28,6 +28,7 @@
     outline: var(--gse-ui-menu-option-focus-border-width)
       var(--gse-ui-menu-option-focus-border-style)
       var(--gse-ui-menu-option-focus-border-color);
+    outline-offset: -2px;
   }
 
   &:host(.gux-hovered:not([disabled])) {

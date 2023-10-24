@@ -10,7 +10,6 @@
 | `active`   | `active`   |             | `boolean` | `false`     |
 | `disabled` | `disabled` |             | `boolean` | `false`     |
 | `filtered` | `filtered` |             | `boolean` | `false`     |
-| `hovered`  | `hovered`  |             | `boolean` | `false`     |
 | `selected` | `selected` |             | `boolean` | `false`     |
 | `value`    | `value`    |             | `string`  | `undefined` |
 

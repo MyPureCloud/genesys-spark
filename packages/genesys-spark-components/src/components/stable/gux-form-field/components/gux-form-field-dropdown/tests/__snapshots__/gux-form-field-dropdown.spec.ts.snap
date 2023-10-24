@@ -138,9 +138,7 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
             <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
           </button>
         </div>
-        <div class="gux-listbox-container" slot="popup">
-          <slot></slot>
-        </div>
+        <slot slot="popup"></slot>
       </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-describedby="gux-help-i" aria-labelledby="gux-label-i" role="listbox" tabindex="0">
@@ -860,9 +858,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
             <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
           </button>
         </div>
-        <div class="gux-listbox-container" slot="popup">
-          <slot></slot>
-        </div>
+        <slot slot="popup"></slot>
       </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
@@ -939,9 +935,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
             <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
           </button>
         </div>
-        <div class="gux-listbox-container" slot="popup">
-          <slot></slot>
-        </div>
+        <slot slot="popup"></slot>
       </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
@@ -1021,9 +1015,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
             <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
           </button>
         </div>
-        <div class="gux-listbox-container" slot="popup">
-          <slot></slot>
-        </div>
+        <slot slot="popup"></slot>
       </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
@@ -1100,9 +1092,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
             <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
           </button>
         </div>
-        <div class="gux-listbox-container" slot="popup">
-          <slot></slot>
-        </div>
+        <slot slot="popup"></slot>
       </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
@@ -1179,9 +1169,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
             <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
           </button>
         </div>
-        <div class="gux-listbox-container" slot="popup">
-          <slot></slot>
-        </div>
+        <slot slot="popup"></slot>
       </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
@@ -1258,9 +1246,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
             <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
           </button>
         </div>
-        <div class="gux-listbox-container" slot="popup">
-          <slot></slot>
-        </div>
+        <slot slot="popup"></slot>
       </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
@@ -1337,9 +1323,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
             <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
           </button>
         </div>
-        <div class="gux-listbox-container" slot="popup">
-          <slot></slot>
-        </div>
+        <slot slot="popup"></slot>
       </gux-popup>
     </mock:shadow-root>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
