@@ -14,7 +14,7 @@ exports[`gux-context-menu-beta renders 1`] = `
       <div class="gux-list-container" slot="popup">
         <gux-list role="list">
           <mock:shadow-root>
-            <span tabindex="-1"></span>
+            <span aria-hidden="true" tabindex="-1"></span>
             <slot></slot>
           </mock:shadow-root>
           <slot></slot>
