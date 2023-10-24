@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.47](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.46...v4.0.0-beta.47) (2023-10-24)
+
+
+### Bug Fixes
+
+* **context-menu:** fix issue where text not wrapping in table ([365f5f4](https://github.com/MyPureCloud/genesys-spark/commit/365f5f40f1b34d81c54f1e9afdad18a1e9ec1f3d))
+* **gux-content-search:** design fixes ([4b619bf](https://github.com/MyPureCloud/genesys-spark/commit/4b619bf7a0a7b7450bdae2a8fc334da8d39a934c))
+* **gux-listbox-multi:** filtering options trims white space ([323c736](https://github.com/MyPureCloud/genesys-spark/commit/323c73659fc5c33aa01dde4205d52e7f60bc36aa))
+
 ## [4.0.0-beta.46](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.45...v4.0.0-beta.46) (2023-10-19)
 
 ## [4.0.0-beta.45](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.44...v4.0.0-beta.45) (2023-10-19)
