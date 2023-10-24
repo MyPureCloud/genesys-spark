@@ -367,6 +367,9 @@
     },
     "focus": "#7B88F7"
   },
+  "global_nav": {
+    "side_menu": "linear-gradient(135deg, #09b581 0%, #9de1cd 100%)"
+  },
   "data_table_composed": {
     "box_shadow": {
       "x": 0,
