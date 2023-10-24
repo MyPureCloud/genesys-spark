@@ -5,6 +5,7 @@
   .gux-tabs {
     display: flex;
     height: 100%;
+
     &:not(.gux-vertical) {
       flex-direction: column;
     }
