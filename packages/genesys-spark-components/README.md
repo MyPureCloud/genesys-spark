@@ -2,7 +2,10 @@
 
 # Spark Web Components
 
-This repo contains the CSS and custom elements that make up Genesys' design system, [Spark](https://spark.genesys.com).
+This repo contains the custom elements that make up the bulk of the
+[Spark](https://spark.genesys.com) design system. Developers should prefer using
+the [`genesys-spark`](../genesys-spark/README.md) package and avoid importing
+this package directly unless there is a specific reason to do so.
 
 ## Component Evolution
 
@@ -16,7 +19,8 @@ For more details on the component evolution process see the full [documentation 
 
 ## Demo/Documentation
 
-[Lives here](https://apps.inindca.com/common-ui-docs/#/genesys-webcomponents/latest)
+You can find usage examples of all of the components, with an in-browser editor playground
+online [here](https://apps.inindca.com/common-ui-docs/#/genesys-webcomponents/latest).
 
 ## Installing the library
 
@@ -30,10 +34,12 @@ or
 
 ## Setting up your App
 
-### Configuration
+### Required Fonts
 
-Since version 3, you will need to set the "allowSyntheticDefaultImports" compiler option to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.
-This new requirement is related to a new dependency (vega-lite) which was added as part of our visualisation work.
+Spark is designed to work with the Urbanist and Noto Sans fonts. These components
+do not provide font loading, so you must include them separately in your project.
+For a detailed breakdown of the variants of each font in use, see the typography
+section of the [Spark Design Docs](https://spark.genesys.com).
 
 ### Stylesheets
 
