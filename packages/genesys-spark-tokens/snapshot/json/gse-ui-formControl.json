@@ -52,7 +52,7 @@
         "size": "16px"
       },
       "gap": "12px",
-      "padding": "0 12px",
+      "padding": "8px 12px",
       "prefix_sufix": {
         "text": {
           "fontFamily": "Noto Sans",

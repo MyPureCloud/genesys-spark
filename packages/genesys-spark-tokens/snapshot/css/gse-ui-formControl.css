@@ -26,7 +26,7 @@
   --gse-ui-formControl-input-inputClearable-inputClearableColor: #626e84;
   --gse-ui-formControl-input-inputClearable-size: 16px;
   --gse-ui-formControl-input-gap: 12px;
-  --gse-ui-formControl-input-padding: 0 12px;
+  --gse-ui-formControl-input-padding: 8px 12px;
   --gse-ui-formControl-input-prefixSufix-text-fontFamily: Noto Sans;
   --gse-ui-formControl-input-prefixSufix-text-lineHeight: 20px;
   --gse-ui-formControl-input-prefixSufix-text-fontSize: 14px;

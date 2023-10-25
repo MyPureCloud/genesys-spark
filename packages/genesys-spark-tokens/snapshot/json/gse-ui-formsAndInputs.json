@@ -629,14 +629,16 @@
         "color": "#7B88F7",
         "width": "2px",
         "style": "solid"
-      }
+      },
+      "border_radius": "2px"
     },
     "focus_time": {
       "border": {
         "color": "#7B88F7",
         "width": "3px",
         "style": "solid"
-      }
+      },
+      "border_radius": "4px"
     }
   },
   "context_menu": {
