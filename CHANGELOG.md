@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.48](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.47...v4.0.0-beta.48) (2023-10-25)
+
+
+### Bug Fixes
+
+* **dropdown,listbox,listbox-multi:** fixing issues with clicking options and focus ring with mouse ([040deea](https://github.com/MyPureCloud/genesys-spark/commit/040deea3478e9fc2ae319ed0e25e549ee8cc8024))
+* **form-field-radio:** added aria-disabled for WCAG 2 AA compliance ([3e715c6](https://github.com/MyPureCloud/genesys-spark/commit/3e715c6c2cdaa0f6ff5ad94d213593151be3ef65))
+* **list:** fixed child element accessibility issue ([a70c6c2](https://github.com/MyPureCloud/genesys-spark/commit/a70c6c2c5d11be2cebc5d7bb16cecd950ced4c5a))
+
 ## [4.0.0-beta.47](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.46...v4.0.0-beta.47) (2023-10-24)
 
 
