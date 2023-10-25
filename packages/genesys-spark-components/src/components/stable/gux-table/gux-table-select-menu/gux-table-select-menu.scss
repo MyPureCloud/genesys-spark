@@ -18,6 +18,7 @@ gux-table-select-menu {
     &:focus-visible {
       // TODO: COMUI-2393 need focus ring tokens for table-select-menu dropdown button ?
       @include focus.gux-focus-ring;
+
       border-radius: 4px;
     }
 

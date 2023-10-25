@@ -36,3 +36,16 @@
     white-space: nowrap;
   }
 }
+
+@mixin gux-menu-container {
+  margin: 0;
+  overflow-y: auto;
+  background: var(--gse-ui-menu-backgroundColor);
+  border-color: var(--gse-ui-menu-border-color);
+  border-style: var(--gse-ui-menu-border-style);
+  border-width: var(--gse-ui-menu-border-width);
+  border-radius: var(--gse-ui-menu-borderRadius);
+  box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
+    var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
+    var(--gse-ui-menu-boxShadow-color);
+}

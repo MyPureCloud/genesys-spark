@@ -1,12 +1,4 @@
-// COMUI-2156 add missing button tokens
-$temp-box-shadow: 0 4px 6px 1px rgb(35 57 92 / 12%);
-$temp-menu-wrapper-borderRadius: 4px;
-$temp-menu-wrapper-borderWidth: 1px;
-$temp-dropdown-button-width: 32px;
-$temp-dropdown-button-padding: 0;
-$temp-dropdown-button-border-top-left-radius: 0;
-$temp-dropdown-button-border-bottom-left-radius: 0;
-$temp-dropdown-button-border-bottom-icon-width: 16px;
+@use '../../../style/mixins';
 
 @mixin button-text {
   font-family: var(--gse-ui-button-text-fontFamily);
@@ -43,27 +35,21 @@ $temp-dropdown-button-border-bottom-icon-width: 16px;
 
   .gux-dropdown-button {
     button {
-      width: $temp-dropdown-button-width;
-      padding: $temp-dropdown-button-padding;
-      border-top-left-radius: $temp-dropdown-button-border-top-left-radius;
-      border-bottom-left-radius: $temp-dropdown-button-border-bottom-left-radius;
+      width: var(--gse-ui-button-iconOnly-width);
+      padding: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
 
       gux-icon {
-        width: $temp-dropdown-button-border-bottom-icon-width;
-        height: $temp-dropdown-button-border-bottom-icon-width;
+        width: var(--gse-ui-button-icon-size);
+        height: var(--gse-ui-button-icon-size);
       }
     }
   }
 
   .gux-list-container {
     max-width: 220px;
-    padding: var(--gux-spacing-xs) 0;
-    margin: 0;
-    list-style: none;
-    background-color: var(--gse-ui-menu-wrapper-backgroundColor);
-    border: $temp-menu-wrapper-borderWidth solid
-      var(--gse-ui-menu-wrapper-border);
-    border-radius: $temp-menu-wrapper-borderRadius;
-    box-shadow: $temp-box-shadow;
+
+    @include mixins.gux-menu-container;
   }
 }
