@@ -41,7 +41,7 @@ jobs:
 
       # This creates the component specific types that are needed for eslint
       - name: Stencil
-        run: npm run build --workspace=packages/genesys-spark-components
+        run: npm run stencil --workspace=packages/genesys-spark-components
 
       # Run linting
       - name: Lint
