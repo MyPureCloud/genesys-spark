@@ -294,7 +294,7 @@
       "focus_border_radius": "20px",
       "border_radius": "16px",
       "calendar_button": {
-        "border_radius": "2px"
+        "focus_border_radius": "2px"
       },
       "selected": {
         "foreground_color": "#ffffff",
