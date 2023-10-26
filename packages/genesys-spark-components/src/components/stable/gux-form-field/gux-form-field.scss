@@ -1,0 +1,7 @@
+@mixin gse-ui-formControl-label {
+  font-family: var(--gse-ui-formControl-label-text-fontFamily);
+  font-size: var(--gse-ui-formControl-label-text-fontSize);
+  font-weight: var(--gse-ui-formControl-label-text-fontWeight);
+  line-height: var(--gse-ui-formControl-label-text-lineHeight);
+  color: var(--gse-ui-formControl-label-labelColor);
+}

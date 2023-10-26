@@ -1,15 +1,6 @@
 @use './focus';
 @use './typography';
 
-/* Anchor */
-a {
-  @include typography.gux-anchor;
-}
-
-table a {
-  @include typography.gux-anchor-table;
-}
-
 /* Button */
 button {
   &:focus-visible {

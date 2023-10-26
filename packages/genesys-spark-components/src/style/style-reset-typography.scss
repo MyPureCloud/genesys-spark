@@ -1,31 +1,133 @@
 @use './typography.scss';
 
-body {
-  @include typography.body-font;
-}
-
-/* Headings */
+//Header
 
 h1 {
-  @include typography.h1;
+  @include typography.heading-xl;
 }
 
 h2 {
-  @include typography.h2;
+  @include typography.heading-lg;
 }
 
 h3 {
-  @include typography.h3;
+  @include typography.heading-md;
 }
 
 h4,
 h5,
 h6 {
-  @include typography.h4-6;
+  @include typography.heading-sm;
+}
+
+.gux-heading-xl {
+  @include typography.heading-xl;
+}
+
+.gux-heading-lg {
+  @include typography.heading-lg;
+}
+
+.gux-heading-md {
+  @include typography.heading-md;
+}
+
+.gux-heading-sm {
+  @include typography.heading-sm;
+}
+
+.gux-heading-xs {
+  @include typography.heading-xs;
+}
+
+.gux-heading-subheading {
+  @include typography.heading-subheading;
+}
+
+.gux-heading-overline {
+  @include typography.heading-overline;
+}
+
+// Body
+
+body {
+  @include typography.body-sm-regular;
+}
+
+.gux-body-lg-regular {
+  @include typography.body-lg-regular;
+}
+
+.gux-body-lg-semibold {
+  @include typography.body-lg-semiBold;
+}
+
+.gux-body-lg-bold {
+  @include typography.body-lg-bold;
+}
+
+.gux-body-md-regular {
+  @include typography.body-md-regular;
+}
+
+.gux-body-md-semibold {
+  @include typography.body-md-semiBold;
+}
+
+.gux-body-md-bold {
+  @include typography.body-md-bold;
+}
+
+.gux-body-sm-regular {
+  @include typography.body-sm-regular;
+}
+
+.gux-body-sm-semibold {
+  @include typography.body-sm-semiBold;
+}
+
+.gux-body-sm-bold {
+  @include typography.body-sm-bold;
+}
+
+//Components
+
+.gux-ui-button {
+  @include typography.ui-button;
+}
+
+.gux-ui-link {
+  @include typography.ui-link;
+}
+
+.gux-ui-label {
+  @include typography.ui-label;
+}
+
+.gux-ui-placeholder {
+  @include typography.ui-placeholder;
+}
+
+// Anchor
+
+a {
+  @include typography.ui-anchor;
+}
+
+table a {
+  @include typography.ui-anchor-table;
+}
+
+.gux-ui-anchor {
+  @include typography.ui-anchor;
+}
+
+.gux-anchor-table {
+  @include typography.ui-anchor-table;
 }
 
 .gux-icon-anchor {
-  gux-icon {
+  .gux-icon {
     padding-right: var(--gse-ui-links-inLine-padding);
   }
 }
