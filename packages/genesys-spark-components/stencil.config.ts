@@ -34,20 +34,7 @@ export const config: Config = {
   rollupPlugins: {
     after: [
       copy({
-        targets: [
-          { src: 'build/i18n', dest: 'dist/genesys-webcomponents' },
-          { src: 'src/style/fonts', dest: 'dist/genesys-webcomponents' },
-          {
-            src: [
-              'src/style/global.scss',
-              'src/style/typography.scss',
-              'src/style/focus.scss',
-              'src/style/style-reset-typography.scss',
-              'src/style/style-reset-focusable.scss'
-            ],
-            dest: 'dist/genesys-webcomponents/scss'
-          }
-        ],
+        targets: [{ src: 'build/i18n', dest: 'dist/genesys-webcomponents' }],
         verbose: true
       }),
       {

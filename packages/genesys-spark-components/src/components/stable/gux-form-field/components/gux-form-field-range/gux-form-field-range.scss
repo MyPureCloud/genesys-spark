@@ -19,8 +19,9 @@
 @prop $gse-ui-slider-focusRing-borderRadius
 **/
 
-@use '../../../../../style/zindex.scss';
 @use '../../../../../style/typography.scss';
+@use '../../../../../style/zindex.scss';
+@use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
@@ -56,7 +57,7 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
 }
 
 ::slotted(label) {
-  @include typography.gse-ui-formControl-label;
+  @include gux-form-field.gse-ui-formControl-label;
 }
 
 ::slotted(input[type='range']) {
@@ -145,7 +146,7 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
     }
 
     .gux-range-tooltip {
-      @include typography.gux-small-text;
+      @include typography.body-sm-regular;
 
       position: absolute;
       z-index: var(--gux-zindex-tooltip, zindex.$gux-zindex-tooltip);
