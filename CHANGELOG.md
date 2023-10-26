@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.49](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.48...v4.0.0-beta.49) (2023-10-26)
+
+
+### Bug Fixes
+
+* **gux-form-field-radio:** using token for focus style ([6ff336e](https://github.com/MyPureCloud/genesys-spark/commit/6ff336e085f5739ce2f4f6de4f562f8783f586c2))
+
 ## [4.0.0-beta.48](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.47...v4.0.0-beta.48) (2023-10-25)
 
 
