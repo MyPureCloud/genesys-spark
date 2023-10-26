@@ -50,6 +50,9 @@ describe('gux-phone-input', () => {
     await page.waitForChanges();
     await a11yCheck(page);
 
+    // First arrow down focuses the currently selected option
+    await page.keyboard.press('ArrowDown');
+    // Second arrow down to move the selection down one
     await page.keyboard.press('ArrowDown');
     await page.keyboard.press('Enter');
     await page.waitForChanges();
@@ -77,6 +80,9 @@ describe('gux-phone-input', () => {
     await page.waitForChanges();
     await a11yCheck(page);
 
+    // First arrow down focuses the currently selected option
+    await page.keyboard.press('ArrowDown');
+    // Second arrow down to move the selection down one
     await page.keyboard.press('ArrowDown');
     await page.keyboard.press('Enter');
     await page.waitForChanges();
