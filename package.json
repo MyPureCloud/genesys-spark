@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "commit": "git-cz",
-    "commitlint": "commitlint --from 30e62e0c73aa2f57776b8932e93750c04957b71f",
+    "commitlint": "commitlint --from 81b354d83c18eb6ac0ca925b4694d43c09e588e8",
     "current-version": "cross-var \"echo $npm_package_version\"",
     "dev": "run-pty start.json",
     "dev.examples": "npm run dev --workspace=web-apps/genesys-spark-examples",
