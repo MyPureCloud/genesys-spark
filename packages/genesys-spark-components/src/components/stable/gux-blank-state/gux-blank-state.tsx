@@ -1,5 +1,7 @@
-import { Component, Element, JSX, h } from '@stencil/core';
+import { Component, Element, JSX, h, State } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
+import { OnMutation } from '@utils/decorator/on-mutation';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot primary-message - Required slot for primary-message.
@@ -17,8 +19,28 @@ export class GuxBlankState {
   @Element()
   root: HTMLElement;
 
+  @State()
+  private hasCallToAction: boolean = false;
+
+  @OnMutation({ childList: true, subtree: true })
+  onMutation(): void {
+    this.hasCallToAction = hasSlot(this.root, 'call-to-action');
+  }
+
+  private renderCallToActionSlot(): JSX.Element {
+    if (this.hasCallToAction) {
+      return (
+        <gux-button-slot accent="primary">
+          <slot name="call-to-action"></slot>
+        </gux-button-slot>
+      ) as JSX.Element;
+    }
+  }
+
   componentWillLoad() {
     trackComponent(this.root);
+
+    this.hasCallToAction = hasSlot(this.root, 'call-to-action');
   }
 
   render(): JSX.Element {
@@ -33,9 +55,7 @@ export class GuxBlankState {
         <div class="gux-guidance">
           <slot name="additional-guidance"></slot>
         </div>
-        <gux-button-slot accent="primary">
-          <slot name="call-to-action"></slot>
-        </gux-button-slot>
+        {this.renderCallToActionSlot()}
       </div>
     ) as JSX.Element;
   }
