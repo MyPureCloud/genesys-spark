@@ -1,12 +1,5 @@
 @use '../../../style/mixins';
 
-$error-gse-ui-tag-borderRadius: var(--gse-ui-tag-height);
-
-$missing-gse-ui-tag-focusRing-color: #7b88f7;
-$missing-gse-ui-tag-focusRing-width: 2px;
-$missing-gse-ui-tag-focusRing-offset: 0;
-$missing-gse-ui-tag-focusRing-cornerRadius: 4px;
-
 /**
   * @prop --gse-ui-tag-default-backgroundColor
   * @prop --gse-ui-tag-default-foregroundColor
@@ -44,7 +37,7 @@ $missing-gse-ui-tag-focusRing-cornerRadius: 4px;
 
 :host {
   display: inline-block;
-  border-radius: $error-gse-ui-tag-borderRadius;
+  border-radius: var(--gse-ui-tag-borderRadius);
 }
 
 .gux-tag {
@@ -63,7 +56,7 @@ $missing-gse-ui-tag-focusRing-cornerRadius: 4px;
   line-height: var(--gse-ui-tag-text-lineHeight);
   color: var(--gse-ui-tag-default-foregroundColor);
   background-color: var(--gse-ui-tag-default-backgroundColor);
-  border-radius: $error-gse-ui-tag-borderRadius;
+  border-radius: var(--gse-ui-tag-borderRadius);
 
   &.gux-disabled {
     position: relative;
@@ -73,7 +66,7 @@ $missing-gse-ui-tag-focusRing-cornerRadius: 4px;
       inset: 0;
       content: '';
       background-color: #fff;
-      border-radius: $error-gse-ui-tag-borderRadius;
+      border-radius: var(--gse-ui-tag-borderRadius);
       opacity: var(--gse-ui-tag-disabled-opacity);
     }
   }
@@ -110,10 +103,9 @@ $missing-gse-ui-tag-focusRing-cornerRadius: 4px;
 
     &:focus-within {
       .gux-tag-remove-icon {
-        border-radius: $missing-gse-ui-tag-focusRing-cornerRadius;
-        outline: $missing-gse-ui-tag-focusRing-width solid
-          $missing-gse-ui-tag-focusRing-color;
-        outline-offset: $missing-gse-ui-tag-focusRing-offset;
+        border-radius: var(--gse-semantic-focusRing-cornerRadius);
+        outline: var(--gse-semantic-focusRing-small-border-width) solid
+          var(--gse-semantic-color-focus);
       }
     }
   }
