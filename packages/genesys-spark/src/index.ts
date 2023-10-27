@@ -5,7 +5,7 @@ const ASSET_PREFIX = "__ASSET_PREFIX__";
 const SCRIPT_PATH = "genesys-webcomponents.esm.js";
 const STYLE_PATH = "genesys-webcomponents.css";
 
-const assetsOrigin = getAssetsOrigin();
+const assetsOrigin = getAssetsOrigin(); 
 const SCRIPT_SRC = `${assetsOrigin}${ASSET_PREFIX}${SCRIPT_PATH}`;
 const STYLE_HREF = `${assetsOrigin}${ASSET_PREFIX}${STYLE_PATH}`;
 const fontOrigin = getFontOrigin();

@@ -59,26 +59,30 @@ export function checkAndLoadStyle(styleHref: string): Promise<void> {
  * This function checks for loaded fonts with those identifiers. If a font is
  * not found, the corresponding stylesheet is added to the document.
  * @param fonts An object mapping font-family identifiers to CSS file urls
- * @returns A promise that resolves if all required stylesheets load
+ * @returns A promise that resolves once the script tags has finished loading.
+ * It does not fail if the script tags fail to load because we don't want to fail
+ * the whole component loading process in that situation.
  */
 export function checkAndLoadFonts(fonts: {[key: string]: string}): Promise<void> {
+    const fontsToLoad = {...fonts}; //clone our input so we can safely mutate it.
+    
     document.fonts.forEach((fontFace) => {
         // If the family is defined with quotes in CSS (e.g. `font-family: "Noto Sans"), 
         // those quotes may be preserved JS, depending on the browser.
         const normalizedFamily = fontFace.family.replace(/"/g, "");
-        if(fonts[normalizedFamily]) {
+        if(fontsToLoad[normalizedFamily]) {
             // remove the font from the set to load
-            delete fonts[normalizedFamily];
+            delete fontsToLoad[normalizedFamily];
         }
     });
 
     return Promise.all(
-        Object.values(fonts).map((href) => {
+        Object.values(fontsToLoad).map((href) => {
             return checkAndLoadStyle(href).catch(() => {
                 // Don't fail loading process for fonts, since the components
                 // should still be reasonably usable.
                 console.info(`genesys-spark: couldn't load font style ${href}`)
             });
         })
-    ).then()
+    ).then(() => {}) // flatten the promise array
 }
