@@ -1,5 +1,5 @@
 import { E2EElement, E2EPage } from '@stencil/core/testing';
-import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
+import { newSparkE2EPage, a11yCheck } from '@test/e2eTestUtils';
 
 describe('gux-dropdown-multi', () => {
   const html = `
@@ -259,18 +259,6 @@ describe('gux-dropdown-multi', () => {
       expect(listboxItems.length).toBe(5);
       expect(listboxItems[0].textContent).toEqual('Ant');
     });
-    describe('adding option to dropdown', () => {
-      it('renders tag when option is added to dropdown that value set', async () => {
-        const { page } = await setupPage(valueSetDropdown);
-        let tagElements = await page.findAll('pierce/.gux-tag');
-        expect(tagElements.length).toBe(0);
-        await addNewOption(page);
-        await page.waitForChanges();
-        tagElements = await page.findAll('pierce/.gux-tag');
-        expect(tagElements.length).toBe(1);
-        expect(tagElements[0].textContent).toEqual('1');
-      });
-    });
 
     describe('with the create option set', () => {
       it('provides the option to create items', async () => {
@@ -343,17 +331,6 @@ async function getCreateAction(dropdown: E2EElement): Promise<E2EElement> {
   return await dropdown.find('gux-create-option');
 }
 
-async function addNewOption(page: E2EPage): Promise<void> {
-  await page.evaluate(() => {
-    const listboxElement = document.querySelector('gux-listbox-multi');
-    const element = document.createElement('gux-option-multi');
-    element.setAttribute('value', 'newoption');
-    element.innerText = 'newoption';
-    listboxElement.appendChild(element);
-  });
-  await page.waitForChanges();
-}
-
 async function addNewCustomOption(page: E2EPage): Promise<void> {
   await page.evaluate(() => {
     const listboxElement = document.querySelector('gux-listbox-multi');
@@ -368,17 +345,6 @@ async function addNewCustomOption(page: E2EPage): Promise<void> {
 
 const creatableDropdown = `
 <gux-dropdown-multi lang="en">
-  <gux-listbox-multi aria-label="Animals">
-    <gux-create-option slot="create"></gux-create-option>
-    <gux-option-multi value="ant">Ant</gux-option-multi>
-    <gux-option-multi value="bear">Bear</gux-option-multi>
-    <gux-option-multi value="cat">Cat</gux-option-multi>
-  </gux-listbox-multi>
-</gux-dropdown-multi>
-`;
-
-const valueSetDropdown = `
-<gux-dropdown-multi lang="en" value="newoption">
   <gux-listbox-multi aria-label="Animals">
     <gux-create-option slot="create"></gux-create-option>
     <gux-option-multi value="ant">Ant</gux-option-multi>

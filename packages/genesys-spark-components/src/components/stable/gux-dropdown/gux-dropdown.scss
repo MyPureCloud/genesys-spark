@@ -62,10 +62,7 @@
 
 .gux-field {
   &.gux-input-field {
-    height: calc(
-      var(--gse-ui-formControl-input-textfield-height) -
-        (var(--gse-ui-formControl-input-default-border-width) * 2)
-    );
+    height: var(--gse-ui-formControl-input-contentText-lineHeight);
   }
 
   .gux-field-content {
@@ -81,7 +78,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     min-width: 0;
-    height: 60%; // keeps input centered while still visible
+    height: var(--gse-ui-formControl-input-contentText-lineHeight);
 
     .gux-filter,
     .gux-selected-option,
@@ -163,10 +160,7 @@
 
   .gux-field-button {
     width: auto;
-    height: calc(
-      var(--gse-ui-formControl-input-textfield-height) -
-        (var(--gse-ui-formControl-input-default-border-width) * 2)
-    );
+    height: var(--gse-ui-formControl-input-contentText-lineHeight);
     margin: 0;
     background: inherit;
     border: none;

@@ -482,14 +482,12 @@ export class GuxDropdownMulti {
   }
 
   private renderTag(): JSX.Element {
-    const selectedListboxOptionElement = this.getOptionElementByValue(
-      this.value
-    );
-    if (selectedListboxOptionElement?.length) {
+    const selectedValues = this.value?.split(',') || [];
+    if (selectedValues.length) {
       return (
         <gux-dropdown-multi-tag
           disabled={this.disabled}
-          number-selected={selectedListboxOptionElement.length}
+          number-selected={selectedValues.length}
         ></gux-dropdown-multi-tag>
       ) as JSX.Element;
     }
