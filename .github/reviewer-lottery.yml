@@ -1,6 +1,6 @@
 groups:
   - name: core-ui
-    reviewers: 1
+    reviewers: 2
     usernames:
       - daragh-king-genesys
       - gavin-everett-genesys
