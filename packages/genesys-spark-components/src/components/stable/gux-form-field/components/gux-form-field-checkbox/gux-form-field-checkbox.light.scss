@@ -12,7 +12,7 @@ gux-form-field-checkbox {
   }
 
   input[type='checkbox']:focus-visible {
-    border-radius: 2px; //TODO: COMUI-2321
+    border-radius: var(--gse-ui-checkbox-focus-borderRadiusSmall);
     outline: var(--gse-ui-checkbox-focus-border-width)
       var(--gse-ui-checkbox-focus-border-style)
       var(--gse-ui-checkbox-focus-border-color);
