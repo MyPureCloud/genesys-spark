@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.51](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.50...v4.0.0-beta.51) (2023-10-28)
+
+
+### Bug Fixes
+
+* **blank-state:** remove gux-button-slot-beta from shadowDOM ([426fa33](https://github.com/MyPureCloud/genesys-spark/commit/426fa333eed5bf1266e264e7382d9d2eb51d1323))
+* **gux-datepicker:** uX comment fixes ([47074d2](https://github.com/MyPureCloud/genesys-spark/commit/47074d221503b150f8b0c5fa42c758357c19f03b))
+* **gux-tag:** token fixes ([59e6a89](https://github.com/MyPureCloud/genesys-spark/commit/59e6a894c7aded5ee1e4c492282d97c15349afd8))
+
 ## [4.0.0-beta.50](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.49...v4.0.0-beta.50) (2023-10-27)
 
 ## [4.0.0-beta.49](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.48...v4.0.0-beta.49) (2023-10-26)
