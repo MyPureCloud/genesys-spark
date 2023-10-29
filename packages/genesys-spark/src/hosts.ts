@@ -37,10 +37,21 @@ export function getAssetsOrigin(): string {
       return "http://localhost:3333";
     }
 
+    const matchedDomain = getRegionDomain();
+    return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
+  }
+
+  export function getFontOrigin(): string {
+    if (IS_DEV_MODE == true) {
+      // Fonts aren't locally hosted during dev mode
+      return "http://app.inindca.com"
+    }
+    return getAssetsOrigin();
+  }
+
+  function getRegionDomain() {
     const pageHost = window.location.hostname;
-    const matchedDomain = DOMAIN_LIST.find(regionDomain =>
+    return DOMAIN_LIST.find(regionDomain =>
       pageHost.endsWith(regionDomain)
     );
-  
-    return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
   }
