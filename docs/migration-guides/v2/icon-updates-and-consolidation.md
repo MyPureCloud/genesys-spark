@@ -21,6 +21,9 @@ migrate to the new Spark Icons.
 - Some Spark icons have legacy equivalents with different names.
   - Using the legacy icon name in `gux-icon` will automatically use the appropriate Spark Icon but please migrate to the Spark Icon name.
 - Some Legacy icons have no Spark Icon equivalent.
+
   - These icons will still be displayed by `gux-icon`. If you use an icon that has no equivalent Spark Icon please contact the Design System
     Team and they will work with you to get it added to the icon set. For tracking reasons you should also update the icon name to have a
     `legacy/` prefix (`icon-name="bandage"` -> `icon-name="legacy/bandage"`)
+
+    ***

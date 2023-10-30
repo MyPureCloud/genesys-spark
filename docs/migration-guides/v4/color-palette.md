@@ -1,10 +1,10 @@
 # Deprecated Color Variables
 
-In V4, we are using Spark tokens for colors and will no longer be exporting the following color palette variables. Below is a list of color variables and their hex equivalents.
+In V4, we are using Spark tokens for colors and will no longer be exporting the following color palette variables. Below is a list of color variables and their hex equivalents. Read more about the new Spark 4.0 Design System color palette on the [Spark Design System documentation site](https://spark.genesys.com/latest/foundations/color/core-palette/design-XYztDeyk)
 
 ## Blue
 
-| variable     | value   |
+| Variable     | Value   |
 | ------------ | ------- |
 | gux-blue-10  | #172b52 |
 | gux-blue-20  | #1c3363 |
@@ -19,7 +19,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 
 ## Black
 
-| variable      | value   |
+| Variable      | Value   |
 | ------------- | ------- |
 | gux-black-10  | #000000 |
 | gux-black-20  | #151d28 |
@@ -34,7 +34,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 
 ## Grey
 
-| variable     | value   |
+| Variable     | Value   |
 | ------------ | ------- |
 | gux-grey-10  | #8a97ad |
 | gux-grey-20  | #99a4b8 |
@@ -49,7 +49,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 
 ## Alert Red
 
-| variable          | value   |
+| Variable          | Value   |
 | ----------------- | ------- |
 | gux-alert-red-10  | #520404 |
 | gux-alert-red-20  | #700505 |
@@ -64,7 +64,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 
 ## Alert Yellow
 
-| variable             | value   |
+| Variable             | Value   |
 | -------------------- | ------- |
 | gux-alert-yellow-10  | #523800 |
 | gux-alert-yellow-20  | #755000 |
@@ -79,7 +79,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 
 ## Alert Green
 
-| variable            | value   |
+| Variable            | Value   |
 | ------------------- | ------- |
 | gux-alert-green-10  | #0d3d00 |
 | gux-alert-green-20  | #164b08 |
@@ -94,7 +94,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 
 ## Secondary Palette
 
-| variable                   | value   |
+| Variable                   | Value   |
 | -------------------------- | ------- |
 | gux-navy-sec               | #203b73 |
 | gux-blue-sec               | #75a8ff |
@@ -111,7 +111,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 
 ## Brand Colors
 
-| variable                  | value   |
+| Variable                  | Value   |
 | ------------------------- | ------- |
 | gux-genesys-charcoal-grey | #33383d |
 | gux-genesys-off-white     | #fdfdfd |
@@ -124,7 +124,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 
 ## V1 Legacy
 
-| variable          | value   |
+| Variable          | Value   |
 | ----------------- | ------- |
 | gux-blue          | #75a8ff |
 | gux-charcoal-grey | #444a52 |

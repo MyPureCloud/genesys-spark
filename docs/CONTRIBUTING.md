@@ -1,4 +1,4 @@
-# Contributing To Common Web Components
+# Contributing To Genesys Spark Repo
 
 - [Before Starting](#before-starting)
 - [While Working](#while-working)
