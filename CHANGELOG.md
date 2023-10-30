@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.52](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.51...v4.0.0-beta.52) (2023-10-30)
+
+
+### Features
+
+* **genesys-spark:** add font stylesheets as well as component styles ([2340e2e](https://github.com/MyPureCloud/genesys-spark/commit/2340e2efdf2066b5c9a2a09b437f381245f54541))
+
 ## [4.0.0-beta.51](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.50...v4.0.0-beta.51) (2023-10-28)
 
 
