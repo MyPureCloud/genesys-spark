@@ -9,6 +9,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c --watch",
+    "prettier": "prettier --log-level silent --ignore-path .gitignore --ignore-unknown --write .",
     "test": "jest",
     "test.watch": "jest --watch",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"

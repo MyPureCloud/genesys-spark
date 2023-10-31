@@ -35,7 +35,7 @@ While `registerSparkComponents()` will add the required webfonts to your page if
 they are not already present, it is recommended that you link stylesheets to load
 the Urbanist and Noto Sans fonts in your document prior to starting your app. This
 will improve loading performance and prevent a jarring font transition when the
-required fonts load. 
+required fonts load.
 
 ## Asset loading details
 

@@ -3,5 +3,3 @@ build/
 dist/
 src/components/**/*.md
 src/components.d.ts
-
-CHANGELOG.md
