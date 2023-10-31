@@ -38,7 +38,7 @@
       border: var(--gse-ui-timePicker-focusTime-border-width)
         var(--gse-ui-timePicker-focusTime-border-style)
         var(--gse-ui-timePicker-focusTime-border-color);
-      border-radius: 4px; // TODO: COMUI-2311
+      border-radius: var(--gse-ui-timePicker-focusTime-borderRadius);
     }
 
     &:hover:not(:disabled) {
@@ -83,16 +83,10 @@
       outline: none;
 
       &:focus-visible {
-        border: var(--gse-ui-formControl-input-active-border-width)
-          var(--gse-ui-formControl-input-active-border-style)
-          var(--gse-ui-formControl-input-active-border-color);
-        border-radius: var(
-          --gse-ui-formControl-focusRing-borderRadius
-        ); // COMUI-2311 : This focus styling is incorrect.
-
-        outline: var(--gse-ui-formControl-input-focus-border-width)
-          var(--gse-ui-formControl-input-focus-border-style)
-          var(--gse-ui-formControl-input-focus-border-color);
+        border: var(--gse-ui-timePicker-focusAmpm-border-width)
+          var(--gse-ui-timePicker-focusAmpm-border-style)
+          var(--gse-ui-timePicker-focusAmpm-border-color);
+        border-radius: var(--gse-ui-timePicker-focusAmpm-borderRadius);
       }
 
       .gux-meridiem {
@@ -132,13 +126,13 @@
         border: var(--gse-ui-timePicker-focusClock-border-width)
           var(--gse-ui-timePicker-focusClock-border-style)
           var(--gse-ui-timePicker-focusClock-border-color);
-        border-radius: 4px; // TODO: COMUI-2311
+        border-radius: var(--gse-ui-timePicker-focusClock-borderRadius);
       }
 
       gux-icon {
         width: var(--gse-ui-icon-size-sm);
         height: var(--gse-ui-icon-size-sm);
-        padding: 3px; //TODO: COMUI-2311
+        padding: var(--gse-ui-timePicker-clock-padding);
       }
     }
   }
