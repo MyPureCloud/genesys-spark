@@ -120,7 +120,7 @@
       border: none;
 
       &.gux-active:not(:disabled) {
-        color: #4856cb; // TODO COMUI-2236
+        color: var(--gse-ui-timePicker-clockStates-activeColor);
         cursor: pointer;
       }
 
