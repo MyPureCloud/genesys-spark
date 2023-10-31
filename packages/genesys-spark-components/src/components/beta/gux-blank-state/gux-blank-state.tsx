@@ -3,6 +3,8 @@ import { trackComponent } from '@utils/tracking/usage';
 import { GuxBlankStateSizes } from './gux-blank-state.types';
 import { OnResize } from '../../../utils/decorator/on-resize';
 import * as blankStateWidth from './gux-blank-state-constants';
+import { OnMutation } from '@utils/decorator/on-mutation';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot primary-message - Required slot for primary-message.
@@ -26,17 +28,36 @@ export class GuxBlankState {
   @State()
   blankStateSize: GuxBlankStateSizes;
 
+  @State()
+  private hasCallToAction: boolean = false;
+
   @OnResize()
   onResize(): void {
     this.setBlankStateSize();
   }
 
+  @OnMutation({ childList: true, subtree: true })
+  onMutation(): void {
+    this.hasCallToAction = hasSlot(this.root, 'call-to-action');
+  }
+
   componentWillLoad() {
     trackComponent(this.root);
+    this.hasCallToAction = hasSlot(this.root, 'call-to-action');
   }
 
   componentDidLoad() {
     this.setBlankStateSize();
+  }
+
+  private renderCallToActionSlot(): JSX.Element {
+    if (this.hasCallToAction) {
+      return (
+        <gux-button-slot-beta accent="primary">
+          <slot name="call-to-action"></slot>
+        </gux-button-slot-beta>
+      ) as JSX.Element;
+    }
   }
 
   private setBlankStateSize(): void {
@@ -68,9 +89,7 @@ export class GuxBlankState {
         <div class="gux-guidance-container">
           <slot name="additional-guidance"></slot>
         </div>
-        <gux-button-slot-beta accent="primary">
-          <slot name="call-to-action"></slot>
-        </gux-button-slot-beta>
+        {this.renderCallToActionSlot()}
       </div>
     ) as JSX.Element;
   }
