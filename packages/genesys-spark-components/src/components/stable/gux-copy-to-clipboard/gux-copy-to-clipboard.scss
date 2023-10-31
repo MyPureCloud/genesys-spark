@@ -1,6 +1,6 @@
 /**
-  * @prop --gse-ui-copyToClipboard-contentContainer-gap : https://inindca.atlassian.net/browse/COMUI-2153
-  * @prop --gse-ui-copyToClipboard-gap : https://inindca.atlassian.net/browse/COMUI-2153
+  * @prop --gse-ui-copyToClipboard-contentContainer-gap
+  * @prop --gse-ui-tooltip-targetOffset - not using this token because the target offset is hardcoded to 16 within gux-tooltip
   * @prop --gse-ui-copyToClipboard-iconContainer-padding
   * @prop --gse-ui-copyToClipboard-label-active-backgroundColor
   * @prop --gse-ui-copyToClipboard-label-borderRadius
@@ -40,6 +40,7 @@ button {
     display: inherit;
     align-items: inherit;
     cursor: pointer;
+    gap: var(--gse-ui-copyToClipboard-contentContainer-gap);
 
     ::slotted(*) {
       padding: var(--gse-ui-copyToClipboard-label-padding);
@@ -60,7 +61,6 @@ button {
       width: var(--gse-ui-icon-size-sm);
       height: var(--gse-ui-icon-size-sm);
       padding: var(--gse-ui-copyToClipboard-iconContainer-padding);
-      margin-left: var(--gse-ui-copyToClipboard-contentContainer-gap);
       visibility: hidden;
       background-color: var(
         --gse-ui-copyToClipboard-label-active-backgroundColor
