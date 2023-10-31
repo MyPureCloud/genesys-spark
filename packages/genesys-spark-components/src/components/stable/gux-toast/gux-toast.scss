@@ -84,6 +84,13 @@
       flex-wrap: nowrap;
       gap: var(--gse-ui-toast-buttonBar-gap);
       justify-content: flex-start;
+
+      ::slotted(a) {
+        font-family: var(--gse-ui-link-inLine-medium-underlinedText-fontFamily);
+        line-height: var(--gse-ui-link-inLine-medium-underlinedText-lineHeight);
+        font-size: var(--gse-ui-link-inLine-medium-underlinedText-fontSize);
+        font-weight: var(--gse-ui-link-inLine-medium-underlinedText-fontWeight);
+      }
     }
   }
 
