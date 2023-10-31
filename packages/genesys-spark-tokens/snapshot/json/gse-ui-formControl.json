@@ -66,6 +66,9 @@
       "textfield": {
         "height": "32px"
       },
+      "color_picker": {
+        "size": "32px"
+      },
       "input_icon": {
         "size": "16px",
         "default_color": "#3e5374",
