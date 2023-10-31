@@ -1,3 +1,5 @@
+@use '../../../style/mixins';
+
 :host {
   display: block;
   max-width: fit-content;
@@ -50,16 +52,6 @@ button[disabled] {
 .gux-list-container {
   width: 220px; // TODO: [COMUI-2290] missing token
   max-height: 330px; // TODO: [COMUI-2290] missing token
-  padding: var(--gse-ui-menu-padding);
-  margin: 0;
-  overflow-y: auto;
-  text-align: left;
-  list-style: none;
-  background-color: var(--gse-ui-menu-backgroundColor);
-  border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
-    var(--gse-ui-menu-border-color);
-  border-radius: var(--gse-ui-menu-borderRadius);
-  box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
-    var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
-    var(--gse-ui-menu-boxShadow-color);
+
+  @include mixins.gux-menu-container;
 }
