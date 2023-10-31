@@ -86,9 +86,7 @@
         border: var(--gse-ui-timePicker-focusAmpm-border-width)
           var(--gse-ui-timePicker-focusAmpm-border-style)
           var(--gse-ui-timePicker-focusAmpm-border-color);
-        border-radius: var(
-          --gse-ui-timePicker-focusAmpm-borderRadius
-        ); // COMUI-2311 : This focus styling is incorrect.
+        border-radius: var(--gse-ui-timePicker-focusAmpm-borderRadius);
       }
 
       .gux-meridiem {
