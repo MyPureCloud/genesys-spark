@@ -507,6 +507,44 @@
       "offset": "1px"
     }
   },
+  "time_picker": {
+    "clock": {
+      "padding": "3px"
+    },
+    "clock_states": {
+      "default_color": "#626e84",
+      "hover_color": "#3742A2",
+      "active_color": "#4856CB",
+      "disabled_color": "#626e8480"
+    },
+    "focus_clock": {
+      "border": {
+        "color": "#7B88F7",
+        "width": "2px",
+        "style": "solid"
+      },
+      "border_radius": "2px"
+    },
+    "focus_ampm": {
+      "border": {
+        "color": "#7B88F7",
+        "width": "2px",
+        "style": "solid"
+      },
+      "border_radius": "2px"
+    },
+    "focus_time": {
+      "border": {
+        "color": "#7B88F7",
+        "width": "3px",
+        "style": "solid"
+      },
+      "border_radius": "4px"
+    },
+    "ampm": {
+      "padding": "3px"
+    }
+  },
   "color_picker": {
     "label": {
       "required_symbol_color": "#e22245",
@@ -589,7 +627,10 @@
     "parenting": {
       "gap": "4px"
     },
-    "background_color": "#ffffff"
+    "background_color": "#ffffff",
+    "arrow": {
+      "border_radius": "4px"
+    }
   },
   "phone_input": {
     "dropdown": {
@@ -617,30 +658,6 @@
       "foreground_color": "#626E84"
     },
     "min_width": "230px"
-  },
-  "time_picker": {
-    "clock_states": {
-      "default_color": "#626e84",
-      "hover_color": "#3742A2",
-      "active_color": "#4856CB",
-      "disabled_color": "#626e8480"
-    },
-    "focus_clock": {
-      "border": {
-        "color": "#7B88F7",
-        "width": "2px",
-        "style": "solid"
-      },
-      "border_radius": "2px"
-    },
-    "focus_time": {
-      "border": {
-        "color": "#7B88F7",
-        "width": "3px",
-        "style": "solid"
-      },
-      "border_radius": "4px"
-    }
   },
   "context_menu": {
     "button": {
