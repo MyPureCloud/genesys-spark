@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.108.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.108.0...v3.108.1) (2023-11-01)
+
+
+### Bug Fixes
+
+* **asset-loading:** fixed default asset loading ([d022d12](https://github.com/MyPureCloud/genesys-spark/commit/d022d12c43ad977c44e5c28528ddc0c87868e0b5))
+* **blank-state:** add conditional for call-to-action slot ([72ea280](https://github.com/MyPureCloud/genesys-spark/commit/72ea280ff2e536695f3940f3ecdbe7778f389451))
+
 ## 3.108.0 (2023-10-26)
 
 
