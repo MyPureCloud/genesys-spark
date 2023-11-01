@@ -18,11 +18,12 @@
 }
 
 ::slotted(input) {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   align-self: auto;
   order: 0;
-  width: var(--gse-ui-formControl-input-colorPicker-size);
-  height: var(--gse-ui-formControl-input-colorPicker-size);
+  min-width: var(--gse-ui-colorPicker-input-swatchSizing);
+  width: var(--gse-ui-colorPicker-input-swatchSizing);
+  height: var(--gse-ui-colorPicker-input-swatchSizing);
   overflow: hidden;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   color: var(--gse-ui-formControl-input-populatedColor);
@@ -30,8 +31,8 @@
   text-overflow: ellipsis;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
-  border-radius: var(--gse-ui-formControl-input-borderRadius);
   outline: none;
+  padding: 0;
 
   &::placeholder {
     color: var(--gse-ui-formControl-input-placeholderColor);
@@ -59,7 +60,8 @@
       align-items: center;
       align-self: auto;
       order: 0;
-      height: var(--gse-ui-formControl-input-textfield-height);
+      width: var(--gse-ui-formControl-input-colorPicker-size);
+      height: var(--gse-ui-formControl-input-colorPicker-size);
       font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
       font-size: var(--gse-ui-formControl-input-contentText-fontSize);
       line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
@@ -67,6 +69,9 @@
       background-color: var(--gse-ui-formControl-input-backgroundColor);
       background-image: none;
       border-radius: var(--gse-ui-formControl-input-borderRadius);
+      border: var(--gse-ui-formControl-input-default-border-width)
+        var(--gse-ui-formControl-input-default-border-style)
+        var(--gse-ui-formControl-input-default-border-color);
 
       &.gux-disabled {
         opacity: var(--gse-ui-formControl-input-disabled-opacity);
@@ -82,10 +87,15 @@
           var(--gse-ui-formControl-input-focus-border-color);
       }
 
-      &.gux-input-error {
-        .gux-input-container {
-          border-color: var(--gse-ui-formControl-input-error-border-color);
-        }
+      &:hover {
+        border-color: var(--gse-ui-formControl-input-hover-border-color);
+        cursor: pointer;
+      }
+    }
+
+    &.gux-input-error {
+      .gux-input-container {
+        border-color: var(--gse-ui-formControl-input-error-border-color);
       }
     }
   }
