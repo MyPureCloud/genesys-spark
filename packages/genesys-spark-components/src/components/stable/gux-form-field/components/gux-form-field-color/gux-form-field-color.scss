@@ -21,8 +21,8 @@
   flex: 1 1 auto;
   align-self: auto;
   order: 0;
-  width: 32px; //TODO: 2292
-  height: var(--gse-ui-formControl-input-textfield-height);
+  width: var(--gse-ui-formControl-input-colorPicker-size);
+  height: var(--gse-ui-formControl-input-colorPicker-size);
   overflow: hidden;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   color: var(--gse-ui-formControl-input-populatedColor);
