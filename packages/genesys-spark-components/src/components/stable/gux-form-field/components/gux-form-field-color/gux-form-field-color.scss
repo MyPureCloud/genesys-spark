@@ -89,6 +89,10 @@
           var(--gse-ui-formControl-input-focus-border-color);
       }
 
+      &:hover {
+        border-color: var(--gse-ui-formControl-input-hover-border-color);
+      }
+
       &.gux-input-error {
         .gux-input-container {
           border-color: var(--gse-ui-formControl-input-error-border-color);
