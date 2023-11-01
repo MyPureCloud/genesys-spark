@@ -23,6 +23,7 @@
     width: var(--gse-ui-popover-anchor-width);
     height: var(--gse-ui-popover-anchor-width);
     background: var(--gse-ui-popover-backgroundColor);
+    border-radius: var(--gse-ui-flyoutMenu-arrow-borderRadius);
   }
 
   .gux-popover-header {
