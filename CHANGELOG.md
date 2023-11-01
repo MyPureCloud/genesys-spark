@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.53](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.52...v4.0.0-beta.53) (2023-11-01)
+
+
+### Features
+
+* **domains:** support new domains ([6199ecf](https://github.com/MyPureCloud/genesys-spark/commit/6199ecf37058dbff8d66448274a5b24f670f1516))
+
+
+### Bug Fixes
+
+* **list:** fixed list container style ([6b0cc34](https://github.com/MyPureCloud/genesys-spark/commit/6b0cc341e03d6a3fa89dcf018068c4a9ea529184))
+
 ## [4.0.0-beta.52](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.51...v4.0.0-beta.52) (2023-10-30)
 
 
