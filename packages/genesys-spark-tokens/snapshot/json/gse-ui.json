@@ -560,13 +560,21 @@
     },
     "border_radius": "4px",
     "height": "32px",
-    "icon_only": {
-      "width": "32px"
-    },
     "border": {
       "color": "#4856CB",
       "width": "1px",
       "style": "solid"
+    },
+    "divider": {
+      "color": "#4856CB",
+      "width": "1px",
+      "style": "solid"
+    },
+    "icon_only": {
+      "padding": "0 8px"
+    },
+    "focus": {
+      "offset": 0
     }
   }
 }
