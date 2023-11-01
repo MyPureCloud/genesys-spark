@@ -1,7 +1,7 @@
 declare global {
   // IS_DEV_MODE is rewritten by @rollup/plugin-replace. This definition lets
   // our typescript file typecheck.
-  var IS_DEV_MODE: boolean
+  var IS_DEV_MODE: boolean;
 }
 
 // Default domain to load assets from
@@ -31,27 +31,25 @@ const DOMAIN_LIST = [
  * Will use the domain of the current window if it matches a Genesys domain.
  */
 export function getAssetsOrigin(): string {
-    if (IS_DEV_MODE == true) {
-      // This conditional is optimized out in production due to @rollup/plugin-replace
-      // and rollup's dead code elimination
-      return "http://localhost:3333";
-    }
-
-    const matchedDomain = getRegionDomain();
-    return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
+  if (IS_DEV_MODE == true) {
+    // This conditional is optimized out in production due to @rollup/plugin-replace
+    // and rollup's dead code elimination
+    return 'http://localhost:3333';
   }
 
-  export function getFontOrigin(): string {
-    if (IS_DEV_MODE == true) {
-      // Fonts aren't locally hosted during dev mode
-      return "http://app.inindca.com"
-    }
-    return getAssetsOrigin();
-  }
+  const matchedDomain = getRegionDomain();
+  return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
+}
 
-  function getRegionDomain() {
-    const pageHost = window.location.hostname;
-    return DOMAIN_LIST.find(regionDomain =>
-      pageHost.endsWith(regionDomain)
-    );
+export function getFontOrigin(): string {
+  if (IS_DEV_MODE == true) {
+    // Fonts aren't locally hosted during dev mode
+    return 'http://app.inindca.com';
   }
+  return getAssetsOrigin();
+}
+
+function getRegionDomain() {
+  const pageHost = window.location.hostname;
+  return DOMAIN_LIST.find(regionDomain => pageHost.endsWith(regionDomain));
+}

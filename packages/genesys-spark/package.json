@@ -9,6 +9,9 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c --watch",
+    "eslint": "eslint --fix './**/*.ts'",
+    "lint-staged": "lint-staged",
+    "prettier": "prettier --log-level silent --ignore-path .gitignore --ignore-unknown --write .",
     "test": "jest",
     "test.watch": "jest --watch",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
@@ -20,6 +23,9 @@
   },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "ts-jest": "^29.1.1"

@@ -1,11 +1,15 @@
-import { checkAndLoadFonts, checkAndLoadScript, checkAndLoadStyle } from '../src/loading';
+import {
+  checkAndLoadFonts,
+  checkAndLoadScript,
+  checkAndLoadStyle
+} from '../src/loading';
 
 const SCRIPT_URL = 'https://localhost/script.js';
 const STYLE_URL = 'https://localhost/style.css';
 const FONTS = {
-  "Font1": `font1.css`,
-  "Font2": `font2.css`
-}
+  Font1: `font1.css`,
+  Font2: `font2.css`
+};
 
 describe('The loading module', () => {
   afterEach(() => {
@@ -21,7 +25,7 @@ describe('The loading module', () => {
       expect(tag).not.toBeNull(); // The tag was created
       tag?.dispatchEvent(new Event('load')); // The promise will resolve
 
-      expect(promise).resolves.toBe(undefined);
+      await expect(promise).resolves.toBe(undefined);
     });
     test('will fail if the script fails to load', async () => {
       const promise = checkAndLoadScript(SCRIPT_URL);
@@ -30,7 +34,7 @@ describe('The loading module', () => {
       expect(tag).not.toBeNull(); // The tag was created
       tag?.dispatchEvent(new Event('error')); // The promise will reject
 
-      expect(promise).rejects.toContain(SCRIPT_URL);
+      await expect(promise).rejects.toContain(SCRIPT_URL);
     });
     test('will not create a tag if one already exists', async () => {
       const script = document.createElement('script');
@@ -52,7 +56,7 @@ describe('The loading module', () => {
       expect(tag).not.toBeNull(); // The tag was created
       tag?.dispatchEvent(new Event('load')); // The promise will resolve
 
-      expect(promise).resolves.toBe(undefined);
+      await expect(promise).resolves.toBe(undefined);
     });
     test('will fail if the style fails to load', async () => {
       const promise = checkAndLoadStyle(STYLE_URL);
@@ -63,7 +67,7 @@ describe('The loading module', () => {
       expect(tag).not.toBeNull(); // The tag was created
       tag?.dispatchEvent(new Event('error')); // The promise will reject
 
-      expect(promise).rejects.toContain(STYLE_URL);
+      await expect(promise).rejects.toContain(STYLE_URL);
     });
     test('will not create a tag if one already exists', async () => {
       const link = document.createElement('link');
@@ -76,14 +80,14 @@ describe('The loading module', () => {
       expect(tags.length).toBe(1); // A second tag was not created
     });
   });
-  describe("checkAndLoadFonts", () => {
-    let documentFonts : Array<any> = [];
+  describe('checkAndLoadFonts', () => {
+    let documentFonts: Array<any> = [];
 
     beforeEach(() => {
       documentFonts = [];
       //@ts-ignore - needed to be able to stub out font API
       document.fonts = documentFonts;
-    })
+    });
 
     test('Will load missing fonts', async () => {
       const promise = checkAndLoadFonts(FONTS);
@@ -93,14 +97,14 @@ describe('The loading module', () => {
       expect(tag1).not.toBeNull();
       expect(tag2).not.toBeNull();
 
-      tag1?.dispatchEvent(new Event("load"));
-      tag2?.dispatchEvent(new Event("load"));
+      tag1?.dispatchEvent(new Event('load'));
+      tag2?.dispatchEvent(new Event('load'));
 
-      expect(promise).resolves.toBe(undefined);
+      await expect(promise).resolves.toBe(undefined);
     });
 
     test('Will not load fonts that are already loaded', async () => {
-      documentFonts.push({family: "Font2"});
+      documentFonts.push({ family: 'Font2' });
 
       const promise = checkAndLoadFonts(FONTS);
       const tag1 = document.querySelector(`link[href="font1.css"]`);
@@ -109,13 +113,13 @@ describe('The loading module', () => {
       expect(tag1).not.toBeNull();
       expect(tag2).toBeNull();
 
-      tag1?.dispatchEvent(new Event("load"));
+      tag1?.dispatchEvent(new Event('load'));
 
-      expect(promise).resolves.toBe(undefined);
-    })
+      await expect(promise).resolves.toBe(undefined);
+    });
 
     test('Ignores quotes on the family when checking for loaded fonts', async () => {
-      documentFonts.push({family: '"Font2"'});
+      documentFonts.push({ family: '"Font2"' });
 
       const promise = checkAndLoadFonts(FONTS);
       const tag1 = document.querySelector(`link[href="font1.css"]`);
@@ -124,10 +128,10 @@ describe('The loading module', () => {
       expect(tag1).not.toBeNull();
       expect(tag2).toBeNull();
 
-      tag1?.dispatchEvent(new Event("load"));
+      tag1?.dispatchEvent(new Event('load'));
 
-      expect(promise).resolves.toBe(undefined);
-    })
+      await expect(promise).resolves.toBe(undefined);
+    });
 
     test('Still resolves even if fonts fail to load', async () => {
       const promise = checkAndLoadFonts(FONTS);
@@ -137,10 +141,10 @@ describe('The loading module', () => {
       expect(tag1).not.toBeNull();
       expect(tag2).not.toBeNull();
 
-      tag1?.dispatchEvent(new Event("error"));
-      tag2?.dispatchEvent(new Event("error"));
+      tag1?.dispatchEvent(new Event('error'));
+      tag2?.dispatchEvent(new Event('error'));
 
-      expect(promise).resolves.toBe(undefined);
+      await expect(promise).resolves.toBe(undefined);
     });
   });
 });
