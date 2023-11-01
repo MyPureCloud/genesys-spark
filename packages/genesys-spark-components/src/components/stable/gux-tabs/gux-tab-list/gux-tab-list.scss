@@ -6,12 +6,12 @@ gux-tabs {
       .gux-tab-container {
         display: flex;
         flex-direction: column;
-        width: 98px; // COMUI-2327 missing a tabs-set fixedWidth token of 98px.
+        width: var(--gse-ui-tabs-set-vertical-width);
         max-width: 160px;
         height: 100%;
-        margin-right: 16px; // TODO: COMUI-2327
+        margin-right: var(--gse-ui-tabs-set-vertical-marginRight);
         border-right: var(--gse-ui-tabs-item-divider-horizontal-height) solid
-          var(--gse-ui-tabs-item-divider-dividerColor); //TODO: COMUI-2327.
+          var(--gse-ui-tabs-item-divider-dividerColor);
 
         .gux-scroll-button-container {
           width: 100%;
@@ -42,10 +42,10 @@ gux-tabs {
   &:not([orientation='vertical']) {
     > gux-tab-list {
       .gux-tab-container {
-        height: 40px; //TODO : COMUI-2327 - missing tab-set token height.
-        margin-bottom: 16px; // TODO : COMUI-2237
+        height: var(--gse-ui-tabs-set-horizontal-height);
+        margin-bottom: var(--gse-ui-tabs-set-horizontal-marginBottom);
         border-bottom: var(--gse-ui-tabs-item-divider-horizontal-height) solid
-          var(--gse-ui-tabs-item-divider-dividerColor); //TODO: COMUI-2327.
+          var(--gse-ui-tabs-item-divider-dividerColor);
       }
 
       .gux-scrollable-section {
@@ -58,8 +58,9 @@ gux-tabs {
     box-sizing: content-box;
     display: flex;
     width: 100%;
-    overflow: hidden hidden;
-    background-color: transparent; //TODO: COMUI-2327.
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: transparent;
   }
 
   .gux-scrollable-section {
