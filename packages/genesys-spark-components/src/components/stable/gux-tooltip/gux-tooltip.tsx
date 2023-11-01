@@ -13,6 +13,7 @@ import {
   autoUpdate,
   computePosition,
   flip,
+  hide,
   offset,
   shift,
   Placement
@@ -104,11 +105,12 @@ export class GuxTooltip {
     void computePosition(this.forElement, this.root, {
       placement: this.placement,
       strategy: 'fixed',
-      middleware: [offset(16), flip(), shift()]
-    }).then(({ x, y, placement }) => {
+      middleware: [offset(16), flip(), shift(), hide()]
+    }).then(({ x, y, middlewareData, placement }) => {
       Object.assign(this.root.style, {
         left: `${x}px`,
-        top: `${y}px`
+        top: `${y}px`,
+        visibility: middlewareData.hide?.referenceHidden ? 'hidden' : 'visible'
       });
       // data-placement is currently only used for e2e tests
       this.root.setAttribute('data-placement', placement);
