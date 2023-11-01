@@ -60,7 +60,10 @@
       align-self: auto;
       justify-content: center;
       order: 0;
-      height: var(--gse-ui-formControl-input-textfield-height);
+      width: var(--gse-ui-formControl-input-colorPicker-size);
+      height: calc(
+        var(--gse-ui-formControl-input-colorPicker-size) + 2px
+      ); // Adding 2px here so that the width and height are both 34px to make room for the border to render, otherwise it's cut off
       font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
       font-size: var(--gse-ui-formControl-input-contentText-fontSize);
       line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
@@ -68,6 +71,9 @@
       background-color: var(--gse-ui-formControl-input-backgroundColor);
       background-image: none;
       border-radius: var(--gse-ui-formControl-input-borderRadius);
+      border: var(--gse-ui-formControl-input-default-border-width)
+        var(--gse-ui-formControl-input-default-border-style)
+        var(--gse-ui-formControl-input-default-border-color);
 
       &.gux-disabled {
         opacity: var(--gse-ui-formControl-input-disabled-opacity);
