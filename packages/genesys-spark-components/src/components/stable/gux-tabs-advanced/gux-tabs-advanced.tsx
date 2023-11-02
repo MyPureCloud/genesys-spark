@@ -21,7 +21,6 @@ import { trackComponent } from '@utils/tracking/usage';
  */
 
 @Component({
-  styleUrl: 'gux-tabs-advanced.scss',
   tag: 'gux-tabs-advanced',
   shadow: true
 })
@@ -107,12 +106,8 @@ export class GuxTabsAdvanced {
   render(): JSX.Element {
     return (
       <Host>
-        <div class="gux-tabs">
-          <slot name="tab-list"></slot>
-          <div>
-            <slot onSlotchange={this.onSlotchange.bind(this)}></slot>
-          </div>
-        </div>
+        <slot name="tab-list"></slot>
+        <slot onSlotchange={this.onSlotchange.bind(this)}></slot>
       </Host>
     ) as JSX.Element;
   }

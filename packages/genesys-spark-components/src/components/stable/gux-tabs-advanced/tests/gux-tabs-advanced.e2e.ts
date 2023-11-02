@@ -14,7 +14,7 @@ const axeExclusions = [
   },
   {
     issueId: 'aria-required-children',
-    target: '.gux-scrollable-section',
+    target: '.gux-tablist',
     exclusionReason:
       'To be addressed in COMUI-2392. New violation picked up after upgrading from axe-core v4.4.2 to v4.8.2'
   }
@@ -241,7 +241,7 @@ describe('gux-tabs-advanced', () => {
     it('should open and close options popup on click', async () => {
       const page = await newNonrandomE2EPage({ html: htmlExample1 });
       const optionPopoverTarget = await page.find(
-        'gux-tab-advanced[tab-id="1-1"] .gux-tab-options-button'
+        'gux-tab-advanced[tab-id="1-1"] .gux-tab-options-trigger'
       );
 
       await optionPopoverTarget.click();
@@ -251,15 +251,15 @@ describe('gux-tabs-advanced', () => {
       const optionPopover = await page.find(
         'gux-tab-advanced[tab-id="1-1"] gux-popover-list'
       );
-      let optionPopoverHidden = optionPopover.getAttribute('hidden');
+      let optionPopoverOpen = optionPopover.getAttribute('is-open');
 
-      expect(optionPopoverHidden).toBe(null);
+      expect(optionPopoverOpen).toBe('');
 
       await optionPopoverTarget.click();
       await page.waitForChanges();
-      optionPopoverHidden = optionPopover.getAttribute('hidden');
+      optionPopoverOpen = optionPopover.getAttribute('is-open');
 
-      expect(optionPopoverHidden).toBe('');
+      expect(optionPopoverOpen).toBe(null);
     });
   });
 });

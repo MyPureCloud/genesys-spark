@@ -111,7 +111,7 @@ export class GuxTabAdvancedList {
   onFocusin(event: FocusEvent) {
     if (
       this.allowSort &&
-      eventIsFrom('.gux-scrollable-section', event) &&
+      eventIsFrom('.gux-tablist', event) &&
       !this.keyboardSort
     ) {
       this.ariaLiveAlert = 'toggleSort';
@@ -122,7 +122,7 @@ export class GuxTabAdvancedList {
   onFocusout(event: FocusEvent) {
     if (
       !this.root
-        .querySelector('.gux-scrollable-section')
+        .querySelector('.gux-tablist')
         .contains(event.relatedTarget as Node)
     ) {
       this.tabTriggers.forEach((tabTrigger, index) => {
@@ -175,7 +175,7 @@ export class GuxTabAdvancedList {
           !eventIsFrom('.gux-tab-options-button', event)
         ) {
           this.ariaLiveAlert = '';
-          const parentNode = this.root.querySelector('.gux-scrollable-section');
+          const parentNode = this.root.querySelector('.gux-tablist');
           const allNodes = parentNode.querySelectorAll('gux-tab-advanced');
           const targetNodeIndex = Array.prototype.indexOf.call(
             allNodes,
@@ -215,7 +215,7 @@ export class GuxTabAdvancedList {
           !eventIsFrom('.gux-tab-options-button', event)
         ) {
           this.ariaLiveAlert = '';
-          const parentNode = this.root.querySelector('.gux-scrollable-section');
+          const parentNode = this.root.querySelector('.gux-tablist');
           const allNodes = parentNode.querySelectorAll('gux-tab-advanced');
           const targetNodeIndex = Array.prototype.indexOf.call(
             allNodes,
@@ -245,7 +245,7 @@ export class GuxTabAdvancedList {
         if (this.keyboardSort && this.allowSort) {
           this.keyboardSort = false;
           this.ariaLiveAlert = 'sortCancelled';
-          const parentNode = this.root.querySelector('.gux-scrollable-section');
+          const parentNode = this.root.querySelector('.gux-tablist');
           const allNodes = this.tabTriggers;
           const targetNodeIndex = this.initialSortIndex;
           const insertBeforeTab = allNodes[targetNodeIndex] || null;
@@ -327,7 +327,9 @@ export class GuxTabAdvancedList {
             this.emitSortChanged();
           } else {
             this.keyboardSort = true;
-            this.sortTarget = (event.target as Element).parentNode.parentNode;
+            this.sortTarget = (event.target as Element).closest(
+              'gux-tab-advanced'
+            );
             this.tabTriggers.forEach((tabTrigger, index) => {
               const active =
                 tabTrigger.tabId ===
@@ -398,7 +400,7 @@ export class GuxTabAdvancedList {
 
   createSortable() {
     this.sortableInstance = new Sortable(
-      this.root.querySelector('.gux-scrollable-section'),
+      this.root.querySelector('.gux-tablist'),
       {
         animation: 250,
         draggable: 'gux-tab-advanced',
@@ -573,73 +575,82 @@ export class GuxTabAdvancedList {
   }
 
   render(): JSX.Element {
-    const AddNewTabButton = (props: { onClick: () => void }) => {
-      return (
-        <button
-          title={
-            this.disableAddTabButton
-              ? this.i18n('disableNewTab')
-              : this.root.querySelector('[slot="add-tab"]')
-              ? this.root.querySelector('[slot="add-tab"]').textContent.trim()
-              : this.i18n('createNewTab')
-          }
-          class="add-tab-button"
-          onClick={() => props.onClick()}
-          disabled={this.disableAddTabButton}
-        >
-          <slot name="add-tab">
-            <gux-icon icon-name="add" decorative></gux-icon>
-          </slot>
-        </button>
-      ) as JSX.Element;
-    };
     return [
-      <span class="gux-sr-only gux-aria-live-region" aria-live="polite">
-        {this.ariaLiveAlert ? this.i18n(this.ariaLiveAlert) : ''}
-      </span>,
+      this.renderAlert(),
       <div class="gux-tab-container">
-        <div class="action-button-container">
-          {this.renderScrollButton('scrollLeft')}
+        {this.renderScrollButton('scrollLeft')}
+
+        <div class="gux-scrollable-section">
+          <div
+            class="gux-tablist"
+            role="tablist"
+            data-gux-tab-sorting={this.keyboardSort}
+            aria-owns={this.triggerIds}
+          >
+            <slot></slot>
+          </div>
+          {this.renderAddButton()}
         </div>
 
-        <div
-          role="tablist"
-          class={`gux-scrollable-section ${
-            this.keyboardSort ? 'gux-tab-sorting' : ''
-          }`}
-          aria-owns={this.triggerIds}
-        >
-          <slot></slot>
-        </div>
-
-        <div class="action-button-container">
-          {this.renderScrollButton('scrollRight')}
-
-          {this.showNewTabButton ? (
-            <AddNewTabButton onClick={() => this.newTab.emit()} />
-          ) : null}
-        </div>
+        {this.renderScrollButton('scrollRight')}
       </div>
     ] as JSX.Element;
   }
 
+  private renderAlert(): JSX.Element {
+    return (
+      <div class="gux-sr-only gux-aria-live-region" aria-live="polite">
+        {this.ariaLiveAlert ? this.i18n(this.ariaLiveAlert) : ''}
+      </div>
+    ) as JSX.Element;
+  }
+
+  private renderAddButton(): JSX.Element {
+    return (
+      <div>
+        {this.showNewTabButton ? (
+          <gux-button-slot class="gux-add-button" accent="ghost">
+            <button
+              onClick={() => this.newTab.emit()}
+              disabled={this.disableAddTabButton}
+            >
+              <slot name="add-tab">
+                <gux-icon
+                  icon-name="add"
+                  screenreader-text={
+                    this.disableAddTabButton
+                      ? this.i18n('disableNewTab')
+                      : this.root.querySelector('[slot="add-tab"]')
+                      ? this.root
+                          .querySelector('[slot="add-tab"]')
+                          .textContent.trim()
+                      : this.i18n('createNewTab')
+                  }
+                ></gux-icon>
+              </slot>
+            </button>
+          </gux-button-slot>
+        ) : null}
+      </div>
+    ) as JSX.Element;
+  }
+
   private renderScrollButton(direction: string): JSX.Element {
     return (
-      <div class="gux-scroll-button-container">
+      <div>
         {this.hasScrollbar ? (
-          <button
-            tabindex="-1"
-            title={this.i18n(direction)}
-            aria-label={this.i18n(direction)}
-            class="gux-scroll-button"
-            onDragOver={() => this.getScrollDirection(direction)}
-            onClick={() => this.getScrollDirection(direction)}
-          >
-            <gux-icon
-              icon-name={this.getChevronIconName(direction)}
-              decorative={true}
-            />
-          </button>
+          <gux-button-slot class="gux-scroll-button" accent="ghost">
+            <button
+              tabindex="-1"
+              onDragOver={() => this.getScrollDirection(direction)}
+              onClick={() => this.getScrollDirection(direction)}
+            >
+              <gux-icon
+                icon-name={this.getChevronIconName(direction)}
+                screenreader-text={this.i18n(direction)}
+              />
+            </button>
+          </gux-button-slot>
         ) : null}
       </div>
     ) as JSX.Element;
