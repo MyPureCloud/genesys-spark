@@ -1,6 +1,6 @@
 # Deprecated Spacing Classes
 
-In V4, we are using Spark tokens and will no longer be exporting the following classes. Replace instances of the following classes with the corresponding px values.
+In V4, we are using Spark tokens and will no longer be exporting the following classes. Replace instances of the following classes with the corresponding px values. Read more about the new Spark 4.0 Design System spacing guidelines on the [Spark Design System documentation site](https://spark.genesys.com/latest/foundations/spacing/design-MpmyI1Ym)
 
 | class name         | value |
 | ------------------ | ----- |

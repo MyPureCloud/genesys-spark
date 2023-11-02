@@ -40,9 +40,9 @@ export async function bootstrap() {
                   .join('')}
                   <div class="sticky-footer">
                   <h2>Resources</h2>
-                    <a class="resources-link" href="https://github.com/MyPureCloud/genesys-webcomponents/tree/main/packages/genesys-spark-components/documentation/migrations/v3" target="_blank">V2 -> V3 Migration Guide</a>
-                    <a class="resources-link" href="https://spark.genesys.com" target="_blank">Spark UX Documentation</a>
-                    <a class="resources-link" href="https://github.com/MyPureCloud/genesys-webcomponents/blob/main/README.md#genesys-web-components" target="_blank">Web Components README</a>
+                    <a class="resources-link" href="https://github.com/MyPureCloud/genesys-spark/tree/main/packages/genesys-spark-components/documentation/migrations/v4" target="_blank">V3 -> V4 Migration Guide</a>
+                    <a class="resources-link" href="https://spark.genesys.com" target="_blank">Spark 4.0 UX Documentation</a>
+                    <a class="resources-link" href="https://github.com/MyPureCloud/genesys-spark/blob/main/README.md#genesys-web-components" target="_blank">Genesys Spark Components README</a>
                   </div>
             </nav>
             <iframe id="componentFrame" title="Component Examples"/>
