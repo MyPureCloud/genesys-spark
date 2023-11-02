@@ -6,7 +6,8 @@
     flex-wrap: nowrap;
     place-content: stretch flex-start;
     align-items: flex-start;
-    padding: var(--gse-ui-formControl-helper-padding);
+    justify-content: flex-start;
+    padding: var(--gse-ui-formControl-helper-paddingSmall);
     font-family: var(--gse-ui-formControl-helper-helperText-fontFamily);
     font-size: var(--gse-ui-formControl-helper-helperText-fontSize);
     line-height: var(--gse-ui-formControl-helper-helperText-lineHeight);
