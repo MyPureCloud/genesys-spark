@@ -1,5 +1,6 @@
 @import (reference) '../../../../style/color.less';
 @import (reference) '../../../../style/typography.less';
+@import (reference) '../../../../style/focus.less';
 
 .gux-breadcrumb-generation {
   display: flex;
@@ -23,6 +24,11 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+
+    &:focus-visible {
+      border-radius: 4px;
+      .gux-focus-ring();
     }
   }
 
