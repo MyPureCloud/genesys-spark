@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.108.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.108.1...v3.108.2) (2023-11-02)
+
+
+### Bug Fixes
+
+* **tooltip:** hiding tooltip when target is scrolled out of view (backport) ([55132ca](https://github.com/MyPureCloud/genesys-spark/commit/55132cabd20cb35e5ad55f46e4cf2e60eb827b5e))
+
 ### [3.108.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.108.0...v3.108.1) (2023-11-01)
 
 
