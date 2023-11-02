@@ -1,10 +1,11 @@
-// I could not find anything about the focus ring but its color. I made temporary variables for now
-$temp-focus-ring-width: 2px;
-$temp-focus-ring-offset: 3px;
-$temp-focus-ring-corner-radius: 4px;
+@use '../../../../style/_focus.scss';
 
 /**
-  * @prop --gse-semantic-color-focus : //TODO https://inindca.atlassian.net/browse/COMUI-2115
+  * @prop --gse-semantic-focusRing-cornerRadius
+  * @prop --gse-semantic-focusRing-default-border-color
+  * @prop --gse-semantic-focusRing-default-border-style
+  * @prop --gse-semantic-focusRing-default-border-width
+  * @prop --gse-semantic-focusRing-offset
   * @prop --gse-ui-breadcrumbs-primary-height
   * @prop --gse-ui-breadcrumbs-primary-separator-padding
   * @prop --gse-ui-breadcrumbs-primary-separator-typography-fontFamily
@@ -144,11 +145,9 @@ $temp-focus-ring-corner-radius: 4px;
       }
 
       &:focus-visible {
-        border-radius: calc(
-          $temp-focus-ring-corner-radius - $temp-focus-ring-offset
-        );
-        outline: $temp-focus-ring-width solid var(--gse-semantic-color-focus);
-        outline-offset: $temp-focus-ring-offset;
+        @include focus.gux-focus-ring;
+
+        border-radius: var(--gse-semantic-focusRing-cornerRadius);
       }
     }
   }
