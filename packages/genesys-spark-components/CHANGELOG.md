@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.108.3](https://github.com/MyPureCloud/genesys-spark/compare/v3.108.2...v3.108.3) (2023-11-03)
+
+
+### Bug Fixes
+
+* **breadcrumb:** adding default focus styling to breadcrumb-item ([19db782](https://github.com/MyPureCloud/genesys-spark/commit/19db782df9c18e226630ccc7f9675a22bb96d59d))
+
 ### [3.108.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.108.1...v3.108.2) (2023-11-02)
 
 
