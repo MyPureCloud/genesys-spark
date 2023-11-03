@@ -61,9 +61,8 @@
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: flex-start;
+    place-content: flex-start flex-start;
     align-items: center;
-    justify-content: flex-start;
 
     ~ .gux-datepicker-field {
       margin-left: 20px; // TODO: COMUI-2299
@@ -97,9 +96,8 @@
       flex-direction: row;
       flex-wrap: nowrap;
       gap: var(--gse-ui-formControl-input-gap);
-      align-content: stretch;
+      place-content: stretch center;
       align-items: center;
-      justify-content: center;
       width: 100%;
       height: var(--gse-ui-formControl-input-textfield-height);
       padding: var(--gse-ui-formControl-input-padding);
@@ -166,12 +164,12 @@
           align-self: auto;
           justify-content: center;
           order: 0;
+          padding: 2; // TODO: COMUI-2299
           color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
           background: transparent;
           border: none;
           border-radius: var(--gse-ui-actionButton-borderRadius);
           outline: none;
-          padding: 2; // TODO: COMUI-2299
 
           &:focus-within {
             @include gse-ui-focus;

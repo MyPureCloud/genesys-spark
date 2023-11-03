@@ -22,9 +22,8 @@
   flex-direction: row;
   flex-wrap: nowrap;
   gap: var(--gse-ui-dataTableItems-editColumn-editColumnItem-gap);
-  align-content: stretch;
+  place-content: stretch flex-start;
   align-items: center;
-  justify-content: flex-start;
   margin-bottom: -2px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
   border-top: 2px solid transparent; //TODO https://inindca.atlassian.net/browse/COMUI-2314
   border-bottom: 2px solid transparent; //TODO https://inindca.atlassian.net/browse/COMUI-2314

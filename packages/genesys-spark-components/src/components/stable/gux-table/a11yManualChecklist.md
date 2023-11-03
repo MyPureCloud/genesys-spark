@@ -1,4 +1,5 @@
 # gux-table manual accessibility testing status
+
 **Last Updated:** Mon Jan 03 2022 15:16:03 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |

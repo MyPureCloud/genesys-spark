@@ -54,8 +54,7 @@
   display: flex;
   flex-direction: row;
   gap: var(--gse-ui-tooltip-gap);
-  align-content: center;
-  justify-content: flex-start;
+  place-content: center flex-start;
   padding: var(--gse-ui-tooltip-padding);
   font-family: var(--gse-ui-tooltip-text-fontFamily);
   font-size: var(--gse-ui-tooltip-text-fontSize);

@@ -110,9 +110,8 @@ $temp-focus-ring-corner-radius: 4px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: flex-start;
+  place-content: flex-start flex-start;
   align-items: center;
-  justify-content: flex-start;
   min-height: var(--gse-ui-breadcrumbs-secondary-height);
 
   .gux-breadcrumb-content {

@@ -29,9 +29,8 @@
   .gux-popover-header {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    place-content: center space-between;
     align-items: center;
-    justify-content: space-between;
     padding-bottom: var(--gse-ui-popover-gap);
     font-family: var(--gse-ui-popover-title-text-fontFamily);
     font-size: var(--gse-ui-popover-title-text-fontSize);

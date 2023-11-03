@@ -18,9 +18,8 @@ gux-pagination-buttons-legacy {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
-    align-content: stretch;
+    place-content: stretch flex-end;
     align-items: center;
-    justify-content: flex-end;
     margin-left: var(
       --gse-ui-dataTableItems-tablePagination-recordsetControls-gap
     );
@@ -44,9 +43,8 @@ gux-pagination-buttons-legacy {
       flex-direction: row;
       flex-wrap: nowrap;
       gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
-      align-content: stretch;
+      place-content: stretch center;
       align-items: center;
-      justify-content: center;
 
       & > div {
         flex: 0 1 auto;
@@ -70,9 +68,8 @@ gux-pagination-buttons-legacy {
       flex-direction: row;
       flex-wrap: nowrap;
       gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
-      align-content: stretch;
+      place-content: stretch center;
       align-items: center;
-      justify-content: center;
 
       .gux-pagination-buttons-list-button {
         height: 32px;

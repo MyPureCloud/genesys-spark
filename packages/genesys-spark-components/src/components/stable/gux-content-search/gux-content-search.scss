@@ -109,9 +109,8 @@
     flex-grow: 1;
     flex-shrink: 0;
     gap: var(--gse-ui-formControl-input-gap);
-    align-content: center;
+    place-content: center flex-end;
     align-items: center;
-    justify-content: flex-end;
     padding: 0;
 
     gux-icon {

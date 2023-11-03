@@ -1,9 +1,9 @@
 button {
+  padding: 0;
   color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
   background: transparent;
   border: none;
   border-radius: var(--gse-ui-formControl-input-borderRadius);
-  padding: 0;
 
   &:not(:disabled):focus-visible,
   &:not(:disabled):hover {

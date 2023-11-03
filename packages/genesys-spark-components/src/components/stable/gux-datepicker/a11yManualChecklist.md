@@ -1,4 +1,5 @@
 # gux-datepicker manual accessibility testing status
+
 **Last Updated:** Wed Dec 22 2021 14:42:55 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
@@ -10,6 +11,6 @@
 | ✅ | [3.2.1 On Focus](https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html) | - |
 | ✅ | [3.2.2 On Input](https://www.w3.org/WAI/WCAG21/Understanding/on-input.html) | - |
 | ✅ | [3.3.1 Error Identification](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html) | - |
-| ❌ | [3.2.2 Labels or Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html) | The input for the date does not communicate what format is expected  |
+| ❌ | [3.2.2 Labels or Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html) | The input for the date does not communicate what format is expected |
 | ✅ | [4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) | - |
 | ✅ | [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html) | - |
