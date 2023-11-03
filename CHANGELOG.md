@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.54](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.53...v4.0.0-beta.54) (2023-11-03)
+
+
+### Bug Fixes
+
+* **gux-copy-to-clipboard:** token fixes ([11f3218](https://github.com/MyPureCloud/genesys-spark/commit/11f3218daabcd7aaa1147d6fa785aa5cec0dc1fb))
+* **gux-popover:** added token for arrow ([68c2026](https://github.com/MyPureCloud/genesys-spark/commit/68c202625ff16990ba295809f3f778254034c30d))
+* **tooltip:** hiding tooltip when target is scrolled out of view ([64ebbb5](https://github.com/MyPureCloud/genesys-spark/commit/64ebbb558ea1c3ea164ce5c8605b4048ffbee8d3))
+
 ## [4.0.0-beta.53](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.52...v4.0.0-beta.53) (2023-11-01)
 
 
