@@ -66,6 +66,7 @@ button {
         --gse-ui-copyToClipboard-label-active-backgroundColor
       );
       border-radius: var(--gse-ui-copyToClipboard-label-borderRadius);
+      flex-shrink: 0;
     }
   }
 
