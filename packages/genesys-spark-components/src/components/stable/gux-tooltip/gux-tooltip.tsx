@@ -16,8 +16,7 @@ import {
   hide,
   offset,
   shift,
-  Placement,
-  arrow
+  Placement
 } from '@floating-ui/dom';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
@@ -36,7 +35,6 @@ import { GuxTooltipAccent } from './gux-tooltip-types';
 })
 export class GuxTooltip {
   private forElement: HTMLElement;
-  private arrowElement: HTMLDivElement;
 
   private pointerenterHandler: () => void = () => this.show();
   private pointerleaveHandler: () => void = () => this.hide();
@@ -62,9 +60,6 @@ export class GuxTooltip {
 
   @Prop()
   accent: GuxTooltipAccent = 'light';
-
-  @Prop()
-  anchor: boolean = false;
 
   /**
    * If tooltip is shown or not
@@ -114,15 +109,11 @@ export class GuxTooltip {
   private updatePosition(): void {
     const middleware = [offset(16), flip(), shift(), hide()];
 
-    if (this.anchor) {
-      middleware.push(arrow({ element: this.arrowElement }));
-    }
-
     void computePosition(this.forElement, this.root, {
       placement: this.placement,
       strategy: 'fixed',
       middleware: middleware
-    }).then(({ x, y, middlewareData, placement }) => {
+    }).then(({ x, y, middlewareData }) => {
       Object.assign(this.root.style, {
         left: `${x}px`,
         top: `${y}px`,
@@ -130,30 +121,6 @@ export class GuxTooltip {
       });
       //data-placement needed on the for e2e tests.
       this.root.setAttribute('data-placement', this.placement);
-
-      const side = placement.split('-')[0];
-
-      const staticSide = {
-        top: 'bottom',
-        right: 'left',
-        bottom: 'top',
-        left: 'right'
-      }[side];
-
-      if (middlewareData.arrow) {
-        //This is 13 because this makes the arrow look aligned.
-        const arrowLen = 13;
-        const { x, y } = middlewareData.arrow;
-
-        Object.assign(this.arrowElement.style, {
-          left: x != null ? `${x}px` : '',
-          top: y != null ? `${y}px` : '',
-          right: '',
-          bottom: '',
-          [staticSide]: `${-arrowLen / 2}px`,
-          transform: 'rotate(45deg)'
-        });
-      }
     });
   }
   private show(): void {
@@ -183,17 +150,6 @@ export class GuxTooltip {
       console.error(
         `gux-tooltip: invalid element supplied to 'for': "${this.for}"`
       );
-    }
-  }
-
-  private renderAnchor(): JSX.Element {
-    if (this.anchor) {
-      return (
-        <div
-          ref={(el: HTMLDivElement) => (this.arrowElement = el)}
-          class="gux-arrow"
-        ></div>
-      ) as JSX.Element;
     }
   }
 
@@ -250,7 +206,6 @@ export class GuxTooltip {
           data-placement={this.placement}
         >
           <slot />
-          {this.renderAnchor()}
         </div>
       </Host>
     ) as JSX.Element;
