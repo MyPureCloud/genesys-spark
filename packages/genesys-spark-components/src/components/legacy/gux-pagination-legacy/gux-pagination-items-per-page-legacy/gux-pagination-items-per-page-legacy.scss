@@ -4,9 +4,8 @@ gux-pagination-items-per-page-legacy {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
-    align-content: stretch;
+    place-content: stretch center;
     align-items: center;
-    justify-content: center;
 
     & > div {
       flex: 0 1 auto;

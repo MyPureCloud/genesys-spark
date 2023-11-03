@@ -3,4 +3,8 @@ playgrounds/
 shared-configs/
 web-apps/
 
+packages/genesys-spark-components/src/components/**/readme.md
+packages/genesys-spark-tokens/data/tokens.json
+packages/genesys-spark-visualizations/src/components/**/readme.md
+
 CHANGELOG.md

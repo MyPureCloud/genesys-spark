@@ -71,9 +71,8 @@ button {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: var(--gse-ui-segmentedControl-button-gap);
-    align-content: stretch;
+    place-content: stretch flex-start;
     align-items: center;
-    justify-content: flex-start;
     height: 100%;
     padding: var(--gse-ui-segmentedControl-button-padding);
     color: var(--gse-ui-segmentedControl-button-default-foregroundColor);

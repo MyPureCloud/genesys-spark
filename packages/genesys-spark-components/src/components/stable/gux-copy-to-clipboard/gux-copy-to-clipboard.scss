@@ -38,9 +38,9 @@ button {
 
   .gux-copy-content {
     display: inherit;
+    gap: var(--gse-ui-copyToClipboard-contentContainer-gap);
     align-items: inherit;
     cursor: pointer;
-    gap: var(--gse-ui-copyToClipboard-contentContainer-gap);
 
     ::slotted(*) {
       padding: var(--gse-ui-copyToClipboard-label-padding);

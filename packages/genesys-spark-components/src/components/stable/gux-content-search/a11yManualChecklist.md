@@ -1,4 +1,5 @@
 # gux-content-search manual accessibility testing status
+
 **Last Updated:** Tue Jul 25 2023 14:44:34 GMT-0400 (Eastern Daylight Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |

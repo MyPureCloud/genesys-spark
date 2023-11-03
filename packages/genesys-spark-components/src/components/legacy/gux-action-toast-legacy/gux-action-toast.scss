@@ -4,9 +4,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-content: stretch;
+  place-content: stretch flex-start;
   align-items: stretch;
-  justify-content: flex-start;
   width: 270px;
   padding: 20px 24px;
   margin-bottom: 4px;
@@ -24,10 +23,9 @@
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: stretch;
+  place-content: stretch flex-start;
   align-items: center;
   align-self: auto;
-  justify-content: flex-start;
   order: 0;
 
   @include typography.heading-lg;
@@ -64,9 +62,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: stretch;
+    place-content: stretch flex-start;
     align-items: flex-start;
-    justify-content: flex-start;
     margin: 0;
   }
 }
@@ -76,10 +73,9 @@
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: stretch;
+  place-content: stretch space-between;
   align-items: flex-start;
   align-self: auto;
-  justify-content: space-between;
   order: 0;
 
   .gux-negative-button {
@@ -100,10 +96,9 @@
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: stretch;
+  place-content: stretch space-between;
   align-items: flex-start;
   align-self: auto;
-  justify-content: space-between;
   order: 0;
 
   .gux-negative-button {

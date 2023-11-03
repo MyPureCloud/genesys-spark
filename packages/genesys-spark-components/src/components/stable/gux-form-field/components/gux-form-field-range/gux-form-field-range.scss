@@ -78,10 +78,9 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: stretch;
-    align-items: center;
-    justify-content: flex-start;
     gap: var(--gse-ui-slider-gap);
+    place-content: stretch flex-start;
+    align-items: center;
     // We will not use a token for this height style below
     height: 32px;
     font-size: var(--gse-ui-slider-label-text-fontSize);

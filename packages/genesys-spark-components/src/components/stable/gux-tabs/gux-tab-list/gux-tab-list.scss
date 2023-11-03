@@ -58,8 +58,7 @@ gux-tabs {
     box-sizing: content-box;
     display: flex;
     width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden hidden;
     background-color: transparent; //TODO: COMUI-2327.
   }
 

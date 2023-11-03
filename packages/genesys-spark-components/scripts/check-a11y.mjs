@@ -149,13 +149,13 @@ function createComponentList(componentStability) {
 }
 
 function getMarkdown(componentName, a11yRuleAnswers) {
-  let markdown = `# ${componentName} manual accessibility testing status\n**Last Updated:** ${new Date().toISOString()}\n| Pass | WCAG Success Criterion | Notes |\n| --- | --- | --- |`;
+  let markdown = `# ${componentName} manual accessibility testing status\n\n**Last Updated:** ${new Date().toISOString()}\n| Pass | WCAG Success Criterion | Notes |\n| --- | --- | --- |\n`;
   a11yRules.forEach(rule => {
     const testSuccess = a11yRuleAnswers.a11yCheck[rule.id].success
       ? '✅'
       : '❌';
     const testDetails = a11yRuleAnswers.a11yCheck[rule.id].details;
-    markdown += `\n| ${testSuccess} | [${rule.title}](${rule.link}) | ${testDetails} |`;
+    markdown += `| ${testSuccess} | [${rule.title}](${rule.link}) | ${testDetails} |\n`;
   });
   return markdown;
 }

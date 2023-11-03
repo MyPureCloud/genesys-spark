@@ -1,4 +1,5 @@
 # gux-pagination-legacy manual accessibility testing status
+
 **Last Updated:** Thu Dec 16 2021 10:57:46 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |

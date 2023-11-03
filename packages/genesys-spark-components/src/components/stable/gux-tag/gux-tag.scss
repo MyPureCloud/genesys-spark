@@ -45,9 +45,8 @@
   flex-direction: row;
   flex-wrap: nowrap;
   gap: var(--gse-ui-tag-removable-gap);
-  align-content: stretch;
+  place-content: stretch flex-start;
   align-items: center;
-  justify-content: flex-start;
   height: var(--gse-ui-tag-height);
   padding: var(--gse-ui-tag-padding);
   font-family: var(--gse-ui-tag-text-fontFamily);
@@ -87,9 +86,8 @@
   .gux-tag-remove-button {
     all: unset;
     display: flex;
-    align-content: center;
+    place-content: center center;
     align-items: center;
-    justify-content: center;
 
     &:not(:disabled):hover {
       cursor: pointer;

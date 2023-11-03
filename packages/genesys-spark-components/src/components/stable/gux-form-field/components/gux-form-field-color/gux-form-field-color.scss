@@ -55,10 +55,9 @@
       flex-direction: row;
       flex-wrap: nowrap;
       gap: var(--gse-ui-formControl-input-gap);
-      align-content: stretch;
+      place-content: stretch center;
       align-items: center;
       align-self: auto;
-      justify-content: center;
       order: 0;
       height: var(--gse-ui-formControl-input-textfield-height);
       font-family: var(--gse-ui-formControl-input-contentText-fontFamily);

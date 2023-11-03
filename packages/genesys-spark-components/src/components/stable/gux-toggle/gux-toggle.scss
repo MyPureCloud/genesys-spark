@@ -54,9 +54,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: var(--gse-ui-toggle-gap);
-    align-content: stretch;
+    place-content: stretch flex-start;
     align-items: flex-start;
-    justify-content: flex-start;
 
     .gux-toggle-label {
       position: relative;
@@ -89,9 +88,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        align-content: stretch;
+        place-content: stretch center;
         align-items: center;
-        justify-content: center;
       }
     }
   }
@@ -101,9 +99,8 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      align-content: stretch;
+      place-content: stretch flex-start;
       align-items: flex-start;
-      justify-content: flex-start;
       font-size: var(--gse-ui-toggle-label-fontSize);
       color: var(--gse-ui-formControl-helper-errorColor);
 

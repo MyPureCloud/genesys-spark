@@ -19,9 +19,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-content: stretch;
+  place-content: stretch center;
   align-items: center;
-  justify-content: center;
 
   .gux-no-matches {
     box-sizing: border-box;

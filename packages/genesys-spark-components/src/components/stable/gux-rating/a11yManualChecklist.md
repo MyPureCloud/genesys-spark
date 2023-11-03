@@ -1,4 +1,5 @@
 # gux-rating manual accessibility testing status
+
 **Last Updated:** Wed Dec 22 2021 09:46:49 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |

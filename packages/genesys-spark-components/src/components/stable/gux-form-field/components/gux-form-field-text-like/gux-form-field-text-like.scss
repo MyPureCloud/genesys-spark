@@ -56,9 +56,8 @@ slot[name='suffix'] {
       flex-direction: row;
       flex-wrap: nowrap;
       gap: var(--gse-ui-formControl-input-gap);
-      align-content: stretch;
+      place-content: stretch center;
       align-items: center;
-      justify-content: center;
       width: 100%;
       height: var(--gse-ui-formControl-input-textfield-height);
       padding: var(--gse-ui-formControl-input-padding);

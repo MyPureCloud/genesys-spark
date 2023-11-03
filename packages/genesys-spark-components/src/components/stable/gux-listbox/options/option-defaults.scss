@@ -5,9 +5,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: var(--gse-ui-menu-option-gap);
-    align-content: stretch;
+    place-content: stretch center;
     align-items: center;
-    justify-content: center;
     height: var(--gse-ui-menu-option-height);
     padding: var(--gse-ui-menu-option-padding);
     font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
