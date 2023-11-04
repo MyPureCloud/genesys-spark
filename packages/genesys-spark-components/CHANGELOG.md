@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.108.4](https://github.com/MyPureCloud/genesys-spark/compare/v3.108.3...v3.108.4) (2023-11-04)
+
+
+### Bug Fixes
+
+* **copy-to-clipboard:** prevent icon from shrinking ([297a8b1](https://github.com/MyPureCloud/genesys-spark/commit/297a8b149c6f6a160a382ac041087d65d717fbb0))
+
 ### [3.108.3](https://github.com/MyPureCloud/genesys-spark/compare/v3.108.2...v3.108.3) (2023-11-03)
 
 
