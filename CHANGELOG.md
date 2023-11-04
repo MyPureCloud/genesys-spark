@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.55](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.54...v4.0.0-beta.55) (2023-11-04)
+
+
+### Bug Fixes
+
+* **breadcrumb:** adding focus tokens ([442d397](https://github.com/MyPureCloud/genesys-spark/commit/442d3975eab3b87d228113b6697c01b35f103c16))
+* **copy-to-clipboard:** prevent icon from shrinking ([2b65c92](https://github.com/MyPureCloud/genesys-spark/commit/2b65c9278268aca2163c8cc10a969e8ef0658660))
+
 ## [4.0.0-beta.54](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.53...v4.0.0-beta.54) (2023-11-03)
 
 
