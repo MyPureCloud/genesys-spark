@@ -35,5 +35,5 @@ export function registerSparkComponents(): Promise<void> {
   ]).then();
 }
 
-// TODO: Build out utility functions where components aren't the right solution
-// export function formatDate(...)
+// Re-export of utility modules
+export * as Intl from './intl';
