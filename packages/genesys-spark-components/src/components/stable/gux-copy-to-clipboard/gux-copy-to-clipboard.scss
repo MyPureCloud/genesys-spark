@@ -58,6 +58,7 @@ button {
     }
 
     gux-icon[icon-name='copy'] {
+      flex-shrink: 0;
       width: var(--gse-ui-icon-size-sm);
       height: var(--gse-ui-icon-size-sm);
       padding: var(--gse-ui-copyToClipboard-iconContainer-padding);
@@ -66,7 +67,6 @@ button {
         --gse-ui-copyToClipboard-label-active-backgroundColor
       );
       border-radius: var(--gse-ui-copyToClipboard-label-borderRadius);
-      flex-shrink: 0;
     }
   }
 

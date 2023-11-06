@@ -58,33 +58,6 @@
 </section>
 
 <section>
-  <h3>anchor</h3>
-  <p>Renders an arrow or anchor element with the tooltip.</p>
-  <div class="flex-container">
-    <div class="flex-example">
-      <h4 class="flex-header">true</h4>
-      <div class="flex-content">
-        <gux-button
-          >Hover<gux-tooltip anchor="true"
-            >Tooltip with anchor</gux-tooltip
-          ></gux-button
-        >
-      </div>
-    </div>
-    <div class="flex-example">
-      <h4 class="flex-header">false</h4>
-      <div class="flex-content">
-        <gux-button
-          >Hover<gux-tooltip anchor="false"
-            >Tooltip without anchor</gux-tooltip
-          ></gux-button
-        >
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
   <h3>for</h3>
   <p>
     Links the tooltip to an element by <em>id</em> instead of its parent node.
@@ -127,7 +100,6 @@
     Indicates preferred placement of the tooltip. Tooltip will shift based on
     available space.
   </p>
-  <h4>Without Anchors</h4>
   <div class="grid-example">
     <div></div>
     <div class="grid-content" id="top-start">top-start</div>
@@ -183,138 +155,72 @@
     >
   </div>
 
-  <h4>With Anchors</h4>
-  <div class="grid-example">
-    <div></div>
-    <div class="grid-content" id="top-start-anchor">top-start</div>
-    <div class="grid-content" id="top-anchor">top</div>
-    <div class="grid-content" id="top-end-anchor">top-end</div>
-    <div></div>
-    <div class="grid-content" id="left-start-anchor">left-start</div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="grid-content" id="right-start-anchor">right-start</div>
-    <div class="grid-content" id="left-anchor">left</div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="grid-content" id="right-anchor">right</div>
-    <div class="grid-content" id="left-end-anchor">left-end</div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="grid-content" id="right-end-anchor">right-end</div>
-    <div></div>
-    <div class="grid-content" id="bottom-start-anchor">bottom-start</div>
-    <div class="grid-content" id="bottom-anchor">bottom</div>
-    <div class="grid-content" id="bottom-end-anchor">bottom-end</div>
-    <div></div>
+  <h2>Methods</h2>
 
-    <gux-tooltip for="top-start-anchor" placement="top-start" anchor
-      >Top start tooltip</gux-tooltip
-    >
-    <gux-tooltip for="top-anchor" placement="top" anchor
-      >Top tooltip</gux-tooltip
-    >
-    <gux-tooltip for="top-end-anchor" placement="top-end" anchor
-      >Top end tooltip</gux-tooltip
-    >
-    <gux-tooltip for="left-start-anchor" placement="left-start" anchor
-      >Left start tooltip</gux-tooltip
-    >
-    <gux-tooltip for="right-start-anchor" placement="right-start" anchor
-      >Right start tooltip</gux-tooltip
-    >
-    <gux-tooltip for="left-anchor" placement="left" anchor
-      >Left tooltip</gux-tooltip
-    >
-    <gux-tooltip for="right-anchor" placement="right" anchor
-      >Right tooltip</gux-tooltip
-    >
-    <gux-tooltip for="left-end-anchor" placement="left-end" anchor
-      >Left end tooltip</gux-tooltip
-    >
-    <gux-tooltip for="right-end-anchor" placement="right-end" anchor
-      >Right end tooltip</gux-tooltip
-    >
-    <gux-tooltip for="bottom-start-anchor" placement="bottom-start" anchor
-      >Bottom start tooltip</gux-tooltip
-    >
-    <gux-tooltip for="bottom-anchor" placement="bottom" anchor
-      >Bottom tooltip</gux-tooltip
-    >
-    <gux-tooltip for="bottom-end-anchor" placement="bottom-end" anchor
-      >Bottom end tooltip</gux-tooltip
-    >
-  </div>
+  <section>
+    <h3>hideTooltip</h3>
+    <code>hideTooltip() =&gt; Promise&lt;void&gt;</code>
+    <p>Hides the tooltip if it is currently visible.</p>
+  </section>
+
+  <section>
+    <h3>showTooltip</h3>
+    <code>showTooltip() =&gt; Promise&lt;void&gt;</code>
+    <p>Show the tooltip if it is currently hidden.</p>
+  </section>
+
+  <style>
+    .no-overflow {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .flex-example {
+      width: 250px;
+      min-width: 250px;
+    }
+
+    .flex-header {
+      width: fit-content;
+      margin: auto;
+      font-weight: 400;
+    }
+
+    .flex-content {
+      width: fit-content;
+      margin: auto;
+    }
+
+    .grid-example {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+      width: 600px;
+      margin-left: 150px;
+    }
+
+    .grid-content {
+      padding: 20px 0;
+      font-weight: bold;
+      text-align: center;
+      background-color: aliceblue;
+      border: 1px solid lightblue;
+      border-radius: 5px;
+    }
+
+    p {
+      max-width: 600px;
+    }
+
+    strong {
+      background-color: yellow;
+    }
+  </style>
 </section>
-
-<h2>Methods</h2>
-
-<section>
-  <h3>hideTooltip</h3>
-  <code>hideTooltip() =&gt; Promise&lt;void&gt;</code>
-  <p>Hides the tooltip if it is currently visible.</p>
-</section>
-
-<section>
-  <h3>showTooltip</h3>
-  <code>showTooltip() =&gt; Promise&lt;void&gt;</code>
-  <p>Show the tooltip if it is currently hidden.</p>
-</section>
-
-<style>
-  .no-overflow {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .flex-example {
-    width: 250px;
-    min-width: 250px;
-  }
-
-  .flex-header {
-    width: fit-content;
-    margin: auto;
-    font-weight: 400;
-  }
-
-  .flex-content {
-    width: fit-content;
-    margin: auto;
-  }
-
-  .grid-example {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 25px;
-    width: 600px;
-    margin-left: 150px;
-  }
-
-  .grid-content {
-    padding: 20px 0;
-    font-weight: bold;
-    text-align: center;
-    background-color: aliceblue;
-    border: 1px solid lightblue;
-    border-radius: 5px;
-  }
-
-  p {
-    max-width: 600px;
-  }
-
-  strong {
-    background-color: yellow;
-  }
-</style>
