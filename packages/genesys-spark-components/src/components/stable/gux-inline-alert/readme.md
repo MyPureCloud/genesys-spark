@@ -1,4 +1,4 @@
-# gux-alert
+# gux-inline-alert
 
 
 
