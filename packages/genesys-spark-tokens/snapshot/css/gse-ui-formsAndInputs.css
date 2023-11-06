@@ -88,7 +88,7 @@
   --gse-ui-menu-boxShadow-spread: 1px;
   --gse-ui-menu-boxShadow-color: #23395c1a;
   --gse-ui-menu-boxShadow-type: dropShadow;
-  --gse-ui-menu-padding: 8px 1px;
+  --gse-ui-menu-padding: 8px 0px;
   --gse-ui-menu-backgroundColor: #ffffff;
   --gse-ui-menu-scrollbar-foregroundColor: #626e84;
   --gse-ui-dropdown-menu-emptyState-header-text-fontFamily: Noto Sans;
