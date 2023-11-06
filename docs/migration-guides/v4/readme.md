@@ -10,6 +10,8 @@
   - [V3 Stable Components Archived to Legacy in V4](#v3-stable-components-archived-to-legacy-in-v4)
   - [V3 Beta Components Removed From V4](#v3-beta-components-removed-from-v4)
   - [V3 Legacy Components Removed from V4](#v3-legacy-components-removed-from-v4)
+  - [V3 Beta Components With No API Changes That Are Still In Beta In V4](#v3-beta-components-with-no-api-changes-that-are-still-in-beta-in-v4)
+  - [V3 Stable Components With No API Changes That Are Still Stable In V4](#v3-stable-components-with-no-api-changes-that-are-still-stable-in-v4)
 - [Component API Changes](#component-api-changes)
   - [V3 Beta Components Promoted to Stable in V4 API Changes](#v3-beta-components-promoted-to-stable-in-v4-api-changes)
     - [gux-badge](#gux-badge)
@@ -77,21 +79,21 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 
 #### Component tag rename only, no API changes:
 
-| V3 tag name                   | V4 tag name              |
-| ----------------------------- | ------------------------ |
-| gux-blank-state-beta          | gux-blank-state          |
-| gux-column-manager-beta       | gux-column-manager       |
-| gux-context-menu-beta         | gux-context-menu         |
-| gux-inline-alert-beta         | gux-inline-alert         |
-| gux-loading-message-beta      | gux-loading-message      |
-| gux-popover-beta              | gux-popover              |
-| gux-popup-beta                | gux-popup                |
-| gux-skip-navigation-list-beta | gux-skip-navigation-list |
-| gux-tab-panel-beta            | gux-tab-panel            |
-| gux-table-beta                | gux-table                |
-| gux-table-toolbar-beta        | gux-table-toolbar        |
-| gux-time-picker-beta          | gux-time-picker          |
-| gux-pagination-beta           | gux-pagination           |
+| V3 tag name                     | V4 tag name                |
+| ------------------------------- | -------------------------- |
+| `gux-blank-state-beta`          | `gux-blank-state`          |
+| `gux-column-manager-beta`       | `gux-column-manager`       |
+| `gux-context-menu-beta`         | `gux-context-menu`         |
+| `gux-inline-alert-beta`         | `gux-inline-alert`         |
+| `gux-loading-message-beta`      | `gux-loading-message`      |
+| `gux-popover-beta`              | `gux-popover`              |
+| `gux-popup-beta`                | `gux-popup`                |
+| `gux-skip-navigation-list-beta` | `gux-skip-navigation-list` |
+| `gux-tab-panel-beta`            | `gux-tab-panel`            |
+| `gux-table-beta`                | `gux-table`                |
+| `gux-table-toolbar-beta`        | `gux-table-toolbar`        |
+| `gux-time-picker-beta`          | `gux-time-picker`          |
+| `gux-pagination-beta`           | `gux-pagination`           |
 
 #### Component tag rename AND required API changes:
 
@@ -128,26 +130,42 @@ If possible, avoid the usage of legacy components that have a migration path and
 
 ### V3 Beta Components Removed From V4
 
-| V3 tag name            | V4 equivalent | Migration Guide                                  |
-| ---------------------- | ------------- | ------------------------------------------------ |
-| gux-error-message-beta | N/A           | [migration details](./gux-error-message-beta.md) |
+| V3 tag name              | V4 equivalent | Migration Guide                                  |
+| ------------------------ | ------------- | ------------------------------------------------ |
+| `gux-error-message-beta` | N/A           | [migration details](./gux-error-message-beta.md) |
 
 ### V3 Legacy Components Removed from V4
 
-| V3 tag name                | V4 stable equivalent (requires API changes) | V3 Migration Guide                                     |
-| -------------------------- | ------------------------------------------- | ------------------------------------------------------ |
-| gux-accordion-legacy       | gux-accordion                               | [migration details](../v3/gux-accordion-legacy.md)     |
-| gux-action-button-legacy   | gux-action-button                           | [migration details](../v3/gux-action-button-legacy.md) |
-| gux-action-list-legacy     | gux-list                                    | [migration details](../v3/gux-list-legacy.md)          |
-| gux-button-multi-legacy    | gux-button-multi                            | [migration details](../v3/gux-button-multi-legacy.md)  |
-| gux-command-palette-legacy | N/A                                         | N/A                                                    |
-| gux-dropdown-legacy        | gux-dropdown                                | [migration details](../v3/gux-dropdown-legacy.md)      |
-| gux-form-field-legacy      | gux-form-field-{type}                       | [migration details](../v3/gux-form-field-legacy.md)    |
-| gux-list-legacy            | gux-list                                    | [migration details](../v3/gux-list-legacy.md)          |
-| gux-panel-frame-legacy     | N/A                                         | N/A                                                    |
-| gux-side-panel-legacy      | N/A                                         | N/A                                                    |
-| gux-tabs-advanced          | gux-tabs, gux-tabs-advanced                 | [migration details](../v3/gux-tabs-legacy.md)          |
-| gux-text-label-legacy      | gux-form-field-{type}                       | [migration details](../v3/gux-form-field-legacy.md)    |
+| V3 tag name                  | V4 stable equivalent (requires API changes) | V3 Migration Guide                                     |
+| ---------------------------- | ------------------------------------------- | ------------------------------------------------------ |
+| `gux-accordion-legacy`       | `gux-accordion`                             | [migration details](../v3/gux-accordion-legacy.md)     |
+| `gux-action-button-legacy`   | `gux-action-button`                         | [migration details](../v3/gux-action-button-legacy.md) |
+| `gux-action-list-legacy`     | `gux-list`                                  | [migration details](../v3/gux-list-legacy.md)          |
+| `gux-button-multi-legacy`    | `gux-button-multi`                          | [migration details](../v3/gux-button-multi-legacy.md)  |
+| `gux-command-palette-legacy` | N/A                                         | N/A                                                    |
+| `gux-dropdown-legacy`        | `gux-dropdown`                              | [migration details](../v3/gux-dropdown-legacy.md)      |
+| `gux-form-field-legacy`      | `gux-form-field-{type}`                     | [migration details](../v3/gux-form-field-legacy.md)    |
+| `gux-list-legacy`            | `gux-list`                                  | [migration details](../v3/gux-list-legacy.md)          |
+| `gux-panel-frame-legacy`     | N/A                                         | N/A                                                    |
+| `gux-side-panel-legacy`      | N/A                                         | N/A                                                    |
+| `gux-tabs-advanced`          | `gux-tabs`, gux-tabs-advanced`              | [migration details](../v3/gux-tabs-legacy.md)          |
+| `gux-text-label-legacy`      | `gux-form-field-{type}`                     | [migration details](../v3/gux-form-field-legacy.md)    |
+
+### V3 Beta Components With No API Changes That Are Still In Beta In V4
+
+These components should not require any migration work.
+
+- `gux-announce-beta`
+- `gux-screen-reader-beta`
+- `gux-date-beta `
+- `gux-datetime-beta `
+- `gux-time-beta `
+
+### V3 Stable Components With No API Changes That Are Still Stable In V4
+
+These components should not require any migration work.
+
+- `gux-rating`
 
 ## Component API Changes
 
