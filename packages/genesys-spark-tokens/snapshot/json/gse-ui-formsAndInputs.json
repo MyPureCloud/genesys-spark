@@ -201,7 +201,7 @@
       "color": "#23395c1a",
       "type": "dropShadow"
     },
-    "padding": "8px 1px",
+    "padding": "8px 0px",
     "background_color": "#ffffff",
     "scrollbar": {
       "foreground_color": "#626e84"
