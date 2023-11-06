@@ -12,10 +12,10 @@
 
     &.gux-beside {
       position: relative;
-      top: 8px; // TODO COMUI-2289
+      top: var(--gse-ui-formControl-input-top);
       float: left;
       width: fit-content;
-      min-width: 45px;
+      min-width: 45px; // TODO:2289
       margin-right: var(--gse-ui-formControl-label-gap);
     }
 
