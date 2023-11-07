@@ -109,7 +109,7 @@
         }
 
         .gux-filter-suggestion {
-          opacity: 0.5; // missing token ticket: COMUI-2285
+          color: var(--gse-ui-formControl-input-suggestionColor);
         }
       }
 
