@@ -7,23 +7,16 @@ declare global {
 // Default domain to load assets from
 const DEFAULT_DOMAIN = 'mypurecloud.com';
 
-// List of Genesys UI domains
-const DOMAIN_LIST = [
-  'apne2.pure.cloud',
-  'aps1.pure.cloud',
-  'cac1.pure.cloud',
-  'euw2.pure.cloud',
+// List of Genesys UI domains that do not follow the ${region}.pure.cloud format
+const NON_STANDARD_DOMAINS = [
   'inindca.com',
   'inintca.com',
   'mypurecloud.com.au',
   'mypurecloud.com',
   'mypurecloud.de',
   'mypurecloud.ie',
-  'mypurecloud.jp',
-  'sae1.pure.cloud',
-  'use2.maximus-pure.cloud',
-  // 'use2.us-gov-pure.cloud', Assets are not currently deployed to FedRAMP and should fallback to the default domain
-  'usw2.pure.cloud'
+  'mypurecloud.jp'
+  // 'use2.us-gov-pure.cloud', Assets are not currently deployed to FedRAMP. It should fall back to the default domain.
 ];
 
 /**
@@ -51,5 +44,14 @@ export function getFontOrigin(): string {
 
 function getRegionDomain() {
   const pageHost = window.location.hostname;
-  return DOMAIN_LIST.find(regionDomain => pageHost.endsWith(regionDomain));
+
+  // We can automatically handle the standard domain format: ${region}.pure.cloud
+  if (pageHost.endsWith('.pure.cloud')) {
+    return pageHost.split('.').slice(-3).join('.');
+  }
+
+  // For older domains, we have to do a lookup
+  return NON_STANDARD_DOMAINS.find(regionDomain =>
+    pageHost.endsWith(regionDomain)
+  );
 }
