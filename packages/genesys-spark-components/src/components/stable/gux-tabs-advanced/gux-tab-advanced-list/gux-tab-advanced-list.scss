@@ -2,138 +2,42 @@
 @use '../../../../style/typography';
 @use '../../../../style/mixins';
 
-gux-tab-advanced-list {
-  .gux-tab-container {
+.gux-tab-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 16px; //TODO https://inindca.atlassian.net/browse/COMUI-2444
+  background-color: var(--gse-ui-advancedTabs-set-backgroundColor);
+
+  .gux-scrollable-section {
     display: flex;
-    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
-    height: 50px;
-    margin-bottom: 16px;
-    overflow: auto hidden;
-    background-color: #f6f7f9;
-    border-bottom: 1px solid #d7dce5;
-    border-radius: 4px 4px 0 0;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--gse-ui-advancedTabs-divider-dividerColor); //TODO https://inindca.atlassian.net/browse/COMUI-2444
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 
-    .action-button-container {
-      display: flex;
-      border-radius: 4px;
-
-      .add-tab-button {
-        min-width: 35px;
-        height: 50px;
-        padding: 0;
-        margin-left: 2px;
-        color: #2e394c;
-        background-color: #e2e6ee;
-        border: none;
-        border-radius: 4px;
-        transition: color 0.25s;
-
-        [slot='add-tab'] {
-          display: inline-flex;
-          align-items: center;
-          padding: 0 12px;
-          white-space: nowrap;
-
-          @include typography.body-sm-bold;
-
-          gux-icon {
-            padding-right: 8px;
-          }
-        }
-
-        &:disabled {
-          opacity: 0.5;
-        }
-
-        &:hover {
-          background-color: #d7dce5;
-        }
-
-        &:active {
-          background-color: #c8cfda;
-        }
-
-        &:focus-visible {
-          outline: none;
-          box-shadow: inset 0 0 0 3px #aac9ff;
-        }
-
-        &:focus-visible {
-          border-radius: 5px;
-          outline: none;
-          box-shadow: inset 0 0 0 3px #aac9ff;
-        }
-
-        gux-icon {
-          width: 16px;
-          height: 16px;
-        }
-      }
-
-      .gux-scroll-button-container {
-        display: flex;
-        border-radius: 4px;
-
-        .gux-scroll-button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 28px;
-          height: 50px;
-          padding: 0;
-          color: #2e394c;
-          background-color: #e2e6ee;
-          border: none;
-          border-radius: 4px;
-          transition: color 0.25s;
-
-          &:focus-visible {
-            border: 3px solid #aac9ff;
-            border-radius: 5px;
-            outline: none;
-          }
-
-          gux-icon {
-            width: 16px;
-            height: 16px;
-          }
-
-          &:focus-visible {
-            border: 3px solid #aac9ff;
-            outline: none;
-          }
-
-          &:hover {
-            background-color: #d7dce5;
-          }
-
-          &:active {
-            background-color: #c8cfda;
-          }
-
-          &:focus-visible {
-            @include focus.gux-focus-ring;
-          }
-        }
-      }
+    &::-webkit-scrollbar {
+      height: 0;
     }
 
-    .gux-scrollable-section {
+    .gux-tablist {
       display: flex;
-      align-items: flex-end;
-      height: 50px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      scrollbar-width: none;
-
-      &::-webkit-scrollbar {
-        height: 0;
-      }
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: flex-start;
     }
   }
+}
 
-  .gux-sr-only {
-    @include mixins.gux-sr-only;
-  }
+.gux-sr-only {
+  @include mixins.gux-sr-only;
 }

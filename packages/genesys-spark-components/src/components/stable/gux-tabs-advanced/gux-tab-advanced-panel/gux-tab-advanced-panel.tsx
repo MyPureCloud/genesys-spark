@@ -46,6 +46,7 @@ export class GuxTabAdvancedPanel {
     return (
       <div
         id={`gux-${this.tabId}-panel`}
+        class="gux-tabpanel"
         role="tabpanel"
         aria-labelledby={`gux-${this.tabId}-tab`}
         tabIndex={0}
