@@ -46,6 +46,7 @@
       "border_radius": "4px",
       "background_color": "#ffffff",
       "placeholder_color": "#626e84",
+      "suggestion_color": "#626e84",
       "populated_color": "#1b2c48",
       "input_clearable": {
         "input_clearable_color": "#626e84",
@@ -125,6 +126,7 @@
         "fontWeight": 400
       },
       "padding": "8px 0 0 0",
+      "padding_small": "4px 0 0 0",
       "error_padding": "4px 0 0 0",
       "default_color": "#626e84",
       "error_color": "#e22245",

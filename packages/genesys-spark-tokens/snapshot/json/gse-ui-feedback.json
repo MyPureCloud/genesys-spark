@@ -263,10 +263,11 @@
   },
   "blank_state": {
     "small": {
-      "width": "250px"
+      "width": "250px",
+      "max_width": "569px"
     },
     "large": {
-      "width": "564px"
+      "min_width": "570px"
     },
     "icon": {
       "size": {

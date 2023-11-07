@@ -5,12 +5,6 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Search"
   },
-  "gux-alert": {
-    "info": "Information alert with message",
-    "success": "Success alert with message",
-    "warning": "Warning alert with message",
-    "error": "Error alert with message"
-  },
   "gux-badge": {
     "info": "badge with label: {label}, accent: info",
     "info-bold": "badge with label: {label}, accent: info bold",
@@ -107,6 +101,12 @@
   },
   "gux-form-field-time-zone-picker": {
     "required": "Required"
+  },
+  "gux-inline-alert": {
+    "info": "Information alert with message",
+    "success": "Success alert with message",
+    "warning": "Warning alert with message",
+    "error": "Error alert with message"
   },
   "gux-listbox": {
     "noMatches": "No matches",
