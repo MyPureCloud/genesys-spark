@@ -108,12 +108,12 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
         // We are not using a token for this margin below since it this 6px margin is used to center position the head on the track
         margin: 6px 0;
         background: var(--gse-ui-slider-bar-default-backgroundColor);
-        border-radius: 20px; // TODO : COMUI-2410 -- missing token for gux-track based on ux review.
+        border-radius: var(--gse-ui-slider-track-borderRadius);
 
         .gux-progress {
           height: $track-height;
           background-color: $range-active;
-          border-radius: 20px; // TODO : COMUI-2410 -- missing token for gux-track based on ux review.
+          border-radius: var(--gse-ui-slider-track-borderRadius);
         }
       }
     }
