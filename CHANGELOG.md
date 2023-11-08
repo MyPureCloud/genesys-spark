@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.57](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.56...v4.0.0-beta.57) (2023-11-08)
+
+
+### Bug Fixes
+
+* **genesys-spark:** ensure asset loading is done on the same domain for new regions ([b1e4b17](https://github.com/MyPureCloud/genesys-spark/commit/b1e4b175d2cbd92a326f60ea3a3a0713165c589e))
+
 ## [4.0.0-beta.56](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.55...v4.0.0-beta.56) (2023-11-07)
 
 ## [4.0.0-beta.55](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.54...v4.0.0-beta.55) (2023-11-04)
