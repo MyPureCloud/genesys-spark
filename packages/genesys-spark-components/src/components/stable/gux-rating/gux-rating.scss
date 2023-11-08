@@ -1,3 +1,5 @@
+@use '../../../style/_focus.scss';
+
 /**
  * @prop --gse-ui-rating-default-color
  * @prop --gse-ui-rating-active-color
@@ -13,10 +15,9 @@
 }
 
 :host(:host:focus-visible) {
-  outline: var(--gse-ui-focus-width) var(--gse-ui-focus-style)
-    var(--gse-ui-focus-color);
-  outline-offset: 1px;
-  box-shadow: 0 0 0 1px var(--gse-ui-focus-style);
+  @include focus.gux-focus-ring-small;
+  outline-offset: var(--gse-semantic-focusRing-offset);
+  box-shadow: 0 0 0 1px var(--gse-semantic-focusRing-small-border-style);
 }
 
 .gux-rating-star-container {

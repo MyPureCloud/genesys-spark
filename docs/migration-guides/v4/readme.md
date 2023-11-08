@@ -166,6 +166,7 @@ These components should not require any migration work.
 These components should not require any migration work.
 
 - `gux-rating`
+- `gux-list`
 
 ## Component API Changes
 
