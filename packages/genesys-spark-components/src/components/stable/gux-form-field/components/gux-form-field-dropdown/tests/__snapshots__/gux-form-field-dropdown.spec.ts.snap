@@ -4,12 +4,14 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          This is a help message
-        </gux-screen-reader-beta>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+          <gux-screen-reader-beta>
+            This is a help message
+          </gux-screen-reader-beta>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -101,12 +103,14 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          This is a help message
-        </gux-screen-reader-beta>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+          <gux-screen-reader-beta>
+            This is a help message
+          </gux-screen-reader-beta>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -184,9 +188,11 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -275,9 +281,11 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-disabled gux-input">
           <slot></slot>
@@ -366,12 +374,14 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label gux-required">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend class="gux-required">
+          <slot name="label"></slot>
+          <gux-screen-reader-beta>
+            Required
+          </gux-screen-reader-beta>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -460,9 +470,11 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -551,9 +563,11 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 <gux-form-field-dropdown label-position="above">
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -642,9 +656,11 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 <gux-form-field-dropdown label-position="beside">
   <mock:shadow-root>
     <fieldset class="gux-beside gux-form-field-fieldset-container">
-      <legend class="gux-beside gux-form-field-legend-label">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-beside gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -733,9 +749,11 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 <gux-form-field-dropdown label-position="screenreader">
   <mock:shadow-root>
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-form-field-legend-label gux-screenreader">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -824,9 +842,11 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -901,9 +921,11 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-disabled gux-input">
           <slot></slot>
@@ -978,12 +1000,14 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label gux-required">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend class="gux-required">
+          <slot name="label"></slot>
+          <gux-screen-reader-beta>
+            Required
+          </gux-screen-reader-beta>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -1058,9 +1082,11 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -1135,9 +1161,11 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
 <gux-form-field-dropdown label-position="above">
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-above gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -1212,9 +1240,11 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
 <gux-form-field-dropdown label-position="beside">
   <mock:shadow-root>
     <fieldset class="gux-beside gux-form-field-fieldset-container">
-      <legend class="gux-beside gux-form-field-legend-label">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-beside gux-form-field-legend-label">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
@@ -1289,9 +1319,11 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
 <gux-form-field-dropdown label-position="screenreader">
   <mock:shadow-root>
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-      </legend>
+      <div class="gux-form-field-legend-label gux-screenreader">
+        <legend>
+          <slot name="label"></slot>
+        </legend>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <slot></slot>
