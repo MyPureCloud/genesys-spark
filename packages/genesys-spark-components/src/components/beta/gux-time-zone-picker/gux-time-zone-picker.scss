@@ -1,31 +1,11 @@
-.has-defaults {
-  gux-option {
-    padding-left: 20px;
-  }
-}
-
 gux-dropdown {
   .zone-header {
-    padding: 6px 12px;
-    color: #6b7585;
+    padding: 8px 12px 4px; //TODO: COMUI-2478 token needed for padding
+    color: #6b7585; //TODO: COMUI-2478 need tp clarify token for zone header.
     text-transform: uppercase;
   }
 
-  .tz-utc {
-    color: #596373;
-  }
-
-  gux-list-divider {
-    width: 97%;
-    margin-left: 15px;
-  }
-
   gux-option {
-    &.gux-active,
-    &.gux-hovered:not(:disabled) {
-      .tz-utc {
-        color: #e2e6ee;
-      }
-    }
+    padding: 0px 12px; //TODO COMUI-2478  cannot use dropdown tokens here as the gux-option requires a padding of 8px 12px in gux-dropdown whereas in timezone its 0px 12px.
   }
 }
