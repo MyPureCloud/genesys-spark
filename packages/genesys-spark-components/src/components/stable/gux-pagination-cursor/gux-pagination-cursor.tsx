@@ -135,12 +135,12 @@ export class GuxPaginationCursor {
     return (
       this.itemsPerPage &&
       ((
-        <gux-pagination-items-per-page-beta
+        <gux-pagination-items-per-page
           items-per-page={this.itemsPerPage}
           onInternalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
             this
           )}
-        ></gux-pagination-items-per-page-beta>
+        ></gux-pagination-items-per-page>
       ) as JSX.Element)
     );
   }
