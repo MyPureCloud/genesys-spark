@@ -9,17 +9,19 @@
       is-open
     >
       <span slot="title">Title</span>
-      <div>Popover Content</div>
-      <div class="popover-content">
-        <gux-button accent="ghost" onclick="notify(event)">
-          Action 3
-        </gux-button>
-        <gux-button accent="secondary" onclick="notify(event)">
-          Action 2
-        </gux-button>
-        <gux-button accent="primary" onclick="notify(event)">
-          Action 1
-        </gux-button>
+      <div class="popover-content-wrapper">
+        <div>Popover Content</div>
+        <div class="popover-content">
+          <gux-button accent="ghost" onclick="notify(event)">
+            Action 3
+          </gux-button>
+          <gux-button accent="secondary" onclick="notify(event)">
+            Action 2
+          </gux-button>
+          <gux-button accent="primary" onclick="notify(event)">
+            Action 1
+          </gux-button>
+        </div>
       </div>
     </gux-popover>
   </div>
@@ -50,12 +52,17 @@
     background-color: #fff;
   }
 
+  .popover-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
   .popover-content {
     display: flex;
     flex-direction: row;
     gap: 8px;
     width: 280px;
-    padding-top: 4px;
   }
 
   #popover-target {
