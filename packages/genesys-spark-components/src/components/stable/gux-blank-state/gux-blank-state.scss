@@ -11,9 +11,8 @@
   * @prop --gse-ui-blankState-icon-size-lg
   * @prop --gse-ui-blankState-icon-size-sm
   * @prop --gse-ui-blankState-iconColor
-  * @prop --gse-ui-blankState-large-width : // TODO https://inindca.atlassian.net/browse/COMUI-2242
   * @prop --gse-ui-blankState-padding
-  * @prop --gse-ui-blankState-small-width : // TODO https://inindca.atlassian.net/browse/COMUI-2242
+  * @prop --gse-ui-blankState-large-minWidth
   * @prop --gse-ui-progressAndLoading-blankState-large-header-fontFamily
   * @prop --gse-ui-progressAndLoading-blankState-large-header-fontSize
   * @prop --gse-ui-progressAndLoading-blankState-large-header-fontWeight
@@ -104,7 +103,7 @@
 }
 
 // https://bholmes.dev/blog/alternative-to-css-variable-media-queries/
-@container (width <= #{gse-ui-feedback.$gse-ui-blankState-small-width}) {
+@container (width < #{gse-ui-feedback.$gse-ui-blankState-large-minWidth}) {
   .gux-container {
     ::slotted(gux-icon) {
       width: var(--gse-ui-blankState-icon-size-sm);
