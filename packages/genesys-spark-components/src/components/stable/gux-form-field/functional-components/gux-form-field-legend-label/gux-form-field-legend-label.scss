@@ -3,7 +3,7 @@
 /* stylelint-disable-next-line selector-class-pattern */
 @mixin Style {
   .gux-form-field-legend-label {
-    &.gux-required {
+    .gux-required {
       &::after {
         color: var(--gse-ui-formControl-label-indicator-requiredColor);
         content: ' *';

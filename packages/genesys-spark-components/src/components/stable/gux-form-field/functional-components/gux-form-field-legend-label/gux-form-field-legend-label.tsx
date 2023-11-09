@@ -11,14 +11,19 @@ export const GuxFormFieldLegendLabel: FunctionalComponent<
   GuxFormFieldLegendLabelProps
 > = ({ position, required }, children): VNode => {
   return (
-    <legend
+    <div
       class={{
         'gux-form-field-legend-label': true,
-        [`gux-${position}`]: true,
-        'gux-required': required
+        [`gux-${position}`]: true
       }}
     >
-      {children}
-    </legend>
+      <legend
+        class={{
+          'gux-required': required
+        }}
+      >
+        {children}
+      </legend>
+    </div>
   ) as VNode;
 };
