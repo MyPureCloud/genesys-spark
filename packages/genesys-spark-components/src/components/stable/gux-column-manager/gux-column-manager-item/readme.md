@@ -53,13 +53,6 @@ Type: `Promise<void>`
 |      | slot for gux-form-field-checkbox |
 
 
-## CSS Custom Properties
-
-| Name                                                    | Description |
-| ------------------------------------------------------- | ----------- |
-| `--gse-ui-dataTableItems-editColumn-editColumnItem-gap` |             |
-
-
 ## Dependencies
 
 ### Depends on

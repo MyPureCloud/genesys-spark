@@ -1,14 +1,5 @@
 @use '../../../style/_focus.scss';
 
-/**
- * @prop --gse-ui-rating-default-color
- * @prop --gse-ui-rating-active-color
- * @prop --gse-ui-rating-hover-color
- * @prop --gse-ui-rating-disabled-color
- * @prop --gse-ui-rating-disabled-opacity
- * @prop --gse-ui-rating-size
-*/
-
 :host {
   display: inline-flex;
   user-select: none;

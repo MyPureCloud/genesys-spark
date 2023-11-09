@@ -1,30 +1,6 @@
 @use '../../../../style/mixins';
 @use '../../../../style/focus';
 
-/**
-  * @prop --gse-ui-segmentedControl-borderRadius
-  * @prop --gse-ui-segmentedControl-button-active-backgroundColor
-  * @prop --gse-ui-segmentedControl-button-active-foregroundColor
-  * @prop --gse-ui-segmentedControl-button-default-backgroundColor
-  * @prop --gse-ui-segmentedControl-button-default-foregroundColor
-  * @prop --gse-ui-segmentedControl-button-disabled-backgroundColor
-  * @prop --gse-ui-segmentedControl-button-disabled-foregroundColor
-  * @prop --gse-ui-segmentedControl-button-disabled-opacity
-  * @prop --gse-ui-segmentedControl-button-end-borderRadius
-  * @prop --gse-ui-segmentedControl-button-gap
-  * @prop --gse-ui-segmentedControl-button-hover-backgroundColor
-  * @prop --gse-ui-segmentedControl-button-hover-foregroundColor
-  * @prop --gse-ui-segmentedControl-button-middle-borderRadius
-  * @prop --gse-ui-segmentedControl-button-padding
-  * @prop --gse-ui-segmentedControl-button-start-borderRadius
-  * @prop --gse-ui-segmentedControl-divider-color
-  * @prop --gse-ui-segmentedControl-divider-style
-  * @prop --gse-ui-segmentedControl-divider-width
-  * @prop --gse-ui-segmentedControl-focus-offset
-  * @prop --gse-ui-segmentedControl-height
-  * @prop --gse-ui-segmentedControl-iconOnly-padding
-  */
-
 button {
   all: unset;
 }

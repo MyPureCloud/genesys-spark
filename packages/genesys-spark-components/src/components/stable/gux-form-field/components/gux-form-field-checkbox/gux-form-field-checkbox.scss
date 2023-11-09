@@ -1,25 +1,3 @@
-/**
-* @prop --gse-ui-checkbox-icon-default-unselectedForegroundColor
-* @prop --gse-ui-checkbox-icon-default-selectedForegroundColor
-* @prop --gse-ui-checkbox-icon-hover-foregroundColor
-* @prop --gse-ui-checkbox-icon-active-foregroundColor
-* @prop --gse-ui-checkbox-icon-error-foregroundColor
-* @prop --gse-ui-checkbox-icon-height
-* @prop --gse-ui-checkbox-icon-width
-* @prop --gse-ui-checkbox-label-foregroundColor
-* @prop --gse-ui-checkbox-label-text-fontFamily
-* @prop --gse-ui-checkbox-label-text-fontWeight
-* @prop --gse-ui-checkbox-label-text-lineHeight
-* @prop --gse-ui-checkbox-gap
-* @prop --gse-ui-checkbox-disabled-opacity
-* @prop --gse-ui-checkbox-focus-border-color
-* @prop --gse-ui-checkbox-focus-border-width
-* @prop --gse-ui-checkbox-focus-border-style
-* @prop --gse-ui-checkbox-focus-borderRadius
-* @prop --gse-ui-checkbox-focus-offset
-
-*/
-
 @use '../gux-form-field-checkbox/gux-form-field-checkbox-icons.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';

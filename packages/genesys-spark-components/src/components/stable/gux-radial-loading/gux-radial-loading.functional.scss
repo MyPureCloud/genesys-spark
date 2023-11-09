@@ -1,15 +1,5 @@
 @use 'sass:math';
 
-/**
-  * @prop --gse-ui-progressAndLoading-largeBorder //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-smallBorder //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-thinBorder //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-spinner-base
-  * @prop --gse-ui-progressAndLoading-spinner-foreground
-  * @prop --gse-ui-progressAndLoading-spinner-large //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-spinner-small //TODO https://inindca.atlassian.net/browse/COMUI-2226
-*/
-
 $largeSpinnerSize: 48; // Linked to --gse-ui-progressAndLoading-spinner-large
 $largeSpinnerBorder: 4; // Linked to --gse-ui-progressAndLoading-largeBorder
 

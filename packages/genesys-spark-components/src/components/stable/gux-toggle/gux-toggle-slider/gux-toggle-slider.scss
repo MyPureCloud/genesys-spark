@@ -1,39 +1,3 @@
-/**
- * @prop --gse-ui-toggle-track-width
- * @prop --gse-ui-toggle-track-height
- * @prop --gse-ui-toggle-track-enabled-off-backgroundColor
- * @prop --gse-ui-toggle-track-enabled-on-backgroundColor
- * @prop --gse-ui-toggle-track-disabled-off-backgroundColor
- * @prop --gse-ui-toggle-track-disabled-on-backgroundColor
- * @prop --gse-ui-toggle-track-error-off-backgroundColor
- * @prop --gse-ui-toggle-track-error-on-backgroundColor
- * @prop --gse-ui-toggle-track-hover-off-backgroundColor
- * @prop --gse-ui-toggle-track-hover-on-backgroundColor
- * @prop --gse-ui-toggle-track-borderRadius
- * @prop --gse-ui-toggle-handle-width
- * @prop --gse-ui-toggle-handle-height
- * @prop --gse-ui-toggle-handle-hover-border-width
- * @prop --gse-ui-toggle-handle-hover-border-style
- * @prop --gse-ui-toggle-handle-hover-border-color
- * @prop --gse-ui-toggle-handle-enabled-border-width
- * @prop --gse-ui-toggle-handle-enabled-border-color
- * @prop --gse-ui-toggle-handle-enabled-border-style
- * @prop --gse-ui-toggle-handle-disabled-border-width
- * @prop --gse-ui-toggle-handle-disabled-border-color
- * @prop --gse-ui-toggle-handle-disabled-border-style
- * @prop --gse-ui-toggle-handle-error-border-color
- * @prop --gse-ui-toggle-handle-error-border-width
- * @prop --gse-ui-toggle-handle-error-border-style
- * @prop --gse-ui-toggle-handle-backgroundColor
- * @prop --gse-ui-toggle-handle-foregroundColor
- * @prop --gse-ui-toggle-handle-borderRadius
- * @prop --gse-ui-toggle-focus-border-color;
- * @prop --gse-ui-toggle-focus-border-width
- * @prop --gse-ui-toggle-focus-border-style
- * @prop --gse-ui-toggle-focus-borderRadius
- * @prop --gse-ui-toggle-focus-offset
- */
-
 @use 'sass:math';
 
 $toggle-height: var(--gse-ui-toggle-track-height);
