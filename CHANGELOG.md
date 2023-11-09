@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.58](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.57...v4.0.0-beta.58) (2023-11-09)
+
+
+### Bug Fixes
+
+* **focus-style:** added missing utility classes ([6f25173](https://github.com/MyPureCloud/genesys-spark/commit/6f2517383457b5498e2bc85ad2424187fd8b587b))
+
 ## [4.0.0-beta.57](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.56...v4.0.0-beta.57) (2023-11-08)
 
 
