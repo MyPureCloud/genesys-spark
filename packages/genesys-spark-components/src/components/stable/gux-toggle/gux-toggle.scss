@@ -62,7 +62,6 @@
       display: inline-block;
       padding: 0 4px; // TODO: COMUI-2332 missing token
       font-family: var(--gse-ui-toggle-label-fontFamily);
-      // line-height: var(--gse-ui-toggle-label-lineHeight); // TODO: COMUI-2332 adding this line height shifts up the label so it's not vertically centered anymore
       font-size: var(--gse-ui-toggle-label-fontSize);
       font-weight: var(--gse-ui-toggle-label-fontWeight);
 
@@ -110,7 +109,7 @@
         order: 0;
         width: var(--gse-ui-button-icon-size);
         height: var(--gse-ui-button-icon-size);
-        margin: 0 4px; // TODO: COMUI-2332 missing token
+        margin: var(--gse-ui-formControl-helper-errorPadding);
         color: var(--gse-ui-formControl-helper-errorColor);
       }
 
