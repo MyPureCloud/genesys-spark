@@ -36,6 +36,7 @@ button {
   border-width: var(--gse-ui-segmentedControl-divider-width);
   border-right: none;
   border-radius: var(--gse-ui-segmentedControl-button-middle-borderRadius);
+  cursor: pointer;
 
   &.gux-start {
     border-left-color: var(--gse-ui-segmentedControl-divider-color);
