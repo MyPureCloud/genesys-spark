@@ -1,20 +1,26 @@
 gux-tabs[orientation='vertical'] > gux-tab-list {
-  .gux-tab {
-    display: flex;
-    justify-content: flex-end;
-    height: var(--gse-ui-tabs-item-vertical-fixedHeight);
-    padding: var(--gse-ui-tabs-item-vertical-padding);
-    border-right: var(--gse-ui-tabs-item-divider-vertical-width) solid
-      var(--gse-ui-tabs-item-divider-dividerColor);
+  gux-tab {
+    box-sizing: border-box;
+    border-right-width: var(--gse-ui-tabs-item-divider-vertical-width);
+    border-right-style: solid;
+    border-right-color: var(--gse-ui-tabs-item-divider-dividerColor);
 
-    &.gux-active {
-      border-right: var(--gse-ui-tabs-item-indicator-vertical-width) solid
-        var(--gse-ui-tabs-item-indicator-activeColor);
-    }
+    .gux-tab {
+      display: flex;
+      justify-content: flex-end;
+      height: var(--gse-ui-tabs-item-vertical-fixedHeight);
+      padding: var(--gse-ui-tabs-item-vertical-padding);
+      border-right-width: var(--gse-ui-tabs-item-indicator-vertical-width);
+      border-right-style: solid;
+      border-right-color: transparent;
 
-    &:hover:not(.gux-active):not(.gux-disabled) {
-      border-right: var(--gse-ui-tabs-item-indicator-vertical-width) solid
-        var(--gse-ui-tabs-item-indicator-hoverColor);
+      &.gux-active {
+        border-right-color: var(--gse-ui-tabs-item-indicator-activeColor);
+      }
+
+      &:hover:not(.gux-active):not(.gux-disabled) {
+        border-right-color: var(--gse-ui-tabs-item-indicator-hoverColor);
+      }
     }
   }
 }
@@ -24,15 +30,16 @@ gux-tabs:not([orientation='vertical']) > gux-tab-list {
     box-sizing: border-box;
     height: var(--gse-ui-tabs-item-horizontal-fixedHeight);
     padding: var(--gse-ui-tabs-item-horizontal-padding);
+    border-bottom-width: var(--gse-ui-tabs-item-indicator-horizontal-height);
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
 
     &.gux-active {
-      border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
-        var(--gse-ui-tabs-item-indicator-activeColor);
+      border-bottom-color: var(--gse-ui-tabs-item-indicator-activeColor);
     }
 
     &:hover:not(.gux-active):not(.gux-disabled) {
-      border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
-        var(--gse-ui-tabs-item-indicator-hoverColor);
+      border-bottom-color: var(--gse-ui-tabs-item-indicator-hoverColor);
     }
 
     gux-tooltip-title {
