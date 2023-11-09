@@ -40,6 +40,12 @@ export class GuxPopup {
   disabled: boolean = false;
 
   /**
+   * Number of pixels the popup is offset from the target.
+   */
+  @Prop()
+  offset: number = 2;
+
+  /**
    * set if parent component design allows for popup exceeding target width
    */
   @Prop()
@@ -81,7 +87,7 @@ export class GuxPopup {
           strategy: 'fixed',
           placement: 'bottom-start',
           middleware: [
-            offset(2),
+            offset(this.offset),
             flip(),
             size({
               apply({
