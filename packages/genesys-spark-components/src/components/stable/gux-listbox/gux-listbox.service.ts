@@ -1,5 +1,7 @@
 import { ListboxOptionElement } from './options/option-types';
 
+const validOptionTagNames = ['GUX-OPTION', 'GUX-OPTION-ICON'];
+
 export function getListOptions(
   list: HTMLGuxListboxElement
 ): ListboxOptionElement[] {
@@ -26,14 +28,23 @@ function getActiveOption(list: HTMLGuxListboxElement): ListboxOptionElement {
   return getListOptions(list).find(option => option.active);
 }
 
+function isSelectableOption(
+  option: HTMLElement & { disabled?: boolean; filtered?: boolean }
+): boolean {
+  return (
+    validOptionTagNames.includes(option.tagName) &&
+    !option.disabled &&
+    !option.filtered
+  );
+}
+
 function setActiveOption(
   list: HTMLGuxListboxElement,
   element: ListboxOptionElement
 ): void {
   if (element) {
     getListOptions(list).forEach(option => {
-      const active =
-        (!option.disabled || !option.filtered) && option === element;
+      const active = isSelectableOption(option) && option === element;
       option.active = active;
 
       if (active) {
@@ -47,7 +58,7 @@ function setActiveOption(
 function getFirstOption(list: HTMLGuxListboxElement): ListboxOptionElement {
   let firstOption = getListOptions(list)[0];
 
-  while (firstOption && (firstOption.disabled || firstOption.filtered)) {
+  while (firstOption && !isSelectableOption(firstOption)) {
     firstOption = firstOption.nextElementSibling as ListboxOptionElement;
   }
 
@@ -59,7 +70,7 @@ function getNextOption(list: HTMLGuxListboxElement): ListboxOptionElement {
     let nextOption = getActiveOption(list)
       .nextElementSibling as ListboxOptionElement;
 
-    while (nextOption && (nextOption.disabled || nextOption.filtered)) {
+    while (nextOption && !isSelectableOption(nextOption)) {
       nextOption = nextOption.nextElementSibling as ListboxOptionElement;
     }
 
@@ -74,10 +85,7 @@ function getPreviousOption(list: HTMLGuxListboxElement): ListboxOptionElement {
     let previousOption = getActiveOption(list)
       .previousElementSibling as ListboxOptionElement;
 
-    while (
-      previousOption &&
-      (previousOption.disabled || previousOption.filtered)
-    ) {
+    while (previousOption && !isSelectableOption(previousOption)) {
       previousOption =
         previousOption.previousElementSibling as ListboxOptionElement;
     }
@@ -93,7 +101,7 @@ function getLastOption(list: HTMLGuxListboxElement): ListboxOptionElement {
 
   let lastOption = options[options.length - 1];
 
-  while (lastOption && (lastOption.disabled || lastOption.filtered)) {
+  while (lastOption && !isSelectableOption(lastOption)) {
     lastOption = lastOption.previousElementSibling as ListboxOptionElement;
   }
 
@@ -147,10 +155,7 @@ export function hasPreviousOption(list: HTMLGuxListboxElement): boolean {
     let previousOption = getActiveOption(list)
       .previousElementSibling as ListboxOptionElement;
 
-    while (
-      previousOption &&
-      (previousOption.disabled || previousOption.filtered)
-    ) {
+    while (previousOption && !isSelectableOption(previousOption)) {
       previousOption =
         previousOption.previousElementSibling as ListboxOptionElement;
     }
@@ -166,7 +171,7 @@ export function hasNextOption(list: HTMLGuxListboxElement): boolean {
     let nextOption = getActiveOption(list)
       .nextElementSibling as ListboxOptionElement;
 
-    while (nextOption && (nextOption.disabled || nextOption.filtered)) {
+    while (nextOption && !isSelectableOption(nextOption)) {
       nextOption = nextOption.nextElementSibling as ListboxOptionElement;
     }
 
