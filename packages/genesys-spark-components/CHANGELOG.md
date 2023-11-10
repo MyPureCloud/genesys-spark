@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.109.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.108.4...v3.109.0) (2023-11-10)
+
+
+### Features
+
+* **inputs:** increasing contrast between placeholder and value ([a8d4657](https://github.com/MyPureCloud/genesys-spark/commit/a8d465706e1c7a8b209792831c9c660560fa8959))
+
 ### [3.108.4](https://github.com/MyPureCloud/genesys-spark/compare/v3.108.3...v3.108.4) (2023-11-04)
 
 
