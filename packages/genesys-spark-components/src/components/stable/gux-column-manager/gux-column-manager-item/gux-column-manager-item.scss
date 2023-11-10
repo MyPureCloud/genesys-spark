@@ -50,6 +50,7 @@
     color: #596373; //TODO https://inindca.atlassian.net/browse/COMUI-2314
     cursor: grab;
     border-radius: 4px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+    display: flex;
 
     gux-icon {
       width: var(--gse-ui-icon-size-sm);
@@ -87,8 +88,10 @@
 
     gux-text-highlight {
       position: absolute;
-      top: 0;
-      left: 26px + 5px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+      top: 1px;
+      left: calc(
+        var(--gse-ui-icon-size-sm) + var(--gse-ui-checkbox-gap)
+      ); //TODO https://inindca.atlassian.net/browse/COMUI-2314
       color: transparent;
       pointer-events: none;
     }
