@@ -30,5 +30,8 @@
         "foreground_color": "#e22245"
       }
     }
+  },
+  "dismiss_button": {
+    "foreground_color": "#626e84"
   }
 }

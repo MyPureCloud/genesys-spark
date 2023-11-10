@@ -257,9 +257,9 @@
         }
       }
     },
-    "large_border": "4px",
-    "small_border": "2px",
-    "thin_border": "1px"
+    "large_border": 4,
+    "small_border": 2,
+    "thin_border": 1
   },
   "blank_state": {
     "small": {
