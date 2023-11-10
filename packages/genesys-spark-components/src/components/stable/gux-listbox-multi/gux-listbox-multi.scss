@@ -1,7 +1,7 @@
 :host {
   box-sizing: border-box;
   display: block;
-  max-height: 20rem; // missing token ticket COMUI-2269
+  max-height: var(--gse-ui-menu-maxHeight);
   padding: var(--gse-ui-menu-padding);
   overflow-y: auto;
   background: var(--gse-ui-menu-backgroundColor);
