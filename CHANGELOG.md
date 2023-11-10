@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.59](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.58...v4.0.0-beta.59) (2023-11-10)
+
+
+### Features
+
+* **genesys-spark:** add date/time formatting utilities ([2c1b559](https://github.com/MyPureCloud/genesys-spark/commit/2c1b559d35ddb1b14ed0577ac60b7cd2f75d90e1))
+
+
+### Bug Fixes
+
+* **blank-state:** changed min widt of large version ([71aba6d](https://github.com/MyPureCloud/genesys-spark/commit/71aba6dbc9a6fb7a02b75113ff31f96ce47cd44f))
+* **loading-message:** added max width restriction ([271851d](https://github.com/MyPureCloud/genesys-spark/commit/271851de8436266d624997826bea1a7b47abeb01))
+* **pagination-cursor:** fixing missing items per page dropdown ([fba5a6a](https://github.com/MyPureCloud/genesys-spark/commit/fba5a6a51e662ec73cbb8eb6faa932707ed781dd))
+* **segmented-control:** added pointer cursor ([e32ee1f](https://github.com/MyPureCloud/genesys-spark/commit/e32ee1febe21bc74f6a0e0f28e3676db58d91643))
+* **segmented-control:** fixed design system tokens ([6aa032e](https://github.com/MyPureCloud/genesys-spark/commit/6aa032e198e7a4eb953bcda5899bb89515ee0a05))
+
 ## [4.0.0-beta.58](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.57...v4.0.0-beta.58) (2023-11-09)
 
 
