@@ -130,7 +130,9 @@
     },
     "edit_column": {
       "edit_column_item": {
-        "gap": "8px"
+        "gap": "8px",
+        "foreground_color": "#3e5374",
+        "height": "18px"
       },
       "edit_column_content": {
         "gap": "10px",
