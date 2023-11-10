@@ -21,7 +21,7 @@ gux-button-slot {
       order: 0;
       width: 16px;
       height: 16px;
-      color: var(--gse-ui-toast-closeButtonColor); // TODO: COMUI-2205
+      color: var(--gse-ui-dismissButton-foregroundColor);
     }
   }
 }
