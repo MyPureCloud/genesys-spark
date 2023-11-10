@@ -12,6 +12,7 @@
 | `disabled`          | `disabled`            |                                                                        | `boolean` | `false` |
 | `exceedTargetWidth` | `exceed-target-width` | set if parent component design allows for popup exceeding target width | `boolean` | `false` |
 | `expanded`          | `expanded`            |                                                                        | `boolean` | `false` |
+| `offset`            | `offset`              | Number of pixels the popup is offset from the target.                  | `number`  | `2`     |
 
 
 ## Events

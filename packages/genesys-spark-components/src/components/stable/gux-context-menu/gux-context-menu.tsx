@@ -153,7 +153,11 @@ export class GuxContextMenu {
   render(): JSX.Element {
     return (
       <Host>
-        <gux-popup expanded={this.isOpen} exceed-target-width>
+        <gux-popup
+          expanded={this.isOpen}
+          offset={4} // --gse-ui-contextMenu-gap TODO: Should use the json token as part of COMUI-2480
+          exceed-target-width
+        >
           <div slot="target" class="gux-button-container">
             <gux-button-slot accent="ghost">
               <button
