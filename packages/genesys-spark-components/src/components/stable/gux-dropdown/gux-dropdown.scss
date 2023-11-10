@@ -141,8 +141,7 @@
     var(--gse-ui-formControl-input-active-border-color);
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
-  &:focus-visible,
-  &:focus-within:has(:focus-visible) {
+  &:focus-visible {
     @include gux-input-focus-border;
   }
 
@@ -177,8 +176,7 @@
     var(--gse-ui-formControl-input-default-border-color);
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
-  &:focus-visible,
-  &:focus-within:has(:focus-visible) {
+  &:focus-visible {
     @include gux-input-focus-border;
   }
 }
