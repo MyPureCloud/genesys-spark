@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.109.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.109.0...v3.109.1) (2023-11-11)
+
+
+### Bug Fixes
+
+* **gux-listbox:** fix keyboard accessibility issue for list boxes with dividers ([8f0f456](https://github.com/MyPureCloud/genesys-spark/commit/8f0f456bb7c2c650fa605553e9d123d02613f24f))
+
 ## [3.109.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.108.4...v3.109.0) (2023-11-10)
 
 
