@@ -61,20 +61,20 @@
       position: relative;
       display: inline-block;
       padding: 0 4px; // TODO: COMUI-2332 missing token
-      font-family: var(--gse-ui-toggle-label-fontFamily);
-      // line-height: var(--gse-ui-toggle-label-lineHeight); // TODO: COMUI-2332 adding this line height shifts up the label so it's not vertically centered anymore
-      font-size: var(--gse-ui-toggle-label-fontSize);
-      font-weight: var(--gse-ui-toggle-label-fontWeight);
 
       .gux-toggle-label-text {
         display: grid;
         grid-template-areas: 'inner-div';
         place-items: start;
-        font-family: var(--gse-ui-toggle-label-fontWeight);
 
         .gux-toggle-label-text-inner {
           position: relative;
           grid-area: inner-div;
+          font-family: var(--gse-ui-toggle-label-fontFamily);
+          font-size: var(--gse-ui-toggle-label-fontSize);
+          font-weight: var(--gse-ui-toggle-label-fontWeight);
+          color: var(--gse-ui-formControl-label-labelColor);
+          word-wrap: break-word;
 
           &.gux-hidden {
             visibility: hidden;
