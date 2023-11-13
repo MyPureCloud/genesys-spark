@@ -86,6 +86,7 @@ export class GuxTab {
           'gux-tab': true,
           'gux-active': this.active
         }}
+        disabled={this.guxDisabled}
         type="button"
         aria-disabled={this.guxDisabled.toString()}
         id={`gux-${this.tabId}-tab`}
