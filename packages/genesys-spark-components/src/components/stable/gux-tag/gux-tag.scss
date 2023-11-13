@@ -1,40 +1,5 @@
 @use '../../../style/mixins';
 
-/**
-  * @prop --gse-ui-tag-default-backgroundColor
-  * @prop --gse-ui-tag-default-foregroundColor
-  * @prop --gse-ui-tag-accent1-backgroundColor
-  * @prop --gse-ui-tag-accent1-foregroundColor
-  * @prop --gse-ui-tag-accent2-backgroundColor
-  * @prop --gse-ui-tag-accent2-foregroundColor
-  * @prop --gse-ui-tag-accent3-backgroundColor
-  * @prop --gse-ui-tag-accent3-foregroundColor
-  * @prop --gse-ui-tag-accent4-backgroundColor
-  * @prop --gse-ui-tag-accent4-foregroundColor
-  * @prop --gse-ui-tag-accent5-backgroundColor
-  * @prop --gse-ui-tag-accent5-foregroundColor
-  * @prop --gse-ui-tag-accent6-backgroundColor
-  * @prop --gse-ui-tag-accent6-foregroundColor
-  * @prop --gse-ui-tag-accent7-backgroundColor
-  * @prop --gse-ui-tag-accent7-foregroundColor
-  * @prop --gse-ui-tag-accent8-backgroundColor
-  * @prop --gse-ui-tag-accent8-foregroundColor
-  * @prop --gse-ui-tag-accent9-backgroundColor
-  * @prop --gse-ui-tag-accent9-foregroundColor
-  * @prop --gse-ui-tag-accent10-backgroundColor
-  * @prop --gse-ui-tag-accent10-foregroundColor
-  * @prop --gse-ui-tag-borderRadius
-  * @prop --gse-ui-tag-button-size
-  * @prop --gse-ui-tag-height
-  * @prop --gse-ui-tag-padding
-  * @prop --gse-ui-tag-removable-gap
-  * @prop --gse-ui-tag-removable-padding
-  * @prop --gse-ui-tag-text-fontFamily
-  * @prop --gse-ui-tag-text-fontSize
-  * @prop --gse-ui-tag-text-fontWeight // missing
-  * @prop --gse-ui-tag-text-lineHeight
-  */
-
 :host {
   display: inline-block;
   border-radius: var(--gse-ui-tag-borderRadius);

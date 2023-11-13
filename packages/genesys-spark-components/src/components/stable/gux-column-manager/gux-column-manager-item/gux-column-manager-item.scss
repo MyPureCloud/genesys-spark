@@ -1,10 +1,6 @@
 @use '../../../../style/mixins';
 @use '../../../../style/focus';
 
-/**
-  * @prop --gse-ui-dataTableItems-editColumn-editColumnItem-gap
-  */
-
 :host([gs-reorder-indicator='above']) {
   .gux-container {
     border-top-color: #aac9ff; //TODO https://inindca.atlassian.net/browse/COMUI-2314

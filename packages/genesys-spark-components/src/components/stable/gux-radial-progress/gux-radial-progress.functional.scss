@@ -1,15 +1,3 @@
-/**
-  * @prop --gse-ui-progressAndLoading-largeBorder
-  * @prop --gse-ui-progressAndLoading-spinner-base
-  * @prop --gse-ui-progressAndLoading-spinner-foreground
-  * @prop --gse-ui-progressAndLoading-spinner-large : //TODO https://inindca.atlassian.net/browse/COMUI-2226
-  * @prop --gse-ui-progressAndLoading-spinner-text-fontFamily
-  * @prop --gse-ui-progressAndLoading-spinner-text-fontSize
-  * @prop --gse-ui-progressAndLoading-spinner-text-fontWeight
-  * @prop --gse-ui-progressAndLoading-spinner-text-lineHeight
-  * @prop --gse-ui-progressAndLoading-textColor
-*/
-
 @mixin gux-percentage-state-style {
   div[role='progressbar'] {
     .gux-svg-container {

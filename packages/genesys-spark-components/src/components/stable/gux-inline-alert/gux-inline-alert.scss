@@ -1,37 +1,3 @@
-/**
-  * @prop --gse-ui-alert-padding
-  * @prop --gse-ui-alert-gap
-  * @prop --gse-ui-alert-info-backgroundColor
-  * @prop --gse-ui-alert-info-foregroundColor
-  * @prop --gse-ui-alert-info-iconColor
-  * @prop --gse-ui-alert-info-border-color
-  * @prop --gse-ui-alert-info-border-width
-  * @prop --gse-ui-alert-info-border-style
-  * @prop --gse-ui-alert-success-backgroundColor
-  * @prop --gse-ui-alert-success-foregroundColor
-  * @prop --gse-ui-alert-success-iconColor
-  * @prop --gse-ui-alert-success-border-color
-  * @prop --gse-ui-alert-success-border-width
-  * @prop --gse-ui-alert-success-border-style
-  * @prop --gse-ui-alert-warning-backgroundColor
-  * @prop --gse-ui-alert-warning-foregroundColor
-  * @prop --gse-ui-alert-warning-iconColor
-  * @prop --gse-ui-alert-warning-border-color
-  * @prop --gse-ui-alert-warning-border-width
-  * @prop --gse-ui-alert-warning-border-style
-  * @prop --gse-ui-alert-error-backgroundColor
-  * @prop --gse-ui-alert-error-foregroundColor
-  * @prop --gse-ui-alert-error-iconColor
-  * @prop --gse-ui-alert-error-border-color
-  * @prop --gse-ui-alert-error-border-width
-  * @prop --gse-ui-alert-error-border-style
-  * @prop --gse-ui-alert-text-fontFamily
-  * @prop --gse-ui-alert-text-lineHeight
-  * @prop --gse-ui-alert-text-fontSize
-  * @prop --gse-ui-alert-borderRadius
-  * @prop --gse-ui-alert-text-fontWeight
-  */
-
 @use '../../../style/mixins';
 
 :host {

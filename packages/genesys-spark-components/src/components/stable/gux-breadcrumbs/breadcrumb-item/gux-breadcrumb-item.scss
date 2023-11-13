@@ -1,48 +1,5 @@
 @use '../../../../style/_focus.scss';
 
-/**
-  * @prop --gse-semantic-focusRing-cornerRadius
-  * @prop --gse-semantic-focusRing-default-border-color
-  * @prop --gse-semantic-focusRing-default-border-style
-  * @prop --gse-semantic-focusRing-default-border-width
-  * @prop --gse-semantic-focusRing-offset
-  * @prop --gse-ui-breadcrumbs-primary-height
-  * @prop --gse-ui-breadcrumbs-primary-separator-padding
-  * @prop --gse-ui-breadcrumbs-primary-separator-typography-fontFamily
-  * @prop --gse-ui-breadcrumbs-primary-separator-typography-fontSize
-  * @prop --gse-ui-breadcrumbs-primary-separator-typography-fontWeight
-  * @prop --gse-ui-breadcrumbs-primary-separator-typography-lineHeight
-  * @prop --gse-ui-breadcrumbs-secondary-height
-  * @prop --gse-ui-breadcrumbs-secondary-separator-padding
-  * @prop --gse-ui-breadcrumbs-secondary-separator-typography-fontFamily
-  * @prop --gse-ui-breadcrumbs-secondary-separator-typography-fontSize
-  * @prop --gse-ui-breadcrumbs-secondary-separator-typography-fontWeight
-  * @prop --gse-ui-breadcrumbs-secondary-separator-typography-lineHeight
-  * @prop --gse-ui-breadcrumbs-separator-color
-  * @prop --gse-ui-link-active-foregroundColor
-  * @prop --gse-ui-link-default-foregroundColor
-  * @prop --gse-ui-link-hover-foregroundColor
-  * @prop --gse-ui-link-inLine-medium-text-fontFamily
-  * @prop --gse-ui-link-inLine-medium-text-fontSize
-  * @prop --gse-ui-link-inLine-medium-text-fontWeight
-  * @prop --gse-ui-link-inLine-medium-text-lineHeight
-  * @prop --gse-ui-link-inLine-medium-underlinedText-fontFamily
-  * @prop --gse-ui-link-inLine-medium-underlinedText-fontSize
-  * @prop --gse-ui-link-inLine-medium-underlinedText-fontWeight
-  * @prop --gse-ui-link-inLine-medium-underlinedText-lineHeight
-  * @prop --gse-ui-link-inLine-medium-underlinedText-textDecoration
-  * @prop --gse-ui-link-inLine-small-text-fontFamily
-  * @prop --gse-ui-link-inLine-small-text-fontSize
-  * @prop --gse-ui-link-inLine-small-text-fontWeight
-  * @prop --gse-ui-link-inLine-small-text-lineHeight
-  * @prop --gse-ui-link-inLine-small-underlinedText-fontFamily
-  * @prop --gse-ui-link-inLine-small-underlinedText-fontSize
-  * @prop --gse-ui-link-inLine-small-underlinedText-fontWeight
-  * @prop --gse-ui-link-inLine-small-underlinedText-lineHeight
-  * @prop --gse-ui-link-inLine-small-underlinedText-textDecoration
-  * @prop --gse-ui-link-visited-foregroundColor
-  */
-
 @mixin link-breadcrumb-primary-default {
   font-family: var(--gse-ui-link-inLine-medium-text-fontFamily);
   font-size: var(--gse-ui-link-inLine-medium-text-fontSize);

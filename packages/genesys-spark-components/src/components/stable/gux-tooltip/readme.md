@@ -62,37 +62,6 @@ Type: `Promise<void>`
 |      | Content of the tooltip |
 
 
-## CSS Custom Properties
-
-| Name                                     | Description |
-| ---------------------------------------- | ----------- |
-| `--gse-ui-tooltip-borderRadius`          |             |
-| `--gse-ui-tooltip-boxShadow-blur`        |             |
-| `--gse-ui-tooltip-boxShadow-color`       |             |
-| `--gse-ui-tooltip-boxShadow-spread`      |             |
-| `--gse-ui-tooltip-boxShadow-x`           |             |
-| `--gse-ui-tooltip-boxShadow-y`           |             |
-| `--gse-ui-tooltip-dark-backgroundColor`  |             |
-| `--gse-ui-tooltip-dark-border-color`     |             |
-| `--gse-ui-tooltip-dark-border-style`     |             |
-| `--gse-ui-tooltip-dark-border-width`     |             |
-| `--gse-ui-tooltip-dark-foregroundColor`  |             |
-| `--gse-ui-tooltip-dark-iconColor`        |             |
-| `--gse-ui-tooltip-gap`                   |             |
-| `--gse-ui-tooltip-height`                |             |
-| `--gse-ui-tooltip-light-backgroundColor` |             |
-| `--gse-ui-tooltip-light-border-color`    |             |
-| `--gse-ui-tooltip-light-border-style`    |             |
-| `--gse-ui-tooltip-light-border-width`    |             |
-| `--gse-ui-tooltip-light-foregroundColor` |             |
-| `--gse-ui-tooltip-light-iconColor`       |             |
-| `--gse-ui-tooltip-padding`               |             |
-| `--gse-ui-tooltip-text-fontFamily`       |             |
-| `--gse-ui-tooltip-text-fontSize`         |             |
-| `--gse-ui-tooltip-text-fontWeight`       |             |
-| `--gse-ui-tooltip-text-lineHeight`       |             |
-
-
 ## Dependencies
 
 ### Used by

@@ -17,21 +17,6 @@ Otherwise, if the progress is unknown, and no percentage is provided, it instead
 | `value`            | `value`             | The progress made in the progress spinner compared to the max value      | `number` | `undefined` |
 
 
-## CSS Custom Properties
-
-| Name                                                  | Description                                            |
-| ----------------------------------------------------- | ------------------------------------------------------ |
-| `--gse-ui-progressAndLoading-largeBorder`             |                                                        |
-| `--gse-ui-progressAndLoading-spinner-base`            |                                                        |
-| `--gse-ui-progressAndLoading-spinner-foreground`      |                                                        |
-| `--gse-ui-progressAndLoading-spinner-large`           | //TODO https://inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-spinner-text-fontFamily` |                                                        |
-| `--gse-ui-progressAndLoading-spinner-text-fontSize`   |                                                        |
-| `--gse-ui-progressAndLoading-spinner-text-fontWeight` |                                                        |
-| `--gse-ui-progressAndLoading-spinner-text-lineHeight` |                                                        |
-| `--gse-ui-progressAndLoading-textColor`               |                                                        |
-
-
 ## Dependencies
 
 ### Depends on

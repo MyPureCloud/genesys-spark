@@ -16,19 +16,6 @@ Otherwise, if the loading is unknown, and no percentage is provided, it instead 
 | `screenreaderText` | `screenreader-text` | Localized text to provide an accessible label for the component. If no screenreader text is provided, the localized string "Loading" will be used by default. | `string`                            | `''`      |
 
 
-## CSS Custom Properties
-
-| Name                                                     | Description                               |
-| -------------------------------------------------------- | ----------------------------------------- |
-| `--gse-ui-progressAndLoading-largeBorder //TODO https`   | //inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-smallBorder //TODO https`   | //inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-spinner-base`               |                                           |
-| `--gse-ui-progressAndLoading-spinner-foreground`         |                                           |
-| `--gse-ui-progressAndLoading-spinner-large //TODO https` | //inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-spinner-small //TODO https` | //inindca.atlassian.net/browse/COMUI-2226 |
-| `--gse-ui-progressAndLoading-thinBorder //TODO https`    | //inindca.atlassian.net/browse/COMUI-2226 |
-
-
 ## Dependencies
 
 ### Used by
