@@ -145,6 +145,10 @@
     @include gux-input-focus-border;
   }
 
+  &:focus-within:has(:focus-visible) {
+    @include gux-input-focus-border;
+  }
+
   .gux-filter-input {
     background-color: inherit;
     border: none;
@@ -177,6 +181,10 @@
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
   &:focus-visible {
+    @include gux-input-focus-border;
+  }
+
+  &:focus-within:has(:focus-visible) {
     @include gux-input-focus-border;
   }
 }
