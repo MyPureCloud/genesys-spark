@@ -1,4 +1,5 @@
 @use '../../../style/mixins';
+@use '../../../style/focus';
 
 .gux-time-picker {
   position: relative;
@@ -34,10 +35,7 @@
     border-radius: var(--gse-ui-formControl-input-borderRadius);
 
     &:focus-within {
-      border: var(--gse-ui-timePicker-focusTime-border-width)
-        var(--gse-ui-timePicker-focusTime-border-style)
-        var(--gse-ui-timePicker-focusTime-border-color);
-      border-radius: var(--gse-ui-timePicker-focusTime-borderRadius);
+      @include focus.gux-focus-ring;
     }
 
     &:hover:not(:disabled) {
@@ -82,9 +80,8 @@
       outline: none;
 
       &:focus-visible {
-        border: var(--gse-ui-timePicker-focusAmpm-border-width)
-          var(--gse-ui-timePicker-focusAmpm-border-style)
-          var(--gse-ui-timePicker-focusAmpm-border-color);
+        @include focus.gux-focus-ring-small;
+
         border-radius: var(--gse-ui-timePicker-focusAmpm-borderRadius);
       }
 
@@ -111,20 +108,16 @@
       color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
       background: transparent;
       border: none;
+      outline: none;
 
       &.gux-active:not(:disabled) {
         color: var(--gse-ui-timePicker-clockStates-activeColor);
         cursor: pointer;
       }
 
-      &:focus {
-        outline: none;
-      }
-
       &:focus-visible {
-        border: var(--gse-ui-timePicker-focusClock-border-width)
-          var(--gse-ui-timePicker-focusClock-border-style)
-          var(--gse-ui-timePicker-focusClock-border-color);
+        @include focus.gux-focus-ring-small;
+
         border-radius: var(--gse-ui-timePicker-focusClock-borderRadius);
       }
 
