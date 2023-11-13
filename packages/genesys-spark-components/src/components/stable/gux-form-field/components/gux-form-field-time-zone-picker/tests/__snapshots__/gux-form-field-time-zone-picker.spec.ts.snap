@@ -4,7 +4,7 @@ exports[`gux-form-field-time-zone-picker #render error should render component a
 <gux-form-field-time-zone-picker>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
+      <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="label"></slot>
         <gux-screen-reader-beta>
           <mock:shadow-root>
@@ -23,6 +23,9 @@ exports[`gux-form-field-time-zone-picker #render error should render component a
           This is an error message
         </gux-screen-reader-beta>
       </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Select Time Zone
+      </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-input-error gux-time-zone-picker-container">
           <slot></slot>
@@ -55,7 +58,7 @@ exports[`gux-form-field-time-zone-picker #render help should render component as
 <gux-form-field-time-zone-picker>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
+      <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="label"></slot>
         <gux-screen-reader-beta>
           <mock:shadow-root>
@@ -66,6 +69,9 @@ exports[`gux-form-field-time-zone-picker #render help should render component as
           Required
         </gux-screen-reader-beta>
       </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Select Time Zone
+      </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
           <slot></slot>
@@ -98,7 +104,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
 <gux-form-field-time-zone-picker>
   <mock:shadow-root>
     <fieldset class="gux-form-field-fieldset-container gux-undefined">
-      <legend class="gux-form-field-legend-label gux-undefined">
+      <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="label"></slot>
         <gux-screen-reader-beta>
           <mock:shadow-root>
@@ -109,6 +115,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
           Required
         </gux-screen-reader-beta>
       </legend>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
           <slot></slot>
@@ -135,7 +142,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
 <gux-form-field-time-zone-picker>
   <mock:shadow-root>
     <fieldset class="gux-form-field-fieldset-container gux-undefined">
-      <legend class="gux-form-field-legend-label gux-undefined">
+      <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="label"></slot>
         <gux-screen-reader-beta>
           <mock:shadow-root>
@@ -146,6 +153,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
           Required
         </gux-screen-reader-beta>
       </legend>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
           <slot></slot>
@@ -172,7 +180,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
 <gux-form-field-time-zone-picker>
   <mock:shadow-root>
     <fieldset class="gux-form-field-fieldset-container gux-undefined">
-      <legend class="gux-form-field-legend-label gux-undefined">
+      <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="label"></slot>
         <gux-screen-reader-beta>
           <mock:shadow-root>
@@ -183,6 +191,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
           Required
         </gux-screen-reader-beta>
       </legend>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
           <slot></slot>
@@ -209,7 +218,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
 <gux-form-field-time-zone-picker>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
+      <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="label"></slot>
         <gux-screen-reader-beta>
           <mock:shadow-root>
@@ -220,6 +229,9 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
           Required
         </gux-screen-reader-beta>
       </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Select Time Zone
+      </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
           <slot></slot>
@@ -249,7 +261,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
 <gux-form-field-time-zone-picker label-position="above">
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-above gux-form-field-legend-label">
+      <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="label"></slot>
         <gux-screen-reader-beta>
           <mock:shadow-root>
@@ -260,6 +272,9 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
           Required
         </gux-screen-reader-beta>
       </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Select Time Zone
+      </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
           <slot></slot>
@@ -289,7 +304,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
 <gux-form-field-time-zone-picker label-position="beside">
   <mock:shadow-root>
     <fieldset class="gux-beside gux-form-field-fieldset-container">
-      <legend class="gux-beside gux-form-field-legend-label">
+      <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="label"></slot>
         <gux-screen-reader-beta>
           <mock:shadow-root>
@@ -300,6 +315,9 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
           Required
         </gux-screen-reader-beta>
       </legend>
+      <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+        Select Time Zone
+      </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
           <slot></slot>
@@ -340,6 +358,9 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
           Required
         </gux-screen-reader-beta>
       </legend>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
+        Select Time Zone
+      </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
           <slot></slot>
