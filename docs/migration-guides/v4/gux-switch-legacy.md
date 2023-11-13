@@ -25,6 +25,37 @@ Refer to The Spark Design System site for more info on this: https://spark.genes
 </gux-switch>
 ```
 
+## V4 Basic Migration: Add "-legacy" to Tag Name
+
+Steps:
+
+- Replace the `gux-switch` tag with `gux-switch-legacy` tag
+
+```diff
+- <gux-switch
++ <gux-switch-legacy
+  ...
+- </gux-switch>
++ </gux-switch-legacy>
+```
+
+Completed V3 Basic Migration:
+
+```html
+<gux-switch-legacy
+  layout="default"
+  value="month"
+  onchange="notify(event)"
+  oninput="notify(event)"
+>
+  <gux-switch-item value="month">Month</gux-switch-item>
+  <gux-switch-item value="week" disabled>Week</gux-switch-item>
+  <gux-switch-item value="day">Day</gux-switch-item>
+  <gux-switch-item value="hour">Hour</gux-switch-item>
+  <gux-switch-item value="minute">Minute</gux-switch-item>
+</gux-switch-legacy>
+```
+
 ## V4 Full Migration to gux-segmented-control-beta
 
 ```html
