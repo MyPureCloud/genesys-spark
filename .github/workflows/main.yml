@@ -31,7 +31,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '16'
+          node-version-file: 'package.json'
       # Can't use npm ci, because it fails on missing optional dependencies
       - run: npm install
 
