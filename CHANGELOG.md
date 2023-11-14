@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.61](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.58...v4.0.0-beta.61) (2023-11-14)
+
+
+### Features
+
+* **genesys-spark:** add date/time formatting utilities ([f40893c](https://github.com/MyPureCloud/genesys-spark/commit/f40893ccae61bdae90f49018b116a4b3f8e1bf33))
+* **gux-popup:** add offset property to gux-popup ([34dae0d](https://github.com/MyPureCloud/genesys-spark/commit/34dae0d308c69ee675852909cde9d84ff1b21655))
+
+
+### Bug Fixes
+
+* **blank-state:** changed min widt of large version ([71aba6d](https://github.com/MyPureCloud/genesys-spark/commit/71aba6dbc9a6fb7a02b75113ff31f96ce47cd44f))
+* **column-manager:** fix text highlighting ([78bcd51](https://github.com/MyPureCloud/genesys-spark/commit/78bcd5177d18e97bfb5d7f9d74e3f4c130545f9a))
+* **dismiss-button:** fixed css token issue ([8968a50](https://github.com/MyPureCloud/genesys-spark/commit/8968a501bab47f1f7e12734bc345870fb01ff738))
+* **input clear:** certering clear icon vertically ([bf6aff8](https://github.com/MyPureCloud/genesys-spark/commit/bf6aff82b4563b9f1862ca4ff6317ea4670b9b9e))
+* **loading-message:** added max width restriction ([271851d](https://github.com/MyPureCloud/genesys-spark/commit/271851de8436266d624997826bea1a7b47abeb01))
+* **month-picker:** fixed styles ([c35674b](https://github.com/MyPureCloud/genesys-spark/commit/c35674b61b3fb61aaefc58cd3ea076953fca73e8))
+* **pagination-cursor:** fixing missing items per page dropdown ([eec4a22](https://github.com/MyPureCloud/genesys-spark/commit/eec4a22ba0d7fd5100e533f32bbcf43d825a6fd3))
+* **segmented-control:** added pointer cursor ([4741e28](https://github.com/MyPureCloud/genesys-spark/commit/4741e28e22bf59c4a91e121bb44e7fd674db5ba6))
+* **segmented-control:** fixed design system tokens ([8bb3418](https://github.com/MyPureCloud/genesys-spark/commit/8bb341814287ca309b2214369c8adb7bd6d0ce72))
+* **tabs:** fixed tab UX issues ([9b3e4d9](https://github.com/MyPureCloud/genesys-spark/commit/9b3e4d9e9c2c768a6be2856de457af09fe121ab1))
+* **time-picker:** fixed focus styles ([e2956ce](https://github.com/MyPureCloud/genesys-spark/commit/e2956ce9256bc8add7c67f32a36df601ff8f9eb4))
+
 ## [4.0.0-beta.60](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.58...v4.0.0-beta.59) (2023-11-10)
 
 
