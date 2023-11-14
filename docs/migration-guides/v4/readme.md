@@ -84,8 +84,10 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | `gux-blank-state-beta`          | `gux-blank-state`          |
 | `gux-column-manager-beta`       | `gux-column-manager`       |
 | `gux-context-menu-beta`         | `gux-context-menu`         |
+| `gux-flyout-menu-beta`          | `gux-flyout-menu`          |
 | `gux-inline-alert-beta`         | `gux-inline-alert`         |
 | `gux-loading-message-beta`      | `gux-loading-message`      |
+| `gux-pagination-beta`           | `gux-pagination`           |
 | `gux-popover-beta`              | `gux-popover`              |
 | `gux-popup-beta`                | `gux-popup`                |
 | `gux-skip-navigation-list-beta` | `gux-skip-navigation-list` |
@@ -93,7 +95,6 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | `gux-table-beta`                | `gux-table`                |
 | `gux-table-toolbar-beta`        | `gux-table-toolbar`        |
 | `gux-time-picker-beta`          | `gux-time-picker`          |
-| `gux-pagination-beta`           | `gux-pagination`           |
 
 #### Component tag rename AND required API changes:
 
