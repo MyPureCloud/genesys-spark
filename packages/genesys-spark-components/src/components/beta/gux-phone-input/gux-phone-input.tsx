@@ -492,7 +492,10 @@ export class GuxPhoneInput {
     return (
       <input
         id={'tel-input'}
-        class="gux-phone-text-input"
+        class={{
+          'gux-phone-text-input': true,
+          'gux-disabled': this.disabled
+        }}
         type="tel"
         placeholder={this.phoneUtil.format(
           this.phoneUtil.getExampleNumber(
