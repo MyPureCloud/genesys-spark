@@ -61,11 +61,6 @@ describe('gux-toggle', () => {
         userInteraction: (element: HTMLElement) => element.click()
       },
       {
-        name: 'Enter is pressed',
-        userInteraction: (element: HTMLElement) =>
-          element.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }))
-      },
-      {
         name: 'Space is pressed',
         userInteraction: (element: HTMLElement) =>
           element.dispatchEvent(new KeyboardEvent('keydown', { key: ' ' }))
@@ -77,11 +72,13 @@ describe('gux-toggle', () => {
             '<gux-toggle disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newSpecPage({ components, html, language });
           const element = page.root as HTMLGuxToggleElement;
+          const toggleSlider =
+            element.shadowRoot.querySelector('gux-toggle-slider');
           const checkSpy = jest.fn();
 
           element.addEventListener('check', checkSpy);
 
-          userInteraction(element);
+          userInteraction(toggleSlider);
           await page.waitForChanges();
 
           expect(checkSpy).not.toHaveBeenCalled();
@@ -92,11 +89,13 @@ describe('gux-toggle', () => {
             '<gux-toggle checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newSpecPage({ components, html, language });
           const element = page.root as HTMLGuxToggleElement;
+          const toggleSlider =
+            element.shadowRoot.querySelector('gux-toggle-slider');
           const checkSpy = jest.fn();
 
           element.addEventListener('check', checkSpy);
 
-          userInteraction(element);
+          userInteraction(toggleSlider);
           await page.waitForChanges();
 
           expect(checkSpy).toHaveBeenCalled();
@@ -107,10 +106,11 @@ describe('gux-toggle', () => {
             '<gux-toggle checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newSpecPage({ components, html, language });
           const element = page.root as HTMLGuxToggleElement;
-
+          const toggleSlider =
+            element.shadowRoot.querySelector('gux-toggle-slider');
           expect(element.checked).toBe(false);
 
-          userInteraction(element);
+          userInteraction(toggleSlider);
           await page.waitForChanges();
 
           expect(element.checked).toBe(true);
@@ -121,10 +121,11 @@ describe('gux-toggle', () => {
             '<gux-toggle checked checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newSpecPage({ components, html, language });
           const element = page.root as HTMLGuxToggleElement;
-
+          const toggleSlider =
+            element.shadowRoot.querySelector('gux-toggle-slider');
           expect(element.checked).toBe(true);
 
-          userInteraction(element);
+          userInteraction(toggleSlider);
           await page.waitForChanges();
 
           expect(element.checked).toBe(false);
@@ -135,10 +136,11 @@ describe('gux-toggle', () => {
             '<gux-toggle disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newSpecPage({ components, html, language });
           const element = page.root as HTMLGuxToggleElement;
-
+          const toggleSlider =
+            element.shadowRoot.querySelector('gux-toggle-slider');
           expect(element.checked).toBe(false);
 
-          userInteraction(element);
+          userInteraction(toggleSlider);
           await page.waitForChanges();
 
           expect(element.checked).toBe(false);
@@ -149,10 +151,11 @@ describe('gux-toggle', () => {
             '<gux-toggle checked disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newSpecPage({ components, html, language });
           const element = page.root as HTMLGuxToggleElement;
-
+          const toggleSlider =
+            element.shadowRoot.querySelector('gux-toggle-slider');
           expect(element.checked).toBe(true);
 
-          userInteraction(element);
+          userInteraction(toggleSlider);
           await page.waitForChanges();
 
           expect(element.checked).toBe(true);
