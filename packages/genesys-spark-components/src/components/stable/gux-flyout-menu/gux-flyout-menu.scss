@@ -6,17 +6,6 @@
   z-index: var(--gux-zindex-popover, zindex.$gux-zindex-popover);
   color: var(--gse-ui-menu-option-label-foregroundColor);
   cursor: default;
-
-  .gux-arrow {
-    position: absolute;
-    width: var(--gse-ui-popover-anchor-width);
-    height: var(--gse-ui-popover-anchor-height);
-    background: var(--gse-ui-popover-backgroundColor);
-    border-top: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
-      var(--gse-ui-menu-border-color);
-    border-right: var(--gse-ui-menu-border-width)
-      var(--gse-ui-menu-border-style) var(--gse-ui-menu-border-color);
-  }
 }
 
 :host(:focus) {
@@ -30,11 +19,22 @@
 .gux-flyout-menu-content {
   position: fixed;
   display: none;
-  border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
-    var(--gse-ui-menu-border-color);
+  border: none;
   border-radius: var(--gse-ui-menu-borderRadius);
 
   &.gux-shown {
     display: flex;
+  }
+
+  .gux-arrow {
+    position: absolute;
+    width: var(--gse-ui-popover-anchor-width);
+    height: var(--gse-ui-popover-anchor-height);
+    background: var(--gse-ui-popover-backgroundColor);
+    border: none;
+    box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
+      var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
+      var(--gse-ui-menu-boxShadow-color);
+    z-index: -1;
   }
 }
