@@ -4,6 +4,7 @@ export interface GuxTimeZoneListing {
   abbreviation: string;
   group: string[];
   countryName: string;
+  countryCode: string;
   continentCode: string;
   continentName: string;
   mainCities: string[];
