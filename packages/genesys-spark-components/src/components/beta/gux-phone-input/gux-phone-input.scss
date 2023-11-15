@@ -19,8 +19,8 @@
   outline: none;
 
   &.gux-disabled {
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
   }
 }
 

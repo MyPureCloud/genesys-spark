@@ -45,26 +45,24 @@
 gux-tab-advanced {
   .gux-tab {
     display: flex;
-
-    border-top-width: var(--gse-ui-advancedTabs-item-indicator-height);
-    border-bottom-width: var(--gse-ui-advancedTabs-item-indicator-height);
-    border-bottom-style: solid;
-    border-color: transparent;
     align-items: center;
+    border-color: transparent;
+    border-top-width: var(--gse-ui-advancedTabs-item-indicator-height);
+    border-bottom-style: solid;
+    border-bottom-width: var(--gse-ui-advancedTabs-item-indicator-height);
 
     .gux-buttons {
-      width: var(--gse-ui-advancedTabs-item-width);
-      flex: 1 1 0;
       display: flex;
-
-      align-items: center;
+      flex: 1 1 0;
       gap: var(--gse-ui-advancedTabs-item-gap);
+      align-items: center;
+      width: var(--gse-ui-advancedTabs-item-width);
       min-width: 0;
 
       .gux-tab-button {
         all: unset;
-        width: 100px;
         flex: 1 1 0;
+        width: 100px;
         min-width: 0;
         padding: var(--gse-ui-advancedTabs-item-padding);
 
@@ -79,9 +77,9 @@ gux-tab-advanced {
 
         .gux-tab-button-text {
           font-family: var(--gse-ui-advancedTabs-item-itemText-fontFamily);
-          line-height: var(--gse-ui-advancedTabs-item-itemText-lineHeight);
           font-size: var(--gse-ui-advancedTabs-item-itemText-fontSize);
           font-weight: var(--gse-ui-advancedTabs-item-itemText-fontWeight);
+          line-height: var(--gse-ui-advancedTabs-item-itemText-lineHeight);
           color: var(--gse-ui-advancedTabs-item-text-color);
           white-space: nowrap;
         }
@@ -102,8 +100,8 @@ gux-tab-advanced {
     }
 
     .gux-divider {
-      height: var(--gse-ui-advancedTabs-item-divider-right-height);
       width: var(--gse-ui-advancedTabs-item-divider-right-width);
+      height: var(--gse-ui-advancedTabs-item-divider-right-height);
       background-color: var(--gse-ui-advancedTabs-divider-dividerColor);
     }
 

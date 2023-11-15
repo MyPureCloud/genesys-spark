@@ -35,13 +35,13 @@
 
   .gux-dropdown-button {
     button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: var(--gse-ui-button-iconOnly-width);
       padding: 0;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
 
       gux-icon {
         width: var(--gse-ui-button-icon-size);

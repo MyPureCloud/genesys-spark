@@ -29,9 +29,9 @@ $medium-breakpoint: gse-ui-feedback.$gse-ui-progressAndLoading-loadingState-medi
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: var(--gse-ui-progressAndLoading-loadingState-large-width);
   color: var(--gse-ui-progressAndLoading-textColor);
   text-align: center;
-  max-width: var(--gse-ui-progressAndLoading-loadingState-large-width);
 }
 
 // https://bholmes.dev/blog/alternative-to-css-variable-media-queries/

@@ -40,13 +40,13 @@
 
   .gux-reorder {
     all: unset;
+    display: flex;
     flex: 0 1 auto;
     align-self: auto;
     order: 0;
     color: #596373; //TODO https://inindca.atlassian.net/browse/COMUI-2314
     cursor: grab;
     border-radius: 4px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
-    display: flex;
 
     gux-icon {
       width: var(--gse-ui-icon-size-sm);
@@ -88,6 +88,7 @@
       left: calc(
         var(--gse-ui-icon-size-sm) + var(--gse-ui-checkbox-gap)
       ); //TODO https://inindca.atlassian.net/browse/COMUI-2314
+
       color: transparent;
       pointer-events: none;
     }
