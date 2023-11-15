@@ -375,13 +375,13 @@ If possible, avoid the usage of legacy components that have a migration path and
 
 #### gux-tab-panel
 
-- **_Shadow DOM_**: This component now uses a shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
+- **_Shadow DOM_**: This component now uses the shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
 
 #### gux-text-highlight
 
 - **_New Prop_**: A new `dimmed` property has been added to `gux-text-highlight`. This property changes the color used to highlight the text to a lighter one.
 
-- **_Shadow DOM_**: This component now uses a shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
+- **_Shadow DOM_**: This component now uses the shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
 
 #### gux-tooltip
 
@@ -401,7 +401,7 @@ The default component behavior for `gux-tooltip` remains unchanged. We suggest r
 
 ## Components Without API Changes
 
-The following components do not have any API changes or tag name changes and show not require any migration work
+The following components do not have any API changes or tag name changes and should not require any migration work
 
 Beta:
 
