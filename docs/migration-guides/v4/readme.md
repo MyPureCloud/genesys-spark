@@ -17,6 +17,7 @@
     - [gux-badge](#gux-badge)
     - [gux-button-slot](#gux-button-slot)
     - [gux-calendar](#gux-calendar)
+    - [gux-card](#gux-card)
     - [gux-dropdown-multi](#gux-dropdown-multi)
     - [gux-popover](#gux-popover)
     - [gux-popover-list](#gux-popover-list)
@@ -102,6 +103,7 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | ------------------------- | -------------------- | ---------------------------------------- |
 | `gux-badge-beta`          | `gux-badge`          | [migration details](#gux-badge)          |
 | `gux-button-slot-beta`    | `gux-button-slot`    | [migration details](#gux-button-slot)    |
+| `gux-card-beta`           | `gux-card`           | [migration details](#gux-card)           |
 | `gux-dropdown-multi-beta` | `gux-dropdown-multi` | [migration details](#gux-dropdown-multi) |
 | `gux-tag-beta`            | `gux-tag`            | [migration details](#gux-tag)            |
 
@@ -222,6 +224,12 @@ These components should not require any migration work.
 #### gux-calendar
 
 - **_Event Rename_**: The `input` event has been renamed `calendarSelect`
+
+#### gux-card
+
+- **_Prop Update_**: The `accent` types for `gux-card` have been updated.
+  - The `outline` type has been deprecated in `v4` and has been replaced by `bordered` as the default `accent`.
+  - The `filled` type has been deprecated in `v4`.
 
 #### gux-dropdown-multi
 
