@@ -20,6 +20,7 @@ gux-toggle-slider {
     order: 0;
     width: $toggle-width;
     height: $toggle-height;
+    cursor: pointer;
     border-radius: var(--gse-ui-toggle-track-borderRadius);
 
     &.gux-error {

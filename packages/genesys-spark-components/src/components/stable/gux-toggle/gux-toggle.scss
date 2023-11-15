@@ -10,8 +10,6 @@
 }
 
 .gux-toggle-container {
-  cursor: pointer;
-
   &.gux-disabled {
     pointer-events: none;
     cursor: default;
@@ -53,6 +51,7 @@
       position: relative;
       display: inline-block;
       padding: 0 4px; // TODO: COMUI-2332 missing token
+      cursor: default;
 
       .gux-toggle-label-text {
         display: grid;

@@ -6,7 +6,6 @@ import {
   h,
   Host,
   JSX,
-  Listen,
   Prop,
   Watch
 } from '@stencil/core';
@@ -71,15 +70,8 @@ export class GuxToggle {
   @Event()
   check: EventEmitter<boolean>;
 
-  @Listen('click')
-  onClick(): void {
-    this.toggle();
-  }
-
-  @Listen('keydown')
-  onKeydown(event: KeyboardEvent): void {
+  private onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
-      case 'Enter':
       case ' ':
         event.preventDefault();
         this.toggle();
@@ -175,6 +167,8 @@ export class GuxToggle {
               checked={this.checked}
               disabled={this.disabled || this.loading}
               guxAriaLabel={this.getAriaLabel()}
+              onClick={this.toggle.bind(this)}
+              onKeyDown={this.onKeydown.bind(this)}
               labelId={
                 this.checkedLabel && this.uncheckedLabel ? this.labelId : ''
               }
