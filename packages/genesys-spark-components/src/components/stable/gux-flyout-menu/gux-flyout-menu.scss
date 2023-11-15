@@ -28,6 +28,7 @@
 
   .gux-arrow {
     position: absolute;
+    z-index: -1;
     width: var(--gse-ui-popover-anchor-width);
     height: var(--gse-ui-popover-anchor-height);
     background: var(--gse-ui-popover-backgroundColor);
@@ -35,6 +36,5 @@
     box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
       var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
       var(--gse-ui-menu-boxShadow-color);
-    z-index: -1;
   }
 }

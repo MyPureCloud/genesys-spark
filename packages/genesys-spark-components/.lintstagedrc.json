@@ -1,6 +1,6 @@
 {
   "*": "prettier --ignore-unknown --write",
-  "*.{css,html, scss}": "stylelint --fix",
+  "*.{css,html,scss}": "stylelint --fix",
   "*.{ts,tsx,js,jsx}": "eslint --fix ",
   "*.svg": "svgo -i",
   "package.json": ["prettier-package-json --write"]
