@@ -40,7 +40,7 @@
   color: #2e394c;
   background-color: #f6f7f9;
   background-image: none;
-  border: 1px solid #6b7585;
+  border: 1px solid var(--gse-ui-formControl-input-default-border-color);
   border-radius: 4px;
   box-shadow: inset 0 0 4px rgba(#202937, 16%);
 
@@ -62,22 +62,21 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  place-content: stretch center;
   align-items: center;
   width: 100%;
   height: 30px;
-  padding: 6px 8px 6px 16px;
+  padding: 6px 8px 6px 12px;
   font-family: inherit;
   font-size: 12px;
   line-height: 1.6667;
   cursor: pointer;
   border-radius: 4px;
+  gap: 4px;
 }
 
 .gux-field {
   .gux-field-content {
     display: flex;
-    flex: 1 1 0;
     flex-direction: column;
     flex-wrap: nowrap;
     place-content: stretch flex-start;
@@ -114,7 +113,6 @@
     order: 0;
     width: 16px;
     height: 16px;
-    padding-left: 8px;
     color: #596373;
   }
 }
