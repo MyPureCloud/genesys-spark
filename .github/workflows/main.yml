@@ -29,9 +29,9 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version-file: 'package.json'
       # Can't use npm ci, because it fails on missing optional dependencies
       - run: npm install
 
