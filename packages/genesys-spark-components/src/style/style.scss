@@ -15,6 +15,7 @@
 @use '~genesys-spark-tokens/dist/css/gse-ui.css';
 @use 'style-reset-focusable.scss';
 @use 'style-reset-typography.scss';
+
 @use '../components/beta/gux-calendar-beta/gux-calendar.light.scss';
 @use '../components/legacy/gux-action-toast-legacy/gux-action-toast.light.scss';
 @use '../components/stable/gux-action-button/gux-action-button.light.scss';
@@ -22,3 +23,4 @@
 @use '../components/stable/gux-content-search/gux-content-search.light.scss';
 @use '../components/stable/gux-form-field/gux-form-field.light.scss';
 @use '../components/stable/gux-table/gux-table.light.scss';
+@use '../components/stable/gux-form-field/components/gux-form-field-color/gux-form-field-color.light.scss';
