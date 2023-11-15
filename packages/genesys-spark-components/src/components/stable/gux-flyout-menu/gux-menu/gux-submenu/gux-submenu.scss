@@ -56,8 +56,7 @@
     margin: 0;
     visibility: hidden;
     background-color: var(--gse-ui-menu-backgroundColor);
-    border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
-      var(--gse-ui-menu-border-color);
+    border: none;
     border-radius: var(--gse-ui-menu-borderRadius);
     box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
       var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
