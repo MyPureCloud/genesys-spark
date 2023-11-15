@@ -1,18 +1,16 @@
 gux-tabs[orientation='vertical'] > gux-tab-list {
   gux-tab {
     box-sizing: border-box;
-    border-right-width: var(--gse-ui-tabs-item-divider-vertical-width);
-    border-right-style: solid;
-    border-right-color: var(--gse-ui-tabs-item-divider-dividerColor);
+    border-right: var(--gse-ui-tabs-item-divider-vertical-width) solid
+      var(--gse-ui-tabs-item-divider-dividerColor);
 
     .gux-tab {
       display: flex;
       justify-content: flex-end;
       height: var(--gse-ui-tabs-item-vertical-fixedHeight);
       padding: var(--gse-ui-tabs-item-vertical-padding);
-      border-right-width: var(--gse-ui-tabs-item-indicator-vertical-width);
-      border-right-style: solid;
-      border-right-color: transparent;
+      border-right: var(--gse-ui-tabs-item-indicator-vertical-width) solid
+        transparent;
 
       &.gux-active {
         border-right-color: var(--gse-ui-tabs-item-indicator-activeColor);
@@ -30,9 +28,8 @@ gux-tabs:not([orientation='vertical']) > gux-tab-list {
     box-sizing: border-box;
     height: var(--gse-ui-tabs-item-horizontal-fixedHeight);
     padding: var(--gse-ui-tabs-item-horizontal-padding);
-    border-bottom-width: var(--gse-ui-tabs-item-indicator-horizontal-height);
-    border-bottom-style: solid;
-    border-bottom-color: transparent;
+    border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
+      transparent;
 
     &.gux-active {
       border-bottom-color: var(--gse-ui-tabs-item-indicator-activeColor);

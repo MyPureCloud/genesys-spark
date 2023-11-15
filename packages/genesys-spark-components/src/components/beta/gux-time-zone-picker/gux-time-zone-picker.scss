@@ -6,6 +6,6 @@ gux-dropdown {
   }
 
   gux-option {
-    padding: 0px 12px; //TODO COMUI-2478  cannot use dropdown tokens here as the gux-option requires a padding of 8px 12px in gux-dropdown whereas in timezone its 0px 12px.
+    padding: 0 12px; //TODO COMUI-2478  cannot use dropdown tokens here as the gux-option requires a padding of 8px 12px in gux-dropdown whereas in timezone its 0px 12px.
   }
 }
