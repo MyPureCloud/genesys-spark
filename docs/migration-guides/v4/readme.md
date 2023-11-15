@@ -10,8 +10,6 @@
   - [V3 Stable Components Archived to Legacy in V4](#v3-stable-components-archived-to-legacy-in-v4)
   - [V3 Beta Components Removed From V4](#v3-beta-components-removed-from-v4)
   - [V3 Legacy Components Removed from V4](#v3-legacy-components-removed-from-v4)
-  - [V3 Beta Components With No API Changes That Are Still In Beta In V4](#v3-beta-components-with-no-api-changes-that-are-still-in-beta-in-v4)
-  - [V3 Stable Components With No API Changes That Are Still Stable In V4](#v3-stable-components-with-no-api-changes-that-are-still-stable-in-v4)
 - [Component API Changes](#component-api-changes)
   - [V3 Beta Components Promoted to Stable in V4 API Changes](#v3-beta-components-promoted-to-stable-in-v4-api-changes)
     - [gux-badge](#gux-badge)
@@ -26,6 +24,8 @@
     - [gux-accordion](#gux-accordion)
     - [gux-action-button](#gux-action-button)
     - [gux-button-multi](#gux-button-multi)
+    - [gux-content-search](#gux-content-search)
+    - [gux-datepicker](#gux-datepicker)
     - [gux-dropdown](#gux-dropdown)
     - [gux-radial-progress](#gux-radial-progress)
     - [gux-form-field (color, number, range, search, select, text-like, textarea)](#gux-form-field-color-number-range-search-select-text-like-textarea)
@@ -35,6 +35,7 @@
     - [gux-tab-panel](#gux-tab-panel)
     - [gux-text-highlight](#gux-text-highlight)
     - [gux-tooltip](#gux-tooltip)
+- [Components Without API Changes](#components-without-api-changes)
 
 ## General Changes
 
@@ -85,9 +86,10 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | `gux-blank-state-beta`          | `gux-blank-state`          |
 | `gux-column-manager-beta`       | `gux-column-manager`       |
 | `gux-context-menu-beta`         | `gux-context-menu`         |
-| `gux-flyout-menu-beta`          | `gux-flyout-menu`          |
+| `gux-copy-to-clipboard-beta`    | `gux-copy-to-clipboard`    |
 | `gux-inline-alert-beta`         | `gux-inline-alert`         |
 | `gux-loading-message-beta`      | `gux-loading-message`      |
+| `gux-flyout-menu-beta`          | `gux-flyout-menu`          |
 | `gux-pagination-beta`           | `gux-pagination`           |
 | `gux-popover-beta`              | `gux-popover`              |
 | `gux-popup-beta`                | `gux-popup`                |
@@ -96,6 +98,7 @@ Action: _(required)_ remove `-beta` from the tag name of the component.
 | `gux-table-beta`                | `gux-table`                |
 | `gux-table-toolbar-beta`        | `gux-table-toolbar`        |
 | `gux-time-picker-beta`          | `gux-time-picker`          |
+| `gux-truncate-beta`             | `gux-truncate`             |
 
 #### Component tag rename AND required API changes:
 
@@ -151,25 +154,8 @@ If possible, avoid the usage of legacy components that have a migration path and
 | `gux-list-legacy`            | `gux-list`                                  | [migration details](../v3/gux-list-legacy.md)          |
 | `gux-panel-frame-legacy`     | N/A                                         | N/A                                                    |
 | `gux-side-panel-legacy`      | N/A                                         | N/A                                                    |
-| `gux-tabs-advanced`          | `gux-tabs`, gux-tabs-advanced`              | [migration details](../v3/gux-tabs-legacy.md)          |
+| `gux-tabs-legacy`            | `gux-tabs`, gux-tabs-advanced`              | [migration details](../v3/gux-tabs-legacy.md)          |
 | `gux-text-label-legacy`      | `gux-form-field-{type}`                     | [migration details](../v3/gux-form-field-legacy.md)    |
-
-### V3 Beta Components With No API Changes That Are Still In Beta In V4
-
-These components should not require any migration work.
-
-- `gux-announce-beta`
-- `gux-screen-reader-beta`
-- `gux-date-beta `
-- `gux-datetime-beta `
-- `gux-time-beta `
-
-### V3 Stable Components With No API Changes That Are Still Stable In V4
-
-These components should not require any migration work.
-
-- `gux-rating`
-- `gux-list`
 
 ## Component API Changes
 
@@ -298,10 +284,10 @@ These components should not require any migration work.
 
 #### gux-action-button
 
-- **_Removed Prop_**: The deprecated `title` prop has been removed. Instead, slot in a `span` or `div` with a slot name of `title`.
+- **_Removed Prop_**: The deprecated `text` prop has been removed. Instead, slot in a `span` or `div` with a slot name of `title`.
 
   ```diff
-  - <gux-action-button title="Primary" accent="primary" is-open="true">
+  - <gux-action-button text="Primary" accent="primary" is-open="true">
   + <gux-action-button accent="primary" is-open="true">
   +   <span slot="title">Primary</span>
       <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
@@ -311,16 +297,24 @@ These components should not require any migration work.
 
 #### gux-button-multi
 
-- **_Removed Prop_**: The deprecated `title` prop has been removed. Instead, slot in a `span` or `div` with a slot name of `title`.
+- **_Removed Prop_**: The deprecated `text` prop has been removed. Instead, slot in a `span` or `div` with a slot name of `title`.
 
   ```diff
-  - <gux-button-multi title="Primary" accent="primary" is-open="true">
+  - <gux-button-multi text="Primary" accent="primary" is-open="true">
   + <gux-button-multi accent="primary" is-open="true">
   +   <span slot="title">Primary</span>
       <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
       <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
     </gux-button-multi>
   ```
+
+#### gux-content-search
+
+- **_Style Change_**: Internal margins have been removed. See details in the [form-field-component](#gux-form-field-color-number-range-search-select-text-like-textarea) section for more details
+
+#### gux-datepicker
+
+- **_Style Change_**: Internal margins have been removed. See details in the [form-field-component](#gux-form-field-color-number-range-search-select-text-like-textarea) section for more details
 
 #### gux-dropdown
 
@@ -344,7 +338,7 @@ These components should not require any migration work.
 
 #### gux-form-field (color, number, range, search, select, text-like, textarea)
 
-- **_Style Change_**: Internal margins have been removed from the from field components.
+- **_Style Change_**: Internal margins have been removed from the form field components.
 
   This change was implemented to accommodate layouts that already accounted for spacings between components. In v3, developers could override the component margins with four CSS custom properties:
 
@@ -389,11 +383,13 @@ These components should not require any migration work.
 
 #### gux-tab-panel
 
-- **_Shadow DOM_**: This component now uses a shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
+- **_Shadow DOM_**: This component now uses the shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
 
 #### gux-text-highlight
 
 - **_New Prop_**: A new `dimmed` property has been added to `gux-text-highlight`. This property changes the color used to highlight the text to a lighter one.
+
+- **_Shadow DOM_**: This component now uses the shadow DOM. We do not expect this change to require any updates in applications. If this change does cause you an issue please reach out to the CORE UI team for help.
 
 #### gux-tooltip
 
@@ -410,6 +406,38 @@ These components should not require any migration work.
   ```
 
 The default component behavior for `gux-tooltip` remains unchanged. We suggest reading the Spark Design documentation or consulting with your UX contact before using the new properties.
+
+## Components Without API Changes
+
+The following components do not have any API changes or tag name changes and should not require any migration work
+
+Beta:
+
+- `gux-announce-beta`
+- `gux-date-beta`
+- `gux-date-time-beta`
+- `gux-month-picker-beta`
+- `gux-phone-input-beta`
+- `gux-screen-reader-beta`
+- `gux-time-zone-picker-beta`
+- `gux-time-beta`
+
+Stable:
+
+- `gux-breadcrumbs`
+- `gux-button`
+- `gux-list`
+- `gux-listbox`
+- `gux-listbox-multi`
+- `gux-page-loading-spinner`
+- `gux-pagination-cursor`
+- `gux-rating`
+- `gux-radial-loading`
+- `gux-toggle`
+
+Legacy:
+
+- `advanced-dropdown-legacy`
 
 ---
 
