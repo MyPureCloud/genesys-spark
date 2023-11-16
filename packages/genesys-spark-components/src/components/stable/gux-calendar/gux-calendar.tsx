@@ -216,7 +216,13 @@ export class GuxCalendar {
         const [start, end] = fromIsoDateRange(this.value);
         const fromTimeStamp = start.getTime();
         const toTimeStamp = end.getTime();
-        if (date.getTime() === fromTimeStamp) {
+        if (
+          date.getTime() === fromTimeStamp &&
+          date.getTime() === toTimeStamp
+        ) {
+          isSelected = true;
+          classes.push('gux-selected');
+        } else if (date.getTime() === fromTimeStamp) {
           isSelected = true;
           classes.push('gux-selected');
           classes.push('gux-start-date');
