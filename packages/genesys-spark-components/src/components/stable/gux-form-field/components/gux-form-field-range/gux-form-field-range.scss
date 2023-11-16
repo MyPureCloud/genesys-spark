@@ -151,7 +151,7 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
       @include typography.body-sm-regular;
 
       position: absolute;
-      z-index: var(--gux-zindex-tooltip, zindex.$gux-zindex-tooltip);
+      z-index: var(--gse-core-zIndex-tooltip);
       display: flex;
       align-items: center;
       justify-content: center;

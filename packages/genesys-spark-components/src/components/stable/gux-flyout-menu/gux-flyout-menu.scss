@@ -3,7 +3,7 @@
 
 // Style
 :host {
-  z-index: var(--gux-zindex-popover, zindex.$gux-zindex-popover);
+  z-index: var(--gse-core-zIndex-popover);
   color: var(--gse-ui-menu-option-label-foregroundColor);
   cursor: default;
 

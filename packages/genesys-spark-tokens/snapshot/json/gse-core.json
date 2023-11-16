@@ -8,6 +8,19 @@
     "md": "24px",
     "lg": "32px"
   },
+  "z-index": {
+    "base": 0,
+    "show-focus": 1,
+    "sticky": 1,
+    "popup": 100,
+    "popover": 200,
+    "tooltip": 200,
+    "panel": 300,
+    "navbar": 400,
+    "sidebar": 400,
+    "toast": 500,
+    "modal": 600
+  },
   "border_radius": {
     "none": 0,
     "sm": "4px",

@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: var(--gux-zindex-popover, zindex.$gux-zindex-popover);
+  z-index: var(--gse-core-zIndex-popover);
   display: inline-block;
   padding: 8px 0; // TODO: COMUI-2257 - add missing token
   background-color: var(--gse-ui-popover-backgroundColor);
