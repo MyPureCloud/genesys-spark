@@ -142,20 +142,20 @@ If possible, avoid the usage of legacy components that have a migration path and
 
 ### V3 Legacy Components Removed from V4
 
-| V3 tag name                  | V4 stable equivalent (requires API changes) | V3 Migration Guide                                     |
-| ---------------------------- | ------------------------------------------- | ------------------------------------------------------ |
-| `gux-accordion-legacy`       | `gux-accordion`                             | [migration details](../v3/gux-accordion-legacy.md)     |
-| `gux-action-button-legacy`   | `gux-action-button`                         | [migration details](../v3/gux-action-button-legacy.md) |
-| `gux-action-list-legacy`     | `gux-list`                                  | [migration details](../v3/gux-list-legacy.md)          |
-| `gux-button-multi-legacy`    | `gux-button-multi`                          | [migration details](../v3/gux-button-multi-legacy.md)  |
-| `gux-command-palette-legacy` | N/A                                         | N/A                                                    |
-| `gux-dropdown-legacy`        | `gux-dropdown`                              | [migration details](../v3/gux-dropdown-legacy.md)      |
-| `gux-form-field-legacy`      | `gux-form-field-{type}`                     | [migration details](../v3/gux-form-field-legacy.md)    |
-| `gux-list-legacy`            | `gux-list`                                  | [migration details](../v3/gux-list-legacy.md)          |
-| `gux-panel-frame-legacy`     | N/A                                         | N/A                                                    |
-| `gux-side-panel-legacy`      | N/A                                         | N/A                                                    |
-| `gux-tabs-legacy`            | `gux-tabs`, gux-tabs-advanced`              | [migration details](../v3/gux-tabs-legacy.md)          |
-| `gux-text-label-legacy`      | `gux-form-field-{type}`                     | [migration details](../v3/gux-form-field-legacy.md)    |
+| V3 tag name                  | V4 stable equivalent (requires API changes) | V3 Migration Guide                                    |
+| ---------------------------- | ------------------------------------------- | ----------------------------------------------------- |
+| `gux-accordion-legacy`       | `gux-accordion`                             | [migration details](../v3/gux-accordion-legacy.md)    |
+| `gux-action-button-legacy`   | `gux-action-button`                         | [migration details](./gux-action-button-legacy.md)    |
+| `gux-action-list-legacy`     | `gux-list`                                  | [migration details](../v3/gux-list-legacy.md)         |
+| `gux-button-multi-legacy`    | `gux-button-multi`                          | [migration details](../v3/gux-button-multi-legacy.md) |
+| `gux-command-palette-legacy` | N/A                                         | N/A                                                   |
+| `gux-dropdown-legacy`        | `gux-dropdown`                              | [migration details](../v3/gux-dropdown-legacy.md)     |
+| `gux-form-field-legacy`      | `gux-form-field-{type}`                     | [migration details](../v3/gux-form-field-legacy.md)   |
+| `gux-list-legacy`            | `gux-list`                                  | [migration details](../v3/gux-list-legacy.md)         |
+| `gux-panel-frame-legacy`     | N/A                                         | N/A                                                   |
+| `gux-side-panel-legacy`      | N/A                                         | N/A                                                   |
+| `gux-tabs-legacy`            | `gux-tabs`, gux-tabs-advanced`              | [migration details](../v3/gux-tabs-legacy.md)         |
+| `gux-text-label-legacy`      | `gux-form-field-{type}`                     | [migration details](../v3/gux-form-field-legacy.md)   |
 
 ## Component API Changes
 
