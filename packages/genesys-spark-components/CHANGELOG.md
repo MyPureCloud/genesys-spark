@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.109.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.109.1...v3.109.2) (2023-11-16)
+
+
+### Bug Fixes
+
+* **toggle:** prevent clickable area expanding past toggle-slider ([a57d76d](https://github.com/MyPureCloud/genesys-spark/commit/a57d76ddfa29e16fe7bdceeca65594b2746bc1d3))
+
 ### [3.109.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.109.0...v3.109.1) (2023-11-11)
 
 
