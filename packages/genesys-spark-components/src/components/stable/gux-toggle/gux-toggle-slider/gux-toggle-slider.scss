@@ -4,7 +4,7 @@ $toggle-height: var(--gse-ui-toggle-track-height);
 $toggle-width: var(--gse-ui-toggle-track-width);
 $slider-diameter: calc(var(--gse-ui-toggle-handle-width));
 $slider-transition: calc($toggle-width - $toggle-height);
-$slider-transition-duration: 0.5s; // TODO: COMUI-2332 missing token
+$slider-transition-duration: 0.2s; // TODO: COMUI-2509 - we are hardcoding this animation duration until design comes back with a token
 
 gux-toggle-slider {
   display: flex;
@@ -87,9 +87,7 @@ gux-toggle-slider {
           inset: 0;
           width: calc($slider-diameter - 2);
           height: calc($slider-diameter - 2);
-          padding: 1px; // TODO: COMUI-2332 missing token
-          color: #fdfdfd; // TODO: COMUI-2332 missing token
-          opacity: 0; // TODO: COMUI-2332 missing token
+          color: var(--gse-ui-toggle-handle-backgroundColor);
           transition: color $slider-transition-duration linear;
         }
       }
@@ -125,8 +123,8 @@ gux-toggle-slider {
           transform: translateX($slider-transition);
 
           gux-icon {
-            color: #2a60c8; // TODO: COMUI-2332 missing token
-            opacity: 1; // TODO: COMUI-2332 missing token
+            color: var(--gse-ui-toggle-handle-foregroundColor);
+            opacity: 1;
             transition: opacity math.div($slider-transition-duration, 2) linear;
             transition-delay: math.div($slider-transition-duration, 2);
           }
