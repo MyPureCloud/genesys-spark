@@ -1,7 +1,7 @@
 # V4 Migration Guide
 
 - [General Changes](#general-changes)
-- [Tokenization](#tokenization)
+- [Tokenization & CSS variables](#tokenization)
 - [Default styles for HTML elements / CSS reset](#default-styles-for-html-elements-css-reset)
 - [Component Stability Changes](#component-stability-changes)
   - [V3 Beta Components Promoted to Stable in V4](#v3-beta-components-promoted-to-stable-in-v4)
@@ -39,18 +39,24 @@
 
 ## General Changes
 
+- There is a new `genesys-spark` package that will load the components from the web at runtime, ensuring that apps will not unnecessarily bundle component assets. This is now the recommended way to install the design system.
 - Typescript updated to v5
 - `registerElements()` is no longer an async/promise function.
 - Visualizations have been moved out of `genesys-spark-components` into a separate package in the same `genesys-spark` monorepo project, `genesys-spark-visualizations`
 - PopperJS dependency removed. All instances of PopperJS have been replaced with Floating UI. We do not expect this to affect component usage.
 
-## Tokenization
+## Tokenization & CSS Variables
 
 In the v4 release, components have gone through a redesign process to adopt the new design system styles. Part of this effort included adopting tokens for styles within the components. Using tokens will simplify design changes in the future, helping us keep aligned with the Spark design system. Since we have moved toward using tokens in the components, some of our shared classes are no longer needed. These include:
 
 - Shadows: see the [shadow styles migration guide](./shadows.md)
 - Colors: see the [color palette migration guide](./color-palette.md)
 - Spacing: see the [spacing variables migration guide](./spacing.md)
+
+The tokens are exposed as CSS variables, which are used by the components. However, they are not yet
+an officially supported API. The specifics of the variables should be considered to be in a beta state.
+We will do our best to avoid removing/renaming CSS variables, but will do so if needed to resolve problems
+in the components.
 
 ## Default styles for HTML elements / CSS reset
 
