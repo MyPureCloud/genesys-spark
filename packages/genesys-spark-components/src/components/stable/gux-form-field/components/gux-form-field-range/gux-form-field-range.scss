@@ -20,7 +20,6 @@
 **/
 
 @use '../../../../../style/typography.scss';
-@use '../../../../../style/zindex.scss';
 @use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
@@ -151,7 +150,7 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
       @include typography.body-sm-regular;
 
       position: absolute;
-      z-index: var(--gse-core-zIndex-tooltip);
+      z-index: var(--gse-semantic-zIndex-tooltip);
       display: flex;
       align-items: center;
       justify-content: center;

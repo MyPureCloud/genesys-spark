@@ -81,7 +81,7 @@ gux-table {
     thead {
       position: sticky;
       top: 0;
-      z-index: var(--gse-core-zIndex-tooltip);
+      z-index: var(--gse-semantic-zIndex-tooltip);
 
       th {
         position: relative;

@@ -79,7 +79,7 @@ button {
 
     &:focus-visible {
       position: relative;
-      z-index: var(--gse-core-zIndex-showFocus);
+      z-index: var(--gse-semantic-zIndex-showFocus);
       border-radius: var(--gse-ui-segmentedControl-borderRadius);
 
       @include focus.gux-focus-ring;

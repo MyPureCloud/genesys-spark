@@ -1,9 +1,8 @@
 @use '../../../style/focus.scss';
-@use '../../../style/zindex.scss';
 
 // Style
 :host {
-  z-index: var(--gse-core-zIndex-popover);
+  z-index: var(--gse-semantic-zIndex-popover);
   color: var(--gse-ui-menu-option-label-foregroundColor);
   cursor: default;
 

@@ -55,5 +55,18 @@
         "style": "solid"
       }
     }
+  },
+  "z_index": {
+    "base": 0,
+    "show-focus": 1,
+    "sticky": 1,
+    "popup": 100,
+    "popover": 200,
+    "tooltip": 200,
+    "panel": 300,
+    "navbar": 400,
+    "sidebar": 400,
+    "toast": 500,
+    "modal": 600
   }
 }

@@ -1,112 +1,3 @@
-<div class="scroll-container">
-  <div class="scroll-interior">
-    <div id="popover-target">Example Element</div>
-    <gux-popover
-      id="popover-example"
-      position="top"
-      for="popover-target"
-      is-open
-    >
-      <span slot="title">Title</span>
-      <div class="popover-content-wrapper">
-        <div>Popover Content</div>
-        <div class="popover-content">
-          <gux-button accent="ghost" onclick="notify(event)">
-            Action 3
-          </gux-button>
-          <gux-button accent="secondary" onclick="notify(event)">
-            Action 2
-          </gux-button>
-          <gux-button accent="primary" onclick="notify(event)">
-            Action 1
-          </gux-button>
-        </div>
-      </div>
-    </gux-popover>
-  </div>
-</div>
-<gux-button
-  >Hover<gux-tooltip accent="dark"
-    >Tooltip with dark accent</gux-tooltip
-  ></gux-button
->
-<gux-dropdown value="">
-  <gux-listbox aria-label="Animals">
-    <gux-option value="a" disabled>Ant</gux-option>
-    <gux-option value="b">Bat</gux-option>
-    <gux-option value="c">Cat</gux-option>
-    <gux-option value="d">Dog</gux-option>
-    <gux-option value="e" disabled>Eel</gux-option>
-    <gux-option value="f">Frog</gux-option>
-    <gux-option value="g">Goat</gux-option>
-    <gux-option value="h" disabled>Horse</gux-option>
-    <gux-option value="i" disabled>Ibis</gux-option>
-    <gux-option value="">None</gux-option>
-  </gux-listbox>
-</gux-dropdown>
-<gux-button
-  >Hover<gux-tooltip accent="dark"
-    >Tooltip with dark accent</gux-tooltip
-  ></gux-button
-><gux-button
-  >Hover<gux-tooltip accent="dark"
-    >Tooltip with dark accent</gux-tooltip
-  ></gux-button
-><gux-button
-  >Hover<gux-tooltip accent="dark"
-    >Tooltip with dark accent</gux-tooltip
-  ></gux-button
-><gux-button
-  >Hover<gux-tooltip accent="dark"
-    >Tooltip with dark accent</gux-tooltip
-  ></gux-button
-><gux-button
-  >Hover<gux-tooltip accent="dark"
-    >Tooltip with dark accent</gux-tooltip
-  ></gux-button
->
-<div class="scroll-container">
-  <div class="scroll-interior">
-    <div id="popover-target">Example Element</div>
-    <gux-popover
-      id="popover-example"
-      position="top"
-      for="popover-target"
-      is-open
-    >
-      <span slot="title">Title</span>
-      <div class="popover-content-wrapper">
-        <div>Popover Content</div>
-        <div class="popover-content">
-          <gux-button accent="ghost" onclick="notify(event)">
-            Action 3
-          </gux-button>
-          <gux-button accent="secondary" onclick="notify(event)">
-            Action 2
-          </gux-button>
-          <gux-button accent="primary" onclick="notify(event)">
-            Action 1
-          </gux-button>
-        </div>
-      </div>
-    </gux-popover>
-  </div>
-</div>
-<gux-dropdown value="">
-  <gux-listbox aria-label="Animals">
-    <gux-option value="a" disabled>Ant</gux-option>
-    <gux-option value="b">Bat</gux-option>
-    <gux-option value="c">Cat</gux-option>
-    <gux-option value="d">Dog</gux-option>
-    <gux-option value="e" disabled>Eel</gux-option>
-    <gux-option value="f">Frog</gux-option>
-    <gux-option value="g">Goat</gux-option>
-    <gux-option value="h" disabled>Horse</gux-option>
-    <gux-option value="i" disabled>Ibis</gux-option>
-    <gux-option value="">None</gux-option>
-  </gux-listbox>
-</gux-dropdown>
-
 <gux-table>
   <table slot="data">
     <thead>
@@ -119,60 +10,57 @@
     <tbody>
       <tr>
         <td>0</td>
-        <td>gse-core-zIndex-base</td>
+        <td>gse-semantic-zIndex-base</td>
         <td>Default z-index value for basic elements</td>
       </tr>
       <tr>
         <td>1</td>
-        <td>gse-core-zIndex-showFocus</td>
-        <td>
-          Apply to elements that need an elevated focus style, such as segmented
-          control
-        </td>
+        <td>gse-semantic-zIndex-showFocus</td>
+        <td>Apply to elements that need an elevated focus style control</td>
       </tr>
       <tr>
         <td>1</td>
-        <td>gse-core-zIndex-sticky</td>
+        <td>gse-semantic-zIndex-sticky</td>
         <td>used for sticky headers</td>
       </tr>
       <tr>
         <td>100</td>
-        <td>gse-core-zIndex-popup</td>
+        <td>gse-semantic-zIndex-popup</td>
         <td>popups</td>
       </tr>
       <tr>
         <td>200</td>
-        <td>gse-core-zIndex-popover</td>
-        <td>popovers,</td>
+        <td>gse-semantic-zIndex-popover</td>
+        <td>popovers</td>
       </tr>
       <tr>
         <td>200</td>
-        <td>gse-core-zIndex-tooltip</td>
+        <td>gse-semantic-zIndex-tooltip</td>
         <td>tooltips</td>
       </tr>
       <tr>
         <td>300</td>
-        <td>gse-core-zIndex-panel</td>
+        <td>gse-semantic-zIndex-panel</td>
         <td>panel, not currently used</td>
       </tr>
       <tr>
         <td>400</td>
-        <td>gse-core-zIndex-navbar</td>
+        <td>gse-semantic-zIndex-navbar</td>
         <td>top navigation bars</td>
       </tr>
       <tr>
         <td>400</td>
-        <td>gse-core-zIndex-sidebar</td>
+        <td>gse-semantic-zIndex-sidebar</td>
         <td>side nav bars</td>
       </tr>
       <tr>
         <td>500</td>
-        <td>gse-core-zIndex-toast</td>
+        <td>gse-semantic-zIndex-toast</td>
         <td>toasts</td>
       </tr>
       <tr>
         <td>600</td>
-        <td>gse-core-zIndex-modal</td>
+        <td>gse-semantic-zIndex-modal</td>
         <td>used in modals</td>
       </tr>
     </tbody>

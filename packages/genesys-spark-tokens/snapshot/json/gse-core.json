@@ -8,18 +8,15 @@
     "md": "24px",
     "lg": "32px"
   },
-  "z-index": {
-    "base": 0,
-    "show-focus": 1,
-    "sticky": 1,
-    "popup": 100,
-    "popover": 200,
-    "tooltip": 200,
-    "panel": 300,
-    "navbar": 400,
-    "sidebar": 400,
-    "toast": 500,
-    "modal": 600
+  "z_index": {
+    "0": 0,
+    "1": 1,
+    "100": 100,
+    "200": 200,
+    "300": 300,
+    "400": 400,
+    "500": 500,
+    "600": 600
   },
   "border_radius": {
     "none": 0,

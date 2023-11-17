@@ -25,7 +25,6 @@
 @prop gse-ui-icon-size-sm
 */
 
-@use '../../../style/zindex.scss';
 @use '../../../style/mixins.scss';
 
 @mixin gse-ui-focus {
@@ -191,7 +190,7 @@
 
       gux-calendar {
         position: fixed;
-        z-index: var(--gse-core-zIndex-popup);
+        z-index: var(--gse-semantic-zIndex-popup);
         display: none;
       }
     }
