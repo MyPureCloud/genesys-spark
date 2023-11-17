@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.110.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.109.2...v3.110.0) (2023-11-17)
+
+
+### Features
+
+* **icons:** adding requested icons ([b645e2e](https://github.com/MyPureCloud/genesys-spark/commit/b645e2e9be62dd184699719c887eacf35c52d7fe))
+
+
+### Bug Fixes
+
+* **calendar:** remove stylings if same date selected ([d8649ff](https://github.com/MyPureCloud/genesys-spark/commit/d8649ff677c0fbd52251b1fef19a1b23e1a28dff))
+
 ### [3.109.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.109.1...v3.109.2) (2023-11-16)
 
 
