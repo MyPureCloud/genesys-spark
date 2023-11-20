@@ -163,15 +163,16 @@
           align-self: auto;
           justify-content: center;
           order: 0;
+          padding: 0;
           color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
           background: transparent;
           border: none;
           border-radius: var(--gse-ui-actionButton-borderRadius);
           outline: none;
-          padding: 0;
 
           &:focus-within {
             @include gse-ui-focus;
+
             padding: 2px; // TODO: COMUI-2299 - token needed?
           }
 

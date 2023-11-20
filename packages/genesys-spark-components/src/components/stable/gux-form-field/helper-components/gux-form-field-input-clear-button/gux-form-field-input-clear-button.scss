@@ -1,10 +1,10 @@
 button {
+  display: flex;
   padding: 0;
   color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
   background: transparent;
   border: none;
   border-radius: var(--gse-ui-formControl-input-borderRadius);
-  display: flex;
 
   &:not(:disabled):focus-visible,
   &:not(:disabled):hover {
