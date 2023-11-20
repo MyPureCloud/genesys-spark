@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-test-toggle #render should render component as expected (1) 1`] = `
+<gux-test-toggle>
+  <mock:shadow-root>
+    <div class="gux-test-toggle">
+      <label aria-label="Toggle Switch" aria-labelledby="gux-test-toggle-label-i" htmlfor="gux-test-toggle" id="label">
+        <div class="gux-test-toggle-slider" tabindex="0">
+          <input aria-checked="false" aria-disabled="false" id="gux-test-toggle" role="switch" type="checkbox">
+          <span></span>
+          <gux-icon class="gux-test-toggle-success-icon" decorative="" icon-name="alert-success" screenreader-text="Toggle Switch"></gux-icon>
+        </div>
+        <p class="gux-test-toggle-label"></p>
+      </label>
+    </div>
+  </mock:shadow-root>
+</gux-test-toggle>
+`;
+
+exports[`gux-test-toggle #render should render component as expected (2) 1`] = `
+<gux-test-toggle label="Toggle Switch">
+  <mock:shadow-root>
+    <div class="gux-test-toggle">
+      <label aria-label="Toggle Switch" aria-labelledby="gux-test-toggle-label-i" htmlfor="gux-test-toggle" id="label">
+        <div class="gux-test-toggle-slider" tabindex="0">
+          <input aria-checked="false" aria-disabled="false" id="gux-test-toggle" role="switch" type="checkbox">
+          <span></span>
+          <gux-icon class="gux-test-toggle-success-icon" decorative="" icon-name="alert-success" screenreader-text="Toggle Switch"></gux-icon>
+        </div>
+        <p class="gux-test-toggle-label">
+          Toggle Switch
+        </p>
+      </label>
+    </div>
+  </mock:shadow-root>
+</gux-test-toggle>
+`;
+
+exports[`gux-test-toggle #render should render component as expected (3) 1`] = `
+<gux-test-toggle error="">
+  <mock:shadow-root>
+    <div class="gux-test-toggle">
+      <label aria-label="Toggle Switch" aria-labelledby="gux-test-toggle-label-i" htmlfor="gux-test-toggle" id="label">
+        <div class="gux-test-toggle-slider gux-test-toggle-slider-error" tabindex="0">
+          <input aria-checked="false" aria-disabled="false" id="gux-test-toggle" role="switch" type="checkbox">
+          <span></span>
+        </div>
+        <p class="gux-test-toggle-label"></p>
+      </label>
+    </div>
+  </mock:shadow-root>
+</gux-test-toggle>
+`;
+
+exports[`gux-test-toggle #render should render component as expected (4) 1`] = `
+<gux-test-toggle error="" label="Toggle Switch">
+  <mock:shadow-root>
+    <div class="gux-test-toggle">
+      <label aria-label="Toggle Switch" aria-labelledby="gux-test-toggle-label-i" htmlfor="gux-test-toggle" id="label">
+        <div class="gux-test-toggle-slider gux-test-toggle-slider-error" tabindex="0">
+          <input aria-checked="false" aria-disabled="false" id="gux-test-toggle" role="switch" type="checkbox">
+          <span></span>
+        </div>
+        <p class="gux-test-toggle-label">
+          Toggle Switch
+        </p>
+      </label>
+    </div>
+  </mock:shadow-root>
+</gux-test-toggle>
+`;
+
+exports[`gux-test-toggle #render should render component as expected (5) 1`] = `
+<gux-test-toggle disabled="">
+  <mock:shadow-root>
+    <div class="gux-test-toggle">
+      <label aria-label="Toggle Switch" aria-labelledby="gux-test-toggle-label-i" htmlfor="gux-test-toggle" id="label">
+        <div class="gux-test-toggle-slider gux-test-toggle-slider-disabled" tabindex="">
+          <input aria-checked="false" aria-disabled="true" disabled="" id="gux-test-toggle" role="switch" type="checkbox">
+          <span></span>
+          <gux-icon class="gux-test-toggle-success-icon" decorative="" icon-name="alert-success" screenreader-text="Toggle Switch"></gux-icon>
+        </div>
+        <p class="gux-test-toggle-label"></p>
+      </label>
+    </div>
+  </mock:shadow-root>
+</gux-test-toggle>
+`;
+
+exports[`gux-test-toggle #render should render component as expected (6) 1`] = `
+<gux-test-toggle disabled="" label="Toggle Switch">
+  <mock:shadow-root>
+    <div class="gux-test-toggle">
+      <label aria-label="Toggle Switch" aria-labelledby="gux-test-toggle-label-i" htmlfor="gux-test-toggle" id="label">
+        <div class="gux-test-toggle-slider gux-test-toggle-slider-disabled" tabindex="">
+          <input aria-checked="false" aria-disabled="true" disabled="" id="gux-test-toggle" role="switch" type="checkbox">
+          <span></span>
+          <gux-icon class="gux-test-toggle-success-icon" decorative="" icon-name="alert-success" screenreader-text="Toggle Switch"></gux-icon>
+        </div>
+        <p class="gux-test-toggle-label">
+          Toggle Switch
+        </p>
+      </label>
+    </div>
+  </mock:shadow-root>
+</gux-test-toggle>
+`;
+
+exports[`gux-test-toggle #render should render component as expected (7) 1`] = `
+<gux-test-toggle label="Toggle Switch" message="Some helper text">
+  <mock:shadow-root>
+    <div class="gux-test-toggle">
+      <label aria-label="Toggle Switch" aria-labelledby="gux-test-toggle-label-i" htmlfor="gux-test-toggle" id="label">
+        <div class="gux-test-toggle-slider" tabindex="0">
+          <input aria-checked="false" aria-disabled="false" id="gux-test-toggle" role="switch" type="checkbox">
+          <span></span>
+          <gux-icon class="gux-test-toggle-success-icon" decorative="" icon-name="alert-success" screenreader-text="Toggle Switch"></gux-icon>
+        </div>
+        <p class="gux-test-toggle-label">
+          Toggle Switch
+        </p>
+      </label>
+      <div class="gux-test-toggle-message">
+        <p>
+          Some helper text
+        </p>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-test-toggle>
+`;
+
+exports[`gux-test-toggle #render should render component as expected (8) 1`] = `
+<gux-test-toggle message="Some helper text">
+  <mock:shadow-root>
+    <div class="gux-test-toggle">
+      <label aria-label="Toggle Switch" aria-labelledby="gux-test-toggle-label-i" htmlfor="gux-test-toggle" id="label">
+        <div class="gux-test-toggle-slider" tabindex="0">
+          <input aria-checked="false" aria-disabled="false" id="gux-test-toggle" role="switch" type="checkbox">
+          <span></span>
+          <gux-icon class="gux-test-toggle-success-icon" decorative="" icon-name="alert-success" screenreader-text="Toggle Switch"></gux-icon>
+        </div>
+        <p class="gux-test-toggle-label"></p>
+      </label>
+      <div class="gux-test-toggle-message">
+        <p>
+          Some helper text
+        </p>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-test-toggle>
+`;
+
+exports[`gux-test-toggle #render should render component as expected (9) 1`] = `
+<gux-test-toggle error="" message="Some helper text">
+  <mock:shadow-root>
+    <div class="gux-test-toggle">
+      <label aria-label="Toggle Switch" aria-labelledby="gux-test-toggle-label-i" htmlfor="gux-test-toggle" id="label">
+        <div class="gux-test-toggle-slider gux-test-toggle-slider-error" tabindex="0">
+          <input aria-checked="false" aria-disabled="false" id="gux-test-toggle" role="switch" type="checkbox">
+          <span></span>
+        </div>
+        <p class="gux-test-toggle-label"></p>
+      </label>
+      <div class="gux-test-toggle-message gux-test-toggle-message-error">
+        <gux-icon decorative="" icon-name="alert-warning-octogon" screenreader-text="Toggle Switch Error Message"></gux-icon>
+        <p>
+          Some helper text
+        </p>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-test-toggle>
+`;
+
+exports[`gux-test-toggle #render should render component as expected (10) 1`] = `
+<gux-test-toggle error="" label="Toggle Switch" message="Some helper text">
+  <mock:shadow-root>
+    <div class="gux-test-toggle">
+      <label aria-label="Toggle Switch" aria-labelledby="gux-test-toggle-label-i" htmlfor="gux-test-toggle" id="label">
+        <div class="gux-test-toggle-slider gux-test-toggle-slider-error" tabindex="0">
+          <input aria-checked="false" aria-disabled="false" id="gux-test-toggle" role="switch" type="checkbox">
+          <span></span>
+        </div>
+        <p class="gux-test-toggle-label">
+          Toggle Switch
+        </p>
+      </label>
+      <div class="gux-test-toggle-message gux-test-toggle-message-error">
+        <gux-icon decorative="" icon-name="alert-warning-octogon" screenreader-text="Toggle Switch Error Message"></gux-icon>
+        <p>
+          Some helper text
+        </p>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-test-toggle>
+`;

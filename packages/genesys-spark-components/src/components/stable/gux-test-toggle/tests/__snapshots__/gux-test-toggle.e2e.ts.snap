@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-test-toggle #render should render component as expected (1) 1`] = `"<gux-test-toggle hydrated=\\"\\"></gux-test-toggle>"`;
+
+exports[`gux-test-toggle #render should render component as expected (2) 1`] = `"<gux-test-toggle label=\\"Toggle Switch\\" hydrated=\\"\\"></gux-test-toggle>"`;
+
+exports[`gux-test-toggle #render should render component as expected (3) 1`] = `"<gux-test-toggle error=\\"\\" hydrated=\\"\\"></gux-test-toggle>"`;
+
+exports[`gux-test-toggle #render should render component as expected (4) 1`] = `"<gux-test-toggle label=\\"Toggle Switch\\" error=\\"\\" hydrated=\\"\\"></gux-test-toggle>"`;
+
+exports[`gux-test-toggle #render should render component as expected (5) 1`] = `"<gux-test-toggle disabled=\\"\\" hydrated=\\"\\"></gux-test-toggle>"`;
+
+exports[`gux-test-toggle #render should render component as expected (6) 1`] = `"<gux-test-toggle label=\\"Toggle Switch\\" disabled=\\"\\" hydrated=\\"\\"></gux-test-toggle>"`;
+
+exports[`gux-test-toggle #render should render component as expected (7) 1`] = `"<gux-test-toggle label=\\"Toggle Switch\\" message=\\"Some helper text\\" hydrated=\\"\\"></gux-test-toggle>"`;
+
+exports[`gux-test-toggle #render should render component as expected (8) 1`] = `"<gux-test-toggle message=\\"Some helper text\\" hydrated=\\"\\"></gux-test-toggle>"`;
+
+exports[`gux-test-toggle #render should render component as expected (9) 1`] = `"<gux-test-toggle message=\\"Some helper text\\" error=\\"\\" hydrated=\\"\\"></gux-test-toggle>"`;
+
+exports[`gux-test-toggle #render should render component as expected (10) 1`] = `"<gux-test-toggle label=\\"Toggle Switch\\" message=\\"Some helper text\\" error=\\"\\" hydrated=\\"\\"></gux-test-toggle>"`;

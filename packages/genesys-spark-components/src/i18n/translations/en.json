@@ -474,6 +474,10 @@
     "tag-disabled": "disabled tag with label: {label}",
     "remove-tag": "Remove tag with label: {label}"
   },
+  "gux-test-toggle": {
+    "defaultAriaLabel": "Toggle Switch",
+    "errorMessageAriaLabel": "Toggle Switch Error Message"
+  },
   "gux-time-picker": {
     "am": "AM",
     "time-separator": ":",
