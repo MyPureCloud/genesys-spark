@@ -2,6 +2,7 @@
 
 - [General Changes](#general-changes)
 - [Tokenization](#tokenization)
+  - [Z-index CSS Variable Overrides](#z-index-css-variable-overrides)
 - [Default styles for HTML elements / CSS reset](#default-styles-for-html-elements-css-reset)
 - [Component Stability Changes](#component-stability-changes)
   - [V3 Beta Components Promoted to Stable in V4](#v3-beta-components-promoted-to-stable-in-v4)
@@ -49,6 +50,10 @@ In the v4 release, components have gone through a redesign process to adopt the 
 - Shadows: see the [shadow styles migration guide](./shadows.md)
 - Colors: see the [color palette migration guide](./color-palette.md)
 - Spacing: see the [spacing variables migration guide](./spacing.md)
+
+### Z-index CSS Variable Overrides
+
+The default z-index values and CSS variable overrides for components have been changed and set as tokens in v4. See the [z-index migration guide](./z-index.md) for more details
 
 ## Default styles for HTML elements / CSS reset
 
