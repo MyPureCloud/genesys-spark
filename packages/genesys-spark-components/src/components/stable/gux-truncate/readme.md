@@ -53,7 +53,6 @@ Type: `Promise<void>`
  - [gux-option-icon](../gux-listbox/options/gux-option-icon)
  - [gux-option-multi](../gux-listbox-multi/gux-option-multi)
  - [gux-simple-toast-legacy](../../legacy/gux-simple-toast-legacy)
- - [gux-tag](../gux-tag)
  - [gux-toast](../gux-toast)
 
 ### Depends on
@@ -71,7 +70,6 @@ graph TD;
   gux-option-icon --> gux-truncate
   gux-option-multi --> gux-truncate
   gux-simple-toast-legacy --> gux-truncate
-  gux-tag --> gux-truncate
   gux-toast --> gux-truncate
   style gux-truncate fill:#f9f,stroke:#333,stroke-width:4px
 ```

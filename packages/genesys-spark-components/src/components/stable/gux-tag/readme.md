@@ -32,15 +32,15 @@
 
 ### Depends on
 
-- [gux-truncate](../gux-truncate)
+- [gux-tooltip-title](../gux-tooltip-title)
 - [gux-icon](../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-tag --> gux-truncate
+  gux-tag --> gux-tooltip-title
   gux-tag --> gux-icon
-  gux-truncate --> gux-tooltip
+  gux-tooltip-title --> gux-tooltip
   style gux-tag fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
