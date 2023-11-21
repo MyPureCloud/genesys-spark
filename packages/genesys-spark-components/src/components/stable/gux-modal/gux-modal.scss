@@ -37,22 +37,22 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
 
       &.gux-small {
         width: var(--gse-ui-modal-small-width);
-        max-height: min(368px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
+        max-height: min(368px, 100vh - 2 * #{24px});
       }
 
       &.gux-medium {
         width: var(--gse-ui-modal-medium-width);
-        max-height: min(640px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
+        max-height: min(640px, 100vh - 2 * #{24px});
       }
 
       &.gux-large {
         width: var(--gse-ui-modal-large-width);
-        max-height: min(640px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
+        max-height: min(640px, 100vh - 2 * #{24px});
       }
 
       &.gux-dynamic {
-        max-width: calc(100vw - 2 * 24px); // TODO: COMUI-2300
-        max-height: calc(100vh - 2 * 24px); // TODO: COMUI-2300
+        max-width: calc(100vw - 2 * 24px);
+        max-height: calc(100vh - 2 * 24px);
 
         .gux-modal-content {
           max-height: none;
@@ -72,7 +72,7 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       }
 
       .gux-modal-content {
-        max-height: 432px; // TODO: COMUI-2300
+        max-height: 432px;
         margin-top: var(--gse-ui-modal-gap);
         margin-bottom: var(--gse-ui-modal-gap);
         overflow-y: auto;
@@ -90,7 +90,6 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
 
     .gux-modal-container {
       @media (max-width: 416px) {
-        // TODO: COMUI-2300
         &.gux-small,
         &.gux-medium,
         &.gux-large {
