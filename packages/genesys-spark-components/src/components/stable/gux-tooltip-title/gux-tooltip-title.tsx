@@ -120,6 +120,7 @@ export class GuxTooltipTitle {
         .querySelector('slot')
         .assignedNodes()
         .map(node => node.textContent)
+        .map(node => node.replace('\n', ''))
         .join('')
         .trim();
     } else if (this.root.querySelector('.gux-title-container')) {
