@@ -9,7 +9,7 @@ import {
 } from '@stencil/core';
 import { logWarn } from '@utils/error/log-error';
 import { OnMutation } from '@utils/decorator/on-mutation';
-import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+import { OnResize } from '@utils/decorator/on-resize';
 
 @Component({
   styleUrl: 'gux-tooltip-title.scss',
@@ -73,11 +73,12 @@ export class GuxTooltipTitle {
   onMutation(): void {
     this.titleName = this.setTooltipTitleText();
     this.checkForTooltipHideOrShow();
+  }
 
-    // Handle checking if the tooltip should hide/show for dynamic content
-    afterNextRenderTimeout(() => {
-      this.checkForTooltipHideOrShow();
-    }, 500);
+  @OnResize()
+  onResize(): void {
+    this.titleName = this.setTooltipTitleText();
+    this.checkForTooltipHideOrShow();
   }
 
   componentWillLoad() {
