@@ -21,9 +21,10 @@
   flex: 0 1 auto;
   align-self: auto;
   order: 0;
-  min-width: var(--gse-ui-colorPicker-input-swatchSizing);
   width: var(--gse-ui-colorPicker-input-swatchSizing);
+  min-width: var(--gse-ui-colorPicker-input-swatchSizing);
   height: var(--gse-ui-colorPicker-input-swatchSizing);
+  padding: 0;
   overflow: hidden;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   color: var(--gse-ui-formControl-input-populatedColor);
@@ -32,7 +33,6 @@
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
   outline: none;
-  padding: 0;
 
   &::placeholder {
     color: var(--gse-ui-formControl-input-placeholderColor);
@@ -68,10 +68,10 @@
       color: var(--gse-ui-formControl-input-populatedColor);
       background-color: var(--gse-ui-formControl-input-backgroundColor);
       background-image: none;
-      border-radius: var(--gse-ui-formControl-input-borderRadius);
       border: var(--gse-ui-formControl-input-default-border-width)
         var(--gse-ui-formControl-input-default-border-style)
         var(--gse-ui-formControl-input-default-border-color);
+      border-radius: var(--gse-ui-formControl-input-borderRadius);
 
       &.gux-disabled {
         opacity: var(--gse-ui-formControl-input-disabled-opacity);
@@ -88,8 +88,8 @@
       }
 
       &:hover {
-        border-color: var(--gse-ui-formControl-input-hover-border-color);
         cursor: pointer;
+        border-color: var(--gse-ui-formControl-input-hover-border-color);
       }
     }
 

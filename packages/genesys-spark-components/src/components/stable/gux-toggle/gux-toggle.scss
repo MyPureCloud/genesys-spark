@@ -89,13 +89,13 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
+      gap: var(--gse-ui-toggle-gap);
       place-content: stretch flex-start;
       align-items: flex-start;
+      align-items: center;
+      padding: var(--gse-ui-formControl-helper-errorPadding);
       font-size: var(--gse-ui-toggle-label-fontSize);
       color: var(--gse-ui-formControl-helper-errorColor);
-      gap: var(--gse-ui-toggle-gap);
-      padding: var(--gse-ui-formControl-helper-errorPadding);
-      align-items: center;
 
       gux-icon {
         flex: 0 1 auto;

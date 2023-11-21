@@ -27,7 +27,6 @@
 */
 
 @use '../../../style/typography.scss';
-@use '../../../style/zindex.scss';
 
 ::slotted(button:active:enabled) {
   color: var(--gse-ui-link-active-foregroundColor);
@@ -50,7 +49,7 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
   .gux-modal {
     position: fixed;
     inset: 0;
-    z-index: var(--gux-zindex-modal, zindex.$gux-zindex-modal);
+    z-index: var(--gse-semantic-zIndex-modal);
     display: flex;
     align-items: center;
     justify-content: center;

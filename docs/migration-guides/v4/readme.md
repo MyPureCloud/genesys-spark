@@ -1,7 +1,8 @@
 # V4 Migration Guide
 
 - [General Changes](#general-changes)
-- [Tokenization & CSS variables](#tokenization)
+- [Tokenization & CSS Variables](#tokenization-css-variables)
+  - [Z-index CSS Variable Overrides](#z-index-css-variable-overrides)
 - [Default styles for HTML elements / CSS reset](#default-styles-for-html-elements-css-reset)
 - [Component Stability Changes](#component-stability-changes)
   - [V3 Beta Components Promoted to Stable in V4](#v3-beta-components-promoted-to-stable-in-v4)
@@ -57,6 +58,10 @@ The tokens are exposed as CSS variables, which are used by the components. Howev
 an officially supported API. The specifics of the variables should be considered to be in a beta state.
 We will do our best to avoid removing/renaming CSS variables, but will do so if needed to resolve problems
 in the components.
+
+### Z-index CSS Variable Overrides
+
+The default z-index values and CSS variable overrides for components have been changed and set as tokens in v4. See the [z-index migration guide](./z-index.md) for more details
 
 ## Default styles for HTML elements / CSS reset
 
