@@ -74,14 +74,14 @@ export class GuxTag {
 
   private renderTagTitle(): JSX.Element {
     return (
-      <gux-tooltip-title>
+      <gux-truncate>
         <span>
           <slot
             aria-hidden="true"
             onSlotchange={this.onSlotChange.bind(this)}
           />
         </span>
-      </gux-tooltip-title>
+      </gux-truncate>
     ) as JSX.Element;
   }
 
@@ -116,7 +116,7 @@ export class GuxTag {
 
   componentWillLoad(): void {
     trackComponent(this.root, {
-      variant: this.removable ? 'removable' : 'permenant'
+      variant: this.removable ? 'removable' : 'permanent'
     });
   }
 
