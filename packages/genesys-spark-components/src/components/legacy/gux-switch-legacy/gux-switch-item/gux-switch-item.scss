@@ -1,3 +1,4 @@
+@use '../../../../style/focus';
 @use '../../../../style/typography';
 
 $icon-off: #99a4b8;
@@ -45,13 +46,18 @@ gux-switch-legacy {
       &:hover {
         padding: 0 8px 1px;
         border-bottom: 4px solid #2a60c8;
-        outline: none;
 
         > gux-icon {
           svg {
             fill: $icon-on;
           }
         }
+      }
+
+      &:focus-visible {
+        @include focus.gux-focus-ring;
+
+        border-radius: 2px;
       }
 
       > gux-icon {
