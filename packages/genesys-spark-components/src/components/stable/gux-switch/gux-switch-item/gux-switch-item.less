@@ -1,4 +1,5 @@
 @import (reference) '../../../../style/color.less';
+@import (reference) '../../../../style/focus.less';
 @import (reference) '../../../../style/spacing.less';
 @import (reference) '../../../../style/typography.less';
 
@@ -47,12 +48,17 @@ gux-switch {
       &:hover {
         padding: 0 @gux-spacing-xs 1px;
         border-bottom: @gux-spacing-2xs solid @gux-blue-60;
-        outline: none;
 
         > gux-icon {
           svg {
             fill: @icon-on;
           }
+        }
+
+        &:focus-visible {
+          .gux-focus-ring();
+
+          border-radius: 2px;
         }
       }
 
