@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.110.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.110.0...v3.110.1) (2023-11-22)
+
+
+### Bug Fixes
+
+* **disclosure-button:** added focus state ([efc14db](https://github.com/MyPureCloud/genesys-spark/commit/efc14db252cad01ef98b3bb9cd69577b4e9e67db))
+
 ## [3.110.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.109.2...v3.110.0) (2023-11-17)
 
 
