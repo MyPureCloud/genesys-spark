@@ -6,6 +6,9 @@
   "author": "",
   "type": "module",
   "main": "dist/index.js",
+  "files": [
+    "dist/src/*.d.ts"
+  ],
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c --watch",
@@ -16,6 +19,7 @@
     "test.watch": "jest --watch",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
+  "types": "dist/src/index.d.ts",
   "dependencies": {
     "@rollup/plugin-replace": "^5.0.5",
     "@rollup/plugin-typescript": "^11.1.5",
