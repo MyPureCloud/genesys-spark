@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.65](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.64...v4.0.0-beta.65) (2023-11-23)
+
+
+### Bug Fixes
+
+* **genesys-spark:** make sure package.json points to generated type location ([068fb5f](https://github.com/MyPureCloud/genesys-spark/commit/068fb5f55c9beed51dcdebcd1eade48f4246924c))
+
 ## [4.0.0-beta.64](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.58...v4.0.0-beta.64) (2023-11-22)
 
 
