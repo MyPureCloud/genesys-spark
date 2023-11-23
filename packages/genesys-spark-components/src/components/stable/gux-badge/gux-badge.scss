@@ -24,9 +24,12 @@
   gux-tooltip-title {
     white-space: nowrap;
 
-    ::slotted(gux-icon) {
-      height: 16px;
-      font-size: 16px;
+    .gux-title-container {
+      ::slotted(gux-icon) {
+        top: 1px;
+        height: 16px;
+        font-size: 16px;
+      }
     }
   }
 
