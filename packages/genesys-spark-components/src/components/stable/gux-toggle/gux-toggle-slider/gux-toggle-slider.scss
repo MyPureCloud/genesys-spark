@@ -85,8 +85,10 @@ gux-toggle-slider {
         gux-icon {
           position: absolute;
           inset: 0;
-          width: calc($slider-diameter - 2);
-          height: calc($slider-diameter - 2);
+          width: 10px; // A 16px check icon would be too big for the switch div. Token needed ?
+          height: 10px;
+          margin-top: 1.5px; // This styling is needed to correctly position check icon inside div.
+          margin-left: 1px;
           color: var(--gse-ui-toggle-handle-backgroundColor);
           transition: color $slider-transition-duration linear;
         }
