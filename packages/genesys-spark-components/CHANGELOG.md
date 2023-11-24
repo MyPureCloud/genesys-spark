@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.111.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.110.1...v3.111.0) (2023-11-24)
+
+
+### Features
+
+* **switch:** added focus visible ring ([27d03c7](https://github.com/MyPureCloud/genesys-spark/commit/27d03c7d12167f8b044cb5e50fc9801df83c08f1))
+
 ### [3.110.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.110.0...v3.110.1) (2023-11-22)
 
 
