@@ -13,7 +13,7 @@
   z-index: var(--gse-semantic-zIndex-popup);
   width: max-content;
   visibility: hidden;
-  background-color: white; //TODO: https://inindca.atlassian.net/browse/COMUI-2233
+  background-color: var(--gse-ui-menu-backgroundColor);
 
   &.gux-expanded {
     visibility: visible;
