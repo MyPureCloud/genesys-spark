@@ -103,6 +103,14 @@ button {
     border-style: var(--gse-ui-button-tertiary-default-border-style);
     border-width: var(--gse-ui-button-tertiary-default-border-width);
 
+    &.gux-icon-only {
+      padding: calc(
+        var(--gse-ui-button-paddingIconOnly) - var(
+            --gse-ui-button-tertiary-default-border-width
+          )
+      );
+    }
+
     &:hover:enabled {
       color: var(--gse-ui-button-tertiary-hover-foregroundColor);
       background-color: var(--gse-ui-button-tertiary-hover-backgroundColor);
