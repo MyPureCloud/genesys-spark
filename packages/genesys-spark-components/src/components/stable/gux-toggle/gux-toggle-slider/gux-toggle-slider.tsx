@@ -53,7 +53,9 @@ export class GuxToggleSlider {
       >
         <div class="gux-slider">
           <div class="gux-switch">
-            {!isError && <gux-icon icon-name="checkmark" decorative></gux-icon>}
+            {!isError && (
+              <gux-icon icon-name="fa/check-solid" decorative></gux-icon>
+            )}
           </div>
         </div>
       </div>

@@ -85,8 +85,15 @@ gux-toggle-slider {
         gux-icon {
           position: absolute;
           inset: 0;
-          width: calc($slider-diameter - 2);
-          height: calc($slider-diameter - 2);
+          width: calc(
+            $slider-diameter - 6px
+          ); // TODO : COMUI-2528 token needs to be created for 10px as 16px is too big for icon.
+
+          height: calc(
+            $slider-diameter - 6px
+          ); // TODO : COMUI-2528 token needs to be created for 10px as 16px is too big for icon.
+
+          margin: auto;
           color: var(--gse-ui-toggle-handle-backgroundColor);
           transition: color $slider-transition-duration linear;
         }
