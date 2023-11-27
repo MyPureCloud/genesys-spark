@@ -403,7 +403,9 @@ export class GuxDropdownMulti {
     switch (event.key) {
       case 'ArrowDown':
         event.stopImmediatePropagation();
+        event.preventDefault();
         this.listboxElement.focus();
+        setInitialActiveOption(this.listboxElement);
         return;
     }
   }
