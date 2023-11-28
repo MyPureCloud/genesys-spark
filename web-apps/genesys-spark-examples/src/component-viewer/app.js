@@ -23,7 +23,7 @@ function createLayout() {
           <button class="tablinks inherited">Inherited Theme</button>
         </div>
         <div class="preview gux-light-theme"></div>
-        <a id="editor-toggle" class="editor-toggle">Show/Hide Editor</a>
+          <gux-toggle class="editor-toggle" checked-label="Code Editor Hidden" unchecked-label="Code Editor Visible"></gux-toggle>
         <div class="editor"></div>
       </div>
       <gux-disclosure-button-legacy position="right">
@@ -117,15 +117,6 @@ function setNewTheme(theme, panel, button, buttons) {
   button.classList.add('active');
 }
 
-function toggleEditor(editor) {
-  const hiddenEditorClass = 'editor-hidden';
-  if (editor.classList.contains(hiddenEditorClass)) {
-    editor.classList.remove(hiddenEditorClass);
-  } else {
-    editor.classList.add(hiddenEditorClass);
-  }
-}
-
 export async function bootstrap(exampleCode, callback) {
   await registerSparkComponents();
 
@@ -153,9 +144,11 @@ export async function bootstrap(exampleCode, callback) {
     setNewTheme('gux-dark-theme', preview, darkThemeButton, buttons)
   );
 
-  editorToggle.addEventListener('click', () => toggleEditor(editor));
+  editorToggle.addEventListener('click', () =>
+    editor.classList.toggle('editor-hidden')
+  );
   document.addEventListener('keydown', event => {
-    if (event.code === 'KeyE') toggleEditor(editor);
+    if (event.code === 'KeyE') editor.classList.toggle('editor-hidden');
   });
 
   // Code Setter
