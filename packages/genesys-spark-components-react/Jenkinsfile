@@ -1,4 +1,8 @@
 @Library('pipeline-library')
+
+// Set up environment variable to point to nexus
+env.NPM_CONFIG_USERCONFIG = '/var/build/npmrc-nexus'
+
 import com.genesys.pipelines.Common
 
 Common common = new Common()

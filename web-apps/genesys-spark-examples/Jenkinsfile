@@ -1,5 +1,8 @@
 @Library('pipeline-library')
 
+// Set up environment variable to point to nexus
+env.NPM_CONFIG_USERCONFIG = '/var/build/npmrc-nexus'
+
 Boolean isMainBranch = env.BRANCH_NAME == 'main'
 
 Boolean isMaintenanceReleaseBranch = env.BRANCH_NAME.startsWith('maintenance/')
