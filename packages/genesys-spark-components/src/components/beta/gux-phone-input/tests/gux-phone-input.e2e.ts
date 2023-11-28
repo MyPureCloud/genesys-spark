@@ -99,7 +99,7 @@ describe('gux-phone-input', () => {
       html: `<gux-phone-input-beta value="+13175971660"></gux-phone-input-beta>`
     });
     const dropdownButtonIcon = await page.find(
-      'pierce/.gux-field-button gux-region-icon'
+      'pierce/.gux-field-button gux-flag-icon-beta'
     );
     const component = await page.find('gux-phone-input-beta');
 

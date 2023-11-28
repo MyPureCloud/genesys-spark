@@ -103,7 +103,7 @@ Type: `Promise<void>`
 ### Depends on
 
 - [gux-icon](../../stable/gux-icon)
-- [gux-region-icon](./components/gux-region-icon)
+- [gux-flag-icon-beta](../gux-flag-icon)
 - [gux-option](../../stable/gux-listbox/options/gux-option)
 - [gux-listbox](../../stable/gux-listbox)
 - [gux-popup](../../stable/gux-popup)
@@ -112,7 +112,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-phone-input-beta --> gux-icon
-  gux-phone-input-beta --> gux-region-icon
+  gux-phone-input-beta --> gux-flag-icon-beta
   gux-phone-input-beta --> gux-option
   gux-phone-input-beta --> gux-listbox
   gux-phone-input-beta --> gux-popup
