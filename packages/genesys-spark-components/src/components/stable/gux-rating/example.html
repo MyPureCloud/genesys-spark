@@ -8,11 +8,19 @@
 >
 </gux-rating>
 
+<h2>Integers only</h2>
+<gux-rating
+  aria-label="feedback"
+  increment="1"
+  onchange="notify(event)"
+  oninput="notify(event)"
+>
+</gux-rating>
+
 <h2>Set initial value</h2>
-<label for="rating">Feedback</label><br />
+<label id="rating">Feedback</label><br />
 <gux-rating
   aria-labelledby="rating"
-  id="rating"
   value="3"
   onchange="notify(event)"
   oninput="notify(event)"

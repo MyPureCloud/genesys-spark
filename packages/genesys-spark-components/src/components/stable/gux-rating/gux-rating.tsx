@@ -28,6 +28,9 @@ export class GuxRating {
   @Prop()
   readonly: boolean = false;
 
+  @Prop()
+  increment: 0.5 | 1 = 1;
+
   @Listen('click')
   onClick(event: MouseEvent): void {
     event.stopPropagation();
@@ -48,7 +51,13 @@ export class GuxRating {
     } else if (clickedStarNominalValue === this.value) {
       this.updateRatingValue(0);
     } else if (clickedStarNominalValue !== Math.floor(this.value)) {
-      this.updateRatingValue(clickedStarNominalValue - 0.5);
+      if (this.increment === 0.5) {
+        this.updateRatingValue(clickedStarNominalValue - 0.5);
+      } else {
+        this.updateRatingValue(clickedStarNominalValue);
+      }
+    } else {
+      this.updateRatingValue(clickedStarNominalValue);
     }
   }
 
@@ -62,14 +71,12 @@ export class GuxRating {
 
     switch (event.key) {
       case 'ArrowUp':
-      case 'ArrowLeft':
         event.preventDefault();
-        this.updateRatingValue(this.value - 0.5);
+        this.updateRatingValue(this.value + this.increment);
         break;
       case 'ArrowDown':
-      case 'ArrowRight':
         event.preventDefault();
-        this.updateRatingValue(this.value + 0.5);
+        this.updateRatingValue(this.value - this.increment);
         break;
       case 'End':
         event.preventDefault();
@@ -83,11 +90,14 @@ export class GuxRating {
   }
 
   private updateRatingValue(newValue: number): void {
-    const validatedNewValue = clamp(
+    const clampedNewValue = clamp(
       newValue,
       0,
       Array.from(this.starContainer.children).length
     );
+
+    const validatedNewValue =
+      Math.round(clampedNewValue / this.increment) * this.increment;
 
     if (this.value !== validatedNewValue) {
       this.value = validatedNewValue;

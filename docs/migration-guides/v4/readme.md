@@ -32,6 +32,7 @@
     - [gux-form-field (color, number, range, search, select, text-like, textarea)](#gux-form-field-color-number-range-search-select-text-like-textarea)
     - [gux-form-field-checkbox](#gux-form-field-checkbox)
     - [gux-icon (legacy icons)](#gux-icon-legacy-icons)
+    - [gux-rating](#gux-rating)
     - [gux-tabs](#gux-tabs)
     - [gux-tab-panel](#gux-tab-panel)
     - [gux-text-highlight](#gux-text-highlight)
@@ -387,6 +388,19 @@ If possible, avoid the usage of legacy components that have a migration path and
 - These changes simplify the icon component as now all icon names are a one-to-one mapping to an svg file.
 - These changes should also make it clearer to application teams if the icons they are using are official Spark icons or not.
 - The process for adding Official Spark icons has been streamlined and you should contact the UX Design System Team if you require an official replacement for a legacy icon used in your application
+
+#### gux-rating
+
+- **_New Prop_**: A new `increment` property has been added to `gux-rating`. This property can be set to 0.5 or 1 (default). In V3 0.5 was the default so if needed you must add `increment="0.5"` to your rating component for it to behave in an identical manor.
+
+  ```diff
+    <gux-rating
+      aria-label="feedback"
+  +   increment="0.5"
+    >
+    </gux-rating>
+
+  ```
 
 #### gux-tabs
 
