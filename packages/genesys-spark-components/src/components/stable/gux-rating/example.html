@@ -8,10 +8,10 @@
 >
 </gux-rating>
 
-<h2>Integers only</h2>
+<h2>Increment set to half</h2>
 <gux-rating
   aria-label="feedback"
-  increment="1"
+  increment="half"
   onchange="notify(event)"
   oninput="notify(event)"
 >
@@ -31,6 +31,7 @@
 <label id="rating-label">Feedback</label><br />
 <gux-rating
   aria-labelledby="rating-label"
+  increment="half"
   value="2.5"
   max-value="10"
   onchange="notify(event)"

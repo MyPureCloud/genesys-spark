@@ -29,7 +29,7 @@ export class GuxRating {
   readonly: boolean = false;
 
   @Prop()
-  increment: 0.5 | 1 = 1;
+  increment: 'default' | 'half' = 'default';
 
   @Listen('click')
   onClick(event: MouseEvent): void {
@@ -51,7 +51,7 @@ export class GuxRating {
     } else if (clickedStarNominalValue === this.value) {
       this.updateRatingValue(0);
     } else if (clickedStarNominalValue !== Math.floor(this.value)) {
-      if (this.increment === 0.5) {
+      if (this.increment === 'half') {
         this.updateRatingValue(clickedStarNominalValue - 0.5);
       } else {
         this.updateRatingValue(clickedStarNominalValue);
@@ -69,14 +69,16 @@ export class GuxRating {
       return;
     }
 
+    const increment = this.increment === 'half' ? 0.5 : 1;
+
     switch (event.key) {
       case 'ArrowUp':
         event.preventDefault();
-        this.updateRatingValue(this.value + this.increment);
+        this.updateRatingValue(this.value + increment);
         break;
       case 'ArrowDown':
         event.preventDefault();
-        this.updateRatingValue(this.value - this.increment);
+        this.updateRatingValue(this.value - increment);
         break;
       case 'End':
         event.preventDefault();
@@ -96,8 +98,10 @@ export class GuxRating {
       Array.from(this.starContainer.children).length
     );
 
+    const increment = this.increment === 'half' ? 0.5 : 1;
+
     const validatedNewValue =
-      Math.round(clampedNewValue / this.increment) * this.increment;
+      Math.round(clampedNewValue / increment) * increment;
 
     if (this.value !== validatedNewValue) {
       this.value = validatedNewValue;

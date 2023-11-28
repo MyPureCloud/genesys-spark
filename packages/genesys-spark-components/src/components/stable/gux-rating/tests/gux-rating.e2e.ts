@@ -125,149 +125,151 @@ describe('gux-rating', () => {
         await e2ePage.waitForChanges();
       }
 
-      describe('default', () => {
-        let page: E2EPage;
+      describe('increment', () => {
+        describe('default', () => {
+          let page: E2EPage;
 
-        beforeEach(async () => {
-          page = await newSparkE2EPage({
-            html: '<gux-rating aria-label="Feedback"></gux-rating>'
+          beforeEach(async () => {
+            page = await newSparkE2EPage({
+              html: '<gux-rating aria-label="Feedback"></gux-rating>'
+            });
+          });
+
+          [
+            { starToClick: 1 },
+            { starToClick: 2 },
+            { starToClick: 3 },
+            { starToClick: 4 },
+            { starToClick: 5 }
+          ].forEach(({ starToClick }) => {
+            it(`should render 0 if star ${starToClick} is clicked but the component is disabled`, async () => {
+              page = await newSparkE2EPage({
+                html: '<gux-rating disabled aria-label="Feedback"></gux-rating>'
+              });
+
+              await clickStar(page, starToClick);
+
+              expect(await getStarCounts(page)).toEqual({
+                emptyStars: 5,
+                fullStars: 0,
+                halfStars: 0
+              });
+            });
+
+            it(`should render 0 if star ${starToClick} is clicked but the component is readonly`, async () => {
+              page = await newSparkE2EPage({
+                html: '<gux-rating readonly aria-label="Feedback"></gux-rating>'
+              });
+
+              await clickStar(page, starToClick);
+
+              expect(await getStarCounts(page)).toEqual({
+                emptyStars: 5,
+                fullStars: 0,
+                halfStars: 0
+              });
+            });
+
+            it(`should render ${starToClick} if star ${starToClick} is clicked`, async () => {
+              await clickStar(page, starToClick);
+
+              expect(await getStarCounts(page)).toEqual({
+                emptyStars: 5 - starToClick,
+                fullStars: starToClick,
+                halfStars: 0
+              });
+            });
+
+            it(`should render 0 if star ${starToClick} is clicked twice times`, async () => {
+              await clickStar(page, starToClick);
+              await clickStar(page, starToClick);
+
+              expect(await getStarCounts(page)).toEqual({
+                emptyStars: 5,
+                fullStars: 0,
+                halfStars: 0
+              });
+            });
           });
         });
 
-        [
-          { starToClick: 1 },
-          { starToClick: 2 },
-          { starToClick: 3 },
-          { starToClick: 4 },
-          { starToClick: 5 }
-        ].forEach(({ starToClick }) => {
-          it(`should render 0 if star ${starToClick} is clicked but the component is disabled`, async () => {
+        describe('half', () => {
+          let page: E2EPage;
+
+          beforeEach(async () => {
             page = await newSparkE2EPage({
-              html: '<gux-rating disabled aria-label="Feedback"></gux-rating>'
-            });
-
-            await clickStar(page, starToClick);
-
-            expect(await getStarCounts(page)).toEqual({
-              emptyStars: 5,
-              fullStars: 0,
-              halfStars: 0
+              html: '<gux-rating increment="half" aria-label="Feedback"></gux-rating>'
             });
           });
 
-          it(`should render 0 if star ${starToClick} is clicked but the component is readonly`, async () => {
-            page = await newSparkE2EPage({
-              html: '<gux-rating readonly aria-label="Feedback"></gux-rating>'
+          [
+            { starToClick: 1 },
+            { starToClick: 2 },
+            { starToClick: 3 },
+            { starToClick: 4 },
+            { starToClick: 5 }
+          ].forEach(({ starToClick }) => {
+            it(`should render 0 if star ${starToClick} is clicked but the component is disabled`, async () => {
+              page = await newSparkE2EPage({
+                html: ' <gux-rating increment="half" disabled aria-label="Feedback"></gux-rating>'
+              });
+
+              await clickStar(page, starToClick);
+
+              expect(await getStarCounts(page)).toEqual({
+                emptyStars: 5,
+                fullStars: 0,
+                halfStars: 0
+              });
             });
 
-            await clickStar(page, starToClick);
+            it(`should render 0 if star ${starToClick} is clicked but the component is readonly`, async () => {
+              page = await newSparkE2EPage({
+                html: ' <gux-rating increment="half" readonly aria-label="Feedback"></gux-rating>'
+              });
 
-            expect(await getStarCounts(page)).toEqual({
-              emptyStars: 5,
-              fullStars: 0,
-              halfStars: 0
-            });
-          });
+              await clickStar(page, starToClick);
 
-          it(`should render ${
-            starToClick - 0.5
-          } if star ${starToClick} is clicked`, async () => {
-            await clickStar(page, starToClick);
-
-            expect(await getStarCounts(page)).toEqual({
-              emptyStars: 5 - starToClick,
-              fullStars: starToClick - 1,
-              halfStars: 1
-            });
-          });
-
-          it(`should render ${starToClick} if star ${starToClick} is clicked twice`, async () => {
-            await clickStar(page, starToClick);
-            await clickStar(page, starToClick);
-
-            expect(await getStarCounts(page)).toEqual({
-              emptyStars: 5 - starToClick,
-              fullStars: starToClick,
-              halfStars: 0
-            });
-          });
-
-          it(`should render 0 if star ${starToClick} is clicked three times`, async () => {
-            await clickStar(page, starToClick);
-            await clickStar(page, starToClick);
-            await clickStar(page, starToClick);
-
-            expect(await getStarCounts(page)).toEqual({
-              emptyStars: 5,
-              fullStars: 0,
-              halfStars: 0
-            });
-          });
-        });
-      });
-
-      describe('increment set to 1', () => {
-        let page: E2EPage;
-
-        beforeEach(async () => {
-          page = await newSparkE2EPage({
-            html: '<gux-rating increment="1" aria-label="Feedback"></gux-rating>'
-          });
-        });
-
-        [
-          { starToClick: 1 },
-          { starToClick: 2 },
-          { starToClick: 3 },
-          { starToClick: 4 },
-          { starToClick: 5 }
-        ].forEach(({ starToClick }) => {
-          it(`should render 0 if star ${starToClick} is clicked but the component is disabled`, async () => {
-            page = await newSparkE2EPage({
-              html: '<gux-rating increment="1" disabled aria-label="Feedback"></gux-rating>'
+              expect(await getStarCounts(page)).toEqual({
+                emptyStars: 5,
+                fullStars: 0,
+                halfStars: 0
+              });
             });
 
-            await clickStar(page, starToClick);
+            it(`should render ${
+              starToClick - 0.5
+            } if star ${starToClick} is clicked`, async () => {
+              await clickStar(page, starToClick);
 
-            expect(await getStarCounts(page)).toEqual({
-              emptyStars: 5,
-              fullStars: 0,
-              halfStars: 0
-            });
-          });
-
-          it(`should render 0 if star ${starToClick} is clicked but the component is readonly`, async () => {
-            page = await newSparkE2EPage({
-              html: '<gux-rating increment="1" readonly aria-label="Feedback"></gux-rating>'
+              expect(await getStarCounts(page)).toEqual({
+                emptyStars: 5 - starToClick,
+                fullStars: starToClick - 1,
+                halfStars: 1
+              });
             });
 
-            await clickStar(page, starToClick);
+            it(`should render ${starToClick} if star ${starToClick} is clicked twice`, async () => {
+              await clickStar(page, starToClick);
+              await clickStar(page, starToClick);
 
-            expect(await getStarCounts(page)).toEqual({
-              emptyStars: 5,
-              fullStars: 0,
-              halfStars: 0
+              expect(await getStarCounts(page)).toEqual({
+                emptyStars: 5 - starToClick,
+                fullStars: starToClick,
+                halfStars: 0
+              });
             });
-          });
 
-          it(`should render ${starToClick} if star ${starToClick} is clicked`, async () => {
-            await clickStar(page, starToClick);
+            it(`should render 0 if star ${starToClick} is clicked three times`, async () => {
+              await clickStar(page, starToClick);
+              await clickStar(page, starToClick);
+              await clickStar(page, starToClick);
 
-            expect(await getStarCounts(page)).toEqual({
-              emptyStars: 5 - starToClick,
-              fullStars: starToClick,
-              halfStars: 0
-            });
-          });
-
-          it(`should render 0 if star ${starToClick} is clicked twice times`, async () => {
-            await clickStar(page, starToClick);
-            await clickStar(page, starToClick);
-
-            expect(await getStarCounts(page)).toEqual({
-              emptyStars: 5,
-              fullStars: 0,
-              halfStars: 0
+              expect(await getStarCounts(page)).toEqual({
+                emptyStars: 5,
+                fullStars: 0,
+                halfStars: 0
+              });
             });
           });
         });
@@ -275,92 +277,94 @@ describe('gux-rating', () => {
     });
 
     describe('keyboard', () => {
-      describe('default', () => {
-        let page: E2EPage;
+      describe('increment', () => {
+        describe('default', () => {
+          let page: E2EPage;
 
-        beforeEach(async () => {
-          page = await newSparkE2EPage({
-            html: '<gux-rating value="2.5" aria-label="Feedback"></gux-rating>'
+          beforeEach(async () => {
+            page = await newSparkE2EPage({
+              html: '<gux-rating value="2" aria-label="Feedback"></gux-rating>'
+            });
+          });
+
+          [
+            {
+              press: 'ArrowDown',
+              expectedStarCounts: { emptyStars: 4, fullStars: 1, halfStars: 0 }
+            },
+            {
+              press: 'ArrowRight',
+              expectedStarCounts: { emptyStars: 3, fullStars: 2, halfStars: 0 }
+            },
+            {
+              press: 'ArrowUp',
+              expectedStarCounts: { emptyStars: 2, fullStars: 3, halfStars: 0 }
+            },
+            {
+              press: 'ArrowLeft',
+              expectedStarCounts: { emptyStars: 3, fullStars: 2, halfStars: 0 }
+            },
+            {
+              press: 'Home',
+              expectedStarCounts: { emptyStars: 5, fullStars: 0, halfStars: 0 }
+            },
+            {
+              press: 'End',
+              expectedStarCounts: { emptyStars: 0, fullStars: 5, halfStars: 0 }
+            }
+          ].forEach(({ press, expectedStarCounts }) => {
+            it(`should render component as expected ${press}`, async () => {
+              const element = await page.find('gux-rating');
+
+              await element.press(press);
+
+              expect(await getStarCounts(page)).toEqual(expectedStarCounts);
+            });
           });
         });
 
-        [
-          {
-            press: 'ArrowDown',
-            expectedStarCounts: { emptyStars: 3, fullStars: 2, halfStars: 0 }
-          },
-          {
-            press: 'ArrowRight',
-            expectedStarCounts: { emptyStars: 2, fullStars: 2, halfStars: 1 }
-          },
-          {
-            press: 'ArrowUp',
-            expectedStarCounts: { emptyStars: 2, fullStars: 3, halfStars: 0 }
-          },
-          {
-            press: 'ArrowLeft',
-            expectedStarCounts: { emptyStars: 2, fullStars: 2, halfStars: 1 }
-          },
-          {
-            press: 'Home',
-            expectedStarCounts: { emptyStars: 5, fullStars: 0, halfStars: 0 }
-          },
-          {
-            press: 'End',
-            expectedStarCounts: { emptyStars: 0, fullStars: 5, halfStars: 0 }
-          }
-        ].forEach(({ press, expectedStarCounts }) => {
-          it(`should render component as expected ${press}`, async () => {
-            const element = await page.find('gux-rating');
+        describe('half', () => {
+          let page: E2EPage;
 
-            await element.press(press);
-
-            expect(await getStarCounts(page)).toEqual(expectedStarCounts);
+          beforeEach(async () => {
+            page = await newSparkE2EPage({
+              html: '<gux-rating increment="half" value="2.5" aria-label="Feedback"></gux-rating>'
+            });
           });
-        });
-      });
 
-      describe('integer set to 1', () => {
-        let page: E2EPage;
+          [
+            {
+              press: 'ArrowDown',
+              expectedStarCounts: { emptyStars: 3, fullStars: 2, halfStars: 0 }
+            },
+            {
+              press: 'ArrowRight',
+              expectedStarCounts: { emptyStars: 2, fullStars: 2, halfStars: 1 }
+            },
+            {
+              press: 'ArrowUp',
+              expectedStarCounts: { emptyStars: 2, fullStars: 3, halfStars: 0 }
+            },
+            {
+              press: 'ArrowLeft',
+              expectedStarCounts: { emptyStars: 2, fullStars: 2, halfStars: 1 }
+            },
+            {
+              press: 'Home',
+              expectedStarCounts: { emptyStars: 5, fullStars: 0, halfStars: 0 }
+            },
+            {
+              press: 'End',
+              expectedStarCounts: { emptyStars: 0, fullStars: 5, halfStars: 0 }
+            }
+          ].forEach(({ press, expectedStarCounts }) => {
+            it(`should render component as expected ${press}`, async () => {
+              const element = await page.find('gux-rating');
 
-        beforeEach(async () => {
-          page = await newSparkE2EPage({
-            html: '<gux-rating increment="1" value="2" aria-label="Feedback"></gux-rating>'
-          });
-        });
+              await element.press(press);
 
-        [
-          {
-            press: 'ArrowDown',
-            expectedStarCounts: { emptyStars: 4, fullStars: 1, halfStars: 0 }
-          },
-          {
-            press: 'ArrowRight',
-            expectedStarCounts: { emptyStars: 3, fullStars: 2, halfStars: 0 }
-          },
-          {
-            press: 'ArrowUp',
-            expectedStarCounts: { emptyStars: 2, fullStars: 3, halfStars: 0 }
-          },
-          {
-            press: 'ArrowLeft',
-            expectedStarCounts: { emptyStars: 3, fullStars: 2, halfStars: 0 }
-          },
-          {
-            press: 'Home',
-            expectedStarCounts: { emptyStars: 5, fullStars: 0, halfStars: 0 }
-          },
-          {
-            press: 'End',
-            expectedStarCounts: { emptyStars: 0, fullStars: 5, halfStars: 0 }
-          }
-        ].forEach(({ press, expectedStarCounts }) => {
-          it(`should render component as expected ${press}`, async () => {
-            const element = await page.find('gux-rating');
-
-            await element.press(press);
-
-            expect(await getStarCounts(page)).toEqual(expectedStarCounts);
+              expect(await getStarCounts(page)).toEqual(expectedStarCounts);
+            });
           });
         });
       });

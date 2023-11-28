@@ -12,13 +12,13 @@
 
 ## Properties
 
-| Property    | Attribute   | Description | Type       | Default |
-| ----------- | ----------- | ----------- | ---------- | ------- |
-| `disabled`  | `disabled`  |             | `boolean`  | `false` |
-| `increment` | `increment` |             | `0.5 \| 1` | `1`     |
-| `maxValue`  | `max-value` |             | `number`   | `5`     |
-| `readonly`  | `readonly`  |             | `boolean`  | `false` |
-| `value`     | `value`     |             | `number`   | `0`     |
+| Property    | Attribute   | Description | Type                  | Default     |
+| ----------- | ----------- | ----------- | --------------------- | ----------- |
+| `disabled`  | `disabled`  |             | `boolean`             | `false`     |
+| `increment` | `increment` |             | `"default" \| "half"` | `'default'` |
+| `maxValue`  | `max-value` |             | `number`              | `5`         |
+| `readonly`  | `readonly`  |             | `boolean`             | `false`     |
+| `value`     | `value`     |             | `number`              | `0`         |
 
 
 ## Dependencies

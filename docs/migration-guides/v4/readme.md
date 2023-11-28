@@ -391,12 +391,12 @@ If possible, avoid the usage of legacy components that have a migration path and
 
 #### gux-rating
 
-- **_New Prop_**: A new `increment` property has been added to `gux-rating`. This property can be set to 0.5 or 1 (default). In V3 0.5 was the default so if needed you must add `increment="0.5"` to your rating component for it to behave in an identical manor.
+- **_New Prop_**: A new `increment` property has been added to `gux-rating`. This property can be set to "default" or "half". In V3 increments were always 0.5 (half) so if needed you must add `increment="half"` to your rating component for it to behave in an identical manner.
 
   ```diff
     <gux-rating
       aria-label="feedback"
-  +   increment="0.5"
+  +   increment="half"
     >
     </gux-rating>
 
