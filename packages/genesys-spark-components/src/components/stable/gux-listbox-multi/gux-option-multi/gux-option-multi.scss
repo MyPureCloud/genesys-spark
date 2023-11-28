@@ -21,7 +21,8 @@
   .gux-checkbox-container {
     position: relative;
     display: inline-block;
-    width: 18.7px;
+    min-width: var(--gse-ui-menu-option-startIcon-width);
+    max-width: var(--gse-ui-menu-option-startIcon-width);
     height: var(--gse-ui-menu-option-startIcon-height);
     content: '';
 
