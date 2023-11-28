@@ -5,7 +5,8 @@ import {
   h,
   Host,
   readTask,
-  State
+  State,
+  Method
 } from '@stencil/core';
 import { GuxTableToolbarLayout } from './gux-table-toolbar.types';
 import { MIN_CONTROL_SPACING } from './gux-table-toolbar.constants';
@@ -237,6 +238,13 @@ export class GuxTableToolbar {
         this.renderFullLayout();
       }
     });
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async guxForceUpdate(): Promise<void> {
+    this.recordLayoutMinSize();
+    this.checkResponsiveLayout();
   }
 
   render(): JSX.Element {

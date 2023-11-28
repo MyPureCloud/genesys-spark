@@ -5,6 +5,19 @@
 <!-- Auto Generated Below -->
 
 
+## Methods
+
+### `guxForceUpdate() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Slots
 
 | Slot                   | Description                  |
