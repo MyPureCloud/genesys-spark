@@ -1,7 +1,8 @@
 gux-action-button {
   [slot='title'] {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
 
     gux-icon {
       width: var(--gse-ui-button-icon-size);
