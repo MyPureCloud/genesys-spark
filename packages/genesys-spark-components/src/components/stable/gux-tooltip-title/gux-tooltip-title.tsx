@@ -119,10 +119,8 @@ export class GuxTooltipTitle {
       return this.root
         .querySelector('slot')
         .assignedNodes()
-        .map(node => node.textContent)
-        .map(node => node.replace('\n', ''))
-        .join('')
-        .trim();
+        .map(node => node.textContent.trim())
+        .join('');
     } else if (this.root.querySelector('.gux-title-container')) {
       return this.root.querySelector('.gux-title-container').textContent.trim();
     }
