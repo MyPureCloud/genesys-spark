@@ -384,7 +384,10 @@
       "color": "#767c8d",
       "opacity": 0.5
     },
-    "size": "16px"
+    "size": "16px",
+    "star": {
+      "gap": "8px"
+    }
   },
   "link": {
     "default": {

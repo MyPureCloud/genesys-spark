@@ -1,7 +1,8 @@
 @use '../../../style/_focus.scss';
 
 :host {
-  display: inline-flex;
+  display: inline-block;
+  min-width: fit-content;
   user-select: none;
 }
 
@@ -13,6 +14,9 @@
 }
 
 .gux-rating-star-container {
+  display: flex;
+  gap: var(--gse-ui-rating-star-gap);
+  justify-content: space-between;
   color: var(--gse-ui-rating-default-color);
 
   &.gux-disabled {
@@ -22,6 +26,7 @@
   }
 
   gux-icon {
+    flex: 0 0 auto;
     width: var(--gse-ui-rating-size);
     height: var(--gse-ui-rating-size);
     color: var(--gse-ui-rating-default-color);
