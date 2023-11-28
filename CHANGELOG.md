@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.66](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.65...v4.0.0-beta.66) (2023-11-28)
+
+
+### Features
+
+* **all-row-select:** added disabled property ([267a50f](https://github.com/MyPureCloud/genesys-spark/commit/267a50f5a7a66084adbbe1b0c7e9f243e98c5a0c))
+
+
+### Bug Fixes
+
+* **dropdown:** fixed keyboard navigation issue ([05fa438](https://github.com/MyPureCloud/genesys-spark/commit/05fa4385f192b50ef5fb784e59663ddbf0a4b8b4))
+
 ## [4.0.0-beta.65](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.64...v4.0.0-beta.65) (2023-11-23)
 
 
