@@ -101,10 +101,6 @@ export class GuxTooltipTitle {
     this.root.classList.add('gux-tooltip-icon-decorative');
   }
 
-  private addIconOnly(): void {
-    this.root.classList.add('gux-tooltip-icon-only');
-  }
-
   private getTitleElements(): Array<Element> {
     const slot = this.root.querySelector('slot');
     const target = this.root.querySelector('.gux-title-container span')
@@ -136,7 +132,6 @@ export class GuxTooltipTitle {
     this.getTitleElements().forEach(element => {
       if (element.tagName === 'GUX-ICON' && !this.getTitleTextContent()) {
         this.iconOnly = true;
-        this.addIconOnly();
         tooltipTitleText = element.getAttribute('screenreader-text');
       } else if (element.tagName === 'GUX-ICON' && this.getTitleTextContent()) {
         this.addIconDecorative();
@@ -162,7 +157,12 @@ export class GuxTooltipTitle {
 
   render(): JSX.Element {
     return [
-      <span class="gux-title-container">
+      <span
+        class={{
+          'gux-title-container': true,
+          'gux-icon-only': this.iconOnly
+        }}
+      >
         <slot />
       </span>,
       this.renderTooltip()
