@@ -9,16 +9,16 @@
 gux-icon {
   width: var(--gse-ui-icon-size-sm); // TODO: [COMUI-2290] missing token
   height: var(--gse-ui-icon-size-sm); // TODO: [COMUI-2290] missing token
-  color: var(--gse-ui-contextMenu-states-default-foregroundColor);
+  color: var(--gse-ui-button-ghost-default-foregroundColor);
 }
 
 button {
   height: var(
-    --gse-ui-contextMenu-button-default
+    --gse-ui-button-default-height
   ); // TODO: [COMUI-2290] name should be more specific
 
   padding: 0 8px; // TODO: [COMUI-2290] missing token
-  border-radius: var(--gse-ui-contextMenu-borderRadius);
+  border-radius: var(--gse-ui-button-borderRadius);
 }
 
 button.gux-compact {
@@ -30,23 +30,23 @@ button.gux-compact {
 }
 
 button:hover:enabled {
-  background-color: var(--gse-ui-contextMenu-states-hover-backgroundColor);
+  background-color: var(--gse-ui-button-ghost-hover-backgroundColor);
 
   gux-icon {
-    color: var(--gse-ui-contextMenu-states-hover-foregroundColor);
+    color: var(--gse-ui-button-ghost-hover-foregroundColor);
   }
 }
 
 button:active:enabled {
-  background-color: var(--gse-ui-contextMenu-states-active-backgroundColor);
+  background-color: var(--gse-ui-button-ghost-active-backgroundColor);
 
   gux-icon {
-    color: var(--gse-ui-contextMenu-states-active-foregroundColor);
+    color: var(--gse-ui-button-ghost-active-foregroundColor);
   }
 }
 
 button[disabled] {
-  opacity: var(--gse-ui-contextMenu-disabled-opacity);
+  opacity: var(--gse-ui-button-disabled-opacity);
 }
 
 .gux-list-container {
