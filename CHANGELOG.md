@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.67](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.66...v4.0.0-beta.67) (2023-11-29)
+
+
+### Features
+
+* **flags-icon:** added new flag icon component ([095a85b](https://github.com/MyPureCloud/genesys-spark/commit/095a85b5dcc5be82bdb8460616c7c4042339a015))
+* **rating:** adding space and some flexibility for component width ([6d64dd8](https://github.com/MyPureCloud/genesys-spark/commit/6d64dd8e272adffafbcb0bd5fada41853da24122))
+
+
+### Bug Fixes
+
+* **action button:** action-button title containing an icon is not vertically centered ([21d1e30](https://github.com/MyPureCloud/genesys-spark/commit/21d1e308d8434fe822960d81ef55e9531413e3a4))
+
 ## [4.0.0-beta.66](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.65...v4.0.0-beta.66) (2023-11-28)
 
 
