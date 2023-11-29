@@ -144,6 +144,7 @@ export type GuxIconIconName =
   | 'custom/file-pen-question'
   | 'custom/filter-notification'
   | 'custom/font-regular-highlight'
+  | 'custom/gkn-logo'
   | 'custom/list-alphabetical-regular'
   | 'custom/list-roman-regular'
   | 'custom/one-button'
