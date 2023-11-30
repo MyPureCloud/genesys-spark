@@ -23,7 +23,7 @@ function createLayout() {
           <button class="tablinks inherited">Inherited Theme</button>
         </div>
         <div class="preview gux-light-theme"></div>
-          <gux-toggle class="editor-toggle" checked-label="Code Editor Hidden" unchecked-label="Code Editor Visible"></gux-toggle>
+          <gux-toggle class="editor-toggle" checked checked-label="Code Editor Visible" unchecked-label="Code Editor Hidden"></gux-toggle>
         <div class="editor"></div>
       </div>
       <gux-disclosure-button-legacy position="right">
