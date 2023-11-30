@@ -253,6 +253,12 @@
             font-weight: var(--gse-ui-calendarMenu-date-currentText-fontWeight);
             line-height: var(--gse-ui-calendarMenu-date-currentText-lineHeight);
           }
+
+          &:focus-visible {
+            border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
+            outline: var(--gse-semantic-focusRing-default-border-width) solid
+              var(--gse-semantic-focusRing-default-border-color);
+          }
         }
       }
     }
