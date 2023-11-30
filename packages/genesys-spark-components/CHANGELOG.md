@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.112.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.111.0...v3.112.0) (2023-11-30)
+
+
+### Features
+
+* **icon:** add gkn-logo icon ([5ea8dae](https://github.com/MyPureCloud/genesys-spark/commit/5ea8daeb38b6ecc3358c7d8796e9261e95fd08a0))
+
 ## [3.111.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.110.1...v3.111.0) (2023-11-24)
 
 
