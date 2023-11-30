@@ -5,9 +5,10 @@
 
 ## Properties
 
-| Property | Attribute | Description                                              | Type                                          | Default     |
-| -------- | --------- | -------------------------------------------------------- | --------------------------------------------- | ----------- |
-| `size`   | `size`    | Indicates the size of the modal (small, medium or large) | `"dynamic" \| "large" \| "medium" \| "small"` | `'dynamic'` |
+| Property | Attribute | Description                                                                                                                                                                                                                                                                                                                                          | Type                                          | Default     |
+| -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ----------- |
+| `open`   | `open`    | Indicates/sets whether or not the modal is open. On a native dialog, you should not toggle the open attribute, due to the unusual behaviors described [here](https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-open) In this component, it is safe as this property acts as a proxy for calls to `showModal` and `close`. | `boolean`                                     | `false`     |
+| `size`   | `size`    | Indicates the size of the modal (small, medium or large)                                                                                                                                                                                                                                                                                             | `"dynamic" \| "large" \| "medium" \| "small"` | `'dynamic'` |
 
 
 ## Events
