@@ -8,9 +8,15 @@ $smallSpinnerBorder: var(--gse-ui-progressAndLoading-smallBorder);
 
 $thinSpinnerBorder: var(--gse-ui-progressAndLoading-thinBorder);
 
-$largeCircumference: (math.$pi * ($largeSpinnerSize - $largeSpinnerBorder));
-$smallCircumference: (math.$pi * ($smallSpinnerSize - $smallSpinnerBorder));
-$largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
+$largeCircumference: (
+  math.$pi * (calc($largeSpinnerSize - $largeSpinnerBorder))
+);
+$smallCircumference: (
+  math.$pi * (calc($smallSpinnerSize - $smallSpinnerBorder))
+);
+$largeThinCircumference: (
+  math.$pi * (calc($largeSpinnerSize - $thinSpinnerBorder))
+);
 
 @mixin spin($name, $circumference) {
   @keyframes #{$name}Spin {
@@ -95,7 +101,7 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
       .gux-dynamic-circle-mask {
         display: none;
         stroke: white;
-        stroke-width: $largeSpinnerBorder - $thinSpinnerBorder;
+        stroke-width: calc($largeSpinnerBorder - $thinSpinnerBorder);
       }
 
       .gux-static-circle {
