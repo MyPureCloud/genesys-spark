@@ -55,7 +55,7 @@
   display: inline-grid;
   width: var(--gse-ui-checkbox-icon-width);
   height: var(--gse-ui-checkbox-icon-height);
-  margin: 1px 0 0;
+  margin: 0;
   text-align: center;
   vertical-align: middle;
   -webkit-appearance: none;
@@ -120,10 +120,4 @@
   line-height: var(--gse-ui-checkbox-label-text-lineHeight);
   color: var(--gse-ui-checkbox-label-foregroundColor);
   vertical-align: middle;
-}
-
-.gux-input {
-  display: inline-grid;
-  grid-template-rows: var(--gse-ui-checkbox-label-text-lineHeight) auto;
-  align-items: center;
 }
