@@ -78,31 +78,51 @@ export class GuxTimeZonePickerBeta {
   private filterTimeZoneList(timeZoneList: GuxTimeZoneOption[]) {
     const searchString = this.searchString;
     return timeZoneList.filter(tzOption => {
-      return tzOption.displayTextName
+      return this.getFormattedTimeZoneOption(tzOption)
         .toLowerCase()
         .includes(searchString.toLowerCase());
     });
   }
 
   private getTimeZoneOption(timeZone: GuxTimeZoneListing): GuxTimeZoneOption {
-    const localizedName = this.i18n(timeZone.name);
-    if (!localizedName) {
+    const localizedGroupName = this.i18n(timeZone.name);
+    const localizedCountryName = this.i18n(timeZone.countryName);
+    if (!localizedGroupName) {
       return;
     }
     const formattedOffset = formatOffset(timeZone.currentTimeOffsetInMinutes);
     const localizedUTC = this.i18n('UTC');
-    const displayTextName = `${localizedName}`;
+    const displayTextName = `${localizedGroupName}`;
     const displayTextOffset = ` (${localizedUTC}${formattedOffset})`;
     const baseDisplayOffsetText = `${displayTextOffset}`;
+    const displayTextNameFormatted = displayTextName.replace(/_/g, ' ');
+    const countryName = `${localizedCountryName}`;
+    const defaultZone = '';
+    const priority = displayTextName.startsWith('Etc/GMT') ? 2 : 1;
+
     return {
       value: timeZone.name,
-      localizedName,
+      localizedGroupName,
       formattedOffset,
-      displayTextName,
+      displayTextNameFormatted,
       displayTextOffset,
-      baseDisplayOffsetText
+      baseDisplayOffsetText,
+      countryName,
+      defaultZone,
+      priority
     };
   }
+
+  private getFormattedTimeZoneOption(option: GuxTimeZoneOption): string {
+    return option.displayTextNameFormatted.startsWith('Etc/GMT')
+      ? option.displayTextNameFormatted.concat(option.baseDisplayOffsetText)
+      : option.displayTextNameFormatted
+          .split('/')
+          .pop()
+          .concat(', ', option.countryName)
+          .concat(option.baseDisplayOffsetText);
+  }
+
   private getTimeZoneOptionsList(): GuxTimeZoneOption[] {
     const allTimeZones = getTimeZoneList();
     const timeZoneOptionsList: GuxTimeZoneOption[] = [];
@@ -112,12 +132,14 @@ export class GuxTimeZonePickerBeta {
       if (!zone) {
         return;
       }
+
       timeZoneOptionsList.push(zone);
     });
-
-    return timeZoneOptionsList.sort((a, b) => {
-      return a.displayTextName?.localeCompare(b.displayTextName) || 0;
-    });
+    return timeZoneOptionsList.sort(
+      (a, b) =>
+        a.priority - b.priority ||
+        a.displayTextNameFormatted?.localeCompare(b.displayTextNameFormatted)
+    );
   }
 
   private getDefaultZones(): string[] {
@@ -145,22 +167,17 @@ export class GuxTimeZonePickerBeta {
     );
 
     defaultZoneOptions.forEach(option => {
-      const baseDisplayOffsetText = option.baseDisplayOffsetText;
       if (
         defaultZoneOptions.length === 1 &&
         this.workspaceDefault === this.localDefault
       ) {
-        defaultZoneOptions[0].displayTextOffset = `${
-          defaultZoneOptions[0].displayTextOffset
-        } ${this.i18n('localAndWorkspaceDefault')}`;
+        defaultZoneOptions[0].defaultZone = `${this.i18n(
+          'localAndWorkspaceDefault'
+        )}`;
       } else if (option.value === this.workspaceDefault) {
-        option.displayTextOffset = `${baseDisplayOffsetText} ${this.i18n(
-          'workspaceDefault'
-        )}`;
+        option.defaultZone = `${this.i18n('workspaceDefault')}`;
       } else if (option.value === this.localDefault) {
-        option.displayTextOffset = `${baseDisplayOffsetText} ${this.i18n(
-          'localDefault'
-        )}`;
+        option.defaultZone = `${this.i18n('localDefault')}`;
       }
     });
 
@@ -170,9 +187,16 @@ export class GuxTimeZonePickerBeta {
   private renderTimeZones(zoneList: GuxTimeZoneOption[]): JSX.Element[] {
     return zoneList.map(tzOption => {
       return (
-        <gux-option value={tzOption.value}>
-          {tzOption.displayTextName}
-          <span class="tz-utc">{tzOption.displayTextOffset}</span>
+        <gux-option
+          class={{
+            'gux-has-defaults': tzOption.defaultZone !== ''
+          }}
+          value={tzOption.value}
+        >
+          <div class="gux-option-wrapper">
+            <div>{this.getFormattedTimeZoneOption(tzOption)}</div>
+            <span class="gux-default-zone">{tzOption.defaultZone}</span>
+          </div>
         </gux-option>
       ) as JSX.Element;
     });

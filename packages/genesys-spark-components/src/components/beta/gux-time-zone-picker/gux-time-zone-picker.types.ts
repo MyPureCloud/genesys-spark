@@ -16,9 +16,12 @@ export interface GuxTimeZoneListing {
 
 export interface GuxTimeZoneOption {
   value: string;
-  localizedName: string;
+  localizedGroupName: string;
   formattedOffset: string;
-  displayTextName: string;
+  displayTextNameFormatted: string;
   displayTextOffset: string;
   baseDisplayOffsetText: string;
+  countryName: string;
+  defaultZone: string;
+  priority: number;
 }
