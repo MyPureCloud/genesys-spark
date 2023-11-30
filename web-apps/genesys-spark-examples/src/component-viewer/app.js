@@ -144,11 +144,19 @@ export async function bootstrap(exampleCode, callback) {
     setNewTheme('gux-dark-theme', preview, darkThemeButton, buttons)
   );
 
-  editorToggle.addEventListener('check', () =>
-    editor.classList.toggle('editor-hidden')
-  );
+  editorToggle.addEventListener('check', active => {
+    if (active.detail) {
+      editor.classList.remove('editor-hidden');
+    } else {
+      editor.classList.add('editor-hidden');
+    }
+  });
+
   document.addEventListener('keydown', event => {
-    if (event.code === 'KeyE') editor.classList.toggle('editor-hidden');
+    if (event.code === 'KeyE') {
+      editorToggle.toggleAttribute('checked');
+      editor.classList.toggle('editor-hidden');
+    }
   });
 
   // Code Setter
