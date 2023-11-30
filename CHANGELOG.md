@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.68](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.67...v4.0.0-beta.68) (2023-11-30)
+
+
+### Features
+
+* **icon:** add gkn-logo icon ([4ee3a3d](https://github.com/MyPureCloud/genesys-spark/commit/4ee3a3da738286f07322765c7fd84b3d3b31f1d8))
+* **time-picker:** set ko, zh-CN and zh-CN locales to use 24h clock ([9ec068b](https://github.com/MyPureCloud/genesys-spark/commit/9ec068b1d91705cb531d4f006e1ca59fe7e8c988))
+
+
+### Bug Fixes
+
+* **gux-calendar-beta:** handling disabled date state ([a5ad1f7](https://github.com/MyPureCloud/genesys-spark/commit/a5ad1f7346ffd92ceccce27c3d5079bb8d911d05))
+* **gux-tabs:** fix scroll behavior in gux-tab-panel ([b3623ca](https://github.com/MyPureCloud/genesys-spark/commit/b3623ca2772c01b17a3598a0086cbec0127f6d1f))
+
 ## [4.0.0-beta.67](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.66...v4.0.0-beta.67) (2023-11-29)
 
 
