@@ -133,7 +133,8 @@
 
       &:focus-visible {
         border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
-        outline: 1px solid #7b61ff;
+        outline: var(--gse-semantic-focusRing-default-border-width) solid
+          var(--gse-semantic-focusRing-default-border-color);
       }
 
       .gux-sr-only {
