@@ -144,7 +144,7 @@ export async function bootstrap(exampleCode, callback) {
     setNewTheme('gux-dark-theme', preview, darkThemeButton, buttons)
   );
 
-  editorToggle.addEventListener('click', () =>
+  editorToggle.addEventListener('check', () =>
     editor.classList.toggle('editor-hidden')
   );
   document.addEventListener('keydown', event => {
