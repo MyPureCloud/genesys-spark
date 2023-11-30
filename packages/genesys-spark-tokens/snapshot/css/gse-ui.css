@@ -155,7 +155,7 @@
   --gse-ui-button-text-fontWeight: 700;
   --gse-ui-button-padding: 0 12px;
   --gse-ui-button-paddingIconOnly: 8px;
-  --gse-ui-button-height: 32px;
+  --gse-ui-button-default-height: 32px;
   --gse-ui-button-borderRadius: 4px;
   --gse-ui-button-iconOnly-width: 32px;
   --gse-ui-button-icon-size: 16px;
@@ -192,6 +192,7 @@
   --gse-ui-button-danger-hover-foregroundColor: #ffffff;
   --gse-ui-button-danger-active-backgroundColor: #440a15;
   --gse-ui-button-danger-active-foregroundColor: #ffffff;
+  --gse-ui-button-compact-height: 24px;
   --gse-ui-rating-default-color: #767c8d;
   --gse-ui-rating-active-color: #4856cb;
   --gse-ui-rating-hover-color: #3742a2;

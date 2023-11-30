@@ -187,7 +187,7 @@
         "background_color": "#ffffff"
       }
     },
-    "max_height": "346px",
+    "max_height": "344px",
     "border_radius": "4px",
     "border": {
       "color": "#c6c8ce",
@@ -211,6 +211,21 @@
       "background_color": "#c6c8ce",
       "margin": "4px 0 8px 0",
       "height": "1px"
+    },
+    "grouped_menu": {
+      "title": {
+        "padding": "8px 12px 4px",
+        "height": "28px",
+        "foreground_color": "#626e84"
+      },
+      "padding": "8px 1px",
+      "divider": {
+        "padding": "4px 0px 8px",
+        "height": "13px"
+      },
+      "subtext": {
+        "foreground_color": "#626e84"
+      }
     }
   },
   "dropdown": {
@@ -674,26 +689,13 @@
       "compact": "24px"
     },
     "border_radius": "4px",
-    "states": {
-      "default": {
-        "foreground_color": "#767c8d"
-      },
-      "hover": {
-        "foreground_color": "#3742A2",
-        "background_color": "#DEE1FD"
-      },
-      "active": {
-        "foreground_color": "#252E78",
-        "background_color": "#CED2FC"
-      },
-      "disabled": {
-        "foreground_color": "#767c8d"
-      }
-    },
     "disabled": {
       "opacity": 0.5
     },
-    "gap": "4px"
+    "menu": {
+      "max_height": "344px",
+      "width": "220px"
+    }
   },
   "month_picker": {
     "calendar_states": {
