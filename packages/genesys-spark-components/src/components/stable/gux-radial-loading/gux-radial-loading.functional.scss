@@ -1,12 +1,22 @@
 @use 'sass:math';
 
-$largeSpinnerSize: 48; // Linked to --gse-ui-progressAndLoading-spinner-large
-$largeSpinnerBorder: 4; // Linked to --gse-ui-progressAndLoading-largeBorder
+$largeSpinnerSize: var(
+  -gse-ui-progressAndLoading-spinner-large
+); // Linked to --gse-ui-progressAndLoading-spinner-large
+$largeSpinnerBorder: var(
+  --gse-ui-progressAndLoading-largeBorder
+); // Linked to --gse-ui-progressAndLoading-largeBorder
 
-$smallSpinnerSize: 16; // Linked to --gse-ui-progressAndLoading-spinner-small
-$smallSpinnerBorder: 2; // Linked to --gse-ui-progressAndLoading-smallBorder
+$smallSpinnerSize: var(
+  --gse-ui-progressAndLoading-spinner-small
+); // Linked to --gse-ui-progressAndLoading-spinner-small
+$smallSpinnerBorder: var(
+  --gse-ui-progressAndLoading-smallBorder
+); // Linked to --gse-ui-progressAndLoading-smallBorder
 
-$thinSpinnerBorder: 1; // Linked to --gse-ui-progressAndLoading-smallBorder
+$thinSpinnerBorder: var(
+  --gse-ui-progressAndLoading-thinBorder
+); // Linked to --gse-ui-progressAndLoading-smallBorder
 
 $largeCircumference: (math.$pi * ($largeSpinnerSize - $largeSpinnerBorder));
 $smallCircumference: (math.$pi * ($smallSpinnerSize - $smallSpinnerBorder));
