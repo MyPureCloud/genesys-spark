@@ -9,13 +9,13 @@ $smallSpinnerBorder: var(--gse-ui-progressAndLoading-smallBorder);
 $thinSpinnerBorder: var(--gse-ui-progressAndLoading-thinBorder);
 
 $largeCircumference: (
-  math.$pi * (calc($largeSpinnerSize - $largeSpinnerBorder))
+  calc(math.$pi * (calc($largeSpinnerSize - $largeSpinnerBorder)))
 );
 $smallCircumference: (
-  math.$pi * (calc($smallSpinnerSize - $smallSpinnerBorder))
+  calc(math.$pi * (calc($smallSpinnerSize - $smallSpinnerBorder)))
 );
 $largeThinCircumference: (
-  math.$pi * (calc($largeSpinnerSize - $thinSpinnerBorder))
+  calc(math.$pi * (calc($largeSpinnerSize - $thinSpinnerBorder)))
 );
 
 @mixin spin($name, $circumference) {
