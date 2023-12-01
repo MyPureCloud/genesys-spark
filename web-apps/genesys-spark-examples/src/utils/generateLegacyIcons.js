@@ -34,7 +34,7 @@ function generateHTML(path) {
     </form>
 
     <div class="icon-example">
-      <gux-icon id="legacy-display-icon" icon-name="unknown" class="example" decorative="true"></gux-icon>
+      <gux-icon size="large" id="legacy-display-icon" icon-name="unknown" decorative="true"></gux-icon>
       <div id="legacy-display-icon-name" class="icon-name">unknown</div>
     </div>
   `;

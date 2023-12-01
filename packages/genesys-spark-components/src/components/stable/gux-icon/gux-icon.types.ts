@@ -541,3 +541,5 @@ export type GuxIconIconName =
   | 'youtube'
   | 'zoom-in'
   | 'zoom-out';
+
+export type GuxIconSize = 'inherit' | 'small' | 'medium' | 'large';

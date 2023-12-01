@@ -31,7 +31,7 @@
     - [gux-radial-progress](#gux-radial-progress)
     - [gux-form-field (color, number, range, search, select, text-like, textarea)](#gux-form-field-color-number-range-search-select-text-like-textarea)
     - [gux-form-field-checkbox](#gux-form-field-checkbox)
-    - [gux-icon (legacy icons)](#gux-icon-legacy-icons)
+    - [gux-icon](#gux-icon)
     - [gux-rating](#gux-rating)
     - [gux-tabs](#gux-tabs)
     - [gux-tab-panel](#gux-tab-panel)
@@ -380,14 +380,17 @@ If possible, avoid the usage of legacy components that have a migration path and
     </gux-form-field-checkbox>
   ```
 
-#### gux-icon (legacy icons)
+#### gux-icon
 
-- **No legacy icons have been removed in v4 but how they are accessed has changed.**
-- We have removed automatic `legacy/` prefixing of icon names that only existed in the legacy icon list. You may need to add this prefix yourself in v4 and plan to migrate to an official Spark icon.
-- We have removed automatic icon mapping from one icon name to another. You may need to change your icon name if you were using an icon name that was mapped to another.
-- These changes simplify the icon component as now all icon names are a one-to-one mapping to an svg file.
-- These changes should also make it clearer to application teams if the icons they are using are official Spark icons or not.
-- The process for adding Official Spark icons has been streamlined and you should contact the UX Design System Team if you require an official replacement for a legacy icon used in your application
+- **_New Prop_**: The `size` property has now been added to `gux-icon`. The property can be used to set the size on the element to one of the three Spark approved sizes {small, medium, large}. A `gux-icon` can still be set to an arbitrary size if that is what your application calls for.
+
+- Access to legacy icons
+  - **No legacy icons have been removed in v4 but how they are accessed has changed.**
+  - We have removed automatic `legacy/` prefixing of icon names that only existed in the legacy icon list. You may need to add this prefix yourself in v4 and plan to migrate to an official Spark icon.
+  - We have removed automatic icon mapping from one icon name to another. You may need to change your icon name if you were using an icon name that was mapped to another.
+  - These changes simplify the icon component as now all icon names are a one-to-one mapping to an svg file.
+  - These changes should also make it clearer to application teams if the icons they are using are official Spark icons or not.
+  - The process for adding Official Spark icons has been streamlined and you should contact the UX Design System Team if you require an official replacement for a legacy icon used in your application
 
 #### gux-rating
 

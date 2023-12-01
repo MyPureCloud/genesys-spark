@@ -30,7 +30,10 @@ const getAllVariants = directory => {
 
 const content = `export type GuxIconIconName = ${getAllVariants(
   __dirname + '/../src/components/stable/gux-icon/icons'
-)}`;
+)}
+
+export type GuxIconSize = 'inherit' | 'small' | 'medium' | 'large';
+`;
 
 const filePath =
   __dirname + '/../src/components/stable/gux-icon/gux-icon.types.ts';
