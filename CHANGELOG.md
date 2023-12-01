@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.69](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.68...v4.0.0-beta.69) (2023-12-01)
+
+
+### Features
+
+* **button:** account for border width in tertiary icon button padding ([7bca7f7](https://github.com/MyPureCloud/genesys-spark/commit/7bca7f716763adee0f95f1e4ad424f91e7218806))
+* **dropdown-multi:** make option svg 16 by 16 ([4e5139e](https://github.com/MyPureCloud/genesys-spark/commit/4e5139e102a6c8cfa467cac440cfc857ebe974f1))
+* **dropdown-multi:** update styling with better solution ([42a1ed4](https://github.com/MyPureCloud/genesys-spark/commit/42a1ed4d9cf3550767f160d537a5e2a7f4515fbd))
+* **phone-input:** set bg color to token ([035eeca](https://github.com/MyPureCloud/genesys-spark/commit/035eecaa93c5aba1a3f5a2d793c57ec7feded9dd))
+* **rating:** added new property to customize increment ([58cdb17](https://github.com/MyPureCloud/genesys-spark/commit/58cdb1714198370887de8044336893224ce3de2f))
+* **tokens:** replacing relevant tokens ([6124d9c](https://github.com/MyPureCloud/genesys-spark/commit/6124d9c1b725bb5cc63e5051bda5cd6e65231ada))
+* **tokens:** various token updates from ux ([910ee73](https://github.com/MyPureCloud/genesys-spark/commit/910ee7347a5130e80d42a46e53c50e68c7f08049))
+* **tooltip-title:** align icon centre when no text present ([3a0a8ca](https://github.com/MyPureCloud/genesys-spark/commit/3a0a8ca27f5690b36758c843fb17829c38907dc9))
+* **tooltip-title:** code review comment application ([f9dfcdf](https://github.com/MyPureCloud/genesys-spark/commit/f9dfcdf94ddb46ff1c5d712a6772edf80a2d9b43))
+
+
+### Bug Fixes
+
+* **pr-comment:** addressed PR comment ([1e43602](https://github.com/MyPureCloud/genesys-spark/commit/1e4360241a9630d6a88ee506d18e6c1be6dda05f))
+
 ## [4.0.0-beta.68](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.67...v4.0.0-beta.68) (2023-11-30)
 
 
