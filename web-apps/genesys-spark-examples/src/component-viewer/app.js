@@ -152,13 +152,6 @@ export async function bootstrap(exampleCode, callback) {
     }
   });
 
-  document.addEventListener('keydown', event => {
-    if (event.code === 'KeyE') {
-      editorToggle.toggleAttribute('checked');
-      editor.classList.toggle('editor-hidden');
-    }
-  });
-
   // Code Setter
   const attributesPanel = new AttributesPanel(attribute);
   const eventsPanel = new EventsPanel(events, preview, notification);
