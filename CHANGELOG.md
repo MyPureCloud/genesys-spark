@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.70](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.69...v4.0.0-beta.70) (2023-12-02)
+
+
+### Features
+
+* **checkbox, radio:** simplify changes to work with current setup ([171336a](https://github.com/MyPureCloud/genesys-spark/commit/171336a3f6c905a17ea547a70d47285f3a2fa4be))
+* **form-field-checkbox form-field-radio:** add more consistent spacing in radio and checkbox ([f34ec82](https://github.com/MyPureCloud/genesys-spark/commit/f34ec829317277f3b4e2d203d3254e6893c81e9a))
+* **form-field-radio:** align input and label ([f3fc161](https://github.com/MyPureCloud/genesys-spark/commit/f3fc161d9f8608b4db253fbcbe5c757b02d83585))
+* **form-field-radio:** change align to flex-start on radio input ([8427998](https://github.com/MyPureCloud/genesys-spark/commit/84279985a734d54f3b9781014dd31fc8734bc4a7))
+
 ## [4.0.0-beta.69](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.68...v4.0.0-beta.69) (2023-12-01)
 
 
