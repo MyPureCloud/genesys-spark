@@ -23,6 +23,7 @@ function createLayout() {
           <button class="tablinks inherited">Inherited Theme</button>
         </div>
         <div class="preview gux-light-theme"></div>
+          <gux-toggle class="editor-toggle" checked checked-label="Code Editor Visible" unchecked-label="Code Editor Hidden"></gux-toggle>
         <div class="editor"></div>
       </div>
       <gux-disclosure-button-legacy position="right">
@@ -54,6 +55,7 @@ function createLayout() {
   const events = template.querySelector('.events');
   const notification = template.querySelector('.notification');
   const editor = template.querySelector('.editor');
+  const editorToggle = template.querySelector('.editor-toggle');
 
   const setupAccessibilityTool = async () => {
     const axeLive = await import('axe-live');
@@ -96,7 +98,8 @@ function createLayout() {
     attribute,
     events,
     notification,
-    editor
+    editor,
+    editorToggle
   };
 }
 
@@ -125,7 +128,8 @@ export async function bootstrap(exampleCode, callback) {
     attribute,
     events,
     notification,
-    editor
+    editor,
+    editorToggle
   } = createLayout();
 
   //Theme Setter
@@ -139,6 +143,14 @@ export async function bootstrap(exampleCode, callback) {
   darkThemeButton.addEventListener('click', () =>
     setNewTheme('gux-dark-theme', preview, darkThemeButton, buttons)
   );
+
+  editorToggle.addEventListener('check', active => {
+    if (active.detail) {
+      editor.classList.remove('editor-hidden');
+    } else {
+      editor.classList.add('editor-hidden');
+    }
+  });
 
   // Code Setter
   const attributesPanel = new AttributesPanel(attribute);
