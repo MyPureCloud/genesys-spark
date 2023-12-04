@@ -38,3 +38,7 @@ that is only used to organize development and is not published.
 [Read more...](packages/genesys-spark-tokens/README.md)
 
 ## Contributing and Local Development
+
+A guide to contributing to the Genesys Spark repository
+
+[Read more...](docs/CONTRIBUTING.md)
