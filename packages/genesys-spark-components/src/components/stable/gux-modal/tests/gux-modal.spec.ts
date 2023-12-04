@@ -54,7 +54,7 @@ describe('gux-modal', () => {
     expect(showModal).toHaveBeenCalled();
   });
 
-  it('Should keep the open property in sync when opened/closed via mehtod', async () => {
+  it('Should keep the open property in sync when opened/closed via method', async () => {
     const page = await modalPage(closedModal);
     const modal = page.rootInstance;
 

@@ -55,7 +55,9 @@ Steps:
 - Use `gux-button-slot` components instead of `gux-button`
 - Remove the `initial-focus` attribute from the `gux-modal` element. Instead, place the `autofocus` attribute on the element that you wish to focus first
 - Remove the `trap-focus` attribute from the `gux-modal` element. The gux-modal uses the [dialog HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) internally, which manages trap focus within the modal
-- Instead of adding and removing the `gux-modal` component from the DOM, use the `showModal` and `close` methods on the `gux-modal` component to hide and show the modal.
+- There are two mechanisms for showing/hiding modals in v4, to support both of the common approaches we see.
+  - You can render the modal, and use the `showModal` and `close` methods on the `gux-modal` element to show and hide it.
+  - Alternatively, if you only want to rener the modal when visible, add the `open` attribute to have it render in an initially open state
 
 ```diff
 -<gux-modal initial-focus="#cancel-button" size="small">
