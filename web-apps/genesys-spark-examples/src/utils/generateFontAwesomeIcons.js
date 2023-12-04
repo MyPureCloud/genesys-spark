@@ -166,7 +166,7 @@ function generateSection(iconNames) {
   output += '<div class="icons-container">';
   iconNames.forEach(iconName => {
     output += `<div class="icon-example">
-    <gux-icon icon-name="${iconName}" class="example" decorative="true"></gux-icon>
+    <gux-icon size="large" icon-name="${iconName}" decorative="true"></gux-icon>
     <div class="icon-name">${iconName}</div>
   </div>`;
   });
