@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.71](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.70...v4.0.0-beta.71) (2023-12-04)
+
+
+### Features
+
+* **badge, tooltip-title, tabs:** set fixed height of icon and centre for tooltip title ([72e09fa](https://github.com/MyPureCloud/genesys-spark/commit/72e09faffc0c7fa11751ded4cd7534804a8d396e))
+* **badge:** centred icon in badge ([c157ef6](https://github.com/MyPureCloud/genesys-spark/commit/c157ef6a67883b862d5c4cce0eb5344c1cbf0fc1))
+* **calendar-stable:** add focus ring styling ([725bd6a](https://github.com/MyPureCloud/genesys-spark/commit/725bd6a09175ee731cae25040ea0b052b82c3790))
+* **content-search:** shrink text for long navigation info ([17a397e](https://github.com/MyPureCloud/genesys-spark/commit/17a397e68b51819ca18bebdd7e6a59fcf669c996))
+* **form fields:** add outline offset to a number of form fields ([a2745df](https://github.com/MyPureCloud/genesys-spark/commit/a2745df939056d0bb03adb354d84dec6deb84089))
+* **icon:** added new size property ([c765171](https://github.com/MyPureCloud/genesys-spark/commit/c765171a360ef4bf07b388092c1c2bfac5f67419))
+
+
+### Bug Fixes
+
+* **table-toolbar:** add forceUpdate to MutationObserver ([cfdde8f](https://github.com/MyPureCloud/genesys-spark/commit/cfdde8fcd4dd82ff90584aa3bf7aaaacce9e6179))
+* **table-toolbar:** table-toolbar may fail to condense if text changes dynamically ([5a65b55](https://github.com/MyPureCloud/genesys-spark/commit/5a65b551a789c03384f0148ea37df7f832d99ccb))
+
 ## [4.0.0-beta.70](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.69...v4.0.0-beta.70) (2023-12-02)
 
 
