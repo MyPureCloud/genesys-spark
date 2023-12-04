@@ -180,7 +180,9 @@
             @include gse-ui-focus;
 
             border: none;
-            border-radius: 2px;
+            border-radius: var(
+              --gse-ui-calendarMenu-month-calendarButton-focusBorderRadius
+            );
             outline-offset: 3px;
           }
 
