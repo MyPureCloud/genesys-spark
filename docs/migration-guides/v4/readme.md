@@ -41,7 +41,7 @@
 
 ## General Changes
 
-- There is a new `genesys-spark` package that will load the components from the web at runtime, ensuring that apps will not unnecessarily bundle component assets. This is now the recommended way to install the design system.
+- There is a new `genesys-spark` package that will load the components from the web at runtime, ensuring that apps will not unnecessarily bundle component assets. This is now the recommended way to install the design system. [More information here](../../../packages/genesys-spark/README.md)
 - Typescript updated to v5
 - `registerElements()` is no longer an async/promise function.
 - Visualizations have been moved out of `genesys-spark-components` into a separate package in the same `genesys-spark` monorepo project, `genesys-spark-visualizations`

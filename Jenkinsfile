@@ -6,7 +6,7 @@ Boolean isMaintenanceReleaseBranch = env.BRANCH_NAME.startsWith('maintenance/')
 
 Boolean isFeatureBranch = env.BRANCH_NAME.startsWith('feature/')
 
-Boolean isBetaBranch = env.BRANCH_NAME.startsWith('beta/') || isMainBranch
+Boolean isBetaBranch = env.BRANCH_NAME.startsWith('beta/')
 
 Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch || isBetaBranch
 
