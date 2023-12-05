@@ -135,6 +135,9 @@ function mdTableToArray(tableMd) {
       },
       text(text) {
         return text;
+      },
+      link(href, title, text) {
+        return `[${text}](${href})`;
       }
     }
   });

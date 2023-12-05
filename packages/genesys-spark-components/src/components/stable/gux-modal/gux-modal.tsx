@@ -6,7 +6,8 @@ import {
   h,
   JSX,
   Prop,
-  Method
+  Method,
+  Watch
 } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
@@ -32,25 +33,49 @@ export class GuxModal {
   size: GuxModalSize = 'dynamic';
 
   /**
+   * Indicates/sets whether or not the modal is open. On a native dialog, you should not toggle the
+   * open attribute, due to the unusual behaviors described [here](https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-open)
+   * In this component, it is safe as this property acts as a proxy for calls to `showModal` and `close`.
+   */
+  @Prop({ mutable: true })
+  open: boolean = false;
+
+  /**
    * Fired when a user dismisses the modal
    */
   @Event()
   guxdismiss: EventEmitter<void>;
 
+  /**
+   * "Renders" the open state of the modal
+   */
+  @Watch('open')
+  private syncOpenState() {
+    if (this.open) {
+      this.dialogElement.showModal();
+    } else {
+      this.dialogElement.close();
+    }
+  }
+
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async showModal(): Promise<void> {
-    this.dialogElement.showModal();
+    this.open = true;
   }
 
   // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async close(): Promise<void> {
-    this.dialogElement.close();
+    this.open = false;
   }
 
   componentWillLoad(): void {
     trackComponent(this.root, { variant: `${this.size}` });
+  }
+
+  componentDidLoad(): void {
+    this.syncOpenState();
   }
 
   private hasModalTitleSlot(): boolean {
