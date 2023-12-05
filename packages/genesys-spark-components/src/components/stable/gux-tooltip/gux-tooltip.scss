@@ -4,6 +4,7 @@
   display: none;
   width: max-content;
   max-width: 250px;
+  pointer-events: none;
   box-shadow: var(--gse-ui-tooltip-boxShadow-x)
     var(--gse-ui-tooltip-boxShadow-y) var(--gse-ui-tooltip-boxShadow-blur)
     var(--gse-ui-tooltip-boxShadow-spread) var(--gse-ui-tooltip-boxShadow-color);
@@ -30,7 +31,6 @@
   font-weight: var(--gse-ui-tooltip-text-fontWeight);
   line-height: var(--gse-ui-tooltip-text-lineHeight);
   color: var(--gse-ui-tooltip-light-foregroundColor);
-  pointer-events: none;
   background-color: var(--gse-ui-tooltip-light-backgroundColor);
   border: var(--gse-ui-tooltip-light-border-width)
     var(--gse-ui-tooltip-light-border-style)
