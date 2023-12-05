@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.112.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.112.0...v3.112.1) (2023-12-05)
+
+
+### Bug Fixes
+
+* **gux-tabs:** fix scroll behavior in flex tab-panel-beta ([bb3d3a3](https://github.com/MyPureCloud/genesys-spark/commit/bb3d3a325eb8d2987d8eb7cb1b4992cc350e37ea))
+
 ## [3.112.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.111.0...v3.112.0) (2023-11-30)
 
 
