@@ -111,7 +111,8 @@
         "text": {
           "fontFamily": "Noto Sans",
           "lineHeight": "18px",
-          "fontSize": "12px"
+          "fontSize": "12px",
+          "fontWeight": 400
         },
         "required_color": "#e22245",
         "optional_color": "#626e84"

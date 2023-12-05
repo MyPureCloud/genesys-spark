@@ -123,17 +123,74 @@
       "sm": {
         "fontFamily": "Noto Sans",
         "lineHeight": "18px",
-        "fontSize": "12px"
+        "fontSize": "12px",
+        "fontWeight": 400
+      },
+      "sm_bold": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "18px",
+        "fontSize": "12px",
+        "fontWeight": 700
+      },
+      "sm_semi_bold": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "18px",
+        "fontSize": "12px",
+        "fontWeight": 600
+      },
+      "sm_regular": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "18px",
+        "fontSize": "12px",
+        "fontWeight": 400
       },
       "md": {
         "fontFamily": "Noto Sans",
+        "lineHeight": "18px",
+        "fontSize": "12px",
+        "fontWeight": 400
+      },
+      "md_regular": {
+        "fontFamily": "Noto Sans",
         "lineHeight": "20px",
-        "fontSize": "14px"
+        "fontSize": "14px",
+        "fontWeight": 400
+      },
+      "md_semi_bold": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "20px",
+        "fontSize": "14px",
+        "fontWeight": 600
+      },
+      "md_bold": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "20px",
+        "fontSize": "14px",
+        "fontWeight": 700
       },
       "lg": {
         "fontFamily": "Noto Sans",
         "lineHeight": "24px",
-        "fontSize": "16px"
+        "fontSize": "16px",
+        "fontWeight": 400
+      },
+      "lg_regular": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "24px",
+        "fontSize": "16px",
+        "fontWeight": 400
+      },
+      "lg_semi_bold": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "24px",
+        "fontSize": "16px",
+        "fontWeight": 600
+      },
+      "lg_bold": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "24px",
+        "fontSize": "16px",
+        "fontWeight": 700
       }
     },
     "heading": {
@@ -143,11 +200,35 @@
         "fontSize": "14px",
         "fontWeight": 700
       },
+      "xs_bold": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "24px",
+        "fontSize": "14px",
+        "fontWeight": 700
+      },
+      "xs_semi_bold": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "24px",
+        "fontSize": "14px",
+        "fontWeight": 600
+      },
       "sm": {
         "fontFamily": "Urbanist",
         "lineHeight": "24px",
         "fontSize": "16px",
         "fontWeight": 700
+      },
+      "sm_bold": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "24px",
+        "fontSize": "16px",
+        "fontWeight": 700
+      },
+      "sm_semi_bold": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "24px",
+        "fontSize": "16px",
+        "fontWeight": 600
       },
       "md": {
         "fontFamily": "Urbanist",
@@ -155,17 +236,53 @@
         "fontSize": "18px",
         "fontWeight": 700
       },
+      "md_bold": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "27px",
+        "fontSize": "18px",
+        "fontWeight": 700
+      },
+      "md_semi_bold": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "27px",
+        "fontSize": "18px",
+        "fontWeight": 600
+      },
       "lg": {
         "fontFamily": "Urbanist",
         "lineHeight": "32px",
         "fontSize": "24px",
         "fontWeight": 700
       },
+      "lg_bold": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "32px",
+        "fontSize": "24px",
+        "fontWeight": 700
+      },
+      "lg_semi_bold": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "32px",
+        "fontSize": "24px",
+        "fontWeight": 600
+      },
       "xl": {
         "fontFamily": "Urbanist",
         "lineHeight": "44px",
         "fontSize": "36px",
         "fontWeight": 700
+      },
+      "xl_bold": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "44px",
+        "fontSize": "36px",
+        "fontWeight": 700
+      },
+      "xl_semi_bold": {
+        "fontFamily": "Urbanist",
+        "lineHeight": "44px",
+        "fontSize": "36px",
+        "fontWeight": 600
       },
       "overline": {
         "fontFamily": "Urbanist",
@@ -179,6 +296,24 @@
     "subheading": {
       "fontFamily": "Urbanist",
       "fontWeight": 700,
+      "lineHeight": "20px",
+      "fontSize": "14px"
+    },
+    "subheading_bold": {
+      "fontFamily": "Urbanist",
+      "fontWeight": 700,
+      "lineHeight": "20px",
+      "fontSize": "14px"
+    },
+    "subheading_semi_bold": {
+      "fontFamily": "Urbanist",
+      "fontWeight": 600,
+      "lineHeight": "20px",
+      "fontSize": "14px"
+    },
+    "subheading_regular": {
+      "fontFamily": "Urbanist",
+      "fontWeight": 400,
       "lineHeight": "20px",
       "fontSize": "14px"
     }
