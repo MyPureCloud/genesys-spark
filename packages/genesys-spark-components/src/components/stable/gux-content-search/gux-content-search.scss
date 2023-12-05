@@ -121,6 +121,8 @@
     button {
       display: block;
       align-items: center;
+      height: var(--gse-ui-search-counter-icon-height);
+      padding: 0;
       overflow: hidden;
       color: var(--gse-ui-search-counter-default-foregroundColor);
       cursor: pointer;
@@ -147,8 +149,6 @@
       &.gux-clear-button {
         flex-shrink: 0;
         align-items: center;
-        padding-right: 0;
-        padding-left: 0;
 
         gux-icon {
           width: var(--gse-ui-icon-size-sm);
@@ -166,8 +166,11 @@
     .gux-navigation-panel {
       display: flex;
       gap: var(--gse-ui-search-counter-gap);
+      align-items: center;
 
       .gux-navigation-divider {
+        box-sizing: border-box;
+        align-self: center;
         height: 16px; // TODO COMUI-2310 - missing token for divider height
         color: var(--gse-ui-search-counter-default-foregroundColor);
         background-color: #c6c8ce; // TODO COMUI-2310 - missing token for divider background color.
@@ -189,15 +192,11 @@
       .gux-previous-button {
         flex-shrink: 0;
         align-items: center;
-        padding-right: 0;
-        padding-left: 0;
       }
 
       .gux-next-button {
         flex-shrink: 0;
         align-items: center;
-        padding-right: 0;
-        padding-left: 0;
       }
     }
   }
