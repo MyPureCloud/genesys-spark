@@ -68,7 +68,7 @@ export class GuxTag {
       event.composedPath()[0] as HTMLSlotElement
     ).assignedNodes();
     this.label = slotAssignedNodes
-      .map(nodeItem => nodeItem.textContent)
+      .map(nodeItem => nodeItem.textContent.trim())
       .join('');
   }
 
