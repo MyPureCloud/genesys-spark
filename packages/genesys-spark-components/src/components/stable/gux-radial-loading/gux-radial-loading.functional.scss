@@ -1,69 +1,75 @@
 @use 'sass:math';
 
-$largeSpinnerSize: 48; // Linked to --gse-ui-progressAndLoading-spinner-large
-$largeSpinnerBorder: 4; // Linked to --gse-ui-progressAndLoading-largeBorder
+$largeSpinnerSize: var(--gse-ui-progressAndLoading-spinner-large);
+$largeSpinnerBorder: var(--gse-ui-progressAndLoading-largeBorder);
 
-$smallSpinnerSize: 16; // Linked to --gse-ui-progressAndLoading-spinner-small
-$smallSpinnerBorder: 2; // Linked to --gse-ui-progressAndLoading-smallBorder
+$smallSpinnerSize: var(--gse-ui-progressAndLoading-spinner-small);
+$smallSpinnerBorder: var(--gse-ui-progressAndLoading-smallBorder);
 
-$thinSpinnerBorder: 1; // Linked to --gse-ui-progressAndLoading-smallBorder
+$thinSpinnerBorder: var(--gse-ui-progressAndLoading-smallBorder);
 
-$largeCircumference: (math.$pi * ($largeSpinnerSize - $largeSpinnerBorder));
-$smallCircumference: (math.$pi * ($smallSpinnerSize - $smallSpinnerBorder));
-$largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
+$largeCircumference: calc(
+  math.$pi * calc($largeSpinnerSize - $largeSpinnerBorder)
+);
+$smallCircumference: calc(
+  math.$pi * calc($smallSpinnerSize - $smallSpinnerBorder)
+);
+$largeThinCircumference: calc(
+  math.$pi * calc($largeSpinnerSize - $thinSpinnerBorder)
+);
 
 @mixin spin($name, $circumference) {
   @keyframes #{$name}Spin {
     0% {
-      stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      stroke-dasharray: 1 calc(($circumference / 2) - 1);
       transform: rotate(0deg);
     }
 
     7.5% {
-      stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      stroke-dasharray: 1 calc(($circumference / 2) - 1);
       transform: rotate(0deg);
     }
 
     20% {
-      stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      stroke-dasharray: 1 calc(($circumference / 2) - 1);
       transform: rotate(90deg);
     }
 
     30% {
-      stroke-dasharray: math.div($circumference, 4);
+      stroke-dasharray: calc($circumference / 4);
       transform: rotate(180deg);
     }
 
     40% {
-      stroke-dasharray: math.div($circumference, 4);
+      stroke-dasharray: calc($circumference / 4);
     }
 
     50% {
-      stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      stroke-dasharray: 1 calc(($circumference / 2) - 1);
       transform: rotate(450deg);
     }
 
     57.5% {
-      stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      stroke-dasharray: 1 calc(($circumference / 2) - 1);
       transform: rotate(450deg);
     }
 
     70% {
-      stroke-dasharray: math.div($circumference, 4);
+      stroke-dasharray: calc($circumference / 4);
       transform: rotate(540deg);
     }
 
     80% {
-      stroke-dasharray: math.div($circumference, 4);
+      stroke-dasharray: calc($circumference / 4);
       transform: rotate(630deg);
     }
 
     90% {
-      stroke-dasharray: math.div($circumference, 4);
+      stroke-dasharray: calc($circumference / 4);
     }
 
     100% {
-      stroke-dasharray: 1 math.div($circumference, 2) - 1;
+      stroke-dasharray: 1 calc(($circumference / 2) - 1);
       transform: rotate(900deg);
     }
   }
