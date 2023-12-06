@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.71...v4.0.1) (2023-12-06)
+
+
+### Features
+
+* **app.js:** add show hide to code editor ([d6271f2](https://github.com/MyPureCloud/genesys-spark/commit/d6271f26b2a625163f641ef3969554dea4efd607))
+* **app.js:** change the application of toggle ([cee5ee5](https://github.com/MyPureCloud/genesys-spark/commit/cee5ee5abc94601eefbeb686e02880acb8dcbd89))
+* **app.js:** fix label click bug ([895c8b0](https://github.com/MyPureCloud/genesys-spark/commit/895c8b0799dff187af2bef48f6bf7bc99bd26eca))
+* **app.js:** remove key event ([1e1a866](https://github.com/MyPureCloud/genesys-spark/commit/1e1a8669294d2d30c7353004b396c0f0db8d436d))
+* **app.js:** replace link with toggle and tidy up code ([28954ac](https://github.com/MyPureCloud/genesys-spark/commit/28954acb85ca6d405bb73bcd11b45771f995e424))
+* **app.js:** tidy up toggle ([af26687](https://github.com/MyPureCloud/genesys-spark/commit/af266872f97983e8c3cf79a22d714a340095da1d))
+* **calendar-beta:** change focus ring style ([1f37b35](https://github.com/MyPureCloud/genesys-spark/commit/1f37b35f945b7aeaa3b3cbde5bcaa992df209163))
+* **content-search month-picker:** add outline offset on focus ([facfa4d](https://github.com/MyPureCloud/genesys-spark/commit/facfa4d1201f1873aece052ec4edf6bceb0b7f0c))
+* **content-search:** align navigation panel on content-search with input text ([a9aea43](https://github.com/MyPureCloud/genesys-spark/commit/a9aea43e51e4c126577ec736bb98d7b05a6c22ae))
+* **gux-modal:** add an open property to the modal ([b8c4fb5](https://github.com/MyPureCloud/genesys-spark/commit/b8c4fb5b98e86a54aa26d7c5006906054004e85b))
+
+
+### Bug Fixes
+
+* **gux-tooltip:** add support for updating for attribute after component is connected ([fdfd257](https://github.com/MyPureCloud/genesys-spark/commit/fdfd257669dbc5e2a1c7ad9c684cea88160f1b91))
+* **token:** fixed token build ([a17764d](https://github.com/MyPureCloud/genesys-spark/commit/a17764d18c7a8dec38eeabf1559f9b9e9705ee84))
+
 ## [4.0.0-beta.71](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.0-beta.70...v4.0.0-beta.71) (2023-12-04)
 
 
