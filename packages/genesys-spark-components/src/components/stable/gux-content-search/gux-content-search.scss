@@ -77,6 +77,7 @@
     outline: var(--gse-ui-formControl-input-focus-border-width)
       var(--gse-ui-formControl-input-focus-border-style)
       var(--gse-ui-formControl-input-focus-border-color);
+    outline-offset: var(--gse-semantic-focusRing-offset);
   }
 
   &:not(:disabled):not(.gux-disabled):hover {
