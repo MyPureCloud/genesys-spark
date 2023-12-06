@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.113.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.112.1...v3.113.0) (2023-12-06)
+
+
+### Features
+
+* **gux-tooltip:** add support for updating for attribute ([2f056cf](https://github.com/MyPureCloud/genesys-spark/commit/2f056cf9bec28fdf071f9d6099f168269dec3042))
+
+
+### Bug Fixes
+
+* **time-zone-picker:** remove stylings from gux-list-divider ([55681de](https://github.com/MyPureCloud/genesys-spark/commit/55681de5f06a517ed9f85a51757ab7af04145760))
+
 ### [3.112.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.112.0...v3.112.1) (2023-12-05)
 
 
