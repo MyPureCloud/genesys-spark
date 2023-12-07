@@ -5,7 +5,9 @@ import {
   EventEmitter,
   h,
   JSX,
-  Prop
+  Listen,
+  Prop,
+  Watch
 } from '@stencil/core';
 import {
   autoUpdate,
@@ -19,6 +21,7 @@ import {
 
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
+import { afterNextRender } from '@utils/dom/after-next-render';
 import { findElementById } from '@utils/dom/find-element-by-id';
 
 /**
@@ -28,7 +31,9 @@ import { findElementById } from '@utils/dom/find-element-by-id';
 @Component({
   styleUrl: 'gux-popover-list.scss',
   tag: 'gux-popover-list',
-  shadow: true
+  shadow: {
+    delegatesFocus: true
+  }
 })
 export class GuxPopoverList {
   private popupElement: HTMLDivElement;
@@ -73,6 +78,39 @@ export class GuxPopoverList {
    */
   @Event()
   guxdismiss: EventEmitter<void>;
+
+  /**
+   * Fired when the popover is open
+   */
+  @Event()
+  guxopen: EventEmitter<void>;
+
+  /**
+   * Fired when the popover is close
+   */
+  @Event()
+  guxclose: EventEmitter<void>;
+
+  @Watch('isOpen')
+  onIsOpenChange(isOpen: boolean): void {
+    if (isOpen) {
+      this.guxopen.emit();
+
+      afterNextRender(() => {
+        this.root.focus();
+      });
+    } else {
+      this.guxclose.emit();
+    }
+  }
+
+  @Listen('keydown')
+  onKeyDown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Escape':
+        this.dismiss();
+    }
+  }
 
   @OnClickOutside({ triggerEvents: 'mousedown' })
   checkForClickOutside(event: MouseEvent) {

@@ -18,7 +18,9 @@
 
 | Event        | Description                             | Type                |
 | ------------ | --------------------------------------- | ------------------- |
+| `guxclose`   | Fired when the popover is close         | `CustomEvent<void>` |
 | `guxdismiss` | Fired when a user dismisses the popover | `CustomEvent<void>` |
+| `guxopen`    | Fired when the popover is open          | `CustomEvent<void>` |
 
 
 ## Slots

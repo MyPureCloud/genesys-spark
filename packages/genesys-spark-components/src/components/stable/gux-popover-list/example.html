@@ -1,7 +1,7 @@
 <h1>gux-popover-list</h1>
 <div class="scroll-container">
   <div class="scroll-interior">
-    <div id="popover-target">Example Element</div>
+    <div id="popover-target" tabindex="1">Example Element</div>
     <gux-popover-list
       id="popover-example"
       position="top"
@@ -26,6 +26,10 @@
   const popoverExample = document.getElementById('popover-example');
 
   popoverTarget.addEventListener('mouseover', () => {
+    popoverExample.isOpen = true;
+  });
+
+  popoverTarget.addEventListener('focus', () => {
     popoverExample.isOpen = true;
   });
 })()"
