@@ -75,6 +75,10 @@ You will need to set a lang attribute on the a component or one of its ancestor 
 Normally, you should set it on the page somewhere at a high level, e.g. `<html lang="en">` or `<body lang="en">`
 and the components will localize based on that. If no language is set, the components default to English.
 
+### Framework Integration Notes
+
+- [React](../../packages/genesys-spark-components-react/README.md)
+
 ## Development and Contribution
 
 The common component library has a small set of developers, who also work on other projects, so
