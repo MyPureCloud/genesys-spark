@@ -35,7 +35,8 @@
     "text": {
       "fontFamily": "Noto Sans",
       "lineHeight": "20px",
-      "fontSize": "14px"
+      "fontSize": "14px",
+      "fontWeight": 400
     },
     "margin": "16px",
     "gap": "12px",
