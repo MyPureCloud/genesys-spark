@@ -1,12 +1,13 @@
 @use 'sass:math';
+@use '~genesys-spark-tokens/dist/scss/gse-ui-feedback';
 
-$largeSpinnerSize: 48; // Linked to --gse-ui-progressAndLoading-spinner-large
-$largeSpinnerBorder: 4; // Linked to --gse-ui-progressAndLoading-largeBorder
+$largeSpinnerSize: gse-ui-feedback.$gse-ui-progressAndLoading-spinner-large;
+$largeSpinnerBorder: gse-ui-feedback.$gse-ui-progressAndLoading-largeBorder;
 
-$smallSpinnerSize: 16; // Linked to --gse-ui-progressAndLoading-spinner-small
-$smallSpinnerBorder: 2; // Linked to --gse-ui-progressAndLoading-smallBorder
+$smallSpinnerSize: gse-ui-feedback.$gse-ui-progressAndLoading-spinner-small;
+$smallSpinnerBorder: gse-ui-feedback.$gse-ui-progressAndLoading-smallBorder;
 
-$thinSpinnerBorder: 1; // Linked to --gse-ui-progressAndLoading-smallBorder
+$thinSpinnerBorder: gse-ui-feedback.$gse-ui-progressAndLoading-smallBorder;
 
 $largeCircumference: (math.$pi * ($largeSpinnerSize - $largeSpinnerBorder));
 $smallCircumference: (math.$pi * ($smallSpinnerSize - $smallSpinnerBorder));
