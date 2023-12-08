@@ -7,10 +7,14 @@
 
 ## Properties
 
-| Property            | Attribute | Description                         | Type                                         | Default     |
-| ------------------- | --------- | ----------------------------------- | -------------------------------------------- | ----------- |
-| `name` _(required)_ | `name`    | Name which is shown as initials     | `string`                                     | `undefined` |
-| `size`              | `size`    | Avatar size: small, medium or large | `"large" \| "medium" \| "small" \| "xsmall"` | `'large'`   |
+| Property      | Attribute     | Description | Type                                                                                             | Default       |
+| ------------- | ------------- | ----------- | ------------------------------------------------------------------------------------------------ | ------------- |
+| `accent`      | `accent`      |             | `"add" \| "default" \| "more" \| 1 \| 10 \| 11 \| 12 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9`    | `'default'`   |
+| `initials`    | `initials`    |             | `string`                                                                                         | `undefined`   |
+| `interactive` | `interactive` |             | `boolean`                                                                                        | `false`       |
+| `size`        | `size`        |             | `"large" \| "medium" \| "small" \| "xsmall"`                                                     | `'large'`     |
+| `status`      | `status`      |             | `"available" \| "break" \| "busy" \| "notifications" \| "offline" \| "out-of-office" \| "queue"` | `'available'` |
+| `statusRing`  | `status-ring` |             | `boolean`                                                                                        | `false`       |
 
 
 ## Slots

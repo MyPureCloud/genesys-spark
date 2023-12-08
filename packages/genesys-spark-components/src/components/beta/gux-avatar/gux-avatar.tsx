@@ -1,7 +1,7 @@
 import { Component, h, JSX, Prop, Element, Fragment } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
-import { logWarn } from '@utils/error/log-error';
-import { GuxAvatarSize } from './gux-avatar.types';
+import { GuxAvatarSize, GuxAvatarAccent } from './gux-avatar.types';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot image - Headshot photo.
@@ -13,62 +13,113 @@ import { GuxAvatarSize } from './gux-avatar.types';
   shadow: true
 })
 export class GuxAvatar {
+  /*
+   * Reference to the host element.
+   */
   @Element()
   root: HTMLElement;
 
-  /**
-   * Avatar size: small, medium or large
-   */
+  @Prop()
+  status: GuxAvatarStatus = 'available';
+
   @Prop()
   size: GuxAvatarSize = 'large';
 
-  /**
-   * Name which is shown as initials
-   */
   @Prop()
-  name!: string;
+  statusRing: boolean = false;
 
-  private generateInitials(): string {
-    const nameArray = this.name?.split(' ') ?? [];
-    if (nameArray.length > 1) {
-      return nameArray[0].charAt(0) + nameArray[nameArray.length - 1].charAt(0);
+  @Prop()
+  initials: string;
+
+  @Prop()
+  accent: GuxAvatarAccent = 'default';
+
+  @Prop()
+  badge: GuxAvatarBadge;
+
+  @Prop()
+  interactive: boolean = false;
+
+  hasImageSlot: boolean;
+
+  private displayInnerContent(): JSX.Element | null {
+    if (this.hasImageSlot) {
+      return (<slot name="image"></slot>) as JSX.Element | null;
     }
-    return nameArray[0]?.charAt(0) + nameArray[0]?.charAt(1);
+    return (<div class="initials">{this.initials}</div>) as JSX.Element | null;
   }
 
-  private logWarning(): void {
-    const avatarImage = this.root.querySelector('img');
-    if (!this.name && !avatarImage) {
-      logWarn(this.root, 'must have a name attribute for accessibility.');
-    } else if (avatarImage && !avatarImage.getAttribute('alt')) {
-      logWarn(this.root, 'Alt attribute is required for slotted image.');
+  private displayBadge(): JSX.Element | null {
+    if (this.badge) {
+      return (
+        <div
+          class={{
+            'gux-avatar-badge': true,
+            [`${this.badge}`]: true,
+            [`gux-${this.size}`]: true
+          }}
+        >
+          <gux-icon
+            icon-name={this.getIcon(this.badge)}
+            screenreader-text={this.badge}
+          ></gux-icon>
+        </div>
+      ) as JSX.Element;
+    }
+  }
+
+  private getIcon(accent: GuxAvatarBadge): string {
+    switch (accent) {
+      case 'available':
+        return 'fa/circle-check-solid';
+      case 'break':
+        return 'fa/clock-outline';
+      case 'busy':
+        return 'fa/ban-outline';
+      case 'notifications':
+        return 'fa/bell-regular';
+      case 'offline':
+        return 'fa/circle-xmark-regular';
+      case 'out-of-office':
+        return 'fa/subtract-circle';
+      case 'queue':
+        return 'fa/headset-solid';
+      default:
+        return 'fa/circle-xmark-regular';
     }
   }
 
   componentWillLoad(): void {
-    trackComponent(this.root);
-  }
-
-  componentDidLoad() {
-    this.logWarning();
+    trackComponent(this.root, { variant: this.status });
+    this.hasImageSlot = hasSlot(this.root, 'image');
   }
 
   render(): JSX.Element {
-    return (
+    const avatarContent = (
       <Fragment>
         <div
           class={{
             'gux-avatar': true,
-            [`gux-${this.size}`]: true
+            [`${this.status}`]: true,
+            [`gux-${this.size}`]: true,
+            [`gux-${this.statusRing && 'status-ring'}`]: true
           }}
         >
-          <div class="gux-content">
-            <slot name="image">
-              <abbr title={this.name}>{this.generateInitials()}</abbr>
-            </slot>
+          <div
+            class={{
+              content: true,
+              [`gux-accent-${this.accent}`]: true
+            }}
+          >
+            {this.displayInnerContent()}
           </div>
         </div>
+        {this.displayBadge()}
       </Fragment>
-    ) as JSX.Element;
+    );
+
+    return this.interactive
+      ? ((<button>{avatarContent}</button>) as JSX.Element)
+      : (avatarContent as JSX.Element);
   }
 }
