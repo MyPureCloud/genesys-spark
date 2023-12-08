@@ -44,9 +44,9 @@ export class GuxAvatar {
 
   private displayInnerContent(): JSX.Element | null {
     if (this.hasImageSlot) {
-      return (<slot name="image"></slot>) as JSX.Element | null;
+      return (<slot name="image"></slot>) as JSX.Element;
     }
-    return (<div class="initials">{this.initials}</div>) as JSX.Element | null;
+    return (<div class="initials">{this.initials}</div>) as JSX.Element;
   }
 
   private displayBadge(): JSX.Element | null {
