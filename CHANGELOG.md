@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.1.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.1.0...v4.1.1) (2023-12-08)
+
+
+### Bug Fixes
+
+* **tooltip:** set host pointer-events to none ([1f37b82](https://github.com/MyPureCloud/genesys-spark/commit/1f37b826e330abfb0eeade6c87fc2687c7a7c642))
+
 ## [4.1.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.0.1...v4.1.0) (2023-12-07)
 
 
