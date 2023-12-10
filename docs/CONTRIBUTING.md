@@ -1,6 +1,7 @@
 # Contributing To Genesys Spark Repo
 
 - [Before Starting](#before-starting)
+- [Running Locally](#running-locally)
 - [While Working](#while-working)
 - [During Review](#during-review)
 
@@ -19,24 +20,39 @@
 
 - Open a GitHub Issue describing the issue you are looking to solve, or the feature you'd like to add, for discussion with the maintainers.
 
+### Running Locally
+
+To run the components locally, install dependencies:
+
+`npm ci`
+
+Run an initial build to bootstrap tokens and other artifacts. This is only required once after
+switching branches or pulling changes:
+
+`npm run build`
+
+Start the dev server:
+
+`npm start`
+
 ### While Working
 
 - Use `npm run commit` or `git cz` to ensure correctly formatted commit messages. ([Commitizen](https://github.com/commitizen/cz-cli))
-- Components should follow our best practices for [Component Design](./COMPONENT_DESIGN.md)
+- Components should follow our best practices for [Component Design](/packages/genesys-spark-components/documentation/COMPONENT_DESIGN.md)
 - Components should be implemented in TypeScript, with Stencil (if you think you need to deviate from this, talk to the common UI dev team first)
 - Create tests for your component
   - Use unit tests for helper utils and any JS APIs on the component
   - Use [Puppeteer](https://developers.google.com/web/tools/puppeteer) e2e tests for user interactions
   - Create a [snapshot test](https://jestjs.io/docs/en/snapshot-testing) for detecting unintended markup changes
-  - Be sure your component meets the [Testing and Building Accessible Components Guidelines](./A11Y_TESTING.md)
-- [Make sure any text generated within your component uses the `i18n` localization tools for string replacement](./COMPONENT_LOCALIZATION.md). Refer to the [Genesys Cloud Localization Process](https://intranet.genesys.com/display/Localization/Genesys+Cloud+Localization+Process) for more information about the localization process.
+  - Be sure your component meets the [Testing and Building Accessible Components Guidelines](/packages/genesys-spark-components/documentation/A11Y_TESTING.md)
+- [Make sure any text generated within your component uses the `i18n` localization tools for string replacement](/packages/genesys-spark-components/documentation/COMPONENT_LOCALIZATION.md). Refer to the [Genesys Cloud Localization Process](https://intranet.genesys.com/display/Localization/Genesys+Cloud+Localization+Process) for more information about the localization process.
 - Each component should include a file with example usages
   - Examples should include all presentational variations
 - Format your code based on the `.prettierrc.json` settings (configuring auto-format with [Prettier](https://prettier.io/) is highly recommended).
 
 ### During Review
 
-- Open a Pull Request on the repo. Add Core UI team members as reviewers.
+- Open a Pull Request on the repo. GitHub actions will automatically assign Core UI reviewers.
 - Tests and linters must be passing
 - Review will be thorough - problems in these components will have a widespread impact.
 - If your review is completed and you don't have merge rights for main, reach out to a member of the Core UI team or post in the [Common UI Development](https://apps.mypurecloud.com/directory/#/group/5b99076f08ece9148419013b) and one of us will get it merged.
