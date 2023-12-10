@@ -1,4 +1,4 @@
-import NewRelicBrowser from 'new-relic-browser';
+import 'new-relic-browser';
 import packageInfo from '../../../package.json';
 
 // The number of actions to process every interval
@@ -139,11 +139,4 @@ export function getVersionEvent(packageInfoVersion: string): LibraryEvent {
       minorVersion: `${major}.${minor}`
     }
   };
-}
-
-// Get NewRelic types working
-declare global {
-  interface Window {
-    newrelic?: typeof NewRelicBrowser;
-  }
 }
