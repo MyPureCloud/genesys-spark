@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-form-field-time-zone-picker #render error should render component as expected 1`] = `"<gux-form-field-time-zone-picker hydrated=\\"\\"> <gux-time-zone-picker-beta value=\\"Etc/GMT+1\\" workspace-default=\\"Etc/GMT\\" local-default=\\"America/Detroit\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-error-i\\" hydrated=\\"\\"></gux-time-zone-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Select Time Zone</label> <span slot=\\"error\\" id=\\"gux-form-field-error-i\\">This is an error message</span> </gux-form-field-time-zone-picker>"`;
+
+exports[`gux-form-field-time-zone-picker #render error should render component as expected 2`] = `null`;
+
+exports[`gux-form-field-time-zone-picker #render help should render component as expected 1`] = `"<gux-form-field-time-zone-picker hydrated=\\"\\"> <gux-time-zone-picker-beta value=\\"Etc/GMT+1\\" workspace-default=\\"Etc/GMT\\" local-default=\\"America/Detroit\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-help-i\\" hydrated=\\"\\"></gux-time-zone-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Select Time Zone</label> <span slot=\\"help\\" id=\\"gux-form-field-help-i\\">This is a help message</span> </gux-form-field-time-zone-picker>"`;
+
+exports[`gux-form-field-time-zone-picker #render help should render component as expected 2`] = `null`;
+
+exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-time-zone-picker hydrated=\\"\\"> <gux-time-zone-picker-beta value=\\"Etc/GMT+1\\" workspace-default=\\"Etc/GMT\\" local-default=\\"America/Detroit\\" hydrated=\\"\\"></gux-time-zone-picker-beta> </gux-form-field-time-zone-picker>"`;
+
+exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (1) 2`] = `
+<fieldset class="gux-form-field-fieldset-container gux-undefined">
+  <legend class="gux-form-field-legend-label gux-screenreader">
+    <slot name="label"></slot>
+  </legend>
+  <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input gux-time-zone-picker-container">
+      <slot></slot>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-time-zone-picker hydrated=\\"\\"> <gux-time-zone-picker-beta value=\\"Etc/GMT+1\\" workspace-default=\\"Etc/GMT\\" local-default=\\"America/Detroit\\" disabled=\\"\\" hydrated=\\"\\"></gux-time-zone-picker-beta> </gux-form-field-time-zone-picker>"`;
+
+exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (2) 2`] = `
+<fieldset class="gux-form-field-fieldset-container gux-undefined">
+  <legend class="gux-form-field-legend-label gux-screenreader">
+    <slot name="label"></slot>
+  </legend>
+  <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+  <div class="gux-input-and-error-container">
+    <div class="gux-disabled gux-input gux-time-zone-picker-container">
+      <slot></slot>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-time-zone-picker hydrated=\\"\\"> <gux-time-zone-picker-beta value=\\"Etc/GMT+1\\" workspace-default=\\"Etc/GMT\\" local-default=\\"America/Detroit\\" required=\\"\\" hydrated=\\"\\"></gux-time-zone-picker-beta> </gux-form-field-time-zone-picker>"`;
+
+exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (3) 2`] = `
+<fieldset class="gux-form-field-fieldset-container gux-undefined">
+  <legend class="gux-form-field-legend-label gux-screenreader">
+    <slot name="label"></slot>
+    <gux-screen-reader-beta hydrated="">
+      Required
+    </gux-screen-reader-beta>
+  </legend>
+  <span aria-hidden="true" class="gux-form-field-legend-label gux-required gux-undefined" role="presentation"></span>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input gux-time-zone-picker-container">
+      <slot></slot>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (1) 1`] = `"<gux-form-field-time-zone-picker hydrated=\\"\\"> <gux-time-zone-picker-beta value=\\"Etc/GMT+1\\" workspace-default=\\"Etc/GMT\\" local-default=\\"America/Detroit\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-zone-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Select Time Zone</label> </gux-form-field-time-zone-picker>"`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (1) 2`] = `null`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (2) 1`] = `"<gux-form-field-time-zone-picker label-position=\\"above\\" hydrated=\\"\\"> <gux-time-zone-picker-beta value=\\"Etc/GMT+1\\" workspace-default=\\"Etc/GMT\\" local-default=\\"America/Detroit\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-zone-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Select Time Zone</label> </gux-form-field-time-zone-picker>"`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (2) 2`] = `null`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (3) 1`] = `"<gux-form-field-time-zone-picker label-position=\\"beside\\" hydrated=\\"\\"> <gux-time-zone-picker-beta value=\\"Etc/GMT+1\\" workspace-default=\\"Etc/GMT\\" local-default=\\"America/Detroit\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-zone-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Select Time Zone</label> </gux-form-field-time-zone-picker>"`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (3) 2`] = `null`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (4) 1`] = `"<gux-form-field-time-zone-picker label-position=\\"screenreader\\" hydrated=\\"\\"> <gux-time-zone-picker-beta value=\\"Etc/GMT+1\\" workspace-default=\\"Etc/GMT\\" local-default=\\"America/Detroit\\" id=\\"gux-form-field-input-i\\" hydrated=\\"\\"></gux-time-zone-picker-beta> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Select Time Zone</label> </gux-form-field-time-zone-picker>"`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (4) 2`] = `null`;

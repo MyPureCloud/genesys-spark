@@ -8,7 +8,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (1)
         <div class="gux-input">
           <slot name="input"></slot>
         </div>
-        <div class="gux-label">
+        <div class="gux-label-beside">
           <slot name="label"></slot>
           <div class="gux-form-field-error">
             <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -40,7 +40,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (2)
         <div class="gux-input">
           <slot name="input"></slot>
         </div>
-        <div class="gux-label">
+        <div class="gux-label-beside">
           <slot name="label"></slot>
           <div class="gux-form-field-error">
             <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -72,7 +72,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (3)
         <div class="gux-input">
           <slot name="input"></slot>
         </div>
-        <div class="gux-label">
+        <div class="gux-label-beside">
           <slot name="label"></slot>
           <div class="gux-form-field-error gux-show">
             <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -107,7 +107,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (4)
         <div class="gux-input">
           <slot name="input"></slot>
         </div>
-        <div class="gux-label">
+        <div class="gux-label-beside">
           <slot name="label"></slot>
           <div class="gux-form-field-error">
             <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -139,7 +139,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (5)
         <div class="gux-input">
           <slot name="input"></slot>
         </div>
-        <div class="gux-label">
+        <div class="gux-label-beside">
           <slot name="label"></slot>
           <div class="gux-form-field-error gux-show">
             <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
@@ -174,7 +174,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (6)
         <div class="gux-input">
           <slot name="input"></slot>
         </div>
-        <div class="gux-label">
+        <div class="gux-label-beside">
           <slot name="label"></slot>
           <div class="gux-form-field-error">
             <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>

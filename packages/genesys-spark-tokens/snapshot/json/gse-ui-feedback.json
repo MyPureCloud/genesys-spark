@@ -35,7 +35,8 @@
     "text": {
       "fontFamily": "Noto Sans",
       "lineHeight": "20px",
-      "fontSize": "14px"
+      "fontSize": "14px",
+      "fontWeight": 400
     },
     "margin": "16px",
     "gap": "12px",
@@ -100,6 +101,10 @@
     "border_radius": "16px",
     "shroud": {
       "opacity": 0.8
+    },
+    "dismiss_button": {
+      "padding_top": "16px",
+      "padding_right": "8px"
     }
   },
   "popover": {
@@ -151,8 +156,8 @@
     "spinner": {
       "foreground": "#4856CB",
       "base": "#CED2FC",
-      "large": "48px",
-      "small": "16px",
+      "large": 48,
+      "small": 16,
       "text": {
         "fontFamily": "Noto Sans",
         "fontWeight": 600,
@@ -253,16 +258,17 @@
         }
       }
     },
-    "large_border": "4px",
-    "small_border": "2px",
-    "thin_border": "1px"
+    "large_border": 4,
+    "small_border": 2,
+    "thin_border": 1
   },
   "blank_state": {
     "small": {
-      "width": "250px"
+      "width": "250px",
+      "max_width": "569px"
     },
     "large": {
-      "width": "564px"
+      "min_width": "570px"
     },
     "icon": {
       "size": {

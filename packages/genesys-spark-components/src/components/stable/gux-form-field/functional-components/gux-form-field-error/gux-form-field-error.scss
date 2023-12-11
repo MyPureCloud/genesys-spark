@@ -4,9 +4,8 @@
     display: none;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: stretch;
-    align-items: flex-start;
-    justify-content: flex-start;
+    place-content: stretch flex-start;
+    align-items: center;
     padding: var(--gse-ui-formControl-helper-errorPadding);
     font-family: var(--gse-ui-formControl-helper-helperText-fontFamily);
     font-size: var(--gse-ui-formControl-helper-helperText-fontSize);

@@ -1,7 +1,7 @@
 :host {
   box-sizing: border-box;
   display: block;
-  max-height: 20rem; // missing token ticket COMUI-2269
+  max-height: var(--gse-ui-menu-maxHeight);
   padding: var(--gse-ui-menu-padding);
   overflow-y: auto;
   background: var(--gse-ui-menu-backgroundColor);
@@ -15,19 +15,12 @@
   scrollbar-color: var(--gse-ui-menu-scrollbar-foregroundColor);
 }
 
-:host(:focus-visible) {
-  outline: var(--gse-semantic-focusRing-width) solid
-    var(--gse-semantic-color-focus);
-  outline-offset: var(--gse-semantic-focusRing-offset);
-}
-
 .gux-message-container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-content: stretch;
+  place-content: stretch center;
   align-items: center;
-  justify-content: center;
 
   .gux-no-matches {
     box-sizing: border-box;

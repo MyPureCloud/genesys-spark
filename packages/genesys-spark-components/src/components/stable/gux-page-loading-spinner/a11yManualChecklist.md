@@ -1,4 +1,5 @@
 # gux-page-loading-spinner manual accessibility testing status
+
 **Last Updated:** Mon Dec 20 2021 11:47:41 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |

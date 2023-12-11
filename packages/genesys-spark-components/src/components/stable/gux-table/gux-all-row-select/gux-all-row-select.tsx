@@ -21,15 +21,17 @@ import tableResources from '../i18n/en.json';
 })
 export class GuxAllRowSelect {
   private inputElement: HTMLInputElement;
+  private id: string = randomHTMLId('gux-all-row-select');
+  private i18n: GetI18nValue;
 
   @Element()
   root: HTMLElement;
 
-  private id: string = randomHTMLId('gux-all-row-select');
-  private i18n: GetI18nValue;
-
   @Prop()
   selected: boolean = false;
+
+  @Prop()
+  disabled: boolean;
 
   @Event()
   internalallrowselectchange: EventEmitter;
@@ -56,17 +58,18 @@ export class GuxAllRowSelect {
 
   render(): JSX.Element {
     return (
-      <gux-form-field-checkbox>
+      <gux-form-field-checkbox label-position="screenreader">
         <input
           ref={el => (this.inputElement = el)}
           slot="input"
           id={this.id}
           type="checkbox"
           checked={this.selected}
+          disabled={this.disabled}
         />
         <label slot="label" htmlFor={this.id}>
           &#8203;
-          <span class="gux-label-text">{this.i18n('selectAllTableRows')}</span>
+          <span>{this.i18n('selectAllTableRows')}</span>
         </label>
       </gux-form-field-checkbox>
     ) as JSX.Element;

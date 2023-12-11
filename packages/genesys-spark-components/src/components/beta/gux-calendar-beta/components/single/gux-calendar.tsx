@@ -86,6 +86,10 @@ export class GuxCalendar {
   }
 
   private onDateClick(date: Date): void {
+    if (this.isInvalidDate(date)) {
+      return;
+    }
+
     this.focusedValue = new Date(date.getTime());
     this.slottedInput.value = date.toISOString().substring(0, 10);
     simulateNativeEvent(this.root, 'input');
@@ -161,6 +165,13 @@ export class GuxCalendar {
     }
   }
 
+  private isInvalidDate(date: Date): boolean {
+    return (
+      (this.minValue && date.getTime() <= this.minValue.getTime()) ||
+      (this.maxValue && date.getTime() > this.maxValue.getTime())
+    );
+  }
+
   private getMonthDays(): IWeekElement[] {
     const firstOfMonth = getFirstOfMonth(this.getFocusedValue());
     const weeks = [];
@@ -188,10 +199,8 @@ export class GuxCalendar {
         };
       }
 
-      // Disable a date that is outside the defined date range boundaries
-      const disabled =
-        (this.minValue && currentDate.getTime() <= this.minValue.getTime()) ||
-        (this.maxValue && currentDate.getTime() > this.maxValue.getTime());
+      // Check if a date is outside the defined date range boundaries
+      const disabled = this.isInvalidDate(currentDate);
 
       const focused =
         this.getFocusedValue()?.getTime() === currentDate.getTime() &&

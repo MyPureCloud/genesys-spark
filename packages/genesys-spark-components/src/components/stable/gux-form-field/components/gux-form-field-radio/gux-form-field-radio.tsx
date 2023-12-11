@@ -75,7 +75,10 @@ export class GuxFormFieldRadio {
             <div class="gux-input">
               <slot name="input" onSlotchange={() => this.setInput()} />
             </div>
-            <div class="gux-label">
+            <div
+              class="gux-label"
+              aria-disabled={this.disabled ? 'true' : 'false'}
+            >
               <slot name="label" />
               <GuxFormFieldError show={this.hasError}>
                 <slot name="error" />

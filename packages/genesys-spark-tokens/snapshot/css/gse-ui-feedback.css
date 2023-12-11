@@ -22,6 +22,7 @@
   --gse-ui-toast-text-fontFamily: Noto Sans;
   --gse-ui-toast-text-lineHeight: 20px;
   --gse-ui-toast-text-fontSize: 14px;
+  --gse-ui-toast-text-fontWeight: 400;
   --gse-ui-toast-margin: 16px;
   --gse-ui-toast-gap: 12px;
   --gse-ui-toast-gapText: 4px;
@@ -62,6 +63,8 @@
   --gse-ui-modal-boxShadow-type: dropShadow;
   --gse-ui-modal-borderRadius: 16px;
   --gse-ui-modal-shroud-opacity: 0.8;
+  --gse-ui-modal-dismissButton-paddingTop: 16px;
+  --gse-ui-modal-dismissButton-paddingRight: 8px;
   --gse-ui-popover-borderRadius: 8px;
   --gse-ui-popover-boxShadow-x: 0;
   --gse-ui-popover-boxShadow-y: 6px;
@@ -89,8 +92,8 @@
   --gse-ui-popover-anchor-height: 13px;
   --gse-ui-progressAndLoading-spinner-foreground: #4856cb;
   --gse-ui-progressAndLoading-spinner-base: #ced2fc;
-  --gse-ui-progressAndLoading-spinner-large: 48px;
-  --gse-ui-progressAndLoading-spinner-small: 16px;
+  --gse-ui-progressAndLoading-spinner-large: 48;
+  --gse-ui-progressAndLoading-spinner-small: 16;
   --gse-ui-progressAndLoading-spinner-text-fontFamily: Noto Sans;
   --gse-ui-progressAndLoading-spinner-text-fontWeight: 600;
   --gse-ui-progressAndLoading-spinner-text-lineHeight: 18px;
@@ -147,11 +150,12 @@
   --gse-ui-progressAndLoading-blankState-small-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-blankState-small-subheader-lineHeight: 18px;
   --gse-ui-progressAndLoading-blankState-small-subheader-fontSize: 12px;
-  --gse-ui-progressAndLoading-largeBorder: 4px;
-  --gse-ui-progressAndLoading-smallBorder: 2px;
-  --gse-ui-progressAndLoading-thinBorder: 1px;
+  --gse-ui-progressAndLoading-largeBorder: 4;
+  --gse-ui-progressAndLoading-smallBorder: 2;
+  --gse-ui-progressAndLoading-thinBorder: 1;
   --gse-ui-blankState-small-width: 250px;
-  --gse-ui-blankState-large-width: 564px;
+  --gse-ui-blankState-small-maxWidth: 569px;
+  --gse-ui-blankState-large-minWidth: 570px;
   --gse-ui-blankState-icon-size-sm: 32px;
   --gse-ui-blankState-icon-size-lg: 42px;
   --gse-ui-blankState-padding: 32px 16px;

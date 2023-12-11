@@ -65,6 +65,7 @@ Type: `Promise<void>`
 
 ### Depends on
 
+- [gux-button-slot](../../gux-button-slot)
 - [gux-icon](../../gux-icon)
 - [gux-popover-list](../../gux-popover-list)
 - [gux-tooltip-title](../../gux-tooltip-title)
@@ -72,6 +73,7 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
+  gux-tab-advanced --> gux-button-slot
   gux-tab-advanced --> gux-icon
   gux-tab-advanced --> gux-popover-list
   gux-tab-advanced --> gux-tooltip-title

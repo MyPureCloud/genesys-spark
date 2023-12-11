@@ -6,7 +6,7 @@ Boolean isMaintenanceReleaseBranch = env.BRANCH_NAME.startsWith('maintenance/')
 
 Boolean isFeatureBranch = env.BRANCH_NAME.startsWith('feature/')
 
-Boolean isBetaBranch = env.BRANCH_NAME.startsWith('beta/') || isMainBranch
+Boolean isBetaBranch = env.BRANCH_NAME.startsWith('beta/')
 
 Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch || isBetaBranch
 
@@ -26,16 +26,40 @@ webappPipeline {
         // it may protect against problems if the pipeline behavior changes in the future.
         if (isReleaseBranch) {
             sh('npm ci')
-            sh("npm run release -- ${releaseOptions}")
+            sh(
+                label: 'Version bump & changelog generation',
+                script: "npm run release -- ${releaseOptions}"
+            )
             String releaseVersion = sh(
                 script: 'npm run --silent current-version',
                 returnStdout: true
             ).trim()
-            sh("npm run version-sync ${releaseVersion}")
-            sh('npm install --package-lock-only')
-            sh('git add . && git commit --amend --no-edit --no-verify')
-            sh("git tag -a \"v${releaseVersion}\" -m \"chore(release): ${releaseVersion}\"")
+            sh(
+                label: 'Sync package versions',
+                script: """
+                npm run version-sync ${releaseVersion}
+                npm install --package-lock-only
+                """
+            )
+            sh(
+                label: 'Commit changes and tag release',
+                script: """
+                git add packages/**/package.json web-apps/**/package.json package-lock.json
+                git commit --amend --no-edit --no-verify
+                git tag -a \"v${releaseVersion}\" -m \"chore(release): ${releaseVersion}\"
+                """
+            )
+            String unexpectedChanges = sh(
+                label: 'Check for untracked / unexpected changes',
+                script: 'git status --porcelain',
+                returnStdout: true
+            ).trim()
+
+            if (unexpectedChanges != "") {
+                error("I found uncommited changes that should not exist:\n${unexpectedChanges}")
+            }
         }
+
         return readJSON(file: 'package.json').version
     }
     team = 'Core UI'

@@ -1,4 +1,4 @@
-@use '../../../../../style/typography.scss';
+@use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
@@ -14,7 +14,7 @@
 }
 
 ::slotted(label) {
-  @include typography.gse-ui-formControl-label;
+  @include gux-form-field.gse-ui-formControl-label;
 }
 
 ::slotted(input) {
@@ -24,6 +24,7 @@
   width: 100%;
   overflow: hidden;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  color: var(--gse-ui-formControl-input-populatedColor);
   text-overflow: ellipsis;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
@@ -52,10 +53,9 @@
       flex-direction: row;
       flex-wrap: nowrap;
       gap: var(--gse-ui-formControl-input-gap);
-      align-content: stretch;
+      place-content: stretch center;
       align-items: center;
       align-self: auto;
-      justify-content: center;
       order: 0;
       width: 100%;
       height: var(--gse-ui-formControl-input-textfield-height);
@@ -93,6 +93,13 @@
         outline: var(--gse-ui-formControl-input-focus-border-width)
           var(--gse-ui-formControl-input-focus-border-style)
           var(--gse-ui-formControl-input-focus-border-color);
+        outline-offset: var(--gse-semantic-focusRing-offset);
+      }
+
+      &:hover:not(.gux-disabled) {
+        border: var(--gse-ui-formControl-input-hover-border-width)
+          var(--gse-ui-formControl-input-hover-border-style)
+          var(--gse-ui-formControl-input-hover-border-color);
       }
     }
 

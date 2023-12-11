@@ -1,29 +1,22 @@
 declare global {
   // IS_DEV_MODE is rewritten by @rollup/plugin-replace. This definition lets
   // our typescript file typecheck.
-  var IS_DEV_MODE: boolean
+  var IS_DEV_MODE: boolean;
 }
 
 // Default domain to load assets from
 const DEFAULT_DOMAIN = 'mypurecloud.com';
 
-// List of Genesys UI domains
-const DOMAIN_LIST = [
-  'apne2.pure.cloud',
-  'aps1.pure.cloud',
-  'cac1.pure.cloud',
-  'euw2.pure.cloud',
+// List of Genesys UI domains that do not follow the ${region}.pure.cloud format
+const NON_STANDARD_DOMAINS = [
   'inindca.com',
   'inintca.com',
   'mypurecloud.com.au',
   'mypurecloud.com',
   'mypurecloud.de',
   'mypurecloud.ie',
-  'mypurecloud.jp',
-  'sae1.pure.cloud',
-  'use2.maximus-pure.cloud',
-  // 'use2.us-gov-pure.cloud', Assets are not currently deployed to FedRAMP and should fallback to the default domain
-  'usw2.pure.cloud'
+  'mypurecloud.jp'
+  // 'use2.us-gov-pure.cloud', Assets are not currently deployed to FedRAMP. It should fall back to the default domain.
 ];
 
 /**
@@ -31,16 +24,34 @@ const DOMAIN_LIST = [
  * Will use the domain of the current window if it matches a Genesys domain.
  */
 export function getAssetsOrigin(): string {
-    if (IS_DEV_MODE == true) {
-      // This conditional is optimized out in production due to @rollup/plugin-replace
-      // and rollup's dead code elimination
-      return "http://localhost:3333";
-    }
-
-    const pageHost = window.location.hostname;
-    const matchedDomain = DOMAIN_LIST.find(regionDomain =>
-      pageHost.endsWith(regionDomain)
-    );
-  
-    return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
+  if (IS_DEV_MODE == true) {
+    // This conditional is optimized out in production due to @rollup/plugin-replace
+    // and rollup's dead code elimination
+    return 'http://localhost:3333';
   }
+
+  const matchedDomain = getRegionDomain();
+  return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
+}
+
+export function getFontOrigin(): string {
+  if (IS_DEV_MODE == true) {
+    // Fonts aren't locally hosted during dev mode
+    return 'http://app.inindca.com';
+  }
+  return getAssetsOrigin();
+}
+
+function getRegionDomain() {
+  const pageHost = window.location.hostname;
+
+  // We can automatically handle the standard domain format: ${region}.pure.cloud
+  if (pageHost.endsWith('.pure.cloud')) {
+    return pageHost.split('.').slice(-3).join('.');
+  }
+
+  // For older domains, we have to do a lookup
+  return NON_STANDARD_DOMAINS.find(regionDomain =>
+    pageHost.endsWith(regionDomain)
+  );
+}

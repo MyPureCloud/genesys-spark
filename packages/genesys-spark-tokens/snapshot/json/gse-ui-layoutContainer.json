@@ -92,6 +92,7 @@
     },
     "content_item": {
       "padding": "16px",
+      "gap": "16px",
       "foreground_color": "#1b2c48",
       "background_color": "#ffffff",
       "default_text": {

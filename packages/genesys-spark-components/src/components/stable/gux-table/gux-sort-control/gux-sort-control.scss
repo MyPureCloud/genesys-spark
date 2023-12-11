@@ -4,9 +4,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: flex-start;
+  place-content: flex-start flex-start;
   align-items: center;
-  justify-content: flex-start;
   border-top: var(--gse-ui-dataTableItems-header-selectedBar-height) solid
     transparent;
   border-bottom: var(--gse-ui-dataTableItems-header-selectedBar-height) solid

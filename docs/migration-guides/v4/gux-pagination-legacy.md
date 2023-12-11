@@ -2,8 +2,7 @@
 
 [Back to main guide](./readme.md)
 
-The `gux-pagination` component is now becoming `legacy` and will be replaced by the `gux-pagination-beta` component which will now become `stable`. The new stable `gux-pagination` component
-has a new refreshed design and includes extra functionality including `go-to-page` to allow a user to search for a page. For more information of how to migrate to the `stable` version click [here](./readme.md)
+A full migration of `gux-pagination` upgrades the design to the latest UX standards and allows for easier design changes through css tokens.
 
 ## V3 gux-pagination example
 
@@ -11,33 +10,46 @@ has a new refreshed design and includes extra functionality including `go-to-pag
 <gux-pagination total-items="123" items-per-page="25"></gux-pagination>
 ```
 
-## V4 Full Migration
+## V4 Basic Migration: Add "-legacy" to tag name
 
 Steps:
 
 - Replace the `gux-pagination` tag with `gux-pagination-legacy` tag
 
 ```diff
-- <gux-pagination
-+ <gux-pagination-legacy
-     total-items="123"
-     items-per-page="25"
-  >
+- <gux-pagination total-items="123" items-per-page="25">
++ <gux-pagination-legacy total-items="123" items-per-page="25">
+  ...
 - </gux-pagination>
-+ </gux-pagination-legacy>
++ <gux-pagination-legacy>
 ```
 
-## Properties
+Completed V3 Basic Migration
 
-| Property       | Attribute        | Description                                                                     | Type                              | Default  |
-| -------------- | ---------------- | ------------------------------------------------------------------------------- | --------------------------------- | -------- |
-| `currentPage`  | `current-page`   | The currently select page. Changes are watched by the component.                | `number`                          | `1`      |
-| `itemsPerPage` | `items-per-page` | The max number of items on a page. Used to calculate total page count           | `100 \| 25 \| 50 \| 75`           | `25`     |
-| `layout`       | `layout`         | The pagination component can have different layouts to suit the available space | `"expanded" \| "full" \| "small"` | `'full'` |
-| `totalItems`   | `total-items`    | The total number of items in the data set. Used to calculate total page count   | `number`                          | `0`      |
+```html
+<gux-pagination-legacy
+  total-items="123"
+  items-per-page="25"
+></gux-pagination-legacy>
+```
 
-## Events
+## V4 Full Migration
 
-| Event                 | Description | Type                                                          |
-| --------------------- | ----------- | ------------------------------------------------------------- |
-| `guxpaginationchange` |             | `CustomEvent<{ currentPage: number; itemsPerPage: number; }>` |
+The `layout` property options have changed.
+
+Steps:
+
+- Replace `expanded` or `full` to `advanced`.
+
+```diff
+- <gux-pagination total-items="123" items-per-page="25" layout="expanded"></gux-pagination>
+- <gux-pagination total-items="123" items-per-page="25" layout="full"></gux-pagination>
++ <gux-pagination total-items="123" items-per-page="25" layout="advanced"></gux-pagination>
+```
+
+- Replace `small` to `simple`.
+
+```diff
+- <gux-pagination total-items="123" items-per-page="25" layout="small"></gux-pagination>
++ <gux-pagination total-items="123" items-per-page="25" layout="simple"></gux-pagination>
+```

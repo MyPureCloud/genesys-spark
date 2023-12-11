@@ -2,7 +2,10 @@
 
 # Spark Web Components
 
-This repo contains the CSS and custom elements that make up Genesys' design system, [Spark](https://spark.genesys.com).
+This repo contains the custom elements that make up the bulk of the
+[Spark](https://spark.genesys.com) design system. Developers should prefer using
+the [`genesys-spark`](../genesys-spark/README.md) package and avoid importing
+this package directly unless there is a specific reason to do so.
 
 ## Component Evolution
 
@@ -16,7 +19,8 @@ For more details on the component evolution process see the full [documentation 
 
 ## Demo/Documentation
 
-[Lives here](https://apps.inindca.com/common-ui-docs/#/genesys-webcomponents/latest)
+You can find usage examples of all of the components, with an in-browser editor playground
+online [here](https://apps.inindca.com/common-ui-docs/#/genesys-webcomponents/latest).
 
 ## Installing the library
 
@@ -30,10 +34,12 @@ or
 
 ## Setting up your App
 
-### Configuration
+### Required Fonts
 
-Since version 3, you will need to set the "allowSyntheticDefaultImports" compiler option to "true" in your host apps tsconfig.json. Omitting this option will cause build errors in your app.
-This new requirement is related to a new dependency (vega-lite) which was added as part of our visualisation work.
+Spark is designed to work with the Urbanist and Noto Sans fonts. These components
+do not provide font loading, so you must include them separately in your project.
+For a detailed breakdown of the variants of each font in use, see the typography
+section of the [Spark Design Docs](https://spark.genesys.com).
 
 ### Stylesheets
 
@@ -48,19 +54,6 @@ The library requires the inclusion of a baseline set of CSS styles that it provi
 The best mechanism for importing the stylesheet into your project will depend on how you handle CSS in your project in general. Reach out to the Common UI Development group if you're having trouble with your specific integration.
 
 **Note: Since v3 this baseline stylesheet is required.**
-
-#### Contextual z-index overrides
-
-In complex layouts you may find that your app's use of `z-index` conflicts with the default `z-index` applied to raised content like dropdown menus, tooltips, popovers, or modals.
-
-Components with layered content elements like menus or popovers use CSS variables for their `z-index`, and you can override the default z-index in your app's stylesheet for the specific context where you have a conflict.
-
-```css
-.myApp .someElementThatHasContentWithCustomZIndexes {
-  /* Provide higher z-index for dropdowns in this part of my app so they appear above the surrounding content */
-  --gux-zindex-popup: 100;
-}
-```
 
 ### Genesys Cloud applications
 

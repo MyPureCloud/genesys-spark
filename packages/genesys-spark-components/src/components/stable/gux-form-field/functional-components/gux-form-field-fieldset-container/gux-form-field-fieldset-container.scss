@@ -6,5 +6,13 @@
     padding: 0;
     margin: 0;
     border: none;
+
+    &.gux-beside {
+      flex-direction: row;
+    }
+
+    &.gux-above {
+      flex-direction: column;
+    }
   }
 }

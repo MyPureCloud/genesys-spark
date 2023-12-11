@@ -1,0 +1,387 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-form-field-time-zone-picker #render error should render component as expected 1`] = `
+<gux-form-field-time-zone-picker>
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          This is an error message
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Select Time Zone
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-input-error gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error gux-show">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-time-zone-picker-beta aria-describedby="gux-form-field-error-i" id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Select Time Zone
+  </label>
+  <span id="gux-form-field-error-i" slot="error">
+    This is an error message
+  </span>
+</gux-form-field-time-zone-picker>
+`;
+
+exports[`gux-form-field-time-zone-picker #render help should render component as expected 1`] = `
+<gux-form-field-time-zone-picker>
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Select Time Zone
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help gux-show">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-time-zone-picker-beta aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Select Time Zone
+  </label>
+  <span id="gux-form-field-help-i" slot="help">
+    This is a help message
+  </span>
+</gux-form-field-time-zone-picker>
+`;
+
+exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (1) 1`] = `
+<gux-form-field-time-zone-picker>
+  <mock:shadow-root>
+    <fieldset class="gux-form-field-fieldset-container gux-undefined">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-time-zone-picker-beta local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+</gux-form-field-time-zone-picker>
+`;
+
+exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (2) 1`] = `
+<gux-form-field-time-zone-picker>
+  <mock:shadow-root>
+    <fieldset class="gux-form-field-fieldset-container gux-undefined">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-time-zone-picker-beta disabled="" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+</gux-form-field-time-zone-picker>
+`;
+
+exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (3) 1`] = `
+<gux-form-field-time-zone-picker>
+  <mock:shadow-root>
+    <fieldset class="gux-form-field-fieldset-container gux-undefined">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-time-zone-picker-beta local-default="America/Detroit" required="" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+</gux-form-field-time-zone-picker>
+`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (1) 1`] = `
+<gux-form-field-time-zone-picker>
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Select Time Zone
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Select Time Zone
+  </label>
+</gux-form-field-time-zone-picker>
+`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (2) 1`] = `
+<gux-form-field-time-zone-picker label-position="above">
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Select Time Zone
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Select Time Zone
+  </label>
+</gux-form-field-time-zone-picker>
+`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (3) 1`] = `
+<gux-form-field-time-zone-picker label-position="beside">
+  <mock:shadow-root>
+    <fieldset class="gux-beside gux-form-field-fieldset-container">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+        Select Time Zone
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Select Time Zone
+  </label>
+</gux-form-field-time-zone-picker>
+`;
+
+exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (4) 1`] = `
+<gux-form-field-time-zone-picker label-position="screenreader">
+  <mock:shadow-root>
+    <fieldset class="gux-form-field-fieldset-container gux-screenreader">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          <mock:shadow-root>
+            <span class="gux-sr-only">
+              <slot></slot>
+            </span>
+          </mock:shadow-root>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
+        Select Time Zone
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Select Time Zone
+  </label>
+</gux-form-field-time-zone-picker>
+`;

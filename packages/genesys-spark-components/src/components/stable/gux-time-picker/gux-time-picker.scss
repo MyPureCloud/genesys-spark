@@ -1,3 +1,6 @@
+@use '../../../style/mixins';
+@use '../../../style/focus';
+
 .gux-time-picker {
   position: relative;
   display: inline-block;
@@ -14,9 +17,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: var(--gse-ui-formControl-input-gap);
-    align-content: stretch;
+    place-content: stretch center;
     align-items: center;
-    justify-content: center;
     width: 100%;
     height: var(--gse-ui-formControl-input-textfield-height);
     padding: var(--gse-ui-formControl-input-padding);
@@ -33,10 +35,7 @@
     border-radius: var(--gse-ui-formControl-input-borderRadius);
 
     &:focus-within {
-      border: var(--gse-ui-timePicker-focusTime-border-width)
-        var(--gse-ui-timePicker-focusTime-border-style)
-        var(--gse-ui-timePicker-focusTime-border-color);
-      border-radius: 4px; // TODO: COMUI-2311
+      @include focus.gux-focus-ring;
     }
 
     &:hover:not(:disabled) {
@@ -81,16 +80,9 @@
       outline: none;
 
       &:focus-visible {
-        border: var(--gse-ui-formControl-input-active-border-width)
-          var(--gse-ui-formControl-input-active-border-style)
-          var(--gse-ui-formControl-input-active-border-color);
-        border-radius: var(
-          --gse-ui-formControl-focusRing-borderRadius
-        ); // COMUI-2311 : This focus styling is incorrect.
+        @include focus.gux-focus-ring-small;
 
-        outline: var(--gse-ui-formControl-input-focus-border-width)
-          var(--gse-ui-formControl-input-focus-border-style)
-          var(--gse-ui-formControl-input-focus-border-color);
+        border-radius: var(--gse-ui-timePicker-focusAmpm-borderRadius);
       }
 
       .gux-meridiem {
@@ -116,27 +108,23 @@
       color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
       background: transparent;
       border: none;
+      outline: none;
 
       &.gux-active:not(:disabled) {
-        color: #4856cb; // TODO COMUI-2236
+        color: var(--gse-ui-timePicker-clockStates-activeColor);
         cursor: pointer;
       }
 
-      &:focus {
-        outline: none;
-      }
-
       &:focus-visible {
-        border: var(--gse-ui-timePicker-focusClock-border-width)
-          var(--gse-ui-timePicker-focusClock-border-style)
-          var(--gse-ui-timePicker-focusClock-border-color);
-        border-radius: 4px; // TODO: COMUI-2311
+        @include focus.gux-focus-ring-small;
+
+        border-radius: var(--gse-ui-timePicker-focusClock-borderRadius);
       }
 
       gux-icon {
         width: var(--gse-ui-icon-size-sm);
         height: var(--gse-ui-icon-size-sm);
-        padding: 3px; //TODO: COMUI-2311
+        padding: var(--gse-ui-timePicker-clock-padding);
       }
     }
   }
@@ -147,16 +135,7 @@
 
   .gux-list-container {
     max-height: 150px;
-    padding: var(--gse-ui-menu-padding);
-    margin: 0;
-    overflow-y: scroll;
-    list-style: none;
-    background-color: var(--gse-ui-menu-backgroundColor);
-    border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
-      var(--gse-ui-menu-border-color);
-    border-radius: var(--gse-ui-menu-borderRadius);
-    box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
-      var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
-      var(--gse-ui-menu-boxShadow-color);
+
+    @include mixins.gux-menu-container;
   }
 }

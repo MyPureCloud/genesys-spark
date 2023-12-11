@@ -1,151 +1,226 @@
-<div class="container">
-  <h1>gux-tooltip</h1>
-  <h2>Positioning Top</h2>
-  <div class="section">
-    <gux-button id="top-left">Top Left</gux-button>
-    <gux-button id="top-center">Top Center</gux-button>
-    <gux-button id="top-right">Top Right</gux-button>
-  </div>
+<h1>gux-tooltip</h1>
+<h2>Summary</h2>
+<p>Simple tooltip that is displayed when hovering over a linked node.</p>
 
-  <h2>Text Tooltips</h2>
-  <div class="section">
-    <p>
-      <strong tabindex="0" id="note-1">Lorem ipsum</strong> dolor sit amet,
-      consectetur adipiscing elit. Sed ac odio a dolor semper vehicula at ut
-      nulla. Proin pellentesque neque sollicitudin iaculis efficitur.
-      <strong tabindex="0" id="note-2">Duis porta</strong> urna urna, non
-      commodo nisl vulputate pretium. Nam vestibulum orci vel sem lobortis
-      <strong tabindex="0" id="note-3">faucibus</strong>. Sed arcu mauris,
-      auctor vitae elit et, luctus feugiat leo. Ut non massa vel nisi commodo
-      sagittis eget sit amet mi. Morbi elit nisi, facilisis quis vulputate in,
-      mollis aliquet ipsum. In hac habitasse platea dictumst. Morbi sed ligula
-      id massa consequat lacinia. Aliquam luctus lacus at ex euismod, at
-      volutpat ipsum porttitor. Nam congue tortor sed bibendum
-      <strong tabindex="0" id="note-4">vestibulum</strong>. Aliquam porttitor
-      diam eu mattis convallis.
-    </p>
-    <gux-tooltip for="note-1">Tooltip for note 1</gux-tooltip>
-    <gux-tooltip for="note-2">Tooltip for note 2</gux-tooltip>
-    <gux-tooltip for="note-3">Tooltip for note 3</gux-tooltip>
-    <gux-tooltip for="note-4">Tooltip for note 4</gux-tooltip>
-  </div>
+<section>
+  <h3>Default Behavior</h3>
+  <p>
+    By default, the tooltip will be displayed when hovering over the parent
+    node. Default positioning is beneath the node. The tooltip is not restricted
+    by the parent's overflow style. If the text is sufficiently long, it will
+    wrap into multiple lines.
+  </p>
 
-  <h2>Long Text Tooltips</h2>
-  <div class="section">
-    <p>
-      <strong id="long-note-1">Lorem ipsum</strong> dolor sit amet, consectetur
-      adipiscing elit. Sed ac odio a dolor semper vehicula at ut nulla. Proin
-      pellentesque neque sollicitudin iaculis efficitur.
-    </p>
-    <gux-tooltip for="long-note-1"
-      >You do not have permission to edit this setting. For details, contact
-      your administrator.</gux-tooltip
+  <p class="no-overflow">
+    <strong>Hover</strong> over this paragraph to see an example of a tooltip
+    extending beyond a node with hidden overflow.
+    <gux-tooltip>Default behavior example</gux-tooltip>
+  </p>
+
+  <p>
+    <strong>Hover</strong> over this paragraph to seen an example of a tooltip
+    with more text.
+    <gux-tooltip
+      >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac odio a
+      dolor semper vehicula at ut nulla. Proin pellentesque neque sollicitudin
+      iaculis efficitur.</gux-tooltip
     >
-  </div>
+  </p>
+</section>
 
-  <h2>Tooltips with no "for" prop</h2>
-  <div class="section">
-    <div>
-      <gux-button>Button</gux-button>
-      <gux-tooltip>Tooltip linked to parent element</gux-tooltip>
+<h2>Properties</h2>
+
+<section>
+  <h3>accent</h3>
+  <p>Applies styles for color variants.</p>
+  <div class="flex-container">
+    <div class="flex-example">
+      <h4 class="flex-header">light</h4>
+      <div class="flex-content">
+        <gux-button
+          >Hover<gux-tooltip accent="light"
+            >Tooltip with light accent</gux-tooltip
+          ></gux-button
+        >
+      </div>
     </div>
-  </div>
-
-  <h2>Icon Tooltips</h2>
-  <div class="section">
-    <div>
-      <gux-icon
-        icon-name="user-add"
-        screenreader-text="add John Smith to contact list"
-      ></gux-icon>
-      <gux-tooltip>add John Smith to contact list</gux-tooltip>
-    </div>
-  </div>
-
-  <h2>In a container where overflow is hidden</h2>
-  <div class="section">
-    <div class="no-overflow">
-      <div>
-        <gux-icon
-          icon-name="user-add"
-          screenreader-text="add John Smith to contact list"
-        ></gux-icon>
-        <gux-tooltip>add John Smith to contact list</gux-tooltip>
+    <div class="flex-example">
+      <h4 class="flex-header">dark</h4>
+      <div class="flex-content">
+        <gux-button
+          >Hover<gux-tooltip accent="dark"
+            >Tooltip with dark accent</gux-tooltip
+          ></gux-button
+        >
       </div>
     </div>
   </div>
+</section>
 
-  <h2>Positioning Bottom</h2>
-  <div class="section">
-    <gux-button id="bottom-left">Bottom Left</gux-button>
-    <gux-button id="bottom-center">Bottom Center</gux-button>
-    <gux-button id="bottom-right">Bottom Right</gux-button>
-  </div>
-
-  <h2>Tooltip with an anchor</h2>
-  <div class="section">
-    <div>
-      <gux-button id="anchor-tooltip">Button with anchor tooltip</gux-button>
+<section>
+  <h3>for</h3>
+  <p>
+    Links the tooltip to an element by <em>id</em> instead of its parent node.
+  </p>
+  <div class="flex-container">
+    <div class="flex-example">
+      <h4 class="flex-header">Button</h4>
+      <div class="flex-content">
+        <gux-button id="button-example">Hover</gux-button>
+        <gux-tooltip for="button-example">Tooltip for button</gux-tooltip>
+      </div>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">Icon</h4>
+      <div class="flex-content">
+        <gux-icon
+          id="icon-example"
+          icon-name="user-add"
+          screenreader-text="add John Smith to contact list"
+          >Hover
+        </gux-icon>
+        <gux-tooltip for="icon-example">Tooltip for icon</gux-tooltip>
+      </div>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">Text</h4>
+      <div class="flex-content">
+        <div>
+          Hover over the <strong id="text-example">highlighted</strong> text.
+        </div>
+        <gux-tooltip for="text-example">Tooltip for text</gux-tooltip>
+      </div>
     </div>
   </div>
+</section>
 
-  <h2>Tooltip with dark accent</h2>
-  <div class="section">
-    <div>
-      <gux-button id="anchor-tooltip-dark"
-        >Button with dark accent tooltip</gux-button
-      >
-    </div>
+<section>
+  <h3>placement</h3>
+  <p>
+    Indicates preferred placement of the tooltip. Tooltip will shift based on
+    available space.
+  </p>
+  <div class="grid-example">
+    <div></div>
+    <div class="grid-content" id="top-start">top-start</div>
+    <div class="grid-content" id="top">top</div>
+    <div class="grid-content" id="top-end">top-end</div>
+    <div></div>
+    <div class="grid-content" id="left-start">left-start</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="grid-content" id="right-start">right-start</div>
+    <div class="grid-content" id="left">left</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="grid-content" id="right">right</div>
+    <div class="grid-content" id="left-end">left-end</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="grid-content" id="right-end">right-end</div>
+    <div></div>
+    <div class="grid-content" id="bottom-start">bottom-start</div>
+    <div class="grid-content" id="bottom">bottom</div>
+    <div class="grid-content" id="bottom-end">bottom-end</div>
+    <div></div>
+
+    <gux-tooltip for="top-start" placement="top-start"
+      >Top start tooltip</gux-tooltip
+    >
+    <gux-tooltip for="top" placement="top">Top tooltip</gux-tooltip>
+    <gux-tooltip for="top-end" placement="top-end">Top end tooltip</gux-tooltip>
+    <gux-tooltip for="left-start" placement="left-start"
+      >Left start tooltip</gux-tooltip
+    >
+    <gux-tooltip for="right-start" placement="right-start"
+      >Right start tooltip</gux-tooltip
+    >
+    <gux-tooltip for="left" placement="left">Left tooltip</gux-tooltip>
+    <gux-tooltip for="right" placement="right">Right tooltip</gux-tooltip>
+    <gux-tooltip for="left-end" placement="left-end"
+      >Left end tooltip</gux-tooltip
+    >
+    <gux-tooltip for="right-end" placement="right-end"
+      >Right end tooltip</gux-tooltip
+    >
+    <gux-tooltip for="bottom-start" placement="bottom-start"
+      >Bottom start tooltip</gux-tooltip
+    >
+    <gux-tooltip for="bottom" placement="bottom">Bottom tooltip</gux-tooltip>
+    <gux-tooltip for="bottom-end" placement="bottom-end"
+      >Bottom end tooltip</gux-tooltip
+    >
   </div>
-</div>
 
-<gux-tooltip for="top-left">Top left button tooltip</gux-tooltip>
-<gux-tooltip for="top-center">Top center button tooltip</gux-tooltip>
-<gux-tooltip for="top-right">Top right button tooltip</gux-tooltip>
-<gux-tooltip for="bottom-left"> Bottom left button tooltip </gux-tooltip>
-<gux-tooltip for="bottom-center"> Bottom center button tooltip </gux-tooltip>
-<gux-tooltip for="bottom-right"> Bottom right button tooltip </gux-tooltip>
-<gux-tooltip anchor for="anchor-tooltip"
-  >Tooltip with anchor property</gux-tooltip
->
-<gux-tooltip anchor accent="dark" for="anchor-tooltip-dark"
-  >Tooltip with dark accent and anchor property</gux-tooltip
->
+  <h2>Methods</h2>
 
-<style>
-  .container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 100%;
-  }
+  <section>
+    <h3>hideTooltip</h3>
+    <code>hideTooltip() =&gt; Promise&lt;void&gt;</code>
+    <p>Hides the tooltip if it is currently visible.</p>
+  </section>
 
-  .section {
-    display: flex;
-    flex: 0 1 auto;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    align-items: flex-start;
-    align-self: center;
-    justify-content: space-between;
-    order: 0;
-    width: 100%;
-  }
+  <section>
+    <h3>showTooltip</h3>
+    <code>showTooltip() =&gt; Promise&lt;void&gt;</code>
+    <p>Show the tooltip if it is currently hidden.</p>
+  </section>
 
-  .no-overflow {
-    position: relative;
-    overflow: hidden;
-  }
+  <style>
+    .no-overflow {
+      position: relative;
+      overflow: hidden;
+    }
 
-  p {
-    max-width: 600px;
-  }
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-  strong {
-    background-color: yellow;
-  }
-</style>
+    .flex-example {
+      width: 250px;
+      min-width: 250px;
+    }
+
+    .flex-header {
+      width: fit-content;
+      margin: auto;
+      font-weight: 400;
+    }
+
+    .flex-content {
+      width: fit-content;
+      margin: auto;
+    }
+
+    .grid-example {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+      width: 600px;
+      margin-left: 150px;
+    }
+
+    .grid-content {
+      padding: 20px 0;
+      font-weight: bold;
+      text-align: center;
+      background-color: aliceblue;
+      border: 1px solid lightblue;
+      border-radius: 5px;
+    }
+
+    p {
+      max-width: 600px;
+    }
+
+    strong {
+      background-color: yellow;
+    }
+  </style>
+</section>

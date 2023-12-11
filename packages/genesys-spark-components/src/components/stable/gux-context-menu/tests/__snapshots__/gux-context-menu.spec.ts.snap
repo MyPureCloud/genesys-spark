@@ -3,7 +3,7 @@
 exports[`gux-context-menu renders 1`] = `
 <gux-context-menu>
   <mock:shadow-root>
-    <gux-popup exceed-target-width="">
+    <gux-popup exceed-target-width="" offset="4">
       <div class="gux-button-container" slot="target">
         <gux-button-slot accent="ghost">
           <button aria-expanded="false" aria-haspopup="true" id="gux-i" type="button">
@@ -14,7 +14,7 @@ exports[`gux-context-menu renders 1`] = `
       <div class="gux-list-container" slot="popup">
         <gux-list role="list">
           <mock:shadow-root>
-            <span tabindex="-1"></span>
+            <span aria-hidden="true" tabindex="-1"></span>
             <slot></slot>
           </mock:shadow-root>
           <slot></slot>

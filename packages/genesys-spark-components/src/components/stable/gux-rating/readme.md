@@ -12,24 +12,13 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type      | Default |
-| ---------- | ----------- | ----------- | --------- | ------- |
-| `disabled` | `disabled`  |             | `boolean` | `false` |
-| `maxValue` | `max-value` |             | `number`  | `5`     |
-| `readonly` | `readonly`  |             | `boolean` | `false` |
-| `value`    | `value`     |             | `number`  | `0`     |
-
-
-## CSS Custom Properties
-
-| Name                               | Description |
-| ---------------------------------- | ----------- |
-| `--gse-ui-rating-active-color`     |             |
-| `--gse-ui-rating-default-color`    |             |
-| `--gse-ui-rating-disabled-color`   |             |
-| `--gse-ui-rating-disabled-opacity` |             |
-| `--gse-ui-rating-hover-color`      |             |
-| `--gse-ui-rating-size`             |             |
+| Property    | Attribute   | Description | Type                  | Default     |
+| ----------- | ----------- | ----------- | --------------------- | ----------- |
+| `disabled`  | `disabled`  |             | `boolean`             | `false`     |
+| `increment` | `increment` |             | `"default" \| "half"` | `'default'` |
+| `maxValue`  | `max-value` |             | `number`              | `5`         |
+| `readonly`  | `readonly`  |             | `boolean`             | `false`     |
+| `value`     | `value`     |             | `number`              | `0`         |
 
 
 ## Dependencies

@@ -5,8 +5,9 @@ import {
   EventEmitter,
   h,
   JSX,
-  Listen,
-  Prop
+  Prop,
+  Method,
+  Watch
 } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
@@ -14,20 +15,13 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import { GuxModalSize } from './gux-modal.types';
 
-/**
- * @slot content - Required slot for the modal content
- * @slot left-align-buttons - Optional slot to set gux-buttons aligned to the left of the modal
- * @slot right-align-buttons - Optional slot to set gux-buttons aligned to the left of the modal
- * @slot title - Optional slot to set the modal title
- */
 @Component({
   styleUrl: 'gux-modal.scss',
   tag: 'gux-modal',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxModal {
-  private dismissButton: HTMLGuxDismissButtonElement;
-  private triggerElement: HTMLElement;
+  private dialogElement: HTMLDialogElement;
 
   @Element()
   private root: HTMLElement;
@@ -38,48 +32,61 @@ export class GuxModal {
   @Prop()
   size: GuxModalSize = 'dynamic';
 
-  @Prop()
-  trapFocus: boolean = true;
-
   /**
-   * Query selector for the element to initially focus when the modal opens
-   * Defaults to the first tabbable element
+   * Indicates/sets whether or not the modal is open. On a native dialog, you should not toggle the
+   * open attribute, due to the unusual behaviors described [here](https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-open)
+   * In this component, it is safe as this property acts as a proxy for calls to `showModal` and `close`.
    */
-  @Prop()
-  initialFocus?: string | undefined;
+  @Prop({ mutable: true })
+  open: boolean = false;
 
   /**
-   * Fired when a user dismisses the modal (The default behaviour is to remove the component from the DOM)
+   * Fired when a user dismisses the modal
    */
   @Event()
   guxdismiss: EventEmitter<void>;
 
-  @Listen('keydown')
-  protected handleKeyEvent(event: KeyboardEvent) {
-    if (event.key === 'Escape') {
-      this.onDismissHandler(event);
+  /**
+   * "Renders" the open state of the modal
+   */
+  @Watch('open')
+  private syncOpenState() {
+    if (this.open) {
+      this.dialogElement.showModal();
+    } else {
+      this.dialogElement.close();
     }
   }
 
-  connectedCallback(): void {
-    this.triggerElement = document.activeElement as HTMLElement;
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async showModal(): Promise<void> {
+    this.open = true;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/require-await
+  @Method()
+  async close(): Promise<void> {
+    this.open = false;
   }
 
   componentWillLoad(): void {
-    const trapFocusVariant = this.trapFocus ? 'trapfocuson' : 'trapfocusoff';
-    const componentVariant = `${this.size}-${trapFocusVariant}`;
-    trackComponent(this.root, { variant: componentVariant });
+    trackComponent(this.root, { variant: `${this.size}` });
   }
 
   componentDidLoad(): void {
-    const initialFocusElement = this.getInitialFocusElement();
-    if (initialFocusElement) {
-      // using .focus?.() instead of .focus() as a workaround for a Stencil bug in unit tests
-      // https://github.com/ionic-team/stencil/issues/1964
-      initialFocusElement.focus?.();
-    } else if (this.dismissButton) {
-      this.dismissButton.focus?.();
-    }
+    this.syncOpenState();
+  }
+
+  private hasModalTitleSlot(): boolean {
+    return Boolean(this.root.querySelector('[slot="title"]'));
+  }
+
+  private hasFooterButtons(): boolean {
+    return (
+      Boolean(this.root.querySelector('[slot="start-align-buttons"]')) ||
+      Boolean(this.root.querySelector('[slot="end-align-buttons"]'))
+    );
   }
 
   render(): JSX.Element {
@@ -88,24 +95,18 @@ export class GuxModal {
     const titleID: string = randomHTMLId();
 
     return (
-      <div
-        class="gux-modal"
-        role="dialog"
-        aria-modal="true"
+      <dialog
+        onClose={this.onCloseHandler.bind(this)}
+        ref={el => (this.dialogElement = el)}
         aria-labelledby={hasModalTitleSlot ? titleID : null}
       >
         <div class={`gux-modal-container gux-${this.size}`}>
-          {this.renderModalTrapFocusEl()}
-
-          {hasModalTitleSlot && (
-            <h1 class="gux-modal-header" id={titleID}>
-              <slot name="title" />
-            </h1>
-          )}
           <gux-dismiss-button
             onClick={this.onDismissHandler.bind(this)}
-            ref={el => (this.dismissButton = el)}
           ></gux-dismiss-button>
+
+          {hasModalTitleSlot && this.renderTitle(titleID)}
+
           <div
             class={{
               'gux-modal-content': true,
@@ -116,58 +117,38 @@ export class GuxModal {
               <slot name="content" />
             </p>
           </div>
+          {hasFooterButtons && this.renderButtonFooter()}
+        </div>
+      </dialog>
+    ) as JSX.Element;
+  }
 
-          {hasFooterButtons && (
-            <div class="gux-button-footer">
-              <div class="gux-left-align-buttons">
-                <slot name="left-align-buttons" />
-              </div>
+  private renderTitle(titleID: string): JSX.Element {
+    return (
+      <h1 class="gux-modal-header" id={titleID}>
+        <slot name="title" />
+      </h1>
+    ) as JSX.Element;
+  }
 
-              <div class="gux-right-align-buttons">
-                <slot name="right-align-buttons" />
-              </div>
-            </div>
-          )}
-          {this.renderModalTrapFocusEl()}
+  private renderButtonFooter(): JSX.Element {
+    return (
+      <div class="gux-button-footer">
+        <div class="gux-start-align-buttons">
+          <slot name="start-align-buttons" />
+        </div>
+
+        <div class="gux-end-align-buttons">
+          <slot name="end-align-buttons" />
         </div>
       </div>
     ) as JSX.Element;
   }
-
-  // When trap-focus is enabled, focusing this element
-  // will immediately redirect focus back to the dismiss button at the top of the modal.
-  private renderModalTrapFocusEl(): JSX.Element {
-    if (this.trapFocus) {
-      return (
-        <span onFocus={() => this.dismissButton.focus()} tabindex="0"></span>
-      ) as JSX.Element;
-    }
+  private onCloseHandler(): void {
+    this.guxdismiss.emit();
   }
 
-  private getInitialFocusElement(): HTMLElement | SVGElement | undefined {
-    return this.initialFocus
-      ? this.root.querySelector<HTMLElement | SVGElement>(this.initialFocus)
-      : undefined;
-  }
-
-  private hasModalTitleSlot(): boolean {
-    return Boolean(this.root.querySelector('[slot="title"]'));
-  }
-
-  private hasFooterButtons(): boolean {
-    return (
-      Boolean(this.root.querySelector('[slot="left-align-buttons"]')) ||
-      Boolean(this.root.querySelector('[slot="right-align-buttons"]'))
-    );
-  }
-
-  private onDismissHandler(event: Event): void {
-    event.stopPropagation();
-
-    const dismissEvent = this.guxdismiss.emit();
-    if (!dismissEvent.defaultPrevented) {
-      this.root.remove();
-      this.triggerElement?.focus();
-    }
+  private onDismissHandler(): void {
+    this.dialogElement.close();
   }
 }

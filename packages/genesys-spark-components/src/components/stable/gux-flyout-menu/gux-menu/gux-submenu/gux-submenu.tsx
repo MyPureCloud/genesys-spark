@@ -170,7 +170,7 @@ export class GuxSubmenu {
       }).then(({ x, y }) => {
         Object.assign(this.submenuElement.style, {
           left: `${x}px`,
-          top: `${y}px`
+          top: `${y - 8}px` //TODO https://inindca.atlassian.net/browse/COMUI-2480
         });
       });
     }

@@ -1,4 +1,5 @@
 # gux-radial-loading manual accessibility testing status
+
 **Last Updated:** Mon Dec 20 2021 11:41:58 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |

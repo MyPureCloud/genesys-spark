@@ -1,31 +1,24 @@
-.has-defaults {
-  gux-option {
-    padding-left: 20px;
-  }
-}
-
 gux-dropdown {
   .zone-header {
-    padding: 6px 12px;
-    color: #6b7585;
+    padding: 8px 12px 4px; //TODO: COMUI-2478 token needed for padding
+    color: #6b7585; //TODO: COMUI-2478 need tp clarify token for zone header.
     text-transform: uppercase;
   }
 
-  .tz-utc {
-    color: #596373;
-  }
-
-  gux-list-divider {
-    width: 97%;
-    margin-left: 15px;
-  }
-
   gux-option {
-    &.gux-active,
-    &.gux-hovered:not(:disabled) {
-      .tz-utc {
-        color: #e2e6ee;
-      }
+    padding: var(--gse-ui-menu-option-padding);
+
+    &.gux-has-defaults {
+      height: auto;
+    }
+
+    .gux-option-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gux-default-zone {
+      color: #626e84; // COMUI-2478 need to clarify token.
     }
   }
 }

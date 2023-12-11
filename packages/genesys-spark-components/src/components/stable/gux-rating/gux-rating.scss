@@ -1,25 +1,22 @@
-/**
- * @prop --gse-ui-rating-default-color
- * @prop --gse-ui-rating-active-color
- * @prop --gse-ui-rating-hover-color
- * @prop --gse-ui-rating-disabled-color
- * @prop --gse-ui-rating-disabled-opacity
- * @prop --gse-ui-rating-size
-*/
+@use '../../../style/_focus.scss';
 
 :host {
-  display: inline-flex;
+  display: inline-block;
+  min-width: fit-content;
   user-select: none;
 }
 
 :host(:host:focus-visible) {
-  outline: var(--gse-ui-focus-width) var(--gse-ui-focus-style)
-    var(--gse-ui-focus-color);
-  outline-offset: 1px;
-  box-shadow: 0 0 0 1px var(--gse-ui-focus-style);
+  @include focus.gux-focus-ring-small;
+
+  outline-offset: var(--gse-semantic-focusRing-offset);
+  box-shadow: 0 0 0 1px var(--gse-semantic-focusRing-small-border-style);
 }
 
 .gux-rating-star-container {
+  display: flex;
+  gap: var(--gse-ui-rating-star-gap);
+  justify-content: space-between;
   color: var(--gse-ui-rating-default-color);
 
   &.gux-disabled {
@@ -29,6 +26,7 @@
   }
 
   gux-icon {
+    flex: 0 0 auto;
     width: var(--gse-ui-rating-size);
     height: var(--gse-ui-rating-size);
     color: var(--gse-ui-rating-default-color);

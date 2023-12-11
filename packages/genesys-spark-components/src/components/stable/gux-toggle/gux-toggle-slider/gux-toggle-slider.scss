@@ -1,46 +1,10 @@
-/**
- * @prop --gse-ui-toggle-track-width
- * @prop --gse-ui-toggle-track-height
- * @prop --gse-ui-toggle-track-enabled-off-backgroundColor
- * @prop --gse-ui-toggle-track-enabled-on-backgroundColor
- * @prop --gse-ui-toggle-track-disabled-off-backgroundColor
- * @prop --gse-ui-toggle-track-disabled-on-backgroundColor
- * @prop --gse-ui-toggle-track-error-off-backgroundColor
- * @prop --gse-ui-toggle-track-error-on-backgroundColor
- * @prop --gse-ui-toggle-track-hover-off-backgroundColor
- * @prop --gse-ui-toggle-track-hover-on-backgroundColor
- * @prop --gse-ui-toggle-track-borderRadius
- * @prop --gse-ui-toggle-handle-width
- * @prop --gse-ui-toggle-handle-height
- * @prop --gse-ui-toggle-handle-hover-border-width
- * @prop --gse-ui-toggle-handle-hover-border-style
- * @prop --gse-ui-toggle-handle-hover-border-color
- * @prop --gse-ui-toggle-handle-enabled-border-width
- * @prop --gse-ui-toggle-handle-enabled-border-color
- * @prop --gse-ui-toggle-handle-enabled-border-style
- * @prop --gse-ui-toggle-handle-disabled-border-width
- * @prop --gse-ui-toggle-handle-disabled-border-color
- * @prop --gse-ui-toggle-handle-disabled-border-style
- * @prop --gse-ui-toggle-handle-error-border-color
- * @prop --gse-ui-toggle-handle-error-border-width
- * @prop --gse-ui-toggle-handle-error-border-style
- * @prop --gse-ui-toggle-handle-backgroundColor
- * @prop --gse-ui-toggle-handle-foregroundColor
- * @prop --gse-ui-toggle-handle-borderRadius
- * @prop --gse-ui-toggle-focus-border-color;
- * @prop --gse-ui-toggle-focus-border-width
- * @prop --gse-ui-toggle-focus-border-style
- * @prop --gse-ui-toggle-focus-borderRadius
- * @prop --gse-ui-toggle-focus-offset
- */
-
 @use 'sass:math';
 
 $toggle-height: var(--gse-ui-toggle-track-height);
 $toggle-width: var(--gse-ui-toggle-track-width);
 $slider-diameter: calc(var(--gse-ui-toggle-handle-width));
 $slider-transition: calc($toggle-width - $toggle-height);
-$slider-transition-duration: 0.5s; // TODO: COMUI-2332 missing token
+$slider-transition-duration: 0.2s; // TODO: COMUI-2509 - we are hardcoding this animation duration until design comes back with a token
 
 gux-toggle-slider {
   display: flex;
@@ -56,6 +20,7 @@ gux-toggle-slider {
     order: 0;
     width: $toggle-width;
     height: $toggle-height;
+    cursor: pointer;
     border-radius: var(--gse-ui-toggle-track-borderRadius);
 
     &.gux-error {
@@ -120,11 +85,16 @@ gux-toggle-slider {
         gux-icon {
           position: absolute;
           inset: 0;
-          width: calc($slider-diameter - 2);
-          height: calc($slider-diameter - 2);
-          padding: 1px; // TODO: COMUI-2332 missing token
-          color: #fdfdfd; // TODO: COMUI-2332 missing token
-          opacity: 0; // TODO: COMUI-2332 missing token
+          width: calc(
+            $slider-diameter - 6px
+          ); // TODO : COMUI-2528 token needs to be created for 10px as 16px is too big for icon.
+
+          height: calc(
+            $slider-diameter - 6px
+          ); // TODO : COMUI-2528 token needs to be created for 10px as 16px is too big for icon.
+
+          margin: auto;
+          color: var(--gse-ui-toggle-handle-backgroundColor);
           transition: color $slider-transition-duration linear;
         }
       }
@@ -160,8 +130,8 @@ gux-toggle-slider {
           transform: translateX($slider-transition);
 
           gux-icon {
-            color: #2a60c8; // TODO: COMUI-2332 missing token
-            opacity: 1; // TODO: COMUI-2332 missing token
+            color: var(--gse-ui-toggle-handle-foregroundColor);
+            opacity: 1;
             transition: opacity math.div($slider-transition-duration, 2) linear;
             transition-delay: math.div($slider-transition-duration, 2);
           }

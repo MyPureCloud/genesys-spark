@@ -22,7 +22,10 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
 
-import { getSearchOption } from '../gux-listbox/gux-listbox.service';
+import {
+  getSearchOption,
+  setInitialActiveOption
+} from '../gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
 /**
@@ -185,6 +188,7 @@ export class GuxDropdownMulti {
         if (this.activeElementNotListbox()) {
           event.preventDefault();
           this.expanded = true;
+          setInitialActiveOption(this.listboxElement);
         }
         return;
       case 'Enter':
@@ -399,7 +403,9 @@ export class GuxDropdownMulti {
     switch (event.key) {
       case 'ArrowDown':
         event.stopImmediatePropagation();
+        event.preventDefault();
         this.listboxElement.focus();
+        setInitialActiveOption(this.listboxElement);
         return;
     }
   }
@@ -478,14 +484,12 @@ export class GuxDropdownMulti {
   }
 
   private renderTag(): JSX.Element {
-    const selectedListboxOptionElement = this.getOptionElementByValue(
-      this.value
-    );
-    if (selectedListboxOptionElement?.length) {
+    const selectedValues = this.value?.split(',') || [];
+    if (selectedValues.length) {
       return (
         <gux-dropdown-multi-tag
           disabled={this.disabled}
-          number-selected={selectedListboxOptionElement.length}
+          number-selected={selectedValues.length}
         ></gux-dropdown-multi-tag>
       ) as JSX.Element;
     }

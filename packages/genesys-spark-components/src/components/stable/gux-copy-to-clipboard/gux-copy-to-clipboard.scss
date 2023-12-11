@@ -1,21 +1,3 @@
-/**
-  * @prop --gse-ui-copyToClipboard-contentContainer-gap : https://inindca.atlassian.net/browse/COMUI-2153
-  * @prop --gse-ui-copyToClipboard-gap : https://inindca.atlassian.net/browse/COMUI-2153
-  * @prop --gse-ui-copyToClipboard-iconContainer-padding
-  * @prop --gse-ui-copyToClipboard-label-active-backgroundColor
-  * @prop --gse-ui-copyToClipboard-label-borderRadius
-  * @prop --gse-ui-copyToClipboard-label-foregroundColor
-  * @prop --gse-ui-copyToClipboard-label-padding
-  * @prop --gse-ui-copyToClipboard-label-text-fontFamily
-  * @prop --gse-ui-copyToClipboard-label-text-fontSize
-  * @prop --gse-ui-copyToClipboard-label-text-fontWeight
-  * @prop --gse-ui-copyToClipboard-label-text-lineHeight
-  * @prop --gse-ui-copyToClipboard-label-text-textDecoration
-  * @prop --gse-ui-copyToClipboard-tooltipIcon-error-foregroundColor
-  * @prop --gse-ui-copyToClipboard-tooltipIcon-success-foregroundColor
-  * @prop --gse-ui-icon-size-sm
-  */
-
 @mixin focus-and-hover-copy-content {
   ::slotted(*) {
     background-color: var(
@@ -38,6 +20,7 @@ button {
 
   .gux-copy-content {
     display: inherit;
+    gap: var(--gse-ui-copyToClipboard-contentContainer-gap);
     align-items: inherit;
     cursor: pointer;
 
@@ -57,10 +40,10 @@ button {
     }
 
     gux-icon[icon-name='copy'] {
+      flex-shrink: 0;
       width: var(--gse-ui-icon-size-sm);
       height: var(--gse-ui-icon-size-sm);
       padding: var(--gse-ui-copyToClipboard-iconContainer-padding);
-      margin-left: var(--gse-ui-copyToClipboard-contentContainer-gap);
       visibility: hidden;
       background-color: var(
         --gse-ui-copyToClipboard-label-active-backgroundColor

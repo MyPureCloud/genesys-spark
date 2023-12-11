@@ -16,6 +16,7 @@ import {
   actOnActiveOption,
   clearActiveOptions,
   goToOption,
+  hasActiveOption,
   hasPreviousOption,
   hasNextOption,
   onClickedOption,
@@ -83,11 +84,6 @@ export class GuxListbox {
   @Event()
   internallistboxoptionsupdated: EventEmitter;
 
-  @Listen('focus')
-  onFocus(): void {
-    setInitialActiveOption(this.root);
-  }
-
   @Listen('blur')
   onBlur(): void {
     clearActiveOptions(this.root);
@@ -95,6 +91,12 @@ export class GuxListbox {
 
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
+    if (!hasActiveOption(this.root)) {
+      event.preventDefault();
+      setInitialActiveOption(this.root);
+      return;
+    }
+
     switch (event.key) {
       case 'Enter':
         event.preventDefault();

@@ -1,4 +1,5 @@
 # gux-radial-progress manual accessibility testing status
+
 **Last Updated:** Mon Dec 20 2021 11:45:10 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |

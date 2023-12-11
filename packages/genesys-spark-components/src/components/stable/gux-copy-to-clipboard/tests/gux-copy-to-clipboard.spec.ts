@@ -1,5 +1,4 @@
 import { newSpecPage } from '@test/specTestUtils';
-import MutationObserver from 'mutation-observer';
 import { GuxCopyToClipboard } from '../gux-copy-to-clipboard';
 
 const components = [GuxCopyToClipboard];
@@ -12,10 +11,6 @@ const html = `
 `;
 
 describe('gux-copy-to-clipboard', () => {
-  beforeEach(async () => {
-    global.MutationObserver = MutationObserver;
-  });
-
   describe('#render', () => {
     it('should render copy to clipboard', async () => {
       const page = await newSpecPage({ components, html, language });

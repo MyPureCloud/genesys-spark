@@ -157,7 +157,12 @@ export class GuxTooltipTitle {
 
   render(): JSX.Element {
     return [
-      <span class="gux-title-container">
+      <span
+        class={{
+          'gux-title-container': true,
+          'gux-icon-only': this.iconOnly
+        }}
+      >
         <slot />
       </span>,
       this.renderTooltip()

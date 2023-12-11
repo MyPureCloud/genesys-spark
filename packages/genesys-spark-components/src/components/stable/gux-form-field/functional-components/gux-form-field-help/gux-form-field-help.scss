@@ -4,10 +4,10 @@
     display: none;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: stretch;
+    place-content: stretch flex-start;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: var(--gse-ui-formControl-helper-padding);
+    padding: var(--gse-ui-formControl-helper-paddingSmall);
     font-family: var(--gse-ui-formControl-helper-helperText-fontFamily);
     font-size: var(--gse-ui-formControl-helper-helperText-fontSize);
     line-height: var(--gse-ui-formControl-helper-helperText-lineHeight);

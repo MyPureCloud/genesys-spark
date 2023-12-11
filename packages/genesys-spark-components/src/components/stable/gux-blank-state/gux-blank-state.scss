@@ -1,37 +1,5 @@
 @use '../../../../../genesys-spark-tokens/dist/scss/_gse-ui-feedback'; // TODO: https://inindca.atlassian.net/browse/COMUI-2242
 
-/**
-  * @prop --gse-ui-badge-height
-  * @prop --gse-ui-badge-height
-  * @prop --gse-ui-blankState-backgroundColor
-  * @prop --gse-ui-blankState-borderRadius
-  * @prop --gse-ui-blankState-gapContent
-  * @prop --gse-ui-blankState-gapMain
-  * @prop --gse-ui-blankState-gapMessage
-  * @prop --gse-ui-blankState-icon-size-lg
-  * @prop --gse-ui-blankState-icon-size-sm
-  * @prop --gse-ui-blankState-iconColor
-  * @prop --gse-ui-blankState-large-width : // TODO https://inindca.atlassian.net/browse/COMUI-2242
-  * @prop --gse-ui-blankState-padding
-  * @prop --gse-ui-blankState-small-width : // TODO https://inindca.atlassian.net/browse/COMUI-2242
-  * @prop --gse-ui-progressAndLoading-blankState-large-header-fontFamily
-  * @prop --gse-ui-progressAndLoading-blankState-large-header-fontSize
-  * @prop --gse-ui-progressAndLoading-blankState-large-header-fontWeight
-  * @prop --gse-ui-progressAndLoading-blankState-large-header-lineHeight
-  * @prop --gse-ui-progressAndLoading-blankState-large-subheader-fontFamily
-  * @prop --gse-ui-progressAndLoading-blankState-large-subheader-fontSize
-  * @prop --gse-ui-progressAndLoading-blankState-large-subheader-fontWeight
-  * @prop --gse-ui-progressAndLoading-blankState-large-subheader-lineHeight
-  * @prop --gse-ui-progressAndLoading-blankState-small-header-fontFamily
-  * @prop --gse-ui-progressAndLoading-blankState-small-header-fontSize
-  * @prop --gse-ui-progressAndLoading-blankState-small-header-fontWeight
-  * @prop --gse-ui-progressAndLoading-blankState-small-header-lineHeight
-  * @prop --gse-ui-progressAndLoading-blankState-small-subheader-fontFamily
-  * @prop --gse-ui-progressAndLoading-blankState-small-subheader-fontSize
-  * @prop --gse-ui-progressAndLoading-blankState-small-subheader-fontWeight
-  * @prop --gse-ui-progressAndLoading-blankState-small-subheader-lineHeight
-  */
-
 :host {
   display: flex;
   flex-direction: column;
@@ -104,7 +72,7 @@
 }
 
 // https://bholmes.dev/blog/alternative-to-css-variable-media-queries/
-@container (width <= #{gse-ui-feedback.$gse-ui-blankState-small-width}) {
+@container (width < #{gse-ui-feedback.$gse-ui-blankState-large-minWidth}) {
   .gux-container {
     ::slotted(gux-icon) {
       width: var(--gse-ui-blankState-icon-size-sm);

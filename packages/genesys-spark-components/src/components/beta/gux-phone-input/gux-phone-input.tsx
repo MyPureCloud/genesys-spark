@@ -474,10 +474,10 @@ export class GuxPhoneInput {
     return (
       <div class="gux-selected-option">
         {this.region ? (
-          <gux-region-icon
-            region={this.region?.alpha2Code}
+          <gux-flag-icon-beta
+            flag={this.region?.alpha2Code}
             screenreader-text={this.i18n(this.region?.alpha2Code)}
-          />
+          ></gux-flag-icon-beta>
         ) : (
           <gux-icon
             icon-name="globe"
@@ -492,7 +492,10 @@ export class GuxPhoneInput {
     return (
       <input
         id={'tel-input'}
-        class="gux-phone-text-input"
+        class={{
+          'gux-phone-text-input': true,
+          'gux-disabled': this.disabled
+        }}
         type="tel"
         placeholder={this.phoneUtil.format(
           this.phoneUtil.getExampleNumber(
@@ -538,7 +541,7 @@ export class GuxPhoneInput {
           (
             <gux-option value={region.alpha2Code}>
               <span class="gux-option-content">
-                <gux-region-icon region={region.alpha2Code} />
+                <gux-flag-icon-beta flag={region.alpha2Code} />
                 <span>{region.name}</span>
                 <span class="gux-country-code">{region.dialCode}</span>
               </span>

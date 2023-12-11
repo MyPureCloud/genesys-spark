@@ -13,33 +13,13 @@
 @use '~genesys-spark-tokens/dist/css/gse-ui-navigation.css';
 @use '~genesys-spark-tokens/dist/css/gse-ui-searchAndFilter.css';
 @use '~genesys-spark-tokens/dist/css/gse-ui.css';
-@use 'focus.scss';
 @use 'style-reset-focusable.scss';
 @use 'style-reset-typography.scss';
-@use 'typography.scss';
 @use '../components/beta/gux-calendar-beta/gux-calendar.light.scss';
+@use '../components/legacy/gux-action-toast-legacy/gux-action-toast.light.scss';
 @use '../components/stable/gux-action-button/gux-action-button.light.scss';
 @use '../components/stable/gux-button-multi/gux-button-multi.light.scss';
+@use '../components/stable/gux-content-search/gux-content-search.light.scss';
 @use '../components/stable/gux-form-field/gux-form-field.light.scss';
 @use '../components/stable/gux-table/gux-table.light.scss';
-
-gux-action-toast-legacy {
-  dl {
-    dt {
-      flex: 0 1 20%;
-      align-self: auto;
-      order: 0;
-      margin: 0;
-      color: #2e394c;
-
-      @include typography.bold-font;
-    }
-
-    dd {
-      flex: 0 1 80%;
-      align-self: auto;
-      order: 0;
-      margin: 0;
-    }
-  }
-}
+@use '../components/stable/gux-form-field/components/gux-form-field-color/gux-form-field-color.light.scss';

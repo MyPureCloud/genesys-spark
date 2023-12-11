@@ -1,7 +1,5 @@
 node_modules/
 build/
 dist/
-src/components/**/*.md
+src/components/**/readme.md
 src/components.d.ts
-
-CHANGELOG.md

@@ -2,6 +2,15 @@ import { E2EPage } from '@stencil/core/testing';
 
 import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
 
+const axeExclusions = [
+  {
+    issueId: 'aria-required-children',
+    target: 'gux-context-menu,gux-list',
+    exclusionReason:
+      'To be addressed in COMUI-2388. New violation picked up after upgrading from axe-core v4.4.2 to v4.8.2'
+  }
+];
+
 const html = `
 <gux-context-menu>
   <gux-list-item id="list-item-1" onclick="notify(event)">Test 1</gux-list-item>
@@ -29,11 +38,11 @@ describe('gux-context-menu', () => {
   it('should be a11y compliant', async () => {
     const element = await page.find('gux-context-menu');
 
-    await a11yCheck(page, [], 'before opening context menu');
+    await a11yCheck(page, axeExclusions, 'before opening context menu');
     await element.click();
     await page.waitForChanges();
 
-    await a11yCheck(page, [], 'after opening context menu');
+    await a11yCheck(page, axeExclusions, 'after opening context menu');
   });
 
   it('should focus first item in list on click', async () => {

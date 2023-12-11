@@ -1,31 +1,5 @@
 @use '../../../style/mixins';
 
-/**
-  * @prop --gse-ui-badge-height
-  * @prop --gse-ui-badge-gap
-  * @prop --gse-ui-badge-borderRadius
-  * @prop --gse-ui-badge-text-fontFamily
-  * @prop --gse-ui-badge-text-fontSize
-  * @prop --gse-ui-badge-text-fontWeight // missing
-  * @prop --gse-ui-badge-text-lineHeight
-  * @prop --gse-ui-badge-error-bold-backgroundColor
-  * @prop --gse-ui-badge-error-bold-foregroundColor
-  * @prop --gse-ui-badge-error-regular-backgroundColor
-  * @prop --gse-ui-badge-error-regular-foregroundColor
-  * @prop --gse-ui-badge-info-bold-backgroundColor
-  * @prop --gse-ui-badge-info-bold-foregroundColor
-  * @prop --gse-ui-badge-info-regular-backgroundColor
-  * @prop --gse-ui-badge-info-regular-foregroundColor
-  * @prop --gse-ui-badge-success-bold-backgroundColor
-  * @prop --gse-ui-badge-success-bold-foregroundColor
-  * @prop --gse-ui-badge-success-regular-backgroundColor
-  * @prop --gse-ui-badge-success-regular-foregroundColor
-  * @prop --gse-ui-badge-warning-bold-backgroundColor
-  * @prop --gse-ui-badge-warning-bold-foregroundColor
-  * @prop --gse-ui-badge-warning-regular-backgroundColor
-  * @prop --gse-ui-badge-warning-regular-foregroundColor
-  */
-
 // Style
 :host {
   display: inline-block;
@@ -49,11 +23,6 @@
 
   gux-tooltip-title {
     white-space: nowrap;
-
-    ::slotted(gux-icon) {
-      height: 16px;
-      font-size: 16px;
-    }
   }
 
   .gux-sr-only {

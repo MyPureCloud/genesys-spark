@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
-  align-content: stretch;
+  place-content: stretch space-between;
   align-items: flex-start;
-  justify-content: space-between;
   padding: var(--gse-ui-dataTableItems-tablePagination-padding);
   font-family: var(
     --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily

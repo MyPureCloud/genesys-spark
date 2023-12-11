@@ -62,6 +62,54 @@
   </fieldset>
 
   <fieldset>
+    <legend>Programmatically set input value</legend>
+    <span
+      >Use the `guxForceUpdate` method on the form field component to update the
+      state of the clearable form after programmatically setting the input
+      value</span
+    >
+    <gux-form-field-text-like id="setInputExampleFormField" clearable>
+      <input
+        id="setInputExample"
+        slot="input"
+        type="text"
+        name="c-4"
+        value="Sample text"
+      />
+      <label slot="label">Programmatically set input value</label>
+    </gux-form-field-text-like>
+
+    <gux-button-slot>
+      <button
+        type="button"
+        onclick="(function () {
+          const formField = document.getElementById('setInputExampleFormField');
+          const input = document.getElementById('setInputExample');
+
+          input.value = '';
+          formField.guxForceUpdate();
+        })()"
+      >
+        Clear input field
+      </button>
+    </gux-button-slot>
+
+    <gux-button-slot>
+      <button
+        type="button"
+        onclick="(function () {
+          const formField = document.getElementById('setInputExampleFormField');
+          const input = document.getElementById('setInputExample');
+          input.value = 'New Value';
+          formField.guxForceUpdate();
+        })()"
+      >
+        Set input field with new value
+      </button>
+    </gux-button-slot>
+  </fieldset>
+
+  <fieldset>
     <legend>Label Position</legend>
 
     <gux-form-field-text-like>

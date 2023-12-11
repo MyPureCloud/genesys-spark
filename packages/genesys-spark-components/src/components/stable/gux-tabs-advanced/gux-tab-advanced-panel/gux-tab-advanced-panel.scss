@@ -1,7 +1,7 @@
 @use '../../../../style/focus';
 
 gux-tab-advanced-panel {
-  div[role='tabpanel'] {
+  .gux-tabpanel {
     &:focus {
       outline: none;
     }

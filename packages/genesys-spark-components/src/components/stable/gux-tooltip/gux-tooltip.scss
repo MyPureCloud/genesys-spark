@@ -1,40 +1,10 @@
-@use '../../../style/zindex.scss';
-
-/**
-  * @prop --gse-ui-tooltip-light-border-color
-  * @prop --gse-ui-tooltip-light-border-width
-  * @prop --gse-ui-tooltip-light-border-style
-  * @prop --gse-ui-tooltip-light-backgroundColor
-  * @prop --gse-ui-tooltip-light-foregroundColor
-  * @prop --gse-ui-tooltip-light-iconColor
-  * @prop --gse-ui-tooltip-dark-border-color
-  * @prop --gse-ui-tooltip-dark-border-width
-  * @prop --gse-ui-tooltip-dark-border-style
-  * @prop --gse-ui-tooltip-dark-backgroundColor
-  * @prop --gse-ui-tooltip-dark-foregroundColor
-  * @prop --gse-ui-tooltip-dark-iconColor
-  * @prop --gse-ui-tooltip-boxShadow-x
-  * @prop --gse-ui-tooltip-boxShadow-y
-  * @prop --gse-ui-tooltip-boxShadow-blur
-  * @prop --gse-ui-tooltip-boxShadow-spread
-  * @prop --gse-ui-tooltip-boxShadow-color
-  * @prop --gse-ui-tooltip-padding
-  * @prop --gse-ui-tooltip-height
-  * @prop --gse-ui-tooltip-gap
-  * @prop --gse-ui-tooltip-borderRadius
-  * @prop --gse-ui-tooltip-text-fontFamily
-  * @prop --gse-ui-tooltip-text-lineHeight
-  * @prop --gse-ui-tooltip-text-fontSize
-  * @prop --gse-ui-tooltip-text-fontWeight
-
-  */
-
 :host {
   position: fixed;
-  z-index: var(--gux-zindex-tooltip, zindex.$gux-zindex-tooltip);
+  z-index: var(--gse-semantic-zIndex-tooltip);
   display: none;
   width: max-content;
   max-width: 250px;
+  pointer-events: none;
   box-shadow: var(--gse-ui-tooltip-boxShadow-x)
     var(--gse-ui-tooltip-boxShadow-y) var(--gse-ui-tooltip-boxShadow-blur)
     var(--gse-ui-tooltip-boxShadow-spread) var(--gse-ui-tooltip-boxShadow-color);
@@ -54,81 +24,18 @@
   display: flex;
   flex-direction: row;
   gap: var(--gse-ui-tooltip-gap);
-  align-content: center;
-  justify-content: flex-start;
+  place-content: center flex-start;
   padding: var(--gse-ui-tooltip-padding);
   font-family: var(--gse-ui-tooltip-text-fontFamily);
   font-size: var(--gse-ui-tooltip-text-fontSize);
   font-weight: var(--gse-ui-tooltip-text-fontWeight);
   line-height: var(--gse-ui-tooltip-text-lineHeight);
   color: var(--gse-ui-tooltip-light-foregroundColor);
-  pointer-events: none;
   background-color: var(--gse-ui-tooltip-light-backgroundColor);
   border: var(--gse-ui-tooltip-light-border-width)
     var(--gse-ui-tooltip-light-border-style)
     var(--gse-ui-tooltip-light-border-color);
   border-radius: var(--gse-ui-tooltip-borderRadius);
-
-  &[data-placement='bottom'],
-  &[data-placement='bottom-start'],
-  &[data-placement='bottom-end'] {
-    .gux-arrow {
-      border-top: var(--gse-ui-tooltip-light-border-width)
-        var(--gse-ui-tooltip-light-border-style)
-        var(--gse-ui-tooltip-light-border-color);
-      border-left: var(--gse-ui-tooltip-light-border-width)
-        var(--gse-ui-tooltip-light-border-style)
-        var(--gse-ui-tooltip-light-border-color);
-    }
-  }
-
-  &[data-placement='top'],
-  &[data-placement='top-start'],
-  &[data-placement='top-end'] {
-    .gux-arrow {
-      border-right: var(--gse-ui-tooltip-light-border-width)
-        var(--gse-ui-tooltip-light-border-style)
-        var(--gse-ui-tooltip-light-border-color);
-      border-bottom: var(--gse-ui-tooltip-light-border-width)
-        var(--gse-ui-tooltip-light-border-style)
-        var(--gse-ui-tooltip-light-border-color);
-    }
-  }
-
-  &[data-placement='left'],
-  &[data-placement='left-start'],
-  &[data-placement='left-end'] {
-    .gux-arrow {
-      border-top: var(--gse-ui-tooltip-light-border-width)
-        var(--gse-ui-tooltip-light-border-style)
-        var(--gse-ui-tooltip-light-border-color);
-      border-right: var(--gse-ui-tooltip-light-border-width)
-        var(--gse-ui-tooltip-light-border-style)
-        var(--gse-ui-tooltip-light-border-color);
-    }
-  }
-
-  &[data-placement='right'],
-  &[data-placement='right-start'],
-  &[data-placement='right-end'] {
-    .gux-arrow {
-      border-bottom: var(--gse-ui-tooltip-light-border-width)
-        var(--gse-ui-tooltip-light-border-style)
-        var(--gse-ui-tooltip-light-border-color);
-      border-left: var(--gse-ui-tooltip-light-border-width)
-        var(--gse-ui-tooltip-light-border-style)
-        var(--gse-ui-tooltip-light-border-color);
-    }
-  }
-
-  .gux-arrow {
-    position: absolute;
-    //These dimensions give the arrows the best alignment.
-    width: 13px;
-    height: 13px;
-    background: inherit;
-    border-radius: var(--gse-ui-tooltip-borderRadius);
-  }
 
   ::slotted(gux-icon) {
     align-self: center;
@@ -141,58 +48,6 @@
     color: var(--gse-ui-tooltip-dark-foregroundColor);
     background-color: var(--gse-ui-tooltip-dark-backgroundColor);
     border-color: var(--gse-ui-tooltip-dark-border-color);
-
-    &[data-placement='bottom'],
-    &[data-placement='bottom-start'],
-    &[data-placement='bottom-end'] {
-      .gux-arrow {
-        border-top: var(--gse-ui-tooltip-dark-border-width)
-          var(--gse-ui-tooltip-dark-border-style)
-          var(--gse-ui-tooltip-dark-border-color);
-        border-left: var(--gse-ui-tooltip-dark-border-width)
-          var(--gse-ui-tooltip-dark-border-style)
-          var(--gse-ui-tooltip-dark-border-color);
-      }
-    }
-
-    &[data-placement='top'],
-    &[data-placement='top-start'],
-    &[data-placement='top-end'] {
-      .gux-arrow {
-        border-right: var(--gse-ui-tooltip-dark-border-width)
-          var(--gse-ui-tooltip-dark-border-style)
-          var(--gse-ui-tooltip-dark-border-color);
-        border-bottom: var(--gse-ui-tooltip-dark-border-width)
-          var(--gse-ui-tooltip-dark-border-style)
-          var(--gse-ui-tooltip-dark-border-color);
-      }
-    }
-
-    &[data-placement='left'],
-    &[data-placement='left-start'],
-    &[data-placement='left-end'] {
-      .gux-arrow {
-        border-top: var(--gse-ui-tooltip-dark-border-width)
-          var(--gse-ui-tooltip-dark-border-style)
-          var(--gse-ui-tooltip-dark-border-color);
-        border-right: var(--gse-ui-tooltip-dark-border-width)
-          var(--gse-ui-tooltip-dark-border-style)
-          var(--gse-ui-tooltip-dark-border-color);
-      }
-    }
-
-    &[data-placement='right'],
-    &[data-placement='right-start'],
-    &[data-placement='right-end'] {
-      .gux-arrow {
-        border-bottom: var(--gse-ui-tooltip-dark-border-width)
-          var(--gse-ui-tooltip-dark-border-style)
-          var(--gse-ui-tooltip-dark-border-color);
-        border-left: var(--gse-ui-tooltip-dark-border-width)
-          var(--gse-ui-tooltip-dark-border-style)
-          var(--gse-ui-tooltip-dark-border-color);
-      }
-    }
 
     ::slotted(gux-icon) {
       align-self: center;

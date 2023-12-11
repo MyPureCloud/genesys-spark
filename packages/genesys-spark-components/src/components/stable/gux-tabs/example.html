@@ -230,10 +230,6 @@
   Example 10 -- set `gux-tabs` height and `gux-tab-list` and `gux-tab-panel`
   fill the available space
 </h2>
-<span
-  >`gux-tab-panel` uses the shadow dom, so try using it if you are having issues
-  rendering content within gux-tab-panel</span
->
 
 <gux-tabs class="example" style="display: block; height: 400px">
   <gux-tab-list slot="tab-list">
@@ -243,65 +239,102 @@
     <gux-tab gux-disabled tab-id="10-4">Tab Header 4</gux-tab>
     <gux-tab gux-disabled tab-id="10-5">Tab Header 5 long long long</gux-tab>
   </gux-tab-list>
-  <gux-tab-panel class="bg-color-example" tab-id="10-1"
-    >Tab content 1</gux-tab-panel
-  >
-  <gux-tab-panel class="bg-color-example" tab-id="10-2"
-    >Tab content 2</gux-tab-panel
-  >
-  <gux-tab-panel class="bg-color-example" tab-id="10-3"
-    >Tab content 3</gux-tab-panel
-  >
-  <gux-tab-panel class="bg-color-example" tab-id="10-4"
-    >Tab content 4</gux-tab-panel
-  >
-  <gux-tab-panel class="bg-color-example" tab-id="10-5"
-    >Tab content 5</gux-tab-panel
-  >
+  <gux-tab-panel style="overflow: auto" tab-id="10-1">
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at metus
+      lobortis, venenatis elit nec, gravida quam. Pellentesque vel metus ac nisl
+      auctor finibus. Sed vehicula arcu sed mauris malesuada convallis.
+      Suspendisse condimentum nisl vel lacus dapibus maximus. Cras condimentum
+      vehicula imperdiet. Aenean ornare nisl sit amet sapien tristique, tempus
+      varius enim dignissim. Pellentesque porta efficitur auctor. Vestibulum
+      ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+      curae; Quisque sagittis, ante sit amet mollis tristique, felis sapien
+      ornare odio, ut eleifend massa tortor at libero. Mauris fermentum libero
+      id elit tristique consectetur. Maecenas sit amet sollicitudin ligula.
+      Phasellus urna ante, finibus id vestibulum ac, suscipit vitae augue. Sed
+      quis turpis ut ex bibendum hendrerit vitae sed est. In ultricies ex varius
+      ullamcorper vulputate. Praesent nisi libero, molestie nec dui consectetur,
+      dapibus pellentesque ligula. Pellentesque eget luctus leo. Sed commodo
+      elementum augue, in maximus ante ultricies vel. In orci magna, ornare quis
+      nunc non, euismod porttitor dui. Pellentesque rutrum nibh accumsan,
+      dapibus odio congue, consectetur sapien. Donec et pharetra augue, a
+      ultricies justo. Aliquam aliquet magna nec mi lacinia sollicitudin. Mauris
+      blandit turpis commodo, mattis nunc id, fringilla enim. In hac habitasse
+      platea dictumst. Vestibulum sagittis magna eu tellus semper laoreet.
+      Integer vitae elementum nunc. Nulla dui urna, auctor eget hendrerit a,
+      pulvinar eget mi. Mauris vestibulum ultricies facilisis. Sed id finibus
+      metus. Quisque eu justo risus. Vivamus et eleifend augue. Quisque erat
+      sapien, venenatis non semper sit amet, varius vel nisl. Fusce pulvinar dui
+      sapien, vitae lacinia nulla auctor in. Suspendisse eget luctus libero, et
+      sagittis dui. Mauris id ligula et quam volutpat viverra. Lorem ipsum dolor
+      sit amet, consectetur adipiscing elit. Aliquam efficitur diam ut nibh
+      condimentum, sit amet posuere dui aliquam. Pellentesque habitant morbi
+      tristique senectus et netus et malesuada fames ac turpis egestas.
+      Phasellus nunc nisi, rutrum quis mattis vel, aliquam nec metus. Lorem
+      ipsum dolor sit amet, consectetur adipiscing elit. Nam at metus lobortis,
+      venenatis elit nec, gravida quam. Pellentesque vel metus ac nisl auctor
+      finibus. Sed vehicula arcu sed mauris malesuada convallis. Suspendisse
+      condimentum nisl vel lacus dapibus maximus. Cras condimentum vehicula
+      imperdiet. Aenean ornare nisl sit amet sapien tristique, tempus varius
+      enim dignissim. Pellentesque porta efficitur auctor. Vestibulum ante ipsum
+      primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque
+      sagittis, ante sit amet mollis tristique, felis sapien ornare odio, ut
+      eleifend massa tortor at libero. Mauris fermentum libero id elit tristique
+      consectetur. Maecenas sit amet sollicitudin ligula. Phasellus urna ante,
+      finibus id vestibulum ac, suscipit vitae augue. Sed quis turpis ut ex
+      bibendum hendrerit vitae sed est. In ultricies ex varius ullamcorper
+      vulputate. Praesent nisi libero, molestie nec dui consectetur, dapibus
+      pellentesque ligula. Pellentesque eget luctus leo. Sed commodo elementum
+      augue, in maximus ante ultricies vel. In orci magna, ornare quis nunc non,
+      euismod porttitor dui. Pellentesque rutrum nibh accumsan, dapibus odio
+      congue, consectetur sapien. Donec et pharetra augue, a ultricies justo.
+      Aliquam aliquet magna nec mi lacinia sollicitudin. Mauris blandit turpis
+      commodo, mattis nunc id, fringilla enim. In hac habitasse platea dictumst.
+      Vestibulum sagittis magna eu tellus semper laoreet. Integer vitae
+      elementum nunc. Nulla dui urna, auctor eget hendrerit a, pulvinar eget mi.
+      Mauris vestibulum ultricies facilisis. Sed id finibus metus. Quisque eu
+      justo risus. Vivamus et eleifend augue. Quisque erat sapien, venenatis non
+      semper sit amet, varius vel nisl. Fusce pulvinar dui sapien, vitae lacinia
+      nulla auctor in. Suspendisse eget luctus libero, et sagittis dui. Mauris
+      id ligula et quam volutpat viverra. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Aliquam efficitur diam ut nibh condimentum,
+      sit amet posuere dui aliquam. Pellentesque habitant morbi tristique
+      senectus et netus et malesuada fames ac turpis egestas. Phasellus nunc
+      nisi, rutrum quis mattis vel, aliquam nec metus. Lorem ipsum dolor sit
+      amet, consectetur adipiscing elit. Nam at metus lobortis, venenatis elit
+      nec, gravida quam. Pellentesque vel metus ac nisl auctor finibus. Sed
+      vehicula arcu sed mauris malesuada convallis. Suspendisse condimentum nisl
+      vel lacus dapibus maximus. Cras condimentum vehicula imperdiet. Aenean
+      ornare nisl sit amet sapien tristique, tempus varius enim dignissim.
+      Pellentesque porta efficitur auctor. Vestibulum ante ipsum primis in
+      faucibus orci luctus et ultrices posuere cubilia curae; Quisque sagittis,
+      ante sit amet mollis tristique, felis sapien ornare odio, ut eleifend
+      massa tortor at libero. Mauris fermentum libero id elit tristique
+      consectetur. Maecenas sit amet sollicitudin ligula. Phasellus urna ante,
+      finibus id vestibulum ac, suscipit vitae augue. Sed quis turpis ut ex
+      bibendum hendrerit vitae sed est. In ultricies ex varius ullamcorper
+      vulputate. Praesent nisi libero, molestie nec dui consectetur, dapibus
+      pellentesque ligula. Pellentesque eget luctus leo. Sed commodo elementum
+      augue, in maximus ante ultricies vel. In orci magna, ornare quis nunc non,
+      euismod porttitor dui. Pellentesque rutrum nibh accumsan, dapibus odio
+      congue, consectetur sapien. Donec et pharetra augue, a ultricies justo.
+      Aliquam aliquet magna nec mi lacinia sollicitudin. Mauris blandit turpis
+      commodo, mattis nunc id, fringilla enim. In hac habitasse platea dictumst.
+      Vestibulum sagittis magna eu tellus semper laoreet. Integer vitae
+      elementum nunc. Nulla dui urna, auctor eget hendrerit a, pulvinar eget mi.
+      Mauris vestibulum ultricies facilisis. Sed id finibus metus. Quisque eu
+      justo risus. Vivamus et eleifend augue. Quisque erat sapien, venenatis non
+      semper sit amet, varius vel nisl. Fusce pulvinar dui sapien, vitae lacinia
+      nulla auctor in. Suspendisse eget luctus libero, et sagittis dui. Mauris
+      id ligula et quam volutpat viverra. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Aliquam efficitur diam ut nibh condimentum,
+      sit amet posuere dui aliquam. Pellentesque habitant morbi tristique
+      senectus et netus et malesuada fames ac turpis egestas. Phasellus nunc
+      nisi, rutrum quis mattis vel, aliquam nec metus.
+    </div>
+  </gux-tab-panel>
+  <gux-tab-panel tab-id="10-2">Tab content 2</gux-tab-panel>
+  <gux-tab-panel tab-id="10-3">Tab content 3</gux-tab-panel>
+  <gux-tab-panel tab-id="10-4">Tab content 4</gux-tab-panel>
+  <gux-tab-panel tab-id="10-5">Tab content 5</gux-tab-panel>
 </gux-tabs>
-
-<h2>
-  Example 11 -- Set the `use-flexbox` attribute to enable flexbox positioning.
-</h2>
-<span
-  >`gux-tab-list` and `gux-tab-panel` fill the available space within
-  `gux-tabs`. The `use-flexbox` attribute will be removed in v4, and flexbox
-  will be enabled by default.</span
->
-
-<gux-tabs class="example flexbox-example" use-flexbox>
-  <gux-tab-list slot="tab-list">
-    <gux-tab tab-id="10-1">Tab Header 1</gux-tab>
-    <gux-tab tab-id="10-2">Tab Header 2</gux-tab>
-    <gux-tab tab-id="10-3">Tab Header 3</gux-tab>
-    <gux-tab gux-disabled tab-id="10-4">Tab Header 4</gux-tab>
-    <gux-tab gux-disabled tab-id="10-5">Tab Header 5 long long long</gux-tab>
-  </gux-tab-list>
-  <gux-tab-panel class="bg-color-example" tab-id="10-1"
-    ><div>Tab content 1</div></gux-tab-panel
-  >
-  <gux-tab-panel class="bg-color-example" tab-id="10-2"
-    >Tab content 2</gux-tab-panel
-  >
-  <gux-tab-panel class="bg-color-example" tab-id="10-3"
-    >Tab content 3</gux-tab-panel
-  >
-  <gux-tab-panel class="bg-color-example" tab-id="10-4"
-    >Tab content 4</gux-tab-panel
-  >
-  <gux-tab-panel class="bg-color-example" tab-id="10-5"
-    >Tab content 5</gux-tab-panel
-  >
-</gux-tabs>
-
-<style>
-  .flexbox-example {
-    height: 400px;
-    border: 2px solid black;
-  }
-
-  .bg-color-example {
-    background-color: lightcoral;
-    border: 3px solid blue;
-  }
-</style>

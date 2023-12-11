@@ -9,9 +9,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: stretch;
+  place-content: stretch space-between;
   align-items: center;
-  justify-content: space-between;
   height: var(--gse-ui-dataTableItems-cell-tablePagination-height);
   padding: var(--gse-ui-dataTableItems-tablePagination-padding);
   background-color: var(
@@ -24,10 +23,9 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
-    align-content: stretch;
+    place-content: stretch flex-start;
     align-items: center;
     align-self: auto;
-    justify-content: flex-start;
     order: 0;
 
     & > * {

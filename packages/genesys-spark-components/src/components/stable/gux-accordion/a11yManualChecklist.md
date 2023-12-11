@@ -1,4 +1,5 @@
 # gux-accordion manual accessibility testing status
+
 **Last Updated:** Tue Dec 14 2021 16:04:21 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |

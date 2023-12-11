@@ -3,7 +3,8 @@
   "compilerOptions": {
     "noEmitOnError": true,
     "outDir": "dist",
-    "declaration": true
+    "declaration": true,
+    "lib": ["ESNext.Intl", "DOM"]
   },
-  "include": ["src"]
+  "include": ["src", "test"]
 }

@@ -1,28 +1,7 @@
-/**
-* @prop --gse-ui-checkbox-icon-default-unselectedForegroundColor
-* @prop --gse-ui-checkbox-icon-default-selectedForegroundColor
-* @prop --gse-ui-checkbox-icon-hover-foregroundColor
-* @prop --gse-ui-checkbox-icon-active-foregroundColor
-* @prop --gse-ui-checkbox-icon-error-foregroundColor
-* @prop --gse-ui-checkbox-icon-height
-* @prop --gse-ui-checkbox-icon-width
-* @prop --gse-ui-checkbox-label-foregroundColor
-* @prop --gse-ui-checkbox-label-text-fontFamily
-* @prop --gse-ui-checkbox-label-text-fontWeight
-* @prop --gse-ui-checkbox-label-text-lineHeight
-* @prop --gse-ui-checkbox-gap
-* @prop --gse-ui-checkbox-disabled-opacity
-* @prop --gse-ui-checkbox-focus-border-color
-* @prop --gse-ui-checkbox-focus-border-width
-* @prop --gse-ui-checkbox-focus-border-style
-* @prop --gse-ui-checkbox-focus-borderRadius
-* @prop --gse-ui-checkbox-focus-offset
-
-*/
-
 @use '../gux-form-field-checkbox/gux-form-field-checkbox-icons.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+@use '../../../../../style/mixins';
 
 @include gux-form-field-error.Style;
 @include gux-form-field-help.Style;
@@ -63,13 +42,12 @@
 }
 
 .gux-input-label {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   gap: var(--gse-ui-checkbox-gap);
 
-  .gux-label {
-    display: flex;
-    flex-direction: column;
+  .gux-label-screenreader {
+    @include mixins.gux-sr-only;
   }
 }
 
@@ -77,6 +55,7 @@
   display: inline-grid;
   width: var(--gse-ui-checkbox-icon-width);
   height: var(--gse-ui-checkbox-icon-height);
+  margin: 0;
   text-align: center;
   vertical-align: middle;
   -webkit-appearance: none;
@@ -93,7 +72,7 @@
 }
 
 ::slotted(input[type='checkbox']:focus-visible) {
-  border-radius: 2px; // TODO: COMUI-2321
+  border-radius: var(--gse-ui-checkbox-focus-borderRadiusSmall);
   outline: var(--gse-ui-checkbox-focus-border-width)
     var(--gse-ui-checkbox-focus-border-style)
     var(--gse-ui-checkbox-focus-border-color);

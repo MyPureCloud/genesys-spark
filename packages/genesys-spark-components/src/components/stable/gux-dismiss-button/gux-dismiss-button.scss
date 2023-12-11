@@ -1,7 +1,7 @@
 gux-button-slot {
   position: absolute;
-  top: 16px; // TODO : COMUI-2352
-  right: 8px; //TODO : COMUI-2352
+  top: var(--gse-ui-modal-dismissButton-paddingTop);
+  right: var(--gse-ui-modal-dismissButton-paddingRight);
 
   &.gux-inherit {
     position: inherit;
@@ -11,9 +11,8 @@ gux-button-slot {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: stretch;
+    place-content: stretch center;
     align-items: center;
-    justify-content: center;
     width: 8px;
 
     gux-icon {
@@ -22,7 +21,7 @@ gux-button-slot {
       order: 0;
       width: 16px;
       height: 16px;
-      color: var(--gse-ui-toast-closeButtonColor); // TODO: COMUI-2205
+      color: var(--gse-ui-dismissButton-foregroundColor);
     }
   }
 }

@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property        | Attribute        | Description | Type                         | Default    |
+| --------------- | ---------------- | ----------- | ---------------------------- | ---------- |
+| `labelPosition` | `label-position` |             | `"beside" \| "screenreader"` | `'beside'` |
+
+
 ## Slots
 
 | Slot      | Description                     |
@@ -13,30 +20,6 @@
 | `"help"`  | Optional slot for help message  |
 | `"input"` | Required slot for input tag     |
 | `"label"` | Required slot for label tag     |
-
-
-## CSS Custom Properties
-
-| Name                                                       | Description |
-| ---------------------------------------------------------- | ----------- |
-| `--gse-ui-checkbox-disabled-opacity`                       |             |
-| `--gse-ui-checkbox-focus-border-color`                     |             |
-| `--gse-ui-checkbox-focus-border-style`                     |             |
-| `--gse-ui-checkbox-focus-border-width`                     |             |
-| `--gse-ui-checkbox-focus-borderRadius`                     |             |
-| `--gse-ui-checkbox-focus-offset`                           |             |
-| `--gse-ui-checkbox-gap`                                    |             |
-| `--gse-ui-checkbox-icon-active-foregroundColor`            |             |
-| `--gse-ui-checkbox-icon-default-selectedForegroundColor`   |             |
-| `--gse-ui-checkbox-icon-default-unselectedForegroundColor` |             |
-| `--gse-ui-checkbox-icon-error-foregroundColor`             |             |
-| `--gse-ui-checkbox-icon-height`                            |             |
-| `--gse-ui-checkbox-icon-hover-foregroundColor`             |             |
-| `--gse-ui-checkbox-icon-width`                             |             |
-| `--gse-ui-checkbox-label-foregroundColor`                  |             |
-| `--gse-ui-checkbox-label-text-fontFamily`                  |             |
-| `--gse-ui-checkbox-label-text-fontWeight`                  |             |
-| `--gse-ui-checkbox-label-text-lineHeight`                  |             |
 
 
 ## Dependencies

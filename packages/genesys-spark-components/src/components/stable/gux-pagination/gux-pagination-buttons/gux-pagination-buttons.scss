@@ -4,9 +4,8 @@ gux-pagination-buttons {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
-    align-content: stretch;
+    place-content: stretch flex-end;
     align-items: center;
-    justify-content: flex-end;
     margin-left: var(
       --gse-ui-dataTableItems-tablePagination-recordsetControls-gap
     );
@@ -30,9 +29,8 @@ gux-pagination-buttons {
       flex-shrink: 0;
       flex-wrap: nowrap;
       gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
-      align-content: stretch;
+      place-content: stretch center;
       align-items: center;
-      justify-content: center;
 
       .gux-pagination-buttons-list-current,
       .gux-pagination-buttons-list-target {
@@ -59,8 +57,9 @@ gux-pagination-buttons {
 
         &:focus-visible {
           border-radius: calc(
-            var(--gse-semantic-focusRing-cornerRadius) -
-              var(--gse-semantic-focusRing-offset)
+            var(--gse-semantic-focusRing-cornerRadius) - var(
+                --gse-semantic-focusRing-offset
+              )
           );
           outline: var(--gse-semantic-focusRing-width) solid
             var(--gse-semantic-color-focus);

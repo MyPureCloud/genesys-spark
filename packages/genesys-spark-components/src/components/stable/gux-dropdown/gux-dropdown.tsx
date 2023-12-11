@@ -25,7 +25,8 @@ import translationResources from './i18n/en.json';
 
 import {
   getSearchOption,
-  getListOptions
+  getListOptions,
+  setInitialActiveOption
 } from '../gux-listbox/gux-listbox.service';
 import {
   ListboxOptionElement,
@@ -126,6 +127,7 @@ export class GuxDropdown {
         if (this.activeElementNotListbox()) {
           event.preventDefault();
           this.expanded = true;
+          setInitialActiveOption(this.listboxElement);
         }
         return;
     }
@@ -323,7 +325,9 @@ export class GuxDropdown {
     switch (event.key) {
       case 'ArrowDown':
         event.stopImmediatePropagation();
+        event.preventDefault();
         this.listboxElement.focus();
+        setInitialActiveOption(this.listboxElement);
         return;
       case 'Enter':
         void this.listboxElement.guxSelectActive();
@@ -469,11 +473,7 @@ export class GuxDropdown {
   }
 
   private renderPopup(): JSX.Element {
-    return (
-      <div slot="popup" class="gux-listbox-container">
-        <slot></slot>
-      </div>
-    ) as JSX.Element;
+    return (<slot slot="popup"></slot>) as JSX.Element;
   }
 
   private renderTarget(): JSX.Element {

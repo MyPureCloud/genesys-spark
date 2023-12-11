@@ -108,6 +108,7 @@ export class GuxFormFieldTimePicker {
         <GuxFormFieldLegendLabel
           position={this.computedLabelPosition}
           required={this.required}
+          labelText={this.label?.textContent}
         >
           <slot name="label" onSlotchange={() => this.setLabel()} />
           {this.renderScreenReaderText(

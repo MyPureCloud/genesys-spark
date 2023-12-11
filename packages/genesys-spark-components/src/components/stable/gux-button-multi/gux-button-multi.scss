@@ -1,7 +1,4 @@
-// COMUI-2156 add missing button tokens
-$temp-box-shadow: 0 4px 6px 1px rgb(35 57 92 / 12%);
-$temp-menu-wrapper-borderRadius: 4px;
-$temp-menu-wrapper-borderWidth: 1px;
+@use '../../../style/mixins';
 
 @mixin button-text {
   font-family: var(--gse-ui-button-text-fontFamily);
@@ -25,7 +22,7 @@ $temp-menu-wrapper-borderWidth: 1px;
       gux-icon {
         width: var(--gse-ui-button-icon-size);
         height: var(--gse-ui-button-icon-size);
-        margin-left: var(--gux-spacing-xs);
+        margin-left: var(--gse-ui-button-gap);
       }
     }
   }
@@ -33,11 +30,6 @@ $temp-menu-wrapper-borderWidth: 1px;
 
 .gux-list-container {
   max-width: 220px;
-  padding: var(--gux-spacing-xs) 0;
-  margin: 0;
-  list-style: none;
-  background-color: var(--gse-ui-menu-wrapper-backgroundColor);
-  border: $temp-menu-wrapper-borderWidth solid var(--gse-ui-menu-wrapper-border);
-  border-radius: $temp-menu-wrapper-borderRadius;
-  box-shadow: $temp-box-shadow;
+
+  @include mixins.gux-menu-container;
 }

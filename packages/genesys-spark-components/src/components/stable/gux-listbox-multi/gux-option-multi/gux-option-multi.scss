@@ -21,7 +21,8 @@
   .gux-checkbox-container {
     position: relative;
     display: inline-block;
-    width: var(--gse-ui-menu-option-startIcon-width);
+    min-width: var(--gse-ui-menu-option-startIcon-width);
+    max-width: var(--gse-ui-menu-option-startIcon-width);
     height: var(--gse-ui-menu-option-startIcon-height);
     content: '';
 
@@ -36,6 +37,13 @@
     opacity: var(--gse-ui-menu-option-disabled-opacity);
 
     @include mixins.gux-disabled-pointer;
+  }
+
+  &:host(:active:not(:disabled)) {
+    font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
+    font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
+    font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
+    line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
   }
 
   &:host(.gux-selected) {
@@ -55,9 +63,10 @@
     outline: var(--gse-ui-menu-option-focus-border-width)
       var(--gse-ui-menu-option-focus-border-style)
       var(--gse-ui-menu-option-focus-border-color);
+    outline-offset: -2px;
   }
 
-  &:host(.gux-hovered:not([disabled])) {
+  &:host(:hover:not([disabled])) {
     background-color: var(--gse-ui-menu-option-hover-backgroundColor);
 
     &:host(.gux-selected) {

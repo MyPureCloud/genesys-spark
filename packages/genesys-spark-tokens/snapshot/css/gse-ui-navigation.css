@@ -1,7 +1,7 @@
 :root {
   --gse-ui-tabs-item-height: 40px;
   --gse-ui-tabs-item-fixedWidth: 98px;
-  --gse-ui-tabs-item-horizontal-fixedHeight: 37px;
+  --gse-ui-tabs-item-horizontal-fixedHeight: 40px;
   --gse-ui-tabs-item-horizontal-padding: 11px 12px 10px;
   --gse-ui-tabs-item-disableOpacity: 0.5;
   --gse-ui-tabs-item-itemText-fontFamily: Noto Sans;
@@ -23,11 +23,20 @@
   --gse-ui-tabs-item-gap: 8px;
   --gse-ui-tabs-item-vertical-fixedHeight: 40px;
   --gse-ui-tabs-item-vertical-padding: 11px 9px 10px 12px;
+  --gse-ui-tabs-item-focusRing-offset: 1px;
   --gse-ui-tabs-set-vertical-height: 360px;
+  --gse-ui-tabs-set-vertical-width: 98px;
+  --gse-ui-tabs-set-vertical-marginRight: 16px;
   --gse-ui-tabs-set-horizontal-width: 800px;
+  --gse-ui-tabs-set-horizontal-height: 40px;
+  --gse-ui-tabs-set-horizontal-marginBottom: 16px;
   --gse-ui-tabs-set-gap: -1px;
   --gse-ui-tabs-set-divider-horizontal-height: 1px;
   --gse-ui-tabs-set-divider-vertical-width: 1px;
+  --gse-ui-tabs-focusRing-border-color: #7b88f7;
+  --gse-ui-tabs-focusRing-border-width: 3px;
+  --gse-ui-tabs-focusRing-border-style: solid;
+  --gse-ui-tabs-focusRing-borderRadius: 4px;
   --gse-ui-advancedTabs-divider-dividerColor: #c6c8ce;
   --gse-ui-advancedTabs-item-padding: 11px 12px 10px;
   --gse-ui-advancedTabs-item-gap: 8px;
@@ -69,6 +78,19 @@
   --gse-ui-advancedTabs-button-arrow-height: 48px;
   --gse-ui-advancedTabs-set-backgroundColor: #f3f5fb;
   --gse-ui-advancedTabs-set-standard-width: 920px;
+  --gse-ui-globalNav-text-fontFamily: Noto Sans;
+  --gse-ui-globalNav-text-lineHeight: 16px;
+  --gse-ui-globalNav-text-fontSize: 12px;
+  --gse-ui-globalNav-text-fontWeight: 700;
+  --gse-ui-globalNav-toggle-onQueue-text-fontFamily: Noto Sans;
+  --gse-ui-globalNav-toggle-onQueue-text-lineHeight: 16px;
+  --gse-ui-globalNav-toggle-onQueue-text-fontSize: 12px;
+  --gse-ui-globalNav-toggle-onQueue-text-fontWeight: 600;
+  --gse-ui-globalNav-toggle-gap: 16px;
+  --gse-ui-globalNav-toggle-offQueue-text-fontFamily: Noto Sans;
+  --gse-ui-globalNav-toggle-offQueue-text-lineHeight: 16px;
+  --gse-ui-globalNav-toggle-offQueue-text-fontSize: 12px;
+  --gse-ui-globalNav-toggle-offQueue-text-fontWeight: 400;
   --gse-ui-globalNav-focus-border-color: #7b88f7;
   --gse-ui-globalNav-focus-border-width: 3px;
   --gse-ui-globalNav-focus-border-style: solid;
@@ -89,4 +111,41 @@
   --gse-ui-globalNav-buttonReturn-width: 280px;
   --gse-ui-globalNav-buttonReturn-padding: 16px 28px;
   --gse-ui-globalNav-buttonReturn-gap: 12px;
+  --gse-ui-globalNav-treeView-border-color: #3e5374;
+  --gse-ui-globalNav-treeView-border-width: 2px;
+  --gse-ui-globalNav-treeView-border-style: solid;
+  --gse-ui-globalNav-treeView-gap: 8px;
+  --gse-ui-globalNav-treeView-width: 224px;
+  --gse-ui-globalNav-bar-padding: 8px 12px;
+  --gse-ui-globalNav-sideMenu-heading-text-fontFamily: Urbanist;
+  --gse-ui-globalNav-sideMenu-heading-text-lineHeight: 16px;
+  --gse-ui-globalNav-sideMenu-heading-text-fontSize: 12px;
+  --gse-ui-globalNav-sideMenu-heading-text-fontWeight: 600;
+  --gse-ui-globalNav-sideMenu-heading-textColor: #ffffff;
+  --gse-ui-globalNav-sideMenu-top-open-buttons-gap: 8px;
+  --gse-ui-globalNav-sideMenu-top-open-gap: 16px;
+  --gse-ui-globalNav-sideMenu-top-closed-buttons-gap: 8px;
+  --gse-ui-globalNav-sideMenu-top-closed-gap: 128px;
+  --gse-ui-globalNav-sideMenu-open-buttonColor: #4856cb;
+  --gse-ui-globalNav-sideMenu-closed-buttonColor: #ffffff;
+  --gse-ui-globalNav-sideMenu-primary-backgroundColor: linear-gradient(
+    105deg,
+    #23395d 50%,
+    #3e5374 100%
+  );
+  --gse-ui-globalNav-sideMenu-secondary-backgroundColor: linear-gradient(
+    140deg,
+    #23395d 10%,
+    #1b2b48 100%
+  );
+  --gse-ui-globalNav-sideMenu-width: 280px;
+  --gse-ui-globalNav-sideMenu-items-gap: 12px;
+  --gse-ui-globalNav-sideMenu-padding: 16px 24px;
+  --gse-ui-globalNav-toogle-onQueue-textColor: #4856cb;
+  --gse-ui-globalNav-toogle-offQueue-textColor: #3e5374;
+  --gse-ui-globalNav-topBar-items-gap: 16px;
+  --gse-ui-globalNav-topBar-padding: 16px 24px;
+  --gse-ui-globalNav-topBar-height: 64px;
+  --gse-ui-globalNav-topBar-iconColor: #4856cb;
+  --gse-ui-globalNav-topBar-backgroundColor: #ffffff;
 }

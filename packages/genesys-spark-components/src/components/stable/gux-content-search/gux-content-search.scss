@@ -7,22 +7,30 @@
   min-width: 300px;
 }
 
+::slotted(input[disabled]) {
+  opacity: var(--gse-ui-formControl-input-disabled-opacity);
+}
+
 ::slotted(input) {
   box-sizing: border-box;
   flex-basis: 100%;
   flex-shrink: 1;
   width: 100%;
+  overflow: hidden;
   font-family: var(--gse-ui-search-counter-text-fontFamily);
   font-size: var(--gse-ui-search-counter-text-fontSize);
   font-weight: var(--gse-ui-search-counter-text-fontWeight);
   line-height: var(--gse-ui-search-counter-text-lineHeight);
+  color: var(--gse-ui-formControl-input-populatedColor);
+  text-overflow: ellipsis;
+  white-space: nowrap;
   background-image: none;
   border: 0;
   border-radius: 0;
   outline: none;
 
   &::placeholder {
-    color: var(--gse-ui-formControl-input-placeholderColor);
+    color: var(--gse-ui-formControl-input-populatedColor);
   }
 
   &.gux-focused,
@@ -49,6 +57,11 @@
     var(--gse-ui-formControl-input-default-border-color);
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
+  gux-truncate {
+    display: flex;
+    align-items: center;
+  }
+
   &.gux-disabled {
     pointer-events: none;
     cursor: default;
@@ -64,9 +77,10 @@
     outline: var(--gse-ui-formControl-input-focus-border-width)
       var(--gse-ui-formControl-input-focus-border-style)
       var(--gse-ui-formControl-input-focus-border-color);
+    outline-offset: var(--gse-semantic-focusRing-offset);
   }
 
-  &:not(:disabled):hover {
+  &:not(:disabled):not(.gux-disabled):hover {
     border: var(--gse-ui-formControl-input-hover-border-width)
       var(--gse-ui-formControl-input-hover-border-style)
       var(--gse-ui-formControl-input-hover-border-color);
@@ -96,9 +110,8 @@
     flex-grow: 1;
     flex-shrink: 0;
     gap: var(--gse-ui-formControl-input-gap);
-    align-content: center;
+    place-content: center flex-end;
     align-items: center;
-    justify-content: flex-end;
     padding: 0;
 
     gux-icon {
@@ -109,6 +122,8 @@
     button {
       display: block;
       align-items: center;
+      height: var(--gse-ui-search-counter-icon-height);
+      padding: 0;
       overflow: hidden;
       color: var(--gse-ui-search-counter-default-foregroundColor);
       cursor: pointer;
@@ -135,8 +150,6 @@
       &.gux-clear-button {
         flex-shrink: 0;
         align-items: center;
-        padding-right: 0;
-        padding-left: 0;
 
         gux-icon {
           width: var(--gse-ui-icon-size-sm);
@@ -154,10 +167,13 @@
     .gux-navigation-panel {
       display: flex;
       gap: var(--gse-ui-search-counter-gap);
+      align-items: center;
 
       .gux-navigation-divider {
-        width: 1px; // TODO COMUI-2310 - missing token for divider width.
+        box-sizing: border-box;
+        align-self: center;
         height: 16px; // TODO COMUI-2310 - missing token for divider height
+        color: var(--gse-ui-search-counter-default-foregroundColor);
         background-color: #c6c8ce; // TODO COMUI-2310 - missing token for divider background color.
         border: 1px var(--gse-ui-search-counter-divider-border-style)
           var(--gse-ui-search-counter-divider-border-color);
@@ -170,21 +186,18 @@
 
       .gux-navigation-result {
         align-items: center;
+        color: var(--gse-ui-search-counter-default-foregroundColor);
         white-space: nowrap;
       }
 
       .gux-previous-button {
         flex-shrink: 0;
         align-items: center;
-        padding-right: 0;
-        padding-left: 0;
       }
 
       .gux-next-button {
         flex-shrink: 0;
         align-items: center;
-        padding-right: 0;
-        padding-left: 0;
       }
     }
   }

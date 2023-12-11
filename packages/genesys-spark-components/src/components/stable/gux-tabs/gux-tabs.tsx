@@ -48,12 +48,6 @@ export class GuxTabs {
   @Prop()
   alignment: GuxTabsAlignment = 'left';
 
-  /**
-   * Use flexbox for positioning. Allows panels to fill height of tabs. Will remove this prop and use flexbox as default in V4
-   */
-  @Prop()
-  useFlexbox: boolean = false;
-
   @State()
   tabList: HTMLGuxTabListElement;
 
@@ -121,11 +115,7 @@ export class GuxTabs {
 
   render(): JSX.Element {
     return (
-      <Host
-        class={{
-          'gux-flex': this.useFlexbox
-        }}
-      >
+      <Host>
         <div class={`gux-tabs gux-${this.alignment} gux-${this.orientation}`}>
           <slot name="tab-list"></slot>
           <div

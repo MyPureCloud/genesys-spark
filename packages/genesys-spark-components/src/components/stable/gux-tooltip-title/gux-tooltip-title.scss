@@ -33,9 +33,15 @@ gux-tooltip {
     gux-icon,
     ::slotted(gux-icon) {
       position: absolute;
+      top: 1px;
       left: -20px;
       flex-shrink: 0;
       width: 16px;
+      height: 16px;
     }
   }
+}
+
+.gux-icon-only {
+  line-height: 0px;
 }

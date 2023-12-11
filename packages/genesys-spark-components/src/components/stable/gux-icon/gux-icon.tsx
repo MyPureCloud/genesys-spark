@@ -3,7 +3,7 @@ import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 
 import { getBaseSvgHtml } from './gux-icon.service';
-import { GuxIconIconName } from './gux-icon.types';
+import { GuxIconIconName, GuxIconSize } from './gux-icon.types';
 import { logError } from '@utils/error/log-error';
 
 @Component({
@@ -35,6 +35,9 @@ export class GuxIcon {
    */
   @Prop()
   screenreaderText: string = '';
+
+  @Prop()
+  size: GuxIconSize = 'inherit';
 
   @State()
   private svgHtml: string;

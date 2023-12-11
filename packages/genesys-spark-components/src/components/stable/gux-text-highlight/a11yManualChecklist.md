@@ -1,4 +1,5 @@
 # gux-text-highlight manual accessibility testing status
+
 **Last Updated:** Tue Dec 21 2021 12:43:23 GMT-0500 (Eastern Standard Time)
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |

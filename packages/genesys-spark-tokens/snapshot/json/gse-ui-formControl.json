@@ -46,13 +46,15 @@
       "border_radius": "4px",
       "background_color": "#ffffff",
       "placeholder_color": "#626e84",
+      "suggestion_color": "#626e84",
       "populated_color": "#1b2c48",
       "input_clearable": {
         "input_clearable_color": "#626e84",
         "size": "16px"
       },
       "gap": "12px",
-      "padding": "0 12px",
+      "top": "8px",
+      "padding": "8px 12px",
       "prefix_sufix": {
         "text": {
           "fontFamily": "Noto Sans",
@@ -64,7 +66,11 @@
         "default_color": "#626e84"
       },
       "textfield": {
-        "height": "32px"
+        "height": "32px",
+        "min_width": "45px"
+      },
+      "color_picker": {
+        "size": "32px"
       },
       "input_icon": {
         "size": "16px",
@@ -105,7 +111,8 @@
         "text": {
           "fontFamily": "Noto Sans",
           "lineHeight": "18px",
-          "fontSize": "12px"
+          "fontSize": "12px",
+          "fontWeight": 400
         },
         "required_color": "#e22245",
         "optional_color": "#626e84"
@@ -120,6 +127,7 @@
         "fontWeight": 400
       },
       "padding": "8px 0 0 0",
+      "padding_small": "4px 0 0 0",
       "error_padding": "4px 0 0 0",
       "default_color": "#626e84",
       "error_color": "#e22245",

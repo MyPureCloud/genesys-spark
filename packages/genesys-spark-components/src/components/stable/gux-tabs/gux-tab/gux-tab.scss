@@ -1,20 +1,24 @@
 gux-tabs[orientation='vertical'] > gux-tab-list {
-  .gux-tab {
-    display: flex;
-    justify-content: flex-end;
-    height: var(--gse-ui-tabs-item-vertical-fixedHeight);
-    padding: var(--gse-ui-tabs-item-vertical-padding);
+  gux-tab {
+    box-sizing: border-box;
     border-right: var(--gse-ui-tabs-item-divider-vertical-width) solid
-      var(--gse-ui-tabs-item-divider-dividerColor); //TODO: COMUI-2327. -- replace vertical-width with vertical-height when token created.
+      var(--gse-ui-tabs-item-divider-dividerColor);
 
-    &.gux-active {
+    .gux-tab {
+      display: flex;
+      justify-content: flex-end;
+      height: var(--gse-ui-tabs-item-vertical-fixedHeight);
+      padding: var(--gse-ui-tabs-item-vertical-padding);
       border-right: var(--gse-ui-tabs-item-indicator-vertical-width) solid
-        var(--gse-ui-tabs-item-indicator-activeColor); // TODO COMUI-2327 : Missing 2px height token for highlight.
-    }
+        transparent;
 
-    &:hover:not(.gux-active):not(.gux-disabled) {
-      border-right: var(--gse-ui-tabs-item-indicator-vertical-width) solid
-        var(--gse-ui-tabs-item-indicator-hoverColor);
+      &.gux-active {
+        border-right-color: var(--gse-ui-tabs-item-indicator-activeColor);
+      }
+
+      &:hover:not(.gux-active):not(.gux-disabled) {
+        border-right-color: var(--gse-ui-tabs-item-indicator-hoverColor);
+      }
     }
   }
 }
@@ -22,17 +26,17 @@ gux-tabs[orientation='vertical'] > gux-tab-list {
 gux-tabs:not([orientation='vertical']) > gux-tab-list {
   .gux-tab {
     box-sizing: border-box;
-    height: 40px; // TODO: COMUI-2327. Token needs to be updated to 40px.
+    height: var(--gse-ui-tabs-item-horizontal-fixedHeight);
     padding: var(--gse-ui-tabs-item-horizontal-padding);
+    border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
+      transparent;
 
     &.gux-active {
-      border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
-        var(--gse-ui-tabs-item-indicator-activeColor); // TODO COMUI-2327 : Missing 2px height token for highlight.
+      border-bottom-color: var(--gse-ui-tabs-item-indicator-activeColor);
     }
 
     &:hover:not(.gux-active):not(.gux-disabled) {
-      border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
-        var(--gse-ui-tabs-item-indicator-hoverColor);
+      border-bottom-color: var(--gse-ui-tabs-item-indicator-hoverColor);
     }
 
     gux-tooltip-title {
@@ -80,7 +84,7 @@ gux-tab {
     line-height: var(--gse-ui-tabs-item-itemText-lineHeight);
     color: var(--gse-ui-tabs-item-itemTextColor);
     cursor: pointer;
-    background-color: transparent; //TODO: COMUI-2327
+    background-color: transparent;
     border: none;
 
     &.gux-disabled {
@@ -92,11 +96,10 @@ gux-tab {
     }
 
     &:focus-visible {
-      border: var(--gse-semantic-focusRing-default-border-width)
-        var(--gse-semantic-focusRing-default-border-style)
-        var(--gse-semantic-focusRing-default-border-color); //TODO: COMUI-2327
-
-      border-radius: 4px; // TODO:COMUI-2327
+      border: var(--gse-ui-tabs-focusRing-border-width)
+        var(--gse-ui-tabs-focusRing-border-style)
+        var(--gse-ui-tabs-focusRing-border-color);
+      border-radius: var(--gse-ui-tabs-focusRing-borderRadius);
       outline: none;
     }
 

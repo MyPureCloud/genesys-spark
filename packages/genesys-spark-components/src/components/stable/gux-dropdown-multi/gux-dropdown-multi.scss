@@ -35,9 +35,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: stretch;
+  place-content: stretch center;
   align-items: center;
-  justify-content: center;
   width: 100%;
   height: var(--gse-ui-formControl-input-textfield-height);
   font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
@@ -62,10 +61,7 @@
 
 .gux-field {
   &.gux-input-field {
-    height: calc(
-      var(--gse-ui-formControl-input-textfield-height) -
-        (var(--gse-ui-formControl-input-default-border-width) * 2)
-    );
+    height: var(--gse-ui-formControl-input-contentText-lineHeight);
   }
 
   .gux-field-content {
@@ -74,11 +70,10 @@
     flex: 1 1 0;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: stretch;
+    place-content: stretch flex-start;
     align-items: flex-start;
-    justify-content: flex-start;
     min-width: 0;
-    height: 60%; // keeps input centered while still visible
+    height: var(--gse-ui-formControl-input-contentText-lineHeight);
 
     .gux-filter,
     .gux-selected-option,
@@ -115,7 +110,7 @@
         }
 
         .gux-filter-suggestion {
-          opacity: 0.5; // missing token ticket: COMUI-2285
+          color: var(--gse-ui-formControl-input-suggestionColor);
         }
       }
 
@@ -147,8 +142,11 @@
     var(--gse-ui-formControl-input-active-border-color);
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
-  &:focus-visible,
-  &:focus-within {
+  &:focus-visible {
+    @include focus.gux-focus-ring;
+  }
+
+  &:focus-within:has(:focus-visible) {
     @include focus.gux-focus-ring;
   }
 
@@ -164,10 +162,7 @@
 
   .gux-field-button {
     width: auto;
-    height: calc(
-      var(--gse-ui-formControl-input-textfield-height) -
-        (var(--gse-ui-formControl-input-default-border-width) * 2)
-    );
+    height: var(--gse-ui-formControl-input-contentText-lineHeight);
     margin: 0;
     background: inherit;
     border: none;
@@ -186,8 +181,11 @@
     var(--gse-ui-formControl-input-default-border-color);
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
-  &:focus-visible,
-  &:focus-within {
+  &:focus-visible {
+    @include focus.gux-focus-ring;
+  }
+
+  &:focus-within:has(:focus-visible) {
     @include focus.gux-focus-ring;
   }
 }

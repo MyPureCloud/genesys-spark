@@ -1,50 +1,8 @@
 @use '../../../style/mixins';
 
-$error-gse-ui-tag-borderRadius: var(--gse-ui-tag-height);
-
-$missing-gse-ui-tag-focusRing-color: #7b88f7;
-$missing-gse-ui-tag-focusRing-width: 2px;
-$missing-gse-ui-tag-focusRing-offset: 0;
-$missing-gse-ui-tag-focusRing-cornerRadius: 4px;
-
-/**
-  * @prop --gse-ui-tag-default-backgroundColor
-  * @prop --gse-ui-tag-default-foregroundColor
-  * @prop --gse-ui-tag-accent1-backgroundColor
-  * @prop --gse-ui-tag-accent1-foregroundColor
-  * @prop --gse-ui-tag-accent2-backgroundColor
-  * @prop --gse-ui-tag-accent2-foregroundColor
-  * @prop --gse-ui-tag-accent3-backgroundColor
-  * @prop --gse-ui-tag-accent3-foregroundColor
-  * @prop --gse-ui-tag-accent4-backgroundColor
-  * @prop --gse-ui-tag-accent4-foregroundColor
-  * @prop --gse-ui-tag-accent5-backgroundColor
-  * @prop --gse-ui-tag-accent5-foregroundColor
-  * @prop --gse-ui-tag-accent6-backgroundColor
-  * @prop --gse-ui-tag-accent6-foregroundColor
-  * @prop --gse-ui-tag-accent7-backgroundColor
-  * @prop --gse-ui-tag-accent7-foregroundColor
-  * @prop --gse-ui-tag-accent8-backgroundColor
-  * @prop --gse-ui-tag-accent8-foregroundColor
-  * @prop --gse-ui-tag-accent9-backgroundColor
-  * @prop --gse-ui-tag-accent9-foregroundColor
-  * @prop --gse-ui-tag-accent10-backgroundColor
-  * @prop --gse-ui-tag-accent10-foregroundColor
-  * @prop --gse-ui-tag-borderRadius
-  * @prop --gse-ui-tag-button-size
-  * @prop --gse-ui-tag-height
-  * @prop --gse-ui-tag-padding
-  * @prop --gse-ui-tag-removable-gap
-  * @prop --gse-ui-tag-removable-padding
-  * @prop --gse-ui-tag-text-fontFamily
-  * @prop --gse-ui-tag-text-fontSize
-  * @prop --gse-ui-tag-text-fontWeight // missing
-  * @prop --gse-ui-tag-text-lineHeight
-  */
-
 :host {
   display: inline-block;
-  border-radius: $error-gse-ui-tag-borderRadius;
+  border-radius: var(--gse-ui-tag-borderRadius);
 }
 
 .gux-tag {
@@ -52,9 +10,8 @@ $missing-gse-ui-tag-focusRing-cornerRadius: 4px;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: var(--gse-ui-tag-removable-gap);
-  align-content: stretch;
+  place-content: stretch flex-start;
   align-items: center;
-  justify-content: flex-start;
   height: var(--gse-ui-tag-height);
   padding: var(--gse-ui-tag-padding);
   font-family: var(--gse-ui-tag-text-fontFamily);
@@ -63,7 +20,7 @@ $missing-gse-ui-tag-focusRing-cornerRadius: 4px;
   line-height: var(--gse-ui-tag-text-lineHeight);
   color: var(--gse-ui-tag-default-foregroundColor);
   background-color: var(--gse-ui-tag-default-backgroundColor);
-  border-radius: $error-gse-ui-tag-borderRadius;
+  border-radius: var(--gse-ui-tag-borderRadius);
 
   &.gux-disabled {
     position: relative;
@@ -73,8 +30,8 @@ $missing-gse-ui-tag-focusRing-cornerRadius: 4px;
       inset: 0;
       content: '';
       background-color: #fff;
-      border-radius: $error-gse-ui-tag-borderRadius;
-      opacity: 0.5;
+      border-radius: var(--gse-ui-tag-borderRadius);
+      opacity: var(--gse-ui-tag-disabled-opacity);
     }
   }
 
@@ -94,9 +51,8 @@ $missing-gse-ui-tag-focusRing-cornerRadius: 4px;
   .gux-tag-remove-button {
     all: unset;
     display: flex;
-    align-content: center;
+    place-content: center center;
     align-items: center;
-    justify-content: center;
 
     &:not(:disabled):hover {
       cursor: pointer;
@@ -110,10 +66,9 @@ $missing-gse-ui-tag-focusRing-cornerRadius: 4px;
 
     &:focus-within {
       .gux-tag-remove-icon {
-        border-radius: $missing-gse-ui-tag-focusRing-cornerRadius;
-        outline: $missing-gse-ui-tag-focusRing-width solid
-          $missing-gse-ui-tag-focusRing-color;
-        outline-offset: $missing-gse-ui-tag-focusRing-offset;
+        border-radius: var(--gse-semantic-focusRing-cornerRadius);
+        outline: var(--gse-semantic-focusRing-small-border-width) solid
+          var(--gse-semantic-color-focus);
       }
     }
   }

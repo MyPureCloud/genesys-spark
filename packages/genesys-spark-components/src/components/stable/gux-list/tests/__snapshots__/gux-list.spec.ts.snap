@@ -3,7 +3,7 @@
 exports[`gux-list #render should render component as expected 1`] = `
 <gux-list id="list" role="list">
   <mock:shadow-root>
-    <span tabindex="-1"></span>
+    <span aria-hidden="true" tabindex="-1"></span>
     <slot></slot>
   </mock:shadow-root>
   <gux-list-item role="listitem">

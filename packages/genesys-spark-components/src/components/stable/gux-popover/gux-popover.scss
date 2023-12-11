@@ -1,10 +1,8 @@
-@use '../../../style/zindex.scss';
-
 .gux-popover-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: var(--gux-zindex-popover, zindex.$gux-zindex-popover);
+  z-index: var(--gse-semantic-zIndex-popover);
   display: inline-block;
   min-width: 280px;
   padding: var(--gse-ui-popover-gap);
@@ -23,14 +21,14 @@
     width: var(--gse-ui-popover-anchor-width);
     height: var(--gse-ui-popover-anchor-width);
     background: var(--gse-ui-popover-backgroundColor);
+    border-radius: var(--gse-ui-flyoutMenu-arrow-borderRadius);
   }
 
   .gux-popover-header {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    place-content: center space-between;
     align-items: center;
-    justify-content: space-between;
     padding-bottom: var(--gse-ui-popover-gap);
     font-family: var(--gse-ui-popover-title-text-fontFamily);
     font-size: var(--gse-ui-popover-title-text-fontSize);

@@ -1,3 +1,5 @@
+@use '../../../../style/focus';
+
 gux-table-select-menu {
   display: inline-flex;
   font-family: var(--gse-ui-popover-body-text-fontFamily);
@@ -14,12 +16,10 @@ gux-table-select-menu {
     outline: none;
 
     &:focus-visible {
-      gux-icon {
-        border-radius: var(--gse-semantic-focusRing-cornerRadius);
-        outline: var(--gse-semantic-focusRing-width) solid
-          var(--gse-semantic-color-focus);
-        outline-offset: var(--gse-semantic-focusRing-offset);
-      }
+      // TODO: COMUI-2393 need focus ring tokens for table-select-menu dropdown button ?
+      @include focus.gux-focus-ring;
+
+      border-radius: 4px;
     }
 
     gux-icon {

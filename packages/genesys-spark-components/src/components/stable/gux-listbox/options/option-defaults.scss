@@ -5,9 +5,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: var(--gse-ui-menu-option-gap);
-    align-content: stretch;
+    place-content: stretch center;
     align-items: center;
-    justify-content: center;
     height: var(--gse-ui-menu-option-height);
     padding: var(--gse-ui-menu-option-padding);
     font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
@@ -39,14 +38,22 @@
     background: var(--gse-ui-menu-option-selected-backgroundColor);
   }
 
+  :host(:active:not(:disabled)) {
+    font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
+    font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
+    font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
+    line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
+  }
+
   :host(.gux-active) {
     border-radius: var(--gse-semantic-focusRing-cornerRadius);
     outline: var(--gse-ui-menu-option-focus-border-width)
       var(--gse-ui-menu-option-focus-border-style)
       var(--gse-ui-menu-option-focus-border-color);
+    outline-offset: -2px;
   }
 
-  :host(.gux-hovered:not(:disabled)) {
+  :host(:hover:not(:disabled)) {
     background: var(--gse-ui-menu-option-hover-backgroundColor);
   }
 

@@ -4,9 +4,8 @@
   flex-direction: row;
   flex-wrap: nowrap;
   gap: var(--gse-ui-toast-gap);
-  align-content: stretch;
+  place-content: stretch flex-start;
   align-items: flex-start;
-  justify-content: flex-start;
   width: var(--gse-ui-toast-wrappingWidth);
   padding: var(--gse-ui-toast-margin);
   margin-bottom: var(--gse-ui-toast-stacking-gap);
@@ -53,10 +52,9 @@
     flex-direction: column;
     flex-wrap: nowrap;
     gap: var(--gse-ui-toast-gapButton);
-    align-content: stretch;
+    place-content: stretch flex-start;
     align-items: flex-start;
     align-self: auto;
-    justify-content: flex-start;
     order: 0;
 
     .gux-message {
@@ -84,6 +82,13 @@
       flex-wrap: nowrap;
       gap: var(--gse-ui-toast-buttonBar-gap);
       justify-content: flex-start;
+
+      ::slotted(a) {
+        font-family: var(--gse-ui-link-inLine-medium-underlinedText-fontFamily);
+        font-size: var(--gse-ui-link-inLine-medium-underlinedText-fontSize);
+        font-weight: var(--gse-ui-link-inLine-medium-underlinedText-fontWeight);
+        line-height: var(--gse-ui-link-inLine-medium-underlinedText-lineHeight);
+      }
     }
   }
 

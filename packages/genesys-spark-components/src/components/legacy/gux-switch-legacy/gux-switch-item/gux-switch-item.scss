@@ -1,3 +1,4 @@
+@use '../../../../style/focus';
 @use '../../../../style/typography';
 
 $icon-off: #99a4b8;
@@ -8,7 +9,7 @@ $active-tab: #75a8ff;
 
 gux-switch-item {
   > .gux-switch-item {
-    @include typography.body-font;
+    @include typography.body-sm-regular;
 
     font: unset;
     color: #2e394c;
@@ -30,7 +31,7 @@ gux-switch-item {
   }
 
   &.gux-selected {
-    @include typography.bold-font;
+    @include typography.body-sm-bold;
   }
 }
 
@@ -45,13 +46,18 @@ gux-switch-legacy {
       &:hover {
         padding: 0 8px 1px;
         border-bottom: 4px solid #2a60c8;
-        outline: none;
 
         > gux-icon {
           svg {
             fill: $icon-on;
           }
         }
+      }
+
+      &:focus-visible {
+        @include focus.gux-focus-ring;
+
+        border-radius: 2px;
       }
 
       > gux-icon {
@@ -77,7 +83,7 @@ gux-switch-legacy {
   &.gux-small {
     > gux-switch-item {
       .gux-switch-item {
-        @include typography.gux-small-text;
+        @include typography.body-sm-regular;
 
         padding: 0 4px;
         border-bottom: 1px solid $inactive-small;

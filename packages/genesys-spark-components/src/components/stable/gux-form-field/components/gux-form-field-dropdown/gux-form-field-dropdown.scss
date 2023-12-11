@@ -1,4 +1,4 @@
-@use '../../../../../style/typography.scss';
+@use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-fieldset-container/gux-form-field-fieldset-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-legend-label/gux-form-field-legend-label.scss';
@@ -14,11 +14,12 @@
 }
 
 ::slotted(label) {
-  @include typography.gse-ui-formControl-label;
+  @include gux-form-field.gse-ui-formControl-label;
 }
 
 .gux-input-and-error-container {
   flex-grow: 1;
+  width: 100%;
 
   .gux-input {
     &.gux-disabled {

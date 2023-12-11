@@ -91,7 +91,7 @@
   --gse-ui-badge-text-fontSize: 12px;
   --gse-ui-badge-text-fontWeight: 400;
   --gse-ui-badge-height: 20px;
-  --gse-ui-badge-padding: 0 12px;
+  --gse-ui-badge-padding: 2px 12px;
   --gse-ui-badge-gap: 4px;
   --gse-ui-badge-info-bold-backgroundColor: #6e5ddb;
   --gse-ui-badge-info-bold-foregroundColor: #ffffff;
@@ -155,7 +155,7 @@
   --gse-ui-button-text-fontWeight: 700;
   --gse-ui-button-padding: 0 12px;
   --gse-ui-button-paddingIconOnly: 8px;
-  --gse-ui-button-height: 32px;
+  --gse-ui-button-default-height: 32px;
   --gse-ui-button-borderRadius: 4px;
   --gse-ui-button-iconOnly-width: 32px;
   --gse-ui-button-icon-size: 16px;
@@ -192,12 +192,14 @@
   --gse-ui-button-danger-hover-foregroundColor: #ffffff;
   --gse-ui-button-danger-active-backgroundColor: #440a15;
   --gse-ui-button-danger-active-foregroundColor: #ffffff;
+  --gse-ui-button-compact-height: 24px;
   --gse-ui-rating-default-color: #767c8d;
   --gse-ui-rating-active-color: #4856cb;
   --gse-ui-rating-hover-color: #3742a2;
   --gse-ui-rating-disabled-color: #767c8d;
   --gse-ui-rating-disabled-opacity: 0.5;
   --gse-ui-rating-size: 16px;
+  --gse-ui-rating-star-gap: 8px;
   --gse-ui-link-default-foregroundColor: #4856cb;
   --gse-ui-link-disabled-foregroundColor: #4856cb;
   --gse-ui-link-hover-foregroundColor: #3742a2;
@@ -283,8 +285,12 @@
   --gse-ui-segmentedControl-button-active-foregroundColor: #ffffff;
   --gse-ui-segmentedControl-borderRadius: 4px;
   --gse-ui-segmentedControl-height: 32px;
-  --gse-ui-segmentedControl-iconOnly-width: 32px;
   --gse-ui-segmentedControl-border-color: #4856cb;
   --gse-ui-segmentedControl-border-width: 1px;
   --gse-ui-segmentedControl-border-style: solid;
+  --gse-ui-segmentedControl-divider-color: #4856cb;
+  --gse-ui-segmentedControl-divider-width: 1px;
+  --gse-ui-segmentedControl-divider-style: solid;
+  --gse-ui-segmentedControl-iconOnly-padding: 0 8px;
+  --gse-ui-segmentedControl-focus-offset: 0;
 }

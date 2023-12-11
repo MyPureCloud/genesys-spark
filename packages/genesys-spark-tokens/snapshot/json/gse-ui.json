@@ -166,7 +166,7 @@
       "fontWeight": 400
     },
     "height": "20px",
-    "padding": "0 12px",
+    "padding": "2px 12px",
     "gap": "4px",
     "info": {
       "bold": {
@@ -286,7 +286,9 @@
     },
     "padding": "0 12px",
     "padding_icon_only": "8px",
-    "height": "32px",
+    "default": {
+      "height": "32px"
+    },
     "border_radius": "4px",
     "icon_only": {
       "width": "32px"
@@ -368,6 +370,9 @@
         "background_color": "#440a15",
         "foreground_color": "#ffffff"
       }
+    },
+    "compact": {
+      "height": "24px"
     }
   },
   "rating": {
@@ -384,7 +389,10 @@
       "color": "#767c8d",
       "opacity": 0.5
     },
-    "size": "16px"
+    "size": "16px",
+    "star": {
+      "gap": "8px"
+    }
   },
   "link": {
     "default": {
@@ -560,13 +568,21 @@
     },
     "border_radius": "4px",
     "height": "32px",
-    "icon_only": {
-      "width": "32px"
-    },
     "border": {
       "color": "#4856CB",
       "width": "1px",
       "style": "solid"
+    },
+    "divider": {
+      "color": "#4856CB",
+      "width": "1px",
+      "style": "solid"
+    },
+    "icon_only": {
+      "padding": "0 8px"
+    },
+    "focus": {
+      "offset": 0
     }
   }
 }

@@ -4,12 +4,15 @@ exports[`gux-form-field-dropdown #render help should render component as expecte
 
 exports[`gux-form-field-dropdown #render help should render component as expected 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-beside gux-form-field-legend-label">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
     <gux-screen-reader-beta hydrated="">
       This is a help message
     </gux-screen-reader-beta>
   </legend>
+  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -29,16 +32,19 @@ exports[`gux-form-field-dropdown #render help should render component as expecte
 </fieldset>
 `;
 
-exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (1) 1`] = `"<gux-form-field-dropdown hydrated=\\"\\"> <gux-dropdown-multi hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" aria-describedby=\\"gux-error-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" aria-activedescendant=\\"\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-active\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> <span slot=\\"error\\" id=\\"gux-error-i\\">This is an error message</span> </gux-form-field-dropdown>"`;
+exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (1) 1`] = `"<gux-form-field-dropdown hydrated=\\"\\"> <gux-dropdown-multi hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" aria-describedby=\\"gux-error-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> <span slot=\\"error\\" id=\\"gux-error-i\\">This is an error message</span> </gux-form-field-dropdown>"`;
 
 exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (1) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-beside gux-form-field-legend-label">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
     <gux-screen-reader-beta hydrated="">
       This is an error message
     </gux-screen-reader-beta>
   </legend>
+  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -58,16 +64,19 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
 </fieldset>
 `;
 
-exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (2) 1`] = `"<gux-form-field-dropdown label-position=\\"above\\" hydrated=\\"\\"> <gux-dropdown-multi hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" aria-describedby=\\"gux-error-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" aria-activedescendant=\\"\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-active\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> <span slot=\\"error\\" id=\\"gux-error-i\\">This is an error message</span> </gux-form-field-dropdown>"`;
+exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (2) 1`] = `"<gux-form-field-dropdown label-position=\\"above\\" hydrated=\\"\\"> <gux-dropdown-multi hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" aria-describedby=\\"gux-error-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> <span slot=\\"error\\" id=\\"gux-error-i\\">This is an error message</span> </gux-form-field-dropdown>"`;
 
 exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (2) 2`] = `
 <fieldset class="gux-above gux-form-field-fieldset-container">
-  <legend class="gux-above gux-form-field-legend-label">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
     <gux-screen-reader-beta hydrated="">
       This is an error message
     </gux-screen-reader-beta>
   </legend>
+  <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -87,16 +96,19 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
 </fieldset>
 `;
 
-exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (3) 1`] = `"<gux-form-field-dropdown label-position=\\"beside\\" hydrated=\\"\\"> <gux-dropdown-multi hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" aria-describedby=\\"gux-error-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" aria-activedescendant=\\"\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-active\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> <span slot=\\"error\\" id=\\"gux-error-i\\">This is an error message</span> </gux-form-field-dropdown>"`;
+exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (3) 1`] = `"<gux-form-field-dropdown label-position=\\"beside\\" hydrated=\\"\\"> <gux-dropdown-multi hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" aria-describedby=\\"gux-error-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> <span slot=\\"error\\" id=\\"gux-error-i\\">This is an error message</span> </gux-form-field-dropdown>"`;
 
 exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (3) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-beside gux-form-field-legend-label">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
     <gux-screen-reader-beta hydrated="">
       This is an error message
     </gux-screen-reader-beta>
   </legend>
+  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -116,7 +128,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
 </fieldset>
 `;
 
-exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (4) 1`] = `"<gux-form-field-dropdown label-position=\\"screenreader\\" hydrated=\\"\\"> <gux-dropdown-multi hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" aria-describedby=\\"gux-error-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" aria-activedescendant=\\"\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-active\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> <span slot=\\"error\\" id=\\"gux-error-i\\">This is an error message</span> </gux-form-field-dropdown>"`;
+exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (4) 1`] = `"<gux-form-field-dropdown label-position=\\"screenreader\\" hydrated=\\"\\"> <gux-dropdown-multi hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" aria-describedby=\\"gux-error-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> <span slot=\\"error\\" id=\\"gux-error-i\\">This is an error message</span> </gux-form-field-dropdown>"`;
 
 exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (4) 2`] = `
 <fieldset class="gux-form-field-fieldset-container gux-screenreader">
@@ -126,6 +138,9 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
       This is an error message
     </gux-screen-reader-beta>
   </legend>
+  <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -145,13 +160,16 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
 </fieldset>
 `;
 
-exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (1) 1`] = `"<gux-form-field-dropdown hydrated=\\"\\"> <gux-dropdown-multi hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" aria-activedescendant=\\"\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-active\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> </gux-form-field-dropdown>"`;
+exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (1) 1`] = `"<gux-form-field-dropdown hydrated=\\"\\"> <gux-dropdown-multi hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> </gux-form-field-dropdown>"`;
 
 exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (1) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-beside gux-form-field-legend-label">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
   </legend>
+  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -171,13 +189,16 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
 </fieldset>
 `;
 
-exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (2) 1`] = `"<gux-form-field-dropdown hydrated=\\"\\"> <gux-dropdown-multi disabled=\\"\\" hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" aria-activedescendant=\\"\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-active\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> </gux-form-field-dropdown>"`;
+exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (2) 1`] = `"<gux-form-field-dropdown hydrated=\\"\\"> <gux-dropdown-multi disabled=\\"\\" hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> </gux-form-field-dropdown>"`;
 
 exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (2) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-beside gux-form-field-legend-label">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
   </legend>
+  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-disabled gux-input">
       <slot></slot>
@@ -197,16 +218,19 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
 </fieldset>
 `;
 
-exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (3) 1`] = `"<gux-form-field-dropdown hydrated=\\"\\"> <gux-dropdown-multi required=\\"\\" hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" aria-activedescendant=\\"\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-active\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> </gux-form-field-dropdown>"`;
+exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (3) 1`] = `"<gux-form-field-dropdown hydrated=\\"\\"> <gux-dropdown-multi required=\\"\\" hydrated=\\"\\"> <gux-listbox-multi aria-labelledby=\\"gux-label-i\\" role=\\"listbox\\" aria-multiselectable=\\"true\\" tabindex=\\"0\\" hydrated=\\"\\"> <gux-option-multi value=\\"a\\" disabled=\\"\\" id=\\"gux-option-multi-i\\" role=\\"option\\" class=\\"gux-disabled\\" aria-selected=\\"false\\" aria-disabled=\\"true\\" hydrated=\\"\\">Ant</gux-option-multi> <gux-option-multi value=\\"b\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Bat</gux-option-multi> <gux-option-multi value=\\"c\\" id=\\"gux-option-multi-i\\" role=\\"option\\" aria-selected=\\"false\\" aria-disabled=\\"false\\" hydrated=\\"\\">Cat</gux-option-multi> </gux-listbox-multi> </gux-dropdown-multi> <label slot=\\"label\\" id=\\"gux-label-i\\">Default</label> </gux-form-field-dropdown>"`;
 
 exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (3) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-beside gux-form-field-legend-label gux-required">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
     <gux-screen-reader-beta hydrated="">
       Required
     </gux-screen-reader-beta>
   </legend>
+  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label gux-required" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -230,9 +254,12 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
 
 exports[`gux-form-field-dropdown #render single select dropdown input attributes should render component as expected (1) 2`] = `
 <fieldset class="gux-above gux-form-field-fieldset-container">
-  <legend class="gux-above gux-form-field-legend-label">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
   </legend>
+  <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+    This will be read by a screen reader
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -256,9 +283,12 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
 
 exports[`gux-form-field-dropdown #render single select dropdown input attributes should render component as expected (2) 2`] = `
 <fieldset class="gux-above gux-form-field-fieldset-container">
-  <legend class="gux-above gux-form-field-legend-label">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
   </legend>
+  <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+    This will be read by a screen reader
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-disabled gux-input">
       <slot></slot>
@@ -282,12 +312,15 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
 
 exports[`gux-form-field-dropdown #render single select dropdown input attributes should render component as expected (3) 2`] = `
 <fieldset class="gux-above gux-form-field-fieldset-container">
-  <legend class="gux-above gux-form-field-legend-label gux-required">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
     <gux-screen-reader-beta hydrated="">
       Required
     </gux-screen-reader-beta>
   </legend>
+  <span aria-hidden="true" class="gux-above gux-form-field-legend-label gux-required" role="presentation">
+    This will be read by a screen reader
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -311,12 +344,15 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
 
 exports[`gux-form-field-dropdown #render single select dropdown label-position should render component as expected (1) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-beside gux-form-field-legend-label">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
     <gux-screen-reader-beta hydrated="">
       This is an error message
     </gux-screen-reader-beta>
   </legend>
+  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -340,12 +376,15 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
 
 exports[`gux-form-field-dropdown #render single select dropdown label-position should render component as expected (2) 2`] = `
 <fieldset class="gux-above gux-form-field-fieldset-container">
-  <legend class="gux-above gux-form-field-legend-label">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
     <gux-screen-reader-beta hydrated="">
       This is an error message
     </gux-screen-reader-beta>
   </legend>
+  <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -369,12 +408,15 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
 
 exports[`gux-form-field-dropdown #render single select dropdown label-position should render component as expected (3) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-beside gux-form-field-legend-label">
+  <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
     <gux-screen-reader-beta hydrated="">
       This is an error message
     </gux-screen-reader-beta>
   </legend>
+  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -404,6 +446,9 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
       This is an error message
     </gux-screen-reader-beta>
   </legend>
+  <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
+    Default
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>

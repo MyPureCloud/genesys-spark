@@ -1,14 +1,4 @@
 @use './focus';
-@use './typography';
-
-/* Anchor */
-a {
-  @include typography.gux-anchor;
-}
-
-table a {
-  @include typography.gux-anchor-table;
-}
 
 /* Button */
 button {
@@ -59,4 +49,12 @@ input {
   &:focus-visible {
     @include focus.gux-focus-ring-small;
   }
+}
+
+.gux-focus-ring {
+  @include focus.gux-focus-ring;
+}
+
+.gux-focus-ring-small {
+  @include focus.gux-focus-ring-small;
 }

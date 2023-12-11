@@ -12,7 +12,8 @@
           "color": "#a3a7b0",
           "width": 1,
           "style": "solid"
-        }
+        },
+        "foreground_color": "#a3a7b0"
       },
       "text": {
         "fontFamily": "Noto Sans",
@@ -26,11 +27,14 @@
         "width": "16px"
       }
     },
+    "width": "320px",
     "match": {
       "first_level": {
-        "background_color": "#B5E2E8"
+        "background_color": "#B5E2E8",
+        "foreground_colour": "#1b2c48"
       },
       "subsequent_level": {
+        "foreground_colour": "#1b2c48",
         "background_color": "#DAF0F4"
       }
     }

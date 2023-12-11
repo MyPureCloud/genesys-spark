@@ -10,9 +10,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: stretch;
+  place-content: stretch flex-start;
   align-items: center;
-  justify-content: flex-start;
   height: var(--gse-ui-tag-height);
   padding: var(--gse-ui-tag-removable-padding);
   font-family: var(--gse-ui-tag-text-fontFamily);
@@ -29,9 +28,8 @@
   .gux-tag-remove-button {
     all: unset;
     display: flex;
-    align-content: center;
+    place-content: center center;
     align-items: center;
-    justify-content: center;
     margin-left: var(--gse-ui-tag-removable-gap);
 
     &:not(:disabled):hover {
@@ -51,6 +49,6 @@
   }
 
   &.gux-disabled {
-    opacity: 0.5; // missing token ticket: COMUI-2287
+    opacity: var(--gse-ui-tag-disabled-opacity);
   }
 }

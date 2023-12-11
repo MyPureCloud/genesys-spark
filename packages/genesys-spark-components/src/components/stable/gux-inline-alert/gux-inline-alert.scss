@@ -1,0 +1,92 @@
+@use '../../../style/mixins';
+
+:host {
+  display: block;
+}
+
+.gux-inline-alert {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: var(--gse-ui-alert-gap);
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--gse-ui-alert-padding);
+  border: 1px solid;
+  border-radius: var(--gse-ui-alert-borderRadius);
+
+  gux-icon {
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: var(--gse-ui-icon-size-sm);
+    height: var(--gse-ui-icon-size-sm);
+    margin-top: 1px;
+  }
+
+  gux-tooltip-title {
+    white-space: nowrap;
+  }
+
+  .gux-message-wrapper {
+    display: flex;
+    gap: var(--gse-ui-alert-gap);
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--gse-ui-alert-text-fontFamily);
+    font-size: var(--gse-ui-alert-text-fontSize);
+    font-weight: var(--gse-ui-alert-text-fontWeight);
+    line-height: var(--gse-ui-alert-text-lineHeight);
+  }
+
+  .gux-sr-only {
+    @include mixins.gux-sr-only-clip;
+  }
+
+  &.gux-info {
+    color: var(--gse-ui-alert-info-foregroundColor);
+    background-color: var(--gse-ui-alert-info-backgroundColor);
+    border: var(--gse-ui-alert-info-border-width)
+      var(--gse-ui-alert-info-border-style)
+      var(--gse-ui-alert-info-border-color);
+
+    gux-icon {
+      color: var(--gse-ui-alert-info-iconColor);
+    }
+  }
+
+  &.gux-error {
+    color: var(--gse-ui-alert-error-foregroundColor);
+    background-color: var(--gse-ui-alert-error-backgroundColor);
+    border: var(--gse-ui-alert-error-border-width)
+      var(--gse-ui-alert-error-border-style)
+      var(--gse-ui-alert-error-border-color);
+
+    gux-icon {
+      color: var(--gse-ui-alert-error-iconColor);
+    }
+  }
+
+  &.gux-warning {
+    color: var(--gse-ui-alert-warning-foregroundColor);
+    background-color: var(--gse-ui-alert-warning-backgroundColor);
+    border: var(--gse-ui-alert-warning-border-width)
+      var(--gse-ui-alert-warning-border-style)
+      var(--gse-ui-alert-warning-border-color);
+
+    gux-icon {
+      color: var(--gse-ui-alert-warning-iconColor);
+    }
+  }
+
+  &.gux-success {
+    color: var(--gse-ui-alert-success-foregroundColor);
+    background-color: var(--gse-ui-alert-success-backgroundColor);
+    border: var(--gse-ui-alert-success-border-width)
+      var(--gse-ui-alert-success-border-style)
+      var(--gse-ui-alert-success-border-color);
+
+    gux-icon {
+      color: var(--gse-ui-alert-success-iconColor);
+    }
+  }
+}

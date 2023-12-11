@@ -1,5 +1,4 @@
 @use '../../../style/mixins';
-@use '../../../style/zindex.scss';
 
 .gux-target-container {
   &.gux-disabled {
@@ -11,10 +10,10 @@
 
 .gux-popup-container {
   position: fixed;
-  z-index: var(--gux-zindex-popup, zindex.$gux-zindex-popup);
+  z-index: var(--gse-semantic-zIndex-popup);
   width: max-content;
   visibility: hidden;
-  background-color: white; //TODO: https://inindca.atlassian.net/browse/COMUI-2233
+  background-color: var(--gse-ui-menu-backgroundColor);
 
   &.gux-expanded {
     visibility: visible;

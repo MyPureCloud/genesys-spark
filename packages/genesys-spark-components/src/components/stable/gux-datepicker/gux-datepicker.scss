@@ -25,7 +25,6 @@
 @prop gse-ui-icon-size-sm
 */
 
-@use '../../../style/zindex.scss';
 @use '../../../style/mixins.scss';
 
 @mixin gse-ui-focus {
@@ -33,7 +32,8 @@
     var(--gse-ui-formControl-input-active-border-style)
     var(--gse-ui-formControl-input-active-border-color);
   border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
-  outline: var(--gse-ui-formControl-input-focus-border-width)
+  outline: 2px
+    // TODO: COMUI-2299 - Design needs to update --gse-ui-formControl-input-focus-border-width token to be 2px instead of 3px
     var(--gse-ui-formControl-input-focus-border-style)
     var(--gse-ui-formControl-input-focus-border-color);
 }
@@ -60,9 +60,8 @@
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: flex-start;
+    place-content: flex-start flex-start;
     align-items: center;
-    justify-content: flex-start;
 
     ~ .gux-datepicker-field {
       margin-left: 20px; // TODO: COMUI-2299
@@ -96,9 +95,8 @@
       flex-direction: row;
       flex-wrap: nowrap;
       gap: var(--gse-ui-formControl-input-gap);
-      align-content: stretch;
+      place-content: stretch center;
       align-items: center;
-      justify-content: center;
       width: 100%;
       height: var(--gse-ui-formControl-input-textfield-height);
       padding: var(--gse-ui-formControl-input-padding);
@@ -114,7 +112,17 @@
         var(--gse-ui-formControl-input-default-border-color);
       border-radius: var(--gse-ui-formControl-input-borderRadius);
 
+      &:hover {
+        border: var(--gse-ui-formControl-input-hover-border-width)
+          var(--gse-ui-formControl-input-hover-border-style)
+          var(--gse-ui-formControl-input-hover-border-color);
+      }
+
       &:focus-within {
+        @include gse-ui-focus;
+      }
+
+      &.gux-active {
         @include gse-ui-focus;
       }
 
@@ -155,6 +163,7 @@
           align-self: auto;
           justify-content: center;
           order: 0;
+          padding: 0;
           color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
           background: transparent;
           border: none;
@@ -163,6 +172,8 @@
 
           &:focus-within {
             @include gse-ui-focus;
+
+            padding: 2px; // TODO: COMUI-2299 - token needed?
           }
 
           &:not(:disabled):focus-visible,
@@ -180,7 +191,7 @@
 
       gux-calendar {
         position: fixed;
-        z-index: var(--gux-zindex-popup, zindex.$gux-zindex-popup);
+        z-index: var(--gse-semantic-zIndex-popup);
         display: none;
       }
     }

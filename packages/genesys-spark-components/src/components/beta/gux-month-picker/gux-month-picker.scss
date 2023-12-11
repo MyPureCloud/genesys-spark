@@ -21,6 +21,7 @@
     outline: var(--gse-ui-formControl-input-focus-border-width)
       var(--gse-ui-formControl-input-focus-border-style)
       var(--gse-ui-formControl-input-focus-border-color);
+    outline-offset: var(--gse-semantic-focusRing-offset);
   }
 
   .gux-display {
@@ -53,7 +54,9 @@
     border: none;
 
     &:focus-visible {
-      border-radius: 2px; // TODO : COMUI-2256 missing 2px border-radius focus token.
+      border-radius: var(
+        --gse-ui-calendarMenu-month-calendarButton-focusBorderRadius
+      );
       outline: var(--gse-ui-monthPicker-calendarStates-focus-border-width)
         var(--gse-ui-monthPicker-calendarStates-focus-border-style)
         var(--gse-ui-monthPicker-calendarStates-focus-border-color);

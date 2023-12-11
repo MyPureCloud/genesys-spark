@@ -1,7 +1,6 @@
 button {
-  flex: 0 1 auto;
-  align-self: auto;
-  order: 0;
+  display: flex;
+  padding: 0;
   color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
   background: transparent;
   border: none;
@@ -16,7 +15,6 @@ button {
   gux-icon {
     width: var(--gse-ui-icon-size-sm);
     height: var(--gse-ui-icon-size-sm);
-    margin-right: var(--gse-ui-formControl-input-gap);
     border-radius: var(--gse-ui-formControl-input-borderRadius);
   }
 

@@ -1,19 +1,30 @@
 const icons = [
   {
     iconNames: [
+      'custom/add-column-after',
+      'custom/add-column-before',
+      'custom/add-row-after',
+      'custom/add-row-before',
       'custom/binoculars-slash-regular',
       'custom/clipboard-list-slash-regular',
       'custom/carousel',
       'custom/co-browse',
+      'custom/delete-column',
+      'custom/delete-row',
+      'custom/delete-table',
       'custom/face-smile-hearts-regular',
       'custom/file-pen-question',
       'custom/filter-notification',
       'custom/font-regular-highlight',
+      'custom/gkn-logo',
       'custom/list-alphabetical-regular',
       'custom/list-roman-regular',
       'custom/one-button',
       'custom/quick-reply',
       'custom/three-button',
+      'custom/wrap-text-inline',
+      'custom/wrap-text-tight',
+      'custom/wrap-text-top-bottom',
       'fa/00-solid',
       'fa/1-regular',
       'fa/alarm-clock-regular',
@@ -35,10 +46,12 @@ const icons = [
       'fa/binoculars-regular',
       'fa/bold-regular',
       'fa/book-regular',
+      'fa/bookmark-regular',
       'fa/briefcase-regular',
       'fa/bullseye-regular',
       'fa/calculator-regular',
       'fa/calendar-days-regular',
+      'fa/check-solid',
       'fa/circle-check-regular',
       'fa/circle-check-solid',
       'fa/circle-info-solid',
@@ -70,6 +83,7 @@ const icons = [
       'fa/face-laugh-solid',
       'fa/file-chart-pie-regular',
       'fa/file-exclamation-regular',
+      'fa/file-zip-regular',
       'fa/film-solid',
       'fa/filter-solid',
       'fa/font-regular',
@@ -129,6 +143,8 @@ const icons = [
       'fa/strikethrough-regular',
       'fa/subscript-regular',
       'fa/superscript-regular',
+      'fa/table-columns-regular',
+      'fa/table-cells-regular',
       'fa/text-size-regular',
       'fa/text-slash-regular',
       'fa/ticket-regular',
@@ -150,7 +166,7 @@ function generateSection(iconNames) {
   output += '<div class="icons-container">';
   iconNames.forEach(iconName => {
     output += `<div class="icon-example">
-    <gux-icon icon-name="${iconName}" class="example" decorative="true"></gux-icon>
+    <gux-icon size="large" icon-name="${iconName}" decorative="true"></gux-icon>
     <div class="icon-name">${iconName}</div>
   </div>`;
   });

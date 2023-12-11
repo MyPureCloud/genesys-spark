@@ -7,16 +7,17 @@ import {
   JSX,
   Method,
   Prop,
-  State
+  State,
+  Watch
 } from '@stencil/core';
 import {
   autoUpdate,
   computePosition,
   flip,
+  hide,
   offset,
   shift,
-  Placement,
-  arrow
+  Placement
 } from '@floating-ui/dom';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
@@ -35,12 +36,20 @@ import { GuxTooltipAccent } from './gux-tooltip-types';
 })
 export class GuxTooltip {
   private forElement: HTMLElement;
-  private arrowElement: HTMLDivElement;
 
-  private pointerenterHandler: () => void = () => this.show();
-  private pointerleaveHandler: () => void = () => this.hide();
-  private focusinHandler: () => void = () => this.show();
-  private focusoutHandler: () => void = () => this.hide();
+  private pointerenterHandler: EventListener = () => this.show();
+  private pointerleaveHandler: EventListener = () => this.hide();
+  private focusinHandler: EventListener = () => this.show();
+  private focusoutHandler: EventListener = () => this.hide();
+
+  private forElementListeners: Map<string, EventListenerOrEventListenerObject> =
+    new Map([
+      ['pointerenter', this.pointerenterHandler],
+      ['pointerleave', this.pointerleaveHandler],
+      ['focusin', this.focusinHandler],
+      ['focusout', this.focusoutHandler]
+    ]);
+
   private id: string = randomHTMLId('gux-tooltip');
   private cleanupUpdatePosition: () => void;
 
@@ -61,9 +70,6 @@ export class GuxTooltip {
 
   @Prop()
   accent: GuxTooltipAccent = 'light';
-
-  @Prop()
-  anchor: boolean = false;
 
   /**
    * If tooltip is shown or not
@@ -111,47 +117,20 @@ export class GuxTooltip {
   }
 
   private updatePosition(): void {
-    const middleware = [offset(16), flip(), shift()];
-
-    if (this.anchor) {
-      middleware.push(arrow({ element: this.arrowElement }));
-    }
+    const middleware = [offset(16), flip(), shift(), hide()];
 
     void computePosition(this.forElement, this.root, {
       placement: this.placement,
       strategy: 'fixed',
       middleware: middleware
-    }).then(({ x, y, middlewareData, placement }) => {
+    }).then(({ x, y, middlewareData }) => {
       Object.assign(this.root.style, {
         left: `${x}px`,
-        top: `${y}px`
+        top: `${y}px`,
+        visibility: middlewareData.hide?.referenceHidden ? 'hidden' : 'visible'
       });
       //data-placement needed on the for e2e tests.
       this.root.setAttribute('data-placement', this.placement);
-
-      const side = placement.split('-')[0];
-
-      const staticSide = {
-        top: 'bottom',
-        right: 'left',
-        bottom: 'top',
-        left: 'right'
-      }[side];
-
-      if (middlewareData.arrow) {
-        //This is 13 because this makes the arrow look aligned.
-        const arrowLen = 13;
-        const { x, y } = middlewareData.arrow;
-
-        Object.assign(this.arrowElement.style, {
-          left: x != null ? `${x}px` : '',
-          top: y != null ? `${y}px` : '',
-          right: '',
-          bottom: '',
-          [staticSide]: `${-arrowLen / 2}px`,
-          transform: 'rotate(45deg)'
-        });
-      }
     });
   }
   private show(): void {
@@ -168,11 +147,11 @@ export class GuxTooltip {
     this.isShown = false;
   }
 
-  private getForElement(): void {
+  private getForElement(): HTMLElement {
     if (this.for) {
-      this.forElement = findElementById(this.root, this.for);
+      return findElementById(this.root, this.for);
     } else {
-      this.forElement = this.root.parentElement;
+      return this.root.parentElement;
     }
   }
 
@@ -184,36 +163,38 @@ export class GuxTooltip {
     }
   }
 
-  private renderAnchor(): JSX.Element {
-    if (this.anchor) {
-      return (
-        <div
-          ref={(el: HTMLDivElement) => (this.arrowElement = el)}
-          class="gux-arrow"
-        ></div>
-      ) as JSX.Element;
-    }
-  }
-
-  connectedCallback(): void {
-    this.getForElement();
+  private setForElement(): void {
+    this.forElement = this.getForElement();
 
     if (this.forElement) {
       this.forElement.setAttribute('aria-describedby', this.id);
 
-      this.forElement.addEventListener(
-        'pointerenter',
-        this.pointerenterHandler
+      this.forElementListeners.forEach((handler, type) =>
+        this.forElement.addEventListener(type, handler)
       );
-      this.forElement.addEventListener(
-        'pointerleave',
-        this.pointerleaveHandler
-      );
-      this.forElement.addEventListener('focusin', this.focusinHandler);
-      this.forElement.addEventListener('focusout', this.focusoutHandler);
     } else {
       this.logForAttributeError();
     }
+  }
+
+  private disconnectForElement(): void {
+    if (this.forElement) {
+      this.forElement.removeAttribute('aria-describedby');
+
+      this.forElementListeners.forEach((handler, type) =>
+        this.forElement.removeEventListener(type, handler)
+      );
+    }
+  }
+
+  @Watch('for') //@ts-expect-error: unused warning because is is only used by decorator
+  private updateForElement(): void {
+    this.disconnectForElement();
+    this.setForElement();
+  }
+
+  connectedCallback(): void {
+    this.setForElement();
   }
 
   componentWillLoad(): void {
@@ -224,17 +205,8 @@ export class GuxTooltip {
     if (this.cleanupUpdatePosition) {
       this.cleanupUpdatePosition();
     }
-    this.forElement?.removeAttribute('aria-describedby');
-    this.forElement?.removeEventListener(
-      'pointerenter',
-      this.pointerenterHandler
-    );
-    this.forElement?.removeEventListener(
-      'pointerleave',
-      this.pointerleaveHandler
-    );
-    this.forElement?.removeEventListener('focusin', this.focusinHandler);
-    this.forElement?.removeEventListener('focusout', this.focusoutHandler);
+
+    this.disconnectForElement();
   }
 
   render(): JSX.Element {
@@ -248,7 +220,6 @@ export class GuxTooltip {
           data-placement={this.placement}
         >
           <slot />
-          {this.renderAnchor()}
         </div>
       </Host>
     ) as JSX.Element;

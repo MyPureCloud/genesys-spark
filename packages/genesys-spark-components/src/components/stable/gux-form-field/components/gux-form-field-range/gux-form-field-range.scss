@@ -19,8 +19,8 @@
 @prop $gse-ui-slider-focusRing-borderRadius
 **/
 
-@use '../../../../../style/zindex.scss';
 @use '../../../../../style/typography.scss';
+@use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
@@ -56,7 +56,7 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
 }
 
 ::slotted(label) {
-  @include typography.gse-ui-formControl-label;
+  @include gux-form-field.gse-ui-formControl-label;
 }
 
 ::slotted(input[type='range']) {
@@ -77,9 +77,9 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: stretch;
+    gap: var(--gse-ui-slider-gap);
+    place-content: stretch flex-start;
     align-items: center;
-    justify-content: flex-start;
     // We will not use a token for this height style below
     height: 32px;
     font-size: var(--gse-ui-slider-label-text-fontSize);
@@ -107,10 +107,12 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
         // We are not using a token for this margin below since it this 6px margin is used to center position the head on the track
         margin: 6px 0;
         background: var(--gse-ui-slider-bar-default-backgroundColor);
+        border-radius: var(--gse-ui-slider-track-borderRadius);
 
         .gux-progress {
           height: $track-height;
           background-color: $range-active;
+          border-radius: var(--gse-ui-slider-track-borderRadius);
         }
       }
     }
@@ -145,10 +147,10 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
     }
 
     .gux-range-tooltip {
-      @include typography.gux-small-text;
+      @include typography.body-sm-regular;
 
       position: absolute;
-      z-index: var(--gux-zindex-tooltip, zindex.$gux-zindex-tooltip);
+      z-index: var(--gse-semantic-zIndex-tooltip);
       display: flex;
       align-items: center;
       justify-content: center;
