@@ -293,7 +293,8 @@
       "header_text": {
         "fontFamily": "Noto Sans",
         "lineHeight": "24px",
-        "fontSize": "16px"
+        "fontSize": "16px",
+        "fontWeight": 400
       },
       "range": {
         "vertical": {
@@ -432,6 +433,9 @@
     },
     "disabled": {
       "opacity": 0.5
+    },
+    "focus_calendar": {
+      "gap": "3px"
     }
   },
   "toggle": {
@@ -689,9 +693,6 @@
       "compact": "24px"
     },
     "border_radius": "4px",
-    "disabled": {
-      "opacity": 0.5
-    },
     "menu": {
       "max_height": "344px",
       "width": "220px"
