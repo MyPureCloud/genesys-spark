@@ -118,7 +118,7 @@ export class GuxPopover {
     // This is 13 because this makes the arrow look aligned
     const arrowLen = 13;
 
-    if (this.popupElement) {
+    if (this.popupElement && forElement) {
       void computePosition(forElement, this.popupElement, {
         placement: this.position,
         middleware: [
