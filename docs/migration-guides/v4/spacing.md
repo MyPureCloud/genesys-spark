@@ -49,6 +49,6 @@ Example:
 - Replace the `gux-spacing-2xs` variable with a spacing token.
 
 ```diff
-- gux-spacing-4xs;
+- gux-spacing-2xs;
 + var(--gse-core-spacing-4xs);
 ```
