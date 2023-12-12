@@ -1,8 +1,23 @@
-# Deprecated Color Variables
+# Color Variables
 
-In V4, we are using Spark tokens for colors and will no longer be exporting the following color palette variables. Below is a list of color variables and their hex equivalents. Read more about the new Spark 4.0 Design System color palette on the [Spark Design System documentation site](https://spark.genesys.com/latest/foundations/color/core-palette/design-XYztDeyk)
+[Back to main guide](./readme.md)
 
-## Blue
+In V4, we are using Spark tokens for colors and will no longer be exporting the following color palette variables. Read more about the new Spark 4.0 Design System color palette on the [Spark Design System documentation site](https://spark.genesys.com/latest/foundations/color/core-palette/design-XYztDeyk)
+
+## V4 Basic Migration
+
+The color variables `gux-color-value` no longer exist within v4 and have been replaced with the corresponding hex values outlined in the tables below.
+
+Example:
+
+You are using `gux-blue-10` within your application. This value can be replaced with the equivalent hex value. `gux-blue-10` now becomes `#172b52`.
+
+```diff
+- color: gux-blue-10;
++ color: #172b52;
+```
+
+### Blue
 
 | Variable     | Value   |
 | ------------ | ------- |
@@ -17,7 +32,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 | gux-blue-90  | #aac9ff |
 | gux-blue-100 | #deeaff |
 
-## Black
+### Black
 
 | Variable      | Value   |
 | ------------- | ------- |
@@ -32,7 +47,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 | gux-black-90  | #596373 |
 | gux-black-100 | #6b7585 |
 
-## Grey
+### Grey
 
 | Variable     | Value   |
 | ------------ | ------- |
@@ -47,7 +62,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 | gux-grey-90  | #f6f7f9 |
 | gux-grey-100 | #fdfdfd |
 
-## Alert Red
+### Alert Red
 
 | Variable          | Value   |
 | ----------------- | ------- |
@@ -62,7 +77,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 | gux-alert-red-90  | #f8b2b2 |
 | gux-alert-red-100 | #fceaea |
 
-## Alert Yellow
+### Alert Yellow
 
 | Variable             | Value   |
 | -------------------- | ------- |
@@ -77,7 +92,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 | gux-alert-yellow-90  | #fce5b1 |
 | gux-alert-yellow-100 | #fdf8ec |
 
-## Alert Green
+### Alert Green
 
 | Variable            | Value   |
 | ------------------- | ------- |
@@ -92,7 +107,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 | gux-alert-green-90  | #c2deb9 |
 | gux-alert-green-100 | #eefcea |
 
-## Secondary Palette
+### Secondary Palette
 
 | Variable                   | Value   |
 | -------------------------- | ------- |
@@ -109,7 +124,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 | gux-alert-yellow-green-sec | #ddd933 |
 | gux-dark-purple-sec        | #5e5782 |
 
-## Brand Colors
+### Brand Colors
 
 | Variable                  | Value   |
 | ------------------------- | ------- |
@@ -122,7 +137,7 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 | gux-genesys-light-blue    | #3b90aa |
 | gux-genesys-yellow        | #ff8f14 |
 
-## V1 Legacy
+### V1 Legacy
 
 | Variable          | Value   |
 | ----------------- | ------- |
@@ -131,3 +146,17 @@ In V4, we are using Spark tokens for colors and will no longer be exporting the 
 | gux-dark-blue     | #2a60c8 |
 | gux-off-white     | #fdfdfd |
 | gux-warm-red      | #ff4f1f |
+
+## V4 Full Migration
+
+You can find out more about the new Spark 4.0 Design System color palette on the [Spark Design System documentation site](https://spark.genesys.com/latest/foundations/color/core-palette/design-XYztDeyk)
+
+To use one of the new tokens from the Spark 4.0 color palette you can simply use the prefix `gse-core-color` followed by the color and weight you wish to use.
+
+Example you would like to use `blueberry` with a weight of `100`. The token would be `--gse-core-color-blueberry-100`. Below is an example of how you would use this in your application.
+
+```diff
+.gux-container {
++ color: var(--gse-core-color-blueberry-100);
+}
+```
