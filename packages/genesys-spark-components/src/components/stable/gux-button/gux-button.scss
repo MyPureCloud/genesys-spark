@@ -59,6 +59,7 @@ button {
   border-radius: var(--gse-ui-button-borderRadius);
 
   &.gux-icon-only {
+    display: inline-flex;
     padding: var(--gse-ui-button-paddingIconOnly);
   }
 
