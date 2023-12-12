@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "lib": ["dom", "es2017", "ES2020.Intl"],
+    "skipLibCheck": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "baseUrl": "./src",
+    "paths": {
+      "@utils/*": ["utils/*"],
+      "@test/*": ["test/*"]
+    }
+  },
+  "include": ["src"]
+}

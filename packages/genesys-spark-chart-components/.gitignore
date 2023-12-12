@@ -1,0 +1,7 @@
+node_modules/
+build/
+dist/
+.stencil/
+
+src/components.d.ts
+manifest.json
