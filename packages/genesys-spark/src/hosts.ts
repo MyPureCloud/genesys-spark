@@ -23,13 +23,27 @@ const NON_STANDARD_DOMAINS = [
  * Returns the origin that web component assets should be loaded from.
  * Will use the domain of the current window if it matches a Genesys domain.
  */
-export function getAssetsOrigin(): string {
+export function getComponentAssetsOrigin(): string {
   if (IS_DEV_MODE == true) {
     // This conditional is optimized out in production due to @rollup/plugin-replace
     // and rollup's dead code elimination
-    return 'http://localhost:3333';
+    return 'http://localhost:3733';
   }
 
+  return getAssetsOrigin();
+}
+
+export function getChartComponentAssetsOrigin(): string {
+  if (IS_DEV_MODE == true) {
+    // This conditional is optimized out in production due to @rollup/plugin-replace
+    // and rollup's dead code elimination
+    return 'http://localhost:3734';
+  }
+
+  return getAssetsOrigin();
+}
+
+export function getAssetsOrigin(): string {
   const matchedDomain = getRegionDomain();
   return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
 }
@@ -39,7 +53,7 @@ export function getFontOrigin(): string {
     // Fonts aren't locally hosted during dev mode
     return 'http://app.inindca.com';
   }
-  return getAssetsOrigin();
+  return getComponentAssetsOrigin();
 }
 
 function getRegionDomain() {

@@ -12,9 +12,12 @@ export default {
     replace({
       values: {
         IS_DEV_MODE: IS_DEV_MODE,
-        __ASSET_PREFIX__: IS_DEV_MODE
+        __COMPONENT_ASSET_PREFIX__: IS_DEV_MODE
           ? '/dist/genesys-webcomponents/'
-          : process.env.COMPONENT_ASSETS_PATH
+          : process.env.COMPONENT_ASSETS_PATH,
+        __CHART_COMPONENT_ASSET_PREFIX__: IS_DEV_MODE
+          ? '/dist/genesys-chart-webcomponents/'
+          : process.env.CHART_COMPONENT_ASSETS_PATH
       },
       preventAssignment: true
     }),

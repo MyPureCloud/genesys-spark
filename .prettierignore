@@ -7,4 +7,7 @@ packages/genesys-spark-components/src/components/**/readme.md
 packages/genesys-spark-tokens/data/tokens.json
 packages/genesys-spark-visualizations/src/components/**/readme.md
 
+packages/genesys-spark-components-react/stencil-generated/
+packages/genesys-spark-chart-components-react/stencil-generated/
+
 CHANGELOG.md

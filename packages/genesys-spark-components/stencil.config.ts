@@ -71,5 +71,8 @@ export const config: Config = {
   },
   extras: {
     experimentalImportInjection: true
+  },
+  devServer: {
+    port: 3733
   }
 };
