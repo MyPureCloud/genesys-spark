@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property          | Attribute            | Description                                                                                                                                           | Type                                                                                                               | Default     |
@@ -19,6 +20,7 @@
 | `yAxisTitle`      | `y-axis-title`       | Title to display along the y-axis                                                                                                                     | `string`                                                                                                           | `undefined` |
 | `yFieldName`      | `y-field-name`       | Name for the data field to use to populate the chart's x-axis e.g. yFieldName of "value" will map any "value" fields in chartData to the y-axis       | `string`                                                                                                           | `undefined` |
 
+
 ## Dependencies
 
 ### Depends on
@@ -26,13 +28,12 @@
 - [gux-visualization-beta](../gux-visualization)
 
 ### Graph
-
 ```mermaid
 graph TD;
   gux-chart-scatter-plot-beta --> gux-visualization-beta
   style gux-chart-scatter-plot-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

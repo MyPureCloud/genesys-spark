@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property         | Attribute          | Description                                                                                                   | Type                                                                                                               | Default     |
@@ -16,6 +17,7 @@
 | `legendTitle`    | `legend-title`     |                                                                                                               | `string`                                                                                                           | `undefined` |
 | `outerRadius`    | `outer-radius`     |                                                                                                               | `number`                                                                                                           | `undefined` |
 
+
 ## Dependencies
 
 ### Depends on
@@ -23,13 +25,12 @@
 - [gux-visualization-beta](../gux-visualization)
 
 ### Graph
-
 ```mermaid
 graph TD;
   gux-chart-pie-beta --> gux-visualization-beta
   style gux-chart-pie-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

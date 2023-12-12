@@ -101,8 +101,10 @@ webappPipeline {
         // All of the useful stencil output lives under /genesys-webcomponents, so
         // we add it to the loading path here to simplify internal code
         componentAssetsPath = "${assetPrefix}genesys-webcomponents/"
+        chartComponentAssetsPath = "${assetPrefix}genesys-chart-webcomponents/"
 
         env.COMPONENT_ASSETS_PATH = componentAssetsPath
+        env.CHART_COMPONENT_ASSETS_PATH = chartComponentAssetsPath
 
         sh('npm run build')
     }

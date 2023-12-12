@@ -40,6 +40,7 @@ graph TD;
   gux-pagination-buttons-legacy --> gux-form-field-text-like
   gux-pagination-buttons-legacy --> gux-button-slot
   gux-pagination-buttons-legacy --> gux-icon
+  gux-form-field-text-like --> gux-radial-loading
   gux-form-field-text-like --> gux-form-field-input-clear-button
   gux-form-field-text-like --> gux-icon
   gux-form-field-input-clear-button --> gux-icon

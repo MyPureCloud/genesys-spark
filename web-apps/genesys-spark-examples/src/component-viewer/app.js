@@ -1,6 +1,9 @@
 import { parseFragment, serialize } from 'parse5';
 
-import { registerSparkComponents } from 'genesys-spark';
+import {
+  registerSparkComponents,
+  registerSparkChartComponents
+} from 'genesys-spark';
 import AttributesPanel from './panels/attributes';
 import { createPreview } from './panels/preview';
 import { createEditor } from './panels/editor';
@@ -118,7 +121,10 @@ function setNewTheme(theme, panel, button, buttons) {
 }
 
 export async function bootstrap(exampleCode, callback) {
-  await registerSparkComponents();
+  await Promise.all([
+    registerSparkComponents(),
+    registerSparkChartComponents()
+  ]);
 
   const {
     inheritedThemeButton,
