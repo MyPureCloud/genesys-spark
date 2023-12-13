@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.3.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.2.0...v4.3.0) (2023-12-13)
+
+
+### Features
+
+* **button:** centre icon in icon only button ([107051e](https://github.com/MyPureCloud/genesys-spark/commit/107051eb8d13f3432a6a0131843b43192db2d2cc))
+* **datepicker:** add token for border radius ([647abef](https://github.com/MyPureCloud/genesys-spark/commit/647abefaec82db3e75d141904ed0406e9b46890b))
+* **datepicker:** add token for gap to component scss ([d8bd638](https://github.com/MyPureCloud/genesys-spark/commit/d8bd638438ee66daf2d7d7bc9b110ebe5bd05821))
+* **datepicker:** update datepicker focus style for calendar ([971a3d8](https://github.com/MyPureCloud/genesys-spark/commit/971a3d8829b81f2a88012c2de703afbf02f3aabe))
+
+
+### Bug Fixes
+
+* **tag:** fixing gux-tooltip-title ([c623b83](https://github.com/MyPureCloud/genesys-spark/commit/c623b8322f3722d1f42efb58b283f36639fae258))
+* **tag:** fixing gux-tooltip-title when span is slotted ([bd28438](https://github.com/MyPureCloud/genesys-spark/commit/bd2843885be00a3fbd8b2dd5808db2aefdccc9a5))
+* **tag:** replacing gux-tooltip-title with gux-truncate ([e81b4ba](https://github.com/MyPureCloud/genesys-spark/commit/e81b4ba9c87909dd31b033cc000d0ffb0e867a4f))
+
 ## [4.2.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.1.2...v4.2.0) (2023-12-12)
 
 
