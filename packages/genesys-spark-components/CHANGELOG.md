@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.113.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.113.0...v3.113.1) (2023-12-13)
+
+
+### Bug Fixes
+
+* **calendar:** fixed selected date on previouse month css ([71ef4da](https://github.com/MyPureCloud/genesys-spark/commit/71ef4dac0a2e27fc6b1862079cfafceb6ff39056))
+* **tooltip:** set host pointer-events to none ([dea1a90](https://github.com/MyPureCloud/genesys-spark/commit/dea1a90cfc766f4fa6cd876938d3ed855a61c376))
+
 ## [3.113.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.112.1...v3.113.0) (2023-12-06)
 
 
