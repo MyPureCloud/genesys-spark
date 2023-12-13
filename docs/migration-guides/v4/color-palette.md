@@ -149,8 +149,6 @@ You are using `gux-blue-10` within your application. This value can be replaced 
 
 ## V4 Full Migration
 
-You can find out more about the new Spark 4.0 Design System color palette on the [Spark Design System documentation site](https://spark.genesys.com/latest/foundations/color/core-palette/design-XYztDeyk)
-
 To use one of the new tokens from the Spark 4.0 color palette you can simply use the prefix `gse-core-color` followed by the color and weight you wish to use.
 
 Example you would like to use `blueberry` with a weight of `100`. The token would be `--gse-core-color-blueberry-100`. Below is an example of how you would use this in your application.
@@ -160,3 +158,5 @@ Example you would like to use `blueberry` with a weight of `100`. The token woul
 + color: var(--gse-core-color-blueberry-100);
 }
 ```
+
+You can find out more about the new Spark 4.0 Design System color palette on the [Spark Design System documentation site](https://spark.genesys.com/latest/foundations/color/core-palette/design-XYztDeyk)

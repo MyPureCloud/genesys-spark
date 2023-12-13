@@ -32,7 +32,7 @@ Example:
 
 ## V4 Full Migration
 
-Below is a table which represents new v4 spacing tokens which can be used within your application. Simply replace a spacing value with one of the token names outlined below. Read more about the new Spark 4.0 Design System spacing guidelines on the [Spark Design System documentation site](https://spark.genesys.com/latest/foundations/spacing/design-MpmyI1Ym)
+Below is a table which represents new v4 spacing tokens which can be used within your application. Simply replace a spacing variable with one of the token names outlined below. Read more about the new Spark 4.0 Design System spacing guidelines on the [Spark Design System documentation site](https://spark.genesys.com/latest/foundations/spacing/design-MpmyI1Ym)
 
 | Token name             | Token value |
 | ---------------------- | ----------- |
@@ -46,7 +46,7 @@ Below is a table which represents new v4 spacing tokens which can be used within
 
 Example:
 
-- Replace the `gux-spacing-2xs` variable with a spacing token.
+- For example if you are using `gux-spacing-2xs` variable you can simply replace this with the `--gse-core-spacing-4xs` token which gives you a value of `4px`.
 
 ```diff
 - gux-spacing-2xs;
