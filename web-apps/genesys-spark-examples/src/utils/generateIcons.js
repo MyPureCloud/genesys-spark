@@ -223,7 +223,6 @@ const icons = [
       'device-cellphone',
       'device-headphones',
       'device-laptop',
-      'device-pc',
       'device-server',
       'device-tablet'
     ]
