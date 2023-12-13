@@ -17,7 +17,7 @@ The classes `.gux-shadow-*` no longer exist within v4 and have been replaced wit
 
 Example:
 
-- Replace `.gux-shadow-10` class with the following `box-shadow` styling.
+- Replace `.gux-shadow-10` class with the following `box-shadow` value outlined in the table above.
 
 ```diff
 .gux-container {
