@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.113.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.113.1...v3.113.2) (2023-12-14)
+
+
+### Bug Fixes
+
+* **table-toolbar:** table-toolbar may fail to condense if text changes dynamically ([d8d26d1](https://github.com/MyPureCloud/genesys-spark/commit/d8d26d1e6af27e2725fdf19888b91ba69555e89a))
+
 ### [3.113.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.113.0...v3.113.1) (2023-12-13)
 
 
