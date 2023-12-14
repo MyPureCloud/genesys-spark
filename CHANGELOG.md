@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.3.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.3.0...v4.3.1) (2023-12-14)
+
+
+### Bug Fixes
+
+* **popover:** console errors if target element removed ([db22c72](https://github.com/MyPureCloud/genesys-spark/commit/db22c72594837e2f3b204966ca5d22786f86e811))
+
 ## [4.3.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.2.0...v4.3.0) (2023-12-13)
 
 
