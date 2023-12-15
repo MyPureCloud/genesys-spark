@@ -30,7 +30,7 @@
     "selectedColumnCount": "Выбранные столбцы: {count} / {total}",
     "selectAllColumnsScreenReader": "Выбранные столбцы: {count} из {total}. Установите флажок, чтобы выбрать все столбцы ({total})",
     "unselectAllColumnsScreenReader": "Выбранные столбцы: {count} из {total}. Снимите флажок, чтобы отменить выбор всех столбцов ({total})",
-    "movePositionPrompt": "Нажмите клавишу ПРОБЕЛ или ВВОД, чтобы переместить столбец {columnName} из положения {oldPositionNumber} в положение {newPositionNumber}.",
+    "movePositionPrompt": "Нажмите клавишу ПРОБЕЛ или ВВОД, чтобы переместить столбец {columnName} из позиции {oldPositionNumber} в позицию {newPositionNumber}.",
     "reorderingModeActive": "Режим переупорядочивания активирован. Переместите столбец {columnName} с помощью клавиш со стрелками ВВЕРХ и ВНИЗ, HOME и END. Нажмите клавишу ESCAPE, чтобы отключить режим переупорядочивания."
   },
   "gux-column-manager-item": {
