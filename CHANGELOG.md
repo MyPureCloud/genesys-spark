@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.4.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.3.1...v4.4.0) (2023-12-15)
+
+
+### Features
+
+* **segmented-control:** remove extra example instance for expand ([f1f833c](https://github.com/MyPureCloud/genesys-spark/commit/f1f833c544ca50549441c6f531426ba57e386101))
+
 ### [4.3.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.3.0...v4.3.1) (2023-12-14)
 
 
