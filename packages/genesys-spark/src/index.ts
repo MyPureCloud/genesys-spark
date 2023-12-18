@@ -1,22 +1,29 @@
-import { getAssetsOrigin, getFontOrigin } from './hosts';
+import {
+  getComponentAssetsOrigin,
+  getChartComponentAssetsOrigin,
+  getFontOrigin
+} from './hosts';
 import {
   checkAndLoadScript,
   checkAndLoadStyle,
   checkAndLoadFonts
 } from './loading';
 
-const ASSET_PREFIX = '__ASSET_PREFIX__';
-const SCRIPT_PATH = 'genesys-webcomponents.esm.js';
-const STYLE_PATH = 'genesys-webcomponents.css';
+const COMPONENT_ASSET_PREFIX = '__COMPONENT_ASSET_PREFIX__';
+const CHART_COMPONENT_ASSET_PREFIX = '__CHART_COMPONENT_ASSET_PREFIX__';
 
-const assetsOrigin = getAssetsOrigin();
-const SCRIPT_SRC = `${assetsOrigin}${ASSET_PREFIX}${SCRIPT_PATH}`;
-const STYLE_HREF = `${assetsOrigin}${ASSET_PREFIX}${STYLE_PATH}`;
-const fontOrigin = getFontOrigin();
-const FONTS = {
-  Urbanist: `${fontOrigin}/webfonts/urbanist.css`,
-  'Noto Sans': `${fontOrigin}/webfonts/noto-sans.css`
-};
+/**
+ * TODO
+ */
+export function loadSparkFonts(): Promise<void> {
+  const fontOrigin = getFontOrigin();
+  const FONTS = {
+    Urbanist: `${fontOrigin}/webfonts/urbanist.css`,
+    'Noto Sans': `${fontOrigin}/webfonts/noto-sans.css`
+  };
+
+  return checkAndLoadFonts(FONTS);
+}
 
 /**
  * Loads the spark web components, as well as required CSS and fonts from a
@@ -28,10 +35,35 @@ const FONTS = {
  * unexpected failures.
  */
 export function registerSparkComponents(): Promise<void> {
+  const SCRIPT_PATH = 'genesys-webcomponents.esm.js';
+  const STYLE_PATH = 'genesys-webcomponents.css';
+
+  const assetsOrigin = getComponentAssetsOrigin();
+  const SCRIPT_SRC = `${assetsOrigin}${COMPONENT_ASSET_PREFIX}${SCRIPT_PATH}`;
+  const STYLE_HREF = `${assetsOrigin}${COMPONENT_ASSET_PREFIX}${STYLE_PATH}`;
+
   return Promise.all([
     checkAndLoadScript(SCRIPT_SRC),
     checkAndLoadStyle(STYLE_HREF),
-    checkAndLoadFonts(FONTS)
+    loadSparkFonts()
+  ]).then();
+}
+
+/**
+ * TODO
+ */
+export function registerSparkChartComponents(): Promise<void> {
+  const SCRIPT_PATH = 'genesys-chart-webcomponents.esm.js';
+  const STYLE_PATH = 'genesys-chart-webcomponents.css';
+
+  const assetsOrigin = getChartComponentAssetsOrigin();
+  const SCRIPT_SRC = `${assetsOrigin}${CHART_COMPONENT_ASSET_PREFIX}${SCRIPT_PATH}`;
+  const STYLE_HREF = `${assetsOrigin}${CHART_COMPONENT_ASSET_PREFIX}${STYLE_PATH}`;
+
+  return Promise.all([
+    checkAndLoadScript(SCRIPT_SRC),
+    checkAndLoadStyle(STYLE_HREF),
+    loadSparkFonts()
   ]).then();
 }
 

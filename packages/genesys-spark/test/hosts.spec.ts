@@ -1,4 +1,8 @@
-import { getAssetsOrigin, getFontOrigin } from '../src/hosts';
+import {
+  getComponentAssetsOrigin,
+  getChartComponentAssetsOrigin,
+  getFontOrigin
+} from '../src/hosts';
 
 const NON_STANDARD_DOMAINS = [
   'inindca.com',
@@ -15,22 +19,46 @@ describe('The hosts module', () => {
     window.IS_DEV_MODE = false;
   });
 
-  describe('when determining asset domains', () => {
+  describe('when determining component asset domains', () => {
     it('Will return the correct domain for pages in a `pure.cloud` region', () => {
       setLocation('https://uis.region.pure.cloud/page');
-      expect(getAssetsOrigin()).toBe('https://app.region.pure.cloud');
+      expect(getComponentAssetsOrigin()).toBe('https://app.region.pure.cloud');
     });
 
     it('Will return a default domain for non-genesys hosted pages', () => {
       setLocation('https://www.example.com/page');
-      expect(getAssetsOrigin()).toBe('https://app.mypurecloud.com');
+      expect(getComponentAssetsOrigin()).toBe('https://app.mypurecloud.com');
     });
 
     NON_STANDARD_DOMAINS.forEach(domain => {
       const withSubDomain = `https://dummySubdomain.${domain}/page`;
       it(`Will recognize ${withSubDomain} as a Genesys domain`, () => {
         setLocation(withSubDomain);
-        expect(getAssetsOrigin()).toBe(`https://app.${domain}`);
+        expect(getComponentAssetsOrigin()).toBe(`https://app.${domain}`);
+      });
+    });
+  });
+
+  describe('when determining chart component asset domains', () => {
+    it('Will return the correct domain for pages in a `pure.cloud` region', () => {
+      setLocation('https://uis.region.pure.cloud/page');
+      expect(getChartComponentAssetsOrigin()).toBe(
+        'https://app.region.pure.cloud'
+      );
+    });
+
+    it('Will return a default domain for non-genesys hosted pages', () => {
+      setLocation('https://www.example.com/page');
+      expect(getChartComponentAssetsOrigin()).toBe(
+        'https://app.mypurecloud.com'
+      );
+    });
+
+    NON_STANDARD_DOMAINS.forEach(domain => {
+      const withSubDomain = `https://dummySubdomain.${domain}/page`;
+      it(`Will recognize ${withSubDomain} as a Genesys domain`, () => {
+        setLocation(withSubDomain);
+        expect(getChartComponentAssetsOrigin()).toBe(`https://app.${domain}`);
       });
     });
   });

@@ -11,6 +11,7 @@
     "dev": "run-pty start.json",
     "dev.examples": "npm run dev --workspace=web-apps/genesys-spark-examples",
     "dev.gsc": "npm run dev --workspace=packages/genesys-spark-components",
+    "dev.gscc": "npm run dev --workspace=packages/genesys-spark-chart-components",
     "dev.spark": "npm run dev --workspace=packages/genesys-spark",
     "eslint.root": "eslint --fix .",
     "eslint.workspaces": "npm run eslint --workspaces --if-present",
@@ -43,6 +44,7 @@
   "workspaces": [
     "./packages/genesys-spark-tokens",
     "./packages/genesys-spark-components",
+    "./packages/genesys-spark-chart-components",
     "./packages/*",
     "./playgrounds/*",
     "./shared-configs/*",
