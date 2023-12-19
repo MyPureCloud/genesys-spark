@@ -53,6 +53,16 @@
     outline-offset: -2px;
   }
 
+  :host(.gux-show-subtext) {
+    place-content: stretch flex-start;
+
+    .gux-option-text {
+      p {
+        margin: 0;
+      }
+    }
+  }
+
   :host(:hover:not(:disabled)) {
     background: var(--gse-ui-menu-option-hover-backgroundColor);
   }

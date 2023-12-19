@@ -34,6 +34,9 @@ export class GuxOptionMulti {
   value: string;
 
   @Prop()
+  subtext: string;
+
+  @Prop()
   active: boolean = false;
 
   @Prop({ mutable: true })
@@ -118,6 +121,33 @@ export class GuxOptionMulti {
     }
   }
 
+  private renderText(): JSX.Element {
+    // The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text.
+    // This attribute is required because we need to get the slotted text and exclude the screen reader text.
+    if (this.subtext) {
+      return (
+        <div class="gux-option-text">
+          <gux-truncate
+            gux-slot-container
+            ref={el => (this.truncateElement = el)}
+          >
+            <slot />
+          </gux-truncate>
+          <p>{this.subtext}</p>
+        </div>
+      ) as JSX.Element;
+    } else {
+      return (
+        <gux-truncate
+          gux-slot-container
+          ref={el => (this.truncateElement = el)}
+        >
+          <slot />
+        </gux-truncate>
+      ) as JSX.Element;
+    }
+  }
+
   render(): JSX.Element {
     return (
       <Host
@@ -126,21 +156,14 @@ export class GuxOptionMulti {
           'gux-active': this.active,
           'gux-disabled': this.disabled,
           'gux-filtered': this.filtered,
-          'gux-selected': this.selected
+          'gux-selected': this.selected,
+          'gux-show-subtext': !!this.subtext
         }}
         aria-selected={this.selected.toString()}
         aria-disabled={this.disabled.toString()}
       >
         {this.renderSVGCheckbox()}
-        {/* The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text.
-        This attribute is required because we need to get the slotted text and exclude the screen reader text. */}
-        <gux-truncate
-          gux-slot-container
-          ref={el => (this.truncateElement = el)}
-        >
-          <slot />
-        </gux-truncate>
-
+        {this.renderText()}
         {this.renderCustomOptionInstructions()}
       </Host>
     ) as JSX.Element;

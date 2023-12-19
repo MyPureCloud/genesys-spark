@@ -20,6 +20,9 @@ export class GuxOption {
   value: string;
 
   @Prop()
+  subtext: string;
+
+  @Prop()
   active: boolean = false;
 
   @Prop()
@@ -52,6 +55,25 @@ export class GuxOption {
     return this.selected ? 'true' : 'false';
   }
 
+  private renderText(): JSX.Element {
+    if (this.subtext) {
+      return (
+        <div class="gux-option-text">
+          <gux-truncate ref={el => (this.truncateElement = el)}>
+            <slot />
+          </gux-truncate>
+          <p>{this.subtext}</p>
+        </div>
+      ) as JSX.Element;
+    } else {
+      return (
+        <gux-truncate ref={el => (this.truncateElement = el)}>
+          <slot />
+        </gux-truncate>
+      ) as JSX.Element;
+    }
+  }
+
   render(): JSX.Element {
     return (
       <Host
@@ -60,14 +82,13 @@ export class GuxOption {
           'gux-active': this.active,
           'gux-disabled': this.disabled,
           'gux-filtered': this.filtered,
-          'gux-selected': this.selected
+          'gux-selected': this.selected,
+          'gux-show-subtext': !!this.subtext
         }}
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}
       >
-        <gux-truncate ref={el => (this.truncateElement = el)}>
-          <slot />
-        </gux-truncate>
+        {this.renderText()}
       </Host>
     ) as JSX.Element;
   }

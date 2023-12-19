@@ -1,5 +1,11 @@
 <h1>gux-listbox</h1>
 <form onchange="notify(event)" oninput="notify(event)">
+  <h3>Subtext Test</h3>
+  <gux-listbox value="b" aria-label="Animals">
+    <gux-option value="a" subtext="Subtext">Ant </gux-option>
+    <gux-option value="b" subtext="Subtext">Bat</gux-option>
+  </gux-listbox>
+
   <h3>Typical</h3>
   <gux-listbox value="b" aria-label="Animals">
     <gux-option value="a" disabled>Ant</gux-option>

@@ -29,6 +29,9 @@ export class GuxOptionIcon {
   value: string;
 
   @Prop()
+  subtext: string;
+
+  @Prop()
   iconName: string;
 
   @Prop()
@@ -82,6 +85,25 @@ export class GuxOptionIcon {
     return this.selected ? 'true' : 'false';
   }
 
+  private renderText(): JSX.Element {
+    if (this.subtext) {
+      return (
+        <div class="gux-option-text">
+          <gux-truncate ref={el => (this.truncateElement = el)}>
+            <slot />
+          </gux-truncate>
+          <p>{this.subtext}</p>
+        </div>
+      ) as JSX.Element;
+    } else {
+      return (
+        <gux-truncate ref={el => (this.truncateElement = el)}>
+          <slot />
+        </gux-truncate>
+      ) as JSX.Element;
+    }
+  }
+
   render(): JSX.Element {
     let iconStyle = null;
     // If the icon color is set and we don't have a background highlight that
@@ -98,7 +120,8 @@ export class GuxOptionIcon {
           'gux-disabled': this.disabled,
           'gux-filtered': this.filtered,
           'gux-hovered': this.hovered,
-          'gux-selected': this.selected
+          'gux-selected': this.selected,
+          'gux-show-subtext': !!this.subtext
         }}
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}
@@ -109,9 +132,7 @@ export class GuxOptionIcon {
           icon-name={this.iconName}
           style={iconStyle}
         ></gux-icon>
-        <gux-truncate ref={el => (this.truncateElement = el)}>
-          <slot />
-        </gux-truncate>
+        {this.renderText()}
       </Host>
     ) as JSX.Element;
   }
