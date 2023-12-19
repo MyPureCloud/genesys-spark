@@ -30,5 +30,4 @@ export interface ListboxOptionElement extends HTMLElement {
   filtered: boolean;
   selected: boolean;
   value: string;
-  subtext: string;
 }

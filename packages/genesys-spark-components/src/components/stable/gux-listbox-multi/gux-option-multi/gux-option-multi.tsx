@@ -7,12 +7,14 @@ import {
   Host,
   JSX,
   Prop,
+  State,
   Watch
 } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot - text
@@ -57,6 +59,9 @@ export class GuxOptionMulti {
   @Event()
   internalselectcustomoption: EventEmitter<string>;
 
+  @State()
+  private hasSubtext: boolean = false;
+
   @Watch('selected')
   emitRemoveCustomOption() {
     if (!this.selected && this.custom) {
@@ -78,6 +83,7 @@ export class GuxOptionMulti {
     if (this.custom) {
       this.internalselectcustomoption.emit(this.value);
     }
+    this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
   // SVGs must be in DOM for tokenization to work
@@ -133,7 +139,9 @@ export class GuxOptionMulti {
           >
             <slot />
           </gux-truncate>
-          <p>{this.subtext}</p>
+          <span>
+            <slot name="subtext"></slot>
+          </span>
         </div>
       ) as JSX.Element;
     } else {
@@ -157,7 +165,7 @@ export class GuxOptionMulti {
           'gux-disabled': this.disabled,
           'gux-filtered': this.filtered,
           'gux-selected': this.selected,
-          'gux-show-subtext': !!this.subtext
+          'gux-show-subtext': this.hasSubtext
         }}
         aria-selected={this.selected.toString()}
         aria-disabled={this.disabled.toString()}

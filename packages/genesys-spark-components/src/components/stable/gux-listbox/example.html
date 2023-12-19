@@ -2,8 +2,8 @@
 <form onchange="notify(event)" oninput="notify(event)">
   <h3>Subtext Test</h3>
   <gux-listbox value="b" aria-label="Animals">
-    <gux-option value="a" subtext="Subtext">Ant </gux-option>
-    <gux-option value="b" subtext="Subtext">Bat</gux-option>
+    <gux-option value="a">Ant <span slot="subtext">Subtext</span></gux-option>
+    <gux-option value="b">Bat <span slot="subtext">Subtext</span></gux-option>
   </gux-listbox>
 
   <h3>Typical</h3>

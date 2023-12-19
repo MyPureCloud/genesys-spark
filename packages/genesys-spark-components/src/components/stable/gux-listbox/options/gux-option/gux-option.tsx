@@ -1,6 +1,16 @@
-import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Host,
+  JSX,
+  Prop,
+  State,
+  Watch
+} from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot - text
@@ -20,9 +30,6 @@ export class GuxOption {
   value: string;
 
   @Prop()
-  subtext: string;
-
-  @Prop()
   active: boolean = false;
 
   @Prop()
@@ -33,6 +40,9 @@ export class GuxOption {
 
   @Prop()
   filtered: boolean = false;
+
+  @State()
+  hasSubtext: boolean = false;
 
   @Watch('active')
   handleActive(active: boolean) {
@@ -45,6 +55,7 @@ export class GuxOption {
 
   componentWillLoad(): void {
     this.root.id = this.root.id || randomHTMLId('gux-option');
+    this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
   private getAriaSelected(): boolean | string {
@@ -56,13 +67,15 @@ export class GuxOption {
   }
 
   private renderText(): JSX.Element {
-    if (this.subtext) {
+    if (this.hasSubtext) {
       return (
         <div class="gux-option-text">
           <gux-truncate ref={el => (this.truncateElement = el)}>
             <slot />
           </gux-truncate>
-          <p>{this.subtext}</p>
+          <span>
+            <slot name="subtext"></slot>
+          </span>
         </div>
       ) as JSX.Element;
     } else {
@@ -83,7 +96,7 @@ export class GuxOption {
           'gux-disabled': this.disabled,
           'gux-filtered': this.filtered,
           'gux-selected': this.selected,
-          'gux-show-subtext': !!this.subtext
+          'gux-show-subtext': this.hasSubtext
         }}
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}
