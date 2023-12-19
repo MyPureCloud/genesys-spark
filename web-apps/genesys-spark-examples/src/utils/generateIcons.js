@@ -223,7 +223,7 @@ const icons = [
       'device-cellphone',
       'device-headphones',
       'device-laptop',
-      'device-pc',
+      // 'device-pc', GDS-2231 Hide device-pc icon
       'device-server',
       'device-tablet'
     ]
