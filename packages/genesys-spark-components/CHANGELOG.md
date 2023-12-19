@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.114.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.113.2...v3.114.0) (2023-12-19)
+
+
+### Features
+
+* **icon:** add 3 fa icons to gux-icon ([fd010fb](https://github.com/MyPureCloud/genesys-spark/commit/fd010fb3fcc94d37b29d9ca672c16f1c8be34834))
+
 ### [3.113.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.113.1...v3.113.2) (2023-12-14)
 
 
