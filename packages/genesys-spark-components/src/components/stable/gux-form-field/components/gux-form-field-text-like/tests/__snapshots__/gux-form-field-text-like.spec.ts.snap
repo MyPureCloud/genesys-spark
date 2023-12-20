@@ -581,6 +581,189 @@ exports[`gux-form-field-text-like #render label-position should render component
 </gux-form-field-text-like>
 `;
 
+exports[`gux-form-field-text-like #render loading should render component as expected (1) 1`] = `
+<gux-form-field-text-like>
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="prefix"></slot>
+            <slot name="input"></slot>
+            <slot name="suffix"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-text-like>
+`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (2) 1`] = `
+<gux-form-field-text-like loading="">
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="prefix"></slot>
+            <slot name="input"></slot>
+            <gux-radial-loading context="input"></gux-radial-loading>
+            <slot name="suffix"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-text-like>
+`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (3) 1`] = `
+<gux-form-field-text-like loading="true">
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="prefix"></slot>
+            <slot name="input"></slot>
+            <gux-radial-loading context="input"></gux-radial-loading>
+            <slot name="suffix"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-text-like>
+`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (4) 1`] = `
+<gux-form-field-text-like loading="false">
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="prefix"></slot>
+            <slot name="input"></slot>
+            <slot name="suffix"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-text-like>
+`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (5) 1`] = `
+<gux-form-field-text-like loading="">
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-disabled gux-input-container">
+            <slot name="prefix"></slot>
+            <slot name="input"></slot>
+            <gux-radial-loading context="input"></gux-radial-loading>
+            <slot name="suffix"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <input disabled="" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-text-like>
+`;
+
 exports[`gux-form-field-text-like #render prefix should render component as expected 1`] = `
 <gux-form-field-text-like>
   <mock:shadow-root>
