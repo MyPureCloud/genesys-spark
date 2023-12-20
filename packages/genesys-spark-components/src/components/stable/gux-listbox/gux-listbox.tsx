@@ -216,12 +216,6 @@ export class GuxListbox {
     this.allListboxOptionsFiltered =
       this.listboxOptions.filter(listboxOption => !listboxOption.filtered)
         .length === 0;
-
-    if (!this.allListboxOptionsFiltered && this.filter) {
-      setFirstOptionActive(this.root);
-    } else {
-      clearActiveOptions(this.root);
-    }
   }
 
   // The slot must always be rendered so onSlotchange can be called
