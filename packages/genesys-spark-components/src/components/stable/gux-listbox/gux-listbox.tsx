@@ -185,20 +185,24 @@ export class GuxListbox {
       this.selectedValues = this.value.split(',');
     }
 
-    const childrenArray = Array.from(this.root.children);
-    const options = [] as ListboxOptionElement[];
-    childrenArray.forEach(child => {
-      if (child.tagName === 'GUX-OPTION-GROUP') {
-        options.push(child.children as unknown as ListboxOptionElement);
-      } else {
-        options.push(child as unknown as ListboxOptionElement);
-      }
-    });
-    console.log(options);
+    const isGroupedList = Array.from(this.root.children).some(
+      child => child.tagName === 'GUX-OPTION-GROUP'
+    );
 
-    this.listboxOptions = Array.from(
-      this.root.children
-    ) as ListboxOptionElement[];
+    if (!isGroupedList) {
+      this.listboxOptions = Array.from(
+        this.root.children
+      ) as ListboxOptionElement[];
+    } else {
+      const groups = Array.from(this.root.children);
+      groups.forEach(child => {
+        const childOptions = Array.from(
+          child.children
+        ) as ListboxOptionElement[];
+        this.listboxOptions = childOptions;
+      });
+    }
+
     this.internallistboxoptionsupdated.emit();
   }
 
