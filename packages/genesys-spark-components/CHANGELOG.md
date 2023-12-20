@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.115.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.114.0...v3.115.0) (2023-12-20)
+
+
+### Features
+
+* **generateicons:** hide device-pc icon as first stage toward removing ([7c45431](https://github.com/MyPureCloud/genesys-spark/commit/7c4543164ed65ca6846f60f08c9c50fafeb9263a))
+* **generateicons:** hide icon with comment ([5f363b2](https://github.com/MyPureCloud/genesys-spark/commit/5f363b2d94b8072b96bfab177a6b7cff452ae0ce))
+* **icon:** add display icon updates to v3 ([d557f6e](https://github.com/MyPureCloud/genesys-spark/commit/d557f6e6b6fe7a020c07b1784315db42e5a6c40a))
+
 ## [3.114.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.113.2...v3.114.0) (2023-12-19)
 
 
