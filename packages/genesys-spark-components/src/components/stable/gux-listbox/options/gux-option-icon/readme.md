@@ -31,14 +31,14 @@
 
 ### Depends on
 
-- [gux-icon](../../../gux-icon)
 - [gux-truncate](../../../gux-truncate)
+- [gux-icon](../../../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-option-icon --> gux-icon
   gux-option-icon --> gux-truncate
+  gux-option-icon --> gux-icon
   gux-truncate --> gux-tooltip
   style gux-option-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -12,6 +12,7 @@
 | `disabled` | `disabled` |             | `boolean` | `false`     |
 | `filtered` | `filtered` |             | `boolean` | `false`     |
 | `selected` | `selected` |             | `boolean` | `false`     |
+| `subtext`  | `subtext`  |             | `string`  | `undefined` |
 | `value`    | `value`    |             | `string`  | `undefined` |
 
 

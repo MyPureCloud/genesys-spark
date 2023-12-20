@@ -69,7 +69,7 @@ export class GuxOption {
   private renderText(): JSX.Element {
     if (this.hasSubtext) {
       return (
-        <div class="gux-option-text">
+        <div class="gux-option-wrapper">
           <gux-truncate ref={el => (this.truncateElement = el)}>
             <slot />
           </gux-truncate>

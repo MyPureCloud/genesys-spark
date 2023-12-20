@@ -184,6 +184,18 @@ export class GuxListbox {
     if (this.value) {
       this.selectedValues = this.value.split(',');
     }
+
+    const childrenArray = Array.from(this.root.children);
+    const options = [] as ListboxOptionElement[];
+    childrenArray.forEach(child => {
+      if (child.tagName === 'GUX-OPTION-GROUP') {
+        options.push(child.children as unknown as ListboxOptionElement);
+      } else {
+        options.push(child as unknown as ListboxOptionElement);
+      }
+    });
+    console.log(options);
+
     this.listboxOptions = Array.from(
       this.root.children
     ) as ListboxOptionElement[];
