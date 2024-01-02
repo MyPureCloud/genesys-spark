@@ -195,11 +195,11 @@ export class GuxListbox {
       ) as ListboxOptionElement[];
     } else {
       const groups = Array.from(this.root.children);
-      groups.forEach(child => {
+      groups.map(child => {
         const childOptions = Array.from(
           child.children
         ) as ListboxOptionElement[];
-        this.listboxOptions = childOptions;
+        this.listboxOptions.push(...childOptions);
       });
     }
 

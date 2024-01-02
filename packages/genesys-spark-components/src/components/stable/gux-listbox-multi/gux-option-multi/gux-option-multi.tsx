@@ -36,9 +36,6 @@ export class GuxOptionMulti {
   value: string;
 
   @Prop()
-  subtext: string;
-
-  @Prop()
   active: boolean = false;
 
   @Prop({ mutable: true })
@@ -130,7 +127,7 @@ export class GuxOptionMulti {
   private renderText(): JSX.Element {
     // The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text.
     // This attribute is required because we need to get the slotted text and exclude the screen reader text.
-    if (this.subtext) {
+    if (this.hasSubtext) {
       return (
         <div class="gux-option-text">
           <gux-truncate
