@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  flex: 1 1 auto;
+  align-self: auto;
+}
+
+.gux-menu-option-group-title {
+  display: block;
+  padding: var(--gse-ui-menu-option-padding);
+
+  // TODO: Replace with real tokens
+  font-family: Urbanist, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  color: var(--ui-shared-typography-subtle, #626e84);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
