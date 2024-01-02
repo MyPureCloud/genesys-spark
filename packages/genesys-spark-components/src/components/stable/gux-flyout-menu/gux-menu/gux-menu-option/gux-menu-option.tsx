@@ -1,5 +1,14 @@
-import { Component, Element, h, JSX, Listen, Method } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  JSX,
+  Listen,
+  Method,
+  State
+} from '@stencil/core';
 
+import { hasSlot } from '@utils/dom/has-slot';
 import { menuNavigation } from '../gux-menu.common';
 
 /**
@@ -16,6 +25,13 @@ export class GuxMenuOption {
 
   @Element()
   private root: HTMLElement;
+
+  @State()
+  private hasSubtext: boolean = false;
+
+  componentWillLoad(): void {
+    this.hasSubtext = hasSlot(this.root, 'subtext');
+  }
 
   /**
    * Focus on the components button element
@@ -47,6 +63,27 @@ export class GuxMenuOption {
     }
   }
 
+  private renderText(): JSX.Element {
+    if (this.hasSubtext) {
+      return (
+        <div class="gux-menu-option-button-text-wrapper">
+          <span class="gux-menu-option-button-text">
+            <slot />
+          </span>
+          <span class="gux-menu-option-button-subtext">
+            <slot name="subtext" />
+          </span>
+        </div>
+      ) as JSX.Element;
+    } else {
+      return (
+        <span class="gux-menu-option-button-text">
+          <slot />
+        </span>
+      ) as JSX.Element;
+    }
+  }
+
   render(): JSX.Element {
     return (
       <button
@@ -57,9 +94,7 @@ export class GuxMenuOption {
         tabIndex={-1}
         ref={el => (this.buttonElement = el)}
       >
-        <span class="gux-menu-option-button-text">
-          <slot />
-        </span>
+        {this.renderText()}
       </button>
     ) as JSX.Element;
   }

@@ -27,5 +27,23 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+
+    .gux-menu-option-button-subtext {
+      display: block;
+      overflow-x: hidden;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px; /* 133.333% */
+      // TODO: Replace with proper tokens etc
+      color: var(--gse-ui-shared-typography-subtle);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .gux-menu-option-button-text-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
