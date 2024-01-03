@@ -1,35 +1,10 @@
 <h1>gux-flyout-menu</h1>
-<gux-flyout-menu onclick="notify(event)">
-  <span slot="target">Example Target Element</span>
-  <gux-menu slot="menu">
-    <gux-menu-group title="group title test">
-      <gux-menu-option
-        >Option OneA <span slot="subtext">Subtext</span></gux-menu-option
-      >
-      <gux-menu-option
-        >Option OneB <span slot="subtext">Subtext B</span></gux-menu-option
-      >
-      <gux-submenu label="Submenu Two">
-        <gux-menu-option>Option One</gux-menu-option>
-        <gux-menu-option>Option Two</gux-menu-option>
-        <gux-menu-option>Option Three</gux-menu-option>
-      </gux-submenu>
-    </gux-menu-group>
-    <gux-submenu label="Submenu Two">
+<div style="margin-bottom: 12px">
+  <gux-flyout-menu onclick="notify(event)">
+    <span slot="target">Example Target Element</span>
+    <gux-menu slot="menu">
       <gux-menu-option>Option One</gux-menu-option>
       <gux-submenu label="Submenu Two">
-        <gux-menu-option>Option One</gux-menu-option>
-        <gux-menu-option>Option Two</gux-menu-option>
-        <gux-menu-option>Option Three</gux-menu-option>
-      </gux-submenu>
-      <gux-menu-option>Option Three</gux-menu-option>
-    </gux-submenu>
-    <gux-menu-option>Option Three</gux-menu-option>
-    <gux-menu-option>Option Four</gux-menu-option>
-    <gux-submenu label="Submenu Five">
-      <gux-menu-option>Option One</gux-menu-option>
-      <gux-menu-option>Option Two</gux-menu-option>
-      <gux-submenu label="Submenu Three">
         <gux-menu-option>Option One</gux-menu-option>
         <gux-submenu label="Submenu Two">
           <gux-menu-option>Option One</gux-menu-option>
@@ -38,6 +13,52 @@
         </gux-submenu>
         <gux-menu-option>Option Three</gux-menu-option>
       </gux-submenu>
-    </gux-submenu>
-  </gux-menu>
-</gux-flyout-menu>
+      <gux-menu-option>Option Three</gux-menu-option>
+      <gux-menu-option>Option Four</gux-menu-option>
+      <gux-submenu label="Submenu Five">
+        <gux-menu-option>Option One</gux-menu-option>
+        <gux-menu-option>Option Two</gux-menu-option>
+        <gux-submenu label="Submenu Three">
+          <gux-menu-option>Option One</gux-menu-option>
+          <gux-submenu label="Submenu Two">
+            <gux-menu-option>Option One</gux-menu-option>
+            <gux-menu-option>Option Two</gux-menu-option>
+            <gux-menu-option>Option Three</gux-menu-option>
+          </gux-submenu>
+          <gux-menu-option>Option Three</gux-menu-option>
+        </gux-submenu>
+      </gux-submenu>
+    </gux-menu>
+  </gux-flyout-menu>
+</div>
+<div>
+  <gux-flyout-menu onclick="notify(event)">
+    <span slot="target">Example Target Element With Grouped Options</span>
+    <gux-menu slot="menu">
+      <gux-menu-group group-title="Group 1">
+        <gux-menu-option>Option One</gux-menu-option>
+        <gux-submenu label="Submenu Two">
+          <gux-menu-group group-title="SubGroup 1">
+            <gux-menu-option>Option One</gux-menu-option>
+            <gux-submenu label="Submenu Two">
+              <gux-menu-option>Option One</gux-menu-option>
+              <gux-menu-option>Option Two</gux-menu-option>
+              <gux-menu-option>Option Three</gux-menu-option>
+            </gux-submenu>
+          </gux-menu-group>
+          <gux-menu-option>Option Three</gux-menu-option>
+        </gux-submenu>
+        <gux-menu-option>Option Three</gux-menu-option>
+        <gux-menu-option>Option Four</gux-menu-option>
+      </gux-menu-group>
+      <gux-menu-group group-title="Group 2">
+        <gux-menu-option>Option Five</gux-menu-option>
+        <gux-menu-option>Option Six</gux-menu-option>
+      </gux-menu-group>
+      <gux-menu-group>
+        <gux-menu-option>Option Seven</gux-menu-option>
+        <gux-menu-option>Option Eight</gux-menu-option>
+      </gux-menu-group>
+    </gux-menu>
+  </gux-flyout-menu>
+</div>
