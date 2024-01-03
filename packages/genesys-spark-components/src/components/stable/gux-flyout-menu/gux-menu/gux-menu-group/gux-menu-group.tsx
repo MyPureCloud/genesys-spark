@@ -1,7 +1,7 @@
-import { Component, Host, JSX, Prop, h } from '@stencil/core';
+import { Component, Host, JSX, Prop, h, State, Element } from '@stencil/core';
 
 /**
- * @slot - text
+ * @slot - Group options
  */
 
 @Component({
@@ -9,23 +9,37 @@ import { Component, Host, JSX, Prop, h } from '@stencil/core';
   tag: 'gux-menu-group',
   shadow: true
 })
-export class GuxMenuOption {
-  @Prop()
-  title: string;
+export class GuxMenuGroup {
+  @Element()
+  root: HTMLElement;
 
   @Prop()
-  showDivider: boolean = true;
+  groupTitle: string;
+
+  @Prop()
+  divider: boolean = true;
+
+  @State()
+  hasTitle: boolean = false;
 
   private renderDivider(): JSX.Element {
-    if (this.showDivider) {
+    if (this.divider) {
       return (<gux-list-divider></gux-list-divider>) as JSX.Element;
+    }
+  }
+
+  private renderTitle(): JSX.Element {
+    if (this.groupTitle) {
+      return (
+        <span class="gux-menu-option-group-title">{this.groupTitle}</span>
+      ) as JSX.Element;
     }
   }
 
   render(): JSX.Element {
     return (
       <Host class="gux-menu-option-group" role="group">
-        <span class="gux-menu-option-group-title">{this.title}</span>
+        {this.renderTitle()}
         <slot />
         {this.renderDivider()}
       </Host>
