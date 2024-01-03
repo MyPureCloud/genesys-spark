@@ -2,10 +2,11 @@ groups:
   - name: core-ui
     reviewers: 2
     usernames:
+      - 321gillian
       - daragh-king-genesys
       - gavin-everett-genesys
+      - jason-evans-genesys
+      - jordanstith15
       - katie-bobbe-genesys
       - MattCheely
-      - jordanstith15
       - thomas-c-dillon
-      - jason-evans-genesys
