@@ -1,6 +1,10 @@
 import { Component, h, JSX, Prop, Element, Fragment } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
-import { GuxAvatarSize, GuxAvatarAccent } from './gux-avatar.types';
+import {
+  GuxAvatarStatus,
+  GuxAvatarSize,
+  GuxAvatarAccent
+} from './gux-avatar.types';
 import { hasSlot } from '@utils/dom/has-slot';
 
 /**
@@ -29,47 +33,73 @@ export class GuxAvatar {
   statusRing: boolean = false;
 
   @Prop()
-  initials: string;
+  name: string;
 
   @Prop()
   accent: GuxAvatarAccent = 'default';
 
   @Prop()
-  badge: GuxAvatarBadge;
+  badge: boolean = false;
 
   @Prop()
   interactive: boolean = false;
 
+  @Prop()
+  notifications: boolean = false;
+
   hasImageSlot: boolean;
+
+  private generateInitials(): string {
+    const nameArray = this.name.split(' ');
+    if (nameArray.length > 1) {
+      return nameArray[0].charAt(0) + nameArray[nameArray.length - 1].charAt(0);
+    }
+    return nameArray[0].charAt(0) + nameArray[0].charAt(1);
+  }
 
   private displayInnerContent(): JSX.Element | null {
     if (this.hasImageSlot) {
       return (<slot name="image"></slot>) as JSX.Element;
     }
-    return (<div class="initials">{this.initials}</div>) as JSX.Element;
+    return (
+      <div class="initials">{this.generateInitials()}</div>
+    ) as JSX.Element;
   }
 
   private displayBadge(): JSX.Element | null {
+    const displayedStatus = this.notifications ? 'notifications' : this.status;
     if (this.badge) {
       return (
         <div
           class={{
             'gux-avatar-badge': true,
-            [`${this.badge}`]: true,
+            [`${displayedStatus}`]: true,
             [`gux-${this.size}`]: true
           }}
         >
           <gux-icon
-            icon-name={this.getIcon(this.badge)}
-            screenreader-text={this.badge}
+            icon-name={this.getIcon(displayedStatus)}
+            screenreader-text={displayedStatus}
           ></gux-icon>
         </div>
       ) as JSX.Element;
     }
   }
 
-  private getIcon(accent: GuxAvatarBadge): string {
-    switch (accent) {
+  private getAccent(): string {
+    if (this.accent === 'auto') {
+      let hash = 0;
+      for (let i = 0; i < this.name.length; i++) {
+        hash += this.name.charCodeAt(i);
+      }
+      const accent = hash % 12;
+      return accent === 0 ? '12' : accent.toString();
+    }
+    return this.accent.toString();
+  }
+
+  private getIcon(status: GuxAvatarStatus): string {
+    switch (status) {
       case 'available':
         return 'fa/circle-check-solid';
       case 'break':
@@ -108,7 +138,7 @@ export class GuxAvatar {
           <div
             class={{
               content: true,
-              [`gux-accent-${this.accent}`]: true
+              [`gux-accent-${this.getAccent()}`]: true
             }}
           >
             {this.displayInnerContent()}

@@ -12,6 +12,7 @@ export type GuxAvatarAccent =
   | 'default'
   | 'add'
   | 'more'
+  | 'auto'
   | 1
   | 2
   | 3
