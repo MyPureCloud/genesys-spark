@@ -13,6 +13,7 @@ export type GuxAvatarAccent =
   | 'default'
   | 'add'
   | 'more'
+  | 'auto'
   | 1
   | 2
   | 3
@@ -25,12 +26,3 @@ export type GuxAvatarAccent =
   | 10
   | 11
   | 12;
-
-export type GuxAvatarBadge =
-  | 'available'
-  | 'break'
-  | 'busy'
-  | 'notifications'
-  | 'offline'
-  | 'out-of-office'
-  | 'queue';
