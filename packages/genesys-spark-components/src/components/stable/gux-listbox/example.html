@@ -33,4 +33,14 @@
     <gux-option id="cat" value="c">Cat</gux-option>
     <gux-option id="dog" value="d">Dog</gux-option>
   </gux-listbox>
+
+  <h3>Subtext on Options</h3>
+  <gux-listbox value="a" aria-label="Animals">
+    <gux-option value="a" disabled
+      >Ant <span slot="subtext">Very Small</span></gux-option
+    >
+    <gux-option value="b">Bat<span slot="subtext">Small</span></gux-option>
+    <gux-option value="c">Cat<span slot="subtext">Medium</span></gux-option>
+    <gux-option value="d">Dog<span slot="subtext">Large</span></gux-option>
+  </gux-listbox>
 </form>

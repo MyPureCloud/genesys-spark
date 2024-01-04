@@ -14,14 +14,14 @@ describe('gux-dropdown', () => {
       const html = `
       <gux-dropdown lang="en" value="j">
         <gux-listbox aria-label="Animals">
-          <gux-option value="a">Ant</gux-option>
+          <gux-option value="a">Ant<span slot="subtext">Small</span></gux-option>
           <gux-option value="b">Bat</gux-option>
           <gux-option value="c">Cat</gux-option>
           <gux-option value="d">Dog</gux-option>
           <gux-option value="e">Eel</gux-option>
           <gux-option value="f">Frog</gux-option>
           <gux-option value="g">Goat</gux-option>
-          <gux-option value="h">Horse</gux-option>
+          <gux-option value="h">Horse<span slot="subtext">Large</span></gux-option>
           <gux-option value="i">Ibis</gux-option>
         </gux-listbox>
       </gux-dropdown>
@@ -41,7 +41,7 @@ describe('gux-dropdown', () => {
           icon-name="user"
           icon-color="var(--gux-blue-60)"
           value="leonardo"
-          >Leonardo</gux-option-icon
+          >Leonardo<span slot="subtext">TMNT</span></gux-option-icon
         >
         <gux-option-icon icon-name="user" icon-color="#8452cf" value="donatello"
           >Donatello</gux-option-icon

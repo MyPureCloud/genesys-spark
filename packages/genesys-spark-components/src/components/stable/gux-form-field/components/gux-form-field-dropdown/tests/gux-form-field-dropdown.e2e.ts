@@ -29,7 +29,7 @@ describe('gux-form-field-dropdown', () => {
       <gux-form-field-dropdown>
       <gux-dropdown>
         <gux-listbox>
-          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="a" disabled>Ant<span slot="subtext">Small</span></gux-option>
           <gux-option value="b">Bat</gux-option>
           <gux-option value="c">Cat</gux-option>
         </gux-listbox>
@@ -70,7 +70,7 @@ describe('gux-form-field-dropdown', () => {
                 <gux-listbox>
                   <gux-option value="a" disabled>Ant</gux-option>
                   <gux-option value="b">Bat</gux-option>
-                  <gux-option value="c">Cat</gux-option>
+                  <gux-option value="c">Cat<span slot="subtext">Medium</span></gux-option>
                 </gux-listbox>
               </gux-dropdown>
               <label slot="label">Default</label>
@@ -116,7 +116,7 @@ describe('gux-form-field-dropdown', () => {
               <gux-listbox>
                 <gux-option value="a" disabled>Ant</gux-option>
                 <gux-option value="b">Bat</gux-option>
-                <gux-option value="c">Cat</gux-option>
+                <gux-option value="c">Cat<span slot="subtext">Medium</span></gux-option>
               </gux-listbox>
             </gux-dropdown>
             <label slot="label">This will be read by a screen reader</label>
@@ -167,7 +167,7 @@ describe('gux-form-field-dropdown', () => {
                 <gux-listbox-multi>
                   <gux-option-multi value="a" disabled>Ant</gux-option-multi>
                   <gux-option-multi value="b">Bat</gux-option-multi>
-                  <gux-option-multi value="c">Cat</gux-option-multi>
+                  <gux-option-multi value="c">Cat<span slot="subtext">Medium</span></gux-option-multi>
                 </gux-listbox-multi>
               </gux-dropdown-multi>
               <label slot="label">Default</label>
@@ -211,7 +211,7 @@ describe('gux-form-field-dropdown', () => {
               <gux-listbox-multi>
                 <gux-option-multi value="a" disabled>Ant</gux-option-multi>
                 <gux-option-multi value="b">Bat</gux-option-multi>
-                <gux-option-multi value="c">Cat</gux-option-multi>
+                <gux-option-multi value="c">Cat<span slot="subtext">Medium</span></gux-option-multi>
               </gux-listbox-multi>
             </gux-dropdown-multi>
             <label slot="label">Default</label>

@@ -5,8 +5,8 @@ testWithOptionType(
   'gux-option',
   `
 <gux-option value="a">Ant</gux-option>
-<gux-option value="b">Bear</gux-option>
-<gux-option value="be">Bee</gux-option>
+<gux-option value="b">Bear<span slot="subtext">Large</span></gux-option>
+<gux-option value="be">Bee<span slot="subtext">Small</span></gux-option>
 <gux-option value="c">Cat</gux-option>
 <gux-option value="">None</gux-option>
 
@@ -17,8 +17,8 @@ testWithOptionType(
   'gux-option-icon',
   `
 <gux-option-icon icon-name="user" value="a">Ant</gux-option-icon>
-<gux-option-icon icon-name="user" value="b">Bear</gux-option-icon>
-<gux-option-icon icon-name="user" value="be">Bee</gux-option-icon>
+<gux-option-icon icon-name="user" value="b">Bear<span slot="subtext">Large</span></gux-option-icon>
+<gux-option-icon icon-name="user" value="be">Bee<span slot="subtext">Small</span></gux-option-icon>
 <gux-option-icon icon-name="user" value="c">Cat</gux-option-icon>
 <gux-option-icon icon-name="user" value="">None</gux-option-icon>
 `
@@ -66,7 +66,7 @@ function testWithOptionType(optionType: string, listboxContent: string) {
 
         visibleItems = await unfilteredOptions(page, optionType);
         expect(visibleItems.length).toBe(2);
-        expect(visibleItems[0].textContent).toEqual('Bear');
+        expect(visibleItems[0].textContent).toContain('Bear');
       });
 
       it('does not filter items when filter type is custom', async () => {

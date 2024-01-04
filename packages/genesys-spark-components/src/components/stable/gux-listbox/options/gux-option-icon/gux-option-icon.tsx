@@ -6,10 +6,12 @@ import {
   JSX,
   Listen,
   Prop,
+  State,
   Watch
 } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot - text
@@ -52,6 +54,9 @@ export class GuxOptionIcon {
   @Prop({ mutable: true })
   hovered: boolean = false;
 
+  @State()
+  private hasSubtext: boolean = false;
+
   @Listen('mouseenter')
   onmouseenter() {
     this.hovered = true;
@@ -72,6 +77,7 @@ export class GuxOptionIcon {
 
   componentWillLoad(): void {
     this.root.id = this.root.id || randomHTMLId('gux-option-icon');
+    this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
   private getAriaSelected(): boolean | string {
@@ -80,6 +86,27 @@ export class GuxOptionIcon {
     }
 
     return this.selected ? 'true' : 'false';
+  }
+
+  private renderText(): JSX.Element {
+    if (this.hasSubtext) {
+      return (
+        <div class="gux-option-text">
+          <gux-truncate ref={el => (this.truncateElement = el)}>
+            <slot />
+          </gux-truncate>
+          <div class="gux-subtext">
+            <slot name="subtext"></slot>
+          </div>
+        </div>
+      ) as JSX.Element;
+    } else {
+      return (
+        <gux-truncate ref={el => (this.truncateElement = el)}>
+          <slot />
+        </gux-truncate>
+      ) as JSX.Element;
+    }
   }
 
   render(): JSX.Element {
@@ -98,7 +125,8 @@ export class GuxOptionIcon {
           'gux-disabled': this.disabled,
           'gux-filtered': this.filtered,
           'gux-hovered': this.hovered,
-          'gux-selected': this.selected
+          'gux-selected': this.selected,
+          'gux-show-subtext': this.hasSubtext
         }}
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}
@@ -109,9 +137,7 @@ export class GuxOptionIcon {
           icon-name={this.iconName}
           style={iconStyle}
         ></gux-icon>
-        <gux-truncate ref={el => (this.truncateElement = el)}>
-          <slot />
-        </gux-truncate>
+        {this.renderText()}
       </Host>
     ) as JSX.Element;
   }
