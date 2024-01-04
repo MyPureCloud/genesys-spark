@@ -10,7 +10,7 @@ const html = `
   <gux-listbox-multi aria-label="Animals">
     <gux-option-multi value="a" disabled>Ant</gux-option-multi>
     <gux-option-multi value="b">Bat</gux-option-multi>
-    <gux-option-multi value="c">Cat</gux-option-multi>
+    <gux-option-multi value="c">Cat<span slot="subtext">Medium</span></gux-option-multi>
   </gux-listbox-multi>
 </gux-dropdown-multi>
 `;

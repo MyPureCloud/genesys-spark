@@ -7,12 +7,14 @@ import {
   Host,
   JSX,
   Prop,
+  State,
   Watch
 } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot - text
@@ -48,6 +50,9 @@ export class GuxOptionMulti {
   @Prop()
   custom: boolean = false;
 
+  @State()
+  private hasSubtext: boolean = false;
+
   @Event()
   guxremovecustomoption: EventEmitter<string>;
 
@@ -75,6 +80,7 @@ export class GuxOptionMulti {
     if (this.custom) {
       this.internalselectcustomoption.emit(this.value);
     }
+    this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
   // SVGs must be in DOM for tokenization to work
@@ -118,6 +124,35 @@ export class GuxOptionMulti {
     }
   }
 
+  private renderText(): JSX.Element {
+    // The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text.
+    // This attribute is required because we need to get the slotted text and exclude the screen reader text.
+    if (this.hasSubtext) {
+      return (
+        <div class="gux-option-text">
+          <gux-truncate
+            gux-slot-container
+            ref={el => (this.truncateElement = el)}
+          >
+            <slot />
+          </gux-truncate>
+          <div class="gux-subtext">
+            <slot name="subtext"></slot>
+          </div>
+        </div>
+      ) as JSX.Element;
+    } else {
+      return (
+        <gux-truncate
+          gux-slot-container
+          ref={el => (this.truncateElement = el)}
+        >
+          <slot />
+        </gux-truncate>
+      ) as JSX.Element;
+    }
+  }
+
   render(): JSX.Element {
     return (
       <Host
@@ -126,21 +161,14 @@ export class GuxOptionMulti {
           'gux-active': this.active,
           'gux-disabled': this.disabled,
           'gux-filtered': this.filtered,
-          'gux-selected': this.selected
+          'gux-selected': this.selected,
+          'gux-show-subtext': this.hasSubtext
         }}
         aria-selected={this.selected.toString()}
         aria-disabled={this.disabled.toString()}
       >
         {this.renderSVGCheckbox()}
-        {/* The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text.
-        This attribute is required because we need to get the slotted text and exclude the screen reader text. */}
-        <gux-truncate
-          gux-slot-container
-          ref={el => (this.truncateElement = el)}
-        >
-          <slot />
-        </gux-truncate>
-
+        {this.renderText()}
         {this.renderCustomOptionInstructions()}
       </Host>
     ) as JSX.Element;

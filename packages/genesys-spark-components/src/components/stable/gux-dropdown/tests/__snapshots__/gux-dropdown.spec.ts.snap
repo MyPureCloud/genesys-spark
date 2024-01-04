@@ -21,13 +21,21 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
     <mock:shadow-root>
       <slot></slot>
     </mock:shadow-root>
-    <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="a">
+    <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="a">
       <mock:shadow-root>
-        <gux-truncate>
-          <slot></slot>
-        </gux-truncate>
+        <div class="gux-option-wrapper">
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+          <div class="gux-subtext">
+            <slot name="subtext"></slot>
+          </div>
+        </div>
       </mock:shadow-root>
       Ant
+      <span slot="subtext">
+        Small
+      </span>
     </gux-option>
     <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
       <mock:shadow-root>
@@ -77,13 +85,21 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
       </mock:shadow-root>
       Goat
     </gux-option>
-    <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="h">
+    <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="h">
       <mock:shadow-root>
-        <gux-truncate>
-          <slot></slot>
-        </gux-truncate>
+        <div class="gux-option-wrapper">
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+          <div class="gux-subtext">
+            <slot name="subtext"></slot>
+          </div>
+        </div>
       </mock:shadow-root>
       Horse
+      <span slot="subtext">
+        Large
+      </span>
     </gux-option>
     <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="i">
       <mock:shadow-root>
@@ -118,14 +134,22 @@ exports[`gux-dropdown #render should render as expected with gux-option-icon 1`]
     <mock:shadow-root>
       <slot></slot>
     </mock:shadow-root>
-    <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="var(--gux-blue-60)" icon-name="user" id="gux-option-icon-i" role="option" value="leonardo">
+    <gux-option-icon aria-disabled="false" aria-selected="false" class="gux-show-subtext" icon-color="var(--gux-blue-60)" icon-name="user" id="gux-option-icon-i" role="option" value="leonardo">
       <mock:shadow-root>
         <gux-icon decorative="" icon-name="user" style="color: var(--gux-blue-60);"></gux-icon>
-        <gux-truncate>
-          <slot></slot>
-        </gux-truncate>
+        <div class="gux-option-text">
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+          <div class="gux-subtext">
+            <slot name="subtext"></slot>
+          </div>
+        </div>
       </mock:shadow-root>
       Leonardo
+      <span slot="subtext">
+        TMNT
+      </span>
     </gux-option-icon>
     <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#8452cf" icon-name="user" id="gux-option-icon-i" role="option" value="donatello">
       <mock:shadow-root>

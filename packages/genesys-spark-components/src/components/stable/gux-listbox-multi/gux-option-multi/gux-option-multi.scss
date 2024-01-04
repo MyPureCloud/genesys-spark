@@ -66,6 +66,22 @@
     outline-offset: -2px;
   }
 
+  &:host(.gux-show-subtext) {
+    place-content: stretch flex-start;
+    height: auto;
+
+    .gux-option-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gux-subtext {
+      height: var(--gse-ui-groupedMenu-subtext-height);
+      font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
+      color: var(--gse-ui-menu-groupedMenu-subtext-foregroundColor);
+    }
+  }
+
   &:host(:hover:not([disabled])) {
     background-color: var(--gse-ui-menu-option-hover-backgroundColor);
 
