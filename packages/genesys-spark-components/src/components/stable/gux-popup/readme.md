@@ -7,12 +7,13 @@
 
 ## Properties
 
-| Property            | Attribute             | Description                                                            | Type      | Default |
-| ------------------- | --------------------- | ---------------------------------------------------------------------- | --------- | ------- |
-| `disabled`          | `disabled`            |                                                                        | `boolean` | `false` |
-| `exceedTargetWidth` | `exceed-target-width` | set if parent component design allows for popup exceeding target width | `boolean` | `false` |
-| `expanded`          | `expanded`            |                                                                        | `boolean` | `false` |
-| `offset`            | `offset`              | Number of pixels the popup is offset from the target.                  | `number`  | `2`     |
+| Property            | Attribute             | Description                                                            | Type                                                                                                                                                                 | Default          |
+| ------------------- | --------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `disabled`          | `disabled`            |                                                                        | `boolean`                                                                                                                                                            | `false`          |
+| `exceedTargetWidth` | `exceed-target-width` | set if parent component design allows for popup exceeding target width | `boolean`                                                                                                                                                            | `false`          |
+| `expanded`          | `expanded`            |                                                                        | `boolean`                                                                                                                                                            | `false`          |
+| `offset`            | `offset`              | Number of pixels the popup is offset from the target.                  | `number`                                                                                                                                                             | `2`              |
+| `placement`         | `placement`           | Placement of the tooltip. Default is bottom-start                      | `"bottom" \| "bottom-end" \| "bottom-start" \| "left" \| "left-end" \| "left-start" \| "right" \| "right-end" \| "right-start" \| "top" \| "top-end" \| "top-start"` | `'bottom-start'` |
 
 
 ## Events
