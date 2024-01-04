@@ -74,7 +74,7 @@
     "@stencil/utils": "0.0.5",
     "@types/google-libphonenumber": "^7.4.29",
     "@types/jest": "^27.5.2",
-    "@types/new-relic-browser": "^0.1118.2",
+    "@types/new-relic-browser": "^1.230.2",
     "@types/puppeteer": "^5.4.7",
     "@types/resize-observer-browser": "^0.1.9",
     "@types/sortablejs": "^1.15.4",
