@@ -191,6 +191,7 @@ export class GuxActionButton {
         <gux-popup
           expanded={this.isOpen}
           disabled={this.disabled}
+          placement="bottom-end"
           exceed-target-width
         >
           <div slot="target" class="gux-action-button-container">
