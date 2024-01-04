@@ -33,4 +33,23 @@
     <gux-option id="cat" value="c">Cat</gux-option>
     <gux-option id="dog" value="d">Dog</gux-option>
   </gux-listbox>
+
+  <h3>Grouped</h3>
+  <gux-listbox aria-label="Animals">
+    <gux-option-group>
+      <span slot="title">Group 1</span>
+      <gux-option id="ant" value="a">Ant</gux-option>
+      <gux-option id="bat" value="b">Bat</gux-option>
+      <gux-option id="cat" value="c">Cat</gux-option>
+      <gux-option id="dog" value="d">Dog</gux-option>
+    </gux-option-group>
+    <gux-option-group>
+      <span slot="title">Group 2</span>
+      <gux-option value="e" disabled>Eel</gux-option>
+      <gux-option value="f">Frog</gux-option>
+      <gux-option value="g">Goat</gux-option>
+      <gux-option value="h" disabled>Horse</gux-option>
+      <gux-option value="i" disabled>Ibis</gux-option>
+    </gux-option-group>
+  </gux-listbox>
 </form>

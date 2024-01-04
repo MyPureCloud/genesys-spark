@@ -1,0 +1,15 @@
+@use '../../../../style/typography.scss';
+
+:host {
+  display: block;
+  flex: 1 1 auto;
+  align-self: auto;
+}
+
+.gux-option-group-title {
+  display: block;
+  padding: var(--gse-ui-menu-groupedMenu-title-padding);
+  color: var(--gse-ui-menu-groupedMenu-title-foregroundColor);
+
+  @include typography.heading-overline;
+}
