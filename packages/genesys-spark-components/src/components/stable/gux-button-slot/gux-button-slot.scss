@@ -20,7 +20,7 @@
   width: 100%;
   min-width: var(--gse-ui-button-icon-only-width);
   height: var(--gse-ui-button-default-height);
-  padding: var(--gse-ui-button-padding);
+  padding: var(--gse-ui-button-default-padding);
   overflow: hidden;
   color: var(--gse-ui-button-secondary-default-foregroundColor);
   text-overflow: ellipsis;
@@ -36,7 +36,7 @@
   ::slotted(input[type='button']),
   ::slotted(input[type='submit']),
   ::slotted(button) {
-    padding: var(--gse-ui-button-paddingIconOnly);
+    padding: var(--gse-ui-button-default-paddingIconOnly);
   }
 }
 
