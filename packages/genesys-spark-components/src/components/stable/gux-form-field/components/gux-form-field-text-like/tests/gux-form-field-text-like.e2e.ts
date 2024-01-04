@@ -145,6 +145,40 @@ describe('gux-form-field-text-like', () => {
       });
     });
 
+    describe('loading', () => {
+      [
+        { componentAttribute: '', inputAttribute: '' },
+        { componentAttribute: 'loading', inputAttribute: '' },
+        { componentAttribute: 'loading="true"', inputAttribute: '' },
+        { componentAttribute: 'loading="false"', inputAttribute: '' },
+        { componentAttribute: 'loading', inputAttribute: 'disabled' }
+      ].forEach(({ componentAttribute, inputAttribute }, index) => {
+        const html = `
+          <gux-form-field-text-like lang="en" ${componentAttribute}>
+            <input slot="input" type="text" value="Sample text" ${inputAttribute}/>
+            <label slot="label">Label</label>
+          </gux-form-field-text-like>
+        `;
+
+        it(`should render component as expected (${index + 1})`, async () => {
+          const page = await newNonrandomE2EPage({ html });
+          const element = await page.find('gux-form-field-text-like');
+          const elementShadowDom = await element.find(
+            'pierce/.gux-form-field-container'
+          );
+
+          expect(element.outerHTML).toMatchSnapshot();
+          expect(elementShadowDom).toMatchSnapshot();
+        });
+
+        it(`should be accessible (${index + 1})`, async () => {
+          const page = await newSparkE2EPage({ html });
+
+          await a11yCheck(page, axeExclusions);
+        });
+      });
+    });
+
     describe('help', () => {
       const html = `
         <gux-form-field-text-like>

@@ -72,6 +72,28 @@ describe('gux-form-field-text-like', () => {
       });
     });
 
+    describe('loading', () => {
+      [
+        { componentAttribute: '', inputAttribute: '' },
+        { componentAttribute: 'loading', inputAttribute: '' },
+        { componentAttribute: 'loading="true"', inputAttribute: '' },
+        { componentAttribute: 'loading="false"', inputAttribute: '' },
+        { componentAttribute: 'loading', inputAttribute: 'disabled' }
+      ].forEach(({ componentAttribute, inputAttribute }, index) => {
+        it(`should render component as expected (${index + 1})`, async () => {
+          const html = `
+            <gux-form-field-text-like ${componentAttribute}>
+              <input slot="input" type="text" value="Sample text" ${inputAttribute}/>
+              <label slot="label">Label</label>
+            </gux-form-field-text-like>
+          `;
+          const page = await newSpecPage({ components, html, language });
+
+          expect(page.root).toMatchSnapshot();
+        });
+      });
+    });
+
     describe('help', () => {
       it('should render component as expected', async () => {
         const html = `
