@@ -456,6 +456,27 @@
   <gux-dropdown-multi id="loading-2" filter-type="starts-with" loading>
     <gux-listbox-multi aria-label="Animals"> </gux-listbox-multi>
   </gux-dropdown-multi>
+
+  <h2>Grouped Options</h2>
+  <gux-dropdown-multi>
+    <gux-listbox-multi aria-label="Animals">
+      <gux-option-group>
+        <span slot="title">Group 1</span>
+        <gux-option-multi value="a">Ant</gux-option-multi>
+        <gux-option-multi value="b">Bat</gux-option-multi>
+        <gux-option-multi value="c">Cat</gux-option-multi>
+        <gux-option-multi value="d">Dog</gux-option-multi>
+      </gux-option-group>
+      <gux-option-group>
+        <span slot="title">Group 2</span>
+        <gux-option-multi value="e">Eel</gux-option-multi>
+        <gux-option-multi value="f" disabled>Frog</gux-option-multi>
+        <gux-option-multi value="g">Goat</gux-option-multi>
+        <gux-option-multi value="h">Horse</gux-option-multi>
+        <gux-option-multi value="i">Ibis</gux-option-multi>
+      </gux-option-group>
+    </gux-listbox-multi>
+  </gux-dropdown-multi>
 </form>
 
 <style

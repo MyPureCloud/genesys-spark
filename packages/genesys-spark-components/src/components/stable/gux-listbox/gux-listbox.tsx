@@ -19,6 +19,7 @@ import {
   hasActiveOption,
   hasPreviousOption,
   hasNextOption,
+  isOptionGroup,
   onClickedOption,
   setFirstOptionActive,
   setInitialActiveOption,
@@ -184,9 +185,20 @@ export class GuxListbox {
     if (this.value) {
       this.selectedValues = this.value.split(',');
     }
-    this.listboxOptions = Array.from(
-      this.root.children
-    ) as ListboxOptionElement[];
+
+    const options: ListboxOptionElement[] = [];
+    const listChildren = Array.from(this.root.children);
+    listChildren.map(child => {
+      if (isOptionGroup(child)) {
+        const childOptions = Array.from(
+          child.children
+        ) as ListboxOptionElement[];
+        return options.push(...childOptions);
+      }
+      return options.push(child as ListboxOptionElement);
+    });
+    this.listboxOptions = [...options];
+
     this.internallistboxoptionsupdated.emit();
   }
 
@@ -213,6 +225,7 @@ export class GuxListbox {
         listboxOption.filtered = !matchOption(listboxOption, this.filter);
       }
     });
+
     this.allListboxOptionsFiltered =
       this.listboxOptions.filter(listboxOption => !listboxOption.filtered)
         .length === 0;
