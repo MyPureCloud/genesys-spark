@@ -1,7 +1,28 @@
 <h1>gux-dropdown</h1>
 <form onchange="notify(event)" oninput="notify(event)">
   <h2>Filterable long list: filter by start of option</h2>
-  <gux-dropdown filter-type="starts-with" placeholder="Select a country">
+
+  <h2>Grouped</h2>
+  <gux-dropdown>
+    <gux-listbox aria-label="Animals">
+      <gux-option-group>
+        <span slot="title">Group 1</span>
+        <gux-option value="a" disabled>Ant</gux-option>
+      </gux-option-group>
+      <gux-option-group>
+        <span slot="title">Group 2</span>
+        <gux-option value="e">Eel</gux-option>
+        <gux-option
+          value="
+      f"
+          >Frog</gux-option
+        >
+        <gux-option value="g">Goat</gux-option>
+      </gux-option-group>
+      <gux-option value="h">Horse</gux-option>
+    </gux-listbox>
+  </gux-dropdown>
+  <!-- <gux-dropdown filter-type="starts-with" placeholder="Select a country">
     <gux-listbox aria-label="Countries">
       <gux-option value="AFG">Afghanistan</gux-option>
       <gux-option value="ALA">Åland Islands</gux-option>
@@ -483,7 +504,7 @@
   <h3>Loading a filterable list</h3>
   <gux-dropdown id="loading-2" filter-type="starts-with" loading>
     <gux-listbox aria-label="Animals"> </gux-listbox>
-  </gux-dropdown>
+  </gux-dropdown> -->
 </form>
 
 <style

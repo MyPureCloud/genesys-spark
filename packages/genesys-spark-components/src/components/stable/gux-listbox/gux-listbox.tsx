@@ -184,9 +184,24 @@ export class GuxListbox {
     if (this.value) {
       this.selectedValues = this.value.split(',');
     }
-    this.listboxOptions = Array.from(
-      this.root.children
-    ) as ListboxOptionElement[];
+    const isGroupedList = Array.from(this.root.children).some(
+      child => child.tagName === 'GUX-OPTION-GROUP'
+    );
+
+    if (!isGroupedList) {
+      this.listboxOptions = Array.from(
+        this.root.children
+      ) as ListboxOptionElement[];
+    } else {
+      const groups = Array.from(this.root.children);
+      groups.map(child => {
+        const childOptions = Array.from(
+          child.children
+        ) as ListboxOptionElement[];
+        this.listboxOptions.push(...childOptions);
+      });
+    }
+
     this.internallistboxoptionsupdated.emit();
   }
 
