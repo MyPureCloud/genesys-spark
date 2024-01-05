@@ -5,9 +5,14 @@ gux-table {
 
   &.gux-fixed-first-column {
     table,
-    thead,
+    th:first-child {
+      background-color: var(
+        --gse-ui-dataTableItems-header-fixedBackgroundColor
+      );
+    }
+
+    table,
     th:first-child,
-    tbody,
     td:first-child {
       position: sticky;
       left: 0;
@@ -15,13 +20,11 @@ gux-table {
     }
 
     table,
-    tbody,
     tr:nth-child(even) td:first-child {
       background-color: var(--gse-ui-dataTableItems-cell-altBackgroundColor);
     }
 
     table,
-    tbody,
     tr:nth-child(odd) td:first-child {
       background-color: var(
         --gse-ui-dataTableItems-cell-defaultBackgroundColor
