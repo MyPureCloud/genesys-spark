@@ -16,11 +16,11 @@ export function getListOptions(
   });
 }
 
-function isOptionGroup(item: Element) {
+export function isOptionGroup(item: Element): boolean {
   return item.tagName === 'GUX-OPTION-GROUP';
 }
 
-function hasOptionGroups(list: HTMLGuxListboxElement) {
+export function hasOptionGroups(list: HTMLGuxListboxElement): boolean {
   return Array.from(list.children).some(child => isOptionGroup(child));
 }
 

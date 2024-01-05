@@ -19,6 +19,7 @@ import {
   goToOption,
   hasPreviousOption,
   hasNextOption,
+  isOptionGroup,
   onClickedOption,
   setFirstOptionActive,
   setInitialActiveOption,
@@ -240,9 +241,22 @@ export class GuxListboxMulti {
 
   // get list of listbox option elements
   private setListboxOptions(): void {
-    this.listboxOptions = (
-      Array.from(this.root.children) as HTMLGuxOptionMultiElement[]
-    ).filter(element => element.tagName === 'GUX-OPTION-MULTI');
+    const options: HTMLGuxOptionMultiElement[] = [];
+    const listChildren = Array.from(this.root.children);
+    listChildren.map(child => {
+      if (isOptionGroup(child)) {
+        const childOptions = Array.from(
+          child.children
+        ) as HTMLGuxOptionMultiElement[];
+        return options.push(...childOptions);
+      }
+      return options.push(child as HTMLGuxOptionMultiElement);
+    });
+
+    const filteredOptions: HTMLGuxOptionMultiElement[] = options.filter(
+      element => element.tagName === 'GUX-OPTION-MULTI'
+    );
+    this.listboxOptions.push(...filteredOptions);
     this.internallistboxoptionsupdated.emit();
   }
 
