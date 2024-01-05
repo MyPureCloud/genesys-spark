@@ -35,7 +35,7 @@ export class GuxPopup {
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
 
   /**
-   * Placement of the tooltip. Default is bottom-start
+   * Placement of the popup. Default is bottom-start
    */
   @Prop({ mutable: true })
   placement: Placement = 'bottom-start';
