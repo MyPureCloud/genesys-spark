@@ -3,6 +3,32 @@ gux-table {
     box-sizing: border-box;
   }
 
+  &.gux-fixed-first-column {
+    table,
+    thead,
+    th:first-child,
+    tbody,
+    td:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+    }
+
+    table,
+    tbody,
+    tr:nth-child(even) td:first-child {
+      background-color: var(--gse-ui-dataTableItems-cell-altBackgroundColor);
+    }
+
+    table,
+    tbody,
+    tr:nth-child(odd) td:first-child {
+      background-color: var(
+        --gse-ui-dataTableItems-cell-defaultBackgroundColor
+      );
+    }
+  }
+
   table {
     width: 100%;
     white-space: nowrap;
