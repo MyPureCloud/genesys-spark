@@ -256,7 +256,7 @@ export class GuxListboxMulti {
     const filteredOptions: HTMLGuxOptionMultiElement[] = options.filter(
       element => element.tagName === 'GUX-OPTION-MULTI'
     );
-    this.listboxOptions.push(...filteredOptions);
+    this.listboxOptions = [...filteredOptions];
     this.internallistboxoptionsupdated.emit();
   }
 

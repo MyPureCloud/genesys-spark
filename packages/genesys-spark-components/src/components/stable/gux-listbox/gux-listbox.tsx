@@ -197,7 +197,7 @@ export class GuxListbox {
       }
       return options.push(child as ListboxOptionElement);
     });
-    this.listboxOptions.push(...options);
+    this.listboxOptions = [...options];
 
     this.internallistboxoptionsupdated.emit();
   }
