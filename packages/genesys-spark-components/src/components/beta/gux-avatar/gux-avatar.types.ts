@@ -10,8 +10,6 @@ export type GuxAvatarSize = 'xsmall' | 'small' | 'medium' | 'large';
 
 export type GuxAvatarAccent =
   | 'default'
-  | 'add'
-  | 'more'
   | 'auto'
   | 1
   | 2
