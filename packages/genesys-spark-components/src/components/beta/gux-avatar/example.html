@@ -1,16 +1,25 @@
 <h1>gux-avatar-beta</h1>
+<gux-avatar-beta></gux-avatar-beta>
 <h2>Image or name</h2>
-<gux-avatar-beta status="available" status-ring>
+<gux-avatar-beta status="available" status-ring name="Conor Darcy">
   <img slot="image" src="https://i.pravatar.cc/300" />
 </gux-avatar-beta>
 <gux-avatar-beta status="available" status-ring name="Conor Darcy">
 </gux-avatar-beta>
 
 <h2>Sizes</h2>
-<gux-avatar-beta size="xsmall" status-ring name="XS"></gux-avatar-beta>
-<gux-avatar-beta size="small" status-ring name="SM"></gux-avatar-beta>
-<gux-avatar-beta size="medium" status-ring name="MD"></gux-avatar-beta>
-<gux-avatar-beta size="large" status-ring name="LG"></gux-avatar-beta>
+<gux-avatar-beta
+  size="xsmall"
+  status-ring
+  name="Xavier Smith"
+></gux-avatar-beta>
+<gux-avatar-beta size="small" status-ring name="Susan Murphy"></gux-avatar-beta>
+<gux-avatar-beta size="medium" status-ring name="Mary Doyle"></gux-avatar-beta>
+<gux-avatar-beta
+  size="large"
+  status-ring
+  name="Liam Gallagher"
+></gux-avatar-beta>
 
 <h2>Status ring</h2>
 <gux-avatar-beta name="AB"></gux-avatar-beta>
@@ -24,39 +33,28 @@
 
 <h2>Accents</h2>
 <gux-avatar-beta status="available" name="AB"> </gux-avatar-beta>
-
 <gux-avatar-beta status="available" name="CD" accent="1"> </gux-avatar-beta>
-
-<gux-avatar-beta status="available" name="CD" accent="2"> </gux-avatar-beta>
-
-<gux-avatar-beta status="available" name="EF" accent="3"> </gux-avatar-beta>
-
-<gux-avatar-beta status="available" name="GH" accent="4"> </gux-avatar-beta>
-
-<gux-avatar-beta status="available" name="IJ" accent="5"> </gux-avatar-beta>
-
-<gux-avatar-beta status="available" name="JK" accent="6"> </gux-avatar-beta>
-
-<gux-avatar-beta status="available" name="LM" accent="7"> </gux-avatar-beta>
-
-<gux-avatar-beta status="available" name="NO" accent="8"> </gux-avatar-beta>
-
-<gux-avatar-beta status="available" name="PQ" accent="9"> </gux-avatar-beta>
-
-<gux-avatar-beta status="available" name="RS" accent="10"> </gux-avatar-beta>
-
-<gux-avatar-beta status="available" name="TU" accent="11"> </gux-avatar-beta>
-
-<gux-avatar-beta status="available" name="VW" accent="12"> </gux-avatar-beta>
+<gux-avatar-beta status="available" name="EF" accent="2"> </gux-avatar-beta>
+<gux-avatar-beta status="available" name="GH" accent="3"> </gux-avatar-beta>
+<gux-avatar-beta status="available" name="IJ" accent="4"> </gux-avatar-beta>
+<gux-avatar-beta status="available" name="JK" accent="5"> </gux-avatar-beta>
+<gux-avatar-beta status="available" name="LM" accent="6"> </gux-avatar-beta>
+<gux-avatar-beta status="available" name="NO" accent="7"> </gux-avatar-beta>
+<gux-avatar-beta status="available" name="PQ" accent="8"> </gux-avatar-beta>
+<gux-avatar-beta status="available" name="RS" accent="9"> </gux-avatar-beta>
+<gux-avatar-beta status="available" name="TU" accent="10"> </gux-avatar-beta>
+<gux-avatar-beta status="available" name="VW" accent="11"> </gux-avatar-beta>
+<gux-avatar-beta status="available" name="XY" accent="12"> </gux-avatar-beta>
 
 <h3>Automatically choose accent based on the name</h3>
-<gux-avatar-beta name="Conor Darcy" accent="auto"> </gux-avatar-beta>
+<gux-avatar-beta name="Monserrat Limon" accent="auto"> </gux-avatar-beta>
+<gux-avatar-beta name="Memo Lopez" accent="auto"> </gux-avatar-beta>
 <gux-avatar-beta name="Gillian Middleton" accent="auto"> </gux-avatar-beta>
 <gux-avatar-beta name="Dorka Hajnal" accent="auto"> </gux-avatar-beta>
 
 <h2>Badges</h2>
 <gux-avatar-beta
-  name="CD"
+  name="Memo Lopez"
   status="available"
   status-ring
   badge
@@ -64,14 +62,14 @@
 <gux-avatar-beta name="EF" status="break" status-ring badge></gux-avatar-beta>
 <gux-avatar-beta name="GH" status="busy" status-ring badge></gux-avatar-beta>
 <gux-avatar-beta
-  name="IJ"
+  name="Jackie Yada"
   status="notifications"
   status-ring
   badge
 ></gux-avatar-beta>
 <gux-avatar-beta name="KL" status="offline" status-ring badge></gux-avatar-beta>
 <gux-avatar-beta
-  name="OP"
+  name="Vanessa Cepeda"
   status="out-of-office"
   status-ring
   badge
@@ -80,7 +78,7 @@
 
 <h2>Notifications badge override</h2>
 <gux-avatar-beta
-  name="QR"
+  name="Stepheni Mendez"
   status="queue"
   status-ring
   badge
@@ -88,5 +86,11 @@
 ></gux-avatar-beta>
 
 <h2>As a button</h2>
-<gux-avatar-beta status="available" status-ring name="CD" interactive>
+<gux-avatar-beta
+  status="available"
+  status-ring
+  name="Monserrat Garcia Limon"
+  interactive
+  onclick="notify(event)"
+>
 </gux-avatar-beta>

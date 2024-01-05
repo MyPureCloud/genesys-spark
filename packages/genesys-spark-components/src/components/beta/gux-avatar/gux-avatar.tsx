@@ -17,9 +17,6 @@ import { hasSlot } from '@utils/dom/has-slot';
   shadow: true
 })
 export class GuxAvatar {
-  /*
-   * Reference to the host element.
-   */
   @Element()
   root: HTMLElement;
 
@@ -29,6 +26,9 @@ export class GuxAvatar {
   @Prop()
   size: GuxAvatarSize = 'large';
 
+  /**
+   * Shows a status ring around the avatar
+   */
   @Prop()
   statusRing: boolean = false;
 
@@ -38,23 +38,32 @@ export class GuxAvatar {
   @Prop()
   accent: GuxAvatarAccent = 'default';
 
+  /**
+   * Shows a status badge
+   */
   @Prop()
   badge: boolean = false;
 
+  /**
+   * Wrap the content with a button if it needs to be clickable
+   */
   @Prop()
   interactive: boolean = false;
 
+  /**
+   * Override the status badge with a notification icon
+   */
   @Prop()
   notifications: boolean = false;
 
   hasImageSlot: boolean;
 
   private generateInitials(): string {
-    const nameArray = this.name.split(' ');
+    const nameArray = this.name ? this.name.split(' ') : [''];
     if (nameArray.length > 1) {
       return nameArray[0].charAt(0) + nameArray[nameArray.length - 1].charAt(0);
     }
-    return nameArray[0].charAt(0) + nameArray[0].charAt(1);
+    return nameArray[0]?.charAt(0) + nameArray[0]?.charAt(1);
   }
 
   private displayInnerContent(): JSX.Element | null {
@@ -132,14 +141,16 @@ export class GuxAvatar {
             'gux-avatar': true,
             [`${this.status}`]: true,
             [`gux-${this.size}`]: true,
-            [`gux-${this.statusRing && 'status-ring'}`]: true
+            [`gux-${this.statusRing ? 'status-ring' : ''}`]: this.statusRing
           }}
+          aria-label={this.name}
         >
           <div
             class={{
               content: true,
               [`gux-accent-${this.getAccent()}`]: true
             }}
+            aria-hidden="true"
           >
             {this.displayInnerContent()}
           </div>
