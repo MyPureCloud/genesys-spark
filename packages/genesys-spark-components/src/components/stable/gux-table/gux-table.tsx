@@ -80,6 +80,12 @@ export class GuxTable {
   emptyMessage: string;
 
   /**
+   * Indicates if the tables first column is fixed and will stay in place even when scrolling horizontally.
+   */
+  @Prop()
+  fixedFirstColumn: boolean = false;
+
+  /**
    * Triggers when table row was selected/unselected
    */
   @Event() guxselectionchanged: EventEmitter<GuxTableSelectedState>;
@@ -431,6 +437,7 @@ export class GuxTable {
   render(): JSX.Element {
     return (
       <Host
+        class={{ 'gux-fixed-first-column': this.fixedFirstColumn }}
         gs-table-id={this.tableId}
         gs-obj-table={this.objectTable}
         gs-compact={this.compact}

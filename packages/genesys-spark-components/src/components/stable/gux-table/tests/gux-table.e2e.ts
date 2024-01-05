@@ -117,6 +117,10 @@ describe('gux-table', () => {
         html: `<gux-table object-table selectable-rows>${tableContent}</gux-table>`
       },
       {
+        description: 'should render table with fixed first column',
+        html: `<gux-table fixed-first-column>${tableContent}</gux-table>`
+      },
+      {
         description: 'should render empty table with rows selection',
         html: `
           <gux-table object-table selectable-rows>
