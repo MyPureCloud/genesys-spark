@@ -18,6 +18,10 @@
   word-wrap: break-word;
   cursor: pointer;
 
+  .gux-option-wrapper {
+    width: 100%;
+  }
+
   .gux-checkbox-container {
     position: relative;
     display: inline-block;
@@ -75,7 +79,7 @@
       flex-direction: column;
     }
 
-    .gux-subtext {
+    slot[name='subtext']::slotted(*) {
       height: var(--gse-ui-groupedMenu-subtext-height);
       font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
       color: var(--gse-ui-menu-groupedMenu-subtext-foregroundColor);

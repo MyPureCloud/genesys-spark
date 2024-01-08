@@ -31,9 +31,12 @@ exports[`gux-dropdown #render should render as expected 1`] = `
         <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
           <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
         </svg>
-        <gux-truncate gux-slot-container="">
-          <slot></slot>
-        </gux-truncate>
+        <div class="gux-option-wrapper">
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+          <slot name="subtext"></slot>
+        </div>
       </mock:shadow-root>
       Ant
     </gux-option-multi>
@@ -42,9 +45,12 @@ exports[`gux-dropdown #render should render as expected 1`] = `
         <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
           <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
         </svg>
-        <gux-truncate gux-slot-container="">
-          <slot></slot>
-        </gux-truncate>
+        <div class="gux-option-wrapper">
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+          <slot name="subtext"></slot>
+        </div>
       </mock:shadow-root>
       Bat
     </gux-option-multi>
@@ -53,13 +59,11 @@ exports[`gux-dropdown #render should render as expected 1`] = `
         <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
           <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
         </svg>
-        <div class="gux-option-text">
-          <gux-truncate gux-slot-container="">
+        <div class="gux-option-wrapper">
+          <gux-truncate>
             <slot></slot>
           </gux-truncate>
-          <div class="gux-subtext">
-            <slot name="subtext"></slot>
-          </div>
+          <slot name="subtext"></slot>
         </div>
       </mock:shadow-root>
       Cat

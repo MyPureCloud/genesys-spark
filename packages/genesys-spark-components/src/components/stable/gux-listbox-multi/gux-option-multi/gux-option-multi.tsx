@@ -7,7 +7,6 @@ import {
   Host,
   JSX,
   Prop,
-  State,
   Watch
 } from '@stencil/core';
 
@@ -18,6 +17,7 @@ import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot - text
+ * @slot subtext - Optional slot for subtext
  */
 
 @Component({
@@ -50,7 +50,6 @@ export class GuxOptionMulti {
   @Prop()
   custom: boolean = false;
 
-  @State()
   private hasSubtext: boolean = false;
 
   @Event()
@@ -80,6 +79,9 @@ export class GuxOptionMulti {
     if (this.custom) {
       this.internalselectcustomoption.emit(this.value);
     }
+  }
+
+  componentWillRender(): void {
     this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
@@ -124,35 +126,6 @@ export class GuxOptionMulti {
     }
   }
 
-  private renderText(): JSX.Element {
-    // The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text.
-    // This attribute is required because we need to get the slotted text and exclude the screen reader text.
-    if (this.hasSubtext) {
-      return (
-        <div class="gux-option-text">
-          <gux-truncate
-            gux-slot-container
-            ref={el => (this.truncateElement = el)}
-          >
-            <slot />
-          </gux-truncate>
-          <div class="gux-subtext">
-            <slot name="subtext"></slot>
-          </div>
-        </div>
-      ) as JSX.Element;
-    } else {
-      return (
-        <gux-truncate
-          gux-slot-container
-          ref={el => (this.truncateElement = el)}
-        >
-          <slot />
-        </gux-truncate>
-      ) as JSX.Element;
-    }
-  }
-
   render(): JSX.Element {
     return (
       <Host
@@ -168,7 +141,14 @@ export class GuxOptionMulti {
         aria-disabled={this.disabled.toString()}
       >
         {this.renderSVGCheckbox()}
-        {this.renderText()}
+        {/* The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text.
+        This attribute is required because we need to get the slotted text and exclude the screen reader text. */}
+        <div class="gux-option-wrapper">
+          <gux-truncate ref={el => (this.truncateElement = el)}>
+            <slot />
+          </gux-truncate>
+          <slot name="subtext"></slot>
+        </div>
         {this.renderCustomOptionInstructions()}
       </Host>
     ) as JSX.Element;

@@ -1,19 +1,11 @@
-import {
-  Component,
-  Element,
-  h,
-  Host,
-  JSX,
-  Prop,
-  State,
-  Watch
-} from '@stencil/core';
+import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot - text
+ * @slot subtext - Optional slot for subtext
  */
 
 @Component({
@@ -41,8 +33,7 @@ export class GuxOption {
   @Prop()
   filtered: boolean = false;
 
-  @State()
-  hasSubtext: boolean = false;
+  private hasSubtext: boolean = false;
 
   @Watch('active')
   handleActive(active: boolean) {
@@ -55,6 +46,9 @@ export class GuxOption {
 
   componentWillLoad(): void {
     this.root.id = this.root.id || randomHTMLId('gux-option');
+  }
+
+  componentWillRender(): void {
     this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
@@ -64,27 +58,6 @@ export class GuxOption {
     }
 
     return this.selected ? 'true' : 'false';
-  }
-
-  private renderText(): JSX.Element {
-    if (this.hasSubtext) {
-      return (
-        <div class="gux-option-wrapper">
-          <gux-truncate ref={el => (this.truncateElement = el)}>
-            <slot />
-          </gux-truncate>
-          <div class="gux-subtext">
-            <slot name="subtext"></slot>
-          </div>
-        </div>
-      ) as JSX.Element;
-    } else {
-      return (
-        <gux-truncate ref={el => (this.truncateElement = el)}>
-          <slot />
-        </gux-truncate>
-      ) as JSX.Element;
-    }
   }
 
   render(): JSX.Element {
@@ -101,7 +74,12 @@ export class GuxOption {
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}
       >
-        {this.renderText()}
+        <div class="gux-option-wrapper">
+          <gux-truncate ref={el => (this.truncateElement = el)}>
+            <slot />
+          </gux-truncate>
+          <slot name="subtext"></slot>
+        </div>
       </Host>
     ) as JSX.Element;
   }
