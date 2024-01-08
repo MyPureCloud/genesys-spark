@@ -7,7 +7,8 @@ import {
   Host,
   JSX,
   Prop,
-  Watch
+  Watch,
+  State
 } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
@@ -50,6 +51,7 @@ export class GuxOptionMulti {
   @Prop()
   custom: boolean = false;
 
+  @State()
   private hasSubtext: boolean = false;
 
   @Event()

@@ -6,7 +6,8 @@ import {
   JSX,
   Listen,
   Prop,
-  Watch
+  Watch,
+  State
 } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
@@ -54,6 +55,7 @@ export class GuxOptionIcon {
   @Prop({ mutable: true })
   hovered: boolean = false;
 
+  @State()
   private hasSubtext: boolean = false;
 
   @Listen('mouseenter')
@@ -79,6 +81,10 @@ export class GuxOptionIcon {
   }
 
   componentWillRender(): void {
+    this.onSubtextChange();
+  }
+
+  private onSubtextChange() {
     this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
@@ -122,7 +128,7 @@ export class GuxOptionIcon {
           <gux-truncate ref={el => (this.truncateElement = el)}>
             <slot />
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot onSlotchange={() => this.onSubtextChange()} name="subtext" />
         </div>
       </Host>
     ) as JSX.Element;

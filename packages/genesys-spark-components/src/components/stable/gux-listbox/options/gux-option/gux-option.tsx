@@ -1,4 +1,13 @@
-import { Component, Element, h, Host, JSX, Prop, Watch } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Host,
+  JSX,
+  Prop,
+  Watch,
+  State
+} from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { hasSlot } from '@utils/dom/has-slot';
@@ -33,6 +42,7 @@ export class GuxOption {
   @Prop()
   filtered: boolean = false;
 
+  @State()
   private hasSubtext: boolean = false;
 
   @Watch('active')
@@ -49,6 +59,10 @@ export class GuxOption {
   }
 
   componentWillRender(): void {
+    this.onSubtextChange();
+  }
+
+  private onSubtextChange() {
     this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
@@ -78,7 +92,7 @@ export class GuxOption {
           <gux-truncate ref={el => (this.truncateElement = el)}>
             <slot />
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot onSlotchange={() => this.onSubtextChange()} name="subtext" />
         </div>
       </Host>
     ) as JSX.Element;
