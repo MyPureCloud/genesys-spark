@@ -257,6 +257,11 @@ export class GuxListboxMulti {
       element => element.tagName === 'GUX-OPTION-MULTI'
     );
     this.listboxOptions = [...filteredOptions];
+
+    const lastChild = listChildren[listChildren.length - 1];
+    if (lastChild && isOptionGroup(lastChild))
+      lastChild.setAttribute('divider', 'false');
+
     this.internallistboxoptionsupdated.emit();
   }
 

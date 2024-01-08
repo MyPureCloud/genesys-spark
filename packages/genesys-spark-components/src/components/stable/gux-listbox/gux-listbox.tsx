@@ -199,6 +199,10 @@ export class GuxListbox {
     });
     this.listboxOptions = [...options];
 
+    const lastChild = listChildren[listChildren.length - 1];
+    if (lastChild && isOptionGroup(lastChild))
+      lastChild.setAttribute('divider', 'false');
+
     this.internallistboxoptionsupdated.emit();
   }
 
