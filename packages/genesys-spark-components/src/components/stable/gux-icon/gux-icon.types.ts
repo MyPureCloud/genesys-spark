@@ -185,6 +185,7 @@ export type GuxIconIconName =
   | 'fa/arrow-left-to-line-solid'
   | 'fa/arrow-right-to-line-solid'
   | 'fa/arrow-turn-down-right-regular'
+  | 'fa/arrows-down-to-people-regular'
   | 'fa/arrows-rotate-solid'
   | 'fa/arrows-to-circle-regular'
   | 'fa/asterix-regular'
