@@ -62,6 +62,9 @@ export class GuxFormFieldTextLike {
   @Prop()
   labelPosition: GuxFormFieldLabelPosition;
 
+  @Prop()
+  loading: boolean = false;
+
   @State()
   private hasPrefix: boolean;
 
@@ -100,6 +103,14 @@ export class GuxFormFieldTextLike {
     this.hasHelp = hasSlot(this.root, 'help');
 
     forceUpdate(this.root);
+  }
+
+  private renderRadialLoading(): JSX.Element {
+    if (this.loading) {
+      return (
+        <gux-radial-loading context="input"></gux-radial-loading>
+      ) as JSX.Element;
+    }
   }
 
   componentWillLoad(): void {
@@ -157,6 +168,7 @@ export class GuxFormFieldTextLike {
             >
               <slot name="prefix" />
               <slot name="input" />
+              {this.renderRadialLoading()}
               <slot name="suffix" />
               {this.clearable && this.hasContent && !this.disabled && (
                 <gux-form-field-input-clear-button

@@ -392,6 +392,159 @@ exports[`gux-form-field-text-like #render label-position should render component
 </div>
 `;
 
+exports[`gux-form-field-text-like #render loading should render component as expected (1) 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (1) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <slot name="prefix"></slot>
+        <slot name="input"></slot>
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (2) 1`] = `"<gux-form-field-text-like lang=\\"en\\" loading=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (2) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <slot name="prefix"></slot>
+        <slot name="input"></slot>
+        <gux-radial-loading hydrated=""></gux-radial-loading>
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (3) 1`] = `"<gux-form-field-text-like lang=\\"en\\" loading=\\"true\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (3) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <slot name="prefix"></slot>
+        <slot name="input"></slot>
+        <gux-radial-loading hydrated=""></gux-radial-loading>
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (4) 1`] = `"<gux-form-field-text-like lang=\\"en\\" loading=\\"false\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (4) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <slot name="prefix"></slot>
+        <slot name="input"></slot>
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (5) 1`] = `"<gux-form-field-text-like lang=\\"en\\" loading=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+
+exports[`gux-form-field-text-like #render loading should render component as expected (5) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-disabled gux-input-container">
+        <slot name="prefix"></slot>
+        <slot name="input"></slot>
+        <gux-radial-loading hydrated=""></gux-radial-loading>
+        <slot name="suffix"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`gux-form-field-text-like #render prefix should render component as expected 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <span slot=\\"prefix\\" id=\\"gux-prefix-i\\">Prefix</span> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-prefix-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render prefix should render component as expected 2`] = `
