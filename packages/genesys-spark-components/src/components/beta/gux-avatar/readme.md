@@ -1,7 +1,5 @@
 # gux-avatar-beta
 
-
-
 <!-- Auto Generated Below -->
 
 

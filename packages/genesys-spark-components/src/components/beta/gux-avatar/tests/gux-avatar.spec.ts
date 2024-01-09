@@ -59,15 +59,4 @@ describe('gux-avatar', () => {
       });
     });
   });
-  // // Test if a click event is fired when the avatar is clicked and interactive prop is present
-  // describe('#render with interactive', () => {
-  //   it(`should fire a click event when clicked`, async () => {
-  //     const html = `<gux-avatar-beta interactive></gux-avatar-beta>`;
-  //     const page = await newSpecPage({ components: [GuxAvatar], html });
-  //     const spy = jest.fn();
-  //     page.root.addEventListener('click', spy);
-  //     page.root.click();
-  //     expect(spy).toHaveBeenCalled();
-  //   });
-  // });
 });
