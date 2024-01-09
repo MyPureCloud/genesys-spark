@@ -129,16 +129,16 @@
   &.gux-large {
     top: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
     right: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
-    width: 24px;
-    height: 24px;
+    width: var(--gse-ui-avatar-large-badge-size);
+    height: var(--gse-ui-avatar-large-badge-size);
     border-width: var(--gse-ui-avatar-content-large-border-width);
   }
 
   &.gux-medium {
     top: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
     right: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
-    width: 16px;
-    height: 16px;
+    width: var(--gse-ui-avatar-medium-badge-size);
+    height: var(--gse-ui-avatar-medium-badge-size);
     border-width: var(--gse-ui-avatar-content-default-border-width);
   }
 
@@ -146,8 +146,8 @@
   &.gux-xsmall {
     top: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
     right: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
-    width: 8px;
-    height: 8px;
+    width: var(--gse-ui-avatar-small-badge-size);
+    height: var(--gse-ui-avatar-small-badge-size);
     border-width: var(--gse-ui-avatar-content-default-border-width);
   }
 

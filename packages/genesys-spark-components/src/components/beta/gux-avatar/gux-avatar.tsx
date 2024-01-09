@@ -1,12 +1,4 @@
-import {
-  Component,
-  h,
-  JSX,
-  Prop,
-  Element,
-  Fragment,
-  Watch
-} from '@stencil/core';
+import { Component, h, JSX, Prop, Element, Fragment } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import {
   GuxAvatarStatus,
@@ -14,7 +6,7 @@ import {
   GuxAvatarAccent
 } from './gux-avatar.types';
 import { hasSlot } from '@utils/dom/has-slot';
-import { logError } from '@utils/error/log-error';
+import { logWarn } from '@utils/error/log-error';
 
 /**
  * @slot image - Headshot photo.
@@ -140,15 +132,11 @@ export class GuxAvatar {
   componentWillLoad(): void {
     trackComponent(this.root, { variant: this.status });
     this.hasImageSlot = hasSlot(this.root, 'image');
-    if (!this.name) {
-      logError(this.root, 'must have a name attribute for accessibility');
-    }
   }
 
-  @Watch('name')
-  nameChanged(): void {
+  componentDidLoad() {
     if (!this.name) {
-      logError(this.root, 'must have a name attribute for accessibility');
+      logWarn(this.root, 'must have a name attribute for accessibility.');
     }
   }
 
