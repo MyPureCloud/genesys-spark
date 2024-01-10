@@ -4,12 +4,18 @@
   display: block;
   flex: 1 1 auto;
   align-self: auto;
-}
 
-.gux-option-group-title {
-  display: block;
-  padding: var(--gse-ui-menu-groupedMenu-title-padding);
-  color: var(--gse-ui-menu-groupedMenu-title-foregroundColor);
+  &:host(.gux-disabled) {
+    pointer-events: none;
+    cursor: default;
+    // TODO: Get more styles for this from design
+  }
 
-  @include typography.heading-overline;
+  .gux-option-group-label {
+    display: block;
+    padding: var(--gse-ui-menu-groupedMenu-title-padding);
+    color: var(--gse-ui-menu-groupedMenu-title-foregroundColor);
+
+    @include typography.heading-overline;
+  }
 }

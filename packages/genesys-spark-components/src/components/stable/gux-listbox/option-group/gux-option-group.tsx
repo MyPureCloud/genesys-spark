@@ -1,5 +1,4 @@
-import { Component, h, Host, JSX, Prop, State, Element } from '@stencil/core';
-import { hasSlot } from '@utils/dom/has-slot';
+import { Component, h, Host, JSX, Prop, Element } from '@stencil/core';
 
 /**
  * The listbox component provides keyboard bindings and a11y patterns for selecting
@@ -17,20 +16,19 @@ export class GuxOptionGroup {
   root: HTMLElement;
 
   @Prop()
+  label: string;
+
+  @Prop()
   divider: boolean = true;
 
-  @State()
-  private showTitle: boolean = false;
+  @Prop()
+  disabled: boolean = false;
 
-  componentWillLoad(): void {
-    this.showTitle = hasSlot(this.root, 'title');
-  }
-
-  private renderTitle(): JSX.Element {
-    if (this.showTitle) {
+  private renderLabel(): JSX.Element {
+    if (this.label) {
       return (
-        <div class="gux-option-group-title">
-          <slot name="title"></slot>
+        <div class="gux-option-group-label" role="presentation">
+          {this.label}
         </div>
       ) as JSX.Element;
     }
@@ -44,9 +42,11 @@ export class GuxOptionGroup {
 
   render(): JSX.Element {
     return (
-      <Host role="group" class="gux-option-group">
-        {this.renderTitle()}
-        <slot />
+      <Host class={{ 'gux-disabled': this.disabled }}>
+        {this.renderLabel()}
+        <div role="group">
+          <slot />
+        </div>
         {this.renderDivider()}
       </Host>
     ) as JSX.Element;
