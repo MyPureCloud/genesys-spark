@@ -77,7 +77,7 @@ webappPipeline {
                 withCredentials([
                   string(credentialsId: constants.credentials.npm,  variable: 'NPM_TOKEN')
                 ]) {
-                    sh(script: 'npm publish --workspace=packages/genesys-spark-components',
+                    sh(script: 'npm publish --tag maintenance --workspace=packages/genesys-spark-components',
                         label: 'Publish Components')
 
                     sh(script: '''
@@ -86,7 +86,7 @@ webappPipeline {
                         ''',
                         label: 'Set exact version dependency in React Components')
 
-                    sh(script: 'npm publish --workspace=packages/genesys-spark-components-react',
+                    sh(script: 'npm publish --tag maintenance --workspace=packages/genesys-spark-components-react',
                         label: 'Publish React Components')
                 }
             }
