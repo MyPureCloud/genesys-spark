@@ -29,7 +29,7 @@ node(nodelabels.getCombinedExecutorLabelForEnv('dev')) {
             sh(script: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ./packages/genesys-spark-components-react/.npmrc',
                 label: 'Set public npmjs registry with creds')
 
-            sh(script: 'npm publish --workspace=packages/genesys-spark-components-react',
+            sh(script: 'npm publish --tag maintenance --workspace=packages/genesys-spark-components-react',
                 label: 'Build project')
         }
     }

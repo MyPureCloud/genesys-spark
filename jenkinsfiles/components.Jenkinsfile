@@ -86,7 +86,7 @@ webappPipeline {
                     sh('''
                       echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ./.npmrc
                       echo ".npmrc" >> .npmignore
-                      npm publish
+                      npm publish --tag maintenance
                     ''')
                 }
             }

@@ -34,7 +34,7 @@ node(nodelabels.getCombinedExecutorLabelForEnv('dev')) {
                 npm install --legacy-peer-deps --no-progress --save --save-exact genesys-spark-components@${publishedVersion} &&
                 npm run build &&
                 npm version ${publishedVersion} &&
-                npm publish
+                npm publish --tag maintenance
             """
         }
     }
