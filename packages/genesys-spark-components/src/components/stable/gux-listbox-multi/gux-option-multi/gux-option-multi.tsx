@@ -81,9 +81,10 @@ export class GuxOptionMulti {
     if (this.custom) {
       this.internalselectcustomoption.emit(this.value);
     }
+    this.onSubtextChange();
   }
 
-  componentWillRender(): void {
+  private onSubtextChange() {
     this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
@@ -149,7 +150,7 @@ export class GuxOptionMulti {
           <gux-truncate ref={el => (this.truncateElement = el)}>
             <slot />
           </gux-truncate>
-          <slot name="subtext"></slot>
+          <slot onSlotchange={() => this.onSubtextChange()} name="subtext" />
         </div>
         {this.renderCustomOptionInstructions()}
       </Host>

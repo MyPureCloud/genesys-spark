@@ -56,9 +56,6 @@ export class GuxOption {
 
   componentWillLoad(): void {
     this.root.id = this.root.id || randomHTMLId('gux-option');
-  }
-
-  componentWillRender(): void {
     this.onSubtextChange();
   }
 

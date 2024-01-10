@@ -78,9 +78,6 @@ export class GuxOptionIcon {
 
   componentWillLoad(): void {
     this.root.id = this.root.id || randomHTMLId('gux-option-icon');
-  }
-
-  componentWillRender(): void {
     this.onSubtextChange();
   }
 
