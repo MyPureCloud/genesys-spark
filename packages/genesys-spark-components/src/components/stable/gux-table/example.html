@@ -389,55 +389,6 @@
 
 <h2>Data table with sortable columns</h2>
 
-<style
-  onload="(function () {
-    function ascending( a, b ) {
-      if ( a.textContent < b.textContent ){
-        return -1;
-      }
-      if ( a.textContent > b.textContent ){
-        return 1;
-      }
-      return 0;
-    }
-
-    function shuffle( a, b ) {
-      return 0.5 - Math.random();
-    }
-
-    const table = document.querySelector('#sortable-table');
-
-    table.addEventListener('guxsortchanged',
-    (event) => {
-      const {columnName, sortDirection} = event.detail;
-
-      const columns = Array.from(table.querySelectorAll('thead tr th')).forEach((column) => column.removeAttribute('aria-sort'));
-      const column = table.querySelector(`thead tr th[data-column-name='` + columnName + `']`);
-      column.setAttribute('aria-sort', sortDirection);
-
-      const tableBody = table.querySelector('tbody');
-
-      switch (sortDirection) {
-        case 'ascending':
-          [...tableBody.children].sort(ascending).forEach(node=>tableBody.appendChild(node));
-          break;
-        case 'descending':
-          [...tableBody.children].sort(ascending).reverse().forEach(node=>tableBody.appendChild(node));
-          break;
-        default:
-          [...tableBody.children].sort(shuffle).forEach(node=>tableBody.appendChild(node));
-          break;
-      }
-
-
-    })
-  })()"
->
-  .not-used {
-    -custom-noop: noop;
-  }
-</style>
-
 <gux-table resizable-columns id="sortable-table">
   <table slot="data">
     <thead>
@@ -890,3 +841,163 @@
     </tbody>
   </table>
 </gux-table>
+
+<h2>Data table with fixed columns</h2>
+<gux-table resizeable-columns>
+  <table slot="data">
+    <thead>
+      <tr>
+        <th
+          class="gux-sticky-cell gux-sticky-cell-header-style"
+          data-column-name="first-name"
+        >
+          First name
+        </th>
+        <th
+          class="gux-sticky-cell-2 gux-sticky-cell-header-style"
+          data-column-name="last-name"
+        >
+          Last name
+        </th>
+        <th data-colum-name="summary">Summary</th>
+        <th data-column-name="age" data-cell-numeric>Age</th>
+        <th data-column-name="action" data-cell-action>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="gux-sticky-cell gux-sticky-cell-style-even">John</td>
+        <td class="gux-sticky-cell-2 gux-sticky-cell-style-even">Doe</td>
+        <td>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </td>
+        <td data-cell-numeric>25</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+      <tr>
+        <td class="gux-sticky-cell gux-sticky-cell-style-odd">Jane</td>
+        <td class="gux-sticky-cell-2 gux-sticky-cell-style-odd">Doe</td>
+        <td>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </td>
+        <td data-cell-numeric>23</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+      <tr>
+        <td class="gux-sticky-cell gux-sticky-cell-style-even">Jane</td>
+        <td class="gux-sticky-cell-2 gux-sticky-cell-style-even">Doe</td>
+        <td>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </td>
+        <td data-cell-numeric>21</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+      <tr>
+        <td class="gux-sticky-cell gux-sticky-cell-style-odd">Jane</td>
+        <td class="gux-sticky-cell-2 gux-sticky-cell-style-odd">Doe</td>
+        <td>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </td>
+        <td data-cell-numeric>23</td>
+        <td data-cell-action>Delete</td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table>
+
+<style
+  onload="(function () {
+    function ascending( a, b ) {
+      if ( a.textContent < b.textContent ){
+        return -1;
+      }
+      if ( a.textContent > b.textContent ){
+        return 1;
+      }
+      return 0;
+    }
+
+    function shuffle( a, b ) {
+      return 0.5 - Math.random();
+    }
+
+    const table = document.querySelector('#sortable-table');
+
+    table.addEventListener('guxsortchanged',
+    (event) => {
+      const {columnName, sortDirection} = event.detail;
+
+      const columns = Array.from(table.querySelectorAll('thead tr th')).forEach((column) => column.removeAttribute('aria-sort'));
+      const column = table.querySelector(`thead tr th[data-column-name='` + columnName + `']`);
+      column.setAttribute('aria-sort', sortDirection);
+
+      const tableBody = table.querySelector('tbody');
+
+      switch (sortDirection) {
+        case 'ascending':
+          [...tableBody.children].sort(ascending).forEach(node=>tableBody.appendChild(node));
+          break;
+        case 'descending':
+          [...tableBody.children].sort(ascending).reverse().forEach(node=>tableBody.appendChild(node));
+          break;
+        default:
+          [...tableBody.children].sort(shuffle).forEach(node=>tableBody.appendChild(node));
+          break;
+      }
+
+
+    })
+  })()"
+>
+  .not-used {
+    -custom-noop: noop;
+  }
+
+  .gux-sticky-cell {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+  }
+
+  .gux-sticky-cell-2 {
+    position: sticky;
+    left: 89px;
+    z-index: 1;
+  }
+
+  .gux-sticky-cell-header-style {
+    background-color: var(--gse-ui-dataTableItems-header-fixedBackgroundColor);
+  }
+
+  .gux-sticky-cell-style-odd {
+    background-color: var(--gse-ui-dataTableItems-cell-altBackgroundColor);
+  }
+
+  .gux-sticky-cell-style-even {
+    background-color: var(--gse-ui-dataTableItems-cell-defaultBackgroundColor);
+  }
+</style>
