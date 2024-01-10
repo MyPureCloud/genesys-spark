@@ -64,12 +64,12 @@ function getSiblingForGroupedList(
   const activeOption = getActiveOption(list);
   const activeOptionIndex = availableOptionsList.indexOf(activeOption);
 
-  switch (location.toUpperCase()) {
-    case 'FIRST':
+  switch (location) {
+    case 'first':
       return availableOptionsList[0];
-    case 'LAST':
+    case 'last':
       return availableOptionsList[availableOptionsList.length - 1];
-    case 'PREVIOUS':
+    case 'previous':
       return availableOptionsList[activeOptionIndex - 1];
     default:
       return availableOptionsList[activeOptionIndex + 1];

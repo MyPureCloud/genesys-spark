@@ -1,9 +1,6 @@
-import { Component, h, Host, JSX, Prop, Element } from '@stencil/core';
+import { Component, h, Host, JSX, Prop } from '@stencil/core';
 
 /**
- * The listbox component provides keyboard bindings and a11y patterns for selecting
- * from a list of options.
- *
  * @slot - collection of elements conforming to the ListboxOptionElement interface
  */
 @Component({
@@ -12,9 +9,6 @@ import { Component, h, Host, JSX, Prop, Element } from '@stencil/core';
   shadow: true
 })
 export class GuxOptionGroup {
-  @Element()
-  root: HTMLElement;
-
   @Prop()
   label: string;
 

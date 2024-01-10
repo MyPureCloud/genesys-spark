@@ -33,6 +33,8 @@ import {
   optionTagSelector
 } from './options/option-types';
 
+import { ListboxOptionGroupElement } from './option-group/gux-option-group.types';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
@@ -199,9 +201,10 @@ export class GuxListbox {
     });
     this.listboxOptions = [...options];
 
-    const lastChild = listChildren[listChildren.length - 1];
-    if (lastChild && isOptionGroup(lastChild))
-      lastChild.setAttribute('divider', 'false');
+    const lastChild = listChildren[
+      listChildren.length - 1
+    ] as ListboxOptionGroupElement;
+    if (lastChild && isOptionGroup(lastChild)) lastChild.divider = false;
 
     this.internallistboxoptionsupdated.emit();
   }

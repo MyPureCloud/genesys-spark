@@ -29,6 +29,8 @@ import {
   hasActiveOption
 } from '../gux-listbox/gux-listbox.service';
 
+import { ListboxOptionGroupElement } from '../gux-listbox/option-group/gux-option-group.types';
+
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { whenEventIsFrom } from '@utils/dom/when-event-is-from';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
@@ -239,28 +241,32 @@ export class GuxListboxMulti {
     this.optionCreateElement = this.root.querySelector('gux-create-option');
   }
 
+  private isGuxOptionMultiElement(item: Element) {
+    return item.tagName === 'GUX-OPTION-MULTI';
+  }
+
   // get list of listbox option elements
   private setListboxOptions(): void {
     const options: HTMLGuxOptionMultiElement[] = [];
     const listChildren = Array.from(this.root.children);
     listChildren.map(child => {
       if (isOptionGroup(child)) {
-        const childOptions = Array.from(
-          child.children
+        const childOptions = Array.from(child.children).filter(child =>
+          this.isGuxOptionMultiElement(child)
         ) as HTMLGuxOptionMultiElement[];
         return options.push(...childOptions);
       }
+
+      if (!this.isGuxOptionMultiElement(child)) return;
       return options.push(child as HTMLGuxOptionMultiElement);
     });
 
-    const filteredOptions: HTMLGuxOptionMultiElement[] = options.filter(
-      element => element.tagName === 'GUX-OPTION-MULTI'
-    );
-    this.listboxOptions = [...filteredOptions];
+    this.listboxOptions = [...options];
 
-    const lastChild = listChildren[listChildren.length - 1];
-    if (lastChild && isOptionGroup(lastChild))
-      lastChild.setAttribute('divider', 'false');
+    const lastChild = listChildren[
+      listChildren.length - 1
+    ] as ListboxOptionGroupElement;
+    if (lastChild && isOptionGroup(lastChild)) lastChild.divider = false;
 
     this.internallistboxoptionsupdated.emit();
   }
