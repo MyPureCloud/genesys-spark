@@ -1,4 +1,5 @@
 import { ListboxOptionElement } from './options/option-types';
+import { ListboxOptionGroupElement } from './option-group/gux-option-group.types';
 
 export function getListOptions(
   list: HTMLGuxListboxElement
@@ -289,4 +290,12 @@ export function matchOption(
     .trim()
     .toLowerCase()
     .startsWith(matchString.toLowerCase());
+}
+
+export function matchGroup(
+  group: ListboxOptionGroupElement,
+  matchString: string
+): boolean {
+  //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
+  return group.label.trim().toLowerCase().startsWith(matchString.toLowerCase());
 }

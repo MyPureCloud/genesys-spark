@@ -499,6 +499,31 @@
       <gux-option value="e">Eel</gux-option>
     </gux-listbox>
   </gux-dropdown>
+
+  <h2>Grouped & Filterable 2</h2>
+  <gux-dropdown filter-type="starts-with" placeholder="Select an animal">
+    <gux-listbox aria-label="Animals">
+      <gux-option-group label="First Group">
+        <gux-option value="a" disabled>Ant</gux-option>
+        <gux-option value="b">Bat</gux-option>
+      </gux-option-group>
+      <gux-option-group label="Second Group">
+        <gux-option value="c">Cat</gux-option>
+        <gux-option value="d">Dog</gux-option>
+      </gux-option-group>
+      <gux-option-group label="Third Group">
+        <gux-option value="e">Eel</gux-option>
+        <gux-option value="f">Frog</gux-option>
+      </gux-option-group>
+      <gux-option-group label="TFourth Group">
+        <gux-option value="g">Goat</gux-option>
+        <gux-option value="Horse">Horse</gux-option>
+      </gux-option-group>
+      <gux-option-group label="Fifth Group">
+        <gux-option value="i">Ibis</gux-option>
+      </gux-option-group>
+    </gux-listbox>
+  </gux-dropdown>
 </form>
 
 <style

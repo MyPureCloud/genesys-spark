@@ -16,7 +16,10 @@ export class GuxOptionGroup {
   divider: boolean = true;
 
   @Prop()
-  disabled: boolean = false;
+  disabled: boolean;
+
+  @Prop()
+  filtered: boolean;
 
   private renderLabel(): JSX.Element {
     if (this.label) {
@@ -36,7 +39,12 @@ export class GuxOptionGroup {
 
   render(): JSX.Element {
     return (
-      <Host class={{ 'gux-disabled': this.disabled }}>
+      <Host
+        class={{
+          'gux-disabled': this.disabled,
+          'gux-filtered': this.filtered
+        }}
+      >
         {this.renderLabel()}
         <div role="group">
           <slot />

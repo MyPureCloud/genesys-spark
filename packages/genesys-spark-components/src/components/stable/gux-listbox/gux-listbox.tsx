@@ -26,7 +26,8 @@ import {
   setLastOptionActive,
   setNextOptionActive,
   setPreviousOptionActive,
-  matchOption
+  matchOption,
+  matchGroup
 } from './gux-listbox.service';
 import {
   ListboxOptionElement,
@@ -80,6 +81,9 @@ export class GuxListbox {
 
   @State()
   listboxOptions: ListboxOptionElement[] = [];
+
+  @State()
+  listboxGroups: ListboxOptionGroupElement[] = [];
 
   @State()
   allListboxOptionsFiltered: boolean;
@@ -183,29 +187,26 @@ export class GuxListbox {
     actOnActiveOption(this.root, value => this.updateValue(value));
   }
 
-  private setListboxOptions(): void {
+  private setListboxOptionsAndGroups(): void {
     if (this.value) {
       this.selectedValues = this.value.split(',');
     }
 
     const options: ListboxOptionElement[] = [];
+    const groups: ListboxOptionGroupElement[] = [];
     const listChildren = Array.from(this.root.children);
     listChildren.map(child => {
       if (isOptionGroup(child)) {
         const childOptions = Array.from(
           child.children
         ) as ListboxOptionElement[];
+        groups.push(child as ListboxOptionGroupElement);
         return options.push(...childOptions);
       }
       return options.push(child as ListboxOptionElement);
     });
     this.listboxOptions = [...options];
-
-    const lastChild = listChildren[
-      listChildren.length - 1
-    ] as ListboxOptionGroupElement;
-    if (lastChild && isOptionGroup(lastChild)) lastChild.divider = false;
-
+    this.listboxGroups = [...groups];
     this.internallistboxoptionsupdated.emit();
   }
 
@@ -222,7 +223,7 @@ export class GuxListbox {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
 
-    this.setListboxOptions();
+    this.setListboxOptionsAndGroups();
   }
 
   componentWillRender(): void {
@@ -233,16 +234,42 @@ export class GuxListbox {
       }
     });
 
+    this.listboxGroups.forEach(listboxGroup => {
+      if (this.filterType !== 'custom') {
+        const groupLabelMatch = matchGroup(listboxGroup, this.filter);
+        const groupChildren = Array.from(
+          listboxGroup.children
+        ) as ListboxOptionElement[];
+        const optionMatch = groupChildren.some(option =>
+          matchOption(option, this.filter)
+        );
+
+        listboxGroup.filtered = !groupLabelMatch && !optionMatch;
+        listboxGroup.divider = true;
+        if (groupLabelMatch) {
+          groupChildren.forEach(option => (option.filtered = false));
+        }
+      }
+    });
+
+    const listBoxGroupsFiltered = this.listboxGroups.filter(
+      group => !group.filtered
+    );
+
+    const lastListboxGroup =
+      listBoxGroupsFiltered[listBoxGroupsFiltered.length - 1];
+    if (lastListboxGroup) lastListboxGroup.divider = false;
+
     this.allListboxOptionsFiltered =
       this.listboxOptions.filter(listboxOption => !listboxOption.filtered)
-        .length === 0;
+        .length === 0 && listBoxGroupsFiltered.length === 0;
   }
 
   // The slot must always be rendered so onSlotchange can be called
   renderHiddenSlot(): JSX.Element {
     return (
       <div hidden>
-        <slot onSlotchange={() => this.setListboxOptions()} />
+        <slot onSlotchange={() => this.setListboxOptionsAndGroups()} />
       </div>
     ) as JSX.Element;
   }
@@ -279,7 +306,7 @@ export class GuxListbox {
 
     return (
       <Host role="listbox" tabindex={0}>
-        <slot onSlotchange={() => this.setListboxOptions()} />
+        <slot onSlotchange={() => this.setListboxOptionsAndGroups()} />
       </Host>
     ) as JSX.Element;
   }

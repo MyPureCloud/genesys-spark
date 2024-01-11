@@ -11,6 +11,10 @@
     // TODO: Get more styles for this from design
   }
 
+  &:host(.gux-filtered) {
+    display: none;
+  }
+
   .gux-option-group-label {
     display: block;
     padding: var(--gse-ui-menu-groupedMenu-title-padding);
