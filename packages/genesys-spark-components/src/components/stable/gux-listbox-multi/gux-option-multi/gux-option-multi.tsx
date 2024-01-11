@@ -7,15 +7,18 @@ import {
   Host,
   JSX,
   Prop,
-  Watch
+  Watch,
+  State
 } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot - text
+ * @slot subtext - Optional slot for subtext
  */
 
 @Component({
@@ -48,6 +51,9 @@ export class GuxOptionMulti {
   @Prop()
   custom: boolean = false;
 
+  @State()
+  private hasSubtext: boolean = false;
+
   @Event()
   guxremovecustomoption: EventEmitter<string>;
 
@@ -75,6 +81,11 @@ export class GuxOptionMulti {
     if (this.custom) {
       this.internalselectcustomoption.emit(this.value);
     }
+    this.onSubtextChange();
+  }
+
+  private onSubtextChange() {
+    this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
   // SVGs must be in DOM for tokenization to work
@@ -126,7 +137,8 @@ export class GuxOptionMulti {
           'gux-active': this.active,
           'gux-disabled': this.disabled,
           'gux-filtered': this.filtered,
-          'gux-selected': this.selected
+          'gux-selected': this.selected,
+          'gux-show-subtext': this.hasSubtext
         }}
         aria-selected={this.selected.toString()}
         aria-disabled={this.disabled.toString()}
@@ -134,13 +146,12 @@ export class GuxOptionMulti {
         {this.renderSVGCheckbox()}
         {/* The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text.
         This attribute is required because we need to get the slotted text and exclude the screen reader text. */}
-        <gux-truncate
-          gux-slot-container
-          ref={el => (this.truncateElement = el)}
-        >
-          <slot />
-        </gux-truncate>
-
+        <div class="gux-option-wrapper">
+          <gux-truncate ref={el => (this.truncateElement = el)}>
+            <slot />
+          </gux-truncate>
+          <slot onSlotchange={() => this.onSubtextChange()} name="subtext" />
+        </div>
         {this.renderCustomOptionInstructions()}
       </Host>
     ) as JSX.Element;
