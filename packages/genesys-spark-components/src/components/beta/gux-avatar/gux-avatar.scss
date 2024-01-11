@@ -163,7 +163,7 @@
     background-color: var(--gse-ui-avatar-badge-break);
 
     & gux-icon {
-      margin: 2px;
+      margin: var(--gse-ui-avatar-badge-break-icon-margin, 2px);
       color: var(--gse-ui-avatar-badge-foregroundDark);
     }
   }
@@ -172,7 +172,7 @@
     background-color: var(--gse-ui-avatar-badge-busy);
 
     & gux-icon {
-      margin: 2px;
+      margin: var(--gse-ui-avatar-badge-busy-icon-margin, 2px);
       color: var(--gse-ui-avatar-badge-foregroundDefault);
     }
   }
@@ -181,7 +181,7 @@
     background-color: var(--gse-ui-avatar-badge-notification);
 
     & gux-icon {
-      margin: 4px;
+      margin: var(--gse-ui-avatar-badge-notifications-icon-margin, 4px);
       color: var(--gse-ui-avatar-badge-foregroundDefault);
     }
   }
@@ -206,7 +206,7 @@
     background-color: var(--gse-ui-avatar-badge-onQueue);
 
     & gux-icon {
-      margin: 4px;
+      margin: var(--gse-ui-avatar-badge-queue-icon-margin, 4px);
       color: var(--gse-ui-avatar-badge-foregroundDefault);
     }
   }
