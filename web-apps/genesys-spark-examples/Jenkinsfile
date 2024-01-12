@@ -23,7 +23,7 @@ webappPipeline {
     skipCommitsFrom = []
     buildType = {
         if (isReleaseBranch) {
-            return 'MAINLINE'
+            return 'FEATURE'
         }
 
         return isFeatureBranch ? 'FEATURE' : 'CI'
