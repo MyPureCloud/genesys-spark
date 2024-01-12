@@ -161,7 +161,11 @@ export class GuxButtonMulti {
 
   render(): JSX.Element {
     return (
-      <gux-popup expanded={this.isOpen} exceed-target-width>
+      <gux-popup
+        expanded={this.isOpen}
+        exceed-target-width
+        placement="bottom-end"
+      >
         <div slot="target" class="gux-button-multi-container">
           <gux-button-slot
             class="gux-dropdown-button"

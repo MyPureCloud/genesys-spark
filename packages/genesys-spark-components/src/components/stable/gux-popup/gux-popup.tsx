@@ -16,7 +16,8 @@ import {
   offset,
   size,
   shift,
-  hide
+  hide,
+  Placement
 } from '@floating-ui/dom';
 
 /**
@@ -32,6 +33,12 @@ export class GuxPopup {
   private targetElementContainer: HTMLElement;
   private popupElementContainer: HTMLElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
+
+  /**
+   * Placement of the popup. Default is bottom-start
+   */
+  @Prop()
+  placement: Placement = 'bottom-start';
 
   @Prop()
   expanded: boolean = false;
@@ -85,7 +92,7 @@ export class GuxPopup {
         this.popupElementContainer,
         {
           strategy: 'fixed',
-          placement: 'bottom-start',
+          placement: this.placement,
           middleware: [
             offset(this.offset),
             flip(),
