@@ -1,5 +1,4 @@
 import { ListboxOptionElement } from './options/option-types';
-import { logError } from '../../../utils/error/log-error';
 
 export function getListOptions(
   list: HTMLGuxListboxElement
@@ -36,10 +35,6 @@ export function isOption(item: Element): boolean {
   return optionTypes.includes(item.tagName);
 }
 
-export function hasOptionGroups(list: HTMLGuxListboxElement): boolean {
-  return Array.from(list.children).some(child => isOptionGroup(child));
-}
-
 function getFirstSelectedOption(
   list: HTMLGuxListboxElement
 ): ListboxOptionElement {
@@ -70,32 +65,37 @@ function setActiveOption(
   }
 }
 
-function getListOptionByLocation(
-  list: HTMLGuxListboxElement,
-  location: 'next' | 'previous' | 'first' | 'last'
-): ListboxOptionElement {
-  const availableOptionsList = getAvailableListOptions(list);
-  const activeOptionIndex = hasActiveOption(list)
-    ? availableOptionsList.indexOf(getActiveOption(list))
-    : -1;
+function getFirstOption(list: HTMLGuxListboxElement): ListboxOptionElement {
+  return getAvailableListOptions(list)[0];
+}
 
-  switch (location) {
-    case 'first':
-      return availableOptionsList[0];
-    case 'last':
-      return availableOptionsList.slice(-1)[0];
-    case 'previous':
-      return hasActiveOption(list)
-        ? availableOptionsList[activeOptionIndex - 1]
-        : getListOptionByLocation(list, 'first');
-    case 'next':
-      return hasActiveOption(list)
-        ? availableOptionsList[activeOptionIndex + 1]
-        : getListOptionByLocation(list, 'first');
-    default:
-      logError(list, 'must include a valid location');
-      return null;
+function getNextOption(list: HTMLGuxListboxElement): ListboxOptionElement {
+  if (hasActiveOption(list)) {
+    const availableListOptions = getAvailableListOptions(list);
+    const activeOption = getActiveOption(list);
+    const activeOptionIndex = availableListOptions.indexOf(activeOption);
+
+    return availableListOptions[activeOptionIndex + 1];
   }
+
+  return getFirstOption(list);
+}
+
+function getPreviousOption(list: HTMLGuxListboxElement): ListboxOptionElement {
+  if (hasActiveOption(list)) {
+    const availableOptionsList = getAvailableListOptions(list);
+    const activeOptionIndex = availableOptionsList.indexOf(
+      getActiveOption(list)
+    );
+    return availableOptionsList[activeOptionIndex - 1];
+  }
+
+  return getFirstOption(list);
+}
+
+function getLastOption(list: HTMLGuxListboxElement): ListboxOptionElement {
+  const availableOptions = getAvailableListOptions(list);
+  return availableOptions[availableOptions.length - 1];
 }
 
 export function hasActiveOption(list: HTMLGuxListboxElement): boolean {
@@ -132,15 +132,12 @@ export function clearActiveOptions(list: HTMLGuxListboxElement): void {
 }
 
 export function setInitialActiveOption(list: HTMLGuxListboxElement) {
-  setActiveOption(
-    list,
-    getFirstSelectedOption(list) || getListOptionByLocation(list, 'first')
-  );
+  setActiveOption(list, getFirstSelectedOption(list) || getFirstOption(list));
 }
 
 export function hasPreviousOption(list: HTMLGuxListboxElement): boolean {
   if (hasActiveOption(list)) {
-    return Boolean(getListOptionByLocation(list, 'previous'));
+    return Boolean(getPreviousOption(list));
   }
 
   return false;
@@ -148,26 +145,26 @@ export function hasPreviousOption(list: HTMLGuxListboxElement): boolean {
 
 export function hasNextOption(list: HTMLGuxListboxElement): boolean {
   if (hasActiveOption(list)) {
-    return Boolean(getListOptionByLocation(list, 'next'));
+    return Boolean(getNextOption(list));
   }
 
   return false;
 }
 
 export function setFirstOptionActive(list: HTMLGuxListboxElement): void {
-  setActiveOption(list, getListOptionByLocation(list, 'first'));
+  setActiveOption(list, getFirstOption(list));
 }
 
 export function setNextOptionActive(list: HTMLGuxListboxElement): void {
-  setActiveOption(list, getListOptionByLocation(list, 'next'));
+  setActiveOption(list, getNextOption(list));
 }
 
 export function setPreviousOptionActive(list: HTMLGuxListboxElement): void {
-  setActiveOption(list, getListOptionByLocation(list, 'previous'));
+  setActiveOption(list, getPreviousOption(list));
 }
 
 export function setLastOptionActive(list: HTMLGuxListboxElement): void {
-  setActiveOption(list, getListOptionByLocation(list, 'last'));
+  setActiveOption(list, getLastOption(list));
 }
 
 export function actOnActiveOption(
