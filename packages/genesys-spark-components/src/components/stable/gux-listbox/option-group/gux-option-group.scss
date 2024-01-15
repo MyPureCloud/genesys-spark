@@ -5,16 +5,6 @@
   flex: 1 1 auto;
   align-self: auto;
 
-  &.gux-disabled {
-    pointer-events: none;
-    cursor: default;
-    // TODO: Get more styles for this from design
-  }
-
-  &.gux-filtered {
-    display: none;
-  }
-
   .gux-option-group-label {
     display: block;
     padding: var(--gse-ui-menu-groupedMenu-title-padding);

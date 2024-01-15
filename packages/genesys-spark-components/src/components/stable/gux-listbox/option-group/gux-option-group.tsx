@@ -12,18 +12,14 @@ export class GuxOptionGroup {
   @Prop()
   label!: string;
 
-  @Prop()
-  disabled: boolean;
+  // @Prop()
+  // disabled: boolean;
+  // TOOD: Add disabled state once design work is complete
 
   render(): JSX.Element {
     return (
       <Host>
-        <div
-          class={{
-            'gux-option-group': true,
-            'gux-disabled': this.disabled
-          }}
-        >
+        <div class="gux-option-group">
           <div class="gux-option-group-label" role="presentation">
             {this.label}
           </div>
