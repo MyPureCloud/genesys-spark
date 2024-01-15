@@ -457,7 +457,8 @@
     <gux-listbox-multi aria-label="Animals"> </gux-listbox-multi>
   </gux-dropdown-multi>
 
-  <h2>Grouped Options</h2>
+  <h2>Grouped</h2>
+  <h3>Standard Grouped Options</h3>
   <gux-dropdown-multi filter-type="starts-with" placeholder="Select an animal">
     <gux-listbox-multi aria-label="Animals">
       <gux-option-group label="Group 1">
@@ -473,6 +474,31 @@
       </gux-option-group>
       <gux-option-group label="Last Group">
         <gux-option-multi value="h">Horse</gux-option-multi>
+        <gux-option-multi value="i">Ibis</gux-option-multi>
+      </gux-option-group>
+    </gux-listbox-multi>
+  </gux-dropdown-multi>
+
+  <h3>Grouped & Filterable Options</h3>
+  <gux-dropdown-multi filter-type="starts-with" placeholder="Select an animal">
+    <gux-listbox-multi aria-label="Animals">
+      <gux-option-group label="First Group">
+        <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+        <gux-option-multi value="b">Bat</gux-option-multi>
+      </gux-option-group>
+      <gux-option-group label="Second Group">
+        <gux-option-multi value="c">Cat</gux-option-multi>
+        <gux-option-multi value="d">Dog</gux-option-multi>
+      </gux-option-group>
+      <gux-option-group label="Three A Group">
+        <gux-option-multi value="e">Eel</gux-option-multi>
+        <gux-option-multi value="f">Frog</gux-option-multi>
+      </gux-option-group>
+      <gux-option-group label="Three B Group">
+        <gux-option-multi value="g">Goat</gux-option-multi>
+        <gux-option-multi value="Horse">Horse</gux-option-multi>
+      </gux-option-group>
+      <gux-option-group label="Fifth Group">
         <gux-option-multi value="i">Ibis</gux-option-multi>
       </gux-option-group>
     </gux-listbox-multi>

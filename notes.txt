@@ -1,0 +1,33 @@
+Navigating grouped lists in listbox
+-------------------------
+List can be navigated up and down by keyboard
+Pressing enter selects an item in the list
+User presses the down arrow from the last option, then focus goes back to the first option
+User presses the up arrow from the first option, focus should go back to the last item
+Disabled and filtered items should not be focused when navigating by keyboard
+Group titles should be skipped when navigating by keyboard
+In the case of two option groups, if the down arrow is pressed on the last option of group one focus should move to the first option in group two
+In the case of two option groups, if the up arrow is pressed on the first option of group two focus should move to the last option in group one
+If listbox is focused and user presses enter or arrow key, the first item should be focused if nothing else is active
+
+Check that this works with dropdown-multi also (Make sure that listbox-service is the location for common functions for this)
+
+Should work with search
+Group titles should be searchable
+Filtered lists should include group titles and groups
+Searching by a group title should return the group and all options
+Searching by an option title should return the group title and that option
+Divider should be hidden for last group in filtered list
+
+Tests needed to cover these scenarios (after API review)
+
+Divider should show after groups
+Divider should not show in the case that the group is the last item in the list
+
+If group title matches query - show group and options
+If group has some matches but not title match - show group and filtered option
+If group title doesn't match query and options don't match query - hide group and options
+
+Make sure the divider disappears for the filtered groups
+
+
