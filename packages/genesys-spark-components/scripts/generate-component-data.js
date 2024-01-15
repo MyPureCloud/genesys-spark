@@ -138,6 +138,9 @@ function mdTableToArray(tableMd) {
       },
       link(href, title, text) {
         return `[${text}](${href})`;
+      },
+      em(text) {
+        return `${text}`;
       }
     }
   });

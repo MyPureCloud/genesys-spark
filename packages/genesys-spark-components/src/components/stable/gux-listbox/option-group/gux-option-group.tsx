@@ -5,7 +5,7 @@ import { Component, h, Host, JSX, Prop } from '@stencil/core';
  */
 @Component({
   styleUrl: 'gux-option-group.scss',
-  tag: 'gux-option-group',
+  tag: 'gux-option-group-beta',
   shadow: true
 })
 export class GuxOptionGroup {
