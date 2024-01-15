@@ -66,11 +66,12 @@ function setActiveOption(
 }
 
 function getFirstOption(list: HTMLGuxListboxElement): ListboxOptionElement {
+  console.log(getAvailableListOptions(list)[0]);
   return getAvailableListOptions(list)[0];
 }
 
 function getNextOption(list: HTMLGuxListboxElement): ListboxOptionElement {
-  if (hasActiveOption(list)) {
+  if (hasActiveOption(list) && getActiveOption(list) !== getLastOption(list)) {
     const availableListOptions = getAvailableListOptions(list);
     const activeOption = getActiveOption(list);
     const activeOptionIndex = availableListOptions.indexOf(activeOption);
@@ -87,6 +88,11 @@ function getPreviousOption(list: HTMLGuxListboxElement): ListboxOptionElement {
     const activeOptionIndex = availableOptionsList.indexOf(
       getActiveOption(list)
     );
+
+    if (getActiveOption(list) === getFirstOption(list)) {
+      return getLastOption(list);
+    }
+
     return availableOptionsList[activeOptionIndex - 1];
   }
 
