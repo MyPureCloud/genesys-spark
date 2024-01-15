@@ -6,7 +6,7 @@ export function getListOptions(
 ): ListboxOptionElement[] {
   const listChildren = Array.from(list.children);
 
-  const allOptions = listChildren.reduce((accumulator, child) => {
+  return listChildren.reduce((accumulator: ListboxOptionElement[], child) => {
     let childOptions = [];
 
     if (isOptionGroup(child)) {
@@ -17,8 +17,6 @@ export function getListOptions(
 
     return [...accumulator, ...childOptions] as ListboxOptionElement[];
   }, []);
-
-  return allOptions as ListboxOptionElement[];
 }
 
 export function getAvailableListOptions(
