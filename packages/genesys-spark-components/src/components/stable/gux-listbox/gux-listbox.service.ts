@@ -3,9 +3,25 @@ import { ListboxOptionElement } from './options/option-types';
 export function getListOptions(
   list: HTMLGuxListboxElement
 ): ListboxOptionElement[] {
-  return (Array.from(list.children) as ListboxOptionElement[]).filter(item => {
+  const listChildren = Array.from(list.children);
+
+  const allOptions = [];
+  listChildren.map(child => {
+    if (isOptionGroup(child)) return allOptions.push(...child.children);
+    return allOptions.push(child);
+  });
+
+  return (allOptions as ListboxOptionElement[]).filter(item => {
     return item.value || item.value === '';
   });
+}
+
+export function isOptionGroup(item: Element): boolean {
+  return item.tagName === 'GUX-OPTION-GROUP';
+}
+
+export function hasOptionGroups(list: HTMLGuxListboxElement): boolean {
+  return Array.from(list.children).some(child => isOptionGroup(child));
 }
 
 function getFirstSelectedOption(
@@ -38,8 +54,34 @@ function setActiveOption(
   }
 }
 
+function getSiblingForGroupedList(
+  list: HTMLGuxListboxElement,
+  location: 'next' | 'previous' | 'first' | 'last'
+): ListboxOptionElement {
+  const availableOptionsList = getListOptions(list).filter(
+    option => !option.disabled && !option.filtered
+  );
+  const activeOption = getActiveOption(list);
+  const activeOptionIndex = availableOptionsList.indexOf(activeOption);
+
+  switch (location) {
+    case 'first':
+      return availableOptionsList[0];
+    case 'last':
+      return availableOptionsList[availableOptionsList.length - 1];
+    case 'previous':
+      return availableOptionsList[activeOptionIndex - 1];
+    default:
+      return availableOptionsList[activeOptionIndex + 1];
+  }
+}
+
 function getFirstOption(list: HTMLGuxListboxElement): ListboxOptionElement {
-  let firstOption = getListOptions(list)[0];
+  let firstOption: ListboxOptionElement = getListOptions(list)[0];
+
+  if (hasOptionGroups(list)) {
+    return (firstOption = getSiblingForGroupedList(list, 'first'));
+  }
 
   while (firstOption && (firstOption.disabled || firstOption.filtered)) {
     firstOption = firstOption.nextElementSibling as ListboxOptionElement;
@@ -50,8 +92,12 @@ function getFirstOption(list: HTMLGuxListboxElement): ListboxOptionElement {
 
 function getNextOption(list: HTMLGuxListboxElement): ListboxOptionElement {
   if (hasActiveOption(list)) {
-    let nextOption = getActiveOption(list)
-      .nextElementSibling as ListboxOptionElement;
+    const activeOption = getActiveOption(list);
+    let nextOption: ListboxOptionElement;
+    if (hasOptionGroups(list)) {
+      return (nextOption = getSiblingForGroupedList(list, 'next'));
+    }
+    nextOption = activeOption.nextElementSibling as ListboxOptionElement;
 
     while (nextOption && (nextOption.disabled || nextOption.filtered)) {
       nextOption = nextOption.nextElementSibling as ListboxOptionElement;
@@ -65,8 +111,13 @@ function getNextOption(list: HTMLGuxListboxElement): ListboxOptionElement {
 
 function getPreviousOption(list: HTMLGuxListboxElement): ListboxOptionElement {
   if (hasActiveOption(list)) {
-    let previousOption = getActiveOption(list)
-      .previousElementSibling as ListboxOptionElement;
+    const activeOption = getActiveOption(list);
+    let previousOption: ListboxOptionElement;
+    if (hasOptionGroups(list)) {
+      return (previousOption = getSiblingForGroupedList(list, 'previous'));
+    }
+    previousOption =
+      activeOption.previousElementSibling as ListboxOptionElement;
 
     while (
       previousOption &&
@@ -84,8 +135,10 @@ function getPreviousOption(list: HTMLGuxListboxElement): ListboxOptionElement {
 
 function getLastOption(list: HTMLGuxListboxElement): ListboxOptionElement {
   const options = getListOptions(list);
-
-  let lastOption = options[options.length - 1];
+  let lastOption: ListboxOptionElement = options[options.length - 1];
+  if (hasOptionGroups(list)) {
+    return (lastOption = getSiblingForGroupedList(list, 'last'));
+  }
 
   while (lastOption && (lastOption.disabled || lastOption.filtered)) {
     lastOption = lastOption.previousElementSibling as ListboxOptionElement;
@@ -133,15 +186,21 @@ export function setInitialActiveOption(list: HTMLGuxListboxElement) {
 
 export function hasPreviousOption(list: HTMLGuxListboxElement): boolean {
   if (hasActiveOption(list)) {
-    let previousOption = getActiveOption(list)
-      .previousElementSibling as ListboxOptionElement;
-
-    while (
-      previousOption &&
-      (previousOption.disabled || previousOption.filtered)
-    ) {
+    const activeOption = getActiveOption(list);
+    let previousOption: ListboxOptionElement;
+    if (hasOptionGroups(list)) {
+      previousOption = getSiblingForGroupedList(list, 'previous');
+    } else {
       previousOption =
-        previousOption.previousElementSibling as ListboxOptionElement;
+        activeOption.previousElementSibling as ListboxOptionElement;
+
+      while (
+        previousOption &&
+        (previousOption.disabled || previousOption.filtered)
+      ) {
+        previousOption =
+          previousOption.previousElementSibling as ListboxOptionElement;
+      }
     }
 
     return Boolean(previousOption);
@@ -152,11 +211,16 @@ export function hasPreviousOption(list: HTMLGuxListboxElement): boolean {
 
 export function hasNextOption(list: HTMLGuxListboxElement): boolean {
   if (hasActiveOption(list)) {
-    let nextOption = getActiveOption(list)
-      .nextElementSibling as ListboxOptionElement;
+    const activeOption = getActiveOption(list);
+    let nextOption: ListboxOptionElement;
+    if (hasOptionGroups(list)) {
+      nextOption = getSiblingForGroupedList(list, 'next');
+    } else {
+      nextOption = activeOption.nextElementSibling as ListboxOptionElement;
 
-    while (nextOption && (nextOption.disabled || nextOption.filtered)) {
-      nextOption = nextOption.nextElementSibling as ListboxOptionElement;
+      while (nextOption && (nextOption.disabled || nextOption.filtered)) {
+        nextOption = nextOption.nextElementSibling as ListboxOptionElement;
+      }
     }
 
     return Boolean(nextOption);

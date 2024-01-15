@@ -1,0 +1,29 @@
+@use '../../../../style/typography.scss';
+
+.gux-option-group {
+  display: block;
+  flex: 1 1 auto;
+  align-self: auto;
+
+  &.gux-disabled {
+    pointer-events: none;
+    cursor: default;
+    // TODO: Get more styles for this from design
+  }
+
+  &.gux-filtered {
+    display: none;
+  }
+
+  .gux-option-group-label {
+    display: block;
+    padding: var(--gse-ui-menu-groupedMenu-title-padding);
+    color: var(--gse-ui-menu-groupedMenu-title-foregroundColor);
+
+    @include typography.heading-overline;
+  }
+}
+
+:host(:last-of-type) .gux-option-group gux-list-divider {
+  display: none;
+}
