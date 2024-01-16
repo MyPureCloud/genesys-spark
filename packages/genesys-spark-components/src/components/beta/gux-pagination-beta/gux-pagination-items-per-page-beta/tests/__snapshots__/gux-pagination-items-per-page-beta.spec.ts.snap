@@ -4,7 +4,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
 <gux-pagination-items-per-page-beta items-per-page="25">
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
-      <gux-dropdown aria-label="Items per page dropdown, 25 selected">
+      <gux-dropdown aria-label="Items per page dropdown, 25 items per page selected">
         <mock:shadow-root>
           <gux-popup-beta>
             <div class="gux-target-container-collapsed" slot="target">
@@ -66,7 +66,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
 <gux-pagination-items-per-page-beta items-per-page="50">
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
-      <gux-dropdown aria-label="Items per page dropdown, 50 selected">
+      <gux-dropdown aria-label="Items per page dropdown, 50 items per page selected">
         <mock:shadow-root>
           <gux-popup-beta>
             <div class="gux-target-container-collapsed" slot="target">
@@ -128,7 +128,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
 <gux-pagination-items-per-page-beta items-per-page="75">
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
-      <gux-dropdown aria-label="Items per page dropdown, 75 selected">
+      <gux-dropdown aria-label="Items per page dropdown, 75 items per page selected">
         <mock:shadow-root>
           <gux-popup-beta>
             <div class="gux-target-container-collapsed" slot="target">
@@ -190,7 +190,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
 <gux-pagination-items-per-page-beta items-per-page="100">
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
-      <gux-dropdown aria-label="Items per page dropdown, 100 selected">
+      <gux-dropdown aria-label="Items per page dropdown, 100 items per page selected">
         <mock:shadow-root>
           <gux-popup-beta>
             <div class="gux-target-container-collapsed" slot="target">
