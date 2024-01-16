@@ -150,7 +150,7 @@ export class GuxPaginationButtons {
         <div class="gux-pagination-buttons-group">
           <gux-button-slot accent="ghost">
             <button
-              title={this.i18n('first')}
+              title={this.i18n('firstPage')}
               disabled={this.onFirstPage}
               onClick={this.handleClickFirst.bind(this)}
             >
@@ -159,7 +159,7 @@ export class GuxPaginationButtons {
           </gux-button-slot>
           <gux-button-slot accent="ghost">
             <button
-              title={this.i18n('previous')}
+              title={this.i18n('previousPage')}
               disabled={this.onFirstPage}
               onClick={this.handleClickPrevious.bind(this)}
             >
