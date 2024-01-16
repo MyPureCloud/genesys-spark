@@ -95,7 +95,7 @@ export class GuxPaginationButtons {
               ref={el => (this.currentElement = el)}
               class="gux-pagination-buttons-list-current"
               aria-label={this.i18n('pageSelected', {
-                pageSelected: cv.display
+                pageSelected: cv.pageNumber
               })}
             >
               {cv.display}
