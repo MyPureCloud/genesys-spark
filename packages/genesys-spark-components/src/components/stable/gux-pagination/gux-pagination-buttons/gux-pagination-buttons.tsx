@@ -94,6 +94,9 @@ export class GuxPaginationButtons {
             <button
               ref={el => (this.currentElement = el)}
               class="gux-pagination-buttons-list-current"
+              aria-label={this.i18n('pageSelected', {
+                pageSelected: cv.display
+              })}
             >
               {cv.display}
             </button>
@@ -114,6 +117,9 @@ export class GuxPaginationButtons {
           <button
             class="gux-pagination-buttons-list-target"
             onClick={() => this.handlePageChange(cv.pageNumber)}
+            aria-label={this.i18n('pageNumber', {
+              pageNumber: cv.pageNumber
+            })}
           >
             {cv.display}
           </button>
@@ -167,7 +173,7 @@ export class GuxPaginationButtons {
         <div class="gux-pagination-buttons-group">
           <gux-button-slot accent="ghost">
             <button
-              title={this.i18n('next')}
+              title={this.i18n('nextPage')}
               disabled={this.onLastPage}
               onClick={this.handleClickNext.bind(this)}
             >
@@ -176,7 +182,7 @@ export class GuxPaginationButtons {
           </gux-button-slot>
           <gux-button-slot accent="ghost">
             <button
-              title={this.i18n('last')}
+              title={this.i18n('lastPage')}
               disabled={this.onLastPage}
               onClick={this.handleClickLast.bind(this)}
             >

@@ -137,7 +137,8 @@
     "next": "Next",
     "last": "Last",
     "pageInputLabel": "Page {currentPage, number} of {totalPages, number}",
-    "goToPage": "Go to page"
+    "goToPage": "Go to page",
+    "pageNumber": "Page {pageNumber}"
   },
   "gux-pagination-buttons-legacy": {
     "page": "Page",
@@ -163,7 +164,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "per page",
     "itemsPerPage": "Items per page",
-    "rangeSelected": "Items per page dropdown, {range} selected"
+    "rangeSelected": "Items per page dropdown, {range} items per page"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "per page",
