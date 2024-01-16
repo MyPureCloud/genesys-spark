@@ -1,4 +1,4 @@
-<img src="https://studio-assets.supernova.io/design-systems/27408/b8ad8938-c463-41aa-ad30-c659b149b853.png"/>
+<img src="https://studio-assets.supernova.io/design-systems/27408/7754f040-a504-4d00-8165-ac8657c885a4.png"/>
 
 # Spark Design System
 
