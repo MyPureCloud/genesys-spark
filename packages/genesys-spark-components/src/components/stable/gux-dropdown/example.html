@@ -1,6 +1,6 @@
 <h1>gux-dropdown</h1>
 <form onchange="notify(event)" oninput="notify(event)">
-  <!-- <h2>Filterable long list: filter by start of option</h2>
+  <h2>Filterable long list: filter by start of option</h2>
   <gux-dropdown filter-type="starts-with" placeholder="Select a country">
     <gux-listbox aria-label="Countries">
       <gux-option value="AFG">Afghanistan</gux-option>
@@ -43,7 +43,9 @@
       <gux-option value="CMR">Cameroon</gux-option>
       <gux-option value="CAN">Canada</gux-option>
       <gux-option value="CPV">Cape Verde</gux-option>
-      <gux-option value="BES">Caribbean Netherlands: Bonaire, Sint Eustatius and Saba</gux-option>
+      <gux-option value="BES"
+        >Caribbean Netherlands: Bonaire, Sint Eustatius and Saba</gux-option
+      >
       <gux-option value="CYM">Cayman Islands</gux-option>
       <gux-option value="CAF">Central African Republic</gux-option>
       <gux-option value="TCD">Chad</gux-option>
@@ -119,7 +121,9 @@
       <gux-option value="KAZ">Kazakhstan</gux-option>
       <gux-option value="KEN">Kenya</gux-option>
       <gux-option value="KIR">Kiribati</gux-option>
-      <gux-option value="PRK">Korea, Democratic People"s Rep. (North)</gux-option>
+      <gux-option value="PRK"
+        >Korea, Democratic People"s Rep. (North)</gux-option
+      >
       <gux-option value="KOR">Korea, Republic of (South)</gux-option>
       <gux-option value="KWT">Kuwait</gux-option>
       <gux-option value="KGZ">Kyrgyzstan</gux-option>
@@ -186,7 +190,9 @@
       <gux-option value="RUS">Russian Federation</gux-option>
       <gux-option value="RWA">Rwanda</gux-option>
       <gux-option value="BLM">Saint Barthélemy</gux-option>
-      <gux-option value="SHN">Saint Helena, Ascension and Tristan da Cunha</gux-option>
+      <gux-option value="SHN"
+        >Saint Helena, Ascension and Tristan da Cunha</gux-option
+      >
       <gux-option value="KNA">Saint Kitts and Nevis</gux-option>
       <gux-option value="LCA">Saint Lucia</gux-option>
       <gux-option value="MAF">Saint Martin (French part)</gux-option>
@@ -207,7 +213,9 @@
       <gux-option value="SLB">Solomon Islands</gux-option>
       <gux-option value="SOM">Somalia</gux-option>
       <gux-option value="ZAF">South Africa</gux-option>
-      <gux-option value="SGS">South Georgia and the South Sandwich Islands</gux-option>
+      <gux-option value="SGS"
+        >South Georgia and the South Sandwich Islands</gux-option
+      >
       <gux-option value="SSD">South Sudan</gux-option>
       <gux-option value="ESP">Spain</gux-option>
       <gux-option value="LKA">Sri Lanka</gux-option>
@@ -300,16 +308,22 @@
     </gux-listbox>
   </gux-dropdown>
 
-  <gux-button onclick="(function() {
+  <gux-button
+    onclick="(function() {
     const newOption = window.toHTML(`<gux-option value='j'>Jellyfish</gux-option>`);
     document.getElementById('unknown-listbox').appendChild(newOption);
-  })()">Add "Jellyfish" Option</gux-button>
+  })()"
+    >Add "Jellyfish" Option</gux-button
+  >
 
-  <gux-button onclick="(function() {
+  <gux-button
+    onclick="(function() {
     const option = document.querySelector('#unknown-listbox gux-option[value=j]')
 
     option && option.remove();
-})()">Remove "Jellyfish" Option</gux-button>
+})()"
+    >Remove "Jellyfish" Option</gux-button
+  >
 
   <h2>Disabled</h2>
   <gux-dropdown value="a" disabled>
@@ -433,11 +447,27 @@
 
   <gux-dropdown>
     <gux-listbox aria-label="Users">
-      <gux-option-icon icon-name="user" icon-color="var(--gux-blue-60)" value="leonardo">Leonardo</gux-option-icon>
-      <gux-option-icon icon-name="user" icon-color="#8452cf" value="donatello">Donatello</gux-option-icon>
-      <gux-option-icon icon-name="user" icon-color="rgb(234, 11, 11)" value="raphael">Raphael</gux-option-icon>
-      <gux-option-icon icon-name="user" icon-color="#e08915"
-        icon-sr-text="Screenreader information about the icon goes here, if needed" value="michelangelo">Michelangelo
+      <gux-option-icon
+        icon-name="user"
+        icon-color="var(--gux-blue-60)"
+        value="leonardo"
+        >Leonardo</gux-option-icon
+      >
+      <gux-option-icon icon-name="user" icon-color="#8452cf" value="donatello"
+        >Donatello</gux-option-icon
+      >
+      <gux-option-icon
+        icon-name="user"
+        icon-color="rgb(234, 11, 11)"
+        value="raphael"
+        >Raphael</gux-option-icon
+      >
+      <gux-option-icon
+        icon-name="user"
+        icon-color="#e08915"
+        icon-sr-text="Screenreader information about the icon goes here, if needed"
+        value="michelangelo"
+        >Michelangelo
       </gux-option-icon>
     </gux-listbox>
   </gux-dropdown>
@@ -453,9 +483,10 @@
   <h3>Loading a filterable list</h3>
   <gux-dropdown id="loading-2" filter-type="starts-with" loading>
     <gux-listbox aria-label="Animals"> </gux-listbox>
-  </gux-dropdown> -->
+  </gux-dropdown>
 
   <h2>Grouped Options</h2>
+  <h3>Standard Grouped Options</h3>
   <gux-dropdown>
     <gux-listbox aria-label="Animals">
       <gux-option-group-beta label="Group 1">
@@ -476,7 +507,7 @@
     </gux-listbox>
   </gux-dropdown>
 
-  <h2>Grouped Options with filtering</h2>
+  <h3>Grouped Options with filtering</h3>
   <gux-dropdown filter-type="starts-with" placeholder="Select a country">
     <gux-listbox aria-label="Animals">
       <gux-option-group-beta label="Group 1">
