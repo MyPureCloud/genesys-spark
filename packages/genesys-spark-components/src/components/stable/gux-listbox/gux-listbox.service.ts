@@ -66,7 +66,6 @@ function setActiveOption(
 }
 
 function getFirstOption(list: HTMLGuxListboxElement): ListboxOptionElement {
-  console.log(getAvailableListOptions(list)[0]);
   return getAvailableListOptions(list)[0];
 }
 
