@@ -29,13 +29,26 @@ import { registerSparkComponents } from 'genesys-spark';
 await registerSparkComponents();
 ```
 
+### Loading the chart components
+
+When initializing your app/page, call `registerSparkChartComponents`, which will inject
+the script and style tags into your page that define the chart related Spark custom elements:
+
+```js
+import { registerSparkChartComponents } from 'genesys-spark';
+
+// It's not _required_ to await component loading, but it can help prevent a flash
+// of unstyled content.
+await registerSparkChartComponents();
+```
+
 ### Font Loading
 
-While `registerSparkComponents()` will add the required webfonts to your page if
-they are not already present, it is recommended that you link stylesheets to load
-the Urbanist and Noto Sans fonts in your document prior to starting your app. This
-will improve loading performance and prevent a jarring font transition when the
-required fonts load.
+While `registerSparkComponents()` and `registerSparkChartComponents()` will add
+the required web fonts to your page if they are not already present, it is recommended
+that you link stylesheets to load the Urbanist and Noto Sans fonts in your document
+prior to starting your app. This will improve loading performance and prevent a
+jarring font transition when the required fonts load.
 
 ## Asset loading details
 

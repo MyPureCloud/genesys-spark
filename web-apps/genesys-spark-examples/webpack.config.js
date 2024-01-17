@@ -71,6 +71,16 @@ module.exports = {
             return path.basename(absoluteFilename);
           },
           transform: generateComponentPage
+        },
+        {
+          from: '../../packages/genesys-spark-chart-components/src/components/**/example.html',
+          to: ({ absoluteFilename }) => {
+            const segments = absoluteFilename.split(path.sep);
+            const component = segments[segments.length - 2];
+
+            return `${component}.html`;
+          },
+          transform: generateComponentPage
         }
       ]
     })

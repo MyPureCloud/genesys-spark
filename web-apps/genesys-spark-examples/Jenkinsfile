@@ -4,9 +4,9 @@ Boolean isMainBranch = env.BRANCH_NAME == 'main'
 
 Boolean isMaintenanceReleaseBranch = env.BRANCH_NAME.startsWith('maintenance/')
 
-Boolean isFeatureBranch = env.BRANCH_NAME.startsWith('feature/') || env.BRANCH_NAME.startsWith('beta/')
+Boolean isFeatureBranch = env.BRANCH_NAME.startsWith('feature/') || env.BRANCH_NAME.startsWith('beta/') || isMaintenanceReleaseBranch
 
-Boolean isReleaseBranch = isMaintenanceReleaseBranch || isMainBranch
+Boolean isReleaseBranch = isMainBranch
 
 webappPipeline {
     projectName = 'common-ui-docs/genesys-webcomponents'

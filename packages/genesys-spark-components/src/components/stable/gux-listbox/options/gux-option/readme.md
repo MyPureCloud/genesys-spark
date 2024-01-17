@@ -16,9 +16,10 @@
 
 ## Slots
 
-| Slot | Description |
-| ---- | ----------- |
-|      | text        |
+| Slot        | Description               |
+| ----------- | ------------------------- |
+|             | text                      |
+| `"subtext"` | Optional slot for subtext |
 
 
 ## Dependencies

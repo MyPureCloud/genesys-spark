@@ -6,13 +6,16 @@ import {
   JSX,
   Listen,
   Prop,
-  Watch
+  Watch,
+  State
 } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot - text
+ * @slot subtext - Optional slot for subtext
  */
 
 @Component({
@@ -52,6 +55,9 @@ export class GuxOptionIcon {
   @Prop({ mutable: true })
   hovered: boolean = false;
 
+  @State()
+  private hasSubtext: boolean = false;
+
   @Listen('mouseenter')
   onmouseenter() {
     this.hovered = true;
@@ -72,6 +78,11 @@ export class GuxOptionIcon {
 
   componentWillLoad(): void {
     this.root.id = this.root.id || randomHTMLId('gux-option-icon');
+    this.onSubtextChange();
+  }
+
+  private onSubtextChange() {
+    this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
   private getAriaSelected(): boolean | string {
@@ -98,7 +109,8 @@ export class GuxOptionIcon {
           'gux-disabled': this.disabled,
           'gux-filtered': this.filtered,
           'gux-hovered': this.hovered,
-          'gux-selected': this.selected
+          'gux-selected': this.selected,
+          'gux-show-subtext': this.hasSubtext
         }}
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}
@@ -109,9 +121,12 @@ export class GuxOptionIcon {
           icon-name={this.iconName}
           style={iconStyle}
         ></gux-icon>
-        <gux-truncate ref={el => (this.truncateElement = el)}>
-          <slot />
-        </gux-truncate>
+        <div class="gux-option-wrapper">
+          <gux-truncate ref={el => (this.truncateElement = el)}>
+            <slot />
+          </gux-truncate>
+          <slot onSlotchange={() => this.onSubtextChange()} name="subtext" />
+        </div>
       </Host>
     ) as JSX.Element;
   }

@@ -158,7 +158,7 @@
     "border_radius": 0
   },
   "badge": {
-    "border_radius": "10px",
+    "border_radius": "16px",
     "text": {
       "fontFamily": "Noto Sans",
       "lineHeight": "18px",
@@ -284,9 +284,9 @@
       "fontSize": "12px",
       "fontWeight": 700
     },
-    "padding": "0 12px",
-    "padding_icon_only": "8px",
     "default": {
+      "padding": "0 12px",
+      "padding_icon_only": "8px",
       "height": "32px"
     },
     "border_radius": "4px",
@@ -372,7 +372,9 @@
       }
     },
     "compact": {
-      "height": "24px"
+      "height": "24px",
+      "padding": "0 12px",
+      "padding_icon_only": "4px"
     }
   },
   "rating": {

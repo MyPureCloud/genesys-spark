@@ -9,6 +9,15 @@
     }
   },
   {
+    "command": ["npm", "run", "dev.gscc"],
+    "title": "Stencil Chart Components",
+    "defaultStatus": ["🧩", "🧩"],
+    "status": {
+      "rebuild failed": ["🚨", "🚨"],
+      "rebuild finished": ["🧩", "🧩"]
+    }
+  },
+  {
     "command": ["npm", "run", "dev.spark"],
     "title": "Spark Package",
     "defaultStatus": ["✨", "✨"]

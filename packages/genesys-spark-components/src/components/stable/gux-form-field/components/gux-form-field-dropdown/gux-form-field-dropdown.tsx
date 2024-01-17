@@ -2,8 +2,6 @@ import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
-import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
-import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
 import { OnMutation } from '@utils/decorator/on-mutation';
 import { onRequiredChange } from '@utils/dom/on-attribute-change';
 import { hasSlot } from '@utils/dom/has-slot';
@@ -41,7 +39,6 @@ export class GuxFormFieldDropdown {
   private listboxElement: HTMLGuxListboxElement | HTMLGuxListboxMultiElement;
   private dropdownElement: HTMLGuxDropdownElement | HTMLGuxDropdownMultiElement;
   private label: HTMLLabelElement;
-  private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
 
   @Element()
@@ -52,9 +49,6 @@ export class GuxFormFieldDropdown {
 
   @State()
   private computedLabelPosition: GuxFormFieldLabelPosition = 'above';
-
-  @State()
-  private disabled: boolean;
 
   @State()
   private required: boolean;
@@ -97,9 +91,6 @@ export class GuxFormFieldDropdown {
   }
 
   disconnectedCallback(): void {
-    if (this.disabledObserver) {
-      this.disabledObserver.disconnect();
-    }
     if (this.requiredObserver) {
       this.requiredObserver.disconnect();
     }
@@ -140,8 +131,7 @@ export class GuxFormFieldDropdown {
           <div
             class={{
               'gux-input': true,
-              'gux-input-error': this.hasError,
-              'gux-disabled': this.disabled
+              'gux-input-error': this.hasError
             }}
           >
             <slot />
@@ -175,15 +165,8 @@ export class GuxFormFieldDropdown {
       this.root.querySelector('gux-listbox') ||
       this.root.querySelector('gux-listbox-multi');
 
-    this.disabled = calculateInputDisabledState(this.dropdownElement);
     this.required = this.dropdownElement.required;
 
-    this.disabledObserver = onInputDisabledStateChange(
-      this.dropdownElement,
-      (disabled: boolean) => {
-        this.disabled = disabled;
-      }
-    );
     this.requiredObserver = onRequiredChange(
       this.dropdownElement,
       (required: boolean) => {

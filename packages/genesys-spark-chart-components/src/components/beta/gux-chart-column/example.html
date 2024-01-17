@@ -1,0 +1,125 @@
+<h1>gux-chart-column-beta</h1>
+<h2>Default</h2>
+<gux-chart-column-beta
+  id="chart-1"
+  x-field-name="category"
+  y-field-name="value"
+>
+</gux-chart-column-beta>
+
+<h2>Layered</h2>
+<gux-chart-column-beta
+  id="chart-2"
+  x-field-name="category"
+  y-field-name="value"
+>
+</gux-chart-column-beta>
+
+<h2>Legend</h2>
+<gux-chart-column-beta
+  id="chart-3"
+  include-legend="true"
+  x-field-name="category"
+  y-field-name="value"
+>
+</gux-chart-column-beta>
+
+<h2>Custom legend position</h2>
+<gux-chart-column-beta
+  id="chart-6"
+  include-legend="true"
+  legend-position="left"
+  x-field-name="category"
+  y-field-name="value"
+>
+</gux-chart-column-beta>
+
+<h2>Non-default data fields</h2>
+<gux-chart-column-beta id="chart-4" x-field-name="grade" y-field-name="count">
+</gux-chart-column-beta>
+
+<h2>Custom Labels</h2>
+<gux-chart-column-beta
+  id="chart-5"
+  include-legend="true"
+  x-field-name="category"
+  x-tick-label-slant="true"
+  x-axis-title="Class"
+  y-field-name="value"
+  y-axis-title="Students"
+  legend-title="Class Name"
+>
+</gux-chart-column-beta>
+
+<style
+  onload="(function() {
+    const chart1 = document.querySelector('#chart-1');
+    const chart2 = document.querySelector('#chart-2');
+    const chart3 = document.querySelector('#chart-3');
+    const chart4 = document.querySelector('#chart-4');
+    const chart5 = document.querySelector('#chart-5');
+    const chart6 = document.querySelector('#chart-6');
+
+    chart1.addEventListener('chartClicked', (event) => console.info(event));
+
+    chart1.chartData = {'values': [
+    {'category': 'a', 'value': 4},
+    {'category': 'b', 'value': 6},
+    {'category': 'c', 'value': 10},
+    {'category': 'd', 'value': 3},
+    {'category': 'e', 'value': 10},
+    {'category': 'f', 'value': 20}
+  ]
+}
+
+chart2.chartData = {'values': [
+    {'category': 'a', 'value': 3, 'series': 'group1'},
+    {'category': 'a', 'value': 4, 'series': 'group2'},
+    {'category': 'b', 'value': 1, 'series': 'group1'},
+    {'category': 'b', 'value': 6, 'series': 'group2'},
+    {'category': 'c', 'value': 10, 'series': 'group2'},
+    {'category': 'c', 'value': 7, 'series': 'group1'},
+    {'category': 'd', 'value': 6, 'series': 'group2'},
+    {'category': 'd', 'value': 3, 'series': 'group1'},
+    {'category': 'e', 'value': 14, 'series': 'group2'},
+    {'category': 'e', 'value': 10, 'series': 'group1'},
+    {'category': 'f', 'value': 20, 'series': 'group2'},
+    {'category': 'f', 'value': 2, 'series': 'group1'}
+  ]
+}
+chart2.chartLayers = ['group2', 'group1']
+
+chart3.chartData = chart6.chartData = {'values': [
+    {'category': 'a', 'value': 4},
+    {'category': 'b', 'value': 6},
+    {'category': 'c', 'value': 10},
+    {'category': 'd', 'value': 3},
+    {'category': 'e', 'value': 10},
+    {'category': 'f', 'value': 20}
+  ]
+}
+
+chart4.chartData = {'values': [
+    {'grade': 'A', 'count': 4},
+    {'grade': 'B', 'count': 6},
+    {'grade': 'C', 'count': 10},
+    {'grade': 'D', 'count': 3},
+    {'grade': 'F', 'count': 1}
+  ]
+}
+
+chart5.chartData = {'values': [
+    {'category': 'Biology', 'value': 4},
+    {'category': 'Physics', 'value': 6},
+    {'category': 'Chemistry', 'value': 10},
+    {'category': 'Statistics', 'value': 3},
+    {'category': 'Geometry', 'value': 10},
+    {'category': 'Calculus', 'value': 20}
+  ]
+}
+  })()"
+>
+  .not-used {
+    -custom-noop: noop;
+  }
+</style>
