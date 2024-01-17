@@ -12,6 +12,14 @@
 
     @include typography.heading-overline;
   }
+
+  &.gux-hide-divider gux-list-divider {
+    display: none;
+  }
+}
+
+:host(.gux-filtered) {
+  display: none;
 }
 
 :host(:last-of-type) .gux-option-group gux-list-divider {
