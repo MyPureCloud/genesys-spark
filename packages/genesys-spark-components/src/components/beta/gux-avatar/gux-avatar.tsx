@@ -5,7 +5,6 @@ import {
   GuxAvatarSize,
   GuxAvatarAccent
 } from './gux-avatar.types';
-import { hasSlot } from '@utils/dom/has-slot';
 import { logWarn } from '@utils/error/log-error';
 
 /**
@@ -43,21 +42,19 @@ export class GuxAvatar {
    * Shows a status badge
    */
   @Prop()
-  badge: boolean = false;
+  hasBadge: boolean = false;
 
   /**
    * Wrap the content with a button if it needs to be clickable
    */
   @Prop()
-  interactive: boolean = false;
+  isInteractive: boolean = false;
 
   /**
    * Override the status badge with a notification icon
    */
   @Prop()
   notifications: boolean = false;
-
-  hasImageSlot: boolean;
 
   private generateInitials(): string {
     const nameArray = this.name ? this.name.split(' ') : [''];
@@ -67,18 +64,11 @@ export class GuxAvatar {
     return nameArray[0]?.charAt(0) + nameArray[0]?.charAt(1);
   }
 
-  private displayInnerContent(): JSX.Element | null {
-    if (this.hasImageSlot) {
-      return (<slot name="image"></slot>) as JSX.Element;
-    }
-    return (
-      <div class="initials">{this.generateInitials()}</div>
-    ) as JSX.Element;
-  }
-
-  private displayBadge(): JSX.Element | null {
-    const displayedStatus = this.notifications ? 'notifications' : this.status;
-    if (this.badge) {
+  private renderBadge(): JSX.Element | null {
+    if (this.hasBadge) {
+      const displayedStatus = this.notifications
+        ? 'notifications'
+        : this.status;
       return (
         <div
           class={{
@@ -88,7 +78,7 @@ export class GuxAvatar {
           }}
         >
           <gux-icon
-            icon-name={this.getIcon(displayedStatus)}
+            icon-name={this.getBadgeIcon(displayedStatus)}
             screenreader-text={displayedStatus}
           ></gux-icon>
         </div>
@@ -108,7 +98,7 @@ export class GuxAvatar {
     return this.accent.toString();
   }
 
-  private getIcon(status: GuxAvatarStatus): string {
+  private getBadgeIcon(status: GuxAvatarStatus): string {
     switch (status) {
       case 'available':
         return 'fa/circle-check-solid';
@@ -129,15 +119,18 @@ export class GuxAvatar {
     }
   }
 
-  componentWillLoad(): void {
-    trackComponent(this.root, { variant: this.status });
-    this.hasImageSlot = hasSlot(this.root, 'image');
-  }
-
-  componentDidLoad() {
+  private logWaring(): void {
     if (!this.name) {
       logWarn(this.root, 'must have a name attribute for accessibility.');
     }
+  }
+
+  componentWillLoad(): void {
+    trackComponent(this.root, { variant: this.status });
+  }
+
+  componentDidLoad() {
+    this.logWaring();
   }
 
   render(): JSX.Element {
@@ -148,25 +141,27 @@ export class GuxAvatar {
             'gux-avatar': true,
             [`${this.status}`]: true,
             [`gux-${this.size}`]: true,
-            [`gux-${this.statusRing ? 'status-ring' : ''}`]: this.statusRing
+            'gux-status-ring': this.statusRing
           }}
           aria-label={this.name}
         >
           <div
             class={{
-              content: true,
+              'gux-content': true,
               [`gux-accent-${this.getAccent()}`]: true
             }}
             aria-hidden="true"
           >
-            {this.displayInnerContent()}
+            <slot name="image">
+              <div class="initials">{this.generateInitials()}</div>
+            </slot>
           </div>
         </div>
-        {this.displayBadge()}
+        {this.renderBadge()}
       </Fragment>
     );
 
-    return this.interactive
+    return this.isInteractive
       ? ((<button>{avatarContent}</button>) as JSX.Element)
       : (avatarContent as JSX.Element);
   }

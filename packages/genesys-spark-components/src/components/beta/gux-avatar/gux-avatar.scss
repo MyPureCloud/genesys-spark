@@ -43,7 +43,7 @@
     width: var(--gse-ui-avatar-large-size);
     height: var(--gse-ui-avatar-large-size);
 
-    & .content {
+    & .gux-content {
       width: calc(100% - var(--gse-ui-avatar-large-statusRing-width) * 2);
       height: calc(100% - var(--gse-ui-avatar-large-statusRing-width) * 2);
       margin: var(--gse-ui-avatar-large-statusRing-width);
@@ -56,7 +56,7 @@
     width: var(--gse-ui-avatar-medium-size);
     height: var(--gse-ui-avatar-medium-size);
 
-    & .content {
+    & .gux-content {
       width: calc(100% - var(--gse-ui-avatar-medium-statusRing-width) * 2);
       height: calc(100% - var(--gse-ui-avatar-medium-statusRing-width) * 2);
       margin: var(--gse-ui-avatar-medium-statusRing-width);
@@ -68,7 +68,7 @@
     width: var(--gse-ui-avatar-small-size);
     height: var(--gse-ui-avatar-small-size);
 
-    & .content {
+    & .gux-content {
       width: calc(100% - var(--gse-ui-avatar-small-statusRing-width) * 2);
       height: calc(100% - var(--gse-ui-avatar-small-statusRing-width) * 2);
       margin: var(--gse-ui-avatar-small-statusRing-width);
@@ -80,7 +80,7 @@
     width: var(--gse-ui-avatar-xsmall-size);
     height: var(--gse-ui-avatar-xsmall-size);
 
-    & .content {
+    & .gux-content {
       width: calc(100% - var(--gse-ui-avatar-xsmall-statusRing-width) * 2);
       height: calc(100% - var(--gse-ui-avatar-xsmall-statusRing-width) * 2);
       margin: var(--gse-ui-avatar-xsmall-statusRing-width);
@@ -152,62 +152,62 @@
   }
 
   &.available {
-    background-color: var(--gse-ui-avatar-badge-foregroundDefault);
+    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
 
     & gux-icon {
-      color: var(--gse-ui-avatar-badge-available);
+      color: var(--gse-ui-avatar-badge-available-color);
     }
   }
 
   &.break {
-    background-color: var(--gse-ui-avatar-badge-break);
+    background-color: var(--gse-ui-avatar-badge-break-color);
 
     & gux-icon {
-      margin: var(--gse-ui-avatar-badge-break-icon-margin, 2px);
-      color: var(--gse-ui-avatar-badge-foregroundDark);
+      margin: var(--gse-ui-avatar-badge-break-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDark-color);
     }
   }
 
   &.busy {
-    background-color: var(--gse-ui-avatar-badge-busy);
+    background-color: var(--gse-ui-avatar-badge-busy-color);
 
     & gux-icon {
-      margin: var(--gse-ui-avatar-badge-busy-icon-margin, 2px);
-      color: var(--gse-ui-avatar-badge-foregroundDefault);
+      margin: var(--gse-ui-avatar-badge-busy-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
     }
   }
 
   &.notifications {
-    background-color: var(--gse-ui-avatar-badge-notification);
+    background-color: var(--gse-ui-avatar-badge-notification-color);
 
     & gux-icon {
-      margin: var(--gse-ui-avatar-badge-notifications-icon-margin, 4px);
-      color: var(--gse-ui-avatar-badge-foregroundDefault);
+      margin: var(--gse-ui-avatar-badge-notifications-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
     }
   }
 
   &.offline {
-    background-color: var(--gse-ui-avatar-badge-foregroundDefault);
+    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
 
     & gux-icon {
-      color: var(--gse-ui-avatar-badge-offline);
+      color: var(--gse-ui-avatar-badge-offline-color);
     }
   }
 
   &.out-of-office {
-    background-color: var(--gse-ui-avatar-badge-foregroundDefault);
+    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
 
     & gux-icon {
-      color: var(--gse-ui-avatar-badge-outOfOffice);
+      color: var(--gse-ui-avatar-badge-outOfOffice-color);
     }
   }
 
   &.queue {
-    background-color: var(--gse-ui-avatar-badge-onQueue);
+    background-color: var(--gse-ui-avatar-badge-onQueue-color);
 
     & gux-icon {
-      margin: var(--gse-ui-avatar-badge-queue-icon-margin, 4px);
-      color: var(--gse-ui-avatar-badge-foregroundDefault);
+      margin: var(--gse-ui-avatar-badge-queue-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
     }
   }
 
@@ -217,7 +217,7 @@
   }
 }
 
-.content {
+.gux-content {
   box-sizing: border-box;
   display: flex;
   align-items: center;
