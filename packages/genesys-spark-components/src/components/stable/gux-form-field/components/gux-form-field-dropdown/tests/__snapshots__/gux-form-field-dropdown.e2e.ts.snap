@@ -200,7 +200,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
     Default
   </span>
   <div class="gux-input-and-error-container">
-    <div class="gux-disabled gux-input">
+    <div class="gux-input">
       <slot></slot>
     </div>
     <div class="gux-form-field-error">
@@ -290,7 +290,7 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
     This will be read by a screen reader
   </span>
   <div class="gux-input-and-error-container">
-    <div class="gux-disabled gux-input">
+    <div class="gux-input">
       <slot></slot>
     </div>
     <div class="gux-form-field-error">

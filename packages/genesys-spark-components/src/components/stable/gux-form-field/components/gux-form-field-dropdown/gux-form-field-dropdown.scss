@@ -20,11 +20,4 @@
 .gux-input-and-error-container {
   flex-grow: 1;
   width: 100%;
-
-  .gux-input {
-    &.gux-disabled {
-      pointer-events: none;
-      opacity: var(--gse-ui-formControl-input-disabled-opacity);
-    }
-  }
 }
