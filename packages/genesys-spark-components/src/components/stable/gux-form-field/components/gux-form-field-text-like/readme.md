@@ -11,6 +11,7 @@
 | --------------- | ---------------- | ----------- | --------------------------------------- | ----------- |
 | `clearable`     | `clearable`      |             | `boolean`                               | `undefined` |
 | `labelPosition` | `label-position` |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
+| `loading`       | `loading`        |             | `boolean`                               | `false`     |
 
 
 ## Methods
@@ -46,12 +47,14 @@ Type: `Promise<void>`
 
 ### Depends on
 
+- [gux-radial-loading](../../../gux-radial-loading)
 - [gux-form-field-input-clear-button](../../helper-components/gux-form-field-input-clear-button)
 - [gux-icon](../../../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-form-field-text-like --> gux-radial-loading
   gux-form-field-text-like --> gux-form-field-input-clear-button
   gux-form-field-text-like --> gux-icon
   gux-form-field-input-clear-button --> gux-icon
