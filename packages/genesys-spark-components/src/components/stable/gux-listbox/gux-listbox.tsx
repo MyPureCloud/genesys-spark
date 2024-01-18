@@ -19,6 +19,7 @@ import {
   hasActiveOption,
   hasPreviousOption,
   hasNextOption,
+  getListOptions,
   onClickedOption,
   setFirstOptionActive,
   setInitialActiveOption,
@@ -184,9 +185,8 @@ export class GuxListbox {
     if (this.value) {
       this.selectedValues = this.value.split(',');
     }
-    this.listboxOptions = Array.from(
-      this.root.children
-    ) as ListboxOptionElement[];
+
+    this.listboxOptions = getListOptions(this.root);
     this.internallistboxoptionsupdated.emit();
   }
 
