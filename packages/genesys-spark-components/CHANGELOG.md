@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.116.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.115.0...v3.116.0) (2024-01-18)
+
+
+### Features
+
+* **icon:** add new icons ([d1fb6dd](https://github.com/MyPureCloud/genesys-spark/commit/d1fb6ddec03cb124994aff12d3e3ae5b915a859e))
+* **icon:** update icon to regular ([e5598a5](https://github.com/MyPureCloud/genesys-spark/commit/e5598a5df385d87d42e09be1fd8ab1e0229e34c2))
+* **pagination-beta:** improving accessibility ([f9b163d](https://github.com/MyPureCloud/genesys-spark/commit/f9b163d969dc976eb9fc90f026214dfc7e90bd39))
+* **update icon names to fa names:** update icon names to fa names ([19e5b7a](https://github.com/MyPureCloud/genesys-spark/commit/19e5b7aaad882368215e54d68e6730f4f2a05ceb))
+
+
+### Bug Fixes
+
+* **form-field-dropdown:** remove disabled states ([82f0d36](https://github.com/MyPureCloud/genesys-spark/commit/82f0d362300b03d2d0a4efcf8dd9cd1393695351))
+* **form-field-dropdown:** remove extra disabled styling on dropdown ([f3a1d8a](https://github.com/MyPureCloud/genesys-spark/commit/f3a1d8ad780f602d3d174277dc174f8ef51557ab))
+* **form-field-dropdown:** update snapshots ([c35e0bb](https://github.com/MyPureCloud/genesys-spark/commit/c35e0bbc48905088da0c947669f5b30e66096e55))
+
 ## [3.115.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.114.0...v3.115.0) (2023-12-20)
 
 
