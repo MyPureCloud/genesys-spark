@@ -9,12 +9,12 @@ import {
   forceUpdate
 } from '@stencil/core';
 import { GuxTableToolbarLayout } from './gux-table-toolbar.types';
-import { MIN_CONTROL_SPACING } from './gux-table-toolbar.constants';
 import { OnResize } from '@utils/decorator/on-resize';
 import { OnMutation } from '@utils/decorator/on-mutation';
 import { trackComponent } from '@utils/tracking/usage';
 import { setAccent, setActionsIconOnlyProp } from './gux-table-toolbar.service';
 import { getSlot } from '@utils/dom/get-slot';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 /**
  * @slot search-and-filter - Slot for search and filter.
@@ -56,19 +56,26 @@ export class GuxTableToolbar {
    */
   private recordLayoutMinSize() {
     readTask(() => {
-      const filterWidth = this.filterSlot?.clientWidth | 0;
+      const filterWidth = this.searchAndFilterContainer?.clientWidth | 0;
       const controlWidth = this.actionsContainer?.clientWidth | 0;
-      const minSize = filterWidth + controlWidth + MIN_CONTROL_SPACING;
+      const minControlSize = this.minControlSize?.clientWidth | 0;
+      const minSize = filterWidth + controlWidth + minControlSize;
       this.minimumSizes[this.displayedLayout] = minSize;
     });
   }
 
-  iconOnlySectionWidth: number;
+  get minControlSize(): HTMLElement | null {
+    return this.root.shadowRoot.querySelector('.section-spacing');
+  }
 
   get actionsContainer(): HTMLElement | null {
     return this.root.shadowRoot.querySelector(
       '.gux-contextual-permanent-primary'
     );
+  }
+
+  get searchAndFilterContainer(): HTMLElement | null {
+    return this.root.shadowRoot.querySelector('.search-filter-container');
   }
 
   get filterSlot(): HTMLSlotElement | null {
@@ -158,7 +165,7 @@ export class GuxTableToolbar {
     );
   }
 
-  private renderIconOnlyLayoutScaleDown(controlWidth: number): void {
+  private renderIconOnlyLayoutScaleDown(): void {
     this.displayedLayout = 'iconOnly';
     setActionsIconOnlyProp(
       true,
@@ -166,8 +173,6 @@ export class GuxTableToolbar {
       ...this.allFilterContextual,
       ...this.permanentActions
     );
-    //Save the width of the iconOnly section so when resizing backup we have a reference point.
-    this.iconOnlySectionWidth = controlWidth;
   }
 
   private renderIconOnlyLayoutScaleUp(): void {
@@ -195,14 +200,17 @@ export class GuxTableToolbar {
     setAccent(this.menuActionsItems, 'ghost');
   }
 
-  componentWillLoad() {
+  componentWillRender(): void {
     trackComponent(this.root);
     this.hasContextDivider = this.needsContextDivider();
   }
 
   componentDidLoad(): void {
-    this.recordLayoutMinSize();
-    this.checkResponsiveLayout();
+    // This timeout is required to calculate the correct size of the containers when the component loads. By including a timeout of 1 second the containers calculate correctly.
+    afterNextRenderTimeout(() => {
+      this.recordLayoutMinSize();
+      this.checkResponsiveLayout();
+    });
     setAccent(this.menuActionsItems, 'ghost');
   }
 
@@ -219,20 +227,18 @@ export class GuxTableToolbar {
   @OnResize()
   checkResponsiveLayout(): void {
     readTask(() => {
-      const controlWidth = this.actionsContainer?.clientWidth | 0;
       const toolbarWidth = this.root.clientWidth;
 
-      if (
-        toolbarWidth <= this.minimumSizes.full &&
-        toolbarWidth >= this.minimumSizes.iconOnly
-      ) {
+      if (toolbarWidth <= this.minimumSizes.iconOnly) {
+        if (this.displayedLayout == 'iconOnly') {
+          this.renderCondensedLayout();
+        }
+      } else if (toolbarWidth <= this.minimumSizes.full) {
         if (this.displayedLayout == 'full') {
-          this.renderIconOnlyLayoutScaleDown(controlWidth);
+          this.renderIconOnlyLayoutScaleDown();
         } else if (this.displayedLayout == 'condensed') {
           this.renderIconOnlyLayoutScaleUp();
         }
-      } else if (toolbarWidth <= this.minimumSizes.iconOnly) {
-        this.renderCondensedLayout();
       } else if (this.minimumSizes.iconOnly > this.minimumSizes.full) {
         this.renderIconOnlyLayoutScaleUp();
       } else {
