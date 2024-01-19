@@ -1,6 +1,5 @@
 import { Component, h, Host, JSX, Prop, Element, State } from '@stencil/core';
 import { ListboxOptionElement } from '../options/option-types';
-import { getClosestElement } from '@utils/dom/get-closest-element';
 import { onMutation } from '@utils/dom/on-mutation';
 
 /**
@@ -22,7 +21,7 @@ export class GuxOptionGroup {
 
   // @Prop()
   // disabled: boolean;
-  // TOOD: Add disabled state once design work is complete
+  // TOOD: GDS-2328
 
   @State()
   filtered: boolean = false;
@@ -31,26 +30,29 @@ export class GuxOptionGroup {
   showDivider: boolean = true;
 
   componentDidLoad(): void {
-    this.rootParent = getClosestElement(
-      'gux-dropdown',
-      this.root
-    ) as HTMLElement;
+    this.rootParent = this.root.parentNode as HTMLElement;
 
-    this.parentObserver = onMutation(this.rootParent, () => {
-      const groupOptions = Array.from(this.root?.children).filter(child =>
-        this.isOption(child)
-      ) as ListboxOptionElement[];
-      const allOptionsFiltered = groupOptions.every(option => option.filtered);
+    if (this.rootParent) {
+      this.parentObserver = onMutation(this.rootParent, () => {
+        const visibleOptions =
+          Array.from(this.root?.children).filter(
+            (child: ListboxOptionElement) =>
+              this.isOption(child) && !child.filtered
+          ).length > 0;
 
-      this.showDivider =
-        this.hasVisibleNextSibling(this.root) && !allOptionsFiltered;
-
-      this.filtered = allOptionsFiltered;
-    });
+        this.filtered = !visibleOptions;
+        if (!this.filtered) {
+          this.showDivider =
+            this.hasVisibleNextSibling(this.root) && visibleOptions;
+        }
+      });
+    }
   }
 
   disconnectedCallback(): void {
-    this.parentObserver.disconnect();
+    if (this.rootParent) {
+      this.parentObserver.disconnect();
+    }
   }
 
   private isOption(item: Element): boolean {

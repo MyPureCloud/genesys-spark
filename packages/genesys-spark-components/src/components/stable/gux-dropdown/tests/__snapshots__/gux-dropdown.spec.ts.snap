@@ -130,6 +130,273 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
 </gux-dropdown>
 `;
 
+exports[`gux-dropdown #render should render as expected with gux-option-group and gux-option 1`] = `
+<gux-dropdown lang="en" value="f">
+  <mock:shadow-root>
+    <gux-popup>
+      <div class="gux-target-container-collapsed" slot="target">
+        <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+          <div class="gux-field-content">
+            <div class="gux-selected-option">
+              <gux-truncate>
+                Frog
+              </gux-truncate>
+            </div>
+          </div>
+          <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+        </button>
+      </div>
+      <slot slot="popup"></slot>
+    </gux-popup>
+  </mock:shadow-root>
+  <gux-listbox aria-label="Animals" role="listbox" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <gux-option-group-beta label="Group 1">
+      <mock:shadow-root>
+        <div class="gux-option-group">
+          <div class="gux-option-group-label" role="presentation">
+            Group 1
+          </div>
+          <div role="group">
+            <slot></slot>
+          </div>
+          <gux-list-divider></gux-list-divider>
+        </div>
+      </mock:shadow-root>
+      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="a">
+        <mock:shadow-root>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Ant
+      </gux-option>
+      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
+        <mock:shadow-root>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Bat
+      </gux-option>
+      <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="c">
+        <mock:shadow-root>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Cat
+      </gux-option>
+      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="d">
+        <mock:shadow-root>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Dog
+      </gux-option>
+    </gux-option-group-beta>
+    <gux-option-group-beta label="Group 2">
+      <mock:shadow-root>
+        <div class="gux-option-group">
+          <div class="gux-option-group-label" role="presentation">
+            Group 2
+          </div>
+          <div role="group">
+            <slot></slot>
+          </div>
+          <gux-list-divider></gux-list-divider>
+        </div>
+      </mock:shadow-root>
+      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="e">
+        <mock:shadow-root>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Eel
+      </gux-option>
+      <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option" value="f">
+        <mock:shadow-root>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Frog
+      </gux-option>
+      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="g">
+        <mock:shadow-root>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Goat
+      </gux-option>
+    </gux-option-group-beta>
+    <gux-option-group-beta label="Group 3">
+      <mock:shadow-root>
+        <div class="gux-option-group">
+          <div class="gux-option-group-label" role="presentation">
+            Group 3
+          </div>
+          <div role="group">
+            <slot></slot>
+          </div>
+          <gux-list-divider></gux-list-divider>
+        </div>
+      </mock:shadow-root>
+      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="h">
+        <mock:shadow-root>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Horse
+      </gux-option>
+      <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="i">
+        <mock:shadow-root>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Ibis
+      </gux-option>
+    </gux-option-group-beta>
+  </gux-listbox>
+</gux-dropdown>
+`;
+
+exports[`gux-dropdown #render should render as expected with gux-option-group and gux-option-icon 1`] = `
+<gux-dropdown lang="en" value="f">
+  <mock:shadow-root>
+    <gux-popup>
+      <div class="gux-target-container-collapsed" slot="target">
+        <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+          <div class="gux-field-content">
+            <div class="gux-placeholder">
+              Select...
+            </div>
+          </div>
+          <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+        </button>
+      </div>
+      <slot slot="popup"></slot>
+    </gux-popup>
+  </mock:shadow-root>
+  <gux-listbox aria-label="Animals" role="listbox" tabindex="0">
+    <mock:shadow-root>
+      <slot></slot>
+    </mock:shadow-root>
+    <gux-option-group-beta label="Group 1">
+      <mock:shadow-root>
+        <div class="gux-option-group">
+          <div class="gux-option-group-label" role="presentation">
+            Group 1
+          </div>
+          <div role="group">
+            <slot></slot>
+          </div>
+          <gux-list-divider></gux-list-divider>
+        </div>
+      </mock:shadow-root>
+      <gux-option-icon aria-disabled="false" aria-selected="false" class="gux-show-subtext" icon-color="var(--gux-blue-60)" icon-name="user" id="gux-option-icon-i" role="option" value="leonardo">
+        <mock:shadow-root>
+          <gux-icon decorative="" icon-name="user" style="color: var(--gux-blue-60);"></gux-icon>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Leonardo
+        <span slot="subtext">
+          TMNT
+        </span>
+      </gux-option-icon>
+      <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#8452cf" icon-name="user" id="gux-option-icon-i" role="option" value="donatello">
+        <mock:shadow-root>
+          <gux-icon decorative="" icon-name="user" style="color: #8452cf;"></gux-icon>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Donatello
+      </gux-option-icon>
+    </gux-option-group-beta>
+    <gux-option-group-beta label="Group 2">
+      <mock:shadow-root>
+        <div class="gux-option-group">
+          <div class="gux-option-group-label" role="presentation">
+            Group 2
+          </div>
+          <div role="group">
+            <slot></slot>
+          </div>
+          <gux-list-divider></gux-list-divider>
+        </div>
+      </mock:shadow-root>
+      <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="rgb(234, 11, 11)" icon-name="user" id="gux-option-icon-i" role="option" value="raphael">
+        <mock:shadow-root>
+          <gux-icon decorative="" icon-name="user" style="color: rgb(234, 11, 11);"></gux-icon>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Raphael
+      </gux-option-icon>
+      <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#e08915" icon-name="user" icon-sr-text="Screenreader information about the icon goes here, if needed" id="gux-option-icon-i" role="option" value="michelangelo">
+        <mock:shadow-root>
+          <gux-icon icon-name="user" screenreader-text="Screenreader information about the icon goes here, if needed" style="color: #e08915;"></gux-icon>
+          <div class="gux-option-wrapper">
+            <gux-truncate>
+              <slot></slot>
+            </gux-truncate>
+            <slot name="subtext"></slot>
+          </div>
+        </mock:shadow-root>
+        Michelangelo
+      </gux-option-icon>
+    </gux-option-group-beta>
+  </gux-listbox>
+</gux-dropdown>
+`;
+
 exports[`gux-dropdown #render should render as expected with gux-option-icon 1`] = `
 <gux-dropdown lang="en" value="j">
   <mock:shadow-root>
