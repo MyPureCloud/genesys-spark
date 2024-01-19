@@ -1,8 +1,8 @@
 import { parseFragment, serialize } from 'parse5';
 
 import {
-  registerSparkComponents,
-  registerSparkChartComponents
+  registerSparkComponents
+  // registerSparkChartComponents
 } from 'genesys-spark';
 import AttributesPanel from './panels/attributes';
 import { createPreview } from './panels/preview';
@@ -122,8 +122,8 @@ function setNewTheme(theme, panel, button, buttons) {
 
 export async function bootstrap(exampleCode, callback) {
   await Promise.all([
-    registerSparkComponents(),
-    registerSparkChartComponents()
+    registerSparkComponents()
+    // registerSparkChartComponents()
   ]);
 
   const {

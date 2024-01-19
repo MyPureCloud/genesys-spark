@@ -1,15 +1,15 @@
 import { toHTML } from '../utils/to-html.js';
 import { componentSpecs, getComponentSpec } from '../component-specs.js';
 import {
-  registerSparkComponents,
-  registerSparkChartComponents
+  registerSparkComponents
+  // registerSparkChartComponents
 } from 'genesys-spark';
 import '../styles/component-listing.scss';
 
 export async function bootstrap() {
   await Promise.all([
-    registerSparkComponents(),
-    registerSparkChartComponents()
+    registerSparkComponents()
+    // registerSparkChartComponents()
   ]);
 
   let components = Object.keys(componentSpecs)
