@@ -451,7 +451,10 @@ export class GuxPhoneInput {
       <div class="gux-region-select">
         <button
           type="button"
-          class="gux-field gux-field-button"
+          class={{
+            'gux-field gux-field-button': true,
+            'gux-expanded': this.expanded
+          }}
           disabled={this.disabled}
           onClick={this.fieldButtonClick.bind(this)}
           ref={el => (this.fieldButtonElement = el)}
@@ -530,8 +533,10 @@ export class GuxPhoneInput {
         <gux-option value="">
           <span class="gux-option-content">
             <gux-icon icon-name="globe" decorative></gux-icon>
-            <span>{this.i18n('unknownRegion')}</span>
-            <span class="gux-country-code">+</span>
+            <span>
+              {this.i18n('unknownRegion')}{' '}
+              <span class="gux-country-code">(+)</span>
+            </span>
           </span>
         </gux-option>
       ) as JSX.Element
@@ -542,8 +547,10 @@ export class GuxPhoneInput {
             <gux-option value={region.alpha2Code}>
               <span class="gux-option-content">
                 <gux-flag-icon-beta flag={region.alpha2Code} />
-                <span>{region.name}</span>
-                <span class="gux-country-code">{region.dialCode}</span>
+                <span>
+                  {region.name}{' '}
+                  <span class="gux-country-code">({region.dialCode})</span>
+                </span>
               </span>
             </gux-option>
           ) as JSX.Element

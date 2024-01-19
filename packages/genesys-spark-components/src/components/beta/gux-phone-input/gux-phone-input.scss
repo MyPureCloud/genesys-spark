@@ -1,8 +1,20 @@
 @use '../../../style/focus';
 
+// --gse-ui-phoneInput-dropdown-hover-backgroundColor: #eff0fe;
+// --gse-ui-phoneInput-dropdown-active-backgroundColor: #ced2fc;
+// --gse-ui-phoneInput-dropdown-foregroundColor: #626e84;
+// --gse-ui-phoneInput-dropdown-flag-height: 12px;
+// --gse-ui-phoneInput-dropdown-flag-width: 16px;
+// --gse-ui-phoneInput-dropdown-height: 32px;
+// --gse-ui-phoneInput-dropdown-menu-minWidth: 230px;
+// --gse-ui-phoneInput-dropdown-icon-width: 16px;
+// --gse-ui-phoneInput-dropdown-icon-height: 16px;
+// --gse-ui-phoneInput-countryCode-foregroundColor: #626e84;
+// --gse-ui-phoneInput-minWidth: 230px;
+
 :host {
   display: block;
-  color: #2e394c;
+  color: var(--gse-ui-formControl-input-populatedColor);
 }
 
 .gux-phone-text-input {
@@ -11,8 +23,8 @@
   order: 0;
   width: 100%;
   overflow: hidden;
-  font-size: 12px;
-  color: #2e394c;
+  font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  color: var(--gse-ui-formControl-input-populatedColor);
   text-overflow: ellipsis;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
@@ -33,16 +45,18 @@
   align-items: center;
   width: 100%;
   height: 32px;
-  padding: 4px 8px 4px 0;
-  font-family: inherit;
-  font-size: 12px;
-  line-height: 1.6667;
-  color: #2e394c;
+  padding: 0 8px 0 0;
+  font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
+  font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
+  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
+  color: var(--gse-ui-formControl-input-populatedColor);
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   background-image: none;
-  border: 1px solid var(--gse-ui-formControl-input-default-border-color);
-  border-radius: 4px;
-  box-shadow: inset 0 0 4px rgba(#202937, 16%);
+  border: var(--gse-ui-formControl-input-default-border-width)
+    var(--gse-ui-formControl-input-default-border-style)
+    var(--gse-ui-formControl-input-default-border-color);
+  border-radius: var(--gse-ui-formControl-input-borderRadius);
 
   &.gux-error {
     border-color: #ea0b0b;
@@ -53,25 +67,21 @@
   }
 }
 
-.gux-region-select {
-  min-width: 70px;
-  margin-right: 5px;
-}
-
 .gux-field {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 4px;
+  gap: var(--gse-ui-formControl-label-gap);
   align-items: center;
   width: 100%;
-  height: 30px;
-  padding: 6px 8px 6px 12px;
+  height: var(--gse-ui-phoneInput-dropdown-height);
+  padding: 0 2px 0 12px;
   font-family: inherit;
-  font-size: 12px;
-  line-height: 1.6667;
+  font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: var(--gse-ui-formControl-input-borderRadius) 0 0
+    var(--gse-ui-formControl-input-borderRadius);
 }
 
 .gux-field {
@@ -82,28 +92,21 @@
     place-content: stretch flex-start;
     align-items: flex-start;
     min-width: 0;
-    height: 100%;
 
     .gux-selected-option {
-      display: grid;
-      flex: 1 1 auto;
-      align-self: auto;
-      order: 0;
+      display: flex;
+      justify-content: center;
+      width: 16px;
       overflow: hidden;
-
-      gux-flag-icon-beta {
-        position: relative;
-        top: -3px;
-      }
 
       gux-icon {
         position: relative;
-        font-size: 18px;
+        color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
       }
     }
 
     .gux-placeholder {
-      color: #596373;
+      color: var(--gse-ui-formControl-input-placeholderColor);
     }
   }
 
@@ -111,13 +114,14 @@
     flex: 0 0 auto;
     align-self: auto;
     order: 0;
-    width: 16px;
-    height: 16px;
-    color: #596373;
+    width: var(--gse-ui-phoneInput-dropdown-icon-width);
+    height: var(--gse-ui-phoneInput-dropdown-icon-height);
+    color: var(--gse-ui-phoneInput-dropdown-foregroundColor);
   }
 }
 
 .gux-field-button {
+  height: 100%;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
   outline: inherit;
@@ -125,18 +129,31 @@
   &:focus-visible {
     @include focus.gux-focus-ring;
   }
+
+  &.gux-expanded {
+    background-color: var(--gse-ui-phoneInput-dropdown-active-backgroundColor);
+
+    .gux-expand-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    background-color: var(--gse-ui-phoneInput-dropdown-hover-backgroundColor);
+  }
 }
 
 .gux-listbox-container {
   box-sizing: border-box;
-  width: 368px;
+  min-width: var(--gse-ui-phoneInput-dropdown-menu-minWidth);
   margin: 0;
   color: #2e394c;
 }
 
 .gux-option-content {
   display: grid;
-  grid-template-columns: 36px 1fr 40px;
+  grid-template-columns: 36px 1fr;
+  align-items: center;
   width: 100%;
   height: 25px;
   line-height: 25px;
@@ -147,6 +164,13 @@
 
   gux-icon {
     position: relative;
-    font-size: 18px;
+    left: 4px;
+    width: var(--gse-ui-phoneInput-dropdown-icon-width);
+    height: var(--gse-ui-phoneInput-dropdown-icon-height);
+    color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
   }
+}
+
+.gux-region-select {
+  height: 100%;
 }
