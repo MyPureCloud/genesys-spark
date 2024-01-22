@@ -15,7 +15,8 @@ import tableResources from '../i18n/en.json';
 
 @Component({
   styleUrl: 'gux-row-select.scss',
-  tag: 'gux-row-select'
+  tag: 'gux-row-select',
+  shadow: false
 })
 export class GuxRowSelect {
   @Element()
