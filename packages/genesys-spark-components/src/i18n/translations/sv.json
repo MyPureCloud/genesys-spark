@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "Sida",
     "totalPages": " av {totalPages, number}",
-    "first": "Första",
-    "previous": "Föregående",
-    "next": "Nästa",
-    "last": "Sista",
+    "firstPage": "Första sidan",
+    "previousPage": "Föregående sida",
+    "nextPage": "Nästa sida",
+    "lastPage": "Sista sidan",
     "pageInputLabel": "Sida {currentPage, number} av {totalPages, number}",
-    "goToPage": "Gå till sida"
+    "goToPage": "Gå till sida",
+    "pageNumber": "Sida {pageNumber}",
+    "pageSelected": "Sida {pageSelected} vald"
   },
   "gux-pagination-buttons-legacy": {
     "page": "Sida",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "per sida",
     "itemsPerPage": "Objekt per sida",
-    "rangeSelected": "Listruta med objekt per sida, {range} valda"
+    "rangeSelected": "Listmeny med antal objekt per sida, {range} objekt per sida valda"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "per sida",
