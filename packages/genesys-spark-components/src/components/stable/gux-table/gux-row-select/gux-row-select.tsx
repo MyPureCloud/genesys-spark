@@ -39,7 +39,6 @@ export class GuxRowSelect {
   onCheck(event: CustomEvent): void {
     event.stopPropagation();
     this.internalrowselectchange.emit(this.inputElement.checked);
-    console.log('executed');
   }
 
   async componentWillLoad(): Promise<void> {
