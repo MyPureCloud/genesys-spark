@@ -1,17 +1,5 @@
 @use '../../../style/focus';
 
-// --gse-ui-phoneInput-dropdown-hover-backgroundColor: #eff0fe;
-// --gse-ui-phoneInput-dropdown-active-backgroundColor: #ced2fc;
-// --gse-ui-phoneInput-dropdown-foregroundColor: #626e84;
-// --gse-ui-phoneInput-dropdown-flag-height: 12px;
-// --gse-ui-phoneInput-dropdown-flag-width: 16px;
-// --gse-ui-phoneInput-dropdown-height: 32px;
-// --gse-ui-phoneInput-dropdown-menu-minWidth: 230px;
-// --gse-ui-phoneInput-dropdown-icon-width: 16px;
-// --gse-ui-phoneInput-dropdown-icon-height: 16px;
-// --gse-ui-phoneInput-countryCode-foregroundColor: #626e84;
-// --gse-ui-phoneInput-minWidth: 230px;
-
 :host {
   display: block;
   color: var(--gse-ui-formControl-input-populatedColor);
@@ -59,7 +47,9 @@
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
   &.gux-error {
-    border-color: #ea0b0b;
+    border: var(--gse-ui-formControl-input-error-border-width)
+      var(--gse-ui-formControl-input-error-border-style)
+      var(--gse-ui-formControl-input-error-border-color);
   }
 
   &:focus-within {
@@ -75,7 +65,7 @@
   align-items: center;
   width: 100%;
   height: var(--gse-ui-phoneInput-dropdown-height);
-  padding: 0 2px 0 12px;
+  padding: 0 0 0 12px;
   font-family: inherit;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
@@ -145,6 +135,7 @@
 
 .gux-listbox-container {
   box-sizing: border-box;
+  width: var(--gse-ui-phoneInput-dropdown-menu-minWidth);
   min-width: var(--gse-ui-phoneInput-dropdown-menu-minWidth);
   margin: 0;
   color: #2e394c;
@@ -173,4 +164,5 @@
 
 .gux-region-select {
   height: 100%;
+  margin-right: 4px;
 }
