@@ -4,7 +4,7 @@ import {
   DateTimeFormatter,
   GuxDateTimeFormat
 } from '../../../i18n/DateTimeFormatter';
-import { Intl as sparkIntl } from 'genesys-spark';
+import * as sparkIntl from '../../../i18n/intl';
 import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
 import { getDesiredLocale } from '../../../i18n/index';
 import { GuxTimeZoneIdentifier } from '../../../i18n/time-zone/types';
