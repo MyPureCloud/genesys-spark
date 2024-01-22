@@ -15,8 +15,7 @@ import tableResources from '../i18n/en.json';
 
 @Component({
   styleUrl: 'gux-row-select.scss',
-  tag: 'gux-row-select',
-  shadow: true
+  tag: 'gux-row-select'
 })
 export class GuxRowSelect {
   @Element()
@@ -39,6 +38,7 @@ export class GuxRowSelect {
   onCheck(event: CustomEvent): void {
     event.stopPropagation();
     this.internalrowselectchange.emit(this.inputElement.checked);
+    console.log('executed');
   }
 
   async componentWillLoad(): Promise<void> {

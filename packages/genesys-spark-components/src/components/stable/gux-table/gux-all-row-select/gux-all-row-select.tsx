@@ -16,8 +16,7 @@ import tableResources from '../i18n/en.json';
 
 @Component({
   styleUrl: 'gux-all-row-select.scss',
-  tag: 'gux-all-row-select',
-  shadow: true
+  tag: 'gux-all-row-select'
 })
 export class GuxAllRowSelect {
   private inputElement: HTMLInputElement;
