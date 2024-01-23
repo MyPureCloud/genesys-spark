@@ -680,7 +680,12 @@
       "icon": {
         "width": "16px",
         "height": "16px"
-      }
+      },
+      "padding": "0 8px 0 12px",
+      "disabled": {
+        "padding": "0 4px 0 12px"
+      },
+      "gap": "4px"
     },
     "country_code": {
       "foreground_color": "#626E84"
@@ -712,5 +717,8 @@
         }
       }
     }
+  },
+  "cta_group": {
+    "gap": "8px"
   }
 }
