@@ -1,3 +1,15 @@
 {
-  "extends": ["stylelint-config-genesys-spark-components"]
+  "extends": ["stylelint-config-genesys-spark-components"],
+  "overrides": [
+    {
+      "files": [
+        "src/components/stable/gux-button/**/*.{scss,html}",
+        "src/components/stable/gux-button-slot/**/*.{scss,html}"
+      ],
+      "plugins": ["stylelint-use-logical-spec"],
+      "rules": {
+        "liberty/use-logical-spec": true
+      }
+    }
+  ]
 }

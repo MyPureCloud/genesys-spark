@@ -17,9 +17,9 @@
 ::slotted(button) {
   @include button-text;
 
-  width: 100%;
-  min-width: var(--gse-ui-button-icon-only-width);
-  height: var(--gse-ui-button-default-height);
+  inline-size: 100%;
+  min-inline-size: var(--gse-ui-button-icon-only-width);
+  block-size: var(--gse-ui-button-default-height);
   padding: var(--gse-ui-button-default-padding);
   overflow: hidden;
   color: var(--gse-ui-button-secondary-default-foregroundColor);
@@ -169,12 +169,12 @@
 }
 
 :host([accent='inline']) {
-  min-width: initial;
+  min-inline-size: initial;
 
   ::slotted(input[type='button']),
   ::slotted(input[type='submit']),
   ::slotted(button) {
-    height: initial;
+    block-size: initial;
     padding: 0;
     color: var(--gse-ui-link-default-foregroundColor);
     background: none;
