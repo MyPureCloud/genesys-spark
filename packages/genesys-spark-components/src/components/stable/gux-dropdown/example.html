@@ -467,8 +467,8 @@
         icon-color="#e08915"
         icon-sr-text="Screenreader information about the icon goes here, if needed"
         value="michelangelo"
-        >Michelangelo</gux-option-icon
-      >
+        >Michelangelo
+      </gux-option-icon>
     </gux-listbox>
   </gux-dropdown>
 
@@ -483,6 +483,51 @@
   <h3>Loading a filterable list</h3>
   <gux-dropdown id="loading-2" filter-type="starts-with" loading>
     <gux-listbox aria-label="Animals"> </gux-listbox>
+  </gux-dropdown>
+
+  <h2>Grouped Options</h2>
+  <h3>Standard Grouped Options</h3>
+  <gux-dropdown>
+    <gux-listbox aria-label="Animals">
+      <gux-option-group-beta label="Group 1">
+        <gux-option value="a">Ant</gux-option>
+        <gux-option value="b">Bat</gux-option>
+        <gux-option value="c" disabled>Cat</gux-option>
+        <gux-option value="d">Dog</gux-option>
+      </gux-option-group-beta>
+      <gux-option-group-beta label="Group 2">
+        <gux-option value="e">Eel</gux-option>
+        <gux-option value="f">Frog</gux-option>
+        <gux-option value="g">Goat</gux-option>
+      </gux-option-group-beta>
+      <gux-option-group-beta label="Group 3">
+        <gux-option value="h">Horse</gux-option>
+        <gux-option value="i">Ibis</gux-option>
+      </gux-option-group-beta>
+    </gux-listbox>
+  </gux-dropdown>
+
+  <h3>Grouped Options with filtering</h3>
+  <gux-dropdown filter-type="starts-with" placeholder="Select a country">
+    <gux-listbox aria-label="Animals">
+      <gux-option-group-beta label="Group 1">
+        <gux-option value="a">Ant</gux-option>
+        <gux-option value="b">Bat</gux-option>
+        <gux-option value="c" disabled>Cat</gux-option>
+        <gux-option value="d">Dog</gux-option>
+      </gux-option-group-beta>
+      <gux-option-group-beta label="Group 2">
+        <gux-option value="e">Eel</gux-option>
+        <gux-option value="f">Frog</gux-option>
+        <gux-option value="g">Goat</gux-option>
+        <gux-option value="aaa">Antelope</gux-option>
+      </gux-option-group-beta>
+      <gux-option-group-beta label="Group 3">
+        <gux-option value="h">Horse</gux-option>
+        <gux-option value="i">Ibis</gux-option>
+        <gux-option value="aa">Aardvark</gux-option>
+      </gux-option-group-beta>
+    </gux-listbox>
   </gux-dropdown>
 </form>
 

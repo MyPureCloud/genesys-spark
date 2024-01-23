@@ -9,7 +9,6 @@ testWithOptionType(
 <gux-option value="be">Bee<span slot="subtext">Small</span></gux-option>
 <gux-option value="c">Cat</gux-option>
 <gux-option value="">None</gux-option>
-
 `
 );
 
@@ -140,6 +139,52 @@ function testWithOptionType(optionType: string, listboxContent: string) {
         expect(activeItem[0].outerHTML).toContain(listboxItems[1].outerHTML);
       });
 
+      it('moves focus between first and last option when using respective arrow keys', async () => {
+        const { page } = await render(nonFilterableDropdown(listboxContent));
+        await openWithKeyboard(page);
+
+        const listbox = await page.find('gux-dropdown gux-listbox');
+        const listboxItems = await page.findAll(
+          `gux-dropdown gux-listbox ${optionType}`
+        );
+
+        let activeItem = await listbox.findAll('.gux-active');
+
+        expect(activeItem.length).toBe(1);
+        expect(activeItem[0].outerHTML).toContain(listboxItems[0].outerHTML);
+
+        await activeItem[0].press('ArrowUp');
+        activeItem = await listbox.findAll('.gux-active');
+        expect(activeItem[0].outerHTML).toContain(listboxItems[4].outerHTML);
+
+        await activeItem[0].press('ArrowDown');
+        activeItem = await listbox.findAll('.gux-active');
+        expect(activeItem[0].outerHTML).toContain(listboxItems[0].outerHTML);
+      });
+
+      it('moves between groups when arrow keys are pressed', async () => {
+        const { page } = await render(
+          nonFilterableDropdown(getGroupedContent(listboxContent))
+        );
+        await openWithKeyboard(page);
+
+        const listbox = await page.find('gux-dropdown gux-listbox');
+        const listboxItems = await page.findAll(
+          `gux-dropdown gux-listbox ${optionType}`
+        );
+
+        let activeItem = await listbox.findAll('.gux-active');
+
+        expect(activeItem.length).toBe(1);
+        expect(activeItem[0].outerHTML).toContain(listboxItems[0].outerHTML);
+
+        await activeItem[0].press('ArrowDown');
+        await activeItem[0].press('ArrowDown');
+        activeItem = await listbox.findAll('.gux-active');
+
+        expect(activeItem[0].outerHTML).toContain(listboxItems[2].outerHTML);
+      });
+
       it('selects listbox options on keypress', async () => {
         const { page } = await render(nonFilterableDropdown(listboxContent));
         await openWithKeyboard(page);
@@ -163,6 +208,7 @@ function testWithOptionType(optionType: string, listboxContent: string) {
         expect(selectedItem.length).toBe(1);
         expect(selectedItem[0].outerHTML).toContain(listboxItems[0].outerHTML);
       });
+
       it('selects a listbox item with a value of an empty string', async () => {
         const { page } = await render(nonFilterableDropdown(listboxContent));
         const dropdownSelectedText = await page.find(`pierce/.gux-field`);
@@ -258,5 +304,20 @@ function filterableCustomDropdown(listboxContent: string) {
     ${listboxContent}
   </gux-listbox>
 </gux-dropdown>
+  `;
+}
+
+function getGroupedContent(listboxContent: string) {
+  const regex =
+    /(<gux-(option|option-icon)[^>]*>.*?<\/gux-(option|option-icon)>)/g;
+  const resultArray = listboxContent.match(regex) || [];
+
+  return `
+    <gux-option-group-beta label="Group 1">
+      ${resultArray.slice(0, 2).join('')}
+    </gux-option-group-beta>
+    <gux-option-group-beta label="Group 2">
+      ${resultArray.slice(2).join('')}
+    </gux-option-group-beta>
   `;
 }
