@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.7.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.6.1...v4.7.0) (2024-01-23)
+
+
+### Features
+
+* **language:** translation updates ([4293c5f](https://github.com/MyPureCloud/genesys-spark/commit/4293c5f87d14b01da3d45a57efa3f9bd082c0933))
+
 ### [4.6.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.6.0...v4.6.1) (2024-01-19)
 
 ## [4.6.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.4.1...v4.6.0) (2024-01-19)
