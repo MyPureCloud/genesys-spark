@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "Side",
     "totalPages": " av {totalPages, number}",
-    "first": "Første",
-    "previous": "Forrige",
-    "next": "Neste",
-    "last": "Siste",
+    "firstPage": "Første side",
+    "previousPage": "Forrige side",
+    "nextPage": "Neste side",
+    "lastPage": "Siste side",
     "pageInputLabel": "Side {currentPage, number} av {totalPages, number}",
-    "goToPage": "Gå til side"
+    "goToPage": "Gå til side",
+    "pageNumber": "Side {pageNumber}",
+    "pageSelected": "Side {pageSelected} valgt"
   },
   "gux-pagination-buttons-legacy": {
     "page": "Side",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "per side",
     "itemsPerPage": "Elementer per side",
-    "rangeSelected": "Nedtrekksmeny for elementer per side, {range} valgt"
+    "rangeSelected": "Elementer per side i nedtrekkslisten, {range} elementer per side valgt"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "per side",

@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "페이지",
     "totalPages": " / 총 {totalPages, number}",
-    "first": "첫 번째",
-    "previous": "이전",
-    "next": "다음",
-    "last": "마지막",
+    "firstPage": "첫 번째 페이지",
+    "previousPage": "이전 페이지",
+    "nextPage": "다음 페이지",
+    "lastPage": "마지막 페이지",
     "pageInputLabel": "페이지 {totalPages, number} 중 {currentPage, number}",
-    "goToPage": "페이지로 이동"
+    "goToPage": "페이지로 이동",
+    "pageNumber": "{pageNumber}페이지",
+    "pageSelected": "{pageSelected}개 페이지 선택됨"
   },
   "gux-pagination-buttons-legacy": {
     "page": "페이지",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "페이지당",
     "itemsPerPage": "페이지당 항목",
-    "rangeSelected": "페이지당 항목 드롭다운, {range} 선택됨"
+    "rangeSelected": "페이지당 항목 드롭다운, 페이지당 {range}개 항목 선택됨"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "페이지당",
