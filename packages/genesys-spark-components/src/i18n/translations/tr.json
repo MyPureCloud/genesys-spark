@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "Sayfa",
     "totalPages": " / {totalPages, number}",
-    "first": "İlk",
-    "previous": "Önceki",
-    "next": "Sonraki",
-    "last": "Son",
+    "firstPage": "İlk sayfa",
+    "previousPage": "Önceki sayfa",
+    "nextPage": "Sonraki sayfa",
+    "lastPage": "Son sayfa",
     "pageInputLabel": "Sayfa {currentPage, number}/{totalPages, number}",
-    "goToPage": "Sayfaya git:"
+    "goToPage": "Sayfaya git:",
+    "pageNumber": "Sayfa {pageNumber}",
+    "pageSelected": "Sayfa {pageSelected} seçildi"
   },
   "gux-pagination-buttons-legacy": {
     "page": "Sayfa",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "sayfa başına",
     "itemsPerPage": "Sayfa başına öğeler",
-    "rangeSelected": "Sayfa açılır listesi başına öğeler, {range} seçildi"
+    "rangeSelected": "Sayfa açılır listesi başına öğe, sayfa başına {range} öğe seçildi"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "sayfa başına",
