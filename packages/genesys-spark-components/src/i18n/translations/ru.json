@@ -132,19 +132,21 @@
   "gux-pagination-buttons": {
     "page": "Страница",
     "totalPages": " из {totalPages, number}",
-    "first": "Первая",
-    "previous": "Предыдущая",
-    "next": "Следующая",
-    "last": "Последняя",
+    "firstPage": "Первая страница",
+    "previousPage": "Предыдущая страница",
+    "nextPage": "Следующая страница",
+    "lastPage": "Последняя страница",
     "pageInputLabel": "Страница {currentPage, number} из {totalPages, number}",
-    "goToPage": "Перейти на страницу"
+    "goToPage": "Перейти на страницу",
+    "pageNumber": "Страница {pageNumber}",
+    "pageSelected": "Выбрана страница {pageSelected}"
   },
   "gux-pagination-buttons-legacy": {
     "page": "Страница",
     "totalPages": " из {totalPages, number}",
     "first": "Первая",
     "previous": "Предыдущая",
-    "next": "Далее",
+    "next": "Следующая",
     "last": "Последняя",
     "pageInputLabel": "Страница {currentPage, number} из {totalPages, number}"
   },
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "на странице",
     "itemsPerPage": "Элементов на странице",
-    "rangeSelected": "Раскрывающийся список элементов на странице, выбрано: {range}"
+    "rangeSelected": "Раскрывающийся список элементов на странице, {range} выбранных элементов(а) на странице"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "на странице",
