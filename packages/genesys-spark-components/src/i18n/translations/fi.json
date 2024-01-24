@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "Sivu",
     "totalPages": " / {totalPages, number}",
-    "first": "Ensimmäinen",
-    "previous": "Edellinen",
-    "next": "Seuraava",
-    "last": "Viimeinen",
+    "firstPage": "Ensimmäinen sivu",
+    "previousPage": "Edellinen sivu",
+    "nextPage": "Seuraava sivu",
+    "lastPage": "Viimeinen sivu",
     "pageInputLabel": "Sivu {currentPage, number} / {totalPages, number})",
-    "goToPage": "Siirry sivulle"
+    "goToPage": "Siirry sivulle",
+    "pageNumber": "Sivu {pageNumber}",
+    "pageSelected": "Sivu {pageSelected} valittu"
   },
   "gux-pagination-buttons-legacy": {
     "page": "Sivu",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "sivulla",
     "itemsPerPage": "Nimikettä sivulla",
-    "rangeSelected": "Kohteita per avattava valikko, {range} valittu"
+    "rangeSelected": "Kohteita per sivun pudotusvalikko, {range} kohdetta valittu sivua kohden"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "sivulla",
