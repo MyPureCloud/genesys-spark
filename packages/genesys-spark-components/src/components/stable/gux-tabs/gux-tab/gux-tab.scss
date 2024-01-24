@@ -69,13 +69,11 @@ gux-tabs[alignment='full-width'] > gux-tab-list {
 
 gux-tab {
   display: flex;
-  width: var(--gse-ui-tabs-item-fixedWidth);
   max-width: 160px;
 
   .gux-tab {
     display: flex;
     align-items: center;
-    width: var(--gse-ui-tabs-item-fixedWidth);
     max-width: 160px;
     height: var(--gse-ui-tabs-item-height);
     font-family: var(--gse-ui-tabs-item-itemText-fontFamily);
