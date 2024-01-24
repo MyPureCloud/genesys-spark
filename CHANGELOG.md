@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.8.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.7.0...v4.8.0) (2024-01-24)
+
+
+### Features
+
+* **language:** translation updates ([063644d](https://github.com/MyPureCloud/genesys-spark/commit/063644d66312353dbca97ac280b1fd2c517623ff))
+* **language:** translation updates ([7cbfa6c](https://github.com/MyPureCloud/genesys-spark/commit/7cbfa6ccc181aec702d69300aadab0c5065ba42b))
+* **option group:** add option filtering version ([89709b7](https://github.com/MyPureCloud/genesys-spark/commit/89709b7eee25e97cdf2d091f2f9487b99a624f05))
+* **option-group:** add some group tests ([49203ff](https://github.com/MyPureCloud/genesys-spark/commit/49203ff64f449d31ddf371e8860026787c80efdb))
+* **tidy implmentation:** tidy implmentation ([da7a62e](https://github.com/MyPureCloud/genesys-spark/commit/da7a62e5f967a8e456e8d2e53320eaa56c1ea536))
+
+
+### Bug Fixes
+
+* **logical-css:** button and button-slot now use logical css properties ([00170fc](https://github.com/MyPureCloud/genesys-spark/commit/00170fc1a816039e6c3380086f58834592cf6642))
+
 ## [4.7.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.6.1...v4.7.0) (2024-01-23)
 
 
