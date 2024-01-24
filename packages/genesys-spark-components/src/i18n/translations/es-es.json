@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "Página",
     "totalPages": " de {totalPages, number}",
-    "first": "Primero",
-    "previous": "Anterior",
-    "next": "Siguiente",
-    "last": "Último",
+    "firstPage": "Primera página",
+    "previousPage": "Página anterior",
+    "nextPage": "Página siguiente",
+    "lastPage": "Última página",
     "pageInputLabel": "Página {currentPage, number} de {totalPages, number}",
-    "goToPage": "Ir a la página"
+    "goToPage": "Ir a la página",
+    "pageNumber": "Página {pageNumber}",
+    "pageSelected": "Página {pageSelected} seleccionada"
   },
   "gux-pagination-buttons-legacy": {
     "page": "Página",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "por página",
     "itemsPerPage": "Elementos por página",
-    "rangeSelected": "Elementos por página desplegable, {range} seleccionados"
+    "rangeSelected": "Desplegable de elementos por página, {range} elementos por página seleccionados"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "por página",

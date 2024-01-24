@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "页面",
     "totalPages": " / {totalPages, number}",
-    "first": "首页",
-    "previous": "上一页",
-    "next": "下一页",
-    "last": "末页",
+    "firstPage": "第一页",
+    "previousPage": "上一页",
+    "nextPage": "下一页",
+    "lastPage": "最后一页",
     "pageInputLabel": "第 {currentPage, number} 页（共 {totalPages, number} 页）",
-    "goToPage": "转至页面"
+    "goToPage": "转至页面",
+    "pageNumber": "第 {pageNumber} 页",
+    "pageSelected": "已选择第 {pageSelected} 页"
   },
   "gux-pagination-buttons-legacy": {
     "page": "页面",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "每页",
     "itemsPerPage": "每页项目数",
-    "rangeSelected": "每页下拉列表的项目数，已选择{range}"
+    "rangeSelected": "每页下拉列表的项目数，每页已选择 {range} 个项目"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "每页",

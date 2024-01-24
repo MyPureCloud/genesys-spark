@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "Сторінка",
     "totalPages": "з {totalPages, number}",
-    "first": "Перша",
-    "previous": "Назад",
-    "next": "Далі",
-    "last": "Остання",
+    "firstPage": "Перша сторінка",
+    "previousPage": "Попередня сторінка",
+    "nextPage": "Наступна сторінка",
+    "lastPage": "Остання сторінка",
     "pageInputLabel": "Сторінка {currentPage, number} з {totalPages, number}",
-    "goToPage": "Перейти на сторінку"
+    "goToPage": "Перейти на сторінку",
+    "pageNumber": "Сторінка {pageNumber}",
+    "pageSelected": "Вибрано сторінку {pageSelected}"
   },
   "gux-pagination-buttons-legacy": {
     "page": "Сторінка",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "на сторінці",
     "itemsPerPage": "Елементів на сторінці",
-    "rangeSelected": "Розкривний список елементів на сторінці, вибрано: {range}"
+    "rangeSelected": "Розкривний список елементів на сторінці, вибрано стільки елементів на сторінці: {range}"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "на сторінці",
