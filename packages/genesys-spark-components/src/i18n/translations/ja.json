@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "ページ",
     "totalPages": " / {totalPages, number}",
-    "first": "最初",
-    "previous": "前へ",
-    "next": "次へ",
-    "last": "最後",
+    "firstPage": "最初のページ",
+    "previousPage": "前のページ",
+    "nextPage": "次のページ",
+    "lastPage": "最後のページ",
     "pageInputLabel": "ページ {currentPage, number} / {totalPages, number}",
-    "goToPage": "ページに移動"
+    "goToPage": "ページに移動",
+    "pageNumber": "ページ {pageNumber}",
+    "pageSelected": "ページ {pageSelected} を選択中"
   },
   "gux-pagination-buttons-legacy": {
     "page": "ページ",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "/ページ",
     "itemsPerPage": "件ずつ表示",
-    "rangeSelected": "ページ ドロップダウンあたりのアイテム数、選択された {range}"
+    "rangeSelected": "ページ当たりの件数ドロップダウンで、ページ当たり {range} 件を選択中"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "/ページ",
