@@ -10,6 +10,7 @@
   align-self: auto;
   order: 0;
   width: 100%;
+  margin-inline-start: var(--gse-core-spacing-4xs);
   overflow: hidden;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   color: var(--gse-ui-formControl-input-populatedColor);
@@ -32,8 +33,8 @@
   place-content: stretch center;
   align-items: center;
   width: 100%;
-  height: 32px;
-  padding: 0 8px 0 0;
+  height: var(--gse-ui-phoneInput-dropdown-height);
+  padding: 0 var(--gse-core-spacing-3xs) 0 0;
   font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
@@ -64,8 +65,8 @@
   gap: var(--gse-ui-formControl-label-gap);
   align-items: center;
   width: 100%;
-  height: var(--gse-ui-phoneInput-dropdown-height);
-  padding: 0 0 0 12px;
+  height: 100%;
+  padding: 0 0 0 var(--gse-core-spacing-2xs);
   font-family: inherit;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
@@ -111,14 +112,12 @@
 }
 
 .gux-field-button {
-  height: 100%;
+  box-sizing: border-box;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
-  outline: inherit;
-
-  &:focus-visible {
-    @include focus.gux-focus-ring;
-  }
+  border-radius: var(--gse-ui-formControl-input-borderRadius) 0 0
+    var(--gse-ui-formControl-input-borderRadius);
+  outline: none;
 
   &.gux-expanded {
     background-color: var(--gse-ui-phoneInput-dropdown-active-backgroundColor);
@@ -138,7 +137,6 @@
   width: var(--gse-ui-phoneInput-dropdown-menu-minWidth);
   min-width: var(--gse-ui-phoneInput-dropdown-menu-minWidth);
   margin: 0;
-  color: #2e394c;
 }
 
 .gux-option-content {
@@ -146,8 +144,6 @@
   grid-template-columns: 36px 1fr;
   align-items: center;
   width: 100%;
-  height: 25px;
-  line-height: 25px;
 
   .gux-country-code {
     text-align: right;
@@ -155,7 +151,7 @@
 
   gux-icon {
     position: relative;
-    left: 4px;
+    inset-inline-start: 4px;
     width: var(--gse-ui-phoneInput-dropdown-icon-width);
     height: var(--gse-ui-phoneInput-dropdown-icon-height);
     color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
@@ -164,5 +160,9 @@
 
 .gux-region-select {
   height: 100%;
-  margin-right: 4px;
+  border-radius: var(--gse-ui-formControl-input-borderRadius);
+
+  &:focus-within {
+    @include focus.gux-focus-ring;
+  }
 }
