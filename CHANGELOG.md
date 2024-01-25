@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.9.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.8.0...v4.9.0) (2024-01-25)
+
+
+### Features
+
+* **language:** translation updates ([76eb10e](https://github.com/MyPureCloud/genesys-spark/commit/76eb10e25b5c46f002755a38e8ffd77e5984981f))
+* **language:** translation updates ([35fc818](https://github.com/MyPureCloud/genesys-spark/commit/35fc81802fca93ceba4af216c5f55b63ee4ef468))
+
+
+### Bug Fixes
+
+* **tab:** removed fixed width from gux-tab ([9552983](https://github.com/MyPureCloud/genesys-spark/commit/9552983d21d4d416817724067954bc6e8b0f0db0))
+
 ## [4.8.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.7.0...v4.8.0) (2024-01-24)
 
 
