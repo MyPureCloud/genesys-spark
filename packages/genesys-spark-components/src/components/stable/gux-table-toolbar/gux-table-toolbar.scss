@@ -7,9 +7,8 @@
   max-height: var(--gse-ui-dataTableItems-tableToolbar-height);
 
   .search-filter-container {
-    width: 260px;
     min-width: 260px;
-    padding-right: var(--gse-ui-dataTableItems-tableToolbar-gap);
+    padding-inline-end: var(--gse-ui-dataTableItems-tableToolbar-gap);
   }
 
   slot[name='search-and-filter']::slotted(*) {
