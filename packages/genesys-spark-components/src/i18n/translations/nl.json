@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "Pagina",
     "totalPages": " van {totalPages, number}",
-    "first": "Eerste",
-    "previous": "Vorige",
-    "next": "Volgende",
-    "last": "Laatste",
+    "firstPage": "Eerste pagina",
+    "previousPage": "Vorige pagina",
+    "nextPage": "Volgende pagina",
+    "lastPage": "Laatste pagina",
     "pageInputLabel": "Pagina {currentPage, number} van {totalPages, number}",
-    "goToPage": "Naar pagina"
+    "goToPage": "Naar pagina",
+    "pageNumber": "Pagina {pageNumber}",
+    "pageSelected": "Pagina {pageSelected} geselecteerd"
   },
   "gux-pagination-buttons-legacy": {
     "page": "Pagina",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "per pagina",
     "itemsPerPage": "Items per pagina",
-    "rangeSelected": "Items per vervolgkeuzelijst op pagina, {range} geselecteerd"
+    "rangeSelected": "Items per vervolgkeuzelijst op pagina, {range} items per pagina geselecteerd"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "per pagina",
