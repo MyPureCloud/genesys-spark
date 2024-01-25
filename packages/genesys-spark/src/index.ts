@@ -68,4 +68,4 @@ export function registerSparkChartComponents(): Promise<void> {
 }
 
 // Re-export of utility modules
-export * as Intl from './intl';
+export * as Intl from './utils/intl';
