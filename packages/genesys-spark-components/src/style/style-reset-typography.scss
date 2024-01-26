@@ -20,28 +20,62 @@ h6 {
   @include typography.heading-sm;
 }
 
-.gux-heading-xl {
-  @include typography.heading-xl;
+.gux-heading-xl,
+.gux-heading-xl-bold {
+  @include typography.heading-xl-bold;
 }
 
-.gux-heading-lg {
-  @include typography.heading-lg;
+.gux-heading-xl-semibold {
+  @include typography.heading-xl-semiBold;
 }
 
-.gux-heading-md {
-  @include typography.heading-md;
+.gux-heading-lg,
+.gux-heading-lg-bold {
+  @include typography.heading-lg-bold;
 }
 
-.gux-heading-sm {
-  @include typography.heading-sm;
+.gux-heading-lg-semibold {
+  @include typography.heading-lg-semiBold;
 }
 
-.gux-heading-xs {
-  @include typography.heading-xs;
+.gux-heading-md,
+.gux-heading-md-bold {
+  @include typography.heading-md-bold;
 }
 
-.gux-heading-subheading {
-  @include typography.heading-subheading;
+.gux-heading-md-semibold {
+  @include typography.heading-md-semiBold;
+}
+
+.gux-heading-sm,
+.gux-heading-sm-bold {
+  @include typography.heading-sm-bold;
+}
+
+.gux-heading-sm-semibold {
+  @include typography.heading-sm-semiBold;
+}
+
+.gux-heading-xs,
+.gux-heading-xs-bold {
+  @include typography.heading-xs-bold;
+}
+
+.gux-heading-xs-semibold {
+  @include typography.heading-xs-semiBold;
+}
+
+.gux-heading-subheading-regular {
+  @include typography.heading-subheading-regular;
+}
+
+.gux-heading-subheading,
+.gux-heading-subheading-bold {
+  @include typography.heading-subheading-bold;
+}
+
+.gux-heading-subheading-semibold {
+  @include typography.heading-subheading-semiBold;
 }
 
 .gux-heading-overline {

@@ -1,31 +1,243 @@
 <h1>Typography</h1>
 
-<p>This is the default text style.</p>
-
-<hr />
-
-<h1>Heading 1</h1>
-
-<h2>Heading 2</h2>
-
-<h3>Heading 3</h3>
-
-<h4>Heading 4</h4>
-
-<h5>Heading 5</h5>
-
-<h6>Heading 6</h6>
-
-<hr />
-
-<h4 class="h1">Heading style from a class</h4>
-
+<h2 class="gux-heading-lg-semibold">Text Styles</h2>
 <p>
-  This is useful when the logical heading level, which is important for
-  accessibility, is different than the desired visual style
+  The component library enables the use of Spark typography. The typography
+  styles are decoupled from the semantic meaning of HTML elements such as h1,
+  h2, p etc. They can be mixed and matched based on the desired outcome or
+  information architecture using tokens or utility classes.
 </p>
 
-<hr />
+<h3 class="gux-heading-subheading">Headlines & Subheads</h3>
+<p>
+  Urbanist will be used for Headers for English and the additional 13 languages
+  supported by Urbanist. For the remaining languages Noto Sans will be used for
+  header and body copy.
+</p>
+<br />
+<gux-table compact>
+  <table slot="data">
+    <thead>
+      <tr>
+        <th>Style Name</th>
+        <th>Typeface</th>
+        <th>Value</th>
+        <th>Line Height</th>
+        <th>Weight</th>
+        <th>Sample</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Heading/xl</td>
+        <td>Urbanist</td>
+        <td>36px</td>
+        <td>44px</td>
+        <td>
+          <div class="split-row">
+            <p>Bold</p>
+            <p>SemiBold</p>
+          </div>
+        </td>
+        <td>
+          <div class="split-row">
+            <p class="gux-heading-xl-bold">Heading xl bold</p>
+            <p class="gux-heading-xl-semibold">Heading xl semi</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Heading/lg</td>
+        <td>Urbanist</td>
+        <td>24px</td>
+        <td>32px</td>
+        <td>
+          <div class="split-row">
+            <p>Bold</p>
+            <p>SemiBold</p>
+          </div>
+        </td>
+        <td>
+          <div class="split-row">
+            <p class="gux-heading-lg-bold">Heading lg bold</p>
+            <p class="gux-heading-lg-semibold">Heading lg semi</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Heading/md</td>
+        <td>Urbanist</td>
+        <td>18px</td>
+        <td>27px</td>
+        <td>
+          <div class="split-row">
+            <p>Bold</p>
+            <p>SemiBold</p>
+          </div>
+        </td>
+        <td>
+          <div class="split-row">
+            <p class="gux-heading-md-bold">Heading md bold</p>
+            <p class="gux-heading-md-semibold">Heading md semi</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Heading/sm</td>
+        <td>Urbanist</td>
+        <td>16px</td>
+        <td>24px</td>
+        <td>
+          <div class="split-row">
+            <p>Bold</p>
+            <p>SemiBold</p>
+          </div>
+        </td>
+        <td>
+          <div class="split-row">
+            <p class="gux-heading-sm-bold">Heading sm bold</p>
+            <p class="gux-heading-sm-semibold">Heading sm semi</p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Heading/xs</td>
+        <td>Urbanist</td>
+        <td>14px</td>
+        <td>21px</td>
+        <td>
+          <div class="split-row">
+            <p>Bold</p>
+            <p>SemiBold</p>
+          </div>
+        </td>
+        <td>
+          <div class="split-row">
+            <p class="gux-heading-xs-bold">Heading xs bold</p>
+            <p class="gux-heading-xs-semibold">Heading xs semi</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Subheading</td>
+        <td>Urbanist</td>
+        <td>14px</td>
+        <td>20px</td>
+        <td>
+          <div class="split-row thirds">
+            <p>Bold</p>
+            <p>SemiBold</p>
+            <p>Regular</p>
+          </div>
+        </td>
+        <td>
+          <div class="split-row thirds">
+            <p class="gux-heading-subheading-bold">Subhead bold</p>
+            <p class="gux-heading-subheading-semibold">Subhead semi</p>
+            <p class="gux-heading-subheading-regular">Subhead regular</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Overline</td>
+        <td>Urbanist</td>
+        <td>12px</td>
+        <td>16px</td>
+        <td>
+          <p>Regular</p>
+        </td>
+        <td>
+          <p class="gux-heading-overline">Overline</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table>
+
+<h3 class="subheading">Body & UI</h3>
+
+<p>
+  Noto Sans covers all Genesys supported languages and more and is our body font
+  for all languages.
+</p>
+<br />
+<gux-table compact>
+  <table slot="data">
+    <thead>
+      <tr>
+        <th>Style Name</th>
+        <th>Typeface</th>
+        <th>Value</th>
+        <th>Line Height</th>
+        <th>Weight</th>
+        <th>Sample</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Body/lg</td>
+        <td>Noto Sans</td>
+        <td>16px</td>
+        <td>24px</td>
+        <td>
+          <div class="split-row thirds">
+            <p>Regular</p>
+            <p>SemiBold</p>
+            <p>Bold</p>
+          </div>
+        </td>
+        <td>
+          <div class="split-row thirds">
+            <p class="gux-body-lg-regular">Body lg regular</p>
+            <p class="gux-body-lg-semibold">Body lg semi</p>
+            <p class="gux-body-lg-bold">Body lg bold</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Body/md</td>
+        <td>Noto Sans</td>
+        <td>14px</td>
+        <td>20px</td>
+        <td>
+          <div class="split-row thirds">
+            <p>Regular</p>
+            <p>SemiBold</p>
+            <p>Bold</p>
+          </div>
+        </td>
+        <td>
+          <div class="split-row thirds">
+            <p class="gux-body-md-regular">Body md regular</p>
+            <p class="gux-body-md-semibold">Body md semi</p>
+            <p class="gux-body-md-bold">Body md bold</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Body/sm</td>
+        <td>Noto Sans</td>
+        <td>12px</td>
+        <td>18px</td>
+        <td>
+          <div class="split-row thirds">
+            <p>Regular</p>
+            <p>SemiBold</p>
+            <p>Bold</p>
+          </div>
+        </td>
+        <td>
+          <div class="split-row thirds">
+            <p class="gux-body-sm-regular">Body sm regular</p>
+            <p class="gux-body-sm-semibold">Body sm semi</p>
+            <p class="gux-body-sm-bold">Body sm bold</p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table>
 
 <h2>Anchor Styling</h2>
 
@@ -34,18 +246,18 @@
 
 <h3>With Icon</h3>
 <div>Use the gux-icon-anchor class to add padding to the right of the icon</div>
-<a href="#" class="gux-icon-anchor"
-  ><gux-icon icon-name="external-link" decorative></gux-icon>External link</a
->
+<a href="#" class="gux-icon-anchor">
+  <gux-icon icon-name="external-link" decorative></gux-icon>External link
+</a>
 
 <h3>In Text</h3>
 <p>
   Maecenas accumsan nulla et maximus tempor.
   <a href="#">Example link</a>
   Proin non sem tempor ex elementum porttitor at non elit.
-  <a href="#" class="gux-icon-anchor"
-    ><gux-icon icon-name="external-link" decorative></gux-icon>External link</a
-  >
+  <a href="#" class="gux-icon-anchor">
+    <gux-icon icon-name="external-link" decorative></gux-icon>External link
+  </a>
   Maecenas ex elementum accumsan at nonr.
 </p>
 
@@ -68,182 +280,20 @@
   </table>
 </gux-table>
 
-<h2>Fonts</h2>
-<h3>Urbanist</h3>
-<gux-table compact>
-  <table slot="data">
-    <thead>
-      <tr>
-        <th>Font weight</th>
-        <th>Normal</th>
-        <th>Italic</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>100</td>
-        <td class="urbanist fw-100">The quick brown fox</td>
-        <td class="urbanist fw-100 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>200</td>
-        <td class="urbanist fw-200">The quick brown fox</td>
-        <td class="urbanist fw-200 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>300</td>
-        <td class="urbanist fw-300">The quick brown fox</td>
-        <td class="urbanist fw-300 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>400</td>
-        <td class="urbanist fw-400">The quick brown fox</td>
-        <td class="urbanist fw-400 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>500</td>
-        <td class="urbanist fw-500">The quick brown fox</td>
-        <td class="urbanist fw-500 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>600</td>
-        <td class="urbanist fw-600">The quick brown fox</td>
-        <td class="urbanist fw-600 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>700</td>
-        <td class="urbanist fw-700">The quick brown fox</td>
-        <td class="urbanist fw-700 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>800</td>
-        <td class="urbanist fw-800">The quick brown fox</td>
-        <td class="urbanist fw-800 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>900</td>
-        <td class="urbanist fw-900">The quick brown fox</td>
-        <td class="urbanist fw-900 italic">jumps over the lazy dog</td>
-      </tr>
-    </tbody>
-  </table>
-</gux-table>
-
-<h3>Noto Sans</h3>
-<gux-table compact>
-  <table slot="data">
-    <thead>
-      <tr>
-        <th>Font weight</th>
-        <th>Normal</th>
-        <th>Italic</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>100</td>
-        <td class="noto fw-100">The quick brown fox</td>
-        <td class="noto fw-100 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>200</td>
-        <td class="noto fw-200">The quick brown fox</td>
-        <td class="noto fw-200 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>300</td>
-        <td class="noto fw-300">The quick brown fox</td>
-        <td class="noto fw-300 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>400</td>
-        <td class="noto fw-400">The quick brown fox</td>
-        <td class="noto fw-400 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>500</td>
-        <td class="noto fw-500">The quick brown fox</td>
-        <td class="noto fw-500 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>600</td>
-        <td class="noto fw-600">The quick brown fox</td>
-        <td class="noto fw-600 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>700</td>
-        <td class="noto fw-700">The quick brown fox</td>
-        <td class="noto fw-700 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>800</td>
-        <td class="noto fw-800">The quick brown fox</td>
-        <td class="noto fw-800 italic">jumps over the lazy dog</td>
-      </tr>
-      <tr>
-        <td>900</td>
-        <td class="noto fw-900">The quick brown fox</td>
-        <td class="noto fw-900 italic">jumps over the lazy dog</td>
-      </tr>
-    </tbody>
-  </table>
-</gux-table>
-
 <style>
-  .table,
-  .tr,
-  .td {
-    padding: 5px;
-    border: 1px solid black;
+  gux-table {
+    margin-bottom: var(--gse-core-spacing-lg);
   }
 
-  .urbanist {
-    font-family: Urbanist, sans-serif;
-    font-size: 16px;
+  .split-row {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 100%;
   }
 
-  .noto {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 16px;
-  }
-
-  .italic {
-    font-style: italic;
-  }
-
-  .fw-100 {
-    font-weight: 100;
-  }
-
-  .fw-200 {
-    font-weight: 200;
-  }
-
-  .fw-300 {
-    font-weight: 300;
-  }
-
-  .fw-400 {
-    font-weight: 400;
-  }
-
-  .fw-500 {
-    font-weight: 500;
-  }
-
-  .fw-600 {
-    font-weight: 600;
-  }
-
-  .fw-700 {
-    font-weight: 700;
-  }
-
-  .fw-800 {
-    font-weight: 800;
-  }
-
-  .fw-900 {
-    font-weight: 900;
+  .thirds {
+    grid-template-rows: 1fr 1fr 1fr;
   }
 </style>
