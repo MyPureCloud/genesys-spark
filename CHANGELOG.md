@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.10.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.10.0...v4.10.1) (2024-01-27)
+
+
+### Bug Fixes
+
+* **toolbar:** fix resizing behaviour ([72741ba](https://github.com/MyPureCloud/genesys-spark/commit/72741ba584fd1a03bf06f2b87943762ed1715287))
+
 ## [4.10.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.9.0...v4.10.0) (2024-01-26)
 
 
