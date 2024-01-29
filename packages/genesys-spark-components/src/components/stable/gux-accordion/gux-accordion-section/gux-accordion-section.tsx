@@ -59,12 +59,17 @@ export class GuxAccordionSection {
   reverseHeadings: boolean = false;
 
   @Event()
-  internalsectionopened: EventEmitter<void>;
+  guxopened: EventEmitter<void>;
+
+  @Event()
+  guxclosed: EventEmitter<void>;
 
   @Watch('open')
   watchOpen(open: boolean): void {
     if (open) {
-      this.internalsectionopened.emit();
+      this.guxopened.emit();
+    } else {
+      this.guxclosed.emit();
     }
   }
 

@@ -18,10 +18,8 @@ export class GuxAccordion {
   @Prop()
   singleOpenSection: boolean = false;
 
-  @Listen('internalsectionopened')
-  handleInternalsectionopened(event: CustomEvent) {
-    event.stopImmediatePropagation();
-
+  @Listen('guxopened')
+  handleGuxopened(event: CustomEvent) {
     if (this.singleOpenSection) {
       this.getAccordionSections().forEach(section => {
         if (section !== event.target) {

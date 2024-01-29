@@ -242,7 +242,14 @@
   </gux-accordion-section>
 </gux-accordion>
 
-<style>
+<style
+  onload="(function () {
+    Array.from(document.querySelectorAll('gux-accordion-section')).forEach(item => {
+      item.addEventListener('guxopened', notify);
+      item.addEventListener('guxclosed', notify);
+    });
+})()"
+>
   .gux-content-text {
     font-family: var(--gse-ui-accordion-contentItem-defaultText-fontFamily);
     font-size: var(--gse-ui-accordion-contentItem-defaultText-fontSize);
