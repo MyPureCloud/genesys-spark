@@ -76,20 +76,26 @@ export class GuxTimeZonePickerBeta {
   }
 
   private filterTimeZoneList(timeZoneList: GuxTimeZoneOption[]) {
-    const searchString = this.searchString;
+    const searchString = this.searchString.toLowerCase();
     return timeZoneList.filter(tzOption => {
-      return this.getFormattedTimeZoneOption(tzOption)
-        .toLowerCase()
-        .includes(searchString.toLowerCase());
+      return tzOption.mainCities.some(city => {
+        return tzOption.displayTextNameFormatted
+          .concat(tzOption.baseDisplayOffsetText)
+          .concat(city)
+          .toLowerCase()
+          .includes(searchString);
+      });
     });
   }
 
   private getTimeZoneOption(timeZone: GuxTimeZoneListing): GuxTimeZoneOption {
     const localizedGroupName = this.i18n(timeZone.name);
+
     const localizedCountryName = this.i18n(timeZone.countryName);
     if (!localizedGroupName) {
       return;
     }
+
     const formattedOffset = formatOffset(timeZone.currentTimeOffsetInMinutes);
     const localizedUTC = this.i18n('UTC');
     const displayTextName = `${localizedGroupName}`;
@@ -97,6 +103,7 @@ export class GuxTimeZonePickerBeta {
     const baseDisplayOffsetText = `${displayTextOffset}`;
     const displayTextNameFormatted = displayTextName.replace(/_/g, ' ');
     const countryName = `${localizedCountryName}`;
+    const mainCities = timeZone.mainCities;
     const defaultZone = '';
     const priority = displayTextName.startsWith('Etc/GMT') ? 2 : 1;
 
@@ -108,6 +115,7 @@ export class GuxTimeZonePickerBeta {
       displayTextOffset,
       baseDisplayOffsetText,
       countryName,
+      mainCities: mainCities,
       defaultZone,
       priority
     };

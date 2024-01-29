@@ -22,6 +22,7 @@ export interface GuxTimeZoneOption {
   displayTextOffset: string;
   baseDisplayOffsetText: string;
   countryName: string;
+  mainCities: string[];
   defaultZone: string;
   priority: number;
 }
