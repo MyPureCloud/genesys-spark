@@ -4,6 +4,8 @@ import {
   DateTimeFormatter,
   GuxDateTimeFormat
 } from '../../../i18n/DateTimeFormatter';
+import * as sparkIntl from '../../../genesys-spark-utils/intl';
+import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
 import { getDesiredLocale } from '../../../i18n/index';
 import { GuxTimeZoneIdentifier } from '../../../i18n/time-zone/types';
 import { getValidTimezone } from '@utils/date/get-valid-timezone';
@@ -14,6 +16,7 @@ import { getValidTimezone } from '@utils/date/get-valid-timezone';
 })
 export class GuxDate {
   private formatter: DateTimeFormatter;
+  private hasRegionalDatesCookie: boolean = false;
 
   /**
    * Reference to the host element.
@@ -41,16 +44,29 @@ export class GuxDate {
 
   componentWillLoad(): void {
     trackComponent(this.root);
-    this.formatter = new DateTimeFormatter(getDesiredLocale(this.root));
+    if (readRegionalDatesCookie()) {
+      this.hasRegionalDatesCookie = true;
+    } else {
+      this.formatter = new DateTimeFormatter(getDesiredLocale(this.root));
+    }
+  }
+
+  private renderDate(): JSX.Element {
+    if (this.hasRegionalDatesCookie) {
+      return sparkIntl
+        .dateTimeFormat(sparkIntl.determineDisplayLocale(this.root), {
+          dateStyle: this.format,
+          timeZone: getValidTimezone(this.timeZone)
+        })
+        .format(new Date(this.datetime));
+    } else {
+      return this.formatter.formatDate(new Date(this.datetime), this.format, {
+        timeZone: getValidTimezone(this.timeZone)
+      });
+    }
   }
 
   render() {
-    return (
-      <Host>
-        {this.formatter.formatDate(new Date(this.datetime), this.format, {
-          timeZone: getValidTimezone(this.timeZone)
-        })}
-      </Host>
-    ) as JSX.Element;
+    return (<Host>{this.renderDate()}</Host>) as JSX.Element;
   }
 }

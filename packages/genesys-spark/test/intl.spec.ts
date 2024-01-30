@@ -2,7 +2,7 @@ import {
   determineDisplayLocale,
   dateTimeFormat,
   relativeTimeFormat
-} from '../src/intl';
+} from '../src/utils/intl';
 
 describe('The intl module', () => {
   beforeEach(() => {

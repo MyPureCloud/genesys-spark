@@ -19,7 +19,7 @@ export function dateTimeFormat(
   }
 
   if (locale != undefined) {
-    return new Intl.DateTimeFormat(locale, options);
+    return new Intl.DateTimeFormat(locale as string, options);
   } else {
     const userLocale = determineDisplayLocale();
     return new Intl.DateTimeFormat(userLocale, options);
@@ -46,7 +46,7 @@ export function relativeTimeFormat(
   }
 
   if (locale != undefined) {
-    return new Intl.RelativeTimeFormat(locale, options);
+    return new Intl.RelativeTimeFormat(locale as string, options);
   } else {
     const userLocale = determineDisplayLocale();
     return new Intl.RelativeTimeFormat(userLocale, options);

@@ -8,12 +8,13 @@
     "dist/"
   ],
   "scripts": {
-    "build": "npm run clean && npm run i18n && npm run generate-gux-icon-types-file && npm run stencil && npm run build-wrapper",
+    "build": "npm run clean && npm run i18n && npm run generate-gux-icon-types-file && npm run copy-genesys-spark-utils && npm run stencil && npm run build-wrapper",
     "build-i18n": "./scripts/build-i18n.js",
     "build-wrapper": "./scripts/wrap-stencil.js",
     "check-a11y": "node ./scripts/check-a11y.mjs",
     "check-readmes": "./scripts/check-readmes.sh",
     "clean": "rm -r ./dist ./build || true",
+    "copy-genesys-spark-utils": "node ./scripts/copy-genesys-spark-utils.mjs",
     "predev": "npm run i18n && npm run generate-gux-icon-types-file ",
     "dev": "npm run stencil.dev",
     "eslint": "eslint --fix .",
