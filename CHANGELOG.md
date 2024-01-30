@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.11.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.10.1...v4.11.0) (2024-01-30)
+
+
+### Features
+
+* **table-toolbar:** remove fixed width for filter ([9cba454](https://github.com/MyPureCloud/genesys-spark/commit/9cba454003424764eff3baa768d9c0049735f69b))
+* **type page:** update the typography page ([f53b479](https://github.com/MyPureCloud/genesys-spark/commit/f53b479ab8e77205a27fc524bbd3fbd7de6335a7))
+
 ### [4.10.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.10.0...v4.10.1) (2024-01-27)
 
 
