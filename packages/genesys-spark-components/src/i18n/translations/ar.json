@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "صفحة",
     "totalPages": " من {totalPages, number}",
-    "first": "الأول",
-    "previous": "السابق",
-    "next": "التالي",
-    "last": "الأخير",
+    "firstPage": "الصفحة الأولى",
+    "previousPage": "الصفحة السابقة",
+    "nextPage": "الصفحة التالية",
+    "lastPage": "الصفحة الأخيرة",
     "pageInputLabel": "صفحة {currentPage, number} من {totalPages, number}",
-    "goToPage": "الانتقال إلى الصفحة"
+    "goToPage": "الانتقال إلى الصفحة",
+    "pageNumber": "الصفحة {pageNumber}",
+    "pageSelected": "تم تحديد الصفحة {pageSelected}"
   },
   "gux-pagination-buttons-legacy": {
     "page": "صفحة",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "لكل صفحة",
     "itemsPerPage": "عناصر لكل صفحة",
-    "rangeSelected": "العناصر في القائمة المنسدلة لكل صفحة، تم تحديد  {range}"
+    "rangeSelected": "العناصر في القائمة المنسدلة لكل صفحة، تم تحديد {range} عناصر لكل صفحة"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "لكل صفحة",

@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "Stránka",
     "totalPages": " z {totalPages, number}",
-    "first": "První",
-    "previous": "Předchozí",
-    "next": "Další",
-    "last": "Poslední",
+    "firstPage": "První stránka",
+    "previousPage": "Předchozí stránka",
+    "nextPage": "Další stránka",
+    "lastPage": "Poslední stránka",
     "pageInputLabel": "Strana {currentPage, number}/{totalPages, number}",
-    "goToPage": "Přejít na stránku"
+    "goToPage": "Přejít na stránku",
+    "pageNumber": "Stránka {pageNumber}",
+    "pageSelected": "Vybrána stránka {pageSelected}"
   },
   "gux-pagination-buttons-legacy": {
     "page": "Stránka",
