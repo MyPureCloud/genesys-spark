@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.12.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.11.0...v4.12.0) (2024-01-31)
+
+
+### Features
+
+* **dateformat:** add new date format for date date-time and time components ([b1354fc](https://github.com/MyPureCloud/genesys-spark/commit/b1354fc696bbce546de463e222742bf09bc578f4))
+
 ## [4.11.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.10.1...v4.11.0) (2024-01-30)
 
 
