@@ -76,14 +76,13 @@ export class GuxTimeZonePickerBeta {
   }
 
   private filterTimeZoneList(timeZoneList: GuxTimeZoneOption[]) {
-    const searchString = this.searchString.toLowerCase();
     return timeZoneList.filter(tzOption => {
       return tzOption.mainCities.some(city => {
         return tzOption.displayTextName
           .concat(tzOption.baseDisplayOffsetText)
           .concat(city)
           .toLowerCase()
-          .includes(searchString);
+          .includes(this.searchString.toLowerCase());
       });
     });
   }
