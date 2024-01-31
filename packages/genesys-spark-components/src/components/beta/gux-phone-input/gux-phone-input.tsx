@@ -446,6 +446,17 @@ export class GuxPhoneInput {
     });
   }
 
+  private renderExpandIcon(): JSX.Element {
+    if (!this.disabled)
+      return (
+        <gux-icon
+          class="gux-expand-icon"
+          iconName="chevron-small-down"
+          decorative
+        />
+      ) as JSX.Element;
+  }
+
   private renderCountryButton(): JSX.Element {
     return (
       <div class="gux-region-select">
@@ -453,7 +464,8 @@ export class GuxPhoneInput {
           type="button"
           class={{
             'gux-field gux-field-button': true,
-            'gux-expanded': this.expanded
+            'gux-expanded': this.expanded,
+            'gux-disabled': this.disabled
           }}
           disabled={this.disabled}
           onClick={this.fieldButtonClick.bind(this)}
@@ -463,11 +475,7 @@ export class GuxPhoneInput {
           aria-label={this.i18n('regionDropdownButton')}
         >
           <div class="gux-field-content">{this.renderButtonDisplay()}</div>
-          <gux-icon
-            class="gux-expand-icon"
-            iconName="chevron-small-down"
-            decorative
-          />
+          {this.renderExpandIcon()}
         </button>
       </div>
     ) as JSX.Element;

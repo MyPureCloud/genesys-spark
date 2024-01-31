@@ -62,17 +62,21 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: var(--gse-ui-formControl-label-gap);
+  gap: var(--gse-ui-phoneInput-dropdown-gap);
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0 0 0 var(--gse-core-spacing-2xs);
+  padding: var(--gse-ui-phoneInput-dropdown-padding);
   font-family: inherit;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   cursor: pointer;
   border-radius: var(--gse-ui-formControl-input-borderRadius) 0 0
     var(--gse-ui-formControl-input-borderRadius);
+
+  &.gux-disabled {
+    padding: var(--gse-ui-phoneInput-dropdown-disabled-padding);
+  }
 }
 
 .gux-field {
@@ -87,7 +91,7 @@
     .gux-selected-option {
       display: flex;
       justify-content: center;
-      width: 16px;
+      width: var(--gse-ui-phoneInput-dropdown-flag-width);
       overflow: hidden;
 
       gux-icon {
@@ -134,7 +138,7 @@
 
 .gux-listbox-container {
   box-sizing: border-box;
-  width: var(--gse-ui-phoneInput-dropdown-menu-minWidth);
+  width: fit-content;
   min-width: var(--gse-ui-phoneInput-dropdown-menu-minWidth);
   margin: 0;
 }
