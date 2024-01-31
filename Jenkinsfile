@@ -4,19 +4,20 @@ Boolean isMainBranch = env.BRANCH_NAME == 'main'
 
 Boolean isMaintenanceReleaseBranch = env.BRANCH_NAME.startsWith('maintenance/')
 
-Boolean isFeatureBranch = env.BRANCH_NAME.startsWith('feature/')
-
 Boolean isBetaBranch = env.BRANCH_NAME.startsWith('beta/')
+
+Boolean isFeatureBranch = env.BRANCH_NAME.startsWith('feature/')
 
 Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch || isBetaBranch
 
-Boolean isPublicBranch = isReleaseBranch || isFeatureBranch || isBetaBranch
+Boolean isPublicBranch = isReleaseBranch || isFeatureBranch
 
 String releaseOptions = isBetaBranch ? '--prerelease beta' : ''
 String publishOptions = isBetaBranch ? '--tag beta' : ''
 
 // We track this globally because it will later be passed to the documentation build
 String componentAssetsPath = ''
+String charComponentAssetsPath = ''
 
 webappPipeline {
     projectName = 'spark-components'
@@ -68,9 +69,9 @@ webappPipeline {
     nodeVersion = '18.16.1'
     testJob = 'no-tests'
     deployConfig = [:]
-    manifest = customManifest('./packages/genesys-spark-components/dist') {
-        sh('./packages/genesys-spark-components/scripts/generate-manifest.js')
-        readJSON(file: './packages/genesys-spark-components/manifest.json')
+    manifest = customManifest('./dist') {
+        sh('./scripts/create-manifest.js')
+        readJSON(file: './manifest.json')
     }
     buildType = {
         if (isReleaseBranch) {
@@ -101,7 +102,7 @@ webappPipeline {
         // All of the useful stencil output lives under /genesys-webcomponents, so
         // we add it to the loading path here to simplify internal code
         componentAssetsPath = "${assetPrefix}genesys-webcomponents/"
-        chartComponentAssetsPath = "${assetPrefix}genesys-chart-webcomponents/"
+        chartComponentAssetsPath = "${assetPrefix}chart/genesys-chart-webcomponents/"
 
         env.COMPONENT_ASSETS_PATH = componentAssetsPath
         env.CHART_COMPONENT_ASSETS_PATH = chartComponentAssetsPath
@@ -117,6 +118,9 @@ webappPipeline {
                     sh(script: "npm publish --workspace=packages/genesys-spark-components ${publishOptions}",
                         label: 'Publish Components')
 
+                    sh(script: "npm publish --workspace=packages/genesys-spark-chart-components ${publishOptions}",
+                        label: 'Publish Chart Components')
+
                     sh(script: "npm publish --workspace=packages/genesys-spark ${publishOptions}",
                         label: 'Publish Main Package'
                     )
@@ -124,11 +128,15 @@ webappPipeline {
                     sh(script: '''
                             RELEASE_VERSION="$(npm run --silent current-version)"
                             npm install --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react
+                            npm install --no-progress -P -E genesys-spark-chart-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-chart-components-react
                         ''',
-                        label: 'Set exact version dependency in React Components')
+                        label: 'Set exact version dependency in React Components and Chart React Components')
 
                     sh(script: "npm publish --workspace=packages/genesys-spark-components-react ${publishOptions}",
                         label: 'Publish React Components')
+
+                    sh(script: "npm publish --workspace=packages/genesys-spark-chart-components-react ${publishOptions}",
+                        label: 'Publish ChartReact Components')
                 }
             }
 
@@ -148,7 +156,8 @@ webappPipeline {
                 build(job: 'spark-monorepo-examples',
                parameters: [
                 string(name: 'BRANCH_NAME', value: env.BRANCH_NAME),
-                string(name: 'COMPONENT_ASSETS_PATH', value: componentAssetsPath)
+                string(name: 'COMPONENT_ASSETS_PATH', value: componentAssetsPath),
+                string(name: 'CHART_COMPONENT_ASSETS_PATH', value: chartComponentAssetsPath)
                ],
                 propagate: false,
                      wait: false)
