@@ -79,7 +79,7 @@ export class GuxTimeZonePickerBeta {
     const searchString = this.searchString.toLowerCase();
     return timeZoneList.filter(tzOption => {
       return tzOption.mainCities.some(city => {
-        return tzOption.displayTextNameFormatted
+        return tzOption.displayTextName
           .concat(tzOption.baseDisplayOffsetText)
           .concat(city)
           .toLowerCase()
@@ -97,10 +97,9 @@ export class GuxTimeZonePickerBeta {
 
     const formattedOffset = formatOffset(timeZone.currentTimeOffsetInMinutes);
     const localizedUTC = this.i18n('UTC');
-    const displayTextName = `${localizedGroupName}`;
     const displayTextOffset = ` (${localizedUTC}${formattedOffset})`;
     const baseDisplayOffsetText = `${displayTextOffset}`;
-    const displayTextNameFormatted = displayTextName.replace(/_/g, ' ');
+    const displayTextName = `${localizedGroupName}`.replace(/_/g, ' ');
     const countryName = `${localizedCountryName}`;
     const mainCities = timeZone.mainCities;
     const defaultZone = '';
@@ -110,20 +109,20 @@ export class GuxTimeZonePickerBeta {
       value: timeZone.name,
       localizedGroupName,
       formattedOffset,
-      displayTextNameFormatted,
+      displayTextName,
       displayTextOffset,
       baseDisplayOffsetText,
       countryName,
-      mainCities: mainCities,
+      mainCities,
       defaultZone,
       priority
     };
   }
 
   private getFormattedTimeZoneOption(option: GuxTimeZoneOption): string {
-    return option.displayTextNameFormatted.startsWith('Etc/GMT')
-      ? option.displayTextNameFormatted.concat(option.baseDisplayOffsetText)
-      : option.displayTextNameFormatted
+    return option.displayTextName.startsWith('Etc/GMT')
+      ? option.displayTextName.concat(option.baseDisplayOffsetText)
+      : option.displayTextName
           .split('/')
           .pop()
           .concat(', ', option.countryName)
@@ -145,7 +144,7 @@ export class GuxTimeZonePickerBeta {
     return timeZoneOptionsList.sort(
       (a, b) =>
         a.priority - b.priority ||
-        a.displayTextNameFormatted?.localeCompare(b.displayTextNameFormatted)
+        a.displayTextName?.localeCompare(b.displayTextName)
     );
   }
 

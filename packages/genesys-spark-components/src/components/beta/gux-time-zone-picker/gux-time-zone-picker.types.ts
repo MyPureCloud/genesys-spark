@@ -18,7 +18,7 @@ export interface GuxTimeZoneOption {
   value: string;
   localizedGroupName: string;
   formattedOffset: string;
-  displayTextNameFormatted: string;
+  displayTextName: string;
   displayTextOffset: string;
   baseDisplayOffsetText: string;
   countryName: string;
