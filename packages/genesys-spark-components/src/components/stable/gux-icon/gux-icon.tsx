@@ -2,7 +2,7 @@ import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
 
-import { getBaseSvgHtml } from './gux-icon.service';
+import { getBaseSvgHtml, getRootIconName } from './gux-icon.service';
 import { GuxIconIconName, GuxIconSize } from './gux-icon.types';
 import { logError } from '@utils/error/log-error';
 
@@ -44,7 +44,8 @@ export class GuxIcon {
 
   @Watch('iconName')
   async prepIcon(iconName: string): Promise<void> {
-    this.baseSvgHtml = await getBaseSvgHtml(iconName);
+    const rootIconName = getRootIconName(iconName);
+    this.baseSvgHtml = await getBaseSvgHtml(rootIconName);
     this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
   }
 
@@ -63,7 +64,7 @@ export class GuxIcon {
   }
 
   async componentWillLoad(): Promise<void> {
-    trackComponent(this.root, { variant: this.iconName });
+    trackComponent(this.root, { variant: getRootIconName(this.iconName) });
 
     await this.prepIcon(this.iconName);
   }
