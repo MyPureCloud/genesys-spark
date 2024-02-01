@@ -143,7 +143,9 @@ export class GuxTimeZonePickerBeta {
     return timeZoneOptionsList.sort(
       (a, b) =>
         a.priority - b.priority ||
-        a.displayTextName?.localeCompare(b.displayTextName)
+        this.getFormattedTimeZoneOption(a)?.localeCompare(
+          this.getFormattedTimeZoneOption(b)
+        )
     );
   }
 
