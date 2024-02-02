@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.12.1-beta.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.12.0...v4.12.1-beta.0) (2024-02-02)
+
+
+### Bug Fixes
+
+* **charts:** fixed charts deploy ([a933eda](https://github.com/MyPureCloud/genesys-spark/commit/a933eda6fe4eaaa52688406429878cd7e335d10a))
+
 ## [4.12.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.11.0...v4.12.0) (2024-01-31)
 
 
