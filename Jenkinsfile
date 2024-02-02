@@ -13,10 +13,11 @@ Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch || isBetaBr
 Boolean isPublicBranch = isReleaseBranch || isFeatureBranch
 
 String releaseOptions = isBetaBranch ? '--prerelease beta' : ''
-String publishOptions = isBetaBranch ? '--tag beta --dry-run' : ''
+String publishOptions = isBetaBranch ? '--tag beta' : ''
 
 // We track this globally because it will later be passed to the documentation build
 String componentAssetsPath = ''
+String charComponentAssetsPath = ''
 
 webappPipeline {
     projectName = 'spark-components'
@@ -155,7 +156,8 @@ webappPipeline {
                 build(job: 'spark-monorepo-examples',
                parameters: [
                 string(name: 'BRANCH_NAME', value: env.BRANCH_NAME),
-                string(name: 'COMPONENT_ASSETS_PATH', value: componentAssetsPath)
+                string(name: 'COMPONENT_ASSETS_PATH', value: componentAssetsPath),
+                string(name: 'CHART_COMPONENT_ASSETS_PATH', value: chartComponentAssetsPath)
                ],
                 propagate: false,
                      wait: false)
