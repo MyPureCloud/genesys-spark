@@ -1,4 +1,4 @@
 export const legacyIconNames: string[] = [
-  'arrow-left-to-line-solid',
-  'arrow-right-to-line-solid'
+  'fa/arrow-left-to-line-solid',
+  'fa/arrow-right-to-line-solid'
 ];
