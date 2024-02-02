@@ -13,7 +13,7 @@ Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch || isBetaBr
 Boolean isPublicBranch = isReleaseBranch || isFeatureBranch
 
 String releaseOptions = isBetaBranch ? '--prerelease beta' : ''
-String publishOptions = isBetaBranch ? '--tag beta --dry-run' : ''
+String publishOptions = isBetaBranch ? '--tag beta' : ''
 
 // We track this globally because it will later be passed to the documentation build
 String componentAssetsPath = ''
