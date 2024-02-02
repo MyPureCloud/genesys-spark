@@ -9,8 +9,6 @@ export const legacyIconNames: string[] = [
   'angle-up',
   'apps-alpha',
   'apps',
-  'arrow-left-to-line-solid',
-  'arrow-right-to-line-solid',
   'arrow-s',
   'arrows-h',
   'arrows-v',
