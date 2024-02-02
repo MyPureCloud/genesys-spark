@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.12.1-beta.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.12.1-beta.0...v4.12.1-beta.1) (2024-02-02)
+
+
+### Bug Fixes
+
+* **publish:** remove temp dry run tag ([097680b](https://github.com/MyPureCloud/genesys-spark/commit/097680b2d807cc11bf3ebfff897452085808c4ae))
+
 ### [4.12.1-beta.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.12.0...v4.12.1-beta.0) (2024-02-02)
 
 
