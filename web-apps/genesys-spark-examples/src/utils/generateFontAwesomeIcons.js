@@ -12,6 +12,7 @@ const icons = [
       'custom/delete-column',
       'custom/delete-row',
       'custom/delete-table',
+      'custom/face-smile-hearts-regular',
       'custom/file-pen-question',
       'custom/filter-notification',
       'custom/font-regular-highlight',
@@ -35,8 +36,10 @@ const icons = [
       'fa/align-right-regular',
       'fa/arrow-down-left-and-arrow-up-right-to-center-regular',
       'fa/arrow-down-wide-short-regular',
+      'fa/arrow-left-to-line-regular',
       'fa/arrow-left-to-line-solid',
       'fa/arrow-right-to-bracket-regular',
+      'fa/arrow-right-to-line-regular',
       'fa/arrow-right-to-line-solid',
       'fa/arrow-turn-down-right-regular',
       'fa/arrow-up-right-and-arrow-down-left-from-center-regular',
@@ -94,6 +97,7 @@ const icons = [
       'fa/file-zip-regular',
       'fa/film-solid',
       'fa/filter-solid',
+      'fa/flag-checkered-regular',
       'fa/font-regular',
       'fa/forward-step-regular',
       'fa/function-regular',
@@ -162,7 +166,9 @@ const icons = [
       'fa/volume-regular',
       'fa/volume-xmark-regular',
       'fa/wand-magic-sparkles-regular',
-      'fa/windows'
+      'fa/wifi-regular',
+      'fa/windows',
+      'fa/x-twitter'
     ]
   }
 ];
