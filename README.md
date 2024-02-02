@@ -13,7 +13,8 @@
 ## Hi there! 👋
 
 - Keep reading for an overview of the Spark packages and links on how to get started installing them!
-- For details on component documentation and guidelines, go to [https://spark.genesys.com/](https://spark.genesys.com?utm_source=github&utm_medium=readme_p)
+- To see usage examples of the components with an in-browser editor visit the [component playground!](https://apps.inindca.com/common-ui-docs/#/genesys-webcomponents/latest)
+- For details on UX component documentation and guidelines, go to [https://spark.genesys.com/](https://spark.genesys.com?utm_source=github&utm_medium=readme_p)
 - If you want to contribute to the codebase, check out the [contributing guide!](docs/CONTRIBUTING.md)
 
 ## Spark Packages
@@ -50,10 +51,6 @@ The set of [design tokens](https://spark.genesys.com/latest/design-tokens/overvi
 that is only used to organize development and is not published.
 
 [Read more...](packages/genesys-spark-tokens/README.md)
-
-## Figma libraries
-
-Currently, all our Figma libraries are only available for Genesys employees only, [You can visit them here.](https://www.figma.com/file/JKbHmcf4nUF6C7Pj8M6MpY)
 
 ## Contributing and Local Development
 
