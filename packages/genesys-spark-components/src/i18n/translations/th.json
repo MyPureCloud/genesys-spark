@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "หน้า",
     "totalPages": " จาก {totalPages, number}",
-    "first": "ชื่อ",
-    "previous": "ก่อนหน้า",
-    "next": "ถัดไป",
-    "last": "นามสกุล",
+    "firstPage": "หน้าแรก",
+    "previousPage": "หน้าก่อน",
+    "nextPage": "หน้าถัดไป",
+    "lastPage": "หน้าสุดท้าย",
     "pageInputLabel": "หน้า {currentPage, number} จาก {totalPages, number}",
-    "goToPage": "ไปที่หน้า"
+    "goToPage": "ไปที่หน้า",
+    "pageNumber": "หน้า {pageNumber}",
+    "pageSelected": "เลือกแล้ว {pageSelected} หน้า"
   },
   "gux-pagination-buttons-legacy": {
     "page": "หน้า",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "ต่อหน้า",
     "itemsPerPage": "รายการต่อหน้า",
-    "rangeSelected": "ดรอปดาวน์สำหรับจำนวนรายการต่อหนึ่งหน้า, เลือกแล้ว {range} รายการ"
+    "rangeSelected": "ดรอปดาวน์สำหรับจำนวนรายการต่อหนึ่งหน้า เลือกแล้ว {range} รายการต่อหน้า"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "ต่อหน้า",

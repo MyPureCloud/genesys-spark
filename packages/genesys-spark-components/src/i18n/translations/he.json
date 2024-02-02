@@ -132,12 +132,14 @@
   "gux-pagination-buttons": {
     "page": "עמוד",
     "totalPages": "מתוך {totalPages, number}",
-    "first": "ראשון",
-    "previous": "הקודם",
-    "next": "הבא",
-    "last": "אחרון",
+    "firstPage": "עמוד ראשון",
+    "previousPage": "העמוד הקודם",
+    "nextPage": "העמוד הבא",
+    "lastPage": "עמוד אחרון",
     "pageInputLabel": "עמוד {currentPage, number} מתוך {totalPages, number}",
-    "goToPage": "עבור לעמוד"
+    "goToPage": "עבור לעמוד",
+    "pageNumber": "עמוד {pageNumber}",
+    "pageSelected": "עמוד {pageSelected} נבחר"
   },
   "gux-pagination-buttons-legacy": {
     "page": "עמוד",
@@ -163,7 +165,7 @@
   "gux-pagination-items-per-page": {
     "perPage": "בעמוד",
     "itemsPerPage": "פריטים בעמוד",
-    "rangeSelected": "רשימה נפתחת של פריטים בעמוד, {range} נבחר"
+    "rangeSelected": "רשימה נפתחת של פריטים בעמוד, נבחרו {range} פריטים בעמוד"
   },
   "gux-pagination-items-per-page-legacy": {
     "perPage": "בעמוד",
@@ -418,8 +420,8 @@
     "ZM": "זמביה",
     "ZW": "זימבאבווה",
     "unknownRegion": "אזור לא ידוע",
-    "regionDropdown": "תפריט נפתח של אזורים",
-    "regionDropdownButton": "לחצן תפריט נפתח של אזורים"
+    "regionDropdown": "רשימה נפתחת של אזורים",
+    "regionDropdownButton": "לחצן רשימה נפתחת של אזורים"
   },
   "gux-radial-loading": {
     "loading": "טוען"
