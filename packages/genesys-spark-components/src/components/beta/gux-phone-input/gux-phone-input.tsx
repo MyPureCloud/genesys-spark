@@ -446,12 +446,27 @@ export class GuxPhoneInput {
     });
   }
 
+  private renderExpandIcon(): JSX.Element {
+    if (!this.disabled)
+      return (
+        <gux-icon
+          class="gux-expand-icon"
+          iconName="chevron-small-down"
+          decorative
+        />
+      ) as JSX.Element;
+  }
+
   private renderCountryButton(): JSX.Element {
     return (
       <div class="gux-region-select">
         <button
           type="button"
-          class="gux-field gux-field-button"
+          class={{
+            'gux-field gux-field-button': true,
+            'gux-expanded': this.expanded,
+            'gux-disabled': this.disabled
+          }}
           disabled={this.disabled}
           onClick={this.fieldButtonClick.bind(this)}
           ref={el => (this.fieldButtonElement = el)}
@@ -460,11 +475,7 @@ export class GuxPhoneInput {
           aria-label={this.i18n('regionDropdownButton')}
         >
           <div class="gux-field-content">{this.renderButtonDisplay()}</div>
-          <gux-icon
-            class="gux-expand-icon"
-            iconName="chevron-small-down"
-            decorative
-          />
+          {this.renderExpandIcon()}
         </button>
       </div>
     ) as JSX.Element;
@@ -530,8 +541,10 @@ export class GuxPhoneInput {
         <gux-option value="">
           <span class="gux-option-content">
             <gux-icon icon-name="globe" decorative></gux-icon>
-            <span>{this.i18n('unknownRegion')}</span>
-            <span class="gux-country-code">+</span>
+            <span>
+              {this.i18n('unknownRegion')}{' '}
+              <span class="gux-country-code">(+)</span>
+            </span>
           </span>
         </gux-option>
       ) as JSX.Element
@@ -542,8 +555,10 @@ export class GuxPhoneInput {
             <gux-option value={region.alpha2Code}>
               <span class="gux-option-content">
                 <gux-flag-icon-beta flag={region.alpha2Code} />
-                <span>{region.name}</span>
-                <span class="gux-country-code">{region.dialCode}</span>
+                <span>
+                  {region.name}{' '}
+                  <span class="gux-country-code">({region.dialCode})</span>
+                </span>
               </span>
             </gux-option>
           ) as JSX.Element

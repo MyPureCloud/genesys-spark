@@ -2,7 +2,7 @@
 
 :host {
   display: block;
-  color: #2e394c;
+  color: var(--gse-ui-formControl-input-populatedColor);
 }
 
 .gux-phone-text-input {
@@ -10,9 +10,10 @@
   align-self: auto;
   order: 0;
   width: 100%;
+  margin-inline-start: var(--gse-core-spacing-4xs);
   overflow: hidden;
-  font-size: 12px;
-  color: #2e394c;
+  font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  color: var(--gse-ui-formControl-input-populatedColor);
   text-overflow: ellipsis;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
@@ -32,20 +33,24 @@
   place-content: stretch center;
   align-items: center;
   width: 100%;
-  height: 32px;
-  padding: 4px 8px 4px 0;
-  font-family: inherit;
-  font-size: 12px;
-  line-height: 1.6667;
-  color: #2e394c;
+  height: var(--gse-ui-phoneInput-dropdown-height);
+  padding: 0 var(--gse-core-spacing-3xs) 0 0;
+  font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
+  font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
+  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
+  color: var(--gse-ui-formControl-input-populatedColor);
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   background-image: none;
-  border: 1px solid var(--gse-ui-formControl-input-default-border-color);
-  border-radius: 4px;
-  box-shadow: inset 0 0 4px rgba(#202937, 16%);
+  border: var(--gse-ui-formControl-input-default-border-width)
+    var(--gse-ui-formControl-input-default-border-style)
+    var(--gse-ui-formControl-input-default-border-color);
+  border-radius: var(--gse-ui-formControl-input-borderRadius);
 
   &.gux-error {
-    border-color: #ea0b0b;
+    border: var(--gse-ui-formControl-input-error-border-width)
+      var(--gse-ui-formControl-input-error-border-style)
+      var(--gse-ui-formControl-input-error-border-color);
   }
 
   &:focus-within {
@@ -53,25 +58,25 @@
   }
 }
 
-.gux-region-select {
-  min-width: 70px;
-  margin-right: 5px;
-}
-
 .gux-field {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 4px;
+  gap: var(--gse-ui-phoneInput-dropdown-gap);
   align-items: center;
   width: 100%;
-  height: 30px;
-  padding: 6px 8px 6px 12px;
+  height: 100%;
+  padding: var(--gse-ui-phoneInput-dropdown-padding);
   font-family: inherit;
-  font-size: 12px;
-  line-height: 1.6667;
+  font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: var(--gse-ui-formControl-input-borderRadius) 0 0
+    var(--gse-ui-formControl-input-borderRadius);
+
+  &.gux-disabled {
+    padding: var(--gse-ui-phoneInput-dropdown-disabled-padding);
+  }
 }
 
 .gux-field {
@@ -82,28 +87,21 @@
     place-content: stretch flex-start;
     align-items: flex-start;
     min-width: 0;
-    height: 100%;
 
     .gux-selected-option {
-      display: grid;
-      flex: 1 1 auto;
-      align-self: auto;
-      order: 0;
+      display: flex;
+      justify-content: center;
+      width: var(--gse-ui-phoneInput-dropdown-flag-width);
       overflow: hidden;
-
-      gux-flag-icon-beta {
-        position: relative;
-        top: -3px;
-      }
 
       gux-icon {
         position: relative;
-        font-size: 18px;
+        color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
       }
     }
 
     .gux-placeholder {
-      color: #596373;
+      color: var(--gse-ui-formControl-input-placeholderColor);
     }
   }
 
@@ -111,35 +109,45 @@
     flex: 0 0 auto;
     align-self: auto;
     order: 0;
-    width: 16px;
-    height: 16px;
-    color: #596373;
+    width: var(--gse-ui-phoneInput-dropdown-icon-width);
+    height: var(--gse-ui-phoneInput-dropdown-icon-height);
+    color: var(--gse-ui-phoneInput-dropdown-foregroundColor);
   }
 }
 
 .gux-field-button {
+  box-sizing: border-box;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
-  outline: inherit;
+  border-radius: var(--gse-ui-formControl-input-borderRadius) 0 0
+    var(--gse-ui-formControl-input-borderRadius);
+  outline: none;
 
-  &:focus-visible {
-    @include focus.gux-focus-ring;
+  &.gux-expanded {
+    background-color: var(--gse-ui-phoneInput-dropdown-active-backgroundColor);
+
+    .gux-expand-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    background-color: var(--gse-ui-phoneInput-dropdown-hover-backgroundColor);
   }
 }
 
 .gux-listbox-container {
   box-sizing: border-box;
-  width: 368px;
+  width: fit-content;
+  min-width: var(--gse-ui-phoneInput-dropdown-menu-minWidth);
   margin: 0;
-  color: #2e394c;
 }
 
 .gux-option-content {
   display: grid;
-  grid-template-columns: 36px 1fr 40px;
+  grid-template-columns: 36px 1fr;
+  align-items: center;
   width: 100%;
-  height: 25px;
-  line-height: 25px;
 
   .gux-country-code {
     text-align: right;
@@ -147,6 +155,18 @@
 
   gux-icon {
     position: relative;
-    font-size: 18px;
+    inset-inline-start: 4px;
+    width: var(--gse-ui-phoneInput-dropdown-icon-width);
+    height: var(--gse-ui-phoneInput-dropdown-icon-height);
+    color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
+  }
+}
+
+.gux-region-select {
+  height: 100%;
+  border-radius: var(--gse-ui-formControl-input-borderRadius);
+
+  &:focus-within {
+    @include focus.gux-focus-ring;
   }
 }

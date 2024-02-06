@@ -126,6 +126,6 @@ describe('gux-phone-input', () => {
 
     const selected = await page.find('pierce/.gux-selected');
 
-    expect(selected.textContent).toEqual('Switzerland+41');
+    expect(selected.textContent).toEqual('Switzerland (+41)');
   });
 });
