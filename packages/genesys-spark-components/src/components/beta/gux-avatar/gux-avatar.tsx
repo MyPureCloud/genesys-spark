@@ -57,7 +57,7 @@ export class GuxAvatar {
   notifications: boolean = false;
 
   private generateInitials(): string {
-    const nameArray = this.name ? this.name.split(' ') : [''];
+    const nameArray = this.name.split(' ');
     if (nameArray.length > 1) {
       return nameArray[0].charAt(0) + nameArray[nameArray.length - 1].charAt(0);
     }
@@ -87,15 +87,13 @@ export class GuxAvatar {
   }
 
   private getAccent(): string {
-    if (this.accent === 'auto') {
-      let hash = 0;
-      for (let i = 0; i < this.name.length; i++) {
-        hash += this.name.charCodeAt(i);
-      }
-      const accent = hash % 12;
-      return accent === 0 ? '12' : accent.toString();
+    if (this.accent !== 'auto') {
+      return this.accent.toString();
     }
-    return this.accent.toString();
+    const hashedName = this.name
+      .split('')
+      .reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    return (hashedName % 12 || 12).toString();
   }
 
   private getBadgeIcon(status: GuxAvatarStatus): string {
