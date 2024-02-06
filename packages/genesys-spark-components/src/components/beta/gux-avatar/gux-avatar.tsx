@@ -119,9 +119,12 @@ export class GuxAvatar {
     }
   }
 
-  private logWaring(): void {
-    if (!this.name) {
+  private logWarning(): void {
+    const avatarImage = this.root.querySelector('img');
+    if (!this.name && !avatarImage) {
       logWarn(this.root, 'must have a name attribute for accessibility.');
+    } else if (avatarImage && !avatarImage.getAttribute('alt')) {
+      logWarn(this.root, 'Alt attribute is required for slotted image.');
     }
   }
 
@@ -130,7 +133,7 @@ export class GuxAvatar {
   }
 
   componentDidLoad() {
-    this.logWaring();
+    this.logWarning();
   }
 
   render(): JSX.Element {
@@ -143,17 +146,15 @@ export class GuxAvatar {
             [`gux-${this.size}`]: true,
             'gux-status-ring': this.statusRing
           }}
-          aria-label={this.name}
         >
           <div
             class={{
               'gux-content': true,
               [`gux-accent-${this.getAccent()}`]: true
             }}
-            aria-hidden="true"
           >
             <slot name="image">
-              <div class="initials">{this.generateInitials()}</div>
+              <abbr title={this.name}>{this.generateInitials()}</abbr>
             </slot>
           </div>
         </div>

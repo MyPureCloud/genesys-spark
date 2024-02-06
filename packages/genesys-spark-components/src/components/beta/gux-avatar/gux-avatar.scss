@@ -2,6 +2,10 @@
   position: relative;
   display: inline-block;
 
+  abbr {
+    text-decoration: none;
+  }
+
   & button {
     padding: 0;
     margin: 0;

@@ -270,15 +270,39 @@
       }
     },
     "badge": {
-      "available": "#09b581",
-      "busy": "#e22245",
-      "break": "#f8c73e",
-      "on-queue": "#4856CB",
-      "offline": "#626e84",
-      "out-of-office": "#6e5ddb",
-      "notification": "#fe624d",
-      "foreground_default": "#ffffff",
-      "foreground_dark": "#3e5374",
+      "available": {
+        "color": "#09b581"
+      },
+      "busy": {
+        "color": "#e22245",
+        "icon": {
+          "margin": "2px"
+        }
+      },
+      "break": {
+        "color": "#f8c73e",
+        "icon": {
+          "margin": "2px"
+        }
+      },
+      "on-queue": {
+        "color": "#4856CB"
+      },
+      "offline": {
+        "color": "#626e84"
+      },
+      "out-of-office": {
+        "color": "#6e5ddb"
+      },
+      "notification": {
+        "color": "#fe624d"
+      },
+      "foreground_default": {
+        "color": "#ffffff"
+      },
+      "foreground_dark": {
+        "color": "#3e5374"
+      },
       "notifications": {
         "icon": {
           "margin": "4px"
