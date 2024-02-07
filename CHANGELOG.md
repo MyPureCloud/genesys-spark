@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.14.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.13.0...v4.14.0) (2024-02-07)
+
+
+### Features
+
+* **phone-input:** apply tokens, change icon display ([7a2fd0b](https://github.com/MyPureCloud/genesys-spark/commit/7a2fd0b5906475746ab70fdc31c4e9681c95649b))
+* **phone-input:** styling changes ([9647682](https://github.com/MyPureCloud/genesys-spark/commit/964768285e4c99c1b167c78ab45aa970f79004dc))
+* **phone-input:** tidy implementation ([29e7c48](https://github.com/MyPureCloud/genesys-spark/commit/29e7c48b4bb6cbb9e2f2ca7ea6dd5cfad3df1f0c))
+* **phone-input:** update styling ([730cfe9](https://github.com/MyPureCloud/genesys-spark/commit/730cfe90fcf85eb539de355bc859f43fbf746fae))
+* **token:** Added padding for the disabled variant of the phone input dropdown ([e55c0aa](https://github.com/MyPureCloud/genesys-spark/commit/e55c0aa525c0061fcea0bc625eed783c867bea44))
+* **tokens:** Added spacing tokens for the phone input dropdown ([e7b0e81](https://github.com/MyPureCloud/genesys-spark/commit/e7b0e81b1c792ceb9298c62fa9959f18f9a4663c))
+* **tokens:** Upated figms variables ([04ad08b](https://github.com/MyPureCloud/genesys-spark/commit/04ad08b644319e044ed4c4e1402ba953b01e202a))
+
 ## [4.13.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.12.0...v4.13.0) (2024-02-03)
 
 
