@@ -6,12 +6,6 @@ const axeExclusions = [
     target: 'gux-content-search,span',
     exclusionReason:
       'WCAG 1.4.3 Contrast (Minimum), inactive user interface components do not need to meet contrast minimum'
-  },
-  {
-    issueId: 'color-contrast',
-    target: 'gux-content-search,.gux-navigation-result',
-    exclusionReason:
-      'To be addressed in COMUI-2389. New violation picked up after upgrading from axe-core v4.4.2 to v4.8.2'
   }
 ];
 

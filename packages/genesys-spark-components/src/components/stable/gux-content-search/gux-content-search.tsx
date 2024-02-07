@@ -128,6 +128,7 @@ export class GuxContentSearch {
               'gux-navigation-panel': true,
               'gux-navigation-disabled': disableNavigationPanel
             }}
+            aria-disabled={disableNavigationPanel.toString()}
           >
             <span
               class={{

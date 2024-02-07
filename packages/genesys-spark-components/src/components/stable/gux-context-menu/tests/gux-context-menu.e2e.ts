@@ -2,14 +2,7 @@ import { E2EPage } from '@stencil/core/testing';
 
 import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
 
-const axeExclusions = [
-  {
-    issueId: 'aria-required-children',
-    target: 'gux-context-menu,gux-list',
-    exclusionReason:
-      'To be addressed in COMUI-2388. New violation picked up after upgrading from axe-core v4.4.2 to v4.8.2'
-  }
-];
+const axeExclusions = [];
 
 const html = `
 <gux-context-menu>

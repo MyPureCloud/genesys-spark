@@ -2,14 +2,7 @@ import { E2EPage } from '@stencil/core/testing';
 
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
-const axeExclusions = [
-  {
-    issueId: 'aria-required-children',
-    target: 'gux-button-multi,gux-list',
-    exclusionReason:
-      'To be addressed in COMUI-2387. New violation picked up after upgrading from axe-core v4.4.2 to v4.8.2'
-  }
-];
+const axeExclusions = [];
 
 async function clickDropdownButton(page: E2EPage): Promise<void> {
   return await page.click('pierce/.gux-dropdown-button > button');
