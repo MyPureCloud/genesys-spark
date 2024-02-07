@@ -1,4 +1,5 @@
 import { getAssetPath } from '@stencil/core';
+import { legacyIconNames } from './legacy-icon-names';
 
 const svgHTMLCache: Map<string, Promise<string>> = new Map();
 
@@ -18,9 +19,15 @@ function iconInfoToId(iconName: string): string {
   return iconName.replace('/', '-');
 }
 
-export async function getBaseSvgHtml(
-  iconName: string = 'unknown'
-): Promise<string> {
+export function getRootIconName(iconName: string): string {
+  if (legacyIconNames.includes(iconName)) {
+    return `legacy/${iconName}`;
+  }
+
+  return iconName;
+}
+
+export async function getBaseSvgHtml(iconName: string): Promise<string> {
   const id = iconInfoToId(iconName);
 
   if (svgHTMLCache.has(id)) {

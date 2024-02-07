@@ -12,9 +12,11 @@ const getAllVariants = directory => {
   fileList.forEach(file => {
     file = path.join(directory, file);
     const fileStatus = fs.statSync(file);
-    if (fileStatus.isDirectory() && !file.includes('legacy')) {
-      // Recursively search sub directories excluding legacy.
+    if (fileStatus.isDirectory()) {
       variants = variants.concat(getAllVariants(file));
+    } else if (file.includes('legacy/fa/')) {
+      const fileName = file.split('legacy/fa/').pop();
+      variants.push(`legacy/fa/${fileName}`, `fa/${fileName}`);
     } else {
       variants.push(file.split('icons/').pop());
     }
