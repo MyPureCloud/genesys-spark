@@ -291,9 +291,7 @@
       "offline": {
         "color": "#626e84"
       },
-      "out-of-office": {
-        "color": "#6e5ddb"
-      },
+      "out-of-office": "#B74BA4",
       "notification": {
         "color": "#fe624d"
       },

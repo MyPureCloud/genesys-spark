@@ -1,7 +1,7 @@
 import { Component, h, JSX, Prop, Element, Fragment } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import {
-  GuxAvatarStatus,
+  GuxAvatarPresence,
   GuxAvatarSize,
   GuxAvatarAccent
 } from './gux-avatar.types';
@@ -21,16 +21,16 @@ export class GuxAvatar {
   root: HTMLElement;
 
   @Prop()
-  status: GuxAvatarStatus = 'available';
+  presence: GuxAvatarPresence = 'available';
 
   @Prop()
   size: GuxAvatarSize = 'large';
 
   /**
-   * Shows a status ring around the avatar
+   * Shows a presence ring around the avatar
    */
   @Prop()
-  statusRing: boolean = false;
+  presenceRing: boolean = false;
 
   @Prop()
   name!: string;
@@ -39,7 +39,7 @@ export class GuxAvatar {
   accent: GuxAvatarAccent = 'default';
 
   /**
-   * Shows a status badge
+   * Shows a presence badge
    */
   @Prop()
   hasBadge: boolean = false;
@@ -51,10 +51,10 @@ export class GuxAvatar {
   isInteractive: boolean = false;
 
   /**
-   * Override the status badge with a notification icon
+   * Override the presence badge with a notification icon
    */
   @Prop()
-  notifications: boolean = false;
+  hasNotifications: boolean = false;
 
   private generateInitials(): string {
     const nameArray = this.name.split(' ');
@@ -65,25 +65,40 @@ export class GuxAvatar {
   }
 
   private renderBadge(): JSX.Element | null {
-    if (this.hasBadge) {
-      const displayedStatus = this.notifications
-        ? 'notifications'
-        : this.status;
+    if (this.hasNotifications && this.hasBadge) {
+      return this.renderNotificationsBadge();
+    } else if (this.hasBadge) {
       return (
         <div
           class={{
             'gux-avatar-badge': true,
-            [`${displayedStatus}`]: true,
+            [`${this.presence}`]: true,
             [`gux-${this.size}`]: true
           }}
         >
           <gux-icon
-            icon-name={this.getBadgeIcon(displayedStatus)}
-            screenreader-text={displayedStatus}
+            icon-name={this.getStatusIcon(this.presence)}
+            screenreader-text={this.presence}
           ></gux-icon>
         </div>
       ) as JSX.Element;
     }
+  }
+
+  private renderNotificationsBadge(): JSX.Element | null {
+    return (
+      <div
+        class={{
+          'gux-avatar-badge notifications': true,
+          [`gux-${this.size}`]: true
+        }}
+      >
+        <gux-icon
+          icon-name="fa/bell-regular"
+          screenreader-text="notifications"
+        ></gux-icon>
+      </div>
+    ) as JSX.Element;
   }
 
   private getAccent(): string {
@@ -96,22 +111,20 @@ export class GuxAvatar {
     return (hashedName % 12 || 12).toString();
   }
 
-  private getBadgeIcon(status: GuxAvatarStatus): string {
-    switch (status) {
+  private getStatusIcon(presence: GuxAvatarPresence): string {
+    switch (presence) {
       case 'available':
         return 'fa/circle-check-solid';
-      case 'break':
-        return 'fa/clock-outline';
       case 'busy':
         return 'fa/ban-outline';
-      case 'notifications':
-        return 'fa/bell-regular';
+      case 'away':
+        return 'fa/clock-outline';
+      case 'on-queue':
+        return 'fa/headset-solid';
       case 'offline':
         return 'fa/circle-xmark-regular';
       case 'out-of-office':
         return 'fa/subtract-circle';
-      case 'queue':
-        return 'fa/headset-solid';
       default:
         return 'fa/circle-xmark-regular';
     }
@@ -127,7 +140,7 @@ export class GuxAvatar {
   }
 
   componentWillLoad(): void {
-    trackComponent(this.root, { variant: this.status });
+    trackComponent(this.root, { variant: this.presence });
   }
 
   componentDidLoad() {
@@ -140,9 +153,9 @@ export class GuxAvatar {
         <div
           class={{
             'gux-avatar': true,
-            [`${this.status}`]: true,
+            [`${this.presence}`]: true,
             [`gux-${this.size}`]: true,
-            'gux-status-ring': this.statusRing
+            'gux-presence-ring': this.presenceRing
           }}
         >
           <div

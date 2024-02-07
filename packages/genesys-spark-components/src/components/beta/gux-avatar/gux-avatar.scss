@@ -92,10 +92,12 @@
     }
   }
 
-  &.gux-status-ring {
+  &.gux-presence-ring {
+    &.available {
+      background: var(--gse-ui-avatar-statusRing-available);
     }
 
-    &.break {
+    &.away {
       background: var(--gse-ui-avatar-statusRing-break);
     }
 
@@ -115,7 +117,7 @@
       background: var(--gse-ui-avatar-statusRing-outOfOffice);
     }
 
-    &.queue {
+    &.on-queue {
       background: var(--gse-ui-avatar-statusRing-queue);
     }
   }
@@ -163,7 +165,7 @@
     }
   }
 
-  &.break {
+  &.away {
     background-color: var(--gse-ui-avatar-badge-break-color);
 
     & gux-icon {
@@ -202,11 +204,11 @@
     background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
 
     & gux-icon {
-      color: var(--gse-ui-avatar-badge-outOfOffice-color);
+      color: var(--gse-ui-avatar-badge-outOfOffice);
     }
   }
 
-  &.queue {
+  &.on-queue {
     background-color: var(--gse-ui-avatar-badge-onQueue-color);
 
     & gux-icon {
