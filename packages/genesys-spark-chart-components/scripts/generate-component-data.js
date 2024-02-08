@@ -5,7 +5,19 @@ const path = require('path');
 const { marked } = require('marked');
 
 const projectPath = path.join(__dirname, '..');
-const specDestination = path.join(projectPath, 'dist/component-specs.json');
+const componentSpecsOutputFolder = path.join(
+  projectPath,
+  'build/component-specs'
+);
+
+if (!fs.existsSync(componentSpecsOutputFolder)) {
+  fs.mkdirSync(componentSpecsOutputFolder, { recursive: true });
+}
+
+const specDestination = path.join(
+  projectPath,
+  'build/component-specs/component-specs.json'
+);
 const componentExampleGlob = path.join(
   projectPath,
   'src/components/**/example.html'
