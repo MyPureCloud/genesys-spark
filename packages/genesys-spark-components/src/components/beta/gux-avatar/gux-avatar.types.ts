@@ -23,3 +23,5 @@ export type GuxAvatarAccent =
   | 10
   | 11
   | 12;
+
+export type GuxAvatarUcIntegrationApps = 'teams' | 'zoom' | '8x8';

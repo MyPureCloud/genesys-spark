@@ -1,9 +1,12 @@
 import { Component, h, JSX, Prop, Element, Fragment } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
+import { render8x8SVG, renderTeamsSVG, renderZoomSVG } from './svg-utils';
+
 import {
   GuxAvatarPresence,
   GuxAvatarSize,
-  GuxAvatarAccent
+  GuxAvatarAccent,
+  GuxAvatarUcIntegrationApps
 } from './gux-avatar.types';
 import { logWarn } from '@utils/error/log-error';
 
@@ -20,9 +23,15 @@ export class GuxAvatar {
   @Element()
   root: HTMLElement;
 
+  /**
+   * Shows presence such as away or available
+   */
   @Prop()
   presence: GuxAvatarPresence = 'available';
 
+  /**
+   * Avatar size: small, medium or large
+   */
   @Prop()
   size: GuxAvatarSize = 'large';
 
@@ -32,11 +41,23 @@ export class GuxAvatar {
   @Prop()
   presenceRing: boolean = false;
 
+  /**
+   * Shows a presence ring around the avatar
+   */
   @Prop()
   name!: string;
 
+  /**
+   * Manually sets avatar accent
+   */
   @Prop()
   accent: GuxAvatarAccent = 'default';
+
+  /**
+   * Shows uc integration app logo on large avatar
+   */
+  @Prop()
+  ucIntegration: GuxAvatarUcIntegrationApps;
 
   /**
    * Shows a presence badge
@@ -77,7 +98,7 @@ export class GuxAvatar {
           }}
         >
           <gux-icon
-            icon-name={this.getStatusIcon(this.presence)}
+            icon-name={this.getPresenceIcon(this.presence)}
             screenreader-text={this.presence}
           ></gux-icon>
         </div>
@@ -101,6 +122,29 @@ export class GuxAvatar {
     ) as JSX.Element;
   }
 
+  private renderUcIntegrationsIcon(): JSX.Element | null {
+    switch (this.ucIntegration) {
+      case 'teams':
+        return renderTeamsSVG();
+      case 'zoom':
+        return renderZoomSVG();
+      case '8x8':
+        return render8x8SVG();
+      default:
+        return null;
+    }
+  }
+
+  private renderUcIntegrationBadge(): JSX.Element | null {
+    if (this.ucIntegration && this.size === 'large') {
+      return (
+        <div class="gux-avatar-integration-badge">
+          {this.renderUcIntegrationsIcon()}
+        </div>
+      ) as JSX.Element;
+    }
+  }
+
   private getAccent(): string {
     if (this.accent !== 'auto') {
       return this.accent.toString();
@@ -111,7 +155,7 @@ export class GuxAvatar {
     return (hashedName % 12 || 12).toString();
   }
 
-  private getStatusIcon(presence: GuxAvatarPresence): string {
+  private getPresenceIcon(presence: GuxAvatarPresence): string {
     switch (presence) {
       case 'available':
         return 'fa/circle-check-solid';
@@ -170,6 +214,7 @@ export class GuxAvatar {
           </div>
         </div>
         {this.renderBadge()}
+        {this.renderUcIntegrationBadge()}
       </Fragment>
     );
 
