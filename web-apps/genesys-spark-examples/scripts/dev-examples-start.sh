@@ -8,4 +8,3 @@ do
   echo "Waiting for the component-specs files to be created..."
   sleep 1
 done
-echo "The component-specs files exist. Starting example app..."
