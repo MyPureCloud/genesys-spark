@@ -5,6 +5,15 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Search"
   },
+  "gux-avatar": {
+    "notifications": "Notifications",
+    "available": "Available",
+    "away": "Away",
+    "busy": "Busy",
+    "on-queue": "On Queue",
+    "offline": "Offline",
+    "out-of-office": "Out of Office"
+  },
   "gux-badge": {
     "info": "badge with label: {label}, accent: info",
     "info-bold": "badge with label: {label}, accent: info bold",

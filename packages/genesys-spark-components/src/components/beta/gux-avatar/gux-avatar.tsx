@@ -1,14 +1,15 @@
 import { Component, h, JSX, Prop, Element, Fragment } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { render8x8SVG, renderTeamsSVG, renderZoomSVG } from './svg-utils';
-
+import { logWarn } from '@utils/error/log-error';
 import {
   GuxAvatarPresence,
   GuxAvatarSize,
   GuxAvatarAccent,
   GuxAvatarUcIntegrationApps
 } from './gux-avatar.types';
-import { logWarn } from '@utils/error/log-error';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import defaultResources from './i18n/en.json';
 
 /**
  * @slot image - Headshot photo.
@@ -20,6 +21,8 @@ import { logWarn } from '@utils/error/log-error';
   shadow: true
 })
 export class GuxAvatar {
+  private i18n: GetI18nValue;
+
   @Element()
   root: HTMLElement;
 
@@ -78,7 +81,7 @@ export class GuxAvatar {
   hasNotifications: boolean = false;
 
   private generateInitials(): string {
-    const nameArray = this.name.split(' ');
+    const nameArray = this.name?.split(' ') ?? [];
     if (nameArray.length > 1) {
       return nameArray[0].charAt(0) + nameArray[nameArray.length - 1].charAt(0);
     }
@@ -86,7 +89,7 @@ export class GuxAvatar {
   }
 
   private renderBadge(): JSX.Element | null {
-    if (this.hasNotifications && this.hasBadge) {
+    if (this.hasNotifications) {
       return this.renderNotificationsBadge();
     } else if (this.hasBadge) {
       return (
@@ -99,7 +102,7 @@ export class GuxAvatar {
         >
           <gux-icon
             icon-name={this.getPresenceIcon(this.presence)}
-            screenreader-text={this.presence}
+            screenreader-text={this.i18n(this.presence)}
           ></gux-icon>
         </div>
       ) as JSX.Element;
@@ -116,7 +119,7 @@ export class GuxAvatar {
       >
         <gux-icon
           icon-name="fa/bell-regular"
-          screenreader-text="notifications"
+          screenreader-text={this.i18n('notifications')}
         ></gux-icon>
       </div>
     ) as JSX.Element;
@@ -183,8 +186,9 @@ export class GuxAvatar {
     }
   }
 
-  componentWillLoad(): void {
+  async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.presence });
+    this.i18n = await buildI18nForComponent(this.root, defaultResources);
   }
 
   componentDidLoad() {

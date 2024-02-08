@@ -40,23 +40,57 @@ describe('gux-avatar', () => {
       }
     );
   });
-
-  describe('#render different statuses', () => {
+  describe('#render different presences', () => {
     [
       'available',
-      'break',
+      'away',
       'busy',
-      'notifications',
       'offline',
-      'queue',
+      'on-queue',
       'out-of-office'
-    ].forEach((status: string) => {
-      it(`should work as expected for "${status}"`, async () => {
-        const html = `<gux-avatar-beta status=${status}></gux-avatar-beta>`;
+    ].forEach((presence: string) => {
+      it(`should work as expected for "${presence}"`, async () => {
+        const html = `<gux-avatar-beta has-badge presence=${presence}></gux-avatar-beta>`;
         const page = await newSpecPage({ components: [GuxAvatar], html });
 
         expect(page.root).toMatchSnapshot();
       });
+    });
+  });
+
+  describe('#render different ucIntegration presences', () => {
+    ['teams', 'zoom', '8x8'].forEach((ucIntegration: string) => {
+      it(`should work as expected for "${ucIntegration}"`, async () => {
+        const html = `<gux-avatar-beta has-badge uc-integration=${ucIntegration}></gux-avatar-beta>`;
+        const page = await newSpecPage({ components: [GuxAvatar], html });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
+    it('should not render ucIntegration badge if size is not large', async () => {
+      const html = `<gux-avatar-beta has-badge uc-integration="8x8" size="medium"></gux-avatar-beta>`;
+      const page = await newSpecPage({ components: [GuxAvatar], html });
+
+      expect(page.root).toMatchSnapshot();
+    });
+  });
+
+  describe('#render notification badge', () => {
+    it('should render notification badge', async () => {
+      const html = `<gux-avatar-beta has-badge has-notifications name="John Doe"></gux-avatar-beta>`;
+      const page = await newSpecPage({ components: [GuxAvatar], html });
+
+      expect(page.root).toMatchSnapshot();
+    });
+  });
+
+  describe('#render presence ring', () => {
+    it('should render presence ring', async () => {
+      const html = `<gux-avatar-beta presence-ring name="John Doe"></gux-avatar-beta>`;
+      const page = await newSpecPage({ components: [GuxAvatar], html });
+
+      expect(page.root).toMatchSnapshot();
     });
   });
 });

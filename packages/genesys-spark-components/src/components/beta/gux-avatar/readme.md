@@ -7,14 +7,15 @@
 
 | Property            | Attribute           | Description                                                | Type                                                                                 | Default       |
 | ------------------- | ------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------- |
-| `accent`            | `accent`            |                                                            | `"auto" \| "default" \| 1 \| 10 \| 11 \| 12 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9` | `'default'`   |
+| `accent`            | `accent`            | Manually sets avatar accent                                | `"auto" \| "default" \| 1 \| 10 \| 11 \| 12 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9` | `'default'`   |
 | `hasBadge`          | `has-badge`         | Shows a presence badge                                     | `boolean`                                                                            | `false`       |
 | `hasNotifications`  | `has-notifications` | Override the presence badge with a notification icon       | `boolean`                                                                            | `false`       |
 | `isInteractive`     | `is-interactive`    | Wrap the content with a button if it needs to be clickable | `boolean`                                                                            | `false`       |
-| `name` _(required)_ | `name`              |                                                            | `string`                                                                             | `undefined`   |
-| `presence`          | `presence`          |                                                            | `"available" \| "away" \| "busy" \| "offline" \| "on-queue" \| "out-of-office"`      | `'available'` |
+| `name` _(required)_ | `name`              | Shows a presence ring around the avatar                    | `string`                                                                             | `undefined`   |
+| `presence`          | `presence`          | Shows presence such as away or available                   | `"available" \| "away" \| "busy" \| "offline" \| "on-queue" \| "out-of-office"`      | `'available'` |
 | `presenceRing`      | `presence-ring`     | Shows a presence ring around the avatar                    | `boolean`                                                                            | `false`       |
-| `size`              | `size`              |                                                            | `"large" \| "medium" \| "small" \| "xsmall"`                                         | `'large'`     |
+| `size`              | `size`              | Avatar size: small, medium or large                        | `"large" \| "medium" \| "small" \| "xsmall"`                                         | `'large'`     |
+| `ucIntegration`     | `uc-integration`    | Shows uc integration app logo on large avatar              | `"8x8" \| "teams" \| "zoom"`                                                         | `undefined`   |
 
 
 ## Slots
