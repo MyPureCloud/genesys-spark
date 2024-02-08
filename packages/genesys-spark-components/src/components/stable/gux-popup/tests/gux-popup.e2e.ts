@@ -1,19 +1,6 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
-const axeExclusions = [
-  {
-    issueId: 'aria-required-children',
-    target: 'gux-list',
-    exclusionReason:
-      'To be addressed in COMUI-2391. New violation picked up after upgrading from axe-core v4.4.2 to v4.8.2'
-  },
-  {
-    issueId: 'color-contrast',
-    target: 'gux-button,.gux-secondary',
-    exclusionReason:
-      'To be addressed in COMUI-2391. New violation picked up after upgrading from axe-core v4.4.2 to v4.8.2'
-  }
-];
+const axeExclusions = [];
 
 function getGuxPopupHtml(expanded: boolean, disabled: boolean): string {
   return `

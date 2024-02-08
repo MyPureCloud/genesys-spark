@@ -173,6 +173,7 @@ export class GuxPopup {
           'gux-target-container': true,
           'gux-disabled': this.disabled
         }}
+        aria-disabled={this.disabled.toString()}
         ref={(el: HTMLElement) => (this.targetElementContainer = el)}
       >
         <slot name="target"></slot>
