@@ -1,4 +1,4 @@
-import { Component, Element, JSX, h, Prop } from '@stencil/core';
+import { Component, Element, JSX, h, Listen, Prop } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxTableToolbarActionAccent } from '../gux-table-toolbar-action-accents.types';
 import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
@@ -24,6 +24,14 @@ export class GuxTableToolbarCustomAction {
 
   @Prop()
   disabled: boolean = false;
+
+  @Listen('click', { capture: true })
+  handleClick(event: MouseEvent): void {
+    if (this.disabled) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+  }
 
   private renderTooltip(): JSX.Element {
     if (this.iconOnly) {
