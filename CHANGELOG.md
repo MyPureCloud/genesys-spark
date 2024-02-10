@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.17.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.16.0...v4.17.0) (2024-02-10)
+
+
+### Features
+
+* **icon:** add avatar icons ([06bc9ab](https://github.com/MyPureCloud/genesys-spark/commit/06bc9ab636c1fdd073344ca1058159733cb1d5c0))
+
+
+### Bug Fixes
+
+* **examples:** stopped ResizeObserver loop issue ([af406e6](https://github.com/MyPureCloud/genesys-spark/commit/af406e614e4ddfadc54a0d6eceb14d7ccf2c44e6))
+
 ## [4.16.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.15.0...v4.16.0) (2024-02-09)
 
 
