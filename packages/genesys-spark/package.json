@@ -27,8 +27,8 @@
   },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.2",
-    "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "@typescript-eslint/parser": "^6.9.1",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
