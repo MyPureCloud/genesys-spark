@@ -20,16 +20,18 @@ export class GuxAvatar {
   size: GuxAvatarSize = 'large';
 
   /**
-   * Abbreviated name or initials
-   */
-  @Prop()
-  abbr: string;
-
-  /**
    * Name which is shown as initials
    */
   @Prop()
   name!: string;
+
+  private generateInitials(): string {
+    const nameArray = this.name?.split(' ') ?? [];
+    if (nameArray.length > 1) {
+      return nameArray[0].charAt(0) + nameArray[nameArray.length - 1].charAt(0);
+    }
+    return nameArray[0]?.charAt(0) + nameArray[0]?.charAt(1);
+  }
 
   private validatingInputs(): void {
     const avatarImage = this.root.querySelector('img');
@@ -64,7 +66,7 @@ export class GuxAvatar {
         <div class="gux-content">
           <slot name="image">
             {!this.root.querySelector('[slot="image"]') && (
-              <abbr title={this.name}>{this.abbr}</abbr>
+              <abbr title={this.name}>{this.generateInitials()}</abbr>
             )}
           </slot>
         </div>
