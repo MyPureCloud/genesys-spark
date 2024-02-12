@@ -9,20 +9,17 @@
 
 .gux-avatar {
   position: relative;
+  width: var(--gse-ui-avatar-large-size);
+  height: var(--gse-ui-avatar-large-size);
   overflow: hidden;
   border-radius: 50%;
 
-  &.gux-large {
-    width: var(--gse-ui-avatar-large-size);
-    height: var(--gse-ui-avatar-large-size);
-
-    & .gux-content {
-      width: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
-      height: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
-      margin: var(--gse-ui-avatar-large-presenceRing-width);
-      font-size: var(--gse-ui-avatar-large-initials-fontSize);
-      border-width: var(--gse-ui-avatar-content-large-border-width);
-    }
+  & .gux-content {
+    width: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
+    height: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
+    margin: var(--gse-ui-avatar-large-presenceRing-width);
+    font-size: var(--gse-ui-avatar-large-initials-fontSize);
+    border-width: var(--gse-ui-avatar-content-large-border-width);
   }
 
   &.gux-medium {
@@ -64,20 +61,17 @@
 
 .gux-avatar-badge {
   position: absolute;
+  top: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
+  right: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: var(--gse-ui-avatar-large-badge-size);
+  height: var(--gse-ui-avatar-large-badge-size);
   border-color: var(--gse-ui-avatar-content-default-border-color);
   border-style: var(--gse-ui-avatar-content-default-border-style);
+  border-width: var(--gse-ui-avatar-content-large-border-width);
   border-radius: 50%;
-
-  &.gux-large {
-    top: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
-    right: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
-    width: var(--gse-ui-avatar-large-badge-size);
-    height: var(--gse-ui-avatar-large-badge-size);
-    border-width: var(--gse-ui-avatar-content-large-border-width);
-  }
 
   &.gux-medium {
     top: calc(var(--gse-ui-avatar-content-default-border-width) * -1);

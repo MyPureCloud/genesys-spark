@@ -1,4 +1,4 @@
-import { Component, h, JSX, Prop, Element, Fragment } from '@stencil/core';
+import { Component, h, JSX, Prop, Element } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
 import { GuxAvatarSize } from './gux-avatar.types';
@@ -16,9 +16,6 @@ export class GuxAvatar {
   @Element()
   root: HTMLElement;
 
-  /**
-   * Avatar size: small, medium or large
-   */
   @Prop()
   size: GuxAvatarSize = 'large';
 
@@ -36,39 +33,44 @@ export class GuxAvatar {
     return nameArray[0]?.charAt(0) + nameArray[0]?.charAt(1);
   }
 
-  private logWarning(): void {
+  private validatingInputs(): void {
     const avatarImage = this.root.querySelector('img');
-    if (!this.name && !avatarImage) {
-      logWarn(this.root, 'must have a name attribute for accessibility.');
-    } else if (avatarImage && !avatarImage.getAttribute('alt')) {
+    if (!this.name) {
+      logWarn(this.root, 'Name prop is required for accessibility');
+    }
+
+    if (avatarImage && !avatarImage.getAttribute('alt')) {
       logWarn(this.root, 'Alt attribute is required for slotted image.');
     }
   }
 
   componentWillLoad(): void {
-    trackComponent(this.root);
+    trackComponent(this.root, { variant: this.size });
   }
 
   componentDidLoad() {
-    this.logWarning();
+    this.validatingInputs();
   }
 
   render(): JSX.Element {
+    const validSizes: GuxAvatarSize[] = ['xsmall', 'small', 'medium', 'large'];
+    const checkedSize = validSizes.includes(this.size) ? this.size : 'large';
+
     return (
-      <Fragment>
-        <div
-          class={{
-            'gux-avatar': true,
-            [`gux-${this.size}`]: true
-          }}
-        >
-          <div class="gux-content">
-            <slot name="image">
+      <div
+        class={{
+          'gux-avatar': true,
+          [`gux-${checkedSize}`]: true
+        }}
+      >
+        <div class="gux-content">
+          <slot name="image">
+            {!this.root.querySelector('[slot="image"]') && (
               <abbr title={this.name}>{this.generateInitials()}</abbr>
-            </slot>
-          </div>
+            )}
+          </slot>
         </div>
-      </Fragment>
+      </div>
     ) as JSX.Element;
   }
 }
