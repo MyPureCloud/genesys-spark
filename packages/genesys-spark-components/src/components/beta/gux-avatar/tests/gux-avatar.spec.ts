@@ -53,7 +53,7 @@ describe('gux-avatar', () => {
     ['xsmall', 'small', 'medium', 'large', 'medium-rare'].forEach(
       (size: string) => {
         it(`should work as expected for "${size}"`, async () => {
-          const html = `<gux-avatar-beta name="John Doe" size=${size}></gux-avatar-beta>`;
+          const html = `<gux-avatar-beta name="John Doe" abbr="JD" size=${size}></gux-avatar-beta>`;
           const page = await newSpecPage({ components: [GuxAvatar], html });
 
           expect(page.root).toMatchSnapshot();

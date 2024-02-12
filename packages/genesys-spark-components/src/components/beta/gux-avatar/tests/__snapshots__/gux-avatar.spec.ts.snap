@@ -94,7 +94,7 @@ exports[`gux-avatar #render component with name type (5) for valid markup 1`] = 
 `;
 
 exports[`gux-avatar #render different sizes should work as expected for "large" 1`] = `
-<gux-avatar-beta name="John Doe" size="large">
+<gux-avatar-beta abbr="JD" name="John Doe" size="large">
   <mock:shadow-root>
     <div class="gux-avatar gux-large">
       <div class="gux-content">
@@ -110,7 +110,7 @@ exports[`gux-avatar #render different sizes should work as expected for "large" 
 `;
 
 exports[`gux-avatar #render different sizes should work as expected for "medium" 1`] = `
-<gux-avatar-beta name="John Doe" size="medium">
+<gux-avatar-beta abbr="JD" name="John Doe" size="medium">
   <mock:shadow-root>
     <div class="gux-avatar gux-medium">
       <div class="gux-content">
@@ -126,7 +126,7 @@ exports[`gux-avatar #render different sizes should work as expected for "medium"
 `;
 
 exports[`gux-avatar #render different sizes should work as expected for "medium-rare" 1`] = `
-<gux-avatar-beta name="John Doe" size="medium-rare">
+<gux-avatar-beta abbr="JD" name="John Doe" size="medium-rare">
   <mock:shadow-root>
     <div class="gux-avatar gux-medium-rare">
       <div class="gux-content">
@@ -142,7 +142,7 @@ exports[`gux-avatar #render different sizes should work as expected for "medium-
 `;
 
 exports[`gux-avatar #render different sizes should work as expected for "small" 1`] = `
-<gux-avatar-beta name="John Doe" size="small">
+<gux-avatar-beta abbr="JD" name="John Doe" size="small">
   <mock:shadow-root>
     <div class="gux-avatar gux-small">
       <div class="gux-content">
@@ -158,7 +158,7 @@ exports[`gux-avatar #render different sizes should work as expected for "small" 
 `;
 
 exports[`gux-avatar #render different sizes should work as expected for "xsmall" 1`] = `
-<gux-avatar-beta name="John Doe" size="xsmall">
+<gux-avatar-beta abbr="JD" name="John Doe" size="xsmall">
   <mock:shadow-root>
     <div class="gux-avatar gux-xsmall">
       <div class="gux-content">
