@@ -10,7 +10,7 @@ import { logWarn } from '../../../../utils/error/log-error';
 describe('gux-avatar', () => {
   describe('#render', () => {
     [
-      `<gux-avatar-beta name="John Doe"></gux-avatar-beta>`,
+      `<gux-avatar-beta name="John Doe" abbr="JD"></gux-avatar-beta>`,
       `<gux-avatar-beta name="John Doe"><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`
     ].forEach((html, index) => {
       it(`component with or without an image (${
@@ -40,7 +40,7 @@ describe('gux-avatar', () => {
     ['xsmall', 'small', 'medium', 'large', 'medium-rare'].forEach(
       (size: string) => {
         it(`should work as expected for "${size}"`, async () => {
-          const html = `<gux-avatar-beta name="John Doe" size=${size}></gux-avatar-beta>`;
+          const html = `<gux-avatar-beta name="John Doe" abbr="JD" size=${size}></gux-avatar-beta>`;
           const page = await newSpecPage({ components: [GuxAvatar], html });
 
           expect(page.root).toMatchSnapshot();
