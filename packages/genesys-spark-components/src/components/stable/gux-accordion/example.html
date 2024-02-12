@@ -214,3 +214,16 @@
     </div>
   </gux-accordion-section>
 </gux-accordion>
+
+<style
+  onload="(function () {
+    Array.from(document.querySelectorAll('gux-accordion-section')).forEach(item => {
+      item.addEventListener('guxopened', notify);
+      item.addEventListener('guxclosed', notify);
+    });
+})()"
+>
+  .not-used {
+    -custom-noop: noop;
+  }
+</style>
