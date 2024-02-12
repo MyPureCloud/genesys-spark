@@ -5,6 +5,7 @@ import {
   EventEmitter,
   h,
   JSX,
+  Listen,
   Prop
 } from '@stencil/core';
 import {
@@ -75,6 +76,15 @@ export class GuxPopover {
    */
   @Event()
   guxdismiss: EventEmitter<void>;
+
+  @Listen('keydown')
+  onKeyDown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Escape':
+        this.dismiss();
+        break;
+    }
+  }
 
   @OnClickOutside({ triggerEvents: 'mousedown' })
   checkForClickOutside(event: MouseEvent) {
