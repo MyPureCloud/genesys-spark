@@ -3,6 +3,7 @@
 :host([disabled]),
 button[disabled] {
   pointer-events: none;
+  user-select: none;
 }
 
 .gux-sr-only {
