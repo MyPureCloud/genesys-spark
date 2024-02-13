@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.118.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.118.0...v3.118.1) (2024-02-13)
+
+
+### Bug Fixes
+
+* **datepicker:** fixed font size bug ([b420bb0](https://github.com/MyPureCloud/genesys-spark/commit/b420bb0449ba6864152d073a8ca4547be679efd0))
+
 ## [3.118.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.117.1...v3.118.0) (2024-02-09)
 
 
