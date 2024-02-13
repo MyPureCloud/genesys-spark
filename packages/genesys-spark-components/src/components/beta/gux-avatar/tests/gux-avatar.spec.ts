@@ -11,9 +11,12 @@ describe('gux-avatar', () => {
   describe('#render', () => {
     [
       `<gux-avatar-beta name="John Doe"></gux-avatar-beta>`,
-      `<gux-avatar-beta name="John Doe"><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`
+      `<gux-avatar-beta name="JohnDoe"></gux-avatar-beta>`,
+      `<gux-avatar-beta name="山田 太郎"></gux-avatar-beta>`,
+      `<gux-avatar-beta name="이 영수"></gux-avatar-beta>`,
+      `<gux-avatar-beta name="邓 小平"></gux-avatar-beta>`
     ].forEach((html, index) => {
-      it(`component with or without an image (${
+      it(`component with name type (${
         index + 1
       }) for valid markup`, async () => {
         const page = await newSpecPage({ components: [GuxAvatar], html });
@@ -23,7 +26,17 @@ describe('gux-avatar', () => {
       });
     });
 
-    it(`should log warning for avatar without name"`, async () => {
+    it(`component with image`, async () => {
+      const html = `<gux-avatar-beta name="John Doe"><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`;
+      const page = await newSpecPage({ components: [GuxAvatar], html });
+
+      expect(page.root).toMatchSnapshot();
+      expect(logWarn).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('warnings', () => {
+    it(`should log warning for avatar without name`, async () => {
       const html = `<gux-avatar-beta></gux-avatar-beta>`;
       await newSpecPage({ components: [GuxAvatar], html });
       expect(logWarn).toHaveBeenCalled();

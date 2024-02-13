@@ -1,6 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-avatar #render component with or without an image (1) for valid markup 1`] = `
+exports[`gux-avatar #render component with image 1`] = `
+<gux-avatar-beta name="John Doe">
+  <mock:shadow-root>
+    <div class="gux-avatar gux-large">
+      <div class="gux-content">
+        <slot name="image"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <img alt="John Doe Image" slot="image" src="https://i.pravatar.cc/300">
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render component with name type (1) for valid markup 1`] = `
 <gux-avatar-beta name="John Doe">
   <mock:shadow-root>
     <div class="gux-avatar gux-large">
@@ -16,16 +29,67 @@ exports[`gux-avatar #render component with or without an image (1) for valid mar
 </gux-avatar-beta>
 `;
 
-exports[`gux-avatar #render component with or without an image (2) for valid markup 1`] = `
-<gux-avatar-beta name="John Doe">
+exports[`gux-avatar #render component with name type (2) for valid markup 1`] = `
+<gux-avatar-beta name="JohnDoe">
   <mock:shadow-root>
     <div class="gux-avatar gux-large">
       <div class="gux-content">
-        <slot name="image"></slot>
+        <slot name="image">
+          <abbr title="JohnDoe">
+            Jo
+          </abbr>
+        </slot>
       </div>
     </div>
   </mock:shadow-root>
-  <img alt="John Doe Image" slot="image" src="https://i.pravatar.cc/300">
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render component with name type (3) for valid markup 1`] = `
+<gux-avatar-beta name="山田 太郎">
+  <mock:shadow-root>
+    <div class="gux-avatar gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr title="山田 太郎">
+            山太
+          </abbr>
+        </slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render component with name type (4) for valid markup 1`] = `
+<gux-avatar-beta name="이 영수">
+  <mock:shadow-root>
+    <div class="gux-avatar gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr title="이 영수">
+            이영
+          </abbr>
+        </slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render component with name type (5) for valid markup 1`] = `
+<gux-avatar-beta name="邓 小平">
+  <mock:shadow-root>
+    <div class="gux-avatar gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr title="邓 小平">
+            邓小
+          </abbr>
+        </slot>
+      </div>
+    </div>
+  </mock:shadow-root>
 </gux-avatar-beta>
 `;
 

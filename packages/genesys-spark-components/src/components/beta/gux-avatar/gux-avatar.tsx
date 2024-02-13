@@ -20,7 +20,8 @@ export class GuxAvatar {
   size: GuxAvatarSize = 'large';
 
   /**
-   * Name which is shown as initials
+   * Name which is shown as initials. Should be formatted 'Lastname Firstname' for JA, zhCN and KO names.
+   * Names without blank space will show first 2 characters of string.
    */
   @Prop()
   name!: string;
