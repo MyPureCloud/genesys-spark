@@ -32,6 +32,66 @@
     text-transform: uppercase;
     background-color: var(--gse-ui-avatar-media-initialsBackground-default);
     border-radius: 50%;
+
+    &.gux-accent-1 {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent1);
+    }
+
+    &.gux-accent-2 {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent2);
+    }
+
+    &.gux-accent-3 {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent3);
+    }
+
+    &.gux-accent-4 {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent4);
+    }
+
+    &.gux-accent-5 {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent5);
+    }
+
+    &.gux-accent-6 {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent6);
+    }
+
+    &.gux-accent-7 {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent7);
+    }
+
+    &.gux-accent-8 {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent8);
+    }
+
+    &.gux-accent-9 {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent9);
+    }
+
+    &.gux-accent-10 {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent10);
+    }
+
+    &.gux-accent-11 {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent11);
+    }
+
+    &.gux-accent-12 {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent12);
+    }
   }
 
   &.gux-medium {

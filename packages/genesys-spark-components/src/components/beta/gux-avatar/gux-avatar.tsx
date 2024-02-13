@@ -1,7 +1,7 @@
 import { Component, h, JSX, Prop, Element } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
-import { GuxAvatarSize } from './gux-avatar.types';
+import { GuxAvatarSize, GuxAvatarAccent } from './gux-avatar.types';
 
 /**
  * @slot image - Headshot photo.
@@ -26,12 +26,28 @@ export class GuxAvatar {
   @Prop()
   name!: string;
 
+  /**
+   * Manually sets avatar accent
+   */
+  @Prop()
+  accent: GuxAvatarAccent = 'default';
+
   private generateInitials(): string {
     const nameArray = this.name?.split(' ') ?? [];
     if (nameArray.length > 1) {
       return nameArray[0].charAt(0) + nameArray[nameArray.length - 1].charAt(0);
     }
     return nameArray[0]?.charAt(0) + nameArray[0]?.charAt(1);
+  }
+
+  private getAccent(): string {
+    if (this.accent !== 'auto') {
+      return this.accent.toString();
+    }
+    const hashedName = this.name
+      .split('')
+      .reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    return (hashedName % 12 || 12).toString();
   }
 
   private validatingInputs(): void {
@@ -61,7 +77,12 @@ export class GuxAvatar {
           [`gux-${this.size}`]: true
         }}
       >
-        <div class="gux-content">
+        <div
+          class={{
+            'gux-content': true,
+            [`gux-accent-${this.getAccent()}`]: true
+          }}
+        >
           <slot name="image">
             {!this.root.querySelector('[slot="image"]') && (
               <abbr title={this.name}>{this.generateInitials()}</abbr>
