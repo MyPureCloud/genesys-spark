@@ -54,9 +54,6 @@ export class GuxAvatar {
   }
 
   render(): JSX.Element {
-    const validSizes: GuxAvatarSize[] = ['xsmall', 'small', 'medium', 'large'];
-    const checkedSize = validSizes.includes(this.size) ? this.size : 'large';
-
     return (
       <div
         class={{
