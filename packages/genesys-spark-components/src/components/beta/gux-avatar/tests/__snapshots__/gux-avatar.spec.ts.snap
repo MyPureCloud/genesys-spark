@@ -128,7 +128,7 @@ exports[`gux-avatar #render different sizes should work as expected for "medium"
 exports[`gux-avatar #render different sizes should work as expected for "medium-rare" 1`] = `
 <gux-avatar-beta name="John Doe" size="medium-rare">
   <mock:shadow-root>
-    <div class="gux-avatar gux-large">
+    <div class="gux-avatar gux-medium-rare">
       <div class="gux-content">
         <slot name="image">
           <abbr title="John Doe">
