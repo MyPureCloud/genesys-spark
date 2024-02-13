@@ -15,19 +15,15 @@
 
 .gux-avatar {
   position: relative;
-  width: var(--gse-ui-avatar-large-size);
-  height: var(--gse-ui-avatar-large-size);
   overflow: hidden;
-  border-radius: 50%;
 
   .gux-content {
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
-    height: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
-    margin: var(--gse-ui-avatar-large-presenceRing-width);
+    width: var(--gse-ui-avatar-large-content-size);
+    height: var(--gse-ui-avatar-large-content-size);
     overflow: hidden;
     font-family: var(--gse-ui-avatar-large-initials-fontFamily);
     font-size: var(--gse-ui-avatar-large-initials-fontSize);
@@ -35,82 +31,33 @@
     color: var(--gse-ui-avatar-media-initialsForeground-inverse);
     text-transform: uppercase;
     background-color: var(--gse-ui-avatar-media-initialsBackground-default);
-    border: var(--gse-ui-avatar-content-default-border-width)
-      var(--gse-ui-avatar-content-default-border-style)
-      var(--gse-ui-avatar-content-default-border-color);
     border-radius: 50%;
   }
 
   &.gux-medium {
-    width: var(--gse-ui-avatar-medium-size);
-    height: var(--gse-ui-avatar-medium-size);
-
     .gux-content {
-      width: calc(100% - var(--gse-ui-avatar-medium-presenceRing-width) * 2);
-      height: calc(100% - var(--gse-ui-avatar-medium-presenceRing-width) * 2);
-      margin: var(--gse-ui-avatar-medium-presenceRing-width);
+      width: var(--gse-ui-avatar-medium-content-size);
+      height: var(--gse-ui-avatar-medium-content-size);
       font-size: var(--gse-ui-avatar-medium-initials-fontSize);
       font-weight: var(--gse-ui-avatar-medium-initials-fontWeight);
     }
   }
 
   &.gux-small {
-    width: var(--gse-ui-avatar-small-size);
-    height: var(--gse-ui-avatar-small-size);
-
     .gux-content {
-      width: calc(100% - var(--gse-ui-avatar-small-presenceRing-width) * 2);
-      height: calc(100% - var(--gse-ui-avatar-small-presenceRing-width) * 2);
-      margin: var(--gse-ui-avatar-small-presenceRing-width);
+      width: var(--gse-ui-avatar-small-content-size);
+      height: var(--gse-ui-avatar-small-content-size);
       font-size: var(--gse-ui-avatar-small-initials-fontSize);
       font-weight: var(--gse-ui-avatar-small-initials-fontWeight);
     }
   }
 
   &.gux-xsmall {
-    width: var(--gse-ui-avatar-xsmall-size);
-    height: var(--gse-ui-avatar-xsmall-size);
-
     .gux-content {
-      width: calc(100% - var(--gse-ui-avatar-xsmall-presenceRing-width) * 2);
-      height: calc(100% - var(--gse-ui-avatar-xsmall-presenceRing-width) * 2);
-      margin: var(--gse-ui-avatar-xsmall-presenceRing-width);
+      width: var(--gse-ui-avatar-xsmall-content-size);
+      height: var(--gse-ui-avatar-xsmall-content-size);
       font-size: var(--gse-ui-avatar-xsmall-initials-fontSize);
       font-weight: var(--gse-ui-avatar-xsmall-initials-fontWeight);
-    }
-  }
-
-  .gux-avatar-badge {
-    position: absolute;
-    top: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
-    right: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: var(--gse-ui-avatar-large-badge-size);
-    height: var(--gse-ui-avatar-large-badge-size);
-    border-color: var(--gse-ui-avatar-content-default-border-color);
-    border-style: var(--gse-ui-avatar-content-default-border-style);
-    border-width: var(--gse-ui-avatar-content-large-border-width);
-    border-radius: 50%;
-
-    &.gux-medium,
-    &.gux-small,
-    &.gux-xsmall {
-      top: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
-      right: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
-      border-width: var(--gse-ui-avatar-content-default-border-width);
-    }
-
-    &.gux-medium {
-      width: var(--gse-ui-avatar-medium-badge-size);
-      height: var(--gse-ui-avatar-medium-badge-size);
-    }
-
-    &.gux-small,
-    &.gux-xsmall {
-      width: var(--gse-ui-avatar-small-badge-size);
-      height: var(--gse-ui-avatar-small-badge-size);
     }
   }
 }

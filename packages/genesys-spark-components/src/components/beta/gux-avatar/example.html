@@ -30,18 +30,22 @@
 </div>
 
 <h2>Size Variations</h2>
-<gux-avatar-beta size="xsmall" name="Xavier Smith"></gux-avatar-beta>
-<gux-avatar-beta size="small" name="Susan Murphy"></gux-avatar-beta>
-<gux-avatar-beta size="medium" name="Mary Doyle"></gux-avatar-beta>
-<gux-avatar-beta size="large" name="Liam Gallagher"></gux-avatar-beta>
-
-<gux-avatar-beta
-  class="size-default"
-  size="medium-rare"
-  name="Derek Feehan"
-></gux-avatar-beta>
-
+<div class="size-example-group">
+  <gux-avatar-beta size="xsmall" name="Xavier Smith"></gux-avatar-beta>
+  <gux-avatar-beta size="small" name="Susan Murphy"></gux-avatar-beta>
+  <gux-avatar-beta size="medium" name="Mary Doyle"></gux-avatar-beta>
+  <gux-avatar-beta size="large" name="Liam Gallagher"></gux-avatar-beta>
+  <gux-avatar-beta
+    class="size-default"
+    size="medium-rare"
+    name="Derek Feehan"
+  ></gux-avatar-beta>
+</div>
 <style>
+  gux-avatar {
+    padding: 0 4px;
+  }
+
   .name-example {
     display: flex;
     flex-direction: column;
@@ -50,9 +54,20 @@
 
   .name-example-group {
     display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 500px;
+  }
+
+  .size-example-group {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 300px;
   }
 
   .size-default {
+    padding-left: 8px;
     border-inline-start: 1px solid var(--gse-core-color-cornflower-600);
   }
 </style>
