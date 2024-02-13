@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.18.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.17.0...v4.18.0) (2024-02-13)
+
+
+### Features
+
+* **accordion:** added open and close events ([2101816](https://github.com/MyPureCloud/genesys-spark/commit/2101816282b377dec0cffe60441dc0d9d1f62274))
+
+
+### Bug Fixes
+
+* **datepicker:** fixed font size bug ([14a1db9](https://github.com/MyPureCloud/genesys-spark/commit/14a1db99dab95c8a05dc62fb9ccb75e580140e36))
+* **toolbar-custom-action:** fixed click event firing when disabled ([b9c1e51](https://github.com/MyPureCloud/genesys-spark/commit/b9c1e5182e85527098ab5bf5cc3dad1dfc504ce7))
+
 ## [4.17.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.16.0...v4.17.0) (2024-02-10)
 
 
