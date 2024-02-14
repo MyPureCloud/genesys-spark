@@ -53,6 +53,28 @@ export function relativeTimeFormat(
   }
 }
 
+function closestPassShadow(
+  node: Element | ParentNode | null,
+  selector: string
+): HTMLElement | null {
+  if (!node) {
+    return null;
+  }
+
+  if (node instanceof ShadowRoot) {
+    return closestPassShadow(node.host, selector);
+  }
+
+  if (node instanceof HTMLElement) {
+    if (node.matches(selector)) {
+      return node;
+    } else {
+      return closestPassShadow(node.parentNode, selector);
+    }
+  }
+
+  return closestPassShadow(node.parentNode, selector);
+}
 /**
  * Makes a best effort to return the locale that should be used for a given element
  * by checking language tags on ancestors. If no element is provided, it will
@@ -64,7 +86,7 @@ export function relativeTimeFormat(
 export function determineDisplayLocale(
   element: HTMLElement = document.body
 ): string {
-  const domLocale = element.closest<HTMLElement>('[lang]')?.lang;
+  const domLocale = closestPassShadow(element, '*[lang]')?.lang;
   if (!domLocale || browserHasRegionData(domLocale)) {
     // If we can't find a locale in the DOM, or we find a locale without a region that matches the
     // users's browser locale, use the browser locale.
