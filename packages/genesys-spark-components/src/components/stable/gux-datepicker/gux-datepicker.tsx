@@ -25,7 +25,8 @@ import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
 import { CalendarModes } from '../../../common-enums';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-
+import * as sparkIntl from '../../../genesys-spark-utils/intl';
+import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
 import { GuxCalendarDayOfWeek } from '../gux-calendar/gux-calendar.types';
 
 import translationResources from './i18n/en.json';
@@ -39,6 +40,7 @@ import {
   incrementDay,
   incrementMonth,
   incrementYear,
+  getFormat,
   getFormattedDate,
   getIntervalLetter,
   getFormatSeparator,
@@ -73,6 +75,7 @@ export class GuxDatepicker {
   endInputId: string = randomHTMLId('gux-datepicker');
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
   i18n: GetI18nValue;
+  formatOverride = false;
 
   @Element()
   root: HTMLElement;
@@ -123,7 +126,7 @@ export class GuxDatepicker {
    * The datepicker date format (default to mm/dd/yyyy, or specified)
    */
   @Prop()
-  format: string = 'mm/dd/yyyy';
+  format: string;
 
   /**
    * Disable the input and prevent interactions.
@@ -542,23 +545,53 @@ export class GuxDatepicker {
   }
 
   updateDate() {
-    if (this.mode === CalendarModes.Range) {
-      const [from, to] = fromIsoDateRange(this.value);
-      const { map: map1, regexp: regexp1 } = this.getMapAndRegexFromField(from);
-      this.formattedValue = this.format.replace(regexp1, match => {
-        return map1[match] as string;
-      });
-      const { map: map2, regexp: regexp2 } = this.getMapAndRegexFromField(to);
-      this.toFormattedValue = this.format.replace(regexp2, match => {
-        return map2[match] as string;
-      });
+    if (readRegionalDatesCookie() && !this.formatOverride) {
+      if (this.mode === CalendarModes.Range) {
+        const [from, to] = fromIsoDateRange(this.value);
+        this.formattedValue = sparkIntl
+          .dateTimeFormat(sparkIntl.determineDisplayLocale(this.root), {
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric'
+          })
+          .format(new Date(from));
+        this.toFormattedValue = sparkIntl
+          .dateTimeFormat(sparkIntl.determineDisplayLocale(this.root), {
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric'
+          })
+          .format(new Date(to));
+      } else {
+        const dateValue = fromIsoDate(this.value);
+        this.formattedValue = sparkIntl
+          .dateTimeFormat(sparkIntl.determineDisplayLocale(this.root), {
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric'
+          })
+          .format(new Date(dateValue));
+      }
     } else {
-      const dateValue = fromIsoDate(this.value);
-      const { map: map3, regexp: regexp3 } =
-        this.getMapAndRegexFromField(dateValue);
-      this.formattedValue = this.format.replace(regexp3, match => {
-        return map3[match] as string;
-      });
+      if (this.mode === CalendarModes.Range) {
+        const [from, to] = fromIsoDateRange(this.value);
+        const { map: map1, regexp: regexp1 } =
+          this.getMapAndRegexFromField(from);
+        this.formattedValue = this.format.replace(regexp1, match => {
+          return map1[match] as string;
+        });
+        const { map: map2, regexp: regexp2 } = this.getMapAndRegexFromField(to);
+        this.toFormattedValue = this.format.replace(regexp2, match => {
+          return map2[match] as string;
+        });
+      } else {
+        const dateValue = fromIsoDate(this.value);
+        const { map: map3, regexp: regexp3 } =
+          this.getMapAndRegexFromField(dateValue);
+        this.formattedValue = this.format.replace(regexp3, match => {
+          return map3[match] as string;
+        });
+      }
     }
   }
 
@@ -645,7 +678,15 @@ export class GuxDatepicker {
   async componentWillLoad() {
     trackComponent(this.root, { variant: this.mode });
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-
+    if (readRegionalDatesCookie()) {
+      if (!this.format) {
+        this.format = getFormat(this.root);
+      } else {
+        this.formatOverride = true;
+      }
+    } else if (!this.format) {
+      this.format = 'mm/dd/yyyy';
+    }
     this.watchMinDate(this.minDate);
     this.watchMaxDate(this.maxDate);
     this.watchFormat(this.format);
