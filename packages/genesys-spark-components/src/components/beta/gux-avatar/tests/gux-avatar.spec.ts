@@ -49,6 +49,30 @@ describe('gux-avatar', () => {
     });
   });
 
+  describe('changes to attributes after initial load should be reflected in DOM', () => {
+    it(`should update size attribute`, async () => {
+      const html = `<gux-avatar-beta size="large" name="John Doe"></gux-avatar-beta>`;
+      const page = await newSpecPage({ components: [GuxAvatar], html });
+      const element = document.querySelector('gux-avatar-beta');
+
+      element.setAttribute('size', 'small');
+      await page.waitForChanges();
+
+      expect(page.root).toMatchSnapshot();
+    });
+
+    it(`should update accent attribute`, async () => {
+      const html = `<gux-avatar-beta accent="1" name="John Doe"></gux-avatar-beta>`;
+      const page = await newSpecPage({ components: [GuxAvatar], html });
+      const element = document.querySelector('gux-avatar-beta');
+
+      element.setAttribute('accent', '6');
+      await page.waitForChanges();
+
+      expect(page.root).toMatchSnapshot();
+    });
+  });
+
   describe('#render different sizes', () => {
     ['xsmall', 'small', 'medium', 'large', 'medium-rare'].forEach(
       (size: string) => {
@@ -63,15 +87,30 @@ describe('gux-avatar', () => {
   });
 
   describe('#render different accents', () => {
-    ['default', 'auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].forEach(
-      (accent: string) => {
-        it(`should work as expected for "${accent}"`, async () => {
-          const html = `<gux-avatar-beta name="John Doe" accent=${accent}></gux-avatar-beta>`;
-          const page = await newSpecPage({ components: [GuxAvatar], html });
+    [
+      'default',
+      'auto',
+      '0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12',
+      'invalid-accent'
+    ].forEach((accent: string) => {
+      it(`should work as expected for "${accent}"`, async () => {
+        const html = `<gux-avatar-beta name="John Doe" accent=${accent}></gux-avatar-beta>`;
+        const page = await newSpecPage({ components: [GuxAvatar], html });
 
-          expect(page.root).toMatchSnapshot();
-        });
-      }
-    );
+        expect(page.root).toMatchSnapshot();
+      });
+    });
   });
 });

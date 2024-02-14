@@ -42,12 +42,12 @@ export class GuxAvatar {
 
   private getAccent(): string {
     if (this.accent !== 'auto') {
-      return this.accent.toString();
+      return this.accent;
     }
     const hashedName = this.name
       .split('')
       .reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    return (hashedName % 12 || 12).toString();
+    return (hashedName % 12).toString();
   }
 
   private validatingInputs(): void {
@@ -74,21 +74,15 @@ export class GuxAvatar {
       <div
         class={{
           'gux-avatar': true,
-          [`gux-${this.size}`]: true
+          [`gux-${this.size}`]: true,
+          [`gux-accent-${this.getAccent()}`]: true
         }}
       >
-        <div
-          class={{
-            'gux-content': true,
-            [`gux-accent-${this.getAccent()}`]: true
-          }}
-        >
-          <slot name="image">
-            {!this.root.querySelector('[slot="image"]') && (
-              <abbr title={this.name}>{this.generateInitials()}</abbr>
-            )}
-          </slot>
-        </div>
+        <slot name="image">
+          {!this.root.querySelector('[slot="image"]') && (
+            <abbr title={this.name}>{this.generateInitials()}</abbr>
+          )}
+        </slot>
       </div>
     ) as JSX.Element;
   }

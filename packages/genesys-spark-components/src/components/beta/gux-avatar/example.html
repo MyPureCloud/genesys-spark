@@ -56,6 +56,7 @@
 <gux-avatar-beta name="TU" accent="10"></gux-avatar-beta>
 <gux-avatar-beta name="VW" accent="11"></gux-avatar-beta>
 <gux-avatar-beta name="XY" accent="12"></gux-avatar-beta>
+<gux-avatar-beta name="XY" accent="invalid-accent"></gux-avatar-beta>
 
 <h3>Automatically choose accent based on the name</h3>
 <gux-avatar-beta name="Monserrat Limon" accent="auto"></gux-avatar-beta>
@@ -63,9 +64,56 @@
 <gux-avatar-beta name="Gillian Middleton" accent="auto"></gux-avatar-beta>
 <gux-avatar-beta name="Dorka Hajnal" accent="auto"></gux-avatar-beta>
 
+<h2>Dynamic Example</h2>
+
+<div class="dynamic-example-wrapper">
+  <gux-avatar-beta
+    id="dynamic-example"
+    name="Monserrat Limon"
+    size="large"
+    accent="auto"
+  ></gux-avatar-beta>
+  <div class="control">
+    <p class="gux-heading-subheading-regular">Avatar Controls</p>
+    <gux-form-field-dropdown>
+      <gux-dropdown value="large" id="update-size">
+        <gux-listbox aria-label="Update size">
+          <gux-option value="xsmall">X-Small</gux-option>
+          <gux-option value="small">Small</gux-option>
+          <gux-option value="medium">Medium</gux-option>
+          <gux-option value="large">Large</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Size</label>
+    </gux-form-field-dropdown>
+
+    <gux-form-field-text-like>
+      <input
+        slot="input"
+        name="avatarName"
+        id="update-name"
+        type="text"
+        placeholder="Enter name"
+      />
+      <label slot="label">Name</label>
+    </gux-form-field-text-like>
+    <gux-button
+      onclick="(function() {
+        const avatar = document.getElementById('dynamic-example');
+        const updateSize = document.getElementById('update-size');
+        const updateName = document.getElementById('update-name');
+        console.log(updateName);
+        avatar.setAttribute('size', updateSize.value);
+        avatar.setAttribute('name', updateName.value);
+      })()"
+      >Update Avatar</gux-button
+    >
+  </div>
+</div>
+
 <style>
-  gux-avatar {
-    padding: 0 4px;
+  gux-avatar-beta {
+    padding: 4px;
   }
 
   .name-example {
@@ -86,6 +134,23 @@
     align-items: flex-end;
     justify-content: space-between;
     max-width: 300px;
+  }
+
+  .control {
+    min-width: 150px;
+    padding: 0 var(--gse-core-spacing-2xs) var(--gse-core-spacing-2xs);
+    border: 1px solid var(--gse-core-color-blueberry-900);
+    border-radius: var(--gse-core-borderRadius-md);
+  }
+
+  .dynamic-example-wrapper {
+    display: flex;
+    gap: var(--gse-core-spacing-lg);
+    align-items: center;
+  }
+
+  gux-form-field-text-like {
+    margin: var(--gse-core-spacing-2xs) 0;
   }
 
   .size-default {
