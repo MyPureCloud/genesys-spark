@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.19.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.18.0...v4.19.0) (2024-02-14)
+
+
+### Features
+
+* **tokens:** Deleted tooltip offset token ([d779a1f](https://github.com/MyPureCloud/genesys-spark/commit/d779a1f49e3ff271b18517abca97f969ffcc3f7d))
+* **tokens:** remove unused token ([8908fd4](https://github.com/MyPureCloud/genesys-spark/commit/8908fd4905c6bb1d4602871c3227a6b6f06e773a))
+
 ## [4.18.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.17.0...v4.18.0) (2024-02-13)
 
 
