@@ -94,41 +94,37 @@ $gse-ui-avatar-large-initials-fontFamily: Urbanist;
 $gse-ui-avatar-large-initials-lineHeight: 44px;
 $gse-ui-avatar-large-initials-fontSize: 36px;
 $gse-ui-avatar-large-initials-fontWeight: 600;
-$gse-ui-avatar-large-statusRing-width: 4px;
-$gse-ui-avatar-statusRing-available: linear-gradient(
+$gse-ui-avatar-large-presenceRing-width: 4px;
+$gse-ui-avatar-large-ucIntegration-size: 32px;
+$gse-ui-avatar-presenceRing-available: linear-gradient(
   135deg,
   #09b581 0%,
   #9de1cd 100%
 );
-$gse-ui-avatar-statusRing-busy: linear-gradient(
+$gse-ui-avatar-presenceRing-busy: linear-gradient(
   135deg,
   #e22245 0%,
   #f3a7b5 100%
 );
-$gse-ui-avatar-statusRing-break: linear-gradient(
+$gse-ui-avatar-presenceRing-away: linear-gradient(
   135deg,
   #f8c73e 0%,
   #fce9b2 100%
 );
-$gse-ui-avatar-statusRing-queue: linear-gradient(
+$gse-ui-avatar-presenceRing-onQueue: linear-gradient(
   135deg,
   #4856cb 0%,
   #9ca6f9 100%
 );
-$gse-ui-avatar-statusRing-offline: linear-gradient(
+$gse-ui-avatar-presenceRing-offline: linear-gradient(
   135deg,
   #767c8d 0%,
   #a3a7b0 100%
 );
-$gse-ui-avatar-statusRing-outOfOffice: linear-gradient(
+$gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(
   135deg,
-  #a05195 0%,
-  #c5bef1 100%
-);
-$gse-ui-avatar-statusRing-notifications: linear-gradient(
-  135deg,
-  #fe624d 0%,
-  #4856cb 100%
+  #b74ba4 0%,
+  #f5bfeb 100%
 );
 $gse-ui-avatar-medium-size: 48px;
 $gse-ui-avatar-medium-badge-size: 16px;
@@ -138,7 +134,7 @@ $gse-ui-avatar-medium-initials-fontFamily: Urbanist;
 $gse-ui-avatar-medium-initials-lineHeight: 27px;
 $gse-ui-avatar-medium-initials-fontSize: 18px;
 $gse-ui-avatar-medium-initials-fontWeight: 600;
-$gse-ui-avatar-medium-statusRing-width: 3px;
+$gse-ui-avatar-medium-presenceRing-width: 3px;
 $gse-ui-avatar-small-size: 32px;
 $gse-ui-avatar-small-badge-size: 8px;
 $gse-ui-avatar-small-focusRing-size: 34px;
@@ -148,7 +144,7 @@ $gse-ui-avatar-small-initials-lineHeight: 18px;
 $gse-ui-avatar-small-initials-fontSize: 12px;
 $gse-ui-avatar-small-initials-fontWeight: 600;
 $gse-ui-avatar-small-substract-size: 30px;
-$gse-ui-avatar-small-statusRing-width: 2px;
+$gse-ui-avatar-small-presenceRing-width: 2px;
 $gse-ui-avatar-xsmall-size: 24px;
 $gse-ui-avatar-xsmall-focusRing-size: 26px;
 $gse-ui-avatar-xsmall-content-size: 18px;
@@ -156,16 +152,19 @@ $gse-ui-avatar-xsmall-initials-fontFamily: Urbanist;
 $gse-ui-avatar-xsmall-initials-lineHeight: 16px;
 $gse-ui-avatar-xsmall-initials-fontSize: 8px;
 $gse-ui-avatar-xsmall-initials-fontWeight: 600;
-$gse-ui-avatar-xsmall-statusRing-width: 2px;
-$gse-ui-avatar-badge-available: #09b581;
-$gse-ui-avatar-badge-busy: #e22245;
-$gse-ui-avatar-badge-break: #f8c73e;
-$gse-ui-avatar-badge-onQueue: #4856cb;
-$gse-ui-avatar-badge-offline: #626e84;
-$gse-ui-avatar-badge-outOfOffice: #6e5ddb;
-$gse-ui-avatar-badge-notification: #fe624d;
-$gse-ui-avatar-badge-foregroundDefault: #ffffff;
-$gse-ui-avatar-badge-foregroundDark: #3e5374;
+$gse-ui-avatar-xsmall-presenceRing-width: 2px;
+$gse-ui-avatar-badge-available-color: #09b581;
+$gse-ui-avatar-badge-busy-color: #e22245;
+$gse-ui-avatar-badge-busy-icon-margin: 2px;
+$gse-ui-avatar-badge-away: #f8c73e;
+$gse-ui-avatar-badge-onQueue-color: #4856cb;
+$gse-ui-avatar-badge-offline-color: #626e84;
+$gse-ui-avatar-badge-outOfOffice: #b74ba4;
+$gse-ui-avatar-badge-notification-color: #fe624d;
+$gse-ui-avatar-badge-foregroundDefault-color: #ffffff;
+$gse-ui-avatar-badge-foregroundDark-color: #3e5374;
+$gse-ui-avatar-badge-notifications-icon-margin: 4px;
+$gse-ui-avatar-badge-queue-icon-margin: 4px;
 $gse-ui-avatar-media-initialsBackground-default: #115d71;
 $gse-ui-avatar-media-initialsBackground-accent1: #7785b8;
 $gse-ui-avatar-media-initialsBackground-accent2: #90d3dd;

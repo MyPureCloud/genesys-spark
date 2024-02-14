@@ -1,0 +1,73 @@
+<h1>gux-avatar-beta</h1>
+<h2>Image</h2>
+<gux-avatar-beta name="Conor Darcy">
+  <img slot="image" src="https://i.pravatar.cc/300" alt="Avatar Sample Image" />
+</gux-avatar-beta>
+
+<h2>Name</h2>
+
+<div class="name-example-group">
+  <div class="name-example">
+    <h3>en</h3>
+    <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
+  </div>
+  <div class="name-example">
+    <h3>no-whitespace</h3>
+    <gux-avatar-beta name="ConorDarcy"></gux-avatar-beta>
+  </div>
+  <div class="name-example">
+    <h3>JA</h3>
+    <gux-avatar-beta name="山田 太郎"></gux-avatar-beta>
+  </div>
+  <div class="name-example">
+    <h3>KO</h3>
+    <gux-avatar-beta name="이 영수"></gux-avatar-beta>
+  </div>
+  <div class="name-example">
+    <h3>zhCN</h3>
+    <gux-avatar-beta name="邓 小平"></gux-avatar-beta>
+  </div>
+</div>
+
+<h2>Size Variations</h2>
+<div class="size-example-group">
+  <gux-avatar-beta size="xsmall" name="Xavier Smith"></gux-avatar-beta>
+  <gux-avatar-beta size="small" name="Susan Murphy"></gux-avatar-beta>
+  <gux-avatar-beta size="medium" name="Mary Doyle"></gux-avatar-beta>
+  <gux-avatar-beta size="large" name="Liam Gallagher"></gux-avatar-beta>
+  <gux-avatar-beta
+    class="size-default"
+    size="medium-rare"
+    name="Derek Feehan"
+  ></gux-avatar-beta>
+</div>
+<style>
+  gux-avatar {
+    padding: 0 4px;
+  }
+
+  .name-example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name-example-group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 500px;
+  }
+
+  .size-example-group {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 300px;
+  }
+
+  .size-default {
+    padding-left: 8px;
+    border-inline-start: 1px solid var(--gse-core-color-cornflower-600);
+  }
+</style>
