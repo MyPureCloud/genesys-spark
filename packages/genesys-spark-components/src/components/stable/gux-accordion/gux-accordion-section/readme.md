@@ -16,9 +16,10 @@
 
 ## Events
 
-| Event                   | Description | Type                |
-| ----------------------- | ----------- | ------------------- |
-| `internalsectionopened` |             | `CustomEvent<void>` |
+| Event       | Description | Type                |
+| ----------- | ----------- | ------------------- |
+| `guxclosed` |             | `CustomEvent<void>` |
+| `guxopened` |             | `CustomEvent<void>` |
 
 
 ## Slots
