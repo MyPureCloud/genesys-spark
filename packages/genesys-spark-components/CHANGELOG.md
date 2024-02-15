@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.119.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.118.1...v3.119.0) (2024-02-15)
+
+
+### Features
+
+* **accordion:** added open and close events ([beaec0f](https://github.com/MyPureCloud/genesys-spark/commit/beaec0fb3778e2613668a5e9aa3febfe5bd3046a))
+
 ### [3.118.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.118.0...v3.118.1) (2024-02-13)
 
 
