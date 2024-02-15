@@ -333,6 +333,7 @@ export class GuxDropdown {
     switch (event.key) {
       case 'ArrowDown':
         event.stopImmediatePropagation();
+        event.preventDefault();
         this.listboxElement.focus();
         return;
       case 'Enter':

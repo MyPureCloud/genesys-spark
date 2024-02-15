@@ -370,6 +370,19 @@ describe('gux-time-picker.service', () => {
         );
       });
     });
+
+    [
+      { locale: 'ar' },
+      { locale: 'ko' },
+      { locale: 'zh-cn' },
+      { locale: 'zh-tw' }
+    ].forEach(({ locale }: { locale: string }) => {
+      it(`should return "24h" for "${locale}" as the localization team specifically requested that`, async () => {
+        const element = document.createElement('div');
+        element.setAttribute('lang', locale);
+        expect(getLocaleClockType(element)).toEqual('24h');
+      });
+    });
   });
 
   describe('#incrementHour', () => {

@@ -29,15 +29,18 @@ export function getTimeDisplayValues(
 }
 
 export function getLocaleClockType(root: HTMLElement): GuxClockType {
-  const locale = getDesiredLocale(root);
+  const locale = getDesiredLocale(root).toLowerCase();
   const date = new Date('January 19, 1975 15:00:00 UTC+00:00');
   const time = new Intl.DateTimeFormat(locale, {
     timeStyle: 'short',
     timeZone: 'UTC'
   }).format(date);
 
-  // The localization team has requested that arabic uses the 24h clock.
-  if (locale.startsWith('ar')) {
+  // The localization team has requested that some locales be hardcoded to the 24h clock. https://inindca.atlassian.net/browse/LOCAL-9597
+  const localesSetTo24h = ['ar', 'ko', 'zh-cn', 'zh-tw'];
+  if (
+    localesSetTo24h.some(localeSetTo24h => locale.startsWith(localeSetTo24h))
+  ) {
     return '24h';
   }
 
