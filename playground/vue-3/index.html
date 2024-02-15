@@ -16,7 +16,7 @@
       src="https://dhqbrvplips7x.cloudfront.net/common-ui-docs/genesys-webcomponents/3.59.0-715/genesys-webcomponents/genesys-webcomponents.esm.js"
     ></script>
 
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue@^3.4.0"></script>
   </head>
 
   <body>
@@ -46,19 +46,72 @@
       </gux-form-field-dropdown>
 
       <gux-button v-on:click="toggleHasError">Toggle Has Error</gux-button>
+
+      <h3>Custom Search With Dynamic Rendering of Options</h3>
+      <gux-dropdown
+        filter-type="custom"
+        ref="customSearchDynamicRender"
+        @guxexpanded="openDropdown"
+        @guxcollapsed="closeDropdown"
+        @guxfilter="filterOptions"
+        v-model="customDropdownValue"
+      >
+        <gux-listbox>
+          <gux-option
+            v-for="option in optionElements"
+            :key="option.value"
+            :value="option.value"
+            >{{ option.name }}</gux-option
+          >
+        </gux-listbox>
+      </gux-dropdown>
     </div>
 
     <script>
-      var app = Vue.createApp({
+      const options = [
+        { value: 'a', name: 'Ant' },
+        { value: 'b', name: 'Bat' },
+        { value: 'c', name: 'Cat' },
+        { value: 'd', name: 'Dog' }
+      ];
+
+      let app = Vue.createApp({
         data() {
           return {
-            hasError: false
+            customDropdownValue: 'c', // set default dropdown value here
+            hasError: false,
+            optionElements: []
           };
         },
         methods: {
           toggleHasError: function () {
             this.hasError = !this.hasError;
+          },
+          // render options on open
+          openDropdown: function (_event) {
+            this.optionElements = options;
+          },
+          // de-render options on close except for one containing value
+          closeDropdown: function (_event) {
+            // this.customDropdownValue = this.$refs.customSearchDynamicRender.value;
+            this.optionElements = options.filter(
+              o => o.value === this.customDropdownValue
+            );
+          },
+          // optional custom filter, not needed if doing default filters or not doing a filterable dropdown. allows for api calls this way.
+          filterOptions: function (event) {
+            this.optionElements = options.filter(
+              o =>
+                o.value.startsWith(event.detail) ||
+                o.name.startsWith(event.detail)
+            );
           }
+        },
+        mounted() {
+          // sets starting rendered options to only the one containing value. renders nothing if value is empty
+          this.optionElements = options.filter(
+            o => o.value === this.customDropdownValue
+          );
         }
       });
 
