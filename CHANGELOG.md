@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.20.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.19.0...v4.20.0) (2024-02-15)
+
+
+### Features
+
+* **avatar:** basic avatar implementation: sizes and initials only ([#325](https://github.com/MyPureCloud/genesys-spark/issues/325)) ([6fa44c2](https://github.com/MyPureCloud/genesys-spark/commit/6fa44c256408dcacabc660a4329bcabf2f5dcb77))
+* **popover:** added press Escape to close functionality ([deffa40](https://github.com/MyPureCloud/genesys-spark/commit/deffa40216175c7379a7e3b6c19ffd2adb8e90e6))
+
 ## [4.19.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.18.0...v4.19.0) (2024-02-14)
 
 
