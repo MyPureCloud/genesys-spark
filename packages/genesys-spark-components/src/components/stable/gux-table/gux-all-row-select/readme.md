@@ -1,4 +1,4 @@
-# gux-row-select
+# gux-all-row-select
 
 
 
