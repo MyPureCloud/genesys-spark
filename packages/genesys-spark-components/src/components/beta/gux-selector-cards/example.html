@@ -1,0 +1,64 @@
+<!-- Proposed API closely alligned with the component API on Figma. -->
+
+<!-- Card group containing "Simple" cards & radio buttons -->
+<gux-selector-cards class="example1">
+  <gux-selector-card variant="simple">
+    <label slot="label" for="first">Chart</label>
+    <div slot="input"><input id="first" type="radio" name="example1" /></div>
+    <div slot="icon"><gux-icon /></div>
+  </gux-selector-card>
+
+  <gux-selector-card variant="simple">
+    <label slot="label" for="second">Text</label>
+    <div slot="input"><input id="second" type="radio" name="example1" /></div>
+    <div slot="icon"><gux-icon /></div>
+  </gux-selector-card>
+</gux-selector-cards>
+
+<!-- Card group containing "Descriptive" cards & radio buttons -->
+<gux-selector-cards class="example2">
+  <gux-selector-card variant="”descriptive”">
+    <label slot="label" for="first">Chart</label>
+    <div slot="input">
+      <input id="first" type="radio" name="example2" checked />
+    </div>
+    <div slot="icon"><gux-icon /></div>
+    <div slot="content">Description...</div>
+    <div slot="badge"><gux-badge /></div>
+  </gux-selector-card>
+
+  <gux-selector-card variant="”descriptive”">
+    <label slot="label" for="second">Text</label>
+    <div slot="input"><input id="second" type="radio" name="example2" /></div>
+    <div slot="icon"><gux-icon /></div>
+    <div slot="content">Description...</div>
+    <div slot="badge"><gux-badge /></div>
+  </gux-selector-card>
+</gux-selector-cards>
+
+<!-- Card group containing "Simple" cards & checkboxes, one checked & one disabled. -->
+<gux-selector-cards class="example3">
+  <gux-selector-card variant="simple">
+    <label slot="label" for="first">Chart</label>
+    <div slot="input">
+      <input id="first" type="checkbox" name="checkboxExample" />
+    </div>
+    <div slot="icon"><gux-icon /></div>
+  </gux-selector-card>
+
+  <gux-selector-card variant="simple">
+    <label slot="label" for="second">Text</label>
+    <div slot="input">
+      <input id="second" type="checkbox" name="checkboxExample" checked />
+    </div>
+    <div slot="icon"><gux-icon /></div>
+  </gux-selector-card>
+
+  <gux-selector-card variant="simple">
+    <label slot="label" for="third">Web content</label>
+    <div slot="input">
+      <input id="third" type="checkbox" name="checkboxExample" disabled />
+    </div>
+    <div slot="icon"><gux-icon /></div>
+  </gux-selector-card>
+</gux-selector-cards>
