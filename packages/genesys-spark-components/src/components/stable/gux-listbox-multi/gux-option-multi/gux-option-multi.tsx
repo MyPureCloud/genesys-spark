@@ -21,7 +21,8 @@ import translationResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-option-multi.less',
-  tag: 'gux-option-multi'
+  tag: 'gux-option-multi',
+  shadow: false
 })
 export class GuxOptionMulti {
   private truncateElement: HTMLGuxTruncateBetaElement;

@@ -1,6 +1,10 @@
 import { ListboxOptionElement } from './options/option-types';
 
-const validOptionTagNames = ['GUX-OPTION', 'GUX-OPTION-ICON'];
+const validOptionTagNames = [
+  'GUX-OPTION',
+  'GUX-OPTION-ICON',
+  'GUX-OPTION-MULTI'
+];
 
 export function getListOptions(
   list: HTMLGuxListboxElement
@@ -46,7 +50,6 @@ function setActiveOption(
     getListOptions(list).forEach(option => {
       const active = isSelectableOption(option) && option === element;
       option.active = active;
-
       if (active) {
         list.setAttribute('aria-activedescendant', option.id);
       }
@@ -108,7 +111,7 @@ function getLastOption(list: HTMLGuxListboxElement): ListboxOptionElement {
   return lastOption;
 }
 
-function hasActiveOption(list: HTMLGuxListboxElement): boolean {
+export function hasActiveOption(list: HTMLGuxListboxElement): boolean {
   return Boolean(getActiveOption(list));
 }
 

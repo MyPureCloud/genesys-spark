@@ -22,7 +22,10 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
 
-import { getSearchOption } from '../../stable/gux-listbox/gux-listbox.service';
+import {
+  getSearchOption,
+  setInitialActiveOption
+} from '../../stable/gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../../stable/gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
 /**
@@ -191,6 +194,7 @@ export class GuxDropdownMulti {
         if (this.activeElementNotListbox()) {
           event.preventDefault();
           this.expanded = true;
+          setInitialActiveOption(this.listboxElement);
         }
         return;
       case 'Enter':
@@ -409,7 +413,9 @@ export class GuxDropdownMulti {
     switch (event.key) {
       case 'ArrowDown':
         event.stopImmediatePropagation();
+        event.preventDefault();
         this.listboxElement.focus();
+        setInitialActiveOption(this.listboxElement);
         return;
     }
   }

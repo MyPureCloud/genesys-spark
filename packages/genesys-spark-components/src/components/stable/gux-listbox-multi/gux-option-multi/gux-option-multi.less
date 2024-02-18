@@ -1,5 +1,6 @@
 @import (reference) '../../../../style/color.less';
 @import (reference) '../../../../style/typography.less';
+@import (reference) '../../../../style/focus.less';
 
 @gux-icon-checkbox-unchecked: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' viewBox='1 1 13 13'%3E%3Cpath d='M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z' fill='%23596373' /%3E%3C/svg%3E");
 @gux-icon-checkbox-unchecked-hover: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' viewBox='1 1 13 13'%3E%3Cpath d='M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z' fill='none' /%3E%3C/svg%3E");
@@ -34,13 +35,19 @@ gux-option-multi {
     opacity: 0.5;
   }
 
+  &.gux-active {
+    .gux-focus-ring();
+
+    border-radius: 4px;
+    outline-offset: -2px;
+  }
+
   &.gux-selected {
     .gux-checkbox-container::before {
       background-image: @gux-icon-checkbox-checked;
     }
   }
 
-  &.gux-active,
   &.gux-hovered:not([disabled]) {
     color: @gux-grey-100;
     background: @gux-blue-60;
