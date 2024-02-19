@@ -187,7 +187,7 @@
       },
       "initials": {
         "fontFamily": "Urbanist",
-        "lineHeight": "44px",
+        "lineHeight": 1,
         "fontSize": "36px",
         "fontWeight": 600
       },
@@ -219,7 +219,7 @@
       },
       "initials": {
         "fontFamily": "Urbanist",
-        "lineHeight": "27px",
+        "lineHeight": 1,
         "fontSize": "18px",
         "fontWeight": 600
       },
@@ -240,7 +240,7 @@
       },
       "initials": {
         "fontFamily": "Urbanist",
-        "lineHeight": "18px",
+        "lineHeight": 1,
         "fontSize": "12px",
         "fontWeight": 600
       },
@@ -261,7 +261,7 @@
       },
       "initials": {
         "fontFamily": "Urbanist",
-        "lineHeight": "16px",
+        "lineHeight": 1,
         "fontSize": "8px",
         "fontWeight": 600
       },
