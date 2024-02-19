@@ -4,7 +4,11 @@ exports[`gux-avatar #render component with image 1`] = `
 <gux-avatar-beta name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-large">
-      <slot name="image"></slot>
+      <slot name="image">
+        <abbr title="John Doe">
+          JD
+        </abbr>
+      </slot>
     </div>
   </mock:shadow-root>
   <img alt="John Doe Image" slot="image" src="https://i.pravatar.cc/300">

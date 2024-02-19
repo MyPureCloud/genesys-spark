@@ -79,9 +79,7 @@ export class GuxAvatar {
         }}
       >
         <slot name="image">
-          {!this.root.querySelector('[slot="image"]') && (
-            <abbr title={this.name}>{this.generateInitials()}</abbr>
-          )}
+          <abbr title={this.name}>{this.generateInitials()}</abbr>
         </slot>
       </div>
     ) as JSX.Element;
