@@ -63,5 +63,22 @@ describe('gux-avatar', () => {
         await a11yCheck(page);
       });
     });
+
+    [
+      'available',
+      'busy',
+      'away',
+      'on-queue',
+      'offline',
+      'out-of-office',
+      'invalid-presence'
+    ].forEach(presence => {
+      it(`should be accessible when presence is "${presence}"`, async () => {
+        const html = `<gux-avatar-beta name="John Doe" has-badge presence="${presence}" presence-ring></gux-avatar-beta>`;
+        const page = await newSparkE2EPage({ html });
+
+        await a11yCheck(page);
+      });
+    });
   });
 });

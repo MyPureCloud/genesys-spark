@@ -15,105 +15,287 @@
 
 .gux-avatar {
   position: relative;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--gse-ui-avatar-large-content-size);
-  height: var(--gse-ui-avatar-large-content-size);
+  width: var(--gse-ui-avatar-large-size);
+  height: var(--gse-ui-avatar-large-size);
   overflow: hidden;
-  font-family: var(--gse-ui-avatar-large-initials-fontFamily);
-  font-size: var(--gse-ui-avatar-large-initials-fontSize);
-  font-weight: var(--gse-ui-avatar-large-initials-fontWeight);
-  line-height: var(--gse-core-lineHeight-matchFontSize);
-  color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-  text-transform: uppercase;
-  background-color: var(--gse-ui-avatar-media-initialsBackground-default);
   border-radius: 50%;
 
-  &.gux-accent-1 {
+  .gux-content {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
+    height: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
+    margin: var(--gse-ui-avatar-large-presenceRing-width);
+    overflow: hidden;
+    font-family: var(--gse-ui-avatar-large-initials-fontFamily);
+    font-size: var(--gse-ui-avatar-large-initials-fontSize);
+    font-weight: var(--gse-ui-avatar-large-initials-fontWeight);
+    line-height: var(--gse-core-lineHeight-matchFontSize);
     color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent1);
-  }
-
-  &.gux-accent-2 {
-    color: var(--gse-ui-avatar-media-initialsForeground-default);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent2);
-  }
-
-  &.gux-accent-3 {
-    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent3);
-  }
-
-  &.gux-accent-4 {
-    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent4);
-  }
-
-  &.gux-accent-5 {
-    color: var(--gse-ui-avatar-media-initialsForeground-default);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent5);
-  }
-
-  &.gux-accent-6 {
-    color: var(--gse-ui-avatar-media-initialsForeground-default);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent6);
-  }
-
-  &.gux-accent-7 {
-    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent7);
-  }
-
-  &.gux-accent-8 {
-    color: var(--gse-ui-avatar-media-initialsForeground-default);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent8);
-  }
-
-  &.gux-accent-9 {
-    color: var(--gse-ui-avatar-media-initialsForeground-default);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent9);
-  }
-
-  &.gux-accent-10 {
-    color: var(--gse-ui-avatar-media-initialsForeground-default);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent10);
-  }
-
-  &.gux-accent-11 {
-    color: var(--gse-ui-avatar-media-initialsForeground-default);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent11);
-  }
-
-  &.gux-accent-12 {
-    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-    background-color: var(--gse-ui-avatar-media-initialsBackground-accent12);
-  }
-
-  &.gux-accent-inherit {
-    color: inherit;
-    background-color: inherit;
+    text-transform: uppercase;
+    background-color: var(--gse-ui-avatar-media-initialsBackground-default);
+    border: var(--gse-ui-avatar-content-large-border-width)
+      var(--gse-ui-avatar-content-default-border-style)
+      var(--gse-ui-avatar-content-default-border-color);
+    border-radius: 50%;
   }
 
   &.gux-medium {
-    width: var(--gse-ui-avatar-medium-content-size);
-    height: var(--gse-ui-avatar-medium-content-size);
-    font-size: var(--gse-ui-avatar-medium-initials-fontSize);
-    font-weight: var(--gse-ui-avatar-medium-initials-fontWeight);
+    width: var(--gse-ui-avatar-medium-size);
+    height: var(--gse-ui-avatar-medium-size);
+
+    & .gux-content {
+      width: calc(100% - var(--gse-ui-avatar-medium-presenceRing-width) * 2);
+      height: calc(100% - var(--gse-ui-avatar-medium-presenceRing-width) * 2);
+      margin: var(--gse-ui-avatar-medium-presenceRing-width);
+      font-size: var(--gse-ui-avatar-medium-initials-fontSize);
+      font-weight: var(--gse-ui-avatar-medium-initials-fontWeight);
+    }
   }
 
   &.gux-small {
-    width: var(--gse-ui-avatar-small-content-size);
-    height: var(--gse-ui-avatar-small-content-size);
-    font-size: var(--gse-ui-avatar-small-initials-fontSize);
-    font-weight: var(--gse-ui-avatar-small-initials-fontWeight);
+    width: var(--gse-ui-avatar-small-size);
+    height: var(--gse-ui-avatar-small-size);
+
+    & .gux-content {
+      width: calc(100% - var(--gse-ui-avatar-small-presenceRing-width) * 2);
+      height: calc(100% - var(--gse-ui-avatar-small-presenceRing-width) * 2);
+      margin: var(--gse-ui-avatar-small-presenceRing-width);
+      font-size: var(--gse-ui-avatar-small-initials-fontSize);
+      font-weight: var(--gse-ui-avatar-small-initials-fontWeight);
+    }
   }
 
   &.gux-xsmall {
-    width: var(--gse-ui-avatar-xsmall-content-size);
-    height: var(--gse-ui-avatar-xsmall-content-size);
-    font-size: var(--gse-ui-avatar-xsmall-initials-fontSize);
-    font-weight: var(--gse-ui-avatar-xsmall-initials-fontWeight);
+    width: var(--gse-ui-avatar-xsmall-size);
+    height: var(--gse-ui-avatar-xsmall-size);
+
+    & .gux-content {
+      width: calc(100% - var(--gse-ui-avatar-xsmall-presenceRing-width) * 2);
+      height: calc(100% - var(--gse-ui-avatar-xsmall-presenceRing-width) * 2);
+      margin: var(--gse-ui-avatar-xsmall-presenceRing-width);
+      font-size: var(--gse-ui-avatar-xsmall-initials-fontSize);
+      font-weight: var(--gse-ui-avatar-xsmall-initials-fontWeight);
+    }
+  }
+
+  &.gux-accent-1 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent1);
+    }
+  }
+
+  &.gux-accent-2 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent2);
+    }
+  }
+
+  &.gux-accent-3 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent3);
+    }
+  }
+
+  &.gux-accent-4 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent4);
+    }
+  }
+
+  &.gux-accent-5 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent5);
+    }
+  }
+
+  &.gux-accent-6 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent6);
+    }
+  }
+
+  &.gux-accent-7 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent7);
+    }
+  }
+
+  &.gux-accent-8 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent8);
+    }
+  }
+
+  &.gux-accent-9 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent9);
+    }
+  }
+
+  &.gux-accent-10 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent10);
+    }
+  }
+
+  &.gux-accent-11 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent11);
+    }
+  }
+
+  &.gux-accent-12 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent12);
+    }
+  }
+
+  &.gux-accent-inherit {
+    .gux-content {
+      color: inherit;
+      background-color: inherit;
+    }
+  }
+
+  &.gux-presence-ring {
+    &.available {
+      background: var(--gse-ui-avatar-presenceRing-available);
+    }
+
+    &.away {
+      background: var(--gse-ui-avatar-presenceRing-away);
+    }
+
+    &.busy {
+      background: var(--gse-ui-avatar-presenceRing-busy);
+    }
+
+    &.notifications {
+      background: var(--gse-ui-avatar-presenceRing-notifications);
+    }
+
+    &.offline {
+      background: var(--gse-ui-avatar-presenceRing-offline);
+    }
+
+    &.out-of-office {
+      background: var(--gse-ui-avatar-presenceRing-outOfOffice);
+    }
+
+    &.on-queue {
+      background: var(--gse-ui-avatar-presenceRing-onQueue);
+    }
+  }
+}
+
+.gux-avatar-badge {
+  position: absolute;
+  top: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
+  right: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--gse-ui-avatar-large-badge-size);
+  height: var(--gse-ui-avatar-large-badge-size);
+  border-color: var(--gse-ui-avatar-content-default-border-color);
+  border-style: var(--gse-ui-avatar-content-default-border-style);
+  border-width: var(--gse-ui-avatar-content-large-border-width);
+  border-radius: 50%;
+
+  &.gux-medium {
+    top: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
+    right: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
+    width: var(--gse-ui-avatar-medium-badge-size);
+    height: var(--gse-ui-avatar-medium-badge-size);
+    border-width: var(--gse-ui-avatar-content-default-border-width);
+  }
+
+  &.gux-small,
+  &.gux-xsmall {
+    top: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
+    right: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
+    width: var(--gse-ui-avatar-small-badge-size);
+    height: var(--gse-ui-avatar-small-badge-size);
+    border-width: var(--gse-ui-avatar-content-default-border-width);
+  }
+
+  &.available {
+    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+
+    & gux-icon {
+      color: var(--gse-ui-avatar-badge-available-color);
+    }
+  }
+
+  &.away {
+    background-color: var(--gse-ui-avatar-badge-away);
+
+    & gux-icon {
+      margin: var(--gse-ui-avatar-badge-away-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDark-color);
+    }
+  }
+
+  &.busy {
+    background-color: var(--gse-ui-avatar-badge-busy-color);
+
+    & gux-icon {
+      margin: var(--gse-ui-avatar-badge-busy-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+    }
+  }
+
+  &.notifications {
+    background-color: var(--gse-ui-avatar-badge-notification-color);
+
+    & gux-icon {
+      margin: var(--gse-ui-avatar-badge-notifications-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+    }
+  }
+
+  &.offline {
+    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+
+    & gux-icon {
+      color: var(--gse-ui-avatar-badge-offline-color);
+    }
+  }
+
+  &.out-of-office {
+    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+
+    & gux-icon {
+      color: var(--gse-ui-avatar-badge-outOfOffice);
+    }
+  }
+
+  &.on-queue {
+    background-color: var(--gse-ui-avatar-badge-onQueue-color);
+
+    & gux-icon {
+      margin: var(--gse-ui-avatar-badge-queue-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+    }
+  }
+
+  & gux-icon {
+    width: 100%;
+    height: 100%;
   }
 }
