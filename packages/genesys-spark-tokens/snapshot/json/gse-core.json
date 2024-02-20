@@ -116,7 +116,8 @@
     "md": "24px",
     "lg": "27px",
     "xl": "32px",
-    "2xl": "44px"
+    "2xl": "44px",
+    "match_font_size": 1
   },
   "typography": {
     "body": {
