@@ -24,7 +24,8 @@ import {
   setInitialActiveOption,
   setLastOptionActive,
   setNextOptionActive,
-  setPreviousOptionActive
+  setPreviousOptionActive,
+  hasActiveOption
 } from '../gux-listbox/gux-listbox.service';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
@@ -98,6 +99,11 @@ export class GuxListboxMulti {
 
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
+    if (!hasActiveOption(this.root)) {
+      event.preventDefault();
+      setInitialActiveOption(this.root);
+      return;
+    }
     switch (event.key) {
       case 'Enter':
         event.preventDefault();
@@ -232,7 +238,6 @@ export class GuxListboxMulti {
   private updateOnSlotChange(): void {
     this.setListboxOptions();
     this.updateListboxOptions();
-    setInitialActiveOption(this.root);
   }
 
   private getOptionCreateElement(): void {
