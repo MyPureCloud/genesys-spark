@@ -287,6 +287,7 @@ export type GuxIconIconName =
   | 'fa/ranking-star-regular'
   | 'fa/rectangle-list-regular'
   | 'fa/regular-display-slash'
+  | 'fa/regular-language-slash'
   | 'fa/regular-user-circle-arrow-left'
   | 'fa/reply-regular'
   | 'fa/right-to-bracket-regular'

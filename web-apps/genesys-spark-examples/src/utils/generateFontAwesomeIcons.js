@@ -139,6 +139,7 @@ const icons = [
       'fa/ranking-star-regular',
       'fa/rectangle-list-regular',
       'fa/regular-display-slash',
+      'fa/regular-language-slash',
       'fa/reply-regular',
       'fa/right-to-bracket-regular',
       'fa/road-regular',
