@@ -131,6 +131,15 @@ describe('gux-avatar', () => {
       });
     });
 
+    describe('#render notification badge', () => {
+      it('should render notification badge', async () => {
+        const html = `<gux-avatar-beta has-badge has-notifications name="John Doe"></gux-avatar-beta>`;
+        const page = await newSpecPage({ components: [GuxAvatar], html });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
     describe('#render presence ring', () => {
       it('should render presence ring', async () => {
         const html = `<gux-avatar-beta presence-ring name="John Doe"></gux-avatar-beta>`;

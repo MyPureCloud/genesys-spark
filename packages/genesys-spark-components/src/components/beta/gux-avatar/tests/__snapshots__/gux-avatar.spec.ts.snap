@@ -97,6 +97,25 @@ exports[`gux-avatar #render component with name type (5) for valid markup 1`] = 
 </gux-avatar-beta>
 `;
 
+exports[`gux-avatar #render different accents #render notification badge should render notification badge 1`] = `
+<gux-avatar-beta has-badge="" has-notifications="" name="John Doe">
+  <mock:shadow-root>
+    <div class="available gux-accent-default gux-avatar gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large notifications">
+      <gux-icon icon-name="fa/bell-regular" screenreader-text="Notifications"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
 exports[`gux-avatar #render different accents #render presence ring should render presence ring 1`] = `
 <gux-avatar-beta name="John Doe" presence-ring="">
   <mock:shadow-root>
