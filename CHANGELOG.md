@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.21.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.20.2...v4.21.0) (2024-02-21)
+
+
+### Features
+
+* **avatar:** add accent styles ([#330](https://github.com/MyPureCloud/genesys-spark/issues/330)) ([65264f8](https://github.com/MyPureCloud/genesys-spark/commit/65264f803a0d54a111801582f3500ade4c6ef818))
+* **icon:** add regular-language-slash icon v4 ([#341](https://github.com/MyPureCloud/genesys-spark/issues/341)) ([efc3b8a](https://github.com/MyPureCloud/genesys-spark/commit/efc3b8a4e6ff3f04d06c11398ec9bb2c34ef5d4e))
+
+
+### Bug Fixes
+
+* **calendar-beta:** when date selected it will select day before ([45c8fa6](https://github.com/MyPureCloud/genesys-spark/commit/45c8fa639aa273590406d9a139714868ee091de8))
+
 ### [4.20.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.20.1...v4.20.2) (2024-02-17)
 
 ### [4.20.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.20.0...v4.20.1) (2024-02-16)
