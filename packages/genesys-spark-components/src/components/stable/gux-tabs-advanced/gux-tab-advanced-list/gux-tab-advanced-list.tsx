@@ -621,10 +621,10 @@ export class GuxTabAdvancedList {
                     this.disableAddTabButton
                       ? this.i18n('disableNewTab')
                       : this.root.querySelector('[slot="add-tab"]')
-                      ? this.root
-                          .querySelector('[slot="add-tab"]')
-                          .textContent.trim()
-                      : this.i18n('createNewTab')
+                        ? this.root
+                            .querySelector('[slot="add-tab"]')
+                            .textContent.trim()
+                        : this.i18n('createNewTab')
                   }
                 ></gux-icon>
               </slot>
