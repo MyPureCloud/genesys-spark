@@ -1,7 +1,6 @@
 import { CalendarModes } from '../../../common-enums';
 
 import { GuxDatepickerIntervalRange } from './gux-datepicker.types';
-import * as sparkIntl from '../../../genesys-spark-utils/intl';
 
 export function getCalendarLabels(
   labelString: string,
@@ -187,38 +186,4 @@ export function getIntervalRange(
   const selectionEnd = format.lastIndexOf(intervalLetter) + 1;
 
   return { selectionStart, selectionEnd };
-}
-
-export function getFormat(component: HTMLElement): string {
-  const fixedDate = new Date('December 31, 2000 15:00:00 UTC+00:00');
-  const localizedFixedDate = sparkIntl
-    .dateTimeFormat(sparkIntl.determineDisplayLocale(component), {
-      year: 'numeric',
-      month: 'numeric',
-      day: 'numeric'
-    })
-    .format(fixedDate);
-  const fixedDay = sparkIntl
-    .dateTimeFormat(sparkIntl.determineDisplayLocale(component), {
-      day: 'numeric'
-    })
-    .format(fixedDate)
-    .match(/(\d+)/)[0];
-  const fixedMonth = sparkIntl
-    .dateTimeFormat(sparkIntl.determineDisplayLocale(component), {
-      month: 'numeric'
-    })
-    .format(fixedDate)
-    .match(/(\d+)/)[0];
-  const fixedYear = sparkIntl
-    .dateTimeFormat(sparkIntl.determineDisplayLocale(component), {
-      year: 'numeric'
-    })
-    .format(fixedDate)
-    .match(/(\d+)/)[0];
-
-  return localizedFixedDate
-    .replace(fixedDay, 'dd')
-    .replace(fixedMonth, 'mm')
-    .replace(fixedYear, 'yyyy');
 }
