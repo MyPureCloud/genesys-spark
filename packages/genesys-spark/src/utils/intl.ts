@@ -7,6 +7,7 @@
  * @param options options to pass to the Intl.DateTimeFormat constructor
  * @returns a new DateTimeFormat
  */
+import { closestPassShadow } from './get-closest-element';
 export function dateTimeFormat(
   localeOrOptions: string | Intl.DateTimeFormatOptions,
   options?: Intl.DateTimeFormatOptions
@@ -53,28 +54,6 @@ export function relativeTimeFormat(
   }
 }
 
-function closestPassShadow(
-  node: Element | ParentNode | null,
-  selector: string
-): HTMLElement | null {
-  if (!node) {
-    return null;
-  }
-
-  if (node instanceof ShadowRoot) {
-    return closestPassShadow(node.host, selector);
-  }
-
-  if (node instanceof HTMLElement) {
-    if (node.matches(selector)) {
-      return node;
-    } else {
-      return closestPassShadow(node.parentNode, selector);
-    }
-  }
-
-  return closestPassShadow(node.parentNode, selector);
-}
 /**
  * Makes a best effort to return the locale that should be used for a given element
  * by checking language tags on ancestors. If no element is provided, it will
