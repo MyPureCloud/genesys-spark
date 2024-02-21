@@ -3,7 +3,8 @@ import { ListboxOptionElement } from './options/option-types';
 const validOptionTagNames = [
   'GUX-OPTION',
   'GUX-OPTION-ICON',
-  'GUX-OPTION-MULTI'
+  'GUX-OPTION-MULTI',
+  'GUX-CREATE-OPTION'
 ];
 
 export function getListOptions(
