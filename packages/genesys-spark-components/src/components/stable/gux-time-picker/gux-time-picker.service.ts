@@ -1,4 +1,6 @@
 import { getDesiredLocale } from '../../../i18n';
+import * as sparkIntl from '../../../genesys-spark-utils/intl';
+import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
 
 import {
   GuxClockType,
@@ -29,7 +31,12 @@ export function getTimeDisplayValues(
 }
 
 export function getLocaleClockType(root: HTMLElement): GuxClockType {
-  const locale = getDesiredLocale(root).toLowerCase();
+  let locale: string;
+  if (readRegionalDatesCookie()) {
+    locale = sparkIntl.determineDisplayLocale(root).toLowerCase();
+  } else {
+    locale = getDesiredLocale(root).toLowerCase();
+  }
   const date = new Date('January 19, 1975 15:00:00 UTC+00:00');
   const time = new Intl.DateTimeFormat(locale, {
     timeStyle: 'short',
