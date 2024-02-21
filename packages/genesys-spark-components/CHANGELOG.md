@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.120.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.119.0...v3.120.0) (2024-02-21)
+
+
+### Features
+
+* **icon:** add regular-language-slash icon ([#343](https://github.com/MyPureCloud/genesys-spark/issues/343)) ([bbf26e6](https://github.com/MyPureCloud/genesys-spark/commit/bbf26e63626879a3561c335830d1657b287a8e89))
+
+
+### Bug Fixes
+
+* **dropdown-multi:** elements cannot be navigated with keyboard ([ef4eae5](https://github.com/MyPureCloud/genesys-spark/commit/ef4eae50048b4bdcfb196bec8a9f0df0424ebad6))
+
 ## [3.119.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.118.1...v3.119.0) (2024-02-15)
 
 
