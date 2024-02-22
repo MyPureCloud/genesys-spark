@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.120.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.120.0...v3.120.1) (2024-02-22)
+
+
+### Bug Fixes
+
+* **backport:** backporting some bug fixes from v4 ([13402e5](https://github.com/MyPureCloud/genesys-spark/commit/13402e56855eaa30fda51caa9b275b13bf0d3fa6))
+* **time-picker-beta:** aM/PM button does not inherit visibility css property when set on component ([bf24edc](https://github.com/MyPureCloud/genesys-spark/commit/bf24edc8d5e16cfac5fb1d70ae43d39d26999167))
+
 ## [3.120.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.119.0...v3.120.0) (2024-02-21)
 
 
