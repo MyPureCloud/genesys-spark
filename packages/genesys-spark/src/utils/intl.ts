@@ -114,5 +114,6 @@ export function getFormat(locale: string): string {
       }
     })
     .join('');
-  return dateString.replace(/\s/g, '');
+  // review locales with two character date delimiters https://inindca.atlassian.net/browse/COMUI-2679
+  return dateString.replace(/\s/g, '').replace(/‏/g, '');
 }
