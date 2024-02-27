@@ -68,6 +68,12 @@ export class GuxTooltipBase {
   @Prop({ mutable: true })
   placement: Placement = 'bottom-start';
 
+  @Prop({ mutable: true })
+  offsetX: number = 0;
+
+  @Prop({ mutable: true })
+  offsetY: number = 0;
+
   @Prop()
   accent: GuxTooltipAccent = 'light';
 
@@ -102,6 +108,8 @@ export class GuxTooltipBase {
     this.hide();
   }
 
+  @Watch('offsetX')
+  @Watch('offsetY')
   private runUpdatePosition(): void {
     this.cleanupUpdatePosition = autoUpdate(
       this.forElement,
@@ -125,8 +133,8 @@ export class GuxTooltipBase {
       middleware: middleware
     }).then(({ x, y, middlewareData }) => {
       Object.assign(this.root.style, {
-        left: `${x}px`,
-        top: `${y}px`,
+        left: `${x + this.offsetX}px`,
+        top: `${y - this.offsetY}px`,
         visibility: middlewareData.hide?.referenceHidden ? 'hidden' : 'visible'
       });
       //data-placement needed on the for e2e tests.
