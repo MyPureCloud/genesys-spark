@@ -1,4 +1,4 @@
-import { Component, h, JSX, Prop, Element, Fragment } from '@stencil/core';
+import { Component, h, JSX, Prop, Element } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
 import {
@@ -41,10 +41,17 @@ export class GuxAvatar {
   accent: GuxAvatarAccent = 'default';
 
   /**
-   * Shows presence such as away or available
+   * Shows presence such as away or available.
+   * Must be combined with presenceBadge or presenceRing props to take effect.
    */
   @Prop()
   presence: GuxAvatarPresence = 'available';
+
+  /**
+   * Text override for presence name
+   */
+  @Prop()
+  subPresence: string;
 
   /**
    * Shows a presence ring around the avatar
@@ -56,13 +63,13 @@ export class GuxAvatar {
    * Shows a presence badge
    */
   @Prop()
-  hasBadge: boolean = false;
+  presenceBadge: boolean = false;
 
   /**
    * Override the presence badge with a notification icon
    */
   @Prop()
-  hasNotifications: boolean = false;
+  notifications: boolean = false;
 
   private generateInitials(): string {
     const nameArray = this.name?.split(' ') ?? [];
@@ -94,21 +101,18 @@ export class GuxAvatar {
   }
 
   private renderBadge(): JSX.Element | null {
-    if (this.hasNotifications) {
+    if (this.notifications) {
       return this.renderNotificationsBadge();
-    } else if (this.hasBadge) {
+    } else if (this.presenceBadge) {
       return (
         <div
           class={{
             'gux-avatar-badge': true,
-            [`${this.presence}`]: true,
+            [`gux-${this.presence}`]: true,
             [`gux-${this.size}`]: true
           }}
         >
-          <gux-icon
-            icon-name={this.getPresenceIcon(this.presence)}
-            screenreader-text={this.i18n(this.presence)}
-          ></gux-icon>
+          <gux-icon icon-name={this.getPresenceIcon(this.presence)}></gux-icon>
         </div>
       ) as JSX.Element;
     }
@@ -118,14 +122,11 @@ export class GuxAvatar {
     return (
       <div
         class={{
-          'gux-avatar-badge notifications': true,
+          'gux-avatar-badge gux-notifications': true,
           [`gux-${this.size}`]: true
         }}
       >
-        <gux-icon
-          icon-name="fa/bell-regular"
-          screenreader-text={this.i18n('notifications')}
-        ></gux-icon>
+        <gux-icon icon-name="fa/bell-regular"></gux-icon>
       </div>
     ) as JSX.Element;
   }
@@ -149,6 +150,12 @@ export class GuxAvatar {
     }
   }
 
+  private getDescriptionText(): string {
+    if (!this.presenceRing && !this.presenceBadge) return this.name;
+    if (this.subPresence) return `${this.name} (${this.subPresence})`;
+    return `${this.name} (${this.i18n(this.presence)})`;
+  }
+
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.size });
     this.i18n = await buildI18nForComponent(this.root, defaultResources);
@@ -159,25 +166,25 @@ export class GuxAvatar {
   }
 
   render(): JSX.Element {
-    return (
-      <Fragment>
-        <div
-          class={{
-            'gux-avatar': true,
-            [`${this.presence}`]: true,
-            [`gux-${this.size}`]: true,
-            'gux-presence-ring': this.presenceRing,
-            [`gux-accent-${this.getAccent()}`]: true
-          }}
-        >
-          <div class="gux-content">
-            <slot name="image">
-              <abbr title={this.name}>{this.generateInitials()}</abbr>
-            </slot>
-          </div>
+    return [
+      <div
+        class={{
+          'gux-avatar': true,
+          [`gux-${this.presence}`]: this.presenceRing || this.presenceBadge,
+          [`gux-${this.size}`]: true,
+          'gux-presence-ring': this.presenceRing,
+          [`gux-accent-${this.getAccent()}`]: true
+        }}
+      >
+        <div class="gux-content">
+          <slot name="image">
+            <abbr title={this.getDescriptionText()}>
+              {this.generateInitials()}
+            </abbr>
+          </slot>
         </div>
-        {this.renderBadge()}
-      </Fragment>
-    ) as JSX.Element;
+      </div>,
+      this.renderBadge()
+    ] as JSX.Element;
   }
 }

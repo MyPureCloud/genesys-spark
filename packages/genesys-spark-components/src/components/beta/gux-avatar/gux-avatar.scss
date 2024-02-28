@@ -55,6 +55,14 @@
     }
   }
 
+  &.gux-medium,
+  &.gux-small,
+  &.gux-xsmall {
+    & .gux-content {
+      border-width: var(--gse-ui-avatar-content-default-border-width);
+    }
+  }
+
   &.gux-small {
     width: var(--gse-ui-avatar-small-size);
     height: var(--gse-ui-avatar-small-size);
@@ -173,31 +181,31 @@
   }
 
   &.gux-presence-ring {
-    &.available {
+    &.gux-available {
       background: var(--gse-ui-avatar-presenceRing-available);
     }
 
-    &.away {
+    &.gux-away {
       background: var(--gse-ui-avatar-presenceRing-away);
     }
 
-    &.busy {
+    &.gux-busy {
       background: var(--gse-ui-avatar-presenceRing-busy);
     }
 
-    &.notifications {
+    &.gux-notifications {
       background: var(--gse-ui-avatar-presenceRing-notifications);
     }
 
-    &.offline {
+    &.gux-offline {
       background: var(--gse-ui-avatar-presenceRing-offline);
     }
 
-    &.out-of-office {
+    &.gux-out-of-office {
       background: var(--gse-ui-avatar-presenceRing-outOfOffice);
     }
 
-    &.on-queue {
+    &.gux-on-queue {
       background: var(--gse-ui-avatar-presenceRing-onQueue);
     }
   }
@@ -232,17 +240,26 @@
     width: var(--gse-ui-avatar-small-badge-size);
     height: var(--gse-ui-avatar-small-badge-size);
     border-width: var(--gse-ui-avatar-content-default-border-width);
+
+    & gux-icon {
+      display: none;
+    }
   }
 
-  &.available {
+  &.gux-available {
     background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+
+    &.gux-small,
+    &.gux-xsmall {
+      background-color: var(--gse-ui-avatar-badge-available-color);
+    }
 
     & gux-icon {
       color: var(--gse-ui-avatar-badge-available-color);
     }
   }
 
-  &.away {
+  &.gux-away {
     background-color: var(--gse-ui-avatar-badge-away);
 
     & gux-icon {
@@ -251,7 +268,7 @@
     }
   }
 
-  &.busy {
+  &.gux-busy {
     background-color: var(--gse-ui-avatar-badge-busy-color);
 
     & gux-icon {
@@ -260,7 +277,7 @@
     }
   }
 
-  &.notifications {
+  &.gux-notifications {
     background-color: var(--gse-ui-avatar-badge-notification-color);
 
     & gux-icon {
@@ -269,23 +286,33 @@
     }
   }
 
-  &.offline {
+  &.gux-offline {
     background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+
+    &.gux-small,
+    &.gux-xsmall {
+      background-color: var(--gse-ui-avatar-badge-offline-color);
+    }
 
     & gux-icon {
       color: var(--gse-ui-avatar-badge-offline-color);
     }
   }
 
-  &.out-of-office {
+  &.gux-out-of-office {
     background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+
+    &.gux-small,
+    &.gux-xsmall {
+      background-color: var(--gse-ui-avatar-badge-outOfOffice);
+    }
 
     & gux-icon {
       color: var(--gse-ui-avatar-badge-outOfOffice);
     }
   }
 
-  &.on-queue {
+  &.gux-on-queue {
     background-color: var(--gse-ui-avatar-badge-onQueue-color);
 
     & gux-icon {
