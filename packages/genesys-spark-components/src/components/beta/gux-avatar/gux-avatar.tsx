@@ -103,7 +103,7 @@ export class GuxAvatar {
   private renderBadge(): JSX.Element | null {
     if (this.notifications) {
       return this.renderNotificationsBadge();
-    } else if (this.badge) {
+    } else if (this.badge && this.presence !== 'idle') {
       return (
         <div
           class={{
@@ -136,8 +136,12 @@ export class GuxAvatar {
       case 'available':
         return 'fa/circle-check-solid';
       case 'busy':
+      case 'meeting':
         return 'fa/ban-outline';
       case 'away':
+      case 'break':
+      case 'meal':
+      case 'training':
         return 'fa/clock-outline';
       case 'on-queue':
         return 'fa/headset-solid';
@@ -151,9 +155,10 @@ export class GuxAvatar {
   }
 
   private getDescriptionText(): string {
-    if (!this.ring && !this.badge) return this.name;
+    if (this.notifications)
+      return `${this.name} (${this.i18n('notifications')})`;
     if (this.label) return `${this.name} (${this.label})`;
-    return `${this.name} (${this.i18n(this.presence)})`;
+    return `${this.name}`;
   }
 
   async componentWillLoad(): Promise<void> {
@@ -178,7 +183,10 @@ export class GuxAvatar {
       >
         <div class="gux-content">
           <slot name="image">
-            <abbr title={this.getDescriptionText()}>
+            <abbr
+              title={this.getDescriptionText()}
+              aria-label={this.getDescriptionText()}
+            >
               {this.generateInitials()}
             </abbr>
           </slot>

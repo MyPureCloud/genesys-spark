@@ -1,13 +1,3 @@
 {
-  "available": "Available",
-  "away": "Away",
-  "busy": "Busy",
-  "idle": "Idle",
-  "meal": "Meal",
-  "meeting": "Meeting",
-  "notifications": "Notifications",
-  "offline": "Offline",
-  "on-queue": "On Queue",
-  "out-of-office": "Out of Office",
-  "training": "Training"
+  "notifications": "Notifications"
 }

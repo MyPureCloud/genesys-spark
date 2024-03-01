@@ -6,7 +6,7 @@ exports[`gux-avatar #render component with image 1`] = `
     <div class="gux-accent-default gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -23,7 +23,7 @@ exports[`gux-avatar #render component with name type (1) for valid markup 1`] = 
     <div class="gux-accent-default gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -39,7 +39,7 @@ exports[`gux-avatar #render component with name type (2) for valid markup 1`] = 
     <div class="gux-accent-default gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="JohnDoe">
+          <abbr aria-label="JohnDoe" title="JohnDoe">
             Jo
           </abbr>
         </slot>
@@ -55,7 +55,7 @@ exports[`gux-avatar #render component with name type (3) for valid markup 1`] = 
     <div class="gux-accent-default gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="山田 太郎">
+          <abbr aria-label="山田 太郎" title="山田 太郎">
             山太
           </abbr>
         </slot>
@@ -71,7 +71,7 @@ exports[`gux-avatar #render component with name type (4) for valid markup 1`] = 
     <div class="gux-accent-default gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="이 영수">
+          <abbr aria-label="이 영수" title="이 영수">
             이영
           </abbr>
         </slot>
@@ -87,7 +87,7 @@ exports[`gux-avatar #render component with name type (5) for valid markup 1`] = 
     <div class="gux-accent-default gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="邓 小平">
+          <abbr aria-label="邓 小平" title="邓 小平">
             邓小
           </abbr>
         </slot>
@@ -97,13 +97,13 @@ exports[`gux-avatar #render component with name type (5) for valid markup 1`] = 
 </gux-avatar-beta>
 `;
 
-exports[`gux-avatar #render different accents #render notification badge should render notification badge 1`] = `
-<gux-avatar-beta has-badge="" has-notifications="" name="John Doe">
+exports[`gux-avatar #render different accents #render label should render label 1`] = `
+<gux-avatar-beta label="All Hands" name="John Doe" presence="busy" ring="">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-accent-default gux-avatar gux-busy gux-large gux-ring">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe (All Hands)" title="John Doe (All Hands)">
             JD
           </abbr>
         </slot>
@@ -113,13 +113,32 @@ exports[`gux-avatar #render different accents #render notification badge should 
 </gux-avatar-beta>
 `;
 
-exports[`gux-avatar #render different accents #render presence ring should render presence ring 1`] = `
-<gux-avatar-beta name="John Doe" presence-ring="">
+exports[`gux-avatar #render different accents #render notification badge should render notification badge 1`] = `
+<gux-avatar-beta badge="" name="John Doe" notifications="">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-available gux-avatar gux-large gux-presence-ring">
+    <div class="gux-accent-default gux-available gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe (Available)">
+          <abbr aria-label="John Doe (Notifications)" title="John Doe (Notifications)">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-notifications">
+      <gux-icon icon-name="fa/bell-regular"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different accents #render presence ring should render presence ring 1`] = `
+<gux-avatar-beta name="John Doe" presen="" ring="">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-available gux-avatar gux-large gux-ring">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -135,7 +154,7 @@ exports[`gux-avatar #render different accents should work as expected for "0" 1`
     <div class="gux-accent-0 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -151,7 +170,7 @@ exports[`gux-avatar #render different accents should work as expected for "1" 1`
     <div class="gux-accent-1 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -167,7 +186,7 @@ exports[`gux-avatar #render different accents should work as expected for "2" 1`
     <div class="gux-accent-2 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -183,7 +202,7 @@ exports[`gux-avatar #render different accents should work as expected for "3" 1`
     <div class="gux-accent-3 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -199,7 +218,7 @@ exports[`gux-avatar #render different accents should work as expected for "4" 1`
     <div class="gux-accent-4 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -215,7 +234,7 @@ exports[`gux-avatar #render different accents should work as expected for "5" 1`
     <div class="gux-accent-5 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -231,7 +250,7 @@ exports[`gux-avatar #render different accents should work as expected for "6" 1`
     <div class="gux-accent-6 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -247,7 +266,7 @@ exports[`gux-avatar #render different accents should work as expected for "7" 1`
     <div class="gux-accent-7 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -263,7 +282,7 @@ exports[`gux-avatar #render different accents should work as expected for "8" 1`
     <div class="gux-accent-8 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -279,7 +298,7 @@ exports[`gux-avatar #render different accents should work as expected for "9" 1`
     <div class="gux-accent-9 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -295,7 +314,7 @@ exports[`gux-avatar #render different accents should work as expected for "10" 1
     <div class="gux-accent-10 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -311,7 +330,7 @@ exports[`gux-avatar #render different accents should work as expected for "11" 1
     <div class="gux-accent-11 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -327,7 +346,7 @@ exports[`gux-avatar #render different accents should work as expected for "12" 1
     <div class="gux-accent-12 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -343,7 +362,7 @@ exports[`gux-avatar #render different accents should work as expected for "auto"
     <div class="gux-accent-3 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -359,7 +378,7 @@ exports[`gux-avatar #render different accents should work as expected for "defau
     <div class="gux-accent-default gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -375,7 +394,7 @@ exports[`gux-avatar #render different accents should work as expected for "inval
     <div class="gux-accent-invalid-accent gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -386,96 +405,206 @@ exports[`gux-avatar #render different accents should work as expected for "inval
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "available" 1`] = `
-<gux-avatar-beta has-badge="" name="John Doe" presence="available">
+<gux-avatar-beta badge="" name="John Doe" presence="available">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-accent-default gux-available gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
       </div>
+    </div>
+    <div class="gux-available gux-avatar-badge gux-large">
+      <gux-icon icon-name="fa/circle-check-solid"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "away" 1`] = `
-<gux-avatar-beta has-badge="" name="John Doe" presence="away">
+<gux-avatar-beta badge="" name="John Doe" presence="away">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-accent-default gux-avatar gux-away gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
       </div>
+    </div>
+    <div class="gux-avatar-badge gux-away gux-large">
+      <gux-icon icon-name="fa/clock-outline"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "busy" 1`] = `
-<gux-avatar-beta has-badge="" name="John Doe" presence="busy">
+<gux-avatar-beta badge="" name="John Doe" presence="busy">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-accent-default gux-avatar gux-busy gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
       </div>
+    </div>
+    <div class="gux-avatar-badge gux-busy gux-large">
+      <gux-icon icon-name="fa/ban-outline"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "idle" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="idle">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-idle gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "invalid-presence" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="invalid-presence">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-invalid-presence gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-invalid-presence gux-large">
+      <gux-icon icon-name="fa/circle-xmark-regular"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "meal" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="meal">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large gux-meal">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-meal">
+      <gux-icon icon-name="fa/clock-outline"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "meeting" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="meeting">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large gux-meeting">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-meeting">
+      <gux-icon icon-name="fa/ban-outline"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "offline" 1`] = `
-<gux-avatar-beta has-badge="" name="John Doe" presence="offline">
+<gux-avatar-beta badge="" name="John Doe" presence="offline">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-accent-default gux-avatar gux-large gux-offline">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
       </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-offline">
+      <gux-icon icon-name="fa/circle-xmark-regular"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "on-queue" 1`] = `
-<gux-avatar-beta has-badge="" name="John Doe" presence="on-queue">
+<gux-avatar-beta badge="" name="John Doe" presence="on-queue">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-accent-default gux-avatar gux-large gux-on-queue">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
       </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-on-queue">
+      <gux-icon icon-name="fa/headset-solid"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
 `;
 
 exports[`gux-avatar #render different presences should work as expected for "out-of-office" 1`] = `
-<gux-avatar-beta has-badge="" name="John Doe" presence="out-of-office">
+<gux-avatar-beta badge="" name="John Doe" presence="out-of-office">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large">
+    <div class="gux-accent-default gux-avatar gux-large gux-out-of-office">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
       </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-out-of-office">
+      <gux-icon icon-name="fa/subtract-circle"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "training" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="training">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large gux-training">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-training">
+      <gux-icon icon-name="fa/clock-outline"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -487,7 +616,7 @@ exports[`gux-avatar #render different sizes should work as expected for "large" 
     <div class="gux-accent-default gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -503,7 +632,7 @@ exports[`gux-avatar #render different sizes should work as expected for "medium"
     <div class="gux-accent-default gux-avatar gux-medium">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -519,7 +648,7 @@ exports[`gux-avatar #render different sizes should work as expected for "medium-
     <div class="gux-accent-default gux-avatar gux-medium-rare">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -535,7 +664,7 @@ exports[`gux-avatar #render different sizes should work as expected for "small" 
     <div class="gux-accent-default gux-avatar gux-small">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -551,7 +680,7 @@ exports[`gux-avatar #render different sizes should work as expected for "xsmall"
     <div class="gux-accent-default gux-avatar gux-xsmall">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -567,7 +696,7 @@ exports[`gux-avatar changes to attributes after initial load should be reflected
     <div class="gux-accent-6 gux-avatar gux-large">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
@@ -583,7 +712,7 @@ exports[`gux-avatar changes to attributes after initial load should be reflected
     <div class="gux-accent-default gux-avatar gux-small">
       <div class="gux-content">
         <slot name="image">
-          <abbr title="John Doe">
+          <abbr aria-label="John Doe" title="John Doe">
             JD
           </abbr>
         </slot>
