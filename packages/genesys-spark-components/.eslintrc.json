@@ -9,9 +9,6 @@
     "sourceType": "module"
   },
   "extends": ["genesys-spark-components"],
-  "rules": {
-    "@typescript-eslint/no-unsafe-assignment": "off"
-  },
   "overrides": [
     {
       "files": ["./**/*.{ts,tsx}"],

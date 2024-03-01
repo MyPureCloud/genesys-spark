@@ -58,14 +58,14 @@ export class GuxModal {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async showModal(): Promise<void> {
     this.open = true;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async close(): Promise<void> {
     this.open = false;
   }

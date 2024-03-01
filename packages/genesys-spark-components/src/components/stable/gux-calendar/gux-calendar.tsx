@@ -104,8 +104,8 @@ export class GuxCalendar {
   /**
    * Sets new value and rerender the calendar
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async setValue(value: Date | [Date, Date]) {
     if (this.mode === CalendarModes.Range && value instanceof Array) {
       const [date1, date2] = value;
@@ -121,8 +121,8 @@ export class GuxCalendar {
   /**
    * Focus the preview date
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async focusPreviewDate() {
     const target: HTMLTableCellElement = this.root.shadowRoot.querySelector(
       `td[data-date="${this.previewValue.getTime()}"]`
@@ -135,8 +135,8 @@ export class GuxCalendar {
   /**
    * Reset calendar view to show first selected date
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async resetCalendarView(value: Date): Promise<void> {
     this.previewValue = value;
   }

@@ -83,28 +83,28 @@ export class GuxPhoneInput {
   @State()
   private region: Region = null;
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async setRegionAlpha2Code(alpha2Code: Alpha2Code): Promise<void> {
     this._setRegionAlpha2Code(alpha2Code);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async setRegionDialCode(dialCode: string): Promise<void> {
     const newRegion = this.getRegionFromDialCode(dialCode);
 
     this.updateInputWithNewRegion(newRegion, this.region);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async getRegion(): Promise<Region> {
     return this.region;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async getFormattedNumber(
     format: typeof this.phoneNumberFormat = 'E164'
   ): Promise<string> {
@@ -114,24 +114,24 @@ export class GuxPhoneInput {
     return phone ? this.phoneUtil.format(phone, libFormat) : null;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async getExtension(): Promise<string> {
     const phone = this.parsePhoneNumber(this.value, this.region?.alpha2Code);
 
     return phone ? phone.getExtension() : null;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async isPossibleNumber(): Promise<boolean> {
     const phone = this.parsePhoneNumber(this.value, this.region?.alpha2Code);
 
     return phone ? this.phoneUtil.isPossibleNumber(phone) : false;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async isValidNumber(): Promise<boolean> {
     const phone = this.parsePhoneNumber(this.value, this.region?.alpha2Code);
 
