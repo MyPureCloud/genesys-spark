@@ -97,7 +97,11 @@
         <gux-listbox aria-label="Update presence">
           <gux-option value="available">Available</gux-option>
           <gux-option value="busy">Busy</gux-option>
+          <gux-option value="meeting">Meeting</gux-option>
           <gux-option value="away">Away</gux-option>
+          <gux-option value="meal">Meal</gux-option>
+          <gux-option value="break">Break</gux-option>
+          <gux-option value="training">Training</gux-option>
           <gux-option value="on-queue">On Queue</gux-option>
           <gux-option value="offline">Offline</gux-option>
           <gux-option value="out-of-office">Out of Office</gux-option>
@@ -108,31 +112,21 @@
     <gux-form-field-text-like>
       <input
         slot="input"
-        name="avatarSubpresence"
-        id="update-subpresence"
+        name="avatarLabel"
+        id="update-label"
         type="text"
-        placeholder="Enter sub-presence"
+        placeholder="Enter label"
         value=""
       />
-      <label slot="label">Sub-Presence</label>
+      <label slot="label">Label</label>
     </gux-form-field-text-like>
     <div class="checkboxes">
       <gux-form-field-checkbox>
-        <input
-          slot="input"
-          type="checkbox"
-          name="update-presence-ring"
-          value="presence-ring"
-        />
+        <input slot="input" type="checkbox" name="update-ring" value="ring" />
         <label slot="label">Presence Ring</label>
       </gux-form-field-checkbox>
       <gux-form-field-checkbox>
-        <input
-          slot="input"
-          type="checkbox"
-          name="update-presence-badge"
-          value="presence-badge"
-        />
+        <input slot="input" type="checkbox" name="update-badge" value="badge" />
         <label slot="label">Presence Badge</label>
       </gux-form-field-checkbox>
       <gux-form-field-checkbox>
@@ -150,18 +144,18 @@
         const avatar = document.getElementById('dynamic-example');
         const updateSize = document.getElementById('update-size');
         const updateName = document.getElementById('update-name');
-        const updateSubPresence = document.getElementById('update-subpresence');
+        const updateLabel = document.getElementById('update-label');
         const updatePresence = document.getElementById('update-presence');
-        const updatePresenceBadge = document.getElementsByName('update-presence-badge')[0];
-        const updatePresenceRing = document.getElementsByName('update-presence-ring')[0];
-        const updatePresenceNotifications = document.getElementsByName('update-notifications')[0];
+        const updateBadge = document.getElementsByName('update-badge')[0];
+        const updateRing = document.getElementsByName('update-ring')[0];
+        const updateNotifications = document.getElementsByName('update-notifications')[0];
         avatar.setAttribute('size', updateSize.value);
         avatar.setAttribute('name', updateName.value);
-        avatar.setAttribute('sub-presence', updateSubPresence.value);
+        avatar.setAttribute('label', updateLabel.value);
         avatar.setAttribute('presence', updatePresence.value);
-        avatar.setAttribute('presence-badge', updatePresenceBadge.checked);
-        avatar.setAttribute('presence-ring', updatePresenceRing.checked);
-        avatar.setAttribute('notifications', updatePresenceNotifications.checked);
+        avatar.setAttribute('badge', updateBadge.checked);
+        avatar.setAttribute('ring', updateRing.checked);
+        avatar.setAttribute('notifications', updateNotifications.checked);
       })()"
       >Update Avatar</gux-button
     >
@@ -172,173 +166,94 @@
     size="large"
     accent="auto"
     presence="available"
-    presence-ring="false"
-    presence-badge="false"
+    ring="false"
+    badge="false"
   ></gux-avatar-beta>
 </div>
 
 <h2>Presences</h2>
 <h3>Presence Ring</h3>
 <gux-avatar-beta name="Alan Butler"></gux-avatar-beta>
-<gux-avatar-beta
-  presence="available"
-  name="Conor Darcy"
-  presence-ring
-></gux-avatar-beta>
-<gux-avatar-beta
-  presence="busy"
-  name="Giles Hession"
-  presence-ring
-></gux-avatar-beta>
-<gux-avatar-beta
-  presence="away"
-  name="Iseult Jones"
-  presence-ring
-></gux-avatar-beta>
-<gux-avatar-beta
-  presence="on-queue"
-  name="Kamala Lyons"
-  presence-ring
-></gux-avatar-beta>
+<gux-avatar-beta presence="available" name="Conor Darcy" ring></gux-avatar-beta>
+<gux-avatar-beta presence="busy" name="Giles Hession" ring></gux-avatar-beta>
+<gux-avatar-beta presence="away" name="Iseult Jones" ring></gux-avatar-beta>
+<gux-avatar-beta presence="on-queue" name="Kamala Lyons" ring></gux-avatar-beta>
 <gux-avatar-beta
   presence="offline"
   name="Michael Norris"
-  presence-ring
+  ring
 ></gux-avatar-beta>
-<gux-avatar-beta
-  presence="out-of-office"
-  name="OP"
-  presence-ring
-></gux-avatar-beta>
-<gux-avatar-beta name="Conor Darcy" presence="available" presence-ring>
+<gux-avatar-beta presence="out-of-office" name="OP" ring></gux-avatar-beta>
+<gux-avatar-beta name="Conor Darcy" presence="available" ring>
   <img
     slot="image"
     src="https://i.pravatar.cc/300"
     alt="Conor Darcy (available)"
   />
 </gux-avatar-beta>
-<gux-avatar-beta
-  name="Conor Darcy"
-  presence="available"
-  presence-ring
-  size="medium"
->
+<gux-avatar-beta name="Conor Darcy" presence="available" ring size="medium">
 </gux-avatar-beta>
-<gux-avatar-beta
-  name="Conor Darcy"
-  presence="available"
-  presence-ring
-  size="small"
->
+<gux-avatar-beta name="Conor Darcy" presence="available" ring size="small">
 </gux-avatar-beta>
-<gux-avatar-beta
-  name="Conor Darcy"
-  presence="available"
-  presence-ring
-  size="xsmall"
->
+<gux-avatar-beta name="Conor Darcy" presence="available" ring size="xsmall">
 </gux-avatar-beta>
 
 <h3>Presence Badge</h3>
-<gux-avatar-beta
-  name="Memo Lopez"
-  presence="available"
-  presence-badge
-></gux-avatar-beta>
-<gux-avatar-beta name="GH" presence="busy" presence-badge></gux-avatar-beta>
-<gux-avatar-beta name="EF" presence="away" presence-badge></gux-avatar-beta>
-<gux-avatar-beta name="MN" presence="on-queue" presence-badge></gux-avatar-beta>
-<gux-avatar-beta name="KL" presence="offline" presence-badge></gux-avatar-beta>
+<gux-avatar-beta name="Memo Lopez" presence="available" badge></gux-avatar-beta>
+<gux-avatar-beta name="GH" presence="busy" badge></gux-avatar-beta>
+<gux-avatar-beta name="EF" presence="away" badge></gux-avatar-beta>
+<gux-avatar-beta name="MN" presence="on-queue" badge></gux-avatar-beta>
+<gux-avatar-beta name="KL" presence="offline" badge></gux-avatar-beta>
 <gux-avatar-beta
   name="Vanessa Cepeda"
   presence="out-of-office"
-  presence-badge
+  badge
 ></gux-avatar-beta>
 <gux-avatar-beta
   name="Memo Lopez"
   presence="available"
-  presence-badge
+  badge
   presence="invalid-presence"
 ></gux-avatar-beta>
-<gux-avatar-beta name="Conor Darcy" presence="available" presence-badge>
+<gux-avatar-beta name="Conor Darcy" presence="available" badge>
   <img
     slot="image"
     src="https://i.pravatar.cc/300"
     alt="Conor Darcy (available)"
   />
 </gux-avatar-beta>
-<gux-avatar-beta
-  name="Conor Darcy"
-  presence="available"
-  presence-badge
-  size="medium"
->
+<gux-avatar-beta name="Conor Darcy" presence="available" badge size="medium">
 </gux-avatar-beta>
-<gux-avatar-beta
-  name="Conor Darcy"
-  presence="available"
-  presence-badge
-  size="small"
->
+<gux-avatar-beta name="Conor Darcy" presence="available" badge size="small">
 </gux-avatar-beta>
-<gux-avatar-beta
-  name="Conor Darcy"
-  presence="available"
-  presence-badge
-  size="xsmall"
->
+<gux-avatar-beta name="Conor Darcy" presence="available" badge size="xsmall">
 </gux-avatar-beta>
 
 <h3>Presence Badge + Presence Ring</h3>
 <gux-avatar-beta
   name="Memo Lopez"
   presence="available"
-  presence-ring
-  presence-badge
+  ring
+  badge
 ></gux-avatar-beta>
-<gux-avatar-beta
-  name="GH"
-  presence="busy"
-  presence-ring
-  presence-badge
-></gux-avatar-beta>
-<gux-avatar-beta
-  name="EF"
-  presence="away"
-  presence-ring
-  presence-badge
-></gux-avatar-beta>
-<gux-avatar-beta
-  name="MN"
-  presence="on-queue"
-  presence-ring
-  presence-badge
-></gux-avatar-beta>
-<gux-avatar-beta
-  name="KL"
-  presence="offline"
-  presence-ring
-  presence-badge
-></gux-avatar-beta>
+<gux-avatar-beta name="GH" presence="busy" ring badge></gux-avatar-beta>
+<gux-avatar-beta name="EF" presence="away" ring badge></gux-avatar-beta>
+<gux-avatar-beta name="MN" presence="on-queue" ring badge></gux-avatar-beta>
+<gux-avatar-beta name="KL" presence="offline" ring badge></gux-avatar-beta>
 <gux-avatar-beta
   name="Vanessa Cepeda"
   presence="out-of-office"
-  presence-ring
-  presence-badge
+  ring
+  badge
 ></gux-avatar-beta>
 <gux-avatar-beta
   name="Memo Lopez"
   presence="available"
-  presence-ring
-  presence-badge
+  ring
+  badge
   presence="invalid-presence"
 ></gux-avatar-beta>
-<gux-avatar-beta
-  name="Conor Darcy"
-  presence="available"
-  presence-ring
-  presence-badge
->
+<gux-avatar-beta name="Conor Darcy" presence="available" ring badge>
   <img
     slot="image"
     src="https://i.pravatar.cc/300"
@@ -348,24 +263,24 @@
 <gux-avatar-beta
   name="Conor Darcy"
   presence="available"
-  presence-badge
-  presence-ring
+  badge
+  ring
   size="medium"
 >
 </gux-avatar-beta>
 <gux-avatar-beta
   name="Conor Darcy"
   presence="available"
-  presence-badge
-  presence-ring
+  badge
+  ring
   size="small"
 >
 </gux-avatar-beta>
 <gux-avatar-beta
   name="Conor Darcy"
   presence="available"
-  presence-badge
-  presence-ring
+  badge
+  ring
   size="xsmall"
 >
 </gux-avatar-beta>
@@ -374,15 +289,15 @@
 <gux-avatar-beta
   name="Stepheni Mendez"
   presence="on-queue"
-  presence-ring
-  presence-badge
+  ring
+  badge
   notifications
 ></gux-avatar-beta>
 <gux-avatar-beta
   name="Conor Darcy"
   presence="available"
-  presence-badge
-  presence-ring
+  badge
+  ring
   notifications
 >
   <img
@@ -391,18 +306,13 @@
     alt="Conor Darcy (available)"
   />
 </gux-avatar-beta>
-<gux-avatar-beta
-  name="Conor Darcy"
-  presence="available"
-  presence-badge
-  notifications
->
+<gux-avatar-beta name="Conor Darcy" presence="available" badge notifications>
 </gux-avatar-beta>
 <gux-avatar-beta
   name="Conor Darcy"
   presence="available"
-  presence-badge
-  presence-ring
+  badge
+  ring
   notifications
   size="medium"
 >
@@ -410,8 +320,8 @@
 <gux-avatar-beta
   name="Conor Darcy"
   presence="available"
-  presence-badge
-  presence-ring
+  badge
+  ring
   notifications
   size="small"
 >
@@ -419,8 +329,8 @@
 <gux-avatar-beta
   name="Conor Darcy"
   presence="available"
-  presence-badge
-  presence-ring
+  badge
+  ring
   notifications
   size="xsmall"
 >
@@ -430,17 +340,12 @@
 <gux-avatar-beta
   name="Stepheni Mendez"
   presence="away"
-  sub-presence="Break"
-  presence-ring
-  presence-badge
+  label="Break"
+  ring
+  badge
 ></gux-avatar-beta>
 
-<gux-avatar-beta
-  name="Conor Darcy"
-  presence="away"
-  presence-ring
-  presence-badge
->
+<gux-avatar-beta name="Conor Darcy" presence="away" ring badge>
   <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy (Break)" />
 </gux-avatar-beta>
 

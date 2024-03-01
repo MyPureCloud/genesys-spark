@@ -180,16 +180,20 @@
     }
   }
 
-  &.gux-presence-ring {
+  &.gux-ring {
     &.gux-available {
       background: var(--gse-ui-avatar-presenceRing-available);
     }
 
-    &.gux-away {
+    &.gux-away,
+    &.gux-break,
+    &.gux-meal,
+    &.gux-training {
       background: var(--gse-ui-avatar-presenceRing-away);
     }
 
-    &.gux-busy {
+    &.gux-busy,
+    &.gux-meeting {
       background: var(--gse-ui-avatar-presenceRing-busy);
     }
 
@@ -259,7 +263,10 @@
     }
   }
 
-  &.gux-away {
+  &.gux-away,
+  &.gux-break,
+  &.gux-meal,
+  &.gux-training {
     background-color: var(--gse-ui-avatar-badge-away);
 
     & gux-icon {
@@ -268,7 +275,8 @@
     }
   }
 
-  &.gux-busy {
+  &.gux-busy,
+  &.gux-meeting {
     background-color: var(--gse-ui-avatar-badge-busy-color);
 
     & gux-icon {

@@ -91,6 +91,10 @@ describe('gux-avatar', () => {
       'available',
       'away',
       'busy',
+      'meal',
+      'training',
+      'idle',
+      'meeting',
       'offline',
       'on-queue',
       'out-of-office'

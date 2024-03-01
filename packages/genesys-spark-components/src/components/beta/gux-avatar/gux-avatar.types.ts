@@ -20,8 +20,13 @@ export type GuxAvatarAccent =
 
 export type GuxAvatarPresence =
   | 'available'
-  | 'busy'
   | 'away'
+  | 'break'
+  | 'busy'
+  | 'meal'
+  | 'meeting'
+  | 'idle'
   | 'on-queue'
   | 'offline'
-  | 'out-of-office';
+  | 'out-of-office'
+  | 'training';

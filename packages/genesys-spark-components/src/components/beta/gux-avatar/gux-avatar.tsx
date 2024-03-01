@@ -42,31 +42,31 @@ export class GuxAvatar {
 
   /**
    * Shows presence such as away or available.
-   * Must be combined with presenceBadge or presenceRing props to take effect.
+   * Must be combined with badge or ring props to take effect.
    */
   @Prop()
   presence: GuxAvatarPresence = 'available';
 
   /**
-   * Text override for presence name
+   * Label to display for accessibility
    */
   @Prop()
-  subPresence: string;
+  label: string;
 
   /**
-   * Shows a presence ring around the avatar
+   * Shows a ring around the avatar indicating current presence
    */
   @Prop()
-  presenceRing: boolean = false;
+  ring: boolean = false;
 
   /**
-   * Shows a presence badge
+   * Shows a badge indicating current presence
    */
   @Prop()
-  presenceBadge: boolean = false;
+  badge: boolean = false;
 
   /**
-   * Override the presence badge with a notification icon
+   * Show notifications indicator
    */
   @Prop()
   notifications: boolean = false;
@@ -103,7 +103,7 @@ export class GuxAvatar {
   private renderBadge(): JSX.Element | null {
     if (this.notifications) {
       return this.renderNotificationsBadge();
-    } else if (this.presenceBadge) {
+    } else if (this.badge) {
       return (
         <div
           class={{
@@ -151,8 +151,8 @@ export class GuxAvatar {
   }
 
   private getDescriptionText(): string {
-    if (!this.presenceRing && !this.presenceBadge) return this.name;
-    if (this.subPresence) return `${this.name} (${this.subPresence})`;
+    if (!this.ring && !this.badge) return this.name;
+    if (this.label) return `${this.name} (${this.label})`;
     return `${this.name} (${this.i18n(this.presence)})`;
   }
 
@@ -170,9 +170,9 @@ export class GuxAvatar {
       <div
         class={{
           'gux-avatar': true,
-          [`gux-${this.presence}`]: this.presenceRing || this.presenceBadge,
+          [`gux-${this.presence}`]: this.ring || this.badge,
           [`gux-${this.size}`]: true,
-          'gux-presence-ring': this.presenceRing,
+          'gux-ring': this.ring,
           [`gux-accent-${this.getAccent()}`]: true
         }}
       >
