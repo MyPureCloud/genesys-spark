@@ -89,7 +89,6 @@ export class GuxCalendar {
     if (this.isInvalidDate(date)) {
       return;
     }
-
     this.focusedValue = new Date(date.getTime());
     this.slottedInput.value = asIsoDate(date);
     simulateNativeEvent(this.root, 'input');
