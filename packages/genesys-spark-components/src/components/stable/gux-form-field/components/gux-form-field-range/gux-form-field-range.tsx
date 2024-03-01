@@ -1,6 +1,7 @@
 import {
   Component,
   Element,
+  forceUpdate,
   h,
   Host,
   JSX,
@@ -30,6 +31,7 @@ import {
   getSlottedInput
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
+import { OnResize } from '@utils/decorator/on-resize';
 
 /**
  * @slot input - Required slot for input tag
@@ -48,9 +50,9 @@ export class GuxFormField {
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
 
+  private containerElement: HTMLDivElement;
   private progressElement: HTMLDivElement;
-  private sliderTooltip: HTMLElement;
-  private sliderTooltipContainer: HTMLElement;
+  private tooltipElement: HTMLGuxTooltipBaseBetaElement;
 
   @Element()
   private root: HTMLElement;
@@ -126,6 +128,14 @@ export class GuxFormField {
 
   componentDidLoad(): void {
     this.updatePosition();
+
+    /**
+     * Element references are only created after first reference.
+     * Trigger another render after the element references are created to update tooltip property.
+     */
+    if (this.tooltipElement) {
+      forceUpdate(this.root);
+    }
   }
 
   disconnectedCallback(): void {
@@ -223,6 +233,7 @@ export class GuxFormField {
           'gux-range-input-container': true,
           'gux-disabled': this.disabled
         }}
+        ref={el => (this.containerElement = el)}
       >
         <div class="gux-range">
           <div class="gux-track">
@@ -232,20 +243,16 @@ export class GuxFormField {
             ></div>
           </div>
           <slot name="input" />
-          <div
-            class={{
-              'gux-range-tooltip-container': true,
-              'gux-hidden': !this.valueInTooltip
-            }}
-            ref={el => (this.sliderTooltipContainer = el)}
-          >
-            <div
-              class="gux-range-tooltip"
-              ref={el => (this.sliderTooltip = el)}
+          {this.valueInTooltip && (
+            <gux-tooltip-base-beta
+              ref={el => (this.tooltipElement = el)}
+              forElement={this.containerElement}
+              offsetY={-10}
+              placement="top"
             >
               {this.getDisplayValue()}
-            </div>
-          </div>
+            </gux-tooltip-base-beta>
+          )}
         </div>
         <div
           class={{
@@ -264,17 +271,20 @@ export class GuxFormField {
     this.updatePosition();
   }
 
+  @OnResize()
   private updatePosition(): void {
     const value = Number(this.input.value || 0);
     const min = Number(this.input.min || 0);
     const max = Number(this.input.max || 100);
     const placementPercentage = ((value - min) / (max - min)) * 100;
 
-    if (this.sliderTooltip) {
-      const width = this.sliderTooltipContainer.offsetWidth;
-      const offset =
-        placementPercentage - (placementPercentage / 8 / width) * 100;
-      this.sliderTooltip.style.left = `${offset}%`;
+    if (this.tooltipElement) {
+      const thumbDiameter = 20;
+      const functionalRangeWidth =
+        this.containerElement.offsetWidth - thumbDiameter;
+      const percentFromCenter = placementPercentage / 100 - 0.5;
+
+      this.tooltipElement.offsetX = percentFromCenter * functionalRangeWidth;
     }
 
     this.progressElement.style.width = `${placementPercentage}%`;
