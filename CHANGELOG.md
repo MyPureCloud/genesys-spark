@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.22.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.21.3...v4.22.0) (2024-03-02)
+
+
+### Features
+
+* **gux-form-field-range:** use gut-tooltip-base for range tooltip ([5391cdb](https://github.com/MyPureCloud/genesys-spark/commit/5391cdbf9809d4fafdd38e6f733170ce8b67da7e))
+* **tooltip-base:** add tooltip-base component for internal use ([a71dec0](https://github.com/MyPureCloud/genesys-spark/commit/a71dec0138d95fab65226a8078f02d197c1b2ca8))
+
+
+### Bug Fixes
+
+* **calendar-beta:** selecting dates in april or november does not select date ([d70729d](https://github.com/MyPureCloud/genesys-spark/commit/d70729d74e5201727e975be264ba77f8b6301aff))
+
 ### [4.21.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.21.2...v4.21.3) (2024-03-01)
 
 ### [4.21.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.21.1...v4.21.2) (2024-02-27)
