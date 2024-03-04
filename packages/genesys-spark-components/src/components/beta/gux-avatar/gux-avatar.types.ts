@@ -29,4 +29,5 @@ export type GuxAvatarPresence =
   | 'on-queue'
   | 'offline'
   | 'out-of-office'
-  | 'training';
+  | 'training'
+  | 'none';

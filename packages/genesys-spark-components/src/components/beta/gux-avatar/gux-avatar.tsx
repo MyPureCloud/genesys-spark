@@ -45,7 +45,7 @@ export class GuxAvatar {
    * Must be combined with badge or ring props to take effect.
    */
   @Prop()
-  presence: GuxAvatarPresence = 'available';
+  presence: GuxAvatarPresence = 'none';
 
   /**
    * Label to display for accessibility
@@ -103,7 +103,7 @@ export class GuxAvatar {
   private renderBadge(): JSX.Element | null {
     if (this.notifications) {
       return this.renderNotificationsBadge();
-    } else if (this.badge && this.presence !== 'idle') {
+    } else if (this.badge && !['idle', 'none'].includes(this.presence)) {
       return (
         <div
           class={{
@@ -157,7 +157,8 @@ export class GuxAvatar {
   private getDescriptionText(): string {
     if (this.notifications)
       return `${this.name} (${this.i18n('notifications')})`;
-    if (this.label) return `${this.name} (${this.label})`;
+    if (this.label && this.presence !== 'none')
+      return `${this.name} (${this.label})`;
     return `${this.name}`;
   }
 

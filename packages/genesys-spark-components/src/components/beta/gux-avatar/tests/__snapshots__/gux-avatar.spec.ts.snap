@@ -116,7 +116,7 @@ exports[`gux-avatar #render different accents #render label should render label 
 exports[`gux-avatar #render different accents #render notification badge should render notification badge 1`] = `
 <gux-avatar-beta badge="" name="John Doe" notifications="">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-available gux-avatar gux-large">
+    <div class="gux-accent-default gux-avatar gux-large gux-none">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe (Notifications)" title="John Doe (Notifications)">
@@ -135,7 +135,7 @@ exports[`gux-avatar #render different accents #render notification badge should 
 exports[`gux-avatar #render different accents #render presence ring should render presence ring 1`] = `
 <gux-avatar-beta name="John Doe" presen="" ring="">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-available gux-avatar gux-large gux-ring">
+    <div class="gux-accent-default gux-avatar gux-large gux-none gux-ring">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
