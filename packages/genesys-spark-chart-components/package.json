@@ -61,7 +61,6 @@
     "@stencil/core": "^4.12.6",
     "@stencil/react-output-target": "^0.5.3",
     "@stencil/sass": "^3.0.10",
-    "@stencil/utils": "0.0.5",
     "@types/jest": "^27.5.2",
     "@types/new-relic-browser": "^0.1118.2",
     "@types/puppeteer": "^5.4.7",
