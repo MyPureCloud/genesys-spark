@@ -118,8 +118,8 @@ export class GuxAdvancedDropdownLegacy {
     return Promise.resolve([this.value]);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async setLabeledBy(id: string) {
     this.srLabelledby = id;
   }

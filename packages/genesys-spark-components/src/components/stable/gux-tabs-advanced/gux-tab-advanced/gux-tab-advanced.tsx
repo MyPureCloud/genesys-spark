@@ -159,20 +159,20 @@ export class GuxTabAdvanced {
   @Event()
   internalactivatetabpanel: EventEmitter<string>;
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxSetActive(active: boolean): Promise<void> {
     this.active = active;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxGetActive() {
     return this.active;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocus(): Promise<void> {
     this.buttonElement.focus();
   }

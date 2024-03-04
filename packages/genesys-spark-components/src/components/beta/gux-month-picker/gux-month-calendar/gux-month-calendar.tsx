@@ -73,8 +73,8 @@ export class GuxMonthCalendar {
   /**
    * Focus a month
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocus(iSOYearMonth: GuxISOYearMonth): Promise<void> {
     iSOYearMonth = iSOYearMonth || getCurrentISOYearMonth();
 

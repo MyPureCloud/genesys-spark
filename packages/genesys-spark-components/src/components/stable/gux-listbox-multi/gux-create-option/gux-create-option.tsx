@@ -55,8 +55,8 @@ export class GuxCreateOption {
   @Event()
   internalcreatenewoption: EventEmitter<string>;
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxEmitInternalCreateNewOption(): Promise<void> {
     this.internalcreatenewoption.emit();
   }

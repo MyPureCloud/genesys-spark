@@ -61,8 +61,8 @@ export class GuxMonthList {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocusFirstItem(): Promise<void> {
     first(this.root, validFocusableItems);
   }

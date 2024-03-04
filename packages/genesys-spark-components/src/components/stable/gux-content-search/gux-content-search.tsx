@@ -61,8 +61,8 @@ export class GuxContentSearch {
   /**
    * Clears the input.
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async clear(): Promise<void> {
     if (this.disabled) {
       return;
