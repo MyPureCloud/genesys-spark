@@ -17,7 +17,7 @@ import { findElementById } from '@utils/dom/find-element-by-id';
 import { randomHTMLId } from '@utils/dom/random-html-id';
 
 /**
- * @slot - Content of the tooltip
+ * @slot content - Slot for content
  */
 @Component({
   tag: 'gux-tooltip-beta',
@@ -50,7 +50,6 @@ export class GuxTooltip {
   /*
    * Show tooltip
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async showTooltip(): Promise<void> {
     return await this.baseTooltip.showTooltip();
@@ -59,13 +58,12 @@ export class GuxTooltip {
   /*
    * Hide tooltip
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
   async hideTooltip(): Promise<void> {
     return await this.baseTooltip.hideTooltip();
   }
 
-  @Watch('for') //@ts-expect-error: unused warning because is is only used by decorator
+  @Watch('for')
   private updateForElement(): void {
     this.forElement = this.getForElement();
   }
@@ -75,7 +73,7 @@ export class GuxTooltip {
   }
 
   connectedCallback(): void {
-    this.forElement = this.getForElement();
+    this.updateForElement();
   }
 
   private getForElement(): HTMLElement {
@@ -110,7 +108,11 @@ export class GuxTooltip {
           tooltipId={this.id}
           ref={el => (this.baseTooltip = el)}
         >
-          <slot />
+          <span slot="content">
+            <slot name="content">
+              <slot />
+            </slot>
+          </span>
         </gux-tooltip-base-beta>
       </Host>
     ) as JSX.Element;
