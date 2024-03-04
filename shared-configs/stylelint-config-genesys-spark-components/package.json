@@ -17,7 +17,7 @@
     "postcss-scss": "^4.0.8",
     "stylelint": "^16.2.1",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-recess-order": "^4.2.0",
+    "stylelint-config-recess-order": "^5.0.0",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-scss": "^6.1.0"
   },
@@ -37,9 +37,9 @@
     "prettier-package-json": "^2.8.0",
     "stylelint": "^16.2.1",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-recess-order": "^4.6.0",
+    "stylelint-config-recess-order": "^5.0.0",
     "stylelint-config-standard": "^36.0.0",
-    "stylelint-scss": "^6.1.0"
+    "stylelint-scss": "^6.2.0"
   },
   "prettier": "prettier-config-genesys-spark-components"
 }

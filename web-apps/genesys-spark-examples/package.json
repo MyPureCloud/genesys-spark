@@ -55,9 +55,9 @@
     "stylelint": "^16.2.1",
     "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-recess-order": "^4.6.0",
+    "stylelint-config-recess-order": "^5.0.0",
     "stylelint-config-standard": "^36.0.0",
-    "stylelint-scss": "^6.1.0",
+    "stylelint-scss": "^6.2.0",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"

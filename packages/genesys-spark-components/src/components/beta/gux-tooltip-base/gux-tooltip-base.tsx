@@ -93,8 +93,8 @@ export class GuxTooltipBase {
   /*
    * Show tooltip
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async showTooltip(): Promise<void> {
     this.show();
   }
@@ -102,8 +102,8 @@ export class GuxTooltipBase {
   /*
    * Hide tooltip
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async hideTooltip(): Promise<void> {
     this.hide();
   }
