@@ -24,7 +24,7 @@
     "generate-versions-file": "./scripts/generate-versions-file.mjs",
     "i18n": "npm run update-en-i18n && npm run build-i18n && npm run generate-start-of-week-file",
     "lint-all": "npm-run-all \"stylelint\" \"eslint\" \"prettier\" \"prettier-package-json\" \"svgo\"",
-    "lint-staged": "lint-staged",
+    "lint-staged": "lint-staged --concurrent false",
     "list-checked-a11y-components": "node scripts/list-checked-a11y-components.js",
     "list-component-tracking": "./scripts/list-component-tracking.js",
     "list-i18n-files": "./scripts/list-i18n-files.js",
@@ -64,7 +64,7 @@
     "google-libphonenumber": "^3.2.33",
     "intl-messageformat": "^10.5.4",
     "requestanimationframe-timer": "^3.0.3",
-    "sortablejs": "^1.15.0"
+    "sortablejs": "^1.15.2"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
@@ -78,9 +78,9 @@
     "@types/new-relic-browser": "^0.1118.2",
     "@types/puppeteer": "^5.4.7",
     "@types/resize-observer-browser": "^0.1.9",
-    "@types/sortablejs": "^1.15.4",
-    "@typescript-eslint/eslint-plugin": "^7.1.0",
-    "@typescript-eslint/parser": "^7.1.0",
+    "@types/sortablejs": "^1.15.8",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
     "axe-core": "^4.8.4",
     "axe-live": "^1.0.1",
     "eslint": "^8.57.0",

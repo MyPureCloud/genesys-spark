@@ -8,7 +8,7 @@
   "scripts": {
     "eslint": "eslint . --no-error-on-unmatched-pattern --fix",
     "lint-all": "npm-run-all \"stylelint\" \"eslint\" \"prettier\" \"prettier-package-json\"",
-    "lint-staged": "lint-staged",
+    "lint-staged": "lint-staged --concurrent false",
     "prettier": "prettier --log-level silent --ignore-path .gitignore --ignore-unknown --write .",
     "prettier-package-json": "prettier-package-json --write ./package.json",
     "start": "http-server . --port 8090",

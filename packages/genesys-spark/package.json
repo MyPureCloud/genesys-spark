@@ -13,7 +13,7 @@
     "build": "rollup -c",
     "dev": "rollup -c --watch",
     "eslint": "eslint --fix './**/*.ts'",
-    "lint-staged": "lint-staged",
+    "lint-staged": "lint-staged --concurrent false",
     "prettier": "prettier --log-level silent --ignore-path .gitignore --ignore-unknown --write .",
     "test": "jest",
     "test.watch": "jest --watch",
