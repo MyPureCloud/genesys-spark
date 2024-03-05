@@ -11,15 +11,15 @@
     "build": "node build/index.mjs",
     "eslint": "eslint . --ignore-path .gitignore --no-error-on-unmatched-pattern --fix",
     "lint-all": "npm-run-all \"eslint\" \"prettier\" \"prettier-package-json\"",
-    "lint-staged": "lint-staged",
+    "lint-staged": "lint-staged --concurrent false",
     "prettier": "prettier --log-level silent --ignore-unknown --write .",
     "prettier-package-json": "prettier-package-json --write ./package.json",
     "snapshot": "node build/index.mjs snapshot",
     "test": "node test/index.mjs"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.1.0",
-    "@typescript-eslint/parser": "^7.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
     "change-case": "^5.4.3",
     "dir-compare": "^4.2.0",
     "eslint": "^8.57.0",

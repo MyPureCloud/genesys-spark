@@ -7,7 +7,7 @@
   "scripts": {
     "eslint": "eslint . --fix",
     "lint-all": "npm-run-all \"eslint\" \"prettier\" \"prettier-package-json\"",
-    "lint-staged": "lint-staged",
+    "lint-staged": "lint-staged --concurrent false",
     "prettier": "prettier --log-level silent --ignore-path .gitignore --ignore-unknown --write .",
     "prettier-package-json": "prettier-package-json --write ./package.json"
   },
@@ -22,8 +22,8 @@
     "stylelint-scss": "^6.1.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.1.0",
-    "@typescript-eslint/parser": "^7.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
     "eslint": "^8.57.0",
     "eslint-config-genesys-spark-components": "file:../eslint-config-genesys-spark-components",
     "eslint-config-prettier": "^9.1.0",
