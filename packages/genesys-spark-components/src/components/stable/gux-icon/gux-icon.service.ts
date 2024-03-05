@@ -1,5 +1,8 @@
 import { getAssetPath } from '@stencil/core';
-import { legacyIconNames } from './legacy-icon-names';
+import { legacyIconNames } from './icon-names-legacy';
+import { deprecatedIconNamesMap } from './icon-names-deprecated';
+
+const deprecatedIconNames = Object.keys(deprecatedIconNamesMap);
 
 const svgHTMLCache: Map<string, Promise<string>> = new Map();
 
@@ -22,6 +25,10 @@ function iconInfoToId(iconName: string): string {
 export function getRootIconName(iconName: string): string {
   if (legacyIconNames.includes(iconName)) {
     return `legacy/${iconName}`;
+  }
+
+  if (deprecatedIconNames.includes(iconName)) {
+    return deprecatedIconNamesMap[iconName];
   }
 
   return iconName;
