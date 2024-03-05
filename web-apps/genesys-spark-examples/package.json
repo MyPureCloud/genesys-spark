@@ -21,7 +21,7 @@
   "dependencies": {
     "genesys-spark": "file:../../packages/genesys-spark",
     "iframe-coordinator": "^4.6.1",
-    "monaco-editor": "^0.40.0",
+    "monaco-editor": "^0.46.0",
     "parse5": "^7.1.2"
   },
   "devDependencies": {
