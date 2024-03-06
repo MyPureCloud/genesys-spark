@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.23.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.22.1...v4.23.0) (2024-03-06)
+
+
+### Features
+
+* **avatar:** Show presence ring and badges ([#345](https://github.com/MyPureCloud/genesys-spark/issues/345)) ([a7baf12](https://github.com/MyPureCloud/genesys-spark/commit/a7baf120431ced232d950d3e4ed331df613b7b8e))
+* **icon:** add regular and restricted icons ([#354](https://github.com/MyPureCloud/genesys-spark/issues/354)) ([e5ce82b](https://github.com/MyPureCloud/genesys-spark/commit/e5ce82bd53b394d831102ea5d30d78e69007331f))
+
 ### [4.22.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.22.0...v4.22.1) (2024-03-05)
 
 ## [4.22.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.21.3...v4.22.0) (2024-03-02)
