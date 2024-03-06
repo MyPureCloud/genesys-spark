@@ -7,7 +7,7 @@
  * @param options options to pass to the Intl.DateTimeFormat constructor
  * @returns a new DateTimeFormat
  */
-import { closestPassShadow } from './get-closest-element';
+import { getClosestElement } from './get-closest-element';
 export function dateTimeFormat(
   localeOrOptions: string | Intl.DateTimeFormatOptions,
   options?: Intl.DateTimeFormatOptions
@@ -65,7 +65,7 @@ export function relativeTimeFormat(
 export function determineDisplayLocale(
   element: HTMLElement = document.body
 ): string {
-  const domLocale = closestPassShadow(element, '*[lang]')?.lang;
+  const domLocale = getClosestElement(element, '*[lang]')?.lang;
   if (!domLocale || browserHasRegionData(domLocale)) {
     // If we can't find a locale in the DOM, or we find a locale without a region that matches the
     // users's browser locale, use the browser locale.

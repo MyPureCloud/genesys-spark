@@ -1,5 +1,5 @@
 //https://inindca.atlassian.net/browse/COMUI-2673
-export function closestPassShadow(
+export function getClosestElement(
   node: Element | ParentNode | null,
   selector: string
 ): HTMLElement | null {
@@ -8,16 +8,16 @@ export function closestPassShadow(
   }
 
   if (node instanceof ShadowRoot) {
-    return closestPassShadow(node.host, selector);
+    return getClosestElement(node.host, selector);
   }
 
   if (node instanceof HTMLElement) {
     if (node.matches(selector)) {
       return node;
     } else {
-      return closestPassShadow(node.parentNode, selector);
+      return getClosestElement(node.parentNode, selector);
     }
   }
 
-  return closestPassShadow(node.parentNode, selector);
+  return getClosestElement(node.parentNode, selector);
 }
