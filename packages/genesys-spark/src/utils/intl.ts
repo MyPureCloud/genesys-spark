@@ -87,3 +87,34 @@ function browserHasRegionData(localeString: string): boolean {
     navigator.language.startsWith(`${localeString}-`)
   );
 }
+
+export function getFormat(locale: string): string {
+  const date = new Date('July 5, 2000 15:00:00 UTC+00:00');
+  const options = {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric'
+  };
+  const dateTimeFormat = new Intl.DateTimeFormat(
+    locale,
+    options as Intl.DateTimeFormatOptions
+  );
+
+  const parts = dateTimeFormat.formatToParts(date);
+  const dateString = parts
+    .map(({ type, value }) => {
+      switch (type) {
+        case 'day':
+          return `dd`;
+        case 'month':
+          return `mm`;
+        case 'year':
+          return `yyyy`;
+        default:
+          return value;
+      }
+    })
+    .join('');
+  // review locales with two character date delimiters https://inindca.atlassian.net/browse/COMUI-2679
+  return dateString.replace(/\s/g, '').replace(/‏/g, '');
+}

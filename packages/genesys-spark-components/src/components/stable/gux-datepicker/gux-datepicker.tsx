@@ -25,7 +25,9 @@ import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
 import { CalendarModes } from '../../../common-enums';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-
+import * as sparkIntl from '../../../genesys-spark-utils/intl';
+// Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
+import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
 import { GuxCalendarDayOfWeek } from '../gux-calendar/gux-calendar.types';
 
 import translationResources from './i18n/en.json';
@@ -122,8 +124,8 @@ export class GuxDatepicker {
   /**
    * The datepicker date format (default to mm/dd/yyyy, or specified)
    */
-  @Prop()
-  format: string = 'mm/dd/yyyy';
+  @Prop({ mutable: true })
+  format: string;
 
   /**
    * Disable the input and prevent interactions.
@@ -645,7 +647,13 @@ export class GuxDatepicker {
   async componentWillLoad() {
     trackComponent(this.root, { variant: this.mode });
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-
+    if (readRegionalDatesCookie()) {
+      this.format =
+        this.format ||
+        sparkIntl.getFormat(sparkIntl.determineDisplayLocale(this.root));
+    } else {
+      this.format = this.format || 'mm/dd/yyyy';
+    }
     this.watchMinDate(this.minDate);
     this.watchMaxDate(this.maxDate);
     this.watchFormat(this.format);
