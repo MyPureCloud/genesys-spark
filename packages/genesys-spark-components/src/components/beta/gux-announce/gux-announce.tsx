@@ -21,8 +21,8 @@ export class GuxAnnounce {
   @Prop()
   politeness: GuxAnnouncePoliteness = 'polite';
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxAnnounce(text: string): Promise<void> {
     this.containerElement.innerText = '';
     afterNextRender(() => {

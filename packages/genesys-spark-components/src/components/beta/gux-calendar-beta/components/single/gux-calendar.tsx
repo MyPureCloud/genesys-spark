@@ -1,6 +1,6 @@
 import { Component, Element, h, JSX, State } from '@stencil/core';
 import { IWeekElement, GuxCalendarDayOfWeek } from '../../gux-calendar.types';
-import { fromIsoDate } from '@utils/date/iso-dates';
+import { asIsoDate, fromIsoDate } from '@utils/date/iso-dates';
 import {
   getWeekdays,
   getFirstOfMonth,
@@ -89,9 +89,8 @@ export class GuxCalendar {
     if (this.isInvalidDate(date)) {
       return;
     }
-
     this.focusedValue = new Date(date.getTime());
-    this.slottedInput.value = date.toISOString().substring(0, 10);
+    this.slottedInput.value = asIsoDate(date);
     simulateNativeEvent(this.root, 'input');
   }
 

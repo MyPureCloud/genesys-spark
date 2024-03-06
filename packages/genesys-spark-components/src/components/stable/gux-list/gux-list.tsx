@@ -60,26 +60,26 @@ export class GuxList {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocusFirstItem(): Promise<void> {
     first(this.root, validFocusableItems);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocusItemById(id: string): Promise<void> {
     byId(this.root, validFocusableItems, id);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocusItemByClosestId(id: string): Promise<void> {
     byClosestId(this.root, validFocusableItems, id);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocusLastItem(): Promise<void> {
     last(this.root, validFocusableItems);
   }

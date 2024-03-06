@@ -104,8 +104,9 @@ export class GuxTooltipTitle {
 
   private getTitleElements(): Array<Element> {
     const slot = this.root.querySelector('slot');
-    const target = this.root.querySelector('.gux-title-container span')
-      ?.children;
+    const target = this.root.querySelector(
+      '.gux-title-container span'
+    )?.children;
     if (slot) {
       return slot.assignedElements();
     } else if (target) {

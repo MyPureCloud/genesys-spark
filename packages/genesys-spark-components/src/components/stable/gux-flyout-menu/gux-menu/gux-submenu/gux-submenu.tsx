@@ -47,8 +47,8 @@ export class GuxSubmenu {
   /**
    * Focus on the components button element
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocus(): Promise<void> {
     this.buttonElement.focus();
   }

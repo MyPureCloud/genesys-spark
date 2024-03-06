@@ -140,6 +140,17 @@ function generateComponentPage(exampleMarkup) {
     );
   }
 
+  if (withHtml.includes('${RESTRICTED_ICON_EXAMPLE_LIST}')) {
+    const iconScript = require('./src/utils/generateRestrictedIcons');
+    const iconsExamplesHtml = iconScript.generateHTML(
+      '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/restricted'
+    );
+    withHtml = withHtml.replace(
+      '${RESTRICTED_ICON_EXAMPLE_LIST}',
+      iconsExamplesHtml
+    );
+  }
+
   return withHtml;
 }
 

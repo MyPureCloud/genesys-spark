@@ -15,49 +15,322 @@
 
 .gux-avatar {
   position: relative;
+  width: var(--gse-ui-avatar-large-size);
+  height: var(--gse-ui-avatar-large-size);
   overflow: hidden;
+  border-radius: 50%;
 
   .gux-content {
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: var(--gse-ui-avatar-large-content-size);
-    height: var(--gse-ui-avatar-large-content-size);
+    width: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
+    height: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
+    margin: var(--gse-ui-avatar-large-presenceRing-width);
     overflow: hidden;
     font-family: var(--gse-ui-avatar-large-initials-fontFamily);
     font-size: var(--gse-ui-avatar-large-initials-fontSize);
     font-weight: var(--gse-ui-avatar-large-initials-fontWeight);
+    line-height: var(--gse-core-lineHeight-matchFontSize);
     color: var(--gse-ui-avatar-media-initialsForeground-inverse);
     text-transform: uppercase;
     background-color: var(--gse-ui-avatar-media-initialsBackground-default);
+    border: var(--gse-ui-avatar-content-large-border-width)
+      var(--gse-ui-avatar-content-default-border-style)
+      var(--gse-ui-avatar-content-default-border-color);
     border-radius: 50%;
   }
 
   &.gux-medium {
-    .gux-content {
-      width: var(--gse-ui-avatar-medium-content-size);
-      height: var(--gse-ui-avatar-medium-content-size);
+    width: var(--gse-ui-avatar-medium-size);
+    height: var(--gse-ui-avatar-medium-size);
+
+    & .gux-content {
+      width: calc(100% - var(--gse-ui-avatar-medium-presenceRing-width) * 2);
+      height: calc(100% - var(--gse-ui-avatar-medium-presenceRing-width) * 2);
+      margin: var(--gse-ui-avatar-medium-presenceRing-width);
       font-size: var(--gse-ui-avatar-medium-initials-fontSize);
       font-weight: var(--gse-ui-avatar-medium-initials-fontWeight);
     }
   }
 
+  &.gux-medium,
+  &.gux-small,
+  &.gux-xsmall {
+    & .gux-content {
+      border-width: var(--gse-ui-avatar-content-default-border-width);
+    }
+  }
+
   &.gux-small {
-    .gux-content {
-      width: var(--gse-ui-avatar-small-content-size);
-      height: var(--gse-ui-avatar-small-content-size);
+    width: var(--gse-ui-avatar-small-size);
+    height: var(--gse-ui-avatar-small-size);
+
+    & .gux-content {
+      width: calc(100% - var(--gse-ui-avatar-small-presenceRing-width) * 2);
+      height: calc(100% - var(--gse-ui-avatar-small-presenceRing-width) * 2);
+      margin: var(--gse-ui-avatar-small-presenceRing-width);
       font-size: var(--gse-ui-avatar-small-initials-fontSize);
       font-weight: var(--gse-ui-avatar-small-initials-fontWeight);
     }
   }
 
   &.gux-xsmall {
-    .gux-content {
-      width: var(--gse-ui-avatar-xsmall-content-size);
-      height: var(--gse-ui-avatar-xsmall-content-size);
+    width: var(--gse-ui-avatar-xsmall-size);
+    height: var(--gse-ui-avatar-xsmall-size);
+
+    & .gux-content {
+      width: calc(100% - var(--gse-ui-avatar-xsmall-presenceRing-width) * 2);
+      height: calc(100% - var(--gse-ui-avatar-xsmall-presenceRing-width) * 2);
+      margin: var(--gse-ui-avatar-xsmall-presenceRing-width);
       font-size: var(--gse-ui-avatar-xsmall-initials-fontSize);
       font-weight: var(--gse-ui-avatar-xsmall-initials-fontWeight);
     }
+  }
+
+  &.gux-accent-1 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent1);
+    }
+  }
+
+  &.gux-accent-2 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent2);
+    }
+  }
+
+  &.gux-accent-3 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent3);
+    }
+  }
+
+  &.gux-accent-4 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent4);
+    }
+  }
+
+  &.gux-accent-5 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent5);
+    }
+  }
+
+  &.gux-accent-6 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent6);
+    }
+  }
+
+  &.gux-accent-7 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent7);
+    }
+  }
+
+  &.gux-accent-8 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent8);
+    }
+  }
+
+  &.gux-accent-9 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent9);
+    }
+  }
+
+  &.gux-accent-10 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent10);
+    }
+  }
+
+  &.gux-accent-11 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent11);
+    }
+  }
+
+  &.gux-accent-12 {
+    .gux-content {
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(--gse-ui-avatar-media-initialsBackground-accent12);
+    }
+  }
+
+  &.gux-accent-inherit {
+    .gux-content {
+      color: inherit;
+      background-color: inherit;
+    }
+  }
+
+  &.gux-ring {
+    &.gux-available {
+      background: var(--gse-ui-avatar-presenceRing-available);
+    }
+
+    &.gux-away,
+    &.gux-break,
+    &.gux-meal,
+    &.gux-training {
+      background: var(--gse-ui-avatar-presenceRing-away);
+    }
+
+    &.gux-busy,
+    &.gux-meeting {
+      background: var(--gse-ui-avatar-presenceRing-busy);
+    }
+
+    &.gux-notifications {
+      background: var(--gse-ui-avatar-presenceRing-notifications);
+    }
+
+    &.gux-offline {
+      background: var(--gse-ui-avatar-presenceRing-offline);
+    }
+
+    &.gux-out-of-office {
+      background: var(--gse-ui-avatar-presenceRing-outOfOffice);
+    }
+
+    &.gux-on-queue {
+      background: var(--gse-ui-avatar-presenceRing-onQueue);
+    }
+  }
+}
+
+.gux-avatar-badge {
+  position: absolute;
+  top: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
+  right: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--gse-ui-avatar-large-badge-size);
+  height: var(--gse-ui-avatar-large-badge-size);
+  border-color: var(--gse-ui-avatar-content-default-border-color);
+  border-style: var(--gse-ui-avatar-content-default-border-style);
+  border-width: var(--gse-ui-avatar-content-large-border-width);
+  border-radius: 50%;
+
+  &.gux-medium {
+    top: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
+    right: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
+    width: var(--gse-ui-avatar-medium-badge-size);
+    height: var(--gse-ui-avatar-medium-badge-size);
+    border-width: var(--gse-ui-avatar-content-default-border-width);
+  }
+
+  &.gux-small,
+  &.gux-xsmall {
+    top: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
+    right: calc(var(--gse-ui-avatar-content-default-border-width) * -1);
+    width: var(--gse-ui-avatar-small-badge-size);
+    height: var(--gse-ui-avatar-small-badge-size);
+    border-width: var(--gse-ui-avatar-content-default-border-width);
+
+    & gux-icon {
+      display: none;
+    }
+  }
+
+  &.gux-available {
+    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+
+    &.gux-small,
+    &.gux-xsmall {
+      background-color: var(--gse-ui-avatar-badge-available-color);
+    }
+
+    & gux-icon {
+      color: var(--gse-ui-avatar-badge-available-color);
+    }
+  }
+
+  &.gux-away,
+  &.gux-break,
+  &.gux-meal,
+  &.gux-training {
+    background-color: var(--gse-ui-avatar-badge-away);
+
+    & gux-icon {
+      margin: var(--gse-ui-avatar-badge-away-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDark-color);
+    }
+  }
+
+  &.gux-busy,
+  &.gux-meeting {
+    background-color: var(--gse-ui-avatar-badge-busy-color);
+
+    & gux-icon {
+      margin: var(--gse-ui-avatar-badge-busy-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+    }
+  }
+
+  &.gux-notifications {
+    background-color: var(--gse-ui-avatar-badge-notification-color);
+
+    & gux-icon {
+      margin: var(--gse-ui-avatar-badge-notifications-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+    }
+  }
+
+  &.gux-offline {
+    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+
+    &.gux-small,
+    &.gux-xsmall {
+      background-color: var(--gse-ui-avatar-badge-offline-color);
+    }
+
+    & gux-icon {
+      color: var(--gse-ui-avatar-badge-offline-color);
+    }
+  }
+
+  &.gux-out-of-office {
+    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+
+    &.gux-small,
+    &.gux-xsmall {
+      background-color: var(--gse-ui-avatar-badge-outOfOffice);
+    }
+
+    & gux-icon {
+      color: var(--gse-ui-avatar-badge-outOfOffice);
+    }
+  }
+
+  &.gux-on-queue {
+    background-color: var(--gse-ui-avatar-badge-onQueue-color);
+
+    & gux-icon {
+      margin: var(--gse-ui-avatar-badge-queue-icon-margin);
+      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+    }
+  }
+
+  & gux-icon {
+    width: 100%;
+    height: 100%;
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark",
-  "version": "4.19.0",
+  "version": "4.23.0",
   "description": "",
   "license": "ISC",
   "author": "",
@@ -13,25 +13,23 @@
     "build": "rollup -c",
     "dev": "rollup -c --watch",
     "eslint": "eslint --fix './**/*.ts'",
-    "lint-staged": "lint-staged",
+    "lint-staged": "lint-staged --concurrent false",
     "prettier": "prettier --log-level silent --ignore-path .gitignore --ignore-unknown --write .",
     "test": "jest",
     "test.watch": "jest --watch",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "types": "dist/src/index.d.ts",
-  "dependencies": {
-    "@rollup/plugin-replace": "^5.0.5",
-    "@rollup/plugin-typescript": "^11.1.5",
-    "rollup": "^3.29.4"
-  },
   "devDependencies": {
-    "@tsconfig/strictest": "^2.0.2",
-    "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "@typescript-eslint/parser": "^6.9.1",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@tsconfig/strictest": "^2.0.3",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "ts-jest": "^29.1.1"
+    "rollup": "^4.12.0",
+    "ts-jest": "^29.1.2"
   }
 }
