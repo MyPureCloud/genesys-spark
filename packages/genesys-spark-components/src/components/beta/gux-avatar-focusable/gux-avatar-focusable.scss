@@ -1,0 +1,16 @@
+::slotted(a) {
+  --gse-ui-links-borderRadius: 50%; // TODO: Find a better way to overwrite the a typography style in slotted anchor
+
+  display: inline-block;
+  line-height: 0px;
+}
+
+::slotted(button) {
+  padding: 0;
+  margin: 0;
+  line-height: 0px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 50%;
+}
