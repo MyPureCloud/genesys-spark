@@ -158,6 +158,12 @@ export class GuxDatepicker {
   @State()
   active: boolean = false;
 
+  /**
+   * Tracks the amount of key presses when focusing on the input.
+   */
+  @State()
+  pressedKeys: Set<string> = new Set();
+
   @Watch('value')
   watchValue() {
     this.updateDate();
@@ -325,6 +331,7 @@ export class GuxDatepicker {
   }
 
   onInputFocusOut() {
+    this.pressedKeys.clear();
     this.lastIntervalRange = this.initialIntervalRange;
   }
 
@@ -362,6 +369,7 @@ export class GuxDatepicker {
   }
 
   updateIntervalValue(event: KeyboardEvent): void {
+    this.pressedKeys.add(event.key);
     const inputNumber = parseInt(event.key, 10);
 
     if (!isNaN(inputNumber)) {
@@ -377,7 +385,7 @@ export class GuxDatepicker {
       ) {
         this.typeYearValue(currentSectionValue, event.key);
       } else {
-        if (this.canSetDate(inputNumber)) {
+        if (this.canSetDate(inputNumber) && this.pressedKeys.size == 2) {
           this.updateSelection(
             this.focusedField,
             `${currentSectionValue[1]}${event.key}`
