@@ -1,5 +1,5 @@
 <h1>gux-avatar-beta</h1>
-
+<!--
 <h2>Image</h2>
 <gux-avatar-beta name="Conor Darcy">
   <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy" />
@@ -468,7 +468,7 @@
   notifications
   size="xsmall"
 >
-</gux-avatar-beta>
+</gux-avatar-beta> -->
 
 <h2>Wrapped Avatar</h2>
 <p>
@@ -477,24 +477,24 @@
 </p>
 <h3>Button</h3>
 <div class="wrapped-examples">
-  <button>
+  <button class="gux-avatar-button">
     <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
   </button>
-  <button>
+  <button class="gux-avatar-button">
     <gux-avatar-beta
       name="Conor Darcy"
       presence="available"
       badge
     ></gux-avatar-beta>
   </button>
-  <button>
+  <button class="gux-avatar-button">
     <gux-avatar-beta
       name="Conor Darcy"
       presence="available"
       ring
     ></gux-avatar-beta>
   </button>
-  <button>
+  <button class="gux-avatar-button">
     <gux-avatar-beta
       name="Conor Darcy"
       presence="available"
@@ -502,7 +502,7 @@
       ring
     ></gux-avatar-beta>
   </button>
-  <button>
+  <button class="gux-avatar-button">
     <gux-avatar-beta
       size="medium"
       name="Conor Darcy"
@@ -511,7 +511,7 @@
       ring
     ></gux-avatar-beta>
   </button>
-  <button>
+  <button class="gux-avatar-button gux-focus-ring-small-focused-visible">
     <gux-avatar-beta
       size="small"
       name="Conor Darcy"
@@ -520,7 +520,7 @@
       ring
     ></gux-avatar-beta>
   </button>
-  <button>
+  <button class="gux-avatar-button gux-focus-ring-small-focused-visible">
     <gux-avatar-beta
       size="xsmall"
       name="Conor Darcy"
@@ -533,24 +533,24 @@
 
 <h3>Anchor Tag</h3>
 <div class="wrapped-examples">
-  <a href="#">
+  <a href="#" class="gux-avatar-link">
     <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
   </a>
-  <a href="#">
+  <a href="#" class="gux-avatar-link">
     <gux-avatar-beta
       name="Conor Darcy"
       presence="available"
       badge
     ></gux-avatar-beta>
   </a>
-  <a href="#">
+  <a href="#" class="gux-avatar-link">
     <gux-avatar-beta
       name="Conor Darcy"
       presence="available"
       ring
     ></gux-avatar-beta>
   </a>
-  <a href="#">
+  <a href="#" class="gux-avatar-link">
     <gux-avatar-beta
       name="Conor Darcy"
       presence="available"
@@ -558,7 +558,7 @@
       ring
     ></gux-avatar-beta>
   </a>
-  <a href="#">
+  <a href="#" class="gux-avatar-link">
     <gux-avatar-beta
       size="medium"
       name="Conor Darcy"
@@ -567,7 +567,7 @@
       ring
     ></gux-avatar-beta>
   </a>
-  <a href="#">
+  <a href="#" class="gux-avatar-link gux-focus-ring-small-focused-visible">
     <gux-avatar-beta
       size="small"
       name="Conor Darcy"
@@ -576,7 +576,7 @@
       ring
     ></gux-avatar-beta>
   </a>
-  <a href="#">
+  <a href="#" class="gux-avatar-link gux-focus-ring-small-focused-visible">
     <gux-avatar-beta
       size="xsmall"
       name="Conor Darcy"
@@ -586,7 +586,6 @@
     ></gux-avatar-beta>
   </a>
 </div>
-<!-- Anchor Tag -->
 <style>
   .name-example {
     display: flex;
@@ -642,8 +641,7 @@
     align-items: flex-end;
   }
 
-  /* Styles for focussed Avatar within a button or anchor tag example */
-  button {
+  .gux-avatar-button {
     padding: 0;
     margin: 0;
     line-height: 0px;
@@ -653,35 +651,8 @@
     border-radius: 50%;
   }
 
-  a {
+  .gux-avatar-link {
     line-height: 0px;
     border-radius: 50%;
-  }
-
-  a:focus-visible,
-  button:focus-visible {
-    outline-style: solid;
-    outline-color: var(--gse-ui-avatar-focus);
-    outline-offset: var(--gse-semantic-focusRing-offset);
-  }
-
-  a:focus-visible:has(> gux-avatar-beta[size='large']),
-  button:focus-visible:has(> gux-avatar-beta[size='large']) {
-    outline-width: var(--gse-ui-avatar-focusRing-large-border-width);
-  }
-
-  a:focus-visible:has(> gux-avatar-beta[size='medium']),
-  button:focus-visible:has(> gux-avatar-beta[size='medium']) {
-    outline-width: var(--gse-ui-avatar-focusRing-medium-border-width);
-  }
-
-  a:focus-visible:has(> gux-avatar-beta[size='small']),
-  button:focus-visible:has(> gux-avatar-beta[size='small']) {
-    outline-width: var(--gse-ui-avatar-focusRing-small-border-width);
-  }
-
-  a:focus-visible:has(> gux-avatar-beta[size='xsmall']),
-  button:focus-visible:has(> gux-avatar-beta[size='xsmall']) {
-    outline-width: var(--gse-ui-avatar-focusRing-xsmall-border-width);
   }
 </style>
