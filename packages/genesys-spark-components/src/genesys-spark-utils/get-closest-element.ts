@@ -1,4 +1,5 @@
 //https://inindca.atlassian.net/browse/COMUI-2673
+// utility to get the closest element passing shadow dom boundaries
 export function getClosestElement(
   node: Element | ParentNode | null,
   selector: string
