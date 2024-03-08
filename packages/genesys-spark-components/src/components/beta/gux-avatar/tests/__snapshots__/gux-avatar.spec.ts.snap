@@ -126,7 +126,7 @@ exports[`gux-avatar #render different accents #render notification badge should 
       </div>
     </div>
     <div class="gux-avatar-badge gux-large gux-notifications">
-      <gux-icon icon-name="fa/bell-regular"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/bell-regular"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -417,7 +417,7 @@ exports[`gux-avatar #render different presences should work as expected for "ava
       </div>
     </div>
     <div class="gux-available gux-avatar-badge gux-large">
-      <gux-icon icon-name="fa/circle-check-solid"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/circle-check-solid"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -436,7 +436,7 @@ exports[`gux-avatar #render different presences should work as expected for "awa
       </div>
     </div>
     <div class="gux-avatar-badge gux-away gux-large">
-      <gux-icon icon-name="fa/clock-outline"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/clock-outline"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -455,7 +455,7 @@ exports[`gux-avatar #render different presences should work as expected for "bus
       </div>
     </div>
     <div class="gux-avatar-badge gux-busy gux-large">
-      <gux-icon icon-name="fa/ban-outline"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/ban-outline"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -490,7 +490,7 @@ exports[`gux-avatar #render different presences should work as expected for "inv
       </div>
     </div>
     <div class="gux-avatar-badge gux-invalid-presence gux-large">
-      <gux-icon icon-name="fa/circle-xmark-regular"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/circle-xmark-regular"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -509,7 +509,7 @@ exports[`gux-avatar #render different presences should work as expected for "mea
       </div>
     </div>
     <div class="gux-avatar-badge gux-large gux-meal">
-      <gux-icon icon-name="fa/clock-outline"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/clock-outline"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -528,7 +528,7 @@ exports[`gux-avatar #render different presences should work as expected for "mee
       </div>
     </div>
     <div class="gux-avatar-badge gux-large gux-meeting">
-      <gux-icon icon-name="fa/ban-outline"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/ban-outline"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -547,7 +547,7 @@ exports[`gux-avatar #render different presences should work as expected for "off
       </div>
     </div>
     <div class="gux-avatar-badge gux-large gux-offline">
-      <gux-icon icon-name="fa/circle-xmark-regular"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/circle-xmark-regular"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -566,7 +566,7 @@ exports[`gux-avatar #render different presences should work as expected for "on-
       </div>
     </div>
     <div class="gux-avatar-badge gux-large gux-on-queue">
-      <gux-icon icon-name="fa/headset-solid"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/headset-solid"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -585,7 +585,7 @@ exports[`gux-avatar #render different presences should work as expected for "out
       </div>
     </div>
     <div class="gux-avatar-badge gux-large gux-out-of-office">
-      <gux-icon icon-name="fa/subtract-circle"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/subtract-circle"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -604,7 +604,7 @@ exports[`gux-avatar #render different presences should work as expected for "tra
       </div>
     </div>
     <div class="gux-avatar-badge gux-large gux-training">
-      <gux-icon icon-name="fa/clock-outline"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/clock-outline"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>

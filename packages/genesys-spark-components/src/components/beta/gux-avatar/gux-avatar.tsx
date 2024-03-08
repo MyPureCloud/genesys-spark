@@ -112,7 +112,10 @@ export class GuxAvatar {
             [`gux-${this.size}`]: true
           }}
         >
-          <gux-icon icon-name={this.getPresenceIcon(this.presence)}></gux-icon>
+          <gux-icon
+            icon-name={this.getPresenceIcon(this.presence)}
+            decorative
+          ></gux-icon>
         </div>
       ) as JSX.Element;
     }
@@ -126,7 +129,7 @@ export class GuxAvatar {
           [`gux-${this.size}`]: true
         }}
       >
-        <gux-icon icon-name="fa/bell-regular"></gux-icon>
+        <gux-icon icon-name="fa/bell-regular" decorative></gux-icon>
       </div>
     ) as JSX.Element;
   }
