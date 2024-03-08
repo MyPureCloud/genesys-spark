@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.24.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.23.1...v4.24.0) (2024-03-08)
+
+
+### Features
+
+* **cta-group:** cta group component ([e86fed2](https://github.com/MyPureCloud/genesys-spark/commit/e86fed26a84240c62efc8ef2ebb3a1a9a974ea06))
+* **tokens:** Removed unused component tokens ([59491b0](https://github.com/MyPureCloud/genesys-spark/commit/59491b09949b236e43cb47dacd4674ad2a46d811))
+* **tokens:** Renamed button_bar token to cta_group ([e32bd0f](https://github.com/MyPureCloud/genesys-spark/commit/e32bd0f457d007598ba74e152e1d7685ab4a7633))
+
 ### [4.23.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.23.0...v4.23.1) (2024-03-07)
 
 ## [4.23.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.22.1...v4.23.0) (2024-03-06)
