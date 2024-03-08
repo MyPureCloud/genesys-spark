@@ -1,5 +1,5 @@
 export const deprecatedIconNamesMap: { [key: string]: string } = {
-  'fa/00-solid': 'fa/00-regular', // TODO https://inindca.atlassian.net/browse/COMUI-2698
+  'fa/00-solid': 'fa/00-regular',
   'fa/arrows-rotate-solid': 'fa/arrows-rotate-regular',
   'fa/ban-regular': 'ban-outline',
   'fa/check-solid': 'checkmark',
