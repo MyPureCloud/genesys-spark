@@ -3,7 +3,7 @@
 
 :host {
   display: inline-block;
-  width: 300px; // TODO : COMUI-2310 according to figma this should be a 320px token ?
+  width: 300px; // TODO: GDS-2451 according to figma this should be a 320px token ?
   min-width: 300px;
 }
 
@@ -172,9 +172,8 @@
       .gux-navigation-divider {
         box-sizing: border-box;
         align-self: center;
-        height: 16px; // TODO COMUI-2310 - missing token for divider height
+        height: 16px; // TODO: GDS-2451 - missing token for divider height
         color: var(--gse-ui-search-counter-default-foregroundColor);
-        background-color: #c6c8ce; // TODO COMUI-2310 - missing token for divider background color.
         border: 1px var(--gse-ui-search-counter-divider-border-style)
           var(--gse-ui-search-counter-divider-border-color);
       }
