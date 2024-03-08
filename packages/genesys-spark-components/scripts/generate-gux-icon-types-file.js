@@ -13,10 +13,13 @@ const getAllVariants = directory => {
     file = path.join(directory, file);
     const fileStatus = fs.statSync(file);
     if (fileStatus.isDirectory()) {
-      variants = variants.concat(getAllVariants(file));
+      variants.push(...getAllVariants(file));
     } else if (file.includes('legacy/fa/')) {
       const fileName = file.split('legacy/fa/').pop();
       variants.push(`legacy/fa/${fileName}`, `fa/${fileName}`);
+    } else if (file.includes('deprecated/')) {
+      const fileName = file.split('deprecated/').pop();
+      variants.push(`deprecated/${fileName}`, `${fileName}`);
     } else {
       variants.push(file.split('icons/').pop());
     }
