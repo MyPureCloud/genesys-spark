@@ -20,6 +20,10 @@
   overflow: hidden;
   border-radius: 50%;
 
+  .gux-change-photo-icon {
+    display: none;
+  }
+
   .gux-content {
     box-sizing: border-box;
     display: flex;
@@ -40,6 +44,37 @@
       var(--gse-ui-avatar-content-default-border-style)
       var(--gse-ui-avatar-content-default-border-color);
     border-radius: 50%;
+  }
+
+  &.gux-change-photo:hover {
+    cursor: pointer;
+
+    .gux-change-photo-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: var(--gse-semantic-zIndex-showFocus);
+      display: inline-block;
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      transform: translate(-50%, -50%);
+    }
+
+    .gux-content::after {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      box-sizing: border-box;
+      width: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
+      height: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
+      content: '';
+      background-color: var(--gse-ui-avatar-hoverModal);
+      border: var(--gse-ui-avatar-content-large-border-width)
+        var(--gse-ui-avatar-content-default-border-style)
+        var(--gse-ui-avatar-content-default-border-color);
+      border-radius: 50%;
+      opacity: 0.8; // TODO: Replace with token
+      transition: background-color 0.5s ease;
+    }
   }
 
   &.gux-medium {

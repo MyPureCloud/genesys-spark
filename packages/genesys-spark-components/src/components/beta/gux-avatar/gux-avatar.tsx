@@ -1,4 +1,12 @@
-import { Component, h, JSX, Prop, Element } from '@stencil/core';
+import {
+  Component,
+  h,
+  JSX,
+  Prop,
+  Element,
+  Event,
+  EventEmitter
+} from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
 import {
@@ -71,6 +79,18 @@ export class GuxAvatar {
   @Prop()
   notifications: boolean = false;
 
+  /**
+   * Show photo change overlay on hover, only available for large avatars
+   */
+  @Prop()
+  changePhoto: boolean = false;
+
+  /**
+   * Occurs when the item has been clicked when changePhoto is true
+   */
+  @Event()
+  edit: EventEmitter<string>;
+
   private generateInitials(): string {
     const nameArray = this.name?.split(' ') ?? [];
     if (nameArray.length > 1) {
@@ -134,6 +154,19 @@ export class GuxAvatar {
     ) as JSX.Element;
   }
 
+  private renderCameraIcon(): JSX.Element {
+    if (this.changePhoto && this.size === 'large') {
+      return (
+        <gux-icon
+          class="gux-change-photo-icon"
+          icon-name="fa/camera-solid"
+          size="small"
+          decorative
+        ></gux-icon>
+      ) as JSX.Element;
+    }
+  }
+
   private getPresenceIcon(presence: GuxAvatarPresence): string {
     switch (presence) {
       case 'available':
@@ -167,6 +200,10 @@ export class GuxAvatar {
     return `${this.name}`;
   }
 
+  private onAvatarClick(): void {
+    if (this.changePhoto) this.edit.emit();
+  }
+
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.size });
     this.i18n = await buildI18nForComponent(this.root, defaultResources);
@@ -184,9 +221,12 @@ export class GuxAvatar {
           [`gux-${this.presence}`]: this.ring || this.badge,
           [`gux-${this.size}`]: true,
           'gux-ring': this.ring,
-          [`gux-accent-${this.getAccent()}`]: true
+          [`gux-accent-${this.getAccent()}`]: true,
+          'gux-change-photo': this.changePhoto && this.size === 'large'
         }}
+        onClick={() => this.onAvatarClick()}
       >
+        {this.renderCameraIcon()}
         <div class="gux-content">
           <slot name="image">
             <abbr

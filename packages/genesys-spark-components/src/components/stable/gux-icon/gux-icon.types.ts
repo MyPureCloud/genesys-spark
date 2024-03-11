@@ -290,6 +290,7 @@ export type GuxIconIconName =
   | 'fa/bullseye-regular'
   | 'fa/calculator-regular'
   | 'fa/calendar-days-regular'
+  | 'fa/camera-solid'
   | 'fa/check-solid'
   | 'fa/circle-check-regular'
   | 'fa/circle-check-solid'
