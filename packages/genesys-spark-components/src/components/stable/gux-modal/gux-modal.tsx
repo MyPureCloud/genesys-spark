@@ -7,7 +7,8 @@ import {
   JSX,
   Prop,
   Method,
-  Watch
+  Watch,
+  Listen
 } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
@@ -68,6 +69,24 @@ export class GuxModal {
   // eslint-disable-next-line @typescript-eslint/require-await
   async close(): Promise<void> {
     this.open = false;
+  }
+
+  /*
+   * This serves as a workaround for a specific issue found in Safari and Firefox browsers.
+   * In full-screen mode, pressing the "Escape" key would not only close the native HTML dialog but also minimize the browser window.
+   * By preventing the default behavior of the "Escape" key event and explicitly closing the dialog, this workaround ensures
+   * that the browser window remains unaffected when closing the dialog in full-screen mode.
+   * More info can be found here: https://discussions.apple.com/thread/251785881?answerId=253426808022&sortBy=best#253426808022
+   */
+
+  @Listen('keydown')
+  onKeydown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Escape':
+        event.preventDefault();
+        this.dialogElement.close();
+        return;
+    }
   }
 
   componentWillLoad(): void {
