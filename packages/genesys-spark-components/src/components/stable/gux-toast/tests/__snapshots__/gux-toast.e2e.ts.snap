@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-toast #render should render action toast 1`] = `"<gux-toast toast-type=\\"action\\" hydrated=\\"\\"> <gux-icon slot=\\"icon\\" icon-name=\\"fa/diamond-regular\\" decorative=\\"\\" hydrated=\\"\\"></gux-icon> <div slot=\\"title\\">2 Actions</div> <div slot=\\"message\\">This is an example message</div> <button slot=\\"primary-button\\" type=\\"button\\" onclick=\\"notify(event)\\"> Action 1 </button> <button slot=\\"secondary-button\\" type=\\"button\\" onclick=\\"notify(event)\\"> Action 2 </button> </gux-toast>"`;
+exports[`gux-toast #render should render action toast 1`] = `"<gux-toast toast-type=\\"action\\" hydrated=\\"\\"> <gux-icon slot=\\"icon\\" icon-name=\\"fa/diamond-regular\\" decorative=\\"\\" size=\\"inherit\\" hydrated=\\"\\"></gux-icon> <div slot=\\"title\\">2 Actions</div> <div slot=\\"message\\">This is an example message</div> <button slot=\\"primary-button\\" type=\\"button\\" onclick=\\"notify(event)\\"> Action 1 </button> <button slot=\\"secondary-button\\" type=\\"button\\" onclick=\\"notify(event)\\"> Action 2 </button> </gux-toast>"`;
 
 exports[`gux-toast #render should render error toast 1`] = `"<gux-toast toast-type=\\"error\\" hydrated=\\"\\"> <div slot=\\"title\\">Error Example with Link</div> <div slot=\\"message\\">This is an example message</div> <a slot=\\"link\\" href=\\"#\\">Link</a> </gux-toast>"`;
 
