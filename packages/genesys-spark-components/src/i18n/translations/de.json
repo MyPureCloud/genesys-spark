@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Suchen"
   },
+  "gux-avatar": {
+    "notifications": "Benachrichtigungen"
+  },
   "gux-badge": {
     "info": "Badge mit Bezeichnung: {label}, Akzent: Info",
     "info-bold": "Badge mit Bezeichnung: {label}, Akzent: Info fett",

@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "بحث"
   },
+  "gux-avatar": {
+    "notifications": "الإشعارات"
+  },
   "gux-badge": {
     "info": "شارة تحمل تسمية: {label}، اللهجة: معلومات",
     "info-bold": "شارة تحمل تسمية: {label}، اللهجة، معلومات بخط عريض",

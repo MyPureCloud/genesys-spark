@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Ara"
   },
+  "gux-avatar": {
+    "notifications": "Bildirimler"
+  },
   "gux-badge": {
     "info": "etiketli rozet: {label}, vurgu: bilgi",
     "info-bold": "etiketli rozet: {label}, vurgu: bilgi kalın",

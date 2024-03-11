@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Cerca"
   },
+  "gux-avatar": {
+    "notifications": "Notifiche"
+  },
   "gux-badge": {
     "info": "badge con etichetta: {label}, accento: info",
     "info-bold": "badge con etichetta: {label}, accento: info accentuato",
