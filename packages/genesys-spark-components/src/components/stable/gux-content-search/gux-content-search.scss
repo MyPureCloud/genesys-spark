@@ -16,6 +16,7 @@
   flex-basis: 100%;
   flex-shrink: 1;
   width: 100%;
+  min-width: 20px;
   overflow: hidden;
   font-family: var(--gse-ui-search-counter-text-fontFamily);
   font-size: var(--gse-ui-search-counter-text-fontSize);
