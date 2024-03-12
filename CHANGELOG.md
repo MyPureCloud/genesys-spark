@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.26.0](https://github.com/MyPureCloud/genesys-spark/compare/v5.0.0...v4.26.0) (2024-03-12)
+
+
+### Bug Fixes
+
+* **modal:** escape issue on safari and firefox ([1f892de](https://github.com/MyPureCloud/genesys-spark/commit/1f892deaa431a54711551f6b7735afa579752150))
+
 ## [5.0.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.25.0...v5.0.0) (2024-03-12)
 
 
