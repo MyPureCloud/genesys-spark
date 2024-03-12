@@ -331,7 +331,11 @@
         "add": "#4856CB"
       }
     },
-    "hover_modal": "#0f1929",
+    "hover_modal": {
+      "shroud-color": "#0f1929",
+      "foreground-color": "#ffffff",
+      "opacity": "80%"
+    },
     "content": {
       "border_radius": "256px",
       "default": {
@@ -386,7 +390,15 @@
         }
       }
     },
-    "focus": "#7B88F7"
+    "focus": "#7B88F7",
+    "add-change-image": {
+      "hover-modal": {
+        "shroud-size": "84px"
+      },
+      "icon": {
+        "size": "16px"
+      }
+    }
   },
   "global_nav": {
     "side_menu": "linear-gradient(135deg, #09b581 0%, #9de1cd 100%)"
