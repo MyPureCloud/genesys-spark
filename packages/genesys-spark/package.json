@@ -16,6 +16,7 @@
     "lint-staged": "lint-staged --concurrent false",
     "prettier": "prettier --log-level silent --ignore-path .gitignore --ignore-unknown --write .",
     "test": "jest",
+    "test.ci": "npm run test",
     "test.watch": "jest --watch",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
