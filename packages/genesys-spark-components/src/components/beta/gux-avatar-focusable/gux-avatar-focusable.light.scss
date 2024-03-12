@@ -1,0 +1,15 @@
+@use '../../../style/_focus.scss';
+
+gux-avatar-focusable-beta {
+  a {
+    border-radius: 50%;
+  }
+
+  &.gux-size-small,
+  &.gux-size-xsmall {
+    a:focus-visible,
+    button:focus-visible {
+      @include focus.gux-focus-ring-small;
+    }
+  }
+}
