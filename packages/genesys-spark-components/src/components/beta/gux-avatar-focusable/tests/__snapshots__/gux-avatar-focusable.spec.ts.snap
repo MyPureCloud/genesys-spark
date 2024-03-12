@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-avatar-focusable #render component type (1) with valid markup 1`] = `
+<gux-avatar-focusable-beta class="gux-size-large">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <button>
+    <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
+  </button>
+</gux-avatar-focusable-beta>
+`;
+
+exports[`gux-avatar-focusable #render component type (2) with valid markup 1`] = `
+<gux-avatar-focusable-beta class="gux-size-large">
+  <mock:shadow-root>
+    <slot></slot>
+  </mock:shadow-root>
+  <a href="#">
+    <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
+  </a>
+</gux-avatar-focusable-beta>
+`;

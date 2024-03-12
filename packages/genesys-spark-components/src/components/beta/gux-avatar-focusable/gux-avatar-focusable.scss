@@ -1,6 +1,4 @@
 ::slotted(a) {
-  --gse-ui-links-borderRadius: 50%; // TODO: Find a better way to overwrite the a typography style in slotted anchor
-
   display: inline-block;
   line-height: 0px;
 }

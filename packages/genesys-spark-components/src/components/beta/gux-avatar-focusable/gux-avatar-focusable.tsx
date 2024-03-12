@@ -1,4 +1,4 @@
-import { Component, h, JSX, Element } from '@stencil/core';
+import { Component, h, JSX, Element, State, Host } from '@stencil/core';
 import { logWarn } from '@utils/error/log-error';
 
 @Component({
@@ -6,41 +6,36 @@ import { logWarn } from '@utils/error/log-error';
   tag: 'gux-avatar-focusable-beta',
   shadow: true
 })
-export class GuxAvatarLink {
+export class GuxAvatarFocusable {
   @Element() root: HTMLElement;
 
-  componentDidLoad() {
+  @State()
+  private avatarElement: HTMLGuxAvatarBetaElement;
+
+  componentWillLoad() {
     this.validateSlot();
   }
 
   private validateSlot(): void {
     const slottedElement = this.root.querySelector('a, button');
-    const avatarElement = slottedElement.querySelector('gux-avatar-beta');
-
-    if (!slottedElement) {
+    if (slottedElement) {
+      this.avatarElement = slottedElement.querySelector('gux-avatar-beta');
+      if (!this.avatarElement) {
+        logWarn(this.root, 'Slotted element must contain a gux-avatar');
+      }
+    } else {
       logWarn(
         this.root,
         'An anchor tag or button tag must be slotted into gux-avatar-focusable'
       );
     }
-
-    if (!avatarElement) {
-      logWarn(this.root, 'Slotted element must contain a gux-avatar');
-    }
-
-    if (['small', 'xsmall'].includes(avatarElement.size)) {
-      slottedElement.classList.add('gux-focus-ring-small-focused-visible');
-    } else if (
-      ['medium', 'large'].includes(avatarElement.size) &&
-      [...avatarElement.classList].includes(
-        'gux-focus-ring-small-focused-visible'
-      )
-    ) {
-      slottedElement.classList.remove('gux-focus-ring-small-focused-visible');
-    }
   }
 
   render(): JSX.Element {
-    return (<slot></slot>) as JSX.Element;
+    return (
+      <Host class={`gux-size-${this.avatarElement?.size ?? 'large'}`}>
+        <slot></slot>
+      </Host>
+    ) as JSX.Element;
   }
 }
