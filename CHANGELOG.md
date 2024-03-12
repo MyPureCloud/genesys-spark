@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.25.0...v5.0.0) (2024-03-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* **icon:** Size prop reflected in markup. May require snapshot updates
+
+### Features
+
+* **icon:** reflect size prop so css carries through ([#371](https://github.com/MyPureCloud/genesys-spark/issues/371)) ([95c2dc2](https://github.com/MyPureCloud/genesys-spark/commit/95c2dc255701adca5cbfb98270b37f8e4c5dd6a0))
+
+
+### Bug Fixes
+
+* **tokens:** remove fixedWidth for tabs token ([20b18c3](https://github.com/MyPureCloud/genesys-spark/commit/20b18c33c8ae9650bf0d2d2185626184e27a1335))
+* **tokens:** update tabs tokens ([fc2ecf2](https://github.com/MyPureCloud/genesys-spark/commit/fc2ecf231e359eb042c01c8fcedcc97b4f58fbe9))
+
 ## [4.25.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.24.0...v4.25.0) (2024-03-09)
 
 
