@@ -59,7 +59,7 @@
   },
   "types": "dist/types/index.d.ts",
   "dependencies": {
-    "@floating-ui/dom": "1.4.3",
+    "@floating-ui/dom": "^1.6.3",
     "@vvo/tzdb": "^6.125.0",
     "google-libphonenumber": "^3.2.34",
     "intl-messageformat": "^10.5.4",
