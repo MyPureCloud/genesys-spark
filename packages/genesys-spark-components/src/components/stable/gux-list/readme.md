@@ -19,6 +19,12 @@ Type: `Promise<void>`
 
 
 
+#### Parameters
+
+| Name | Type     | Description |
+| ---- | -------- | ----------- |
+| `id` | `string` |             |
+
 #### Returns
 
 Type: `Promise<void>`
@@ -28,6 +34,12 @@ Type: `Promise<void>`
 ### `guxFocusItemById(id: string) => Promise<void>`
 
 
+
+#### Parameters
+
+| Name | Type     | Description |
+| ---- | -------- | ----------- |
+| `id` | `string` |             |
 
 #### Returns
 
