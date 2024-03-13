@@ -25,7 +25,13 @@ const newVersionsJson = semverSort
   .desc([
     ...new Set([].concat(currentVersionsJson, npmVersionsJson, newVersion))
   ])
-  .filter(v => !Boolean(prerelease(v)));
+  .filter(v => {
+    if (v === '5.0.0') {
+      return false;
+    }
+
+    return !Boolean(prerelease(v));
+  });
 const newVersionsString = JSON.stringify(newVersionsJson, null, 2);
 
 fs.writeFileSync(path.resolve('./dist/versions.json'), newVersionsString, {
