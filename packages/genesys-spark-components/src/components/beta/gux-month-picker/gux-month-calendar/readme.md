@@ -20,6 +20,12 @@
 
 Focus a month
 
+#### Parameters
+
+| Name           | Type                    | Description |
+| -------------- | ----------------------- | ----------- |
+| `iSOYearMonth` | ``${string}-${string}`` |             |
+
 #### Returns
 
 Type: `Promise<void>`

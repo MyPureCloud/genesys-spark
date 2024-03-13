@@ -46,6 +46,12 @@ Type: `Promise<boolean>`
 
 
 
+#### Parameters
+
+| Name     | Type      | Description |
+| -------- | --------- | ----------- |
+| `active` | `boolean` |             |
+
 #### Returns
 
 Type: `Promise<void>`

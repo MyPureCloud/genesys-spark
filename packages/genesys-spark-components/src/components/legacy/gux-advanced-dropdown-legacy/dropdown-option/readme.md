@@ -39,6 +39,12 @@ Type: `Promise<string>`
 
 Determines if the search input matches this option.
 
+#### Parameters
+
+| Name          | Type     | Description                          |
+| ------------- | -------- | ------------------------------------ |
+| `searchInput` | `string` | The input string being searched for. |
+
 #### Returns
 
 Type: `Promise<boolean>`

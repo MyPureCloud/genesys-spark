@@ -26,6 +26,12 @@
 
 
 
+#### Parameters
+
+| Name            | Type      | Description |
+| --------------- | --------- | ----------- |
+| `indeterminate` | `boolean` |             |
+
 #### Returns
 
 Type: `Promise<void>`

@@ -40,6 +40,12 @@ Type: `Promise<void>`
 
 Reset calendar view to show first selected date
 
+#### Parameters
+
+| Name    | Type   | Description |
+| ------- | ------ | ----------- |
+| `value` | `Date` |             |
+
 #### Returns
 
 Type: `Promise<void>`
@@ -49,6 +55,12 @@ Type: `Promise<void>`
 ### `setValue(value: Date | [Date, Date]) => Promise<void>`
 
 Sets new value and rerender the calendar
+
+#### Parameters
+
+| Name    | Type                   | Description |
+| ------- | ---------------------- | ----------- |
+| `value` | `Date \| [Date, Date]` |             |
 
 #### Returns
 
