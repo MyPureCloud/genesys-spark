@@ -16,7 +16,7 @@
     "prettier-package-json": "prettier-package-json --write ./package.json",
     "snapshot": "node build/index.mjs snapshot",
     "test": "node test/index.mjs",
-    "test.ci": "npm run test"
+    "test.ci": "npm run build && npm run test"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.1.1",
