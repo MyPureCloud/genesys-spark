@@ -35,9 +35,14 @@ Start the dev server:
 
 `npm start`
 
+### Writing Commit Messages
+
+- Use `npm run commit`to ensure correctly formatted commit messages. ([git-cz](https://github.com/streamich/git-cz))
+
+WIP add more here
+
 ### While Working
 
-- Use `npm run commit` or `git cz` to ensure correctly formatted commit messages. ([Commitizen](https://github.com/commitizen/cz-cli))
 - Components should follow our best practices for [Component Design](/packages/genesys-spark-components/documentation/COMPONENT_DESIGN.md)
 - Components should be implemented in TypeScript, with Stencil (if you think you need to deviate from this, talk to the common UI dev team first)
 - Create tests for your component
