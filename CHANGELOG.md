@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.26.1-beta.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.26.0...v4.26.1-beta.0) (2024-03-13)
+
+
+### Bug Fixes
+
+* **genesys-spark:** fixd build types output ([4cf4a4d](https://github.com/MyPureCloud/genesys-spark/commit/4cf4a4d302cfc808f0ffc0bb304181ef29dec215))
+
 ## [4.26.0](https://github.com/MyPureCloud/genesys-spark/compare/v5.0.0...v4.26.0) (2024-03-12)
 
 
