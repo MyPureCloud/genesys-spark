@@ -2,7 +2,6 @@ import { Component, h, JSX, Element, State, Host } from '@stencil/core';
 import { logWarn } from '@utils/error/log-error';
 
 @Component({
-  styleUrl: 'gux-avatar-focusable.scss',
   tag: 'gux-avatar-focusable-beta',
   shadow: true
 })
@@ -33,7 +32,7 @@ export class GuxAvatarFocusable {
 
   render(): JSX.Element {
     return (
-      <Host class={`gux-size-${this.avatarElement?.size ?? 'large'}`}>
+      <Host gs-avatar-size={this.avatarElement?.size ?? 'large'}>
         <slot></slot>
       </Host>
     ) as JSX.Element;
