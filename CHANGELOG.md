@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.26.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.26.0...v4.26.1) (2024-03-14)
+
+
+### Bug Fixes
+
+* **docs:** hide v5 ([1244b6f](https://github.com/MyPureCloud/genesys-spark/commit/1244b6f5618b263d24a2f36bb3257538d4ff716f))
+* **genesys-spark:** fixd build types output ([4cf4a4d](https://github.com/MyPureCloud/genesys-spark/commit/4cf4a4d302cfc808f0ffc0bb304181ef29dec215))
+* **tests:** fixed ci test script ([2d3c5fa](https://github.com/MyPureCloud/genesys-spark/commit/2d3c5fadb2484c165d1eb988033ff0d383dbeb53))
+* **tokens:** add test command to package json ([f01b949](https://github.com/MyPureCloud/genesys-spark/commit/f01b949bafa27a352a6228dd780150ca09403952))
+* **tokens:** remove token test ([7366ecf](https://github.com/MyPureCloud/genesys-spark/commit/7366ecf13fea4115ea73d5c5c990590582fb7ff8))
+* **tokens:** test change should fail build ([24bb718](https://github.com/MyPureCloud/genesys-spark/commit/24bb718e531b42759f4c722d0edd9b90967ca1a9))
+* **type example:** fix dodgy Firefox version ([#377](https://github.com/MyPureCloud/genesys-spark/issues/377)) ([a1f2f99](https://github.com/MyPureCloud/genesys-spark/commit/a1f2f995a0a2925f753de029ddff39210851ba7f))
+
 ## [4.26.0](https://github.com/MyPureCloud/genesys-spark/compare/v5.0.0...v4.26.0) (2024-03-12)
 
 
