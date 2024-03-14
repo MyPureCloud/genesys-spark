@@ -1,0 +1,14 @@
+{
+  "z-index": {
+    "styles": true
+  },
+  "typography": {
+    "styles": true
+  },
+  "global": {
+    "styles": true
+  },
+  "focus": {
+    "styles": true
+  }
+}

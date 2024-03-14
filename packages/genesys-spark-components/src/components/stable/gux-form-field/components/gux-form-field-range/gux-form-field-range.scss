@@ -19,7 +19,7 @@
 @prop $gse-ui-slider-focusRing-borderRadius
 **/
 
-@use '../../../../../style/typography.scss';
+@use '~genesys-spark/src/style/typography.scss';
 @use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
