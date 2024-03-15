@@ -1,3 +1,5 @@
+@use '../../../style/_focus.scss';
+
 :host {
   position: relative;
   display: inline-block;
@@ -46,7 +48,12 @@
     border-radius: 50%;
   }
 
-  &.gux-change-photo:hover {
+  &.gux-change-photo:focus-visible {
+    @include focus.gux-focus-ring;
+  }
+
+  &.gux-change-photo:hover,
+  &.gux-change-photo:focus-visible {
     cursor: pointer;
 
     .gux-change-photo-icon {
@@ -61,8 +68,8 @@
 
     .gux-content::after {
       position: absolute;
-      top: 4px;
-      left: 4px;
+      top: var(--gse-ui-avatar-large-presenceRing-width);
+      left: var(--gse-ui-avatar-large-presenceRing-width);
       width: var(--gse-ui-avatar-addChangeImage-hoverModal-shroudSize);
       height: var(--gse-ui-avatar-addChangeImage-hoverModal-shroudSize);
       content: '';

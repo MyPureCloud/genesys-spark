@@ -5,7 +5,8 @@ import {
   Prop,
   Element,
   Event,
-  EventEmitter
+  EventEmitter,
+  Listen
 } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
@@ -80,7 +81,7 @@ export class GuxAvatar {
   notifications: boolean = false;
 
   /**
-   * Show photo change overlay on hover, only available for large avatars
+   * Avatar has role button, photo overlay and emits event.
    */
   @Prop()
   changePhoto: boolean = false;
@@ -89,7 +90,7 @@ export class GuxAvatar {
    * Occurs when the item has been clicked when changePhoto is true
    */
   @Event()
-  edit: EventEmitter<string>;
+  guxchangephoto: EventEmitter<void>;
 
   private generateInitials(): string {
     const nameArray = this.name?.split(' ') ?? [];
@@ -161,9 +162,18 @@ export class GuxAvatar {
           class="gux-change-photo-icon"
           icon-name="fa/camera-solid"
           size="small"
-          decorative
+          screenreaderText={this.i18n('changePhoto')}
         ></gux-icon>
       ) as JSX.Element;
+    }
+  }
+
+  @Listen('keydown')
+  onKeyDown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Enter':
+        this.onAvatarEvent();
+        break;
     }
   }
 
@@ -200,8 +210,8 @@ export class GuxAvatar {
     return `${this.name}`;
   }
 
-  private onAvatarClick(): void {
-    if (this.changePhoto) this.edit.emit();
+  private onAvatarEvent(): void {
+    if (this.changePhoto) this.guxchangephoto.emit();
   }
 
   async componentWillLoad(): Promise<void> {
@@ -224,7 +234,9 @@ export class GuxAvatar {
           [`gux-accent-${this.getAccent()}`]: true,
           'gux-change-photo': this.changePhoto && this.size === 'large'
         }}
-        onClick={() => this.onAvatarClick()}
+        role={this.changePhoto ? 'button' : ''}
+        tabindex={this.changePhoto ? '0' : '-1'}
+        onClick={() => this.onAvatarEvent()}
       >
         {this.renderCameraIcon()}
         <div class="gux-content">

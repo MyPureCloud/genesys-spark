@@ -168,5 +168,7 @@ describe('gux-avatar', () => {
         expect(page.root).toMatchSnapshot();
       });
     });
+
+    //TODO: Add tests for change photo once format agreed
   });
 });

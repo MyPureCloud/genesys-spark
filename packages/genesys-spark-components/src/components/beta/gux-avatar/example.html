@@ -1,5 +1,5 @@
 <h1>gux-avatar-beta</h1>
-<h2>Image</h2>
+<!-- <h2>Image</h2>
 <gux-avatar-beta name="Conor Darcy">
   <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy" />
 </gux-avatar-beta>
@@ -154,10 +154,10 @@
         const updateName = document.getElementById('update-name');
         const updateLabel = document.getElementById('update-label');
         const updatePresence = document.getElementById('update-presence');
-        const updateBadge = document.getElementsByName('update-badge')[0];
-        const updateRing = document.getElementsByName('update-ring')[0];
-        const updateNotifications = document.getElementsByName('update-notifications')[0];
-        const updateChangePhoto = document.getElementsByName('update-photo')[0];
+        const updateBadge = document.querySelector('[name=update-badge]');
+        const updateRing = document.querySelector('[name=update-ring]');
+        const updateNotifications = document.querySelector('[name=update-notifications]');
+        const updateChangePhoto = document.querySelector('[name=update-photo]');
         avatar.setAttribute('size', updateSize.value);
         avatar.setAttribute('name', updateName.value);
         avatar.setAttribute('label', updateLabel.value);
@@ -478,7 +478,7 @@
   notifications
   size="xsmall"
 >
-</gux-avatar-beta>
+</gux-avatar-beta> -->
 
 <h2>gux-avatar-focusable</h2>
 <p>
@@ -626,7 +626,7 @@
 </div>
 <h2>Change Photo</h2>
 <gux-avatar-beta name="Simon Whelehan" change-photo>
-  <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy" />
+  <img slot="image" src="https://i.pravatar.cc/300" alt="Simon Whelehan" />
 </gux-avatar-beta>
 <gux-avatar-beta
   name="Kevin Kinahan"
@@ -638,7 +638,7 @@
   <img
     slot="image"
     src="https://i.pravatar.cc/300"
-    alt="Conor Darcy (Available)"
+    alt="Kevin Kinahan (Available)"
   />
 </gux-avatar-beta>
 <gux-avatar-beta
@@ -651,7 +651,7 @@
   <img
     slot="image"
     src="https://i.pravatar.cc/300"
-    alt="Conor Darcy (Available)"
+    alt="Michael Duignan (Available)"
   />
 </gux-avatar-beta>
 <gux-avatar-beta
@@ -665,7 +665,7 @@
   <img
     slot="image"
     src="https://i.pravatar.cc/300"
-    alt="Conor Darcy (Available) "
+    alt="John Ryan (Available) "
   />
 </gux-avatar-beta>
 
