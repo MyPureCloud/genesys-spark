@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.26.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.26.1...v4.26.2) (2024-03-15)
+
+
+### Bug Fixes
+
+* **datepicker:** first keypress after focus should be treated as new input ([14dd8e5](https://github.com/MyPureCloud/genesys-spark/commit/14dd8e5e7d9bdd60dccc951322dcaa9a7d29dbd3))
+* **datepicker:** first keypress after focus should be treated as new input ([d46f4d2](https://github.com/MyPureCloud/genesys-spark/commit/d46f4d2d7984be522c4048d6c1f3526068a2d717))
+* **gux-modal:** added space around content slot ([9db863f](https://github.com/MyPureCloud/genesys-spark/commit/9db863fc0d338b32633c1709ca1f1754821a3e21))
+
 ### [4.26.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.26.0...v4.26.1) (2024-03-14)
 
 
