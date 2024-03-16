@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.26.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.26.2...v4.26.3) (2024-03-16)
+
+
+### Bug Fixes
+
+* **month-picker:** remove renderFocusTarget ([20cc10e](https://github.com/MyPureCloud/genesys-spark/commit/20cc10ed1571fc9af4724a51a12b99e6871262be))
+
 ### [4.26.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.26.1...v4.26.2) (2024-03-15)
 
 
