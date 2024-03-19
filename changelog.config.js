@@ -6,7 +6,7 @@ const componentSpecs = Object.assign(COMPONENT_SPECS, CHART_COMPONENT_SPECS);
 const getComponentSpec = function () {
   let scopeList = ['other'];
   for (const [key] of Object.entries(componentSpecs)) {
-    scopeList.push(key);
+    scopeList.push(key.replace('gux-', ''));
   }
   return scopeList;
 };
@@ -15,9 +15,9 @@ module.exports = {
   disableEmoji: true,
   format: '{type}{scope}: {emoji}{subject}',
   list: [
-    'test',
     'feat',
     'fix',
+    'test',
     'chore',
     'docs',
     'refactor',
