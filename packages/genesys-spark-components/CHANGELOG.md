@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.122.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.121.0...v3.122.0) (2024-03-20)
+
+
+### Features
+
+* **monthpicker datepicker:** change calendar focus ring to small ([#384](https://github.com/MyPureCloud/genesys-spark/issues/384)) ([0fe2c13](https://github.com/MyPureCloud/genesys-spark/commit/0fe2c1362284c9dc7fd87c725f1f7987c9cf6763))
+
 ## [3.121.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.120.1...v3.121.0) (2024-03-07)
 
 
