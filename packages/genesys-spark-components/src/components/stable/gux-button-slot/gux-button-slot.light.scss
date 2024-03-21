@@ -1,0 +1,34 @@
+gux-button-slot {
+  a {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: var(--gse-ui-button-borderRadius);
+  }
+
+  a:visited {
+    color: var(--gse-ui-button-secondary-default-foregroundColor);
+  }
+
+  &[accent='primary'] > a {
+    color: var(--gse-ui-button-primary-default-foregroundColor);
+  }
+
+  &[accent='danger'] > a {
+    color: var(--gse-ui-button-danger-default-foregroundColor);
+  }
+
+  &[accent='tertiary']:hover > a {
+    color: var(--gse-ui-button-tertiary-hover-foregroundColor);
+  }
+
+  &[accent='ghost']:hover > a {
+    color: var(--gse-ui-button-ghost-default-foregroundColor);
+  }
+
+  &[accent='inline']:hover > a {
+    text-decoration: underline;
+  }
+}

@@ -194,6 +194,38 @@ describe('gux-button-slot', () => {
       {
         description: 'should render input[type=submit] with invalid accent',
         html: '<gux-button-slot accent="invalid"><input type="submit"accent="primary" value="Button"/></gux-button-slot>'
+      },
+      {
+        description: 'should render default anchor tag',
+        html: '<gux-button-slot><a href="#">Default</a></gux-button-slot>'
+      },
+      {
+        description: 'should render primary anchor tag',
+        html: '<gux-button-slot accent="primary"><a href="#">Default</a></gux-button-slot>'
+      },
+      {
+        description: 'should render secondary anchor tag',
+        html: '<gux-button-slot accent="secondary"><a href="#">Secondary</a></gux-button-slot>'
+      },
+      {
+        description: 'should render tertiary anchor tag',
+        html: '<gux-button-slot accent="tertiary"><a href="#">Tertiary</a></gux-button-slot>'
+      },
+      {
+        description: 'should render ghost anchor tag',
+        html: '<gux-button-slot accent="ghost"><a href="#">Ghost</a></gux-button-slot>'
+      },
+      {
+        description: 'should render danger anchor tag',
+        html: '<gux-button-slot accent="danger"><a href="#">Danger</a></gux-button-slot>'
+      },
+      {
+        description: 'should render inline anchor tag',
+        html: '<gux-button-slot accent="inline"><a href="#">Inline</a></gux-button-slot>'
+      },
+      {
+        description: 'should render invalid accent anchor tag',
+        html: '<gux-button-slot accent="invalid"><a href="#">Invalid</a></gux-button-slot>'
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {

@@ -2,11 +2,15 @@
 
 exports[`gux-button-slot #render should render button with invalid accent 1`] = `"<gux-button-slot accent=\\"invalid\\" hydrated=\\"\\"><button type=\\"button\\" accent=\\"primary\\">Button</button></gux-button-slot>"`;
 
+exports[`gux-button-slot #render should render danger anchor tag 1`] = `"<gux-button-slot accent=\\"danger\\" hydrated=\\"\\"><a href=\\"#\\">Danger</a></gux-button-slot>"`;
+
 exports[`gux-button-slot #render should render danger button 1`] = `"<gux-button-slot accent=\\"danger\\" hydrated=\\"\\"><button type=\\"button\\" accent=\\"primary\\">Button</button></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render danger input[type=button] 1`] = `"<gux-button-slot accent=\\"danger\\" hydrated=\\"\\"><input type=\\"button\\" accent=\\"primary\\" value=\\"Button\\"></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render danger input[type=submit] 1`] = `"<gux-button-slot accent=\\"danger\\" hydrated=\\"\\"><input type=\\"submit\\" accent=\\"primary\\" value=\\"Button\\"></gux-button-slot>"`;
+
+exports[`gux-button-slot #render should render default anchor tag 1`] = `"<gux-button-slot accent=\\"secondary\\" hydrated=\\"\\"><a href=\\"#\\">Default</a></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render default button 1`] = `"<gux-button-slot accent=\\"secondary\\" hydrated=\\"\\"><button type=\\"button\\" accent=\\"primary\\">Button</button></gux-button-slot>"`;
 
@@ -56,11 +60,15 @@ exports[`gux-button-slot #render should render disabled tertiary input[type=butt
 
 exports[`gux-button-slot #render should render disabled tertiary input[type=submit] 1`] = `"<gux-button-slot accent=\\"tertiary\\" hydrated=\\"\\"><input type=\\"submit\\" accent=\\"primary\\" disabled=\\"\\" value=\\"Button\\"></gux-button-slot>"`;
 
+exports[`gux-button-slot #render should render ghost anchor tag 1`] = `"<gux-button-slot accent=\\"ghost\\" hydrated=\\"\\"><a href=\\"#\\">Ghost</a></gux-button-slot>"`;
+
 exports[`gux-button-slot #render should render ghost button 1`] = `"<gux-button-slot accent=\\"ghost\\" hydrated=\\"\\"><button type=\\"button\\" accent=\\"primary\\">Button</button></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render ghost input[type=button] 1`] = `"<gux-button-slot accent=\\"ghost\\" hydrated=\\"\\"><input type=\\"button\\" accent=\\"primary\\" value=\\"Button\\"></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render ghost input[type=submit] 1`] = `"<gux-button-slot accent=\\"ghost\\" hydrated=\\"\\"><input type=\\"submit\\" accent=\\"primary\\" value=\\"Button\\"></gux-button-slot>"`;
+
+exports[`gux-button-slot #render should render inline anchor tag 1`] = `"<gux-button-slot accent=\\"inline\\" hydrated=\\"\\"><a href=\\"#\\">Inline</a></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render inline button 1`] = `"<gux-button-slot accent=\\"inline\\" hydrated=\\"\\"><button type=\\"button\\" accent=\\"primary\\">Button</button></gux-button-slot>"`;
 
@@ -72,11 +80,15 @@ exports[`gux-button-slot #render should render input[type=button] with invalid a
 
 exports[`gux-button-slot #render should render input[type=submit] with invalid accent 1`] = `"<gux-button-slot accent=\\"invalid\\" hydrated=\\"\\"><input type=\\"submit\\" accent=\\"primary\\" value=\\"Button\\"></gux-button-slot>"`;
 
+exports[`gux-button-slot #render should render invalid accent anchor tag 1`] = `"<gux-button-slot accent=\\"invalid\\" hydrated=\\"\\"><a href=\\"#\\">Invalid</a></gux-button-slot>"`;
+
 exports[`gux-button-slot #render should render invalid button 1`] = `"<gux-button-slot accent=\\"invalid\\" hydrated=\\"\\"><button type=\\"button\\" accent=\\"primary\\">Button</button></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render invalid input[type=button] 1`] = `"<gux-button-slot accent=\\"invalid\\" hydrated=\\"\\"><input type=\\"button\\" accent=\\"primary\\" value=\\"Button\\"></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render invalid input[type=submit] 1`] = `"<gux-button-slot accent=\\"invalid\\" hydrated=\\"\\"><input type=\\"submit\\" accent=\\"primary\\" value=\\"Button\\"></gux-button-slot>"`;
+
+exports[`gux-button-slot #render should render primary anchor tag 1`] = `"<gux-button-slot accent=\\"primary\\" hydrated=\\"\\"><a href=\\"#\\">Default</a></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render primary button 1`] = `"<gux-button-slot accent=\\"primary\\" hydrated=\\"\\"><button type=\\"button\\" accent=\\"primary\\">Button</button></gux-button-slot>"`;
 
@@ -84,11 +96,15 @@ exports[`gux-button-slot #render should render primary input[type=button] 1`] = 
 
 exports[`gux-button-slot #render should render primary input[type=submit] 1`] = `"<gux-button-slot accent=\\"primary\\" hydrated=\\"\\"><input type=\\"submit\\" accent=\\"primary\\" value=\\"Button\\"></gux-button-slot>"`;
 
+exports[`gux-button-slot #render should render secondary anchor tag 1`] = `"<gux-button-slot accent=\\"secondary\\" hydrated=\\"\\"><a href=\\"#\\">Secondary</a></gux-button-slot>"`;
+
 exports[`gux-button-slot #render should render secondary button 1`] = `"<gux-button-slot accent=\\"secondary\\" hydrated=\\"\\"><button type=\\"button\\" accent=\\"primary\\">Button</button></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render secondary input[type=button] 1`] = `"<gux-button-slot accent=\\"secondary\\" hydrated=\\"\\"><input type=\\"button\\" accent=\\"primary\\" value=\\"Button\\"></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render secondary input[type=submit] 1`] = `"<gux-button-slot accent=\\"secondary\\" hydrated=\\"\\"><input type=\\"submit\\" accent=\\"primary\\" value=\\"Button\\"></gux-button-slot>"`;
+
+exports[`gux-button-slot #render should render tertiary anchor tag 1`] = `"<gux-button-slot accent=\\"tertiary\\" hydrated=\\"\\"><a href=\\"#\\">Tertiary</a></gux-button-slot>"`;
 
 exports[`gux-button-slot #render should render tertiary button 1`] = `"<gux-button-slot accent=\\"tertiary\\" hydrated=\\"\\"><button type=\\"button\\" accent=\\"primary\\">Button</button></gux-button-slot>"`;
 
