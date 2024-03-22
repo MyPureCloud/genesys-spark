@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.28.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.27.0...v4.28.0) (2024-03-22)
+
+
+### Features
+
+* **context-menu:** add compact and default padding tokens ([8c97f31](https://github.com/MyPureCloud/genesys-spark/commit/8c97f31a0c2d6537b3415ab8cffc177548844710))
+* **gux-context-menu:** adopt new tokens ([4016c36](https://github.com/MyPureCloud/genesys-spark/commit/4016c36de49aed6bbf45e58b5ab9007f16b4975e))
+
 ## [4.27.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.26.3...v4.27.0) (2024-03-20)
 
 
