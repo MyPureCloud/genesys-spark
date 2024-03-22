@@ -22,7 +22,7 @@
     "test.watch": "jest --watch",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.5",
     "@tsconfig/strictest": "^2.0.3",
