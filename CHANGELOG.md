@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.28.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.28.0...v4.28.1) (2024-03-23)
+
+
+### Bug Fixes
+
+* **genesys-spark:** fixed broken types reference ([57539ed](https://github.com/MyPureCloud/genesys-spark/commit/57539ede805d145823b75d541e45ae9d6d56ff1e))
+
 ## [4.28.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.27.0...v4.28.0) (2024-03-22)
 
 
