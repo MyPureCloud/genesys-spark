@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "검색"
   },
+  "gux-avatar": {
+    "notifications": "알림"
+  },
   "gux-badge": {
     "info": "레이블 있는 배지: {label}, 강조: 정보",
     "info-bold": "레이블 있는 배지: {label}, 강조: 정보 굵게",

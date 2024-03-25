@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Haku"
   },
+  "gux-avatar": {
+    "notifications": "Ilmoitukset"
+  },
   "gux-badge": {
     "info": "selitteellinen merkki: {label}, korostus: tieto",
     "info-bold": "selitteellinen merkki: {label}, korostus: lihavoitu tieto",

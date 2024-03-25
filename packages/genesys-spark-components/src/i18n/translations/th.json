@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "ค้นหา"
   },
+  "gux-avatar": {
+    "notifications": "การแจ้งเตือน"
+  },
   "gux-badge": {
     "info": "แบดจ์พร้อมป้ายกำกับ: {label}, สำเนียง: ข้อมูล",
     "info-bold": "แบดจ์พร้อมป้ายกำกับ: {label}, สำเนียง: ข้อมูลตัวหนา",
