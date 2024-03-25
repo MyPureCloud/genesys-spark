@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.29.0-beta.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.28.1...v4.29.0-beta.0) (2024-03-25)
+
+
+### Features
+
+* **date-time:** use current time in date-time example ([#390](https://github.com/MyPureCloud/genesys-spark/issues/390)) ([b856afc](https://github.com/MyPureCloud/genesys-spark/commit/b856afc87705ca6d88f48b645389b0ef125ba08a))
+
+
+### Bug Fixes
+
+* **charts:** fixed charts deploy ([a01c005](https://github.com/MyPureCloud/genesys-spark/commit/a01c0056fd88861856fe055066e239efc3cd4de6))
+* **publish:** remove temp dry run tag ([f45a7d5](https://github.com/MyPureCloud/genesys-spark/commit/f45a7d5ce30abb1a0c64090fe23824987b1b4d58))
+
 ### [4.28.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.28.0...v4.28.1) (2024-03-23)
 
 
