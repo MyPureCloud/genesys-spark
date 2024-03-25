@@ -4,7 +4,7 @@ import {
   DateTimeFormatter,
   GuxDateTimeFormat
 } from '../../../i18n/DateTimeFormatter';
-import * as sparkIntl from '../../../genesys-spark-utils/intl';
+import * as sparkIntl from '../../../../../genesys-spark/src/utils/intl';
 // Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
 import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
 import { getDesiredLocale } from '../../../i18n/index';

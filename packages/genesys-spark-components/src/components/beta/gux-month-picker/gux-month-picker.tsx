@@ -17,7 +17,7 @@ import {
   GetI18nValue,
   getDesiredLocale
 } from '../../../i18n';
-import * as sparkIntl from '../../../genesys-spark-utils/intl';
+import * as sparkIntl from '../../../../../genesys-spark/src/utils/intl';
 import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { afterNextRender } from '@utils/dom/after-next-render';
