@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.123.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.122.0...v3.123.0) (2024-03-26)
+
+
+### Features
+
+* **pagination:** change width to fit-content ([#394](https://github.com/MyPureCloud/genesys-spark/issues/394)) ([2a94370](https://github.com/MyPureCloud/genesys-spark/commit/2a9437080dd1c5c9baa4f07cd15f396dbe5d7f8e))
+
+
+### Bug Fixes
+
+* **date-picker:** first keypress after focus should be treated as new input ([d01a9de](https://github.com/MyPureCloud/genesys-spark/commit/d01a9ded84f39bcbb77706ead1197fe7f03217ae))
+
 ## [3.122.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.121.0...v3.122.0) (2024-03-20)
 
 
