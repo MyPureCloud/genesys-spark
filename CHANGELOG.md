@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.29.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.28.1...v4.29.0) (2024-03-26)
+
+
+### Features
+
+* **date-time:** use current time in date-time example ([#390](https://github.com/MyPureCloud/genesys-spark/issues/390)) ([b856afc](https://github.com/MyPureCloud/genesys-spark/commit/b856afc87705ca6d88f48b645389b0ef125ba08a))
+* **language:** translation updates ([0dbc18e](https://github.com/MyPureCloud/genesys-spark/commit/0dbc18e39f1f35e2bf6e0adaeaa63d19a22a960b))
+* **pagination:** change dropdown size to fit-content ([#393](https://github.com/MyPureCloud/genesys-spark/issues/393)) ([80560e7](https://github.com/MyPureCloud/genesys-spark/commit/80560e7121b7ab25b67182ade718d2b548634673))
+
 ### [4.28.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.28.0...v4.28.1) (2024-03-23)
 
 
