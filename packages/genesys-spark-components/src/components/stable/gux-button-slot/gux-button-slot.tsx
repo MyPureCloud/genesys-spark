@@ -32,7 +32,7 @@ export class GuxButtonSlot {
       slottedTagName = slottedElement.tagName;
     }
 
-    if (slottedTagName === 'BUTTON') {
+    if (['BUTTON', 'A'].includes(slottedTagName)) {
       return;
     } else if (slottedTagName === 'INPUT') {
       const slottedType = slottedElement.getAttribute('type');
@@ -44,7 +44,7 @@ export class GuxButtonSlot {
 
     logError(
       this.root,
-      'You must slot a button, input[type="button"] or input[type="submit"] element.'
+      'You must slot a button, a, input[type="button"] or input[type="submit"] element.'
     );
   }
 

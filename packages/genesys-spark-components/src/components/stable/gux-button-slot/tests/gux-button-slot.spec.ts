@@ -210,6 +210,38 @@ describe('gux-button-slot', () => {
       {
         description: 'should render input[type=submit] with invalid accent',
         html: '<gux-button-slot accent="invalid"><input type="submit" accent="primary" value="Button"/></gux-button-slot>'
+      },
+      {
+        description: 'should render default anchor tag',
+        html: '<gux-button-slot><a href="#">Default</a></gux-button-slot>'
+      },
+      {
+        description: 'should render primary anchor tag',
+        html: '<gux-button-slot accent="primary"><a href="#">Default</a></gux-button-slot>'
+      },
+      {
+        description: 'should render secondary anchor tag',
+        html: '<gux-button-slot accent="secondary"><a href="#">Secondary</a></gux-button-slot>'
+      },
+      {
+        description: 'should render tertiary anchor tag',
+        html: '<gux-button-slot accent="tertiary"><a href="#">Tertiary</a></gux-button-slot>'
+      },
+      {
+        description: 'should render ghost anchor tag',
+        html: '<gux-button-slot accent="ghost"><a href="#">Ghost</a></gux-button-slot>'
+      },
+      {
+        description: 'should render danger anchor tag',
+        html: '<gux-button-slot accent="danger"><a href="#">Danger</a></gux-button-slot>'
+      },
+      {
+        description: 'should render inline anchor tag',
+        html: '<gux-button-slot accent="inline"><a href="#">Inline</a></gux-button-slot>'
+      },
+      {
+        description: 'should render invalid accent anchor tag',
+        html: '<gux-button-slot accent="invalid"><a href="#">Invalid</a></gux-button-slot>'
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
@@ -252,7 +284,17 @@ describe('gux-button-slot', () => {
       expect(logError).not.toHaveBeenCalled();
     });
 
-    it('should not log an error if an input[type=text] element is slotted', async () => {
+    it('should not log an error if an anchor element is slotted', async () => {
+      await newSpecPage({
+        components,
+        html: '<gux-button-slot><a href="#">Invalid</a></gux-button-slot>',
+        language
+      });
+
+      expect(logError).not.toHaveBeenCalled();
+    });
+
+    it('should log an error if an input[type=text] element is slotted', async () => {
       await newSpecPage({
         components,
         html: '<gux-button-slot id="test"><input type="text" accent="primary" value="Button"/></gux-button-slot>',
@@ -261,11 +303,11 @@ describe('gux-button-slot', () => {
 
       expect(logError).toHaveBeenCalledWith(
         document.getElementById('test'),
-        'You must slot a button, input[type="button"] or input[type="submit"] element.'
+        'You must slot a button, a, input[type="button"] or input[type="submit"] element.'
       );
     });
 
-    it('should not log an error if a button element is slotted', async () => {
+    it('should log an error if a div element is slotted', async () => {
       await newSpecPage({
         components,
         html: '<gux-button-slot id="test"><div>Not a button</div></gux-button-slot>',
@@ -274,7 +316,7 @@ describe('gux-button-slot', () => {
 
       expect(logError).toHaveBeenCalledWith(
         document.getElementById('test'),
-        'You must slot a button, input[type="button"] or input[type="submit"] element.'
+        'You must slot a button, a, input[type="button"] or input[type="submit"] element.'
       );
     });
   });
