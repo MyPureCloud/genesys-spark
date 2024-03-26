@@ -15,3 +15,5 @@ test.properties
 ui-jobs-config.json
 manifest.json
 temp.txt
+dist/
+manifest.json

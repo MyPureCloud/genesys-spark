@@ -6,7 +6,7 @@ const path = require('path');
 const versionHelper = require('./version-helper');
 
 const name = 'genesys-webcomponents';
-const sourceDir = path.join(__dirname, '../dist/genesys-webcomponents');
+const sourceDir = path.join(__dirname, './dist');
 const version = versionHelper.getDeployVersion();
 const build = `${process.env.BUILD_NUMBER}`;
 const buildDate = new Date().toISOString();
@@ -24,5 +24,5 @@ const manifest = {
 const manifestPath = path.join(__dirname, '../manifest.json');
 const manifestJson = JSON.stringify(manifest, null, 2);
 
-console.log(`Writing manifest file: ${manifestPath}`, manifestJson);
+console.info(`Writing manifest file: ${manifestPath}`, manifestJson);
 fs.writeFileSync(manifestPath, manifestJson, { encoding: 'utf8' });
