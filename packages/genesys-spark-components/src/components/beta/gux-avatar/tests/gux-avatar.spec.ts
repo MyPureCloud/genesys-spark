@@ -26,12 +26,18 @@ describe('gux-avatar', () => {
       });
     });
 
-    it(`component with image`, async () => {
-      const html = `<gux-avatar-beta name="John Doe"><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`;
-      const page = await newSpecPage({ components: [GuxAvatar], html });
+    [
+      `<gux-avatar-beta name="John Doe"><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`,
+      `<gux-avatar-beta name="John Doe" change-photo><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`
+    ].forEach((html, index) => {
+      it(`component with image type (${
+        index + 1
+      }) for valid markup`, async () => {
+        const page = await newSpecPage({ components: [GuxAvatar], html });
 
-      expect(page.root).toMatchSnapshot();
-      expect(logWarn).not.toHaveBeenCalled();
+        expect(page.root).toMatchSnapshot();
+        expect(logWarn).not.toHaveBeenCalled();
+      });
     });
   });
 
@@ -162,5 +168,7 @@ describe('gux-avatar', () => {
         expect(page.root).toMatchSnapshot();
       });
     });
+
+    //TODO: Add tests for change photo once format agreed
   });
 });

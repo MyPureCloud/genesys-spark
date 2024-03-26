@@ -6,7 +6,8 @@
     "searchAria": "Search"
   },
   "gux-avatar": {
-    "notifications": "Notifications"
+    "notifications": "Notifications",
+    "changePhoto": "Change profile photo"
   },
   "gux-badge": {
     "info": "badge with label: {label}, accent: info",
