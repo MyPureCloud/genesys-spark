@@ -3,7 +3,7 @@
 exports[`gux-avatar #render component with image type (1) for valid markup 1`] = `
 <gux-avatar-beta name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -20,7 +20,7 @@ exports[`gux-avatar #render component with image type (1) for valid markup 1`] =
 exports[`gux-avatar #render component with image type (2) for valid markup 1`] = `
 <gux-avatar-beta change-photo="" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-change-photo gux-large" id="gux-avatar" role="button" tabindex="0">
+    <div class="gux-accent-default gux-avatar gux-change-photo gux-large" role="button" tabindex="0">
       <gux-icon class="gux-change-photo-icon" icon-name="fa/camera-solid" screenreadertext="Change profile photo" size="small"></gux-icon>
       <div class="gux-content">
         <slot name="image">
@@ -38,7 +38,7 @@ exports[`gux-avatar #render component with image type (2) for valid markup 1`] =
 exports[`gux-avatar #render component with name type (1) for valid markup 1`] = `
 <gux-avatar-beta name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -54,7 +54,7 @@ exports[`gux-avatar #render component with name type (1) for valid markup 1`] = 
 exports[`gux-avatar #render component with name type (2) for valid markup 1`] = `
 <gux-avatar-beta name="JohnDoe">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="JohnDoe" title="JohnDoe">
@@ -70,7 +70,7 @@ exports[`gux-avatar #render component with name type (2) for valid markup 1`] = 
 exports[`gux-avatar #render component with name type (3) for valid markup 1`] = `
 <gux-avatar-beta name="山田 太郎">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="山田 太郎" title="山田 太郎">
@@ -86,7 +86,7 @@ exports[`gux-avatar #render component with name type (3) for valid markup 1`] = 
 exports[`gux-avatar #render component with name type (4) for valid markup 1`] = `
 <gux-avatar-beta name="이 영수">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="이 영수" title="이 영수">
@@ -102,7 +102,7 @@ exports[`gux-avatar #render component with name type (4) for valid markup 1`] = 
 exports[`gux-avatar #render component with name type (5) for valid markup 1`] = `
 <gux-avatar-beta name="邓 小平">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="邓 小平" title="邓 小平">
@@ -118,7 +118,7 @@ exports[`gux-avatar #render component with name type (5) for valid markup 1`] = 
 exports[`gux-avatar #render different accents #render label should render label 1`] = `
 <gux-avatar-beta label="All Hands" name="John Doe" presence="busy" ring="">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-busy gux-large gux-ring" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-busy gux-large gux-ring" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe (All Hands)" title="John Doe (All Hands)">
@@ -134,7 +134,7 @@ exports[`gux-avatar #render different accents #render label should render label 
 exports[`gux-avatar #render different accents #render notification badge should render notification badge 1`] = `
 <gux-avatar-beta badge="" name="John Doe" notifications="">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large gux-none" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large gux-none" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe (Notifications)" title="John Doe (Notifications)">
@@ -153,7 +153,7 @@ exports[`gux-avatar #render different accents #render notification badge should 
 exports[`gux-avatar #render different accents #render presence ring should render presence ring 1`] = `
 <gux-avatar-beta name="John Doe" presen="" ring="">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large gux-none gux-ring" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large gux-none gux-ring" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -169,7 +169,7 @@ exports[`gux-avatar #render different accents #render presence ring should rende
 exports[`gux-avatar #render different accents should work as expected for "0" 1`] = `
 <gux-avatar-beta accent="0" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-0 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-0 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -185,7 +185,7 @@ exports[`gux-avatar #render different accents should work as expected for "0" 1`
 exports[`gux-avatar #render different accents should work as expected for "1" 1`] = `
 <gux-avatar-beta accent="1" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-1 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-1 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -201,7 +201,7 @@ exports[`gux-avatar #render different accents should work as expected for "1" 1`
 exports[`gux-avatar #render different accents should work as expected for "2" 1`] = `
 <gux-avatar-beta accent="2" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-2 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-2 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -217,7 +217,7 @@ exports[`gux-avatar #render different accents should work as expected for "2" 1`
 exports[`gux-avatar #render different accents should work as expected for "3" 1`] = `
 <gux-avatar-beta accent="3" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-3 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-3 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -233,7 +233,7 @@ exports[`gux-avatar #render different accents should work as expected for "3" 1`
 exports[`gux-avatar #render different accents should work as expected for "4" 1`] = `
 <gux-avatar-beta accent="4" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-4 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-4 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -249,7 +249,7 @@ exports[`gux-avatar #render different accents should work as expected for "4" 1`
 exports[`gux-avatar #render different accents should work as expected for "5" 1`] = `
 <gux-avatar-beta accent="5" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-5 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-5 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -265,7 +265,7 @@ exports[`gux-avatar #render different accents should work as expected for "5" 1`
 exports[`gux-avatar #render different accents should work as expected for "6" 1`] = `
 <gux-avatar-beta accent="6" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-6 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-6 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -281,7 +281,7 @@ exports[`gux-avatar #render different accents should work as expected for "6" 1`
 exports[`gux-avatar #render different accents should work as expected for "7" 1`] = `
 <gux-avatar-beta accent="7" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-7 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-7 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -297,7 +297,7 @@ exports[`gux-avatar #render different accents should work as expected for "7" 1`
 exports[`gux-avatar #render different accents should work as expected for "8" 1`] = `
 <gux-avatar-beta accent="8" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-8 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-8 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -313,7 +313,7 @@ exports[`gux-avatar #render different accents should work as expected for "8" 1`
 exports[`gux-avatar #render different accents should work as expected for "9" 1`] = `
 <gux-avatar-beta accent="9" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-9 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-9 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -329,7 +329,7 @@ exports[`gux-avatar #render different accents should work as expected for "9" 1`
 exports[`gux-avatar #render different accents should work as expected for "10" 1`] = `
 <gux-avatar-beta accent="10" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-10 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-10 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -345,7 +345,7 @@ exports[`gux-avatar #render different accents should work as expected for "10" 1
 exports[`gux-avatar #render different accents should work as expected for "11" 1`] = `
 <gux-avatar-beta accent="11" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-11 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-11 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -361,7 +361,7 @@ exports[`gux-avatar #render different accents should work as expected for "11" 1
 exports[`gux-avatar #render different accents should work as expected for "12" 1`] = `
 <gux-avatar-beta accent="12" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-12 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-12 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -377,7 +377,7 @@ exports[`gux-avatar #render different accents should work as expected for "12" 1
 exports[`gux-avatar #render different accents should work as expected for "auto" 1`] = `
 <gux-avatar-beta accent="auto" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-3 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-3 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -393,7 +393,7 @@ exports[`gux-avatar #render different accents should work as expected for "auto"
 exports[`gux-avatar #render different accents should work as expected for "default" 1`] = `
 <gux-avatar-beta accent="default" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -409,7 +409,7 @@ exports[`gux-avatar #render different accents should work as expected for "defau
 exports[`gux-avatar #render different accents should work as expected for "invalid-accent" 1`] = `
 <gux-avatar-beta accent="invalid-accent" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-invalid-accent gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-invalid-accent gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -425,7 +425,7 @@ exports[`gux-avatar #render different accents should work as expected for "inval
 exports[`gux-avatar #render different presences should work as expected for "available" 1`] = `
 <gux-avatar-beta badge="" name="John Doe" presence="available">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-available gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-available gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -444,7 +444,7 @@ exports[`gux-avatar #render different presences should work as expected for "ava
 exports[`gux-avatar #render different presences should work as expected for "away" 1`] = `
 <gux-avatar-beta badge="" name="John Doe" presence="away">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-away gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-away gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -463,7 +463,7 @@ exports[`gux-avatar #render different presences should work as expected for "awa
 exports[`gux-avatar #render different presences should work as expected for "busy" 1`] = `
 <gux-avatar-beta badge="" name="John Doe" presence="busy">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-busy gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-busy gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -482,7 +482,7 @@ exports[`gux-avatar #render different presences should work as expected for "bus
 exports[`gux-avatar #render different presences should work as expected for "idle" 1`] = `
 <gux-avatar-beta badge="" name="John Doe" presence="idle">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-idle gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-idle gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -498,7 +498,7 @@ exports[`gux-avatar #render different presences should work as expected for "idl
 exports[`gux-avatar #render different presences should work as expected for "invalid-presence" 1`] = `
 <gux-avatar-beta badge="" name="John Doe" presence="invalid-presence">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-invalid-presence gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-invalid-presence gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -517,7 +517,7 @@ exports[`gux-avatar #render different presences should work as expected for "inv
 exports[`gux-avatar #render different presences should work as expected for "meal" 1`] = `
 <gux-avatar-beta badge="" name="John Doe" presence="meal">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large gux-meal" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large gux-meal" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -536,7 +536,7 @@ exports[`gux-avatar #render different presences should work as expected for "mea
 exports[`gux-avatar #render different presences should work as expected for "meeting" 1`] = `
 <gux-avatar-beta badge="" name="John Doe" presence="meeting">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large gux-meeting" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large gux-meeting" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -555,7 +555,7 @@ exports[`gux-avatar #render different presences should work as expected for "mee
 exports[`gux-avatar #render different presences should work as expected for "offline" 1`] = `
 <gux-avatar-beta badge="" name="John Doe" presence="offline">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large gux-offline" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large gux-offline" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -574,7 +574,7 @@ exports[`gux-avatar #render different presences should work as expected for "off
 exports[`gux-avatar #render different presences should work as expected for "on-queue" 1`] = `
 <gux-avatar-beta badge="" name="John Doe" presence="on-queue">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large gux-on-queue" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large gux-on-queue" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -593,7 +593,7 @@ exports[`gux-avatar #render different presences should work as expected for "on-
 exports[`gux-avatar #render different presences should work as expected for "out-of-office" 1`] = `
 <gux-avatar-beta badge="" name="John Doe" presence="out-of-office">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large gux-out-of-office" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large gux-out-of-office" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -612,7 +612,7 @@ exports[`gux-avatar #render different presences should work as expected for "out
 exports[`gux-avatar #render different presences should work as expected for "training" 1`] = `
 <gux-avatar-beta badge="" name="John Doe" presence="training">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large gux-training" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large gux-training" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -631,7 +631,7 @@ exports[`gux-avatar #render different presences should work as expected for "tra
 exports[`gux-avatar #render different sizes should work as expected for "large" 1`] = `
 <gux-avatar-beta name="John Doe" size="large">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -647,7 +647,7 @@ exports[`gux-avatar #render different sizes should work as expected for "large" 
 exports[`gux-avatar #render different sizes should work as expected for "medium" 1`] = `
 <gux-avatar-beta name="John Doe" size="medium">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-medium" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-medium" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -663,7 +663,7 @@ exports[`gux-avatar #render different sizes should work as expected for "medium"
 exports[`gux-avatar #render different sizes should work as expected for "medium-rare" 1`] = `
 <gux-avatar-beta name="John Doe" size="medium-rare">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-medium-rare" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-medium-rare" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -679,7 +679,7 @@ exports[`gux-avatar #render different sizes should work as expected for "medium-
 exports[`gux-avatar #render different sizes should work as expected for "small" 1`] = `
 <gux-avatar-beta name="John Doe" size="small">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-small" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-small" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -695,7 +695,7 @@ exports[`gux-avatar #render different sizes should work as expected for "small" 
 exports[`gux-avatar #render different sizes should work as expected for "xsmall" 1`] = `
 <gux-avatar-beta name="John Doe" size="xsmall">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-xsmall" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-xsmall" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -711,7 +711,7 @@ exports[`gux-avatar #render different sizes should work as expected for "xsmall"
 exports[`gux-avatar changes to attributes after initial load should be reflected in DOM should update accent attribute 1`] = `
 <gux-avatar-beta accent="6" name="John Doe">
   <mock:shadow-root>
-    <div class="gux-accent-6 gux-avatar gux-large" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-6 gux-avatar gux-large" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
@@ -727,7 +727,7 @@ exports[`gux-avatar changes to attributes after initial load should be reflected
 exports[`gux-avatar changes to attributes after initial load should be reflected in DOM should update size attribute 1`] = `
 <gux-avatar-beta name="John Doe" size="small">
   <mock:shadow-root>
-    <div class="gux-accent-default gux-avatar gux-small" id="gux-avatar" role="" tabindex="-1">
+    <div class="gux-accent-default gux-avatar gux-small" role="" tabindex="-1">
       <div class="gux-content">
         <slot name="image">
           <abbr aria-label="John Doe" title="John Doe">
