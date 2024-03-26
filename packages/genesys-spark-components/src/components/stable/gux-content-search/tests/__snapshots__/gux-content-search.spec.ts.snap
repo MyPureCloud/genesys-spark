@@ -7,7 +7,7 @@ exports[`gux-content-search #render should render default control no props 1`] =
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
     </div>
@@ -23,7 +23,7 @@ exports[`gux-content-search #render should render default control no props With 
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
     </div>
@@ -39,7 +39,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -74,7 +74,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -109,7 +109,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -144,7 +144,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -179,7 +179,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -214,7 +214,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -249,7 +249,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -284,7 +284,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -319,7 +319,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -354,7 +354,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -389,7 +389,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -424,7 +424,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -459,7 +459,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">
@@ -494,7 +494,7 @@ exports[`gux-content-search #render should render default control with all props
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="search"></gux-icon>
       </div>
-      <gux-truncate max-lines="1">
+      <gux-truncate>
         <slot></slot>
       </gux-truncate>
       <div class="gux-content-control-panel">

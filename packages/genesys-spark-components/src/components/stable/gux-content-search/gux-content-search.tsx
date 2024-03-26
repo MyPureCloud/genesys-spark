@@ -109,8 +109,7 @@ export class GuxContentSearch {
         <div class="gux-search-icon">
           <gux-icon decorative icon-name="search"></gux-icon>
         </div>
-
-        <gux-truncate max-lines="1">
+        <gux-truncate>
           <slot />
         </gux-truncate>
         {this.getNavigationPanel()}
