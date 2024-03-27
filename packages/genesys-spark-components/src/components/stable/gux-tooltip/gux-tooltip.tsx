@@ -27,7 +27,7 @@ import { afterNextRender } from '@utils/dom/after-next-render';
 import { GuxTooltipAccent } from './gux-tooltip-types';
 
 /**
- * @slot - Content of the tooltip
+ * @slot content - Slot for content
  */
 @Component({
   styleUrl: 'gux-tooltip.scss',
@@ -219,7 +219,9 @@ export class GuxTooltip {
           }}
           data-placement={this.placement}
         >
-          <slot />
+          <slot name="content">
+            <slot />
+          </slot>
         </div>
       </Host>
     ) as JSX.Element;

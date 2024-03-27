@@ -44,6 +44,12 @@
     color: var(--gse-ui-tooltip-light-iconColor);
   }
 
+  ::slotted(*) {
+    width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+
   &.gux-dark {
     color: var(--gse-ui-tooltip-dark-foregroundColor);
     background-color: var(--gse-ui-tooltip-dark-backgroundColor);
