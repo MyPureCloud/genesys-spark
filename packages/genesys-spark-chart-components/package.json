@@ -46,7 +46,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "git-cz"
     }
   },
   "types": "dist/types/index.d.ts",

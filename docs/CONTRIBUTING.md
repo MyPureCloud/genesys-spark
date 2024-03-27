@@ -35,9 +35,52 @@ Start the dev server:
 
 `npm start`
 
+### Writing Commit Messages
+
+Writing descriptive and informative commit messages will help both contributors to the project and consumers of the Genesys Spark package.
+
+Commit messages
+
+- Use `npm run commit`to ensure correctly formatted commit messages. ([git-cz](https://github.com/streamich/git-cz)). This will run the `git-cz` CLI. There will be various prompts to guide you through the commit writing process.
+
+  1. Select the type of change:
+
+```
+  feat:       A new feature (minor version bump and adds commit message to CHANGELOG)
+  fix:        A bug fix (minor version bump and adds commit message to CHANGELOG)
+  test:       Adding missing tests
+  chore:      Build process or auxiliary tool changes
+  docs:       Documentation only changes
+  refactor:   A code change that neither fixes a bug or adds a feature
+  style:      Markup, white-space, formatting, missing semi-colons...
+  ci:         CI related changes
+  perf:       A code change that improves performance
+```
+
+The type of change that is selected will affect the changelog and version bumps. `feat` and `fix` commits will add a line to the changelog and will result in a minor version bump. When using `feat` or `fix` commits, only select this type of change for one commit per branch. Use another change type for additional commits (such as chore) or rebase your branch before merging. Multiple commits with `feat` or `fix` commits will add multiple lines to the changelog, which adds clutter.
+
+2. Select the type of scope of the change
+
+Select from a list of all the components in the component library. If you change is something other than one of the components, select 'other'
+
+3. Write a short, imperative mood description of the change
+
+In other words, write your commit message like it is giving an instruction or order. Example of an imperative mood commit that describes a fix to a toggle button:
+
+Imperative mood:
+`Add screen reader text to toggle button`
+
+Not:
+`Adding screen reader text to toggle button`
+`Added screen reader text to toggle button`
+
+4. Provide a longer description of the change (optional)
+
+5. Issues that this commit closes (optional)
+   Add the JIRA issue number that relates to this commit, if applicable
+
 ### While Working
 
-- Use `npm run commit` or `git cz` to ensure correctly formatted commit messages. ([Commitizen](https://github.com/commitizen/cz-cli))
 - Components should follow our best practices for [Component Design](/packages/genesys-spark-components/documentation/COMPONENT_DESIGN.md)
 - Components should be implemented in TypeScript, with Stencil (if you think you need to deviate from this, talk to the common UI dev team first)
 - Create tests for your component
