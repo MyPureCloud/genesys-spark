@@ -1,0 +1,27 @@
+<!--
+    GUX-LABEL
+    Props:
+    fieldStatus - indicates if field is required, optional or neither
+    actionIcon - displays clickable icon, limited to question mark or info icon
+
+    Behaviour:
+    actionIcon click emits guxactioniconclick
+
+    Styling:
+    Text is not truncated, can be single or multiple lines.
+
+    Attributes:
+    for - standard label attribute
+    Global attributes
+
+    Warnings:
+    Placing inputs inside labels gives an implicit for to the label. In this case, a warning may be logged if the element not considered appropriate within a label. This could be for anchors and buttons etc.
+
+-->
+
+<gux-form-field-text-like>
+  <input slot="input" type="text" name="t-1" value="Sample text" />
+  <gux-label slot="label" field-status="“required”" action-icon="“info”"
+    >Text</gux-label
+  >
+</gux-form-field-text-like>
