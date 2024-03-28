@@ -119,7 +119,8 @@ $gux-form-field-number-step-button-size: 14px;
     padding: 0;
     color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
     background: transparent;
-    border: none;
+    border: var(--gse-ui-formControl-input-default-border-width)
+      var(--gse-ui-formControl-input-default-border-style) transparent;
 
     &:not(:disabled):focus-visible,
     &:not(:disabled):hover {
