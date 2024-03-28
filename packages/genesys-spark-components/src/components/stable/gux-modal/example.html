@@ -394,3 +394,96 @@
     </div>
   </gux-modal>
 </div>
+
+<div>
+  <h2>Autofocus</h2>
+
+  <p>
+    By default, the modal will autofocus on the 'X' button.<br />However, you
+    can apply focus to an appropriate element by applying the
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autofocus"
+      target="_blank"
+      >'autofocus'</a
+    >
+    attribute like here on the 'Accept' button.
+  </p>
+
+  <gux-inline-alert class="alert" accent="warning">
+    The focus ring is only visible when using the keyboard to navigate.
+  </gux-inline-alert>
+
+  <gux-button onclick="document.getElementById('example8').showModal()"
+    >Autofocus 'X' (default)</gux-button
+  >
+
+  <gux-button onclick="document.getElementById('example9').showModal()"
+    >Autofocus accept button</gux-button
+  >
+
+  <gux-modal id="example8" size="small">
+    <div slot="title">Default focus</div>
+    <div slot="content">
+      <p>By default, the modal will autofocus on the 'X' button.</p>
+      <p>
+        <strong>Note:</strong> The focus ring is only visible when using the
+        keyboard to navigate.
+      </p>
+    </div>
+    <div slot="start-align-buttons">
+      <gux-button-slot accent="primary">
+        <button type="button" autofocus>Accept</button>
+      </gux-button-slot>
+    </div>
+    <div slot="end-align-buttons">
+      <gux-button-slot>
+        <button
+          onclick="document.getElementById('example1').close()"
+          type="button"
+        >
+          Cancel
+        </button>
+      </gux-button-slot>
+    </div>
+  </gux-modal>
+
+  <gux-modal id="example9" size="small">
+    <div slot="title">Autofocus accept button</div>
+    <div slot="content">
+      <p>
+        You can apply focus to an appropriate element by applying the
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autofocus"
+          target="_blank"
+          >'autofocus'</a
+        >
+        attribute like here on the 'Accept' button.
+      </p>
+      <p>
+        <strong>Note:</strong> The focus ring is only visible when using the
+        keyboard to navigate.
+      </p>
+    </div>
+    <div slot="start-align-buttons">
+      <gux-button-slot accent="primary">
+        <button type="button" autofocus>Accept</button>
+      </gux-button-slot>
+    </div>
+    <div slot="end-align-buttons">
+      <gux-button-slot>
+        <button
+          onclick="document.getElementById('example1').close()"
+          type="button"
+        >
+          Cancel
+        </button>
+      </gux-button-slot>
+    </div>
+  </gux-modal>
+</div>
+
+<style>
+  .alert {
+    margin-bottom: 16px;
+  }
+</style>
