@@ -277,7 +277,8 @@
   label="Available"
   badge
   presence="invalid-presence"
-></gux-avatar-beta>
+>
+</gux-avatar-beta>
 <gux-avatar-beta name="Conor Darcy" presence="available" badge>
   <img
     slot="image"
@@ -468,6 +469,151 @@
   size="xsmall"
 >
 </gux-avatar-beta>
+
+<h2>gux-avatar-focusable</h2>
+<p>
+  The following shows examples of correct focus styling for the avatar when it
+  is located within a focusable element such as a button or anchor tag.
+</p>
+<h3>Button</h3>
+<div class="wrapped-examples">
+  <gux-avatar-focusable-beta>
+    <button>
+      <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button>
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        badge
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button>
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        ring
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button>
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button>
+      <gux-avatar-beta
+        size="medium"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button>
+      <gux-avatar-beta
+        size="small"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button>
+      <gux-avatar-beta
+        size="xsmall"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+</div>
+
+<h3>Anchor Tag</h3>
+<div class="wrapped-examples">
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        badge
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        ring
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        size="medium"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        size="small"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        size="xsmall"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+</div>
 <style>
   .name-example {
     display: flex;
@@ -515,5 +661,11 @@
 
   .checkboxes {
     margin: var(--gse-core-spacing-2xs) 0;
+  }
+
+  .wrapped-examples {
+    display: flex;
+    gap: var(--gse-core-spacing-3xs);
+    align-items: flex-end;
   }
 </style>
