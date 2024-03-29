@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.30.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.29.0...v4.30.0) (2024-03-29)
+
+
+### Features
+
+* **avatar:** add focus styled examples ([#359](https://github.com/MyPureCloud/genesys-spark/issues/359)) ([b968c17](https://github.com/MyPureCloud/genesys-spark/commit/b968c1770b9fab15bd853509c59456246730b97b))
+
 ## [4.29.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.28.1...v4.29.0) (2024-03-26)
 
 
