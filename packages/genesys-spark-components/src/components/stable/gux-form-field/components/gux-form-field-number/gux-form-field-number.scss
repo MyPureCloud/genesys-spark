@@ -3,6 +3,7 @@
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
 @use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+@use '../../functional-components/gux-form-field-label-container/gux-form-field-label-container.scss';
 
 $gux-form-field-number-step-button-size: 14px;
 
@@ -10,6 +11,7 @@ $gux-form-field-number-step-button-size: 14px;
 @include gux-form-field-error.Style;
 @include gux-form-field-label.Style;
 @include gux-form-field-help.Style;
+@include gux-form-field-label-container.Style;
 
 :host {
   display: block;

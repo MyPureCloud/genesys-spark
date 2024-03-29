@@ -4,8 +4,11 @@ exports[`gux-form-field-select #render help should render component as expected 
 
 exports[`gux-form-field-select #render help should render component as expected 2`] = `
 <div class="gux-beside gux-form-field-container">
-  <div class="gux-beside gux-form-field-label">
-    <slot name="label"></slot>
+  <div class="gux-beside gux-form-field-label-container">
+    <div class="gux-form-field-label">
+      <slot name="label"></slot>
+    </div>
+    <slot name="label-info"></slot>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -33,8 +36,11 @@ exports[`gux-form-field-select #render input attributes should render component 
 
 exports[`gux-form-field-select #render input attributes should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
-  <div class="gux-beside gux-form-field-label">
-    <slot name="label"></slot>
+  <div class="gux-beside gux-form-field-label-container">
+    <div class="gux-form-field-label">
+      <slot name="label"></slot>
+    </div>
+    <slot name="label-info"></slot>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -62,8 +68,11 @@ exports[`gux-form-field-select #render input attributes should render component 
 
 exports[`gux-form-field-select #render input attributes should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
-  <div class="gux-beside gux-form-field-label">
-    <slot name="label"></slot>
+  <div class="gux-beside gux-form-field-label-container">
+    <div class="gux-form-field-label">
+      <slot name="label"></slot>
+    </div>
+    <slot name="label-info"></slot>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -91,8 +100,11 @@ exports[`gux-form-field-select #render input attributes should render component 
 
 exports[`gux-form-field-select #render input attributes should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
-  <div class="gux-beside gux-form-field-label gux-required">
-    <slot name="label"></slot>
+  <div class="gux-beside gux-form-field-label-container">
+    <div class="gux-form-field-label gux-required">
+      <slot name="label"></slot>
+    </div>
+    <slot name="label-info"></slot>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -120,8 +132,11 @@ exports[`gux-form-field-select #render label-position should render component as
 
 exports[`gux-form-field-select #render label-position should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
-  <div class="gux-beside gux-form-field-label">
-    <slot name="label"></slot>
+  <div class="gux-beside gux-form-field-label-container">
+    <div class="gux-form-field-label">
+      <slot name="label"></slot>
+    </div>
+    <slot name="label-info"></slot>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -149,8 +164,11 @@ exports[`gux-form-field-select #render label-position should render component as
 
 exports[`gux-form-field-select #render label-position should render component as expected (2) 2`] = `
 <div class="gux-above gux-form-field-container">
-  <div class="gux-above gux-form-field-label">
-    <slot name="label"></slot>
+  <div class="gux-above gux-form-field-label-container">
+    <div class="gux-form-field-label">
+      <slot name="label"></slot>
+    </div>
+    <slot name="label-info"></slot>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -178,8 +196,11 @@ exports[`gux-form-field-select #render label-position should render component as
 
 exports[`gux-form-field-select #render label-position should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
-  <div class="gux-beside gux-form-field-label">
-    <slot name="label"></slot>
+  <div class="gux-beside gux-form-field-label-container">
+    <div class="gux-form-field-label">
+      <slot name="label"></slot>
+    </div>
+    <slot name="label-info"></slot>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -207,8 +228,11 @@ exports[`gux-form-field-select #render label-position should render component as
 
 exports[`gux-form-field-select #render label-position should render component as expected (4) 2`] = `
 <div class="gux-form-field-container gux-screenreader">
-  <div class="gux-form-field-label gux-screenreader">
-    <slot name="label"></slot>
+  <div class="gux-form-field-label-container gux-screenreader">
+    <div class="gux-form-field-label">
+      <slot name="label"></slot>
+    </div>
+    <slot name="label-info"></slot>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">

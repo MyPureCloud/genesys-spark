@@ -20,6 +20,7 @@
 | `"error"`                                 | Optional slot for error message |
 | `"help"`                                  | Optional slot for help message  |
 | `"label"`                                 | Required slot for label tag     |
+| `"label-info"`                            | Optional slot for label tooltip |
 
 
 ## Dependencies

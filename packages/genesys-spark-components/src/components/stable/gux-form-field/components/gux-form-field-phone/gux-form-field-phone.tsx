@@ -1,4 +1,13 @@
-import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  JSX,
+  Listen,
+  Prop,
+  State,
+  Watch
+} from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
@@ -9,10 +18,12 @@ import {
 } from '@utils/dom/on-attribute-change';
 import { trackComponent } from '@utils/tracking/usage';
 
-import { GuxFormFieldFieldsetContainer } from '../../functional-components/gux-form-field-fieldset-container/gux-form-field-fieldset-container';
-import { GuxFormFieldError } from '../../functional-components/gux-form-field-error/gux-form-field-error';
-import { GuxFormFieldLegendLabel } from '../../functional-components/gux-form-field-legend-label/gux-form-field-legend-label';
-
+import {
+  GuxFormFieldError,
+  GuxFormFieldLegendLabel,
+  GuxFormFieldLegendLabelContainer,
+  GuxFormFieldFieldsetContainer
+} from '../../functional-components/functional-components';
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 import { hasSlot } from '@utils/dom/has-slot';
 import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
@@ -29,6 +40,7 @@ import { GuxFormFieldHelp } from '../../functional-components/gux-form-field-hel
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
  * @slot help - Optional slot for help message
+ * @slot label-info - Optional slot for label tooltip
  */
 @Component({
   styleUrl: 'gux-form-field-phone.scss',
@@ -37,8 +49,9 @@ import { GuxFormFieldHelp } from '../../functional-components/gux-form-field-hel
 })
 export class GuxFormFieldPhone {
   private getI18nValue: GetI18nValue;
-  private phoneInputElement: HTMLGuxPhoneInputBetaElement;
+  private input: HTMLGuxPhoneInputBetaElement;
   private label: HTMLLabelElement;
+  private labelInfo: HTMLGuxLabelInfoBetaElement;
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
 
@@ -73,8 +86,35 @@ export class GuxFormFieldPhone {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
+    this.labelInfo = this.root.querySelector('gux-label-info-beta');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+  }
+
+  @Listen('keyup')
+  handleKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Tab': {
+        if (this.input.matches(':focus-visible')) {
+          void this.labelInfo?.showTooltip();
+          setTimeout(() => {
+            void this.labelInfo?.hideTooltip();
+          }, 6000);
+        }
+        break;
+      }
+      default: {
+        if (this.input.matches(':focus-visible')) {
+          void this.labelInfo?.hideTooltip();
+        }
+        break;
+      }
+    }
+  }
+
+  @Listen('focusout')
+  onFocusout(): void {
+    void this.labelInfo?.hideTooltip();
   }
 
   async componentWillLoad(): Promise<void> {
@@ -86,6 +126,7 @@ export class GuxFormFieldPhone {
     this.setInput();
     this.setLabel();
 
+    this.labelInfo = this.root.querySelector('gux-label-info-beta');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
 
@@ -100,21 +141,25 @@ export class GuxFormFieldPhone {
   render(): JSX.Element {
     return (
       <GuxFormFieldFieldsetContainer labelPosition={this.computedLabelPosition}>
-        <GuxFormFieldLegendLabel
-          position={this.computedLabelPosition}
-          required={this.required}
-          labelText={this.label?.textContent}
+        <GuxFormFieldLegendLabelContainer
+          labelPosition={this.computedLabelPosition}
         >
-          <slot name="label" onSlotchange={() => this.setLabel()} />
-          {this.renderScreenReaderText(
-            this.getI18nValue('required'),
-            this.required
-          )}
-          {this.renderScreenReaderText(
-            getSlotTextContent(this.root, 'error'),
-            this.hasError
-          )}
-        </GuxFormFieldLegendLabel>
+          <GuxFormFieldLegendLabel
+            required={this.required}
+            labelText={this.label?.textContent}
+          >
+            <slot name="label" onSlotchange={() => this.setLabel()} />
+            {this.renderScreenReaderText(
+              this.getI18nValue('required'),
+              this.required
+            )}
+            {this.renderScreenReaderText(
+              getSlotTextContent(this.root, 'error'),
+              this.hasError
+            )}
+          </GuxFormFieldLegendLabel>
+          <slot name="label-info" />
+        </GuxFormFieldLegendLabelContainer>
         <div class="gux-input-and-error-container">
           <div
             class={{
@@ -164,25 +209,25 @@ export class GuxFormFieldPhone {
   }
 
   private setInput(): void {
-    this.phoneInputElement = this.root.querySelector('gux-phone-input-beta');
+    this.input = this.root.querySelector('gux-phone-input-beta');
 
-    this.disabled = this.phoneInputElement.disabled;
-    this.required = this.phoneInputElement.required;
+    this.disabled = this.input.disabled;
+    this.required = this.input.required;
 
     this.disabledObserver = onDisabledChange(
-      this.phoneInputElement,
+      this.input,
       (disabled: boolean) => {
         this.disabled = disabled;
       }
     );
     this.requiredObserver = onRequiredChange(
-      this.phoneInputElement,
+      this.input,
       (required: boolean) => {
         this.required = required;
       }
     );
 
-    validateFormIds(this.root, this.phoneInputElement);
+    validateFormIds(this.root, this.input);
   }
 
   private setLabel(): void {

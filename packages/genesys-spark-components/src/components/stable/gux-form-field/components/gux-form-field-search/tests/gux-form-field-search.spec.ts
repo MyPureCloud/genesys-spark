@@ -71,5 +71,22 @@ describe('gux-form-field-search', () => {
         expect(page.root).toMatchSnapshot();
       });
     });
+
+    describe('label-info', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-search>
+          <input slot="input" type="search" name="e-1" />
+          <label slot="label">Default</label>
+          <gux-label-info-beta slot="label-info">
+            <span slot="content">This is some tooltip text</span>
+          </gux-label-info-beta>
+        </gux-form-field-search>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
   });
 });

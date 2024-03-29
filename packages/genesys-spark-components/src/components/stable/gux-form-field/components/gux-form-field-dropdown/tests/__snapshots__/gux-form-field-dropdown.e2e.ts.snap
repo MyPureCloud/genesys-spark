@@ -4,15 +4,18 @@ exports[`gux-form-field-dropdown #render help should render component as expecte
 
 exports[`gux-form-field-dropdown #render help should render component as expected 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      This is a help message
-    </gux-screen-reader-beta>
-  </legend>
-  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
-    Default
-  </span>
+  <div class="gux-beside gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+      <gux-screen-reader-beta hydrated="">
+        This is a help message
+      </gux-screen-reader-beta>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -36,15 +39,18 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
 
 exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (1) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      This is an error message
-    </gux-screen-reader-beta>
-  </legend>
-  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
-    Default
-  </span>
+  <div class="gux-beside gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+      <gux-screen-reader-beta hydrated="">
+        This is an error message
+      </gux-screen-reader-beta>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -68,15 +74,18 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
 
 exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (2) 2`] = `
 <fieldset class="gux-above gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      This is an error message
-    </gux-screen-reader-beta>
-  </legend>
-  <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-    Default
-  </span>
+  <div class="gux-above gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+      <gux-screen-reader-beta hydrated="">
+        This is an error message
+      </gux-screen-reader-beta>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -100,15 +109,18 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
 
 exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (3) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      This is an error message
-    </gux-screen-reader-beta>
-  </legend>
-  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
-    Default
-  </span>
+  <div class="gux-beside gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+      <gux-screen-reader-beta hydrated="">
+        This is an error message
+      </gux-screen-reader-beta>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -132,15 +144,18 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
 
 exports[`gux-form-field-dropdown #render multi select dropdown label-position should render component as expected (4) 2`] = `
 <fieldset class="gux-form-field-fieldset-container gux-screenreader">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      This is an error message
-    </gux-screen-reader-beta>
-  </legend>
-  <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
-    Default
-  </span>
+  <div class="gux-form-field-legend-label-container gux-screenreader">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+      <gux-screen-reader-beta hydrated="">
+        This is an error message
+      </gux-screen-reader-beta>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -164,12 +179,15 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
 
 exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (1) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-  </legend>
-  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
-    Default
-  </span>
+  <div class="gux-beside gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -193,12 +211,15 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
 
 exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (2) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-  </legend>
-  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
-    Default
-  </span>
+  <div class="gux-beside gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -222,15 +243,18 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
 
 exports[`gux-form-field-dropdown #render multi select dropdown should render component as expected (3) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      Required
-    </gux-screen-reader-beta>
-  </legend>
-  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label gux-required" role="presentation">
-    Default
-  </span>
+  <div class="gux-beside gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+      <gux-screen-reader-beta hydrated="">
+        Required
+      </gux-screen-reader-beta>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label gux-required" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -254,12 +278,15 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
 
 exports[`gux-form-field-dropdown #render single select dropdown input attributes should render component as expected (1) 2`] = `
 <fieldset class="gux-above gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-  </legend>
-  <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-    This will be read by a screen reader
-  </span>
+  <div class="gux-above gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      This will be read by a screen reader
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -283,12 +310,15 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
 
 exports[`gux-form-field-dropdown #render single select dropdown input attributes should render component as expected (2) 2`] = `
 <fieldset class="gux-above gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-  </legend>
-  <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-    This will be read by a screen reader
-  </span>
+  <div class="gux-above gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      This will be read by a screen reader
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -312,15 +342,18 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
 
 exports[`gux-form-field-dropdown #render single select dropdown input attributes should render component as expected (3) 2`] = `
 <fieldset class="gux-above gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      Required
-    </gux-screen-reader-beta>
-  </legend>
-  <span aria-hidden="true" class="gux-above gux-form-field-legend-label gux-required" role="presentation">
-    This will be read by a screen reader
-  </span>
+  <div class="gux-above gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+      <gux-screen-reader-beta hydrated="">
+        Required
+      </gux-screen-reader-beta>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label gux-required" role="presentation">
+      This will be read by a screen reader
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
       <slot></slot>
@@ -344,15 +377,18 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
 
 exports[`gux-form-field-dropdown #render single select dropdown label-position should render component as expected (1) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      This is an error message
-    </gux-screen-reader-beta>
-  </legend>
-  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
-    Default
-  </span>
+  <div class="gux-beside gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+      <gux-screen-reader-beta hydrated="">
+        This is an error message
+      </gux-screen-reader-beta>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -376,15 +412,18 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
 
 exports[`gux-form-field-dropdown #render single select dropdown label-position should render component as expected (2) 2`] = `
 <fieldset class="gux-above gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      This is an error message
-    </gux-screen-reader-beta>
-  </legend>
-  <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-    Default
-  </span>
+  <div class="gux-above gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+      <gux-screen-reader-beta hydrated="">
+        This is an error message
+      </gux-screen-reader-beta>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -408,15 +447,18 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
 
 exports[`gux-form-field-dropdown #render single select dropdown label-position should render component as expected (3) 2`] = `
 <fieldset class="gux-beside gux-form-field-fieldset-container">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      This is an error message
-    </gux-screen-reader-beta>
-  </legend>
-  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
-    Default
-  </span>
+  <div class="gux-beside gux-form-field-legend-label-container">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+      <gux-screen-reader-beta hydrated="">
+        This is an error message
+      </gux-screen-reader-beta>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>
@@ -440,15 +482,18 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
 
 exports[`gux-form-field-dropdown #render single select dropdown label-position should render component as expected (4) 2`] = `
 <fieldset class="gux-form-field-fieldset-container gux-screenreader">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      This is an error message
-    </gux-screen-reader-beta>
-  </legend>
-  <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
-    Default
-  </span>
+  <div class="gux-form-field-legend-label-container gux-screenreader">
+    <legend class="gux-form-field-legend-label gux-screenreader">
+      <slot name="label"></slot>
+      <gux-screen-reader-beta hydrated="">
+        This is an error message
+      </gux-screen-reader-beta>
+    </legend>
+    <div aria-hidden="true" class="gux-form-field-legend-label" role="presentation">
+      Default
+    </div>
+    <slot name="label-info"></slot>
+  </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
       <slot></slot>

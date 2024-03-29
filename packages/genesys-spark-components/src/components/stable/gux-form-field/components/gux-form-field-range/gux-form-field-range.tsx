@@ -21,6 +21,7 @@ import {
   GuxFormFieldHelp,
   GuxFormFieldError,
   GuxFormFieldLabel,
+  GuxFormFieldLabelContainer,
   GuxFormFieldContainer
 } from '../../functional-components/functional-components';
 
@@ -38,6 +39,7 @@ import { OnResize } from '@utils/decorator/on-resize';
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
  * @slot help - Optional slot for help message
+ * @slot label-info - Optional slot for label tooltip
  */
 @Component({
   styleUrl: 'gux-form-field-range.scss',
@@ -47,6 +49,7 @@ import { OnResize } from '@utils/decorator/on-resize';
 export class GuxFormField {
   private input: HTMLInputElement;
   private label: HTMLLabelElement;
+  private labelInfo: HTMLGuxLabelInfoBetaElement;
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
 
@@ -104,7 +107,6 @@ export class GuxFormField {
     }
   }
 
-  @Listen('focusout')
   @Listen('mouseup')
   onMouseup(): void {
     this.active = false;
@@ -112,14 +114,43 @@ export class GuxFormField {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
+    this.labelInfo = this.root.querySelector('gux-label-info-beta');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+  }
+
+  @Listen('keyup')
+  handleKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Tab': {
+        if (this.input.matches(':focus-visible')) {
+          void this.labelInfo?.showTooltip();
+          setTimeout(() => {
+            void this.labelInfo?.hideTooltip();
+          }, 6000);
+        }
+        break;
+      }
+      default: {
+        if (this.input.matches(':focus-visible')) {
+          void this.labelInfo?.hideTooltip();
+        }
+        break;
+      }
+    }
+  }
+
+  @Listen('focusout')
+  onFocusout(): void {
+    this.active = false;
+    void this.labelInfo?.hideTooltip();
   }
 
   componentWillLoad(): void {
     this.setInput();
     this.setLabel();
 
+    this.labelInfo = this.root.querySelector('gux-label-info-beta');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
 
@@ -157,12 +188,15 @@ export class GuxFormField {
         }}
       >
         <GuxFormFieldContainer labelPosition={this.computedLabelPosition}>
-          <GuxFormFieldLabel
-            position={this.computedLabelPosition}
-            required={this.required}
+          <GuxFormFieldLabelContainer
+            labelPosition={this.computedLabelPosition}
           >
-            <slot name="label" onSlotchange={() => this.setLabel()} />
-          </GuxFormFieldLabel>
+            <GuxFormFieldLabel required={this.required}>
+              <slot name="label" onSlotchange={() => this.setLabel()} />
+            </GuxFormFieldLabel>
+            <slot name="label-info" />
+          </GuxFormFieldLabelContainer>
+
           <div class="gux-input-and-error-container">
             {this.renderRangeInput()}
             <GuxFormFieldError show={this.hasError}>

@@ -1,0 +1,25 @@
+/* stylelint-disable-next-line selector-class-pattern */
+@use '~genesys-spark/src/style/mixins.scss';
+
+@mixin Style {
+  .gux-form-field-label-container {
+    display: inline-flex;
+    gap: var(--gse-ui-formControl-label-gap);
+
+    &.gux-beside {
+      position: relative;
+      top: var(--gse-ui-formControl-input-top);
+      width: fit-content;
+      min-width: var(--gse-ui-formControl-input-textfield-minWidth);
+      margin-right: var(--gse-ui-formControl-group-gapItems);
+    }
+
+    &.gux-above {
+      padding: var(--gse-ui-formControl-label-padding);
+    }
+
+    &.gux-screenreader {
+      @include mixins.gux-sr-only;
+    }
+  }
+}
