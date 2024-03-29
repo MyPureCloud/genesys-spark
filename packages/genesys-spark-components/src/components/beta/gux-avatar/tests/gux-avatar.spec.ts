@@ -86,6 +86,29 @@ describe('gux-avatar', () => {
     );
   });
 
+  describe('#render different presences', () => {
+    [
+      'available',
+      'away',
+      'busy',
+      'meal',
+      'training',
+      'idle',
+      'meeting',
+      'offline',
+      'on-queue',
+      'out-of-office',
+      'invalid-presence'
+    ].forEach((presence: string) => {
+      it(`should work as expected for "${presence}"`, async () => {
+        const html = `<gux-avatar-beta badge presence=${presence} name="John Doe"></gux-avatar-beta>`;
+        const page = await newSpecPage({ components: [GuxAvatar], html });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+  });
+
   describe('#render different accents', () => {
     [
       'default',
@@ -107,6 +130,33 @@ describe('gux-avatar', () => {
     ].forEach((accent: string) => {
       it(`should work as expected for "${accent}"`, async () => {
         const html = `<gux-avatar-beta name="John Doe" accent=${accent}></gux-avatar-beta>`;
+        const page = await newSpecPage({ components: [GuxAvatar], html });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
+    describe('#render notification badge', () => {
+      it('should render notification badge', async () => {
+        const html = `<gux-avatar-beta badge notifications name="John Doe"></gux-avatar-beta>`;
+        const page = await newSpecPage({ components: [GuxAvatar], html });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
+    describe('#render presence ring', () => {
+      it('should render presence ring', async () => {
+        const html = `<gux-avatar-beta ring name="John Doe" presen></gux-avatar-beta>`;
+        const page = await newSpecPage({ components: [GuxAvatar], html });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
+    describe('#render label', () => {
+      it('should render label', async () => {
+        const html = `<gux-avatar-beta label="All Hands" name="John Doe" presence="busy" ring></gux-avatar-beta>`;
         const page = await newSpecPage({ components: [GuxAvatar], html });
 
         expect(page.root).toMatchSnapshot();

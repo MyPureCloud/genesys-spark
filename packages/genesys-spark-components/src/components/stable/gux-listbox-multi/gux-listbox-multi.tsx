@@ -190,8 +190,8 @@ export class GuxListboxMulti {
     );
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxSelectActive(): Promise<void> {
     actOnActiveOption(this.root, value => this.updateValue(value));
   }

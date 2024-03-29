@@ -1,0 +1,27 @@
+@use '~genesys-spark/src/style/focus.scss';
+
+gux-avatar-focusable-beta {
+  a {
+    display: inline-block;
+    line-height: 0px;
+    border-radius: 50%;
+  }
+
+  &[gs-avatar-size='small'],
+  &[gs-avatar-size='xsmall'] {
+    a:focus-visible,
+    button:focus-visible {
+      @include focus.gux-focus-ring-small;
+    }
+  }
+
+  button {
+    padding: 0;
+    margin: 0;
+    line-height: 0px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 50%;
+  }
+}

@@ -17,7 +17,7 @@ gux-pagination-items-per-page {
     .gux-pagination-items-per-page-picker {
       gux-dropdown {
         display: inline-block;
-        width: 64px;
+        width: fit-content;
       }
     }
 

@@ -30,8 +30,8 @@ export class GuxTabPanel {
   @State()
   active: boolean = false;
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxSetActive(active: boolean): Promise<void> {
     this.active = active;
   }

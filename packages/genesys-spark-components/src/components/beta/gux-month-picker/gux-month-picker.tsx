@@ -17,6 +17,8 @@ import {
   GetI18nValue,
   getDesiredLocale
 } from '../../../i18n';
+import * as sparkIntl from '../../../genesys-spark-utils/intl';
+import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { afterNextRender } from '@utils/dom/after-next-render';
 import {
@@ -109,7 +111,11 @@ export class GuxMonthPicker {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-    this.locale = getDesiredLocale(this.root);
+    if (readRegionalDatesCookie()) {
+      this.locale = sparkIntl.determineDisplayLocale(this.root);
+    } else {
+      this.locale = getDesiredLocale(this.root);
+    }
   }
 
   private isOutOfBounds(value: GuxISOYearMonth): boolean {

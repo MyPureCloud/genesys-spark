@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Пошук"
   },
+  "gux-avatar": {
+    "notifications": "Сповіщення"
+  },
   "gux-badge": {
     "info": "значок із міткою: {label}, виділення: відомості",
     "info-bold": "значок із міткою: {label}, виділення: відомості, напівжирний",

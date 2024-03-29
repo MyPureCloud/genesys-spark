@@ -2,7 +2,6 @@
   "tabs": {
     "item": {
       "height": "40px",
-      "fixed_width": "98px",
       "horizontal": {
         "fixed_height": "40px",
         "padding": "11px 12px 10px"

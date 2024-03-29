@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Szukaj"
   },
+  "gux-avatar": {
+    "notifications": "Powiadomienia"
+  },
   "gux-badge": {
     "info": "odznaka z etykietą: {label}, akcent: info",
     "info-bold": "odznaka z etykietą: {label}, akcent: info. pogrub.",

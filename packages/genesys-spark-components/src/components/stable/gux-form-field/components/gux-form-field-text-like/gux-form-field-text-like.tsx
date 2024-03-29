@@ -95,8 +95,8 @@ export class GuxFormFieldTextLike {
     this.hasHelp = hasSlot(this.root, 'help');
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxForceUpdate(): Promise<void> {
     this.hasContent = hasContent(this.input);
     this.hasError = hasSlot(this.root, 'error');

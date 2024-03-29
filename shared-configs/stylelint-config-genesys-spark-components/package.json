@@ -7,7 +7,7 @@
   "scripts": {
     "eslint": "eslint . --fix",
     "lint-all": "npm-run-all \"eslint\" \"prettier\" \"prettier-package-json\"",
-    "lint-staged": "lint-staged",
+    "lint-staged": "lint-staged --concurrent false",
     "prettier": "prettier --log-level silent --ignore-path .gitignore --ignore-unknown --write .",
     "prettier-package-json": "prettier-package-json --write ./package.json"
   },
@@ -17,19 +17,19 @@
     "postcss-scss": "^4.0.8",
     "stylelint": "^16.2.1",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-recess-order": "^4.2.0",
+    "stylelint-config-recess-order": "^5.0.0",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-scss": "^6.1.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint": "^8.57.0",
     "eslint-config-genesys-spark-components": "file:../eslint-config-genesys-spark-components",
     "eslint-config-prettier": "^9.1.0",
     "lint-staged": "^15.2.2",
     "npm-run-all": "^4.1.5",
-    "postcss-html": "^1.5.0",
+    "postcss-html": "^1.6.0",
     "postcss-less": "^6.0.0",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.2.5",
@@ -37,9 +37,9 @@
     "prettier-package-json": "^2.8.0",
     "stylelint": "^16.2.1",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-recess-order": "^4.6.0",
+    "stylelint-config-recess-order": "^5.0.0",
     "stylelint-config-standard": "^36.0.0",
-    "stylelint-scss": "^6.1.0"
+    "stylelint-scss": "^6.2.1"
   },
   "prettier": "prettier-config-genesys-spark-components"
 }

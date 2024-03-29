@@ -5,7 +5,7 @@ exports[`gux-disclosure-button-legacy #render should render component as expecte
 exports[`gux-disclosure-button-legacy #render should render component as expected (1) 2`] = `
 <div class="gux-disclosure-button-container gux-left">
   <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
-    <gux-icon hydrated="" icon-name="arrow-solid-right"></gux-icon>
+    <gux-icon hydrated="" icon-name="arrow-solid-right" size="inherit"></gux-icon>
   </button>
   <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
     <slot name="panel-content"></slot>
@@ -18,7 +18,7 @@ exports[`gux-disclosure-button-legacy #render should render component as expecte
 exports[`gux-disclosure-button-legacy #render should render component as expected (2) 2`] = `
 <div class="gux-disclosure-button-container gux-left">
   <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
-    <gux-icon hydrated="" icon-name="arrow-solid-left"></gux-icon>
+    <gux-icon hydrated="" icon-name="arrow-solid-left" size="inherit"></gux-icon>
   </button>
   <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
     <slot name="panel-content"></slot>
@@ -31,7 +31,7 @@ exports[`gux-disclosure-button-legacy #render should render component as expecte
 exports[`gux-disclosure-button-legacy #render should render component as expected (3) 2`] = `
 <div class="gux-disclosure-button-container gux-left">
   <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
-    <gux-icon hydrated="" icon-name="arrow-solid-right"></gux-icon>
+    <gux-icon hydrated="" icon-name="arrow-solid-right" size="inherit"></gux-icon>
   </button>
   <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
     <slot name="panel-content"></slot>
@@ -44,7 +44,7 @@ exports[`gux-disclosure-button-legacy #render should render component as expecte
 exports[`gux-disclosure-button-legacy #render should render component as expected (4) 2`] = `
 <div class="gux-disclosure-button-container gux-left">
   <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
-    <gux-icon hydrated="" icon-name="arrow-solid-left"></gux-icon>
+    <gux-icon hydrated="" icon-name="arrow-solid-left" size="inherit"></gux-icon>
   </button>
   <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
     <slot name="panel-content"></slot>
@@ -57,7 +57,7 @@ exports[`gux-disclosure-button-legacy #render should render component as expecte
 exports[`gux-disclosure-button-legacy #render should render component as expected (5) 2`] = `
 <div class="gux-disclosure-button-container gux-right">
   <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
-    <gux-icon hydrated="" icon-name="arrow-solid-left"></gux-icon>
+    <gux-icon hydrated="" icon-name="arrow-solid-left" size="inherit"></gux-icon>
   </button>
   <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
     <slot name="panel-content"></slot>
@@ -70,7 +70,7 @@ exports[`gux-disclosure-button-legacy #render should render component as expecte
 exports[`gux-disclosure-button-legacy #render should render component as expected (6) 2`] = `
 <div class="gux-disclosure-button-container gux-right">
   <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
-    <gux-icon hydrated="" icon-name="arrow-solid-right"></gux-icon>
+    <gux-icon hydrated="" icon-name="arrow-solid-right" size="inherit"></gux-icon>
   </button>
   <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
     <slot name="panel-content"></slot>
@@ -83,7 +83,7 @@ exports[`gux-disclosure-button-legacy #render should render component as expecte
 exports[`gux-disclosure-button-legacy #render should render component as expected (7) 2`] = `
 <div class="gux-disclosure-button-container gux-left">
   <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="More Info" class="gux-disclosure-button">
-    <gux-icon hydrated="" icon-name="arrow-solid-right"></gux-icon>
+    <gux-icon hydrated="" icon-name="arrow-solid-right" size="inherit"></gux-icon>
   </button>
   <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
     <slot name="panel-content"></slot>

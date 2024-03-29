@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-cta-group #render should render component as expected (1) 1`] = `
+<gux-cta-group>
+  <mock:shadow-root>
+    <div class="gux-cta-group gux-start-align">
+      <slot name="primary"></slot>
+      <slot name="secondary"></slot>
+      <slot name="dismiss"></slot>
+    </div>
+  </mock:shadow-root>
+  <gux-button slot="primary">
+    Primary
+  </gux-button>
+  <gux-button slot="secondary">
+    Secondary
+  </gux-button>
+  <gux-button slot="dismiss">
+    Dismiss
+  </gux-button>
+</gux-cta-group>
+`;
+
+exports[`gux-cta-group #render should render component as expected (2) 1`] = `
+<gux-cta-group align="end">
+  <mock:shadow-root>
+    <div class="gux-cta-group gux-end-align">
+      <slot name="primary"></slot>
+      <slot name="secondary"></slot>
+      <slot name="dismiss"></slot>
+    </div>
+  </mock:shadow-root>
+  <gux-button slot="primary">
+    Primary
+  </gux-button>
+  <gux-button-multi slot="secondary">
+    <span slot="title">
+      Secondary
+    </span>
+    <gux-list-item>
+      Test 1
+    </gux-list-item>
+    <gux-list-item>
+      Test 2
+    </gux-list-item>
+  </gux-button-multi>
+  <gux-button slot="dismiss">
+    Dismiss
+  </gux-button>
+</gux-cta-group>
+`;
+
+exports[`gux-cta-group #render should render component as expected (3) 1`] = `
+<gux-cta-group dangerous="">
+  <mock:shadow-root>
+    <div class="gux-cta-group gux-start-align">
+      <slot name="primary"></slot>
+      <slot name="secondary"></slot>
+      <slot name="dismiss"></slot>
+    </div>
+  </mock:shadow-root>
+  <gux-button slot="primary">
+    Delete key
+  </gux-button>
+  <gux-button slot="dismiss">
+    Cancel
+  </gux-button>
+</gux-cta-group>
+`;

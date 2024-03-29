@@ -25,6 +25,12 @@
 
 
 
+#### Parameters
+
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `tabId` | `string` |             |
+
 #### Returns
 
 Type: `Promise<void>`

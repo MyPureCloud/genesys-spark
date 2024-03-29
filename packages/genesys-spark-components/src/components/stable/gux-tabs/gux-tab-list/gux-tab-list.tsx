@@ -110,8 +110,8 @@ export class GuxTabList {
     this.setTabTriggers();
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxSetActive(activeTab: string): Promise<void> {
     this.tabTriggers.forEach((tabTrigger, index) => {
       const active = tabTrigger.tabId === activeTab;

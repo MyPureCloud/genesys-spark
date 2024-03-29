@@ -23,12 +23,10 @@ const specDestination = path.join(
 );
 const styleExampleGlob = path.join(projectPath, 'src/style/examples/*.html');
 
-export function generateMetadata() {
-  fs.writeFileSync(
-    specDestination,
-    JSON.stringify(generateComponentSpec(), null, 2)
-  );
-}
+fs.writeFileSync(
+  specDestination,
+  JSON.stringify(generateComponentSpec(), null, 2)
+);
 
 function generateComponentSpec() {
   let styleExamples = globSync(styleExampleGlob);

@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "検索"
   },
+  "gux-avatar": {
+    "notifications": "通知"
+  },
   "gux-badge": {
     "info": "ラベル付きバッジ: {label}、アクセント: 情報 ",
     "info-bold": "ラベル付きバッジ: {label}、アクセント: 情報 太字",

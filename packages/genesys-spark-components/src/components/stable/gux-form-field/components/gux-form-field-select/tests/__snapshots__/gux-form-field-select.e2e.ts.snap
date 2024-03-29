@@ -11,11 +11,11 @@ exports[`gux-form-field-select #render help should render component as expected 
     <div class="gux-input">
       <div class="gux-input-container">
         <slot name="input"></slot>
-        <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
+        <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -40,11 +40,11 @@ exports[`gux-form-field-select #render input attributes should render component 
     <div class="gux-input">
       <div class="gux-input-container">
         <slot name="input"></slot>
-        <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
+        <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -69,11 +69,11 @@ exports[`gux-form-field-select #render input attributes should render component 
     <div class="gux-input">
       <div class="gux-disabled gux-input-container">
         <slot name="input"></slot>
-        <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
+        <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -98,11 +98,11 @@ exports[`gux-form-field-select #render input attributes should render component 
     <div class="gux-input">
       <div class="gux-input-container">
         <slot name="input"></slot>
-        <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
+        <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -127,11 +127,11 @@ exports[`gux-form-field-select #render label-position should render component as
     <div class="gux-input">
       <div class="gux-input-container">
         <slot name="input"></slot>
-        <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
+        <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -156,11 +156,11 @@ exports[`gux-form-field-select #render label-position should render component as
     <div class="gux-input">
       <div class="gux-input-container">
         <slot name="input"></slot>
-        <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
+        <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -185,11 +185,11 @@ exports[`gux-form-field-select #render label-position should render component as
     <div class="gux-input">
       <div class="gux-input-container">
         <slot name="input"></slot>
-        <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
+        <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -214,11 +214,11 @@ exports[`gux-form-field-select #render label-position should render component as
     <div class="gux-input">
       <div class="gux-input-container">
         <slot name="input"></slot>
-        <gux-icon hydrated="" icon-name="chevron-small-down"></gux-icon>
+        <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>

@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Hledat"
   },
+  "gux-avatar": {
+    "notifications": "Oznámení"
+  },
   "gux-badge": {
     "info": "odznak s popiskem: {label}, akcent: info",
     "info-bold": "odznak s popiskem: {label}, akcent: info tučně",

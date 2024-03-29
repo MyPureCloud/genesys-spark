@@ -75,8 +75,8 @@ export class GuxTabs {
     this.activateTab(tabId, this.tabList, this.tabPanels);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxActivate(tabId: string): Promise<void> {
     this.activateTab(tabId, this.tabList, this.tabPanels);
   }

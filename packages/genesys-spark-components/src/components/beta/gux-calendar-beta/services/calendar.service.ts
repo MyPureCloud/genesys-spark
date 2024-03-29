@@ -40,6 +40,10 @@ export function firstDateInMonth(
   const startDate = new Date(year, month, 1, 0, 0, 0, 0);
   const firstDayOfMonth = startDate.getDay();
   const firstDayOffset = (-1 * (startDayOfWeek - firstDayOfMonth - 7)) % 7;
+  const firstDateInMonth = new Date(
+    startDate.getTime() - firstDayOffset * (86400 * 1000)
+  );
+  firstDateInMonth.setHours(0, 0, 0, 0);
 
-  return new Date(startDate.getTime() - firstDayOffset * (86400 * 1000));
+  return firstDateInMonth;
 }

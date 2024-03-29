@@ -36,7 +36,7 @@ export class GuxIcon {
   @Prop()
   screenreaderText: string = '';
 
-  @Prop()
+  @Prop({ reflect: true })
   size: GuxIconSize = 'inherit';
 
   @State()

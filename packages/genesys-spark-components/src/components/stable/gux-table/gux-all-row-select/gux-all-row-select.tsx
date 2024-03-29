@@ -43,8 +43,8 @@ export class GuxAllRowSelect {
     this.internalallrowselectchange.emit(this.inputElement.checked);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async setIndeterminate(indeterminate: boolean = true): Promise<void> {
     this.inputElement.indeterminate = indeterminate;
   }

@@ -4,11 +4,13 @@ exports[`gux-avatar #render component with image 1`] = `
 <gux-avatar-beta name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
   <img alt="John Doe Image" slot="image" src="https://i.pravatar.cc/300">
@@ -19,11 +21,13 @@ exports[`gux-avatar #render component with name type (1) for valid markup 1`] = 
 <gux-avatar-beta name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -33,11 +37,13 @@ exports[`gux-avatar #render component with name type (2) for valid markup 1`] = 
 <gux-avatar-beta name="JohnDoe">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="JohnDoe">
-          Jo
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="JohnDoe" title="JohnDoe">
+            Jo
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -47,11 +53,13 @@ exports[`gux-avatar #render component with name type (3) for valid markup 1`] = 
 <gux-avatar-beta name="山田 太郎">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="山田 太郎">
-          山太
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="山田 太郎" title="山田 太郎">
+            山太
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -61,11 +69,13 @@ exports[`gux-avatar #render component with name type (4) for valid markup 1`] = 
 <gux-avatar-beta name="이 영수">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="이 영수">
-          이영
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="이 영수" title="이 영수">
+            이영
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -75,11 +85,64 @@ exports[`gux-avatar #render component with name type (5) for valid markup 1`] = 
 <gux-avatar-beta name="邓 小平">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="邓 小平">
-          邓小
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="邓 小平" title="邓 小平">
+            邓小
+          </abbr>
+        </slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different accents #render label should render label 1`] = `
+<gux-avatar-beta label="All Hands" name="John Doe" presence="busy" ring="">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-busy gux-large gux-ring">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe (All Hands)" title="John Doe (All Hands)">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different accents #render notification badge should render notification badge 1`] = `
+<gux-avatar-beta badge="" name="John Doe" notifications="">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large gux-none">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe (Notifications)" title="John Doe (Notifications)">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-notifications">
+      <gux-icon decorative="" icon-name="fa/bell-regular"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different accents #render presence ring should render presence ring 1`] = `
+<gux-avatar-beta name="John Doe" presen="" ring="">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large gux-none gux-ring">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -89,11 +152,13 @@ exports[`gux-avatar #render different accents should work as expected for "0" 1`
 <gux-avatar-beta accent="0" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-0 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -103,11 +168,13 @@ exports[`gux-avatar #render different accents should work as expected for "1" 1`
 <gux-avatar-beta accent="1" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-1 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -117,11 +184,13 @@ exports[`gux-avatar #render different accents should work as expected for "2" 1`
 <gux-avatar-beta accent="2" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-2 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -131,11 +200,13 @@ exports[`gux-avatar #render different accents should work as expected for "3" 1`
 <gux-avatar-beta accent="3" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-3 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -145,11 +216,13 @@ exports[`gux-avatar #render different accents should work as expected for "4" 1`
 <gux-avatar-beta accent="4" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-4 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -159,11 +232,13 @@ exports[`gux-avatar #render different accents should work as expected for "5" 1`
 <gux-avatar-beta accent="5" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-5 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -173,11 +248,13 @@ exports[`gux-avatar #render different accents should work as expected for "6" 1`
 <gux-avatar-beta accent="6" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-6 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -187,11 +264,13 @@ exports[`gux-avatar #render different accents should work as expected for "7" 1`
 <gux-avatar-beta accent="7" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-7 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -201,11 +280,13 @@ exports[`gux-avatar #render different accents should work as expected for "8" 1`
 <gux-avatar-beta accent="8" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-8 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -215,11 +296,13 @@ exports[`gux-avatar #render different accents should work as expected for "9" 1`
 <gux-avatar-beta accent="9" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-9 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -229,11 +312,13 @@ exports[`gux-avatar #render different accents should work as expected for "10" 1
 <gux-avatar-beta accent="10" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-10 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -243,11 +328,13 @@ exports[`gux-avatar #render different accents should work as expected for "11" 1
 <gux-avatar-beta accent="11" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-11 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -257,11 +344,13 @@ exports[`gux-avatar #render different accents should work as expected for "12" 1
 <gux-avatar-beta accent="12" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-12 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -271,11 +360,13 @@ exports[`gux-avatar #render different accents should work as expected for "auto"
 <gux-avatar-beta accent="auto" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-3 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -285,11 +376,13 @@ exports[`gux-avatar #render different accents should work as expected for "defau
 <gux-avatar-beta accent="default" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -299,11 +392,219 @@ exports[`gux-avatar #render different accents should work as expected for "inval
 <gux-avatar-beta accent="invalid-accent" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-invalid-accent gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "available" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="available">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-available gux-avatar gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-available gux-avatar-badge gux-large">
+      <gux-icon decorative="" icon-name="fa/circle-check-solid"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "away" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="away">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-away gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-away gux-large">
+      <gux-icon decorative="" icon-name="fa/clock-outline"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "busy" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="busy">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-busy gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-busy gux-large">
+      <gux-icon decorative="" icon-name="fa/ban-outline"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "idle" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="idle">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-idle gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "invalid-presence" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="invalid-presence">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-invalid-presence gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-invalid-presence gux-large">
+      <gux-icon decorative="" icon-name="fa/circle-xmark-regular"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "meal" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="meal">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large gux-meal">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-meal">
+      <gux-icon decorative="" icon-name="fa/clock-outline"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "meeting" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="meeting">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large gux-meeting">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-meeting">
+      <gux-icon decorative="" icon-name="fa/ban-outline"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "offline" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="offline">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large gux-offline">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-offline">
+      <gux-icon decorative="" icon-name="fa/circle-xmark-regular"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "on-queue" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="on-queue">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large gux-on-queue">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-on-queue">
+      <gux-icon decorative="" icon-name="fa/headset-solid"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "out-of-office" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="out-of-office">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large gux-out-of-office">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-out-of-office">
+      <gux-icon decorative="" icon-name="fa/subtract-circle"></gux-icon>
+    </div>
+  </mock:shadow-root>
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render different presences should work as expected for "training" 1`] = `
+<gux-avatar-beta badge="" name="John Doe" presence="training">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large gux-training">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+    <div class="gux-avatar-badge gux-large gux-training">
+      <gux-icon decorative="" icon-name="fa/clock-outline"></gux-icon>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -313,11 +614,13 @@ exports[`gux-avatar #render different sizes should work as expected for "large" 
 <gux-avatar-beta name="John Doe" size="large">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -327,11 +630,13 @@ exports[`gux-avatar #render different sizes should work as expected for "medium"
 <gux-avatar-beta name="John Doe" size="medium">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-medium">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -341,11 +646,13 @@ exports[`gux-avatar #render different sizes should work as expected for "medium-
 <gux-avatar-beta name="John Doe" size="medium-rare">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-medium-rare">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -355,11 +662,13 @@ exports[`gux-avatar #render different sizes should work as expected for "small" 
 <gux-avatar-beta name="John Doe" size="small">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-small">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -369,11 +678,13 @@ exports[`gux-avatar #render different sizes should work as expected for "xsmall"
 <gux-avatar-beta name="John Doe" size="xsmall">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-xsmall">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -383,11 +694,13 @@ exports[`gux-avatar changes to attributes after initial load should be reflected
 <gux-avatar-beta accent="6" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-6 gux-avatar gux-large">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>
@@ -397,11 +710,13 @@ exports[`gux-avatar changes to attributes after initial load should be reflected
 <gux-avatar-beta name="John Doe" size="small">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-small">
-      <slot name="image">
-        <abbr title="John Doe">
-          JD
-        </abbr>
-      </slot>
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
     </div>
   </mock:shadow-root>
 </gux-avatar-beta>

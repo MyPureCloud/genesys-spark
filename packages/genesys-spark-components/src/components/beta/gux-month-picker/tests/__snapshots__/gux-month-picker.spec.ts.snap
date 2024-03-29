@@ -33,7 +33,6 @@ exports[`gux-month-picker-beta #render should render the component as expected 1
             </div>
             <gux-month-list role="list" tabindex="1">
               <mock:shadow-root>
-                <span tabindex="1"></span>
                 <slot></slot>
               </mock:shadow-root>
               <gux-month-list-item aria-label="January 2022" aria-selected="true" role="listitem" value="2022-01">

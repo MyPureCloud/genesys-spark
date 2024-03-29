@@ -17,3 +17,17 @@ export type GuxAvatarAccent =
   | '10'
   | '11'
   | '12';
+
+export type GuxAvatarPresence =
+  | 'available'
+  | 'away'
+  | 'break'
+  | 'busy'
+  | 'meal'
+  | 'meeting'
+  | 'idle'
+  | 'on-queue'
+  | 'offline'
+  | 'out-of-office'
+  | 'training'
+  | 'none';

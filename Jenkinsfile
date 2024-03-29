@@ -94,6 +94,7 @@ webappPipeline {
         }
         sh('npm run test.ci')
         sh('npm run build --workspace=packages/genesys-spark-tokens')
+        sh('npm run build --workspace=packages/genesys-spark')
         sh('npm run stencil --workspace=packages/genesys-spark-components')
         sh('npm run lint')
     }
