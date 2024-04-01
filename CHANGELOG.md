@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.31.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.30.0...v4.31.0) (2024-04-01)
+
+
+### Features
+
+* **icon:** adding icons for new label work ([#399](https://github.com/MyPureCloud/genesys-spark/issues/399)) ([355cdf5](https://github.com/MyPureCloud/genesys-spark/commit/355cdf571d4a0890d07e80e625d5a5afac673985))
+
+
+### Bug Fixes
+
+* **form-field-number:** add default transparent border to arrow buttons to reserve space for hover ([d218b72](https://github.com/MyPureCloud/genesys-spark/commit/d218b72679b5abae9fffca4f129df07663bed8fd))
+* **tooltip:** fixed overflow-wrap for long words ([e0f9a69](https://github.com/MyPureCloud/genesys-spark/commit/e0f9a6940401cdfde90ad17b041ace8ecd77706e))
+
 ## [4.30.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.29.0...v4.30.0) (2024-03-29)
 
 
