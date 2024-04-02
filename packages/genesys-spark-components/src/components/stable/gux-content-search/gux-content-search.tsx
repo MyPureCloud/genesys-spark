@@ -109,9 +109,8 @@ export class GuxContentSearch {
         <div class="gux-search-icon">
           <gux-icon decorative icon-name="search"></gux-icon>
         </div>
-        <gux-truncate>
-          <slot />
-        </gux-truncate>
+
+        <slot />
         {this.getNavigationPanel()}
       </div>
     ) as JSX.Element;

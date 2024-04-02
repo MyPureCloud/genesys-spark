@@ -109,43 +109,6 @@
   </div>
 </div>
 
-<h2>Languages</h2>
-<div id="languages-container">
-  <div id="sample"></div>
-</div>
-
-<style
-  onload="(function () {
-  const languagesContainer = document.getElementById('languages-container');
-  [
-    'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
-    'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
-    'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
-  ].forEach((lang) => {
-    const today = new Date().toLocaleDateString('fr-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
-    const html = window.toHTML([
-      '<div class=language lang=' + lang + '>',
-        '<h3>' + lang + '</h3>',
-        '<gux-content-search current-match=1000 match-count=100000>',
-        '<input type=text placeholder=Search value=Lorem-ipsum-dolor-sit-amet/>',
-        '</gux-content-search>',
-      '</div>'
-    ].join(''));
-    languagesContainer.appendChild(html);
-  });
-})()"
->
-  #languages-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .language {
-    padding: 10px 25px;
-  }
-</style>
-
 <style>
   gux-content-search {
     margin: 10px;
