@@ -5,8 +5,7 @@ import {
   h,
   JSX,
   Method,
-  Prop,
-  State
+  Prop
 } from '@stencil/core';
 
 import { OnMutation } from '@utils/decorator/on-mutation';
@@ -33,9 +32,6 @@ export class GuxTruncate {
    */
   @Prop()
   maxLines: number;
-
-  @State()
-  needsTruncation2: boolean;
 
   @Method()
   async setShowTooltip() {
@@ -64,12 +60,6 @@ export class GuxTruncate {
   private needsTruncation(): boolean {
     const slotContainerElement: HTMLSpanElement =
       this.root.shadowRoot.querySelector('.gux-truncate-slot-container');
-    console.log(
-      'scrollWidth',
-      slotContainerElement?.scrollWidth,
-      'offsetWidth',
-      slotContainerElement?.offsetWidth
-    );
     return (
       slotContainerElement?.scrollWidth > slotContainerElement?.offsetWidth ||
       slotContainerElement?.scrollHeight > slotContainerElement?.offsetHeight
@@ -77,7 +67,6 @@ export class GuxTruncate {
   }
 
   private renderTooltip(): JSX.Element {
-    console.log('needs to truncate tooltip', this.needsTruncation());
     if (this.needsTruncation()) {
       return (
         <gux-tooltip aria-hidden="true" ref={el => (this.tooltipElement = el)}>

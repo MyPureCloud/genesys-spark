@@ -6,11 +6,6 @@ export function getTextContentFromNodes(elements: Node[]): string {
         return acc.concat(getTextContentFromNodes(slotElements));
       }
 
-      if (cv.nodeName === 'INPUT') {
-        const inputElement = cv as HTMLInputElement;
-        return acc.concat(inputElement.value);
-      }
-
       return acc.concat(cv.textContent);
     }, [] as string[])
     .map(s => s.trim())
