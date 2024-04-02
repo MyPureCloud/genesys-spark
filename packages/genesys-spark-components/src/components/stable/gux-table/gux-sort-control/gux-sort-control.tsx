@@ -113,10 +113,10 @@ export class GuxSortControl {
   private getIconName(colSortDirection: GuxTableSortDirection): string {
     switch (colSortDirection) {
       case 'descending':
-        return 'arrow-solid-down';
+        return 'fa/caret-down-solid';
       case 'ascending':
       default:
-        return 'arrow-solid-up';
+        return 'fa/caret-up-solid';
     }
   }
 

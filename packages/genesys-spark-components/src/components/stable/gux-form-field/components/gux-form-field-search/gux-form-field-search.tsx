@@ -134,7 +134,10 @@ export class GuxFormFieldSearch {
                 'gux-disabled': this.disabled
               }}
             >
-              <gux-icon icon-name="search" decorative></gux-icon>
+              <gux-icon
+                icon-name="fa/magnifying-glass-regular"
+                decorative
+              ></gux-icon>
               <slot name="input" />
               {this.clearable && this.hasContent && !this.disabled && (
                 <gux-form-field-input-clear-button

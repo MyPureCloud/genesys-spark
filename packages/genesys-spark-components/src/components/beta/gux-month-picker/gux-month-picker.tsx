@@ -338,7 +338,7 @@ export class GuxMonthPicker {
         disabled={this.disabled}
       >
         <gux-icon
-          icon-name="calendar"
+          icon-name="fa/calendar-regular"
           screenreader-text={this.i18n('toggleCalendar')}
         ></gux-icon>
       </button>

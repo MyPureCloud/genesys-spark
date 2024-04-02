@@ -34,7 +34,7 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
           <span class="gux-submenu-button-text">
             Submenu Two
           </span>
-          <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
+          <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
         </button>
         <div class="gux-submenu-wrapper">
           <div class="gux-submenu-content" role="menu">
@@ -58,7 +58,7 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
             <span class="gux-submenu-button-text">
               Submenu Two
             </span>
-            <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
+            <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
           </button>
           <div class="gux-submenu-wrapper">
             <div class="gux-submenu-content" role="menu">
@@ -134,7 +134,7 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
           <span class="gux-submenu-button-text">
             Submenu Five
           </span>
-          <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
+          <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
         </button>
         <div class="gux-submenu-wrapper">
           <div class="gux-submenu-content" role="menu">
@@ -168,7 +168,7 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
             <span class="gux-submenu-button-text">
               Submenu Three
             </span>
-            <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
+            <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
           </button>
           <div class="gux-submenu-wrapper">
             <div class="gux-submenu-content" role="menu">
@@ -192,7 +192,7 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
               <span class="gux-submenu-button-text">
                 Submenu Two
               </span>
-              <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
+              <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
             </button>
             <div class="gux-submenu-wrapper">
               <div class="gux-submenu-content" role="menu">
@@ -216,7 +216,7 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
                 <span class="gux-submenu-button-text">
                   Submenu Two
                 </span>
-                <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="chevron-small-right"></gux-icon>
+                <gux-icon class="gux-submenu-open-icon" decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
               </button>
               <div class="gux-submenu-wrapper">
                 <div class="gux-submenu-content" role="menu">

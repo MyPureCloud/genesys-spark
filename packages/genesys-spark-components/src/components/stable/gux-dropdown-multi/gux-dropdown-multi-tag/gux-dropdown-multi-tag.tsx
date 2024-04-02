@@ -68,7 +68,7 @@ export class GuxDropdownMultiTag {
       >
         <gux-icon
           class="gux-tag-remove-icon"
-          icon-name="close"
+          icon-name="fa/xmark-large-regular"
           screenreader-text={this.i18n('clearSelection', {
             numberSelected: this.numberSelected.toString()
           })}

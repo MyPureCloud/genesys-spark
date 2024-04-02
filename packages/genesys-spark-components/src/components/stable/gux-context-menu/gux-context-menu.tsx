@@ -171,7 +171,7 @@ export class GuxContextMenu {
                 disabled={this.disabled}
               >
                 <gux-icon
-                  icon-name="menu-kebab-vertical"
+                  icon-name="fa/ellipsis-vertical-regular"
                   screenreader-text={
                     this.screenreaderText ||
                     this.i18n('contextMenuScreenreaderText')

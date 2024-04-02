@@ -5,7 +5,7 @@ exports[`gux-content-search #render should render default control no props 1`] =
   <mock:shadow-root>
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
     </div>
@@ -19,7 +19,7 @@ exports[`gux-content-search #render should render default control no props With 
   <mock:shadow-root>
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
     </div>
@@ -33,7 +33,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -43,16 +43,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -66,7 +66,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -76,16 +76,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -99,7 +99,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -109,16 +109,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -132,7 +132,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -142,16 +142,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -165,7 +165,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -175,16 +175,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -198,7 +198,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -208,16 +208,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -231,7 +231,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -241,16 +241,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -264,7 +264,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -274,16 +274,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -297,7 +297,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -307,16 +307,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -330,7 +330,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -340,16 +340,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -363,7 +363,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -373,16 +373,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -396,7 +396,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -406,16 +406,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -429,7 +429,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -439,16 +439,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" disabled="" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" disabled="" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" disabled="" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>
@@ -462,7 +462,7 @@ exports[`gux-content-search #render should render default control with all props
   <mock:shadow-root>
     <div class="gux-content-search">
       <div class="gux-search-icon">
-        <gux-icon decorative="" icon-name="search"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
       <div class="gux-content-control-panel">
@@ -472,16 +472,16 @@ exports[`gux-content-search #render should render default control with all props
           </span>
           <div class="gux-navigation-buttons">
             <button aria-label="Highlight previous match" class="gux-previous-button" title="Highlight previous match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-up"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-up-solid"></gux-icon>
             </button>
             <button aria-label="Highlight next match" class="gux-next-button" title="Highlight next match" type="button">
-              <gux-icon decorative="" icon-name="arrow-solid-down"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/caret-down-solid"></gux-icon>
             </button>
           </div>
           <div class="gux-navigation-divider"></div>
         </div>
         <button class="gux-clear-button" tabindex="-1" title="Clear" type="button">
-          <gux-icon decorative="" icon-name="close"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         </button>
       </div>
     </div>

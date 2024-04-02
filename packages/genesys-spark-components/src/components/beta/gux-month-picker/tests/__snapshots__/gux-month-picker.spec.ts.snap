@@ -14,7 +14,7 @@ exports[`gux-month-picker-beta #render should render the component as expected 1
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="calendar" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -22,13 +22,13 @@ exports[`gux-month-picker-beta #render should render the component as expected 1
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="chevron-small-left" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="chevron-small-right" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list" tabindex="1">

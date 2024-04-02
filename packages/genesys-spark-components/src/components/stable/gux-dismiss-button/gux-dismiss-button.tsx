@@ -34,7 +34,7 @@ export class GuxDismissButton {
       >
         <button type="button" title={this.i18n('dismiss')}>
           <div class="gux-icon-container">
-            <gux-icon icon-name="close" decorative></gux-icon>
+            <gux-icon icon-name="fa/xmark-large-regular" decorative></gux-icon>
           </div>
         </button>
       </gux-button-slot>

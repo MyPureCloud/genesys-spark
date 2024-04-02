@@ -6,7 +6,7 @@ exports[`gux-datepicker #render should render component as expected (1) 1`] = `
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
-          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+          <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
         </button>
         <div class="gux-month-list">
           <label>
@@ -14,7 +14,7 @@ exports[`gux-datepicker #render should render component as expected (1) 1`] = `
           </label>
         </div>
         <button aria-hidden="true" class="gux-right" tabindex="-1" type="button">
-          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+          <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
         </button>
       </div>
       <div class="gux-content">
@@ -403,7 +403,7 @@ exports[`gux-datepicker #render should render component as expected (2) 1`] = `
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
-          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+          <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
         </button>
         <div class="gux-month-list">
           <label>
@@ -414,7 +414,7 @@ exports[`gux-datepicker #render should render component as expected (2) 1`] = `
           </label>
         </div>
         <button aria-hidden="true" class="gux-right" tabindex="-1" type="button">
-          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+          <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
         </button>
       </div>
       <div class="gux-content">
@@ -1060,7 +1060,7 @@ exports[`gux-datepicker #render should render component as expected (3) 1`] = `
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
-          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+          <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
         </button>
         <div class="gux-month-list">
           <label>
@@ -1068,7 +1068,7 @@ exports[`gux-datepicker #render should render component as expected (3) 1`] = `
           </label>
         </div>
         <button aria-hidden="true" class="gux-right" tabindex="-1" type="button">
-          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+          <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
         </button>
       </div>
       <div class="gux-content">
@@ -1457,7 +1457,7 @@ exports[`gux-datepicker #render should render component as expected (4) 1`] = `
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
-          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+          <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
         </button>
         <div class="gux-month-list">
           <label>
@@ -1465,7 +1465,7 @@ exports[`gux-datepicker #render should render component as expected (4) 1`] = `
           </label>
         </div>
         <button aria-hidden="true" class="gux-right" tabindex="-1" type="button">
-          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+          <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
         </button>
       </div>
       <div class="gux-content">

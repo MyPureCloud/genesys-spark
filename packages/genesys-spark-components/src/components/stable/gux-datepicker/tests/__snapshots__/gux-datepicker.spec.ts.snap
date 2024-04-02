@@ -12,7 +12,7 @@ exports[`gux-datepicker #render should render component as expected (1) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="08/15/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
           <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
@@ -35,7 +35,7 @@ exports[`gux-datepicker #render should render component as expected (2) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="08/15/97">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
           <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
@@ -58,7 +58,7 @@ exports[`gux-datepicker #render should render component as expected (3) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="08.15.1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
           <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
@@ -81,7 +81,7 @@ exports[`gux-datepicker #render should render component as expected (4) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input disabled="" id="gux-datepicker-i" type="text" value="08/15/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
           <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
@@ -104,7 +104,7 @@ exports[`gux-datepicker #render should render component as expected (5) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="11/25/2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
           <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
@@ -118,7 +118,7 @@ exports[`gux-datepicker #render should render component as expected (5) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="12/02/2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
         </div>
@@ -140,7 +140,7 @@ exports[`gux-datepicker #render should render component as expected (6) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="11/25/2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
           <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
@@ -154,7 +154,7 @@ exports[`gux-datepicker #render should render component as expected (6) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="12/02/2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
         </div>
@@ -176,7 +176,7 @@ exports[`gux-datepicker #render should render component as expected (7) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="11.25.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
           <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
@@ -190,7 +190,7 @@ exports[`gux-datepicker #render should render component as expected (7) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="12.02.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
         </div>
@@ -212,7 +212,7 @@ exports[`gux-datepicker #render should render component as expected (8) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input disabled="" id="gux-datepicker-i" type="text" value="11/25/2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
           <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
@@ -226,7 +226,7 @@ exports[`gux-datepicker #render should render component as expected (8) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input disabled="" id="gux-datepicker-i" type="text" value="12/02/2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
         </div>
@@ -248,7 +248,7 @@ exports[`gux-datepicker #render should render component as expected (9) 1`] = `
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="08/15/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="calendar"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/calendar-regular"></gux-icon>
             </button>
           </div>
           <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" startdayofweek="6" tabindex="-1" value="1997-08-15"></gux-calendar>

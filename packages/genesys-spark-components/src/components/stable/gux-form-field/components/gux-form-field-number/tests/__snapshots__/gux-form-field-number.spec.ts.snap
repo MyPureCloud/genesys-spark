@@ -14,15 +14,15 @@ exports[`gux-form-field-number #render clearable should render component as expe
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -57,15 +57,15 @@ exports[`gux-form-field-number #render clearable should render component as expe
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -100,15 +100,15 @@ exports[`gux-form-field-number #render clearable should render component as expe
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -142,15 +142,15 @@ exports[`gux-form-field-number #render clearable should render component as expe
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -184,15 +184,15 @@ exports[`gux-form-field-number #render clearable should render component as expe
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" disabled="" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" disabled="" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -226,15 +226,15 @@ exports[`gux-form-field-number #render help should render component as expected 
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -271,15 +271,15 @@ exports[`gux-form-field-number #render input attributes should render component 
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -313,15 +313,15 @@ exports[`gux-form-field-number #render input attributes should render component 
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" disabled="" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" disabled="" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -355,15 +355,15 @@ exports[`gux-form-field-number #render input attributes should render component 
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -397,15 +397,15 @@ exports[`gux-form-field-number #render label-position should render component as
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -439,15 +439,15 @@ exports[`gux-form-field-number #render label-position should render component as
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -481,15 +481,15 @@ exports[`gux-form-field-number #render label-position should render component as
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -523,15 +523,15 @@ exports[`gux-form-field-number #render label-position should render component as
           </div>
           <div class="gux-step-buttons-container">
             <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-up"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
             <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>

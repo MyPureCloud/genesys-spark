@@ -31,7 +31,7 @@ exports[`gux-form-field-time-zone-picker #render error should render component a
           <slot></slot>
         </div>
         <div class="gux-form-field-error gux-show">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -77,7 +77,7 @@ exports[`gux-form-field-time-zone-picker #render help should render component as
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -121,7 +121,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -159,7 +159,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -197,7 +197,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -237,7 +237,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -280,7 +280,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -323,7 +323,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -366,7 +366,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="alert-warning-octogon"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>

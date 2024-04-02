@@ -86,7 +86,7 @@ exports[`gux-tag #render should render component as expected (5) 1`] = `
         tag with label:
       </div>
       <button class="gux-tag-remove-button" type="button">
-        <gux-icon class="gux-tag-remove-icon" icon-name="close" screenreader-text="Remove tag with label: "></gux-icon>
+        <gux-icon class="gux-tag-remove-icon" icon-name="fa/xmark-large-regular" screenreader-text="Remove tag with label: "></gux-icon>
       </button>
     </div>
   </mock:shadow-root>
@@ -108,7 +108,7 @@ exports[`gux-tag #render should render component as expected (6) 1`] = `
         disabled tag with label:
       </div>
       <button class="gux-tag-remove-button" disabled="" type="button">
-        <gux-icon class="gux-tag-remove-icon" icon-name="close" screenreader-text="Remove tag with label: "></gux-icon>
+        <gux-icon class="gux-tag-remove-icon" icon-name="fa/xmark-large-regular" screenreader-text="Remove tag with label: "></gux-icon>
       </button>
     </div>
   </mock:shadow-root>
