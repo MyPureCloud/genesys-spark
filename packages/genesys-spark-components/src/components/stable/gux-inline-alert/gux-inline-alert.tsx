@@ -3,9 +3,14 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxAlertAccent } from './gux-inline-alert.types';
 import translationResources from './i18n/en.json';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * @slot - Slot for message.
+ */
+
+/**
+ * @slot emphasis-text - Slot for emphasis text.
  */
 
 @Component({
@@ -50,10 +55,17 @@ export class GuxAlert {
           [`gux-${this.accent}`]: true
         }}
       >
-        <gux-icon icon-name={this.getIcon(this.accent)} decorative></gux-icon>
         <div class="gux-message-wrapper">
+          <gux-icon icon-name={this.getIcon(this.accent)} decorative></gux-icon>
           <div class="gux-sr-only">{this.i18n(this.accent)}</div>
-          <slot />
+          {hasSlot(this.root, 'emphasis-text') && (
+            <div class="gux-emphasis-text">
+              <slot name="emphasis-text" />
+            </div>
+          )}
+          <div class="gux-message">
+            <slot />
+          </div>
         </div>
       </div>
     ) as JSX.Element;

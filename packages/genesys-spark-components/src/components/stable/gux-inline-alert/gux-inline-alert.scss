@@ -8,7 +8,6 @@
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: var(--gse-ui-alert-gap);
   align-items: center;
   justify-content: flex-start;
   padding: var(--gse-ui-alert-padding);
@@ -30,12 +29,17 @@
   .gux-message-wrapper {
     display: flex;
     gap: var(--gse-ui-alert-gap);
-    align-items: center;
-    justify-content: flex-start;
     font-family: var(--gse-ui-alert-text-fontFamily);
     font-size: var(--gse-ui-alert-text-fontSize);
     font-weight: var(--gse-ui-alert-text-fontWeight);
     line-height: var(--gse-ui-alert-text-lineHeight);
+  }
+
+  .gux-emphasis-text {
+    font-family: var(--gse-ui-alert-emphasisText-fontFamily);
+    font-size: var(--gse-ui-alert-emphasisText-fontSize);
+    font-weight: var(--gse-ui-alert-emphasisText-fontWeight);
+    line-height: var(--gse-ui-alert-emphasisText-lineHeight);
   }
 
   .gux-sr-only {

@@ -2,17 +2,21 @@
 
 <h2>Inline Alert Examples</h2>
 <div class="alerts">
-  <gux-inline-alert accent="info"
-    ><strong>Note:</strong> This is an information alert.</gux-inline-alert
+  <gux-inline-alert accent="info">
+    <span slot="emphasis-text">Note:</span>
+    This is an information alert.</gux-inline-alert
   >
-  <gux-inline-alert accent="success"
-    ><strong>Note:</strong> This is a success alert.</gux-inline-alert
+  <gux-inline-alert accent="success">
+    <span slot="emphasis-text">Note:</span>
+    This is a success alert.</gux-inline-alert
   >
-  <gux-inline-alert accent="warning"
-    ><strong>Note:</strong> This is a warning alert.</gux-inline-alert
+  <gux-inline-alert accent="warning">
+    <span slot="emphasis-text">Note:</span>
+    This is a warning alert.</gux-inline-alert
   >
-  <gux-inline-alert accent="error"
-    ><strong>Note:</strong> This is a warning alert.</gux-inline-alert
+  <gux-inline-alert accent="error">
+    <span slot="emphasis-text">Note:</span>
+    This is a warning alert.</gux-inline-alert
   >
 </div>
 
@@ -26,6 +30,12 @@
   </gux-truncate>
 </gux-inline-alert>
 
+<h2>Text wrapping example</h2>
+<gux-inline-alert accent="info" style="width: 400px">
+  <span slot="emphasis-text">Note:</span>
+  This is an information message to demonstrate that this alert will wrap if a
+  width is applied & the text is long enough.
+</gux-inline-alert>
 <style>
   .alerts {
     display: flex;
