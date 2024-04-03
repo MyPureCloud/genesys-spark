@@ -4,12 +4,14 @@ exports[`gux-inline-alert #render should render component as expected (1) 1`] = 
 <gux-inline-alert accent="info">
   <mock:shadow-root>
     <div class="gux-info gux-inline-alert">
-      <gux-icon decorative="" icon-name="fa/circle-info-solid"></gux-icon>
       <div class="gux-message-wrapper">
+        <gux-icon decorative="" icon-name="fa/circle-info-solid"></gux-icon>
         <div class="gux-sr-only">
           Information alert with message
         </div>
-        <slot></slot>
+        <div class="gux-message">
+          <slot></slot>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -21,12 +23,14 @@ exports[`gux-inline-alert #render should render component as expected (2) 1`] = 
 <gux-inline-alert accent="success">
   <mock:shadow-root>
     <div class="gux-inline-alert gux-success">
-      <gux-icon decorative="" icon-name="fa/circle-check-solid"></gux-icon>
       <div class="gux-message-wrapper">
+        <gux-icon decorative="" icon-name="fa/circle-check-solid"></gux-icon>
         <div class="gux-sr-only">
           Success alert with message
         </div>
-        <slot></slot>
+        <div class="gux-message">
+          <slot></slot>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -38,12 +42,14 @@ exports[`gux-inline-alert #render should render component as expected (3) 1`] = 
 <gux-inline-alert accent="warning">
   <mock:shadow-root>
     <div class="gux-inline-alert gux-warning">
-      <gux-icon decorative="" icon-name="fa/triangle-exclamation-solid"></gux-icon>
       <div class="gux-message-wrapper">
+        <gux-icon decorative="" icon-name="fa/triangle-exclamation-solid"></gux-icon>
         <div class="gux-sr-only">
           Warning alert with message
         </div>
-        <slot></slot>
+        <div class="gux-message">
+          <slot></slot>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
@@ -55,12 +61,14 @@ exports[`gux-inline-alert #render should render component as expected (4) 1`] = 
 <gux-inline-alert accent="error">
   <mock:shadow-root>
     <div class="gux-error gux-inline-alert">
-      <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
       <div class="gux-message-wrapper">
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
         <div class="gux-sr-only">
           Error alert with message
         </div>
-        <slot></slot>
+        <div class="gux-message">
+          <slot></slot>
+        </div>
       </div>
     </div>
   </mock:shadow-root>
