@@ -84,7 +84,7 @@ export class GuxModal {
     switch (event.key) {
       case 'Escape':
         event.preventDefault();
-        this.dialogElement.close();
+        this.onDismissHandler();
         return;
     }
   }
@@ -168,6 +168,6 @@ export class GuxModal {
   }
 
   private onDismissHandler(): void {
-    this.dialogElement.close();
+    this.open = false;
   }
 }
