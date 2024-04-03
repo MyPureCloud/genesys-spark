@@ -1,6 +1,6 @@
-@use '../../../../style/focus';
-@use '../../../../style/typography';
-@use '../../../../style/mixins';
+@use '~genesys-spark/src/style/focus.scss';
+@use '~genesys-spark/src/style/typography.scss';
+@use '~genesys-spark/src/style/mixins.scss';
 
 .gux-tab-container {
   display: flex;

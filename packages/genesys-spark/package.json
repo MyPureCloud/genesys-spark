@@ -11,29 +11,44 @@
   ],
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "rollup -c",
+    "build": "npm run build.style-sheets && npm run build.rollup && npm run build.generate-component-data",
+    "build.generate-component-data": "node ./scripts/generate-component-data.js",
+    "build.rollup": "rollup -c",
+    "build.style-sheets": "./scripts/build-style-sheets.sh",
     "clean": "rm -r ./dist || true",
     "dev": "rollup -c --watch",
     "eslint": "eslint --fix './**/*.ts'",
     "lint-staged": "lint-staged --concurrent false",
     "prettier": "prettier --log-level silent --ignore-path .gitignore --ignore-unknown --write .",
+    "stylelint": "stylelint --fix \"**/*.{css,html,scss}\"",
     "test": "jest",
     "test.ci": "npm run test",
     "test.watch": "jest --watch",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "types": "dist/index.d.ts",
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.13.2"
+  },
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.5",
     "@tsconfig/strictest": "^2.0.3",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
+    "glob": "^10.3.10",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "rollup": "^4.12.1",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^6.1.1",
+    "sass": "^1.72.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recess-order": "^4.6.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-scss": "^6.2.1",
     "ts-jest": "^29.1.2"
   }
 }

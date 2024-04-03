@@ -43,6 +43,7 @@
   },
   "workspaces": [
     "./packages/genesys-spark-tokens",
+    "./packages/genesys-spark",
     "./packages/genesys-spark-components",
     "./packages/genesys-spark-chart-components",
     "./packages/*",

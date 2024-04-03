@@ -1,5 +1,5 @@
-@use '../../../../style/mixins';
-@use '../../../../style/focus';
+@use '~genesys-spark/src/style/focus.scss';
+@use '~genesys-spark/src/style/mixins.scss';
 
 button {
   all: unset;

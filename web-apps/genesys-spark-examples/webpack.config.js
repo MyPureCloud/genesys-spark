@@ -70,7 +70,7 @@ module.exports = {
           transform: generateComponentPage
         },
         {
-          from: '../../packages/genesys-spark-components/src/style/examples/*.html',
+          from: '../../packages/genesys-spark/src/style/examples/*.html',
           to: ({ absoluteFilename }) => {
             return path.basename(absoluteFilename);
           },
