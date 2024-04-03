@@ -11,7 +11,7 @@ import translationResources from './i18n/en.json';
   tag: 'gux-form-field-input-clear-button',
   shadow: { delegatesFocus: true }
 })
-export class Gux {
+export class GuxFormFieldInputClearButton {
   private i18n: GetI18nValue;
 
   @Element()
