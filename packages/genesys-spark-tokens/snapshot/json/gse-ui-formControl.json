@@ -118,8 +118,11 @@
         "optional_color": "#626e84"
       }
     },
+    "group": {
+      "gap_items": "8px"
+    },
     "helper": {
-      "gap": "8px",
+      "gap": "4px",
       "helper_text": {
         "fontFamily": "Noto Sans",
         "lineHeight": "18px",
