@@ -52,6 +52,7 @@
 
   .gux-list-container {
     max-width: 220px;
+    max-height: var(--gse-ui-menu-maxHeight);
 
     @include mixins.gux-menu-container;
   }
