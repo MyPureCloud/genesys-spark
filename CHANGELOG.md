@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.32.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.31.1...v4.32.0) (2024-04-04)
+
+
+### Features
+
+* **genesys-spark:** generate global and reset stylesheets ([2a919bd](https://github.com/MyPureCloud/genesys-spark/commit/2a919bdbdd708f01b725c05fe9714c8a167521c0))
+* **modal:** allow modal to be reopened ([de806da](https://github.com/MyPureCloud/genesys-spark/commit/de806da8704f9a4367ec6eaccdd537e043bc7ee7))
+* **modal:** pr suggestion ([3df131d](https://github.com/MyPureCloud/genesys-spark/commit/3df131d60880a5e0062d08a63a5a484a86520747))
+
 ### [4.31.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.31.0...v4.31.1) (2024-04-03)
 
 ## [4.31.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.30.0...v4.31.0) (2024-04-01)
