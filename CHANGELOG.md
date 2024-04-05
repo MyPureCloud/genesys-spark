@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.33.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.32.0...v4.33.0) (2024-04-05)
+
+
+### Features
+
+* **action-button:** setting max-height on popup to match dropdown ([e1f68a1](https://github.com/MyPureCloud/genesys-spark/commit/e1f68a195e1f0d9de0a28528bcc3f47b10fd8797))
+
+
+### Bug Fixes
+
+* **form-field-input-clear-button:** change class name to match component ([#406](https://github.com/MyPureCloud/genesys-spark/issues/406)) ([dfe51ef](https://github.com/MyPureCloud/genesys-spark/commit/dfe51ef878b10964aa988f64abe53dbd9eb05eaf))
+
 ## [4.32.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.31.1...v4.32.0) (2024-04-04)
 
 

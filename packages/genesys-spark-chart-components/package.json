@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-chart-components",
-  "version": "4.32.0",
+  "version": "4.33.0",
   "description": "Common chart webcomponents",
   "license": "MIT",
   "main": "dist/stencil-wrapper.js",
