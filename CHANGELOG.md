@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.33.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.33.0...v4.33.1) (2024-04-06)
+
+
+### Bug Fixes
+
+* **gux-accordion:** allowing user to highlight text ([35b2395](https://github.com/MyPureCloud/genesys-spark/commit/35b2395059810532e6d0c1dbee3f2e27c3b122ba))
+
 ## [4.33.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.32.0...v4.33.0) (2024-04-05)
 
 
