@@ -39,6 +39,13 @@ Type: `Promise<void>`
 
 
 
+#### Parameters
+
+| Name              | Type      | Description |
+| ----------------- | --------- | ----------- |
+| `highlight`       | `string`  |             |
+| `highlightActive` | `boolean` |             |
+
 #### Returns
 
 Type: `Promise<void>`

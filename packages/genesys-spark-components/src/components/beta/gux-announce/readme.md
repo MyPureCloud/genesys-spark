@@ -15,6 +15,12 @@
 
 
 
+#### Parameters
+
+| Name   | Type     | Description |
+| ------ | -------- | ----------- |
+| `text` | `string` |             |
+
 #### Returns
 
 Type: `Promise<void>`

@@ -447,7 +447,7 @@ export class GuxPhoneInput {
   }
 
   private renderExpandIcon(): JSX.Element {
-    if (!this.disabled)
+    if (!this.disabled) {
       return (
         <gux-icon
           class="gux-expand-icon"
@@ -455,6 +455,7 @@ export class GuxPhoneInput {
           decorative
         />
       ) as JSX.Element;
+    }
   }
 
   private renderCountryButton(): JSX.Element {

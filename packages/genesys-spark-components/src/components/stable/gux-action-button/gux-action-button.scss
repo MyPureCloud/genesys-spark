@@ -1,4 +1,4 @@
-@use '../../../style/mixins';
+@use '~genesys-spark/src/style/mixins.scss';
 
 @mixin button-text {
   font-family: var(--gse-ui-button-text-fontFamily);
@@ -52,6 +52,7 @@
 
   .gux-list-container {
     max-width: 220px;
+    max-height: var(--gse-ui-menu-maxHeight);
 
     @include mixins.gux-menu-container;
   }

@@ -158,10 +158,12 @@ export class GuxAvatar {
   }
 
   private getDescriptionText(): string {
-    if (this.notifications)
+    if (this.notifications) {
       return `${this.name} (${this.i18n('notifications')})`;
-    if (this.label && this.presence !== 'none')
+    }
+    if (this.label && this.presence !== 'none') {
       return `${this.name} (${this.label})`;
+    }
     return `${this.name}`;
   }
 

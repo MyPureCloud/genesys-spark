@@ -2,6 +2,116 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.33.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.33.0...v4.33.1) (2024-04-06)
+
+
+### Bug Fixes
+
+* **gux-accordion:** allowing user to highlight text ([35b2395](https://github.com/MyPureCloud/genesys-spark/commit/35b2395059810532e6d0c1dbee3f2e27c3b122ba))
+
+## [4.33.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.32.0...v4.33.0) (2024-04-05)
+
+
+### Features
+
+* **action-button:** setting max-height on popup to match dropdown ([e1f68a1](https://github.com/MyPureCloud/genesys-spark/commit/e1f68a195e1f0d9de0a28528bcc3f47b10fd8797))
+
+
+### Bug Fixes
+
+* **form-field-input-clear-button:** change class name to match component ([#406](https://github.com/MyPureCloud/genesys-spark/issues/406)) ([dfe51ef](https://github.com/MyPureCloud/genesys-spark/commit/dfe51ef878b10964aa988f64abe53dbd9eb05eaf))
+
+## [4.32.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.31.1...v4.32.0) (2024-04-04)
+
+
+### Features
+
+* **genesys-spark:** generate global and reset stylesheets ([2a919bd](https://github.com/MyPureCloud/genesys-spark/commit/2a919bdbdd708f01b725c05fe9714c8a167521c0))
+* **modal:** allow modal to be reopened ([de806da](https://github.com/MyPureCloud/genesys-spark/commit/de806da8704f9a4367ec6eaccdd537e043bc7ee7))
+* **modal:** pr suggestion ([3df131d](https://github.com/MyPureCloud/genesys-spark/commit/3df131d60880a5e0062d08a63a5a484a86520747))
+
+### [4.31.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.31.0...v4.31.1) (2024-04-03)
+
+## [4.31.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.30.0...v4.31.0) (2024-04-01)
+
+
+### Features
+
+* **icon:** adding icons for new label work ([#399](https://github.com/MyPureCloud/genesys-spark/issues/399)) ([355cdf5](https://github.com/MyPureCloud/genesys-spark/commit/355cdf571d4a0890d07e80e625d5a5afac673985))
+
+
+### Bug Fixes
+
+* **form-field-number:** add default transparent border to arrow buttons to reserve space for hover ([d218b72](https://github.com/MyPureCloud/genesys-spark/commit/d218b72679b5abae9fffca4f129df07663bed8fd))
+* **tooltip:** fixed overflow-wrap for long words ([e0f9a69](https://github.com/MyPureCloud/genesys-spark/commit/e0f9a6940401cdfde90ad17b041ace8ecd77706e))
+
+## [4.30.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.29.0...v4.30.0) (2024-03-29)
+
+
+### Features
+
+* **avatar:** add focus styled examples ([#359](https://github.com/MyPureCloud/genesys-spark/issues/359)) ([b968c17](https://github.com/MyPureCloud/genesys-spark/commit/b968c1770b9fab15bd853509c59456246730b97b))
+
+## [4.29.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.28.1...v4.29.0) (2024-03-26)
+
+
+### Features
+
+* **date-time:** use current time in date-time example ([#390](https://github.com/MyPureCloud/genesys-spark/issues/390)) ([b856afc](https://github.com/MyPureCloud/genesys-spark/commit/b856afc87705ca6d88f48b645389b0ef125ba08a))
+* **language:** translation updates ([0dbc18e](https://github.com/MyPureCloud/genesys-spark/commit/0dbc18e39f1f35e2bf6e0adaeaa63d19a22a960b))
+* **pagination:** change dropdown size to fit-content ([#393](https://github.com/MyPureCloud/genesys-spark/issues/393)) ([80560e7](https://github.com/MyPureCloud/genesys-spark/commit/80560e7121b7ab25b67182ade718d2b548634673))
+
+### [4.28.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.28.0...v4.28.1) (2024-03-23)
+
+
+### Bug Fixes
+
+* **genesys-spark:** fixed broken types reference ([57539ed](https://github.com/MyPureCloud/genesys-spark/commit/57539ede805d145823b75d541e45ae9d6d56ff1e))
+
+## [4.28.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.27.0...v4.28.0) (2024-03-22)
+
+
+### Features
+
+* **context-menu:** add compact and default padding tokens ([8c97f31](https://github.com/MyPureCloud/genesys-spark/commit/8c97f31a0c2d6537b3415ab8cffc177548844710))
+* **gux-context-menu:** adopt new tokens ([4016c36](https://github.com/MyPureCloud/genesys-spark/commit/4016c36de49aed6bbf45e58b5ab9007f16b4975e))
+
+## [4.27.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.26.3...v4.27.0) (2024-03-20)
+
+
+### Features
+
+* **icon:** add icons ([#386](https://github.com/MyPureCloud/genesys-spark/issues/386)) ([e48d15d](https://github.com/MyPureCloud/genesys-spark/commit/e48d15d59e50628372037a9fdeb96af327ec49f7))
+
+### [4.26.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.26.2...v4.26.3) (2024-03-16)
+
+
+### Bug Fixes
+
+* **month-picker:** remove renderFocusTarget ([20cc10e](https://github.com/MyPureCloud/genesys-spark/commit/20cc10ed1571fc9af4724a51a12b99e6871262be))
+
+### [4.26.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.26.1...v4.26.2) (2024-03-15)
+
+
+### Bug Fixes
+
+* **datepicker:** first keypress after focus should be treated as new input ([14dd8e5](https://github.com/MyPureCloud/genesys-spark/commit/14dd8e5e7d9bdd60dccc951322dcaa9a7d29dbd3))
+* **datepicker:** first keypress after focus should be treated as new input ([d46f4d2](https://github.com/MyPureCloud/genesys-spark/commit/d46f4d2d7984be522c4048d6c1f3526068a2d717))
+* **gux-modal:** added space around content slot ([9db863f](https://github.com/MyPureCloud/genesys-spark/commit/9db863fc0d338b32633c1709ca1f1754821a3e21))
+
+### [4.26.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.26.0...v4.26.1) (2024-03-14)
+
+
+### Bug Fixes
+
+* **docs:** hide v5 ([1244b6f](https://github.com/MyPureCloud/genesys-spark/commit/1244b6f5618b263d24a2f36bb3257538d4ff716f))
+* **genesys-spark:** fixd build types output ([4cf4a4d](https://github.com/MyPureCloud/genesys-spark/commit/4cf4a4d302cfc808f0ffc0bb304181ef29dec215))
+* **tests:** fixed ci test script ([2d3c5fa](https://github.com/MyPureCloud/genesys-spark/commit/2d3c5fadb2484c165d1eb988033ff0d383dbeb53))
+* **tokens:** add test command to package json ([f01b949](https://github.com/MyPureCloud/genesys-spark/commit/f01b949bafa27a352a6228dd780150ca09403952))
+* **tokens:** remove token test ([7366ecf](https://github.com/MyPureCloud/genesys-spark/commit/7366ecf13fea4115ea73d5c5c990590582fb7ff8))
+* **tokens:** test change should fail build ([24bb718](https://github.com/MyPureCloud/genesys-spark/commit/24bb718e531b42759f4c722d0edd9b90967ca1a9))
+* **type example:** fix dodgy Firefox version ([#377](https://github.com/MyPureCloud/genesys-spark/issues/377)) ([a1f2f99](https://github.com/MyPureCloud/genesys-spark/commit/a1f2f995a0a2925f753de029ddff39210851ba7f))
+
 ## [4.26.0](https://github.com/MyPureCloud/genesys-spark/compare/v5.0.0...v4.26.0) (2024-03-12)
 
 

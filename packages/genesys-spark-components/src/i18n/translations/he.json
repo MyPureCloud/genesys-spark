@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "חפש"
   },
+  "gux-avatar": {
+    "notifications": "התראות"
+  },
   "gux-badge": {
     "info": "תג עם תווית: {label}, הדגשה: מידע",
     "info-bold": "תג עם תווית: {label}, הדגשה: מידע מודגש",
@@ -1225,7 +1228,7 @@
   },
   "gux-toggle": {
     "defaultAriaLabel": "שינוי מתג",
-    "toggleIsLoading": "שינוי המצב נטען",
-    "toggleIsFinishedLoading": "הטעינה של שינוי המצב הסתיימה"
+    "toggleIsLoading": "שינוי מצב בטעינה",
+    "toggleIsFinishedLoading": "טעינת שינוי המצב הסתיימה"
   }
 }

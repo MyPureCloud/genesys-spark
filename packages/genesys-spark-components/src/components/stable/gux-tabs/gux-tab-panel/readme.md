@@ -25,6 +25,12 @@ Unlike gux-tab-panel, gux-tab-panel uses the shadow dom
 
 
 
+#### Parameters
+
+| Name     | Type      | Description |
+| -------- | --------- | ----------- |
+| `active` | `boolean` |             |
+
 #### Returns
 
 Type: `Promise<void>`

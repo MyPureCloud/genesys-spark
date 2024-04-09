@@ -67,14 +67,9 @@ export class GuxMonthList {
     first(this.root, validFocusableItems);
   }
 
-  private renderFocusTarget(): JSX.Element {
-    return (<span tabindex="1"></span>) as JSX.Element;
-  }
-
   render(): JSX.Element {
     return (
       <Host role="list">
-        {this.renderFocusTarget()}
         <slot></slot>
       </Host>
     ) as JSX.Element;

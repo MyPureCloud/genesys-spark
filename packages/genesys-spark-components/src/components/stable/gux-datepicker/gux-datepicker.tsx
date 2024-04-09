@@ -160,6 +160,12 @@ export class GuxDatepicker {
   @State()
   active: boolean = false;
 
+  /**
+   * Tracks the amount of key presses when focusing on the input.
+   */
+  @State()
+  pressedKeys: Array<string> = [];
+
   @Watch('value')
   watchValue() {
     this.updateDate();
@@ -242,6 +248,8 @@ export class GuxDatepicker {
           );
           this.setIntervalRange(previousIntervalRange);
           this.setCursorRange();
+          this.pressedKeys.length = 0;
+
           break;
         }
         case 'ArrowRight': {
@@ -253,6 +261,8 @@ export class GuxDatepicker {
           );
           this.setIntervalRange(nextIntervalRange);
           this.setCursorRange();
+          this.pressedKeys.length = 0;
+
           break;
         }
         default:
@@ -314,6 +324,7 @@ export class GuxDatepicker {
   @OnClickOutside({ triggerEvents: 'mousedown' })
   onClickOutside() {
     this.active = false;
+    this.pressedKeys.length = 0;
   }
 
   /*********  Event Handlers  **********/
@@ -364,6 +375,7 @@ export class GuxDatepicker {
   }
 
   updateIntervalValue(event: KeyboardEvent): void {
+    this.pressedKeys.push(event.key);
     const inputNumber = parseInt(event.key, 10);
 
     if (!isNaN(inputNumber)) {
@@ -379,7 +391,7 @@ export class GuxDatepicker {
       ) {
         this.typeYearValue(currentSectionValue, event.key);
       } else {
-        if (this.canSetDate(inputNumber)) {
+        if (this.canSetDate(inputNumber) && this.pressedKeys.length >= 2) {
           this.updateSelection(
             this.focusedField,
             `${currentSectionValue[1]}${event.key}`
@@ -481,7 +493,7 @@ export class GuxDatepicker {
     }
   }
 
-  canSetDate(key: number) {
+  canSetDate(key: number): boolean {
     const newValue = parseInt(
       [
         this.focusedField.value[this.intervalRange.selectionEnd - 1].toString(),

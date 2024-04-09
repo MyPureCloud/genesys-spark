@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "搜索"
   },
+  "gux-avatar": {
+    "notifications": "通知"
+  },
   "gux-badge": {
     "info": "标签为 {label} 的徽章，强调：信息",
     "info-bold": "标签为 {label} 的徽章，强调：信息粗体",

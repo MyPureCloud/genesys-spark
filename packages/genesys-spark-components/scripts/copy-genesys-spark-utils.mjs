@@ -27,7 +27,9 @@ function copyGenesysSparkUtils() {
       `../src/genesys-spark-utils/${file}`
     );
     copyFile(copyFromPath, destinationPath, err => {
-      if (err) throw err;
+      if (err) {
+        throw err;
+      }
       console.log(`${file} was copied to destination`);
     });
   });

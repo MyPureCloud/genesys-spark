@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Sök"
   },
+  "gux-avatar": {
+    "notifications": "Aviseringar"
+  },
   "gux-badge": {
     "info": "märke med etikett: {label}, accent: info",
     "info-bold": "märke med etikett: {label}, accent: info fetstil",

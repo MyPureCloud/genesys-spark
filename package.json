@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.26.0",
+  "version": "4.33.1",
   "description": "Common webcomponents",
   "license": "MIT",
   "scripts": {
@@ -43,6 +43,7 @@
   },
   "workspaces": [
     "./packages/genesys-spark-tokens",
+    "./packages/genesys-spark",
     "./packages/genesys-spark-components",
     "./packages/genesys-spark-chart-components",
     "./packages/*",

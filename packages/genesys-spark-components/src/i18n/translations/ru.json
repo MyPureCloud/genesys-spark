@@ -5,6 +5,9 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Поиск"
   },
+  "gux-avatar": {
+    "notifications": "Уведомления"
+  },
   "gux-badge": {
     "info": "значок с меткой: {label}, выделение: сведения",
     "info-bold": "значок с меткой: {label}, выделение: сведения, полужирный",
@@ -69,12 +72,12 @@
     "dismiss": "Пропустить"
   },
   "gux-dropdown": {
-    "filterResults": "Начните ввод для фильтрации результатов в раскрывающемся списке",
+    "filterResults": "Введите, чтобы отфильтровать результаты в раскрывающемся списке",
     "noSelection": "Выбрать...",
     "dropdown": "Раскрывающийся список"
   },
   "gux-dropdown-multi": {
-    "textInputResults": "Начните ввод для фильтрации результатов в раскрывающемся списке",
+    "textInputResults": "Введите, чтобы отфильтровать результаты в раскрывающемся списке",
     "noSelection": "Выбрать...",
     "dropdown": "Раскрывающийся список",
     "numberSelected": "Выбрано: {numberSelected}",
