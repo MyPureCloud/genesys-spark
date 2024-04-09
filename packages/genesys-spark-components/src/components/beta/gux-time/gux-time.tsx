@@ -6,7 +6,8 @@ import {
 } from '../../../i18n/DateTimeFormatter';
 import * as sparkIntl from '../../../genesys-spark-utils/intl';
 // Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
-import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
+import { readRegionalDatesCookie } from '../../../i18n/read-regional-dates-cookie';
+import { readRegionalDatesVar } from '../../../i18n/read-regional-dates-var';
 import { getDesiredLocale } from '../../../i18n/index';
 import { GuxTimeZoneIdentifier } from '../../../i18n/time-zone/types';
 import { getValidTimezone } from '@utils/date/get-valid-timezone';
@@ -48,7 +49,7 @@ export class GuxTime {
 
   componentWillLoad(): void {
     trackComponent(this.root);
-    if (readRegionalDatesCookie()) {
+    if (readRegionalDatesCookie() || readRegionalDatesVar()) {
       this.hasRegionalDatesCookie = true;
     } else {
       this.formatter = new DateTimeFormatter(getDesiredLocale(this.root));

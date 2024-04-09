@@ -1,6 +1,7 @@
 import { getDesiredLocale } from '../../../i18n';
 import * as sparkIntl from '../../../genesys-spark-utils/intl';
-import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
+import { readRegionalDatesCookie } from '../../../i18n/read-regional-dates-cookie';
+import { readRegionalDatesVar } from '../../../i18n/read-regional-dates-var';
 
 import {
   GuxClockType,
@@ -32,7 +33,7 @@ export function getTimeDisplayValues(
 
 export function getLocaleClockType(root: HTMLElement): GuxClockType {
   let locale: string;
-  if (readRegionalDatesCookie()) {
+  if (readRegionalDatesCookie() || readRegionalDatesVar()) {
     locale = sparkIntl.determineDisplayLocale(root).toLowerCase();
   } else {
     locale = getDesiredLocale(root).toLowerCase();

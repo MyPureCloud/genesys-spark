@@ -16,7 +16,8 @@ import {
 } from '../../../../i18n';
 import * as sparkIntl from '../../../../genesys-spark-utils/intl';
 // Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
-import { readRegionalDatesCookie } from '../../../../i18n/check-regional-dates-cookie';
+import { readRegionalDatesCookie } from '../../../../i18n/read-regional-dates-cookie';
+import { readRegionalDatesVar } from '../../../../i18n/read-regional-dates-var';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { afterNextRender } from '@utils/dom/after-next-render';
 import {
@@ -96,7 +97,7 @@ export class GuxMonthCalendar {
 
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-    if (readRegionalDatesCookie()) {
+    if (readRegionalDatesCookie() || readRegionalDatesVar()) {
       this.locale = sparkIntl.determineDisplayLocale(this.root);
     } else {
       this.locale = getDesiredLocale(this.root);
