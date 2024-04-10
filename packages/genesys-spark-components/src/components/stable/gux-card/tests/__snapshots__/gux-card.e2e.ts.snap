@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`#render different card accents should render component as expected (1) 1`] = `"<gux-card hydrated=\\"\\"><span>This is a content slot</span></gux-card>"`;
+exports[`#render different card accents should render component as expected (1) 1`] = `"<gux-card hydrated=""><span>This is a content slot</span></gux-card>"`;
 
-exports[`#render different card accents should render component as expected (2) 1`] = `"<gux-card accent=\\"bordered\\" hydrated=\\"\\"><span>This is a content slot</span></gux-card>"`;
+exports[`#render different card accents should render component as expected (2) 1`] = `"<gux-card accent="bordered" hydrated=""><span>This is a content slot</span></gux-card>"`;
 
-exports[`#render different card accents should render component as expected (3) 1`] = `"<gux-card accent=\\"raised\\" hydrated=\\"\\"><span>This is a content slot</span></gux-card>"`;
+exports[`#render different card accents should render component as expected (3) 1`] = `"<gux-card accent="raised" hydrated=""><span>This is a content slot</span></gux-card>"`;
 
-exports[`#render different card accents should render component as expected (4) 1`] = `"<gux-card accent=\\"borderless\\" hydrated=\\"\\"><span>This is a content slot</span></gux-card>"`;
+exports[`#render different card accents should render component as expected (4) 1`] = `"<gux-card accent="borderless" hydrated=""><span>This is a content slot</span></gux-card>"`;

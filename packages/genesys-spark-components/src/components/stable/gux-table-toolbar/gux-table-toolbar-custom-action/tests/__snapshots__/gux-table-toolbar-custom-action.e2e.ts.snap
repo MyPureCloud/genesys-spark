@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-table-toolbar-custom-action #render should render a toolbar-custom-action 1`] = `"<gux-table-toolbar-custom-action hydrated=\\"\\"><span slot=\\"text\\">Filter</span><gux-icon slot=\\"icon\\" icon-name=\\"filter\\" decorative=\\"\\" size=\\"inherit\\" hydrated=\\"\\"></gux-icon></gux-table-toolbar-custom-action>"`;
+exports[`gux-table-toolbar-custom-action #render should render a toolbar-custom-action 1`] = `"<gux-table-toolbar-custom-action hydrated=""><span slot="text">Filter</span><gux-icon slot="icon" icon-name="filter" decorative="" size="inherit" hydrated=""></gux-icon></gux-table-toolbar-custom-action>"`;
 
-exports[`gux-table-toolbar-custom-action #render should render disabled toolbar-custom-action 1`] = `"<gux-table-toolbar-custom-action disabled=\\"\\" hydrated=\\"\\"><span slot=\\"text\\">Filter</span><gux-icon slot=\\"icon\\" icon-name=\\"filter\\" decorative=\\"\\" size=\\"inherit\\" hydrated=\\"\\"></gux-icon></gux-table-toolbar-custom-action>"`;
+exports[`gux-table-toolbar-custom-action #render should render disabled toolbar-custom-action 1`] = `"<gux-table-toolbar-custom-action disabled="" hydrated=""><span slot="text">Filter</span><gux-icon slot="icon" icon-name="filter" decorative="" size="inherit" hydrated=""></gux-icon></gux-table-toolbar-custom-action>"`;
