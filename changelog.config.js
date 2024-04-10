@@ -4,7 +4,7 @@ const CHART_COMPONENT_SPECS = require('genesys-spark-chart-components/build/comp
 const componentSpecs = Object.assign(COMPONENT_SPECS, CHART_COMPONENT_SPECS);
 
 const getComponentSpec = function () {
-  let scopeList = ['other'];
+  const scopeList = ['other'];
   for (const [key] of Object.entries(componentSpecs)) {
     scopeList.push(key.replace('gux-', ''));
   }
@@ -12,8 +12,7 @@ const getComponentSpec = function () {
 };
 
 module.exports = {
-  disableEmoji: true,
-  format: '{type}{scope}: {emoji}{subject}',
+  format: '{type}{scope}: {subject}',
   list: [
     'feat',
     'fix',
