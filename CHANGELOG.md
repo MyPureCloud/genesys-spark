@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.35.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.34.0...v4.35.0) (2024-04-11)
+
+
+### Features
+
+* **content-search:** Fix truncation issues for Safari and Firefox ([#365](https://github.com/MyPureCloud/genesys-spark/issues/365)) ([1811957](https://github.com/MyPureCloud/genesys-spark/commit/1811957b0253b0c0281ba49eb7c1fea03d32306e))
+
 ## [4.34.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.33.1...v4.34.0) (2024-04-10)
 
 
