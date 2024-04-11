@@ -10,7 +10,9 @@ exports[`gux-inline-alert #render should render component as expected (1) 1`] = 
           Information alert with message
         </div>
         <div class="gux-message">
-          <slot></slot>
+          <slot name="message">
+            <slot></slot>
+          </slot>
         </div>
       </div>
     </div>
@@ -29,7 +31,9 @@ exports[`gux-inline-alert #render should render component as expected (2) 1`] = 
           Success alert with message
         </div>
         <div class="gux-message">
-          <slot></slot>
+          <slot name="message">
+            <slot></slot>
+          </slot>
         </div>
       </div>
     </div>
@@ -48,7 +52,9 @@ exports[`gux-inline-alert #render should render component as expected (3) 1`] = 
           Warning alert with message
         </div>
         <div class="gux-message">
-          <slot></slot>
+          <slot name="message">
+            <slot></slot>
+          </slot>
         </div>
       </div>
     </div>
@@ -67,7 +73,9 @@ exports[`gux-inline-alert #render should render component as expected (4) 1`] = 
           Error alert with message
         </div>
         <div class="gux-message">
-          <slot></slot>
+          <slot name="message">
+            <slot></slot>
+          </slot>
         </div>
       </div>
     </div>

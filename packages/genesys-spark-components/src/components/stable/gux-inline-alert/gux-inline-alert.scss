@@ -1,11 +1,13 @@
 @use '../../../style/mixins';
 
 :host {
-  display: block;
+  display: flex;
+  width: fit-content;
 }
 
 .gux-inline-alert {
   display: inline-flex;
+  flex: 1 1 auto;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
@@ -33,6 +35,10 @@
     font-size: var(--gse-ui-alert-text-fontSize);
     font-weight: var(--gse-ui-alert-text-fontWeight);
     line-height: var(--gse-ui-alert-text-lineHeight);
+  }
+
+  .gux-message {
+    flex: 1 1 auto;
   }
 
   .gux-emphasis-text {
