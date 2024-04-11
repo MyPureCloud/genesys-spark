@@ -9,15 +9,17 @@ exports[`gux-inline-alert #render should render component as expected (1) 1`] = 
         <div class="gux-sr-only">
           Information alert with message
         </div>
-        <div class="gux-message">
-          <slot name="message">
+        <div class="gux-content">
+          <slot name="content">
             <slot></slot>
           </slot>
         </div>
       </div>
     </div>
   </mock:shadow-root>
-  Note: This is an information alert.
+  <div slot="content">
+    Note: This is an information alert.
+  </div>
 </gux-inline-alert>
 `;
 
@@ -30,15 +32,17 @@ exports[`gux-inline-alert #render should render component as expected (2) 1`] = 
         <div class="gux-sr-only">
           Success alert with message
         </div>
-        <div class="gux-message">
-          <slot name="message">
+        <div class="gux-content">
+          <slot name="content">
             <slot></slot>
           </slot>
         </div>
       </div>
     </div>
   </mock:shadow-root>
-  Note: This is a success alert.
+  <div slot="content">
+    Note: This is a success alert.
+  </div>
 </gux-inline-alert>
 `;
 
@@ -51,15 +55,17 @@ exports[`gux-inline-alert #render should render component as expected (3) 1`] = 
         <div class="gux-sr-only">
           Warning alert with message
         </div>
-        <div class="gux-message">
-          <slot name="message">
+        <div class="gux-content">
+          <slot name="content">
             <slot></slot>
           </slot>
         </div>
       </div>
     </div>
   </mock:shadow-root>
-  Note: This is a warning alert.
+  <div slot="content">
+    Note: This is a warning alert.
+  </div>
 </gux-inline-alert>
 `;
 
@@ -72,14 +78,16 @@ exports[`gux-inline-alert #render should render component as expected (4) 1`] = 
         <div class="gux-sr-only">
           Error alert with message
         </div>
-        <div class="gux-message">
-          <slot name="message">
+        <div class="gux-content">
+          <slot name="content">
             <slot></slot>
           </slot>
         </div>
       </div>
     </div>
   </mock:shadow-root>
-  Note: This is a warning alert.
+  <div slot="content">
+    Note: This is a warning alert.
+  </div>
 </gux-inline-alert>
 `;

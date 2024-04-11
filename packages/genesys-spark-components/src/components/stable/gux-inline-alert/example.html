@@ -3,16 +3,16 @@
 <h2>Inline Alert Examples</h2>
 <div class="alerts">
   <gux-inline-alert accent="info">
-    <div slot="message">This is an information alert.</div>
+    <div slot="content">This is an information alert.</div>
   </gux-inline-alert>
   <gux-inline-alert accent="success">
-    <div slot="message">This is a success alert.</div>
+    <div slot="content">This is a success alert.</div>
   </gux-inline-alert>
   <gux-inline-alert accent="warning">
-    <div slot="message">This is a warning alert.</div>
+    <div slot="content">This is a warning alert.</div>
   </gux-inline-alert>
   <gux-inline-alert accent="error">
-    <div slot="message">This is an error alert.</div>
+    <div slot="content">This is an error alert.</div>
   </gux-inline-alert>
 </div>
 
@@ -20,7 +20,7 @@
 
 <h2>1 line truncated inline alert example</h2>
 <gux-inline-alert accent="info" style="width: 400px">
-  <div slot="message">
+  <div slot="content">
     <gux-truncate max-lines="1">
       This is an information message to demonstrate that this alert will
       truncate after 1 line. You can also alter the max lines to be 2.
@@ -30,7 +30,7 @@
 
 <h2>Text wrapping example</h2>
 <gux-inline-alert accent="info" style="width: 400px">
-  <div slot="message">
+  <div slot="content">
     This is an information message to demonstrate that this alert will wrap if a
     width is applied & the text is long enough.
   </div>

@@ -37,15 +37,8 @@
     line-height: var(--gse-ui-alert-text-lineHeight);
   }
 
-  .gux-message {
+  .gux-content {
     flex: 1 1 auto;
-  }
-
-  .gux-emphasis-text {
-    font-family: var(--gse-ui-alert-emphasisText-fontFamily);
-    font-size: var(--gse-ui-alert-emphasisText-fontSize);
-    font-weight: var(--gse-ui-alert-emphasisText-fontWeight);
-    line-height: var(--gse-ui-alert-emphasisText-lineHeight);
   }
 
   .gux-sr-only {

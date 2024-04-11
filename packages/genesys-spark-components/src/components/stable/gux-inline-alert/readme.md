@@ -14,9 +14,9 @@
 
 ## Slots
 
-| Slot              | Description             |
-| ----------------- | ----------------------- |
-| `"emphasis-text"` | Slot for emphasis text. |
+| Slot        | Description           |
+| ----------- | --------------------- |
+| `"content"` | Slot for the message. |
 
 
 ## Dependencies
