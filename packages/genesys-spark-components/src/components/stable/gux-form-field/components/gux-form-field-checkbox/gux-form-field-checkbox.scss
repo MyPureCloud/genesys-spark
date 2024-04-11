@@ -41,6 +41,10 @@
   }
 }
 
+.gux-form-field-container {
+  line-height: 0;
+}
+
 .gux-input-label {
   display: inline-flex;
   flex-direction: row;
@@ -115,9 +119,8 @@
 ::slotted(label) {
   display: inline-block;
   font-family: var(--gse-ui-checkbox-label-text-fontFamily);
-  font-size: 12px; // -- missing font-size token https://inindca.atlassian.net/browse/COMUI-1672
+  font-size: var(--gse-ui-checkbox-label-text-fontSize);
   font-weight: var(--gse-ui-checkbox-label-text-fontWeight);
   line-height: var(--gse-ui-checkbox-label-text-lineHeight);
   color: var(--gse-ui-checkbox-label-foregroundColor);
-  vertical-align: middle;
 }

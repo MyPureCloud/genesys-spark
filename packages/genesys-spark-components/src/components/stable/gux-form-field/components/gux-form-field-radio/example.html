@@ -4,7 +4,7 @@
 
 <h2>Example</h2>
 <form onchange="notify(event)" oninput="notify(event)">
-  <fieldset>
+  <fieldset class="example-fieldset">
     <legend>Food</legend>
 
     <gux-form-field-radio>
@@ -46,3 +46,9 @@
     </gux-form-field-radio>
   </fieldset>
 </form>
+
+<style>
+  .example-fieldset gux-form-field-radio {
+    margin-bottom: var(--gse-core-spacing-4xs);
+  }
+</style>

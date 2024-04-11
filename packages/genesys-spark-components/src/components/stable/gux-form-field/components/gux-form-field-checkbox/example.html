@@ -6,7 +6,7 @@
 
 <h2>Example</h2>
 <form onchange="notify(event)" oninput="notify(event)">
-  <fieldset>
+  <fieldset class="example-fieldset">
     <legend>Food</legend>
 
     <gux-form-field-checkbox>
@@ -77,3 +77,9 @@
     Toggle Pizza field
   </button>
 </gux-button-slot>
+
+<style>
+  .example-fieldset gux-form-field-checkbox {
+    margin-bottom: var(--gse-core-spacing-4xs);
+  }
+</style>
