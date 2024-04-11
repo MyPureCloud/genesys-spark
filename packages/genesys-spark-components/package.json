@@ -73,7 +73,7 @@
     "@stencil/react-output-target": "^0.5.3",
     "@stencil/sass": "^3.0.10",
     "@types/google-libphonenumber": "^7.4.30",
-    "@types/jest": "^27.5.2",
+    "@types/jest": "^29.5.12",
     "@types/new-relic-browser": "^0.1118.2",
     "@types/puppeteer": "^5.4.7",
     "@types/resize-observer-browser": "^0.1.9",

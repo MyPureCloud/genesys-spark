@@ -75,7 +75,7 @@ describe('gux-calendar', () => {
     // Private
     describe('private', () => {
       it('incrementPreviewDateByMonth', () => {
-        jest.useFakeTimers('legacy');
+        jest.useFakeTimers({ legacyFakeTimers: true });
         const startingMonth = component.previewValue.getMonth();
         component.incrementPreviewDateByMonth(3);
         jest.runAllTimers();
@@ -166,7 +166,7 @@ describe('gux-calendar', () => {
         expect(component.updateRangeElements).toHaveBeenCalled();
       });
       it('onKeyDown', async () => {
-        jest.useFakeTimers('legacy');
+        jest.useFakeTimers({ legacyFakeTimers: true });
         jest
           .spyOn(component, 'incrementPreviewDateByMonth')
           .mockImplementation(() => {
