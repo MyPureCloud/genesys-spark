@@ -34,8 +34,6 @@ graph TD;
   gux-column-manager --> gux-form-field-checkbox
   gux-column-manager --> gux-announce-beta
   gux-content-search --> gux-icon
-  gux-content-search --> gux-truncate
-  gux-truncate --> gux-tooltip
   gux-form-field-checkbox --> gux-icon
   style gux-column-manager fill:#f9f,stroke:#333,stroke-width:4px
 ```

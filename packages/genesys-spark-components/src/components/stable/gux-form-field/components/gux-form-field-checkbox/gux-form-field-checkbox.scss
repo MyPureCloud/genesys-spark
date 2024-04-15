@@ -1,7 +1,7 @@
 @use '../gux-form-field-checkbox/gux-form-field-checkbox-icons.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
-@use '../../../../../style/mixins';
+@use '~genesys-spark/src/style/mixins.scss';
 
 @include gux-form-field-error.Style;
 @include gux-form-field-help.Style;

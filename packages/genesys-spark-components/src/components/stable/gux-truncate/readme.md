@@ -46,7 +46,6 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [gux-content-search](../gux-content-search)
  - [gux-dropdown](../gux-dropdown)
  - [gux-notification-toast-legacy](../../legacy/gux-notification-toast-legacy)
  - [gux-option](../gux-listbox/options/gux-option)
@@ -63,7 +62,6 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-truncate --> gux-tooltip
-  gux-content-search --> gux-truncate
   gux-dropdown --> gux-truncate
   gux-notification-toast-legacy --> gux-truncate
   gux-option --> gux-truncate

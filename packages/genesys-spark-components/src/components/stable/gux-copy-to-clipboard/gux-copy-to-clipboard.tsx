@@ -7,7 +7,6 @@ import { GuxCopyToClipboardContent } from './gux-copy-to-clipboard.types';
 /**
  * @slot content - Slot for content
  */
-
 @Component({
   styleUrl: 'gux-copy-to-clipboard.scss',
   tag: 'gux-copy-to-clipboard',

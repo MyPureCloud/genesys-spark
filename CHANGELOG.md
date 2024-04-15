@@ -2,6 +2,85 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.36.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.35.0...v4.36.0) (2024-04-13)
+
+
+### Features
+
+* **icon:** Add two icons ([#412](https://github.com/MyPureCloud/genesys-spark/issues/412)) ([a75a1ee](https://github.com/MyPureCloud/genesys-spark/commit/a75a1ee3c354c01995eceaeb1fe01c9872729346))
+
+
+### Bug Fixes
+
+* **charts:** fixed charts deploy ([fef1183](https://github.com/MyPureCloud/genesys-spark/commit/fef1183b677bac3b1c563235b5d4b6b7179a2598))
+
+## [4.35.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.34.0...v4.35.0) (2024-04-11)
+
+
+### Features
+
+* **content-search:** Fix truncation issues for Safari and Firefox ([#365](https://github.com/MyPureCloud/genesys-spark/issues/365)) ([1811957](https://github.com/MyPureCloud/genesys-spark/commit/1811957b0253b0c0281ba49eb7c1fea03d32306e))
+
+## [4.34.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.33.1...v4.34.0) (2024-04-10)
+
+
+### Features
+
+* **tokens:** change form_control.help.gap to 4px - jackie ([13f8cba](https://github.com/MyPureCloud/genesys-spark/commit/13f8cbacb5b6d64308cf1ca55dd8f5020b974259))
+* **tokens:** gap forms groups - jackie ([1198419](https://github.com/MyPureCloud/genesys-spark/commit/11984191c966db9633165b260f342e82a2da3174))
+* **tokens:** gap radiobuttons/checkbox forms - jackie ([76f9072](https://github.com/MyPureCloud/genesys-spark/commit/76f907205ceaba66d2f616602fab85adefc43bca))
+* **tokens:** generating new tokens ([e62aa96](https://github.com/MyPureCloud/genesys-spark/commit/e62aa96e4102c356814c427de176df1981a6cc20))
+
+### [4.33.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.33.0...v4.33.1) (2024-04-06)
+
+
+### Bug Fixes
+
+* **gux-accordion:** allowing user to highlight text ([35b2395](https://github.com/MyPureCloud/genesys-spark/commit/35b2395059810532e6d0c1dbee3f2e27c3b122ba))
+
+## [4.33.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.32.0...v4.33.0) (2024-04-05)
+
+
+### Features
+
+* **action-button:** setting max-height on popup to match dropdown ([e1f68a1](https://github.com/MyPureCloud/genesys-spark/commit/e1f68a195e1f0d9de0a28528bcc3f47b10fd8797))
+
+
+### Bug Fixes
+
+* **form-field-input-clear-button:** change class name to match component ([#406](https://github.com/MyPureCloud/genesys-spark/issues/406)) ([dfe51ef](https://github.com/MyPureCloud/genesys-spark/commit/dfe51ef878b10964aa988f64abe53dbd9eb05eaf))
+
+## [4.32.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.31.1...v4.32.0) (2024-04-04)
+
+
+### Features
+
+* **genesys-spark:** generate global and reset stylesheets ([2a919bd](https://github.com/MyPureCloud/genesys-spark/commit/2a919bdbdd708f01b725c05fe9714c8a167521c0))
+* **modal:** allow modal to be reopened ([de806da](https://github.com/MyPureCloud/genesys-spark/commit/de806da8704f9a4367ec6eaccdd537e043bc7ee7))
+* **modal:** pr suggestion ([3df131d](https://github.com/MyPureCloud/genesys-spark/commit/3df131d60880a5e0062d08a63a5a484a86520747))
+
+### [4.31.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.31.0...v4.31.1) (2024-04-03)
+
+## [4.31.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.30.0...v4.31.0) (2024-04-01)
+
+
+### Features
+
+* **icon:** adding icons for new label work ([#399](https://github.com/MyPureCloud/genesys-spark/issues/399)) ([355cdf5](https://github.com/MyPureCloud/genesys-spark/commit/355cdf571d4a0890d07e80e625d5a5afac673985))
+
+
+### Bug Fixes
+
+* **form-field-number:** add default transparent border to arrow buttons to reserve space for hover ([d218b72](https://github.com/MyPureCloud/genesys-spark/commit/d218b72679b5abae9fffca4f129df07663bed8fd))
+* **tooltip:** fixed overflow-wrap for long words ([e0f9a69](https://github.com/MyPureCloud/genesys-spark/commit/e0f9a6940401cdfde90ad17b041ace8ecd77706e))
+
+## [4.30.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.29.0...v4.30.0) (2024-03-29)
+
+
+### Features
+
+* **avatar:** add focus styled examples ([#359](https://github.com/MyPureCloud/genesys-spark/issues/359)) ([b968c17](https://github.com/MyPureCloud/genesys-spark/commit/b968c1770b9fab15bd853509c59456246730b97b))
+
 ## [4.29.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.28.1...v4.29.0) (2024-03-26)
 
 

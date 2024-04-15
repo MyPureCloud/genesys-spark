@@ -35,13 +35,9 @@ jobs:
       # Can't use npm ci, because it fails on missing optional dependencies
       - run: npm install
 
-      # This creates the design token exports that are needed for the components
-      - name: Tokens
-        run: npm run build --workspace=packages/genesys-spark-tokens
-
-      # This creates the component specific types that are needed for eslint
-      - name: Stencil
-        run: npm run stencil --workspace=packages/genesys-spark-components
+      # Build
+      - name: Build
+        run: npm run build
 
       # Run linting
       - name: Lint
@@ -50,10 +46,6 @@ jobs:
       # Runs tests
       - name: Test
         run: npm run test.ci
-
-      # Build
-      - name: Build
-        run: npm run build
 
   prComment:
     if: startsWith(github.head_ref, 'feature/')

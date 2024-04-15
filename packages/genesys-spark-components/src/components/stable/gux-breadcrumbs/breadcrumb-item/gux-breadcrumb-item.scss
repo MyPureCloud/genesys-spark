@@ -1,4 +1,4 @@
-@use '../../../../style/_focus.scss';
+@use '~genesys-spark/src/style/focus.scss';
 
 @mixin link-breadcrumb-primary-default {
   font-family: var(--gse-ui-link-inLine-medium-text-fontFamily);
