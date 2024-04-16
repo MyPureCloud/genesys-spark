@@ -217,7 +217,28 @@
         "border_radius": "8px"
       },
       "border_radius": "4px",
-      "disable_opacity": 0.5
+      "disable_opacity": 0.5,
+      "selected_panel": {
+        "background_color": "#3742A2",
+        "foreground_color": "#ffffff"
+      },
+      "return": {
+        "default": {
+          "background_color": "#1C2463",
+          "foreground_color": "#ffffff"
+        },
+        "hover": {
+          "background_color": "#141A4F",
+          "foreground_color": "#ffffff"
+        },
+        "selected": {
+          "background_color": "#4856CB",
+          "foreground_color": "#ffffff"
+        }
+      },
+      "tree_view": {
+        "bar": "#314669"
+      }
     },
     "button_return": {
       "height": "48px",
@@ -244,8 +265,7 @@
           "lineHeight": "16px",
           "fontSize": "12px",
           "fontWeight": 600
-        },
-        "text_color": "#ffffff"
+        }
       },
       "top": {
         "open": {
@@ -261,31 +281,11 @@
           "gap": "128px"
         }
       },
-      "open": {
-        "button_color": "#4856CB"
-      },
-      "closed": {
-        "button_color": "#ffffff"
-      },
-      "primary": {
-        "background_color": "linear-gradient(105deg, #23395D 50%, #3E5374 100%)"
-      },
-      "secondary": {
-        "background_color": "linear-gradient(140deg, #23395D 10%, #1B2B48 100%)"
-      },
       "width": "280px",
       "items": {
         "gap": "12px"
       },
       "padding": "16px 24px"
-    },
-    "toogle": {
-      "on_queue": {
-        "text_color": "#4856CB"
-      },
-      "off_queue": {
-        "text_color": "#3e5374"
-      }
     },
     "top_bar": {
       "items": {
@@ -293,8 +293,37 @@
       },
       "padding": "16px 24px",
       "height": "64px",
-      "icon_color": "#4856CB",
-      "background_color": "#ffffff"
+      "frame": {
+        "background_color": "#ffffff",
+        "stroke": "#c6ceec"
+      },
+      "logo": "#FF4F1F",
+      "menu_button": {
+        "closed": {
+          "default": {
+            "foreground_color": "#4856CB"
+          },
+          "hover": {
+            "background_color": "#3742A2",
+            "foreground_color_stroke": "#4856CB",
+            "foreground_color": "#ffffff"
+          }
+        },
+        "open": {
+          "default": {
+            "foreground_color_stroke": "#ffffff"
+          },
+          "hover": {
+            "background_color": "#3742A2",
+            "foreground_color": "#ffffff"
+          }
+        }
+      }
+    },
+    "panel": {
+      "panel_title": "#ffffff",
+      "primary": "linear-gradient(127deg, #23395D 3.19%, #3E5374 225.06%)",
+      "secondary": "linear-gradient(358deg, #1B2B48 0.16%, #23395D 98.45%)"
     }
   }
 }
