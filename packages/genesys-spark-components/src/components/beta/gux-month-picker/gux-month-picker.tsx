@@ -18,8 +18,7 @@ import {
   getDesiredLocale
 } from '../../../i18n';
 import * as sparkIntl from '../../../genesys-spark-utils/intl';
-import { readRegionalDatesCookie } from '../../../i18n/read-regional-dates-cookie';
-import { readRegionalDatesVar } from '../../../i18n/read-regional-dates-var';
+import { useRegionalDates } from '../../../i18n/use-regional-dates';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { afterNextRender } from '@utils/dom/after-next-render';
 import {
@@ -112,7 +111,7 @@ export class GuxMonthPicker {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-    if (readRegionalDatesCookie() || readRegionalDatesVar()) {
+    if (useRegionalDates()) {
       this.locale = sparkIntl.determineDisplayLocale(this.root);
     } else {
       this.locale = getDesiredLocale(this.root);

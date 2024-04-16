@@ -1,10 +1,5 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
-jest.mock('../../../../i18n/read-regional-dates-var', () => ({
-  __esModule: true,
-  readRegionalDatesVar: jest.fn()
-}));
-
 describe('gux-time-picker', () => {
   describe('#render', () => {
     it('renders', async () => {

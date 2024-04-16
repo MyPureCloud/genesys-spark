@@ -1,8 +1,7 @@
 import { capitalizeFirstLetter } from '@utils/string/capitalize-first-letter';
 import * as sparkIntl from '../../../genesys-spark-utils/intl';
 // Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
-import { readRegionalDatesCookie } from '../../../i18n/read-regional-dates-cookie';
-import { readRegionalDatesVar } from '../../../i18n/read-regional-dates-var';
+import { useRegionalDates } from '../../../i18n/use-regional-dates';
 
 export function firstDateInMonth(
   month: number,
@@ -48,7 +47,7 @@ export function getOffsetMonthDate(baseDate: Date, monthDelta: number) {
 }
 
 export function getDateMonthAndYearString(date: Date, locale: string) {
-  if (readRegionalDatesCookie() || readRegionalDatesVar()) {
+  if (useRegionalDates()) {
     return capitalizeFirstLetter(
       sparkIntl
         .dateTimeFormat(locale, {
