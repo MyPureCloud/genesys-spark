@@ -65,6 +65,7 @@ graph TD;
   gux-dismiss-button --> gux-icon
   gux-form-field-number --> gux-form-field-input-clear-button
   gux-form-field-number --> gux-icon
+  gux-form-field-number --> gux-form-field-label-indicator
   gux-form-field-input-clear-button --> gux-icon
   style gux-pagination fill:#f9f,stroke:#333,stroke-width:4px
 ```

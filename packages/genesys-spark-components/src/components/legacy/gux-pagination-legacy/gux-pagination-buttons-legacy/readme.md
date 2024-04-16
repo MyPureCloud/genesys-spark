@@ -43,6 +43,7 @@ graph TD;
   gux-form-field-text-like --> gux-radial-loading
   gux-form-field-text-like --> gux-form-field-input-clear-button
   gux-form-field-text-like --> gux-icon
+  gux-form-field-text-like --> gux-form-field-label-indicator
   gux-form-field-input-clear-button --> gux-icon
   gux-pagination-legacy --> gux-pagination-buttons-legacy
   style gux-pagination-buttons-legacy fill:#f9f,stroke:#333,stroke-width:4px

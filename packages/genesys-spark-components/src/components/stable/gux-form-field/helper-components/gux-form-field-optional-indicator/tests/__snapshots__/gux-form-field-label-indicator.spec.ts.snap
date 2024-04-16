@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-form-field-label-indicator #render should render component as expected (1) 1`] = `<gux-form-field-label-indicator></gux-form-field-label-indicator>`;
+
+exports[`gux-form-field-label-indicator #render should render component as expected (2) 1`] = `<gux-form-field-label-indicator required="false" variant="required"></gux-form-field-label-indicator>`;
+
+exports[`gux-form-field-label-indicator #render should render component as expected (3) 1`] = `
+<gux-form-field-label-indicator required="true" variant="required">
+  <span aria-hidden="true" class="gux-form-field-label-indicator-required">
+    *
+  </span>
+</gux-form-field-label-indicator>
+`;
+
+exports[`gux-form-field-label-indicator #render should render component as expected (4) 1`] = `
+<gux-form-field-label-indicator required="false" variant="optional">
+  <span class="gux-form-field-label-indicator-optional">
+    (optional)
+  </span>
+</gux-form-field-label-indicator>
+`;
+
+exports[`gux-form-field-label-indicator #render should render component as expected (5) 1`] = `<gux-form-field-label-indicator required="true" variant="optional"></gux-form-field-label-indicator>`;

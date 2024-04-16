@@ -50,6 +50,7 @@ Type: `Promise<void>`
 graph TD;
   gux-all-row-select --> gux-form-field-checkbox
   gux-form-field-checkbox --> gux-icon
+  gux-form-field-checkbox --> gux-form-field-label-indicator
   style gux-all-row-select fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

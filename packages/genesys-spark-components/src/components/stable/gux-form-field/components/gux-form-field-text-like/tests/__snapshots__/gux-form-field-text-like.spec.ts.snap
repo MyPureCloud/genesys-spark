@@ -6,6 +6,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -42,6 +43,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -79,6 +81,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -116,6 +119,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -152,6 +156,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -188,6 +193,7 @@ exports[`gux-form-field-text-like #render help should render component as expect
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -227,6 +233,7 @@ exports[`gux-form-field-text-like #render input attributes should render compone
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -263,6 +270,7 @@ exports[`gux-form-field-text-like #render input attributes should render compone
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -297,8 +305,9 @@ exports[`gux-form-field-text-like #render input attributes should render compone
 <gux-form-field-text-like>
   <mock:shadow-root>
     <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label gux-required">
+      <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -335,6 +344,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -371,6 +381,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -407,6 +418,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -443,6 +455,7 @@ exports[`gux-form-field-text-like #render label-position should render component
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -479,6 +492,7 @@ exports[`gux-form-field-text-like #render label-position should render component
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -515,6 +529,7 @@ exports[`gux-form-field-text-like #render label-position should render component
     <div class="gux-beside gux-form-field-container">
       <div class="gux-beside gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -551,6 +566,7 @@ exports[`gux-form-field-text-like #render label-position should render component
     <div class="gux-form-field-container gux-screenreader">
       <div class="gux-form-field-label gux-screenreader">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -587,6 +603,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -623,6 +640,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -660,6 +678,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -697,6 +716,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -733,6 +753,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -770,6 +791,7 @@ exports[`gux-form-field-text-like #render prefix should render component as expe
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -809,6 +831,7 @@ exports[`gux-form-field-text-like #render suffix should render component as expe
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">

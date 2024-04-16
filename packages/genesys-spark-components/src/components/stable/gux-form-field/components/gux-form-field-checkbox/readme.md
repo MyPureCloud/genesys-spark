@@ -33,11 +33,13 @@
 ### Depends on
 
 - [gux-icon](../../../gux-icon)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-form-field-checkbox --> gux-icon
+  gux-form-field-checkbox --> gux-form-field-label-indicator
   gux-all-row-select --> gux-form-field-checkbox
   gux-column-manager --> gux-form-field-checkbox
   gux-row-select --> gux-form-field-checkbox

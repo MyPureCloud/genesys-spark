@@ -50,6 +50,7 @@ Type: `Promise<void>`
 - [gux-radial-loading](../../../gux-radial-loading)
 - [gux-form-field-input-clear-button](../../helper-components/gux-form-field-input-clear-button)
 - [gux-icon](../../../gux-icon)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
 
 ### Graph
 ```mermaid
@@ -57,6 +58,7 @@ graph TD;
   gux-form-field-text-like --> gux-radial-loading
   gux-form-field-text-like --> gux-form-field-input-clear-button
   gux-form-field-text-like --> gux-icon
+  gux-form-field-text-like --> gux-form-field-label-indicator
   gux-form-field-input-clear-button --> gux-icon
   gux-pagination-buttons-legacy --> gux-form-field-text-like
   style gux-form-field-text-like fill:#f9f,stroke:#333,stroke-width:4px

@@ -28,11 +28,13 @@
 ### Depends on
 
 - [gux-icon](../../../gux-icon)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-form-field-radio --> gux-icon
+  gux-form-field-radio --> gux-form-field-label-indicator
   style gux-form-field-radio fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

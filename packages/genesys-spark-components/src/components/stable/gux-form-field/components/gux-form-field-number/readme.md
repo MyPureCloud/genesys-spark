@@ -53,12 +53,14 @@ Type: `Promise<void>`
 
 - [gux-form-field-input-clear-button](../../helper-components/gux-form-field-input-clear-button)
 - [gux-icon](../../../gux-icon)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-form-field-number --> gux-form-field-input-clear-button
   gux-form-field-number --> gux-icon
+  gux-form-field-number --> gux-form-field-label-indicator
   gux-form-field-input-clear-button --> gux-icon
   gux-pagination-ellipsis-button --> gux-form-field-number
   style gux-form-field-number fill:#f9f,stroke:#333,stroke-width:4px
