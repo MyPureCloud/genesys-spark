@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-number #render clearable should render component as expected (1) 1`] = `"<gux-form-field-number lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render clearable should render component as expected (1) 1`] = `"<gux-form-field-number lang="en" hydrated=""> <input slot="input" type="number" value="10" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render clearable should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -36,7 +36,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
 </div>
 `;
 
-exports[`gux-form-field-number #render clearable should render component as expected (2) 1`] = `"<gux-form-field-number lang=\\"en\\" clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render clearable should render component as expected (2) 1`] = `"<gux-form-field-number lang="en" clearable="" hydrated=""> <input slot="input" type="number" value="10" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render clearable should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -73,7 +73,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
 </div>
 `;
 
-exports[`gux-form-field-number #render clearable should render component as expected (3) 1`] = `"<gux-form-field-number lang=\\"en\\" clearable=\\"true\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render clearable should render component as expected (3) 1`] = `"<gux-form-field-number lang="en" clearable="true" hydrated=""> <input slot="input" type="number" value="10" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render clearable should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -110,7 +110,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
 </div>
 `;
 
-exports[`gux-form-field-number #render clearable should render component as expected (4) 1`] = `"<gux-form-field-number lang=\\"en\\" clearable=\\"false\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render clearable should render component as expected (4) 1`] = `"<gux-form-field-number lang="en" clearable="false" hydrated=""> <input slot="input" type="number" value="10" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render clearable should render component as expected (4) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -146,7 +146,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
 </div>
 `;
 
-exports[`gux-form-field-number #render clearable should render component as expected (5) 1`] = `"<gux-form-field-number lang=\\"en\\" clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render clearable should render component as expected (5) 1`] = `"<gux-form-field-number lang="en" clearable="" hydrated=""> <input slot="input" type="number" value="10" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render clearable should render component as expected (5) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -182,7 +182,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
 </div>
 `;
 
-exports[`gux-form-field-number #render help should render component as expected 1`] = `"<gux-form-field-number hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" name=\\"e-1\\" value=\\"10\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-help-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Default</label> <span slot=\\"help\\" id=\\"gux-form-field-help-i\\">This is a help message</span> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render help should render component as expected 1`] = `"<gux-form-field-number hydrated=""> <input slot="input" type="number" name="e-1" value="10" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render help should render component as expected 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -218,7 +218,7 @@ exports[`gux-form-field-number #render help should render component as expected 
 </div>
 `;
 
-exports[`gux-form-field-number #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-number lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-number lang="en" hydrated=""> <input slot="input" type="number" value="10" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render input attributes should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -254,7 +254,7 @@ exports[`gux-form-field-number #render input attributes should render component 
 </div>
 `;
 
-exports[`gux-form-field-number #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-number lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-number lang="en" hydrated=""> <input slot="input" type="number" value="10" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render input attributes should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -290,7 +290,7 @@ exports[`gux-form-field-number #render input attributes should render component 
 </div>
 `;
 
-exports[`gux-form-field-number #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-number lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" required=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-number lang="en" hydrated=""> <input slot="input" type="number" value="10" required="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render input attributes should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -326,7 +326,7 @@ exports[`gux-form-field-number #render input attributes should render component 
 </div>
 `;
 
-exports[`gux-form-field-number #render label-position should render component as expected (1) 1`] = `"<gux-form-field-number lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render label-position should render component as expected (1) 1`] = `"<gux-form-field-number lang="en" hydrated=""> <input slot="input" type="number" value="10" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render label-position should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -362,7 +362,7 @@ exports[`gux-form-field-number #render label-position should render component as
 </div>
 `;
 
-exports[`gux-form-field-number #render label-position should render component as expected (2) 1`] = `"<gux-form-field-number lang=\\"en\\" label-position=\\"above\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render label-position should render component as expected (2) 1`] = `"<gux-form-field-number lang="en" label-position="above" hydrated=""> <input slot="input" type="number" value="10" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render label-position should render component as expected (2) 2`] = `
 <div class="gux-above gux-form-field-container">
@@ -398,7 +398,7 @@ exports[`gux-form-field-number #render label-position should render component as
 </div>
 `;
 
-exports[`gux-form-field-number #render label-position should render component as expected (3) 1`] = `"<gux-form-field-number lang=\\"en\\" label-position=\\"beside\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render label-position should render component as expected (3) 1`] = `"<gux-form-field-number lang="en" label-position="beside" hydrated=""> <input slot="input" type="number" value="10" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render label-position should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -434,7 +434,7 @@ exports[`gux-form-field-number #render label-position should render component as
 </div>
 `;
 
-exports[`gux-form-field-number #render label-position should render component as expected (4) 1`] = `"<gux-form-field-number lang=\\"en\\" label-position=\\"screenreader\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"number\\" value=\\"10\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-number>"`;
+exports[`gux-form-field-number #render label-position should render component as expected (4) 1`] = `"<gux-form-field-number lang="en" label-position="screenreader" hydrated=""> <input slot="input" type="number" value="10" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-number>"`;
 
 exports[`gux-form-field-number #render label-position should render component as expected (4) 2`] = `
 <div class="gux-form-field-container gux-screenreader">

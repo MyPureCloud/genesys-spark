@@ -73,7 +73,6 @@ describe('gux-action-button', () => {
   });
 
   it('should fire open and close events if not disabled', async () => {
-    jest.useFakeTimers('legacy');
     const page = await newSpecPage({ components, html, language });
     const openSpy = jest.fn();
     const closeSpy = jest.fn();

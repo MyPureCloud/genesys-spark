@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-color #render help should render component as expected 1`] = `"<gux-form-field-color hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" name=\\"e-1\\" value=\\"#cc3ebe\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-help-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Default</label> <span slot=\\"help\\" id=\\"gux-form-field-help-i\\">This is a help message</span> </gux-form-field-color>"`;
+exports[`gux-form-field-color #render help should render component as expected 1`] = `"<gux-form-field-color hydrated=""> <input slot="input" type="color" name="e-1" value="#cc3ebe" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-color>"`;
 
 exports[`gux-form-field-color #render help should render component as expected 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -28,7 +28,7 @@ exports[`gux-form-field-color #render help should render component as expected 2
 </div>
 `;
 
-exports[`gux-form-field-color #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-color hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color>"`;
+exports[`gux-form-field-color #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-color hydrated=""> <input slot="input" type="color" value="#ff0000" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-color>"`;
 
 exports[`gux-form-field-color #render input attributes should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -56,7 +56,7 @@ exports[`gux-form-field-color #render input attributes should render component a
 </div>
 `;
 
-exports[`gux-form-field-color #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-color hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color>"`;
+exports[`gux-form-field-color #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-color hydrated=""> <input slot="input" type="color" value="#ff0000" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-color>"`;
 
 exports[`gux-form-field-color #render input attributes should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -84,7 +84,7 @@ exports[`gux-form-field-color #render input attributes should render component a
 </div>
 `;
 
-exports[`gux-form-field-color #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-color hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" required=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color>"`;
+exports[`gux-form-field-color #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-color hydrated=""> <input slot="input" type="color" value="#ff0000" required="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-color>"`;
 
 exports[`gux-form-field-color #render input attributes should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -112,7 +112,7 @@ exports[`gux-form-field-color #render input attributes should render component a
 </div>
 `;
 
-exports[`gux-form-field-color #render label-position should render component as expected (1) 1`] = `"<gux-form-field-color hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color>"`;
+exports[`gux-form-field-color #render label-position should render component as expected (1) 1`] = `"<gux-form-field-color hydrated=""> <input slot="input" type="color" value="#ff0000" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-color>"`;
 
 exports[`gux-form-field-color #render label-position should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -140,7 +140,7 @@ exports[`gux-form-field-color #render label-position should render component as 
 </div>
 `;
 
-exports[`gux-form-field-color #render label-position should render component as expected (2) 1`] = `"<gux-form-field-color label-position=\\"above\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color>"`;
+exports[`gux-form-field-color #render label-position should render component as expected (2) 1`] = `"<gux-form-field-color label-position="above" hydrated=""> <input slot="input" type="color" value="#ff0000" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-color>"`;
 
 exports[`gux-form-field-color #render label-position should render component as expected (2) 2`] = `
 <div class="gux-above gux-form-field-container">
@@ -168,7 +168,7 @@ exports[`gux-form-field-color #render label-position should render component as 
 </div>
 `;
 
-exports[`gux-form-field-color #render label-position should render component as expected (3) 1`] = `"<gux-form-field-color label-position=\\"beside\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color>"`;
+exports[`gux-form-field-color #render label-position should render component as expected (3) 1`] = `"<gux-form-field-color label-position="beside" hydrated=""> <input slot="input" type="color" value="#ff0000" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-color>"`;
 
 exports[`gux-form-field-color #render label-position should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -196,7 +196,7 @@ exports[`gux-form-field-color #render label-position should render component as 
 </div>
 `;
 
-exports[`gux-form-field-color #render label-position should render component as expected (4) 1`] = `"<gux-form-field-color label-position=\\"screenreader\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"color\\" value=\\"#ff0000\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-color>"`;
+exports[`gux-form-field-color #render label-position should render component as expected (4) 1`] = `"<gux-form-field-color label-position="screenreader" hydrated=""> <input slot="input" type="color" value="#ff0000" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-color>"`;
 
 exports[`gux-form-field-color #render label-position should render component as expected (4) 2`] = `
 <div class="gux-form-field-container gux-screenreader">

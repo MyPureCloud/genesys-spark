@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-truncate #render should render component as expected (1) 1`] = `"<gux-truncate hydrated=\\"\\">Some text to truncate</gux-truncate>"`;
+exports[`gux-truncate #render should render component as expected (1) 1`] = `"<gux-truncate hydrated="">Some text to truncate</gux-truncate>"`;
 
-exports[`gux-truncate #render should render component as expected (2) 1`] = `"<gux-truncate hydrated=\\"\\"><span>Some text to truncate in a span</span></gux-truncate>"`;
+exports[`gux-truncate #render should render component as expected (2) 1`] = `"<gux-truncate hydrated=""><span>Some text to truncate in a span</span></gux-truncate>"`;
 
-exports[`gux-truncate #render should render component as expected (3) 1`] = `"<gux-truncate hydrated=\\"\\"><div>Div <span>with a span</span> inside</div></gux-truncate>"`;
+exports[`gux-truncate #render should render component as expected (3) 1`] = `"<gux-truncate hydrated=""><div>Div <span>with a span</span> inside</div></gux-truncate>"`;
 
-exports[`gux-truncate #render should render component as expected (4) 1`] = `"<gux-truncate max-lines=\\"3\\" hydrated=\\"\\">This is a long text that should be truncated after three lines of wrapped text</gux-truncate>"`;
+exports[`gux-truncate #render should render component as expected (4) 1`] = `"<gux-truncate max-lines="3" hydrated="">This is a long text that should be truncated after three lines of wrapped text</gux-truncate>"`;
