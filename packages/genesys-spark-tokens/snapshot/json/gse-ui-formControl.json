@@ -106,6 +106,12 @@
         "fontSize": "12px",
         "fontWeight": 400
       },
+      "text_bold": {
+        "fontFamily": "Noto Sans",
+        "lineHeight": "18px",
+        "fontSize": "12px",
+        "fontWeight": 600
+      },
       "label_color": "#1b2c48",
       "indicator": {
         "text": {
@@ -115,7 +121,11 @@
           "fontWeight": 400
         },
         "required_color": "#e22245",
-        "optional_color": "#626e84"
+        "optional_color": "#3e5374"
+      },
+      "icon_size": "16px",
+      "tooltip_trigger": {
+        "optional_color": "#3e5374"
       }
     },
     "group": {
