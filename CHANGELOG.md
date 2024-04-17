@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.37.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.36.0...v4.37.0) (2024-04-17)
+
+
+### Features
+
+* **global_navigation:** updating tokens ([a66042c](https://github.com/MyPureCloud/genesys-spark/commit/a66042c083a999e66c6cbbebd635fa7f258a658e))
+* **navigation:** token updates ([aae71fd](https://github.com/MyPureCloud/genesys-spark/commit/aae71fd69a2af07b08c401f022c6093994a88dc4))
+* **tokens:** Add new label tokens ([#418](https://github.com/MyPureCloud/genesys-spark/issues/418)) ([563b49e](https://github.com/MyPureCloud/genesys-spark/commit/563b49e71aedd22ce8ad7bb7887ef12773f86f3b))
+
 ## [4.36.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.35.0...v4.36.0) (2024-04-13)
 
 
