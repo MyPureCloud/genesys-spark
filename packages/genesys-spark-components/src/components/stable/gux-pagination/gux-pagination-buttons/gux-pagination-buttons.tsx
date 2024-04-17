@@ -154,7 +154,10 @@ export class GuxPaginationButtons {
               disabled={this.onFirstPage}
               onClick={this.handleClickFirst.bind(this)}
             >
-              <gux-icon decorative icon-name="chevron-double-left"></gux-icon>
+              <gux-icon
+                decorative
+                icon-name="fa/chevrons-left-regular"
+              ></gux-icon>
             </button>
           </gux-button-slot>
           <gux-button-slot accent="ghost">
@@ -163,7 +166,10 @@ export class GuxPaginationButtons {
               disabled={this.onFirstPage}
               onClick={this.handleClickPrevious.bind(this)}
             >
-              <gux-icon decorative icon-name="chevron-small-left"></gux-icon>
+              <gux-icon
+                decorative
+                icon-name="custom/chevron-left-small-regular"
+              ></gux-icon>
             </button>
           </gux-button-slot>
         </div>
@@ -177,7 +183,10 @@ export class GuxPaginationButtons {
               disabled={this.onLastPage}
               onClick={this.handleClickNext.bind(this)}
             >
-              <gux-icon decorative icon-name="chevron-small-right"></gux-icon>
+              <gux-icon
+                decorative
+                icon-name="custom/chevron-right-small-regular"
+              ></gux-icon>
             </button>
           </gux-button-slot>
           <gux-button-slot accent="ghost">
@@ -186,7 +195,10 @@ export class GuxPaginationButtons {
               disabled={this.onLastPage}
               onClick={this.handleClickLast.bind(this)}
             >
-              <gux-icon decorative icon-name="chevron-double-right"></gux-icon>
+              <gux-icon
+                decorative
+                icon-name="fa/chevrons-right-regular"
+              ></gux-icon>
             </button>
           </gux-button-slot>
         </div>

@@ -14,15 +14,15 @@ exports[`gux-form-field-number #render clearable should render component as expe
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -51,15 +51,15 @@ exports[`gux-form-field-number #render clearable should render component as expe
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -88,15 +88,15 @@ exports[`gux-form-field-number #render clearable should render component as expe
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -124,15 +124,15 @@ exports[`gux-form-field-number #render clearable should render component as expe
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -160,15 +160,15 @@ exports[`gux-form-field-number #render clearable should render component as expe
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" disabled="" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" disabled="" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -196,15 +196,15 @@ exports[`gux-form-field-number #render help should render component as expected 
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -232,15 +232,15 @@ exports[`gux-form-field-number #render input attributes should render component 
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -268,15 +268,15 @@ exports[`gux-form-field-number #render input attributes should render component 
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" disabled="" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" disabled="" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -304,15 +304,15 @@ exports[`gux-form-field-number #render input attributes should render component 
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -340,15 +340,15 @@ exports[`gux-form-field-number #render label-position should render component as
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -376,15 +376,15 @@ exports[`gux-form-field-number #render label-position should render component as
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -412,15 +412,15 @@ exports[`gux-form-field-number #render label-position should render component as
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -448,15 +448,15 @@ exports[`gux-form-field-number #render label-position should render component as
       </div>
       <div class="gux-step-buttons-container">
         <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-up" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-up-small-regular" size="inherit"></gux-icon>
         </button>
         <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
-          <gux-icon hydrated="" icon-name="chevron-small-down" size="inherit"></gux-icon>
+          <gux-icon hydrated="" icon-name="custom/chevron-down-small-regular" size="inherit"></gux-icon>
         </button>
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>

@@ -144,7 +144,10 @@ export class GuxToggle {
       return (
         <div id={this.errorId} class="gux-toggle-error">
           <div class="gux-toggle-error-container">
-            <gux-icon icon-name="alert-warning-octogon" decorative></gux-icon>
+            <gux-icon
+              icon-name="fa/hexagon-exclamation-regular"
+              decorative
+            ></gux-icon>
             <div class="gux-toggle-error-message">{this.errorMessage}</div>
           </div>
         </div>

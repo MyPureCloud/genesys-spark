@@ -337,7 +337,7 @@ export class GuxTimePicker {
         onClick={this.toggleDropdown.bind(this)}
         ref={el => (this.clockButton = el)}
       >
-        <gux-icon decorative icon-name="clock-outline"></gux-icon>
+        <gux-icon decorative icon-name="fa/clock-regular"></gux-icon>
       </button>
     ) as JSX.Element;
   }

@@ -128,7 +128,7 @@ export class GuxPaginationEllipsisButton {
         >
           <gux-icon
             screenreaderText={this.i18n('goToPage')}
-            icon-name="menu-kebab-horizontal"
+            icon-name="fa/ellipsis-regular"
           ></gux-icon>
         </button>
         <gux-tooltip for="popover-target">{this.i18n('goToPage')}</gux-tooltip>

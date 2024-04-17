@@ -272,7 +272,10 @@ export class GuxCalendar {
           })}
           onClick={() => this.setNewFocusedMonth(-1)}
         >
-          <gux-icon decorative icon-name="chevron-small-left"></gux-icon>
+          <gux-icon
+            decorative
+            icon-name="custom/chevron-left-small-regular"
+          ></gux-icon>
         </button>
         <span class="gux-header-month-and-year">
           {getDateAsMonthYear(this.getFocusedValue(), this.locale)}
@@ -288,7 +291,10 @@ export class GuxCalendar {
           })}
           onClick={() => this.setNewFocusedMonth(1)}
         >
-          <gux-icon decorative icon-name="chevron-small-right"></gux-icon>
+          <gux-icon
+            decorative
+            icon-name="custom/chevron-right-small-regular"
+          ></gux-icon>
         </button>
       </div>
     ) as JSX.Element;

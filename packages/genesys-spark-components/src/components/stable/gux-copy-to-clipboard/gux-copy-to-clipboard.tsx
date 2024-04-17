@@ -60,9 +60,9 @@ export class GuxCopyToClipboard {
   getIconName(tooltipContent: GuxCopyToClipboardContent): string {
     switch (tooltipContent) {
       case 'copyFailure':
-        return 'badge-x';
+        return 'fa/circle-xmark-solid';
       case 'copySuccess':
-        return 'badge-check';
+        return 'fa/circle-check-solid';
     }
   }
 
@@ -102,7 +102,7 @@ export class GuxCopyToClipboard {
           {/* This is a named slot because we don't want it to be possible to slot a text node.
           Slotted text nodes are not targeted by `::slotted(*)` so they are not styled as expected. */}
           <slot name="content" />
-          <gux-icon icon-name="copy" decorative></gux-icon>
+          <gux-icon icon-name="fa/copy-regular" decorative></gux-icon>
         </div>
         {this.renderTooltip()}
       </button>

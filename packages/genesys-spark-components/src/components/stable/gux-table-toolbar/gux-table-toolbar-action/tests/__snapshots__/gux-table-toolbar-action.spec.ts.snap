@@ -7,7 +7,7 @@ exports[`#render should render a disabled toolbar-action 1`] = `
       <span slot="text">
         Export
       </span>
-      <gux-icon decorative="" icon-name="export" slot="icon"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/arrow-up-from-line-regular" slot="icon"></gux-icon>
     </gux-table-toolbar-custom-action>
   </mock:shadow-root>
 </gux-table-toolbar-action>
@@ -20,7 +20,7 @@ exports[`#render should render a primary toolbar-action 1`] = `
       <span slot="text">
         Export
       </span>
-      <gux-icon decorative="" icon-name="export" slot="icon"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/arrow-up-from-line-regular" slot="icon"></gux-icon>
     </gux-table-toolbar-custom-action>
   </mock:shadow-root>
 </gux-table-toolbar-action>
@@ -33,7 +33,7 @@ exports[`#render should render delete toolbar-action 1`] = `
       <span slot="text">
         Delete
       </span>
-      <gux-icon decorative="" icon-name="delete" slot="icon"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/trash-regular" slot="icon"></gux-icon>
     </gux-table-toolbar-custom-action>
   </mock:shadow-root>
 </gux-table-toolbar-action>
@@ -46,7 +46,7 @@ exports[`#render should render export toolbar-action 1`] = `
       <span slot="text">
         Export
       </span>
-      <gux-icon decorative="" icon-name="export" slot="icon"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/arrow-up-from-line-regular" slot="icon"></gux-icon>
     </gux-table-toolbar-custom-action>
   </mock:shadow-root>
 </gux-table-toolbar-action>
@@ -59,7 +59,7 @@ exports[`#render should render import toolbar-action 1`] = `
       <span slot="text">
         Import
       </span>
-      <gux-icon decorative="" icon-name="import" slot="icon"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/file-import-regular" slot="icon"></gux-icon>
     </gux-table-toolbar-custom-action>
   </mock:shadow-root>
 </gux-table-toolbar-action>
@@ -72,7 +72,7 @@ exports[`#render should render refresh toolbar-action 1`] = `
       <span slot="text">
         Refresh
       </span>
-      <gux-icon decorative="" icon-name="refresh" slot="icon"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/arrows-rotate-regular" slot="icon"></gux-icon>
     </gux-table-toolbar-custom-action>
   </mock:shadow-root>
 </gux-table-toolbar-action>
@@ -85,7 +85,7 @@ exports[`#render should render revert toolbar-action 1`] = `
       <span slot="text">
         Revert
       </span>
-      <gux-icon decorative="" icon-name="reset" slot="icon"></gux-icon>
+      <gux-icon decorative="" icon-name="fa/arrow-rotate-left-regular" slot="icon"></gux-icon>
     </gux-table-toolbar-custom-action>
   </mock:shadow-root>
 </gux-table-toolbar-action>

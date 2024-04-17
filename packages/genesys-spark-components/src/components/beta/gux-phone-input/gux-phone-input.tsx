@@ -451,7 +451,7 @@ export class GuxPhoneInput {
       return (
         <gux-icon
           class="gux-expand-icon"
-          iconName="chevron-small-down"
+          iconName="custom/chevron-down-small-regular"
           decorative
         />
       ) as JSX.Element;
@@ -492,7 +492,7 @@ export class GuxPhoneInput {
           ></gux-flag-icon-beta>
         ) : (
           <gux-icon
-            icon-name="globe"
+            icon-name="fa/earth-africa-regular"
             screenreader-text={this.i18n('unknownRegion')}
           ></gux-icon>
         )}
@@ -541,7 +541,7 @@ export class GuxPhoneInput {
       (
         <gux-option value="">
           <span class="gux-option-content">
-            <gux-icon icon-name="globe" decorative></gux-icon>
+            <gux-icon icon-name="fa/earth-africa-regular" decorative></gux-icon>
             <span>
               {this.i18n('unknownRegion')}{' '}
               <span class="gux-country-code">(+)</span>
