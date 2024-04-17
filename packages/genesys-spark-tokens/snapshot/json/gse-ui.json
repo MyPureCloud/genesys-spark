@@ -18,7 +18,7 @@
       },
       "box_shadow": {
         "x": 0,
-        "y": "4px",
+        "y": 0,
         "blur": "6px",
         "spread": "1px",
         "color": "#23395c1f",
@@ -56,7 +56,7 @@
     },
     "box_shadow": {
       "x": 0,
-      "y": "4px",
+      "y": 0,
       "blur": "6px",
       "spread": "1px",
       "color": "#23395c1f",

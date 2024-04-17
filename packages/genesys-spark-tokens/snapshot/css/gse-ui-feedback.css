@@ -30,7 +30,7 @@
   --gse-ui-toast-buttonBar-gap: 8px;
   --gse-ui-toast-borderRadius: 8px;
   --gse-ui-toast-boxShadow-x: 0;
-  --gse-ui-toast-boxShadow-y: 2px;
+  --gse-ui-toast-boxShadow-y: 0;
   --gse-ui-toast-boxShadow-blur: 4px;
   --gse-ui-toast-boxShadow-spread: 1px;
   --gse-ui-toast-boxShadow-color: #23395c1a;
@@ -56,7 +56,7 @@
   --gse-ui-modal-large-width: 800px;
   --gse-ui-modal-buttonBar-gap: 8px;
   --gse-ui-modal-boxShadow-x: 0;
-  --gse-ui-modal-boxShadow-y: 6px;
+  --gse-ui-modal-boxShadow-y: 0;
   --gse-ui-modal-boxShadow-blur: 8px;
   --gse-ui-modal-boxShadow-spread: 1px;
   --gse-ui-modal-boxShadow-color: #23395c26;
@@ -67,7 +67,7 @@
   --gse-ui-modal-dismissButton-paddingRight: 8px;
   --gse-ui-popover-borderRadius: 8px;
   --gse-ui-popover-boxShadow-x: 0;
-  --gse-ui-popover-boxShadow-y: 6px;
+  --gse-ui-popover-boxShadow-y: 0;
   --gse-ui-popover-boxShadow-blur: 8px;
   --gse-ui-popover-boxShadow-spread: 1px;
   --gse-ui-popover-boxShadow-color: #23395c26;
@@ -88,8 +88,8 @@
   --gse-ui-popover-title-text-fontWeight: 700;
   --gse-ui-popover-title-text-lineHeight: 24px;
   --gse-ui-popover-title-text-fontSize: 16px;
-  --gse-ui-popover-anchor-width: 13px;
-  --gse-ui-popover-anchor-height: 13px;
+  --gse-ui-popover-anchor-width: 18px;
+  --gse-ui-popover-anchor-height: 9px;
   --gse-ui-progressAndLoading-spinner-foreground: #4856cb;
   --gse-ui-progressAndLoading-spinner-base: #ced2fc;
   --gse-ui-progressAndLoading-spinner-large: 48;

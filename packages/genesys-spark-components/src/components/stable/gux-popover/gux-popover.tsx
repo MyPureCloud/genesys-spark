@@ -125,8 +125,6 @@ export class GuxPopover {
 
   private updatePosition(): void {
     const forElement = findElementById(this.root, this.for);
-    // This is 13 because this makes the arrow look aligned
-    const arrowLen = 13;
 
     if (this.popupElement && forElement) {
       void computePosition(forElement, this.popupElement, {
@@ -155,16 +153,34 @@ export class GuxPopover {
           left: 'right'
         }[side];
 
+        const arrowRotation = {
+          top: 0,
+          right: 90,
+          bottom: 180,
+          left: -90
+        }[side];
+
+        // This is 13 because this makes the arrow look aligned when horizontal
+        // or 15 if vertical due to extra padding needed to show the shadow.
+        const arrowLen = side === 'left' || side === 'right' ? 15 : 13;
+
         if (middlewareData.arrow) {
-          const { x, y } = middlewareData.arrow;
+          let x = middlewareData.arrow.x;
+          const y = middlewareData.arrow.y;
+
+          if (side === 'left' || side === 'right') {
+            x = x + 4;
+          }
+
           this.popupElement.setAttribute('data-placement', placement);
+
           Object.assign(this.arrowElement.style, {
             left: x != null ? `${x}px` : '',
             top: y != null ? `${y}px` : '',
             right: '',
             bottom: '',
-            [staticSide]: `${-arrowLen / 2}px`,
-            transform: 'rotate(45deg)'
+            [staticSide]: `${-arrowLen}px`,
+            transform: `rotate(${arrowRotation}deg)`
           });
         }
       });
@@ -226,7 +242,9 @@ export class GuxPopover {
         <div
           ref={(el: HTMLDivElement) => (this.arrowElement = el)}
           class="gux-arrow"
-        ></div>
+        >
+          <div class="gux-arrow-caret"></div>
+        </div>
         <div class={{ 'gux-popover-header': Boolean(this.titleSlot) }}>
           <slot name="title"></slot>
           {this.renderDismissButton()}
