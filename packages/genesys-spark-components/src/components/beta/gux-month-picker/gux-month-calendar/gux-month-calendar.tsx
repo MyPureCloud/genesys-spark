@@ -247,16 +247,18 @@ export class GuxMonthCalendar {
       String(i + 1).padStart(2, '0')
     ).map(month => {
       const value = getISOYearMonth(this.year, month);
+      const selected = this.isSelectedMonth(value);
 
       return (
         <gux-month-list-item
           class={{ 'gux-current-month': this.isCurrentMonth(month) }}
           value={value}
-          selected={this.isSelectedMonth(value)}
+          selected={selected}
           aria-selected={this.isAriaSelectedMonth(value)}
           aria-label={this.getMonthAriaLabel(value)}
           onClick={() => this.onMonthClick(value)}
           disabled={this.isOutOfBounds(value)}
+          tabIndex={selected ? 1 : 0}
         >
           {this.getMonthShortName(this.year, month)}
         </gux-month-list-item>
@@ -265,7 +267,6 @@ export class GuxMonthCalendar {
 
     return (
       <gux-month-list
-        tabIndex={1}
         ref={(el: HTMLGuxMonthListElement) => (this.monthListElement = el)}
       >
         {monthButtons}
@@ -275,7 +276,7 @@ export class GuxMonthCalendar {
 
   private renderTrapFocusEl(): JSX.Element {
     return (
-      <span onFocus={() => this.doFocusTrap()} tabindex="0"></span>
+      <span onFocus={() => this.doFocusTrap()} tabIndex="0"></span>
     ) as JSX.Element;
   }
 

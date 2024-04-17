@@ -50,7 +50,6 @@ export class GuxMonthListItem {
           <button
             class={{ 'gux-selected': this.selected }}
             type="button"
-            tabIndex={-1}
             disabled={this.disabled}
           >
             <slot></slot>
