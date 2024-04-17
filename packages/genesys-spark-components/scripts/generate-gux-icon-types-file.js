@@ -33,7 +33,7 @@ const getAllVariants = directory => {
       .sort()
       // deduplicate the array
       .filter(function (item, position, array) {
-        return !position || item != array[position - 1];
+        return !position || item !== array[position - 1];
       })
       .join(' | ')
   );
