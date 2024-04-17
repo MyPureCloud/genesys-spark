@@ -31,7 +31,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -156,7 +156,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 ديسمبر
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -196,7 +195,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -321,7 +320,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 pro
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -361,7 +359,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -486,7 +484,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 dec.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -526,7 +523,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -651,7 +648,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 Dez
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -691,7 +687,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -816,7 +812,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 Dec
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -856,7 +851,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -981,7 +976,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 dic
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -1021,7 +1015,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -1146,7 +1140,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 dic
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -1186,7 +1179,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -1311,7 +1304,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 joulu
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -1351,7 +1343,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -1476,7 +1468,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 déc.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -1516,7 +1507,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -1641,7 +1632,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 déc.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -1681,7 +1671,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -1806,7 +1796,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 דצמ׳
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -1846,7 +1835,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -1971,7 +1960,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 dic
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -2011,7 +1999,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -2136,7 +2124,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 12月
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -2176,7 +2163,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -2301,7 +2288,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 12월
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -2341,7 +2327,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -2466,7 +2452,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 dec
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -2506,7 +2491,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -2631,7 +2616,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 des
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -2671,7 +2655,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -2796,7 +2780,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 gru
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -2836,7 +2819,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -2961,7 +2944,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 dez.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -3001,7 +2983,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -3126,7 +3108,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 dez.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -3166,7 +3147,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -3291,7 +3272,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 дек.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -3331,7 +3311,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -3456,7 +3436,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 dec.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -3496,7 +3475,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -3621,7 +3600,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 ธ.ค.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -3661,7 +3639,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -3786,7 +3764,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 Ara
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -3826,7 +3803,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -3951,7 +3928,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 груд.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -3991,7 +3967,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -4116,7 +4092,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 12月
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -4156,7 +4131,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -4281,7 +4256,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 12月
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -4321,7 +4295,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -4446,7 +4420,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 ديسمبر
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -4486,7 +4459,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -4611,7 +4584,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 pro
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -4651,7 +4623,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -4776,7 +4748,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 dec.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -4816,7 +4787,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -4941,7 +4912,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 Dez
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -4981,7 +4951,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -5106,7 +5076,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 Dec
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -5146,7 +5115,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -5271,7 +5240,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 dic
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -5311,7 +5279,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -5436,7 +5404,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 dic
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -5476,7 +5443,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -5601,7 +5568,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 joulu
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -5641,7 +5607,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -5766,7 +5732,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 déc.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -5806,7 +5771,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -5931,7 +5896,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 déc.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -5971,7 +5935,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -6096,7 +6060,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 דצמ׳
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -6136,7 +6099,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -6261,7 +6224,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 dic
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -6301,7 +6263,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -6426,7 +6388,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 12月
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -6466,7 +6427,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -6591,7 +6552,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 12월
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -6631,7 +6591,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -6756,7 +6716,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 dec
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -6796,7 +6755,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -6921,7 +6880,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 des
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -6961,7 +6919,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -7086,7 +7044,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 gru
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -7126,7 +7083,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -7251,7 +7208,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 dez.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -7291,7 +7247,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -7416,7 +7372,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 dez.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -7456,7 +7411,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -7581,7 +7536,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 дек.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -7621,7 +7575,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -7746,7 +7700,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 dec.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -7786,7 +7739,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -7911,7 +7864,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 ธ.ค.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -7951,7 +7903,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -8076,7 +8028,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 Ara
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -8116,7 +8067,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -8241,7 +8192,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 груд.
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -8281,7 +8231,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -8406,7 +8356,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 12月
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
@@ -8446,7 +8395,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="1">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -8571,7 +8520,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 12月
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>

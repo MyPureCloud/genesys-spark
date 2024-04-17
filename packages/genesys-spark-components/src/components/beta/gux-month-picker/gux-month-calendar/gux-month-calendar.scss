@@ -7,6 +7,10 @@
     var(--gse-ui-calendarMenu-boxShadow-spread)
     var(--gse-ui-calendarMenu-boxShadow-color);
 
+  &.gux-hidden {
+    display: none;
+  }
+
   .gux-current-month {
     font-family: var(--gse-ui-calendarMenu-month-currentText-fontFamily);
     font-size: var(--gse-ui-calendarMenu-month-currentText-fontSize);
