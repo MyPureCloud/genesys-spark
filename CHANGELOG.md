@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.38.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.37.0...v4.38.0) (2024-04-18)
+
+
+### Features
+
+* **gux-icon:** synced icon names with Figma ([fb7484a](https://github.com/MyPureCloud/genesys-spark/commit/fb7484afa0d2598c8485fea9c33a639729bf2cf0))
+
+
+### Bug Fixes
+
+* **other:** addressed PR comment ([e78cb60](https://github.com/MyPureCloud/genesys-spark/commit/e78cb609c968f658e9353a01264c881c7d2c2571))
+
 ## [4.37.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.36.0...v4.37.0) (2024-04-17)
 
 
