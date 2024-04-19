@@ -711,6 +711,7 @@ export type GuxIconIconName =
   | 'fa/calendar-plus-regular'
   | 'fa/calendar-regular'
   | 'fa/camera-regular'
+  | 'fa/camera-solid'
   | 'fa/camera-web-regular'
   | 'fa/camera-web-slash-regular'
   | 'fa/caret-down-solid'

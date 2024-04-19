@@ -1,7 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-avatar #render component with image 1`] = `
+exports[`gux-avatar #render component with image type (1) for valid markup 1`] = `
 <gux-avatar-beta name="John Doe">
+  <mock:shadow-root>
+    <div class="gux-accent-default gux-avatar gux-large">
+      <div class="gux-content">
+        <slot name="image">
+          <abbr aria-label="John Doe" title="John Doe">
+            JD
+          </abbr>
+        </slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <img alt="John Doe Image" slot="image" src="https://i.pravatar.cc/300">
+</gux-avatar-beta>
+`;
+
+exports[`gux-avatar #render component with image type (2) for valid markup 1`] = `
+<gux-avatar-beta change-photo="" name="John Doe">
   <mock:shadow-root>
     <div class="gux-accent-default gux-avatar gux-large">
       <div class="gux-content">
