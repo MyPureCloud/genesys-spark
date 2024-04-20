@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.39.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.38.0...v4.39.0) (2024-04-20)
+
+
+### Features
+
+* **avatar:** gux-avatar add change photo ([#374](https://github.com/MyPureCloud/genesys-spark/issues/374)) ([e016a10](https://github.com/MyPureCloud/genesys-spark/commit/e016a1017df5cdd22cfe5159fe0f0278193fed0d))
+
+
+### Bug Fixes
+
+* **tabs-advanced:** Closing popover list on tab press ([6e4f999](https://github.com/MyPureCloud/genesys-spark/commit/6e4f999e45d3fd4ff45a592af3333b5192f03f6e))
+
 ## [4.38.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.37.0...v4.38.0) (2024-04-18)
 
 
