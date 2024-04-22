@@ -4,8 +4,10 @@ import { logWarn } from '@utils/error/log-error';
 import {
   GuxAvatarSize,
   GuxAvatarAccent,
-  GuxAvatarPresence
+  GuxAvatarPresence,
+  GuxAvatarUcIntegrationApps
 } from './gux-avatar.types';
+import { render8x8SVG, renderTeamsSVG, renderZoomSVG } from './svg-utils';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import defaultResources from './i18n/en.json';
 
@@ -70,6 +72,12 @@ export class GuxAvatar {
    */
   @Prop()
   notifications: boolean = false;
+
+  /**
+   * Shows uc integration app logo on large avatar
+   */
+  @Prop()
+  ucIntegration: GuxAvatarUcIntegrationApps = 'none';
 
   private generateInitials(): string {
     const nameArray = this.name?.split(' ') ?? [];
@@ -157,6 +165,29 @@ export class GuxAvatar {
     }
   }
 
+  private renderUcIntegrationsIcon(): JSX.Element | null {
+    switch (this.ucIntegration) {
+      case 'teams':
+        return renderTeamsSVG();
+      case 'zoom':
+        return renderZoomSVG();
+      case '8x8':
+        return render8x8SVG();
+      default:
+        return null;
+    }
+  }
+
+  private renderUcIntegrationBadge(): JSX.Element | null {
+    if (this.ucIntegration && this.size === 'large') {
+      return (
+        <div class="gux-avatar-integration-badge">
+          {this.renderUcIntegrationsIcon()}
+        </div>
+      ) as JSX.Element;
+    }
+  }
+
   private getDescriptionText(): string {
     if (this.notifications) {
       return `${this.name} (${this.i18n('notifications')})`;
@@ -198,7 +229,8 @@ export class GuxAvatar {
           </slot>
         </div>
       </div>,
-      this.renderBadge()
+      this.renderBadge(),
+      this.renderUcIntegrationBadge()
     ] as JSX.Element;
   }
 }

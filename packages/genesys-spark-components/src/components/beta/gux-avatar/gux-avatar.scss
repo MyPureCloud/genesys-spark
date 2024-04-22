@@ -217,6 +217,16 @@
   }
 }
 
+.gux-avatar-integration-badge {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .gux-avatar-badge {
   position: absolute;
   top: calc(var(--gse-ui-avatar-content-large-border-width) * -1);

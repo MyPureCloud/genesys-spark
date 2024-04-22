@@ -28,7 +28,7 @@ describe('gux-avatar', () => {
 
     [
       `<gux-avatar-beta name="John Doe"><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`,
-      `<gux-avatar-beta name="John Doe" change-photo><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`
+      `<gux-avatar-beta name="John Doe"><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`
     ].forEach((html, index) => {
       it(`component with image type (${
         index + 1
@@ -142,6 +142,19 @@ describe('gux-avatar', () => {
       });
     });
 
+    describe('#render different uc-integration logos', () => {
+      ['zoom', 'teams', '8x8', 'invalid-uc-integration'].forEach(
+        (app: string) => {
+          it(`should work as expected for "${app}"`, async () => {
+            const html = `<gux-avatar-beta name="John Doe" uc-integration=${app}></gux-avatar-beta>`;
+            const page = await newSpecPage({ components: [GuxAvatar], html });
+
+            expect(page.root).toMatchSnapshot();
+          });
+        }
+      );
+    });
+
     describe('#render notification badge', () => {
       it('should render notification badge', async () => {
         const html = `<gux-avatar-beta badge notifications name="John Doe"></gux-avatar-beta>`;
@@ -168,7 +181,5 @@ describe('gux-avatar', () => {
         expect(page.root).toMatchSnapshot();
       });
     });
-
-    //TODO: Add tests for change photo once format agreed
   });
 });

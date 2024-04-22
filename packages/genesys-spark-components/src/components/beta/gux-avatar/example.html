@@ -108,6 +108,16 @@
       </gux-dropdown>
       <label slot="label">Presence</label>
     </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown value="" id="update-uc-integration">
+        <gux-listbox aria-label="Update Uc Inegration">
+          <gux-option value="zoom">Zoom</gux-option>
+          <gux-option value="team">Teams</gux-option>
+          <gux-option value="8x8">8x8</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">UcIntegration</label>
+    </gux-form-field-dropdown>
     <gux-form-field-text-like>
       <input
         slot="input"
@@ -145,6 +155,7 @@
         const updateName = document.getElementById('update-name');
         const updateLabel = document.getElementById('update-label');
         const updatePresence = document.getElementById('update-presence');
+        const updateUcIntegraton = document.getElementById('update-uc-integration');
         const updateBadge = document.querySelector('[name=update-badge]');
         const updateRing = document.querySelector('[name=update-ring]');
         const updateNotifications = document.querySelector('[name=update-notifications]');
@@ -152,6 +163,7 @@
         avatar.setAttribute('name', updateName.value);
         avatar.setAttribute('label', updateLabel.value);
         avatar.setAttribute('presence', updatePresence.value);
+        avatar.setAttribute('uc-integration', updateUcIntegraton.value);
         avatar.setAttribute('badge', updateBadge.checked);
         avatar.setAttribute('ring', updateRing.checked);
         avatar.setAttribute('notifications', updateNotifications.checked);
@@ -466,6 +478,41 @@
   ring
   notifications
   size="xsmall"
+>
+</gux-avatar-beta>
+<h2>UC Integration App Badge</h2>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  badge
+  ring
+  notifications
+  uc-integration="teams"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  badge
+  uc-integration="zoom"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  ring
+  uc-integration="8x8"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  ring
+  uc-integration="slack"
 >
 </gux-avatar-beta>
 
