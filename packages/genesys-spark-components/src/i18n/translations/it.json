@@ -8,6 +8,9 @@
   "gux-avatar": {
     "notifications": "Notifiche"
   },
+  "gux-avatar-change-photo": {
+    "changePhoto": "Cambia foto profilo"
+  },
   "gux-badge": {
     "info": "badge con etichetta: {label}, accento: info",
     "info-bold": "badge con etichetta: {label}, accento: info accentuato",
