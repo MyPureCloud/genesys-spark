@@ -137,15 +137,6 @@
         />
         <label slot="label">Notifications</label>
       </gux-form-field-checkbox>
-      <gux-form-field-checkbox>
-        <input
-          slot="input"
-          type="checkbox"
-          name="update-photo"
-          value="change-photo"
-        />
-        <label slot="label">Change Photo</label>
-      </gux-form-field-checkbox>
     </div>
     <gux-button
       onclick="(function() {
@@ -157,7 +148,6 @@
         const updateBadge = document.querySelector('[name=update-badge]');
         const updateRing = document.querySelector('[name=update-ring]');
         const updateNotifications = document.querySelector('[name=update-notifications]');
-        const updateChangePhoto = document.querySelector('[name=update-photo]');
         avatar.setAttribute('size', updateSize.value);
         avatar.setAttribute('name', updateName.value);
         avatar.setAttribute('label', updateLabel.value);
@@ -165,7 +155,6 @@
         avatar.setAttribute('badge', updateBadge.checked);
         avatar.setAttribute('ring', updateRing.checked);
         avatar.setAttribute('notifications', updateNotifications.checked);
-        avatar.setAttribute('change-photo', updateChangePhoto.checked);
       })()"
       >Update Avatar</gux-button
     >
