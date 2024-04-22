@@ -106,6 +106,13 @@ export class GuxAvatar {
     if (avatarImage && !avatarImage.getAttribute('alt')) {
       logWarn(this.root, 'Alt attribute is required for slotted image.');
     }
+
+    if (this.ucIntegration !== 'none' && this.size !== 'large') {
+      logWarn(
+        this.root,
+        'UC Integration app logo can only be shown on large avatar'
+      );
+    }
   }
 
   private renderBadge(): JSX.Element | null {

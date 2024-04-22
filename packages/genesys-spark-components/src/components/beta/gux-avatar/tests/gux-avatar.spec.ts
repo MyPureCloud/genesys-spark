@@ -53,6 +53,12 @@ describe('gux-avatar', () => {
       await newSpecPage({ components: [GuxAvatar], html });
       expect(logWarn).toHaveBeenCalled();
     });
+
+    it(`should log warning for avatar with uc integration that isn't large"`, async () => {
+      const html = `<gux-avatar-beta name="John Doe" uc-integration="teams" size="medium"><img slot="image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`;
+      await newSpecPage({ components: [GuxAvatar], html });
+      expect(logWarn).toHaveBeenCalled();
+    });
   });
 
   describe('changes to attributes after initial load should be reflected in DOM', () => {
