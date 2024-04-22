@@ -70,7 +70,7 @@ module.exports = {
           transform: generateComponentPage
         },
         {
-          from: '../../packages/genesys-spark-components/src/style/examples/*.html',
+          from: '../../packages/genesys-spark/src/style/examples/*.html',
           to: ({ absoluteFilename }) => {
             return path.basename(absoluteFilename);
           },
@@ -130,10 +130,18 @@ function generateComponentPage(exampleMarkup) {
   if (withHtml.includes('${FA_ICON_EXAMPLE_LIST}')) {
     withHtml = withHtml.replace(
       '${FA_ICON_EXAMPLE_LIST}',
-      generateIconListHTML([
-        '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/fa/**/*.svg',
+      generateIconListHTML(
+        '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/fa/**/*.svg'
+      )
+    );
+  }
+
+  if (withHtml.includes('${CUSTOM_ICON_EXAMPLE_LIST}')) {
+    withHtml = withHtml.replace(
+      '${CUSTOM_ICON_EXAMPLE_LIST}',
+      generateIconListHTML(
         '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/custom/**/*.svg'
-      ])
+      )
     );
   }
 

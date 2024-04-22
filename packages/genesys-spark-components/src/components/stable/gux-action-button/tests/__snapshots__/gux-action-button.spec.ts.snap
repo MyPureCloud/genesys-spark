@@ -13,7 +13,7 @@ exports[`gux-action-button renders 1`] = `
           </gux-button-slot>
           <gux-button-slot accent="primary" class="gux-dropdown-button">
             <button aria-expanded="false" aria-haspopup="true" aria-label="More options" type="button">
-              <gux-icon decorative="" icon-name="chevron-small-down"></gux-icon>
+              <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </gux-button-slot>
         </div>

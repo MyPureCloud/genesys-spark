@@ -7,13 +7,13 @@ exports[`gux-calendar renders 1`] = `
       <slot></slot>
       <div class="gux-header">
         <button aria-label="Previous month: April 2023" class="gux-left" type="button">
-          <gux-icon decorative="" icon-name="chevron-small-left"></gux-icon>
+          <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
         </button>
         <span class="gux-header-month-and-year">
           May 2023
         </span>
         <button aria-label="Next month: June 2023" class="gux-right" type="button">
-          <gux-icon decorative="" icon-name="chevron-small-right"></gux-icon>
+          <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
         </button>
       </div>
       <div>

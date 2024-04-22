@@ -16,7 +16,7 @@ import {
 } from '../../../../i18n';
 import * as sparkIntl from '../../../../genesys-spark-utils/intl';
 // Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
-import { readRegionalDatesCookie } from '../../../../i18n/check-regional-dates-cookie';
+import { useRegionalDates } from '../../../../i18n/use-regional-dates';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { afterNextRender } from '@utils/dom/after-next-render';
 import {
@@ -96,7 +96,7 @@ export class GuxMonthCalendar {
 
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-    if (readRegionalDatesCookie()) {
+    if (useRegionalDates()) {
       this.locale = sparkIntl.determineDisplayLocale(this.root);
     } else {
       this.locale = getDesiredLocale(this.root);
@@ -215,7 +215,7 @@ export class GuxMonthCalendar {
           ref={(el: HTMLButtonElement) => (this.previousYearElement = el)}
         >
           <gux-icon
-            icon-name="chevron-small-left"
+            icon-name="custom/chevron-left-small-regular"
             screenreader-text={this.i18n('changeYear', {
               currentYear: parseInt(this.year),
               changeYear: parseInt(this.year) - 1
@@ -231,7 +231,7 @@ export class GuxMonthCalendar {
           ref={(el: HTMLButtonElement) => (this.nextYearElement = el)}
         >
           <gux-icon
-            icon-name="chevron-small-right"
+            icon-name="custom/chevron-right-small-regular"
             screenreader-text={this.i18n('changeYear', {
               currentYear: parseInt(this.year),
               changeYear: parseInt(this.year) + 1

@@ -1,0 +1,51 @@
+@use '~genesys-spark/src/style/focus.scss';
+
+.gux-change-photo {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  line-height: 0px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 50%;
+
+  .gux-change-photo-icon {
+    display: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    cursor: pointer;
+
+    .gux-change-photo-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: var(--gse-semantic-zIndex-showFocus);
+      display: inline-block;
+      color: var(--gse-ui-avatar-hoverModal-foregroundColor);
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      position: absolute;
+      top: var(--gse-ui-avatar-large-presenceRing-width);
+      left: var(--gse-ui-avatar-large-presenceRing-width);
+      width: var(--gse-ui-avatar-addChangeImage-hoverModal-shroudSize);
+      height: var(--gse-ui-avatar-addChangeImage-hoverModal-shroudSize);
+      content: '';
+      background-color: var(--gse-ui-avatar-hoverModal-shroudColor);
+      border: var(--gse-ui-avatar-content-large-border-width)
+        var(--gse-ui-avatar-content-default-border-style)
+        var(--gse-ui-avatar-content-default-border-color);
+      border-radius: 50%;
+      opacity: var(--gse-ui-avatar-hoverModal-opacity);
+      transition: background-color 0.5s ease;
+    }
+  }
+
+  &:focus-visible {
+    @include focus.gux-focus-ring;
+  }
+}

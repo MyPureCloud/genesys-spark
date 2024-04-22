@@ -25,12 +25,18 @@ const getAllVariants = directory => {
     }
   });
 
-  return variants
-    .filter(filename => filename.match(svgExtensionRegex))
-    .map(filename => filename.replace(svgExtensionRegex, ''))
-    .map(filename => `'${filename}'`)
-    .sort()
-    .join(' | ');
+  return (
+    variants
+      .filter(filename => filename.match(svgExtensionRegex))
+      .map(filename => filename.replace(svgExtensionRegex, ''))
+      .map(filename => `'${filename}'`)
+      .sort()
+      // deduplicate the array
+      .filter(function (item, position, array) {
+        return !position || item !== array[position - 1];
+      })
+      .join(' | ')
+  );
 };
 
 const content = `export type GuxIconIconName = ${getAllVariants(

@@ -43,7 +43,22 @@ export class GuxTableToolbarAction {
   }
 
   private returnActionTypeIcon(action: GuxTableToolbarActionTypes): string {
-    return action == 'revert' ? 'reset' : action;
+    switch (action) {
+      case 'refresh':
+        return 'fa/arrows-rotate-regular';
+      case 'delete':
+        return 'fa/trash-regular';
+      case 'export':
+        return 'fa/arrow-up-from-line-regular';
+      case 'import':
+        return 'fa/file-import-regular';
+      case 'revert':
+        return 'fa/arrow-rotate-left-regular';
+      case 'add':
+        return 'fa/plus-regular';
+      default:
+        return 'fa/square-x-regular';
+    }
   }
 
   async componentWillLoad(): Promise<void> {

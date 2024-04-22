@@ -508,7 +508,11 @@ export class GuxDropdown {
               'gux-expand-icon': true
             }}
             screenreader-text={this.i18n('dropdown')}
-            iconName={this.expanded ? 'chevron-small-up' : 'chevron-small-down'}
+            iconName={
+              this.expanded
+                ? 'custom/chevron-up-small-regular'
+                : 'custom/chevron-down-small-regular'
+            }
           ></gux-icon>
         </button>
       </div>

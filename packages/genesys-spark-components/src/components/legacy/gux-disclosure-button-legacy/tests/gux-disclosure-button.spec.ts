@@ -52,7 +52,7 @@ describe('gux-disclosure-button', () => {
 
         expect(element.isOpen).toBe(false);
         expect(panel).not.toHaveClass('gux-active');
-        expect(icon).toEqualAttribute('icon-name', 'arrow-solid-right');
+        expect(icon).toEqualAttribute('icon-name', 'fa/caret-right-solid');
 
         button.click();
 
@@ -60,7 +60,7 @@ describe('gux-disclosure-button', () => {
 
         expect(element.isOpen).toBe(true);
         expect(panel).toHaveClass('gux-active');
-        expect(icon).toEqualAttribute('icon-name', 'arrow-solid-left');
+        expect(icon).toEqualAttribute('icon-name', 'fa/caret-left-solid');
         expect(activeEventSpy).toHaveBeenCalledWith(
           expect.objectContaining({
             detail: true
@@ -86,7 +86,7 @@ describe('gux-disclosure-button', () => {
 
         expect(element.isOpen).toBe(true);
         expect(panel).toHaveClass('gux-active');
-        expect(icon).toEqualAttribute('icon-name', 'arrow-solid-left');
+        expect(icon).toEqualAttribute('icon-name', 'fa/caret-left-solid');
 
         button.click();
 
@@ -94,7 +94,7 @@ describe('gux-disclosure-button', () => {
 
         expect(element.isOpen).toBe(false);
         expect(panel).not.toHaveClass('gux-active');
-        expect(icon).toEqualAttribute('icon-name', 'arrow-solid-right');
+        expect(icon).toEqualAttribute('icon-name', 'fa/caret-right-solid');
         expect(activeEventSpy).toHaveBeenCalledWith(
           expect.objectContaining({
             detail: false

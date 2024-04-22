@@ -1,12 +1,15 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.31.0",
+  "version": "4.39.0",
   "description": "Common webcomponents",
   "license": "MIT",
   "scripts": {
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present && npm run create-dist-folder",
     "commit": "git-cz",
     "commitlint": "commitlint --from 81b354d83c18eb6ac0ca925b4694d43c09e588e8",
+    "copy.chart-components": "cp -R ./packages/genesys-spark-chart-components/dist ./dist/chart",
+    "create-dist-folder": "node ./scripts/create-dist-folder.js",
+    "create-manifest": "node ./scripts/create-manifest.js",
     "current-version": "cross-var \"echo $npm_package_version\"",
     "dev": "run-pty start.json",
     "dev.examples": "npm run dev --workspace=web-apps/genesys-spark-examples",
@@ -38,11 +41,12 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "git-cz"
     }
   },
   "workspaces": [
     "./packages/genesys-spark-tokens",
+    "./packages/genesys-spark",
     "./packages/genesys-spark-components",
     "./packages/genesys-spark-chart-components",
     "./packages/*",
@@ -51,14 +55,14 @@
     "./web-apps/*"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^19.0.3",
-    "@commitlint/config-conventional": "^19.0.3",
+    "@commitlint/cli": "^19.1.0",
+    "@commitlint/config-conventional": "^19.1.0",
     "commitizen": "^4.3.0",
     "cross-var": "^1.1.0",
-    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.57.0",
     "eslint-config-genesys-spark-components": "^0.0.1",
     "eslint-config-prettier": "^9.1.0",
+    "git-cz": "^4.9.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "npm-run-all": "^4.1.5",

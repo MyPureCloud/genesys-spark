@@ -16,7 +16,7 @@ exports[`gux-pagination-items-per-page-legacy #render should render as expected 
                     </gux-truncate>
                   </div>
                 </div>
-                <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
             <slot slot="popup"></slot>
@@ -96,7 +96,7 @@ exports[`gux-pagination-items-per-page-legacy #render should render as expected 
                     </gux-truncate>
                   </div>
                 </div>
-                <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
             <slot slot="popup"></slot>
@@ -176,7 +176,7 @@ exports[`gux-pagination-items-per-page-legacy #render should render as expected 
                     </gux-truncate>
                   </div>
                 </div>
-                <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
             <slot slot="popup"></slot>
@@ -256,7 +256,7 @@ exports[`gux-pagination-items-per-page-legacy #render should render as expected 
                     </gux-truncate>
                   </div>
                 </div>
-                <gux-icon class="gux-expand-icon" iconname="chevron-small-down" screenreader-text="Dropdown"></gux-icon>
+                <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
               </button>
             </div>
             <slot slot="popup"></slot>

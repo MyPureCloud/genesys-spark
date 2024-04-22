@@ -49,14 +49,11 @@ Type: `Promise<void>`
 ### Depends on
 
 - [gux-icon](../gux-icon)
-- [gux-truncate](../gux-truncate)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-content-search --> gux-icon
-  gux-content-search --> gux-truncate
-  gux-truncate --> gux-tooltip
   gux-column-manager --> gux-content-search
   style gux-content-search fill:#f9f,stroke:#333,stroke-width:4px
 ```

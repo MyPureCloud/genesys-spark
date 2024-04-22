@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-textarea #render help should render component as expected 1`] = `"<gux-form-field-textarea hydrated=\\"\\"> <textarea slot=\\"input\\" name=\\"textarea\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-help-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Default</label> <span slot=\\"help\\" id=\\"gux-form-field-help-i\\">This is a help message</span> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render help should render component as expected 1`] = `"<gux-form-field-textarea hydrated=""> <textarea slot="input" name="textarea" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"></textarea> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render help should render component as expected 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -12,7 +12,7 @@ exports[`gux-form-field-textarea #render help should render component as expecte
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -26,7 +26,7 @@ exports[`gux-form-field-textarea #render help should render component as expecte
 </div>
 `;
 
-exports[`gux-form-field-textarea #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=""> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render input attributes should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -38,7 +38,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -52,7 +52,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
 </div>
 `;
 
-exports[`gux-form-field-textarea #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-textarea hydrated=\\"\\"> <textarea slot=\\"input\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-textarea hydrated=""> <textarea slot="input" disabled="" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render input attributes should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -64,7 +64,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -78,7 +78,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
 </div>
 `;
 
-exports[`gux-form-field-textarea #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-textarea hydrated=\\"\\"> <textarea slot=\\"input\\" required=\\"\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-textarea hydrated=""> <textarea slot="input" required="" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render input attributes should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -90,7 +90,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -104,7 +104,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
 </div>
 `;
 
-exports[`gux-form-field-textarea #render label-position should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render label-position should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=""> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render label-position should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -116,7 +116,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -130,7 +130,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
 </div>
 `;
 
-exports[`gux-form-field-textarea #render label-position should render component as expected (2) 1`] = `"<gux-form-field-textarea label-position=\\"above\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render label-position should render component as expected (2) 1`] = `"<gux-form-field-textarea label-position="above" hydrated=""> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render label-position should render component as expected (2) 2`] = `
 <div class="gux-above gux-form-field-container">
@@ -142,7 +142,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -156,7 +156,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
 </div>
 `;
 
-exports[`gux-form-field-textarea #render label-position should render component as expected (3) 1`] = `"<gux-form-field-textarea label-position=\\"beside\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render label-position should render component as expected (3) 1`] = `"<gux-form-field-textarea label-position="beside" hydrated=""> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render label-position should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -168,7 +168,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -182,7 +182,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
 </div>
 `;
 
-exports[`gux-form-field-textarea #render label-position should render component as expected (4) 1`] = `"<gux-form-field-textarea label-position=\\"screenreader\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render label-position should render component as expected (4) 1`] = `"<gux-form-field-textarea label-position="screenreader" hydrated=""> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render label-position should render component as expected (4) 2`] = `
 <div class="gux-form-field-container gux-screenreader">
@@ -194,7 +194,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -208,7 +208,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
 </div>
 `;
 
-exports[`gux-form-field-textarea #render resize should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render resize should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=""> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render resize should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -220,7 +220,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -234,7 +234,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
 </div>
 `;
 
-exports[`gux-form-field-textarea #render resize should render component as expected (2) 1`] = `"<gux-form-field-textarea resize=\\"auto\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render resize should render component as expected (2) 1`] = `"<gux-form-field-textarea resize="auto" hydrated=""> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render resize should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -246,7 +246,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -260,7 +260,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
 </div>
 `;
 
-exports[`gux-form-field-textarea #render resize should render component as expected (3) 1`] = `"<gux-form-field-textarea resize=\\"manual\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render resize should render component as expected (3) 1`] = `"<gux-form-field-textarea resize="manual" hydrated=""> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render resize should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -272,7 +272,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -286,7 +286,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
 </div>
 `;
 
-exports[`gux-form-field-textarea #render resize should render component as expected (4) 1`] = `"<gux-form-field-textarea resize=\\"none\\" hydrated=\\"\\"> <textarea slot=\\"input\\" id=\\"gux-form-field-input-i\\"></textarea> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render resize should render component as expected (4) 1`] = `"<gux-form-field-textarea resize="none" hydrated=""> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render resize should render component as expected (4) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -298,7 +298,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
       <slot name="input"></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>

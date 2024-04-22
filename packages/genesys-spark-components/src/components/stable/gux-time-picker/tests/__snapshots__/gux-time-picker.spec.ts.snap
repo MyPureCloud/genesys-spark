@@ -21,7 +21,7 @@ exports[`gux-time-picker #render should render as expected 1`] = `
           </div>
         </button>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="clock-outline"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">

@@ -240,7 +240,7 @@ export class GuxTabAdvanced {
               disabled={this.guxDisabled}
             >
               <gux-icon
-                icon-name="menu-kebab-vertical"
+                icon-name="fa/ellipsis-vertical-regular"
                 screenreader-text={this.i18n('options', {
                   tabTitle: this.tabTitle
                 })}

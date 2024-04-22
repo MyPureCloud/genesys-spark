@@ -42,9 +42,9 @@ Type: `Promise<void>`
 
 ## Slots
 
-| Slot | Description            |
-| ---- | ---------------------- |
-|      | Content of the tooltip |
+| Slot        | Description      |
+| ----------- | ---------------- |
+| `"content"` | Slot for content |
 
 
 ## Dependencies

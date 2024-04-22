@@ -11,7 +11,7 @@ import translationResources from './i18n/en.json';
   tag: 'gux-form-field-input-clear-button',
   shadow: { delegatesFocus: true }
 })
-export class Gux {
+export class GuxFormFieldInputClearButton {
   private i18n: GetI18nValue;
 
   @Element()
@@ -25,7 +25,7 @@ export class Gux {
   render(): JSX.Element {
     return (
       <button tabIndex={-1} type="button" title={this.i18n('clear')}>
-        <gux-icon icon-name="close" decorative></gux-icon>
+        <gux-icon icon-name="fa/xmark-large-regular" decorative></gux-icon>
       </button>
     ) as JSX.Element;
   }

@@ -86,6 +86,9 @@
       "border_radius": "5.5px",
       "border_radius_small": "2px",
       "offset": "1px"
+    },
+    "group": {
+      "gap": "8px"
     }
   },
   "menu": {

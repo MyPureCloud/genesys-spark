@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-checkbox #render should render component as expected (1) 1`] = `"<gux-form-field-checkbox hydrated=\\"\\"> <input slot=\\"input\\" type=\\"checkbox\\" name=\\"food-1[]\\" value=\\"pizza\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> </gux-form-field-checkbox>"`;
+exports[`gux-form-field-checkbox #render should render component as expected (1) 1`] = `"<gux-form-field-checkbox hydrated=""> <input slot="input" type="checkbox" name="food-1[]" value="pizza" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Pizza</label> </gux-form-field-checkbox>"`;
 
 exports[`gux-form-field-checkbox #render should render component as expected (1) 2`] = `
 <div class="gux-form-field-container">
@@ -11,7 +11,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (1)
     <div class="gux-label-beside">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -26,7 +26,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (1)
 </div>
 `;
 
-exports[`gux-form-field-checkbox #render should render component as expected (2) 1`] = `"<gux-form-field-checkbox class=\\"gux-disabled\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"checkbox\\" name=\\"food-1[]\\" value=\\"pizza\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> </gux-form-field-checkbox>"`;
+exports[`gux-form-field-checkbox #render should render component as expected (2) 1`] = `"<gux-form-field-checkbox class="gux-disabled" hydrated=""> <input slot="input" type="checkbox" name="food-1[]" value="pizza" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Pizza</label> </gux-form-field-checkbox>"`;
 
 exports[`gux-form-field-checkbox #render should render component as expected (2) 2`] = `
 <div class="gux-form-field-container">
@@ -37,7 +37,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (2)
     <div class="gux-label-beside">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -52,7 +52,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (2)
 </div>
 `;
 
-exports[`gux-form-field-checkbox #render should render component as expected (3) 1`] = `"<gux-form-field-checkbox class=\\"gux-input-error\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"checkbox\\" name=\\"food-1[]\\" value=\\"pizza\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-error-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> <span slot=\\"error\\" id=\\"gux-form-field-error-i\\">This is an error message</span> </gux-form-field-checkbox>"`;
+exports[`gux-form-field-checkbox #render should render component as expected (3) 1`] = `"<gux-form-field-checkbox class="gux-input-error" hydrated=""> <input slot="input" type="checkbox" name="food-1[]" value="pizza" id="gux-form-field-input-i" aria-describedby="gux-form-field-error-i"> <label slot="label" for="gux-form-field-input-i">Pizza</label> <span slot="error" id="gux-form-field-error-i">This is an error message</span> </gux-form-field-checkbox>"`;
 
 exports[`gux-form-field-checkbox #render should render component as expected (3) 2`] = `
 <div class="gux-form-field-container">
@@ -63,7 +63,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (3)
     <div class="gux-label-beside">
       <slot name="label"></slot>
       <div class="gux-form-field-error gux-show">
-        <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -78,7 +78,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (3)
 </div>
 `;
 
-exports[`gux-form-field-checkbox #render should render component as expected (4) 1`] = `"<gux-form-field-checkbox hydrated=\\"\\"> <input slot=\\"input\\" type=\\"checkbox\\" name=\\"food-1[]\\" value=\\"pizza\\" checked=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> </gux-form-field-checkbox>"`;
+exports[`gux-form-field-checkbox #render should render component as expected (4) 1`] = `"<gux-form-field-checkbox hydrated=""> <input slot="input" type="checkbox" name="food-1[]" value="pizza" checked="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Pizza</label> </gux-form-field-checkbox>"`;
 
 exports[`gux-form-field-checkbox #render should render component as expected (4) 2`] = `
 <div class="gux-form-field-container">
@@ -89,7 +89,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (4)
     <div class="gux-label-beside">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -104,7 +104,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (4)
 </div>
 `;
 
-exports[`gux-form-field-checkbox #render should render component as expected (5) 1`] = `"<gux-form-field-checkbox class=\\"gux-input-error\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"checkbox\\" name=\\"food-1[]\\" value=\\"pizza\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-error-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> <span slot=\\"error\\" id=\\"gux-form-field-error-i\\">Error message</span> </gux-form-field-checkbox>"`;
+exports[`gux-form-field-checkbox #render should render component as expected (5) 1`] = `"<gux-form-field-checkbox class="gux-input-error" hydrated=""> <input slot="input" type="checkbox" name="food-1[]" value="pizza" id="gux-form-field-input-i" aria-describedby="gux-form-field-error-i"> <label slot="label" for="gux-form-field-input-i">Pizza</label> <span slot="error" id="gux-form-field-error-i">Error message</span> </gux-form-field-checkbox>"`;
 
 exports[`gux-form-field-checkbox #render should render component as expected (5) 2`] = `
 <div class="gux-form-field-container">
@@ -115,7 +115,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (5)
     <div class="gux-label-beside">
       <slot name="label"></slot>
       <div class="gux-form-field-error gux-show">
-        <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -130,7 +130,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (5)
 </div>
 `;
 
-exports[`gux-form-field-checkbox #render should render component as expected (6) 1`] = `"<gux-form-field-checkbox hydrated=\\"\\"> <input slot=\\"input\\" type=\\"checkbox\\" name=\\"food-1[]\\" value=\\"pizza\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-help-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Pizza</label> <span slot=\\"help\\" id=\\"gux-form-field-help-i\\">This is a help message</span> </gux-form-field-checkbox>"`;
+exports[`gux-form-field-checkbox #render should render component as expected (6) 1`] = `"<gux-form-field-checkbox hydrated=""> <input slot="input" type="checkbox" name="food-1[]" value="pizza" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"> <label slot="label" for="gux-form-field-input-i">Pizza</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-checkbox>"`;
 
 exports[`gux-form-field-checkbox #render should render component as expected (6) 2`] = `
 <div class="gux-form-field-container">
@@ -141,7 +141,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (6)
     <div class="gux-label-beside">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="alert-warning-octogon" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>

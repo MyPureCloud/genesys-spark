@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-announce-beta #render should render component as expected (1) 1`] = `"<gux-announce-beta aria-live=\\"polite\\" hydrated=\\"\\"> This is some text to read </gux-announce-beta>"`;
+exports[`gux-announce-beta #render should render component as expected (1) 1`] = `"<gux-announce-beta aria-live="polite" hydrated=""> This is some text to read </gux-announce-beta>"`;
 
-exports[`gux-announce-beta #render should render component as expected (2) 1`] = `"<gux-announce-beta politeness=\\"assertive\\" aria-live=\\"assertive\\" hydrated=\\"\\"> This is some text to read </gux-announce-beta>"`;
+exports[`gux-announce-beta #render should render component as expected (2) 1`] = `"<gux-announce-beta politeness="assertive" aria-live="assertive" hydrated=""> This is some text to read </gux-announce-beta>"`;
 
-exports[`gux-announce-beta #render should render component as expected (3) 1`] = `"<gux-announce-beta politeness=\\"off\\" aria-live=\\"off\\" hydrated=\\"\\"> This is some text to read </gux-announce-beta>"`;
+exports[`gux-announce-beta #render should render component as expected (3) 1`] = `"<gux-announce-beta politeness="off" aria-live="off" hydrated=""> This is some text to read </gux-announce-beta>"`;
 
-exports[`gux-announce-beta #render should render component as expected (4) 1`] = `"<gux-announce-beta politeness=\\"polite\\" aria-live=\\"polite\\" hydrated=\\"\\"> This is some text to read </gux-announce-beta>"`;
+exports[`gux-announce-beta #render should render component as expected (4) 1`] = `"<gux-announce-beta politeness="polite" aria-live="polite" hydrated=""> This is some text to read </gux-announce-beta>"`;

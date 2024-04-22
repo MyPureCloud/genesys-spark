@@ -10,7 +10,7 @@ exports[`gux-modal #render should render large modal 1`] = `
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
-                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
                 </div>
               </button>
             </gux-button-slot>
@@ -68,7 +68,7 @@ exports[`gux-modal #render should render medium modal 1`] = `
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
-                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
                 </div>
               </button>
             </gux-button-slot>
@@ -126,7 +126,7 @@ exports[`gux-modal #render should render modal with a specified initial focus el
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
-                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
                 </div>
               </button>
             </gux-button-slot>
@@ -187,7 +187,7 @@ exports[`gux-modal #render should render modal with just left align buttons 1`] 
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
-                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
                 </div>
               </button>
             </gux-button-slot>
@@ -238,7 +238,7 @@ exports[`gux-modal #render should render modal with just right align buttons 1`]
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
-                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
                 </div>
               </button>
             </gux-button-slot>
@@ -289,7 +289,7 @@ exports[`gux-modal #render should render modal without a title 1`] = `
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
-                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
                 </div>
               </button>
             </gux-button-slot>
@@ -341,7 +341,7 @@ exports[`gux-modal #render should render modal without buttons 1`] = `
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
-                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
                 </div>
               </button>
             </gux-button-slot>
@@ -377,7 +377,7 @@ exports[`gux-modal #render should render small modal 1`] = `
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
-                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
                 </div>
               </button>
             </gux-button-slot>
@@ -435,7 +435,7 @@ exports[`gux-modal #render should render small modal by default 1`] = `
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
-                  <gux-icon decorative="" icon-name="close"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
                 </div>
               </button>
             </gux-button-slot>

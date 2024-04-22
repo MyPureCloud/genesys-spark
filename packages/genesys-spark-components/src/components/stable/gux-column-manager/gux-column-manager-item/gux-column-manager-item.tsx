@@ -249,7 +249,7 @@ export class GuxColumnManagerItem {
             onKeyDown={event => this.keyboardReorder(event)}
             ref={el => (this.reorderButtonElement = el)}
           >
-            <gux-icon icon-name="grab-vertical" decorative></gux-icon>
+            <gux-icon icon-name="fa/grip-vertical-solid" decorative></gux-icon>
             <span class="gux-sr-only">
               {this.i18n('activateReordering', { columnName: this.text })}
             </span>

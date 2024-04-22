@@ -48,7 +48,7 @@ export async function getBaseSvgHtml(iconName: string): Promise<string> {
         throw err;
       }, 0);
 
-      return getBaseSvgHtml('unknown');
+      return getBaseSvgHtml('fa/square-x-regular');
     });
 
   svgHTMLCache.set(id, svgHtml);
