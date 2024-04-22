@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-inline-alert #render should render component as expected (1) 1`] = `"<gux-inline-alert accent="info" hydrated="">Note: This is an information alert.</gux-inline-alert>"`;
+exports[`gux-inline-alert #render should render component as expected (1) 1`] = `"<gux-inline-alert accent=\\"info\\" hydrated=\\"\\"><div slot=\\"content\\">Note: This is an information alert.</div></gux-inline-alert>"`;
 
-exports[`gux-inline-alert #render should render component as expected (2) 1`] = `"<gux-inline-alert accent="success" hydrated="">Note: This is a success alert.</gux-inline-alert>"`;
+exports[`gux-inline-alert #render should render component as expected (2) 1`] = `"<gux-inline-alert accent=\\"success\\" hydrated=\\"\\"><div slot=\\"content\\">Note: This is a success alert.</div></gux-inline-alert>"`;
 
-exports[`gux-inline-alert #render should render component as expected (3) 1`] = `"<gux-inline-alert accent="warning" hydrated="">Note: This is a warning alert.</gux-inline-alert>"`;
+exports[`gux-inline-alert #render should render component as expected (3) 1`] = `"<gux-inline-alert accent=\\"warning\\" hydrated=\\"\\"><div slot=\\"content\\">Note: This is a warning alert.</div></gux-inline-alert>"`;
 
-exports[`gux-inline-alert #render should render component as expected (4) 1`] = `"<gux-inline-alert accent="error" hydrated="">Note: This is a warning alert.</gux-inline-alert>"`;
+exports[`gux-inline-alert #render should render component as expected (4) 1`] = `"<gux-inline-alert accent=\\"error\\" hydrated=\\"\\"><div slot=\\"content\\">Note: This is a warning alert.</div></gux-inline-alert>"`;
