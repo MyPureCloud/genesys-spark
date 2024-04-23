@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.40.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.39.0...v4.40.0) (2024-04-23)
+
+
+### Features
+
+* **inline-alert:** allowing control of alert width with css ([0793193](https://github.com/MyPureCloud/genesys-spark/commit/07931934b625c1196f2a69ce9d0e686a344df437))
+* **inline-alert:** renaming slot ([b473e3e](https://github.com/MyPureCloud/genesys-spark/commit/b473e3e08926f71982608a9855e8058ee885c695))
+* **inline-alert:** text alignment when wrapping ([4f068f6](https://github.com/MyPureCloud/genesys-spark/commit/4f068f6a6cd97cfd16ac8393b71fcfee0c3c9fad))
+* **inline-alert:** updated snapshots ([7b66036](https://github.com/MyPureCloud/genesys-spark/commit/7b66036fa309d82c452274cf5090f8f60476f04f))
+* **tokens:** Added new core tokens ([2185272](https://github.com/MyPureCloud/genesys-spark/commit/2185272510d9897f9d9a52c492feabf250f4ba0f))
+
+
+### Bug Fixes
+
+* **avatar:** Fix dynamic example ([#422](https://github.com/MyPureCloud/genesys-spark/issues/422)) ([51f2327](https://github.com/MyPureCloud/genesys-spark/commit/51f2327d70b55a4dfb525cd4bdedc4ab784900a8))
+
 ## [4.39.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.38.0...v4.39.0) (2024-04-20)
 
 
