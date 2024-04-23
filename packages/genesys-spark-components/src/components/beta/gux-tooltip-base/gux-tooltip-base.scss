@@ -5,6 +5,7 @@
   width: max-content;
   max-width: 250px;
   pointer-events: none;
+  border-radius: var(--gse-ui-tooltip-borderRadius);
   box-shadow: var(--gse-ui-tooltip-boxShadow-x)
     var(--gse-ui-tooltip-boxShadow-y) var(--gse-ui-tooltip-boxShadow-blur)
     var(--gse-ui-tooltip-boxShadow-spread) var(--gse-ui-tooltip-boxShadow-color);
