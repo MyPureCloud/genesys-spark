@@ -221,7 +221,7 @@
   position: absolute;
   inset-block-end: 0;
   inset-inline-end: 0;
-  z-index: 2;
+  z-index: var(--gse-semantic-zIndex-showFocus);
   display: flex;
   align-items: center;
   justify-content: center;
