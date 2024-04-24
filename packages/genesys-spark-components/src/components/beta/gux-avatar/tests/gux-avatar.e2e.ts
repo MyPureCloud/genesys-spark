@@ -63,5 +63,16 @@ describe('gux-avatar', () => {
         await a11yCheck(page);
       });
     });
+
+    ['zoom', 'teams', '8x8', 'invalid-uc-integration'].forEach(
+      ucIntegration => {
+        it(`should be accessible when uc-integration is "${ucIntegration}"`, async () => {
+          const html = `<gux-avatar-beta name="John Doe" uc-integration="${ucIntegration}"></gux-avatar-beta>`;
+          const page = await newSparkE2EPage({ html });
+
+          await a11yCheck(page);
+        });
+      }
+    );
   });
 });
