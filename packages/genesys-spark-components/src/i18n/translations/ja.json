@@ -8,6 +8,9 @@
   "gux-avatar": {
     "notifications": "通知"
   },
+  "gux-avatar-change-photo": {
+    "changePhoto": "プロフィール写真を変更"
+  },
   "gux-badge": {
     "info": "ラベル付きバッジ: {label}、アクセント: 情報 ",
     "info-bold": "ラベル付きバッジ: {label}、アクセント: 情報 太字",

@@ -8,6 +8,9 @@
   "gux-avatar": {
     "notifications": "Oznámení"
   },
+  "gux-avatar-change-photo": {
+    "changePhoto": "Změnit profilovou fotku"
+  },
   "gux-badge": {
     "info": "odznak s popiskem: {label}, akcent: info",
     "info-bold": "odznak s popiskem: {label}, akcent: info tučně",
