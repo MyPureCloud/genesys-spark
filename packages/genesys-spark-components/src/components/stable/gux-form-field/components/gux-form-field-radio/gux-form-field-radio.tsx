@@ -1,4 +1,4 @@
-import { Component, Element, h, Host, JSX, State } from '@stencil/core';
+import { Component, Element, h, Host, JSX, Prop, State } from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
@@ -36,10 +36,16 @@ export class GuxFormFieldRadio {
   private disabled: boolean;
 
   @State()
-  private hasError: boolean = false;
+  private hasHelp: boolean = false;
 
   @State()
-  private hasHelp: boolean = false;
+  private hasError: boolean = false;
+
+  @Prop()
+  hasGroupError: boolean = false;
+
+  @Prop()
+  hasGroupDisabled: boolean = false;
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
@@ -66,7 +72,7 @@ export class GuxFormFieldRadio {
     return (
       <Host
         class={{
-          'gux-input-error': this.hasError,
+          'gux-input-error': this.hasError || this.hasGroupError,
           'gux-disabled': this.disabled
         }}
       >

@@ -1,0 +1,120 @@
+<h1>gux-form-field-radio</h1>
+
+<p>slot a input[type=radio] element into a gux-form-field-radio element</p>
+
+<h2>Example</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-form-field-radio-group>
+    <label slot="label">Food</label>
+
+    <gux-form-field-radio>
+      <input slot="input" type="radio" name="food-1" value="pizza" />
+      <label slot="label">Pizza</label>
+    </gux-form-field-radio>
+
+    <gux-form-field-radio>
+      <input slot="input" type="radio" name="food-1" value="pasta" checked />
+      <label slot="label">Pasta</label>
+    </gux-form-field-radio>
+
+    <gux-form-field-radio>
+      <input slot="input" type="radio" name="food-1" value="hamburger" />
+      <label slot="label">Hamburger</label>
+    </gux-form-field-radio>
+
+    <gux-form-field-radio>
+      <input
+        slot="input"
+        type="radio"
+        name="food-1"
+        value="sandwich"
+        disabled
+      />
+      <label slot="label">Sandwich</label>
+    </gux-form-field-radio>
+
+    <gux-form-field-radio>
+      <input slot="input" type="radio" name="food-1" value="sushi" />
+      <label slot="label">Sushi</label>
+      <span slot="error">Subject to availibility</span>
+    </gux-form-field-radio>
+
+    <gux-form-field-radio>
+      <input slot="input" type="radio" name="food-1" value="spaghetti" />
+      <label slot="label">Spaghetti</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-radio>
+  </gux-form-field-radio-group>
+</form>
+
+<h2>Example 2 with Error</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-form-field-radio-group>
+    <label slot="label">Food</label>
+
+    <gux-form-field-radio>
+      <input slot="input" type="radio" name="food-1" value="pizza" />
+      <label slot="label">Pizza</label>
+    </gux-form-field-radio>
+
+    <gux-form-field-radio>
+      <input
+        slot="input"
+        type="radio"
+        name="food-1"
+        value="sandwich"
+        disabled
+      />
+      <label slot="label">Sandwich</label>
+    </gux-form-field-radio>
+
+    <gux-form-field-radio>
+      <input slot="input" type="radio" name="food-1" value="sushi" />
+      <label slot="label">Sushi</label>
+      <span slot="error">Subject to availibility</span>
+    </gux-form-field-radio>
+
+    <gux-form-field-radio>
+      <input slot="input" type="radio" name="food-1" value="spaghetti" />
+      <label slot="label">Spaghetti</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-radio>
+    <span slot="groupError">Subject to availibility</span>
+  </gux-form-field-radio-group>
+</form>
+
+<h2>Example 3 Disabled group</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-form-field-radio-group disabled>
+    <span slot="label">Food</span>
+
+    <gux-form-field-radio>
+      <input slot="input" type="radio" name="food-1" value="pizza" />
+      <label slot="label">Pizza</label>
+    </gux-form-field-radio>
+
+    <gux-form-field-radio>
+      <input
+        slot="input"
+        type="radio"
+        name="food-1"
+        value="sandwich"
+        disabled
+      />
+      <label slot="label">Sandwich</label>
+    </gux-form-field-radio>
+
+    <gux-form-field-radio>
+      <input slot="input" type="radio" name="food-1" value="sushi" />
+      <label slot="label">Sushi</label>
+      <span slot="error">Subject to availibility</span>
+    </gux-form-field-radio>
+
+    <gux-form-field-radio>
+      <input slot="input" type="radio" name="food-1" value="spaghetti" />
+      <label slot="label">Spaghetti</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-radio>
+    <span slot="groupHelp">This is a help message</span>
+  </gux-form-field-radio-group>
+</form>

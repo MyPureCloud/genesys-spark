@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-form-field-radio #render should render component as expected (1) 1`] = `
+<gux-form-field-radio>
+  
+  <input name="food-1" slot="input" type="radio" value="pizza">
+  
+  <label slot="label">
+  Pizza
+</label>
+  
+</gux-form-field-radio>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (2) 1`] = `
+<gux-form-field-radio>
+  
+  <input disabled="" name="food-1" slot="input" type="radio" value="pizza">
+  
+  <label slot="label">
+  Pizza
+</label>
+  
+</gux-form-field-radio>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (3) 1`] = `
+<gux-form-field-radio>
+  
+  <input name="food-1" slot="input" type="radio" value="pizza">
+  
+  <label slot="label">
+  Pizza
+</label>
+  
+  <span slot="error">
+  This is an error message
+</span>
+  
+</gux-form-field-radio>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (4) 1`] = `
+<gux-form-field-radio>
+  
+  <input checked="" name="food-1" slot="input" type="radio" value="pizza">
+  
+  <label slot="label">
+  Pizza
+</label>
+  
+</gux-form-field-radio>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (5) 1`] = `
+<gux-form-field-radio>
+  
+  <input name="food-1" slot="input" type="radio" value="pizza">
+  
+  <label slot="label">
+  Pizza
+</label>
+  
+  <span slot="error">
+  Error message
+</span>
+  
+</gux-form-field-radio>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (6) 1`] = `
+<gux-form-field-radio>
+  
+  <input disabled="" name="food-1" slot="input" type="radio" value="pizza">
+  
+  <label slot="label">
+  Pizza
+</label>
+  
+  <span slot="error">
+  Error message
+</span>
+  
+</gux-form-field-radio>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (7) 1`] = `
+<gux-form-field-radio>
+  
+  <input name="food-1" slot="input" type="radio" value="spaghetti">
+  
+  <label slot="label">
+  Spaghetti
+</label>
+  
+  <span slot="help">
+  This is a help message
+</span>
+  
+</gux-form-field-radio>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (8) 1`] = `
+<gux-form-field-radio>
+  
+  <input disabled="" name="food-1" slot="input" type="radio" value="spaghetti">
+  
+  <label slot="label">
+  Spaghetti
+</label>
+  
+  <span slot="help">
+  This is a help message
+</span>
+  
+</gux-form-field-radio>
+`;
