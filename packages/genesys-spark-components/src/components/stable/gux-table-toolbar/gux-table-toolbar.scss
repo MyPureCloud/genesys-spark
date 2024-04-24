@@ -5,6 +5,10 @@
   justify-content: space-between;
   width: 100%;
   max-height: var(--gse-ui-dataTableItems-tableToolbar-height);
+  opacity: 0;
+  animation-name: show-toolbar;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 
   .search-filter-container {
     min-width: 260px;
@@ -54,5 +58,11 @@
       gap: var(--gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap);
       margin-left: var(--gse-ui-dataTableItems-tableToolbar-gap);
     }
+  }
+}
+
+@keyframes show-toolbar {
+  to {
+    opacity: 1;
   }
 }
