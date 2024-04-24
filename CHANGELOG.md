@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.41.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.40.0...v4.41.0) (2024-04-24)
+
+
+### Features
+
+* **language:** translation updates ([#427](https://github.com/MyPureCloud/genesys-spark/issues/427)) ([132de09](https://github.com/MyPureCloud/genesys-spark/commit/132de09107222f2d3d49f6e8a770102d881b3c97))
+* **tooltip:** Fix tooltip border issue ([#426](https://github.com/MyPureCloud/genesys-spark/issues/426)) ([52bbf05](https://github.com/MyPureCloud/genesys-spark/commit/52bbf052e54832f29feab1e22dc3cd3024222005))
+
 ## [4.40.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.39.0...v4.40.0) (2024-04-23)
 
 
