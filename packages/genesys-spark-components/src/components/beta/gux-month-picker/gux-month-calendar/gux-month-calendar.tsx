@@ -215,7 +215,6 @@ export class GuxMonthCalendar {
         <button
           type="button"
           class="gux-year-change"
-          tabIndex={0}
           onClick={() => this.changeYear(-1)}
           disabled={this.isPreviousYearLessThanMinYear(this.year, this.min)}
           ref={(el: HTMLButtonElement) => (this.previousYearElement = el)}
@@ -232,7 +231,6 @@ export class GuxMonthCalendar {
         <button
           type="button"
           class="gux-year-change"
-          tabIndex={0}
           onClick={() => this.changeYear(1)}
           disabled={this.isNextYearGreaterThanMaxYear(this.year, this.max)}
           ref={(el: HTMLButtonElement) => (this.nextYearElement = el)}
