@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.42.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.41.0...v4.42.0) (2024-04-25)
+
+
+### Features
+
+* **avatar:** UC app integration icon added ([#423](https://github.com/MyPureCloud/genesys-spark/issues/423)) ([877a5d3](https://github.com/MyPureCloud/genesys-spark/commit/877a5d3a99f71d56e3151b1940f407cbc6dab017))
+* **language:** translation updates ([260cb70](https://github.com/MyPureCloud/genesys-spark/commit/260cb70c192f56b861d9d7e9e17f8d189a4fbd4c))
+
+
+### Bug Fixes
+
+* **inline-alert:** snap update ([#430](https://github.com/MyPureCloud/genesys-spark/issues/430)) ([cc322b9](https://github.com/MyPureCloud/genesys-spark/commit/cc322b9067e7b6b74f084885b019c95627c81fa8))
+
 ## [4.41.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.40.0...v4.41.0) (2024-04-24)
 
 
