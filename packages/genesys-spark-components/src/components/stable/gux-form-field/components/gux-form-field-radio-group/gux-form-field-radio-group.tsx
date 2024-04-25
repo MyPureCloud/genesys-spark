@@ -24,7 +24,7 @@ import { trackComponent } from '@utils/tracking/usage';
   tag: 'gux-form-field-radio-group',
   shadow: true
 })
-export class GuxFormFieldRadio {
+export class GuxFormFieldRadioGroup {
   private disabledObserver: MutationObserver;
   private label: HTMLLabelElement;
 
@@ -67,7 +67,7 @@ export class GuxFormFieldRadio {
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     this.hasGroupError = hasSlot(this.root, 'groupError');
-    this.hasGroupHelp = hasSlot(this.root, 'help');
+    this.hasGroupHelp = hasSlot(this.root, 'groupHelp');
   }
 
   componentWillLoad(): void {

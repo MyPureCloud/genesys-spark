@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                 | Type      | Default |
-| ---------- | ---------- | --------------------------- | --------- | ------- |
-| `disabled` | `disabled` | Disables the action button. | `boolean` | `false` |
+| Property   | Attribute  | Description                              | Type      | Default |
+| ---------- | ---------- | ---------------------------------------- | --------- | ------- |
+| `disabled` | `disabled` | Disables the radio buttons in the group. | `boolean` | `false` |
 
 
 ## Slots

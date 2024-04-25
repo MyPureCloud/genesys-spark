@@ -105,6 +105,9 @@ export class GuxFormFieldRadio {
       'input[type="radio"][slot="input"]'
     );
 
+    if (this.hasGroupDisabled) {
+      this.input.disabled = true;
+    }
     preventBrowserValidationStyling(this.input);
 
     this.disabled = calculateInputDisabledState(this.input);
