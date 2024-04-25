@@ -31,7 +31,7 @@ exports[`gux-month-picker-beta #render should render the component as expected 1
                 <gux-icon icon-name="chevron-small-right" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
               </button>
             </div>
-            <gux-month-list role="list" tabindex="0">
+            <gux-month-list role="list">
               <mock:shadow-root>
                 <slot></slot>
               </mock:shadow-root>
@@ -156,7 +156,6 @@ exports[`gux-month-picker-beta #render should render the component as expected 1
                 Dec
               </gux-month-list-item>
             </gux-month-list>
-            <span tabindex="0"></span>
           </div>
         </mock:shadow-root>
       </gux-month-calendar>
