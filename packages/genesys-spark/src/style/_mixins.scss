@@ -49,3 +49,16 @@
     var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
     var(--gse-ui-menu-boxShadow-color);
 }
+
+@mixin gux-toolbar-prevent-initial-flicker-workaround {
+  opacity: 0;
+  animation-name: show-toolbar;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+
+  @keyframes show-toolbar {
+    to {
+      opacity: 1;
+    }
+  }
+}
