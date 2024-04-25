@@ -1,4 +1,15 @@
-@use '~genesys-spark/src/style/mixins.scss';
+@mixin gux-toolbar-prevent-initial-flicker-workaround {
+  opacity: 0;
+  animation-name: show-toolbar;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+
+  @keyframes show-toolbar {
+    to {
+      opacity: 1;
+    }
+  }
+}
 
 :host {
   display: flex;
@@ -8,7 +19,7 @@
   width: 100%;
   max-height: var(--gse-ui-dataTableItems-tableToolbar-height);
 
-  @include mixins.gux-toolbar-prevent-initial-flicker-workaround;
+  @include gux-toolbar-prevent-initial-flicker-workaround;
 
   .search-filter-container {
     min-width: 260px;
