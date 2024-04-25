@@ -97,6 +97,7 @@ export class GuxMonthCalendar {
   onKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Tab':
+        // Manually move focus to the selected month if the focus is currently on the next year arrow in the header
         if (!event.shiftKey && this.nextYearElement.matches(':focus-visible')) {
           const target: HTMLButtonElement = this.root.shadowRoot.querySelector(
             `gux-month-list-item[value="${this.value}"]`
