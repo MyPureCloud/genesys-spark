@@ -8,6 +8,9 @@
   "gux-avatar": {
     "notifications": "Bildirimler"
   },
+  "gux-avatar-change-photo": {
+    "changePhoto": "Profil fotoğrafını değiştir"
+  },
   "gux-badge": {
     "info": "etiketli rozet: {label}, vurgu: bilgi",
     "info-bold": "etiketli rozet: {label}, vurgu: bilgi kalın",
