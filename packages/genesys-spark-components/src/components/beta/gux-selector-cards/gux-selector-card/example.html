@@ -1,0 +1,89 @@
+<h1>gux-selector-card-beta</h1>
+
+<h2>Simple - Radio Button</h2>
+
+<div class="row">
+  <div class="card-container">
+    <h4>Default</h4>
+    <gux-selector-card-beta variant="simple">
+      <label slot="label" for="first">Card label</label>
+      <input
+        slot="input"
+        id="first"
+        type="radio"
+        name="example1"
+        value="card-label"
+      />
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+      <span slot="content"
+        >A label for a sample selector card. Used in Spark WCL.</span
+      >
+    </gux-selector-card-beta>
+  </div>
+
+  <div class="card-container">
+    <h4>Disabled - Unchecked</h4>
+    <gux-selector-card-beta variant="simple">
+      <label slot="label" for="second">Card Label</label>
+      <input
+        slot="input"
+        id="second"
+        type="radio"
+        name="example2"
+        disabled
+        value="card-label"
+      />
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+      <span slot="content" id="existing-id"
+        >A second label for a sample selector card. Used in Spark WCL.</span
+      >
+    </gux-selector-card-beta>
+  </div>
+
+  <div class="card-container">
+    <h4>Disabled - Checked</h4>
+    <gux-selector-card-beta variant="simple">
+      <label slot="label" for="third">Card Label</label>
+      <input
+        slot="input"
+        id="third"
+        type="radio"
+        name="example3"
+        disabled
+        checked
+        value="card-label"
+      />
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+    </gux-selector-card-beta>
+  </div>
+</div>
+<div class="row">
+  <div class="card-container">
+    <h4>Longer label</h4>
+    <gux-selector-card-beta variant="simple">
+      <label slot="label" for="fourth">A longer card label example</label>
+      <input
+        slot="input"
+        id="fourth"
+        type="radio"
+        name="example4"
+        value="card-label"
+      />
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+    </gux-selector-card-beta>
+  </div>
+</div>
+
+<style>
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+</style>
