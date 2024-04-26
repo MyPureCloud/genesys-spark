@@ -14,12 +14,11 @@
 
 ## Slots
 
-| Slot           | Description                          |
-| -------------- | ------------------------------------ |
-| `"groupError"` | Optional slot for groupError message |
-| `"groupHelp"`  | Optional slot for groupHelp message  |
-| `"input"`      | Required slot for input tag          |
-| `"label"`      | Required slot for label tag          |
+| Slot            | Description                           |
+| --------------- | ------------------------------------- |
+| `"group-error"` | Optional slot for group-error message |
+| `"group-help"`  | Optional slot for group-help message  |
+| `"group-label"` | Required slot for label tag           |
 
 
 ## Dependencies
@@ -32,9 +31,9 @@
 ### Graph
 ```mermaid
 graph TD;
-  gux-form-field-radio-group --> gux-screen-reader-beta
-  gux-form-field-radio-group --> gux-icon
-  style gux-form-field-radio-group fill:#f9f,stroke:#333,stroke-width:4px
+  gux-form-field-radio-group-beta --> gux-screen-reader-beta
+  gux-form-field-radio-group-beta --> gux-icon
+  style gux-form-field-radio-group-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-form-field-radio-beta #render should render component as expected (1) 1`] = `
+<gux-form-field-radio-group-beta>
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="group-label"></slot>
+      </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Pizza
+      </span>
+      <slot></slot>
+      <div class="gux-form-field-error">
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+        <div class="gux-message">
+          <slot name="group-error"></slot>
+        </div>
+      </div>
+      <div class="gux-form-field-help">
+        <div class="gux-message">
+          <slot name="group-help"></slot>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <label slot="group-label">
+    Food
+  </label>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="pizza">
+    <label slot="label">
+      Pizza
+    </label>
+  </gux-form-field-radio>
+</gux-form-field-radio-group-beta>
+`;

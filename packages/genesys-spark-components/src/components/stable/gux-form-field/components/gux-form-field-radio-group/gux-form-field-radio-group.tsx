@@ -14,17 +14,16 @@ import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 import { trackComponent } from '@utils/tracking/usage';
 
 /**
- * @slot input - Required slot for input tag
- * @slot label - Required slot for label tag
- * @slot groupError - Optional slot for groupError message
- * @slot groupHelp - Optional slot for groupHelp message
+ * @slot group-label - Required slot for label tag
+ * @slot group-error - Optional slot for group-error message
+ * @slot group-help - Optional slot for group-help message
  */
 @Component({
   styleUrl: 'gux-form-field-radio-group.scss',
-  tag: 'gux-form-field-radio-group',
+  tag: 'gux-form-field-radio-group-beta',
   shadow: true
 })
-export class GuxFormFieldRadioGroup {
+export class GuxFormFieldRadioGroupBeta {
   private disabledObserver: MutationObserver;
   private label: HTMLLabelElement;
 
@@ -66,13 +65,13 @@ export class GuxFormFieldRadioGroup {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
-    this.hasGroupError = hasSlot(this.root, 'groupError');
-    this.hasGroupHelp = hasSlot(this.root, 'groupHelp');
+    this.hasGroupError = hasSlot(this.root, 'group-error');
+    this.hasGroupHelp = hasSlot(this.root, 'group-help');
   }
 
   componentWillLoad(): void {
-    this.hasGroupError = hasSlot(this.root, 'groupError');
-    this.hasGroupHelp = hasSlot(this.root, 'groupHelp');
+    this.hasGroupError = hasSlot(this.root, 'group-error');
+    this.hasGroupHelp = hasSlot(this.root, 'group-help');
     this.setLabel();
     this.setDisabledRadio();
 
@@ -112,23 +111,23 @@ export class GuxFormFieldRadioGroup {
           required={false}
           labelText={this.label?.textContent}
         >
-          <slot name="label" onSlotchange={() => this.setLabel()} />
+          <slot name="group-label" onSlotchange={() => this.setLabel()} />
 
           {this.renderScreenReaderText(
-            getSlotTextContent(this.root, 'groupError'),
+            getSlotTextContent(this.root, 'group-error'),
             this.hasGroupError
           )}
           {this.renderScreenReaderText(
-            getSlotTextContent(this.root, 'groupHelp'),
+            getSlotTextContent(this.root, 'group-help'),
             this.hasGroupHelp
           )}
         </GuxFormFieldLegendLabel>
         <slot />
         <GuxFormFieldError show={this.hasGroupError}>
-          <slot name="groupError" />
+          <slot name="group-error" />
         </GuxFormFieldError>
         <GuxFormFieldHelp show={!this.hasGroupError && this.hasGroupHelp}>
-          <slot name="groupHelp" />
+          <slot name="group-help" />
         </GuxFormFieldHelp>
       </GuxFormFieldFieldsetContainer>
     ) as JSX.Element;

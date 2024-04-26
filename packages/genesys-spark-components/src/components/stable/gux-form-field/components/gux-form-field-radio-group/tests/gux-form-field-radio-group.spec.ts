@@ -1,34 +1,37 @@
 import { newSpecPage } from '@test/specTestUtils';
 
-import { GuxFormFieldRadioGroup } from '../gux-form-field-radio-group';
+import { GuxFormFieldRadioGroupBeta } from '../gux-form-field-radio-group';
 
-const components = [GuxFormFieldRadioGroup];
+const components = [GuxFormFieldRadioGroupBeta];
 const language = 'en';
 
-describe('gux-form-field-radio', () => {
+describe('gux-form-field-radio-beta', () => {
   it('should build', async () => {
     const html = `
-      <gux-form-field-radio>
-        <input slot="input" type="radio" name="food-1" value="pizza"/>
-        <label slot="label">Pizza</label>
-      </gux-form-field-radio>
+      <gux-form-field-radio-group-beta>
+        <label slot="group-label">Food</label>
+        <gux-form-field-radio>
+          <input slot="input" type="radio" name="food-1" value="pizza"/>
+          <label slot="label">Pizza</label>
+        </gux-form-field-radio>
+      </gux-form-field-radio-group-beta>
     `;
     const page = await newSpecPage({ components, html, language });
 
-    expect(page.rootInstance).toBeInstanceOf(GuxFormFieldRadioGroup);
+    expect(page.rootInstance).toBeInstanceOf(GuxFormFieldRadioGroupBeta);
   });
 
   describe('#render', () => {
     [
       `
-      <gux-form-field-radio-group>
-      <label slot="label">Food</label>
+      <gux-form-field-radio-group-beta>
+        <label slot="group-label">Food</label>
 
         <gux-form-field-radio>
           <input slot="input" type="radio" name="food-1" value="pizza"/>
           <label slot="label">Pizza</label>
         </gux-form-field-radio>
-      </gux-form-field-radio-group>
+      </gux-form-field-radio-group-beta>
       // `
       // `
       //   <gux-form-field-radio>

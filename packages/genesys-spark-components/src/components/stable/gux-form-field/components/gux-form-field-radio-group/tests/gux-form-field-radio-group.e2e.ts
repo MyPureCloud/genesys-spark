@@ -22,18 +22,18 @@ async function newNonrandomE2EPage({
   return page;
 }
 
-describe('gux-form-field-radio-group', () => {
+describe('gux-form-field-radio-group-beta', () => {
   describe('#render', () => {
     [
       `
-      <gux-form-field-radio-group>
-        <label slot="label">Food</label>
+      <gux-form-field-radio-group-beta>
+        <label slot="group-label">Food</label>
 
         <gux-form-field-radio>
           <input slot="input" type="radio" name="food-1" value="pizza"/>
           <label slot="label">Pizza</label>
         </gux-form-field-radio>
-      </gux-form-field-radio-group>
+      </gux-form-field-radio-group-beta>
       // `
       // `
       //   <gux-form-field-radio>
@@ -102,7 +102,7 @@ describe('gux-form-field-radio-group', () => {
   it('switches between states when clicked', async () => {
     const page = await newSparkE2EPage({
       html: `
-      <gux-form-field-radio-group>
+      <gux-form-field-radio-group-beta>
         <label slot="label">Food</label>
         <gux-form-field-radio id="pizza">
           <input slot="input" type="radio" name="food-1" value="pizza"/>
@@ -112,7 +112,7 @@ describe('gux-form-field-radio-group', () => {
           <input slot="input" type="radio" name="food-1" value="pasta"/>
           <label slot="label">Pasta</label>
         </gux-form-field-radio>
-      </gux-form-field-radio-group>
+      </gux-form-field-radio-group-beta>
 
       `
     });
