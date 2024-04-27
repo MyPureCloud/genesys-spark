@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.44.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.43.0...v4.44.0) (2024-04-27)
+
+
+### Features
+
+* **language:** translation updates ([#434](https://github.com/MyPureCloud/genesys-spark/issues/434)) ([8cc7e43](https://github.com/MyPureCloud/genesys-spark/commit/8cc7e439d7411d0e2b9e046476f7ae72aa95cccc))
+* **selector-card:** Simple radio selector card (card only) ([#409](https://github.com/MyPureCloud/genesys-spark/issues/409)) ([9012005](https://github.com/MyPureCloud/genesys-spark/commit/90120050932e4e55c69e40f6c8313407218323d7))
+
+
+### Bug Fixes
+
+* **table-toolbar:** fix initial glitchy render ([d952b9e](https://github.com/MyPureCloud/genesys-spark/commit/d952b9ee64464d52b775263222cc9f81aecd00db))
+* **table-toolbar:** fix initial glitchy render ([d25bb35](https://github.com/MyPureCloud/genesys-spark/commit/d25bb35602b683aa81bcbcb7c2e57d9ca9a18c2a))
+* **table-toolbar:** fix initial glitchy render ([c4777a5](https://github.com/MyPureCloud/genesys-spark/commit/c4777a59524fe30d417dc06c2021748fd0c71dea))
+
 ## [4.43.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.42.0...v4.43.0) (2024-04-26)
 
 
