@@ -162,12 +162,11 @@ export class GuxToggle {
             'gux-disabled': this.disabled || this.loading
           }}
         >
-          <div class="gux-toggle-input">
+          <div class="gux-toggle-input" onClick={this.toggle.bind(this)}>
             <gux-toggle-slider
               checked={this.checked}
               disabled={this.disabled || this.loading}
               guxAriaLabel={this.getAriaLabel()}
-              onClick={this.toggle.bind(this)}
               onKeyDown={this.onKeydown.bind(this)}
               labelId={
                 this.checkedLabel && this.uncheckedLabel ? this.labelId : ''
