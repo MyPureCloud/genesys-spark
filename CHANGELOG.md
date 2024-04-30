@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.45.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.44.0...v4.45.0) (2024-04-30)
+
+
+### Features
+
+* **tokens:** adjust islandaqua colors ([#435](https://github.com/MyPureCloud/genesys-spark/issues/435)) ([cb44f95](https://github.com/MyPureCloud/genesys-spark/commit/cb44f95b443e840258b8e7d39cb837051db9e696))
+
 ## [4.44.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.43.0...v4.44.0) (2024-04-27)
 
 
