@@ -218,7 +218,6 @@ export class GuxMonthCalendar {
           class="gux-year-change"
           onClick={() => this.changeYear(-1)}
           disabled={this.isPreviousYearLessThanMinYear(this.year, this.min)}
-          ref={(el: HTMLButtonElement) => (this.previousYearElement = el)}
         >
           <gux-icon
             icon-name="chevron-small-left"
@@ -269,13 +268,7 @@ export class GuxMonthCalendar {
       ) as JSX.Element;
     });
 
-    return (
-      <gux-month-list
-        ref={(el: HTMLGuxMonthListElement) => (this.monthListElement = el)}
-      >
-        {monthButtons}
-      </gux-month-list>
-    ) as JSX.Element;
+    return (<gux-month-list>{monthButtons}</gux-month-list>) as JSX.Element;
   }
 
   render(): JSX.Element {
