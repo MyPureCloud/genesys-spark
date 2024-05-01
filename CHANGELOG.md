@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.46.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.45.0...v4.46.0) (2024-05-01)
+
+
+### Features
+
+* **table:** Allow gux-button to inherit icon colour ([#437](https://github.com/MyPureCloud/genesys-spark/issues/437)) ([b4108dc](https://github.com/MyPureCloud/genesys-spark/commit/b4108dc340fe38201df62231e618bd50c1e21687))
+
+
+### Bug Fixes
+
+* **toggle:** Add option to click on label ([#438](https://github.com/MyPureCloud/genesys-spark/issues/438)) ([9b8bbbc](https://github.com/MyPureCloud/genesys-spark/commit/9b8bbbc9bd52d3720869c420f3862da8fbcc871f))
+
 ## [4.45.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.44.0...v4.45.0) (2024-04-30)
 
 
