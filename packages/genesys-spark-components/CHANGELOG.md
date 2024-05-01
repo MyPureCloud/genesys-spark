@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.124.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.124.0...v3.124.1) (2024-05-01)
+
+
+### Bug Fixes
+
+* **toggle:** make label clickable ([#440](https://github.com/MyPureCloud/genesys-spark/issues/440)) ([d3d5e3f](https://github.com/MyPureCloud/genesys-spark/commit/d3d5e3fc2abe938d8ea54d9a86b94ad46e1ecf2f))
+
 ## [3.124.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.123.0...v3.124.0) (2024-04-13)
 
 
