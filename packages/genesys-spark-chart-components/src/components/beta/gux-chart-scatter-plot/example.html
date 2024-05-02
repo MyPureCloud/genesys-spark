@@ -86,6 +86,8 @@
     const chart6 = document.querySelector('#chart-6');
     const chart7 = document.querySelector('#chart-7');
 
+    chart1.addEventListener('chartClicked', (event) => console.info(event));
+
     const chartData = {'values': [
       {'date': '2021-01-01', 'value': 9.4, 'category': 'Jupiter'},
       {'date': '2021-01-02', 'value': 12.8, 'category': 'Jupiter'},
@@ -157,5 +159,7 @@
 
   })()"
 >
+
+
   --noop: none;
 </style>
