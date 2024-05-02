@@ -62,10 +62,6 @@ button {
     display: inline-flex;
     align-items: center;
 
-    .gux-tooltip-content > * {
-      vertical-align: middle;
-    }
-
     gux-icon {
       width: var(--gse-ui-icon-size-sm);
       height: var(--gse-ui-icon-size-sm);
