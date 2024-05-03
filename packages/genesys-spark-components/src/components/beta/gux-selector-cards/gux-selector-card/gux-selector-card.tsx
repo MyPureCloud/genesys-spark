@@ -38,9 +38,6 @@ export class GuxSelectorCard {
   @State()
   private disabled: boolean;
 
-  @State()
-  private checked: boolean;
-
   componentWillLoad(): void {
     this.setInput();
     trackComponent(this.root, { variant: this.variant });
@@ -57,7 +54,7 @@ export class GuxSelectorCard {
       this.root,
       'input[type="radio"][slot="input"]'
     );
-    this.checked = this.input.checked;
+
     preventBrowserValidationStyling(this.input);
 
     setSlotAriaDescribedby(this.root, this.input, 'content');
@@ -72,11 +69,6 @@ export class GuxSelectorCard {
     );
 
     validateFormIds(this.root, this.input);
-  }
-
-  private setChecked(): void {
-    this.input.checked = true;
-    this.checked = true;
   }
 
   private renderContent(): JSX.Element | null {
@@ -102,11 +94,10 @@ export class GuxSelectorCard {
       <Host
         class={{
           [`gux-${this.variant}`]: true,
-          'gux-checked': this.checked,
           'gux-disabled': this.disabled
         }}
       >
-        <div class="gux-content" onClick={() => this.setChecked()}>
+        <div class="gux-content">
           <div class="gux-icon">
             <slot name="icon" />
           </div>
