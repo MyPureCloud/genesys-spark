@@ -14,3 +14,13 @@
 :host {
   display: block;
 }
+
+:host([disabled]) {
+  .gux-form-field-legend-label {
+    opacity: var(--gse-ui-formControl-input-disabled-opacity);
+  }
+}
+
+.gux-form-field-legend-label {
+  @include gux-form-field.gse-ui-formControl-label;
+}
