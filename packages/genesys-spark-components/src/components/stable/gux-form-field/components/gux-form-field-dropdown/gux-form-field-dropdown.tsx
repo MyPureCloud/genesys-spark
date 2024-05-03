@@ -14,7 +14,11 @@ import {
 } from '../../functional-components/functional-components';
 import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 
-import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
+import {
+  GuxFormFieldLabelPosition,
+  GuxFormFieldIndicatorMark
+} from '../../gux-form-field.types';
+
 import {
   getComputedLabelPosition,
   setSlotAriaLabelledby,
@@ -46,6 +50,9 @@ export class GuxFormFieldDropdown {
 
   @Prop()
   labelPosition: GuxFormFieldLabelPosition;
+
+  @Prop()
+  indicatorMark: GuxFormFieldIndicatorMark;
 
   @State()
   private computedLabelPosition: GuxFormFieldLabelPosition = 'above';
@@ -112,6 +119,7 @@ export class GuxFormFieldDropdown {
           position={this.computedLabelPosition}
           required={this.required}
           labelText={this.label?.textContent}
+          indicatorMark={this.indicatorMark}
         >
           <slot name="label" onSlotchange={() => this.setLabel()} />
           {this.renderScreenReaderText(

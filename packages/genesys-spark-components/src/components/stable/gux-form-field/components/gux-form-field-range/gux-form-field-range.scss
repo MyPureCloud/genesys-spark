@@ -56,7 +56,7 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
 }
 
 ::slotted(label) {
-  @include gux-form-field.gse-ui-formControl-label;
+  @include gux-form-field.gse-ui-formControl-label-bold;
 }
 
 ::slotted(input[type='range']) {

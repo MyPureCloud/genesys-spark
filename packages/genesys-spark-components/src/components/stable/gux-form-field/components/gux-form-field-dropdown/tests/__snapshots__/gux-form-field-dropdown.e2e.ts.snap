@@ -12,6 +12,7 @@ exports[`gux-form-field-dropdown #render help should render component as expecte
   </legend>
   <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -44,6 +45,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
   </legend>
   <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
@@ -76,6 +78,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
   </legend>
   <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
@@ -108,6 +111,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
   </legend>
   <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
@@ -140,6 +144,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown label-position sh
   </legend>
   <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
@@ -169,6 +174,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
   </legend>
   <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -198,6 +204,7 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
   </legend>
   <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -228,8 +235,13 @@ exports[`gux-form-field-dropdown #render multi select dropdown should render com
       Required
     </gux-screen-reader-beta>
   </legend>
-  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label gux-required" role="presentation">
+  <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated="">
+      <span aria-hidden="true" class="gux-form-field-label-indicator-required">
+        *
+      </span>
+    </gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -259,6 +271,7 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
   </legend>
   <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
     This will be read by a screen reader
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -288,6 +301,7 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
   </legend>
   <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
     This will be read by a screen reader
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -318,8 +332,13 @@ exports[`gux-form-field-dropdown #render single select dropdown input attributes
       Required
     </gux-screen-reader-beta>
   </legend>
-  <span aria-hidden="true" class="gux-above gux-form-field-legend-label gux-required" role="presentation">
+  <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
     This will be read by a screen reader
+    <gux-form-field-label-indicator hydrated="">
+      <span aria-hidden="true" class="gux-form-field-label-indicator-required">
+        *
+      </span>
+    </gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -352,6 +371,7 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
   </legend>
   <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
@@ -384,6 +404,7 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
   </legend>
   <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
@@ -416,6 +437,7 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
   </legend>
   <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">
@@ -448,6 +470,7 @@ exports[`gux-form-field-dropdown #render single select dropdown label-position s
   </legend>
   <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
     Default
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-input-error">

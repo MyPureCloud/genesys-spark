@@ -9,6 +9,7 @@
 
 | Property        | Attribute        | Description | Type                                    | Default     |
 | --------------- | ---------------- | ----------- | --------------------------------------- | ----------- |
+| `indicatorMark` | `indicator-mark` |             | `"optional" \| "required"`              | `undefined` |
 | `labelPosition` | `label-position` |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
 
 

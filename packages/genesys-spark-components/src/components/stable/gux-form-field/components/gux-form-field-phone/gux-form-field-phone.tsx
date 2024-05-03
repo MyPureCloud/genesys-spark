@@ -13,7 +13,10 @@ import { GuxFormFieldFieldsetContainer } from '../../functional-components/gux-f
 import { GuxFormFieldError } from '../../functional-components/gux-form-field-error/gux-form-field-error';
 import { GuxFormFieldLegendLabel } from '../../functional-components/gux-form-field-legend-label/gux-form-field-legend-label';
 
-import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
+import {
+  GuxFormFieldLabelPosition,
+  GuxFormFieldIndicatorMark
+} from '../../gux-form-field.types';
 import { hasSlot } from '@utils/dom/has-slot';
 import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 import {
@@ -47,6 +50,14 @@ export class GuxFormFieldPhone {
 
   @Prop()
   labelPosition: GuxFormFieldLabelPosition;
+
+  /**
+   * Field indicator mark which can show *, (optional) or blank
+   * Defaults to required. When set to required, the component will display * for required fields and blank for optional
+   * When set to optional, the component will display (optional) for optional and blank for required.
+   */
+  @Prop()
+  indicatorMark: GuxFormFieldIndicatorMark;
 
   @State()
   private computedLabelPosition: GuxFormFieldLabelPosition = 'above';
@@ -104,6 +115,7 @@ export class GuxFormFieldPhone {
           position={this.computedLabelPosition}
           required={this.required}
           labelText={this.label?.textContent}
+          indicatorMark={this.indicatorMark}
         >
           <slot name="label" onSlotchange={() => this.setLabel()} />
           {this.renderScreenReaderText(

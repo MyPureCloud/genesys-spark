@@ -21,6 +21,7 @@
  - [gux-form-field-color](../../components/gux-form-field-color)
  - [gux-form-field-dropdown](../../components/gux-form-field-dropdown)
  - [gux-form-field-number](../../components/gux-form-field-number)
+ - [gux-form-field-phone](../../components/gux-form-field-phone)
  - [gux-form-field-radio](../../components/gux-form-field-radio)
  - [gux-form-field-range](../../components/gux-form-field-range)
  - [gux-form-field-search](../../components/gux-form-field-search)
@@ -37,6 +38,7 @@ graph TD;
   gux-form-field-color --> gux-form-field-label-indicator
   gux-form-field-dropdown --> gux-form-field-label-indicator
   gux-form-field-number --> gux-form-field-label-indicator
+  gux-form-field-phone --> gux-form-field-label-indicator
   gux-form-field-radio --> gux-form-field-label-indicator
   gux-form-field-range --> gux-form-field-label-indicator
   gux-form-field-search --> gux-form-field-label-indicator

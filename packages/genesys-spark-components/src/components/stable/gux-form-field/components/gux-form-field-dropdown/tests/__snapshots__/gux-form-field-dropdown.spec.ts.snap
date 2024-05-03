@@ -12,6 +12,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -124,6 +125,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -219,6 +221,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -325,6 +328,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -432,8 +436,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
           Required
         </gux-screen-reader-beta>
       </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label gux-required" role="presentation">
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -540,6 +545,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -646,6 +652,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -752,6 +759,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
       </legend>
       <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -858,6 +866,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
       </legend>
       <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -964,6 +973,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -1056,6 +1066,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -1149,8 +1160,9 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
           Required
         </gux-screen-reader-beta>
       </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label gux-required" role="presentation">
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -1243,6 +1255,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -1335,6 +1348,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -1427,6 +1441,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
       </legend>
       <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -1519,6 +1534,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
       </legend>
       <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">

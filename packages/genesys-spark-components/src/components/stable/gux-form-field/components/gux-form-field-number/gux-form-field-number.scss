@@ -16,7 +16,7 @@ $gux-form-field-number-step-button-size: 14px;
 }
 
 ::slotted(label) {
-  @include gux-form-field.gse-ui-formControl-label;
+  @include gux-form-field.gse-ui-formControl-label-bold;
 }
 
 ::slotted(input) {
