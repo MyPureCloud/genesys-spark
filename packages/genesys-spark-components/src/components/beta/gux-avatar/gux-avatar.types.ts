@@ -1,5 +1,7 @@
 export type GuxAvatarSize = 'xsmall' | 'small' | 'medium' | 'large';
 
+export type GuxAvatarUcIntegrationApps = 'teams' | 'zoom' | '8x8' | 'none';
+
 export type GuxAvatarAccent =
   | 'default'
   | 'auto'

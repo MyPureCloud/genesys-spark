@@ -8,6 +8,9 @@
   "gux-avatar": {
     "notifications": "Ilmoitukset"
   },
+  "gux-avatar-change-photo": {
+    "changePhoto": "Vaihda profiilikuva"
+  },
   "gux-badge": {
     "info": "selitteellinen merkki: {label}, korostus: tieto",
     "info-bold": "selitteellinen merkki: {label}, korostus: lihavoitu tieto",

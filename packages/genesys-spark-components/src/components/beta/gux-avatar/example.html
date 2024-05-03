@@ -1,5 +1,4 @@
 <h1>gux-avatar-beta</h1>
-
 <h2>Image</h2>
 <gux-avatar-beta name="Conor Darcy">
   <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy" />
@@ -109,6 +108,16 @@
       </gux-dropdown>
       <label slot="label">Presence</label>
     </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown value="" id="update-uc-integration">
+        <gux-listbox aria-label="Update Uc Inegration">
+          <gux-option value="zoom">Zoom</gux-option>
+          <gux-option value="teams">Teams</gux-option>
+          <gux-option value="8x8">8x8</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">UcIntegration</label>
+    </gux-form-field-dropdown>
     <gux-form-field-text-like>
       <input
         slot="input"
@@ -146,13 +155,15 @@
         const updateName = document.getElementById('update-name');
         const updateLabel = document.getElementById('update-label');
         const updatePresence = document.getElementById('update-presence');
-        const updateBadge = document.getElementsByName('update-badge')[0];
-        const updateRing = document.getElementsByName('update-ring')[0];
-        const updateNotifications = document.getElementsByName('update-notifications')[0];
+        const updateUcIntegraton = document.getElementById('update-uc-integration');
+        const updateBadge = document.querySelector('[name=update-badge]');
+        const updateRing = document.querySelector('[name=update-ring]');
+        const updateNotifications = document.querySelector('[name=update-notifications]');
         avatar.setAttribute('size', updateSize.value);
         avatar.setAttribute('name', updateName.value);
         avatar.setAttribute('label', updateLabel.value);
         avatar.setAttribute('presence', updatePresence.value);
+        avatar.setAttribute('uc-integration', updateUcIntegraton.value);
         avatar.setAttribute('badge', updateBadge.checked);
         avatar.setAttribute('ring', updateRing.checked);
         avatar.setAttribute('notifications', updateNotifications.checked);
@@ -382,7 +393,7 @@
   />
 </gux-avatar-beta>
 <gux-avatar-beta
-  name="Conor Darcy"
+  name="Joe Errity"
   presence="available"
   label="Available"
   badge
@@ -391,7 +402,7 @@
 >
 </gux-avatar-beta>
 <gux-avatar-beta
-  name="Conor Darcy"
+  name="Martin Hanamy"
   presence="available"
   label="Available"
   badge
@@ -400,7 +411,7 @@
 >
 </gux-avatar-beta>
 <gux-avatar-beta
-  name="Conor Darcy"
+  name="Hubert Rigney"
   presence="available"
   label="Available"
   badge
@@ -419,7 +430,7 @@
   notifications
 ></gux-avatar-beta>
 <gux-avatar-beta
-  name="Conor Darcy"
+  name="Kevin Martin"
   presence="available"
   badge
   ring
@@ -428,11 +439,11 @@
   <img
     slot="image"
     src="https://i.pravatar.cc/300"
-    alt="Conor Darcy (available)"
+    alt="Kevin Martin (available)"
   />
 </gux-avatar-beta>
 <gux-avatar-beta
-  name="Conor Darcy"
+  name="John Troy"
   label="Available"
   presence="available"
   badge
@@ -440,7 +451,7 @@
 >
 </gux-avatar-beta>
 <gux-avatar-beta
-  name="Conor Darcy"
+  name="Billy Dooley"
   presence="available"
   label="Available"
   badge
@@ -450,7 +461,7 @@
 >
 </gux-avatar-beta>
 <gux-avatar-beta
-  name="Conor Darcy"
+  name="Gary Hanniffy"
   presence="available"
   label="Available"
   badge
@@ -460,7 +471,7 @@
 >
 </gux-avatar-beta>
 <gux-avatar-beta
-  name="Conor Darcy"
+  name="Stephen Byrne"
   presence="available"
   label="Available"
   badge
@@ -469,6 +480,53 @@
   size="xsmall"
 >
 </gux-avatar-beta>
+<h2>UC Integration App Badge</h2>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  badge
+  ring
+  notifications
+  uc-integration="teams"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  badge
+  uc-integration="zoom"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  ring
+  uc-integration="8x8"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  ring
+  uc-integration="invalid-app"
+>
+</gux-avatar-beta>
+<gux-avatar-focusable-beta>
+  <gux-avatar-change-photo-beta>
+    <gux-avatar-beta
+      slot="avatar"
+      presence="busy"
+      ring
+      badge
+      name="Conor Darcy"
+      uc-integration="zoom"
+    ></gux-avatar-beta>
+  </gux-avatar-change-photo-beta>
+</gux-avatar-focusable-beta>
 
 <h2>gux-avatar-focusable</h2>
 <p>
@@ -478,12 +536,12 @@
 <h3>Button</h3>
 <div class="wrapped-examples">
   <gux-avatar-focusable-beta>
-    <button>
+    <button onclick="notify(event)">
       <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
     </button>
   </gux-avatar-focusable-beta>
   <gux-avatar-focusable-beta>
-    <button>
+    <button onclick="notify(event)">
       <gux-avatar-beta
         name="Conor Darcy"
         presence="available"
@@ -492,7 +550,7 @@
     </button>
   </gux-avatar-focusable-beta>
   <gux-avatar-focusable-beta>
-    <button>
+    <button onclick="notify(event)">
       <gux-avatar-beta
         name="Conor Darcy"
         presence="available"
@@ -501,7 +559,7 @@
     </button>
   </gux-avatar-focusable-beta>
   <gux-avatar-focusable-beta>
-    <button>
+    <button onclick="notify(event)">
       <gux-avatar-beta
         name="Conor Darcy"
         presence="available"
@@ -511,7 +569,7 @@
     </button>
   </gux-avatar-focusable-beta>
   <gux-avatar-focusable-beta>
-    <button>
+    <button onclick="notify(event)">
       <gux-avatar-beta
         size="medium"
         name="Conor Darcy"
@@ -522,7 +580,7 @@
     </button>
   </gux-avatar-focusable-beta>
   <gux-avatar-focusable-beta>
-    <button>
+    <button onclick="notify(event)">
       <gux-avatar-beta
         size="small"
         name="Conor Darcy"
@@ -533,7 +591,7 @@
     </button>
   </gux-avatar-focusable-beta>
   <gux-avatar-focusable-beta>
-    <button>
+    <button onclick="notify(event)">
       <gux-avatar-beta
         size="xsmall"
         name="Conor Darcy"
@@ -614,6 +672,46 @@
     </a>
   </gux-avatar-focusable-beta>
 </div>
+<h2>Change Photo (large only)</h2>
+<div class="wrapped-examples">
+  <gux-avatar-focusable-beta>
+    <gux-avatar-change-photo-beta>
+      <gux-avatar-beta slot="avatar" name="Conor Darcy"></gux-avatar-beta>
+    </gux-avatar-change-photo-beta>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <gux-avatar-change-photo-beta>
+      <gux-avatar-beta
+        slot="avatar"
+        name="Conor Darcy"
+        presence="available"
+        badge
+      ></gux-avatar-beta>
+    </gux-avatar-change-photo-beta>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <gux-avatar-change-photo-beta>
+      <gux-avatar-beta
+        slot="avatar"
+        name="Conor Darcy"
+        presence="available"
+        ring
+      ></gux-avatar-beta>
+    </gux-avatar-change-photo-beta>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <gux-avatar-change-photo-beta>
+      <gux-avatar-beta
+        slot="avatar"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </gux-avatar-change-photo-beta>
+  </gux-avatar-focusable-beta>
+</div>
+
 <style>
   .name-example {
     display: flex;

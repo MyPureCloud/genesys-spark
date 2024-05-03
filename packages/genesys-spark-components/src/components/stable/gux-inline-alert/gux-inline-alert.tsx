@@ -5,7 +5,7 @@ import { GuxAlertAccent } from './gux-inline-alert.types';
 import translationResources from './i18n/en.json';
 
 /**
- * @slot - Slot for message.
+ * @slot content - Slot for the message.
  */
 
 @Component({
@@ -50,10 +50,14 @@ export class GuxAlert {
           [`gux-${this.accent}`]: true
         }}
       >
-        <gux-icon icon-name={this.getIcon(this.accent)} decorative></gux-icon>
         <div class="gux-message-wrapper">
+          <gux-icon icon-name={this.getIcon(this.accent)} decorative></gux-icon>
           <div class="gux-sr-only">{this.i18n(this.accent)}</div>
-          <slot />
+          <div class="gux-content">
+            <slot name="content">
+              <slot />
+            </slot>
+          </div>
         </div>
       </div>
     ) as JSX.Element;

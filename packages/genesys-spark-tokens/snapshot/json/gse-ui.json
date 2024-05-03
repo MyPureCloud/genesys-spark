@@ -18,7 +18,7 @@
       },
       "box_shadow": {
         "x": 0,
-        "y": "4px",
+        "y": 0,
         "blur": "6px",
         "spread": "1px",
         "color": "#23395c1f",
@@ -56,7 +56,7 @@
     },
     "box_shadow": {
       "x": 0,
-      "y": "4px",
+      "y": 0,
       "blur": "6px",
       "spread": "1px",
       "color": "#23395c1f",
@@ -88,7 +88,7 @@
       "foreground_color": "#1b2c48"
     },
     "accent3": {
-      "background_color": "#0D7482",
+      "background_color": "#0C6D7E",
       "foreground_color": "#ffffff"
     },
     "accent4": {

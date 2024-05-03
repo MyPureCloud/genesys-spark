@@ -26,12 +26,18 @@ describe('gux-avatar', () => {
       });
     });
 
-    it(`component with image`, async () => {
-      const html = `<gux-avatar-beta name="John Doe"><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`;
-      const page = await newSpecPage({ components: [GuxAvatar], html });
+    [
+      `<gux-avatar-beta name="John Doe"><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`,
+      `<gux-avatar-beta name="John Doe"><img slot="image" alt="John Doe Image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`
+    ].forEach((html, index) => {
+      it(`component with image type (${
+        index + 1
+      }) for valid markup`, async () => {
+        const page = await newSpecPage({ components: [GuxAvatar], html });
 
-      expect(page.root).toMatchSnapshot();
-      expect(logWarn).not.toHaveBeenCalled();
+        expect(page.root).toMatchSnapshot();
+        expect(logWarn).not.toHaveBeenCalled();
+      });
     });
   });
 
@@ -44,6 +50,12 @@ describe('gux-avatar', () => {
 
     it(`should log warning for avatar image without alt tag"`, async () => {
       const html = `<gux-avatar-beta name="John Doe"><img slot="image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`;
+      await newSpecPage({ components: [GuxAvatar], html });
+      expect(logWarn).toHaveBeenCalled();
+    });
+
+    it(`should log warning for avatar with uc integration that isn't large"`, async () => {
+      const html = `<gux-avatar-beta name="John Doe" uc-integration="teams" size="medium"><img slot="image" src="https://i.pravatar.cc/300" /></gux-avatar-beta>`;
       await newSpecPage({ components: [GuxAvatar], html });
       expect(logWarn).toHaveBeenCalled();
     });
@@ -134,6 +146,19 @@ describe('gux-avatar', () => {
 
         expect(page.root).toMatchSnapshot();
       });
+    });
+
+    describe('#render different uc-integration logos', () => {
+      ['zoom', 'teams', '8x8', 'invalid-uc-integration'].forEach(
+        (app: string) => {
+          it(`should work as expected for "${app}"`, async () => {
+            const html = `<gux-avatar-beta name="John Doe" uc-integration=${app}></gux-avatar-beta>`;
+            const page = await newSpecPage({ components: [GuxAvatar], html });
+
+            expect(page.root).toMatchSnapshot();
+          });
+        }
+      );
     });
 
     describe('#render notification badge', () => {

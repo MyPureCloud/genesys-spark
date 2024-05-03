@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-avatar #render component with valid markup 1`] = `
+<gux-avatar-change-photo-beta>
+  <mock:shadow-root>
+    <button aria-describedby="gux-change-photo-icon" class="gux-change-photo">
+      <gux-icon class="gux-change-photo-icon" icon-name="fa/camera-solid" id="gux-change-photo-icon" screenreadertext="Change profile photo" size="small"></gux-icon>
+      <slot name="avatar"></slot>
+    </button>
+  </mock:shadow-root>
+  <gux-avatar-beta name="Conor Darcy" slot="avatar"></gux-avatar-beta>
+</gux-avatar-change-photo-beta>
+`;

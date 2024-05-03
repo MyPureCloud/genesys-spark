@@ -9,7 +9,7 @@
   --gse-ui-card-raised-border-width: 1px;
   --gse-ui-card-raised-border-style: solid;
   --gse-ui-card-raised-boxShadow-x: 0;
-  --gse-ui-card-raised-boxShadow-y: 4px;
+  --gse-ui-card-raised-boxShadow-y: 0;
   --gse-ui-card-raised-boxShadow-blur: 6px;
   --gse-ui-card-raised-boxShadow-spread: 1px;
   --gse-ui-card-raised-boxShadow-color: #23395c1f;
@@ -30,7 +30,7 @@
   --gse-ui-tooltip-dark-foregroundColor: #ffffff;
   --gse-ui-tooltip-dark-iconColor: #ffffff;
   --gse-ui-tooltip-boxShadow-x: 0;
-  --gse-ui-tooltip-boxShadow-y: 4px;
+  --gse-ui-tooltip-boxShadow-y: 0;
   --gse-ui-tooltip-boxShadow-blur: 6px;
   --gse-ui-tooltip-boxShadow-spread: 1px;
   --gse-ui-tooltip-boxShadow-color: #23395c1f;
@@ -50,7 +50,7 @@
   --gse-ui-tag-accent1-foregroundColor: #1b2c48;
   --gse-ui-tag-accent2-backgroundColor: #90d3dd;
   --gse-ui-tag-accent2-foregroundColor: #1b2c48;
-  --gse-ui-tag-accent3-backgroundColor: #0d7482;
+  --gse-ui-tag-accent3-backgroundColor: #0c6d7e;
   --gse-ui-tag-accent3-foregroundColor: #ffffff;
   --gse-ui-tag-accent4-backgroundColor: #547688;
   --gse-ui-tag-accent4-foregroundColor: #ffffff;

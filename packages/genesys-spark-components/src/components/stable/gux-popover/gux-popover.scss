@@ -19,9 +19,25 @@
   .gux-arrow {
     position: absolute;
     width: var(--gse-ui-popover-anchor-width);
-    height: var(--gse-ui-popover-anchor-width);
-    background: var(--gse-ui-popover-backgroundColor);
-    border-radius: var(--gse-ui-flyoutMenu-arrow-borderRadius);
+    height: var(--gse-ui-popover-anchor-height);
+
+    /* 4px padding leaves some space for the shadow to bleed into */
+    padding-bottom: 4px;
+    overflow: hidden;
+  }
+
+  .gux-arrow-caret {
+    width: 0;
+    height: 0;
+    filter: drop-shadow(
+      var(--gse-ui-popover-boxShadow-x) var(--gse-ui-popover-boxShadow-y)
+        calc(var(--gse-ui-popover-boxShadow-blur) / 2)
+        var(--gse-ui-tooltip-boxShadow-color)
+    );
+    border-top: calc(var(--gse-ui-popover-anchor-width) / 2) solid
+      var(--gse-ui-popover-backgroundColor);
+    border-right: calc(var(--gse-ui-popover-anchor-width) / 2) solid transparent;
+    border-left: calc(var(--gse-ui-popover-anchor-width) / 2) solid transparent;
   }
 
   .gux-popover-header {
