@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.48.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.47.0...v4.48.0) (2024-05-04)
+
+
+### Features
+
+* **selector-cards:** Selector cards group ([#436](https://github.com/MyPureCloud/genesys-spark/issues/436)) ([4c36cf2](https://github.com/MyPureCloud/genesys-spark/commit/4c36cf211b977c0b88f6f9e8c1ea2ae8fc097e2f))
+
 ## [4.47.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.46.0...v4.47.0) (2024-05-02)
 
 
