@@ -94,6 +94,8 @@ export class GuxVisualization {
   }
 
   render(): JSX.Element {
-    return (<div ref={el => (this.chartContainer = el)}></div>) as JSX.Element;
+    return (
+      <div class="chart-container" ref={el => (this.chartContainer = el)}></div>
+    ) as JSX.Element;
   }
 }
