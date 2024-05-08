@@ -32,6 +32,214 @@ exports[`gux-date #render different datetime formats eg(short,medium,full,long) 
 </gux-date-beta>
 `;
 
+exports[`gux-date #render different languages should work as expected for ar 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    الخميس، ٧ يوليو ٢٠٢٢
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for cs 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    čtvrtek 7. července 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for da 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    torsdag den 7. juli 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for de 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    Donnerstag, 7. Juli 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for en 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    Thursday, July 7, 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for es 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    jueves, 7 de julio de 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for es-es 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    jueves, 7 de julio de 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for fi 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    torstai 7. heinäkuuta 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for fr 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    jeudi 7 juillet 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for fr-ca 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    jeudi 7 juillet 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for he 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    יום חמישי, 7 ביולי 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for it 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    giovedì 7 luglio 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for ja 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    2022年7月7日木曜日
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for ko 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    2022년 7월 7일 목요일
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for nl 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    donderdag 7 juli 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for no 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    torsdag 7. juli 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for pl 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    czwartek, 7 lipca 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for pt-br 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    quinta-feira, 7 de julho de 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for pt-pt 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    quinta-feira, 7 de julho de 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for ru 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    четверг, 7 июля 2022 г.
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for sv 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    torsdag 7 juli 2022
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for th 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    วันพฤหัสบดีที่ 7 กรกฎาคม พ.ศ. 2565
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for tr 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    7 Temmuz 2022 Perşembe
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for uk 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    четвер, 7 липня 2022 р.
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for zh-cn 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    2022年7月7日星期四
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render different languages should work as expected for zh-tw 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <mock:shadow-root>
+    2022年7月7日 星期四
+  </mock:shadow-root>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render different time zones should work as expected for "Africa/Abidjan" 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Africa/Abidjan">
   <mock:shadow-root>

@@ -116,10 +116,5 @@ describe('gux-datepicker', () => {
     expect(labels[0].className).not.toContain('gux-sr-only');
     expect(labels[1].textContent).toBe('End');
 
-    // await element.setAttribute('label', ['test1', 'test2']);
-    // await page.waitForChanges();
-    // expect(labels[0].textContent).toEqual('test1');
-    // expect(labels[0].className).not.toContain('gux-sr-only');
-    // expect(labels[1].textContent).toEqual('test2');
   });
 });
