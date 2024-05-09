@@ -418,7 +418,8 @@
       "spread": "1px",
       "color": "#23395c1a",
       "type": "dropShadow"
-    }
+    },
+    "divider": "#c6c8ce"
   },
   "date_picker": {
     "range": {
@@ -436,7 +437,9 @@
     },
     "focus_calendar": {
       "gap": "3px"
-    }
+    },
+    "icon_hover": "#3742A2",
+    "icon_focus": "#3742A2"
   },
   "toggle": {
     "label": {
