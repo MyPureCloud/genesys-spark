@@ -65,7 +65,8 @@ export function relativeTimeFormat(
 export function determineDisplayLocale(
   element: HTMLElement = document.body
 ): string {
-  const domLocale = (getClosestElement(element, '*[lang]') as HTMLElement)?.lang;
+  const domLocale = (getClosestElement(element, '*[lang]') as HTMLElement)
+    ?.lang;
   if (!domLocale || browserHasRegionData(domLocale)) {
     // If we can't find a locale in the DOM, or we find a locale without a region that matches the
     // users's browser locale, use the browser locale.

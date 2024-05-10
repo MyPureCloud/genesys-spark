@@ -115,6 +115,5 @@ describe('gux-datepicker', () => {
     expect(labels[0].textContent).toBe('Start');
     expect(labels[0].className).not.toContain('gux-sr-only');
     expect(labels[1].textContent).toBe('End');
-
   });
 });

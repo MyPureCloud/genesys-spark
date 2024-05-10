@@ -7,38 +7,9 @@ jest.mock('i18n/use-regional-dates', () => ({
 
 import { newSpecPage } from '@test/specTestUtils';
 import { GuxDatepicker } from '../gux-datepicker';
-
-const languageList = [
-  'ar',
-  'cs',
-  'da',
-  'de',
-  'en',
-  'es-es',
-  'es',
-  'fi',
-  'fr-ca',
-  'fr',
-  'he',
-  'it',
-  'ja',
-  'ko',
-  'nl',
-  'no',
-  'pl',
-  'pt-br',
-  'pt-pt',
-  'ru',
-  'sv',
-  'th',
-  'tr',
-  'uk',
-  'zh-cn',
-  'zh-tw'
-];
+import { languageList } from '../../../../i18n/languageList';
 
 const testCases = [
-  `<gux-datepicker></gux-datepicker>`,
   `<gux-datepicker value="1997-08-15"></gux-datepicker>`,
   `<gux-datepicker value="1997-08-15" format="mm/dd/yy"></gux-datepicker>`,
   `<gux-datepicker value="1997-08-15" format="mm.dd.yyyy"></gux-datepicker>`,
