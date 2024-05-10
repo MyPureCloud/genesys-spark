@@ -188,7 +188,7 @@
 
           &:not(:disabled):focus-visible,
           &:not(:disabled):hover {
-            color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
+            color: var(--gse-ui-datePicker-iconHover);
             cursor: pointer;
           }
 
