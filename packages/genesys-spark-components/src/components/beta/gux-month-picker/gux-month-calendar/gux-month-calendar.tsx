@@ -65,6 +65,9 @@ export class GuxMonthCalendar {
   @State()
   locale: string;
 
+  @State()
+  previewValue: string;
+
   @Watch('value')
   onValueUpdate(newValue: GuxISOYearMonth) {
     const { year } = getYearMonthObject(newValue);
@@ -100,8 +103,10 @@ export class GuxMonthCalendar {
         // Manually move focus to the selected month if the focus is currently on the next year arrow in the header
         if (!event.shiftKey && this.nextYearElement.matches(':focus-visible')) {
           const target: HTMLButtonElement = this.root.shadowRoot.querySelector(
-            `gux-month-list-item[value="${this.value}"]`
+            `gux-month-list-item[value="${this.previewValue}"]`
           );
+          console.log('this.value', this.value);
+          console.log('target', target);
           if (target) {
             target.focus();
           }
@@ -121,6 +126,7 @@ export class GuxMonthCalendar {
     }
     if (this.value) {
       this.year = getYearMonthObject(this.value).year;
+      this.updatePreviewValue(this.value);
     } else {
       this.year = getYearMonthObject(getCurrentISOYearMonth()).year;
     }
@@ -128,9 +134,14 @@ export class GuxMonthCalendar {
 
   private updateValue(value: GuxISOYearMonth): void {
     this.value = value;
+    this.updatePreviewValue(value);
 
     simulateNativeEvent(this.root, 'input');
     simulateNativeEvent(this.root, 'change');
+  }
+
+  private updatePreviewValue(value: GuxISOYearMonth): void {
+    this.previewValue = value;
   }
 
   private isOutOfBounds(value: GuxISOYearMonth): boolean {
@@ -181,6 +192,9 @@ export class GuxMonthCalendar {
 
   private changeYear(increment: number): void {
     this.year = (parseInt(this.year) + increment).toString();
+    const month = getYearMonthObject(this.value).month;
+    const value = getISOYearMonth(this.year, month);
+    this.updatePreviewValue(value);
   }
 
   private isPreviousYearLessThanMinYear(
