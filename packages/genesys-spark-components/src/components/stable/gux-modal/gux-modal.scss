@@ -91,7 +91,7 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
         margin-top: var(--gse-ui-modal-gap);
 
         &.gux-no-buttons {
-          margin-top: 0;
+          display: none;
         }
       }
     }

@@ -132,7 +132,7 @@ export class GuxModal {
 
           {hasModalTitleSlot && this.renderTitle(titleID)}
 
-          <div class="'gux-modal-content">
+          <div class="gux-modal-content">
             <p>
               <slot name="content" />
             </p>
