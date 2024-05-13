@@ -585,5 +585,44 @@
     "focus": {
       "offset": 0
     }
+  },
+  "form_footer": {
+    "page": {
+      "desktop": {
+        "bottom_padding": "16px",
+        "horizontal_padding": "32px",
+        "gap": "16px"
+      },
+      "mobile": {
+        "bottom_padding": "16px",
+        "horizontal_padding": "16px",
+        "gap": "16px"
+      }
+    },
+    "separator": {
+      "color": "#c6c8ce",
+      "width": 1,
+      "style": "solid"
+    },
+    "side_sheet": {
+      "desktop": {
+        "bottom_padding": "16px",
+        "horizontal_padding": "24px",
+        "gap": "16px"
+      }
+    },
+    "modal": {
+      "desktop": {
+        "bottom_padding": "16px",
+        "horizontal_padding": "32px",
+        "gap": "32px"
+      }
+    },
+    "background_color": "#ffffff",
+    "border": {
+      "color": "#4856CB",
+      "width": "1px",
+      "style": "solid"
+    }
   }
 }
