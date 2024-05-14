@@ -350,10 +350,18 @@ exports[`gux-modal #render should render modal without buttons 1`] = `
         <h1 class="gux-modal-header" id="gux-i">
           <slot name="title"></slot>
         </h1>
-        <div class="gux-modal-content gux-no-buttons">
+        <div class="gux-modal-content">
           <p>
             <slot name="content"></slot>
           </p>
+        </div>
+        <div class="gux-button-footer gux-no-buttons">
+          <div class="gux-start-align-buttons">
+            <slot name="start-align-buttons"></slot>
+          </div>
+          <div class="gux-end-align-buttons">
+            <slot name="end-align-buttons"></slot>
+          </div>
         </div>
       </div>
     </dialog>
