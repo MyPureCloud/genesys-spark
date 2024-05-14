@@ -87,8 +87,8 @@ export class GuxMonthPicker {
     }
   }
 
-  @Listen('closeCalendar', { target: 'body' })
-  getChangedValue() {
+  @Listen('closeCalendar')
+  closeCalendar() {
     this.expanded = false;
   }
 
