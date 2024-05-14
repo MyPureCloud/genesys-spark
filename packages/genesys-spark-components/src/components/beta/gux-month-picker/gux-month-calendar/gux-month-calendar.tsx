@@ -68,6 +68,12 @@ export class GuxMonthCalendar {
   @State()
   previewValue: string;
 
+  /**
+   * Controls hiding and showing the month-calendar
+   */
+  @State()
+  isOpen: boolean = false;
+
   @Watch('value')
   onValueUpdate(newValue: GuxISOYearMonth) {
     const { year } = getYearMonthObject(newValue);
@@ -81,6 +87,7 @@ export class GuxMonthCalendar {
   @Method()
   // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocus(iSOYearMonth: GuxISOYearMonth): Promise<void> {
+    this.isOpen = true;
     iSOYearMonth = iSOYearMonth || getCurrentISOYearMonth();
 
     const { year } = getYearMonthObject(iSOYearMonth);
@@ -102,18 +109,26 @@ export class GuxMonthCalendar {
       case 'Tab':
         // Manually move focus to the selected month if the focus is currently on the next year arrow in the header
         if (!event.shiftKey && this.nextYearElement.matches(':focus-visible')) {
-          const target: HTMLButtonElement = this.root.shadowRoot.querySelector(
-            `gux-month-list-item[value="${this.previewValue}"]`
-          );
-          console.log('this.value', this.value);
-          console.log('target', target);
-          if (target) {
-            target.focus();
+          const monthElement: HTMLButtonElement =
+            this.root.shadowRoot.querySelector(
+              `gux-month-list-item[value="${this.previewValue}"]`
+            );
+          if (monthElement) {
+            monthElement.focus();
           }
-
           event.preventDefault();
         }
         break;
+    }
+  }
+
+  @Listen('focusout')
+  onFocusout(event: FocusEvent): void {
+    const focusIsOutsideComponent = !this.root.contains(
+      event.relatedTarget as Node
+    );
+    if (focusIsOutsideComponent) {
+      this.isOpen = false;
     }
   }
 
@@ -287,7 +302,12 @@ export class GuxMonthCalendar {
 
   render(): JSX.Element {
     return (
-      <div class="gux-month-calendar">
+      <div
+        class={{
+          'gux-hidden': !this.isOpen,
+          'gux-month-calendar': true
+        }}
+      >
         {this.renderHeader()}
         {this.renderMonths()}
       </div>
