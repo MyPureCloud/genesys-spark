@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/unbound-method */
@@ -31,59 +32,57 @@ export function OnClickOutside(
     (BUILD as any).connectedCallback = true;
     (BUILD as any).disconnectedCallback = true;
 
-    // eslint-disable-next-line
     const { connectedCallback, disconnectedCallback } = proto;
+
+    const store = new Map<ComponentInterface, EventListener>();
 
     proto.connectedCallback = function () {
       const host = getElement(this);
       const method = this[methodName];
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-      registerOnClickOutside(this, host, method, opt);
+
+      registerOnClickOutside(store, this, host, method, opt);
+
       return connectedCallback && connectedCallback.call(this);
     };
 
     proto.disconnectedCallback = function () {
-      const host = getElement(this);
-      const method = this[methodName];
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-      removeOnClickOutside(this, host, method, opt);
+      removeOnClickOutside(store, this, opt);
+
       return disconnectedCallback && disconnectedCallback.call(this);
     };
   };
 }
 
 export function registerOnClickOutside(
+  store: Map<ComponentInterface, EventListener>,
   component: ComponentInterface,
   element: HTMLElement,
   callback: OnClickOutsideCallback,
   opt: OnClickOutsideOptions = OnClickOutsideOptionsDefaults
 ): void {
   const excludedNodes = getExcludedNodes(opt);
+  const listener = (e: Event) => {
+    initOnClickOutside(e, component, element, callback, excludedNodes);
+  };
+
+  store.set(component, listener);
+
   getTriggerEvents(opt).forEach(triggerEvent => {
-    window.addEventListener(
-      triggerEvent,
-      (e: Event) => {
-        initOnClickOutside(e, component, element, callback, excludedNodes);
-      },
-      false
-    );
+    window.addEventListener(triggerEvent, listener, false);
   });
 }
 
 export function removeOnClickOutside(
+  store: Map<ComponentInterface, EventListener>,
   component: ComponentInterface,
-  element: HTMLElement,
-  callback: OnClickOutsideCallback,
   opt: OnClickOutsideOptions = OnClickOutsideOptionsDefaults
 ): void {
+  const listener = store.get(component);
+
+  store.delete(component);
+
   getTriggerEvents(opt).forEach(triggerEvent => {
-    window.removeEventListener(
-      triggerEvent,
-      (e: Event) => {
-        initOnClickOutside(e, component, element, callback);
-      },
-      false
-    );
+    window.removeEventListener(triggerEvent, listener, false);
   });
 }
 
