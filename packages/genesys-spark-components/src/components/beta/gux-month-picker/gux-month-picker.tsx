@@ -370,7 +370,6 @@ export class GuxMonthPicker {
         value={this.value}
         min={this.min}
         max={this.max}
-        expanded={this.expanded}
       />
     ) as JSX.Element;
   }

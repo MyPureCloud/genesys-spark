@@ -73,8 +73,8 @@ export class GuxMonthCalendar {
   /**
    * Controls hiding and showing the month-calendar
    */
-  @Prop({ mutable: true })
-  expanded: boolean = false;
+  @State()
+  expanded: boolean = true;
 
   @Event()
   closeCalendar: EventEmitter<void>;
@@ -92,6 +92,7 @@ export class GuxMonthCalendar {
   @Method()
   // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocus(iSOYearMonth: GuxISOYearMonth): Promise<void> {
+    this.expanded = true;
     iSOYearMonth = iSOYearMonth || getCurrentISOYearMonth();
 
     const { year } = getYearMonthObject(iSOYearMonth);
