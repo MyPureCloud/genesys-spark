@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.49.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.48.1...v4.49.0) (2024-05-14)
+
+
+### Features
+
+* **other:** form ([ec75974](https://github.com/MyPureCloud/genesys-spark/commit/ec7597401ca0c4d9b7bd627292142d6bcf82f66d))
+* **tokens:** form footer - jackie ([cef167b](https://github.com/MyPureCloud/genesys-spark/commit/cef167be66228c1f43568c309de4e11c9530f71d))
+* **tokens:** Form footer 2 - jackie ([9568a27](https://github.com/MyPureCloud/genesys-spark/commit/9568a2784a341777be921e8a356db1f657259e78))
+* **tokens:** form footer jackie ([6014832](https://github.com/MyPureCloud/genesys-spark/commit/601483215f0bc80dc2160969f9e4d6506209411e))
+
 ### [4.48.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.48.0...v4.48.1) (2024-05-10)
 
 ## [4.48.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.47.0...v4.48.0) (2024-05-04)
