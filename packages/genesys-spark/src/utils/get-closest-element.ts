@@ -1,24 +1,24 @@
 //https://inindca.atlassian.net/browse/COMUI-2673
 // utility to get the closest element passing shadow dom boundaries
 export function getClosestElement(
-  node: Element | ParentNode | null,
+  baseElement: HTMLElement = this,
   selector: string
-): HTMLElement | null {
-  if (!node) {
-    return null;
-  }
-
-  if (node instanceof ShadowRoot) {
-    return getClosestElement(node.host, selector);
-  }
-
-  if (node instanceof HTMLElement) {
-    if (node.matches(selector)) {
-      return node;
-    } else {
-      return getClosestElement(node.parentNode, selector);
+) {
+  function closest(element: Element | Window | Document): Element {
+    if (!element || element === document || element === window) {
+      return null;
     }
+
+    if ((element as Element).assignedSlot) {
+      element = (element as Element).assignedSlot;
+    }
+
+    const found = (element as Element).closest(selector);
+
+    return found
+      ? found
+      : closest(((element as Element).getRootNode() as ShadowRoot).host);
   }
 
-  return getClosestElement(node.parentNode, selector);
+  return closest(baseElement);
 }
