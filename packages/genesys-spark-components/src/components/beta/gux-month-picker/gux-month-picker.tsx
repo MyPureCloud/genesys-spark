@@ -87,6 +87,11 @@ export class GuxMonthPicker {
     }
   }
 
+  @Listen('closeCalendar', { target: 'body' })
+  getChangedValue() {
+    this.expanded = false;
+  }
+
   @Watch('value')
   onValueUpdate(newValue: GuxISOYearMonth) {
     if (this.isOutOfBounds(newValue)) {
@@ -365,6 +370,7 @@ export class GuxMonthPicker {
         value={this.value}
         min={this.min}
         max={this.max}
+        expanded={this.expanded}
       />
     ) as JSX.Element;
   }

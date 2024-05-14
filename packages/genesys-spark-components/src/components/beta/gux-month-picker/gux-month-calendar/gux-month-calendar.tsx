@@ -6,6 +6,8 @@ import {
   Prop,
   State,
   Method,
+  EventEmitter,
+  Event,
   Listen,
   Watch
 } from '@stencil/core';
@@ -71,8 +73,11 @@ export class GuxMonthCalendar {
   /**
    * Controls hiding and showing the month-calendar
    */
-  @State()
-  isOpen: boolean = false;
+  @Prop({ mutable: true })
+  expanded: boolean = false;
+
+  @Event()
+  closeCalendar: EventEmitter<void>;
 
   @Watch('value')
   onValueUpdate(newValue: GuxISOYearMonth) {
@@ -87,7 +92,6 @@ export class GuxMonthCalendar {
   @Method()
   // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocus(iSOYearMonth: GuxISOYearMonth): Promise<void> {
-    this.isOpen = true;
     iSOYearMonth = iSOYearMonth || getCurrentISOYearMonth();
 
     const { year } = getYearMonthObject(iSOYearMonth);
@@ -128,7 +132,8 @@ export class GuxMonthCalendar {
       event.relatedTarget as Node
     );
     if (focusIsOutsideComponent) {
-      this.isOpen = false;
+      this.expanded = false;
+      this.closeCalendar.emit();
     }
   }
 
@@ -304,7 +309,7 @@ export class GuxMonthCalendar {
     return (
       <div
         class={{
-          'gux-hidden': !this.isOpen,
+          'gux-hidden': !this.expanded,
           'gux-month-calendar': true
         }}
       >
