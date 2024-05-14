@@ -147,7 +147,7 @@ export class GuxMonthCalendar {
     }
     if (this.value) {
       this.year = getYearMonthObject(this.value).year;
-      this.updatePreviewValue(this.value);
+      this.previewValue = this.value;
     } else {
       this.year = getYearMonthObject(getCurrentISOYearMonth()).year;
     }
@@ -155,14 +155,10 @@ export class GuxMonthCalendar {
 
   private updateValue(value: GuxISOYearMonth): void {
     this.value = value;
-    this.updatePreviewValue(value);
+    this.previewValue = this.value;
 
     simulateNativeEvent(this.root, 'input');
     simulateNativeEvent(this.root, 'change');
-  }
-
-  private updatePreviewValue(value: GuxISOYearMonth): void {
-    this.previewValue = value;
   }
 
   private isOutOfBounds(value: GuxISOYearMonth): boolean {
@@ -215,7 +211,7 @@ export class GuxMonthCalendar {
     this.year = (parseInt(this.year) + increment).toString();
     const month = getYearMonthObject(this.value).month;
     const value = getISOYearMonth(this.year, month);
-    this.updatePreviewValue(value);
+    this.previewValue = value;
   }
 
   private isPreviousYearLessThanMinYear(
