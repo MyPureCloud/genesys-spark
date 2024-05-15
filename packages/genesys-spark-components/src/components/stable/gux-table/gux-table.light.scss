@@ -101,6 +101,12 @@ gux-table {
 
       tr:nth-child(2n) {
         background-color: var(--gse-ui-dataTableItems-cell-altBackgroundColor);
+
+        &:hover {
+          background-color: var(
+            --gse-ui-dataTableItems-cell-hoverBackgroundColor
+          );
+        }
       }
 
       tr:hover {
