@@ -21,7 +21,7 @@ export function OnResize(): OnResizeDecorator {
 
     const { connectedCallback, disconnectedCallback } = proto;
 
-    const store = new Map<unknown, ResizeObserver>();
+    const store = new Map<ComponentInterface, ResizeObserver>();
 
     proto.connectedCallback = function () {
       const method = this[methodName];
@@ -41,8 +41,8 @@ export function OnResize(): OnResizeDecorator {
 }
 
 function registerObserver(
-  store: Map<unknown, ResizeObserver>,
-  key: unknown,
+  store: Map<ComponentInterface, ResizeObserver>,
+  key: ComponentInterface,
   observer: ResizeObserver
 ) {
   if (store.has(key)) {
@@ -54,7 +54,10 @@ function registerObserver(
   observer.observe(getElement(key));
 }
 
-function deregisterObserver(store: Map<unknown, ResizeObserver>, key: unknown) {
+function deregisterObserver(
+  store: Map<ComponentInterface, ResizeObserver>,
+  key: ComponentInterface
+) {
   if (store.has(key)) {
     store.get(key).disconnect();
   }
