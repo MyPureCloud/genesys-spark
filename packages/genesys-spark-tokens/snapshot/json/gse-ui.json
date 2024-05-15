@@ -590,23 +590,26 @@
     "page": {
       "desktop": {
         "bottom_padding": "16px",
+        "top_padding": "16px",
         "horizontal_padding": "32px",
         "gap": "16px"
       },
       "mobile": {
         "bottom_padding": "16px",
+        "top_padding": "16px",
         "horizontal_padding": "16px",
         "gap": "16px"
       }
     },
     "separator": {
       "color": "#c6c8ce",
-      "width": 1,
+      "width": "1px",
       "style": "solid"
     },
     "side_sheet": {
       "desktop": {
         "bottom_padding": "16px",
+        "top_padding": "16px",
         "horizontal_padding": "24px",
         "gap": "16px"
       }
@@ -614,8 +617,9 @@
     "modal": {
       "desktop": {
         "bottom_padding": "16px",
+        "top_padding": "16px",
         "horizontal_padding": "32px",
-        "gap": "32px"
+        "gap": "16px"
       }
     },
     "background_color": "#ffffff",
