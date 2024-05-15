@@ -1,40 +1,57 @@
-import { newSpecPage } from '@stencil/core/testing';
+const useRegionalDates = jest.fn().mockReturnValue(false);
 
+jest.mock('i18n/use-regional-dates', () => ({
+  __esModule: true,
+  useRegionalDates
+}));
+
+import { newSpecPage } from '@stencil/core/testing';
 import { GuxDatepicker } from '../gux-datepicker';
+import { languageList } from '../../../../i18n/languageList';
+
+const testCases = [
+  `<gux-datepicker value="1997-08-15"></gux-datepicker>`,
+  `<gux-datepicker value="1997-08-15" format="mm/dd/yy"></gux-datepicker>`,
+  `<gux-datepicker value="1997-08-15" format="mm.dd.yyyy"></gux-datepicker>`,
+  `<gux-datepicker value="1997-08-15" disabled></gux-datepicker>`,
+  `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" number-of-months="2" ></gux-datepicker>`,
+  `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" min-date="2019-11-10" max-date="2019-12-31" number-of-months="2" ></gux-datepicker>`,
+  `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" min-date="2019-11-10" max-date="2019-12-31" number-of-months="2" format="mm.dd.yyyy" ></gux-datepicker>`,
+  `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" number-of-months="2" disabled></gux-datepicker>`,
+  `<gux-datepicker value="1997-08-15" start-day-of-week="6"></gux-datepicker>`
+];
 
 const components = [GuxDatepicker];
-const language = 'en';
 
 describe('gux-datepicker', () => {
-  it('should build', async () => {
-    const page = await newSpecPage({
-      components,
-      html: `<gux-datepicker></gux-datepicker>`,
-      language
+  describe('#render using non regional dates', () => {
+    beforeAll(() => {
+      useRegionalDates.mockReturnValue(false);
     });
-    expect(page.rootInstance).toBeInstanceOf(GuxDatepicker);
+
+    languageList.forEach(language => {
+      testCases.forEach((html, index) => {
+        it(`should render component as expected (${index + 1})`, async () => {
+          const page = await newSpecPage({ components, html, language });
+
+          expect(page.root).toMatchSnapshot();
+        });
+      });
+    });
   });
 
-  describe('#render', () => {
-    [
-      `<gux-datepicker value="1997-08-15"></gux-datepicker>`,
-      `<gux-datepicker value="1997-08-15" format="mm/dd/yy"></gux-datepicker>`,
-      `<gux-datepicker value="1997-08-15" format="mm.dd.yyyy"></gux-datepicker>`,
-      `<gux-datepicker value="1997-08-15" disabled></gux-datepicker>`,
-      `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" number-of-months="2" ></gux-datepicker>`,
-      `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" min-date="2019-11-10" max-date="2019-12-31" number-of-months="2" ></gux-datepicker>`,
-      `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" min-date="2019-11-10" max-date="2019-12-31" number-of-months="2" format="mm.dd.yyyy" ></gux-datepicker>`,
-      `<gux-datepicker mode="range" value="2019-11-25/2019-12-02" number-of-months="2" disabled></gux-datepicker>`,
-      `<gux-datepicker value="1997-08-15" start-day-of-week="6"></gux-datepicker>`
-    ].forEach((input, index) => {
-      it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newSpecPage({
-          components,
-          html: input,
-          language
-        });
+  describe('#render using regional dates', () => {
+    beforeAll(() => {
+      useRegionalDates.mockReturnValue(true);
+    });
 
-        expect(page.root).toMatchSnapshot();
+    languageList.forEach(language => {
+      testCases.forEach((html, index) => {
+        it(`should render component as expected (${index + 1})`, async () => {
+          const page = await newSpecPage({ components, html, language });
+
+          expect(page.root).toMatchSnapshot();
+        });
       });
     });
   });
