@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.50.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.49.0...v4.50.0) (2024-05-15)
+
+
+### Features
+
+* **modal:** fixing class name ([5c79aac](https://github.com/MyPureCloud/genesys-spark/commit/5c79aac2ba981c3ff298b3f024aebb94037453f9))
+* **modal:** using css to show or hide the button footer ([c41834e](https://github.com/MyPureCloud/genesys-spark/commit/c41834ecd93c9dbcc23ffb7151a8a22606555a4e))
+* **tooltip:** using the content slot ([9dcb9dc](https://github.com/MyPureCloud/genesys-spark/commit/9dcb9dc3afc0a839723857b785ace138e5a193db))
+
+
+### Bug Fixes
+
+* **button:** remove border-radius from inline buttons ([b2b5f47](https://github.com/MyPureCloud/genesys-spark/commit/b2b5f478b3106a515980005cc3ab78ef925552fc))
+
 ## [4.49.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.48.1...v4.49.0) (2024-05-14)
 
 
