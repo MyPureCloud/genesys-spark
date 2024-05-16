@@ -1,10 +1,9 @@
 //https://inindca.atlassian.net/browse/COMUI-2673
 // utility to get the closest element passing shadow dom boundaries
-export function getClosestElement(
-  baseElement: HTMLElement = this,
-  selector: string
-) {
-  function closest(element: Element | Window | Document): Element {
+export function getClosestElement(baseElement: HTMLElement, selector: string) {
+  function closest(
+    element: Element | Window | Document | null
+  ): Element | null {
     if (!element || element === document || element === window) {
       return null;
     }
