@@ -125,7 +125,8 @@
       },
       "icon_size": "16px",
       "tooltip_trigger": {
-        "optional_color": "#3e5374"
+        "optional_color": "#3e5374",
+        "border_radius": "2px"
       }
     },
     "group": {
