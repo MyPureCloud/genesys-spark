@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.51.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.50.0...v4.51.0) (2024-05-17)
+
+
+### Features
+
+* **other:** tokens ([14a005b](https://github.com/MyPureCloud/genesys-spark/commit/14a005bb0171623995e4189ec5b618bc3a995844))
+* **tokens:** add formfooter tokens jackie ([35ce29e](https://github.com/MyPureCloud/genesys-spark/commit/35ce29e731275ea431698faa32576de9a39397d9))
+
+
+### Bug Fixes
+
+* **datepicker:** fixed tests ([6be3350](https://github.com/MyPureCloud/genesys-spark/commit/6be3350ca7d71891f88a4933b081359db12abe36))
+* **other:** fixed build error ([7c9fd8c](https://github.com/MyPureCloud/genesys-spark/commit/7c9fd8c820c046c9d87d6a6e4cb1d98e8bf1767d))
+* **other:** fixed memory leak in click outside decorator ([97d02bb](https://github.com/MyPureCloud/genesys-spark/commit/97d02bb233576764473f0e6033c092c85b18ed4f))
+
 ## [4.50.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.49.0...v4.50.0) (2024-05-15)
 
 
