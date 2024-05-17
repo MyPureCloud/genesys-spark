@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.124.4](https://github.com/MyPureCloud/genesys-spark/compare/v3.124.3...v3.124.4) (2024-05-17)
+
+
+### Bug Fixes
+
+* **other:** fixed memory leak in click outside decorator ([6722188](https://github.com/MyPureCloud/genesys-spark/commit/6722188c49ee7b142875242ef1eebb62276eac83))
+
 ### [3.124.3](https://github.com/MyPureCloud/genesys-spark/compare/v3.124.2...v3.124.3) (2024-05-16)
 
 ### [3.124.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.124.1...v3.124.2) (2024-05-04)
