@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.52.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.51.0...v4.52.0) (2024-05-18)
+
+
+### Features
+
+* **tokens:** Label icon tooltip border radius ([#459](https://github.com/MyPureCloud/genesys-spark/issues/459)) ([7ac6115](https://github.com/MyPureCloud/genesys-spark/commit/7ac6115601351076be29f5655882a74910169760))
+
 ## [4.51.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.50.0...v4.51.0) (2024-05-17)
 
 
