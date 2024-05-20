@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-form-field-phone #render error should render component as expected 1`] = `
+<gux-form-field-phone>
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          Required
+        </gux-screen-reader-beta>
+        <gux-screen-reader-beta>
+          Custom Error Message
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Default
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-input-error">
+          <div class="gux-input-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error gux-show">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-phone-input-beta aria-describedby="gux-form-field-error-i" id="gux-form-field-input-i"></gux-phone-input-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+  <span id="gux-form-field-error-i" slot="error">
+    Custom Error Message
+  </span>
+</gux-form-field-phone>
+`;
+
+exports[`gux-form-field-phone #render help should render component as expected 1`] = `
+<gux-form-field-phone>
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Default
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help gux-show">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-phone-input-beta aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i"></gux-phone-input-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+  <span id="gux-form-field-help-i" slot="help">
+    Custom Help Message
+  </span>
+</gux-form-field-phone>
+`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (1) 1`] = `
+<gux-form-field-phone>
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Label
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-phone>
+`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (2) 1`] = `
+<gux-form-field-phone label-position="above">
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+        Label
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-phone>
+`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (3) 1`] = `
+<gux-form-field-phone label-position="beside">
+  <mock:shadow-root>
+    <fieldset class="gux-beside gux-form-field-fieldset-container">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+        Label
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-phone>
+`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (4) 1`] = `
+<gux-form-field-phone label-position="screenreader">
+  <mock:shadow-root>
+    <fieldset class="gux-form-field-fieldset-container gux-screenreader">
+      <legend class="gux-form-field-legend-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-screen-reader-beta>
+          Required
+        </gux-screen-reader-beta>
+      </legend>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
+        Label
+      </span>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-phone>
+`;
