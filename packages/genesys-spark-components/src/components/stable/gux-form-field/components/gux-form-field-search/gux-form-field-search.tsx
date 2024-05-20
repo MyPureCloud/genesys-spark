@@ -83,8 +83,8 @@ export class GuxFormFieldSearch {
     this.hasHelp = hasSlot(this.root, 'help');
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxForceUpdate(): Promise<void> {
     this.hasContent = hasContent(this.input);
     this.hasError = hasSlot(this.root, 'error');
@@ -134,7 +134,10 @@ export class GuxFormFieldSearch {
                 'gux-disabled': this.disabled
               }}
             >
-              <gux-icon icon-name="search" decorative></gux-icon>
+              <gux-icon
+                icon-name="fa/magnifying-glass-regular"
+                decorative
+              ></gux-icon>
               <slot name="input" />
               {this.clearable && this.hasContent && !this.disabled && (
                 <gux-form-field-input-clear-button

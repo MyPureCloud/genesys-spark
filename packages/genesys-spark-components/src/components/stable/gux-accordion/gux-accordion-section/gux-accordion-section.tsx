@@ -59,12 +59,17 @@ export class GuxAccordionSection {
   reverseHeadings: boolean = false;
 
   @Event()
-  internalsectionopened: EventEmitter<void>;
+  guxopened: EventEmitter<void>;
+
+  @Event()
+  guxclosed: EventEmitter<void>;
 
   @Watch('open')
   watchOpen(open: boolean): void {
     if (open) {
-      this.internalsectionopened.emit();
+      this.guxopened.emit();
+    } else {
+      this.guxclosed.emit();
     }
   }
 
@@ -136,7 +141,10 @@ export class GuxAccordionSection {
                 'gux-arrow-position-start': this.isArrowPositionBeforeText()
               }}
             >
-              <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
+              <gux-icon
+                decorative
+                icon-name="custom/chevron-down-small-regular"
+              ></gux-icon>
             </div>
           </button>
         </div>

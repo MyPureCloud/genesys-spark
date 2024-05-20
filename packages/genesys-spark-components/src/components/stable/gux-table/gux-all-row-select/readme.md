@@ -1,4 +1,4 @@
-# gux-row-select
+# gux-all-row-select
 
 
 
@@ -25,6 +25,12 @@
 ### `setIndeterminate(indeterminate?: boolean) => Promise<void>`
 
 
+
+#### Parameters
+
+| Name            | Type      | Description |
+| --------------- | --------- | ----------- |
+| `indeterminate` | `boolean` |             |
 
 #### Returns
 

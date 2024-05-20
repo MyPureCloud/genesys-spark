@@ -1,8 +1,9 @@
-@use '../../../../style/mixins';
+@use '~genesys-spark/src/style/mixins.scss';
 
 :host([disabled]),
 button[disabled] {
   pointer-events: none;
+  user-select: none;
 }
 
 .gux-sr-only {

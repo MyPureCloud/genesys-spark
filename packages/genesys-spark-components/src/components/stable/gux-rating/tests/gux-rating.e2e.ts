@@ -9,13 +9,13 @@ describe('gux-rating', () => {
 
     return {
       emptyStars: element.shadowRoot.querySelectorAll(
-        'gux-icon[icon-name="rating"]'
+        'gux-icon[icon-name="fa/star-regular"]'
       ).length,
       halfStars: element.shadowRoot.querySelectorAll(
-        'gux-icon[icon-name="rating-partial"]'
+        'gux-icon[icon-name="fa/star-sharp-half-stroke-regular"]'
       ).length,
       fullStars: element.shadowRoot.querySelectorAll(
-        'gux-icon[icon-name="rating-active"]'
+        'gux-icon[icon-name="fa/star-solid"]'
       ).length
     };
   }

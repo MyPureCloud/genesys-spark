@@ -18,7 +18,7 @@
       },
       "box_shadow": {
         "x": 0,
-        "y": "4px",
+        "y": 0,
         "blur": "6px",
         "spread": "1px",
         "color": "#23395c1f",
@@ -56,7 +56,7 @@
     },
     "box_shadow": {
       "x": 0,
-      "y": "4px",
+      "y": 0,
       "blur": "6px",
       "spread": "1px",
       "color": "#23395c1f",
@@ -71,8 +71,7 @@
       "lineHeight": "18px",
       "fontSize": "12px",
       "fontWeight": 400
-    },
-    "target_offset": "16px"
+    }
   },
   "tag": {
     "border_radius": "16px",
@@ -89,7 +88,7 @@
       "foreground_color": "#1b2c48"
     },
     "accent3": {
-      "background_color": "#0D7482",
+      "background_color": "#0C6D7E",
       "foreground_color": "#ffffff"
     },
     "accent4": {
@@ -585,6 +584,49 @@
     },
     "focus": {
       "offset": 0
+    }
+  },
+  "form_footer": {
+    "page": {
+      "desktop": {
+        "bottom_padding": "16px",
+        "top_padding": "16px",
+        "horizontal_padding": "32px",
+        "gap": "16px"
+      },
+      "mobile": {
+        "bottom_padding": "16px",
+        "top_padding": "16px",
+        "horizontal_padding": "16px",
+        "gap": "16px"
+      }
+    },
+    "separator": {
+      "color": "#c6c8ce",
+      "width": "1px",
+      "style": "solid"
+    },
+    "side_sheet": {
+      "desktop": {
+        "bottom_padding": "16px",
+        "top_padding": "16px",
+        "horizontal_padding": "24px",
+        "gap": "16px"
+      }
+    },
+    "modal": {
+      "desktop": {
+        "bottom_padding": "16px",
+        "top_padding": "16px",
+        "horizontal_padding": "32px",
+        "gap": "16px"
+      }
+    },
+    "background_color": "#ffffff",
+    "border": {
+      "color": "#4856CB",
+      "width": "1px",
+      "style": "solid"
     }
   }
 }

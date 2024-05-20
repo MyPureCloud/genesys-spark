@@ -75,7 +75,9 @@ export class GuxSegmentedControlItem {
   private renderTooltip(): JSX.Element {
     if (this.iconOnly) {
       return (
-        <gux-tooltip>{getSlotTextContent(this.root, 'text')}</gux-tooltip>
+        <gux-tooltip>
+          <div slot="content">{getSlotTextContent(this.root, 'text')}</div>
+        </gux-tooltip>
       ) as JSX.Element;
     }
   }

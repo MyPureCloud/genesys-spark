@@ -221,7 +221,10 @@ export class GuxActionButton {
                 aria-expanded={this.isOpen.toString()}
                 aria-label={this.i18n('moreOptions')}
               >
-                <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
+                <gux-icon
+                  decorative
+                  icon-name="custom/chevron-down-small-regular"
+                ></gux-icon>
               </button>
             </gux-button-slot>
           </div>

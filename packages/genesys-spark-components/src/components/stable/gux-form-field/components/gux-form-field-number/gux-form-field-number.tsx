@@ -91,8 +91,8 @@ export class GuxFormFieldNumber {
     this.hasHelp = hasSlot(this.root, 'help');
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxForceUpdate(): Promise<void> {
     this.hasContent = hasContent(this.input);
     this.hasError = hasSlot(this.root, 'error');
@@ -240,7 +240,10 @@ export class GuxFormFieldNumber {
           disabled={disabled}
           onClick={() => this.stepUp(input)}
         >
-          <gux-icon icon-name="chevron-small-up" decorative></gux-icon>
+          <gux-icon
+            icon-name="custom/chevron-up-small-regular"
+            decorative
+          ></gux-icon>
         </button>
 
         <button
@@ -251,7 +254,10 @@ export class GuxFormFieldNumber {
           disabled={disabled}
           onClick={() => this.stepDown(input)}
         >
-          <gux-icon icon-name="chevron-small-down" decorative></gux-icon>
+          <gux-icon
+            icon-name="custom/chevron-down-small-regular"
+            decorative
+          ></gux-icon>
         </button>
       </div>
     ) as JSX.Element;

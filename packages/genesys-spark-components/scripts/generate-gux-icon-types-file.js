@@ -12,20 +12,31 @@ const getAllVariants = directory => {
   fileList.forEach(file => {
     file = path.join(directory, file);
     const fileStatus = fs.statSync(file);
-    if (fileStatus.isDirectory() && !file.includes('legacy')) {
-      // Recursively search sub directories excluding legacy.
-      variants = variants.concat(getAllVariants(file));
+    if (fileStatus.isDirectory()) {
+      variants.push(...getAllVariants(file));
+    } else if (file.includes('legacy/fa/')) {
+      const fileName = file.split('legacy/fa/').pop();
+      variants.push(`legacy/fa/${fileName}`, `fa/${fileName}`);
+    } else if (file.includes('deprecated/')) {
+      const fileName = file.split('deprecated/').pop();
+      variants.push(`deprecated/${fileName}`, `${fileName}`);
     } else {
       variants.push(file.split('icons/').pop());
     }
   });
 
-  return variants
-    .filter(filename => filename.match(svgExtensionRegex))
-    .map(filename => filename.replace(svgExtensionRegex, ''))
-    .map(filename => `'${filename}'`)
-    .sort()
-    .join(' | ');
+  return (
+    variants
+      .filter(filename => filename.match(svgExtensionRegex))
+      .map(filename => filename.replace(svgExtensionRegex, ''))
+      .map(filename => `'${filename}'`)
+      .sort()
+      // deduplicate the array
+      .filter(function (item, position, array) {
+        return !position || item !== array[position - 1];
+      })
+      .join(' | ')
+  );
 };
 
 const content = `export type GuxIconIconName = ${getAllVariants(

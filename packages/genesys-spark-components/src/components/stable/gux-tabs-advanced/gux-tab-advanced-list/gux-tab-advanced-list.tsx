@@ -344,8 +344,8 @@ export class GuxTabAdvancedList {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxSetActive(activeTab: string): Promise<void> {
     this.tabTriggers.forEach((tabTrigger, index) => {
       const active = tabTrigger.tabId === activeTab;
@@ -616,15 +616,15 @@ export class GuxTabAdvancedList {
             >
               <slot name="add-tab">
                 <gux-icon
-                  icon-name="add"
+                  icon-name="fa/plus-regular"
                   screenreader-text={
                     this.disableAddTabButton
                       ? this.i18n('disableNewTab')
                       : this.root.querySelector('[slot="add-tab"]')
-                      ? this.root
-                          .querySelector('[slot="add-tab"]')
-                          .textContent.trim()
-                      : this.i18n('createNewTab')
+                        ? this.root
+                            .querySelector('[slot="add-tab"]')
+                            .textContent.trim()
+                        : this.i18n('createNewTab')
                   }
                 ></gux-icon>
               </slot>
@@ -670,9 +670,9 @@ export class GuxTabAdvancedList {
   private getChevronIconName(direction: string): string {
     switch (direction) {
       case 'scrollLeft':
-        return 'chevron-left';
+        return 'fa/chevron-left-regular';
       case 'scrollRight':
-        return 'chevron-right';
+        return 'fa/chevron-right-regular';
     }
   }
 }

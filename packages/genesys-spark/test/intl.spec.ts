@@ -1,6 +1,7 @@
 import {
   determineDisplayLocale,
   dateTimeFormat,
+  getFormat,
   relativeTimeFormat
 } from '../src/utils/intl';
 
@@ -100,5 +101,14 @@ describe('The intl module', () => {
       relativeTimeFormat('en-US');
       expect(Intl.RelativeTimeFormat).toHaveBeenCalledWith('en-US', undefined);
     });
+  });
+
+  describe('Determining the format of a date', () => {
+    jest.resetAllMocks();
+    Object.defineProperty(Intl, 'GetFormat', {
+      value: jest.fn()
+    });
+    expect(getFormat('en-us')).toBe('mm/dd/yyyy');
+    expect(getFormat('en-gb')).toBe('dd/mm/yyyy');
   });
 });

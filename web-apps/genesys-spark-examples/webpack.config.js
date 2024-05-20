@@ -2,6 +2,10 @@ const path = require('path');
 const fs = require('fs');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { generateIconListHTML } = require('./src/utils/generate-icon-list-html');
+const {
+  generateIconSelectHTML
+} = require('./src/utils/generate-icon-select-html');
 
 const CDN_URL = process.env.CDN_URL || '';
 
@@ -66,7 +70,7 @@ module.exports = {
           transform: generateComponentPage
         },
         {
-          from: '../../packages/genesys-spark-components/src/style/examples/*.html',
+          from: '../../packages/genesys-spark/src/style/examples/*.html',
           to: ({ absoluteFilename }) => {
             return path.basename(absoluteFilename);
           },
@@ -124,19 +128,47 @@ function generateComponentPage(exampleMarkup) {
   }
 
   if (withHtml.includes('${FA_ICON_EXAMPLE_LIST}')) {
-    const iconScript = require('./src/utils/generateFontAwesomeIcons');
-    const iconsExamplesHtml = iconScript.generateHTML();
-    withHtml = withHtml.replace('${FA_ICON_EXAMPLE_LIST}', iconsExamplesHtml);
+    withHtml = withHtml.replace(
+      '${FA_ICON_EXAMPLE_LIST}',
+      generateIconListHTML(
+        '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/fa/**/*.svg'
+      )
+    );
+  }
+
+  if (withHtml.includes('${CUSTOM_ICON_EXAMPLE_LIST}')) {
+    withHtml = withHtml.replace(
+      '${CUSTOM_ICON_EXAMPLE_LIST}',
+      generateIconListHTML(
+        '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/custom/**/*.svg'
+      )
+    );
   }
 
   if (withHtml.includes('${LEGACY_ICON_EXAMPLE_LIST}')) {
-    const iconScript = require('./src/utils/generateLegacyIcons');
-    const iconsExamplesHtml = iconScript.generateHTML(
-      '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/legacy'
-    );
     withHtml = withHtml.replace(
       '${LEGACY_ICON_EXAMPLE_LIST}',
-      iconsExamplesHtml
+      generateIconSelectHTML(
+        '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/legacy/**/*.svg'
+      )
+    );
+  }
+
+  if (withHtml.includes('${RESTRICTED_ICON_EXAMPLE_LIST}')) {
+    withHtml = withHtml.replace(
+      '${RESTRICTED_ICON_EXAMPLE_LIST}',
+      generateIconListHTML(
+        '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/restricted/**/*.svg'
+      )
+    );
+  }
+
+  if (withHtml.includes('${DEPRECATED_ICON_EXAMPLE_LIST}')) {
+    withHtml = withHtml.replace(
+      '${DEPRECATED_ICON_EXAMPLE_LIST}',
+      generateIconListHTML(
+        '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/deprecated/**/*.svg'
+      )
     );
   }
 

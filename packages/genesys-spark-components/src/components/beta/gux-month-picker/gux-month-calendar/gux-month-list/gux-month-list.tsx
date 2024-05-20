@@ -61,20 +61,15 @@ export class GuxMonthList {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocusFirstItem(): Promise<void> {
     first(this.root, validFocusableItems);
-  }
-
-  private renderFocusTarget(): JSX.Element {
-    return (<span tabindex="1"></span>) as JSX.Element;
   }
 
   render(): JSX.Element {
     return (
       <Host role="list">
-        {this.renderFocusTarget()}
         <slot></slot>
       </Host>
     ) as JSX.Element;

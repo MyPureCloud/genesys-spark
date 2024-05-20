@@ -28,6 +28,12 @@
 
 
 
+#### Parameters
+
+| Name        | Type     | Description |
+| ----------- | -------- | ----------- |
+| `activeTab` | `string` |             |
+
 #### Returns
 
 Type: `Promise<void>`

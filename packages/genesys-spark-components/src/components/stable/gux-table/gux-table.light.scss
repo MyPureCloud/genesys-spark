@@ -27,6 +27,10 @@ gux-table {
       gux-icon {
         color: var(--gse-ui-dataTableItems-cell-icon-foregroundColor);
       }
+
+      gux-button > gux-icon {
+        color: inherit;
+      }
     }
 
     th {

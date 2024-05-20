@@ -1,3 +1,13 @@
+jest.mock('@floating-ui/dom', () => {
+  const originalModule = jest.requireActual('@floating-ui/dom');
+
+  return {
+    __esModule: true,
+    ...originalModule,
+    autoUpdate: jest.fn()
+  } as unknown;
+});
+
 import { newSpecPage } from '@test/specTestUtils';
 import * as floatingUi from '@floating-ui/dom';
 

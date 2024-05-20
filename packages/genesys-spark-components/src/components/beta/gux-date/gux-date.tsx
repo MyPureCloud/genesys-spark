@@ -5,7 +5,8 @@ import {
   GuxDateTimeFormat
 } from '../../../i18n/DateTimeFormatter';
 import * as sparkIntl from '../../../genesys-spark-utils/intl';
-import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
+// Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
+import { useRegionalDates } from '../../../i18n/use-regional-dates';
 import { getDesiredLocale } from '../../../i18n/index';
 import { GuxTimeZoneIdentifier } from '../../../i18n/time-zone/types';
 import { getValidTimezone } from '@utils/date/get-valid-timezone';
@@ -44,7 +45,7 @@ export class GuxDate {
 
   componentWillLoad(): void {
     trackComponent(this.root);
-    if (readRegionalDatesCookie()) {
+    if (useRegionalDates()) {
       this.hasRegionalDatesCookie = true;
     } else {
       this.formatter = new DateTimeFormatter(getDesiredLocale(this.root));

@@ -7,6 +7,7 @@
  * @param options options to pass to the Intl.DateTimeFormat constructor
  * @returns a new DateTimeFormat
  */
+import { getClosestElement } from './get-closest-element';
 export function dateTimeFormat(
   localeOrOptions: string | Intl.DateTimeFormatOptions,
   options?: Intl.DateTimeFormatOptions
@@ -64,7 +65,8 @@ export function relativeTimeFormat(
 export function determineDisplayLocale(
   element: HTMLElement = document.body
 ): string {
-  const domLocale = element.closest<HTMLElement>('[lang]')?.lang;
+  const domLocale = (getClosestElement(element, '*[lang]') as HTMLElement)
+    ?.lang;
   if (!domLocale || browserHasRegionData(domLocale)) {
     // If we can't find a locale in the DOM, or we find a locale without a region that matches the
     // users's browser locale, use the browser locale.
@@ -83,6 +85,37 @@ export function determineDisplayLocale(
 function browserHasRegionData(localeString: string): boolean {
   return (
     localeString.length == 2 &&
-    navigator.language.startsWith(`${localeString}-`)
+    navigator.language?.startsWith(`${localeString}-`)
   );
+}
+
+export function getFormat(locale: string): string {
+  const date = new Date('July 5, 2000 15:00:00 UTC+00:00');
+  const options = {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric'
+  };
+  const dateTimeFormat = new Intl.DateTimeFormat(
+    locale,
+    options as Intl.DateTimeFormatOptions
+  );
+
+  const parts = dateTimeFormat.formatToParts(date);
+  const dateString = parts
+    .map(({ type, value }) => {
+      switch (type) {
+        case 'day':
+          return `dd`;
+        case 'month':
+          return `mm`;
+        case 'year':
+          return `yyyy`;
+        default:
+          return value;
+      }
+    })
+    .join('');
+  // review locales with two character date delimiters https://inindca.atlassian.net/browse/COMUI-2679
+  return dateString.replace(/\s/g, '').replace(/‏/g, '');
 }

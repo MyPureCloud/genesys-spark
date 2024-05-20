@@ -21,10 +21,12 @@
     <strong>Hover</strong> over this paragraph to seen an example of a tooltip
     with more text.
     <gux-tooltip
-      >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac odio a
-      dolor semper vehicula at ut nulla. Proin pellentesque neque sollicitudin
-      iaculis efficitur.</gux-tooltip
-    >
+      ><div slot="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac odio a
+        dolor semper vehicula at ut nulla. Proin pellentesque neque sollicitudin
+        iaculis efficitur.
+      </div>
+    </gux-tooltip>
   </p>
 </section>
 
@@ -38,9 +40,9 @@
       <h4 class="flex-header">light</h4>
       <div class="flex-content">
         <gux-button
-          >Hover<gux-tooltip accent="light"
-            >Tooltip with light accent</gux-tooltip
-          ></gux-button
+          >Hover<gux-tooltip accent="light">
+            <div slot="content">Tooltip with light accent</div>
+          </gux-tooltip></gux-button
         >
       </div>
     </div>
@@ -48,9 +50,9 @@
       <h4 class="flex-header">dark</h4>
       <div class="flex-content">
         <gux-button
-          >Hover<gux-tooltip accent="dark"
-            >Tooltip with dark accent</gux-tooltip
-          ></gux-button
+          >Hover<gux-tooltip accent="dark">
+            <div slot="content">Tooltip with dark accent</div>
+          </gux-tooltip></gux-button
         >
       </div>
     </div>
@@ -67,7 +69,9 @@
       <h4 class="flex-header">Button</h4>
       <div class="flex-content">
         <gux-button id="button-example">Hover</gux-button>
-        <gux-tooltip for="button-example">Tooltip for button</gux-tooltip>
+        <gux-tooltip for="button-example">
+          <div slot="content">Tooltip for button</div>
+        </gux-tooltip>
       </div>
     </div>
     <div class="flex-example">
@@ -79,7 +83,9 @@
           screenreader-text="add John Smith to contact list"
           >Hover
         </gux-icon>
-        <gux-tooltip for="icon-example">Tooltip for icon</gux-tooltip>
+        <gux-tooltip for="icon-example">
+          <div slot="content">Tooltip for icon</div>
+        </gux-tooltip>
       </div>
     </div>
     <div class="flex-example">
@@ -88,7 +94,9 @@
         <div>
           Hover over the <strong id="text-example">highlighted</strong> text.
         </div>
-        <gux-tooltip for="text-example">Tooltip for text</gux-tooltip>
+        <gux-tooltip for="text-example">
+          <div slot="content">Tooltip for text</div>
+        </gux-tooltip>
       </div>
     </div>
   </div>
@@ -127,32 +135,42 @@
     <div class="grid-content" id="bottom-end">bottom-end</div>
     <div></div>
 
-    <gux-tooltip for="top-start" placement="top-start"
-      >Top start tooltip</gux-tooltip
-    >
-    <gux-tooltip for="top" placement="top">Top tooltip</gux-tooltip>
-    <gux-tooltip for="top-end" placement="top-end">Top end tooltip</gux-tooltip>
-    <gux-tooltip for="left-start" placement="left-start"
-      >Left start tooltip</gux-tooltip
-    >
-    <gux-tooltip for="right-start" placement="right-start"
-      >Right start tooltip</gux-tooltip
-    >
-    <gux-tooltip for="left" placement="left">Left tooltip</gux-tooltip>
-    <gux-tooltip for="right" placement="right">Right tooltip</gux-tooltip>
-    <gux-tooltip for="left-end" placement="left-end"
-      >Left end tooltip</gux-tooltip
-    >
-    <gux-tooltip for="right-end" placement="right-end"
-      >Right end tooltip</gux-tooltip
-    >
-    <gux-tooltip for="bottom-start" placement="bottom-start"
-      >Bottom start tooltip</gux-tooltip
-    >
-    <gux-tooltip for="bottom" placement="bottom">Bottom tooltip</gux-tooltip>
-    <gux-tooltip for="bottom-end" placement="bottom-end"
-      >Bottom end tooltip</gux-tooltip
-    >
+    <gux-tooltip for="top-start" placement="top-start">
+      <div slot="content">Top start tooltip</div>
+    </gux-tooltip>
+    <gux-tooltip for="top" placement="top">
+      <div slot="content">Top tooltip</div>
+    </gux-tooltip>
+    <gux-tooltip for="top-end" placement="top-end">
+      <div slot="content">Top end tooltip</div>
+    </gux-tooltip>
+    <gux-tooltip for="left-start" placement="left-start">
+      <div slot="content">Left start tooltip</div>
+    </gux-tooltip>
+    <gux-tooltip for="right-start" placement="right-start">
+      <div slot="content">Right start tooltip</div>
+    </gux-tooltip>
+    <gux-tooltip for="left" placement="left">
+      <div slot="content">Left tooltip</div>
+    </gux-tooltip>
+    <gux-tooltip for="right" placement="right">
+      <div slot="content">Right tooltip</div>
+    </gux-tooltip>
+    <gux-tooltip for="left-end" placement="left-end">
+      <div slot="content">Left end tooltip</div>
+    </gux-tooltip>
+    <gux-tooltip for="right-end" placement="right-end">
+      <div slot="content">Right end tooltip</div>
+    </gux-tooltip>
+    <gux-tooltip for="bottom-start" placement="bottom-start">
+      <div slot="content">Bottom start tooltip</div>
+    </gux-tooltip>
+    <gux-tooltip for="bottom" placement="bottom">
+      <div slot="content">Bottom tooltip</div>
+    </gux-tooltip>
+    <gux-tooltip for="bottom-end" placement="bottom-end">
+      <div slot="content">Bottom end tooltip</div>
+    </gux-tooltip>
   </div>
 
   <h2>Methods</h2>

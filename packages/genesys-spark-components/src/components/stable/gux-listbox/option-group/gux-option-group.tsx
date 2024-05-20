@@ -62,7 +62,9 @@ export class GuxOptionGroup {
 
   private hasVisibleNextSibling(element: Element): boolean {
     let nextOption = element.nextElementSibling;
-    if (nextOption === null) return false;
+    if (nextOption === null) {
+      return false;
+    }
     while (nextOption && nextOption.classList.contains('gux-filtered')) {
       nextOption = nextOption.nextElementSibling;
     }

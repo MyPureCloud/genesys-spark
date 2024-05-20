@@ -19,7 +19,7 @@
 @prop $gse-ui-slider-focusRing-borderRadius
 **/
 
-@use '../../../../../style/typography.scss';
+@use '~genesys-spark/src/style/typography.scss';
 @use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
@@ -72,6 +72,10 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
 
 .gux-input-and-error-container {
   flex-grow: 1;
+
+  &.gux-hidden {
+    display: none;
+  }
 
   .gux-range-input-container {
     display: flex;
@@ -130,66 +134,6 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
 
       &.gux-hidden {
         display: none;
-      }
-    }
-  }
-
-  // TODO: (COMUI-2234) Will circle back to update tooltip styles with tokens after the tooltip component is reskined
-  .gux-range-tooltip-container {
-    position: absolute;
-    top: -50px;
-    width: 100%;
-    height: 32px;
-    pointer-events: none;
-
-    &.gux-hidden {
-      display: none;
-    }
-
-    .gux-range-tooltip {
-      @include typography.body-sm-regular;
-
-      position: absolute;
-      z-index: var(--gse-semantic-zIndex-tooltip);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 32px;
-      margin-left: -20px;
-      visibility: hidden;
-      background-color: var(--gse-ui-tooltip-light-backgroundColor);
-      border: var(--gse-ui-tooltip-light-border-width)
-        var(--gse-ui-tooltip-light-border-style)
-        var(--gse-ui-tooltip-light-border-color);
-      border-radius: var(--gse-ui-tooltip-borderRadius);
-      box-shadow: var(--gse-ui-tooltip-boxShadow-x)
-        var(--gse-ui-tooltip-boxShadow-y) var(--gse-ui-tooltip-boxShadow-blur)
-        var(--gse-ui-tooltip-boxShadow-spread)
-        var(--gse-ui-tooltip-boxShadow-color);
-
-      &::after,
-      &::before {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        pointer-events: none;
-        content: ' ';
-        border: solid transparent;
-      }
-
-      &::after {
-        margin-left: -4px;
-        border-width: 4px;
-        border-top-color: var(--gse-ui-tooltip-light-backgroundColor);
-      }
-
-      &::before {
-        margin-left: -6px;
-        border-width: 6px;
-        border-top-color: var(--gse-ui-tooltip-light-backgroundColor);
       }
     }
   }

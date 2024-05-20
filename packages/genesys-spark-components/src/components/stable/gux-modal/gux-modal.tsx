@@ -7,7 +7,8 @@ import {
   JSX,
   Prop,
   Method,
-  Watch
+  Watch,
+  Listen
 } from '@stencil/core';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
@@ -58,16 +59,34 @@ export class GuxModal {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async showModal(): Promise<void> {
     this.open = true;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async close(): Promise<void> {
     this.open = false;
+  }
+
+  /*
+   * This serves as a workaround for a specific issue found in Safari and Firefox browsers.
+   * In full-screen mode, pressing the "Escape" key would not only close the native HTML dialog but also minimize the browser window.
+   * By preventing the default behavior of the "Escape" key event and explicitly closing the dialog, this workaround ensures
+   * that the browser window remains unaffected when closing the dialog in full-screen mode.
+   * More info can be found here: https://discussions.apple.com/thread/251785881?answerId=253426808022&sortBy=best#253426808022
+   */
+
+  @Listen('keydown')
+  onKeydown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Escape':
+        event.preventDefault();
+        this.onDismissHandler();
+        return;
+    }
   }
 
   componentWillLoad(): void {
@@ -83,15 +102,21 @@ export class GuxModal {
   }
 
   private hasFooterButtons(): boolean {
+    const startAlignButtonsSlot = this.root.querySelector(
+      '[slot="start-align-buttons"]'
+    );
+    const endAlignButtonsSlot = this.root.querySelector(
+      '[slot="end-align-buttons"]'
+    );
+
     return (
-      Boolean(this.root.querySelector('[slot="start-align-buttons"]')) ||
-      Boolean(this.root.querySelector('[slot="end-align-buttons"]'))
+      Boolean(startAlignButtonsSlot?.textContent?.trim()) ||
+      Boolean(endAlignButtonsSlot?.textContent?.trim())
     );
   }
 
   render(): JSX.Element {
     const hasModalTitleSlot = this.hasModalTitleSlot();
-    const hasFooterButtons = this.hasFooterButtons();
     const titleID: string = randomHTMLId();
 
     return (
@@ -107,17 +132,12 @@ export class GuxModal {
 
           {hasModalTitleSlot && this.renderTitle(titleID)}
 
-          <div
-            class={{
-              'gux-modal-content': true,
-              'gux-no-buttons': !hasFooterButtons
-            }}
-          >
+          <div class="gux-modal-content">
             <p>
               <slot name="content" />
             </p>
           </div>
-          {hasFooterButtons && this.renderButtonFooter()}
+          {this.renderButtonFooter()}
         </div>
       </dialog>
     ) as JSX.Element;
@@ -132,8 +152,14 @@ export class GuxModal {
   }
 
   private renderButtonFooter(): JSX.Element {
+    const hasFooterButtons = this.hasFooterButtons();
     return (
-      <div class="gux-button-footer">
+      <div
+        class={{
+          'gux-button-footer': true,
+          'gux-no-buttons': !hasFooterButtons
+        }}
+      >
         <div class="gux-start-align-buttons">
           <slot name="start-align-buttons" />
         </div>
@@ -149,6 +175,6 @@ export class GuxModal {
   }
 
   private onDismissHandler(): void {
-    this.dialogElement.close();
+    this.open = false;
   }
 }

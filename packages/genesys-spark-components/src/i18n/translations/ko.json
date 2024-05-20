@@ -5,6 +5,12 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "검색"
   },
+  "gux-avatar": {
+    "notifications": "알림"
+  },
+  "gux-avatar-change-photo": {
+    "changePhoto": "프로필 사진 변경"
+  },
   "gux-badge": {
     "info": "레이블 있는 배지: {label}, 강조: 정보",
     "info-bold": "레이블 있는 배지: {label}, 강조: 정보 굵게",

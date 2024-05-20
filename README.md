@@ -1,10 +1,25 @@
-# Spark Monorepo
+<img src="https://studio-assets.supernova.io/design-systems/27408/7754f040-a504-4d00-8165-ac8657c885a4.png"/>
 
-_Visit the [V4 migration guide](docs/migration-guides/v4/readme.md) for details on the new v4 release and migration details._
+# Spark Design System
 
-This project contains several packages that make up Genesys' design system, Spark.
+[![Major Version](https://img.shields.io/badge/V4-Flare-orange)](docs/migration-guides/v4/readme.md)
+[![NPM latest](https://img.shields.io/npm/v/genesys-spark/latest.svg)](docs/migration-guides/v4/readme.md)
+[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/MyPureCloud/genesys-spark/blob/main/LICENSE)
+[![Documentation](https://img.shields.io/badge/documentation-8A2BE2)](https://spark.genesys.com?utm_source=github&utm_medium=readme_shield)
+[![Figma library](https://img.shields.io/badge/spark_core_components-darkslateblue?logo=figma&logoColor=white)](https://www.figma.com/file/JKbHmcf4nUF6C7Pj8M6MpY)
+
+> ⚠ Visit the [V4 migration guide](docs/migration-guides/v4/readme.md) for details on the new v4 release and migration details.
+
+## Hi there! 👋
+
+- Keep reading for an overview of the Spark packages and links on how to get started installing them!
+- To see usage examples of the components with an in-browser editor visit the [component playground!](https://apps.inindca.com/common-ui-docs/#/genesys-webcomponents/latest)
+- For details on UX component documentation and guidelines, go to [https://spark.genesys.com/](https://spark.genesys.com?utm_source=github&utm_medium=readme_p)
+- If you want to contribute to the codebase, check out the [contributing guide!](docs/CONTRIBUTING.md)
 
 ## Spark Packages
+
+This project contains several packages that make up Genesys' design system, Spark.
 
 ### genesys-spark
 
@@ -32,7 +47,7 @@ Specialized React bindings for genesys-spark-components. React doesn't always pl
 
 ### genesys-spark-tokens
 
-The set of [design tokens](https://www.uxpin.com/studio/blog/what-are-design-tokens/) that the Spark components and styles are built on. This is an internal package
+The set of [design tokens](https://spark.genesys.com/latest/design-tokens/overview-fVPAMeaU#section-what-are-design-tokens-af) that the Spark components and styles are built on. This is an internal package
 that is only used to organize development and is not published.
 
 [Read more...](packages/genesys-spark-tokens/README.md)

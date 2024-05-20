@@ -1,12 +1,15 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.12.0",
+  "version": "4.52.0",
   "description": "Common webcomponents",
   "license": "MIT",
   "scripts": {
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present && npm run create-dist-folder",
     "commit": "git-cz",
     "commitlint": "commitlint --from 81b354d83c18eb6ac0ca925b4694d43c09e588e8",
+    "copy.chart-components": "cp -R ./packages/genesys-spark-chart-components/dist ./dist/chart",
+    "create-dist-folder": "node ./scripts/create-dist-folder.js",
+    "create-manifest": "node ./scripts/create-manifest.js",
     "current-version": "cross-var \"echo $npm_package_version\"",
     "dev": "run-pty start.json",
     "dev.examples": "npm run dev --workspace=web-apps/genesys-spark-examples",
@@ -25,7 +28,7 @@
     "lint-staged.root": "lint-staged",
     "lint-staged.workspaces": "npm run lint-staged --workspaces --if-present",
     "new-tokens-data": "npm run snapshot --workspace=packages/genesys-spark-tokens",
-    "prepare": "husky install",
+    "prepare": "husky",
     "prettier-package-json.root": "prettier-package-json --write ./package.json",
     "prettier-package-json.workspaces": "npm run prettier-package-json --workspaces --if-present",
     "prettier.root": "prettier --log-level silent --ignore-unknown --write .",
@@ -38,11 +41,12 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "git-cz"
     }
   },
   "workspaces": [
     "./packages/genesys-spark-tokens",
+    "./packages/genesys-spark",
     "./packages/genesys-spark-components",
     "./packages/genesys-spark-chart-components",
     "./packages/*",
@@ -51,18 +55,18 @@
     "./web-apps/*"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^17.8.1",
-    "@commitlint/config-conventional": "^17.8.1",
+    "@commitlint/cli": "^19.1.0",
+    "@commitlint/config-conventional": "^19.1.0",
     "commitizen": "^4.3.0",
     "cross-var": "^1.1.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.52.0",
+    "eslint": "^8.57.0",
     "eslint-config-genesys-spark-components": "^0.0.1",
-    "eslint-config-prettier": "^8.10.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.3.0",
+    "eslint-config-prettier": "^9.1.0",
+    "git-cz": "^4.9.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.0.3",
+    "prettier": "^3.2.5",
     "prettier-config-genesys-spark-components": "^0.0.1",
     "run-pty": "^4.1.0",
     "standard-version": "^9.5.0"

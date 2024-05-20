@@ -27,7 +27,7 @@ import { afterNextRender } from '@utils/dom/after-next-render';
 import { GuxTooltipAccent } from './gux-tooltip-types';
 
 /**
- * @slot - Content of the tooltip
+ * @slot content - Slot for content
  */
 @Component({
   styleUrl: 'gux-tooltip.scss',
@@ -87,8 +87,8 @@ export class GuxTooltip {
   /*
    * Show tooltip
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async showTooltip(): Promise<void> {
     this.show();
   }
@@ -96,8 +96,8 @@ export class GuxTooltip {
   /*
    * Hide tooltip
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async hideTooltip(): Promise<void> {
     this.hide();
   }
@@ -219,7 +219,9 @@ export class GuxTooltip {
           }}
           data-placement={this.placement}
         >
-          <slot />
+          <slot name="content">
+            <slot />
+          </slot>
         </div>
       </Host>
     ) as JSX.Element;

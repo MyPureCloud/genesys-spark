@@ -1,7 +1,4 @@
 :host {
-  -webkit-user-select: none;
-  user-select: none;
-
   &:first-child {
     .gux-header {
       border-top: var(--gse-ui-accordion-wrapper-dividerBorder-width)

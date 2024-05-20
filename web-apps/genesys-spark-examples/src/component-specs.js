@@ -1,9 +1,11 @@
-import COMPONENT_SPECS from 'genesys-spark-components/dist/component-specs.json';
-import CHART_COMPONENT_SPECS from 'genesys-spark-chart-components/dist/component-specs.json';
+import COMPONENT_SPECS from 'genesys-spark-components/build/component-specs/component-specs.json';
+import CHART_COMPONENT_SPECS from 'genesys-spark-chart-components/build/component-specs/component-specs.json';
+import SPARK_SPECS from 'genesys-spark/build/component-specs/component-specs.json';
 
 export const componentSpecs = Object.assign(
   COMPONENT_SPECS,
-  CHART_COMPONENT_SPECS
+  CHART_COMPONENT_SPECS,
+  SPARK_SPECS
 );
 
 export function getComponentSpec(tag) {

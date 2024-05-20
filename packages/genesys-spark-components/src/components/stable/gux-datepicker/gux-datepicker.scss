@@ -25,7 +25,7 @@
 @prop gse-ui-icon-size-sm
 */
 
-@use '../../../style/mixins.scss';
+@use '~genesys-spark/src/style/mixins.scss';
 
 @mixin gse-ui-focus {
   border: var(--gse-ui-formControl-input-active-border-width)
@@ -101,9 +101,6 @@
       width: 100%;
       height: var(--gse-ui-formControl-input-textfield-height);
       padding: var(--gse-ui-formControl-input-padding);
-      font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
-      font-size: var(--gse-ui-formControl-input-contentText-fontSize);
-      line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
       color: var(--gse-ui-formControl-input-populatedColor);
       white-space: nowrap;
       background-color: var(--gse-ui-formControl-input-backgroundColor);
@@ -144,6 +141,9 @@
           );
           padding: 0;
           overflow: hidden;
+          font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
+          font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+          line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
           color: var(--gse-ui-formControl-input-populatedColor);
           border: none;
           outline: none;
@@ -188,7 +188,7 @@
 
           &:not(:disabled):focus-visible,
           &:not(:disabled):hover {
-            color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
+            color: var(--gse-ui-datePicker-iconHover);
             cursor: pointer;
           }
 

@@ -1,4 +1,4 @@
-@use '../../../style/mixins';
+@use '~genesys-spark/src/style/mixins.scss';
 
 :host {
   display: block;
@@ -7,26 +7,20 @@
 }
 
 gux-icon {
-  width: var(--gse-ui-icon-size-sm); // TODO: [COMUI-2290] missing token
-  height: var(--gse-ui-icon-size-sm); // TODO: [COMUI-2290] missing token
+  width: var(--gse-ui-icon-size-sm);
+  height: var(--gse-ui-icon-size-sm);
   color: var(--gse-ui-button-ghost-default-foregroundColor);
 }
 
 button {
-  height: var(
-    --gse-ui-button-default-height
-  ); // TODO: [COMUI-2290] name should be more specific
-
-  padding: 0 8px; // TODO: [COMUI-2290] missing token
+  height: var(--gse-ui-button-default-height);
+  padding: var(--gse-ui-button-default-paddingIconOnly);
   border-radius: var(--gse-ui-button-borderRadius);
 }
 
 button.gux-compact {
-  height: var(
-    --gse-ui-contextMenu-button-compact
-  ); // TODO: [COMUI-2290] name should be more specific
-
-  padding: 0 4px; // TODO: [COMUI-2290] missing token
+  height: var(--gse-ui-button-compact-height);
+  padding: var(--gse-ui-button-compact-paddingIconOnly);
 }
 
 button:hover:enabled {
@@ -50,8 +44,8 @@ button[disabled] {
 }
 
 .gux-list-container {
-  width: 220px; // TODO: [COMUI-2290] missing token
-  max-height: 330px; // TODO: [COMUI-2290] missing token
+  width: var(--gse-ui-contextMenu-menu-width);
+  max-height: var(--gse-ui-contextMenu-menu-maxHeight);
 
   @include mixins.gux-menu-container;
 }

@@ -2,7 +2,4 @@
  * This file combines all the exported library styles into a single stylesheet for consumption by applications.
  */
 
-@use '~genesys-spark-tokens/dist/css/gse-core.css';
-@use '~genesys-spark-tokens/dist/css/gse-semantic.css';
-@use 'style-reset-focusable.scss';
-@use 'style-reset-typography.scss';
+@use '~genesys-spark/src/style/global.scss';

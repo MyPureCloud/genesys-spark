@@ -1,29 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-text-highlight #render should handle no highlight property 1`] = `"<gux-text-highlight text=\\"Some text to highlight in the tests\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should handle no highlight property 1`] = `"<gux-text-highlight text="Some text to highlight in the tests" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should handle no text property 1`] = `"<gux-text-highlight highlight=\\"Other text\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should handle no text property 1`] = `"<gux-text-highlight highlight="Other text" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render contains strategy 1`] = `"<gux-text-highlight highlight=\\"te\\" text=\\"Some text to highlight in the tests\\" strategy=\\"contains\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render contains strategy 1`] = `"<gux-text-highlight highlight="te" text="Some text to highlight in the tests" strategy="contains" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render contains strategy case insensitively 1`] = `"<gux-text-highlight highlight=\\"TE\\" text=\\"Some text to highlight in the tests\\" strategy=\\"contains\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render contains strategy case insensitively 1`] = `"<gux-text-highlight highlight="TE" text="Some text to highlight in the tests" strategy="contains" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render contains strategy when no match found 1`] = `"<gux-text-highlight highlight=\\"Other text\\" text=\\"Some text to highlight in the tests\\" strategy=\\"contains\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render contains strategy when no match found 1`] = `"<gux-text-highlight highlight="Other text" text="Some text to highlight in the tests" strategy="contains" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render default strategy 1`] = `"<gux-text-highlight highlight=\\"Some text\\" text=\\"Some text to highlight in the tests\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render default strategy 1`] = `"<gux-text-highlight highlight="Some text" text="Some text to highlight in the tests" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render default strategy case insensitively 1`] = `"<gux-text-highlight highlight=\\"some text\\" text=\\"Some text to highlight in the tests\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render default strategy case insensitively 1`] = `"<gux-text-highlight highlight="some text" text="Some text to highlight in the tests" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render default strategy when no match found 1`] = `"<gux-text-highlight highlight=\\"Other text\\" text=\\"Some text to highlight in the tests\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render default strategy when no match found 1`] = `"<gux-text-highlight highlight="Other text" text="Some text to highlight in the tests" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render fuzzy strategy 1`] = `"<gux-text-highlight highlight=\\"text test\\" text=\\"Some text to highlight in the tests\\" strategy=\\"fuzzy\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render fuzzy strategy 1`] = `"<gux-text-highlight highlight="text test" text="Some text to highlight in the tests" strategy="fuzzy" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render fuzzy strategy case insensitively 1`] = `"<gux-text-highlight highlight=\\"TEXT TEST\\" text=\\"Some text to highlight in the tests\\" strategy=\\"fuzzy\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render fuzzy strategy case insensitively 1`] = `"<gux-text-highlight highlight="TEXT TEST" text="Some text to highlight in the tests" strategy="fuzzy" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render fuzzy strategy when no match found 1`] = `"<gux-text-highlight highlight=\\"Other word\\" text=\\"Some text to highlight in the tests\\" strategy=\\"fuzzy\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render fuzzy strategy when no match found 1`] = `"<gux-text-highlight highlight="Other word" text="Some text to highlight in the tests" strategy="fuzzy" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render start strategy 1`] = `"<gux-text-highlight highlight=\\"Some text\\" text=\\"Some text to highlight in the tests\\" strategy=\\"start\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render start strategy 1`] = `"<gux-text-highlight highlight="Some text" text="Some text to highlight in the tests" strategy="start" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render start strategy case insensitively 1`] = `"<gux-text-highlight highlight=\\"some text\\" text=\\"Some text to highlight in the tests\\" strategy=\\"start\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render start strategy case insensitively 1`] = `"<gux-text-highlight highlight="some text" text="Some text to highlight in the tests" strategy="start" hydrated=""></gux-text-highlight>"`;
 
-exports[`gux-text-highlight #render should render start strategy when no match found 1`] = `"<gux-text-highlight highlight=\\"Other text\\" text=\\"Some text to highlight in the tests\\" strategy=\\"start\\" hydrated=\\"\\"></gux-text-highlight>"`;
+exports[`gux-text-highlight #render should render start strategy when no match found 1`] = `"<gux-text-highlight highlight="Other text" text="Some text to highlight in the tests" strategy="start" hydrated=""></gux-text-highlight>"`;

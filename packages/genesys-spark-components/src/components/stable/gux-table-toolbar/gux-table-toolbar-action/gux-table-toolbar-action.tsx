@@ -1,4 +1,4 @@
-import { Component, Element, JSX, h, Prop } from '@stencil/core';
+import { Component, Element, JSX, h, Listen, Prop } from '@stencil/core';
 import { capitalizeFirstLetter } from '@utils/string/capitalize-first-letter';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxTableToolbarActionTypes } from './gux-table-toolbar-action.types';
@@ -30,12 +30,35 @@ export class GuxTableToolbarAction {
   @Prop()
   disabled: boolean = false;
 
+  @Listen('click', { capture: true })
+  handleClick(event: MouseEvent): void {
+    if (this.disabled) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+  }
+
   private returnActionLocale(action: GuxTableToolbarActionTypes): string {
     return this.i18n(`action${capitalizeFirstLetter(action)}`);
   }
 
   private returnActionTypeIcon(action: GuxTableToolbarActionTypes): string {
-    return action == 'revert' ? 'reset' : action;
+    switch (action) {
+      case 'refresh':
+        return 'fa/arrows-rotate-regular';
+      case 'delete':
+        return 'fa/trash-regular';
+      case 'export':
+        return 'fa/arrow-up-from-line-regular';
+      case 'import':
+        return 'fa/file-import-regular';
+      case 'revert':
+        return 'fa/arrow-rotate-left-regular';
+      case 'add':
+        return 'fa/plus-regular';
+      default:
+        return 'fa/square-x-regular';
+    }
   }
 
   async componentWillLoad(): Promise<void> {

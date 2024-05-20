@@ -78,13 +78,11 @@ body {
   }
 
   > .editor {
-    flex-grow: 1;
     min-height: 40vh;
     max-height: 400px;
     transition: height 0.15s ease-in;
 
     &.editor-hidden {
-      flex-grow: 0;
       min-height: 0;
       max-height: 0;
       transition: height 0.4s ease-in-out;

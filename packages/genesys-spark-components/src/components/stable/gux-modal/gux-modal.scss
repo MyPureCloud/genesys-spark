@@ -1,4 +1,4 @@
-@use '../../../style/typography.scss';
+@use '~genesys-spark/src/style/typography.scss';
 
 ::slotted(button:active:enabled) {
   color: var(--gse-ui-link-active-foregroundColor);
@@ -18,7 +18,8 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
   dialog {
     box-sizing: border-box;
     justify-content: space-between;
-    border: 1px solid #b4bccb; // TODO: COMUI-2300
+    padding: 0;
+    border: none;
     border-radius: var(--gse-ui-modal-borderRadius);
     box-shadow: var(--gse-ui-modal-boxShadow-x) var(--gse-ui-modal-boxShadow-y)
       var(--gse-ui-modal-boxShadow-blur) var(--gse-ui-modal-boxShadow-spread)
@@ -33,7 +34,8 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
     .gux-modal-container {
       display: flex;
       flex-direction: column;
-      padding: var(--gse-ui-modal-padding);
+      padding-top: var(--gse-ui-modal-padding);
+      padding-bottom: var(--gse-ui-modal-padding);
 
       &.gux-small {
         width: var(--gse-ui-modal-small-width);
@@ -60,6 +62,8 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       }
 
       .gux-modal-header {
+        padding-right: var(--gse-ui-modal-padding);
+        padding-left: var(--gse-ui-modal-padding);
         margin: 0;
         font-family: var(--gse-ui-modal-heading-fontFamily);
         font-size: var(--gse-ui-modal-heading-fontSize);
@@ -73,18 +77,22 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
 
       .gux-modal-content {
         max-height: 432px;
+        padding-right: var(--gse-ui-modal-padding);
+        padding-left: var(--gse-ui-modal-padding);
         margin-top: var(--gse-ui-modal-gap);
-        margin-bottom: var(--gse-ui-modal-gap);
         overflow-y: auto;
-
-        &.gux-no-buttons {
-          margin-bottom: 0;
-        }
       }
 
       .gux-button-footer {
         display: flex;
         justify-content: space-between;
+        padding-right: var(--gse-ui-modal-padding);
+        padding-left: var(--gse-ui-modal-padding);
+        margin-top: var(--gse-ui-modal-gap);
+
+        &.gux-no-buttons {
+          display: none;
+        }
       }
     }
 

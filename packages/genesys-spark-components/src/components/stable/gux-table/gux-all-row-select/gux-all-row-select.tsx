@@ -27,7 +27,7 @@ export class GuxAllRowSelect {
   @Element()
   root: HTMLElement;
 
-  @Prop()
+  @Prop({ mutable: true })
   selected: boolean = false;
 
   @Prop()
@@ -39,11 +39,12 @@ export class GuxAllRowSelect {
   @Listen('input')
   onCheck(event: CustomEvent): void {
     event.stopPropagation();
+    this.selected = this.inputElement.checked;
     this.internalallrowselectchange.emit(this.inputElement.checked);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async setIndeterminate(indeterminate: boolean = true): Promise<void> {
     this.inputElement.indeterminate = indeterminate;
   }

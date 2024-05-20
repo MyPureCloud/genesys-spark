@@ -5,6 +5,12 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "搜尋"
   },
+  "gux-avatar": {
+    "notifications": "通知"
+  },
+  "gux-avatar-change-photo": {
+    "changePhoto": "變更個人檔案相片"
+  },
   "gux-badge": {
     "info": "徽章含標籤：{label}，調性：資訊",
     "info-bold": "徽章含標籤：{label}，調性：粗體資訊",

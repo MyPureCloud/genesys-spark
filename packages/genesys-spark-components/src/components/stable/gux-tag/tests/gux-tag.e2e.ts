@@ -162,6 +162,7 @@ describe('gux-tag', () => {
         });
       }
     );
+
     it('should be accessible when the text overflows the tag', async () => {
       const html = `<gux-tag style="width:100px" lang="en" accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>Long long long long long long long</gux-tag>`;
       const page = await newSparkE2EPage({ html });

@@ -2,8 +2,7 @@
  * This file combines all the exported library styles into a single stylesheet for consumption by applications.
  */
 
-@use '~genesys-spark-tokens/dist/css/gse-core.css';
-@use '~genesys-spark-tokens/dist/css/gse-semantic.css';
+@use '~genesys-spark/src/style/global.scss';
 @use '~genesys-spark-tokens/dist/css/gse-ui-actions.css';
 @use '~genesys-spark-tokens/dist/css/gse-ui-dataDisplay.css';
 @use '~genesys-spark-tokens/dist/css/gse-ui-feedback.css';
@@ -13,9 +12,8 @@
 @use '~genesys-spark-tokens/dist/css/gse-ui-navigation.css';
 @use '~genesys-spark-tokens/dist/css/gse-ui-searchAndFilter.css';
 @use '~genesys-spark-tokens/dist/css/gse-ui.css';
-@use 'style-reset-focusable.scss';
-@use 'style-reset-typography.scss';
 @use '../components/beta/gux-calendar-beta/gux-calendar.light.scss';
+@use '../components/beta/gux-avatar-focusable/gux-avatar-focusable.light.scss';
 @use '../components/legacy/gux-action-toast-legacy/gux-action-toast.light.scss';
 @use '../components/stable/gux-action-button/gux-action-button.light.scss';
 @use '../components/stable/gux-button-multi/gux-button-multi.light.scss';
@@ -23,3 +21,4 @@
 @use '../components/stable/gux-form-field/gux-form-field.light.scss';
 @use '../components/stable/gux-table/gux-table.light.scss';
 @use '../components/stable/gux-form-field/components/gux-form-field-color/gux-form-field-color.light.scss';
+@use '../components/beta/gux-selector-cards/gux-selector-card/gux-selector-card.light.scss';

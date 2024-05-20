@@ -47,8 +47,8 @@ export class GuxSubmenu {
   /**
    * Focus on the components button element
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocus(): Promise<void> {
     this.buttonElement.focus();
   }
@@ -225,7 +225,7 @@ export class GuxSubmenu {
           <span class="gux-submenu-button-text">{this.label}</span>
           <gux-icon
             class="gux-submenu-open-icon"
-            icon-name="chevron-small-right"
+            icon-name="custom/chevron-right-small-regular"
             decorative
           ></gux-icon>
         </button>

@@ -68,20 +68,27 @@
 
 <style
   onload="(function () {
+  // window['GUX_OPTIONS_enableRegionalDates'] = true
   const languagesContainer = document.getElementById('languages-container');
+  const arHtml = window.toHTML([
+    '<div>',
+        '<h3>ar</h3>',
+          '<gux-datepicker dir=rtl lang=ar value=2022-12-23></gux-datepicker>',
+      '</div>'
+    ].join(''));
+    languagesContainer.appendChild(arHtml);
 
   [
-    'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
+    'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
     'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
     'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
   ].forEach((lang) => {
     const html = window.toHTML([
       '<div class=language lang=' + lang + '>',
         '<h3>' + lang + '</h3>',
-          '<gux-datepicker value=2022-12-22></gux-datepicker>',
+          '<gux-datepicker value=2022-12-23></gux-datepicker>',
       '</div>'
     ].join(''));
-
     languagesContainer.appendChild(html);
   });
 })()"

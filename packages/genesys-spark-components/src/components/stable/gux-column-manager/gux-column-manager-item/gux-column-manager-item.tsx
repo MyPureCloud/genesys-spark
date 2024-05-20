@@ -75,8 +75,8 @@ export class GuxColumnManagerItem {
   @Event()
   private internal_keyboard_reorder_finish: EventEmitter<void>;
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method('guxSetHighlight')
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxSetHighlight(
     highlight: string = '',
     highlightActive: boolean = false
@@ -85,8 +85,8 @@ export class GuxColumnManagerItem {
     this.highlightActive = highlightActive;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method('guxFocus')
+  // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocus(): Promise<void> {
     this.reorderButtonElement.focus();
   }
@@ -249,7 +249,7 @@ export class GuxColumnManagerItem {
             onKeyDown={event => this.keyboardReorder(event)}
             ref={el => (this.reorderButtonElement = el)}
           >
-            <gux-icon icon-name="grab-vertical" decorative></gux-icon>
+            <gux-icon icon-name="fa/grip-vertical-solid" decorative></gux-icon>
             <span class="gux-sr-only">
               {this.i18n('activateReordering', { columnName: this.text })}
             </span>

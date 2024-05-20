@@ -5,6 +5,12 @@
   "gux-advanced-dropdown-legacy": {
     "searchAria": "Pesquisar"
   },
+  "gux-avatar": {
+    "notifications": "Notificações"
+  },
+  "gux-avatar-change-photo": {
+    "changePhoto": "Alterar foto de perfil"
+  },
   "gux-badge": {
     "info": "selo com etiqueta: {label}, destacar: informações",
     "info-bold": "selo com etiqueta: {label}, destacar: informações em negrito",

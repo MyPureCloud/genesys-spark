@@ -1,0 +1,9 @@
+.gux-cta-group {
+  display: flex;
+  gap: var(--gse-ui-ctaGroup-gap);
+
+  &.gux-end-align {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+}

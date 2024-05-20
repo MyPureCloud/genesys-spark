@@ -83,28 +83,28 @@ export class GuxPhoneInput {
   @State()
   private region: Region = null;
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async setRegionAlpha2Code(alpha2Code: Alpha2Code): Promise<void> {
     this._setRegionAlpha2Code(alpha2Code);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async setRegionDialCode(dialCode: string): Promise<void> {
     const newRegion = this.getRegionFromDialCode(dialCode);
 
     this.updateInputWithNewRegion(newRegion, this.region);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async getRegion(): Promise<Region> {
     return this.region;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async getFormattedNumber(
     format: typeof this.phoneNumberFormat = 'E164'
   ): Promise<string> {
@@ -114,24 +114,24 @@ export class GuxPhoneInput {
     return phone ? this.phoneUtil.format(phone, libFormat) : null;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async getExtension(): Promise<string> {
     const phone = this.parsePhoneNumber(this.value, this.region?.alpha2Code);
 
     return phone ? phone.getExtension() : null;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async isPossibleNumber(): Promise<boolean> {
     const phone = this.parsePhoneNumber(this.value, this.region?.alpha2Code);
 
     return phone ? this.phoneUtil.isPossibleNumber(phone) : false;
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async isValidNumber(): Promise<boolean> {
     const phone = this.parsePhoneNumber(this.value, this.region?.alpha2Code);
 
@@ -446,12 +446,28 @@ export class GuxPhoneInput {
     });
   }
 
+  private renderExpandIcon(): JSX.Element {
+    if (!this.disabled) {
+      return (
+        <gux-icon
+          class="gux-expand-icon"
+          iconName="custom/chevron-down-small-regular"
+          decorative
+        />
+      ) as JSX.Element;
+    }
+  }
+
   private renderCountryButton(): JSX.Element {
     return (
       <div class="gux-region-select">
         <button
           type="button"
-          class="gux-field gux-field-button"
+          class={{
+            'gux-field gux-field-button': true,
+            'gux-expanded': this.expanded,
+            'gux-disabled': this.disabled
+          }}
           disabled={this.disabled}
           onClick={this.fieldButtonClick.bind(this)}
           ref={el => (this.fieldButtonElement = el)}
@@ -460,11 +476,7 @@ export class GuxPhoneInput {
           aria-label={this.i18n('regionDropdownButton')}
         >
           <div class="gux-field-content">{this.renderButtonDisplay()}</div>
-          <gux-icon
-            class="gux-expand-icon"
-            iconName="chevron-small-down"
-            decorative
-          />
+          {this.renderExpandIcon()}
         </button>
       </div>
     ) as JSX.Element;
@@ -480,7 +492,7 @@ export class GuxPhoneInput {
           ></gux-flag-icon-beta>
         ) : (
           <gux-icon
-            icon-name="globe"
+            icon-name="fa/earth-africa-regular"
             screenreader-text={this.i18n('unknownRegion')}
           ></gux-icon>
         )}
@@ -529,9 +541,11 @@ export class GuxPhoneInput {
       (
         <gux-option value="">
           <span class="gux-option-content">
-            <gux-icon icon-name="globe" decorative></gux-icon>
-            <span>{this.i18n('unknownRegion')}</span>
-            <span class="gux-country-code">+</span>
+            <gux-icon icon-name="fa/earth-africa-regular" decorative></gux-icon>
+            <span>
+              {this.i18n('unknownRegion')}{' '}
+              <span class="gux-country-code">(+)</span>
+            </span>
           </span>
         </gux-option>
       ) as JSX.Element
@@ -542,8 +556,10 @@ export class GuxPhoneInput {
             <gux-option value={region.alpha2Code}>
               <span class="gux-option-content">
                 <gux-flag-icon-beta flag={region.alpha2Code} />
-                <span>{region.name}</span>
-                <span class="gux-country-code">{region.dialCode}</span>
+                <span>
+                  {region.name}{' '}
+                  <span class="gux-country-code">({region.dialCode})</span>
+                </span>
               </span>
             </gux-option>
           ) as JSX.Element

@@ -218,8 +218,8 @@ export class GuxTable {
   /**
    * Returns the selected rows Ids.
    */
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async getSelected(): Promise<GuxTableSelectedState> {
     return this.getSelectedInternal();
   }

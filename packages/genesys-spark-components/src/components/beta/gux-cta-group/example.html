@@ -1,0 +1,72 @@
+<h1>gux-cta-group</h1>
+
+<gux-cta-group>
+  <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+  <gux-button slot="secondary" onclick="notify(event)">Secondary</gux-button>
+  <gux-button slot="dismiss" onclick="notify(event)">Dismiss</gux-button>
+</gux-cta-group>
+
+<h2>gux-cta-group danger variant</h2>
+
+<gux-cta-group dangerous>
+  <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+  <gux-button slot="secondary" onclick="notify(event)">Secondary</gux-button>
+  <gux-button slot="dismiss" onclick="notify(event)">Dismiss</gux-button>
+</gux-cta-group>
+
+<h2>gux-cta-group end aligned</h2>
+
+<gux-cta-group align="end">
+  <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+  <gux-button slot="secondary" onclick="notify(event)">Secondary</gux-button>
+  <gux-button slot="dismiss" onclick="notify(event)">Dismiss</gux-button>
+</gux-cta-group>
+
+<h2>gux-cta-group without secondary actions</h2>
+
+<gux-cta-group>
+  <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+  <gux-button slot="dismiss" onclick="notify(event)">Dismiss</gux-button>
+</gux-cta-group>
+
+<h2>gux-cta-group with multi buttons</h2>
+
+<gux-cta-group>
+  <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+  <gux-button-multi slot="secondary">
+    <span slot="title">Secondary</span>
+    <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+    <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+    <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+    <gux-list-divider></gux-list-divider>
+    <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+  </gux-button-multi>
+  <gux-button slot="dismiss" onclick="notify(event)">Dismiss</gux-button>
+</gux-cta-group>
+
+<h2>gux-cta-group with action buttons</h2>
+
+<gux-cta-group>
+  <gux-action-button slot="primary">
+    <div slot="title">Primary</div>
+    <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+    <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+    <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+  </gux-action-button>
+  <gux-button slot="secondary" onclick="notify(event)">Secondary</gux-button>
+  <gux-button slot="dismiss" onclick="notify(event)">Dismiss</gux-button>
+</gux-cta-group>
+
+<h2>gux-cta-group with button slots</h2>
+
+<gux-cta-group>
+  <gux-button-slot slot="primary">
+    <button type="button" onclick="notify(event)">Primary</button>
+  </gux-button-slot>
+  <gux-button-slot slot="secondary">
+    <input type="button" onclick="notify(event)" value="Secondary" />
+  </gux-button-slot>
+  <gux-button-slot slot="dismiss">
+    <button type="button" onclick="notify(event)">Dismiss</button>
+  </gux-button-slot>
+</gux-cta-group>

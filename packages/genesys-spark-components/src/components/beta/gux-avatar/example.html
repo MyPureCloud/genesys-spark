@@ -1,0 +1,769 @@
+<h1>gux-avatar-beta</h1>
+<h2>Image</h2>
+<gux-avatar-beta name="Conor Darcy">
+  <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy" />
+</gux-avatar-beta>
+
+<h2>Name</h2>
+
+<div class="name-example-group">
+  <div class="name-example">
+    <h3>en</h3>
+    <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
+  </div>
+  <div class="name-example">
+    <h3>JA</h3>
+    <gux-avatar-beta name="山田 太郎"></gux-avatar-beta>
+  </div>
+  <div class="name-example">
+    <h3>KO</h3>
+    <gux-avatar-beta name="이 영수"></gux-avatar-beta>
+  </div>
+  <div class="name-example">
+    <h3>zhCN</h3>
+    <gux-avatar-beta name="邓 小平"></gux-avatar-beta>
+  </div>
+  <div class="name-example">
+    <h3>no-whitespace</h3>
+    <gux-avatar-beta name="ConorDarcy"></gux-avatar-beta>
+  </div>
+</div>
+
+<h2>Size Variations</h2>
+<div class="size-example-group">
+  <gux-avatar-beta size="xsmall" name="Xavier Smith"></gux-avatar-beta>
+  <gux-avatar-beta size="small" name="Susan Murphy"></gux-avatar-beta>
+  <gux-avatar-beta size="medium" name="Mary Doyle"></gux-avatar-beta>
+  <gux-avatar-beta size="large" name="Liam Gallagher"></gux-avatar-beta>
+  <gux-avatar-beta
+    class="size-default"
+    size="medium-rare"
+    name="Derek Feehan"
+  ></gux-avatar-beta>
+</div>
+
+<h2>Accents</h2>
+<gux-avatar-beta name="Alan Butler"></gux-avatar-beta>
+<gux-avatar-beta name="Conor Darcy" accent="1"></gux-avatar-beta>
+<gux-avatar-beta name="Elliot Fitzgerald" accent="2"></gux-avatar-beta>
+<gux-avatar-beta name="Greg Hayes" accent="3"></gux-avatar-beta>
+<gux-avatar-beta name="Iseult Jones" accent="4"></gux-avatar-beta>
+<gux-avatar-beta name="John King" accent="5"></gux-avatar-beta>
+<gux-avatar-beta name="Larissa Mendez" accent="6"></gux-avatar-beta>
+<gux-avatar-beta name="Nancy Omaha" accent="7"></gux-avatar-beta>
+<gux-avatar-beta name="Paul Quinn" accent="8"></gux-avatar-beta>
+<gux-avatar-beta name="Roisin Smyth" accent="9"></gux-avatar-beta>
+<gux-avatar-beta name="Thomas U." accent="10"></gux-avatar-beta>
+<gux-avatar-beta name="Valerie Wall" accent="11"></gux-avatar-beta>
+<gux-avatar-beta name="Xavier Yarrow" accent="12"></gux-avatar-beta>
+<gux-avatar-beta name="Xavier Yarrow" accent="invalid-accent"></gux-avatar-beta>
+
+<h3>Automatically choose accent based on the name</h3>
+<gux-avatar-beta name="Monserrat Limon" accent="auto"></gux-avatar-beta>
+<gux-avatar-beta name="Memo Lopez" accent="auto"></gux-avatar-beta>
+<gux-avatar-beta name="Gillian Middleton" accent="auto"></gux-avatar-beta>
+<gux-avatar-beta name="Dorka Hajnal" accent="auto"></gux-avatar-beta>
+
+<h2>Dynamic Example</h2>
+
+<div class="dynamic-example-wrapper">
+  <div class="control">
+    <p class="gux-heading-subheading-regular">Avatar Controls</p>
+    <gux-form-field-text-like>
+      <input
+        slot="input"
+        name="avatarName"
+        id="update-name"
+        type="text"
+        placeholder="Enter name"
+        value="Monserrat Limon"
+      />
+      <label slot="label">Name</label>
+    </gux-form-field-text-like>
+    <gux-form-field-dropdown>
+      <gux-dropdown value="large" id="update-size">
+        <gux-listbox aria-label="Update size">
+          <gux-option value="xsmall">X-Small</gux-option>
+          <gux-option value="small">Small</gux-option>
+          <gux-option value="medium">Medium</gux-option>
+          <gux-option value="large">Large</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Size</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown value="available" id="update-presence">
+        <gux-listbox aria-label="Update presence">
+          <gux-option value="available">Available</gux-option>
+          <gux-option value="busy">Busy</gux-option>
+          <gux-option value="meeting">Meeting</gux-option>
+          <gux-option value="away">Away</gux-option>
+          <gux-option value="meal">Meal</gux-option>
+          <gux-option value="break">Break</gux-option>
+          <gux-option value="training">Training</gux-option>
+          <gux-option value="on-queue">On Queue</gux-option>
+          <gux-option value="offline">Offline</gux-option>
+          <gux-option value="out-of-office">Out of Office</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Presence</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown>
+      <gux-dropdown value="" id="update-uc-integration">
+        <gux-listbox aria-label="Update Uc Inegration">
+          <gux-option value="zoom">Zoom</gux-option>
+          <gux-option value="teams">Teams</gux-option>
+          <gux-option value="8x8">8x8</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">UcIntegration</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-text-like>
+      <input
+        slot="input"
+        name="avatarLabel"
+        id="update-label"
+        type="text"
+        placeholder="Enter label"
+        value=""
+      />
+      <label slot="label">Label</label>
+    </gux-form-field-text-like>
+    <div class="checkboxes">
+      <gux-form-field-checkbox>
+        <input slot="input" type="checkbox" name="update-ring" value="ring" />
+        <label slot="label">Ring</label>
+      </gux-form-field-checkbox>
+      <gux-form-field-checkbox>
+        <input slot="input" type="checkbox" name="update-badge" value="badge" />
+        <label slot="label">Badge</label>
+      </gux-form-field-checkbox>
+      <gux-form-field-checkbox>
+        <input
+          slot="input"
+          type="checkbox"
+          name="update-notifications"
+          value="notifications"
+        />
+        <label slot="label">Notifications</label>
+      </gux-form-field-checkbox>
+    </div>
+    <gux-button
+      onclick="(function() {
+        const avatar = document.getElementById('dynamic-example');
+        const updateSize = document.getElementById('update-size');
+        const updateName = document.getElementById('update-name');
+        const updateLabel = document.getElementById('update-label');
+        const updatePresence = document.getElementById('update-presence');
+        const updateUcIntegraton = document.getElementById('update-uc-integration');
+        const updateBadge = document.querySelector('[name=update-badge]');
+        const updateRing = document.querySelector('[name=update-ring]');
+        const updateNotifications = document.querySelector('[name=update-notifications]');
+        avatar.setAttribute('size', updateSize.value);
+        avatar.setAttribute('name', updateName.value);
+        avatar.setAttribute('label', updateLabel.value);
+        avatar.setAttribute('presence', updatePresence.value);
+        avatar.setAttribute('uc-integration', updateUcIntegraton.value);
+        avatar.setAttribute('badge', updateBadge.checked);
+        avatar.setAttribute('ring', updateRing.checked);
+        avatar.setAttribute('notifications', updateNotifications.checked);
+      })()"
+      >Update Avatar</gux-button
+    >
+  </div>
+  <gux-avatar-beta
+    id="dynamic-example"
+    name="Monserrat Limon"
+    size="large"
+    accent="auto"
+    presence="available"
+    ring="false"
+    badge="false"
+  ></gux-avatar-beta>
+</div>
+
+<h2>Presences</h2>
+<h3>Ring</h3>
+<gux-avatar-beta name="Alan Butler"></gux-avatar-beta>
+<gux-avatar-beta
+  presence="available"
+  label="Available"
+  name="Conor Darcy"
+  ring
+></gux-avatar-beta>
+<gux-avatar-beta
+  presence="busy"
+  label="Busy"
+  name="Giles Hession"
+  ring
+></gux-avatar-beta>
+<gux-avatar-beta
+  presence="away"
+  label="Available"
+  name="Iseult Jones"
+  ring
+></gux-avatar-beta>
+<gux-avatar-beta
+  presence="on-queue"
+  label="On Queue"
+  name="Kamala Lyons"
+  ring
+></gux-avatar-beta>
+<gux-avatar-beta
+  presence="offline"
+  label="Offline"
+  name="Michael Norris"
+  ring
+></gux-avatar-beta>
+<gux-avatar-beta
+  presence="out-of-office"
+  label="Out of Office"
+  name="OP"
+  ring
+></gux-avatar-beta>
+<gux-avatar-beta name="Conor Darcy" presence="available" ring>
+  <img
+    slot="image"
+    src="https://i.pravatar.cc/300"
+    alt="Conor Darcy (available)"
+  />
+</gux-avatar-beta>
+<gux-avatar-beta name="Conor Darcy" presence="idle" label="Idle" ring>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Conor Darcy"
+  presence="available"
+  label="Available"
+  ring
+  size="medium"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Conor Darcy"
+  presence="available"
+  label="Available"
+  ring
+  size="small"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Conor Darcy"
+  presence="available"
+  label="Available"
+  ring
+  size="xsmall"
+>
+</gux-avatar-beta>
+
+<h3>Badge</h3>
+<gux-avatar-beta
+  name="Memo Lopez"
+  presence="available"
+  label="Available"
+  badge
+></gux-avatar-beta>
+<gux-avatar-beta name="GH" presence="busy" label="Busy" badge></gux-avatar-beta>
+<gux-avatar-beta name="EF" presence="away" label="Away" badge></gux-avatar-beta>
+<gux-avatar-beta
+  name="MN"
+  presence="on-queue"
+  label="On Queue"
+  badge
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="KL"
+  presence="offline"
+  label="Offline"
+  badge
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="Vanessa Cepeda"
+  presence="out-of-office"
+  label="Out of Office"
+  badge
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="Memo Lopez"
+  presence="available"
+  label="Available"
+  badge
+  presence="invalid-presence"
+>
+</gux-avatar-beta>
+<gux-avatar-beta name="Conor Darcy" presence="available" badge>
+  <img
+    slot="image"
+    src="https://i.pravatar.cc/300"
+    alt="Conor Darcy (available)"
+  />
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Conor Darcy"
+  label="Available"
+  presence="available"
+  badge
+  size="medium"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Conor Darcy"
+  label="Available"
+  presence="available"
+  badge
+  size="small"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Conor Darcy"
+  label="Available"
+  presence="available"
+  badge
+  size="xsmall"
+>
+</gux-avatar-beta>
+
+<h3>Badge + Ring</h3>
+<gux-avatar-beta
+  name="Memo Lopez"
+  presence="available"
+  label="Available"
+  ring
+  badge
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="GH"
+  presence="busy"
+  label="Busy"
+  ring
+  badge
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="EF"
+  presence="away"
+  label="Away"
+  ring
+  badge
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="MN"
+  presence="on-queue"
+  label="On Queue"
+  ring
+  badge
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="KL"
+  presence="offline"
+  label="Offline"
+  ring
+  badge
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="Vanessa Cepeda"
+  presence="out-of-office"
+  label="Out of Office"
+  ring
+  badge
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="Memo Lopez"
+  label="Idle"
+  ring
+  badge
+  presence="idle"
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="Brian Whelehan"
+  label="No presence"
+  ring
+  badge
+  presence="none"
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="Conor Darcy"
+  label="Available"
+  presence="available"
+  ring
+  badge
+>
+  <img
+    slot="image"
+    src="https://i.pravatar.cc/300"
+    alt="Conor Darcy (available)"
+  />
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Joe Errity"
+  presence="available"
+  label="Available"
+  badge
+  ring
+  size="medium"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Martin Hanamy"
+  presence="available"
+  label="Available"
+  badge
+  ring
+  size="small"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Hubert Rigney"
+  presence="available"
+  label="Available"
+  badge
+  ring
+  size="xsmall"
+>
+</gux-avatar-beta>
+
+<h2>Notifications</h2>
+<gux-avatar-beta
+  name="Stepheni Mendez"
+  presence="on-queue"
+  label="On Queue"
+  ring
+  badge
+  notifications
+></gux-avatar-beta>
+<gux-avatar-beta
+  name="Kevin Martin"
+  presence="available"
+  badge
+  ring
+  notifications
+>
+  <img
+    slot="image"
+    src="https://i.pravatar.cc/300"
+    alt="Kevin Martin (available)"
+  />
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="John Troy"
+  label="Available"
+  presence="available"
+  badge
+  notifications
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Billy Dooley"
+  presence="available"
+  label="Available"
+  badge
+  ring
+  notifications
+  size="medium"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Gary Hanniffy"
+  presence="available"
+  label="Available"
+  badge
+  ring
+  notifications
+  size="small"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  badge
+  ring
+  notifications
+  size="xsmall"
+>
+</gux-avatar-beta>
+<h2>UC Integration App Badge</h2>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  badge
+  ring
+  notifications
+  uc-integration="teams"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  badge
+  uc-integration="zoom"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  ring
+  uc-integration="8x8"
+>
+</gux-avatar-beta>
+<gux-avatar-beta
+  name="Stephen Byrne"
+  presence="available"
+  label="Available"
+  ring
+  uc-integration="invalid-app"
+>
+</gux-avatar-beta>
+<gux-avatar-focusable-beta>
+  <gux-avatar-change-photo-beta>
+    <gux-avatar-beta
+      slot="avatar"
+      presence="busy"
+      ring
+      badge
+      name="Conor Darcy"
+      uc-integration="zoom"
+    ></gux-avatar-beta>
+  </gux-avatar-change-photo-beta>
+</gux-avatar-focusable-beta>
+
+<h2>gux-avatar-focusable</h2>
+<p>
+  The following shows examples of correct focus styling for the avatar when it
+  is located within a focusable element such as a button or anchor tag.
+</p>
+<h3>Button</h3>
+<div class="wrapped-examples">
+  <gux-avatar-focusable-beta>
+    <button onclick="notify(event)">
+      <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button onclick="notify(event)">
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        badge
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button onclick="notify(event)">
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        ring
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button onclick="notify(event)">
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button onclick="notify(event)">
+      <gux-avatar-beta
+        size="medium"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button onclick="notify(event)">
+      <gux-avatar-beta
+        size="small"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <button onclick="notify(event)">
+      <gux-avatar-beta
+        size="xsmall"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </button>
+  </gux-avatar-focusable-beta>
+</div>
+
+<h3>Anchor Tag</h3>
+<div class="wrapped-examples">
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        badge
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        ring
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        size="medium"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        size="small"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <a href="#">
+      <gux-avatar-beta
+        size="xsmall"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </a>
+  </gux-avatar-focusable-beta>
+</div>
+<h2>Change Photo (large only)</h2>
+<div class="wrapped-examples">
+  <gux-avatar-focusable-beta>
+    <gux-avatar-change-photo-beta>
+      <gux-avatar-beta slot="avatar" name="Conor Darcy"></gux-avatar-beta>
+    </gux-avatar-change-photo-beta>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <gux-avatar-change-photo-beta>
+      <gux-avatar-beta
+        slot="avatar"
+        name="Conor Darcy"
+        presence="available"
+        badge
+      ></gux-avatar-beta>
+    </gux-avatar-change-photo-beta>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <gux-avatar-change-photo-beta>
+      <gux-avatar-beta
+        slot="avatar"
+        name="Conor Darcy"
+        presence="available"
+        ring
+      ></gux-avatar-beta>
+    </gux-avatar-change-photo-beta>
+  </gux-avatar-focusable-beta>
+  <gux-avatar-focusable-beta>
+    <gux-avatar-change-photo-beta>
+      <gux-avatar-beta
+        slot="avatar"
+        name="Conor Darcy"
+        presence="available"
+        badge
+        ring
+      ></gux-avatar-beta>
+    </gux-avatar-change-photo-beta>
+  </gux-avatar-focusable-beta>
+</div>
+
+<style>
+  .name-example {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name-example-group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 550px;
+  }
+
+  .size-example-group {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 300px;
+  }
+
+  .control {
+    min-width: 150px;
+    padding: 0 var(--gse-core-spacing-2xs) var(--gse-core-spacing-2xs);
+    border: 1px solid var(--gse-core-color-blueberry-900);
+    border-radius: var(--gse-core-borderRadius-md);
+  }
+
+  .dynamic-example-wrapper {
+    display: flex;
+    gap: var(--gse-core-spacing-lg);
+    align-items: center;
+  }
+
+  gux-form-field-text-like,
+  gux-form-field-dropdown {
+    margin: var(--gse-core-spacing-2xs) 0;
+  }
+
+  .size-default {
+    padding-left: 8px;
+    border-inline-start: 1px solid var(--gse-core-color-cornflower-600);
+  }
+
+  .checkboxes {
+    margin: var(--gse-core-spacing-2xs) 0;
+  }
+
+  .wrapped-examples {
+    display: flex;
+    gap: var(--gse-core-spacing-3xs);
+    align-items: flex-end;
+  }
+</style>

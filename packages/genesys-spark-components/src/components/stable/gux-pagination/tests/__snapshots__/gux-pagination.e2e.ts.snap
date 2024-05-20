@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-pagination #render should render as expected (1) 1`] = `"<gux-pagination lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"25\\" layout=\\"advanced\\" hydrated=\\"\\"></gux-pagination>"`;
+exports[`gux-pagination #render should render as expected (1) 1`] = `"<gux-pagination lang="en" current-page="1" total-items="1000" items-per-page="25" layout="advanced" hydrated=""></gux-pagination>"`;
 
-exports[`gux-pagination #render should render as expected (2) 1`] = `"<gux-pagination lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"50\\" layout=\\"advanced\\" hydrated=\\"\\"></gux-pagination>"`;
+exports[`gux-pagination #render should render as expected (2) 1`] = `"<gux-pagination lang="en" current-page="1" total-items="1000" items-per-page="50" layout="advanced" hydrated=""></gux-pagination>"`;
 
-exports[`gux-pagination #render should render as expected (3) 1`] = `"<gux-pagination lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"75\\" layout=\\"advanced\\" hydrated=\\"\\"></gux-pagination>"`;
+exports[`gux-pagination #render should render as expected (3) 1`] = `"<gux-pagination lang="en" current-page="1" total-items="1000" items-per-page="75" layout="advanced" hydrated=""></gux-pagination>"`;
 
-exports[`gux-pagination #render should render as expected (4) 1`] = `"<gux-pagination lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"100\\" layout=\\"advanced\\" hydrated=\\"\\"></gux-pagination>"`;
+exports[`gux-pagination #render should render as expected (4) 1`] = `"<gux-pagination lang="en" current-page="1" total-items="1000" items-per-page="100" layout="advanced" hydrated=""></gux-pagination>"`;
 
-exports[`gux-pagination #render should render as expected (5) 1`] = `"<gux-pagination lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"25\\" layout=\\"advanced\\" hydrated=\\"\\"></gux-pagination>"`;
+exports[`gux-pagination #render should render as expected (5) 1`] = `"<gux-pagination lang="en" current-page="1" total-items="1000" items-per-page="25" layout="advanced" hydrated=""></gux-pagination>"`;
 
-exports[`gux-pagination #render should render as expected (6) 1`] = `"<gux-pagination lang=\\"en\\" current-page=\\"10\\" total-items=\\"1000\\" items-per-page=\\"25\\" layout=\\"advanced\\" hydrated=\\"\\"></gux-pagination>"`;
+exports[`gux-pagination #render should render as expected (6) 1`] = `"<gux-pagination lang="en" current-page="10" total-items="1000" items-per-page="25" layout="advanced" hydrated=""></gux-pagination>"`;
 
-exports[`gux-pagination #render should render as expected (7) 1`] = `"<gux-pagination lang=\\"en\\" current-page=\\"10\\" total-items=\\"1000\\" items-per-page=\\"50\\" layout=\\"advanced\\" hydrated=\\"\\"></gux-pagination>"`;
+exports[`gux-pagination #render should render as expected (7) 1`] = `"<gux-pagination lang="en" current-page="10" total-items="1000" items-per-page="50" layout="advanced" hydrated=""></gux-pagination>"`;
 
-exports[`gux-pagination #render should render as expected (8) 1`] = `"<gux-pagination lang=\\"en\\" current-page=\\"10\\" total-items=\\"1000\\" items-per-page=\\"75\\" layout=\\"advanced\\" hydrated=\\"\\"></gux-pagination>"`;
+exports[`gux-pagination #render should render as expected (8) 1`] = `"<gux-pagination lang="en" current-page="10" total-items="1000" items-per-page="75" layout="advanced" hydrated=""></gux-pagination>"`;
 
-exports[`gux-pagination #render should render as expected (9) 1`] = `"<gux-pagination lang=\\"en\\" current-page=\\"10\\" total-items=\\"1000\\" items-per-page=\\"100\\" layout=\\"advanced\\" hydrated=\\"\\"></gux-pagination>"`;
+exports[`gux-pagination #render should render as expected (9) 1`] = `"<gux-pagination lang="en" current-page="10" total-items="1000" items-per-page="100" layout="advanced" hydrated=""></gux-pagination>"`;
 
-exports[`gux-pagination #render should render as expected (10) 1`] = `"<gux-pagination lang=\\"en\\" current-page=\\"1\\" total-items=\\"1000\\" items-per-page=\\"25\\" layout=\\"simple\\" hydrated=\\"\\"></gux-pagination>"`;
+exports[`gux-pagination #render should render as expected (10) 1`] = `"<gux-pagination lang="en" current-page="1" total-items="1000" items-per-page="25" layout="simple" hydrated=""></gux-pagination>"`;

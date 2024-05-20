@@ -26,7 +26,7 @@ export class GuxRowSelect {
   private i18n: GetI18nValue;
   private inputElement: HTMLInputElement;
 
-  @Prop()
+  @Prop({ mutable: true })
   selected: boolean = false;
 
   @Prop()
@@ -38,6 +38,7 @@ export class GuxRowSelect {
   @Listen('input')
   onCheck(event: CustomEvent): void {
     event.stopPropagation();
+    this.selected = this.inputElement.checked;
     this.internalrowselectchange.emit(this.inputElement.checked);
   }
 

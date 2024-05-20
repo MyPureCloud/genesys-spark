@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-text-like #render clearable should render component as expected (1) 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render clearable should render component as expected (1) 1`] = `"<gux-form-field-text-like lang="en" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render clearable should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -16,7 +16,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -30,7 +30,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
 </div>
 `;
 
-exports[`gux-form-field-text-like #render clearable should render component as expected (2) 1`] = `"<gux-form-field-text-like lang=\\"en\\" clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render clearable should render component as expected (2) 1`] = `"<gux-form-field-text-like lang="en" clearable="" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render clearable should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -47,7 +47,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -61,7 +61,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
 </div>
 `;
 
-exports[`gux-form-field-text-like #render clearable should render component as expected (3) 1`] = `"<gux-form-field-text-like lang=\\"en\\" clearable=\\"true\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render clearable should render component as expected (3) 1`] = `"<gux-form-field-text-like lang="en" clearable="true" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render clearable should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -78,7 +78,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -92,7 +92,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
 </div>
 `;
 
-exports[`gux-form-field-text-like #render clearable should render component as expected (4) 1`] = `"<gux-form-field-text-like lang=\\"en\\" clearable=\\"false\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render clearable should render component as expected (4) 1`] = `"<gux-form-field-text-like lang="en" clearable="false" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render clearable should render component as expected (4) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -108,7 +108,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -122,7 +122,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
 </div>
 `;
 
-exports[`gux-form-field-text-like #render clearable should render component as expected (5) 1`] = `"<gux-form-field-text-like lang=\\"en\\" clearable=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render clearable should render component as expected (5) 1`] = `"<gux-form-field-text-like lang="en" clearable="" hydrated=""> <input slot="input" type="text" value="Sample text" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render clearable should render component as expected (5) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -138,7 +138,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -152,7 +152,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
 </div>
 `;
 
-exports[`gux-form-field-text-like #render help should render component as expected 1`] = `"<gux-form-field-text-like hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" name=\\"e-1\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-form-field-help-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Default</label> <span slot=\\"help\\" id=\\"gux-form-field-help-i\\">This is a help message</span> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render help should render component as expected 1`] = `"<gux-form-field-text-like hydrated=""> <input slot="input" type="text" name="e-1" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render help should render component as expected 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -168,7 +168,7 @@ exports[`gux-form-field-text-like #render help should render component as expect
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -182,7 +182,7 @@ exports[`gux-form-field-text-like #render help should render component as expect
 </div>
 `;
 
-exports[`gux-form-field-text-like #render input type attribute should render component as expected (1) 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"email\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render input type attribute should render component as expected (1) 1`] = `"<gux-form-field-text-like lang="en" hydrated=""> <input slot="input" type="email" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render input type attribute should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -198,7 +198,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -212,7 +212,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
 </div>
 `;
 
-exports[`gux-form-field-text-like #render input type attribute should render component as expected (2) 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"password\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render input type attribute should render component as expected (2) 1`] = `"<gux-form-field-text-like lang="en" hydrated=""> <input slot="input" type="password" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render input type attribute should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -228,7 +228,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -242,7 +242,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
 </div>
 `;
 
-exports[`gux-form-field-text-like #render input type attribute should render component as expected (3) 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render input type attribute should render component as expected (3) 1`] = `"<gux-form-field-text-like lang="en" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render input type attribute should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -258,7 +258,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -272,7 +272,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
 </div>
 `;
 
-exports[`gux-form-field-text-like #render label-position should render component as expected (1) 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render label-position should render component as expected (1) 1`] = `"<gux-form-field-text-like lang="en" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render label-position should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -288,7 +288,7 @@ exports[`gux-form-field-text-like #render label-position should render component
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -302,7 +302,7 @@ exports[`gux-form-field-text-like #render label-position should render component
 </div>
 `;
 
-exports[`gux-form-field-text-like #render label-position should render component as expected (2) 1`] = `"<gux-form-field-text-like lang=\\"en\\" label-position=\\"above\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render label-position should render component as expected (2) 1`] = `"<gux-form-field-text-like lang="en" label-position="above" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render label-position should render component as expected (2) 2`] = `
 <div class="gux-above gux-form-field-container">
@@ -318,7 +318,7 @@ exports[`gux-form-field-text-like #render label-position should render component
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -332,7 +332,7 @@ exports[`gux-form-field-text-like #render label-position should render component
 </div>
 `;
 
-exports[`gux-form-field-text-like #render label-position should render component as expected (3) 1`] = `"<gux-form-field-text-like lang=\\"en\\" label-position=\\"beside\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render label-position should render component as expected (3) 1`] = `"<gux-form-field-text-like lang="en" label-position="beside" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render label-position should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -348,7 +348,7 @@ exports[`gux-form-field-text-like #render label-position should render component
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -362,7 +362,7 @@ exports[`gux-form-field-text-like #render label-position should render component
 </div>
 `;
 
-exports[`gux-form-field-text-like #render label-position should render component as expected (4) 1`] = `"<gux-form-field-text-like lang=\\"en\\" label-position=\\"screenreader\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render label-position should render component as expected (4) 1`] = `"<gux-form-field-text-like lang="en" label-position="screenreader" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render label-position should render component as expected (4) 2`] = `
 <div class="gux-form-field-container gux-screenreader">
@@ -378,7 +378,7 @@ exports[`gux-form-field-text-like #render label-position should render component
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -392,7 +392,7 @@ exports[`gux-form-field-text-like #render label-position should render component
 </div>
 `;
 
-exports[`gux-form-field-text-like #render loading should render component as expected (1) 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render loading should render component as expected (1) 1`] = `"<gux-form-field-text-like lang="en" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render loading should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -408,7 +408,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -422,7 +422,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
 </div>
 `;
 
-exports[`gux-form-field-text-like #render loading should render component as expected (2) 1`] = `"<gux-form-field-text-like lang=\\"en\\" loading=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render loading should render component as expected (2) 1`] = `"<gux-form-field-text-like lang="en" loading="" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render loading should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -439,7 +439,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -453,7 +453,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
 </div>
 `;
 
-exports[`gux-form-field-text-like #render loading should render component as expected (3) 1`] = `"<gux-form-field-text-like lang=\\"en\\" loading=\\"true\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render loading should render component as expected (3) 1`] = `"<gux-form-field-text-like lang="en" loading="true" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render loading should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -470,7 +470,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -484,7 +484,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
 </div>
 `;
 
-exports[`gux-form-field-text-like #render loading should render component as expected (4) 1`] = `"<gux-form-field-text-like lang=\\"en\\" loading=\\"false\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render loading should render component as expected (4) 1`] = `"<gux-form-field-text-like lang="en" loading="false" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render loading should render component as expected (4) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -500,7 +500,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -514,7 +514,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
 </div>
 `;
 
-exports[`gux-form-field-text-like #render loading should render component as expected (5) 1`] = `"<gux-form-field-text-like lang=\\"en\\" loading=\\"\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render loading should render component as expected (5) 1`] = `"<gux-form-field-text-like lang="en" loading="" hydrated=""> <input slot="input" type="text" value="Sample text" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render loading should render component as expected (5) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -531,7 +531,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -545,7 +545,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
 </div>
 `;
 
-exports[`gux-form-field-text-like #render prefix should render component as expected 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <span slot=\\"prefix\\" id=\\"gux-prefix-i\\">Prefix</span> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-prefix-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render prefix should render component as expected 1`] = `"<gux-form-field-text-like lang="en" hydrated=""> <span slot="prefix" id="gux-prefix-i">Prefix</span> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i" aria-describedby="gux-prefix-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render prefix should render component as expected 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -561,7 +561,7 @@ exports[`gux-form-field-text-like #render prefix should render component as expe
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -575,7 +575,7 @@ exports[`gux-form-field-text-like #render prefix should render component as expe
 </div>
 `;
 
-exports[`gux-form-field-text-like #render suffix should render component as expected 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\" aria-describedby=\\"gux-suffix-i\\"> <span slot=\\"suffix\\" id=\\"gux-suffix-i\\">Suffix</span> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like #render suffix should render component as expected 1`] = `"<gux-form-field-text-like lang="en" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i" aria-describedby="gux-suffix-i"> <span slot="suffix" id="gux-suffix-i">Suffix</span> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like #render suffix should render component as expected 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -591,7 +591,7 @@ exports[`gux-form-field-text-like #render suffix should render component as expe
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -605,7 +605,7 @@ exports[`gux-form-field-text-like #render suffix should render component as expe
 </div>
 `;
 
-exports[`gux-form-field-text-like input attributes should render component as expected (1) 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like input attributes should render component as expected (1) 1`] = `"<gux-form-field-text-like lang="en" hydrated=""> <input slot="input" type="text" value="Sample text" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like input attributes should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -621,7 +621,7 @@ exports[`gux-form-field-text-like input attributes should render component as ex
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -635,7 +635,7 @@ exports[`gux-form-field-text-like input attributes should render component as ex
 </div>
 `;
 
-exports[`gux-form-field-text-like input attributes should render component as expected (2) 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" disabled=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like input attributes should render component as expected (2) 1`] = `"<gux-form-field-text-like lang="en" hydrated=""> <input slot="input" type="text" value="Sample text" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like input attributes should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -651,7 +651,7 @@ exports[`gux-form-field-text-like input attributes should render component as ex
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -665,7 +665,7 @@ exports[`gux-form-field-text-like input attributes should render component as ex
 </div>
 `;
 
-exports[`gux-form-field-text-like input attributes should render component as expected (3) 1`] = `"<gux-form-field-text-like lang=\\"en\\" hydrated=\\"\\"> <input slot=\\"input\\" type=\\"text\\" value=\\"Sample text\\" required=\\"\\" id=\\"gux-form-field-input-i\\"> <label slot=\\"label\\" for=\\"gux-form-field-input-i\\">Label</label> </gux-form-field-text-like>"`;
+exports[`gux-form-field-text-like input attributes should render component as expected (3) 1`] = `"<gux-form-field-text-like lang="en" hydrated=""> <input slot="input" type="text" value="Sample text" required="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-text-like>"`;
 
 exports[`gux-form-field-text-like input attributes should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -681,7 +681,7 @@ exports[`gux-form-field-text-like input attributes should render component as ex
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="alert-warning-octogon"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>

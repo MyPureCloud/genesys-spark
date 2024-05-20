@@ -29,10 +29,14 @@ exports[`gux-tooltip #render should render component as expected (1) 1`] = `
     <gux-tooltip id="gux-tooltip-i" role="tooltip">
       <mock:shadow-root>
         <div class="gux-container gux-light" data-placement="bottom-start">
-          <slot></slot>
+          <slot name="content">
+            <slot></slot>
+          </slot>
         </div>
       </mock:shadow-root>
-      Tooltip
+      <div slot="content">
+        Tooltip
+      </div>
     </gux-tooltip>
   </div>
 </body>
@@ -47,10 +51,14 @@ exports[`gux-tooltip #render should render component as expected (2) 1`] = `
     <gux-tooltip for="element" id="gux-tooltip-i" role="tooltip">
       <mock:shadow-root>
         <div class="gux-container gux-light" data-placement="bottom-start">
-          <slot></slot>
+          <slot name="content">
+            <slot></slot>
+          </slot>
         </div>
       </mock:shadow-root>
-      Tooltip
+      <div slot="content">
+        Tooltip
+      </div>
     </gux-tooltip>
   </div>
 </body>

@@ -118,8 +118,8 @@ export class GuxAdvancedDropdownLegacy {
     return Promise.resolve([this.value]);
   }
 
-  // eslint-disable-next-line @typescript-eslint/require-await
   @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
   async setLabeledBy(id: string) {
     this.srLabelledby = id;
   }
@@ -178,7 +178,10 @@ export class GuxAdvancedDropdownLegacy {
             )}
           </a>
           <div class="gux-icon-wrapper">
-            <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
+            <gux-icon
+              decorative
+              icon-name="custom/chevron-down-small-regular"
+            ></gux-icon>
           </div>
         </div>
         <div slot="popup" class="gux-advanced-dropdown-menu">

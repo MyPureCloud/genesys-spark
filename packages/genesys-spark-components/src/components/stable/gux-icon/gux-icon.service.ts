@@ -1,4 +1,8 @@
 import { getAssetPath } from '@stencil/core';
+import { legacyIconNames } from './icon-names-legacy';
+import { deprecatedIconNamesMap } from './icon-names-deprecated';
+
+const deprecatedIconNames = Object.keys(deprecatedIconNamesMap);
 
 const svgHTMLCache: Map<string, Promise<string>> = new Map();
 
@@ -18,9 +22,19 @@ function iconInfoToId(iconName: string): string {
   return iconName.replace('/', '-');
 }
 
-export async function getBaseSvgHtml(
-  iconName: string = 'unknown'
-): Promise<string> {
+export function getRootIconName(iconName: string): string {
+  if (legacyIconNames.includes(iconName)) {
+    return `legacy/${iconName}`;
+  }
+
+  if (deprecatedIconNames.includes(iconName)) {
+    return deprecatedIconNamesMap[iconName];
+  }
+
+  return iconName;
+}
+
+export async function getBaseSvgHtml(iconName: string): Promise<string> {
   const id = iconInfoToId(iconName);
 
   if (svgHTMLCache.has(id)) {
@@ -34,7 +48,7 @@ export async function getBaseSvgHtml(
         throw err;
       }, 0);
 
-      return getBaseSvgHtml('unknown');
+      return getBaseSvgHtml('fa/square-x-regular');
     });
 
   svgHTMLCache.set(id, svgHtml);

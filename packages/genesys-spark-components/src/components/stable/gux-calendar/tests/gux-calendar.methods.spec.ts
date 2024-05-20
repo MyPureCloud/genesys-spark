@@ -75,7 +75,7 @@ describe('gux-calendar', () => {
     // Private
     describe('private', () => {
       it('incrementPreviewDateByMonth', () => {
-        jest.useFakeTimers('legacy');
+        jest.useFakeTimers({ legacyFakeTimers: true });
         const startingMonth = component.previewValue.getMonth();
         component.incrementPreviewDateByMonth(3);
         jest.runAllTimers();
@@ -110,7 +110,7 @@ describe('gux-calendar', () => {
         expect(result).toEqual(dummy);
       });
       it('getRangeDatesElements', () => {
-        spyOn(component, 'getRangeDates').and.callThrough();
+        jest.spyOn(component, 'getRangeDates');
         component.getRangeDatesElements(rangeStart, rangeEnd);
         expect(component.getRangeDates).toHaveBeenCalledWith(
           rangeStart,
@@ -127,10 +127,10 @@ describe('gux-calendar', () => {
         expect(result.length).toEqual(6);
       });
       it('onDateClick with single mode', async () => {
-        spyOn(component, 'setValue').and.callFake(() => {
-          return;
+        jest.spyOn(component, 'setValue').mockImplementation(() => {
+          return Promise.resolve();
         });
-        spyOn(component, 'emitCalendarSelect').and.callFake(() => {
+        jest.spyOn(component, 'emitCalendarSelect').mockImplementation(() => {
           return;
         });
         await component.onDateClick(testDate);
@@ -139,16 +139,16 @@ describe('gux-calendar', () => {
       });
       it('onDateClick with range mode', async () => {
         component.mode = CalendarModes.Range;
-        spyOn(component, 'getAllDatesElements').and.callFake(() => {
+        jest.spyOn(component, 'getAllDatesElements').mockImplementation(() => {
+          return [];
+        });
+        jest.spyOn(utils, 'removeClassToElements').mockImplementation(() => {
           return;
         });
-        spyOn(utils, 'removeClassToElements').and.callFake(() => {
+        jest.spyOn(component, 'emitCalendarSelect').mockImplementation(() => {
           return;
         });
-        spyOn(component, 'emitCalendarSelect').and.callFake(() => {
-          return;
-        });
-        spyOn(component, 'updateRangeElements').and.callFake(() => {
+        jest.spyOn(component, 'updateRangeElements').mockImplementation(() => {
           return;
         });
         await component.onDateClick(rangeStart);
@@ -156,7 +156,7 @@ describe('gux-calendar', () => {
         expect(component.emitCalendarSelect).toHaveBeenCalled();
       });
       it('onDateMouseEnter', () => {
-        spyOn(component, 'updateRangeElements').and.callFake(() => {
+        jest.spyOn(component, 'updateRangeElements').mockImplementation(() => {
           return;
         });
         component.mode = CalendarModes.Range;
@@ -166,14 +166,16 @@ describe('gux-calendar', () => {
         expect(component.updateRangeElements).toHaveBeenCalled();
       });
       it('onKeyDown', async () => {
-        jest.useFakeTimers('legacy');
-        spyOn(component, 'incrementPreviewDateByMonth').and.callFake(() => {
-          return;
+        jest.useFakeTimers({ legacyFakeTimers: true });
+        jest
+          .spyOn(component, 'incrementPreviewDateByMonth')
+          .mockImplementation(() => {
+            return;
+          });
+        jest.spyOn(component, 'setValue').mockImplementation(() => {
+          return Promise.resolve();
         });
-        spyOn(component, 'setValue').and.callFake(() => {
-          return;
-        });
-        spyOn(component, 'emitCalendarSelect').and.callFake(() => {
+        jest.spyOn(component, 'emitCalendarSelect').mockImplementation(() => {
           return;
         });
         const initialPreviewValue = rangeEnd;

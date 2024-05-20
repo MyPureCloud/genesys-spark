@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-tooltip-beta #remove should remove component as expected (1) 1`] = `
+<body>
+  <div>
+    <div>
+      Element
+    </div>
+  </div>
+</body>
+`;
+
+exports[`gux-tooltip-beta #remove should remove component as expected (2) 1`] = `
+<body>
+  <div>
+    <div id="element">
+      Element
+    </div>
+  </div>
+</body>
+`;
+
+exports[`gux-tooltip-beta #render should render component as expected (1) 1`] = `
+<body>
+  <div>
+    <div>
+      Element
+    </div>
+    <gux-tooltip-beta id="gux-tooltip-i" role="tooltip">
+      <mock:shadow-root>
+        <gux-tooltip-base-beta accent="light" placement="bottom-start" tooltipid="gux-tooltip-i">
+          <span slot="content">
+            <slot name="content">
+              <slot></slot>
+            </slot>
+          </span>
+        </gux-tooltip-base-beta>
+      </mock:shadow-root>
+      <div slot="content">
+        Tooltip
+      </div>
+    </gux-tooltip-beta>
+  </div>
+</body>
+`;
+
+exports[`gux-tooltip-beta #render should render component as expected (2) 1`] = `
+<body>
+  <div>
+    <div id="element">
+      Element
+    </div>
+    <gux-tooltip-beta for="element" id="gux-tooltip-i" role="tooltip">
+      <mock:shadow-root>
+        <gux-tooltip-base-beta accent="light" placement="bottom-start" tooltipid="gux-tooltip-i">
+          <span slot="content">
+            <slot name="content">
+              <slot></slot>
+            </slot>
+          </span>
+        </gux-tooltip-base-beta>
+      </mock:shadow-root>
+      <div slot="content">
+        Tooltip
+      </div>
+    </gux-tooltip-beta>
+  </div>
+</body>
+`;
