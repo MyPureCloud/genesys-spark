@@ -134,6 +134,7 @@
     },
     "helper": {
       "gap": "4px",
+      "gap_sm": "4px",
       "helper_text": {
         "fontFamily": "Noto Sans",
         "lineHeight": "18px",
@@ -141,6 +142,9 @@
         "fontWeight": 400
       },
       "padding": "8px 0 0 0",
+      "icon": {
+        "padding": "1px 0 1px 0"
+      },
       "padding_small": "4px 0 0 0",
       "error_padding": "4px 0 0 0",
       "default_color": "#626e84",
