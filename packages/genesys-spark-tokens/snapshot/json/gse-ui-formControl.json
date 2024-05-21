@@ -134,7 +134,6 @@
     },
     "helper": {
       "gap": "4px",
-      "gap_sm": "4px",
       "helper_text": {
         "fontFamily": "Noto Sans",
         "lineHeight": "18px",
