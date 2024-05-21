@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.124.5](https://github.com/MyPureCloud/genesys-spark/compare/v3.124.4...v3.124.5) (2024-05-21)
+
+
+### Bug Fixes
+
+* **pagination:** curtail expanding input on Firefox ([#460](https://github.com/MyPureCloud/genesys-spark/issues/460)) ([b4d2cb8](https://github.com/MyPureCloud/genesys-spark/commit/b4d2cb818687c0318233bb8ad035b301bb4a6034))
+
 ### [3.124.4](https://github.com/MyPureCloud/genesys-spark/compare/v3.124.3...v3.124.4) (2024-05-17)
 
 
