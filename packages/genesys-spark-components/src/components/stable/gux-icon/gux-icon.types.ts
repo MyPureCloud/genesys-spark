@@ -154,6 +154,7 @@ export type GuxIconIconName =
   | 'custom/panel-large-regular'
   | 'custom/panel-medium-regular'
   | 'custom/panel-small-regular'
+  | 'custom/panel-small-right-regular'
   | 'custom/person-running'
   | 'custom/quick-reply'
   | 'custom/three-button'
