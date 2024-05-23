@@ -1,0 +1,300 @@
+:root {
+  --gse-semantic-borderRadius-interactive-large: 4px;
+  --gse-semantic-borderRadius-interactive-small: 4px;
+  --gse-semantic-borderRadius-container-large: 16px;
+  --gse-semantic-borderRadius-container-medium: 8px;
+  --gse-semantic-borderRadius-container-small: 4px;
+  --gse-semantic-borderRadius-formControl-input-large: 4px;
+  --gse-semantic-borderRadius-formControl-input-medium: 8px;
+  --gse-semantic-borderRadius-formControl-input-small: 4px;
+  --gse-semantic-borderRadius-focus-full: 100%;
+  --gse-semantic-borderRadius-focus-xlarge: 16px;
+  --gse-semantic-borderRadius-focus-large: 8px;
+  --gse-semantic-borderRadius-focus-medium: 8px;
+  --gse-semantic-borderRadius-focus-small: 4px;
+  --gse-semantic-borderRadius-focus-xsmall: 2px;
+  --gse-semantic-fontFamily-headings: Roboto; /* The font family we use for headings and subheadings in this theme. */
+  --gse-semantic-opacity-disabled: 0.5; /* The opacity we apply when a component is disabled. */
+  --gse-semantic-background-surface-primary-10: #ffffff;
+  --gse-semantic-background-surface-primary-20: #fdfdfd;
+  --gse-semantic-background-surface-primary-30: #f6f7f9;
+  --gse-semantic-background-surface-primary-40: #e8ecf2;
+  --gse-semantic-background-surface-primary-50: #d7dce5;
+  --gse-semantic-background-surface-primary-60: #e2e6ee;
+  --gse-semantic-background-surface-secondary-10: #2a60c8;
+  --gse-semantic-background-surface-secondary-20: #2754ac;
+  --gse-semantic-background-surface-secondary-30: #23478f;
+  --gse-semantic-background-surface-tertiary-10: #00000000;
+  --gse-semantic-background-surface-tertiary-20: #6b7585;
+  --gse-semantic-background-surface-highContrast-10: #283243;
+  --gse-semantic-background-surface-highContrast-20: #1c3363;
+  --gse-semantic-background-surface-highContrast-30: #172b52;
+  --gse-semantic-background-surface-highContrast-40: #000000;
+  --gse-semantic-background-formControl-input-10: #ffffff;
+  --gse-semantic-background-formControl-input-20: #6b7585;
+  --gse-semantic-background-overlay-10: rgb(12.5% 16.1% 21.6% / 0.8);
+  --gse-semantic-background-system-primary-10: #deeaff;
+  --gse-semantic-background-system-primary-20: #75a8ff;
+  --gse-semantic-background-system-primary-30: #2a60c8;
+  --gse-semantic-background-system-primary-40: #2754ac;
+  --gse-semantic-background-system-primary-50: #203b73;
+  --gse-semantic-background-system-info-10: #deeaff;
+  --gse-semantic-background-system-info-20: #75a8ff;
+  --gse-semantic-background-system-info-30: #2a60c8;
+  --gse-semantic-background-system-info-40: #203b73;
+  --gse-semantic-background-system-info-50: #172b52;
+  --gse-semantic-background-system-success-10: #eefcea;
+  --gse-semantic-background-system-success-20: #95c189;
+  --gse-semantic-background-system-success-30: #3c8527;
+  --gse-semantic-background-system-success-40: #205a10;
+  --gse-semantic-background-system-success-50: #0d3d00;
+  --gse-semantic-background-system-warning-10: #fdf8ec;
+  --gse-semantic-background-system-warning-20: #fcd276;
+  --gse-semantic-background-system-warning-30: #ffae00;
+  --gse-semantic-background-system-warning-40: #976700;
+  --gse-semantic-background-system-warning-50: #523800;
+  --gse-semantic-background-system-error-10: #fceaea;
+  --gse-semantic-background-system-error-20: #f37a7a;
+  --gse-semantic-background-system-error-30: #ea0b0b;
+  --gse-semantic-background-system-error-40: #8f0707;
+  --gse-semantic-background-system-error-50: #520404;
+  --gse-semantic-background-customAccents-bold-10: #203b73;
+  --gse-semantic-background-customAccents-bold-20: #75a8ff;
+  --gse-semantic-background-customAccents-bold-30: #b5b5eb;
+  --gse-semantic-background-customAccents-bold-40: #1da8b3;
+  --gse-semantic-background-customAccents-bold-50: #868c1e;
+  --gse-semantic-background-customAccents-bold-60: #75a8ff;
+  --gse-semantic-background-customAccents-bold-70: #8452cf;
+  --gse-semantic-background-customAccents-bold-80: #5e5782;
+  --gse-semantic-background-customAccents-bold-90: #ff8fdd;
+  --gse-semantic-background-customAccents-bold-100: #cc3ebe;
+  --gse-semantic-background-customAccents-bold-110: #ddd933;
+  --gse-semantic-background-customAccents-subtle-10: lch(77.6 10.9 279);
+  --gse-semantic-background-customAccents-subtle-20: lch(90.4 14.8 272);
+  --gse-semantic-background-customAccents-subtle-30: lch(92.5 8.53 288);
+  --gse-semantic-background-customAccents-subtle-40: lch(88.8 11 206);
+  --gse-semantic-background-customAccents-subtle-50: lch(86.9 16.3 103);
+  --gse-semantic-background-customAccents-subtle-60: lch(90.4 14.8 272);
+  --gse-semantic-background-customAccents-subtle-70: lch(83.7 21.4 305);
+  --gse-semantic-background-customAccents-subtle-80: lch(81.7 7.69 295);
+  --gse-semantic-background-customAccents-subtle-90: lch(92.1 16.4 338);
+  --gse-semantic-background-customAccents-subtle-100: lch(85.6 22.8 330);
+  --gse-semantic-background-customAccents-subtle-110: lch(95.5 22.7 98.8);
+  --gse-semantic-foreground-primary-10: #3e4a5b;
+  --gse-semantic-foreground-primary-20: #2e394c;
+  --gse-semantic-foreground-primary-30: #2e394c;
+  --gse-semantic-foreground-secondary-10: #ffffff;
+  --gse-semantic-foreground-secondary-20: #596373;
+  --gse-semantic-foreground-secondary-30: #4c5667;
+  --gse-semantic-foreground-tertiary-10: #2e394c;
+  --gse-semantic-foreground-tertiary-20: #2e394c;
+  --gse-semantic-foreground-tertiary-30: #2e394c;
+  --gse-semantic-foreground-highContrast-10: #ffffff;
+  --gse-semantic-foreground-highContrast-20: #eff1f5;
+  --gse-semantic-foreground-highContrast-30: #b4bccb;
+  --gse-semantic-foreground-system-primary-10: #2a60c8;
+  --gse-semantic-foreground-system-info-10: #2a60c8;
+  --gse-semantic-foreground-system-success-10: #3c8527;
+  --gse-semantic-foreground-system-warning-10: #ffae00;
+  --gse-semantic-foreground-system-error-10: #ea0b0b;
+  --gse-semantic-foreground-specialAccents-brand-10: #ff4f1f;
+  --gse-semantic-foreground-specialAccents-ai-10: #8a5ecc;
+  --gse-semantic-foreground-link-10: #2a60c8;
+  --gse-semantic-foreground-link-20: #2754ac;
+  --gse-semantic-foreground-link-30: #23478f;
+  --gse-semantic-foreground-link-40: #8452cf;
+  --gse-semantic-border-focus-10: #aac9ff;
+  --gse-semantic-border-divider-10: #ffffff;
+  --gse-semantic-border-divider-20: #b4bccb;
+  --gse-semantic-border-divider-30: #2a60c8;
+  --gse-semantic-border-system-primary-10: #75a8ff;
+  --gse-semantic-border-system-info-10: #75a8ff;
+  --gse-semantic-border-system-success-10: #95c189;
+  --gse-semantic-border-system-warning-10: #fcd276;
+  --gse-semantic-border-system-error-10: #f37a7a;
+  --gse-semantic-border-system-error-20: #ea0b0b;
+  --gse-semantic-border-inputs-default-10: #6b7585;
+  --gse-semantic-border-inputs-hover-10: #2754ac;
+  --gse-semantic-border-inputs-active-10: #2a60c8;
+  --gse-semantic-border-edges-default-10: #b4bccb;
+  --gse-semantic-border-edges-default-20: #4c5667;
+  --gse-semantic-border-edges-enabled-10: #2a60c8;
+  --gse-semantic-border-edges-hover-10: #75a8ff;
+  --gse-semantic-border-edges-hover-20: #23478f;
+  --gse-semantic-border-edges-active-10: #2a60c8;
+  --gse-semantic-body-sm-regular-fontFamily: 'Noto Sans'; /* This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors. */
+  --gse-semantic-body-sm-regular-fontWeight: 400; /* This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors. */
+  --gse-semantic-body-sm-regular-fontSize: 12px; /* This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors. */
+  --gse-semantic-body-sm-regular-lineHeight: 18px; /* This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors. */
+  --gse-semantic-body-sm-link-fontFamily: 'Noto Sans'; /* This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors. */
+  --gse-semantic-body-sm-link-fontWeight: 700; /* This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors. */
+  --gse-semantic-body-sm-link-fontSize: 12px; /* This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors. */
+  --gse-semantic-body-sm-link-lineHeight: 18px; /* This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors. */
+  --gse-semantic-body-sm-link-textDecoration: underline; /* This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors. */
+  --gse-semantic-body-sm-bold-fontFamily: 'Noto Sans'; /* This is the typography style we use to add great emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-sm-bold-fontWeight: 700; /* This is the typography style we use to add great emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-sm-bold-fontSize: 12px; /* This is the typography style we use to add great emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-sm-bold-lineHeight: 18px; /* This is the typography style we use to add great emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-sm-semiBold-fontFamily: 'Noto Sans'; /* This is the typography style we use to add moderate emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-sm-semiBold-fontWeight: 600; /* This is the typography style we use to add moderate emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-sm-semiBold-fontSize: 12px; /* This is the typography style we use to add moderate emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-sm-semiBold-lineHeight: 18px; /* This is the typography style we use to add moderate emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-md-regular-fontFamily: 'Noto Sans'; /* This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors. */
+  --gse-semantic-body-md-regular-fontWeight: 400; /* This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors. */
+  --gse-semantic-body-md-regular-fontSize: 14px; /* This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors. */
+  --gse-semantic-body-md-regular-lineHeight: 20px; /* This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors. */
+  --gse-semantic-body-md-link-fontFamily: 'Noto Sans'; /* This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors. */
+  --gse-semantic-body-md-link-fontWeight: 700; /* This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors. */
+  --gse-semantic-body-md-link-fontSize: 14px; /* This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors. */
+  --gse-semantic-body-md-link-lineHeight: 20px; /* This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors. */
+  --gse-semantic-body-md-link-textDecoration: underline; /* This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors. */
+  --gse-semantic-body-md-bold-fontFamily: 'Noto Sans'; /* This is the typography style we use to add great emphasis in bodies of text, like paragraphs; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-md-bold-fontWeight: 700; /* This is the typography style we use to add great emphasis in bodies of text, like paragraphs; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-md-bold-fontSize: 14px; /* This is the typography style we use to add great emphasis in bodies of text, like paragraphs; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-md-bold-lineHeight: 20px; /* This is the typography style we use to add great emphasis in bodies of text, like paragraphs; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-md-semiBold-fontFamily: 'Noto Sans'; /* This is the typography style we use to add moderate emphasis in bodies of text, like paragraphs, we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-md-semiBold-fontWeight: 600; /* This is the typography style we use to add moderate emphasis in bodies of text, like paragraphs, we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-md-semiBold-fontSize: 14px; /* This is the typography style we use to add moderate emphasis in bodies of text, like paragraphs, we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-md-semiBold-lineHeight: 20px; /* This is the typography style we use to add moderate emphasis in bodies of text, like paragraphs, we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-lg-regular-fontFamily: 'Noto Sans'; /* This is the typography style we use in most of our high emphasis bodies of text like introductory paragraphs after a heading; we usually pair it with medium emphasis colors. */
+  --gse-semantic-body-lg-regular-fontWeight: 400; /* This is the typography style we use in most of our high emphasis bodies of text like introductory paragraphs after a heading; we usually pair it with medium emphasis colors. */
+  --gse-semantic-body-lg-regular-fontSize: 16px; /* This is the typography style we use in most of our high emphasis bodies of text like introductory paragraphs after a heading; we usually pair it with medium emphasis colors. */
+  --gse-semantic-body-lg-regular-lineHeight: 24px; /* This is the typography style we use in most of our high emphasis bodies of text like introductory paragraphs after a heading; we usually pair it with medium emphasis colors. */
+  --gse-semantic-body-lg-link-fontFamily: 'Noto Sans'; /* This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors. */
+  --gse-semantic-body-lg-link-fontWeight: 700; /* This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors. */
+  --gse-semantic-body-lg-link-fontSize: 16px; /* This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors. */
+  --gse-semantic-body-lg-link-lineHeight: 24px; /* This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors. */
+  --gse-semantic-body-lg-link-textDecoration: underline; /* This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors. */
+  --gse-semantic-body-lg-bold-fontFamily: 'Noto Sans'; /* This is the typography style we use to add great emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-lg-bold-fontWeight: 700; /* This is the typography style we use to add great emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-lg-bold-fontSize: 16px; /* This is the typography style we use to add great emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-lg-bold-lineHeight: 24px; /* This is the typography style we use to add great emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-lg-semiBold-fontFamily: 'Noto Sans'; /* This is the typography style we use to add moderate emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-lg-semiBold-fontWeight: 600; /* This is the typography style we use to add moderate emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-lg-semiBold-fontSize: 16px; /* This is the typography style we use to add moderate emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-lg-semiBold-lineHeight: 24px; /* This is the typography style we use to add moderate emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-heading-xs-bold-fontFamily: Roboto; /* We use this typography style for high emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xs-bold-fontWeight: 700; /* We use this typography style for high emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xs-bold-fontSize: 14px; /* We use this typography style for high emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xs-bold-lineHeight: 24px; /* We use this typography style for high emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xs-semiBold-fontFamily: Roboto; /* We use this typography style for moderate emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xs-semiBold-fontWeight: 600; /* We use this typography style for moderate emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xs-semiBold-fontSize: 14px; /* We use this typography style for moderate emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xs-semiBold-lineHeight: 24px; /* We use this typography style for moderate emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-sm-bold-fontFamily: Roboto; /* We use this typography style for high emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-sm-bold-fontWeight: 700; /* We use this typography style for high emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-sm-bold-fontSize: 16px; /* We use this typography style for high emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-sm-bold-lineHeight: 24px; /* We use this typography style for high emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-sm-semiBold-fontFamily: Roboto; /* We use this typography style for moderate emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-sm-semiBold-fontWeight: 600; /* We use this typography style for moderate emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-sm-semiBold-fontSize: 16px; /* We use this typography style for moderate emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-sm-semiBold-lineHeight: 24px; /* We use this typography style for moderate emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-md-bold-fontFamily: Roboto; /* We use this typography style for high emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-md-bold-fontWeight: 700; /* We use this typography style for high emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-md-bold-fontSize: 18px; /* We use this typography style for high emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-md-bold-lineHeight: 27px; /* We use this typography style for high emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-md-semiBold-fontFamily: Roboto; /* We use this typography style for moderate emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-md-semiBold-fontWeight: 600; /* We use this typography style for moderate emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-md-semiBold-fontSize: 18px; /* We use this typography style for moderate emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-md-semiBold-lineHeight: 27px; /* We use this typography style for moderate emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-lg-bold-fontFamily: Roboto; /* We use this typography style for high emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-lg-bold-fontWeight: 700; /* We use this typography style for high emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-lg-bold-fontSize: 24px; /* We use this typography style for high emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-lg-bold-lineHeight: 32px; /* We use this typography style for high emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-lg-semiBold-fontFamily: Roboto; /* We use this typography style for moderate emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-lg-semiBold-fontWeight: 600; /* We use this typography style for moderate emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-lg-semiBold-fontSize: 24px; /* We use this typography style for moderate emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-lg-semiBold-lineHeight: 32px; /* We use this typography style for moderate emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xl-bold-fontFamily: Roboto; /* We use this typography style for high emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xl-bold-fontWeight: 700; /* We use this typography style for high emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xl-bold-fontSize: 36px; /* We use this typography style for high emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xl-bold-lineHeight: 44px; /* We use this typography style for high emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xl-semiBold-fontFamily: Roboto; /* We use this typography style for moderate emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xl-semiBold-fontWeight: 600; /* We use this typography style for moderate emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xl-semiBold-fontSize: 36px; /* We use this typography style for moderate emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-xl-semiBold-lineHeight: 44px; /* We use this typography style for moderate emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.We usually pair it with high emphasis colors. */
+  --gse-semantic-heading-overline-fontFamily: Roboto; /* We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors. */
+  --gse-semantic-heading-overline-fontWeight: 600; /* We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors. */
+  --gse-semantic-heading-overline-fontSize: 12px; /* We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors. */
+  --gse-semantic-heading-overline-lineHeight: 16px; /* We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors. */
+  --gse-semantic-heading-overline-textCase: uppercase; /* We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors. */
+  --gse-semantic-heading-overline-letterSpacing: 1px; /* We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors. */
+  --gse-semantic-subheading-bold-fontFamily: Roboto; /* We use this typography style for high emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-subheading-bold-fontWeight: 700; /* We use this typography style for high emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-subheading-bold-fontSize: 14px; /* We use this typography style for high emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-subheading-bold-lineHeight: 20px; /* We use this typography style for high emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-subheading-semiBold-fontFamily: Roboto; /* We use this typography style for moderate emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-subheading-semiBold-fontWeight: 600; /* We use this typography style for moderate emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-subheading-semiBold-fontSize: 14px; /* We use this typography style for moderate emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-subheading-semiBold-lineHeight: 20px; /* We use this typography style for moderate emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-subheading-regular-fontFamily: Roboto; /* We use this typography style for low emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-subheading-regular-fontWeight: 400; /* We use this typography style for low emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-subheading-regular-fontSize: 14px; /* We use this typography style for low emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-subheading-regular-lineHeight: 20px; /* We use this typography style for low emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors. */
+  --gse-semantic-interactive-medium-height: 32px; /* The recommended height of medium-sized interactive components, for example buttons. */
+  --gse-semantic-interactive-medium-gap: 8px; /* The recommended gap between the content inside of a medium-sized interactive component. */
+  --gse-semantic-interactive-medium-padding-horizontal: 12px; /* The recommended horizontal padding for medium-sized horizontal components. */
+  --gse-semantic-interactive-small-height: 24px; /* The recommended size for small-sized interactive components. For example small buttons. */
+  --gse-semantic-interactive-small-gap: 8px; /* The recommended gap between the content inside of a small-sized interactive component. */
+  --gse-semantic-interactive-small-padding-horizontal: 4px; /* The recommended horizontal padding for small-sized horizontal components. */
+  --gse-semantic-interactive-small-borderRadius: 4px; /* The recommended small border-radius for interactive component. Eg Buttons */
+  --gse-semantic-interactive-large-borderRadius: 4px; /* The recommended large border-radius for interactive component. Eg Tags */
+  --gse-semantic-interactive-edges-borderWidth: 1px; /* The default border width for the edges of interactive components, like the ones on a tertiary(or outlined) button. */
+  --gse-semantic-interactive-divider-borderWidth: 1px; /* The default border width for the dividers within interactive components, like the ones on an action button. */
+  --gse-semantic-container-large-borderRadius: 4px; /* The recommended large border-radius for large containers, like modals. */
+  --gse-semantic-container-large-padding: 32px; /* We uses this spacing as the default padding for large containers like modals. */
+  --gse-semantic-container-large-gap: 16px; /* The recommended gap between items inside a large container, like a modal. */
+  --gse-semantic-container-small-borderRadius: 4px; /* The recommended small border-radius for containers. Eg in-line alert */
+  --gse-semantic-container-small-gap: 8px; /* The recommended gap between items inside a container, like the gap between elements inisde a card. */
+  --gse-semantic-container-small-horizontalPadding: 12px; /* The default padding of a small-sized container, like a tooltip. */
+  --gse-semantic-container-small-verticalPadding: 12px; /* The default vertical padding of a small-sized container, like a tooltip. */
+  --gse-semantic-container-small-minHeight: 20px; /* The minimum height recommended for a small container, like a tag. */
+  --gse-semantic-container-small-height: 32px; /* The average recommended height for a small container, like a tag. */
+  --gse-semantic-container-medium-borderRadius: 8px; /* The recommended medium border-radius for containers. Eg cards */
+  --gse-semantic-container-medium-horizontalPadding: 24px; /* The default horizontal padding of a medium-sized container, like a card. */
+  --gse-semantic-container-medium-verticalPadding: 24px; /* The default vertical padding of a medium-sized container, like a tooltip. */
+  --gse-semantic-container-medium-minHeight: 32px; /* The minimmum recommended height for a medium container, like a tag. */
+  --gse-semantic-container-edges-borderWidth: 1px; /* The recommended border width for the edges of containers, like cards or menus or popovers. */
+  --gse-semantic-container-divider-borderWidth: 1px; /* The recommended border width for the dividers within containers, like cards or menus or popovers. */
+  --gse-semantic-formControl-textInput-large-borderRadius: 4px; /* The recommended large border-radius for inputs */
+  --gse-semantic-formControl-textInput-small-borderRadius: 4px; /* The recommended small border-radius for inputs */
+  --gse-semantic-formControl-textInput-medium-borderRadius: 8px; /* The recommended medium border-radius for inputs */
+  --gse-semantic-formControl-textInput-padding: 8px 12px; /* The default padding for inputs inside a form control. */
+  --gse-semantic-formControl-textInput-gap: 12px; /* The default gap for between elements inside an input. For example, the space between a placeholder and an icon inside and input. */
+  --gse-semantic-formControl-textInput-edges-borderWidth: 1px; /* The recommended border width for the edges of text-based inputs, like textfields or text areas. */
+  --gse-semantic-formControl-textInput-divider-borderWidth: 1px; /* The recommended border width for the dividers within text-based inputs, like the textfields or textareas. */
+  --gse-semantic-formControl-formField-gap: 4px; /* The default gap for between elements inside a form field, like textfields, text areas. */
+  --gse-semantic-contanier-large-boxShadow-x: 0; /* The recommended box shadow for large containers, like modals or popovers. */
+  --gse-semantic-contanier-large-boxShadow-y: 0; /* The recommended box shadow for large containers, like modals or popovers. */
+  --gse-semantic-contanier-large-boxShadow-blur: 8px; /* The recommended box shadow for large containers, like modals or popovers. */
+  --gse-semantic-contanier-large-boxShadow-spread: 1px; /* The recommended box shadow for large containers, like modals or popovers. */
+  --gse-semantic-contanier-large-boxShadow-color: rgba(
+    35,
+    57,
+    92,
+    0.15
+  ); /* The recommended box shadow for large containers, like modals or popovers. */
+  --gse-semantic-contanier-large-boxShadow-type: dropShadow; /* The recommended box shadow for large containers, like modals or popovers. */
+  --gse-semantic-contanier-medium-boxShadow-x: 0; /* The shadow we used for medium-sized components like elevated cards. */
+  --gse-semantic-contanier-medium-boxShadow-y: 0; /* The shadow we used for medium-sized components like elevated cards. */
+  --gse-semantic-contanier-medium-boxShadow-blur: 6px; /* The shadow we used for medium-sized components like elevated cards. */
+  --gse-semantic-contanier-medium-boxShadow-spread: 1px; /* The shadow we used for medium-sized components like elevated cards. */
+  --gse-semantic-contanier-medium-boxShadow-color: rgba(
+    35,
+    57,
+    92,
+    0.12
+  ); /* The shadow we used for medium-sized components like elevated cards. */
+  --gse-semantic-contanier-medium-boxShadow-type: dropShadow; /* The shadow we used for medium-sized components like elevated cards. */
+  --gse-semantic-contanier-small-boxShadow-x: 0; /* The shadow we used for small-sized components like tooltips. */
+  --gse-semantic-contanier-small-boxShadow-y: 0; /* The shadow we used for small-sized components like tooltips. */
+  --gse-semantic-contanier-small-boxShadow-blur: 4px; /* The shadow we used for small-sized components like tooltips. */
+  --gse-semantic-contanier-small-boxShadow-spread: 1px; /* The shadow we used for small-sized components like tooltips. */
+  --gse-semantic-contanier-small-boxShadow-color: rgba(
+    35,
+    57,
+    92,
+    0.1
+  ); /* The shadow we used for small-sized components like tooltips. */
+  --gse-semantic-contanier-small-boxShadow-type: dropShadow; /* The shadow we used for small-sized components like tooltips. */
+}
