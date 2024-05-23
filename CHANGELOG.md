@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.53.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.52.1...v4.53.0) (2024-05-23)
+
+
+### Features
+
+* **icon:** add new panel and location icons ([#469](https://github.com/MyPureCloud/genesys-spark/issues/469)) ([cb30f1e](https://github.com/MyPureCloud/genesys-spark/commit/cb30f1e1977733ba56529afd5f498bddf3528e6b))
+* **tokens:** help text gap new token jackie ([3bfb75c](https://github.com/MyPureCloud/genesys-spark/commit/3bfb75cbdc0e226052e01559cd1a9f4ccff63d89))
+* **tokens:** help text new tokens jackie ([8cbe179](https://github.com/MyPureCloud/genesys-spark/commit/8cbe179d0f5d8e4fe3129b5b0feff7ec0f06c41c))
+* **tokens:** input help text new token jackie ([6a62989](https://github.com/MyPureCloud/genesys-spark/commit/6a629892386db4489288782468ad4e66185b21e1))
+
+
+### Bug Fixes
+
+* **form-field-number:** Add spacing on right of clear button ([#462](https://github.com/MyPureCloud/genesys-spark/issues/462)) ([b8a6552](https://github.com/MyPureCloud/genesys-spark/commit/b8a6552e9367b6155db2a6d2452ef415e32b6bb7))
+* **form-field-range:** Fix tooltip info ([#465](https://github.com/MyPureCloud/genesys-spark/issues/465)) ([f3aef1e](https://github.com/MyPureCloud/genesys-spark/commit/f3aef1e8223a0aab66cfb2b7d446ad2478b59564))
+* **tokens:** removed gap_sm token ([a25c16c](https://github.com/MyPureCloud/genesys-spark/commit/a25c16c11977ad8159434fec021ea3844a2ac8c4))
+
 ### [4.52.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.52.0...v4.52.1) (2024-05-21)
 
 
