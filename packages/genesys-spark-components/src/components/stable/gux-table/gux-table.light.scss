@@ -18,12 +18,6 @@ gux-table {
       color: var(--gse-ui-dataTableItems-cell-foregroundColor);
       text-align: left;
 
-      &:hover {
-        background-color: var(
-          --gse-ui-dataTableItems-cell-hoverBackgroundColor
-        );
-      }
-
       gux-icon {
         color: var(--gse-ui-dataTableItems-cell-icon-foregroundColor);
       }
@@ -103,7 +97,8 @@ gux-table {
         background-color: var(--gse-ui-dataTableItems-cell-altBackgroundColor);
       }
 
-      tr:hover {
+      tr:hover,
+      tr:nth-child(2n):hover {
         background-color: var(
           --gse-ui-dataTableItems-cell-hoverBackgroundColor
         );
