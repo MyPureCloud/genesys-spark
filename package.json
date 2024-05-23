@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components",
-  "version": "3.124.5",
+  "version": "3.125.0",
   "description": "Common webcomponents",
   "license": "MIT",
   "scripts": {

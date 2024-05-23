@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.125.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.124.5...v3.125.0) (2024-05-23)
+
+
+### Features
+
+* **icon:** add panel and location icons ([#470](https://github.com/MyPureCloud/genesys-spark/issues/470)) ([3c9e364](https://github.com/MyPureCloud/genesys-spark/commit/3c9e364c45c6455a424a8d5d46bf9bc690db16a1))
+
 ### [3.124.5](https://github.com/MyPureCloud/genesys-spark/compare/v3.124.4...v3.124.5) (2024-05-21)
 
 
