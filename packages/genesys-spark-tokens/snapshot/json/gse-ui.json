@@ -77,31 +77,87 @@
     "border_radius": "16px",
     "default": {
       "background_color": "#23395d",
-      "foreground_color": "#ffffff"
+      "foreground_color": "#ffffff",
+      "bold": {
+        "background_color": "#3e5374",
+        "foreground_color": "#ffffff"
+      },
+      "subtle": {
+        "background_color": "#c6c8ce",
+        "foreground_color": "#1b2c48"
+      }
     },
     "accent1": {
       "background_color": "#e4e5e7",
-      "foreground_color": "#1b2c48"
+      "foreground_color": "#1b2c48",
+      "bold": {
+        "background_color": "#626d97",
+        "foreground_color": "#ffffff"
+      },
+      "subtle": {
+        "background_color": "#d1d7ef",
+        "foreground_color": "#1b2c48"
+      }
     },
     "accent2": {
       "background_color": "#90D3DD",
-      "foreground_color": "#1b2c48"
+      "foreground_color": "#1b2c48",
+      "bold": {
+        "background_color": "#54C6AB",
+        "foreground_color": "#1b2c48"
+      },
+      "subtle": {
+        "background_color": "#98DDCD",
+        "foreground_color": "#1b2c48"
+      }
     },
     "accent3": {
       "background_color": "#0C6D7E",
-      "foreground_color": "#ffffff"
+      "foreground_color": "#ffffff",
+      "bold": {
+        "background_color": "#0C6D7E",
+        "foreground_color": "#ffffff"
+      },
+      "subtle": {
+        "background_color": "#90D3DD",
+        "foreground_color": "#1b2c48"
+      }
     },
     "accent4": {
       "background_color": "#547688",
-      "foreground_color": "#ffffff"
+      "foreground_color": "#ffffff",
+      "bold": {
+        "background_color": "#607732",
+        "foreground_color": "#ffffff"
+      },
+      "subtle": {
+        "background_color": "#C6DD98",
+        "foreground_color": "#1b2c48"
+      }
     },
     "accent5": {
       "background_color": "#a5cae0",
-      "foreground_color": "#1b2c48"
+      "foreground_color": "#1b2c48",
+      "bold": {
+        "background_color": "#5798D9",
+        "foreground_color": "#1b2c48"
+      },
+      "subtle": {
+        "background_color": "#9AC1E8",
+        "foreground_color": "#1b2c48"
+      }
     },
     "accent6": {
       "background_color": "#b5bfe6",
-      "foreground_color": "#1b2c48"
+      "foreground_color": "#1b2c48",
+      "subtle": {
+        "background_color": "#CDACFF",
+        "foreground_color": "#1b2c48"
+      },
+      "bold": {
+        "background_color": "#AC75FF",
+        "foreground_color": "#1b2c48"
+      }
     },
     "text": {
       "fontFamily": "Noto Sans",
@@ -116,26 +172,64 @@
     },
     "accent7": {
       "background_color": "#A05195",
-      "foreground_color": "#ffffff"
+      "foreground_color": "#ffffff",
+      "bold": {
+        "background_color": "#89387B",
+        "foreground_color": "#ffffff"
+      },
+      "subtle": {
+        "background_color": "#EF9EE1",
+        "foreground_color": "#1b2c48"
+      }
     },
     "height": "20px",
     "accent8": {
       "background_color": "#F95D6A",
-      "foreground_color": "#1b2c48"
+      "foreground_color": "#1b2c48",
+      "bold": {
+        "background_color": "#FF5C77",
+        "foreground_color": "#1b2c48"
+      },
+      "subtle": {
+        "background_color": "#FF9DAD",
+        "foreground_color": "#1b2c48"
+      }
     },
     "accent9": {
       "background_color": "#FE8F85",
-      "foreground_color": "#1b2c48"
+      "foreground_color": "#1b2c48",
+      "bold": {
+        "background_color": "#c44b3b",
+        "foreground_color": "#ffffff"
+      },
+      "subtle": {
+        "background_color": "#feb2ab",
+        "foreground_color": "#1b2c48"
+      }
     },
     "accent10": {
       "background_color": "#FFC650",
-      "foreground_color": "#1b2c48"
+      "foreground_color": "#1b2c48",
+      "bold": {
+        "background_color": "#FFC650",
+        "foreground_color": "#1b2c48"
+      },
+      "subtle": {
+        "background_color": "#FFDD96",
+        "foreground_color": "#1b2c48"
+      }
     },
     "button": {
       "size": "16px"
     },
     "disabled": {
       "opacity": 0.5
+    },
+    "small": {
+      "height": "20px"
+    },
+    "large": {
+      "height": "32px"
     }
   },
   "links": {
@@ -162,7 +256,7 @@
       "fontFamily": "Noto Sans",
       "lineHeight": "18px",
       "fontSize": "12px",
-      "fontWeight": 400
+      "fontWeight": 600
     },
     "height": "20px",
     "padding": "2px 12px",
