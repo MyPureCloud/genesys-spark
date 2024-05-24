@@ -15,8 +15,8 @@ import { trackComponent } from '@utils/tracking/usage';
 
 /**
  * @slot group-label - Required slot for label tag
- * @slot group-error - Optional slot for group-error message
- * @slot group-help - Optional slot for group-help message
+ * @slot group-error - Optional slot for error message
+ * @slot group-help - Optional slot for help message
  */
 @Component({
   styleUrl: 'gux-form-field-radio-group.scss',
@@ -31,7 +31,7 @@ export class GuxFormFieldRadioGroupBeta {
   private root: HTMLElement;
 
   /**
-   *  radio group has error text.
+   *  Radio group has error text.
    */
   @State()
   private hasGroupError: boolean = false;
