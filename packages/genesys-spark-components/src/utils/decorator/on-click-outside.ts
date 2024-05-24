@@ -105,10 +105,18 @@ function initOnClickOutside(
 }
 
 function getTriggerEvents(opt: OnClickOutsideOptions): string[] {
+  let events: string[];
   if (opt.triggerEvents) {
-    return opt.triggerEvents.split(',').map(e => e.trim());
+    events = opt.triggerEvents.split(',').map(e => e.trim());
+  } else {
+    events = ['click'];
   }
-  return ['click'];
+
+  if (!events.includes('blur')) {
+    events.push('blur');
+  }
+
+  return events;
 }
 
 function getExcludedNodes(opt: OnClickOutsideOptions): HTMLElement[] {
