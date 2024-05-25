@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.54.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.53.0...v4.54.0) (2024-05-25)
+
+
+### Features
+
+* **dropdown:** Add example for subtext and amend selected option for display ([#464](https://github.com/MyPureCloud/genesys-spark/issues/464)) ([cd1767e](https://github.com/MyPureCloud/genesys-spark/commit/cd1767e5f7272145361e9f4b4160789b6780754e))
+* **table:** improving row hover color ([53dbd80](https://github.com/MyPureCloud/genesys-spark/commit/53dbd80ab43775d4d2d8b3292113a90d99457e39))
+* **table:** improving table row hover ([a3a70eb](https://github.com/MyPureCloud/genesys-spark/commit/a3a70eb24c00b2cf9ce5a005941b89b268331b70))
+* **tokens:** splitted JSON ([fdb2512](https://github.com/MyPureCloud/genesys-spark/commit/fdb2512121f0fe03a10f76c941d7ad01a8ad2b27))
+
+
+### Bug Fixes
+
+* **other:** form ([88d10a2](https://github.com/MyPureCloud/genesys-spark/commit/88d10a2f306f5b95f14b55770a683703f69bde66))
+
 ## [4.53.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.52.1...v4.53.0) (2024-05-23)
 
 
