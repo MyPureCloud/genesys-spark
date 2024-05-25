@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.125.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.125.0...v3.125.1) (2024-05-25)
+
+
+### Bug Fixes
+
+* **on-click-outside:** popup now collapses when clicking another frame ([54d4671](https://github.com/MyPureCloud/genesys-spark/commit/54d46713339c1ad4e8eb7f11b47955dc5b9ed03f))
+* **translations:** backported Ukrainian translations ([78e6beb](https://github.com/MyPureCloud/genesys-spark/commit/78e6bebf5ee7590058f760fbb34fd22647d05790))
+
 ## [3.125.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.124.5...v3.125.0) (2024-05-23)
 
 
