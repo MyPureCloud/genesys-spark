@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.55.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.54.0...v4.55.0) (2024-05-28)
+
+
+### Features
+
+* **icon:** Add sparkles and panel small icons ([#474](https://github.com/MyPureCloud/genesys-spark/issues/474)) ([d43e26f](https://github.com/MyPureCloud/genesys-spark/commit/d43e26f77d8ff9250140b08ca91aa92ba03bc487))
+
+
+### Bug Fixes
+
+* **other:** popup ([294fc70](https://github.com/MyPureCloud/genesys-spark/commit/294fc700346fa751197f5cc7c7c9029e5bf4cca1))
+
 ## [4.54.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.53.0...v4.54.0) (2024-05-25)
 
 
