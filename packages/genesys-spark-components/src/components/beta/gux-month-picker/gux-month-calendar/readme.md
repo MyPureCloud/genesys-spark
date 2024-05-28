@@ -14,6 +14,13 @@
 | `value`  | `value`   | The current selected year and month in ISO8601 format (yyyy-mm) | ``${string}-${string}`` | `undefined` |
 
 
+## Events
+
+| Event           | Description | Type                |
+| --------------- | ----------- | ------------------- |
+| `closeCalendar` |             | `CustomEvent<void>` |
+
+
 ## Methods
 
 ### `guxFocus(iSOYearMonth: GuxISOYearMonth) => Promise<void>`

@@ -127,17 +127,6 @@ export class GuxMonthCalendar {
     }
   }
 
-  @Listen('focusout')
-  onFocusout(event: FocusEvent): void {
-    const focusIsOutsideComponent = !this.root.contains(
-      event.relatedTarget as Node
-    );
-    if (focusIsOutsideComponent) {
-      this.expanded = false;
-      this.closeCalendar.emit();
-    }
-  }
-
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     if (readRegionalDatesCookie()) {

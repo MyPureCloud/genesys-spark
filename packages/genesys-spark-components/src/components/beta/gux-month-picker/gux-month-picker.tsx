@@ -87,11 +87,6 @@ export class GuxMonthPicker {
     }
   }
 
-  @Listen('closeCalendar')
-  closeCalendar() {
-    this.expanded = false;
-  }
-
   @Watch('value')
   onValueUpdate(newValue: GuxISOYearMonth) {
     if (this.isOutOfBounds(newValue)) {
@@ -120,6 +115,16 @@ export class GuxMonthPicker {
       this.locale = sparkIntl.determineDisplayLocale(this.root);
     } else {
       this.locale = getDesiredLocale(this.root);
+    }
+  }
+
+  @Listen('focusout')
+  onFocusout(event: FocusEvent): void {
+    const focusIsOutsideComponent = !this.root.contains(
+      event.relatedTarget as Node
+    );
+    if (focusIsOutsideComponent) {
+      this.expanded = false;
     }
   }
 
