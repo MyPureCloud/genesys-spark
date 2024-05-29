@@ -87,18 +87,18 @@ gux-table {
     }
 
     tbody {
-      tr {
+      tr td {
         background-color: var(
           --gse-ui-dataTableItems-cell-defaultBackgroundColor
         );
       }
 
-      tr:nth-child(2n) {
+      tr:nth-child(2n) td {
         background-color: var(--gse-ui-dataTableItems-cell-altBackgroundColor);
       }
 
-      tr:hover,
-      tr:nth-child(2n):hover {
+      tr:hover td,
+      tr:nth-child(2n):hover td {
         background-color: var(
           --gse-ui-dataTableItems-cell-hoverBackgroundColor
         );
