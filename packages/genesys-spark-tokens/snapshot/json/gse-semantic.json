@@ -43,14 +43,14 @@
     "corner_radius": "4px",
     "default": {
       "border": {
-        "color": "#7B88F7",
+        "color": "#7b88f7",
         "width": "3px",
         "style": "solid"
       }
     },
     "small": {
       "border": {
-        "color": "#7B88F7",
+        "color": "#7b88f7",
         "width": "2px",
         "style": "solid"
       }

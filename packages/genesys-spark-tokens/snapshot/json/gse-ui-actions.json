@@ -2,7 +2,7 @@
   "copy_to_clipboard": {
     "label": {
       "active": {
-        "background_color": "#DEE1FD"
+        "background_color": "#dee1fd"
       },
       "foreground_color": "#1b2c48",
       "padding": "2px 4px",
