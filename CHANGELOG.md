@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.56.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.55.0...v4.56.0) (2024-05-30)
+
+
+### Features
+
+* **table:** applying styles to whole row even with sticky columns ([cecc4a8](https://github.com/MyPureCloud/genesys-spark/commit/cecc4a8be9696eb081369888b2af085544afb56f))
+* **table:** removing unused styles ([b3e81d1](https://github.com/MyPureCloud/genesys-spark/commit/b3e81d16bf9530eee29e4ff6af29b53847f50f99))
+
+
+### Bug Fixes
+
+* **tabs:** vertical tab component now truncates ([50e1a79](https://github.com/MyPureCloud/genesys-spark/commit/50e1a79d69a700df1ce678c656c5c4a6598e854d))
+
 ## [4.55.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.54.0...v4.55.0) (2024-05-28)
 
 
