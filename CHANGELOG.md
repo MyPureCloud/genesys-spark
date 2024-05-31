@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.56.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.56.0...v4.56.1) (2024-05-31)
+
+
+### Bug Fixes
+
+* **pagination:** remove legacy types import ([0382170](https://github.com/MyPureCloud/genesys-spark/commit/038217037365275aedc45a9b1d8377967a99b6a1))
+* **popover:** Closing popover on focus out ([b637029](https://github.com/MyPureCloud/genesys-spark/commit/b6370296df0c15fe2e9e5f644d649787d36e29be))
+
 ## [4.56.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.55.0...v4.56.0) (2024-05-30)
 
 
