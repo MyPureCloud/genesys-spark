@@ -125,7 +125,8 @@
       },
       "icon_size": "16px",
       "tooltip_trigger": {
-        "optional_color": "#3e5374"
+        "optional_color": "#3e5374",
+        "border_radius": "2px"
       }
     },
     "group": {
@@ -140,6 +141,9 @@
         "fontWeight": 400
       },
       "padding": "8px 0 0 0",
+      "icon": {
+        "padding": "1px 0 1px 0"
+      },
       "padding_small": "4px 0 0 0",
       "error_padding": "4px 0 0 0",
       "default_color": "#626e84",

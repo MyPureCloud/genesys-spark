@@ -439,7 +439,9 @@
     },
     "focus_calendar": {
       "gap": "3px"
-    }
+    },
+    "icon_hover": "#3742A2",
+    "icon_focus": "#3742A2"
   },
   "toggle": {
     "label": {

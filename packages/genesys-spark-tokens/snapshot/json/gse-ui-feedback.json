@@ -48,7 +48,7 @@
     "border_radius": "8px",
     "box_shadow": {
       "x": 0,
-      "y": "2px",
+      "y": 0,
       "blur": "4px",
       "spread": "1px",
       "color": "#23395c1a",
@@ -92,7 +92,7 @@
     },
     "box_shadow": {
       "x": 0,
-      "y": "6px",
+      "y": 0,
       "blur": "8px",
       "spread": "1px",
       "color": "#23395c26",
@@ -111,7 +111,7 @@
     "border_radius": "8px",
     "box_shadow": {
       "x": 0,
-      "y": "6px",
+      "y": 0,
       "blur": "8px",
       "spread": "1px",
       "color": "#23395c26",
@@ -148,8 +148,8 @@
       }
     },
     "anchor": {
-      "width": "13px",
-      "height": "13px"
+      "width": "18px",
+      "height": "9px"
     }
   },
   "progress_and_loading": {

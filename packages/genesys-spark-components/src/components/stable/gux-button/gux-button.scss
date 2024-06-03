@@ -80,6 +80,8 @@ button {
 
   &:focus-visible:enabled {
     @include focus.gux-focus-ring;
+
+    border-radius: var(--gse-semantic-focusRing-cornerRadius);
   }
 
   &.gux-primary {
@@ -160,6 +162,7 @@ button {
     color: var(--gse-ui-link-default-foregroundColor);
     background: none;
     border: none;
+    border-radius: 0;
 
     &[disabled] {
       color: var(--gse-ui-link-disabled-foregroundColor);

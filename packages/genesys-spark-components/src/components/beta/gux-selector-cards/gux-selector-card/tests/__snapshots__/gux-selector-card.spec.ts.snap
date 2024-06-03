@@ -29,7 +29,7 @@ exports[`gux-form-field-radio #render should render component as expected (1) 1`
 `;
 
 exports[`gux-form-field-radio #render should render component as expected (2) 1`] = `
-<gux-selector-card-beta class="gux-checked gux-disabled gux-simple" variant="simple">
+<gux-selector-card-beta class="gux-disabled gux-simple" variant="simple">
   <mock:shadow-root>
     <div class="gux-content">
       <div class="gux-icon">
