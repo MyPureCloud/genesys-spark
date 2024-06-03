@@ -70,7 +70,7 @@ export class GuxTruncate {
     if (this.needsTruncation()) {
       return (
         <gux-tooltip aria-hidden="true" ref={el => (this.tooltipElement = el)}>
-          {this.getTooltipContent()}
+          <div slot="content">{this.getTooltipContent()}</div>
         </gux-tooltip>
       ) as JSX.Element;
     }

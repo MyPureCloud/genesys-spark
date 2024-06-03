@@ -406,7 +406,7 @@
   "data_table_composed": {
     "box_shadow": {
       "x": 0,
-      "y": "2px",
+      "y": 0,
       "blur": "4px",
       "spread": "1px",
       "color": "#23395c1a",

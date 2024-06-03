@@ -408,7 +408,7 @@
   "elevation": {
     "low": {
       "x": 0,
-      "y": "2px",
+      "y": 0,
       "blur": "4px",
       "spread": "1px",
       "color": "#23395c1a",
@@ -416,7 +416,7 @@
     },
     "medium": {
       "x": 0,
-      "y": "4px",
+      "y": 0,
       "blur": "6px",
       "spread": "1px",
       "color": "#23395c1f",
@@ -424,7 +424,7 @@
     },
     "high": {
       "x": 0,
-      "y": "6px",
+      "y": 0,
       "blur": "8px",
       "spread": "1px",
       "color": "#23395c26",

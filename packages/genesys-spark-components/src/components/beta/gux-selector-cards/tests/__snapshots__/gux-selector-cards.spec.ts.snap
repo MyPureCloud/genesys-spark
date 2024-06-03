@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-selector-cards #render should render component as expected (1) 1`] = `
+<gux-selector-cards-beta>
+  <mock:shadow-root>
+    <div class="gux-selector-cards">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+</gux-selector-cards-beta>
+`;
+
+exports[`gux-selector-cards #render should render component as expected (2) 1`] = `
+<gux-selector-cards-beta>
+  <mock:shadow-root>
+    <div class="gux-selector-cards">
+      <slot></slot>
+    </div>
+  </mock:shadow-root>
+  <gux-selector-card-beta variant="simple">
+    <label for="first" slot="label">
+      First
+    </label>
+    <input id="first" name="example1" slot="input" type="radio">
+    <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  </gux-selector-card-beta>
+  <gux-selector-card-beta variant="simple">
+    <label for="second" slot="label">
+      Second
+    </label>
+    <input id="second" name="example1" slot="input" type="radio">
+    <gux-icon decorative="" icon-name="fa/bell-regular" slot="icon"></gux-icon>
+  </gux-selector-card-beta>
+  <gux-selector-card-beta variant="simple">
+    <label for="third" slot="label">
+      Third
+    </label>
+    <input id="third" name="example1" slot="input" type="radio">
+    <gux-icon decorative="" icon-name="fa/play-regular" slot="icon"></gux-icon>
+  </gux-selector-card-beta>
+  <gux-selector-card-beta variant="simple">
+    <label for="fourth" slot="label">
+      Fourth
+    </label>
+    <input disabled="" id="fourth" name="example1" slot="input" type="radio">
+    <gux-icon decorative="" icon-name="fa/bell-regular" slot="icon"></gux-icon>
+  </gux-selector-card-beta>
+  <gux-selector-card-beta variant="simple">
+    <label for="fifth" slot="label">
+      Fifth
+    </label>
+    <input id="fifth" name="example1" slot="input" type="radio">
+    <gux-icon decorative="" icon-name="fa/play-regular" slot="icon"></gux-icon>
+  </gux-selector-card-beta>
+</gux-selector-cards-beta>
+`;
