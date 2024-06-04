@@ -1,27 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-form-field-radio #render should render component as expected (1) 1`] = `
-<gux-selector-card-beta class="gux-disabled gux-simple" variant="simple">
+<gux-selector-card-beta variant="simple">
   <mock:shadow-root>
-    <div class="gux-content">
-      <div class="gux-icon">
-        <slot name="icon"></slot>
+    <div class="gux-disabled gux-selector-card gux-simple">
+      <div class="gux-content">
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <gux-truncate class="gux-label" max-lines="2">
+          <slot name="label"></slot>
+        </gux-truncate>
+        <slot name="input"></slot>
+        <span class="gux-screenreader">
+          <slot name="description"></slot>
+        </span>
       </div>
-      <gux-truncate max-lines="2">
-        <slot name="label"></slot>
-      </gux-truncate>
-      <slot name="input"></slot>
-      <span class="gux-screenreader">
-        <slot name="content"></slot>
-      </span>
     </div>
   </mock:shadow-root>
   <label for="second" slot="label">
     Card Label
   </label>
-  <input aria-describedby="gux-content-i" disabled="" id="second" name="example2" slot="input" type="radio" value="card-label">
+  <input disabled="" id="second" name="example2" slot="input" type="radio" value="card-label">
   <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon">
-    <span id="gux-content-i" slot="content">
+    <span id="existing-id" slot="content">
       A second label for a sample selector card. Used in Spark WCL.
     </span>
   </gux-icon>
@@ -29,19 +31,21 @@ exports[`gux-form-field-radio #render should render component as expected (1) 1`
 `;
 
 exports[`gux-form-field-radio #render should render component as expected (2) 1`] = `
-<gux-selector-card-beta class="gux-disabled gux-simple" variant="simple">
+<gux-selector-card-beta variant="simple">
   <mock:shadow-root>
-    <div class="gux-content">
-      <div class="gux-icon">
-        <slot name="icon"></slot>
+    <div class="gux-disabled gux-selector-card gux-simple">
+      <div class="gux-content">
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <gux-truncate class="gux-label" max-lines="2">
+          <slot name="label"></slot>
+        </gux-truncate>
+        <slot name="input"></slot>
+        <span class="gux-screenreader">
+          <slot name="description"></slot>
+        </span>
       </div>
-      <gux-truncate max-lines="2">
-        <slot name="label"></slot>
-      </gux-truncate>
-      <slot name="input"></slot>
-      <span class="gux-screenreader">
-        <slot name="content"></slot>
-      </span>
     </div>
   </mock:shadow-root>
   <label for="third" slot="label">
@@ -53,25 +57,220 @@ exports[`gux-form-field-radio #render should render component as expected (2) 1`
 `;
 
 exports[`gux-form-field-radio #render should render component as expected (3) 1`] = `
-<gux-selector-card-beta class="gux-simple" variant="simple">
+<gux-selector-card-beta variant="simple">
   <mock:shadow-root>
-    <div class="gux-content">
-      <div class="gux-icon">
-        <slot name="icon"></slot>
+    <div class="gux-selector-card gux-simple">
+      <div class="gux-content">
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <gux-truncate class="gux-label" max-lines="2">
+          <slot name="label"></slot>
+        </gux-truncate>
+        <slot name="input"></slot>
+        <span class="gux-screenreader">
+          <slot name="description"></slot>
+        </span>
       </div>
-      <gux-truncate max-lines="2">
-        <slot name="label"></slot>
-      </gux-truncate>
-      <slot name="input"></slot>
-      <span class="gux-screenreader">
-        <slot name="content"></slot>
-      </span>
     </div>
   </mock:shadow-root>
   <label for="fourth" slot="label">
     A longer card label example
   </label>
   <input id="fourth" name="example4" slot="input" type="radio" value="card-label">
+  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+</gux-selector-card-beta>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (4) 1`] = `
+<gux-selector-card-beta variant="descriptive">
+  <mock:shadow-root>
+    <div class="gux-descriptive gux-selector-card">
+      <div class="gux-content">
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <gux-truncate class="gux-label" max-lines="2">
+          <slot name="label"></slot>
+        </gux-truncate>
+        <slot name="input"></slot>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
+        <slot name="badge"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <label for="fourth" slot="label">
+    A longer card label example. This can span up to 2 lines.
+  </label>
+  <input id="fourth" name="example4" slot="input" type="radio" value="card-label">
+  <span slot="content">
+    A description for a sample selector card. Used in Spark WCL. Descriptions can span up to 3 lines before being truncated.
+  </span>
+  <gux-badge bold="" slot="badge">
+    Badge
+  </gux-badge>
+  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+</gux-selector-card-beta>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (5) 1`] = `
+<gux-selector-card-beta variant="descriptive">
+  <mock:shadow-root>
+    <div class="gux-descriptive gux-disabled gux-selector-card">
+      <div class="gux-content">
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <gux-truncate class="gux-label" max-lines="2">
+          <slot name="label"></slot>
+        </gux-truncate>
+        <slot name="input"></slot>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
+        <slot name="badge"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <label for="third" slot="label">
+    Card Label
+  </label>
+  <input checked="" disabled="" id="third" name="example3" slot="input" type="radio" value="card-label">
+  <span slot="content">
+    A label for a sample selector card. Used in Spark WCL.
+  </span>
+  <gux-badge bold="" slot="badge">
+    Badge
+  </gux-badge>
+  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+</gux-selector-card-beta>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (6) 1`] = `
+<gux-selector-card-beta variant="descriptive">
+  <mock:shadow-root>
+    <div class="gux-descriptive gux-disabled gux-selector-card">
+      <div class="gux-content">
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <gux-truncate class="gux-label" max-lines="2">
+          <slot name="label"></slot>
+        </gux-truncate>
+        <slot name="input"></slot>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
+        <slot name="badge"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <label for="second" slot="label">
+    Card Label
+  </label>
+  <input disabled="" id="second" name="example2" slot="input" type="radio" value="card-label">
+  <span slot="content">
+    A label for a sample selector card. Used in Spark WCL.
+  </span>
+  <gux-badge bold="" slot="badge">
+    Badge
+  </gux-badge>
+  ß
+  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+</gux-selector-card-beta>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (7) 1`] = `
+<gux-selector-card-beta variant="descriptive">
+  <mock:shadow-root>
+    <div class="gux-descriptive gux-selector-card">
+      <div class="gux-content">
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <gux-truncate class="gux-label" max-lines="2">
+          <slot name="label"></slot>
+        </gux-truncate>
+        <slot name="input"></slot>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
+        <slot name="badge"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <label for="first" slot="label">
+    Card label
+  </label>
+  <input id="first" name="example1" slot="input" type="radio" value="card-label">
+  <span slot="content">
+    A label for a sample selector card. Used in Spark WCL.
+  </span>
+  <gux-badge bold="" slot="badge">
+    Badge
+  </gux-badge>
+  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+</gux-selector-card-beta>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (8) 1`] = `
+<gux-selector-card-beta variant="descriptive">
+  <mock:shadow-root>
+    <div class="gux-descriptive gux-selector-card">
+      <div class="gux-content">
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <gux-truncate class="gux-label" max-lines="2">
+          <slot name="label"></slot>
+        </gux-truncate>
+        <slot name="input"></slot>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
+        <slot name="badge"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <label for="first" slot="label">
+    Card label
+  </label>
+  <input id="first" name="example1" slot="input" type="radio" value="card-label">
+  <span slot="content">
+    A label for a sample selector card. Used in Spark WCL.
+  </span>
+  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+</gux-selector-card-beta>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (9) 1`] = `
+<gux-selector-card-beta variant="descriptive">
+  <mock:shadow-root>
+    <div class="gux-descriptive gux-selector-card">
+      <div class="gux-content">
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <gux-truncate class="gux-label" max-lines="2">
+          <slot name="label"></slot>
+        </gux-truncate>
+        <slot name="input"></slot>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
+        <slot name="badge"></slot>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <label for="first" slot="label">
+    Card label
+  </label>
+  <input id="first" name="example1" slot="input" type="radio" value="card-label">
+  <gux-badge bold="" slot="badge">
+    Badge
+  </gux-badge>
   <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
 </gux-selector-card-beta>
 `;
