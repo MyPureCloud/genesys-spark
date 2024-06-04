@@ -1,17 +1,17 @@
 {
-    "tokenSetOrder": [
-        "global_deprecated",
-        "ui_deprecated",
-        "core",
-        "semantic",
-        "ui",
-        "actions",
-        "form_control",
-        "forms_and_inputs",
-        "search_and_filter",
-        "data_display",
-        "layout & container",
-        "navigation",
-        "feedback"
-    ]
+  "tokenSetOrder": [
+    "global_deprecated",
+    "ui_deprecated",
+    "core",
+    "semantic",
+    "ui",
+    "actions",
+    "form_control",
+    "forms_and_inputs",
+    "search_and_filter",
+    "data_display",
+    "layout & container",
+    "navigation",
+    "feedback"
+  ]
 }
