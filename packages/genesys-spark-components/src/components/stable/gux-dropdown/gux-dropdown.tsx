@@ -422,8 +422,15 @@ export class GuxDropdown {
 
   private renderOption(option: HTMLGuxOptionElement): JSX.Element {
     let optionText = option.textContent;
+    // TODO: COMUI-2909 Look at removing this subtext clause
     if (hasSlot(option, 'text')) {
       optionText = getSlotTextContent(option, 'text');
+    } else if (hasSlot(option, 'subtext')) {
+      const subtext = option.querySelector('[slot=subtext]');
+      optionText = optionText.substring(
+        0,
+        optionText.length - subtext.textContent.length
+      );
     }
 
     return (

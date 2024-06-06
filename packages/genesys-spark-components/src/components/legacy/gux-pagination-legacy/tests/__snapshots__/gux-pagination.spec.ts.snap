@@ -44,6 +44,7 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -55,6 +56,7 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -66,6 +68,7 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -77,6 +80,7 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -188,6 +192,7 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -199,6 +204,7 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -210,6 +216,7 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -221,6 +228,7 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -332,6 +340,7 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -343,6 +352,7 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -354,6 +364,7 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -365,6 +376,7 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -476,6 +488,7 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -487,6 +500,7 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -498,6 +512,7 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -509,6 +524,7 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -620,6 +636,7 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -631,6 +648,7 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -642,6 +660,7 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -653,6 +672,7 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -764,6 +784,7 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -775,6 +796,7 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -786,6 +808,7 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -797,6 +820,7 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -908,6 +932,7 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -919,6 +944,7 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -930,6 +956,7 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -941,6 +968,7 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1052,6 +1080,7 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1063,6 +1092,7 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1074,6 +1104,7 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1085,6 +1116,7 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1196,6 +1228,7 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1207,6 +1240,7 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1218,6 +1252,7 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1229,6 +1264,7 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1392,6 +1428,7 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1403,6 +1440,7 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1414,6 +1452,7 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1425,6 +1464,7 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1536,6 +1576,7 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1547,6 +1588,7 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1558,6 +1600,7 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1569,6 +1612,7 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1680,6 +1724,7 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1691,6 +1736,7 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1702,6 +1748,7 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1713,6 +1760,7 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
                     <mock:shadow-root>
                       <div class="gux-option-wrapper">
                         <gux-truncate>
+                          <slot name="text"></slot>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>

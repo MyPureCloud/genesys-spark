@@ -167,6 +167,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -178,6 +179,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -189,6 +191,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1007,6 +1010,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1018,6 +1022,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1029,6 +1034,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1099,6 +1105,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1110,6 +1117,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1121,6 +1129,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1194,6 +1203,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1205,6 +1215,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1216,6 +1227,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1286,6 +1298,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1297,6 +1310,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1308,6 +1322,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1378,6 +1393,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1389,6 +1405,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1400,6 +1417,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1470,6 +1488,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1481,6 +1500,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1492,6 +1512,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1562,6 +1583,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1573,6 +1595,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -1584,6 +1607,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
