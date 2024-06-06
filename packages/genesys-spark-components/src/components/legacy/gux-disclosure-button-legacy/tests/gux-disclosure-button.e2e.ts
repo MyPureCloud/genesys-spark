@@ -68,14 +68,14 @@ describe('gux-disclosure-button-legacy', () => {
 
         expect(await element.getProperty('isOpen')).toBe(false);
         expect(panel).not.toHaveClass('gux-active');
-        expect(icon).toEqualAttribute('icon-name', 'arrow-solid-right');
+        expect(icon).toEqualAttribute('icon-name', 'fa/caret-right-solid');
 
         await button.click();
         await page.waitForChanges();
 
         expect(await element.getProperty('isOpen')).toBe(true);
         expect(panel).toHaveClass('gux-active');
-        expect(icon).toEqualAttribute('icon-name', 'arrow-solid-left');
+        expect(icon).toEqualAttribute('icon-name', 'fa/caret-left-solid');
         expect(onActive).toHaveReceivedEventDetail(true);
       });
     });

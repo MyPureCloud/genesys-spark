@@ -80,12 +80,7 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
         padding-right: var(--gse-ui-modal-padding);
         padding-left: var(--gse-ui-modal-padding);
         margin-top: var(--gse-ui-modal-gap);
-        margin-bottom: var(--gse-ui-modal-gap);
         overflow-y: auto;
-
-        &.gux-no-buttons {
-          margin-bottom: 0;
-        }
       }
 
       .gux-button-footer {
@@ -93,6 +88,11 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
         justify-content: space-between;
         padding-right: var(--gse-ui-modal-padding);
         padding-left: var(--gse-ui-modal-padding);
+        margin-top: var(--gse-ui-modal-gap);
+
+        &.gux-no-buttons {
+          display: none;
+        }
       }
     }
 

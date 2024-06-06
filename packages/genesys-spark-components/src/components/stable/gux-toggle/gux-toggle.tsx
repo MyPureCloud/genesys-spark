@@ -144,7 +144,10 @@ export class GuxToggle {
       return (
         <div id={this.errorId} class="gux-toggle-error">
           <div class="gux-toggle-error-container">
-            <gux-icon icon-name="alert-warning-octogon" decorative></gux-icon>
+            <gux-icon
+              icon-name="fa/hexagon-exclamation-regular"
+              decorative
+            ></gux-icon>
             <div class="gux-toggle-error-message">{this.errorMessage}</div>
           </div>
         </div>
@@ -162,16 +165,15 @@ export class GuxToggle {
             'gux-disabled': this.disabled || this.loading
           }}
         >
-          <div class="gux-toggle-input">
+          <div class="gux-toggle-input" onClick={this.toggle.bind(this)}>
             <gux-toggle-slider
               checked={this.checked}
               disabled={this.disabled || this.loading}
               guxAriaLabel={this.getAriaLabel()}
-              onClick={this.toggle.bind(this)}
-              onKeyDown={this.onKeydown.bind(this)}
               labelId={
                 this.checkedLabel && this.uncheckedLabel ? this.labelId : ''
               }
+              onKeyDown={this.onKeydown.bind(this)}
               errorId={this.errorMessage ? this.errorId : ''}
             ></gux-toggle-slider>
             {this.renderLabel()}

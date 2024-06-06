@@ -27,7 +27,7 @@ import { CalendarModes } from '../../../common-enums';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import * as sparkIntl from '../../../genesys-spark-utils/intl';
 // Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
-import { readRegionalDatesCookie } from '../../../i18n/check-regional-dates-cookie';
+import { useRegionalDates } from '../../../i18n/use-regional-dates';
 import { GuxCalendarDayOfWeek } from '../gux-calendar/gux-calendar.types';
 
 import translationResources from './i18n/en.json';
@@ -659,7 +659,7 @@ export class GuxDatepicker {
   async componentWillLoad() {
     trackComponent(this.root, { variant: this.mode });
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-    if (readRegionalDatesCookie()) {
+    if (useRegionalDates()) {
       this.format =
         this.format ||
         sparkIntl.getFormat(sparkIntl.determineDisplayLocale(this.root));
@@ -742,7 +742,7 @@ export class GuxDatepicker {
         aria-label={this.i18n('toggleCalendar')}
         disabled={this.disabled}
       >
-        <gux-icon decorative icon-name="calendar"></gux-icon>
+        <gux-icon decorative icon-name="fa/calendar-regular"></gux-icon>
       </button>
     ) as JSX.Element;
   }

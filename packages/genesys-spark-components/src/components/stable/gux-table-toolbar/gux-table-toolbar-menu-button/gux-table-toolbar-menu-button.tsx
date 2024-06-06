@@ -136,7 +136,7 @@ export class GuxTableToolbarMenuButton {
                   <span>
                     <gux-icon
                       screenreader-text={this.i18n('additionalActions')}
-                      icon-name="menu-kebab-horizontal"
+                      icon-name="fa/ellipsis-regular"
                     ></gux-icon>
                   </span>
                 </gux-tooltip-title>

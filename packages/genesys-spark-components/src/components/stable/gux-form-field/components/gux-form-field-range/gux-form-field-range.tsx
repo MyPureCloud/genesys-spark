@@ -250,7 +250,7 @@ export class GuxFormField {
               offsetY={-10}
               placement="top"
             >
-              {this.getDisplayValue()}
+              <span slot="content">{this.getDisplayValue()}</span>
             </gux-tooltip-base-beta>
           )}
         </div>

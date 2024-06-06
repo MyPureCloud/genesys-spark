@@ -13,7 +13,8 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import translationResources from './i18n/en.json';
 import { GuxPaginationCursorDetail } from './gux-pagination-cursor.types';
-import { GuxItemsPerPage } from '../../legacy/gux-pagination-legacy/gux-pagination.types';
+
+import { GuxItemsPerPage } from '../gux-pagination/gux-pagination.types';
 
 @Component({
   styleUrl: 'gux-pagination-cursor.scss',
@@ -77,7 +78,7 @@ export class GuxPaginationCursor {
             onClick={() => this.onButtonClick('previous')}
           >
             <gux-icon
-              iconName="chevron-small-left"
+              iconName="custom/chevron-left-small-regular"
               screenreader-text={this.i18n('previous')}
             ></gux-icon>
           </button>
@@ -90,7 +91,7 @@ export class GuxPaginationCursor {
             onClick={() => this.onButtonClick('next')}
           >
             <gux-icon
-              iconName="chevron-small-right"
+              iconName="custom/chevron-right-small-regular"
               screenreader-text={this.i18n('next')}
             ></gux-icon>
           </button>
@@ -109,7 +110,10 @@ export class GuxPaginationCursor {
             onClick={() => this.onButtonClick('previous')}
           >
             <div class="gux-button-align-content">
-              <gux-icon decorative iconName="chevron-small-left"></gux-icon>
+              <gux-icon
+                decorative
+                iconName="custom/chevron-left-small-regular"
+              ></gux-icon>
               <span>{this.i18n('previous')}</span>
             </div>
           </button>
@@ -122,7 +126,10 @@ export class GuxPaginationCursor {
           >
             <div class="gux-button-align-content">
               <span>{this.i18n('next')}</span>
-              <gux-icon decorative iconName="chevron-small-right"></gux-icon>
+              <gux-icon
+                decorative
+                iconName="custom/chevron-right-small-regular"
+              ></gux-icon>
             </div>
           </button>
         </gux-button-slot>

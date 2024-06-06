@@ -392,13 +392,13 @@ export class GuxTabList {
   private getChevronIconName(direction: string): string {
     switch (direction) {
       case 'scrollLeft':
-        return 'chevron-small-left';
+        return 'custom/chevron-left-small-regular';
       case 'scrollRight':
-        return 'chevron-small-right';
+        return 'custom/chevron-right-small-regular';
       case 'scrollUp':
-        return 'chevron-small-up';
+        return 'custom/chevron-up-small-regular';
       case 'scrollDown':
-        return 'chevron-small-down';
+        return 'custom/chevron-down-small-regular';
     }
   }
 }

@@ -8,6 +8,9 @@
   "gux-avatar": {
     "notifications": "Сповіщення"
   },
+  "gux-avatar-change-photo": {
+    "changePhoto": "Змінити фото профілю"
+  },
   "gux-badge": {
     "info": "значок із міткою: {label}, виділення: відомості",
     "info-bold": "значок із міткою: {label}, виділення: відомості, напівжирний",

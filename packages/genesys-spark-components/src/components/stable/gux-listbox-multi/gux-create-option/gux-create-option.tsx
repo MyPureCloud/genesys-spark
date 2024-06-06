@@ -91,7 +91,7 @@ export class GuxCreateOption {
         }}
       >
         <div class="gux-option">
-          <gux-icon decorative iconName="add"></gux-icon>
+          <gux-icon decorative icon-name="fa/plus-regular"></gux-icon>
           <div class="gux-create-text">
             {this.i18n('createOption', {
               optionValue: this.value

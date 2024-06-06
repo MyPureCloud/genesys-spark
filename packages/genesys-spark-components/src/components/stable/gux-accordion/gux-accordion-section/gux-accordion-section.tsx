@@ -141,7 +141,10 @@ export class GuxAccordionSection {
                 'gux-arrow-position-start': this.isArrowPositionBeforeText()
               }}
             >
-              <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
+              <gux-icon
+                decorative
+                icon-name="custom/chevron-down-small-regular"
+              ></gux-icon>
             </div>
           </button>
         </div>

@@ -17,13 +17,17 @@ describe('gux-tooltip', () => {
       `
         <div>
           <div>Element</div>
-          <gux-tooltip>Tooltip</gux-tooltip>
+          <gux-tooltip>
+            <div slot="content">Tooltip</div>
+          </gux-tooltip>
         </div>
       `,
       `
         <div>
           <div id="element">Element</div>
-          <gux-tooltip for="element">Tooltip</gux-tooltip>
+          <gux-tooltip for="element">
+            <div slot="content">Tooltip</div>
+          </gux-tooltip>
         </div>
       `
     ].forEach((html, index) => {
@@ -40,13 +44,17 @@ describe('gux-tooltip', () => {
       `
         <div>
           <div>Element</div>
-          <gux-tooltip>Tooltip</gux-tooltip>
+          <gux-tooltip>
+            <div slot="content">Tooltip</div>
+          </gux-tooltip>
         </div>
       `,
       `
         <div>
           <div id="element">Element</div>
-          <gux-tooltip for="element">Tooltip</gux-tooltip>
+          <gux-tooltip for="element">
+            <div slot="content">Tooltip</div>
+          </gux-tooltip>
         </div>
       `
     ].forEach((html, index) => {

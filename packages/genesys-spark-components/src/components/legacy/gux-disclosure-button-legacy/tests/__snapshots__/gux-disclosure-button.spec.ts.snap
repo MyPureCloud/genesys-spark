@@ -5,7 +5,7 @@ exports[`gux-disclosure-button #render should render component as expected (1) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
-        <gux-icon decorative="" icon-name="arrow-solid-right"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
       </button>
       <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
@@ -20,7 +20,7 @@ exports[`gux-disclosure-button #render should render component as expected (2) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
-        <gux-icon decorative="" icon-name="arrow-solid-left"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/caret-left-solid"></gux-icon>
       </button>
       <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
@@ -35,7 +35,7 @@ exports[`gux-disclosure-button #render should render component as expected (3) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
-        <gux-icon decorative="" icon-name="arrow-solid-right"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
       </button>
       <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
@@ -50,7 +50,7 @@ exports[`gux-disclosure-button #render should render component as expected (4) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
-        <gux-icon decorative="" icon-name="arrow-solid-left"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/caret-left-solid"></gux-icon>
       </button>
       <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
@@ -65,7 +65,7 @@ exports[`gux-disclosure-button #render should render component as expected (5) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-right">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
-        <gux-icon decorative="" icon-name="arrow-solid-left"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/caret-left-solid"></gux-icon>
       </button>
       <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
@@ -80,7 +80,7 @@ exports[`gux-disclosure-button #render should render component as expected (6) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-right">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
-        <gux-icon decorative="" icon-name="arrow-solid-right"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
       </button>
       <div class="gux-active gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>
@@ -95,7 +95,7 @@ exports[`gux-disclosure-button #render should render component as expected (7) 1
   <mock:shadow-root>
     <div class="gux-disclosure-button-container gux-left">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="More Info" class="gux-disclosure-button">
-        <gux-icon decorative="" icon-name="arrow-solid-right"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
       </button>
       <div class="gux-disclosure-panel" id="gux-disclosure-button-panel-i" role="region">
         <slot name="panel-content"></slot>

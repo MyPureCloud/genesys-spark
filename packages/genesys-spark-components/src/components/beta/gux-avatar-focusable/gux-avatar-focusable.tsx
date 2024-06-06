@@ -16,7 +16,9 @@ export class GuxAvatarFocusable {
   }
 
   private validateSlot(): void {
-    const slottedElement = this.root.querySelector('a, button');
+    const slottedElement = this.root.querySelector(
+      'a, button, gux-avatar-change-photo-beta'
+    );
     if (slottedElement) {
       this.avatarElement = slottedElement.querySelector('gux-avatar-beta');
       if (!this.avatarElement) {
@@ -25,7 +27,7 @@ export class GuxAvatarFocusable {
     } else {
       logWarn(
         this.root,
-        'An anchor tag or button tag must be slotted into gux-avatar-focusable'
+        'An anchor tag, gux-avatar-change-photo-beta tag or button tag must be slotted into gux-avatar-focusable'
       );
     }
   }

@@ -8,6 +8,9 @@
   "gux-avatar": {
     "notifications": "התראות"
   },
+  "gux-avatar-change-photo": {
+    "changePhoto": "שנה תמונת פרופיל"
+  },
   "gux-badge": {
     "info": "תג עם תווית: {label}, הדגשה: מידע",
     "info-bold": "תג עם תווית: {label}, הדגשה: מידע מודגש",

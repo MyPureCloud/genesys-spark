@@ -21,7 +21,7 @@ export function OnMutation(options: MutationObserverInit): OnMutationDecorator {
 
     const { connectedCallback, disconnectedCallback } = proto;
 
-    const store = new Map<unknown, MutationObserver>();
+    const store = new Map<ComponentInterface, MutationObserver>();
 
     proto.connectedCallback = function () {
       const method = this[methodName];
@@ -41,8 +41,8 @@ export function OnMutation(options: MutationObserverInit): OnMutationDecorator {
 }
 
 function registerObserver(
-  store: Map<unknown, MutationObserver>,
-  key: unknown,
+  store: Map<ComponentInterface, MutationObserver>,
+  key: ComponentInterface,
   observer: MutationObserver,
   options: MutationObserverInit
 ) {
@@ -56,8 +56,8 @@ function registerObserver(
 }
 
 function deregisterObserver(
-  store: Map<unknown, MutationObserver>,
-  key: unknown
+  store: Map<ComponentInterface, MutationObserver>,
+  key: ComponentInterface
 ) {
   if (store.has(key)) {
     store.get(key).disconnect();

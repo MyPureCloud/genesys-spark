@@ -25,7 +25,7 @@ export class GuxFormFieldInputClearButton {
   render(): JSX.Element {
     return (
       <button tabIndex={-1} type="button" title={this.i18n('clear')}>
-        <gux-icon icon-name="close" decorative></gux-icon>
+        <gux-icon icon-name="fa/xmark-large-regular" decorative></gux-icon>
       </button>
     ) as JSX.Element;
   }

@@ -115,11 +115,11 @@ export class GuxRating {
     return [...Array(this.maxValue).keys()]
       .reduce((acc, cv) => {
         if (cv + 0.5 === this.value) {
-          return acc.concat('rating-partial');
+          return acc.concat('fa/star-sharp-half-stroke-regular');
         } else if (cv + 1 <= this.value) {
-          return acc.concat('rating-active');
+          return acc.concat('fa/star-solid');
         }
-        return acc.concat('rating');
+        return acc.concat('fa/star-regular');
       }, [] as string[])
       .map(
         iconName =>

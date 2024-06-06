@@ -10,8 +10,8 @@
           "label_color": "#1b2c48",
           "chevron_icon": {
             "closed": "#626e84",
-            "open": "#252E78",
-            "hover": "#3742A2"
+            "open": "#252e78",
+            "hover": "#3742a2"
           }
         }
       },
@@ -48,7 +48,7 @@
           "start_shortcut_color": "#1b2c48",
           "parent_icon_color": "#1b2c48"
         },
-        "background_color": "#EFF0FE"
+        "background_color": "#eff0fe"
       },
       "selected": {
         "foreground": {
@@ -57,7 +57,7 @@
           "start_shortcut_color": "#1b2c48",
           "parent_icon_color": "#1b2c48"
         },
-        "background_color": "#CED2FC"
+        "background_color": "#ced2fc"
       },
       "focus": {
         "border_radius": "4px"
@@ -86,7 +86,7 @@
       }
     },
     "focus_border": {
-      "color": "#7B88F7",
+      "color": "#7b88f7",
       "style": "solid",
       "width": "2px"
     },

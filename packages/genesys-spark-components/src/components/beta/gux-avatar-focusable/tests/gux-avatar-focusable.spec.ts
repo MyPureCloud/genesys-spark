@@ -19,6 +19,11 @@ describe('gux-avatar-focusable', () => {
         <a href="#">
           <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
         </a>
+      </gux-avatar-focusable-beta>`,
+      `<gux-avatar-focusable-beta>
+        <gux-avatar-change-photo-beta>
+          <gux-avatar-beta slot="avatar" name="Conor Darcy"></gux-avatar-beta>
+        </gux-avatar-change-photo-beta>
       </gux-avatar-focusable-beta>`
     ].forEach((html, index) => {
       it(`component type (${index + 1}) with valid markup`, async () => {
@@ -50,9 +55,14 @@ describe('gux-avatar-focusable', () => {
         <div>
           <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
         </div>
+      </gux-avatar-focusable-beta>`,
+      `<gux-avatar-focusable-beta>
+        <gux-avatar-change-photo-beta>
+          <gux-avatar-beta slot="avatar" name="Conor Darcy"></gux-avatar-beta>
+        </gux-avatar-change-photo-beta>
       </gux-avatar-focusable-beta>`
     ].forEach((html, index) => {
-      it(`should log warning for gux-avatar-focusable without anchor or button tags type (${index + 1})`, async () => {
+      it(`should log warning for gux-avatar-focusable without anchor, gux-change-photo-beta or button tags type (${index + 1})`, async () => {
         await newSpecPage({ components: [GuxAvatarFocusable], html });
         expect(logWarn).toHaveBeenCalled();
       });

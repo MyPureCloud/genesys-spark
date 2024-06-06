@@ -616,7 +616,7 @@ export class GuxTabAdvancedList {
             >
               <slot name="add-tab">
                 <gux-icon
-                  icon-name="add"
+                  icon-name="fa/plus-regular"
                   screenreader-text={
                     this.disableAddTabButton
                       ? this.i18n('disableNewTab')
@@ -670,9 +670,9 @@ export class GuxTabAdvancedList {
   private getChevronIconName(direction: string): string {
     switch (direction) {
       case 'scrollLeft':
-        return 'chevron-left';
+        return 'fa/chevron-left-regular';
       case 'scrollRight':
-        return 'chevron-right';
+        return 'fa/chevron-right-regular';
     }
   }
 }

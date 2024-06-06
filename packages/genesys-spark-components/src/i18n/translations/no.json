@@ -8,6 +8,9 @@
   "gux-avatar": {
     "notifications": "Varsler"
   },
+  "gux-avatar-change-photo": {
+    "changePhoto": "Endre profilbilde"
+  },
   "gux-badge": {
     "info": "merke med etikett: {label}, betoning: info",
     "info-bold": "merke med etikett: {label}, betoning: info fet",

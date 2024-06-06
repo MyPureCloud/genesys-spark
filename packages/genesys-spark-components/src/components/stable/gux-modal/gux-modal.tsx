@@ -102,15 +102,21 @@ export class GuxModal {
   }
 
   private hasFooterButtons(): boolean {
+    const startAlignButtonsSlot = this.root.querySelector(
+      '[slot="start-align-buttons"]'
+    );
+    const endAlignButtonsSlot = this.root.querySelector(
+      '[slot="end-align-buttons"]'
+    );
+
     return (
-      Boolean(this.root.querySelector('[slot="start-align-buttons"]')) ||
-      Boolean(this.root.querySelector('[slot="end-align-buttons"]'))
+      Boolean(startAlignButtonsSlot?.textContent?.trim()) ||
+      Boolean(endAlignButtonsSlot?.textContent?.trim())
     );
   }
 
   render(): JSX.Element {
     const hasModalTitleSlot = this.hasModalTitleSlot();
-    const hasFooterButtons = this.hasFooterButtons();
     const titleID: string = randomHTMLId();
 
     return (
@@ -126,17 +132,12 @@ export class GuxModal {
 
           {hasModalTitleSlot && this.renderTitle(titleID)}
 
-          <div
-            class={{
-              'gux-modal-content': true,
-              'gux-no-buttons': !hasFooterButtons
-            }}
-          >
+          <div class="gux-modal-content">
             <p>
               <slot name="content" />
             </p>
           </div>
-          {hasFooterButtons && this.renderButtonFooter()}
+          {this.renderButtonFooter()}
         </div>
       </dialog>
     ) as JSX.Element;
@@ -151,8 +152,14 @@ export class GuxModal {
   }
 
   private renderButtonFooter(): JSX.Element {
+    const hasFooterButtons = this.hasFooterButtons();
     return (
-      <div class="gux-button-footer">
+      <div
+        class={{
+          'gux-button-footer': true,
+          'gux-no-buttons': !hasFooterButtons
+        }}
+      >
         <div class="gux-start-align-buttons">
           <slot name="start-align-buttons" />
         </div>

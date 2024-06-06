@@ -24,6 +24,7 @@ $gux-form-field-number-step-button-size: 14px;
   align-self: auto;
   order: 0;
   width: 100%;
+  padding-bottom: 0;
   overflow: hidden;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   text-align: right;
@@ -76,10 +77,6 @@ $gux-form-field-number-step-button-size: 14px;
 
       &.gux-disabled {
         opacity: var(--gse-ui-formControl-input-disabled-opacity);
-      }
-
-      &.gux-clear {
-        padding-right: 0;
       }
 
       &:focus-within {

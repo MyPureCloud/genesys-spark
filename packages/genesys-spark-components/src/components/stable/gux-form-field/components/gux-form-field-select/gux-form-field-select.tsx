@@ -107,7 +107,10 @@ export class GuxFormFieldSelect {
               }}
             >
               <slot name="input" />
-              <gux-icon icon-name="chevron-small-down" decorative></gux-icon>
+              <gux-icon
+                icon-name="custom/chevron-down-small-regular"
+                decorative
+              ></gux-icon>
             </div>
           </div>
           <GuxFormFieldError show={this.hasError}>

@@ -178,7 +178,7 @@ export class GuxTooltipTitle {
           ref={el => (this.tooltipElement = el)}
           hidden={!this.showTooltip}
         >
-          {this.titleName}
+          <div slot="content">{this.titleName}</div>
         </gux-tooltip>
       ) as JSX.Element;
     }

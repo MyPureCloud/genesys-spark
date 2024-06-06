@@ -46,11 +46,12 @@
     gap: var(--gse-ui-toggle-gap);
     place-content: stretch flex-start;
     align-items: flex-start;
+    width: fit-content;
+    cursor: pointer;
 
     .gux-toggle-label {
       position: relative;
       display: inline-block;
-      cursor: default;
 
       .gux-toggle-label-text {
         display: grid;

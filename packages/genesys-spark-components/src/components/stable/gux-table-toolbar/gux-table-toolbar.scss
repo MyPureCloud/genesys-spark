@@ -1,3 +1,16 @@
+@mixin gux-toolbar-prevent-initial-flicker-workaround {
+  opacity: 0;
+  animation-name: show-toolbar;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+
+  @keyframes show-toolbar {
+    to {
+      opacity: 1;
+    }
+  }
+}
+
 :host {
   display: flex;
   flex-direction: row;
@@ -5,6 +18,8 @@
   justify-content: space-between;
   width: 100%;
   max-height: var(--gse-ui-dataTableItems-tableToolbar-height);
+
+  @include gux-toolbar-prevent-initial-flicker-workaround;
 
   .search-filter-container {
     min-width: 260px;

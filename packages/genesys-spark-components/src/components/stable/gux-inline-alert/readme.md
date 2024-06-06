@@ -14,9 +14,9 @@
 
 ## Slots
 
-| Slot | Description       |
-| ---- | ----------------- |
-|      | Slot for message. |
+| Slot        | Description           |
+| ----------- | --------------------- |
+| `"content"` | Slot for the message. |
 
 
 ## Dependencies

@@ -17,10 +17,9 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import {
   GuxItemsPerPage,
+  GuxPaginationLayout,
   GuxPaginationState
-} from '../../legacy/gux-pagination-legacy/gux-pagination.types';
-
-import { GuxPaginationLayout } from './gux-pagination.types';
+} from './gux-pagination.types';
 
 const minAdvancedSpacerWidth = 24;
 

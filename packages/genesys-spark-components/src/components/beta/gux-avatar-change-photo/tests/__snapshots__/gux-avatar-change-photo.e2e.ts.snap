@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-avatar #render should log warning for gux-avatar-change-photo without avatar 1`] = `"<gux-avatar-change-photo-beta hydrated=""> <gux-avatar-beta slot="avatar" name="Conor Darcy" hydrated=""></gux-avatar-beta> </gux-avatar-change-photo-beta>"`;

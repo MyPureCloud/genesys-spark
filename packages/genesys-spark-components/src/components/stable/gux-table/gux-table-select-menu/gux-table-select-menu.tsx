@@ -118,7 +118,7 @@ export class GuxTableSelectMenu {
           disabled={this.dropdownDisabled}
         >
           <gux-icon
-            icon-name="chevron-small-down"
+            icon-name="custom/chevron-down-small-regular"
             screenreader-text={this.i18n('tableOptions')}
           ></gux-icon>
         </button>,

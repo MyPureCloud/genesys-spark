@@ -78,6 +78,7 @@ export class GuxPopoverList {
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
+      case 'Tab':
       case 'Escape':
         this.dismiss();
         break;

@@ -57,8 +57,9 @@ gux-pagination-buttons-legacy {
         width: 60px;
 
         input {
-          width: inherit;
+          width: 60px;
           text-align: center;
+          background-color: transparent;
         }
       }
     }

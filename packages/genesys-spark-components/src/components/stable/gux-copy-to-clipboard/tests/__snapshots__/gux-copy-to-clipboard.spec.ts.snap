@@ -6,10 +6,10 @@ exports[`gux-copy-to-clipboard #render should render copy to clipboard 1`] = `
     <button class="gux-copy-to-clipboard-wrapper">
       <div class="gux-copy-content">
         <slot name="content"></slot>
-        <gux-icon decorative="" icon-name="copy"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/copy-regular"></gux-icon>
       </div>
       <gux-tooltip placement="bottom-end">
-        <div class="gux-tooltip-content">
+        <div slot="content">
           <span>
             Click to Copy
           </span>

@@ -8,6 +8,9 @@
   "gux-avatar": {
     "notifications": "Powiadomienia"
   },
+  "gux-avatar-change-photo": {
+    "changePhoto": "Zmień zdjęcie profilowe"
+  },
   "gux-badge": {
     "info": "odznaka z etykietą: {label}, akcent: info",
     "info-bold": "odznaka z etykietą: {label}, akcent: info. pogrub.",

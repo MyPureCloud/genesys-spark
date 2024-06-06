@@ -180,7 +180,10 @@ export class GuxButtonMulti {
               aria-expanded={this.isOpen.toString()}
             >
               <slot name="title" />
-              <gux-icon decorative icon-name="chevron-small-down"></gux-icon>
+              <gux-icon
+                decorative
+                icon-name="custom/chevron-down-small-regular"
+              ></gux-icon>
             </button>
           </gux-button-slot>
         </div>

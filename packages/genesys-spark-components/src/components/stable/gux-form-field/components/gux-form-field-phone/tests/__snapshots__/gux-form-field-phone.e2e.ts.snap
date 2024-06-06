@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-form-field-phone #render error should render component as expected 1`] = `"<gux-form-field-phone hydrated=""> <gux-phone-input-beta id="gux-form-field-input-i" aria-describedby="gux-form-field-error-i" hydrated=""></gux-phone-input-beta> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="error" id="gux-form-field-error-i">Custom Error Message</span> </gux-form-field-phone>"`;
+
+exports[`gux-form-field-phone #render error should render component as expected 2`] = `null`;
+
+exports[`gux-form-field-phone #render help should render component as expected 1`] = `"<gux-form-field-phone hydrated=""> <gux-phone-input-beta id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i" hydrated=""></gux-phone-input-beta> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-phone>"`;
+
+exports[`gux-form-field-phone #render help should render component as expected 2`] = `null`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (1) 1`] = `"<gux-form-field-phone lang="en" hydrated=""> <gux-phone-input-beta id="gux-form-field-input-i" hydrated=""></gux-phone-input-beta> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-phone>"`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (1) 2`] = `null`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (2) 1`] = `"<gux-form-field-phone lang="en" label-position="above" hydrated=""> <gux-phone-input-beta id="gux-form-field-input-i" hydrated=""></gux-phone-input-beta> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-phone>"`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (2) 2`] = `null`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (3) 1`] = `"<gux-form-field-phone lang="en" label-position="beside" hydrated=""> <gux-phone-input-beta id="gux-form-field-input-i" hydrated=""></gux-phone-input-beta> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-phone>"`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (3) 2`] = `null`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (4) 1`] = `"<gux-form-field-phone lang="en" label-position="screenreader" hydrated=""> <gux-phone-input-beta id="gux-form-field-input-i" hydrated=""></gux-phone-input-beta> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-phone>"`;
+
+exports[`gux-form-field-phone #render label-position should render component as expected (4) 2`] = `null`;

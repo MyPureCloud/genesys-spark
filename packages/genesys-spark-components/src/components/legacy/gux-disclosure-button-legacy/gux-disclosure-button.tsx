@@ -56,7 +56,7 @@ export class GuxDisclosureButtonLegacy {
    * Indicated image used by button
    */
   @State()
-  icon: string = 'arrow-solid-right';
+  icon: string = 'fa/caret-right-solid';
 
   /**
    * Return the state of the components panel on state change
@@ -81,9 +81,9 @@ export class GuxDisclosureButtonLegacy {
 
   updateIcon(): void {
     if (this.position === 'right') {
-      this.icon = this.isOpen ? 'arrow-solid-right' : 'arrow-solid-left';
+      this.icon = this.isOpen ? 'fa/caret-right-solid' : 'fa/caret-left-solid';
     } else {
-      this.icon = this.isOpen ? 'arrow-solid-left' : 'arrow-solid-right';
+      this.icon = this.isOpen ? 'fa/caret-left-solid' : 'fa/caret-right-solid';
     }
   }
 
