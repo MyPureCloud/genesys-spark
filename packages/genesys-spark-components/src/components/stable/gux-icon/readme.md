@@ -41,6 +41,7 @@
  - [gux-form-field-checkbox](../gux-form-field/components/gux-form-field-checkbox)
  - [gux-form-field-color](../gux-form-field/components/gux-form-field-color)
  - [gux-form-field-dropdown](../gux-form-field/components/gux-form-field-dropdown)
+ - [gux-form-field-file](../gux-form-field/components/gux-form-field-file)
  - [gux-form-field-input-clear-button](../gux-form-field/helper-components/gux-form-field-input-clear-button)
  - [gux-form-field-number](../gux-form-field/components/gux-form-field-number)
  - [gux-form-field-phone](../gux-form-field/components/gux-form-field-phone)
@@ -102,6 +103,7 @@ graph TD;
   gux-form-field-checkbox --> gux-icon
   gux-form-field-color --> gux-icon
   gux-form-field-dropdown --> gux-icon
+  gux-form-field-file --> gux-icon
   gux-form-field-input-clear-button --> gux-icon
   gux-form-field-number --> gux-icon
   gux-form-field-phone --> gux-icon
