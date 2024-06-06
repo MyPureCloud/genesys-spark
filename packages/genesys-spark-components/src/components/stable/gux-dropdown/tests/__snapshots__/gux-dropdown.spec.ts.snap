@@ -25,6 +25,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
       <mock:shadow-root>
         <div class="gux-option-wrapper">
           <gux-truncate>
+            <slot name="text"></slot>
             <slot></slot>
           </gux-truncate>
           <slot name="subtext"></slot>
@@ -39,6 +40,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
       <mock:shadow-root>
         <div class="gux-option-wrapper">
           <gux-truncate>
+            <slot name="text"></slot>
             <slot></slot>
           </gux-truncate>
           <slot name="subtext"></slot>
@@ -50,6 +52,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
       <mock:shadow-root>
         <div class="gux-option-wrapper">
           <gux-truncate>
+            <slot name="text"></slot>
             <slot></slot>
           </gux-truncate>
           <slot name="subtext"></slot>
@@ -61,6 +64,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
       <mock:shadow-root>
         <div class="gux-option-wrapper">
           <gux-truncate>
+            <slot name="text"></slot>
             <slot></slot>
           </gux-truncate>
           <slot name="subtext"></slot>
@@ -72,6 +76,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
       <mock:shadow-root>
         <div class="gux-option-wrapper">
           <gux-truncate>
+            <slot name="text"></slot>
             <slot></slot>
           </gux-truncate>
           <slot name="subtext"></slot>
@@ -83,6 +88,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
       <mock:shadow-root>
         <div class="gux-option-wrapper">
           <gux-truncate>
+            <slot name="text"></slot>
             <slot></slot>
           </gux-truncate>
           <slot name="subtext"></slot>
@@ -94,6 +100,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
       <mock:shadow-root>
         <div class="gux-option-wrapper">
           <gux-truncate>
+            <slot name="text"></slot>
             <slot></slot>
           </gux-truncate>
           <slot name="subtext"></slot>
@@ -105,6 +112,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
       <mock:shadow-root>
         <div class="gux-option-wrapper">
           <gux-truncate>
+            <slot name="text"></slot>
             <slot></slot>
           </gux-truncate>
           <slot name="subtext"></slot>
@@ -119,6 +127,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
       <mock:shadow-root>
         <div class="gux-option-wrapper">
           <gux-truncate>
+            <slot name="text"></slot>
             <slot></slot>
           </gux-truncate>
           <slot name="subtext"></slot>
@@ -169,6 +178,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -180,6 +190,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -191,6 +202,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -202,6 +214,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -226,6 +239,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -237,6 +251,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -248,6 +263,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -272,6 +288,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
@@ -283,6 +300,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
         <mock:shadow-root>
           <div class="gux-option-wrapper">
             <gux-truncate>
+              <slot name="text"></slot>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
