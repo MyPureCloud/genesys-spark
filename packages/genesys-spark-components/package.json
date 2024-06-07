@@ -134,6 +134,6 @@
   "collection": "dist/collection/collection-manifest.json",
   "prettier": "prettier-config-genesys-spark-components",
   "volta": {
-    "node": "18.16.1"
+    "node": "18.20.3"
   }
 }
