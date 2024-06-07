@@ -23,20 +23,6 @@
 | `"label"`       | Required slot for label tag                   |
 
 
-## Dependencies
-
-### Depends on
-
-- [gux-truncate](../../../stable/gux-truncate)
-
-### Graph
-```mermaid
-graph TD;
-  gux-selector-card-beta --> gux-truncate
-  gux-truncate --> gux-tooltip
-  style gux-selector-card-beta fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

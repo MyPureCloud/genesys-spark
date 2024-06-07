@@ -6,37 +6,31 @@ $gux-icon-radio-unchecked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' 
 $gux-icon-radio-checked-error: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8C5 6.31563 6.31563 5 8 5C9.65625 5 11 6.31563 11 8C11 9.65625 9.65625 11 8 11C6.31563 11 5 9.65625 5 8ZM16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40938 1.5 1.5 4.40938 1.5 8C1.5 11.5906 4.40938 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40938 11.5906 1.5 8 1.5Z' /%3E%3C/svg%3E";
 
 @mixin unchecked {
-  background: var(--gse-ui-radioButton-icon-default-unselectedForegroundColor);
   -webkit-mask-image: url($gux-icon-radio-unchecked);
   mask-image: url($gux-icon-radio-unchecked);
 }
 
 @mixin unchecked-hover {
-  background: var(--gse-ui-radioButton-icon-hover-foregroundColor);
   -webkit-mask-image: url($gux-icon-radio-unchecked);
   mask-image: url($gux-icon-radio-unchecked);
 }
 
 @mixin checked-hover {
-  background: var(--gse-ui-radioButton-icon-hover-foregroundColor);
   -webkit-mask-image: url($gux-icon-radio-checked-hover);
   mask-image: url($gux-icon-radio-checked-hover);
 }
 
 @mixin checked {
-  background: var(--gse-ui-radioButton-icon-default-selectedForegroundColor);
   -webkit-mask-image: url($gux-icon-radio-checked);
   mask-image: url($gux-icon-radio-checked);
 }
 
 @mixin unchecked-error {
-  background: var(--gse-ui-radioButton-icon-error-foregroundColor);
   -webkit-mask-image: url($gux-icon-radio-unchecked-error);
   mask-image: url($gux-icon-radio-unchecked-error);
 }
 
 @mixin checked-error {
-  background: var(--gse-ui-radioButton-icon-error-foregroundColor);
   -webkit-mask-image: url($gux-icon-radio-checked-error);
   mask-image: url($gux-icon-radio-checked-error);
 }
