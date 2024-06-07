@@ -1,4 +1,4 @@
-import { Component, h, JSX, Element, Prop, State, Host } from '@stencil/core';
+import { Component, h, JSX, Element, Prop, State } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
 import {
@@ -15,7 +15,7 @@ import { setSlotAriaDescribedby } from '../../../stable/gux-form-field/gux-form-
  * @slot icon - Required slot for icon
  * @slot input - Required slot for input tag
  * @slot label - Required slot for label tag
- * @slot content - Optional slot for additional text content
+ * @slot description - Optional slot for additional text description
  * @slot badge - Optional slot for badge
  */
 
@@ -31,7 +31,6 @@ export class GuxSelectorCard {
   @Element()
   private root: HTMLElement;
 
-  //TODO: COMUI-2784 Descriptive variant styling
   @Prop()
   variant: GuxSelectorCardVariant = 'simple';
 
@@ -57,7 +56,7 @@ export class GuxSelectorCard {
 
     preventBrowserValidationStyling(this.input);
 
-    setSlotAriaDescribedby(this.root, this.input, 'content');
+    setSlotAriaDescribedby(this.root, this.input, 'description');
 
     this.disabled = calculateInputDisabledState(this.input);
 
@@ -71,15 +70,19 @@ export class GuxSelectorCard {
     validateFormIds(this.root, this.input);
   }
 
-  private renderContent(): JSX.Element | null {
+  private renderDescription(): JSX.Element | null {
     if (this.variant === 'simple') {
       return (
         <span class="gux-screenreader">
-          <slot name="content" />
+          <slot name="description" />
         </span>
       ) as JSX.Element;
     } else {
-      return (<slot name="content" />) as JSX.Element; //TODO: COMUI-2784 Descriptive variant
+      return (
+        <gux-truncate class="gux-description" max-lines={3}>
+          <slot name="description" />
+        </gux-truncate>
+      ) as JSX.Element;
     }
   }
 
@@ -91,24 +94,26 @@ export class GuxSelectorCard {
 
   render(): JSX.Element {
     return (
-      <Host
+      <div
         class={{
+          'gux-selector-card': true,
           [`gux-${this.variant}`]: true,
           'gux-disabled': this.disabled
         }}
+        onClick={() => this.input.setAttribute('checked', 'true')}
       >
         <div class="gux-content">
           <div class="gux-icon">
             <slot name="icon" />
           </div>
-          <gux-truncate max-lines={2}>
+          <gux-truncate class="gux-label" max-lines={2}>
             <slot name="label" />
           </gux-truncate>
           <slot name="input" />
-          {this.renderContent()}
+          {this.renderDescription()}
           {this.renderBadge()}
         </div>
-      </Host>
+      </div>
     ) as JSX.Element;
   }
 }

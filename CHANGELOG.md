@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.58.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.57.0...v4.58.0) (2024-06-06)
+
+
+### Features
+
+* **cta_group:** adding button spacing token ([55de9d9](https://github.com/MyPureCloud/genesys-spark/commit/55de9d93eadba439274705adc07d356bd8edb86d))
+
+## [4.57.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.56.1...v4.57.0) (2024-06-05)
+
+
+### Features
+
+* **selector-card:** Add descriptive variant for radio selector card ([#468](https://github.com/MyPureCloud/genesys-spark/issues/468)) ([a852550](https://github.com/MyPureCloud/genesys-spark/commit/a852550ba5e60ae98eb29115e59fa436fd27fab5))
+
 ### [4.56.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.56.0...v4.56.1) (2024-05-31)
 
 

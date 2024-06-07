@@ -86,7 +86,10 @@ export class GuxTruncate {
         }}
       >
         <span
-          class="gux-truncate-slot-container"
+          class={{
+            'gux-overflow-hidden': this.needsTruncation(),
+            'gux-truncate-slot-container': true
+          }}
           style={{ webkitLineClamp: this.maxLines?.toString() }}
         >
           <slot />
