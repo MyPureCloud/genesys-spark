@@ -135,7 +135,27 @@ describe('gux-form-field-radio', () => {
         />
         <gux-badge slot="badge" bold>Badge</gux-badge>
         <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
-      </gux-selector-card-beta>`
+      </gux-selector-card-beta>`,
+      ` <gux-selector-card-beta variant="descriptive">
+      <label slot="label"
+        >A longer card label example. This can span up to 2 lines.
+      </label>
+      <input slot="input" type="checkbox" name="food-1[]" value="pasta" />
+      <span slot="description"
+        >A description for a sample selector card. Used in Spark WCL.
+        Descriptions can span up to 3 lines before being truncated.
+      </span>
+      <gux-badge slot="badge" bold>Badge</gux-badge>
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+    </gux-selector-card-beta>`,
+      `<gux-selector-card-beta variant="simple">
+      <label slot="label">Card label</label>
+      <input slot="input" type="checkbox" name="food-1[]" value="pizza" />
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+      <span slot="description"
+        >A label for a sample selector card. Used in Spark WCL.</span
+      >
+    </gux-selector-card-beta>`
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });
