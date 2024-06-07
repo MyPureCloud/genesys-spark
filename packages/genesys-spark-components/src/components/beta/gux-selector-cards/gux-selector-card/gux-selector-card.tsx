@@ -51,7 +51,7 @@ export class GuxSelectorCard {
   private setInput(): void {
     this.input = getSlottedInput(
       this.root,
-      'input[type="radio"][slot="input"]'
+      'input[type="radio"][slot="input"], input[type="checkbox"][slot="input"]'
     );
 
     preventBrowserValidationStyling(this.input);
