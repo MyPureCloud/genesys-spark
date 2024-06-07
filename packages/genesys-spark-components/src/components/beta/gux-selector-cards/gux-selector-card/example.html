@@ -1,5 +1,63 @@
 <h1>gux-selector-card-beta</h1>
 
+<h2>Simple - Checkbox</h2>
+
+<div class="row">
+  <div class="card-container">
+    <h4>Default</h4>
+    <gux-selector-card-beta variant="simple">
+      <label slot="label">Card label</label>
+      <input slot="input" type="checkbox" name="food-1[]" value="pizza" />
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+      <span slot="description"
+        >A label for a sample selector card. Used in Spark WCL.</span
+      >
+    </gux-selector-card-beta>
+  </div>
+
+  <div class="card-container">
+    <h4>Disabled - Unchecked</h4>
+    <gux-selector-card-beta variant="simple">
+      <label slot="label">Card Label</label>
+      <input
+        slot="input"
+        type="checkbox"
+        name="food-1[]"
+        value="sushi"
+        disabled
+      />
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+      <span slot="description" id="existing-id"
+        >A second label for a sample selector card. Used in Spark WCL.</span
+      >
+    </gux-selector-card-beta>
+  </div>
+
+  <div class="card-container">
+    <h4>Disabled - Checked</h4>
+    <gux-selector-card-beta variant="simple">
+      <label slot="label">Card Label</label>
+      <input
+        slot="input"
+        type="checkbox"
+        name="food-1[]"
+        value="hamburger"
+        disabled
+        checked
+      />
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+    </gux-selector-card-beta>
+  </div>
+
+  <div class="card-container">
+    <h4>Longer label</h4>
+    <gux-selector-card-beta variant="simple">
+      <label slot="label">A longer card label example</label>
+      <input slot="input" type="checkbox" name="food-1[]" value="pasta" />
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+    </gux-selector-card-beta>
+  </div>
+</div>
 <h2>Simple - Radio Button</h2>
 
 <div class="row">
@@ -56,8 +114,7 @@
       <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
     </gux-selector-card-beta>
   </div>
-</div>
-<div class="row">
+
   <div class="card-container">
     <h4>Longer label</h4>
     <gux-selector-card-beta variant="simple">
@@ -134,8 +191,6 @@
       <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
     </gux-selector-card-beta>
   </div>
-</div>
-<div class="row">
   <div class="card-container">
     <h4>Longer label</h4>
     <gux-selector-card-beta variant="descriptive">
@@ -149,6 +204,76 @@
         name="example4"
         value="card-label"
       />
+      <span slot="description"
+        >A description for a sample selector card. Used in Spark WCL.
+        Descriptions can span up to 3 lines before being truncated.
+      </span>
+      <gux-badge slot="badge" bold>Badge</gux-badge>
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+    </gux-selector-card-beta>
+  </div>
+</div>
+
+<h2>Descriptive - Checkbox</h2>
+<div class="row">
+  <div class="card-container">
+    <h4>Default</h4>
+    <gux-selector-card-beta variant="descriptive">
+      <label slot="label">Card label</label>
+      <input slot="input" type="checkbox" name="food-1[]" value="pizza" />
+      <span slot="description"
+        >A label for a sample selector card. Used in Spark WCL.</span
+      >
+      <gux-badge slot="badge" bold>Badge</gux-badge>
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+    </gux-selector-card-beta>
+  </div>
+
+  <div class="card-container">
+    <h4>Disabled - Unchecked</h4>
+    <gux-selector-card-beta variant="descriptive">
+      <label slot="label">Card Label</label>
+      <input
+        slot="input"
+        type="checkbox"
+        name="food-1[]"
+        value="sushi"
+        disabled
+      />
+      <span slot="description"
+        >A label for a sample selector card. Used in Spark WCL.</span
+      >
+      <gux-badge slot="badge" bold>Badge</gux-badge>ß
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+    </gux-selector-card-beta>
+  </div>
+
+  <div class="card-container">
+    <h4>Disabled - Checked</h4>
+    <gux-selector-card-beta variant="descriptive">
+      <label slot="label">Card Label</label>
+      <input
+        slot="input"
+        type="checkbox"
+        name="food-1[]"
+        value="hamburger"
+        disabled
+        checked
+      />
+      <span slot="description"
+        >A label for a sample selector card. Used in Spark WCL.</span
+      >
+      <gux-badge slot="badge" bold>Badge</gux-badge>
+      <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+    </gux-selector-card-beta>
+  </div>
+  <div class="card-container">
+    <h4>Longer label</h4>
+    <gux-selector-card-beta variant="descriptive">
+      <label slot="label"
+        >A longer card label example. This can span up to 2 lines.
+      </label>
+      <input slot="input" type="checkbox" name="food-1[]" value="pasta" />
       <span slot="description"
         >A description for a sample selector card. Used in Spark WCL.
         Descriptions can span up to 3 lines before being truncated.
