@@ -18,7 +18,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -130,7 +130,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -225,7 +225,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -331,7 +331,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -440,7 +440,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -546,7 +546,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -652,7 +652,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -758,7 +758,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -864,7 +864,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -970,7 +970,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1062,7 +1062,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1157,7 +1157,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1249,7 +1249,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1341,7 +1341,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1433,7 +1433,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1525,7 +1525,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
