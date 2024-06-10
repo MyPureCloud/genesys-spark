@@ -45,6 +45,7 @@
  - [gux-form-field-number](../gux-form-field/components/gux-form-field-number)
  - [gux-form-field-phone](../gux-form-field/components/gux-form-field-phone)
  - [gux-form-field-radio](../gux-form-field/components/gux-form-field-radio)
+ - [gux-form-field-radio-group-beta](../gux-form-field/components/gux-form-field-radio-group)
  - [gux-form-field-range](../gux-form-field/components/gux-form-field-range)
  - [gux-form-field-search](../gux-form-field/components/gux-form-field-search)
  - [gux-form-field-select](../gux-form-field/components/gux-form-field-select)
@@ -105,6 +106,7 @@ graph TD;
   gux-form-field-number --> gux-icon
   gux-form-field-phone --> gux-icon
   gux-form-field-radio --> gux-icon
+  gux-form-field-radio-group-beta --> gux-icon
   gux-form-field-range --> gux-icon
   gux-form-field-search --> gux-icon
   gux-form-field-select --> gux-icon
