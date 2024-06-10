@@ -62,3 +62,33 @@ export function getDateMonthAndYearString(date: Date, locale: string) {
     );
   }
 }
+
+const getDatePatternForPart = (part: Intl.DateTimeFormatPart) => {
+  switch (part.type) {
+    case 'day':
+      return 'd'.repeat(part.value.length);
+    case 'month':
+      return 'm'.repeat(part.value.length);
+    case 'year':
+      return 'y'.repeat(part.value.length);
+    case 'literal':
+      return part.value;
+    default:
+      console.log('Unsupported date part', part);
+      return '';
+  }
+};
+
+/**
+ * Get the date format pattern for the given locale.
+ * @example
+ *     getDatePlaceholderForLocale(date, 'en-AU');   // dd/mm/yyyy
+ *     getDatePlaceholderForLocale(date, 'en-US');   // m/d/yyyy
+ */
+export function getDatePlaceholderForLocale(date: Date, locale: string) {
+  // const locale = (new Intl.NumberFormat()).resolvedOptions().locale;
+  return new Intl.DateTimeFormat(locale)
+    .formatToParts(date)
+    .map(getDatePatternForPart)
+    .join('');
+}

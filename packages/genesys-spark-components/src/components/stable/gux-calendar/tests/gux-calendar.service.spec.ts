@@ -2,7 +2,8 @@ import {
   firstDateInMonth,
   getWeekdays,
   getOffsetMonthDate,
-  getDateMonthAndYearString
+  getDateMonthAndYearString,
+  getDatePlaceholderForLocale
 } from '../gux-calendar.service';
 
 describe('calendar.service', () => {
@@ -168,6 +169,49 @@ describe('calendar.service', () => {
       it(`should work as expected for ${locale}`, () => {
         expect(
           getDateMonthAndYearString(new Date(2022, 11, 31), locale)
+        ).toEqual(expectedOutput);
+      });
+    });
+  });
+
+  describe('getDatePlaceholderForLocale', () => {
+    [
+      // list of date formats by locale:
+      // https://help.talend.com/en-US/data-preparation-user-guide/7.3/list-of-date-and-date-time-formats
+      // https://docs.oracle.com/cd/E19455-01/806-0169/overview-7/index.html
+      //
+      // List of locale countries:
+      // https://saimana.com/list-of-country-locale-code/
+      { locale: 'ar', expectedOutput: 'dd/mm/yyyy' },
+      { locale: 'cs', expectedOutput: 'dd. mm. yyyy' },
+      { locale: 'da', expectedOutput: 'dd.mm.yyyy' },
+      { locale: 'de', expectedOutput: 'dd.mm.yyyy' },
+      { locale: 'en', expectedOutput: 'mm/dd/yyyy' },
+      { locale: 'es', expectedOutput: 'dd/mm/yyyy' },
+      { locale: 'es-es', expectedOutput: 'dd/mm/yyyy' },
+      { locale: 'fi', expectedOutput: 'dd.mm.yyyy' },
+      { locale: 'fr', expectedOutput: 'dd/mm/yyyy' },
+      { locale: 'fr-ca', expectedOutput: 'yyyy-mm-dd' },
+      { locale: 'he', expectedOutput: 'dd/mm/yyyy' },
+      { locale: 'it', expectedOutput: 'dd/mm/yyyy' },
+      { locale: 'ja', expectedOutput: 'yyyy/mm/dd' },
+      { locale: 'ko', expectedOutput: 'yyyy. mm. dd.' },
+      { locale: 'nl', expectedOutput: 'dd-mm-yyyy' },
+      { locale: 'no', expectedOutput: 'dd.mm.yyyy' },
+      { locale: 'pl', expectedOutput: 'dd.mm.yyyy' },
+      { locale: 'pt-br', expectedOutput: 'dd/mm/yyyy' },
+      { locale: 'pt-pt', expectedOutput: 'dd/mm/yyyy' },
+      { locale: 'ru', expectedOutput: 'dd.mm.yyyy' },
+      { locale: 'sv', expectedOutput: 'yyyy-mm-dd' },
+      { locale: 'th', expectedOutput: 'dd/mm/yyyy' },
+      { locale: 'tr', expectedOutput: 'dd.mm.yyyy' },
+      { locale: 'uk', expectedOutput: 'dd.mm.yyyy' },
+      { locale: 'zh-cn', expectedOutput: 'yyyy-mm-dd' },
+      { locale: 'zh-tw', expectedOutput: 'yyyy-mm-dd' }
+    ].forEach(({ locale, expectedOutput }) => {
+      it(`should work as expected for ${locale}`, () => {
+        expect(
+          getDatePlaceholderForLocale(new Date(2022, 11, 31), locale)
         ).toEqual(expectedOutput);
       });
     });
