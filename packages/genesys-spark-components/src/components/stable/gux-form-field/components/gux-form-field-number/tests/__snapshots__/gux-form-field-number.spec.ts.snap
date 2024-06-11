@@ -22,7 +22,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -65,7 +65,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -108,7 +108,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -150,7 +150,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -192,7 +192,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -234,7 +234,7 @@ exports[`gux-form-field-number #render help should render component as expected 
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -279,7 +279,7 @@ exports[`gux-form-field-number #render input attributes should render component 
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -321,7 +321,7 @@ exports[`gux-form-field-number #render input attributes should render component 
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -363,7 +363,7 @@ exports[`gux-form-field-number #render input attributes should render component 
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -405,7 +405,7 @@ exports[`gux-form-field-number #render label-position should render component as
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -447,7 +447,7 @@ exports[`gux-form-field-number #render label-position should render component as
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -489,7 +489,7 @@ exports[`gux-form-field-number #render label-position should render component as
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -531,7 +531,7 @@ exports[`gux-form-field-number #render label-position should render component as
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>

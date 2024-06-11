@@ -21,7 +21,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
       <slot></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -48,7 +48,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
       <slot></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -78,7 +78,7 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
       <slot></slot>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
