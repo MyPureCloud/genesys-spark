@@ -11,7 +11,7 @@ exports[`gux-form-field-radio-group-beta #render should render component as expe
     <div aria-disabled="false" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -37,7 +37,7 @@ exports[`gux-form-field-radio-group-beta #render should render component as expe
     <div aria-disabled="false" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -63,7 +63,7 @@ exports[`gux-form-field-radio-group-beta #render should render component as expe
     <div aria-disabled="false" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -89,7 +89,7 @@ exports[`gux-form-field-radio-group-beta #render should render component as expe
     <div aria-disabled="true" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>

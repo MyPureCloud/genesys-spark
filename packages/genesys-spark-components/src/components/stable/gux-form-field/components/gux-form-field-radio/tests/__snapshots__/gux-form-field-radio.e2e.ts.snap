@@ -11,7 +11,7 @@ exports[`gux-form-field-radio #render should render component as expected (1) 2`
     <div aria-disabled="false" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -37,7 +37,7 @@ exports[`gux-form-field-radio #render should render component as expected (2) 2`
     <div aria-disabled="true" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -63,7 +63,7 @@ exports[`gux-form-field-radio #render should render component as expected (3) 2`
     <div aria-disabled="false" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error gux-show">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -89,7 +89,7 @@ exports[`gux-form-field-radio #render should render component as expected (4) 2`
     <div aria-disabled="false" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -115,7 +115,7 @@ exports[`gux-form-field-radio #render should render component as expected (5) 2`
     <div aria-disabled="false" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error gux-show">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -141,7 +141,7 @@ exports[`gux-form-field-radio #render should render component as expected (6) 2`
     <div aria-disabled="true" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error gux-show">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -167,7 +167,7 @@ exports[`gux-form-field-radio #render should render component as expected (7) 2`
     <div aria-disabled="false" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
@@ -193,7 +193,7 @@ exports[`gux-form-field-radio #render should render component as expected (8) 2`
     <div aria-disabled="true" class="gux-label">
       <slot name="label"></slot>
       <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
         <div class="gux-message">
           <slot name="error"></slot>
         </div>
