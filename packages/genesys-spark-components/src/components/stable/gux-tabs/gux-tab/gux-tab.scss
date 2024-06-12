@@ -7,6 +7,7 @@ gux-tabs[orientation='vertical'] > gux-tab-list {
     .gux-tab {
       display: flex;
       justify-content: flex-end;
+      width: var(--gse-ui-tabs-set-vertical-width);
       height: var(--gse-ui-tabs-item-vertical-fixedHeight);
       padding: var(--gse-ui-tabs-item-vertical-padding);
       border-right: var(--gse-ui-tabs-item-indicator-vertical-width) solid
@@ -26,6 +27,7 @@ gux-tabs[orientation='vertical'] > gux-tab-list {
 gux-tabs:not([orientation='vertical']) > gux-tab-list {
   .gux-tab {
     box-sizing: border-box;
+    max-width: 160px;
     height: var(--gse-ui-tabs-item-horizontal-fixedHeight);
     padding: var(--gse-ui-tabs-item-horizontal-padding);
     border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
@@ -69,12 +71,10 @@ gux-tabs[alignment='full-width'] > gux-tab-list {
 
 gux-tab {
   display: flex;
-  max-width: 160px;
 
   .gux-tab {
     display: flex;
     align-items: center;
-    max-width: 160px;
     height: var(--gse-ui-tabs-item-height);
     font-family: var(--gse-ui-tabs-item-itemText-fontFamily);
     font-size: var(--gse-ui-tabs-item-itemText-fontSize);
@@ -102,7 +102,6 @@ gux-tab {
     }
 
     gux-tooltip-title {
-      max-width: 160px;
       white-space: nowrap;
     }
   }

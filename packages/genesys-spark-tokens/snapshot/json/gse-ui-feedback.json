@@ -19,7 +19,7 @@
     "action": {
       "background_color": "#ffffff",
       "foreground_color": "#1b2c48",
-      "icon_color": "#4856CB"
+      "icon_color": "#4856cb"
     },
     "error": {
       "background_color": "#ffffff",
@@ -154,8 +154,8 @@
   },
   "progress_and_loading": {
     "spinner": {
-      "foreground": "#4856CB",
-      "base": "#CED2FC",
+      "foreground": "#4856cb",
+      "base": "#ced2fc",
       "large": 48,
       "small": 16,
       "text": {

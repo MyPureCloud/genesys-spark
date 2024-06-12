@@ -19,7 +19,7 @@ const components = [
 ];
 const language = 'en';
 
-describe('gux-form-field-select', () => {
+describe('gux-form-field-dropdown', () => {
   describe('single select dropdown', () => {
     it('should build', async () => {
       const html = `

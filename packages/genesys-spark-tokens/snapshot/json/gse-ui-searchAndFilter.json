@@ -5,7 +5,7 @@
         "foreground_color": "#626e84"
       },
       "hover": {
-        "foreground_color": "#4856CB"
+        "foreground_color": "#4856cb"
       },
       "divider": {
         "border": {
@@ -30,12 +30,12 @@
     "width": "320px",
     "match": {
       "first_level": {
-        "background_color": "#B5E2E8",
+        "background_color": "#b5e2e8",
         "foreground_colour": "#1b2c48"
       },
       "subsequent_level": {
         "foreground_colour": "#1b2c48",
-        "background_color": "#DAF0F4"
+        "background_color": "#daf0f4"
       }
     }
   },

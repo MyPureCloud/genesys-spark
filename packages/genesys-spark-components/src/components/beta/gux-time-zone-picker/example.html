@@ -20,4 +20,41 @@
     local-default="America/Detroit"
   >
   </gux-time-zone-picker-beta>
+
+  <h3>Languages</h3>
+  <div id="languages-container"></div>
 </form>
+
+<style
+  onload="(function () {
+  const languagesContainer = document.getElementById('languages-container');
+  [
+    'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
+    'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
+    'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
+  ].forEach((lang) => {
+    const today = new Date().toLocaleDateString('fr-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
+    const html = window.toHTML([
+      '<div class=language lang=' + lang + '>',
+        '<h4>' + lang + '</h4>',
+        '<gux-time-zone-picker-beta workspace-default=Etc/GMT local-default=America/Detroit> </gux-time-zone-picker-beta>',
+      '</div>'
+    ].join(''));
+    languagesContainer.appendChild(html);
+  });
+})()"
+>
+  .language {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .language > h4 {
+    flex: 0 0 50px;
+  }
+
+  .language > gux-time-zone-picker-beta {
+    flex: 1 1 auto;
+  }
+</style>

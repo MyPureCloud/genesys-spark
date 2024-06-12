@@ -14,13 +14,13 @@
 
 ## Slots
 
-| Slot        | Description                               |
-| ----------- | ----------------------------------------- |
-| `"badge"`   | Optional slot for badge                   |
-| `"content"` | Optional slot for additional text content |
-| `"icon"`    | Required slot for icon                    |
-| `"input"`   | Required slot for input tag               |
-| `"label"`   | Required slot for label tag               |
+| Slot            | Description                                   |
+| --------------- | --------------------------------------------- |
+| `"badge"`       | Optional slot for badge                       |
+| `"description"` | Optional slot for additional text description |
+| `"icon"`        | Required slot for icon                        |
+| `"input"`       | Required slot for input tag                   |
+| `"label"`       | Required slot for label tag                   |
 
 
 ## Dependencies

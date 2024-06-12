@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-select multi select dropdown #render help multi select should render component as expected 1`] = `
+exports[`gux-form-field-dropdown multi select dropdown #render help multi select should render component as expected 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -18,7 +18,7 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -112,7 +112,7 @@ exports[`gux-form-field-select multi select dropdown #render help multi select s
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select multi select dropdown #render help should render component as expected 1`] = `
+exports[`gux-form-field-dropdown multi select dropdown #render help should render component as expected 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -130,7 +130,7 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -210,7 +210,7 @@ exports[`gux-form-field-select multi select dropdown #render help should render 
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select multi select dropdown #render input attributes should render component as expected (1) 1`] = `
+exports[`gux-form-field-dropdown multi select dropdown #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -225,7 +225,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -316,7 +316,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select multi select dropdown #render input attributes should render component as expected (2) 1`] = `
+exports[`gux-form-field-dropdown multi select dropdown #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -331,7 +331,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -422,7 +422,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select multi select dropdown #render input attributes should render component as expected (3) 1`] = `
+exports[`gux-form-field-dropdown multi select dropdown #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -440,7 +440,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -531,7 +531,7 @@ exports[`gux-form-field-select multi select dropdown #render input attributes sh
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select multi select dropdown #render label-position should render component as expected (1) 1`] = `
+exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -546,7 +546,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -637,7 +637,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select multi select dropdown #render label-position should render component as expected (2) 1`] = `
+exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-dropdown label-position="above">
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -652,7 +652,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -743,7 +743,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select multi select dropdown #render label-position should render component as expected (3) 1`] = `
+exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-dropdown label-position="beside">
   <mock:shadow-root>
     <fieldset class="gux-beside gux-form-field-fieldset-container">
@@ -758,7 +758,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -849,7 +849,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select multi select dropdown #render label-position should render component as expected (4) 1`] = `
+exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-dropdown label-position="screenreader">
   <mock:shadow-root>
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
@@ -864,7 +864,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -955,7 +955,7 @@ exports[`gux-form-field-select multi select dropdown #render label-position shou
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select single select dropdown #render input attributes should render component as expected (1) 1`] = `
+exports[`gux-form-field-dropdown single select dropdown #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -970,7 +970,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1047,7 +1047,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select single select dropdown #render input attributes should render component as expected (2) 1`] = `
+exports[`gux-form-field-dropdown single select dropdown #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -1062,7 +1062,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1139,7 +1139,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select single select dropdown #render input attributes should render component as expected (3) 1`] = `
+exports[`gux-form-field-dropdown single select dropdown #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -1157,7 +1157,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1234,7 +1234,7 @@ exports[`gux-form-field-select single select dropdown #render input attributes s
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select single select dropdown #render label-position should render component as expected (1) 1`] = `
+exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -1249,7 +1249,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1326,7 +1326,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select single select dropdown #render label-position should render component as expected (2) 1`] = `
+exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-dropdown label-position="above">
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -1341,7 +1341,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1418,7 +1418,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select single select dropdown #render label-position should render component as expected (3) 1`] = `
+exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-dropdown label-position="beside">
   <mock:shadow-root>
     <fieldset class="gux-beside gux-form-field-fieldset-container">
@@ -1433,7 +1433,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -1510,7 +1510,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
 </gux-form-field-dropdown>
 `;
 
-exports[`gux-form-field-select single select dropdown #render label-position should render component as expected (4) 1`] = `
+exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-dropdown label-position="screenreader">
   <mock:shadow-root>
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
@@ -1525,7 +1525,7 @@ exports[`gux-form-field-select single select dropdown #render label-position sho
           <slot></slot>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>

@@ -14,18 +14,6 @@ $gux-icon-radio-checked: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='h
   mask-image: url($gux-icon-radio-checked);
 }
 
-:host(.gux-disabled) {
-  cursor: not-allowed;
-
-  .gux-content {
-    pointer-events: none;
-    -webkit-user-select: none; /* Safari */
-    user-select: none;
-    background-color: var(--gse-ui-selectorCard-disabled-backgroundColor);
-    opacity: var(--gse-ui-selectorCard-disabled-opacity);
-  }
-}
-
 ::slotted(*) {
   cursor: pointer;
 }
@@ -118,74 +106,159 @@ $gux-icon-radio-checked: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='h
   @include checked;
 }
 
-.gux-content {
-  position: relative;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: var(--gse-ui-selectorCard-descriptive-text-gap);
-  align-items: center;
-  width: var(--gse-ui-selectorCard-simple-minWidth);
-  min-width: var(--gse-ui-selectorCard-simple-minWidth);
-  max-width: var(--gse-ui-selectorCard-simple-maxWidth);
-  height: fit-content;
-  min-height: var(--gse-ui-selectorCard-simple-minHeight);
-  max-height: var(--gse-ui-selectorCard-simple-maxHeight);
-  padding: var(--gse-ui-selectorCard-simple-padding);
-  text-align: center;
-  background-color: var(--gse-ui-selectorCard-default-backgroundColor);
-  border-radius: var(--gse-ui-selectorCard-simple-borderRadius);
+.gux-selector-card {
+  .gux-content {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gse-ui-selectorCard-descriptive-text-gap);
+    align-items: center;
+    width: var(--gse-ui-selectorCard-simple-minWidth);
+    min-width: var(--gse-ui-selectorCard-simple-minWidth);
+    max-width: var(--gse-ui-selectorCard-simple-maxWidth);
+    height: fit-content;
+    min-height: var(--gse-ui-selectorCard-simple-minHeight);
+    max-height: var(--gse-ui-selectorCard-simple-maxHeight);
+    padding: var(--gse-ui-selectorCard-simple-padding);
+    text-align: center;
+    background-color: var(--gse-ui-selectorCard-default-backgroundColor);
+    border-radius: var(--gse-ui-selectorCard-simple-borderRadius);
 
-  .gux-icon {
-    line-height: 0;
-  }
-
-  &:focus-within {
-    @include focus.gux-focus-ring;
-  }
-
-  &:hover {
-    cursor: pointer;
-    background-color: var(--gse-ui-selectorCard-hover-backgroundColor);
-
-    ::slotted(input[type='radio']:not(:checked):not(:disabled))::before {
-      background-color: var(
-        --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
-      );
-
-      @include unchecked;
+    gux-truncate {
+      z-index: calc(var(--gse-semantic-zIndex-showFocus));
     }
 
-    ::slotted(input[type='radio']:checked:not(:disabled))::before {
-      background-color: var(
-        --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
-      );
+    .gux-icon {
+      line-height: 0;
+    }
 
-      @include checked;
+    &:focus-within {
+      @include focus.gux-focus-ring;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--gse-ui-selectorCard-hover-backgroundColor);
+
+      ::slotted(input[type='radio']:not(:checked):not(:disabled))::before {
+        background-color: var(
+          --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
+        );
+
+        @include unchecked;
+      }
+
+      ::slotted(input[type='radio']:checked:not(:disabled))::before {
+        background-color: var(
+          --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
+        );
+
+        @include checked;
+      }
+    }
+
+    &:active {
+      background-color: var(--gse-ui-selectorCard-active-backgroundColor);
+
+      ::slotted(input[type='radio']:not(:checked):not(:disabled))::before {
+        background-color: var(
+          --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
+        );
+
+        @include unchecked;
+      }
+
+      ::slotted(input[type='radio']:checked:not(:disabled))::before {
+        background-color: var(
+          --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
+        );
+
+        @include checked;
+      }
+    }
+
+    .gux-screenreader {
+      @include mixins.gux-sr-only;
     }
   }
 
-  &:active {
-    background-color: var(--gse-ui-selectorCard-active-backgroundColor);
+  &.gux-descriptive {
+    .gux-content {
+      align-items: flex-start;
+      width: var(--gse-ui-selectorCard-descriptive-minWidth);
+      min-width: var(--gse-ui-selectorCard-descriptive-minWidth);
+      max-width: var(--gse-ui-selectorCard-descriptive-maxWidth);
+      min-height: var(--gse-ui-selectorCard-descriptive-minHeight);
+      max-height: var(--gse-ui-selectorCard-descriptive-maxHeight);
+      padding: var(--gse-ui-selectorCard-descriptive-padding);
+      text-align: start;
+      border-radius: var(--gse-ui-selectorCard-descriptive-borderRadius);
 
-    ::slotted(input[type='radio']:not(:checked):not(:disabled))::before {
-      background-color: var(
-        --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
-      );
+      .gux-description {
+        z-index: var(--gse-semantic-zIndex-showFocus);
+        margin-bottom: var(--gse-ui-selectorCard-descriptive-gap);
+        font-family: var(
+          --gse-ui-selectorCard-descriptive-description-fontFamily
+        );
+        font-size: var(--gse-ui-selectorCard-descriptive-description-fontSize);
+        font-weight: var(
+          --gse-ui-selectorCard-descriptive-description-fontWeight
+        );
+        line-height: var(
+          --gse-ui-selectorCard-descriptive-description-lineHeight
+        );
+      }
 
-      @include unchecked;
-    }
+      gux-truncate {
+        z-index: calc(
+          var(--gse-semantic-zIndex-showFocus) + 1
+        ); // Needs to be higher than description for tooltip
+      }
 
-    ::slotted(input[type='radio']:checked:not(:disabled))::before {
-      background-color: var(
-        --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
-      );
+      ::slotted(gux-badge) {
+        margin-top: var(-gse-ui-selectorCard-descriptive-badge-marginTop);
+      }
 
-      @include checked;
+      ::slotted(input[type='radio']) {
+        left: 0;
+        border-radius: var(--gse-ui-selectorCard-descriptive-borderRadius);
+
+        &::before {
+          inset-block-start: var(--gse-ui-selectorCard-descriptive-gap);
+          inset-inline-end: var(--gse-ui-selectorCard-descriptive-gap);
+          width: var(--gse-ui-icon-size-md);
+          height: var(--gse-ui-icon-size-md);
+        }
+      }
+
+      ::slotted(label) {
+        display: block;
+        margin-bottom: var(--gse-ui-selectorCard-descriptive-text-gap);
+        font-family: var(--gse-ui-selectorCard-descriptive-label-fontFamily);
+        font-size: var(--gse-ui-selectorCard-descriptive-label-fontSize);
+        font-weight: var(--gse-ui-selectorCard-descriptive-label-fontWeight);
+        line-height: var(--gse-ui-selectorCard-descriptive-label-lineHeight);
+      }
+
+      ::slotted(gux-icon) {
+        width: var(--gse-ui-icon-size-lg);
+        height: var(--gse-ui-icon-size-lg);
+        margin-bottom: var(--gse-ui-selectorCard-descriptive-gap);
+      }
     }
   }
 
-  .gux-screenreader {
-    @include mixins.gux-sr-only;
+  &.gux-disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+
+    .gux-content {
+      pointer-events: none;
+      -webkit-user-select: none; /* Safari */
+      user-select: none;
+      background-color: var(--gse-ui-selectorCard-disabled-backgroundColor);
+      opacity: var(--gse-ui-selectorCard-disabled-opacity);
+    }
   }
 }

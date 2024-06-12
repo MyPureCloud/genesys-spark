@@ -35,6 +35,9 @@ gux-tooltip {
 
 .gux-truncate-slot-container {
   display: block;
-  overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.gux-overflow-hidden {
+  overflow: hidden;
 }
