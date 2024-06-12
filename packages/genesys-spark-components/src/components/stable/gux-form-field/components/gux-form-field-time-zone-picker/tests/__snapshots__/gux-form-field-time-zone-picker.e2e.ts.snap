@@ -14,6 +14,9 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
 <fieldset class="gux-form-field-fieldset-container gux-undefined">
   <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
+    <gux-screen-reader-beta hydrated="">
+      Required
+    </gux-screen-reader-beta>
   </legend>
   <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
   <div class="gux-input-and-error-container">
