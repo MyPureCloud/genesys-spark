@@ -96,7 +96,58 @@ describe('gux-selector-cards', () => {
           <gux-badge slot="badge" bold>Badge</gux-badge>
           <gux-icon slot="icon" icon-name="fa/play-regular" decorative />
         </gux-selector-card-beta>
-      </gux-selector-cards-beta>`
+      </gux-selector-cards-beta>`,
+      `<gux-selector-cards-beta class="example1">
+  <gux-selector-card-beta variant="descriptive">
+    <label slot="label" for="1-D">First</label>
+    <input slot="input" id="1-D" type="checkbox" name="example4" value="1-D" />
+    <span slot="description"
+      >A label for a sample selector card. Used in Spark WCL.</span
+    >
+    <gux-badge slot="badge" bold>Badge</gux-badge>
+    <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+  </gux-selector-card-beta>
+
+  <gux-selector-card-beta variant="descriptive">
+    <label slot="label" for="2-D">Second</label>
+    <input slot="input" id="2-D" type="checkbox" name="example4" value="2-D" />
+    <span slot="description"
+      >A label for a sample selector card. Used in Spark WCL.</span
+    >
+    <gux-badge slot="badge" bold>Badge</gux-badge>
+    <gux-icon slot="icon" icon-name="fa/bell-regular" decorative />
+  </gux-selector-card-beta>
+
+  <gux-selector-card-beta variant="descriptive">
+    <label slot="label" for="3-D">Third</label>
+    <input slot="input" id="3-D" type="checkbox" name="example4" value="3-D" />
+    <span slot="description"
+      >A label for a sample selector card. Used in Spark WCL.</span
+    >
+    <gux-badge slot="badge" bold>Badge</gux-badge>
+    <gux-icon slot="icon" icon-name="fa/play-regular" decorative />
+  </gux-selector-card-beta>
+
+  <gux-selector-card-beta variant="descriptive">
+    <label slot="label" for="4-D">Fourth</label>
+    <input slot="input" id="4-D" type="checkbox" name="example4" disabled value="4-D" />
+    <span slot="description"
+      >A label for a sample selector card. Used in Spark WCL.</span
+    >
+    <gux-badge slot="badge" bold>Badge</gux-badge>
+    <gux-icon slot="icon" icon-name="fa/bell-regular" decorative />
+  </gux-selector-card-beta>
+
+  <gux-selector-card-beta variant="descriptive">
+    <label slot="label" for="5-D">Fifth</label>
+    <input slot="input" id="5-D" type="checkbox" name="example4" value="5-D" />
+    <span slot="description"
+      >A label for a sample selector card. Used in Spark WCL.</span
+    >
+    <gux-badge slot="badge" bold>Badge</gux-badge>
+    <gux-icon slot="icon" icon-name="fa/play-regular" decorative />
+  </gux-selector-card-beta>
+</gux-selector-cards-beta>`
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newNonrandomE2EPage({ html });
