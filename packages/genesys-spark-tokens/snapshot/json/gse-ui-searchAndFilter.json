@@ -10,7 +10,7 @@
       "divider": {
         "border": {
           "color": "#a3a7b0",
-          "width": 1,
+          "width": "1px",
           "style": "solid"
         },
         "foreground_color": "#a3a7b0"

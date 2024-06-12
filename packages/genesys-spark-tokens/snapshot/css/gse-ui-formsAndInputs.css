@@ -377,4 +377,5 @@
   --gse-ui-selectorCard-disabled-backgroundColor: #ffffff;
   --gse-ui-selectorCard-disabled-selectedIndicator-selected-foregroundColor: #4856cb;
   --gse-ui-selectorCard-disabled-selectedIndicator-unselected-foregroundColor: #767c8d;
+  --gse-ui-ctaGroup-gap: 8px;
 }

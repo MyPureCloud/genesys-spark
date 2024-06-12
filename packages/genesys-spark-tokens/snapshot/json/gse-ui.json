@@ -226,10 +226,22 @@
       "opacity": 0.5
     },
     "small": {
-      "height": "20px"
+      "height": "20px",
+      "label": {
+        "fontFamily": "Noto Sans",
+        "fontWeight": 600,
+        "fontSize": "12px",
+        "lineHeight": "16px"
+      }
     },
     "large": {
-      "height": "32px"
+      "height": "32px",
+      "label": {
+        "fontFamily": "Noto Sans",
+        "fontWeight": 600,
+        "fontSize": "14px",
+        "lineHeight": "16px"
+      }
     }
   },
   "links": {

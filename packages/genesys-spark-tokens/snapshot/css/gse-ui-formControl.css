@@ -67,6 +67,7 @@
   --gse-ui-formControl-label-indicator-optionalColor: #3e5374;
   --gse-ui-formControl-label-iconSize: 16px;
   --gse-ui-formControl-label-tooltipTrigger-optionalColor: #3e5374;
+  --gse-ui-formControl-label-tooltipTrigger-borderRadius: 2px;
   --gse-ui-formControl-group-gapItems: 8px;
   --gse-ui-formControl-helper-gap: 4px;
   --gse-ui-formControl-helper-helperText-fontFamily: Noto Sans;
