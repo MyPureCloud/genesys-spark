@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.59.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.58.0...v4.59.0) (2024-06-12)
+
+
+### Features
+
+* **form-field-radio-group:** add new form-field-radio-group component ([b2a7691](https://github.com/MyPureCloud/genesys-spark/commit/b2a7691128793345e30d69f479301729b3fb0b0a))
+
 ## [4.58.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.57.0...v4.58.0) (2024-06-06)
 
 
