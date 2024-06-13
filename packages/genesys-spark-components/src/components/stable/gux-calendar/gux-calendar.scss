@@ -118,6 +118,7 @@
   .gux-content {
     display: flex;
     align-items: flex-start;
+    height: var(--gse-ui-calendarMenu-height);
     padding: var(--gse-ui-calendarMenu-dateBody-padding);
     color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
     background-color: var(--gse-ui-calendarMenu-backgroundColor);
