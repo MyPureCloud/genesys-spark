@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.60.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.59.0...v4.60.0) (2024-06-13)
+
+
+### Features
+
+* **other:** forms ([c9de447](https://github.com/MyPureCloud/genesys-spark/commit/c9de447f4d35ea26c5ffc971785fa29f7a7f8260))
+
+
+### Bug Fixes
+
+* **visualization:** Add chart click handling to all chart types ([b574b55](https://github.com/MyPureCloud/genesys-spark/commit/b574b552c86d28912edbba5029a3fdef611c1627))
+* **visualization:** adds a container-width style to gux visualizations ([c8d675a](https://github.com/MyPureCloud/genesys-spark/commit/c8d675a87cae4e57283e500ffbc9a439a41e4bf7))
+
 ## [4.59.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.58.0...v4.59.0) (2024-06-12)
 
 
