@@ -7,9 +7,9 @@
 
 ## Slots
 
-| Slot        | Description                       |
-| ----------- | --------------------------------- |
-| `"heading"` | Slot for section heading element. |
+| Slot | Description                       |
+| ---- | --------------------------------- |
+|      | Slot for section heading element. |
 
 
 ----------------------------------------------

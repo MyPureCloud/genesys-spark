@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-footer #render should render the gux-form-footer component as expected (1) 1`] = `"<gux-form-footer placement="page-desktop" hydrated=""> <footer> <gux-button accent="primary" hydrated="">Primary</gux-button> <gux-button accent="secondary" hydrated="">Secondary</gux-button> </footer> </gux-form-footer>"`;
+exports[`gux-form-footer #render should render the gux-form-footer component as expected (1) 1`] = `"<gux-form-footer placement="page-desktop" class="gux-form-footer-page-desktop" hydrated=""> <footer> <gux-button accent="primary" hydrated="">Primary</gux-button> <gux-button accent="secondary" hydrated="">Secondary</gux-button> </footer> </gux-form-footer>"`;
 
-exports[`gux-form-footer #render should render the gux-form-footer component as expected (2) 1`] = `"<gux-form-footer placement="page-desktop" hydrated=""> <footer> <gux-button accent="primary" hydrated="">Primary</gux-button> </footer> </gux-form-footer>"`;
+exports[`gux-form-footer #render should render the gux-form-footer component as expected (2) 1`] = `"<gux-form-footer placement="page-desktop" class="gux-form-footer-page-desktop" hydrated=""> <footer> <gux-button accent="primary" hydrated="">Primary</gux-button> </footer> </gux-form-footer>"`;
