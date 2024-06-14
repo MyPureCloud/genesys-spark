@@ -1,0 +1,98 @@
+<h1>gux-form-field-file</h1>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>Label Position</legend>
+
+    <gux-form-field-file>
+      <label slot="label">Upload a profile picture</label>
+      <input
+        type="file"
+        id="avatar"
+        name="avatar"
+        accept="image/png, image/jpeg"
+        slot="input"
+      />
+    </gux-form-field-file>
+
+    <gux-form-field-file label-position="beside">
+      <label slot="label">Upload a profile picture</label>
+      <input
+        type="file"
+        id="avatar"
+        name="avatar"
+        accept="image/png, image/jpeg"
+        slot="input"
+      />
+    </gux-form-field-file>
+  </fieldset>
+
+  <fieldset>
+    <legend>Disabled</legend>
+    <gux-form-field-file>
+      <label slot="label">Upload a profile picture</label>
+      <input
+        type="file"
+        id="avatar"
+        name="avatar"
+        accept="image/png, image/jpeg"
+        slot="input"
+        disabled
+      />
+    </gux-form-field-file>
+  </fieldset>
+
+  <fieldset>
+    <legend>Required</legend>
+    <gux-form-field-file>
+      <label slot="label">Upload a profile picture</label>
+      <input
+        type="file"
+        id="avatar"
+        name="avatar"
+        accept="image/png, image/jpeg"
+        slot="input"
+        required
+      />
+    </gux-form-field-file>
+  </fieldset>
+
+  <fieldset>
+    <legend>Error</legend>
+    <gux-form-field-file>
+      <label slot="label">Upload a profile picture</label>
+      <input
+        type="file"
+        id="avatar"
+        name="avatar"
+        accept="image/png, image/jpeg"
+        slot="input"
+      />
+      <span slot="error">This is an error message</span>
+    </gux-form-field-file>
+  </fieldset>
+
+  <fieldset>
+    <legend>Help</legend>
+    <gux-form-field-file>
+      <label slot="label">Upload a profile picture</label>
+      <input
+        type="file"
+        id="avatar"
+        name="avatar"
+        accept="image/png, image/jpeg"
+        slot="input"
+      />
+      <span slot="help">This is a help message</span>
+    </gux-form-field-file>
+  </fieldset>
+</form>
+
+<style>
+  gux-form-field-file {
+    margin-bottom: 12px;
+  }
+
+  fieldset {
+    margin-bottom: 12px;
+  }
+</style>
