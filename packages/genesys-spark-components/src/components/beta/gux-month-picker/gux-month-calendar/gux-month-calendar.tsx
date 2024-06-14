@@ -6,8 +6,6 @@ import {
   Prop,
   State,
   Method,
-  EventEmitter,
-  Event,
   Listen,
   Watch
 } from '@stencil/core';
@@ -75,9 +73,6 @@ export class GuxMonthCalendar {
    */
   @State()
   expanded: boolean = true;
-
-  @Event()
-  closeCalendar: EventEmitter<void>;
 
   @Watch('value')
   onValueUpdate(newValue: GuxISOYearMonth) {
