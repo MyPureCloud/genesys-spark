@@ -14,11 +14,11 @@
 
 ## Slots
 
-| Slot            | Description                           |
-| --------------- | ------------------------------------- |
-| `"group-error"` | Optional slot for group-error message |
-| `"group-help"`  | Optional slot for group-help message  |
-| `"group-label"` | Required slot for label tag           |
+| Slot            | Description                     |
+| --------------- | ------------------------------- |
+| `"group-error"` | Optional slot for error message |
+| `"group-help"`  | Optional slot for help message  |
+| `"group-label"` | Required slot for label tag     |
 
 
 ## Dependencies

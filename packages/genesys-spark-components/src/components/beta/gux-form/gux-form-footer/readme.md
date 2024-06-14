@@ -14,9 +14,9 @@
 
 ## Slots
 
-| Slot | Description        |
-| ---- | ------------------ |
-|      | Slot for elements. |
+| Slot | Description              |
+| ---- | ------------------------ |
+|      | Slot for footer element. |
 
 
 ----------------------------------------------

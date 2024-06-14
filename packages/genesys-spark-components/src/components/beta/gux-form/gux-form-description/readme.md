@@ -7,9 +7,9 @@
 
 ## Slots
 
-| Slot            | Description           |
-| --------------- | --------------------- |
-| `"description"` | Slot for description. |
+| Slot | Description           |
+| ---- | --------------------- |
+|      | Slot for description. |
 
 
 ----------------------------------------------
