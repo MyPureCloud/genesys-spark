@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.60.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.60.0...v4.60.1) (2024-06-14)
+
+
+### Bug Fixes
+
+* **other:** calendar ([c532c81](https://github.com/MyPureCloud/genesys-spark/commit/c532c81a13f1cf57aafecc1f522d9cb225857a68))
+
 ## [4.60.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.59.0...v4.60.0) (2024-06-13)
 
 
