@@ -1,0 +1,577 @@
+{
+  "body": {
+    "sm": {
+      "regular": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.regular}",
+          "fontSize": "{font_size.xs}",
+          "lineHeight": "{line_height.xs}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors."
+      },
+      "link": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.xs}",
+          "lineHeight": "{line_height.xs}",
+          "textDecoration": "{text_decoration.underline}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors."
+      },
+      "bold": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.xs}",
+          "lineHeight": "{line_height.xs}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add great emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with high emphasis colors."
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.xs}",
+          "lineHeight": "{line_height.xs}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add moderate emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or high emphasis colors."
+      }
+    },
+    "md": {
+      "regular": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.regular}",
+          "fontSize": "{font_size.sm}",
+          "lineHeight": "{line_height.sm}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors."
+      },
+      "link": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.sm}",
+          "lineHeight": "{line_height.sm}",
+          "textDecoration": "{text_decoration.underline}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors."
+      },
+      "bold": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.sm}",
+          "lineHeight": "{line_height.sm}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add great emphasis in bodies of text, like paragraphs; we usually pair it with high emphasis colors."
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.sm}",
+          "lineHeight": "{line_height.sm}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add moderate emphasis in bodies of text, like paragraphs, we usually pair it with medium or high emphasis colors."
+      }
+    },
+    "lg": {
+      "regular": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.regular}",
+          "fontSize": "{font_size.md}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use in most of our high emphasis bodies of text like introductory paragraphs after a heading; we usually pair it with medium emphasis colors."
+      },
+      "link": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.md}",
+          "lineHeight": "{line_height.md}",
+          "textDecoration": "{text_decoration.underline}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors."
+      },
+      "bold": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.md}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add great emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with high emphasis colors."
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.md}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add moderate emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with medium or high emphasis colors."
+      }
+    }
+  },
+  "heading": {
+    "xs": {
+      "bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.sm}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for high emphasis headers nested on a 5th-6th level, h5's or h6's.\nWe usually pair it with high emphasis colors."
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.sm}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for moderate emphasis headers nested on a 5th-6th level, h5's or h6's.\nWe usually pair it with high emphasis colors."
+      }
+    },
+    "sm": {
+      "bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.md}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for high emphasis headers nested on a 4th level, h4's.\nWe usually pair it with high emphasis colors."
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.md}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for moderate emphasis headers nested on a 4th level, h4's.\nWe usually pair it with high emphasis colors."
+      }
+    },
+    "md": {
+      "bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.lg}",
+          "lineHeight": "{line_height.lg}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for high emphasis headers nested on a 3rd level, h3's.\nWe usually pair it with high emphasis colors."
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.lg}",
+          "lineHeight": "{line_height.lg}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for moderate emphasis headers nested on a 3rd level, h3's.\nWe usually pair it with high emphasis colors."
+      }
+    },
+    "lg": {
+      "bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.xl}",
+          "lineHeight": "{line_height.xl}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for high emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons.\nWe usually pair it with high emphasis colors."
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.xl}",
+          "lineHeight": "{line_height.xl}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for moderate emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons.\nWe usually pair it with high emphasis colors."
+      }
+    },
+    "xl": {
+      "bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.xxl}",
+          "lineHeight": "{line_height.2xl}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for high emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons.\nWe usually pair it with high emphasis colors."
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.xxl}",
+          "lineHeight": "{line_height.2xl}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for moderate emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons.\nWe usually pair it with high emphasis colors.We usually pair it with high emphasis colors."
+      }
+    },
+    "overline": {
+      "value": {
+        "fontFamily": "{font_family.headings}",
+        "fontWeight": "{font_weight.semi_bold}",
+        "fontSize": "{font_size.xs}",
+        "lineHeight": "{line_height.2xs}",
+        "textCase": "{text_case.uppercase}",
+        "letterSpacing": "{letter_spacing.1}"
+      },
+      "type": "typography",
+      "description": "We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.\n\nWe usually pair it with low emphasis colors."
+    }
+  },
+  "subheading": {
+    "bold": {
+      "value": {
+        "fontFamily": "{font_family.headings}",
+        "fontWeight": "{font_weight.bold}",
+        "fontSize": "{font_size.sm}",
+        "lineHeight": "{line_height.sm}"
+      },
+      "type": "typography",
+      "description": "We use this typography style for high emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header.\nWe usually pair it with medium emphasis colors."
+    },
+    "semi_bold": {
+      "value": {
+        "fontFamily": "{font_family.headings}",
+        "fontWeight": "{font_weight.semi_bold}",
+        "fontSize": "{font_size.sm}",
+        "lineHeight": "{line_height.sm}"
+      },
+      "type": "typography",
+      "description": "We use this typography style for moderate emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header.\nWe usually pair it with medium emphasis colors."
+    },
+    "regular": {
+      "value": {
+        "fontFamily": "{font_family.headings}",
+        "fontWeight": "{font_weight.regular}",
+        "fontSize": "{font_size.sm}",
+        "lineHeight": "{line_height.sm}"
+      },
+      "type": "typography",
+      "description": "We use this typography style for low emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header.\nWe usually pair it with medium emphasis colors."
+    }
+  },
+  "opacity": {
+    "disabled": {
+      "value": "{opacity.50}",
+      "type": "opacity",
+      "description": "The opacity we apply when a component is disabled."
+    }
+  },
+  "interactive": {
+    "medium": {
+      "height": {
+        "value": "{size.lg}",
+        "type": "sizing",
+        "description": "The recommended height of medium-sized interactive components, for example buttons."
+      },
+      "gap": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The recommended gap between the content inside of a medium-sized interactive component."
+      },
+      "padding": {
+        "horizontal": {
+          "value": "{spacing.2xs}",
+          "type": "spacing",
+          "description": "The recommended horizontal padding for medium-sized horizontal components."
+        }
+      }
+    },
+    "small": {
+      "height": {
+        "value": "{size.md}",
+        "type": "sizing",
+        "description": "The recommended size for small-sized interactive components. For example small buttons."
+      },
+      "gap": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The recommended gap between the content inside of a small-sized interactive component."
+      },
+      "padding": {
+        "horizontal": {
+          "value": "{spacing.4xs}",
+          "type": "spacing",
+          "description": "The recommended horizontal padding for small-sized horizontal components."
+        }
+      },
+      "border_radius": {
+        "value": "{border_radius.interactive.small}",
+        "type": "borderRadius",
+        "description": "The recommended small border-radius for interactive component. Eg Buttons"
+      }
+    },
+    "large": {
+      "border_radius": {
+        "value": "{border_radius.interactive.large}",
+        "type": "borderRadius",
+        "description": "The recommended large border-radius for interactive component. Eg Tags"
+      }
+    },
+    "edges": {
+      "border_width": {
+        "value": "{border_width.1}",
+        "type": "borderWidth",
+        "description": "The default border width for the edges of interactive components, like the ones on a tertiary(or outlined) button."
+      }
+    },
+    "divider": {
+      "border_width": {
+        "value": "{border_width.1}",
+        "type": "borderWidth",
+        "description": "The default border width for the dividers within interactive components, like the ones on an action button."
+      }
+    }
+  },
+  "focus": {
+    "full": {
+      "border_radius": {
+        "value": "{border_radius.focus.full}",
+        "type": "borderRadius",
+        "description": "The recommended full border-radius for focus. Eg avatar"
+      }
+    },
+    "xlarge": {
+      "border_radius": {
+        "value": "{border_radius.focus.xlarge}",
+        "type": "borderRadius",
+        "description": "The recommended xlarge border-radius for focus. Eg toggle"
+      }
+    },
+    "large": {
+      "border_radius": {
+        "value": "{border_radius.focus.large}",
+        "type": "borderRadius",
+        "description": "The recommended large border-radius for focus. Eg segmented control"
+      }
+    },
+    "medium": {
+      "border_radius": {
+        "value": "{border_radius.focus.medium}",
+        "type": "borderRadius",
+        "description": "The recommended medium border-radius for focus. Eg check box"
+      }
+    },
+    "small": {
+      "border_radius": {
+        "value": "{border_radius.focus.small}",
+        "type": "borderRadius",
+        "description": "The recommended small border-radius for focus. Eg input control"
+      },
+      "border_width": {
+        "value": "{border_width.1}",
+        "type": "borderWidth",
+        "description": "The recommended width of the focus outline fo small-sized components, like the stars on a rating component."
+      }
+    },
+    "xsmall": {
+      "border_radius": {
+        "value": "{border_radius.focus.xsmall}",
+        "type": "borderRadius",
+        "description": "The recommended xsmall border-radius for focus. Eg icons"
+      }
+    }
+  },
+  "container": {
+    "large": {
+      "border_radius": {
+        "value": "{border_radius.interactive.large}",
+        "type": "borderRadius",
+        "description": "The recommended large border-radius for large containers, like modals."
+      },
+      "padding": {
+        "value": "{spacing.lg}",
+        "type": "spacing",
+        "description": "We uses this spacing as the default padding for large containers like modals."
+      },
+      "gap": {
+        "value": "{spacing.xs}",
+        "type": "spacing",
+        "description": "The recommended gap between items inside a large container, like a modal."
+      }
+    },
+    "small": {
+      "border_radius": {
+        "value": "{border_radius.interactive.small}",
+        "type": "borderRadius",
+        "description": "The recommended small border-radius for containers. Eg in-line alert"
+      },
+      "gap": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
+      },
+      "horizontal_padding": {
+        "value": "{spacing.2xs}",
+        "type": "spacing",
+        "description": "The default padding of a small-sized container, like a tooltip."
+      },
+      "vertical_padding": {
+        "value": "{spacing.2xs}",
+        "type": "spacing",
+        "description": "The default vertical padding of a small-sized container, like a tooltip."
+      },
+      "min_height": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "The minimum height recommended for a small container, like a tag."
+      },
+      "height": {
+        "value": "{size.lg}",
+        "type": "sizing",
+        "description": "The average recommended height for a small container, like a tag."
+      }
+    },
+    "medium": {
+      "border_radius": {
+        "value": "{border_radius.container.medium}",
+        "type": "borderRadius",
+        "description": "The recommended medium border-radius for containers. Eg cards"
+      },
+      "horizontal_padding": {
+        "value": "{spacing.md}",
+        "type": "spacing",
+        "description": "The default horizontal padding of a medium-sized container, like a card."
+      },
+      "vertical_padding": {
+        "value": "{spacing.md}",
+        "type": "spacing",
+        "description": "The default vertical padding of a medium-sized container, like a tooltip."
+      },
+      "min_height": {
+        "value": "{size.lg}",
+        "type": "sizing",
+        "description": "The minimmum recommended height for a medium container, like a tag."
+      }
+    },
+    "edges": {
+      "border_width": {
+        "value": "{border_width.1}",
+        "type": "borderWidth",
+        "description": "The recommended border width for the edges of containers, like cards or menus or popovers."
+      }
+    },
+    "divider": {
+      "border_width": {
+        "value": "{border_width.1}",
+        "type": "borderWidth",
+        "description": "The recommended border width for the dividers within containers, like cards or menus or popovers."
+      }
+    }
+  },
+  "form_control": {
+    "text_input": {
+      "large": {
+        "border_radius": {
+          "value": "{border_radius.form_control.input.large}",
+          "type": "borderRadius",
+          "description": "The recommended large border-radius for inputs"
+        }
+      },
+      "small": {
+        "border_radius": {
+          "value": "{border_radius.form_control.input.small}",
+          "type": "borderRadius",
+          "description": "The recommended small border-radius for inputs"
+        }
+      },
+      "medium": {
+        "border_radius": {
+          "value": "{border_radius.form_control.input.medium}",
+          "type": "borderRadius",
+          "description": "The recommended medium border-radius for inputs"
+        }
+      },
+      "padding": {
+        "value": "{spacing.3xs} {spacing.2xs}",
+        "type": "spacing",
+        "description": "The default padding for inputs inside a form control."
+      },
+      "gap": {
+        "value": "{spacing.2xs}",
+        "type": "spacing",
+        "description": "The default gap for between elements inside an input. For example, the space between a placeholder and an icon inside and input."
+      },
+      "edges": {
+        "border_width": {
+          "value": "{border_width.1}",
+          "type": "borderWidth",
+          "description": "The recommended border width for the edges of text-based inputs, like textfields or text areas."
+        }
+      },
+      "divider": {
+        "border_width": {
+          "value": "{border_width.1}",
+          "type": "borderWidth",
+          "description": "The recommended border width for the dividers within text-based inputs, like the textfields or textareas."
+        }
+      }
+    },
+    "form_field": {
+      "gap": {
+        "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "The default gap for between elements inside a form field, like textfields, text areas."
+      }
+    }
+  },
+  "contanier": {
+    "large": {
+      "box_shadow": {
+        "value": "{elevation.high}",
+        "type": "boxShadow",
+        "description": "The recommended box shadow for large containers, like modals or popovers."
+      }
+    },
+    "medium": {
+      "box_shadow": {
+        "value": "{elevation.medium}",
+        "type": "boxShadow",
+        "description": "The shadow we used for medium-sized components like elevated cards."
+      }
+    },
+    "small": {
+      "box_shadow": {
+        "value": "{elevation.low}",
+        "type": "boxShadow",
+        "description": "The shadow we used for small-sized components like tooltips."
+      }
+    }
+  }
+}

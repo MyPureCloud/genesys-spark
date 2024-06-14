@@ -1,17 +1,21 @@
 {
-    "tokenSetOrder": [
-        "global_deprecated",
-        "ui_deprecated",
-        "core",
-        "semantic",
-        "ui",
-        "actions",
-        "form_control",
-        "forms_and_inputs",
-        "search_and_filter",
-        "data_display",
-        "layout & container",
-        "navigation",
-        "feedback"
-    ]
+  "tokenSetOrder": [
+    "core_deprecated",
+    "semantic_deprecated",
+    "core",
+    "semantic/theme/flare",
+    "semantic/theme/legacy",
+    "semantic/mode/light",
+    "semantic/mode/dark",
+    "semantic/global",
+    "ui/unordered",
+    "ui/actions",
+    "ui/form_control",
+    "ui/forms_and_inputs",
+    "ui/search_and_filter",
+    "ui/data_display",
+    "ui/layout_and_container",
+    "ui/navigation",
+    "ui/feedback"
+  ]
 }
