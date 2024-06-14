@@ -1,0 +1,308 @@
+{
+  "color": {
+    "info": {
+      "lightest": {
+        "value": "#e2dff8",
+        "type": "color"
+      },
+      "lighter": {
+        "value": "#c5bef1",
+        "type": "color"
+      },
+      "main": {
+        "value": "#6e5ddb",
+        "type": "color"
+      },
+      "darker": {
+        "value": "#443989",
+        "type": "color"
+      },
+      "darkest": {
+        "value": "#2E275F",
+        "type": "color"
+      }
+    },
+    "warning": {
+      "lightest": {
+        "value": "#fef4d8",
+        "type": "color"
+      },
+      "lighter": {
+        "value": "#fce9b2",
+        "type": "color"
+      },
+      "main": {
+        "value": "#f8c73e",
+        "type": "color"
+      },
+      "darker": {
+        "value": "#6c5619",
+        "type": "color"
+      },
+      "darkest": {
+        "value": "#3d300c",
+        "type": "color"
+      }
+    },
+    "error": {
+      "lightest": {
+        "value": "#f9d3da",
+        "type": "color"
+      },
+      "lighter": {
+        "value": "#f3a7b5",
+        "type": "color"
+      },
+      "main": {
+        "value": "#e22245",
+        "type": "color"
+      },
+      "darker": {
+        "value": "#881429",
+        "type": "color"
+      },
+      "darkest": {
+        "value": "#440a15",
+        "type": "color"
+      }
+    },
+    "success": {
+      "lightest": {
+        "value": "#cef0e6",
+        "type": "color"
+      },
+      "lighter": {
+        "value": "#9de1cd",
+        "type": "color"
+      },
+      "main": {
+        "value": "#09b581",
+        "type": "color"
+      },
+      "darker": {
+        "value": "#056d4d",
+        "type": "color"
+      },
+      "darkest": {
+        "value": "#033627",
+        "type": "color"
+      }
+    },
+    "primary": {
+      "lightest": {
+        "value": "{color.blueberry.200}",
+        "type": "color"
+      },
+      "lighter": {
+        "value": "{color.blueberry.300}",
+        "type": "color"
+      },
+      "main": {
+        "value": "{color.blueberry.600}",
+        "type": "color"
+      },
+      "darker": {
+        "value": "{color.blueberry.700}",
+        "type": "color"
+      },
+      "darkest": {
+        "value": "{color.blueberry.800}",
+        "type": "color"
+      }
+    },
+    "focus": {
+      "value": "{color.blueberry.400}",
+      "type": "color"
+    }
+  },
+  "focus_ring": {
+    "width": {
+      "value": "3px",
+      "type": "borderWidth"
+    },
+    "offset": {
+      "value": "1px",
+      "type": "spacing"
+    },
+    "corner_radius": {
+      "value": "{border_radius.sm}",
+      "type": "borderRadius"
+    },
+    "default": {
+      "border": {
+        "value": {
+          "color": "{color.focus}",
+          "width": "{focus_ring.width}",
+          "style": "solid"
+        },
+        "type": "border"
+      }
+    },
+    "small": {
+      "border": {
+        "value": {
+          "color": "{color.focus}",
+          "width": "2px",
+          "style": "solid"
+        },
+        "type": "border"
+      }
+    }
+  },
+  "z_index": {
+    "base": {
+      "value": "{z_index.0}",
+      "type": "zindex"
+    },
+    "show-focus": {
+      "value": "{z_index.1}",
+      "type": "zindex"
+    },
+    "sticky": {
+      "value": "{z_index.1}",
+      "type": "zindex"
+    },
+    "popup": {
+      "value": "{z_index.100}",
+      "type": "zindex"
+    },
+    "popover": {
+      "value": "{z_index.200}",
+      "type": "zindex"
+    },
+    "tooltip": {
+      "value": "{z_index.200}",
+      "type": "zindex"
+    },
+    "panel": {
+      "value": "{z_index.300}",
+      "type": "zindex"
+    },
+    "navbar": {
+      "value": "{z_index.400}",
+      "type": "zindex"
+    },
+    "sidebar": {
+      "value": "{z_index.400}",
+      "type": "zindex"
+    },
+    "toast": {
+      "value": "{z_index.500}",
+      "type": "zindex"
+    },
+    "modal": {
+      "value": "{z_index.600}",
+      "type": "zindex"
+    }
+  },
+  "forms": {
+    "max_width": {
+      "value": "600px",
+      "type": "sizing",
+      "description": "The recommended max width fo a form."
+    },
+    "margin": {
+      "value": "{spacing.md}",
+      "type": "spacing",
+      "description": "The recommended side margins of a form."
+    },
+    "form_body": {
+      "padding_bottom": {
+        "value": "{spacing.lg}",
+        "type": "spacing",
+        "description": "The minimum spacing a form body should have between itself and the form footer."
+      }
+    },
+    "form_control": {
+      "grouped_inputs": {
+        "gap": {
+          "value": "{spacing.3xs}",
+          "type": "spacing",
+          "description": "The recommended spacing between gruoped inputs like checkboxes or radio inputs."
+        }
+      },
+      "gap": {
+        "value": "{spacing.xs}",
+        "type": "spacing",
+        "description": "The recommended spacing between 1 form control and the other, either vertically or horizontally."
+      },
+      "label": {
+        "margin_bottom": {
+          "value": "{spacing.4xs}",
+          "type": "spacing",
+          "description": "The recommended spacing between a label and its input."
+        }
+      },
+      "helper_text": {
+        "margin_top": {
+          "value": "{spacing.4xs}",
+          "type": "spacing",
+          "description": "The recommended spacing between an input and its helper text."
+        }
+      }
+    },
+    "form_header": {
+      "padding_bottom": {
+        "value": "{spacing.sm}",
+        "type": "spacing",
+        "description": "This is the bottom padding of the form header, applied after the paragraph if it has one."
+      },
+      "gap": {
+        "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "This spacing is used for the gap between the form header and its paragraph if it has one."
+      },
+      "foreground_color": {
+        "value": "{color.cornflower.900}",
+        "type": "color",
+        "description": "This is the recommended color for the content of the form header."
+      },
+      "text": {
+        "value": "{typography.heading.lg_semi_bold}",
+        "type": "typography",
+        "description": "This is the recommended typography style for the form header."
+      }
+    },
+    "fieldset": {
+      "padding_bottom": {
+        "value": "{spacing.2xl}",
+        "type": "spacing",
+        "description": "The bottom padding of a fieldset"
+      },
+      "header": {
+        "padding_bottom": {
+          "value": "{spacing.sm}",
+          "type": "spacing",
+          "description": "This is the recommended bottom padding of the fielset header, applied after the paragraph if it has one."
+        },
+        "gap": {
+          "value": "{spacing.4xs}",
+          "type": "spacing",
+          "description": "This is the recommended spacing for the gap between the fieldset header and its paragraph if it has one."
+        },
+        "foreground_color": {
+          "value": "{color.cornflower.900}",
+          "type": "color",
+          "description": "This is the recommended color for the content of the fieldset header."
+        },
+        "text": {
+          "value": "{typography.heading.md_bold}",
+          "type": "typography",
+          "description": "This is the recommended typography style for the fieldset header."
+        }
+      }
+    },
+    "paragraph": {
+      "foreground_color": {
+        "value": "{color.cornflower.700}",
+        "type": "color",
+        "description": "The recommended color of the content of a form paragraph."
+      },
+      "text": {
+        "value": "{typography.body.sm_regular}",
+        "type": "typography",
+        "description": "This is the recommended style of the content of a form paragraph."
+      }
+    }
+  }
+}

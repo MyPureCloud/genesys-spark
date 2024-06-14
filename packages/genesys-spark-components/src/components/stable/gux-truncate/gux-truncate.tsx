@@ -70,7 +70,7 @@ export class GuxTruncate {
     if (this.needsTruncation()) {
       return (
         <gux-tooltip aria-hidden="true" ref={el => (this.tooltipElement = el)}>
-          {this.getTooltipContent()}
+          <div slot="content">{this.getTooltipContent()}</div>
         </gux-tooltip>
       ) as JSX.Element;
     }
@@ -86,7 +86,10 @@ export class GuxTruncate {
         }}
       >
         <span
-          class="gux-truncate-slot-container"
+          class={{
+            'gux-overflow-hidden': this.needsTruncation(),
+            'gux-truncate-slot-container': true
+          }}
           style={{ webkitLineClamp: this.maxLines?.toString() }}
         >
           <slot />

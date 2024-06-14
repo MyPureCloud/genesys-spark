@@ -15,7 +15,7 @@ exports[`gux-form-field-select #render help should render component as expected 
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -44,7 +44,7 @@ exports[`gux-form-field-select #render input attributes should render component 
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -73,7 +73,7 @@ exports[`gux-form-field-select #render input attributes should render component 
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -102,7 +102,7 @@ exports[`gux-form-field-select #render input attributes should render component 
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -131,7 +131,7 @@ exports[`gux-form-field-select #render label-position should render component as
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -160,7 +160,7 @@ exports[`gux-form-field-select #render label-position should render component as
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -189,7 +189,7 @@ exports[`gux-form-field-select #render label-position should render component as
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>
@@ -218,7 +218,7 @@ exports[`gux-form-field-select #render label-position should render component as
       </div>
     </div>
     <div class="gux-form-field-error">
-      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-regular" size="inherit"></gux-icon>
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
       </div>

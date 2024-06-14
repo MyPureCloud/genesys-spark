@@ -1,4 +1,5 @@
 import { cleanOldOutputFolder } from './clean-old-output-folder.mjs';
+import { createThemes } from './create-themes.mjs';
 import { formatOutputFolder } from './format-output-folder.mjs';
 import { getAllTokenStudioFiles } from './get-all-token-studio-files.mjs';
 import { getRootPath } from './get-root-path.mjs';
@@ -9,6 +10,7 @@ import { transformToStyleDictionaryReadableTokens } from './transform-to-style-d
 
 export {
   cleanOldOutputFolder,
+  createThemes,
   formatOutputFolder,
   getAllTokenStudioFiles,
   getRootPath,

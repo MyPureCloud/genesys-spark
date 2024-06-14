@@ -32,8 +32,8 @@
         "horizontal": {
           "height": "2px"
         },
-        "hover_color": "#4856CB",
-        "active_color": "#3742A2"
+        "hover_color": "#4856cb",
+        "active_color": "#3742a2"
       },
       "icon": {
         "icon_color": "#1b2c48",
@@ -71,7 +71,7 @@
     },
     "focus_ring": {
       "border": {
-        "color": "#7B88F7",
+        "color": "#7b88f7",
         "width": "3px",
         "style": "solid"
       },
@@ -88,7 +88,7 @@
       "focus": {
         "border_radius": "8px",
         "border": {
-          "color": "#7B88F7",
+          "color": "#7b88f7",
           "width": "3px",
           "style": "solid"
         },
@@ -120,8 +120,8 @@
         "height": "9px"
       },
       "indicator": {
-        "hover_color": "#4856CB",
-        "active_color": "#3742A2",
+        "hover_color": "#4856cb",
+        "active_color": "#3742a2",
         "height": "2px"
       },
       "icon": {
@@ -133,7 +133,7 @@
         "height": "45px",
         "width": "32px",
         "default_color": "#626e84",
-        "active_color": "#252E78",
+        "active_color": "#252e78",
         "focus": {
           "height": "53px",
           "width": "40px"
@@ -189,7 +189,7 @@
     },
     "focus": {
       "border": {
-        "color": "#7B88F7",
+        "color": "#7b88f7",
         "width": "3px",
         "style": "solid"
       }
@@ -203,11 +203,11 @@
         "foreground_color": "#ffffff"
       },
       "hover": {
-        "background_color": "#252E78",
+        "background_color": "#252e78",
         "foreground_color": "#ffffff"
       },
       "selected": {
-        "background_color": "#4856CB",
+        "background_color": "#4856cb",
         "foreground_color": "#ffffff"
       },
       "disabled": {
@@ -219,20 +219,20 @@
       "border_radius": "4px",
       "disable_opacity": 0.5,
       "selected_panel": {
-        "background_color": "#3742A2",
+        "background_color": "#3742a2",
         "foreground_color": "#ffffff"
       },
       "return": {
         "default": {
-          "background_color": "#1C2463",
+          "background_color": "#1c2463",
           "foreground_color": "#ffffff"
         },
         "hover": {
-          "background_color": "#141A4F",
+          "background_color": "#141a4f",
           "foreground_color": "#ffffff"
         },
         "selected": {
-          "background_color": "#4856CB",
+          "background_color": "#4856cb",
           "foreground_color": "#ffffff"
         }
       },
@@ -297,15 +297,15 @@
         "background_color": "#ffffff",
         "stroke": "#c6ceec"
       },
-      "logo": "#FF4F1F",
+      "logo": "#ff4f1f",
       "menu_button": {
         "closed": {
           "default": {
-            "foreground_color": "#4856CB"
+            "foreground_color": "#4856cb"
           },
           "hover": {
-            "background_color": "#3742A2",
-            "foreground_color_stroke": "#4856CB",
+            "background_color": "#3742a2",
+            "foreground_color_stroke": "#4856cb",
             "foreground_color": "#ffffff"
           }
         },
@@ -314,7 +314,7 @@
             "foreground_color_stroke": "#ffffff"
           },
           "hover": {
-            "background_color": "#3742A2",
+            "background_color": "#3742a2",
             "foreground_color": "#ffffff"
           }
         }

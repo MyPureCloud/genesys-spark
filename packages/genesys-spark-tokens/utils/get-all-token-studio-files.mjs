@@ -3,8 +3,8 @@ import path from 'path';
 
 import { getRootPath } from './get-root-path.mjs';
 
-export function getAllTokenStudioFiles() {
-  const tokenStudioTokensFolder = path.resolve(getRootPath(), 'data');
+export function getAllTokenStudioFiles(dataFolder) {
+  const tokenStudioTokensFolder = path.resolve(getRootPath(), dataFolder);
 
   return fs
     .readdirSync(tokenStudioTokensFolder)

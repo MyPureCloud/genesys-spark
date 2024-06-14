@@ -1,4 +1,6 @@
 dist/
+dist-new/
 node_modules/
 data/
+data-old/
 snapshot/

@@ -15,10 +15,7 @@ export const GuxFormFieldError: FunctionalComponent<GuxFormFieldErrorProps> = (
         'gux-show': show
       }}
     >
-      <gux-icon
-        icon-name="fa/hexagon-exclamation-regular"
-        decorative
-      ></gux-icon>
+      <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative></gux-icon>
       <div class="gux-message">{children}</div>
     </div>
   ) as VNode;

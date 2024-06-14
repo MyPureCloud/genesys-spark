@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-chart-components",
-  "version": "4.47.0",
+  "version": "4.60.1",
   "description": "Common chart webcomponents",
   "license": "MIT",
   "main": "dist/stencil-wrapper.js",
@@ -112,6 +112,6 @@
   "collection": "dist/collection/collection-manifest.json",
   "prettier": "prettier-config-genesys-spark-components",
   "volta": {
-    "node": "18.16.1"
+    "node": "18.20.3"
   }
 }

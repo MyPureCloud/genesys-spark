@@ -6,13 +6,17 @@ describe('gux-tooltip-beta', () => {
       `
         <div id="element" lang="en">
           <div>Element</div>
-          <gux-tooltip-beta>Tooltip</gux-tooltip-beta>
+          <gux-tooltip-beta>
+            <span slot="content">Tooltip</span>
+          </gux-tooltip-beta>
         </div>
       `,
       `
         <div lang="en">
           <div id="element">Element</div>
-          <gux-tooltip-beta for="element">Tooltip</gux-tooltip-beta>
+          <gux-tooltip-beta for="element">
+            <div slot="content">Tooltip</div>
+          </gux-tooltip-beta>
         </div>
       `
     ].forEach((html, index) => {

@@ -66,7 +66,12 @@ export class GuxVisualization {
         visSpec.signals.push({
           name: 'chartClick',
           value: 0,
-          on: [{ events: 'rect:mousedown', update: 'datum' }]
+          on: [
+            { events: 'rect:mousedown', update: 'datum' },
+            { events: 'arc:mousedown', update: 'datum' },
+            { events: 'line:mousedown', update: 'datum' },
+            { events: 'symbol:mousedown', update: 'datum' }
+          ]
         });
         return visSpec;
       }
@@ -94,6 +99,11 @@ export class GuxVisualization {
   }
 
   render(): JSX.Element {
-    return (<div ref={el => (this.chartContainer = el)}></div>) as JSX.Element;
+    return (
+      <div
+        class="gux-chart-container"
+        ref={el => (this.chartContainer = el)}
+      ></div>
+    ) as JSX.Element;
   }
 }

@@ -31,7 +31,7 @@
   "color": {
     "white": "#ffffff",
     "black": "#000000",
-    "transparent": "#000000",
+    "transparent": "#00000000",
     "cornflower": {
       "100": "#f2f2f3",
       "200": "#e4e5e7",
@@ -432,13 +432,13 @@
     }
   },
   "size": {
-    "xs": "16rem",
-    "sm": "20rem",
-    "md": "24rem",
-    "lg": "32rem",
-    "xl": "40rem",
-    "2xl": "48rem",
-    "3xl": "98rem"
+    "xs": "16px",
+    "sm": "20px",
+    "md": "24px",
+    "lg": "32px",
+    "xl": "40px",
+    "2xl": "48px",
+    "3xl": "98px"
   },
   "text_decoration": {
     "underline": "underline"

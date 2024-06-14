@@ -86,6 +86,20 @@ export class GuxPopover {
     }
   }
 
+  @Listen('focusout')
+  onFocusout(event: FocusEvent): void {
+    if (!this.closeOnClickOutside && this.displayDismissButton) {
+      return;
+    }
+
+    const focusIsOutsidePopover = !this.root.contains(
+      event.relatedTarget as Node
+    );
+    if (focusIsOutsidePopover) {
+      this.dismiss();
+    }
+  }
+
   @OnClickOutside({ triggerEvents: 'mousedown' })
   checkForClickOutside(event: MouseEvent) {
     const clickPath = event.composedPath();

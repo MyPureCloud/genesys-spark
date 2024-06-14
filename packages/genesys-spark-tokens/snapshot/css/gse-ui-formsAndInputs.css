@@ -197,6 +197,8 @@
   --gse-ui-datePicker-dateTyped-backgroundColor: #dee1fd;
   --gse-ui-datePicker-disabled-opacity: 0.5;
   --gse-ui-datePicker-focusCalendar-gap: 3px;
+  --gse-ui-datePicker-iconHover: #3742a2;
+  --gse-ui-datePicker-iconFocus: #3742a2;
   --gse-ui-toggle-label-fontFamily: Noto Sans;
   --gse-ui-toggle-label-fontWeight: 400;
   --gse-ui-toggle-label-lineHeight: 16px;
@@ -375,4 +377,5 @@
   --gse-ui-selectorCard-disabled-backgroundColor: #ffffff;
   --gse-ui-selectorCard-disabled-selectedIndicator-selected-foregroundColor: #4856cb;
   --gse-ui-selectorCard-disabled-selectedIndicator-unselected-foregroundColor: #767c8d;
+  --gse-ui-ctaGroup-gap: 8px;
 }

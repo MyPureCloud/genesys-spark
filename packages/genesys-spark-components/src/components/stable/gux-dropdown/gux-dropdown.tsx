@@ -33,6 +33,7 @@ import {
   ValidOptionTag
 } from '../gux-listbox/options/option-types';
 import { GuxFilterTypes } from './gux-dropdown.types';
+import { hasSlot } from '@utils/dom/has-slot';
 
 /**
  * Our Dropdown component. In the most basic case, it's used with `gux-option` to give users
@@ -408,11 +409,7 @@ export class GuxDropdown {
     const tag = item.tagName.toLowerCase() as ValidOptionTag;
     switch (tag) {
       case 'gux-option':
-        return (
-          <gux-truncate ref={el => (this.truncateElement = el)}>
-            {item.textContent}
-          </gux-truncate>
-        ) as JSX.Element;
+        return this.renderOption(item as HTMLGuxOptionElement);
       case 'gux-option-icon':
         return this.renderIconOption(item as HTMLGuxOptionIconElement);
       default:
@@ -420,6 +417,22 @@ export class GuxDropdown {
         const _exhaustiveCheck: never = tag;
         return _exhaustiveCheck;
     }
+  }
+
+  private renderOption(option: HTMLGuxOptionElement): JSX.Element {
+    let optionText = option.textContent;
+    if (hasSlot(option, 'subtext')) {
+      const subtext = option.querySelector('[slot=subtext]');
+      optionText = optionText.substring(
+        0,
+        optionText.length - subtext.textContent.length
+      );
+    }
+    return (
+      <gux-truncate ref={el => (this.truncateElement = el)}>
+        {optionText}
+      </gux-truncate>
+    ) as JSX.Element;
   }
 
   private renderIconOption(iconOption: HTMLGuxOptionIconElement): JSX.Element {

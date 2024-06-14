@@ -5,6 +5,14 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property           | Attribute            | Description | Type      | Default |
+| ------------------ | -------------------- | ----------- | --------- | ------- |
+| `hasGroupDisabled` | `has-group-disabled` |             | `boolean` | `false` |
+| `hasGroupError`    | `has-group-error`    |             | `boolean` | `false` |
+
+
 ## Slots
 
 | Slot      | Description                     |
