@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.127.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.126.0...v3.127.0) (2024-06-15)
+
+
+### Features
+
+* **time-picker:** behind feat toggle remove hard coded 24 hr format for certain locales ([67523f6](https://github.com/MyPureCloud/genesys-spark/commit/67523f6b041a47a36c9c80221ae25abb9dcf8688))
+
 ## [3.126.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.125.1...v3.126.0) (2024-05-28)
 
 
