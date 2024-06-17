@@ -57,6 +57,32 @@
   </fieldset>
 
   <fieldset>
+    <legend>Optional</legend>
+    <gux-form-field-file indicator-mark="optional">
+      <label slot="label">Upload a profile picture</label>
+      <input
+        type="file"
+        id="avatar"
+        name="avatar"
+        accept="image/png, image/jpeg"
+        slot="input"
+      />
+    </gux-form-field-file>
+
+    <gux-form-field-file indicator-mark="optional">
+      <label slot="label">Upload a profile picture</label>
+      <input
+        type="file"
+        id="avatar"
+        name="avatar"
+        accept="image/png, image/jpeg"
+        slot="input"
+        required
+      />
+    </gux-form-field-file>
+  </fieldset>
+
+  <fieldset>
     <legend>Error</legend>
     <gux-form-field-file>
       <label slot="label">Upload a profile picture</label>
