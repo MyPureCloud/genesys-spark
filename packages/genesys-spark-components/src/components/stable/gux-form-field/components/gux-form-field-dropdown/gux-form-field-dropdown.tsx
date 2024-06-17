@@ -52,7 +52,7 @@ export class GuxFormFieldDropdown {
   labelPosition: GuxFormFieldLabelPosition;
 
   @Prop()
-  indicatorMark: GuxFormFieldIndicatorMark;
+  indicatorMark: GuxFormFieldIndicatorMark = 'required';
 
   @State()
   private computedLabelPosition: GuxFormFieldLabelPosition = 'above';

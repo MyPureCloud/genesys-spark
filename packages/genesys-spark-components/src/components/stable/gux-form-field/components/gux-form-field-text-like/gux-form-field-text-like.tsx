@@ -71,7 +71,7 @@ export class GuxFormFieldTextLike {
    * When set to optional, the component will display (optional) for optional and blank for required.
    */
   @Prop()
-  indicatorMark: GuxFormFieldIndicatorMark;
+  indicatorMark: GuxFormFieldIndicatorMark = 'required';
 
   @Prop()
   loading: boolean = false;
