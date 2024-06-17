@@ -9,6 +9,7 @@
 
 | Property        | Attribute        | Description | Type                                    | Default     |
 | --------------- | ---------------- | ----------- | --------------------------------------- | ----------- |
+| `indicatorMark` | `indicator-mark` |             | `"optional" \| "required"`              | `undefined` |
 | `labelPosition` | `label-position` |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
 
 
@@ -28,12 +29,14 @@
 
 - [gux-screen-reader-beta](../../../../beta/gux-screen-reader)
 - [gux-icon](../../../gux-icon)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-form-field-dropdown --> gux-screen-reader-beta
   gux-form-field-dropdown --> gux-icon
+  gux-form-field-dropdown --> gux-form-field-label-indicator
   style gux-form-field-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

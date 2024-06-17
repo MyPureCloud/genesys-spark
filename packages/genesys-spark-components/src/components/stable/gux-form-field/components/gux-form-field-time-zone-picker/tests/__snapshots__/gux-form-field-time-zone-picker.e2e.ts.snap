@@ -15,7 +15,9 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
   <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
   </legend>
-  <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+  <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation">
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-time-zone-picker-container">
       <slot></slot>
@@ -42,7 +44,9 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
   <legend class="gux-form-field-legend-label gux-screenreader">
     <slot name="label"></slot>
   </legend>
-  <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+  <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation">
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-disabled gux-input gux-time-zone-picker-container">
       <slot></slot>
@@ -72,7 +76,13 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
       Required
     </gux-screen-reader-beta>
   </legend>
-  <span aria-hidden="true" class="gux-form-field-legend-label gux-required gux-undefined" role="presentation"></span>
+  <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation">
+    <gux-form-field-label-indicator hydrated="">
+      <span aria-hidden="true" class="gux-form-field-label-indicator-required">
+        *
+      </span>
+    </gux-form-field-label-indicator>
+  </span>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-time-zone-picker-container">
       <slot></slot>

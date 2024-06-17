@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property        | Attribute        | Description | Type                                    | Default     |
-| --------------- | ---------------- | ----------- | --------------------------------------- | ----------- |
-| `clearable`     | `clearable`      |             | `boolean`                               | `undefined` |
-| `labelPosition` | `label-position` |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
+| Property        | Attribute        | Description                                                                                                                                                                                                                                                                     | Type                                    | Default     |
+| --------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ----------- |
+| `clearable`     | `clearable`      |                                                                                                                                                                                                                                                                                 | `boolean`                               | `undefined` |
+| `indicatorMark` | `indicator-mark` | Field indicator mark which can show *, (optional) or blank Defaults to required. When set to required, the component will display * for required fields and blank for optional When set to optional, the component will display (optional) for optional and blank for required. | `"optional" \| "required"`              | `undefined` |
+| `labelPosition` | `label-position` |                                                                                                                                                                                                                                                                                 | `"above" \| "beside" \| "screenreader"` | `undefined` |
 
 
 ## Methods
@@ -53,12 +54,14 @@ Type: `Promise<void>`
 
 - [gux-form-field-input-clear-button](../../helper-components/gux-form-field-input-clear-button)
 - [gux-icon](../../../gux-icon)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-form-field-number --> gux-form-field-input-clear-button
   gux-form-field-number --> gux-icon
+  gux-form-field-number --> gux-form-field-label-indicator
   gux-form-field-input-clear-button --> gux-icon
   gux-pagination-ellipsis-button --> gux-form-field-number
   style gux-form-field-number fill:#f9f,stroke:#333,stroke-width:4px

@@ -25,6 +25,7 @@ exports[`gux-form-field-time-zone-picker #render error should render component a
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Select Time Zone
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-input-error gux-time-zone-picker-container">
@@ -71,6 +72,7 @@ exports[`gux-form-field-time-zone-picker #render help should render component as
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Select Time Zone
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
@@ -115,7 +117,9 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
           Required
         </gux-screen-reader-beta>
       </legend>
-      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation">
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+      </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
           <slot></slot>
@@ -153,7 +157,9 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
           Required
         </gux-screen-reader-beta>
       </legend>
-      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation">
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+      </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
           <slot></slot>
@@ -191,7 +197,9 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
           Required
         </gux-screen-reader-beta>
       </legend>
-      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+      <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation">
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+      </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
           <slot></slot>
@@ -231,6 +239,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Select Time Zone
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
@@ -274,6 +283,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Select Time Zone
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
@@ -317,6 +327,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
       </legend>
       <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
         Select Time Zone
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">
@@ -360,6 +371,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
       </legend>
       <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
         Select Time Zone
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-time-zone-picker-container">

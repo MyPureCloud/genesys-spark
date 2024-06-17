@@ -47,4 +47,20 @@
       <span slot="error">This is an error message</span>
     </gux-form-field-time-zone-picker>
   </fieldset>
+
+  <fieldset>
+    <legend>Optional Indicator Mark</legend>
+    <gux-form-field-time-zone-picker
+      label-position="above"
+      indicator-mark="optional"
+    >
+      <gux-time-zone-picker-beta
+        value="Etc/GMT+1"
+        workspace-default="Etc/GMT"
+        local-default="America/Detroit"
+      >
+      </gux-time-zone-picker-beta>
+      <label slot="label">Select Time Zone</label>
+    </gux-form-field-time-zone-picker>
+  </fieldset>
 </form>

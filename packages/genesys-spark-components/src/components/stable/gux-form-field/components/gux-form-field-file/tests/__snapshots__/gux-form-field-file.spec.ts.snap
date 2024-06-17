@@ -12,6 +12,7 @@ exports[`gux-form-field-file #render help should render component as expected 1`
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Upload a profile picture
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <slot name="input"></slot>
       <div class="gux-form-field-error">
@@ -46,6 +47,7 @@ exports[`gux-form-field-file #render input attributes should render component as
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Upload a profile picture
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <slot name="input"></slot>
       <div class="gux-form-field-error">
@@ -77,6 +79,7 @@ exports[`gux-form-field-file #render input attributes should render component as
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Upload a profile picture
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <slot name="input"></slot>
       <div class="gux-form-field-error">
@@ -109,8 +112,9 @@ exports[`gux-form-field-file #render input attributes should render component as
           required
         </gux-screen-reader-beta>
       </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label gux-required" role="presentation">
+      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Upload a profile picture
+        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
       </span>
       <slot name="input"></slot>
       <div class="gux-form-field-error">
@@ -142,6 +146,7 @@ exports[`gux-form-field-file #render label-position should render component as e
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Upload a profile picture
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <slot name="input"></slot>
       <div class="gux-form-field-error">
@@ -173,6 +178,7 @@ exports[`gux-form-field-file #render label-position should render component as e
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Upload a profile picture
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <slot name="input"></slot>
       <div class="gux-form-field-error">
@@ -204,6 +210,7 @@ exports[`gux-form-field-file #render label-position should render component as e
       </legend>
       <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
         Upload a profile picture
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <slot name="input"></slot>
       <div class="gux-form-field-error">
@@ -235,6 +242,7 @@ exports[`gux-form-field-file #render label-position should render component as e
       </legend>
       <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
         Upload a profile picture
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <slot name="input"></slot>
       <div class="gux-form-field-error">

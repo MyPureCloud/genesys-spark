@@ -14,5 +14,5 @@
 }
 
 ::slotted(label) {
-  @include gux-form-field.gse-ui-formControl-label;
+  @include gux-form-field.gse-ui-formControl-label-bold;
 }

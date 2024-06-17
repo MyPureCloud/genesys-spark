@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property         | Attribute          | Description | Type                                    | Default     |
-| ---------------- | ------------------ | ----------- | --------------------------------------- | ----------- |
-| `displayUnits`   | `display-units`    |             | `string`                                | `undefined` |
-| `labelPosition`  | `label-position`   |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
-| `valueInTooltip` | `value-in-tooltip` |             | `boolean`                               | `undefined` |
+| Property         | Attribute          | Description                                                                                                                                                                                                                                                                     | Type                                    | Default     |
+| ---------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ----------- |
+| `displayUnits`   | `display-units`    |                                                                                                                                                                                                                                                                                 | `string`                                | `undefined` |
+| `indicatorMark`  | `indicator-mark`   | Field indicator mark which can show *, (optional) or blank Defaults to required. When set to required, the component will display * for required fields and blank for optional When set to optional, the component will display (optional) for optional and blank for required. | `"optional" \| "required"`              | `undefined` |
+| `labelPosition`  | `label-position`   |                                                                                                                                                                                                                                                                                 | `"above" \| "beside" \| "screenreader"` | `undefined` |
+| `valueInTooltip` | `value-in-tooltip` |                                                                                                                                                                                                                                                                                 | `boolean`                               | `undefined` |
 
 
 ## Slots
@@ -30,12 +31,14 @@
 
 - [gux-tooltip-base-beta](../../../../beta/gux-tooltip-base)
 - [gux-icon](../../../gux-icon)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-form-field-range --> gux-tooltip-base-beta
   gux-form-field-range --> gux-icon
+  gux-form-field-range --> gux-form-field-label-indicator
   style gux-form-field-range fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

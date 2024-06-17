@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property        | Attribute        | Description | Type                                    | Default     |
-| --------------- | ---------------- | ----------- | --------------------------------------- | ----------- |
-| `labelPosition` | `label-position` |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
-| `resize`        | `resize`         |             | `"auto" \| "manual" \| "none"`          | `undefined` |
+| Property        | Attribute        | Description                                                                                                                                                                                                                                                                     | Type                                    | Default     |
+| --------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ----------- |
+| `indicatorMark` | `indicator-mark` | Field indicator mark which can show *, (optional) or blank Defaults to required. When set to required, the component will display * for required fields and blank for optional When set to optional, the component will display (optional) for optional and blank for required. | `"optional" \| "required"`              | `undefined` |
+| `labelPosition` | `label-position` |                                                                                                                                                                                                                                                                                 | `"above" \| "beside" \| "screenreader"` | `undefined` |
+| `resize`        | `resize`         |                                                                                                                                                                                                                                                                                 | `"auto" \| "manual" \| "none"`          | `undefined` |
 
 
 ## Slots
@@ -28,11 +29,13 @@
 ### Depends on
 
 - [gux-icon](../../../gux-icon)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-form-field-textarea --> gux-icon
+  gux-form-field-textarea --> gux-form-field-label-indicator
   style gux-form-field-textarea fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

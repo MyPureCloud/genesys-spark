@@ -6,6 +6,7 @@ exports[`gux-form-field-textarea #render help should render component as expecte
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-undefined">
@@ -40,6 +41,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-undefined">
@@ -71,6 +73,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-undefined">
@@ -102,6 +105,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-undefined">
@@ -133,6 +137,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-undefined">
@@ -164,6 +169,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-undefined">
@@ -195,6 +201,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
     <div class="gux-beside gux-form-field-container">
       <div class="gux-beside gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-undefined">
@@ -226,6 +233,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
     <div class="gux-form-field-container gux-screenreader">
       <div class="gux-form-field-label gux-screenreader">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-undefined">
@@ -257,6 +265,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-undefined">
@@ -288,6 +297,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-auto" data-replicated-value="undefined">
@@ -319,6 +329,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-manual">
@@ -350,6 +361,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-resize-none">

@@ -31,6 +31,7 @@
 graph TD;
   gux-row-select --> gux-form-field-checkbox
   gux-form-field-checkbox --> gux-icon
+  gux-form-field-checkbox --> gux-form-field-label-indicator
   style gux-row-select fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

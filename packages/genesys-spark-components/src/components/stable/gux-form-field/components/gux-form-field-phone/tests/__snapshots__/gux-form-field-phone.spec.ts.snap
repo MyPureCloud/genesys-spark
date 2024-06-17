@@ -15,6 +15,7 @@ exports[`gux-form-field-phone #render error should render component as expected 
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-input-error">
@@ -58,6 +59,7 @@ exports[`gux-form-field-phone #render help should render component as expected 1
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Default
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -101,6 +103,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Label
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -141,6 +144,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Label
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -181,6 +185,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
       </legend>
       <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
         Label
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
@@ -221,6 +226,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
       </legend>
       <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
         Label
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <div class="gux-input-and-error-container">
         <div class="gux-input">

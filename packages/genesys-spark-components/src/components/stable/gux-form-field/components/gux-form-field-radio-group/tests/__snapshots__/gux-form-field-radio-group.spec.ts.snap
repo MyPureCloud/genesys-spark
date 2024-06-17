@@ -9,6 +9,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Pizza
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <slot></slot>
       <div class="gux-form-field-error">
@@ -48,6 +49,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Pizza
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <slot></slot>
       <div class="gux-form-field-error gux-show">
@@ -105,6 +107,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Pizza
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <slot></slot>
       <div class="gux-form-field-error">
@@ -168,6 +171,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
         Pizza
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
       </span>
       <slot></slot>
       <div class="gux-form-field-error">

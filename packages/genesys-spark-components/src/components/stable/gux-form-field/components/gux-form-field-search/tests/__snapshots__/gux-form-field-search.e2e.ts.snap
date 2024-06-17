@@ -6,6 +6,7 @@ exports[`gux-form-field-search #render help should render component as expected 
 <div class="gux-beside gux-form-field-container">
   <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -35,6 +36,7 @@ exports[`gux-form-field-search #render input attributes should render component 
 <div class="gux-beside gux-form-field-container">
   <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -65,6 +67,7 @@ exports[`gux-form-field-search #render input attributes should render component 
 <div class="gux-beside gux-form-field-container">
   <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -92,8 +95,13 @@ exports[`gux-form-field-search #render input attributes should render component 
 
 exports[`gux-form-field-search #render input attributes should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
-  <div class="gux-beside gux-form-field-label gux-required">
+  <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated="">
+      <span aria-hidden="true" class="gux-form-field-label-indicator-required">
+        *
+      </span>
+    </gux-form-field-label-indicator>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -124,6 +132,7 @@ exports[`gux-form-field-search #render label-position should render component as
 <div class="gux-beside gux-form-field-container">
   <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -154,6 +163,7 @@ exports[`gux-form-field-search #render label-position should render component as
 <div class="gux-above gux-form-field-container">
   <div class="gux-above gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -184,6 +194,7 @@ exports[`gux-form-field-search #render label-position should render component as
 <div class="gux-beside gux-form-field-container">
   <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
@@ -214,6 +225,7 @@ exports[`gux-form-field-search #render label-position should render component as
 <div class="gux-form-field-container gux-screenreader">
   <div class="gux-form-field-label gux-screenreader">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
   </div>
   <div class="gux-input-and-error-container">
     <div class="gux-input">
