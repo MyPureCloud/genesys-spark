@@ -24,7 +24,7 @@
 ### Depends on
 
 - [gux-option](../../stable/gux-listbox/options/gux-option)
-- [gux-list-divider](../../stable/gux-list/gux-list-divider)
+- [gux-option-group-beta](../../stable/gux-listbox/option-group)
 - [gux-dropdown](../../stable/gux-dropdown)
 - [gux-listbox](../../stable/gux-listbox)
 
@@ -32,11 +32,12 @@
 ```mermaid
 graph TD;
   gux-time-zone-picker-beta --> gux-option
-  gux-time-zone-picker-beta --> gux-list-divider
+  gux-time-zone-picker-beta --> gux-option-group-beta
   gux-time-zone-picker-beta --> gux-dropdown
   gux-time-zone-picker-beta --> gux-listbox
   gux-option --> gux-truncate
   gux-truncate --> gux-tooltip
+  gux-option-group-beta --> gux-list-divider
   gux-dropdown --> gux-truncate
   gux-dropdown --> gux-icon
   gux-dropdown --> gux-radial-loading

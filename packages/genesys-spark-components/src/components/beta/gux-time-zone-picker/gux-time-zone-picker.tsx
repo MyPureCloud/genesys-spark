@@ -202,18 +202,23 @@ export class GuxTimeZonePickerBeta {
     });
   }
 
-  private renderDefaultsList(): JSX.Element {
+  private renderDefaultsList(): JSX.Element | null {
     const defaults = this.renderTimeZones(this.getDefaultZoneList());
     if (defaults.length) {
       return (
-        <div>
-          <div class="zone-header">{this.i18n('default')}</div>
+        <gux-option-group-beta label={this.i18n('default')}>
           {defaults}
-          <gux-list-divider></gux-list-divider>
-          <div class="zone-header">{this.i18n('all')}</div>
-        </div>
+        </gux-option-group-beta>
       ) as JSX.Element;
     }
+  }
+
+  private renderAllTimeZoneOptionsList(): JSX.Element | null {
+    return (
+      <gux-option-group-beta label={this.i18n('all')}>
+        {this.timeZoneOptionElements}
+      </gux-option-group-beta>
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
@@ -233,7 +238,7 @@ export class GuxTimeZonePickerBeta {
       >
         <gux-listbox aria-label={this.i18n('timeZones')}>
           {this.renderDefaultsList()}
-          {this.timeZoneOptionElements}
+          {this.renderAllTimeZoneOptionsList()}
         </gux-listbox>
       </gux-dropdown>
     ) as JSX.Element;
