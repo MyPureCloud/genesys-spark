@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.127.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.127.0...v3.127.1) (2024-06-18)
+
+
+### Bug Fixes
+
+* **calendar:** addition of fixed height to calendar ([b612731](https://github.com/MyPureCloud/genesys-spark/commit/b6127312272cd8fbbc0dee404c0fe2d4abc63787))
+* **calendar:** addition of fixed height to calendar ([d42471c](https://github.com/MyPureCloud/genesys-spark/commit/d42471c18cc9bd5eecb82a5ac39ab2de4eb25b07))
+
 ## [3.127.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.126.0...v3.127.0) (2024-06-15)
 
 
