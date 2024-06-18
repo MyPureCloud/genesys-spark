@@ -574,7 +574,7 @@
       }
     }
   },
-  "style": {
+  "assets": {
     "large": {
       "size": {
         "value": "{size.lg}",

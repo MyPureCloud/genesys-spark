@@ -437,19 +437,19 @@
   "icon": {
     "small": {
       "size": {
-        "value": "{style.small.size}",
+        "value": "{assets.small.size}",
         "type": "sizing"
       }
     },
     "medium": {
       "size": {
-        "value": "{style.medium.size}",
+        "value": "{assets.medium.size}",
         "type": "sizing"
       }
     },
     "large": {
       "size": {
-        "value": "{style.large.size}",
+        "value": "{assets.large.size}",
         "type": "sizing"
       }
     },

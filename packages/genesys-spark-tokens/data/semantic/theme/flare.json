@@ -12,7 +12,7 @@
     }
   },
   "background": {
-    "surface": {
+    "container": {
       "primary": {
         "10": {
           "value": "{color.white}",
