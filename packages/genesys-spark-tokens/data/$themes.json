@@ -611,10 +611,8 @@
     "$figmaCollectionId": "VariableCollectionId:28327:138365",
     "$figmaModeId": "28327:3",
     "$figmaVariableReferences": {
-      "interactive.medium.height": "8a539dfcb71fd7e0b92035647f128a5deb87562f",
       "interactive.medium.gap": "fb00f9856fdcd44eeba1c922b36cff5bb9c348f2",
       "interactive.medium.padding.horizontal": "981b5dcba9ef2f27e146874f540cce8216d8df4f",
-      "interactive.small.height": "e3dc8154ef194421addacd2180ec510b1a3a2e93",
       "interactive.small.gap": "7c47cfac48b815c7a864098429f0c9bd953eda31",
       "interactive.small.padding.horizontal": "15595e64288790e0cf9b2719155291604cfc23a5",
       "interactive.small.border_radius": "87518ca57b1eb20db979efcc0af6daec7acda86e",
@@ -786,7 +784,9 @@
       "border.form_control.text_input.default": "b3e5c197aea4a4ac612e4d7dbaee2f8c7d191e0b",
       "border.form_control.text_input.hover": "b17184819c452568acfcd801a4fe6f1447fff6fd",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
-      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc"
+      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc",
+      "interactive.medium.size": "8a539dfcb71fd7e0b92035647f128a5deb87562f",
+      "interactive.small.size": "e3dc8154ef194421addacd2180ec510b1a3a2e93"
     }
   },
   {
@@ -801,10 +801,8 @@
     "$figmaCollectionId": "VariableCollectionId:28327:138365",
     "$figmaModeId": "28327:4",
     "$figmaVariableReferences": {
-      "interactive.medium.height": "8a539dfcb71fd7e0b92035647f128a5deb87562f",
       "interactive.medium.gap": "fb00f9856fdcd44eeba1c922b36cff5bb9c348f2",
       "interactive.medium.padding.horizontal": "981b5dcba9ef2f27e146874f540cce8216d8df4f",
-      "interactive.small.height": "e3dc8154ef194421addacd2180ec510b1a3a2e93",
       "interactive.small.gap": "7c47cfac48b815c7a864098429f0c9bd953eda31",
       "interactive.small.padding.horizontal": "15595e64288790e0cf9b2719155291604cfc23a5",
       "interactive.small.border_radius": "87518ca57b1eb20db979efcc0af6daec7acda86e",
@@ -839,7 +837,9 @@
       "form_control.text_input.edges.border_width": "bfd18e571bf5893dd8077db519d0d8b6c7812b31",
       "form_control.text_input.divider.border_width": "6dfd35f9ecee7867ebaac2d4314172c81c9011b2",
       "interactive.edges.border_width": "c4501f54f03d02ecb823257ebe7339c1d9cf8394",
-      "interactive.divider.border_width": "349870cd910f34d741c42f611806ef837c0b7e5d"
+      "interactive.divider.border_width": "349870cd910f34d741c42f611806ef837c0b7e5d",
+      "interactive.medium.size": "8a539dfcb71fd7e0b92035647f128a5deb87562f",
+      "interactive.small.size": "e3dc8154ef194421addacd2180ec510b1a3a2e93"
     }
   },
   {

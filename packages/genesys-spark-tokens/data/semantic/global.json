@@ -295,10 +295,10 @@
   },
   "interactive": {
     "medium": {
-      "height": {
+      "size": {
         "value": "{size.lg}",
         "type": "sizing",
-        "description": "The recommended height of medium-sized interactive components, for example buttons."
+        "description": "The recommended size of medium-sized interactive components, for example buttons height."
       },
       "gap": {
         "value": "{spacing.3xs}",
@@ -314,10 +314,10 @@
       }
     },
     "small": {
-      "height": {
+      "size": {
         "value": "{size.md}",
         "type": "sizing",
-        "description": "The recommended size for small-sized interactive components. For example small buttons."
+        "description": "The recommended size for small-sized interactive components. For example small button height."
       },
       "gap": {
         "value": "{spacing.3xs}",
