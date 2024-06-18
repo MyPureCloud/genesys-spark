@@ -20,14 +20,20 @@ export class GuxTimeZonePickerBeta {
   @Element()
   private root: HTMLElement;
 
-  @Prop()
-  public value: string;
+  @Prop({ mutable: true })
+  value: string;
 
   @Prop()
-  public workspaceDefault: string;
+  workspaceDefault: string;
 
   @Prop()
-  public localDefault: string;
+  localDefault: string;
+
+  @Prop()
+  customDefault: string;
+
+  @Prop()
+  customDefaultLabel: string;
 
   @Prop()
   hasError: boolean = false;
@@ -119,8 +125,7 @@ export class GuxTimeZonePickerBeta {
       : option.displayTextNameFormatted
           .split('/')
           .pop()
-          .concat(', ', option.countryName)
-          .concat(option.baseDisplayOffsetText);
+          .concat(', ', option.countryName, option.baseDisplayOffsetText);
   }
 
   private getTimeZoneOptionsList(): GuxTimeZoneOption[] {
@@ -143,14 +148,11 @@ export class GuxTimeZonePickerBeta {
   }
 
   private getDefaultZones(): string[] {
-    const defaultZones: string[] = [];
-    if (this.workspaceDefault) {
-      defaultZones.push(this.workspaceDefault);
-    }
-    if (this.localDefault) {
-      defaultZones.push(this.localDefault);
-    }
-    return defaultZones;
+    return [
+      this.workspaceDefault,
+      this.localDefault,
+      this.customDefault
+    ].filter(zone => !!zone);
   }
 
   private getDefaultZoneList(): GuxTimeZoneOption[] {
@@ -167,17 +169,15 @@ export class GuxTimeZonePickerBeta {
     );
 
     defaultZoneOptions.forEach(option => {
-      if (
-        defaultZoneOptions.length === 1 &&
-        this.workspaceDefault === this.localDefault
-      ) {
-        defaultZoneOptions[0].defaultZone = `${this.i18n(
-          'localAndWorkspaceDefault'
-        )}`;
+      if (this.workspaceDefault === this.localDefault) {
+        option.defaultZone = `${this.i18n('localAndWorkspaceDefault')}`;
       } else if (option.value === this.workspaceDefault) {
         option.defaultZone = `${this.i18n('workspaceDefault')}`;
       } else if (option.value === this.localDefault) {
         option.defaultZone = `${this.i18n('localDefault')}`;
+      }
+      if (option.value === this.customDefault) {
+        option.defaultZone = `(${this.customDefaultLabel})`;
       }
     });
 
@@ -202,25 +202,33 @@ export class GuxTimeZonePickerBeta {
     });
   }
 
-  private renderDefaultsList(): JSX.Element {
+  private renderDefaultsList(): JSX.Element | null {
     const defaults = this.renderTimeZones(this.getDefaultZoneList());
     if (defaults.length) {
       return (
-        <div>
-          <div class="zone-header">{this.i18n('default')}</div>
+        <gux-option-group-beta label={this.i18n('default')}>
           {defaults}
-          <gux-list-divider></gux-list-divider>
-          <div class="zone-header">{this.i18n('all')}</div>
-        </div>
+        </gux-option-group-beta>
       ) as JSX.Element;
     }
+  }
+
+  private renderAllTimeZoneOptionsList(): JSX.Element | null {
+    return (
+      <gux-option-group-beta label={this.i18n('all')}>
+        {this.timeZoneOptionElements}
+      </gux-option-group-beta>
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
     return (
       <gux-dropdown
         class={{
-          'has-defaults': !!this.workspaceDefault || !!this.localDefault
+          'has-defaults':
+            !!this.workspaceDefault ||
+            !!this.localDefault ||
+            !!this.customDefault
         }}
         filter-type="custom"
         placeholder={this.i18n('selectZone')}
@@ -230,7 +238,7 @@ export class GuxTimeZonePickerBeta {
       >
         <gux-listbox aria-label={this.i18n('timeZones')}>
           {this.renderDefaultsList()}
-          {this.timeZoneOptionElements}
+          {this.renderAllTimeZoneOptionsList()}
         </gux-listbox>
       </gux-dropdown>
     ) as JSX.Element;
