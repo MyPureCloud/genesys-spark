@@ -113,7 +113,7 @@
       "type": "boxShadow"
     },
     "icon": {
-      "value": "{icon.size.md}",
+      "value": "{icon.medium.size}",
       "type": "sizing"
     },
     "wrapping_width": {
@@ -178,7 +178,7 @@
       "type": "typography"
     },
     "icon": {
-      "value": "{icon.size.lg}",
+      "value": "{icon.large.size}",
       "type": "sizing"
     },
     "small": {

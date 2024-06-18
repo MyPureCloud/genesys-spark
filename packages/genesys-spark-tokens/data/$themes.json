@@ -1615,9 +1615,6 @@
       "badge.error.bold.foreground_color": "ffe2b5ee5cd8364ff2d04b60e0f887d790b265b2",
       "badge.error.regular.background_color": "16665e85e31f82623f6862ea6b439fd127222b9d",
       "badge.error.regular.foreground_color": "ebb30a11c3ee8aa59833f875c9f86a5177828e42",
-      "icon.size.sm": "f9e82f0373fd079ede6735bd78c52a6e549b71b0",
-      "icon.size.md": "13b7eaa882a7e0d4cbdf0b2c71e8a903d787d711",
-      "icon.size.lg": "76850618a70c2e8a3b70d7e78e8805d5cfae4b3f",
       "alert.gap": "f25dc8e33c902fc7b92c02249f017b53a565556f",
       "alert.info.background_color": "b06353b25fda08941b50a976e517f5ec049a6413",
       "alert.info.foreground_color": "c2ab4a1329b12a6e96425c2425ee7c8b8b3ed26a",
@@ -1719,7 +1716,10 @@
       "form_footer.modal.desktop.top_padding": "e21b31cf9d82a4eafa9bb4736aca9c21b697033d",
       "form_footer.modal.desktop.horizontal_padding": "6e4673ccf193dd14434c3c2455e0728263db78eb",
       "form_footer.modal.desktop.gap": "985b706c8804bd3ae67396c0079b5bd6f1fe26c8",
-      "form_footer.background_color": "d058ce14c09316e3f28e22b087febcb4a2d8515c"
+      "form_footer.background_color": "d058ce14c09316e3f28e22b087febcb4a2d8515c",
+      "icon.small.size": "f9e82f0373fd079ede6735bd78c52a6e549b71b0",
+      "icon.medium.size": "13b7eaa882a7e0d4cbdf0b2c71e8a903d787d711",
+      "icon.large.size": "76850618a70c2e8a3b70d7e78e8805d5cfae4b3f"
     },
     "group": ".ui"
   }

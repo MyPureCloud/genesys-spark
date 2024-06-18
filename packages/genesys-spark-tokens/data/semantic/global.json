@@ -573,5 +573,28 @@
         "description": "The shadow we used for small-sized components like tooltips."
       }
     }
+  },
+  "style": {
+    "large": {
+      "size": {
+        "value": "{size.lg}",
+        "type": "sizing",
+        "description": "The recommended size of large-sized for styles, for example icons."
+      }
+    },
+    "medium": {
+      "size": {
+        "value": "{size.md}",
+        "type": "sizing",
+        "description": "The recommended size of medium-sized for styles, for example medium icons."
+      }
+    },
+    "small": {
+      "size": {
+        "value": "{size.xs}",
+        "type": "sizing",
+        "description": "The recommended size of small-sized for styles, for example small icons."
+      }
+    }
   }
 }
