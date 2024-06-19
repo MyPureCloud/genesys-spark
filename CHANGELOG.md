@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.62.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.61.0...v4.62.0) (2024-06-19)
+
+
+### Features
+
+* **icon:** adding trash-arrow-up icon ([9b495d8](https://github.com/MyPureCloud/genesys-spark/commit/9b495d8263f6246bc5dda87551c3b55b5d54910c))
+
 ## [4.61.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.60.1...v4.61.0) (2024-06-15)
 
 
