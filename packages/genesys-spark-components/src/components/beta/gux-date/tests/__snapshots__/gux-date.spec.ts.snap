@@ -187,7 +187,7 @@ exports[`gux-date #render regional dates #render different languages should work
 exports[`gux-date #render regional dates #render different languages should work as expected for ru 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <mock:shadow-root>
-    четверг, 7 июля 2022 г.
+    четверг, 7 июля 2022 г.
   </mock:shadow-root>
 </gux-date-beta>
 `;
@@ -219,7 +219,7 @@ exports[`gux-date #render regional dates #render different languages should work
 exports[`gux-date #render regional dates #render different languages should work as expected for uk 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <mock:shadow-root>
-    четвер, 7 липня 2022 р.
+    четвер, 7 липня 2022 р.
   </mock:shadow-root>
 </gux-date-beta>
 `;
@@ -4083,7 +4083,7 @@ exports[`gux-date #render using non regional dates #render different languages s
 exports[`gux-date #render using non regional dates #render different languages should work as expected for ru 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <mock:shadow-root>
-    четверг, 7 июля 2022 г.
+    четверг, 7 июля 2022 г.
   </mock:shadow-root>
 </gux-date-beta>
 `;
@@ -4115,7 +4115,7 @@ exports[`gux-date #render using non regional dates #render different languages s
 exports[`gux-date #render using non regional dates #render different languages should work as expected for uk 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <mock:shadow-root>
-    четвер, 7 липня 2022 р.
+    четвер, 7 липня 2022 р.
   </mock:shadow-root>
 </gux-date-beta>
 `;
