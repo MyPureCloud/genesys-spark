@@ -1,0 +1,14 @@
+::slotted(*) {
+  margin: 0;
+  font-family: var(
+    --gse-semantic-forms-fieldset-header-text-fontFamily
+  ) !important;
+  font-size: var(--gse-semantic-forms-fieldset-header-text-fontSize) !important;
+  font-weight: var(
+    --gse-semantic-forms-fieldset-header-text-fontWeight
+  ) !important;
+  line-height: var(
+    --gse-semantic-forms-fieldset-header-text-lineHeight
+  ) !important;
+  color: var(--gse-semantic-forms-fieldset-header-foregroundColor) !important;
+}

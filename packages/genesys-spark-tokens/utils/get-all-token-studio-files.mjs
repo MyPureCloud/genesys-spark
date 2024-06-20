@@ -3,9 +3,7 @@ import path from 'path';
 
 import { getRootPath } from './get-root-path.mjs';
 
-const dataFolder = 'data-old';
-
-export function getAllTokenStudioFiles() {
+export function getAllTokenStudioFiles(dataFolder) {
   const tokenStudioTokensFolder = path.resolve(getRootPath(), dataFolder);
 
   return fs

@@ -4,6 +4,7 @@
     display: none;
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: var(--gse-ui-formControl-helper-gap);
     place-content: stretch flex-start;
     align-items: center;
     padding: var(--gse-ui-formControl-helper-errorPadding);
@@ -18,11 +19,10 @@
 
     gux-icon {
       flex: 0 1 auto;
-      align-self: auto;
+      align-self: start;
       order: 0;
       min-width: var(--gse-ui-icon-size-sm);
       min-height: var(--gse-ui-icon-size-sm);
-      margin-right: var(--gse-ui-formControl-helper-gap);
       color: var(--gse-ui-formControl-helper-errorColor);
     }
 

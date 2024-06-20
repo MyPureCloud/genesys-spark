@@ -118,6 +118,8 @@
     const chart8 = document.querySelector('#chart-8');
     const chart9 = document.querySelector('#chart-9');
 
+    chart1.addEventListener('chartClicked', (event) => console.info(event));
+
     const chartData = {'values': [
         {'category': 'Voice', 'value': 4},
         {'category': 'Callback', 'value': 6},

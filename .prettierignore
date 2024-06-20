@@ -1,12 +1,7 @@
 node_modules/
+packages/
 playgrounds/
 shared-configs/
 web-apps/
-
-packages/genesys-spark-chart-components-react/stencil-generated/
-packages/genesys-spark-chart-components/src/components/**/readme.md
-packages/genesys-spark-components-react/stencil-generated/
-packages/genesys-spark-components/src/components/**/readme.md
-packages/genesys-spark-tokens/data/tokens.json
 
 CHANGELOG.md

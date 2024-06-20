@@ -2,6 +2,56 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.62.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.62.0...v4.62.1) (2024-06-20)
+
+
+### Bug Fixes
+
+* **table-toolbar:** table-toolbar tooltip/popup now appear over other gux components ([5970251](https://github.com/MyPureCloud/genesys-spark/commit/5970251bf02c448ba965e1f66b42921a6d1a7b6a))
+
+## [4.62.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.61.0...v4.62.0) (2024-06-19)
+
+
+### Features
+
+* **icon:** adding trash-arrow-up icon ([9b495d8](https://github.com/MyPureCloud/genesys-spark/commit/9b495d8263f6246bc5dda87551c3b55b5d54910c))
+
+## [4.61.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.60.1...v4.61.0) (2024-06-15)
+
+
+### Features
+
+* **other:** form-field-file ([4e68137](https://github.com/MyPureCloud/genesys-spark/commit/4e68137628dc7d9bd2857cfed40b2a1d32eb7c02))
+* **time-picker:** behind feat toggle remove hard coded 24hr format for certain locales ([3cbf058](https://github.com/MyPureCloud/genesys-spark/commit/3cbf058007a851f3c01490063ac0c7061dfc2906))
+* **tokens:** Created themed styles ([7437c4c](https://github.com/MyPureCloud/genesys-spark/commit/7437c4c6f612a727a8737c8b87b55f11a6e9ba6e))
+
+### [4.60.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.60.0...v4.60.1) (2024-06-14)
+
+
+### Bug Fixes
+
+* **other:** calendar ([c532c81](https://github.com/MyPureCloud/genesys-spark/commit/c532c81a13f1cf57aafecc1f522d9cb225857a68))
+
+## [4.60.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.59.0...v4.60.0) (2024-06-13)
+
+
+### Features
+
+* **other:** forms ([c9de447](https://github.com/MyPureCloud/genesys-spark/commit/c9de447f4d35ea26c5ffc971785fa29f7a7f8260))
+
+
+### Bug Fixes
+
+* **visualization:** Add chart click handling to all chart types ([b574b55](https://github.com/MyPureCloud/genesys-spark/commit/b574b552c86d28912edbba5029a3fdef611c1627))
+* **visualization:** adds a container-width style to gux visualizations ([c8d675a](https://github.com/MyPureCloud/genesys-spark/commit/c8d675a87cae4e57283e500ffbc9a439a41e4bf7))
+
+## [4.59.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.58.0...v4.59.0) (2024-06-12)
+
+
+### Features
+
+* **form-field-radio-group:** add new form-field-radio-group component ([b2a7691](https://github.com/MyPureCloud/genesys-spark/commit/b2a7691128793345e30d69f479301729b3fb0b0a))
+
 ## [4.58.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.57.0...v4.58.0) (2024-06-06)
 
 

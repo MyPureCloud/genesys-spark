@@ -7,7 +7,7 @@ describe('gux-tooltip-beta', () => {
         <div id="element" lang="en">
           <div>Element</div>
           <gux-tooltip-beta>
-            <div slot="content">Tooltip</div>
+            <span slot="content">Tooltip</span>
           </gux-tooltip-beta>
         </div>
       `,

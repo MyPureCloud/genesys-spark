@@ -1,5 +1,6 @@
 import { getDesiredLocale } from '../../../i18n';
 import * as sparkIntl from '../../../genesys-spark-utils/intl';
+// Remove useRegionalDates with this ticket https://inindca.atlassian.net/browse/COMUI-2598
 import { useRegionalDates } from '../../../i18n/use-regional-dates';
 
 import {
@@ -43,12 +44,15 @@ export function getLocaleClockType(root: HTMLElement): GuxClockType {
     timeZone: 'UTC'
   }).format(date);
 
-  // The localization team has requested that some locales be hardcoded to the 24h clock. https://inindca.atlassian.net/browse/LOCAL-9597
-  const localesSetTo24h = ['ar', 'ko', 'zh-cn', 'zh-tw'];
-  if (
-    localesSetTo24h.some(localeSetTo24h => locale.startsWith(localeSetTo24h))
-  ) {
-    return '24h';
+  // LEGACY -- The localization team has requested that some locales be hardcoded to the 24h clock. https://inindca.atlassian.net/browse/LOCAL-9597
+  // Localization team has requested to removing hardcoded 24h clock locales as requested in https://inindca.atlassian.net/browse/COMUI-2890
+  if (!useRegionalDates()) {
+    const localesSetTo24h = ['ar', 'ko', 'zh-cn', 'zh-tw'];
+    if (
+      localesSetTo24h.some(localeSetTo24h => locale.startsWith(localeSetTo24h))
+    ) {
+      return '24h';
+    }
   }
 
   return new RegExp('.*15.*').test(time) ? '24h' : '12h';

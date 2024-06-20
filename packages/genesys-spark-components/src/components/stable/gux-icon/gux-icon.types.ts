@@ -1019,6 +1019,7 @@ export type GuxIconIconName =
   | 'fa/thumbtack-regular'
   | 'fa/ticket-regular'
   | 'fa/timer-regular'
+  | 'fa/trash-arrow-up-regular'
   | 'fa/trash-regular'
   | 'fa/triangle-exclamation-regular'
   | 'fa/triangle-exclamation-solid'
