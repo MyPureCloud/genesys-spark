@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.62.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.62.0...v4.62.1) (2024-06-20)
+
+
+### Bug Fixes
+
+* **table-toolbar:** table-toolbar tooltip/popup now appear over other gux components ([5970251](https://github.com/MyPureCloud/genesys-spark/commit/5970251bf02c448ba965e1f66b42921a6d1a7b6a))
+
 ## [4.62.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.61.0...v4.62.0) (2024-06-19)
 
 
