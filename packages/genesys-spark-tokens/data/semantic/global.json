@@ -14,7 +14,7 @@
       "link": {
         "value": {
           "fontFamily": "{font_family.body}",
-          "fontWeight": "{font_weight.bold}",
+          "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.xs}",
           "lineHeight": "{line_height.xs}",
           "textDecoration": "{text_decoration.underline}"
@@ -57,7 +57,7 @@
       "link": {
         "value": {
           "fontFamily": "{font_family.body}",
-          "fontWeight": "{font_weight.bold}",
+          "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.sm}",
           "lineHeight": "{line_height.sm}",
           "textDecoration": "{text_decoration.underline}"
@@ -100,7 +100,7 @@
       "link": {
         "value": {
           "fontFamily": "{font_family.body}",
-          "fontWeight": "{font_weight.bold}",
+          "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.md}",
           "lineHeight": "{line_height.md}",
           "textDecoration": "{text_decoration.underline}"
