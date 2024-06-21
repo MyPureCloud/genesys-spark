@@ -74,11 +74,11 @@
         "type": "sizing"
       },
       "padding": {
-        "value": "0 {spacing.2xs}",
+        "value": "0 {interactive.large.padding.horizontal}",
         "type": "spacing"
       },
       "padding_icon_only": {
-        "value": "{spacing.3xs}",
+        "value": "{interactive.medium.padding.horizontal}",
         "type": "spacing"
       }
     },
@@ -100,46 +100,46 @@
         "type": "sizing"
       },
       "padding": {
-        "value": "0 {spacing.2xs}",
+        "value": "0 {interactive.large.padding.horizontal}",
         "type": "spacing"
       },
       "padding_icon_only": {
-        "value": "{spacing.4xs}",
+        "value": "{interactive.small.padding.horizontal}",
         "type": "spacing"
       }
     },
     "gap": {
-      "value": "{spacing.3xs}",
+      "value": "{interactive.large.gap}",
       "type": "spacing"
     },
     "primary": {
       "default": {
         "background_color": {
-          "value": "{color.primary.main}",
+          "value": "{background.interactive.primary.default}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.primary.default}",
           "type": "color"
         }
       },
       "hover": {
         "background_color": {
-          "value": "{color.primary.darker}",
+          "value": "{background.interactive.primary.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.primary.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "{color.primary.darkest}",
+          "value": "{background.interactive.primary.active}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.primary.active}",
           "type": "color"
         }
       }
@@ -147,31 +147,31 @@
     "secondary": {
       "default": {
         "background_color": {
-          "value": "{color.blueberry.50}",
+          "value": "{background.interactive.secondary.default}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.primary.main}",
+          "value": "{foreground.interactive.secondary.default}",
           "type": "color"
         }
       },
       "hover": {
         "background_color": {
-          "value": "{color.blueberry.100}",
+          "value": "{background.interactive.secondary.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.primary.darker}",
+          "value": "{foreground.interactive.secondary.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "{color.blueberry.200}",
+          "value": "{background.interactive.secondary.active}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.primary.darkest}",
+          "value": "{foreground.interactive.secondary.active}",
           "type": "color"
         }
       }
@@ -179,17 +179,17 @@
     "tertiary": {
       "default": {
         "background_color": {
-          "value": "{color.transparent}",
+          "value": "{background.interactive.tertiary.default}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.primary.main}",
+          "value": "{foreground.interactive.tertiary.default}",
           "type": "color"
         },
         "border": {
           "value": {
-            "color": "{button.tertiary.default.foreground_color}",
-            "width": "1px",
+            "color": "{foreground.interactive.tertiary.default}",
+            "width": "{interactive.edges.border_width}",
             "style": "solid"
           },
           "type": "border"
@@ -197,21 +197,21 @@
       },
       "hover": {
         "background_color": {
-          "value": "{color.primary.darker}",
+          "value": "{background.interactive.tertiary.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.tertiary.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "{color.primary.darkest}",
+          "value": "{background.interactive.tertiary.active}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.tertiary.active}",
           "type": "color"
         }
       }
@@ -219,31 +219,31 @@
     "ghost": {
       "default": {
         "background_color": {
-          "value": "{color.transparent}",
+          "value": "{background.interactive.ghost.default}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.primary.main}",
+          "value": "{foreground.interactive.ghost.default}",
           "type": "color"
         }
       },
       "hover": {
         "background_color": {
-          "value": "{color.blueberry.100}",
+          "value": "{background.interactive.ghost.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.primary.darker}",
+          "value": "{foreground.interactive.ghost.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "{color.blueberry.200}",
+          "value": "{background.interactive.ghost.active}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.primary.darkest}",
+          "value": "{foreground.interactive.ghost.active}",
           "type": "color"
         }
       }
@@ -251,42 +251,42 @@
     "danger": {
       "default": {
         "background_color": {
-          "value": "{color.error.main}",
+          "value": "{background.interactive.danger.default}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.danger.default}",
           "type": "color"
         }
       },
       "hover": {
         "background_color": {
-          "value": "{color.error.darker}",
+          "value": "{background.interactive.danger.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.danger.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "{color.error.darkest}",
+          "value": "{background.interactive.danger.active}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.danger.active}",
           "type": "color"
         }
       }
     },
     "border_radius": {
-      "value": "{border_radius.sm}",
+      "value": "{border_radius.interactive.small}",
       "type": "borderRadius"
     },
     "disabled": {
       "opacity": {
-        "value": "0.5",
+        "value": "{opacity.50}",
         "type": "opacity"
       }
     },
@@ -307,15 +307,15 @@
         "type": "sizing"
       },
       "padding": {
-        "value": "0 {spacing.3xs}",
+        "value": "0 {interactive.medium.padding.horizontal}",
         "type": "spacing"
       },
       "border_radius": {
-        "value": "0 {border_radius.sm} {border_radius.sm} 0",
+        "value": "0 {border_radius.interactive.small} {border_radius.interactive.small} 0",
         "type": "borderRadius"
       },
       "focus_border_radius": {
-        "value": "0 {border_radius.md} {border_radius.md} 0",
+        "value": "0 {border_radius.focus.large} {border_radius.focus.large} 0",
         "type": "borderRadius"
       }
     },
@@ -331,31 +331,31 @@
     },
     "left_segment": {
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{interactive.large.gap}",
         "type": "spacing"
       },
       "padding": {
-        "value": "0 {spacing.xs}",
+        "value": "0 {interactive.xlarge.padding.horizontal}",
         "type": "spacing"
       },
       "focus_border_radius": {
-        "value": "{border_radius.md} 0 0 {border_radius.md}",
+        "value": "{border_radius.focus.large} 0 0 {border_radius.focus.large}",
         "type": "borderRadius"
       },
       "border_radius": {
-        "value": "{border_radius.sm} 0 0 {border_radius.sm}",
+        "value": "{border_radius.interactive.small} 0 0 {border_radius.interactive.small}",
         "type": "borderRadius"
       }
     },
     "border_radius": {
-      "value": "{border_radius.sm}",
+      "value": "{border_radius.interactive.small}",
       "type": "borderRadius"
     },
     "tertiary": {
       "divider": {
         "value": {
-          "color": "{button.tertiary.default.foreground_color}",
-          "width": "1px",
+          "color": "{border.interactive.tertiary.divider}",
+          "width": "{interactive.divider.large.border_width}",
           "style": "solid"
         },
         "type": "border"
@@ -364,8 +364,8 @@
     "primary": {
       "divider": {
         "value": {
-          "color": "{color.white}",
-          "width": "2px",
+          "color": "{border.interactive.primary.divider}",
+          "width": "{interactive.divider.large.border_width}",
           "style": "solid"
         },
         "type": "border"
@@ -374,8 +374,8 @@
     "secondary": {
       "divider": {
         "value": {
-          "color": "{color.white}",
-          "width": "2px",
+          "color": "{border.interactive.secondary.divider}",
+          "width": "{interactive.divider.large.border_width}",
           "style": "solid"
         },
         "type": "border"
@@ -384,8 +384,8 @@
     "danger": {
       "divider": {
         "value": {
-          "color": "{color.white}",
-          "width": "2px",
+          "color": "{border.interactive.danger.divider}",
+          "width": "{interactive.divider.large.border_width}",
           "style": "solid"
         },
         "type": "border"

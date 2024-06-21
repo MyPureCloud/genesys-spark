@@ -647,7 +647,6 @@
       "form_control.text_input.edges.border_width": "bfd18e571bf5893dd8077db519d0d8b6c7812b31",
       "form_control.text_input.divider.border_width": "6dfd35f9ecee7867ebaac2d4314172c81c9011b2",
       "interactive.edges.border_width": "c4501f54f03d02ecb823257ebe7339c1d9cf8394",
-      "interactive.divider.border_width": "349870cd910f34d741c42f611806ef837c0b7e5d",
       "background.interactive.primary.default": "0188808b7c6d3225fc85570edd14072ada698fa2",
       "background.interactive.primary.hover": "a285a137eb449419c1c85ba88c7ab91ef62bf9cf",
       "background.interactive.primary.active": "6ef3e85d6ae0977961e8251602155649d5911bf7",
@@ -786,7 +785,8 @@
       "border.container.high_constrast.default": "34344b34e2361dec12dd6be5a01920f30fd152fb",
       "border.container.high_constrast.enabled": "1f17e169a2c77dad4a8eb7426221420328b69f1c",
       "border.container.high_constrast.hover": "01f8997457dde237d7d430e1cd1aefd2f0b71f11",
-      "border.container.high_constrast.active": "156014236031c771f472fff8c21d978963837655"
+      "border.container.high_constrast.active": "156014236031c771f472fff8c21d978963837655",
+      "interactive.divider.small.border_width": "349870cd910f34d741c42f611806ef837c0b7e5d"
     }
   },
   {
@@ -837,9 +837,9 @@
       "form_control.text_input.edges.border_width": "bfd18e571bf5893dd8077db519d0d8b6c7812b31",
       "form_control.text_input.divider.border_width": "6dfd35f9ecee7867ebaac2d4314172c81c9011b2",
       "interactive.edges.border_width": "c4501f54f03d02ecb823257ebe7339c1d9cf8394",
-      "interactive.divider.border_width": "349870cd910f34d741c42f611806ef837c0b7e5d",
       "interactive.medium.size": "8a539dfcb71fd7e0b92035647f128a5deb87562f",
-      "interactive.small.size": "e3dc8154ef194421addacd2180ec510b1a3a2e93"
+      "interactive.small.size": "e3dc8154ef194421addacd2180ec510b1a3a2e93",
+      "interactive.divider.small.border_width": "349870cd910f34d741c42f611806ef837c0b7e5d"
     }
   },
   {
