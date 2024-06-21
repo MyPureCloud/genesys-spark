@@ -291,12 +291,7 @@
       }
     },
     "text": {
-      "value": {
-        "fontFamily": "{font_family.roboto}",
-        "lineHeight": "{line_height.2xs}",
-        "fontSize": "{font_size.xs}",
-        "fontWeight": "{font_weight.bold}"
-      },
+      "value": "{body.sm.bold}",
       "type": "typography"
     }
   },
