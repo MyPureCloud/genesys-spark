@@ -107,7 +107,7 @@ describe('gux-form-field-checkbox-group-beta', () => {
        <span slot="group-help">This is a group help message</span>
      </gux-form-field-checkbox-group-beta>`,
       ` <gux-form-field-checkbox-group-beta disabled>
-     <span label="group-label">Food</span>
+     <label slot="group-label">Food</label>
  
      <gux-form-field-checkbox>
        <input slot="input" type="checkbox" name="food-1" value="pizza" />

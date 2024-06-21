@@ -94,7 +94,7 @@ describe('gux-form-field-checkbox-beta', () => {
     </gux-form-field-checkbox-group-beta>`,
 
       ` <gux-form-field-checkbox-group-beta disabled>
-        <label slot="group-label">Food</span>
+        <label slot="group-label">Food</label>
 
         <gux-form-field-checkbox>
           <input slot="input" type="checkbox" name="food-1" value="pizza" />

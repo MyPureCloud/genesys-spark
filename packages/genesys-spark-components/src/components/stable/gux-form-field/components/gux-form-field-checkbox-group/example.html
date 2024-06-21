@@ -8,7 +8,10 @@
 <form onchange="notify(event)" oninput="notify(event)">
   <gux-form-field-checkbox-group-beta>
     <label slot="group-label">Food</label>
-
+    <gux-form-field-checkbox slot="group-checkbox">
+      <input slot="input" type="checkbox" name="food-1" />
+      <label slot="label">No restrictions</label>
+    </gux-form-field-checkbox>
     <gux-form-field-checkbox>
       <input slot="input" type="checkbox" name="food-1" value="pizza" />
       <label slot="label">Pizza</label>

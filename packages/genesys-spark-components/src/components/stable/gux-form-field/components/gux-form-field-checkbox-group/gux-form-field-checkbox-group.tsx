@@ -15,6 +15,7 @@ import { trackComponent } from '@utils/tracking/usage';
 
 /**
  * @slot group-label - Required slot for label tag
+ * @slot group-checkbox - Optional slot
  * @slot group-error - Optional slot for error message
  * @slot group-help - Optional slot for help message
  */
@@ -122,6 +123,7 @@ export class GuxFormFieldCheckboxGroupBeta {
             this.hasGroupHelp
           )}
         </GuxFormFieldLegendLabel>
+        <slot name="group-checkbox" />
         <slot />
         <GuxFormFieldError show={this.hasGroupError}>
           <slot name="group-error" />
@@ -134,6 +136,6 @@ export class GuxFormFieldCheckboxGroupBeta {
   }
 
   private setLabel(): void {
-    this.label = this.root.querySelector('label[slot="label"]');
+    this.label = this.root.querySelector('label[slot="group-label"]');
   }
 }
