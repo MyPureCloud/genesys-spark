@@ -478,7 +478,7 @@
         "description": "The default padding of a small-sized container, like a tooltip."
       },
       "vertical_padding": {
-        "value": "{spacing.2xs}",
+        "value": "{spacing.3xs}",
         "type": "spacing",
         "description": "The default vertical padding of a small-sized container, like a tooltip."
       },

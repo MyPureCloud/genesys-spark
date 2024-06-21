@@ -51,18 +51,18 @@
     "light": {
       "border": {
         "value": {
-          "color": "{color.cornflower.300}",
-          "width": "1px",
+          "color": "{border.container.edges.default}",
+          "width": "{container.edges.border_width}",
           "style": "solid"
         },
         "type": "border"
       },
       "background_color": {
-        "value": "{color.white}",
+        "value": "{background.container.page.default}",
         "type": "color"
       },
       "foreground_color": {
-        "value": "{color.cornflower.900}",
+        "value": "{foreground.container.high_emphasis}",
         "type": "color"
       }
     },
@@ -70,51 +70,46 @@
       "border": {
         "value": {
           "color": "{color.cornflower.900}",
-          "width": "1px",
+          "width": "{container.edges.border_width}",
           "style": "solid"
         },
         "type": "border"
       },
       "background_color": {
-        "value": "{color.cornflower.900}",
+        "value": "{background.container.high_constrast.default}",
         "type": "color"
       },
       "foreground_color": {
-        "value": "{color.white}",
+        "value": "{foreground.container.high_contrast.high_emphasis}",
         "type": "color"
       },
       "icon_color": {
-        "value": "{color.white}",
+        "value": "{foreground.container.high_contrast.high_emphasis}",
         "type": "color"
       }
     },
     "box_shadow": {
-      "value": "{elevation.medium}",
+      "value": "{contanier.medium.box_shadow}",
       "type": "boxShadow"
     },
     "padding": {
-      "value": "{spacing.3xs} {spacing.2xs}",
+      "value": "{container.small.vertical_padding} {container.small.horizontal_padding}",
       "type": "spacing"
     },
     "height": {
-      "value": "{size.lg}",
+      "value": "{container.small.height}",
       "type": "sizing"
     },
     "gap": {
-      "value": "{spacing.3xs}",
+      "value": "{container.small.gap}",
       "type": "spacing"
     },
     "border_radius": {
-      "value": "{border_radius.sm}",
+      "value": "{container.small.border_radius}",
       "type": "borderRadius"
     },
     "text": {
-      "value": {
-        "fontFamily": "{font_family.roboto}",
-        "lineHeight": "{line_height.xs}",
-        "fontSize": "{font_size.xs}",
-        "fontWeight": "{font_weight.regular}"
-      },
+      "value": "{body.sm.regular}",
       "type": "typography"
     }
   },

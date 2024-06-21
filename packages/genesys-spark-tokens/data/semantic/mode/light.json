@@ -150,7 +150,7 @@
       },
       "high_constrast": {
         "default": {
-          "value": "{background.container.high_contrast.40}",
+          "value": "{background.container.high_contrast.10}",
           "type": "color",
           "description": "The background color for the default state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards."
         },
