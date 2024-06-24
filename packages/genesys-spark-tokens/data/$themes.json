@@ -18,8 +18,8 @@
     "selectedTokenSets": {
       "core": "enabled"
     },
-    "$figmaCollectionId": "VariableCollectionId:28327:137965",
-    "$figmaModeId": "28327:0",
+    "$figmaCollectionId": "VariableCollectionId:29815:18385",
+    "$figmaModeId": "29815:0",
     "$figmaVariableReferences": {
       "spacing.4xs": "56893a6774799a9563967ac995e533e01d87347e",
       "spacing.3xs": "fab83511d8231fca5a33acbee7f8cc0a6fca451f",
@@ -351,8 +351,8 @@
       "semantic/theme/flare": "enabled"
     },
     "group": "theme",
-    "$figmaCollectionId": "VariableCollectionId:28327:138243",
-    "$figmaModeId": "28327:1",
+    "$figmaCollectionId": "VariableCollectionId:29815:18665",
+    "$figmaModeId": "29815:1",
     "$figmaVariableReferences": {
       "theme.font_family.headings": "9873bdf942d20820c95b63c324d1185a38a36977",
       "theme.font_family.body": "fea55e158a08e7b793bca0deb975d0260cdc868f",
@@ -511,8 +511,8 @@
       "semantic/theme/legacy": "enabled"
     },
     "group": "theme",
-    "$figmaCollectionId": "VariableCollectionId:28327:138243",
-    "$figmaModeId": "28327:2",
+    "$figmaCollectionId": "VariableCollectionId:29815:18665",
+    "$figmaModeId": "29815:2",
     "$figmaVariableReferences": {
       "theme.font_family.headings": "9873bdf942d20820c95b63c324d1185a38a36977",
       "theme.font_family.body": "fea55e158a08e7b793bca0deb975d0260cdc868f",
@@ -702,8 +702,8 @@
       "semantic/global": "enabled"
     },
     "group": "mode",
-    "$figmaCollectionId": "VariableCollectionId:28327:138365",
-    "$figmaModeId": "28327:3",
+    "$figmaCollectionId": "VariableCollectionId:29815:18799",
+    "$figmaModeId": "29815:3",
     "$figmaVariableReferences": {
       "background.interactive.primary.default": "0188808b7c6d3225fc85570edd14072ada698fa2",
       "background.interactive.primary.hover": "a285a137eb449419c1c85ba88c7ab91ef62bf9cf",
@@ -1010,8 +1010,8 @@
       "semantic/global": "enabled"
     },
     "group": "mode",
-    "$figmaCollectionId": "VariableCollectionId:28327:138365",
-    "$figmaModeId": "28327:4",
+    "$figmaCollectionId": "VariableCollectionId:29815:18799",
+    "$figmaModeId": "29815:4",
     "$figmaVariableReferences": {
       "background.interactive.primary.default": "0188808b7c6d3225fc85570edd14072ada698fa2",
       "background.interactive.primary.hover": "a285a137eb449419c1c85ba88c7ab91ef62bf9cf",
@@ -1393,7 +1393,7 @@
       "ui/layout_and_container": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:8987:36891",
-    "$figmaModeId": "28327:5",
+    "$figmaModeId": "29815:5",
     "$figmaVariableReferences": {
       "color.focus": "4903357e580485abfbc7eec7c53a94eb42f7f2fd",
       "card.background-color": "f1ee3f17d5190864c318ecdf9f74569843a5a447",

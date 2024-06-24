@@ -856,6 +856,10 @@
     "noto_sans": {
       "value": "'Noto Sans'",
       "type": "fontFamilies"
+    },
+    "noto_sans_mono": {
+      "value": "Noto Sans Mono",
+      "type": "fontFamilies"
     }
   },
   "font_size": {
@@ -969,6 +973,14 @@
     }
   },
   "size": {
+    "5xs": {
+      "value": "2px",
+      "type": "sizing"
+    },
+    "4xs": {
+      "value": "4px",
+      "type": "sizing"
+    },
     "xs": {
       "value": "16px",
       "type": "sizing"
@@ -1003,14 +1015,6 @@
     },
     "3xs": {
       "value": "8px",
-      "type": "sizing"
-    },
-    "4xs": {
-      "value": "4px",
-      "type": "sizing"
-    },
-    "5xs": {
-      "value": "2px",
       "type": "sizing"
     },
     "6xs": {
