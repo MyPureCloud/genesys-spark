@@ -1,265 +1,179 @@
 <h1>gux-icon</h1>
 
-<gux-tabs class="example">
-  <gux-tab-list slot="tab-list">
-    <gux-tab tab-id="1-1">Usage</gux-tab>
-    <gux-tab tab-id="1-2">Current icons</gux-tab>
-    <gux-tab tab-id="1-3">Legacy icons</gux-tab>
-    <gux-tab tab-id="1-4">Restricted icons</gux-tab>
-    <gux-tab tab-id="1-5">Deprecated icons</gux-tab>
-  </gux-tab-list>
-  <gux-tab-panel tab-id="1-1">
-    <div>
-      <h2 id="shadow-dom-header">Shadow DOM</h2>
-      <div id="shadow-dom-host"></div>
-      <p>
-        The `gux-icon` is expected to work even when used in the shadow dom
-        (open)
-      </p>
+<nav class="icon-nav">
+  <ul>
+    <li><a href="gux-icon-current.html">Current icons</a></li>
+    <li><a href="gux-icon-spark.html">Spark icons</a></li>
+    <li><a href="gux-icon-restricted.html">Restricted icons</a></li>
+    <li><a href="gux-icon-legacy.html">Legacy icons</a></li>
+    <li><a href="gux-icon-deprecated.html">Deprecated icons</a></li>
+  </ul>
+</nav>
 
-      <h2>Accessibility</h2>
-      <gux-icon size="large" icon-name="bus" decorative></gux-icon>
-      <p>
-        Set the <strong>decorative</strong> attrribute if the icon does not
-        convey information about the page and is only for decoration
-      </p>
+<h2 id="shadow-dom-header">Shadow DOM</h2>
+<div id="shadow-dom-host"></div>
+<p>
+  The `gux-icon` is expected to work even when used in the shadow dom (open)
+</p>
 
-      <gux-icon
-        size="large"
-        icon-name="user-add"
-        screenreader-text="add John Smith to contact list"
-      ></gux-icon>
-      <p>
-        Set the <strong>screenreader-text</strong> attribute if the icon conveys
-        information to the user that would not otherwise be available
-      </p>
+<h2>Accessibility</h2>
+<gux-icon size="large" icon-name="bus" decorative></gux-icon>
+<p>
+  Set the <strong>decorative</strong> attrribute if the icon does not convey
+  information about the page and is only for decoration
+</p>
 
-      <gux-icon size="large" icon-name="fa/bullseye-regular"></gux-icon>
-      <p>
-        If neither <strong>decorative</strong> or
-        <strong>screenreader-text</strong>
-        are set an error will be logged in the console
-      </p>
+<gux-icon
+  size="large"
+  icon-name="user-add"
+  screenreader-text="add John Smith to contact list"
+></gux-icon>
+<p>
+  Set the <strong>screenreader-text</strong> attribute if the icon conveys
+  information to the user that would not otherwise be available
+</p>
 
-      <h2>Styling</h2>
-      <gux-icon
-        size="large"
-        id="styled"
-        icon-name="user-add"
-        decorative
-      ></gux-icon>
-      <p>
-        You can use the <strong>color</strong>, <strong>height</strong> and
-        <strong>width</strong> css properties to style your icon
-      </p>
+<gux-icon size="large" icon-name="fa/bullseye-regular"></gux-icon>
+<p>
+  If neither <strong>decorative</strong> or
+  <strong>screenreader-text</strong>
+  are set an error will be logged in the console
+</p>
 
-      <h2>Sizing</h2>
+<h2>Styling</h2>
+<gux-icon size="large" id="styled" icon-name="user-add" decorative></gux-icon>
+<p>
+  You can use the <strong>color</strong>, <strong>height</strong> and
+  <strong>width</strong> css properties to style your icon
+</p>
 
-      <h3>inherit (height and width set on element)</h3>
-      <gux-icon
-        style="width: 19px; height: 19px"
-        icon-name="user-add"
-        decorative
-      ></gux-icon>
+<h2>Sizing</h2>
 
-      <h3>small (16x16)</h3>
-      <gux-icon size="small" icon-name="user-add" decorative></gux-icon>
+<h3>inherit (height and width set on element)</h3>
+<gux-icon
+  style="width: 19px; height: 19px"
+  icon-name="user-add"
+  decorative
+></gux-icon>
 
-      <h3>medium (24x24)</h3>
-      <gux-icon size="medium" icon-name="user-add" decorative></gux-icon>
+<h3>small (16x16)</h3>
+<gux-icon size="small" icon-name="user-add" decorative></gux-icon>
 
-      <h3>large (32x32)</h3>
-      <gux-icon size="large" icon-name="user-add" decorative></gux-icon>
+<h3>medium (24x24)</h3>
+<gux-icon size="medium" icon-name="user-add" decorative></gux-icon>
 
-      <h2>Caching</h2>
-      <div>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-left-regular"
-          decorative
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-center-regular"
-          decorative
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-right-regular"
-          decorative
-        ></gux-icon>
-      </div>
-      <hr />
-      <div>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-left-regular"
-          decorative
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-center-regular"
-          decorative
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-right-regular"
-          decorative
-        ></gux-icon>
-      </div>
-      <hr />
-      <div>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-left-regular"
-          decorative
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-center-regular"
-          decorative
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-right-regular"
-          decorative
-        ></gux-icon>
-      </div>
-      <hr />
-      <div>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-left-regular"
-          decorative
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-center-regular"
-          decorative
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-right-regular"
-          decorative
-        ></gux-icon>
-      </div>
-      <hr />
-      <div>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-left-regular"
-          decorative
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-center-regular"
-          decorative
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="fa/align-right-regular"
-          decorative
-        ></gux-icon>
-      </div>
-      <hr />
-      <div>
-        <gux-icon
-          size="large"
-          icon-name="user"
-          screenreader-text="user-01"
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="user"
-          screenreader-text="user-02"
-        ></gux-icon>
-        <gux-icon
-          size="large"
-          icon-name="user"
-          screenreader-text="user-03"
-        ></gux-icon>
-      </div>
-      <p>Duplicated icons should not require additional network calls</p>
-    </div>
-  </gux-tab-panel>
-  <gux-tab-panel tab-id="1-2">
-    <div>
-      <h2>Font Awesome Icons</h2>
-      <p>
-        <a
-          href="https://form.asana.com/?k=wsglJ3RA89wMSdgRyoGdQg&d=12075379665713"
-          target="_blank"
-          >Request new FontAwesome icons</a
-        >
-      </p>
-      ${FA_ICON_EXAMPLE_LIST}
+<h3>large (32x32)</h3>
+<gux-icon size="large" icon-name="user-add" decorative></gux-icon>
 
-      <h2>Custom Icons</h2>
-      <p>
-        <a
-          href="https://form.asana.com/?k=wsglJ3RA89wMSdgRyoGdQg&d=12075379665713"
-          target="_blank"
-          >Request new custom icons</a
-        >
-      </p>
-      ${CUSTOM_ICON_EXAMPLE_LIST}
-
-      <h2>Spark Icons</h2>
-      <p>
-        These icon names map to a Font Awesome icon. The latest guidance from UX
-        is to not use these icon names but use the appropriate Font Awesome icon
-        name directly.
-      </p>
-      ${SPARK_ICON_EXAMPLE_LIST}
-    </div>
-  </gux-tab-panel>
-  <gux-tab-panel tab-id="1-3">
-    <div>
-      <h2>Legacy</h2>
-      <gux-icon
-        size="large"
-        icon-name="legacy/cc-delivery"
-        decorative
-      ></gux-icon>
-      <p>
-        After a review of icons in this project many of them were removed as
-        they will not be part of the official Spark Design System. You should
-        migrate all usage of these icons where possible and if not possible
-        contact the Spark Design System team to get a suitable icon added to the
-        system. For convenience all legacy icons will be available via a
-        "legacy/" prefix to aid in the transition to officially supported icons.
-      </p>
-
-      <h2>Legacy Icons (Migrate away from these)</h2>
-      ${LEGACY_ICON_EXAMPLE_LIST}
-    </div>
-  </gux-tab-panel>
-  <gux-tab-panel tab-id="1-4">
-    <div>
-      <h2>Restricted</h2>
-      <p>
-        These icons have carefully defined uses and require approval from the
-        Spark team to apply.
-        <a
-          href="https://form.asana.com/?k=wsglJ3RA89wMSdgRyoGdQg&d=12075379665713"
-          target="_blank"
-          >Request the use of a restricted icon</a
-        >
-      </p>
-
-      <h2>Restricted Icons (Approval required before use)</h2>
-      ${RESTRICTED_ICON_EXAMPLE_LIST}
-    </div>
-  </gux-tab-panel>
-  <gux-tab-panel tab-id="1-5">
-    <div>
-      <h2>Deprecated</h2>
-      <p>These icons have been deprecated.</p>
-
-      ${DEPRECATED_ICON_EXAMPLE_LIST}
-    </div>
-  </gux-tab-panel>
-</gux-tabs>
+<h2>Caching</h2>
+<div>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-left-regular"
+    decorative
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-center-regular"
+    decorative
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-right-regular"
+    decorative
+  ></gux-icon>
+</div>
+<hr />
+<div>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-left-regular"
+    decorative
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-center-regular"
+    decorative
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-right-regular"
+    decorative
+  ></gux-icon>
+</div>
+<hr />
+<div>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-left-regular"
+    decorative
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-center-regular"
+    decorative
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-right-regular"
+    decorative
+  ></gux-icon>
+</div>
+<hr />
+<div>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-left-regular"
+    decorative
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-center-regular"
+    decorative
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-right-regular"
+    decorative
+  ></gux-icon>
+</div>
+<hr />
+<div>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-left-regular"
+    decorative
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-center-regular"
+    decorative
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="fa/align-right-regular"
+    decorative
+  ></gux-icon>
+</div>
+<hr />
+<div>
+  <gux-icon
+    size="large"
+    icon-name="user"
+    screenreader-text="user-01"
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="user"
+    screenreader-text="user-02"
+  ></gux-icon>
+  <gux-icon
+    size="large"
+    icon-name="user"
+    screenreader-text="user-03"
+  ></gux-icon>
+</div>
+<p>Duplicated icons should not require additional network calls</p>
 
 <style
   onload="(function () {
@@ -286,13 +200,13 @@
   .icons-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
     width: 100%;
   }
 
   .icon-example {
     width: 200px;
     height: 100px;
-    margin: 5px;
     text-align: center;
   }
 </style>

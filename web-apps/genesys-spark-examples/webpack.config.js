@@ -69,6 +69,17 @@ module.exports = {
           },
           transform: generateComponentPage
         },
+
+        {
+          from: '../../packages/genesys-spark-components/src/components/**/docs/*.html',
+          to: ({ absoluteFilename }) => {
+            const segments = absoluteFilename.split(path.sep);
+            const component = segments[segments.length - 3];
+            const page = segments[segments.length - 1];
+            return `${component}-${page}`;
+          },
+          transform: generateComponentPage
+        },
         {
           from: '../../packages/genesys-spark/src/style/examples/*.html',
           to: ({ absoluteFilename }) => {
