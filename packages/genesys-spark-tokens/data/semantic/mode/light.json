@@ -582,6 +582,13 @@
           "type": "color",
           "description": "The color for content on error backgrounds that we want to highlight, like the info icon on an alert."
         }
+      },
+      "icon": {
+        "default": {
+          "value": "{foreground.icon.10}",
+          "type": "color",
+          "description": "The color for foreground content on progress_and_loading/default backgrounds."
+        }
       }
     },
     "form_control": {

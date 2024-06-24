@@ -407,7 +407,7 @@
       }
     },
     "color": {
-      "value": "{foreground.primary.10}",
+      "value": "{foreground.system.icon.default}",
       "type": "color"
     }
   },

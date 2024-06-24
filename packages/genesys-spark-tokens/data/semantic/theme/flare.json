@@ -436,6 +436,12 @@
         "value": "{color.plum.700}",
         "type": "color"
       }
+    },
+    "icon": {
+      "10": {
+        "value": "{color.cornflower.700}",
+        "type": "color"
+      }
     }
   },
   "border": {

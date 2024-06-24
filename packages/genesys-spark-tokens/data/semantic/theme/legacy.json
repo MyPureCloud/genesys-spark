@@ -436,6 +436,12 @@
         "value": "{color_legacy.secondary.electric_purple}",
         "type": "color"
       }
+    },
+    "icon": {
+      "10": {
+        "value": "{color_legacy.black.50}",
+        "type": "color"
+      }
     }
   },
   "border": {
