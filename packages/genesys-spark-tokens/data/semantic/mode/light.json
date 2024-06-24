@@ -623,22 +623,22 @@
       },
       "click_input": {
         "enabled": {
-          "value": "{foreground.secondary.20}",
+          "value": "{foreground.form_control.click_input.50}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are enabled but not selected."
         },
         "selected": {
-          "value": "{foreground.tertiary.10}",
+          "value": "{foreground.form_control.click_input.10}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are selected."
         },
         "hover": {
-          "value": "{foreground.tertiary.20}",
+          "value": "{foreground.form_control.click_input.20}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are on the hover state."
         },
         "active": {
-          "value": "{foreground.tertiary.30}",
+          "value": "{foreground.form_control.click_input.30}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are on the active state."
         },

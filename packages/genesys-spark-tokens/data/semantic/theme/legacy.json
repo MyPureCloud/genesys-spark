@@ -442,6 +442,26 @@
         "value": "{color_legacy.black.50}",
         "type": "color"
       }
+    },
+    "form_control": {
+      "click_input": {
+        "10": {
+          "value": "{color_legacy.blue.60}",
+          "type": "color"
+        },
+        "20": {
+          "value": "{color_legacy.blue.50}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color_legacy.blue.40}",
+          "type": "color"
+        },
+        "50": {
+          "value": "{color_legacy.black.100}",
+          "type": "color"
+        }
+      }
     }
   },
   "border": {

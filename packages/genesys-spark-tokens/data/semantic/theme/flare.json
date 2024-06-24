@@ -442,6 +442,26 @@
         "value": "{color.cornflower.700}",
         "type": "color"
       }
+    },
+    "form_control": {
+      "click_input": {
+        "10": {
+          "value": "{color.blueberry.600}",
+          "type": "color"
+        },
+        "20": {
+          "value": "{color.blueberry.700}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color.blueberry.800}",
+          "type": "color"
+        },
+        "50": {
+          "value": "{color.cornflower.500}",
+          "type": "color"
+        }
+      }
     }
   },
   "border": {
