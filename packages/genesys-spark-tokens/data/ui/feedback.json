@@ -313,11 +313,11 @@
   "progress_and_loading": {
     "spinner": {
       "foreground": {
-        "value": "{color.blueberry.600}",
+        "value": "{background.system.progress_and_loading.progressed}",
         "type": "color"
       },
       "base": {
-        "value": "{color.blueberry.200}",
+        "value": "{background.system.progress_and_loading.default}",
         "type": "color"
       },
       "large": {
@@ -339,7 +339,7 @@
       }
     },
     "text_color": {
-      "value": "{color.cornflower.900}",
+      "value": "{foreground.container.high_emphasis}",
       "type": "color"
     },
     "loading_state": {
