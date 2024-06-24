@@ -985,7 +985,8 @@
       "links.in_line.small.text": "S:058c9a189cabf7398ce92201c799034de6869e7c,",
       "links.in_line.small.underlined_text": "S:37800c800d97f218edeeaf1ca814f89f94ddf9ee,",
       "breadcrumbs.primary.separator.typography": "S:34399013dffeaf36782e32f62095c84e884732a1,",
-      "breadcrumbs.secondary.separator.typography": "S:65572e4d34461abd54a785af58a324bfad39075b,"
+      "breadcrumbs.secondary.separator.typography": "S:65572e4d34461abd54a785af58a324bfad39075b,",
+      "menu.grouped_menu.title.text": "S:e7af70cac597000cec53adcbbccb4be12269d821,"
     },
     "selectedTokenSets": {
       "core_deprecated": "source",

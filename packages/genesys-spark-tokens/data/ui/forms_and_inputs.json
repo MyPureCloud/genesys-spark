@@ -420,6 +420,10 @@
         "foreground_color": {
           "value": "{foreground.container.low_emphasis}",
           "type": "color"
+        },
+        "text": {
+          "value": "{heading.overline}",
+          "type": "typography"
         }
       },
       "padding": {
