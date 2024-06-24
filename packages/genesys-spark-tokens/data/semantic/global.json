@@ -6,7 +6,7 @@
           "fontFamily": "{font_family.body}",
           "fontWeight": "{font_weight.regular}",
           "fontSize": "{font_size.xs}",
-          "lineHeight": "{line_height.xs}"
+          "lineHeight": "{line_height.2xs}"
         },
         "type": "typography",
         "description": "This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors."

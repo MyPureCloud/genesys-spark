@@ -220,12 +220,7 @@
       "label": {
         "default": {
           "text": {
-            "value": {
-              "fontFamily": "{font_family.roboto}",
-              "fontWeight": "{font_weight.regular}",
-              "lineHeight": "{line_height.2xs}",
-              "fontSize": "{font_size.xs}"
-            },
+            "value": "{body.sm.regular}",
             "type": "typography"
           }
         },
