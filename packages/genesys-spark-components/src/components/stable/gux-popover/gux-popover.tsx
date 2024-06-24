@@ -94,6 +94,7 @@ export class GuxPopover {
 
     const focusIsOutsidePopover =
       event.relatedTarget && !this.root.contains(event.relatedTarget as Node);
+
     if (focusIsOutsidePopover) {
       this.dismiss();
     }
