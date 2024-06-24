@@ -528,6 +528,23 @@
         "type": "borderWidth",
         "description": "The recommended border width for the dividers within containers, like cards or menus or popovers."
       }
+    },
+    "xsmall": {
+      "gap": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
+      },
+      "horizontal_padding": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The default padding of a  extra small-sized container, like the container of an eyebrow title."
+      },
+      "vertical_padding": {
+        "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "The default padding of a  extra small-sized container, like the container of an eyebrow title."
+      }
     }
   },
   "form_control": {
@@ -629,6 +646,37 @@
         "value": "{size.xs}",
         "type": "sizing",
         "description": "The recommended size of small-sized for styles, for example small icons."
+      }
+    }
+  },
+  "divider": {
+    "width": {
+      "value": "{size.6xs}",
+      "type": "sizing",
+      "description": "The default width of our divider, we usually represent dividers as rectangles on Figma instead of a single line layer."
+    },
+    "xs": {
+      "margin": {
+        "value": "{spacing.6xs}",
+        "type": "spacing"
+      }
+    },
+    "sm": {
+      "margin": {
+        "value": "{spacing.5xs}",
+        "type": "spacing"
+      }
+    },
+    "md": {
+      "margin": {
+        "value": "{spacing.4xs}",
+        "type": "spacing"
+      }
+    },
+    "lg": {
+      "margin": {
+        "value": "{spacing.3xs}",
+        "type": "spacing"
       }
     }
   }
