@@ -14,7 +14,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { trackComponent } from '@utils/tracking/usage';
 
 import tagResources from './i18n/en.json';
-import { GuxTagAccent } from './gux-tag.types';
+import { GuxTagAccent, GuxTagSize, GuxTagEmphasis } from './gux-tag.types';
 
 /**
  * @slot - content
@@ -39,6 +39,12 @@ export class GuxTag {
 
   @Prop()
   removable: boolean = false;
+
+  @Prop()
+  size: GuxTagSize = 'small';
+
+  @Prop()
+  emphasis: GuxTagEmphasis = 'bold';
 
   @State()
   label: string;
@@ -130,7 +136,9 @@ export class GuxTag {
         class={{
           'gux-tag': true,
           [`gux-accent-${this.accent}`]: true,
-          'gux-disabled': this.disabled
+          'gux-disabled': this.disabled,
+          [`gux-size-${this.size}`]: true,
+          [`gux-emphasis-${this.emphasis}`]: true
         }}
         aria-disabled={this.disabled.toString()}
       >
