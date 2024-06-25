@@ -11,3 +11,7 @@ export type GuxTagAccent =
   | '9'
   | '10'
   | 'inherit';
+
+export type GuxTagSize = 'small' | 'large';
+
+export type GuxTagEmphasis = 'bold' | 'subtle';
