@@ -134,6 +134,6 @@ export class GuxFormFieldRadioGroupBeta {
   }
 
   private setLabel(): void {
-    this.label = this.root.querySelector('label[slot="label"]');
+    this.label = this.root.querySelector('label[slot="group-label"]');
   }
 }

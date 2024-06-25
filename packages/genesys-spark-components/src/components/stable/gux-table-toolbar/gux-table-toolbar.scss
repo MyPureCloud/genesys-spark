@@ -12,6 +12,8 @@
 }
 
 :host {
+  position: relative;
+  z-index: var(--gse-semantic-zIndex-sticky);
   display: flex;
   flex-direction: row;
   align-items: center;

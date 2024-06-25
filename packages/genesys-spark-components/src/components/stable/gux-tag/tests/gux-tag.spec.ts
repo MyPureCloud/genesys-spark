@@ -9,10 +9,14 @@ describe('gux-tag', () => {
     [
       '<gux-tag>default</gux-tag>',
       '<gux-tag accent="default">default (explicit)</gux-tag>',
-      '<gux-tag accent="1">navy</gux-tag>',
-      '<gux-tag accent="1"><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
-      '<gux-tag accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
-      '<gux-tag accent="1" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>'
+      '<gux-tag accent="1">Accent 1</gux-tag>',
+      '<gux-tag accent="1"><gux-icon icon-name="bolt" decorative="true"></gux-icon>Accent 1</gux-tag>',
+      '<gux-tag accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>Accent 1</gux-tag>',
+      '<gux-tag accent="1" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>Accent 1</gux-tag>',
+      '<gux-tag emphasis="subtle" accent="1">Subtle 1</gux-tag>',
+      '<gux-tag emphasis="bold" accent="1">Bold 1</gux-tag>',
+      '<gux-tag size="small" accent="1">Small 1</gux-tag>',
+      '<gux-tag size="large" accent="1">Large 1</gux-tag>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });
