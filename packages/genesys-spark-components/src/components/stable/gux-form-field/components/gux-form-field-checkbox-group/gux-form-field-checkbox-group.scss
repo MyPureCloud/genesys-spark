@@ -21,6 +21,17 @@
   }
 }
 
+:host(.gux-group-checkbox) {
+  ::slotted(gux-form-field-checkbox) {
+    //to do style
+    padding-left: 20px;
+  }
+
+  slot[name='group-checkbox']::slotted(gux-form-field-checkbox) {
+    padding-left: 0;
+  }
+}
+
 .gux-form-field-legend-label {
   @include gux-form-field.gse-ui-formControl-label;
 }

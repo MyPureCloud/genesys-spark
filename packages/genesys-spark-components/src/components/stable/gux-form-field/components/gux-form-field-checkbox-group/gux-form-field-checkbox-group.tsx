@@ -1,7 +1,21 @@
-import { Component, Element, h, JSX, State, Prop, Watch } from '@stencil/core';
+import {
+  Component,
+  Element,
+  forceUpdate,
+  h,
+  JSX,
+  State,
+  Prop,
+  Watch
+} from '@stencil/core';
 
 import { OnMutation } from '@utils/decorator/on-mutation';
 import { hasSlot } from '@utils/dom/has-slot';
+
+import {
+  setAllCheckboxInputs,
+  setMainCheckboxElementCheckedState
+} from './gux-form-field-checkbox-group.service';
 
 import {
   GuxFormFieldError,
@@ -75,8 +89,18 @@ export class GuxFormFieldCheckboxGroupBeta {
     this.hasGroupHelp = hasSlot(this.root, 'group-help');
     this.setLabel();
     this.setDisabledCheckbox();
+    // this.setupNestedCheckboxes();
 
     trackComponent(this.root);
+  }
+
+  componentDidLoad(): void {
+    setMainCheckboxElementCheckedState(
+      this.root,
+      this.root.querySelector(
+        'gux-form-field-checkbox[slot="group-checkbox"] input'
+      )
+    );
   }
 
   disconnectedCallback(): void {
@@ -92,6 +116,54 @@ export class GuxFormFieldCheckboxGroupBeta {
         item.hasGroupDisabled = this.disabled;
       });
     }
+  }
+
+  private onMainCheckboxChange(): void {
+    const groupCheckbox = this.root.querySelector(
+      'gux-form-field-checkbox[slot="group-checkbox"] input'
+    );
+    // todo fix this
+    // eslint-disable-next-line
+    setAllCheckboxInputs(this.root, groupCheckbox.checked);
+    forceUpdate(this.root);
+  }
+
+  private setupNestedCheckboxes(): void {
+    const groupCheckbox = this.root.querySelector(
+      'gux-form-field-checkbox[slot="group-checkbox"] input'
+    );
+    if (groupCheckbox) {
+      this.root.classList.add('gux-group-checkbox');
+    } else {
+      this.root.classList.remove('gux-group-checkbox');
+    }
+    groupCheckbox?.addEventListener('change', () => {
+      this.onMainCheckboxChange();
+    });
+    // TODO if length of group checkbox is more than one throw error
+    const checkboxSlots = Array.from(
+      this.root.querySelectorAll('gux-form-field-checkbox input')
+    );
+    if (checkboxSlots?.length) {
+      checkboxSlots.forEach(item => {
+        item.addEventListener('change', () => {
+          this.updateMainCheckbox();
+        });
+        if (groupCheckbox?.checked) {
+          item.checked = true;
+        }
+      });
+    }
+  }
+
+  private updateMainCheckbox(): void {
+    setMainCheckboxElementCheckedState(
+      this.root,
+      this.root.querySelector(
+        'gux-form-field-checkbox[slot="group-checkbox"] input'
+      )
+    );
+    forceUpdate(this.root);
   }
 
   private renderScreenReaderText(
@@ -123,8 +195,11 @@ export class GuxFormFieldCheckboxGroupBeta {
             this.hasGroupHelp
           )}
         </GuxFormFieldLegendLabel>
-        <slot name="group-checkbox" />
-        <slot />
+        <slot
+          onSlotchange={() => this.setupNestedCheckboxes()}
+          name="group-checkbox"
+        />
+        <slot onSlotchange={() => this.updateMainCheckbox()} />
         <GuxFormFieldError show={this.hasGroupError}>
           <slot name="group-error" />
         </GuxFormFieldError>
