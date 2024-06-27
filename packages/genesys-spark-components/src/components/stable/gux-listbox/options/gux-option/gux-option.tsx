@@ -87,6 +87,7 @@ export class GuxOption {
       >
         <div class="gux-option-wrapper">
           <gux-truncate ref={el => (this.truncateElement = el)}>
+            <slot name="text" />
             <slot />
           </gux-truncate>
           <slot onSlotchange={() => this.onSubtextChange()} name="subtext" />

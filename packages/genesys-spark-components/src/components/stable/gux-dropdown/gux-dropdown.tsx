@@ -20,6 +20,7 @@ import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-c
 import { afterNextRender } from '@utils/dom/after-next-render';
 import { trackComponent } from '@utils/tracking/usage';
 import { OnMutation } from '@utils/decorator/on-mutation';
+import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 
 import translationResources from './i18n/en.json';
 
@@ -421,13 +422,17 @@ export class GuxDropdown {
 
   private renderOption(option: HTMLGuxOptionElement): JSX.Element {
     let optionText = option.textContent;
-    if (hasSlot(option, 'subtext')) {
+    // TODO: COMUI-2909 Look at removing this subtext clause
+    if (hasSlot(option, 'text')) {
+      optionText = getSlotTextContent(option, 'text');
+    } else if (hasSlot(option, 'subtext')) {
       const subtext = option.querySelector('[slot=subtext]');
       optionText = optionText.substring(
         0,
         optionText.length - subtext.textContent.length
       );
     }
+
     return (
       <gux-truncate ref={el => (this.truncateElement = el)}>
         {optionText}
