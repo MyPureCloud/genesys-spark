@@ -105,7 +105,10 @@ export class GuxFormFieldRadioGroupBeta {
   }
   render(): JSX.Element {
     return (
-      <GuxFormFieldFieldsetContainer labelPosition="above">
+      <GuxFormFieldFieldsetContainer
+        labelPosition="above"
+        disabled={this.disabled}
+      >
         <GuxFormFieldLegendLabel
           position="above"
           required={false}

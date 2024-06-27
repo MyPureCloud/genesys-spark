@@ -31,6 +31,17 @@ export async function createThemes(sourceFolder, outputFolder) {
         preprocessors: ['tokens-studio'],
         hooks: {
           transforms: {
+            'color/gse': {
+              type: 'value',
+              transitive: false,
+              filter: () => true,
+              transform: token => {
+                if (token.type === 'color') {
+                  return token.value.toLowerCase();
+                }
+                return token.value;
+              }
+            },
             'name/gse': {
               type: 'name',
               transitive: false,
@@ -85,7 +96,7 @@ function getPlatform(name, type, format, transformGroup, outputFolder) {
   return {
     [type]: {
       transformGroup,
-      transforms: ['name/gse'],
+      transforms: ['color/gse', 'name/gse'],
       prefix: 'gse',
       buildPath: `${outputFolder}/${type}/`,
       files: [

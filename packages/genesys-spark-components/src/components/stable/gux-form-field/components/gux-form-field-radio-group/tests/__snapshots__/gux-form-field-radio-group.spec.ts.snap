@@ -162,7 +162,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
 exports[`gux-form-field-radio-beta #render should render component as expected (4) 1`] = `
 <gux-form-field-radio-group-beta disabled="">
   <mock:shadow-root>
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset aria-disabled="true" class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="group-label"></slot>
       </legend>
