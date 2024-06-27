@@ -119,17 +119,15 @@ export class GuxFormFieldCheckboxGroupBeta {
   }
 
   private onMainCheckboxChange(): void {
-    const groupCheckbox = this.root.querySelector(
+    const groupCheckbox: HTMLInputElement = this.root.querySelector(
       'gux-form-field-checkbox[slot="group-checkbox"] input'
     );
-    // todo fix this
-    // eslint-disable-next-line
     setAllCheckboxInputs(this.root, groupCheckbox.checked);
     forceUpdate(this.root);
   }
 
   private setupNestedCheckboxes(): void {
-    const groupCheckbox = this.root.querySelector(
+    const groupCheckbox: HTMLInputElement = this.root.querySelector(
       'gux-form-field-checkbox[slot="group-checkbox"] input'
     );
     if (groupCheckbox) {
@@ -141,7 +139,7 @@ export class GuxFormFieldCheckboxGroupBeta {
       this.onMainCheckboxChange();
     });
     // TODO if length of group checkbox is more than one throw error
-    const checkboxSlots = Array.from(
+    const checkboxSlots: HTMLInputElement[] = Array.from(
       this.root.querySelectorAll('gux-form-field-checkbox input')
     );
     if (checkboxSlots?.length) {
