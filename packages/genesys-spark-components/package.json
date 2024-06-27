@@ -39,7 +39,7 @@
     "stylelint": "stylelint --fix \"**/*.{css,html,scss}\"",
     "svgo": "find ./src/components/stable/gux-icon/icons/**/*.svg -type f ! -path '*/legacy/*' -exec svgo {} +",
     "test": "TZ=UTC stencil test --spec --e2e",
-    "test.ci": "TZ=UTC npm run test.ci.spec",
+    "test.ci": "npm-run-all test.ci.*",
     "test.ci.e2e": "TZ=UTC stencil test --e2e --max-workers=1",
     "test.ci.spec": "TZ=UTC stencil test --spec --max-workers=1",
     "test.e2e": "TZ=UTC stencil test --e2e",
