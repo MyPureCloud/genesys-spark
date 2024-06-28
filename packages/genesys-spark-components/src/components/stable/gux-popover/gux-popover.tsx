@@ -276,6 +276,7 @@ export class GuxPopover {
     return (
       <div
         ref={(el: HTMLDivElement) => (this.popupElement = el)}
+        aria-expanded={this.isOpen.toString()}
         class={{
           'gux-hidden': !this.isOpen,
           'gux-popover-wrapper': true
