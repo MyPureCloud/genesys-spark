@@ -155,8 +155,8 @@
         "foreground_color": "#1b2c48"
       },
       "bold": {
-        "background_color": "#ac75ff",
-        "foreground_color": "#1b2c48"
+        "background_color": "#8a5ecc",
+        "foreground_color": "#ffffff"
       }
     },
     "text": {
