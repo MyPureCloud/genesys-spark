@@ -36,7 +36,9 @@ import { findElementById } from '@utils/dom/find-element-by-id';
 export class GuxPopover {
   private popupElement: HTMLDivElement;
   private arrowElement: HTMLDivElement;
+  private contentElement: HTMLDivElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
+  private lastActiveElement: HTMLElement;
 
   @Element()
   private root: HTMLElement;
@@ -205,6 +207,7 @@ export class GuxPopover {
     const dismissEvent = this.guxdismiss.emit();
     if (!dismissEvent.defaultPrevented) {
       this.isOpen = false;
+      this.lastActiveElement?.focus();
     }
   }
 
@@ -215,16 +218,42 @@ export class GuxPopover {
   componentDidLoad(): void {
     if (this.isOpen) {
       this.runUpdatePosition();
+      this.focusFirstSlottedElement();
     }
   }
 
   componentDidUpdate(): void {
+    this.lastActiveElement = document.activeElement as HTMLElement;
+
     if (this.isOpen) {
+      this.focusFirstSlottedElement();
       this.runUpdatePosition();
     } else if (this.cleanupUpdatePosition) {
       this.cleanupUpdatePosition();
     }
   }
+
+  private focusFirstSlottedElement(): void {
+    this.contentElement.focus();
+
+    // TODO: should we dynamically focus first focusable elemtn in the slotted content?
+    //
+    // // Focus the first focusable element in the slotted content
+    // const contentElementChildren = this.getRootChildren(this.contentElement);
+    // if (contentElementChildren?.length) {
+    //   const firstChild = this.getRootChildren(this.contentElement)[0] as HTMLElement;
+    //   const firstSlottedInput = firstChild.querySelector(
+    //     'gux-button gux-dropdown'
+    //   ) as HTMLElement;
+    //   firstSlottedInput.focus();
+    // }
+  }
+
+  // private getRootChildren(root: HTMLElement): Element[] {
+  //   const slot = root.querySelector('slot');
+
+  //   return slot ? slot.assignedElements() : Array.from(root.children);
+  // }
 
   disconnectedCallback(): void {
     if (this.cleanupUpdatePosition) {
@@ -263,7 +292,11 @@ export class GuxPopover {
           <slot name="title"></slot>
           {this.renderDismissButton()}
         </div>
-        <div class="gux-popover-content">
+        <div
+          ref={(el: HTMLDivElement) => (this.contentElement = el)}
+          tabIndex={0}
+          class="gux-popover-content"
+        >
           <slot />
         </div>
       </div>
