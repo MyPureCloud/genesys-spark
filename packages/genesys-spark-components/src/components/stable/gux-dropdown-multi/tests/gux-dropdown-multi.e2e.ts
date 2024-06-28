@@ -1,6 +1,15 @@
 import { E2EElement, E2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '@test/e2eTestUtils';
 
+const axeExclusions = [
+  {
+    issueId: 'target-size',
+    target: 'gux-dropdown-multi,button',
+    exclusionReason:
+      'COMUI-2948 Fix any of the following: Target has insufficient size (20px by 18px, should be at least 24px by 24px); Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px.'
+  }
+];
+
 describe('gux-dropdown-multi', () => {
   const html = `
     <gux-dropdown-multi lang="en">
@@ -29,11 +38,11 @@ describe('gux-dropdown-multi', () => {
     it('opens drop down on click', async () => {
       const page = await newSparkE2EPage({ html });
       await page.waitForChanges();
-      await a11yCheck(page, [], 'before opening dropdown');
+      await a11yCheck(page, axeExclusions, 'before opening dropdown');
       const dropdownButtonElement = await page.find('pierce/.gux-field');
       await dropdownButtonElement.click();
       await page.waitForChanges();
-      await a11yCheck(page, [], 'after opening dropdown');
+      await a11yCheck(page, axeExclusions, 'after opening dropdown');
 
       const dropMenu = await page.find('pierce/.gux-popup-container');
 
@@ -265,7 +274,7 @@ describe('gux-dropdown-multi', () => {
         const { page, dropdown } = await setupPage(creatableDropdown);
         await inputFilter(page, dropdown, 'bee');
         const createAction = await getCreateAction(dropdown);
-        await a11yCheck(page);
+        await a11yCheck(page, axeExclusions);
         expect(createAction).not.toBeNull();
         expect(createAction).not.toHaveClass('gux-filtered');
       });

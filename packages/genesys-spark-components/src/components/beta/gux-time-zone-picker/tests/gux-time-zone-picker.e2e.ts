@@ -1,6 +1,15 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 import { E2EPage } from '@stencil/core/testing';
 
+const axeExclusions = [
+  {
+    issueId: 'target-size',
+    target: 'gux-time-zone-picker-beta,gux-dropdown,button',
+    exclusionReason:
+      'COMUI-2944 Fix any of the following: Target has insufficient size (20px by 18px, should be at least 24px by 24px); Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px.'
+  }
+];
+
 async function openWithClick(page: E2EPage) {
   const dropdownButtonElement = await page.find('pierce/.gux-field');
   await dropdownButtonElement.click();
@@ -29,9 +38,9 @@ describe('gux-time-zone-picker-beta', () => {
     const html = `<gux-time-zone-picker-beta></gux-time-zone-picker-beta>`;
     const page = await newSparkE2EPage({ html });
 
-    await a11yCheck(page);
+    await a11yCheck(page, axeExclusions);
     await openWithClick(page);
-    await a11yCheck(page);
+    await a11yCheck(page, axeExclusions);
     let visibleItems = await unfilteredOptions(page);
     expect(visibleItems.length).toBe(478);
 
@@ -50,9 +59,9 @@ describe('gux-time-zone-picker-beta', () => {
     const html = `<gux-time-zone-picker-beta></gux-time-zone-picker-beta>`;
     const page = await newSparkE2EPage({ html });
 
-    await a11yCheck(page);
+    await a11yCheck(page, axeExclusions);
     await openWithClick(page);
-    await a11yCheck(page);
+    await a11yCheck(page, axeExclusions);
     let visibleItems = await unfilteredOptions(page);
     expect(visibleItems.length).toBe(478);
 
