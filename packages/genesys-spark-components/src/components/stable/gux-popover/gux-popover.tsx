@@ -38,7 +38,7 @@ export class GuxPopover {
   private popupElement: HTMLDivElement;
   private arrowElement: HTMLDivElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
-  private id: string = randomHTMLId('gux-tooltip');
+  private id: string = randomHTMLId('gux-popover');
 
   @Element()
   private root: HTMLElement;
