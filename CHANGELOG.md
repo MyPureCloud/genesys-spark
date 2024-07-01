@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.63.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.0...v4.63.1) (2024-06-30)
+
+## [4.63.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.62.2...v4.63.0) (2024-06-26)
+
+
+### Features
+
+* **tag:** new bold styles and large size ([34fd359](https://github.com/MyPureCloud/genesys-spark/commit/34fd359badf56ad305270aabcf4ec7bb265ba76a))
+
+
+### Bug Fixes
+
+* **form-field-radio-group:** fix radio group label text ([31fef7b](https://github.com/MyPureCloud/genesys-spark/commit/31fef7bff4b0d08a9fe3139de295230f4303b638))
+
 ### [4.62.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.62.1...v4.62.2) (2024-06-25)
 
 ### [4.62.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.62.0...v4.62.1) (2024-06-20)
