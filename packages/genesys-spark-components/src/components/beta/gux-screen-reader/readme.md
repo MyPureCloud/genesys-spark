@@ -16,6 +16,7 @@
 
 ### Used by
 
+ - [gux-form-field-checkbox-group-beta](../../stable/gux-form-field/components/gux-form-field-checkbox-group)
  - [gux-form-field-dropdown](../../stable/gux-form-field/components/gux-form-field-dropdown)
  - [gux-form-field-file](../../stable/gux-form-field/components/gux-form-field-file)
  - [gux-form-field-phone](../../stable/gux-form-field/components/gux-form-field-phone)
@@ -26,6 +27,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  gux-form-field-checkbox-group-beta --> gux-screen-reader-beta
   gux-form-field-dropdown --> gux-screen-reader-beta
   gux-form-field-file --> gux-screen-reader-beta
   gux-form-field-phone --> gux-screen-reader-beta
