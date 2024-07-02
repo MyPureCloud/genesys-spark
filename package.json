@@ -29,6 +29,7 @@
     "lint-staged.workspaces": "npm run lint-staged --workspaces --if-present",
     "new-tokens-data": "npm run snapshot --workspace=packages/genesys-spark-tokens",
     "playground.angular": "cd ./playground/angular-v13 && rm -f ./package-lock.json && npm install && npm start",
+    "playground.ember": "cd ./playground/ember-3 && rm -f ./package-lock.json && npm install && npm start",
     "playground.knockout": "cd ./playground/knockout-3 && npm install && npm start",
     "playground.vue": "cd ./playground/vue-3 && npm install && npm start",
     "prepare": "husky",
