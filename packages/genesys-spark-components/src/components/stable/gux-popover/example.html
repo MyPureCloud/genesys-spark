@@ -2,6 +2,11 @@
 <div class="scroll-container">
   <div class="scroll-interior">
     <div id="popover-target">Example Element</div>
+
+    <div class="open-popover">
+      <button id="open-popover">Open Popover</button>
+    </div>
+
     <gux-popover
       id="popover-example"
       position="top"
@@ -31,8 +36,13 @@
   onload="(function () {
   const popoverTarget = document.getElementById('popover-target');
   const popoverExample = document.getElementById('popover-example');
+  const openPopover = document.getElementById('open-popover');
 
   popoverTarget.addEventListener('mouseover', () => {
+    popoverExample.isOpen = true;
+  });
+
+  openPopover.addEventListener('click', () => {
     popoverExample.isOpen = true;
   });
 })()"
@@ -74,5 +84,9 @@
     background-color: #fdfdfd;
     border: 1px #e4e9f0;
     box-shadow: 0 0 2px fade(#202937, 24%);
+  }
+
+  .open-popover {
+    padding: 10px;
   }
 </style>
