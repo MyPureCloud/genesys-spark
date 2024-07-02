@@ -110,6 +110,18 @@
   </fieldset>
 
   <fieldset>
+    <legend>Label Info</legend>
+
+    <gux-form-field-number>
+      <input slot="input" type="number" name="e-1" value="10" />
+      <label slot="label">Default</label>
+      <gux-label-info-beta slot="label-info">
+        <span slot="content">This is some tooltip text</span>
+      </gux-label-info-beta>
+    </gux-form-field-number>
+  </fieldset>
+
+  <fieldset>
     <legend>Programmatically set value</legend>
 
     <gux-form-field-number id="p" clearable>

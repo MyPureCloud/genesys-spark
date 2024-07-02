@@ -22,6 +22,7 @@
  - [gux-form-field-radio-group-beta](../../stable/gux-form-field/components/gux-form-field-radio-group)
  - [gux-form-field-time-picker](../../stable/gux-form-field/components/gux-form-field-time-picker)
  - [gux-form-field-time-zone-picker](../../stable/gux-form-field/components/gux-form-field-time-zone-picker)
+ - [gux-icon-tooltip-beta](../gux-icon-tooltip)
 
 ### Graph
 ```mermaid
@@ -32,6 +33,7 @@ graph TD;
   gux-form-field-radio-group-beta --> gux-screen-reader-beta
   gux-form-field-time-picker --> gux-screen-reader-beta
   gux-form-field-time-zone-picker --> gux-screen-reader-beta
+  gux-icon-tooltip-beta --> gux-screen-reader-beta
   style gux-screen-reader-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

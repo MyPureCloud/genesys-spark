@@ -6,7 +6,8 @@ import {
   JSX,
   Method,
   Prop,
-  State
+  State,
+  Listen
 } from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
@@ -20,6 +21,7 @@ import {
   GuxFormFieldHelp,
   GuxFormFieldError,
   GuxFormFieldLabel,
+  GuxFormFieldLabelContainer,
   GuxFormFieldContainer
 } from '../../functional-components/functional-components';
 
@@ -41,6 +43,7 @@ import { trackComponent } from '@utils/tracking/usage';
  * @slot suffix - Optional slot for suffix
  * @slot error - Optional slot for error message
  * @slot help - Optional slot for help message
+ * @slot label-info - Optional slot for label tooltip
  */
 @Component({
   styleUrl: 'gux-form-field-text-like.scss',
@@ -50,6 +53,7 @@ import { trackComponent } from '@utils/tracking/usage';
 export class GuxFormFieldTextLike {
   private input: HTMLInputElement;
   private label: HTMLLabelElement;
+  private labelInfo: HTMLGuxLabelInfoBetaElement;
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
 
@@ -91,8 +95,35 @@ export class GuxFormFieldTextLike {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
+    this.labelInfo = this.root.querySelector('gux-label-info-beta');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+  }
+
+  @Listen('keyup')
+  handleKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Tab': {
+        if (this.input.matches(':focus-visible')) {
+          void this.labelInfo?.showTooltip();
+          setTimeout(() => {
+            void this.labelInfo?.hideTooltip();
+          }, 6000);
+        }
+        break;
+      }
+      default: {
+        if (this.input.matches(':focus-visible')) {
+          void this.labelInfo?.hideTooltip();
+        }
+        break;
+      }
+    }
+  }
+
+  @Listen('focusout')
+  onFocusout(): void {
+    void this.labelInfo?.hideTooltip();
   }
 
   @Method()
@@ -117,6 +148,7 @@ export class GuxFormFieldTextLike {
     this.setInput();
     this.setLabel();
 
+    this.labelInfo = this.root.querySelector('gux-label-info-beta');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
     this.hasPrefix = Boolean(this.root.querySelector('[slot="prefix"]'));
@@ -145,12 +177,12 @@ export class GuxFormFieldTextLike {
   render(): JSX.Element {
     return (
       <GuxFormFieldContainer labelPosition={this.computedLabelPosition}>
-        <GuxFormFieldLabel
-          position={this.computedLabelPosition}
-          required={this.required}
-        >
-          <slot name="label" onSlotchange={() => this.setLabel()} />
-        </GuxFormFieldLabel>
+        <GuxFormFieldLabelContainer labelPosition={this.computedLabelPosition}>
+          <GuxFormFieldLabel required={this.required}>
+            <slot name="label" onSlotchange={() => this.setLabel()} />
+          </GuxFormFieldLabel>
+          <slot name="label-info" />
+        </GuxFormFieldLabelContainer>
         <div class="gux-input-and-error-container">
           <div
             class={{

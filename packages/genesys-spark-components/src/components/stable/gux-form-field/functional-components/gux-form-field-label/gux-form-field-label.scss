@@ -9,21 +9,5 @@
         content: ' *';
       }
     }
-
-    &.gux-beside {
-      position: relative;
-      top: 8px;
-      width: fit-content;
-      min-width: 45px;
-      margin-right: var(--gse-ui-formControl-label-gap);
-    }
-
-    &.gux-above {
-      padding: var(--gse-ui-formControl-label-padding);
-    }
-
-    &.gux-screenreader {
-      @include mixins.gux-sr-only;
-    }
   }
 }

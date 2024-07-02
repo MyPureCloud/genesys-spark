@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
+import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
@@ -11,7 +11,8 @@ import {
   GuxFormFieldHelp,
   GuxFormFieldError,
   GuxFormFieldLabel,
-  GuxFormFieldContainer
+  GuxFormFieldContainer,
+  GuxFormFieldLabelContainer
 } from '../../functional-components/functional-components';
 
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
@@ -36,6 +37,7 @@ import { trackComponent } from '@utils/tracking/usage';
 export class GuxFormFieldColor {
   private input: HTMLInputElement;
   private label: HTMLLabelElement;
+  private labelInfo: HTMLGuxLabelInfoBetaElement;
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
 
@@ -62,14 +64,44 @@ export class GuxFormFieldColor {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
+    this.labelInfo = this.root.querySelector('gux-label-info-beta');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+  }
+
+  @Listen('keyup')
+  handleKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Tab': {
+        if (this.input.matches(':focus-visible')) {
+          void this.labelInfo?.showTooltip();
+          console.log('test 1');
+          setTimeout(() => {
+            console.log('test 2');
+            void this.labelInfo?.hideTooltip();
+          }, 6000);
+        }
+        break;
+      }
+      default: {
+        if (this.input.matches(':focus-visible')) {
+          void this.labelInfo?.hideTooltip();
+        }
+        break;
+      }
+    }
+  }
+
+  @Listen('focusout')
+  onFocusout(): void {
+    void this.labelInfo?.hideTooltip();
   }
 
   componentWillLoad(): void {
     this.setInput();
     this.setLabel();
 
+    this.labelInfo = this.root.querySelector('gux-label-info-beta');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
 
@@ -88,12 +120,12 @@ export class GuxFormFieldColor {
   render(): JSX.Element {
     return (
       <GuxFormFieldContainer labelPosition={this.computedLabelPosition}>
-        <GuxFormFieldLabel
-          position={this.computedLabelPosition}
-          required={this.required}
-        >
-          <slot name="label" onSlotchange={() => this.setLabel()} />
-        </GuxFormFieldLabel>
+        <GuxFormFieldLabelContainer labelPosition={this.computedLabelPosition}>
+          <GuxFormFieldLabel required={this.required}>
+            <slot name="label" onSlotchange={() => this.setLabel()} />
+          </GuxFormFieldLabel>
+          <slot name="label-info" />
+        </GuxFormFieldLabelContainer>
         <div class="gux-input-and-error-container">
           <div
             class={{

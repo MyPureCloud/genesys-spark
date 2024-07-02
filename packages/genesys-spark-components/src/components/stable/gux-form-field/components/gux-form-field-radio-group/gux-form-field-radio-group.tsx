@@ -12,6 +12,7 @@ import {
 import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 
 import { trackComponent } from '@utils/tracking/usage';
+import { GuxFormFieldLegendLabelContainer } from '../../functional-components/gux-form-field-legend-label-container/gux-form-field-legend-label-container';
 
 /**
  * @slot group-label - Required slot for label tag
@@ -109,22 +110,24 @@ export class GuxFormFieldRadioGroupBeta {
         labelPosition="above"
         disabled={this.disabled}
       >
-        <GuxFormFieldLegendLabel
-          position="above"
-          required={false}
-          labelText={this.label?.textContent}
-        >
-          <slot name="group-label" onSlotchange={() => this.setLabel()} />
+        <GuxFormFieldLegendLabelContainer labelPosition="above">
+          <GuxFormFieldLegendLabel
+            required={false}
+            labelText={this.label?.textContent}
+          >
+            <slot name="group-label" onSlotchange={() => this.setLabel()} />
 
-          {this.renderScreenReaderText(
-            getSlotTextContent(this.root, 'group-error'),
-            this.hasGroupError
-          )}
-          {this.renderScreenReaderText(
-            getSlotTextContent(this.root, 'group-help'),
-            this.hasGroupHelp
-          )}
-        </GuxFormFieldLegendLabel>
+            {this.renderScreenReaderText(
+              getSlotTextContent(this.root, 'group-error'),
+              this.hasGroupError
+            )}
+            {this.renderScreenReaderText(
+              getSlotTextContent(this.root, 'group-help'),
+              this.hasGroupHelp
+            )}
+          </GuxFormFieldLegendLabel>
+          <slot name="label-info" />
+        </GuxFormFieldLegendLabelContainer>
         <slot />
         <GuxFormFieldError show={this.hasGroupError}>
           <slot name="group-error" />

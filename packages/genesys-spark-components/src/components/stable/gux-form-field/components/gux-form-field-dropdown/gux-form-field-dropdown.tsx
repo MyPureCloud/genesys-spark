@@ -1,4 +1,13 @@
-import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  JSX,
+  Listen,
+  Prop,
+  State,
+  Watch
+} from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
@@ -10,6 +19,7 @@ import {
   GuxFormFieldHelp,
   GuxFormFieldError,
   GuxFormFieldLegendLabel,
+  GuxFormFieldLegendLabelContainer,
   GuxFormFieldFieldsetContainer
 } from '../../functional-components/functional-components';
 import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
@@ -28,6 +38,7 @@ import componentResources from './i18n/en.json';
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
  * @slot help - Optional slot for help message
+ * @slot label-info - Optional slot for label tooltip
  */
 @Component({
   styleUrl: 'gux-form-field-dropdown.scss',
@@ -39,6 +50,7 @@ export class GuxFormFieldDropdown {
   private listboxElement: HTMLGuxListboxElement | HTMLGuxListboxMultiElement;
   private dropdownElement: HTMLGuxDropdownElement | HTMLGuxDropdownMultiElement;
   private label: HTMLLabelElement;
+  private labelInfo: HTMLGuxLabelInfoBetaElement;
   private requiredObserver: MutationObserver;
 
   @Element()
@@ -71,8 +83,35 @@ export class GuxFormFieldDropdown {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
+    this.labelInfo = this.root.querySelector('gux-label-info-beta');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+  }
+
+  @Listen('keyup')
+  handleKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Tab': {
+        if (this.dropdownElement.matches(':focus-visible')) {
+          void this.labelInfo?.showTooltip();
+          setTimeout(() => {
+            void this.labelInfo?.hideTooltip();
+          }, 6000);
+        }
+        break;
+      }
+      default: {
+        if (this.dropdownElement.matches(':focus-visible')) {
+          void this.labelInfo?.hideTooltip();
+        }
+        break;
+      }
+    }
+  }
+
+  @Listen('focusout')
+  onFocusout(): void {
+    void this.labelInfo?.hideTooltip();
   }
 
   async componentWillLoad(): Promise<void> {
@@ -84,6 +123,7 @@ export class GuxFormFieldDropdown {
     this.setInput();
     this.setLabel();
 
+    this.labelInfo = this.root.querySelector('gux-label-info-beta');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
 
@@ -95,6 +135,7 @@ export class GuxFormFieldDropdown {
       this.requiredObserver.disconnect();
     }
   }
+
   private renderScreenReaderText(
     text: string,
     condition: boolean = false
@@ -105,28 +146,33 @@ export class GuxFormFieldDropdown {
       ) as JSX.Element;
     }
   }
+
   render(): JSX.Element {
     return (
       <GuxFormFieldFieldsetContainer labelPosition={this.computedLabelPosition}>
-        <GuxFormFieldLegendLabel
-          position={this.computedLabelPosition}
-          required={this.required}
-          labelText={this.label?.textContent}
+        <GuxFormFieldLegendLabelContainer
+          labelPosition={this.computedLabelPosition}
         >
-          <slot name="label" onSlotchange={() => this.setLabel()} />
-          {this.renderScreenReaderText(
-            this.getI18nValue('required'),
-            this.required
-          )}
-          {this.renderScreenReaderText(
-            getSlotTextContent(this.root, 'error'),
-            this.hasError
-          )}
-          {this.renderScreenReaderText(
-            getSlotTextContent(this.root, 'help'),
-            this.hasHelp
-          )}
-        </GuxFormFieldLegendLabel>
+          <GuxFormFieldLegendLabel
+            required={this.required}
+            labelText={this.label?.textContent}
+          >
+            <slot name="label" onSlotchange={() => this.setLabel()} />
+            {this.renderScreenReaderText(
+              this.getI18nValue('required'),
+              this.required
+            )}
+            {this.renderScreenReaderText(
+              getSlotTextContent(this.root, 'error'),
+              this.hasError
+            )}
+            {this.renderScreenReaderText(
+              getSlotTextContent(this.root, 'help'),
+              this.hasHelp
+            )}
+          </GuxFormFieldLegendLabel>
+          <slot name="label-info" />
+        </GuxFormFieldLegendLabelContainer>
         <div class="gux-input-and-error-container">
           <div
             class={{
