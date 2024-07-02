@@ -15,6 +15,14 @@
   display: block;
 }
 
+::slotted(gux-form-field-radio) {
+  padding-top: var(--gse-ui-formControl-group-gapItems);
+}
+
+::slotted(gux-form-field-radio:first-of-type) {
+  padding-top: 0;
+}
+
 :host([disabled]) {
   .gux-form-field-legend-label {
     opacity: var(--gse-ui-formControl-input-disabled-opacity);
