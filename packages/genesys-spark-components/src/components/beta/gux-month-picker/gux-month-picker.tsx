@@ -120,9 +120,8 @@ export class GuxMonthPicker {
 
   @Listen('focusout')
   onFocusout(event: FocusEvent): void {
-    const focusIsOutsideComponent = !this.root.contains(
-      event.relatedTarget as Node
-    );
+    const focusIsOutsideComponent =
+      event.relatedTarget && !this.root.contains(event.relatedTarget as Node);
     if (focusIsOutsideComponent) {
       this.expanded = false;
     }
