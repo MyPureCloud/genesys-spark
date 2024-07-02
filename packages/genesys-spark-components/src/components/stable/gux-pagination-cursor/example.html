@@ -1,46 +1,66 @@
 <h1>gux-pagination-cursor</h1>
 <h2>Default (no previous or next page available)</h2>
 <div lang="en">
-  <div class="table-placeholder"></div>
-  <gux-pagination-cursor></gux-pagination-cursor>
+  <div id="default" class="table-placeholder"></div>
+  <gux-pagination-cursor
+    controls="default"
+    label="Pagination for default example"
+  ></gux-pagination-cursor>
 </div>
 
 <h2>Next page available</h2>
 <div lang="en">
-  <div class="table-placeholder"></div>
-  <gux-pagination-cursor has-next></gux-pagination-cursor>
+  <div id="next" class="table-placeholder"></div>
+  <gux-pagination-cursor
+    has-next
+    controls="next"
+    label="Pagination for next example"
+  ></gux-pagination-cursor>
 </div>
 
 <h2>Next and previous page available</h2>
 <div lang="en">
-  <div class="table-placeholder"></div>
-  <gux-pagination-cursor has-previous has-next></gux-pagination-cursor>
+  <div id="next-previous" class="table-placeholder"></div>
+  <gux-pagination-cursor
+    has-previous
+    has-next
+    controls="next-previous"
+    label="Pagination for next and previous example"
+  ></gux-pagination-cursor>
 </div>
 
 <h2>Previous page available</h2>
 <div lang="en">
-  <div class="table-placeholder"></div>
-  <gux-pagination-cursor has-previous></gux-pagination-cursor>
+  <div id="previous" class="table-placeholder"></div>
+  <gux-pagination-cursor
+    has-previous
+    controls="previous"
+    label="Pagination for previous example"
+  ></gux-pagination-cursor>
 </div>
 
 <h2>Advanced Layout</h2>
 <div lang="en">
-  <div class="table-placeholder"></div>
+  <div id="advanced" class="table-placeholder"></div>
   <gux-pagination-cursor
     layout="advanced"
     has-previous
     has-next
+    controls="advanced"
+    label="Pagination for advanced example"
   ></gux-pagination-cursor>
 </div>
 
 <h2>Advanced Layout with Item Per Page dropdown</h2>
 <div lang="en">
-  <div class="table-placeholder"></div>
+  <div id="advanced-per-item" class="table-placeholder"></div>
   <gux-pagination-cursor
     layout="advanced"
     items-per-page="25"
     has-previous
     has-next
+    controls="advanced-per-item"
+    label="Pagination for advanced example with item per page dropdown"
   ></gux-pagination-cursor>
 </div>
 
