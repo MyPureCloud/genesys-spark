@@ -10,16 +10,18 @@ exports[`gux-form-field-checkbox-group-beta #render should render component as e
     </div>
     <div aria-disabled="false" class="gux-label-beside">
       <slot name="label"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
-        </div>
+    </div>
+  </div>
+  <div class="error-and-help-text">
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -36,16 +38,18 @@ exports[`gux-form-field-checkbox-group-beta #render should render component as e
     </div>
     <div aria-disabled="false" class="gux-label-beside">
       <slot name="label"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
-        </div>
+    </div>
+  </div>
+  <div class="error-and-help-text">
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -62,42 +66,18 @@ exports[`gux-form-field-checkbox-group-beta #render should render component as e
     </div>
     <div aria-disabled="false" class="gux-label-beside">
       <slot name="label"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
-        </div>
-      </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
-      </div>
     </div>
   </div>
-</div>
-`;
-
-exports[`gux-form-field-checkbox-group-beta #render should render component as expected (4) 1`] = `"<gux-form-field-checkbox class="gux-disabled" hydrated=""> <input slot="input" type="checkbox" name="food-1" value="pizza" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Pizza</label> </gux-form-field-checkbox>"`;
-
-exports[`gux-form-field-checkbox-group-beta #render should render component as expected (4) 2`] = `
-<div class="gux-form-field-container">
-  <div class="gux-input-label">
-    <div class="gux-input">
-      <slot name="input"></slot>
-    </div>
-    <div aria-disabled="true" class="gux-label-beside">
-      <slot name="label"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
-        </div>
+  <div class="error-and-help-text">
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>

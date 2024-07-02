@@ -11,6 +11,7 @@ import {
 
 import { OnMutation } from '@utils/decorator/on-mutation';
 import { hasSlot } from '@utils/dom/has-slot';
+import { logWarn } from '@utils/error/log-error';
 
 import {
   setAllCheckboxInputs,
@@ -89,7 +90,6 @@ export class GuxFormFieldCheckboxGroupBeta {
     this.hasGroupHelp = hasSlot(this.root, 'group-help');
     this.setLabel();
     this.setDisabledCheckbox();
-    // this.setupNestedCheckboxes();
 
     trackComponent(this.root);
   }
@@ -127,6 +127,9 @@ export class GuxFormFieldCheckboxGroupBeta {
   }
 
   private setupNestedCheckboxes(): void {
+    this.warnMultipleGroupCheckbox();
+    this.warnGroupCheckboxNameAttr();
+
     const groupCheckbox: HTMLInputElement = this.root.querySelector(
       'gux-form-field-checkbox[slot="group-checkbox"] input'
     );
@@ -138,7 +141,10 @@ export class GuxFormFieldCheckboxGroupBeta {
     groupCheckbox?.addEventListener('change', () => {
       this.onMainCheckboxChange();
     });
-    // TODO if length of group checkbox is more than one throw error
+    this.initialSetNestedCheckboxes(groupCheckbox?.checked);
+  }
+
+  private initialSetNestedCheckboxes(groupCheckboxChecked): void {
     const checkboxSlots: HTMLInputElement[] = Array.from(
       this.root.querySelectorAll('gux-form-field-checkbox input')
     );
@@ -147,10 +153,28 @@ export class GuxFormFieldCheckboxGroupBeta {
         item.addEventListener('change', () => {
           this.updateMainCheckbox();
         });
-        if (groupCheckbox?.checked) {
+        if (groupCheckboxChecked && !item.disabled) {
           item.checked = true;
         }
       });
+    }
+  }
+
+  private warnMultipleGroupCheckbox(): void {
+    const groupCheckboxList = this.root.querySelectorAll(
+      'gux-form-field-checkbox[slot="group-checkbox"] input'
+    );
+    if (groupCheckboxList?.length > 1) {
+      logWarn(this.root, 'Can only have one group checkbox');
+    }
+  }
+
+  private warnGroupCheckboxNameAttr(): void {
+    const groupCheckbox: HTMLInputElement = this.root.querySelector(
+      'gux-form-field-checkbox[slot="group-checkbox"] input'
+    );
+    if (groupCheckbox?.hasAttribute('name')) {
+      logWarn(this.root, 'Group checkbox should not have a name attribute');
     }
   }
 

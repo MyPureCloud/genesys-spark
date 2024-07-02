@@ -5,7 +5,7 @@ export function setAllCheckboxInputs(
   checked: boolean
 ): void {
   getCheckboxInputs(root).forEach(checkboxInput => {
-    if (checkboxInput.checked !== checked) {
+    if (checkboxInput.checked !== checked && !checkboxInput.disabled) {
       checkboxInput.checked = checked;
       simulateNativeEvent(checkboxInput, 'input');
       simulateNativeEvent(checkboxInput, 'change');
