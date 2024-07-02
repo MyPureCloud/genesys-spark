@@ -6,6 +6,7 @@ import {
   Prop,
   State,
   Method,
+  Listen,
   Watch
 } from '@stencil/core';
 
@@ -35,9 +36,7 @@ import translationResources from './i18n/en.json';
 })
 export class GuxMonthCalendar {
   private i18n: GetI18nValue;
-  private previousYearElement: HTMLButtonElement;
   private nextYearElement: HTMLButtonElement;
-  private monthListElement: HTMLGuxMonthListElement;
 
   @Element()
   root: HTMLElement;
@@ -66,6 +65,15 @@ export class GuxMonthCalendar {
   @State()
   locale: string;
 
+  @State()
+  previewValue: string;
+
+  /**
+   * Controls hiding and showing the month-calendar
+   */
+  @State()
+  expanded: boolean = true;
+
   @Watch('value')
   onValueUpdate(newValue: GuxISOYearMonth) {
     const { year } = getYearMonthObject(newValue);
@@ -79,6 +87,7 @@ export class GuxMonthCalendar {
   @Method()
   // eslint-disable-next-line @typescript-eslint/require-await
   async guxFocus(iSOYearMonth: GuxISOYearMonth): Promise<void> {
+    this.expanded = true;
     iSOYearMonth = iSOYearMonth || getCurrentISOYearMonth();
 
     const { year } = getYearMonthObject(iSOYearMonth);
@@ -94,6 +103,25 @@ export class GuxMonthCalendar {
     });
   }
 
+  @Listen('keydown')
+  onKeyDown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Tab':
+        // Manually move focus to the selected month if the focus is currently on the next year arrow in the header
+        if (!event.shiftKey && this.nextYearElement.matches(':focus-visible')) {
+          const monthElement: HTMLButtonElement =
+            this.root.shadowRoot.querySelector(
+              `gux-month-list-item[value="${this.previewValue}"]`
+            );
+          if (monthElement) {
+            monthElement.focus();
+          }
+          event.preventDefault();
+        }
+        break;
+    }
+  }
+
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     if (useRegionalDates()) {
@@ -103,6 +131,7 @@ export class GuxMonthCalendar {
     }
     if (this.value) {
       this.year = getYearMonthObject(this.value).year;
+      this.previewValue = this.value;
     } else {
       this.year = getYearMonthObject(getCurrentISOYearMonth()).year;
     }
@@ -110,6 +139,7 @@ export class GuxMonthCalendar {
 
   private updateValue(value: GuxISOYearMonth): void {
     this.value = value;
+    this.previewValue = this.value;
 
     simulateNativeEvent(this.root, 'input');
     simulateNativeEvent(this.root, 'change');
@@ -163,6 +193,9 @@ export class GuxMonthCalendar {
 
   private changeYear(increment: number): void {
     this.year = (parseInt(this.year) + increment).toString();
+    const month = getYearMonthObject(this.value).month;
+    const value = getISOYearMonth(this.year, month);
+    this.previewValue = value;
   }
 
   private isPreviousYearLessThanMinYear(
@@ -192,18 +225,6 @@ export class GuxMonthCalendar {
     );
   }
 
-  private doFocusTrap(): void {
-    if (!this.previousYearElement.disabled) {
-      this.previousYearElement.focus();
-    }
-
-    if (!this.nextYearElement.disabled) {
-      this.nextYearElement.focus();
-    }
-
-    this.monthListElement.focus();
-  }
-
   private renderHeader(): JSX.Element {
     return (
       <div class="gux-year-header">
@@ -212,7 +233,6 @@ export class GuxMonthCalendar {
           class="gux-year-change"
           onClick={() => this.changeYear(-1)}
           disabled={this.isPreviousYearLessThanMinYear(this.year, this.min)}
-          ref={(el: HTMLButtonElement) => (this.previousYearElement = el)}
         >
           <gux-icon
             icon-name="custom/chevron-left-small-regular"
@@ -263,28 +283,19 @@ export class GuxMonthCalendar {
       ) as JSX.Element;
     });
 
-    return (
-      <gux-month-list
-        tabIndex={1}
-        ref={(el: HTMLGuxMonthListElement) => (this.monthListElement = el)}
-      >
-        {monthButtons}
-      </gux-month-list>
-    ) as JSX.Element;
-  }
-
-  private renderTrapFocusEl(): JSX.Element {
-    return (
-      <span onFocus={() => this.doFocusTrap()} tabindex="0"></span>
-    ) as JSX.Element;
+    return (<gux-month-list>{monthButtons}</gux-month-list>) as JSX.Element;
   }
 
   render(): JSX.Element {
     return (
-      <div class="gux-month-calendar">
+      <div
+        class={{
+          'gux-hidden': !this.expanded,
+          'gux-month-calendar': true
+        }}
+      >
         {this.renderHeader()}
         {this.renderMonths()}
-        {this.renderTrapFocusEl()}
       </div>
     ) as JSX.Element;
   }
