@@ -17,7 +17,7 @@ import {
   Placement,
   shift
 } from '@floating-ui/dom';
-
+import { randomHTMLId } from '@utils/dom/random-html-id';
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
 import { findElementById } from '@utils/dom/find-element-by-id';
@@ -35,6 +35,7 @@ export class GuxPopoverList {
   private popupElement: HTMLDivElement;
   private arrowElement: HTMLDivElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
+  private id: string = randomHTMLId('gux-popover-list');
 
   @Element()
   private root: HTMLElement;
@@ -205,6 +206,8 @@ export class GuxPopoverList {
           'gux-hidden': !this.isOpen,
           'gux-popover-wrapper': true
         }}
+        role="dialog"
+        aria-describedby={this.id}
         data-placement
       >
         <div
@@ -216,7 +219,7 @@ export class GuxPopoverList {
             onClick={this.dismiss.bind(this)}
           ></gux-dismiss-button>
         )}
-        <div class="gux-popover-content">
+        <div id={this.id} class="gux-popover-content">
           <slot />
         </div>
       </div>
