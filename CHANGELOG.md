@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.63.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.1...v4.63.2) (2024-07-02)
+
+
+### Bug Fixes
+
+* **popover:** Fixed gux-popover dismiss logic on focus out ([8327933](https://github.com/MyPureCloud/genesys-spark/commit/83279335251ecbdcbddfafa3c834260d68561090))
+
 ### [4.63.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.0...v4.63.1) (2024-06-30)
 
 ## [4.63.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.62.2...v4.63.0) (2024-06-26)
