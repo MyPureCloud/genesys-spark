@@ -94,9 +94,7 @@ describe('gux-toggle', () => {
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-toggle');
           const checkSpy = await element.spyOnEvent('check');
-          const toggleSlider = await page.find(
-            'gux-toggle >>> gux-toggle-slider'
-          );
+          const toggleSlider = await page.find('pierce/gux-toggle-slider');
 
           await userInteraction(toggleSlider);
           await page.waitForChanges();
@@ -110,9 +108,7 @@ describe('gux-toggle', () => {
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-toggle');
           const checkSpy = await element.spyOnEvent('check');
-          const toggleSlider = await page.find(
-            'gux-toggle >>> gux-toggle-slider'
-          );
+          const toggleSlider = await page.find('pierce/gux-toggle-slider');
 
           await userInteraction(toggleSlider);
           await page.waitForChanges();
@@ -125,9 +121,7 @@ describe('gux-toggle', () => {
             '<gux-toggle lang="en" checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newSparkE2EPage({ html });
           const element = await page.find('gux-toggle');
-          const toggleSlider = await page.find(
-            'gux-toggle >>> gux-toggle-slider'
-          );
+          const toggleSlider = await page.find('pierce/gux-toggle-slider');
 
           expect(await element.getProperty('checked')).toBe(false);
 
@@ -142,9 +136,7 @@ describe('gux-toggle', () => {
             '<gux-toggle lang="en" checked checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-toggle');
-          const toggleSlider = await page.find(
-            'gux-toggle >>> gux-toggle-slider'
-          );
+          const toggleSlider = await page.find('pierce/gux-toggle-slider');
 
           expect(await element.getProperty('checked')).toBe(true);
 
@@ -159,9 +151,7 @@ describe('gux-toggle', () => {
             '<gux-toggle lang="en" disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-toggle');
-          const toggleSlider = await page.find(
-            'gux-toggle >>> gux-toggle-slider'
-          );
+          const toggleSlider = await page.find('pierce/gux-toggle-slider');
 
           expect(await element.getProperty('checked')).toBe(false);
 
@@ -176,9 +166,7 @@ describe('gux-toggle', () => {
             '<gux-toggle lang="en" checked disabled checked-label="On" unchecked-label="Off"></gux-toggle>';
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-toggle');
-          const toggleSlider = await page.find(
-            'gux-toggle >>> gux-toggle-slider'
-          );
+          const toggleSlider = await page.find('pierce/gux-toggle-slider');
 
           expect(await element.getProperty('checked')).toBe(true);
 
@@ -194,7 +182,7 @@ describe('gux-toggle', () => {
           const page: E2EPage = await newNonrandomE2EPage({ html });
           const element: E2EElement = await page.find('gux-toggle');
           const toggleSlider: E2EElement = await page.find(
-            'gux-toggle >>> gux-toggle-slider'
+            'pierce/gux-toggle-slider'
           );
           await page.evaluate(() => {
             document.addEventListener('check', event => {
