@@ -1,13 +1,3 @@
-@use '~genesys-spark/src/style/focus.scss';
-
-.gux-popover-content {
-  &:focus-visible {
-    @include focus.gux-focus-ring;
-
-    border-radius: var(--gse-semantic-focusRing-cornerRadius);
-  }
-}
-
 .gux-popover-wrapper {
   position: absolute;
   top: 0;
