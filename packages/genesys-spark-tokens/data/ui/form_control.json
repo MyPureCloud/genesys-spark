@@ -309,11 +309,11 @@
     },
     "spinner": {
       "track": {
-        "value": "{color.blueberry.600}",
+        "value": "{background.system.progress_and_loading.progressed}",
         "type": "color"
       },
       "error_color": {
-        "value": "{color.blueberry.200}",
+        "value": "{background.system.progress_and_loading.default}",
         "type": "color"
       }
     },

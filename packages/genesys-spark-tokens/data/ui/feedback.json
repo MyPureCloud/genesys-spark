@@ -322,11 +322,13 @@
       },
       "large": {
         "value": "48",
-        "type": "sizing"
+        "type": "sizing",
+        "description": "keeping hard code as it cant have \"px\""
       },
       "small": {
         "value": "16",
-        "type": "sizing"
+        "type": "sizing",
+        "description": "keeping hard code as it cant have \"px\""
       },
       "text": {
         "value": {
