@@ -698,6 +698,11 @@
           "value": "{border.edges.active.10}",
           "type": "color",
           "description": "The color for the edge borders of surfaces that are on the active state, like the bottom border of a tab."
+        },
+        "high_emphasis": {
+          "value": "{border.edges.default.30}",
+          "type": "color",
+          "description": "The default color for the edge borders of high-emphasis surfaces e.g dark tooltip"
         }
       },
       "high_constrast": {

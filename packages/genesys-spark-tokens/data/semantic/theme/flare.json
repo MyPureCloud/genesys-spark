@@ -494,6 +494,10 @@
         "20": {
           "value": "{color.cornflower.700}",
           "type": "color"
+        },
+        "30": {
+          "value": "{color.cornflower.900}",
+          "type": "color"
         }
       },
       "enabled": {

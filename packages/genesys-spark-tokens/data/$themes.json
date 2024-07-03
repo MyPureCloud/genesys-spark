@@ -798,7 +798,6 @@
       "foreground.form_control.label.optional_accent": "e5e2ea1363e63b2e94219b4df6d747125402b354",
       "border.focus": "f6b6d35bc61074da860d63566a4509c015b31401",
       "border.container.divider": "3ea5986940df900d7d6feb74520393bf528f930d",
-      "border.container.edges.default": "365585a57fefca4301856ae2a12645e0d77c4eb3",
       "border.container.edges.hover": "bf4786daf15f249051549ec584dddbc739513e9c",
       "border.container.edges.enabled": "c8dad298e98e8cd08e2e8db21c8748d01ba118ee",
       "border.container.edges.active": "daac2b2f4f4b1094a2e02efa4bdc5e22a8e7592b",
@@ -818,7 +817,8 @@
       "border.form_control.text_input.default": "b3e5c197aea4a4ac612e4d7dbaee2f8c7d191e0b",
       "border.form_control.text_input.hover": "b17184819c452568acfcd801a4fe6f1447fff6fd",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
-      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc"
+      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc",
+      "border.container.edges.high_emphasis": "365585a57fefca4301856ae2a12645e0d77c4eb3"
     }
   },
   {

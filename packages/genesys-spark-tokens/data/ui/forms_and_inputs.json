@@ -368,7 +368,7 @@
     },
     "border": {
       "value": {
-        "color": "{border.container.edges.default}",
+        "color": "{border.container.edges.high_emphasis}",
         "width": "{container.edges.border_width}",
         "style": "solid"
       },
