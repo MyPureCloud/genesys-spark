@@ -218,7 +218,7 @@ export class GuxPopover {
   componentDidLoad(): void {
     if (this.isOpen) {
       this.runUpdatePosition();
-      this.focusFirstSlottedElement();
+      this.contentElement.focus();
     }
   }
 
@@ -226,15 +226,11 @@ export class GuxPopover {
     this.lastActiveElement = document.activeElement as HTMLElement;
 
     if (this.isOpen) {
-      this.focusFirstSlottedElement();
+      this.contentElement.focus();
       this.runUpdatePosition();
     } else if (this.cleanupUpdatePosition) {
       this.cleanupUpdatePosition();
     }
-  }
-
-  private focusFirstSlottedElement(): void {
-    this.contentElement.focus();
   }
 
   disconnectedCallback(): void {
