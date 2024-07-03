@@ -235,25 +235,7 @@ export class GuxPopover {
 
   private focusFirstSlottedElement(): void {
     this.contentElement.focus();
-
-    // TODO: should we dynamically focus first focusable elemtn in the slotted content?
-    //
-    // // Focus the first focusable element in the slotted content
-    // const contentElementChildren = this.getRootChildren(this.contentElement);
-    // if (contentElementChildren?.length) {
-    //   const firstChild = this.getRootChildren(this.contentElement)[0] as HTMLElement;
-    //   const firstSlottedInput = firstChild.querySelector(
-    //     'gux-button gux-dropdown'
-    //   ) as HTMLElement;
-    //   firstSlottedInput.focus();
-    // }
   }
-
-  // private getRootChildren(root: HTMLElement): Element[] {
-  //   const slot = root.querySelector('slot');
-
-  //   return slot ? slot.assignedElements() : Array.from(root.children);
-  // }
 
   disconnectedCallback(): void {
     if (this.cleanupUpdatePosition) {
@@ -296,6 +278,7 @@ export class GuxPopover {
         <div
           ref={(el: HTMLDivElement) => (this.contentElement = el)}
           class="gux-popover-content"
+          tabIndex={0}
         >
           <slot />
         </div>

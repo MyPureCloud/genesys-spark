@@ -1,3 +1,13 @@
+@use '~genesys-spark/src/style/focus.scss';
+
+.gux-popover-content {
+  &:focus-visible,
+  :focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
 .gux-popover-wrapper {
   position: absolute;
   top: 0;
@@ -8,6 +18,7 @@
   padding: var(--gse-ui-popover-gap);
   background-color: var(--gse-ui-popover-backgroundColor);
   border-radius: var(--gse-ui-popover-borderRadius);
+  outline: none;
   box-shadow: var(--gse-ui-popover-boxShadow-x)
     var(--gse-ui-popover-boxShadow-y) var(--gse-ui-popover-boxShadow-blur)
     var(--gse-ui-popover-boxShadow-spread) var(--gse-ui-tooltip-boxShadow-color);
