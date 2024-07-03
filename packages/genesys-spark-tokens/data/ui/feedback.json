@@ -331,12 +331,7 @@
         "description": "keeping hard code as it cant have \"px\""
       },
       "text": {
-        "value": {
-          "fontFamily": "{font_family.roboto}",
-          "fontWeight": "{font_weight.semi_bold}",
-          "lineHeight": "{line_height.xs}",
-          "fontSize": "{font_size.xs}"
-        },
+        "value": "{body.sm.semi_bold}",
         "type": "typography"
       }
     },
