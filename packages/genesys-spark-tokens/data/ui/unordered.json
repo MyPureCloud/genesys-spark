@@ -51,7 +51,7 @@
     "light": {
       "border": {
         "value": {
-          "color": "{border.container.edges.high_emphasis}",
+          "color": "{border.container.edges.default}",
           "width": "{container.edges.border_width}",
           "style": "solid"
         },
