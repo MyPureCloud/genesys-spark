@@ -142,7 +142,9 @@
       "70": "#fbbe3b",
       "80": "#fcd276",
       "90": "#fce5b1",
-      "100": "#fdf8ec"
+      "100": "#fdf8ec",
+      "110": "#fff793",
+      "120": "#ffef27"
     },
     "secondary": {
       "yellow_green": "#ddd933",

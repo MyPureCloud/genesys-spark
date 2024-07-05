@@ -3,50 +3,45 @@
     "counter": {
       "default": {
         "foreground_color": {
-          "value": "{color.cornflower.600}",
+          "value": "{form_control.input.input_icon.icon_end_color}",
           "type": "color"
         }
       },
       "hover": {
         "foreground_color": {
-          "value": "{color.primary.main}",
+          "value": "{foreground.form_control.click_input.hover}",
           "type": "color"
         }
       },
       "divider": {
         "border": {
           "value": {
-            "color": "{color.cornflower.400}",
-            "width": "1",
+            "color": "{border.form_control.text_input.default}",
+            "width": "{container.divider.border_width}",
             "style": "solid"
           },
           "type": "border"
         },
         "foreground_color": {
-          "value": "{color.cornflower.400}",
+          "value": "{border.form_control.text_input.default}",
           "type": "color"
         }
       },
       "text": {
-        "value": {
-          "fontFamily": "{font_family.roboto}",
-          "fontWeight": "{font_weight.regular}",
-          "lineHeight": "{line_height.xs}",
-          "fontSize": "{font_size.xs}"
-        },
+        "value": "{body.sm.regular}",
         "type": "typography"
       },
       "gap": {
-        "value": "{spacing.4xs}",
+        "value": "{form_control.form_field.gap}",
         "type": "spacing"
       },
       "icon": {
         "height": {
-          "value": "{size.xs}",
+          "value": "{assets.sm.size}",
           "type": "sizing"
         },
         "width": {
-          "value": "{size.xs}",
+          "value": "{assets.sm.size}",
           "type": "sizing"
         }
       }
@@ -58,21 +53,21 @@
     "match": {
       "first_level": {
         "background_color": {
-          "value": "{color.islandaqua.300}",
+          "value": "{theme.background.custom_accents.bold.120}",
           "type": "color"
         },
         "foreground_colour": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.form_control.text_input.populated}",
           "type": "color"
         }
       },
       "subsequent_level": {
         "foreground_colour": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.form_control.text_input.populated}",
           "type": "color"
         },
         "background_color": {
-          "value": "{color.islandaqua.200}",
+          "value": "{theme.background.custom_accents.subtle.120}",
           "type": "color"
         }
       }
