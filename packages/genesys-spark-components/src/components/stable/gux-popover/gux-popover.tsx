@@ -31,7 +31,7 @@ import { findElementById } from '@utils/dom/find-element-by-id';
 @Component({
   styleUrl: 'gux-popover.scss',
   tag: 'gux-popover',
-  shadow: { delegatesFocus: true }
+  shadow: true
 })
 export class GuxPopover {
   private popupElement: HTMLDivElement;
