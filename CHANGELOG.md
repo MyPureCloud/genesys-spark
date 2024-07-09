@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.63.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.2...v4.63.3) (2024-07-09)
+
+
+### Bug Fixes
+
+* **form-field-radio-group:** update radio group spacing ([29ac0eb](https://github.com/MyPureCloud/genesys-spark/commit/29ac0eb3d9551e0c9fd9874c6a44014e347ed1ec))
+
 ### [4.63.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.1...v4.63.2) (2024-07-02)
 
 
