@@ -275,6 +275,7 @@ export class GuxPopover {
           ref={(el: HTMLDivElement) => (this.contentElement = el)}
           class="gux-popover-content"
           tabIndex={0}
+          aria-label="Popover content"
         >
           <slot />
         </div>
