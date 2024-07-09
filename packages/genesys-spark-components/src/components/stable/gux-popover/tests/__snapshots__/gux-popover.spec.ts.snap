@@ -3,14 +3,14 @@
 exports[`gux-popover #render should render popover 1`] = `
 <gux-popover for="popover-target" id="popover-example" is-open="" position="top">
   <mock:shadow-root>
-    <div aria-describedby="gux-popover-i" class="gux-popover-wrapper" data-placement role="dialog">
+    <div class="gux-popover-wrapper" data-placement role="dialog">
       <div class="gux-arrow">
         <div class="gux-arrow-caret"></div>
       </div>
       <div class="gux-popover-header">
         <slot name="title"></slot>
       </div>
-      <div class="gux-popover-content" id="gux-popover-i">
+      <div class="gux-popover-content">
         <slot></slot>
       </div>
     </div>
