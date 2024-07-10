@@ -5,7 +5,7 @@ import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '@utils/tracking/usage';
 
-import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
+import * as VisualizationColorUtil from '../../../utils/theme/color-palette';
 
 import { logError } from '../../../utils/error/log-error';
 
@@ -21,6 +21,18 @@ export class GuxLineChart {
 
   private visualizationSpec: VisualizationSpec;
 
+  /**
+   * Optional label color
+   */
+  @Prop()
+  labelColor: string = VisualizationColorUtil.DEFAULT_LABEL_COLOR;
+
+  /**
+   * Optional domain line color
+   */
+  @Prop()
+  domainColor: string = VisualizationColorUtil.DEFAULT_DOMAIN_COLOR;
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private baseChartSpec: Record<string, any> = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
@@ -32,7 +44,11 @@ export class GuxLineChart {
     config: {
       axis: {
         ticks: false,
-        titlePadding: 8
+        titlePadding: 8,
+        labelColor:
+          this.labelColor || VisualizationColorUtil.DEFAULT_LABEL_COLOR,
+        domainColor:
+          this.domainColor || VisualizationColorUtil.DEFAULT_DOMAIN_COLOR
       },
       axisX: {
         labelAngle: 0
@@ -47,7 +63,7 @@ export class GuxLineChart {
       color: {
         field: DEFAULT_COLOR_FIELD_NAME,
         type: 'nominal',
-        scale: { range: VISUALIZATION_COLORS },
+        scale: { range: VisualizationColorUtil.VISUALIZATION_COLORS },
         legend: null
       },
       tooltip: { aggregate: 'count', type: 'quantitative' }

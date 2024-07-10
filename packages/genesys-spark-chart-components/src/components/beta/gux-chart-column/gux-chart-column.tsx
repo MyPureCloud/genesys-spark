@@ -4,7 +4,7 @@ import { Component, Element, h, JSX, Prop, Watch } from '@stencil/core';
 import { EmbedOptions, VisualizationSpec } from 'vega-embed';
 
 import { trackComponent } from '@utils/tracking/usage';
-import { VISUALIZATION_COLORS } from '../../../utils/theme/color-palette';
+import * as VisualizationColorUtil from '../../../utils/theme/color-palette';
 import { logError } from '../../../utils/error/log-error';
 
 @Component({
@@ -16,6 +16,18 @@ export class GuxColumnChart {
   @Element()
   root: HTMLElement;
 
+  /**
+   * Optional label color
+   */
+  @Prop()
+  labelColor: string = VisualizationColorUtil.DEFAULT_LABEL_COLOR;
+
+  /**
+   * Optional domain line color
+   */
+  @Prop()
+  domainColor: string = VisualizationColorUtil.DEFAULT_DOMAIN_COLOR;
+
   private visualizationSpec: VisualizationSpec;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -25,7 +37,11 @@ export class GuxColumnChart {
     config: {
       axis: {
         ticks: false,
-        titlePadding: 8
+        titlePadding: 8,
+        labelColor:
+          this.labelColor || VisualizationColorUtil.DEFAULT_LABEL_COLOR,
+        domainColor:
+          this.domainColor || VisualizationColorUtil.DEFAULT_DOMAIN_COLOR
       },
       axisX: {
         labelAngle: 0
@@ -38,7 +54,7 @@ export class GuxColumnChart {
         symbolType: 'circle'
       },
       bar: {
-        color: VISUALIZATION_COLORS[0]
+        color: VisualizationColorUtil.VISUALIZATION_COLORS[0]
       }
     },
     encoding: {
@@ -195,7 +211,7 @@ export class GuxColumnChart {
     // Set up colors for legend and bars
     const rangeField = xFieldName;
     const rangeConfig = {
-      [rangeField]: VISUALIZATION_COLORS
+      [rangeField]: VisualizationColorUtil.VISUALIZATION_COLORS
     };
     this.baseChartSpec.config.range = rangeConfig;
     const spec = Object.assign(this.baseChartSpec, chartData);
