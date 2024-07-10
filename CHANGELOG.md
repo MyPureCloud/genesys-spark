@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### Bug Fixes
+
+* **copy-to-clipboard:** contrain max-width of component and min-width of copy icon ([202c3d9](https://github.com/harter-genesys/genesys-spark/commit/202c3d931fdad696968b72296ca28105b11f9858))
+
+### [4.64.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.1...v4.63.2) (2024-07-02)
+
 ## [4.64.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.3...v4.64.0) (2024-07-10)
 
 
