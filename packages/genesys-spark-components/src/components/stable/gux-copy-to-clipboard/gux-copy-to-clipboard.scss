@@ -17,11 +17,13 @@ button {
 .gux-copy-to-clipboard-wrapper {
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
 
   .gux-copy-content {
     display: inherit;
     gap: var(--gse-ui-copyToClipboard-contentContainer-gap);
     align-items: inherit;
+    max-width: 100%;
     cursor: pointer;
 
     ::slotted(*) {
@@ -42,6 +44,7 @@ button {
     gux-icon[icon-name='copy'] {
       flex-shrink: 0;
       width: var(--gse-ui-icon-size-sm);
+      min-width: 22px;
       height: var(--gse-ui-icon-size-sm);
       padding: var(--gse-ui-copyToClipboard-iconContainer-padding);
       visibility: hidden;
