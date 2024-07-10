@@ -8,7 +8,11 @@ describe('gux-tag', () => {
       '<gux-tag lang="en" accent="1">navy</gux-tag>',
       '<gux-tag lang="en" accent="1"><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
       '<gux-tag lang="en" accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
-      '<gux-tag lang="en" accent="1" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>'
+      '<gux-tag lang="en" accent="1" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>navy</gux-tag>',
+      '<gux-tag lang="en" emphasis="subtle" accent="1">Subtle 1</gux-tag>',
+      '<gux-tag lang="en" emphasis="bold" accent="1">Bold 1</gux-tag>',
+      '<gux-tag lang="en" size="small" accent="1">Small 1</gux-tag>',
+      '<gux-tag lang="en" size="large" accent="1">Large 1</gux-tag>'
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSparkE2EPage({ html });
@@ -145,23 +149,43 @@ describe('gux-tag', () => {
   });
 
   describe('a11y', () => {
-    ['default', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'].forEach(
-      accent => {
-        it(`should be accessible when accent is "${accent}"`, async () => {
-          const html = `<gux-tag lang="en" accent="${accent}" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>tag</gux-tag>`;
-          const page = await newSparkE2EPage({ html });
+    ['small', 'large'].forEach(size => {
+      describe(size, () => {
+        ['bold', 'subtle'].forEach(emphasis => {
+          describe(emphasis, () => {
+            [
+              'default',
+              '1',
+              '2',
+              '3',
+              '4',
+              '5',
+              '6',
+              '7',
+              '8',
+              '9',
+              '10'
+            ].forEach(accent => {
+              describe(`accent: ${accent}`, () => {
+                it('should be accessible', async () => {
+                  const html = `<gux-tag lang="en" size="${size}" emphasis="${emphasis}" accent="${accent}" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>tag</gux-tag>`;
+                  const page = await newSparkE2EPage({ html });
 
-          await a11yCheck(page);
+                  await a11yCheck(page);
+                });
+
+                it('should be accessible when disabled', async () => {
+                  const html = `<gux-tag lang="en" size="${size}" emphasis="${emphasis}" accent="${accent}" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>tag</gux-tag>`;
+                  const page = await newSparkE2EPage({ html });
+
+                  await a11yCheck(page);
+                });
+              });
+            });
+          });
         });
-
-        it(`should be accessible when disabled and accent is "${accent}"`, async () => {
-          const html = `<gux-tag lang="en" accent="${accent}" removable disabled><gux-icon icon-name="bolt" decorative="true"></gux-icon>tag</gux-tag>`;
-          const page = await newSparkE2EPage({ html });
-
-          await a11yCheck(page);
-        });
-      }
-    );
+      });
+    });
 
     it('should be accessible when the text overflows the tag', async () => {
       const html = `<gux-tag style="width:100px" lang="en" accent="1" removable><gux-icon icon-name="bolt" decorative="true"></gux-icon>Long long long long long long long</gux-tag>`;

@@ -94,7 +94,7 @@ describe('gux-form-field-radio-beta', () => {
     </gux-form-field-radio-group-beta>`,
 
       ` <gux-form-field-radio-group-beta disabled>
-        <label slot="group-label">Food</span>
+        <label slot="group-label">Food</label>
 
         <gux-form-field-radio>
           <input slot="input" type="radio" name="food-1" value="pizza" />

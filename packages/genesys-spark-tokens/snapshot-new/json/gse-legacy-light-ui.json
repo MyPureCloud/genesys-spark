@@ -1916,7 +1916,7 @@
       "away": "linear-gradient(135deg, #f8c73e 0%, #fce9b2 100%)",
       "on-queue": "linear-gradient(135deg, #4856cb 0%, #9ca6f9 100%)",
       "offline": "linear-gradient(135deg, #767c8d 0%, #a3a7b0 100%)",
-      "out_of_office": "linear-gradient(135deg, #B74BA4 0%, #F5BFEB 100%)"
+      "out_of_office": "linear-gradient(135deg, #b74ba4 0%, #f5bfeb 100%)"
     },
     "medium": {
       "size": "48px",
@@ -2245,8 +2245,8 @@
     },
     "panel": {
       "panel_title": "#ffffff",
-      "primary": "linear-gradient(127deg, #23395D 3.19%, #3E5374 225.06%)",
-      "secondary": "linear-gradient(358deg, #1B2B48 0.16%, #23395D 98.45%)"
+      "primary": "linear-gradient(127deg, #23395d 3.19%, #3e5374 225.06%)",
+      "secondary": "linear-gradient(358deg, #1b2b48 0.16%, #23395d 98.45%)"
     }
   },
   "data_table_composed": {

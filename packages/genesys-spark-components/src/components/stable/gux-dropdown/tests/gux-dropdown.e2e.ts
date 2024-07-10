@@ -1,6 +1,15 @@
 import { E2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
+const axeExclusions = [
+  {
+    issueId: 'target-size',
+    target: 'gux-dropdown,button',
+    exclusionReason:
+      'COMUI-2947 Target has insufficient size (20px by 18px, should be at least 24px by 24px) Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px.'
+  }
+];
+
 testWithOptionType(
   'gux-option',
   `
@@ -45,9 +54,17 @@ function testWithOptionType(optionType: string, listboxContent: string) {
       it('opens dropdown on click', async () => {
         const { page } = await render(filterablePrefixDropdown(listboxContent));
 
-        await a11yCheck(page, [], 'before opening dropdown with filter');
+        await a11yCheck(
+          page,
+          axeExclusions,
+          'before opening dropdown with filter'
+        );
         await openWithClick(page);
-        await a11yCheck(page, [], 'after opening dropdown with filter');
+        await a11yCheck(
+          page,
+          axeExclusions,
+          'after opening dropdown with filter'
+        );
 
         const dropMenu = await page.find('pierce/.gux-popup-container');
         expect(dropMenu.className.split(' ')).toContain('gux-expanded');
@@ -88,9 +105,9 @@ function testWithOptionType(optionType: string, listboxContent: string) {
       it('opens drop down on click', async () => {
         const { page } = await render(nonFilterableDropdown(listboxContent));
 
-        await a11yCheck(page, [], 'before opening dropdown');
+        await a11yCheck(page, axeExclusions, 'before opening dropdown');
         await openWithClick(page);
-        await a11yCheck(page, [], 'after opening dropdown');
+        await a11yCheck(page, axeExclusions, 'after opening dropdown');
 
         await expectDropdownToBeOpen(page);
       });

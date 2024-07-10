@@ -3,23 +3,25 @@
 exports[`gux-form-field-radio-group-beta #render should render component as expected (1) 1`] = `"<gux-form-field-radio hydrated=""> <input slot="input" type="radio" name="food-1" value="pizza" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Pizza</label> </gux-form-field-radio>"`;
 
 exports[`gux-form-field-radio-group-beta #render should render component as expected (1) 2`] = `
-<div class="gux-form-field-container">
+<div aria-disabled="false" class="gux-form-field-container">
   <div class="gux-input-label">
     <div class="gux-input">
       <slot name="input"></slot>
     </div>
-    <div aria-disabled="false" class="gux-label">
+    <div class="gux-label">
       <slot name="label"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
-        </div>
+    </div>
+  </div>
+  <div class="error-and-help-text">
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -29,23 +31,25 @@ exports[`gux-form-field-radio-group-beta #render should render component as expe
 exports[`gux-form-field-radio-group-beta #render should render component as expected (2) 1`] = `"<gux-form-field-radio class="gux-input-error" hydrated=""> <input slot="input" type="radio" name="food-1" value="pizza" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Pizza</label> </gux-form-field-radio>"`;
 
 exports[`gux-form-field-radio-group-beta #render should render component as expected (2) 2`] = `
-<div class="gux-form-field-container">
+<div aria-disabled="false" class="gux-form-field-container">
   <div class="gux-input-label">
     <div class="gux-input">
       <slot name="input"></slot>
     </div>
-    <div aria-disabled="false" class="gux-label">
+    <div class="gux-label">
       <slot name="label"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
-        </div>
+    </div>
+  </div>
+  <div class="error-and-help-text">
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -55,23 +59,25 @@ exports[`gux-form-field-radio-group-beta #render should render component as expe
 exports[`gux-form-field-radio-group-beta #render should render component as expected (3) 1`] = `"<gux-form-field-radio hydrated=""> <input slot="input" type="radio" name="food-1" value="pizza" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Pizza</label> </gux-form-field-radio>"`;
 
 exports[`gux-form-field-radio-group-beta #render should render component as expected (3) 2`] = `
-<div class="gux-form-field-container">
+<div aria-disabled="false" class="gux-form-field-container">
   <div class="gux-input-label">
     <div class="gux-input">
       <slot name="input"></slot>
     </div>
-    <div aria-disabled="false" class="gux-label">
+    <div class="gux-label">
       <slot name="label"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
-        </div>
+    </div>
+  </div>
+  <div class="error-and-help-text">
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>
@@ -81,23 +87,25 @@ exports[`gux-form-field-radio-group-beta #render should render component as expe
 exports[`gux-form-field-radio-group-beta #render should render component as expected (4) 1`] = `"<gux-form-field-radio class="gux-disabled" hydrated=""> <input slot="input" type="radio" name="food-1" value="pizza" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Pizza</label> </gux-form-field-radio>"`;
 
 exports[`gux-form-field-radio-group-beta #render should render component as expected (4) 2`] = `
-<div class="gux-form-field-container">
+<div aria-disabled="true" class="gux-form-field-container">
   <div class="gux-input-label">
     <div class="gux-input">
       <slot name="input"></slot>
     </div>
-    <div aria-disabled="true" class="gux-label">
+    <div class="gux-label">
       <slot name="label"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
-        </div>
+    </div>
+  </div>
+  <div class="error-and-help-text">
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
       </div>
     </div>
   </div>

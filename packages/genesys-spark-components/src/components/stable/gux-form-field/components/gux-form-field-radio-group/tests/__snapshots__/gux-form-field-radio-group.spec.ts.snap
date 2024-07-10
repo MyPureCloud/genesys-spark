@@ -8,7 +8,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
         <slot name="group-label"></slot>
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Pizza
+        Food
       </span>
       <slot></slot>
       <div class="gux-form-field-error">
@@ -47,7 +47,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
         </gux-screen-reader-beta>
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Pizza
+        Food
       </span>
       <slot></slot>
       <div class="gux-form-field-error gux-show">
@@ -104,7 +104,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
         </gux-screen-reader-beta>
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Pizza
+        Food
       </span>
       <slot></slot>
       <div class="gux-form-field-error">
@@ -162,12 +162,12 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
 exports[`gux-form-field-radio-beta #render should render component as expected (4) 1`] = `
 <gux-form-field-radio-group-beta disabled="">
   <mock:shadow-root>
-    <fieldset class="gux-above gux-form-field-fieldset-container">
+    <fieldset aria-disabled="true" class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-legend-label gux-screenreader">
         <slot name="group-label"></slot>
       </legend>
       <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Pizza
+        Food
       </span>
       <slot></slot>
       <div class="gux-form-field-error">
@@ -185,36 +185,36 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
   </mock:shadow-root>
   <label slot="group-label">
     Food
-    <gux-form-field-radio>
-      <input name="food-1" slot="input" type="radio" value="pizza">
-      <label slot="label">
-        Pizza
-      </label>
-    </gux-form-field-radio>
-    <gux-form-field-radio>
-      <input disabled="" name="food-1" slot="input" type="radio" value="sandwich">
-      <label slot="label">
-        Sandwich
-      </label>
-    </gux-form-field-radio>
-    <gux-form-field-radio>
-      <input name="food-1" slot="input" type="radio" value="sushi">
-      <label slot="label">
-        Sushi
-      </label>
-      <span slot="error">
-        Subject to availibility
-      </span>
-    </gux-form-field-radio>
-    <gux-form-field-radio>
-      <input name="food-1" slot="input" type="radio" value="spaghetti">
-      <label slot="label">
-        Spaghetti
-      </label>
-      <span slot="help">
-        This is a help message
-      </span>
-    </gux-form-field-radio>
   </label>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="pizza">
+    <label slot="label">
+      Pizza
+    </label>
+  </gux-form-field-radio>
+  <gux-form-field-radio>
+    <input disabled="" name="food-1" slot="input" type="radio" value="sandwich">
+    <label slot="label">
+      Sandwich
+    </label>
+  </gux-form-field-radio>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="sushi">
+    <label slot="label">
+      Sushi
+    </label>
+    <span slot="error">
+      Subject to availibility
+    </span>
+  </gux-form-field-radio>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="spaghetti">
+    <label slot="label">
+      Spaghetti
+    </label>
+    <span slot="help">
+      This is a help message
+    </span>
+  </gux-form-field-radio>
 </gux-form-field-radio-group-beta>
 `;

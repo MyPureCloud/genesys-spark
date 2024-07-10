@@ -2,6 +2,57 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.64.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.3...v4.64.0) (2024-07-10)
+
+
+### Features
+
+* **time-zone-picker:** allow custom defaults ([3d7b517](https://github.com/MyPureCloud/genesys-spark/commit/3d7b51791ece50fb1a82b29a8437f15599d89d87))
+
+### [4.63.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.2...v4.63.3) (2024-07-09)
+
+
+### Bug Fixes
+
+* **form-field-radio-group:** update radio group spacing ([29ac0eb](https://github.com/MyPureCloud/genesys-spark/commit/29ac0eb3d9551e0c9fd9874c6a44014e347ed1ec))
+
+### [4.63.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.1...v4.63.2) (2024-07-02)
+
+
+### Bug Fixes
+
+* **popover:** Fixed gux-popover dismiss logic on focus out ([8327933](https://github.com/MyPureCloud/genesys-spark/commit/83279335251ecbdcbddfafa3c834260d68561090))
+
+### [4.63.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.0...v4.63.1) (2024-06-30)
+
+## [4.63.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.62.2...v4.63.0) (2024-06-26)
+
+
+### Features
+
+* **tag:** new bold styles and large size ([34fd359](https://github.com/MyPureCloud/genesys-spark/commit/34fd359badf56ad305270aabcf4ec7bb265ba76a))
+
+
+### Bug Fixes
+
+* **form-field-radio-group:** fix radio group label text ([31fef7b](https://github.com/MyPureCloud/genesys-spark/commit/31fef7bff4b0d08a9fe3139de295230f4303b638))
+
+### [4.62.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.62.1...v4.62.2) (2024-06-25)
+
+### [4.62.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.62.0...v4.62.1) (2024-06-20)
+
+
+### Bug Fixes
+
+* **table-toolbar:** table-toolbar tooltip/popup now appear over other gux components ([5970251](https://github.com/MyPureCloud/genesys-spark/commit/5970251bf02c448ba965e1f66b42921a6d1a7b6a))
+
+## [4.62.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.61.0...v4.62.0) (2024-06-19)
+
+
+### Features
+
+* **icon:** adding trash-arrow-up icon ([9b495d8](https://github.com/MyPureCloud/genesys-spark/commit/9b495d8263f6246bc5dda87551c3b55b5d54910c))
+
 ## [4.61.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.60.1...v4.61.0) (2024-06-15)
 
 

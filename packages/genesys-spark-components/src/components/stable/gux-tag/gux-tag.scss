@@ -22,6 +22,14 @@
   background-color: var(--gse-ui-tag-default-backgroundColor);
   border-radius: var(--gse-ui-tag-borderRadius);
 
+  &.gux-size-small {
+    height: var(--gse-ui-tag-small-height);
+  }
+
+  &.gux-size-large {
+    height: var(--gse-ui-tag-large-height);
+  }
+
   &.gux-disabled {
     position: relative;
 
@@ -74,58 +82,113 @@
   }
 
   &.gux-accent-default {
-    color: var(--gse-ui-tag-default-foregroundColor);
-    background-color: var(--gse-ui-tag-default-backgroundColor);
+    color: var(--gse-ui-tag-default-bold-foregroundColor);
+    background-color: var(--gse-ui-tag-default-bold-backgroundColor);
+
+    &.gux-emphasis-subtle {
+      color: var(--gse-ui-tag-default-subtle-foregroundColor);
+      background-color: var(--gse-ui-tag-default-subtle-backgroundColor);
+    }
   }
 
   &.gux-accent-1 {
-    color: var(--gse-ui-tag-accent1-foregroundColor);
-    background-color: var(--gse-ui-tag-accent1-backgroundColor);
+    color: var(--gse-ui-tag-accent1-bold-foregroundColor);
+    background-color: var(--gse-ui-tag-accent1-bold-backgroundColor);
+
+    &.gux-emphasis-subtle {
+      color: var(--gse-ui-tag-accent1-subtle-foregroundColor);
+      background-color: var(--gse-ui-tag-accent1-subtle-backgroundColor);
+    }
   }
 
   &.gux-accent-2 {
-    color: var(--gse-ui-tag-accent2-foregroundColor);
-    background-color: var(--gse-ui-tag-accent2-backgroundColor);
+    color: var(--gse-ui-tag-accent2-bold-foregroundColor);
+    background-color: var(--gse-ui-tag-accent2-bold-backgroundColor);
+
+    &.gux-emphasis-subtle {
+      color: var(--gse-ui-tag-accent2-subtle-foregroundColor);
+      background-color: var(--gse-ui-tag-accent2-subtle-backgroundColor);
+    }
   }
 
   &.gux-accent-3 {
-    color: var(--gse-ui-tag-accent3-foregroundColor);
-    background-color: var(--gse-ui-tag-accent3-backgroundColor);
+    color: var(--gse-ui-tag-accent3-bold-foregroundColor);
+    background-color: var(--gse-ui-tag-accent3-bold-backgroundColor);
+
+    &.gux-emphasis-subtle {
+      color: var(--gse-ui-tag-accent3-subtle-foregroundColor);
+      background-color: var(--gse-ui-tag-accent3-subtle-backgroundColor);
+    }
   }
 
   &.gux-accent-4 {
-    color: var(--gse-ui-tag-accent4-foregroundColor);
-    background-color: var(--gse-ui-tag-accent4-backgroundColor);
+    color: var(--gse-ui-tag-accent4-bold-foregroundColor);
+    background-color: var(--gse-ui-tag-accent4-bold-backgroundColor);
+
+    &.gux-emphasis-subtle {
+      color: var(--gse-ui-tag-accent4-subtle-foregroundColor);
+      background-color: var(--gse-ui-tag-accent4-subtle-backgroundColor);
+    }
   }
 
   &.gux-accent-5 {
-    color: var(--gse-ui-tag-accent5-foregroundColor);
-    background-color: var(--gse-ui-tag-accent5-backgroundColor);
+    color: var(--gse-ui-tag-accent5-bold-foregroundColor);
+    background-color: var(--gse-ui-tag-accent5-bold-backgroundColor);
+
+    &.gux-emphasis-subtle {
+      color: var(--gse-ui-tag-accent5-subtle-foregroundColor);
+      background-color: var(--gse-ui-tag-accent5-subtle-backgroundColor);
+    }
   }
 
   &.gux-accent-6 {
-    color: var(--gse-ui-tag-accent6-foregroundColor);
-    background-color: var(--gse-ui-tag-accent6-backgroundColor);
+    color: var(--gse-ui-tag-accent6-bold-foregroundColor);
+    background-color: var(--gse-ui-tag-accent6-bold-backgroundColor);
+
+    &.gux-emphasis-subtle {
+      color: var(--gse-ui-tag-accent6-subtle-foregroundColor);
+      background-color: var(--gse-ui-tag-accent6-subtle-backgroundColor);
+    }
   }
 
   &.gux-accent-7 {
-    color: var(--gse-ui-tag-accent7-foregroundColor);
-    background-color: var(--gse-ui-tag-accent7-backgroundColor);
+    color: var(--gse-ui-tag-accent7-bold-foregroundColor);
+    background-color: var(--gse-ui-tag-accent7-bold-backgroundColor);
+
+    &.gux-emphasis-subtle {
+      color: var(--gse-ui-tag-accent7-subtle-foregroundColor);
+      background-color: var(--gse-ui-tag-accent7-subtle-backgroundColor);
+    }
   }
 
   &.gux-accent-8 {
-    color: var(--gse-ui-tag-accent8-foregroundColor);
-    background-color: var(--gse-ui-tag-accent8-backgroundColor);
+    color: var(--gse-ui-tag-accent8-bold-foregroundColor);
+    background-color: var(--gse-ui-tag-accent8-bold-backgroundColor);
+
+    &.gux-emphasis-subtle {
+      color: var(--gse-ui-tag-accent8-subtle-foregroundColor);
+      background-color: var(--gse-ui-tag-accent8-subtle-backgroundColor);
+    }
   }
 
   &.gux-accent-9 {
-    color: var(--gse-ui-tag-accent9-foregroundColor);
-    background-color: var(--gse-ui-tag-accent9-backgroundColor);
+    color: var(--gse-ui-tag-accent9-bold-foregroundColor);
+    background-color: var(--gse-ui-tag-accent9-bold-backgroundColor);
+
+    &.gux-emphasis-subtle {
+      color: var(--gse-ui-tag-accent9-subtle-foregroundColor);
+      background-color: var(--gse-ui-tag-accent9-subtle-backgroundColor);
+    }
   }
 
   &.gux-accent-10 {
-    color: var(--gse-ui-tag-accent10-foregroundColor);
-    background-color: var(--gse-ui-tag-accent10-backgroundColor);
+    color: var(--gse-ui-tag-accent10-bold-foregroundColor);
+    background-color: var(--gse-ui-tag-accent10-bold-backgroundColor);
+
+    &.gux-emphasis-subtle {
+      color: var(--gse-ui-tag-accent10-subtle-foregroundColor);
+      background-color: var(--gse-ui-tag-accent10-subtle-backgroundColor);
+    }
   }
 
   &.gux-accent-inherit {

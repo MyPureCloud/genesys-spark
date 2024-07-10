@@ -80,13 +80,15 @@ export class GuxFormFieldCheckbox {
             </div>
             <div class={`gux-label-${this.labelPosition}`}>
               <slot name="label" />
-              <GuxFormFieldError show={this.hasError}>
-                <slot name="error" />
-              </GuxFormFieldError>
-              <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
-                <slot name="help" />
-              </GuxFormFieldHelp>
             </div>
+          </div>
+          <div class="error-and-help-text">
+            <GuxFormFieldError show={this.hasError}>
+              <slot name="error" />
+            </GuxFormFieldError>
+            <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
+              <slot name="help" />
+            </GuxFormFieldHelp>
           </div>
         </div>
       </Host>

@@ -76,23 +76,25 @@ export class GuxFormFieldRadio {
           'gux-disabled': this.disabled
         }}
       >
-        <div class="gux-form-field-container">
+        <div
+          class="gux-form-field-container"
+          aria-disabled={this.disabled ? 'true' : 'false'}
+        >
           <div class="gux-input-label">
             <div class="gux-input">
               <slot name="input" onSlotchange={() => this.setInput()} />
             </div>
-            <div
-              class="gux-label"
-              aria-disabled={this.disabled ? 'true' : 'false'}
-            >
+            <div class="gux-label">
               <slot name="label" />
-              <GuxFormFieldError show={this.hasError}>
-                <slot name="error" />
-              </GuxFormFieldError>
-              <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
-                <slot name="help" />
-              </GuxFormFieldHelp>
             </div>
+          </div>
+          <div class="error-and-help-text">
+            <GuxFormFieldError show={this.hasError}>
+              <slot name="error" />
+            </GuxFormFieldError>
+            <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
+              <slot name="help" />
+            </GuxFormFieldHelp>
           </div>
         </div>
       </Host>
