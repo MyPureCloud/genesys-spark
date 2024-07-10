@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.64.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.3...v4.64.0) (2024-07-10)
+
+
+### Features
+
+* **time-zone-picker:** allow custom defaults ([3d7b517](https://github.com/MyPureCloud/genesys-spark/commit/3d7b51791ece50fb1a82b29a8437f15599d89d87))
+
 ### [4.63.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.2...v4.63.3) (2024-07-09)
 
 
