@@ -1,8 +1,9 @@
 @use '~genesys-spark/src/style/typography.scss';
 
 :host {
+  position: relative;
+  z-index: var(--gse-semantic-zIndex-sticky);
   display: block;
-  isolation: isolate;
 
   .gux-table {
     position: relative;
