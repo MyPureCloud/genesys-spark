@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.64.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.0...v4.64.1) (2024-07-12)
+
+
+### Bug Fixes
+
+* **form-field-select:** clicking downarrow now displays the dropdown ([bf96624](https://github.com/MyPureCloud/genesys-spark/commit/bf966247befdb679adf0d3ab6248dc3b876ce50a))
+
 ## [4.64.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.3...v4.64.0) (2024-07-10)
 
 
