@@ -1,4 +1,4 @@
-# gux-form-field-radio
+# gux-form-field-radio-group-beta
 
 
 

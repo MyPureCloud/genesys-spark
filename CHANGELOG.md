@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.64.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.0...v4.64.1) (2024-07-12)
+
+
+### Bug Fixes
+
+* **form-field-select:** clicking downarrow now displays the dropdown ([bf96624](https://github.com/MyPureCloud/genesys-spark/commit/bf966247befdb679adf0d3ab6248dc3b876ce50a))
+
+## [4.64.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.3...v4.64.0) (2024-07-10)
+
+
+### Features
+
+* **time-zone-picker:** allow custom defaults ([3d7b517](https://github.com/MyPureCloud/genesys-spark/commit/3d7b51791ece50fb1a82b29a8437f15599d89d87))
+
+### [4.63.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.2...v4.63.3) (2024-07-09)
+
+
+### Bug Fixes
+
+* **form-field-radio-group:** update radio group spacing ([29ac0eb](https://github.com/MyPureCloud/genesys-spark/commit/29ac0eb3d9551e0c9fd9874c6a44014e347ed1ec))
+
+### [4.63.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.1...v4.63.2) (2024-07-02)
+
+
+### Bug Fixes
+
+* **popover:** Fixed gux-popover dismiss logic on focus out ([8327933](https://github.com/MyPureCloud/genesys-spark/commit/83279335251ecbdcbddfafa3c834260d68561090))
+
 ### [4.63.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.0...v4.63.1) (2024-06-30)
 
 ## [4.63.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.62.2...v4.63.0) (2024-06-26)
