@@ -15,7 +15,7 @@ import { logWarn } from '@utils/error/log-error';
 
 import {
   setAllCheckboxInputs,
-  setMainCheckboxElementCheckedState
+  setParentCheckboxElementCheckedState
 } from './gux-form-field-checkbox-group.service';
 
 import {
@@ -76,7 +76,7 @@ export class GuxFormFieldCheckboxGroupBeta {
 
   @Watch('disabled')
   watchDisabled(): void {
-    this.setDisabledCheckbox();
+    this.setDisabledCheckboxes();
   }
 
   @OnMutation({ childList: true, subtree: true })
@@ -89,13 +89,13 @@ export class GuxFormFieldCheckboxGroupBeta {
     this.hasGroupError = hasSlot(this.root, 'group-error');
     this.hasGroupHelp = hasSlot(this.root, 'group-help');
     this.setLabel();
-    this.setDisabledCheckbox();
+    this.setDisabledCheckboxes();
 
     trackComponent(this.root);
   }
 
   componentDidLoad(): void {
-    setMainCheckboxElementCheckedState(
+    setParentCheckboxElementCheckedState(
       this.root,
       this.root.querySelector(
         'gux-form-field-checkbox[slot="group-checkbox"] input'
@@ -109,7 +109,13 @@ export class GuxFormFieldCheckboxGroupBeta {
     }
   }
 
-  private setDisabledCheckbox(): void {
+  private getGroupCheckboxElement(): HTMLInputElement {
+    return this.root.querySelector(
+      'gux-form-field-checkbox[slot="group-checkbox"] input'
+    );
+  }
+
+  private setDisabledCheckboxes(): void {
     const checkboxSlots = this.root.querySelectorAll('gux-form-field-checkbox');
     if (checkboxSlots) {
       checkboxSlots.forEach(item => {
@@ -119,9 +125,7 @@ export class GuxFormFieldCheckboxGroupBeta {
   }
 
   private onMainCheckboxChange(): void {
-    const groupCheckbox: HTMLInputElement = this.root.querySelector(
-      'gux-form-field-checkbox[slot="group-checkbox"] input'
-    );
+    const groupCheckbox: HTMLInputElement = this.getGroupCheckboxElement();
     setAllCheckboxInputs(this.root, groupCheckbox.checked);
     forceUpdate(this.root);
   }
@@ -130,9 +134,7 @@ export class GuxFormFieldCheckboxGroupBeta {
     this.warnMultipleGroupCheckbox();
     this.warnGroupCheckboxNameAttr();
 
-    const groupCheckbox: HTMLInputElement = this.root.querySelector(
-      'gux-form-field-checkbox[slot="group-checkbox"] input'
-    );
+    const groupCheckbox: HTMLInputElement = this.getGroupCheckboxElement();
     if (groupCheckbox) {
       this.root.classList.add('gux-group-checkbox');
     } else {
@@ -146,7 +148,9 @@ export class GuxFormFieldCheckboxGroupBeta {
 
   private initialSetNestedCheckboxes(groupCheckboxChecked): void {
     const checkboxSlots: HTMLInputElement[] = Array.from(
-      this.root.querySelectorAll('gux-form-field-checkbox input')
+      this.root.querySelectorAll(
+        'gux-form-field-checkbox input:not(gux-form-field-checkbox[slot="group-checkbox"] input)'
+      )
     );
     if (checkboxSlots?.length) {
       checkboxSlots.forEach(item => {
@@ -170,16 +174,14 @@ export class GuxFormFieldCheckboxGroupBeta {
   }
 
   private warnGroupCheckboxNameAttr(): void {
-    const groupCheckbox: HTMLInputElement = this.root.querySelector(
-      'gux-form-field-checkbox[slot="group-checkbox"] input'
-    );
+    const groupCheckbox: HTMLInputElement = this.getGroupCheckboxElement();
     if (groupCheckbox?.hasAttribute('name')) {
       logWarn(this.root, 'Group checkbox should not have a name attribute');
     }
   }
 
   private updateMainCheckbox(): void {
-    setMainCheckboxElementCheckedState(
+    setParentCheckboxElementCheckedState(
       this.root,
       this.root.querySelector(
         'gux-form-field-checkbox[slot="group-checkbox"] input'

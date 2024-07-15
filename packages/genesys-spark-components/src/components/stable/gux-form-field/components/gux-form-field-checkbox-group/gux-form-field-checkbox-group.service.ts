@@ -13,16 +13,16 @@ export function setAllCheckboxInputs(
   });
 }
 
-export function setMainCheckboxElementCheckedState(
+export function setParentCheckboxElementCheckedState(
   root: HTMLElement,
   mainCheckboxElement: HTMLInputElement
 ): void {
   if (mainCheckboxElement) {
-    const { count, total } = getSelectedColumnCount(root);
-    if (count === 0) {
+    const { checkedCheckboxes, totalCheckboxes } = getSelectedColumnCount(root);
+    if (checkedCheckboxes === 0) {
       mainCheckboxElement.indeterminate = false;
       mainCheckboxElement.checked = false;
-    } else if (count === total) {
+    } else if (checkedCheckboxes === totalCheckboxes) {
       mainCheckboxElement.indeterminate = false;
       mainCheckboxElement.checked = true;
     } else {
@@ -32,13 +32,13 @@ export function setMainCheckboxElementCheckedState(
 }
 
 export function getSelectedColumnCount(root: HTMLElement): {
-  count: number;
-  total: number;
+  checkedCheckboxes: number;
+  totalCheckboxes: number;
 } {
-  const total = getCheckboxInputs(root).length;
-  const count = getCheckedCheckboxInputs(root).length;
+  const totalCheckboxes = getCheckboxInputs(root).length;
+  const checkedCheckboxes = getCheckedCheckboxInputs(root).length;
 
-  return { count, total };
+  return { checkedCheckboxes, totalCheckboxes };
 }
 
 function getCheckboxInputs(root: HTMLElement): HTMLInputElement[] {
