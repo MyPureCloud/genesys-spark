@@ -16,7 +16,7 @@ import { getSlotTextContent } from '../../../utils/dom/get-slot-text-content';
   shadow: true
 })
 export class GuxLabelInfo {
-  private tooltip: HTMLGuxTooltipBetaElement;
+  private tooltipElement: HTMLGuxTooltipBetaElement;
 
   @Element()
   private root: HTMLElement;
@@ -42,7 +42,7 @@ export class GuxLabelInfo {
    */
   @Method()
   async showTooltip(): Promise<void> {
-    return await this.tooltip.showTooltip();
+    return await this.tooltipElement.showTooltip();
   }
 
   /*
@@ -50,7 +50,7 @@ export class GuxLabelInfo {
    */
   @Method()
   async hideTooltip(): Promise<void> {
-    return await this.tooltip.hideTooltip();
+    return await this.tooltipElement.hideTooltip();
   }
 
   render(): JSX.Element {
@@ -66,7 +66,7 @@ export class GuxLabelInfo {
         ></gux-icon>
         <gux-tooltip-beta
           placement={this.placement}
-          ref={el => (this.tooltip = el)}
+          ref={el => (this.tooltipElement = el)}
         >
           <div slot="content">{getSlotTextContent(this.root, 'content')}</div>
         </gux-tooltip-beta>

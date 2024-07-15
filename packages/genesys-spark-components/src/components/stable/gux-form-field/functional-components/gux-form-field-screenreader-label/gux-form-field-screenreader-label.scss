@@ -4,9 +4,5 @@
 @mixin Style {
   .gux-form-field-screenreader-label {
     @include mixins.gux-sr-only;
-
-    ::slotted(label) {
-      white-space: nowrap;
-    }
   }
 }

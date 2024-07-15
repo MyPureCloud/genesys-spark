@@ -6,13 +6,13 @@
     display: inline-flex;
     flex: 1 0 auto;
 
-    ::slotted(label) {
-      padding-inline-end: var(--gse-ui-formControl-label-gap);
+    ::slotted(gux-label-info-beta) {
+      padding-inline-start: var(--gse-ui-formControl-label-gap);
     }
 
     &.gux-required {
       gux-form-field-label-indicator {
-        padding-inline-end: var(--gse-ui-formControl-label-gap);
+        padding-inline-start: var(--gse-ui-formControl-label-gap);
       }
     }
 

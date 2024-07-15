@@ -74,5 +74,22 @@ describe('gux-form-field-time-picker', () => {
         expect(page.root).toMatchSnapshot();
       });
     });
+
+    describe('label-info', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-time-picker>
+        <gux-time-picker value="09:00"></gux-time-picker>
+        <label slot="label">Select Time</label>
+        <gux-label-info-beta slot="label-info">
+          <span slot="content">This is some tooltip text</span>
+        </gux-label-info-beta>
+      </gux-form-field-time-picker>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
   });
 });

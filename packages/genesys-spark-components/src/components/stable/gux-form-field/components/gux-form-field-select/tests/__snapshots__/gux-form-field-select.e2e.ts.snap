@@ -3,8 +3,8 @@
 exports[`gux-form-field-select #render help should render component as expected 1`] = `"<gux-form-field-select hydrated=""> <select slot="input" name="e-1" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"> <option value="option1">Option 1</option> <option value="option2">Option 2</option> <option value="option3">Option 3</option> </select> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-select>"`;
 
 exports[`gux-form-field-select #render help should render component as expected 2`] = `
-<div class="gux-above gux-form-field-container">
-  <div class="gux-above gux-form-field-label">
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
     <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
     <slot name="label-info"></slot>
@@ -34,8 +34,8 @@ exports[`gux-form-field-select #render help should render component as expected 
 exports[`gux-form-field-select #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-select hydrated=""> <select slot="input" name="lp-1" id="gux-form-field-input-i"> <option value="option1">Option 1</option> <option value="option2">Option 2</option> <option value="option3">Option 3</option> </select> <label slot="label" for="gux-form-field-input-i">Default</label> </gux-form-field-select>"`;
 
 exports[`gux-form-field-select #render input attributes should render component as expected (1) 2`] = `
-<div class="gux-above gux-form-field-container">
-  <div class="gux-above gux-form-field-label">
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
     <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
     <slot name="label-info"></slot>
@@ -65,8 +65,8 @@ exports[`gux-form-field-select #render input attributes should render component 
 exports[`gux-form-field-select #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-select hydrated=""> <select slot="input" name="lp-1" disabled="" id="gux-form-field-input-i"> <option value="option1">Option 1</option> <option value="option2">Option 2</option> <option value="option3">Option 3</option> </select> <label slot="label" for="gux-form-field-input-i">Default</label> </gux-form-field-select>"`;
 
 exports[`gux-form-field-select #render input attributes should render component as expected (2) 2`] = `
-<div class="gux-above gux-form-field-container">
-  <div class="gux-above gux-form-field-label">
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
     <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
     <slot name="label-info"></slot>
@@ -96,8 +96,8 @@ exports[`gux-form-field-select #render input attributes should render component 
 exports[`gux-form-field-select #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-select hydrated=""> <select slot="input" name="lp-1" required="" id="gux-form-field-input-i"> <option value="option1">Option 1</option> <option value="option2">Option 2</option> <option value="option3">Option 3</option> </select> <label slot="label" for="gux-form-field-input-i">Default</label> </gux-form-field-select>"`;
 
 exports[`gux-form-field-select #render input attributes should render component as expected (3) 2`] = `
-<div class="gux-above gux-form-field-container">
-  <div class="gux-above gux-form-field-label gux-required">
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label gux-required">
     <slot name="label"></slot>
     <gux-form-field-label-indicator hydrated="">
       <span aria-hidden="true" class="gux-form-field-label-indicator-required">
@@ -131,8 +131,8 @@ exports[`gux-form-field-select #render input attributes should render component 
 exports[`gux-form-field-select #render label-position should render component as expected (1) 1`] = `"<gux-form-field-select hydrated=""> <select slot="input" name="lp-1" id="gux-form-field-input-i"> <option value="option1">Option 1</option> <option value="option2">Option 2</option> <option value="option3">Option 3</option> </select> <label slot="label" for="gux-form-field-input-i">Default</label> </gux-form-field-select>"`;
 
 exports[`gux-form-field-select #render label-position should render component as expected (1) 2`] = `
-<div class="gux-above gux-form-field-container">
-  <div class="gux-above gux-form-field-label">
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
     <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
     <slot name="label-info"></slot>

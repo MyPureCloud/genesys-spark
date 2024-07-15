@@ -171,7 +171,6 @@ export class GuxFormFieldDropdown {
           required={this.required}
         >
           <slot name="label" onSlotchange={() => this.setLabel()} />
-
           <gux-form-field-label-indicator
             variant="required"
             required={this.required}

@@ -3,8 +3,8 @@
 exports[`gux-form-field-color #render help should render component as expected 1`] = `"<gux-form-field-color hydrated=""> <input slot="input" type="color" name="e-1" value="#cc3ebe" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-color>"`;
 
 exports[`gux-form-field-color #render help should render component as expected 2`] = `
-<div class="gux-above gux-form-field-container">
-  <div class="gux-above gux-form-field-label">
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
     <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
     <slot name="label-info"></slot>

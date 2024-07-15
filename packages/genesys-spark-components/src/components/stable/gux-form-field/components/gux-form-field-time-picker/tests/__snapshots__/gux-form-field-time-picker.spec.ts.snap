@@ -4,20 +4,14 @@ exports[`gux-form-field-time-picker #render help should render component as expe
 <gux-form-field-time-picker>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          <mock:shadow-root>
-            <span class="gux-sr-only">
-              <slot></slot>
-            </span>
-          </mock:shadow-root>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Select Time
-      </span>
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-time-picker-container">
@@ -52,20 +46,14 @@ exports[`gux-form-field-time-picker #render intervals should render component as
 <gux-form-field-time-picker>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          <mock:shadow-root>
-            <span class="gux-sr-only">
-              <slot></slot>
-            </span>
-          </mock:shadow-root>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Label
-      </span>
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-time-picker-container">
@@ -97,20 +85,14 @@ exports[`gux-form-field-time-picker #render intervals should render component as
 <gux-form-field-time-picker>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          <mock:shadow-root>
-            <span class="gux-sr-only">
-              <slot></slot>
-            </span>
-          </mock:shadow-root>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Label
-      </span>
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-time-picker-container">
@@ -142,20 +124,14 @@ exports[`gux-form-field-time-picker #render intervals should render component as
 <gux-form-field-time-picker>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          <mock:shadow-root>
-            <span class="gux-sr-only">
-              <slot></slot>
-            </span>
-          </mock:shadow-root>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Label
-      </span>
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-time-picker-container">
@@ -183,24 +159,62 @@ exports[`gux-form-field-time-picker #render intervals should render component as
 </gux-form-field-time-picker>
 `;
 
+exports[`gux-form-field-time-picker #render label-info should render component as expected 1`] = `
+<gux-form-field-time-picker>
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Select Time This is some tooltip text
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-time-picker-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <gux-time-picker aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" value="09:00"></gux-time-picker>
+  <label for="gux-form-field-input-i" slot="label">
+    Select Time
+  </label>
+  <gux-label-info-beta id="gux-label-info-beta-i" slot="label-info">
+    <span slot="content">
+      This is some tooltip text
+    </span>
+  </gux-label-info-beta>
+</gux-form-field-time-picker>
+`;
+
 exports[`gux-form-field-time-picker #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-time-picker>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          <mock:shadow-root>
-            <span class="gux-sr-only">
-              <slot></slot>
-            </span>
-          </mock:shadow-root>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Label
-      </span>
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-time-picker-container">
@@ -232,20 +246,14 @@ exports[`gux-form-field-time-picker #render label-position should render compone
 <gux-form-field-time-picker label-position="above">
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          <mock:shadow-root>
-            <span class="gux-sr-only">
-              <slot></slot>
-            </span>
-          </mock:shadow-root>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Label
-      </span>
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-time-picker-container">
@@ -277,20 +285,14 @@ exports[`gux-form-field-time-picker #render label-position should render compone
 <gux-form-field-time-picker label-position="beside">
   <mock:shadow-root>
     <fieldset class="gux-beside gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          <mock:shadow-root>
-            <span class="gux-sr-only">
-              <slot></slot>
-            </span>
-          </mock:shadow-root>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Label
-      </span>
+      </legend>
+      <div class="gux-beside gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-time-picker-container">
@@ -322,20 +324,14 @@ exports[`gux-form-field-time-picker #render label-position should render compone
 <gux-form-field-time-picker label-position="screenreader">
   <mock:shadow-root>
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          <mock:shadow-root>
-            <span class="gux-sr-only">
-              <slot></slot>
-            </span>
-          </mock:shadow-root>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Label
-      </span>
+      </legend>
+      <div class="gux-form-field-visual-label gux-screenreader" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-time-picker-container">

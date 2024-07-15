@@ -21,6 +21,32 @@
   </fieldset>
 
   <fieldset>
+    <legend>Label Beside</legend>
+    <gux-form-field-time-zone-picker label-position="beside">
+      <gux-time-zone-picker-beta
+        value="Etc/GMT+1"
+        workspace-default="Etc/GMT"
+        local-default="America/Detroit"
+      >
+      </gux-time-zone-picker-beta>
+      <label slot="label">Select Time Zone</label>
+    </gux-form-field-time-zone-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>Label Screenreader Only</legend>
+    <gux-form-field-time-zone-picker label-position="screenreader">
+      <gux-time-zone-picker-beta
+        value="Etc/GMT+1"
+        workspace-default="Etc/GMT"
+        local-default="America/Detroit"
+      >
+      </gux-time-zone-picker-beta>
+      <label slot="label">Select Time Zone</label>
+    </gux-form-field-time-zone-picker>
+  </fieldset>
+
+  <fieldset>
     <legend>Disabled</legend>
     <gux-form-field-time-zone-picker label-position="above">
       <gux-time-zone-picker-beta
@@ -45,6 +71,22 @@
       </gux-time-zone-picker-beta>
       <label slot="label">Select Time Zone</label>
       <span slot="error">This is an error message</span>
+    </gux-form-field-time-zone-picker>
+  </fieldset>
+
+  <fieldset>
+    <legend>Label Info</legend>
+    <gux-form-field-time-zone-picker label-position="above">
+      <gux-time-zone-picker-beta
+        value="Etc/GMT+1"
+        workspace-default="Etc/GMT"
+        local-default="America/Detroit"
+      >
+      </gux-time-zone-picker-beta>
+      <label slot="label">Select Time Zone</label>
+      <gux-label-info-beta slot="label-info">
+        <span slot="content">This is some tooltip text</span>
+      </gux-label-info-beta>
     </gux-form-field-time-zone-picker>
   </fieldset>
 </form>
