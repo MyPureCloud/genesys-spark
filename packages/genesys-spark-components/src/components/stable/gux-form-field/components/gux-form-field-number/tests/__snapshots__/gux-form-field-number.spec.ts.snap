@@ -345,7 +345,7 @@ exports[`gux-form-field-number #render input attributes should render component 
 <gux-form-field-number>
   <mock:shadow-root>
     <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label gux-required">
+      <div class="gux-above gux-asterisk gux-form-field-label gux-required">
         <slot name="label"></slot>
       </div>
       <div class="gux-input-and-error-container">

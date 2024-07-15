@@ -1,0 +1,12 @@
+@use '~genesys-spark/src/style/mixins.scss';
+
+/* stylelint-disable-next-line selector-class-pattern */
+@mixin Style {
+  .gux-form-field-screenreader-label {
+    @include mixins.gux-sr-only;
+
+    ::slotted(label) {
+      white-space: nowrap;
+    }
+  }
+}
