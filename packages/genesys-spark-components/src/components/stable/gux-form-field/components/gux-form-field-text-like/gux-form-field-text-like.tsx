@@ -182,7 +182,6 @@ export class GuxFormFieldTextLike {
         <GuxFormFieldLabel
           required={this.required}
           position={this.computedLabelPosition}
-          showAsterisk={false}
         >
           <slot name="label" onSlotchange={() => this.setLabel()} />
           <gux-form-field-label-indicator

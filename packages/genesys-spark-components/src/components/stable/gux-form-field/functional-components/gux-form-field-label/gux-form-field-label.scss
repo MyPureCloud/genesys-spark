@@ -16,13 +16,6 @@
       }
     }
 
-    &.gux-asterisk {
-      &::after {
-        color: var(--gse-ui-formControl-label-indicator-requiredColor);
-        content: ' *';
-      }
-    }
-
     &.gux-beside {
       position: relative;
       top: var(--gse-ui-formControl-input-top);

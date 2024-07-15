@@ -5,11 +5,10 @@ import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 interface GuxFormFieldLabelProps {
   position: GuxFormFieldLabelPosition;
   required: boolean;
-  showAsterisk?: boolean;
 }
 
 export const GuxFormFieldLabel: FunctionalComponent<GuxFormFieldLabelProps> = (
-  { position, required, showAsterisk = true },
+  { position, required },
   children
 ): VNode => {
   return (
@@ -17,8 +16,7 @@ export const GuxFormFieldLabel: FunctionalComponent<GuxFormFieldLabelProps> = (
       class={{
         'gux-form-field-label': true,
         [`gux-${position}`]: true,
-        'gux-required': required,
-        'gux-asterisk': required && showAsterisk //This is temporary until the other components are updated to match text-like
+        'gux-required': required
       }}
     >
       {children}
