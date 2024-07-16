@@ -1,14 +1,12 @@
 import { Component, State, Element, JSX, Prop, h } from '@stencil/core';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
-import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
 import { OnMutation } from '@utils/decorator/on-mutation';
 import { hasSlot } from '@utils/dom/has-slot';
 import { trackComponent } from '@utils/tracking/usage';
 import {
   GuxFormFieldError,
-  GuxFormFieldFieldsetContainer,
+  GuxFormFieldContainer,
   GuxFormFieldHelp,
-  GuxFormFieldLegendLabel
+  GuxFormFieldLabel
 } from '../../functional-components/functional-components';
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
 import {
@@ -16,8 +14,6 @@ import {
   getSlottedInput,
   validateFormIds
 } from '../../gux-form-field.service';
-import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
-import componentResources from './i18n/en.json';
 import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-validation-styling';
 import { onRequiredChange } from '@utils/dom/on-attribute-change';
 
@@ -34,7 +30,6 @@ import { onRequiredChange } from '@utils/dom/on-attribute-change';
   shadow: true
 })
 export class GuxFormFieldFile {
-  private getI18nValue: GetI18nValue;
   private fileInputElement: HTMLInputElement;
   private label: HTMLLabelElement;
   private requiredObserver: MutationObserver;
@@ -63,12 +58,7 @@ export class GuxFormFieldFile {
     this.hasHelp = hasSlot(this.root, 'help');
   }
 
-  async componentWillLoad(): Promise<void> {
-    this.getI18nValue = await buildI18nForComponent(
-      this.root,
-      componentResources as ILocalizedComponentResources
-    );
-
+  componentWillLoad(): void {
     this.setInput();
     this.setLabel();
 
@@ -81,17 +71,6 @@ export class GuxFormFieldFile {
   disconnectedCallback(): void {
     if (this.requiredObserver) {
       this.requiredObserver.disconnect();
-    }
-  }
-
-  private renderScreenReaderText(
-    text: string,
-    condition: boolean = true
-  ): JSX.Element {
-    if (condition) {
-      return (
-        <gux-screen-reader-beta>{text}</gux-screen-reader-beta>
-      ) as JSX.Element;
     }
   }
 
@@ -135,26 +114,13 @@ export class GuxFormFieldFile {
 
   render(): JSX.Element {
     return (
-      <GuxFormFieldFieldsetContainer labelPosition={this.computedLabelPosition}>
-        <GuxFormFieldLegendLabel
+      <GuxFormFieldContainer labelPosition={this.computedLabelPosition}>
+        <GuxFormFieldLabel
           position={this.computedLabelPosition}
           required={this.required}
-          labelText={this.label?.textContent}
         >
           <slot name="label" onSlotchange={() => this.setLabel()} />
-          {this.renderScreenReaderText(
-            this.getI18nValue('required'),
-            this.required
-          )}
-          {this.renderScreenReaderText(
-            getSlotTextContent(this.root, 'error'),
-            this.hasError
-          )}
-          {this.renderScreenReaderText(
-            getSlotTextContent(this.root, 'help'),
-            this.hasHelp
-          )}
-        </GuxFormFieldLegendLabel>
+        </GuxFormFieldLabel>
         <slot name="input" onSlotchange={() => this.setInput()} />
         <GuxFormFieldError show={this.hasError}>
           <slot name="error" />
@@ -162,7 +128,7 @@ export class GuxFormFieldFile {
         <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
           <slot name="help" />
         </GuxFormFieldHelp>
-      </GuxFormFieldFieldsetContainer>
+      </GuxFormFieldContainer>
     ) as JSX.Element;
   }
 }

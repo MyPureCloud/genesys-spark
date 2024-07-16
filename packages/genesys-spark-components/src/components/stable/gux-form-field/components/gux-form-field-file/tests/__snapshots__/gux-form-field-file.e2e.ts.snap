@@ -2,32 +2,176 @@
 
 exports[`gux-form-field-file #render help should render component as expected 1`] = `"<gux-form-field-file hydrated=""> <label slot="label" for="avatar">Upload a profile picture</label> <input slot="input" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" aria-describedby="gux-form-field-help-i"> <span slot="help" id="gux-form-field-help-i">This is a help message </span> </gux-form-field-file>"`;
 
-exports[`gux-form-field-file #render help should render component as expected 2`] = `null`;
+exports[`gux-form-field-file #render help should render component as expected 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <slot name="input"></slot>
+  <div class="gux-form-field-error">
+    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+  <div class="gux-form-field-help gux-show">
+    <div class="gux-message">
+      <slot name="help"></slot>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`gux-form-field-file #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-file hydrated=""> <label slot="label" for="avatar">Upload a profile picture</label> <input slot="input" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"> </gux-form-field-file>"`;
 
-exports[`gux-form-field-file #render input attributes should render component as expected (1) 2`] = `null`;
+exports[`gux-form-field-file #render input attributes should render component as expected (1) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <slot name="input"></slot>
+  <div class="gux-form-field-error">
+    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+  <div class="gux-form-field-help">
+    <div class="gux-message">
+      <slot name="help"></slot>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`gux-form-field-file #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-file hydrated=""> <label slot="label" for="avatar">Upload a profile picture</label> <input slot="input" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" disabled=""> </gux-form-field-file>"`;
 
-exports[`gux-form-field-file #render input attributes should render component as expected (2) 2`] = `null`;
+exports[`gux-form-field-file #render input attributes should render component as expected (2) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <slot name="input"></slot>
+  <div class="gux-form-field-error">
+    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+  <div class="gux-form-field-help">
+    <div class="gux-message">
+      <slot name="help"></slot>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`gux-form-field-file #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-file hydrated=""> <label slot="label" for="avatar">Upload a profile picture</label> <input slot="input" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required=""> </gux-form-field-file>"`;
 
-exports[`gux-form-field-file #render input attributes should render component as expected (3) 2`] = `null`;
+exports[`gux-form-field-file #render input attributes should render component as expected (3) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label gux-required">
+    <slot name="label"></slot>
+  </div>
+  <slot name="input"></slot>
+  <div class="gux-form-field-error">
+    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+  <div class="gux-form-field-help">
+    <div class="gux-message">
+      <slot name="help"></slot>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`gux-form-field-file #render label-position should render component as expected (1) 1`] = `"<gux-form-field-file hydrated=""> <label slot="label" for="avatar">Upload a profile picture</label> <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" slot="input"> </gux-form-field-file>"`;
 
-exports[`gux-form-field-file #render label-position should render component as expected (1) 2`] = `null`;
+exports[`gux-form-field-file #render label-position should render component as expected (1) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <slot name="input"></slot>
+  <div class="gux-form-field-error">
+    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+  <div class="gux-form-field-help">
+    <div class="gux-message">
+      <slot name="help"></slot>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`gux-form-field-file #render label-position should render component as expected (2) 1`] = `"<gux-form-field-file label-position="above" hydrated=""> <label slot="label" for="avatar">Upload a profile picture</label> <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" slot="input"> </gux-form-field-file>"`;
 
-exports[`gux-form-field-file #render label-position should render component as expected (2) 2`] = `null`;
+exports[`gux-form-field-file #render label-position should render component as expected (2) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <slot name="input"></slot>
+  <div class="gux-form-field-error">
+    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+  <div class="gux-form-field-help">
+    <div class="gux-message">
+      <slot name="help"></slot>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`gux-form-field-file #render label-position should render component as expected (3) 1`] = `"<gux-form-field-file label-position="beside" hydrated=""> <label slot="label" for="avatar">Upload a profile picture</label> <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" slot="input"> </gux-form-field-file>"`;
 
-exports[`gux-form-field-file #render label-position should render component as expected (3) 2`] = `null`;
+exports[`gux-form-field-file #render label-position should render component as expected (3) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+  </div>
+  <slot name="input"></slot>
+  <div class="gux-form-field-error">
+    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+  <div class="gux-form-field-help">
+    <div class="gux-message">
+      <slot name="help"></slot>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`gux-form-field-file #render label-position should render component as expected (4) 1`] = `"<gux-form-field-file label-position="screenreader" hydrated=""> <label slot="label" for="avatar">Upload a profile picture</label> <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" slot="input"> </gux-form-field-file>"`;
 
-exports[`gux-form-field-file #render label-position should render component as expected (4) 2`] = `null`;
+exports[`gux-form-field-file #render label-position should render component as expected (4) 2`] = `
+<div class="gux-form-field-container gux-screenreader">
+  <div class="gux-form-field-label gux-screenreader">
+    <slot name="label"></slot>
+  </div>
+  <slot name="input"></slot>
+  <div class="gux-form-field-error">
+    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+    <div class="gux-message">
+      <slot name="error"></slot>
+    </div>
+  </div>
+  <div class="gux-form-field-help">
+    <div class="gux-message">
+      <slot name="help"></slot>
+    </div>
+  </div>
+</div>
+`;
