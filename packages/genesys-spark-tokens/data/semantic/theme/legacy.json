@@ -550,6 +550,10 @@
         "20": {
           "value": "{color_legacy.black.80}",
           "type": "color"
+        },
+        "30": {
+          "value": "{color_legacy.black.50}",
+          "type": "color"
         }
       },
       "enabled": {

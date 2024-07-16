@@ -394,7 +394,7 @@
       }
     }
   },
-  "focus": {
+  "focus_outline": {
     "full": {
       "border_radius": {
         "value": "{border_radius.focus.full}",

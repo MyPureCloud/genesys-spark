@@ -345,7 +345,7 @@
         "border": {
           "value": {
             "color": "{border.focus}",
-            "width": "{focus.small.border_width}",
+            "width": "{focus_outline.small.border_width}",
             "style": "solid"
           },
           "type": "border"
