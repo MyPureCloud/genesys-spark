@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.64.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.2...v4.64.3) (2024-07-16)
+
+
+### Bug Fixes
+
+* **table:** disabled pagination overlapping context-menu ([1bc2d83](https://github.com/MyPureCloud/genesys-spark/commit/1bc2d830cde7833a2418195482ca8b2f0f46f2be))
+
+### [4.64.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.1...v4.64.2) (2024-07-13)
+
+
+### Bug Fixes
+
+* **table:** fix disabled row select bug in vue ([b85f309](https://github.com/MyPureCloud/genesys-spark/commit/b85f309d348b2feb44ddb15271f01ea72bfcdf73))
+
+### [4.64.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.0...v4.64.1) (2024-07-12)
+
+
+### Bug Fixes
+
+* **form-field-select:** clicking downarrow now displays the dropdown ([bf96624](https://github.com/MyPureCloud/genesys-spark/commit/bf966247befdb679adf0d3ab6248dc3b876ce50a))
+
 ## [4.64.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.63.3...v4.64.0) (2024-07-10)
 
 
