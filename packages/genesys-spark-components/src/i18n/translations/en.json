@@ -92,9 +92,6 @@
   "gux-form-field-dropdown": {
     "required": "Required"
   },
-  "gux-form-field-file": {
-    "required": "required"
-  },
   "gux-form-field-input-clear-button": {
     "clear": "Clear"
   },
