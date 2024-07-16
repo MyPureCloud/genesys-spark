@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-pagination-cursor #render should render as expected (1) 1`] = `
-<gux-pagination-cursor controls="id1" label="Example label">
+<gux-pagination-cursor label="Example label">
   <mock:shadow-root>
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
-        <button aria-controls="id1" class="gux-simple-button" disabled="" type="button">
+        <button class="gux-simple-button" disabled="" type="button">
           <gux-icon iconname="custom/chevron-left-small-regular" screenreader-text="Previous"></gux-icon>
         </button>
       </gux-button-slot>
       <gux-button-slot accent="ghost">
-        <button aria-controls="id1" class="gux-simple-button" disabled="" type="button">
+        <button class="gux-simple-button" disabled="" type="button">
           <gux-icon iconname="custom/chevron-right-small-regular" screenreader-text="Next"></gux-icon>
         </button>
       </gux-button-slot>
@@ -20,16 +20,16 @@ exports[`gux-pagination-cursor #render should render as expected (1) 1`] = `
 `;
 
 exports[`gux-pagination-cursor #render should render as expected (2) 1`] = `
-<gux-pagination-cursor controls="id2" has-next="" label="Example label">
+<gux-pagination-cursor has-next="" label="Example label">
   <mock:shadow-root>
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
-        <button aria-controls="id2" class="gux-simple-button" disabled="" type="button">
+        <button class="gux-simple-button" disabled="" type="button">
           <gux-icon iconname="custom/chevron-left-small-regular" screenreader-text="Previous"></gux-icon>
         </button>
       </gux-button-slot>
       <gux-button-slot accent="ghost">
-        <button aria-controls="id2" class="gux-simple-button" type="button">
+        <button class="gux-simple-button" type="button">
           <gux-icon iconname="custom/chevron-right-small-regular" screenreader-text="Next"></gux-icon>
         </button>
       </gux-button-slot>
@@ -39,16 +39,16 @@ exports[`gux-pagination-cursor #render should render as expected (2) 1`] = `
 `;
 
 exports[`gux-pagination-cursor #render should render as expected (3) 1`] = `
-<gux-pagination-cursor controls="id3" has-next="" has-previous="" label="Example label">
+<gux-pagination-cursor has-next="" has-previous="" label="Example label">
   <mock:shadow-root>
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
-        <button aria-controls="id3" class="gux-simple-button" type="button">
+        <button class="gux-simple-button" type="button">
           <gux-icon iconname="custom/chevron-left-small-regular" screenreader-text="Previous"></gux-icon>
         </button>
       </gux-button-slot>
       <gux-button-slot accent="ghost">
-        <button aria-controls="id3" class="gux-simple-button" type="button">
+        <button class="gux-simple-button" type="button">
           <gux-icon iconname="custom/chevron-right-small-regular" screenreader-text="Next"></gux-icon>
         </button>
       </gux-button-slot>
@@ -58,16 +58,16 @@ exports[`gux-pagination-cursor #render should render as expected (3) 1`] = `
 `;
 
 exports[`gux-pagination-cursor #render should render as expected (4) 1`] = `
-<gux-pagination-cursor controls="id4" has-previous="" label="Example label">
+<gux-pagination-cursor has-previous="" label="Example label">
   <mock:shadow-root>
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
-        <button aria-controls="id4" class="gux-simple-button" type="button">
+        <button class="gux-simple-button" type="button">
           <gux-icon iconname="custom/chevron-left-small-regular" screenreader-text="Previous"></gux-icon>
         </button>
       </gux-button-slot>
       <gux-button-slot accent="ghost">
-        <button aria-controls="id4" class="gux-simple-button" disabled="" type="button">
+        <button class="gux-simple-button" disabled="" type="button">
           <gux-icon iconname="custom/chevron-right-small-regular" screenreader-text="Next"></gux-icon>
         </button>
       </gux-button-slot>
@@ -77,7 +77,7 @@ exports[`gux-pagination-cursor #render should render as expected (4) 1`] = `
 `;
 
 exports[`gux-pagination-cursor #render should render as expected (5) 1`] = `
-<gux-pagination-cursor controls="id5" label="Example label" layout="advanced">
+<gux-pagination-cursor label="Example label" layout="advanced">
   <mock:shadow-root>
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">

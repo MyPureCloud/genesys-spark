@@ -10,7 +10,6 @@ import {
 
 import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
-import { logWarn } from '@utils/error/log-error';
 
 import translationResources from './i18n/en.json';
 import { GuxPaginationCursorDetail } from './gux-pagination-cursor.types';
@@ -46,12 +45,6 @@ export class GuxPaginationCursor {
   @Prop()
   layout: 'simple' | 'advanced' = 'simple';
 
-  /**
-   * ID of the element that contains the paginated content to aid accessibility.
-   */
-  @Prop()
-  controls: string;
-
   @Event()
   private guxPaginationCursorchange: EventEmitter<GuxPaginationCursorDetail>;
 
@@ -74,10 +67,6 @@ export class GuxPaginationCursor {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
 
-    if (!this.controls) {
-      logWarn(this.root, 'A controls prop may help with accessibility');
-    }
-
     this.i18n = await buildI18nForComponent(this.root, translationResources);
   }
 
@@ -90,7 +79,6 @@ export class GuxPaginationCursor {
             type="button"
             disabled={!this.hasPrevious}
             onClick={() => this.onButtonClick('previous')}
-            aria-controls={this.controls}
           >
             <gux-icon
               iconName="custom/chevron-left-small-regular"
@@ -104,7 +92,6 @@ export class GuxPaginationCursor {
             type="button"
             disabled={!this.hasNext}
             onClick={() => this.onButtonClick('next')}
-            aria-controls={this.controls}
           >
             <gux-icon
               iconName="custom/chevron-right-small-regular"
