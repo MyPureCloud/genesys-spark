@@ -149,6 +149,7 @@ export type GuxIconIconName =
   | 'custom/grip-lines-diagonal-regular'
   | 'custom/list-alphabetical-regular'
   | 'custom/list-roman-regular'
+  | 'custom/log-eye-regular'
   | 'custom/one-button'
   | 'custom/panel-collapse-regular'
   | 'custom/panel-large-regular'
