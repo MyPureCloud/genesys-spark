@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.64.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.3...v4.64.4) (2024-07-17)
+
+
+### Bug Fixes
+
+* **copy-to-clipboard:** fix status icon styles and align icon and text ([741f679](https://github.com/MyPureCloud/genesys-spark/commit/741f6792b498d6e907b3d47beb903f1f64fdf7e4))
+* **form-field-file:** Remove duplication in screenreader content ([#533](https://github.com/MyPureCloud/genesys-spark/issues/533)) ([f68a2f2](https://github.com/MyPureCloud/genesys-spark/commit/f68a2f2fedf502a75e3bffc7fef6a1e57c651a2c))
+
 ### [4.64.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.2...v4.64.3) (2024-07-16)
 
 
