@@ -4,7 +4,7 @@ export function setAllCheckboxInputs(
   root: HTMLElement,
   checked: boolean
 ): void {
-  getCheckboxInputs(root).forEach(checkboxInput => {
+  getNestedCheckboxInputs(root).forEach(checkboxInput => {
     if (checkboxInput.checked !== checked && !checkboxInput.disabled) {
       checkboxInput.checked = checked;
       simulateNativeEvent(checkboxInput, 'input');
@@ -35,18 +35,22 @@ export function getSelectedColumnCount(root: HTMLElement): {
   checkedCheckboxes: number;
   totalCheckboxes: number;
 } {
-  const totalCheckboxes = getCheckboxInputs(root).length;
+  const totalCheckboxes = getNestedCheckboxInputs(root).length;
   const checkedCheckboxes = getCheckedCheckboxInputs(root).length;
 
   return { checkedCheckboxes, totalCheckboxes };
 }
 
-function getCheckboxInputs(root: HTMLElement): HTMLInputElement[] {
-  return Array.from(root.querySelectorAll('input[type=checkbox]'));
+function getNestedCheckboxInputs(root: HTMLElement): HTMLInputElement[] {
+  return Array.from(
+    root.querySelectorAll(
+      'gux-form-field-checkbox input:not(gux-form-field-checkbox[slot="group-checkbox"] input'
+    )
+  );
 }
 
 function getCheckedCheckboxInputs(root: HTMLElement): HTMLInputElement[] {
-  const checkboxInputs = getCheckboxInputs(root);
+  const checkboxInputs = getNestedCheckboxInputs(root);
 
   return checkboxInputs.filter(x => x.checked);
 }
