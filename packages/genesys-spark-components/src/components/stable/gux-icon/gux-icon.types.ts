@@ -162,6 +162,7 @@ export type GuxIconIconName =
   | 'custom/list-alphabetical-regular'
   | 'custom/list-roman-regular'
   | 'custom/lock-keyholes-regular'
+  | 'custom/log-eye-regular'
   | 'custom/message-bell-regular'
   | 'custom/microphone-line-on-regular'
   | 'custom/microsoft-teams'
