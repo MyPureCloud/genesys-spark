@@ -357,6 +357,18 @@
         "type": "borderWidth",
         "description": "The default border width for the dividers within interactive components, like the ones on an action button."
       }
+    },
+    "x_small": {
+      "height": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is recommended for special interactive elements, such as color swatches in the Rich Text Editor."
+      },
+      "width": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is recommended for special interactive elements, such as color swatches in the Rich Text Editor."
+      }
     }
   },
   "focus": {
@@ -493,6 +505,12 @@
         "type": "borderWidth",
         "description": "The recommended border width for the dividers within containers, like cards or menus or popovers."
       }
+    },
+    "emphasis": {
+      "width": {
+        "value": "{size.4xs}",
+        "type": "sizing"
+      }
     }
   },
   "form_control": {
@@ -571,6 +589,40 @@
         "value": "{elevation.low}",
         "type": "boxShadow",
         "description": "The shadow we used for small-sized components like tooltips."
+      }
+    }
+  },
+  "divider": {
+    "medium": {
+      "padding": {
+        "value": "0 {spacing.4xs}",
+        "type": "spacing"
+      }
+    },
+    "small": {
+      "width": {
+        "value": "{size.5xs}",
+        "type": "sizing",
+        "description": "This token is for dividers that are made with rectangles."
+      },
+      "height": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is for dividers that are made with rectangles."
+      }
+    }
+  },
+  "code": {
+    "sm": {
+      "regular": {
+        "value": {
+          "fontFamily": "{font_family.monospace.body}",
+          "fontWeight": "{font_weight.regular}",
+          "fontSize": "{font_size.xs}",
+          "lineHeight": "{line_height.2xs}"
+        },
+        "type": "typography",
+        "description": "This typography token is recommended to be used only for code blocks."
       }
     }
   }

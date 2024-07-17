@@ -102,6 +102,48 @@
           "type": "color",
           "description": "The background color of danger actions in the active state."
         }
+      },
+      "custom": {
+        "tomato": {
+          "value": "{background.custom_accents.color_swatch.10}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "coral": {
+          "value": "{background.custom_accents.color_swatch.20}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "pear": {
+          "value": "{background.custom_accents.color_swatch.30}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "mango": {
+          "value": "{background.custom_accents.color_swatch.40}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "raspberry": {
+          "value": "{background.custom_accents.color_swatch.50}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "blueberry": {
+          "value": "{background.custom_accents.color_swatch.60}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "mineral": {
+          "value": "{background.custom_accents.color_swatch.70}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "islandaqua": {
+          "value": "{background.custom_accents.color_swatch.80}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        }
       }
     },
     "overlay": {
@@ -471,7 +513,7 @@
         "description": "The default color for high emphasis content on surfaces, like headings, subheadings, quotes or bold text."
       },
       "mid_emphasis": {
-        "value": "{foreground.primary.10}",
+        "value": "{foreground.primary.20}",
         "type": "color",
         "description": "The default color for medium emphasis content on surfaces, like normal paragraphs."
       },
@@ -657,6 +699,13 @@
           "description": "The color we used for the optional indicator."
         }
       }
+    },
+    "divider": {
+      "default": {
+        "value": "{foreground.divider.40}",
+        "type": "color",
+        "description": "This color is for toolbar dividers, for example rich text editor and data table toolbars."
+      }
     }
   },
   "border": {
@@ -713,6 +762,13 @@
           "value": "{border.edges.active.10}",
           "type": "color",
           "description": "The color for the edge borders of high contrast surfaces that are on the active state."
+        }
+      },
+      "emphasis": {
+        "default": {
+          "value": "{color.lavenderhaze.700}",
+          "type": "color",
+          "description": "This border color can be used for subtle emphasis on containers, such as the quote block for the Rich Text Editor."
         }
       }
     },
