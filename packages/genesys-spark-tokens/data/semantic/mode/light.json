@@ -3,85 +3,85 @@
     "interactive": {
       "primary": {
         "default": {
-          "value": "{background.surface.secondary.10}",
+          "value": "{background.container.secondary.10}",
           "type": "color",
           "description": "The background color of primary actions in the default state."
         },
         "hover": {
-          "value": "{background.surface.secondary.20}",
+          "value": "{background.container.secondary.20}",
           "type": "color",
           "description": "The background color of primary actions in the hover state."
         },
         "active": {
-          "value": "{background.surface.secondary.30}",
+          "value": "{background.container.secondary.30}",
           "type": "color",
           "description": "The background color of primary actions in the active state."
         }
       },
       "secondary": {
         "default": {
-          "value": "{background.surface.primary.40}",
+          "value": "{background.container.primary.40}",
           "type": "color",
           "description": "The background color of secondary actions in the default state."
         },
         "hover": {
-          "value": "{background.surface.primary.50}",
+          "value": "{background.container.primary.50}",
           "type": "color",
           "description": "The background color of secondary actions in the hover state."
         },
         "active": {
-          "value": "{background.surface.primary.60}",
+          "value": "{background.container.primary.60}",
           "type": "color",
           "description": "The background color of secondary actions in the active state."
         }
       },
       "tertiary": {
         "default": {
-          "value": "{background.surface.tertiary.10}",
+          "value": "{background.container.tertiary.10}",
           "type": "color",
           "description": "The background color of tertiary actions in the default state."
         },
         "hover": {
-          "value": "{background.surface.secondary.20}",
+          "value": "{background.container.secondary.20}",
           "type": "color",
           "description": "The background color of tertiary actions in the hover state."
         },
         "active": {
-          "value": "{background.surface.secondary.30}",
+          "value": "{background.container.secondary.30}",
           "type": "color",
           "description": "The background color of tertiary actions in the active state."
         }
       },
       "ghost": {
         "default": {
-          "value": "{background.surface.tertiary.10}",
+          "value": "{background.container.tertiary.10}",
           "type": "color",
           "description": "The background color of dismissal actions in the default state."
         },
         "hover": {
-          "value": "{background.surface.primary.50}",
+          "value": "{background.container.primary.50}",
           "type": "color",
           "description": "The background color of dismissal actions in the hover state."
         },
         "active": {
-          "value": "{background.surface.primary.60}",
+          "value": "{background.container.primary.60}",
           "type": "color",
           "description": "The background color of dismissal actions in the active state."
         }
       },
       "subtle": {
         "default": {
-          "value": "{background.surface.primary.10}",
+          "value": "{background.container.primary.10}",
           "type": "color",
           "description": "The background color of subtle dismissal actions, like close buttons on modals; in the default state."
         },
         "hover": {
-          "value": "{background.surface.primary.50}",
+          "value": "{background.container.primary.50}",
           "type": "color",
           "description": "The background color of subtle dismissal actions, like close buttons on modals; in the hover state."
         },
         "active": {
-          "value": "{background.surface.primary.60}",
+          "value": "{background.container.primary.60}",
           "type": "color",
           "description": "The background color of subtle dismissal actions, like close buttons on modals; in the active state."
         }
@@ -113,54 +113,54 @@
         }
       }
     },
-    "surface": {
+    "container": {
       "page": {
         "default": {
-          "value": "{background.surface.primary.10}",
+          "value": "{background.container.primary.10}",
           "type": "color",
           "description": "The default background color for a page."
         },
         "tonal_subtle": {
-          "value": "{background.surface.primary.20}",
+          "value": "{background.container.primary.20}",
           "type": "color",
           "description": "A more subtle background color for a page, ideal for highlight surfaces that are over the background, for example, a dashboard with different panels."
         },
         "tonal_medium": {
-          "value": "{background.surface.primary.30}",
+          "value": "{background.container.primary.30}",
           "type": "color",
           "description": "The background color to highlight elements in the background, for example, the row of a table."
         }
       },
       "elevated": {
         "default": {
-          "value": "{background.surface.primary.10}",
+          "value": "{background.container.primary.10}",
           "type": "color",
           "description": "The background color for the default state of an elevated surface like modals, popovers, cards, etc."
         },
         "hover": {
-          "value": "{background.surface.primary.40}",
+          "value": "{background.container.primary.40}",
           "type": "color",
           "description": "The background color for the hover state of an elevated surface like modals, popovers, cards, etc."
         },
         "active": {
-          "value": "{background.surface.primary.60}",
+          "value": "{background.container.primary.60}",
           "type": "color",
           "description": "The background color for the active state of an elevated surface like modals, popovers, cards, etc."
         }
       },
       "high_constrast": {
         "default": {
-          "value": "{background.surface.high_contrast.40}",
+          "value": "{background.container.high_contrast.10}",
           "type": "color",
           "description": "The background color for the default state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards."
         },
         "hover": {
-          "value": "{background.surface.high_contrast.30}",
+          "value": "{background.container.high_contrast.30}",
           "type": "color",
           "description": "The background color for the hover state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards."
         },
         "active": {
-          "value": "{background.surface.high_contrast.20}",
+          "value": "{background.container.high_contrast.20}",
           "type": "color",
           "description": "The background color for the active state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards."
         }
@@ -314,7 +314,7 @@
           "description": "The color to indicate that this progress has not been achieved."
         },
         "progressed": {
-          "value": "{background.surface.secondary.10}",
+          "value": "{background.container.secondary.10}",
           "type": "color",
           "description": "The color to indicate that this progress in a component."
         }
@@ -323,7 +323,7 @@
     "form_control": {
       "click_input": {
         "track": {
-          "value": "{background.surface.tertiary.20}",
+          "value": "{background.container.tertiary.20}",
           "type": "color",
           "description": "The color used for the tracks of click-based components,like the container of the toggle or the track of the slider."
         }
@@ -464,7 +464,7 @@
         }
       }
     },
-    "surface": {
+    "container": {
       "high_emphasis": {
         "value": "{foreground.primary.30}",
         "type": "color",
@@ -582,6 +582,13 @@
           "type": "color",
           "description": "The color for content on error backgrounds that we want to highlight, like the info icon on an alert."
         }
+      },
+      "icon": {
+        "default": {
+          "value": "{foreground.icon.10}",
+          "type": "color",
+          "description": "The color for foreground content on progress_and_loading/default backgrounds."
+        }
       }
     },
     "form_control": {
@@ -616,22 +623,22 @@
       },
       "click_input": {
         "enabled": {
-          "value": "{foreground.secondary.20}",
+          "value": "{foreground.form_control.click_input.50}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are enabled but not selected."
         },
         "selected": {
-          "value": "{foreground.tertiary.10}",
+          "value": "{foreground.form_control.click_input.10}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are selected."
         },
         "hover": {
-          "value": "{foreground.tertiary.20}",
+          "value": "{foreground.form_control.click_input.20}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are on the hover state."
         },
         "active": {
-          "value": "{foreground.tertiary.30}",
+          "value": "{foreground.form_control.click_input.30}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are on the active state."
         },
@@ -665,7 +672,7 @@
       "type": "color",
       "description": "The color we use for focus outlines."
     },
-    "surface": {
+    "container": {
       "divider": {
         "value": "{border.divider.20}",
         "type": "color",
@@ -691,6 +698,11 @@
           "value": "{border.edges.active.10}",
           "type": "color",
           "description": "The color for the edge borders of surfaces that are on the active state, like the bottom border of a tab."
+        },
+        "high_emphasis": {
+          "value": "{border.edges.default.30}",
+          "type": "color",
+          "description": "The default color for the edge borders of high-emphasis surfaces e.g dark tooltip"
         }
       },
       "high_constrast": {

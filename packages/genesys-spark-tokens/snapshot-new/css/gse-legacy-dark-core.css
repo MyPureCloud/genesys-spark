@@ -46,6 +46,11 @@
   --gse-core-fontFamily-urbanist: Urbanist;
   --gse-core-fontFamily-notoSans: 'Noto Sans';
   --gse-core-fontWeight-semiBold: 600;
+  --gse-core-size-2xs: 12px;
+  --gse-core-size-3xs: 8px;
+  --gse-core-size-4xs: 4px;
+  --gse-core-size-5xs: 2px;
+  --gse-core-size-6xs: 1px;
   --gse-core-colorLegacy-blue-10: #172b52;
   --gse-core-colorLegacy-blue-20: #1c3363;
   --gse-core-colorLegacy-blue-30: #203b73;
