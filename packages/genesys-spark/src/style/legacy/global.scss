@@ -1,0 +1,9 @@
+@use '../flare/global.scss';
+@use '../flare/ui.scss';
+@use '../../../../genesys-spark-tokens/dist-new/scss/gse-legacy-light-core';
+@use '../../../../genesys-spark-tokens/dist-new/scss/gse-legacy-light-semantic';
+
+:root {
+  @include gse-legacy-light-core.tokens;
+  @include gse-legacy-light-semantic.tokens;
+}

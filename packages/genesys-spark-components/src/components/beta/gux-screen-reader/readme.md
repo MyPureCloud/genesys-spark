@@ -17,7 +17,6 @@
 ### Used by
 
  - [gux-form-field-dropdown](../../stable/gux-form-field/components/gux-form-field-dropdown)
- - [gux-form-field-file](../../stable/gux-form-field/components/gux-form-field-file)
  - [gux-form-field-phone](../../stable/gux-form-field/components/gux-form-field-phone)
  - [gux-form-field-radio-group-beta](../../stable/gux-form-field/components/gux-form-field-radio-group)
  - [gux-form-field-time-picker](../../stable/gux-form-field/components/gux-form-field-time-picker)
@@ -27,7 +26,6 @@
 ```mermaid
 graph TD;
   gux-form-field-dropdown --> gux-screen-reader-beta
-  gux-form-field-file --> gux-screen-reader-beta
   gux-form-field-phone --> gux-screen-reader-beta
   gux-form-field-radio-group-beta --> gux-screen-reader-beta
   gux-form-field-time-picker --> gux-screen-reader-beta

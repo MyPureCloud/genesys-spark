@@ -34,7 +34,15 @@ export const config: Config = {
   rollupPlugins: {
     after: [
       copy({
-        targets: [{ src: 'build/i18n', dest: 'dist/genesys-webcomponents' }],
+        targets: [
+          { src: 'build/i18n', dest: 'dist/genesys-webcomponents' },
+          {
+            src: 'build/style/*',
+            dest: 'dist/genesys-webcomponents',
+            rename: (name, extension) =>
+              `/genesys-webcomponents-${name}.${extension}`
+          }
+        ],
         verbose: true
       }),
       {

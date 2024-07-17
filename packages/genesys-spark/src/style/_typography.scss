@@ -300,5 +300,8 @@
 @mixin ui-anchor-table {
   @include ui-anchor;
 
-  text-decoration: none;
+  // https://sass-lang.com/documentation/breaking-changes/mixed-decls/
+  & {
+    text-decoration: none;
+  }
 }
