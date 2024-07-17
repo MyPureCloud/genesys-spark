@@ -2,8 +2,6 @@
 @use '../../../../genesys-spark-tokens/dist-new/scss/gse-flare-dark-semantic';
 @use '../../../../genesys-spark-tokens/dist-new/scss/gse-flare-light-core';
 @use '../../../../genesys-spark-tokens/dist-new/scss/gse-flare-light-semantic';
-@use '../global-focusable';
-@use '../global-typography';
 
 :root {
   @include gse-flare-light-core.tokens;

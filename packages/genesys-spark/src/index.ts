@@ -40,7 +40,7 @@ export function loadSparkFonts(): Promise<void> {
  */
 export function registerSparkComponents(opts: registerOptions): Promise<void> {
   const SCRIPT_PATH = 'genesys-webcomponents.esm.js';
-  const STYLE_PATH = opts.theme
+  const STYLE_PATH = opts?.theme
     ? `genesys-webcomponents-${opts.theme}.css`
     : 'genesys-webcomponents.css';
 
@@ -62,7 +62,7 @@ export function registerSparkChartComponents(
   opts: registerOptions
 ): Promise<void> {
   const SCRIPT_PATH = 'genesys-chart-webcomponents.esm.js';
-  const STYLE_PATH = opts.theme
+  const STYLE_PATH = opts?.theme
     ? `genesys-webcomponents-${opts.theme}.css`
     : 'genesys-chart-webcomponents.css';
 

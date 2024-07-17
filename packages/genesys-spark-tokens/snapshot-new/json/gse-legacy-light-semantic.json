@@ -729,32 +729,32 @@
   "contanier": {
     "large": {
       "box_shadow": {
-        "x": "0rem",
-        "y": "0rem",
-        "blur": "8rem",
-        "spread": "1rem",
-        "color": "#23395c",
-        "type": "dropShadow"
+        "blur": "8px",
+        "spread": "1px",
+        "color": "rgba(35,57,92,0.15)",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
       }
     },
     "medium": {
       "box_shadow": {
-        "x": "0rem",
-        "y": "0rem",
-        "blur": "6rem",
-        "spread": "1rem",
-        "color": "#23395c",
-        "type": "dropShadow"
+        "blur": "6px",
+        "spread": "1px",
+        "color": "rgba(35,57,92,0.12)",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
       }
     },
     "small": {
       "box_shadow": {
-        "x": "0rem",
-        "y": "0rem",
-        "blur": "4rem",
-        "spread": "1rem",
-        "color": "#23395c",
-        "type": "dropShadow"
+        "blur": "4px",
+        "spread": "1px",
+        "color": "rgba(35,57,92,0.1)",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
       }
     }
   },
