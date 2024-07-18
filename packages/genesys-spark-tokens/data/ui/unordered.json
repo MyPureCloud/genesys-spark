@@ -93,7 +93,7 @@
       "type": "boxShadow"
     },
     "padding": {
-      "value": "{container.small.vertical_padding} {container.small.horizontal_padding}",
+      "value": "{container.small.vertical_padding} {container.small.padding}",
       "type": "spacing"
     },
     "height": {

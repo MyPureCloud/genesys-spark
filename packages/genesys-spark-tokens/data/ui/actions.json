@@ -74,11 +74,11 @@
         "type": "sizing"
       },
       "padding": {
-        "value": "0 {interactive.large.padding.horizontal}",
+        "value": "0 {interactive.large.padding}",
         "type": "spacing"
       },
       "padding_icon_only": {
-        "value": "{interactive.medium.padding.horizontal}",
+        "value": "{interactive.medium.padding}",
         "type": "spacing"
       }
     },
@@ -100,11 +100,11 @@
         "type": "sizing"
       },
       "padding": {
-        "value": "0 {interactive.large.padding.horizontal}",
+        "value": "0 {interactive.large.padding}",
         "type": "spacing"
       },
       "padding_icon_only": {
-        "value": "{interactive.small.padding.horizontal}",
+        "value": "{interactive.small.padding}",
         "type": "spacing"
       }
     },
@@ -302,7 +302,7 @@
         "type": "sizing"
       },
       "padding": {
-        "value": "0 {interactive.medium.padding.horizontal}",
+        "value": "0 {interactive.medium.padding}",
         "type": "spacing"
       },
       "border_radius": {
@@ -330,7 +330,7 @@
         "type": "spacing"
       },
       "padding": {
-        "value": "0 {interactive.xlarge.padding.horizontal}",
+        "value": "0 {interactive.xlarge.padding}",
         "type": "spacing"
       },
       "focus_border_radius": {
@@ -394,7 +394,7 @@
         "type": "sizing"
       },
       "padding": {
-        "value": "{interactive.large.padding.horizontal}",
+        "value": "{interactive.large.padding}",
         "type": "spacing"
       },
       "gap": {
@@ -451,7 +451,7 @@
         }
       },
       "padding": {
-        "value": "{interactive.small.padding.horizontal}",
+        "value": "{interactive.small.padding}",
         "type": "spacing"
       }
     },

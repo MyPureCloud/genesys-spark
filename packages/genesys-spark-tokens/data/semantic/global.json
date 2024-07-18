@@ -306,11 +306,9 @@
         "description": "The recommended gap between the content inside of a medium-sized interactive component."
       },
       "padding": {
-        "horizontal": {
-          "value": "{spacing.3xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for medium-sized components."
-        }
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The recommended horizontal padding for medium-sized components."
       }
     },
     "small": {
@@ -325,11 +323,9 @@
         "description": "The recommended gap between the content inside of a small-sized interactive component."
       },
       "padding": {
-        "horizontal": {
-          "value": "{spacing.4xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for small-sized horizontal components."
-        }
+        "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "The recommended horizontal padding for small-sized horizontal components."
       },
       "border_radius": {
         "value": "{border_radius.interactive.small}",
@@ -349,11 +345,9 @@
         "description": "The recommended gap between the content inside of a medium-sized interactive component."
       },
       "padding": {
-        "horizontal": {
-          "value": "{spacing.2xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for large-sized components."
-        }
+        "value": "{spacing.2xs}",
+        "type": "spacing",
+        "description": "The recommended horizontal padding for large-sized components."
       }
     },
     "edges": {
@@ -386,11 +380,9 @@
         "description": "The recommended gap between the content inside of a xlarge-sized interactive component."
       },
       "padding": {
-        "horizontal": {
-          "value": "{spacing.xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for xlarge-sized components."
-        }
+        "value": "{spacing.xs}",
+        "type": "spacing",
+        "description": "The recommended horizontal padding for xlarge-sized components."
       }
     }
   },
@@ -455,15 +447,15 @@
         "type": "borderRadius",
         "description": "The recommended large border-radius for large containers, like modals."
       },
-      "padding": {
-        "value": "{spacing.lg}",
-        "type": "spacing",
-        "description": "We uses this spacing as the default padding for large containers like modals."
-      },
       "gap": {
         "value": "{spacing.xs}",
         "type": "spacing",
         "description": "The recommended gap between items inside a large container, like a modal."
+      },
+      "padding": {
+        "value": "{spacing.lg}",
+        "type": "spacing",
+        "description": "We uses this spacing as the default padding for large containers like modals."
       }
     },
     "small": {
@@ -477,15 +469,10 @@
         "type": "spacing",
         "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
       },
-      "horizontal_padding": {
+      "padding": {
         "value": "{spacing.2xs}",
         "type": "spacing",
         "description": "The default padding of a small-sized container, like a tooltip."
-      },
-      "vertical_padding": {
-        "value": "{spacing.3xs}",
-        "type": "spacing",
-        "description": "The default vertical padding of a small-sized container, like a tooltip."
       },
       "min_height": {
         "value": "{size.sm}",
@@ -499,20 +486,20 @@
       }
     },
     "medium": {
+      "gap": {
+        "value": "{spacing.2xs}",
+        "type": "spacing",
+        "description": "The recommended medium gap between items inside a container, like the gap between elements inisde a modal."
+      },
       "border_radius": {
         "value": "{border_radius.container.medium}",
         "type": "borderRadius",
         "description": "The recommended medium border-radius for containers. Eg cards"
       },
-      "horizontal_padding": {
+      "padding": {
         "value": "{spacing.md}",
         "type": "spacing",
         "description": "The default horizontal padding of a medium-sized container, like a card."
-      },
-      "vertical_padding": {
-        "value": "{spacing.md}",
-        "type": "spacing",
-        "description": "The default vertical padding of a medium-sized container, like a tooltip."
       },
       "min_height": {
         "value": "{size.lg}",
@@ -536,17 +523,12 @@
     },
     "xsmall": {
       "gap": {
-        "value": "{spacing.3xs}",
-        "type": "spacing",
-        "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
-      },
-      "horizontal_padding": {
-        "value": "{spacing.3xs}",
-        "type": "spacing",
-        "description": "The default padding of a  extra small-sized container, like the container of an eyebrow title."
-      },
-      "vertical_padding": {
         "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "The recommended xsmall gap between items inside a container, like the gap between elements inside a tag."
+      },
+      "padding": {
+        "value": "{spacing.3xs}",
         "type": "spacing",
         "description": "The default padding of a  extra small-sized container, like the container of an eyebrow title."
       }

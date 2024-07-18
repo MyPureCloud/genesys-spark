@@ -192,7 +192,7 @@
   "menu": {
     "option": {
       "padding": {
-        "value": "{container.small.vertical_padding} {container.small.horizontal_padding}",
+        "value": "{container.small.vertical_padding} {container.small.padding}",
         "type": "spacing"
       },
       "gap": {
@@ -406,7 +406,7 @@
     "grouped_menu": {
       "title": {
         "padding": {
-          "value": "{container.small.vertical_padding} {container.small.horizontal_padding} {container.xsmall.vertical_padding}",
+          "value": "{container.small.vertical_padding} {container.small.padding} {container.xsmall.vertical_padding}",
           "type": "spacing"
         },
         "height": {
@@ -423,7 +423,7 @@
         }
       },
       "padding": {
-        "value": "{container.small.vertical_padding} {container.xsmall.horizontal_padding}",
+        "value": "{container.small.vertical_padding} {container.xsmall.padding}",
         "type": "spacing"
       },
       "divider": {
