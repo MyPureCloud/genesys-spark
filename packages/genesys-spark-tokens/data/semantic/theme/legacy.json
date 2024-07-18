@@ -85,7 +85,7 @@
     "form_control": {
       "input": {
         "10": {
-          "value": "{color.white}",
+          "value": "{color_legacy.grey.90}",
           "type": "color"
         },
         "20": {

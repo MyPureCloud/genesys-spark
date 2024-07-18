@@ -661,7 +661,12 @@
         "optional_accent": {
           "value": "{foreground.primary.10}",
           "type": "color",
-          "description": "The color we used for the optional indicator."
+          "description": "The color we used for optional indicator in labels"
+        },
+        "tooltip": {
+          "value": "{foreground.primary.10}",
+          "type": "color",
+          "description": "The color we used for tooltip in labels"
         }
       }
     }

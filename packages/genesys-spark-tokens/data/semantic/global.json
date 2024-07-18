@@ -6,7 +6,7 @@
           "fontFamily": "{font_family.body}",
           "fontWeight": "{font_weight.regular}",
           "fontSize": "{font_size.xs}",
-          "lineHeight": "{line_height.2xs}"
+          "lineHeight": "{line_height.xs}"
         },
         "type": "typography",
         "description": "This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors."
@@ -421,6 +421,11 @@
         "value": "{border_radius.focus.medium}",
         "type": "borderRadius",
         "description": "The recommended medium border-radius for focus. Eg check box"
+      },
+      "border_width": {
+        "value": "{border_width.2}",
+        "type": "borderWidth",
+        "description": "The recommended width of the focus outline fo medium-sized components, like the stars on a checkbox"
       }
     },
     "small": {
@@ -570,16 +575,6 @@
           "description": "The recommended medium border-radius for inputs"
         }
       },
-      "padding": {
-        "value": "{spacing.3xs} {spacing.2xs}",
-        "type": "spacing",
-        "description": "The default padding for inputs inside a form control."
-      },
-      "gap": {
-        "value": "{spacing.2xs}",
-        "type": "spacing",
-        "description": "The default gap for between elements inside an input. For example, the space between a placeholder and an icon inside and input."
-      },
       "edges": {
         "border_width": {
           "value": "{border_width.1}",
@@ -596,10 +591,62 @@
       }
     },
     "form_field": {
+      "text_input": {
+        "padding": {
+          "value": "{spacing.3xs} {spacing.2xs}",
+          "type": "spacing",
+          "description": "The default padding for inputs inside a form control."
+        },
+        "gap": {
+          "value": "{spacing.2xs}",
+          "type": "spacing",
+          "description": "The default gap for between elements inside an input. For example, the space between a placeholder and an icon inside and input."
+        },
+        "medium": {
+          "height": {
+            "value": "{size.lg}",
+            "type": "sizing"
+          }
+        },
+        "min_width": {
+          "value": "{size.2xl}",
+          "type": "sizing"
+        },
+        "large": {
+          "height": {
+            "value": "{size.3xl}",
+            "type": "sizing"
+          }
+        }
+      },
       "gap": {
         "value": "{spacing.4xs}",
         "type": "spacing",
-        "description": "The default gap for between elements inside a form field, like textfields, text areas."
+        "description": "The default gap for between elements inside a form field, for example, the space between a label and its input or its helper text."
+      },
+      "padding": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The default gap for between elements inside a form field, for example, the space between a label and its input or its helper text."
+      },
+      "click_input": {
+        "gap": {
+          "value": "{spacing.3xs}",
+          "type": "spacing",
+          "description": "The default gap for between elements inside a form group, like checkboxes, radio buttons."
+        },
+        "padding": {
+          "value": "{spacing.4xs}",
+          "type": "spacing",
+          "description": "The default padding for between elements inside a form group, like checkboxes, radio buttons."
+        }
+      },
+      "grouped_input": {
+        "gap": {
+          "value": "{spacing.3xs}",
+          "type": "spacing",
+          "description": "The recommended gap between groped inputs, like the sapce inbetween checkboxes or radio buttons."
+        }
       }
     }
   },
