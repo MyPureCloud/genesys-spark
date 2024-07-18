@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.128.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.127.2...v3.128.0) (2024-07-18)
+
+
+### Features
+
+* **icon:** add log-eye-regular icon ([#536](https://github.com/MyPureCloud/genesys-spark/issues/536)) ([3f42193](https://github.com/MyPureCloud/genesys-spark/commit/3f4219392a42ef355c3ab45a769e2ec0657210dc))
+
 ### [3.127.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.127.1...v3.127.2) (2024-07-16)
 
 
