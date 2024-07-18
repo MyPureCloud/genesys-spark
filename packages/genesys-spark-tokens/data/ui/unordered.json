@@ -131,21 +131,21 @@
       },
       "bold": {
         "background_color": {
-          "value": "{color.cornflower.700}",
+          "value": "{background.system.custom_accents.bold.accent_1}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.system.custom_accents.light}",
           "type": "color"
         }
       },
       "subtle": {
         "background_color": {
-          "value": "{color.cornflower.300}",
+          "value": "{background.system.custom_accents.subtle.accent_1}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       }
@@ -163,21 +163,21 @@
       },
       "bold": {
         "background_color": {
-          "value": "{color.lavenderhaze.1000}",
+          "value": "{background.system.custom_accents.bold.accent_2}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.system.custom_accents.light}",
           "type": "color"
         }
       },
       "subtle": {
         "background_color": {
-          "value": "{color.lavenderhaze.400}",
+          "value": "{background.system.custom_accents.subtle.accent_2}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       }
@@ -195,21 +195,21 @@
       },
       "bold": {
         "background_color": {
-          "value": "{color.jade.600}",
+          "value": "{background.system.custom_accents.bold.accent_3}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       },
       "subtle": {
         "background_color": {
-          "value": "{color.jade.400}",
+          "value": "{background.system.custom_accents.subtle.accent_3}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       }
@@ -227,21 +227,21 @@
       },
       "bold": {
         "background_color": {
-          "value": "{color.islandaqua.800}",
+          "value": "{background.system.custom_accents.bold.accent_4}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.system.custom_accents.light}",
           "type": "color"
         }
       },
       "subtle": {
         "background_color": {
-          "value": "{color.islandaqua.400}",
+          "value": "{background.system.custom_accents.subtle.accent_4}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       }
@@ -259,21 +259,21 @@
       },
       "bold": {
         "background_color": {
-          "value": "{color.pear.800}",
+          "value": "{background.system.custom_accents.bold.accent_5}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.system.custom_accents.light}",
           "type": "color"
         }
       },
       "subtle": {
         "background_color": {
-          "value": "{color.pear.400}",
+          "value": "{background.system.custom_accents.subtle.accent_5}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       }
@@ -291,21 +291,21 @@
       },
       "bold": {
         "background_color": {
-          "value": "{color.mineral.600}",
+          "value": "{background.system.custom_accents.bold.accent_6}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       },
       "subtle": {
         "background_color": {
-          "value": "{color.mineral.400}",
+          "value": "{background.system.custom_accents.subtle.accent_6}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       }
@@ -323,21 +323,21 @@
       },
       "subtle": {
         "background_color": {
-          "value": "{color.plum.400}",
+          "value": "{background.system.custom_accents.bold.accent_7}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       },
       "bold": {
         "background_color": {
-          "value": "{color.plum.700}",
+          "value": "{background.system.custom_accents.subtle.accent_7}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.system.custom_accents.light}",
           "type": "color"
         }
       }
@@ -378,21 +378,21 @@
       },
       "bold": {
         "background_color": {
-          "value": "{color.raspberry.800}",
+          "value": "{background.system.custom_accents.bold.accent_8}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.system.custom_accents.light}",
           "type": "color"
         }
       },
       "subtle": {
         "background_color": {
-          "value": "{color.raspberry.400}",
+          "value": "{background.system.custom_accents.subtle.accent_8}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       }
@@ -414,21 +414,21 @@
       },
       "bold": {
         "background_color": {
-          "value": "{color.coral.600}",
+          "value": "{background.system.custom_accents.bold.accent_9}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       },
       "subtle": {
         "background_color": {
-          "value": "{color.coral.400}",
+          "value": "{background.system.custom_accents.subtle.accent_9}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       }
@@ -446,21 +446,21 @@
       },
       "bold": {
         "background_color": {
-          "value": "{color.tomato.800}",
+          "value": "{background.system.custom_accents.bold.accent_10}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.system.custom_accents.light}",
           "type": "color"
         }
       },
       "subtle": {
         "background_color": {
-          "value": "{color.tomato.400}",
+          "value": "{background.system.custom_accents.subtle.accent_10}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       }
@@ -478,21 +478,21 @@
       },
       "bold": {
         "background_color": {
-          "value": "{color.mango.600}",
+          "value": "{background.system.custom_accents.bold.accent_11}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       },
       "subtle": {
         "background_color": {
-          "value": "{color.mango.400}",
+          "value": "{background.system.custom_accents.subtle.accent_11}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       }
