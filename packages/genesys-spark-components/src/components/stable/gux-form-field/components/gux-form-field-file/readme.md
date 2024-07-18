@@ -26,13 +26,11 @@
 
 ### Depends on
 
-- [gux-screen-reader-beta](../../../../beta/gux-screen-reader)
 - [gux-icon](../../../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-form-field-file --> gux-screen-reader-beta
   gux-form-field-file --> gux-icon
   style gux-form-field-file fill:#f9f,stroke:#333,stroke-width:4px
 ```
