@@ -1,7 +1,7 @@
 {
   "card": {
     "background-color": {
-      "value": "{color.white}",
+      "value": "{background.container.elevated.default}",
       "type": "color"
     },
     "border_radius": {
@@ -33,7 +33,7 @@
       }
     },
     "padding": {
-      "value": "{spacing.md}",
+      "value": "{container.large.padding}",
       "type": "spacing"
     },
     "borderless": {
@@ -93,7 +93,7 @@
       "type": "boxShadow"
     },
     "padding": {
-      "value": "{container.small.vertical_padding} {container.small.padding}",
+      "value": "{container.xsmall.padding} {container.small.padding}",
       "type": "spacing"
     },
     "height": {
@@ -198,16 +198,16 @@
       "type": "typography"
     },
     "padding": {
-      "value": "0 {spacing.2xs}",
+      "value": "0 {container.small.padding}",
       "type": "spacing"
     },
     "removable": {
       "padding": {
-        "value": "0 {spacing.3xs} 0 {spacing.2xs}",
+        "value": "0 {container.xsmall.padding} 0 {container.small.padding}",
         "type": "spacing"
       },
       "gap": {
-        "value": "{spacing.4xs}",
+        "value": "{container.xsmall.gap}",
         "type": "spacing"
       }
     },
@@ -222,7 +222,7 @@
       }
     },
     "height": {
-      "value": "{size.sm}",
+      "value": "{container.small.min_height}",
       "type": "sizing"
     },
     "accent8": {
@@ -257,7 +257,7 @@
     },
     "button": {
       "size": {
-        "value": "{icon.small.size}",
+        "value": "{assets.small.size}",
         "type": "sizing"
       }
     },
@@ -287,15 +287,15 @@
       }
     },
     "height": {
-      "value": "{size.sm}",
+      "value": "{container.xsmall.height}",
       "type": "sizing"
     },
     "padding": {
-      "value": "2px {spacing.2xs}",
+      "value": "{container.2xs.padding} {container.small.padding}",
       "type": "spacing"
     },
     "gap": {
-      "value": "{spacing.4xs}",
+      "value": "{container.xsmall.gap}",
       "type": "spacing"
     },
     "info": {
@@ -413,11 +413,11 @@
   },
   "alert": {
     "padding": {
-      "value": "{spacing.3xs} {spacing.xs}",
+      "value": "{container.xsmall.padding} {container.medium.padding}",
       "type": "spacing"
     },
     "gap": {
-      "value": "{spacing.3xs}",
+      "value": "{container.medium.gap}",
       "type": "spacing"
     },
     "info": {
@@ -561,12 +561,12 @@
       }
     },
     "size": {
-      "value": "{icon.small.size}",
+      "value": "{assets.small.size}",
       "type": "sizing"
     },
     "star": {
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{forms.form_control.grouped_inputs.gap}",
         "type": "spacing"
       }
     }
@@ -574,12 +574,12 @@
   "breadcrumbs": {
     "primary": {
       "height": {
-        "value": "{size.sm}",
+        "value": "{container.xsmall.height}",
         "type": "sizing"
       },
       "separator": {
         "padding": {
-          "value": "0 {spacing.2xs}",
+          "value": "0 {container.small.padding}",
           "type": "spacing"
         },
         "typography": {
@@ -595,12 +595,12 @@
     },
     "secondary": {
       "height": {
-        "value": "18px",
+        "value": "{container.xsmall.min_height}",
         "type": "sizing"
       },
       "separator": {
         "padding": {
-          "value": "0 {spacing.3xs}",
+          "value": "0 {container.xsmall.padding}",
           "type": "spacing"
         },
         "typography": {
@@ -628,11 +628,11 @@
   "segmented_control": {
     "button": {
       "padding": {
-        "value": "0 {spacing.2xs}",
+        "value": "0 {container.small.padding}",
         "type": "spacing"
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{container.small.gap}",
         "type": "spacing"
       },
       "start": {
@@ -703,7 +703,7 @@
       "type": "borderRadius"
     },
     "height": {
-      "value": "{size.lg}",
+      "value": "{container.small.height}",
       "type": "sizing"
     },
     "border": {
@@ -724,7 +724,7 @@
     },
     "icon_only": {
       "padding": {
-        "value": "0 {spacing.3xs}",
+        "value": "0 {container.xsmall.padding}",
         "type": "spacing"
       }
     },
@@ -739,44 +739,44 @@
     "page": {
       "desktop": {
         "bottom_padding": {
-          "value": "{spacing.xs}",
+          "value": "{container.medium.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "top_padding": {
-          "value": "{spacing.xs}",
+          "value": "{container.medium.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "horizontal_padding": {
-          "value": "{spacing.lg}",
+          "value": "{container.xlarge.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "gap": {
-          "value": "{spacing.xs}",
+          "value": "{container.xlarge.gap}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         }
       },
       "mobile": {
         "bottom_padding": {
-          "value": "{spacing.xs}",
+          "value": "{container.medium.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "top_padding": {
-          "value": "{spacing.xs}",
+          "value": "{container.medium.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "horizontal_padding": {
-          "value": "{spacing.xs}",
+          "value": "{container.medium.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "gap": {
-          "value": "{spacing.xs}",
+          "value": "{container.xlarge.gap}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         }
@@ -794,22 +794,22 @@
     "side_sheet": {
       "desktop": {
         "bottom_padding": {
-          "value": "{spacing.xs}",
+          "value": "{container.medium.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "top_padding": {
-          "value": "{spacing.xs}",
+          "value": "{container.medium.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "horizontal_padding": {
-          "value": "{spacing.md}",
+          "value": "{container.large.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "gap": {
-          "value": "{spacing.xs}",
+          "value": "{container.xlarge.gap}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         }
@@ -818,22 +818,22 @@
     "modal": {
       "desktop": {
         "bottom_padding": {
-          "value": "{spacing.xs}",
+          "value": "{container.medium.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "top_padding": {
-          "value": "{spacing.xs}",
+          "value": "{container.medium.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "horizontal_padding": {
-          "value": "{spacing.lg}",
+          "value": "{container.xlarge.padding}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         },
         "gap": {
-          "value": "{spacing.xs}",
+          "value": "{container.xlarge.gap}",
           "type": "spacing",
           "description": "The recommended vertical padding for the form footer content."
         }
