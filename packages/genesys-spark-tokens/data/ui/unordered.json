@@ -343,7 +343,7 @@
       }
     },
     "text": {
-      "value": "{body.sm.semi_bold}",
+      "value": "{body.md.semi_bold}",
       "type": "typography"
     },
     "padding": {
