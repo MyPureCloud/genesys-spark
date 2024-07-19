@@ -323,7 +323,7 @@
       },
       "subtle": {
         "background_color": {
-          "value": "{background.system.custom_accents.bold.accent_7}",
+          "value": "{background.system.custom_accents.subtle.accent_7}",
           "type": "color"
         },
         "foreground_color": {
@@ -333,11 +333,11 @@
       },
       "bold": {
         "background_color": {
-          "value": "{background.system.custom_accents.subtle.accent_7}",
+          "value": "{background.system.custom_accents.bold.accent_7}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.system.custom_accents.light}",
+          "value": "{foreground.system.custom_accents.dark}",
           "type": "color"
         }
       }
