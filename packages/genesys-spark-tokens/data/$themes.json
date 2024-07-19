@@ -11,9 +11,9 @@
       "typography.heading.md": "S:47dddac11b7660fa18ce1765111e6e7d7cce0915,",
       "typography.heading.lg": "S:383a393a975ebdbdd217a0314a08819f84b5bb0e,",
       "typography.heading.xl": "S:a1183401df4973d4a6d0ffcb9382f54b1f5c762b,",
-      "elevation.low": "S:51ffe482b6ef81896e99ff5e8045dfd39a23f407,",
-      "elevation.medium": "S:78c2da53890145073eca0f09641c9a29335782b2,",
-      "elevation.high": "S:e9c359ccd5911f0a64bbcfcb7b091cd7729eff54,"
+      "elevation.low": "S:11cf8039fe7040b2a56470bc2e63a545319ebf59,",
+      "elevation.medium": "S:3f1a8aff9925b45ace9d0b04948b115ac5d24c6c,",
+      "elevation.high": "S:120a65ca683c835ca116a5ac37131b8d73c4ef1e,"
     },
     "selectedTokenSets": {
       "core": "enabled"
@@ -616,9 +616,9 @@
       "subheading.bold": "S:d709afa6d538540c8964f5979dd0fbbdf9915075,",
       "subheading.semi_bold": "S:9896e3b33eea312d1d1d9ef61df5c2e9c02dcbab,",
       "subheading.regular": "S:18f9f2b81b98c8afba64abd3bc5f7a1b68b33fd8,",
-      "contanier.large.box_shadow": "S:561396306619d4ca54771b602df2d5c6a8505389,",
-      "contanier.medium.box_shadow": "S:f99e2a0fb17700bd8d441344625fe58ba9673032,",
-      "contanier.small.box_shadow": "S:524ab6ad2454876b5abd9d333935ae78526371f1,"
+      "contanier.large.box_shadow": "S:d5d6d2a6b30b35d87f5fbbd150ec6d93d10b7d4a,",
+      "contanier.medium.box_shadow": "S:528906ea7cc3b9f753cdbb7339aaa4ac485b0164,",
+      "contanier.small.box_shadow": "S:fc4cb660747af4fd2fce04097a0fa2c1b038e78a,"
     },
     "selectedTokenSets": {
       "semantic/mode/light": "enabled",
