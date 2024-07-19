@@ -168,7 +168,9 @@ export class GuxDatepicker {
 
   @Watch('value')
   watchValue() {
-    this.updateDate();
+    if (this.format) {
+      this.updateDate();
+    }
   }
 
   @Watch('minDate')
