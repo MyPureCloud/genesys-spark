@@ -29,14 +29,15 @@ Type: `Promise<void>`
 
 ## Slots
 
-| Slot       | Description                     |
-| ---------- | ------------------------------- |
-| `"error"`  | Optional slot for error message |
-| `"help"`   | Optional slot for help message  |
-| `"input"`  | Required slot for input tag     |
-| `"label"`  | Required slot for label tag     |
-| `"prefix"` | Optional slot for prefix        |
-| `"suffix"` | Optional slot for suffix        |
+| Slot           | Description                     |
+| -------------- | ------------------------------- |
+| `"error"`      | Optional slot for error message |
+| `"help"`       | Optional slot for help message  |
+| `"input"`      | Required slot for input tag     |
+| `"label"`      | Required slot for label tag     |
+| `"label-info"` | Optional slot for label tooltip |
+| `"prefix"`     | Optional slot for prefix        |
+| `"suffix"`     | Optional slot for suffix        |
 
 
 ## Dependencies
@@ -48,6 +49,7 @@ Type: `Promise<void>`
 ### Depends on
 
 - [gux-radial-loading](../../../gux-radial-loading)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
 - [gux-form-field-input-clear-button](../../helper-components/gux-form-field-input-clear-button)
 - [gux-icon](../../../gux-icon)
 
@@ -55,6 +57,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-form-field-text-like --> gux-radial-loading
+  gux-form-field-text-like --> gux-form-field-label-indicator
   gux-form-field-text-like --> gux-form-field-input-clear-button
   gux-form-field-text-like --> gux-icon
   gux-form-field-input-clear-button --> gux-icon

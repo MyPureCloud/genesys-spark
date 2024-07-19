@@ -20,19 +20,20 @@
 | `"error"`                                 | Optional slot for error message |
 | `"help"`                                  | Optional slot for help message  |
 | `"label"`                                 | Required slot for label tag     |
+| `"label-info"`                            | Optional slot for label tooltip |
 
 
 ## Dependencies
 
 ### Depends on
 
-- [gux-screen-reader-beta](../../../../beta/gux-screen-reader)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
 - [gux-icon](../../../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-form-field-time-picker --> gux-screen-reader-beta
+  gux-form-field-time-picker --> gux-form-field-label-indicator
   gux-form-field-time-picker --> gux-icon
   style gux-form-field-time-picker fill:#f9f,stroke:#333,stroke-width:4px
 ```
