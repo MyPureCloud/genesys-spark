@@ -383,6 +383,28 @@
         "value": "{spacing.xs}",
         "type": "spacing",
         "description": "The recommended horizontal padding for xlarge-sized components."
+      },
+      "size": {
+        "value": "{size.xl}",
+        "type": "sizing",
+        "description": "The recommended size for extra-large-sized interactive components. For example a large button height."
+      }
+    },
+    "xs": {
+      "size": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "The recommended size for small-sized interactive components. For example small link."
+      },
+      "gap": {
+        "value": "{spacing.5xs}",
+        "type": "spacing",
+        "description": "The recommended gap between the content inside of a small-sized interactive component."
+      },
+      "padding": {
+        "value": "{spacing.5xs}",
+        "type": "spacing",
+        "description": "The recommended padding for extra-small-sized interactive components."
       }
     }
   },
