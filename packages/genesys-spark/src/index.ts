@@ -38,7 +38,7 @@ export function loadSparkFonts(): Promise<void> {
  * application bootstrap if it rejects. Its primary use should be for logging
  * unexpected failures.
  */
-export function registerSparkComponents(opts: registerOptions): Promise<void> {
+export function registerSparkComponents(opts?: registerOptions): Promise<void> {
   const SCRIPT_PATH = 'genesys-webcomponents.esm.js';
   const STYLE_PATH = opts?.theme
     ? `genesys-webcomponents-${opts.theme}.css`
@@ -59,7 +59,7 @@ export function registerSparkComponents(opts: registerOptions): Promise<void> {
  * TODO
  */
 export function registerSparkChartComponents(
-  opts: registerOptions
+  opts?: registerOptions
 ): Promise<void> {
   const SCRIPT_PATH = 'genesys-chart-webcomponents.esm.js';
   const STYLE_PATH = opts?.theme
