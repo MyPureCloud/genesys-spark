@@ -1,4 +1,4 @@
-import { Component, State, Element, JSX, Prop, h } from '@stencil/core';
+import { Component, State, Element, JSX, Prop, h, Listen } from '@stencil/core';
 import { OnMutation } from '@utils/decorator/on-mutation';
 import { hasSlot } from '@utils/dom/has-slot';
 import { trackComponent } from '@utils/tracking/usage';
@@ -22,6 +22,7 @@ import { onRequiredChange } from '@utils/dom/on-attribute-change';
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
  * @slot help - Optional slot for help message
+ * @slot label-info - Optional slot for tooltip
  */
 
 @Component({
@@ -30,9 +31,11 @@ import { onRequiredChange } from '@utils/dom/on-attribute-change';
   shadow: true
 })
 export class GuxFormFieldFile {
-  private fileInputElement: HTMLInputElement;
+  private input: HTMLInputElement;
   private label: HTMLLabelElement;
+  private labelInfo: HTMLGuxLabelInfoBetaElement;
   private requiredObserver: MutationObserver;
+  private hideLabelInfoTimeout: ReturnType<typeof setTimeout>;
 
   @Element()
   private root: HTMLElement;
@@ -54,8 +57,37 @@ export class GuxFormFieldFile {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
+    this.labelInfo = this.root.querySelector('[slot=label-info]');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+  }
+
+  @Listen('keyup')
+  handleKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Tab': {
+        if (this.input.matches(':focus-visible')) {
+          void this.labelInfo?.showTooltip();
+          this.hideLabelInfoTimeout = setTimeout(() => {
+            void this.labelInfo?.hideTooltip();
+          }, 6000);
+        }
+        break;
+      }
+      default: {
+        if (this.input.matches(':focus-visible')) {
+          void this.labelInfo?.hideTooltip();
+          clearTimeout(this.hideLabelInfoTimeout);
+        }
+        break;
+      }
+    }
+  }
+
+  @Listen('focusout')
+  onFocusout(): void {
+    void this.labelInfo?.hideTooltip();
+    clearTimeout(this.hideLabelInfoTimeout);
   }
 
   componentWillLoad(): void {
@@ -64,6 +96,7 @@ export class GuxFormFieldFile {
 
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+    this.labelInfo = this.root.querySelector('[slot=label-info]');
 
     trackComponent(this.root, { variant: this.variant });
   }
@@ -84,22 +117,19 @@ export class GuxFormFieldFile {
   }
 
   private setInput(): void {
-    this.fileInputElement = getSlottedInput(
-      this.root,
-      'input[type="file"][slot="input"]'
-    );
+    this.input = getSlottedInput(this.root, 'input[type="file"][slot="input"]');
 
-    preventBrowserValidationStyling(this.fileInputElement);
-    this.required = this.fileInputElement.required;
+    preventBrowserValidationStyling(this.input);
+    this.required = this.input.required;
 
     this.requiredObserver = onRequiredChange(
-      this.fileInputElement,
+      this.input,
       (required: boolean) => {
         this.required = required;
       }
     );
 
-    validateFormIds(this.root, this.fileInputElement);
+    validateFormIds(this.root, this.input);
   }
 
   private get variant(): string {
@@ -120,14 +150,21 @@ export class GuxFormFieldFile {
           required={this.required}
         >
           <slot name="label" onSlotchange={() => this.setLabel()} />
+          <gux-form-field-label-indicator
+            variant="required"
+            required={this.required}
+          />
+          <slot name="label-info" />
         </GuxFormFieldLabel>
-        <slot name="input" onSlotchange={() => this.setInput()} />
-        <GuxFormFieldError show={this.hasError}>
-          <slot name="error" />
-        </GuxFormFieldError>
-        <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
-          <slot name="help" />
-        </GuxFormFieldHelp>
+        <div class="gux-input-and-error-container">
+          <slot name="input" onSlotchange={() => this.setInput()} />
+          <GuxFormFieldError show={this.hasError}>
+            <slot name="error" />
+          </GuxFormFieldError>
+          <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
+            <slot name="help" />
+          </GuxFormFieldHelp>
+        </div>
       </GuxFormFieldContainer>
     ) as JSX.Element;
   }

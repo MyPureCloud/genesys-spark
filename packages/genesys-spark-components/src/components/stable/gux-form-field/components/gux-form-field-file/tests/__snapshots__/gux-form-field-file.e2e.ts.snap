@@ -6,17 +6,21 @@ exports[`gux-form-field-file #render help should render component as expected 2`
 <div class="gux-above gux-form-field-container">
   <div class="gux-above gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
   </div>
-  <slot name="input"></slot>
-  <div class="gux-form-field-error">
-    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-and-error-container">
+    <slot name="input"></slot>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
     </div>
-  </div>
-  <div class="gux-form-field-help gux-show">
-    <div class="gux-message">
-      <slot name="help"></slot>
+    <div class="gux-form-field-help gux-show">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
     </div>
   </div>
 </div>
@@ -28,17 +32,21 @@ exports[`gux-form-field-file #render input attributes should render component as
 <div class="gux-above gux-form-field-container">
   <div class="gux-above gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
   </div>
-  <slot name="input"></slot>
-  <div class="gux-form-field-error">
-    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-and-error-container">
+    <slot name="input"></slot>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
     </div>
-  </div>
-  <div class="gux-form-field-help">
-    <div class="gux-message">
-      <slot name="help"></slot>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
     </div>
   </div>
 </div>
@@ -50,17 +58,21 @@ exports[`gux-form-field-file #render input attributes should render component as
 <div class="gux-above gux-form-field-container">
   <div class="gux-above gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
   </div>
-  <slot name="input"></slot>
-  <div class="gux-form-field-error">
-    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-and-error-container">
+    <slot name="input"></slot>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
     </div>
-  </div>
-  <div class="gux-form-field-help">
-    <div class="gux-message">
-      <slot name="help"></slot>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
     </div>
   </div>
 </div>
@@ -72,17 +84,25 @@ exports[`gux-form-field-file #render input attributes should render component as
 <div class="gux-above gux-form-field-container">
   <div class="gux-above gux-form-field-label gux-required">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated="">
+      <span aria-hidden="true" class="gux-form-field-label-indicator-required">
+        *
+      </span>
+    </gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
   </div>
-  <slot name="input"></slot>
-  <div class="gux-form-field-error">
-    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-and-error-container">
+    <slot name="input"></slot>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
     </div>
-  </div>
-  <div class="gux-form-field-help">
-    <div class="gux-message">
-      <slot name="help"></slot>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
     </div>
   </div>
 </div>
@@ -94,17 +114,21 @@ exports[`gux-form-field-file #render label-position should render component as e
 <div class="gux-above gux-form-field-container">
   <div class="gux-above gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
   </div>
-  <slot name="input"></slot>
-  <div class="gux-form-field-error">
-    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-and-error-container">
+    <slot name="input"></slot>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
     </div>
-  </div>
-  <div class="gux-form-field-help">
-    <div class="gux-message">
-      <slot name="help"></slot>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
     </div>
   </div>
 </div>
@@ -116,17 +140,21 @@ exports[`gux-form-field-file #render label-position should render component as e
 <div class="gux-above gux-form-field-container">
   <div class="gux-above gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
   </div>
-  <slot name="input"></slot>
-  <div class="gux-form-field-error">
-    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-and-error-container">
+    <slot name="input"></slot>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
     </div>
-  </div>
-  <div class="gux-form-field-help">
-    <div class="gux-message">
-      <slot name="help"></slot>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
     </div>
   </div>
 </div>
@@ -138,17 +166,21 @@ exports[`gux-form-field-file #render label-position should render component as e
 <div class="gux-beside gux-form-field-container">
   <div class="gux-beside gux-form-field-label">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
   </div>
-  <slot name="input"></slot>
-  <div class="gux-form-field-error">
-    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-and-error-container">
+    <slot name="input"></slot>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
     </div>
-  </div>
-  <div class="gux-form-field-help">
-    <div class="gux-message">
-      <slot name="help"></slot>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
     </div>
   </div>
 </div>
@@ -160,17 +192,21 @@ exports[`gux-form-field-file #render label-position should render component as e
 <div class="gux-form-field-container gux-screenreader">
   <div class="gux-form-field-label gux-screenreader">
     <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
   </div>
-  <slot name="input"></slot>
-  <div class="gux-form-field-error">
-    <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
-    <div class="gux-message">
-      <slot name="error"></slot>
+  <div class="gux-input-and-error-container">
+    <slot name="input"></slot>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
     </div>
-  </div>
-  <div class="gux-form-field-help">
-    <div class="gux-message">
-      <slot name="help"></slot>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
     </div>
   </div>
 </div>

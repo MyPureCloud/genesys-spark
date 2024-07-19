@@ -201,6 +201,52 @@ describe('gux-form-field-dropdown', () => {
           expect(page.root).toMatchSnapshot();
         });
       });
+
+      describe('label-info', () => {
+        it('should render component as expected', async () => {
+          const html = `
+          <gux-form-field-dropdown>
+          <gux-dropdown>
+            <gux-listbox>
+              <gux-option value="a" disabled>Ant</gux-option>
+              <gux-option value="b">Bat</gux-option>
+              <gux-option value="c">Cat<span slot="subtext">Medium</span></gux-option>
+            </gux-listbox>
+          </gux-dropdown>
+          <label slot="label">Default</label>
+          <gux-label-info-beta slot="label-info">
+            <span slot="content">This is some tooltip text</span>
+          </gux-label-info-beta>
+        </gux-form-field-dropdown>
+          `;
+          const page = await newSpecPage({ components, html, language });
+
+          expect(page.root).toMatchSnapshot();
+        });
+      });
+
+      describe('help multi select', () => {
+        it('should render component as expected', async () => {
+          const html = `
+          <gux-form-field-dropdown>
+          <gux-dropdown-multi>
+            <gux-listbox-multi>
+              <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+              <gux-option-multi value="b">Bat</gux-option-multi>
+              <gux-option-multi value="c">Cat<span slot="subtext">Medium</span></gux-option-multi>
+            </gux-listbox-multi>
+          </gux-dropdown-multi>
+          <label slot="label">Default</label>
+          <gux-label-info-beta slot="label-info">
+            <span slot="content">This is some tooltip text</span>
+          </gux-label-info-beta>
+        </gux-form-field-dropdown>
+          `;
+          const page = await newSpecPage({ components, html, language });
+
+          expect(page.root).toMatchSnapshot();
+        });
+      });
     });
   });
 });

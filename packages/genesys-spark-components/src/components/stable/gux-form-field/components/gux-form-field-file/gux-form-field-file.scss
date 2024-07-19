@@ -16,3 +16,7 @@
 ::slotted(label) {
   @include gux-form-field.gse-ui-formControl-label;
 }
+
+.gux-input-and-error-container {
+  flex-grow: 1;
+}

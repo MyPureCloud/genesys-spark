@@ -93,5 +93,22 @@ describe('gux-form-field-number', () => {
         expect(page.root).toMatchSnapshot();
       });
     });
+
+    describe('label-info', () => {
+      it('should render component as expected', async () => {
+        const html = `
+          <gux-form-field-number>
+            <input slot="input" type="number" name="e-1" value="10" />
+            <label slot="label">Default</label>
+            <gux-label-info-beta slot="label-info">
+              <span slot="content">This is some tooltip text</span>
+            </gux-label-info-beta>
+          </gux-form-field-number>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
   });
 });
