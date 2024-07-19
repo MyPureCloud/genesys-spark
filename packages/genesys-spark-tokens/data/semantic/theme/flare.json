@@ -627,11 +627,11 @@
         "type": "borderRadius"
       },
       "xlarge": {
-        "value": "{border_radius.lg}",
+        "value": "{border_radius.xl}",
         "type": "borderRadius"
       },
       "large": {
-        "value": "{border_radius.md}",
+        "value": "{border_radius.lg}",
         "type": "borderRadius"
       },
       "medium": {
