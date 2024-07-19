@@ -395,7 +395,7 @@
       <gux-option-multi value="e">Eel</gux-option-multi>
       <gux-option-multi value="f">Frog</gux-option-multi>
       <gux-option-multi value="g">Goat</gux-option-multi>
-      <gux-option-multi value="h">Hourse</gux-option-multi>
+      <gux-option-multi value="h">Horse</gux-option-multi>
       <gux-option-multi value="i">Ibis</gux-option-multi>
       <gux-option-multi value="j">Jellyfish</gux-option-multi>
       <gux-option-multi value="k">Kestrel</gux-option-multi>
@@ -473,6 +473,16 @@
   <h3>Loading a filterable list</h3>
   <gux-dropdown-multi id="loading-2" filter-type="starts-with" loading>
     <gux-listbox-multi aria-label="Animals"> </gux-listbox-multi>
+  </gux-dropdown-multi>
+
+  <h2>List wider than dropdown input</h2>
+  <gux-dropdown-multi placeholder="Select an animal" exceedtargetwidth>
+    <gux-listbox-multi aria-label="Animals" style="width: 300px">
+      <gux-option-multi value="a">Ant</gux-option-multi>
+      <gux-option-multi value="b">Bat</gux-option-multi>
+      <gux-option-multi value="c">Cat</gux-option-multi>
+      <gux-option-multi value="d">Dog</gux-option-multi>
+    </gux-listbox-multi>
   </gux-dropdown-multi>
 </form>
 

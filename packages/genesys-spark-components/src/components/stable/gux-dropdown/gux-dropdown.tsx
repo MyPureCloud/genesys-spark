@@ -79,6 +79,14 @@ export class GuxDropdown {
   @Prop()
   hasError: boolean = false;
 
+  /**
+   * allows dropdown popup to be wider than input
+   * defaults to fitting content if width is not specified for listbox
+   * default min-width is set to width of input
+   */
+  @Prop()
+  exceedtargetwidth: boolean = false;
+
   @State()
   private expanded: boolean = false;
 
@@ -552,6 +560,7 @@ export class GuxDropdown {
       <gux-popup
         expanded={this.expanded && (!this.loading || this.isFilterable())}
         disabled={this.disabled}
+        exceedTargetWidth={this.exceedtargetwidth}
       >
         {this.renderTarget()}
         {this.renderPopup()}
