@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.65.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.65.1...v4.65.2) (2024-07-19)
+
+
+### Bug Fixes
+
+* **datepicker:** ensure format is set before updating value ([635be1f](https://github.com/MyPureCloud/genesys-spark/commit/635be1fde52b46951ef6331e6036bdff0b5e7762))
+* **other:** genesys-spark ([e12b0da](https://github.com/MyPureCloud/genesys-spark/commit/e12b0dae9f83f82a82f3858d74d52b4bca247db4))
+
 ### [4.65.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.65.0...v4.65.1) (2024-07-19)
 
 
