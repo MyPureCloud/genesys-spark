@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.66.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.65.2...v4.66.0) (2024-07-20)
+
+
+### Features
+
+* **labels:** gux-icon-tooltip-beta and gux-label-info ([#401](https://github.com/MyPureCloud/genesys-spark/issues/401)) ([283248b](https://github.com/MyPureCloud/genesys-spark/commit/283248b75c4ceb584e1a8502037700571558e0ed))
+
 ### [4.65.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.65.1...v4.65.2) (2024-07-19)
 
 
