@@ -181,6 +181,30 @@
     </gux-form-field-dropdown>
   </fieldset>
 
+  <fieldset>
+    <legend>Optional Indicator Mark</legend>
+    <gux-form-field-dropdown indicator-mark="optional">
+      <gux-dropdown>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Indicator Mark</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown indicator-mark="optional">
+      <gux-dropdown required>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Required</label>
+    </gux-form-field-dropdown>
+  </fieldset>
+
   <h2>Dropdown (multi select)</h2>
   <p>
     slot a gux-dropdown-multi element into a gux-form-field-dropdown element
@@ -356,6 +380,30 @@
       <gux-label-info-beta slot="label-info">
         <span slot="content">This is some tooltip text</span>
       </gux-label-info-beta>
+    </gux-form-field-dropdown>
+  </fieldset>
+
+  <fieldset>
+    <legend>Optional Indicator Mark</legend>
+    <gux-form-field-dropdown indicator-mark="optional">
+      <gux-dropdown-multi>
+        <gux-listbox>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox>
+      </gux-dropdown-multi>
+      <label slot="label">Indicator Mark</label>
+    </gux-form-field-dropdown>
+    <gux-form-field-dropdown indicator-mark="optional">
+      <gux-dropdown-multi required>
+        <gux-listbox>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox>
+      </gux-dropdown-multi>
+      <label slot="label">Required</label>
     </gux-form-field-dropdown>
   </fieldset>
 </form>

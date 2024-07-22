@@ -57,6 +57,24 @@ describe('gux-form-field-color', () => {
       });
     });
 
+    describe('indicator marks', () => {
+      ['', 'indicator-mark="optional"', 'indicator-mark="required"'].forEach(
+        (indicatorMark, index) => {
+          it(`should render component as expected (${index + 1})`, async () => {
+            const html = `
+              <gux-form-field-color ${indicatorMark}>
+                <input slot="input" type="color" value="#ff0000" />
+                <label slot="label">Label</label>
+              </gux-form-field-color>
+            `;
+            const page = await newSpecPage({ components, html, language });
+
+            expect(page.root).toMatchSnapshot();
+          });
+        }
+      );
+    });
+
     describe('help', () => {
       it('should render component as expected', async () => {
         const html = `

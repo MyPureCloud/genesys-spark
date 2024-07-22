@@ -14,7 +14,10 @@ import {
   GuxFormFieldContainer
 } from '../../functional-components/functional-components';
 
-import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
+import {
+  GuxFormFieldLabelPosition,
+  GuxFormFieldIndicatorMark
+} from '../../gux-form-field.types';
 import {
   getComputedLabelPosition,
   validateFormIds
@@ -51,6 +54,14 @@ export class GuxFormFieldTextarea {
 
   @Prop()
   labelPosition: GuxFormFieldLabelPosition;
+
+  /**
+   * Field indicator mark which can show *, (optional) or blank
+   * Defaults to required. When set to required, the component will display * for required fields and blank for optional
+   * When set to optional, the component will display (optional) for optional and blank for required.
+   */
+  @Prop()
+  indicatorMark: GuxFormFieldIndicatorMark = 'required';
 
   @State()
   private computedLabelPosition: GuxFormFieldLabelPosition = 'above';
@@ -135,7 +146,7 @@ export class GuxFormFieldTextarea {
         >
           <slot name="label" onSlotchange={() => this.setLabel()} />
           <gux-form-field-label-indicator
-            variant="required"
+            variant={this.indicatorMark}
             required={this.required}
           />
           <slot name="label-info" />

@@ -126,6 +126,28 @@
       </gux-label-info-beta>
     </gux-form-field-select>
   </fieldset>
+
+  <fieldset>
+    <legend>Optional Indicator Mark</legend>
+
+    <gux-form-field-select indicator-mark="optional">
+      <select slot="input" name="e-1">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Indicator Mark</label>
+    </gux-form-field-select>
+
+    <gux-form-field-select indicator-mark="optional">
+      <select slot="input" name="e-1" required>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Indicator Mark</label>
+    </gux-form-field-select>
+  </fieldset>
 </form>
 
 <style>

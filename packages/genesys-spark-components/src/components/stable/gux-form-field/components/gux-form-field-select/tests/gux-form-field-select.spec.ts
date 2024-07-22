@@ -67,6 +67,29 @@ describe('gux-form-field-select', () => {
         });
       });
     });
+
+    describe('indicator marks', () => {
+      ['', 'indicator-mark="optional"', 'indicator-mark="required"'].forEach(
+        (indicatorMark, index) => {
+          it(`should render component as expected (${index + 1})`, async () => {
+            const html = `
+              <gux-form-field-select ${indicatorMark}>
+                <select slot="input" name="lp-1">
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+                </select>
+                <label slot="label">Default</label>
+              </gux-form-field-select>
+            `;
+            const page = await newSpecPage({ components, html, language });
+
+            expect(page.root).toMatchSnapshot();
+          });
+        }
+      );
+    });
+
     describe('help', () => {
       it('should render component as expected', async () => {
         const html = `
