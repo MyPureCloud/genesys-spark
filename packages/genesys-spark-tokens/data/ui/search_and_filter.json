@@ -3,13 +3,13 @@
     "counter": {
       "default": {
         "foreground_color": {
-          "value": "{color.cornflower.600}",
+          "value": "{form_control.input.input_icon.icon_end_color}",
           "type": "color"
         }
       },
       "hover": {
         "foreground_color": {
-          "value": "{color.primary.main}",
+          "value": "{foreground.form_control.click_input.hover}",
           "type": "color"
         }
       },
@@ -23,7 +23,7 @@
           "type": "border"
         },
         "foreground_color": {
-          "value": "{color.cornflower.400}",
+          "value": "{border.form_control.text_input.default}",
           "type": "color"
         }
       },
@@ -37,16 +37,16 @@
         "type": "typography"
       },
       "gap": {
-        "value": "{spacing.4xs}",
+        "value": "{form_control.form_field.gap}",
         "type": "spacing"
       },
       "icon": {
         "height": {
-          "value": "{size.xs}",
+          "value": "{assets.small.size}",
           "type": "sizing"
         },
         "width": {
-          "value": "{size.xs}",
+          "value": "{assets.small.size}",
           "type": "sizing"
         }
       }
