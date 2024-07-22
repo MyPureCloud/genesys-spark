@@ -266,6 +266,10 @@
         "110": {
           "value": "{color_legacy.secondary.yellow_green}",
           "type": "color"
+        },
+        "120": {
+          "value": "{color_legacy.yellow.120}",
+          "type": "color"
         }
       },
       "subtle": {
@@ -311,6 +315,10 @@
         },
         "110": {
           "value": "{color_legacy.data_visualization.yellow_green}",
+          "type": "color"
+        },
+        "120": {
+          "value": "{color_legacy.yellow.110}",
           "type": "color"
         }
       }

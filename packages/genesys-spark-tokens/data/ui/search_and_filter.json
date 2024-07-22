@@ -16,8 +16,8 @@
       "divider": {
         "border": {
           "value": {
-            "color": "{color.cornflower.400}",
-            "width": "1",
+            "color": "{border.form_control.text_input.default}",
+            "width": "{container.divider.border_width}",
             "style": "solid"
           },
           "type": "border"
@@ -28,12 +28,7 @@
         }
       },
       "text": {
-        "value": {
-          "fontFamily": "{font_family.roboto}",
-          "fontWeight": "{font_weight.regular}",
-          "lineHeight": "{line_height.xs}",
-          "fontSize": "{font_size.xs}"
-        },
+        "value": "{body.sm.regular}",
         "type": "typography"
       },
       "gap": {
@@ -58,21 +53,21 @@
     "match": {
       "first_level": {
         "background_color": {
-          "value": "{color.islandaqua.300}",
+          "value": "{background.custom_accents.bold.120}",
           "type": "color"
         },
         "foreground_colour": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.form_control.text_input.populated}",
           "type": "color"
         }
       },
       "subsequent_level": {
         "foreground_colour": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.form_control.text_input.populated}",
           "type": "color"
         },
         "background_color": {
-          "value": "{color.islandaqua.200}",
+          "value": "{background.custom_accents.subtle.120}",
           "type": "color"
         }
       }

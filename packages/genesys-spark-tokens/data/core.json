@@ -1231,6 +1231,14 @@
       "100": {
         "value": "#FDF8EC",
         "type": "color"
+      },
+      "110": {
+        "value": "#FFF793",
+        "type": "color"
+      },
+      "120": {
+        "value": "#FFEF27",
+        "type": "color"
       }
     },
     "secondary": {

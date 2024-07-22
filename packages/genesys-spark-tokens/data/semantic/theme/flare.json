@@ -266,6 +266,10 @@
         "110": {
           "value": "{color.mango.600}",
           "type": "color"
+        },
+        "120": {
+          "value": "{color.islandaqua.300}",
+          "type": "color"
         }
       },
       "subtle": {
@@ -311,6 +315,10 @@
         },
         "110": {
           "value": "{color.mango.400}",
+          "type": "color"
+        },
+        "120": {
+          "value": "{color.islandaqua.200}",
           "type": "color"
         }
       }

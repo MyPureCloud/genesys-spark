@@ -248,6 +248,11 @@
             "value": "{background.custom_accents.bold.110}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
+          },
+          "accent_12": {
+            "value": "{background.custom_accents.bold.120}",
+            "type": "color",
+            "description": "A custom accent used in search component"
           }
         },
         "subtle": {
@@ -304,6 +309,11 @@
             "value": "{background.custom_accents.subtle.110}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
+          },
+          "accent_12": {
+            "value": "{background.custom_accents.subtle.120}",
+            "type": "color",
+            "description": "A custom accent used in search component"
           }
         }
       },
