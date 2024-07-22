@@ -311,9 +311,9 @@ export class GuxFormField {
 
   @OnResize()
   private updatePosition(): void {
-    const value = Number(this.input.value || 0);
-    const min = Number(this.input.min || 0);
-    const max = Number(this.input.max || 100);
+    const value = Number(this.input?.value || 0);
+    const min = Number(this.input?.min || 0);
+    const max = Number(this.input?.max || 100);
     const placementPercentage = ((value - min) / (max - min)) * 100;
 
     if (this.tooltipElement) {
