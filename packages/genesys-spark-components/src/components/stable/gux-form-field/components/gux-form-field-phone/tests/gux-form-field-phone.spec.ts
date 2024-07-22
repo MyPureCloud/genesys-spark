@@ -38,6 +38,26 @@ describe('gux-form-field-phone', () => {
           expect(page.root).toMatchSnapshot();
         });
       });
+
+      describe('indicator marks', () => {
+        ['', 'indicator-mark="optional"', 'indicator-mark="required"'].forEach(
+          (indicatorMark, index) => {
+            it(`should render component as expected (${
+              index + 1
+            })`, async () => {
+              const html = `
+              <gux-form-field-phone ${indicatorMark}>
+                <gux-phone-input-beta></gux-phone-input-beta>
+                <label slot="label">Label</label>
+              </gux-form-field-phone>
+            `;
+              const page = await newSpecPage({ components, html, language });
+
+              expect(page.root).toMatchSnapshot();
+            });
+          }
+        );
+      });
     });
 
     describe('error', () => {

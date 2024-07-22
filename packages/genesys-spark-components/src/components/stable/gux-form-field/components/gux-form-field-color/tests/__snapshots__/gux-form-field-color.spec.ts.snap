@@ -39,6 +39,114 @@ exports[`gux-form-field-color #render help should render component as expected 1
 </gux-form-field-color>
 `;
 
+exports[`gux-form-field-color #render indicator marks should render component as expected (1) 1`] = `
+<gux-form-field-color>
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <input id="gux-form-field-input-i" slot="input" type="color" value="#ff0000">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-color>
+`;
+
+exports[`gux-form-field-color #render indicator marks should render component as expected (2) 1`] = `
+<gux-form-field-color indicator-mark="optional">
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <input id="gux-form-field-input-i" slot="input" type="color" value="#ff0000">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-color>
+`;
+
+exports[`gux-form-field-color #render indicator marks should render component as expected (3) 1`] = `
+<gux-form-field-color indicator-mark="required">
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <input id="gux-form-field-input-i" slot="input" type="color" value="#ff0000">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-color>
+`;
+
 exports[`gux-form-field-color #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-color>
   <mock:shadow-root>
