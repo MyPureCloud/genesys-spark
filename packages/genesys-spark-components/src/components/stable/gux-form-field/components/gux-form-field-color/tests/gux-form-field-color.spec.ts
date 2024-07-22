@@ -71,5 +71,21 @@ describe('gux-form-field-color', () => {
         expect(page.root).toMatchSnapshot();
       });
     });
+
+    it('should render the label info when provided', async () => {
+      const html = `
+            <gux-form-field-color>
+              <input slot="input" type="color" name="e-1" value="#cc3ebe" />
+              <label slot="label">Default</label>
+              <gux-label-info-beta slot="label-info">
+                <span slot="content">This is some tooltip text</span>
+              </gux-label-info-beta>
+            </gux-form-field-color>
+          `;
+
+      const page = await newSpecPage({ components, html, language });
+
+      expect(page.root).toMatchSnapshot();
+    });
   });
 });

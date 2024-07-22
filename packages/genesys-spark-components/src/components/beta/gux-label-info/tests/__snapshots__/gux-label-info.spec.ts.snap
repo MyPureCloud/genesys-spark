@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-label-info-beta #render should render component as expected (1) 1`] = `
+<gux-label-info-beta>
+  <mock:shadow-root>
+    <div class="gux-label-info">
+      <gux-screen-reader-beta>
+        <slot name="content"></slot>
+      </gux-screen-reader-beta>
+      <gux-icon decorative="" icon-name="fa/circle-info-regular" size="small"></gux-icon>
+      <gux-tooltip-beta placement="right">
+        <div slot="content"></div>
+      </gux-tooltip-beta>
+    </div>
+  </mock:shadow-root>
+</gux-label-info-beta>
+`;
+
+exports[`gux-label-info-beta #render should render component as expected (2) 1`] = `
+<gux-label-info-beta variant="question">
+  <mock:shadow-root>
+    <div class="gux-label-info">
+      <gux-screen-reader-beta>
+        <slot name="content"></slot>
+      </gux-screen-reader-beta>
+      <gux-icon decorative="" icon-name="fa/circle-question-regular" size="small"></gux-icon>
+      <gux-tooltip-beta placement="right">
+        <div slot="content">
+          This is some tooltip text
+        </div>
+      </gux-tooltip-beta>
+    </div>
+  </mock:shadow-root>
+  <span slot="content">
+    This is some tooltip text
+  </span>
+</gux-label-info-beta>
+`;
+
+exports[`gux-label-info-beta #render should render component as expected (3) 1`] = `
+<gux-label-info-beta variant="info">
+  <mock:shadow-root>
+    <div class="gux-label-info">
+      <gux-screen-reader-beta>
+        <slot name="content"></slot>
+      </gux-screen-reader-beta>
+      <gux-icon decorative="" icon-name="fa/circle-info-regular" size="small"></gux-icon>
+      <gux-tooltip-beta placement="right">
+        <div slot="content"></div>
+      </gux-tooltip-beta>
+    </div>
+  </mock:shadow-root>
+</gux-label-info-beta>
+`;
+
+exports[`gux-label-info-beta #render should render component as expected (4) 1`] = `
+<gux-label-info-beta>
+  <mock:shadow-root>
+    <div class="gux-label-info">
+      <gux-screen-reader-beta>
+        <slot name="content"></slot>
+      </gux-screen-reader-beta>
+      <gux-icon decorative="" icon-name="fa/circle-info-regular" size="small"></gux-icon>
+      <gux-tooltip-beta placement="right">
+        <div slot="content">
+          This is some tooltip text
+        </div>
+      </gux-tooltip-beta>
+    </div>
+  </mock:shadow-root>
+  <span slot="content">
+    This is some tooltip text
+  </span>
+</gux-label-info-beta>
+`;
+
+exports[`gux-label-info-beta #render should render component as expected (5) 1`] = `
+<gux-label-info-beta variant="invalid-variant">
+  <mock:shadow-root>
+    <div class="gux-label-info">
+      <gux-screen-reader-beta>
+        <slot name="content"></slot>
+      </gux-screen-reader-beta>
+      <gux-icon decorative="" icon-name="fa/circle-info-regular" size="small"></gux-icon>
+      <gux-tooltip-beta placement="right">
+        <div slot="content">
+          This is an information tooltip
+        </div>
+      </gux-tooltip-beta>
+    </div>
+  </mock:shadow-root>
+  <span slot="content">
+    This is an information tooltip
+  </span>
+</gux-label-info-beta>
+`;

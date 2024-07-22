@@ -1,0 +1,5 @@
+@use '../../../../genesys-spark-tokens/dist-new/scss/gse-legacy-light-ui';
+
+:root {
+  @include gse-legacy-light-ui.tokens;
+}

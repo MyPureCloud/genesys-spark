@@ -63,6 +63,7 @@ graph TD;
   gux-popover --> gux-dismiss-button
   gux-dismiss-button --> gux-button-slot
   gux-dismiss-button --> gux-icon
+  gux-form-field-number --> gux-form-field-label-indicator
   gux-form-field-number --> gux-form-field-input-clear-button
   gux-form-field-number --> gux-icon
   gux-form-field-input-clear-button --> gux-icon

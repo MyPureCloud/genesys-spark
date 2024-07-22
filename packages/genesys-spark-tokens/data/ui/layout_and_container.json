@@ -10,7 +10,7 @@
         "type": "spacing"
       },
       "chevron_icon": {
-        "value": "{icon.size.sm}",
+        "value": "{icon.small.size}",
         "type": "sizing"
       },
       "gap": {
@@ -67,11 +67,11 @@
         "type": "spacing"
       },
       "start_icon": {
-        "value": "{icon.size.sm}",
+        "value": "{icon.small.size}",
         "type": "sizing"
       },
       "parent_icon": {
-        "value": "{icon.size.sm}",
+        "value": "{icon.small.size}",
         "type": "sizing"
       },
       "gap": {

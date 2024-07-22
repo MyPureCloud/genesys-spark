@@ -2,25 +2,37 @@
 <h2>Default (no previous or next page available)</h2>
 <div lang="en">
   <div class="table-placeholder"></div>
-  <gux-pagination-cursor></gux-pagination-cursor>
+  <gux-pagination-cursor
+    label="Pagination for default example"
+  ></gux-pagination-cursor>
 </div>
 
 <h2>Next page available</h2>
 <div lang="en">
   <div class="table-placeholder"></div>
-  <gux-pagination-cursor has-next></gux-pagination-cursor>
+  <gux-pagination-cursor
+    has-next
+    label="Pagination for next example"
+  ></gux-pagination-cursor>
 </div>
 
 <h2>Next and previous page available</h2>
 <div lang="en">
   <div class="table-placeholder"></div>
-  <gux-pagination-cursor has-previous has-next></gux-pagination-cursor>
+  <gux-pagination-cursor
+    has-previous
+    has-next
+    label="Pagination for next and previous example"
+  ></gux-pagination-cursor>
 </div>
 
 <h2>Previous page available</h2>
 <div lang="en">
   <div class="table-placeholder"></div>
-  <gux-pagination-cursor has-previous></gux-pagination-cursor>
+  <gux-pagination-cursor
+    has-previous
+    label="Pagination for previous example"
+  ></gux-pagination-cursor>
 </div>
 
 <h2>Advanced Layout</h2>
@@ -30,6 +42,7 @@
     layout="advanced"
     has-previous
     has-next
+    label="Pagination for advanced example"
   ></gux-pagination-cursor>
 </div>
 
@@ -41,6 +54,7 @@
     items-per-page="25"
     has-previous
     has-next
+    label="Pagination for advanced example with item per page dropdown"
   ></gux-pagination-cursor>
 </div>
 

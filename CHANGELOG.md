@@ -2,6 +2,83 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.66.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.65.2...v4.66.0) (2024-07-20)
+
+
+### Features
+
+* **labels:** gux-icon-tooltip-beta and gux-label-info ([#401](https://github.com/MyPureCloud/genesys-spark/issues/401)) ([283248b](https://github.com/MyPureCloud/genesys-spark/commit/283248b75c4ceb584e1a8502037700571558e0ed))
+
+### [4.65.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.65.1...v4.65.2) (2024-07-19)
+
+
+### Bug Fixes
+
+* **datepicker:** ensure format is set before updating value ([635be1f](https://github.com/MyPureCloud/genesys-spark/commit/635be1fde52b46951ef6331e6036bdff0b5e7762))
+* **other:** genesys-spark ([e12b0da](https://github.com/MyPureCloud/genesys-spark/commit/e12b0dae9f83f82a82f3858d74d52b4bca247db4))
+
+### [4.65.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.65.0...v4.65.1) (2024-07-19)
+
+
+### Bug Fixes
+
+* **other:** addressed PR comments ([821d19c](https://github.com/MyPureCloud/genesys-spark/commit/821d19c69c40a0c2cb91aac40fbaa61a4faaf984))
+
+## [4.65.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.4...v4.65.0) (2024-07-18)
+
+
+### Features
+
+* **icon:** Add log-eye-regular icon ([#535](https://github.com/MyPureCloud/genesys-spark/issues/535)) ([7390788](https://github.com/MyPureCloud/genesys-spark/commit/7390788ea1e03edf7aefa294fbbe2c5b9644e971))
+* **tokens:** Added click input theme level colors ([6f89f9a](https://github.com/MyPureCloud/genesys-spark/commit/6f89f9a9bb88f21931b8dcc67bddee7f2bb82387))
+* **tokens:** Added token for grouped menu header ([b59d4e9](https://github.com/MyPureCloud/genesys-spark/commit/b59d4e9bd101329d52f891f3b8855fc86959144e))
+* **tokens:** Theming UI icons ([e00084f](https://github.com/MyPureCloud/genesys-spark/commit/e00084f706ab1bdbec2a33f5d911e32efcaf5bb9))
+* **tokens:** UI theming - buttons ([7733f12](https://github.com/MyPureCloud/genesys-spark/commit/7733f127203693197ebd031b18ae0b1b257a5df6))
+* **tokens:** UI theming - fix icons ([a021f6b](https://github.com/MyPureCloud/genesys-spark/commit/a021f6b5908263e9ec958396544a35f4b04dc4ce))
+* **tokens:** UI theming - fix spinner ([9a01192](https://github.com/MyPureCloud/genesys-spark/commit/9a01192bc6de12f2657bcc10edae8f71989c0fd8))
+* **tokens:** UI theming - fix tooltip ([bfbbcfc](https://github.com/MyPureCloud/genesys-spark/commit/bfbbcfcc51f99e29b288368457e43e4c1e34aec3))
+* **tokens:** UI theming - inline button ([d57df38](https://github.com/MyPureCloud/genesys-spark/commit/d57df38d66942e8d271713f229a27c262ccd210f))
+* **tokens:** UI theming - Menu no effects ([4721044](https://github.com/MyPureCloud/genesys-spark/commit/47210447ba7923321a5901039d6a7395c8581b18))
+* **tokens:** UI theming - spinner ([e8fde30](https://github.com/MyPureCloud/genesys-spark/commit/e8fde303a19974f2da57f8e892bdb48159a5af0a))
+* **tokens:** UI theming - tooltip ([feb2acf](https://github.com/MyPureCloud/genesys-spark/commit/feb2acf844670851ff1575e36d47c71b838d68f4))
+* **tokens:** UI theming buttons add large and xlarge spacing ([aad50ae](https://github.com/MyPureCloud/genesys-spark/commit/aad50aee09fb165dcdc8ee5ec2ef6bd5422ca3a3))
+* **tokens:** UI theming buttons part 1 ([b47e40b](https://github.com/MyPureCloud/genesys-spark/commit/b47e40b6c4ae63b077bd7b42b1a9abc98df9bf91))
+* **tokens:** UI theming fix tooltip ([65463ac](https://github.com/MyPureCloud/genesys-spark/commit/65463ac882816041aae0337257df06bdc0f57409))
+* **tokens:** UI theming rename groups ([31025e5](https://github.com/MyPureCloud/genesys-spark/commit/31025e5c6324ec617a3ef2ea0133d8616a12d81a))
+* **tokens:** UI theming rename token interactive size ([22dd7b3](https://github.com/MyPureCloud/genesys-spark/commit/22dd7b3af1a22f6cda91006d64d01f3a54ae5c3d))
+* **tokens:** ui theming tooltip ([2ceadc1](https://github.com/MyPureCloud/genesys-spark/commit/2ceadc1e1b9ac61be6aa9ebc8465bcfb562417ae))
+* **tokens:** UI theming typography button ([4ff285d](https://github.com/MyPureCloud/genesys-spark/commit/4ff285de619da755df9f34091f2eb42c2b55f5d5))
+* **tokens:** Updated menu tokens ([2eba5bc](https://github.com/MyPureCloud/genesys-spark/commit/2eba5bc964b73793623478b67dd75c143b425799))
+* **tokens:** Updated styles ([b0e9231](https://github.com/MyPureCloud/genesys-spark/commit/b0e9231791a3cfa22cf74f76297c9d181f1d25a3))
+
+
+### Bug Fixes
+
+* **icon:** "setAttribute not a function" error when setting decorative programmatically in firefox ([7bfd82c](https://github.com/MyPureCloud/genesys-spark/commit/7bfd82ccb5cd4565444d0358806d520a7df797a3))
+* **tokens:** fixed reference issues ([f5fa3c9](https://github.com/MyPureCloud/genesys-spark/commit/f5fa3c9dd3a42325d1d71ffad031da333f249828))
+
+### [4.64.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.3...v4.64.4) (2024-07-17)
+
+
+### Bug Fixes
+
+* **copy-to-clipboard:** fix status icon styles and align icon and text ([741f679](https://github.com/MyPureCloud/genesys-spark/commit/741f6792b498d6e907b3d47beb903f1f64fdf7e4))
+* **form-field-file:** Remove duplication in screenreader content ([#533](https://github.com/MyPureCloud/genesys-spark/issues/533)) ([f68a2f2](https://github.com/MyPureCloud/genesys-spark/commit/f68a2f2fedf502a75e3bffc7fef6a1e57c651a2c))
+
+### [4.64.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.2...v4.64.3) (2024-07-16)
+
+
+### Bug Fixes
+
+* **table:** disabled pagination overlapping context-menu ([1bc2d83](https://github.com/MyPureCloud/genesys-spark/commit/1bc2d830cde7833a2418195482ca8b2f0f46f2be))
+
+### [4.64.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.1...v4.64.2) (2024-07-13)
+
+
+### Bug Fixes
+
+* **table:** fix disabled row select bug in vue ([b85f309](https://github.com/MyPureCloud/genesys-spark/commit/b85f309d348b2feb44ddb15271f01ea72bfcdf73))
+
 ### [4.64.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.64.0...v4.64.1) (2024-07-12)
 
 

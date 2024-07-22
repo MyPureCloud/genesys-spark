@@ -74,6 +74,7 @@ graph TD;
   gux-advanced-dropdown-legacy --> gux-popup
   gux-advanced-dropdown-legacy --> gux-icon
   gux-advanced-dropdown-legacy --> gux-form-field-search
+  gux-form-field-search --> gux-form-field-label-indicator
   gux-form-field-search --> gux-icon
   gux-form-field-search --> gux-form-field-input-clear-button
   gux-form-field-input-clear-button --> gux-icon
