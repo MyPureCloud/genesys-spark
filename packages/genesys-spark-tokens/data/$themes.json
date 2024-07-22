@@ -302,7 +302,9 @@
       "color_legacy.brand.brand_yellow": "8ec5757097836b5d5127e771c259a3251ca8a9f8",
       "border_width.1": "e70d893dce1f1cd0930b9f7bef5a6ae0cf94b3c4",
       "border_width.2": "b55270ee3a3da09ced27fa43ccbd101be4297792",
-      "border_width.3": "0793e4130243066008477536634e659eaf34a72f"
+      "border_width.3": "0793e4130243066008477536634e659eaf34a72f",
+      "color_legacy.yellow.110": "50e668670c8ce442bee14a39404ae9948a22bbd0",
+      "color_legacy.yellow.120": "9fed0bc2a497d4dc159ec16f6488dbc739e9035d"
     },
     "group": ".core"
   },
@@ -371,6 +373,7 @@
       "background.custom_accents.bold.90": "791cb102f69b77a9ba4897bf804e855695d361d4",
       "background.custom_accents.bold.100": "94baf50c9a754fd0d23a45ad64ea310e96aac3d5",
       "background.custom_accents.bold.110": "129920249d2802d97ca6c31494f7bac1ac7f186e",
+      "background.custom_accents.bold.120": "99e6a867c02379e015ca8a8ee8634fadac7e2631",
       "background.custom_accents.subtle.10": "9a2e380c8f42c450961c533ba6bc1d2024817a5b",
       "background.custom_accents.subtle.20": "41dd3f8f41ad2da32727c3d659450260d307f49e",
       "background.custom_accents.subtle.30": "2677c310dfb405ebfc9ddaf28e28b68927476575",
@@ -382,6 +385,7 @@
       "background.custom_accents.subtle.90": "94599a6b0a3b9e442c915ea2ad62277717a473f2",
       "background.custom_accents.subtle.100": "e26e69d8d233f39fa564d1c43597d2c86dfbef86",
       "background.custom_accents.subtle.110": "b99216a863cd3deb8e6b1d8b4dbbb053623c5f93",
+      "background.custom_accents.subtle.120": "f9de4dc46ff0f33f64a3a893184e9a0d50769783",
       "foreground.primary.10": "5461ef3d303a39c8f6595d75a92570c303db2d6a",
       "foreground.primary.20": "f8422604087b875b13b0936658341393d6f40b13",
       "foreground.primary.30": "791efffa23fe724140290eb107aa5deff1f0ef49",
@@ -583,7 +587,9 @@
       "border_radius.focus.large": "863ebe09eda9ddfb5d3548c123cfed571cf1274c",
       "border_radius.focus.medium": "f2c87579ac1f11a371eb5b6301658e0775da31fa",
       "border_radius.focus.small": "79675ae64f8c132f3956a5861008315ec50541de",
-      "border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354"
+      "border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354",
+      "background.custom_accents.bold.120": "99e6a867c02379e015ca8a8ee8634fadac7e2631",
+      "background.custom_accents.subtle.120": "f9de4dc46ff0f33f64a3a893184e9a0d50769783"
     }
   },
   {
@@ -743,6 +749,7 @@
       "background.system.custom_accents.bold.accent_9": "45914048a9be99e543125e2dab001b173d2b14c7",
       "background.system.custom_accents.bold.accent_10": "c185f871c2280869741ede56a421950c43e08c1c",
       "background.system.custom_accents.bold.accent_11": "74383ed836186fce38260454bbbfb22d8cec5358",
+      "background.system.custom_accents.bold.accent_12": "d18a7e791736e39b1125ce24dbc0baffb7137065",
       "background.system.custom_accents.subtle.accent_1": "68ac4aa6efce741a39141975c7cf3d029175b5cf",
       "background.system.custom_accents.subtle.accent_2": "dfe206c8b9e7025ad4b1305098a481e75245f1dd",
       "background.system.custom_accents.subtle.accent_3": "34b703734b31e39969e4341a3954b37b87eea8af",
@@ -754,6 +761,7 @@
       "background.system.custom_accents.subtle.accent_9": "dfc94a35186c2d5e49f3ee7500aad28d123a5691",
       "background.system.custom_accents.subtle.accent_10": "964910235fc3f9ad881712ee8434dbc5f6e2d46e",
       "background.system.custom_accents.subtle.accent_11": "ec37580a9c6ffb43de3d3e5414ae87cb63e58de3",
+      "background.system.custom_accents.subtle.accent_12": "d0efafcf69a9872fa3a11bfa05482b711a313eb9",
       "background.system.progress_and_loading.default": "af362ee0e249708c23aea258a9529c397d679c0d",
       "background.system.progress_and_loading.progressed": "316f483ef6becf7108ea84e7102c4f1153a33056",
       "background.form_control.click_input.track": "f7264e518f41aeffe25c977126496c0f212c2fa8",
