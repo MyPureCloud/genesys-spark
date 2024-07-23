@@ -4,12 +4,13 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
 <gux-form-field-checkbox-group-beta>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="group-label"></slot>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Food
-      </span>
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="group-label"></slot>
+        <slot name="group-label-info"></slot>
+      </div>
       <slot name="group-checkbox"></slot>
       <slot></slot>
       <div class="gux-form-field-error">
@@ -41,15 +42,13 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
 <gux-form-field-checkbox-group-beta>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="group-label"></slot>
-        <gux-screen-reader-beta>
-          Subject to availibility
-        </gux-screen-reader-beta>
+      <legend class="gux-form-field-screenreader-label">
+        Food Subject to availibility
       </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Food
-      </span>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="group-label"></slot>
+        <slot name="group-label-info"></slot>
+      </div>
       <slot name="group-checkbox"></slot>
       <slot></slot>
       <div class="gux-form-field-error gux-show">
@@ -99,15 +98,13 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
 <gux-form-field-checkbox-group-beta>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="group-label"></slot>
-        <gux-screen-reader-beta>
-          This is a group help message
-        </gux-screen-reader-beta>
+      <legend class="gux-form-field-screenreader-label">
+        Food This is a group help message
       </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Food
-      </span>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="group-label"></slot>
+        <slot name="group-label-info"></slot>
+      </div>
       <slot name="group-checkbox"></slot>
       <slot></slot>
       <div class="gux-form-field-error">
@@ -166,12 +163,13 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
 <gux-form-field-checkbox-group-beta disabled="">
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="group-label"></slot>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Food
-      </span>
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="group-label"></slot>
+        <slot name="group-label-info"></slot>
+      </div>
       <slot name="group-checkbox"></slot>
       <slot></slot>
       <div class="gux-form-field-error">
