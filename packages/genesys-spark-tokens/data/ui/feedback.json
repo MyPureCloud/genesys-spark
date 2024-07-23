@@ -342,21 +342,11 @@
     "loading_state": {
       "large": {
         "header": {
-          "value": {
-            "fontFamily": "{font_family.urbanist}",
-            "fontWeight": "{font_weight.bold}",
-            "lineHeight": "{line_height.xl}",
-            "fontSize": "{font_size.xl}"
-          },
+          "value": "{heading.lg.bold}",
           "type": "typography"
         },
         "subheader": {
-          "value": {
-            "fontFamily": "{font_family.roboto}",
-            "fontWeight": "{font_weight.semi_bold}",
-            "lineHeight": "{line_height.md}",
-            "fontSize": "{font_size.md}"
-          },
+          "value": "{body.lg.semi_bold}",
           "type": "typography"
         },
         "width": {
@@ -366,21 +356,11 @@
       },
       "medium": {
         "header": {
-          "value": {
-            "fontFamily": "{font_family.urbanist}",
-            "fontWeight": "{font_weight.bold}",
-            "lineHeight": "{line_height.lg}",
-            "fontSize": "{font_size.lg}"
-          },
+          "value": "{heading.md.bold}",
           "type": "typography"
         },
         "subheader": {
-          "value": {
-            "fontFamily": "{font_family.roboto}",
-            "fontWeight": "{font_weight.semi_bold}",
-            "lineHeight": "{line_height.sm}",
-            "fontSize": "{font_size.sm}"
-          },
+          "value": "{body.md.semi_bold}",
           "type": "typography"
         },
         "width": {
@@ -390,21 +370,11 @@
       },
       "small": {
         "header": {
-          "value": {
-            "fontFamily": "{font_family.urbanist}",
-            "fontWeight": "{font_weight.bold}",
-            "lineHeight": "{line_height.md}",
-            "fontSize": "{font_size.md}"
-          },
+          "value": "{heading.sm.bold}",
           "type": "typography"
         },
         "subheader": {
-          "value": {
-            "fontFamily": "{font_family.roboto}",
-            "fontWeight": "{font_weight.semi_bold}",
-            "lineHeight": "{line_height.xs}",
-            "fontSize": "{font_size.xs}"
-          },
+          "value": "{body.sm.semi_bold}",
           "type": "typography"
         },
         "width": {
@@ -415,11 +385,11 @@
     },
     "large": {
       "gap": {
-        "value": "{spacing.md}",
+        "value": "{container.xlarge.gap}",
         "type": "spacing"
       },
       "gap_text": {
-        "value": "{spacing.4xs}",
+        "value": "{container.xsmall.gap}",
         "type": "spacing"
       }
     },
@@ -431,21 +401,21 @@
     },
     "medium": {
       "gap": {
-        "value": "{spacing.xs}",
+        "value": "{container.large.gap}",
         "type": "spacing"
       },
       "gap_text": {
-        "value": "{spacing.4xs}",
+        "value": "{container.xsmall.gap}",
         "type": "spacing"
       }
     },
     "small": {
       "gap": {
-        "value": "{spacing.2xs}",
+        "value": "{container.medium.gap}",
         "type": "spacing"
       },
       "gap_text": {
-        "value": "{spacing.4xs}",
+        "value": "{container.xsmall.gap}",
         "type": "spacing"
       }
     },

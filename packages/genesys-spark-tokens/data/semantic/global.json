@@ -498,6 +498,11 @@
       }
     },
     "xlarge": {
+      "gap": {
+        "value": "{spacing.md}",
+        "type": "spacing",
+        "description": "The recommended gap between items inside a xlarge container, like progress and loading."
+      },
       "padding": {
         "value": "{spacing.lg}",
         "type": "spacing",
