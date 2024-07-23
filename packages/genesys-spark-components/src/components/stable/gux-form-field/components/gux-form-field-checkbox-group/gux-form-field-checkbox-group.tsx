@@ -21,7 +21,8 @@ import {
 import {
   GuxFormFieldError,
   GuxFormFieldHelp,
-  GuxFormFieldLegendLabel,
+  GuxFormFieldScreenreaderLabel,
+  GuxFormFieldVisualLabel,
   GuxFormFieldFieldsetContainer
 } from '../../functional-components/functional-components';
 import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
@@ -59,6 +60,12 @@ export class GuxFormFieldCheckboxGroupBeta {
   private hasGroupHelp: boolean = false;
 
   /**
+   *  radio group has label info tooltip
+   */
+  @State()
+  private hasGroupLabelInfo: boolean = false;
+
+  /**
    * Disables the checkboxes in the group.
    */
   @Prop()
@@ -83,11 +90,13 @@ export class GuxFormFieldCheckboxGroupBeta {
   onMutation(): void {
     this.hasGroupError = hasSlot(this.root, 'group-error');
     this.hasGroupHelp = hasSlot(this.root, 'group-help');
+    this.hasGroupLabelInfo = hasSlot(this.root, 'group-label-info');
   }
 
   componentWillLoad(): void {
     this.hasGroupError = hasSlot(this.root, 'group-error');
     this.hasGroupHelp = hasSlot(this.root, 'group-help');
+    this.hasGroupLabelInfo = hasSlot(this.root, 'group-label-info');
     this.setLabel();
     this.setDisabledCheckboxes();
 
@@ -190,35 +199,34 @@ export class GuxFormFieldCheckboxGroupBeta {
     forceUpdate(this.root);
   }
 
-  private renderScreenReaderText(
-    text: string,
-    condition: boolean = false
-  ): JSX.Element {
+  private renderText(text: string, condition: boolean = false): string {
     if (condition) {
-      return (
-        <gux-screen-reader-beta>{text}</gux-screen-reader-beta>
-      ) as JSX.Element;
+      return ' ' + text;
     }
   }
+
   render(): JSX.Element {
     return (
       <GuxFormFieldFieldsetContainer labelPosition="above">
-        <GuxFormFieldLegendLabel
-          position="above"
-          required={false}
-          labelText={this.label?.textContent}
-        >
-          <slot name="group-label" onSlotchange={() => this.setLabel()} />
-
-          {this.renderScreenReaderText(
+        <GuxFormFieldScreenreaderLabel>
+          {this.label?.textContent}
+          {this.renderText(
             getSlotTextContent(this.root, 'group-error'),
             this.hasGroupError
           )}
-          {this.renderScreenReaderText(
+          {this.renderText(
             getSlotTextContent(this.root, 'group-help'),
             this.hasGroupHelp
           )}
-        </GuxFormFieldLegendLabel>
+          {this.renderText(
+            getSlotTextContent(this.root, 'group-label-info'),
+            this.hasGroupLabelInfo
+          )}
+        </GuxFormFieldScreenreaderLabel>
+        <GuxFormFieldVisualLabel position="above" required={false}>
+          <slot name="group-label" onSlotchange={() => this.setLabel()} />
+          <slot name="group-label-info"></slot>
+        </GuxFormFieldVisualLabel>
         <slot
           onSlotchange={() => this.setupNestedCheckboxes()}
           name="group-checkbox"

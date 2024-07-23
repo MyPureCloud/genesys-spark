@@ -328,4 +328,51 @@
       <span slot="help">This is a help message</span>
     </gux-form-field-checkbox>
   </gux-form-field-checkbox-group-beta>
+
+  <h2>Example with Label Info</h2>
+  <form onchange="notify(event)" oninput="notify(event)">
+    <gux-form-field-checkbox-group-beta>
+      <label slot="group-label">Toppings</label>
+      <gux-label-info-beta slot="group-label-info">
+        <span slot="content">This is some tooltip text</span>
+      </gux-label-info-beta>
+      <gux-form-field-checkbox>
+        <input slot="input" type="checkbox" name="topping-1" value="hotFudge" />
+        <label slot="label">Hot Fudge</label>
+      </gux-form-field-checkbox>
+
+      <gux-form-field-checkbox>
+        <input
+          slot="input"
+          type="checkbox"
+          name="topping-1"
+          value="cherry"
+          disabled
+        />
+        <label slot="label">Cherry</label>
+      </gux-form-field-checkbox>
+
+      <gux-form-field-checkbox>
+        <input
+          slot="input"
+          type="checkbox"
+          name="topping-1"
+          value="strawberries"
+        />
+        <label slot="label">Strawberries</label>
+        <span slot="error">This is an error message</span>
+      </gux-form-field-checkbox>
+
+      <gux-form-field-checkbox>
+        <input
+          slot="input"
+          type="checkbox"
+          name="topping-1"
+          value="cookieCrumble"
+        />
+        <label slot="label">Cookie Crumble</label>
+        <span slot="help">This is a help message</span>
+      </gux-form-field-checkbox>
+    </gux-form-field-checkbox-group-beta>
+  </form>
 </form>
