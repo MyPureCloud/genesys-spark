@@ -367,7 +367,7 @@
       },
       "count-display": {
         "gap": {
-          "value": "{container.2xs.gap}",
+          "value": "{container.small.gap}",
           "type": "spacing"
         }
       }

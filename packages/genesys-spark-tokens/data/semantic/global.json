@@ -396,11 +396,6 @@
         "type": "sizing",
         "description": "The recommended size for small-sized interactive components. For example small link."
       },
-      "gap": {
-        "value": "{spacing.5xs}",
-        "type": "spacing",
-        "description": "The recommended gap between the content inside of a small-sized interactive component."
-      },
       "padding": {
         "value": "{spacing.5xs}",
         "type": "spacing",
@@ -499,7 +494,7 @@
         "description": "The recommended small border-radius for containers. Eg in-line alert"
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{spacing.4xs}",
         "type": "spacing",
         "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
       },
@@ -557,7 +552,7 @@
     },
     "xsmall": {
       "gap": {
-        "value": "{spacing.4xs}",
+        "value": "{spacing.5xs}",
         "type": "spacing",
         "description": "The recommended xsmall gap between items inside a container, like the gap between elements inside a tag."
       },
@@ -578,11 +573,6 @@
       }
     },
     "2xs": {
-      "gap": {
-        "value": "{spacing.4xs}",
-        "type": "spacing",
-        "description": "The recommended xsmall gap between items inside a container, like the gap between elements inside a tag."
-      },
       "padding": {
         "value": "{spacing.5xs}",
         "type": "spacing",

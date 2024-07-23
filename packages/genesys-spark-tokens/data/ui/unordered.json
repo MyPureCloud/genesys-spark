@@ -101,7 +101,7 @@
       "type": "sizing"
     },
     "gap": {
-      "value": "{container.small.gap}",
+      "value": "{container.medium.gap}",
       "type": "spacing"
     },
     "border_radius": {
@@ -356,7 +356,7 @@
         "type": "spacing"
       },
       "gap": {
-        "value": "{container.xsmall.gap}",
+        "value": "{container.small.gap}",
         "type": "spacing"
       }
     },
@@ -527,7 +527,7 @@
       "type": "spacing"
     },
     "gap": {
-      "value": "{container.xsmall.gap}",
+      "value": "{container.small.gap}",
       "type": "spacing"
     },
     "info": {
@@ -844,7 +844,7 @@
         "type": "spacing"
       },
       "gap": {
-        "value": "{container.small.gap}",
+        "value": "{container.medium.gap}",
         "type": "spacing"
       },
       "start": {

@@ -196,7 +196,7 @@
         "type": "spacing"
       },
       "gap": {
-        "value": "{container.small.gap}",
+        "value": "{container.medium.gap}",
         "type": "spacing"
       },
       "height": {
@@ -1320,7 +1320,7 @@
     },
     "parenting": {
       "gap": {
-        "value": "{container.small.gap}",
+        "value": "{container.medium.gap}",
         "type": "spacing"
       }
     },
