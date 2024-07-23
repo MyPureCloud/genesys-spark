@@ -275,6 +275,8 @@
       "color_legacy.yellow.80": "831873d49d1284f6c4212a95429a193d9fbe3e7a",
       "color_legacy.yellow.90": "5813652148eb805e433bc145dfc87e38a9dfbb8d",
       "color_legacy.yellow.100": "0cb0bf774bbbc7b4184f6d1a4345441ccb97228e",
+      "color_legacy.yellow.110": "50e668670c8ce442bee14a39404ae9948a22bbd0",
+      "color_legacy.yellow.120": "9fed0bc2a497d4dc159ec16f6488dbc739e9035d",
       "color_legacy.secondary.yellow_green": "7f896f718008cbc6a264b06938e2eda2ee4308d1",
       "color_legacy.secondary.olive_green": "ee4e260eb7d1b4d278307f33b41f7e0806f0e514",
       "color_legacy.secondary.aqua_green": "95a468f290d61cb43761b419b93691bae2cee7a4",
@@ -302,9 +304,7 @@
       "color_legacy.brand.brand_yellow": "8ec5757097836b5d5127e771c259a3251ca8a9f8",
       "border_width.1": "e70d893dce1f1cd0930b9f7bef5a6ae0cf94b3c4",
       "border_width.2": "b55270ee3a3da09ced27fa43ccbd101be4297792",
-      "border_width.3": "0793e4130243066008477536634e659eaf34a72f",
-      "color_legacy.yellow.110": "50e668670c8ce442bee14a39404ae9948a22bbd0",
-      "color_legacy.yellow.120": "9fed0bc2a497d4dc159ec16f6488dbc739e9035d"
+      "border_width.3": "0793e4130243066008477536634e659eaf34a72f"
     },
     "group": ".core"
   },
@@ -515,6 +515,7 @@
       "background.custom_accents.bold.90": "791cb102f69b77a9ba4897bf804e855695d361d4",
       "background.custom_accents.bold.100": "94baf50c9a754fd0d23a45ad64ea310e96aac3d5",
       "background.custom_accents.bold.110": "129920249d2802d97ca6c31494f7bac1ac7f186e",
+      "background.custom_accents.bold.120": "99e6a867c02379e015ca8a8ee8634fadac7e2631",
       "background.custom_accents.subtle.10": "9a2e380c8f42c450961c533ba6bc1d2024817a5b",
       "background.custom_accents.subtle.20": "41dd3f8f41ad2da32727c3d659450260d307f49e",
       "background.custom_accents.subtle.30": "2677c310dfb405ebfc9ddaf28e28b68927476575",
@@ -526,6 +527,7 @@
       "background.custom_accents.subtle.90": "94599a6b0a3b9e442c915ea2ad62277717a473f2",
       "background.custom_accents.subtle.100": "e26e69d8d233f39fa564d1c43597d2c86dfbef86",
       "background.custom_accents.subtle.110": "b99216a863cd3deb8e6b1d8b4dbbb053623c5f93",
+      "background.custom_accents.subtle.120": "f9de4dc46ff0f33f64a3a893184e9a0d50769783",
       "foreground.primary.10": "5461ef3d303a39c8f6595d75a92570c303db2d6a",
       "foreground.primary.20": "f8422604087b875b13b0936658341393d6f40b13",
       "foreground.primary.30": "791efffa23fe724140290eb107aa5deff1f0ef49",
@@ -587,9 +589,7 @@
       "border_radius.focus.large": "863ebe09eda9ddfb5d3548c123cfed571cf1274c",
       "border_radius.focus.medium": "f2c87579ac1f11a371eb5b6301658e0775da31fa",
       "border_radius.focus.small": "79675ae64f8c132f3956a5861008315ec50541de",
-      "border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354",
-      "background.custom_accents.bold.120": "99e6a867c02379e015ca8a8ee8634fadac7e2631",
-      "background.custom_accents.subtle.120": "f9de4dc46ff0f33f64a3a893184e9a0d50769783"
+      "border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354"
     }
   },
   {
@@ -661,9 +661,14 @@
       "focus_outline.small.border_width": "a154e96e419b4a13bff4e179adcaf82730d9ec0e",
       "focus_outline.xsmall.border_radius": "2056e5601edb6754af6c83d1b147d43cf20774df",
       "container.large.border_radius": "61f82df97a30c67b9c3fe51fd369edd32404dc69",
+      "container.medium.gap": "5b8505afab3d6102d7719bbd858059389a85e46d",
+      "container.large.gap": "5b8505afab3d6102d7719bbd858059389a85e46d",
+      "container.xlarge.gap": "d77ef3220806a6678b665075789c849b092b5723",
       "container.large.padding": "de00ce90236ccb57be031d1ec828571ce11c5f37",
       "container.xlarge.padding": "91ebed5429a19f71dc70d4879ac2de11f27626f9",
       "container.small.border_radius": "aecf08879c1dc1eb5e1f6d38169bde1024354495",
+      "container.xsmall.gap": "1bc7d3b20a818cf11c6d8437739851334861240f",
+      "container.small.gap": "1bc7d3b20a818cf11c6d8437739851334861240f",
       "container.small.padding": "5c70ea732daf506d254560e1806940bed2c2079c",
       "container.small.min_height": "834fbc0e73c1b866db52ff2f634db8717cd57cee",
       "container.small.height": "5a921ef5efe38006805d051a37dcf5a204212288",
@@ -672,6 +677,7 @@
       "container.medium.padding": "873542bceceb78631589a8566ae4d451e6c90ac2",
       "container.edges.border_width": "501ecfe533078885e8fff9f1ba267c5c0c7e1c6e",
       "container.divider.border_width": "65f3f6c9b975b3e5649b2a947e46899327c8cc1d",
+      "container.2xs.gap": "ad496d6f9b5755df72f9d189f209b6da9cd68bbd",
       "container.xsmall.padding": "1bee5cba45a2e7bb5f7b395ee95c72d3fd279f6a",
       "container.xsmall.min_height": "ee6bc04fb62d8e8a4e4fc04eb67021177cac4293",
       "container.xsmall.height": "2af7b983a5cbeaf3da0343eeb50fce64675f69bd",
@@ -839,12 +845,7 @@
       "border.form_control.text_input.default": "b3e5c197aea4a4ac612e4d7dbaee2f8c7d191e0b",
       "border.form_control.text_input.hover": "b17184819c452568acfcd801a4fe6f1447fff6fd",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
-      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc",
-      "container.2xs.gap": "ad496d6f9b5755df72f9d189f209b6da9cd68bbd",
-      "container.xsmall.gap": "1bc7d3b20a818cf11c6d8437739851334861240f",
-      "container.small.gap": "1d47f4f7e11051d8e6dae6eae847752af6ba177c",
-      "container.medium.gap": "5b8505afab3d6102d7719bbd858059389a85e46d",
-      "container.large.gap": "5b8505afab3d6102d7719bbd858059389a85e46d"
+      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc"
     }
   },
   {
@@ -886,9 +887,14 @@
       "focus_outline.small.border_width": "a154e96e419b4a13bff4e179adcaf82730d9ec0e",
       "focus_outline.xsmall.border_radius": "2056e5601edb6754af6c83d1b147d43cf20774df",
       "container.large.border_radius": "61f82df97a30c67b9c3fe51fd369edd32404dc69",
+      "container.medium.gap": "5b8505afab3d6102d7719bbd858059389a85e46d",
+      "container.large.gap": "5b8505afab3d6102d7719bbd858059389a85e46d",
+      "container.xlarge.gap": "d77ef3220806a6678b665075789c849b092b5723",
       "container.large.padding": "de00ce90236ccb57be031d1ec828571ce11c5f37",
       "container.xlarge.padding": "91ebed5429a19f71dc70d4879ac2de11f27626f9",
       "container.small.border_radius": "aecf08879c1dc1eb5e1f6d38169bde1024354495",
+      "container.xsmall.gap": "1bc7d3b20a818cf11c6d8437739851334861240f",
+      "container.small.gap": "1bc7d3b20a818cf11c6d8437739851334861240f",
       "container.small.padding": "5c70ea732daf506d254560e1806940bed2c2079c",
       "container.small.min_height": "834fbc0e73c1b866db52ff2f634db8717cd57cee",
       "container.small.height": "5a921ef5efe38006805d051a37dcf5a204212288",
@@ -897,6 +903,7 @@
       "container.medium.padding": "873542bceceb78631589a8566ae4d451e6c90ac2",
       "container.edges.border_width": "501ecfe533078885e8fff9f1ba267c5c0c7e1c6e",
       "container.divider.border_width": "65f3f6c9b975b3e5649b2a947e46899327c8cc1d",
+      "container.2xs.gap": "ad496d6f9b5755df72f9d189f209b6da9cd68bbd",
       "container.xsmall.padding": "1bee5cba45a2e7bb5f7b395ee95c72d3fd279f6a",
       "container.xsmall.min_height": "ee6bc04fb62d8e8a4e4fc04eb67021177cac4293",
       "container.xsmall.height": "2af7b983a5cbeaf3da0343eeb50fce64675f69bd",
@@ -1061,12 +1068,7 @@
       "border.form_control.text_input.default": "b3e5c197aea4a4ac612e4d7dbaee2f8c7d191e0b",
       "border.form_control.text_input.hover": "b17184819c452568acfcd801a4fe6f1447fff6fd",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
-      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc",
-      "container.2xs.gap": "ad496d6f9b5755df72f9d189f209b6da9cd68bbd",
-      "container.xsmall.gap": "1bc7d3b20a818cf11c6d8437739851334861240f",
-      "container.small.gap": "1d47f4f7e11051d8e6dae6eae847752af6ba177c",
-      "container.medium.gap": "5b8505afab3d6102d7719bbd858059389a85e46d",
-      "container.large.gap": "5b8505afab3d6102d7719bbd858059389a85e46d"
+      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc"
     }
   },
   {
