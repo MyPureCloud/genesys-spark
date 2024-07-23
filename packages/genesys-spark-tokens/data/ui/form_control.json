@@ -278,7 +278,7 @@
     },
     "spin_button": {
       "gap": {
-        "value": "{form_control.form_field.text_input.gap}",
+        "value": "{form_control.form_field.grouped_input.gap}",
         "type": "spacing"
       }
     },
