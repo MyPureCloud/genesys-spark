@@ -98,10 +98,15 @@ export class GuxPaginationEllipsisButton {
 
   private applyInputListener(): void {
     this.inputElement?.addEventListener('keydown', (event: KeyboardEvent) => {
+      const inputValue = (event.target as HTMLInputElement).value.trim();
       if (event.key == 'Enter' || event.key == ' ') {
-        event.preventDefault();
-        this.goToPage.emit((event.target as HTMLInputElement).value);
-        this.isOpen = false;
+        if (inputValue == '') {
+          event.preventDefault();
+        } else {
+          event.preventDefault();
+          this.goToPage.emit((event.target as HTMLInputElement).value);
+          this.isOpen = false;
+        }
       }
     });
   }
@@ -142,6 +147,10 @@ export class GuxPaginationEllipsisButton {
               min="1"
               max={this.totalPages}
               value="1"
+              onKeyDown={evt =>
+                ['e', 'E', '+', '-', '.'].includes(evt.key) &&
+                evt.preventDefault()
+              }
             />
             <label slot="label"></label>
           </gux-form-field-number>
