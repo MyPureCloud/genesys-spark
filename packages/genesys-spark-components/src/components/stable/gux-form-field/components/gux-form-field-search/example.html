@@ -73,6 +73,18 @@
   </fieldset>
 
   <fieldset>
+    <legend>Label Info</legend>
+
+    <gux-form-field-search>
+      <input slot="input" type="search" name="e-1" />
+      <label slot="label">Default</label>
+      <gux-label-info-beta slot="label-info">
+        <span slot="content">This is some tooltip text</span>
+      </gux-label-info-beta>
+    </gux-form-field-search>
+  </fieldset>
+
+  <fieldset>
     <legend>Programmatically set value</legend>
 
     <gux-form-field-search id="a">

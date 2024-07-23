@@ -1,4 +1,4 @@
-@use '~genesys-spark/src/style/focus.scss';
+@use '~genesys-spark/dist/scss/focus.scss';
 
 // Style
 :host {
@@ -27,13 +27,32 @@
 
   .gux-arrow {
     position: absolute;
-    z-index: -1;
-    width: var(--gse-ui-popover-anchor-width);
-    height: var(--gse-ui-popover-anchor-height);
-    background: var(--gse-ui-popover-backgroundColor);
-    border: none;
-    box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
-      var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
-      var(--gse-ui-menu-boxShadow-color);
+    width: var(
+      --gse-ui-popover-anchor-width
+    ); // TODO: COMUI-2993 Replace this token with menu-specific token
+
+    height: var(
+      --gse-ui-popover-anchor-height
+    ); // TODO: COMUI-2993 Replace this token with menu-specific token
+
+    /* 4px padding leaves some space for the shadow to bleed into */
+    padding-bottom: 4px;
+    overflow: hidden;
+  }
+
+  .gux-arrow-caret {
+    width: 0;
+    height: 0;
+    filter: drop-shadow(
+      var(--gse-ui-popover-boxShadow-x) var(--gse-ui-popover-boxShadow-y)
+        calc(var(--gse-ui-popover-boxShadow-blur) / 2)
+        var(--gse-ui-tooltip-boxShadow-color)
+    ); // TODO: COMUI-2993 Replace this token with menu-specific token
+
+    border-top: calc(var(--gse-ui-popover-anchor-width) / 2) solid
+      var(--gse-ui-popover-backgroundColor); // TODO: COMUI-2993 Replace this token with menu-specific token
+
+    border-right: calc(var(--gse-ui-popover-anchor-width) / 2) solid transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
+    border-left: calc(var(--gse-ui-popover-anchor-width) / 2) solid transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
   }
 }

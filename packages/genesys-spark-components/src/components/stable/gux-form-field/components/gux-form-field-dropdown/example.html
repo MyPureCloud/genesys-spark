@@ -164,6 +164,22 @@
       <span slot="help">This is a help message</span>
     </gux-form-field-dropdown>
   </fieldset>
+  <fieldset>
+    <legend>Label Info</legend>
+    <gux-form-field-dropdown>
+      <gux-dropdown required>
+        <gux-listbox>
+          <gux-option value="a" disabled>Ant</gux-option>
+          <gux-option value="b">Bat</gux-option>
+          <gux-option value="c">Cat</gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+      <label slot="label">Default</label>
+      <gux-label-info-beta slot="label-info">
+        <span slot="content">This is some tooltip text</span>
+      </gux-label-info-beta>
+    </gux-form-field-dropdown>
+  </fieldset>
 
   <h2>Dropdown (multi select)</h2>
   <p>
@@ -323,6 +339,23 @@
       </gux-dropdown-multi>
       <label slot="label">Required</label>
       <span slot="help">This is a help message</span>
+    </gux-form-field-dropdown>
+  </fieldset>
+  <fieldset>
+    <legend>Label Info</legend>
+
+    <gux-form-field-dropdown>
+      <gux-dropdown-multi>
+        <gux-listbox>
+          <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox>
+      </gux-dropdown-multi>
+      <label slot="label">Default</label>
+      <gux-label-info-beta slot="label-info">
+        <span slot="content">This is some tooltip text</span>
+      </gux-label-info-beta>
     </gux-form-field-dropdown>
   </fieldset>
 </form>

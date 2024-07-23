@@ -99,6 +99,17 @@
       <span slot="help">This is a help message</span>
     </gux-form-field-textarea>
   </fieldset>
+  <fieldset>
+    <legend>Label Info</legend>
+
+    <gux-form-field-textarea>
+      <textarea slot="input" name="textarea"></textarea>
+      <label slot="label">Default</label>
+      <gux-label-info-beta slot="label-info">
+        <span slot="content">This is some tooltip text</span>
+      </gux-label-info-beta>
+    </gux-form-field-textarea>
+  </fieldset>
 </form>
 
 <style>

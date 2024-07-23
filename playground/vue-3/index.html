@@ -7,13 +7,13 @@
     <title>Vue Tester App</title>
 
     <link
-      href="https://dhqbrvplips7x.cloudfront.net/common-ui-docs/genesys-webcomponents/3.59.0-715/genesys-webcomponents/genesys-webcomponents.css"
+      href="http://localhost:3733/dist/genesys-webcomponents/genesys-webcomponents.css"
       rel="stylesheet"
     />
 
     <script
       type="module"
-      src="https://dhqbrvplips7x.cloudfront.net/common-ui-docs/genesys-webcomponents/3.59.0-715/genesys-webcomponents/genesys-webcomponents.esm.js"
+      src="http://localhost:3733/dist/genesys-webcomponents/genesys-webcomponents.esm.js"
     ></script>
 
     <script src="https://unpkg.com/vue@^3.4.0"></script>
@@ -65,6 +65,53 @@
           >
         </gux-listbox>
       </gux-dropdown>
+
+      <h3>table example</h3>
+
+      <h2>Object table with rows selection and disabled rows</h2>
+      <gux-table object-table selectable-rows>
+        <table slot="data">
+          <thead>
+            <tr data-row-id="head">
+              <th><gux-all-row-select></gux-all-row-select></th>
+              <th data-column-name="first-name">First name</th>
+              <th data-column-name="last-name">Last name</th>
+              <th data-column-name="age" data-cell-numeric>Age</th>
+              <th data-column-name="action" data-cell-action>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-row-id="person-id-1">
+              <td><gux-row-select disabled="true"></gux-row-select></td>
+              <td>John</td>
+              <td>Doe</td>
+              <td data-cell-numeric>25</td>
+              <td data-cell-action>Delete</td>
+            </tr>
+            <tr data-row-id="person-id-2">
+              <td><gux-row-select disabled="false"></gux-row-select></td>
+              <td>Jane</td>
+              <td>Doe</td>
+              <td data-cell-numeric>23</td>
+              <td data-cell-action>Delete</td>
+            </tr>
+            <tr data-row-id="person-id-3">
+              <td><gux-row-select :disabled="!!hasError"></gux-row-select></td>
+              <td>Toggle Has Error</td>
+              <td>To Disable</td>
+              <td data-cell-numeric>21</td>
+              <td data-cell-action>Delete</td>
+            </tr>
+            <tr data-row-id="person-id-4">
+              <td><gux-row-select></gux-row-select></td>
+              <td>Jane</td>
+              <td>Doe</td>
+              <td data-cell-numeric>23</td>
+              <td data-cell-action>Delete</td>
+            </tr>
+          </tbody>
+        </table>
+      </gux-table>
     </div>
 
     <script>

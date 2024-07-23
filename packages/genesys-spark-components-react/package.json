@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components-react",
-  "version": "4.63.3",
+  "version": "4.67.0",
   "description": "",
   "license": "MIT",
   "main": "dist/index.js",
