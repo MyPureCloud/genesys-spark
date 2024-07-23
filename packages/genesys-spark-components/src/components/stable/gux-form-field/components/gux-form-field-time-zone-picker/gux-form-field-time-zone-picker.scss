@@ -12,7 +12,7 @@
 @include gux-form-field-screenreader-label.Style;
 
 ::slotted(label) {
-  @include gux-form-field.gse-ui-formControl-label;
+  @include gux-form-field.gse-ui-formControl-label-bold;
 }
 
 .gux-input-and-error-container {

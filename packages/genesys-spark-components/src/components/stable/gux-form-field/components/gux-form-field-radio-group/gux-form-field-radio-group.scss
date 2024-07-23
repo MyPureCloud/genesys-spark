@@ -31,6 +31,6 @@
   }
 }
 
-.gux-form-field-legend-label {
-  @include gux-form-field.gse-ui-formControl-label;
+::slotted(label) {
+  @include gux-form-field.gse-ui-formControl-label-bold;
 }
