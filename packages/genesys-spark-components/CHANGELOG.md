@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.128.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.128.1...v3.128.2) (2024-07-23)
+
+
+### Bug Fixes
+
+* **pagination-beta:** filter out characters from slotted number input ([2e7efbc](https://github.com/MyPureCloud/genesys-spark/commit/2e7efbcc5588be6d6f74bbadfd792688ed121d21))
+
 ### [3.128.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.128.0...v3.128.1) (2024-07-20)
 
 
