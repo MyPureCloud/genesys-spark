@@ -27,8 +27,13 @@
 
   .gux-arrow {
     position: absolute;
-    width: var(--gse-ui-popover-anchor-width);
-    height: var(--gse-ui-popover-anchor-height);
+    width: var(
+      --gse-ui-popover-anchor-width
+    ); // TODO: COMUI-2993 Replace this token with menu-specific token
+
+    height: var(
+      --gse-ui-popover-anchor-height
+    ); // TODO: COMUI-2993 Replace this token with menu-specific token
 
     /* 4px padding leaves some space for the shadow to bleed into */
     padding-bottom: 4px;
@@ -42,10 +47,12 @@
       var(--gse-ui-popover-boxShadow-x) var(--gse-ui-popover-boxShadow-y)
         calc(var(--gse-ui-popover-boxShadow-blur) / 2)
         var(--gse-ui-tooltip-boxShadow-color)
-    );
+    ); // TODO: COMUI-2993 Replace this token with menu-specific token
+
     border-top: calc(var(--gse-ui-popover-anchor-width) / 2) solid
-      var(--gse-ui-popover-backgroundColor);
-    border-right: calc(var(--gse-ui-popover-anchor-width) / 2) solid transparent;
-    border-left: calc(var(--gse-ui-popover-anchor-width) / 2) solid transparent;
+      var(--gse-ui-popover-backgroundColor); // TODO: COMUI-2993 Replace this token with menu-specific token
+
+    border-right: calc(var(--gse-ui-popover-anchor-width) / 2) solid transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
+    border-left: calc(var(--gse-ui-popover-anchor-width) / 2) solid transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
   }
 }
