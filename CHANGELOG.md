@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.67.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.66.0...v4.67.0) (2024-07-23)
+
+
+### Features
+
+* **pagination-cursor:** allowing reference to controlled element ([f8be542](https://github.com/MyPureCloud/genesys-spark/commit/f8be5425deef149453ecde623951a88db2102c20))
+
+
+### Bug Fixes
+
+* **pagination:** filter out characters from slotted number input ([4fbe9b2](https://github.com/MyPureCloud/genesys-spark/commit/4fbe9b2a950e962c4b6ca756343b6cb8f36053b1))
+
 ## [4.66.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.65.2...v4.66.0) (2024-07-20)
 
 
