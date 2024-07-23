@@ -25,18 +25,18 @@
       }
     },
     "gap": {
-      "value": "{container.small.gap}",
+      "value": "{interactive.large.gap}",
       "type": "spacing"
     },
     "content_container": {
       "gap": {
-        "value": "{container.xsmall.gap}",
+        "value": "{interactive.medium.gap}",
         "type": "spacing"
       }
     },
     "icon_container": {
       "padding": {
-        "value": "{container.xsmall.padding}",
+        "value": "{interactive.small.padding}",
         "type": "spacing"
       }
     },
