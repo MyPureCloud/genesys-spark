@@ -465,9 +465,9 @@
         "description": "The recommended large border-radius for large containers, like modals."
       },
       "gap": {
-        "value": "{spacing.2xs}",
+        "value": "{spacing.xs}",
         "type": "spacing",
-        "description": "The recommended medium gap between items inside a container, like the gap between elements inisde a modal."
+        "description": "The recommended gap between items inside a large container, like a modal."
       },
       "padding": {
         "value": "{spacing.md}",
@@ -475,12 +475,29 @@
         "description": "The default horizontal padding of a medium-sized container, like a card."
       }
     },
-    "xlarge": {
+    "medium": {
       "gap": {
+        "value": "{spacing.2xs}",
+        "type": "spacing",
+        "description": "The recommended medium gap between items inside a container, like the gap between elements inisde a modal."
+      },
+      "border_radius": {
+        "value": "{border_radius.container.medium}",
+        "type": "borderRadius",
+        "description": "The recommended medium border-radius for containers. Eg cards"
+      },
+      "min_height": {
+        "value": "{size.lg}",
+        "type": "sizing",
+        "description": "The minimmum recommended height for a medium container, like a button bar."
+      },
+      "padding": {
         "value": "{spacing.xs}",
         "type": "spacing",
-        "description": "The recommended gap between items inside a large container, like a modal."
-      },
+        "description": "The default horizontal padding of a medium-sized container, like an alert."
+      }
+    },
+    "xlarge": {
       "padding": {
         "value": "{spacing.lg}",
         "type": "spacing",
@@ -494,9 +511,9 @@
         "description": "The recommended small border-radius for containers. Eg in-line alert"
       },
       "gap": {
-        "value": "{spacing.4xs}",
+        "value": "{spacing.3xs}",
         "type": "spacing",
-        "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
+        "description": "The recommended medium gap between items inside a container, like the gap between elements inisde an alert."
       },
       "padding": {
         "value": "{spacing.2xs}",
@@ -514,47 +531,11 @@
         "description": "The average recommended height for a small container, like a tooltip."
       }
     },
-    "medium": {
-      "border_radius": {
-        "value": "{border_radius.container.medium}",
-        "type": "borderRadius",
-        "description": "The recommended medium border-radius for containers. Eg cards"
-      },
-      "min_height": {
-        "value": "{size.lg}",
-        "type": "sizing",
-        "description": "The minimmum recommended height for a medium container, like a button bar."
-      },
-      "gap": {
-        "value": "{spacing.3xs}",
-        "type": "spacing",
-        "description": "The recommended medium gap between items inside a container, like the gap between elements inisde an alert."
-      },
-      "padding": {
-        "value": "{spacing.xs}",
-        "type": "spacing",
-        "description": "The default horizontal padding of a medium-sized container, like an alert."
-      }
-    },
-    "edges": {
-      "border_width": {
-        "value": "{border_width.1}",
-        "type": "borderWidth",
-        "description": "The recommended border width for the edges of containers, like cards or menus or popovers."
-      }
-    },
-    "divider": {
-      "border_width": {
-        "value": "{border_width.1}",
-        "type": "borderWidth",
-        "description": "The recommended border width for the dividers within containers, like cards or menus or popovers."
-      }
-    },
     "xsmall": {
       "gap": {
-        "value": "{spacing.5xs}",
+        "value": "{spacing.4xs}",
         "type": "spacing",
-        "description": "The recommended xsmall gap between items inside a container, like the gap between elements inside a tag."
+        "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
       },
       "padding": {
         "value": "{spacing.3xs}",
@@ -572,7 +553,26 @@
         "description": "The average recommended height for a small container, like a tag."
       }
     },
+    "edges": {
+      "border_width": {
+        "value": "{border_width.1}",
+        "type": "borderWidth",
+        "description": "The recommended border width for the edges of containers, like cards or menus or popovers."
+      }
+    },
+    "divider": {
+      "border_width": {
+        "value": "{border_width.1}",
+        "type": "borderWidth",
+        "description": "The recommended border width for the dividers within containers, like cards or menus or popovers."
+      }
+    },
     "2xs": {
+      "gap": {
+        "value": "{spacing.5xs}",
+        "type": "spacing",
+        "description": "The recommended xsmall gap between items inside a container, like the gap between elements inside a tag."
+      },
       "padding": {
         "value": "{spacing.5xs}",
         "type": "spacing",
