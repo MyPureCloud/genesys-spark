@@ -13,7 +13,7 @@
       "multiselect": {
         "default": {
           "height": {
-            "value": "{size.xl}",
+            "value": "{container.large.height}",
             "type": "sizing"
           },
           "width": {
@@ -33,7 +33,7 @@
         },
         "compact": {
           "height": {
-            "value": "{size.lg}",
+            "value": "{container.small.height}",
             "type": "sizing"
           },
           "width": {
@@ -76,7 +76,7 @@
       },
       "default": {
         "height": {
-          "value": "{size.xl}",
+          "value": "{container.large.height}",
           "type": "sizing"
         },
         "width": {
@@ -86,7 +86,7 @@
       },
       "compact": {
         "height": {
-          "value": "{size.lg}",
+          "value": "{container.small.height}",
           "type": "sizing"
         },
         "width": {
@@ -95,11 +95,11 @@
         }
       },
       "padding": {
-        "value": "0 {spacing.2xs}",
+        "value": "0 {container.small.padding}",
         "type": "spacing"
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{container.small.gap}",
         "type": "spacing"
       },
       "selected_bar": {
@@ -157,28 +157,28 @@
       "multiselect": {
         "default": {
           "height": {
-            "value": "{size.xl}",
+            "value": "{container.large.height}",
             "type": "sizing"
           }
         },
         "compact": {
           "height": {
-            "value": "{size.lg}",
+            "value": "{container.small.height}",
             "type": "sizing"
           }
         },
         "padding": {
-          "value": "0 {spacing.xs}",
+          "value": "0 {container.medium.padding}",
           "type": "spacing"
         },
         "gap": {
-          "value": "{spacing.3xs}",
+          "value": "{container.small.gap}",
           "type": "spacing"
         },
         "checkbox_cell": {
           "default": {
             "height": {
-              "value": "{size.xl}",
+              "value": "{container.large.height}",
               "type": "sizing"
             },
             "width": {
@@ -210,7 +210,7 @@
       },
       "compact": {
         "height": {
-          "value": "{size.lg}",
+          "value": "{container.small.height}",
           "type": "sizing"
         },
         "width": {
@@ -219,11 +219,11 @@
         }
       },
       "padding": {
-        "value": "0 {spacing.2xs}",
+        "value": "0 {container.small.padding}",
         "type": "spacing"
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{container.small.gap}",
         "type": "spacing"
       },
       "icon": {
@@ -254,7 +254,7 @@
       "context_menu": {
         "default": {
           "height": {
-            "value": "{size.xl}",
+            "value": "{container.large.height}",
             "type": "sizing"
           },
           "width": {
@@ -264,7 +264,7 @@
         },
         "compact": {
           "height": {
-            "value": "{size.lg}",
+            "value": "{container.small.height}",
             "type": "sizing"
           },
           "width": {
@@ -277,7 +277,7 @@
     "edit_column": {
       "edit_column_item": {
         "gap": {
-          "value": "{spacing.3xs}",
+          "value": "{container.small.gap}",
           "type": "spacing"
         },
         "foreground_color": {
@@ -295,7 +295,7 @@
           "type": "spacing"
         },
         "padding": {
-          "value": "{spacing.3xs} 0",
+          "value": "{container.xsmall.padding} 0",
           "type": "spacing"
         }
       }
@@ -303,12 +303,12 @@
     "table_toolbar": {
       "table_toolbar_group": {
         "gap": {
-          "value": "{spacing.4xs}",
+          "value": "{container.xsmall.gap}",
           "type": "spacing"
         }
       },
       "gap": {
-        "value": "{spacing.4xs}",
+        "value": "{container.xsmall.gap}",
         "type": "spacing"
       },
       "divider_color": {
@@ -321,12 +321,12 @@
           "type": "sizing"
         },
         "height": {
-          "value": "{size.lg}",
+          "value": "{container.small.height}",
           "type": "sizing"
         }
       },
       "height": {
-        "value": "{size.lg}",
+        "value": "{container.small.height}",
         "type": "sizing"
       }
     },

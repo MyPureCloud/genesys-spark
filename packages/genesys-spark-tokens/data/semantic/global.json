@@ -473,6 +473,11 @@
         "value": "{spacing.md}",
         "type": "spacing",
         "description": "The default horizontal padding of a medium-sized container, like a card."
+      },
+      "height": {
+        "value": "{size.xl}",
+        "type": "sizing",
+        "description": "The average recommended height for a cell in the datatable"
       }
     },
     "medium": {
