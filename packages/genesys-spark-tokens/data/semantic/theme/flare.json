@@ -365,6 +365,10 @@
       "30": {
         "value": "{color.blueberry.800}",
         "type": "color"
+      },
+      "05": {
+        "value": "{color.blueberry.300}",
+        "type": "color"
       }
     },
     "high_contrast": {

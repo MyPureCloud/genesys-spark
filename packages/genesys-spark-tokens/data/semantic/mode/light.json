@@ -472,6 +472,13 @@
           "type": "color",
           "description": "The  color of links when  they were already visited."
         }
+      },
+      "indicator": {
+        "default": {
+          "value": "{foreground.tertiary.05}",
+          "type": "color",
+          "description": "this is used to the selected indicator for the data table headers"
+        }
       }
     },
     "container": {

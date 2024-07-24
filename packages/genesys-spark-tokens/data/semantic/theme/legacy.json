@@ -365,6 +365,10 @@
       "30": {
         "value": "{color_legacy.black.50}",
         "type": "color"
+      },
+      "05": {
+        "value": "{color_legacy.blue.80}",
+        "type": "color"
       }
     },
     "high_contrast": {

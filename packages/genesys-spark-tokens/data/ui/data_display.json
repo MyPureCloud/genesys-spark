@@ -57,7 +57,7 @@
         "type": "color"
       },
       "default_background_color": {
-        "value": "{color.white}",
+        "value": "{background.container.page.default}",
         "type": "color"
       },
       "fixed_background_color": {
