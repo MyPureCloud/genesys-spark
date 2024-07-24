@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.68.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.67.0...v4.68.0) (2024-07-24)
+
+
+### Features
+
+* **other:** Form field label font weight change ([#544](https://github.com/MyPureCloud/genesys-spark/issues/544)) ([ce639c6](https://github.com/MyPureCloud/genesys-spark/commit/ce639c65461394c2e69a2b0e70e76cd38a09c53b))
+
+
+### Bug Fixes
+
+* **flyout-menu:** Fix menu arrow position ([#539](https://github.com/MyPureCloud/genesys-spark/issues/539)) ([71f8a60](https://github.com/MyPureCloud/genesys-spark/commit/71f8a60ff8d7ea3da8fac02b4e2ccec430b06920))
+* **form-field-range:** Fix console error on updatePosition before componentWillLoad ([#546](https://github.com/MyPureCloud/genesys-spark/issues/546)) ([dea61c5](https://github.com/MyPureCloud/genesys-spark/commit/dea61c53e95c87ef3a19f2467efdd0a3e59a4457))
+
 ## [4.67.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.66.0...v4.67.0) (2024-07-23)
 
 
