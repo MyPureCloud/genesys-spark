@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.69.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.68.0...v4.69.0) (2024-07-24)
+
+
+### Features
+
+* **form-field-checkbox-group:** add form-field-checkbox-group component ([9fb8393](https://github.com/MyPureCloud/genesys-spark/commit/9fb8393b19d543750df92eb35ad9103f655c8c13))
+
 ## [4.68.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.67.0...v4.68.0) (2024-07-24)
 
 
