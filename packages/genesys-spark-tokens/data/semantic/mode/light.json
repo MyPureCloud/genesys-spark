@@ -718,6 +718,13 @@
           "value": "{border.edges.default.30}",
           "type": "color",
           "description": "The default color for the edge borders of high-emphasis surfaces e.g dark tooltip"
+        },
+        "data_table": {
+          "default": {
+            "value": "{border.edges.default.05}",
+            "type": "color",
+            "description": "This is used for default border for datatables"
+          }
         }
       },
       "high_constrast": {

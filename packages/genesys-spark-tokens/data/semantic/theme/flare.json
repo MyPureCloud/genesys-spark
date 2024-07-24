@@ -506,6 +506,10 @@
         "30": {
           "value": "{color.cornflower.900}",
           "type": "color"
+        },
+        "05": {
+          "value": "{color.lavenderhaze.300}",
+          "type": "color"
         }
       },
       "enabled": {

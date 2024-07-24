@@ -31,7 +31,7 @@
           "type": "color"
         },
         "50": {
-          "value": "{color_legacy.grey.50}",
+          "value": "{color_legacy.blue.100}",
           "type": "color"
         },
         "60": {
@@ -561,6 +561,10 @@
         },
         "30": {
           "value": "{color_legacy.black.50}",
+          "type": "color"
+        },
+        "05": {
+          "value": "{color_legacy.grey.60}",
           "type": "color"
         }
       },
