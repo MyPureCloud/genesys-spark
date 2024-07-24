@@ -1,4 +1,4 @@
-import { Component, Element, h, Host, JSX, State, Prop } from '@stencil/core';
+import { Component, Element, h, Host, JSX, Prop, State } from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
@@ -10,7 +10,6 @@ import {
   GuxFormFieldError,
   GuxFormFieldHelp
 } from '../../functional-components/functional-components';
-
 import { trackComponent } from '@utils/tracking/usage';
 import { validateFormIds, getSlottedInput } from '../../gux-form-field.service';
 
@@ -34,15 +33,20 @@ export class GuxFormFieldCheckbox {
 
   @Prop()
   labelPosition: 'beside' | 'screenreader' = 'beside';
-
   @State()
   private disabled: boolean;
 
   @State()
-  private hasError: boolean = false;
+  private hasHelp: boolean = false;
 
   @State()
-  private hasHelp: boolean = false;
+  private hasError: boolean = false;
+
+  @Prop()
+  hasGroupError: boolean = false;
+
+  @Prop()
+  hasGroupDisabled: boolean = false;
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
@@ -69,7 +73,7 @@ export class GuxFormFieldCheckbox {
     return (
       <Host
         class={{
-          'gux-input-error': this.hasError,
+          'gux-input-error': this.hasError || this.hasGroupError,
           'gux-disabled': this.disabled
         }}
       >
@@ -78,7 +82,10 @@ export class GuxFormFieldCheckbox {
             <div class="gux-input">
               <slot name="input" onSlotchange={() => this.setInput()} />
             </div>
-            <div class={`gux-label-${this.labelPosition}`}>
+            <div
+              class={`gux-label-${this.labelPosition}`}
+              aria-disabled={this.disabled ? 'true' : 'false'}
+            >
               <slot name="label" />
             </div>
           </div>
@@ -105,6 +112,9 @@ export class GuxFormFieldCheckbox {
       'input[type="checkbox"][slot="input"]'
     );
 
+    if (this.hasGroupDisabled) {
+      this.input.disabled = true;
+    }
     preventBrowserValidationStyling(this.input);
 
     this.disabled = calculateInputDisabledState(this.input);

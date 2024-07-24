@@ -1,0 +1,378 @@
+<h1>gux-form-field-checkbox-group-beta</h1>
+
+<h2>Example</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-form-field-checkbox-group-beta>
+    <label slot="group-label">Toppings</label>
+
+    <gux-form-field-checkbox>
+      <input slot="input" type="checkbox" name="topping-1" value="hotFudge" />
+      <label slot="label">Hot Fudge</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="sprinkles"
+        checked
+      />
+      <label slot="label">Sprinkles</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="caramelSauce"
+      />
+      <label slot="label">Caramel Sauce</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="cherry"
+        disabled
+      />
+      <label slot="label">Cherry</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="strawberries"
+      />
+      <label slot="label">Strawberries</label>
+      <span slot="error">This is an error messsage</span>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="cookieCrumble"
+      />
+      <label slot="label">Cookie Crumble</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-checkbox>
+  </gux-form-field-checkbox-group-beta>
+</form>
+
+<h2>Example With Nested Checkboxes</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-form-field-checkbox-group-beta>
+    <label slot="group-label">Toppings</label>
+    <gux-form-field-checkbox slot="group-checkbox">
+      <input slot="input" type="checkbox" />
+      <label slot="label">Select all toppings</label>
+    </gux-form-field-checkbox>
+    <gux-form-field-checkbox>
+      <input slot="input" type="checkbox" name="topping-1" value="hotFudge" />
+      <label slot="label">Hot Fudge</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="sprinkles"
+        checked
+      />
+      <label slot="label">Sprinkles</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="caramelSauce"
+      />
+      <label slot="label">Caramel Sauce</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="strawberries"
+      />
+      <label slot="label">Strawberries</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="cookieCrumble"
+      />
+      <label slot="label">Cookie Crumble</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-checkbox>
+  </gux-form-field-checkbox-group-beta>
+</form>
+
+<h2>Example With Nested Checkboxes and Mixed State</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-form-field-checkbox-group-beta>
+    <label slot="group-label">Toppings</label>
+    <gux-form-field-checkbox slot="group-checkbox">
+      <input slot="input" type="checkbox" />
+      <label slot="label">Select all toppings</label>
+    </gux-form-field-checkbox>
+    <gux-form-field-checkbox>
+      <input slot="input" type="checkbox" name="topping-1" value="hotFudge" />
+      <label slot="label">Hot Fudge</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="sprinkles"
+        checked
+      />
+      <label slot="label">Sprinkles</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="caramelSauce"
+      />
+      <label slot="label">Caramel Sauce</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="cherry"
+        disabled
+      />
+      <label slot="label">Cherry</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="strawberries"
+      />
+      <label slot="label">Strawberries</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="cookieCrumble"
+      />
+      <label slot="label">Cookie Crumble</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-checkbox>
+  </gux-form-field-checkbox-group-beta>
+</form>
+
+<h2>Example with Group Error</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-form-field-checkbox-group-beta>
+    <label slot="group-label">Toppings</label>
+
+    <gux-form-field-checkbox>
+      <input slot="input" type="checkbox" name="topping-1" value="hotFudge" />
+      <label slot="label">Hot Fudge</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="cherry"
+        disabled
+      />
+      <label slot="label">Cherry</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="strawberries"
+      />
+      <label slot="label">Strawberries</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="cookieCrumble"
+      />
+      <label slot="label">Cookie Crumble</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-checkbox>
+    <span slot="group-error">This is an error message</span>
+  </gux-form-field-checkbox-group-beta>
+</form>
+
+<h2>Example with Group Help text</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-form-field-checkbox-group-beta>
+    <label slot="group-label">Toppings</label>
+
+    <gux-form-field-checkbox>
+      <input slot="input" type="checkbox" name="topping-1" value="hotFudge" />
+      <label slot="label">Hot Fudge</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="cherry"
+        disabled
+      />
+      <label slot="label">Cherry</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="strawberries"
+      />
+      <label slot="label">Strawberries</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="cookieCrumble"
+      />
+      <label slot="label">Cookie Crumble</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-checkbox>
+    <span slot="group-help">This is a group help message</span>
+  </gux-form-field-checkbox-group-beta>
+</form>
+
+<h2>Example with disabled group</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-form-field-checkbox-group-beta disabled>
+    <label slot="group-label">Toppings</label>
+
+    <gux-form-field-checkbox>
+      <input slot="input" type="checkbox" name="topping-1" value="hotFudge" />
+      <label slot="label">Hot Fudge</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="cherry"
+        disabled
+      />
+      <label slot="label">Cherry</label>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="strawberries"
+      />
+      <label slot="label">Strawberries</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-checkbox>
+
+    <gux-form-field-checkbox>
+      <input
+        slot="input"
+        type="checkbox"
+        name="topping-1"
+        value="cookieCrumble"
+      />
+      <label slot="label">Cookie Crumble</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-checkbox>
+  </gux-form-field-checkbox-group-beta>
+
+  <h2>Example with Label Info</h2>
+  <form onchange="notify(event)" oninput="notify(event)">
+    <gux-form-field-checkbox-group-beta>
+      <label slot="group-label">Toppings</label>
+      <gux-label-info-beta slot="group-label-info">
+        <span slot="content">This is some tooltip text</span>
+      </gux-label-info-beta>
+      <gux-form-field-checkbox>
+        <input slot="input" type="checkbox" name="topping-1" value="hotFudge" />
+        <label slot="label">Hot Fudge</label>
+      </gux-form-field-checkbox>
+
+      <gux-form-field-checkbox>
+        <input
+          slot="input"
+          type="checkbox"
+          name="topping-1"
+          value="cherry"
+          disabled
+        />
+        <label slot="label">Cherry</label>
+      </gux-form-field-checkbox>
+
+      <gux-form-field-checkbox>
+        <input
+          slot="input"
+          type="checkbox"
+          name="topping-1"
+          value="strawberries"
+        />
+        <label slot="label">Strawberries</label>
+        <span slot="error">This is an error message</span>
+      </gux-form-field-checkbox>
+
+      <gux-form-field-checkbox>
+        <input
+          slot="input"
+          type="checkbox"
+          name="topping-1"
+          value="cookieCrumble"
+        />
+        <label slot="label">Cookie Crumble</label>
+        <span slot="help">This is a help message</span>
+      </gux-form-field-checkbox>
+    </gux-form-field-checkbox-group-beta>
+  </form>
+</form>

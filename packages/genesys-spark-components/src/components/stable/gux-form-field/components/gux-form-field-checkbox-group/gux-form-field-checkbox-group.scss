@@ -1,0 +1,47 @@
+@use '../../gux-form-field.scss';
+@use '../../functional-components/gux-form-field-fieldset-container/gux-form-field-fieldset-container.scss';
+@use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
+@use '../../functional-components/gux-form-field-visual-label/gux-form-field-visual-label.scss';
+@use '../../functional-components/gux-form-field-screenreader-label/gux-form-field-screenreader-label.scss';
+@use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+
+@include gux-form-field-fieldset-container.Style;
+@include gux-form-field-error.Style;
+@include gux-form-field-help.Style;
+@include gux-form-field-error.Style;
+@include gux-form-field-help.Style;
+@include gux-form-field-visual-label.Style;
+@include gux-form-field-screenreader-label.Style;
+
+:host {
+  display: block;
+}
+
+:host([disabled]) {
+  .gux-form-field-legend-label {
+    opacity: var(--gse-ui-formControl-input-disabled-opacity);
+  }
+}
+
+::slotted(gux-form-field-checkbox) {
+  padding-top: var(--gse-ui-formControl-group-gapItems);
+}
+
+::slotted(gux-form-field-checkbox:first-of-type) {
+  padding-top: 0;
+}
+
+:host(.gux-group-checkbox) {
+  ::slotted(gux-form-field-checkbox) {
+    // need token COMUI-2994
+    padding-left: 24px;
+  }
+
+  slot[name='group-checkbox']::slotted(gux-form-field-checkbox) {
+    padding-left: 0;
+  }
+}
+
+.gux-form-field-legend-label {
+  @include gux-form-field.gse-ui-formControl-label;
+}

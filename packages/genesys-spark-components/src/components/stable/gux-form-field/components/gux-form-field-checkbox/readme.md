@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property        | Attribute        | Description | Type                         | Default    |
-| --------------- | ---------------- | ----------- | ---------------------------- | ---------- |
-| `labelPosition` | `label-position` |             | `"beside" \| "screenreader"` | `'beside'` |
+| Property           | Attribute            | Description | Type                         | Default    |
+| ------------------ | -------------------- | ----------- | ---------------------------- | ---------- |
+| `hasGroupDisabled` | `has-group-disabled` |             | `boolean`                    | `false`    |
+| `hasGroupError`    | `has-group-error`    |             | `boolean`                    | `false`    |
+| `labelPosition`    | `label-position`     |             | `"beside" \| "screenreader"` | `'beside'` |
 
 
 ## Slots
