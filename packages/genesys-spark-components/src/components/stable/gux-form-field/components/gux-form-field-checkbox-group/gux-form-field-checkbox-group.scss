@@ -45,3 +45,13 @@
 .gux-form-field-legend-label {
   @include gux-form-field.gse-ui-formControl-label;
 }
+
+:host([disabled]) {
+  ::slotted(label) {
+    opacity: var(--gse-ui-formControl-input-disabled-opacity);
+  }
+}
+
+::slotted(label) {
+  @include gux-form-field.gse-ui-formControl-label-bold;
+}
