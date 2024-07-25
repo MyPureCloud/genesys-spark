@@ -53,7 +53,7 @@
         }
       },
       "selected_indicator_color": {
-        "value": "{color.blueberry.300}",
+        "value": "{foreground.interactive.indicator.default}",
         "type": "color"
       },
       "default_background_color": {
@@ -61,16 +61,16 @@
         "type": "color"
       },
       "fixed_background_color": {
-        "value": "{color.blueberry.100}",
+        "value": "{background.container.page.tonal_high}",
         "type": "color"
       },
       "foreground_color": {
-        "value": "{color.cornflower.900}",
+        "value": "{foreground.container.high_emphasis}",
         "type": "color"
       },
       "sort": {
         "foreground_color": {
-          "value": "{color.cornflower.600}",
+          "value": "{foreground.container.low_emphasis}",
           "type": "color"
         }
       },
@@ -127,30 +127,30 @@
         "type": "borderRadius"
       },
       "foreground_color": {
-        "value": "{color.cornflower.600}",
+        "value": "{foreground.container.low_emphasis}",
         "type": "color"
       }
     },
     "cell": {
       "alt_background_color": {
-        "value": "{color.lavenderhaze.200}",
+        "value": "{background.container.page.tonal_medium}",
         "type": "color"
       },
       "default_background_color": {
-        "value": "{color.white}",
+        "value": "{background.container.page.default}",
         "type": "color"
       },
       "hover_background_color": {
-        "value": "{color.blueberry.100}",
+        "value": "{background.container.page.tonal_high}",
         "type": "color"
       },
       "foreground_color": {
-        "value": "{color.cornflower.900}",
+        "value": "{foreground.container.high_emphasis}",
         "type": "color"
       },
       "chevron": {
         "foreground_color": {
-          "value": "{color.cornflower.600}",
+          "value": "{foreground.container.low_emphasis}",
           "type": "color"
         }
       },
@@ -228,7 +228,7 @@
       },
       "icon": {
         "foreground_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.container.high_emphasis}",
           "type": "color"
         }
       },
@@ -281,7 +281,7 @@
           "type": "spacing"
         },
         "foreground_color": {
-          "value": "{color.cornflower.700}",
+          "value": "{foreground.container.mid_emphasis}",
           "type": "color"
         },
         "height": {
