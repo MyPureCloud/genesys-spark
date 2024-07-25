@@ -511,7 +511,7 @@
           "value": "{color.cornflower.600}",
           "type": "color"
         },
-        "value": "{body.sm.regular}",
+        "value": "{body.sm.bold}",
         "type": "typography"
       },
       "date": {
