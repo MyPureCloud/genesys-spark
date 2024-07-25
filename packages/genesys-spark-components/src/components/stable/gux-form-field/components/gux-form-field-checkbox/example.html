@@ -8,7 +8,7 @@
 </p>
 
 <form onchange="notify(event)" oninput="notify(event)">
-  <h2>Example 1</h2>
+  <h2>Example 1 - Default</h2>
   <gux-form-field-checkbox>
     <input slot="input" type="checkbox" name="food-1[]" value="pizza" />
     <label slot="label">Pizza</label>
@@ -56,13 +56,13 @@
     />
     <label slot="label">Sandwich</label>
   </gux-form-field-checkbox>
-  <h2>Example - Error Text</h2>
+  <h2>Example 5 - Error Message</h2>
   <gux-form-field-checkbox>
     <input slot="input" type="checkbox" name="food-1[]" value="sushi" />
     <label slot="label">Sushi</label>
     <span slot="error">Subject to availability</span>
   </gux-form-field-checkbox>
-  <h2>Example - Help Text</h2>
+  <h2>Example 6 - Help Text</h2>
   <gux-form-field-checkbox>
     <input slot="input" type="checkbox" name="food-1[]" value="spaghetti" />
     <label slot="label">Spaghetti</label>
