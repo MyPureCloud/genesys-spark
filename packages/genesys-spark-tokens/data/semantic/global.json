@@ -512,6 +512,11 @@
         "value": "{spacing.lg}",
         "type": "spacing",
         "description": "We uses this spacing as the default padding for large containers like modals."
+      },
+      "height": {
+        "value": "{size.2xl}",
+        "type": "sizing",
+        "description": "The average recommended height for the header of a calendar"
       }
     },
     "small": {
