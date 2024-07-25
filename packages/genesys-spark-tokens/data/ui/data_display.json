@@ -188,7 +188,7 @@
           },
           "compact": {
             "height": {
-              "value": "{size.lg}",
+              "value": "{container.small.height}",
               "type": "sizing"
             },
             "width": {
@@ -200,7 +200,7 @@
       },
       "default": {
         "height": {
-          "value": "{size.xl}",
+          "value": "{container.large.height}",
           "type": "sizing"
         },
         "width": {
