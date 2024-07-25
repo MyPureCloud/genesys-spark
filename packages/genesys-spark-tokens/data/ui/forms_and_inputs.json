@@ -511,12 +511,7 @@
           "value": "{color.cornflower.600}",
           "type": "color"
         },
-        "value": {
-          "fontFamily": "{font_family.roboto}",
-          "lineHeight": "{line_height.2xs}",
-          "fontSize": "{font_size.xs}",
-          "fontWeight": "{font_weight.bold}"
-        },
+        "value": "{body.sm.regular}",
         "type": "typography"
       },
       "date": {
