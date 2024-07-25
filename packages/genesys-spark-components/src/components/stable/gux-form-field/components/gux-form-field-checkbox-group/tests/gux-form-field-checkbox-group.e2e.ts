@@ -16,6 +16,12 @@ const axeExclusions = [
     target: 'gux-form-field-checkbox-group-beta,span[role="presentation"]',
     exclusionReason:
       'WCAG 1.4.3 Contrast (Minimum), inactive user interface components do not need to meet contrast minimum'
+  },
+  {
+    issueId: 'color-contrast',
+    target: 'label[slot="group-label"]',
+    exclusionReason:
+      'WCAG 1.4.3 Contrast (Minimum), inactive user interface components do not need to meet contrast minimum'
   }
 ];
 async function newNonrandomE2EPage({
