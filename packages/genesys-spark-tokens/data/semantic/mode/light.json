@@ -129,6 +129,11 @@
           "value": "{background.container.primary.30}",
           "type": "color",
           "description": "The background color to highlight elements in the background, for example, the row of a table."
+        },
+        "tonal_high": {
+          "value": "{background.container.primary.50}",
+          "type": "color",
+          "description": "The background color to highlight elements in the background, for example, the alternated row of a table."
         }
       },
       "elevated": {
