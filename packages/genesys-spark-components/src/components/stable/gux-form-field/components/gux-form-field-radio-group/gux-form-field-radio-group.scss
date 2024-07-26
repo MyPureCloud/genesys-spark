@@ -26,7 +26,7 @@
 }
 
 :host([disabled]) {
-  .gux-form-field-legend-label {
+  ::slotted(label) {
     opacity: var(--gse-ui-formControl-input-disabled-opacity);
   }
 }
