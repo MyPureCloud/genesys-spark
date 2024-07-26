@@ -1030,31 +1030,31 @@
   "time_picker": {
     "clock": {
       "padding": {
-        "value": "3px",
+        "value": "{interactive.xs.padding}",
         "type": "spacing"
       }
     },
     "clock_states": {
       "default_color": {
-        "value": "{color.cornflower.600}",
+        "value": "{foreground.interactive.subtle.default}",
         "type": "color"
       },
       "hover_color": {
-        "value": "{color.blueberry.700}",
+        "value": "{foreground.interactive.subtle.hover}",
         "type": "color"
       },
       "active_color": {
-        "value": "{color.blueberry.600}",
+        "value": "{foreground.interactive.subtle.active}",
         "type": "color"
       },
       "disabled_color": {
-        "value": "{color.cornflower.600}",
+        "value": "{foreground.interactive.subtle.default}",
         "type": "color",
         "$extensions": {
           "studio.tokens": {
             "modify": {
               "type": "alpha",
-              "value": "0.5",
+              "value": ".5",
               "space": "lch"
             }
           }
@@ -1064,48 +1064,48 @@
     "focus_clock": {
       "border": {
         "value": {
-          "color": "{color.focus}",
-          "width": "2px",
+          "color": "{border.focus}",
+          "width": "{focus_outline.medium.border_width}",
           "style": "solid"
         },
         "type": "border"
       },
       "border_radius": {
-        "value": "2px",
+        "value": "{interactive.small.border_radius}",
         "type": "borderRadius"
       }
     },
     "focus_ampm": {
       "border": {
         "value": {
-          "color": "{color.focus}",
-          "width": "2px",
+          "color": "{border.focus}",
+          "width": "{focus_outline.medium.border_width}",
           "style": "solid"
         },
         "type": "border"
       },
       "border_radius": {
-        "value": "2px",
+        "value": "{interactive.small.border_radius}",
         "type": "borderRadius"
       }
     },
     "focus_time": {
       "border": {
         "value": {
-          "color": "{color.focus}",
-          "width": "3px",
+          "color": "{border.focus}",
+          "width": "{focus_outline.medium.border_width}",
           "style": "solid"
         },
         "type": "border"
       },
       "border_radius": {
-        "value": "{border_radius.sm}",
+        "value": "{interactive.small.border_radius}",
         "type": "borderRadius"
       }
     },
     "ampm": {
       "padding": {
-        "value": "3px",
+        "value": "{container.2xs.padding}",
         "type": "spacing"
       }
     }

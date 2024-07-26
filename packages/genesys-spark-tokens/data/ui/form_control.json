@@ -161,7 +161,7 @@
         "border": {
           "value": {
             "color": "{border.focus}",
-            "width": "{focus.medium.border_width}",
+            "width": "{focus_outline.medium.border_width}",
             "style": "solid"
           },
           "type": "border"
