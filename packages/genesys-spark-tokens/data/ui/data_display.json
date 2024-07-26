@@ -302,7 +302,7 @@
         "type": "spacing"
       },
       "divider_color": {
-        "value": "{color.lavenderhaze.500}",
+        "value": "{border.container.divider}",
         "type": "color"
       },
       "divider": {
