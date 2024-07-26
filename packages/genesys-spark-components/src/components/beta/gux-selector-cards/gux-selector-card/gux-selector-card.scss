@@ -1,30 +1,7 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
-
-$gux-icon-radio-unchecked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40937 1.5 1.5 4.40937 1.5 8C1.5 11.5906 4.40937 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40937 11.5906 1.5 8 1.5Z' fill-rule='evenodd' clip-rule='evenodd' /%3E%3C/svg%3E";
-$gux-icon-radio-checked: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8C5 6.31563 6.31563 5 8 5C9.65625 5 11 6.31563 11 8C11 9.65625 9.65625 11 8 11C6.31563 11 5 9.65625 5 8ZM16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40938 1.5 1.5 4.40938 1.5 8C1.5 11.5906 4.40938 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40938 11.5906 1.5 8 1.5Z' /%3E%3C/svg%3E";
-$gux-icon-checkbox-unchecked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' %3E%3Cpath d='M13.7143 0C14.975 0 16 1.02321 16 2.28571V13.7143C16 14.975 14.975 16 13.7143 16H2.28571C1.02321 16 0 14.975 0 13.7143V2.28571C0 1.02321 1.02321 0 2.28571 0H13.7143ZM13.7143 1.71429H2.28571C1.97 1.71429 1.71429 1.97 1.71429 2.28571V13.7143C1.71429 14.0286 1.97 14.2857 2.28571 14.2857H13.7143C14.0286 14.2857 14.2857 14.0286 14.2857 13.7143V2.28571C14.2857 1.97 14.0286 1.71429 13.7143 1.71429Z' /%3E%3C/svg%3E";
-$gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' %3E%3Cpath d='M2.28571 0C1.025 0 0 1.025 0 2.28571V13.7143C0 14.975 1.025 16 2.28571 16H13.7143C14.975 16 16 14.975 16 13.7143V2.28571C16 1.025 14.975 0 13.7143 0H2.28571ZM12.0357 6.32143L7.46429 10.8929C7.12857 11.2286 6.58571 11.2286 6.25357 10.8929L3.96786 8.60714C3.63214 8.27143 3.63214 7.72857 3.96786 7.39643C4.30357 7.06429 4.84643 7.06071 5.17857 7.39643L6.85714 9.075L10.8214 5.10714C11.1571 4.77143 11.7 4.77143 12.0321 5.10714C12.3643 5.44286 12.3679 5.98571 12.0321 6.31786L12.0357 6.32143Z' /%3E%3C/svg%3E";
-
-@mixin unchecked-radio {
-  -webkit-mask-image: url($gux-icon-radio-unchecked);
-  mask-image: url($gux-icon-radio-unchecked);
-}
-
-@mixin checked-radio {
-  -webkit-mask-image: url($gux-icon-radio-checked);
-  mask-image: url($gux-icon-radio-checked);
-}
-
-@mixin unchecked-checkbox {
-  -webkit-mask-image: url($gux-icon-checkbox-unchecked);
-  mask-image: url($gux-icon-checkbox-unchecked);
-}
-
-@mixin checked-checkbox {
-  -webkit-mask-image: url($gux-icon-checkbox-checked);
-  mask-image: url($gux-icon-checkbox-checked);
-}
+@use '../../../stable/gux-form-field/components/gux-form-field-checkbox/gux-form-field-checkbox-icons.scss';
+@use '../../../stable/gux-form-field/components/gux-form-field-radio/gux-form-field-radio-icons.scss';
 
 ::slotted(*) {
   cursor: pointer;
@@ -95,7 +72,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
     --gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor
   );
 
-  @include unchecked-radio;
+  @include gux-form-field-radio-icons.unchecked;
 }
 
 ::slotted(input[type='checkbox']:not(:checked))::before {
@@ -103,7 +80,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
     --gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor
   );
 
-  @include unchecked-checkbox;
+  @include gux-form-field-checkbox-icons.unchecked;
 }
 
 ::slotted(input[type='radio']:checked)::before {
@@ -111,7 +88,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
     --gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor
   );
 
-  @include checked-radio;
+  @include gux-form-field-radio-icons.checked;
 }
 
 ::slotted(input[type='checkbox']:checked)::before {
@@ -119,7 +96,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
     --gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor
   );
 
-  @include checked-checkbox;
+  @include gux-form-field-checkbox-icons.checked;
 }
 
 ::slotted(input[type='radio']:disabled)::before {
@@ -129,7 +106,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   );
   opacity: var(--gse-ui-radioButton-disabled-opacity);
 
-  @include unchecked-radio;
+  @include gux-form-field-radio-icons.unchecked;
 }
 
 ::slotted(input[type='checkbox']:disabled)::before {
@@ -139,7 +116,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   );
   opacity: var(--gse-ui-radioButton-disabled-opacity);
 
-  @include unchecked-checkbox;
+  @include gux-form-field-checkbox-icons.unchecked;
 }
 
 ::slotted(input[type='radio']:disabled:checked)::before {
@@ -149,7 +126,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   );
   opacity: var(--gse-ui-radioButton-disabled-opacity);
 
-  @include checked-radio;
+  @include gux-form-field-radio-icons.checked;
 }
 
 ::slotted(input[type='checkbox']:disabled:checked)::before {
@@ -159,7 +136,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
   );
   opacity: var(--gse-ui-radioButton-disabled-opacity);
 
-  @include checked-checkbox;
+  @include gux-form-field-checkbox-icons.checked;
 }
 
 .gux-selector-card {
@@ -206,7 +183,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
           --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
         );
 
-        @include unchecked-radio;
+        @include gux-form-field-radio-icons.unchecked;
       }
 
       ::slotted(input[type='checkbox']:checked:not(:disabled))::before {
@@ -214,7 +191,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
           --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
         );
 
-        @include checked-checkbox;
+        @include gux-form-field-checkbox-icons.checked;
       }
 
       ::slotted(input[type='checkbox']:not(:checked):not(:disabled))::before {
@@ -222,7 +199,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
           --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
         );
 
-        @include unchecked-checkbox;
+        @include gux-form-field-checkbox-icons.unchecked;
       }
 
       ::slotted(input[type='checkbox']:checked:not(:disabled))::before {
@@ -230,7 +207,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
           --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
         );
 
-        @include checked-checkbox;
+        @include gux-form-field-checkbox-icons.checked;
       }
     }
   }
@@ -244,7 +221,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
           --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
         );
 
-        @include unchecked-radio;
+        @include gux-form-field-radio-icons.unchecked;
       }
 
       ::slotted(input[type='radio']:checked:not(:disabled))::before {
@@ -252,7 +229,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
           --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
         );
 
-        @include checked-radio;
+        @include gux-form-field-radio-icons.checked;
       }
 
       ::slotted(input[type='checkbox']:not(:checked):not(:disabled))::before {
@@ -260,7 +237,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
           --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
         );
 
-        @include unchecked-checkbox;
+        @include gux-form-field-checkbox-icons.unchecked;
       }
 
       ::slotted(input[type='checkbox']:checked:not(:disabled))::before {
@@ -268,7 +245,7 @@ $gux-icon-checkbox-checked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/
           --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
         );
 
-        @include checked-checkbox;
+        @include gux-form-field-checkbox-icons.checked;
       }
     }
   }
