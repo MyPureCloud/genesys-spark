@@ -98,7 +98,7 @@
         "type": "spacing"
       },
       "padding": {
-        "value": "{form_control.form_field.text_input.padding}",
+        "value": "{form_control.form_field.text_input.small.padding} {form_control.form_field.text_input.medium.padding}",
         "type": "spacing"
       },
       "prefix_sufix": {
@@ -294,7 +294,7 @@
     },
     "textarea": {
       "padding": {
-        "value": "{form_control.form_field.text_input.padding}",
+        "value": "{form_control.form_field.text_input.small.padding}",
         "type": "spacing"
       }
     },

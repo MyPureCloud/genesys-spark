@@ -142,8 +142,7 @@
     },
     "shroud_color": {
       "value": "{background.overlay.shroud.default}",
-      "type": "color",
-      "$extensions": {}
+      "type": "color"
     },
     "header": {
       "gap": {

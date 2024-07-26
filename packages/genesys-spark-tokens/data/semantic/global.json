@@ -640,10 +640,12 @@
     },
     "form_field": {
       "text_input": {
-        "padding": {
-          "value": "{spacing.3xs} {spacing.2xs}",
-          "type": "spacing",
-          "description": "The default padding for inputs inside a form control."
+        "small": {
+          "padding": {
+            "value": "{spacing.3xs}",
+            "type": "spacing",
+            "description": "The default vertical padding for inputs inside a form control."
+          }
         },
         "gap": {
           "value": "{spacing.2xs}",
@@ -654,6 +656,11 @@
           "height": {
             "value": "{size.lg}",
             "type": "sizing"
+          },
+          "padding": {
+            "value": "{spacing.2xs}",
+            "type": "spacing",
+            "description": "The recommended horizontal padding for text inputs."
           }
         },
         "min_width": {
