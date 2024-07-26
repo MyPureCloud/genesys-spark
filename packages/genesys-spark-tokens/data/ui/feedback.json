@@ -129,56 +129,42 @@
   },
   "modal": {
     "close_button_color": {
-      "value": "{color.cornflower.600}",
+      "value": "{foreground.interactive.subtle.default}",
       "type": "color"
     },
     "header_color": {
-      "value": "{color.cornflower.900}",
+      "value": "{foreground.container.high_emphasis}",
       "type": "color"
     },
     "background_color": {
-      "value": "{color.white}",
+      "value": "{background.container.elevated.default}",
       "type": "color"
     },
     "shroud_color": {
-      "value": "{color.cornflower.800}",
+      "value": "{background.overlay.shroud.default}",
       "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "alpha",
-            "value": "0.8",
-            "space": "srgb"
-          }
-        }
-      }
+      "$extensions": {}
     },
     "header": {
       "gap": {
-        "value": "{spacing.2xs}",
+        "value": "{container.medium.gap}",
         "type": "spacing"
       }
     },
     "padding": {
-      "value": "{spacing.lg}",
+      "value": "{container.xlarge.padding}",
       "type": "spacing"
     },
     "gap": {
-      "value": "{spacing.xs}",
+      "value": "{container.large.gap}",
       "type": "spacing"
     },
     "heading": {
-      "value": {
-        "fontFamily": "{font_family.urbanist}",
-        "lineHeight": "{line_height.xl}",
-        "fontSize": "{font_size.xl}",
-        "fontWeight": "{font_weight.bold}",
-        "letterSpacing": "2%"
-      },
+      "value": "{heading.lg.bold}",
       "type": "typography"
     },
     "icon": {
-      "value": "{icon.large.size}",
+      "value": "{assets.large.size}",
       "type": "sizing"
     },
     "small": {
@@ -201,31 +187,31 @@
     },
     "button_bar": {
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{container.small.gap}",
         "type": "spacing"
       }
     },
     "box_shadow": {
-      "value": "{elevation.high}",
+      "value": "{contanier.large.box_shadow}",
       "type": "boxShadow"
     },
     "border_radius": {
-      "value": "16px",
+      "value": "{border_radius.container.large}",
       "type": "borderRadius"
     },
     "shroud": {
       "opacity": {
-        "value": "0.8",
+        "value": "{opacity.shroud}",
         "type": "opacity"
       }
     },
     "dismiss_button": {
       "padding_top": {
-        "value": "{spacing.xs}",
+        "value": "{interactive.xlarge.padding}",
         "type": "spacing"
       },
       "padding_right": {
-        "value": "{spacing.3xs}",
+        "value": "{interactive.medium.padding}",
         "type": "spacing"
       }
     }

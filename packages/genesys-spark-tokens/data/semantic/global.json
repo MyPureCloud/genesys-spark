@@ -291,6 +291,11 @@
       "value": "{opacity.50}",
       "type": "opacity",
       "description": "The opacity we apply when a component is disabled."
+    },
+    "shroud": {
+      "value": "{opacity.80}",
+      "type": "opacity",
+      "description": "The default opacity for shroud elements like the one on modals."
     }
   },
   "interactive": {
