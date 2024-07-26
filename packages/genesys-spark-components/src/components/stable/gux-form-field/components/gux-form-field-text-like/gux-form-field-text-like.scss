@@ -66,6 +66,7 @@ slot[name='suffix'] {
       font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
       line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
       color: var(--gse-ui-formControl-input-populatedColor);
+      cursor: text;
       background-color: var(--gse-ui-formControl-input-backgroundColor);
       background-image: none;
       border: var(--gse-ui-formControl-input-default-border-width)
@@ -80,6 +81,7 @@ slot[name='suffix'] {
       }
 
       &.gux-disabled {
+        cursor: default;
         opacity: var(--gse-ui-formControl-input-disabled-opacity);
       }
 

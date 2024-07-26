@@ -33,6 +33,7 @@ import {
   getSlottedInput
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
+import { focusInputElement } from '@utils/dom/focus-input-element';
 
 /**
  * @slot input - Required slot for input tag
@@ -172,6 +173,7 @@ export class GuxFormFieldSearch {
                 'gux-input-container': true,
                 'gux-disabled': this.disabled
               }}
+              onClick={() => focusInputElement(this.input)}
             >
               <gux-icon
                 icon-name="fa/magnifying-glass-regular"

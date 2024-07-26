@@ -34,6 +34,7 @@ import {
   getSlottedInput
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
+import { focusInputElement } from '@utils/dom/focus-input-element';
 
 /**
  * @slot input - Required slot for input tag
@@ -204,6 +205,7 @@ export class GuxFormFieldTextLike {
                 'gux-has-prefix': this.hasPrefix,
                 'gux-has-suffix': this.hasSuffix
               }}
+              onClick={() => focusInputElement(this.input)}
             >
               <slot name="prefix" />
               <slot name="input" />
