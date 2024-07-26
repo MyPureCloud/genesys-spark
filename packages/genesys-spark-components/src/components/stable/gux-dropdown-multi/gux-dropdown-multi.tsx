@@ -75,7 +75,7 @@ export class GuxDropdownMulti {
    * default min-width is set to width of input
    */
   @Prop()
-  exceedtargetwidth: boolean = false;
+  exceedTargetWidth: boolean = false;
 
   @State()
   hasCreate: boolean = false;
@@ -603,7 +603,7 @@ export class GuxDropdownMulti {
         <gux-popup
           expanded={this.expanded && (!this.loading || this.isFilterable())}
           disabled={this.disabled}
-          exceedTargetWidth={this.exceedtargetwidth}
+          exceedTargetWidth={this.exceedTargetWidth}
         >
           {this.renderTarget()}
           {this.renderPopup()}
