@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.69.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.69.0...v4.69.1) (2024-07-27)
+
+
+### Bug Fixes
+
+* **advanced-dropdown-legacy:** Add focus ring ([#551](https://github.com/MyPureCloud/genesys-spark/issues/551)) ([77be079](https://github.com/MyPureCloud/genesys-spark/commit/77be07971209df8e0b7e1218a45dd66b89ef87e3))
+* **form-field-checkbox-group:** update label style and disabled state ([de7dcb7](https://github.com/MyPureCloud/genesys-spark/commit/de7dcb7b2ab073ea043a789042055aa5b97a0798))
+* **form-field-radio-group:** add group label disabled state ([f5a1c2e](https://github.com/MyPureCloud/genesys-spark/commit/f5a1c2e6527c870146bcd6486da3b375a754a4fe))
+
 ## [4.69.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.68.0...v4.69.0) (2024-07-24)
 
 
