@@ -460,6 +460,10 @@
         "type": "borderRadius",
         "description": "The recommended xsmall border-radius for focus. Eg icons"
       }
+    },
+    "offset": {
+      "value": "{spacing.6xs}",
+      "type": "spacing"
     }
   },
   "container": {
