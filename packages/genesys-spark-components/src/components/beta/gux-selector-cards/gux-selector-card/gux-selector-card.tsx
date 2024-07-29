@@ -79,13 +79,14 @@ export class GuxSelectorCard {
       ) as JSX.Element;
     } else {
       return (
-        <gux-truncate
-          class="gux-description"
-          max-lines={3}
+        <div
+          class="gux-description-wrapper"
           onClick={() => this.setCheckedState()}
         >
-          <slot name="description" />
-        </gux-truncate>
+          <gux-truncate class="gux-description" max-lines={3}>
+            <slot name="description" />
+          </gux-truncate>
+        </div>
       ) as JSX.Element;
     }
   }

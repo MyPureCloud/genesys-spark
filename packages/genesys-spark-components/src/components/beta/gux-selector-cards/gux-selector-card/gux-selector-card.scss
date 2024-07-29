@@ -15,8 +15,7 @@
 }
 
 ::slotted(label) {
-  width: fit-content;
-  max-width: 100%;
+  width: 100%;
   font-family: var(--gse-ui-selectorCard-simple-label-fontFamily);
   font-size: var(--gse-ui-selectorCard-simple-label-fontSize);
   font-weight: var(--gse-ui-selectorCard-simple-label-fontWeight);
@@ -113,6 +112,8 @@
 }
 
 .gux-selector-card {
+  width: fit-content;
+
   .gux-content {
     position: relative;
     box-sizing: border-box;
@@ -134,6 +135,11 @@
     gux-truncate {
       z-index: calc(var(--gse-semantic-zIndex-showFocus));
       width: fit-content;
+      max-width: 100%;
+      word-wrap: break-word;
+    }
+
+    .gux-description-wrapper {
       max-width: 100%;
     }
 
