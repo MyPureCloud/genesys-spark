@@ -1,0 +1,98 @@
+@use '~genesys-spark/dist/scss/checkbox-icons.scss';
+@use '~genesys-spark/dist/scss/radio-icons.scss';
+
+@mixin radio-unchecked {
+  @include radio-icons.radio-unchecked;
+
+  background-color: var(
+    --gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor
+  );
+}
+
+@mixin radio-unchecked-active {
+  @include radio-icons.radio-unchecked;
+
+  background-color: var(
+    --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
+  );
+}
+
+@mixin radio-checked-active {
+  @include radio-icons.radio-checked;
+
+  background-color: var(
+    --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
+  );
+}
+
+@mixin radio-unchecked-hover {
+  @include radio-icons.radio-unchecked-hover;
+
+  background-color: var(
+    --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
+  );
+}
+
+@mixin radio-checked-hover {
+  @include radio-icons.radio-checked-hover;
+
+  background-color: var(
+    --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
+  );
+}
+
+@mixin radio-checked {
+  @include radio-icons.radio-checked;
+
+  background-color: var(
+    --gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor
+  );
+}
+
+@mixin checkbox-unchecked {
+  @include checkbox-icons.checkbox-unchecked;
+
+  background-color: var(
+    --gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor
+  );
+}
+
+@mixin checkbox-unchecked-hover {
+  @include checkbox-icons.checkbox-unchecked-hover;
+
+  background-color: var(
+    --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
+  );
+}
+
+@mixin checkbox-checked-hover {
+  @include checkbox-icons.checkbox-checked-hover;
+
+  background-color: var(
+    --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
+  );
+}
+
+@mixin checkbox-unchecked-active {
+  @include checkbox-icons.checkbox-unchecked-hover;
+
+  background-color: var(
+    --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
+  );
+}
+
+@mixin checkbox-checked-active {
+  @include checkbox-icons.checkbox-checked-hover;
+
+  background-color: var(
+    --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
+  );
+}
+
+@mixin checkbox-checked {
+  @include checkbox-icons.checkbox-checked;
+
+  background-color: var(
+    --gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor
+  );
+}

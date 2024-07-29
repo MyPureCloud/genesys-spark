@@ -2,6 +2,7 @@
 @use '~genesys-spark/dist/scss/mixins.scss';
 @use '../../../stable/gux-form-field/components/gux-form-field-checkbox/gux-form-field-checkbox-icons.scss';
 @use '../../../stable/gux-form-field/components/gux-form-field-radio/gux-form-field-radio-icons.scss';
+@use './gux-selector-card-icons.scss';
 
 ::slotted(*) {
   cursor: pointer;
@@ -68,75 +69,47 @@
 }
 
 ::slotted(input[type='radio']:not(:checked))::before {
-  background-color: var(
-    --gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor
-  );
-
-  @include gux-form-field-radio-icons.unchecked;
+  @include gux-selector-card-icons.radio-unchecked;
 }
 
 ::slotted(input[type='checkbox']:not(:checked))::before {
-  background-color: var(
-    --gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor
-  );
-
-  @include gux-form-field-checkbox-icons.unchecked;
+  @include gux-selector-card-icons.checkbox-unchecked;
 }
 
 ::slotted(input[type='radio']:checked)::before {
-  background-color: var(
-    --gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor
-  );
-
-  @include gux-form-field-radio-icons.checked;
+  @include gux-selector-card-icons.radio-checked;
 }
 
 ::slotted(input[type='checkbox']:checked)::before {
-  background-color: var(
-    --gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor
-  );
-
-  @include gux-form-field-checkbox-icons.checked;
+  @include gux-selector-card-icons.checkbox-checked;
 }
 
 ::slotted(input[type='radio']:disabled)::before {
-  cursor: not-allowed;
-  background-color: var(
-    --gse-ui-selectorCard-disabled-selectedIndicator-unselected-foregroundColor
-  );
-  opacity: var(--gse-ui-radioButton-disabled-opacity);
+  @include gux-selector-card-icons.radio-unchecked;
 
-  @include gux-form-field-radio-icons.unchecked;
+  cursor: not-allowed;
+  opacity: var(--gse-ui-radioButton-disabled-opacity);
 }
 
 ::slotted(input[type='checkbox']:disabled)::before {
-  cursor: not-allowed;
-  background-color: var(
-    --gse-ui-selectorCard-disabled-selectedIndicator-unselected-foregroundColor
-  );
-  opacity: var(--gse-ui-radioButton-disabled-opacity);
+  @include gux-selector-card-icons.checkbox-unchecked;
 
-  @include gux-form-field-checkbox-icons.unchecked;
+  cursor: not-allowed;
+  opacity: var(--gse-ui-radioButton-disabled-opacity);
 }
 
 ::slotted(input[type='radio']:disabled:checked)::before {
-  cursor: not-allowed;
-  background-color: var(
-    --gse-ui-selectorCard-disabled-selectedIndicator-selected-foregroundColor
-  );
-  opacity: var(--gse-ui-radioButton-disabled-opacity);
+  @include gux-selector-card-icons.radio-checked;
 
-  @include gux-form-field-radio-icons.checked;
+  cursor: not-allowed;
+  opacity: var(--gse-ui-radioButton-disabled-opacity);
 }
 
 ::slotted(input[type='checkbox']:disabled:checked)::before {
-  cursor: not-allowed;
-  background-color: var(
-    --gse-ui-selectorCard-disabled-selectedIndicator-selected-foregroundColor
-  );
-  opacity: var(--gse-ui-radioButton-disabled-opacity);
+  @include gux-selector-card-icons.checkbox-checked;
 
-  @include gux-form-field-checkbox-icons.checked;
+  cursor: not-allowed;
+  opacity: var(--gse-ui-radioButton-disabled-opacity);
 }
 
 .gux-selector-card {
@@ -179,35 +152,15 @@
       background-color: var(--gse-ui-selectorCard-hover-backgroundColor);
 
       ::slotted(input[type='radio']:not(:checked):not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
-        );
-
-        @include gux-form-field-radio-icons.unchecked;
-      }
-
-      ::slotted(input[type='checkbox']:checked:not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
-        );
-
-        @include gux-form-field-checkbox-icons.checked;
+        @include gux-selector-card-icons.radio-unchecked-hover;
       }
 
       ::slotted(input[type='checkbox']:not(:checked):not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
-        );
-
-        @include gux-form-field-checkbox-icons.unchecked;
+        @include gux-selector-card-icons.checkbox-unchecked-hover;
       }
 
       ::slotted(input[type='checkbox']:checked:not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
-        );
-
-        @include gux-form-field-checkbox-icons.checked;
+        @include gux-selector-card-icons.checkbox-checked-hover;
       }
     }
   }
@@ -217,35 +170,19 @@
       background-color: var(--gse-ui-selectorCard-active-backgroundColor);
 
       ::slotted(input[type='radio']:not(:checked):not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
-        );
-
-        @include gux-form-field-radio-icons.unchecked;
+        @include gux-selector-card-icons.radio-unchecked-active;
       }
 
       ::slotted(input[type='radio']:checked:not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
-        );
-
-        @include gux-form-field-radio-icons.checked;
+        @include gux-selector-card-icons.radio-checked-active;
       }
 
       ::slotted(input[type='checkbox']:not(:checked):not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
-        );
-
-        @include gux-form-field-checkbox-icons.unchecked;
+        @include gux-selector-card-icons.checkbox-unchecked-active;
       }
 
       ::slotted(input[type='checkbox']:checked:not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
-        );
-
-        @include gux-form-field-checkbox-icons.checked;
+        @include gux-selector-card-icons.checkbox-checked-active;
       }
     }
   }
