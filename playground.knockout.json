@@ -1,0 +1,39 @@
+[
+  {
+    "command": ["npm", "run", "dev.gsc"],
+    "title": "Stencil Components",
+    "defaultStatus": ["🧩", "🧩"],
+    "status": {
+      "rebuild failed": ["🚨", "🚨"],
+      "rebuild finished": ["🧩", "🧩"]
+    }
+  },
+  {
+    "command": ["npm", "run", "dev.gscc"],
+    "title": "Stencil Chart Components",
+    "defaultStatus": ["🧩", "🧩"],
+    "status": {
+      "rebuild failed": ["🚨", "🚨"],
+      "rebuild finished": ["🧩", "🧩"]
+    }
+  },
+  {
+    "command": ["npm", "run", "dev.spark"],
+    "title": "Spark Package",
+    "defaultStatus": ["✨", "✨"]
+  },
+  {
+    "command": ["npm", "run", "dev.examples"],
+    "title": "Docs - http://localhost:8080",
+    "defaultStatus": ["🗃️", "🗃️"],
+    "status": {
+      "ERROR": ["🚨", "🚨"],
+      "compiled successfully": ["🗃️", "🗃️"]
+    }
+  },
+  {
+    "command": ["npm", "run", "playground.knockout.start"],
+    "title": "Knockout Playground",
+    "defaultStatus": ["✨", "✨"]
+  }
+]
