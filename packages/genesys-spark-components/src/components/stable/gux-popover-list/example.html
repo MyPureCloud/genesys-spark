@@ -1,21 +1,43 @@
 <h1>gux-popover-list</h1>
 <div class="scroll-container">
   <div class="scroll-interior">
-    <div id="popover-target">Example Element</div>
+    <gux-button
+      id="popover-target"
+      accent="primary"
+      aria-describedby="popover-list-content-1"
+      onclick="notify(event)"
+    >
+      Click to open popover-list</gux-button
+    >
+
     <gux-popover-list
       id="popover-example"
       position="top"
       for="popover-target"
-      is-open
+      is-open="false"
     >
-      <gux-list>
-        <gux-list-item onclick="notify(event, 'item-1')">Item 1</gux-list-item>
-        <gux-list-item onclick="notify(event, 'item-2')">Item 2</gux-list-item>
-        <gux-list-item onclick="notify(event, 'item-3')">Item 3</gux-list-item>
-        <gux-list-item onclick="notify(event, 'item-4')">Item 4</gux-list-item>
-        <gux-list-item onclick="notify(event, 'item-5')">Item 5</gux-list-item>
-        <gux-list-item onclick="notify(event, 'item-6')">Item 6</gux-list-item>
-      </gux-list>
+      <div id="popover-list-content-1">
+        <gux-list>
+          <gux-list-item onclick="notify(event, 'item-1')"
+            >Item 1</gux-list-item
+          >
+          <gux-list-item onclick="notify(event, 'item-2')"
+            >Item 2</gux-list-item
+          >
+          <gux-list-item onclick="notify(event, 'item-3')"
+            >Item 3</gux-list-item
+          >
+          <gux-list-item onclick="notify(event, 'item-4')"
+            >Item 4</gux-list-item
+          >
+          <gux-list-item onclick="notify(event, 'item-5')"
+            >Item 5</gux-list-item
+          >
+          <gux-list-item onclick="notify(event, 'item-6')"
+            >Item 6</gux-list-item
+          >
+        </gux-list>
+      </div>
     </gux-popover-list>
   </div>
 </div>
@@ -25,7 +47,7 @@
   const popoverTarget = document.getElementById('popover-target');
   const popoverExample = document.getElementById('popover-example');
 
-  popoverTarget.addEventListener('mouseover', () => {
+  popoverTarget.addEventListener('click', () => {
     popoverExample.isOpen = true;
   });
 })()"
@@ -47,7 +69,6 @@
 
   #popover-target {
     position: absolute;
-    top: 250px;
     left: 250px;
     display: inline-block;
     padding: 10px 15px;

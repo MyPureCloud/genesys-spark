@@ -17,7 +17,6 @@ import {
   Placement,
   shift
 } from '@floating-ui/dom';
-
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
 import { findElementById } from '@utils/dom/find-element-by-id';
@@ -205,6 +204,7 @@ export class GuxPopoverList {
           'gux-hidden': !this.isOpen,
           'gux-popover-wrapper': true
         }}
+        role="dialog"
         data-placement
       >
         <div
