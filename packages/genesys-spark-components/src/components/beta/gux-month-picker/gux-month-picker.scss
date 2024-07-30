@@ -26,6 +26,7 @@
 
   .gux-display {
     display: inline-flex;
+    align-items: center;
     min-width: 100px;
     padding-right: var(--gse-ui-formControl-input-gap);
     font-family: var(--gse-ui-formControl-label-text-fontFamily);
