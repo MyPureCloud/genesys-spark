@@ -44,7 +44,6 @@ button {
     gux-icon[icon-name='fa/copy-regular'] {
       flex-shrink: 0;
       width: var(--gse-ui-icon-size-sm);
-      min-width: 22px;
       height: var(--gse-ui-icon-size-sm);
       padding: var(--gse-ui-copyToClipboard-iconContainer-padding);
       visibility: hidden;
