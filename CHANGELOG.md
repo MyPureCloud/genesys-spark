@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.70.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.69.1...v4.70.0) (2024-07-30)
+
+
+### Features
+
+* allowing listbox to be wider than dropdown ([7a1dcfe](https://github.com/MyPureCloud/genesys-spark/commit/7a1dcfef21168d1554018f342dccf353dd791908))
+
 ### [4.69.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.69.0...v4.69.1) (2024-07-27)
 
 
