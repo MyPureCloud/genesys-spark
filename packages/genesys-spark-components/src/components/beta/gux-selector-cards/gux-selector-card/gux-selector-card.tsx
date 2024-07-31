@@ -79,14 +79,13 @@ export class GuxSelectorCard {
       ) as JSX.Element;
     } else {
       return (
-        <div
-          class="gux-description-wrapper"
-          onClick={() => this.setCheckedState()}
+        <gux-truncate
+          class="gux-description"
+          max-lines={3}
+          onClick={() => this.input.click()}
         >
-          <gux-truncate class="gux-description" max-lines={3}>
-            <slot name="description" />
-          </gux-truncate>
-        </div>
+          <slot name="description" />
+        </gux-truncate>
       ) as JSX.Element;
     }
   }
@@ -94,14 +93,6 @@ export class GuxSelectorCard {
   private renderBadge(): JSX.Element | null {
     if (this.variant === 'descriptive') {
       return (<slot name="badge" />) as JSX.Element;
-    }
-  }
-
-  private setCheckedState(): void {
-    if (!this.input.checked || this.input.type === 'radio') {
-      this.input.setAttribute('checked', '');
-    } else {
-      this.input.removeAttribute('checked');
     }
   }
 
@@ -113,17 +104,12 @@ export class GuxSelectorCard {
           [`gux-${this.variant}`]: true,
           'gux-disabled': this.disabled
         }}
-        onClick={() => this.setCheckedState()}
       >
         <div class="gux-content">
           <div class="gux-icon">
             <slot name="icon" />
           </div>
-          <gux-truncate
-            class="gux-label"
-            max-lines={2}
-            onClick={() => this.setCheckedState()}
-          >
+          <gux-truncate class="gux-label" max-lines={2}>
             <slot name="label" />
           </gux-truncate>
           <slot name="input" />
