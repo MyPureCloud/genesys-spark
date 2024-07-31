@@ -70,6 +70,11 @@ export class GuxSelectorCard {
     validateFormIds(this.root, this.input);
   }
 
+  private selectInput() {
+    this.input?.click();
+    this.input?.focus();
+  }
+
   private renderDescription(): JSX.Element | null {
     if (this.variant === 'simple') {
       return (
@@ -82,7 +87,7 @@ export class GuxSelectorCard {
         <gux-truncate
           class="gux-description"
           max-lines={3}
-          onClick={() => this.input.click()}
+          onClick={() => this.selectInput()}
         >
           <slot name="description" />
         </gux-truncate>

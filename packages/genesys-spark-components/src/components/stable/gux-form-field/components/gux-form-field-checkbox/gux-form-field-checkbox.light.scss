@@ -2,7 +2,7 @@
 //  - https://bugs.webkit.org/show_bug.cgi?id=223814
 //  - https://bugs.webkit.org/show_bug.cgi?id=178237#attach_442680
 
-@use './gux-form-field-checkbox-icons.scss';
+@use '~genesys-spark/dist/scss/checkbox-icons.scss';
 
 gux-form-field-checkbox {
   input[type='checkbox']::before {
@@ -20,29 +20,41 @@ gux-form-field-checkbox {
   }
 
   input[type='checkbox']:not(:checked)::before {
-    @include gux-form-field-checkbox-icons.unchecked;
+    @include checkbox-icons.unchecked;
+
+    background: var(--gse-ui-checkbox-icon-default-unselectedForegroundColor);
   }
 
   input[type='checkbox']:not(:checked):not(:disabled):not(
       :indeterminate
     ):hover::before {
-    @include gux-form-field-checkbox-icons.unchecked-hover;
+    @include checkbox-icons.unchecked-hover;
+
+    background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
   }
 
   input[type='checkbox']:checked:not(:disabled):hover::before {
-    @include gux-form-field-checkbox-icons.checked-hover;
+    @include checkbox-icons.checked-hover;
+
+    background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
   }
 
   input[type='checkbox']:checked::before {
-    @include gux-form-field-checkbox-icons.checked;
+    @include checkbox-icons.checked;
+
+    background: var(--gse-ui-checkbox-icon-default-selectedForegroundColor);
   }
 
   input[type='checkbox']:indeterminate::before {
-    @include gux-form-field-checkbox-icons.indeterminate;
+    @include checkbox-icons.indeterminate;
+
+    background: var(--gse-ui-checkbox-icon-default-selectedForegroundColor);
   }
 
   input[type='checkbox']:not(:disabled):indeterminate:hover {
-    @include gux-form-field-checkbox-icons.indeterminate-hover;
+    @include checkbox-icons.indeterminate-hover;
+
+    background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
   }
 
   input[type='checkbox']:disabled::before {
@@ -52,15 +64,21 @@ gux-form-field-checkbox {
 
   &.gux-input-error {
     input[type='checkbox']:not(:checked)::before {
-      @include gux-form-field-checkbox-icons.unchecked-error;
+      @include checkbox-icons.unchecked-error;
+
+      background: var(--gse-ui-checkbox-icon-error-foregroundColor);
     }
 
     input[type='checkbox']:checked::before {
-      @include gux-form-field-checkbox-icons.checked-error;
+      @include checkbox-icons.checked-error;
+
+      background: var(--gse-ui-checkbox-icon-error-foregroundColor);
     }
 
     input[type='checkbox']:indeterminate::before {
-      @include gux-form-field-checkbox-icons.indeterminate-error;
+      @include checkbox-icons.indeterminate-error;
+
+      background: var(--gse-ui-checkbox-icon-error-foregroundColor);
     }
   }
 }
