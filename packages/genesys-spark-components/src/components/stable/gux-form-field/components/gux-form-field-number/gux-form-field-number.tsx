@@ -39,6 +39,7 @@ import {
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 import componentResources from './i18n/en.json';
+import { focusInputElement } from '@utils/dom/focus-input-element';
 
 /**
  * @slot input - Required slot for input tag
@@ -188,6 +189,7 @@ export class GuxFormFieldNumber {
                 'gux-disabled': this.disabled,
                 'gux-clear': showClearButton
               }}
+              onClick={() => focusInputElement(this.input)}
             >
               <slot name="input" onSlotchange={() => this.setInput()} />
               {showClearButton && (
