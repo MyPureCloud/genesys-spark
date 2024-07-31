@@ -1109,11 +1109,11 @@
   "color_picker": {
     "label": {
       "required_symbol_color": {
-        "value": "{color.error.main}",
+        "value": "{foreground.form_control.label.required_accent}",
         "type": "color"
       },
       "text_color": {
-        "value": "{color.cornflower.900}",
+        "value": "{foreground.form_control.label.default}",
         "type": "color"
       },
       "text": {
@@ -1123,31 +1123,31 @@
     },
     "input_container": {
       "background_color": {
-        "value": "{color.white}",
+        "value": "{background.form_control.text_input.track}",
         "type": "color"
       },
       "border": {
         "default_color": {
-          "value": "{color.cornflower.400}",
+          "value": "{border.form_control.text_input.default}",
           "type": "color"
         },
         "hover_color": {
-          "value": "{color.primary.darker}",
+          "value": "{border.form_control.text_input.hover}",
           "type": "color"
         },
         "active_color": {
-          "value": "{color.primary.darkest}",
+          "value": "{border.form_control.text_input.active}",
           "type": "color"
         },
         "error_color": {
-          "value": "{color.error.main}",
+          "value": "{border.form_control.text_input.error}",
           "type": "color"
         }
       }
     },
     "input": {
       "container_sizing": {
-        "value": "{size.lg}",
+        "value": "{form_control.form_field.text_input.medium.height}",
         "type": "sizing"
       },
       "swatch_sizing": {
@@ -1155,12 +1155,12 @@
         "type": "sizing"
       },
       "swatch_border_radius": {
-        "value": "2px",
+        "value": "{border_radius.form_control.input.small}",
         "type": "borderRadius"
       }
     },
     "gap": {
-      "value": "{spacing.3xs}",
+      "value": "{form_control.form_field.click_input.gap}",
       "type": "spacing"
     }
   },
