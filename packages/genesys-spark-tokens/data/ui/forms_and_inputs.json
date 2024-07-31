@@ -1194,7 +1194,7 @@
       },
       "disabled": {
         "background_color": {
-          "value": "{color.primary.main}",
+          "value": "{background.interactive.primary.default}",
           "type": "color"
         }
       },
@@ -1233,12 +1233,12 @@
         }
       },
       "height": {
-        "value": "4px",
+        "value": "{divider.track.height}",
         "type": "sizing"
       }
     },
     "gap": {
-      "value": "{spacing.xs}",
+      "value": "{container.large.gap}",
       "type": "spacing"
     },
     "focus_ring": {

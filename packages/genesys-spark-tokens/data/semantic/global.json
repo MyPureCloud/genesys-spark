@@ -789,6 +789,13 @@
         "value": "{spacing.3xs}",
         "type": "spacing"
       }
+    },
+    "track": {
+      "height": {
+        "value": "{size.4xs}",
+        "type": "sizing",
+        "description": "The heioght for track elements, like the track of the slider."
+      }
     }
   }
 }
