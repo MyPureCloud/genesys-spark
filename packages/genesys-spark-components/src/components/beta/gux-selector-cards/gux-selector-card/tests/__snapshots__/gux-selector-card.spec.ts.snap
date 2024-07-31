@@ -94,11 +94,9 @@ exports[`gux-form-field-radio #render should render component as expected (4) 1`
           <slot name="label"></slot>
         </gux-truncate>
         <slot name="input"></slot>
-        <div class="gux-description-wrapper">
-          <gux-truncate class="gux-description" max-lines="3">
-            <slot name="description"></slot>
-          </gux-truncate>
-        </div>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -129,11 +127,9 @@ exports[`gux-form-field-radio #render should render component as expected (5) 1`
           <slot name="label"></slot>
         </gux-truncate>
         <slot name="input"></slot>
-        <div class="gux-description-wrapper">
-          <gux-truncate class="gux-description" max-lines="3">
-            <slot name="description"></slot>
-          </gux-truncate>
-        </div>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -164,11 +160,9 @@ exports[`gux-form-field-radio #render should render component as expected (6) 1`
           <slot name="label"></slot>
         </gux-truncate>
         <slot name="input"></slot>
-        <div class="gux-description-wrapper">
-          <gux-truncate class="gux-description" max-lines="3">
-            <slot name="description"></slot>
-          </gux-truncate>
-        </div>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -200,11 +194,9 @@ exports[`gux-form-field-radio #render should render component as expected (7) 1`
           <slot name="label"></slot>
         </gux-truncate>
         <slot name="input"></slot>
-        <div class="gux-description-wrapper">
-          <gux-truncate class="gux-description" max-lines="3">
-            <slot name="description"></slot>
-          </gux-truncate>
-        </div>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -235,11 +227,9 @@ exports[`gux-form-field-radio #render should render component as expected (8) 1`
           <slot name="label"></slot>
         </gux-truncate>
         <slot name="input"></slot>
-        <div class="gux-description-wrapper">
-          <gux-truncate class="gux-description" max-lines="3">
-            <slot name="description"></slot>
-          </gux-truncate>
-        </div>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -267,11 +257,9 @@ exports[`gux-form-field-radio #render should render component as expected (9) 1`
           <slot name="label"></slot>
         </gux-truncate>
         <slot name="input"></slot>
-        <div class="gux-description-wrapper">
-          <gux-truncate class="gux-description" max-lines="3">
-            <slot name="description"></slot>
-          </gux-truncate>
-        </div>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -299,11 +287,9 @@ exports[`gux-form-field-radio #render should render component as expected (10) 1
           <slot name="label"></slot>
         </gux-truncate>
         <slot name="input"></slot>
-        <div class="gux-description-wrapper">
-          <gux-truncate class="gux-description" max-lines="3">
-            <slot name="description"></slot>
-          </gux-truncate>
-        </div>
+        <gux-truncate class="gux-description" max-lines="3">
+          <slot name="description"></slot>
+        </gux-truncate>
         <slot name="badge"></slot>
       </div>
     </div>

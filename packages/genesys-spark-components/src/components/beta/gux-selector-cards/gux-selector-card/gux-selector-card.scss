@@ -133,14 +133,10 @@
     border-radius: var(--gse-ui-selectorCard-simple-borderRadius);
 
     gux-truncate {
-      z-index: calc(var(--gse-semantic-zIndex-showFocus));
+      z-index: var(--gse-semantic-zIndex-showFocus);
       width: fit-content;
       max-width: 100%;
       word-wrap: break-word;
-    }
-
-    .gux-description-wrapper {
-      max-width: 100%;
     }
 
     .gux-icon {
@@ -210,7 +206,6 @@
       border-radius: var(--gse-ui-selectorCard-descriptive-borderRadius);
 
       .gux-description {
-        z-index: var(--gse-semantic-zIndex-showFocus);
         margin-bottom: var(--gse-ui-selectorCard-descriptive-gap);
         font-family: var(
           --gse-ui-selectorCard-descriptive-description-fontFamily
