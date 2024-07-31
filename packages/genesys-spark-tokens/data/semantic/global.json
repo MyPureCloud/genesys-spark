@@ -703,6 +703,20 @@
           "value": "{spacing.4xs}",
           "type": "spacing",
           "description": "The default padding for between elements inside a form group, like checkboxes, radio buttons."
+        },
+        "medium": {
+          "size": {
+            "value": "{size.lg}",
+            "type": "sizing",
+            "description": "The recommended height form medium-size click inputs, like checkboxes or radio buttons."
+          }
+        },
+        "small": {
+          "size": {
+            "value": "{size.xs}",
+            "type": "sizing",
+            "description": "The recommended height for leaner click inputs, like toggles."
+          }
         }
       },
       "grouped_input": {
@@ -710,6 +724,15 @@
           "value": "{spacing.3xs}",
           "type": "spacing",
           "description": "The recommended gap between groped inputs, like the sapce inbetween checkboxes or radio buttons."
+        }
+      }
+    },
+    "click_input": {
+      "handle": {
+        "border_width": {
+          "value": "{border_width.2}",
+          "type": "borderWidth",
+          "description": "The recommended border width for handles on click inputs, like the habdle of a toggle."
         }
       }
     }
