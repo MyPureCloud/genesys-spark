@@ -598,6 +598,10 @@
   },
   "border_radius": {
     "interactive": {
+      "xlarge": {
+        "value": "{border_radius.full}",
+        "type": "borderRadius"
+      },
       "large": {
         "value": "{border_radius.sm}",
         "type": "borderRadius"

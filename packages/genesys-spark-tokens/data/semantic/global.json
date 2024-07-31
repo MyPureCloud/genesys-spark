@@ -393,6 +393,11 @@
         "value": "{size.xl}",
         "type": "sizing",
         "description": "The recommended size for extra-large-sized interactive components. For example a large button height."
+      },
+      "border_radius": {
+        "value": "{border_radius.interactive.xlarge}",
+        "type": "borderRadius",
+        "description": "The recommended xlarge border-radius for interactive component. Eg handle of the slider"
       }
     },
     "xs": {
