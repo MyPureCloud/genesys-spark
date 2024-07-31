@@ -188,7 +188,7 @@
   "menu": {
     "option": {
       "padding": {
-        "value": "{container.small.vertical_padding} {container.small.padding}",
+        "value": "{container.xsmall.padding} {container.small.padding}",
         "type": "spacing"
       },
       "gap": {
@@ -371,7 +371,7 @@
       "type": "boxShadow"
     },
     "padding": {
-      "value": "{container.small.vertical_padding} 0px",
+      "value": "{container.xsmall.padding} 0px",
       "type": "spacing"
     },
     "background_color": {
@@ -1279,7 +1279,7 @@
       "type": "borderRadius"
     },
     "padding": {
-      "value": "{container.small.vertical_padding} 0px",
+      "value": "{container.xsmall.padding} 0px",
       "type": "spacing"
     },
     "parenting": {
