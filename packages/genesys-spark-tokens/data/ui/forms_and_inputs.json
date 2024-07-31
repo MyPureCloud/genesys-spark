@@ -170,11 +170,11 @@
         "type": "borderRadius"
       },
       "border_radius_small": {
-        "value": "2px",
+        "value": "{border_radius.focus.xsmall}",
         "type": "borderRadius"
       },
       "offset": {
-        "value": "1px",
+        "value": "{focus_outline.offset}",
         "type": "spacing"
       }
     },
