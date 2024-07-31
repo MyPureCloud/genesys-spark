@@ -1376,16 +1376,16 @@
   "context_menu": {
     "button": {
       "default": {
-        "value": "{size.lg}",
+        "value": "{interactive.medium.size}",
         "type": "sizing"
       },
       "compact": {
-        "value": "{size.md}",
+        "value": "{interactive.small.size}",
         "type": "sizing"
       }
     },
     "border_radius": {
-      "value": "{border_radius.sm}",
+      "value": "{border_radius.interactive.small}",
       "type": "borderRadius"
     },
     "menu": {
