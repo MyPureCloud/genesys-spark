@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.71.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.70.0...v4.71.0) (2024-07-31)
+
+
+### Features
+
+* **icon:** Add new icons redo, undo, eraser, link-simple and grid-2-plus ([#555](https://github.com/MyPureCloud/genesys-spark/issues/555)) ([a4d1fcf](https://github.com/MyPureCloud/genesys-spark/commit/a4d1fcf3e3d954895994c967e8e7f3489bdf62c5))
+
+
+### Bug Fixes
+
+* **month-picker:** Fixed tabbing issues ([25a1df6](https://github.com/MyPureCloud/genesys-spark/commit/25a1df64b719175b9cdbdeb1b6a2b9cb33b5203e))
+
 ## [4.70.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.69.1...v4.70.0) (2024-07-30)
 
 
