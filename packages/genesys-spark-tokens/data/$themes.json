@@ -718,6 +718,9 @@
       "divider.md.margin": "8fb165c6645c0d9f60f61fcc426d198171a726fa",
       "divider.lg.margin": "5d432756d8444d409fcdb00d0b4ed77c6e7be614",
       "divider.track.height": "46560c35735a5b947e3746cad41bbc266fd70218",
+      "form_control.form_field.click_input.medium.size": "eef57218b020b1e36cb8fa3262c8447d3ddf64a4",
+      "form_control.form_field.click_input.small.size": "158b9db03b917cb23973ce39118093f43e034a7a",
+      "form_control.click_input.handle.border_width": "252cd2eed196eba091f3a3b2066846aec61d96ed",
       "background.interactive.primary.default": "0188808b7c6d3225fc85570edd14072ada698fa2",
       "background.interactive.primary.hover": "a285a137eb449419c1c85ba88c7ab91ef62bf9cf",
       "background.interactive.primary.active": "6ef3e85d6ae0977961e8251602155649d5911bf7",
@@ -842,6 +845,7 @@
       "border.container.divider": "3ea5986940df900d7d6feb74520393bf528f930d",
       "border.container.edges.default": "365585a57fefca4301856ae2a12645e0d77c4eb3",
       "border.container.edges.hover": "bf4786daf15f249051549ec584dddbc739513e9c",
+      "border.container.edges.error": "d9d44907cbca6285f5af63897eab9ad01743e687",
       "border.container.edges.enabled": "c8dad298e98e8cd08e2e8db21c8748d01ba118ee",
       "border.container.edges.active": "daac2b2f4f4b1094a2e02efa4bdc5e22a8e7592b",
       "border.container.edges.high_emphasis": "365585a57fefca4301856ae2a12645e0d77c4eb3",
@@ -862,7 +866,8 @@
       "border.form_control.text_input.default": "b3e5c197aea4a4ac612e4d7dbaee2f8c7d191e0b",
       "border.form_control.text_input.hover": "b17184819c452568acfcd801a4fe6f1447fff6fd",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
-      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc"
+      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc",
+      "background.container.elevated.error": "7641dbcbe8f74cfdcc0a266cdfbbf7522804848f"
     }
   },
   {
@@ -954,6 +959,9 @@
       "divider.md.margin": "8fb165c6645c0d9f60f61fcc426d198171a726fa",
       "divider.lg.margin": "5d432756d8444d409fcdb00d0b4ed77c6e7be614",
       "divider.track.height": "46560c35735a5b947e3746cad41bbc266fd70218",
+      "form_control.form_field.click_input.medium.size": "eef57218b020b1e36cb8fa3262c8447d3ddf64a4",
+      "form_control.form_field.click_input.small.size": "158b9db03b917cb23973ce39118093f43e034a7a",
+      "form_control.click_input.handle.border_width": "252cd2eed196eba091f3a3b2066846aec61d96ed",
       "background.interactive.primary.default": "0188808b7c6d3225fc85570edd14072ada698fa2",
       "background.interactive.primary.hover": "a285a137eb449419c1c85ba88c7ab91ef62bf9cf",
       "background.interactive.primary.active": "6ef3e85d6ae0977961e8251602155649d5911bf7",
