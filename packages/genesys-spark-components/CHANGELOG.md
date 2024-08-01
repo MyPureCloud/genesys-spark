@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.129.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.128.2...v3.129.0) (2024-08-01)
+
+
+### Features
+
+* **icon:** add redo, undo, eraser, grid-2-plus and link-simple icons to v3 ([#556](https://github.com/MyPureCloud/genesys-spark/issues/556)) ([ba06dfa](https://github.com/MyPureCloud/genesys-spark/commit/ba06dfab94b4740287b57503f9761cff503ead2d))
+
 ### [3.128.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.128.1...v3.128.2) (2024-07-23)
 
 
