@@ -927,7 +927,7 @@
         }
       },
       "border_radius": {
-        "value": "{border_radius.form_control.input.large}",
+        "value": "{border_radius.interactive.xlarge}",
         "type": "borderRadius"
       }
     },
