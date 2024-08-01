@@ -377,7 +377,7 @@
       },
       "badge": {
         "size": {
-          "value": "{size.md}",
+          "value": "{assets.medium.size}",
           "type": "sizing"
         }
       },
@@ -410,7 +410,7 @@
       },
       "uc-integration": {
         "size": {
-          "value": "{size.lg}",
+          "value": "{assets.large.size}",
           "type": "sizing"
         }
       }
@@ -443,12 +443,12 @@
     },
     "medium": {
       "size": {
-        "value": "{size.2xl}",
+        "value": "{assets.xlarge.size}",
         "type": "sizing"
       },
       "badge": {
         "size": {
-          "value": "{size.xs}",
+          "value": "{assets.small.size}",
           "type": "sizing"
         }
       },
@@ -460,7 +460,7 @@
       },
       "content": {
         "size": {
-          "value": "{size.xl}",
+          "value": "40px",
           "type": "sizing"
         }
       },
@@ -482,7 +482,7 @@
     },
     "small": {
       "size": {
-        "value": "{size.lg}",
+        "value": "{assets.large.size}",
         "type": "sizing"
       },
       "badge": {
@@ -527,7 +527,7 @@
     },
     "xsmall": {
       "size": {
-        "value": "{size.md}",
+        "value": "{assets.medium.size}",
         "type": "sizing"
       },
       "focus_ring": {
@@ -578,7 +578,7 @@
         },
         "icon": {
           "margin": {
-            "value": "2px",
+            "value": "{interactive.xs.padding}",
             "type": "spacing"
           }
         }
@@ -624,7 +624,7 @@
       "notifications": {
         "icon": {
           "margin": {
-            "value": "4px",
+            "value": "{interactive.small.padding}",
             "type": "spacing"
           }
         }
@@ -632,7 +632,7 @@
       "queue": {
         "icon": {
           "margin": {
-            "value": "4px",
+            "value": "{interactive.small.padding}",
             "type": "spacing"
           }
         }
@@ -831,7 +831,7 @@
       },
       "icon": {
         "size": {
-          "value": "{icon.small.size}",
+          "value": "{assets.small.size}",
           "type": "sizing"
         }
       }
