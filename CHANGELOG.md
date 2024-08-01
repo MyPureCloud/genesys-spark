@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.71.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.71.0...v4.71.1) (2024-08-01)
+
+
+### Bug Fixes
+
+* **other:** form-field ([6902cc8](https://github.com/MyPureCloud/genesys-spark/commit/6902cc8d606adaf64e88d2be65a07dfd73bfd393))
+
 ## [4.71.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.70.0...v4.71.0) (2024-07-31)
 
 
