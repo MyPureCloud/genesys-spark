@@ -6,7 +6,7 @@
         "type": "sizing"
       },
       "padding": {
-        "value": "10px {spacing.xs} 10px {spacing.xs}",
+        "value": "{container.xsmall.padding} {container.medium.padding} {container.xsmall.padding} {container.medium.padding}",
         "type": "spacing"
       },
       "chevron_icon": {
@@ -14,26 +14,26 @@
         "type": "sizing"
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{container.small.gap}",
         "type": "spacing"
       },
       "default": {
         "foreground": {
           "label_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{foreground.container.high_emphasis}",
             "type": "color"
           },
           "chevron_icon": {
             "closed": {
-              "value": "{color.cornflower.600}",
+              "value": "{foreground.interactive.subtle.default}",
               "type": "color"
             },
             "open": {
-              "value": "{color.primary.darkest}",
+              "value": "{foreground.interactive.subtle.active}",
               "type": "color"
             },
             "hover": {
-              "value": "{color.primary.darker}",
+              "value": "{foreground.interactive.subtle.hover}",
               "type": "color"
             }
           }
@@ -53,17 +53,17 @@
     },
     "reversed_header": {
       "padding": {
-        "value": "2px",
+        "value": "{container.2xs.padding}",
         "type": "spacing"
       }
     },
     "menu_item": {
       "height": {
-        "value": "{size.lg}",
+        "value": "{container.small.height}",
         "type": "sizing"
       },
       "padding": {
-        "value": "0 {spacing.2xs} 0 {spacing.md}",
+        "value": "0 {container.small.padding} 0 {container.large.padding}",
         "type": "spacing"
       },
       "start_icon": {
@@ -75,25 +75,25 @@
         "type": "sizing"
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{container.small.gap}",
         "type": "spacing"
       },
       "default": {
         "foreground": {
           "start_icon_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "label_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "start_shortcut_color": {
-            "value": "{color.cornflower.600}",
+            "value": "{menu.option.shortcut.default.foreground_color}",
             "type": "color"
           },
           "parent_icon_color": {
-            "value": "{color.cornflower.600}",
+            "value": "{menu.option.parent_icon.default.foreground_color}",
             "type": "color"
           }
         }
@@ -101,54 +101,54 @@
       "hover": {
         "foreground": {
           "start_icon_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "label_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "start_shortcut_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.shortcut.default.foreground_color}",
             "type": "color"
           },
           "parent_icon_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.parent_icon.hover.foreground_color}",
             "type": "color"
           }
         },
         "background_color": {
-          "value": "{color.blueberry.50}",
+          "value": "{menu.option.hover.background_color}",
           "type": "color"
         }
       },
       "selected": {
         "foreground": {
           "start_icon_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "label_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "start_shortcut_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.shortcut.selected.foreground_color}",
             "type": "color"
           },
           "parent_icon_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.parent_icon.selected.foreground_color}",
             "type": "color"
           }
         },
         "background_color": {
-          "value": "{color.blueberry.200}",
+          "value": "{menu.option.selected.background_color}",
           "type": "color"
         }
       },
       "focus": {
         "border_radius": {
-          "value": "{border_radius.sm}",
+          "value": "{container.small.border_radius}",
           "type": "borderRadius"
         }
       },
@@ -194,19 +194,19 @@
     },
     "content_item": {
       "padding": {
-        "value": "{spacing.xs}",
+        "value": "{container.medium.padding}",
         "type": "spacing"
       },
       "gap": {
-        "value": "{spacing.xs}",
+        "value": "{container.large.gap}",
         "type": "spacing"
       },
       "foreground_color": {
-        "value": "{color.cornflower.900}",
+        "value": "{foreground.container.high_emphasis}",
         "type": "color"
       },
       "background_color": {
-        "value": "{color.white}",
+        "value": "{background.container.elevated.default}",
         "type": "color"
       },
       "default_text": {
@@ -232,14 +232,14 @@
     "focus": {
       "offset": {
         "gap": {
-          "value": "1px",
+          "value": "{focus_outline.offset}",
           "type": "spacing"
         }
       }
     },
     "content_panel": {
       "padding_bottom": {
-        "value": "{spacing.4xs}",
+        "value": "{container.xsmall.padding}",
         "type": "spacing"
       }
     },
