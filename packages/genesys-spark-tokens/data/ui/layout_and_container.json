@@ -41,12 +41,7 @@
       },
       "label": {
         "default_text": {
-          "value": {
-            "fontFamily": "{font_family.roboto}",
-            "lineHeight": "{line_height.sm}",
-            "fontSize": "{font_size.sm}",
-            "fontWeight": "{font_weight.bold}"
-          },
+          "value": "{body.md.bold}",
           "type": "typography"
         }
       }
@@ -154,41 +149,26 @@
       },
       "label": {
         "default_text": {
-          "value": {
-            "fontFamily": "{font_family.roboto}",
-            "lineHeight": "{line_height.xs}",
-            "fontSize": "{font_size.xs}",
-            "fontWeight": "{font_weight.regular}"
-          },
+          "value": "{body.sm.regular}",
           "type": "typography"
         },
         "selected_text": {
-          "value": {
-            "fontFamily": "{font_family.roboto}",
-            "lineHeight": "{line_height.xs}",
-            "fontSize": "{font_size.xs}",
-            "fontWeight": "{font_weight.semi_bold}"
-          },
+          "value": "{body.sm.semi_bold}",
           "type": "typography"
         }
       },
       "shortcut": {
         "text": {
-          "value": {
-            "fontFamily": "{font_family.roboto}",
-            "lineHeight": "{line_height.sm}",
-            "fontSize": "{font_size.sm}",
-            "fontWeight": "{font_weight.regular}"
-          },
+          "value": "{menu.option.shortcut.text}",
           "type": "typography"
         }
       }
     },
     "focus_border": {
       "value": {
-        "color": "{color.focus}",
+        "color": "{border.focus}",
         "style": "solid",
-        "width": "2px"
+        "width": "{focus_outline.medium.border_width}"
       },
       "type": "border"
     },
@@ -210,20 +190,15 @@
         "type": "color"
       },
       "default_text": {
-        "value": {
-          "fontFamily": "{font_family.roboto}",
-          "lineHeight": "{line_height.xs}",
-          "fontSize": "{font_size.xs}",
-          "fontWeight": "{font_weight.regular}"
-        },
+        "value": "{body.sm.regular}",
         "type": "typography"
       }
     },
     "wrapper": {
       "divider_border": {
         "value": {
-          "color": "{color.cornflower.300}",
-          "width": "1px",
+          "color": "{border.container.divider}",
+          "width": "{container.divider.border_width}",
           "style": "solid"
         },
         "type": "border"
@@ -246,7 +221,7 @@
     "label": {
       "disabled": {
         "opacity": {
-          "value": "0.5",
+          "value": "{opacity.disabled}",
           "type": "opacity"
         }
       }
