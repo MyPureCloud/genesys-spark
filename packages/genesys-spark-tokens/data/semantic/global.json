@@ -788,6 +788,13 @@
         "type": "sizing",
         "description": "The recommended size of xlarge-sized for styles, for example avatar"
       }
+    },
+    "xsmall": {
+      "size": {
+        "value": "{size.3xs}",
+        "type": "sizing",
+        "description": "The recommended size of small-sized for assets, for example super small icons."
+      }
     }
   },
   "divider": {
