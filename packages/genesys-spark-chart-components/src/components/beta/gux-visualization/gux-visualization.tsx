@@ -17,6 +17,8 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import { timeFormatLocale } from './gux-visualization.locale';
 
+import * as VisualizationColorUtil from '../../../utils/theme/color-palette';
+
 @Component({
   styleUrl: 'gux-visualization.scss',
   tag: 'gux-visualization-beta',
@@ -24,10 +26,21 @@ import { timeFormatLocale } from './gux-visualization.locale';
 })
 export class GuxVisualization {
   private chartContainer: HTMLDivElement;
-  private defaultVisualizationSpec: VisualizationSpec = {};
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private defaultVisualizationSpec: Record<string, any> = {
+    $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+    mark: { type: 'bar' },
+    config: {
+      axis: {
+        labelColor: VisualizationColorUtil.DEFAULT_LABEL_COLOR,
+        domainColor: VisualizationColorUtil.DEFAULT_DOMAIN_COLOR
+      }
+    }
+  };
 
   private defaultEmbedOptions: EmbedOptions = {
-    actions: false,
+    actions: true,
     renderer: 'svg'
   };
 
