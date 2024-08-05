@@ -395,10 +395,10 @@
       },
       "initials": {
         "value": {
-          "fontFamily": "{font_family.urbanist}",
-          "lineHeight": "{line_height.match_font_size}",
+          "fontFamily": "{font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.xxl}",
-          "fontWeight": "{font_weight.semi_bold}"
+          "lineHeight": "{line_height.match_font_size}"
         },
         "type": "typography"
       },
@@ -466,7 +466,7 @@
       },
       "initials": {
         "value": {
-          "fontFamily": "{font_family.urbanist}",
+          "fontFamily": "{font_family.headings}",
           "lineHeight": "{line_height.match_font_size}",
           "fontSize": "{font_size.lg}",
           "fontWeight": "{font_weight.semi_bold}"
@@ -505,7 +505,7 @@
       },
       "initials": {
         "value": {
-          "fontFamily": "{font_family.urbanist}",
+          "fontFamily": "{font_family.headings}",
           "lineHeight": "{line_height.match_font_size}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.semi_bold}"
@@ -544,7 +544,7 @@
       },
       "initials": {
         "value": {
-          "fontFamily": "{font_family.urbanist}",
+          "fontFamily": "{font_family.headings}",
           "lineHeight": "{line_height.match_font_size}",
           "fontSize": "8px",
           "fontWeight": "{font_weight.semi_bold}"
@@ -730,20 +730,20 @@
         "type": "color"
       },
       "opacity": {
-        "value": "80%",
+        "value": "{opacity.shroud}",
         "type": "opacity"
       }
     },
     "content": {
       "border_radius": {
-        "value": "256px",
+        "value": "{container.full.border_radius}",
         "type": "borderRadius"
       },
       "default": {
         "border": {
           "value": {
-            "color": "{color.white}",
-            "width": "1px",
+            "color": "{background.container.elevated.default}",
+            "width": "{container.divider.border_width}",
             "style": "solid"
           },
           "type": "border"
@@ -752,7 +752,7 @@
       "large": {
         "border": {
           "value": {
-            "color": "{color.white}",
+            "color": "{background.container.elevated.default}",
             "width": "2px",
             "style": "solid"
           },
@@ -769,13 +769,13 @@
     "focus_ring": {
       "large": {
         "border_radius": {
-          "value": "96px",
+          "value": "{focus_outline.full.border_radius}",
           "type": "borderRadius"
         },
         "border": {
           "value": {
-            "color": "{color.focus}",
-            "width": "3px",
+            "color": "{border.focus}",
+            "width": "{focus_outline.medium.border_width}",
             "style": "solid"
           },
           "type": "border"
@@ -783,15 +783,15 @@
       },
       "medium_small": {
         "border_radius": {
-          "value": "100px",
+          "value": "{focus_outline.full.border_radius}",
           "type": "borderRadius"
         }
       },
       "medium": {
         "border": {
           "value": {
-            "color": "{color.focus}",
-            "width": "3px",
+            "color": "{border.focus}",
+            "width": "{focus_outline.medium.border_width}",
             "style": "solid"
           },
           "type": "border"
@@ -800,8 +800,8 @@
       "small": {
         "border": {
           "value": {
-            "color": "{color.focus}",
-            "width": "2px",
+            "color": "{border.focus}",
+            "width": "{focus_outline.medium.border_width}",
             "style": "solid"
           },
           "type": "border"
@@ -810,8 +810,8 @@
       "xsmall": {
         "border": {
           "value": {
-            "color": "{color.focus}",
-            "width": "2px",
+            "color": "{border.focus}",
+            "width": "{focus_outline.medium.border_width}",
             "style": "solid"
           },
           "type": "border"
@@ -819,7 +819,7 @@
       }
     },
     "focus": {
-      "value": "{color.blueberry.400}",
+      "value": "{border.focus}",
       "type": "color"
     },
     "add-change-image": {

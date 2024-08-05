@@ -607,6 +607,13 @@
         "type": "spacing",
         "description": "The default padding of a our smallest containers, like the container of an tag."
       }
+    },
+    "full": {
+      "border_radius": {
+        "value": "{border_radius.full}",
+        "type": "borderRadius",
+        "description": "The recomended border radius for circle-shaped containers."
+      }
     }
   },
   "form_control": {
