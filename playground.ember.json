@@ -33,7 +33,7 @@
   },
   {
     "command": ["npm", "run", "playground.ember.start"],
-    "title": "Ember Playground",
+    "title": "Ember Playground - http://localhost:4200",
     "defaultStatus": ["✨", "✨"]
   }
 ]

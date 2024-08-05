@@ -33,7 +33,7 @@
   },
   {
     "command": ["npm", "run", "playground.angular.start"],
-    "title": "Angular Playground",
+    "title": "Angular Playground - http://localhost:4200",
     "defaultStatus": ["✨", "✨"]
   }
 ]
