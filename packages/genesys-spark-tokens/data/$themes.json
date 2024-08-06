@@ -1205,7 +1205,12 @@
       "links.in_line.small.underlined_text": "S:37800c800d97f218edeeaf1ca814f89f94ddf9ee,",
       "breadcrumbs.primary.separator.typography": "S:34399013dffeaf36782e32f62095c84e884732a1,",
       "breadcrumbs.secondary.separator.typography": "S:65572e4d34461abd54a785af58a324bfad39075b,",
-      "menu.grouped_menu.title.text": "S:e7af70cac597000cec53adcbbccb4be12269d821,"
+      "menu.grouped_menu.title.text": "S:e7af70cac597000cec53adcbbccb4be12269d821,",
+      "modal_side_sheet.heading": "S:6e14b84d81c86186d71b0292637946d6fff245ad,",
+      "modal_side_sheet.description": "S:0e27c85b82f35e626ca2c801b8080d2a477c93b2,",
+      "dynamic_side_sheet.heading": "S:f7366e6a0adbdb9920ef61a405da215daba0344b,",
+      "dynamic_side_sheet.description": "S:592f2ea2d4886502d23dc268ee3a7c8c1813fadf,",
+      "dynamic_side_sheet.box_shadow": "S:fffbfcc9cdb84dee899c96b60a2a1172e27d3fd9,"
     },
     "selectedTokenSets": {
       "core_deprecated": "source",
