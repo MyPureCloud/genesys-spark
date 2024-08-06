@@ -5,7 +5,7 @@
     );
   }
 
-  gux-icon[icon-name='copy'] {
+  gux-icon[icon-name='fa/copy-regular'] {
     visibility: visible;
   }
 }
@@ -39,7 +39,7 @@ button {
       @include focus-and-hover-copy-content;
     }
 
-    gux-icon[icon-name='copy'] {
+    gux-icon[icon-name='fa/copy-regular'] {
       flex-shrink: 0;
       width: var(--gse-ui-icon-size-sm);
       height: var(--gse-ui-icon-size-sm);
@@ -62,18 +62,22 @@ button {
     display: inline-flex;
     align-items: center;
 
+    .gux-tooltip-content > * {
+      vertical-align: middle;
+    }
+
     gux-icon {
       width: var(--gse-ui-icon-size-sm);
       height: var(--gse-ui-icon-size-sm);
       padding: var(--gse-ui-copyToClipboard-iconContainer-padding);
 
-      &[icon-name='badge-check'] {
+      &[icon-name='fa/circle-check-solid'] {
         color: var(
           --gse-ui-copyToClipboard-tooltipIcon-success-foregroundColor
         );
       }
 
-      &[icon-name='badge-x'] {
+      &[icon-name='fa/circle-xmark-solid'] {
         color: var(--gse-ui-copyToClipboard-tooltipIcon-error-foregroundColor);
       }
     }

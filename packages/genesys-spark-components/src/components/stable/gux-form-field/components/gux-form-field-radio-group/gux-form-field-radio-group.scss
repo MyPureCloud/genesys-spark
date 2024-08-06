@@ -1,26 +1,36 @@
 @use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-fieldset-container/gux-form-field-fieldset-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
-@use '../../functional-components/gux-form-field-legend-label/gux-form-field-legend-label.scss';
 @use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+@use '../../functional-components/gux-form-field-screenreader-label/gux-form-field-screenreader-label.scss';
+@use '../../functional-components/gux-form-field-visual-label/gux-form-field-visual-label.scss';
 
 @include gux-form-field-fieldset-container.Style;
 @include gux-form-field-error.Style;
-@include gux-form-field-legend-label.Style;
 @include gux-form-field-help.Style;
 @include gux-form-field-error.Style;
 @include gux-form-field-help.Style;
+@include gux-form-field-visual-label.Style;
+@include gux-form-field-screenreader-label.Style;
 
 :host {
   display: block;
 }
 
+::slotted(gux-form-field-radio) {
+  padding-top: var(--gse-ui-formControl-group-gapItems);
+}
+
+::slotted(gux-form-field-radio:first-of-type) {
+  padding-top: 0;
+}
+
 :host([disabled]) {
-  .gux-form-field-legend-label {
+  ::slotted(label) {
     opacity: var(--gse-ui-formControl-input-disabled-opacity);
   }
 }
 
-.gux-form-field-legend-label {
-  @include gux-form-field.gse-ui-formControl-label;
+::slotted(label) {
+  @include gux-form-field.gse-ui-formControl-label-bold;
 }

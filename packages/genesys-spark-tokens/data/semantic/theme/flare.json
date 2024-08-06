@@ -12,7 +12,7 @@
     }
   },
   "background": {
-    "surface": {
+    "container": {
       "primary": {
         "10": {
           "value": "{color.white}",
@@ -436,6 +436,32 @@
         "value": "{color.plum.700}",
         "type": "color"
       }
+    },
+    "icon": {
+      "10": {
+        "value": "{color.cornflower.700}",
+        "type": "color"
+      }
+    },
+    "form_control": {
+      "click_input": {
+        "10": {
+          "value": "{color.blueberry.600}",
+          "type": "color"
+        },
+        "20": {
+          "value": "{color.blueberry.700}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color.blueberry.800}",
+          "type": "color"
+        },
+        "50": {
+          "value": "{color.cornflower.500}",
+          "type": "color"
+        }
+      }
     }
   },
   "border": {
@@ -467,6 +493,10 @@
         },
         "20": {
           "value": "{color.cornflower.700}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color.cornflower.900}",
           "type": "color"
         }
       },

@@ -952,6 +952,26 @@
     "3xl": {
       "value": "98px",
       "type": "sizing"
+    },
+    "2xs": {
+      "value": "12px",
+      "type": "sizing"
+    },
+    "3xs": {
+      "value": "8px",
+      "type": "sizing"
+    },
+    "4xs": {
+      "value": "4px",
+      "type": "sizing"
+    },
+    "5xs": {
+      "value": "2px",
+      "type": "sizing"
+    },
+    "6xs": {
+      "value": "1px",
+      "type": "sizing"
     }
   },
   "text_decoration": {

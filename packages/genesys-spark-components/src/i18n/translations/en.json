@@ -92,9 +92,6 @@
   "gux-form-field-dropdown": {
     "required": "Required"
   },
-  "gux-form-field-file": {
-    "required": "required"
-  },
   "gux-form-field-input-clear-button": {
     "clear": "Clear"
   },
@@ -500,9 +497,9 @@
     "default": "Default",
     "all": "All",
     "timeZones": "Time zones",
-    "workspaceDefault": "Workspace default",
-    "localDefault": "Local",
-    "localAndWorkspaceDefault": "Local and Workspace Default",
+    "workspaceDefault": "(Workspace default)",
+    "localDefault": "(Local)",
+    "localAndWorkspaceDefault": "(Local and Workspace Default)",
     "Africa/Abidjan": "Africa/Abidjan",
     "Africa/Accra": "Africa/Accra",
     "Africa/Addis_Ababa": "Africa/Addis_Ababa",

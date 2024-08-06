@@ -44,23 +44,29 @@ export class GuxIcon {
 
   @Watch('iconName')
   async prepIcon(iconName: string): Promise<void> {
-    const rootIconName = getRootIconName(iconName);
-    this.baseSvgHtml = await getBaseSvgHtml(rootIconName);
-    this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
+    if (iconName) {
+      const rootIconName = getRootIconName(iconName);
+      this.baseSvgHtml = await getBaseSvgHtml(rootIconName);
+      this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
+    }
   }
 
   @Watch('decorative')
   watchDecorative(decorative: boolean): void {
     this.validateProps(decorative, this.screenreaderText);
 
-    this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
+    if (this.baseSvgHtml) {
+      this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
+    }
   }
 
   @Watch('screenreaderText')
   watchScreenreaderText(screenreaderText: string): void {
     this.validateProps(this.decorative, screenreaderText);
 
-    this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
+    if (this.baseSvgHtml) {
+      this.svgHtml = this.getSvgWithAriaAttributes(this.baseSvgHtml);
+    }
   }
 
   async componentWillLoad(): Promise<void> {
@@ -90,7 +96,6 @@ export class GuxIcon {
   private getSvgWithAriaAttributes(svgText: string): string {
     const svgElement = new DOMParser().parseFromString(svgText, 'image/svg+xml')
       .firstChild as SVGElement;
-
     if (this.decorative) {
       svgElement.setAttribute('aria-hidden', String(this.decorative));
     } else {

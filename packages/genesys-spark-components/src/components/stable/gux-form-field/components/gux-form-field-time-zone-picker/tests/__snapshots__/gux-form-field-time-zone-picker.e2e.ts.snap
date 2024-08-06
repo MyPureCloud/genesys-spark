@@ -11,11 +11,14 @@ exports[`gux-form-field-time-zone-picker #render help should render component as
 exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-time-zone-picker hydrated=""> <gux-time-zone-picker-beta value="Etc/GMT+1" workspace-default="Etc/GMT" local-default="America/Detroit" hydrated=""></gux-time-zone-picker-beta> </gux-form-field-time-zone-picker>"`;
 
 exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (1) 2`] = `
-<fieldset class="gux-form-field-fieldset-container gux-undefined">
-  <legend class="gux-form-field-legend-label gux-screenreader">
+<fieldset class="gux-form-field-fieldset-container">
+  <legend class="gux-form-field-screenreader-label"></legend>
+  <div class="gux-form-field-visual-label gux-undefined" role="presentation">
     <slot name="label"></slot>
-  </legend>
-  <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <slot name="label-info"></slot>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-time-zone-picker-container">
       <slot></slot>
@@ -38,11 +41,14 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
 exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-time-zone-picker hydrated=""> <gux-time-zone-picker-beta value="Etc/GMT+1" workspace-default="Etc/GMT" local-default="America/Detroit" disabled="" hydrated=""></gux-time-zone-picker-beta> </gux-form-field-time-zone-picker>"`;
 
 exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (2) 2`] = `
-<fieldset class="gux-form-field-fieldset-container gux-undefined">
-  <legend class="gux-form-field-legend-label gux-screenreader">
+<fieldset class="gux-form-field-fieldset-container">
+  <legend class="gux-form-field-screenreader-label"></legend>
+  <div class="gux-form-field-visual-label gux-undefined" role="presentation">
     <slot name="label"></slot>
-  </legend>
-  <span aria-hidden="true" class="gux-form-field-legend-label gux-undefined" role="presentation"></span>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <slot name="label-info"></slot>
   <div class="gux-input-and-error-container">
     <div class="gux-disabled gux-input gux-time-zone-picker-container">
       <slot></slot>
@@ -65,14 +71,20 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
 exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-time-zone-picker hydrated=""> <gux-time-zone-picker-beta value="Etc/GMT+1" workspace-default="Etc/GMT" local-default="America/Detroit" required="" hydrated=""></gux-time-zone-picker-beta> </gux-form-field-time-zone-picker>"`;
 
 exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (3) 2`] = `
-<fieldset class="gux-form-field-fieldset-container gux-undefined">
-  <legend class="gux-form-field-legend-label gux-screenreader">
-    <slot name="label"></slot>
-    <gux-screen-reader-beta hydrated="">
-      Required
-    </gux-screen-reader-beta>
+<fieldset class="gux-form-field-fieldset-container">
+  <legend class="gux-form-field-screenreader-label">
+    Required
   </legend>
-  <span aria-hidden="true" class="gux-form-field-legend-label gux-required gux-undefined" role="presentation"></span>
+  <div class="gux-form-field-visual-label gux-required gux-undefined" role="presentation">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated="">
+      <span aria-hidden="true" class="gux-form-field-label-indicator-required">
+        *
+      </span>
+    </gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <slot name="label-info"></slot>
   <div class="gux-input-and-error-container">
     <div class="gux-input gux-time-zone-picker-container">
       <slot></slot>

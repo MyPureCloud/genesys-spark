@@ -14,7 +14,7 @@
 }
 
 ::slotted(label) {
-  @include gux-form-field.gse-ui-formControl-label;
+  @include gux-form-field.gse-ui-formControl-label-bold;
 }
 
 ::slotted(select) {
@@ -22,7 +22,8 @@
   align-self: auto;
   order: 0;
   width: 100%;
-  margin-left: var(--gse-ui-formControl-input-gap);
+  height: var(--gse-ui-formControl-input-textfield-height);
+  padding-left: var(--gse-ui-formControl-input-gap);
   color: var(--gse-ui-formControl-input-populatedColor);
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -52,7 +53,6 @@
       place-content: stretch center;
       align-items: center;
       width: 100%;
-      height: var(--gse-ui-formControl-input-textfield-height);
       font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
       font-size: var(--gse-ui-formControl-input-contentText-fontSize);
       font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
@@ -77,9 +77,12 @@
       }
 
       gux-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
         width: var(--gse-ui-formControl-input-inputIcon-size);
         height: var(--gse-ui-formControl-input-inputIcon-size);
-        margin-right: var(--gse-ui-formControl-input-gap);
+        margin: var(--gse-ui-formControl-input-padding);
         pointer-events: none;
       }
 

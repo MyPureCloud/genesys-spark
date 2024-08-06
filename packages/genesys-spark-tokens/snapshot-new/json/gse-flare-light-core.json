@@ -64,6 +64,13 @@
   "font_weight": {
     "semi_bold": "600"
   },
+  "size": {
+    "2xs": "12px",
+    "3xs": "8px",
+    "4xs": "4px",
+    "5xs": "2px",
+    "6xs": "1px"
+  },
   "color_legacy": {
     "blue": {
       "10": "#172b52",

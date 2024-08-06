@@ -116,6 +116,29 @@ export function validateFormIds(
         .filter(id => !id.startsWith(`gux-form-field-help`)) || [];
     input.setAttribute('aria-describedby', describedByIds.join(' '));
   }
+
+  if (hasSlot(root, 'label-info')) {
+    const labelInfo = root.querySelector('[slot="label-info"]');
+    const labelInfoId = randomHTMLId('gux-label-info-beta');
+    const describedByIds =
+      input
+        .getAttribute('aria-describedby')
+        ?.split(' ')
+        .filter(id => !id.startsWith(`gux-label-info-beta`)) || [];
+
+    labelInfo.setAttribute('id', labelInfoId);
+    describedByIds.push(labelInfoId);
+
+    describedByIds &&
+      input.setAttribute('aria-describedby', describedByIds.join(' '));
+  } else if (input.getAttribute('aria-describedby')) {
+    const describedByIds =
+      input
+        .getAttribute('aria-describedby')
+        ?.split(' ')
+        .filter(id => !id.startsWith(`gux-label-info-beta`)) || [];
+    input.setAttribute('aria-describedby', describedByIds.join(' '));
+  }
 }
 
 export function setSlotAriaAttribute(

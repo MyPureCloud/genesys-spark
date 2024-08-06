@@ -64,6 +64,11 @@ Type: `Promise<void>`
 
 ## Dependencies
 
+### Used by
+
+ - [gux-icon-tooltip-beta](../gux-icon-tooltip)
+ - [gux-label-info-beta](../gux-label-info)
+
 ### Depends on
 
 - [gux-tooltip-base-beta](../gux-tooltip-base)
@@ -72,6 +77,8 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-tooltip-beta --> gux-tooltip-base-beta
+  gux-icon-tooltip-beta --> gux-tooltip-beta
+  gux-label-info-beta --> gux-tooltip-beta
   style gux-tooltip-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

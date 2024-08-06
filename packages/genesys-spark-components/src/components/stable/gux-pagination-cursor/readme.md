@@ -12,6 +12,7 @@
 | `hasNext`      | `has-next`       |                                                                                                | `boolean`                | `false`     |
 | `hasPrevious`  | `has-previous`   |                                                                                                | `boolean`                | `false`     |
 | `itemsPerPage` | `items-per-page` | Optional. Shows items per page dropdown when set. Only available with layout set to 'advanced' | `100 \| 25 \| 50 \| 75`  | `undefined` |
+| `label`        | `label`          |                                                                                                | `string`                 | `undefined` |
 | `layout`       | `layout`         |                                                                                                | `"advanced" \| "simple"` | `'simple'`  |
 
 

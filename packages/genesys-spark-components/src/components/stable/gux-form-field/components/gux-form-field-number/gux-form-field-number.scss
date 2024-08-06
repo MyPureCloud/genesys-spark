@@ -16,7 +16,7 @@ $gux-form-field-number-step-button-size: 14px;
 }
 
 ::slotted(label) {
-  @include gux-form-field.gse-ui-formControl-label;
+  @include gux-form-field.gse-ui-formControl-label-bold;
 }
 
 ::slotted(input) {
@@ -68,6 +68,7 @@ $gux-form-field-number-step-button-size: 14px;
       font-size: var(--gse-ui-formControl-input-contentText-fontSize);
       line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
       color: var(--gse-ui-formControl-input-populatedColor);
+      cursor: text;
       background-color: var(--gse-ui-formControl-input-backgroundColor);
       background-image: none;
       border: var(--gse-ui-formControl-input-default-border-width)
@@ -76,6 +77,7 @@ $gux-form-field-number-step-button-size: 14px;
       border-radius: var(--gse-ui-formControl-input-borderRadius);
 
       &.gux-disabled {
+        cursor: default;
         opacity: var(--gse-ui-formControl-input-disabled-opacity);
       }
 

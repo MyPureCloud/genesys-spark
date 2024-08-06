@@ -40,7 +40,7 @@
 // --gse-ui-advancedTabs-set-backgroundColor: #f3f5fb;
 // --gse-ui-advancedTabs-set-standard-width: 920px;
 
-@use '~genesys-spark/src/style/focus.scss';
+@use '~genesys-spark/dist/scss/focus.scss';
 
 gux-tab-advanced {
   .gux-tab {

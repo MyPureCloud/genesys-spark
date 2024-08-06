@@ -95,5 +95,28 @@ describe('gux-form-field-file', () => {
         expect(page.root).toMatchSnapshot();
       });
     });
+
+    describe('label-info', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-file>
+          <label slot="label">Upload a profile picture</label>
+          <input
+            slot="input"
+            type="file"
+            id="avatar"
+            name="avatar"
+            accept="image/png, image/jpeg"
+          />
+          <gux-label-info-beta slot="label-info">
+            <span slot="content">This is some tooltip text</span>
+          </gux-label-info-beta>
+        </gux-form-field-file>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
   });
 });

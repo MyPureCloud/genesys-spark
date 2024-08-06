@@ -3,29 +3,27 @@
 exports[`gux-form-field-file #render help should render component as expected 1`] = `
 <gux-form-field-file>
   <mock:shadow-root>
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          This is a help message
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Upload a profile picture
-      </span>
-      <slot name="input"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <slot name="input"></slot>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help gux-show">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
         </div>
       </div>
-      <div class="gux-form-field-help gux-show">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
-      </div>
-    </fieldset>
+    </div>
   </mock:shadow-root>
   <label for="avatar" slot="label">
     Upload a profile picture
@@ -40,26 +38,27 @@ exports[`gux-form-field-file #render help should render component as expected 1`
 exports[`gux-form-field-file #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-file>
   <mock:shadow-root>
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Upload a profile picture
-      </span>
-      <slot name="input"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <slot name="input"></slot>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
         </div>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
-      </div>
-    </fieldset>
+    </div>
   </mock:shadow-root>
   <label for="avatar" slot="label">
     Upload a profile picture
@@ -71,26 +70,27 @@ exports[`gux-form-field-file #render input attributes should render component as
 exports[`gux-form-field-file #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-file>
   <mock:shadow-root>
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Upload a profile picture
-      </span>
-      <slot name="input"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <slot name="input"></slot>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
         </div>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
-      </div>
-    </fieldset>
+    </div>
   </mock:shadow-root>
   <label for="avatar" slot="label">
     Upload a profile picture
@@ -102,29 +102,27 @@ exports[`gux-form-field-file #render input attributes should render component as
 exports[`gux-form-field-file #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-file>
   <mock:shadow-root>
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label gux-required">
         <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label gux-required" role="presentation">
-        Upload a profile picture
-      </span>
-      <slot name="input"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <slot name="input"></slot>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
         </div>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
-      </div>
-    </fieldset>
+    </div>
   </mock:shadow-root>
   <label for="avatar" slot="label">
     Upload a profile picture
@@ -133,29 +131,67 @@ exports[`gux-form-field-file #render input attributes should render component as
 </gux-form-field-file>
 `;
 
+exports[`gux-form-field-file #render label-info should render component as expected 1`] = `
+<gux-form-field-file>
+  <mock:shadow-root>
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <slot name="input"></slot>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mock:shadow-root>
+  <label for="avatar" slot="label">
+    Upload a profile picture
+  </label>
+  <input accept="image/png, image/jpeg" aria-describedby="gux-label-info-beta-i" id="avatar" name="avatar" slot="input" type="file">
+  <gux-label-info-beta id="gux-label-info-beta-i" slot="label-info">
+    <span slot="content">
+      This is some tooltip text
+    </span>
+  </gux-label-info-beta>
+</gux-form-field-file>
+`;
+
 exports[`gux-form-field-file #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-file>
   <mock:shadow-root>
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Upload a profile picture
-      </span>
-      <slot name="input"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <slot name="input"></slot>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
         </div>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
-      </div>
-    </fieldset>
+    </div>
   </mock:shadow-root>
   <label for="avatar" slot="label">
     Upload a profile picture
@@ -167,26 +203,27 @@ exports[`gux-form-field-file #render label-position should render component as e
 exports[`gux-form-field-file #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-file label-position="above">
   <mock:shadow-root>
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Upload a profile picture
-      </span>
-      <slot name="input"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <slot name="input"></slot>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
         </div>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
-      </div>
-    </fieldset>
+    </div>
   </mock:shadow-root>
   <label for="avatar" slot="label">
     Upload a profile picture
@@ -198,26 +235,27 @@ exports[`gux-form-field-file #render label-position should render component as e
 exports[`gux-form-field-file #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-file label-position="beside">
   <mock:shadow-root>
-    <fieldset class="gux-beside gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
+    <div class="gux-beside gux-form-field-container">
+      <div class="gux-beside gux-form-field-label">
         <slot name="label"></slot>
-      </legend>
-      <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
-        Upload a profile picture
-      </span>
-      <slot name="input"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <slot name="input"></slot>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
         </div>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
-      </div>
-    </fieldset>
+    </div>
   </mock:shadow-root>
   <label for="avatar" slot="label">
     Upload a profile picture
@@ -229,26 +267,27 @@ exports[`gux-form-field-file #render label-position should render component as e
 exports[`gux-form-field-file #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-file label-position="screenreader">
   <mock:shadow-root>
-    <fieldset class="gux-form-field-fieldset-container gux-screenreader">
-      <legend class="gux-form-field-legend-label gux-screenreader">
+    <div class="gux-form-field-container gux-screenreader">
+      <div class="gux-form-field-label gux-screenreader">
         <slot name="label"></slot>
-      </legend>
-      <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
-        Upload a profile picture
-      </span>
-      <slot name="input"></slot>
-      <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
-        <div class="gux-message">
-          <slot name="error"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <slot name="input"></slot>
+        <div class="gux-form-field-error">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
         </div>
       </div>
-      <div class="gux-form-field-help">
-        <div class="gux-message">
-          <slot name="help"></slot>
-        </div>
-      </div>
-    </fieldset>
+    </div>
   </mock:shadow-root>
   <label for="avatar" slot="label">
     Upload a profile picture

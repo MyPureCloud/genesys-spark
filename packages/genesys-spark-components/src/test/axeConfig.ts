@@ -2,6 +2,6 @@
 export const axeConfig = {
   runOnly: {
     type: 'tags',
-    values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']
+    values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa']
   }
 };

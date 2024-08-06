@@ -851,7 +851,7 @@
       },
       "icon": {
         "size": {
-          "value": "{icon.size.sm}",
+          "value": "{icon.small.size}",
           "type": "sizing"
         }
       }

@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-icon-tooltip-beta #render should render component as expected (1) 1`] = `
+<gux-icon-tooltip-beta>
+  <mock:shadow-root>
+    <div class="gux-icon-tooltip">
+      <gux-screen-reader-beta>
+        <slot name="content"></slot>
+      </gux-screen-reader-beta>
+      <gux-icon decorative="" size="small"></gux-icon>
+      <gux-tooltip-beta placement="right">
+        <div slot="content"></div>
+      </gux-tooltip-beta>
+    </div>
+  </mock:shadow-root>
+</gux-icon-tooltip-beta>
+`;
+
+exports[`gux-icon-tooltip-beta #render should render component as expected (2) 1`] = `
+<gux-icon-tooltip-beta>
+  <mock:shadow-root>
+    <div class="gux-icon-tooltip">
+      <gux-screen-reader-beta>
+        <slot name="content"></slot>
+      </gux-screen-reader-beta>
+      <gux-icon decorative="" size="small"></gux-icon>
+      <gux-tooltip-beta placement="right">
+        <div slot="content">
+          This is some tooltip text
+        </div>
+      </gux-tooltip-beta>
+    </div>
+  </mock:shadow-root>
+  <span slot="content">
+    This is some tooltip text
+  </span>
+</gux-icon-tooltip-beta>
+`;
+
+exports[`gux-icon-tooltip-beta #render should render component as expected (3) 1`] = `
+<gux-icon-tooltip-beta icon-name="fa/bell-regular">
+  <mock:shadow-root>
+    <div class="gux-icon-tooltip">
+      <gux-screen-reader-beta>
+        <slot name="content"></slot>
+      </gux-screen-reader-beta>
+      <gux-icon decorative="" icon-name="fa/bell-regular" size="small"></gux-icon>
+      <gux-tooltip-beta placement="right">
+        <div slot="content"></div>
+      </gux-tooltip-beta>
+    </div>
+  </mock:shadow-root>
+</gux-icon-tooltip-beta>
+`;
+
+exports[`gux-icon-tooltip-beta #render should render component as expected (4) 1`] = `
+<gux-icon-tooltip-beta icon-name="fa/bell-regular">
+  <mock:shadow-root>
+    <div class="gux-icon-tooltip">
+      <gux-screen-reader-beta>
+        <slot name="content"></slot>
+      </gux-screen-reader-beta>
+      <gux-icon decorative="" icon-name="fa/bell-regular" size="small"></gux-icon>
+      <gux-tooltip-beta placement="right">
+        <div slot="content">
+          This is some tooltip text
+        </div>
+      </gux-tooltip-beta>
+    </div>
+  </mock:shadow-root>
+  <span slot="content">
+    This is some tooltip text
+  </span>
+</gux-icon-tooltip-beta>
+`;

@@ -6,7 +6,7 @@
           "fontFamily": "{font_family.body}",
           "fontWeight": "{font_weight.regular}",
           "fontSize": "{font_size.xs}",
-          "lineHeight": "{line_height.xs}"
+          "lineHeight": "{line_height.2xs}"
         },
         "type": "typography",
         "description": "This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors."
@@ -14,7 +14,7 @@
       "link": {
         "value": {
           "fontFamily": "{font_family.body}",
-          "fontWeight": "{font_weight.bold}",
+          "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.xs}",
           "lineHeight": "{line_height.xs}",
           "textDecoration": "{text_decoration.underline}"
@@ -57,7 +57,7 @@
       "link": {
         "value": {
           "fontFamily": "{font_family.body}",
-          "fontWeight": "{font_weight.bold}",
+          "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.sm}",
           "lineHeight": "{line_height.sm}",
           "textDecoration": "{text_decoration.underline}"
@@ -100,7 +100,7 @@
       "link": {
         "value": {
           "fontFamily": "{font_family.body}",
-          "fontWeight": "{font_weight.bold}",
+          "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.md}",
           "lineHeight": "{line_height.md}",
           "textDecoration": "{text_decoration.underline}"
@@ -295,32 +295,32 @@
   },
   "interactive": {
     "medium": {
-      "height": {
+      "size": {
         "value": "{size.lg}",
         "type": "sizing",
-        "description": "The recommended height of medium-sized interactive components, for example buttons."
+        "description": "The recommended size of medium-sized interactive components, for example buttons height."
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{spacing.4xs}",
         "type": "spacing",
         "description": "The recommended gap between the content inside of a medium-sized interactive component."
       },
       "padding": {
         "horizontal": {
-          "value": "{spacing.2xs}",
+          "value": "{spacing.3xs}",
           "type": "spacing",
-          "description": "The recommended horizontal padding for medium-sized horizontal components."
+          "description": "The recommended horizontal padding for medium-sized components."
         }
       }
     },
     "small": {
-      "height": {
+      "size": {
         "value": "{size.md}",
         "type": "sizing",
-        "description": "The recommended size for small-sized interactive components. For example small buttons."
+        "description": "The recommended size for small-sized interactive components. For example small button height."
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{spacing.5xs}",
         "type": "spacing",
         "description": "The recommended gap between the content inside of a small-sized interactive component."
       },
@@ -342,6 +342,18 @@
         "value": "{border_radius.interactive.large}",
         "type": "borderRadius",
         "description": "The recommended large border-radius for interactive component. Eg Tags"
+      },
+      "gap": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The recommended gap between the content inside of a medium-sized interactive component."
+      },
+      "padding": {
+        "horizontal": {
+          "value": "{spacing.2xs}",
+          "type": "spacing",
+          "description": "The recommended horizontal padding for large-sized components."
+        }
       }
     },
     "edges": {
@@ -352,14 +364,37 @@
       }
     },
     "divider": {
-      "border_width": {
-        "value": "{border_width.1}",
-        "type": "borderWidth",
-        "description": "The default border width for the dividers within interactive components, like the ones on an action button."
+      "small": {
+        "border_width": {
+          "value": "{border_width.1}",
+          "type": "borderWidth",
+          "description": "The default border width for the dividers within interactive components, like the ones on an action button."
+        }
+      },
+      "large": {
+        "border_width": {
+          "value": "{border_width.2}",
+          "type": "borderWidth",
+          "description": "The default border width for the dividers within interactive components, like the ones on an action button."
+        }
+      }
+    },
+    "xlarge": {
+      "gap": {
+        "value": "{spacing.2xs}",
+        "type": "spacing",
+        "description": "The recommended gap between the content inside of a xlarge-sized interactive component."
+      },
+      "padding": {
+        "horizontal": {
+          "value": "{spacing.xs}",
+          "type": "spacing",
+          "description": "The recommended horizontal padding for xlarge-sized components."
+        }
       }
     }
   },
-  "focus": {
+  "focus_outline": {
     "full": {
       "border_radius": {
         "value": "{border_radius.focus.full}",
@@ -443,7 +478,7 @@
         "description": "The default padding of a small-sized container, like a tooltip."
       },
       "vertical_padding": {
-        "value": "{spacing.2xs}",
+        "value": "{spacing.3xs}",
         "type": "spacing",
         "description": "The default vertical padding of a small-sized container, like a tooltip."
       },
@@ -492,6 +527,23 @@
         "value": "{border_width.1}",
         "type": "borderWidth",
         "description": "The recommended border width for the dividers within containers, like cards or menus or popovers."
+      }
+    },
+    "xsmall": {
+      "gap": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
+      },
+      "horizontal_padding": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The default padding of a  extra small-sized container, like the container of an eyebrow title."
+      },
+      "vertical_padding": {
+        "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "The default padding of a  extra small-sized container, like the container of an eyebrow title."
       }
     }
   },
@@ -571,6 +623,60 @@
         "value": "{elevation.low}",
         "type": "boxShadow",
         "description": "The shadow we used for small-sized components like tooltips."
+      }
+    }
+  },
+  "assets": {
+    "large": {
+      "size": {
+        "value": "{size.lg}",
+        "type": "sizing",
+        "description": "The recommended size of large-sized for styles, for example icons."
+      }
+    },
+    "medium": {
+      "size": {
+        "value": "{size.md}",
+        "type": "sizing",
+        "description": "The recommended size of medium-sized for styles, for example medium icons."
+      }
+    },
+    "small": {
+      "size": {
+        "value": "{size.xs}",
+        "type": "sizing",
+        "description": "The recommended size of small-sized for styles, for example small icons."
+      }
+    }
+  },
+  "divider": {
+    "width": {
+      "value": "{size.6xs}",
+      "type": "sizing",
+      "description": "The default width of our divider, we usually represent dividers as rectangles on Figma instead of a single line layer."
+    },
+    "xs": {
+      "margin": {
+        "value": "{spacing.6xs}",
+        "type": "spacing"
+      }
+    },
+    "sm": {
+      "margin": {
+        "value": "{spacing.5xs}",
+        "type": "spacing"
+      }
+    },
+    "md": {
+      "margin": {
+        "value": "{spacing.4xs}",
+        "type": "spacing"
+      }
+    },
+    "lg": {
+      "margin": {
+        "value": "{spacing.3xs}",
+        "type": "spacing"
       }
     }
   }

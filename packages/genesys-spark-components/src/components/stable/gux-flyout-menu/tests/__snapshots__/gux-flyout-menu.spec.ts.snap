@@ -7,7 +7,9 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
       <slot name="target"></slot>
     </span>
     <div class="gux-flyout-menu-content">
-      <div class="gux-arrow"></div>
+      <div class="gux-arrow">
+        <div class="gux-arrow-caret"></div>
+      </div>
       <slot name="menu"></slot>
     </div>
   </mock:shadow-root>

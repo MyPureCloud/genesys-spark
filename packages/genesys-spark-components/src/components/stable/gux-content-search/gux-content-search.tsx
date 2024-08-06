@@ -14,6 +14,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import contentSearchResources from './i18n/en.json';
 import { onDisabledChange } from '@utils/dom/on-attribute-change';
+import { focusInputElement } from '@utils/dom/focus-input-element';
 
 /**
  * @slot  - Required slot for input tag
@@ -105,6 +106,7 @@ export class GuxContentSearch {
           'gux-content-search': true,
           'gux-disabled': this.disabled
         }}
+        onClick={() => focusInputElement(this.inputSlottedElement)}
       >
         <div class="gux-search-icon">
           <gux-icon

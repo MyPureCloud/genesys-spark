@@ -14,25 +14,26 @@
 
 ## Slots
 
-| Slot      | Description                                |
-| --------- | ------------------------------------------ |
-|           | Required slot for gux-phone-input-beta tag |
-| `"error"` | Optional slot for error message            |
-| `"help"`  | Optional slot for help message             |
-| `"label"` | Required slot for label tag                |
+| Slot           | Description                                |
+| -------------- | ------------------------------------------ |
+|                | Required slot for gux-phone-input-beta tag |
+| `"error"`      | Optional slot for error message            |
+| `"help"`       | Optional slot for help message             |
+| `"label"`      | Required slot for label tag                |
+| `"label-info"` | Optional slot for label tooltip            |
 
 
 ## Dependencies
 
 ### Depends on
 
-- [gux-screen-reader-beta](../../../../beta/gux-screen-reader)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
 - [gux-icon](../../../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-form-field-phone --> gux-screen-reader-beta
+  gux-form-field-phone --> gux-form-field-label-indicator
   gux-form-field-phone --> gux-icon
   style gux-form-field-phone fill:#f9f,stroke:#333,stroke-width:4px
 ```

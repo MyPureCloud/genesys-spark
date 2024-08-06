@@ -251,9 +251,7 @@ export class GuxTable {
 
     if (selectAllCheckbox) {
       const rowCheckboxes = this.rowCheckboxes;
-      const filterDisabled = rowCheckboxes.filter(
-        rowBox => !rowBox.hasAttribute('disabled')
-      );
+      const filterDisabled = rowCheckboxes.filter(rowBox => !rowBox.disabled);
       const selectedRows = filterDisabled.filter(box => box.selected);
       const hasRows = Boolean(rowCheckboxes.length);
       const allSelected = selectedRows.length === filterDisabled.length;
@@ -274,7 +272,7 @@ export class GuxTable {
 
     rowCheckboxes.forEach(rowBox => {
       selectAllCheckbox.selected = selected;
-      if (!rowBox.hasAttribute('disabled')) {
+      if (!rowBox.disabled) {
         rowBox.selected = selected;
         this.updateRowSelection(rowBox);
       }

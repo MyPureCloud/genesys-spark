@@ -33,6 +33,9 @@ export class GuxPaginationCursor {
   @Prop()
   hasNext: boolean = false;
 
+  @Prop()
+  label: string;
+
   /**
    * Optional. Shows items per page dropdown when set. Only available with layout set to 'advanced'
    */
@@ -69,7 +72,7 @@ export class GuxPaginationCursor {
 
   renderSimpleLayout(): JSX.Element {
     return [
-      <div role="navigation" class="gux-pagination-button-container">
+      <nav aria-label={this.label} class="gux-pagination-button-container">
         <gux-button-slot accent="ghost">
           <button
             class="gux-simple-button"
@@ -96,13 +99,13 @@ export class GuxPaginationCursor {
             ></gux-icon>
           </button>
         </gux-button-slot>
-      </div>
+      </nav>
     ] as JSX.Element;
   }
 
   renderAdvancedLayout(): JSX.Element {
     return [
-      <div role="navigation" class="gux-pagination-button-container">
+      <nav aria-label={this.label} class="gux-pagination-button-container">
         <gux-button-slot accent="ghost">
           <button
             type="button"
@@ -133,7 +136,7 @@ export class GuxPaginationCursor {
             </div>
           </button>
         </gux-button-slot>
-      </div>,
+      </nav>,
       this.renderItemsPerPage()
     ] as JSX.Element;
   }

@@ -118,6 +118,15 @@ export class GuxMonthPicker {
     }
   }
 
+  @Listen('focusout')
+  onFocusout(event: FocusEvent): void {
+    const focusIsOutsideComponent =
+      event.relatedTarget && !this.root.contains(event.relatedTarget as Node);
+    if (focusIsOutsideComponent) {
+      this.expanded = false;
+    }
+  }
+
   private isOutOfBounds(value: GuxISOYearMonth): boolean {
     return this.isBeforeMin(value) || this.isAfterMax(value);
   }

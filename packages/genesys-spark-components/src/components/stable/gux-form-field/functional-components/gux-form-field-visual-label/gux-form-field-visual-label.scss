@@ -1,0 +1,36 @@
+@use '~genesys-spark/src/style/mixins.scss';
+
+/* stylelint-disable-next-line selector-class-pattern */
+@mixin Style {
+  .gux-form-field-visual-label {
+    display: inline-flex;
+    flex: 1 0 auto;
+
+    ::slotted(gux-label-info-beta) {
+      padding-inline-start: var(--gse-ui-formControl-label-gap);
+    }
+
+    &.gux-required {
+      gux-form-field-label-indicator {
+        padding-inline-start: var(--gse-ui-formControl-label-gap);
+      }
+    }
+
+    &.gux-beside {
+      position: relative;
+      top: var(--gse-ui-formControl-input-top);
+      width: fit-content;
+      min-width: var(--gse-ui-formControl-input-textfield-minWidth);
+      max-width: fit-content;
+      margin-right: var(--gse-ui-formControl-group-gapItems);
+    }
+
+    &.gux-above {
+      padding: var(--gse-ui-formControl-label-padding);
+    }
+
+    &.gux-screenreader {
+      display: none;
+    }
+  }
+}

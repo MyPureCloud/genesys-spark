@@ -4,18 +4,14 @@ exports[`gux-form-field-phone #render error should render component as expected 
 <gux-form-field-phone>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          Required
-        </gux-screen-reader-beta>
-        <gux-screen-reader-beta>
-          Custom Error Message
-        </gux-screen-reader-beta>
+      <legend class="gux-form-field-screenreader-label">
+        Default Custom Error Message
       </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
-        Default
-      </span>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-input-error">
           <div class="gux-input-container">
@@ -50,15 +46,14 @@ exports[`gux-form-field-phone #render help should render component as expected 1
 <gux-form-field-phone>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Default
-      </span>
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
@@ -93,15 +88,14 @@ exports[`gux-form-field-phone #render label-position should render component as 
 <gux-form-field-phone>
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Label
-      </span>
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
@@ -133,15 +127,14 @@ exports[`gux-form-field-phone #render label-position should render component as 
 <gux-form-field-phone label-position="above">
   <mock:shadow-root>
     <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-above gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Label
-      </span>
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
@@ -173,15 +166,14 @@ exports[`gux-form-field-phone #render label-position should render component as 
 <gux-form-field-phone label-position="beside">
   <mock:shadow-root>
     <fieldset class="gux-beside gux-form-field-fieldset-container">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-beside gux-form-field-legend-label" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Label
-      </span>
+      </legend>
+      <div class="gux-beside gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
@@ -213,15 +205,14 @@ exports[`gux-form-field-phone #render label-position should render component as 
 <gux-form-field-phone label-position="screenreader">
   <mock:shadow-root>
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
-      <legend class="gux-form-field-legend-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-screen-reader-beta>
-          Required
-        </gux-screen-reader-beta>
-      </legend>
-      <span aria-hidden="true" class="gux-form-field-legend-label gux-screenreader" role="presentation">
+      <legend class="gux-form-field-screenreader-label">
         Label
-      </span>
+      </legend>
+      <div class="gux-form-field-visual-label gux-screenreader" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">

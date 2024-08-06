@@ -1,4 +1,13 @@
-import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  JSX,
+  Listen,
+  Prop,
+  State,
+  Watch
+} from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
@@ -14,7 +23,8 @@ import {
   GuxFormFieldHelp,
   GuxFormFieldError,
   GuxFormFieldFieldsetContainer,
-  GuxFormFieldLegendLabel
+  GuxFormFieldScreenreaderLabel,
+  GuxFormFieldVisualLabel
 } from '../../functional-components/functional-components';
 
 import { GuxFormFieldLabelPosition } from '../../gux-form-field.types';
@@ -30,6 +40,7 @@ import componentResources from './i18n/en.json';
  * @slot label - Required slot for label tag
  * @slot error - Optional slot for error message
  * @slot help - Optional slot for help message
+ * @slot label-info - Optional slot for label tooltip
  */
 @Component({
   styleUrl: 'gux-form-field-time-picker.scss',
@@ -38,10 +49,12 @@ import componentResources from './i18n/en.json';
 })
 export class GuxFormFieldTimePicker {
   private getI18nValue: GetI18nValue;
-  private timePickerElement: HTMLGuxTimePickerElement;
+  private input: HTMLGuxTimePickerElement;
   private label: HTMLLabelElement;
+  private labelInfo: HTMLGuxLabelInfoBetaElement;
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
+  private hideLabelInfoTimeout: ReturnType<typeof setTimeout>;
 
   @Element()
   private root: HTMLElement;
@@ -64,6 +77,9 @@ export class GuxFormFieldTimePicker {
   @State()
   private hasHelp: boolean = false;
 
+  @State()
+  private hasLabelInfo: boolean = false;
+
   @Watch('hasError')
   watchValue(hasError: boolean): void {
     const timePickerSlot = this.root.querySelector('gux-time-picker');
@@ -74,8 +90,36 @@ export class GuxFormFieldTimePicker {
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
+    this.labelInfo = this.root.querySelector('[slot=label-info]');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+  }
+
+  @Listen('keyup')
+  handleKeyup(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Tab': {
+        if (this.input.matches(':focus-within')) {
+          void this.labelInfo?.showTooltip();
+          this.hideLabelInfoTimeout = setTimeout(() => {
+            void this.labelInfo?.hideTooltip();
+          }, 6000);
+        }
+        break;
+      }
+      default: {
+        if (this.input.matches(':focus-within')) {
+          clearTimeout(this.hideLabelInfoTimeout);
+        }
+        break;
+      }
+    }
+  }
+
+  @Listen('focusout')
+  onFocusout(): void {
+    void this.labelInfo?.hideTooltip();
+    clearTimeout(this.hideLabelInfoTimeout);
   }
 
   async componentWillLoad(): Promise<void> {
@@ -87,8 +131,10 @@ export class GuxFormFieldTimePicker {
     this.setInput();
     this.setLabel();
 
+    this.labelInfo = this.root.querySelector('[slot=label-info]');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+    this.hasLabelInfo = hasSlot(this.root, 'label-info');
 
     trackComponent(this.root, { variant: this.variant });
   }
@@ -105,21 +151,30 @@ export class GuxFormFieldTimePicker {
   render(): JSX.Element {
     return (
       <GuxFormFieldFieldsetContainer labelPosition={this.computedLabelPosition}>
-        <GuxFormFieldLegendLabel
-          position={this.computedLabelPosition}
-          required={this.required}
-          labelText={this.label?.textContent}
-        >
-          <slot name="label" onSlotchange={() => this.setLabel()} />
-          {this.renderScreenReaderText(
-            this.getI18nValue('required'),
-            this.required
-          )}
-          {this.renderScreenReaderText(
+        <GuxFormFieldScreenreaderLabel>
+          {this.label?.textContent}
+          {this.renderText(this.getI18nValue('required'), this.required)}
+          {this.renderText(
             getSlotTextContent(this.root, 'error'),
             this.hasError
           )}
-        </GuxFormFieldLegendLabel>
+
+          {this.renderText(
+            getSlotTextContent(this.root, 'label-info'),
+            this.hasLabelInfo
+          )}
+        </GuxFormFieldScreenreaderLabel>
+        <GuxFormFieldVisualLabel
+          position={this.computedLabelPosition}
+          required={this.required}
+        >
+          <slot name="label" onSlotchange={() => this.setLabel()} />
+          <gux-form-field-label-indicator
+            variant="required"
+            required={this.required}
+          />
+          <slot name="label-info"></slot>
+        </GuxFormFieldVisualLabel>
         <div class="gux-input-and-error-container">
           <div
             class={{
@@ -147,14 +202,9 @@ export class GuxFormFieldTimePicker {
     ) as JSX.Element;
   }
 
-  private renderScreenReaderText(
-    text: string,
-    condition: boolean = true
-  ): JSX.Element {
+  private renderText(text: string, condition: boolean = false): string {
     if (condition) {
-      return (
-        <gux-screen-reader-beta>{text}</gux-screen-reader-beta>
-      ) as JSX.Element;
+      return ' ' + text;
     }
   }
 
@@ -169,25 +219,25 @@ export class GuxFormFieldTimePicker {
   }
 
   private setInput(): void {
-    this.timePickerElement = this.root.querySelector('gux-time-picker');
+    this.input = this.root.querySelector('gux-time-picker');
 
-    this.disabled = this.timePickerElement.disabled;
-    this.required = this.timePickerElement.required;
+    this.disabled = this.input.disabled;
+    this.required = this.input.required;
 
     this.disabledObserver = onDisabledChange(
-      this.timePickerElement,
+      this.input,
       (disabled: boolean) => {
         this.disabled = disabled;
       }
     );
     this.requiredObserver = onRequiredChange(
-      this.timePickerElement,
+      this.input,
       (required: boolean) => {
         this.required = required;
       }
     );
 
-    validateFormIds(this.root, this.timePickerElement);
+    validateFormIds(this.root, this.input);
   }
 
   private setLabel(): void {

@@ -42,7 +42,7 @@
 @prop gse-ui-calendarMenu-day-input-height - Not used since this value is already calculated from using other tokens
 */
 
-@use '~genesys-spark/src/style/mixins.scss';
+@use '~genesys-spark/dist/scss/mixins.scss';
 
 // Style
 :host {

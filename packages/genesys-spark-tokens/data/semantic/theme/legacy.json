@@ -12,7 +12,7 @@
     }
   },
   "background": {
-    "surface": {
+    "container": {
       "primary": {
         "10": {
           "value": "{color.white}",
@@ -436,6 +436,32 @@
         "value": "{color_legacy.secondary.electric_purple}",
         "type": "color"
       }
+    },
+    "icon": {
+      "10": {
+        "value": "{color_legacy.black.50}",
+        "type": "color"
+      }
+    },
+    "form_control": {
+      "click_input": {
+        "10": {
+          "value": "{color_legacy.blue.60}",
+          "type": "color"
+        },
+        "20": {
+          "value": "{color_legacy.blue.50}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color_legacy.blue.40}",
+          "type": "color"
+        },
+        "50": {
+          "value": "{color_legacy.black.100}",
+          "type": "color"
+        }
+      }
     }
   },
   "border": {
@@ -523,6 +549,10 @@
         },
         "20": {
           "value": "{color_legacy.black.80}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color_legacy.black.50}",
           "type": "color"
         }
       },

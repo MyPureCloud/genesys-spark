@@ -25,7 +25,7 @@
 @prop gse-ui-icon-size-sm
 */
 
-@use '~genesys-spark/src/style/mixins.scss';
+@use '~genesys-spark/dist/scss/mixins.scss';
 
 @mixin gse-ui-focus {
   border: var(--gse-ui-formControl-input-active-border-width)

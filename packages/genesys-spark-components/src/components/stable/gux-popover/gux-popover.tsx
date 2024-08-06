@@ -92,9 +92,9 @@ export class GuxPopover {
       return;
     }
 
-    const focusIsOutsidePopover = !this.root.contains(
-      event.relatedTarget as Node
-    );
+    const focusIsOutsidePopover =
+      event.relatedTarget && !this.root.contains(event.relatedTarget as Node);
+
     if (focusIsOutsidePopover) {
       this.dismiss();
     }

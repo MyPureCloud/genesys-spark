@@ -26,7 +26,7 @@
 @prop $gse-ui-modal-opacity - Skipped (this is incoporated into the gse-ui-modal-shroudColor token and is no longer needed. Thinking about asking design team to remove this token to avoid confusion)
 */
 
-@use '~genesys-spark/src/style/typography.scss';
+@use '~genesys-spark/dist/scss/typography.scss';
 
 ::slotted(button:active:enabled) {
   color: var(--gse-ui-link-active-foregroundColor);

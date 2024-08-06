@@ -37,7 +37,11 @@ export class GuxMonthListItem {
       this.root
     ) as HTMLElement;
 
-    if (parentList && parentList.shadowRoot.activeElement === null) {
+    if (
+      parentList &&
+      parentList.shadowRoot.activeElement === null &&
+      !this.selected
+    ) {
       this.root.blur();
       parentList.focus();
     }

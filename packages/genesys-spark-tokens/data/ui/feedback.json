@@ -113,7 +113,7 @@
       "type": "boxShadow"
     },
     "icon": {
-      "value": "{icon.size.md}",
+      "value": "{icon.medium.size}",
       "type": "sizing"
     },
     "wrapping_width": {
@@ -178,7 +178,7 @@
       "type": "typography"
     },
     "icon": {
-      "value": "{icon.size.lg}",
+      "value": "{icon.large.size}",
       "type": "sizing"
     },
     "small": {
@@ -313,33 +313,30 @@
   "progress_and_loading": {
     "spinner": {
       "foreground": {
-        "value": "{color.blueberry.600}",
+        "value": "{background.system.progress_and_loading.progressed}",
         "type": "color"
       },
       "base": {
-        "value": "{color.blueberry.200}",
+        "value": "{background.system.progress_and_loading.default}",
         "type": "color"
       },
       "large": {
         "value": "48",
-        "type": "sizing"
+        "type": "sizing",
+        "description": "keeping hard code as it cant have \"px\""
       },
       "small": {
         "value": "16",
-        "type": "sizing"
+        "type": "sizing",
+        "description": "keeping hard code as it cant have \"px\""
       },
       "text": {
-        "value": {
-          "fontFamily": "{font_family.roboto}",
-          "fontWeight": "{font_weight.semi_bold}",
-          "lineHeight": "{line_height.xs}",
-          "fontSize": "{font_size.xs}"
-        },
+        "value": "{body.sm.semi_bold}",
         "type": "typography"
       }
     },
     "text_color": {
-      "value": "{color.cornflower.900}",
+      "value": "{foreground.container.high_emphasis}",
       "type": "color"
     },
     "loading_state": {
