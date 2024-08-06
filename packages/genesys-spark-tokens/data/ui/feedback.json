@@ -526,19 +526,19 @@
   },
   "modal_side_sheet": {
     "background_color": {
-      "value": "{color.white}",
+      "value": "{background.container.elevated.default}",
       "type": "color"
     },
     "header_color": {
-      "value": "{color.cornflower.900}",
+      "value": "{foreground.container.high_emphasis}",
       "type": "color"
     },
     "close_color": {
-      "value": "{color.cornflower.700}",
+      "value": "{foreground.interactive.subtle.default}",
       "type": "color"
     },
     "divider_color": {
-      "value": "{color.cornflower.300}",
+      "value": "{border.container.divider}",
       "type": "color"
     },
     "shroud_color": {
@@ -547,61 +547,61 @@
     },
     "shroud": {
       "opacity": {
-        "value": "0.8",
+        "value": "{opacity.shroud}",
         "type": "opacity"
       }
     },
     "description_color": {
-      "value": "{color.cornflower.800}",
+      "value": "{foreground.container.mid_emphasis}",
       "type": "color"
     },
     "heading": {
-      "value": "{typography.heading.md_semi_bold}",
+      "value": "{heading.md.semi_bold}",
       "type": "typography"
     },
     "description": {
-      "value": "{typography.body.sm_regular}",
+      "value": "{body.sm.regular}",
       "type": "typography"
     },
     "header": {
       "interior_gap": {
-        "value": "{spacing.2xs}",
+        "value": "{container.medium.gap}",
         "type": "spacing"
       },
       "padding_top": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       },
       "padding_left": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       },
       "padding_right": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       },
       "gap": {
-        "value": "{spacing.xs}",
+        "value": "{container.large.gap}",
         "type": "spacing"
       }
     },
     "gap": {
-      "value": "{spacing.md}",
+      "value": "{container.xlarge.gap}",
       "type": "spacing"
     },
     "body": {
       "padding_left": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       },
       "padding_right": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       }
     },
     "footer": {
       "padding": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       }
     },
@@ -622,76 +622,76 @@
   },
   "dynamic_side_sheet": {
     "background_color": {
-      "value": "{color.white}",
+      "value": "{modal_side_sheet.background_color}",
       "type": "color"
     },
     "header_color": {
-      "value": "{color.cornflower.900}",
+      "value": "{modal_side_sheet.header_color}",
       "type": "color"
     },
     "close_color": {
-      "value": "{color.cornflower.700}",
+      "value": "{modal_side_sheet.close_color}",
       "type": "color"
     },
     "divider_color": {
-      "value": "{color.cornflower.300}",
+      "value": "{modal_side_sheet.divider_color}",
       "type": "color"
     },
     "box_shadow": {
-      "value": "{elevation.medium}",
+      "value": "{contanier.medium.box_shadow}",
       "type": "boxShadow"
     },
     "description_color": {
-      "value": "{color.cornflower.800}",
+      "value": "{modal_side_sheet.description_color}",
       "type": "color"
     },
     "heading": {
-      "value": "{typography.heading.md_semi_bold}",
+      "value": "{heading.md.semi_bold}",
       "type": "typography"
     },
     "description": {
-      "value": "{typography.body.sm_regular}",
+      "value": "{body.sm.regular}",
       "type": "typography"
     },
     "header": {
       "interior_gap": {
-        "value": "{spacing.2xs}",
+        "value": "{container.medium.gap}",
         "type": "spacing"
       },
       "padding_top": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       },
       "padding_left": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       },
       "padding_right": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       },
       "gap": {
-        "value": "{spacing.xs}",
+        "value": "{container.large.gap}",
         "type": "spacing"
       }
     },
     "gap": {
-      "value": "{spacing.md}",
+      "value": "{container.xlarge.gap}",
       "type": "spacing"
     },
     "body": {
       "padding_left": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       },
       "padding_right": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       }
     },
     "footer": {
       "padding": {
-        "value": "{spacing.md}",
+        "value": "{container.large.padding}",
         "type": "spacing"
       }
     },
