@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.72.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.71.1...v4.72.0) (2024-08-07)
+
+
+### Features
+
+* **time-zone:** Add gux-time-zone to v4 ([#549](https://github.com/MyPureCloud/genesys-spark/issues/549)) ([1e6b3e1](https://github.com/MyPureCloud/genesys-spark/commit/1e6b3e1c3c68e154d7a7a529c6569c8130a474e6))
+
 ### [4.71.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.71.0...v4.71.1) (2024-08-01)
 
 
