@@ -840,6 +840,13 @@
         "type": "sizing",
         "description": "The heioght for track elements, like the track of the slider."
       }
+    },
+    "indicator": {
+      "width": {
+        "value": "{size.5xs}",
+        "type": "sizing",
+        "description": "The recommended divider indicator width, used for the indicators of active tabs, for example"
+      }
     }
   }
 }

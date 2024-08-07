@@ -2,12 +2,12 @@
   "tabs": {
     "item": {
       "height": {
-        "value": "{size.xl}",
+        "value": "{container.large.height}",
         "type": "sizing"
       },
       "horizontal": {
         "fixed_height": {
-          "value": "{size.xl}",
+          "value": "{container.large.height}",
           "type": "sizing"
         },
         "padding": {
@@ -35,17 +35,17 @@
       "divider": {
         "horizontal": {
           "height": {
-            "value": "1px",
+            "value": "{divider.width}",
             "type": "sizing"
           }
         },
         "vertical": {
           "height": {
-            "value": "{size.xl}",
+            "value": "{container.large.height}",
             "type": "sizing"
           },
           "width": {
-            "value": "1px",
+            "value": "{divider.width}",
             "type": "sizing"
           }
         },
@@ -57,17 +57,17 @@
       "indicator": {
         "vertical": {
           "height": {
-            "value": "{size.xl}",
+            "value": "{container.large.height}",
             "type": "sizing"
           },
           "width": {
-            "value": "2px",
+            "value": "{divider.indicator.width}",
             "type": "sizing"
           }
         },
         "horizontal": {
           "height": {
-            "value": "2px",
+            "value": "{divider.indicator.width}",
             "type": "sizing"
           }
         },
@@ -86,7 +86,7 @@
           "type": "color"
         },
         "size": {
-          "value": "{size.xs}",
+          "value": "{assets.small.size}",
           "type": "sizing"
         }
       },
@@ -96,7 +96,7 @@
       },
       "vertical": {
         "fixed_height": {
-          "value": "{size.xl}",
+          "value": "{container.large.height}",
           "type": "sizing"
         },
         "padding": {
@@ -132,7 +132,7 @@
           "type": "sizing"
         },
         "height": {
-          "value": "{size.xl}",
+          "value": "{container.large.height}",
           "type": "sizing"
         },
         "margin_bottom": {
@@ -147,13 +147,13 @@
       "divider": {
         "horizontal": {
           "height": {
-            "value": "1px",
+            "value": "{divider.width}",
             "type": "sizing"
           }
         },
         "vertical": {
           "width": {
-            "value": "1px",
+            "value": "{divider.width}",
             "type": "sizing"
           }
         }
@@ -213,7 +213,7 @@
         "type": "borderRadius"
       },
       "height": {
-        "value": "{size.2xl}",
+        "value": "{container.xlarge.height}",
         "type": "sizing"
       },
       "width": {
@@ -233,17 +233,17 @@
       "divider": {
         "bottom": {
           "height": {
-            "value": "1px",
+            "value": "{divider.width}",
             "type": "sizing"
           }
         },
         "right": {
           "height": {
-            "value": "{size.lg}",
+            "value": "{container.small.height}",
             "type": "sizing"
           },
           "width": {
-            "value": "1px",
+            "value": "{divider.width}",
             "type": "sizing"
           }
         }
@@ -268,7 +268,7 @@
           "type": "color"
         },
         "height": {
-          "value": "2px",
+          "value": "{divider.indicator.width}",
           "type": "sizing"
         }
       },
@@ -278,7 +278,7 @@
           "type": "color"
         },
         "size": {
-          "value": "{size.xs}",
+          "value": "{assets.small.size}",
           "type": "sizing"
         }
       },
@@ -292,7 +292,7 @@
           "type": "sizing"
         },
         "width": {
-          "value": "{size.lg}",
+          "value": "{container.small.height}",
           "type": "sizing"
         },
         "default_color": {
@@ -333,7 +333,7 @@
       },
       "arrow": {
         "height": {
-          "value": "48px",
+          "value": "{container.xlarge.height}",
           "type": "sizing"
         }
       }
