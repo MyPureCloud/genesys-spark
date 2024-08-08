@@ -611,7 +611,7 @@
       },
       "foreground_default": {
         "color": {
-          "value": "{foreground.container.high_contrast.mid_emphasis}",
+          "value": "{foreground.container.high_contrast.high_emphasis}",
           "type": "color"
         }
       },
