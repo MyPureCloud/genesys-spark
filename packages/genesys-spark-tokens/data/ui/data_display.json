@@ -561,13 +561,13 @@
     "badge": {
       "available": {
         "color": {
-          "value": "{foreground.system.success.accent}",
+          "value": "{background.system.status.available}",
           "type": "color"
         }
       },
       "busy": {
         "color": {
-          "value": "{foreground.system.error.accent}",
+          "value": "{background.system.status.busy}",
           "type": "color",
           "icon": {
             "margin": {
@@ -584,28 +584,28 @@
         }
       },
       "away": {
-        "value": "{foreground.system.warning.accent}",
+        "value": "{background.system.status.away}",
         "type": "color"
       },
       "on-queue": {
         "color": {
-          "value": "{background.interactive.primary.default}",
+          "value": "{background.system.status.on_queue}",
           "type": "color"
         }
       },
       "offline": {
         "color": {
-          "value": "{color.cornflower.600}",
+          "value": "{background.system.status.offline}",
           "type": "color"
         }
       },
       "out-of-office": {
-        "value": "#B74BA4",
+        "value": "{background.system.status.out_of_office}",
         "type": "color"
       },
       "notification": {
         "color": {
-          "value": "{color.tomato.600}",
+          "value": "{background.system.status.notification}",
           "type": "color"
         }
       },
@@ -641,59 +641,59 @@
     "media": {
       "initials_background": {
         "default": {
-          "value": "{color.islandaqua.900}",
+          "value": "{background.system.custom_accents.bold.accent_1}",
           "type": "color"
         },
         "accent1": {
-          "value": "{color.lavenderhaze.900}",
+          "value": "{background.system.custom_accents.bold.accent_2}",
           "type": "color"
         },
         "accent2": {
-          "value": "{color.islandaqua.400}",
+          "value": "{background.system.custom_accents.subtle.accent_4}",
           "type": "color"
         },
         "accent3": {
-          "value": "{color.islandaqua.800}",
+          "value": "{background.system.custom_accents.bold.accent_4}",
           "type": "color"
         },
         "accent4": {
-          "value": "#547688",
+          "value": "{background.system.custom_accents.bold.accent_6}",
           "type": "color"
         },
         "accent5": {
-          "value": "#a5cae0",
+          "value": "{background.system.custom_accents.subtle.accent_6}",
           "type": "color"
         },
         "accent6": {
-          "value": "{color.lavenderhaze.600}",
+          "value": "{background.system.custom_accents.subtle.accent_2}",
           "type": "color"
         },
         "accent7": {
-          "value": "#A05195",
+          "value": "{background.system.custom_accents.bold.accent_8}",
           "type": "color"
         },
         "accent8": {
-          "value": "#F95D6A",
+          "value": "{background.system.custom_accents.bold.accent_9}",
           "type": "color"
         },
         "accent9": {
-          "value": "#FE8F85",
+          "value": "{background.system.custom_accents.subtle.accent_9}",
           "type": "color"
         },
         "accent10": {
-          "value": "#FFC650",
+          "value": "{background.system.custom_accents.bold.accent_11}",
           "type": "color"
         },
         "accent11": {
-          "value": "{color.tomato.600}",
+          "value": "{background.system.custom_accents.subtle.accent_10}",
           "type": "color"
         },
         "accent12": {
-          "value": "{color.tomato.800}",
+          "value": "{background.system.custom_accents.bold.accent_10}",
           "type": "color"
         },
         "overflow_count": {
-          "value": "{color.cornflower.600}",
+          "value": "{foreground.container.low_emphasis}",
           "type": "color"
         },
         "add": {

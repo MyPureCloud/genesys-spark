@@ -321,6 +321,36 @@
           "value": "{color.islandaqua.200}",
           "type": "color"
         }
+      },
+      "status": {
+        "10": {
+          "value": "{color.emerald.500}",
+          "type": "color"
+        },
+        "20": {
+          "value": "{color.pepper.500}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color.honey.500}",
+          "type": "color"
+        },
+        "40": {
+          "value": "{color.blueberry.600}",
+          "type": "color"
+        },
+        "50": {
+          "value": "{color.cornflower.600}",
+          "type": "color"
+        },
+        "60": {
+          "value": "{color.raspberry.700}",
+          "type": "color"
+        },
+        "70": {
+          "value": "{color.tomato.600}",
+          "type": "color"
+        }
       }
     }
   },

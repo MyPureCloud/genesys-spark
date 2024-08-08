@@ -338,6 +338,36 @@
           "type": "color",
           "description": "The color to indicate that this progress in a component."
         }
+      },
+      "status": {
+        "available": {
+          "value": "{background.custom_accents.status.10}",
+          "type": "color"
+        },
+        "busy": {
+          "value": "{background.custom_accents.status.20}",
+          "type": "color"
+        },
+        "away": {
+          "value": "{background.custom_accents.status.30}",
+          "type": "color"
+        },
+        "on_queue": {
+          "value": "{background.custom_accents.status.40}",
+          "type": "color"
+        },
+        "offline": {
+          "value": "{background.custom_accents.status.50}",
+          "type": "color"
+        },
+        "out_of_office": {
+          "value": "{background.custom_accents.status.60}",
+          "type": "color"
+        },
+        "notification": {
+          "value": "{background.custom_accents.status.70}",
+          "type": "color"
+        }
       }
     },
     "form_control": {
