@@ -109,6 +109,23 @@ describe('gux-form-field-text-like', () => {
       });
     });
 
+    describe('label-info', () => {
+      it('should render component as expected', async () => {
+        const html = `
+          <gux-form-field-text-like>
+          <input slot="input" type="text" name="e-1" />
+          <label slot="label">Default</label>
+          <gux-label-info-beta slot="label-info">
+            <span slot="content">This is some tooltip text</span>
+          </gux-label-info-beta>
+        </gux-form-field-text-like>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
     describe('label-position', () => {
       [
         '',

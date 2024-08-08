@@ -1,4 +1,4 @@
-@use '~genesys-spark/src/style/focus.scss';
+@use '~genesys-spark/dist/scss/focus.scss';
 
 :host {
   display: block;
@@ -30,7 +30,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  place-content: stretch center;
   align-items: center;
   width: 100%;
   height: var(--gse-ui-phoneInput-dropdown-height);
@@ -46,6 +45,13 @@
     var(--gse-ui-formControl-input-default-border-style)
     var(--gse-ui-formControl-input-default-border-color);
   border-radius: var(--gse-ui-formControl-input-borderRadius);
+
+  .gux-input {
+    flex: 1;
+    align-content: center;
+    height: 100%;
+    cursor: text;
+  }
 
   &.gux-error {
     border: var(--gse-ui-formControl-input-error-border-width)

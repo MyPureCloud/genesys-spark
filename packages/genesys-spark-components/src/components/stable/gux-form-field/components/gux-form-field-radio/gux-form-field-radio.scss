@@ -29,6 +29,7 @@
 
 :host {
   display: block;
+  padding-top: 4px;
 }
 
 :host(.gux-disabled) {
@@ -59,7 +60,6 @@
   display: flex;
   flex-direction: row;
   gap: var(--gse-ui-radioButton-helper-gap);
-  padding-top: 4px;
 
   .gux-label {
     display: flex;

@@ -1,5 +1,5 @@
 // Variables part
-@use '~genesys-spark/src/style/focus.scss';
+@use '~genesys-spark/dist/scss/focus.scss';
 
 :host {
   display: inline-block;
@@ -51,6 +51,7 @@
   width: 100%;
   height: var(--gse-ui-formControl-input-textfield-height);
   padding: var(--gse-ui-formControl-textarea-padding);
+  cursor: text;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   background-image: none;
   border: var(--gse-ui-formControl-input-default-border-width)

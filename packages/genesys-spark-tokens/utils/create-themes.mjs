@@ -1,13 +1,10 @@
-import {
-  registerTransforms,
-  permutateThemes
-} from '@tokens-studio/sd-transforms';
+import { register, permutateThemes } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { promises } from 'fs';
 import { camelCase } from 'change-case';
 
 export async function createThemes(sourceFolder, outputFolder) {
-  registerTransforms(StyleDictionary, {
+  register(StyleDictionary, {
     expand: {
       composition: true,
       border: true,
@@ -22,6 +19,8 @@ export async function createThemes(sourceFolder, outputFolder) {
 
   const themes = permutateThemes($themes, { separator: '-' });
 
+  delete themes['gse-legacy-dark-ui'];
+
   const sdThemes = Object.entries(themes).map(([name, tokensets]) => {
     const baseName = name.replace(/-ui$/, '');
 
@@ -31,6 +30,17 @@ export async function createThemes(sourceFolder, outputFolder) {
         preprocessors: ['tokens-studio'],
         hooks: {
           transforms: {
+            'color/gse': {
+              type: 'value',
+              transitive: false,
+              filter: () => true,
+              transform: token => {
+                if (token.type === 'color') {
+                  return token.value.toLowerCase();
+                }
+                return token.value;
+              }
+            },
             'name/gse': {
               type: 'name',
               transitive: false,
@@ -48,22 +58,8 @@ export async function createThemes(sourceFolder, outputFolder) {
         platforms: Object.assign(
           getPlatform(
             baseName,
-            'css',
-            'css/variables',
-            'tokens-studio',
-            outputFolder
-          ),
-          getPlatform(
-            baseName,
-            'less',
-            'less/variables',
-            'tokens-studio',
-            outputFolder
-          ),
-          getPlatform(
-            baseName,
             'scss',
-            'scss/variables',
+            'css/variables',
             'tokens-studio',
             outputFolder
           ),
@@ -85,7 +81,7 @@ function getPlatform(name, type, format, transformGroup, outputFolder) {
   return {
     [type]: {
       transformGroup,
-      transforms: ['name/gse'],
+      transforms: ['color/gse', 'name/gse'],
       prefix: 'gse',
       buildPath: `${outputFolder}/${type}/`,
       files: [
@@ -113,7 +109,8 @@ function getPlatform(name, type, format, transformGroup, outputFolder) {
       ],
       options: {
         showFileHeader: false,
-        outputReferences: false
+        outputReferences: false,
+        selector: `@mixin tokens`
       }
     }
   };

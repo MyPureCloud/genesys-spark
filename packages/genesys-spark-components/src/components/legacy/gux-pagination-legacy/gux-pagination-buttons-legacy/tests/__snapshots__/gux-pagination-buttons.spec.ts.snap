@@ -25,6 +25,8 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (1)
             <div class="gux-form-field-container gux-screenreader">
               <div class="gux-form-field-label gux-screenreader">
                 <slot name="label"></slot>
+                <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+                <slot name="label-info"></slot>
               </div>
               <div class="gux-input-and-error-container">
                 <div class="gux-input">
@@ -99,6 +101,8 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (2)
             <div class="gux-form-field-container gux-screenreader">
               <div class="gux-form-field-label gux-screenreader">
                 <slot name="label"></slot>
+                <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+                <slot name="label-info"></slot>
               </div>
               <div class="gux-input-and-error-container">
                 <div class="gux-input">
@@ -173,6 +177,8 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (3)
             <div class="gux-form-field-container gux-screenreader">
               <div class="gux-form-field-label gux-screenreader">
                 <slot name="label"></slot>
+                <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+                <slot name="label-info"></slot>
               </div>
               <div class="gux-input-and-error-container">
                 <div class="gux-input">

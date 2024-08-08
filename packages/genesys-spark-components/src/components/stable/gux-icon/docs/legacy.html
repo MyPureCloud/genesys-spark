@@ -1,0 +1,46 @@
+<h1>gux-icon</h1>
+
+<nav>
+  <ul>
+    <li><a href="gux-icon.html">Usage Guidelines</a></li>
+    <li><a href="gux-icon-current.html">Current icons</a></li>
+    <li><a href="gux-icon-spark.html">Spark icons</a></li>
+    <li><a href="gux-icon-restricted.html">Restricted icons</a></li>
+    <li><a href="gux-icon-legacy.html" aria-current="page">Legacy icons</a></li>
+    <li><a href="gux-icon-deprecated.html">Deprecated icons</a></li>
+  </ul>
+</nav>
+
+<h2>Legacy Icons</h2>
+
+<gux-icon size="large" icon-name="legacy/cc-delivery" decorative></gux-icon>
+<p>
+  After a review of icons in this project many of them were removed as they will
+  not be part of the official Spark Design System. You should migrate all usage
+  of these icons where possible and if not possible contact the Spark Design
+  System team to get a suitable icon added to the system. For convenience all
+  legacy icons will be available via a "legacy/" prefix to aid in the transition
+  to officially supported icons.
+</p>
+
+<h2>Legacy Icons (Migrate away from these)</h2>
+${LEGACY_ICON_EXAMPLE_LIST}
+
+<style>
+  gux-icon {
+    color: var(--gse-core-color-cornflower-700);
+  }
+
+  .icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .icon-example {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+  }
+</style>

@@ -89,5 +89,22 @@ describe('gux-form-field-textarea', () => {
         expect(page.root).toMatchSnapshot();
       });
     });
+
+    describe('label-info', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-textarea>
+        <textarea slot="input" name="textarea"></textarea>
+        <label slot="label">Default</label>
+        <gux-label-info-beta slot="label-info">
+          <span slot="content">This is some tooltip text</span>
+        </gux-label-info-beta>
+      </gux-form-field-textarea>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
   });
 });

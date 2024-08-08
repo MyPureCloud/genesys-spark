@@ -1,4 +1,4 @@
-# gux-form-field-radio
+# gux-form-field-radio-group-beta
 
 
 
@@ -19,19 +19,18 @@
 | `"group-error"` | Optional slot for error message |
 | `"group-help"`  | Optional slot for help message  |
 | `"group-label"` | Required slot for label tag     |
+| `"label-info"`  | Optional slot for tooltip       |
 
 
 ## Dependencies
 
 ### Depends on
 
-- [gux-screen-reader-beta](../../../../beta/gux-screen-reader)
 - [gux-icon](../../../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-form-field-radio-group-beta --> gux-screen-reader-beta
   gux-form-field-radio-group-beta --> gux-icon
   style gux-form-field-radio-group-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```

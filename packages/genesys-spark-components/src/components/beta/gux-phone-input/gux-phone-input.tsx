@@ -26,6 +26,7 @@ import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-vali
 import { logWarn } from '@utils/error/log-error';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { Alpha2Code, Region, RegionObject } from './gux-phone.types';
+import { focusInputElement } from '@utils/dom/focus-input-element';
 
 @Component({
   styleUrl: 'gux-phone-input.scss',
@@ -502,22 +503,27 @@ export class GuxPhoneInput {
 
   private renderInput(): JSX.Element {
     return (
-      <input
-        id={'tel-input'}
-        class={{
-          'gux-phone-text-input': true,
-          'gux-disabled': this.disabled
-        }}
-        type="tel"
-        placeholder={this.phoneUtil.format(
-          this.phoneUtil.getExampleNumber(
-            this.region?.alpha2Code || this.defaultRegionCode || 'US'
-          ),
-          this.displayFormat
-        )}
-        value={this.value}
-        disabled={this.disabled}
-      />
+      <div
+        class="gux-input"
+        onClick={() => focusInputElement(this.inputElement)}
+      >
+        <input
+          id={'tel-input'}
+          class={{
+            'gux-phone-text-input': true,
+            'gux-disabled': this.disabled
+          }}
+          type="tel"
+          placeholder={this.phoneUtil.format(
+            this.phoneUtil.getExampleNumber(
+              this.region?.alpha2Code || this.defaultRegionCode || 'US'
+            ),
+            this.displayFormat
+          )}
+          value={this.value}
+          disabled={this.disabled}
+        />
+      </div>
     ) as JSX.Element;
   }
 

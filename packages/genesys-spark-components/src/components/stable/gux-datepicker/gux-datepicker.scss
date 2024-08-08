@@ -25,7 +25,8 @@
 @prop gse-ui-icon-size-sm
 */
 
-@use '~genesys-spark/src/style/mixins.scss';
+@use '../gux-form-field/gux-form-field.scss';
+@use '~genesys-spark/dist/scss/mixins.scss';
 
 @mixin gse-ui-focus {
   border: var(--gse-ui-formControl-input-active-border-width)
@@ -86,8 +87,8 @@
       align-self: auto;
       order: 0;
       margin-right: var(--gse-ui-formControl-label-gap);
-      font-size: var(--gse-ui-formControl-label-text-fontSize);
-      font-weight: var(--gse-ui-formControl-label-text-fontWeight);
+
+      @include gux-form-field.gse-ui-formControl-label-bold;
     }
 
     .gux-datepicker-field-input {

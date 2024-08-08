@@ -21,6 +21,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [gux-time-zone-picker-beta](../../../beta/gux-time-zone-picker)
+
 ### Depends on
 
 - [gux-list-divider](../../gux-list/gux-list-divider)
@@ -29,6 +33,7 @@
 ```mermaid
 graph TD;
   gux-option-group-beta --> gux-list-divider
+  gux-time-zone-picker-beta --> gux-option-group-beta
   style gux-option-group-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

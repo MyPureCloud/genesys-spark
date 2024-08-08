@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.62.2",
+  "version": "4.73.0",
   "description": "Common webcomponents",
   "license": "MIT",
   "main": "dist/stencil-wrapper.js",
@@ -8,8 +8,9 @@
     "dist/"
   ],
   "scripts": {
-    "build": "npm run clean && npm run i18n && npm run generate-gux-icon-types-file && npm run copy-genesys-spark-utils && npm run stencil && npm run build-wrapper",
+    "build": "npm run clean && npm run i18n && npm run build-themes && npm run generate-gux-icon-types-file && npm run copy-genesys-spark-utils && npm run stencil && npm run build-wrapper",
     "build-i18n": "./scripts/build-i18n.js",
+    "build-themes": "./scripts/build-themes.js",
     "build-wrapper": "./scripts/wrap-stencil.js",
     "check-a11y": "node ./scripts/check-a11y.mjs",
     "check-readmes": "./scripts/check-readmes.sh",

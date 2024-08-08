@@ -71,6 +71,28 @@ describe('gux-form-field-time-zone-picker', () => {
       });
     });
 
+    describe('label-info', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-time-zone-picker>
+          <gux-time-zone-picker-beta
+          value="Etc/GMT+1"
+          workspace-default="Etc/GMT"
+          local-default="America/Detroit"
+        >
+        </gux-time-zone-picker-beta>
+        <label slot="label">Select Time Zone</label>
+        <gux-label-info-beta slot="label-info">
+          <span slot="content">This is some tooltip text</span>
+        </gux-label-info-beta>
+      </gux-form-field-time-zone-picker>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
     describe('error', () => {
       it('should render component as expected', async () => {
         const html = `
