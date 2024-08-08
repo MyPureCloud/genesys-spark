@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.73.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.72.0...v4.73.0) (2024-08-08)
+
+
+### Features
+
+* **datepicker:** change font-weight on label ([#557](https://github.com/MyPureCloud/genesys-spark/issues/557)) ([7b17a81](https://github.com/MyPureCloud/genesys-spark/commit/7b17a81dbb83a5b0ca8451cac7ce3acca3016d71))
+
+
+### Bug Fixes
+
+* click events aren't triggering for line charts ([19e8b56](https://github.com/MyPureCloud/genesys-spark/commit/19e8b56f36b71e5710579f7822fcba219841f96c))
+
 ## [4.72.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.71.1...v4.72.0) (2024-08-07)
 
 
