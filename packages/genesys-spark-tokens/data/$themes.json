@@ -451,7 +451,14 @@
       "border_radius.focus.large": "863ebe09eda9ddfb5d3548c123cfed571cf1274c",
       "border_radius.focus.medium": "f2c87579ac1f11a371eb5b6301658e0775da31fa",
       "border_radius.focus.small": "79675ae64f8c132f3956a5861008315ec50541de",
-      "border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354"
+      "border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354",
+      "background.custom_accents.status.10": "705877861885e045d0c9e93c6345845565300791",
+      "background.custom_accents.status.20": "24ea700dabc958b2995a2869fe7b84967aea4844",
+      "background.custom_accents.status.30": "11cab76d07c568e85a6d1dc934734ca59c2a9c19",
+      "background.custom_accents.status.40": "b4391648c60c37b0d429684c4f17ad9c8306c6c0",
+      "background.custom_accents.status.50": "4a2dd9acbc1a988685ffcd262a0ec5cbadf005fb",
+      "background.custom_accents.status.60": "e297f3e0ad0688ff7192de43857ba5eec7a798b0",
+      "background.custom_accents.status.70": "309543749500845ea443627cb5816c30dfb0e4f7"
     }
   },
   {
@@ -596,7 +603,14 @@
       "border_radius.focus.large": "863ebe09eda9ddfb5d3548c123cfed571cf1274c",
       "border_radius.focus.medium": "f2c87579ac1f11a371eb5b6301658e0775da31fa",
       "border_radius.focus.small": "79675ae64f8c132f3956a5861008315ec50541de",
-      "border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354"
+      "border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354",
+      "background.custom_accents.status.10": "705877861885e045d0c9e93c6345845565300791",
+      "background.custom_accents.status.20": "24ea700dabc958b2995a2869fe7b84967aea4844",
+      "background.custom_accents.status.30": "11cab76d07c568e85a6d1dc934734ca59c2a9c19",
+      "background.custom_accents.status.40": "b4391648c60c37b0d429684c4f17ad9c8306c6c0",
+      "background.custom_accents.status.50": "4a2dd9acbc1a988685ffcd262a0ec5cbadf005fb",
+      "background.custom_accents.status.60": "e297f3e0ad0688ff7192de43857ba5eec7a798b0",
+      "background.custom_accents.status.70": "309543749500845ea443627cb5816c30dfb0e4f7"
     }
   },
   {
@@ -871,7 +885,14 @@
       "border.form_control.text_input.default": "b3e5c197aea4a4ac612e4d7dbaee2f8c7d191e0b",
       "border.form_control.text_input.hover": "b17184819c452568acfcd801a4fe6f1447fff6fd",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
-      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc"
+      "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc",
+      "background.system.status.available": "62cec4ef35b29c906e8d0cfd3216fc0e3aabd58a",
+      "background.system.status.busy": "dc63b8f7cc76508263af7198c1744e781de44cc3",
+      "background.system.status.away": "dff61f744b6c1fa807ae883a165344dca1879226",
+      "background.system.status.on_queue": "e83f453774172e56ae7b7bf5734a949592d8c0c5",
+      "background.system.status.offline": "3d8ba8daefdf6a0f305f19aea5b1aaf60cdc4c1f",
+      "background.system.status.out_of_office": "fd6a8d1ee94cad713066e8fb6df80e763dadba66",
+      "background.system.status.notification": "9c6d99cbe2267653f6a75f503f2b379387be0852"
     }
   },
   {
