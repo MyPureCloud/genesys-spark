@@ -402,7 +402,7 @@
     "grouped_menu": {
       "title": {
         "padding": {
-          "value": "{container.small.vertical_padding} {container.small.padding} {container.xsmall.vertical_padding}",
+          "value": "{container.xsmall.padding} {container.small.padding} {container.xsmall.gap}",
           "type": "spacing"
         },
         "height": {
@@ -419,7 +419,7 @@
         }
       },
       "padding": {
-        "value": "{container.small.vertical_padding} {container.xsmall.padding}",
+        "value": "{container.xsmall.padding} {container.2xs.padding}",
         "type": "spacing"
       },
       "divider": {

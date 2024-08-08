@@ -11,7 +11,7 @@
           "type": "sizing"
         },
         "padding": {
-          "value": "11px {spacing.2xs} 10px",
+          "value": "11px {container.small.padding} 10px",
           "type": "spacing"
         }
       },
@@ -29,7 +29,7 @@
         "type": "typography"
       },
       "item_text_color": {
-        "value": "{color.cornflower.900}",
+        "value": "{foreground.container.high_emphasis}",
         "type": "color"
       },
       "divider": {
@@ -50,7 +50,7 @@
           }
         },
         "divider_color": {
-          "value": "{color.cornflower.300}",
+          "value": "{border.container.divider}",
           "type": "color"
         }
       },
@@ -72,17 +72,17 @@
           }
         },
         "hover_color": {
-          "value": "{color.blueberry.600}",
+          "value": "{border.container.edges.enabled}",
           "type": "color"
         },
         "active_color": {
-          "value": "{color.blueberry.700}",
+          "value": "{border.container.edges.active}",
           "type": "color"
         }
       },
       "icon": {
         "icon_color": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.container.high_emphasis}",
           "type": "color"
         },
         "size": {
@@ -91,7 +91,7 @@
         }
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{container.small.gap}",
         "type": "spacing"
       },
       "vertical": {
@@ -100,13 +100,13 @@
           "type": "sizing"
         },
         "padding": {
-          "value": "11px 9px 10px 12px",
+          "value": "11px 9px 10px {container.small.padding}",
           "type": "spacing"
         }
       },
       "focus_ring": {
         "offset": {
-          "value": "1px",
+          "value": "{focus_ring.offset}",
           "type": "spacing"
         }
       }
@@ -122,7 +122,7 @@
           "type": "sizing"
         },
         "margin_right": {
-          "value": "{spacing.xs}",
+          "value": "{container.medium.padding}",
           "type": "spacing"
         }
       },
@@ -136,7 +136,7 @@
           "type": "sizing"
         },
         "margin_bottom": {
-          "value": "{spacing.xs}",
+          "value": "{container.medium.padding}",
           "type": "spacing"
         }
       },
@@ -173,17 +173,17 @@
   "advanced_tabs": {
     "divider": {
       "divider_color": {
-        "value": "{color.cornflower.300}",
+        "value": "{tabs.item.divider.divider_color}",
         "type": "color"
       }
     },
     "item": {
       "padding": {
-        "value": "11px {spacing.2xs} 10px",
+        "value": "11px {container.small.padding} 10px",
         "type": "spacing"
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{container.small.gap}",
         "type": "spacing"
       },
       "focus": {
@@ -205,7 +205,7 @@
         }
       },
       "background_color": {
-        "value": "{color.white}",
+        "value": "{background.container.elevated.default}",
         "type": "color"
       },
       "border_radius": {
@@ -250,7 +250,7 @@
       },
       "text": {
         "color": {
-          "value": "{color.cornflower.900}",
+          "value": "{tabs.item.item_text_color}",
           "type": "color"
         },
         "height": {
@@ -284,7 +284,7 @@
       },
       "menu_button": {
         "gap": {
-          "value": "{spacing.4xs}",
+          "value": "{interactive.small.padding}",
           "type": "spacing"
         },
         "height": {
