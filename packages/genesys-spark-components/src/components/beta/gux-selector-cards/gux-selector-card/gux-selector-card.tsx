@@ -51,7 +51,7 @@ export class GuxSelectorCard {
   private setInput(): void {
     this.input = getSlottedInput(
       this.root,
-      'input[type="radio"][slot="input"]'
+      'input[type="radio"][slot="input"], input[type="checkbox"][slot="input"]'
     );
 
     preventBrowserValidationStyling(this.input);
@@ -100,7 +100,6 @@ export class GuxSelectorCard {
           [`gux-${this.variant}`]: true,
           'gux-disabled': this.disabled
         }}
-        onClick={() => this.input.setAttribute('checked', 'true')}
       >
         <div class="gux-content">
           <div class="gux-icon">

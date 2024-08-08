@@ -1,7 +1,7 @@
-@use '../gux-form-field-checkbox/gux-form-field-checkbox-icons.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
+@use '~genesys-spark/dist/scss/checkbox-icons.scss';
 
 @include gux-form-field-error.Style;
 @include gux-form-field-help.Style;
@@ -12,11 +12,15 @@
 
 :host(.gux-input-error) {
   ::slotted(input[type='checkbox']:not(:checked))::before {
-    @include gux-form-field-checkbox-icons.unchecked-error;
+    @include checkbox-icons.unchecked-error;
+
+    background: var(--gse-ui-checkbox-icon-error-foregroundColor);
   }
 
   ::slotted(input[type='checkbox']:checked)::before {
-    @include gux-form-field-checkbox-icons.checked-error;
+    @include checkbox-icons.checked-error;
+
+    background: var(--gse-ui-checkbox-icon-error-foregroundColor);
   }
 
   ::slotted(
@@ -24,11 +28,15 @@
           :indeterminate
         ):hover
     )::before {
-    @include gux-form-field-checkbox-icons.unchecked-error;
+    @include checkbox-icons.unchecked-error;
+
+    background: var(--gse-ui-checkbox-icon-error-foregroundColor);
   }
 
   ::slotted(input[type='checkbox']:indeterminate)::before {
-    @include gux-form-field-checkbox-icons.indeterminate-error;
+    @include checkbox-icons.indeterminate-error;
+
+    background: var(--gse-ui-checkbox-icon-error-foregroundColor);
   }
 }
 
@@ -80,7 +88,9 @@
 }
 
 ::slotted(input[type='checkbox']:not(:checked))::before {
-  @include gux-form-field-checkbox-icons.unchecked;
+  @include checkbox-icons.unchecked;
+
+  background: var(--gse-ui-checkbox-icon-default-unselectedForegroundColor);
 }
 
 ::slotted(
@@ -88,23 +98,33 @@
         :indeterminate
       ):hover
   )::before {
-  @include gux-form-field-checkbox-icons.unchecked-hover;
+  @include checkbox-icons.unchecked-hover;
+
+  background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
 }
 
 ::slotted(input[type='checkbox']:checked:not(:disabled):hover) {
-  @include gux-form-field-checkbox-icons.checked-hover;
+  @include checkbox-icons.checked-hover;
+
+  background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
 }
 
 ::slotted(input[type='checkbox']:not(:disabled):indeterminate:hover) {
-  @include gux-form-field-checkbox-icons.indeterminate-hover;
+  @include checkbox-icons.indeterminate-hover;
+
+  background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
 }
 
 ::slotted(input[type='checkbox']:checked)::before {
-  @include gux-form-field-checkbox-icons.checked;
+  @include checkbox-icons.checked;
+
+  background: var(--gse-ui-checkbox-icon-default-selectedForegroundColor);
 }
 
 ::slotted(input[type='checkbox']:indeterminate)::before {
-  @include gux-form-field-checkbox-icons.indeterminate;
+  @include checkbox-icons.indeterminate;
+
+  background: var(--gse-ui-checkbox-icon-default-selectedForegroundColor);
 }
 
 ::slotted(input[type='checkbox']:disabled)::before {

@@ -120,6 +120,37 @@ describe('gux-selector-cards', () => {
           <gux-badge slot="badge" bold>Badge</gux-badge>
           <gux-icon slot="icon" icon-name="fa/play-regular" decorative />
         </gux-selector-card-beta>
+      </gux-selector-cards-beta>`,
+      `<gux-selector-cards-beta class="example1">
+        <gux-selector-card-beta variant="simple">
+          <label slot="label" for="1-C">First</label>
+          <input slot="input" id="1-C" type="checkbox" name="example3" />
+          <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative />
+        </gux-selector-card-beta>
+
+        <gux-selector-card-beta variant="simple">
+          <label slot="label" for="2-C">Second</label>
+          <input slot="input" id="2-C" type="checkbox" name="example3" />
+          <gux-icon slot="icon" icon-name="fa/bell-regular" decorative />
+        </gux-selector-card-beta>
+
+        <gux-selector-card-beta variant="simple">
+          <label slot="label" for="3-C">Third</label>
+          <input slot="input" id="3-C" type="checkbox" name="example3" />
+          <gux-icon slot="icon" icon-name="fa/play-regular" decorative />
+        </gux-selector-card-beta>
+
+        <gux-selector-card-beta variant="simple">
+          <label slot="label" for="4-C">Fourth</label>
+          <input slot="input" id="4-C" type="checkbox" name="example3" disabled />
+          <gux-icon slot="icon" icon-name="fa/bell-regular" decorative />
+        </gux-selector-card-beta>
+
+        <gux-selector-card-beta variant="simple">
+          <label slot="label" for="5-C">Fifth</label>
+          <input slot="input" id="5-C" type="checkbox" name="example3" />
+          <gux-icon slot="icon" icon-name="fa/play-regular" decorative />
+        </gux-selector-card-beta>
       </gux-selector-cards-beta>`
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
