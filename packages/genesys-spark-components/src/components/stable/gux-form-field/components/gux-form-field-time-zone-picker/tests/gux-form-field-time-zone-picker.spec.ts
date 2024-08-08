@@ -34,15 +34,15 @@ describe('gux-form-field-time-zone-picker', () => {
       ].forEach((componentAttribute, index) => {
         it(`should render component as expected (${index + 1})`, async () => {
           const html = `
-            <gux-form-field-time-zone-picker ${componentAttribute}>
+          <gux-form-field-time-zone-picker ${componentAttribute}>
             <gux-time-zone-picker-beta
-            value="Etc/GMT+1"
-            workspace-default="Etc/GMT"
-            local-default="America/Detroit"
-          >
-          </gux-time-zone-picker-beta>
-          <label slot="label">Select Time Zone</label>
-            </gux-form-field-time-zone-picker>
+              value="Etc/GMT+1"
+              workspace-default="Etc/GMT"
+              local-default="America/Detroit"
+            >
+            </gux-time-zone-picker-beta>
+            <label slot="label">Select Time Zone</label>
+          </gux-form-field-time-zone-picker>
           `;
           const page = await newSpecPage({ components, html, language });
 
@@ -51,19 +51,42 @@ describe('gux-form-field-time-zone-picker', () => {
       });
     });
 
+    describe('indicator marks', () => {
+      ['', 'indicator-mark="optional"', 'indicator-mark="required"'].forEach(
+        (indicatorMark, index) => {
+          it(`should render component as expected (${index + 1})`, async () => {
+            const html = `
+              <gux-form-field-time-zone-picker ${indicatorMark}>
+                <gux-time-zone-picker-beta
+                  value="Etc/GMT+1"
+                  workspace-default="Etc/GMT"
+                  local-default="America/Detroit"
+                >
+                </gux-time-zone-picker-beta>
+                <label slot="label">Select Time Zone</label>
+              </gux-form-field-time-zone-picker>
+              `;
+            const page = await newSpecPage({ components, html, language });
+
+            expect(page.root).toMatchSnapshot();
+          });
+        }
+      );
+    });
+
     describe('help', () => {
       it('should render component as expected', async () => {
         const html = `
         <gux-form-field-time-zone-picker>
-        <gux-time-zone-picker-beta
-        value="Etc/GMT+1"
-        workspace-default="Etc/GMT"
-        local-default="America/Detroit"
-      >
-      </gux-time-zone-picker-beta>
-      <label slot="label">Select Time Zone</label>
-      <span slot="help">This is a help message</span>
-      </gux-form-field-time-zone-picker>
+          <gux-time-zone-picker-beta
+            value="Etc/GMT+1"
+            workspace-default="Etc/GMT"
+            local-default="America/Detroit"
+          >
+          </gux-time-zone-picker-beta>
+          <label slot="label">Select Time Zone</label>
+          <span slot="help">This is a help message</span>
+        </gux-form-field-time-zone-picker>
         `;
         const page = await newSpecPage({ components, html, language });
 
@@ -76,16 +99,16 @@ describe('gux-form-field-time-zone-picker', () => {
         const html = `
         <gux-form-field-time-zone-picker>
           <gux-time-zone-picker-beta
-          value="Etc/GMT+1"
-          workspace-default="Etc/GMT"
-          local-default="America/Detroit"
-        >
-        </gux-time-zone-picker-beta>
-        <label slot="label">Select Time Zone</label>
-        <gux-label-info-beta slot="label-info">
-          <span slot="content">This is some tooltip text</span>
-        </gux-label-info-beta>
-      </gux-form-field-time-zone-picker>
+            value="Etc/GMT+1"
+            workspace-default="Etc/GMT"
+            local-default="America/Detroit"
+          >
+          </gux-time-zone-picker-beta>
+          <label slot="label">Select Time Zone</label>
+          <gux-label-info-beta slot="label-info">
+            <span slot="content">This is some tooltip text</span>
+          </gux-label-info-beta>
+        </gux-form-field-time-zone-picker>
         `;
         const page = await newSpecPage({ components, html, language });
 
@@ -97,15 +120,15 @@ describe('gux-form-field-time-zone-picker', () => {
       it('should render component as expected', async () => {
         const html = `
           <gux-form-field-time-zone-picker>
-          <gux-time-zone-picker-beta
-          value="Etc/GMT+1"
-          workspace-default="Etc/GMT"
-          local-default="America/Detroit"
-        >
-        </gux-time-zone-picker-beta>
-        <label slot="label">Select Time Zone</label>
-        <span slot="error">This is an error message</span>
-        </gux-form-field-time-zone-picker>
+            <gux-time-zone-picker-beta
+              value="Etc/GMT+1"
+              workspace-default="Etc/GMT"
+              local-default="America/Detroit"
+            >
+            </gux-time-zone-picker-beta>
+            <label slot="label">Select Time Zone</label>
+            <span slot="error">This is an error message</span>
+          </gux-form-field-time-zone-picker>
           `;
         const page = await newSpecPage({ components, html, language });
 
@@ -118,13 +141,13 @@ describe('gux-form-field-time-zone-picker', () => {
         it(`should render component as expected (${index + 1})`, async () => {
           const html = `
             <gux-form-field-time-zone-picker>
-            <gux-time-zone-picker-beta
-            value="Etc/GMT+1"
-            workspace-default="Etc/GMT"
-            local-default="America/Detroit"
-            ${inputAttribute}
-          >
-          </gux-time-zone-picker-beta>
+              <gux-time-zone-picker-beta
+                value="Etc/GMT+1"
+                workspace-default="Etc/GMT"
+                local-default="America/Detroit"
+                ${inputAttribute}
+              >
+              </gux-time-zone-picker-beta>
             </gux-form-field-time-zone-picker>
             `;
           const page = await newSpecPage({ components, html, language });

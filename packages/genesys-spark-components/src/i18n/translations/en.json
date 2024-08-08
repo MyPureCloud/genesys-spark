@@ -99,6 +99,9 @@
     "increment": "Increment",
     "decrement": "Decrement"
   },
+  "gux-form-field-optional-indicator": {
+    "optional": "optional"
+  },
   "gux-form-field-phone": {
     "required": "Required"
   },

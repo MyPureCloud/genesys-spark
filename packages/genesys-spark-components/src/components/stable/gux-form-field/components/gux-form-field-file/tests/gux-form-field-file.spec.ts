@@ -75,6 +75,30 @@ describe('gux-form-field-file', () => {
       });
     });
 
+    describe('indicator marks', () => {
+      ['', 'indicator-mark="optional"', 'indicator-mark="required"'].forEach(
+        (indicatorMark, index) => {
+          it(`should render component as expected (${index + 1})`, async () => {
+            const html = `
+            <gux-form-field-file ${indicatorMark}>
+              <label slot="label">Upload a profile picture</label>
+              <input
+                slot="input"
+                type="file"
+                id="avatar"
+                name="avatar"
+                accept="image/png, image/jpeg"
+              />
+            </gux-form-field-file>
+          `;
+            const page = await newSpecPage({ components, html, language });
+
+            expect(page.root).toMatchSnapshot();
+          });
+        }
+      );
+    });
+
     describe('help', () => {
       it('should render component as expected', async () => {
         const html = `
