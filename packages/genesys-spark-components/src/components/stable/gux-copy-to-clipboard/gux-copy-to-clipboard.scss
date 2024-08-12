@@ -17,11 +17,13 @@ button {
 .gux-copy-to-clipboard-wrapper {
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
 
   .gux-copy-content {
     display: inherit;
     gap: var(--gse-ui-copyToClipboard-contentContainer-gap);
     align-items: inherit;
+    max-width: 100%;
     cursor: pointer;
 
     ::slotted(*) {
