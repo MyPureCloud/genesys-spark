@@ -121,11 +121,11 @@
     background-color: var(--gse-ui-selectorCard-default-backgroundColor);
     border-radius: var(--gse-ui-selectorCard-simple-borderRadius);
 
-    gux-truncate {
-      z-index: var(--gse-semantic-zIndex-showFocus);
-      width: fit-content;
-      max-width: 100%;
-      word-wrap: break-word;
+    .gux-label-container {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
     }
 
     .gux-icon {
@@ -147,30 +147,18 @@
       max-height: var(--gse-ui-selectorCard-descriptive-maxHeight);
       padding: var(--gse-ui-selectorCard-descriptive-padding);
       text-align: start;
+      white-space: normal;
       border-radius: var(--gse-ui-selectorCard-descriptive-borderRadius);
 
-      .gux-description {
-        margin-bottom: var(--gse-ui-selectorCard-descriptive-gap);
-        font-family: var(
-          --gse-ui-selectorCard-descriptive-description-fontFamily
-        );
-        font-size: var(--gse-ui-selectorCard-descriptive-description-fontSize);
-        font-weight: var(
-          --gse-ui-selectorCard-descriptive-description-fontWeight
-        );
-        line-height: var(
-          --gse-ui-selectorCard-descriptive-description-lineHeight
-        );
-      }
-
-      gux-truncate:hover {
-        z-index: calc(
-          var(--gse-semantic-zIndex-showFocus) + 1
-        ); // Needs to be higher than description for tooltip
+      .gux-description-container {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
       }
 
       ::slotted(gux-badge) {
-        margin-top: var(-gse-ui-selectorCard-descriptive-badge-marginTop);
+        margin-top: var(--gse-ui-selectorCard-descriptive-badge-marginTop);
       }
 
       ::slotted(input[type='radio']),

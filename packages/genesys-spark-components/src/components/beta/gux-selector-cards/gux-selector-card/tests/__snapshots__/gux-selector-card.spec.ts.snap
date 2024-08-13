@@ -8,9 +8,9 @@ exports[`gux-form-field-radio #render should render component as expected (1) 1`
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
         <span class="gux-screenreader">
           <slot name="description"></slot>
@@ -38,9 +38,9 @@ exports[`gux-form-field-radio #render should render component as expected (2) 1`
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
         <span class="gux-screenreader">
           <slot name="description"></slot>
@@ -64,9 +64,9 @@ exports[`gux-form-field-radio #render should render component as expected (3) 1`
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
         <span class="gux-screenreader">
           <slot name="description"></slot>
@@ -90,13 +90,13 @@ exports[`gux-form-field-radio #render should render component as expected (4) 1`
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -123,13 +123,13 @@ exports[`gux-form-field-radio #render should render component as expected (5) 1`
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -156,13 +156,13 @@ exports[`gux-form-field-radio #render should render component as expected (6) 1`
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -190,13 +190,13 @@ exports[`gux-form-field-radio #render should render component as expected (7) 1`
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -223,13 +223,13 @@ exports[`gux-form-field-radio #render should render component as expected (8) 1`
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -253,13 +253,13 @@ exports[`gux-form-field-radio #render should render component as expected (9) 1`
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -283,13 +283,13 @@ exports[`gux-form-field-radio #render should render component as expected (10) 1
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
@@ -316,9 +316,9 @@ exports[`gux-form-field-radio #render should render component as expected (11) 1
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
         <span class="gux-screenreader">
           <slot name="description"></slot>
