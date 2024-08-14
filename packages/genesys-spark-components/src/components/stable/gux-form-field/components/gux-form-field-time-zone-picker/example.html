@@ -61,6 +61,20 @@
   </fieldset>
 
   <fieldset>
+    <legend>Required</legend>
+    <gux-form-field-time-zone-picker label-position="above">
+      <gux-time-zone-picker-beta
+        required
+        value="Etc/GMT+1"
+        workspace-default="Etc/GMT"
+        local-default="America/Detroit"
+      >
+      </gux-time-zone-picker-beta>
+      <label slot="label">Select Time Zone</label>
+    </gux-form-field-time-zone-picker>
+  </fieldset>
+
+  <fieldset>
     <legend>Error</legend>
     <gux-form-field-time-zone-picker label-position="above">
       <gux-time-zone-picker-beta
@@ -95,7 +109,6 @@
     <gux-form-field-time-zone-picker
       label-position="above"
       indicator-mark="optional"
-      class="gap-below"
     >
       <gux-time-zone-picker-beta
         value="Etc/GMT+1"
@@ -105,5 +118,26 @@
       </gux-time-zone-picker-beta>
       <label slot="label">Select Time Zone</label>
     </gux-form-field-time-zone-picker>
+    <div class="gap-above">
+      <gux-form-field-time-zone-picker
+        label-position="above"
+        indicator-mark="optional"
+      >
+        <gux-time-zone-picker-beta
+          value="Etc/GMT+1"
+          workspace-default="Etc/GMT"
+          local-default="America/Detroit"
+          required
+        >
+        </gux-time-zone-picker-beta>
+        <label slot="label">Select Time Zone</label>
+      </gux-form-field-time-zone-picker>
+    </div>
   </fieldset>
 </form>
+
+<style>
+  .gap-above {
+    margin-top: 8px;
+  }
+</style>
