@@ -1,3 +1,12 @@
 .gux-form-field-label-indicator-required {
   color: var(--gse-ui-formControl-label-indicator-requiredColor);
 }
+
+.gux-form-field-label-indicator-optional {
+  margin-inline-start: var(--gse-ui-formControl-label-gap);
+  font-family: var(--gse-ui-formControl-label-indicator-text-fontFamily);
+  font-size: var(--gse-ui-formControl-label-indicator-text-fontSize);
+  font-weight: var(--gse-ui-formControl-label-indicator-text-fontWeight);
+  line-height: var(--gse-ui-formControl-label-indicator-text-lineHeight);
+  color: var(--gse-ui-formControl-label-indicator-optionalColor);
+}

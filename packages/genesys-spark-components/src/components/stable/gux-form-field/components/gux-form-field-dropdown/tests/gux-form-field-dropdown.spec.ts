@@ -88,6 +88,32 @@ describe('gux-form-field-dropdown', () => {
           });
         });
       });
+
+      describe('indicator marks', () => {
+        ['', 'indicator-mark="optional"', 'indicator-mark="required"'].forEach(
+          (indicatorMark, index) => {
+            it(`should render component as expected optional dropdown (${
+              index + 1
+            })`, async () => {
+              const html = `
+                <gux-form-field-dropdown ${indicatorMark}>
+                    <gux-dropdown>
+                      <gux-listbox>
+                        <gux-option value="a" disabled>Ant</gux-option>
+                        <gux-option value="b">Bat</gux-option>
+                        <gux-option value="c">Cat<span slot="subtext">Medium</span></gux-option>
+                      </gux-listbox>
+                    </gux-dropdown>
+                    <label slot="label">Default</label>
+                  </gux-form-field-dropdown>
+              `;
+              const page = await newSpecPage({ components, html, language });
+
+              expect(page.root).toMatchSnapshot();
+            });
+          }
+        );
+      });
     });
   });
 
@@ -164,13 +190,13 @@ describe('gux-form-field-dropdown', () => {
         it('should render component as expected', async () => {
           const html = `
           <gux-form-field-dropdown>
-          <gux-dropdown>
-            <gux-listbox>
-              <gux-option value="a" disabled>Ant</gux-option>
-              <gux-option value="b">Bat</gux-option>
-              <gux-option value="c">Cat<span slot="subtext">Medium</span></gux-option>
-            </gux-listbox>
-          </gux-dropdown>
+          <gux-dropdown-multi>
+            <gux-listbox-multi>
+              <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+              <gux-option-multi value="b">Bat</gux-option-multi>
+              <gux-option-multi value="c">Cat<span slot="subtext">Medium</span></gux-option-multi>
+            </gux-listbox-multi>
+          </gux-dropdown-multi>
           <label slot="label">Default</label>
           <span slot="help">This is a help message</span>
         </gux-form-field-dropdown>
@@ -202,22 +228,22 @@ describe('gux-form-field-dropdown', () => {
         });
       });
 
-      describe('label-info', () => {
+      describe('multi label-info', () => {
         it('should render component as expected', async () => {
           const html = `
-          <gux-form-field-dropdown>
-          <gux-dropdown>
-            <gux-listbox>
-              <gux-option value="a" disabled>Ant</gux-option>
-              <gux-option value="b">Bat</gux-option>
-              <gux-option value="c">Cat<span slot="subtext">Medium</span></gux-option>
-            </gux-listbox>
-          </gux-dropdown>
-          <label slot="label">Default</label>
-          <gux-label-info-beta slot="label-info">
-            <span slot="content">This is some tooltip text</span>
-          </gux-label-info-beta>
-        </gux-form-field-dropdown>
+            <gux-form-field-dropdown>
+              <gux-dropdown-multi>
+                <gux-listbox-multi>
+                  <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+                  <gux-option-multi value="b">Bat</gux-option-multi>
+                  <gux-option-multi value="c">Cat<span slot="subtext">Medium</span></gux-option-multi>
+                </gux-listbox-multi>
+              </gux-dropdown-multi>
+              <label slot="label">Default</label>
+              <gux-label-info-beta slot="label-info">
+                <span slot="content">This is some tooltip text</span>
+              </gux-label-info-beta>
+            </gux-form-field-dropdown>
           `;
           const page = await newSpecPage({ components, html, language });
 
@@ -246,6 +272,32 @@ describe('gux-form-field-dropdown', () => {
 
           expect(page.root).toMatchSnapshot();
         });
+      });
+
+      describe('multi indicator marks', () => {
+        ['', 'indicator-mark="optional"', 'indicator-mark="required"'].forEach(
+          (indicatorMark, index) => {
+            it(`should render component as expected optional dropdown (${
+              index + 1
+            })`, async () => {
+              const html = `
+                <gux-form-field-dropdown ${indicatorMark}>
+                    <gux-dropdown-multi>
+                      <gux-listbox-multi>
+                        <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+                        <gux-option-multi value="b">Bat</gux-option-multi>
+                        <gux-option-multi value="c">Cat<span slot="subtext">Medium</span></gux-option-multi>
+                      </gux-listbox-multi>
+                    </gux-dropdown-multi>
+                    <label slot="label">Default</label>
+                  </gux-form-field-dropdown>
+              `;
+              const page = await newSpecPage({ components, html, language });
+
+              expect(page.root).toMatchSnapshot();
+            });
+          }
+        );
       });
     });
   });

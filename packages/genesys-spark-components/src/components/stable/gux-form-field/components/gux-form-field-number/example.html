@@ -122,6 +122,19 @@
   </fieldset>
 
   <fieldset>
+    <legend>Optional Indicator Mark</legend>
+    <gux-form-field-number indicator-mark="optional">
+      <input slot="input" type="number" name="lp-1" value="10" />
+      <label slot="label">Indicator Mark</label>
+    </gux-form-field-number>
+
+    <gux-form-field-number indicator-mark="optional">
+      <input slot="input" type="number" name="lp-1" value="10" required />
+      <label slot="label">Indicator Mark</label>
+    </gux-form-field-number>
+  </fieldset>
+
+  <fieldset>
     <legend>Programmatically set value</legend>
 
     <gux-form-field-number id="p" clearable>

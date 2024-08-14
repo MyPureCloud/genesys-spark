@@ -77,13 +77,19 @@
         <span slot="content">This is some tooltip text</span>
       </gux-label-info-beta>
     </gux-form-field-color>
+  </fieldset>
 
-    <gux-form-field-color>
+  <fieldset>
+    <legend>Optional Indicator Mark</legend>
+
+    <gux-form-field-color indicator-mark="optional">
+      <input slot="input" type="color" name="e-1" value="#cc3ebe" />
+      <label slot="label">Default</label>
+    </gux-form-field-color>
+
+    <gux-form-field-color indicator-mark="optional">
       <input slot="input" type="color" name="e-1" value="#cc3ebe" required />
       <label slot="label">Default</label>
-      <gux-label-info-beta slot="label-info">
-        <span slot="content">This is some tooltip text</span>
-      </gux-label-info-beta>
     </gux-form-field-color>
   </fieldset>
 </form>

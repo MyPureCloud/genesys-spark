@@ -40,6 +40,26 @@ describe('gux-form-field-time-picker', () => {
           expect(page.root).toMatchSnapshot();
         });
       });
+
+      describe('indicator marks', () => {
+        ['', 'indicator-mark="optional"', 'indicator-mark="required"'].forEach(
+          (indicatorMark, index) => {
+            it(`should render component as expected (${
+              index + 1
+            })`, async () => {
+              const html = `
+                <gux-form-field-time-picker ${indicatorMark}>
+                  <gux-time-picker value="07:00"></gux-time-picker>
+                  <label slot="label">Label</label>
+                </gux-form-field-time-picker>
+              `;
+              const page = await newSpecPage({ components, html, language });
+
+              expect(page.root).toMatchSnapshot();
+            });
+          }
+        );
+      });
     });
 
     describe('intervals', () => {

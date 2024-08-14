@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property        | Attribute        | Description | Type                                    | Default     |
-| --------------- | ---------------- | ----------- | --------------------------------------- | ----------- |
-| `labelPosition` | `label-position` |             | `"above" \| "beside" \| "screenreader"` | `undefined` |
+| Property        | Attribute        | Description                                                                                                                                                                                                                                                                     | Type                                    | Default      |
+| --------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------ |
+| `indicatorMark` | `indicator-mark` | Field indicator mark which can show *, (optional) or blank Defaults to required. When set to required, the component will display * for required fields and blank for optional When set to optional, the component will display (optional) for optional and blank for required. | `"optional" \| "required"`              | `'required'` |
+| `labelPosition` | `label-position` |                                                                                                                                                                                                                                                                                 | `"above" \| "beside" \| "screenreader"` | `undefined`  |
 
 
 ## Methods

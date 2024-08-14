@@ -75,6 +75,24 @@ describe('gux-form-field-textarea', () => {
       });
     });
 
+    describe('indicator marks', () => {
+      ['', 'indicator-mark="optional"', 'indicator-mark="required"'].forEach(
+        (indicatorMark, index) => {
+          it(`should render component as expected (${index + 1})`, async () => {
+            const html = `
+              <gux-form-field-textarea ${indicatorMark}>
+                <textarea slot="input"></textarea>
+                <label slot="label">Label</label>
+              </gux-form-field-textarea>
+            `;
+            const page = await newSpecPage({ components, html, language });
+
+            expect(page.root).toMatchSnapshot();
+          });
+        }
+      );
+    });
+
     describe('help', () => {
       it('should render component as expected', async () => {
         const html = `
