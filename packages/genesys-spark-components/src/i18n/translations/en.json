@@ -89,6 +89,9 @@
   "gux-dropdown-multi-tag": {
     "clearSelection": "Clear {numberSelected} selected items"
   },
+  "gux-form-field-checkbox-group": {
+    "required": "Required"
+  },
   "gux-form-field-dropdown": {
     "required": "Required"
   },
@@ -103,6 +106,9 @@
     "optional": "optional"
   },
   "gux-form-field-phone": {
+    "required": "Required"
+  },
+  "gux-form-field-radio-group": {
     "required": "Required"
   },
   "gux-form-field-time-picker": {

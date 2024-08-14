@@ -9,6 +9,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="group-label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
         <slot name="group-label-info"></slot>
       </div>
       <slot></slot>
@@ -46,6 +47,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="group-label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
         <slot name="group-label-info"></slot>
       </div>
       <slot></slot>
@@ -101,6 +103,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="group-label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
         <slot name="group-label-info"></slot>
       </div>
       <slot></slot>
@@ -165,6 +168,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="group-label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
         <slot name="group-label-info"></slot>
       </div>
       <slot></slot>
@@ -213,6 +217,118 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
     <span slot="help">
       This is a help message
     </span>
+  </gux-form-field-radio>
+</gux-form-field-radio-group-beta>
+`;
+
+exports[`gux-form-field-radio-beta #render should render component as expected (5) 1`] = `
+<gux-form-field-radio-group-beta indicator-mark="otpional">
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Food
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="group-label"></slot>
+        <gux-form-field-label-indicator variant="otpional"></gux-form-field-label-indicator>
+        <slot name="group-label-info"></slot>
+      </div>
+      <slot></slot>
+      <div class="gux-form-field-error">
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+        <div class="gux-message">
+          <slot name="group-error"></slot>
+        </div>
+      </div>
+      <div class="gux-form-field-help">
+        <div class="gux-message">
+          <slot name="group-help"></slot>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <label slot="group-label">
+    Food
+  </label>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="pizza">
+    <label slot="label">
+      Pizza
+    </label>
+  </gux-form-field-radio>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="sandwich">
+    <label slot="label">
+      Sandwich
+    </label>
+  </gux-form-field-radio>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="sushi">
+    <label slot="label">
+      Sushi
+    </label>
+  </gux-form-field-radio>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="spaghetti">
+    <label slot="label">
+      Spaghetti
+    </label>
+  </gux-form-field-radio>
+</gux-form-field-radio-group-beta>
+`;
+
+exports[`gux-form-field-radio-beta #render should render component as expected (6) 1`] = `
+<gux-form-field-radio-group-beta required="">
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Food Required
+      </legend>
+      <div class="gux-above gux-form-field-visual-label gux-required" role="presentation">
+        <slot name="group-label"></slot>
+        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
+        <slot name="group-label-info"></slot>
+      </div>
+      <slot></slot>
+      <div class="gux-form-field-error">
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+        <div class="gux-message">
+          <slot name="group-error"></slot>
+        </div>
+      </div>
+      <div class="gux-form-field-help">
+        <div class="gux-message">
+          <slot name="group-help"></slot>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <label slot="group-label">
+    Food
+  </label>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="pizza">
+    <label slot="label">
+      Pizza
+    </label>
+  </gux-form-field-radio>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="sandwich">
+    <label slot="label">
+      Sandwich
+    </label>
+  </gux-form-field-radio>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="sushi">
+    <label slot="label">
+      Sushi
+    </label>
+  </gux-form-field-radio>
+  <gux-form-field-radio>
+    <input name="food-1" slot="input" type="radio" value="spaghetti">
+    <label slot="label">
+      Spaghetti
+    </label>
   </gux-form-field-radio>
 </gux-form-field-radio-group-beta>
 `;

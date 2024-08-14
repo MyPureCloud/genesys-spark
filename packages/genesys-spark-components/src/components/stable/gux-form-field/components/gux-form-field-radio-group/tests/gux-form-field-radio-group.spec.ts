@@ -35,12 +35,12 @@ describe('gux-form-field-radio-beta', () => {
       `
      <gux-form-field-radio-group-beta>
       <label slot="group-label">Food</label>
-  
+
       <gux-form-field-radio>
         <input slot="input" type="radio" name="food-1" value="pizza" />
         <label slot="label">Pizza</label>
       </gux-form-field-radio>
-  
+
       <gux-form-field-radio>
         <input
           slot="input"
@@ -51,7 +51,7 @@ describe('gux-form-field-radio-beta', () => {
         />
         <label slot="label">Sandwich</label>
       </gux-form-field-radio>
-  
+
       <gux-form-field-radio>
         <input slot="input" type="radio" name="food-1" value="spaghetti" />
         <label slot="label">Spaghetti</label>
@@ -62,12 +62,12 @@ describe('gux-form-field-radio-beta', () => {
      `,
       `<gux-form-field-radio-group-beta>
       <label slot="group-label">Food</label>
-  
+
       <gux-form-field-radio>
         <input slot="input" type="radio" name="food-1" value="pizza" />
         <label slot="label">Pizza</label>
       </gux-form-field-radio>
-  
+
       <gux-form-field-radio>
         <input
           slot="input"
@@ -78,13 +78,13 @@ describe('gux-form-field-radio-beta', () => {
         />
         <label slot="label">Sandwich</label>
       </gux-form-field-radio>
-  
+
       <gux-form-field-radio>
         <input slot="input" type="radio" name="food-1" value="sushi" />
         <label slot="label">Sushi</label>
         <span slot="error">Subject to availibility</span>
       </gux-form-field-radio>
-  
+
       <gux-form-field-radio>
         <input slot="input" type="radio" name="food-1" value="spaghetti" />
         <label slot="label">Spaghetti</label>
@@ -123,7 +123,51 @@ describe('gux-form-field-radio-beta', () => {
           <label slot="label">Spaghetti</label>
           <span slot="help">This is a help message</span>
         </gux-form-field-radio>
-      </gux-form-field-radio-group-beta>`
+      </gux-form-field-radio-group-beta>`,
+      `<gux-form-field-radio-group-beta indicator-mark="otpional">
+      <label slot="group-label">Food</label>
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="pizza" />
+        <label slot="label">Pizza</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="sandwich" />
+        <label slot="label">Sandwich</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="sushi" />
+        <label slot="label">Sushi</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="spaghetti" />
+        <label slot="label">Spaghetti</label>
+      </gux-form-field-radio>
+    </gux-form-field-radio-group-beta>`,
+      `<gux-form-field-radio-group-beta required>
+      <label slot="group-label">Food</label>
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="pizza" />
+        <label slot="label">Pizza</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="sandwich" />
+        <label slot="label">Sandwich</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="sushi" />
+        <label slot="label">Sushi</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="spaghetti" />
+        <label slot="label">Spaghetti</label>
+      </gux-form-field-radio>
+    </gux-form-field-radio-group-beta>`
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
         const page = await newSpecPage({ components, html, language });
