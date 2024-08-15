@@ -1,6 +1,14 @@
-import { Component, h, Element, Prop } from '@stencil/core';
+import {
+  Component,
+  Event,
+  EventEmitter,
+  h,
+  Element,
+  Prop
+} from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxSideSheetSize } from './gux-side-sheet.types';
+import { hasSlot } from '@utils/dom/has-slot';
 
 @Component({
   tag: 'gux-side-sheet-beta',
@@ -14,6 +22,13 @@ export class GuxSideSheet {
   @Prop()
   size: GuxSideSheetSize = 'small';
 
+  @Event()
+  sidesheetdismiss: EventEmitter<void>;
+
+  private onDismissHandler(): void {
+    this.sidesheetdismiss.emit();
+  }
+
   componentWillLoad(): void {
     trackComponent(this.root);
   }
@@ -22,12 +37,14 @@ export class GuxSideSheet {
     return (
       <div class={`gux-side-sheet gux-side-sheet-${this.size}`}>
         <header>
-          <div class="gux-side-sheet-icon">
-            <slot name="icon" />
-          </div>
           <slot name="heading" />
-          <gux-dismiss-button />
+          <gux-dismiss-button onClick={this.onDismissHandler.bind(this)} />
         </header>
+        {hasSlot(this.root, 'description') && (
+          <div class="gux-side-sheet-description">
+            <slot name="description" />
+          </div>
+        )}
         <div class="gux-side-sheet-content">
           <slot name="content" />
         </div>

@@ -3,7 +3,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import {
   GuxSideSheetHeadingLevel,
   GuxSideHeadingTag
-} from './gux-side-sheet.types';
+} from '../gux-side-sheet.types';
 
 @Component({
   tag: 'gux-side-sheet-heading-beta',
@@ -22,6 +22,9 @@ export class GuxSideSheetHeading {
   @Prop()
   text: string;
 
+  @Prop()
+  icon: string;
+
   private HeadingTag: GuxSideHeadingTag;
 
   componentWillLoad(): void {
@@ -32,7 +35,12 @@ export class GuxSideSheetHeading {
   render(): JSX.Element {
     return (
       <this.HeadingTag>
-        <slot />
+        {this.icon && (
+          <gux-icon decorative size="medium" icon-name={this.icon} />
+        )}
+        <gux-truncate>
+          <slot />
+        </gux-truncate>
       </this.HeadingTag>
     ) as JSX.Element;
   }
