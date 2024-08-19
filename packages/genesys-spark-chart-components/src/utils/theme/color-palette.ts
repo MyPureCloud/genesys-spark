@@ -10,3 +10,7 @@ export const VISUALIZATION_COLORS = [
   '#868C1E',
   '#DDD933'
 ];
+
+export const DEFAULT_LABEL_COLOR = '#596373';
+
+export const DEFAULT_DOMAIN_COLOR = '#596373';
