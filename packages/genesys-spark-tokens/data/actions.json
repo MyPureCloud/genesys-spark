@@ -21,7 +21,7 @@
       },
       "text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "fontWeight": "{font_weight.regular}",
           "lineHeight": "{line_height.sm}",
           "fontSize": "{font_size.sm}",

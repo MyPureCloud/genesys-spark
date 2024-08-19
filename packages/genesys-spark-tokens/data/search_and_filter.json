@@ -17,7 +17,7 @@
         "border": {
           "value": {
             "color": "{color.cornflower.400}",
-            "width": "1",
+            "width": "1px",
             "style": "solid"
           },
           "type": "border"
@@ -29,7 +29,7 @@
       },
       "text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "fontWeight": "{font_weight.regular}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}"

@@ -3,7 +3,7 @@
     "input": {
       "content_text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
@@ -109,7 +109,7 @@
       "prefix_sufix": {
         "text": {
           "value": {
-            "fontFamily": "{font_family.roboto}",
+            "fontFamily": "{font_family.body}",
             "lineHeight": "{line_height.sm}",
             "fontSize": "{font_size.sm}",
             "fontWeight": "{font_weight.bold}"
@@ -201,7 +201,7 @@
       },
       "text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
@@ -210,10 +210,10 @@
       },
       "text_bold": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}",
-          "fontWeight": "{font_weight.semi_bold}"
+          "fontWeight": "{font_weight.semi-bold}"
         },
         "type": "typography"
       },
@@ -263,7 +263,7 @@
       },
       "helper_text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
