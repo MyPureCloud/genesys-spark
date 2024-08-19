@@ -79,8 +79,7 @@
   --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight: 16px;
   --gse-ui-dataTableItems-tablePagination-defaultText-fontSize: 12px;
   --gse-ui-dataTableItems-tablePagination-defaultText-fontWeight: 400;
-  --gse-ui-dataTableItems-tablePagination-currentResultText-fontFamily: Noto
-    Sans;
+  --gse-ui-dataTableItems-tablePagination-currentResultText-fontFamily: Noto Sans;
   --gse-ui-dataTableItems-tablePagination-currentResultText-lineHeight: 16px;
   --gse-ui-dataTableItems-tablePagination-currentResultText-fontSize: 12px;
   --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight: 700;
@@ -98,36 +97,12 @@
   --gse-ui-avatar-large-initials-fontWeight: 600;
   --gse-ui-avatar-large-presenceRing-width: 4px;
   --gse-ui-avatar-large-ucIntegration-size: 32px;
-  --gse-ui-avatar-presenceRing-available: linear-gradient(
-    135deg,
-    #09b581 0%,
-    #9de1cd 100%
-  );
-  --gse-ui-avatar-presenceRing-busy: linear-gradient(
-    135deg,
-    #e22245 0%,
-    #f3a7b5 100%
-  );
-  --gse-ui-avatar-presenceRing-away: linear-gradient(
-    135deg,
-    #f8c73e 0%,
-    #fce9b2 100%
-  );
-  --gse-ui-avatar-presenceRing-onQueue: linear-gradient(
-    135deg,
-    #4856cb 0%,
-    #9ca6f9 100%
-  );
-  --gse-ui-avatar-presenceRing-offline: linear-gradient(
-    135deg,
-    #767c8d 0%,
-    #a3a7b0 100%
-  );
-  --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(
-    135deg,
-    #b74ba4 0%,
-    #f5bfeb 100%
-  );
+  --gse-ui-avatar-presenceRing-available: linear-gradient(135deg, #09b581 0%, #9de1cd 100%);
+  --gse-ui-avatar-presenceRing-busy: linear-gradient(135deg, #e22245 0%, #f3a7b5 100%);
+  --gse-ui-avatar-presenceRing-away: linear-gradient(135deg, #f8c73e 0%, #fce9b2 100%);
+  --gse-ui-avatar-presenceRing-onQueue: linear-gradient(135deg, #4856CB 0%, #9CA6F9 100%);
+  --gse-ui-avatar-presenceRing-offline: linear-gradient(135deg, #767c8d 0%, #a3a7b0 100%);
+  --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(135deg, #B74BA4 0%, #F5BFEB 100%);
   --gse-ui-avatar-medium-size: 48px;
   --gse-ui-avatar-medium-badge-size: 16px;
   --gse-ui-avatar-medium-focusRing-size: 50px;
@@ -213,11 +188,7 @@
   --gse-ui-avatar-focus: #7b88f7;
   --gse-ui-avatar-addChangeImage-hoverModal-shroudSize: 84px;
   --gse-ui-avatar-addChangeImage-icon-size: 16px;
-  --gse-ui-globalNav-sideMenu: linear-gradient(
-    135deg,
-    #09b581 0%,
-    #9de1cd 100%
-  );
+  --gse-ui-globalNav-sideMenu: linear-gradient(135deg, #09b581 0%, #9de1cd 100%);
   --gse-ui-dataTableComposed-boxShadow-x: 0;
   --gse-ui-dataTableComposed-boxShadow-y: 0;
   --gse-ui-dataTableComposed-boxShadow-blur: 4px;

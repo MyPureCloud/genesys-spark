@@ -285,15 +285,12 @@
     "background_color": "#fbfcfe",
     "border_radius": "8px"
   },
-  "modal_side_sheet": {
+  "side_sheet": {
     "background_color": "#ffffff",
     "header_color": "#1b2c48",
     "close_color": "#3e5374",
     "divider_color": "#c6c8ce",
     "shroud_color": "#23395dcc",
-    "shroud": {
-      "opacity": 0.8
-    },
     "description_color": "#23395d",
     "heading": {
       "fontFamily": "Urbanist",
@@ -308,7 +305,7 @@
       "fontWeight": 400
     },
     "header": {
-      "interior_gap": "12px",
+      "heading_gap": "12px",
       "padding_top": "24px",
       "padding_left": "24px",
       "padding_right": "24px",
@@ -326,6 +323,11 @@
       "sm": "400px",
       "md": "560px",
       "lg": "960px"
+    }
+  },
+  "modal_side_sheet": {
+    "shroud": {
+      "opacity": 0.8
     }
   },
   "dynamic_side_sheet": {
