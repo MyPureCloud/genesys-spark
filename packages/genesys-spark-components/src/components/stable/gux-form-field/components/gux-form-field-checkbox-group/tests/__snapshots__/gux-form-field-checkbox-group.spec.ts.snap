@@ -9,6 +9,7 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="group-label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
         <slot name="group-label-info"></slot>
       </div>
       <slot name="group-checkbox"></slot>
@@ -47,6 +48,7 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="group-label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
         <slot name="group-label-info"></slot>
       </div>
       <slot name="group-checkbox"></slot>
@@ -103,6 +105,7 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="group-label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
         <slot name="group-label-info"></slot>
       </div>
       <slot name="group-checkbox"></slot>
@@ -168,6 +171,7 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="group-label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
         <slot name="group-label-info"></slot>
       </div>
       <slot name="group-checkbox"></slot>
@@ -217,6 +221,84 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
     <span slot="help">
       This is a help message
     </span>
+  </gux-form-field-checkbox>
+</gux-form-field-checkbox-group-beta>
+`;
+
+exports[`gux-form-field-checkbox-beta #render should render component as expected (5) 1`] = `
+<gux-form-field-checkbox-group-beta required="">
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Food Required
+      </legend>
+      <div class="gux-above gux-form-field-visual-label gux-required" role="presentation">
+        <slot name="group-label"></slot>
+        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
+        <slot name="group-label-info"></slot>
+      </div>
+      <slot name="group-checkbox"></slot>
+      <slot></slot>
+      <div class="gux-form-field-error">
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+        <div class="gux-message">
+          <slot name="group-error"></slot>
+        </div>
+      </div>
+      <div class="gux-form-field-help">
+        <div class="gux-message">
+          <slot name="group-help"></slot>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <label slot="group-label">
+    Food
+  </label>
+  <gux-form-field-checkbox>
+    <input name="food-1" slot="input" type="checkbox" value="pizza">
+    <label slot="label">
+      Pizza
+    </label>
+  </gux-form-field-checkbox>
+</gux-form-field-checkbox-group-beta>
+`;
+
+exports[`gux-form-field-checkbox-beta #render should render component as expected (6) 1`] = `
+<gux-form-field-checkbox-group-beta indicator-mark="optional">
+  <mock:shadow-root>
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Food
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="group-label"></slot>
+        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
+        <slot name="group-label-info"></slot>
+      </div>
+      <slot name="group-checkbox"></slot>
+      <slot></slot>
+      <div class="gux-form-field-error">
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+        <div class="gux-message">
+          <slot name="group-error"></slot>
+        </div>
+      </div>
+      <div class="gux-form-field-help">
+        <div class="gux-message">
+          <slot name="group-help"></slot>
+        </div>
+      </div>
+    </fieldset>
+  </mock:shadow-root>
+  <label slot="group-label">
+    Food
+  </label>
+  <gux-form-field-checkbox>
+    <input name="food-1" slot="input" type="checkbox" value="pizza">
+    <label slot="label">
+      Pizza
+    </label>
   </gux-form-field-checkbox>
 </gux-form-field-checkbox-group-beta>
 `;

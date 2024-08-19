@@ -12,6 +12,8 @@ import {
 import { OnMutation } from '@utils/decorator/on-mutation';
 import { hasSlot } from '@utils/dom/has-slot';
 import { logWarn } from '@utils/error/log-error';
+import { ILocalizedComponentResources } from '../../../../../i18n/fetchResources';
+import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 
 import {
   setAllCheckboxInputs,
@@ -27,7 +29,10 @@ import {
 } from '../../functional-components/functional-components';
 import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 
+import { GuxFormFieldIndicatorMark } from '../../gux-form-field.types';
+
 import { trackComponent } from '@utils/tracking/usage';
+import componentResources from './i18n/en.json';
 
 /**
  * @slot group-label - Required slot for label tag
@@ -41,11 +46,23 @@ import { trackComponent } from '@utils/tracking/usage';
   shadow: true
 })
 export class GuxFormFieldCheckboxGroupBeta {
+  private getI18nValue: GetI18nValue;
   private disabledObserver: MutationObserver;
   private label: HTMLLabelElement;
 
   @Element()
   private root: HTMLElement;
+
+  /**
+   * Field indicator mark which can show *, (optional) or blank
+   * Defaults to required. When set to required, the component will display * for required fields and blank for optional
+   * When set to optional, the component will display (optional) for optional and blank for required.
+   */
+  @Prop()
+  indicatorMark: GuxFormFieldIndicatorMark = 'required';
+
+  @Prop()
+  required: boolean = false;
 
   /**
    *  Checkbox group has error text.
@@ -93,7 +110,12 @@ export class GuxFormFieldCheckboxGroupBeta {
     this.hasGroupLabelInfo = hasSlot(this.root, 'group-label-info');
   }
 
-  componentWillLoad(): void {
+  async componentWillLoad(): Promise<void> {
+    this.getI18nValue = await buildI18nForComponent(
+      this.root,
+      componentResources as ILocalizedComponentResources
+    );
+
     this.hasGroupError = hasSlot(this.root, 'group-error');
     this.hasGroupHelp = hasSlot(this.root, 'group-help');
     this.hasGroupLabelInfo = hasSlot(this.root, 'group-label-info');
@@ -210,6 +232,7 @@ export class GuxFormFieldCheckboxGroupBeta {
       <GuxFormFieldFieldsetContainer labelPosition="above">
         <GuxFormFieldScreenreaderLabel>
           {this.label?.textContent}
+          {this.renderText(this.getI18nValue('required'), this.required)}
           {this.renderText(
             getSlotTextContent(this.root, 'group-error'),
             this.hasGroupError
@@ -223,8 +246,12 @@ export class GuxFormFieldCheckboxGroupBeta {
             this.hasGroupLabelInfo
           )}
         </GuxFormFieldScreenreaderLabel>
-        <GuxFormFieldVisualLabel position="above" required={false}>
+        <GuxFormFieldVisualLabel position="above" required={this.required}>
           <slot name="group-label" onSlotchange={() => this.setLabel()} />
+          <gux-form-field-label-indicator
+            variant={this.indicatorMark}
+            required={this.required}
+          />
           <slot name="group-label-info"></slot>
         </GuxFormFieldVisualLabel>
         <slot

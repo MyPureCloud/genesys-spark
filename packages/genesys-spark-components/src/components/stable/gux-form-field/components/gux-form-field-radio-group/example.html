@@ -147,4 +147,56 @@
       </gux-form-field-radio>
     </gux-form-field-radio-group-beta>
   </form>
+
+  <h2>Example 6 required group</h2>
+  <form onchange="notify(event)" oninput="notify(event)">
+    <gux-form-field-radio-group-beta required>
+      <label slot="group-label">Food</label>
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="pizza" />
+        <label slot="label">Pizza</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="sandwich" />
+        <label slot="label">Sandwich</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="sushi" />
+        <label slot="label">Sushi</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="spaghetti" />
+        <label slot="label">Spaghetti</label>
+      </gux-form-field-radio>
+    </gux-form-field-radio-group-beta>
+  </form>
+
+  <h2>Example 6 optional group</h2>
+  <form onchange="notify(event)" oninput="notify(event)">
+    <gux-form-field-radio-group-beta indicator-mark="optional">
+      <label slot="group-label">Food</label>
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="pizza" />
+        <label slot="label">Pizza</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="sandwich" />
+        <label slot="label">Sandwich</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="sushi" />
+        <label slot="label">Sushi</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="spaghetti" />
+        <label slot="label">Spaghetti</label>
+      </gux-form-field-radio>
+    </gux-form-field-radio-group-beta>
+  </form>
 </form>
