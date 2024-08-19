@@ -10,9 +10,6 @@
     var(--gse-ui-menu-border-color);
   border-radius: var(--gse-ui-menu-borderRadius);
   outline: none;
-  box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
-    var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
-    var(--gse-ui-menu-boxShadow-color);
 }
 
 :host(:focus-visible) {
