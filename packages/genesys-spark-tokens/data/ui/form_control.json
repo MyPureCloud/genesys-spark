@@ -195,10 +195,6 @@
         "value": "0 0 {spacing.3xs} 0",
         "type": "spacing"
       },
-      "gap": {
-        "value": "{spacing.4xs}",
-        "type": "spacing"
-      },
       "text": {
         "value": {
           "fontFamily": "{font_family.roboto}",
@@ -248,6 +244,12 @@
           "value": "2px",
           "type": "borderRadius"
         }
+      }
+    },
+    "form_field": {
+      "gap": {
+        "value": "{spacing.4xs}",
+        "type": "spacing"
       }
     },
     "group": {
