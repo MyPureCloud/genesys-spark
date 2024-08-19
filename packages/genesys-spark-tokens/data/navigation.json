@@ -21,7 +21,7 @@
       },
       "item_text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
@@ -316,7 +316,7 @@
       },
       "item_text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
@@ -354,7 +354,7 @@
   "global_nav": {
     "text": {
       "value": {
-        "fontFamily": "{font_family.roboto}",
+        "fontFamily": "{font_family.body}",
         "lineHeight": "{line_height.2xs}",
         "fontSize": "{font_size.xs}",
         "fontWeight": "{font_weight.bold}"
@@ -365,10 +365,10 @@
       "on_queue": {
         "text": {
           "value": {
-            "fontFamily": "{font_family.roboto}",
+            "fontFamily": "{font_family.body}",
             "lineHeight": "{line_height.2xs}",
             "fontSize": "{font_size.xs}",
-            "fontWeight": "{font_weight.semi_bold}"
+            "fontWeight": "{font_weight.semi-bold}"
           },
           "type": "typography"
         }
@@ -380,7 +380,7 @@
       "off_queue": {
         "text": {
           "value": {
-            "fontFamily": "{font_family.roboto}",
+            "fontFamily": "{font_family.body}",
             "lineHeight": "{line_height.2xs}",
             "fontSize": "{font_size.xs}",
             "fontWeight": "{font_weight.regular}"
@@ -557,10 +557,10 @@
       "heading": {
         "text": {
           "value": {
-            "fontFamily": "{font_family.urbanist}",
+            "fontFamily": "{font_family.heading}",
             "lineHeight": "{line_height.2xs}",
             "fontSize": "{font_size.xs}",
-            "fontWeight": "{font_weight.semi_bold}"
+            "fontWeight": "{font_weight.semi-bold}"
           },
           "type": "typography"
         }

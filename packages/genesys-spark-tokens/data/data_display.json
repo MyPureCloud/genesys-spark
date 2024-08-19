@@ -3,7 +3,7 @@
     "header": {
       "text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.2xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.bold}"
@@ -234,7 +234,7 @@
       },
       "text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.2xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
@@ -351,7 +351,7 @@
       },
       "default_text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.2xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
@@ -360,7 +360,7 @@
       },
       "current_result_text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.2xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.bold}"
@@ -415,10 +415,10 @@
       },
       "initials": {
         "value": {
-          "fontFamily": "{font_family.urbanist}",
+          "fontFamily": "{font_family.heading}",
           "lineHeight": "{line_height.match_font_size}",
           "fontSize": "{font_size.xxl}",
-          "fontWeight": "{font_weight.semi_bold}"
+          "fontWeight": "{font_weight.semi-bold}"
         },
         "type": "typography"
       },
@@ -486,10 +486,10 @@
       },
       "initials": {
         "value": {
-          "fontFamily": "{font_family.urbanist}",
+          "fontFamily": "{font_family.heading}",
           "lineHeight": "{line_height.match_font_size}",
           "fontSize": "{font_size.lg}",
-          "fontWeight": "{font_weight.semi_bold}"
+          "fontWeight": "{font_weight.semi-bold}"
         },
         "type": "typography"
       },
@@ -525,10 +525,10 @@
       },
       "initials": {
         "value": {
-          "fontFamily": "{font_family.urbanist}",
+          "fontFamily": "{font_family.heading}",
           "lineHeight": "{line_height.match_font_size}",
           "fontSize": "{font_size.xs}",
-          "fontWeight": "{font_weight.semi_bold}"
+          "fontWeight": "{font_weight.semi-bold}"
         },
         "type": "typography"
       },
@@ -564,10 +564,10 @@
       },
       "initials": {
         "value": {
-          "fontFamily": "{font_family.urbanist}",
+          "fontFamily": "{font_family.heading}",
           "lineHeight": "{line_height.match_font_size}",
           "fontSize": "8px",
-          "fontWeight": "{font_weight.semi_bold}"
+          "fontWeight": "{font_weight.semi-bold}"
         },
         "type": "typography"
       },

@@ -45,7 +45,7 @@
       },
       "text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "fontWeight": "{font_weight.regular}",
           "lineHeight": "{line_height.xs}"
         },
@@ -137,7 +137,7 @@
       },
       "text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "fontWeight": "{font_weight.regular}",
           "lineHeight": "{line_height.xs}"
         },
@@ -221,7 +221,7 @@
         "default": {
           "text": {
             "value": {
-              "fontFamily": "{font_family.roboto}",
+              "fontFamily": "{font_family.body}",
               "fontWeight": "{font_weight.regular}",
               "lineHeight": "{line_height.2xs}",
               "fontSize": "{font_size.xs}"
@@ -232,7 +232,7 @@
         "active": {
           "text": {
             "value": {
-              "fontFamily": "{font_family.roboto}",
+              "fontFamily": "{font_family.body}",
               "fontWeight": "{font_weight.bold}",
               "lineHeight": "{line_height.2xs}",
               "fontSize": "{font_size.xs}"
@@ -248,7 +248,7 @@
       "shortcut": {
         "text": {
           "value": {
-            "fontFamily": "{font_family.roboto}",
+            "fontFamily": "{font_family.body}",
             "fontWeight": "{font_weight.regular}",
             "lineHeight": "{line_height.sm}",
             "fontSize": "{font_size.sm}"
@@ -472,7 +472,7 @@
         "header": {
           "text": {
             "value": {
-              "fontFamily": "{font_family.roboto}",
+              "fontFamily": "{font_family.body}",
               "fontWeight": "{font_weight.bold}",
               "lineHeight": "{line_height.xs}",
               "fontSize": "{font_size.xs}"
@@ -487,7 +487,7 @@
         "subheader": {
           "text": {
             "value": {
-              "fontFamily": "{font_family.roboto}",
+              "fontFamily": "{font_family.body}",
               "fontWeight": "{font_weight.regular}",
               "lineHeight": "{line_height.xs}",
               "fontSize": "{font_size.xs}"
@@ -534,7 +534,7 @@
           "type": "color"
         },
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.2xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.bold}"
@@ -607,7 +607,7 @@
       },
       "default_text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.2xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
@@ -624,7 +624,7 @@
       },
       "current_text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.2xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.bold}"
@@ -711,7 +711,7 @@
     "date": {
       "default_text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.2xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
@@ -728,7 +728,7 @@
       },
       "current_text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
+          "fontFamily": "{font_family.body}",
           "lineHeight": "{line_height.2xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.bold}"
@@ -905,7 +905,7 @@
   "toggle": {
     "label": {
       "value": {
-        "fontFamily": "{font_family.roboto}",
+        "fontFamily": "{font_family.body}",
         "fontWeight": "{font_weight.regular}",
         "lineHeight": "{line_height.2xs}",
         "fontSize": "{font_size.xs}"
@@ -1270,8 +1270,8 @@
     "label": {
       "text": {
         "value": {
-          "fontFamily": "{font_family.roboto}",
-          "fontWeight": "{font_weight.semi_bold}",
+          "fontFamily": "{font_family.body}",
+          "fontWeight": "{font_weight.semi-bold}",
           "lineHeight": "{line_height.sm}",
           "fontSize": "{font_size.sm}"
         },
@@ -1696,6 +1696,12 @@
           }
         }
       }
+    }
+  },
+  "cta_group": {
+    "gap": {
+      "value": "{spacing.3xs}",
+      "type": "spacing"
     }
   }
 }
