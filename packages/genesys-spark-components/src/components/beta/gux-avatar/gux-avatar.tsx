@@ -227,10 +227,7 @@ export class GuxAvatar {
       >
         <div class="gux-content">
           <slot name="image">
-            <abbr
-              title={this.getDescriptionText()}
-              aria-label={this.getDescriptionText()}
-            >
+            <abbr aria-label={this.getDescriptionText()}>
               {this.generateInitials()}
             </abbr>
           </slot>
