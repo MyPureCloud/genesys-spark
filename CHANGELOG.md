@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.75.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.74.1...v4.75.0) (2024-08-20)
+
+
+### Features
+
+* **chart-column:** Adds the ability to set custom label and domain colors for applicable charts ([e8fdfc3](https://github.com/MyPureCloud/genesys-spark/commit/e8fdfc33f522ae46b7d7fa4205b718b72df203cf))
+* **form-field-radio-group:** required and indicator mark added to groups ([#563](https://github.com/MyPureCloud/genesys-spark/issues/563)) ([610ec78](https://github.com/MyPureCloud/genesys-spark/commit/610ec78f257e1516723ca6e30296af8cabfe7e4f))
+
+
+### Bug Fixes
+
+* **modal:** fix heading token discrepancy ([0b4f222](https://github.com/MyPureCloud/genesys-spark/commit/0b4f222ba6c7a0291ad5317486635b884836ae37))
+
 ### [4.74.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.74.0...v4.74.1) (2024-08-16)
 
 ## [4.74.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.73.1...v4.74.0) (2024-08-15)
