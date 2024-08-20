@@ -17,11 +17,13 @@
 
 ### Used by
 
+ - [gux-form-field-checkbox-group-beta](../../components/gux-form-field-checkbox-group)
  - [gux-form-field-color](../../components/gux-form-field-color)
  - [gux-form-field-dropdown](../../components/gux-form-field-dropdown)
  - [gux-form-field-file](../../components/gux-form-field-file)
  - [gux-form-field-number](../../components/gux-form-field-number)
  - [gux-form-field-phone](../../components/gux-form-field-phone)
+ - [gux-form-field-radio-group-beta](../../components/gux-form-field-radio-group)
  - [gux-form-field-range](../../components/gux-form-field-range)
  - [gux-form-field-search](../../components/gux-form-field-search)
  - [gux-form-field-select](../../components/gux-form-field-select)
@@ -33,11 +35,13 @@
 ### Graph
 ```mermaid
 graph TD;
+  gux-form-field-checkbox-group-beta --> gux-form-field-label-indicator
   gux-form-field-color --> gux-form-field-label-indicator
   gux-form-field-dropdown --> gux-form-field-label-indicator
   gux-form-field-file --> gux-form-field-label-indicator
   gux-form-field-number --> gux-form-field-label-indicator
   gux-form-field-phone --> gux-form-field-label-indicator
+  gux-form-field-radio-group-beta --> gux-form-field-label-indicator
   gux-form-field-range --> gux-form-field-label-indicator
   gux-form-field-search --> gux-form-field-label-indicator
   gux-form-field-select --> gux-form-field-label-indicator
