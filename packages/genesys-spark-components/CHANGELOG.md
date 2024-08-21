@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.130.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.129.0...v3.130.0) (2024-08-21)
+
+
+### Features
+
+* **icon:** aDd comment, heart and lock icons ([#569](https://github.com/MyPureCloud/genesys-spark/issues/569)) ([089d686](https://github.com/MyPureCloud/genesys-spark/commit/089d686d6de77b95e7372e0d16b16333b8c1a07d))
+
 ## [3.129.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.128.2...v3.129.0) (2024-08-01)
 
 
