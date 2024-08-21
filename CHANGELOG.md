@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.76.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.75.0...v4.76.0) (2024-08-21)
+
+
+### Features
+
+* **icon:** Add heart, comment, lock icons ([#568](https://github.com/MyPureCloud/genesys-spark/issues/568)) ([4bc2151](https://github.com/MyPureCloud/genesys-spark/commit/4bc215171603805034bdceab4ff1801c0a222bfa))
+
+
+### Bug Fixes
+
+* **avatar:** remove title attribute from abbr element ([09dab78](https://github.com/MyPureCloud/genesys-spark/commit/09dab780c59f34c43e7abe133e3c38a027bc4b86))
+
 ## [4.75.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.74.1...v4.75.0) (2024-08-20)
 
 
