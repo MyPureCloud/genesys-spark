@@ -40,14 +40,13 @@ export class GuxAvatarChangePhoto {
       <button
         class="gux-change-photo"
         onClick={() => this.guxchangephoto.emit()}
-        aria-describedby="gux-change-photo-icon"
+        aria-label={this.i18n('changePhoto')}
       >
         <gux-icon
-          id="gux-change-photo-icon"
           class="gux-change-photo-icon"
           icon-name="fa/camera-solid"
           size="small"
-          screenreaderText={this.i18n('changePhoto')}
+          decorative
         ></gux-icon>
         <slot name="avatar" />
       </button>
