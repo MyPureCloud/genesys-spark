@@ -7,13 +7,7 @@
     flex: 1 0 auto;
 
     ::slotted(gux-label-info-beta) {
-      padding-inline-start: var(--gse-ui-formControl-label-gap);
-    }
-
-    &.gux-required {
-      gux-form-field-label-indicator {
-        padding-inline-start: var(--gse-ui-formControl-label-gap);
-      }
+      padding-inline-start: var(--gse-ui-formControl-formField-gap);
     }
 
     &.gux-beside {
@@ -26,7 +20,7 @@
     }
 
     &.gux-above {
-      padding: var(--gse-ui-formControl-label-padding);
+      padding-bottom: var(--gse-ui-formControl-formField-gap);
     }
 
     &.gux-screenreader {

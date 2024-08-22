@@ -86,7 +86,7 @@
       flex: 0 1 auto;
       align-self: auto;
       order: 0;
-      margin-right: var(--gse-ui-formControl-label-gap);
+      margin-right: var(--gse-ui-formControl-helper-gap);
 
       @include gux-form-field.gse-ui-formControl-label-bold;
     }
