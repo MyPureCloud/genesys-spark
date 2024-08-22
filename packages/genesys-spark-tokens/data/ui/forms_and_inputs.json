@@ -54,11 +54,11 @@
     },
     "helper": {
       "padding": {
-        "value": "{form_control.form_field.click_input.padding} 0 0 {container.lg.padding}",
+        "value": "{form_control.field.click_input.padding} 0 0 {container.lg.padding}",
         "type": "spacing"
       },
       "gap": {
-        "value": "{form_control.form_field.click_input.gap}",
+        "value": "{form_control.field.click_input.gap}",
         "type": "spacing"
       }
     },
@@ -142,12 +142,12 @@
         "type": "spacing"
       },
       "gap": {
-        "value": "{form_control.form_field.click_input.gap}",
+        "value": "{form_control.field.click_input.gap}",
         "type": "spacing"
       }
     },
     "gap": {
-      "value": "{form_control.form_field.click_input.gap}",
+      "value": "{form_control.field.click_input.gap}",
       "type": "spacing"
     },
     "disabled": {
@@ -854,20 +854,20 @@
       }
     },
     "gap": {
-      "value": "{form_control.form_field.click_input.gap}",
+      "value": "{form_control.field.click_input.gap}",
       "type": "spacing"
     },
     "padding": {
-      "value": "{form_control.form_field.padding}",
+      "value": "{form_control.field.padding}",
       "type": "spacing"
     },
     "track": {
       "width": {
-        "value": "{form_control.form_field.click_input.md.size}",
+        "value": "{form_control.field.click_input.md.size}",
         "type": "sizing"
       },
       "height": {
-        "value": "{form_control.form_field.click_input.sm.size}",
+        "value": "{form_control.field.click_input.sm.size}",
         "type": "sizing"
       },
       "enabled": {
@@ -933,11 +933,11 @@
     },
     "handle": {
       "width": {
-        "value": "{form_control.form_field.click_input.sm.size}",
+        "value": "{form_control.field.click_input.sm.size}",
         "type": "sizing"
       },
       "height": {
-        "value": "{form_control.form_field.click_input.sm.size}",
+        "value": "{form_control.field.click_input.sm.size}",
         "type": "sizing"
       },
       "hover": {
@@ -1142,7 +1142,7 @@
     },
     "input": {
       "container_sizing": {
-        "value": "{form_control.form_field.text_input.md.height}",
+        "value": "{form_control.field.text_input.md.height}",
         "type": "sizing"
       },
       "swatch_sizing": {
@@ -1155,7 +1155,7 @@
       }
     },
     "gap": {
-      "value": "{form_control.form_field.click_input.gap}",
+      "value": "{form_control.field.click_input.gap}",
       "type": "spacing"
     }
   },

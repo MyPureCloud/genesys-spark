@@ -32,7 +32,7 @@
         "type": "typography"
       },
       "gap": {
-        "value": "{form_control.form_field.gap}",
+        "value": "{form_control.field.gap}",
         "type": "spacing"
       },
       "icon": {

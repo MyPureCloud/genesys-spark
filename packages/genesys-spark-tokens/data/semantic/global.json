@@ -671,7 +671,7 @@
         }
       }
     },
-    "form_field": {
+    "field": {
       "text_input": {
         "small": {
           "padding": {

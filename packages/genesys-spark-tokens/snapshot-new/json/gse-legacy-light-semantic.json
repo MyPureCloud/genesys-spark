@@ -884,7 +884,7 @@
         "border_width": "1px"
       }
     },
-    "form_field": {
+    "field": {
       "text_input": {
         "small": {
           "padding": "8px"

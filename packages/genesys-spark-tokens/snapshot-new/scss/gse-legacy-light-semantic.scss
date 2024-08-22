@@ -1,555 +1,511 @@
-$gse-semantic-opacity-disabled: 0.5; // The opacity we apply when a component is disabled.
-$gse-semantic-opacity-shroud: 0.8; // The default opacity for shroud elements like the one on modals.
-$gse-semantic-theme-fontFamily-headings: Roboto; // The font family we use for headings and subheadings in this theme.
-$gse-semantic-theme-fontFamily-body: Roboto; // The font family we use for body and labels in this theme.
-$gse-semantic-theme-background-container-primary-10: #ffffff;
-$gse-semantic-theme-background-container-primary-20: #fdfdfd;
-$gse-semantic-theme-background-container-primary-30: #f6f7f9;
-$gse-semantic-theme-background-container-primary-40: #e8ecf2;
-$gse-semantic-theme-background-container-primary-50: #deeaff;
-$gse-semantic-theme-background-container-primary-60: #e2e6ee;
-$gse-semantic-theme-background-container-secondary-10: #2a60c8;
-$gse-semantic-theme-background-container-secondary-20: #2754ac;
-$gse-semantic-theme-background-container-secondary-30: #23478f;
-$gse-semantic-theme-background-container-tertiary-10: #00000000;
-$gse-semantic-theme-background-container-tertiary-20: #6b7585;
-$gse-semantic-theme-background-container-highContrast-10: #283243;
-$gse-semantic-theme-background-container-highContrast-20: #1c3363;
-$gse-semantic-theme-background-container-highContrast-30: #172b52;
-$gse-semantic-theme-background-container-highContrast-40: #000000;
-$gse-semantic-theme-background-formControl-input-10: #f6f7f9;
-$gse-semantic-theme-background-formControl-input-20: #6b7585;
-$gse-semantic-theme-background-overlay-10: rgb(12.5% 16.1% 21.6% / 0.8);
-$gse-semantic-theme-background-system-primary-10: #deeaff;
-$gse-semantic-theme-background-system-primary-20: #75a8ff;
-$gse-semantic-theme-background-system-primary-30: #2a60c8;
-$gse-semantic-theme-background-system-primary-40: #2754ac;
-$gse-semantic-theme-background-system-primary-50: #203b73;
-$gse-semantic-theme-background-system-info-5: #deeaff;
-$gse-semantic-theme-background-system-info-10: #deeaff;
-$gse-semantic-theme-background-system-info-20: #75a8ff;
-$gse-semantic-theme-background-system-info-30: #2a60c8;
-$gse-semantic-theme-background-system-info-40: #203b73;
-$gse-semantic-theme-background-system-info-50: #172b52;
-$gse-semantic-theme-background-system-success-5: #eefcea;
-$gse-semantic-theme-background-system-success-10: #eefcea;
-$gse-semantic-theme-background-system-success-20: #95c189;
-$gse-semantic-theme-background-system-success-30: #3c8527;
-$gse-semantic-theme-background-system-success-40: #205a10;
-$gse-semantic-theme-background-system-success-50: #0d3d00;
-$gse-semantic-theme-background-system-warning-5: #fdf8ec;
-$gse-semantic-theme-background-system-warning-10: #fdf8ec;
-$gse-semantic-theme-background-system-warning-20: #fcd276;
-$gse-semantic-theme-background-system-warning-30: #ffae00;
-$gse-semantic-theme-background-system-warning-40: #976700;
-$gse-semantic-theme-background-system-warning-50: #523800;
-$gse-semantic-theme-background-system-error-5: #fceaea;
-$gse-semantic-theme-background-system-error-10: #fceaea;
-$gse-semantic-theme-background-system-error-20: #f37a7a;
-$gse-semantic-theme-background-system-error-30: #ea0b0b;
-$gse-semantic-theme-background-system-error-40: #8f0707;
-$gse-semantic-theme-background-system-error-50: #520404;
-$gse-semantic-theme-background-customAccents-bold-10: #203b73;
-$gse-semantic-theme-background-customAccents-bold-20: #23478f;
-$gse-semantic-theme-background-customAccents-bold-30: #b5b5eb;
-$gse-semantic-theme-background-customAccents-bold-40: #205a10;
-$gse-semantic-theme-background-customAccents-bold-50: #151d28;
-$gse-semantic-theme-background-customAccents-bold-60: #75a8ff;
-$gse-semantic-theme-background-customAccents-bold-70: #8452cf;
-$gse-semantic-theme-background-customAccents-bold-80: #5e5782;
-$gse-semantic-theme-background-customAccents-bold-90: #ff8fdd;
-$gse-semantic-theme-background-customAccents-bold-100: #755000;
-$gse-semantic-theme-background-customAccents-bold-110: #ddd933;
-$gse-semantic-theme-background-customAccents-bold-120: #ffef27;
-$gse-semantic-theme-background-customAccents-bold-130: #75a8ff;
-$gse-semantic-theme-background-customAccents-subtle-10: lch(77.6 10.9 279);
-$gse-semantic-theme-background-customAccents-subtle-20: lch(90.4 14.8 272);
-$gse-semantic-theme-background-customAccents-subtle-30: lch(92.5 8.53 288);
-$gse-semantic-theme-background-customAccents-subtle-40: #c2deb9;
-$gse-semantic-theme-background-customAccents-subtle-50: #c8cfda;
-$gse-semantic-theme-background-customAccents-subtle-60: lch(90.4 14.8 272);
-$gse-semantic-theme-background-customAccents-subtle-70: lch(83.7 21.4 305);
-$gse-semantic-theme-background-customAccents-subtle-80: lch(81.7 7.69 295);
-$gse-semantic-theme-background-customAccents-subtle-90: lch(92.1 16.4 338);
-$gse-semantic-theme-background-customAccents-subtle-100: #fcd276;
-$gse-semantic-theme-background-customAccents-subtle-110: lch(95.5 22.7 98.8);
-$gse-semantic-theme-background-customAccents-subtle-120: #fff793;
-$gse-semantic-theme-background-customAccents-status-10: #09b581;
-$gse-semantic-theme-background-customAccents-status-20: #e22245;
-$gse-semantic-theme-background-customAccents-status-30: #f8c73e;
-$gse-semantic-theme-background-customAccents-status-40: #4856cb;
-$gse-semantic-theme-background-customAccents-status-50: #626e84;
-$gse-semantic-theme-background-customAccents-status-60: #b74ba4;
-$gse-semantic-theme-background-customAccents-status-70: #fe624d;
-$gse-semantic-theme-foreground-primary-10: #3e4a5b;
-$gse-semantic-theme-foreground-primary-20: #2e394c;
-$gse-semantic-theme-foreground-primary-30: #2e394c;
-$gse-semantic-theme-foreground-secondary-10: #ffffff;
-$gse-semantic-theme-foreground-secondary-20: #596373;
-$gse-semantic-theme-foreground-secondary-30: #4c5667;
-$gse-semantic-theme-foreground-tertiary-10: #2e394c;
-$gse-semantic-theme-foreground-tertiary-20: #2e394c;
-$gse-semantic-theme-foreground-tertiary-30: #2e394c;
-$gse-semantic-theme-foreground-tertiary-05: #75a8ff;
-$gse-semantic-theme-foreground-highContrast-10: #ffffff;
-$gse-semantic-theme-foreground-highContrast-20: #eff1f5;
-$gse-semantic-theme-foreground-highContrast-30: #b4bccb;
-$gse-semantic-theme-foreground-system-primary-10: #2a60c8;
-$gse-semantic-theme-foreground-system-info-10: #2a60c8;
-$gse-semantic-theme-foreground-system-success-10: #3c8527;
-$gse-semantic-theme-foreground-system-warning-10: #ffae00;
-$gse-semantic-theme-foreground-system-error-10: #ea0b0b;
-$gse-semantic-theme-foreground-specialAccents-brand-10: #ff4f1f;
-$gse-semantic-theme-foreground-specialAccents-ai-10: #8a5ecc;
-$gse-semantic-theme-foreground-link-10: #2a60c8;
-$gse-semantic-theme-foreground-link-20: #2754ac;
-$gse-semantic-theme-foreground-link-30: #23478f;
-$gse-semantic-theme-foreground-link-40: #8452cf;
-$gse-semantic-theme-foreground-icon-10: #2e394c;
-$gse-semantic-theme-foreground-formControl-clickInput-10: #2a60c8;
-$gse-semantic-theme-foreground-formControl-clickInput-20: #2754ac;
-$gse-semantic-theme-foreground-formControl-clickInput-30: #23478f;
-$gse-semantic-theme-foreground-formControl-clickInput-50: #6b7585;
-$gse-semantic-theme-border-focus-10: #aac9ff;
-$gse-semantic-theme-border-divider-10: #ffffff;
-$gse-semantic-theme-border-divider-20: #b4bccb;
-$gse-semantic-theme-border-divider-30: #2a60c8;
-$gse-semantic-theme-border-system-primary-10: #75a8ff;
-$gse-semantic-theme-border-system-info-10: #75a8ff;
-$gse-semantic-theme-border-system-success-10: #95c189;
-$gse-semantic-theme-border-system-warning-10: #fcd276;
-$gse-semantic-theme-border-system-error-10: #f37a7a;
-$gse-semantic-theme-border-system-error-20: #ea0b0b;
-$gse-semantic-theme-border-inputs-default-10: #6b7585;
-$gse-semantic-theme-border-inputs-hover-10: #2754ac;
-$gse-semantic-theme-border-inputs-active-10: #2a60c8;
-$gse-semantic-theme-border-edges-default-10: #b4bccb;
-$gse-semantic-theme-border-edges-default-20: #4c5667;
-$gse-semantic-theme-border-edges-default-30: #2e394c;
-$gse-semantic-theme-border-edges-default-05: #e2e6ee;
-$gse-semantic-theme-border-edges-enabled-10: #2a60c8;
-$gse-semantic-theme-border-edges-hover-10: #75a8ff;
-$gse-semantic-theme-border-edges-hover-20: #23478f;
-$gse-semantic-theme-border-edges-active-10: #2a60c8;
-$gse-semantic-theme-borderRadius-interactive-xlarge: 100%;
-$gse-semantic-theme-borderRadius-interactive-large: 4px;
-$gse-semantic-theme-borderRadius-interactive-small: 4px;
-$gse-semantic-theme-borderRadius-container-large: 4px;
-$gse-semantic-theme-borderRadius-container-medium: 4px;
-$gse-semantic-theme-borderRadius-container-small: 4px;
-$gse-semantic-theme-borderRadius-formControl-input-large: 4px;
-$gse-semantic-theme-borderRadius-formControl-input-medium: 4px;
-$gse-semantic-theme-borderRadius-formControl-input-small: 4px;
-$gse-semantic-theme-borderRadius-focus-full: 100%;
-$gse-semantic-theme-borderRadius-focus-xlarge: 16px;
-$gse-semantic-theme-borderRadius-focus-large: 8px;
-$gse-semantic-theme-borderRadius-focus-medium: 8px;
-$gse-semantic-theme-borderRadius-focus-small: 4px;
-$gse-semantic-theme-borderRadius-focus-xsmall: 4px;
-$gse-semantic-background-interactive-primary-default: #2a60c8; // The background color of primary actions in the default state.
-$gse-semantic-background-interactive-primary-hover: #2754ac; // The background color of primary actions in the hover state.
-$gse-semantic-background-interactive-primary-active: #23478f; // The background color of primary actions in the active state.
-$gse-semantic-background-interactive-secondary-default: #e8ecf2; // The background color of secondary actions in the default state.
-$gse-semantic-background-interactive-secondary-hover: #deeaff; // The background color of secondary actions in the hover state.
-$gse-semantic-background-interactive-secondary-active: #e2e6ee; // The background color of secondary actions in the active state.
-$gse-semantic-background-interactive-tertiary-default: #00000000; // The background color of tertiary actions in the default state.
-$gse-semantic-background-interactive-tertiary-hover: #2754ac; // The background color of tertiary actions in the hover state.
-$gse-semantic-background-interactive-tertiary-active: #23478f; // The background color of tertiary actions in the active state.
-$gse-semantic-background-interactive-ghost-default: #00000000; // The background color of dismissal actions in the default state.
-$gse-semantic-background-interactive-ghost-hover: #deeaff; // The background color of dismissal actions in the hover state.
-$gse-semantic-background-interactive-ghost-active: #e2e6ee; // The background color of dismissal actions in the active state.
-$gse-semantic-background-interactive-subtle-default: #ffffff; // The background color of subtle dismissal actions, like close buttons on modals; in the default state.
-$gse-semantic-background-interactive-subtle-hover: #deeaff; // The background color of subtle dismissal actions, like close buttons on modals; in the hover state.
-$gse-semantic-background-interactive-subtle-active: #e2e6ee; // The background color of subtle dismissal actions, like close buttons on modals; in the active state.
-$gse-semantic-background-interactive-danger-default: #ea0b0b; // The background color of danger actions in the default state.
-$gse-semantic-background-interactive-danger-hover: #8f0707; // The background color of danger actions in the hover state.
-$gse-semantic-background-interactive-danger-active: #520404; // The background color of danger actions in the active state.
-$gse-semantic-background-overlay-shroud-default: rgb(
-  12.5% 16.1% 21.6% / 0.8
-); // The default color for modals overlays.
-$gse-semantic-background-container-page-default: #ffffff; // The default background color for a page.
-$gse-semantic-background-container-page-tonalSubtle: #fdfdfd; // A more subtle background color for a page, ideal for highlight surfaces that are over the background, for example, a dashboard with different panels.
-$gse-semantic-background-container-page-tonalMedium: #f6f7f9; // The background color to highlight elements in the background, for example, the row of a table.
-$gse-semantic-background-container-page-tonalHigh: #deeaff; // The background color to highlight elements in the background, for example, the alternated row of a table.
-$gse-semantic-background-container-elevated-default: #ffffff; // The background color for the default state of an elevated surface like modals, popovers, cards, etc.
-$gse-semantic-background-container-elevated-hover: #e8ecf2; // The background color for the hover state of an elevated surface like modals, popovers, cards, etc.
-$gse-semantic-background-container-elevated-active: #e2e6ee; // The background color for the active state of an elevated surface like modals, popovers, cards, etc.
-$gse-semantic-background-container-elevated-error: #fceaea; // The color of surfaces that are in an error state.
-$gse-semantic-background-container-highConstrast-default: #283243; // The background color for the default state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards.
-$gse-semantic-background-container-highConstrast-hover: #172b52; // The background color for the hover state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards.
-$gse-semantic-background-container-highConstrast-active: #1c3363; // The background color for the active state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards.
-$gse-semantic-background-system-error-tonalMedium: #fceaea; // The default background color for smaller error elements like badges that need a slightly more saturated color that tonal_subtle because of their size.
-$gse-semantic-background-system-error-tonalSubtle: #fceaea; // The default background color for error elements like alerts.
-$gse-semantic-background-system-warning-tonalMedium: #fdf8ec; // The default background color for smaller warning elements like badges that need a slightly more saturated color that tonal_subtle because of their size.
-$gse-semantic-background-system-warning-tonalSubtle: #fdf8ec; // The default background color for warning elements like alerts.
-$gse-semantic-background-system-success-tonalMedium: #eefcea; // The default background color for smaller success elements like badges that need a slightly more saturated color that tonal_subtle because of their size.
-$gse-semantic-background-system-success-tonalSubtle: #eefcea; // The default background color for success elements like alerts.
-$gse-semantic-background-system-info-tonalMedium: #deeaff; // The default background color for smaller info elements like badges that need a slightly more saturated color that tonal_subtle because of their size.
-$gse-semantic-background-system-info-tonalSubtle: #deeaff; // The default background color for info elements like alerts.
-$gse-semantic-background-system-primary-tonalMedium: #deeaff; // Although this tokens has the same value as tonal_subtle, it is needed to match the structure of the other statuses.
-$gse-semantic-background-system-primary-tonalSubtle: #deeaff; // The default background color for neutral feedback elements like alerts.
-$gse-semantic-background-system-customAccents-bold-accent_1: #203b73; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-bold-accent_2: #23478f; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-bold-accent_3: #b5b5eb; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-bold-accent_4: #205a10; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-bold-accent_5: #151d28; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-bold-accent_6: #75a8ff; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-bold-accent_7: #8452cf; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-bold-accent_8: #5e5782; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-bold-accent_9: #ff8fdd; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-bold-accent_10: #755000; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-bold-accent_11: #ddd933; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-bold-accent_12: #ffef27; // A custom accent used in search component
-$gse-semantic-background-system-customAccents-bold-accent_13: #75a8ff;
-$gse-semantic-background-system-customAccents-subtle-accent_1: lch(
-  77.6 10.9 279
-); // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-subtle-accent_2: lch(
-  90.4 14.8 272
-); // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-subtle-accent_3: lch(
-  92.5 8.53 288
-); // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-subtle-accent_4: #c2deb9; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-subtle-accent_5: #c8cfda; // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-subtle-accent_6: lch(
-  90.4 14.8 272
-); // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-subtle-accent_7: lch(
-  83.7 21.4 305
-); // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-subtle-accent_8: lch(
-  81.7 7.69 295
-); // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-subtle-accent_9: lch(
-  92.1 16.4 338
-); // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-subtle-accent_10: #fcd276;
-$gse-semantic-background-system-customAccents-subtle-accent_11: lch(
-  95.5 22.7 98.8
-); // A custom accent used mostly for tags.
-$gse-semantic-background-system-customAccents-subtle-accent_12: #fff793; // A custom accent used in search component
-$gse-semantic-background-system-progressAndLoading-default: #deeaff; // The color to indicate that this progress has not been achieved.
-$gse-semantic-background-system-progressAndLoading-progressed: #2a60c8; // The color to indicate that this progress in a component.
-$gse-semantic-background-system-status-available: #09b581;
-$gse-semantic-background-system-status-busy: #e22245;
-$gse-semantic-background-system-status-away: #f8c73e;
-$gse-semantic-background-system-status-onQueue: #4856cb;
-$gse-semantic-background-system-status-offline: #626e84;
-$gse-semantic-background-system-status-outOfOffice: #b74ba4;
-$gse-semantic-background-system-status-notification: #fe624d;
-$gse-semantic-background-formControl-clickInput-track: #6b7585; // The color used for the tracks of click-based components,like the container of the toggle or the track of the slider.
-$gse-semantic-background-formControl-textInput-track: #f6f7f9; // The default background color for inputs.
-$gse-semantic-foreground-interactive-primary-default: #ffffff; // The color for foreground elements that are over a primary/default background.
-$gse-semantic-foreground-interactive-primary-active: #ffffff; // The color for foreground elements that are over a primary/hover background.
-$gse-semantic-foreground-interactive-primary-hover: #ffffff; // The color for foreground elements that are over a primary/active background.
-$gse-semantic-foreground-interactive-secondary-default: #2e394c; // The color for foreground elements that are over a secondary/default background.
-$gse-semantic-foreground-interactive-secondary-active: #2e394c; // The color for foreground elements that are over a secondary/active background.
-$gse-semantic-foreground-interactive-secondary-hover: #2e394c; // The color for foreground elements that are over a secondary/hover background.
-$gse-semantic-foreground-interactive-tertiary-default: #2e394c; // The color for foreground elements that are over a tertiary/default background.
-$gse-semantic-foreground-interactive-tertiary-active: #ffffff; // The color for foreground elements that are over a tertiary/active background.
-$gse-semantic-foreground-interactive-tertiary-hover: #ffffff; // The color for foreground elements that are over a tertiary/hover background.
-$gse-semantic-foreground-interactive-ghost-default: #2e394c; // The color for foreground elements that are over a ghost/default background.
-$gse-semantic-foreground-interactive-ghost-active: #2e394c; // The color for foreground elements that are over a ghost/active background.
-$gse-semantic-foreground-interactive-ghost-hover: #2e394c; // The color for foreground elements that are over a ghost/hover background.
-$gse-semantic-foreground-interactive-subtle-default: #3e4a5b; // The color for foreground elements that are over a subtle/default background.
-$gse-semantic-foreground-interactive-subtle-active: #2e394c; // The color for foreground elements that are over a subtle/active background.
-$gse-semantic-foreground-interactive-subtle-hover: #2e394c; // The color for foreground elements that are over a subtle/hover background.
-$gse-semantic-foreground-interactive-danger-default: #ffffff; // The color for foreground elements that are over a danger/default background.
-$gse-semantic-foreground-interactive-danger-active: #ffffff; // The color for foreground elements that are over a danger/active background.
-$gse-semantic-foreground-interactive-danger-hover: #ffffff; // The color for foreground elements that are over a danger/hover background.
-$gse-semantic-foreground-interactive-link-default: #2a60c8; // The default color of links.
-$gse-semantic-foreground-interactive-link-active: #23478f; // The active color of links.
-$gse-semantic-foreground-interactive-link-hover: #2754ac; // The hover color of links.
-$gse-semantic-foreground-interactive-link-visited: #8452cf; // The  color of links when  they were already visited.
-$gse-semantic-foreground-interactive-indicator-default: #75a8ff; // this is used to the selected indicator for the data table headers
-$gse-semantic-foreground-container-highEmphasis: #2e394c; // The default color for high emphasis content on surfaces, like headings, subheadings, quotes or bold text.
-$gse-semantic-foreground-container-midEmphasis: #3e4a5b; // The default color for medium emphasis content on surfaces, like normal paragraphs.
-$gse-semantic-foreground-container-lowEmphasis: #4c5667; // The default color for low emphasis content on surfaces, like captions or fine print.
-$gse-semantic-foreground-container-highContrast-highEmphasis: #ffffff; // The default color for high emphasis content on high contrast surfaces, like headings, subheadings, quotes or bold text.
-$gse-semantic-foreground-container-highContrast-midEmphasis: #eff1f5; // The default color for medium emphasis content on high contrast surfaces, like normal paragraphs.
-$gse-semantic-foreground-container-highContrast-lowEmphasis: #b4bccb; // The default color for low emphasis content on high contrast surfaces, like captions or fine print.
-$gse-semantic-foreground-container-specialAccents-ai: #8a5ecc; // The color for foreground content used to highlight an AI feature on a surface.
-$gse-semantic-foreground-container-specialAccents-brand: #ff4f1f; // The brand color, mostly used for logos on surfaces.
-$gse-semantic-foreground-system-customAccents-light: #ffffff; // The recommended color for contetn that is on a custom accent background that doesn't pass the contrast check with the dark color.
-$gse-semantic-foreground-system-customAccents-dark: #2e394c; // The recommended color for contetn that is on a custom accent background that doesn't pass the contrast check with the light color.
-$gse-semantic-foreground-system-progressAndLoading-default: #2e394c; // The color for foreground content on progress_and_loading/default backgrounds.
-$gse-semantic-foreground-system-progressAndLoading-progressed: #ffffff; // The color for foreground content on progress_and_loading/progressed backgrounds.
-$gse-semantic-foreground-system-info-highEmphasis: #2e394c; // The default color for high emphasis content on info backgrounds, like headings, subheadings, quotes or bold text or links.
-$gse-semantic-foreground-system-info-accent: #2a60c8; // The color for content on info backgrounds that we want to highlight, like the info icon on an alert.
-$gse-semantic-foreground-system-success-highEmphasis: #2e394c; // The default color for high emphasis content on success backgrounds, like headings, subheadings, quotes or bold text or links.
-$gse-semantic-foreground-system-success-accent: #3c8527; // The color for content on success backgrounds that we want to highlight, like the info icon on an alert.
-$gse-semantic-foreground-system-warning-highEmphasis: #2e394c; // The default color for high emphasis content on warning backgrounds, like headings, subheadings, quotes or bold text or links.
-$gse-semantic-foreground-system-warning-accent: #ffae00; // The color for content on warning backgrounds that we want to highlight, like the info icon on an alert.
-$gse-semantic-foreground-system-error-highEmphasis: #2e394c; // The default color for high emphasis content on error backgrounds, like headings, subheadings, quotes or bold text or links.
-$gse-semantic-foreground-system-error-accent: #ea0b0b; // The color for content on error backgrounds that we want to highlight, like the info icon on an alert.
-$gse-semantic-foreground-system-icon-default: #2e394c; // The color for foreground content on progress_and_loading/default backgrounds.
-$gse-semantic-foreground-formControl-helpText-default: #4c5667; // The color we used for the default helper text.
-$gse-semantic-foreground-formControl-helpText-error: #ea0b0b; // The color we used for the error helper text.
-$gse-semantic-foreground-formControl-textInput-placeholder: #4c5667; // The default color of placeholder content on an input.
-$gse-semantic-foreground-formControl-textInput-populated: #2e394c; // The default color of populated content on an input.
-$gse-semantic-foreground-formControl-textInput-icon: #4c5667; // The default color of icons on an input.
-$gse-semantic-foreground-formControl-clickInput-enabled: #6b7585; // The color we use for foreground elements on click-based inputs when they are enabled but not selected.
-$gse-semantic-foreground-formControl-clickInput-selected: #2a60c8; // The color we use for foreground elements on click-based inputs when they are selected.
-$gse-semantic-foreground-formControl-clickInput-hover: #2754ac; // The color we use for foreground elements on click-based inputs when they are on the hover state.
-$gse-semantic-foreground-formControl-clickInput-active: #23478f; // The color we use for foreground elements on click-based inputs when they are on the active state.
-$gse-semantic-foreground-formControl-clickInput-error: #ea0b0b;
-$gse-semantic-foreground-formControl-label-default: #2e394c; // The color for the content of input labels.
-$gse-semantic-foreground-formControl-label-requiredAccent: #ea0b0b; // The color we used for the required indicator.
-$gse-semantic-foreground-formControl-label-optionalAccent: #3e4a5b; // The color we used for optional indicator in labels
-$gse-semantic-foreground-formControl-label-tooltip: #3e4a5b; // The color we used for tooltip in labels
-$gse-semantic-border-focus: #aac9ff; // The color we use for focus outlines.
-$gse-semantic-border-container-divider: #b4bccb; // The default color for dividers inside surfaces.
-$gse-semantic-border-container-edges-default: #b4bccb; // The default color for the edge borders of surfaces, we mostly use it to add some elevation for cards.
-$gse-semantic-border-container-edges-hover: #75a8ff; // The color for the edge borders of surfaces that are on the hover state, like the bottom border of a tab.
-$gse-semantic-border-container-edges-error: #ea0b0b; // The color for the edge borders of surfaces that are on the error state, like the border of a card in an error state.
-$gse-semantic-border-container-edges-enabled: #2a60c8; // The color for the edge borders of high contrast surfaces that are enabled, like the bottom border of a selected tab.
-$gse-semantic-border-container-edges-active: #2a60c8; // The color for the edge borders of surfaces that are on the active state, like the bottom border of a tab.
-$gse-semantic-border-container-edges-highEmphasis: #2e394c; // The default color for the edge borders of high-emphasis surfaces e.g dark tooltip
-$gse-semantic-border-container-edges-dataTable-default: #e2e6ee; // This is used for default border for datatables
-$gse-semantic-border-container-highConstrast-default: #4c5667; // The default color for the edge borders of high contrast surfaces.
-$gse-semantic-border-container-highConstrast-enabled: #2a60c8; // The color for the edge borders of high contrast surfaces that are enabled.
-$gse-semantic-border-container-highConstrast-hover: #23478f; // The color for the edge borders of high contrast surfaces that are on the hover state.
-$gse-semantic-border-container-highConstrast-active: #2a60c8; // The color for the edge borders of high contrast surfaces that are on the active state.
-$gse-semantic-border-system-info: #75a8ff; // The default borders for elements that have a feedback/info background.
-$gse-semantic-border-system-warning: #fcd276; // The default borders for elements that have a feedback/warning background.
-$gse-semantic-border-system-success: #95c189; // The default borders for elements that have a feedback/success background.
-$gse-semantic-border-system-error: #f37a7a; // The default borders for elements that have a feedback/error background.
-$gse-semantic-border-system-primary: #75a8ff; // The default borders for elements that have a feedback/primary background.
-$gse-semantic-border-interactive-primary-divider: #ffffff; // The color for dividers inside interactive/primary  elements.
-$gse-semantic-border-interactive-secondary-divider: #ffffff; // The color for dividers inside interactive/secondary elements.
-$gse-semantic-border-interactive-tertiary-divider: #2a60c8; // The color for dividers inside interactive/tertiary elements.
-$gse-semantic-border-interactive-danger-divider: #ffffff; // The color for dividers inside interactive/danger elements.
-$gse-semantic-border-formControl-textInput-default: #6b7585; // The border for inputs edges in the default state.
-$gse-semantic-border-formControl-textInput-hover: #2754ac; // The border for inputs edges in the hover state.
-$gse-semantic-border-formControl-textInput-active: #2a60c8; // The border for inputs edges in the active state.
-$gse-semantic-border-formControl-textInput-error: #ea0b0b; // The border for inputs edges in the error state.
-$gse-semantic-body-sm-regular-fontFamily: Roboto; // This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors.
-$gse-semantic-body-sm-regular-fontWeight: 400; // This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors.
-$gse-semantic-body-sm-regular-fontSize: 12px; // This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors.
-$gse-semantic-body-sm-regular-lineHeight: 18px; // This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors.
-$gse-semantic-body-sm-link-fontFamily: Roboto; // This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors.
-$gse-semantic-body-sm-link-fontWeight: 600; // This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors.
-$gse-semantic-body-sm-link-fontSize: 12px; // This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors.
-$gse-semantic-body-sm-link-lineHeight: 18px; // This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors.
-$gse-semantic-body-sm-link-textDecoration: underline; // This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors.
-$gse-semantic-body-sm-bold-fontFamily: Roboto; // This is the typography style we use to add great emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with high emphasis colors.
-$gse-semantic-body-sm-bold-fontWeight: 700; // This is the typography style we use to add great emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with high emphasis colors.
-$gse-semantic-body-sm-bold-fontSize: 12px; // This is the typography style we use to add great emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with high emphasis colors.
-$gse-semantic-body-sm-bold-lineHeight: 18px; // This is the typography style we use to add great emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with high emphasis colors.
-$gse-semantic-body-sm-semiBold-fontFamily: Roboto; // This is the typography style we use to add moderate emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or high emphasis colors.
-$gse-semantic-body-sm-semiBold-fontWeight: 600; // This is the typography style we use to add moderate emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or high emphasis colors.
-$gse-semantic-body-sm-semiBold-fontSize: 12px; // This is the typography style we use to add moderate emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or high emphasis colors.
-$gse-semantic-body-sm-semiBold-lineHeight: 18px; // This is the typography style we use to add moderate emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or high emphasis colors.
-$gse-semantic-body-md-regular-fontFamily: Roboto; // This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors.
-$gse-semantic-body-md-regular-fontWeight: 400; // This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors.
-$gse-semantic-body-md-regular-fontSize: 14px; // This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors.
-$gse-semantic-body-md-regular-lineHeight: 20px; // This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors.
-$gse-semantic-body-md-link-fontFamily: Roboto; // This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors.
-$gse-semantic-body-md-link-fontWeight: 600; // This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors.
-$gse-semantic-body-md-link-fontSize: 14px; // This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors.
-$gse-semantic-body-md-link-lineHeight: 20px; // This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors.
-$gse-semantic-body-md-link-textDecoration: underline; // This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors.
-$gse-semantic-body-md-bold-fontFamily: Roboto; // This is the typography style we use to add great emphasis in bodies of text, like paragraphs; we usually pair it with high emphasis colors.
-$gse-semantic-body-md-bold-fontWeight: 700; // This is the typography style we use to add great emphasis in bodies of text, like paragraphs; we usually pair it with high emphasis colors.
-$gse-semantic-body-md-bold-fontSize: 14px; // This is the typography style we use to add great emphasis in bodies of text, like paragraphs; we usually pair it with high emphasis colors.
-$gse-semantic-body-md-bold-lineHeight: 20px; // This is the typography style we use to add great emphasis in bodies of text, like paragraphs; we usually pair it with high emphasis colors.
-$gse-semantic-body-md-semiBold-fontFamily: Roboto; // This is the typography style we use to add moderate emphasis in bodies of text, like paragraphs, we usually pair it with medium or high emphasis colors.
-$gse-semantic-body-md-semiBold-fontWeight: 600; // This is the typography style we use to add moderate emphasis in bodies of text, like paragraphs, we usually pair it with medium or high emphasis colors.
-$gse-semantic-body-md-semiBold-fontSize: 14px; // This is the typography style we use to add moderate emphasis in bodies of text, like paragraphs, we usually pair it with medium or high emphasis colors.
-$gse-semantic-body-md-semiBold-lineHeight: 20px; // This is the typography style we use to add moderate emphasis in bodies of text, like paragraphs, we usually pair it with medium or high emphasis colors.
-$gse-semantic-body-lg-regular-fontFamily: Roboto; // This is the typography style we use in most of our high emphasis bodies of text like introductory paragraphs after a heading; we usually pair it with medium emphasis colors.
-$gse-semantic-body-lg-regular-fontWeight: 400; // This is the typography style we use in most of our high emphasis bodies of text like introductory paragraphs after a heading; we usually pair it with medium emphasis colors.
-$gse-semantic-body-lg-regular-fontSize: 16px; // This is the typography style we use in most of our high emphasis bodies of text like introductory paragraphs after a heading; we usually pair it with medium emphasis colors.
-$gse-semantic-body-lg-regular-lineHeight: 24px; // This is the typography style we use in most of our high emphasis bodies of text like introductory paragraphs after a heading; we usually pair it with medium emphasis colors.
-$gse-semantic-body-lg-link-fontFamily: Roboto; // This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors.
-$gse-semantic-body-lg-link-fontWeight: 600; // This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors.
-$gse-semantic-body-lg-link-fontSize: 16px; // This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors.
-$gse-semantic-body-lg-link-lineHeight: 24px; // This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors.
-$gse-semantic-body-lg-link-textDecoration: underline; // This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors.
-$gse-semantic-body-lg-bold-fontFamily: Roboto; // This is the typography style we use to add great emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with high emphasis colors.
-$gse-semantic-body-lg-bold-fontWeight: 700; // This is the typography style we use to add great emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with high emphasis colors.
-$gse-semantic-body-lg-bold-fontSize: 16px; // This is the typography style we use to add great emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with high emphasis colors.
-$gse-semantic-body-lg-bold-lineHeight: 24px; // This is the typography style we use to add great emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with high emphasis colors.
-$gse-semantic-body-lg-semiBold-fontFamily: Roboto; // This is the typography style we use to add moderate emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with medium or high emphasis colors.
-$gse-semantic-body-lg-semiBold-fontWeight: 600; // This is the typography style we use to add moderate emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with medium or high emphasis colors.
-$gse-semantic-body-lg-semiBold-fontSize: 16px; // This is the typography style we use to add moderate emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with medium or high emphasis colors.
-$gse-semantic-body-lg-semiBold-lineHeight: 24px; // This is the typography style we use to add moderate emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with medium or high emphasis colors.
-$gse-semantic-heading-xs-bold-fontFamily: Roboto; // We use this typography style for high emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xs-bold-fontWeight: 700; // We use this typography style for high emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xs-bold-fontSize: 14px; // We use this typography style for high emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xs-bold-lineHeight: 24px; // We use this typography style for high emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xs-semiBold-fontFamily: Roboto; // We use this typography style for moderate emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xs-semiBold-fontWeight: 600; // We use this typography style for moderate emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xs-semiBold-fontSize: 14px; // We use this typography style for moderate emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xs-semiBold-lineHeight: 24px; // We use this typography style for moderate emphasis headers nested on a 5th-6th level, h5's or h6's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-sm-bold-fontFamily: Roboto; // We use this typography style for high emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-sm-bold-fontWeight: 700; // We use this typography style for high emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-sm-bold-fontSize: 16px; // We use this typography style for high emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-sm-bold-lineHeight: 24px; // We use this typography style for high emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-sm-semiBold-fontFamily: Roboto; // We use this typography style for moderate emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-sm-semiBold-fontWeight: 600; // We use this typography style for moderate emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-sm-semiBold-fontSize: 16px; // We use this typography style for moderate emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-sm-semiBold-lineHeight: 24px; // We use this typography style for moderate emphasis headers nested on a 4th level, h4's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-md-bold-fontFamily: Roboto; // We use this typography style for high emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-md-bold-fontWeight: 700; // We use this typography style for high emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-md-bold-fontSize: 18px; // We use this typography style for high emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-md-bold-lineHeight: 27px; // We use this typography style for high emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-md-semiBold-fontFamily: Roboto; // We use this typography style for moderate emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-md-semiBold-fontWeight: 600; // We use this typography style for moderate emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-md-semiBold-fontSize: 18px; // We use this typography style for moderate emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-md-semiBold-lineHeight: 27px; // We use this typography style for moderate emphasis headers nested on a 3rd level, h3's. We usually pair it with high emphasis colors.
-$gse-semantic-heading-lg-bold-fontFamily: Roboto; // We use this typography style for high emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-lg-bold-fontWeight: 700; // We use this typography style for high emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-lg-bold-fontSize: 24px; // We use this typography style for high emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-lg-bold-lineHeight: 32px; // We use this typography style for high emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-lg-semiBold-fontFamily: Roboto; // We use this typography style for moderate emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-lg-semiBold-fontWeight: 600; // We use this typography style for moderate emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-lg-semiBold-fontSize: 24px; // We use this typography style for moderate emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-lg-semiBold-lineHeight: 32px; // We use this typography style for moderate emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xl-bold-fontFamily: Roboto; // We use this typography style for high emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xl-bold-fontWeight: 700; // We use this typography style for high emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xl-bold-fontSize: 36px; // We use this typography style for high emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xl-bold-lineHeight: 44px; // We use this typography style for high emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.
-$gse-semantic-heading-xl-semiBold-fontFamily: Roboto; // We use this typography style for moderate emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.We usually pair it with high emphasis colors.
-$gse-semantic-heading-xl-semiBold-fontWeight: 600; // We use this typography style for moderate emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.We usually pair it with high emphasis colors.
-$gse-semantic-heading-xl-semiBold-fontSize: 36px; // We use this typography style for moderate emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.We usually pair it with high emphasis colors.
-$gse-semantic-heading-xl-semiBold-lineHeight: 44px; // We use this typography style for moderate emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons. We usually pair it with high emphasis colors.We usually pair it with high emphasis colors.
-$gse-semantic-heading-overline-fontFamily: Roboto; // We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors.
-$gse-semantic-heading-overline-fontWeight: 600; // We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors.
-$gse-semantic-heading-overline-fontSize: 12px; // We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors.
-$gse-semantic-heading-overline-lineHeight: 16px; // We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors.
-$gse-semantic-heading-overline-textCase: uppercase; // We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors.
-$gse-semantic-heading-overline-letterSpacing: 1px; // We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.  We usually pair it with low emphasis colors.
-$gse-semantic-subheading-bold-fontFamily: Roboto; // We use this typography style for high emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-subheading-bold-fontWeight: 700; // We use this typography style for high emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-subheading-bold-fontSize: 14px; // We use this typography style for high emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-subheading-bold-lineHeight: 20px; // We use this typography style for high emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-subheading-semiBold-fontFamily: Roboto; // We use this typography style for moderate emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-subheading-semiBold-fontWeight: 600; // We use this typography style for moderate emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-subheading-semiBold-fontSize: 14px; // We use this typography style for moderate emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-subheading-semiBold-lineHeight: 20px; // We use this typography style for moderate emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-subheading-regular-fontFamily: Roboto; // We use this typography style for low emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-subheading-regular-fontWeight: 400; // We use this typography style for low emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-subheading-regular-fontSize: 14px; // We use this typography style for low emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-subheading-regular-lineHeight: 20px; // We use this typography style for low emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header. We usually pair it with medium emphasis colors.
-$gse-semantic-interactive-md-size: 32px; // The recommended size of medium-sized interactive components, for example buttons height.
-$gse-semantic-interactive-md-gap: 4px; // The recommended gap between the content inside of a medium-sized interactive component.
-$gse-semantic-interactive-md-padding: 8px; // The recommended horizontal padding for medium-sized components.
-$gse-semantic-interactive-sm-size: 24px; // The recommended size for small-sized interactive components. For example small button height.
-$gse-semantic-interactive-sm-gap: 2px; // The recommended gap between the content inside of a small-sized interactive component.
-$gse-semantic-interactive-sm-padding: 4px; // The recommended horizontal padding for small-sized horizontal components.
-$gse-semantic-interactive-sm-borderRadius: 4px; // The recommended small border-radius for interactive component. Eg Buttons
-$gse-semantic-interactive-lg-borderRadius: 4px; // The recommended large border-radius for interactive component. Eg Tags
-$gse-semantic-interactive-lg-gap: 8px; // The recommended gap between the content inside of a medium-sized interactive component.
-$gse-semantic-interactive-lg-padding: 12px; // The recommended horizontal padding for large-sized components.
-$gse-semantic-interactive-edges-borderWidth: 1px; // The default border width for the edges of interactive components, like the ones on a tertiary(or outlined) button.
-$gse-semantic-interactive-divider-sm-borderWidth: 1px; // The default border width for the dividers within interactive components, like the ones on an action button.
-$gse-semantic-interactive-divider-lg-borderWidth: 2px; // The default border width for the dividers within interactive components, like the ones on an action button.
-$gse-semantic-interactive-xl-gap: 12px; // The recommended gap between the content inside of a xlarge-sized interactive component.
-$gse-semantic-interactive-xl-padding: 16px; // The recommended horizontal padding for xlarge-sized components.
-$gse-semantic-interactive-xl-size: 40px; // The recommended size for extra-large-sized interactive components. For example a large button height.
-$gse-semantic-interactive-xl-borderRadius: 100%; // The recommended xlarge border-radius for interactive component. Eg handle of the slider
-$gse-semantic-interactive-xs-size: 20px; // The recommended size for small-sized interactive components. For example small link.
-$gse-semantic-interactive-xs-padding: 2px; // The recommended padding for extra-small-sized interactive components.
-$gse-semantic-focusOutline-full-borderRadius: 100%; // The recommended full border-radius for focus. Eg avatar
-$gse-semantic-focusOutline-xl-borderRadius: 16px; // The recommended xlarge border-radius for focus. Eg toggle
-$gse-semantic-focusOutline-lg-borderRadius: 8px; // The recommended large border-radius for focus. Eg segmented control
-$gse-semantic-focusOutline-md-borderRadius: 8px; // The recommended medium border-radius for focus. Eg check box
-$gse-semantic-focusOutline-md-borderWidth: 2px; // The recommended width of the focus outline fo medium-sized components, like the stars on a checkbox
-$gse-semantic-focusOutline-sm-borderRadius: 4px; // The recommended small border-radius for focus. Eg input control
-$gse-semantic-focusOutline-sm-borderWidth: 1px; // The recommended width of the focus outline fo small-sized components, like the stars on a rating component.
-$gse-semantic-focusOutline-xs-borderRadius: 4px; // The recommended xsmall border-radius for focus. Eg icons
-$gse-semantic-focusOutline-offset: 1px;
-$gse-semantic-container-lg-borderRadius: 4px; // The recommended large border-radius for large containers, like modals.
-$gse-semantic-container-lg-gap: 16px; // The recommended gap between items inside a large container, like a modal.
-$gse-semantic-container-lg-padding: 24px; // The default horizontal padding of a medium-sized container, like a card.
-$gse-semantic-container-lg-height: 40px; // The average recommended height for a cell in the datatable
-$gse-semantic-container-md-gap: 12px; // The recommended medium gap between items inside a container, like the gap between elements inisde a modal.
-$gse-semantic-container-md-borderRadius: 4px; // The recommended medium border-radius for containers. Eg cards
-$gse-semantic-container-md-height: 32px; // The minimmum recommended height for a medium container, like a button bar.
-$gse-semantic-container-md-padding: 16px; // The default horizontal padding of a medium-sized container, like an alert.
-$gse-semantic-container-xl-gap: 24px; // The recommended gap between items inside a xlarge container, like progress and loading.
-$gse-semantic-container-xl-padding: 32px; // We uses this spacing as the default padding for large containers like modals.
-$gse-semantic-container-xl-height: 48px; // The average recommended height for the header of a calendar
-$gse-semantic-container-sm-borderRadius: 4px; // The recommended small border-radius for containers. Eg in-line alert
-$gse-semantic-container-sm-gap: 8px; // The recommended medium gap between items inside a container, like the gap between elements inisde an alert.
-$gse-semantic-container-sm-padding: 12px; // The default padding of a small-sized container, like a tooltip.
-$gse-semantic-container-sm-minHeight: 20px; // The minimum height recommended for a small container, like a tooltip.
-$gse-semantic-container-sm-height: 32px; // The average recommended height for a small container, like a tooltip.
-$gse-semantic-container-xs-gap: 4px; // The recommended gap between items inside a container, like the gap between elements inisde a card.
-$gse-semantic-container-xs-padding: 8px; // The default padding of a  extra small-sized container, like the container of an eyebrow title.
-$gse-semantic-container-xs-minHeight: 16px; // The minimum height recommended for a small container, like a tag.
-$gse-semantic-container-xs-height: 20px; // The average recommended height for a small container, like a tag.
-$gse-semantic-container-edges-borderWidth: 1px; // The recommended border width for the edges of containers, like cards or menus or popovers.
-$gse-semantic-container-divider-borderWidth: 1px; // The recommended border width for the dividers within containers, like cards or menus or popovers.
-$gse-semantic-container-2xs-gap: 2px; // The recommended xsmall gap between items inside a container, like the gap between elements inside a tag.
-$gse-semantic-container-2xs-padding: 2px; // The default padding of a our smallest containers, like the container of an tag.
-$gse-semantic-container-2xs-size: 12px; // The average recommended height for a small container, like a tag.
-$gse-semantic-container-full-borderRadius: 100%; // The recomended border radius for circle-shaped containers.
-$gse-semantic-container-3xs-size: 8px;
-$gse-semantic-container-4xs-size: 4px;
-$gse-semantic-formControl-textInput-lg-borderRadius: 4px; // The recommended large border-radius for inputs
-$gse-semantic-formControl-textInput-sm-borderRadius: 4px; // The recommended small border-radius for inputs
-$gse-semantic-formControl-textInput-md-borderRadius: 4px; // The recommended medium border-radius for inputs
-$gse-semantic-formControl-textInput-edges-borderWidth: 1px; // The recommended border width for the edges of text-based inputs, like textfields or text areas.
-$gse-semantic-formControl-textInput-divider-borderWidth: 1px; // The recommended border width for the dividers within text-based inputs, like the textfields or textareas.
-$gse-semantic-formControl-formField-textInput-small-padding: 8px; // The default vertical padding for inputs inside a form control.
-$gse-semantic-formControl-formField-textInput-gap: 12px; // The default gap for between elements inside an input. For example, the space between a placeholder and an icon inside and input.
-$gse-semantic-formControl-formField-textInput-md-height: 32px;
-$gse-semantic-formControl-formField-textInput-medium-padding: 12px; // The recommended horizontal padding for text inputs.
-$gse-semantic-formControl-formField-textInput-minWidth: 48px;
-$gse-semantic-formControl-formField-textInput-lg-height: 98px;
-$gse-semantic-formControl-formField-gap: 4px; // The default gap for between elements inside a form field, for example, the space between a label and its input or its helper text.
-$gse-semantic-formControl-formField-padding: 8px; // The default gap for between elements inside a form field, for example, the space between a label and its input or its helper text.
-$gse-semantic-formControl-formField-clickInput-gap: 8px; // The default gap for between elements inside a form group, like checkboxes, radio buttons.
-$gse-semantic-formControl-formField-clickInput-padding: 4px; // The default padding for between elements inside a form group, like checkboxes, radio buttons.
-$gse-semantic-formControl-formField-clickInput-md-size: 32px; // The recommended height form medium-size click inputs, like checkboxes or radio buttons.
-$gse-semantic-formControl-formField-clickInput-sm-size: 16px; // The recommended height for leaner click inputs, like toggles.
-$gse-semantic-formControl-formField-groupedInput-gap: 8px; // The recommended gap between groped inputs, like the sapce inbetween checkboxes or radio buttons.
-$gse-semantic-formControl-clickInput-handle-borderWidth: 2px; // The recommended border width for handles on click inputs, like the habdle of a toggle.
-$gse-semantic-contanier-lg-boxShadow-x: 0; // The recommended box shadow for large containers, like modals or popovers.
-$gse-semantic-contanier-lg-boxShadow-y: 0; // The recommended box shadow for large containers, like modals or popovers.
-$gse-semantic-contanier-lg-boxShadow-blur: 8px; // The recommended box shadow for large containers, like modals or popovers.
-$gse-semantic-contanier-lg-boxShadow-spread: 1px; // The recommended box shadow for large containers, like modals or popovers.
-$gse-semantic-contanier-lg-boxShadow-color: rgba(
-  35,
-  57,
-  92,
-  0.15
-); // The recommended box shadow for large containers, like modals or popovers.
-$gse-semantic-contanier-lg-boxShadow-type: dropShadow; // The recommended box shadow for large containers, like modals or popovers.
-$gse-semantic-contanier-md-boxShadow-x: 0; // The shadow we used for medium-sized components like elevated cards or menus.
-$gse-semantic-contanier-md-boxShadow-y: 0; // The shadow we used for medium-sized components like elevated cards or menus.
-$gse-semantic-contanier-md-boxShadow-blur: 6px; // The shadow we used for medium-sized components like elevated cards or menus.
-$gse-semantic-contanier-md-boxShadow-spread: 1px; // The shadow we used for medium-sized components like elevated cards or menus.
-$gse-semantic-contanier-md-boxShadow-color: rgba(
-  35,
-  57,
-  92,
-  0.12
-); // The shadow we used for medium-sized components like elevated cards or menus.
-$gse-semantic-contanier-md-boxShadow-type: dropShadow; // The shadow we used for medium-sized components like elevated cards or menus.
-$gse-semantic-contanier-sm-boxShadow-x: 0; // The shadow we used for small-sized components like tooltips.
-$gse-semantic-contanier-sm-boxShadow-y: 0; // The shadow we used for small-sized components like tooltips.
-$gse-semantic-contanier-sm-boxShadow-blur: 4px; // The shadow we used for small-sized components like tooltips.
-$gse-semantic-contanier-sm-boxShadow-spread: 1px; // The shadow we used for small-sized components like tooltips.
-$gse-semantic-contanier-sm-boxShadow-color: rgba(
-  35,
-  57,
-  92,
-  0.1
-); // The shadow we used for small-sized components like tooltips.
-$gse-semantic-contanier-sm-boxShadow-type: dropShadow; // The shadow we used for small-sized components like tooltips.
-$gse-semantic-assets-lg-size: 32px; // The recommended size of large-sized for styles, for example icons.
-$gse-semantic-assets-md-size: 24px; // The recommended size of medium-sized for styles, for example medium icons.
-$gse-semantic-assets-sm-size: 16px; // The recommended size of small-sized for styles, for example small icons.
-$gse-semantic-assets-xl-size: 48px; // The recommended size of xlarge-sized for styles, for example avatar
-$gse-semantic-assets-xs-size: 8px; // The recommended size of small-sized for assets, for example super small icons.
-$gse-semantic-divider-width: 1px; // The default width of our divider, we usually represent dividers as rectangles on Figma instead of a single line layer.
-$gse-semantic-divider-xs-margin: 1px;
-$gse-semantic-divider-sm-margin: 2px;
-$gse-semantic-divider-md-margin: 4px;
-$gse-semantic-divider-lg-margin: 8px;
-$gse-semantic-divider-track-height: 4px; // The heioght for track elements, like the track of the slider.
-$gse-semantic-divider-indicator-width: 2px; // The recommended divider indicator width, used for the indicators of active tabs, for example
+@mixin tokens {
+  --gse-semantic-opacity-disabled: 0.5; /* The opacity we apply when a component is disabled. */
+  --gse-semantic-opacity-shroud: 0.8; /* The default opacity for shroud elements like the one on modals. */
+  --gse-semantic-theme-fontFamily-headings: Roboto; /* The font family we use for headings and subheadings in this theme. */
+  --gse-semantic-theme-fontFamily-body: Roboto; /* The font family we use for body and labels in this theme. */
+  --gse-semantic-theme-background-container-primary-10: #ffffff;
+  --gse-semantic-theme-background-container-primary-20: #fdfdfd;
+  --gse-semantic-theme-background-container-primary-30: #f6f7f9;
+  --gse-semantic-theme-background-container-primary-40: #e8ecf2;
+  --gse-semantic-theme-background-container-primary-50: #deeaff;
+  --gse-semantic-theme-background-container-primary-60: #e2e6ee;
+  --gse-semantic-theme-background-container-secondary-10: #2a60c8;
+  --gse-semantic-theme-background-container-secondary-20: #2754ac;
+  --gse-semantic-theme-background-container-secondary-30: #23478f;
+  --gse-semantic-theme-background-container-tertiary-10: rgba(0, 0, 0, 0);
+  --gse-semantic-theme-background-container-tertiary-20: #6b7585;
+  --gse-semantic-theme-background-container-highContrast-10: #283243;
+  --gse-semantic-theme-background-container-highContrast-20: #1c3363;
+  --gse-semantic-theme-background-container-highContrast-30: #172b52;
+  --gse-semantic-theme-background-container-highContrast-40: #000000;
+  --gse-semantic-theme-background-formControl-input-10: #f6f7f9;
+  --gse-semantic-theme-background-formControl-input-20: #6b7585;
+  --gse-semantic-theme-background-overlay-10: rgb(12.5% 16.1% 21.6% / 0.8);
+  --gse-semantic-theme-background-system-primary-10: #deeaff;
+  --gse-semantic-theme-background-system-primary-20: #75a8ff;
+  --gse-semantic-theme-background-system-primary-30: #2a60c8;
+  --gse-semantic-theme-background-system-primary-40: #2754ac;
+  --gse-semantic-theme-background-system-primary-50: #203b73;
+  --gse-semantic-theme-background-system-info-5: #deeaff;
+  --gse-semantic-theme-background-system-info-10: #deeaff;
+  --gse-semantic-theme-background-system-info-20: #75a8ff;
+  --gse-semantic-theme-background-system-info-30: #2a60c8;
+  --gse-semantic-theme-background-system-info-40: #203b73;
+  --gse-semantic-theme-background-system-info-50: #172b52;
+  --gse-semantic-theme-background-system-success-5: #eefcea;
+  --gse-semantic-theme-background-system-success-10: #eefcea;
+  --gse-semantic-theme-background-system-success-20: #95c189;
+  --gse-semantic-theme-background-system-success-30: #3c8527;
+  --gse-semantic-theme-background-system-success-40: #205a10;
+  --gse-semantic-theme-background-system-success-50: #0d3d00;
+  --gse-semantic-theme-background-system-warning-5: #fdf8ec;
+  --gse-semantic-theme-background-system-warning-10: #fdf8ec;
+  --gse-semantic-theme-background-system-warning-20: #fcd276;
+  --gse-semantic-theme-background-system-warning-30: #ffae00;
+  --gse-semantic-theme-background-system-warning-40: #976700;
+  --gse-semantic-theme-background-system-warning-50: #523800;
+  --gse-semantic-theme-background-system-error-5: #fceaea;
+  --gse-semantic-theme-background-system-error-10: #fceaea;
+  --gse-semantic-theme-background-system-error-20: #f37a7a;
+  --gse-semantic-theme-background-system-error-30: #ea0b0b;
+  --gse-semantic-theme-background-system-error-40: #8f0707;
+  --gse-semantic-theme-background-system-error-50: #520404;
+  --gse-semantic-theme-background-customAccents-bold-10: #203b73;
+  --gse-semantic-theme-background-customAccents-bold-20: #23478f;
+  --gse-semantic-theme-background-customAccents-bold-30: #b5b5eb;
+  --gse-semantic-theme-background-customAccents-bold-40: #205a10;
+  --gse-semantic-theme-background-customAccents-bold-50: #151d28;
+  --gse-semantic-theme-background-customAccents-bold-60: #75a8ff;
+  --gse-semantic-theme-background-customAccents-bold-70: #8452cf;
+  --gse-semantic-theme-background-customAccents-bold-80: #5e5782;
+  --gse-semantic-theme-background-customAccents-bold-90: #ff8fdd;
+  --gse-semantic-theme-background-customAccents-bold-100: #755000;
+  --gse-semantic-theme-background-customAccents-bold-110: #ddd933;
+  --gse-semantic-theme-background-customAccents-bold-120: #ffef27;
+  --gse-semantic-theme-background-customAccents-bold-130: #75a8ff;
+  --gse-semantic-theme-background-customAccents-subtle-10: lch(77.6 10.9 279);
+  --gse-semantic-theme-background-customAccents-subtle-20: lch(90.4 14.8 272);
+  --gse-semantic-theme-background-customAccents-subtle-30: lch(92.5 8.53 288);
+  --gse-semantic-theme-background-customAccents-subtle-40: #c2deb9;
+  --gse-semantic-theme-background-customAccents-subtle-50: #c8cfda;
+  --gse-semantic-theme-background-customAccents-subtle-60: lch(90.4 14.8 272);
+  --gse-semantic-theme-background-customAccents-subtle-70: lch(83.7 21.4 305);
+  --gse-semantic-theme-background-customAccents-subtle-80: lch(81.7 7.69 295);
+  --gse-semantic-theme-background-customAccents-subtle-90: lch(92.1 16.4 338);
+  --gse-semantic-theme-background-customAccents-subtle-100: #fcd276;
+  --gse-semantic-theme-background-customAccents-subtle-110: lch(95.5 22.7 98.8);
+  --gse-semantic-theme-background-customAccents-subtle-120: #fff793;
+  --gse-semantic-theme-background-customAccents-status-10: #09b581;
+  --gse-semantic-theme-background-customAccents-status-20: #e22245;
+  --gse-semantic-theme-background-customAccents-status-30: #f8c73e;
+  --gse-semantic-theme-background-customAccents-status-40: #4856cb;
+  --gse-semantic-theme-background-customAccents-status-50: #626e84;
+  --gse-semantic-theme-background-customAccents-status-60: #b74ba4;
+  --gse-semantic-theme-background-customAccents-status-70: #fe624d;
+  --gse-semantic-theme-foreground-primary-10: #3e4a5b;
+  --gse-semantic-theme-foreground-primary-20: #2e394c;
+  --gse-semantic-theme-foreground-primary-30: #2e394c;
+  --gse-semantic-theme-foreground-secondary-10: #ffffff;
+  --gse-semantic-theme-foreground-secondary-20: #596373;
+  --gse-semantic-theme-foreground-secondary-30: #4c5667;
+  --gse-semantic-theme-foreground-tertiary-10: #2e394c;
+  --gse-semantic-theme-foreground-tertiary-20: #2e394c;
+  --gse-semantic-theme-foreground-tertiary-30: #2e394c;
+  --gse-semantic-theme-foreground-tertiary-05: #75a8ff;
+  --gse-semantic-theme-foreground-highContrast-10: #ffffff;
+  --gse-semantic-theme-foreground-highContrast-20: #eff1f5;
+  --gse-semantic-theme-foreground-highContrast-30: #b4bccb;
+  --gse-semantic-theme-foreground-system-primary-10: #2a60c8;
+  --gse-semantic-theme-foreground-system-info-10: #2a60c8;
+  --gse-semantic-theme-foreground-system-success-10: #3c8527;
+  --gse-semantic-theme-foreground-system-warning-10: #ffae00;
+  --gse-semantic-theme-foreground-system-error-10: #ea0b0b;
+  --gse-semantic-theme-foreground-specialAccents-brand-10: #ff4f1f;
+  --gse-semantic-theme-foreground-specialAccents-ai-10: #8a5ecc;
+  --gse-semantic-theme-foreground-link-10: #2a60c8;
+  --gse-semantic-theme-foreground-link-20: #2754ac;
+  --gse-semantic-theme-foreground-link-30: #23478f;
+  --gse-semantic-theme-foreground-link-40: #8452cf;
+  --gse-semantic-theme-foreground-icon-10: #2e394c;
+  --gse-semantic-theme-foreground-formControl-clickInput-10: #2a60c8;
+  --gse-semantic-theme-foreground-formControl-clickInput-20: #2754ac;
+  --gse-semantic-theme-foreground-formControl-clickInput-30: #23478f;
+  --gse-semantic-theme-foreground-formControl-clickInput-50: #6b7585;
+  --gse-semantic-theme-border-focus-10: #aac9ff;
+  --gse-semantic-theme-border-divider-10: #ffffff;
+  --gse-semantic-theme-border-divider-20: #b4bccb;
+  --gse-semantic-theme-border-divider-30: #2a60c8;
+  --gse-semantic-theme-border-system-primary-10: #75a8ff;
+  --gse-semantic-theme-border-system-info-10: #75a8ff;
+  --gse-semantic-theme-border-system-success-10: #95c189;
+  --gse-semantic-theme-border-system-warning-10: #fcd276;
+  --gse-semantic-theme-border-system-error-10: #f37a7a;
+  --gse-semantic-theme-border-system-error-20: #ea0b0b;
+  --gse-semantic-theme-border-inputs-default-10: #6b7585;
+  --gse-semantic-theme-border-inputs-hover-10: #2754ac;
+  --gse-semantic-theme-border-inputs-active-10: #2a60c8;
+  --gse-semantic-theme-border-edges-default-10: #b4bccb;
+  --gse-semantic-theme-border-edges-default-20: #4c5667;
+  --gse-semantic-theme-border-edges-default-30: #2e394c;
+  --gse-semantic-theme-border-edges-default-05: #e2e6ee;
+  --gse-semantic-theme-border-edges-enabled-10: #2a60c8;
+  --gse-semantic-theme-border-edges-hover-10: #75a8ff;
+  --gse-semantic-theme-border-edges-hover-20: #23478f;
+  --gse-semantic-theme-border-edges-active-10: #2a60c8;
+  --gse-semantic-theme-borderRadius-interactive-xlarge: 100%;
+  --gse-semantic-theme-borderRadius-interactive-large: 4px;
+  --gse-semantic-theme-borderRadius-interactive-small: 4px;
+  --gse-semantic-theme-borderRadius-container-large: 4px;
+  --gse-semantic-theme-borderRadius-container-medium: 4px;
+  --gse-semantic-theme-borderRadius-container-small: 4px;
+  --gse-semantic-theme-borderRadius-formControl-input-large: 4px;
+  --gse-semantic-theme-borderRadius-formControl-input-medium: 4px;
+  --gse-semantic-theme-borderRadius-formControl-input-small: 4px;
+  --gse-semantic-theme-borderRadius-focus-full: 100%;
+  --gse-semantic-theme-borderRadius-focus-xlarge: 16px;
+  --gse-semantic-theme-borderRadius-focus-large: 8px;
+  --gse-semantic-theme-borderRadius-focus-medium: 8px;
+  --gse-semantic-theme-borderRadius-focus-small: 4px;
+  --gse-semantic-theme-borderRadius-focus-xsmall: 4px;
+  --gse-semantic-background-interactive-primary-default: #2a60c8; /* The background color of primary actions in the default state. */
+  --gse-semantic-background-interactive-primary-hover: #2754ac; /* The background color of primary actions in the hover state. */
+  --gse-semantic-background-interactive-primary-active: #23478f; /* The background color of primary actions in the active state. */
+  --gse-semantic-background-interactive-secondary-default: #e8ecf2; /* The background color of secondary actions in the default state. */
+  --gse-semantic-background-interactive-secondary-hover: #deeaff; /* The background color of secondary actions in the hover state. */
+  --gse-semantic-background-interactive-secondary-active: #e2e6ee; /* The background color of secondary actions in the active state. */
+  --gse-semantic-background-interactive-tertiary-default: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /* The background color of tertiary actions in the default state. */
+  --gse-semantic-background-interactive-tertiary-hover: #2754ac; /* The background color of tertiary actions in the hover state. */
+  --gse-semantic-background-interactive-tertiary-active: #23478f; /* The background color of tertiary actions in the active state. */
+  --gse-semantic-background-interactive-ghost-default: rgba(
+    0,
+    0,
+    0,
+    0
+  ); /* The background color of dismissal actions in the default state. */
+  --gse-semantic-background-interactive-ghost-hover: #deeaff; /* The background color of dismissal actions in the hover state. */
+  --gse-semantic-background-interactive-ghost-active: #e2e6ee; /* The background color of dismissal actions in the active state. */
+  --gse-semantic-background-interactive-subtle-default: #ffffff; /* The background color of subtle dismissal actions, like close buttons on modals; in the default state. */
+  --gse-semantic-background-interactive-subtle-hover: #deeaff; /* The background color of subtle dismissal actions, like close buttons on modals; in the hover state. */
+  --gse-semantic-background-interactive-subtle-active: #e2e6ee; /* The background color of subtle dismissal actions, like close buttons on modals; in the active state. */
+  --gse-semantic-background-interactive-danger-default: #ea0b0b; /* The background color of danger actions in the default state. */
+  --gse-semantic-background-interactive-danger-hover: #8f0707; /* The background color of danger actions in the hover state. */
+  --gse-semantic-background-interactive-danger-active: #520404; /* The background color of danger actions in the active state. */
+  --gse-semantic-background-overlay-shroud-default: rgb(
+    12.5% 16.1% 21.6% / 0.8
+  ); /* The default color for modals overlays. */
+  --gse-semantic-background-container-page-default: #ffffff; /* The default background color for a page. */
+  --gse-semantic-background-container-page-tonalSubtle: #fdfdfd; /* A more subtle background color for a page, ideal for highlight surfaces that are over the background, for example, a dashboard with different panels. */
+  --gse-semantic-background-container-page-tonalMedium: #f6f7f9; /* The background color to highlight elements in the background, for example, the row of a table. */
+  --gse-semantic-background-container-page-tonalHigh: #deeaff; /* The background color to highlight elements in the background, for example, the alternated row of a table. */
+  --gse-semantic-background-container-elevated-default: #ffffff; /* The background color for the default state of an elevated surface like modals, popovers, cards, etc. */
+  --gse-semantic-background-container-elevated-hover: #e8ecf2; /* The background color for the hover state of an elevated surface like modals, popovers, cards, etc. */
+  --gse-semantic-background-container-elevated-active: #e2e6ee; /* The background color for the active state of an elevated surface like modals, popovers, cards, etc. */
+  --gse-semantic-background-container-elevated-error: #fceaea; /* The color of surfaces that are in an error state. */
+  --gse-semantic-background-container-highConstrast-default: #283243; /* The background color for the default state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards. */
+  --gse-semantic-background-container-highConstrast-hover: #172b52; /* The background color for the hover state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards. */
+  --gse-semantic-background-container-highConstrast-active: #1c3363; /* The background color for the active state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards. */
+  --gse-semantic-background-system-error-tonalMedium: #fceaea; /* The default background color for smaller error elements like badges that need a slightly more saturated color that tonal_subtle because of their size. */
+  --gse-semantic-background-system-error-tonalSubtle: #fceaea; /* The default background color for error elements like alerts. */
+  --gse-semantic-background-system-warning-tonalMedium: #fdf8ec; /* The default background color for smaller warning elements like badges that need a slightly more saturated color that tonal_subtle because of their size. */
+  --gse-semantic-background-system-warning-tonalSubtle: #fdf8ec; /* The default background color for warning elements like alerts. */
+  --gse-semantic-background-system-success-tonalMedium: #eefcea; /* The default background color for smaller success elements like badges that need a slightly more saturated color that tonal_subtle because of their size. */
+  --gse-semantic-background-system-success-tonalSubtle: #eefcea; /* The default background color for success elements like alerts. */
+  --gse-semantic-background-system-info-tonalMedium: #deeaff; /* The default background color for smaller info elements like badges that need a slightly more saturated color that tonal_subtle because of their size. */
+  --gse-semantic-background-system-info-tonalSubtle: #deeaff; /* The default background color for info elements like alerts. */
+  --gse-semantic-background-system-primary-tonalMedium: #deeaff; /* Although this tokens has the same value as tonal_subtle, it is needed to match the structure of the other statuses. */
+  --gse-semantic-background-system-primary-tonalSubtle: #deeaff; /* The default background color for neutral feedback elements like alerts. */
+  --gse-semantic-background-system-customAccents-bold-accent_1: #203b73; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-bold-accent_2: #23478f; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-bold-accent_3: #b5b5eb; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-bold-accent_4: #205a10; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-bold-accent_5: #151d28; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-bold-accent_6: #75a8ff; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-bold-accent_7: #8452cf; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-bold-accent_8: #5e5782; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-bold-accent_9: #ff8fdd; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-bold-accent_10: #755000; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-bold-accent_11: #ddd933; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-bold-accent_12: #ffef27; /* A custom accent used in search component */
+  --gse-semantic-background-system-customAccents-bold-accent_13: #75a8ff;
+  --gse-semantic-background-system-customAccents-subtle-accent_1: lch(
+    77.6 10.9 279
+  ); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_2: lch(
+    90.4 14.8 272
+  ); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_3: lch(
+    92.5 8.53 288
+  ); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_4: #c2deb9; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_5: #c8cfda; /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_6: lch(
+    90.4 14.8 272
+  ); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_7: lch(
+    83.7 21.4 305
+  ); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_8: lch(
+    81.7 7.69 295
+  ); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_9: lch(
+    92.1 16.4 338
+  ); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_10: #fcd276;
+  --gse-semantic-background-system-customAccents-subtle-accent_11: lch(
+    95.5 22.7 98.8
+  ); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_12: #fff793; /* A custom accent used in search component */
+  --gse-semantic-background-system-progressAndLoading-default: #deeaff; /* The color to indicate that this progress has not been achieved. */
+  --gse-semantic-background-system-progressAndLoading-progressed: #2a60c8; /* The color to indicate that this progress in a component. */
+  --gse-semantic-background-system-status-available: #09b581;
+  --gse-semantic-background-system-status-busy: #e22245;
+  --gse-semantic-background-system-status-away: #f8c73e;
+  --gse-semantic-background-system-status-onQueue: #4856cb;
+  --gse-semantic-background-system-status-offline: #626e84;
+  --gse-semantic-background-system-status-outOfOffice: #b74ba4;
+  --gse-semantic-background-system-status-notification: #fe624d;
+  --gse-semantic-background-formControl-clickInput-track: #6b7585; /* The color used for the tracks of click-based components,like the container of the toggle or the track of the slider. */
+  --gse-semantic-background-formControl-textInput-track: #f6f7f9; /* The default background color for inputs. */
+  --gse-semantic-foreground-interactive-primary-default: #ffffff; /* The color for foreground elements that are over a primary/default background. */
+  --gse-semantic-foreground-interactive-primary-active: #ffffff; /* The color for foreground elements that are over a primary/hover background. */
+  --gse-semantic-foreground-interactive-primary-hover: #ffffff; /* The color for foreground elements that are over a primary/active background. */
+  --gse-semantic-foreground-interactive-secondary-default: #2e394c; /* The color for foreground elements that are over a secondary/default background. */
+  --gse-semantic-foreground-interactive-secondary-active: #2e394c; /* The color for foreground elements that are over a secondary/active background. */
+  --gse-semantic-foreground-interactive-secondary-hover: #2e394c; /* The color for foreground elements that are over a secondary/hover background. */
+  --gse-semantic-foreground-interactive-tertiary-default: #2e394c; /* The color for foreground elements that are over a tertiary/default background. */
+  --gse-semantic-foreground-interactive-tertiary-active: #ffffff; /* The color for foreground elements that are over a tertiary/active background. */
+  --gse-semantic-foreground-interactive-tertiary-hover: #ffffff; /* The color for foreground elements that are over a tertiary/hover background. */
+  --gse-semantic-foreground-interactive-ghost-default: #2e394c; /* The color for foreground elements that are over a ghost/default background. */
+  --gse-semantic-foreground-interactive-ghost-active: #2e394c; /* The color for foreground elements that are over a ghost/active background. */
+  --gse-semantic-foreground-interactive-ghost-hover: #2e394c; /* The color for foreground elements that are over a ghost/hover background. */
+  --gse-semantic-foreground-interactive-subtle-default: #3e4a5b; /* The color for foreground elements that are over a subtle/default background. */
+  --gse-semantic-foreground-interactive-subtle-active: #2e394c; /* The color for foreground elements that are over a subtle/active background. */
+  --gse-semantic-foreground-interactive-subtle-hover: #2e394c; /* The color for foreground elements that are over a subtle/hover background. */
+  --gse-semantic-foreground-interactive-danger-default: #ffffff; /* The color for foreground elements that are over a danger/default background. */
+  --gse-semantic-foreground-interactive-danger-active: #ffffff; /* The color for foreground elements that are over a danger/active background. */
+  --gse-semantic-foreground-interactive-danger-hover: #ffffff; /* The color for foreground elements that are over a danger/hover background. */
+  --gse-semantic-foreground-interactive-link-default: #2a60c8; /* The default color of links. */
+  --gse-semantic-foreground-interactive-link-active: #23478f; /* The active color of links. */
+  --gse-semantic-foreground-interactive-link-hover: #2754ac; /* The hover color of links. */
+  --gse-semantic-foreground-interactive-link-visited: #8452cf; /* The  color of links when  they were already visited. */
+  --gse-semantic-foreground-interactive-indicator-default: #75a8ff; /* this is used to the selected indicator for the data table headers */
+  --gse-semantic-foreground-container-highEmphasis: #2e394c; /* The default color for high emphasis content on surfaces, like headings, subheadings, quotes or bold text. */
+  --gse-semantic-foreground-container-midEmphasis: #3e4a5b; /* The default color for medium emphasis content on surfaces, like normal paragraphs. */
+  --gse-semantic-foreground-container-lowEmphasis: #4c5667; /* The default color for low emphasis content on surfaces, like captions or fine print. */
+  --gse-semantic-foreground-container-highContrast-highEmphasis: #ffffff; /* The default color for high emphasis content on high contrast surfaces, like headings, subheadings, quotes or bold text. */
+  --gse-semantic-foreground-container-highContrast-midEmphasis: #eff1f5; /* The default color for medium emphasis content on high contrast surfaces, like normal paragraphs. */
+  --gse-semantic-foreground-container-highContrast-lowEmphasis: #b4bccb; /* The default color for low emphasis content on high contrast surfaces, like captions or fine print. */
+  --gse-semantic-foreground-container-specialAccents-ai: #8a5ecc; /* The color for foreground content used to highlight an AI feature on a surface. */
+  --gse-semantic-foreground-container-specialAccents-brand: #ff4f1f; /* The brand color, mostly used for logos on surfaces. */
+  --gse-semantic-foreground-system-customAccents-light: #ffffff; /* The recommended color for contetn that is on a custom accent background that doesn't pass the contrast check with the dark color. */
+  --gse-semantic-foreground-system-customAccents-dark: #2e394c; /* The recommended color for contetn that is on a custom accent background that doesn't pass the contrast check with the light color. */
+  --gse-semantic-foreground-system-progressAndLoading-default: #2e394c; /* The color for foreground content on progress_and_loading/default backgrounds. */
+  --gse-semantic-foreground-system-progressAndLoading-progressed: #ffffff; /* The color for foreground content on progress_and_loading/progressed backgrounds. */
+  --gse-semantic-foreground-system-info-highEmphasis: #2e394c; /* The default color for high emphasis content on info backgrounds, like headings, subheadings, quotes or bold text or links. */
+  --gse-semantic-foreground-system-info-accent: #2a60c8; /* The color for content on info backgrounds that we want to highlight, like the info icon on an alert. */
+  --gse-semantic-foreground-system-success-highEmphasis: #2e394c; /* The default color for high emphasis content on success backgrounds, like headings, subheadings, quotes or bold text or links. */
+  --gse-semantic-foreground-system-success-accent: #3c8527; /* The color for content on success backgrounds that we want to highlight, like the info icon on an alert. */
+  --gse-semantic-foreground-system-warning-highEmphasis: #2e394c; /* The default color for high emphasis content on warning backgrounds, like headings, subheadings, quotes or bold text or links. */
+  --gse-semantic-foreground-system-warning-accent: #ffae00; /* The color for content on warning backgrounds that we want to highlight, like the info icon on an alert. */
+  --gse-semantic-foreground-system-error-highEmphasis: #2e394c; /* The default color for high emphasis content on error backgrounds, like headings, subheadings, quotes or bold text or links. */
+  --gse-semantic-foreground-system-error-accent: #ea0b0b; /* The color for content on error backgrounds that we want to highlight, like the info icon on an alert. */
+  --gse-semantic-foreground-system-icon-default: #2e394c; /* The color for foreground content on progress_and_loading/default backgrounds. */
+  --gse-semantic-foreground-formControl-helpText-default: #4c5667; /* The color we used for the default helper text. */
+  --gse-semantic-foreground-formControl-helpText-error: #ea0b0b; /* The color we used for the error helper text. */
+  --gse-semantic-foreground-formControl-textInput-placeholder: #4c5667; /* The default color of placeholder content on an input. */
+  --gse-semantic-foreground-formControl-textInput-populated: #2e394c; /* The default color of populated content on an input. */
+  --gse-semantic-foreground-formControl-textInput-icon: #4c5667; /* The default color of icons on an input. */
+  --gse-semantic-foreground-formControl-clickInput-enabled: #6b7585; /* The color we use for foreground elements on click-based inputs when they are enabled but not selected. */
+  --gse-semantic-foreground-formControl-clickInput-selected: #2a60c8; /* The color we use for foreground elements on click-based inputs when they are selected. */
+  --gse-semantic-foreground-formControl-clickInput-hover: #2754ac; /* The color we use for foreground elements on click-based inputs when they are on the hover state. */
+  --gse-semantic-foreground-formControl-clickInput-active: #23478f; /* The color we use for foreground elements on click-based inputs when they are on the active state. */
+  --gse-semantic-foreground-formControl-clickInput-error: #ea0b0b;
+  --gse-semantic-foreground-formControl-label-default: #2e394c; /* The color for the content of input labels. */
+  --gse-semantic-foreground-formControl-label-requiredAccent: #ea0b0b; /* The color we used for the required indicator. */
+  --gse-semantic-foreground-formControl-label-optionalAccent: #3e4a5b; /* The color we used for optional indicator in labels */
+  --gse-semantic-foreground-formControl-label-tooltip: #3e4a5b; /* The color we used for tooltip in labels */
+  --gse-semantic-border-focus: #aac9ff; /* The color we use for focus outlines. */
+  --gse-semantic-border-container-divider: #b4bccb; /* The default color for dividers inside surfaces. */
+  --gse-semantic-border-container-edges-default: #b4bccb; /* The default color for the edge borders of surfaces, we mostly use it to add some elevation for cards. */
+  --gse-semantic-border-container-edges-hover: #75a8ff; /* The color for the edge borders of surfaces that are on the hover state, like the bottom border of a tab. */
+  --gse-semantic-border-container-edges-error: #ea0b0b; /* The color for the edge borders of surfaces that are on the error state, like the border of a card in an error state. */
+  --gse-semantic-border-container-edges-enabled: #2a60c8; /* The color for the edge borders of high contrast surfaces that are enabled, like the bottom border of a selected tab. */
+  --gse-semantic-border-container-edges-active: #2a60c8; /* The color for the edge borders of surfaces that are on the active state, like the bottom border of a tab. */
+  --gse-semantic-border-container-edges-highEmphasis: #2e394c; /* The default color for the edge borders of high-emphasis surfaces e.g dark tooltip */
+  --gse-semantic-border-container-edges-dataTable-default: #e2e6ee; /* This is used for default border for datatables */
+  --gse-semantic-border-container-highConstrast-default: #4c5667; /* The default color for the edge borders of high contrast surfaces. */
+  --gse-semantic-border-container-highConstrast-enabled: #2a60c8; /* The color for the edge borders of high contrast surfaces that are enabled. */
+  --gse-semantic-border-container-highConstrast-hover: #23478f; /* The color for the edge borders of high contrast surfaces that are on the hover state. */
+  --gse-semantic-border-container-highConstrast-active: #2a60c8; /* The color for the edge borders of high contrast surfaces that are on the active state. */
+  --gse-semantic-border-system-info: #75a8ff; /* The default borders for elements that have a feedback/info background. */
+  --gse-semantic-border-system-warning: #fcd276; /* The default borders for elements that have a feedback/warning background. */
+  --gse-semantic-border-system-success: #95c189; /* The default borders for elements that have a feedback/success background. */
+  --gse-semantic-border-system-error: #f37a7a; /* The default borders for elements that have a feedback/error background. */
+  --gse-semantic-border-system-primary: #75a8ff; /* The default borders for elements that have a feedback/primary background. */
+  --gse-semantic-border-interactive-primary-divider: #ffffff; /* The color for dividers inside interactive/primary  elements. */
+  --gse-semantic-border-interactive-secondary-divider: #ffffff; /* The color for dividers inside interactive/secondary elements. */
+  --gse-semantic-border-interactive-tertiary-divider: #2a60c8; /* The color for dividers inside interactive/tertiary elements. */
+  --gse-semantic-border-interactive-danger-divider: #ffffff; /* The color for dividers inside interactive/danger elements. */
+  --gse-semantic-border-formControl-textInput-default: #6b7585; /* The border for inputs edges in the default state. */
+  --gse-semantic-border-formControl-textInput-hover: #2754ac; /* The border for inputs edges in the hover state. */
+  --gse-semantic-border-formControl-textInput-active: #2a60c8; /* The border for inputs edges in the active state. */
+  --gse-semantic-border-formControl-textInput-error: #ea0b0b; /* The border for inputs edges in the error state. */
+  --gse-semantic-body-sm-regular: 400 12px/18px Roboto; /* This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors. */
+  --gse-semantic-body-sm-link: 600 12px/18px Roboto; /* This is the typography style we use for hyperlinks in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with link colors. */
+  --gse-semantic-body-sm-bold: 700 12px/18px Roboto; /* This is the typography style we use to add great emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-sm-semiBold: 600 12px/18px Roboto; /* This is the typography style we use to add moderate emphasis in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-md-regular: 400 14px/20px Roboto; /* This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors. */
+  --gse-semantic-body-md-link: 600 14px/20px Roboto; /* This is the typography style we use for hyperlinks in bodies of text, like paragraphs; we usually pair it with link colors. */
+  --gse-semantic-body-md-bold: 700 14px/20px Roboto; /* This is the typography style we use to add great emphasis in bodies of text, like paragraphs; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-md-semiBold: 600 14px/20px Roboto; /* This is the typography style we use to add moderate emphasis in bodies of text, like paragraphs, we usually pair it with medium or high emphasis colors. */
+  --gse-semantic-body-lg-regular: 400 16px/24px Roboto; /* This is the typography style we use in most of our high emphasis bodies of text like introductory paragraphs after a heading; we usually pair it with medium emphasis colors. */
+  --gse-semantic-body-lg-link: 600 16px/24px Roboto; /* This is the typography style we use for hyperlinks in bodies of text, like introductory paragraphs after a heading; we usually pair it with link colors. */
+  --gse-semantic-body-lg-bold: 700 16px/24px Roboto; /* This is the typography style we use to add great emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with high emphasis colors. */
+  --gse-semantic-body-lg-semiBold: 600 16px/24px Roboto; /* This is the typography style we use to add moderate emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with medium or high emphasis colors. */
+  /**
+   * We use this typography style for high emphasis headers nested on a 5th-6th level, h5's or h6's.
+   * We usually pair it with high emphasis colors.
+   */
+  --gse-semantic-heading-xs-bold: 700 14px/24px Roboto;
+  /**
+   * We use this typography style for moderate emphasis headers nested on a 5th-6th level, h5's or h6's.
+   * We usually pair it with high emphasis colors.
+   */
+  --gse-semantic-heading-xs-semiBold: 600 14px/24px Roboto;
+  /**
+   * We use this typography style for high emphasis headers nested on a 4th level, h4's.
+   * We usually pair it with high emphasis colors.
+   */
+  --gse-semantic-heading-sm-bold: 700 16px/24px Roboto;
+  /**
+   * We use this typography style for moderate emphasis headers nested on a 4th level, h4's.
+   * We usually pair it with high emphasis colors.
+   */
+  --gse-semantic-heading-sm-semiBold: 600 16px/24px Roboto;
+  /**
+   * We use this typography style for high emphasis headers nested on a 3rd level, h3's.
+   * We usually pair it with high emphasis colors.
+   */
+  --gse-semantic-heading-md-bold: 700 18px/27px Roboto;
+  /**
+   * We use this typography style for moderate emphasis headers nested on a 3rd level, h3's.
+   * We usually pair it with high emphasis colors.
+   */
+  --gse-semantic-heading-md-semiBold: 600 18px/27px Roboto;
+  /**
+   * We use this typography style for high emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons.
+   * We usually pair it with high emphasis colors.
+   */
+  --gse-semantic-heading-lg-bold: 700 24px/32px Roboto;
+  /**
+   * We use this typography style for moderate emphasis headers that are usually the main header of a page at a 1st-2nd level, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons.
+   * We usually pair it with high emphasis colors.
+   */
+  --gse-semantic-heading-lg-semiBold: 600 24px/32px Roboto;
+  /**
+   * We use this typography style for high emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons.
+   * We usually pair it with high emphasis colors.
+   */
+  --gse-semantic-heading-xl-bold: 700 36px/44px Roboto;
+  /**
+   * We use this typography style for moderate emphasis headers that are usually display headers, like the main header of a landing page, at 1st-2nd levels, h1's or h2's, since you can have a smaller or hidden h1 for SEO reasons.
+   * We usually pair it with high emphasis colors.We usually pair it with high emphasis colors.
+   */
+  --gse-semantic-heading-xl-semiBold: 600 36px/44px Roboto;
+  /**
+   * We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.
+   * 
+   * We usually pair it with low emphasis colors.
+   */
+  --gse-semantic-heading-overline: 600 12px/16px Roboto;
+  /**
+   * We use this typography style for high emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header.
+   * We usually pair it with medium emphasis colors.
+   */
+  --gse-semantic-subheading-bold: 700 14px/20px Roboto;
+  /**
+   * We use this typography style for moderate emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header.
+   * We usually pair it with medium emphasis colors.
+   */
+  --gse-semantic-subheading-semiBold: 600 14px/20px Roboto;
+  /**
+   * We use this typography style for low emphasis subheadings that go immediately below a heading, they usually there to give further context to the actual header.
+   * We usually pair it with medium emphasis colors.
+   */
+  --gse-semantic-subheading-regular: 400 14px/20px Roboto;
+  --gse-semantic-interactive-md-size: 32px; /* The recommended size of medium-sized interactive components, for example buttons height. */
+  --gse-semantic-interactive-md-gap: 4px; /* The recommended gap between the content inside of a medium-sized interactive component. */
+  --gse-semantic-interactive-md-padding: 8px; /* The recommended horizontal padding for medium-sized components. */
+  --gse-semantic-interactive-sm-size: 24px; /* The recommended size for small-sized interactive components. For example small button height. */
+  --gse-semantic-interactive-sm-gap: 2px; /* The recommended gap between the content inside of a small-sized interactive component. */
+  --gse-semantic-interactive-sm-padding: 4px; /* The recommended horizontal padding for small-sized horizontal components. */
+  --gse-semantic-interactive-sm-borderRadius: 4px; /* The recommended small border-radius for interactive component. Eg Buttons */
+  --gse-semantic-interactive-lg-borderRadius: 4px; /* The recommended large border-radius for interactive component. Eg Tags */
+  --gse-semantic-interactive-lg-gap: 8px; /* The recommended gap between the content inside of a medium-sized interactive component. */
+  --gse-semantic-interactive-lg-padding: 12px; /* The recommended horizontal padding for large-sized components. */
+  --gse-semantic-interactive-edges-borderWidth: 1px; /* The default border width for the edges of interactive components, like the ones on a tertiary(or outlined) button. */
+  --gse-semantic-interactive-divider-sm-borderWidth: 1px; /* The default border width for the dividers within interactive components, like the ones on an action button. */
+  --gse-semantic-interactive-divider-lg-borderWidth: 2px; /* The default border width for the dividers within interactive components, like the ones on an action button. */
+  --gse-semantic-interactive-xl-gap: 12px; /* The recommended gap between the content inside of a xlarge-sized interactive component. */
+  --gse-semantic-interactive-xl-padding: 16px; /* The recommended horizontal padding for xlarge-sized components. */
+  --gse-semantic-interactive-xl-size: 40px; /* The recommended size for extra-large-sized interactive components. For example a large button height. */
+  --gse-semantic-interactive-xl-borderRadius: 100%; /* The recommended xlarge border-radius for interactive component. Eg handle of the slider */
+  --gse-semantic-interactive-xs-size: 20px; /* The recommended size for small-sized interactive components. For example small link. */
+  --gse-semantic-interactive-xs-padding: 2px; /* The recommended padding for extra-small-sized interactive components. */
+  --gse-semantic-focusOutline-full-borderRadius: 100%; /* The recommended full border-radius for focus. Eg avatar */
+  --gse-semantic-focusOutline-xl-borderRadius: 16px; /* The recommended xlarge border-radius for focus. Eg toggle */
+  --gse-semantic-focusOutline-lg-borderRadius: 8px; /* The recommended large border-radius for focus. Eg segmented control */
+  --gse-semantic-focusOutline-md-borderRadius: 8px; /* The recommended medium border-radius for focus. Eg check box */
+  --gse-semantic-focusOutline-md-borderWidth: 2px; /* The recommended width of the focus outline fo medium-sized components, like the stars on a checkbox */
+  --gse-semantic-focusOutline-sm-borderRadius: 4px; /* The recommended small border-radius for focus. Eg input control */
+  --gse-semantic-focusOutline-sm-borderWidth: 1px; /* The recommended width of the focus outline fo small-sized components, like the stars on a rating component. */
+  --gse-semantic-focusOutline-xs-borderRadius: 4px; /* The recommended xsmall border-radius for focus. Eg icons */
+  --gse-semantic-focusOutline-offset: 1px;
+  --gse-semantic-container-lg-borderRadius: 4px; /* The recommended large border-radius for large containers, like modals. */
+  --gse-semantic-container-lg-gap: 16px; /* The recommended gap between items inside a large container, like a modal. */
+  --gse-semantic-container-lg-padding: 24px; /* The default horizontal padding of a medium-sized container, like a card. */
+  --gse-semantic-container-lg-height: 40px; /* The average recommended height for a cell in the datatable */
+  --gse-semantic-container-md-gap: 12px; /* The recommended medium gap between items inside a container, like the gap between elements inisde a modal. */
+  --gse-semantic-container-md-borderRadius: 4px; /* The recommended medium border-radius for containers. Eg cards */
+  --gse-semantic-container-md-height: 32px; /* The minimmum recommended height for a medium container, like a button bar. */
+  --gse-semantic-container-md-padding: 16px; /* The default horizontal padding of a medium-sized container, like an alert. */
+  --gse-semantic-container-xl-gap: 24px; /* The recommended gap between items inside a xlarge container, like progress and loading. */
+  --gse-semantic-container-xl-padding: 32px; /* We uses this spacing as the default padding for large containers like modals. */
+  --gse-semantic-container-xl-height: 48px; /* The average recommended height for the header of a calendar */
+  --gse-semantic-container-sm-borderRadius: 4px; /* The recommended small border-radius for containers. Eg in-line alert */
+  --gse-semantic-container-sm-gap: 8px; /* The recommended medium gap between items inside a container, like the gap between elements inisde an alert. */
+  --gse-semantic-container-sm-padding: 12px; /* The default padding of a small-sized container, like a tooltip. */
+  --gse-semantic-container-sm-minHeight: 20px; /* The minimum height recommended for a small container, like a tooltip. */
+  --gse-semantic-container-sm-height: 32px; /* The average recommended height for a small container, like a tooltip. */
+  --gse-semantic-container-xs-gap: 4px; /* The recommended gap between items inside a container, like the gap between elements inisde a card. */
+  --gse-semantic-container-xs-padding: 8px; /* The default padding of a  extra small-sized container, like the container of an eyebrow title. */
+  --gse-semantic-container-xs-minHeight: 16px; /* The minimum height recommended for a small container, like a tag. */
+  --gse-semantic-container-xs-height: 20px; /* The average recommended height for a small container, like a tag. */
+  --gse-semantic-container-edges-borderWidth: 1px; /* The recommended border width for the edges of containers, like cards or menus or popovers. */
+  --gse-semantic-container-divider-borderWidth: 1px; /* The recommended border width for the dividers within containers, like cards or menus or popovers. */
+  --gse-semantic-container-2xs-gap: 2px; /* The recommended xsmall gap between items inside a container, like the gap between elements inside a tag. */
+  --gse-semantic-container-2xs-padding: 2px; /* The default padding of a our smallest containers, like the container of an tag. */
+  --gse-semantic-container-2xs-size: 12px; /* The average recommended height for a small container, like a tag. */
+  --gse-semantic-container-full-borderRadius: 100%; /* The recomended border radius for circle-shaped containers. */
+  --gse-semantic-container-3xs-size: 8px;
+  --gse-semantic-container-4xs-size: 4px;
+  --gse-semantic-formControl-textInput-lg-borderRadius: 4px; /* The recommended large border-radius for inputs */
+  --gse-semantic-formControl-textInput-sm-borderRadius: 4px; /* The recommended small border-radius for inputs */
+  --gse-semantic-formControl-textInput-md-borderRadius: 4px; /* The recommended medium border-radius for inputs */
+  --gse-semantic-formControl-textInput-edges-borderWidth: 1px; /* The recommended border width for the edges of text-based inputs, like textfields or text areas. */
+  --gse-semantic-formControl-textInput-divider-borderWidth: 1px; /* The recommended border width for the dividers within text-based inputs, like the textfields or textareas. */
+  --gse-semantic-formControl-field-textInput-small-padding: 8px; /* The default vertical padding for inputs inside a form control. */
+  --gse-semantic-formControl-field-textInput-gap: 12px; /* The default gap for between elements inside an input. For example, the space between a placeholder and an icon inside and input. */
+  --gse-semantic-formControl-field-textInput-md-height: 32px;
+  --gse-semantic-formControl-field-textInput-medium-padding: 12px; /* The recommended horizontal padding for text inputs. */
+  --gse-semantic-formControl-field-textInput-minWidth: 48px;
+  --gse-semantic-formControl-field-textInput-lg-height: 98px;
+  --gse-semantic-formControl-field-gap: 4px; /* The default gap for between elements inside a form field, for example, the space between a label and its input or its helper text. */
+  --gse-semantic-formControl-field-padding: 8px; /* The default gap for between elements inside a form field, for example, the space between a label and its input or its helper text. */
+  --gse-semantic-formControl-field-clickInput-gap: 8px; /* The default gap for between elements inside a form group, like checkboxes, radio buttons. */
+  --gse-semantic-formControl-field-clickInput-padding: 4px; /* The default padding for between elements inside a form group, like checkboxes, radio buttons. */
+  --gse-semantic-formControl-field-clickInput-md-size: 32px; /* The recommended height form medium-size click inputs, like checkboxes or radio buttons. */
+  --gse-semantic-formControl-field-clickInput-sm-size: 16px; /* The recommended height for leaner click inputs, like toggles. */
+  --gse-semantic-formControl-field-groupedInput-gap: 8px; /* The recommended gap between groped inputs, like the sapce inbetween checkboxes or radio buttons. */
+  --gse-semantic-formControl-clickInput-handle-borderWidth: 2px; /* The recommended border width for handles on click inputs, like the habdle of a toggle. */
+  --gse-semantic-contanier-lg-boxShadow: 0 0 8px 1px rgba(35, 57, 92, 0.15); /* The recommended box shadow for large containers, like modals or popovers. */
+  --gse-semantic-contanier-md-boxShadow: 0 0 6px 1px rgba(35, 57, 92, 0.12); /* The shadow we used for medium-sized components like elevated cards or menus. */
+  --gse-semantic-contanier-sm-boxShadow: 0 0 4px 1px rgba(35, 57, 92, 0.1); /* The shadow we used for small-sized components like tooltips. */
+  --gse-semantic-assets-lg-size: 32px; /* The recommended size of large-sized for styles, for example icons. */
+  --gse-semantic-assets-md-size: 24px; /* The recommended size of medium-sized for styles, for example medium icons. */
+  --gse-semantic-assets-sm-size: 16px; /* The recommended size of small-sized for styles, for example small icons. */
+  --gse-semantic-assets-xl-size: 48px; /* The recommended size of xlarge-sized for styles, for example avatar */
+  --gse-semantic-assets-xs-size: 8px; /* The recommended size of small-sized for assets, for example super small icons. */
+  --gse-semantic-divider-width: 1px; /* The default width of our divider, we usually represent dividers as rectangles on Figma instead of a single line layer. */
+  --gse-semantic-divider-xs-margin: 1px;
+  --gse-semantic-divider-sm-margin: 2px;
+  --gse-semantic-divider-md-margin: 4px;
+  --gse-semantic-divider-lg-margin: 8px;
+  --gse-semantic-divider-track-height: 4px; /* The heioght for track elements, like the track of the slider. */
+  --gse-semantic-divider-indicator-width: 2px; /* The recommended divider indicator width, used for the indicators of active tabs, for example */
+}

@@ -90,7 +90,7 @@
         }
       },
       "gap": {
-        "value": "{form_control.form_field.text_input.gap}",
+        "value": "{form_control.field.text_input.gap}",
         "type": "spacing"
       },
       "top": {
@@ -98,7 +98,7 @@
         "type": "spacing"
       },
       "padding": {
-        "value": "{form_control.form_field.text_input.small.padding} {form_control.form_field.text_input.medium.padding}",
+        "value": "{form_control.field.text_input.small.padding} {form_control.field.text_input.medium.padding}",
         "type": "spacing"
       },
       "prefix_sufix": {
@@ -117,17 +117,17 @@
       },
       "textfield": {
         "height": {
-          "value": "{form_control.form_field.text_input.md.height}",
+          "value": "{form_control.field.text_input.md.height}",
           "type": "sizing"
         },
         "min_width": {
-          "value": "{form_control.form_field.text_input.min_width}",
+          "value": "{form_control.field.text_input.min_width}",
           "type": "sizing"
         }
       },
       "color_picker": {
         "size": {
-          "value": "{form_control.form_field.text_input.md.height}",
+          "value": "{form_control.field.text_input.md.height}",
           "type": "sizing"
         }
       },
@@ -153,7 +153,7 @@
       },
       "textarea": {
         "height": {
-          "value": "{form_control.form_field.text_input.lg.height}",
+          "value": "{form_control.field.text_input.lg.height}",
           "type": "sizing"
         }
       },
@@ -182,11 +182,7 @@
     },
     "label": {
       "padding": {
-        "value": "0 0 {form_control.form_field.padding} 0",
-        "type": "spacing"
-      },
-      "gap": {
-        "value": "{form_control.form_field.gap}",
+        "value": "0 0 {form_control.field.padding} 0",
         "type": "spacing"
       },
       "text": {
@@ -232,19 +228,19 @@
     },
     "form_field": {
       "gap": {
-        "value": "{spacing.4xs}",
+        "value": "{form_control.field.gap}",
         "type": "spacing"
       }
     },
     "group": {
       "gap_items": {
-        "value": "{form_control.form_field.grouped_input.gap}",
+        "value": "{form_control.field.grouped_input.gap}",
         "type": "spacing"
       }
     },
     "helper": {
       "gap": {
-        "value": "{form_control.form_field.gap}",
+        "value": "{form_control.field.gap}",
         "type": "spacing"
       },
       "helper_text": {
@@ -252,7 +248,7 @@
         "type": "typography"
       },
       "padding": {
-        "value": "{form_control.form_field.padding} 0 0 0",
+        "value": "{form_control.field.padding} 0 0 0",
         "type": "spacing"
       },
       "icon": {
@@ -262,11 +258,11 @@
         }
       },
       "padding_small": {
-        "value": "{form_control.form_field.gap} 0 0 0",
+        "value": "{form_control.field.gap} 0 0 0",
         "type": "spacing"
       },
       "error_padding": {
-        "value": "{form_control.form_field.gap} 0 0 0",
+        "value": "{form_control.field.gap} 0 0 0",
         "type": "spacing"
       },
       "default_color": {
@@ -284,7 +280,7 @@
     },
     "spin_button": {
       "gap": {
-        "value": "{form_control.form_field.grouped_input.gap}",
+        "value": "{form_control.field.grouped_input.gap}",
         "type": "spacing"
       }
     },
@@ -300,7 +296,7 @@
     },
     "textarea": {
       "padding": {
-        "value": "{form_control.form_field.text_input.small.padding}",
+        "value": "{form_control.field.text_input.small.padding}",
         "type": "spacing"
       }
     },
