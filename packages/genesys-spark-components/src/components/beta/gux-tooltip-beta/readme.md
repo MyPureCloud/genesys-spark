@@ -66,6 +66,8 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [gux-avatar-beta](../gux-avatar)
+ - [gux-avatar-change-photo-beta](../gux-avatar/gux-avatar-change-photo)
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
  - [gux-label-info-beta](../gux-label-info)
 
@@ -77,6 +79,8 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-tooltip-beta --> gux-tooltip-base-beta
+  gux-avatar-beta --> gux-tooltip-beta
+  gux-avatar-change-photo-beta --> gux-tooltip-beta
   gux-icon-tooltip-beta --> gux-tooltip-beta
   gux-label-info-beta --> gux-tooltip-beta
   style gux-tooltip-beta fill:#f9f,stroke:#333,stroke-width:4px

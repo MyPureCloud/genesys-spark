@@ -1,4 +1,4 @@
-import { Component, h, JSX, Prop, Element } from '@stencil/core';
+import { Component, h, JSX, Prop, Element, Method } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
 import {
@@ -22,6 +22,8 @@ import defaultResources from './i18n/en.json';
 })
 export class GuxAvatar {
   private i18n: GetI18nValue;
+  private parentElement: HTMLElement;
+  private tooltip: HTMLGuxTooltipBetaElement;
 
   @Element()
   root: HTMLElement;
@@ -214,6 +216,18 @@ export class GuxAvatar {
     }
   }
 
+  private renderTooltip(): JSX.Element | null {
+    if (['A', 'BUTTON'].includes(this.parentElement.tagName)) {
+      return (
+        <gux-tooltip-beta placement="top" ref={el => (this.tooltip = el)}>
+          <div slot="content">{this.getDescriptionText()}</div>
+        </gux-tooltip-beta>
+      ) as JSX.Element;
+    } else {
+      return null;
+    }
+  }
+
   private getDescriptionText(): string {
     if (this.notifications) {
       return `${this.name} (${this.i18n('notifications')})`;
@@ -224,7 +238,24 @@ export class GuxAvatar {
     return `${this.name}`;
   }
 
+  /*
+   * Show tooltip
+   */
+  @Method()
+  async showTooltip(): Promise<void> {
+    return await this.tooltip.showTooltip();
+  }
+
+  /*
+   * Hide tooltip
+   */
+  @Method()
+  async hideTooltip(): Promise<void> {
+    return await this.tooltip.hideTooltip();
+  }
+
   async componentWillLoad(): Promise<void> {
+    this.parentElement = this.root.parentElement;
     trackComponent(this.root, { variant: this.size });
     this.i18n = await buildI18nForComponent(this.root, defaultResources);
   }
@@ -251,6 +282,7 @@ export class GuxAvatar {
             </abbr>
           </slot>
         </div>
+        {this.renderTooltip()}
       </div>,
       this.renderBadge(),
       this.renderUcIntegrationBadge()

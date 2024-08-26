@@ -1,7 +1,7 @@
 import { Component, h, JSX, Element, Event, EventEmitter } from '@stencil/core';
 import { logWarn } from '@utils/error/log-error';
 
-import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import defaultResources from './i18n/en.json';
 import { trackComponent } from '@utils/tracking/usage';
 
@@ -49,6 +49,9 @@ export class GuxAvatarChangePhoto {
           decorative
         ></gux-icon>
         <slot name="avatar" />
+        <gux-tooltip-beta placement="top">
+          <div slot="content">{this.i18n('changePhoto')}</div>
+        </gux-tooltip-beta>
       </button>
     ) as JSX.Element;
   }
