@@ -239,7 +239,7 @@ export class GuxPhoneInput {
           this.getRegionFromValue(this.value)?.alpha2Code
         );
         this.value = this.phoneUtil.format(phone, this.displayFormat);
-      } catch (e) {
+      } catch {
         logWarn(this.root, 'Number cannot be parsed');
       }
     } else {
@@ -276,7 +276,7 @@ export class GuxPhoneInput {
   ): libphonenumber.PhoneNumber {
     try {
       return this.phoneUtil.parse(value, region);
-    } catch (e) {
+    } catch {
       return null;
     }
   }
@@ -371,7 +371,7 @@ export class GuxPhoneInput {
       if (match) {
         return match;
       }
-    } catch (e) {
+    } catch {
       // Error thrown while parsing, continue processing without googlelib-phonenumber
     }
 

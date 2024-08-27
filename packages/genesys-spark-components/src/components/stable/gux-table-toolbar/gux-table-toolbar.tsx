@@ -185,15 +185,23 @@ export class GuxTableToolbar {
       ...this.allFilterContextual,
       ...this.permanentActions
     );
-    this.permanentActions && this.root?.appendChild(this.permanentSlot);
-    this.primaryAction && this.root?.appendChild(this.primaryAction);
+    if (this.permanentActions) {
+      this.root?.appendChild(this.permanentSlot);
+    }
+    if (this.primaryAction) {
+      this.root?.appendChild(this.primaryAction);
+    }
   }
 
   private renderCondensedLayout(): void {
     this.displayedLayout = 'condensed';
-    this.permanentActions &&
+    if (this.permanentActions) {
       this.menuActionSlot?.appendChild(this.permanentSlot);
-    this.primaryAction && this.menuActionSlot?.appendChild(this.primaryAction);
+    }
+
+    if (this.primaryAction) {
+      this.menuActionSlot?.appendChild(this.primaryAction);
+    }
     setActionsIconOnlyProp(true, ...this.allFilterContextual);
     setActionsIconOnlyProp(false, ...this.permanentActions);
     setActionsIconOnlyProp(false, this.primaryAction);

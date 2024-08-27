@@ -9,7 +9,13 @@ const axeExclusions = [
   },
   {
     issueId: 'target-size',
-    target: 'input',
+    target: 'gux-content-search,.gux-previous-button',
+    exclusionReason:
+      'COMUI-2945 Fix any of the following: Target has insufficient size (134px by 14px, should be at least 24px by 24px); Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px.'
+  },
+  {
+    issueId: 'target-size',
+    target: 'gux-content-search,.gux-next-button',
     exclusionReason:
       'COMUI-2945 Fix any of the following: Target has insufficient size (134px by 14px, should be at least 24px by 24px); Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px.'
   }

@@ -98,9 +98,9 @@ describe('gux-pagination', () => {
           ></gux-pagination>
         `;
         const page = await newNonrandomE2EPage({ html });
-        const element = await page.find('gux-pagination');
         await a11yCheck(page, axeExclusions);
 
+        const element = await page.find('gux-pagination');
         expect(element.outerHTML).toMatchSnapshot();
       });
     });

@@ -1,5 +1,25 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
-import { E2EPage } from '@stencil/core/testing';
+import { E2EPage, newE2EPage } from '@stencil/core/testing';
+
+async function newNonrandomE2EPage({
+  html
+}: {
+  html: string;
+}): Promise<E2EPage> {
+  const page = await newE2EPage();
+
+  await page.evaluateOnNewDocument(() => {
+    Math.random = () => 0.5;
+  });
+  await page.setContent(html);
+  await page.waitForChanges();
+  await page.addScriptTag({
+    path: '../../node_modules/axe-core/axe.min.js'
+  });
+  await page.waitForChanges();
+
+  return page;
+}
 
 describe('gux-modal-legacy', () => {
   describe('#render', () => {
@@ -113,7 +133,7 @@ describe('gux-modal-legacy', () => {
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {
-        const page = await newSparkE2EPage({ html });
+        const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-modal-legacy');
 
         expect(element.outerHTML).toMatchSnapshot();
