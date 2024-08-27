@@ -2,7 +2,7 @@
 
 exports[`gux-tooltip-beta #remove should remove component as expected (1) 1`] = `
 <body>
-  <div>
+  <div aria-describedby="gux-tooltip-i">
     <div>
       Element
     </div>
@@ -13,7 +13,7 @@ exports[`gux-tooltip-beta #remove should remove component as expected (1) 1`] = 
 exports[`gux-tooltip-beta #remove should remove component as expected (2) 1`] = `
 <body>
   <div>
-    <div id="element">
+    <div aria-describedby="gux-tooltip-i" id="element">
       Element
     </div>
   </div>
@@ -22,13 +22,18 @@ exports[`gux-tooltip-beta #remove should remove component as expected (2) 1`] = 
 
 exports[`gux-tooltip-beta #render should render component as expected (1) 1`] = `
 <body>
-  <div>
+  <div aria-describedby="gux-tooltip-i">
     <div>
       Element
     </div>
-    <gux-tooltip-beta id="gux-tooltip-i" role="tooltip">
+    <gux-tooltip-beta id="gux-tooltip-i">
       <mock:shadow-root>
-        <gux-tooltip-base-beta accent="light" placement="bottom-start" tooltipid="gux-tooltip-i">
+        <gux-tooltip-base-beta>
+          <mock:shadow-root>
+            <div class="gux-container gux-light" data-placement="bottom-start">
+              <slot name="content"></slot>
+            </div>
+          </mock:shadow-root>
           <span slot="content">
             <slot name="content">
               <slot></slot>
@@ -47,12 +52,17 @@ exports[`gux-tooltip-beta #render should render component as expected (1) 1`] = 
 exports[`gux-tooltip-beta #render should render component as expected (2) 1`] = `
 <body>
   <div>
-    <div id="element">
+    <div aria-describedby="gux-tooltip-i" id="element">
       Element
     </div>
-    <gux-tooltip-beta for="element" id="gux-tooltip-i" role="tooltip">
+    <gux-tooltip-beta for="element" id="gux-tooltip-i">
       <mock:shadow-root>
-        <gux-tooltip-base-beta accent="light" placement="bottom-start" tooltipid="gux-tooltip-i">
+        <gux-tooltip-base-beta>
+          <mock:shadow-root>
+            <div class="gux-container gux-light" data-placement="bottom-start">
+              <slot name="content"></slot>
+            </div>
+          </mock:shadow-root>
           <span slot="content">
             <slot name="content">
               <slot></slot>

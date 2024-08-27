@@ -29,6 +29,9 @@ describe('gux-tooltip-beta', () => {
           'gux-tooltip-beta >>> gux-tooltip-base-beta'
         );
         expect(baseTooltip.className.split(' ')).not.toContain('gux-show');
+        // verify accessibility issues are not present before tooltip is active
+        await a11yCheck(page);
+
         await element.hover();
         await page.waitForChanges();
 

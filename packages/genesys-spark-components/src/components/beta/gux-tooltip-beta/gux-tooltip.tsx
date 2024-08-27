@@ -28,9 +28,13 @@ export class GuxTooltip {
   private root: HTMLElement;
   private baseTooltip: HTMLGuxTooltipBaseBetaElement;
   private id: string = randomHTMLId('gux-tooltip');
+  private tooltipObserver: MutationObserver;
 
   @State()
   private forElement: HTMLElement;
+
+  @State()
+  private role: string;
 
   /**
    * Indicates the id of the element the popover should anchor to. (If not supplied the parent element is used)
@@ -72,8 +76,28 @@ export class GuxTooltip {
     trackComponent(this.root, { variant: this.placement });
   }
 
+  componentDidLoad(): void {
+    if (this.baseTooltip) {
+      this.tooltipObserver = new MutationObserver((): void => {
+        this.role = this.baseTooltip?.role;
+      });
+
+      this.tooltipObserver.observe(this.baseTooltip, {
+        childList: true,
+        attributes: true,
+        attributeFilter: ['role']
+      });
+    }
+  }
+
   connectedCallback(): void {
     this.updateForElement();
+  }
+
+  disconnectedCallback(): void {
+    if (this.tooltipObserver) {
+      this.tooltipObserver.disconnect();
+    }
   }
 
   private getForElement(): HTMLElement {
@@ -100,7 +124,7 @@ export class GuxTooltip {
 
   render(): JSX.Element {
     return (
-      <Host id={this.id} role="tooltip">
+      <Host id={this.id} role={this.role}>
         <gux-tooltip-base-beta
           forElement={this.forElement}
           placement={this.placement}
