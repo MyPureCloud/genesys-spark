@@ -1,8 +1,5 @@
 # ember-3
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
-
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -14,24 +11,17 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-- `git clone <repository-url>` this repository
-- `cd ember-3`
 - `npm install`
 
 ## Running / Development
 
-- `ember serve`
+- `npm start`
 - Visit your app at [http://localhost:4200](http://localhost:4200).
 - Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
 ### Running Tests
 
-- `ember test`
-- `ember test --server`
+- `npm run test`
 
 ### Linting
 
@@ -40,12 +30,11 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Building
 
-- `ember build` (development)
-- `ember build --environment production` (production)
+- `npm run build`
 
-### Deploying
+### Code Generators
 
-Specify what it takes to deploy your app.
+Make use of the many generators for code, try `ember help generate` for more details
 
 ## Further Reading / Useful Links
 
