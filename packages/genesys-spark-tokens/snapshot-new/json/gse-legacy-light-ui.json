@@ -1,5 +1,8 @@
 {
   "form_control": {
+    "form_field": {
+      "gap": "4px"
+    },
     "input": {
       "content_text": {
         "fontFamily": "Roboto",
@@ -99,7 +102,6 @@
     },
     "label": {
       "padding": "0 0 8px 0",
-      "gap": "4px",
       "text": {
         "fontFamily": "Roboto",
         "lineHeight": "18px",

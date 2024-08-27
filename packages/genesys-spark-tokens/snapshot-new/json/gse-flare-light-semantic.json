@@ -721,9 +721,6 @@
       "divider": {
         "border_width": "1px"
       }
-    },
-    "form_field": {
-      "gap": "4px"
     }
   },
   "contanier": {

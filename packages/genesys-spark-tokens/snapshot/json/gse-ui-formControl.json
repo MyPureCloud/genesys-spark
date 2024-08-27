@@ -99,7 +99,6 @@
     },
     "label": {
       "padding": "0 0 8px 0",
-      "gap": "4px",
       "text": {
         "fontFamily": "Noto Sans",
         "lineHeight": "18px",
@@ -128,6 +127,9 @@
         "optional_color": "#3e5374",
         "border_radius": "2px"
       }
+    },
+    "form_field": {
+      "gap": "4px"
     },
     "group": {
       "gap_items": "8px"
