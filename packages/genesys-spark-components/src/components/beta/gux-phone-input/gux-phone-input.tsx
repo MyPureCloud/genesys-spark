@@ -12,7 +12,10 @@ import {
   State,
   Watch
 } from '@stencil/core';
-import libphonenumber, { PhoneNumberFormat } from 'google-libphonenumber';
+import libphonenumber, {
+  PhoneNumberFormat,
+  PhoneNumberType
+} from 'google-libphonenumber';
 import { trackComponent } from '@utils/tracking/usage';
 import {
   buildI18nForComponent,
@@ -72,6 +75,10 @@ export class GuxPhoneInput {
   // Display only. This chooses how to format the number within the input.
   @Prop()
   phoneNumberFormat: 'E164' | 'INTERNATIONAL' | 'NATIONAL' = 'NATIONAL';
+
+  // Display only. This chooses the type of example number as the placeholder within the input.
+  @Prop()
+  phoneNumberType: 'FIXED_LINE' | 'TOLL_FREE' = 'FIXED_LINE';
 
   @Event() guxregionselect: EventEmitter<string>;
 
@@ -267,6 +274,17 @@ export class GuxPhoneInput {
     }
 
     return output;
+  }
+
+  private parsePhoneNumberType(
+    phoneNumberType: typeof this.phoneNumberType
+  ): libphonenumber.PhoneNumberType {
+    const typeMap = {
+      TOLL_FREE: PhoneNumberType.TOLL_FREE,
+      FIXED_LINE: PhoneNumberType.FIXED_LINE
+    };
+
+    return typeMap[phoneNumberType] ?? PhoneNumberType.FIXED_LINE;
   }
 
   /** Returns parsed phone number object or null if utility threw an error (unknown region or impossible to parse number) */
@@ -515,8 +533,9 @@ export class GuxPhoneInput {
           }}
           type="tel"
           placeholder={this.phoneUtil.format(
-            this.phoneUtil.getExampleNumber(
-              this.region?.alpha2Code || this.defaultRegionCode || 'US'
+            this.phoneUtil.getExampleNumberForType(
+              this.region?.alpha2Code || this.defaultRegionCode || 'US',
+              this.parsePhoneNumberType(this.phoneNumberType)
             ),
             this.displayFormat
           )}
