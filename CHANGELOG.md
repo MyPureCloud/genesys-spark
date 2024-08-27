@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.77.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.76.0...v4.77.0) (2024-08-27)
+
+
+### Features
+
+* **avatar:** remove duplication in screenreader content for change photo ([#574](https://github.com/MyPureCloud/genesys-spark/issues/574)) ([bd1bbcb](https://github.com/MyPureCloud/genesys-spark/commit/bd1bbcb88c6f1ddcc9615839809018f531778ddd))
+
+
+### Bug Fixes
+
+* **modal:** remove scrollbars from dialog element ([d0e4df0](https://github.com/MyPureCloud/genesys-spark/commit/d0e4df047fc7eb8bb9d8bc60f85784e31112ad42))
+
 ## [4.76.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.75.0...v4.76.0) (2024-08-21)
 
 
