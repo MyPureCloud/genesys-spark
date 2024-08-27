@@ -35,7 +35,6 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
     .gux-modal-container {
       display: flex;
       flex-direction: column;
-      padding-top: var(--gse-ui-modal-padding);
       padding-bottom: var(--gse-ui-modal-padding);
 
       &.gux-small {
@@ -63,6 +62,7 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       }
 
       .gux-modal-header {
+        padding-top: var(--gse-ui-modal-padding);
         padding-right: var(--gse-ui-modal-padding);
         padding-left: var(--gse-ui-modal-padding);
         margin: 0;
