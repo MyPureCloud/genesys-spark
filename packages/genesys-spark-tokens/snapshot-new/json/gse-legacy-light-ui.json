@@ -3,9 +3,6 @@
     "focus": "#aac9ff"
   },
   "form_control": {
-    "form_field": {
-      "gap": "4px"
-    },
     "input": {
       "content_text": {
         "fontFamily": "Roboto",

@@ -62,7 +62,7 @@
   --gse-ui-card-borderRadiusCopy: 16px;
   --gse-ui-card-default-border: 1px solid #c6c8ce;
   --gse-ui-card-raised-border: 1px solid #c6c8ce;
-  --gse-ui-card-raised-boxShadow: 0 0 6px 1px rgba(35, 57, 92, 0.12);
+  --gse-ui-card-raised-boxShadow: 0 0 6px 1px rgba(35,57,92,0.12);
   --gse-ui-card-padding: 24px;
   --gse-ui-card-borderless-border: 1px solid transparent;
   --gse-ui-tooltip-light-border: 1px solid #c6c8ce;
@@ -72,7 +72,7 @@
   --gse-ui-tooltip-dark-backgroundColor: #1b2c48;
   --gse-ui-tooltip-dark-foregroundColor: #ffffff;
   --gse-ui-tooltip-dark-iconColor: #ffffff;
-  --gse-ui-tooltip-boxShadow: 0 0 6px 1px rgba(35, 57, 92, 0.12);
+  --gse-ui-tooltip-boxShadow: 0 0 6px 1px rgba(35,57,92,0.12);
   --gse-ui-tooltip-padding: 8px 12px;
   --gse-ui-tooltip-height: 32px;
   --gse-ui-tooltip-gap: 8px;
@@ -404,7 +404,7 @@
   --gse-ui-menu-maxHeight: 344px;
   --gse-ui-menu-borderRadius: 4px;
   --gse-ui-menu-border: 1px solid #c6c8ce;
-  --gse-ui-menu-boxShadow: 0 0 4px 1px rgba(35, 57, 92, 0.1);
+  --gse-ui-menu-boxShadow: 0 0 4px 1px rgba(35,57,92,0.1);
   --gse-ui-menu-padding: 8px 1px;
   --gse-ui-menu-backgroundColor: #ffffff;
   --gse-ui-menu-scrollbar-foregroundColor: #3e5374;
@@ -477,7 +477,7 @@
   --gse-ui-calendarMenu-disabled-opacity: 0.5;
   --gse-ui-calendarMenu-monthBody-padding: 16px 24px;
   --gse-ui-calendarMenu-monthBody-gap: 2px;
-  --gse-ui-calendarMenu-boxShadow: 0 0 4px 1px rgba(35, 57, 92, 0.1);
+  --gse-ui-calendarMenu-boxShadow: 0 0 4px 1px rgba(35,57,92,0.1);
   --gse-ui-datePicker-range-gap: 24px;
   --gse-ui-datePicker-startEndInput-gap: 8px;
   --gse-ui-datePicker-dateTyped-gap: 10px;
@@ -704,8 +704,7 @@
   --gse-ui-dataTableItems-tablePagination-padding: 12px;
   --gse-ui-dataTableItems-tablePagination-divider: 1px solid #c6c8ce;
   --gse-ui-dataTableItems-tablePagination-defaultText: 400 12px/18px 'Noto Sans';
-  --gse-ui-dataTableItems-tablePagination-currentResultText: 700 12px/18px
-    'Noto Sans';
+  --gse-ui-dataTableItems-tablePagination-currentResultText: 700 12px/18px 'Noto Sans';
   --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor: #ffffff;
   --gse-ui-dataTableItems-tablePagination-foregroundColor: #1b2c48;
   --gse-ui-dataTableItems-tablePagination-countDisplay-gap: 4px;
@@ -717,36 +716,12 @@
   --gse-ui-avatar-large-initials: 600 36px/1 Urbanist;
   --gse-ui-avatar-large-presenceRing-width: 4px;
   --gse-ui-avatar-large-ucIntegration-size: 32px;
-  --gse-ui-avatar-presenceRing-available: linear-gradient(
-    135deg,
-    #09b581 0%,
-    #9de1cd 100%
-  );
-  --gse-ui-avatar-presenceRing-busy: linear-gradient(
-    135deg,
-    #e22245 0%,
-    #f3a7b5 100%
-  );
-  --gse-ui-avatar-presenceRing-away: linear-gradient(
-    135deg,
-    #f8c73e 0%,
-    #fce9b2 100%
-  );
-  --gse-ui-avatar-presenceRing-onQueue: linear-gradient(
-    135deg,
-    #4856cb 0%,
-    #9ca6f9 100%
-  );
-  --gse-ui-avatar-presenceRing-offline: linear-gradient(
-    135deg,
-    #767c8d 0%,
-    #a3a7b0 100%
-  );
-  --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(
-    135deg,
-    #b74ba4 0%,
-    #f5bfeb 100%
-  );
+  --gse-ui-avatar-presenceRing-available: linear-gradient(135deg, #09b581 0%, #9de1cd 100%);
+  --gse-ui-avatar-presenceRing-busy: linear-gradient(135deg, #e22245 0%, #f3a7b5 100%);
+  --gse-ui-avatar-presenceRing-away: linear-gradient(135deg, #f8c73e 0%, #fce9b2 100%);
+  --gse-ui-avatar-presenceRing-onQueue: linear-gradient(135deg, #4856cb 0%, #9ca6f9 100%);
+  --gse-ui-avatar-presenceRing-offline: linear-gradient(135deg, #767c8d 0%, #a3a7b0 100%);
+  --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(135deg, #b74ba4 0%, #f5bfeb 100%);
   --gse-ui-avatar-medium-size: 48px;
   --gse-ui-avatar-medium-badge-size: 16px;
   --gse-ui-avatar-medium-focusRing-size: 50px;
@@ -811,11 +786,7 @@
   --gse-ui-avatar-focus: #7b88f7;
   --gse-ui-avatar-addChangeImage-hoverModal-shroudSize: 84px;
   --gse-ui-avatar-addChangeImage-icon-size: 16px;
-  --gse-ui-globalNav-sideMenu: linear-gradient(
-    135deg,
-    #09b581 0%,
-    #9de1cd 100%
-  );
+  --gse-ui-globalNav-sideMenu: linear-gradient(135deg, #09b581 0%, #9de1cd 100%);
   --gse-ui-globalNav-text: 700 12px/16px Roboto;
   --gse-ui-globalNav-toggle-onQueue-text: 600 12px/16px Roboto;
   --gse-ui-globalNav-toggle-gap: 16px;
@@ -865,17 +836,9 @@
   --gse-ui-globalNav-topBar-menuButton-open-hover-backgroundColor: #3742a2;
   --gse-ui-globalNav-topBar-menuButton-open-hover-foregroundColor: #ffffff;
   --gse-ui-globalNav-panel-panelTitle: #ffffff;
-  --gse-ui-globalNav-panel-primary: linear-gradient(
-    127deg,
-    #23395d 3.19%,
-    #3e5374 225.06%
-  );
-  --gse-ui-globalNav-panel-secondary: linear-gradient(
-    358deg,
-    #1b2b48 0.16%,
-    #23395d 98.45%
-  );
-  --gse-ui-dataTableComposed-boxShadow: 0 0 4px 1px rgba(35, 57, 92, 0.1);
+  --gse-ui-globalNav-panel-primary: linear-gradient(127deg, #23395d 3.19%, #3e5374 225.06%);
+  --gse-ui-globalNav-panel-secondary: linear-gradient(358deg, #1b2b48 0.16%, #23395d 98.45%);
+  --gse-ui-dataTableComposed-boxShadow: 0 0 4px 1px rgba(35,57,92,0.1);
   --gse-ui-dataTableComposed-width: 1440px;
   --gse-ui-focus: 2px solid #7b88f7;
   --gse-ui-tabs-item-height: 40px;
@@ -968,7 +931,7 @@
   --gse-ui-toast-gapButton: 16px;
   --gse-ui-toast-buttonBar-gap: 8px;
   --gse-ui-toast-borderRadius: 8px;
-  --gse-ui-toast-boxShadow: 0 0 4px 1px rgba(35, 57, 92, 0.1);
+  --gse-ui-toast-boxShadow: 0 0 4px 1px rgba(35,57,92,0.1);
   --gse-ui-toast-icon: 24px;
   --gse-ui-toast-wrappingWidth: 320px;
   --gse-ui-toast-stacking-gap: 4px;
@@ -985,13 +948,13 @@
   --gse-ui-modal-medium-width: 680px;
   --gse-ui-modal-large-width: 800px;
   --gse-ui-modal-buttonBar-gap: 8px;
-  --gse-ui-modal-boxShadow: 0 0 8px 1px rgba(35, 57, 92, 0.15);
+  --gse-ui-modal-boxShadow: 0 0 8px 1px rgba(35,57,92,0.15);
   --gse-ui-modal-borderRadius: 16px;
   --gse-ui-modal-shroud-opacity: 0.8;
   --gse-ui-modal-dismissButton-paddingTop: 16px;
   --gse-ui-modal-dismissButton-paddingRight: 8px;
   --gse-ui-popover-borderRadius: 8px;
-  --gse-ui-popover-boxShadow: 0 0 8px 1px rgba(35, 57, 92, 0.15);
+  --gse-ui-popover-boxShadow: 0 0 8px 1px rgba(35,57,92,0.15);
   --gse-ui-popover-closeButtonColor: #3e5374;
   --gse-ui-popover-headerColor: #1b2c48;
   --gse-ui-popover-backgroundColor: #ffffff;
@@ -1011,16 +974,13 @@
   --gse-ui-progressAndLoading-spinner-text: 600 12px/18px 'Noto Sans';
   --gse-ui-progressAndLoading-textColor: #1b2c48;
   --gse-ui-progressAndLoading-loadingState-large-header: 700 24px/32px Urbanist;
-  --gse-ui-progressAndLoading-loadingState-large-subheader: 600 16px/24px
-    'Noto Sans';
+  --gse-ui-progressAndLoading-loadingState-large-subheader: 600 16px/24px 'Noto Sans';
   --gse-ui-progressAndLoading-loadingState-large-width: 600px;
   --gse-ui-progressAndLoading-loadingState-medium-header: 700 18px/27px Urbanist;
-  --gse-ui-progressAndLoading-loadingState-medium-subheader: 600 14px/20px
-    'Noto Sans';
+  --gse-ui-progressAndLoading-loadingState-medium-subheader: 600 14px/20px 'Noto Sans';
   --gse-ui-progressAndLoading-loadingState-medium-width: 400px;
   --gse-ui-progressAndLoading-loadingState-small-header: 700 16px/24px Urbanist;
-  --gse-ui-progressAndLoading-loadingState-small-subheader: 600 12px/18px
-    'Noto Sans';
+  --gse-ui-progressAndLoading-loadingState-small-subheader: 600 12px/18px 'Noto Sans';
   --gse-ui-progressAndLoading-loadingState-small-width: 200px;
   --gse-ui-progressAndLoading-large-gap: 24px;
   --gse-ui-progressAndLoading-large-gapText: 4px;
@@ -1030,11 +990,9 @@
   --gse-ui-progressAndLoading-small-gap: 12px;
   --gse-ui-progressAndLoading-small-gapText: 4px;
   --gse-ui-progressAndLoading-blankState-large-header: 700 18px/27px Urbanist;
-  --gse-ui-progressAndLoading-blankState-large-subheader: 600 14px/20px
-    'Noto Sans';
+  --gse-ui-progressAndLoading-blankState-large-subheader: 600 14px/20px 'Noto Sans';
   --gse-ui-progressAndLoading-blankState-small-header: 700 14px/24px Urbanist;
-  --gse-ui-progressAndLoading-blankState-small-subheader: 600 12px/18px
-    'Noto Sans';
+  --gse-ui-progressAndLoading-blankState-small-subheader: 600 12px/18px 'Noto Sans';
   --gse-ui-progressAndLoading-largeBorder: 4px; /* Remove px because of SVG issues from COMUI-2226 */
   --gse-ui-progressAndLoading-smallBorder: 2px; /* Remove px because of SVG issues from COMUI-2226 */
   --gse-ui-progressAndLoading-thinBorder: 1px; /* Remove px because of SVG issues from COMUI-2226 */
@@ -1076,7 +1034,7 @@
   --gse-ui-dynamicSideSheet-headerColor: #1b2c48;
   --gse-ui-dynamicSideSheet-closeColor: #3e5374;
   --gse-ui-dynamicSideSheet-dividerColor: #c6c8ce;
-  --gse-ui-dynamicSideSheet-boxShadow: 0 0 6px 1px rgba(35, 57, 92, 0.12);
+  --gse-ui-dynamicSideSheet-boxShadow: 0 0 6px 1px rgba(35,57,92,0.12);
   --gse-ui-dynamicSideSheet-descriptionColor: #3e5374;
   --gse-ui-dynamicSideSheet-heading: 600 18px/27px Urbanist;
   --gse-ui-dynamicSideSheet-description: 400 12px/18px 'Noto Sans';

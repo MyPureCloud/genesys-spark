@@ -154,20 +154,10 @@
   --gse-semantic-background-interactive-secondary-default: #eff0fe; /* The background color of secondary actions in the default state. */
   --gse-semantic-background-interactive-secondary-hover: #dee1fd; /* The background color of secondary actions in the hover state. */
   --gse-semantic-background-interactive-secondary-active: #ced2fc; /* The background color of secondary actions in the active state. */
-  --gse-semantic-background-interactive-tertiary-default: rgba(
-    0,
-    0,
-    0,
-    0
-  ); /* The background color of tertiary actions in the default state. */
+  --gse-semantic-background-interactive-tertiary-default: rgba(0, 0, 0, 0); /* The background color of tertiary actions in the default state. */
   --gse-semantic-background-interactive-tertiary-hover: #3742a2; /* The background color of tertiary actions in the hover state. */
   --gse-semantic-background-interactive-tertiary-active: #252e78; /* The background color of tertiary actions in the active state. */
-  --gse-semantic-background-interactive-ghost-default: rgba(
-    0,
-    0,
-    0,
-    0
-  ); /* The background color of dismissal actions in the default state. */
+  --gse-semantic-background-interactive-ghost-default: rgba(0, 0, 0, 0); /* The background color of dismissal actions in the default state. */
   --gse-semantic-background-interactive-ghost-hover: #dee1fd; /* The background color of dismissal actions in the hover state. */
   --gse-semantic-background-interactive-ghost-active: #ced2fc; /* The background color of dismissal actions in the active state. */
   --gse-semantic-background-interactive-subtle-default: #ffffff; /* The background color of subtle dismissal actions, like close buttons on modals; in the default state. */
@@ -176,9 +166,7 @@
   --gse-semantic-background-interactive-danger-default: #e22245; /* The background color of danger actions in the default state. */
   --gse-semantic-background-interactive-danger-hover: #881429; /* The background color of danger actions in the hover state. */
   --gse-semantic-background-interactive-danger-active: #440a15; /* The background color of danger actions in the active state. */
-  --gse-semantic-background-overlay-shroud-default: rgb(
-    24.3% 32.5% 45.5% / 0.8
-  ); /* The default color for modals overlays. */
+  --gse-semantic-background-overlay-shroud-default: rgb(24.3% 32.5% 45.5% / 0.8); /* The default color for modals overlays. */
   --gse-semantic-background-container-page-default: #ffffff; /* The default background color for a page. */
   --gse-semantic-background-container-page-tonalSubtle: #fbfcfe; /* A more subtle background color for a page, ideal for highlight surfaces that are over the background, for example, a dashboard with different panels. */
   --gse-semantic-background-container-page-tonalMedium: #f3f5fb; /* The background color to highlight elements in the background, for example, the row of a table. */
@@ -478,9 +466,9 @@
   --gse-semantic-formControl-field-clickInput-sm-size: 16px; /* The recommended height for leaner click inputs, like toggles. */
   --gse-semantic-formControl-field-groupedInput-gap: 8px; /* The recommended gap between groped inputs, like the sapce inbetween checkboxes or radio buttons. */
   --gse-semantic-formControl-clickInput-handle-borderWidth: 2px; /* The recommended border width for handles on click inputs, like the habdle of a toggle. */
-  --gse-semantic-contanier-lg-boxShadow: 0 0 8px 1px rgba(35, 57, 92, 0.15); /* The recommended box shadow for large containers, like modals or popovers. */
-  --gse-semantic-contanier-md-boxShadow: 0 0 6px 1px rgba(35, 57, 92, 0.12); /* The shadow we used for medium-sized components like elevated cards or menus. */
-  --gse-semantic-contanier-sm-boxShadow: 0 0 4px 1px rgba(35, 57, 92, 0.1); /* The shadow we used for small-sized components like tooltips. */
+  --gse-semantic-contanier-lg-boxShadow: 0 0 8px 1px rgba(35,57,92,0.15); /* The recommended box shadow for large containers, like modals or popovers. */
+  --gse-semantic-contanier-md-boxShadow: 0 0 6px 1px rgba(35,57,92,0.12); /* The shadow we used for medium-sized components like elevated cards or menus. */
+  --gse-semantic-contanier-sm-boxShadow: 0 0 4px 1px rgba(35,57,92,0.1); /* The shadow we used for small-sized components like tooltips. */
   --gse-semantic-assets-lg-size: 32px; /* The recommended size of large-sized for styles, for example icons. */
   --gse-semantic-assets-md-size: 24px; /* The recommended size of medium-sized for styles, for example medium icons. */
   --gse-semantic-assets-sm-size: 16px; /* The recommended size of small-sized for styles, for example small icons. */

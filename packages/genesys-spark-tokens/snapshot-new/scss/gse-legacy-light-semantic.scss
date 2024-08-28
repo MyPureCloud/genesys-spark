@@ -153,20 +153,10 @@
   --gse-semantic-background-interactive-secondary-default: #e8ecf2; /* The background color of secondary actions in the default state. */
   --gse-semantic-background-interactive-secondary-hover: #deeaff; /* The background color of secondary actions in the hover state. */
   --gse-semantic-background-interactive-secondary-active: #e2e6ee; /* The background color of secondary actions in the active state. */
-  --gse-semantic-background-interactive-tertiary-default: rgba(
-    0,
-    0,
-    0,
-    0
-  ); /* The background color of tertiary actions in the default state. */
+  --gse-semantic-background-interactive-tertiary-default: rgba(0, 0, 0, 0); /* The background color of tertiary actions in the default state. */
   --gse-semantic-background-interactive-tertiary-hover: #2754ac; /* The background color of tertiary actions in the hover state. */
   --gse-semantic-background-interactive-tertiary-active: #23478f; /* The background color of tertiary actions in the active state. */
-  --gse-semantic-background-interactive-ghost-default: rgba(
-    0,
-    0,
-    0,
-    0
-  ); /* The background color of dismissal actions in the default state. */
+  --gse-semantic-background-interactive-ghost-default: rgba(0, 0, 0, 0); /* The background color of dismissal actions in the default state. */
   --gse-semantic-background-interactive-ghost-hover: #deeaff; /* The background color of dismissal actions in the hover state. */
   --gse-semantic-background-interactive-ghost-active: #e2e6ee; /* The background color of dismissal actions in the active state. */
   --gse-semantic-background-interactive-subtle-default: #ffffff; /* The background color of subtle dismissal actions, like close buttons on modals; in the default state. */
@@ -175,9 +165,7 @@
   --gse-semantic-background-interactive-danger-default: #ea0b0b; /* The background color of danger actions in the default state. */
   --gse-semantic-background-interactive-danger-hover: #8f0707; /* The background color of danger actions in the hover state. */
   --gse-semantic-background-interactive-danger-active: #520404; /* The background color of danger actions in the active state. */
-  --gse-semantic-background-overlay-shroud-default: rgb(
-    12.5% 16.1% 21.6% / 0.8
-  ); /* The default color for modals overlays. */
+  --gse-semantic-background-overlay-shroud-default: rgb(12.5% 16.1% 21.6% / 0.8); /* The default color for modals overlays. */
   --gse-semantic-background-container-page-default: #ffffff; /* The default background color for a page. */
   --gse-semantic-background-container-page-tonalSubtle: #fdfdfd; /* A more subtle background color for a page, ideal for highlight surfaces that are over the background, for example, a dashboard with different panels. */
   --gse-semantic-background-container-page-tonalMedium: #f6f7f9; /* The background color to highlight elements in the background, for example, the row of a table. */
@@ -212,33 +200,17 @@
   --gse-semantic-background-system-customAccents-bold-accent_11: #ddd933; /* A custom accent used mostly for tags. */
   --gse-semantic-background-system-customAccents-bold-accent_12: #ffef27; /* A custom accent used in search component */
   --gse-semantic-background-system-customAccents-bold-accent_13: #75a8ff;
-  --gse-semantic-background-system-customAccents-subtle-accent_1: lch(
-    77.6 10.9 279
-  ); /* A custom accent used mostly for tags. */
-  --gse-semantic-background-system-customAccents-subtle-accent_2: lch(
-    90.4 14.8 272
-  ); /* A custom accent used mostly for tags. */
-  --gse-semantic-background-system-customAccents-subtle-accent_3: lch(
-    92.5 8.53 288
-  ); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_1: lch(77.6 10.9 279); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_2: lch(90.4 14.8 272); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_3: lch(92.5 8.53 288); /* A custom accent used mostly for tags. */
   --gse-semantic-background-system-customAccents-subtle-accent_4: #c2deb9; /* A custom accent used mostly for tags. */
   --gse-semantic-background-system-customAccents-subtle-accent_5: #c8cfda; /* A custom accent used mostly for tags. */
-  --gse-semantic-background-system-customAccents-subtle-accent_6: lch(
-    90.4 14.8 272
-  ); /* A custom accent used mostly for tags. */
-  --gse-semantic-background-system-customAccents-subtle-accent_7: lch(
-    83.7 21.4 305
-  ); /* A custom accent used mostly for tags. */
-  --gse-semantic-background-system-customAccents-subtle-accent_8: lch(
-    81.7 7.69 295
-  ); /* A custom accent used mostly for tags. */
-  --gse-semantic-background-system-customAccents-subtle-accent_9: lch(
-    92.1 16.4 338
-  ); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_6: lch(90.4 14.8 272); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_7: lch(83.7 21.4 305); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_8: lch(81.7 7.69 295); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_9: lch(92.1 16.4 338); /* A custom accent used mostly for tags. */
   --gse-semantic-background-system-customAccents-subtle-accent_10: #fcd276;
-  --gse-semantic-background-system-customAccents-subtle-accent_11: lch(
-    95.5 22.7 98.8
-  ); /* A custom accent used mostly for tags. */
+  --gse-semantic-background-system-customAccents-subtle-accent_11: lch(95.5 22.7 98.8); /* A custom accent used mostly for tags. */
   --gse-semantic-background-system-customAccents-subtle-accent_12: #fff793; /* A custom accent used in search component */
   --gse-semantic-background-system-progressAndLoading-default: #deeaff; /* The color to indicate that this progress has not been achieved. */
   --gse-semantic-background-system-progressAndLoading-progressed: #2a60c8; /* The color to indicate that this progress in a component. */
@@ -493,9 +465,9 @@
   --gse-semantic-formControl-field-clickInput-sm-size: 16px; /* The recommended height for leaner click inputs, like toggles. */
   --gse-semantic-formControl-field-groupedInput-gap: 8px; /* The recommended gap between groped inputs, like the sapce inbetween checkboxes or radio buttons. */
   --gse-semantic-formControl-clickInput-handle-borderWidth: 2px; /* The recommended border width for handles on click inputs, like the habdle of a toggle. */
-  --gse-semantic-contanier-lg-boxShadow: 0 0 8px 1px rgba(35, 57, 92, 0.15); /* The recommended box shadow for large containers, like modals or popovers. */
-  --gse-semantic-contanier-md-boxShadow: 0 0 6px 1px rgba(35, 57, 92, 0.12); /* The shadow we used for medium-sized components like elevated cards or menus. */
-  --gse-semantic-contanier-sm-boxShadow: 0 0 4px 1px rgba(35, 57, 92, 0.1); /* The shadow we used for small-sized components like tooltips. */
+  --gse-semantic-contanier-lg-boxShadow: 0 0 8px 1px rgba(35,57,92,0.15); /* The recommended box shadow for large containers, like modals or popovers. */
+  --gse-semantic-contanier-md-boxShadow: 0 0 6px 1px rgba(35,57,92,0.12); /* The shadow we used for medium-sized components like elevated cards or menus. */
+  --gse-semantic-contanier-sm-boxShadow: 0 0 4px 1px rgba(35,57,92,0.1); /* The shadow we used for small-sized components like tooltips. */
   --gse-semantic-assets-lg-size: 32px; /* The recommended size of large-sized for styles, for example icons. */
   --gse-semantic-assets-md-size: 24px; /* The recommended size of medium-sized for styles, for example medium icons. */
   --gse-semantic-assets-sm-size: 16px; /* The recommended size of small-sized for styles, for example small icons. */
