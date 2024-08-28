@@ -45,6 +45,7 @@ export class GuxPhoneInput {
     libphonenumber.PhoneNumberUtil.getInstance();
   private regionObjects: RegionObject[] = [];
   private displayFormat: PhoneNumberFormat;
+  private displayType: PhoneNumberType = PhoneNumberType.FIXED_LINE;
   private valueWhenFocused: string;
   private regionAlphaCodeWhenFocused: Alpha2Code;
 
@@ -167,6 +168,11 @@ export class GuxPhoneInput {
     this.displayFormat = this.parseDisplayFormat(format);
   }
 
+  @Watch('phoneNumberType')
+  setDisplayType(format: typeof this.phoneNumberType) {
+    this.displayType = this.parsePhoneNumberType(format);
+  }
+
   @Listen('internallistboxoptionsupdated')
   onInternallistboxoptionsupdated(event: CustomEvent): void {
     event.stopPropagation();
@@ -239,6 +245,7 @@ export class GuxPhoneInput {
 
   private initialValueParse(): void {
     this.setDisplayFormat(this.phoneNumberFormat);
+    this.setDisplayType(this.phoneNumberType);
     if (this.value) {
       try {
         const phone = this.phoneUtil.parse(this.value);
@@ -535,7 +542,7 @@ export class GuxPhoneInput {
           placeholder={this.phoneUtil.format(
             this.phoneUtil.getExampleNumberForType(
               this.region?.alpha2Code || this.defaultRegionCode || 'US',
-              this.parsePhoneNumberType(this.phoneNumberType)
+              this.displayType
             ),
             this.displayFormat
           )}
