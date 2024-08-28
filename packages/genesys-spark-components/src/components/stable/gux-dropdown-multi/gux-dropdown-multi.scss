@@ -22,6 +22,7 @@
 .gux-disabled {
   &.gux-target-container-collapsed .gux-field-button,
   &.gux-target-container-expanded {
+    user-select: none;
     border: var(--gse-ui-formControl-input-disabled-border-width)
       var(--gse-ui-formControl-input-disabled-border-style)
       var(--gse-ui-formControl-input-disabled-border-color);
