@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.78.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.77.0...v4.78.0) (2024-08-28)
+
+
+### Features
+
+* **form-fields:** Update the spacing on form fields ([#571](https://github.com/MyPureCloud/genesys-spark/issues/571)) ([a775f3b](https://github.com/MyPureCloud/genesys-spark/commit/a775f3b53c1270f0aeca54d5070d13a9714f61a1))
+
 ## [4.77.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.76.0...v4.77.0) (2024-08-27)
 
 
