@@ -6,7 +6,7 @@
         "type": "sizing"
       },
       "padding": {
-        "value": "10px {spacing.xs} 10px {spacing.xs}",
+        "value": "{container.xs.padding} {container.md.padding} {container.xs.padding} {container.md.padding}",
         "type": "spacing"
       },
       "chevron_icon": {
@@ -14,26 +14,26 @@
         "type": "sizing"
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{container.sm.gap}",
         "type": "spacing"
       },
       "default": {
         "foreground": {
           "label_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{foreground.container.high_emphasis}",
             "type": "color"
           },
           "chevron_icon": {
             "closed": {
-              "value": "{color.cornflower.600}",
+              "value": "{foreground.interactive.subtle.default}",
               "type": "color"
             },
             "open": {
-              "value": "{color.primary.darkest}",
+              "value": "{foreground.interactive.subtle.active}",
               "type": "color"
             },
             "hover": {
-              "value": "{color.primary.darker}",
+              "value": "{foreground.interactive.subtle.hover}",
               "type": "color"
             }
           }
@@ -41,29 +41,24 @@
       },
       "label": {
         "default_text": {
-          "value": {
-            "fontFamily": "{font_family.roboto}",
-            "lineHeight": "{line_height.sm}",
-            "fontSize": "{font_size.sm}",
-            "fontWeight": "{font_weight.bold}"
-          },
+          "value": "{body.md.bold}",
           "type": "typography"
         }
       }
     },
     "reversed_header": {
       "padding": {
-        "value": "2px",
+        "value": "{container.2xs.padding}",
         "type": "spacing"
       }
     },
     "menu_item": {
       "height": {
-        "value": "{size.lg}",
+        "value": "{container.sm.height}",
         "type": "sizing"
       },
       "padding": {
-        "value": "0 {spacing.2xs} 0 {spacing.md}",
+        "value": "0 {container.sm.padding} 0 {container.lg.padding}",
         "type": "spacing"
       },
       "start_icon": {
@@ -75,25 +70,25 @@
         "type": "sizing"
       },
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{container.sm.gap}",
         "type": "spacing"
       },
       "default": {
         "foreground": {
           "start_icon_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "label_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "start_shortcut_color": {
-            "value": "{color.cornflower.600}",
+            "value": "{menu.option.shortcut.default.foreground_color}",
             "type": "color"
           },
           "parent_icon_color": {
-            "value": "{color.cornflower.600}",
+            "value": "{menu.option.parent_icon.default.foreground_color}",
             "type": "color"
           }
         }
@@ -101,129 +96,109 @@
       "hover": {
         "foreground": {
           "start_icon_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "label_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "start_shortcut_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.shortcut.default.foreground_color}",
             "type": "color"
           },
           "parent_icon_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.parent_icon.hover.foreground_color}",
             "type": "color"
           }
         },
         "background_color": {
-          "value": "{color.blueberry.50}",
+          "value": "{menu.option.hover.background_color}",
           "type": "color"
         }
       },
       "selected": {
         "foreground": {
           "start_icon_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "label_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.label.foreground_color}",
             "type": "color"
           },
           "start_shortcut_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.shortcut.selected.foreground_color}",
             "type": "color"
           },
           "parent_icon_color": {
-            "value": "{color.cornflower.900}",
+            "value": "{menu.option.parent_icon.selected.foreground_color}",
             "type": "color"
           }
         },
         "background_color": {
-          "value": "{color.blueberry.200}",
+          "value": "{menu.option.selected.background_color}",
           "type": "color"
         }
       },
       "focus": {
         "border_radius": {
-          "value": "{border_radius.sm}",
+          "value": "{container.sm.border_radius}",
           "type": "borderRadius"
         }
       },
       "label": {
         "default_text": {
-          "value": {
-            "fontFamily": "{font_family.roboto}",
-            "lineHeight": "{line_height.xs}",
-            "fontSize": "{font_size.xs}",
-            "fontWeight": "{font_weight.regular}"
-          },
+          "value": "{body.sm.regular}",
           "type": "typography"
         },
         "selected_text": {
-          "value": {
-            "fontFamily": "{font_family.roboto}",
-            "lineHeight": "{line_height.xs}",
-            "fontSize": "{font_size.xs}",
-            "fontWeight": "{font_weight.semi_bold}"
-          },
+          "value": "{body.sm.semi_bold}",
           "type": "typography"
         }
       },
       "shortcut": {
         "text": {
-          "value": {
-            "fontFamily": "{font_family.roboto}",
-            "lineHeight": "{line_height.sm}",
-            "fontSize": "{font_size.sm}",
-            "fontWeight": "{font_weight.regular}"
-          },
+          "value": "{menu.option.shortcut.text}",
           "type": "typography"
         }
       }
     },
     "focus_border": {
       "value": {
-        "color": "{color.focus}",
+        "color": "{border.focus}",
         "style": "solid",
-        "width": "2px"
+        "width": "{focus_outline.md.border_width}"
       },
       "type": "border"
     },
     "content_item": {
       "padding": {
-        "value": "{spacing.xs}",
+        "value": "{container.md.padding}",
         "type": "spacing"
       },
       "gap": {
-        "value": "{spacing.xs}",
+        "value": "{container.lg.gap}",
         "type": "spacing"
       },
       "foreground_color": {
-        "value": "{color.cornflower.900}",
+        "value": "{foreground.container.high_emphasis}",
         "type": "color"
       },
       "background_color": {
-        "value": "{color.white}",
+        "value": "{background.container.elevated.default}",
         "type": "color"
       },
       "default_text": {
-        "value": {
-          "fontFamily": "{font_family.roboto}",
-          "lineHeight": "{line_height.xs}",
-          "fontSize": "{font_size.xs}",
-          "fontWeight": "{font_weight.regular}"
-        },
+        "value": "{body.sm.regular}",
         "type": "typography"
       }
     },
     "wrapper": {
       "divider_border": {
         "value": {
-          "color": "{color.cornflower.300}",
-          "width": "1px",
+          "color": "{border.container.divider}",
+          "width": "{container.divider.border_width}",
           "style": "solid"
         },
         "type": "border"
@@ -232,21 +207,21 @@
     "focus": {
       "offset": {
         "gap": {
-          "value": "1px",
+          "value": "{focus_outline.offset}",
           "type": "spacing"
         }
       }
     },
     "content_panel": {
       "padding_bottom": {
-        "value": "{spacing.4xs}",
+        "value": "{container.xs.padding}",
         "type": "spacing"
       }
     },
     "label": {
       "disabled": {
         "opacity": {
-          "value": "0.5",
+          "value": "{opacity.disabled}",
           "type": "opacity"
         }
       }
