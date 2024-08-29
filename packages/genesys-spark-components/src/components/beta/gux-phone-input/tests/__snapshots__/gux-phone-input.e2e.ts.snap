@@ -8,6 +8,6 @@ exports[`gux-phone-input #render should render with e164 format 1`] = `"<gux-pho
 
 exports[`gux-phone-input #render should render with international format 1`] = `"<gux-phone-input-beta phone-number-format="INTERNATIONAL" hydrated=""></gux-phone-input-beta>"`;
 
-exports[`gux-phone-input #render should render with value 1`] = `"<gux-phone-input-beta value="+13175971660" hydrated=""></gux-phone-input-beta>"`;
+exports[`gux-phone-input #render should render with toll-free type 1`] = `"<gux-phone-input-beta phone-number-type="TOLL_FREE" hydrated=""></gux-phone-input-beta>"`;
 
-exports[`should render with international format and toll-free type 1`] = `"<gux-phone-input-beta phone-number-type="TOLL_FREE" hydrated=""></gux-phone-input-beta>"`;
+exports[`gux-phone-input #render should render with value 1`] = `"<gux-phone-input-beta value="+13175971660" hydrated=""></gux-phone-input-beta>"`;
