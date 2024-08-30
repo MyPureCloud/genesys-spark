@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.79.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.78.1...v4.79.0) (2024-08-30)
+
+
+### Features
+
+* **phone-input:** add phone-number-type prop to allow displaying toll-free number as placeholder [PLTRES-442] ([#577](https://github.com/MyPureCloud/genesys-spark/issues/577)) ([e418620](https://github.com/MyPureCloud/genesys-spark/commit/e418620b91e3006467c83bfdb288517eaf98bacc))
+* **tokens:** updated label.gap to form_field.gap per COMUI-3033 ([5c5894a](https://github.com/MyPureCloud/genesys-spark/commit/5c5894ae55f198e16e1550d56490562aa32fc9a9))
+* **tokens:** updated ui tokens ([58b14e9](https://github.com/MyPureCloud/genesys-spark/commit/58b14e91054492d0e21d2ad96f8c632e397e9be0))
+* **tokens:** Updated vars in figma ([c5b9df0](https://github.com/MyPureCloud/genesys-spark/commit/c5b9df0c6333743ccd40392d2d2911caf872e565))
+
+
+### Bug Fixes
+
+* **other:** fixed token snapshot tests ([4f8b5e5](https://github.com/MyPureCloud/genesys-spark/commit/4f8b5e5c707b63f44b29102ad9fcb4ce79a875a0))
+
 ### [4.78.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.78.0...v4.78.1) (2024-08-29)
 
 
