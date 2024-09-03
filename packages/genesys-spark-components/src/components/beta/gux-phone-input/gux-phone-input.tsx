@@ -360,6 +360,21 @@ export class GuxPhoneInput {
     return regionMatch?.alpha2Code ?? null;
   }
 
+  /** Gets example number with fallbacks to handle missing data in the library. */
+  private getExampleNumber(): libphonenumber.PhoneNumber {
+    const regionCode =
+      this.region?.alpha2Code || this.defaultRegionCode || 'US';
+
+    return (
+      this.phoneUtil.getExampleNumberForType(regionCode, this.displayType) ||
+      this.phoneUtil.getExampleNumberForType(
+        regionCode,
+        PhoneNumberType.FIXED_LINE
+      ) ||
+      this.phoneUtil.getExampleNumberForType('US', PhoneNumberType.FIXED_LINE)
+    );
+  }
+
   private getRegionFromValue(number: string): Region {
     return this.isNationalNumber(number)
       ? this.region || null
@@ -540,10 +555,7 @@ export class GuxPhoneInput {
           }}
           type="tel"
           placeholder={this.phoneUtil.format(
-            this.phoneUtil.getExampleNumberForType(
-              this.region?.alpha2Code || this.defaultRegionCode || 'US',
-              this.displayType
-            ),
+            this.getExampleNumber(),
             this.displayFormat
           )}
           value={this.value}
