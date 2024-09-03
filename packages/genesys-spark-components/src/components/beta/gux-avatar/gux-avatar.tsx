@@ -12,7 +12,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import defaultResources from './i18n/en.json';
 
 /**
- * @slot image - Headshot photo.
+ * @slot image - Avatar photo.
  */
 
 @Component({
@@ -172,8 +172,8 @@ export class GuxAvatar {
     }
   }
 
-  private renderUcIntegrationsIcon(): JSX.Element | null {
-    switch (this.ucIntegration) {
+  private renderUcIntegrationsIcon(appName: string): JSX.Element | null {
+    switch (appName) {
       case 'teams':
         return renderTeamsSVG();
       case 'zoom':
@@ -185,11 +185,30 @@ export class GuxAvatar {
     }
   }
 
+  private getUcIntegrationText(appName: string): JSX.Element | null {
+    switch (appName) {
+      case 'teams':
+        return 'Microsoft Teams';
+      case 'zoom':
+        return 'Zoom';
+      case '8x8':
+        return '8 by 8';
+      default:
+        return null;
+    }
+  }
+
   private renderUcIntegrationBadge(): JSX.Element | null {
-    if (this.ucIntegration && this.size === 'large') {
+    if (
+      ['zoom', 'teams', '8x8'].includes(this.ucIntegration) &&
+      this.size === 'large'
+    ) {
       return (
         <div class="gux-avatar-integration-badge">
-          {this.renderUcIntegrationsIcon()}
+          {this.renderUcIntegrationsIcon(this.ucIntegration)}
+          <gux-screen-reader-beta>
+            {this.getUcIntegrationText(this.ucIntegration)}
+          </gux-screen-reader-beta>
         </div>
       ) as JSX.Element;
     }
