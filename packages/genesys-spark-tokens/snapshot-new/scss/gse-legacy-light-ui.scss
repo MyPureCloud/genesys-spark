@@ -974,36 +974,12 @@
   --gse-ui-avatar-large-initials-lineHeight: 1;
   --gse-ui-avatar-large-presenceRing-width: 4px;
   --gse-ui-avatar-large-ucIntegration-size: 32px;
-  --gse-ui-avatar-presenceRing-available: linear-gradient(
-    135deg,
-    #3c8527 0%,
-    #95c189 100%
-  );
-  --gse-ui-avatar-presenceRing-busy: linear-gradient(
-    135deg,
-    #ea0b0b 0%,
-    #f37a7a 100%
-  );
-  --gse-ui-avatar-presenceRing-away: linear-gradient(
-    135deg,
-    #ffae00 0%,
-    #fcd276 100%
-  );
-  --gse-ui-avatar-presenceRing-onQueue: linear-gradient(
-    135deg,
-    #2a60c8 0%,
-    #75a8ff 100%
-  );
-  --gse-ui-avatar-presenceRing-offline: linear-gradient(
-    135deg,
-    #767c8d 0%,
-    #a3a7b0 100%
-  );
-  --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(
-    135deg,
-    #b74ba4 0%,
-    #f5bfeb 100%
-  );
+  --gse-ui-avatar-presenceRing-available: linear-gradient(135deg, #3c8527 0%, #95c189 100%);
+  --gse-ui-avatar-presenceRing-busy: linear-gradient(135deg, #ea0b0b 0%, #f37a7a 100%);
+  --gse-ui-avatar-presenceRing-away: linear-gradient(135deg, #ffae00 0%, #fcd276 100%);
+  --gse-ui-avatar-presenceRing-onQueue: linear-gradient(135deg, #2a60c8 0%, #75a8ff 100%);
+  --gse-ui-avatar-presenceRing-offline: linear-gradient(135deg, #767c8d 0%, #a3a7b0 100%);
+  --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(135deg, #b74ba4 0%, #f5bfeb 100%);
   --gse-ui-avatar-medium-size: 48px;
   --gse-ui-avatar-medium-badge-size: 16px;
   --gse-ui-avatar-medium-focusRing-size: 50px;
@@ -1090,11 +1066,7 @@
   --gse-ui-avatar-focus: #aac9ff;
   --gse-ui-avatar-addChangeImage-hoverModal-shroudSize: 84px;
   --gse-ui-avatar-addChangeImage-icon-size: 16px;
-  --gse-ui-globalNav-sideMenu: linear-gradient(
-    135deg,
-    #09b581 0%,
-    #9de1cd 100%
-  );
+  --gse-ui-globalNav-sideMenu: linear-gradient(135deg, #09b581 0%, #9de1cd 100%);
   --gse-ui-globalNav-text-fontFamily: Roboto;
   --gse-ui-globalNav-text-lineHeight: 16px;
   --gse-ui-globalNav-text-fontSize: 12px;
@@ -1157,16 +1129,8 @@
   --gse-ui-globalNav-topBar-menuButton-open-hover-backgroundColor: #3742a2;
   --gse-ui-globalNav-topBar-menuButton-open-hover-foregroundColor: #ffffff;
   --gse-ui-globalNav-panel-panelTitle: #ffffff;
-  --gse-ui-globalNav-panel-primary: linear-gradient(
-    127deg,
-    #23395d 3.19%,
-    #3e5374 225.06%
-  );
-  --gse-ui-globalNav-panel-secondary: linear-gradient(
-    358deg,
-    #1b2b48 0.16%,
-    #23395d 98.45%
-  );
+  --gse-ui-globalNav-panel-primary: linear-gradient(127deg, #23395d 3.19%, #3e5374 225.06%);
+  --gse-ui-globalNav-panel-secondary: linear-gradient(358deg, #1b2b48 0.16%, #23395d 98.45%);
   --gse-ui-dataTableComposed-boxShadow-blur: 4px;
   --gse-ui-dataTableComposed-boxShadow-spread: 1px;
   --gse-ui-dataTableComposed-boxShadow-color: rgba(35, 57, 92, 0.1);
@@ -1416,8 +1380,6 @@
   --gse-ui-blankState-gapContent: 24px;
   --gse-ui-blankState-iconColor: #4c5667;
   --gse-ui-blankState-foregroundColor: #2e394c;
-  --gse-ui-blankState-backgroundColor: rgba(0, 0, 0, 0);
-  --gse-ui-blankState-borderRadius: 4px;
   --gse-ui-modalSideSheet-backgroundColor: #ffffff;
   --gse-ui-modalSideSheet-headerColor: #2e394c;
   --gse-ui-modalSideSheet-closeColor: #3e4a5b;
