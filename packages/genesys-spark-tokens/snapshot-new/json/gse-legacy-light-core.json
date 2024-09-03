@@ -59,7 +59,7 @@
   "font_family": {
     "roboto": "Roboto",
     "urbanist": "Urbanist",
-    "noto_sans": "Noto Sans"
+    "noto_sans": "'Noto Sans'"
   },
   "font_weight": {
     "semi_bold": "600"
@@ -159,16 +159,16 @@
       "navy": "#203b73"
     },
     "data_visualization": {
-      "yellow_green": "#ddd933",
-      "olive_green": "#868c1e",
-      "aqua_green": "#1da8b3",
-      "pink": "#ff8fdd",
-      "fuchsia": "#cc3ebe",
-      "lilac": "#b5b5eb",
-      "plum": "#5e5782",
-      "electric_purple": "#8452cf",
-      "genesys_blue": "#75a8ff",
-      "navy": "#203b73"
+      "yellow_green": "#f8f3c6",
+      "olive_green": "#dcdbbb",
+      "aqua_green": "#c7e5e8",
+      "pink": "#ffdff5",
+      "fuchsia": "#f4c9ec",
+      "lilac": "#e9e8f9",
+      "plum": "#cdc9d8",
+      "electric_purple": "#dcc9f2",
+      "genesys_blue": "#d9e4ff",
+      "navy": "#bbbfd4"
     },
     "brand": {
       "brand_orange": "#ff4f1f",

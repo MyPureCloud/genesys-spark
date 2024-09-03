@@ -6,7 +6,7 @@
   "theme": {
     "font_family": {
       "headings": "Urbanist",
-      "body": "Noto Sans"
+      "body": "'Noto Sans'"
     },
     "background": {
       "container": {
@@ -24,7 +24,7 @@
           "30": "#252e78"
         },
         "tertiary": {
-          "10": "#000000",
+          "10": "rgba(0, 0, 0, 0)",
           "20": "#c6c8ce"
         },
         "high_contrast": {
@@ -41,7 +41,7 @@
         }
       },
       "overlay": {
-        "10": "#3e5374"
+        "10": "#3e5374cc"
       },
       "system": {
         "primary": {
@@ -289,12 +289,12 @@
         "active": "#ced2fc"
       },
       "tertiary": {
-        "default": "#000000",
+        "default": "rgba(0, 0, 0, 0)",
         "hover": "#3742a2",
         "active": "#252e78"
       },
       "ghost": {
-        "default": "#000000",
+        "default": "rgba(0, 0, 0, 0)",
         "hover": "#dee1fd",
         "active": "#ced2fc"
       },
@@ -311,7 +311,7 @@
     },
     "overlay": {
       "shroud": {
-        "default": "#3e5374"
+        "default": "#3e5374cc"
       }
     },
     "container": {
@@ -573,26 +573,26 @@
   "body": {
     "sm": {
       "regular": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
       },
       "link": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "12px",
         "lineHeight": "18px",
         "textDecoration": "underline"
       },
       "bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "700",
         "fontSize": "12px",
         "lineHeight": "18px"
       },
       "semi_bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -600,26 +600,26 @@
     },
     "md": {
       "regular": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "14px",
         "lineHeight": "20px"
       },
       "link": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "14px",
         "lineHeight": "20px",
         "textDecoration": "underline"
       },
       "bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "700",
         "fontSize": "14px",
         "lineHeight": "20px"
       },
       "semi_bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "14px",
         "lineHeight": "20px"
@@ -627,26 +627,26 @@
     },
     "lg": {
       "regular": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "16px",
         "lineHeight": "24px"
       },
       "link": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "16px",
         "lineHeight": "24px",
         "textDecoration": "underline"
       },
       "bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "700",
         "fontSize": "16px",
         "lineHeight": "24px"
       },
       "semi_bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "16px",
         "lineHeight": "24px"
@@ -929,7 +929,7 @@
       "box_shadow": {
         "blur": "8px",
         "spread": "1px",
-        "color": "rgba(35,57,92,0.15)",
+        "color": "rgba(35, 57, 92, 0.15)",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
@@ -939,7 +939,7 @@
       "box_shadow": {
         "blur": "6px",
         "spread": "1px",
-        "color": "rgba(35,57,92,0.12)",
+        "color": "rgba(35, 57, 92, 0.12)",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
@@ -949,7 +949,7 @@
       "box_shadow": {
         "blur": "4px",
         "spread": "1px",
-        "color": "rgba(35,57,92,0.1)",
+        "color": "rgba(35, 57, 92, 0.1)",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
