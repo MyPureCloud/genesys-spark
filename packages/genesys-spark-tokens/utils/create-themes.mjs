@@ -108,7 +108,10 @@ function getPlatform(name, type, format, outputFolder) {
       options: {
         showFileHeader: false,
         outputReferences: false,
-        selector: `@mixin tokens`
+        selector: '@mixin tokens',
+        formatting: {
+          commentStyle: 'none'
+        }
       }
     }
   };

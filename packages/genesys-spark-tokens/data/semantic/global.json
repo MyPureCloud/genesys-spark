@@ -473,6 +473,11 @@
   },
   "container": {
     "lg": {
+      "box_shadow": {
+        "value": "{elevation.high}",
+        "type": "boxShadow",
+        "description": "The recommended box shadow for large containers, like modals or popovers."
+      },
       "border_radius": {
         "value": "{theme.border_radius.interactive.large}",
         "type": "borderRadius",
@@ -495,6 +500,11 @@
       }
     },
     "md": {
+      "box_shadow": {
+        "value": "{elevation.medium}",
+        "type": "boxShadow",
+        "description": "The shadow we used for medium-sized components like elevated cards or menus."
+      },
       "gap": {
         "value": "{spacing.2xs}",
         "type": "spacing",
@@ -534,6 +544,11 @@
       }
     },
     "sm": {
+      "box_shadow": {
+        "value": "{elevation.low}",
+        "type": "boxShadow",
+        "description": "The shadow we used for small-sized components like tooltips."
+      },
       "border_radius": {
         "value": "{theme.border_radius.interactive.small}",
         "type": "borderRadius",
@@ -763,29 +778,6 @@
       }
     }
   },
-  "contanier": {
-    "lg": {
-      "box_shadow": {
-        "value": "{elevation.high}",
-        "type": "boxShadow",
-        "description": "The recommended box shadow for large containers, like modals or popovers."
-      }
-    },
-    "md": {
-      "box_shadow": {
-        "value": "{elevation.medium}",
-        "type": "boxShadow",
-        "description": "The shadow we used for medium-sized components like elevated cards or menus."
-      }
-    },
-    "sm": {
-      "box_shadow": {
-        "value": "{elevation.low}",
-        "type": "boxShadow",
-        "description": "The shadow we used for small-sized components like tooltips."
-      }
-    }
-  },
   "assets": {
     "lg": {
       "size": {
@@ -857,7 +849,7 @@
       "height": {
         "value": "{size.4xs}",
         "type": "sizing",
-        "description": "The heioght for track elements, like the track of the slider."
+        "description": "The height for track elements, like the track of the slider."
       }
     },
     "indicator": {
