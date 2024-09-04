@@ -367,7 +367,7 @@
       "type": "border"
     },
     "box_shadow": {
-      "value": "{contanier.sm.box_shadow}",
+      "value": "{container.sm.box_shadow}",
       "type": "boxShadow"
     },
     "padding": {

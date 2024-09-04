@@ -28,7 +28,7 @@
         "type": "border"
       },
       "box_shadow": {
-        "value": "{contanier.md.box_shadow}",
+        "value": "{container.md.box_shadow}",
         "type": "boxShadow"
       }
     },
@@ -89,7 +89,7 @@
       }
     },
     "box_shadow": {
-      "value": "{contanier.md.box_shadow}",
+      "value": "{container.md.box_shadow}",
       "type": "boxShadow"
     },
     "padding": {

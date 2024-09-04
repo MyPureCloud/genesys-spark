@@ -1,5 +1,5 @@
 @mixin tokens {
-  --gse-ui-color-focus: #aac9ff; /* Created to support the legacy border focus token */
+  --gse-ui-color-focus: #aac9ff;
   --gse-ui-formControl-input-contentText-fontFamily: Roboto;
   --gse-ui-formControl-input-contentText-fontWeight: 400;
   --gse-ui-formControl-input-contentText-fontSize: 12px;
@@ -132,44 +132,44 @@
   --gse-ui-tooltip-text-fontSize: 12px;
   --gse-ui-tooltip-text-lineHeight: 18px;
   --gse-ui-tag-borderRadius: 4px;
-  --gse-ui-tag-default-backgroundColor: #23395d; /* To be deprecated in V5 */
-  --gse-ui-tag-default-foregroundColor: #ffffff; /* To be deprecated in V5 */
+  --gse-ui-tag-default-backgroundColor: #23395d;
+  --gse-ui-tag-default-foregroundColor: #ffffff;
   --gse-ui-tag-default-bold-backgroundColor: #203b73;
   --gse-ui-tag-default-bold-foregroundColor: #ffffff;
   --gse-ui-tag-default-subtle-backgroundColor: #bbbfd4;
   --gse-ui-tag-default-subtle-foregroundColor: #2e394c;
-  --gse-ui-tag-accent1-backgroundColor: #e4e5e7; /* To be deprecated in V5 */
-  --gse-ui-tag-accent1-foregroundColor: #1b2c48; /* To be deprecated in V5 */
+  --gse-ui-tag-accent1-backgroundColor: #e4e5e7;
+  --gse-ui-tag-accent1-foregroundColor: #1b2c48;
   --gse-ui-tag-accent1-bold-backgroundColor: #23478f;
   --gse-ui-tag-accent1-bold-foregroundColor: #ffffff;
   --gse-ui-tag-accent1-subtle-backgroundColor: #d9e4ff;
   --gse-ui-tag-accent1-subtle-foregroundColor: #2e394c;
-  --gse-ui-tag-accent2-backgroundColor: #90d3dd; /* To be deprecated in V5 */
-  --gse-ui-tag-accent2-foregroundColor: #1b2c48; /* To be deprecated in V5 */
+  --gse-ui-tag-accent2-backgroundColor: #90d3dd;
+  --gse-ui-tag-accent2-foregroundColor: #1b2c48;
   --gse-ui-tag-accent2-bold-backgroundColor: #b5b5eb;
   --gse-ui-tag-accent2-bold-foregroundColor: #2e394c;
   --gse-ui-tag-accent2-subtle-backgroundColor: #e9e8f9;
   --gse-ui-tag-accent2-subtle-foregroundColor: #2e394c;
-  --gse-ui-tag-accent3-backgroundColor: #0c6d7e; /* To be deprecated in V5 */
-  --gse-ui-tag-accent3-foregroundColor: #ffffff; /* To be deprecated in V5 */
+  --gse-ui-tag-accent3-backgroundColor: #0c6d7e;
+  --gse-ui-tag-accent3-foregroundColor: #ffffff;
   --gse-ui-tag-accent3-bold-backgroundColor: #205a10;
   --gse-ui-tag-accent3-bold-foregroundColor: #ffffff;
   --gse-ui-tag-accent3-subtle-backgroundColor: #c2deb9;
   --gse-ui-tag-accent3-subtle-foregroundColor: #2e394c;
-  --gse-ui-tag-accent4-backgroundColor: #547688; /* To be deprecated in V5 */
-  --gse-ui-tag-accent4-foregroundColor: #ffffff; /* To be deprecated in V5 */
+  --gse-ui-tag-accent4-backgroundColor: #547688;
+  --gse-ui-tag-accent4-foregroundColor: #ffffff;
   --gse-ui-tag-accent4-bold-backgroundColor: #151d28;
   --gse-ui-tag-accent4-bold-foregroundColor: #ffffff;
   --gse-ui-tag-accent4-subtle-backgroundColor: #c8cfda;
   --gse-ui-tag-accent4-subtle-foregroundColor: #2e394c;
-  --gse-ui-tag-accent5-backgroundColor: #a5cae0; /* To be deprecated in V5 */
-  --gse-ui-tag-accent5-foregroundColor: #1b2c48; /* To be deprecated in V5 */
+  --gse-ui-tag-accent5-backgroundColor: #a5cae0;
+  --gse-ui-tag-accent5-foregroundColor: #1b2c48;
   --gse-ui-tag-accent5-bold-backgroundColor: #75a8ff;
   --gse-ui-tag-accent5-bold-foregroundColor: #2e394c;
   --gse-ui-tag-accent5-subtle-backgroundColor: #d9e4ff;
   --gse-ui-tag-accent5-subtle-foregroundColor: #2e394c;
-  --gse-ui-tag-accent6-backgroundColor: #b5bfe6; /* To be deprecated in V5 */
-  --gse-ui-tag-accent6-foregroundColor: #1b2c48; /* To be deprecated in V5 */
+  --gse-ui-tag-accent6-backgroundColor: #b5bfe6;
+  --gse-ui-tag-accent6-foregroundColor: #1b2c48;
   --gse-ui-tag-accent6-subtle-backgroundColor: #dcc9f2;
   --gse-ui-tag-accent6-subtle-foregroundColor: #2e394c;
   --gse-ui-tag-accent6-bold-backgroundColor: #8452cf;
@@ -181,27 +181,27 @@
   --gse-ui-tag-padding: 0 12px;
   --gse-ui-tag-removable-padding: 0 8px 0 12px;
   --gse-ui-tag-removable-gap: 4px;
-  --gse-ui-tag-accent7-backgroundColor: #a05195; /* To be deprecated in V5 */
-  --gse-ui-tag-accent7-foregroundColor: #ffffff; /* To be deprecated in V5 */
+  --gse-ui-tag-accent7-backgroundColor: #a05195;
+  --gse-ui-tag-accent7-foregroundColor: #ffffff;
   --gse-ui-tag-accent7-bold-backgroundColor: #5e5782;
   --gse-ui-tag-accent7-bold-foregroundColor: #ffffff;
   --gse-ui-tag-accent7-subtle-backgroundColor: #cdc9d8;
   --gse-ui-tag-accent7-subtle-foregroundColor: #2e394c;
   --gse-ui-tag-height: 20px;
-  --gse-ui-tag-accent8-backgroundColor: #f95d6a; /* To be deprecated in V5 */
-  --gse-ui-tag-accent8-foregroundColor: #1b2c48; /* To be deprecated in V5 */
+  --gse-ui-tag-accent8-backgroundColor: #f95d6a;
+  --gse-ui-tag-accent8-foregroundColor: #1b2c48;
   --gse-ui-tag-accent8-bold-backgroundColor: #ff8fdd;
   --gse-ui-tag-accent8-bold-foregroundColor: #2e394c;
   --gse-ui-tag-accent8-subtle-backgroundColor: #ffdff5;
   --gse-ui-tag-accent8-subtle-foregroundColor: #2e394c;
-  --gse-ui-tag-accent9-backgroundColor: #fe8f85; /* To be deprecated in V5 */
-  --gse-ui-tag-accent9-foregroundColor: #1b2c48; /* To be deprecated in V5 */
+  --gse-ui-tag-accent9-backgroundColor: #fe8f85;
+  --gse-ui-tag-accent9-foregroundColor: #1b2c48;
   --gse-ui-tag-accent9-bold-backgroundColor: #755000;
   --gse-ui-tag-accent9-bold-foregroundColor: #ffffff;
   --gse-ui-tag-accent9-subtle-backgroundColor: #fcd276;
   --gse-ui-tag-accent9-subtle-foregroundColor: #2e394c;
-  --gse-ui-tag-accent10-backgroundColor: #ffc650; /* To be deprecated in V5 */
-  --gse-ui-tag-accent10-foregroundColor: #1b2c48; /* To be deprecated in V5 */
+  --gse-ui-tag-accent10-backgroundColor: #ffc650;
+  --gse-ui-tag-accent10-foregroundColor: #1b2c48;
   --gse-ui-tag-accent10-bold-backgroundColor: #ddd933;
   --gse-ui-tag-accent10-bold-foregroundColor: #2e394c;
   --gse-ui-tag-accent10-subtle-backgroundColor: #f8f3c6;
@@ -316,25 +316,25 @@
   --gse-ui-segmentedControl-divider-style: solid;
   --gse-ui-segmentedControl-iconOnly-padding: 0 8px;
   --gse-ui-segmentedControl-focus-offset: 0;
-  --gse-ui-formFooter-page-desktop-bottomPadding: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-page-desktop-topPadding: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-page-desktop-horizontalPadding: 32px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-page-desktop-gap: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-page-mobile-bottomPadding: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-page-mobile-topPadding: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-page-mobile-horizontalPadding: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-page-mobile-gap: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-separator-color: #b4bccb; /* This is the recommended style for the form fotter separator/divider. */
-  --gse-ui-formFooter-separator-width: 1px; /* This is the recommended style for the form fotter separator/divider. */
-  --gse-ui-formFooter-separator-style: solid; /* This is the recommended style for the form fotter separator/divider. */
-  --gse-ui-formFooter-sideSheet-desktop-bottomPadding: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-sideSheet-desktop-topPadding: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-sideSheet-desktop-horizontalPadding: 24px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-sideSheet-desktop-gap: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-modal-desktop-bottomPadding: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-modal-desktop-topPadding: 16px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-modal-desktop-horizontalPadding: 32px; /* The recommended vertical padding for the form footer content. */
-  --gse-ui-formFooter-modal-desktop-gap: 16px; /* The recommended vertical padding for the form footer content. */
+  --gse-ui-formFooter-page-desktop-bottomPadding: 16px;
+  --gse-ui-formFooter-page-desktop-topPadding: 16px;
+  --gse-ui-formFooter-page-desktop-horizontalPadding: 32px;
+  --gse-ui-formFooter-page-desktop-gap: 16px;
+  --gse-ui-formFooter-page-mobile-bottomPadding: 16px;
+  --gse-ui-formFooter-page-mobile-topPadding: 16px;
+  --gse-ui-formFooter-page-mobile-horizontalPadding: 16px;
+  --gse-ui-formFooter-page-mobile-gap: 16px;
+  --gse-ui-formFooter-separator-color: #b4bccb;
+  --gse-ui-formFooter-separator-width: 1px;
+  --gse-ui-formFooter-separator-style: solid;
+  --gse-ui-formFooter-sideSheet-desktop-bottomPadding: 16px;
+  --gse-ui-formFooter-sideSheet-desktop-topPadding: 16px;
+  --gse-ui-formFooter-sideSheet-desktop-horizontalPadding: 24px;
+  --gse-ui-formFooter-sideSheet-desktop-gap: 16px;
+  --gse-ui-formFooter-modal-desktop-bottomPadding: 16px;
+  --gse-ui-formFooter-modal-desktop-topPadding: 16px;
+  --gse-ui-formFooter-modal-desktop-horizontalPadding: 32px;
+  --gse-ui-formFooter-modal-desktop-gap: 16px;
   --gse-ui-formFooter-backgroundColor: #ffffff;
   --gse-ui-formFooter-border-color: #2a60c8;
   --gse-ui-formFooter-border-width: 1px;
@@ -561,7 +561,7 @@
   --gse-ui-menu-padding: 8px 1px;
   --gse-ui-menu-backgroundColor: #ffffff;
   --gse-ui-menu-scrollbar-foregroundColor: #3e4a5b;
-  --gse-ui-menu-divider-backgroundColor: #b4bccb; /* Color for the divider that separates the day picker and the time picker inside the calendar menu. */
+  --gse-ui-menu-divider-backgroundColor: #b4bccb;
   --gse-ui-menu-divider-margin: 4px 0 8px 0;
   --gse-ui-menu-divider-height: 1px;
   --gse-ui-menu-groupedMenu-title-padding: 8px 12px 4px;
@@ -1114,7 +1114,7 @@
   --gse-ui-globalNav-topBar-height: 64px;
   --gse-ui-globalNav-topBar-frame-backgroundColor: #ffffff;
   --gse-ui-globalNav-topBar-frame-stroke: #c6ceec;
-  --gse-ui-globalNav-topBar-logo: #ff4f1f; /* Brand Orange from Spark 1.0 */
+  --gse-ui-globalNav-topBar-logo: #ff4f1f;
   --gse-ui-globalNav-topBar-menuButton-closed-default-foregroundColor: #4856cb;
   --gse-ui-globalNav-topBar-menuButton-closed-hover-backgroundColor: #3742a2;
   --gse-ui-globalNav-topBar-menuButton-closed-hover-foregroundColorStroke: #4856cb;
@@ -1303,8 +1303,8 @@
   --gse-ui-popover-anchor-height: 8px;
   --gse-ui-progressAndLoading-spinner-foreground: #2a60c8;
   --gse-ui-progressAndLoading-spinner-base: #deeaff;
-  --gse-ui-progressAndLoading-spinner-large: 48px; /* keeping hard code as it cant have "px" */
-  --gse-ui-progressAndLoading-spinner-small: 16px; /* keeping hard code as it cant have "px" */
+  --gse-ui-progressAndLoading-spinner-large: 48px;
+  --gse-ui-progressAndLoading-spinner-small: 16px;
   --gse-ui-progressAndLoading-spinner-text-fontFamily: Roboto;
   --gse-ui-progressAndLoading-spinner-text-fontWeight: 600;
   --gse-ui-progressAndLoading-spinner-text-fontSize: 12px;
@@ -1360,9 +1360,9 @@
   --gse-ui-progressAndLoading-blankState-small-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-blankState-small-subheader-fontSize: 12px;
   --gse-ui-progressAndLoading-blankState-small-subheader-lineHeight: 18px;
-  --gse-ui-progressAndLoading-largeBorder: 4px; /* Remove px because of SVG issues from COMUI-2226 */
-  --gse-ui-progressAndLoading-smallBorder: 2px; /* Remove px because of SVG issues from COMUI-2226 */
-  --gse-ui-progressAndLoading-thinBorder: 1px; /* Remove px because of SVG issues from COMUI-2226 */
+  --gse-ui-progressAndLoading-largeBorder: 4px;
+  --gse-ui-progressAndLoading-smallBorder: 2px;
+  --gse-ui-progressAndLoading-thinBorder: 1px;
   --gse-ui-blankState-small-width: 250px;
   --gse-ui-blankState-small-maxWidth: 569px;
   --gse-ui-blankState-large-minWidth: 570px;
