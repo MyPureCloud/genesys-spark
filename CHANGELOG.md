@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.80.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.79.0...v4.80.0) (2024-09-04)
+
+
+### Features
+
+* **avatar:** Add uc app screenreader text to avatar ([#572](https://github.com/MyPureCloud/genesys-spark/issues/572)) ([2ed041d](https://github.com/MyPureCloud/genesys-spark/commit/2ed041d7bfed059caacc82921e662151603cf946))
+
+
+### Bug Fixes
+
+* **phone-input:** added fallbacks for international toll-free placeholder numbers ([#581](https://github.com/MyPureCloud/genesys-spark/issues/581)) ([da3f831](https://github.com/MyPureCloud/genesys-spark/commit/da3f8312cdfba06e857deb9fca8aa734a6cb4702))
+
 ## [4.79.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.78.1...v4.79.0) (2024-08-30)
 
 
