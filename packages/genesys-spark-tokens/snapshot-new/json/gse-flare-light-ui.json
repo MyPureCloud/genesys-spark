@@ -5,7 +5,7 @@
   "form_control": {
     "input": {
       "content_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -60,7 +60,7 @@
       "padding": "8px 12px",
       "prefix_sufix": {
         "text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "700",
           "fontSize": "14px",
           "lineHeight": "20px"
@@ -103,13 +103,13 @@
     "label": {
       "padding": "0 0 8px 0",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
       },
       "text_bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -117,7 +117,7 @@
       "label_color": "#1b2c48",
       "indicator": {
         "text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "400",
           "fontSize": "12px",
           "lineHeight": "18px"
@@ -140,7 +140,7 @@
     "helper": {
       "gap": "4px",
       "helper_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -189,7 +189,7 @@
       "box_shadow": {
         "blur": "6px",
         "spread": "1px",
-        "color": "rgba(35,57,92,0.12)",
+        "color": "rgba(35, 57, 92, 0.12)",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
@@ -198,7 +198,7 @@
     "padding": "24px",
     "borderless": {
       "border": {
-        "color": "transparent",
+        "color": "rgba(0, 0, 0, 0)",
         "width": "1px",
         "style": "solid"
       }
@@ -227,7 +227,7 @@
     "box_shadow": {
       "blur": "6px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.12)",
+      "color": "rgba(35, 57, 92, 0.12)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -237,7 +237,7 @@
     "gap": "8px",
     "border_radius": "4px",
     "text": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "fontWeight": "400",
       "fontSize": "12px",
       "lineHeight": "18px"
@@ -330,7 +330,7 @@
       }
     },
     "text": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "fontWeight": "600",
       "fontSize": "14px",
       "lineHeight": "20px"
@@ -399,7 +399,7 @@
   "badge": {
     "border_radius": "16px",
     "text": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "fontWeight": "600",
       "fontSize": "12px",
       "lineHeight": "18px"
@@ -504,13 +504,13 @@
       }
     },
     "text": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "fontWeight": "400",
       "fontSize": "12px",
       "lineHeight": "18px"
     },
     "emphasis_text": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "fontWeight": "700",
       "fontSize": "12px",
       "lineHeight": "18px"
@@ -542,7 +542,7 @@
       "separator": {
         "padding": "0 12px",
         "typography": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "700",
           "fontSize": "14px",
           "lineHeight": "20px"
@@ -554,7 +554,7 @@
       "separator": {
         "padding": "0 8px",
         "typography": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "700",
           "fontSize": "14px",
           "lineHeight": "20px"
@@ -564,7 +564,7 @@
     "separator": {
       "color": "#c6c8ce"
     },
-    "border_radius": "0rem"
+    "border_radius": "0"
   },
   "segmented_control": {
     "button": {
@@ -574,18 +574,18 @@
         "border_radius": "4px 0 0 4px"
       },
       "middle": {
-        "border_radius": "0rem"
+        "border_radius": "0"
       },
       "end": {
         "border_radius": "0 4px 4px 0"
       },
       "disabled": {
         "opacity": ".5",
-        "background_color": "#000000",
+        "background_color": "rgba(0, 0, 0, 0)",
         "foreground_color": "#4856cb"
       },
       "default": {
-        "background_color": "#000000",
+        "background_color": "rgba(0, 0, 0, 0)",
         "foreground_color": "#4856cb"
       },
       "hover": {
@@ -613,7 +613,7 @@
       "padding": "0 8px"
     },
     "focus": {
-      "offset": "0rem"
+      "offset": "0"
     }
   },
   "form_footer": {
@@ -668,7 +668,7 @@
       "padding": "2px 4px",
       "border_radius": "4px",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "14px",
         "lineHeight": "20px",
@@ -742,7 +742,7 @@
     },
     "tertiary": {
       "default": {
-        "background_color": "#000000",
+        "background_color": "rgba(0, 0, 0, 0)",
         "foreground_color": "#4856cb",
         "border": {
           "color": "#4856cb",
@@ -761,7 +761,7 @@
     },
     "ghost": {
       "default": {
-        "background_color": "#000000",
+        "background_color": "rgba(0, 0, 0, 0)",
         "foreground_color": "#4856cb"
       },
       "hover": {
@@ -792,7 +792,7 @@
       "opacity": ".5"
     },
     "text": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "fontWeight": "700",
       "fontSize": "12px",
       "lineHeight": "18px"
@@ -851,13 +851,13 @@
       "padding": "12px",
       "gap": "8px",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "14px",
         "lineHeight": "20px"
       },
       "underlined_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "14px",
         "lineHeight": "20px",
@@ -868,13 +868,13 @@
       "medium": {
         "height": "24px",
         "text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
           "fontSize": "14px",
           "lineHeight": "20px"
         },
         "underlined_text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
           "fontSize": "14px",
           "lineHeight": "20px",
@@ -884,13 +884,13 @@
       "small": {
         "height": "20px",
         "text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
           "fontSize": "12px",
           "lineHeight": "18px"
         },
         "underlined_text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
           "fontSize": "12px",
           "lineHeight": "18px",
@@ -915,7 +915,7 @@
     "visited": {
       "foregroundColor": "#8a5ecc"
     },
-    "border_radius": "0rem"
+    "border_radius": "0"
   },
   "radio_button": {
     "icon": {
@@ -938,7 +938,7 @@
     "label": {
       "foreground_color": "#1b2c48",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -983,7 +983,7 @@
     "label": {
       "foreground_color": "#1b2c48",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -1023,7 +1023,7 @@
       "label": {
         "default": {
           "text": {
-            "fontFamily": "Noto Sans",
+            "fontFamily": "'Noto Sans'",
             "fontWeight": "400",
             "fontSize": "12px",
             "lineHeight": "18px"
@@ -1031,7 +1031,7 @@
         },
         "active": {
           "text": {
-            "fontFamily": "Noto Sans",
+            "fontFamily": "'Noto Sans'",
             "fontWeight": "700",
             "fontSize": "12px",
             "lineHeight": "18px"
@@ -1041,7 +1041,7 @@
       },
       "shortcut": {
         "text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "400",
           "fontSize": "14px",
           "lineHeight": "20px"
@@ -1120,7 +1120,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.1)",
+      "color": "rgba(35, 57, 92, 0.1)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -1195,7 +1195,7 @@
         "width": "160px"
       },
       "header_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "700",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -1222,7 +1222,7 @@
         "height": "48px"
       },
       "header_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "16px",
         "lineHeight": "24px"
@@ -1234,13 +1234,13 @@
         }
       },
       "default_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
       },
       "current_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "700",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -1275,13 +1275,13 @@
     "background_color": "#ffffff",
     "date": {
       "default_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
       },
       "current_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "700",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -1345,7 +1345,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.1)",
+      "color": "rgba(35, 57, 92, 0.1)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -1373,7 +1373,7 @@
   },
   "toggle": {
     "label": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "fontWeight": "400",
       "fontSize": "12px",
       "lineHeight": "18px"
@@ -1473,7 +1473,7 @@
       "default_color": "#3e5374",
       "hover_color": "#23395d",
       "active_color": "#1b2c48",
-      "disabled_color": "#3e5374"
+      "disabled_color": "#3e537480"
     },
     "focus_clock": {
       "border": {
@@ -1508,7 +1508,7 @@
       "required_symbol_color": "#e22245",
       "text_color": "#1b2c48",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -1553,7 +1553,7 @@
     },
     "label": {
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "14px",
         "lineHeight": "20px"
@@ -1641,7 +1641,7 @@
       "default_color": "#3e5374",
       "hover_color": "#23395d",
       "active_color": "#1b2c48",
-      "disabled_color": "#3e5374",
+      "disabled_color": "#3e537480",
       "focus": {
         "border": {
           "color": "#7b88f7",
@@ -1728,7 +1728,7 @@
         "lineHeight": "24px"
       },
       "description": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -1781,7 +1781,7 @@
         "foreground_color": "#a3a7b0"
       },
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -1810,7 +1810,7 @@
   "data_table_items": {
     "header": {
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "700",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -1906,7 +1906,7 @@
         "foreground_color": "#1b2c48"
       },
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -1960,13 +1960,13 @@
         "style": "solid"
       },
       "default_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
       },
       "current_result_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "700",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -1980,7 +1980,7 @@
   },
   "avatar": {
     "group_shapes": {
-      "gap": "4px * -1"
+      "gap": "-4px"
     },
     "large": {
       "size": "96px",
@@ -2140,7 +2140,7 @@
       }
     },
     "hover_modal": {
-      "shroud-color": "#3e5374",
+      "shroud-color": "#3e5374cc",
       "foreground-color": "#ffffff",
       "opacity": ".8"
     },
@@ -2162,7 +2162,7 @@
       }
     },
     "group_set": {
-      "gap": "2px * -1"
+      "gap": "-2px"
     },
     "focus_ring": {
       "large": {
@@ -2349,7 +2349,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.1)",
+      "color": "rgba(35, 57, 92, 0.1)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2370,7 +2370,7 @@
       },
       "disable_opacity": ".5",
       "item_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -2498,7 +2498,7 @@
         }
       },
       "item_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -2553,7 +2553,7 @@
       "lineHeight": "24px"
     },
     "text": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "fontWeight": "400",
       "fontSize": "14px",
       "lineHeight": "20px"
@@ -2569,7 +2569,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.1)",
+      "color": "rgba(35, 57, 92, 0.1)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2584,7 +2584,7 @@
     "close_button_color": "#3e5374",
     "header_color": "#1b2c48",
     "background_color": "#ffffff",
-    "shroud_color": "#3e5374",
+    "shroud_color": "#3e5374cc",
     "header": {
       "gap": "12px"
     },
@@ -2612,7 +2612,7 @@
     "box_shadow": {
       "blur": "8px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.15)",
+      "color": "rgba(35, 57, 92, 0.15)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2631,7 +2631,7 @@
     "box_shadow": {
       "blur": "8px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.15)",
+      "color": "rgba(35, 57, 92, 0.15)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2652,7 +2652,7 @@
     },
     "body": {
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "14px",
         "lineHeight": "20px"
@@ -2675,10 +2675,10 @@
     "spinner": {
       "foreground": "#4856cb",
       "base": "#dee1fd",
-      "large": "48rem",
-      "small": "16rem",
+      "large": "48px",
+      "small": "16px",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "600",
         "fontSize": "12px",
         "lineHeight": "18px"
@@ -2694,7 +2694,7 @@
           "lineHeight": "32px"
         },
         "subheader": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
           "fontSize": "16px",
           "lineHeight": "24px"
@@ -2709,7 +2709,7 @@
           "lineHeight": "27px"
         },
         "subheader": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
           "fontSize": "14px",
           "lineHeight": "20px"
@@ -2724,7 +2724,7 @@
           "lineHeight": "24px"
         },
         "subheader": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
           "fontSize": "12px",
           "lineHeight": "18px"
@@ -2756,7 +2756,7 @@
           "lineHeight": "27px"
         },
         "subheader": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
           "fontSize": "14px",
           "lineHeight": "20px"
@@ -2770,16 +2770,16 @@
           "lineHeight": "24px"
         },
         "subheader": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
           "fontSize": "12px",
           "lineHeight": "18px"
         }
       }
     },
-    "large_border": "4rem",
-    "small_border": "2rem",
-    "thin_border": "1rem"
+    "large_border": "4px",
+    "small_border": "2px",
+    "thin_border": "1px"
   },
   "blank_state": {
     "small": {
@@ -2801,7 +2801,7 @@
     "gap_content": "24px",
     "icon_color": "#626e84",
     "foreground_color": "#1b2c48",
-    "background_color": "#000000",
+    "background_color": "rgba(0, 0, 0, 0)",
     "border_radius": "8px"
   },
   "modal_side_sheet": {
@@ -2809,7 +2809,7 @@
     "header_color": "#1b2c48",
     "close_color": "#3e5374",
     "divider_color": "#c6c8ce",
-    "shroud_color": "#3e5374",
+    "shroud_color": "#3e5374cc",
     "shroud": {
       "opacity": ".8"
     },
@@ -2821,7 +2821,7 @@
       "lineHeight": "27px"
     },
     "description": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "fontWeight": "400",
       "fontSize": "12px",
       "lineHeight": "18px"
@@ -2855,7 +2855,7 @@
     "box_shadow": {
       "blur": "6px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.12)",
+      "color": "rgba(35, 57, 92, 0.12)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2868,7 +2868,7 @@
       "lineHeight": "27px"
     },
     "description": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "fontWeight": "400",
       "fontSize": "12px",
       "lineHeight": "18px"
@@ -2911,7 +2911,7 @@
       },
       "label": {
         "default_text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "700",
           "fontSize": "14px",
           "lineHeight": "20px"
@@ -2958,13 +2958,13 @@
       },
       "label": {
         "default_text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "400",
           "fontSize": "12px",
           "lineHeight": "18px"
         },
         "selected_text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
           "fontSize": "12px",
           "lineHeight": "18px"
@@ -2972,7 +2972,7 @@
       },
       "shortcut": {
         "text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": "400",
           "fontSize": "14px",
           "lineHeight": "20px"
@@ -2990,7 +2990,7 @@
       "foreground_color": "#1b2c48",
       "background_color": "#ffffff",
       "default_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
