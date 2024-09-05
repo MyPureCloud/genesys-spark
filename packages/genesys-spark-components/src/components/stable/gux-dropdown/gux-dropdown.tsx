@@ -567,7 +567,7 @@ export class GuxDropdown {
     return (
       <gux-popup
         expanded={this.expanded && (!this.loading || this.isFilterable())}
-        disabled={this.disabled}
+        disabled={this.disabled || (this.loading && !this.isFilterable())}
         exceedTargetWidth={this.exceedTargetWidth}
       >
         {this.renderTarget()}
