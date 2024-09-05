@@ -20,7 +20,7 @@
 @prop --gse-ui-radioButton-focus-borderRadius
 @prop --gse-ui-radioButton-focus-offset
 */
-@use './gux-form-field-radio-icons.scss';
+@use '~genesys-spark/dist/scss/radio-icons.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
 
@@ -43,11 +43,15 @@
 
 :host(.gux-input-error) {
   input[type='radio']:checked::before {
-    @include gux-form-field-radio-icons.checked-error;
+    @include radio-icons.checked-error;
+
+    background: var(--gse-ui-radioButton-icon-error-foregroundColor);
   }
 
   ::slotted(input[type='radio']:not(:checked))::before {
-    @include gux-form-field-radio-icons.unchecked-error;
+    @include radio-icons.unchecked-error;
+
+    background: var(--gse-ui-radioButton-icon-error-foregroundColor);
   }
 
   .gux-form-field-error {
@@ -102,19 +106,27 @@
 }
 
 ::slotted(input[type='radio']:not(:checked))::before {
-  @include gux-form-field-radio-icons.unchecked;
+  @include radio-icons.unchecked;
+
+  background: var(--gse-ui-radioButton-icon-default-unselectedForegroundColor);
 }
 
 ::slotted(input[type='radio']:not(:checked):not(:disabled):hover)::before {
-  @include gux-form-field-radio-icons.unchecked-hover;
+  @include radio-icons.unchecked-hover;
+
+  background: var(--gse-ui-radioButton-icon-hover-foregroundColor);
 }
 
 ::slotted(input[type='radio']:checked:not(:disabled):hover)::before {
-  @include gux-form-field-radio-icons.checked-hover;
+  @include radio-icons.checked-hover;
+
+  background: var(--gse-ui-radioButton-icon-hover-foregroundColor);
 }
 
 ::slotted(input[type='radio']:checked)::before {
-  @include gux-form-field-radio-icons.checked;
+  @include radio-icons.checked;
+
+  background: var(--gse-ui-radioButton-icon-default-selectedForegroundColor);
 }
 
 ::slotted(input[type='radio']:disabled)::before {

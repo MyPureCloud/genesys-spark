@@ -1,18 +1,7 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
-
-$gux-icon-radio-unchecked: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40937 1.5 1.5 4.40937 1.5 8C1.5 11.5906 4.40937 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40937 11.5906 1.5 8 1.5Z' fill-rule='evenodd' clip-rule='evenodd' /%3E%3C/svg%3E";
-$gux-icon-radio-checked: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8C5 6.31563 6.31563 5 8 5C9.65625 5 11 6.31563 11 8C11 9.65625 9.65625 11 8 11C6.31563 11 5 9.65625 5 8ZM16 8C16 12.4187 12.4187 16 8 16C3.58125 16 0 12.4187 0 8C0 3.58125 3.58125 0 8 0C12.4187 0 16 3.58125 16 8ZM8 1.5C4.40938 1.5 1.5 4.40938 1.5 8C1.5 11.5906 4.40938 14.5 8 14.5C11.5906 14.5 14.5 11.5906 14.5 8C14.5 4.40938 11.5906 1.5 8 1.5Z' /%3E%3C/svg%3E";
-
-@mixin unchecked {
-  -webkit-mask-image: url($gux-icon-radio-unchecked);
-  mask-image: url($gux-icon-radio-unchecked);
-}
-
-@mixin checked {
-  -webkit-mask-image: url($gux-icon-radio-checked);
-  mask-image: url($gux-icon-radio-checked);
-}
+@use '~genesys-spark/dist/scss/checkbox-icons.scss';
+@use '~genesys-spark/dist/scss/radio-icons.scss';
 
 ::slotted(*) {
   cursor: pointer;
@@ -33,7 +22,8 @@ $gux-icon-radio-checked: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='h
   color: var(--gse-ui-selectorCard-text-foregroundColor);
 }
 
-::slotted(input[type='radio']) {
+::slotted(input[type='radio']),
+::slotted(input[type='checkbox']) {
   position: absolute;
   top: 0;
   width: 100%;
@@ -60,53 +50,59 @@ $gux-icon-radio-checked: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='h
     text-align: center;
     vertical-align: middle;
     content: '';
-    border-radius: 50%;
   }
 }
 
-::slotted(input[type='radio']:checked) {
+::slotted(input[type='radio'])::before {
+  border-radius: 50%;
+}
+
+::slotted(input[type='radio']:checked),
+::slotted(input[type='checkbox']:checked) {
   border: var(--gse-ui-selectorCard-selected-border-width)
     var(--gse-ui-selectorCard-selected-border-style)
     var(--gse-ui-selectorCard-selected-border-color);
+
+  &::before {
+    background-color: var(
+      --gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor
+    );
+  }
 }
 
-::slotted(input[type='radio']:not(:checked))::before {
+::slotted(input[type='radio']:not(:checked))::before,
+::slotted(input[type='checkbox']:not(:checked))::before {
   background-color: var(
     --gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor
   );
+}
 
-  @include unchecked;
+::slotted(input[type='radio']:disabled),
+::slotted(input[type='checkbox']:disabled) {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: var(--gse-ui-radioButton-disabled-opacity);
+}
+
+::slotted(input[type='radio'])::before {
+  @include radio-icons.unchecked;
 }
 
 ::slotted(input[type='radio']:checked)::before {
-  background-color: var(
-    --gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor
-  );
-
-  @include checked;
+  @include radio-icons.checked;
 }
 
-::slotted(input[type='radio']:disabled)::before {
-  cursor: not-allowed;
-  background-color: var(
-    --gse-ui-selectorCard-disabled-selectedIndicator-unselected-foregroundColor
-  );
-  opacity: var(--gse-ui-radioButton-disabled-opacity);
-
-  @include unchecked;
+::slotted(input[type='checkbox'])::before {
+  @include checkbox-icons.unchecked;
 }
 
-::slotted(input[type='radio']:disabled:checked)::before {
-  cursor: not-allowed;
-  background-color: var(
-    --gse-ui-selectorCard-disabled-selectedIndicator-selected-foregroundColor
-  );
-  opacity: var(--gse-ui-radioButton-disabled-opacity);
-
-  @include checked;
+::slotted(input[type='checkbox']:checked)::before {
+  @include checkbox-icons.checked;
 }
 
 .gux-selector-card {
+  width: fit-content;
+
   .gux-content {
     position: relative;
     box-sizing: border-box;
@@ -125,8 +121,11 @@ $gux-icon-radio-checked: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='h
     background-color: var(--gse-ui-selectorCard-default-backgroundColor);
     border-radius: var(--gse-ui-selectorCard-simple-borderRadius);
 
-    gux-truncate {
-      z-index: calc(var(--gse-semantic-zIndex-showFocus));
+    .gux-label-container {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
     }
 
     .gux-icon {
@@ -135,51 +134,6 @@ $gux-icon-radio-checked: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='h
 
     &:focus-within {
       @include focus.gux-focus-ring;
-    }
-
-    &:hover {
-      cursor: pointer;
-      background-color: var(--gse-ui-selectorCard-hover-backgroundColor);
-
-      ::slotted(input[type='radio']:not(:checked):not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
-        );
-
-        @include unchecked;
-      }
-
-      ::slotted(input[type='radio']:checked:not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
-        );
-
-        @include checked;
-      }
-    }
-
-    &:active {
-      background-color: var(--gse-ui-selectorCard-active-backgroundColor);
-
-      ::slotted(input[type='radio']:not(:checked):not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
-        );
-
-        @include unchecked;
-      }
-
-      ::slotted(input[type='radio']:checked:not(:disabled))::before {
-        background-color: var(
-          --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
-        );
-
-        @include checked;
-      }
-    }
-
-    .gux-screenreader {
-      @include mixins.gux-sr-only;
     }
   }
 
@@ -193,34 +147,22 @@ $gux-icon-radio-checked: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='h
       max-height: var(--gse-ui-selectorCard-descriptive-maxHeight);
       padding: var(--gse-ui-selectorCard-descriptive-padding);
       text-align: start;
+      white-space: normal;
       border-radius: var(--gse-ui-selectorCard-descriptive-borderRadius);
 
-      .gux-description {
-        z-index: var(--gse-semantic-zIndex-showFocus);
-        margin-bottom: var(--gse-ui-selectorCard-descriptive-gap);
-        font-family: var(
-          --gse-ui-selectorCard-descriptive-description-fontFamily
-        );
-        font-size: var(--gse-ui-selectorCard-descriptive-description-fontSize);
-        font-weight: var(
-          --gse-ui-selectorCard-descriptive-description-fontWeight
-        );
-        line-height: var(
-          --gse-ui-selectorCard-descriptive-description-lineHeight
-        );
-      }
-
-      gux-truncate {
-        z-index: calc(
-          var(--gse-semantic-zIndex-showFocus) + 1
-        ); // Needs to be higher than description for tooltip
+      .gux-description-container {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
       }
 
       ::slotted(gux-badge) {
-        margin-top: var(-gse-ui-selectorCard-descriptive-badge-marginTop);
+        margin-top: var(--gse-ui-selectorCard-descriptive-badge-marginTop);
       }
 
-      ::slotted(input[type='radio']) {
+      ::slotted(input[type='radio']),
+      ::slotted(input[type='checkbox']) {
         left: 0;
         border-radius: var(--gse-ui-selectorCard-descriptive-borderRadius);
 
@@ -260,5 +202,36 @@ $gux-icon-radio-checked: "data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='h
       background-color: var(--gse-ui-selectorCard-disabled-backgroundColor);
       opacity: var(--gse-ui-selectorCard-disabled-opacity);
     }
+  }
+
+  &:hover:not(:disabled) {
+    .gux-content {
+      cursor: pointer;
+      background-color: var(--gse-ui-selectorCard-hover-backgroundColor);
+
+      ::slotted(input[type='radio'])::before,
+      ::slotted(input[type='checkbox'])::before {
+        background-color: var(
+          --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
+        );
+      }
+    }
+  }
+
+  &:active:not(:disabled) {
+    .gux-content {
+      background-color: var(--gse-ui-selectorCard-active-backgroundColor);
+
+      ::slotted(input[type='radio'])::before,
+      ::slotted(input[type='checkbox'])::before {
+        background-color: var(
+          --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
+        );
+      }
+    }
+  }
+
+  .gux-screenreader {
+    @include mixins.gux-sr-only;
   }
 }
