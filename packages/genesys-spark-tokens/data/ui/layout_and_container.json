@@ -10,7 +10,7 @@
         "type": "spacing"
       },
       "chevron_icon": {
-        "value": "{icon.size.sm}",
+        "value": "{icon.small.size}",
         "type": "sizing"
       },
       "gap": {
@@ -42,7 +42,7 @@
       "label": {
         "default_text": {
           "value": {
-            "fontFamily": "{font_family.body}",
+            "fontFamily": "{font_family.roboto}",
             "lineHeight": "{line_height.sm}",
             "fontSize": "{font_size.sm}",
             "fontWeight": "{font_weight.bold}"
@@ -67,11 +67,11 @@
         "type": "spacing"
       },
       "start_icon": {
-        "value": "{icon.size.sm}",
+        "value": "{icon.small.size}",
         "type": "sizing"
       },
       "parent_icon": {
-        "value": "{icon.size.sm}",
+        "value": "{icon.small.size}",
         "type": "sizing"
       },
       "gap": {
@@ -155,7 +155,7 @@
       "label": {
         "default_text": {
           "value": {
-            "fontFamily": "{font_family.body}",
+            "fontFamily": "{font_family.roboto}",
             "lineHeight": "{line_height.xs}",
             "fontSize": "{font_size.xs}",
             "fontWeight": "{font_weight.regular}"
@@ -164,10 +164,10 @@
         },
         "selected_text": {
           "value": {
-            "fontFamily": "{font_family.body}",
+            "fontFamily": "{font_family.roboto}",
             "lineHeight": "{line_height.xs}",
             "fontSize": "{font_size.xs}",
-            "fontWeight": "{font_weight.semi-bold}"
+            "fontWeight": "{font_weight.semi_bold}"
           },
           "type": "typography"
         }
@@ -175,7 +175,7 @@
       "shortcut": {
         "text": {
           "value": {
-            "fontFamily": "{font_family.body}",
+            "fontFamily": "{font_family.roboto}",
             "lineHeight": "{line_height.sm}",
             "fontSize": "{font_size.sm}",
             "fontWeight": "{font_weight.regular}"
@@ -211,7 +211,7 @@
       },
       "default_text": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{font_family.roboto}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"

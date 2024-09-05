@@ -23,10 +23,10 @@ export class GuxSideSheet {
   size: GuxSideSheetSize = 'small';
 
   @Event()
-  sidesheetdismiss: EventEmitter<void>;
+  sideSheetDismiss: EventEmitter<void>;
 
   private onDismissHandler(): void {
-    this.sidesheetdismiss.emit();
+    this.sideSheetDismiss.emit();
   }
 
   componentWillLoad(): void {
@@ -37,8 +37,8 @@ export class GuxSideSheet {
     return (
       <div class={`gux-side-sheet gux-side-sheet-${this.size}`}>
         <header>
-          <slot name="heading" />
           <gux-dismiss-button onClick={this.onDismissHandler.bind(this)} />
+          <slot name="heading" />
         </header>
         {hasSlot(this.root, 'description') && (
           <div class="gux-side-sheet-description">

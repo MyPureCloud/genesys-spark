@@ -6,14 +6,14 @@ h5,
 h6 {
   display: flex;
   flex: 0 0 auto;
-  gap: var(--gse-ui-dynamicSideSheet-header-interiorGap);
+  gap: var(--gse-ui-sideSheet-header-headingGap);
   align-items: center;
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: var(--gse-ui-dynamicSideSheet-heading-fontFamily);
-  font-size: var(--gse-ui-dynamicSideSheet-heading-fontSize);
-  font-weight: var(--gse-ui-dynamicSideSheet-heading-fontWeight);
+  font-family: var(--gse-ui-sideSheet-heading-fontFamily);
+  font-size: var(--gse-ui-sideSheet-heading-fontSize);
+  font-weight: var(--gse-ui-sideSheet-heading-fontWeight);
   line-height: 1;
-  color: var(--gse-ui-dynamicSideSheet-headerColor);
+  color: var(--gse-ui-sideSheet-headerColor);
 }

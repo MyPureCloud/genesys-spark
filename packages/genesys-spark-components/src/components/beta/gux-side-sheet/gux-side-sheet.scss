@@ -1,7 +1,13 @@
+@import url('mixins');
+
 :host {
   display: block;
   width: fit-content;
   height: 100%;
+}
+
+:host([size='large']) {
+  max-width: 50%;
 }
 
 .gux-side-sheet {
@@ -10,26 +16,43 @@
   flex-direction: column;
   height: inherit;
   background-color: white;
+  box-shadow: var(--gse-ui-dynamicSideSheet-boxShadow-x)
+    var(--gse-ui-dynamicSideSheet-boxShadow-y)
+    var(--gse-ui-dynamicSideSheet-boxShadow-blur)
+    var(--gse-ui-dynamicSideSheet-boxShadow-spread)
+    var(--gse-ui-dynamicSideSheet-boxShadow-color);
 
-  &.gux-side-sheet-small {
-    width: var(--gse-ui-dynamicSideSheet-widthSize-sm);
+  &.gux-side-sheet-small .gux-side-sheet-content {
+    max-width: calc(
+      var(--gse-ui-sideSheet-widthSize-sm) - var(
+          --gse-ui-sideSheet-header-paddingLeft
+        ) - var(--gse-ui-sideSheet-header-paddingRight)
+    );
   }
 
-  &.gux-side-sheet-medium {
-    width: var(--gse-ui-dynamicSideSheet-widthSize-md);
+  &.gux-side-sheet-medium .gux-side-sheet-content {
+    max-width: calc(
+      var(--gse-ui-sideSheet-widthSize-md) - var(
+          --gse-ui-sideSheet-header-paddingLeft
+        ) - var(--gse-ui-sideSheet-header-paddingRight)
+    );
   }
 
-  &.gux-side-sheet-large {
-    width: var(--gse-ui-dynamicSideSheet-widthSize-lg);
+  &.gux-side-sheet-large .gux-side-sheet-content {
+    max-width: calc(
+      var(--gse-ui-sideSheet-widthSize-lg) - var(
+          --gse-ui-sideSheet-header-paddingLeft
+        ) - var(--gse-ui-sideSheet-header-paddingRight)
+    );
   }
 
   & > header {
     position: relative;
-    padding: var(--gse-ui-dynamicSideSheet-header-paddingTop)
-      var(--gse-ui-dynamicSideSheet-header-paddingRight)
-      var(--gse-ui-dynamicSideSheet-header-gap)
-      var(--gse-ui-dynamicSideSheet-header-paddingLeft);
-    border-bottom: 1px solid var(--gse-ui-modalSideSheet-dividerColor);
+    padding: var(--gse-ui-sideSheet-header-paddingTop)
+      var(--gse-ui-sideSheet-header-paddingRight)
+      var(--gse-ui-sideSheet-header-gap)
+      var(--gse-ui-sideSheet-header-paddingLeft);
+    border-bottom: 1px solid var(--gse-ui-sideSheet-dividerColor);
 
     /* Take another look at this */
     & gux-dismiss-button {
@@ -41,32 +64,28 @@
 
   & .gux-side-sheet-content {
     flex: 1 1 100%;
-    padding: var(--gse-ui-modalSideSheet-gap);
+    padding: var(--gse-ui-sideSheet-gap);
     overflow-y: auto;
-    font-family: var(--gse-ui-dynamicSideSheet-description-fontFamily);
-    font-size: var(--gse-ui-dynamicSideSheet-description-fontSize);
-    font-weight: var(--gse-ui-dynamicSideSheet-description-fontWeight);
-    line-height: var(--gse-ui-dynamicSideSheet-description-lineHeight);
+    font-family: var(--gse-ui-sideSheet-description-fontFamily);
+    font-size: var(--gse-ui-sideSheet-description-fontSize);
+    font-weight: var(--gse-ui-sideSheet-description-fontWeight);
+    line-height: var(--gse-ui-sideSheet-description-lineHeight);
   }
 
   & > footer {
     flex: 0 0 auto;
-    padding: var(--gse-ui-dynamicSideSheet-footer-padding);
-    border-top: 1px solid var(--gse-ui-modalSideSheet-dividerColor);
+    padding: var(--gse-ui-sideSheet-footer-padding);
+    border-top: 1px solid var(--gse-ui-sideSheet-dividerColor);
   }
 }
 
 .gux-side-sheet-description {
   flex: 0 0 auto;
-  padding: var(--gse-ui-dynamicSideSheet-header-gap)
-    var(--gse-ui-modalSideSheet-gap) 0 var(--gse-ui-modalSideSheet-gap);
+  padding: var(--gse-ui-sideSheet-header-gap) var(--gse-ui-sideSheet-gap) 0
+    var(--gse-ui-sideSheet-gap);
 }
 
 /* Take another look at this */
 .gux-side-sheet-description ::slotted(*) {
-  margin: 0;
-  font-family: var(--gse-ui-dynamicSideSheet-description-fontFamily) !important;
-  font-size: var(--gse-ui-dynamicSideSheet-description-fontSize) !important;
-  font-weight: var(--gse-ui-dynamicSideSheet-description-fontWeight) !important;
-  line-height: var(--gse-ui-dynamicSideSheet-description-lineHeight) !important;
+  @include slotted-description;
 }

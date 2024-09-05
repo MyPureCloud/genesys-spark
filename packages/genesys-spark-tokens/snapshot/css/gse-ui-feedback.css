@@ -112,7 +112,8 @@
   --gse-ui-progressAndLoading-loadingState-medium-header-fontWeight: 700;
   --gse-ui-progressAndLoading-loadingState-medium-header-lineHeight: 27px;
   --gse-ui-progressAndLoading-loadingState-medium-header-fontSize: 18px;
-  --gse-ui-progressAndLoading-loadingState-medium-subheader-fontFamily: Noto Sans;
+  --gse-ui-progressAndLoading-loadingState-medium-subheader-fontFamily: Noto
+    Sans;
   --gse-ui-progressAndLoading-loadingState-medium-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-loadingState-medium-subheader-lineHeight: 20px;
   --gse-ui-progressAndLoading-loadingState-medium-subheader-fontSize: 14px;

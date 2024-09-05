@@ -1,77 +1,183 @@
-<div class="side-sheet-content">
-  <h1>Side Sheet</h1>
-</div>
+<div id="side-sheet-wrapper">
+  <div id="content">
+    <h1>Side Sheet</h1>
 
-<gux-side-sheet-beta size="medium">
-  <gux-side-sheet-heading-beta
-    slot="heading"
-    level="3"
-    icon="fa/diamond-regular"
-  >
-    Side sheet title
-  </gux-side-sheet-heading-beta>
-  <h2 slot="description">Pellentesque habitant morbi tristique sen</h2>
-  <div slot="content">
     <p>
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+      You can listen to the 'sideSheetDismiss' event on the
+      `gux-side-sheet-beta` element to know when the side sheet is to be
+      hidden/removed.
     </p>
-    <p>
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-    </p>
-    <p>
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-    </p>
-    <p>
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-    </p>
-    <p>
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-    </p>
-    <p>
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-    </p>
-  </div>
-  <div slot="footer">
+
     <gux-cta-group>
-      <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
-      <gux-button slot="secondary" onclick="notify(event)"
-        >Secondary</gux-button
+      <gux-button slot="secondary" id="toggle-small">Toggle small</gux-button>
+      <gux-button slot="secondary" id="toggle-medium">Toggle medium</gux-button>
+    </gux-cta-group>
+
+    <h2>Modal Side Sheet</h2>
+
+    <p>You can show/hide the `gux-modal-side-sheet` via two mechanisms:</p>
+    <ol>
+      <li>
+        Use the `showModal()` and `close()` methods on a `gux-modal-side-sheet`
+        element
+      </li>
+      <li>Set the `open` property or attribute on `gux-modal-side-sheet`</li>
+    </ol>
+
+    <gux-modal-side-sheet-beta id="modal-example">
+      <gux-side-sheet-heading-beta
+        slot="heading"
+        level="3"
+        icon="fa/diamond-regular"
       >
-      <gux-button slot="dismiss" onclick="notify(event)">Dismiss</gux-button>
+        Side sheet title
+      </gux-side-sheet-heading-beta>
+      <h2 slot="description">Pellentesque habitant morbi tristique sen</h2>
+      <div slot="content">
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+        leo.
+      </div>
+      <div slot="footer">
+        <gux-cta-group>
+          <gux-button slot="primary">Primary</gux-button>
+          <gux-button slot="secondary">Secondary</gux-button>
+          <gux-button
+            slot="dismiss"
+            onclick="document.getElementById('modal-example').close()"
+            >Dismiss</gux-button
+          >
+        </gux-cta-group>
+      </div>
+    </gux-modal-side-sheet-beta>
+
+    <gux-cta-group>
+      <gux-button slot="secondary" id="modal-small">Show small</gux-button>
+      <gux-button slot="secondary" id="modal-medium">Show medium</gux-button>
+      <gux-button slot="secondary" id="modal-large">Show large</gux-button>
     </gux-cta-group>
   </div>
-</gux-side-sheet-beta>
 
-<style>
-  .preview.gux-light-theme {
-    display: flex;
+  <gux-side-sheet-beta size="medium" id="dynamic-example">
+    <gux-side-sheet-heading-beta
+      slot="heading"
+      level="3"
+      icon="fa/diamond-regular"
+    >
+      Side sheet title
+    </gux-side-sheet-heading-beta>
+    <h2 slot="description">Pellentesque habitant morbi tristique sen</h2>
+    <div slot="content">
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+        leo.
+      </p>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+        leo.
+      </p>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+        leo.
+      </p>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+        leo.
+      </p>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+        leo.
+      </p>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+        leo.
+      </p>
+    </div>
+    <div slot="footer">
+      <gux-cta-group>
+        <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+        <gux-button slot="secondary" onclick="notify(event)"
+          >Secondary</gux-button
+        >
+        <gux-button
+          slot="dismiss"
+          onclick="document.getElementById('dynamic-example').style.display = 'none'"
+          >Dismiss</gux-button
+        >
+      </gux-cta-group>
+    </div>
+  </gux-side-sheet-beta>
+</div>
+
+<style
+  onload="(function () {
+  const modalSideSheet = document.getElementById('modal-example');
+  const dynamicSideSheet = document.getElementById('dynamic-example');
+  
+  document.getElementById('modal-small').addEventListener('click', function () {
+    modalSideSheet.setAttribute('size', 'small');
+    modalSideSheet.showModal();
+  });
+
+  document.getElementById('modal-medium').addEventListener('click', function () {
+    modalSideSheet.setAttribute('size', 'medium');
+    modalSideSheet.showModal();
+  });
+
+  document.getElementById('modal-large').addEventListener('click', function () {
+    modalSideSheet.setAttribute('size', 'large');
+    modalSideSheet.showModal();
+  });
+
+  document.getElementById('toggle-small').addEventListener('click', function () {
+    dynamicSideSheet.size = 'small';
+    dynamicSideSheet.style.display = 'block';
+  });
+
+  document.getElementById('toggle-medium').addEventListener('click', function () {
+    dynamicSideSheet.size = 'medium';
+    dynamicSideSheet.style.display = 'block';
+  });
+
+  dynamicSideSheet.addEventListener('sideSheetDismiss', event => {    dynamicSideSheet.style.display = dynamicSideSheet.style.display === 'none' ? 'block' : 'none';
+})
+})()"
+>
+  .preview {
     padding: 0 !important;
-    background-color: rgb(0 0 0 / 5%) !important;
   }
 
-  .side-sheet-content {
+  #side-sheet-wrapper {
+    display: flex;
+    height: 100%;
+  }
+
+  #content {
     flex: 1 1 auto;
+    padding: 27px 30px;
   }
 
   gux-side-sheet-beta {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
   }
 </style>

@@ -3,7 +3,7 @@
     "input": {
       "content_text": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{font_family.roboto}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
@@ -90,7 +90,7 @@
           "type": "color"
         },
         "size": {
-          "value": "{icon.size.sm}",
+          "value": "{icon.small.size}",
           "type": "sizing"
         }
       },
@@ -109,7 +109,7 @@
       "prefix_sufix": {
         "text": {
           "value": {
-            "fontFamily": "{font_family.body}",
+            "fontFamily": "{font_family.roboto}",
             "lineHeight": "{line_height.sm}",
             "fontSize": "{font_size.sm}",
             "fontWeight": "{font_weight.bold}"
@@ -143,7 +143,7 @@
       },
       "input_icon": {
         "size": {
-          "value": "{icon.size.sm}",
+          "value": "{icon.small.size}",
           "type": "sizing"
         },
         "default_color": {
@@ -179,7 +179,7 @@
       },
       "spinbutton_icon": {
         "size": {
-          "value": "{icon.size.sm}",
+          "value": "{icon.small.size}",
           "type": "sizing"
         }
       },
@@ -201,7 +201,7 @@
       },
       "text": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{font_family.roboto}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
@@ -210,10 +210,10 @@
       },
       "text_bold": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{font_family.roboto}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}",
-          "fontWeight": "{font_weight.semi-bold}"
+          "fontWeight": "{font_weight.semi_bold}"
         },
         "type": "typography"
       },
@@ -236,7 +236,7 @@
         }
       },
       "icon_size": {
-        "value": "{icon.size.sm}",
+        "value": "{icon.small.size}",
         "type": "sizing"
       },
       "tooltip_trigger": {
@@ -263,7 +263,7 @@
       },
       "helper_text": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{font_family.roboto}",
           "lineHeight": "{line_height.xs}",
           "fontSize": "{font_size.xs}",
           "fontWeight": "{font_weight.regular}"
@@ -297,7 +297,7 @@
         "type": "color"
       },
       "icon_size": {
-        "value": "{icon.size.sm}",
+        "value": "{icon.small.size}",
         "type": "sizing"
       }
     },
@@ -309,11 +309,11 @@
     },
     "spinner": {
       "track": {
-        "value": "{color.blueberry.600}",
+        "value": "{background.system.progress_and_loading.progressed}",
         "type": "color"
       },
       "error_color": {
-        "value": "{color.blueberry.200}",
+        "value": "{background.system.progress_and_loading.default}",
         "type": "color"
       }
     },
