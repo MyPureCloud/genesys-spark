@@ -2,7 +2,7 @@
   "data_table_items": {
     "header": {
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "16px",
         "fontSize": "12px",
         "fontWeight": 700
@@ -98,7 +98,7 @@
         "foreground_color": "#1b2c48"
       },
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "16px",
         "fontSize": "12px",
         "fontWeight": 400
@@ -152,13 +152,13 @@
         "style": "solid"
       },
       "default_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "16px",
         "fontSize": "12px",
         "fontWeight": 400
       },
       "current_result_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "16px",
         "fontSize": "12px",
         "fontWeight": 700

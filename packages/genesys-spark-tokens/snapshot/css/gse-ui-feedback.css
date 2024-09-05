@@ -19,7 +19,7 @@
   --gse-ui-toast-heading-lineHeight: 24px;
   --gse-ui-toast-heading-fontSize: 16px;
   --gse-ui-toast-heading-fontWeight: 700;
-  --gse-ui-toast-text-fontFamily: Noto Sans;
+  --gse-ui-toast-text-fontFamily: 'Noto Sans';
   --gse-ui-toast-text-lineHeight: 20px;
   --gse-ui-toast-text-fontSize: 14px;
   --gse-ui-toast-text-fontWeight: 400;
@@ -80,7 +80,7 @@
   --gse-ui-popover-buttonsBar-gap: 8px;
   --gse-ui-popover-header-gap: 4px;
   --gse-ui-popover-spacer-height: 16px;
-  --gse-ui-popover-body-text-fontFamily: Noto Sans;
+  --gse-ui-popover-body-text-fontFamily: 'Noto Sans';
   --gse-ui-popover-body-text-fontWeight: 400;
   --gse-ui-popover-body-text-lineHeight: 20px;
   --gse-ui-popover-body-text-fontSize: 14px;
@@ -94,7 +94,7 @@
   --gse-ui-progressAndLoading-spinner-base: #ced2fc;
   --gse-ui-progressAndLoading-spinner-large: 48;
   --gse-ui-progressAndLoading-spinner-small: 16;
-  --gse-ui-progressAndLoading-spinner-text-fontFamily: Noto Sans;
+  --gse-ui-progressAndLoading-spinner-text-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-spinner-text-fontWeight: 600;
   --gse-ui-progressAndLoading-spinner-text-lineHeight: 18px;
   --gse-ui-progressAndLoading-spinner-text-fontSize: 12px;
@@ -103,7 +103,7 @@
   --gse-ui-progressAndLoading-loadingState-large-header-fontWeight: 700;
   --gse-ui-progressAndLoading-loadingState-large-header-lineHeight: 32px;
   --gse-ui-progressAndLoading-loadingState-large-header-fontSize: 24px;
-  --gse-ui-progressAndLoading-loadingState-large-subheader-fontFamily: Noto Sans;
+  --gse-ui-progressAndLoading-loadingState-large-subheader-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-loadingState-large-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-loadingState-large-subheader-lineHeight: 24px;
   --gse-ui-progressAndLoading-loadingState-large-subheader-fontSize: 16px;
@@ -112,8 +112,7 @@
   --gse-ui-progressAndLoading-loadingState-medium-header-fontWeight: 700;
   --gse-ui-progressAndLoading-loadingState-medium-header-lineHeight: 27px;
   --gse-ui-progressAndLoading-loadingState-medium-header-fontSize: 18px;
-  --gse-ui-progressAndLoading-loadingState-medium-subheader-fontFamily: Noto
-    Sans;
+  --gse-ui-progressAndLoading-loadingState-medium-subheader-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-loadingState-medium-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-loadingState-medium-subheader-lineHeight: 20px;
   --gse-ui-progressAndLoading-loadingState-medium-subheader-fontSize: 14px;
@@ -122,7 +121,7 @@
   --gse-ui-progressAndLoading-loadingState-small-header-fontWeight: 700;
   --gse-ui-progressAndLoading-loadingState-small-header-lineHeight: 24px;
   --gse-ui-progressAndLoading-loadingState-small-header-fontSize: 16px;
-  --gse-ui-progressAndLoading-loadingState-small-subheader-fontFamily: Noto Sans;
+  --gse-ui-progressAndLoading-loadingState-small-subheader-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-loadingState-small-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-loadingState-small-subheader-lineHeight: 18px;
   --gse-ui-progressAndLoading-loadingState-small-subheader-fontSize: 12px;
@@ -138,7 +137,7 @@
   --gse-ui-progressAndLoading-blankState-large-header-fontWeight: 700;
   --gse-ui-progressAndLoading-blankState-large-header-lineHeight: 27px;
   --gse-ui-progressAndLoading-blankState-large-header-fontSize: 18px;
-  --gse-ui-progressAndLoading-blankState-large-subheader-fontFamily: Noto Sans;
+  --gse-ui-progressAndLoading-blankState-large-subheader-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-blankState-large-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-blankState-large-subheader-lineHeight: 20px;
   --gse-ui-progressAndLoading-blankState-large-subheader-fontSize: 14px;
@@ -146,7 +145,7 @@
   --gse-ui-progressAndLoading-blankState-small-header-fontWeight: 700;
   --gse-ui-progressAndLoading-blankState-small-header-lineHeight: 24px;
   --gse-ui-progressAndLoading-blankState-small-header-fontSize: 14px;
-  --gse-ui-progressAndLoading-blankState-small-subheader-fontFamily: Noto Sans;
+  --gse-ui-progressAndLoading-blankState-small-subheader-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-blankState-small-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-blankState-small-subheader-lineHeight: 18px;
   --gse-ui-progressAndLoading-blankState-small-subheader-fontSize: 12px;

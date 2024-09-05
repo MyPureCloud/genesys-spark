@@ -8,7 +8,7 @@
       "padding": "2px 4px",
       "border_radius": "4px",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": 400,
         "lineHeight": "20px",
         "fontSize": "14px",

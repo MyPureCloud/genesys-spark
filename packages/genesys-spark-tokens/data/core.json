@@ -810,7 +810,7 @@
       "type": "fontFamilies"
     },
     "noto_sans": {
-      "value": "Noto Sans",
+      "value": "'Noto Sans'",
       "type": "fontFamilies"
     }
   },

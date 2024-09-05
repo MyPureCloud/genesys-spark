@@ -20,7 +20,7 @@
     "label": {
       "foreground_color": "#1b2c48",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": 400,
         "lineHeight": "18px"
       }
@@ -64,7 +64,7 @@
     "label": {
       "foreground_color": "#1b2c48",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": 400,
         "lineHeight": "18px"
       }
@@ -103,7 +103,7 @@
       "label": {
         "default": {
           "text": {
-            "fontFamily": "Noto Sans",
+            "fontFamily": "'Noto Sans'",
             "fontWeight": 400,
             "lineHeight": "16px",
             "fontSize": "12px"
@@ -111,7 +111,7 @@
         },
         "active": {
           "text": {
-            "fontFamily": "Noto Sans",
+            "fontFamily": "'Noto Sans'",
             "fontWeight": 700,
             "lineHeight": "16px",
             "fontSize": "12px"
@@ -121,7 +121,7 @@
       },
       "shortcut": {
         "text": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": 400,
           "lineHeight": "20px",
           "fontSize": "14px"
@@ -236,7 +236,7 @@
       "empty_state": {
         "header": {
           "text": {
-            "fontFamily": "Noto Sans",
+            "fontFamily": "'Noto Sans'",
             "fontWeight": 700,
             "lineHeight": "18px",
             "fontSize": "12px"
@@ -245,7 +245,7 @@
         },
         "subheader": {
           "text": {
-            "fontFamily": "Noto Sans",
+            "fontFamily": "'Noto Sans'",
             "fontWeight": 400,
             "lineHeight": "18px",
             "fontSize": "12px"
@@ -267,7 +267,7 @@
         "width": "160px"
       },
       "header_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "16px",
         "fontSize": "12px",
         "fontWeight": 700
@@ -294,7 +294,7 @@
         "height": "49px"
       },
       "header_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "24px",
         "fontSize": "16px",
         "fontWeight": 400
@@ -306,13 +306,13 @@
         }
       },
       "default_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "16px",
         "fontSize": "12px",
         "fontWeight": 400
       },
       "current_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "16px",
         "fontSize": "12px",
         "fontWeight": 700
@@ -347,13 +347,13 @@
     "background_color": "#ffffff",
     "date": {
       "default_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "16px",
         "fontSize": "12px",
         "fontWeight": 400
       },
       "current_text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "16px",
         "fontSize": "12px",
         "fontWeight": 700
@@ -445,7 +445,7 @@
   },
   "toggle": {
     "label": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "fontWeight": 400,
       "lineHeight": "16px",
       "fontSize": "12px"
@@ -580,7 +580,7 @@
       "required_symbol_color": "#e22245",
       "text_color": "#1b2c48",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "18px",
         "fontSize": "12px",
         "fontWeight": 400
@@ -625,7 +625,7 @@
     },
     "label": {
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": 600,
         "lineHeight": "20px",
         "fontSize": "14px"
@@ -800,7 +800,7 @@
         "fontWeight": 700
       },
       "description": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "18px",
         "fontSize": "12px",
         "fontWeight": 400

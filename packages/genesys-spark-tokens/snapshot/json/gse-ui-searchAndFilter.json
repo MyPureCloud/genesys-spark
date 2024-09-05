@@ -16,7 +16,7 @@
         "foreground_color": "#a3a7b0"
       },
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": 400,
         "lineHeight": "18px",
         "fontSize": "12px"
