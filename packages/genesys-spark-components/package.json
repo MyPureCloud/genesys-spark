@@ -60,17 +60,17 @@
   },
   "types": "dist/types/index.d.ts",
   "dependencies": {
-    "@floating-ui/dom": "^1.6.3",
-    "@vvo/tzdb": "^6.125.0",
-    "google-libphonenumber": "^3.2.34",
-    "intl-messageformat": "^10.5.4",
-    "requestanimationframe-timer": "^3.0.3",
-    "sortablejs": "^1.15.2"
+    "@floating-ui/dom": "1.6.3",
+    "@vvo/tzdb": "6.125.0",
+    "google-libphonenumber": "3.2.34",
+    "intl-messageformat": "10.5.4",
+    "requestanimationframe-timer": "3.0.3",
+    "sortablejs": "1.15.2"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
-    "@stencil/core": "^4.12.6",
+    "@stencil/core": "4.12.6",
     "@stencil/react-output-target": "^0.5.3",
     "@stencil/sass": "^3.0.10",
     "@types/google-libphonenumber": "^7.4.30",
@@ -135,6 +135,6 @@
   "collection": "dist/collection/collection-manifest.json",
   "prettier": "prettier-config-genesys-spark-components",
   "volta": {
-    "node": "18.20.3"
+    "node": "20.9.0"
   }
 }
