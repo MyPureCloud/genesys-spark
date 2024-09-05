@@ -7,7 +7,7 @@
   --gse-ui-accordion-header-default-foreground-chevronIcon-closed: #626e84;
   --gse-ui-accordion-header-default-foreground-chevronIcon-open: #252e78;
   --gse-ui-accordion-header-default-foreground-chevronIcon-hover: #3742a2;
-  --gse-ui-accordion-header-label-defaultText-fontFamily: Noto Sans;
+  --gse-ui-accordion-header-label-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-accordion-header-label-defaultText-lineHeight: 20px;
   --gse-ui-accordion-header-label-defaultText-fontSize: 14px;
   --gse-ui-accordion-header-label-defaultText-fontWeight: 700;
@@ -32,15 +32,15 @@
   --gse-ui-accordion-menuItem-selected-foreground-parentIconColor: #1b2c48;
   --gse-ui-accordion-menuItem-selected-backgroundColor: #ced2fc;
   --gse-ui-accordion-menuItem-focus-borderRadius: 4px;
-  --gse-ui-accordion-menuItem-label-defaultText-fontFamily: Noto Sans;
+  --gse-ui-accordion-menuItem-label-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-accordion-menuItem-label-defaultText-lineHeight: 18px;
   --gse-ui-accordion-menuItem-label-defaultText-fontSize: 12px;
   --gse-ui-accordion-menuItem-label-defaultText-fontWeight: 400;
-  --gse-ui-accordion-menuItem-label-selectedText-fontFamily: Noto Sans;
+  --gse-ui-accordion-menuItem-label-selectedText-fontFamily: 'Noto Sans';
   --gse-ui-accordion-menuItem-label-selectedText-lineHeight: 18px;
   --gse-ui-accordion-menuItem-label-selectedText-fontSize: 12px;
   --gse-ui-accordion-menuItem-label-selectedText-fontWeight: 600;
-  --gse-ui-accordion-menuItem-shortcut-text-fontFamily: Noto Sans;
+  --gse-ui-accordion-menuItem-shortcut-text-fontFamily: 'Noto Sans';
   --gse-ui-accordion-menuItem-shortcut-text-lineHeight: 20px;
   --gse-ui-accordion-menuItem-shortcut-text-fontSize: 14px;
   --gse-ui-accordion-menuItem-shortcut-text-fontWeight: 400;
@@ -51,7 +51,7 @@
   --gse-ui-accordion-contentItem-gap: 16px;
   --gse-ui-accordion-contentItem-foregroundColor: #1b2c48;
   --gse-ui-accordion-contentItem-backgroundColor: #ffffff;
-  --gse-ui-accordion-contentItem-defaultText-fontFamily: Noto Sans;
+  --gse-ui-accordion-contentItem-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-accordion-contentItem-defaultText-lineHeight: 18px;
   --gse-ui-accordion-contentItem-defaultText-fontSize: 12px;
   --gse-ui-accordion-contentItem-defaultText-fontWeight: 400;

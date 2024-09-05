@@ -115,7 +115,7 @@
     "paragraph": {
       "foreground_color": "#3e5374",
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "18px",
         "fontSize": "12px",
         "fontWeight": 400
