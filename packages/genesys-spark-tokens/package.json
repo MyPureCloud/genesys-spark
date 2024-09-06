@@ -14,9 +14,10 @@
     "lint-staged": "lint-staged --concurrent false",
     "prettier": "prettier --log-level silent --ignore-unknown --write .",
     "prettier-package-json": "prettier-package-json --write ./package.json",
-    "snapshot": "node build/index.mjs snapshot",
+    "snapshot": "node build/index.mjs snapshot && npm run tokens-reports",
     "test": "node test/index.mjs",
-    "test.ci": "npm run build && npm run test"
+    "test.ci": "npm run build && npm run test",
+    "tokens-reports": "node scripts/tokens-reports.mjs"
   },
   "devDependencies": {
     "@tokens-studio/sd-transforms": "^1.2.3",
