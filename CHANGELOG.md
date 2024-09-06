@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.81.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.80.1...v4.81.0) (2024-09-06)
+
+
+### Features
+
+* **selector-cards:** Checkbox variants added ([#494](https://github.com/MyPureCloud/genesys-spark/issues/494)) ([d6e2021](https://github.com/MyPureCloud/genesys-spark/commit/d6e20219beedaf63a3f168266370f915c9e094dc))
+
+
+### Bug Fixes
+
+* **dropdown:** dropdown is now disabled when loading non-filterable list ([32a28e7](https://github.com/MyPureCloud/genesys-spark/commit/32a28e720c45a9cc7141e9a36a99ed724207eb5b))
+
 ### [4.80.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.80.0...v4.80.1) (2024-09-05)
 
 
