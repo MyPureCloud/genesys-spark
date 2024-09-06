@@ -11,6 +11,7 @@ An internal component used by the gux-pagination component.
 | Property      | Attribute      | Description | Type                     | Default      |
 | ------------- | -------------- | ----------- | ------------------------ | ------------ |
 | `currentPage` | `current-page` |             | `number`                 | `undefined`  |
+| `disabled`    | `disabled`     |             | `boolean`                | `false`      |
 | `layout`      | `layout`       |             | `"advanced" \| "simple"` | `'advanced'` |
 | `totalPages`  | `total-pages`  |             | `number`                 | `undefined`  |
 
@@ -30,16 +31,17 @@ An internal component used by the gux-pagination component.
 
 ### Depends on
 
-- [gux-pagination-ellipsis-button](gux-pagination-ellipsis-button)
 - [gux-button-slot](../../gux-button-slot)
+- [gux-pagination-ellipsis-button](gux-pagination-ellipsis-button)
 - [gux-icon](../../gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-pagination-buttons --> gux-pagination-ellipsis-button
   gux-pagination-buttons --> gux-button-slot
+  gux-pagination-buttons --> gux-pagination-ellipsis-button
   gux-pagination-buttons --> gux-icon
+  gux-pagination-ellipsis-button --> gux-button
   gux-pagination-ellipsis-button --> gux-icon
   gux-pagination-ellipsis-button --> gux-tooltip
   gux-pagination-ellipsis-button --> gux-popover

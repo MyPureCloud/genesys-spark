@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-pagination-items-per-page #render should render as expected (1) 1`] = `
-<gux-pagination-items-per-page items-per-page="25">
+<gux-pagination-items-per-page disabled="false" items-per-page="25">
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
       <gux-dropdown aria-label="Items per page dropdown, 25 items per page selected">
@@ -81,7 +81,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
 `;
 
 exports[`gux-pagination-items-per-page #render should render as expected (2) 1`] = `
-<gux-pagination-items-per-page items-per-page="50">
+<gux-pagination-items-per-page disabled="false" items-per-page="50">
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
       <gux-dropdown aria-label="Items per page dropdown, 50 items per page selected">
@@ -161,7 +161,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
 `;
 
 exports[`gux-pagination-items-per-page #render should render as expected (3) 1`] = `
-<gux-pagination-items-per-page items-per-page="75">
+<gux-pagination-items-per-page disabled="false" items-per-page="75">
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
       <gux-dropdown aria-label="Items per page dropdown, 75 items per page selected">
@@ -241,7 +241,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
 `;
 
 exports[`gux-pagination-items-per-page #render should render as expected (4) 1`] = `
-<gux-pagination-items-per-page items-per-page="100">
+<gux-pagination-items-per-page disabled="false" items-per-page="100">
   <div class="gux-pagination-items-per-page-container">
     <div class="gux-pagination-items-per-page-picker">
       <gux-dropdown aria-label="Items per page dropdown, 100 items per page selected">
@@ -249,6 +249,326 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
           <gux-popup>
             <div class="gux-target-container-collapsed" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+                <div class="gux-field-content">
+                  <div class="gux-selected-option">
+                    <gux-truncate dir="auto">
+                      100
+                    </gux-truncate>
+                  </div>
+                </div>
+                <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              </button>
+            </div>
+            <slot slot="popup"></slot>
+          </gux-popup>
+        </template>
+        <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
+          <template shadowrootmode="open">
+            <slot></slot>
+          </template>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            25
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            50
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            75
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            100
+          </gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+    </div>
+    <div class="gux-pagination-per-page">
+      per page
+    </div>
+  </div>
+</gux-pagination-items-per-page>
+`;
+
+exports[`gux-pagination-items-per-page #render should render as expected (5) 1`] = `
+<gux-pagination-items-per-page disabled="true" items-per-page="25">
+  <div class="gux-pagination-items-per-page-container">
+    <div class="gux-pagination-items-per-page-picker">
+      <gux-dropdown aria-label="Items per page dropdown, 25 items per page selected">
+        <template shadowrootmode="open">
+          <gux-popup disabled="">
+            <div class="gux-disabled gux-target-container-collapsed" slot="target">
+              <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
+                <div class="gux-field-content">
+                  <div class="gux-selected-option">
+                    <gux-truncate dir="auto">
+                      25
+                    </gux-truncate>
+                  </div>
+                </div>
+                <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              </button>
+            </div>
+            <slot slot="popup"></slot>
+          </gux-popup>
+        </template>
+        <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
+          <template shadowrootmode="open">
+            <slot></slot>
+          </template>
+          <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            25
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            50
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            75
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            100
+          </gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+    </div>
+    <div class="gux-pagination-per-page">
+      per page
+    </div>
+  </div>
+</gux-pagination-items-per-page>
+`;
+
+exports[`gux-pagination-items-per-page #render should render as expected (6) 1`] = `
+<gux-pagination-items-per-page disabled="true" items-per-page="50">
+  <div class="gux-pagination-items-per-page-container">
+    <div class="gux-pagination-items-per-page-picker">
+      <gux-dropdown aria-label="Items per page dropdown, 50 items per page selected">
+        <template shadowrootmode="open">
+          <gux-popup disabled="">
+            <div class="gux-disabled gux-target-container-collapsed" slot="target">
+              <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
+                <div class="gux-field-content">
+                  <div class="gux-selected-option">
+                    <gux-truncate dir="auto">
+                      50
+                    </gux-truncate>
+                  </div>
+                </div>
+                <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              </button>
+            </div>
+            <slot slot="popup"></slot>
+          </gux-popup>
+        </template>
+        <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
+          <template shadowrootmode="open">
+            <slot></slot>
+          </template>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            25
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            50
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            75
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            100
+          </gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+    </div>
+    <div class="gux-pagination-per-page">
+      per page
+    </div>
+  </div>
+</gux-pagination-items-per-page>
+`;
+
+exports[`gux-pagination-items-per-page #render should render as expected (7) 1`] = `
+<gux-pagination-items-per-page disabled="true" items-per-page="75">
+  <div class="gux-pagination-items-per-page-container">
+    <div class="gux-pagination-items-per-page-picker">
+      <gux-dropdown aria-label="Items per page dropdown, 75 items per page selected">
+        <template shadowrootmode="open">
+          <gux-popup disabled="">
+            <div class="gux-disabled gux-target-container-collapsed" slot="target">
+              <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
+                <div class="gux-field-content">
+                  <div class="gux-selected-option">
+                    <gux-truncate dir="auto">
+                      75
+                    </gux-truncate>
+                  </div>
+                </div>
+                <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              </button>
+            </div>
+            <slot slot="popup"></slot>
+          </gux-popup>
+        </template>
+        <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
+          <template shadowrootmode="open">
+            <slot></slot>
+          </template>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            25
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            50
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            75
+          </gux-option>
+          <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
+            <template shadowrootmode="open">
+              <div class="gux-option-wrapper">
+                <gux-truncate>
+                  <slot></slot>
+                </gux-truncate>
+                <slot name="subtext"></slot>
+              </div>
+            </template>
+            100
+          </gux-option>
+        </gux-listbox>
+      </gux-dropdown>
+    </div>
+    <div class="gux-pagination-per-page">
+      per page
+    </div>
+  </div>
+</gux-pagination-items-per-page>
+`;
+
+exports[`gux-pagination-items-per-page #render should render as expected (8) 1`] = `
+<gux-pagination-items-per-page disabled="true" items-per-page="100">
+  <div class="gux-pagination-items-per-page-container">
+    <div class="gux-pagination-items-per-page-picker">
+      <gux-dropdown aria-label="Items per page dropdown, 100 items per page selected">
+        <template shadowrootmode="open">
+          <gux-popup disabled="">
+            <div class="gux-disabled gux-target-container-collapsed" slot="target">
+              <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
                     <gux-truncate dir="auto">

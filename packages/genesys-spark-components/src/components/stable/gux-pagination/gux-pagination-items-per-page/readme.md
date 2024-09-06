@@ -10,6 +10,7 @@ An internal component used by the gux-pagination component.
 
 | Property       | Attribute        | Description | Type                    | Default |
 | -------------- | ---------------- | ----------- | ----------------------- | ------- |
+| `disabled`     | `disabled`       |             | `boolean`               | `false` |
 | `itemsPerPage` | `items-per-page` |             | `100 \| 25 \| 50 \| 75` | `25`    |
 
 
