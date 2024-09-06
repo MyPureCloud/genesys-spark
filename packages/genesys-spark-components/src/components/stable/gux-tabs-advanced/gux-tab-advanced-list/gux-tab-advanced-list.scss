@@ -20,9 +20,9 @@
     justify-content: flex-start;
     width: 100%;
     overflow-x: auto;
+    scrollbar-width: none;
     border-bottom: 1px solid var(--gse-ui-advancedTabs-divider-dividerColor); //TODO https://inindca.atlassian.net/browse/COMUI-2444
     scroll-behavior: smooth;
-    scrollbar-width: none;
 
     &::-webkit-scrollbar {
       height: 0;
