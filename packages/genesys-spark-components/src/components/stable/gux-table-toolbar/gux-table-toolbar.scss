@@ -1,19 +1,15 @@
 @mixin gux-toolbar-prevent-initial-flicker-workaround {
-  opacity: 0;
-  animation-name: show-toolbar;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
+  visibility: hidden;
+  transition: visibility 0s 0.5s; /* Delay visibility of toolbar for 0.5s */
 
   @keyframes show-toolbar {
     to {
-      opacity: 1;
+      visibility: visible;
     }
   }
 }
 
 :host {
-  position: relative;
-  z-index: var(--gse-semantic-zIndex-sticky);
   display: flex;
   flex-direction: row;
   align-items: center;
