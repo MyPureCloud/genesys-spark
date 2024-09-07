@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.81.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.0...v4.81.1) (2024-09-07)
+
+
+### Bug Fixes
+
+* **table-toolbar:** change mixin to not create a stacking context ([193d81e](https://github.com/MyPureCloud/genesys-spark/commit/193d81e44b360702291f54d077611831a4806751))
+
 ## [4.81.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.80.1...v4.81.0) (2024-09-06)
 
 
