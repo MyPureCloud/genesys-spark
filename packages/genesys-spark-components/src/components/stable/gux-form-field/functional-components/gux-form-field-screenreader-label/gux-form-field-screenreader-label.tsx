@@ -1,10 +1,9 @@
 import { FunctionalComponent, h, VNode } from '@stencil/core';
 
-interface GuxFormFieldScreenreaderLabelProps {}
-
-export const GuxFormFieldScreenreaderLabel: FunctionalComponent<
-  GuxFormFieldScreenreaderLabelProps
-> = (_, children): VNode[] => {
+export const GuxFormFieldScreenreaderLabel: FunctionalComponent<object> = (
+  _,
+  children
+): VNode[] => {
   return (
     <legend class="gux-form-field-screenreader-label">{children}</legend>
   ) as VNode[];
