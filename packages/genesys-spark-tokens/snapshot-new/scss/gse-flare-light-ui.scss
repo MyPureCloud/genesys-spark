@@ -19,7 +19,7 @@
   --gse-ui-formControl-input-disabled-border-color: #a3a7b0;
   --gse-ui-formControl-input-disabled-border-width: 1px;
   --gse-ui-formControl-input-disabled-border-style: solid;
-  --gse-ui-formControl-input-disabled-opacity: .5;
+  --gse-ui-formControl-input-disabled-opacity: 0.5;
   --gse-ui-formControl-input-borderRadius: 4px;
   --gse-ui-formControl-input-backgroundColor: #ffffff;
   --gse-ui-formControl-input-placeholderColor: #626e84;
@@ -207,7 +207,7 @@
   --gse-ui-tag-accent10-subtle-backgroundColor: #ffdd96;
   --gse-ui-tag-accent10-subtle-foregroundColor: #1b2c48;
   --gse-ui-tag-button-size: 16px;
-  --gse-ui-tag-disabled-opacity: .5;
+  --gse-ui-tag-disabled-opacity: 0.5;
   --gse-ui-badge-borderRadius: 16px;
   --gse-ui-badge-text-fontFamily: 'Noto Sans';
   --gse-ui-badge-text-fontWeight: 600;
@@ -275,7 +275,7 @@
   --gse-ui-rating-active-color: #4856cb;
   --gse-ui-rating-hover-color: #3742a2;
   --gse-ui-rating-disabled-color: #767c8d;
-  --gse-ui-rating-disabled-opacity: .5;
+  --gse-ui-rating-disabled-opacity: 0.5;
   --gse-ui-rating-size: 16px;
   --gse-ui-rating-star-gap: 8px;
   --gse-ui-breadcrumbs-primary-height: 20px;
@@ -297,7 +297,7 @@
   --gse-ui-segmentedControl-button-start-borderRadius: 4px 0 0 4px;
   --gse-ui-segmentedControl-button-middle-borderRadius: 0;
   --gse-ui-segmentedControl-button-end-borderRadius: 0 4px 4px 0;
-  --gse-ui-segmentedControl-button-disabled-opacity: .5;
+  --gse-ui-segmentedControl-button-disabled-opacity: 0.5;
   --gse-ui-segmentedControl-button-disabled-backgroundColor: rgba(0, 0, 0, 0);
   --gse-ui-segmentedControl-button-disabled-foregroundColor: #4856cb;
   --gse-ui-segmentedControl-button-default-backgroundColor: rgba(0, 0, 0, 0);
@@ -397,7 +397,7 @@
   --gse-ui-button-danger-active-backgroundColor: #440a15;
   --gse-ui-button-danger-active-foregroundColor: #ffffff;
   --gse-ui-button-borderRadius: 4px;
-  --gse-ui-button-disabled-opacity: .5;
+  --gse-ui-button-disabled-opacity: 0.5;
   --gse-ui-button-text-fontFamily: 'Noto Sans';
   --gse-ui-button-text-fontWeight: 700;
   --gse-ui-button-text-fontSize: 12px;
@@ -480,7 +480,7 @@
   --gse-ui-radioButton-gap: 8px;
   --gse-ui-radioButton-helper-padding: 4px 0 0 24px;
   --gse-ui-radioButton-helper-gap: 8px;
-  --gse-ui-radioButton-disabled-opacity: .5;
+  --gse-ui-radioButton-disabled-opacity: 0.5;
   --gse-ui-radioButton-focus-border-color: #7b88f7;
   --gse-ui-radioButton-focus-border-width: 2px;
   --gse-ui-radioButton-focus-border-style: solid;
@@ -501,7 +501,7 @@
   --gse-ui-checkbox-helper-padding: 4px 0 0 24px;
   --gse-ui-checkbox-helper-gap: 8px;
   --gse-ui-checkbox-gap: 8px;
-  --gse-ui-checkbox-disabled-opacity: .5;
+  --gse-ui-checkbox-disabled-opacity: 0.5;
   --gse-ui-checkbox-focus-border-color: #7b88f7;
   --gse-ui-checkbox-focus-border-width: 2px;
   --gse-ui-checkbox-focus-border-style: solid;
@@ -531,7 +531,7 @@
   --gse-ui-menu-option-shortcut-selected-foregroundColor: #1b2c48;
   --gse-ui-menu-option-hover-backgroundColor: #eff0fe;
   --gse-ui-menu-option-selected-backgroundColor: #ced2fc;
-  --gse-ui-menu-option-disabled-opacity: .5;
+  --gse-ui-menu-option-disabled-opacity: 0.5;
   --gse-ui-menu-option-checkbox-unchecked-default-foregroundColor: #767c8d;
   --gse-ui-menu-option-checkbox-unchecked-hover-foregroundColor: #3742a2;
   --gse-ui-menu-option-checkbox-unchecked-selected-foregroundColor: #252e78;
@@ -655,8 +655,8 @@
   --gse-ui-calendarMenu-range-body-firstMonth-borderRadius: 0 0 0 8px;
   --gse-ui-calendarMenu-range-body-secondMonth-borderRadius: 0 0 8px 0;
   --gse-ui-calendarMenu-range-date-endDate-borderRadius: 0 16px 16px 0;
-  --gse-ui-calendarMenu-range-date-startDate-borderRadius: 16px  0 0 16px;
-  --gse-ui-calendarMenu-disabled-opacity: .5;
+  --gse-ui-calendarMenu-range-date-startDate-borderRadius: 16px 0 0 16px;
+  --gse-ui-calendarMenu-disabled-opacity: 0.5;
   --gse-ui-calendarMenu-monthBody-padding: 16px 24px;
   --gse-ui-calendarMenu-monthBody-gap: 2px;
   --gse-ui-calendarMenu-boxShadow-blur: 4px;
@@ -669,7 +669,7 @@
   --gse-ui-datePicker-startEndInput-gap: 8px;
   --gse-ui-datePicker-dateTyped-gap: 10px;
   --gse-ui-datePicker-dateTyped-backgroundColor: #dee1fd;
-  --gse-ui-datePicker-disabled-opacity: .5;
+  --gse-ui-datePicker-disabled-opacity: 0.5;
   --gse-ui-datePicker-focusCalendar-gap: 2px;
   --gse-ui-datePicker-iconHover: #3742a2;
   --gse-ui-datePicker-iconFocus: #3742a2;
@@ -707,7 +707,7 @@
   --gse-ui-toggle-handle-backgroundColor: #ffffff;
   --gse-ui-toggle-handle-foregroundColor: #4856cb;
   --gse-ui-toggle-handle-borderRadius: 16px;
-  --gse-ui-toggle-disabled-opacity: .5;
+  --gse-ui-toggle-disabled-opacity: 0.5;
   --gse-ui-toggle-focus-border-color: #7b88f7;
   --gse-ui-toggle-focus-border-width: 2px;
   --gse-ui-toggle-focus-border-style: solid;
@@ -753,7 +753,7 @@
   --gse-ui-slider-handle-active-backgroundColor: #252e78;
   --gse-ui-slider-handle-disabled-backgroundColor: #4856cb;
   --gse-ui-slider-handle-borderRadius: 100%;
-  --gse-ui-slider-disabled-opacity: .5;
+  --gse-ui-slider-disabled-opacity: 0.5;
   --gse-ui-slider-label-text-fontFamily: 'Noto Sans';
   --gse-ui-slider-label-text-fontWeight: 600;
   --gse-ui-slider-label-text-fontSize: 14px;
@@ -847,7 +847,7 @@
   --gse-ui-selectorCard-selected-border-color: #3742a2;
   --gse-ui-selectorCard-selected-border-width: 1px;
   --gse-ui-selectorCard-selected-border-style: solid;
-  --gse-ui-selectorCard-disabled-opacity: .5;
+  --gse-ui-selectorCard-disabled-opacity: 0.5;
   --gse-ui-selectorCard-disabled-backgroundColor: #ffffff;
   --gse-ui-selectorCard-disabled-selectedIndicator-selected-foregroundColor: #4856cb;
   --gse-ui-selectorCard-disabled-selectedIndicator-unselected-foregroundColor: #767c8d;
@@ -969,12 +969,36 @@
   --gse-ui-avatar-large-initials-lineHeight: 1;
   --gse-ui-avatar-large-presenceRing-width: 4px;
   --gse-ui-avatar-large-ucIntegration-size: 32px;
-  --gse-ui-avatar-presenceRing-available: linear-gradient(135deg, #09b581 0%, #9de1cd 100%);
-  --gse-ui-avatar-presenceRing-busy: linear-gradient(135deg, #e22245 0%, #f3a7b5 100%);
-  --gse-ui-avatar-presenceRing-away: linear-gradient(135deg, #f8c73e 0%, #fce9b2 100%);
-  --gse-ui-avatar-presenceRing-onQueue: linear-gradient(135deg, #4856cb 0%, #9ca6f9 100%);
-  --gse-ui-avatar-presenceRing-offline: linear-gradient(135deg, #767c8d 0%, #a3a7b0 100%);
-  --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(135deg, #b74ba4 0%, #f5bfeb 100%);
+  --gse-ui-avatar-presenceRing-available: linear-gradient(
+    135deg,
+    #09b581 0%,
+    #9de1cd 100%
+  );
+  --gse-ui-avatar-presenceRing-busy: linear-gradient(
+    135deg,
+    #e22245 0%,
+    #f3a7b5 100%
+  );
+  --gse-ui-avatar-presenceRing-away: linear-gradient(
+    135deg,
+    #f8c73e 0%,
+    #fce9b2 100%
+  );
+  --gse-ui-avatar-presenceRing-onQueue: linear-gradient(
+    135deg,
+    #4856cb 0%,
+    #9ca6f9 100%
+  );
+  --gse-ui-avatar-presenceRing-offline: linear-gradient(
+    135deg,
+    #767c8d 0%,
+    #a3a7b0 100%
+  );
+  --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(
+    135deg,
+    #b74ba4 0%,
+    #f5bfeb 100%
+  );
   --gse-ui-avatar-medium-size: 48px;
   --gse-ui-avatar-medium-badge-size: 16px;
   --gse-ui-avatar-medium-focusRing-size: 50px;
@@ -1034,7 +1058,7 @@
   --gse-ui-avatar-media-initialsForeground-add: #4856cb;
   --gse-ui-avatar-hoverModal-shroudColor: #3e5374cc;
   --gse-ui-avatar-hoverModal-foregroundColor: #ffffff;
-  --gse-ui-avatar-hoverModal-opacity: .8;
+  --gse-ui-avatar-hoverModal-opacity: 0.8;
   --gse-ui-avatar-content-borderRadius: 100%;
   --gse-ui-avatar-content-default-border-color: #ffffff;
   --gse-ui-avatar-content-default-border-width: 1px;
@@ -1060,7 +1084,11 @@
   --gse-ui-avatar-focus: #7b88f7;
   --gse-ui-avatar-addChangeImage-hoverModal-shroudSize: 84px;
   --gse-ui-avatar-addChangeImage-icon-size: 16px;
-  --gse-ui-globalNav-sideMenu: linear-gradient(135deg, #09b581 0%, #9de1cd 100%);
+  --gse-ui-globalNav-sideMenu: linear-gradient(
+    135deg,
+    #09b581 0%,
+    #9de1cd 100%
+  );
   --gse-ui-globalNav-text-fontFamily: Roboto;
   --gse-ui-globalNav-text-lineHeight: 16px;
   --gse-ui-globalNav-text-fontSize: 12px;
@@ -1123,8 +1151,16 @@
   --gse-ui-globalNav-topBar-menuButton-open-hover-backgroundColor: #3742a2;
   --gse-ui-globalNav-topBar-menuButton-open-hover-foregroundColor: #ffffff;
   --gse-ui-globalNav-panel-panelTitle: #ffffff;
-  --gse-ui-globalNav-panel-primary: linear-gradient(127deg, #23395d 3.19%, #3e5374 225.06%);
-  --gse-ui-globalNav-panel-secondary: linear-gradient(358deg, #1b2b48 0.16%, #23395d 98.45%);
+  --gse-ui-globalNav-panel-primary: linear-gradient(
+    127deg,
+    #23395d 3.19%,
+    #3e5374 225.06%
+  );
+  --gse-ui-globalNav-panel-secondary: linear-gradient(
+    358deg,
+    #1b2b48 0.16%,
+    #23395d 98.45%
+  );
   --gse-ui-dataTableComposed-boxShadow-blur: 4px;
   --gse-ui-dataTableComposed-boxShadow-spread: 1px;
   --gse-ui-dataTableComposed-boxShadow-color: rgba(35, 57, 92, 0.1);
@@ -1138,7 +1174,7 @@
   --gse-ui-tabs-item-height: 40px;
   --gse-ui-tabs-item-horizontal-fixedHeight: 40px;
   --gse-ui-tabs-item-horizontal-padding: 11px 12px 10px;
-  --gse-ui-tabs-item-disableOpacity: .5;
+  --gse-ui-tabs-item-disableOpacity: 0.5;
   --gse-ui-tabs-item-itemText-fontFamily: 'Noto Sans';
   --gse-ui-tabs-item-itemText-fontWeight: 400;
   --gse-ui-tabs-item-itemText-fontSize: 12px;
@@ -1273,7 +1309,7 @@
   --gse-ui-modal-boxShadow-offsetX: 0;
   --gse-ui-modal-boxShadow-offsetY: 0;
   --gse-ui-modal-borderRadius: 16px;
-  --gse-ui-modal-shroud-opacity: .8;
+  --gse-ui-modal-shroud-opacity: 0.8;
   --gse-ui-modal-dismissButton-paddingTop: 16px;
   --gse-ui-modal-dismissButton-paddingRight: 8px;
   --gse-ui-popover-borderRadius: 8px;
@@ -1381,7 +1417,7 @@
   --gse-ui-modalSideSheet-closeColor: #3e5374;
   --gse-ui-modalSideSheet-dividerColor: #c6c8ce;
   --gse-ui-modalSideSheet-shroudColor: #3e5374cc;
-  --gse-ui-modalSideSheet-shroud-opacity: .8;
+  --gse-ui-modalSideSheet-shroud-opacity: 0.8;
   --gse-ui-modalSideSheet-descriptionColor: #3e5374;
   --gse-ui-modalSideSheet-heading-fontFamily: Urbanist;
   --gse-ui-modalSideSheet-heading-fontWeight: 600;
@@ -1494,5 +1530,5 @@
   --gse-ui-accordion-wrapper-dividerBorder-style: solid;
   --gse-ui-accordion-focus-offset-gap: 1px;
   --gse-ui-accordion-contentPanel-paddingBottom: 8px;
-  --gse-ui-accordion-label-disabled-opacity: .5;
+  --gse-ui-accordion-label-disabled-opacity: 0.5;
 }
