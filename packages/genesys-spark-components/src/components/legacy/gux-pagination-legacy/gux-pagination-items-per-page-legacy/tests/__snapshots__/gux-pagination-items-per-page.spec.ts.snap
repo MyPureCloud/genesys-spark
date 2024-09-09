@@ -11,7 +11,7 @@ exports[`gux-pagination-items-per-page-legacy #render should render as expected 
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
-                    <gux-truncate>
+                    <gux-truncate dir="auto">
                       25
                     </gux-truncate>
                   </div>
@@ -91,7 +91,7 @@ exports[`gux-pagination-items-per-page-legacy #render should render as expected 
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
-                    <gux-truncate>
+                    <gux-truncate dir="auto">
                       50
                     </gux-truncate>
                   </div>
@@ -171,7 +171,7 @@ exports[`gux-pagination-items-per-page-legacy #render should render as expected 
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
-                    <gux-truncate>
+                    <gux-truncate dir="auto">
                       75
                     </gux-truncate>
                   </div>
@@ -251,7 +251,7 @@ exports[`gux-pagination-items-per-page-legacy #render should render as expected 
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
-                    <gux-truncate>
+                    <gux-truncate dir="auto">
                       100
                     </gux-truncate>
                   </div>
