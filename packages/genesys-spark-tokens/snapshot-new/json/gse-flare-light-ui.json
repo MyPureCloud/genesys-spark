@@ -2800,9 +2800,7 @@
     "gap_main": "12px",
     "gap_content": "24px",
     "icon_color": "#626e84",
-    "foreground_color": "#1b2c48",
-    "background_color": "rgba(0, 0, 0, 0)",
-    "border_radius": "8px"
+    "foreground_color": "#1b2c48"
   },
   "modal_side_sheet": {
     "background_color": "#ffffff",
