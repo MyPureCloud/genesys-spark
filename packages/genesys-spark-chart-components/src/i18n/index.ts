@@ -72,7 +72,7 @@ export async function getComponentI18nResources(
   } else if (locale !== DEFAULT_LOCALE) {
     try {
       resources = await fetchResources(componentName, locale);
-    } catch (_) {
+    } catch {
       resources = null;
     }
   }
