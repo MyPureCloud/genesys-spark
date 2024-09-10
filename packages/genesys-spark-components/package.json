@@ -61,9 +61,9 @@
   "types": "dist/types/index.d.ts",
   "dependencies": {
     "@floating-ui/dom": "1.6.10",
-    "@vvo/tzdb": "6.125.0",
-    "google-libphonenumber": "3.2.34",
-    "intl-messageformat": "10.5.4",
+    "@vvo/tzdb": "6.145.0",
+    "google-libphonenumber": "3.2.38",
+    "intl-messageformat": "10.5.14",
     "requestanimationframe-timer": "3.0.3",
     "sortablejs": "1.15.3"
   },
