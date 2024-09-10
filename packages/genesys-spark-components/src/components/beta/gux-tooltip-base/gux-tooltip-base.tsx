@@ -202,7 +202,7 @@ export class GuxTooltipBase {
     return (
       <Host
         id={this.tooltipId ? undefined : this.id}
-        role={this.tooltipId ? undefined : 'tooltip'}
+        role={this.tooltipId && !this.isShown ? undefined : 'tooltip'}
         class={{ 'gux-show': this.isShown }}
       >
         <div
