@@ -50,17 +50,17 @@ mkdirSync(join(projectPath, `/${folder}`), { recursive: true });
 
 writeFileSync(
   join(projectPath, `/${folder}/missing-old-tokens.json`),
-  JSON.stringify(missingOldTokenNames, null, 2)
+  JSON.stringify(missingOldTokenNames, null, 2) + '\n'
 );
 writeFileSync(
   join(projectPath, `/${folder}/new-new-tokens.json`),
-  JSON.stringify(newNewTokenNames, null, 2)
+  JSON.stringify(newNewTokenNames, null, 2) + '\n'
 );
 writeFileSync(
   join(projectPath, `/${folder}/used-tokens.json`),
-  JSON.stringify(usedTokenNames, null, 2)
+  JSON.stringify(usedTokenNames, null, 2) + '\n'
 );
 writeFileSync(
   join(projectPath, `/${folder}/missing-used-tokens.json`),
-  JSON.stringify(missingUsedTokenNames, null, 2)
+  JSON.stringify(missingUsedTokenNames, null, 2) + '\n'
 );

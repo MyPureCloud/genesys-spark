@@ -1341,8 +1341,6 @@
       "dynamic_side_sheet.box_shadow": "S:fffbfcc9cdb84dee899c96b60a2a1172e27d3fd9,"
     },
     "selectedTokenSets": {
-      "core_deprecated": "source",
-      "semantic_deprecated": "source",
       "ui/unordered": "enabled",
       "ui/actions": "enabled",
       "ui/form_control": "enabled",
