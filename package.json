@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.77.0",
+  "version": "4.81.2",
   "description": "Common webcomponents",
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,7 @@
     "create-dist-folder": "node ./scripts/create-dist-folder.js",
     "create-manifest": "node ./scripts/create-manifest.js",
     "current-version": "cross-var \"echo $npm_package_version\"",
-    "dev": "run-pty start.json",
+    "dev": "npm start",
     "dev.examples": "npm run dev --workspace=web-apps/genesys-spark-examples",
     "dev.gsc": "npm run dev --workspace=packages/genesys-spark-components",
     "dev.gscc": "npm run dev --workspace=packages/genesys-spark-chart-components",
@@ -28,6 +28,14 @@
     "lint-staged.root": "lint-staged",
     "lint-staged.workspaces": "npm run lint-staged --workspaces --if-present",
     "new-tokens-data": "npm run snapshot --workspace=packages/genesys-spark-tokens",
+    "playground.angular": "run-pty playground.angular.json",
+    "playground.angular.start": "cd ./playground/angular-v13 && npm install && npm start",
+    "playground.ember": "run-pty playground.ember.json",
+    "playground.ember.start": "cd ./playground/ember-3 && npm install && npm start",
+    "playground.knockout": "run-pty playground.knockout.json",
+    "playground.knockout.start": "cd ./playground/knockout-3 && npm install && npm start",
+    "playground.vue": "run-pty playground.vue.json",
+    "playground.vue.start": "cd ./playground/vue-3 && npm install && npm start",
     "prepare": "husky",
     "prettier-package-json.root": "prettier-package-json --write ./package.json",
     "prettier-package-json.workspaces": "npm run prettier-package-json --workspaces --if-present",
@@ -50,25 +58,24 @@
     "./packages/genesys-spark-components",
     "./packages/genesys-spark-chart-components",
     "./packages/*",
-    "./playgrounds/*",
     "./shared-configs/*",
     "./web-apps/*"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^19.1.0",
-    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
     "commitizen": "^4.3.0",
     "cross-var": "^1.1.0",
     "eslint": "^8.57.0",
     "eslint-config-genesys-spark-components": "^0.0.1",
     "eslint-config-prettier": "^9.1.0",
     "git-cz": "^4.9.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.3",
     "prettier-config-genesys-spark-components": "^0.0.1",
-    "run-pty": "^4.1.0",
+    "run-pty": "^5.0.0",
     "standard-version": "^9.5.0"
   },
   "prettier": "prettier-config-genesys-spark-components",
@@ -78,6 +85,6 @@
     }
   },
   "volta": {
-    "node": "18.20.3"
+    "node": "20.9.0"
   }
 }

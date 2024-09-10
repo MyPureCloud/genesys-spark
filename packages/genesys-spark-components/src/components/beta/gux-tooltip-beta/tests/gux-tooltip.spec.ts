@@ -1,7 +1,8 @@
 import { newSpecPage } from '@test/specTestUtils';
 import { GuxTooltip } from '../gux-tooltip';
+import { GuxTooltipBase } from 'components/beta/gux-tooltip-base/gux-tooltip-base';
 
-const components = [GuxTooltip];
+const components = [GuxTooltip, GuxTooltipBase];
 const language = 'en';
 
 describe('gux-tooltip-beta', () => {
@@ -62,6 +63,7 @@ describe('gux-tooltip-beta', () => {
         const page = await newSpecPage({ components, html, language });
 
         page.root.remove();
+
         await page.waitForChanges();
 
         expect(page.body).toMatchSnapshot();

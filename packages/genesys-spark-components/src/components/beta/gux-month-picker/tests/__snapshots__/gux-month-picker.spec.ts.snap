@@ -3815,7 +3815,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                січ.
+                січ
               </gux-month-list-item>
               <gux-month-list-item aria-label="лютий 2022 р." role="listitem" value="2022-02">
                 <mock:shadow-root>
@@ -3825,7 +3825,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                лют.
+                лют
               </gux-month-list-item>
               <gux-month-list-item aria-label="березень 2022 р." role="listitem" value="2022-03">
                 <mock:shadow-root>
@@ -3835,7 +3835,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                бер.
+                бер
               </gux-month-list-item>
               <gux-month-list-item aria-label="квітень 2022 р." role="listitem" value="2022-04">
                 <mock:shadow-root>
@@ -3845,7 +3845,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                квіт.
+                кві
               </gux-month-list-item>
               <gux-month-list-item aria-label="травень 2022 р." role="listitem" value="2022-05">
                 <mock:shadow-root>
@@ -3855,7 +3855,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                трав.
+                тра
               </gux-month-list-item>
               <gux-month-list-item aria-label="червень 2022 р." role="listitem" value="2022-06">
                 <mock:shadow-root>
@@ -3865,7 +3865,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                черв.
+                чер
               </gux-month-list-item>
               <gux-month-list-item aria-label="липень 2022 р." role="listitem" value="2022-07">
                 <mock:shadow-root>
@@ -3875,7 +3875,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                лип.
+                лип
               </gux-month-list-item>
               <gux-month-list-item aria-label="серпень 2022 р." role="listitem" value="2022-08">
                 <mock:shadow-root>
@@ -3885,7 +3885,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                серп.
+                сер
               </gux-month-list-item>
               <gux-month-list-item aria-label="вересень 2022 р." role="listitem" value="2022-09">
                 <mock:shadow-root>
@@ -3895,7 +3895,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                вер.
+                вер
               </gux-month-list-item>
               <gux-month-list-item aria-label="жовтень 2022 р." role="listitem" value="2022-10">
                 <mock:shadow-root>
@@ -3905,7 +3905,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                жовт.
+                жов
               </gux-month-list-item>
               <gux-month-list-item aria-label="листопад 2022 р." role="listitem" value="2022-11">
                 <mock:shadow-root>
@@ -3915,7 +3915,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                лист.
+                лис
               </gux-month-list-item>
               <gux-month-list-item aria-label="грудень 2022 р." role="listitem" value="2022-12">
                 <mock:shadow-root>
@@ -3925,7 +3925,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </mock:shadow-root>
-                груд.
+                гру
               </gux-month-list-item>
             </gux-month-list>
           </div>
@@ -8079,7 +8079,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                січ.
+                січ
               </gux-month-list-item>
               <gux-month-list-item aria-label="лютий 2022 р." role="listitem" value="2022-02">
                 <mock:shadow-root>
@@ -8089,7 +8089,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                лют.
+                лют
               </gux-month-list-item>
               <gux-month-list-item aria-label="березень 2022 р." role="listitem" value="2022-03">
                 <mock:shadow-root>
@@ -8099,7 +8099,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                бер.
+                бер
               </gux-month-list-item>
               <gux-month-list-item aria-label="квітень 2022 р." role="listitem" value="2022-04">
                 <mock:shadow-root>
@@ -8109,7 +8109,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                квіт.
+                кві
               </gux-month-list-item>
               <gux-month-list-item aria-label="травень 2022 р." role="listitem" value="2022-05">
                 <mock:shadow-root>
@@ -8119,7 +8119,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                трав.
+                тра
               </gux-month-list-item>
               <gux-month-list-item aria-label="червень 2022 р." role="listitem" value="2022-06">
                 <mock:shadow-root>
@@ -8129,7 +8129,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                черв.
+                чер
               </gux-month-list-item>
               <gux-month-list-item aria-label="липень 2022 р." role="listitem" value="2022-07">
                 <mock:shadow-root>
@@ -8139,7 +8139,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                лип.
+                лип
               </gux-month-list-item>
               <gux-month-list-item aria-label="серпень 2022 р." role="listitem" value="2022-08">
                 <mock:shadow-root>
@@ -8149,7 +8149,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                серп.
+                сер
               </gux-month-list-item>
               <gux-month-list-item aria-label="вересень 2022 р." role="listitem" value="2022-09">
                 <mock:shadow-root>
@@ -8159,7 +8159,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                вер.
+                вер
               </gux-month-list-item>
               <gux-month-list-item aria-label="жовтень 2022 р." role="listitem" value="2022-10">
                 <mock:shadow-root>
@@ -8169,7 +8169,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                жовт.
+                жов
               </gux-month-list-item>
               <gux-month-list-item aria-label="листопад 2022 р." role="listitem" value="2022-11">
                 <mock:shadow-root>
@@ -8179,7 +8179,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                лист.
+                лис
               </gux-month-list-item>
               <gux-month-list-item aria-label="грудень 2022 р." role="listitem" value="2022-12">
                 <mock:shadow-root>
@@ -8189,7 +8189,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </mock:shadow-root>
-                груд.
+                гру
               </gux-month-list-item>
             </gux-month-list>
           </div>

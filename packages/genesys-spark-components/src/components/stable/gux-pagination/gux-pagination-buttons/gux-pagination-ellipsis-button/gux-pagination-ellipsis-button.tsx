@@ -112,7 +112,11 @@ export class GuxPaginationEllipsisButton {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.root, translationResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      translationResources,
+      'gux-pagination-buttons'
+    );
     trackComponent(this.root);
   }
 

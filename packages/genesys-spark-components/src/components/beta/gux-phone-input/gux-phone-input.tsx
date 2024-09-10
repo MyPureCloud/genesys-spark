@@ -12,7 +12,10 @@ import {
   State,
   Watch
 } from '@stencil/core';
-import libphonenumber, { PhoneNumberFormat } from 'google-libphonenumber';
+import libphonenumber, {
+  PhoneNumberFormat,
+  PhoneNumberType
+} from 'google-libphonenumber';
 import { trackComponent } from '@utils/tracking/usage';
 import {
   buildI18nForComponent,
@@ -42,6 +45,7 @@ export class GuxPhoneInput {
     libphonenumber.PhoneNumberUtil.getInstance();
   private regionObjects: RegionObject[] = [];
   private displayFormat: PhoneNumberFormat;
+  private displayType: PhoneNumberType = PhoneNumberType.FIXED_LINE;
   private valueWhenFocused: string;
   private regionAlphaCodeWhenFocused: Alpha2Code;
 
@@ -72,6 +76,10 @@ export class GuxPhoneInput {
   // Display only. This chooses how to format the number within the input.
   @Prop()
   phoneNumberFormat: 'E164' | 'INTERNATIONAL' | 'NATIONAL' = 'NATIONAL';
+
+  // Display only. This chooses the type of example number as the placeholder within the input.
+  @Prop()
+  phoneNumberType: 'FIXED_LINE' | 'TOLL_FREE' = 'FIXED_LINE';
 
   @Event() guxregionselect: EventEmitter<string>;
 
@@ -160,6 +168,11 @@ export class GuxPhoneInput {
     this.displayFormat = this.parseDisplayFormat(format);
   }
 
+  @Watch('phoneNumberType')
+  setDisplayType(format: typeof this.phoneNumberType) {
+    this.displayType = this.parsePhoneNumberType(format);
+  }
+
   @Listen('internallistboxoptionsupdated')
   onInternallistboxoptionsupdated(event: CustomEvent): void {
     event.stopPropagation();
@@ -232,6 +245,7 @@ export class GuxPhoneInput {
 
   private initialValueParse(): void {
     this.setDisplayFormat(this.phoneNumberFormat);
+    this.setDisplayType(this.phoneNumberType);
     if (this.value) {
       try {
         const phone = this.phoneUtil.parse(this.value);
@@ -239,7 +253,7 @@ export class GuxPhoneInput {
           this.getRegionFromValue(this.value)?.alpha2Code
         );
         this.value = this.phoneUtil.format(phone, this.displayFormat);
-      } catch (e) {
+      } catch {
         logWarn(this.root, 'Number cannot be parsed');
       }
     } else {
@@ -269,6 +283,17 @@ export class GuxPhoneInput {
     return output;
   }
 
+  private parsePhoneNumberType(
+    phoneNumberType: typeof this.phoneNumberType
+  ): libphonenumber.PhoneNumberType {
+    const typeMap = {
+      TOLL_FREE: PhoneNumberType.TOLL_FREE,
+      FIXED_LINE: PhoneNumberType.FIXED_LINE
+    };
+
+    return typeMap[phoneNumberType] ?? PhoneNumberType.FIXED_LINE;
+  }
+
   /** Returns parsed phone number object or null if utility threw an error (unknown region or impossible to parse number) */
   private parsePhoneNumber(
     value: string,
@@ -276,7 +301,7 @@ export class GuxPhoneInput {
   ): libphonenumber.PhoneNumber {
     try {
       return this.phoneUtil.parse(value, region);
-    } catch (e) {
+    } catch {
       return null;
     }
   }
@@ -335,6 +360,21 @@ export class GuxPhoneInput {
     return regionMatch?.alpha2Code ?? null;
   }
 
+  /** Gets example number with fallbacks to handle missing data in the library. */
+  private getExampleNumber(): libphonenumber.PhoneNumber {
+    const regionCode =
+      this.region?.alpha2Code || this.defaultRegionCode || 'US';
+
+    return (
+      this.phoneUtil.getExampleNumberForType(regionCode, this.displayType) ||
+      this.phoneUtil.getExampleNumberForType(
+        regionCode,
+        PhoneNumberType.FIXED_LINE
+      ) ||
+      this.phoneUtil.getExampleNumberForType('US', PhoneNumberType.FIXED_LINE)
+    );
+  }
+
   private getRegionFromValue(number: string): Region {
     return this.isNationalNumber(number)
       ? this.region || null
@@ -371,7 +411,7 @@ export class GuxPhoneInput {
       if (match) {
         return match;
       }
-    } catch (e) {
+    } catch {
       // Error thrown while parsing, continue processing without googlelib-phonenumber
     }
 
@@ -515,9 +555,7 @@ export class GuxPhoneInput {
           }}
           type="tel"
           placeholder={this.phoneUtil.format(
-            this.phoneUtil.getExampleNumber(
-              this.region?.alpha2Code || this.defaultRegionCode || 'US'
-            ),
+            this.getExampleNumber(),
             this.displayFormat
           )}
           value={this.value}

@@ -110,6 +110,13 @@ export class GuxDropdown {
     this.guxfilter.emit(filter);
   }
 
+  @Watch('disabled')
+  watchDisabled(disabled: boolean) {
+    if (disabled) {
+      this.expanded = false;
+    }
+  }
+
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
@@ -484,6 +491,7 @@ export class GuxDropdown {
                   onInput={this.filterInput.bind(this)}
                   onKeyDown={this.filterKeydown.bind(this)}
                   onKeyUp={this.filterKeyup.bind(this)}
+                  disabled={this.disabled}
                 ></input>
               </div>
             </div>
@@ -559,7 +567,7 @@ export class GuxDropdown {
     return (
       <gux-popup
         expanded={this.expanded && (!this.loading || this.isFilterable())}
-        disabled={this.disabled}
+        disabled={this.disabled || (this.loading && !this.isFilterable())}
         exceedTargetWidth={this.exceedTargetWidth}
       >
         {this.renderTarget()}

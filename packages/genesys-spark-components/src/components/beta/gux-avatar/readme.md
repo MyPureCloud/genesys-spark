@@ -22,9 +22,9 @@
 
 ## Slots
 
-| Slot      | Description     |
-| --------- | --------------- |
-| `"image"` | Headshot photo. |
+| Slot      | Description   |
+| --------- | ------------- |
+| `"image"` | Avatar photo. |
 
 
 ## Dependencies
@@ -32,11 +32,13 @@
 ### Depends on
 
 - [gux-icon](../../stable/gux-icon)
+- [gux-screen-reader-beta](../gux-screen-reader)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-avatar-beta --> gux-icon
+  gux-avatar-beta --> gux-screen-reader-beta
   style gux-avatar-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

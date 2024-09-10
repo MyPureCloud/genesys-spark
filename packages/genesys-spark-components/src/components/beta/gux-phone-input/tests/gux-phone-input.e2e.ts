@@ -24,6 +24,10 @@ describe('gux-phone-input', () => {
       {
         description: 'should render with international format',
         html: `<gux-phone-input-beta phone-number-format="INTERNATIONAL"></gux-phone-input-beta>`
+      },
+      {
+        description: 'should render with toll-free type',
+        html: `<gux-phone-input-beta phone-number-type="TOLL_FREE"></gux-phone-input-beta>`
       }
     ].forEach(({ description, html }) => {
       it(description, async () => {

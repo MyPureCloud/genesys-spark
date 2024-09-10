@@ -2387,7 +2387,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should work as expected for "Antarctica/Casey" 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Casey">
   <mock:shadow-root>
-    8:00:00 PM Australian Western Standard Time
+    11:00:00 PM Casey Time
   </mock:shadow-root>
 </gux-time-beta>
 `;
@@ -2467,7 +2467,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should work as expected for "Antarctica/Vostok" 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Vostok">
   <mock:shadow-root>
-    7:00:00 PM Vostok Time
+    6:00:00 PM Vostok Time
   </mock:shadow-root>
 </gux-time-beta>
 `;
@@ -6875,7 +6875,7 @@ exports[`gux-time #render using regional dates #render different time zones shou
 exports[`gux-time #render using regional dates #render different time zones should work as expected for "Antarctica/Casey" 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Casey">
   <mock:shadow-root>
-    8:00:00 PM Australian Western Standard Time
+    11:00:00 PM Casey Time
   </mock:shadow-root>
 </gux-time-beta>
 `;
@@ -6955,7 +6955,7 @@ exports[`gux-time #render using regional dates #render different time zones shou
 exports[`gux-time #render using regional dates #render different time zones should work as expected for "Antarctica/Vostok" 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Vostok">
   <mock:shadow-root>
-    7:00:00 PM Vostok Time
+    6:00:00 PM Vostok Time
   </mock:shadow-root>
 </gux-time-beta>
 `;

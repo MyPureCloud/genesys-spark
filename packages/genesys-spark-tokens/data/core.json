@@ -810,7 +810,7 @@
       "type": "fontFamilies"
     },
     "noto_sans": {
-      "value": "Noto Sans",
+      "value": "'Noto Sans'",
       "type": "fontFamilies"
     }
   },
@@ -1230,6 +1230,14 @@
       },
       "100": {
         "value": "#FDF8EC",
+        "type": "color"
+      },
+      "110": {
+        "value": "#FFF793",
+        "type": "color"
+      },
+      "120": {
+        "value": "#FFEF27",
         "type": "color"
       }
     },

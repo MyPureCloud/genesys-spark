@@ -179,7 +179,7 @@
     }
   },
   "font_family": {
-    "body": "Noto Sans",
+    "body": "'Noto Sans'",
     "heading": "Urbanist"
   },
   "font_size": {
@@ -208,73 +208,73 @@
   "typography": {
     "body": {
       "sm": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "18px",
         "fontSize": "12px",
         "fontWeight": 400
       },
       "sm_bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "18px",
         "fontSize": "12px",
         "fontWeight": 700
       },
       "sm_semi_bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "18px",
         "fontSize": "12px",
         "fontWeight": 600
       },
       "sm_regular": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "18px",
         "fontSize": "12px",
         "fontWeight": 400
       },
       "md": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "20px",
         "fontSize": "14px",
         "fontWeight": 400
       },
       "md_regular": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "20px",
         "fontSize": "14px",
         "fontWeight": 400
       },
       "md_semi_bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "20px",
         "fontSize": "14px",
         "fontWeight": 600
       },
       "md_bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "20px",
         "fontSize": "14px",
         "fontWeight": 700
       },
       "lg": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "24px",
         "fontSize": "16px",
         "fontWeight": 400
       },
       "lg_regular": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "24px",
         "fontSize": "16px",
         "fontWeight": 400
       },
       "lg_semi_bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "24px",
         "fontSize": "16px",
         "fontWeight": 600
       },
       "lg_bold": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "lineHeight": "24px",
         "fontSize": "16px",
         "fontWeight": 700

@@ -156,7 +156,7 @@ export class GuxActionButton {
 
   private focusPopupList(): void {
     afterNextRenderTimeout(() => {
-      this.listElement.focus && this.listElement.focus();
+      this.listElement?.focus();
     });
   }
 

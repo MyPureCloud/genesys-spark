@@ -1,6 +1,6 @@
 @mixin tokens {
   --gse-core-spacing-5xs: 2px;
-  --gse-core-spacing-6xs: 1px; /* Used mostly for the foucs offset. */
+  --gse-core-spacing-6xs: 1px;
   --gse-core-borderRadius-xs: 2px;
   --gse-core-color-pepper-100: #f9d3da;
   --gse-core-color-pepper-200: #f3a7b5;
@@ -111,6 +111,8 @@
   --gse-core-colorLegacy-yellow-80: #fcd276;
   --gse-core-colorLegacy-yellow-90: #fce5b1;
   --gse-core-colorLegacy-yellow-100: #fdf8ec;
+  --gse-core-colorLegacy-yellow-110: #fff793;
+  --gse-core-colorLegacy-yellow-120: #ffef27;
   --gse-core-colorLegacy-secondary-yellowGreen: #ddd933;
   --gse-core-colorLegacy-secondary-oliveGreen: #868c1e;
   --gse-core-colorLegacy-secondary-aquaGreen: #1da8b3;
@@ -121,16 +123,16 @@
   --gse-core-colorLegacy-secondary-electricPurple: #8452cf;
   --gse-core-colorLegacy-secondary-genesysBlue: #75a8ff;
   --gse-core-colorLegacy-secondary-navy: #203b73;
-  --gse-core-colorLegacy-dataVisualization-yellowGreen: lch(95.5 22.7 98.8);
-  --gse-core-colorLegacy-dataVisualization-oliveGreen: lch(86.9 16.3 103);
-  --gse-core-colorLegacy-dataVisualization-aquaGreen: lch(88.8 11 206);
-  --gse-core-colorLegacy-dataVisualization-pink: lch(92.1 16.4 338);
-  --gse-core-colorLegacy-dataVisualization-fuchsia: lch(85.6 22.8 330);
-  --gse-core-colorLegacy-dataVisualization-lilac: lch(92.5 8.53 288);
-  --gse-core-colorLegacy-dataVisualization-plum: lch(81.7 7.69 295);
-  --gse-core-colorLegacy-dataVisualization-electricPurple: lch(83.7 21.4 305);
-  --gse-core-colorLegacy-dataVisualization-genesysBlue: lch(90.4 14.8 272);
-  --gse-core-colorLegacy-dataVisualization-navy: lch(77.6 10.9 279);
+  --gse-core-colorLegacy-dataVisualization-yellowGreen: #f8f3c6;
+  --gse-core-colorLegacy-dataVisualization-oliveGreen: #dcdbbb;
+  --gse-core-colorLegacy-dataVisualization-aquaGreen: #c7e5e8;
+  --gse-core-colorLegacy-dataVisualization-pink: #ffdff5;
+  --gse-core-colorLegacy-dataVisualization-fuchsia: #f4c9ec;
+  --gse-core-colorLegacy-dataVisualization-lilac: #e9e8f9;
+  --gse-core-colorLegacy-dataVisualization-plum: #cdc9d8;
+  --gse-core-colorLegacy-dataVisualization-electricPurple: #dcc9f2;
+  --gse-core-colorLegacy-dataVisualization-genesysBlue: #d9e4ff;
+  --gse-core-colorLegacy-dataVisualization-navy: #bbbfd4;
   --gse-core-colorLegacy-brand-brandOrange: #ff4f1f;
   --gse-core-colorLegacy-brand-brandTeal: #00ae9e;
   --gse-core-colorLegacy-brand-brandNavy: #23395d;

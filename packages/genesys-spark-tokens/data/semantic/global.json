@@ -3,17 +3,17 @@
     "sm": {
       "regular": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.regular}",
           "fontSize": "{font_size.xs}",
-          "lineHeight": "{line_height.2xs}"
+          "lineHeight": "{line_height.xs}"
         },
         "type": "typography",
         "description": "This is the typography style we use in small bodies of text, like caption, disclaimers, or small prints; we usually pair it with medium or low emphasis colors."
       },
       "link": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.xs}",
           "lineHeight": "{line_height.xs}",
@@ -24,7 +24,7 @@
       },
       "bold": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.bold}",
           "fontSize": "{font_size.xs}",
           "lineHeight": "{line_height.xs}"
@@ -34,7 +34,7 @@
       },
       "semi_bold": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.xs}",
           "lineHeight": "{line_height.xs}"
@@ -46,7 +46,7 @@
     "md": {
       "regular": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.regular}",
           "fontSize": "{font_size.sm}",
           "lineHeight": "{line_height.sm}"
@@ -56,7 +56,7 @@
       },
       "link": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.sm}",
           "lineHeight": "{line_height.sm}",
@@ -67,7 +67,7 @@
       },
       "bold": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.bold}",
           "fontSize": "{font_size.sm}",
           "lineHeight": "{line_height.sm}"
@@ -77,7 +77,7 @@
       },
       "semi_bold": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.sm}",
           "lineHeight": "{line_height.sm}"
@@ -89,7 +89,7 @@
     "lg": {
       "regular": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.regular}",
           "fontSize": "{font_size.md}",
           "lineHeight": "{line_height.md}"
@@ -99,7 +99,7 @@
       },
       "link": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.md}",
           "lineHeight": "{line_height.md}",
@@ -110,7 +110,7 @@
       },
       "bold": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.bold}",
           "fontSize": "{font_size.md}",
           "lineHeight": "{line_height.md}"
@@ -120,7 +120,7 @@
       },
       "semi_bold": {
         "value": {
-          "fontFamily": "{font_family.body}",
+          "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.md}",
           "lineHeight": "{line_height.md}"
@@ -134,7 +134,7 @@
     "xs": {
       "bold": {
         "value": {
-          "fontFamily": "{font_family.headings}",
+          "fontFamily": "{theme.font_family.headings}",
           "fontWeight": "{font_weight.bold}",
           "fontSize": "{font_size.sm}",
           "lineHeight": "{line_height.md}"
@@ -144,7 +144,7 @@
       },
       "semi_bold": {
         "value": {
-          "fontFamily": "{font_family.headings}",
+          "fontFamily": "{theme.font_family.headings}",
           "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.sm}",
           "lineHeight": "{line_height.md}"
@@ -156,7 +156,7 @@
     "sm": {
       "bold": {
         "value": {
-          "fontFamily": "{font_family.headings}",
+          "fontFamily": "{theme.font_family.headings}",
           "fontWeight": "{font_weight.bold}",
           "fontSize": "{font_size.md}",
           "lineHeight": "{line_height.md}"
@@ -166,7 +166,7 @@
       },
       "semi_bold": {
         "value": {
-          "fontFamily": "{font_family.headings}",
+          "fontFamily": "{theme.font_family.headings}",
           "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.md}",
           "lineHeight": "{line_height.md}"
@@ -178,7 +178,7 @@
     "md": {
       "bold": {
         "value": {
-          "fontFamily": "{font_family.headings}",
+          "fontFamily": "{theme.font_family.headings}",
           "fontWeight": "{font_weight.bold}",
           "fontSize": "{font_size.lg}",
           "lineHeight": "{line_height.lg}"
@@ -188,7 +188,7 @@
       },
       "semi_bold": {
         "value": {
-          "fontFamily": "{font_family.headings}",
+          "fontFamily": "{theme.font_family.headings}",
           "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.lg}",
           "lineHeight": "{line_height.lg}"
@@ -200,7 +200,7 @@
     "lg": {
       "bold": {
         "value": {
-          "fontFamily": "{font_family.headings}",
+          "fontFamily": "{theme.font_family.headings}",
           "fontWeight": "{font_weight.bold}",
           "fontSize": "{font_size.xl}",
           "lineHeight": "{line_height.xl}"
@@ -210,7 +210,7 @@
       },
       "semi_bold": {
         "value": {
-          "fontFamily": "{font_family.headings}",
+          "fontFamily": "{theme.font_family.headings}",
           "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.xl}",
           "lineHeight": "{line_height.xl}"
@@ -222,7 +222,7 @@
     "xl": {
       "bold": {
         "value": {
-          "fontFamily": "{font_family.headings}",
+          "fontFamily": "{theme.font_family.headings}",
           "fontWeight": "{font_weight.bold}",
           "fontSize": "{font_size.xxl}",
           "lineHeight": "{line_height.2xl}"
@@ -232,7 +232,7 @@
       },
       "semi_bold": {
         "value": {
-          "fontFamily": "{font_family.headings}",
+          "fontFamily": "{theme.font_family.headings}",
           "fontWeight": "{font_weight.semi_bold}",
           "fontSize": "{font_size.xxl}",
           "lineHeight": "{line_height.2xl}"
@@ -243,7 +243,7 @@
     },
     "overline": {
       "value": {
-        "fontFamily": "{font_family.headings}",
+        "fontFamily": "{theme.font_family.headings}",
         "fontWeight": "{font_weight.semi_bold}",
         "fontSize": "{font_size.xs}",
         "lineHeight": "{line_height.2xs}",
@@ -257,7 +257,7 @@
   "subheading": {
     "bold": {
       "value": {
-        "fontFamily": "{font_family.headings}",
+        "fontFamily": "{theme.font_family.headings}",
         "fontWeight": "{font_weight.bold}",
         "fontSize": "{font_size.sm}",
         "lineHeight": "{line_height.sm}"
@@ -267,7 +267,7 @@
     },
     "semi_bold": {
       "value": {
-        "fontFamily": "{font_family.headings}",
+        "fontFamily": "{theme.font_family.headings}",
         "fontWeight": "{font_weight.semi_bold}",
         "fontSize": "{font_size.sm}",
         "lineHeight": "{line_height.sm}"
@@ -277,7 +277,7 @@
     },
     "regular": {
       "value": {
-        "fontFamily": "{font_family.headings}",
+        "fontFamily": "{theme.font_family.headings}",
         "fontWeight": "{font_weight.regular}",
         "fontSize": "{font_size.sm}",
         "lineHeight": "{line_height.sm}"
@@ -291,10 +291,15 @@
       "value": "{opacity.50}",
       "type": "opacity",
       "description": "The opacity we apply when a component is disabled."
+    },
+    "shroud": {
+      "value": "{opacity.80}",
+      "type": "opacity",
+      "description": "The default opacity for shroud elements like the one on modals."
     }
   },
   "interactive": {
-    "medium": {
+    "md": {
       "size": {
         "value": "{size.lg}",
         "type": "sizing",
@@ -306,14 +311,12 @@
         "description": "The recommended gap between the content inside of a medium-sized interactive component."
       },
       "padding": {
-        "horizontal": {
-          "value": "{spacing.3xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for medium-sized components."
-        }
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The recommended horizontal padding for medium-sized components."
       }
     },
-    "small": {
+    "sm": {
       "size": {
         "value": "{size.md}",
         "type": "sizing",
@@ -325,21 +328,19 @@
         "description": "The recommended gap between the content inside of a small-sized interactive component."
       },
       "padding": {
-        "horizontal": {
-          "value": "{spacing.4xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for small-sized horizontal components."
-        }
+        "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "The recommended horizontal padding for small-sized horizontal components."
       },
       "border_radius": {
-        "value": "{border_radius.interactive.small}",
+        "value": "{theme.border_radius.interactive.small}",
         "type": "borderRadius",
         "description": "The recommended small border-radius for interactive component. Eg Buttons"
       }
     },
-    "large": {
+    "lg": {
       "border_radius": {
-        "value": "{border_radius.interactive.large}",
+        "value": "{theme.border_radius.interactive.large}",
         "type": "borderRadius",
         "description": "The recommended large border-radius for interactive component. Eg Tags"
       },
@@ -349,11 +350,9 @@
         "description": "The recommended gap between the content inside of a medium-sized interactive component."
       },
       "padding": {
-        "horizontal": {
-          "value": "{spacing.2xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for large-sized components."
-        }
+        "value": "{spacing.2xs}",
+        "type": "spacing",
+        "description": "The recommended horizontal padding for large-sized components."
       }
     },
     "edges": {
@@ -364,14 +363,14 @@
       }
     },
     "divider": {
-      "small": {
+      "sm": {
         "border_width": {
           "value": "{border_width.1}",
           "type": "borderWidth",
           "description": "The default border width for the dividers within interactive components, like the ones on an action button."
         }
       },
-      "large": {
+      "lg": {
         "border_width": {
           "value": "{border_width.2}",
           "type": "borderWidth",
@@ -379,53 +378,78 @@
         }
       }
     },
-    "xlarge": {
+    "xl": {
       "gap": {
         "value": "{spacing.2xs}",
         "type": "spacing",
         "description": "The recommended gap between the content inside of a xlarge-sized interactive component."
       },
       "padding": {
-        "horizontal": {
-          "value": "{spacing.xs}",
-          "type": "spacing",
-          "description": "The recommended horizontal padding for xlarge-sized components."
-        }
+        "value": "{spacing.xs}",
+        "type": "spacing",
+        "description": "The recommended horizontal padding for xlarge-sized components."
+      },
+      "size": {
+        "value": "{size.xl}",
+        "type": "sizing",
+        "description": "The recommended size for extra-large-sized interactive components. For example a large button height."
+      },
+      "border_radius": {
+        "value": "{theme.border_radius.interactive.xlarge}",
+        "type": "borderRadius",
+        "description": "The recommended xlarge border-radius for interactive component. Eg handle of the slider"
+      }
+    },
+    "xs": {
+      "size": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "The recommended size for small-sized interactive components. For example small link."
+      },
+      "padding": {
+        "value": "{spacing.5xs}",
+        "type": "spacing",
+        "description": "The recommended padding for extra-small-sized interactive components."
       }
     }
   },
   "focus_outline": {
     "full": {
       "border_radius": {
-        "value": "{border_radius.focus.full}",
+        "value": "{theme.border_radius.focus.full}",
         "type": "borderRadius",
         "description": "The recommended full border-radius for focus. Eg avatar"
       }
     },
-    "xlarge": {
+    "xl": {
       "border_radius": {
-        "value": "{border_radius.focus.xlarge}",
+        "value": "{theme.border_radius.focus.xlarge}",
         "type": "borderRadius",
         "description": "The recommended xlarge border-radius for focus. Eg toggle"
       }
     },
-    "large": {
+    "lg": {
       "border_radius": {
-        "value": "{border_radius.focus.large}",
+        "value": "{theme.border_radius.focus.large}",
         "type": "borderRadius",
         "description": "The recommended large border-radius for focus. Eg segmented control"
       }
     },
-    "medium": {
+    "md": {
       "border_radius": {
-        "value": "{border_radius.focus.medium}",
+        "value": "{theme.border_radius.focus.medium}",
         "type": "borderRadius",
         "description": "The recommended medium border-radius for focus. Eg check box"
+      },
+      "border_width": {
+        "value": "{border_width.2}",
+        "type": "borderWidth",
+        "description": "The recommended width of the focus outline fo medium-sized components, like the stars on a checkbox"
       }
     },
-    "small": {
+    "sm": {
       "border_radius": {
-        "value": "{border_radius.focus.small}",
+        "value": "{theme.border_radius.focus.small}",
         "type": "borderRadius",
         "description": "The recommended small border-radius for focus. Eg input control"
       },
@@ -435,84 +459,142 @@
         "description": "The recommended width of the focus outline fo small-sized components, like the stars on a rating component."
       }
     },
-    "xsmall": {
+    "xs": {
       "border_radius": {
-        "value": "{border_radius.focus.xsmall}",
+        "value": "{theme.border_radius.focus.xsmall}",
         "type": "borderRadius",
         "description": "The recommended xsmall border-radius for focus. Eg icons"
       }
+    },
+    "offset": {
+      "value": "{spacing.6xs}",
+      "type": "spacing"
     }
   },
   "container": {
-    "large": {
+    "lg": {
+      "box_shadow": {
+        "value": "{elevation.high}",
+        "type": "boxShadow",
+        "description": "The recommended box shadow for large containers, like modals or popovers."
+      },
       "border_radius": {
-        "value": "{border_radius.interactive.large}",
+        "value": "{theme.border_radius.interactive.large}",
         "type": "borderRadius",
         "description": "The recommended large border-radius for large containers, like modals."
+      },
+      "gap": {
+        "value": "{spacing.xs}",
+        "type": "spacing",
+        "description": "The recommended gap between items inside a large container, like a modal."
+      },
+      "padding": {
+        "value": "{spacing.md}",
+        "type": "spacing",
+        "description": "The default horizontal padding of a medium-sized container, like a card."
+      },
+      "height": {
+        "value": "{size.xl}",
+        "type": "sizing",
+        "description": "The average recommended height for a cell in the datatable"
+      }
+    },
+    "md": {
+      "box_shadow": {
+        "value": "{elevation.medium}",
+        "type": "boxShadow",
+        "description": "The shadow we used for medium-sized components like elevated cards or menus."
+      },
+      "gap": {
+        "value": "{spacing.2xs}",
+        "type": "spacing",
+        "description": "The recommended medium gap between items inside a container, like the gap between elements inisde a modal."
+      },
+      "border_radius": {
+        "value": "{theme.border_radius.container.medium}",
+        "type": "borderRadius",
+        "description": "The recommended medium border-radius for containers. Eg cards"
+      },
+      "height": {
+        "value": "{size.lg}",
+        "type": "sizing",
+        "description": "The minimmum recommended height for a medium container, like a button bar."
+      },
+      "padding": {
+        "value": "{spacing.xs}",
+        "type": "spacing",
+        "description": "The default horizontal padding of a medium-sized container, like an alert."
+      }
+    },
+    "xl": {
+      "gap": {
+        "value": "{spacing.md}",
+        "type": "spacing",
+        "description": "The recommended gap between items inside a xlarge container, like progress and loading."
       },
       "padding": {
         "value": "{spacing.lg}",
         "type": "spacing",
         "description": "We uses this spacing as the default padding for large containers like modals."
       },
-      "gap": {
-        "value": "{spacing.xs}",
-        "type": "spacing",
-        "description": "The recommended gap between items inside a large container, like a modal."
+      "height": {
+        "value": "{size.2xl}",
+        "type": "sizing",
+        "description": "The average recommended height for the header of a calendar"
       }
     },
-    "small": {
+    "sm": {
+      "box_shadow": {
+        "value": "{elevation.low}",
+        "type": "boxShadow",
+        "description": "The shadow we used for small-sized components like tooltips."
+      },
       "border_radius": {
-        "value": "{border_radius.interactive.small}",
+        "value": "{theme.border_radius.interactive.small}",
         "type": "borderRadius",
         "description": "The recommended small border-radius for containers. Eg in-line alert"
       },
       "gap": {
         "value": "{spacing.3xs}",
         "type": "spacing",
-        "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
+        "description": "The recommended medium gap between items inside a container, like the gap between elements inisde an alert."
       },
-      "horizontal_padding": {
+      "padding": {
         "value": "{spacing.2xs}",
         "type": "spacing",
         "description": "The default padding of a small-sized container, like a tooltip."
       },
-      "vertical_padding": {
-        "value": "{spacing.3xs}",
-        "type": "spacing",
-        "description": "The default vertical padding of a small-sized container, like a tooltip."
-      },
       "min_height": {
         "value": "{size.sm}",
         "type": "sizing",
-        "description": "The minimum height recommended for a small container, like a tag."
+        "description": "The minimum height recommended for a small container, like a tooltip."
       },
       "height": {
         "value": "{size.lg}",
         "type": "sizing",
-        "description": "The average recommended height for a small container, like a tag."
+        "description": "The average recommended height for a small container, like a tooltip."
       }
     },
-    "medium": {
-      "border_radius": {
-        "value": "{border_radius.container.medium}",
-        "type": "borderRadius",
-        "description": "The recommended medium border-radius for containers. Eg cards"
-      },
-      "horizontal_padding": {
-        "value": "{spacing.md}",
+    "xs": {
+      "gap": {
+        "value": "{spacing.4xs}",
         "type": "spacing",
-        "description": "The default horizontal padding of a medium-sized container, like a card."
+        "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
       },
-      "vertical_padding": {
-        "value": "{spacing.md}",
+      "padding": {
+        "value": "{spacing.3xs}",
         "type": "spacing",
-        "description": "The default vertical padding of a medium-sized container, like a tooltip."
+        "description": "The default padding of a  extra small-sized container, like the container of an eyebrow title."
       },
       "min_height": {
-        "value": "{size.lg}",
+        "value": "{size.xs}",
         "type": "sizing",
-        "description": "The minimmum recommended height for a medium container, like a tag."
+        "description": "The minimum height recommended for a small container, like a tag."
+      },
+      "height": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "The average recommended height for a small container, like a tag."
       }
     },
     "edges": {
@@ -529,56 +611,65 @@
         "description": "The recommended border width for the dividers within containers, like cards or menus or popovers."
       }
     },
-    "xsmall": {
+    "2xs": {
       "gap": {
-        "value": "{spacing.3xs}",
+        "value": "{spacing.5xs}",
         "type": "spacing",
-        "description": "The recommended gap between items inside a container, like the gap between elements inisde a card."
+        "description": "The recommended xsmall gap between items inside a container, like the gap between elements inside a tag."
       },
-      "horizontal_padding": {
-        "value": "{spacing.3xs}",
+      "padding": {
+        "value": "{spacing.5xs}",
         "type": "spacing",
-        "description": "The default padding of a  extra small-sized container, like the container of an eyebrow title."
+        "description": "The default padding of a our smallest containers, like the container of an tag."
       },
-      "vertical_padding": {
-        "value": "{spacing.4xs}",
-        "type": "spacing",
-        "description": "The default padding of a  extra small-sized container, like the container of an eyebrow title."
+      "size": {
+        "value": "{size.2xs}",
+        "type": "sizing",
+        "description": "The average recommended height for a small container, like a tag."
+      }
+    },
+    "full": {
+      "border_radius": {
+        "value": "{border_radius.full}",
+        "type": "borderRadius",
+        "description": "The recomended border radius for circle-shaped containers."
+      }
+    },
+    "3xs": {
+      "size": {
+        "value": "{size.3xs}",
+        "type": "sizing"
+      }
+    },
+    "4xs": {
+      "size": {
+        "value": "{size.4xs}",
+        "type": "sizing"
       }
     }
   },
   "form_control": {
     "text_input": {
-      "large": {
+      "lg": {
         "border_radius": {
-          "value": "{border_radius.form_control.input.large}",
+          "value": "{theme.border_radius.form_control.input.large}",
           "type": "borderRadius",
           "description": "The recommended large border-radius for inputs"
         }
       },
-      "small": {
+      "sm": {
         "border_radius": {
-          "value": "{border_radius.form_control.input.small}",
+          "value": "{theme.border_radius.form_control.input.small}",
           "type": "borderRadius",
           "description": "The recommended small border-radius for inputs"
         }
       },
-      "medium": {
+      "md": {
         "border_radius": {
-          "value": "{border_radius.form_control.input.medium}",
+          "value": "{theme.border_radius.form_control.input.medium}",
           "type": "borderRadius",
           "description": "The recommended medium border-radius for inputs"
         }
-      },
-      "padding": {
-        "value": "{spacing.3xs} {spacing.2xs}",
-        "type": "spacing",
-        "description": "The default padding for inputs inside a form control."
-      },
-      "gap": {
-        "value": "{spacing.2xs}",
-        "type": "spacing",
-        "description": "The default gap for between elements inside an input. For example, the space between a placeholder and an icon inside and input."
       },
       "edges": {
         "border_width": {
@@ -595,57 +686,132 @@
         }
       }
     },
-    "form_field": {
+    "field": {
+      "text_input": {
+        "small": {
+          "padding": {
+            "value": "{spacing.3xs}",
+            "type": "spacing",
+            "description": "The default vertical padding for inputs inside a form control."
+          }
+        },
+        "gap": {
+          "value": "{spacing.2xs}",
+          "type": "spacing",
+          "description": "The default gap for between elements inside an input. For example, the space between a placeholder and an icon inside and input."
+        },
+        "md": {
+          "height": {
+            "value": "{size.lg}",
+            "type": "sizing"
+          }
+        },
+        "medium": {
+          "padding": {
+            "value": "{spacing.2xs}",
+            "type": "spacing",
+            "description": "The recommended horizontal padding for text inputs."
+          }
+        },
+        "min_width": {
+          "value": "{size.2xl}",
+          "type": "sizing"
+        },
+        "lg": {
+          "height": {
+            "value": "{size.3xl}",
+            "type": "sizing"
+          }
+        }
+      },
       "gap": {
         "value": "{spacing.4xs}",
         "type": "spacing",
-        "description": "The default gap for between elements inside a form field, like textfields, text areas."
-      }
-    }
-  },
-  "contanier": {
-    "large": {
-      "box_shadow": {
-        "value": "{elevation.high}",
-        "type": "boxShadow",
-        "description": "The recommended box shadow for large containers, like modals or popovers."
+        "description": "The default gap for between elements inside a form field, for example, the space between a label and its input or its helper text."
+      },
+      "padding": {
+        "value": "{spacing.3xs}",
+        "type": "spacing",
+        "description": "The default gap for between elements inside a form field, for example, the space between a label and its input or its helper text."
+      },
+      "click_input": {
+        "gap": {
+          "value": "{spacing.3xs}",
+          "type": "spacing",
+          "description": "The default gap for between elements inside a form group, like checkboxes, radio buttons."
+        },
+        "padding": {
+          "value": "{spacing.4xs}",
+          "type": "spacing",
+          "description": "The default padding for between elements inside a form group, like checkboxes, radio buttons."
+        },
+        "md": {
+          "size": {
+            "value": "{size.lg}",
+            "type": "sizing",
+            "description": "The recommended height form medium-size click inputs, like checkboxes or radio buttons."
+          }
+        },
+        "sm": {
+          "size": {
+            "value": "{size.xs}",
+            "type": "sizing",
+            "description": "The recommended height for leaner click inputs, like toggles."
+          }
+        }
+      },
+      "grouped_input": {
+        "gap": {
+          "value": "{spacing.3xs}",
+          "type": "spacing",
+          "description": "The recommended gap between groped inputs, like the sapce inbetween checkboxes or radio buttons."
+        }
       }
     },
-    "medium": {
-      "box_shadow": {
-        "value": "{elevation.medium}",
-        "type": "boxShadow",
-        "description": "The shadow we used for medium-sized components like elevated cards."
-      }
-    },
-    "small": {
-      "box_shadow": {
-        "value": "{elevation.low}",
-        "type": "boxShadow",
-        "description": "The shadow we used for small-sized components like tooltips."
+    "click_input": {
+      "handle": {
+        "border_width": {
+          "value": "{border_width.2}",
+          "type": "borderWidth",
+          "description": "The recommended border width for handles on click inputs, like the habdle of a toggle."
+        }
       }
     }
   },
   "assets": {
-    "large": {
+    "lg": {
       "size": {
         "value": "{size.lg}",
         "type": "sizing",
         "description": "The recommended size of large-sized for styles, for example icons."
       }
     },
-    "medium": {
+    "md": {
       "size": {
         "value": "{size.md}",
         "type": "sizing",
         "description": "The recommended size of medium-sized for styles, for example medium icons."
       }
     },
-    "small": {
+    "sm": {
       "size": {
         "value": "{size.xs}",
         "type": "sizing",
         "description": "The recommended size of small-sized for styles, for example small icons."
+      }
+    },
+    "xl": {
+      "size": {
+        "value": "{size.2xl}",
+        "type": "sizing",
+        "description": "The recommended size of xlarge-sized for styles, for example avatar"
+      }
+    },
+    "xs": {
+      "size": {
+        "value": "{size.3xs}",
+        "type": "sizing",
+        "description": "The recommended size of small-sized for assets, for example super small icons."
       }
     }
   },
@@ -677,6 +843,20 @@
       "margin": {
         "value": "{spacing.3xs}",
         "type": "spacing"
+      }
+    },
+    "track": {
+      "height": {
+        "value": "{size.4xs}",
+        "type": "sizing",
+        "description": "The height for track elements, like the track of the slider."
+      }
+    },
+    "indicator": {
+      "width": {
+        "value": "{size.5xs}",
+        "type": "sizing",
+        "description": "The recommended divider indicator width, used for the indicators of active tabs, for example"
       }
     }
   }

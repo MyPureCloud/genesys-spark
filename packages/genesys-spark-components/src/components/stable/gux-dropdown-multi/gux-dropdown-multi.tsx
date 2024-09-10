@@ -152,6 +152,13 @@ export class GuxDropdownMulti {
     }
   }
 
+  @Watch('disabled')
+  watchDisabled(disabled: boolean) {
+    if (disabled) {
+      this.expanded = false;
+    }
+  }
+
   @Watch('value')
   watchValue(newValue: string) {
     this.validateValue(newValue, this.listboxElement);
@@ -526,6 +533,7 @@ export class GuxDropdownMulti {
                   onInput={this.filterInput.bind(this)}
                   onKeyDown={this.filterKeydown.bind(this)}
                   onKeyUp={this.filterKeyup.bind(this)}
+                  disabled={this.disabled}
                 ></input>
               </div>
             </div>
@@ -602,7 +610,7 @@ export class GuxDropdownMulti {
       <div class="gux-dropdown-container">
         <gux-popup
           expanded={this.expanded && (!this.loading || this.isFilterable())}
-          disabled={this.disabled}
+          disabled={this.disabled || (this.loading && !this.isFilterable())}
           exceedTargetWidth={this.exceedTargetWidth}
         >
           {this.renderTarget()}
