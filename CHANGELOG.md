@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.81.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.1...v4.81.2) (2024-09-10)
+
+
+### Bug Fixes
+
+* **other:** fix new eslint errors ([a9d445f](https://github.com/MyPureCloud/genesys-spark/commit/a9d445fe99245ad389efceca3038a116ed99f068))
+
 ### [4.81.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.0...v4.81.1) (2024-09-07)
 
 
