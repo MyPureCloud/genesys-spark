@@ -93,9 +93,9 @@ function browserHasRegionData(localeString: string): boolean {
 function browserLocaleOverride(localeString: string): boolean {
   switch (localeString.toLowerCase()) {
     case 'zh-cn':
-      return !!navigator.language?.toLowerCase().startsWith('zh-sg');
+      return Boolean(navigator.language?.toLowerCase().startsWith('zh-sg'));
     case 'zh-tw':
-      return !!navigator.language?.toLowerCase().startsWith('zh-hk');
+      return Boolean(navigator.language?.toLowerCase().startsWith('zh-hk'));
     default:
       return false;
   }
