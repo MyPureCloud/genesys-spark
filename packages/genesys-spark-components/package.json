@@ -60,12 +60,12 @@
   },
   "types": "dist/types/index.d.ts",
   "dependencies": {
-    "@floating-ui/dom": "1.6.3",
+    "@floating-ui/dom": "1.6.10",
     "@vvo/tzdb": "6.125.0",
     "google-libphonenumber": "3.2.34",
     "intl-messageformat": "10.5.4",
     "requestanimationframe-timer": "3.0.3",
-    "sortablejs": "1.15.2"
+    "sortablejs": "1.15.3"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -79,8 +79,8 @@
     "@types/puppeteer": "^5.4.7",
     "@types/resize-observer-browser": "^0.1.9",
     "@types/sortablejs": "^1.15.8",
-    "@typescript-eslint/eslint-plugin": "^8.4.0",
-    "@typescript-eslint/parser": "^8.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
     "axe-core": "^4.10.0",
     "axe-live": "^1.0.1",
     "eslint": "^8.57.0",
@@ -97,7 +97,7 @@
     "jest-environment-node": "^29.7.0",
     "jest-junit": "^16.0.0",
     "jest-silent-reporter": "^0.6.0",
-    "jsdom": "^22.1.0",
+    "jsdom": "^25.0.0",
     "lint-staged": "^15.2.10",
     "marked": "^14.1.2",
     "mutation-observer": "^1.0.3",

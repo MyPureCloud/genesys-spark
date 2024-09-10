@@ -52,8 +52,8 @@
   "types": "dist/types/index.d.ts",
   "dependencies": {
     "vega": "5.30.0",
-    "vega-embed": "6.25.0",
-    "vega-lite": "5.19.0"
+    "vega-embed": "6.26.0",
+    "vega-lite": "5.21.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -64,8 +64,8 @@
     "@types/jest": "^29.5.12",
     "@types/new-relic-browser": "^0.1118.2",
     "@types/puppeteer": "^5.4.7",
-    "@typescript-eslint/eslint-plugin": "^8.4.0",
-    "@typescript-eslint/parser": "^8.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
     "axe-core": "^4.10.0",
     "axe-live": "^1.0.1",
     "eslint": "^8.57.0",
@@ -82,7 +82,7 @@
     "jest-environment-node": "^29.7.0",
     "jest-junit": "^16.0.0",
     "jest-silent-reporter": "^0.6.0",
-    "jsdom": "^22.1.0",
+    "jsdom": "^25.0.0",
     "lint-staged": "^15.2.10",
     "marked": "^14.1.2",
     "node-fetch": "^3.3.2",
