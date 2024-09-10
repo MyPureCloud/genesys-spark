@@ -1,17 +1,26 @@
 <h1>gux-popover</h1>
+
 <div class="scroll-container">
   <div class="scroll-interior">
-    <div id="popover-target">Example Element</div>
+    <gux-button
+      id="popover-target"
+      accent="primary"
+      aria-describedby="popover-content-1"
+      onclick="notify(event)"
+    >
+      Click to open popover</gux-button
+    >
+
     <gux-popover
       id="popover-example"
       position="top"
       for="popover-target"
-      is-open
+      is-open="false"
     >
       <span slot="title">Title</span>
       <div class="popover-content-wrapper">
         <div>Popover Content</div>
-        <div class="popover-content">
+        <div id="popover-content-1" class="popover-content">
           <gux-button accent="ghost" onclick="notify(event)">
             Action 3
           </gux-button>
@@ -32,7 +41,7 @@
   const popoverTarget = document.getElementById('popover-target');
   const popoverExample = document.getElementById('popover-example');
 
-  popoverTarget.addEventListener('mouseover', () => {
+  popoverTarget.addEventListener('click', () => {
     popoverExample.isOpen = true;
   });
 })()"
@@ -67,7 +76,6 @@
 
   #popover-target {
     position: absolute;
-    top: 250px;
     left: 250px;
     display: inline-block;
     padding: 10px 15px;

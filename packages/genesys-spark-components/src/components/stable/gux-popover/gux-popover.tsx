@@ -251,6 +251,7 @@ export class GuxPopover {
           'gux-hidden': !this.isOpen,
           'gux-popover-wrapper': true
         }}
+        role="dialog"
         data-placement
       >
         <div
