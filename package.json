@@ -11,7 +11,7 @@
     "create-dist-folder": "node ./scripts/create-dist-folder.js",
     "create-manifest": "node ./scripts/create-manifest.js",
     "current-version": "cross-var \"echo $npm_package_version\"",
-    "dev": "run-pty start.json",
+    "dev": "npm start",
     "dev.examples": "npm run dev --workspace=web-apps/genesys-spark-examples",
     "dev.gsc": "npm run dev --workspace=packages/genesys-spark-components",
     "dev.gscc": "npm run dev --workspace=packages/genesys-spark-chart-components",
@@ -75,7 +75,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
     "prettier-config-genesys-spark-components": "^0.0.1",
-    "run-pty": "^4.1.0",
+    "run-pty": "^5.0.0",
     "standard-version": "^9.5.0"
   },
   "prettier": "prettier-config-genesys-spark-components",
