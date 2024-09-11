@@ -17,21 +17,23 @@ export default class EventsPanel {
   }
 
   updateFromTree(ast) {
-    let descriptionsEl = (this.descriptions = emptyElement(this.descriptions));
+    const descriptionsEl = (this.descriptions = emptyElement(
+      this.descriptions
+    ));
     this.notificationPanel = emptyElement(this.notificationPanel);
-    let components = this.traverseTree(ast);
+    const components = this.traverseTree(ast);
 
     components.forEach(component => {
-      let elements = this.targetElement.getElementsByTagName(component);
-      let componentSpec = getComponentSpec(component);
-      let events = componentSpec.events || [];
+      const elements = this.targetElement.getElementsByTagName(component);
+      const componentSpec = getComponentSpec(component);
+      const events = componentSpec.events || [];
 
       Object.entries(events).forEach(([name, description]) => {
         descriptionsEl.appendChild(toHTML(`<dt>${component} [${name}]</dt>`));
         descriptionsEl.appendChild(toHTML(`<dd>${description}</dd>`));
 
         if (!name.startsWith('internal')) {
-          for (let element of elements) {
+          for (const element of elements) {
             element.addEventListener(name, this.notifyEvent.bind(this));
           }
         }
@@ -40,7 +42,7 @@ export default class EventsPanel {
   }
 
   notifyEvent(e, text) {
-    let notificationPanelEl = this.notificationPanel;
+    const notificationPanelEl = this.notificationPanel;
     const detail = e ? e.detail : e;
     const target = e ? e.currentTarget : '';
 
@@ -62,7 +64,7 @@ export default class EventsPanel {
 
   traverseTree(root) {
     let current;
-    let components = new Set();
+    const components = new Set();
     let queue = [root];
 
     while (queue.length > 0) {

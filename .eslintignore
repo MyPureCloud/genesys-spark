@@ -1,9 +1,0 @@
-dist/
-node_modules/
-packages/
-playground/
-playgrounds/
-shared-configs/
-web-apps/
-
-manifest.json

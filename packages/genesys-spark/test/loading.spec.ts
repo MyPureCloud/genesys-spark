@@ -85,7 +85,7 @@ describe('The loading module', () => {
 
     beforeEach(() => {
       documentFonts = [];
-      //@ts-ignore - needed to be able to stub out font API
+      //@ts-expect-error - needed to be able to stub out font API
       document.fonts = documentFonts;
     });
 

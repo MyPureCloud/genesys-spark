@@ -25,7 +25,7 @@ exports.generateIconSelectHTML = function generateIconSelectHTML(paths) {
           <option value="unknown">unknown</option>
   `;
 
-  for (let iconName of iconNames) {
+  for (const iconName of iconNames) {
     output += `<option value="${iconName}">${iconName}</option>`;
   }
 

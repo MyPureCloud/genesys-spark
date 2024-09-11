@@ -1,7 +1,7 @@
 declare global {
   // IS_DEV_MODE is rewritten by @rollup/plugin-replace. This definition lets
   // our typescript file typecheck.
-  var IS_DEV_MODE: boolean;
+  var IS_DEV_MODE: boolean; // eslint-disable-line no-var
 }
 
 // Default domain to load assets from

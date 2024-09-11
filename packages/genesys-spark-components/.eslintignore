@@ -1,7 +1,0 @@
-node_modules/
-build/
-dist/
-src/components/**/*.md
-src/components.d.ts
-src/components/legacy/
-scripts/generate-component-data.js

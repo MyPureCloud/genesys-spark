@@ -90,8 +90,8 @@ describe('The hosts module', () => {
  * See: https://github.com/jestjs/jest/issues/5124
  */
 function setLocation(location: string) {
-  //@ts-ignore
+  //@ts-expect-error - needed to be able to stub out location API
   delete window.location;
-  //@ts-ignore
+  //@ts-expect-error - needed to be able to stub out location API
   window.location = new URL(location);
 }

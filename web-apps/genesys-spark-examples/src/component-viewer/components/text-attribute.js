@@ -2,10 +2,10 @@ import { toHTML } from '../../utils/to-html';
 import { debounce } from '../../utils/debounce';
 
 export const textAttribute = (name, astNode, parent, renderCallback) => {
-  let matchingAttr = astNode.attrs.find(a => a.name === name);
-  let value = matchingAttr ? matchingAttr.value : '';
+  const matchingAttr = astNode.attrs.find(a => a.name === name);
+  const value = matchingAttr ? matchingAttr.value : '';
 
-  let element = toHTML(`
+  const element = toHTML(`
     <gux-form-field-text-like>
       <input slot="input" type="text" value="${value}" />
       <label slot="label">${name}:</label>
@@ -14,7 +14,7 @@ export const textAttribute = (name, astNode, parent, renderCallback) => {
   element.addEventListener(
     'input',
     debounce(event => {
-      let value = event.target.value;
+      const value = event.target.value;
       if (matchingAttr) {
         matchingAttr.value = value;
       } else if (value) {

@@ -7,8 +7,8 @@ const __dirname = dirname(__filename);
 
 // get a list of files in the genesys-spark utils folder
 function utilsFilesList() {
-  let list = readdirSync(join(__dirname, `../../genesys-spark/src/utils`));
-  let utilFiles = [];
+  const list = readdirSync(join(__dirname, `../../genesys-spark/src/utils`));
+  const utilFiles = [];
   list.forEach(result => {
     utilFiles.push(result);
   });

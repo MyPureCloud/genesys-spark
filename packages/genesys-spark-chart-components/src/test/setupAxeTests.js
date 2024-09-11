@@ -1,11 +1,3 @@
-/* eslint-env jest, node */
-
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/typedef */
-
 global.beforeEach(() => {
   expect.extend({
     toHaveNoViolations(axeViolations, axeScanDetails) {
@@ -15,10 +7,10 @@ global.beforeEach(() => {
 });
 
 function toHaveNoViolations(axeViolations, axeScanDetails) {
-  let violations = [];
+  const violations = [];
 
   axeViolations.forEach(violation => {
-    let violationTargets = [];
+    const violationTargets = [];
     violation.nodes.forEach(violationInstance => {
       let excludedElement = false;
       axeScanDetails.axeExclusions.forEach(exclusion => {
@@ -46,7 +38,7 @@ function toHaveNoViolations(axeViolations, axeScanDetails) {
 function createViolationMessage(violations, axeScanDetails) {
   let violationMessage = '';
   let elementMessage = '';
-  let axeContextMessage = axeScanDetails.axeScanContext
+  const axeContextMessage = axeScanDetails.axeScanContext
     ? `Axe scan context:\n${axeScanDetails.axeScanContext}\n`
     : '';
   violations.forEach(violation => {

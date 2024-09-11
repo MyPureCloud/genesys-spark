@@ -5,7 +5,7 @@ const path = require('path');
 const prettier = require('prettier');
 
 const svgExtensionRegex = new RegExp('.svg$', 'i');
-let variants = [];
+const variants = [];
 
 const getAllVariants = directory => {
   const fileList = fs.readdirSync(directory);
