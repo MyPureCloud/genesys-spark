@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.81.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.2...v4.81.3) (2024-09-11)
+
+
+### Bug Fixes
+
+* **pagination:** Ellipsis button translation ([#593](https://github.com/MyPureCloud/genesys-spark/issues/593)) ([8803483](https://github.com/MyPureCloud/genesys-spark/commit/8803483774d40adb7d79af589689497ca7521cd2))
+* **tooltip-beta:** track base tooltip role in tooltip-beta ([#576](https://github.com/MyPureCloud/genesys-spark/issues/576)) ([02eec16](https://github.com/MyPureCloud/genesys-spark/commit/02eec160144035c966987543b189ab6fb6546b8c))
+
 ### [4.81.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.1...v4.81.2) (2024-09-10)
 
 
