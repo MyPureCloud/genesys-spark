@@ -6,6 +6,11 @@ exports[`gux-avatar #render component with valid markup 1`] = `
     <button aria-label="Change profile photo" class="gux-change-photo">
       <gux-icon class="gux-change-photo-icon" decorative="" icon-name="fa/camera-solid" size="small"></gux-icon>
       <slot name="avatar"></slot>
+      <gux-tooltip-beta placement="top">
+        <div slot="content">
+          Change profile photo
+        </div>
+      </gux-tooltip-beta>
     </button>
   </mock:shadow-root>
   <gux-avatar-beta name="Conor Darcy" slot="avatar"></gux-avatar-beta>
