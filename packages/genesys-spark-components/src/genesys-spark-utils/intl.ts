@@ -84,9 +84,21 @@ export function determineDisplayLocale(
  */
 function browserHasRegionData(localeString: string): boolean {
   return (
-    localeString.length == 2 &&
-    navigator.language?.startsWith(`${localeString}-`)
+    browserLocaleOverride(localeString) ||
+    (localeString.length == 2 &&
+      navigator.language?.startsWith(`${localeString}-`))
   );
+}
+
+function browserLocaleOverride(localeString: string): boolean {
+  switch (localeString.toLowerCase()) {
+    case 'zh-cn':
+      return Boolean(navigator.language?.toLowerCase().startsWith('zh-sg'));
+    case 'zh-tw':
+      return Boolean(navigator.language?.toLowerCase().startsWith('zh-hk'));
+    default:
+      return false;
+  }
 }
 
 export function getFormat(locale: string): string {
