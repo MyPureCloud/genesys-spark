@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.82.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.3...v4.82.0) (2024-09-12)
+
+
+### Features
+
+* **avatar:** add tooltip ([#594](https://github.com/MyPureCloud/genesys-spark/issues/594)) ([a5e3bf7](https://github.com/MyPureCloud/genesys-spark/commit/a5e3bf78fb74395ad1eb87002523c7908310aebf))
+
 ### [4.81.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.2...v4.81.3) (2024-09-11)
 
 
