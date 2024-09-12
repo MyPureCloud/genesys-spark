@@ -2,6 +2,6 @@
 
 exports[`gux-list-divider #render should render component as expected (1) 1`] = `
 <gux-list-divider role="presentation">
-  <mock:shadow-root></mock:shadow-root>
+  <template shadowrootmode="open"></template>
 </gux-list-divider>
 `;

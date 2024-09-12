@@ -2,7 +2,7 @@
 
 exports[`gux-form-field-radio #render should render component as expected (1) 1`] = `
 <gux-selector-card-beta variant="simple">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disabled gux-selector-card gux-simple">
       <div class="gux-content">
         <div class="gux-icon">
@@ -17,7 +17,7 @@ exports[`gux-form-field-radio #render should render component as expected (1) 1`
         </span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="second" slot="label">
     Card Label
   </label>
@@ -32,7 +32,7 @@ exports[`gux-form-field-radio #render should render component as expected (1) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (2) 1`] = `
 <gux-selector-card-beta variant="simple">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disabled gux-selector-card gux-simple">
       <div class="gux-content">
         <div class="gux-icon">
@@ -47,7 +47,7 @@ exports[`gux-form-field-radio #render should render component as expected (2) 1`
         </span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="third" slot="label">
     Card Label
   </label>
@@ -58,7 +58,7 @@ exports[`gux-form-field-radio #render should render component as expected (2) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (3) 1`] = `
 <gux-selector-card-beta variant="simple">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-selector-card gux-simple">
       <div class="gux-content">
         <div class="gux-icon">
@@ -73,7 +73,7 @@ exports[`gux-form-field-radio #render should render component as expected (3) 1`
         </span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="fourth" slot="label">
     A longer card label example
   </label>
@@ -84,7 +84,7 @@ exports[`gux-form-field-radio #render should render component as expected (3) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (4) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
@@ -100,7 +100,7 @@ exports[`gux-form-field-radio #render should render component as expected (4) 1`
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="fourth" slot="label">
     A longer card label example. This can span up to 2 lines.
   </label>
@@ -117,7 +117,7 @@ exports[`gux-form-field-radio #render should render component as expected (4) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (5) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-disabled gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
@@ -133,7 +133,7 @@ exports[`gux-form-field-radio #render should render component as expected (5) 1`
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="third" slot="label">
     Card Label
   </label>
@@ -150,7 +150,7 @@ exports[`gux-form-field-radio #render should render component as expected (5) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (6) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-disabled gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
@@ -166,7 +166,7 @@ exports[`gux-form-field-radio #render should render component as expected (6) 1`
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="second" slot="label">
     Card Label
   </label>
@@ -184,7 +184,7 @@ exports[`gux-form-field-radio #render should render component as expected (6) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (7) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
@@ -200,7 +200,7 @@ exports[`gux-form-field-radio #render should render component as expected (7) 1`
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="first" slot="label">
     Card label
   </label>
@@ -217,7 +217,7 @@ exports[`gux-form-field-radio #render should render component as expected (7) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (8) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
@@ -233,7 +233,7 @@ exports[`gux-form-field-radio #render should render component as expected (8) 1`
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="first" slot="label">
     Card label
   </label>
@@ -247,7 +247,7 @@ exports[`gux-form-field-radio #render should render component as expected (8) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (9) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
@@ -263,7 +263,7 @@ exports[`gux-form-field-radio #render should render component as expected (9) 1`
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="first" slot="label">
     Card label
   </label>
@@ -277,7 +277,7 @@ exports[`gux-form-field-radio #render should render component as expected (9) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (10) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
@@ -293,7 +293,7 @@ exports[`gux-form-field-radio #render should render component as expected (10) 1
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="gux-form-field-input-i" slot="label">
     A longer card label example. This can span up to 2 lines.
   </label>
@@ -310,7 +310,7 @@ exports[`gux-form-field-radio #render should render component as expected (10) 1
 
 exports[`gux-form-field-radio #render should render component as expected (11) 1`] = `
 <gux-selector-card-beta variant="simple">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-selector-card gux-simple">
       <div class="gux-content">
         <div class="gux-icon">
@@ -325,7 +325,7 @@ exports[`gux-form-field-radio #render should render component as expected (11) 1
         </span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="gux-form-field-input-i" slot="label">
     Card label
   </label>

@@ -2,26 +2,26 @@
 
 exports[`gux-truncate #render should render component as expected (1) 1`] = `
 <gux-truncate>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div>
       <span class="gux-truncate-slot-container">
         <slot></slot>
       </span>
     </div>
-  </mock:shadow-root>
+  </template>
   Some text to truncate
 </gux-truncate>
 `;
 
 exports[`gux-truncate #render should render component as expected (2) 1`] = `
 <gux-truncate>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div>
       <span class="gux-truncate-slot-container">
         <slot></slot>
       </span>
     </div>
-  </mock:shadow-root>
+  </template>
   <span>
     Some text to truncate in a span
   </span>
@@ -30,13 +30,13 @@ exports[`gux-truncate #render should render component as expected (2) 1`] = `
 
 exports[`gux-truncate #render should render component as expected (3) 1`] = `
 <gux-truncate>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div>
       <span class="gux-truncate-slot-container">
         <slot></slot>
       </span>
     </div>
-  </mock:shadow-root>
+  </template>
   <div>
     Div
     <span>
@@ -49,13 +49,13 @@ exports[`gux-truncate #render should render component as expected (3) 1`] = `
 
 exports[`gux-truncate #render should render component as expected (4) 1`] = `
 <gux-truncate>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div>
       <span class="gux-truncate-slot-container">
         <slot></slot>
       </span>
     </div>
-  </mock:shadow-root>
+  </template>
   This is a long text that should be truncated after three lines of wrapped text
 </gux-truncate>
 `;

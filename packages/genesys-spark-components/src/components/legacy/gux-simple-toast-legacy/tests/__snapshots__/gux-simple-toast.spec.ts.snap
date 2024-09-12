@@ -2,7 +2,7 @@
 
 exports[`gux-simple-toast-legacy #render should render alert simple toast 1`] = `
 <gux-simple-toast-legacy accent="alert">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-alert gux-icon">
       <slot name="icon"></slot>
     </div>
@@ -10,7 +10,7 @@ exports[`gux-simple-toast-legacy #render should render alert simple toast 1`] = 
       <slot name="message"></slot>
     </gux-truncate>
     <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="message">
     This is the message
@@ -20,7 +20,7 @@ exports[`gux-simple-toast-legacy #render should render alert simple toast 1`] = 
 
 exports[`gux-simple-toast-legacy #render should render neutral simple toast 1`] = `
 <gux-simple-toast-legacy accent="neutral">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-icon gux-neutral">
       <slot name="icon"></slot>
     </div>
@@ -28,7 +28,7 @@ exports[`gux-simple-toast-legacy #render should render neutral simple toast 1`] 
       <slot name="message"></slot>
     </gux-truncate>
     <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="message">
     This is the message
@@ -38,7 +38,7 @@ exports[`gux-simple-toast-legacy #render should render neutral simple toast 1`] 
 
 exports[`gux-simple-toast-legacy #render should render positive simple toast 1`] = `
 <gux-simple-toast-legacy accent="positive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-icon gux-positive">
       <slot name="icon"></slot>
     </div>
@@ -46,7 +46,7 @@ exports[`gux-simple-toast-legacy #render should render positive simple toast 1`]
       <slot name="message"></slot>
     </gux-truncate>
     <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="message">
     This is the message
@@ -56,7 +56,7 @@ exports[`gux-simple-toast-legacy #render should render positive simple toast 1`]
 
 exports[`gux-simple-toast-legacy #render should render warning simple toast 1`] = `
 <gux-simple-toast-legacy accent="warning">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-icon gux-warning">
       <slot name="icon"></slot>
     </div>
@@ -64,7 +64,7 @@ exports[`gux-simple-toast-legacy #render should render warning simple toast 1`] 
       <slot name="message"></slot>
     </gux-truncate>
     <gux-dismiss-button class="gux-dismiss" position="inherit"></gux-dismiss-button>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="message">
     This is the message

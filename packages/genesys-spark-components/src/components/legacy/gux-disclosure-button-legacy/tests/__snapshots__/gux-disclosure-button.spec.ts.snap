@@ -2,7 +2,7 @@
 
 exports[`gux-disclosure-button #render should render component as expected (1) 1`] = `
 <gux-disclosure-button-legacy>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-left">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
         <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
@@ -11,13 +11,13 @@ exports[`gux-disclosure-button #render should render component as expected (1) 1
         <slot name="panel-content"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-disclosure-button-legacy>
 `;
 
 exports[`gux-disclosure-button #render should render component as expected (2) 1`] = `
 <gux-disclosure-button-legacy is-open="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-left">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
         <gux-icon decorative="" icon-name="fa/caret-left-solid"></gux-icon>
@@ -26,13 +26,13 @@ exports[`gux-disclosure-button #render should render component as expected (2) 1
         <slot name="panel-content"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-disclosure-button-legacy>
 `;
 
 exports[`gux-disclosure-button #render should render component as expected (3) 1`] = `
 <gux-disclosure-button-legacy position="left">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-left">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
         <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
@@ -41,13 +41,13 @@ exports[`gux-disclosure-button #render should render component as expected (3) 1
         <slot name="panel-content"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-disclosure-button-legacy>
 `;
 
 exports[`gux-disclosure-button #render should render component as expected (4) 1`] = `
 <gux-disclosure-button-legacy is-open="" position="left">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-left">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
         <gux-icon decorative="" icon-name="fa/caret-left-solid"></gux-icon>
@@ -56,13 +56,13 @@ exports[`gux-disclosure-button #render should render component as expected (4) 1
         <slot name="panel-content"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-disclosure-button-legacy>
 `;
 
 exports[`gux-disclosure-button #render should render component as expected (5) 1`] = `
 <gux-disclosure-button-legacy position="right">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-right">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="Disclosure button" class="gux-disclosure-button">
         <gux-icon decorative="" icon-name="fa/caret-left-solid"></gux-icon>
@@ -71,13 +71,13 @@ exports[`gux-disclosure-button #render should render component as expected (5) 1
         <slot name="panel-content"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-disclosure-button-legacy>
 `;
 
 exports[`gux-disclosure-button #render should render component as expected (6) 1`] = `
 <gux-disclosure-button-legacy is-open="" position="right">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-right">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="true" aria-label="Disclosure button" class="gux-disclosure-button">
         <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
@@ -86,13 +86,13 @@ exports[`gux-disclosure-button #render should render component as expected (6) 1
         <slot name="panel-content"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-disclosure-button-legacy>
 `;
 
 exports[`gux-disclosure-button #render should render component as expected (7) 1`] = `
 <gux-disclosure-button-legacy label="More Info">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disclosure-button-container gux-left">
       <button aria-controls="gux-disclosure-button-panel-i" aria-expanded="false" aria-label="More Info" class="gux-disclosure-button">
         <gux-icon decorative="" icon-name="fa/caret-right-solid"></gux-icon>
@@ -101,6 +101,6 @@ exports[`gux-disclosure-button #render should render component as expected (7) 1
         <slot name="panel-content"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-disclosure-button-legacy>
 `;

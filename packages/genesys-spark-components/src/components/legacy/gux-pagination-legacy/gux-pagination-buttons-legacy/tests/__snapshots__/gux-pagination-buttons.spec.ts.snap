@@ -21,7 +21,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (1)
       </div>
       <div class="gux-pagination-buttons-input">
         <gux-form-field-text-like label-position="screenreader">
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <div class="gux-form-field-container gux-screenreader">
               <div class="gux-form-field-label gux-screenreader">
                 <slot name="label"></slot>
@@ -49,7 +49,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (1)
                 </div>
               </div>
             </div>
-          </mock:shadow-root>
+          </template>
           <label for="gux-form-field-input-i" slot="label">
             Page 0 of 0
           </label>
@@ -97,7 +97,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (2)
       </div>
       <div class="gux-pagination-buttons-input">
         <gux-form-field-text-like label-position="screenreader">
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <div class="gux-form-field-container gux-screenreader">
               <div class="gux-form-field-label gux-screenreader">
                 <slot name="label"></slot>
@@ -125,7 +125,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (2)
                 </div>
               </div>
             </div>
-          </mock:shadow-root>
+          </template>
           <label for="gux-form-field-input-i" slot="label">
             Page 1 of 10
           </label>
@@ -173,7 +173,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (3)
       </div>
       <div class="gux-pagination-buttons-input">
         <gux-form-field-text-like label-position="screenreader">
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <div class="gux-form-field-container gux-screenreader">
               <div class="gux-form-field-label gux-screenreader">
                 <slot name="label"></slot>
@@ -201,7 +201,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (3)
                 </div>
               </div>
             </div>
-          </mock:shadow-root>
+          </template>
           <label for="gux-form-field-input-i" slot="label">
             Page 5 of 10
           </label>

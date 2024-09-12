@@ -2,176 +2,176 @@
 
 exports[`gux-button #render should render danger button 1`] = `
 <gux-button accent="danger">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-danger" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render default button 1`] = `
 <gux-button>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-secondary" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled danger button 1`] = `
 <gux-button accent="danger" disabled="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-danger" disabled="" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled default button 1`] = `
 <gux-button disabled="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-secondary" disabled="" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled ghost button 1`] = `
 <gux-button accent="ghost" disabled="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-ghost" disabled="" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled inline button 1`] = `
 <gux-button accent="inline" disabled="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-inline" disabled="" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled invalid button 1`] = `
 <gux-button accent="invalid" disabled="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-invalid" disabled="" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled primary button 1`] = `
 <gux-button accent="primary" disabled="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-primary" disabled="" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled secondary button 1`] = `
 <gux-button accent="secondary" disabled="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-secondary" disabled="" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render disabled tertiary button 1`] = `
 <gux-button accent="tertiary" disabled="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-tertiary" disabled="" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render ghost button 1`] = `
 <gux-button accent="ghost">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-ghost" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render inline button 1`] = `
 <gux-button accent="inline">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-inline" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render invalid button 1`] = `
 <gux-button accent="invalid">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-invalid" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render primary button 1`] = `
 <gux-button accent="primary">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-primary" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render secondary button 1`] = `
 <gux-button accent="secondary">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-secondary" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;
 
 exports[`gux-button #render should render tertiary button 1`] = `
 <gux-button accent="tertiary">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button class="gux-tertiary" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Button
 </gux-button>
 `;

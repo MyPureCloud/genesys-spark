@@ -2,11 +2,11 @@
 
 exports[`gux-accordion renders 1`] = `
 <gux-accordion>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <gux-accordion-section>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <section>
         <div id="gux-accordion-header-i" role="heading">
           <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header" type="button">
@@ -23,7 +23,7 @@ exports[`gux-accordion renders 1`] = `
           <slot name="content"></slot>
         </div>
       </section>
-    </mock:shadow-root>
+    </template>
     <h2 slot="header">
       First Section
     </h2>
@@ -32,7 +32,7 @@ exports[`gux-accordion renders 1`] = `
     </div>
   </gux-accordion-section>
   <gux-accordion-section arrow-position="beside-text">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <section>
         <div id="gux-accordion-header-i" role="heading">
           <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header" type="button">
@@ -49,7 +49,7 @@ exports[`gux-accordion renders 1`] = `
           <slot name="content"></slot>
         </div>
       </section>
-    </mock:shadow-root>
+    </template>
     <h2 slot="header">
       Second Section
     </h2>
@@ -58,7 +58,7 @@ exports[`gux-accordion renders 1`] = `
     </div>
   </gux-accordion-section>
   <gux-accordion-section disabled="">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <section class="gux-disabled">
         <div id="gux-accordion-header-i" role="heading">
           <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header" disabled="" type="button">
@@ -75,7 +75,7 @@ exports[`gux-accordion renders 1`] = `
           <slot name="content"></slot>
         </div>
       </section>
-    </mock:shadow-root>
+    </template>
     <h2 slot="header">
       Third Section
     </h2>
@@ -87,7 +87,7 @@ exports[`gux-accordion renders 1`] = `
     </div>
   </gux-accordion-section>
   <gux-accordion-section>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <section>
         <div id="gux-accordion-header-i" role="heading">
           <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header" type="button">
@@ -105,7 +105,7 @@ exports[`gux-accordion renders 1`] = `
           <slot name="content"></slot>
         </div>
       </section>
-    </mock:shadow-root>
+    </template>
     <h2 slot="header">
       Fourth Section
     </h2>
@@ -118,7 +118,7 @@ exports[`gux-accordion renders 1`] = `
     </div>
   </gux-accordion-section>
   <gux-accordion-section reverse-headings="true">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <section>
         <div id="gux-accordion-header-i" role="heading">
           <button aria-controls="gux-accordion-section-i" aria-expanded="false" class="gux-header gux-reverse-headings" type="button">
@@ -136,7 +136,7 @@ exports[`gux-accordion renders 1`] = `
           <slot name="content"></slot>
         </div>
       </section>
-    </mock:shadow-root>
+    </template>
     <h2 slot="header">
       Fourth Section
     </h2>

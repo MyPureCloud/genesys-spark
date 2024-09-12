@@ -2,21 +2,21 @@
 
 exports[`gux-selector-cards #render should render component as expected (1) 1`] = `
 <gux-selector-cards-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-selector-cards">
       <slot></slot>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-selector-cards-beta>
 `;
 
 exports[`gux-selector-cards #render should render component as expected (2) 1`] = `
 <gux-selector-cards-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-selector-cards">
       <slot></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-selector-card-beta variant="simple">
     <label for="first" slot="label">
       First
@@ -57,11 +57,11 @@ exports[`gux-selector-cards #render should render component as expected (2) 1`] 
 
 exports[`gux-selector-cards #render should render component as expected (3) 1`] = `
 <gux-selector-cards-beta class="example2">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-selector-cards">
       <slot></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-selector-card-beta variant="descriptive">
     <label for="first" slot="label">
       First
@@ -132,11 +132,11 @@ exports[`gux-selector-cards #render should render component as expected (3) 1`] 
 
 exports[`gux-selector-cards #render should render component as expected (4) 1`] = `
 <gux-selector-cards-beta class="example1">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-selector-cards">
       <slot></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-selector-card-beta variant="simple">
     <label for="1-C" slot="label">
       First

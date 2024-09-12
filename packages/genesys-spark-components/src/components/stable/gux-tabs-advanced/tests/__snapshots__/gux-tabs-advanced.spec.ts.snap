@@ -2,10 +2,10 @@
 
 exports[`gux-tabs-advanced #render should render as expected 1`] = `
 <gux-tabs-advanced id="interactive" lang="en">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot name="tab-list"></slot>
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <gux-tab-advanced-list show-new-tab-button="true" slot="tab-list">
     <!---->
     <div aria-live="polite" class="gux-aria-live-region gux-sr-only"></div>

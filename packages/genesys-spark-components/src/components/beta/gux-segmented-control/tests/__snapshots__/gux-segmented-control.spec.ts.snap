@@ -2,11 +2,11 @@
 
 exports[`gux-segmented-control-beta #render should render as expected 1`] = `
 <gux-segmented-control-beta role="group" value="day">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <gux-segmented-control-item value="month">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-container gux-start">
         <button class="gux-segmented-control-item" type="button">
           <div class="gux-text">
@@ -14,13 +14,13 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
           </div>
         </button>
       </div>
-    </mock:shadow-root>
+    </template>
     <div slot="text">
       Month
     </div>
   </gux-segmented-control-item>
   <gux-segmented-control-item value="week">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-container">
         <button class="gux-segmented-control-item" type="button">
           <div class="gux-text">
@@ -28,13 +28,13 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
           </div>
         </button>
       </div>
-    </mock:shadow-root>
+    </template>
     <div slot="text">
       Week
     </div>
   </gux-segmented-control-item>
   <gux-segmented-control-item value="day">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-container">
         <button class="gux-segmented-control-item" type="button">
           <div class="gux-text">
@@ -42,13 +42,13 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
           </div>
         </button>
       </div>
-    </mock:shadow-root>
+    </template>
     <div slot="text">
       Day
     </div>
   </gux-segmented-control-item>
   <gux-segmented-control-item disabled="" value="hour">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-container">
         <button class="gux-segmented-control-item" disabled="" type="button">
           <div class="gux-text">
@@ -56,13 +56,13 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
           </div>
         </button>
       </div>
-    </mock:shadow-root>
+    </template>
     <div slot="text">
       Hour
     </div>
   </gux-segmented-control-item>
   <gux-segmented-control-item value="minute">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-container gux-end">
         <button class="gux-segmented-control-item" type="button">
           <div class="gux-text">
@@ -70,7 +70,7 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
           </div>
         </button>
       </div>
-    </mock:shadow-root>
+    </template>
     <div slot="text">
       Minute
     </div>
@@ -80,11 +80,11 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
 
 exports[`gux-segmented-control-beta onSlotchange should set selected items as expected 1`] = `
 <gux-segmented-control-beta role="group" value="day">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <gux-segmented-control-item value="month">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-container gux-start">
         <button class="gux-segmented-control-item" type="button">
           <div class="gux-text">
@@ -92,13 +92,13 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </div>
         </button>
       </div>
-    </mock:shadow-root>
+    </template>
     <div slot="text">
       Month
     </div>
   </gux-segmented-control-item>
   <gux-segmented-control-item value="week">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-container">
         <button class="gux-segmented-control-item" type="button">
           <div class="gux-text">
@@ -106,13 +106,13 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </div>
         </button>
       </div>
-    </mock:shadow-root>
+    </template>
     <div slot="text">
       Week
     </div>
   </gux-segmented-control-item>
   <gux-segmented-control-item value="day">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-container">
         <button class="gux-segmented-control-item" type="button">
           <div class="gux-text">
@@ -120,13 +120,13 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </div>
         </button>
       </div>
-    </mock:shadow-root>
+    </template>
     <div slot="text">
       Day
     </div>
   </gux-segmented-control-item>
   <gux-segmented-control-item disabled="" value="hour">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-container">
         <button class="gux-segmented-control-item" disabled="" type="button">
           <div class="gux-text">
@@ -134,13 +134,13 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </div>
         </button>
       </div>
-    </mock:shadow-root>
+    </template>
     <div slot="text">
       Hour
     </div>
   </gux-segmented-control-item>
   <gux-segmented-control-item value="minute">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-container gux-end">
         <button class="gux-segmented-control-item" type="button">
           <div class="gux-text">
@@ -148,13 +148,13 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </div>
         </button>
       </div>
-    </mock:shadow-root>
+    </template>
     <div slot="text">
       Minute
     </div>
   </gux-segmented-control-item>
   <gux-segmented-control-item value="second">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-container gux-end">
         <button class="gux-segmented-control-item" type="button">
           <div class="gux-text">
@@ -162,7 +162,7 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
           </div>
         </button>
       </div>
-    </mock:shadow-root>
+    </template>
     Second
   </gux-segmented-control-item>
 </gux-segmented-control-beta>

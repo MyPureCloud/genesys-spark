@@ -2,11 +2,11 @@
 
 exports[`gux-list-item #render should render component as expected (1) 1`] = `
 <gux-list-item role="listitem">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <button tabindex="-1" type="button">
       <slot></slot>
     </button>
-  </mock:shadow-root>
+  </template>
   Item
 </gux-list-item>
 `;

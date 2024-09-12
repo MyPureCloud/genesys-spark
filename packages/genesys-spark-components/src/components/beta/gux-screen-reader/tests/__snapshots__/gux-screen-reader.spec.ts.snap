@@ -2,11 +2,11 @@
 
 exports[`gux-screen-reader-beta #render should render component as expected 1`] = `
 <gux-screen-reader-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <span class="gux-sr-only">
       <slot></slot>
     </span>
-  </mock:shadow-root>
+  </template>
   This is content
 </gux-screen-reader-beta>
 `;
