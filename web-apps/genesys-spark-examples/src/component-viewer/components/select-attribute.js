@@ -7,8 +7,8 @@ export const selectAttribute = (
   parent,
   renderCallback
 ) => {
-  let matchingAttr = astNode.attrs.find(a => a.name === name);
-  let options = [
+  const matchingAttr = astNode.attrs.find(a => a.name === name);
+  const options = [
     { value: '', selected: false },
     ...values.map(value => ({ value, selected: false }))
   ];
@@ -25,7 +25,7 @@ export const selectAttribute = (
     }
   });
 
-  let element = toHTML(`
+  const element = toHTML(`
     <gux-form-field-select>
       <select slot="input" name="select">
         ${options.map(
@@ -40,7 +40,7 @@ export const selectAttribute = (
     </gux-form-field-select>`);
 
   element.addEventListener('change', function (event) {
-    let selected = event.target.value;
+    const selected = event.target.value;
 
     if (selected === '') {
       astNode.attrs = astNode.attrs.filter(a => a.name !== name);

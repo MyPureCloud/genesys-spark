@@ -12,7 +12,7 @@ export async function bootstrap() {
     registerSparkChartComponents()
   ]);
 
-  let components = Object.keys(componentSpecs)
+  const components = Object.keys(componentSpecs)
     .filter(component => !componentSpecs[component].hidePage)
     .sort((a, b) => {
       return shortName(a) < shortName(b) ? -1 : 1;
@@ -71,7 +71,7 @@ export async function bootstrap() {
   };
 
   function getActiveComponent() {
-    let hash = window.location.hash || `#${components[0]}`;
+    const hash = window.location.hash || `#${components[0]}`;
     document
       .querySelectorAll('.components-list .component-item')
       .forEach(item => {
@@ -89,8 +89,8 @@ export async function bootstrap() {
   searchBox.addEventListener('input', searchHandler);
 
   function hashHandler() {
-    let iframe = document.getElementById('componentFrame');
-    let hash = window.location.hash || `#${components[0]}`;
+    const iframe = document.getElementById('componentFrame');
+    const hash = window.location.hash || `#${components[0]}`;
 
     iframe.src = `./${hash.slice(1)}.html`;
   }

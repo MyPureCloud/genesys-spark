@@ -15,7 +15,7 @@ export const createAttributeGroup = (parent, astNode, renderCallback) => {
 
   const attributes = getComponentSpec(elementName).attributes || [];
   Object.entries(attributes).forEach(([name, type]) => {
-    let handler = handlerFor(type);
+    const handler = handlerFor(type);
     if (handler) {
       handler(name, astNode, element, renderCallback);
     } else {

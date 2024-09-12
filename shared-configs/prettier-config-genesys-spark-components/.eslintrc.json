@@ -1,7 +1,0 @@
-{
-  "root": true,
-  "env": {
-    "node": true
-  },
-  "extends": ["genesys-spark-components"]
-}

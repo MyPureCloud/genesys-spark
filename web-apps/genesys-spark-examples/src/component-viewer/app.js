@@ -17,7 +17,7 @@ window.webcomponentsDocsMain = (example = '', renderCallback = () => {}) =>
   bootstrap(example.trim(), renderCallback);
 
 function createLayout() {
-  let template = toHTML(`
+  const template = toHTML(`
     <div class="component-viewer content" role="main">
       <div class="left-column">
         <div class="tab" hidden>
@@ -181,8 +181,8 @@ export async function bootstrap(exampleCode, callback) {
   sparkLinkElement.appendChild(sparkLinkAnchor);
 
   const updateCode = createEditor(editor, newCode => {
-    let ast = parseFragment(newCode);
-    let html = serialize(ast);
+    const ast = parseFragment(newCode);
+    const html = serialize(ast);
 
     updatePreview(html);
     attributesPanel.updateFromTree(ast);
