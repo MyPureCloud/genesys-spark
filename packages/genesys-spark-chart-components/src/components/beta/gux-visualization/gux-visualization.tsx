@@ -40,7 +40,7 @@ export class GuxVisualization {
   };
 
   private defaultEmbedOptions: EmbedOptions = {
-    actions: true,
+    actions: false,
     renderer: 'svg'
   };
 
