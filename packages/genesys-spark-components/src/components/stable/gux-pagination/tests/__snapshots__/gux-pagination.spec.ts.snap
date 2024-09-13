@@ -2,7 +2,7 @@
 
 exports[`gux-pagination #render should render as expected (1) 1`] = `
 <gux-pagination current-page="1" items-per-page="25" layout="advanced" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="1" items-per-page="25" total-items="1000">
@@ -69,13 +69,13 @@ exports[`gux-pagination #render should render as expected (1) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render as expected (2) 1`] = `
 <gux-pagination current-page="1" items-per-page="50" layout="advanced" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="1" items-per-page="50" total-items="1000">
@@ -142,13 +142,13 @@ exports[`gux-pagination #render should render as expected (2) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render as expected (3) 1`] = `
 <gux-pagination current-page="1" items-per-page="75" layout="advanced" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="1" items-per-page="75" total-items="1000">
@@ -215,13 +215,13 @@ exports[`gux-pagination #render should render as expected (3) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render as expected (4) 1`] = `
 <gux-pagination current-page="1" items-per-page="100" layout="advanced" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="1" items-per-page="100" total-items="1000">
@@ -288,13 +288,13 @@ exports[`gux-pagination #render should render as expected (4) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render as expected (5) 1`] = `
 <gux-pagination current-page="1" items-per-page="25" layout="advanced" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="1" items-per-page="25" total-items="1000">
@@ -361,13 +361,13 @@ exports[`gux-pagination #render should render as expected (5) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render as expected (6) 1`] = `
 <gux-pagination current-page="10" items-per-page="25" layout="advanced" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="10" items-per-page="25" total-items="1000">
@@ -432,13 +432,13 @@ exports[`gux-pagination #render should render as expected (6) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render as expected (7) 1`] = `
 <gux-pagination current-page="10" items-per-page="50" layout="advanced" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="10" items-per-page="50" total-items="1000">
@@ -503,13 +503,13 @@ exports[`gux-pagination #render should render as expected (7) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render as expected (8) 1`] = `
 <gux-pagination current-page="10" items-per-page="75" layout="advanced" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="10" items-per-page="75" total-items="1000">
@@ -574,13 +574,13 @@ exports[`gux-pagination #render should render as expected (8) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render as expected (9) 1`] = `
 <gux-pagination current-page="10" items-per-page="100" layout="advanced" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="10" items-per-page="100" total-items="1000">
@@ -647,13 +647,13 @@ exports[`gux-pagination #render should render as expected (9) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render as expected (10) 1`] = `
 <gux-pagination current-page="1" items-per-page="25" layout="simple" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="1" items-per-page="25" total-items="1000">
@@ -720,13 +720,13 @@ exports[`gux-pagination #render should render as expected (10) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render as expected (11) 1`] = `
 <gux-pagination current-page="-3" items-per-page="25" layout="advanced" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="1" items-per-page="25" total-items="1000">
@@ -793,13 +793,13 @@ exports[`gux-pagination #render should render as expected (11) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render as expected (12) 1`] = `
 <gux-pagination current-page="-3" items-per-page="25" layout="advanced" total-items="0">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="1" items-per-page="25" total-items="0">
@@ -847,13 +847,13 @@ exports[`gux-pagination #render should render as expected (12) 1`] = `
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;
 
 exports[`gux-pagination #render should render current page as 1 when total items is 0 1`] = `
 <gux-pagination current-page="1" items-per-page="25" layout="full" total-items="0">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts current-page="1" items-per-page="25" total-items="0">
@@ -901,6 +901,6 @@ exports[`gux-pagination #render should render current page as 1 when total items
         </gux-pagination-buttons>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination>
 `;

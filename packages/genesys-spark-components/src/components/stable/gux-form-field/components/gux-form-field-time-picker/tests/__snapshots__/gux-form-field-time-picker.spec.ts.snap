@@ -2,7 +2,7 @@
 
 exports[`gux-form-field-time-picker #render help should render component as expected 1`] = `
 <gux-form-field-time-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Select Time
@@ -31,7 +31,7 @@ exports[`gux-form-field-time-picker #render help should render component as expe
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" value="09:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Select Time
@@ -44,7 +44,7 @@ exports[`gux-form-field-time-picker #render help should render component as expe
 
 exports[`gux-form-field-time-picker #render intervals should render component as expected (1) 1`] = `
 <gux-form-field-time-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -73,7 +73,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker id="gux-form-field-input-i" interval="15" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -83,7 +83,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
 
 exports[`gux-form-field-time-picker #render intervals should render component as expected (2) 1`] = `
 <gux-form-field-time-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -112,7 +112,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker id="gux-form-field-input-i" interval="30" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -122,7 +122,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
 
 exports[`gux-form-field-time-picker #render intervals should render component as expected (3) 1`] = `
 <gux-form-field-time-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -151,7 +151,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker id="gux-form-field-input-i" interval="60" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -161,7 +161,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
 
 exports[`gux-form-field-time-picker #render label-info should render component as expected 1`] = `
 <gux-form-field-time-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Select Time This is some tooltip text
@@ -190,7 +190,7 @@ exports[`gux-form-field-time-picker #render label-info should render component a
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" value="09:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Select Time
@@ -205,7 +205,7 @@ exports[`gux-form-field-time-picker #render label-info should render component a
 
 exports[`gux-form-field-time-picker #render label-position indicator marks should render component as expected (1) 1`] = `
 <gux-form-field-time-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -234,7 +234,7 @@ exports[`gux-form-field-time-picker #render label-position indicator marks shoul
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -244,7 +244,7 @@ exports[`gux-form-field-time-picker #render label-position indicator marks shoul
 
 exports[`gux-form-field-time-picker #render label-position indicator marks should render component as expected (2) 1`] = `
 <gux-form-field-time-picker indicator-mark="optional">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -273,7 +273,7 @@ exports[`gux-form-field-time-picker #render label-position indicator marks shoul
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -283,7 +283,7 @@ exports[`gux-form-field-time-picker #render label-position indicator marks shoul
 
 exports[`gux-form-field-time-picker #render label-position indicator marks should render component as expected (3) 1`] = `
 <gux-form-field-time-picker indicator-mark="required">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -312,7 +312,7 @@ exports[`gux-form-field-time-picker #render label-position indicator marks shoul
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -322,7 +322,7 @@ exports[`gux-form-field-time-picker #render label-position indicator marks shoul
 
 exports[`gux-form-field-time-picker #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-time-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -351,7 +351,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -361,7 +361,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
 
 exports[`gux-form-field-time-picker #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-time-picker label-position="above">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -390,7 +390,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -400,7 +400,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
 
 exports[`gux-form-field-time-picker #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-time-picker label-position="beside">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-beside gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -429,7 +429,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -439,7 +439,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
 
 exports[`gux-form-field-time-picker #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-time-picker label-position="screenreader">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -468,7 +468,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label

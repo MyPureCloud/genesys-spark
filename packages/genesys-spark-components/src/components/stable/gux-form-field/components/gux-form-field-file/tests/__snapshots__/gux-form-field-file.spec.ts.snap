@@ -2,7 +2,7 @@
 
 exports[`gux-form-field-file #render help should render component as expected 1`] = `
 <gux-form-field-file>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -24,7 +24,7 @@ exports[`gux-form-field-file #render help should render component as expected 1`
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>
@@ -37,7 +37,7 @@ exports[`gux-form-field-file #render help should render component as expected 1`
 
 exports[`gux-form-field-file #render indicator marks should render component as expected (1) 1`] = `
 <gux-form-field-file>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -59,7 +59,7 @@ exports[`gux-form-field-file #render indicator marks should render component as 
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>
@@ -69,7 +69,7 @@ exports[`gux-form-field-file #render indicator marks should render component as 
 
 exports[`gux-form-field-file #render indicator marks should render component as expected (2) 1`] = `
 <gux-form-field-file indicator-mark="optional">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -91,7 +91,7 @@ exports[`gux-form-field-file #render indicator marks should render component as 
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>
@@ -101,7 +101,7 @@ exports[`gux-form-field-file #render indicator marks should render component as 
 
 exports[`gux-form-field-file #render indicator marks should render component as expected (3) 1`] = `
 <gux-form-field-file indicator-mark="required">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -123,7 +123,7 @@ exports[`gux-form-field-file #render indicator marks should render component as 
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>
@@ -133,7 +133,7 @@ exports[`gux-form-field-file #render indicator marks should render component as 
 
 exports[`gux-form-field-file #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-file>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -155,7 +155,7 @@ exports[`gux-form-field-file #render input attributes should render component as
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>
@@ -165,7 +165,7 @@ exports[`gux-form-field-file #render input attributes should render component as
 
 exports[`gux-form-field-file #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-file>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -187,7 +187,7 @@ exports[`gux-form-field-file #render input attributes should render component as
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>
@@ -197,7 +197,7 @@ exports[`gux-form-field-file #render input attributes should render component as
 
 exports[`gux-form-field-file #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-file>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label gux-required">
         <slot name="label"></slot>
@@ -219,7 +219,7 @@ exports[`gux-form-field-file #render input attributes should render component as
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>
@@ -229,7 +229,7 @@ exports[`gux-form-field-file #render input attributes should render component as
 
 exports[`gux-form-field-file #render label-info should render component as expected 1`] = `
 <gux-form-field-file>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -251,7 +251,7 @@ exports[`gux-form-field-file #render label-info should render component as expec
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>
@@ -266,7 +266,7 @@ exports[`gux-form-field-file #render label-info should render component as expec
 
 exports[`gux-form-field-file #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-file>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -288,7 +288,7 @@ exports[`gux-form-field-file #render label-position should render component as e
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>
@@ -298,7 +298,7 @@ exports[`gux-form-field-file #render label-position should render component as e
 
 exports[`gux-form-field-file #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-file label-position="above">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -320,7 +320,7 @@ exports[`gux-form-field-file #render label-position should render component as e
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>
@@ -330,7 +330,7 @@ exports[`gux-form-field-file #render label-position should render component as e
 
 exports[`gux-form-field-file #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-file label-position="beside">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-beside gux-form-field-container">
       <div class="gux-beside gux-form-field-label">
         <slot name="label"></slot>
@@ -352,7 +352,7 @@ exports[`gux-form-field-file #render label-position should render component as e
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>
@@ -362,7 +362,7 @@ exports[`gux-form-field-file #render label-position should render component as e
 
 exports[`gux-form-field-file #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-file label-position="screenreader">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-form-field-container gux-screenreader">
       <div class="gux-form-field-label gux-screenreader">
         <slot name="label"></slot>
@@ -384,7 +384,7 @@ exports[`gux-form-field-file #render label-position should render component as e
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="avatar" slot="label">
     Upload a profile picture
   </label>

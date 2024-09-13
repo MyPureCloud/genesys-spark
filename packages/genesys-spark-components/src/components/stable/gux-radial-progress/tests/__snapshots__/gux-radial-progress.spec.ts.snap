@@ -2,15 +2,15 @@
 
 exports[`gux-radial-progress #render should render component as expected (1) 1`] = `
 <gux-radial-progress screenreader-text="Uploading file">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (2) 1`] = `
 <gux-radial-progress screenreader-text="Uploading file" value="0">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar">
       <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
         <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
@@ -20,13 +20,13 @@ exports[`gux-radial-progress #render should render component as expected (2) 1`]
         </text>
       </svg>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (3) 1`] = `
 <gux-radial-progress screenreader-text="Uploading file" value="10">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
       <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
         <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
@@ -36,13 +36,13 @@ exports[`gux-radial-progress #render should render component as expected (3) 1`]
         </text>
       </svg>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (4) 1`] = `
 <gux-radial-progress screenreader-text="Uploading file" value="100">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar">
       <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
         <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
@@ -52,29 +52,29 @@ exports[`gux-radial-progress #render should render component as expected (4) 1`]
         </text>
       </svg>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (5) 1`] = `
 <gux-radial-progress screenreader-text="Uploading file" value="123">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (6) 1`] = `
 <gux-radial-progress screenreader-text="Uploading file" value="200">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (7) 1`] = `
 <gux-radial-progress max="100" screenreader-text="Uploading file" value="10">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-label="Uploading file" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar">
       <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
         <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
@@ -84,13 +84,13 @@ exports[`gux-radial-progress #render should render component as expected (7) 1`]
         </text>
       </svg>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (8) 1`] = `
 <gux-radial-progress max="10" screenreader-text="Uploading file" value="10">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-label="Uploading file" aria-valuemax="10" aria-valuemin="0" aria-valuenow="10" role="progressbar">
       <svg class="gux-svg-container" role="presentation" viewBox="0 0 48 48">
         <circle class="gux-static-circle" cx="50%" cy="50%" r="22"></circle>
@@ -100,38 +100,38 @@ exports[`gux-radial-progress #render should render component as expected (8) 1`]
         </text>
       </svg>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (9) 1`] = `
 <gux-radial-progress max="100" screenreader-text="Uploading file" value="test">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (10) 1`] = `
 <gux-radial-progress max="100" screenreader-text="Uploading file" value="-123">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (11) 1`] = `
 <gux-radial-progress max="100" screenreader-text="Uploading file" value="200">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;
 
 exports[`gux-radial-progress #render should render component as expected (12) 1`] = `
 <gux-radial-progress max="test" screenreader-text="Uploading file" value="10">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-radial-loading context="modal" screenreader-text="Uploading file"></gux-radial-loading>
-  </mock:shadow-root>
+  </template>
 </gux-radial-progress>
 `;

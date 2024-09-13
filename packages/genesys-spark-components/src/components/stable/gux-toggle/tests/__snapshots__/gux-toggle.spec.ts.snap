@@ -2,7 +2,7 @@
 
 exports[`gux-toggle #render should render component as expected (1) 1`] = `
 <gux-toggle>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -17,13 +17,13 @@ exports[`gux-toggle #render should render component as expected (1) 1`] = `
       </div>
     </div>
     <gux-announce-beta></gux-announce-beta>
-  </mock:shadow-root>
+  </template>
 </gux-toggle>
 `;
 
 exports[`gux-toggle #render should render component as expected (2) 1`] = `
 <gux-toggle checked="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -38,13 +38,13 @@ exports[`gux-toggle #render should render component as expected (2) 1`] = `
       </div>
     </div>
     <gux-announce-beta></gux-announce-beta>
-  </mock:shadow-root>
+  </template>
 </gux-toggle>
 `;
 
 exports[`gux-toggle #render should render component as expected (3) 1`] = `
 <gux-toggle checked="" disabled="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disabled gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -59,13 +59,13 @@ exports[`gux-toggle #render should render component as expected (3) 1`] = `
       </div>
     </div>
     <gux-announce-beta></gux-announce-beta>
-  </mock:shadow-root>
+  </template>
 </gux-toggle>
 `;
 
 exports[`gux-toggle #render should render component as expected (4) 1`] = `
 <gux-toggle checked-label="On" unchecked-label="Off">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -97,13 +97,13 @@ exports[`gux-toggle #render should render component as expected (4) 1`] = `
       </div>
     </div>
     <gux-announce-beta></gux-announce-beta>
-  </mock:shadow-root>
+  </template>
 </gux-toggle>
 `;
 
 exports[`gux-toggle #render should render component as expected (5) 1`] = `
 <gux-toggle checked="" checked-label="on" unchecked-label="off">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -135,13 +135,13 @@ exports[`gux-toggle #render should render component as expected (5) 1`] = `
       </div>
     </div>
     <gux-announce-beta></gux-announce-beta>
-  </mock:shadow-root>
+  </template>
 </gux-toggle>
 `;
 
 exports[`gux-toggle #render should render component as expected (6) 1`] = `
 <gux-toggle checked-label="On" label-position="left" unchecked-label="Off">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toggle-container gux-toggle-label-left">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -173,13 +173,13 @@ exports[`gux-toggle #render should render component as expected (6) 1`] = `
       </div>
     </div>
     <gux-announce-beta></gux-announce-beta>
-  </mock:shadow-root>
+  </template>
 </gux-toggle>
 `;
 
 exports[`gux-toggle #render should render component as expected (7) 1`] = `
 <gux-toggle checked="" checked-label="on" label-position="right" unchecked-label="off">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -211,13 +211,13 @@ exports[`gux-toggle #render should render component as expected (7) 1`] = `
       </div>
     </div>
     <gux-announce-beta></gux-announce-beta>
-  </mock:shadow-root>
+  </template>
 </gux-toggle>
 `;
 
 exports[`gux-toggle #render should render component as expected (8) 1`] = `
 <gux-toggle checked-label="This is a long label for the toggle to test how it works" label-position="left" unchecked-label="This is another long label for the toggle to test how it works">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toggle-container gux-toggle-label-left">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -249,13 +249,13 @@ exports[`gux-toggle #render should render component as expected (8) 1`] = `
       </div>
     </div>
     <gux-announce-beta></gux-announce-beta>
-  </mock:shadow-root>
+  </template>
 </gux-toggle>
 `;
 
 exports[`gux-toggle #render should render component as expected (9) 1`] = `
 <gux-toggle checked="" checked-label="This is a long label for the toggle to test how it works" label-position="right" unchecked-label="This is another long label for the toggle to test how it works">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -287,6 +287,6 @@ exports[`gux-toggle #render should render component as expected (9) 1`] = `
       </div>
     </div>
     <gux-announce-beta></gux-announce-beta>
-  </mock:shadow-root>
+  </template>
 </gux-toggle>
 `;

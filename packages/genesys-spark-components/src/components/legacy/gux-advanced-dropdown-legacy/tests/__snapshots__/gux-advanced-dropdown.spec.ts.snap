@@ -2,7 +2,7 @@
 
 exports[`gux-advanced-dropdown-legacy should render 1`] = `
 <gux-advanced-dropdown-legacy>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-popup>
       <div class="gux-select-field" slot="target">
         <a class="gux-select-input" tabindex="0"></a>
@@ -24,7 +24,7 @@ exports[`gux-advanced-dropdown-legacy should render 1`] = `
         </div>
       </div>
     </gux-popup>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-option text="English" value="en"></gux-dropdown-option>
   <gux-dropdown-option text="Dutch" value="nl"></gux-dropdown-option>
 </gux-advanced-dropdown-legacy>

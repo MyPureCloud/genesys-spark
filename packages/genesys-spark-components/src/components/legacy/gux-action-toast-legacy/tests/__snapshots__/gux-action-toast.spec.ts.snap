@@ -2,7 +2,7 @@
 
 exports[`gux-action-toast #render should render action toast 1`] = `
 <gux-action-toast-legacy accent="neutral">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-header">
       <div class="gux-icon">
         <slot name="icon"></slot>
@@ -22,7 +22,7 @@ exports[`gux-action-toast #render should render action toast 1`] = `
         <slot name="negative-button"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="title">
     Title

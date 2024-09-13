@@ -2,7 +2,7 @@
 
 exports[`gux-tag #render should render component as expected (1) 1`] = `
 <gux-tag>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-accent-default gux-emphasis-bold gux-size-small gux-tag">
       <gux-tooltip-title>
         <span>
@@ -13,14 +13,14 @@ exports[`gux-tag #render should render component as expected (1) 1`] = `
         tag with label:
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   default
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (2) 1`] = `
 <gux-tag accent="default">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-accent-default gux-emphasis-bold gux-size-small gux-tag">
       <gux-tooltip-title>
         <span>
@@ -31,14 +31,14 @@ exports[`gux-tag #render should render component as expected (2) 1`] = `
         tag with label:
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   default (explicit)
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (3) 1`] = `
 <gux-tag accent="1">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-small gux-tag">
       <gux-tooltip-title>
         <span>
@@ -49,14 +49,14 @@ exports[`gux-tag #render should render component as expected (3) 1`] = `
         tag with label:
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   Accent 1
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (4) 1`] = `
 <gux-tag accent="1">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-small gux-tag">
       <gux-tooltip-title>
         <span>
@@ -67,7 +67,7 @@ exports[`gux-tag #render should render component as expected (4) 1`] = `
         tag with label:
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="true" icon-name="bolt"></gux-icon>
   Accent 1
 </gux-tag>
@@ -75,7 +75,7 @@ exports[`gux-tag #render should render component as expected (4) 1`] = `
 
 exports[`gux-tag #render should render component as expected (5) 1`] = `
 <gux-tag accent="1" removable="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-small gux-tag">
       <gux-tooltip-title>
         <span>
@@ -89,7 +89,7 @@ exports[`gux-tag #render should render component as expected (5) 1`] = `
         <gux-icon class="gux-tag-remove-icon" icon-name="fa/xmark-large-regular" screenreader-text="Remove tag with label: "></gux-icon>
       </button>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="true" icon-name="bolt"></gux-icon>
   Accent 1
 </gux-tag>
@@ -97,7 +97,7 @@ exports[`gux-tag #render should render component as expected (5) 1`] = `
 
 exports[`gux-tag #render should render component as expected (6) 1`] = `
 <gux-tag accent="1" disabled="" removable="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="true" class="gux-accent-1 gux-disabled gux-emphasis-bold gux-size-small gux-tag">
       <gux-tooltip-title>
         <span>
@@ -111,7 +111,7 @@ exports[`gux-tag #render should render component as expected (6) 1`] = `
         <gux-icon class="gux-tag-remove-icon" icon-name="fa/xmark-large-regular" screenreader-text="Remove tag with label: "></gux-icon>
       </button>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="true" icon-name="bolt"></gux-icon>
   Accent 1
 </gux-tag>
@@ -119,7 +119,7 @@ exports[`gux-tag #render should render component as expected (6) 1`] = `
 
 exports[`gux-tag #render should render component as expected (7) 1`] = `
 <gux-tag accent="1" emphasis="subtle">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-accent-1 gux-emphasis-subtle gux-size-small gux-tag">
       <gux-tooltip-title>
         <span>
@@ -130,14 +130,14 @@ exports[`gux-tag #render should render component as expected (7) 1`] = `
         tag with label:
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   Subtle 1
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (8) 1`] = `
 <gux-tag accent="1" emphasis="bold">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-small gux-tag">
       <gux-tooltip-title>
         <span>
@@ -148,14 +148,14 @@ exports[`gux-tag #render should render component as expected (8) 1`] = `
         tag with label:
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   Bold 1
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (9) 1`] = `
 <gux-tag accent="1" size="small">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-small gux-tag">
       <gux-tooltip-title>
         <span>
@@ -166,14 +166,14 @@ exports[`gux-tag #render should render component as expected (9) 1`] = `
         tag with label:
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   Small 1
 </gux-tag>
 `;
 
 exports[`gux-tag #render should render component as expected (10) 1`] = `
 <gux-tag accent="1" size="large">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-accent-1 gux-emphasis-bold gux-size-large gux-tag">
       <gux-tooltip-title>
         <span>
@@ -184,7 +184,7 @@ exports[`gux-tag #render should render component as expected (10) 1`] = `
         tag with label:
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   Large 1
 </gux-tag>
 `;

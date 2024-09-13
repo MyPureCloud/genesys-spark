@@ -2,7 +2,7 @@
 
 exports[`gux-form-field-dropdown multi select dropdown #render help multi select should render component as expected 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default This is a help message
@@ -29,9 +29,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -49,14 +49,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-describedby="gux-help-i" aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -66,11 +66,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -80,11 +80,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -94,7 +94,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -113,7 +113,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
 
 exports[`gux-form-field-dropdown multi select dropdown #render help multi select should render component as expected 2`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default This is some tooltip text
@@ -140,9 +140,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -160,14 +160,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -177,11 +177,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -191,11 +191,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -205,7 +205,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -226,7 +226,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
 
 exports[`gux-form-field-dropdown multi select dropdown #render help should render component as expected 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default This is a help message
@@ -253,9 +253,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -273,14 +273,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-describedby="gux-help-i" aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -290,11 +290,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -304,11 +304,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -318,7 +318,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -337,7 +337,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
 
 exports[`gux-form-field-dropdown multi select dropdown #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -364,9 +364,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -384,14 +384,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -401,11 +401,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -415,11 +415,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -429,7 +429,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -445,7 +445,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
 
 exports[`gux-form-field-dropdown multi select dropdown #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -472,9 +472,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi disabled="">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup disabled="">
           <div class="gux-disabled gux-target-container gux-target-container-collapsed" slot="target">
@@ -492,14 +492,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -509,11 +509,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -523,11 +523,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -537,7 +537,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -553,7 +553,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
 
 exports[`gux-form-field-dropdown multi select dropdown #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default Required
@@ -580,9 +580,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi required="">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -600,14 +600,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -617,11 +617,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -631,11 +631,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -645,7 +645,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -661,7 +661,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
 
 exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -688,9 +688,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -708,14 +708,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -725,11 +725,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -739,11 +739,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -753,7 +753,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -769,7 +769,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
 
 exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-dropdown label-position="above">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -796,9 +796,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -816,14 +816,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -833,11 +833,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -847,11 +847,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -861,7 +861,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -877,7 +877,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
 
 exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-dropdown label-position="beside">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-beside gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -904,9 +904,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -924,14 +924,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -941,11 +941,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -955,11 +955,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -969,7 +969,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -985,7 +985,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
 
 exports[`gux-form-field-dropdown multi select dropdown #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-dropdown label-position="screenreader">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -1012,9 +1012,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -1032,14 +1032,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1049,11 +1049,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1063,11 +1063,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1077,7 +1077,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -1093,7 +1093,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
 
 exports[`gux-form-field-dropdown multi select dropdown #render multi indicator marks should render component as expected optional dropdown (1) 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -1120,9 +1120,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -1140,14 +1140,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1157,11 +1157,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1171,11 +1171,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1185,7 +1185,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -1201,7 +1201,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
 
 exports[`gux-form-field-dropdown multi select dropdown #render multi indicator marks should render component as expected optional dropdown (2) 1`] = `
 <gux-form-field-dropdown indicator-mark="optional">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -1228,9 +1228,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -1248,14 +1248,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1265,11 +1265,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1279,11 +1279,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1293,7 +1293,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -1309,7 +1309,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
 
 exports[`gux-form-field-dropdown multi select dropdown #render multi indicator marks should render component as expected optional dropdown (3) 1`] = `
 <gux-form-field-dropdown indicator-mark="required">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -1336,9 +1336,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -1356,14 +1356,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1373,11 +1373,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1387,11 +1387,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1401,7 +1401,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -1417,7 +1417,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
 
 exports[`gux-form-field-dropdown multi select dropdown #render multi label-info should render component as expected 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default This is some tooltip text
@@ -1444,9 +1444,9 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi label-info 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown-multi>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -1464,14 +1464,14 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi label-info 
           </div>
         </gux-popup>
       </div>
-    </mock:shadow-root>
+    </template>
     <gux-listbox-multi aria-labelledby="gux-label-i" aria-multiselectable="true" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
         <slot name="create"></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1481,11 +1481,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi label-info 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1495,11 +1495,11 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi label-info 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option-multi>
       <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
           </svg>
@@ -1509,7 +1509,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi label-info 
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -1530,7 +1530,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi label-info 
 
 exports[`gux-form-field-dropdown single select dropdown #render indicator marks should render component as expected optional dropdown (1) 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -1557,9 +1557,9 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -1573,42 +1573,42 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
         </div>
         <slot slot="popup"></slot>
       </gux-popup>
-    </mock:shadow-root>
+    </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -1624,7 +1624,7 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
 
 exports[`gux-form-field-dropdown single select dropdown #render indicator marks should render component as expected optional dropdown (2) 1`] = `
 <gux-form-field-dropdown indicator-mark="optional">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -1651,9 +1651,9 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -1667,42 +1667,42 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
         </div>
         <slot slot="popup"></slot>
       </gux-popup>
-    </mock:shadow-root>
+    </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -1718,7 +1718,7 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
 
 exports[`gux-form-field-dropdown single select dropdown #render indicator marks should render component as expected optional dropdown (3) 1`] = `
 <gux-form-field-dropdown indicator-mark="required">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -1745,9 +1745,9 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -1761,42 +1761,42 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
         </div>
         <slot slot="popup"></slot>
       </gux-popup>
-    </mock:shadow-root>
+    </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -1812,7 +1812,7 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
 
 exports[`gux-form-field-dropdown single select dropdown #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -1839,9 +1839,9 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -1855,42 +1855,42 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         </div>
         <slot slot="popup"></slot>
       </gux-popup>
-    </mock:shadow-root>
+    </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -1906,7 +1906,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
 
 exports[`gux-form-field-dropdown single select dropdown #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -1933,9 +1933,9 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown disabled="">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-popup disabled="">
         <div class="gux-disabled gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
@@ -1949,42 +1949,42 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         </div>
         <slot slot="popup"></slot>
       </gux-popup>
-    </mock:shadow-root>
+    </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -2000,7 +2000,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
 
 exports[`gux-form-field-dropdown single select dropdown #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default Required
@@ -2027,9 +2027,9 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown required="">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -2043,42 +2043,42 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
         </div>
         <slot slot="popup"></slot>
       </gux-popup>
-    </mock:shadow-root>
+    </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -2094,7 +2094,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
 
 exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-dropdown>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -2121,9 +2121,9 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -2137,42 +2137,42 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         </div>
         <slot slot="popup"></slot>
       </gux-popup>
-    </mock:shadow-root>
+    </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -2188,7 +2188,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
 
 exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-dropdown label-position="above">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -2215,9 +2215,9 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -2231,42 +2231,42 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         </div>
         <slot slot="popup"></slot>
       </gux-popup>
-    </mock:shadow-root>
+    </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -2282,7 +2282,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
 
 exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-dropdown label-position="beside">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-beside gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -2309,9 +2309,9 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -2325,42 +2325,42 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         </div>
         <slot slot="popup"></slot>
       </gux-popup>
-    </mock:shadow-root>
+    </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium
@@ -2376,7 +2376,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
 
 exports[`gux-form-field-dropdown single select dropdown #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-dropdown label-position="screenreader">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -2403,9 +2403,9 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-dropdown>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -2419,42 +2419,42 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
         </div>
         <slot slot="popup"></slot>
       </gux-popup>
-    </mock:shadow-root>
+    </template>
     <gux-listbox aria-labelledby="gux-label-i" role="listbox" tabindex="0">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <slot></slot>
-      </mock:shadow-root>
+      </template>
       <gux-option aria-disabled="true" class="gux-disabled" disabled="" id="gux-option-i" role="option" value="a">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Ant
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option" value="b">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Bat
       </gux-option>
       <gux-option aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-i" role="option" value="c">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
             </gux-truncate>
             <slot name="subtext"></slot>
           </div>
-        </mock:shadow-root>
+        </template>
         Cat
         <span slot="subtext">
           Medium

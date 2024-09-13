@@ -2,7 +2,7 @@
 
 exports[`gux-blank-state should render the component as expected 1`] = `
 <gux-blank-state>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-container">
       <div class="gux-image">
         <slot name="image"></slot>
@@ -17,7 +17,7 @@ exports[`gux-blank-state should render the component as expected 1`] = `
         <slot name="call-to-action"></slot>
       </gux-button-slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="true" icon-name="bot" slot="image"></gux-icon>
   <div slot="primary-message">
     Sorry, something went wrong.

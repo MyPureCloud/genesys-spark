@@ -2,7 +2,7 @@
 
 exports[`#render  should render component as expected (1) 1`] = `
 <gux-time-zone-picker-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-dropdown filter-type="custom" placeholder="Search by region, country, or city">
       <gux-listbox aria-label="Time zones">
         <gux-option value="Africa/Abidjan">
@@ -2797,9 +2797,9 @@ exports[`#render  should render component as expected (1) 1`] = `
         </gux-option>
       </gux-listbox>
     </gux-dropdown>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-dropdown filter-type="custom" placeholder="Search by region, country, or city">
         <gux-listbox aria-label="Time zones">
           <gux-option value="Africa/Abidjan">
@@ -5594,14 +5594,14 @@ exports[`#render  should render component as expected (1) 1`] = `
           </gux-option>
         </gux-listbox>
       </gux-dropdown>
-    </mock:shadow-root>
+    </template>
   </gux-time-zone-picker-beta>
 </gux-time-zone-picker-beta>
 `;
 
 exports[`#render  should render component as expected (2) 1`] = `
 <gux-time-zone-picker-beta value="Etc/GMT+1">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-dropdown filter-type="custom" placeholder="Search by region, country, or city" value="Etc/GMT+1">
       <gux-listbox aria-label="Time zones">
         <gux-option value="Africa/Abidjan">
@@ -8396,9 +8396,9 @@ exports[`#render  should render component as expected (2) 1`] = `
         </gux-option>
       </gux-listbox>
     </gux-dropdown>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta>
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-dropdown filter-type="custom" placeholder="Search by region, country, or city">
         <gux-listbox aria-label="Time zones">
           <gux-option value="Africa/Abidjan">
@@ -11193,7 +11193,7 @@ exports[`#render  should render component as expected (2) 1`] = `
           </gux-option>
         </gux-listbox>
       </gux-dropdown>
-    </mock:shadow-root>
+    </template>
   </gux-time-zone-picker-beta>
 </gux-time-zone-picker-beta>
 `;

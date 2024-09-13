@@ -2,7 +2,7 @@
 
 exports[`gux-inline-alert #render should render component as expected (1) 1`] = `
 <gux-inline-alert accent="info">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-info gux-inline-alert">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/circle-info-solid"></gux-icon>
@@ -16,7 +16,7 @@ exports[`gux-inline-alert #render should render component as expected (1) 1`] = 
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="content">
     Note: This is an information alert.
   </div>
@@ -25,7 +25,7 @@ exports[`gux-inline-alert #render should render component as expected (1) 1`] = 
 
 exports[`gux-inline-alert #render should render component as expected (2) 1`] = `
 <gux-inline-alert accent="success">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-inline-alert gux-success">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/circle-check-solid"></gux-icon>
@@ -39,7 +39,7 @@ exports[`gux-inline-alert #render should render component as expected (2) 1`] = 
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="content">
     Note: This is a success alert.
   </div>
@@ -48,7 +48,7 @@ exports[`gux-inline-alert #render should render component as expected (2) 1`] = 
 
 exports[`gux-inline-alert #render should render component as expected (3) 1`] = `
 <gux-inline-alert accent="warning">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-inline-alert gux-warning">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/triangle-exclamation-solid"></gux-icon>
@@ -62,7 +62,7 @@ exports[`gux-inline-alert #render should render component as expected (3) 1`] = 
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="content">
     Note: This is a warning alert.
   </div>
@@ -71,7 +71,7 @@ exports[`gux-inline-alert #render should render component as expected (3) 1`] = 
 
 exports[`gux-inline-alert #render should render component as expected (4) 1`] = `
 <gux-inline-alert accent="error">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-error gux-inline-alert">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
@@ -85,7 +85,7 @@ exports[`gux-inline-alert #render should render component as expected (4) 1`] = 
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="content">
     Note: This is a warning alert.
   </div>

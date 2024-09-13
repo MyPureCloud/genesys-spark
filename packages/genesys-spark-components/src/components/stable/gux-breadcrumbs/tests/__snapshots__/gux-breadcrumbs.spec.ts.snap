@@ -2,27 +2,27 @@
 
 exports[`gux-breadcrumbs #render should render component as expected (1) 1`] = `
 <gux-breadcrumbs>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
         <slot></slot>
       </ol>
     </nav>
-  </mock:shadow-root>
+  </template>
 </gux-breadcrumbs>
 `;
 
 exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
 <gux-breadcrumbs>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
         <slot></slot>
       </ol>
     </nav>
-  </mock:shadow-root>
+  </template>
   <gux-breadcrumb-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
           <slot></slot>
@@ -31,11 +31,11 @@ exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
           /
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Category
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <a class="gux-breadcrumb-content gux-link" href="#">
           <slot></slot>
@@ -44,17 +44,17 @@ exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
           /
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Parent
   </gux-breadcrumb-item>
   <gux-breadcrumb-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <span aria-current="page" class="gux-active gux-breadcrumb-content">
           <slot></slot>
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Current
   </gux-breadcrumb-item>
 </gux-breadcrumbs>
@@ -62,15 +62,15 @@ exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
 
 exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
 <gux-breadcrumbs>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
         <slot></slot>
       </ol>
     </nav>
-  </mock:shadow-root>
+  </template>
   <gux-breadcrumb-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
           <slot></slot>
@@ -79,11 +79,11 @@ exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
           /
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Category
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <a class="gux-breadcrumb-content gux-link" href="#">
           <slot></slot>
@@ -92,17 +92,17 @@ exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
           /
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Parent
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <span aria-current="page" class="gux-active gux-breadcrumb-content">
           <slot></slot>
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Current
   </gux-breadcrumb-item>
 </gux-breadcrumbs>
@@ -110,15 +110,15 @@ exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
 
 exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
 <gux-breadcrumbs accent="primary">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
         <slot></slot>
       </ol>
     </nav>
-  </mock:shadow-root>
+  </template>
   <gux-breadcrumb-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <span class="gux-breadcrumb-content">
           <slot></slot>
@@ -127,11 +127,11 @@ exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
           /
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Category
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <a class="gux-breadcrumb-content gux-link" href="#">
           <slot></slot>
@@ -140,17 +140,17 @@ exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
           /
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Parent
   </gux-breadcrumb-item>
   <gux-breadcrumb-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
         <span aria-current="page" class="gux-active gux-breadcrumb-content">
           <slot></slot>
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Current
   </gux-breadcrumb-item>
 </gux-breadcrumbs>
@@ -158,15 +158,15 @@ exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
 
 exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
 <gux-breadcrumbs accent="secondary">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
         <slot></slot>
       </ol>
     </nav>
-  </mock:shadow-root>
+  </template>
   <gux-breadcrumb-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-secondary">
         <span class="gux-breadcrumb-content">
           <slot></slot>
@@ -175,11 +175,11 @@ exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
           /
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Category
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-secondary">
         <a class="gux-breadcrumb-content gux-link" href="#">
           <slot></slot>
@@ -188,17 +188,17 @@ exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
           /
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Parent
   </gux-breadcrumb-item>
   <gux-breadcrumb-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-secondary">
         <span aria-current="page" class="gux-active gux-breadcrumb-content">
           <slot></slot>
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Current
   </gux-breadcrumb-item>
 </gux-breadcrumbs>
@@ -206,15 +206,15 @@ exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
 
 exports[`gux-breadcrumbs #render should render component as expected (6) 1`] = `
 <gux-breadcrumbs accent="invalid">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <nav aria-label="Breadcrumbs">
       <ol>
         <slot></slot>
       </ol>
     </nav>
-  </mock:shadow-root>
+  </template>
   <gux-breadcrumb-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-invalid">
         <span class="gux-breadcrumb-content">
           <slot></slot>
@@ -223,11 +223,11 @@ exports[`gux-breadcrumbs #render should render component as expected (6) 1`] = `
           /
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Category
   </gux-breadcrumb-item>
   <gux-breadcrumb-item href="#" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-invalid">
         <a class="gux-breadcrumb-content gux-link" href="#">
           <slot></slot>
@@ -236,17 +236,17 @@ exports[`gux-breadcrumbs #render should render component as expected (6) 1`] = `
           /
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Parent
   </gux-breadcrumb-item>
   <gux-breadcrumb-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-invalid">
         <span aria-current="page" class="gux-active gux-breadcrumb-content">
           <slot></slot>
         </span>
       </span>
-    </mock:shadow-root>
+    </template>
     Current
   </gux-breadcrumb-item>
 </gux-breadcrumbs>

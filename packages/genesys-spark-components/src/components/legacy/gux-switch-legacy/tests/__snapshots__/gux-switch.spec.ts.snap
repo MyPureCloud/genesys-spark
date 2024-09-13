@@ -2,9 +2,9 @@
 
 exports[`gux-switch-legacy #render should render as expected 1`] = `
 <gux-switch-legacy class="gux-small" layout="small" role="group" value="day">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <gux-switch-item value="month">
     <!---->
     <button class="gux-switch-item" type="button">
@@ -40,9 +40,9 @@ exports[`gux-switch-legacy #render should render as expected 1`] = `
 
 exports[`gux-switch-legacy onSlotchange should set selected items as expected 1`] = `
 <gux-switch-legacy class="gux-small" layout="small" role="group" value="day">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <gux-switch-item value="month">
     <!---->
     <button class="gux-switch-item" type="button">

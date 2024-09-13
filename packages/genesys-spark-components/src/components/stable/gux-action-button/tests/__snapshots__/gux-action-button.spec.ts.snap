@@ -2,7 +2,7 @@
 
 exports[`gux-action-button renders 1`] = `
 <gux-action-button accent="primary" lang="en">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-action-button-container">
       <gux-popup exceed-target-width="" placement="bottom-end">
         <div class="gux-action-button-container" slot="target">
@@ -19,52 +19,52 @@ exports[`gux-action-button renders 1`] = `
         </div>
         <div class="gux-list-container" slot="popup">
           <gux-list role="list">
-            <mock:shadow-root>
+            <template shadowrootmode="open">
               <span aria-hidden="true" tabindex="-1"></span>
               <slot></slot>
-            </mock:shadow-root>
+            </template>
             <slot></slot>
           </gux-list>
         </div>
       </gux-popup>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Primary
   </div>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <button tabindex="-1" type="button">
         <slot></slot>
       </button>
-    </mock:shadow-root>
+    </template>
     Test 1
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <button tabindex="-1" type="button">
         <slot></slot>
       </button>
-    </mock:shadow-root>
+    </template>
     Test 2
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <button tabindex="-1" type="button">
         <slot></slot>
       </button>
-    </mock:shadow-root>
+    </template>
     Test 3
   </gux-list-item>
   <gux-list-divider role="presentation">
-    <mock:shadow-root></mock:shadow-root>
+    <template shadowrootmode="open"></template>
   </gux-list-divider>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <button tabindex="-1" type="button">
         <slot></slot>
       </button>
-    </mock:shadow-root>
+    </template>
     Test 4
   </gux-list-item>
 </gux-action-button>

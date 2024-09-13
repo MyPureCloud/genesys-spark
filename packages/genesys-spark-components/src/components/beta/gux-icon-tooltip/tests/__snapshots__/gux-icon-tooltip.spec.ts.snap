@@ -2,7 +2,7 @@
 
 exports[`gux-icon-tooltip-beta #render should render component as expected (1) 1`] = `
 <gux-icon-tooltip-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-icon-tooltip">
       <gux-screen-reader-beta>
         <slot name="content"></slot>
@@ -12,13 +12,13 @@ exports[`gux-icon-tooltip-beta #render should render component as expected (1) 1
         <div slot="content"></div>
       </gux-tooltip-beta>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-icon-tooltip-beta>
 `;
 
 exports[`gux-icon-tooltip-beta #render should render component as expected (2) 1`] = `
 <gux-icon-tooltip-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-icon-tooltip">
       <gux-screen-reader-beta>
         <slot name="content"></slot>
@@ -30,7 +30,7 @@ exports[`gux-icon-tooltip-beta #render should render component as expected (2) 1
         </div>
       </gux-tooltip-beta>
     </div>
-  </mock:shadow-root>
+  </template>
   <span slot="content">
     This is some tooltip text
   </span>
@@ -39,7 +39,7 @@ exports[`gux-icon-tooltip-beta #render should render component as expected (2) 1
 
 exports[`gux-icon-tooltip-beta #render should render component as expected (3) 1`] = `
 <gux-icon-tooltip-beta icon-name="fa/bell-regular">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-icon-tooltip">
       <gux-screen-reader-beta>
         <slot name="content"></slot>
@@ -49,13 +49,13 @@ exports[`gux-icon-tooltip-beta #render should render component as expected (3) 1
         <div slot="content"></div>
       </gux-tooltip-beta>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-icon-tooltip-beta>
 `;
 
 exports[`gux-icon-tooltip-beta #render should render component as expected (4) 1`] = `
 <gux-icon-tooltip-beta icon-name="fa/bell-regular">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-icon-tooltip">
       <gux-screen-reader-beta>
         <slot name="content"></slot>
@@ -67,7 +67,7 @@ exports[`gux-icon-tooltip-beta #render should render component as expected (4) 1
         </div>
       </gux-tooltip-beta>
     </div>
-  </mock:shadow-root>
+  </template>
   <span slot="content">
     This is some tooltip text
   </span>
