@@ -2,7 +2,7 @@
 
 exports[`gux-flyout-menu #render should render as expected 1`] = `
 <gux-flyout-menu aria-haspopup="true" tabindex="0">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <span>
       <slot name="target"></slot>
     </span>
@@ -12,26 +12,26 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
       </div>
       <slot name="menu"></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <span slot="target">
     Example Target Element
   </span>
   <gux-menu role="menu" slot="menu">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <slot></slot>
-    </mock:shadow-root>
+    </template>
     <gux-menu-option>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
           <span class="gux-menu-option-button-text">
             <slot></slot>
           </span>
         </button>
-      </mock:shadow-root>
+      </template>
       Option One
     </gux-menu-option>
     <gux-submenu label="Submenu Two">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
           <span class="gux-submenu-button-text">
             Submenu Two
@@ -43,19 +43,19 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
             <slot></slot>
           </div>
         </div>
-      </mock:shadow-root>
+      </template>
       <gux-menu-option>
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
             <span class="gux-menu-option-button-text">
               <slot></slot>
             </span>
           </button>
-        </mock:shadow-root>
+        </template>
         Option One
       </gux-menu-option>
       <gux-submenu label="Submenu Two">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
             <span class="gux-submenu-button-text">
               Submenu Two
@@ -67,71 +67,71 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
               <slot></slot>
             </div>
           </div>
-        </mock:shadow-root>
+        </template>
         <gux-menu-option>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
               <span class="gux-menu-option-button-text">
                 <slot></slot>
               </span>
             </button>
-          </mock:shadow-root>
+          </template>
           Option One
         </gux-menu-option>
         <gux-menu-option>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
               <span class="gux-menu-option-button-text">
                 <slot></slot>
               </span>
             </button>
-          </mock:shadow-root>
+          </template>
           Option Two
         </gux-menu-option>
         <gux-menu-option>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
               <span class="gux-menu-option-button-text">
                 <slot></slot>
               </span>
             </button>
-          </mock:shadow-root>
+          </template>
           Option Three
         </gux-menu-option>
       </gux-submenu>
       <gux-menu-option>
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
             <span class="gux-menu-option-button-text">
               <slot></slot>
             </span>
           </button>
-        </mock:shadow-root>
+        </template>
         Option Three
       </gux-menu-option>
     </gux-submenu>
     <gux-menu-option>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
           <span class="gux-menu-option-button-text">
             <slot></slot>
           </span>
         </button>
-      </mock:shadow-root>
+      </template>
       Option Three
     </gux-menu-option>
     <gux-menu-option>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
           <span class="gux-menu-option-button-text">
             <slot></slot>
           </span>
         </button>
-      </mock:shadow-root>
+      </template>
       Option Four
     </gux-menu-option>
     <gux-submenu label="Submenu Five">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
           <span class="gux-submenu-button-text">
             Submenu Five
@@ -143,29 +143,29 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
             <slot></slot>
           </div>
         </div>
-      </mock:shadow-root>
+      </template>
       <gux-menu-option>
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
             <span class="gux-menu-option-button-text">
               <slot></slot>
             </span>
           </button>
-        </mock:shadow-root>
+        </template>
         Option One
       </gux-menu-option>
       <gux-menu-option>
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
             <span class="gux-menu-option-button-text">
               <slot></slot>
             </span>
           </button>
-        </mock:shadow-root>
+        </template>
         Option Two
       </gux-menu-option>
       <gux-submenu label="Submenu Three">
-        <mock:shadow-root>
+        <template shadowrootmode="open">
           <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
             <span class="gux-submenu-button-text">
               Submenu Three
@@ -177,19 +177,19 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
               <slot></slot>
             </div>
           </div>
-        </mock:shadow-root>
+        </template>
         <gux-menu-option>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
               <span class="gux-menu-option-button-text">
                 <slot></slot>
               </span>
             </button>
-          </mock:shadow-root>
+          </template>
           Option One
         </gux-menu-option>
         <gux-submenu label="Submenu Two">
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
               <span class="gux-submenu-button-text">
                 Submenu Two
@@ -201,19 +201,19 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
                 <slot></slot>
               </div>
             </div>
-          </mock:shadow-root>
+          </template>
           <gux-menu-option>
-            <mock:shadow-root>
+            <template shadowrootmode="open">
               <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
                 <span class="gux-menu-option-button-text">
                   <slot></slot>
                 </span>
               </button>
-            </mock:shadow-root>
+            </template>
             Option One
           </gux-menu-option>
           <gux-submenu label="Submenu Two">
-            <mock:shadow-root>
+            <template shadowrootmode="open">
               <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
                 <span class="gux-submenu-button-text">
                   Submenu Two
@@ -225,57 +225,57 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
                   <slot></slot>
                 </div>
               </div>
-            </mock:shadow-root>
+            </template>
             <gux-menu-option>
-              <mock:shadow-root>
+              <template shadowrootmode="open">
                 <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
                   <span class="gux-menu-option-button-text">
                     <slot></slot>
                   </span>
                 </button>
-              </mock:shadow-root>
+              </template>
               Option One
             </gux-menu-option>
             <gux-menu-option>
-              <mock:shadow-root>
+              <template shadowrootmode="open">
                 <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
                   <span class="gux-menu-option-button-text">
                     <slot></slot>
                   </span>
                 </button>
-              </mock:shadow-root>
+              </template>
               Option Two
             </gux-menu-option>
             <gux-menu-option>
-              <mock:shadow-root>
+              <template shadowrootmode="open">
                 <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
                   <span class="gux-menu-option-button-text">
                     <slot></slot>
                   </span>
                 </button>
-              </mock:shadow-root>
+              </template>
               Option Three
             </gux-menu-option>
           </gux-submenu>
           <gux-menu-option>
-            <mock:shadow-root>
+            <template shadowrootmode="open">
               <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
                 <span class="gux-menu-option-button-text">
                   <slot></slot>
                 </span>
               </button>
-            </mock:shadow-root>
+            </template>
             Option Three
           </gux-menu-option>
         </gux-submenu>
         <gux-menu-option>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <button aria-haspopup="false" class="gux-menu-option-button" role="menuitem" tabindex="-1" type="button">
               <span class="gux-menu-option-button-text">
                 <slot></slot>
               </span>
             </button>
-          </mock:shadow-root>
+          </template>
           Option Three
         </gux-menu-option>
       </gux-submenu>

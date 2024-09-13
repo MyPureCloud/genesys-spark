@@ -2,7 +2,7 @@
 
 exports[`gux-form-field-select #render help should render component as expected 1`] = `
 <gux-form-field-select>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -29,7 +29,7 @@ exports[`gux-form-field-select #render help should render component as expected 
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" name="e-1" slot="input">
     <option value="option1">
       Option 1
@@ -52,7 +52,7 @@ exports[`gux-form-field-select #render help should render component as expected 
 
 exports[`gux-form-field-select #render indicator marks should render component as expected (1) 1`] = `
 <gux-form-field-select>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -79,7 +79,7 @@ exports[`gux-form-field-select #render indicator marks should render component a
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select id="gux-form-field-input-i" name="lp-1" slot="input">
     <option value="option1">
       Option 1
@@ -99,7 +99,7 @@ exports[`gux-form-field-select #render indicator marks should render component a
 
 exports[`gux-form-field-select #render indicator marks should render component as expected (2) 1`] = `
 <gux-form-field-select indicator-mark="optional">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -126,7 +126,7 @@ exports[`gux-form-field-select #render indicator marks should render component a
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select id="gux-form-field-input-i" name="lp-1" slot="input">
     <option value="option1">
       Option 1
@@ -146,7 +146,7 @@ exports[`gux-form-field-select #render indicator marks should render component a
 
 exports[`gux-form-field-select #render indicator marks should render component as expected (3) 1`] = `
 <gux-form-field-select indicator-mark="required">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -173,7 +173,7 @@ exports[`gux-form-field-select #render indicator marks should render component a
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select id="gux-form-field-input-i" name="lp-1" slot="input">
     <option value="option1">
       Option 1
@@ -193,7 +193,7 @@ exports[`gux-form-field-select #render indicator marks should render component a
 
 exports[`gux-form-field-select #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-select>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -220,7 +220,7 @@ exports[`gux-form-field-select #render input attributes should render component 
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select id="gux-form-field-input-i" name="lp-1" slot="input">
     <option value="option1">
       Option 1
@@ -240,7 +240,7 @@ exports[`gux-form-field-select #render input attributes should render component 
 
 exports[`gux-form-field-select #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-select>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -267,7 +267,7 @@ exports[`gux-form-field-select #render input attributes should render component 
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select disabled="" id="gux-form-field-input-i" name="lp-1" slot="input">
     <option value="option1">
       Option 1
@@ -287,7 +287,7 @@ exports[`gux-form-field-select #render input attributes should render component 
 
 exports[`gux-form-field-select #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-select>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -314,7 +314,7 @@ exports[`gux-form-field-select #render input attributes should render component 
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select id="gux-form-field-input-i" name="lp-1" required="" slot="input">
     <option value="option1">
       Option 1
@@ -334,7 +334,7 @@ exports[`gux-form-field-select #render input attributes should render component 
 
 exports[`gux-form-field-select #render label-info should render component as expected 1`] = `
 <gux-form-field-select>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -361,7 +361,7 @@ exports[`gux-form-field-select #render label-info should render component as exp
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" name="e-1" slot="input">
     <option value="option1">
       Option 1
@@ -386,7 +386,7 @@ exports[`gux-form-field-select #render label-info should render component as exp
 
 exports[`gux-form-field-select #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-select>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -413,7 +413,7 @@ exports[`gux-form-field-select #render label-position should render component as
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select id="gux-form-field-input-i" name="lp-1" slot="input">
     <option value="option1">
       Option 1
@@ -433,7 +433,7 @@ exports[`gux-form-field-select #render label-position should render component as
 
 exports[`gux-form-field-select #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-select label-position="above">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -460,7 +460,7 @@ exports[`gux-form-field-select #render label-position should render component as
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select id="gux-form-field-input-i" name="lp-1" slot="input">
     <option value="option1">
       Option 1
@@ -480,7 +480,7 @@ exports[`gux-form-field-select #render label-position should render component as
 
 exports[`gux-form-field-select #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-select label-position="beside">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-beside gux-form-field-container">
       <div class="gux-beside gux-form-field-label">
         <slot name="label"></slot>
@@ -507,7 +507,7 @@ exports[`gux-form-field-select #render label-position should render component as
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select id="gux-form-field-input-i" name="lp-1" slot="input">
     <option value="option1">
       Option 1
@@ -527,7 +527,7 @@ exports[`gux-form-field-select #render label-position should render component as
 
 exports[`gux-form-field-select #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-select label-position="screenreader">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-form-field-container gux-screenreader">
       <div class="gux-form-field-label gux-screenreader">
         <slot name="label"></slot>
@@ -554,7 +554,7 @@ exports[`gux-form-field-select #render label-position should render component as
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <select id="gux-form-field-input-i" name="lp-1" slot="input">
     <option value="option1">
       Option 1

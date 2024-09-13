@@ -2,7 +2,7 @@
 
 exports[`gux-form-field-time-zone-picker #render error should render component as expected 1`] = `
 <gux-form-field-time-zone-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Select Time Zone This is an error message
@@ -30,7 +30,7 @@ exports[`gux-form-field-time-zone-picker #render error should render component a
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta aria-describedby="gux-form-field-error-i" id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
     Select Time Zone
@@ -43,7 +43,7 @@ exports[`gux-form-field-time-zone-picker #render error should render component a
 
 exports[`gux-form-field-time-zone-picker #render help should render component as expected 1`] = `
 <gux-form-field-time-zone-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Select Time Zone
@@ -71,7 +71,7 @@ exports[`gux-form-field-time-zone-picker #render help should render component as
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
     Select Time Zone
@@ -84,7 +84,7 @@ exports[`gux-form-field-time-zone-picker #render help should render component as
 
 exports[`gux-form-field-time-zone-picker #render indicator marks should render component as expected (1) 1`] = `
 <gux-form-field-time-zone-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Select Time Zone
@@ -112,7 +112,7 @@ exports[`gux-form-field-time-zone-picker #render indicator marks should render c
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
     Select Time Zone
@@ -122,7 +122,7 @@ exports[`gux-form-field-time-zone-picker #render indicator marks should render c
 
 exports[`gux-form-field-time-zone-picker #render indicator marks should render component as expected (2) 1`] = `
 <gux-form-field-time-zone-picker indicator-mark="optional">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Select Time Zone
@@ -150,7 +150,7 @@ exports[`gux-form-field-time-zone-picker #render indicator marks should render c
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
     Select Time Zone
@@ -160,7 +160,7 @@ exports[`gux-form-field-time-zone-picker #render indicator marks should render c
 
 exports[`gux-form-field-time-zone-picker #render indicator marks should render component as expected (3) 1`] = `
 <gux-form-field-time-zone-picker indicator-mark="required">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Select Time Zone
@@ -188,7 +188,7 @@ exports[`gux-form-field-time-zone-picker #render indicator marks should render c
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
     Select Time Zone
@@ -198,7 +198,7 @@ exports[`gux-form-field-time-zone-picker #render indicator marks should render c
 
 exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-time-zone-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label"></legend>
       <div class="gux-form-field-visual-label gux-undefined" role="presentation">
@@ -224,14 +224,14 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
 </gux-form-field-time-zone-picker>
 `;
 
 exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-time-zone-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label"></legend>
       <div class="gux-form-field-visual-label gux-undefined" role="presentation">
@@ -257,14 +257,14 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta disabled="" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
 </gux-form-field-time-zone-picker>
 `;
 
 exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-time-zone-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label"></legend>
       <div class="gux-form-field-visual-label gux-undefined" role="presentation">
@@ -290,14 +290,14 @@ exports[`gux-form-field-time-zone-picker #render input attributes should render 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta local-default="America/Detroit" required="" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
 </gux-form-field-time-zone-picker>
 `;
 
 exports[`gux-form-field-time-zone-picker #render label-info should render component as expected 1`] = `
 <gux-form-field-time-zone-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Select Time Zone This is some tooltip text
@@ -325,7 +325,7 @@ exports[`gux-form-field-time-zone-picker #render label-info should render compon
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
     Select Time Zone
@@ -340,7 +340,7 @@ exports[`gux-form-field-time-zone-picker #render label-info should render compon
 
 exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-time-zone-picker>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Select Time Zone
@@ -368,7 +368,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
     Select Time Zone
@@ -378,7 +378,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
 
 exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-time-zone-picker label-position="above">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Select Time Zone
@@ -406,7 +406,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
     Select Time Zone
@@ -416,7 +416,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
 
 exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-time-zone-picker label-position="beside">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-beside gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Select Time Zone
@@ -444,7 +444,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
     Select Time Zone
@@ -454,7 +454,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
 
 exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-time-zone-picker label-position="screenreader">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
       <legend class="gux-form-field-screenreader-label">
         Select Time Zone
@@ -482,7 +482,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
     Select Time Zone

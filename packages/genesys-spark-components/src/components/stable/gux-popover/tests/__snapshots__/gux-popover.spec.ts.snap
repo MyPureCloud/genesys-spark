@@ -2,7 +2,7 @@
 
 exports[`gux-popover #render should render popover 1`] = `
 <gux-popover for="popover-target" id="popover-example" is-open="" position="top">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-popover-wrapper" data-placement>
       <div class="gux-arrow">
         <div class="gux-arrow-caret"></div>
@@ -14,7 +14,7 @@ exports[`gux-popover #render should render popover 1`] = `
         <slot></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <span slot="title">
     Title
   </span>

@@ -23,7 +23,7 @@
  - [gux-action-button](../gux-action-button)
  - [gux-advanced-dropdown-legacy](../../legacy/gux-advanced-dropdown-legacy)
  - [gux-avatar-beta](../../beta/gux-avatar)
- - [gux-avatar-change-photo-beta](../../beta/gux-avatar-change-photo)
+ - [gux-avatar-change-photo-beta](../../beta/gux-avatar/gux-avatar-change-photo)
  - [gux-button-multi](../gux-button-multi)
  - [gux-calendar](../gux-calendar)
  - [gux-calendar-beta](../../beta/gux-calendar-beta/components/single)

@@ -2,14 +2,14 @@
 
 exports[`gux-tabs #render should render as expected 1`] = `
 <gux-tabs class="example">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-horizontal gux-left gux-tabs">
       <slot name="tab-list"></slot>
       <div class="gux-horizontal gux-left gux-panel-container">
         <slot></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-tab-list slot="tab-list">
     <!---->
     <div class="gux-tab-container">
@@ -70,33 +70,33 @@ exports[`gux-tabs #render should render as expected 1`] = `
     </div>
   </gux-tab-list>
   <gux-tab-panel aria-labelledby="gux-2-1-tab" hidden="" id="gux-2-1-panel" role="tabpanel" tab-id="2-1" tabindex="0">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <slot></slot>
-    </mock:shadow-root>
+    </template>
     Tab content 1
   </gux-tab-panel>
   <gux-tab-panel aria-labelledby="gux-2-2-tab" hidden="" id="gux-2-2-panel" role="tabpanel" tab-id="2-2" tabindex="0">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <slot></slot>
-    </mock:shadow-root>
+    </template>
     Tab content 2
   </gux-tab-panel>
   <gux-tab-panel aria-labelledby="gux-2-3-tab" hidden="" id="gux-2-3-panel" role="tabpanel" tab-id="2-3" tabindex="0">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <slot></slot>
-    </mock:shadow-root>
+    </template>
     Tab content 3
   </gux-tab-panel>
   <gux-tab-panel aria-labelledby="gux-2-4-tab" hidden="" id="gux-2-4-panel" role="tabpanel" tab-id="2-4" tabindex="0">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <slot></slot>
-    </mock:shadow-root>
+    </template>
     Tab content 4
   </gux-tab-panel>
   <gux-tab-panel aria-labelledby="gux-2-5-tab" hidden="" id="gux-2-5-panel" role="tabpanel" tab-id="2-5" tabindex="0">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <slot></slot>
-    </mock:shadow-root>
+    </template>
     Tab content 5
   </gux-tab-panel>
 </gux-tabs>
@@ -104,14 +104,14 @@ exports[`gux-tabs #render should render as expected 1`] = `
 
 exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
 <gux-tabs orientation="vertical">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-left gux-tabs gux-vertical">
       <slot name="tab-list"></slot>
       <div class="gux-left gux-panel-container gux-vertical">
         <slot></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-tab-list slot="tab-list">
     <!---->
     <div class="gux-tab-container">
@@ -172,33 +172,33 @@ exports[`gux-tabs #render should render vertical tabs as expected 1`] = `
     </div>
   </gux-tab-list>
   <gux-tab-panel aria-labelledby="gux-2-1-tab" hidden="" id="gux-2-1-panel" role="tabpanel" tab-id="2-1" tabindex="0">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <slot></slot>
-    </mock:shadow-root>
+    </template>
     Tab content 1
   </gux-tab-panel>
   <gux-tab-panel aria-labelledby="gux-2-2-tab" hidden="" id="gux-2-2-panel" role="tabpanel" tab-id="2-2" tabindex="0">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <slot></slot>
-    </mock:shadow-root>
+    </template>
     Tab content 2
   </gux-tab-panel>
   <gux-tab-panel aria-labelledby="gux-2-3-tab" hidden="" id="gux-2-3-panel" role="tabpanel" tab-id="2-3" tabindex="0">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <slot></slot>
-    </mock:shadow-root>
+    </template>
     Tab content 3
   </gux-tab-panel>
   <gux-tab-panel aria-labelledby="gux-2-4-tab" hidden="" id="gux-2-4-panel" role="tabpanel" tab-id="2-4" tabindex="0">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <slot></slot>
-    </mock:shadow-root>
+    </template>
     Tab content 4
   </gux-tab-panel>
   <gux-tab-panel aria-labelledby="gux-2-5-tab" hidden="" id="gux-2-5-panel" role="tabpanel" tab-id="2-5" tabindex="0">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <slot></slot>
-    </mock:shadow-root>
+    </template>
     Tab content 5
   </gux-tab-panel>
 </gux-tabs>

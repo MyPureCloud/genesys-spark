@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.83.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.82.0...v4.83.0) (2024-09-13)
+
+
+### Features
+
+* **dropdown:** mixed rtl ltr tester ([#592](https://github.com/MyPureCloud/genesys-spark/issues/592)) ([1fa28fd](https://github.com/MyPureCloud/genesys-spark/commit/1fa28fd6b82ceb2f8641c6406a56cda19e93f2cf))
+* **other:** add browser region override support for Hong Kong and Singapore regions ([85cd582](https://github.com/MyPureCloud/genesys-spark/commit/85cd582586695deb67e5f24621d8c43d096d6763))
+
+
+### Bug Fixes
+
+* **visualization:** don't show vega-lite actions menu by default in gux-visualization ([7f31333](https://github.com/MyPureCloud/genesys-spark/commit/7f313334c1c9f5c9c16099ddaf97c4826aae6cb9))
+
+## [4.82.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.3...v4.82.0) (2024-09-12)
+
+
+### Features
+
+* **avatar:** add tooltip ([#594](https://github.com/MyPureCloud/genesys-spark/issues/594)) ([a5e3bf7](https://github.com/MyPureCloud/genesys-spark/commit/a5e3bf78fb74395ad1eb87002523c7908310aebf))
+
 ### [4.81.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.2...v4.81.3) (2024-09-11)
 
 

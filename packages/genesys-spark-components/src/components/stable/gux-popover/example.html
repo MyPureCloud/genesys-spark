@@ -11,17 +11,17 @@
       <span slot="title">Title</span>
       <div class="popover-content-wrapper">
         <div>Popover Content</div>
-        <div class="popover-content">
-          <gux-button accent="ghost" onclick="notify(event)">
-            Action 3
-          </gux-button>
-          <gux-button accent="secondary" onclick="notify(event)">
-            Action 2
-          </gux-button>
-          <gux-button accent="primary" onclick="notify(event)">
-            Action 1
-          </gux-button>
-        </div>
+        <gux-cta-group align="end">
+          <gux-button slot="primary" onclick="notify(event)"
+            >Action 3</gux-button
+          >
+          <gux-button slot="secondary" onclick="notify(event)"
+            >Action 2</gux-button
+          >
+          <gux-button slot="dismiss" onclick="notify(event)"
+            >Action 1</gux-button
+          >
+        </gux-cta-group>
       </div>
     </gux-popover>
   </div>

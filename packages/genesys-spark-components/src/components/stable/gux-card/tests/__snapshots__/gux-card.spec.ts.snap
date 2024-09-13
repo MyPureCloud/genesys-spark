@@ -2,11 +2,11 @@
 
 exports[`#render different card accents should render component as expected (1) 1`] = `
 <gux-card>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-bordered gux-card">
       <slot></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <span>
     This is a content slot
   </span>
@@ -15,11 +15,11 @@ exports[`#render different card accents should render component as expected (1) 
 
 exports[`#render different card accents should render component as expected (2) 1`] = `
 <gux-card accent="bordered">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-bordered gux-card">
       <slot></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <span>
     This is a content slot
   </span>
@@ -28,11 +28,11 @@ exports[`#render different card accents should render component as expected (2) 
 
 exports[`#render different card accents should render component as expected (3) 1`] = `
 <gux-card accent="raised">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-card gux-raised">
       <slot></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <span>
     This is a content slot
   </span>
@@ -41,11 +41,11 @@ exports[`#render different card accents should render component as expected (3) 
 
 exports[`#render different card accents should render component as expected (4) 1`] = `
 <gux-card accent="borderless">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-borderless gux-card">
       <slot></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <span>
     This is a content slot
   </span>

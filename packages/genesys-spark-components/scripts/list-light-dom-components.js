@@ -11,7 +11,7 @@ async function listLightDomComponents() {
     ]
   });
 
-  let lightDomComponents = [];
+  const lightDomComponents = [];
 
   await Promise.all(
     files.map(async file => {

@@ -2,7 +2,7 @@
 
 exports[`gux-form-field-radio #render should render component as expected (1) 1`] = `
 <gux-form-field-radio>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
@@ -26,7 +26,7 @@ exports[`gux-form-field-radio #render should render component as expected (1) 1`
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input id="gux-form-field-input-i" name="food-1" slot="input" type="radio" value="pizza">
   <label for="gux-form-field-input-i" slot="label">
     Pizza
@@ -36,7 +36,7 @@ exports[`gux-form-field-radio #render should render component as expected (1) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (2) 1`] = `
 <gux-form-field-radio class="gux-disabled">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="true" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
@@ -60,7 +60,7 @@ exports[`gux-form-field-radio #render should render component as expected (2) 1`
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input disabled="" id="gux-form-field-input-i" name="food-1" slot="input" type="radio" value="pizza">
   <label for="gux-form-field-input-i" slot="label">
     Pizza
@@ -70,7 +70,7 @@ exports[`gux-form-field-radio #render should render component as expected (2) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (3) 1`] = `
 <gux-form-field-radio class="gux-input-error">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
@@ -94,7 +94,7 @@ exports[`gux-form-field-radio #render should render component as expected (3) 1`
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input aria-describedby="gux-form-field-error-i" id="gux-form-field-input-i" name="food-1" slot="input" type="radio" value="pizza">
   <label for="gux-form-field-input-i" slot="label">
     Pizza
@@ -107,7 +107,7 @@ exports[`gux-form-field-radio #render should render component as expected (3) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (4) 1`] = `
 <gux-form-field-radio>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
@@ -131,7 +131,7 @@ exports[`gux-form-field-radio #render should render component as expected (4) 1`
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input checked="" id="gux-form-field-input-i" name="food-1" slot="input" type="radio" value="pizza">
   <label for="gux-form-field-input-i" slot="label">
     Pizza
@@ -141,7 +141,7 @@ exports[`gux-form-field-radio #render should render component as expected (4) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (5) 1`] = `
 <gux-form-field-radio class="gux-input-error">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
@@ -165,7 +165,7 @@ exports[`gux-form-field-radio #render should render component as expected (5) 1`
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input aria-describedby="gux-form-field-error-i" id="gux-form-field-input-i" name="food-1" slot="input" type="radio" value="pizza">
   <label for="gux-form-field-input-i" slot="label">
     Pizza
@@ -178,7 +178,7 @@ exports[`gux-form-field-radio #render should render component as expected (5) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (6) 1`] = `
 <gux-form-field-radio class="gux-disabled gux-input-error">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="true" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
@@ -202,7 +202,7 @@ exports[`gux-form-field-radio #render should render component as expected (6) 1`
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input aria-describedby="gux-form-field-error-i" disabled="" id="gux-form-field-input-i" name="food-1" slot="input" type="radio" value="pizza">
   <label for="gux-form-field-input-i" slot="label">
     Pizza
@@ -215,7 +215,7 @@ exports[`gux-form-field-radio #render should render component as expected (6) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (7) 1`] = `
 <gux-form-field-radio>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
@@ -239,7 +239,7 @@ exports[`gux-form-field-radio #render should render component as expected (7) 1`
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" name="food-1" slot="input" type="radio" value="spaghetti">
   <label for="gux-form-field-input-i" slot="label">
     Spaghetti
@@ -252,7 +252,7 @@ exports[`gux-form-field-radio #render should render component as expected (7) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (8) 1`] = `
 <gux-form-field-radio class="gux-disabled">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-disabled="true" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
@@ -276,7 +276,7 @@ exports[`gux-form-field-radio #render should render component as expected (8) 1`
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input aria-describedby="gux-form-field-help-i" disabled="" id="gux-form-field-input-i" name="food-1" slot="input" type="radio" value="spaghetti">
   <label for="gux-form-field-input-i" slot="label">
     Spaghetti

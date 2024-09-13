@@ -2,9 +2,9 @@
 
 exports[`gux-form #render should render gux-form component as expected (1) 1`] = `
 <gux-form-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <form>
     <header>
       <gux-form-heading>
@@ -60,9 +60,9 @@ exports[`gux-form #render should render gux-form component as expected (1) 1`] =
 
 exports[`gux-form #render should render gux-form component as expected (2) 1`] = `
 <gux-form-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <form>
     <header>
       <gux-form-heading>

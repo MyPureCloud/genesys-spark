@@ -2,40 +2,40 @@
 
 exports[`gux-announce-beta #render should render component as expected (1) 1`] = `
 <gux-announce-beta aria-live="polite">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
     <div></div>
-  </mock:shadow-root>
+  </template>
   This is some text to read
 </gux-announce-beta>
 `;
 
 exports[`gux-announce-beta #render should render component as expected (2) 1`] = `
 <gux-announce-beta aria-live="assertive" politeness="assertive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
     <div></div>
-  </mock:shadow-root>
+  </template>
   This is some text to read
 </gux-announce-beta>
 `;
 
 exports[`gux-announce-beta #render should render component as expected (3) 1`] = `
 <gux-announce-beta aria-live="off" politeness="off">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
     <div></div>
-  </mock:shadow-root>
+  </template>
   This is some text to read
 </gux-announce-beta>
 `;
 
 exports[`gux-announce-beta #render should render component as expected (4) 1`] = `
 <gux-announce-beta aria-live="polite" politeness="polite">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
     <div></div>
-  </mock:shadow-root>
+  </template>
   This is some text to read
 </gux-announce-beta>
 `;

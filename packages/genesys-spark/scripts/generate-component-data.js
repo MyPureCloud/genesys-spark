@@ -29,8 +29,8 @@ fs.writeFileSync(
 );
 
 function generateComponentSpec() {
-  let styleExamples = globSync(styleExampleGlob);
-  let stylesSpec = styleExamples.reduce((spec, examplePath) => {
+  const styleExamples = globSync(styleExampleGlob);
+  const stylesSpec = styleExamples.reduce((spec, examplePath) => {
     const name = path.basename(examplePath, '.html');
     spec[name] = { styles: true };
     return spec;

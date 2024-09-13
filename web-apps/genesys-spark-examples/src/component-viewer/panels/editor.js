@@ -12,8 +12,8 @@ const CONFIG = {
 };
 
 export const createEditor = (panel, changeHandler) => {
-  let editor = monaco.editor.create(panel, CONFIG);
-  let model = editor.getModel();
+  const editor = monaco.editor.create(panel, CONFIG);
+  const model = editor.getModel();
 
   model.onDidChangeContent(() => changeHandler(model.getValue()));
   return content => {

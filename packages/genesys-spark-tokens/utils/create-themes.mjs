@@ -49,7 +49,7 @@ export async function createThemes(sourceFolder, outputFolder) {
               type: 'name',
               transitive: false,
               filter: () => true,
-              transform: (token, options, a, s, d) => {
+              transform: (token, options) => {
                 const set = token.filePath.replace('.json', '').split('/')[1];
 
                 return [options.prefix, set]

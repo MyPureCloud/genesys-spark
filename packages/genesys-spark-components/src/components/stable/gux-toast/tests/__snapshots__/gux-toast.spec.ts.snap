@@ -2,7 +2,7 @@
 
 exports[`gux-simple-toast-legacy #render should render action toast 1`] = `
 <gux-toast toast-type="action">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toast gux-toast-action">
       <div class="gux-icon gux-icon-action">
         <slot name="icon"></slot>
@@ -27,7 +27,7 @@ exports[`gux-simple-toast-legacy #render should render action toast 1`] = `
       </div>
       <gux-dismiss-button position="inherit"></gux-dismiss-button>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
   <div slot="title">
     2 Actions
@@ -46,7 +46,7 @@ exports[`gux-simple-toast-legacy #render should render action toast 1`] = `
 
 exports[`gux-simple-toast-legacy #render should render error toast 1`] = `
 <gux-toast toast-type="error">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toast gux-toast-error">
       <div class="gux-icon gux-icon-error">
         <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
@@ -66,7 +66,7 @@ exports[`gux-simple-toast-legacy #render should render error toast 1`] = `
       </div>
       <gux-dismiss-button position="inherit"></gux-dismiss-button>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Error Example with Link
   </div>
@@ -81,7 +81,7 @@ exports[`gux-simple-toast-legacy #render should render error toast 1`] = `
 
 exports[`gux-simple-toast-legacy #render should render info toast 1`] = `
 <gux-toast toast-type="info">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toast gux-toast-info">
       <div class="gux-icon gux-icon-info">
         <gux-icon decorative="" icon-name="fa/circle-info-solid"></gux-icon>
@@ -101,7 +101,7 @@ exports[`gux-simple-toast-legacy #render should render info toast 1`] = `
       </div>
       <gux-dismiss-button position="inherit"></gux-dismiss-button>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Info Example with Link
   </div>
@@ -116,7 +116,7 @@ exports[`gux-simple-toast-legacy #render should render info toast 1`] = `
 
 exports[`gux-simple-toast-legacy #render should render success toast 1`] = `
 <gux-toast toast-type="success">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toast gux-toast-success">
       <div class="gux-icon gux-icon-success">
         <gux-icon decorative="" icon-name="fa/circle-check-solid"></gux-icon>
@@ -136,7 +136,7 @@ exports[`gux-simple-toast-legacy #render should render success toast 1`] = `
       </div>
       <gux-dismiss-button position="inherit"></gux-dismiss-button>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Success Example with Link
   </div>
@@ -151,7 +151,7 @@ exports[`gux-simple-toast-legacy #render should render success toast 1`] = `
 
 exports[`gux-simple-toast-legacy #render should render warning toast 1`] = `
 <gux-toast toast-type="warning">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-toast gux-toast-warning">
       <div class="gux-icon gux-icon-warning">
         <gux-icon decorative="" icon-name="fa/triangle-exclamation-solid"></gux-icon>
@@ -171,7 +171,7 @@ exports[`gux-simple-toast-legacy #render should render warning toast 1`] = `
       </div>
       <gux-dismiss-button position="inherit"></gux-dismiss-button>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Warning Example with Link
   </div>

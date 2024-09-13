@@ -23,12 +23,15 @@
 
 ### Depends on
 
-- [gux-icon](../../stable/gux-icon)
+- [gux-icon](../../../stable/gux-icon)
+- [gux-tooltip-beta](../../gux-tooltip-beta)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-avatar-change-photo-beta --> gux-icon
+  gux-avatar-change-photo-beta --> gux-tooltip-beta
+  gux-tooltip-beta --> gux-tooltip-base-beta
   style gux-avatar-change-photo-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

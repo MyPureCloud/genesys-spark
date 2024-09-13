@@ -2,7 +2,7 @@
 
 exports[`gux-label-info-beta #render should render component as expected (1) 1`] = `
 <gux-label-info-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-label-info">
       <gux-screen-reader-beta>
         <slot name="content"></slot>
@@ -12,13 +12,13 @@ exports[`gux-label-info-beta #render should render component as expected (1) 1`]
         <div slot="content"></div>
       </gux-tooltip-beta>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-label-info-beta>
 `;
 
 exports[`gux-label-info-beta #render should render component as expected (2) 1`] = `
 <gux-label-info-beta variant="question">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-label-info">
       <gux-screen-reader-beta>
         <slot name="content"></slot>
@@ -30,7 +30,7 @@ exports[`gux-label-info-beta #render should render component as expected (2) 1`]
         </div>
       </gux-tooltip-beta>
     </div>
-  </mock:shadow-root>
+  </template>
   <span slot="content">
     This is some tooltip text
   </span>
@@ -39,7 +39,7 @@ exports[`gux-label-info-beta #render should render component as expected (2) 1`]
 
 exports[`gux-label-info-beta #render should render component as expected (3) 1`] = `
 <gux-label-info-beta variant="info">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-label-info">
       <gux-screen-reader-beta>
         <slot name="content"></slot>
@@ -49,13 +49,13 @@ exports[`gux-label-info-beta #render should render component as expected (3) 1`]
         <div slot="content"></div>
       </gux-tooltip-beta>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-label-info-beta>
 `;
 
 exports[`gux-label-info-beta #render should render component as expected (4) 1`] = `
 <gux-label-info-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-label-info">
       <gux-screen-reader-beta>
         <slot name="content"></slot>
@@ -67,7 +67,7 @@ exports[`gux-label-info-beta #render should render component as expected (4) 1`]
         </div>
       </gux-tooltip-beta>
     </div>
-  </mock:shadow-root>
+  </template>
   <span slot="content">
     This is some tooltip text
   </span>
@@ -76,7 +76,7 @@ exports[`gux-label-info-beta #render should render component as expected (4) 1`]
 
 exports[`gux-label-info-beta #render should render component as expected (5) 1`] = `
 <gux-label-info-beta variant="invalid-variant">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-label-info">
       <gux-screen-reader-beta>
         <slot name="content"></slot>
@@ -88,7 +88,7 @@ exports[`gux-label-info-beta #render should render component as expected (5) 1`]
         </div>
       </gux-tooltip-beta>
     </div>
-  </mock:shadow-root>
+  </template>
   <span slot="content">
     This is an information tooltip
   </span>

@@ -552,6 +552,20 @@
       <gux-option value="d">Dog</gux-option>
     </gux-listbox>
   </gux-dropdown>
+
+  <h2>Mixed LTR and RTL content</h2>
+  <gux-dropdown
+    filter-type="starts-with"
+    placeholder="Select an option"
+    style="max-width: 150px"
+  >
+    <gux-listbox aria-label="Options">
+      <gux-option value="a" dir="auto">עברית ואז english</gux-option>
+      <gux-option value="b" dir="auto">עברית</gux-option>
+      <gux-option value="c">Cat</gux-option>
+      <gux-option value="d">Dog</gux-option>
+    </gux-listbox>
+  </gux-dropdown>
 </form>
 
 <style

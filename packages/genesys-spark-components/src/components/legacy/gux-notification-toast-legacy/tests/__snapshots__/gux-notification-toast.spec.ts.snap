@@ -2,7 +2,7 @@
 
 exports[`gux-notification-toast-legacy #render should render alert notification toast 1`] = `
 <gux-notification-toast-legacy accent="alert">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-alert gux-icon">
       <slot name="icon"></slot>
     </div>
@@ -15,7 +15,7 @@ exports[`gux-notification-toast-legacy #render should render alert notification 
       </gux-truncate>
     </div>
     <gux-dismiss-button></gux-dismiss-button>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="title">
     Title
@@ -28,7 +28,7 @@ exports[`gux-notification-toast-legacy #render should render alert notification 
 
 exports[`gux-notification-toast-legacy #render should render neutral notification toast 1`] = `
 <gux-notification-toast-legacy accent="neutral">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-icon gux-neutral">
       <slot name="icon"></slot>
     </div>
@@ -41,7 +41,7 @@ exports[`gux-notification-toast-legacy #render should render neutral notificatio
       </gux-truncate>
     </div>
     <gux-dismiss-button></gux-dismiss-button>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="title">
     Title
@@ -54,7 +54,7 @@ exports[`gux-notification-toast-legacy #render should render neutral notificatio
 
 exports[`gux-notification-toast-legacy #render should render positive notification toast 1`] = `
 <gux-notification-toast-legacy accent="positive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-icon gux-positive">
       <slot name="icon"></slot>
     </div>
@@ -67,7 +67,7 @@ exports[`gux-notification-toast-legacy #render should render positive notificati
       </gux-truncate>
     </div>
     <gux-dismiss-button></gux-dismiss-button>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="title">
     Title
@@ -80,7 +80,7 @@ exports[`gux-notification-toast-legacy #render should render positive notificati
 
 exports[`gux-notification-toast-legacy #render should render warning notification toast 1`] = `
 <gux-notification-toast-legacy accent="warning">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-icon gux-warning">
       <slot name="icon"></slot>
     </div>
@@ -93,7 +93,7 @@ exports[`gux-notification-toast-legacy #render should render warning notificatio
       </gux-truncate>
     </div>
     <gux-dismiss-button></gux-dismiss-button>
-  </mock:shadow-root>
+  </template>
   <gux-icon decorative="" icon-name="user-add" slot="icon"></gux-icon>
   <div slot="title">
     Title

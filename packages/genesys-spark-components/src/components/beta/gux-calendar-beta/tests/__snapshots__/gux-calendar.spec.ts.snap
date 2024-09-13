@@ -2,7 +2,7 @@
 
 exports[`gux-calendar renders 1`] = `
 <gux-calendar-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar-beta">
       <slot></slot>
       <div class="gux-header">
@@ -392,7 +392,7 @@ exports[`gux-calendar renders 1`] = `
         </div>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input max="2023-06-18" min="2023-04-28" type="date" value="2023-05-19">
 </gux-calendar-beta>
 `;

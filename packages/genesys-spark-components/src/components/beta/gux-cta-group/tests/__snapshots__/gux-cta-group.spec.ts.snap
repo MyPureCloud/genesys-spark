@@ -2,13 +2,13 @@
 
 exports[`gux-cta-group #render should render component as expected (1) 1`] = `
 <gux-cta-group>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-cta-group gux-start-align">
       <slot name="primary"></slot>
       <slot name="secondary"></slot>
       <slot name="dismiss"></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-button slot="primary">
     Primary
   </gux-button>
@@ -23,13 +23,13 @@ exports[`gux-cta-group #render should render component as expected (1) 1`] = `
 
 exports[`gux-cta-group #render should render component as expected (2) 1`] = `
 <gux-cta-group align="end">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-cta-group gux-end-align">
       <slot name="primary"></slot>
       <slot name="secondary"></slot>
       <slot name="dismiss"></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-button slot="primary">
     Primary
   </gux-button>
@@ -52,13 +52,13 @@ exports[`gux-cta-group #render should render component as expected (2) 1`] = `
 
 exports[`gux-cta-group #render should render component as expected (3) 1`] = `
 <gux-cta-group dangerous="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-cta-group gux-start-align">
       <slot name="primary"></slot>
       <slot name="secondary"></slot>
       <slot name="dismiss"></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <gux-button slot="primary">
     Delete key
   </gux-button>

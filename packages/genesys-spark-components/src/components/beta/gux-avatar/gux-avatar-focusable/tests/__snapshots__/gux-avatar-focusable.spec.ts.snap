@@ -2,9 +2,9 @@
 
 exports[`gux-avatar-focusable #render component type (1) with valid markup 1`] = `
 <gux-avatar-focusable-beta gs-avatar-size="large">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <button>
     <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
   </button>
@@ -13,9 +13,9 @@ exports[`gux-avatar-focusable #render component type (1) with valid markup 1`] =
 
 exports[`gux-avatar-focusable #render component type (2) with valid markup 1`] = `
 <gux-avatar-focusable-beta gs-avatar-size="large">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <a href="#">
     <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
   </a>
@@ -24,9 +24,9 @@ exports[`gux-avatar-focusable #render component type (2) with valid markup 1`] =
 
 exports[`gux-avatar-focusable #render component type (3) with valid markup 1`] = `
 <gux-avatar-focusable-beta gs-avatar-size="large">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <gux-avatar-change-photo-beta>
     <gux-avatar-beta name="Conor Darcy" slot="avatar"></gux-avatar-beta>
   </gux-avatar-change-photo-beta>

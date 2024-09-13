@@ -136,10 +136,10 @@ function getA11yRuleQuestions() {
 }
 
 function createComponentList(componentStability) {
-  let list = readdirSync(
+  const list = readdirSync(
     join(__dirname, `../src/components/${componentStability}`)
   );
-  let componentList = [];
+  const componentList = [];
   list.forEach(result => {
     if (result.startsWith('gux')) {
       componentList.push(result);

@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components-react",
-  "version": "4.81.3",
+  "version": "4.83.0",
   "description": "",
   "license": "MIT",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "clean": "rm -r ./dist || true",
-    "eslint": "eslint . --ignore-path .gitignore --no-error-on-unmatched-pattern --fix",
+    "eslint": "eslint --fix",
     "lint-all": "npm-run-all \"eslint\" \"prettier\" \"prettier-package-json\"",
     "lint-staged": "lint-staged --concurrent false",
     "prettier": "prettier --log-level silent --ignore-path .gitignore --ignore-unknown --write .",
@@ -29,11 +29,9 @@
   "devDependencies": {
     "@types/react": "17.0.76",
     "@types/react-dom": "^17.0.22",
-    "@typescript-eslint/eslint-plugin": "^8.5.0",
-    "@typescript-eslint/parser": "^8.5.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.10.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
-    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
     "lint-staged": "^15.2.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
@@ -41,6 +39,7 @@
     "prettier-package-json": "^2.8.0",
     "react": "^17.0.2",
     "react-dom": "17.0.2",
+    "smob": "^1.5.0",
     "typescript": "^4.9.5"
   },
   "publishConfig": {

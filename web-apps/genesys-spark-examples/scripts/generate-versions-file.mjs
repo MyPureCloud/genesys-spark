@@ -30,7 +30,7 @@ const newVersionsJson = semverSort
       return false;
     }
 
-    return !Boolean(prerelease(v));
+    return !prerelease(v);
   });
 const newVersionsString = JSON.stringify(newVersionsJson, null, 2);
 

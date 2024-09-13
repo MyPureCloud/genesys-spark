@@ -1,11 +1,11 @@
-jest.mock('../../../../utils/error/log-error', () => ({
+jest.mock('../../../../../utils/error/log-error', () => ({
   __esModule: true,
   logWarn: jest.fn()
 }));
 
 import { newSpecPage } from '@test/specTestUtils';
 import { GuxAvatarFocusable } from '../gux-avatar-focusable';
-import { logWarn } from '../../../../utils/error/log-error';
+import { logWarn } from '../../../../../utils/error/log-error';
 
 describe('gux-avatar-focusable', () => {
   describe('#render', () => {
