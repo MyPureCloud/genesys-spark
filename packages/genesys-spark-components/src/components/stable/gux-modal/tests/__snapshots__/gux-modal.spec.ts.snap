@@ -160,7 +160,7 @@ exports[`gux-modal #render should render modal with a specified initial focus el
   <div slot="start-align-buttons">
     <gux-button id="cancelButton">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>

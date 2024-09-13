@@ -2,6 +2,7 @@ import { Component, Element, h, JSX, Prop, State } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxButtonAccent, GuxButtonType } from './gux-button.types';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 
 /**
  * @slot - content
@@ -15,6 +16,7 @@ import { GuxButtonAccent, GuxButtonType } from './gux-button.types';
 export class GuxButton {
   @Element()
   private root: HTMLElement;
+  private buttonId = randomHTMLId('button');
 
   /**
    * The component button type
@@ -49,10 +51,10 @@ export class GuxButton {
   }
 
   render(): JSX.Element {
-    return (
+    return [
       <button
+        id={this.buttonId}
         type={this.type}
-        title={this.guxTitle}
         disabled={this.disabled}
         class={{
           [`gux-${this.accent}`]: true,
@@ -60,8 +62,19 @@ export class GuxButton {
         }}
       >
         <slot onSlotchange={this.slotChanged.bind(this)} />
-      </button>
-    ) as JSX.Element;
+      </button>,
+      this.renderTooltip()
+    ] as JSX.Element;
+  }
+
+  renderTooltip(): JSX.Element {
+    return this.guxTitle
+      ? ((
+          <gux-tooltip-beta for={this.buttonId}>
+            <div slot="content">{this.guxTitle}</div>
+          </gux-tooltip-beta>
+        ) as JSX.Element)
+      : '';
   }
 
   private stopEventIfDisabled(event: Event) {
