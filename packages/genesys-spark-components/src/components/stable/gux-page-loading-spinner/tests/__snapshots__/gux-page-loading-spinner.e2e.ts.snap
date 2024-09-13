@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-page-loading-spinner renders 1`] = `"<gux-page-loading-spinner lang="en" hydrated=""></gux-page-loading-spinner>"`;
+exports[`gux-page-loading-spinner renders 1`] = `"<gux-page-loading-spinner lang="en" hydrated=""><template shadowrootmode="open"><gux-radial-loading class="gux-spinner" hydrated=""></gux-radial-loading></template></gux-page-loading-spinner>"`;
