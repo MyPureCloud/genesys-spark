@@ -1,0 +1,7 @@
+::slotted(gux-avatar-focusable-beta) {
+  margin-inline-end: calc(-4px + var(--gse-ui-avatar-groupShapes-gap));
+}
+
+.gux-avatar-group {
+  display: flex;
+}
