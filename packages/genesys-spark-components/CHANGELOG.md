@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.131.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.130.0...v3.131.0) (2024-09-14)
+
+
+### Features
+
+* **other:** add browser region override support for Hong Kong and Singapore regions backport ([de2e7f1](https://github.com/MyPureCloud/genesys-spark/commit/de2e7f1b5fb7bfc9f35f59dd6ee64585fc10a785))
+
 ## [3.130.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.129.0...v3.130.0) (2024-08-21)
 
 
