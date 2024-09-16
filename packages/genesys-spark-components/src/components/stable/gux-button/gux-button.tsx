@@ -60,6 +60,7 @@ export class GuxButton {
           [`gux-${this.accent}`]: true,
           'gux-icon-only': this.iconOnly
         }}
+        aria-label={this.guxTitle}
       >
         <slot onSlotchange={this.slotChanged.bind(this)} />
       </button>,
@@ -70,7 +71,7 @@ export class GuxButton {
   renderTooltip(): JSX.Element {
     return this.guxTitle
       ? ((
-          <gux-tooltip-beta for={this.buttonId}>
+          <gux-tooltip-beta for={this.buttonId} visualOnly={true}>
             <div slot="content">{this.guxTitle}</div>
           </gux-tooltip-beta>
         ) as JSX.Element)

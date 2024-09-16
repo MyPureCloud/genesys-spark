@@ -78,6 +78,13 @@ export class GuxTooltipBase {
   accent: GuxTooltipAccent = 'light';
 
   /**
+   * Determines whether the text in the tooltip is read by screenreaders.
+   * Use for cases where the forElement component handles the accessibility.
+   */
+  @Prop()
+  visualOnly: boolean = false;
+
+  /**
    * If tooltip is shown or not
    */
   @State()
@@ -157,8 +164,10 @@ export class GuxTooltipBase {
 
   private setForElement(): void {
     if (this.forElement) {
-      const tooltipId = this.tooltipId ? this.tooltipId : this.id;
-      this.forElement.setAttribute('aria-describedby', tooltipId);
+      if (!this.visualOnly) {
+        const tooltipId = this.tooltipId ? this.tooltipId : this.id;
+        this.forElement.setAttribute('aria-describedby', tooltipId);
+      }
 
       this.forElementListeners.forEach((handler, type) =>
         this.forElement.addEventListener(type, handler)
@@ -204,6 +213,7 @@ export class GuxTooltipBase {
         id={this.tooltipId ? undefined : this.id}
         role={this.tooltipId && !this.isShown ? undefined : 'tooltip'}
         class={{ 'gux-show': this.isShown }}
+        aria-hidden={this.visualOnly}
       >
         <div
           class={{

@@ -51,6 +51,13 @@ export class GuxTooltip {
   @Prop()
   accent: GuxTooltipAccent = 'light';
 
+  /**
+   * Determines whether the text in the tooltip is read by screenreaders.
+   * Use for cases where the forElement component handles the accessibility.
+   */
+  @Prop()
+  visualOnly: boolean = false;
+
   /*
    * Show tooltip
    */
@@ -130,6 +137,7 @@ export class GuxTooltip {
           placement={this.placement}
           accent={this.accent}
           tooltipId={this.id}
+          visualOnly={this.visualOnly}
           ref={el => (this.baseTooltip = el)}
         >
           <span slot="content">
