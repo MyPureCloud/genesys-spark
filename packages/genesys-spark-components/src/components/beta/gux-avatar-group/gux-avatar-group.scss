@@ -1,9 +1,67 @@
+// --gse-ui-avatar-media-initialsBackground-add: #ced2fc;
+// --gse-ui-avatar-media-initialsForeground-default: #1b2c48;
+// --gse-ui-avatar-media-initialsForeground-inverse: #ffffff;
+// --gse-ui-avatar-media-initialsForeground-add: #4856cb;
+
 ::slotted(gux-avatar-focusable-beta) {
   margin-inline-end: calc(-4px + var(--gse-ui-avatar-groupShapes-gap));
 }
 
-.gux-avatar-group {
+.gux-avatar-group-wrapper {
   display: flex;
   padding-block-start: 4px;
-  padding-inline-start: 4px;
+  padding-inline-start: px;
+}
+
+.gux-avatar-group {
+  display: flex;
+  width: 100%;
+  background-color: red;
+  container: avatar-group / inline-size;
+}
+
+@container avatar-group (width <= 59px) {
+  ::slotted(gux-avatar-focusable-beta:nth-child(n + 1):nth-child(-n + 7)) {
+    display: none;
+  }
+}
+
+@container avatar-group (width <= 83px) {
+  ::slotted(gux-avatar-focusable-beta:nth-child(n + 2):nth-child(-n + 7)) {
+    display: none;
+  }
+}
+
+@container avatar-group (width <= 107px) {
+  ::slotted(gux-avatar-focusable-beta:nth-child(n + 3):nth-child(-n + 7)) {
+    display: none;
+  }
+}
+
+@container avatar-group (width <= 131px) {
+  ::slotted(gux-avatar-focusable-beta:nth-child(n + 4):nth-child(-n + 7)) {
+    display: none;
+  }
+}
+
+@container avatar-group (width <= 159px) {
+  ::slotted(gux-avatar-focusable-beta:nth-child(n + 5):nth-child(-n + 7)) {
+    display: none;
+  }
+}
+
+@container avatar-group (width <= 183px) {
+  ::slotted(gux-avatar-focusable-beta:nth-child(n + 6):nth-child(-n + 7)) {
+    display: none;
+  }
+}
+
+@container avatar-group (width <= 207px) {
+  ::slotted(gux-avatar-focusable-beta:nth-child(n + 7):nth-child(-n + 7)) {
+    display: none;
+  }
+}
+
+::slotted(gux-avatar-focusable-beta:nth-child(n + 8)) {
+  display: none;
 }

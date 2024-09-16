@@ -2,6 +2,7 @@ import { Component, h, JSX, Element, State, Host } from '@stencil/core';
 import { logWarn } from '@utils/error/log-error';
 
 @Component({
+  styleUrl: 'gux-avatar-focusable.scss',
   tag: 'gux-avatar-focusable-beta',
   shadow: true
 })

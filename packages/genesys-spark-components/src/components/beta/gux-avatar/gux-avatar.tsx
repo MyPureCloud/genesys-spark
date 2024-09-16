@@ -135,6 +135,8 @@ export class GuxAvatar {
           ></gux-icon>
         </div>
       ) as JSX.Element;
+    } else {
+      return null;
     }
   }
 
@@ -213,6 +215,8 @@ export class GuxAvatar {
           </gux-screen-reader-beta>
         </div>
       ) as JSX.Element;
+    } else {
+      return null;
     }
   }
 
