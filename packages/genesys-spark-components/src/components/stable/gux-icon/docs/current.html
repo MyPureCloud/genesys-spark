@@ -13,6 +13,8 @@
   </ul>
 </nav>
 
+<div id="icon-metadata">${FA_ICON_LIST_JSON}</div>
+
 <h2>Font Awesome Icons</h2>
 <p>
   <a
@@ -21,21 +23,93 @@
     >Request new FontAwesome icons</a
   >
 </p>
-${FA_ICON_EXAMPLE_LIST}
 
-<h2>Custom Icons</h2>
-<p>
-  <a
-    href="https://form.asana.com/?k=wsglJ3RA89wMSdgRyoGdQg&d=12075379665713"
-    target="_blank"
-    >Request new custom icons</a
-  >
-</p>
-${CUSTOM_ICON_EXAMPLE_LIST}
+<div>
+  <gux-content-search
+    ><input id="icon-search-input" type="text"
+  /></gux-content-search>
+</div>
 
-<style>
+<div id="icon-example-list-container">
+  <div class="icon-example-list">${FA_ICON_EXAMPLE_LIST}</div>
+
+  <h2>Custom Icons</h2>
+  <p>
+    <a
+      href="https://form.asana.com/?k=wsglJ3RA89wMSdgRyoGdQg&d=12075379665713"
+      target="_blank"
+      >Request new custom icons</a
+    >
+  </p>
+
+  <div class="icon-example-list">${CUSTOM_ICON_EXAMPLE_LIST}</div>
+</div>
+
+<div id="icon-search-results">
+  <div class="icons-container"></div>
+</div>
+
+<style
+  onload="(function () {
+    // TODO: I'm open to another solution for this, such as making an API call to retrieve the icon metadata json that's served by the CDN
+    // The icon metadata was injected in the DOM via webpack
+    const iconMetadata = JSON.parse(document.getElementById('icon-metadata').textContent.replace('\\n', '').trim());
+    const iconHTMLElements = document.getElementsByClassName('icons-container');
+
+    document.getElementById('icon-search-input').addEventListener('input', function(event) {    
+      const searchResultIcons = [];
+
+      Array.from(iconHTMLElements).forEach((iconContainer) => {
+        Array.from(iconContainer.children).forEach((icon) => {
+          const iconName = icon.children[1].textContent.replace('fa/', '');
+
+          if (iconMetadata[iconName]){
+            // Check if the current icon's description has any exact matches of the search input value
+            if (iconMetadata[iconName].description) {
+              const descriptionItems = iconMetadata[iconName].description.split(',');
+              const matchedDescription = descriptionItems.filter((item) => item.trim().toLowerCase() === event.target.value.trim().toLowerCase());
+              if (matchedDescription.length > 0) {
+                searchResultIcons.push(icon);
+              }
+            }
+          }
+        });
+      });
+
+      // Display search results if there are any matches
+      if (searchResultIcons.length) {
+        document.getElementById('icon-search-results').classList.remove('hidden');
+
+        // Hide the 2 icon containers that have the list of full icons, since we will only display the search result icons
+        document.getElementById('icon-example-list-container').classList.add('hidden');
+
+        let outputHTML = '';
+        searchResultIcons.forEach((icon) => {
+          outputHTML += icon.outerHTML;
+        });
+
+        // Inject the search result icons into the DOM
+        document.querySelectorAll('#icon-search-results .icons-container')[0].innerHTML = outputHTML;
+      } else {
+        // Clear out search result inner HTML
+        document.querySelectorAll('#icon-search-results .icons-container')[0].innerHTML = '';
+
+        // Display original full list of icons since no search results were found
+        document.getElementById('icon-example-list-container').classList.remove('hidden');
+        
+        // Hide the search results HTML container since there are no search results that match the search input value
+        document.getElementById('icon-search-results').classList.add('hidden');
+      }
+    });
+    
+  })()"
+>
   gux-icon {
     color: var(--gse-core-color-cornflower-700);
+  }
+
+  #icon-metadata {
+    display: none;
   }
 
   .icons-container {
@@ -49,5 +123,13 @@ ${CUSTOM_ICON_EXAMPLE_LIST}
     width: 200px;
     height: 100px;
     text-align: center;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  gux-content-search {
+    margin-bottom: 20px;
   }
 </style>

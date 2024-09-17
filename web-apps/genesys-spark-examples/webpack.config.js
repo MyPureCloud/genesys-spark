@@ -3,6 +3,7 @@ const fs = require('fs');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { generateIconListHTML } = require('./src/utils/generate-icon-list-html');
+const { generateIconListJSON } = require('./src/utils/generate-icon-list-json');
 const {
   generateIconSelectHTML
 } = require('./src/utils/generate-icon-select-html');
@@ -145,6 +146,10 @@ function generateComponentPage(exampleMarkup) {
         '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/fa/**/*.svg'
       )
     );
+  }
+
+  if (withHtml.includes('${FA_ICON_LIST_JSON}')) {
+    withHtml = withHtml.replace('${FA_ICON_LIST_JSON}', generateIconListJSON());
   }
 
   if (withHtml.includes('${CUSTOM_ICON_EXAMPLE_LIST}')) {

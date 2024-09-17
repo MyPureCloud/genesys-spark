@@ -1,0 +1,3291 @@
+{
+  "envelope-regular": {
+    "description": "mail, email, send, sent, message, post, letter",
+    "documentationLinks": [],
+    "id": "23:5513"
+  },
+  "inbox-regular": {
+    "description": "mail, email, inbox, received, message, post, letter",
+    "documentationLinks": [],
+    "id": "23:5343"
+  },
+  "asterisk-regular": {
+    "description": "star, wildcard, bullet point, 6, emergency",
+    "documentationLinks": [],
+    "id": "3126:132136"
+  },
+  "custom-phone-low-volume-regular": {
+    "description": "call, calling, telephone, landline, talk, communication, ring, active, weak sound waves",
+    "documentationLinks": [],
+    "id": "23:5369"
+  },
+  "custom-phone-volume-regular": {
+    "description": "call, calling, telephone, landline, talk, communication, ring, active, sound waves",
+    "documentationLinks": [],
+    "id": "23:5367"
+  },
+  "custom-phone-high-volume-regular": {
+    "description": "call, calling, telephone, landline, talk, communication, ring, active, strong sound waves",
+    "documentationLinks": [],
+    "id": "23:5353"
+  },
+  "phone-slash-regular": {
+    "description": "call, telephone, landline, talk, communication, disabled, slash",
+    "documentationLinks": [],
+    "id": "23:5365"
+  },
+  "custom-phone-bars-regular": {
+    "description": "call, telephone, landline, talk, communication, history",
+    "documentationLinks": [],
+    "id": "23:5401"
+  },
+  "custom-phone-arrow-left-regular": {
+    "description": "call, calling, telephone, landline, talk, communication, callback, arrow, arrowhead",
+    "documentationLinks": [],
+    "id": "23:5399"
+  },
+  "phone-xmark-regular": {
+    "description": "call, telephone, landline, talk, communication, close, cancel, x",
+    "documentationLinks": [],
+    "id": "23:5397"
+  },
+  "custom-phone-big-small-regular": {
+    "description": "call, telephone, landline, talk, communication, conference",
+    "documentationLinks": [],
+    "id": "23:5383"
+  },
+  "phone-arrow-right-regular": {
+    "description": "call, calling, telephone, landline, talk, communication, forward, arrow, arrowhead",
+    "documentationLinks": [],
+    "id": "23:5403"
+  },
+  "phone-hangup-regular": {
+    "description": "call, hangup, telephone, landline, talk, communication, finish, end",
+    "documentationLinks": [],
+    "id": "23:5405"
+  },
+  "custom-phone-clock-regular": {
+    "description": "call, telephone, landline, talk, communication, hold, clock",
+    "documentationLinks": [],
+    "id": "23:5385"
+  },
+  "phone-missed-regular": {
+    "description": "call, telephone, landline, talk, communication, missed, arrow, arrowhead",
+    "documentationLinks": [],
+    "id": "23:5395"
+  },
+  "message-check-solid": {
+    "description": "message, chat, bubble, messaging, sms, texting, comment, accepted, success, checked, solid",
+    "documentationLinks": [],
+    "id": "23:5219"
+  },
+  "message-minus-solid": {
+    "description": "message, chat, bubble, messaging, sms, texting, comment, square, minus, subtract, solid",
+    "documentationLinks": [],
+    "id": "23:5221"
+  },
+  "message-arrow-up-right-solid": {
+    "description": "message, chat, bubble, messaging, sms, texting, comment, offered, arrow, arrowhead, solid",
+    "documentationLinks": [],
+    "id": "23:5223"
+  },
+  "message-plus-solid": {
+    "description": "message, chat, bubble, messaging, sms, texting, comment, square, plus, add, solid",
+    "documentationLinks": [],
+    "id": "23:5245"
+  },
+  "message-arrow-up-solid": {
+    "description": "message, chat, bubble, messaging, sms, texting, comment, square, submit, arrow up, arrowhead, solid",
+    "documentationLinks": [],
+    "id": "23:5241"
+  },
+  "fax-regular": {
+    "description": "fax, telephone, landline, talk, communication",
+    "documentationLinks": [],
+    "id": "23:5475"
+  },
+  "regular-envelope-slash": {
+    "description": "mail, email, send, sent, message, post, letter, disabled, slash",
+    "documentationLinks": [],
+    "id": "23:5515"
+  },
+  "custom-envelope-arrow-up-right-regular": {
+    "description": "mail, email, send, sent, message, post, letter, outbound, arrow, arrowhead",
+    "documentationLinks": [],
+    "id": "23:5277"
+  },
+  "custom-phone-star-regular": {
+    "description": "call, telephone, landline, talk, communication, close, star, score, favourite, preference",
+    "documentationLinks": [],
+    "id": "23:5503"
+  },
+  "quote-left-regular": {
+    "description": "quotation, quotation mark, double-quote, writing, book, phrase, saying, left, start, open",
+    "documentationLinks": [],
+    "id": "23:5437"
+  },
+  "quote-right-regular": {
+    "description": "quotation, quotation mark, double-quote, writing, book, phrase, saying, right, end, close",
+    "documentationLinks": [],
+    "id": "23:5439"
+  },
+  "hashtag-regular": {
+    "description": "hash, hashtag, octothorp, pound sign, number sign, symbol, tic-tac-toe",
+    "documentationLinks": [],
+    "id": "1602:125406"
+  },
+  "share-nodes-regular": {
+    "description": "share, send to, export",
+    "documentationLinks": [],
+    "id": "23:5071"
+  },
+  "message-xmark-regular": {
+    "description": "message, chat, bubble, messaging, sms, texting, comment, square, close, cancel, dismiss, x, error",
+    "documentationLinks": [],
+    "id": "23:4827"
+  },
+  "message-slash-regular": {
+    "description": "message, chat, bubble, messaging, sms, texting, comment, square, disabled, slash",
+    "documentationLinks": [],
+    "id": "23:4829"
+  },
+  "message-dots-regular": {
+    "description": "message, chat, bubble, messaging, sms, texting, typing, comment, square",
+    "documentationLinks": [],
+    "id": "23:5303"
+  },
+  "message-lines-regular": {
+    "description": "message, chat, bubble, messaging, sms, texting, typing, comment, square",
+    "documentationLinks": [],
+    "id": "23:5375"
+  },
+  "messages-regular": {
+    "description": "message, chat, bubble, messaging, sms, texting, comment, square, conversation",
+    "documentationLinks": [],
+    "id": "23:4833"
+  },
+  "message-xmark-solid": {
+    "description": "message, chat, bubble, messaging, sms, texting, comment, square, close, cancel, dismiss, x, error, solid",
+    "documentationLinks": [],
+    "id": "23:5239"
+  },
+  "phone-regular": {
+    "description": "call, telephone, landline, talk, communication",
+    "documentationLinks": [],
+    "id": "23:5387"
+  },
+  "envelope-dot-regular": {
+    "description": "mail, email, send, sent, message, post, letter, notification, alert",
+    "documentationLinks": [],
+    "id": "23:5505"
+  },
+  "custom-message-bell-regular": {
+    "description": "message, chat, bubble, messaging, sms, texting, comment, square, notification, alert",
+    "documentationLinks": [],
+    "id": "23:4831"
+  },
+  "message-regular": {
+    "description": "message, chat, bubble, messaging, sms, texting, comment, square",
+    "documentationLinks": [],
+    "id": "23:5627"
+  },
+  "custom-phone-check-regular": {
+    "description": "call, telephone, landline, talk, communication, success",
+    "documentationLinks": [],
+    "id": "23:5413"
+  },
+  "custom-phone-bell-regular": {
+    "description": "call, telephone, landline, talk, communication, bell, alert, notification",
+    "documentationLinks": [],
+    "id": "23:5407"
+  },
+  "phone-arrow-down-left-regular": {
+    "description": "call, calling, telephone, landline, talk, communication, inbound, arrow, arrowhead",
+    "documentationLinks": [],
+    "id": "23:5393"
+  },
+  "phone-arrow-up-right-regular": {
+    "description": "call, calling, telephone, landline, talk, communication, outbound, arrow, arrowhead",
+    "documentationLinks": [],
+    "id": "23:5391"
+  },
+  "language-regular": {
+    "description": "translation, translate, language, internationalisation, speech, communication",
+    "documentationLinks": [],
+    "id": "29746:5101"
+  },
+  "bullhorn-regular": {
+    "description": "campaign, megaphone, bullhorn, announcement, loudspeaker, broadcast",
+    "documentationLinks": [],
+    "id": "23:5457"
+  },
+  "at-regular": {
+    "description": "@, address, email, at symbol, commercial at, arobase",
+    "documentationLinks": [],
+    "id": "23:5057"
+  },
+  "language-slash-regular": {
+    "description": "translation, translate, language, internationalisation, speech, communication, disabled, slash",
+    "documentationLinks": [],
+    "id": "19272:49"
+  },
+  "headset-solid": {
+    "description": "headset, microphone, helpdesk, service desk, customer service, listening, voice chat, gaming",
+    "documentationLinks": [],
+    "id": "310:25403"
+  },
+  "comment-regular": {
+    "description": "comment, bubble, chat, speak, type, talk, outline",
+    "documentationLinks": [],
+    "id": "23:5341"
+  },
+  "comment-solid": {
+    "description": "comment, bubble, chat, speak, type, talk, fill",
+    "documentationLinks": [],
+    "id": "33662:199"
+  },
+  "heart-solid": {
+    "description": "favourite, fill, heart, like, save",
+    "documentationLinks": [],
+    "id": "33662:213"
+  },
+  "heart-regular": {
+    "description": "favourite, outline, heart, like, save",
+    "documentationLinks": [],
+    "id": "33672:220"
+  },
+  "custom-sparkles-solid": {
+    "description": "Custom Icon - Restricted for AI features and indicators",
+    "documentationLinks": [],
+    "id": "26574:31775"
+  },
+  "box-archive-regular": {
+    "description": "saved, archive, box, document, file, dowloaded",
+    "documentationLinks": [],
+    "id": "23:5149"
+  },
+  "newspaper-regular": {
+    "description": "magazine, daily news, newspaper, information, report, news, post",
+    "documentationLinks": [],
+    "id": "23:5433"
+  },
+  "notebook-regular": {
+    "description": "notes, resource, phone-book, note-taking, memorandum, journal, diary, logs, logbook",
+    "documentationLinks": [],
+    "id": "23:5447"
+  },
+  "stamp-regular": {
+    "description": "stamp, clone, seal, official",
+    "documentationLinks": [],
+    "id": "23:5459"
+  },
+  "memo-circle-check-regular": {
+    "description": "notes, note-taking, memorandum, file, document, reminder, checked, done, success",
+    "documentationLinks": [],
+    "id": "23:5553"
+  },
+  "book-regular": {
+    "description": "read, book, reader, novel, story, library, education",
+    "documentationLinks": [],
+    "id": "23:5567"
+  },
+  "briefcase-regular": {
+    "description": "suitcase, briefcase, valise, baggage, folder, portfolio, bag",
+    "documentationLinks": [],
+    "id": "23:5611"
+  },
+  "graduation-cap-regular": {
+    "description": "classroom, teacher, education, school, college, university, graduation, graduate, degree, cap",
+    "documentationLinks": [],
+    "id": "23:5449"
+  },
+  "custom-file-pen-question-regular": {
+    "description": "document, file, help, edit, question mark, write, page",
+    "documentationLinks": [],
+    "id": "2475:126632"
+  },
+  "file-exclamation-regular": {
+    "description": "document, file, write, page, attention, warning, exclamation",
+    "documentationLinks": [],
+    "id": "3585:128165"
+  },
+  "file-zip-regular": {
+    "description": "document, archive, compression, compress, zip",
+    "documentationLinks": [],
+    "id": "10907:179"
+  },
+  "file-certificate-regular": {
+    "description": "document, file, page, certification, award, degree, diploma, education",
+    "documentationLinks": [],
+    "id": "23:5051"
+  },
+  "file-import-regular": {
+    "description": "document, file, page, import, arrowhead, arrow, right",
+    "documentationLinks": [],
+    "id": "23:5177"
+  },
+  "folder-plus-regular": {
+    "description": "directory, file, folder, office, plus, add",
+    "documentationLinks": [],
+    "id": "23:4853"
+  },
+  "folder-open-regular": {
+    "description": "directory, file, folder, office, open, load",
+    "documentationLinks": [],
+    "id": "23:4851"
+  },
+  "files-regular": {
+    "description": "slide, slideshow, layers, file all, group",
+    "documentationLinks": [],
+    "id": "23:5157"
+  },
+  "copy-regular": {
+    "description": "duplicate, copy, file, document, page",
+    "documentationLinks": [],
+    "id": "23:5133"
+  },
+  "floppy-disk-regular": {
+    "description": "floppy disk, diskette, directory, folder, document, file, save",
+    "documentationLinks": [],
+    "id": "23:5155"
+  },
+  "file-chart-column-regular": {
+    "description": "document, file, write, page, graph, chart, statistics, analyze, analysis",
+    "documentationLinks": [],
+    "id": "23:5169"
+  },
+  "file-lines-regular": {
+    "description": "document, file, write, page, library",
+    "documentationLinks": [],
+    "id": "23:5171"
+  },
+  "paste-regular": {
+    "description": "copy to clipboard, duplicate, copy, clipboard, file, document, page",
+    "documentationLinks": [],
+    "id": "23:5137"
+  },
+  "folder-regular": {
+    "description": "directory, file, folder, office",
+    "documentationLinks": [],
+    "id": "23:4849"
+  },
+  "file-magnifying-glass-regular": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "23:5163"
+  },
+  "clipboard-question-regular": {
+    "description": "copy, copied, checklist, clipboard, list, question mark, help",
+    "documentationLinks": [],
+    "id": "23:5147"
+  },
+  "clipboard-check-regular": {
+    "description": "copy, copied, checklist, clipboard, checked, done, correct, valid, success",
+    "documentationLinks": [],
+    "id": "23:5151"
+  },
+  "clipboard-regular": {
+    "description": "copy, copied, checklist, clipboard",
+    "documentationLinks": [],
+    "id": "23:5141"
+  },
+  "paperclip-regular": {
+    "description": "attachment, mail, email, office, paperclip",
+    "documentationLinks": [],
+    "id": "23:5263"
+  },
+  "image-regular": {
+    "description": "picture, photo, frame, photograph, wallpaper, gallery, landscape, media",
+    "documentationLinks": [],
+    "id": "23:5167"
+  },
+  "memo-regular": {
+    "description": "notes, note-taking, memorandum, file, document, reminder",
+    "documentationLinks": [],
+    "id": "23:5471"
+  },
+  "file-chart-pie-regular": {
+    "description": "document, file, write, page, graph, chart, statistics, analyze, analysis",
+    "documentationLinks": [],
+    "id": "23:5569"
+  },
+  "clipboard-list-regular": {
+    "description": "copy, copied, checklist, clipboard, list",
+    "documentationLinks": [],
+    "id": "1711:124895"
+  },
+  "regular-clipboard-list-slash": {
+    "description": "copy, copied, checklist, clipboard, list, disabled, slash",
+    "documentationLinks": [],
+    "id": "1773:124890"
+  },
+  "custom-file-arrow-up-regular": {
+    "description": "document, file, save, write, upload, directional, pointer, pointing, arrowhead",
+    "documentationLinks": [],
+    "id": "23:5205"
+  },
+  "file-invoice-dollar-regular": {
+    "description": "document, file, page, invoice, receipt, payment, bill",
+    "documentationLinks": [],
+    "id": "23:5257"
+  },
+  "file-circle-xmark-regular": {
+    "description": "document, file, page, cancel, abandon, delete, x",
+    "documentationLinks": [],
+    "id": "23:5207"
+  },
+  "file-contract-regular": {
+    "description": "document, file, write, page, contract, sign, signature, verify",
+    "documentationLinks": [],
+    "id": "23:5233"
+  },
+  "file-user-regular": {
+    "description": "application, curriculum, profile, file, document, page, user, person, people",
+    "documentationLinks": [],
+    "id": "23:5203"
+  },
+  "file-regular": {
+    "description": "document, file, write, page",
+    "documentationLinks": [],
+    "id": "15537:170"
+  },
+  "box-regular": {
+    "description": "box, moving, tenant, organize",
+    "documentationLinks": [],
+    "id": "23:5453"
+  },
+  "file-pdf-regular": {
+    "description": "document, file, acrobat, pdf, write",
+    "documentationLinks": [],
+    "id": "23:5173"
+  },
+  "scroll-regular": {
+    "description": "scroll, parchment, paper, script, spell",
+    "documentationLinks": [],
+    "id": "23:5455"
+  },
+  "windows": {
+    "description": "microsoft, logos, brands",
+    "documentationLinks": [],
+    "id": "23:5107"
+  },
+  "microsoft": {
+    "description": "microsoft, logos, brands",
+    "documentationLinks": [],
+    "id": "6811:2661"
+  },
+  "microsoft-teams": {
+    "description": "logos, microsoft, chat, video conference, brands",
+    "documentationLinks": [],
+    "id": "23:5105"
+  },
+  "apple": {
+    "description": "logos, macintosh, imac, iphone, ipad, macos, ios, brands",
+    "documentationLinks": [],
+    "id": "23:5093"
+  },
+  "chrome": {
+    "description": "web browsers, internet, logos, brands, google chrome",
+    "documentationLinks": [],
+    "id": "23:5095"
+  },
+  "google": {
+    "description": "logos, search engine, phone, mobile, android, brands",
+    "documentationLinks": [],
+    "id": "6808:2658"
+  },
+  "opera": {
+    "description": "web browsers, internet, logos, brands",
+    "documentationLinks": [],
+    "id": "23:5109"
+  },
+  "linux": {
+    "description": "logos, brands, penguin logo, operating system",
+    "documentationLinks": [],
+    "id": "23:5103"
+  },
+  "edge": {
+    "description": "web browsers, internet, logos, brands, microsoft edge",
+    "documentationLinks": [],
+    "id": "23:5097"
+  },
+  "internet-explorer": {
+    "description": "web browsers, internet, logos, brands, ie",
+    "documentationLinks": [],
+    "id": "23:5101"
+  },
+  "safari": {
+    "description": "apple, internet, web browsers, macintosh, logos, brands",
+    "documentationLinks": [],
+    "id": "23:5111"
+  },
+  "firefox": {
+    "description": "web browsers, internet, logos, brands, mozilla",
+    "documentationLinks": [],
+    "id": "23:5099"
+  },
+  "android": {
+    "description": "logos, mobile, phone, cellphone, cellular, brands, operating system",
+    "documentationLinks": [],
+    "id": "23:5091"
+  },
+  "wordpress": {
+    "description": "logos, brands, web design, blogging",
+    "documentationLinks": [],
+    "id": "23:5087"
+  },
+  "linkedin": {
+    "description": "logos, jobs, employment, social media, brands",
+    "documentationLinks": [],
+    "id": "23:5081"
+  },
+  "youtube": {
+    "description": "logos, google, videos, movies, social media, brands",
+    "documentationLinks": [],
+    "id": "23:5075"
+  },
+  "slideshare": {
+    "description": "linkedin, presentation, logos, brands",
+    "documentationLinks": [],
+    "id": "23:5083"
+  },
+  "viber": {
+    "description": "logos, messages, messaging, brands, voice call, video call",
+    "documentationLinks": [],
+    "id": "23:5079"
+  },
+  "custom-8x8-solid": {
+    "description": "voip, messaging, messages, brands, logos",
+    "documentationLinks": [],
+    "id": "23:5113"
+  },
+  "custom-8x8": {
+    "description": "voip, messaging, messages, brands, logos",
+    "documentationLinks": [],
+    "id": "23:5635"
+  },
+  "figma": {
+    "description": "logos, drawing, illustration, ui, interface, prototype, prototyping, brands",
+    "documentationLinks": [],
+    "id": "1195:121222"
+  },
+  "facebook-messenger": {
+    "description": "logos, social media, brands, facebook",
+    "documentationLinks": [],
+    "id": "23:5085"
+  },
+  "custom-facebook-messenger-slash": {
+    "description": "logos, social media, brands, facebook, slash, disabled",
+    "documentationLinks": [],
+    "id": "23:5527"
+  },
+  "square-rss-solid": {
+    "description": "rich site summary, content syndication, orange icon, logos, brands",
+    "documentationLinks": [],
+    "id": "23:5063"
+  },
+  "custom-genesys-beyond": {
+    "description": "training, education, genesys, brands, logos",
+    "documentationLinks": [],
+    "id": "23:5299"
+  },
+  "line-messenger": {
+    "description": "messaging, messages, brands, logos",
+    "documentationLinks": [],
+    "id": "23:5061"
+  },
+  "custom-line-slash": {
+    "description": "messaging, messages, brands, logos, slash, disabled",
+    "documentationLinks": [],
+    "id": "23:5519"
+  },
+  "telegram": {
+    "description": "messaging, messages, brands, logos",
+    "documentationLinks": [],
+    "id": "23:5069"
+  },
+  "facebook": {
+    "description": "social media, logos, brands",
+    "documentationLinks": [],
+    "id": "23:5059"
+  },
+  "instagram": {
+    "description": "social media, photography, camera, logos, brands",
+    "documentationLinks": [],
+    "id": "23:5089"
+  },
+  "custom-instagram-slash": {
+    "description": "social media, photography, camera, logos, brands, slash, disabled",
+    "documentationLinks": [],
+    "id": "23:5499"
+  },
+  "custom-genesys": {
+    "description": "cx, customer experience, brands, logos",
+    "documentationLinks": [],
+    "id": "23:5301"
+  },
+  "twitter": {
+    "description": "social media, logos, tweets, brands",
+    "documentationLinks": [],
+    "id": "23:5067"
+  },
+  "custom-twitter-slash": {
+    "description": "social media, logos, tweets, brands, slash, disabled",
+    "documentationLinks": [],
+    "id": "23:5539"
+  },
+  "whatsapp": {
+    "description": "logos, messages, messaging, brands, video call, voice call",
+    "documentationLinks": [],
+    "id": "23:5073"
+  },
+  "custom-whatsapp-slash": {
+    "description": "logos, messages, messaging, brands, video call, voice call, slash, disabled",
+    "documentationLinks": [],
+    "id": "23:5545"
+  },
+  "weixin": {
+    "description": "weixin, messaging, messages, video call, voice call, logos, brands",
+    "documentationLinks": [],
+    "id": "23:5077"
+  },
+  "custom-gkn-logo": {
+    "description": "genesys knowledge network, logos, brands",
+    "documentationLinks": [],
+    "id": "13264:159"
+  },
+  "x-twitter": {
+    "description": "social media, logos, tweets, brands",
+    "documentationLinks": [],
+    "id": "18157:1824"
+  },
+  "binoculars-regular": {
+    "description": "telescope, glasses, search, find, explore, binocular",
+    "documentationLinks": [],
+    "id": "291:11932"
+  },
+  "credit-card-regular": {
+    "description": "debit, credit, visa, mastercard, money, payment, paying, purchase, swipe",
+    "documentationLinks": [],
+    "id": "13637:165"
+  },
+  "cart-circle-check-regular": {
+    "description": "ecommerce, market, basket, buying, groceries, checkout, checked, purchased, success",
+    "documentationLinks": [],
+    "id": "23:5235"
+  },
+  "cart-circle-xmark-regular": {
+    "description": "ecommerce, market, basket, buying, groceries, checkout, removed, cancelled, error,  x",
+    "documentationLinks": [],
+    "id": "23:5243"
+  },
+  "cart-circle-plus-regular": {
+    "description": "ecommerce, market, basket, buying, groceries, checkout, added, plus",
+    "documentationLinks": [],
+    "id": "23:5247"
+  },
+  "truck-regular": {
+    "description": "truck, car, vehicle, shipping, delivery, dispatch",
+    "documentationLinks": [],
+    "id": "23:5201"
+  },
+  "money-bill-regular": {
+    "description": "cash, money, bill, change, currency, payment, paying, purchase, price, sell",
+    "documentationLinks": [],
+    "id": "23:5595"
+  },
+  "tag-regular": {
+    "description": "tag, label, sale, sell, price, discount",
+    "documentationLinks": [],
+    "id": "23:4987"
+  },
+  "cube-regular": {
+    "description": "package, box, cube, delivery, mail, shipping, commerce, square, blocks, volume, design, 3d",
+    "documentationLinks": [],
+    "id": "23:5601"
+  },
+  "regular-binoculars-slash": {
+    "description": "telescope, glasses, search, find, explore, binocular, disabled, slash",
+    "documentationLinks": [],
+    "id": "289:11853"
+  },
+  "circle-star-solid": {
+    "description": "star, favourite, badge, award",
+    "documentationLinks": [],
+    "id": "23:5259"
+  },
+  "star-regular": {
+    "description": "rate, star, rating, favourite, empty",
+    "documentationLinks": [],
+    "id": "23:5359"
+  },
+  "thumb-up-regular": {
+    "description": "thumbs up, satisfied, positive, hand",
+    "documentationLinks": [],
+    "id": "23:5377"
+  },
+  "thumb-down-regular": {
+    "description": "thumbs down, unsatisfied, negative, hand",
+    "documentationLinks": [],
+    "id": "23:5373"
+  },
+  "star-solid": {
+    "description": "rate, star, rating, favourite, active",
+    "documentationLinks": [],
+    "id": "23:4927"
+  },
+  "star-sharp-half-stroke-regular": {
+    "description": "rate, star, rating, favourite, partial",
+    "documentationLinks": [],
+    "id": "23:4925"
+  },
+  "face-smile-solid": {
+    "description": "face, emoji, happy, grinning, smile, solid",
+    "documentationLinks": [],
+    "id": "23:4815"
+  },
+  "face-meh-regular": {
+    "description": "face, emoji, unimpressed, neutral",
+    "documentationLinks": [],
+    "id": "23:4813"
+  },
+  "face-meh-solid": {
+    "description": "face, emoji, unimpressed, neutral, solid",
+    "documentationLinks": [],
+    "id": "23:4819"
+  },
+  "custom-face-smile-hearts-regular": {
+    "description": "face, emoji, heart, love, smile, grinning",
+    "documentationLinks": [],
+    "id": "8261:144"
+  },
+  "face-smile-regular": {
+    "description": "face, emoji, happy, grinning, smile",
+    "documentationLinks": [],
+    "id": "23:4823"
+  },
+  "face-laugh-regular": {
+    "description": "face, emoji, happy, laugh",
+    "documentationLinks": [],
+    "id": "2227:124952"
+  },
+  "face-laugh-solid": {
+    "description": "face, emoji, happy, laugh, solid",
+    "documentationLinks": [],
+    "id": "2227:124949"
+  },
+  "face-frown-regular": {
+    "description": "face, emoji, unhappy, frown",
+    "documentationLinks": [],
+    "id": "2227:124955"
+  },
+  "face-frown-solid": {
+    "description": "face, emoji, unhappy, frown, solid",
+    "documentationLinks": [],
+    "id": "2227:124946"
+  },
+  "volume-regular": {
+    "description": "music, audio, volume high, sound, media",
+    "documentationLinks": [],
+    "id": "23:4841"
+  },
+  "music-regular": {
+    "description": "song, audio, playlist, album, media",
+    "documentationLinks": [],
+    "id": "23:4839"
+  },
+  "waveform-lines-regular": {
+    "description": "sound waves, audio, sound, spectrum, spectrograph, music, media",
+    "documentationLinks": [],
+    "id": "23:4837"
+  },
+  "volume-low-regular": {
+    "description": "music, audio, volume low, sound, media",
+    "documentationLinks": [],
+    "id": "23:4845"
+  },
+  "volume-off-regular": {
+    "description": "music, audio, muted, volume off, sound, media",
+    "documentationLinks": [],
+    "id": "23:4843"
+  },
+  "pause-regular": {
+    "description": "music, audio, video, resume, pause, media",
+    "documentationLinks": [],
+    "id": "2760:132163"
+  },
+  "stop-regular": {
+    "description": "music, audio, video, stop, media",
+    "documentationLinks": [],
+    "id": "2760:132160"
+  },
+  "play-regular": {
+    "description": "music, audio, video, resume, start, media",
+    "documentationLinks": [],
+    "id": "2744:132136"
+  },
+  "backward-step-regular": {
+    "description": "music, audio, video, step, scan, back, backwards, reverse, previous, media",
+    "documentationLinks": [],
+    "id": "2744:132142"
+  },
+  "forward-step-regular": {
+    "description": "music, audio, video, step, scan, skip, ahead, forward, next, media",
+    "documentationLinks": [],
+    "id": "2744:132139"
+  },
+  "backward-fast-regular": {
+    "description": "music, audio, video, back, backwards fast, reverse, previous, media",
+    "documentationLinks": [],
+    "id": "23:5291"
+  },
+  "backward-regular": {
+    "description": "music, audio, video, back, backwards, reverse, previous, media",
+    "documentationLinks": [],
+    "id": "23:5281"
+  },
+  "forward-regular": {
+    "description": "music, audio, video, skip, ahead, forward, next, media",
+    "documentationLinks": [],
+    "id": "23:5279"
+  },
+  "forward-fast-regular": {
+    "description": "music, audio, video, ahead, skip, forward fast, next, media",
+    "documentationLinks": [],
+    "id": "23:5289"
+  },
+  "microphone-regular": {
+    "description": "microphone, talking, audio, recording, music, sound, podcast, studio",
+    "documentationLinks": [],
+    "id": "23:5307"
+  },
+  "microphone-slash-regular": {
+    "description": "microphone, talking, audio, recording, music, sound, sound waves, podcast, studio, disabled, slash",
+    "documentationLinks": [],
+    "id": "23:5311"
+  },
+  "custom-microphone-line-on-regular": {
+    "description": "microphone, talking, audio, recording, music, sound, sound waves, podcast, studio",
+    "documentationLinks": [],
+    "id": "23:5309"
+  },
+  "camera-regular": {
+    "description": "photo, photography, pictures, lens, camera, media",
+    "documentationLinks": [],
+    "id": "23:5325"
+  },
+  "headphones-regular": {
+    "description": "music, audio, headphones, listening",
+    "documentationLinks": [],
+    "id": "23:5323"
+  },
+  "camera-solid": {
+    "description": "photo, photography, pictures, lens, camera, solid media",
+    "documentationLinks": [],
+    "id": "282:11880"
+  },
+  "circle-play-regular": {
+    "description": "music, audio, video, resume, start, circle, round, media",
+    "documentationLinks": [],
+    "id": "1602:125403"
+  },
+  "circle-pause-solid": {
+    "description": "music, audio, video, resume, circle, round, pause, media",
+    "documentationLinks": [],
+    "id": "23:5495"
+  },
+  "shuffle-regular": {
+    "description": "music, audio, randomize, random, crossed, media",
+    "documentationLinks": [],
+    "id": "23:5565"
+  },
+  "voicemail-regular": {
+    "description": "recording, record, voicemail, audio, album, music, media",
+    "documentationLinks": [],
+    "id": "23:5411"
+  },
+  "volume-xmark-regular": {
+    "description": "music, audio, muted, volume, sound, media, error, x",
+    "documentationLinks": [],
+    "id": "2228:124972"
+  },
+  "video-regular": {
+    "description": "video camera, videography, film, movie, recording, media",
+    "documentationLinks": [],
+    "id": "23:5317"
+  },
+  "video-slash-regular": {
+    "description": "video camera, videography, film, movie, recording, media, disabled, slash",
+    "documentationLinks": [],
+    "id": "23:5319"
+  },
+  "volume-slash-regular": {
+    "description": "music, audio, volume, muted, sound, media, disabled, slash",
+    "documentationLinks": [],
+    "id": "23:4847"
+  },
+  "subtract-circle-regular": {
+    "description": "subtraction, minus, difference, mathematics, arithmetics, calculator, circle, round",
+    "documentationLinks": [],
+    "id": "23:5467"
+  },
+  "chart-pie-simple-regular": {
+    "description": "graph, graphing, chart, pie, statistics, circle, analyse, analysis",
+    "documentationLinks": [],
+    "id": "23:5227"
+  },
+  "circle-quarter-regular": {
+    "description": "graph, graphing, segment, quarter, chart, pie, statistics, circle, analyze, analysis",
+    "documentationLinks": [],
+    "id": "23:5253"
+  },
+  "custom-chart-line-spark-regular": {
+    "description": "graph, graphing, chart, statistics, analyse, analysis, stock",
+    "documentationLinks": [],
+    "id": "23:5015"
+  },
+  "chart-area-regular": {
+    "description": "graph, graphing, chart, statistics, analyse, analysis",
+    "documentationLinks": [],
+    "id": "23:5005"
+  },
+  "chart-line-regular": {
+    "description": "graph, graphing, chart, statistics, analyse, analysis, increase",
+    "documentationLinks": [],
+    "id": "23:5007"
+  },
+  "chart-pie-regular": {
+    "description": "graph, graphing, chart, pie, statistics, circle, analyse, analysis",
+    "documentationLinks": [],
+    "id": "23:5003"
+  },
+  "square-poll-vertical-regular": {
+    "description": "graph, graphics, chart, statistics, histogram, analyse, analysis, square",
+    "documentationLinks": [],
+    "id": "23:5115"
+  },
+  "chart-bar-regular": {
+    "description": "graph, graphing, chart, statistics, analyse, analysis, bar, horizontal",
+    "documentationLinks": [],
+    "id": "23:5011"
+  },
+  "chart-column-regular": {
+    "description": "graph, graphing, chart, statistics, analyse, analysis, bar, vertical",
+    "documentationLinks": [],
+    "id": "23:5013"
+  },
+  "chart-scatter-bubble-regular": {
+    "description": "graph, graphing, chart, statistics, analyse, analysis, bubble, circles",
+    "documentationLinks": [],
+    "id": "23:5009"
+  },
+  "circle-0-solid": {
+    "description": "0, zero, number, numerical, digit, mathematics, arithmetic, calculator, round, circle",
+    "documentationLinks": [],
+    "id": "23:5489"
+  },
+  "infinity-regular": {
+    "description": "infinity, math symbol, loop, figure-eight, mathematics, arithmetic, calculator",
+    "documentationLinks": [],
+    "id": "23:5549"
+  },
+  "1-regular": {
+    "description": "1, one, number, numerical, digit, mathematics, arithmetic, calculator",
+    "documentationLinks": [],
+    "id": "23:5591"
+  },
+  "subscript-regular": {
+    "description": "equation, math formula, mathematical expression, scientific notation, lower index",
+    "documentationLinks": [],
+    "id": "2287:127504"
+  },
+  "superscript-regular": {
+    "description": "equation, math formula, mathematical expression, scientific notation, upper index",
+    "documentationLinks": [],
+    "id": "2287:127507"
+  },
+  "sigma-regular": {
+    "description": "symbol, sum, math formula, mathematical notation",
+    "documentationLinks": [],
+    "id": "23:5579"
+  },
+  "function-regular": {
+    "description": "equation, math formula, mathematical expression, computer science, programming, coding, math",
+    "documentationLinks": [],
+    "id": "5299:2868"
+  },
+  "calculator-regular": {
+    "description": "calculator, calculation, maths, arithmetic, mathematics",
+    "documentationLinks": [],
+    "id": "1038:113479"
+  },
+  "plus-regular": {
+    "description": "add, plus, addition, sum, mathematics, arithmetic, calculator, +",
+    "documentationLinks": [],
+    "id": "23:4943"
+  },
+  "minus-regular": {
+    "description": "subtraction, minus, difference, mathematics, arithmetics, calculator",
+    "documentationLinks": [],
+    "id": "23:4995"
+  },
+  "circle-plus-regular": {
+    "description": "add, plus, addition, sum, mathematics, arithmetic, calculator, circle, round, +",
+    "documentationLinks": [],
+    "id": "23:5419"
+  },
+  "circle-xmark-regular": {
+    "description": "close, cancel, error, dismiss, x, multiply, times, mathematics, arithmetics, calculator, circle, round",
+    "documentationLinks": [],
+    "id": "23:5469"
+  },
+  "square-x-regular": {
+    "description": "close, cancel, error, dismiss, x, multiply, times, mathematics, arithmetics, calculator, square",
+    "documentationLinks": [],
+    "id": "23:5461"
+  },
+  "xmark-large-regular": {
+    "description": "x, close, cancel, dismiss, times, multiply, multiplication, product, mathematics, calculator",
+    "documentationLinks": [],
+    "id": "23:4931"
+  },
+  "subtract-circle-solid": {
+    "description": "subtraction, minus, difference, mathematics, arithmetics, calculator, circle, round, solid",
+    "documentationLinks": [],
+    "id": "23:5255"
+  },
+  "circle-plus-solid": {
+    "description": "add, plus, addition, sum, mathematics, arithmetic, calculator, circle, round, +, solid",
+    "documentationLinks": [],
+    "id": "5616:154"
+  },
+  "circle-xmark-solid": {
+    "description": "close, cancel, error, dismiss, x, multiply, times, mathematics, arithmetics, calculator, circle, round, solid",
+    "documentationLinks": [],
+    "id": "23:5497"
+  },
+  "shapes-regular": {
+    "description": "geometry, shapes, square, circle, triangle, draw, design",
+    "documentationLinks": [],
+    "id": "23:5415"
+  },
+  "square-list-regular": {
+    "description": "ul, unordered list, bullet point, checklist, text, square",
+    "documentationLinks": [],
+    "id": "23:5053"
+  },
+  "pen-circle-regular": {
+    "description": "write, edit, editing, modify, update, change, pen, pencil, draw",
+    "documentationLinks": [],
+    "id": "23:5493"
+  },
+  "scissors-regular": {
+    "description": "cut, snip, clipboard, edit, design",
+    "documentationLinks": [],
+    "id": "23:5135"
+  },
+  "trash-regular": {
+    "description": "delete, bin, garbage, remove, destroy, recycle, recycling, trash",
+    "documentationLinks": [],
+    "id": "23:5153"
+  },
+  "pen-regular": {
+    "description": "write, edit, editing, modify, update, change, pen, pencil, draw",
+    "documentationLinks": [],
+    "id": "23:5143"
+  },
+  "pen-slash-regular": {
+    "description": "write, edit, editing, modify, update, change, pen, pencil, draw, slash, disabled",
+    "documentationLinks": [],
+    "id": "3862:129631"
+  },
+  "custom-font-underline-regular": {
+    "description": "typography, typeface, print, font, text, underscore, underline, emphasis",
+    "documentationLinks": [],
+    "id": "3829:127876"
+  },
+  "text-size-regular": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "26925:197"
+  },
+  "highlighter-line-regular": {
+    "description": "highlight, write, text, emphasis",
+    "documentationLinks": [],
+    "id": "2118:124994"
+  },
+  "bold-regular": {
+    "description": "typography, typeface, print, font, text, bold, boldface, emphasis",
+    "documentationLinks": [],
+    "id": "2118:124997"
+  },
+  "italic-regular": {
+    "description": "typography, typeface, print, font, text, italic, oblique, emphasis",
+    "documentationLinks": [],
+    "id": "2118:125000"
+  },
+  "underline-regular": {
+    "description": "typography, typeface, print, font, text, underscore, underline, emphasis",
+    "documentationLinks": [],
+    "id": "2118:125003"
+  },
+  "strikethrough-regular": {
+    "description": "typography, typeface, print, font, text, struck, remove, delete, change",
+    "documentationLinks": [],
+    "id": "2118:125006"
+  },
+  "align-right-regular": {
+    "description": "text, right alignment, flush right, editing, write",
+    "documentationLinks": [],
+    "id": "2118:125009"
+  },
+  "align-left-regular": {
+    "description": "text, left alignment, flush left, editing, write",
+    "documentationLinks": [],
+    "id": "2118:125012"
+  },
+  "align-justify-regular": {
+    "description": "text, justify alignment, editing, write",
+    "documentationLinks": [],
+    "id": "2118:125015"
+  },
+  "align-center-regular": {
+    "description": "text, centered alignment, editing, write",
+    "documentationLinks": [],
+    "id": "2118:125018"
+  },
+  "indent-regular": {
+    "description": "alignment, indent, text, format, editing",
+    "documentationLinks": [],
+    "id": "2118:125021"
+  },
+  "wrap-text-tight-regular": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "16145:16307"
+  },
+  "wrap-text-inline-regular": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "16145:16301"
+  },
+  "wrap-text-top-bottom-regular": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "16145:16304"
+  },
+  "outdent-regular": {
+    "description": "alignment, outdent, text, format, editing",
+    "documentationLinks": [],
+    "id": "2118:125024"
+  },
+  "list-ul-regular": {
+    "description": "ul, unordered list, bullet point, checklist, text",
+    "documentationLinks": [],
+    "id": "2118:125027"
+  },
+  "text-slash-regular": {
+    "description": "typography, typeface, print, font, text, disabled, slash",
+    "documentationLinks": [],
+    "id": "2118:125036"
+  },
+  "font-regular": {
+    "description": "typography, typeface, print, font, text",
+    "documentationLinks": [],
+    "id": "23:5577"
+  },
+  "list-roman-regular": {
+    "description": "ol, ordered list, roman list, checklist, text",
+    "documentationLinks": [],
+    "id": "3060:132266"
+  },
+  "list-ol-regular": {
+    "description": "ol, ordered list, numbered list, checklist, text",
+    "documentationLinks": [],
+    "id": "23:5585"
+  },
+  "fill-drip-regular": {
+    "description": "paint, paint-bucket, colour, colour picker, fill, art, design",
+    "documentationLinks": [],
+    "id": "23:5427"
+  },
+  "palette-regular": {
+    "description": "paint, colour, colour picker, colour pallet, design, draw",
+    "documentationLinks": [],
+    "id": "23:5429"
+  },
+  "list-alphabetical-regular": {
+    "description": "ol, ordered list, alphabetical list, a to z, checklist, text",
+    "documentationLinks": [],
+    "id": "3060:132214"
+  },
+  "arrow-down-wide-short-regular": {
+    "description": "sort, sorting, increasing, arrow",
+    "documentationLinks": [],
+    "id": "23:5593"
+  },
+  "wand-magic-sparkles-regular": {
+    "description": "selection, wizard, design, magic pen, transform, spark, sparkles",
+    "documentationLinks": [],
+    "id": "5299:2865"
+  },
+  "crop-simple-regular": {
+    "description": "photography, image, cut, crop, clip, screenshot",
+    "documentationLinks": [],
+    "id": "2765:132157"
+  },
+  "square-dashed-regular": {
+    "description": "square, dash, marquis, select, selected area",
+    "documentationLinks": [],
+    "id": "5299:2871"
+  },
+  "custom-wrap-text-inline-regular": {
+    "description": "text, format, inline, wrap text, editing",
+    "documentationLinks": [],
+    "id": "10952:180"
+  },
+  "custom-wrap-text-tight-regular": {
+    "description": "text, format, tight, wrap text, editing",
+    "documentationLinks": [],
+    "id": "10952:191"
+  },
+  "custom-wrap-text-top-bottom-regular": {
+    "description": "text, format, top and bottom, wrap text, editing",
+    "documentationLinks": [],
+    "id": "10952:200"
+  },
+  "eraser-regular": {
+    "description": "clear, erase",
+    "documentationLinks": [],
+    "id": "27262:223"
+  },
+  "regular-table-cells-circle-minus": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "27262:230"
+  },
+  "regular-table-cells-circle-plus": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "27262:237"
+  },
+  "link-simple-regular": {
+    "description": "link, connect, URL",
+    "documentationLinks": [],
+    "id": "26798:813"
+  },
+  "custom-redo-regular": {
+    "description": "redo, arrow, right",
+    "documentationLinks": [],
+    "id": "29140:4455"
+  },
+  "custom-undo-regular": {
+    "description": "arrow, undo, left",
+    "documentationLinks": [],
+    "id": "29140:4543"
+  },
+  "wifi-regular": {
+    "description": "wireless, internet, network, connection, connectivity",
+    "documentationLinks": [],
+    "id": "29746:4931"
+  },
+  "circle-dot-regular": {
+    "description": "round, circle, shapes, radio button, active",
+    "documentationLinks": [],
+    "id": "29746:4933"
+  },
+  "server-regular": {
+    "description": "saved, saving, archived, archiving, archival, storage, hard drive, servers, database, switch, device",
+    "documentationLinks": [],
+    "id": "29746:4935"
+  },
+  "bell-regular": {
+    "description": "alarm, bell, notification, time, timer, clock, schedule, events, ringer, call",
+    "documentationLinks": [],
+    "id": "29746:4937"
+  },
+  "hand-pointer-regular": {
+    "description": "hand, pointer, right, cursor, gesture, click",
+    "documentationLinks": [],
+    "id": "29746:4939"
+  },
+  "hand-back-point-right-regular": {
+    "description": "hand, pointer, right, cursor, gesture",
+    "documentationLinks": [],
+    "id": "29746:4941"
+  },
+  "magnifying-glass-regular": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "29746:4943"
+  },
+  "wifi-slash-regular": {
+    "description": "wireless, internet, network, connection, connectivity, disabled, no signal, slash",
+    "documentationLinks": [],
+    "id": "29746:4945"
+  },
+  "paper-plane-top-regular": {
+    "description": "mail, send, email, message, messaging, text, paper plane",
+    "documentationLinks": [],
+    "id": "29746:4947"
+  },
+  "camera-web-regular": {
+    "description": "camera, video, conference, webcam, device",
+    "documentationLinks": [],
+    "id": "29746:4949"
+  },
+  "life-ring-regular": {
+    "description": "assist, lifeguard, lifesaver, lifebelt, help, support, nautical, boats, ships",
+    "documentationLinks": [],
+    "id": "29746:4951"
+  },
+  "ban-regular": {
+    "description": "forbidden, prohibit, cancelled, prevent, stop, do not, circle",
+    "documentationLinks": [],
+    "id": "29746:4953"
+  },
+  "square-regular": {
+    "description": "square, checkbox empty, box, shape, unchecked",
+    "documentationLinks": [],
+    "id": "29746:4955"
+  },
+  "diamond-regular": {
+    "description": "rectangle, shapes, polygon, diamond, suits, cards, games, gaming",
+    "documentationLinks": [],
+    "id": "29746:4957"
+  },
+  "moon-regular": {
+    "description": "moon, night, evening, sleep, snooze, night mode, dark mode",
+    "documentationLinks": [],
+    "id": "29746:4959"
+  },
+  "cloud-regular": {
+    "description": "serverless, backup, storage, meteorology, cloudy, overcast, cloud",
+    "documentationLinks": [],
+    "id": "29746:4961"
+  },
+  "fire-regular": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "29746:4963"
+  },
+  "custom-check-small-regular": {
+    "description": "todo, to-do, task, checklist, checkbox, ok, done, check",
+    "documentationLinks": [],
+    "id": "29746:4965"
+  },
+  "globe-regular": {
+    "description": "world, earth, global, planet, circle, round, internationalisation, languages, country, countries, geography, map",
+    "documentationLinks": [],
+    "id": "29746:4967"
+  },
+  "circle-regular": {
+    "description": "round, circle, shapes, radio button, empty, unchecked",
+    "documentationLinks": [],
+    "id": "29746:4969"
+  },
+  "circle-solid": {
+    "description": "round, circle, shapes, notification, alert, fill",
+    "documentationLinks": [],
+    "id": "29746:4971"
+  },
+  "custom-circle-buttons-regular": {
+    "description": "quick reply, circle, carousel",
+    "documentationLinks": [],
+    "id": "29746:4973"
+  },
+  "custom-rectangule-carousel-regular": {
+    "description": "quick reply, circle, carousel, mobile",
+    "documentationLinks": [],
+    "id": "29746:4975"
+  },
+  "link-regular": {
+    "description": "anchor, hyperlink, hypertext, link, chains",
+    "documentationLinks": [],
+    "id": "29746:4978"
+  },
+  "link-slash-regular": {
+    "description": "anchor, hyperlink, hypertext, link, chains, disabled, slash",
+    "documentationLinks": [],
+    "id": "29746:4980"
+  },
+  "bars-regular": {
+    "description": "hamburger menu, overflow menu, sidebar, 3, ul, ol, unordered list, ordered list",
+    "documentationLinks": [],
+    "id": "29746:4982"
+  },
+  "ellipsis-regular": {
+    "description": "meatball menu, overflow, circles, shapes, 3 dots horizontal, ellipsis, ellipses, more",
+    "documentationLinks": [],
+    "id": "29746:4984"
+  },
+  "ellipsis-vertical-regular": {
+    "description": "kebab menu, overflow, circles, shapes, 3 dots vertical, ellipsis, ellipses, more",
+    "documentationLinks": [],
+    "id": "29746:4986"
+  },
+  "grip-solid": {
+    "description": "drag handle, grab, knurling, squares, shapes, horizontal",
+    "documentationLinks": [],
+    "id": "29746:4988"
+  },
+  "grip-vertical-solid": {
+    "description": "drag handle, grab, knurling, squares, shapes, vertical",
+    "documentationLinks": [],
+    "id": "29746:4990"
+  },
+  "camera-web-slash-regular": {
+    "description": "camera, video, conference, webcam, device, disabled, slash",
+    "documentationLinks": [],
+    "id": "29746:4992"
+  },
+  "laptop-regular": {
+    "description": "laptop, notebook, macbook, computer, device",
+    "documentationLinks": [],
+    "id": "29746:4994"
+  },
+  "laptop-slash-regular": {
+    "description": "laptop, notebook, macbook, computer, device, slash, disabled",
+    "documentationLinks": [],
+    "id": "29746:4996"
+  },
+  "regular-display-slash": {
+    "description": "screen, desktop, imac, tower, computer, device, pc, monitor, slash, disabled",
+    "documentationLinks": [],
+    "id": "29746:4998"
+  },
+  "custom-screen-monitor-regular": {
+    "description": "screen, desktop, computer, device, pc, screencast, remote",
+    "documentationLinks": [],
+    "id": "29746:5000"
+  },
+  "custom-mobiles-one-button-regular": {
+    "description": "cellphone, mobile, cellular, device, one button, group",
+    "documentationLinks": [],
+    "id": "29746:5002"
+  },
+  "custom-mobile-three-button-regular": {
+    "description": "cellphone, mobile, cellular, device, three buttons",
+    "documentationLinks": [],
+    "id": "29746:5004"
+  },
+  "display-regular": {
+    "description": "screen, desktop, imac, tower, computer, device, pc, monitor",
+    "documentationLinks": [],
+    "id": "29746:5006"
+  },
+  "custom-display-arrow-right-slash-regular": {
+    "description": "screen, desktop, imac, tower, computer, device, pc, monitor, share screen, arrow right, slash, disabled",
+    "documentationLinks": [],
+    "id": "29746:5008"
+  },
+  "tablet-regular": {
+    "description": "cellphone, mobile, cellular, ipad, tablet, device",
+    "documentationLinks": [],
+    "id": "29746:5010"
+  },
+  "custom-squares-big-small-regular": {
+    "description": "toolbar, gallery, portfolio, grid, interface, layout, menu, option, squares, dashboard, ui",
+    "documentationLinks": [],
+    "id": "29746:5012"
+  },
+  "custom-squares-big-small-slash-regular": {
+    "description": "toolbar, gallery, portfolio, grid, interface, layout, menu, option, squares, dashboard, ui, disabled, slash",
+    "documentationLinks": [],
+    "id": "29746:5014"
+  },
+  "custom-life-ring-slash-regular": {
+    "description": "assist, lifeguard, lifesaver, lifebelt, help, support, nautical, boats, ships, disabled, slash",
+    "documentationLinks": [],
+    "id": "29746:5016"
+  },
+  "upload-regular": {
+    "description": "saved, saving, archived, archiving, archival, uploaded, upload, uploading, hard drive, disk, device, arrow up",
+    "documentationLinks": [],
+    "id": "29746:5018"
+  },
+  "gear-regular": {
+    "description": "settings, setup, preferences, cogs, gears, machinery, mechanical, device",
+    "documentationLinks": [],
+    "id": "29746:5020"
+  },
+  "custom-rectangules-arrow-left-to-right-regular": {
+    "description": "sync, series, device, share, session, arrow",
+    "documentationLinks": [],
+    "id": "29746:5022"
+  },
+  "clone-regular": {
+    "description": "duplicate, copy, clipboard, clone",
+    "documentationLinks": [],
+    "id": "29746:5024"
+  },
+  "mobile-regular": {
+    "description": "cellphone, mobile, cellular, device",
+    "documentationLinks": [],
+    "id": "29746:5026"
+  },
+  "gears-regular": {
+    "description": "settings, setup, preferences, cogs, gears, machinery, mechanical, engineering, device",
+    "documentationLinks": [],
+    "id": "29746:5028"
+  },
+  "thumbtack-regular": {
+    "description": "favourite, pushpin, pin, tag, important",
+    "documentationLinks": [],
+    "id": "29746:5030"
+  },
+  "message-bot-regular": {
+    "description": "automation, ai, robot, bot",
+    "documentationLinks": [],
+    "id": "29746:5032"
+  },
+  "robot-regular": {
+    "description": "automation, ai, robot, bot",
+    "documentationLinks": [],
+    "id": "29746:5034"
+  },
+  "filter-solid": {
+    "description": "filter, refine, sorting, funel, solid",
+    "documentationLinks": [],
+    "id": "29746:5036"
+  },
+  "custom-filter-dot-regular": {
+    "description": "filter, refine, sorting, funel, notification",
+    "documentationLinks": [],
+    "id": "29746:5038"
+  },
+  "sliders-solid": {
+    "description": "slider, audio, settings, volume, filter, fader, preferences, equalizer",
+    "documentationLinks": [],
+    "id": "29746:5041"
+  },
+  "filter-regular": {
+    "description": "filter, refine, sorting, funel",
+    "documentationLinks": [],
+    "id": "29746:5043"
+  },
+  "delete-left-regular": {
+    "description": "backspace, delete, remove, keyboard, x",
+    "documentationLinks": [],
+    "id": "29746:5045"
+  },
+  "square-check-solid": {
+    "description": "square, checkbox empty, box, shape, checked, fill",
+    "documentationLinks": [],
+    "id": "29746:5047"
+  },
+  "custom-display-arrow-right-regular": {
+    "description": "screen, desktop, imac, tower, computer, device, pc, monitor, share screen, arrow right",
+    "documentationLinks": [],
+    "id": "29746:5049"
+  },
+  "bookmark-regular": {
+    "description": "reading, reader, novel, story, favourite, library, bookmark, important",
+    "documentationLinks": [],
+    "id": "29746:5051"
+  },
+  "table-layout-regular": {
+    "description": "layout, wireframe, dashboard, sidebar, ui, interface, design",
+    "documentationLinks": [],
+    "id": "29746:5053"
+  },
+  "browser-regular": {
+    "description": "web browser, windows, internet, website, webpage",
+    "documentationLinks": [],
+    "id": "29746:5055"
+  },
+  "magnifying-glass-plus-regular": {
+    "description": "search, find, locate, query, inspect, zoom in, plus, magnifying glass",
+    "documentationLinks": [],
+    "id": "29746:5057"
+  },
+  "magnifying-glass-minus-regular": {
+    "description": "search, find, locate, query, inspect, zoom out, minus, magnifying glass",
+    "documentationLinks": [],
+    "id": "29746:5059"
+  },
+  "custom-grip-lines-diagonal-regular": {
+    "description": "notches, lines, textarea, resize, drag handle, knurling",
+    "documentationLinks": [],
+    "id": "29746:5061"
+  },
+  "grid-regular": {
+    "description": "dialpad, grid, squares, shapes, layout",
+    "documentationLinks": [],
+    "id": "29746:5065"
+  },
+  "grid-4-regular": {
+    "description": "dialpad, grid, squares, shapes, layout, view all",
+    "documentationLinks": [],
+    "id": "29746:5067"
+  },
+  "bell-on-regular": {
+    "description": "alarm, bell, notification, time, timer, clock, schedule, events, ringer, call",
+    "documentationLinks": [],
+    "id": "29746:5069"
+  },
+  "bell-slash-regular": {
+    "description": "alarm, bell, notification, time, timer, clock, schedule, events, ringer, call, disabled, slash",
+    "documentationLinks": [],
+    "id": "29746:5071"
+  },
+  "circle-check-solid": {
+    "description": "todo, to-do, task, list, checkbox, round, circle, check, ok, done, fill",
+    "documentationLinks": [],
+    "id": "29746:5073"
+  },
+  "circle-check-regular": {
+    "description": "todo, to-do, task, list, checkbox, round, circle, check, ok, done",
+    "documentationLinks": [],
+    "id": "29746:5075"
+  },
+  "bolt-regular": {
+    "description": "bolt, lighting, electricity, energy, power, electric, thunderstorm, charge, charging, flash",
+    "documentationLinks": [],
+    "id": "29746:5077"
+  },
+  "sun-bright-regular": {
+    "description": "day, daytime, sun, daylight, clear, sunny, sunshine, light mode, brightness, lighten, brighten, weather",
+    "documentationLinks": [],
+    "id": "29746:5079"
+  },
+  "square-minus-regular": {
+    "description": "subtraction, difference, calculator, square, minus, checkbox partial, box",
+    "documentationLinks": [],
+    "id": "29746:5081"
+  },
+  "00-regular": {
+    "description": "00, double digit, number, zero, numbers, placeholder",
+    "documentationLinks": [],
+    "id": "29746:5083"
+  },
+  "custom-panel-collapse-regular": {
+    "description": "panel, align, layout, collapse",
+    "documentationLinks": [],
+    "id": "29746:5085"
+  },
+  "custom-panel-large-regular": {
+    "description": "panel, align, layout, large",
+    "documentationLinks": [],
+    "id": "29746:5087"
+  },
+  "custom-panel-medium-regular": {
+    "description": "panel, align, layout, medium",
+    "documentationLinks": [],
+    "id": "29746:5089"
+  },
+  "custom-panel-small-regular": {
+    "description": "panel, align, layout, small",
+    "documentationLinks": [],
+    "id": "29746:5091"
+  },
+  "trash-arrow-up": {
+    "description": "trash, delete, up arrow",
+    "documentationLinks": [],
+    "id": "29746:5095"
+  },
+  "grid-2-plus-regular": {
+    "description": "grid, squares, shapes, layout, plus, add",
+    "documentationLinks": [],
+    "id": "29746:5097"
+  },
+  "custom-log-eye-regular": {
+    "description": "log, capture, view, system, eye",
+    "documentationLinks": [],
+    "id": "30355:203"
+  },
+  "person-running-regular": {
+    "description": "pedestrian, running, human, human, body, transit, transportation, travel, commuter, user, exercise, people",
+    "documentationLinks": [],
+    "id": "23:4809"
+  },
+  "arrows-down-to-people-regular": {
+    "description": "user, group, team, community, people, profiles, accounts, contacts, arrow down, pointing",
+    "documentationLinks": [],
+    "id": "15812:7878"
+  },
+  "head-side-headphones-regular": {
+    "description": "person, users, agent, customer service, contact, head side, headphones, chat, talk, interaction, people",
+    "documentationLinks": [],
+    "id": "23:4805"
+  },
+  "custom-circle-head-side-headphones-regular": {
+    "description": "person, users, agent, customer service, contact, head side, headphones, circle, round, chat, talk, interaction, people",
+    "documentationLinks": [],
+    "id": "23:4807"
+  },
+  "custom-user-talking-regular": {
+    "description": "person, users, profile, account, contact, chat, talk, interaction, people",
+    "documentationLinks": [],
+    "id": "23:5187"
+  },
+  "custom-user-talking-slash-regular": {
+    "description": "person, users, profile, account, contact, chat, talk, interaction, people, slash, disabled",
+    "documentationLinks": [],
+    "id": "23:5191"
+  },
+  "people-pants-simple-regular": {
+    "description": "user, group, couple, community, people, profiles, accounts",
+    "documentationLinks": [],
+    "id": "23:5183"
+  },
+  "user-regular": {
+    "description": "person, users, profile, account, contact, login, people",
+    "documentationLinks": [],
+    "id": "23:5193"
+  },
+  "user-plus-regular": {
+    "description": "person, users, profile, account, contact, login, add, create, people",
+    "documentationLinks": [],
+    "id": "23:5199"
+  },
+  "circle-user-regular": {
+    "description": "person, users, profile, account, contact, login, circle, people",
+    "documentationLinks": [],
+    "id": "23:5197"
+  },
+  "address-card-regular": {
+    "description": "license, id, badge, credentials, nametag, user, verification, people",
+    "documentationLinks": [],
+    "id": "23:5195"
+  },
+  "address-book-regular": {
+    "description": "address book, contacts, user, accounts, people, person",
+    "documentationLinks": [],
+    "id": "23:5185"
+  },
+  "users-regular": {
+    "description": "user, group, team, community, people, profiles, accounts, contacts",
+    "documentationLinks": [],
+    "id": "23:5189"
+  },
+  "people-group-regular": {
+    "description": "user, group, team, community, people, profiles, accounts, contacts, leadership",
+    "documentationLinks": [],
+    "id": "23:4811"
+  },
+  "image-portrait-regular": {
+    "description": "person, users, profile, account, contact, login, people",
+    "documentationLinks": [],
+    "id": "23:5165"
+  },
+  "custom-users-headset-regular": {
+    "description": "person, users, agent, customer service, contact, chat, talk, interaction, people",
+    "documentationLinks": [],
+    "id": "2140:126763"
+  },
+  "custom-users-light": {
+    "description": "user, group, team, community, people, profiles, accounts, contacts",
+    "documentationLinks": [],
+    "id": "2140:126766"
+  },
+  "user-group-solid": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "5063:12485"
+  },
+  "regular-user-circle-arrow-left": {
+    "description": "person, users, profile, account, contact, login, people, arrow left",
+    "documentationLinks": [],
+    "id": "3964:127856"
+  },
+  "user-check-regular": {
+    "description": "person, users, profile, account, contact, login, check, success, create, people",
+    "documentationLinks": [],
+    "id": "18157:20045"
+  },
+  "user-xmark-regular": {
+    "description": "person, users, profile, account, contact, login, error, x, create, people",
+    "documentationLinks": [],
+    "id": "18157:20044"
+  },
+  "code-branch-regular": {
+    "description": "branch, code, github, vcs, source control, version control, versioning, version",
+    "documentationLinks": [],
+    "id": "29746:4778"
+  },
+  "database-regular": {
+    "description": "saved, saving, archived, archiving, archival, hard disk, storage, hard drive, server, database",
+    "documentationLinks": [],
+    "id": "29746:4780"
+  },
+  "brackets-square-regular": {
+    "description": "code, square brackets, square braces, array",
+    "documentationLinks": [],
+    "id": "29746:4782"
+  },
+  "sitemap-regular": {
+    "description": "diagram, project, site map, data structure, family tree, genealogy, hierarchy, taxonomy, charts, flowchart",
+    "documentationLinks": [],
+    "id": "29746:4784"
+  },
+  "regular-diagram-project-gear": {
+    "description": "diagram, project, data structure, family tree, genealogy, hierarchy, taxonomy, charts, flowchart, configuration, settings, gear",
+    "documentationLinks": [],
+    "id": "29746:4786"
+  },
+  "diagram-project-regular": {
+    "description": "diagram, project, data structure, family tree, genealogy, hierarchy, taxonomy, charts, flowchart",
+    "documentationLinks": [],
+    "id": "29746:4788"
+  },
+  "diagram-nested-regular": {
+    "description": "diagram, nested,  project, data structure, hierarchy, taxonomy, charts, flowchart",
+    "documentationLinks": [],
+    "id": "29746:4790"
+  },
+  "code-regular": {
+    "description": "angle brackets, angle braces, snippets",
+    "documentationLinks": [],
+    "id": "29746:4792"
+  },
+  "microchip-solid": {
+    "description": "processor, microchip, computer, circuit, development",
+    "documentationLinks": [],
+    "id": "29746:4794"
+  },
+  "bug-regular": {
+    "description": "bug, debug, error, insect, ladybird",
+    "documentationLinks": [],
+    "id": "29746:4796"
+  },
+  "arrow-left-to-line-regular": {
+    "description": "directional, pointer, pointing, arrowhead, arrow, left to line",
+    "documentationLinks": [],
+    "id": "29746:4626"
+  },
+  "arrow-right-to-line-regular": {
+    "description": "directional, pointer, pointing, arrowhead, arrow, right to line",
+    "documentationLinks": [],
+    "id": "29746:4628"
+  },
+  "arrows-rotate-regular": {
+    "description": "directional, pointer, pointing, arrowhead, redo, refreshing, sync, synchronise, rotate, spin, arrow",
+    "documentationLinks": [],
+    "id": "29746:4630"
+  },
+  "arrow-right-to-bracket-regular": {
+    "description": "directional, pointer, pointing, arrowhead, arrow, right to bracket, login",
+    "documentationLinks": [],
+    "id": "29746:4632"
+  },
+  "arrow-up-right-and-arrow-down-left-from-center-regular": {
+    "description": "directional, pointer, pointing, arrowhead, expand, fullscreen, resize, arrow",
+    "documentationLinks": [],
+    "id": "29746:4634"
+  },
+  "arrow-down-left-and-arrow-up-right-to-center-regular": {
+    "description": "directional, pointer, pointing, arrowhead, collapse, minimize, resize, arrow",
+    "documentationLinks": [],
+    "id": "29746:4636"
+  },
+  "chevron-left-regular": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, arrow, left",
+    "documentationLinks": [],
+    "id": "29746:4638"
+  },
+  "chevron-right-regular": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, arrow, right",
+    "documentationLinks": [],
+    "id": "29746:4640"
+  },
+  "custom-chevron-left-small-regular": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, arrow, left",
+    "documentationLinks": [],
+    "id": "29746:4642"
+  },
+  "custom-chevron-right-small-regular": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, arrow, right",
+    "documentationLinks": [],
+    "id": "29746:4644"
+  },
+  "custom-share-regular": {
+    "description": "directional, pointer, pointing, forward, arrowhead, arrow, turn right",
+    "documentationLinks": [],
+    "id": "29746:4646"
+  },
+  "custom-reply-regular": {
+    "description": "directional, pointer, pointing, reply, arrowhead, arrow, turn left",
+    "documentationLinks": [],
+    "id": "29746:4648"
+  },
+  "custom-reply-all-regular": {
+    "description": "directional, pointer, pointing, reply all, arrowhead, arrow, left",
+    "documentationLinks": [],
+    "id": "29746:4650"
+  },
+  "arrow-right-regular": {
+    "description": "directional, pointer, pointing, arrow, arrowhead, right",
+    "documentationLinks": [],
+    "id": "29746:4652"
+  },
+  "arrow-up-regular": {
+    "description": "directional, pointer, pointing, arrow, arrowhead, up",
+    "documentationLinks": [],
+    "id": "29746:4654"
+  },
+  "arrow-down-regular": {
+    "description": "directional, pointer, pointing, arrow, arrowhead, down",
+    "documentationLinks": [],
+    "id": "29746:4656"
+  },
+  "arrow-down-left-regular": {
+    "description": "directional, pointer, pointing, arrow, arrowhead, down left",
+    "documentationLinks": [],
+    "id": "29746:4658"
+  },
+  "arrow-down-right-regular": {
+    "description": "directional, pointer, pointing, arrow, arrowhead, down right",
+    "documentationLinks": [],
+    "id": "29746:4660"
+  },
+  "arrow-left-regular": {
+    "description": "directional, pointer, pointing, arrow, arrowhead, left",
+    "documentationLinks": [],
+    "id": "29746:4662"
+  },
+  "arrow-up-left-regular": {
+    "description": "directional, pointer, pointing, arrow, arrowhead, up left",
+    "documentationLinks": [],
+    "id": "29746:4664"
+  },
+  "arrow-up-right-regular": {
+    "description": "directional, pointer, pointing, arrow, arrowhead, up right",
+    "documentationLinks": [],
+    "id": "29746:4666"
+  },
+  "custom-chevron-up-small-regular": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, arrow, up",
+    "documentationLinks": [],
+    "id": "29746:4668"
+  },
+  "chevrons-left-regular": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, double arrow, left",
+    "documentationLinks": [],
+    "id": "29746:4670"
+  },
+  "chevrons-right-regular": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, double arrow, right",
+    "documentationLinks": [],
+    "id": "29746:4672"
+  },
+  "custom-chevron-down-small-regular": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, arrow, down",
+    "documentationLinks": [],
+    "id": "29746:4674"
+  },
+  "caret-down-solid": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, arrow, fill, down",
+    "documentationLinks": [],
+    "id": "29746:4676"
+  },
+  "caret-left-solid": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, arrow, fill, left",
+    "documentationLinks": [],
+    "id": "29746:4678"
+  },
+  "caret-right-solid": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, arrow, fill, right",
+    "documentationLinks": [],
+    "id": "29746:4680"
+  },
+  "caret-up-solid": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, arrow, fill, up",
+    "documentationLinks": [],
+    "id": "29746:4682"
+  },
+  "arrow-right-arrow-left-regular": {
+    "description": "directional, pointer, pointing, arrowhead, left and right, transfer, arrow",
+    "documentationLinks": [],
+    "id": "29746:4684"
+  },
+  "chevrons-up-regular": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, double arrow, up",
+    "documentationLinks": [],
+    "id": "29746:4686"
+  },
+  "chevrons-down-regular": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, double arrow, down",
+    "documentationLinks": [],
+    "id": "29746:4688"
+  },
+  "arrow-turn-down-right-regular": {
+    "description": "directional, pointer, pointing, arrowhead, arrow, turn down right",
+    "documentationLinks": [],
+    "id": "29746:4690"
+  },
+  "arrow-rotate-left-regular": {
+    "description": "directional, pointer, pointing, arrowhead, reset, undo, refreshing, rotate, spin, arrow",
+    "documentationLinks": [],
+    "id": "29746:4692"
+  },
+  "custom-arrows-retweet-regular": {
+    "description": "directional, pointer, pointing, arrowhead, arrow, retweet",
+    "documentationLinks": [],
+    "id": "29746:4694"
+  },
+  "custom-arrow-turn-left-clock-regular": {
+    "description": "directional, pointer, pointing, arrowhead, back, timeline, arrow, clock",
+    "documentationLinks": [],
+    "id": "29746:4696"
+  },
+  "circle-chevron-right-solid": {
+    "description": "chevron, directional, pointer, pointing, arrowhead, triangle, arrow, right",
+    "documentationLinks": [],
+    "id": "29746:4698"
+  },
+  "arrows-to-circle-regular": {
+    "description": "directional, pointer, pointing, arrowhead, arrows to circle, arrow",
+    "documentationLinks": [],
+    "id": "29746:4700"
+  },
+  "arrow-down-to-line-regular": {
+    "description": "directional, pointer, pointing, arrowhead, arrow, bottom, down to line",
+    "documentationLinks": [],
+    "id": "29746:4702"
+  },
+  "arrow-up-from-line-regular": {
+    "description": "directional, pointer, pointing, arrowhead, arrow, top, up to line",
+    "documentationLinks": [],
+    "id": "29746:4704"
+  },
+  "arrow-right-from-bracket-regular": {
+    "description": "directional, pointer, pointing, arrowhead, arrow, logout",
+    "documentationLinks": [],
+    "id": "29746:4706"
+  },
+  "arrows-minimize-regular": {
+    "description": "directional, pointer, pointing, arrowhead, collapse, minimize, resize, center, shrink, arrow",
+    "documentationLinks": [],
+    "id": "29746:4708"
+  },
+  "arrows-maximize-regular": {
+    "description": "directional, pointer, pointing, arrowhead, expand, fullscreen, resize, grow, arrow",
+    "documentationLinks": [],
+    "id": "29746:4710"
+  },
+  "square-arrow-up-right-regular": {
+    "description": "directional, pointer, pointing, popout, arrowhead, arrow, square, rectangle",
+    "documentationLinks": [],
+    "id": "29746:4712"
+  },
+  "arrow-up-right-from-square-regular": {
+    "description": "export, external link, directional, pointer, pointing, arrowhead, arrow",
+    "documentationLinks": [],
+    "id": "29746:4714"
+  },
+  "arrows-up-down-regular": {
+    "description": "arrows, up and down, space, wide, opposite, stretch",
+    "documentationLinks": [],
+    "id": "29746:4716"
+  },
+  "map-location-dot-regular": {
+    "description": "maps, places, location, cartography, geography, travel, direction, journey, pin",
+    "documentationLinks": [],
+    "id": "23:5473"
+  },
+  "map-regular": {
+    "description": "maps, places, location, cartography, geography, travel, direction",
+    "documentationLinks": [],
+    "id": "1602:125397"
+  },
+  "map-solid": {
+    "description": "maps, places, location, cartography, geography, travel, direction, solid",
+    "documentationLinks": [],
+    "id": "1602:125400"
+  },
+  "route-regular": {
+    "description": "route, direction, transit, travel, trail, gps, navigation, destination, vector, map",
+    "documentationLinks": [],
+    "id": "1925:124976"
+  },
+  "square-parking-regular": {
+    "description": "car park, parking, vehicle, commuting, signs, square",
+    "documentationLinks": [],
+    "id": "2140:126746"
+  },
+  "bus-simple-regular": {
+    "description": "vehicles, automobile, public transport, transportation, commuter, travelling, direction, place, location, map, travel",
+    "documentationLinks": [],
+    "id": "23:5445"
+  },
+  "home-regular": {
+    "description": "home, house, building, place, location, destination, map, travel",
+    "documentationLinks": [],
+    "id": "23:4891"
+  },
+  "building-regular": {
+    "description": "home, building, site, commercial, business, place, location, destination, map, travel",
+    "documentationLinks": [],
+    "id": "23:4895"
+  },
+  "road-regular": {
+    "description": "trip, path, drive, road horizon, transportation, highway, map, travel",
+    "documentationLinks": [],
+    "id": "23:5573"
+  },
+  "location-dot-regular": {
+    "description": "maps, places, location, travel, direction, journey, pin",
+    "documentationLinks": [],
+    "id": "23:4893"
+  },
+  "signs-post-regular": {
+    "description": "direction, traffic, destination, road sign, transit, transportation, map, travel",
+    "documentationLinks": [],
+    "id": "23:5619"
+  },
+  "ticket-regular": {
+    "description": "ticket, movie, cinema, event, entry, admission, invitation",
+    "documentationLinks": [],
+    "id": "23:5587"
+  },
+  "draw-circle-solid": {
+    "description": "geolocation, location, gps, aim, goal, target, map, travel",
+    "documentationLinks": [],
+    "id": "23:5555"
+  },
+  "earth-africa-regular": {
+    "description": "world, earth, global, planet, circle, round, internationalisation, international, languages, country, countries, geography, map, travel",
+    "documentationLinks": [],
+    "id": "23:4889"
+  },
+  "utensils-regular": {
+    "description": "lunch, food, meal, eating, restaurant, dining, utensils",
+    "documentationLinks": [],
+    "id": "23:5425"
+  },
+  "flag-regular": {
+    "description": "country, destination, finished, completed, flags, map, travel",
+    "documentationLinks": [],
+    "id": "23:5477"
+  },
+  "flag-checkered-regular": {
+    "description": "destination, race, racing, finish line, finished, completed, flags, map, travel",
+    "documentationLinks": [],
+    "id": "18157:1831"
+  },
+  "location-dot-slash-regular": {
+    "description": "maps, places, location, travel, direction, journey, pin, slash",
+    "documentationLinks": [],
+    "id": "24176:47"
+  },
+  "circle-question-regular": {
+    "description": "information, help, support, question, faq, round, circle",
+    "documentationLinks": [],
+    "id": "23:4909"
+  },
+  "lock-regular": {
+    "description": "padlock, locked, security, secured, authentication, login, encrypted, encryption, privacy. private, password",
+    "documentationLinks": [],
+    "id": "23:5027"
+  },
+  "unlock-regular": {
+    "description": "padlock, unlocked, security, secured, authentication, login, unencrypted, encryption, privacy, private, password",
+    "documentationLinks": [],
+    "id": "23:5043"
+  },
+  "shield-solid": {
+    "description": "badge, security, defence, authentication, authenticated, reliable, protection, safety, solid",
+    "documentationLinks": [],
+    "id": "23:5481"
+  },
+  "shield-check-regular": {
+    "description": "badge, security, defence, authentication, authenticated, reliable, protection, safety",
+    "documentationLinks": [],
+    "id": "23:5483"
+  },
+  "shield-keyhole-regular": {
+    "description": "badge, security, defence, authentication, authenticated, reliable, protection, safety, lock, locked",
+    "documentationLinks": [],
+    "id": "23:5487"
+  },
+  "key-regular": {
+    "description": "padlock, security, secured, authentication, login, encrypted, encryption, privacy, private, password",
+    "documentationLinks": [],
+    "id": "23:5023"
+  },
+  "custom-lock-keyholes-regular": {
+    "description": "padlock, locked, security, secured, authentication, login, encrypted, encryption, privacy. private, password, hold",
+    "documentationLinks": [],
+    "id": "23:5055"
+  },
+  "block-brick-regular": {
+    "description": "firewall, security, blocks, bricks, secured",
+    "documentationLinks": [],
+    "id": "23:5441"
+  },
+  "award-solid": {
+    "description": "award, certification, degree, diploma, education",
+    "documentationLinks": [],
+    "id": "3746:127849"
+  },
+  "badge-check-solid": {
+    "description": "badge, verified, verification, shapes, polygon, checked, success, circle-wavy",
+    "documentationLinks": [],
+    "id": "23:5209"
+  },
+  "triangle-exclamation-solid": {
+    "description": "alert, danger, dangerous, warning, caution, error, triangle, solid",
+    "documentationLinks": [],
+    "id": "389:25058"
+  },
+  "hexagon-exclamation-solid": {
+    "description": "alert, danger, dangerous, warning, caution, error, hexagon, solid",
+    "documentationLinks": [],
+    "id": "389:25061"
+  },
+  "triangle-exclamation-regular": {
+    "description": "alert, danger, dangerous, warning, caution, error, triangle",
+    "documentationLinks": [],
+    "id": "23:4945"
+  },
+  "hexagon-exclamation-regular": {
+    "description": "alert, danger, dangerous, warning, caution, error, hexagon",
+    "documentationLinks": [],
+    "id": "23:4933"
+  },
+  "circle-info-regular": {
+    "description": "information, help, support, round, circle",
+    "documentationLinks": [],
+    "id": "23:4903"
+  },
+  "circle-info-solid": {
+    "description": "information, help, support, round, circle, solid",
+    "documentationLinks": [],
+    "id": "389:25055"
+  },
+  "question-solid": {
+    "description": "information, help, support, question, faq",
+    "documentationLinks": [],
+    "id": "23:5631"
+  },
+  "eye-regular": {
+    "description": "inspect, visible, hidden, show, hide, visibility, security, view",
+    "documentationLinks": [],
+    "id": "23:5025"
+  },
+  "eye-slash-regular": {
+    "description": "inspect, visible, hidden, show, hide, visibility, security, view, disabled, slash",
+    "documentationLinks": [],
+    "id": "23:5019"
+  },
+  "alarm-clock-regular": {
+    "description": "time, timer, alarm, schedule, event, watch",
+    "documentationLinks": [],
+    "id": "2228:124987"
+  },
+  "alarm-snooze-regular": {
+    "description": "snooze, postpone, time, timer, alarm, schedule, event, watch",
+    "documentationLinks": [],
+    "id": "2228:124978"
+  },
+  "timer-regular": {
+    "description": "timeout, time, timer, alarm, schedule, event, watch",
+    "documentationLinks": [],
+    "id": "23:5237"
+  },
+  "hourglass-half-regular": {
+    "description": "time, timer, alarm, schedule, event, waiting, progress",
+    "documentationLinks": [],
+    "id": "23:5127"
+  },
+  "clock-nine-regular": {
+    "description": "time, timer, alarm, schedule, event, watch",
+    "documentationLinks": [],
+    "id": "23:5625"
+  },
+  "hourglass-start-regular": {
+    "description": "time, timer, alarm, schedule, event, waiting, progress, start",
+    "documentationLinks": [],
+    "id": "23:5571"
+  },
+  "clock-rotate-left-regular": {
+    "description": "time, timer, alarm, schedule, event, watch, backup, rewind, history",
+    "documentationLinks": [],
+    "id": "23:5629"
+  },
+  "calendar-clock-regular": {
+    "description": "date, time, event, schedule, calendar, booking, watch, alarm",
+    "documentationLinks": [],
+    "id": "23:5129"
+  },
+  "calendar-regular": {
+    "description": "date, time, event, schedule, calendar, booking",
+    "documentationLinks": [],
+    "id": "23:4959"
+  },
+  "calendar-plus-regular": {
+    "description": "date, time, event, schedule, calendar, booking, add, plus",
+    "documentationLinks": [],
+    "id": "23:4999"
+  },
+  "calendar-days-regular": {
+    "description": "date, time, event, schedule, calendar, booking, days",
+    "documentationLinks": [],
+    "id": "23:5589"
+  },
+  "clock-regular": {
+    "description": "time, timer, alarm, schedule, event, watch",
+    "documentationLinks": [],
+    "id": "23:5123"
+  },
+  "stopwatch-regular": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "18157:20046"
+  },
+  "table-rows-regular": {
+    "description": "view, rows, data, table, datatable, cells, polygon, excel, spreadsheet",
+    "documentationLinks": [],
+    "id": "23:5045"
+  },
+  "table-regular": {
+    "description": "view, apps, application, squares, tiles, data, table, datatable, cells, polygon, excel, spreadsheet",
+    "documentationLinks": [],
+    "id": "23:5119"
+  },
+  "custom-columns-3-regular": {
+    "description": "view, columns, data, table, datatable, cells, polygon, excel, spreadsheet",
+    "documentationLinks": [],
+    "id": "23:5049"
+  },
+  "border-all-regular": {
+    "description": "view, grid, 4, tiles, data, table, datatable, cells, polygon, excel, spreadsheet",
+    "documentationLinks": [],
+    "id": "23:5039"
+  },
+  "table-list-regular": {
+    "description": "view, columns, data, table, datatable, list, polygon, excel, spreadsheet",
+    "documentationLinks": [],
+    "id": "23:5033"
+  },
+  "table-columns-regular": {
+    "description": "view, columns, data, table, datatable, cells, polygon, excel, spreadsheet",
+    "documentationLinks": [],
+    "id": "10907:172"
+  },
+  "table-cells-regular": {
+    "description": "9, apps, application, squares, tiles, cell, table, datatable, tabular, grid, spreadsheet, excel",
+    "documentationLinks": [],
+    "id": "10907:186"
+  },
+  "custom-table-column-plus-right-regular": {
+    "description": "columns, squares, tiles, data, table, datatable, cells, polygon, excel, spreadsheet, add after, right, plus",
+    "documentationLinks": [],
+    "id": "10916:294"
+  },
+  "custom-table-column-plus-left-regular": {
+    "description": "columns, squares, tiles, data, table, datatable, cells, polygon, excel, spreadsheet, add before, left, plus",
+    "documentationLinks": [],
+    "id": "10916:302"
+  },
+  "custom-table-row-plus-bottom-regular": {
+    "description": "rows, squares, tiles, data, table, datatable, cells, polygon, excel, spreadsheet, add after, bottom, plus",
+    "documentationLinks": [],
+    "id": "10916:310"
+  },
+  "custom-table-row-plus-top-regular": {
+    "description": "rows, squares, tiles, data, table, datatable, cells, polygon, excel, spreadsheet, add before, top, plus",
+    "documentationLinks": [],
+    "id": "10916:318"
+  },
+  "custom-table-column-xmark-regular": {
+    "description": "columns, squares, tiles, data, table, datatable, cells, polygon, excel, spreadsheet, delete, x",
+    "documentationLinks": [],
+    "id": "10916:326"
+  },
+  "custom-table-xmark-regular": {
+    "description": "squares, tiles, data, table, datatable, cells, polygon, excel, spreadsheet, delete, x",
+    "documentationLinks": [],
+    "id": "10916:334"
+  },
+  "custom-table-row-xmark-regular": {
+    "description": "rows, squares, tiles, data, table, datatable, cells, polygon, excel, spreadsheet, delete, x",
+    "documentationLinks": [],
+    "id": "10917:342"
+  },
+  "handshake-regular": {
+    "description": "trade, hands, alliance, contract, agreement, deal",
+    "documentationLinks": [],
+    "id": "23:5451"
+  },
+  "whistle-regular": {
+    "description": "coach, coaching, attention, whistle",
+    "documentationLinks": [],
+    "id": "23:5017"
+  },
+  "rocket-regular": {
+    "description": "spaceship, launch, deployment, rocketship",
+    "documentationLinks": [],
+    "id": "2730:132138"
+  },
+  "puzzle-piece-regular": {
+    "description": "board game, element, piece, component, extension, plugin, games",
+    "documentationLinks": [],
+    "id": "1602:125409"
+  },
+  "gauge-simple-high-regular": {
+    "description": "gauge, dash, pressure, circle, round, meter",
+    "documentationLinks": [],
+    "id": "23:5443"
+  },
+  "film-solid": {
+    "description": "movie, camera, photography, darkroom, analog",
+    "documentationLinks": [],
+    "id": "23:5633"
+  },
+  "gem-regular": {
+    "description": "gem, diamond, jewellery, stone",
+    "documentationLinks": [],
+    "id": "23:5607"
+  },
+  "ranking-star-regular": {
+    "description": "star, ranking, winner, prize",
+    "documentationLinks": [],
+    "id": "2746:132153"
+  },
+  "bullseye-regular": {
+    "description": "aim, goal, target",
+    "documentationLinks": [],
+    "id": "23:5615"
+  },
+  "lightbulb-regular": {
+    "description": "flashlight, bulbs, lighting, led, energy, idea, brainstorm",
+    "documentationLinks": [],
+    "id": "23:5485"
+  },
+  "anchor-regular": {
+    "description": "anchor, bay, marina, stop, flag, tag",
+    "documentationLinks": [],
+    "id": "20050:307"
+  },
+  "lighthouse-regular": {
+    "description": "guidance, forecast, vigilance, knowledge",
+    "documentationLinks": [],
+    "id": "32357:7359"
+  },
+  "Icon": {
+    "description": "Icons are a crucial part of our design system and product experience. They are used to express objects, actions, and ideas visually.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/foundations/iconography/glyphs-hqcNhzLM"
+      }
+    ],
+    "id": "458:24129"
+  },
+  "x-twitter-logo": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "32119:104"
+  },
+  "facebook-logo": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "32119:102"
+  },
+  "facebook-messenger-logo": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "32119:101"
+  },
+  "linkedin-logo": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "32119:99"
+  },
+  "teams-logo": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "32119:98"
+  },
+  "8x8-logo": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "32119:97"
+  },
+  "zoom-logo": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "32119:96"
+  },
+  "instagram-logo": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "32119:100"
+  },
+  "meta-logo": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "32119:157"
+  },
+  "In-Line Button": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "769:73609"
+  },
+  "Button": {
+    "description": "An interactive element in various styles that allows users to take actions.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/actions/buttons/basic-button/usage-up4uylWw"
+      }
+    ],
+    "id": "9:582"
+  },
+  "Action Button": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "9:2267"
+  },
+  "Multi Button": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "9:3228"
+  },
+  "MultiButton + Menu": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "28:8258"
+  },
+  "Dismiss Button": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "32048:13201"
+  },
+  "Links": {
+    "description": "A component with button-like properties built to be used in text.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/actions/links/usage-ElgRtAC8"
+      }
+    ],
+    "id": "483:27995"
+  },
+  "Copy To Clipboard": {
+    "description": "The copy to clipboard component enables the user to copy links, code snippets and more.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/actions/copy-to-clipboard/usage-PGmyDt16"
+      }
+    ],
+    "id": "200:23018"
+  },
+  "CTA Group β": {
+    "description": "As the name suggests CTA Groups are used for adding up to 3 CTAs to forms or dialog-type components.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/actions/cta-group/usage-GDTd8ufZ"
+      }
+    ],
+    "id": "15105:4078"
+  },
+  "Flyout Menu": {
+    "description": "Derived from a popover, the flyout menu features drill-down/nested capabilities for menus and lists.Dev equivalent: gux-listbox",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/flyout-menu/usage-XOYodcyl"
+      }
+    ],
+    "id": "567:40164"
+  },
+  "Context Menu Button": {
+    "description": "💡 Figma TipWhen nesting this component into an auto layout (for eg. a list of contacts), make sure to change the canvas stacking to first on top in the advanced auto layout settings.This will prevent the menu being stacked behind other elements.Contextual menus contain a small set of relevant actions, related to a control, a piece of content, a view in an app, or an area of the UI without cluttering the interface.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/context-menu/usage-HoYzkVdK"
+      }
+    ],
+    "id": "30732:2299"
+  },
+  "Form Footer": {
+    "description": "The form footer should always be the last part of a form. This is where the CTAs of the form should reside.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/form-footer/usage-4a9uJsCn"
+      }
+    ],
+    "id": "25386:2122"
+  },
+  "Selector Card": {
+    "description": "Selector cards are used as a supercharged radio/checkbox input, the can hold icons and description to better explain the options the user is selecting.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/selector-card/usage-LcC0ACg7"
+      }
+    ],
+    "id": "10975:769"
+  },
+  "Textfield": {
+    "description": "A text field is for single-line text input that is short and specific. Examples of these would be names, passwords, and numbers.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/text-field/usage-i4D6Qh1o"
+      }
+    ],
+    "id": "7058:5771"
+  },
+  "Spin Button": {
+    "description": "A two-segment UI control increases or decreases the numeric value in a field incrementally.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/spin-button/usage-xmk80mKI"
+      }
+    ],
+    "id": "69:6383"
+  },
+  "Time Picker": {
+    "description": "A component that allows the user to select a specific time.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/time-picker/usage-RgfXDgJK"
+      }
+    ],
+    "id": "8587:14623"
+  },
+  "Textarea": {
+    "description": "A resizable text box for multiple lines of standard text.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/text-area/usage-5MfUAEh1"
+      }
+    ],
+    "id": "861:84026"
+  },
+  "Phone Input": {
+    "description": "Phone inputs allow users to enter phone numbers into forms. They may allow the user to select a specific country code.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/phone-input/usage-OMrxqQq0"
+      }
+    ],
+    "id": "6543:133281"
+  },
+  "Menu Select count version": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/menu/usage-v14sAvVP"
+      }
+    ],
+    "id": "166:10266"
+  },
+  "Menu Toggle version": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/menu/usage-v14sAvVP"
+      }
+    ],
+    "id": "28:5619"
+  },
+  "Menu Option (checkbox)": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/menu/usage-v14sAvVP"
+      }
+    ],
+    "id": "74:11645"
+  },
+  "Menu Option": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/menu/usage-v14sAvVP"
+      }
+    ],
+    "id": "28:5540"
+  },
+  "Menu No effects": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/menu/usage-v14sAvVP"
+      }
+    ],
+    "id": "8032:18972"
+  },
+  "Menu Grouped Menu": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/menu/usage-v14sAvVP"
+      }
+    ],
+    "id": "8032:19038"
+  },
+  "Multi-Select Dropdown": {
+    "description": "A basic component that provides a list of options in a limited space.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/dropdown/multi-select-dropdown/usage-B7V4WENl"
+      }
+    ],
+    "id": "1433:122229"
+  },
+  "Single-Select Dropdown": {
+    "description": "A basic component that provides a list of options in a limited space.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/dropdown/single-select-dropdown/usage-qDq9k63Y"
+      }
+    ],
+    "id": "1433:122174"
+  },
+  "Date Picker - Range": {
+    "description": "A component that allows users to select a range of dates.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/calendar/date-picker/usage-p0IcK584"
+      }
+    ],
+    "id": "16894:21471"
+  },
+  "Calendar - Range": {
+    "description": "A pre-designed and pre-build calendar component.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/calendar/calendar-overview-Jh4UUfOq"
+      }
+    ],
+    "id": "616:37423"
+  },
+  "Calendar - Day": {
+    "description": "A pre-designed and pre-build calendar component.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/calendar/calendar-overview-Jh4UUfOq"
+      }
+    ],
+    "id": "16786:43033"
+  },
+  "Date Picker - Day": {
+    "description": "A component that allows users to select a single day.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/calendar/date-picker/usage-p0IcK584"
+      }
+    ],
+    "id": "667:39255"
+  },
+  "Calendar Month": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "729:56406"
+  },
+  "Month Picker": {
+    "description": "A component that allows users to select a month.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/calendar/month-picker/usage-8fq3WyTs"
+      }
+    ],
+    "id": "729:57107"
+  },
+  "Time-Zone Picker": {
+    "description": "Time-zone pickers allow users to change the local time on a UI.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/time-zone-picker/usage-S6FN97Mo"
+      }
+    ],
+    "id": "8940:21792"
+  },
+  "Color Picker": {
+    "description": "A configurable interface for color selection.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/color-picker/usage-HRHvqjKf"
+      }
+    ],
+    "id": "5124:8309"
+  },
+  "Segmented Control": {
+    "description": "Segmented controls are used for changing the visualization of data.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/segmented-control/usage-PLofObXx"
+      }
+    ],
+    "id": "5338:131306"
+  },
+  "Slider": {
+    "description": "An element that allows for selection of a value within a range.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/slider/usage-SF453hB2"
+      }
+    ],
+    "id": "586:36207"
+  },
+  "Checkbox Group Set": {
+    "description": "A basic element that can be marked as selected and can be used in a list to provide multiple selection options.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/checkbox/usage-SDxexoA2"
+      }
+    ],
+    "id": "22770:11253"
+  },
+  "Checkbox Group Form Field": {
+    "description": "A basic element that can be marked as selected and can be used in a list to provide multiple selection options.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/checkbox/usage-SDxexoA2"
+      }
+    ],
+    "id": "22770:9329"
+  },
+  "Checkbox Nested Group Set": {
+    "description": "A basic element that can be marked as selected and can be used in a list to provide multiple selection options.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/checkbox/usage-SDxexoA2"
+      }
+    ],
+    "id": "22770:11384"
+  },
+  "Checkbox": {
+    "description": "A basic element that can be marked as selected and can be used in a list to provide multiple selection options.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/checkbox/usage-SDxexoA2"
+      }
+    ],
+    "id": "22770:11103"
+  },
+  "Radio Button Group Set": {
+    "description": "Radio buttons are UI elements that select one option from a list of mutually exclusive options.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/radio/usage-gIardsRk"
+      }
+    ],
+    "id": "22770:17698"
+  },
+  "Radio Button Group Form Field": {
+    "description": "Radio buttons are UI elements that select one option from a list of mutually exclusive options.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/radio/usage-gIardsRk"
+      }
+    ],
+    "id": "22770:17622"
+  },
+  "Radio Buttons": {
+    "description": "Radio buttons are UI elements that select one option from a list of mutually exclusive options.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/radio/usage-gIardsRk"
+      }
+    ],
+    "id": "22770:18899"
+  },
+  "Star Rating": {
+    "description": "Simple component that visually shows a rating with the use of star shapes.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/star-ratings/usage-cmZYISLT"
+      }
+    ],
+    "id": "595:485939"
+  },
+  "Toggle": {
+    "description": "A digital on/off switch that always has a default value and prompts users to choose between two mutually exclusive options.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/forms-and-inputs/toggle/usage-11E5CevO"
+      }
+    ],
+    "id": "595:367824"
+  },
+  "Rich Text Editor": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "29145:103575"
+  },
+  "RTE Content Block": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "28365:9487"
+  },
+  "RTE Toolbar Button Group": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "27969:222788"
+  },
+  "RTE Toolbar": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "28353:5547"
+  },
+  "Search": {
+    "description": "A pre-designed and pre-built component that can be used to implement a search functionality within a user interface.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/search-and-filter/search/search-overview-04NlY6mI"
+      }
+    ],
+    "id": "641:50932"
+  },
+  "Add or Change Image β": {
+    "description": "Feature to edit or change the user's avatar photo.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/avatar/add-change-image/usage-buaefcZt"
+      }
+    ],
+    "id": "31929:75236"
+  },
+  "Avatar Group β": {
+    "description": "Avatar groups are a collection of avatars representing multiple users.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/avatar/avatar-group/usage-53w1YJHT"
+      }
+    ],
+    "id": "31929:74772"
+  },
+  "Avatar": {
+    "description": "Avatars are graphical representations of users through a profile picture or initials.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/avatar/avatar-v/usage-xLUSybzs"
+      }
+    ],
+    "id": "31929:75168"
+  },
+  "Badge": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/badges/usage-JDyioDl2"
+      }
+    ],
+    "id": "200:9001"
+  },
+  "Tag": {
+    "description": "A component that allows users to categorize content, display active filters, provide keywords, and/or allow for additional context.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/tags/usage-CFMolSZS"
+      }
+    ],
+    "id": "25284:3073"
+  },
+  "Table Pagination": {
+    "description": "A component that separates out table content into discrete pages.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/pagination/usage-H2MXNMLe"
+      }
+    ],
+    "id": "30812:105218"
+  },
+  "Customize Column Modal": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/table-elements/customize-column-modal-NxYKVc0Y"
+      }
+    ],
+    "id": "388:69677"
+  },
+  "Table Toolbar Button Group": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/table-toolbar/usage-CD6KOVYs"
+      }
+    ],
+    "id": "359:17076"
+  },
+  "Table Toolbar": {
+    "description": "A toolbar containing relevant actions related to a table.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/table-toolbar/usage-CD6KOVYs"
+      }
+    ],
+    "id": "359:18587"
+  },
+  "Multiselect Cell": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "302:40764"
+  },
+  "In-Table Link": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/table-elements/in-table-link-xA9dxzLS"
+      }
+    ],
+    "id": "907:102082"
+  },
+  "Cell": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/table-elements/table-cell-42uu4xCG"
+      }
+    ],
+    "id": "276:10484"
+  },
+  "Column Multiselect": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/table-elements/column-multiselect-PfWJzFPj"
+      }
+    ],
+    "id": "274:10695"
+  },
+  "Column Header": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/table-elements/column-header-ZVivY1xd"
+      }
+    ],
+    "id": "271:10464"
+  },
+  "Column Header - Multiselect": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/table-elements/column-header-ZVivY1xd"
+      }
+    ],
+    "id": "832:87935"
+  },
+  "Context Menu Cell": {
+    "description": "💡 Tip: to show the context menu, set the state to active on the Context Menu Button layer.",
+    "documentationLinks": [],
+    "id": "7776:17589"
+  },
+  "Prebuilt Table Desktop Fixed Column": {
+    "description": "The table is a collection of related data held in a tabular format consisting of columns and rows.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/pre-built-table-component/usage-3oangEHS"
+      }
+    ],
+    "id": "2572:131188"
+  },
+  "Default Column": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/pre-built-table-component/usage-3oangEHS"
+      }
+    ],
+    "id": "2541:130506"
+  },
+  "Fixed Column": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/pre-built-table-component/usage-3oangEHS"
+      }
+    ],
+    "id": "2541:130687"
+  },
+  "Cell Row": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/pre-built-table-component/usage-3oangEHS"
+      }
+    ],
+    "id": "875:95719"
+  },
+  "Header Cells": {
+    "description": "",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/pre-built-table-component/usage-3oangEHS"
+      }
+    ],
+    "id": "834:76838"
+  },
+  "Prebuilt Table Desktop": {
+    "description": "The table is a collection of related data held in a tabular format consisting of columns and rows.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/data-display/data-tables/pre-built-table-component/usage-3oangEHS"
+      }
+    ],
+    "id": "835:76754"
+  },
+  "Accordion": {
+    "description": "A component that allows users to collapse and expand a section of content.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/layout-and-containers/accordion/usage-bJjoyF7i"
+      }
+    ],
+    "id": "539:28699"
+  },
+  "Card": {
+    "description": "Cards are used to group similar concepts together to make a page easier to read.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/layout-and-containers/card/usage-2m0T8zL6"
+      }
+    ],
+    "id": "130:7315"
+  },
+  "Modal Side Panel": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "28482:726"
+  },
+  "Dynamic Side Panel": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "28482:781"
+  },
+  "Breadcrumbs": {
+    "description": "A navigation element that shows the user's current location in the application. It is most clearly seen in the Admin area of Genesys Cloud.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/navigation/breadcrumbs/usage-RoQny6WM"
+      }
+    ],
+    "id": "473:232143"
+  },
+  "Global Navigation β": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "26043:31386"
+  },
+  "Side Navigation": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "504:31575"
+  },
+  "Tab Item": {
+    "description": "A basic component that allows switching between content within one single view.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/navigation/tabs/tab-item/usage-hJHfbfL1"
+      }
+    ],
+    "id": "703:511094"
+  },
+  "Tabs Set": {
+    "description": "A basic component that allows switching between content within one single view.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/navigation/tabs/tab-set/usage-hw30koPX"
+      }
+    ],
+    "id": "706:58123"
+  },
+  "Advanced Tabs Sets": {
+    "description": "A component that allows switching between content within one single view with advanced functionality.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/navigation/advanced-tabs/advanced-tabs-sets/usage-C4kj2VtO"
+      }
+    ],
+    "id": "711:158125"
+  },
+  "Advanced Tabs Groups": {
+    "description": "A component that allows switching between content within one single view with advanced functionality.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/navigation/advanced-tabs/advanced-tabs-groups/usage-fd5nLRHB"
+      }
+    ],
+    "id": "706:394694"
+  },
+  "Blank State": {
+    "description": "Blank State component displays when there is no content or data to show in a particular section of the application.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/feedback/blank-state/usage-TtzBv2g0"
+      }
+    ],
+    "id": "6142:739"
+  },
+  "In-Line Alert Banners": {
+    "description": "An in-line alert banner is a non-modal message that is related to objects in a view.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/feedback/in-line-alert-banners/usage-fsq13JCB"
+      }
+    ],
+    "id": "580:35686"
+  },
+  "Modal": {
+    "description": "A dialog that appears on top of the main content, disabling it, until the user explicitly interacts with the dialog.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/feedback/modals/usage-MUQ6Ll1A"
+      }
+    ],
+    "id": "388:44817"
+  },
+  "Popover": {
+    "description": "A component that displays persistent content such as menus, options, custom information, and pickers. Popovers float on top of a UI.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/feedback/popovers/usage-wA2Lqhzx"
+      }
+    ],
+    "id": "861:1116640"
+  },
+  "Loading Placeholder States": {
+    "description": "Progress and loading indicators express an unspecified wait time or display the length of a process.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/7978beca0/p/45021c-progress--loading-indicators/b/08cca8"
+      }
+    ],
+    "id": "428:29981"
+  },
+  "Spinner": {
+    "description": "Progress and loading indicators express an unspecified wait time or display the length of a process.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/7978beca0/p/45021c-progress--loading-indicators/b/08cca8"
+      }
+    ],
+    "id": "428:29951"
+  },
+  "Toast": {
+    "description": "A component that provides temporary notifications that show brief information. It is typically not disruptive unless an immediate action is required.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/feedback/toasts/usage-FKiiY5xJ"
+      }
+    ],
+    "id": "861:1080536"
+  },
+  "Tooltip": {
+    "description": "A component that appears on hover which provides additional contextual help or information.",
+    "documentationLinks": [
+      {
+        "uri": "https://spark.genesys.com/latest/components/feedback/tooltips/usage-3HD2PXDL"
+      }
+    ],
+    "id": "135:7558"
+  },
+  "Slot Stack/Vertical": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "22:3098"
+  },
+  "Slot Stack/Horizontal": {
+    "description": "",
+    "documentationLinks": [],
+    "id": "22:3102"
+  },
+  "Slot": {
+    "description": "As the name suggests, the slot is just a placeholder for you to insert a component!",
+    "documentationLinks": [],
+    "id": "22:2629"
+  }
+}
