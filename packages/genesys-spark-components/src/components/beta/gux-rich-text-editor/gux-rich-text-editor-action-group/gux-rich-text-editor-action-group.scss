@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  flex-direction: row;
+}
+
+:host([slot='global-actions']) {
+  ::slotted(gux-rich-text-editor-action:last-child) {
+    margin-left: 20px; //Need to confirm with UX.
+  }
+}
+
+.gux-action-group-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.gux-divider {
+  width: 1px;
+  height: 20px;
+  margin: 6px 8px;
+  background-color: #c6c8ce;
+}
