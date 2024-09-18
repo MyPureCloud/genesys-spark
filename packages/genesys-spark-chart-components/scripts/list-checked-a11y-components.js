@@ -21,7 +21,7 @@ async function listCheckedA11yComponents() {
         hasPassingA11yChecks = contents.includes('❌') ? '❌' : '✅';
       }
 
-      let componentName = component.split('/')[3];
+      const componentName = component.split('/')[3];
       return { componentName, hasPassingA11yChecks };
     })
   );

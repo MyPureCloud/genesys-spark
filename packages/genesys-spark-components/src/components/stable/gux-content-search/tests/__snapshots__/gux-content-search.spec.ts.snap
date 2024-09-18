@@ -2,35 +2,35 @@
 
 exports[`gux-content-search #render should render default control no props 1`] = `
 <gux-content-search>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <input type="text">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control no props With placeholder 1`] = `
 <gux-content-search>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
       </div>
       <slot></slot>
     </div>
-  </mock:shadow-root>
+  </template>
   <input placeholder="Search" type="text">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props 1`] = `
 <gux-content-search current-match="1" match-count="10">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -56,14 +56,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input placeholder="Search" type="text" value="Default Search Text">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props in disable mode 1`] = `
 <gux-content-search current-match="10" match-count="10">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -89,14 +89,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input disabled="true" placeholder="Search" type="text" value="Search Disabled">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props in disable mode with 1 match 1`] = `
 <gux-content-search current-match="1" match-count="1">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -122,14 +122,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input disabled="true" placeholder="Search" type="text" value="Search Disabled with 1 match">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props in disable mode with 100000000 match 1`] = `
 <gux-content-search current-match="10000" match-count="100000000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -155,14 +155,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input disabled="true" placeholder="Search" type="text" value="Search Disabled with big match">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props in disable mode with long value 1`] = `
 <gux-content-search current-match="1" match-count="1">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -188,14 +188,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input disabled="true" placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props in disable mode with long value with 100000000 match 1`] = `
 <gux-content-search current-match="1100" match-count="100000001">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -221,14 +221,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input disabled="true" placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props in disable mode with no match 1`] = `
 <gux-content-search current-match="0" match-count="0">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search gux-disabled">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -254,14 +254,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input disabled="true" placeholder="Search" type="text" value="Search Disabled with no Match">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props with invalid  match count 1`] = `
 <gux-content-search current-match="1000" match-count="abc">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -287,14 +287,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props with invalid current match 1`] = `
 <gux-content-search current-match="100000" match-count="100">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -320,14 +320,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props with long text 1 match 1`] = `
 <gux-content-search current-match="1" match-count="1">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -353,14 +353,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props with long text 100000 match 1`] = `
 <gux-content-search current-match="1000" match-count="100000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -386,14 +386,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props with long text no match 1`] = `
 <gux-content-search current-match="0" match-count="0">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -419,14 +419,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input placeholder="Search" type="text" value="Lorem ipsum dolor sit amet, lacinia blandit ultricies lorem aliquam, dui quam a viverra vivamus pellentesque, rhoncus aliquet proin eleifend.">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props with no match 1`] = `
 <gux-content-search current-match="0" match-count="0">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -452,14 +452,14 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input placeholder="Search" type="text" value="Default Search Text">
 </gux-content-search>
 `;
 
 exports[`gux-content-search #render should render default control with all props with short text 100000 match 1`] = `
 <gux-content-search current-match="1000" match-count="100000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-content-search">
       <div class="gux-search-icon">
         <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
@@ -485,7 +485,7 @@ exports[`gux-content-search #render should render default control with all props
         </button>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <input placeholder="Search" type="text" value="Lorem ipsum dolor ">
 </gux-content-search>
 `;

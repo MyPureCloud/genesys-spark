@@ -2,7 +2,7 @@
 
 exports[`gux-modal-legacy #render should render large modal 1`] = `
 <gux-modal-legacy size="large">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-large gux-modal-container">
         <span tabindex="0"></span>
@@ -10,7 +10,7 @@ exports[`gux-modal-legacy #render should render large modal 1`] = `
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -18,7 +18,7 @@ exports[`gux-modal-legacy #render should render large modal 1`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -36,7 +36,7 @@ exports[`gux-modal-legacy #render should render large modal 1`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -45,21 +45,21 @@ exports[`gux-modal-legacy #render should render large modal 1`] = `
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -68,7 +68,7 @@ exports[`gux-modal-legacy #render should render large modal 1`] = `
 
 exports[`gux-modal-legacy #render should render large modal 2`] = `
 <gux-modal-legacy size="large">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-large gux-modal-container">
         <span tabindex="0"></span>
@@ -76,7 +76,7 @@ exports[`gux-modal-legacy #render should render large modal 2`] = `
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -84,7 +84,7 @@ exports[`gux-modal-legacy #render should render large modal 2`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -102,7 +102,7 @@ exports[`gux-modal-legacy #render should render large modal 2`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -111,21 +111,21 @@ exports[`gux-modal-legacy #render should render large modal 2`] = `
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -134,7 +134,7 @@ exports[`gux-modal-legacy #render should render large modal 2`] = `
 
 exports[`gux-modal-legacy #render should render medium modal 1`] = `
 <gux-modal-legacy size="medium">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-medium gux-modal-container">
         <span tabindex="0"></span>
@@ -142,7 +142,7 @@ exports[`gux-modal-legacy #render should render medium modal 1`] = `
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -150,7 +150,7 @@ exports[`gux-modal-legacy #render should render medium modal 1`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -168,7 +168,7 @@ exports[`gux-modal-legacy #render should render medium modal 1`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -177,21 +177,21 @@ exports[`gux-modal-legacy #render should render medium modal 1`] = `
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -200,7 +200,7 @@ exports[`gux-modal-legacy #render should render medium modal 1`] = `
 
 exports[`gux-modal-legacy #render should render medium modal 2`] = `
 <gux-modal-legacy size="medium">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-medium gux-modal-container">
         <span tabindex="0"></span>
@@ -208,7 +208,7 @@ exports[`gux-modal-legacy #render should render medium modal 2`] = `
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -216,7 +216,7 @@ exports[`gux-modal-legacy #render should render medium modal 2`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -234,7 +234,7 @@ exports[`gux-modal-legacy #render should render medium modal 2`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -243,21 +243,21 @@ exports[`gux-modal-legacy #render should render medium modal 2`] = `
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -266,7 +266,7 @@ exports[`gux-modal-legacy #render should render medium modal 2`] = `
 
 exports[`gux-modal-legacy #render should render modal with a specified initial focus element 1`] = `
 <gux-modal-legacy initial-focus="#cancelButton">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-dynamic gux-modal-container">
         <span tabindex="0"></span>
@@ -274,7 +274,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -282,7 +282,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -300,7 +300,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -309,21 +309,21 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
   </div>
   <div slot="left-align-buttons">
     <gux-button id="cancelButton">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -332,7 +332,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
 
 exports[`gux-modal-legacy #render should render modal with a specified initial focus element 2`] = `
 <gux-modal-legacy initial-focus="#cancelButton">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-dynamic gux-modal-container">
         <span tabindex="0"></span>
@@ -340,7 +340,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -348,7 +348,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -366,7 +366,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -375,21 +375,21 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
   </div>
   <div slot="left-align-buttons">
     <gux-button id="cancelButton">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -398,7 +398,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
 
 exports[`gux-modal-legacy #render should render modal with just left align buttons 1`] = `
 <gux-modal-legacy size="small">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-modal-container gux-small">
         <span tabindex="0"></span>
@@ -406,7 +406,7 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -414,7 +414,7 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -432,7 +432,7 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -441,11 +441,11 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
@@ -454,7 +454,7 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
 
 exports[`gux-modal-legacy #render should render modal with just left align buttons 2`] = `
 <gux-modal-legacy size="small">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-modal-container gux-small">
         <span tabindex="0"></span>
@@ -462,7 +462,7 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -470,7 +470,7 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -488,7 +488,7 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -497,11 +497,11 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
@@ -510,7 +510,7 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
 
 exports[`gux-modal-legacy #render should render modal with just right align buttons 1`] = `
 <gux-modal-legacy size="small">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-modal-container gux-small">
         <span tabindex="0"></span>
@@ -518,7 +518,7 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -526,7 +526,7 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -544,7 +544,7 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -553,11 +553,11 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -566,7 +566,7 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
 
 exports[`gux-modal-legacy #render should render modal with just right align buttons 2`] = `
 <gux-modal-legacy size="small">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-modal-container gux-small">
         <span tabindex="0"></span>
@@ -574,7 +574,7 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -582,7 +582,7 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -600,7 +600,7 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -609,11 +609,11 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -622,12 +622,12 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
 
 exports[`gux-modal-legacy #render should render modal without a title 1`] = `
 <gux-modal-legacy size="large">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-large gux-modal-container">
         <span tabindex="0"></span>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -635,7 +635,7 @@ exports[`gux-modal-legacy #render should render modal without a title 1`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -653,27 +653,27 @@ exports[`gux-modal-legacy #render should render modal without a title 1`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="content">
     This contains the modal content.
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -682,12 +682,12 @@ exports[`gux-modal-legacy #render should render modal without a title 1`] = `
 
 exports[`gux-modal-legacy #render should render modal without a title 2`] = `
 <gux-modal-legacy size="large">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-large gux-modal-container">
         <span tabindex="0"></span>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -695,7 +695,7 @@ exports[`gux-modal-legacy #render should render modal without a title 2`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -713,27 +713,27 @@ exports[`gux-modal-legacy #render should render modal without a title 2`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="content">
     This contains the modal content.
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -742,7 +742,7 @@ exports[`gux-modal-legacy #render should render modal without a title 2`] = `
 
 exports[`gux-modal-legacy #render should render modal without buttons 1`] = `
 <gux-modal-legacy size="small">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-modal-container gux-small">
         <span tabindex="0"></span>
@@ -750,7 +750,7 @@ exports[`gux-modal-legacy #render should render modal without buttons 1`] = `
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -758,7 +758,7 @@ exports[`gux-modal-legacy #render should render modal without buttons 1`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content gux-no-buttons">
           <p>
@@ -768,7 +768,7 @@ exports[`gux-modal-legacy #render should render modal without buttons 1`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -780,7 +780,7 @@ exports[`gux-modal-legacy #render should render modal without buttons 1`] = `
 
 exports[`gux-modal-legacy #render should render modal without buttons 2`] = `
 <gux-modal-legacy size="small">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-modal-container gux-small">
         <span tabindex="0"></span>
@@ -788,7 +788,7 @@ exports[`gux-modal-legacy #render should render modal without buttons 2`] = `
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -796,7 +796,7 @@ exports[`gux-modal-legacy #render should render modal without buttons 2`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content gux-no-buttons">
           <p>
@@ -806,7 +806,7 @@ exports[`gux-modal-legacy #render should render modal without buttons 2`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -818,7 +818,7 @@ exports[`gux-modal-legacy #render should render modal without buttons 2`] = `
 
 exports[`gux-modal-legacy #render should render small modal 1`] = `
 <gux-modal-legacy size="small">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-modal-container gux-small">
         <span tabindex="0"></span>
@@ -826,7 +826,7 @@ exports[`gux-modal-legacy #render should render small modal 1`] = `
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -834,7 +834,7 @@ exports[`gux-modal-legacy #render should render small modal 1`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -852,7 +852,7 @@ exports[`gux-modal-legacy #render should render small modal 1`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -861,21 +861,21 @@ exports[`gux-modal-legacy #render should render small modal 1`] = `
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -884,7 +884,7 @@ exports[`gux-modal-legacy #render should render small modal 1`] = `
 
 exports[`gux-modal-legacy #render should render small modal 2`] = `
 <gux-modal-legacy size="small">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-modal-container gux-small">
         <span tabindex="0"></span>
@@ -892,7 +892,7 @@ exports[`gux-modal-legacy #render should render small modal 2`] = `
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -900,7 +900,7 @@ exports[`gux-modal-legacy #render should render small modal 2`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -918,7 +918,7 @@ exports[`gux-modal-legacy #render should render small modal 2`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -927,21 +927,21 @@ exports[`gux-modal-legacy #render should render small modal 2`] = `
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -950,7 +950,7 @@ exports[`gux-modal-legacy #render should render small modal 2`] = `
 
 exports[`gux-modal-legacy #render should render small modal by default 1`] = `
 <gux-modal-legacy>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-dynamic gux-modal-container">
         <span tabindex="0"></span>
@@ -958,7 +958,7 @@ exports[`gux-modal-legacy #render should render small modal by default 1`] = `
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -966,7 +966,7 @@ exports[`gux-modal-legacy #render should render small modal by default 1`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -984,7 +984,7 @@ exports[`gux-modal-legacy #render should render small modal by default 1`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -993,21 +993,21 @@ exports[`gux-modal-legacy #render should render small modal by default 1`] = `
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>
@@ -1016,7 +1016,7 @@ exports[`gux-modal-legacy #render should render small modal by default 1`] = `
 
 exports[`gux-modal-legacy #render should render small modal by default 2`] = `
 <gux-modal-legacy>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div aria-labelledby="gux-i" aria-modal="true" class="gux-modal" role="dialog">
       <div class="gux-dynamic gux-modal-container">
         <span tabindex="0"></span>
@@ -1024,7 +1024,7 @@ exports[`gux-modal-legacy #render should render small modal by default 2`] = `
           <slot name="title"></slot>
         </h1>
         <gux-dismiss-button>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -1032,7 +1032,7 @@ exports[`gux-modal-legacy #render should render small modal by default 2`] = `
                 </div>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
         </gux-dismiss-button>
         <div class="gux-modal-content">
           <p>
@@ -1050,7 +1050,7 @@ exports[`gux-modal-legacy #render should render small modal by default 2`] = `
         <span tabindex="0"></span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="title">
     Modal Title
   </div>
@@ -1059,21 +1059,21 @@ exports[`gux-modal-legacy #render should render small modal by default 2`] = `
   </div>
   <div slot="left-align-buttons">
     <gux-button>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-secondary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Cancel
     </gux-button>
   </div>
   <div slot="right-align-buttons">
     <gux-button accent="primary">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <button class="gux-primary" type="button">
           <slot></slot>
         </button>
-      </mock:shadow-root>
+      </template>
       Accept
     </gux-button>
   </div>

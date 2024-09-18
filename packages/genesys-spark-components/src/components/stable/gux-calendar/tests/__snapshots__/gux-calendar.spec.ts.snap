@@ -2,7 +2,7 @@
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 1`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -393,13 +393,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 2`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -790,13 +790,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 3`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -1187,13 +1187,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 4`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -1584,13 +1584,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 5`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -1981,13 +1981,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 6`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -2378,13 +2378,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 7`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -2775,13 +2775,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 8`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -3172,13 +3172,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 9`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -3569,13 +3569,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 10`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -3966,13 +3966,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 11`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -4363,13 +4363,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 12`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -4760,13 +4760,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 13`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -5157,13 +5157,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 14`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -5554,13 +5554,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 15`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -5951,13 +5951,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 16`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -6348,13 +6348,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 17`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -6745,13 +6745,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 18`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -7142,13 +7142,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 19`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -7539,13 +7539,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 20`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -7936,13 +7936,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 21`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -8333,13 +8333,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 22`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -8730,13 +8730,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 23`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -9127,13 +9127,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 24`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -9524,13 +9524,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 25`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -9921,13 +9921,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (1) 26`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -10318,13 +10318,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 1`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -11033,13 +11033,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 2`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -11748,13 +11748,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 3`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -12463,13 +12463,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 4`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -13178,13 +13178,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 5`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -13835,13 +13835,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 6`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -14550,13 +14550,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 7`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -15265,13 +15265,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 8`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -15980,13 +15980,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 9`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -16637,13 +16637,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 10`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -17352,13 +17352,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 11`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -18009,13 +18009,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 12`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -18724,13 +18724,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 13`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -19381,13 +19381,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 14`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -20038,13 +20038,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 15`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -20753,13 +20753,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 16`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -21468,13 +21468,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 17`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -22183,13 +22183,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 18`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -22840,13 +22840,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 19`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -23497,13 +23497,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 20`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -24212,13 +24212,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 21`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -24927,13 +24927,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 22`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -25584,13 +25584,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 23`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -26299,13 +26299,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 24`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -27014,13 +27014,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 25`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -27729,13 +27729,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (2) 26`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -28386,13 +28386,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 1`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -28783,13 +28783,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 2`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -29180,13 +29180,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 3`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -29577,13 +29577,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 4`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -29974,13 +29974,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 5`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -30371,13 +30371,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 6`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -30768,13 +30768,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 7`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -31165,13 +31165,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 8`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -31562,13 +31562,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 9`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -31959,13 +31959,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 10`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -32356,13 +32356,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 11`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -32753,13 +32753,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 12`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -33150,13 +33150,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 13`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -33547,13 +33547,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 14`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -33944,13 +33944,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 15`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -34341,13 +34341,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 16`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -34738,13 +34738,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 17`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -35135,13 +35135,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 18`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -35532,13 +35532,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 19`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -35929,13 +35929,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 20`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -36326,13 +36326,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 21`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -36723,13 +36723,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 22`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -37120,13 +37120,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 23`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -37517,13 +37517,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 24`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -37914,13 +37914,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 25`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -38311,13 +38311,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (3) 26`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -38708,13 +38708,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 1`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -39105,13 +39105,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 2`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -39502,13 +39502,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 3`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -39899,13 +39899,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 4`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -40296,13 +40296,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 5`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -40693,13 +40693,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 6`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -41090,13 +41090,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 7`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -41487,13 +41487,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 8`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -41884,13 +41884,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 9`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -42281,13 +42281,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 10`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -42678,13 +42678,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 11`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -43075,13 +43075,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 12`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -43472,13 +43472,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 13`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -43869,13 +43869,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 14`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -44266,13 +44266,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 15`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -44663,13 +44663,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 16`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -45060,13 +45060,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 17`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -45457,13 +45457,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 18`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -45854,13 +45854,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 19`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -46251,13 +46251,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 20`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -46648,13 +46648,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 21`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -47045,13 +47045,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 22`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -47442,13 +47442,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 23`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -47839,13 +47839,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 24`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -48236,13 +48236,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 25`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -48633,13 +48633,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using non regional dates should render component as expected (4) 26`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -49030,13 +49030,13 @@ exports[`gux-datepicker #render #render using non regional dates should render c
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 1`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -49427,13 +49427,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 2`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -49824,13 +49824,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 3`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -50221,13 +50221,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 4`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -50618,13 +50618,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 5`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -51015,13 +51015,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 6`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -51412,13 +51412,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 7`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -51809,13 +51809,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 8`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -52206,13 +52206,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 9`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -52603,13 +52603,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 10`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -53000,13 +53000,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 11`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -53397,13 +53397,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 12`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -53794,13 +53794,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 13`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -54191,13 +54191,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 14`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -54588,13 +54588,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 15`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -54985,13 +54985,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 16`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -55382,13 +55382,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 17`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -55779,13 +55779,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 18`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -56176,13 +56176,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 19`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -56573,13 +56573,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 20`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -56970,13 +56970,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 21`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -57367,13 +57367,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 22`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -57764,13 +57764,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 23`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -58161,13 +58161,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 24`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -58558,13 +58558,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 25`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -58955,13 +58955,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (1) 26`] = `
 <gux-calendar mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -59352,13 +59352,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 1`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -60067,13 +60067,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 2`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -60782,13 +60782,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 3`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -61497,13 +61497,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 4`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -62212,13 +62212,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 5`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -62869,13 +62869,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 6`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -63584,13 +63584,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 7`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -64299,13 +64299,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 8`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -65014,13 +65014,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 9`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -65671,13 +65671,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 10`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -66386,13 +66386,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 11`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -67043,13 +67043,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 12`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -67758,13 +67758,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 13`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -68415,13 +68415,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 14`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -69072,13 +69072,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 15`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -69787,13 +69787,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 16`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -70502,13 +70502,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 17`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -71217,13 +71217,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 18`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -71874,13 +71874,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 19`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -72531,13 +72531,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 20`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -73246,13 +73246,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 21`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -73961,13 +73961,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 22`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -74618,13 +74618,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 23`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -75333,13 +75333,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 24`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -76048,13 +76048,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 25`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -76763,13 +76763,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (2) 26`] = `
 <gux-calendar mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -77420,13 +77420,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 1`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -77817,13 +77817,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 2`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -78214,13 +78214,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 3`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -78611,13 +78611,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 4`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -79008,13 +79008,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 5`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -79405,13 +79405,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 6`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -79802,13 +79802,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 7`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -80199,13 +80199,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 8`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -80596,13 +80596,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 9`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -80993,13 +80993,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 10`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -81390,13 +81390,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 11`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -81787,13 +81787,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 12`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -82184,13 +82184,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 13`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -82581,13 +82581,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 14`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -82978,13 +82978,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 15`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -83375,13 +83375,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 16`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -83772,13 +83772,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 17`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -84169,13 +84169,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 18`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -84566,13 +84566,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 19`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -84963,13 +84963,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 20`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -85360,13 +85360,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 21`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -85757,13 +85757,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 22`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -86154,13 +86154,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 23`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -86551,13 +86551,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 24`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -86948,13 +86948,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 25`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -87345,13 +87345,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (3) 26`] = `
 <gux-calendar mode="single" start-day-of-week="6" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -87742,13 +87742,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 1`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -88139,13 +88139,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 2`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -88536,13 +88536,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 3`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -88933,13 +88933,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 4`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -89330,13 +89330,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 5`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -89727,13 +89727,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 6`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -90124,13 +90124,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 7`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -90521,13 +90521,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 8`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -90918,13 +90918,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 9`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -91315,13 +91315,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 10`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -91712,13 +91712,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 11`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -92109,13 +92109,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 12`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -92506,13 +92506,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 13`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -92903,13 +92903,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 14`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -93300,13 +93300,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 15`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -93697,13 +93697,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 16`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -94094,13 +94094,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 17`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -94491,13 +94491,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 18`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -94888,13 +94888,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 19`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -95285,13 +95285,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 20`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -95682,13 +95682,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 21`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -96079,13 +96079,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 22`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -96476,13 +96476,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 23`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -96873,13 +96873,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 24`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -97270,13 +97270,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 25`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -97667,13 +97667,13 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;
 
 exports[`gux-datepicker #render #render using regional dates should render component as expected (4) 26`] = `
 <gux-calendar lang="ar" mode="single" value="1997-08-29">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-calendar">
       <div class="gux-header">
         <button aria-hidden="true" class="gux-left" tabindex="-1" type="button">
@@ -98064,6 +98064,6 @@ exports[`gux-datepicker #render #render using regional dates should render compo
         </table>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-calendar>
 `;

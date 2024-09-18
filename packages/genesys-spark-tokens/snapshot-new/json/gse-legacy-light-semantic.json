@@ -24,7 +24,7 @@
           "30": "#23478f"
         },
         "tertiary": {
-          "10": "#000000",
+          "10": "rgba(0, 0, 0, 0)",
           "20": "#6b7585"
         },
         "high_contrast": {
@@ -41,7 +41,7 @@
         }
       },
       "overlay": {
-        "10": "#202937"
+        "10": "#202937cc"
       },
       "system": {
         "primary": {
@@ -101,17 +101,17 @@
           "130": "#75a8ff"
         },
         "subtle": {
-          "10": "#203b73",
-          "20": "#75a8ff",
-          "30": "#b5b5eb",
+          "10": "#bbbfd4",
+          "20": "#d9e4ff",
+          "30": "#e9e8f9",
           "40": "#c2deb9",
           "50": "#c8cfda",
-          "60": "#75a8ff",
-          "70": "#8452cf",
-          "80": "#5e5782",
-          "90": "#ff8fdd",
+          "60": "#d9e4ff",
+          "70": "#dcc9f2",
+          "80": "#cdc9d8",
+          "90": "#ffdff5",
           "100": "#fcd276",
-          "110": "#ddd933",
+          "110": "#f8f3c6",
           "120": "#fff793"
         },
         "status": {
@@ -288,12 +288,12 @@
         "active": "#e2e6ee"
       },
       "tertiary": {
-        "default": "#000000",
+        "default": "rgba(0, 0, 0, 0)",
         "hover": "#2754ac",
         "active": "#23478f"
       },
       "ghost": {
-        "default": "#000000",
+        "default": "rgba(0, 0, 0, 0)",
         "hover": "#deeaff",
         "active": "#e2e6ee"
       },
@@ -310,7 +310,7 @@
     },
     "overlay": {
       "shroud": {
-        "default": "#202937"
+        "default": "#202937cc"
       }
     },
     "container": {
@@ -370,17 +370,17 @@
           "accent_13": "#75a8ff"
         },
         "subtle": {
-          "accent_1": "#203b73",
-          "accent_2": "#75a8ff",
-          "accent_3": "#b5b5eb",
+          "accent_1": "#bbbfd4",
+          "accent_2": "#d9e4ff",
+          "accent_3": "#e9e8f9",
           "accent_4": "#c2deb9",
           "accent_5": "#c8cfda",
-          "accent_6": "#75a8ff",
-          "accent_7": "#8452cf",
-          "accent_8": "#5e5782",
-          "accent_9": "#ff8fdd",
+          "accent_6": "#d9e4ff",
+          "accent_7": "#dcc9f2",
+          "accent_8": "#cdc9d8",
+          "accent_9": "#ffdff5",
           "accent_10": "#fcd276",
-          "accent_11": "#ddd933",
+          "accent_11": "#f8f3c6",
           "accent_12": "#fff793"
         }
       },
@@ -816,12 +816,28 @@
   },
   "container": {
     "lg": {
+      "box_shadow": {
+        "blur": "8px",
+        "spread": "1px",
+        "color": "rgba(35, 57, 92, 0.15)",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      },
       "border_radius": "4px",
       "gap": "16px",
       "padding": "24px",
       "height": "40px"
     },
     "md": {
+      "box_shadow": {
+        "blur": "6px",
+        "spread": "1px",
+        "color": "rgba(35, 57, 92, 0.12)",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      },
       "gap": "12px",
       "border_radius": "4px",
       "height": "32px",
@@ -833,6 +849,14 @@
       "height": "48px"
     },
     "sm": {
+      "box_shadow": {
+        "blur": "4px",
+        "spread": "1px",
+        "color": "rgba(35, 57, 92, 0.1)",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      },
       "border_radius": "4px",
       "gap": "8px",
       "padding": "12px",
@@ -920,38 +944,6 @@
     "click_input": {
       "handle": {
         "border_width": "2px"
-      }
-    }
-  },
-  "contanier": {
-    "lg": {
-      "box_shadow": {
-        "blur": "8px",
-        "spread": "1px",
-        "color": "rgba(35,57,92,0.15)",
-        "type": "dropShadow",
-        "offsetX": "0",
-        "offsetY": "0"
-      }
-    },
-    "md": {
-      "box_shadow": {
-        "blur": "6px",
-        "spread": "1px",
-        "color": "rgba(35,57,92,0.12)",
-        "type": "dropShadow",
-        "offsetX": "0",
-        "offsetY": "0"
-      }
-    },
-    "sm": {
-      "box_shadow": {
-        "blur": "4px",
-        "spread": "1px",
-        "color": "rgba(35,57,92,0.1)",
-        "type": "dropShadow",
-        "offsetX": "0",
-        "offsetY": "0"
       }
     }
   },

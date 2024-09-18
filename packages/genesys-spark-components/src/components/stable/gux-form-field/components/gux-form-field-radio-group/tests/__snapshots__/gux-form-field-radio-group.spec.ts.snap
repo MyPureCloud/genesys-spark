@@ -2,7 +2,7 @@
 
 exports[`gux-form-field-radio-beta #render should render component as expected (1) 1`] = `
 <gux-form-field-radio-group-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Food
@@ -25,7 +25,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <label slot="group-label">
     Food
   </label>
@@ -40,7 +40,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
 
 exports[`gux-form-field-radio-beta #render should render component as expected (2) 1`] = `
 <gux-form-field-radio-group-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Food Subject to availibility
@@ -63,7 +63,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <label slot="group-label">
     Food
   </label>
@@ -96,7 +96,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
 
 exports[`gux-form-field-radio-beta #render should render component as expected (3) 1`] = `
 <gux-form-field-radio-group-beta>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Food This is a group help message
@@ -119,7 +119,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <label slot="group-label">
     Food
   </label>
@@ -161,7 +161,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
 
 exports[`gux-form-field-radio-beta #render should render component as expected (4) 1`] = `
 <gux-form-field-radio-group-beta disabled="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset aria-disabled="true" class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Food
@@ -184,7 +184,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <label slot="group-label">
     Food
   </label>
@@ -223,7 +223,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
 
 exports[`gux-form-field-radio-beta #render should render component as expected (5) 1`] = `
 <gux-form-field-radio-group-beta indicator-mark="otpional">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Food
@@ -246,7 +246,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <label slot="group-label">
     Food
   </label>
@@ -279,7 +279,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
 
 exports[`gux-form-field-radio-beta #render should render component as expected (6) 1`] = `
 <gux-form-field-radio-group-beta required="">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Food Required
@@ -302,7 +302,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <label slot="group-label">
     Food
   </label>

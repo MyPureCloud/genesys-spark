@@ -25,10 +25,12 @@ describe('gux-tooltip-beta', () => {
 
         const element = await page.find('#element');
         const tooltip = await page.find('gux-tooltip-beta');
-        const baseTooltip = await page.find(
-          'gux-tooltip-beta >>> gux-tooltip-base-beta'
-        );
+        const baseTooltip = await tooltip.find('pierce/gux-tooltip-base-beta');
+
         expect(baseTooltip.className.split(' ')).not.toContain('gux-show');
+        // verify accessibility issues are not present before tooltip is active
+        await a11yCheck(page);
+
         await element.hover();
         await page.waitForChanges();
 

@@ -49,6 +49,33 @@ describe('The intl module', () => {
       document.body.setAttribute('lang', 'yy');
       expect(determineDisplayLocale()).toBe('yy-YY');
     });
+    // Test browser region overrides
+    test('If the language attribute is zh-TW (Traditional Chinese Taiwan) and the browser language is Hong Kong then use the browser region', () => {
+      Object.defineProperty(window.navigator, 'language', {
+        value: 'zh-HK',
+        configurable: true
+      });
+
+      document.body.setAttribute('lang', 'zh-TW');
+      expect(determineDisplayLocale()).toBe('zh-HK');
+    });
+    test('If the language attribute is zh-TW (Traditional Chinese Taiwan) and the browser language is any region other than Hong Kong, then use zh-TW', () => {
+      document.body.setAttribute('lang', 'zh-TW');
+      expect(determineDisplayLocale()).toBe('zh-TW');
+    });
+    test('If the language attribute is zh-CN (Simplified Chinese) and the browser region is Singapore then use the browser region', () => {
+      Object.defineProperty(window.navigator, 'language', {
+        value: 'zh-SG',
+        configurable: true
+      });
+
+      document.body.setAttribute('lang', 'zh-CN');
+      expect(determineDisplayLocale()).toBe('zh-SG');
+    });
+    test('If the language attribute is zh-CN (Simplified Chinese) and the browser language is any other region other than Singapore, then use zh-CN', () => {
+      document.body.setAttribute('lang', 'zh-CN');
+      expect(determineDisplayLocale()).toBe('zh-CN');
+    });
   });
 
   describe('When creating a DateTimeFormat', () => {

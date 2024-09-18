@@ -33,7 +33,7 @@
       "fontWeight": 700
     },
     "text": {
-      "fontFamily": "Noto Sans",
+      "fontFamily": "'Noto Sans'",
       "lineHeight": "20px",
       "fontSize": "14px",
       "fontWeight": 400
@@ -133,7 +133,7 @@
     },
     "body": {
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": 400,
         "lineHeight": "20px",
         "fontSize": "14px"
@@ -159,7 +159,7 @@
       "large": 48,
       "small": 16,
       "text": {
-        "fontFamily": "Noto Sans",
+        "fontFamily": "'Noto Sans'",
         "fontWeight": 600,
         "lineHeight": "18px",
         "fontSize": "12px"
@@ -175,7 +175,7 @@
           "fontSize": "24px"
         },
         "subheader": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": 600,
           "lineHeight": "24px",
           "fontSize": "16px"
@@ -190,7 +190,7 @@
           "fontSize": "18px"
         },
         "subheader": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": 600,
           "lineHeight": "20px",
           "fontSize": "14px"
@@ -205,7 +205,7 @@
           "fontSize": "16px"
         },
         "subheader": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": 600,
           "lineHeight": "18px",
           "fontSize": "12px"
@@ -237,7 +237,7 @@
           "fontSize": "18px"
         },
         "subheader": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": 600,
           "lineHeight": "20px",
           "fontSize": "14px"
@@ -251,7 +251,7 @@
           "fontSize": "14px"
         },
         "subheader": {
-          "fontFamily": "Noto Sans",
+          "fontFamily": "'Noto Sans'",
           "fontWeight": 600,
           "lineHeight": "18px",
           "fontSize": "12px"

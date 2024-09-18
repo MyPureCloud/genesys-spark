@@ -444,7 +444,7 @@ export class GuxDropdown {
       );
     }
     return (
-      <gux-truncate ref={el => (this.truncateElement = el)}>
+      <gux-truncate ref={el => (this.truncateElement = el)} dir="auto">
         {optionText}
       </gux-truncate>
     ) as JSX.Element;
@@ -472,7 +472,7 @@ export class GuxDropdown {
   private renderFilterInputField(): JSX.Element {
     if (this.expanded && this.isFilterable()) {
       return (
-        <div class="gux-field gux-input-field">
+        <div class="gux-field gux-input-field" dir="auto">
           <div class="gux-field-content">
             <div class="gux-filter">
               <div class="gux-filter-display">
@@ -567,7 +567,7 @@ export class GuxDropdown {
     return (
       <gux-popup
         expanded={this.expanded && (!this.loading || this.isFilterable())}
-        disabled={this.disabled}
+        disabled={this.disabled || (this.loading && !this.isFilterable())}
         exceedTargetWidth={this.exceedTargetWidth}
       >
         {this.renderTarget()}

@@ -12,7 +12,7 @@ jobs:
     if: github.event.label.name == 'ux review'
     runs-on: ubuntu-latest
     steps:
-      - uses: mshick/add-pr-comment@v1
+      - uses: mshick/add-pr-comment@v2
         with:
           message: >
             🧐 UX Reviewers Assemble!
@@ -29,4 +29,3 @@ jobs:
               2. Check out the implementation @ https://apps.inindca.com/common-ui-docs/genesys-webcomponents/${{ github.head_ref }}
               3. Be sure to note which issues are blockers and which are refinements
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: 'github-actions[bot]'

@@ -83,8 +83,9 @@ export function validateFormIds(
     error.setAttribute('id', errorId);
     describedByIds.push(errorId);
 
-    describedByIds &&
+    if (describedByIds) {
       input.setAttribute('aria-describedby', describedByIds.join(' '));
+    }
   } else if (input.getAttribute('aria-describedby')) {
     const describedByIds =
       input
@@ -106,8 +107,9 @@ export function validateFormIds(
     help.setAttribute('id', helpId);
     describedByIds.push(helpId);
 
-    describedByIds &&
+    if (describedByIds) {
       input.setAttribute('aria-describedby', describedByIds.join(' '));
+    }
   } else if (input.getAttribute('aria-describedby')) {
     const describedByIds =
       input
@@ -129,8 +131,9 @@ export function validateFormIds(
     labelInfo.setAttribute('id', labelInfoId);
     describedByIds.push(labelInfoId);
 
-    describedByIds &&
+    if (describedByIds) {
       input.setAttribute('aria-describedby', describedByIds.join(' '));
+    }
   } else if (input.getAttribute('aria-describedby')) {
     const describedByIds =
       input
@@ -164,8 +167,9 @@ export function setSlotAriaAttribute(
     slottedElement.setAttribute('id', randomId);
     ariaAttributeIds?.push(randomId);
 
-    ariaAttributeIds &&
+    if (ariaAttributeIds) {
       input.setAttribute(attribute, ariaAttributeIds.join(' '));
+    }
   }
 }
 export function setSlotAriaLabelledby(

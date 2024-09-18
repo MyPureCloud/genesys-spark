@@ -9,6 +9,7 @@ import {
 const outputFolder = process.argv[2] || 'dist';
 
 cleanOldOutputFolder(outputFolder);
+cleanOldOutputFolder(`${outputFolder}-new`);
 
 // Token Generation
 const tokenStudioFiles = getAllTokenStudioFiles('data-old');
@@ -22,3 +23,4 @@ await createThemes('data', `${outputFolder}-new`);
 
 // Formatting
 formatOutputFolder(outputFolder);
+formatOutputFolder(`${outputFolder}-new`);

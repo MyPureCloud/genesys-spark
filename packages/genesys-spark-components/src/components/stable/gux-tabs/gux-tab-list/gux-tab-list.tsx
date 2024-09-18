@@ -175,28 +175,40 @@ export class GuxTabList {
     if (direction === 'forward') {
       if (this.focused < this.tabTriggers.length - 1) {
         writeTask(() => {
-          this.hasHorizontalScrollbar ? this.scrollRight() : this.scrollDown();
+          if (this.hasHorizontalScrollbar) {
+            this.scrollRight();
+          } else {
+            this.scrollDown();
+          }
         });
         this.focusTab(this.focused + 1);
       } else {
         writeTask(() => {
-          this.hasHorizontalScrollbar
-            ? scrollableSection.scrollBy(-scrollableSection.scrollWidth, 0)
-            : scrollableSection.scrollBy(0, -scrollableSection.scrollHeight);
+          if (this.hasHorizontalScrollbar) {
+            scrollableSection.scrollBy(-scrollableSection.scrollWidth, 0);
+          } else {
+            scrollableSection.scrollBy(0, -scrollableSection.scrollHeight);
+          }
         });
         this.focusTab(0);
       }
     } else if (direction === 'backward') {
       if (this.focused > 0) {
         writeTask(() => {
-          this.hasHorizontalScrollbar ? this.scrollLeft() : this.scrollUp();
+          if (this.hasHorizontalScrollbar) {
+            this.scrollLeft();
+          } else {
+            this.scrollUp();
+          }
         });
         this.focusTab(this.focused - 1);
       } else {
         writeTask(() => {
-          this.hasHorizontalScrollbar
-            ? scrollableSection.scrollBy(scrollableSection.scrollWidth, 0)
-            : scrollableSection.scrollBy(0, scrollableSection.scrollHeight);
+          if (this.hasHorizontalScrollbar) {
+            scrollableSection.scrollBy(scrollableSection.scrollWidth, 0);
+          } else {
+            scrollableSection.scrollBy(0, scrollableSection.scrollHeight);
+          }
         });
         this.focusTab(this.tabTriggers.length - 1);
       }

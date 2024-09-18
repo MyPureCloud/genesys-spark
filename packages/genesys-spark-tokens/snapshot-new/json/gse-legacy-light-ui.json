@@ -189,7 +189,7 @@
       "box_shadow": {
         "blur": "6px",
         "spread": "1px",
-        "color": "rgba(35,57,92,0.12)",
+        "color": "rgba(35, 57, 92, 0.12)",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
@@ -198,7 +198,7 @@
     "padding": "24px",
     "borderless": {
       "border": {
-        "color": "transparent",
+        "color": "rgba(0, 0, 0, 0)",
         "width": "1px",
         "style": "solid"
       }
@@ -227,7 +227,7 @@
     "box_shadow": {
       "blur": "6px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.12)",
+      "color": "rgba(35, 57, 92, 0.12)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -253,7 +253,7 @@
         "foreground_color": "#ffffff"
       },
       "subtle": {
-        "background_color": "#203b73",
+        "background_color": "#bbbfd4",
         "foreground_color": "#2e394c"
       }
     },
@@ -265,7 +265,7 @@
         "foreground_color": "#ffffff"
       },
       "subtle": {
-        "background_color": "#75a8ff",
+        "background_color": "#d9e4ff",
         "foreground_color": "#2e394c"
       }
     },
@@ -277,7 +277,7 @@
         "foreground_color": "#2e394c"
       },
       "subtle": {
-        "background_color": "#b5b5eb",
+        "background_color": "#e9e8f9",
         "foreground_color": "#2e394c"
       }
     },
@@ -313,7 +313,7 @@
         "foreground_color": "#2e394c"
       },
       "subtle": {
-        "background_color": "#75a8ff",
+        "background_color": "#d9e4ff",
         "foreground_color": "#2e394c"
       }
     },
@@ -321,7 +321,7 @@
       "background_color": "#b5bfe6",
       "foreground_color": "#1b2c48",
       "subtle": {
-        "background_color": "#8452cf",
+        "background_color": "#dcc9f2",
         "foreground_color": "#2e394c"
       },
       "bold": {
@@ -348,7 +348,7 @@
         "foreground_color": "#ffffff"
       },
       "subtle": {
-        "background_color": "#5e5782",
+        "background_color": "#cdc9d8",
         "foreground_color": "#2e394c"
       }
     },
@@ -361,7 +361,7 @@
         "foreground_color": "#2e394c"
       },
       "subtle": {
-        "background_color": "#ff8fdd",
+        "background_color": "#ffdff5",
         "foreground_color": "#2e394c"
       }
     },
@@ -385,7 +385,7 @@
         "foreground_color": "#2e394c"
       },
       "subtle": {
-        "background_color": "#ddd933",
+        "background_color": "#f8f3c6",
         "foreground_color": "#2e394c"
       }
     },
@@ -564,7 +564,7 @@
     "separator": {
       "color": "#b4bccb"
     },
-    "border_radius": "0rem"
+    "border_radius": "0"
   },
   "segmented_control": {
     "button": {
@@ -574,18 +574,18 @@
         "border_radius": "4px 0 0 4px"
       },
       "middle": {
-        "border_radius": "0rem"
+        "border_radius": "0"
       },
       "end": {
         "border_radius": "0 4px 4px 0"
       },
       "disabled": {
         "opacity": ".5",
-        "background_color": "#000000",
+        "background_color": "rgba(0, 0, 0, 0)",
         "foreground_color": "#2a60c8"
       },
       "default": {
-        "background_color": "#000000",
+        "background_color": "rgba(0, 0, 0, 0)",
         "foreground_color": "#2a60c8"
       },
       "hover": {
@@ -613,7 +613,7 @@
       "padding": "0 8px"
     },
     "focus": {
-      "offset": "0rem"
+      "offset": "0"
     }
   },
   "form_footer": {
@@ -742,7 +742,7 @@
     },
     "tertiary": {
       "default": {
-        "background_color": "#000000",
+        "background_color": "rgba(0, 0, 0, 0)",
         "foreground_color": "#2e394c",
         "border": {
           "color": "#2e394c",
@@ -761,7 +761,7 @@
     },
     "ghost": {
       "default": {
-        "background_color": "#000000",
+        "background_color": "rgba(0, 0, 0, 0)",
         "foreground_color": "#2e394c"
       },
       "hover": {
@@ -915,7 +915,7 @@
     "visited": {
       "foregroundColor": "#8452cf"
     },
-    "border_radius": "0rem"
+    "border_radius": "0"
   },
   "radio_button": {
     "icon": {
@@ -1120,7 +1120,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.1)",
+      "color": "rgba(35, 57, 92, 0.1)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -1345,7 +1345,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.1)",
+      "color": "rgba(35, 57, 92, 0.1)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -1473,7 +1473,7 @@
       "default_color": "#3e4a5b",
       "hover_color": "#2e394c",
       "active_color": "#2e394c",
-      "disabled_color": "#3e4a5b"
+      "disabled_color": "#3e4a5b80"
     },
     "focus_clock": {
       "border": {
@@ -1641,7 +1641,7 @@
       "default_color": "#3e4a5b",
       "hover_color": "#2e394c",
       "active_color": "#2e394c",
-      "disabled_color": "#3e4a5b",
+      "disabled_color": "#3e4a5b80",
       "focus": {
         "border": {
           "color": "#aac9ff",
@@ -1980,7 +1980,7 @@
   },
   "avatar": {
     "group_shapes": {
-      "gap": "4px * -1"
+      "gap": "-4px"
     },
     "large": {
       "size": "96px",
@@ -2122,11 +2122,11 @@
         "accent2": "#c2deb9",
         "accent3": "#205a10",
         "accent4": "#75a8ff",
-        "accent5": "#75a8ff",
-        "accent6": "#75a8ff",
+        "accent5": "#d9e4ff",
+        "accent6": "#d9e4ff",
         "accent7": "#5e5782",
         "accent8": "#ff8fdd",
-        "accent9": "#ff8fdd",
+        "accent9": "#ffdff5",
         "accent10": "#ddd933",
         "accent11": "#fcd276",
         "accent12": "#755000",
@@ -2140,7 +2140,7 @@
       }
     },
     "hover_modal": {
-      "shroud-color": "#202937",
+      "shroud-color": "#202937cc",
       "foreground-color": "#ffffff",
       "opacity": ".8"
     },
@@ -2162,7 +2162,7 @@
       }
     },
     "group_set": {
-      "gap": "2px * -1"
+      "gap": "-2px"
     },
     "focus_ring": {
       "large": {
@@ -2349,7 +2349,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.1)",
+      "color": "rgba(35, 57, 92, 0.1)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2569,7 +2569,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.1)",
+      "color": "rgba(35, 57, 92, 0.1)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2584,7 +2584,7 @@
     "close_button_color": "#3e4a5b",
     "header_color": "#2e394c",
     "background_color": "#ffffff",
-    "shroud_color": "#202937",
+    "shroud_color": "#202937cc",
     "header": {
       "gap": "12px"
     },
@@ -2612,7 +2612,7 @@
     "box_shadow": {
       "blur": "8px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.15)",
+      "color": "rgba(35, 57, 92, 0.15)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2631,7 +2631,7 @@
     "box_shadow": {
       "blur": "8px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.15)",
+      "color": "rgba(35, 57, 92, 0.15)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2675,8 +2675,8 @@
     "spinner": {
       "foreground": "#2a60c8",
       "base": "#deeaff",
-      "large": "48rem",
-      "small": "16rem",
+      "large": "48px",
+      "small": "16px",
       "text": {
         "fontFamily": "Roboto",
         "fontWeight": "600",
@@ -2777,9 +2777,9 @@
         }
       }
     },
-    "large_border": "4rem",
-    "small_border": "2rem",
-    "thin_border": "1rem"
+    "large_border": "4px",
+    "small_border": "2px",
+    "thin_border": "1px"
   },
   "blank_state": {
     "small": {
@@ -2801,7 +2801,7 @@
     "gap_content": "24px",
     "icon_color": "#4c5667",
     "foreground_color": "#2e394c",
-    "background_color": "#000000",
+    "background_color": "rgba(0, 0, 0, 0)",
     "border_radius": "4px"
   },
   "modal_side_sheet": {
@@ -2809,7 +2809,7 @@
     "header_color": "#2e394c",
     "close_color": "#3e4a5b",
     "divider_color": "#b4bccb",
-    "shroud_color": "#202937",
+    "shroud_color": "#202937cc",
     "shroud": {
       "opacity": ".8"
     },
@@ -2855,7 +2855,7 @@
     "box_shadow": {
       "blur": "6px",
       "spread": "1px",
-      "color": "rgba(35,57,92,0.12)",
+      "color": "rgba(35, 57, 92, 0.12)",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"

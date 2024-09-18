@@ -20,11 +20,34 @@
 | `ucIntegration`     | `uc-integration` | Shows uc integration app logo on large avatar                                                                                                                          | `"8x8" \| "none" \| "teams" \| "zoom"`                                                                                                              | `'none'`    |
 
 
+## Methods
+
+### `hideTooltip() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `showTooltip() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Slots
 
-| Slot      | Description     |
-| --------- | --------------- |
-| `"image"` | Headshot photo. |
+| Slot      | Description   |
+| --------- | ------------- |
+| `"image"` | Avatar photo. |
 
 
 ## Dependencies
@@ -32,11 +55,16 @@
 ### Depends on
 
 - [gux-icon](../../stable/gux-icon)
+- [gux-screen-reader-beta](../gux-screen-reader)
+- [gux-tooltip-beta](../gux-tooltip-beta)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-avatar-beta --> gux-icon
+  gux-avatar-beta --> gux-screen-reader-beta
+  gux-avatar-beta --> gux-tooltip-beta
+  gux-tooltip-beta --> gux-tooltip-base-beta
   style gux-avatar-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

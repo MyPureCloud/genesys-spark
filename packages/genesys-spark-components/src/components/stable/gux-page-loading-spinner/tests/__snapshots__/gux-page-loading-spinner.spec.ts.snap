@@ -2,8 +2,8 @@
 
 exports[`gux-page-loading-spinner should render as expected 1`] = `
 <gux-page-loading-spinner>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-radial-loading class="gux-spinner" context="full-page"></gux-radial-loading>
-  </mock:shadow-root>
+  </template>
 </gux-page-loading-spinner>
 `;

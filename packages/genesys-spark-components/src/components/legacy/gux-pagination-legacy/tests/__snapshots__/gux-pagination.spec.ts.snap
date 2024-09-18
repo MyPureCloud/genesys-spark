@@ -2,7 +2,7 @@
 
 exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="25" layout="full" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="1" items-per-page="25" total-items="1000">
@@ -19,13 +19,13 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               25
                             </gux-truncate>
                           </div>
@@ -35,53 +35,53 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -140,13 +140,13 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="50" layout="full" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="1" items-per-page="50" total-items="1000">
@@ -163,13 +163,13 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 50 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               50
                             </gux-truncate>
                           </div>
@@ -179,53 +179,53 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -284,13 +284,13 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="75" layout="full" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="1" items-per-page="75" total-items="1000">
@@ -307,13 +307,13 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 75 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               75
                             </gux-truncate>
                           </div>
@@ -323,53 +323,53 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -428,13 +428,13 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="100" layout="full" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="1" items-per-page="100" total-items="1000">
@@ -451,13 +451,13 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 100 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               100
                             </gux-truncate>
                           </div>
@@ -467,53 +467,53 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -572,13 +572,13 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="25" layout="full" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="1" items-per-page="25" total-items="1000">
@@ -595,13 +595,13 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               25
                             </gux-truncate>
                           </div>
@@ -611,53 +611,53 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -716,13 +716,13 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
 <gux-pagination-legacy current-page="10" items-per-page="25" layout="full" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="10" items-per-page="25" total-items="1000">
@@ -739,13 +739,13 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               25
                             </gux-truncate>
                           </div>
@@ -755,53 +755,53 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -860,13 +860,13 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
 <gux-pagination-legacy current-page="10" items-per-page="50" layout="full" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="10" items-per-page="50" total-items="1000">
@@ -883,13 +883,13 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 50 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               50
                             </gux-truncate>
                           </div>
@@ -899,53 +899,53 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -1004,13 +1004,13 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
 <gux-pagination-legacy current-page="10" items-per-page="75" layout="full" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="10" items-per-page="75" total-items="1000">
@@ -1027,13 +1027,13 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 75 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               75
                             </gux-truncate>
                           </div>
@@ -1043,53 +1043,53 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -1148,13 +1148,13 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
 <gux-pagination-legacy current-page="10" items-per-page="100" layout="full" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="10" items-per-page="100" total-items="1000">
@@ -1171,13 +1171,13 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 100 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               100
                             </gux-truncate>
                           </div>
@@ -1187,53 +1187,53 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -1292,13 +1292,13 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render as expected (10) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="25" layout="small" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="1" items-per-page="25" total-items="1000">
@@ -1344,13 +1344,13 @@ exports[`gux-pagination-legacy #render should render as expected (10) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
 <gux-pagination-legacy current-page="-3" items-per-page="25" layout="full" total-items="1000">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="1" items-per-page="25" total-items="1000">
@@ -1367,13 +1367,13 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               25
                             </gux-truncate>
                           </div>
@@ -1383,53 +1383,53 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -1488,13 +1488,13 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
 <gux-pagination-legacy current-page="-3" items-per-page="25" layout="full" total-items="1">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="1" items-per-page="25" total-items="1">
@@ -1511,13 +1511,13 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               25
                             </gux-truncate>
                           </div>
@@ -1527,53 +1527,53 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -1632,13 +1632,13 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;
 
 exports[`gux-pagination-legacy #render should render current page as 1 when total items is 0 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="25" layout="full" total-items="0">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-pagination-container">
       <div class="gux-pagination-info">
         <gux-pagination-item-counts-legacy current-page="1" items-per-page="25" total-items="0">
@@ -1655,13 +1655,13 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
           <div class="gux-pagination-items-per-page-container">
             <div class="gux-pagination-items-per-page-picker">
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
-                <mock:shadow-root>
+                <template shadowrootmode="open">
                   <gux-popup>
                     <div class="gux-target-container-collapsed" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
-                            <gux-truncate>
+                            <gux-truncate dir="auto">
                               25
                             </gux-truncate>
                           </div>
@@ -1671,53 +1671,53 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
                     </div>
                     <slot slot="popup"></slot>
                   </gux-popup>
-                </mock:shadow-root>
+                </template>
                 <gux-listbox aria-label="Items per page" role="listbox" tabindex="0">
-                  <mock:shadow-root>
+                  <template shadowrootmode="open">
                     <slot></slot>
-                  </mock:shadow-root>
+                  </template>
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     25
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     50
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     75
                   </gux-option>
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
-                    <mock:shadow-root>
+                    <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
                         <gux-truncate>
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
                       </div>
-                    </mock:shadow-root>
+                    </template>
                     100
                   </gux-option>
                 </gux-listbox>
@@ -1776,6 +1776,6 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
         </gux-pagination-buttons-legacy>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
 </gux-pagination-legacy>
 `;

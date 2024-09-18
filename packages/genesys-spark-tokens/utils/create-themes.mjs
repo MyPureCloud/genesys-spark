@@ -1,15 +1,16 @@
-import { register, permutateThemes } from '@tokens-studio/sd-transforms';
+import {
+  register,
+  permutateThemes,
+  expandTypesMap
+} from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { promises } from 'fs';
 import { camelCase } from 'change-case';
 
 export async function createThemes(sourceFolder, outputFolder) {
   register(StyleDictionary, {
-    expand: {
-      composition: true,
-      border: true,
-      typography: true,
-      shadow: true
+    'ts/color/modifiers': {
+      format: 'hex'
     }
   });
 
@@ -28,6 +29,9 @@ export async function createThemes(sourceFolder, outputFolder) {
       {
         source: tokensets.map(tokenset => `${sourceFolder}/${tokenset}.json`),
         preprocessors: ['tokens-studio'],
+        expand: {
+          typesMap: expandTypesMap
+        },
         hooks: {
           transforms: {
             'color/gse': {
@@ -45,7 +49,7 @@ export async function createThemes(sourceFolder, outputFolder) {
               type: 'name',
               transitive: false,
               filter: () => true,
-              transform: (token, options, a, s, d) => {
+              transform: (token, options) => {
                 const set = token.filePath.replace('.json', '').split('/')[1];
 
                 return [options.prefix, set]
@@ -56,14 +60,8 @@ export async function createThemes(sourceFolder, outputFolder) {
           }
         },
         platforms: Object.assign(
-          getPlatform(
-            baseName,
-            'scss',
-            'css/variables',
-            'tokens-studio',
-            outputFolder
-          ),
-          getPlatform(baseName, 'json', 'json/nested', 'js', outputFolder)
+          getPlatform(baseName, 'scss', 'css/variables', outputFolder),
+          getPlatform(baseName, 'json', 'json/nested', outputFolder)
         )
       },
       {
@@ -77,10 +75,10 @@ export async function createThemes(sourceFolder, outputFolder) {
   }
 }
 
-function getPlatform(name, type, format, transformGroup, outputFolder) {
+function getPlatform(name, type, format, outputFolder) {
   return {
     [type]: {
-      transformGroup,
+      transformGroup: 'tokens-studio',
       transforms: ['color/gse', 'name/gse'],
       prefix: 'gse',
       buildPath: `${outputFolder}/${type}/`,
@@ -110,7 +108,10 @@ function getPlatform(name, type, format, transformGroup, outputFolder) {
       options: {
         showFileHeader: false,
         outputReferences: false,
-        selector: `@mixin tokens`
+        selector: '@mixin tokens',
+        formatting: {
+          commentStyle: 'none'
+        }
       }
     }
   };

@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.78.1",
+  "version": "4.83.0",
   "description": "Common webcomponents",
   "license": "MIT",
   "scripts": {
@@ -10,13 +10,13 @@
     "copy.chart-components": "cp -R ./packages/genesys-spark-chart-components/dist ./dist/chart",
     "create-dist-folder": "node ./scripts/create-dist-folder.js",
     "create-manifest": "node ./scripts/create-manifest.js",
-    "current-version": "cross-var \"echo $npm_package_version\"",
-    "dev": "run-pty start.json",
+    "current-version": "cross-replace \"echo $npm_package_version\"",
+    "dev": "npm start",
     "dev.examples": "npm run dev --workspace=web-apps/genesys-spark-examples",
     "dev.gsc": "npm run dev --workspace=packages/genesys-spark-components",
     "dev.gscc": "npm run dev --workspace=packages/genesys-spark-chart-components",
     "dev.spark": "npm run dev --workspace=packages/genesys-spark",
-    "eslint.root": "eslint --fix .",
+    "eslint.root": "eslint . --fix",
     "eslint.workspaces": "npm run eslint --workspaces --if-present",
     "husky.commit-msg": "commitlint --edit",
     "husky.pre-commit": "npm run lint-staged",
@@ -62,20 +62,20 @@
     "./web-apps/*"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^19.1.0",
-    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "commitizen": "^4.3.0",
-    "cross-var": "^1.1.0",
-    "eslint": "^8.57.0",
+    "cross-replace": "^0.2.0",
+    "eslint": "^9.10.0",
     "eslint-config-genesys-spark-components": "^0.0.1",
-    "eslint-config-prettier": "^9.1.0",
     "git-cz": "^4.9.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
+    "globals": "^15.9.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.3",
     "prettier-config-genesys-spark-components": "^0.0.1",
-    "run-pty": "^4.1.0",
+    "run-pty": "^5.0.0",
     "standard-version": "^9.5.0"
   },
   "prettier": "prettier-config-genesys-spark-components",
@@ -85,6 +85,6 @@
     }
   },
   "volta": {
-    "node": "18.20.3"
+    "node": "20.9.0"
   }
 }

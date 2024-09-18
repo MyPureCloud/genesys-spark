@@ -2,7 +2,7 @@
 
 exports[`gux-form-field-phone #render error should render component as expected 1`] = `
 <gux-form-field-phone>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default Custom Error Message
@@ -31,7 +31,7 @@ exports[`gux-form-field-phone #render error should render component as expected 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-phone-input-beta aria-describedby="gux-form-field-error-i" id="gux-form-field-input-i"></gux-phone-input-beta>
   <label for="gux-form-field-input-i" slot="label">
     Default
@@ -44,7 +44,7 @@ exports[`gux-form-field-phone #render error should render component as expected 
 
 exports[`gux-form-field-phone #render help should render component as expected 1`] = `
 <gux-form-field-phone>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Default
@@ -73,7 +73,7 @@ exports[`gux-form-field-phone #render help should render component as expected 1
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-phone-input-beta aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i"></gux-phone-input-beta>
   <label for="gux-form-field-input-i" slot="label">
     Default
@@ -86,7 +86,7 @@ exports[`gux-form-field-phone #render help should render component as expected 1
 
 exports[`gux-form-field-phone #render label-position indicator marks should render component as expected (1) 1`] = `
 <gux-form-field-phone>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -115,7 +115,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -125,7 +125,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
 
 exports[`gux-form-field-phone #render label-position indicator marks should render component as expected (2) 1`] = `
 <gux-form-field-phone indicator-mark="optional">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -154,7 +154,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -164,7 +164,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
 
 exports[`gux-form-field-phone #render label-position indicator marks should render component as expected (3) 1`] = `
 <gux-form-field-phone indicator-mark="required">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -193,7 +193,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -203,7 +203,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
 
 exports[`gux-form-field-phone #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-phone>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -232,7 +232,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -242,7 +242,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
 
 exports[`gux-form-field-phone #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-phone label-position="above">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -271,7 +271,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -281,7 +281,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
 
 exports[`gux-form-field-phone #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-phone label-position="beside">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-beside gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -310,7 +310,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
   <label for="gux-form-field-input-i" slot="label">
     Label
@@ -320,7 +320,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
 
 exports[`gux-form-field-phone #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-phone label-position="screenreader">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
       <legend class="gux-form-field-screenreader-label">
         Label
@@ -349,7 +349,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
         </div>
       </div>
     </fieldset>
-  </mock:shadow-root>
+  </template>
   <gux-phone-input-beta id="gux-form-field-input-i"></gux-phone-input-beta>
   <label for="gux-form-field-input-i" slot="label">
     Label

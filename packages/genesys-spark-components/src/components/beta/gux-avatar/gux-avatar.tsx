@@ -1,4 +1,4 @@
-import { Component, h, JSX, Prop, Element } from '@stencil/core';
+import { Component, h, JSX, Prop, Element, Method } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
 import {
@@ -12,7 +12,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import defaultResources from './i18n/en.json';
 
 /**
- * @slot image - Headshot photo.
+ * @slot image - Avatar photo.
  */
 
 @Component({
@@ -22,6 +22,8 @@ import defaultResources from './i18n/en.json';
 })
 export class GuxAvatar {
   private i18n: GetI18nValue;
+  private parentElement: HTMLElement;
+  private tooltip: HTMLGuxTooltipBetaElement;
 
   @Element()
   root: HTMLElement;
@@ -172,8 +174,8 @@ export class GuxAvatar {
     }
   }
 
-  private renderUcIntegrationsIcon(): JSX.Element | null {
-    switch (this.ucIntegration) {
+  private renderUcIntegrationsIcon(appName: string): JSX.Element | null {
+    switch (appName) {
       case 'teams':
         return renderTeamsSVG();
       case 'zoom':
@@ -185,13 +187,44 @@ export class GuxAvatar {
     }
   }
 
+  private getUcIntegrationText(appName: string): JSX.Element | null {
+    switch (appName) {
+      case 'teams':
+        return 'Microsoft Teams';
+      case 'zoom':
+        return 'Zoom';
+      case '8x8':
+        return '8 by 8';
+      default:
+        return null;
+    }
+  }
+
   private renderUcIntegrationBadge(): JSX.Element | null {
-    if (this.ucIntegration && this.size === 'large') {
+    if (
+      ['zoom', 'teams', '8x8'].includes(this.ucIntegration) &&
+      this.size === 'large'
+    ) {
       return (
         <div class="gux-avatar-integration-badge">
-          {this.renderUcIntegrationsIcon()}
+          {this.renderUcIntegrationsIcon(this.ucIntegration)}
+          <gux-screen-reader-beta>
+            {this.getUcIntegrationText(this.ucIntegration)}
+          </gux-screen-reader-beta>
         </div>
       ) as JSX.Element;
+    }
+  }
+
+  private renderTooltip(): JSX.Element | null {
+    if (['A', 'BUTTON'].includes(this.parentElement.tagName)) {
+      return (
+        <gux-tooltip-beta placement="top" ref={el => (this.tooltip = el)}>
+          <div slot="content">{this.getDescriptionText()}</div>
+        </gux-tooltip-beta>
+      ) as JSX.Element;
+    } else {
+      return null;
     }
   }
 
@@ -205,7 +238,24 @@ export class GuxAvatar {
     return `${this.name}`;
   }
 
+  /*
+   * Show tooltip
+   */
+  @Method()
+  async showTooltip(): Promise<void> {
+    return await this.tooltip.showTooltip();
+  }
+
+  /*
+   * Hide tooltip
+   */
+  @Method()
+  async hideTooltip(): Promise<void> {
+    return await this.tooltip.hideTooltip();
+  }
+
   async componentWillLoad(): Promise<void> {
+    this.parentElement = this.root.parentElement;
     trackComponent(this.root, { variant: this.size });
     this.i18n = await buildI18nForComponent(this.root, defaultResources);
   }
@@ -232,6 +282,7 @@ export class GuxAvatar {
             </abbr>
           </slot>
         </div>
+        {this.renderTooltip()}
       </div>,
       this.renderBadge(),
       this.renderUcIntegrationBadge()

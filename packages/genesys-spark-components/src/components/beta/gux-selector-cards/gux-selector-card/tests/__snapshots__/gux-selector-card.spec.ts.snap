@@ -2,22 +2,22 @@
 
 exports[`gux-form-field-radio #render should render component as expected (1) 1`] = `
 <gux-selector-card-beta variant="simple">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disabled gux-selector-card gux-simple">
       <div class="gux-content">
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
         <span class="gux-screenreader">
           <slot name="description"></slot>
         </span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="second" slot="label">
     Card Label
   </label>
@@ -32,22 +32,22 @@ exports[`gux-form-field-radio #render should render component as expected (1) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (2) 1`] = `
 <gux-selector-card-beta variant="simple">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-disabled gux-selector-card gux-simple">
       <div class="gux-content">
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
         <span class="gux-screenreader">
           <slot name="description"></slot>
         </span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="third" slot="label">
     Card Label
   </label>
@@ -58,22 +58,22 @@ exports[`gux-form-field-radio #render should render component as expected (2) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (3) 1`] = `
 <gux-selector-card-beta variant="simple">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-selector-card gux-simple">
       <div class="gux-content">
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
         <span class="gux-screenreader">
           <slot name="description"></slot>
         </span>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="fourth" slot="label">
     A longer card label example
   </label>
@@ -84,23 +84,23 @@ exports[`gux-form-field-radio #render should render component as expected (3) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (4) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="fourth" slot="label">
     A longer card label example. This can span up to 2 lines.
   </label>
@@ -117,23 +117,23 @@ exports[`gux-form-field-radio #render should render component as expected (4) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (5) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-disabled gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="third" slot="label">
     Card Label
   </label>
@@ -150,23 +150,23 @@ exports[`gux-form-field-radio #render should render component as expected (5) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (6) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-disabled gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="second" slot="label">
     Card Label
   </label>
@@ -184,23 +184,23 @@ exports[`gux-form-field-radio #render should render component as expected (6) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (7) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="first" slot="label">
     Card label
   </label>
@@ -217,23 +217,23 @@ exports[`gux-form-field-radio #render should render component as expected (7) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (8) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="first" slot="label">
     Card label
   </label>
@@ -247,23 +247,23 @@ exports[`gux-form-field-radio #render should render component as expected (8) 1`
 
 exports[`gux-form-field-radio #render should render component as expected (9) 1`] = `
 <gux-selector-card-beta variant="descriptive">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="gux-descriptive gux-selector-card">
       <div class="gux-content">
         <div class="gux-icon">
           <slot name="icon"></slot>
         </div>
-        <gux-truncate class="gux-label" max-lines="2">
+        <div class="gux-label-container">
           <slot name="label"></slot>
-        </gux-truncate>
+        </div>
         <slot name="input"></slot>
-        <gux-truncate class="gux-description" max-lines="3">
+        <div class="gux-description-container">
           <slot name="description"></slot>
-        </gux-truncate>
+        </div>
         <slot name="badge"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <label for="first" slot="label">
     Card label
   </label>
@@ -272,5 +272,68 @@ exports[`gux-form-field-radio #render should render component as expected (9) 1`
     Badge
   </gux-badge>
   <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+</gux-selector-card-beta>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (10) 1`] = `
+<gux-selector-card-beta variant="descriptive">
+  <template shadowrootmode="open">
+    <div class="gux-descriptive gux-selector-card">
+      <div class="gux-content">
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <div class="gux-label-container">
+          <slot name="label"></slot>
+        </div>
+        <slot name="input"></slot>
+        <div class="gux-description-container">
+          <slot name="description"></slot>
+        </div>
+        <slot name="badge"></slot>
+      </div>
+    </div>
+  </template>
+  <label for="gux-form-field-input-i" slot="label">
+    A longer card label example. This can span up to 2 lines.
+  </label>
+  <input aria-describedby="gux-description-i" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pasta">
+  <span id="gux-description-i" slot="description">
+    A description for a sample selector card. Used in Spark WCL. Descriptions can span up to 3 lines before being truncated.
+  </span>
+  <gux-badge bold="" slot="badge">
+    Badge
+  </gux-badge>
+  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+</gux-selector-card-beta>
+`;
+
+exports[`gux-form-field-radio #render should render component as expected (11) 1`] = `
+<gux-selector-card-beta variant="simple">
+  <template shadowrootmode="open">
+    <div class="gux-selector-card gux-simple">
+      <div class="gux-content">
+        <div class="gux-icon">
+          <slot name="icon"></slot>
+        </div>
+        <div class="gux-label-container">
+          <slot name="label"></slot>
+        </div>
+        <slot name="input"></slot>
+        <span class="gux-screenreader">
+          <slot name="description"></slot>
+        </span>
+      </div>
+    </div>
+  </template>
+  <label for="gux-form-field-input-i" slot="label">
+    Card label
+  </label>
+  <input aria-describedby="gux-description-i" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
+  <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon">
+    <span id="gux-description-i" slot="description">
+      A label for a sample selector card. Used in Spark WCL.
+    </span>
+  </gux-icon>
 </gux-selector-card-beta>
 `;

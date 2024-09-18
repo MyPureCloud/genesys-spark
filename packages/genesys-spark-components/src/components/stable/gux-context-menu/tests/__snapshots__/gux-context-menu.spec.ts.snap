@@ -2,7 +2,7 @@
 
 exports[`gux-context-menu renders 1`] = `
 <gux-context-menu>
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <gux-popup exceed-target-width="" offset="4">
       <div class="gux-button-container" slot="target">
         <gux-button-slot accent="ghost">
@@ -13,37 +13,37 @@ exports[`gux-context-menu renders 1`] = `
       </div>
       <div class="gux-list-container" slot="popup">
         <gux-list role="list">
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <span aria-hidden="true" tabindex="-1"></span>
             <slot></slot>
-          </mock:shadow-root>
+          </template>
           <slot></slot>
         </gux-list>
       </div>
     </gux-popup>
-  </mock:shadow-root>
+  </template>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <button tabindex="-1" type="button">
         <slot></slot>
       </button>
-    </mock:shadow-root>
+    </template>
     Test 1
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <button tabindex="-1" type="button">
         <slot></slot>
       </button>
-    </mock:shadow-root>
+    </template>
     Test 2
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <button tabindex="-1" type="button">
         <slot></slot>
       </button>
-    </mock:shadow-root>
+    </template>
     Test 3
   </gux-list-item>
 </gux-context-menu>

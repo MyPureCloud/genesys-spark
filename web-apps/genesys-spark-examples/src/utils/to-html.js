@@ -2,7 +2,7 @@
 //          so make sure any complex structures are enclosed in a single
 //          encapsulating element.
 export function toHTML(html) {
-  let template = document.createElement('template');
+  const template = document.createElement('template');
   template.innerHTML = html.trim();
   return template.content.firstChild;
 }

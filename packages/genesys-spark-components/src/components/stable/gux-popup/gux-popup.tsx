@@ -130,9 +130,11 @@ export class GuxPopup {
           left: `${x}px`,
           top: `${y}px`
         });
-        referenceHidden
-          ? this.popupElementContainer.classList.add('gux-sr-only-clip')
-          : this.popupElementContainer.classList.remove('gux-sr-only-clip');
+        if (referenceHidden) {
+          this.popupElementContainer.classList.add('gux-sr-only-clip');
+        } else {
+          this.popupElementContainer.classList.remove('gux-sr-only-clip');
+        }
       });
     }
   }

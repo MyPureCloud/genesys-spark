@@ -2,43 +2,43 @@
 
 exports[`gux-list #render should render component as expected 1`] = `
 <gux-list id="list" role="list">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <span aria-hidden="true" tabindex="-1"></span>
     <slot></slot>
-  </mock:shadow-root>
+  </template>
   <gux-list-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <button tabindex="-1" type="button">
         <slot></slot>
       </button>
-    </mock:shadow-root>
+    </template>
     Test1
   </gux-list-item>
   <gux-list-divider role="presentation">
-    <mock:shadow-root></mock:shadow-root>
+    <template shadowrootmode="open"></template>
   </gux-list-divider>
   <gux-list-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <button tabindex="-1" type="button">
         <slot></slot>
       </button>
-    </mock:shadow-root>
+    </template>
     Test2
   </gux-list-item>
   <gux-list-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <button tabindex="-1" type="button">
         <slot></slot>
       </button>
-    </mock:shadow-root>
+    </template>
     Test3
   </gux-list-item>
   <gux-list-item role="listitem">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <button tabindex="-1" type="button">
         <slot></slot>
       </button>
-    </mock:shadow-root>
+    </template>
     Test4
   </gux-list-item>
 </gux-list>

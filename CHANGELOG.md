@@ -2,6 +2,94 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.83.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.82.0...v4.83.0) (2024-09-13)
+
+
+### Features
+
+* **dropdown:** mixed rtl ltr tester ([#592](https://github.com/MyPureCloud/genesys-spark/issues/592)) ([1fa28fd](https://github.com/MyPureCloud/genesys-spark/commit/1fa28fd6b82ceb2f8641c6406a56cda19e93f2cf))
+* **other:** add browser region override support for Hong Kong and Singapore regions ([85cd582](https://github.com/MyPureCloud/genesys-spark/commit/85cd582586695deb67e5f24621d8c43d096d6763))
+
+
+### Bug Fixes
+
+* **visualization:** don't show vega-lite actions menu by default in gux-visualization ([7f31333](https://github.com/MyPureCloud/genesys-spark/commit/7f313334c1c9f5c9c16099ddaf97c4826aae6cb9))
+
+## [4.82.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.3...v4.82.0) (2024-09-12)
+
+
+### Features
+
+* **avatar:** add tooltip ([#594](https://github.com/MyPureCloud/genesys-spark/issues/594)) ([a5e3bf7](https://github.com/MyPureCloud/genesys-spark/commit/a5e3bf78fb74395ad1eb87002523c7908310aebf))
+
+### [4.81.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.2...v4.81.3) (2024-09-11)
+
+
+### Bug Fixes
+
+* **pagination:** Ellipsis button translation ([#593](https://github.com/MyPureCloud/genesys-spark/issues/593)) ([8803483](https://github.com/MyPureCloud/genesys-spark/commit/8803483774d40adb7d79af589689497ca7521cd2))
+* **tooltip-beta:** track base tooltip role in tooltip-beta ([#576](https://github.com/MyPureCloud/genesys-spark/issues/576)) ([02eec16](https://github.com/MyPureCloud/genesys-spark/commit/02eec160144035c966987543b189ab6fb6546b8c))
+
+### [4.81.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.1...v4.81.2) (2024-09-10)
+
+
+### Bug Fixes
+
+* **other:** fix new eslint errors ([a9d445f](https://github.com/MyPureCloud/genesys-spark/commit/a9d445fe99245ad389efceca3038a116ed99f068))
+
+### [4.81.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.81.0...v4.81.1) (2024-09-07)
+
+
+### Bug Fixes
+
+* **table-toolbar:** change mixin to not create a stacking context ([193d81e](https://github.com/MyPureCloud/genesys-spark/commit/193d81e44b360702291f54d077611831a4806751))
+
+## [4.81.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.80.1...v4.81.0) (2024-09-06)
+
+
+### Features
+
+* **selector-cards:** Checkbox variants added ([#494](https://github.com/MyPureCloud/genesys-spark/issues/494)) ([d6e2021](https://github.com/MyPureCloud/genesys-spark/commit/d6e20219beedaf63a3f168266370f915c9e094dc))
+
+
+### Bug Fixes
+
+* **dropdown:** dropdown is now disabled when loading non-filterable list ([32a28e7](https://github.com/MyPureCloud/genesys-spark/commit/32a28e720c45a9cc7141e9a36a99ed724207eb5b))
+
+### [4.80.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.80.0...v4.80.1) (2024-09-05)
+
+
+### Bug Fixes
+
+* **other:** removed comments from generated tokens ([2c982d4](https://github.com/MyPureCloud/genesys-spark/commit/2c982d494916dd19c728052c7858c1fc4d257ac3))
+
+## [4.80.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.79.0...v4.80.0) (2024-09-04)
+
+
+### Features
+
+* **avatar:** Add uc app screenreader text to avatar ([#572](https://github.com/MyPureCloud/genesys-spark/issues/572)) ([2ed041d](https://github.com/MyPureCloud/genesys-spark/commit/2ed041d7bfed059caacc82921e662151603cf946))
+
+
+### Bug Fixes
+
+* **phone-input:** added fallbacks for international toll-free placeholder numbers ([#581](https://github.com/MyPureCloud/genesys-spark/issues/581)) ([da3f831](https://github.com/MyPureCloud/genesys-spark/commit/da3f8312cdfba06e857deb9fca8aa734a6cb4702))
+
+## [4.79.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.78.1...v4.79.0) (2024-08-30)
+
+
+### Features
+
+* **phone-input:** add phone-number-type prop to allow displaying toll-free number as placeholder [PLTRES-442] ([#577](https://github.com/MyPureCloud/genesys-spark/issues/577)) ([e418620](https://github.com/MyPureCloud/genesys-spark/commit/e418620b91e3006467c83bfdb288517eaf98bacc))
+* **tokens:** updated label.gap to form_field.gap per COMUI-3033 ([5c5894a](https://github.com/MyPureCloud/genesys-spark/commit/5c5894ae55f198e16e1550d56490562aa32fc9a9))
+* **tokens:** updated ui tokens ([58b14e9](https://github.com/MyPureCloud/genesys-spark/commit/58b14e91054492d0e21d2ad96f8c632e397e9be0))
+* **tokens:** Updated vars in figma ([c5b9df0](https://github.com/MyPureCloud/genesys-spark/commit/c5b9df0c6333743ccd40392d2d2911caf872e565))
+
+
+### Bug Fixes
+
+* **other:** fixed token snapshot tests ([4f8b5e5](https://github.com/MyPureCloud/genesys-spark/commit/4f8b5e5c707b63f44b29102ad9fcb4ce79a875a0))
+
 ### [4.78.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.78.0...v4.78.1) (2024-08-29)
 
 

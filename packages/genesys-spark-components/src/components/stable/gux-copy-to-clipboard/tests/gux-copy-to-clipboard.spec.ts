@@ -42,7 +42,9 @@ describe('gux-copy-to-clipboard', () => {
 
       Object.assign(window.navigator, {
         clipboard: {
-          writeText: jest.fn().mockImplementation(() => Promise.reject())
+          writeText: jest
+            .fn()
+            .mockImplementation(() => Promise.reject(new Error()))
         }
       });
 

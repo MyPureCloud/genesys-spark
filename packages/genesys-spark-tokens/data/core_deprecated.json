@@ -621,7 +621,7 @@
   },
   "font_family": {
     "body": {
-      "value": "Noto Sans",
+      "value": "'Noto Sans'",
       "type": "fontFamilies"
     },
     "heading": {

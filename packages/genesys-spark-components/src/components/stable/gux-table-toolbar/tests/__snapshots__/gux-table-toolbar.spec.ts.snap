@@ -2,7 +2,7 @@
 
 exports[`gux-table-toolbar #render should render table toolbar as expected 1`] = `
 <gux-table-toolbar aria-orientation="horizontal" role="toolbar">
-  <mock:shadow-root>
+  <template shadowrootmode="open">
     <div class="search-filter-container">
       <slot name="search-and-filter"></slot>
     </div>
@@ -14,7 +14,7 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
       <div class="gux-permanent-menu-primary-wrapper">
         <slot name="permanent-actions"></slot>
         <gux-table-toolbar-menu-button class="gux-show-menu" show-menu="">
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-popup exceed-target-width="">
               <div class="gux-toolbar-menu-container" slot="target">
                 <gux-button-slot class="gux-menu-button">
@@ -33,13 +33,13 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
                 </gux-list>
               </div>
             </gux-popup>
-          </mock:shadow-root>
+          </template>
           <slot name="menu-actions"></slot>
         </gux-table-toolbar-menu-button>
         <slot name="primary-action"></slot>
       </div>
     </div>
-  </mock:shadow-root>
+  </template>
   <div slot="search-and-filter">
     <gux-form-field-search label-position="screenreader">
       <input name="a-3" placeholder="Enter search" slot="input" type="search">
@@ -48,7 +48,7 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
       </label>
     </gux-form-field-search>
     <gux-table-toolbar-custom-action>
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <gux-button-slot accent="secondary">
           <button class="gux-action-title" type="button">
             <slot name="icon"></slot>
@@ -57,7 +57,7 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
             </span>
           </button>
         </gux-button-slot>
-      </mock:shadow-root>
+      </template>
       <span slot="text">
         Filter
       </span>
@@ -66,9 +66,9 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
   </div>
   <div slot="contextual-actions">
     <gux-table-toolbar-action action="delete">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <gux-table-toolbar-custom-action>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="secondary">
               <button class="gux-action-title" type="button">
                 <slot name="icon"></slot>
@@ -77,20 +77,20 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
                 </span>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
           <span slot="text">
             Delete
           </span>
           <gux-icon decorative="" icon-name="fa/trash-regular" slot="icon"></gux-icon>
         </gux-table-toolbar-custom-action>
-      </mock:shadow-root>
+      </template>
     </gux-table-toolbar-action>
   </div>
   <div slot="permanent-actions">
     <gux-table-toolbar-action action="export">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <gux-table-toolbar-custom-action>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="secondary">
               <button class="gux-action-title" type="button">
                 <slot name="icon"></slot>
@@ -99,18 +99,18 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
                 </span>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
           <span slot="text">
             Export
           </span>
           <gux-icon decorative="" icon-name="fa/arrow-up-from-line-regular" slot="icon"></gux-icon>
         </gux-table-toolbar-custom-action>
-      </mock:shadow-root>
+      </template>
     </gux-table-toolbar-action>
     <gux-table-toolbar-action action="refresh">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <gux-table-toolbar-custom-action>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="secondary">
               <button class="gux-action-title" type="button">
                 <slot name="icon"></slot>
@@ -119,18 +119,18 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
                 </span>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
           <span slot="text">
             Refresh
           </span>
           <gux-icon decorative="" icon-name="fa/arrows-rotate-regular" slot="icon"></gux-icon>
         </gux-table-toolbar-custom-action>
-      </mock:shadow-root>
+      </template>
     </gux-table-toolbar-action>
     <gux-table-toolbar-action action="revert">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <gux-table-toolbar-custom-action>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="secondary">
               <button class="gux-action-title" type="button">
                 <slot name="icon"></slot>
@@ -139,18 +139,18 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
                 </span>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
           <span slot="text">
             Revert
           </span>
           <gux-icon decorative="" icon-name="fa/arrow-rotate-left-regular" slot="icon"></gux-icon>
         </gux-table-toolbar-custom-action>
-      </mock:shadow-root>
+      </template>
     </gux-table-toolbar-action>
     <gux-table-toolbar-action action="import">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <gux-table-toolbar-custom-action>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="secondary">
               <button class="gux-action-title" type="button">
                 <slot name="icon"></slot>
@@ -159,20 +159,20 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
                 </span>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
           <span slot="text">
             Import
           </span>
           <gux-icon decorative="" icon-name="fa/file-import-regular" slot="icon"></gux-icon>
         </gux-table-toolbar-custom-action>
-      </mock:shadow-root>
+      </template>
     </gux-table-toolbar-action>
   </div>
   <div slot="menu-actions">
     <gux-table-toolbar-action action="export">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <gux-table-toolbar-custom-action>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button class="gux-action-title" type="button">
                 <slot name="icon"></slot>
@@ -181,18 +181,18 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
                 </span>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
           <span slot="text">
             Export
           </span>
           <gux-icon decorative="" icon-name="fa/arrow-up-from-line-regular" slot="icon"></gux-icon>
         </gux-table-toolbar-custom-action>
-      </mock:shadow-root>
+      </template>
     </gux-table-toolbar-action>
     <gux-table-toolbar-action action="refresh">
-      <mock:shadow-root>
+      <template shadowrootmode="open">
         <gux-table-toolbar-custom-action>
-          <mock:shadow-root>
+          <template shadowrootmode="open">
             <gux-button-slot accent="ghost">
               <button class="gux-action-title" type="button">
                 <slot name="icon"></slot>
@@ -201,17 +201,17 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
                 </span>
               </button>
             </gux-button-slot>
-          </mock:shadow-root>
+          </template>
           <span slot="text">
             Refresh
           </span>
           <gux-icon decorative="" icon-name="fa/arrows-rotate-regular" slot="icon"></gux-icon>
         </gux-table-toolbar-custom-action>
-      </mock:shadow-root>
+      </template>
     </gux-table-toolbar-action>
   </div>
   <gux-table-toolbar-custom-action accent="primary" slot="primary">
-    <mock:shadow-root>
+    <template shadowrootmode="open">
       <gux-button-slot accent="primary">
         <button class="gux-action-title" type="button">
           <slot name="icon"></slot>
@@ -220,7 +220,7 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
           </span>
         </button>
       </gux-button-slot>
-    </mock:shadow-root>
+    </template>
     <span slot="text">
       Add
     </span>

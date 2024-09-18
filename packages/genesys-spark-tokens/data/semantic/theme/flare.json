@@ -653,10 +653,6 @@
           "value": "{border_radius.full}",
           "type": "borderRadius"
         },
-        "xlarge-copy": {
-          "value": "{border_radius.full}",
-          "type": "borderRadius"
-        },
         "large": {
           "value": "{border_radius.lg}",
           "type": "borderRadius"
