@@ -9,15 +9,24 @@
 
 .gux-avatar-group-wrapper {
   display: flex;
-  padding-block-start: 4px;
-  padding-inline-start: px;
+  padding-block-start: 2px;
+  padding-inline-start: 2px;
 }
 
 .gux-avatar-group {
   display: flex;
   width: 100%;
-  background-color: red;
   container: avatar-group / inline-size;
+}
+
+gux-list {
+  width: max-content;
+}
+
+.gux-overflow-list-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 @container avatar-group (width <= 59px) {

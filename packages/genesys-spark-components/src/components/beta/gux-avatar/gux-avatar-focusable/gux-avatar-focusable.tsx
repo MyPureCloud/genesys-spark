@@ -21,18 +21,23 @@ export class GuxAvatarFocusable {
 
   private validateSlot(): void {
     this.slottedElement = this.root.querySelector(
-      'a, button, gux-avatar-change-photo-beta'
+      'a, button, gux-avatar-change-photo-beta, gux-avatar-overflow-beta'
     );
 
     if (this.slottedElement) {
-      this.avatarElement = this.slottedElement.querySelector('gux-avatar-beta');
+      this.avatarElement = this.slottedElement.querySelector(
+        'gux-avatar-beta, gux-avatar-overflow-beta'
+      );
       if (!this.avatarElement) {
-        logWarn(this.root, 'Slotted element must contain a gux-avatar');
+        logWarn(
+          this.root,
+          'Slotted element must contain a gux-avatar or gux-avatar-overflow-beta'
+        );
       }
     } else {
       logWarn(
         this.root,
-        'An anchor tag, gux-avatar-change-photo-beta tag or button tag must be slotted into gux-avatar-focusable'
+        'An anchor tag, gux-avatar-change-photo-beta tag, gux-avatar-overflow-beta tag, or button tag must be slotted into gux-avatar-focusable'
       );
     }
 

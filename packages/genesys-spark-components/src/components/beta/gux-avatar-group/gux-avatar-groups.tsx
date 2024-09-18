@@ -16,12 +16,16 @@ export class GuxAvatarGroup {
   root: HTMLElement;
 
   private resizeObserver?: ResizeObserver;
+  private overflowAvatars: HTMLGuxAvatarFocusableBetaElement[];
 
   @State()
-  avatarList: HTMLGuxAvatarBetaElement[];
+  avatarList: HTMLGuxAvatarFocusableBetaElement[];
 
   @State()
   private overflowCount: number = 0;
+
+  @State()
+  private popoverOpen: boolean = false;
 
   get countAvatars() {
     return this.avatarList.length ?? 0;
@@ -30,9 +34,11 @@ export class GuxAvatarGroup {
   private checkGroupContainerWidthForLayout() {
     readTask(() => {
       const container = this.root.shadowRoot.querySelector('.gux-avatar-group');
-
       const containerWidth = container.clientWidth;
       const maxAvatarsToDisplay = this.getMaxAvatarsToDisplay(containerWidth);
+      this.overflowAvatars = Array.from(
+        this.avatarList.slice(maxAvatarsToDisplay)
+      );
       this.overflowCount = this.countAvatars - maxAvatarsToDisplay;
     });
 
@@ -72,9 +78,8 @@ export class GuxAvatarGroup {
   async componentWillLoad(): Promise<void> {
     this.avatarList = Array.from(
       this.root.children
-    ) as HTMLGuxAvatarBetaElement[];
+    ) as HTMLGuxAvatarFocusableBetaElement[];
     trackComponent(this.root);
-    console.log('slot-changed', this.avatarList.length);
   }
 
   componentDidLoad() {
@@ -106,22 +111,64 @@ export class GuxAvatarGroup {
   private slotChanged(): void {
     this.avatarList = Array.from(
       this.root.children
-    ) as HTMLGuxAvatarBetaElement[];
-    console.log('slot-changed', this.avatarList.length);
+    ) as HTMLGuxAvatarFocusableBetaElement[];
   }
 
   private showOverflowIndicator(): JSX.Element | null {
     if (this.overflowCount > 0) {
-      return (
-        <gux-avatar-focusable-beta>
+      return [
+        <gux-avatar-focusable-beta
+          id="avatar-overflow-indicator"
+          onClick={() => (this.popoverOpen = !this.popoverOpen)}
+        >
           <gux-avatar-overflow-beta
             count={this.overflowCount}
           ></gux-avatar-overflow-beta>
-        </gux-avatar-focusable-beta>
+        </gux-avatar-focusable-beta>,
+        this.showOverflowPopover()
+      ] as JSX.Element;
+    } else {
+      return null;
+    }
+  }
+
+  private showOverflowPopover(): JSX.Element | null {
+    if (this.overflowCount > 0 && this.overflowAvatars) {
+      return (
+        <gux-popover-list
+          id="overflow-popover"
+          for="avatar-overflow-indicator"
+          is-open={this.popoverOpen}
+          // is-open
+        >
+          <gux-list>
+            {this.overflowAvatars.map(focusableAvatar =>
+              this.getListItemFromAvatar(focusableAvatar)
+            )}
+          </gux-list>
+        </gux-popover-list>
       ) as JSX.Element;
     } else {
       return null;
     }
+  }
+
+  private getListItemFromAvatar(
+    focusableAvatar: HTMLGuxAvatarFocusableBetaElement
+  ): JSX.Element {
+    const avatar =
+      (focusableAvatar.querySelector(
+        'gux-avatar-beta'
+      ) as HTMLGuxAvatarBetaElement) ?? null;
+    console.log(avatar.outerHTML);
+    return (
+      <gux-list-item>
+        <div class="gux-overflow-list-item">
+          <gux-avatar-beta size="small" name={avatar.name}></gux-avatar-beta>
+          {avatar.name}
+        </div>
+      </gux-list-item>
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
