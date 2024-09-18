@@ -1,6 +1,7 @@
 import { Component, h, JSX, Element, State, readTask } from '@stencil/core';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { trackComponent } from '@utils/tracking/usage';
+import { GuxAvatarAccent } from './../gux-avatar/gux-avatar.types';
 
 /**
  * @slot - Some gux-avatars
@@ -112,6 +113,14 @@ export class GuxAvatarGroup {
     this.avatarList = Array.from(
       this.root.children
     ) as HTMLGuxAvatarFocusableBetaElement[];
+
+    this.avatarList.forEach((avatar, index) => {
+      const avatarComp = avatar.querySelector(
+        'gux-avatar-beta'
+      ) as HTMLGuxAvatarBetaElement;
+      const accentIndex = (index % 12) + 1;
+      avatarComp.accent = accentIndex.toString() as GuxAvatarAccent;
+    });
   }
 
   private showOverflowIndicator(): JSX.Element | null {
@@ -139,7 +148,6 @@ export class GuxAvatarGroup {
           id="overflow-popover"
           for="avatar-overflow-indicator"
           is-open={this.popoverOpen}
-          // is-open
         >
           <gux-list>
             {this.overflowAvatars.map(focusableAvatar =>
@@ -164,7 +172,11 @@ export class GuxAvatarGroup {
     return (
       <gux-list-item>
         <div class="gux-overflow-list-item">
-          <gux-avatar-beta size="small" name={avatar.name}></gux-avatar-beta>
+          <gux-avatar-beta
+            size="small"
+            name={avatar.name}
+            accent={avatar.accent}
+          ></gux-avatar-beta>
           {avatar.name}
         </div>
       </gux-list-item>
