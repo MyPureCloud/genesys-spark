@@ -442,7 +442,8 @@
     "loading": "Loading"
   },
   "gux-rich-text-editor-action": {
-    "actionBold": "Bold"
+    "bold": "Bold",
+    "italic": "Italic"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"

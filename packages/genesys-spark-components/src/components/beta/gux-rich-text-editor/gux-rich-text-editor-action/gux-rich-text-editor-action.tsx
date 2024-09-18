@@ -11,6 +11,8 @@ import {
 import { GuxRichTextEditorActionTypes } from './gux-rich-text-editor-action.types';
 import { trackComponent } from '@utils/tracking/usage';
 import { Editor } from '@tiptap/core';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import translationResources from './i18n/en.json';
 
 @Component({
   tag: 'gux-rich-text-editor-action',
@@ -18,6 +20,19 @@ import { Editor } from '@tiptap/core';
   shadow: true
 })
 export class GuxRichTextEditorAction {
+  private i18n: GetI18nValue;
+
+  private actionMap = {
+    bold: {
+      action: () => this.editor.chain().focus().toggleBold().run(),
+      icon: 'fa/bold-regular'
+    },
+    italic: {
+      action: () => this.editor.chain().focus().toggleItalic().run(),
+      icon: 'fa/italic-regular'
+    }
+  };
+
   @Element()
   root: HTMLElement;
 
@@ -34,6 +49,7 @@ export class GuxRichTextEditorAction {
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.action });
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
   }
 
   // Set the editor instance to the gux-rich-text-editor-action.
@@ -43,12 +59,7 @@ export class GuxRichTextEditorAction {
   }
 
   private handleActionClick(): void {
-    const actionMap = {
-      bold: () => this.editor.chain().focus().toggleBold().run(),
-      italic: () => this.editor.chain().focus().toggleItalic().run()
-    };
-
-    const actionHandler = actionMap[this.action];
+    const actionHandler = this.actionMap[this.action].action;
     if (actionHandler) {
       actionHandler();
     } else {
@@ -57,14 +68,15 @@ export class GuxRichTextEditorAction {
   }
 
   private returnActionTypeIcon(action: GuxRichTextEditorActionTypes): string {
-    switch (action) {
-      case 'bold':
-        return 'fa/bold-regular';
-      case 'italic':
-        return 'fa/italic-regular';
-      default:
-        return 'fa/bold-regular';
-    }
+    return this.actionMap[action]?.icon || 'fa/bold-regular';
+  }
+
+  private renderTooltip(): JSX.Element {
+    return (
+      <gux-tooltip>
+        <div slot="content">{this.i18n(this.action)}</div>
+      </gux-tooltip>
+    ) as JSX.Element;
   }
 
   private applyTipTapEventListeners(): void {
@@ -94,6 +106,7 @@ export class GuxRichTextEditorAction {
               decorative
             ></gux-icon>
           </button>
+          {this.renderTooltip()}
         </gux-button-slot>
       );
     }

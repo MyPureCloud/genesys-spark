@@ -35,13 +35,15 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gux-button](../../../stable/gux-button)
+- [gux-tooltip](../../../stable/gux-tooltip)
+- [gux-button-slot](../../../stable/gux-button-slot)
 - [gux-icon](../../../stable/gux-icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-rich-text-editor-action --> gux-button
+  gux-rich-text-editor-action --> gux-tooltip
+  gux-rich-text-editor-action --> gux-button-slot
   gux-rich-text-editor-action --> gux-icon
   style gux-rich-text-editor-action fill:#f9f,stroke:#333,stroke-width:4px
 ```
