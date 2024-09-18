@@ -29,7 +29,7 @@ export class GuxRichTextEditorAction {
 
   @Watch('editor')
   onEditorInstance() {
-    this.applySectionUpdateListener();
+    this.applyTipTapEventListeners();
   }
 
   async componentWillLoad(): Promise<void> {
@@ -67,21 +67,25 @@ export class GuxRichTextEditorAction {
     }
   }
 
-  private applySectionUpdateListener(): void {
+  private applyTipTapEventListeners(): void {
     // This is needed to notify stencil that the state of the text-editor has changed.
     this.editor.on('selectionUpdate', () => {
       // The selection has changed.
+      forceUpdate(this.root);
+    });
+
+    this.editor.on('transaction', () => {
+      // The editor state has changed.
       forceUpdate(this.root);
     });
   }
 
   private renderActionButton(): JSX.Element {
     if (this.editor) {
-      const actionIsActive = this.editor.isActive(this.action);
       return (
         <gux-button-slot accent="ghost" icon-only>
           <button
-            class={actionIsActive ? 'is-action' : ''}
+            class={this.editor.isActive(this.action) ? 'gux-is-active' : ''}
             type="button"
             onClick={() => this.handleActionClick()}
           >
