@@ -94,10 +94,7 @@ export class GuxToast {
             <slot name="secondary-button" />
           </gux-button-slot>
         )}
-        <gux-button-slot
-          accent={this.hasSecondaryButton ? 'primary' : 'tertiary'}
-          slot="primary"
-        >
+        <gux-button-slot slot="primary">
           <slot name="primary-button" />
         </gux-button-slot>
       </gux-cta-group>
