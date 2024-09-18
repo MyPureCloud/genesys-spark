@@ -1,0 +1,123 @@
+<h1>gux-rich-text-editor</h1>
+<gux-rich-text-editor-beta>
+  <gux-rich-text-editor-action-group slot="typographical-emphasis">
+    <gux-rich-text-editor-action action="bold"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="italic"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action
+      action="underline"
+    ></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="strike"></gux-rich-text-editor-action>
+  </gux-rich-text-editor-action-group>
+  <gux-rich-text-editor-action-group slot="text-styling">
+    <gux-rich-text-editor-action
+      action="clearFormatting"
+    ></gux-rich-text-editor-action>
+  </gux-rich-text-editor-action-group>
+  <gux-rich-text-editor-action-group slot="lists-indentation">
+    <gux-rich-text-editor-action
+      action="bulletedList"
+    ></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action
+      action="orderedList"
+    ></gux-rich-text-editor-action>
+  </gux-rich-text-editor-action-group>
+  <gux-rich-text-editor-action-group slot="inserting">
+    <gux-rich-text-editor-action
+      action="codeblock"
+    ></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action
+      action="blockQuote"
+    ></gux-rich-text-editor-action>
+  </gux-rich-text-editor-action-group>
+  <gux-rich-text-editor-action-group slot="global-actions">
+    <gux-rich-text-editor-action action="undo"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="redo"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="delete"></gux-rich-text-editor-action>
+  </gux-rich-text-editor-action-group>
+  <div class="editorElement" slot="editor"></div>
+</gux-rich-text-editor-beta>
+
+<h2>Disabled</h2>
+<gux-rich-text-editor-beta disabled>
+  <gux-rich-text-editor-action-group slot="typographical-emphasis">
+    <gux-rich-text-editor-action action="bold"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="italic"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action
+      action="underline"
+    ></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action
+      action="strike"
+    ></gux-rich-text-editor-action> </gux-rich-text-editor-action-group
+  >v>
+</gux-rich-text-editor-beta>
+
+<style
+  onload="(function () {
+  (async () => {
+  const { Editor } = await import('https://cdn.jsdelivr.net/npm/@tiptap/core@2.2.2/+esm');
+  const StarterKit = (await import('https://cdn.jsdelivr.net/npm/@tiptap/starter-kit@2.2.2/+esm')).default;
+  const Underline = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-underline@2.2.2/+esm')).default;
+    
+// Initialize the editor
+const editor = new Editor({
+  element: document.querySelector('.editorElement'),
+  extensions: [StarterKit, Underline],
+  content: 'Start typing here...',
+  injectCSS: false,
+  editorProps: {
+    attributes: {
+      class: 'editor-styles'
+    },
+  },
+});
+
+// Map the action types to DOM elements and editor commands
+const actionsConfig = [
+  { action: 'bold', command: 'toggleBold', selector: 'gux-rich-text-editor-action[action=bold]' },
+  { action: 'italic', command: 'toggleItalic', selector: 'gux-rich-text-editor-action[action=italic]' },
+  { action: 'strike', command: 'toggleStrike', selector: 'gux-rich-text-editor-action[action=strike]' },
+  { action: 'underline', command: 'toggleUnderline', selector: 'gux-rich-text-editor-action[action=underline]' },
+  { action: 'codeBlock', command: 'toggleCodeBlock', selector: 'gux-rich-text-editor-action[action=codeblock]' },
+  { action: 'blockquote', command: 'toggleBlockquote', selector: 'gux-rich-text-editor-action[action=blockQuote]' },
+  { action: 'orderedList', command: 'toggleOrderedList', selector: 'gux-rich-text-editor-action[action=orderedList]' },
+  { action: 'bulletList', command: 'toggleBulletList', selector: 'gux-rich-text-editor-action[action=bulletedList]' },
+  { action: 'clearFormatting', command: 'unsetAllMarks', selector: 'gux-rich-text-editor-action[action=clearFormatting]' },
+  { action: 'undo', command: 'undo', selector: 'gux-rich-text-editor-action[action=undo]' },
+  { action: 'redo', command: 'redo', selector: 'gux-rich-text-editor-action[action=redo]' },
+  { action: 'delete', command: 'delete', selector: 'gux-rich-text-editor-action[action=delete]' }
+];
+
+// Add event listeners and store action elements
+const actions = actionsConfig.map(({ action, command, selector }) => {
+  const element = document.querySelector(selector);
+
+  // Add click event listener for toggling editor command
+  element.addEventListener('click', () => {
+   command == 'delete' ? editor.commands.deleteNode('paragraph') : editor.chain().focus()[command]().run();
+  });
+
+  return { element, action };
+});
+
+// Function to update the active state of each action
+function updateActionState() {
+  actions.forEach(({ element, action }) => {
+    const isActive = editor.isActive(action);
+    element.isActive = isActive;
+  });
+}
+
+// Add a single event listener for updating action states
+editor.on('transaction', updateActionState);
+editor.on('selectionUpdate', updateActionState);
+
+
+
+})();
+
+  })()"
+>
+  .not-used {
+    -custom-noop: noop;
+  }
+</style>

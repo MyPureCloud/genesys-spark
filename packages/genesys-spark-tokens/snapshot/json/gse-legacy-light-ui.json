@@ -3145,6 +3145,46 @@
         "color": "#b4bccb",
         "padding": "0 4px"
       }
+    },
+    "container": {
+      "border_radius": "4px"
+    },
+    "main_container": {
+      "default": {
+        "border": {
+          "color": "#6b7585",
+          "width": "1px",
+          "style": "solid"
+        }
+      },
+      "hover": {
+        "border": {
+          "color": "#2754ac",
+          "width": "1px",
+          "style": "solid"
+        }
+      },
+      "active": {
+        "border": {
+          "color": "#2a60c8",
+          "width": "1px",
+          "style": "solid"
+        }
+      },
+      "disabled": {
+        "border": {
+          "color": "#6b7585",
+          "width": "1px",
+          "style": "solid"
+        }
+      },
+      "focus": {
+        "border": {
+          "color": "#aac9ff",
+          "width": "2px",
+          "style": "solid"
+        }
+      }
     }
   }
 }

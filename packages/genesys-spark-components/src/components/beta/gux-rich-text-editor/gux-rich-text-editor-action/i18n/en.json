@@ -1,0 +1,14 @@
+{
+  "bold": "Bold",
+  "italic": "Italic",
+  "underline": "Underline",
+  "strike": "Strike",
+  "codeblock": "Code Block",
+  "blockQuote": "Block Quote",
+  "orderedList": "Ordered List",
+  "bulletedList": "Bulleted List",
+  "clearFormatting": "Clear Formatting",
+  "undo": "Undo",
+  "redo": "Redo",
+  "delete": "Delete"
+}
