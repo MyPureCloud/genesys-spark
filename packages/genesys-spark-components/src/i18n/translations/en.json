@@ -441,6 +441,9 @@
   "gux-radial-loading": {
     "loading": "Loading"
   },
+  "gux-rich-text-editor-action": {
+    "actionBold": "Bold"
+  },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
   },

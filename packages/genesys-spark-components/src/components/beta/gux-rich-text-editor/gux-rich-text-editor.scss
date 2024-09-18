@@ -1,0 +1,32 @@
+.gux-rich-text-editor-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 707px;
+  padding: 8px 16px;
+  border: 1px #a3a7b0 solid;
+  border-radius: 4px;
+
+  .gux-rich-text-editor-toolbar-container {
+    .gux-typographical-emphasis-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  .gux-rich-text-editor {
+    .tiptap {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #23395d;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

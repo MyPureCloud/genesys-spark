@@ -23,6 +23,19 @@ You can choose between two type (secondary and primary).
 |      | content     |
 
 
+## Dependencies
+
+### Used by
+
+ - [gux-rich-text-editor-action](../../beta/gux-rich-text-editor/gux-rich-text-editor-action)
+
+### Graph
+```mermaid
+graph TD;
+  gux-rich-text-editor-action --> gux-button
+  style gux-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
