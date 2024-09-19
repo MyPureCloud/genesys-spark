@@ -7,6 +7,23 @@
   border: 1px #a3a7b0 solid;
   border-radius: 4px;
 
+  &.gux-disabled {
+    pointer-events: none;
+    cursor: default;
+    user-select: none;
+    opacity: 0.5;
+
+    .tiptap {
+      p {
+        user-select: none;
+      }
+    }
+  }
+
+  &:hover:not(.gux-disabled) {
+    border: 1px #3742a2 solid;
+  }
+
   .gux-rich-text-editor-toolbar-container {
     .gux-typographical-emphasis-container {
       display: flex;
@@ -14,6 +31,20 @@
       flex-wrap: nowrap;
       align-items: flex-start;
       justify-content: flex-start;
+
+      .gux-action-group-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 9px;
+        height: 32px;
+
+        .gux-divider {
+          width: 1px;
+          height: 20px;
+          background-color: #c6c8ce;
+        }
+      }
     }
   }
 

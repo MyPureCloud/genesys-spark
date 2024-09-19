@@ -64,6 +64,7 @@
   "dependencies": {
     "@tiptap/core": "^2.6.6",
     "@tiptap/extension-bold": "^2.7.0",
+    "@tiptap/extension-underline": "^2.7.1",
     "@tiptap/pm": "^2.6.6",
     "@tiptap/starter-kit": "^2.6.6"
   },

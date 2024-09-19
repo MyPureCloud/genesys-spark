@@ -13,6 +13,8 @@ import { trackComponent } from '@utils/tracking/usage';
 import { Editor } from '@tiptap/core';
 import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import translationResources from './i18n/en.json';
+import { getClosestElement } from '@utils/dom/get-closest-element';
+import { getActionMap } from './gux-rich-text-editor-action-map';
 
 @Component({
   tag: 'gux-rich-text-editor-action',
@@ -22,22 +24,14 @@ import translationResources from './i18n/en.json';
 export class GuxRichTextEditorAction {
   private i18n: GetI18nValue;
 
-  private actionMap = {
-    bold: {
-      action: () => this.editor.chain().focus().toggleBold().run(),
-      icon: 'fa/bold-regular'
-    },
-    italic: {
-      action: () => this.editor.chain().focus().toggleItalic().run(),
-      icon: 'fa/italic-regular'
-    }
-  };
-
   @Element()
   root: HTMLElement;
 
   @Prop()
   action: GuxRichTextEditorActionTypes;
+
+  @Prop({ mutable: true })
+  disabled: boolean = false;
 
   @State()
   private editor: Editor; // Store the editor instance
@@ -50,6 +44,7 @@ export class GuxRichTextEditorAction {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.action });
     this.i18n = await buildI18nForComponent(this.root, translationResources);
+    this.calculateDisabledState();
   }
 
   // Set the editor instance to the gux-rich-text-editor-action.
@@ -59,7 +54,7 @@ export class GuxRichTextEditorAction {
   }
 
   private handleActionClick(): void {
-    const actionHandler = this.actionMap[this.action].action;
+    const actionHandler = getActionMap(this.editor)[this.action].action;
     if (actionHandler) {
       actionHandler();
     } else {
@@ -68,19 +63,21 @@ export class GuxRichTextEditorAction {
   }
 
   private returnActionTypeIcon(action: GuxRichTextEditorActionTypes): string {
-    return this.actionMap[action]?.icon || 'fa/bold-regular';
+    return getActionMap(this.editor)[action]?.icon || 'fa/bold-regular';
   }
 
   private renderTooltip(): JSX.Element {
-    return (
-      <gux-tooltip>
-        <div slot="content">{this.i18n(this.action)}</div>
-      </gux-tooltip>
-    ) as JSX.Element;
+    if (!this.disabled) {
+      return (
+        <gux-tooltip>
+          <div slot="content">{this.i18n(this.action)}</div>
+        </gux-tooltip>
+      ) as JSX.Element;
+    }
   }
 
+  // This is needed to notify stencil that the state of the text-editor has changed.
   private applyTipTapEventListeners(): void {
-    // This is needed to notify stencil that the state of the text-editor has changed.
     this.editor.on('selectionUpdate', () => {
       // The selection has changed.
       forceUpdate(this.root);
@@ -92,6 +89,14 @@ export class GuxRichTextEditorAction {
     });
   }
 
+  private calculateDisabledState(): boolean {
+    const getParent = getClosestElement(
+      'gux-rich-text-editor-beta',
+      this.root
+    ) as HTMLGuxRichTextEditorBetaElement;
+    return (this.disabled = getParent?.disabled || this.disabled);
+  }
+
   private renderActionButton(): JSX.Element {
     if (this.editor) {
       return (
@@ -100,6 +105,7 @@ export class GuxRichTextEditorAction {
             class={this.editor.isActive(this.action) ? 'gux-is-active' : ''}
             type="button"
             onClick={() => this.handleActionClick()}
+            disabled={this.disabled}
           >
             <gux-icon
               icon-name={this.returnActionTypeIcon(this.action)}

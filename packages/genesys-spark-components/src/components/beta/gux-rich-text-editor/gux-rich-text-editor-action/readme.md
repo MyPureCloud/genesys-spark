@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                 | Default     |
-| -------- | --------- | ----------- | -------------------- | ----------- |
-| `action` | `action`  |             | `"bold" \| "italic"` | `undefined` |
+| Property   | Attribute  | Description | Type                                            | Default     |
+| ---------- | ---------- | ----------- | ----------------------------------------------- | ----------- |
+| `action`   | `action`   |             | `"bold" \| "italic" \| "strike" \| "underline"` | `undefined` |
+| `disabled` | `disabled` |             | `boolean`                                       | `false`     |
 
 
 ## Methods

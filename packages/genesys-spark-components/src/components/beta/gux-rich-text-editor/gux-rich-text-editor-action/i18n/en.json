@@ -1,4 +1,6 @@
 {
   "bold": "Bold",
-  "italic": "Italic"
+  "italic": "Italic",
+  "underline": "Underline",
+  "strike": "Strike"
 }

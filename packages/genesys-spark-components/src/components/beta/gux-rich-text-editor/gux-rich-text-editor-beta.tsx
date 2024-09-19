@@ -1,6 +1,7 @@
-import { Component, h, JSX, Element } from '@stencil/core';
+import { Component, h, JSX, Element, Prop } from '@stencil/core';
 import { Editor } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
+import Underline from '@tiptap/extension-underline';
 
 /**
  * @slot typographical-emphasis - Slot for typographical actions
@@ -21,6 +22,9 @@ export class GuxRichTextEditor {
   @Element()
   root: HTMLElement;
 
+  @Prop()
+  disabled: boolean = false;
+
   private editor: Editor;
 
   componentDidLoad() {
@@ -40,18 +44,33 @@ export class GuxRichTextEditor {
   private setupEditor(): void {
     this.editor = new Editor({
       element: this.root.shadowRoot.querySelector('.gux-rich-text-editor'),
-      extensions: [StarterKit],
+      extensions: [StarterKit, Underline],
       content: 'Start typing here...',
-      injectCSS: false
+      injectCSS: false,
+      editable: !this.disabled
     });
+  }
+
+  private actionGroupDivider(): JSX.Element {
+    return (
+      <div class="gux-action-group-divider">
+        <div class="gux-divider"></div>
+      </div>
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
     return (
-      <div class="gux-rich-text-editor-container">
+      <div
+        class={{
+          'gux-rich-text-editor-container': true,
+          'gux-disabled': this.disabled
+        }}
+      >
         <div class="gux-rich-text-editor-toolbar-container">
           <div class="gux-typographical-emphasis-container">
             <slot name="typographical-emphasis"></slot>
+            {this.actionGroupDivider()}
           </div>
           <div class="gux-text-styling-container">
             <slot name="text-styling"></slot>

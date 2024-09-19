@@ -1,1 +1,5 @@
-export type GuxRichTextEditorActionTypes = 'bold' | 'italic';
+export type GuxRichTextEditorActionTypes =
+  | 'bold'
+  | 'italic'
+  | 'underline'
+  | 'strike';
