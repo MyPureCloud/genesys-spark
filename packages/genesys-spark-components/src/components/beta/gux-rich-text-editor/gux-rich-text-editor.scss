@@ -7,6 +7,12 @@
   border: 1px #a3a7b0 solid;
   border-radius: 4px;
 
+  .gux-rich-text-editor-toolbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
   &.gux-disabled {
     pointer-events: none;
     cursor: default;

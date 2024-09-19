@@ -2,5 +2,6 @@
   "bold": "Bold",
   "italic": "Italic",
   "underline": "Underline",
-  "strike": "Strike"
+  "strike": "Strike",
+  "code": "Code"
 }
