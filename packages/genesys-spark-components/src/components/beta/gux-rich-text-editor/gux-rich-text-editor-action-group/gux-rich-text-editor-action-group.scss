@@ -1,0 +1,21 @@
+.gux-action-group-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .gux-action-group-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9px;
+    height: 32px;
+
+    .gux-divider {
+      width: 1px;
+      height: 20px;
+      background-color: #c6c8ce;
+    }
+  }
+}

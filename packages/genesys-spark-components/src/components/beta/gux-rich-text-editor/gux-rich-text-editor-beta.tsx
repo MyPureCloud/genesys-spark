@@ -50,15 +50,6 @@ export class GuxRichTextEditor {
       editable: !this.disabled
     });
   }
-
-  private actionGroupDivider(): JSX.Element {
-    return (
-      <div class="gux-action-group-divider">
-        <div class="gux-divider"></div>
-      </div>
-    ) as JSX.Element;
-  }
-
   render(): JSX.Element {
     return (
       <div
@@ -70,7 +61,6 @@ export class GuxRichTextEditor {
         <div class="gux-rich-text-editor-toolbar-container">
           <div class="gux-typographical-emphasis-container">
             <slot name="typographical-emphasis"></slot>
-            {this.actionGroupDivider()}
           </div>
           <div class="gux-text-styling-container">
             <slot name="text-styling"></slot>
