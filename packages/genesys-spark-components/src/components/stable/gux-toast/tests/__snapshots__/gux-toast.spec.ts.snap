@@ -20,7 +20,7 @@ exports[`gux-simple-toast-legacy #render should render action toast 1`] = `
           <gux-button-slot slot="secondary">
             <slot name="secondary-button"></slot>
           </gux-button-slot>
-          <gux-button-slot accent="primary" slot="primary">
+          <gux-button-slot slot="primary">
             <slot name="primary-button"></slot>
           </gux-button-slot>
         </gux-cta-group>
