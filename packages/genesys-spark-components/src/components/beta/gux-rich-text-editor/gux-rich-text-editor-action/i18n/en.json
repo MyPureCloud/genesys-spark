@@ -3,5 +3,6 @@
   "italic": "Italic",
   "underline": "Underline",
   "strike": "Strike",
-  "codeBlock": "Code Block"
+  "codeBlock": "Code Block",
+  "clearFormatting": "Clear all formatting"
 }

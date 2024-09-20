@@ -18,5 +18,9 @@ export const getActionMap = editor => ({
   codeBlock: {
     action: () => editor.chain().focus().toggleCodeBlock().run(),
     icon: 'fa/code-regular'
+  },
+  clearFormatting: {
+    action: () => editor.chain().focus().unsetAllMarks().run(),
+    icon: 'fa/eraser-regular'
   }
 });

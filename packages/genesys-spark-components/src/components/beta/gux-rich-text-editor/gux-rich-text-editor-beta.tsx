@@ -9,7 +9,7 @@ import Underline from '@tiptap/extension-underline';
  * @slot lists-indentation - Slot for lists and indentation actions
  * @slot inserting - Slot for inserting actions
  * @slot table-actions - Slot for table actions
- * @slot delete - Slot for delete draft action
+ * @slot global-actions - Slot for global actions
  * @slot content - Optional slot for content
  */
 
@@ -74,8 +74,8 @@ export class GuxRichTextEditor {
           <div class="gux-table-actions-container">
             <slot name="table-actions"></slot>
           </div>
-          <div class="gux-delete-container">
-            <slot name="delete"></slot>
+          <div class="gux-global-actions-container">
+            <slot name="global-actions"></slot>
           </div>
         </div>
         <div class="gux-rich-text-editor"></div>
