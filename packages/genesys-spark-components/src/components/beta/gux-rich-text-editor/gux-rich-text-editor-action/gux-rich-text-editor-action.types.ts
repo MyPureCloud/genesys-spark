@@ -3,4 +3,4 @@ export type GuxRichTextEditorActionTypes =
   | 'italic'
   | 'underline'
   | 'strike'
-  | 'code';
+  | 'codeBlock';

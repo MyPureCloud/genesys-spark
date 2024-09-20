@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                                            | Default     |
-| ---------- | ---------- | ----------- | ----------------------------------------------- | ----------- |
-| `action`   | `action`   |             | `"bold" \| "italic" \| "strike" \| "underline"` | `undefined` |
-| `disabled` | `disabled` |             | `boolean`                                       | `false`     |
+| Property   | Attribute  | Description | Type                                                           | Default     |
+| ---------- | ---------- | ----------- | -------------------------------------------------------------- | ----------- |
+| `action`   | `action`   |             | `"bold" \| "codeBlock" \| "italic" \| "strike" \| "underline"` | `undefined` |
+| `disabled` | `disabled` |             | `boolean`                                                      | `false`     |
 
 
 ## Methods

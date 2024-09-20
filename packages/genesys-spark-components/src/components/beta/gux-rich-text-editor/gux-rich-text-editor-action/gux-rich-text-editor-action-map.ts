@@ -15,8 +15,8 @@ export const getActionMap = editor => ({
     action: () => editor.chain().focus().toggleStrike().run(),
     icon: 'fa/strikethrough-regular'
   },
-  code: {
-    action: () => editor.chain().focus().toggleCode().run(),
+  codeBlock: {
+    action: () => editor.chain().focus().toggleCodeBlock().run(),
     icon: 'fa/code-regular'
   }
 });

@@ -445,7 +445,8 @@
     "bold": "Bold",
     "italic": "Italic",
     "underline": "Underline",
-    "strike": "Strike"
+    "strike": "Strike",
+    "codeBlock": "Code Block"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
