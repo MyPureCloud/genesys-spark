@@ -4,4 +4,7 @@ export type GuxRichTextEditorActionTypes =
   | 'underline'
   | 'strike'
   | 'codeBlock'
-  | 'clearFormatting';
+  | 'clearFormatting'
+  | 'orderedList'
+  | 'bulletList'
+  | 'blockquote';

@@ -17,7 +17,7 @@
 | Slot                       | Description                            |
 | -------------------------- | -------------------------------------- |
 | `"content"`                | Optional slot for content              |
-| `"delete"`                 | Slot for delete draft action           |
+| `"global-actions"`         | Slot for global actions                |
 | `"inserting"`              | Slot for inserting actions             |
 | `"lists-indentation"`      | Slot for lists and indentation actions |
 | `"table-actions"`          | Slot for table actions                 |

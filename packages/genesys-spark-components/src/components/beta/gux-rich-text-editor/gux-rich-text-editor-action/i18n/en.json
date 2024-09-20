@@ -4,5 +4,8 @@
   "underline": "Underline",
   "strike": "Strike",
   "codeBlock": "Code Block",
-  "clearFormatting": "Clear all formatting"
+  "clearFormatting": "Clear all formatting",
+  "orderedList": "Ordered List",
+  "bulletList": "Bullet List",
+  "blockQuote": "Block Quote"
 }

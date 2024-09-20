@@ -46,6 +46,14 @@
         margin: 0;
       }
 
+      blockquote {
+        border-left: 2px solid #a8b4e2;
+
+        p {
+          margin-left: 4px;
+        }
+      }
+
       pre {
         background-color: #f3f5fb;
         border: 1px solid #c6c8ce;

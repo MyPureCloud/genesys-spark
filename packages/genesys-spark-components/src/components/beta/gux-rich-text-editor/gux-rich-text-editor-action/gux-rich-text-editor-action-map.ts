@@ -22,5 +22,17 @@ export const getActionMap = editor => ({
   clearFormatting: {
     action: () => editor.chain().focus().unsetAllMarks().run(),
     icon: 'fa/eraser-regular'
+  },
+  orderedList: {
+    action: () => editor.chain().focus().toggleOrderedList().run(),
+    icon: 'fa/list-ol-regular'
+  },
+  bulletList: {
+    action: () => editor.chain().focus().toggleBulletList().run(),
+    icon: 'fa/list-ul-regular'
+  },
+  blockQuote: {
+    action: () => editor.chain().focus().toggleBlockquote().run(),
+    icon: 'fa/quote-right-regular'
   }
 });

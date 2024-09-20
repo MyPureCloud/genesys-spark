@@ -446,7 +446,11 @@
     "italic": "Italic",
     "underline": "Underline",
     "strike": "Strike",
-    "codeBlock": "Code Block"
+    "codeBlock": "Code Block",
+    "clearFormatting": "Clear all formatting",
+    "orderedList": "Ordered List",
+    "bulletList": "Bullet List",
+    "blockQuote": "Block Quote"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
