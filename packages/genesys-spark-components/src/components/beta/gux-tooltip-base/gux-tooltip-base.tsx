@@ -24,6 +24,7 @@ import { randomHTMLId } from '@utils/dom/random-html-id';
 import { trackComponent } from '@utils/tracking/usage';
 import { afterNextRender } from '@utils/dom/after-next-render';
 import { GuxTooltipAccent } from '../gux-tooltip-beta/gux-tooltip-types';
+import { overflowDetection } from '@utils/dom/overflow-detection';
 
 /**
  * @slot content - Slot for content
@@ -132,7 +133,13 @@ export class GuxTooltipBase {
   }
 
   private updatePosition(): void {
-    const middleware = [offset(16), flip(), shift(), hide()];
+    const middleware = [
+      offset(16),
+      flip(),
+      shift(),
+      hide(),
+      overflowDetection()
+    ];
 
     void computePosition(this.forElement, this.root, {
       placement: this.placement,
