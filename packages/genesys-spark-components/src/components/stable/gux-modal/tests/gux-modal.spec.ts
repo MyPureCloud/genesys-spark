@@ -70,7 +70,8 @@ describe('gux-modal', () => {
   describe('#render', () => {
     [
       {
-        description: 'should render small modal',
+        description:
+          'should render modal with separate button slots (to be deprecated)',
         html: `
           <gux-modal size="small">
             <div slot="title">Modal Title</div>
@@ -85,17 +86,54 @@ describe('gux-modal', () => {
         `
       },
       {
-        description: 'should render medium modal',
+        description:
+          'should render modal with just left align buttons (to be deprecated)',
         html: `
-          <gux-modal size="medium">
+          <gux-modal size="small">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
             <div slot="start-align-buttons">
                 <gux-button-slot><button>Cancel</button></gux-button-slot>
             </div>
+          </gux-modal>
+        `
+      },
+      {
+        description:
+          'should render modal with just right align buttons (to be deprecated)',
+        html: `
+          <gux-modal size="small">
+            <div slot="title">Modal Title</div>
+            <div slot="content">This contains the modal content.</div>
             <div slot="end-align-buttons">
               <gux-button-slot accent='primary'><button>Accept</button></gux-button-slot>
             </div>
+          </gux-modal>
+        `
+      },
+      {
+        description: 'should render small modal',
+        html: `
+          <gux-modal size="small">
+            <div slot="title">Modal Title</div>
+            <div slot="content">This contains the modal content.</div>
+            <gux-cta-group slot="footer" align="end">
+              <gux-button slot="primary">Primary</gux-button>
+              <gux-button slot="dismiss">Cancel</gux-button>
+            </gux-cta-group>
+          </gux-modal>
+        `
+      },
+      {
+        description: 'should render medium modal',
+        html: `
+          <gux-modal size="medium">
+            <div slot="title">Modal Title</div>
+            <div slot="content">This contains the modal content.</div>
+            <gux-cta-group slot="footer" align="end">
+              <gux-button slot="primary">Primary</gux-button>
+              <gux-button slot="dismiss">Cancel</gux-button>
+            </gux-cta-group>
           </gux-modal>
         `
       },
@@ -105,12 +143,10 @@ describe('gux-modal', () => {
           <gux-modal size="large">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
-            <div slot="start-align-buttons">
-                <gux-button-slot><button>Cancel</button></gux-button-slot>
-            </div>
-            <div slot="end-align-buttons">
-              <gux-button-slot accent='primary'><button>Accept</button></gux-button-slot>
-            </div>
+            <gux-cta-group slot="footer" align="end">
+              <gux-button slot="primary">Primary</gux-button>
+              <gux-button slot="dismiss">Cancel</gux-button>
+            </gux-cta-group>
           </gux-modal>
         `
       },
@@ -119,12 +155,10 @@ describe('gux-modal', () => {
         html: `
           <gux-modal size="large">
             <div slot="content">This contains the modal content.</div>
-            <div slot="start-align-buttons">
-                <gux-button-slot><button>Cancel</button></gux-button-slot>
-            </div>
-            <div slot="end-align-buttons">
-              <gux-button-slot accent='primary'><button>Accept</button></gux-button-slot>
-            </div>
+            <gux-cta-group slot="footer" align="end">
+              <gux-button slot="primary">Primary</gux-button>
+              <gux-button slot="dismiss">Cancel</gux-button>
+            </gux-cta-group>
           </gux-modal>
         `
       },
@@ -138,42 +172,16 @@ describe('gux-modal', () => {
         `
       },
       {
-        description: 'should render modal with just left align buttons',
-        html: `
-          <gux-modal size="small">
-            <div slot="title">Modal Title</div>
-            <div slot="content">This contains the modal content.</div>
-            <div slot="start-align-buttons">
-                <gux-button-slot><button>Cancel</button></gux-button-slot>
-            </div>
-          </gux-modal>
-        `
-      },
-      {
-        description: 'should render modal with just right align buttons',
-        html: `
-          <gux-modal size="small">
-            <div slot="title">Modal Title</div>
-            <div slot="content">This contains the modal content.</div>
-            <div slot="end-align-buttons">
-              <gux-button-slot accent='primary'><button>Accept</button></gux-button-slot>
-            </div>
-          </gux-modal>
-        `
-      },
-      {
         description:
           'should render modal with a specified initial focus element',
         html: `
           <gux-modal initial-focus="#cancelButton">
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
-            <div slot="start-align-buttons">
-                <gux-button id="cancelButton">Cancel</gux-button>
-            </div>
-            <div slot="end-align-buttons">
-              <gux-button-slot accent='primary'><button>Accept</button></gux-button-slot>
-            </div>
+            <gux-cta-group slot="footer" align="end">
+              <gux-button slot="primary">Primary</gux-button>
+              <gux-button slot="dismiss">Cancel</gux-button>
+            </gux-cta-group>
           </gux-modal>
         `
       },
@@ -183,12 +191,10 @@ describe('gux-modal', () => {
           <gux-modal>
             <div slot="title">Modal Title</div>
             <div slot="content">This contains the modal content.</div>
-            <div slot="start-align-buttons">
-                <gux-button-slot><button>Cancel</button></gux-button-slot>
-            </div>
-            <div slot="end-align-buttons">
-              <gux-button-slot accent='primary'><button>Accept</button></gux-button-slot>
-            </div>
+            <gux-cta-group slot="footer" align="end">
+              <gux-button slot="primary">Primary</gux-button>
+              <gux-button slot="dismiss">Cancel</gux-button>
+            </gux-cta-group>
           </gux-modal>
         `
       }
