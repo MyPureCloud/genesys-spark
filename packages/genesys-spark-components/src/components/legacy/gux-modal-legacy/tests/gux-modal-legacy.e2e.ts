@@ -1,5 +1,21 @@
+import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
-import { E2EPage } from '@stencil/core/testing';
+
+async function newNonrandomE2EPage({
+  html
+}: {
+  html: string;
+}): Promise<E2EPage> {
+  const page = await newE2EPage();
+
+  await page.evaluateOnNewDocument(() => {
+    Math.random = () => 0.5;
+  });
+  await page.setContent(html);
+  await page.waitForChanges();
+
+  return page;
+}
 
 describe('gux-modal-legacy', () => {
   describe('#render', () => {
@@ -112,17 +128,24 @@ describe('gux-modal-legacy', () => {
         `
       }
     ].forEach(({ description, html }) => {
-      it(description, async () => {
-        const page = await newSparkE2EPage({ html });
-        const element = await page.find('gux-modal-legacy');
+      describe(description, () => {
+        it('snapshot', async () => {
+          const page = await newNonrandomE2EPage({ html });
+          const element = await page.find('gux-modal-legacy');
 
-        expect(element.outerHTML).toMatchSnapshot();
+          expect(element.outerHTML).toMatchSnapshot();
 
-        element.setAttribute('hidden', true);
-        await page.waitForChanges();
-        await a11yCheck(page);
+          element.setAttribute('hidden', true);
+          await page.waitForChanges();
 
-        expect(element.outerHTML).toMatchSnapshot();
+          expect(element.outerHTML).toMatchSnapshot();
+        });
+
+        it('accessibility', async () => {
+          const page = await newSparkE2EPage({ html });
+
+          await a11yCheck(page);
+        });
       });
     });
   });
@@ -141,7 +164,7 @@ describe('gux-modal-legacy', () => {
           </div>
         </gux-modal-legacy>
       `;
-      const page = await newSparkE2EPage({ html });
+      const page = await newNonrandomE2EPage({ html });
       const element = await page.find('gux-modal-legacy');
       const dismissButtonElement = await element.find(
         'pierce/gux-dismiss-button'
@@ -175,7 +198,7 @@ describe('gux-modal-legacy', () => {
           </div>
         </gux-modal-legacy>
       `;
-      const page = await newSparkE2EPage({ html });
+      const page = await newNonrandomE2EPage({ html });
       const element = await page.find('gux-modal-legacy');
       const dismissButtonElement = await element.find(
         'pierce/gux-dismiss-button'
@@ -215,7 +238,7 @@ describe('gux-modal-legacy', () => {
           </div>
         </gux-modal-legacy>
       `;
-      const page = await newSparkE2EPage({ html });
+      const page = await newNonrandomE2EPage({ html });
       const modalEl = await page.find('gux-modal-legacy');
       const guxdismissSpy = await page.spyOnEvent('guxdismiss');
 
@@ -249,7 +272,7 @@ describe('gux-modal-legacy', () => {
       <button id="modal-trigger">Open Modal</button>
     `;
     const setupContainerPage = async (modalHtml: string) => {
-      const page = await newSparkE2EPage({ html: modalContainerHtml });
+      const page = await newNonrandomE2EPage({ html: modalContainerHtml });
 
       await page.evaluate(html => {
         document

@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-description #render should render the gux-form-description component as expected (1) 1`] = `"<gux-form-description hydrated=""><p slot="description">This is a simple paragraph to accompany the form header.</p></gux-form-description>"`;
+exports[`gux-form-description #render should render the gux-form-description component as expected (1) 1`] = `"<gux-form-description hydrated=""><template shadowrootmode="open"><slot></slot></template><p slot="description">This is a simple paragraph to accompany the form header.</p></gux-form-description>"`;
 
-exports[`gux-form-description #render should render the gux-form-description component as expected (2) 1`] = `"<gux-form-description hydrated=""><span slot="description">This is a simple paragraph to accompany the form header.</span></gux-form-description>"`;
+exports[`gux-form-description #render should render the gux-form-description component as expected (2) 1`] = `"<gux-form-description hydrated=""><template shadowrootmode="open"><slot></slot></template><span slot="description">This is a simple paragraph to accompany the form header.</span></gux-form-description>"`;
