@@ -30,6 +30,7 @@
     }
   }
 
+  &:focus-within:not(.gux-disabled),
   &:hover:not(.gux-disabled) {
     border: 1px #3742a2 solid;
   }
