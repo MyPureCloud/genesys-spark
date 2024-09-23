@@ -34,5 +34,13 @@ export const getActionMap = editor => ({
   blockQuote: {
     action: () => editor.chain().focus().toggleBlockquote().run(),
     icon: 'fa/quote-right-regular'
+  },
+  undo: {
+    action: () => editor.chain().focus().undo().run(),
+    icon: 'custom/undo-regular'
+  },
+  redo: {
+    action: () => editor.chain().focus().redo().run(),
+    icon: 'custom/redo-regular'
   }
 });

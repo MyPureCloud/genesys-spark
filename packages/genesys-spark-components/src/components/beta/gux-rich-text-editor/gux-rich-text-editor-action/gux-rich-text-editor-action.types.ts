@@ -7,4 +7,6 @@ export type GuxRichTextEditorActionTypes =
   | 'clearFormatting'
   | 'orderedList'
   | 'bulletList'
-  | 'blockquote';
+  | 'blockquote'
+  | 'undo'
+  | 'redo';

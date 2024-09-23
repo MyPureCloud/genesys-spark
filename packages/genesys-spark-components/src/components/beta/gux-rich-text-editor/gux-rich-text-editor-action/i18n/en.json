@@ -7,5 +7,7 @@
   "clearFormatting": "Clear all formatting",
   "orderedList": "Ordered List",
   "bulletList": "Bullet List",
-  "blockQuote": "Block Quote"
+  "blockQuote": "Block Quote",
+  "undo": "Undo",
+  "redo": "Redo"
 }
