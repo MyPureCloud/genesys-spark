@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                                                                                                                                 | Default     |
-| ---------- | ---------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| `action`   | `action`   |             | `"blockquote" \| "bold" \| "bulletList" \| "clearFormatting" \| "codeBlock" \| "italic" \| "orderedList" \| "strike" \| "underline"` | `undefined` |
-| `disabled` | `disabled` |             | `boolean`                                                                                                                            | `false`     |
+| Property   | Attribute  | Description | Type                                                                                                                                                                 | Default     |
+| ---------- | ---------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `action`   | `action`   |             | `"blockquote" \| "bold" \| "bulletList" \| "clearFormatting" \| "codeBlock" \| "delete" \| "italic" \| "orderedList" \| "redo" \| "strike" \| "underline" \| "undo"` | `undefined` |
+| `disabled` | `disabled` |             | `boolean`                                                                                                                                                            | `false`     |
 
 
 ## Methods

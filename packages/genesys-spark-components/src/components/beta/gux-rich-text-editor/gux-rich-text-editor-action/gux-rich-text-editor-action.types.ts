@@ -9,4 +9,5 @@ export type GuxRichTextEditorActionTypes =
   | 'bulletList'
   | 'blockquote'
   | 'undo'
-  | 'redo';
+  | 'redo'
+  | 'delete';

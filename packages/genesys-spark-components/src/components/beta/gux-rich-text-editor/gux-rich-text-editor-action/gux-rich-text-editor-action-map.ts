@@ -42,5 +42,9 @@ export const getActionMap = editor => ({
   redo: {
     action: () => editor.chain().focus().redo().run(),
     icon: 'custom/redo-regular'
+  },
+  delete: {
+    action: () => editor.commands.deleteNode('paragraph'),
+    icon: 'fa/trash-regular'
   }
 });

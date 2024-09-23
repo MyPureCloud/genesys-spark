@@ -9,5 +9,6 @@
   "bulletList": "Bullet List",
   "blockQuote": "Block Quote",
   "undo": "Undo",
-  "redo": "Redo"
+  "redo": "Redo",
+  "delete": "Delete"
 }
