@@ -27,7 +27,7 @@ export class GuxRichTextEditor {
 
   private editor: Editor;
 
-  componentDidLoad() {
+  componentDidLoad(): void {
     this.setupEditor();
     if (this.editor) {
       this.setupActions();

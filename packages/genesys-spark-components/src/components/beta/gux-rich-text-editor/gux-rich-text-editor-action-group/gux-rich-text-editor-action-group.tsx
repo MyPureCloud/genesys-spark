@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop, Element } from '@stencil/core';
 
 /**
  * @slot actions - Slot for a group of gux-rich-text-editor-actions
@@ -10,11 +10,22 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true
 })
 export class GuxRichTextEditorActionGroup {
-  @Prop()
+  @Element()
+  root: HTMLElement;
+
+  @Prop({ mutable: true })
   hideActionDivider: boolean = false;
 
-  private actionGroupDivider(): JSX.Element {
-    if (!this.hideActionDivider) {
+  private shouldHideDivider(): boolean {
+    return this.hideActionDivider || this.isGlobalActionsSlot();
+  }
+
+  private isGlobalActionsSlot(): boolean {
+    return this.root.getAttribute('slot') === 'global-actions';
+  }
+
+  private renderActionGroupDivider(): JSX.Element {
+    if (!this.shouldHideDivider()) {
       return (
         <div class="gux-action-group-divider">
           <div class="gux-divider"></div>
@@ -27,7 +38,7 @@ export class GuxRichTextEditorActionGroup {
     return (
       <div class="gux-action-group-container">
         <slot name="actions"></slot>
-        {this.actionGroupDivider()}
+        {this.renderActionGroupDivider()}
       </div>
     ) as JSX.Element;
   }
