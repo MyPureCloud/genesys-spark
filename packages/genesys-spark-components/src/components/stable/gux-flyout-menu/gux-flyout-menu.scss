@@ -44,7 +44,8 @@
     width: 0;
     height: 0;
     filter: drop-shadow(
-      var(--gse-ui-popover-boxShadow-x) var(--gse-ui-popover-boxShadow-y)
+      var(--gse-ui-popover-boxShadow-x, --gse-ui-popover-boxShadow-offsetX)
+        var(--gse-ui-popover-boxShadow-y, --gse-ui-popover-boxShadow-offsetY)
         calc(var(--gse-ui-popover-boxShadow-blur) / 2)
         var(--gse-ui-tooltip-boxShadow-color)
     ); // TODO: COMUI-2993 Replace this token with menu-specific token

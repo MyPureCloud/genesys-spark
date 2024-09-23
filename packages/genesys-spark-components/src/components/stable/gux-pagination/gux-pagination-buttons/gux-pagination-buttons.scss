@@ -62,7 +62,7 @@ gux-pagination-buttons {
               )
           );
           outline: var(--gse-semantic-focusRing-width) solid
-            var(--gse-semantic-color-focus);
+            var(--gse-semantic-color-focus, --gse-ui-color-focus);
           outline-offset: var(--gse-semantic-focusRing-offset);
         }
       }

@@ -34,8 +34,8 @@
 @prop gse-ui-calendarMenu-disabled-opacity
 @prop gse-ui-calendarMenu-boxShadow-color
 @prop gse-ui-calendarMenu-boxShadow-type
-@prop gse-ui-calendarMenu-boxShadow-x
-@prop gse-ui-calendarMenu-boxShadow-y
+@prop gse-ui-calendarMenu-boxShadow-offsetX
+@prop gse-ui-calendarMenu-boxShadow-offsetY
 @prop gse-ui-calendarMenu-boxShadow-blur
 @prop gse-ui-calendarMenu-boxShadow-spread
 @prop gse-ui-calendarMenu-day-range-height - Not used since this value is already calculated from using other tokens
@@ -52,8 +52,14 @@
 .gux-calendar {
   margin-top: 2px;
   border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
-  box-shadow: var(--gse-ui-calendarMenu-boxShadow-x)
-    var(--gse-ui-calendarMenu-boxShadow-y)
+  box-shadow: var(
+      --gse-ui-calendarMenu-boxShadow-x,
+      --gse-ui-calendarMenu-boxShadow-offsetX
+    )
+    var(
+      --gse-ui-calendarMenu-boxShadow-y,
+      --gse-ui-calendarMenu-boxShadow-offsetY
+    )
     var(--gse-ui-calendarMenu-boxShadow-blur)
     var(--gse-ui-calendarMenu-boxShadow-spread)
     var(--gse-ui-calendarMenu-boxShadow-color);
@@ -73,7 +79,6 @@
 
     button {
       position: absolute;
-      color: var(--gse-ui-calendarMenu-month-monthHeader-foregroundColor);
       cursor: pointer;
       background: none;
       border: none;
@@ -94,8 +99,8 @@
       }
 
       gux-icon {
-        width: var(--gse-ui-icon-size-sm);
-        height: var(--gse-ui-icon-size-sm);
+        width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+        height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
         pointer-events: none;
       }
     }
