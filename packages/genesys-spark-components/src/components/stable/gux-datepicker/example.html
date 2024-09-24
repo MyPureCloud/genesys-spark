@@ -82,7 +82,7 @@
     'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
   ].forEach((lang) => {
     const html = window.toHTML([
-      '<div class=language lang=' + lang + '>',
+      '<div lang=' + lang + '>',
         '<h3>' + lang + '</h3>',
           '<gux-datepicker value=2022-12-23></gux-datepicker>',
       '</div>'
@@ -94,10 +94,6 @@
   #languages-container {
     display: flex;
     flex-direction: column;
-  }
-
-  .language {
-    padding: 10px 25px;
   }
 
   gux-datepicker {
