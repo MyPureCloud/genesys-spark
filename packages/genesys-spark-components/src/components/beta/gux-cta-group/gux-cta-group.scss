@@ -1,9 +1,21 @@
+:host {
+  display: block;
+}
+
 .gux-cta-group {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: var(--gse-ui-ctaGroup-gap);
+  justify-content: start;
 
   &.gux-end-align {
     flex-direction: row-reverse;
-    align-items: flex-end;
+    justify-content: end;
+  }
+
+  ::slotted(gux-button) {
+    flex: 0 1 auto;
+    min-width: 0;
   }
 }
