@@ -88,18 +88,16 @@ export class GuxToast {
 
   private renderActions(): JSX.Element {
     return (
-      <div class="gux-buttons-bar">
+      <gux-cta-group class="gux-buttons-bar" align="end">
         {this.hasSecondaryButton && (
-          <gux-button-slot>
+          <gux-button-slot slot="secondary">
             <slot name="secondary-button" />
           </gux-button-slot>
         )}
-        <gux-button-slot
-          accent={this.hasSecondaryButton ? 'primary' : 'tertiary'}
-        >
+        <gux-button-slot slot="primary">
           <slot name="primary-button" />
         </gux-button-slot>
-      </div>
+      </gux-cta-group>
     ) as JSX.Element;
   }
 
