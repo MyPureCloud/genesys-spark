@@ -62,7 +62,7 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: var(--gse-ui-modal-padding);
+      padding: var(--gse-ui-modal-padding) 0;
       background: var(--gse-ui-modal-backgroundColor);
       border: 1px solid #b4bccb; // TODO: COMUI-2300
       border-radius: var(--gse-ui-modal-borderRadius);
@@ -95,6 +95,7 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
       }
 
       .gux-modal-header {
+        padding: 0 var(--gse-ui-modal-padding);
         margin: 0;
         font-family: var(--gse-ui-modal-heading-fontFamily);
         font-size: var(--gse-ui-modal-heading-fontSize);
@@ -108,6 +109,7 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
 
       .gux-modal-content {
         max-height: 432px; // TODO: COMUI-2300
+        padding: 0 var(--gse-ui-modal-padding);
         margin-top: var(--gse-ui-modal-gap);
         margin-bottom: var(--gse-ui-modal-gap);
         overflow-y: auto;
@@ -120,6 +122,7 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
       .gux-button-footer {
         display: flex;
         justify-content: space-between;
+        padding: 0 var(--gse-ui-modal-padding);
       }
     }
 
