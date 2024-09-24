@@ -35,10 +35,7 @@
   font-size: var(--gse-ui-tooltip-text-fontSize);
   font-weight: var(--gse-ui-tooltip-text-fontWeight);
   line-height: var(--gse-ui-tooltip-text-lineHeight);
-  color: var(
-    --gse-ui-tooltip-light-iconColor,
-    --gse-ui-tooltip-light-foregroundColor
-  );
+  color: var(--gse-ui-tooltip-light-foregroundColor);
   background-color: var(--gse-ui-tooltip-light-backgroundColor);
   border: var(--gse-ui-tooltip-light-border-width)
     var(--gse-ui-tooltip-light-border-style)
@@ -49,10 +46,7 @@
     align-self: center;
     width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
     height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
-    color: var(
-      --gse-ui-tooltip-light-iconColor,
-      --gse-ui-tooltip-light-foregroundColor
-    );
+    color: var(--gse-ui-tooltip-light-foregroundColor);
   }
 
   ::slotted(*) {

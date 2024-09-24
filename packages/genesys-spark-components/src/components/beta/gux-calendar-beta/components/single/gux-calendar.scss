@@ -35,6 +35,7 @@
 
     .gux-left,
     .gux-right {
+      color: var(--gse-ui-calendarMenu-month-monthHeader-foregroundColor);
       cursor: pointer;
       background: none;
       border: none;
@@ -59,12 +60,14 @@
     font-family: var(--gse-ui-calendarMenu-day-headerText-fontFamily);
     font-size: var(--gse-ui-calendarMenu-day-headerText-fontSize);
     font-weight: var(--gse-ui-calendarMenu-day-headerText-fontWeight);
+    color: var(--gse-ui-calendarMenu-day-dayHeader-foregroundColor);
     text-align: center;
 
     .gux-week-day {
       display: inline-block;
       width: var(--gse-ui-calendarMenu-day-date-size);
       height: 16px;
+      font-weight: var(--gse-ui-calendarMenu-day-header-fontWeight);
     }
   }
 
