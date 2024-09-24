@@ -37,7 +37,7 @@ export class GuxRichTextEditorActionGroup {
   render(): JSX.Element {
     return (
       <div class="gux-action-group-container">
-        <slot name="actions"></slot>
+        <slot></slot>
         {this.renderActionGroupDivider()}
       </div>
     ) as JSX.Element;
