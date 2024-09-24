@@ -10,6 +10,7 @@ This component is meant for use in other components as a dismiss button.
 | Property   | Attribute  | Description | Type                      | Default      |
 | ---------- | ---------- | ----------- | ------------------------- | ------------ |
 | `position` | `position` |             | `"absolute" \| "inherit"` | `'absolute'` |
+| `size`     | `size`     |             | `"medium" \| "small"`     | `'medium'`   |
 
 
 ## Dependencies

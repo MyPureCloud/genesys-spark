@@ -5,7 +5,10 @@ import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 import translationResources from './i18n/en.json';
-import { GuxDismissButtonPosition } from './gux-dismiss-button.types';
+import {
+  GuxDismissButtonPosition,
+  GuxDismissButtonSize
+} from './gux-dismiss-button.types';
 
 @Component({
   styleUrl: 'gux-dismiss-button.scss',
@@ -21,6 +24,9 @@ export class GuxDismissButton {
   @Prop()
   position: GuxDismissButtonPosition = 'absolute';
 
+  @Prop()
+  size: GuxDismissButtonSize = 'medium';
+
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.position });
     this.i18n = await buildI18nForComponent(this.root, translationResources);
@@ -30,7 +36,10 @@ export class GuxDismissButton {
     return (
       <gux-button-slot
         accent="ghost"
-        class={this.position == 'inherit' ? 'gux-inherit' : undefined}
+        class={{
+          'gux-inherit': this.position == 'inherit',
+          'gux-dismiss-small': this.size == 'small'
+        }}
       >
         <button type="button" title={this.i18n('dismiss')}>
           <div class="gux-icon-container">

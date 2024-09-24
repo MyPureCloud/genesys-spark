@@ -700,6 +700,16 @@
       "padding": "0 12px",
       "padding_icon_only": "8px"
     },
+    "dismiss": {
+      "small": {
+        "height": "24px",
+        "width": "24px"
+      },
+      "medium": {
+        "height": "32px",
+        "width": "32px"
+      }
+    },
     "icon_only": {
       "width": "32px"
     },
