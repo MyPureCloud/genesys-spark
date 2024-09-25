@@ -549,6 +549,7 @@
   "--gse-ui-formControl-label-textBold-fontWeight",
   "--gse-ui-formControl-label-textBold-lineHeight",
   "--gse-ui-formControl-label-tooltipTrigger-borderRadius",
+  "--gse-ui-formControl-label-tooltipTrigger-color",
   "--gse-ui-formControl-label-tooltipTrigger-optionalColor",
   "--gse-ui-formControl-spinButton-gap",
   "--gse-ui-formControl-textarea-padding",
