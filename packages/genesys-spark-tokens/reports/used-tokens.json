@@ -959,7 +959,6 @@
   "--gse-ui-tag-default-subtle-backgroundColor",
   "--gse-ui-tag-default-subtle-foregroundColor",
   "--gse-ui-tag-disabled-opacity",
-  "--gse-ui-tag-height",
   "--gse-ui-tag-large-height",
   "--gse-ui-tag-padding",
   "--gse-ui-tag-removable-gap",

@@ -394,6 +394,12 @@
     },
     "disabled": {
       "opacity": ".5"
+    },
+    "small": {
+      "height": "20px"
+    },
+    "large": {
+      "height": "32px"
     }
   },
   "badge": {
