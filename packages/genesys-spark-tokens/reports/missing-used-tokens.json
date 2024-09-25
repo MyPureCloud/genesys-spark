@@ -44,6 +44,5 @@
   "--gse-ui-calendarMenu-day-dayHeader-foregroundColor",
   "--gse-ui-calendarMenu-day-header-fontWeight",
   "--gse-ui-calendarMenu-month-monthHeader-foregroundColor",
-  "--gse-ui-formControl-label-tooltipTrigger-optionalColor",
-  "--gse-ui-groupedMenu-subtext-height"
+  "--gse-ui-formControl-label-tooltipTrigger-optionalColor"
 ]

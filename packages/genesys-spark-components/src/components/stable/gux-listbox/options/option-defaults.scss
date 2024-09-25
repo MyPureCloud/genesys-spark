@@ -67,7 +67,6 @@
     }
 
     slot[name='subtext']::slotted(*) {
-      height: var(--gse-ui-groupedMenu-subtext-height);
       font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
       color: var(--gse-ui-menu-groupedMenu-subtext-foregroundColor);
     }
