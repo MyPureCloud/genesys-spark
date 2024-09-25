@@ -37,10 +37,5 @@
   "--gse-semantic-zIndex-popup",
   "--gse-semantic-zIndex-showFocus",
   "--gse-semantic-zIndex-sticky",
-  "--gse-semantic-zIndex-tooltip",
-  "--gse-ui-avatar-badge-away-icon-margin",
-  "--gse-ui-avatar-presenceRing-notifications",
-  "--gse-ui-calendarMenu-day-dayHeader-foregroundColor",
-  "--gse-ui-calendarMenu-day-header-fontWeight",
-  "--gse-ui-calendarMenu-month-monthHeader-foregroundColor"
+  "--gse-semantic-zIndex-tooltip"
 ]

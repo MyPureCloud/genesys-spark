@@ -141,6 +141,7 @@
   "--gse-ui-avatar-addChangeImage-hoverModal-shroudSize",
   "--gse-ui-avatar-badge-available-color",
   "--gse-ui-avatar-badge-away",
+  "--gse-ui-avatar-badge-away-color",
   "--gse-ui-avatar-badge-away-icon-margin",
   "--gse-ui-avatar-badge-busy-color",
   "--gse-ui-avatar-badge-busy-icon-margin",
