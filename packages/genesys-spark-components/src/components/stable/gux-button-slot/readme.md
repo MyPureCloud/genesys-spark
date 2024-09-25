@@ -30,6 +30,7 @@
  - [gux-pagination-buttons-legacy](../../legacy/gux-pagination-legacy/gux-pagination-buttons-legacy)
  - [gux-pagination-cursor](../gux-pagination-cursor)
  - [gux-rich-text-editor-action](../../beta/gux-rich-text-editor/gux-rich-text-editor-action)
+ - [gux-rich-text-editor-action-link](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
  - [gux-table-toolbar-custom-action](../gux-table-toolbar/gux-table-toolbar-custom-action)
@@ -48,6 +49,7 @@ graph TD;
   gux-pagination-buttons-legacy --> gux-button-slot
   gux-pagination-cursor --> gux-button-slot
   gux-rich-text-editor-action --> gux-button-slot
+  gux-rich-text-editor-action-link --> gux-button-slot
   gux-tab-advanced --> gux-button-slot
   gux-tab-advanced-list --> gux-button-slot
   gux-table-toolbar-custom-action --> gux-button-slot

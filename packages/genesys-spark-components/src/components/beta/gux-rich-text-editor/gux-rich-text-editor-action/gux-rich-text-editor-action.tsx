@@ -6,15 +6,16 @@ import {
   h,
   State,
   forceUpdate,
-  Watch
+  Watch,
+  Listen
 } from '@stencil/core';
 import { GuxRichTextEditorActionTypes } from './gux-rich-text-editor-action.types';
 import { trackComponent } from '@utils/tracking/usage';
 import { Editor } from '@tiptap/core';
 import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import translationResources from './i18n/en.json';
-import { getClosestElement } from '@utils/dom/get-closest-element';
 import { getActionMap } from './gux-rich-text-editor-action-map';
+import { calculateDisabledState } from '../gux-rich-text-editor.service';
 
 @Component({
   tag: 'gux-rich-text-editor-action',
@@ -41,10 +42,20 @@ export class GuxRichTextEditorAction {
     this.applyTipTapEventListeners();
   }
 
+  @Listen('linkAddress', { target: 'document' })
+  onLinkAddressHandler(event: CustomEvent<string>) {
+    this.editor
+      .chain()
+      .focus()
+      .extendMarkRange('link')
+      .setLink({ href: event.detail })
+      .run();
+  }
+
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.action });
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-    this.calculateDisabledState();
+    this.disabled = calculateDisabledState(this.root);
   }
 
   // Set the editor instance to the gux-rich-text-editor-action.
@@ -54,7 +65,8 @@ export class GuxRichTextEditorAction {
   }
 
   private handleActionClick(): void {
-    const actionHandler = getActionMap(this.editor)[this.action].action;
+    const actionEntry = getActionMap(this.editor)[this.action];
+    const actionHandler = actionEntry?.action;
     if (actionHandler) {
       actionHandler();
     } else {
@@ -89,20 +101,15 @@ export class GuxRichTextEditorAction {
     });
   }
 
-  private calculateDisabledState(): boolean {
-    const getParent = getClosestElement(
-      'gux-rich-text-editor-beta',
-      this.root
-    ) as HTMLGuxRichTextEditorBetaElement;
-    return (this.disabled = getParent?.disabled || this.disabled);
-  }
-
   private renderActionButton(): JSX.Element {
     if (this.editor) {
+      const activeStyling = this.editor.isActive(this.action)
+        ? 'gux-is-active'
+        : '';
       return (
         <gux-button-slot accent="ghost" icon-only>
           <button
-            class={this.editor.isActive(this.action) ? 'gux-is-active' : ''}
+            class={activeStyling}
             type="button"
             onClick={() => this.handleActionClick()}
             disabled={this.disabled}

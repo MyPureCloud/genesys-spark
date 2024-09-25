@@ -68,6 +68,7 @@
  - [gux-phone-input-beta](../../beta/gux-phone-input)
  - [gux-rating](../gux-rating)
  - [gux-rich-text-editor-action](../../beta/gux-rich-text-editor/gux-rich-text-editor-action)
+ - [gux-rich-text-editor-action-link](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
  - [gux-sort-control](../gux-table/gux-sort-control)
  - [gux-submenu](../gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
@@ -134,6 +135,7 @@ graph TD;
   gux-phone-input-beta --> gux-icon
   gux-rating --> gux-icon
   gux-rich-text-editor-action --> gux-icon
+  gux-rich-text-editor-action-link --> gux-icon
   gux-sort-control --> gux-icon
   gux-submenu --> gux-icon
   gux-tab-advanced --> gux-icon

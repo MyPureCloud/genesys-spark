@@ -10,5 +10,9 @@
   "blockQuote": "Block Quote",
   "undo": "Undo",
   "redo": "Redo",
-  "delete": "Delete"
+  "delete": "Delete",
+  "link": "Link",
+  "linkAddress": "Link address",
+  "insert": "Insert",
+  "cancel": "Cancel"
 }

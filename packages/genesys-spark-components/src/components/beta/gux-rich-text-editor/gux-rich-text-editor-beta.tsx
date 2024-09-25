@@ -2,6 +2,7 @@ import { Component, h, JSX, Element, Prop } from '@stencil/core';
 import { Editor } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
 import Underline from '@tiptap/extension-underline';
+import Link from '@tiptap/extension-link';
 
 /**
  * @slot typographical-emphasis - Slot for typographical actions
@@ -44,7 +45,15 @@ export class GuxRichTextEditor {
   private setupEditor(): void {
     this.editor = new Editor({
       element: this.root.shadowRoot.querySelector('.gux-rich-text-editor'),
-      extensions: [StarterKit, Underline],
+      extensions: [
+        StarterKit,
+        Underline,
+        Link.configure({
+          openOnClick: true,
+          autolink: true,
+          defaultProtocol: 'https'
+        })
+      ],
       content: 'Start typing here...',
       injectCSS: false,
       editable: !this.disabled
