@@ -40,7 +40,6 @@
   "--gse-semantic-zIndex-tooltip",
   "--gse-ui-avatar-badge-away-icon-margin",
   "--gse-ui-avatar-presenceRing-notifications",
-  "--gse-ui-button-icon-only-width",
   "--gse-ui-calendarMenu-day-dayHeader-foregroundColor",
   "--gse-ui-calendarMenu-day-header-fontWeight",
   "--gse-ui-calendarMenu-month-monthHeader-foregroundColor"

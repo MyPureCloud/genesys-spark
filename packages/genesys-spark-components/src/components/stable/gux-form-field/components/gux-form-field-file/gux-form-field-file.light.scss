@@ -6,7 +6,7 @@ gux-form-field-file {
   }
 
   input[type='file']::file-selector-button {
-    min-inline-size: var(--gse-ui-button-icon-only-width);
+    min-inline-size: var(--gse-ui-button-iconOnly-width);
     block-size: var(--gse-ui-button-default-height);
     padding: var(--gse-ui-button-default-padding);
     margin-right: 8px;

@@ -267,7 +267,6 @@
   "--gse-ui-button-ghost-default-foregroundColor",
   "--gse-ui-button-ghost-hover-backgroundColor",
   "--gse-ui-button-ghost-hover-foregroundColor",
-  "--gse-ui-button-icon-only-width",
   "--gse-ui-button-icon-size",
   "--gse-ui-button-iconOnly-width",
   "--gse-ui-button-primary-active-backgroundColor",
