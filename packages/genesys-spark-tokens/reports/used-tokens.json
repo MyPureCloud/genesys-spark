@@ -686,7 +686,6 @@
   "--gse-ui-modal-heading-fontFamily",
   "--gse-ui-modal-heading-fontSize",
   "--gse-ui-modal-heading-fontWeight",
-  "--gse-ui-modal-heading-letterSpacing",
   "--gse-ui-modal-heading-lineHeight",
   "--gse-ui-modal-large-width",
   "--gse-ui-modal-medium-width",

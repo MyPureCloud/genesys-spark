@@ -109,7 +109,6 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
         font-weight: var(--gse-ui-modal-heading-fontWeight);
         line-height: var(--gse-ui-modal-heading-fontFamily);
         color: var(--gse-ui-modal-headerColor);
-        letter-spacing: var(--gse-ui-modal-heading-letterSpacing);
 
         @include typography.heading-xl;
       }
