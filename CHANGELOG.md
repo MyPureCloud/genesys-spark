@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.84.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.83.1...v4.84.0) (2024-09-25)
+
+
+### Features
+
+* **cta group:** make responsive and allow buttons to truncate if necessary ([b0ad422](https://github.com/MyPureCloud/genesys-spark/commit/b0ad42291644b7302e58f84616558082b7b1e590))
+* **tokens:** generated figma vars and styles ([cbb0667](https://github.com/MyPureCloud/genesys-spark/commit/cbb06679c1fce06bf79c1ad47ad0ad9e5699a66c))
+
+
+### Bug Fixes
+
+* **other:** fixed new code token generation ([47804aa](https://github.com/MyPureCloud/genesys-spark/commit/47804aabdfb2db7724f7e18059a0edc610b09376))
+
 ### [4.83.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.83.0...v4.83.1) (2024-09-20)
 
 

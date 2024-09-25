@@ -110,9 +110,9 @@ gux-toggle-slider {
           );
 
           .gux-switch {
-            border: var(--gse-ui-toggle-handle-hover-disabled-border-width)
-              var(--gse-ui-toggle-handle-hover-disabled-border-style)
-              var(--gse-ui-toggle-handle-hover-disabled-border-color);
+            border: var(--gse-ui-toggle-handle-disabled-border-width)
+              var(--gse-ui-toggle-handle-disabled-border-style)
+              var(--gse-ui-toggle-handle-disabled-border-color);
           }
         }
 

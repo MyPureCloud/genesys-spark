@@ -192,7 +192,8 @@
 
 ::slotted(gux-listbox) {
   outline: none;
-  box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
+  box-shadow: var(--gse-ui-menu-boxShadow-x, --gse-ui-menu-boxShadow-offsetX)
+    var(--gse-ui-menu-boxShadow-y, --gse-ui-menu-boxShadow-offsetY)
     var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
     var(--gse-ui-menu-boxShadow-color);
 }

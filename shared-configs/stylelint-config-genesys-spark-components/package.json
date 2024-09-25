@@ -22,7 +22,7 @@
     "stylelint-scss": "^6.1.0"
   },
   "devDependencies": {
-    "eslint": "^9.10.0",
+    "eslint": "^9.11.0",
     "eslint-config-genesys-spark-components": "file:../eslint-config-genesys-spark-components",
     "globals": "^15.9.0",
     "lint-staged": "^15.2.10",
@@ -35,9 +35,9 @@
     "prettier-package-json": "^2.8.0",
     "stylelint": "^16.9.0",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-recess-order": "^5.1.0",
+    "stylelint-config-recess-order": "^5.1.1",
     "stylelint-config-standard": "^36.0.1",
-    "stylelint-scss": "^6.6.0"
+    "stylelint-scss": "^6.7.0"
   },
   "prettier": "prettier-config-genesys-spark-components"
 }

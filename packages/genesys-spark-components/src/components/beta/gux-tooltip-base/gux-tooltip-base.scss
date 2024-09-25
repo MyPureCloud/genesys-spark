@@ -6,9 +6,13 @@
   max-width: 250px;
   pointer-events: none;
   border-radius: var(--gse-ui-tooltip-borderRadius);
-  box-shadow: var(--gse-ui-tooltip-boxShadow-x)
-    var(--gse-ui-tooltip-boxShadow-y) var(--gse-ui-tooltip-boxShadow-blur)
-    var(--gse-ui-tooltip-boxShadow-spread) var(--gse-ui-tooltip-boxShadow-color);
+  box-shadow: var(
+      --gse-ui-tooltip-boxShadow-x,
+      --gse-ui-tooltip-boxShadow-offsetX
+    )
+    var(--gse-ui-tooltip-boxShadow-y, --gse-ui-tooltip-boxShadow-offsetY)
+    var(--gse-ui-tooltip-boxShadow-blur) var(--gse-ui-tooltip-boxShadow-spread)
+    var(--gse-ui-tooltip-boxShadow-color);
   opacity: 0;
 }
 
@@ -40,9 +44,9 @@
 
   ::slotted(gux-icon) {
     align-self: center;
-    width: var(--gse-ui-icon-size-sm);
-    height: var(--gse-ui-icon-size-sm);
-    color: var(--gse-ui-tooltip-light-iconColor);
+    width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+    height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+    color: var(--gse-ui-tooltip-light-foregroundColor);
   }
 
   ::slotted(*) {
@@ -58,8 +62,8 @@
 
     ::slotted(gux-icon) {
       align-self: center;
-      width: var(--gse-ui-icon-size-sm);
-      height: var(--gse-ui-icon-size-sm);
+      width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+      height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
       color: var(--gse-ui-tooltip-dark-iconColor);
     }
   }

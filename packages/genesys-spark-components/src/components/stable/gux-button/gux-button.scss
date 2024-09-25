@@ -159,23 +159,35 @@ button {
     min-inline-size: initial;
     block-size: initial;
     padding: 0;
-    color: var(--gse-ui-link-default-foregroundColor);
+    color: var(
+      --gse-ui-link-default-foregroundColor,
+      --gse-ui-links-default-foregroundColor
+    );
     background: none;
     border: none;
     border-radius: 0;
 
     &[disabled] {
-      color: var(--gse-ui-link-disabled-foregroundColor);
+      color: var(
+        --gse-ui-link-disabled-foregroundColor,
+        --gse-ui-links-disabled-foregroundColor
+      );
     }
 
     &:hover:enabled {
-      color: var(--gse-ui-link-hover-foregroundColor);
+      color: var(
+        --gse-ui-link-hover-foregroundColor,
+        --gse-ui-links-hover-foregroundColor
+      );
       text-decoration: underline;
       background: none;
     }
 
     &:active:enabled {
-      color: var(--gse-ui-link-active-foregroundColor);
+      color: var(
+        --gse-ui-link-active-foregroundColor,
+        --gse-ui-links-active-foregroundColor
+      );
       text-decoration: underline;
       background: none;
     }

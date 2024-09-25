@@ -276,20 +276,32 @@
 
 /* Anchor */
 @mixin ui-anchor {
-  color: var(--gse-ui-link-default-foregroundColor);
+  color: var(
+    --gse-ui-link-default-foregroundColor,
+    --gse-ui-links-default-foregroundColor
+  );
   text-decoration: underline;
   border-radius: var(--gse-ui-links-borderRadius);
 
   &:hover {
-    color: var(--gse-ui-link-hover-foregroundColor);
+    color: var(
+      --gse-ui-link-hover-foregroundColor,
+      --gse-ui-links-hover-foregroundColor
+    );
   }
 
   &:active {
-    color: var(--gse-ui-link-active-foregroundColor);
+    color: var(
+      --gse-ui-link-active-foregroundColor,
+      --gse-ui-links-active-foregroundColor
+    );
   }
 
   &:visited {
-    color: var(--gse-ui-link-visited-foregroundColor);
+    color: var(
+      --gse-ui-link-visited-foregroundColor,
+      --gse-ui-links-visited-foregroundColor
+    );
   }
 
   &:focus-visible {

@@ -13,8 +13,8 @@
 
 ::slotted(input) {
   box-sizing: border-box;
-  flex-basis: 100%;
   flex-shrink: 1;
+  flex-basis: 100%;
   width: 100%;
   min-width: 20px; // TODO: GDS-2451 token to be added here
   overflow: hidden;
@@ -117,8 +117,8 @@
     padding: 0;
 
     gux-icon {
-      width: var(--gse-ui-icon-size-sm);
-      height: var(--gse-ui-icon-size-sm);
+      width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+      height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
     }
 
     button {
@@ -154,8 +154,8 @@
         align-items: center;
 
         gux-icon {
-          width: var(--gse-ui-icon-size-sm);
-          height: var(--gse-ui-icon-size-sm);
+          width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+          height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
         }
       }
     }
