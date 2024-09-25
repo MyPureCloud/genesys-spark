@@ -43,8 +43,8 @@ button {
 
     gux-icon[icon-name='fa/copy-regular'] {
       flex-shrink: 0;
-      width: var(--gse-ui-icon-size-sm);
-      height: var(--gse-ui-icon-size-sm);
+      width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+      height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
       padding: var(--gse-ui-copyToClipboard-iconContainer-padding);
       visibility: hidden;
       background-color: var(
@@ -69,8 +69,8 @@ button {
     }
 
     gux-icon {
-      width: var(--gse-ui-icon-size-sm);
-      height: var(--gse-ui-icon-size-sm);
+      width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+      height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
       padding: var(--gse-ui-copyToClipboard-iconContainer-padding);
 
       &[icon-name='fa/circle-check-solid'] {

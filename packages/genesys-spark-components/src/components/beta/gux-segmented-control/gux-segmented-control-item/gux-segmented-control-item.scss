@@ -89,8 +89,8 @@ button {
 
     .gux-icon {
       slot[name='icon']::slotted(gux-icon) {
-        width: var(--gse-ui-icon-size-sm);
-        height: var(--gse-ui-icon-size-sm);
+        width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+        height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
       }
     }
   }

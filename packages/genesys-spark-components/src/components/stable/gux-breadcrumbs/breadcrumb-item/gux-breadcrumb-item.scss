@@ -1,18 +1,42 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 
 @mixin link-breadcrumb-primary-default {
-  font-family: var(--gse-ui-link-inLine-medium-text-fontFamily);
-  font-size: var(--gse-ui-link-inLine-medium-text-fontSize);
-  font-weight: var(--gse-ui-link-inLine-medium-text-fontWeight);
-  line-height: var(--gse-ui-link-inLine-medium-text-lineHeight);
+  font-family: var(
+    --gse-ui-link-inLine-medium-text-fontFamily,
+    --gse-ui-links-inLine-medium-text-fontFamily
+  );
+  font-size: var(
+    --gse-ui-link-inLine-medium-text-fontSize,
+    --gse-ui-links-inLine-medium-text-fontSize
+  );
+  font-weight: var(
+    --gse-ui-link-inLine-medium-text-fontWeight,
+    --gse-ui-links-inLine-medium-text-fontWeight
+  );
+  line-height: var(
+    --gse-ui-link-inLine-medium-text-lineHeight,
+    --gse-ui-links-inLine-medium-text-lineHeight
+  );
   text-decoration: none;
 }
 
 @mixin link-breadcrumb-primary-underline {
-  font-family: var(--gse-ui-link-inLine-medium-underlinedText-fontFamily);
-  font-size: var(--gse-ui-link-inLine-medium-underlinedText-fontSize);
-  font-weight: var(--gse-ui-link-inLine-medium-underlinedText-fontWeight);
-  line-height: var(--gse-ui-link-inLine-medium-underlinedText-lineHeight);
+  font-family: var(
+    --gse-ui-link-inLine-medium-underlinedText-fontFamily,
+    --gse-ui-links-inLine-medium-underlinedText-fontFamily
+  );
+  font-size: var(
+    --gse-ui-link-inLine-medium-underlinedText-fontSize,
+    --gse-ui-links-inLine-medium-underlinedText-fontSize
+  );
+  font-weight: var(
+    --gse-ui-link-inLine-medium-underlinedText-fontWeight,
+    --gse-ui-links-inLine-medium-underlinedText-fontWeight
+  );
+  line-height: var(
+    --gse-ui-link-inLine-medium-underlinedText-lineHeight,
+    --gse-ui-links-inLine-medium-underlinedText-lineHeight
+  );
   text-decoration: var(
     --gse-ui-link-inLine-medium-underlinedText-textDecoration
   );
@@ -33,20 +57,45 @@
 }
 
 @mixin link-breadcrumb-secondary-default {
-  font-family: var(--gse-ui-link-inLine-small-text-fontFamily);
-  font-size: var(--gse-ui-link-inLine-small-text-fontSize);
-  font-weight: var(--gse-ui-link-inLine-small-text-fontWeight);
-  line-height: var(--gse-ui-link-inLine-small-text-lineHeight);
+  font-family: var(
+    --gse-ui-link-inLine-small-text-fontFamily,
+    --gse-ui-links-inLine-small-text-fontFamily
+  );
+  font-size: var(
+    --gse-ui-link-inLine-small-text-fontSize,
+    --gse-ui-links-inLine-small-text-fontSize
+  );
+  font-weight: var(
+    --gse-ui-link-inLine-small-text-fontWeight,
+    --gse-ui-links-inLine-small-text-fontWeight
+  );
+  line-height: var(
+    --gse-ui-link-inLine-small-text-lineHeight,
+    --gse-ui-links-inLine-small-text-lineHeight
+  );
   text-decoration: none;
 }
 
 @mixin link-breadcrumb-secondary-underline {
-  font-family: var(--gse-ui-link-inLine-small-underlinedText-fontFamily);
-  font-size: var(--gse-ui-link-inLine-small-underlinedText-fontSize);
-  font-weight: var(--gse-ui-link-inLine-small-underlinedText-fontWeight);
-  line-height: var(--gse-ui-link-inLine-small-underlinedText-lineHeight);
+  font-family: var(
+    --gse-ui-link-inLine-small-underlinedText-fontFamily,
+    --gse-ui-links-inLine-small-underlinedText-fontFamily
+  );
+  font-size: var(
+    --gse-ui-link-inLine-small-underlinedText-fontSize,
+    --gse-ui-links-inLine-small-underlinedText-fontSize
+  );
+  font-weight: var(
+    --gse-ui-link-inLine-small-underlinedText-fontWeight,
+    --gse-ui-links-inLine-small-underlinedText-fontWeight
+  );
+  line-height: var(
+    --gse-ui-link-inLine-small-underlinedText-lineHeight,
+    --gse-ui-links-inLine-small-underlinedText-lineHeight
+  );
   text-decoration: var(
-    --gse-ui-link-inLine-small-underlinedText-textDecoration
+    --gse-ui-link-inLine-small-underlinedText-textDecoration,
+    --gse-ui-links-inLine-small-underlinedText-textDecoration
   );
 }
 
@@ -75,29 +124,47 @@
   .gux-breadcrumb-content {
     @include link-breadcrumb-secondary-default;
 
-    color: var(--gse-ui-link-default-foregroundColor);
+    color: var(
+      --gse-ui-link-default-foregroundColor,
+      --gse-ui-links-default-foregroundColor
+    );
     pointer-events: none;
 
     &.gux-active {
-      color: var(--gse-ui-link-active-foregroundColor);
+      color: var(
+        --gse-ui-link-active-foregroundColor,
+        --gse-ui-links-active-foregroundColor
+      );
     }
 
     &.gux-link {
-      color: var(--gse-ui-link-default-foregroundColor);
+      color: var(
+        --gse-ui-link-default-foregroundColor,
+        --gse-ui-links-default-foregroundColor
+      );
       pointer-events: initial;
 
       &:visited {
-        color: var(--gse-ui-link-visited-foregroundColor);
+        color: var(
+          --gse-ui-link-visited-foregroundColor,
+          --gse-ui-links-visited-foregroundColor
+        );
       }
 
       &:hover {
         @include link-breadcrumb-secondary-underline;
 
-        color: var(--gse-ui-link-hover-foregroundColor);
+        color: var(
+          --gse-ui-link-hover-foregroundColor,
+          --gse-ui-links-hover-foregroundColor
+        );
       }
 
       &:active {
-        color: var(--gse-ui-link-active-foregroundColor);
+        color: var(
+          --gse-ui-link-active-foregroundColor,
+          --gse-ui-links-active-foregroundColor
+        );
       }
 
       &:focus-visible {
