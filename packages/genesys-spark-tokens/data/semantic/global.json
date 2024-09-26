@@ -666,6 +666,11 @@
         "value": "{spacing.lg}",
         "type": "spacing",
         "description": "The minimum spacing a form body should have between itself and the form footer."
+      },
+      "gap": {
+        "value": "{spacing.xs}",
+        "type": "spacing",
+        "description": "The recommended spacing between 1 form control and the other, either vertically or horizontally."
       }
     },
     "text_input": {
