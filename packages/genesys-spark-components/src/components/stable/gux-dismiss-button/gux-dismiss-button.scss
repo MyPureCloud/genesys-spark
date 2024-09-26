@@ -18,9 +18,12 @@ gux-button-slot {
     height: var(--gse-ui-button-dismiss-small-height);
 
     button {
+      width: var(--gse-ui-button-dismiss-small-width);
       height: var(
         --gse-ui-button-dismiss-small-height
       ); // button doesn't stay the same height for the small one without this
+
+      padding: 0;
     }
   }
 
