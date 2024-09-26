@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.131.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.131.0...v3.131.1) (2024-09-26)
+
+
+### Bug Fixes
+
+* **gux-modal:** fix focus ring cropping ([#620](https://github.com/MyPureCloud/genesys-spark/issues/620)) ([f71f750](https://github.com/MyPureCloud/genesys-spark/commit/f71f750aabfa1b2e181f3cc0b6c36677769c528c))
+
 ## [3.131.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.130.0...v3.131.0) (2024-09-14)
 
 
