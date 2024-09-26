@@ -107,6 +107,7 @@ section.gux-disabled {
     align-items: center;
     align-self: auto;
     margin-left: var(--gse-ui-accordion-header-gap);
+    line-height: 0;
     color: var(--gse-ui-accordion-header-default-foreground-chevronIcon-closed);
     transition: transform 0.5s ease;
     transform-origin: center;
