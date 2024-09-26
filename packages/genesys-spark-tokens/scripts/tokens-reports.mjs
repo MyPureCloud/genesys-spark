@@ -44,6 +44,13 @@ const newNewTokenNames = newTokenNames.filter(
 const missingUsedTokenNames = usedTokenNames.filter(
   token => !newTokenNames.includes(token)
 );
+const usedUndefinedTokenNames = usedTokenNames.filter(
+  token =>
+    !oldTokenNames.includes(token) &&
+    !newTokenNames.includes(token) &&
+    token !== '--gse-ui-progressAndLoading-loadingState-'
+);
+
 const mitigatedMissingUsedTokenNames = [
   '--gse-semantic-color-focus',
   '--gse-ui-avatar-badge-away',
@@ -121,4 +128,8 @@ writeFileSync(
     null,
     2
   ) + '\n'
+);
+writeFileSync(
+  join(projectPath, `/${folder}/used-undefined-tokens.json`),
+  JSON.stringify(usedUndefinedTokenNames, null, 2) + '\n'
 );
