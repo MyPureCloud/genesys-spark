@@ -5,22 +5,22 @@
 - Spark components have been updated to support regional date functionality in latest versions of **V3** and **V4**.
 - The new updates in Spark are internally feature toggled so that we can release the new date/time regional at the same time for all apps
 - There are two methods for enabling the new regional date features in Spark components: a global variable, and a feature toggle in the form of a cookie
-  o To test the new Spark component regional date formatting in your application, set the global variable on the window object:
+- To test the new Spark component regional date formatting in your application, set the global variable on the window object:
 
-      ```
-      window['GUX_OPTIONS_enableRegionalDates']= true
-      ```
+  ```
+  window['GUX_OPTIONS_enableRegionalDates']= true
+  ```
 
 ## Feature Toggling
 
 - All regional date functionality should be feature toggled. We want to avoid confusing customers with different date time behavior across applications
-- The Spark component functionality is internally feature toggled and when it is time to GA this feature, will be globally enabled via a cookie set in web directory
+- The Spark component functionality is internally feature toggled. It will be globally enabled via a cookie set in web directory when it is time to release this feature
 - If your app resides outside of web directory, this cookie should still take effect after the user navigates to web directory the first time
 - All regional date functionality that is outside of the Spark components should be feature toggled behind the feature toggle for the epic, `PURE-2946_InternationalizationOfDatesAndTimes`
 
 ## Using components for new date/time regional features
 
-All Spark components that relate to date or time leverage support the new regional date/time features. Here is a list of all the components that are affected by these changes:
+All Spark components that relate to date or time will leverage support of the new regional date/time features. Here is a list of all the components that have been updated to support regional date/time formats:
 
 - gux-calendar
 - gux-date
@@ -38,7 +38,7 @@ If you see any issues when verifying these new features, please create a COMUI t
 
 In addition to updating the Spark components, we have also added new utilities to the `genesys-spark` package to assist with date and time formatting. These utilities standardize date and time formatting practices in Spark components and can serve as utility functions for applications. The utilities are proxies to the browser’s `Intl` object, and will determine the user’s region from the browser configuration of the current language setting if a region is not specified.
 
-Importing the Intl helpers from `genesys-spark` is only possible in `v4`, due to limitations in how Stencil builds packages in `v3`, which makes export of JS APIs not possible. If the Intl helpers are needed in your application but you are still using v3 of genesys-spark-components, it is recommend to import v4 of `genesys-spark` in addition. Using `v4` of genesys-spark alongside `v3` of genesys-spark-components will be reliable as long as registerSparkComponents is not called, and since the genesys-spark package does not contain any component code, using both should not affect the bundle size in your applications.
+Importing the Intl helpers from `genesys-spark` is only possible in `v4`, due to limitations in how Stencil builds packages in `v3`, which makes export of JS APIs not possible. If the Intl helpers are needed in your application but you are still using `v3` of genesys-spark-components, it is recommend to import `v4` of `genesys-spark` in addition. Using `v4` of genesys-spark alongside `v3` of genesys-spark-components will be reliable as long as registerSparkComponents is not called, and since the genesys-spark package does not contain any component code, using both should not affect the bundle size in your applications.
 
 ### dateTimeFormat
 
@@ -49,7 +49,7 @@ Importing the Intl helpers from `genesys-spark` is only possible in `v4`, due to
 * param `options` options to pass to the Intl.DateTimeFormat constructor`
 * `@returns a new DateTimeFormat`
 
-Example (adapted from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat):
+Code Example (adapted from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat):
 
 ```
 import * as sparkIntl from 'genesys-spark';
@@ -89,7 +89,7 @@ console.log(
 
 - returns a new RelativeTimeFormat
 
-Code Example
+Code Example (adapted from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
 
 ```
 import * as sparkIntl from 'genesys-spark';
@@ -150,6 +150,10 @@ For the supported languages that have a regional variant, such as ‘fr-ca’, t
 
 You can use the Spark utils for formatting dates. The Spark Utils are proxies to the [browser’s Intl object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), and will determine the user’s region from the browser configuration of the current language setting if a region is not specified. There are multiple tutorials online detailing how to replace libraries such as Moment.js using Intl
 
-### Q. I’m not upgraded V4 of Genesys Spark Components yet
+### Q. I’m not upgraded to V4 of Genesys Spark Components yet
 
 Spark Component updates have been backported to `V3`. The Spark Utils can be imported separately using `v4` of `genesys-spark`.
+
+### Q. What is a quick way to verify that the regional date formatting is working as expected?
+
+Here is one way to verify that regional date formatting is working. This is under the assumption that your Genesys Cloud language is set to English. Open a new browser window. Set your browser language to a different region of English, such as UK. You should notice that the date formats should change to reflect the date format of this region.
