@@ -859,5 +859,61 @@
         "description": "The recommended divider indicator width, used for the indicators of active tabs, for example"
       }
     }
+  },
+  "z_index": {
+    "base": {
+      "value": "{z_index.0}",
+      "type": "zindex"
+    },
+    "show-focus": {
+      "value": "{z_index.1}",
+      "type": "zindex",
+      "description": "The recommended z-index for focus outlines."
+    },
+    "sticky": {
+      "value": "{z_index.1}",
+      "type": "zindex",
+      "description": "The recommended z-index for sticky elements."
+    },
+    "popup": {
+      "value": "{z_index.100}",
+      "type": "zindex",
+      "description": "The recommended z-index for popup elements."
+    },
+    "popover": {
+      "value": "{z_index.200}",
+      "type": "zindex",
+      "description": "The recommended z-index for popover elements."
+    },
+    "tooltip": {
+      "value": "{z_index.200}",
+      "type": "zindex",
+      "description": "The recommended z-index for tooltips."
+    },
+    "panel": {
+      "value": "{z_index.300}",
+      "type": "zindex",
+      "description": "The recommended z-index for panel elements."
+    },
+    "navbar": {
+      "value": "{z_index.400}",
+      "type": "zindex",
+      "description": "The recommended z-index for navbars."
+    },
+    "sidebar": {
+      "value": "{z_index.400}",
+      "type": "zindex",
+      "description": "The recommended z-index for sidebars."
+    },
+    "toast": {
+      "value": "{z_index.500}",
+      "type": "zindex",
+      "description": "The recommended z-index for toasts."
+    },
+    "modal": {
+      "value": "{z_index.600}",
+      "type": "zindex",
+      "description": "The recommended z-index for modals."
+    }
   }
 }
