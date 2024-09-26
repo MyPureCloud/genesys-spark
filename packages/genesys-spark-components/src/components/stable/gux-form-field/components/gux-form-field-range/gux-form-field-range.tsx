@@ -336,7 +336,9 @@ export class GuxFormField {
       this.tooltipElement.offsetX = percentFromCenter * functionalRangeWidth;
     }
 
-    this.progressElement.style.width = `${placementPercentage}%`;
+    if (this.progressElement) {
+      this.progressElement.style.width = `${placementPercentage}%`;
+    }
   }
 
   private getDisplayValue(): string {
