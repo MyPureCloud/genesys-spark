@@ -661,6 +661,13 @@
         "description": "The recommended side margins of a form."
       }
     },
+    "form_body": {
+      "padding_bottom": {
+        "value": "{spacing.lg}",
+        "type": "spacing",
+        "description": "The minimum spacing a form body should have between itself and the form footer."
+      }
+    },
     "text_input": {
       "lg": {
         "border_radius": {
