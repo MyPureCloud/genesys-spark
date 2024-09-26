@@ -34,8 +34,9 @@ import { findElementById } from '@utils/dom/find-element-by-id';
   shadow: true
 })
 export class GuxPopover {
-  private popupElement: HTMLDivElement;
+  private popupElement: HTMLElement;
   private arrowElement: HTMLDivElement;
+  private targetElement: HTMLInputElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
 
   @Element()
@@ -112,6 +113,12 @@ export class GuxPopover {
       !clickedForElement
     ) {
       this.dismiss();
+    }
+
+    if (clickedForElement) {
+      this.popupElement.showPopover();
+      this.isOpen = true;
+      this.runUpdatePosition();
     }
   }
 
@@ -205,6 +212,7 @@ export class GuxPopover {
     const dismissEvent = this.guxdismiss.emit();
     if (!dismissEvent.defaultPrevented) {
       this.isOpen = false;
+      this.popupElement.hidePopover();
     }
   }
 
@@ -213,8 +221,19 @@ export class GuxPopover {
   }
 
   componentDidLoad(): void {
+    if (this.for) {
+      this.popupElement.popover = 'manual';
+      this.targetElement = document.getElementById(
+        this.for
+      ) as HTMLInputElement;
+      this.targetElement.popoverTargetElement = this.popupElement;
+      this.targetElement.popoverTargetAction = 'toggle';
+    }
+
     if (this.isOpen) {
+      this.popupElement.showPopover();
       this.runUpdatePosition();
+      // setTimeout(() => this.runUpdatePosition(), 0);
     }
   }
 
@@ -245,7 +264,7 @@ export class GuxPopover {
 
   render(): JSX.Element {
     return (
-      <div
+      <popover
         ref={(el: HTMLDivElement) => (this.popupElement = el)}
         class={{
           'gux-hidden': !this.isOpen,
@@ -266,7 +285,7 @@ export class GuxPopover {
         <div class="gux-popover-content">
           <slot />
         </div>
-      </div>
+      </popover>
     ) as JSX.Element;
   }
 }
