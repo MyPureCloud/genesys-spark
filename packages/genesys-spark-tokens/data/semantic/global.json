@@ -819,18 +819,6 @@
           "description": "This is the recommended spacing for the gap between the fieldset header and its paragraph if it has one."
         }
       }
-    },
-    "paragraph": {
-      "foreground_color": {
-        "value": "{color.cornflower.700}",
-        "type": "color",
-        "description": "The recommended color of the content of a form paragraph."
-      },
-      "text": {
-        "value": "{typography.body.sm_regular}",
-        "type": "typography",
-        "description": "This is the recommended style of the content of a form paragraph."
-      }
     }
   },
   "assets": {
