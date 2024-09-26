@@ -35,7 +35,7 @@
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.7",
     "@tsconfig/strictest": "^2.0.5",
-    "eslint": "^9.11.0",
+    "eslint": "^9.11.1",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "glob": "^11.0.0",
     "globals": "^15.9.0",

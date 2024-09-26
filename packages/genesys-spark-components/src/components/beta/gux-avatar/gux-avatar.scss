@@ -280,7 +280,10 @@
   &.gux-break,
   &.gux-meal,
   &.gux-training {
-    background-color: var(--gse-ui-avatar-badge-away);
+    background-color: var(
+      --gse-ui-avatar-badge-away,
+      --gse-ui-avatar-badge-away-color
+    );
 
     & gux-icon {
       margin: var(--gse-ui-avatar-badge-away-icon-margin);

@@ -77,7 +77,6 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
         font-weight: var(--gse-ui-modal-heading-fontWeight);
         line-height: var(--gse-ui-modal-heading-lineHeight);
         color: var(--gse-ui-modal-headerColor);
-        letter-spacing: var(--gse-ui-modal-heading-letterSpacing);
       }
 
       .gux-modal-content {
