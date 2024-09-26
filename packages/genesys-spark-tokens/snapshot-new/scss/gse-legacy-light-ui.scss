@@ -208,6 +208,8 @@
   --gse-ui-tag-accent10-subtle-foregroundColor: #2e394c;
   --gse-ui-tag-button-size: 16px;
   --gse-ui-tag-disabled-opacity: 0.5;
+  --gse-ui-tag-small-height: 20px;
+  --gse-ui-tag-large-height: 32px;
   --gse-ui-badge-borderRadius: 16px;
   --gse-ui-badge-text-fontFamily: Roboto;
   --gse-ui-badge-text-fontWeight: 600;
@@ -1033,7 +1035,8 @@
   --gse-ui-avatar-badge-available-color: #09b581;
   --gse-ui-avatar-badge-busy-color: #e22245;
   --gse-ui-avatar-badge-busy-icon-margin: 2px;
-  --gse-ui-avatar-badge-away: #f8c73e;
+  --gse-ui-avatar-badge-away-color: #f8c73e;
+  --gse-ui-avatar-badge-away-icon-margin: 2px;
   --gse-ui-avatar-badge-onQueue-color: #4856cb;
   --gse-ui-avatar-badge-offline-color: #626e84;
   --gse-ui-avatar-badge-outOfOffice: #b74ba4;

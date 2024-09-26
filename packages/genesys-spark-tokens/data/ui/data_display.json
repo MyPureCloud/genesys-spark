@@ -584,8 +584,16 @@
         }
       },
       "away": {
-        "value": "{background.system.status.away}",
-        "type": "color"
+        "color": {
+          "value": "{background.system.status.away}",
+          "type": "color"
+        },
+        "icon": {
+          "margin": {
+            "value": "{interactive.xs.padding}",
+            "type": "spacing"
+          }
+        }
       },
       "on-queue": {
         "color": {

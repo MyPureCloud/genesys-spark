@@ -45,10 +45,17 @@ const missingUsedTokenNames = usedTokenNames.filter(
   token => !newTokenNames.includes(token)
 );
 const mitigatedMissingUsedTokenNames = [
+  '--gse-semantic-color-focus',
+  '--gse-ui-avatar-badge-away',
+  '--gse-ui-avatar-presenceRing-notifications',
   '--gse-ui-calendarMenu-boxShadow-x',
   '--gse-ui-calendarMenu-boxShadow-y',
+  '--gse-ui-calendarMenu-day-dayHeader-foregroundColor',
+  '--gse-ui-calendarMenu-day-header-fontWeight',
+  '--gse-ui-calendarMenu-month-monthHeader-foregroundColor',
   '--gse-ui-card-raised-boxShadow-x',
   '--gse-ui-card-raised-boxShadow-y',
+  '--gse-ui-formControl-label-tooltipTrigger-optionalColor',
   '--gse-ui-icon-size-lg',
   '--gse-ui-icon-size-md',
   '--gse-ui-icon-size-sm',
@@ -86,7 +93,6 @@ const mitigatedMissingUsedTokenNames = [
   '--gse-ui-toast-boxShadow-y',
   '--gse-ui-tooltip-boxShadow-x',
   '--gse-ui-tooltip-boxShadow-y',
-  '--gse-semantic-color-focus',
   '--gse-ui-tooltip-light-iconColor'
 ];
 

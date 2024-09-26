@@ -503,6 +503,18 @@
         "value": "{opacity.disabled}",
         "type": "opacity"
       }
+    },
+    "small": {
+      "height": {
+        "value": "{size.sm}",
+        "type": "sizing"
+      }
+    },
+    "large": {
+      "height": {
+        "value": "{size.lg}",
+        "type": "sizing"
+      }
     }
   },
   "badge": {

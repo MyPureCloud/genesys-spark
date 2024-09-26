@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.84.0",
+  "version": "4.85.0",
   "description": "Common webcomponents",
   "license": "MIT",
   "main": "dist/stencil-wrapper.js",
@@ -81,7 +81,7 @@
     "@types/sortablejs": "^1.15.8",
     "axe-core": "^4.10.0",
     "axe-live": "^1.0.1",
-    "eslint": "^9.11.0",
+    "eslint": "^9.11.1",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "file-loader": "^6.2.0",
     "genesys-spark-tokens": "file:../genesys-spark-tokens",

@@ -674,6 +674,8 @@
   "--gse-semantic-theme-foreground-tertiary-20",
   "--gse-semantic-theme-foreground-tertiary-30",
   "--gse-ui-advancedTabs-item-focus-borderCopy",
+  "--gse-ui-avatar-badge-away-color",
+  "--gse-ui-avatar-badge-away-icon-margin",
   "--gse-ui-button-dismiss-medium-height",
   "--gse-ui-button-dismiss-medium-width",
   "--gse-ui-button-dismiss-small-height",

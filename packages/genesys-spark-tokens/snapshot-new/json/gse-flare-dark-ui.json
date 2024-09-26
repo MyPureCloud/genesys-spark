@@ -394,6 +394,12 @@
     },
     "disabled": {
       "opacity": ".5"
+    },
+    "small": {
+      "height": "20px"
+    },
+    "large": {
+      "height": "32px"
     }
   },
   "badge": {
@@ -2097,7 +2103,12 @@
           "margin": "2px"
         }
       },
-      "away": "#f8c73e",
+      "away": {
+        "color": "#f8c73e",
+        "icon": {
+          "margin": "2px"
+        }
+      },
       "on-queue": {
         "color": "#4856cb"
       },

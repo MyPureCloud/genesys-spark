@@ -18,7 +18,7 @@
   @include button-text;
 
   inline-size: 100%;
-  min-inline-size: var(--gse-ui-button-icon-only-width);
+  min-inline-size: var(--gse-ui-button-iconOnly-width);
   block-size: var(--gse-ui-button-default-height);
   padding: var(--gse-ui-button-default-padding);
   overflow: hidden;
