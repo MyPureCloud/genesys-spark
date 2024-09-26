@@ -649,6 +649,18 @@
     }
   },
   "form_control": {
+    "form": {
+      "max_width": {
+        "value": "600px",
+        "type": "sizing",
+        "description": "The recommended max width fo a form."
+      },
+      "margin": {
+        "value": "{spacing.md}",
+        "type": "spacing",
+        "description": "The recommended side margins of a form."
+      }
+    },
     "text_input": {
       "lg": {
         "border_radius": {
@@ -775,6 +787,49 @@
           "type": "borderWidth",
           "description": "The recommended border width for handles on click inputs, like the habdle of a toggle."
         }
+      }
+    },
+    "form_header": {
+      "padding_bottom": {
+        "value": "{spacing.sm}",
+        "type": "spacing",
+        "description": "This is the bottom padding of the form header, applied after the paragraph if it has one."
+      },
+      "gap": {
+        "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "This spacing is used for the gap between the form header and its paragraph if it has one."
+      }
+    },
+    "fieldset": {
+      "padding_bottom": {
+        "value": "{spacing.2xl}",
+        "type": "spacing",
+        "description": "The bottom padding of a fieldset"
+      },
+      "header": {
+        "padding_bottom": {
+          "value": "{spacing.sm}",
+          "type": "spacing",
+          "description": "This is the recommended bottom padding of the fielset header, applied after the paragraph if it has one."
+        },
+        "gap": {
+          "value": "{spacing.4xs}",
+          "type": "spacing",
+          "description": "This is the recommended spacing for the gap between the fieldset header and its paragraph if it has one."
+        }
+      }
+    },
+    "paragraph": {
+      "foreground_color": {
+        "value": "{color.cornflower.700}",
+        "type": "color",
+        "description": "The recommended color of the content of a form paragraph."
+      },
+      "text": {
+        "value": "{typography.body.sm_regular}",
+        "type": "typography",
+        "description": "This is the recommended style of the content of a form paragraph."
       }
     }
   },
