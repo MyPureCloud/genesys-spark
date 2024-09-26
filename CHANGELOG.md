@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.85.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.84.0...v4.85.0) (2024-09-26)
+
+
+### Features
+
+* **langauge:** LOCAL-10116 adding placeholder file for hindi ([c14599e](https://github.com/MyPureCloud/genesys-spark/commit/c14599eb9f80bd23cd5c12e4ab51ec709d51e3ff))
+
+
+### Bug Fixes
+
+* **modal-legacy:** prevent focus ring cropping ([#619](https://github.com/MyPureCloud/genesys-spark/issues/619)) ([eca1f8f](https://github.com/MyPureCloud/genesys-spark/commit/eca1f8f7cb0e4f1f5d8edaf7790de9035a559fe1))
+
 ## [4.84.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.83.1...v4.84.0) (2024-09-25)
 
 
