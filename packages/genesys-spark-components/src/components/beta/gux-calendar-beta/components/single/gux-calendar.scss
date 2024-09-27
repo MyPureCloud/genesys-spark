@@ -72,7 +72,7 @@
 
   .gux-content {
     padding: var(--gse-ui-calendarMenu-dateBody-padding);
-    color: var(--gse-core-color-cornflower-900);
+    color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
     background-color: var(--gse-ui-calendarMenu-backgroundColor);
     border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
   }
@@ -87,7 +87,7 @@
       font-style: normal;
       font-weight: var(--gse-ui-calendarMenu-date-defaultText-fontWeight);
       line-height: 32px;
-      color: var(--gse-core-color-cornflower-600);
+      color: #626e84;
       text-align: center;
       vertical-align: middle;
       border: none;

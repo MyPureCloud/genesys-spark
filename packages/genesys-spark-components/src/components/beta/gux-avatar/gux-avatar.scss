@@ -34,7 +34,7 @@
     font-family: var(--gse-ui-avatar-large-initials-fontFamily);
     font-size: var(--gse-ui-avatar-large-initials-fontSize);
     font-weight: var(--gse-ui-avatar-large-initials-fontWeight);
-    line-height: var(--gse-core-lineHeight-matchFontSize);
+    line-height: 1;
     color: var(--gse-ui-avatar-media-initialsForeground-inverse);
     text-transform: uppercase;
     background-color: var(--gse-ui-avatar-media-initialsBackground-default);
