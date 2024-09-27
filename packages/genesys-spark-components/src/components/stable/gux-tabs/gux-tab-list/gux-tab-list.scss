@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 gux-tabs {
   &[orientation='vertical'] {
     height: 100%;
@@ -98,7 +100,7 @@ gux-tabs {
       }
 
       &:active:not(:disabled) {
-        background-color: darken(#e2e6ee, 5%);
+        background-color: color.adjust(#e2e6ee, $lightness: -5%);
       }
 
       &:disabled {

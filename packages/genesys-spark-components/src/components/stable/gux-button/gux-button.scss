@@ -30,10 +30,7 @@
 }
 
 ::slotted(*) {
-  padding-inline-start: var(
-    --gse-core-spacing-3xs
-  ); // COMUI-2156 add missing button tokens
-
+  padding-inline-start: 8px; // COMUI-2156 add missing button tokens
   vertical-align: middle;
 }
 

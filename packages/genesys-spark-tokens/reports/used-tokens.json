@@ -1,9 +1,4 @@
 [
-  "--gse-core-color-cornflower-600",
-  "--gse-core-color-cornflower-900",
-  "--gse-core-lineHeight-matchFontSize",
-  "--gse-core-spacing-3xs",
-  "--gse-core-spacing-4xs",
   "--gse-semantic-color-focus",
   "--gse-semantic-focusRing-cornerRadius",
   "--gse-semantic-focusRing-default-border-color",
