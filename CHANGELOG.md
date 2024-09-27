@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.85.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.85.0...v4.85.1) (2024-09-27)
+
+
+### Bug Fixes
+
+* **accordion:** arrow not centered ([#624](https://github.com/MyPureCloud/genesys-spark/issues/624)) ([ddb12be](https://github.com/MyPureCloud/genesys-spark/commit/ddb12be216b9fb598f15f4bd125a76d1acccad8c))
+* **other:** added fallback to new token in label tooltip trigger ([011fc29](https://github.com/MyPureCloud/genesys-spark/commit/011fc293c9a23668c6218e0ae6022a08524777e8))
+* **other:** fixed all undefined token usage ([e07b71b](https://github.com/MyPureCloud/genesys-spark/commit/e07b71b07504b0093cc47becba8cab1d03d12ef0))
+* **other:** fixed avatar token issue ([b05d009](https://github.com/MyPureCloud/genesys-spark/commit/b05d0095356e975d17d5440820db4bc50b00ee16))
+* **other:** fixed tag height tokens ([bd2f58c](https://github.com/MyPureCloud/genesys-spark/commit/bd2f58ca6deaf2df11c74b37ac9e4f33aff9b1cb))
+* **other:** fixed token typo ([de596f9](https://github.com/MyPureCloud/genesys-spark/commit/de596f939f53fd41d669d2f9eef9d20101e1f460))
+* **other:** removed unnecessary letter-spacing token ([b04136b](https://github.com/MyPureCloud/genesys-spark/commit/b04136be337a3df54285eb23f614b8873e2f24ff))
+* **other:** removed unused subtext height token ([602d1a9](https://github.com/MyPureCloud/genesys-spark/commit/602d1a913c436920b7a0d6e2e622a3023b4d1ef9))
+
 ## [4.85.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.84.0...v4.85.0) (2024-09-26)
 
 
