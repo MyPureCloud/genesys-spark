@@ -30,11 +30,5 @@
   "--gse-semantic-forms-paragraph-text-fontFamily",
   "--gse-semantic-forms-paragraph-text-fontSize",
   "--gse-semantic-forms-paragraph-text-fontWeight",
-  "--gse-semantic-forms-paragraph-text-lineHeight",
-  "--gse-semantic-zIndex-modal",
-  "--gse-semantic-zIndex-popover",
-  "--gse-semantic-zIndex-popup",
-  "--gse-semantic-zIndex-showFocus",
-  "--gse-semantic-zIndex-sticky",
-  "--gse-semantic-zIndex-tooltip"
+  "--gse-semantic-forms-paragraph-text-lineHeight"
 ]
