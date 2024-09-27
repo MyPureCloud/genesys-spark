@@ -40,6 +40,11 @@ export class GuxAvatarGroup {
       this.overflowAvatars = Array.from(
         this.avatarList.slice(maxAvatarsToDisplay)
       );
+
+      if (this.overflowAvatars.length > 0) {
+        this.buildOverflowList();
+      }
+
       this.overflowCount = this.countAvatars - maxAvatarsToDisplay;
     });
 
@@ -118,9 +123,13 @@ export class GuxAvatarGroup {
       const avatarComp = avatar.querySelector(
         'gux-avatar-beta'
       ) as HTMLGuxAvatarBetaElement;
-      const accentIndex = (index % 12) + 1;
-      avatarComp.accent = accentIndex.toString() as GuxAvatarAccent;
+      console.log(avatarComp.name);
+      avatarComp.accent = this.getAccent(index) as GuxAvatarAccent;
     });
+  }
+
+  private getAccent(index): string {
+    return ((index % 12) + 1).toString();
   }
 
   private showOverflowIndicator(): JSX.Element | null {
@@ -134,53 +143,59 @@ export class GuxAvatarGroup {
             count={this.overflowCount}
           ></gux-avatar-overflow-beta>
         </gux-avatar-focusable-beta>,
-        this.showOverflowPopover()
+        <gux-popover-list
+          id="overflow-popover"
+          for="avatar-overflow-indicator"
+          is-open={this.popoverOpen}
+        >
+          <gux-list></gux-list>
+        </gux-popover-list>
       ] as JSX.Element;
     } else {
       return null;
     }
   }
 
-  private showOverflowPopover(): JSX.Element | null {
-    if (this.overflowCount > 0 && this.overflowAvatars) {
-      return (
-        <gux-popover-list
-          id="overflow-popover"
-          for="avatar-overflow-indicator"
-          is-open={this.popoverOpen}
-        >
-          <gux-list>
-            {this.overflowAvatars.map(focusableAvatar =>
-              this.getListItemFromAvatar(focusableAvatar)
-            )}
-          </gux-list>
-        </gux-popover-list>
-      ) as JSX.Element;
-    } else {
-      return null;
+  private buildOverflowList(): void {
+    const list = this.root.shadowRoot.querySelector('gux-list');
+    if (list) {
+      list.innerHTML = '';
+      this.overflowAvatars.map(focusableAvatar =>
+        this.addListItemForAvatar(focusableAvatar)
+      );
     }
   }
 
-  private getListItemFromAvatar(
+  private addListItemForAvatar(
     focusableAvatar: HTMLGuxAvatarFocusableBetaElement
-  ): JSX.Element {
-    const avatar =
-      (focusableAvatar.querySelector(
+  ): void {
+    const listItem = document.createElement('gux-list-item');
+    const listItemWrapper = document.createElement('div');
+    listItemWrapper.classList.add('gux-overflow-list-item');
+    const clonedFocusabledAvatar = focusableAvatar?.cloneNode(
+      true
+    ) as HTMLGuxAvatarFocusableBetaElement;
+    listItemWrapper.appendChild(clonedFocusabledAvatar);
+
+    // Append the avatar's name as text
+    if (clonedFocusabledAvatar) {
+      const avatar = clonedFocusabledAvatar.querySelector(
         'gux-avatar-beta'
-      ) as HTMLGuxAvatarBetaElement) ?? null;
-    console.log(avatar.outerHTML);
-    return (
-      <gux-list-item>
-        <div class="gux-overflow-list-item">
-          <gux-avatar-beta
-            size="small"
-            name={avatar.name}
-            accent={avatar.accent}
-          ></gux-avatar-beta>
-          {avatar.name}
-        </div>
-      </gux-list-item>
-    ) as JSX.Element;
+      ) as HTMLGuxAvatarBetaElement;
+      avatar.accent = this.getAccent(
+        this.avatarList.indexOf(focusableAvatar)
+      ) as GuxAvatarAccent;
+      const nameSpan = document.createElement('span');
+      nameSpan.classList.add('gux-avatar-name');
+      nameSpan.textContent = avatar.name;
+      listItemWrapper.appendChild(nameSpan);
+    }
+
+    listItem.appendChild(listItemWrapper);
+    const popover = this.root.shadowRoot.querySelector('gux-list');
+    if (popover) {
+      popover.appendChild(listItem);
+    }
   }
 
   render(): JSX.Element {

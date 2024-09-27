@@ -7,6 +7,16 @@
   margin-inline-end: calc(-4px + var(--gse-ui-avatar-groupShapes-gap));
 }
 
+button {
+  padding: 0;
+  margin: 0;
+  line-height: 0px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 50%;
+}
+
 .gux-avatar-group-wrapper {
   display: flex;
   padding-block-start: 2px;
@@ -19,14 +29,11 @@
   container: avatar-group / inline-size;
 }
 
-gux-list {
-  width: max-content;
-}
-
 .gux-overflow-list-item {
   display: flex;
   gap: 8px;
   align-items: center;
+  width: max-content;
 }
 
 @container avatar-group (width <= 59px) {
