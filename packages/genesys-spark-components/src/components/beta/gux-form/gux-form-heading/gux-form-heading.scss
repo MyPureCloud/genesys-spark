@@ -1,8 +1,23 @@
 ::slotted(*) {
   margin: 0;
-  font-family: var(--gse-semantic-forms-formHeader-text-fontFamily) !important;
-  font-size: var(--gse-semantic-forms-formHeader-text-fontSize) !important;
-  font-weight: var(--gse-semantic-forms-formHeader-text-fontWeight) !important;
-  line-height: var(--gse-semantic-forms-formHeader-text-lineHeight) !important;
-  color: var(--gse-semantic-forms-formHeader-foregroundColor) !important;
+  font-family: var(
+    --gse-semantic-forms-formHeader-text-fontFamily,
+    --gse-semantic-body-lg-semiBold-fontFamily
+  ) !important;
+  font-size: var(
+    --gse-semantic-forms-formHeader-text-fontSize,
+    --gse-semantic-body-lg-semiBold-fontSize
+  ) !important;
+  font-weight: var(
+    --gse-semantic-forms-formHeader-text-fontWeight,
+    --gse-semantic-body-lg-semiBold-fontWeight
+  ) !important;
+  line-height: var(
+    --gse-semantic-forms-formHeader-text-lineHeight,
+    --gse-semantic-body-lg-semiBold-lineHeight
+  ) !important;
+  color: var(
+    --gse-semantic-forms-formHeader-foregroundColor,
+    --gse-semantic-foreground-container-highEmphasis
+  ) !important;
 }

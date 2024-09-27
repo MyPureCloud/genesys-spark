@@ -74,9 +74,15 @@
 
     &:focus-within {
       .gux-tag-remove-icon {
-        border-radius: var(--gse-semantic-focusRing-cornerRadius);
-        outline: var(--gse-semantic-focusRing-small-border-width) solid
-          var(--gse-semantic-color-focus, --gse-ui-color-focus);
+        border-radius: var(
+          --gse-semantic-focusRing-cornerRadius,
+          --gse-semantic-focusOutline-sm-borderRadius
+        );
+        outline: var(
+            --gse-semantic-focusRing-small-border-width,
+            --gse-semantic-border-focus
+          )
+          solid var(--gse-semantic-color-focus, --gse-ui-color-focus);
       }
     }
   }

@@ -19,12 +19,17 @@ interface registerOptions {
 /**
  * TODO
  */
-export function loadSparkFonts(): Promise<void> {
+export function loadSparkFonts(opts?: registerOptions): Promise<void> {
   const fontOrigin = getFontOrigin();
-  const FONTS = {
+  const flareFonts = {
     Urbanist: `${fontOrigin}/webfonts/urbanist.css`,
     'Noto Sans': `${fontOrigin}/webfonts/noto-sans.css`
   };
+  const legacyFonts = {
+    Roboto: `${fontOrigin}/webfonts/roboto.css`
+  };
+
+  const FONTS = opts?.theme === 'legacy' ? legacyFonts : flareFonts;
 
   return checkAndLoadFonts(FONTS);
 }
@@ -51,20 +56,16 @@ export function registerSparkComponents(opts?: registerOptions): Promise<void> {
   return Promise.all([
     checkAndLoadScript(SCRIPT_SRC),
     checkAndLoadStyle(STYLE_HREF),
-    loadSparkFonts()
+    loadSparkFonts(opts)
   ]).then();
 }
 
 /**
  * TODO
  */
-export function registerSparkChartComponents(
-  opts?: registerOptions
-): Promise<void> {
+export function registerSparkChartComponents(): Promise<void> {
   const SCRIPT_PATH = 'genesys-chart-webcomponents.esm.js';
-  const STYLE_PATH = opts?.theme
-    ? `genesys-webcomponents-${opts.theme}.css`
-    : 'genesys-chart-webcomponents.css';
+  const STYLE_PATH = 'genesys-chart-webcomponents.css';
 
   const assetsOrigin = getChartComponentAssetsOrigin();
   const SCRIPT_SRC = `${assetsOrigin}${CHART_COMPONENT_ASSET_PREFIX}${SCRIPT_PATH}`;
@@ -72,8 +73,7 @@ export function registerSparkChartComponents(
 
   return Promise.all([
     checkAndLoadScript(SCRIPT_SRC),
-    checkAndLoadStyle(STYLE_HREF),
-    loadSparkFonts()
+    checkAndLoadStyle(STYLE_HREF)
   ]).then();
 }
 

@@ -1,12 +1,27 @@
 @mixin gux-focus-ring {
-  outline: var(--gse-semantic-focusRing-default-border-color)
-    var(--gse-semantic-focusRing-default-border-style)
-    var(--gse-semantic-focusRing-default-border-width);
-  outline-offset: var(--gse-semantic-focusRing-offset);
+  outline: var(
+      --gse-semantic-focusRing-default-border-color,
+      --gse-semantic-border-focus
+    )
+    var(--gse-semantic-focusRing-default-border-style, solid)
+    var(
+      --gse-semantic-focusRing-default-border-width,
+      --gse-semantic-focusOutline-md-borderWidth
+    );
+  outline-offset: var(
+    --gse-semantic-focusRing-offset,
+    --gse-semantic-focusOutline-offset
+  );
 }
 
 @mixin gux-focus-ring-small {
-  outline: var(--gse-semantic-focusRing-small-border-color)
-    var(--gse-semantic-focusRing-small-border-style)
-    var(--gse-semantic-focusRing-small-border-width);
+  outline: var(
+      --gse-semantic-focusRing-small-border-color,
+      --gse-semantic-border-focus
+    )
+    var(--gse-semantic-focusRing-small-border-style, solid)
+    var(
+      --gse-semantic-focusRing-small-border-width,
+      --gse-semantic-focusOutline-sm-borderWidth
+    );
 }

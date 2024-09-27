@@ -170,7 +170,10 @@
       &:focus-visible {
         @include focus.gux-focus-ring;
 
-        border-radius: var(--gse-semantic-focusRing-cornerRadius);
+        border-radius: var(
+          --gse-semantic-focusRing-cornerRadius,
+          --gse-semantic-focusOutline-sm-borderRadius
+        );
       }
     }
   }

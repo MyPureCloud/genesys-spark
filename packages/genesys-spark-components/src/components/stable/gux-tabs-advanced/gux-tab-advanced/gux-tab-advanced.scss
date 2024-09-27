@@ -68,7 +68,7 @@ gux-tab-advanced {
 
           border-radius: var(--gse-ui-advancedTabs-item-focus-borderRadius);
           outline-offset: calc(
-            -1 * var(--gse-semantic-focusRing-default-border-width)
+            -1 * var(--gse-semantic-focusRing-default-border-width, --gse-semantic-focusOutline-md-borderWidth)
           );
         }
 

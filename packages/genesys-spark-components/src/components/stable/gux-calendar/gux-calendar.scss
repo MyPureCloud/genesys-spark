@@ -263,8 +263,15 @@
 
           &:focus-visible {
             border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
-            outline: var(--gse-semantic-focusRing-default-border-width) solid
-              var(--gse-semantic-focusRing-default-border-color);
+            outline: var(
+                --gse-semantic-focusRing-default-border-width,
+                --gse-semantic-focusOutline-md-borderWidth
+              )
+              solid
+              var(
+                --gse-semantic-focusRing-default-border-color,
+                --gse-semantic-border-focus
+              );
           }
         }
       }

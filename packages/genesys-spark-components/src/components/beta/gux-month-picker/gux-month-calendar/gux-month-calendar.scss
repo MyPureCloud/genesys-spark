@@ -50,14 +50,24 @@
 
       &:focus-visible {
         border-radius: calc(
-          var(--gse-semantic-focusRing-cornerRadius) - var(
-              --gse-semantic-focusRing-offset
+          var(
+              --gse-semantic-focusRing-cornerRadius,
+              --gse-semantic-focusOutline-sm-borderRadius
+            ) - var(
+              --gse-semantic-focusRing-offset,
+              --gse-semantic-focusOutline-offset
             )
         );
-        outline: var(--gse-semantic-focusRing-width)
-          var(--gse-semantic-focusRing-default-border-style)
+        outline: var(
+            --gse-semantic-focusRing-width,
+            --gse-semantic-focusOutline-md-borderWidth
+          )
+          var(--gse-semantic-focusRing-default-border-style, solid)
           var(--gse-semantic-color-focus, --gse-ui-color-focus);
-        outline-offset: var(--gse-semantic-focusRing-offset);
+        outline-offset: var(
+          --gse-semantic-focusRing-offset,
+          --gse-semantic-focusOutline-offset
+        );
       }
 
       &.gux-year-change {
