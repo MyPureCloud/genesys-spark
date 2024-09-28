@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.86.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.85.1...v4.86.0) (2024-09-28)
+
+
+### Features
+
+* **dismiss-button:** adding small variant ([1df2dbb](https://github.com/MyPureCloud/genesys-spark/commit/1df2dbbccb0003455c5d4417a3dee278ea0bc88c))
+* **tokens:** added missing semantic z-index tokens ([8b8b4ec](https://github.com/MyPureCloud/genesys-spark/commit/8b8b4ec23bc753ab402f64b9ec5b0ff15c053019))
+* **tokens:** readded form body tokens ([b674a51](https://github.com/MyPureCloud/genesys-spark/commit/b674a51e334a572357be1deaced6ffd1c18dfc76))
+* **tokens:** readded form tokens ([ccf8f0f](https://github.com/MyPureCloud/genesys-spark/commit/ccf8f0faf042bfcf8e4caa57978b133234c70fa2))
+* **tokens:** readded some forms tokens ([82c32ee](https://github.com/MyPureCloud/genesys-spark/commit/82c32ee859238366a719327d81ef0ce08349698e))
+* **tokens:** updated figma styles and vars ([1aa0f1d](https://github.com/MyPureCloud/genesys-spark/commit/1aa0f1df9ea16520aa3c8f96f8c973e3df230244))
+
+
+### Bug Fixes
+
+* **form-field-range:** prevent error when resized before render ([#626](https://github.com/MyPureCloud/genesys-spark/issues/626)) ([2c369b6](https://github.com/MyPureCloud/genesys-spark/commit/2c369b68e6f74a198da40e8837190258147dbf27))
+* **other:** removed all core token references from components ([d19cb64](https://github.com/MyPureCloud/genesys-spark/commit/d19cb64d64bbf3bcc6b4122728ff639c8ce4f3ad))
+
 ### [4.85.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.85.0...v4.85.1) (2024-09-27)
 
 
