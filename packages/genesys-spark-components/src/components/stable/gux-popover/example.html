@@ -2,6 +2,8 @@
 <div class="scroll-container">
   <div class="scroll-interior">
     <gux-button id="popover-target">Example Element 2</gux-button>
+    <!-- <button id="popover-target">Example Element 3</button> -->
+    <!-- <gux-button id="popover-target2">test 1</gux-button> -->
     <gux-popover
       id="popover-example"
       position="top"
@@ -28,6 +30,22 @@
   </div>
 </div>
 
+<button popovertarget="mypopover1" popovertargetaction="show">
+  Show popover 1
+</button>
+<button popovertarget="mypopover1" popovertargetaction="hide">
+  Hide popover 1
+</button>
+<div id="mypopover1" popover>Popover content 1</div>
+
+<button popovertarget="mypopover2" popovertargetaction="show">
+  Show popover 2
+</button>
+<button popovertarget="mypopover2" popovertargetaction="hide">
+  Hide popover 2
+</button>
+<div id="mypopover2" popover>Popover content 2</div>
+
 <style
   onload="(function () {
   const popoverTarget = document.getElementById('popover-target');
@@ -38,6 +56,28 @@
   // });
 })()"
 >
+  :popover-open {
+    position: absolute;
+    inset: unset;
+    top: 5px;
+    width: 200px;
+    height: 100px;
+    margin: 0;
+  }
+
+  #mypopover1 {
+    left: 248px;
+  }
+
+  #mypopover2 {
+    left: 148px;
+  }
+
+  .gux-popover-wrapper2 {
+    top: 0;
+    left: 20px;
+  }
+
   .scroll-container {
     width: 900px;
     height: 300px;

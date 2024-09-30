@@ -233,7 +233,6 @@ export class GuxPopover {
     if (this.isOpen) {
       this.popupElement.showPopover();
       this.runUpdatePosition();
-      // setTimeout(() => this.runUpdatePosition(), 0);
     }
   }
 
