@@ -40,7 +40,7 @@ export class GuxAllRowSelect {
   onCheck(event: CustomEvent): void {
     event.stopPropagation();
     this.selected = this.inputElement.checked;
-    this.internalallrowselectchange.emit(this.inputElement.checked);
+    this.internalallrowselectchange.emit(this.selected);
   }
 
   @Method()

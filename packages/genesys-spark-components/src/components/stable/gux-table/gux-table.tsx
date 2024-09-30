@@ -42,9 +42,10 @@ export class GuxTable {
   root: HTMLElement;
 
   private resizeObserver: ResizeObserver;
-  private slotObserver: MutationObserver = new MutationObserver(() =>
-    forceUpdate(this)
-  );
+  private slotObserver: MutationObserver = new MutationObserver(() => {
+    this.prepareSelectableRows();
+    forceUpdate(this);
+  });
   private i18n: GetI18nValue;
   private columnResizeState: GuxTableColumnResizeState | null;
   private tableId: string = randomHTMLId('gux-table');
@@ -267,11 +268,9 @@ export class GuxTable {
 
   // Handle a change in state of the select all checkbox
   private handleSelectAllRows(selected: boolean): void {
-    const selectAllCheckbox = this.selectAllCheckbox;
     const rowCheckboxes = this.rowCheckboxes;
 
     rowCheckboxes.forEach(rowBox => {
-      selectAllCheckbox.selected = selected;
       if (!rowBox.disabled) {
         rowBox.selected = selected;
         this.updateRowSelection(rowBox);
