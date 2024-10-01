@@ -258,10 +258,6 @@ export class GuxPopover {
     }
 
     this.popupElement.popover = 'manual';
-    if (!this.forElement) {
-      this.logForAttributeError();
-      return;
-    }
     this.forElement.popoverTargetElement = this.popupElement;
     this.forElement.popoverTargetAction = 'toggle';
 
