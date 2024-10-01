@@ -16,15 +16,19 @@ const language = 'en';
 describe('gux-pagination-items-per-page', () => {
   describe('#render', () => {
     [
-      { itemsPerPage: 25 },
-      { itemsPerPage: 50 },
-      { itemsPerPage: 75 },
-      { itemsPerPage: 100 }
-    ].forEach(({ itemsPerPage }, index) => {
+      { itemsPerPage: 25, disabled: false },
+      { itemsPerPage: 50, disabled: false },
+      { itemsPerPage: 75, disabled: false },
+      { itemsPerPage: 100, disabled: false },
+      { itemsPerPage: 25, disabled: true },
+      { itemsPerPage: 50, disabled: true },
+      { itemsPerPage: 75, disabled: true },
+      { itemsPerPage: 100, disabled: true }
+    ].forEach(({ itemsPerPage, disabled }, index) => {
       it(`should render as expected (${index + 1})`, async () => {
         const html = `
           <gux-pagination-items-per-page
-            items-per-page="${itemsPerPage}">
+            items-per-page="${itemsPerPage}" disabled="${disabled}">
           </gux-pagination-items-per-page>
         `;
         const page = await newSpecPage({ components, html, language });

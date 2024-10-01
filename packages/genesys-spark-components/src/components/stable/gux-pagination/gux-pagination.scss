@@ -1,5 +1,6 @@
 :host {
   display: block;
+  height: var(--gse-ui-dataTableItems-cell-tablePagination-height);
   border-top: var(--gse-ui-dataTableItems-tablePagination-divider-width)
     var(--gse-ui-dataTableItems-tablePagination-divider-style)
     var(--gse-ui-dataTableItems-tablePagination-divider-color);
@@ -11,7 +12,6 @@
   flex-wrap: nowrap;
   place-content: stretch space-between;
   align-items: center;
-  height: var(--gse-ui-dataTableItems-cell-tablePagination-height);
   padding: var(--gse-ui-dataTableItems-tablePagination-padding);
   background-color: var(
     --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor

@@ -74,14 +74,28 @@ describe('gux-pagination', () => {
         itemsPerPage: 100,
         layout: 'advanced'
       },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'simple' }
-    ].forEach(({ currentPage, totalItems, itemsPerPage, layout }, index) => {
+      {
+        currentPage: 10,
+        totalItems: 1000,
+        itemsPerPage: 100,
+        layout: 'advanced',
+        disabled: true
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'simple',
+        disabled: true
+      }
+    ].forEach(({ currentPage, totalItems, itemsPerPage, layout, disabled }, index) => {
       const html = `
         <gux-pagination lang="en"
           current-page="${currentPage}"
           total-items="${totalItems}"
           items-per-page="${itemsPerPage}"
           layout="${layout}"
+          disabled="${disabled}"
         ></gux-pagination>
       `;
 

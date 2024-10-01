@@ -23,6 +23,19 @@ You can choose between two type (secondary and primary).
 |      | content     |
 
 
+## Dependencies
+
+### Used by
+
+ - [gux-pagination-ellipsis-button](../gux-pagination/gux-pagination-buttons/gux-pagination-ellipsis-button)
+
+### Graph
+```mermaid
+graph TD;
+  gux-pagination-ellipsis-button --> gux-button
+  style gux-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
