@@ -46,7 +46,7 @@ export class GuxPopover {
    * Indicates the id of the element the popover should anchor to
    */
   @Prop()
-  for: string;
+  for!: string;
 
   /**
    * Indicate position of popover element arrow (follow floating ui placement attribute api)
@@ -216,16 +216,33 @@ export class GuxPopover {
     }
   }
 
+  private logForAttributeError(): void {
+    if (this.root.isConnected) {
+      console.error(
+        `gux-popover: invalid element supplied to 'for': "${this.for}"`
+      );
+    }
+  }
+
   connectedCallback(): void {
     trackComponent(this.root, { variant: this.position });
   }
 
   componentDidLoad(): void {
+    if (!this.for) {
+      this.logForAttributeError();
+      return;
+    }
+
     if (this.for) {
       this.popupElement.popover = 'manual';
       this.targetElement = document.getElementById(
         this.for
       ) as HTMLInputElement;
+      if (!this.targetElement) {
+        this.logForAttributeError();
+        return;
+      }
       this.targetElement.popoverTargetElement = this.popupElement;
       this.targetElement.popoverTargetAction = 'toggle';
     }
