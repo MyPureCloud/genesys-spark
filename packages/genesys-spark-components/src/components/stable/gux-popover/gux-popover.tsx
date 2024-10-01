@@ -6,7 +6,9 @@ import {
   h,
   JSX,
   Listen,
-  Prop
+  Prop,
+  Watch,
+  State
 } from '@stencil/core';
 import {
   autoUpdate,
@@ -36,7 +38,6 @@ import { findElementById } from '@utils/dom/find-element-by-id';
 export class GuxPopover {
   private popupElement: HTMLElement;
   private arrowElement: HTMLDivElement;
-  private targetElement: HTMLInputElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
 
   @Element()
@@ -77,6 +78,14 @@ export class GuxPopover {
    */
   @Event()
   guxdismiss: EventEmitter<void>;
+
+  @State()
+  private forElement: HTMLInputElement;
+
+  @Watch('for')
+  private updateForElement(): void {
+    this.forElement = this.getForElement();
+  }
 
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
@@ -124,6 +133,20 @@ export class GuxPopover {
 
   get titleSlot(): HTMLSlotElement | null {
     return getSlot(this.root, 'title');
+  }
+
+  private getForElement(): HTMLInputElement {
+    if (this.for) {
+      const forElement = document.getElementById(this.for) as HTMLInputElement;
+
+      if (!forElement) {
+        this.logForAttributeError();
+      }
+
+      return forElement;
+    } else {
+      this.logForAttributeError();
+    }
   }
 
   private runUpdatePosition(): void {
@@ -225,24 +248,22 @@ export class GuxPopover {
   }
 
   connectedCallback(): void {
+    this.updateForElement();
     trackComponent(this.root, { variant: this.position });
   }
 
   componentDidLoad(): void {
-    if (!this.for) {
-      this.logForAttributeError();
+    if (!this.forElement) {
       return;
     }
 
     this.popupElement.popover = 'manual';
-    this.targetElement = document.getElementById(this.for) as HTMLInputElement;
-
-    if (!this.targetElement) {
+    if (!this.forElement) {
       this.logForAttributeError();
       return;
     }
-    this.targetElement.popoverTargetElement = this.popupElement;
-    this.targetElement.popoverTargetAction = 'toggle';
+    this.forElement.popoverTargetElement = this.popupElement;
+    this.forElement.popoverTargetAction = 'toggle';
 
     if (this.isOpen) {
       this.popupElement.showPopover();
