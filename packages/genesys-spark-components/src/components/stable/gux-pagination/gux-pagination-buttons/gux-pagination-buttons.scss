@@ -25,62 +25,17 @@ gux-pagination-buttons {
 
     .gux-pagination-buttons-list-container {
       display: flex;
-      flex-direction: row;
       flex-shrink: 0;
+      flex-direction: row;
       flex-wrap: nowrap;
       gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
       place-content: stretch center;
       align-items: center;
 
-      .gux-pagination-buttons-list-current,
-      .gux-pagination-buttons-list-target {
-        min-width: 28px;
-        min-height: 24px;
-        padding-right: var(--gse-ui-dataTableItems-tablePagination-padding);
-        padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
-        margin: 0;
-        font-family: var(
-          --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
-        );
-        font-size: var(
-          --gse-ui-dataTableItems-tablePagination-defaultText-fontSize
-        );
-        font-weight: var(
-          --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
-        );
-        line-height: var(
-          --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
-        );
-        color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
-        background: inherit;
-        border: none;
-
-        &:focus-visible {
-          border-radius: calc(
-            var(--gse-semantic-focusRing-cornerRadius) - var(
-                --gse-semantic-focusRing-offset
-              )
-          );
-          outline: var(--gse-semantic-focusRing-width) solid
-            var(--gse-semantic-color-focus);
-          outline-offset: var(--gse-semantic-focusRing-offset);
-        }
-      }
-
       .gux-pagination-buttons-list-current {
+        color: var(--gse-ui-button-ghost-active-foregroundColor);
         background-color: var(--gse-ui-button-ghost-active-backgroundColor);
         border-radius: var(--gse-ui-button-borderRadius);
-      }
-
-      .gux-pagination-buttons-list-target {
-        color: var(--gse-ui-button-ghost-default-foregroundColor);
-        cursor: pointer;
-
-        &:hover {
-          color: var(--gse-ui-button-ghost-hover-foregroundColor);
-          background-color: var(--gse-ui-button-ghost-hover-backgroundColor);
-          border-radius: var(--gse-ui-button-borderRadius);
-        }
       }
     }
   }

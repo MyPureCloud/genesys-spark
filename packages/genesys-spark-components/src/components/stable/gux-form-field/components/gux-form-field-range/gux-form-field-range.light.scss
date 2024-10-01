@@ -58,7 +58,7 @@ gux-form-field-range {
     }
 
     &:focus::-webkit-slider-runnable-track {
-      background: lighten(transparent, $contrast);
+      background: transparent;
     }
 
     &::-moz-range-track {
@@ -84,7 +84,7 @@ gux-form-field-range {
     }
 
     &::-ms-fill-lower {
-      background: darken(transparent, $contrast);
+      background: transparent;
     }
 
     &::-ms-fill-upper {
@@ -102,7 +102,7 @@ gux-form-field-range {
     }
 
     &:focus::-ms-fill-upper {
-      background: lighten(transparent, $contrast);
+      background: transparent;
     }
   }
 

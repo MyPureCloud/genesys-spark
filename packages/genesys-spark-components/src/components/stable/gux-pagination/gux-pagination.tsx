@@ -60,6 +60,9 @@ export class GuxPagination implements ComponentInterface {
   @Prop({ mutable: true })
   itemsPerPage: GuxItemsPerPage = 25;
 
+  @Prop()
+  disabled: boolean = false;
+
   /**
    * The total number of pages needed for the the data set.
    */
@@ -199,6 +202,7 @@ export class GuxPagination implements ComponentInterface {
           />
           {this.displayedLayout === 'advanced' && (
             <gux-pagination-items-per-page
+              disabled={this.disabled}
               items-per-page={this.itemsPerPage}
               onInternalitemsperpagechange={this.handleInternalitemsperpagechange.bind(
                 this
@@ -209,6 +213,7 @@ export class GuxPagination implements ComponentInterface {
         <div class="gux-pagination-spacer"></div>
         <div class="gux-pagination-change">
           <gux-pagination-buttons
+            disabled={this.disabled}
             layout={this.displayedLayout}
             current-page={this.currentPage}
             total-pages={this.totalPages}

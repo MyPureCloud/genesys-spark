@@ -1,5 +1,21 @@
+import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
-import { E2EPage } from '@stencil/core/testing';
+
+async function newNonrandomE2EPage({
+  html
+}: {
+  html: string;
+}): Promise<E2EPage> {
+  const page = await newE2EPage();
+
+  await page.evaluateOnNewDocument(() => {
+    Math.random = () => 0.5;
+  });
+  await page.setContent(html);
+  await page.waitForChanges();
+
+  return page;
+}
 
 describe('gux-modal', () => {
   describe('#render', () => {
@@ -120,17 +136,24 @@ describe('gux-modal', () => {
         `
       }
     ].forEach(({ description, html }) => {
-      it(description, async () => {
-        const page = await newSparkE2EPage({ html });
-        const element = await page.find('gux-modal');
+      describe(description, () => {
+        it('snapshot', async () => {
+          const page = await newNonrandomE2EPage({ html });
+          const element = await page.find('gux-modal');
 
-        expect(element.outerHTML).toMatchSnapshot();
+          expect(element.outerHTML).toMatchSnapshot();
 
-        element.setAttribute('hidden', true);
-        await page.waitForChanges();
-        await a11yCheck(page);
+          element.setAttribute('hidden', true);
+          await page.waitForChanges();
 
-        expect(element.outerHTML).toMatchSnapshot();
+          expect(element.outerHTML).toMatchSnapshot();
+        });
+
+        it('accessibility', async () => {
+          const page = await newSparkE2EPage({ html });
+
+          await a11yCheck(page);
+        });
       });
     });
   });
@@ -150,7 +173,7 @@ describe('gux-modal', () => {
           </gux-cta-group>
         </gux-modal>
       `;
-      const page = await newSparkE2EPage({ html });
+      const page = await newNonrandomE2EPage({ html });
       const element = await page.find('gux-modal');
       const openModalButton = await page.find('#openModalButton');
 
@@ -187,7 +210,7 @@ describe('gux-modal', () => {
           </gux-cta-group>
         </gux-modal>
       `;
-      const page = await newSparkE2EPage({ html });
+      const page = await newNonrandomE2EPage({ html });
       const openModalButton = await page.find('#openModalButton');
 
       await openModalButton.click();
@@ -240,7 +263,7 @@ describe('gux-modal', () => {
           </gux-cta-group>
         </gux-modal>
       `;
-      const page = await newSparkE2EPage({ html });
+      const page = await newNonrandomE2EPage({ html });
       await page.click('#openModalButton');
       await page.waitForChanges();
 
@@ -268,7 +291,7 @@ describe('gux-modal', () => {
           </gux-cta-group>
         </gux-modal>
       `;
-      const page = await newSparkE2EPage({ html });
+      const page = await newNonrandomE2EPage({ html });
 
       await page.click('#openModalButton');
       await page.waitForChanges();
@@ -287,7 +310,7 @@ describe('gux-modal', () => {
           <div slot="content">This contains the modal content.</div>
         </gux-modal>
       `;
-      const page = await newSparkE2EPage({ html });
+      const page = await newNonrandomE2EPage({ html });
 
       await page.click('#openModalButton');
       await page.waitForChanges();
@@ -313,7 +336,7 @@ describe('gux-modal', () => {
           </gux-cta-group>
         </gux-modal>
       `;
-      const page = await newSparkE2EPage({ html });
+      const page = await newNonrandomE2EPage({ html });
 
       await page.click('#openModalButton');
       await page.waitForChanges();

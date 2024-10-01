@@ -10,7 +10,8 @@
   padding: var(--gse-ui-toast-margin);
   margin-bottom: var(--gse-ui-toast-stacking-gap);
   border-radius: var(--gse-ui-toast-borderRadius);
-  box-shadow: var(--gse-ui-toast-boxShadow-x) var(--gse-ui-toast-boxShadow-y)
+  box-shadow: var(--gse-ui-toast-boxShadow-x, --gse-ui-toast-boxShadow-offsetX)
+    var(--gse-ui-toast-boxShadow-y, --gse-ui-toast-boxShadow-offsetY)
     var(--gse-ui-toast-boxShadow-blur) var(--gse-ui-toast-boxShadow-spread)
     var(--gse-ui-toast-boxShadow-color);
 
@@ -77,17 +78,25 @@
     }
 
     .gux-buttons-bar {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      gap: var(--gse-ui-toast-buttonBar-gap);
-      justify-content: flex-start;
+      width: 100%;
 
       ::slotted(a) {
-        font-family: var(--gse-ui-link-inLine-medium-underlinedText-fontFamily);
-        font-size: var(--gse-ui-link-inLine-medium-underlinedText-fontSize);
-        font-weight: var(--gse-ui-link-inLine-medium-underlinedText-fontWeight);
-        line-height: var(--gse-ui-link-inLine-medium-underlinedText-lineHeight);
+        font-family: var(
+          --gse-ui-link-inLine-medium-underlinedText-fontFamily,
+          --gse-ui-links-inLine-medium-underlinedText-fontFamily
+        );
+        font-size: var(
+          --gse-ui-link-inLine-medium-underlinedText-fontSize,
+          --gse-ui-links-inLine-medium-underlinedText-fontSize
+        );
+        font-weight: var(
+          --gse-ui-link-inLine-medium-underlinedText-fontWeight,
+          --gse-ui-links-inLine-medium-underlinedText-fontWeight
+        );
+        line-height: var(
+          --gse-ui-link-inLine-medium-underlinedText-lineHeight,
+          --gse-ui-links-inLine-medium-underlinedText-lineHeight
+        );
       }
     }
   }

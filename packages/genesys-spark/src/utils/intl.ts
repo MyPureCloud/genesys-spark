@@ -1,3 +1,5 @@
+import { getClosestElement } from './get-closest-element';
+
 /**
  * Provides an [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
  * object for formatting dates and times. Unlike the native version, `locale` is
@@ -7,7 +9,6 @@
  * @param options options to pass to the Intl.DateTimeFormat constructor
  * @returns a new DateTimeFormat
  */
-import { getClosestElement } from './get-closest-element';
 export function dateTimeFormat(
   localeOrOptions: string | Intl.DateTimeFormatOptions,
   options?: Intl.DateTimeFormatOptions

@@ -19,8 +19,8 @@
   gux-icon {
     flex-shrink: 0;
     align-self: flex-start;
-    width: var(--gse-ui-icon-size-sm);
-    height: var(--gse-ui-icon-size-sm);
+    width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+    height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
     margin-top: 1px;
   }
 

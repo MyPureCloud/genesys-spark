@@ -34,7 +34,7 @@
     font-family: var(--gse-ui-avatar-large-initials-fontFamily);
     font-size: var(--gse-ui-avatar-large-initials-fontSize);
     font-weight: var(--gse-ui-avatar-large-initials-fontWeight);
-    line-height: var(--gse-core-lineHeight-matchFontSize);
+    line-height: 1;
     color: var(--gse-ui-avatar-media-initialsForeground-inverse);
     text-transform: uppercase;
     background-color: var(--gse-ui-avatar-media-initialsBackground-default);
@@ -199,10 +199,6 @@
       background: var(--gse-ui-avatar-presenceRing-busy);
     }
 
-    &.gux-notifications {
-      background: var(--gse-ui-avatar-presenceRing-notifications);
-    }
-
     &.gux-offline {
       background: var(--gse-ui-avatar-presenceRing-offline);
     }
@@ -280,7 +276,10 @@
   &.gux-break,
   &.gux-meal,
   &.gux-training {
-    background-color: var(--gse-ui-avatar-badge-away);
+    background-color: var(
+      --gse-ui-avatar-badge-away,
+      --gse-ui-avatar-badge-away-color
+    );
 
     & gux-icon {
       margin: var(--gse-ui-avatar-badge-away-icon-margin);

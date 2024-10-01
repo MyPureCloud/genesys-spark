@@ -208,6 +208,8 @@
   --gse-ui-tag-accent10-subtle-foregroundColor: #1b2c48;
   --gse-ui-tag-button-size: 16px;
   --gse-ui-tag-disabled-opacity: 0.5;
+  --gse-ui-tag-small-height: 20px;
+  --gse-ui-tag-large-height: 32px;
   --gse-ui-badge-borderRadius: 16px;
   --gse-ui-badge-text-fontFamily: 'Noto Sans';
   --gse-ui-badge-text-fontWeight: 600;
@@ -357,6 +359,10 @@
   --gse-ui-button-default-height: 32px;
   --gse-ui-button-default-padding: 0 12px;
   --gse-ui-button-default-paddingIconOnly: 8px;
+  --gse-ui-button-dismiss-small-height: 24px;
+  --gse-ui-button-dismiss-small-width: 24px;
+  --gse-ui-button-dismiss-medium-height: 32px;
+  --gse-ui-button-dismiss-medium-width: 32px;
   --gse-ui-button-iconOnly-width: 32px;
   --gse-ui-button-icon-size: 16px;
   --gse-ui-button-compact-height: 24px;
@@ -1029,7 +1035,8 @@
   --gse-ui-avatar-badge-available-color: #09b581;
   --gse-ui-avatar-badge-busy-color: #e22245;
   --gse-ui-avatar-badge-busy-icon-margin: 2px;
-  --gse-ui-avatar-badge-away: #f8c73e;
+  --gse-ui-avatar-badge-away-color: #f8c73e;
+  --gse-ui-avatar-badge-away-icon-margin: 2px;
   --gse-ui-avatar-badge-onQueue-color: #4856cb;
   --gse-ui-avatar-badge-offline-color: #626e84;
   --gse-ui-avatar-badge-outOfOffice: #b74ba4;
