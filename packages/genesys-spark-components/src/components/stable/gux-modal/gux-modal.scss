@@ -49,12 +49,12 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       }
 
       &.gux-medium {
-        width: var(--gse-ui-modal-medium-width);
+        width: min(var(--gse-ui-modal-medium-width), 100vw - 48px);
         max-height: min(640px, 100vh - 2 * #{24px});
       }
 
       &.gux-large {
-        width: var(--gse-ui-modal-large-width);
+        width: min(var(--gse-ui-modal-large-width), 100vw - 48px);
         max-height: min(640px, 100vh - 2 * #{24px});
       }
 
