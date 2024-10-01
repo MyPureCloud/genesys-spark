@@ -234,18 +234,15 @@ export class GuxPopover {
       return;
     }
 
-    if (this.for) {
-      this.popupElement.popover = 'manual';
-      this.targetElement = document.getElementById(
-        this.for
-      ) as HTMLInputElement;
-      if (!this.targetElement) {
-        this.logForAttributeError();
-        return;
-      }
-      this.targetElement.popoverTargetElement = this.popupElement;
-      this.targetElement.popoverTargetAction = 'toggle';
+    this.popupElement.popover = 'manual';
+    this.targetElement = document.getElementById(this.for) as HTMLInputElement;
+
+    if (!this.targetElement) {
+      this.logForAttributeError();
+      return;
     }
+    this.targetElement.popoverTargetElement = this.popupElement;
+    this.targetElement.popoverTargetAction = 'toggle';
 
     if (this.isOpen) {
       this.popupElement.showPopover();
