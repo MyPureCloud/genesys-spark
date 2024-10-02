@@ -40,7 +40,7 @@ button {
   &:focus-visible:not(:disabled) {
     border-radius: var(
       --gse-semantic-focusRing-cornerRadius,
-      --gse-semantic-focusOutline-sm-borderRadius
+      var(--gse-semantic-focusOutline-sm-borderRadius)
     );
     outline: var(--gse-ui-menu-option-focus-border-width)
       var(--gse-ui-menu-option-focus-border-style)

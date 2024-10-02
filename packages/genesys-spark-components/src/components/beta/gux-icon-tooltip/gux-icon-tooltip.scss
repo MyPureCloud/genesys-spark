@@ -13,7 +13,7 @@
   & gux-icon {
     color: var(
       --gse-ui-formControl-label-tooltipTrigger-optionalColor,
-      --gse-ui-formControl-label-tooltipTrigger-color
+      var(--gse-ui-formControl-label-tooltipTrigger-color)
     );
     vertical-align: bottom;
   }

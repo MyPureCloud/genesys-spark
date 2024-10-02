@@ -9,7 +9,7 @@
   background: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
   border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
   // TODO: Get box-shadow token working instead of hardcoding
-  // box-shadow: var(--gse-ui-calendarMenu-boxShadow-color)px var(--gse-ui-calendarMenu-boxShadow-x, --gse-ui-calendarMenu-boxShadow-offsetX)px var(--gse-ui-calendarMenu-boxShadow-y, --gse-ui-calendarMenu-boxShadow-offsetY)px var(--gse-ui-calendarMenu-boxShadow-blur)px var(----gse-ui-calendarMenu-boxShadow-spread)px;
+  // box-shadow: var(--gse-ui-calendarMenu-boxShadow-color)px var(--gse-ui-calendarMenu-boxShadow-x, var(--gse-ui-calendarMenu-boxShadow-offsetX))px var(--gse-ui-calendarMenu-boxShadow-y, var(--gse-ui-calendarMenu-boxShadow-offsetY))px var(--gse-ui-calendarMenu-boxShadow-blur)px var(----gse-ui-calendarMenu-boxShadow-spread)px;
   box-shadow: rgb(34 37 41 / 24%) 0 2px 4px;
 
   .gux-header {
@@ -134,12 +134,12 @@
         border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
         outline: var(
             --gse-semantic-focusRing-default-border-width,
-            --gse-semantic-focusOutline-md-borderWidth
+            var(--gse-semantic-focusOutline-md-borderWidth)
           )
           solid
           var(
             --gse-semantic-focusRing-default-border-color,
-            --gse-semantic-border-focus
+            var(--gse-semantic-border-focus)
           );
       }
 

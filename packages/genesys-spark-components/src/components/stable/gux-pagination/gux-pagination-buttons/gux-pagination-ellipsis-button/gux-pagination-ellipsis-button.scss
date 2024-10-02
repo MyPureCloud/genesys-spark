@@ -1,7 +1,7 @@
 gux-button {
   gux-icon {
-    width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
-    height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+    width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+    height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
     padding-top: 4px;
   }
 }

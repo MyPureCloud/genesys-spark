@@ -150,7 +150,7 @@ gux-table {
 th:not([data-cell-action]):not([data-cell-numeric]):has(> gux-sort-control) {
   padding-right: calc(
     2 * var(--gse-ui-dataTableItems-header-gap) +
-      var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size)
+      var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size))
   ) !important;
 }
 
@@ -158,6 +158,6 @@ th[data-cell-numeric]:has(> gux-sort-control),
 th[data-cell-action]:has(> gux-sort-control) {
   padding-left: calc(
     2 * var(--gse-ui-dataTableItems-header-gap) +
-      var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size) + 2px
+      var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size)) + 2px
   ) !important;
 }

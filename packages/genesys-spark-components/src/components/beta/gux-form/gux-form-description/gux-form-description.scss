@@ -2,22 +2,22 @@
   margin: 0 !important;
   font-family: var(
     --gse-semantic-forms-paragraph-text-fontFamily,
-    --gse-semantic-body-sm-regular-fontFamily
+    var(--gse-semantic-body-sm-regular-fontFamily)
   ) !important;
   font-size: var(
     --gse-semantic-forms-paragraph-text-fontSize,
-    --gse-semantic-body-sm-regular-fontSize
+    var(--gse-semantic-body-sm-regular-fontSize)
   ) !important;
   font-weight: var(
     --gse-semantic-forms-paragraph-text-fontWeight,
-    --gse-semantic-body-sm-regular-fontWeight
+    var(--gse-semantic-body-sm-regular-fontWeight)
   ) !important;
   line-height: var(
     --gse-semantic-forms-paragraph-text-lineHeight,
-    --gse-semantic-body-sm-regular-lineHeight
+    var(--gse-semantic-body-sm-regular-lineHeight)
   ) !important;
   color: var(
     --gse-semantic-forms-paragraph-foregroundColor,
-    --gse-semantic-foreground-container-midEmphasis
+    var(--gse-semantic-foreground-container-midEmphasis)
   ) !important;
 }

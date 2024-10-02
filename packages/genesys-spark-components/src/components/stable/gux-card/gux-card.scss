@@ -24,11 +24,11 @@
       var(--gse-ui-card-raised-border-color);
     box-shadow: var(
         --gse-ui-card-raised-boxShadow-x,
-        --gse-ui-card-raised-boxShadow-offsetX
+        var(--gse-ui-card-raised-boxShadow-offsetX)
       )
       var(
         --gse-ui-card-raised-boxShadow-y,
-        --gse-ui-card-raised-boxShadow-offsetY
+        var(--gse-ui-card-raised-boxShadow-offsetY)
       )
       var(--gse-ui-card-raised-boxShadow-blur)
       var(--gse-ui-card-raised-boxShadow-spread)

@@ -2,22 +2,22 @@
   margin: 0;
   font-family: var(
     --gse-semantic-forms-fieldset-header-text-fontFamily,
-    --gse-semantic-heading-md-bold-fontFamily
+    var(--gse-semantic-heading-md-bold-fontFamily)
   ) !important;
   font-size: var(
     --gse-semantic-forms-fieldset-header-text-fontSize,
-    --gse-semantic-heading-md-bold-fontSize
+    var(--gse-semantic-heading-md-bold-fontSize)
   ) !important;
   font-weight: var(
     --gse-semantic-forms-fieldset-header-text-fontWeight,
-    --gse-semantic-heading-md-bold-fontWeight
+    var(--gse-semantic-heading-md-bold-fontWeight)
   ) !important;
   line-height: var(
     --gse-semantic-forms-fieldset-header-text-lineHeight,
-    --gse-semantic-heading-md-bold-lineHeight
+    var(--gse-semantic-heading-md-bold-lineHeight)
   ) !important;
   color: var(
     --gse-semantic-forms-fieldset-header-foregroundColor,
-    --gse-semantic-foreground-container-highEmphasis
+    var(--gse-semantic-foreground-container-highEmphasis)
   ) !important;
 }

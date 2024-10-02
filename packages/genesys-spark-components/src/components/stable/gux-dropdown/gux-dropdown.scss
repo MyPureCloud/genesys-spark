@@ -4,7 +4,7 @@
     var(--gse-ui-formControl-input-focus-border-color);
   outline-offset: var(
     --gse-semantic-focusRing-offset,
-    --gse-semantic-focusOutline-offset
+    var(--gse-semantic-focusOutline-offset)
   );
 }
 
@@ -195,8 +195,11 @@
 
 ::slotted(gux-listbox) {
   outline: none;
-  box-shadow: var(--gse-ui-menu-boxShadow-x, --gse-ui-menu-boxShadow-offsetX)
-    var(--gse-ui-menu-boxShadow-y, --gse-ui-menu-boxShadow-offsetY)
+  box-shadow: var(
+      --gse-ui-menu-boxShadow-x,
+      var(--gse-ui-menu-boxShadow-offsetX)
+    )
+    var(--gse-ui-menu-boxShadow-y, var(--gse-ui-menu-boxShadow-offsetY))
     var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
     var(--gse-ui-menu-boxShadow-color);
 }

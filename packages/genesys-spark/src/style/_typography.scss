@@ -8,127 +8,148 @@
 @mixin _heading-xl {
   font-family: var(
       --gse-core-typography-heading-xl-fontFamily,
-      --gse-semantic-heading-xl-bold-fontFamily
+      var(--gse-semantic-heading-xl-bold-fontFamily)
     ),
-    var(--gse-core-fontFamily-heading, --gse-semantic-theme-fontFamily-headings),
+    var(
+      --gse-core-fontFamily-heading,
+      var(--gse-semantic-theme-fontFamily-headings)
+    ),
     sans-serif;
   font-size: var(
     --gse-core-typography-heading-xl-fontSize,
-    --gse-semantic-heading-xl-bold-fontSize
+    var(--gse-semantic-heading-xl-bold-fontSize)
   );
   line-height: var(
     --gse-core-typography-heading-xl-lineHeight,
-    --gse-semantic-heading-xl-bold-lineHeight
+    var(--gse-semantic-heading-xl-bold-lineHeight)
   );
 }
 
 @mixin _heading-lg {
   font-family: var(
       --gse-core-typography-heading-lg-fontFamily,
-      --gse-semantic-heading-lg-bold-fontFamily
+      var(--gse-semantic-heading-lg-bold-fontFamily)
     ),
-    var(--gse-core-fontFamily-heading, --gse-semantic-theme-fontFamily-headings),
+    var(
+      --gse-core-fontFamily-heading,
+      var(--gse-semantic-theme-fontFamily-headings)
+    ),
     sans-serif;
   font-size: var(
     --gse-core-typography-heading-lg-fontSize,
-    --gse-semantic-heading-lg-bold-fontSize
+    var(--gse-semantic-heading-lg-bold-fontSize)
   );
   line-height: var(
     --gse-core-typography-heading-lg-lineHeight,
-    --gse-semantic-heading-lg-bold-lineHeight
+    var(--gse-semantic-heading-lg-bold-lineHeight)
   );
 }
 
 @mixin _heading-md {
   font-family: var(
       --gse-core-typography-heading-md-fontFamily,
-      --gse-semantic-heading-md-bold-fontFamily
+      var(--gse-semantic-heading-md-bold-fontFamily)
     ),
-    var(--gse-core-fontFamily-heading, --gse-semantic-theme-fontFamily-headings),
+    var(
+      --gse-core-fontFamily-heading,
+      var(--gse-semantic-theme-fontFamily-headings)
+    ),
     sans-serif;
   font-size: var(
     --gse-core-typography-heading-md-fontSize,
-    --gse-semantic-heading-md-bold-fontSize
+    var(--gse-semantic-heading-md-bold-fontSize)
   );
   line-height: var(
     --gse-core-typography-heading-md-lineHeight,
-    --gse-semantic-heading-md-bold-lineHeight
+    var(--gse-semantic-heading-md-bold-lineHeight)
   );
 }
 
 @mixin _heading-sm {
   font-family: var(
       --gse-core-typography-heading-sm-fontFamily,
-      --gse-semantic-heading-sm-bold-fontFamily
+      var(--gse-semantic-heading-sm-bold-fontFamily)
     ),
-    var(--gse-core-fontFamily-heading, --gse-semantic-theme-fontFamily-headings),
+    var(
+      --gse-core-fontFamily-heading,
+      var(--gse-semantic-theme-fontFamily-headings)
+    ),
     sans-serif;
   font-size: var(
     --gse-core-typography-heading-sm-fontSize,
-    --gse-semantic-heading-sm-bold-fontSize
+    var(--gse-semantic-heading-sm-bold-fontSize)
   );
   line-height: var(
     --gse-core-typography-heading-sm-lineHeight,
-    --gse-semantic-heading-sm-bold-lineHeight
+    var(--gse-semantic-heading-sm-bold-lineHeight)
   );
 }
 
 @mixin _heading-xs {
   font-family: var(
       --gse-core-typography-heading-xs-fontFamily,
-      --gse-semantic-heading-xs-bold-fontFamily
+      var(--gse-semantic-heading-xs-bold-fontFamily)
     ),
-    var(--gse-core-fontFamily-heading, --gse-semantic-theme-fontFamily-headings),
+    var(
+      --gse-core-fontFamily-heading,
+      var(--gse-semantic-theme-fontFamily-headings)
+    ),
     sans-serif;
   font-size: var(
     --gse-core-typography-heading-xs-fontSize,
-    --gse-semantic-heading-xs-bold-fontSize
+    var(--gse-semantic-heading-xs-bold-fontSize)
   );
   line-height: var(
     --gse-core-typography-heading-xs-lineHeight,
-    --gse-semantic-heading-xs-bold-lineHeight
+    var(--gse-semantic-heading-xs-bold-lineHeight)
   );
 }
 
 @mixin _heading-subheading {
   font-family: var(
       --gse-core-typography-subheading-fontFamily,
-      --gse-semantic-subheading-regular-fontFamily
+      var(--gse-semantic-subheading-regular-fontFamily)
     ),
-    var(--gse-core-fontFamily-heading, --gse-semantic-theme-fontFamily-headings),
+    var(
+      --gse-core-fontFamily-heading,
+      var(--gse-semantic-theme-fontFamily-headings)
+    ),
     sans-serif;
   font-size: var(
     --gse-core-typography-subheading-fontSize,
-    --gse-semantic-subheading-regular-fontSize
+    var(--gse-semantic-subheading-regular-fontSize)
   );
   line-height: var(
     --gse-core-typography-subheading-lineHeight,
-    --gse-semantic-subheading-regular-lineHeight
+    var(--gse-semantic-subheading-regular-lineHeight)
   );
 }
 
 @mixin _heading-overline {
   font-family: var(
       --gse-core-typography-heading-overline-fontFamily,
-      --gse-semantic-heading-overline-fontFamily
+      var(--gse-semantic-heading-overline-fontFamily)
     ),
-    var(--gse-core-fontFamily-heading, --gse-semantic-theme-fontFamily-headings),
+    var(
+      --gse-core-fontFamily-heading,
+      var(--gse-semantic-theme-fontFamily-headings)
+    ),
     sans-serif;
   font-size: var(
     --gse-core-typography-heading-overline-fontSize,
-    --gse-semantic-heading-overline-fontSize
+    var(--gse-semantic-heading-overline-fontSize)
   );
   line-height: var(
     --gse-core-typography-heading-overline-lineHeight,
-    --gse-semantic-heading-overline-lineHeight
+    var(--gse-semantic-heading-overline-lineHeight)
   );
   text-transform: var(
     --gse-core-typography-heading-overline-textCase,
-    --gse-semantic-heading-overline-textCase
+    var(--gse-semantic-heading-overline-textCase)
   );
   letter-spacing: var(
     --gse-core-typography-heading-overline-letterSpacing,
-    --gse-semantic-heading-overline-letterSpacing
+    var(--gse-semantic-heading-overline-letterSpacing)
   );
 }
 
@@ -137,7 +158,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-bold,
-    --gse-semantic-heading-xl-bold-fontWeight
+    var(--gse-semantic-heading-xl-bold-fontWeight)
   );
 }
 
@@ -146,7 +167,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-semiBold,
-    --gse-semantic-heading-lg-semiBold-fontWeight
+    var(--gse-semantic-heading-lg-semiBold-fontWeight)
   );
 }
 
@@ -159,7 +180,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-bold,
-    --gse-semantic-heading-lg-bold-fontWeight
+    var(--gse-semantic-heading-lg-bold-fontWeight)
   );
 }
 
@@ -168,7 +189,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-semiBold,
-    --gse-semantic-heading-lg-semiBold-fontWeight
+    var(--gse-semantic-heading-lg-semiBold-fontWeight)
   );
 }
 
@@ -181,15 +202,17 @@
 
   font-weight: var(
     --gse-core-fontWeight-bold,
-    --gse-semantic-heading-md-bold-fontWeight
+    var(--gse-semantic-heading-md-bold-fontWeight)
   );
 }
 
 @mixin heading-md-semiBold {
   @include _heading-md;
 
-  font-weight: var(--gse-core-fontWeight-semiBold),
-    --gse-semantic-heading-md-semibold-fontweight;
+  font-weight: var(
+    --gse-core-fontWeight-semiBold,
+    var(--gse-semantic-heading-md-semiBold-fontWeight)
+  );
 }
 
 @mixin heading-md {
@@ -201,7 +224,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-bold,
-    --gse-semantic-heading-sm-bold-fontWeight
+    var(--gse-semantic-heading-sm-bold-fontWeight)
   );
 }
 
@@ -210,7 +233,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-semiBold,
-    --gse-semantic-heading-sm-semiBold-fontWeight
+    var(--gse-semantic-heading-sm-semiBold-fontWeight)
   );
 }
 
@@ -223,7 +246,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-bold,
-    --gse-semantic-heading-xs-bold-fontWeight
+    var(--gse-semantic-heading-xs-bold-fontWeight)
   );
 }
 
@@ -232,7 +255,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-semiBold,
-    --gse-semantic-heading-xs-semiBold-fontWeight
+    var(--gse-semantic-heading-xs-semiBold-fontWeight)
   );
 }
 
@@ -245,7 +268,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-bold,
-    --gse-semantic-subheading-bold-fontWeight
+    var(--gse-semantic-subheading-bold-fontWeight)
   );
 }
 
@@ -254,7 +277,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-semiBold,
-    --gse-semantic-subheading-semiBold-fontWeight
+    var(--gse-semantic-subheading-semiBold-fontWeight)
   );
 }
 
@@ -263,7 +286,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-regular,
-    --gse-semantic-subheading-regular-fontWeight
+    var(--gse-semantic-subheading-regular-fontWeight)
   );
 }
 
@@ -276,7 +299,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-regular,
-    --gse-semantic-heading-overline-fontWeight
+    var(--gse-semantic-heading-overline-fontWeight)
   ); //TODO token for this is wrong
 }
 
@@ -284,51 +307,51 @@
 @mixin _body-lg {
   font-family: var(
       --gse-core-typography-body-lg-fontFamily,
-      --gse-semantic-body-lg-regular-fontFamily
+      var(--gse-semantic-body-lg-regular-fontFamily)
     ),
-    var(--gse-core-fontFamily-body, --gse-semantic-theme-fontFamily-body),
+    var(--gse-core-fontFamily-body, var(--gse-semantic-theme-fontFamily-body)),
     sans-serif;
   font-size: var(
     --gse-core-typography-body-lg-fontSize,
-    --gse-semantic-body-lg-regular-fontSize
+    var(--gse-semantic-body-lg-regular-fontSize)
   );
   line-height: var(
     --gse-core-typography-body-lg-lineHeight,
-    --gse-semantic-body-lg-regular-lineHeight
+    var(--gse-semantic-body-lg-regular-lineHeight)
   );
 }
 
 @mixin _body-md {
   font-family: var(
       --gse-core-typography-body-md-fontFamily,
-      --gse-semantic-body-md-regular-fontFamily
+      var(--gse-semantic-body-md-regular-fontFamily)
     ),
-    var(--gse-core-fontFamily-body, --gse-semantic-theme-fontFamily-body),
+    var(--gse-core-fontFamily-body, var(--gse-semantic-theme-fontFamily-body)),
     sans-serif;
   font-size: var(
     --gse-core-typography-body-md-fontSize,
-    --gse-semantic-body-md-regular-fontSize
+    var(--gse-semantic-body-md-regular-fontSize)
   );
   line-height: var(
     --gse-core-typography-body-md-lineHeight,
-    --gse-semantic-body-md-regular-lineHeight
+    var(--gse-semantic-body-md-regular-lineHeight)
   );
 }
 
 @mixin _body-sm {
   font-family: var(
       --gse-core-typography-body-sm-fontFamily,
-      --gse-semantic-body-sm-regular-fontFamily
+      var(--gse-semantic-body-sm-regular-fontFamily)
     ),
-    var(--gse-core-fontFamily-body, --gse-semantic-theme-fontFamily-body),
+    var(--gse-core-fontFamily-body, var(--gse-semantic-theme-fontFamily-body)),
     sans-serif;
   font-size: var(
     --gse-core-typography-body-sm-fontSize,
-    --gse-semantic-body-sm-regular-fontSize
+    var(--gse-semantic-body-sm-regular-fontSize)
   );
   line-height: var(
     --gse-core-typography-body-sm-lineHeight,
-    --gse-semantic-body-sm-regular-lineHeight
+    var(--gse-semantic-body-sm-regular-lineHeight)
   );
 }
 
@@ -337,7 +360,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-regular,
-    --gse-semantic-body-lg-regular-fontWeight
+    var(--gse-semantic-body-lg-regular-fontWeight)
   );
 }
 
@@ -346,7 +369,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-semiBold,
-    --gse-semantic-body-lg-semiBold-fontWeight
+    var(--gse-semantic-body-lg-semiBold-fontWeight)
   );
 }
 
@@ -355,7 +378,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-bold,
-    --gse-semantic-body-lg-bold-fontWeight
+    var(--gse-semantic-body-lg-bold-fontWeight)
   );
 }
 
@@ -364,7 +387,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-regular,
-    --gse-semantic-body-md-regular-fontWeight
+    var(--gse-semantic-body-md-regular-fontWeight)
   );
 }
 
@@ -373,15 +396,17 @@
 
   font-weight: var(
     --gse-core-fontWeight-semiBold,
-    --gse-semantic-body-md-semiBold-fontWeight
+    var(--gse-semantic-body-md-semiBold-fontWeight)
   );
 }
 
 @mixin body-md-bold {
   @include _body-md;
 
-  font-weight: var(--gse-core-fontWeight-bold),
-    --gse-semantic-body-md-bold-fontweight;
+  font-weight: var(
+    --gse-core-fontWeight-bold,
+    var(--gse-semantic-body-md-bold-fontWeight)
+  );
 }
 
 @mixin body-sm-regular {
@@ -389,7 +414,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-regular,
-    --gse-semantic-body-sm-regular-fontWeight
+    var(--gse-semantic-body-sm-regular-fontWeight)
   );
 }
 
@@ -398,7 +423,7 @@
 
   font-weight: var(
     --gse-core-fontWeight-semiBold,
-    --gse-semantic-body-sm-semiBold-fontWeight
+    var(--gse-semantic-body-sm-semiBold-fontWeight)
   );
 }
 
@@ -407,79 +432,79 @@
 
   font-weight: var(
     --gse-core-fontWeight-bold,
-    --gse-semantic-body-sm-bold-fontWeight
+    var(--gse-semantic-body-sm-bold-fontWeight)
   );
 }
 
 @mixin ui-button {
   font-family: var(
       --gse-core-typography-body-md-fontFamily,
-      --gse-semantic-body-md-regular-fontFamily
+      var(--gse-semantic-body-md-regular-fontFamily)
     ),
-    var(--gse-core-fontFamily-body, --gse-semantic-theme-fontFamily-body),
+    var(--gse-core-fontFamily-body, var(--gse-semantic-theme-fontFamily-body)),
     sans-serif;
   font-size: var(
     --gse-core-typography-body-md-fontSize,
-    --gse-semantic-body-md-regular-fontSize
+    var(--gse-semantic-body-md-regular-fontSize)
   );
   font-weight: var(--gse-core-fontWeight-semiBold);
   line-height: var(
     --gse-core-typography-body-md-lineHeight,
-    --gse-semantic-body-md-regular-lineHeight
+    var(--gse-semantic-body-md-regular-lineHeight)
   );
 }
 
 @mixin ui-link {
   font-family: var(
       --gse-core-typography-body-md-fontFamily,
-      --gse-semantic-body-md-regular-fontFamily
+      var(--gse-semantic-body-md-regular-fontFamily)
     ),
-    var(--gse-core-fontFamily-body, --gse-semantic-theme-fontFamily-body),
+    var(--gse-core-fontFamily-body, var(--gse-semantic-theme-fontFamily-body)),
     sans-serif;
   font-size: var(
     --gse-core-typography-body-md-fontSize,
-    --gse-semantic-body-md-regular-fontSize
+    var(--gse-semantic-body-md-regular-fontSize)
   );
   font-weight: var(--gse-core-fontWeight-regular);
   line-height: var(
     --gse-core-typography-body-md-lineHeight,
-    --gse-semantic-body-md-regular-lineHeight
+    var(--gse-semantic-body-md-regular-lineHeight)
   );
 }
 
 @mixin ui-label {
   font-family: var(
       --gse-core-typography-body-sm-fontFamily,
-      --gse-semantic-body-sm-regular-fontFamily
+      var(--gse-semantic-body-sm-regular-fontFamily)
     ),
-    var(--gse-core-fontFamily-body, --gse-semantic-theme-fontFamily-body),
+    var(--gse-core-fontFamily-body, var(--gse-semantic-theme-fontFamily-body)),
     sans-serif;
   font-size: var(
     --gse-core-typography-body-sm-fontSize,
-    --gse-semantic-body-sm-regular-fontSize
+    var(--gse-semantic-body-sm-regular-fontSize)
   );
   font-weight: var(--gse-core-fontWeight-bold);
   line-height: var(
     --gse-core-typography-body-sm-lineHeight,
-    --gse-semantic-body-sm-regular-lineHeight
+    var(--gse-semantic-body-sm-regular-lineHeight)
   );
 }
 
 @mixin ui-placeholder {
   font-family: var(
       --gse-core-typography-body-sm-fontFamily,
-      --gse-semantic-body-sm-regular-fontFamily
+      var(--gse-semantic-body-sm-regular-fontFamily)
     ),
-    var(--gse-core-fontFamily-body, --gse-semantic-theme-fontFamily-body),
+    var(--gse-core-fontFamily-body, var(--gse-semantic-theme-fontFamily-body)),
     sans-serif;
   font-size: var(
     --gse-core-typography-body-sm-fontSize,
-    --gse-semantic-body-sm-regular-fontSize
+    var(--gse-semantic-body-sm-regular-fontSize)
   );
   font-weight: var(--gse-core-fontWeight-regular);
   line-height: var(
     --gse-core-typography-body-sm-lineHeight,
-    --gse-semantic-body-sm-regular-lineHeight
+    var(--gse-semantic-body-sm-regular-lineHeight)
   );
 }
 
@@ -487,7 +512,7 @@
 @mixin ui-anchor {
   color: var(
     --gse-ui-link-default-foregroundColor,
-    --gse-ui-links-default-foregroundColor
+    var(--gse-ui-links-default-foregroundColor)
   );
   text-decoration: underline;
   border-radius: var(--gse-ui-links-borderRadius);
@@ -495,21 +520,21 @@
   &:hover {
     color: var(
       --gse-ui-link-hover-foregroundColor,
-      --gse-ui-links-hover-foregroundColor
+      var(--gse-ui-links-hover-foregroundColor)
     );
   }
 
   &:active {
     color: var(
       --gse-ui-link-active-foregroundColor,
-      --gse-ui-links-active-foregroundColor
+      var(--gse-ui-links-active-foregroundColor)
     );
   }
 
   &:visited {
     color: var(
       --gse-ui-link-visited-foregroundColor,
-      --gse-ui-links-visited-foregroundColor
+      var(--gse-ui-links-visited-foregroundColor)
     );
   }
 

@@ -73,7 +73,7 @@
         var(--gse-ui-formControl-input-focus-border-color);
       outline-offset: var(
         --gse-semantic-focusRing-offset,
-        --gse-semantic-focusOutline-offset
+        var(--gse-semantic-focusOutline-offset)
       );
     }
 

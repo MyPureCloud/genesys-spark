@@ -15,12 +15,12 @@
 :host(:focus-visible) {
   outline: var(
       --gse-semantic-focusRing-width,
-      --gse-semantic-focusOutline-md-borderWidth
+      var(--gse-semantic-focusOutline-md-borderWidth)
     )
-    solid var(--gse-semantic-color-focus, --gse-ui-color-focus);
+    solid var(--gse-semantic-color-focus, var(--gse-ui-color-focus));
   outline-offset: var(
     --gse-semantic-focusRing-offset,
-    --gse-semantic-focusOutline-offset
+    var(--gse-semantic-focusOutline-offset)
   );
 }
 

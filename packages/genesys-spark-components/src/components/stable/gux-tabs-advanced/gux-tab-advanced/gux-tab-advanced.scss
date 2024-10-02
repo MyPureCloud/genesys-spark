@@ -68,7 +68,7 @@ gux-tab-advanced {
 
           border-radius: var(--gse-ui-advancedTabs-item-focus-borderRadius);
           outline-offset: calc(
-            -1 * var(--gse-semantic-focusRing-default-border-width, --gse-semantic-focusOutline-md-borderWidth)
+            -1 * var(--gse-semantic-focusRing-default-border-width, var(--gse-semantic-focusOutline-md-borderWidth))
           );
         }
 
@@ -86,8 +86,8 @@ gux-tab-advanced {
     .gux-tab-options {
       .gux-tab-options-trigger {
         gux-icon {
-          width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
-          height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+          width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+          height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
         }
       }
 

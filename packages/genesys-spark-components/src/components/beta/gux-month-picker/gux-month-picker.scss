@@ -23,7 +23,7 @@
       var(--gse-ui-formControl-input-focus-border-color);
     outline-offset: var(
       --gse-semantic-focusRing-offset,
-      --gse-semantic-focusOutline-offset
+      var(--gse-semantic-focusOutline-offset)
     );
   }
 
@@ -66,7 +66,7 @@
         var(--gse-ui-monthPicker-calendarStates-focus-border-color);
       outline-offset: var(
         --gse-semantic-focusRing-offset,
-        --gse-semantic-focusOutline-offset
+        var(--gse-semantic-focusOutline-offset)
       );
     }
 
@@ -85,8 +85,8 @@
     }
 
     gux-icon {
-      width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
-      height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+      width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+      height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
     }
 
     &.gux-expanded {

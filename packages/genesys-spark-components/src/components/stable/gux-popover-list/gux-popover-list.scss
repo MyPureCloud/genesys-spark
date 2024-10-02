@@ -9,9 +9,9 @@
   border-radius: var(--gse-ui-popover-borderRadius);
   box-shadow: var(
       --gse-ui-popover-boxShadow-x,
-      --gse-ui-popover-boxShadow-offsetX
+      var(--gse-ui-popover-boxShadow-offsetX)
     )
-    var(--gse-ui-popover-boxShadow-y, --gse-ui-popover-boxShadow-offsetY)
+    var(--gse-ui-popover-boxShadow-y, var(--gse-ui-popover-boxShadow-offsetY))
     var(--gse-ui-popover-boxShadow-blur) var(--gse-ui-popover-boxShadow-spread)
     var(--gse-ui-tooltip-boxShadow-color);
 

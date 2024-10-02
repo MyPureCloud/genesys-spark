@@ -2,7 +2,7 @@ gux-form-beta {
   form {
     max-width: var(
       --gse-semantic-forms-maxWidth,
-      --gse-semantic-formControl-form-maxWidth
+      var(--gse-semantic-formControl-form-maxWidth)
     );
 
     header {
@@ -10,11 +10,11 @@ gux-form-beta {
       flex-direction: column;
       gap: var(
         --gse-semantic-forms-formHeader-gap,
-        --gse-semantic-formControl-formHeader-gap
+        var(--gse-semantic-formControl-formHeader-gap)
       );
       padding-bottom: var(
         --gse-semantic-forms-formHeader-paddingBottom,
-        --gse-semantic-formControl-fieldset-header-paddingBottom
+        var(--gse-semantic-formControl-fieldset-header-paddingBottom)
       );
       text-align: left;
 
@@ -22,23 +22,23 @@ gux-form-beta {
         margin: 0;
         font-family: var(
           --gse-semantic-forms-formHeader-text-fontFamily,
-          --gse-semantic-body-lg-semiBold-fontFamily
+          var(--gse-semantic-body-lg-semiBold-fontFamily)
         ) !important;
         font-size: var(
           --gse-semantic-forms-formHeader-text-fontSize,
-          --gse-semantic-body-lg-semiBold-fontSize
+          var(--gse-semantic-body-lg-semiBold-fontSize)
         ) !important;
         font-weight: var(
           --gse-semantic-forms-formHeader-text-fontWeight,
-          --gse-semantic-body-lg-semiBold-fontWeight
+          var(--gse-semantic-body-lg-semiBold-fontWeight)
         ) !important;
         line-height: var(
           --gse-semantic-forms-formHeader-text-lineHeight,
-          --gse-semantic-body-lg-semiBold-lineHeight
+          var(--gse-semantic-body-lg-semiBold-lineHeight)
         ) !important;
         color: var(
           --gse-semantic-forms-formHeader-foregroundColor,
-          --gse-semantic-foreground-container-highEmphasis
+          var(--gse-semantic-foreground-container-highEmphasis)
         ) !important;
       }
     }
@@ -47,23 +47,23 @@ gux-form-beta {
       margin: 0 !important;
       font-family: var(
         --gse-semantic-forms-paragraph-text-fontFamily,
-        --gse-semantic-body-sm-regular-fontFamily
+        var(--gse-semantic-body-sm-regular-fontFamily)
       ) !important;
       font-size: var(
         --gse-semantic-forms-paragraph-text-fontSize,
-        --gse-semantic-body-sm-regular-fontSize
+        var(--gse-semantic-body-sm-regular-fontSize)
       ) !important;
       font-weight: var(
         --gse-semantic-forms-paragraph-text-fontWeight,
-        --gse-semantic-body-sm-regular-fontWeight
+        var(--gse-semantic-body-sm-regular-fontWeight)
       ) !important;
       line-height: var(
         --gse-semantic-forms-paragraph-text-lineHeight,
-        --gse-semantic-body-sm-regular-lineHeight
+        var(--gse-semantic-body-sm-regular-lineHeight)
       ) !important;
       color: var(
         --gse-semantic-forms-paragraph-foregroundColor,
-        --gse-semantic-foreground-container-midEmphasis
+        var(--gse-semantic-foreground-container-midEmphasis)
       ) !important;
     }
 
@@ -73,7 +73,7 @@ gux-form-beta {
       flex-direction: column;
       gap: var(
         --gse-semantic-forms-formControl-gap,
-        --gse-semantic-formControl-formBody-gap
+        var(--gse-semantic-formControl-formBody-gap)
       );
 
       legend {
@@ -81,12 +81,12 @@ gux-form-beta {
         flex-direction: column;
         gap: var(
           --gse-semantic-forms-fieldset-header-gap,
-          --gse-semantic-formControl-fieldset-header-gap
+          var(--gse-semantic-formControl-fieldset-header-gap)
         );
         padding-right: 0;
         padding-bottom: var(
           --gse-semantic-forms-fieldset-header-paddingBottom,
-          --gse-semantic-formControl-fieldset-paddingBottom
+          var(--gse-semantic-formControl-fieldset-paddingBottom)
         );
         padding-left: 0;
         text-align: left;
@@ -95,23 +95,23 @@ gux-form-beta {
           margin: 0;
           font-family: var(
             --gse-semantic-forms-fieldset-header-text-fontFamily,
-            --gse-semantic-heading-md-bold-fontFamily
+            var(--gse-semantic-heading-md-bold-fontFamily)
           ) !important;
           font-size: var(
             --gse-semantic-forms-fieldset-header-text-fontSize,
-            --gse-semantic-heading-md-bold-fontSize
+            var(--gse-semantic-heading-md-bold-fontSize)
           ) !important;
           font-weight: var(
             --gse-semantic-forms-fieldset-header-text-fontWeight,
-            --gse-semantic-heading-md-bold-fontWeight
+            var(--gse-semantic-heading-md-bold-fontWeight)
           ) !important;
           line-height: var(
             --gse-semantic-forms-fieldset-header-text-lineHeight,
-            --gse-semantic-heading-md-bold-lineHeight
+            var(--gse-semantic-heading-md-bold-lineHeight)
           ) !important;
           color: var(
             --gse-semantic-forms-fieldset-header-foregroundColor,
-            --gse-semantic-foreground-container-highEmphasis
+            var(--gse-semantic-foreground-container-highEmphasis)
           ) !important;
         }
       }
@@ -121,7 +121,7 @@ gux-form-beta {
     fieldset:not(:has(+ gux-form-footer)) {
       padding-bottom: var(
         --gse-semantic-forms-fieldset-paddingBottom,
-        --gse-semantic-formControl-fieldset-paddingBottom
+        var(--gse-semantic-formControl-fieldset-paddingBottom)
       );
     }
 
@@ -129,7 +129,7 @@ gux-form-beta {
     > *:not(fieldset):not(gux-form-footer):not(header + *):not(fieldset + *) {
       margin-top: var(
         --gse-semantic-forms-formControl-gap,
-        --gse-semantic-formControl-formBody-gap
+        var(--gse-semantic-formControl-formBody-gap)
       );
     }
   }
@@ -138,11 +138,11 @@ gux-form-beta {
   form > *:not(gux-form-footer) {
     padding-right: var(
       --gse-semantic-forms-margin,
-      --gse-semantic-formControl-form-margin
+      var(--gse-semantic-formControl-form-margin)
     );
     padding-left: var(
       --gse-semantic-forms-margin,
-      --gse-semantic-formControl-form-margin
+      var(--gse-semantic-formControl-form-margin)
     );
   }
 }

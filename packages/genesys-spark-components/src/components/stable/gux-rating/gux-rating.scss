@@ -11,9 +11,9 @@
 
   outline-offset: var(
     --gse-semantic-focusRing-offset,
-    --gse-semantic-focusOutline-offset
+    var(--gse-semantic-focusOutline-offset)
   );
-  box-shadow: 0 0 0 1px var(--gse-semantic-focusRing-small-border-style, solid);
+  box-shadow: 0 0 0 1px var(--gse-semantic-focusRing-small-border-color);
 }
 
 .gux-rating-star-container {
