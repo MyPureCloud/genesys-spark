@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.87.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.86.0...v4.87.0) (2024-10-02)
+
+
+### Features
+
+* **pagination:** disabled variant ([#589](https://github.com/MyPureCloud/genesys-spark/issues/589)) ([3c6a369](https://github.com/MyPureCloud/genesys-spark/commit/3c6a369b1ae565c0ba0e8c72ff3f9827c6f84266))
+
 ## [4.86.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.85.1...v4.86.0) (2024-09-28)
 
 
