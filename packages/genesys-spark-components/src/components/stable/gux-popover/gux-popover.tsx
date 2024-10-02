@@ -125,7 +125,7 @@ export class GuxPopover {
     }
 
     if (clickedForElement) {
-      this.popupElement.showPopover();
+      this.popupElement?.showPopover();
       this.isOpen = true;
       this.runUpdatePosition();
     }
@@ -235,7 +235,7 @@ export class GuxPopover {
     const dismissEvent = this.guxdismiss.emit();
     if (!dismissEvent.defaultPrevented) {
       this.isOpen = false;
-      this.popupElement.hidePopover();
+      this.popupElement?.hidePopover();
     }
   }
 
@@ -262,7 +262,7 @@ export class GuxPopover {
     this.forElement.popoverTargetAction = 'toggle';
 
     if (this.isOpen) {
-      this.popupElement.showPopover();
+      this.popupElement?.showPopover();
       this.runUpdatePosition();
     }
   }
