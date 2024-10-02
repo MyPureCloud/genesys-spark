@@ -16,7 +16,7 @@
     "check-readmes": "./scripts/check-readmes.sh",
     "clean": "rm -r ./dist ./build || true",
     "copy-genesys-spark-utils": "node ./scripts/copy-genesys-spark-utils.mjs",
-    "predev": "npm run i18n && npm run generate-gux-icon-types-file ",
+    "predev": "npm run i18n && npm run build-themes && npm run generate-gux-icon-types-file ",
     "dev": "npm run stencil.dev",
     "eslint": "eslint . --fix",
     "generate-flags-sprite-file": "./scripts/generate-flags-sprite-file.js",

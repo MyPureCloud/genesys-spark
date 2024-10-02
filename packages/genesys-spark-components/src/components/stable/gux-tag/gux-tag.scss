@@ -80,7 +80,7 @@
         );
         outline: var(
             --gse-semantic-focusRing-small-border-width,
-            var(--gse-semantic-border-focus)
+            var(--gse-semantic-focusOutline-sm-borderWidth)
           )
           solid var(--gse-semantic-color-focus, var(--gse-ui-color-focus));
       }

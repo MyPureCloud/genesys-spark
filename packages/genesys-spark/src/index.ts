@@ -65,16 +65,11 @@ export function registerSparkComponents(opts?: registerOptions): Promise<void> {
  */
 export function registerSparkChartComponents(): Promise<void> {
   const SCRIPT_PATH = 'genesys-chart-webcomponents.esm.js';
-  const STYLE_PATH = 'genesys-chart-webcomponents.css';
 
   const assetsOrigin = getChartComponentAssetsOrigin();
   const SCRIPT_SRC = `${assetsOrigin}${CHART_COMPONENT_ASSET_PREFIX}${SCRIPT_PATH}`;
-  const STYLE_HREF = `${assetsOrigin}${CHART_COMPONENT_ASSET_PREFIX}${STYLE_PATH}`;
 
-  return Promise.all([
-    checkAndLoadScript(SCRIPT_SRC),
-    checkAndLoadStyle(STYLE_HREF)
-  ]).then();
+  return Promise.all([checkAndLoadScript(SCRIPT_SRC)]).then();
 }
 
 // Re-export of utility modules
