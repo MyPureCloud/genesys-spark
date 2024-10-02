@@ -17,10 +17,10 @@ const components = [GuxPopover];
 const language = 'en';
 const html = `
   <div>
-    <div id="popover-target">
+    <button id="popover-target">
       Example Element
-    </div>
-    <gux-popover id="popover-example" position="top" for="popover-target" is-open>
+    </button>
+    <gux-popover id="popover-example" position="top" for="popover-target" is-open="false">
       <span slot="title">Title</span>
       <div>popover content</div>
     </gux-popover>
@@ -33,6 +33,7 @@ describe('gux-popover', () => {
 
   describe('#render', () => {
     it('should render popover', async () => {
+      jest.spyOn(floatingUi, 'autoUpdate').mockReturnValue(jest.fn());
       jest.spyOn(floatingUi, 'autoUpdate').mockReturnValue(jest.fn());
 
       const page = await newSpecPage({ components, html, language });
