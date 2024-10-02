@@ -25,9 +25,9 @@ describe('gux-popover', () => {
     const page = await newSparkE2EPage({
       html: `
       <div lang="en">
-        <div id="popover-target">
+        <button id="popover-target">
           Example Element
-        </div>
+        </button>
         <gux-popover position="top" for="popover-target" display-dismiss-button is-open>
           <div>popover content</div>
         </gux-popover>

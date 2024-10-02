@@ -52,9 +52,14 @@ describe('gux-popover', () => {
 
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLGuxPopoverElement;
+      const targetElement = element.shadowRoot.querySelector(
+        '#popover-target'
+      ) as HTMLElement;
       const elementWrapper = element.shadowRoot.querySelector(
         '.gux-popover-wrapper'
       );
+      targetElement.click();
+      await page.waitForChanges();
       expect(elementWrapper).not.toHaveClass('gux-hidden');
       expect(autoUpdateSpy).toBeCalledTimes(1);
       expect(cleanupSpy).not.toBeCalled();
