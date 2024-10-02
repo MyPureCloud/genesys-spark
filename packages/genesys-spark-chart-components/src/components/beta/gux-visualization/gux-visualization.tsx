@@ -11,11 +11,12 @@ import {
 } from '@stencil/core';
 import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
 import { Spec as VgSpec } from 'vega';
+import { time } from '@redsift/d3-rs-intl';
 
-import { getDesiredLocale } from '../../../i18n';
+import * as sparkIntl from '../../../genesys-spark-utils/intl';
+// Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
+
 import { trackComponent } from '@utils/tracking/usage';
-
-import { timeFormatLocale } from './gux-visualization.locale';
 
 import * as VisualizationColorUtil from '../../../utils/theme/color-palette';
 
@@ -68,8 +69,9 @@ export class GuxVisualization {
   }
 
   async componentDidRender(): Promise<void> {
-    const locale = getDesiredLocale(this.root);
-
+    const { d3: timeFormatLocale } = time([
+      sparkIntl.determineDisplayLocale(this.root)
+    ]);
     const patchOption = {
       patch: (visSpec: VgSpec): VgSpec => {
         if (!visSpec?.signals) {
@@ -84,13 +86,12 @@ export class GuxVisualization {
         return visSpec;
       }
     };
+
     await embed(
       this.chartContainer,
       Object.assign({}, this.defaultVisualizationSpec, this.visualizationSpec),
       Object.assign(
-        {
-          timeFormatLocale: timeFormatLocale[locale]
-        },
+        { timeFormatLocale },
         this.defaultEmbedOptions,
         this.embedOptions,
         patchOption
