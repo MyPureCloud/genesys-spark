@@ -55,7 +55,7 @@ section.gux-disabled {
       --gse-ui-accordion-header-label-defaultText-fontFamily
     ) !important;
     font-size: var(
-      --gse-ui-accordion-header-label-defaultText-fontFamily
+      --gse-ui-accordion-header-label-defaultText-fontSize
     ) !important;
     font-weight: var(
       --gse-ui-accordion-header-label-defaultText-fontWeight
@@ -92,8 +92,8 @@ section.gux-disabled {
   ::slotted([slot='icon']) {
     flex: 0 0 auto;
     align-self: flex-start;
-    width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
-    height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+    width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+    height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
     margin-right: var(--gse-ui-accordion-header-gap);
     color: var(--gse-ui-accordion-header-default-foreground-chevronIcon-closed);
 

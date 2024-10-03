@@ -16,7 +16,7 @@
   padding: var(--gse-ui-tag-padding);
   font-family: var(--gse-ui-tag-text-fontFamily);
   font-size: var(--gse-ui-tag-text-fontSize);
-  font-weight: var(--gse-ui-tag-text-fontWeight, 600);
+  font-weight: var(--gse-ui-tag-text-fontWeight);
   line-height: var(--gse-ui-tag-text-lineHeight);
   color: var(--gse-ui-tag-default-foregroundColor);
   background-color: var(--gse-ui-tag-default-backgroundColor);
@@ -74,9 +74,15 @@
 
     &:focus-within {
       .gux-tag-remove-icon {
-        border-radius: var(--gse-semantic-focusRing-cornerRadius);
-        outline: var(--gse-semantic-focusRing-small-border-width) solid
-          var(--gse-semantic-color-focus, --gse-ui-color-focus);
+        border-radius: var(
+          --gse-semantic-focusRing-cornerRadius,
+          var(--gse-semantic-focusOutline-sm-borderRadius)
+        );
+        outline: var(
+            --gse-semantic-focusRing-small-border-width,
+            var(--gse-semantic-focusOutline-sm-borderWidth)
+          )
+          solid var(--gse-semantic-color-focus, var(--gse-ui-color-focus));
       }
     }
   }

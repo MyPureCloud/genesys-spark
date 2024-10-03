@@ -278,7 +278,7 @@
   &.gux-training {
     background-color: var(
       --gse-ui-avatar-badge-away,
-      --gse-ui-avatar-badge-away-color
+      var(--gse-ui-avatar-badge-away-color)
     );
 
     & gux-icon {

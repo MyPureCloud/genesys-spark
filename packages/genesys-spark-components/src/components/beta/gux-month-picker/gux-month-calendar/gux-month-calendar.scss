@@ -3,11 +3,11 @@
   width: var(--gse-ui-calendarMenu-width);
   box-shadow: var(
       --gse-ui-calendarMenu-boxShadow-x,
-      --gse-ui-calendarMenu-boxShadow-offsetX
+      var(--gse-ui-calendarMenu-boxShadow-offsetX)
     )
     var(
       --gse-ui-calendarMenu-boxShadow-y,
-      --gse-ui-calendarMenu-boxShadow-offsetY
+      var(--gse-ui-calendarMenu-boxShadow-offsetY)
     )
     var(--gse-ui-calendarMenu-boxShadow-blur)
     var(--gse-ui-calendarMenu-boxShadow-spread)
@@ -50,14 +50,23 @@
 
       &:focus-visible {
         border-radius: calc(
-          var(--gse-semantic-focusRing-cornerRadius) - var(
-              --gse-semantic-focusRing-offset
+          var(
+              --gse-semantic-focusRing-cornerRadius,
+              var(--gse-semantic-focusOutline-sm-borderRadius)
+            ) - var(
+              --gse-semantic-focusRing-offset,
+              var(--gse-semantic-focusOutline-offset)
             )
         );
-        outline: var(--gse-semantic-focusRing-width)
-          var(--gse-semantic-focusRing-default-border-style)
-          var(--gse-semantic-color-focus, --gse-ui-color-focus);
-        outline-offset: var(--gse-semantic-focusRing-offset);
+        outline: var(
+            --gse-semantic-focusRing-width,
+            var(--gse-semantic-focusOutline-md-borderWidth)
+          )
+          solid var(--gse-semantic-color-focus, var(--gse-ui-color-focus));
+        outline-offset: var(
+          --gse-semantic-focusRing-offset,
+          var(--gse-semantic-focusOutline-offset)
+        );
       }
 
       &.gux-year-change {
@@ -68,8 +77,8 @@
       }
 
       gux-icon {
-        width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
-        height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+        width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+        height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
         pointer-events: none;
       }
     }

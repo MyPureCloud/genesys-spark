@@ -88,8 +88,9 @@ describe('gux-pagination', () => {
         layout: 'simple',
         disabled: true
       }
-    ].forEach(({ currentPage, totalItems, itemsPerPage, layout, disabled }, index) => {
-      const html = `
+    ].forEach(
+      ({ currentPage, totalItems, itemsPerPage, layout, disabled }, index) => {
+        const html = `
         <gux-pagination lang="en"
           current-page="${currentPage}"
           total-items="${totalItems}"
@@ -99,18 +100,19 @@ describe('gux-pagination', () => {
         ></gux-pagination>
       `;
 
-      it.skip(`should render as expected (${index + 1})`, async () => {
-        const page = await newNonrandomE2EPage({ html });
-        const element = await page.find('gux-pagination');
+        it.skip(`should render as expected (${index + 1})`, async () => {
+          const page = await newNonrandomE2EPage({ html });
+          const element = await page.find('gux-pagination');
 
-        expect(element.outerHTML).toMatchSnapshot();
-      });
+          expect(element.outerHTML).toMatchSnapshot();
+        });
 
-      it(`should be accessible (${index + 1})`, async () => {
-        const page = await newSparkE2EPage({ html });
+        it(`should be accessible (${index + 1})`, async () => {
+          const page = await newSparkE2EPage({ html });
 
-        await a11yCheck(page);
-      });
-    });
+          await a11yCheck(page);
+        });
+      }
+    );
   });
 });

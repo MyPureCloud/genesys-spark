@@ -79,7 +79,10 @@ button {
   &:focus-visible:enabled {
     @include focus.gux-focus-ring;
 
-    border-radius: var(--gse-semantic-focusRing-cornerRadius);
+    border-radius: var(
+      --gse-semantic-focusRing-cornerRadius,
+      var(--gse-semantic-focusOutline-sm-borderRadius)
+    );
   }
 
   &.gux-primary {
@@ -159,7 +162,7 @@ button {
     padding: 0;
     color: var(
       --gse-ui-link-default-foregroundColor,
-      --gse-ui-links-default-foregroundColor
+      var(--gse-ui-links-default-foregroundColor)
     );
     background: none;
     border: none;
@@ -168,14 +171,14 @@ button {
     &[disabled] {
       color: var(
         --gse-ui-link-disabled-foregroundColor,
-        --gse-ui-links-disabled-foregroundColor
+        var(--gse-ui-links-disabled-foregroundColor)
       );
     }
 
     &:hover:enabled {
       color: var(
         --gse-ui-link-hover-foregroundColor,
-        --gse-ui-links-hover-foregroundColor
+        var(--gse-ui-links-hover-foregroundColor)
       );
       text-decoration: underline;
       background: none;
@@ -184,7 +187,7 @@ button {
     &:active:enabled {
       color: var(
         --gse-ui-link-active-foregroundColor,
-        --gse-ui-links-active-foregroundColor
+        var(--gse-ui-links-active-foregroundColor)
       );
       text-decoration: underline;
       background: none;

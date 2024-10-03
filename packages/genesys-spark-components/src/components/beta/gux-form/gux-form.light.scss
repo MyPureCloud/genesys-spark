@@ -1,78 +1,117 @@
 gux-form-beta {
   form {
-    max-width: var(--gse-semantic-forms-maxWidth);
+    max-width: var(
+      --gse-semantic-forms-maxWidth,
+      var(--gse-semantic-formControl-form-maxWidth)
+    );
 
     header {
       display: flex;
       flex-direction: column;
-      gap: var(--gse-semantic-forms-formHeader-gap);
-      padding-bottom: var(--gse-semantic-forms-formHeader-paddingBottom);
+      gap: var(
+        --gse-semantic-forms-formHeader-gap,
+        var(--gse-semantic-formControl-formHeader-gap)
+      );
+      padding-bottom: var(
+        --gse-semantic-forms-formHeader-paddingBottom,
+        var(--gse-semantic-formControl-fieldset-header-paddingBottom)
+      );
       text-align: left;
 
       gux-form-heading {
         margin: 0;
         font-family: var(
-          --gse-semantic-forms-formHeader-text-fontFamily
+          --gse-semantic-forms-formHeader-text-fontFamily,
+          var(--gse-semantic-body-lg-semiBold-fontFamily)
         ) !important;
         font-size: var(
-          --gse-semantic-forms-formHeader-text-fontSize
+          --gse-semantic-forms-formHeader-text-fontSize,
+          var(--gse-semantic-body-lg-semiBold-fontSize)
         ) !important;
         font-weight: var(
-          --gse-semantic-forms-formHeader-text-fontWeight
+          --gse-semantic-forms-formHeader-text-fontWeight,
+          var(--gse-semantic-body-lg-semiBold-fontWeight)
         ) !important;
         line-height: var(
-          --gse-semantic-forms-formHeader-text-lineHeight
+          --gse-semantic-forms-formHeader-text-lineHeight,
+          var(--gse-semantic-body-lg-semiBold-lineHeight)
         ) !important;
-        color: var(--gse-semantic-forms-formHeader-foregroundColor) !important;
+        color: var(
+          --gse-semantic-forms-formHeader-foregroundColor,
+          var(--gse-semantic-foreground-container-highEmphasis)
+        ) !important;
       }
     }
 
     gux-form-description {
       margin: 0 !important;
       font-family: var(
-        --gse-semantic-forms-paragraph-text-fontFamily
+        --gse-semantic-forms-paragraph-text-fontFamily,
+        var(--gse-semantic-body-sm-regular-fontFamily)
       ) !important;
-      font-size: var(--gse-semantic-forms-paragraph-text-fontSize) !important;
+      font-size: var(
+        --gse-semantic-forms-paragraph-text-fontSize,
+        var(--gse-semantic-body-sm-regular-fontSize)
+      ) !important;
       font-weight: var(
-        --gse-semantic-forms-paragraph-text-fontWeight
+        --gse-semantic-forms-paragraph-text-fontWeight,
+        var(--gse-semantic-body-sm-regular-fontWeight)
       ) !important;
       line-height: var(
-        --gse-semantic-forms-paragraph-text-lineHeight
+        --gse-semantic-forms-paragraph-text-lineHeight,
+        var(--gse-semantic-body-sm-regular-lineHeight)
       ) !important;
-      color: var(--gse-semantic-forms-paragraph-foregroundColor) !important;
+      color: var(
+        --gse-semantic-forms-paragraph-foregroundColor,
+        var(--gse-semantic-foreground-container-midEmphasis)
+      ) !important;
     }
 
     fieldset {
       all: unset;
       display: flex;
       flex-direction: column;
-      gap: var(--gse-semantic-forms-formControl-gap);
+      gap: var(
+        --gse-semantic-forms-formControl-gap,
+        var(--gse-semantic-formControl-formBody-gap)
+      );
 
       legend {
         display: flex;
         flex-direction: column;
-        gap: var(--gse-semantic-forms-fieldset-header-gap);
+        gap: var(
+          --gse-semantic-forms-fieldset-header-gap,
+          var(--gse-semantic-formControl-fieldset-header-gap)
+        );
         padding-right: 0;
-        padding-bottom: var(--gse-semantic-forms-fieldset-header-paddingBottom);
+        padding-bottom: var(
+          --gse-semantic-forms-fieldset-header-paddingBottom,
+          var(--gse-semantic-formControl-fieldset-paddingBottom)
+        );
         padding-left: 0;
         text-align: left;
 
         gux-form-fieldset-heading {
           margin: 0;
           font-family: var(
-            --gse-semantic-forms-fieldset-header-text-fontFamily
+            --gse-semantic-forms-fieldset-header-text-fontFamily,
+            var(--gse-semantic-heading-md-bold-fontFamily)
           ) !important;
           font-size: var(
-            --gse-semantic-forms-fieldset-header-text-fontSize
+            --gse-semantic-forms-fieldset-header-text-fontSize,
+            var(--gse-semantic-heading-md-bold-fontSize)
           ) !important;
           font-weight: var(
-            --gse-semantic-forms-fieldset-header-text-fontWeight
+            --gse-semantic-forms-fieldset-header-text-fontWeight,
+            var(--gse-semantic-heading-md-bold-fontWeight)
           ) !important;
           line-height: var(
-            --gse-semantic-forms-fieldset-header-text-lineHeight
+            --gse-semantic-forms-fieldset-header-text-lineHeight,
+            var(--gse-semantic-heading-md-bold-lineHeight)
           ) !important;
           color: var(
-            --gse-semantic-forms-fieldset-header-foregroundColor
+            --gse-semantic-forms-fieldset-header-foregroundColor,
+            var(--gse-semantic-foreground-container-highEmphasis)
           ) !important;
         }
       }
@@ -80,18 +119,30 @@ gux-form-beta {
 
     /* Applies a 48px padding-bottom to any <fieldset> that is not immediately followed by a <gux-form-footer>. */
     fieldset:not(:has(+ gux-form-footer)) {
-      padding-bottom: var(--gse-semantic-forms-fieldset-paddingBottom);
+      padding-bottom: var(
+        --gse-semantic-forms-fieldset-paddingBottom,
+        var(--gse-semantic-formControl-fieldset-paddingBottom)
+      );
     }
 
     /* Apply a margin-top of 16px to all other children within the form, except fieldset, gux-form-footer, and the first element after header or fieldset */
     > *:not(fieldset):not(gux-form-footer):not(header + *):not(fieldset + *) {
-      margin-top: var(--gse-semantic-forms-formControl-gap);
+      margin-top: var(
+        --gse-semantic-forms-formControl-gap,
+        var(--gse-semantic-formControl-formBody-gap)
+      );
     }
   }
 
   /* Apply padding to all elements except the gux-form-footer where it is not needed */
   form > *:not(gux-form-footer) {
-    padding-right: var(--gse-semantic-forms-margin);
-    padding-left: var(--gse-semantic-forms-margin);
+    padding-right: var(
+      --gse-semantic-forms-margin,
+      var(--gse-semantic-formControl-form-margin)
+    );
+    padding-left: var(
+      --gse-semantic-forms-margin,
+      var(--gse-semantic-formControl-form-margin)
+    );
   }
 }

@@ -156,8 +156,8 @@
     "spinner": {
       "foreground": "#4856cb",
       "base": "#ced2fc",
-      "large": 48,
-      "small": 16,
+      "large": "48px",
+      "small": "16px",
       "text": {
         "fontFamily": "'Noto Sans'",
         "fontWeight": 600,

@@ -21,7 +21,10 @@
     outline: var(--gse-ui-formControl-input-focus-border-width)
       var(--gse-ui-formControl-input-focus-border-style)
       var(--gse-ui-formControl-input-focus-border-color);
-    outline-offset: var(--gse-semantic-focusRing-offset);
+    outline-offset: var(
+      --gse-semantic-focusRing-offset,
+      var(--gse-semantic-focusOutline-offset)
+    );
   }
 
   .gux-display {
@@ -61,7 +64,10 @@
       outline: var(--gse-ui-monthPicker-calendarStates-focus-border-width)
         var(--gse-ui-monthPicker-calendarStates-focus-border-style)
         var(--gse-ui-monthPicker-calendarStates-focus-border-color);
-      outline-offset: var(--gse-semantic-focusRing-offset);
+      outline-offset: var(
+        --gse-semantic-focusRing-offset,
+        var(--gse-semantic-focusOutline-offset)
+      );
     }
 
     &:not(:disabled):hover {
@@ -79,8 +85,8 @@
     }
 
     gux-icon {
-      width: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
-      height: var(--gse-ui-icon-size-sm, --gse-ui-icon-small-size);
+      width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+      height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
     }
 
     &.gux-expanded {

@@ -1,13 +1,13 @@
 @use 'sass:math';
 @use '~genesys-spark-tokens/dist/scss/gse-ui-feedback';
 
-$largeSpinnerSize: gse-ui-feedback.$gse-ui-progressAndLoading-spinner-large;
-$largeSpinnerBorder: gse-ui-feedback.$gse-ui-progressAndLoading-largeBorder;
+$largeSpinnerSize: 48; // Linked to --gse-ui-progressAndLoading-spinner-large
+$largeSpinnerBorder: 4; // Linked to --gse-ui-progressAndLoading-largeBorder
 
-$smallSpinnerSize: gse-ui-feedback.$gse-ui-progressAndLoading-spinner-small;
-$smallSpinnerBorder: gse-ui-feedback.$gse-ui-progressAndLoading-smallBorder;
+$smallSpinnerSize: 16; // Linked to --gse-ui-progressAndLoading-spinner-small
+$smallSpinnerBorder: 2; // Linked to --gse-ui-progressAndLoading-smallBorder
 
-$thinSpinnerBorder: gse-ui-feedback.$gse-ui-progressAndLoading-smallBorder;
+$thinSpinnerBorder: 2; // Linked to --gse-ui-progressAndLoading-smallBorder
 
 $largeCircumference: (math.$pi * ($largeSpinnerSize - $largeSpinnerBorder));
 $smallCircumference: (math.$pi * ($smallSpinnerSize - $smallSpinnerBorder));
@@ -78,8 +78,8 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
   div[role='progressbar'] {
     .gux-svg-container {
       display: block;
-      width: calc(var(--gse-ui-progressAndLoading-spinner-large) * 1px);
-      height: calc(var(--gse-ui-progressAndLoading-spinner-large) * 1px);
+      width: var(--gse-ui-progressAndLoading-spinner-large);
+      height: var(--gse-ui-progressAndLoading-spinner-large);
 
       .gux-dynamic-circle,
       .gux-dynamic-circle-mask {
@@ -120,8 +120,8 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
 
     &.gux-input {
       .gux-svg-container {
-        width: calc(var(--gse-ui-progressAndLoading-spinner-small) * 1px);
-        height: calc(var(--gse-ui-progressAndLoading-spinner-small) * 1px);
+        width: var(--gse-ui-progressAndLoading-spinner-small);
+        height: var(--gse-ui-progressAndLoading-spinner-small);
 
         .gux-dynamic-circle {
           fill: none;
