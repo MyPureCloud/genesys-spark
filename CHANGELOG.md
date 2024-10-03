@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.88.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.87.0...v4.88.0) (2024-10-03)
+
+
+### Features
+
+* **datepicker:** allow a width to be applied to the datepicker input ([06dff80](https://github.com/MyPureCloud/genesys-spark/commit/06dff80d30b1dac3c3492f87df09b05548ff30fd))
+
+
+### Bug Fixes
+
+* **visualization:** added more localizations ([5c3dd96](https://github.com/MyPureCloud/genesys-spark/commit/5c3dd963fc834f294857d3b98d9695edccf473a7))
+
 ## [4.87.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.86.0...v4.87.0) (2024-10-02)
 
 
