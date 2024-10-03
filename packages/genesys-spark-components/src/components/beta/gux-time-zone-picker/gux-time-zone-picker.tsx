@@ -92,7 +92,9 @@ export class GuxTimeZonePickerBeta {
 
   private getTimeZoneOption(timeZone: GuxTimeZoneListing): GuxTimeZoneOption {
     const localizedGroupName = this.i18n(timeZone.name);
-    const localizedCountryName = this.i18n(timeZone.countryName);
+    const localizedCountryName = timeZone.countryName
+      ? this.i18n(timeZone.countryName)
+      : undefined;
     if (!localizedGroupName) {
       return;
     }

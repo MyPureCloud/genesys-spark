@@ -148,6 +148,7 @@ describe('gux-form-field-time-zone-picker', () => {
                 ${inputAttribute}
               >
               </gux-time-zone-picker-beta>
+              <label slot="label">Select Time Zone</label>
             </gux-form-field-time-zone-picker>
             `;
           const page = await newSpecPage({ components, html, language });
