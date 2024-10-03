@@ -10,8 +10,12 @@ jest.mock('@floating-ui/dom', () => {
 
 import { newSpecPage } from '@test/specTestUtils';
 import * as floatingUi from '@floating-ui/dom';
+import { MockHTMLElement } from '@stencil/core/mock-doc';
 
 import { GuxPopover } from '../gux-popover';
+
+//Mocks
+const showPopover = jest.fn();
 
 const components = [GuxPopover];
 const language = 'en';
@@ -27,6 +31,12 @@ const html = `
   </div>`;
 
 describe('gux-popover', () => {
+  beforeAll(() => {
+    Object.assign(MockHTMLElement.prototype, {
+      showPopover: showPopover
+    });
+  });
+
   afterEach(async () => {
     jest.spyOn(floatingUi, 'autoUpdate').mockRestore();
   });
@@ -52,13 +62,14 @@ describe('gux-popover', () => {
 
       const page = await newSpecPage({ components, html, language });
       const element = page.root as HTMLGuxPopoverElement;
-      const targetElement = element.shadowRoot.querySelector(
-        '#popover-target'
-      ) as HTMLElement;
+      const targetElement = document.getElementById(
+        'popover-target'
+      ) as HTMLInputElement;
       const elementWrapper = element.shadowRoot.querySelector(
         '.gux-popover-wrapper'
       );
       targetElement.click();
+      element.isOpen = true;
       await page.waitForChanges();
       expect(elementWrapper).not.toHaveClass('gux-hidden');
       expect(autoUpdateSpy).toBeCalledTimes(1);
