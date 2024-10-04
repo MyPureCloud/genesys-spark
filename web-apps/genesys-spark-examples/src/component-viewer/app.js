@@ -97,7 +97,7 @@ function createLayout() {
 
 export async function bootstrap(exampleCode, callback) {
   await Promise.all([
-    registerSparkComponents(),
+    registerSparkComponents({ theme: 'legacy' }),
     registerSparkChartComponents()
   ]);
 

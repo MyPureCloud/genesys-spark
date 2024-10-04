@@ -8,7 +8,7 @@ import '../styles/component-listing.scss';
 
 export async function bootstrap() {
   await Promise.all([
-    registerSparkComponents(),
+    registerSparkComponents({ theme: 'legacy' }),
     registerSparkChartComponents()
   ]);
 
