@@ -39,6 +39,7 @@ button {
     align-items: center;
     height: 100%;
     padding: var(--gse-ui-segmentedControl-button-padding);
+    line-height: 0;
     color: var(--gse-ui-segmentedControl-button-default-foregroundColor);
     background-color: var(
       --gse-ui-segmentedControl-button-default-backgroundColor
