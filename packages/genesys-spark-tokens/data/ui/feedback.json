@@ -296,14 +296,12 @@
         "type": "color"
       },
       "large": {
-        "value": "48",
-        "type": "sizing",
-        "description": "keeping hard code as it cant have \"px\""
+        "value": "48px",
+        "type": "sizing"
       },
       "small": {
-        "value": "16",
-        "type": "sizing",
-        "description": "keeping hard code as it cant have \"px\""
+        "value": "16px",
+        "type": "sizing"
       },
       "text": {
         "value": "{body.sm.semi_bold}",

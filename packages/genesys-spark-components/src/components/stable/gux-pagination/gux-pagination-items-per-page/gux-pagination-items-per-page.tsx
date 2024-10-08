@@ -29,6 +29,9 @@ export class GuxPaginationItemsPerPage implements ComponentInterface {
   @Prop()
   itemsPerPage: GuxItemsPerPage = 25;
 
+  @Prop()
+  disabled: boolean = false;
+
   @Event({ bubbles: false })
   private internalitemsperpagechange: EventEmitter<number>;
 
@@ -49,6 +52,7 @@ export class GuxPaginationItemsPerPage implements ComponentInterface {
       <gux-dropdown
         ref={el => (this.dropdownElement = el)}
         value={`${this.itemsPerPage}`}
+        disabled={this.disabled}
         aria-label={this.i18n('rangeSelected', {
           range: this.itemsPerPage
         })}

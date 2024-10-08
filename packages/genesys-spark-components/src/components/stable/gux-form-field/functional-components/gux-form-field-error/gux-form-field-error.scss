@@ -20,8 +20,8 @@
     gux-icon {
       flex: 0 1 auto;
       order: 0;
-      min-width: var(--gse-ui-icon-size-sm);
-      min-height: var(--gse-ui-icon-size-sm);
+      min-width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+      min-height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
       color: var(--gse-ui-formControl-helper-errorColor);
     }
 

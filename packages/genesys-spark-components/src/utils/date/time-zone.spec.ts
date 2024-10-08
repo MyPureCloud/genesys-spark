@@ -18,6 +18,7 @@ describe('#formattOffset', () => {
 
 describe('#getTimeZoneList', () => {
   it('should should retrieve the list', () => {
+    jest.useFakeTimers();
     jest.setSystemTime(new Date('2023-09-26'));
     const output = getTimeZoneList();
 

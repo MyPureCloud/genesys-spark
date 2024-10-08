@@ -6,6 +6,7 @@ exports[`gux-pagination-item-counts #render should render as expected (1) 1`] = 
     <span class="gux-pagination-item-counts-range">
       0 - 0
     </span>
+    <span class="gux-pagination-item-counts-total"></span>
   </div>
 </gux-pagination-item-counts>
 `;
@@ -16,8 +17,10 @@ exports[`gux-pagination-item-counts #render should render as expected (2) 1`] = 
     <span class="gux-pagination-item-counts-range">
       26 - 50
     </span>
-    <span>
-      of 99
+    <span class="gux-pagination-item-counts-total">
+      <span>
+        of 99
+      </span>
     </span>
   </div>
 </gux-pagination-item-counts>
@@ -29,8 +32,10 @@ exports[`gux-pagination-item-counts #render should render as expected (3) 1`] = 
     <span class="gux-pagination-item-counts-range">
       51 - 99
     </span>
-    <span>
-      of 99
+    <span class="gux-pagination-item-counts-total">
+      <span>
+        of 99
+      </span>
     </span>
   </div>
 </gux-pagination-item-counts>
@@ -42,8 +47,10 @@ exports[`gux-pagination-item-counts #render should render as expected (4) 1`] = 
     <span class="gux-pagination-item-counts-range">
       1 - 99
     </span>
-    <span>
-      of 99
+    <span class="gux-pagination-item-counts-total">
+      <span>
+        of 99
+      </span>
     </span>
   </div>
 </gux-pagination-item-counts>
@@ -55,6 +62,7 @@ exports[`gux-pagination-item-counts #render should render as expected (5) 1`] = 
     <span class="gux-pagination-item-counts-range">
       0 - 0
     </span>
+    <span class="gux-pagination-item-counts-total"></span>
   </div>
 </gux-pagination-item-counts>
 `;
@@ -65,8 +73,10 @@ exports[`gux-pagination-item-counts #render should render as expected (6) 1`] = 
     <span class="gux-pagination-item-counts-range">
       26 - 10
     </span>
-    <span>
-      of 10
+    <span class="gux-pagination-item-counts-total">
+      <span>
+        of 10
+      </span>
     </span>
   </div>
 </gux-pagination-item-counts>

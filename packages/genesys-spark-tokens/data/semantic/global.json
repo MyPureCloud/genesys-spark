@@ -649,6 +649,30 @@
     }
   },
   "form_control": {
+    "form": {
+      "max_width": {
+        "value": "600px",
+        "type": "sizing",
+        "description": "The recommended max width fo a form."
+      },
+      "margin": {
+        "value": "{spacing.md}",
+        "type": "spacing",
+        "description": "The recommended side margins of a form."
+      }
+    },
+    "form_body": {
+      "padding_bottom": {
+        "value": "{spacing.lg}",
+        "type": "spacing",
+        "description": "The minimum spacing a form body should have between itself and the form footer."
+      },
+      "gap": {
+        "value": "{spacing.xs}",
+        "type": "spacing",
+        "description": "The recommended spacing between 1 form control and the other, either vertically or horizontally."
+      }
+    },
     "text_input": {
       "lg": {
         "border_radius": {
@@ -776,6 +800,37 @@
           "description": "The recommended border width for handles on click inputs, like the habdle of a toggle."
         }
       }
+    },
+    "form_header": {
+      "padding_bottom": {
+        "value": "{spacing.sm}",
+        "type": "spacing",
+        "description": "This is the bottom padding of the form header, applied after the paragraph if it has one."
+      },
+      "gap": {
+        "value": "{spacing.4xs}",
+        "type": "spacing",
+        "description": "This spacing is used for the gap between the form header and its paragraph if it has one."
+      }
+    },
+    "fieldset": {
+      "padding_bottom": {
+        "value": "{spacing.2xl}",
+        "type": "spacing",
+        "description": "The bottom padding of a fieldset"
+      },
+      "header": {
+        "padding_bottom": {
+          "value": "{spacing.sm}",
+          "type": "spacing",
+          "description": "This is the recommended bottom padding of the fielset header, applied after the paragraph if it has one."
+        },
+        "gap": {
+          "value": "{spacing.4xs}",
+          "type": "spacing",
+          "description": "This is the recommended spacing for the gap between the fieldset header and its paragraph if it has one."
+        }
+      }
     }
   },
   "assets": {
@@ -858,6 +913,62 @@
         "type": "sizing",
         "description": "The recommended divider indicator width, used for the indicators of active tabs, for example"
       }
+    }
+  },
+  "z_index": {
+    "base": {
+      "value": "{z_index.0}",
+      "type": "zindex"
+    },
+    "show-focus": {
+      "value": "{z_index.1}",
+      "type": "zindex",
+      "description": "The recommended z-index for focus outlines."
+    },
+    "sticky": {
+      "value": "{z_index.1}",
+      "type": "zindex",
+      "description": "The recommended z-index for sticky elements."
+    },
+    "popup": {
+      "value": "{z_index.100}",
+      "type": "zindex",
+      "description": "The recommended z-index for popup elements."
+    },
+    "popover": {
+      "value": "{z_index.200}",
+      "type": "zindex",
+      "description": "The recommended z-index for popover elements."
+    },
+    "tooltip": {
+      "value": "{z_index.200}",
+      "type": "zindex",
+      "description": "The recommended z-index for tooltips."
+    },
+    "panel": {
+      "value": "{z_index.300}",
+      "type": "zindex",
+      "description": "The recommended z-index for panel elements."
+    },
+    "navbar": {
+      "value": "{z_index.400}",
+      "type": "zindex",
+      "description": "The recommended z-index for navbars."
+    },
+    "sidebar": {
+      "value": "{z_index.400}",
+      "type": "zindex",
+      "description": "The recommended z-index for sidebars."
+    },
+    "toast": {
+      "value": "{z_index.500}",
+      "type": "zindex",
+      "description": "The recommended z-index for toasts."
+    },
+    "modal": {
+      "value": "{z_index.600}",
+      "type": "zindex",
+      "description": "The recommended z-index for modals."
     }
   }
 }

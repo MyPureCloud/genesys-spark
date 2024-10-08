@@ -26,8 +26,8 @@
 
     .gux-sort-icon {
       float: right;
-      width: var(--gse-ui-icon-size-sm);
-      height: var(--gse-ui-icon-size-sm);
+      width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+      height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
       margin: 0 var(--gse-ui-dataTableItems-header-gap);
       color: var(--gse-ui-dataTableItems-header-sort-foregroundColor);
 

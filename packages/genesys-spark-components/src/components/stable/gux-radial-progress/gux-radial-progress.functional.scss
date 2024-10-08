@@ -2,8 +2,8 @@
   div[role='progressbar'] {
     .gux-svg-container {
       display: block;
-      width: calc(var(--gse-ui-progressAndLoading-spinner-large) * 1px);
-      height: calc(var(--gse-ui-progressAndLoading-spinner-large) * 1px);
+      width: var(--gse-ui-progressAndLoading-spinner-large);
+      height: var(--gse-ui-progressAndLoading-spinner-large);
 
       .gux-dynamic-circle {
         fill: none;

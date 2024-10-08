@@ -137,6 +137,27 @@ function getSimpleList(
       };
     });
   }
+
+  if (totalPages === currentPage) {
+    return [
+      {
+        pageNumber: 1,
+        display: '1',
+        current: false
+      },
+      {
+        pageNumber: currentPage,
+        display: '...',
+        current: false
+      },
+      {
+        pageNumber: totalPages,
+        display: String(totalPages),
+        current: true
+      }
+    ];
+  }
+
   if (totalPages >= 4) {
     const startPageList = [...Array(1).keys()].map(index => {
       const pageNumber = index + currentPage;

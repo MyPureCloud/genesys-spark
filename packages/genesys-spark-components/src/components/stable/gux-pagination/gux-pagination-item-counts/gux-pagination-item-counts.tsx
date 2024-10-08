@@ -66,7 +66,9 @@ export class GuxPaginationItemCounts implements ComponentInterface {
             lastItem: this.lastItem
           })}
         </span>
-        {this.getPaginationItemCountsRange()}
+        <span class="gux-pagination-item-counts-total">
+          {this.getPaginationItemCountsRange()}
+        </span>
       </div>
     ) as JSX.Element;
   }

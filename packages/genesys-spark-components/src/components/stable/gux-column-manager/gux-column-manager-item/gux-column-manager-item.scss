@@ -49,8 +49,8 @@
     border-radius: 4px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
 
     gux-icon {
-      width: var(--gse-ui-icon-size-sm);
-      height: var(--gse-ui-icon-size-sm);
+      width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+      height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
     }
 
     &.gux-reordering {
@@ -86,7 +86,8 @@
       position: absolute;
       top: 1px;
       left: calc(
-        var(--gse-ui-icon-size-sm) + var(--gse-ui-checkbox-gap)
+        var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size)) +
+          var(--gse-ui-checkbox-gap)
       ); //TODO https://inindca.atlassian.net/browse/COMUI-2314
 
       color: transparent;

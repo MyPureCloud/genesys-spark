@@ -5,7 +5,11 @@
   background-color: var(--gse-ui-flyoutMenu-backgroundColor);
   border: none;
   border-radius: var(--gse-ui-menu-borderRadius);
-  box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
+  box-shadow: var(
+      --gse-ui-menu-boxShadow-x,
+      var(--gse-ui-menu-boxShadow-offsetX)
+    )
+    var(--gse-ui-menu-boxShadow-y, var(--gse-ui-menu-boxShadow-offsetY))
     var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
     var(--gse-ui-menu-boxShadow-color);
 }

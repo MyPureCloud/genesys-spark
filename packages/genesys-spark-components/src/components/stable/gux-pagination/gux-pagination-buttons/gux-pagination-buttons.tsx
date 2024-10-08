@@ -38,6 +38,9 @@ export class GuxPaginationButtons {
   @Prop()
   layout: GuxPaginationLayout = 'advanced';
 
+  @Prop()
+  disabled: boolean = false;
+
   @Event({ bubbles: false })
   private internalcurrentpagechange: EventEmitter<number>;
 
@@ -91,15 +94,18 @@ export class GuxPaginationButtons {
       if (cv.current) {
         return acc.concat(
           (
-            <button
-              ref={el => (this.currentElement = el)}
-              class="gux-pagination-buttons-list-current"
-              aria-label={this.i18n('pageSelected', {
-                pageSelected: cv.pageNumber
-              })}
-            >
-              {cv.display}
-            </button>
+            <gux-button-slot accent="ghost">
+              <button
+                disabled={this.disabled}
+                ref={el => (this.currentElement = el)}
+                class="gux-pagination-buttons-list-current"
+                aria-label={this.i18n('pageSelected', {
+                  pageSelected: cv.pageNumber
+                })}
+              >
+                {cv.display}
+              </button>
+            </gux-button-slot>
           ) as JSX.Element
         );
       }
@@ -107,22 +113,27 @@ export class GuxPaginationButtons {
       if (cv.display == '...') {
         return acc.concat(
           (
-            <gux-pagination-ellipsis-button totalPages={this.totalPages} />
+            <gux-pagination-ellipsis-button
+              disabled={this.disabled}
+              totalPages={this.totalPages}
+            />
           ) as JSX.Element
         );
       }
 
       return acc.concat(
         (
-          <button
-            class="gux-pagination-buttons-list-target"
-            onClick={() => this.handlePageChange(cv.pageNumber)}
-            aria-label={this.i18n('pageNumber', {
-              pageNumber: cv.pageNumber
-            })}
-          >
-            {cv.display}
-          </button>
+          <gux-button-slot accent="ghost">
+            <button
+              disabled={this.disabled}
+              onClick={() => this.handlePageChange(cv.pageNumber)}
+              aria-label={this.i18n('pageNumber', {
+                pageNumber: cv.pageNumber
+              })}
+            >
+              {cv.display}
+            </button>
+          </gux-button-slot>
         ) as JSX.Element
       );
     }, [] as JSX.Element[]);
@@ -148,25 +159,27 @@ export class GuxPaginationButtons {
     return (
       <div class={`gux-pagination-buttons-container gux-${this.layout}`}>
         <div class="gux-pagination-buttons-group">
-          <gux-button-slot accent="ghost">
+          <gux-button-slot accent="ghost" icon-only>
             <button
               title={this.i18n('firstPage')}
-              disabled={this.onFirstPage}
+              disabled={this.onFirstPage || this.disabled}
               onClick={this.handleClickFirst.bind(this)}
             >
               <gux-icon
+                size="small"
                 decorative
                 icon-name="fa/chevrons-left-regular"
               ></gux-icon>
             </button>
           </gux-button-slot>
-          <gux-button-slot accent="ghost">
+          <gux-button-slot accent="ghost" icon-only>
             <button
               title={this.i18n('previousPage')}
-              disabled={this.onFirstPage}
+              disabled={this.onFirstPage || this.disabled}
               onClick={this.handleClickPrevious.bind(this)}
             >
               <gux-icon
+                size="small"
                 decorative
                 icon-name="custom/chevron-left-small-regular"
               ></gux-icon>
@@ -177,25 +190,27 @@ export class GuxPaginationButtons {
         {this.getPageNavigation()}
 
         <div class="gux-pagination-buttons-group">
-          <gux-button-slot accent="ghost">
+          <gux-button-slot accent="ghost" icon-only>
             <button
               title={this.i18n('nextPage')}
-              disabled={this.onLastPage}
+              disabled={this.onLastPage || this.disabled}
               onClick={this.handleClickNext.bind(this)}
             >
               <gux-icon
+                size="small"
                 decorative
                 icon-name="custom/chevron-right-small-regular"
               ></gux-icon>
             </button>
           </gux-button-slot>
-          <gux-button-slot accent="ghost">
+          <gux-button-slot accent="ghost" icon-only>
             <button
               title={this.i18n('lastPage')}
-              disabled={this.onLastPage}
+              disabled={this.onLastPage || this.disabled}
               onClick={this.handleClickLast.bind(this)}
             >
               <gux-icon
+                size="small"
                 decorative
                 icon-name="fa/chevrons-right-regular"
               ></gux-icon>

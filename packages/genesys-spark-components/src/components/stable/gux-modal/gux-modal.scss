@@ -1,7 +1,10 @@
 @use '~genesys-spark/dist/scss/typography.scss';
 
 ::slotted(button:active:enabled) {
-  color: var(--gse-ui-link-active-foregroundColor);
+  color: var(
+    --gse-ui-link-active-foregroundColor,
+    var(--gse-ui-links-active-foregroundColor)
+  );
   text-decoration: underline;
   background: none;
 }
@@ -22,7 +25,11 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
     overflow: hidden;
     border: none;
     border-radius: var(--gse-ui-modal-borderRadius);
-    box-shadow: var(--gse-ui-modal-boxShadow-x) var(--gse-ui-modal-boxShadow-y)
+    box-shadow: var(
+        --gse-ui-modal-boxShadow-x,
+        var(--gse-ui-modal-boxShadow-offsetX)
+      )
+      var(--gse-ui-modal-boxShadow-y, var(--gse-ui-modal-boxShadow-offsetY))
       var(--gse-ui-modal-boxShadow-blur) var(--gse-ui-modal-boxShadow-spread)
       var(--gse-ui-modal-boxShadow-color);
 
@@ -42,12 +49,12 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       }
 
       &.gux-medium {
-        width: var(--gse-ui-modal-medium-width);
+        width: min(var(--gse-ui-modal-medium-width), 100vw - 48px);
         max-height: min(640px, 100vh - 2 * #{24px});
       }
 
       &.gux-large {
-        width: var(--gse-ui-modal-large-width);
+        width: min(var(--gse-ui-modal-large-width), 100vw - 48px);
         max-height: min(640px, 100vh - 2 * #{24px});
       }
 
@@ -70,7 +77,6 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
         font-weight: var(--gse-ui-modal-heading-fontWeight);
         line-height: var(--gse-ui-modal-heading-lineHeight);
         color: var(--gse-ui-modal-headerColor);
-        letter-spacing: var(--gse-ui-modal-heading-letterSpacing);
       }
 
       .gux-modal-content {

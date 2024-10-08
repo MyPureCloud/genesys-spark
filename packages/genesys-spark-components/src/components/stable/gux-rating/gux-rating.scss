@@ -9,8 +9,11 @@
 :host(:host:focus-visible) {
   @include focus.gux-focus-ring-small;
 
-  outline-offset: var(--gse-semantic-focusRing-offset);
-  box-shadow: 0 0 0 1px var(--gse-semantic-focusRing-small-border-style);
+  outline-offset: var(
+    --gse-semantic-focusRing-offset,
+    var(--gse-semantic-focusOutline-offset)
+  );
+  box-shadow: 0 0 0 1px var(--gse-semantic-focusRing-small-border-color);
 }
 
 .gux-rating-star-container {

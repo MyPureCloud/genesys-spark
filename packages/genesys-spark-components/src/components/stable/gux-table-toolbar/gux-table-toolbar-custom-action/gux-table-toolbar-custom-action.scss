@@ -19,7 +19,7 @@ button[disabled] {
   align-items: center;
 
   slot[name='icon']::slotted(gux-icon) {
-    width: var(--gse-ui-icon-size-sm);
-    height: var(--gse-ui-icon-size-sm);
+    width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+    height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
   }
 }

@@ -91,13 +91,23 @@ gux-pagination-buttons-legacy {
 
         &:focus-visible {
           border-radius: calc(
-            var(--gse-semantic-focusRing-cornerRadius) - var(
-                --gse-semantic-focusRing-offset
+            var(
+                --gse-semantic-focusRing-cornerRadius,
+                var(--gse-semantic-focusOutline-sm-borderRadius)
+              ) - var(
+                --gse-semantic-focusRing-offset,
+                var(--gse-semantic-focusOutline-offset)
               )
           );
-          outline: var(--gse-semantic-focusRing-width) solid
-            var(--gse-semantic-color-focus);
-          outline-offset: var(--gse-semantic-focusRing-offset);
+          outline: var(
+              --gse-semantic-focusRing-width,
+              var(--gse-semantic-focusOutline-md-borderWidth)
+            )
+            solid var(--gse-semantic-color-focus, var(--gse-ui-color-focus));
+          outline-offset: var(
+            --gse-semantic-focusRing-offset,
+            var(--gse-semantic-focusOutline-offset)
+          );
         }
 
         &.gux-current {

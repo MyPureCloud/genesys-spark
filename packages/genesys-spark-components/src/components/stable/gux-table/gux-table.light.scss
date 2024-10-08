@@ -149,14 +149,15 @@ gux-table {
 // used to ensure gux-sort-control arrow doesn't overlap header text when columns are resized
 th:not([data-cell-action]):not([data-cell-numeric]):has(> gux-sort-control) {
   padding-right: calc(
-    2 * var(--gse-ui-dataTableItems-header-gap) + var(--gse-ui-icon-size-sm)
+    2 * var(--gse-ui-dataTableItems-header-gap) +
+      var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size))
   ) !important;
 }
 
 th[data-cell-numeric]:has(> gux-sort-control),
 th[data-cell-action]:has(> gux-sort-control) {
   padding-left: calc(
-    2 * var(--gse-ui-dataTableItems-header-gap) + var(--gse-ui-icon-size-sm) +
-      2px
+    2 * var(--gse-ui-dataTableItems-header-gap) +
+      var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size)) + 2px
   ) !important;
 }

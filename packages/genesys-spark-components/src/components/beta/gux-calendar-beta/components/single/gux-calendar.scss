@@ -9,7 +9,7 @@
   background: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
   border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
   // TODO: Get box-shadow token working instead of hardcoding
-  // box-shadow: var(--gse-ui-calendarMenu-boxShadow-color)px var(--gse-ui-calendarMenu-boxShadow-x)px var(--gse-ui-calendarMenu-boxShadow-y)px var(--gse-ui-calendarMenu-boxShadow-blur)px var(----gse-ui-calendarMenu-boxShadow-spread)px;
+  // box-shadow: var(--gse-ui-calendarMenu-boxShadow-color)px var(--gse-ui-calendarMenu-boxShadow-x, var(--gse-ui-calendarMenu-boxShadow-offsetX))px var(--gse-ui-calendarMenu-boxShadow-y, var(--gse-ui-calendarMenu-boxShadow-offsetY))px var(--gse-ui-calendarMenu-boxShadow-blur)px var(----gse-ui-calendarMenu-boxShadow-spread)px;
   box-shadow: rgb(34 37 41 / 24%) 0 2px 4px;
 
   .gux-header {
@@ -35,7 +35,7 @@
 
     .gux-left,
     .gux-right {
-      color: var(--gse-ui-calendarMenu-month-monthHeader-foregroundColor);
+      color: var(--gse-ui-calendarMenu-header-foregroundColor);
       cursor: pointer;
       background: none;
       border: none;
@@ -60,20 +60,19 @@
     font-family: var(--gse-ui-calendarMenu-day-headerText-fontFamily);
     font-size: var(--gse-ui-calendarMenu-day-headerText-fontSize);
     font-weight: var(--gse-ui-calendarMenu-day-headerText-fontWeight);
-    color: var(--gse-ui-calendarMenu-day-dayHeader-foregroundColor);
+    color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
     text-align: center;
 
     .gux-week-day {
       display: inline-block;
       width: var(--gse-ui-calendarMenu-day-date-size);
       height: 16px;
-      font-weight: var(--gse-ui-calendarMenu-day-header-fontWeight);
     }
   }
 
   .gux-content {
     padding: var(--gse-ui-calendarMenu-dateBody-padding);
-    color: var(--gse-core-color-cornflower-900);
+    color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
     background-color: var(--gse-ui-calendarMenu-backgroundColor);
     border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
   }
@@ -88,7 +87,7 @@
       font-style: normal;
       font-weight: var(--gse-ui-calendarMenu-date-defaultText-fontWeight);
       line-height: 32px;
-      color: var(--gse-core-color-cornflower-600);
+      color: #626e84;
       text-align: center;
       vertical-align: middle;
       border: none;
@@ -133,8 +132,15 @@
 
       &:focus-visible {
         border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
-        outline: var(--gse-semantic-focusRing-default-border-width) solid
-          var(--gse-semantic-focusRing-default-border-color);
+        outline: var(
+            --gse-semantic-focusRing-default-border-width,
+            var(--gse-semantic-focusOutline-md-borderWidth)
+          )
+          solid
+          var(
+            --gse-semantic-focusRing-default-border-color,
+            var(--gse-semantic-border-focus)
+          );
       }
 
       .gux-sr-only {

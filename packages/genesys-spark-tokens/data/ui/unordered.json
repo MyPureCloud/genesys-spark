@@ -503,6 +503,18 @@
         "value": "{opacity.disabled}",
         "type": "opacity"
       }
+    },
+    "small": {
+      "height": {
+        "value": "{size.sm}",
+        "type": "sizing"
+      }
+    },
+    "large": {
+      "height": {
+        "value": "{size.lg}",
+        "type": "sizing"
+      }
     }
   },
   "badge": {
@@ -514,7 +526,7 @@
       "value": "{body.sm.semi_bold}",
       "type": "typography",
       "font_weight": {
-        "value": "{font_weight.semi-bold}",
+        "value": "{font_weight.semi_bold}",
         "type": "fontWeights"
       }
     },
@@ -788,7 +800,7 @@
     },
     "star": {
       "gap": {
-        "value": "{forms.form_control.grouped_inputs.gap}",
+        "value": "{form_control.field.click_input.gap}",
         "type": "spacing"
       }
     }

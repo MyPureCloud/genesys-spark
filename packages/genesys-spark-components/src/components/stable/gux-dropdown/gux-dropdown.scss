@@ -2,7 +2,10 @@
   outline: var(--gse-ui-formControl-input-focus-border-width)
     var(--gse-ui-formControl-input-focus-border-style)
     var(--gse-ui-formControl-input-focus-border-color);
-  outline-offset: var(--gse-semantic-focusRing-offset);
+  outline-offset: var(
+    --gse-semantic-focusRing-offset,
+    var(--gse-semantic-focusOutline-offset)
+  );
 }
 
 :host {
@@ -192,7 +195,11 @@
 
 ::slotted(gux-listbox) {
   outline: none;
-  box-shadow: var(--gse-ui-menu-boxShadow-x) var(--gse-ui-menu-boxShadow-y)
+  box-shadow: var(
+      --gse-ui-menu-boxShadow-x,
+      var(--gse-ui-menu-boxShadow-offsetX)
+    )
+    var(--gse-ui-menu-boxShadow-y, var(--gse-ui-menu-boxShadow-offsetY))
     var(--gse-ui-menu-boxShadow-blur) var(--gse-ui-menu-boxShadow-spread)
     var(--gse-ui-menu-boxShadow-color);
 }

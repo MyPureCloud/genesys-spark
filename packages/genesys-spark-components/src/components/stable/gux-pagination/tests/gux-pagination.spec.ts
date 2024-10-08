@@ -35,6 +35,13 @@ describe('gux-pagination', () => {
       {
         currentPage: 1,
         totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'advanced',
+        disabled: true
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
         itemsPerPage: 50,
         layout: 'advanced'
       },
@@ -80,31 +87,54 @@ describe('gux-pagination', () => {
         itemsPerPage: 100,
         layout: 'advanced'
       },
-      { currentPage: 1, totalItems: 1000, itemsPerPage: 25, layout: 'simple' },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'simple'
+      },
+      {
+        currentPage: 1,
+        totalItems: 1000,
+        itemsPerPage: 25,
+        layout: 'simple',
+        disabled: true
+      },
       {
         currentPage: -3,
         totalItems: 1000,
         itemsPerPage: 25,
         layout: 'advanced'
       },
-      { currentPage: -3, totalItems: 0, itemsPerPage: 25, layout: 'advanced' }
-    ].forEach(({ currentPage, totalItems, itemsPerPage, layout }, index) => {
-      it(`should render as expected (${index + 1})`, async () => {
-        const html = `
+      {
+        currentPage: -3,
+        totalItems: 0,
+        itemsPerPage: 25,
+        layout: 'advanced'
+      }
+    ].forEach(
+      (
+        { currentPage, totalItems, itemsPerPage, layout, disabled = false },
+        index
+      ) => {
+        it(`should render as expected (${index + 1})`, async () => {
+          const html = `
           <gux-pagination
             current-page="${currentPage}"
             total-items="${totalItems}"
             items-per-page="${itemsPerPage}"
             layout="${layout}"
+            disabled="${disabled}"
           ></gux-pagination>
         `;
-        const page = await newSpecPage({ components, html, language });
+          const page = await newSpecPage({ components, html, language });
 
-        expect(page.rootInstance).toBeInstanceOf(GuxPagination);
+          expect(page.rootInstance).toBeInstanceOf(GuxPagination);
 
-        expect(page.root).toMatchSnapshot();
-      });
-    });
+          expect(page.root).toMatchSnapshot();
+        });
+      }
+    );
     it(`should render current page as 1 when total items is 0`, async () => {
       const html = `
       <gux-pagination

@@ -45,7 +45,7 @@
     flex-wrap: nowrap;
     gap: var(--gse-ui-toggle-gap);
     place-content: stretch flex-start;
-    align-items: flex-start;
+    align-items: center;
     width: fit-content;
     cursor: pointer;
 
@@ -56,7 +56,7 @@
       .gux-toggle-label-text {
         display: grid;
         grid-template-areas: 'inner-div';
-        place-items: start;
+        place-items: center start;
 
         .gux-toggle-label-text-inner {
           position: relative;

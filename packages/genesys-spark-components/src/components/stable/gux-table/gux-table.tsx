@@ -108,7 +108,9 @@ export class GuxTable {
     }
 
     this.prepareSelectableRows();
-    this.checkVerticalScroll();
+    readTask(() => {
+      this.checkVerticalScroll();
+    });
 
     if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() => {

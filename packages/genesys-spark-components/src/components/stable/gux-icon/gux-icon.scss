@@ -5,18 +5,18 @@
 }
 
 :host([size='small']) {
-  width: var(--gse-ui-icon-size-sm);
-  height: var(--gse-ui-icon-size-sm);
+  width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+  height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
 }
 
 :host([size='medium']) {
-  width: var(--gse-ui-icon-size-md);
-  height: var(--gse-ui-icon-size-md);
+  width: var(--gse-ui-icon-size-md, var(--gse-ui-icon-medium-size));
+  height: var(--gse-ui-icon-size-md, var(--gse-ui-icon-medium-size));
 }
 
 :host([size='large']) {
-  width: var(--gse-ui-icon-size-lg);
-  height: var(--gse-ui-icon-size-lg);
+  width: var(--gse-ui-icon-size-lg, var(--gse-ui-icon-large-size));
+  height: var(--gse-ui-icon-size-lg, var(--gse-ui-icon-large-size));
 }
 
 .gux-icon-container {

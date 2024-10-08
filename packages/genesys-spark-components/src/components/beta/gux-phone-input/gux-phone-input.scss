@@ -10,7 +10,7 @@
   align-self: auto;
   order: 0;
   width: 100%;
-  margin-inline-start: var(--gse-core-spacing-4xs);
+  margin-inline-start: 4px;
   overflow: hidden;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   color: var(--gse-ui-formControl-input-populatedColor);
@@ -33,7 +33,7 @@
   align-items: center;
   width: 100%;
   height: var(--gse-ui-phoneInput-dropdown-height);
-  padding: 0 var(--gse-core-spacing-3xs) 0 0;
+  padding: 0 8px 0 0;
   font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);

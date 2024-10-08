@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-table-toolbar-action #render should render a disabled toolbar-action 1`] = `"<gux-table-toolbar-action disabled="" action="export" hydrated=""></gux-table-toolbar-action>"`;
+exports[`gux-table-toolbar-action #render should render a disabled toolbar-action 1`] = `"<gux-table-toolbar-action disabled="" action="export" hydrated=""><template shadowrootmode="open"><gux-table-toolbar-custom-action hydrated=""><span slot="text">Export</span><gux-icon slot="icon" icon-name="fa/arrow-up-from-line-regular" size="inherit" hydrated=""></gux-icon></gux-table-toolbar-custom-action></template></gux-table-toolbar-action>"`;
 
-exports[`gux-table-toolbar-action #render should render a primary toolbar-action 1`] = `"<gux-table-toolbar-action slot="primary-action" accent="primary" action="export" hydrated=""></gux-table-toolbar-action>"`;
+exports[`gux-table-toolbar-action #render should render a primary toolbar-action 1`] = `"<gux-table-toolbar-action slot="primary-action" accent="primary" action="export" hydrated=""><template shadowrootmode="open"><gux-table-toolbar-custom-action hydrated=""><span slot="text">Export</span><gux-icon slot="icon" icon-name="fa/arrow-up-from-line-regular" size="inherit" hydrated=""></gux-icon></gux-table-toolbar-custom-action></template></gux-table-toolbar-action>"`;
 
-exports[`gux-table-toolbar-action #render should render delete toolbar-action 1`] = `"<gux-table-toolbar-action action="delete" hydrated=""></gux-table-toolbar-action>"`;
+exports[`gux-table-toolbar-action #render should render delete toolbar-action 1`] = `"<gux-table-toolbar-action action="delete" hydrated=""><template shadowrootmode="open"><gux-table-toolbar-custom-action hydrated=""><span slot="text">Delete</span><gux-icon slot="icon" icon-name="fa/trash-regular" size="inherit" hydrated=""></gux-icon></gux-table-toolbar-custom-action></template></gux-table-toolbar-action>"`;
 
-exports[`gux-table-toolbar-action #render should render export toolbar-action 1`] = `"<gux-table-toolbar-action action="export" hydrated=""></gux-table-toolbar-action>"`;
+exports[`gux-table-toolbar-action #render should render export toolbar-action 1`] = `"<gux-table-toolbar-action action="export" hydrated=""><template shadowrootmode="open"><gux-table-toolbar-custom-action hydrated=""><span slot="text">Export</span><gux-icon slot="icon" icon-name="fa/arrow-up-from-line-regular" size="inherit" hydrated=""></gux-icon></gux-table-toolbar-custom-action></template></gux-table-toolbar-action>"`;
 
-exports[`gux-table-toolbar-action #render should render import toolbar-action 1`] = `"<gux-table-toolbar-action action="import" hydrated=""></gux-table-toolbar-action>"`;
+exports[`gux-table-toolbar-action #render should render import toolbar-action 1`] = `"<gux-table-toolbar-action action="import" hydrated=""><template shadowrootmode="open"><gux-table-toolbar-custom-action hydrated=""><span slot="text">Import</span><gux-icon slot="icon" icon-name="fa/file-import-regular" size="inherit" hydrated=""></gux-icon></gux-table-toolbar-custom-action></template></gux-table-toolbar-action>"`;
 
-exports[`gux-table-toolbar-action #render should render refresh toolbar-action 1`] = `"<gux-table-toolbar-action action="refresh" hydrated=""></gux-table-toolbar-action>"`;
+exports[`gux-table-toolbar-action #render should render refresh toolbar-action 1`] = `"<gux-table-toolbar-action action="refresh" hydrated=""><template shadowrootmode="open"><gux-table-toolbar-custom-action hydrated=""><span slot="text">Refresh</span><gux-icon slot="icon" icon-name="fa/arrows-rotate-regular" size="inherit" hydrated=""></gux-icon></gux-table-toolbar-custom-action></template></gux-table-toolbar-action>"`;
 
-exports[`gux-table-toolbar-action #render should render revert toolbar-action 1`] = `"<gux-table-toolbar-action action="revert" hydrated=""></gux-table-toolbar-action>"`;
+exports[`gux-table-toolbar-action #render should render revert toolbar-action 1`] = `"<gux-table-toolbar-action action="revert" hydrated=""><template shadowrootmode="open"><gux-table-toolbar-custom-action hydrated=""><span slot="text">Revert</span><gux-icon slot="icon" icon-name="fa/arrow-rotate-left-regular" size="inherit" hydrated=""></gux-icon></gux-table-toolbar-custom-action></template></gux-table-toolbar-action>"`;

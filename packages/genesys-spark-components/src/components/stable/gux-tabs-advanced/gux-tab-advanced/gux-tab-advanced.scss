@@ -5,9 +5,6 @@
 // --gse-ui-advancedTabs-item-focus-border-color: #7b88f7;
 // --gse-ui-advancedTabs-item-focus-border-width: 3px;
 // --gse-ui-advancedTabs-item-focus-border-style: solid;
-// --gse-ui-advancedTabs-item-focus-borderCopy-0: 4;
-// --gse-ui-advancedTabs-item-focus-borderCopy-1: p;
-// --gse-ui-advancedTabs-item-focus-borderCopy-2: x;
 // --gse-ui-advancedTabs-item-backgroundColor: #ffffff;
 // --gse-ui-advancedTabs-item-borderRadius: 4px 4px 0 0;
 // --gse-ui-advancedTabs-item-height: 48px;
@@ -71,7 +68,7 @@ gux-tab-advanced {
 
           border-radius: var(--gse-ui-advancedTabs-item-focus-borderRadius);
           outline-offset: calc(
-            -1 * var(--gse-semantic-focusRing-default-border-width)
+            -1 * var(--gse-semantic-focusRing-default-border-width, var(--gse-semantic-focusOutline-md-borderWidth))
           );
         }
 
@@ -89,8 +86,8 @@ gux-tab-advanced {
     .gux-tab-options {
       .gux-tab-options-trigger {
         gux-icon {
-          width: var(--gse-ui-icon-size-sm);
-          height: var(--gse-ui-icon-size-sm);
+          width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+          height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
         }
       }
 

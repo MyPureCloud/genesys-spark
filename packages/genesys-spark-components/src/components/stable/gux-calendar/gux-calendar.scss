@@ -34,8 +34,8 @@
 @prop gse-ui-calendarMenu-disabled-opacity
 @prop gse-ui-calendarMenu-boxShadow-color
 @prop gse-ui-calendarMenu-boxShadow-type
-@prop gse-ui-calendarMenu-boxShadow-x
-@prop gse-ui-calendarMenu-boxShadow-y
+@prop gse-ui-calendarMenu-boxShadow-offsetX
+@prop gse-ui-calendarMenu-boxShadow-offsetY
 @prop gse-ui-calendarMenu-boxShadow-blur
 @prop gse-ui-calendarMenu-boxShadow-spread
 @prop gse-ui-calendarMenu-day-range-height - Not used since this value is already calculated from using other tokens
@@ -52,8 +52,14 @@
 .gux-calendar {
   margin-top: 2px;
   border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
-  box-shadow: var(--gse-ui-calendarMenu-boxShadow-x)
-    var(--gse-ui-calendarMenu-boxShadow-y)
+  box-shadow: var(
+      --gse-ui-calendarMenu-boxShadow-x,
+      var(--gse-ui-calendarMenu-boxShadow-offsetX)
+    )
+    var(
+      --gse-ui-calendarMenu-boxShadow-y,
+      var(--gse-ui-calendarMenu-boxShadow-offsetY)
+    )
     var(--gse-ui-calendarMenu-boxShadow-blur)
     var(--gse-ui-calendarMenu-boxShadow-spread)
     var(--gse-ui-calendarMenu-boxShadow-color);
@@ -73,7 +79,7 @@
 
     button {
       position: absolute;
-      color: var(--gse-ui-calendarMenu-month-monthHeader-foregroundColor);
+      color: var(--gse-ui-calendarMenu-header-foregroundColor);
       cursor: pointer;
       background: none;
       border: none;
@@ -94,8 +100,8 @@
       }
 
       gux-icon {
-        width: var(--gse-ui-icon-size-sm);
-        height: var(--gse-ui-icon-size-sm);
+        width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+        height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
         pointer-events: none;
       }
     }
@@ -257,8 +263,15 @@
 
           &:focus-visible {
             border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
-            outline: var(--gse-semantic-focusRing-default-border-width) solid
-              var(--gse-semantic-focusRing-default-border-color);
+            outline: var(
+                --gse-semantic-focusRing-default-border-width,
+                var(--gse-semantic-focusOutline-md-borderWidth)
+              )
+              solid
+              var(
+                --gse-semantic-focusRing-default-border-color,
+                var(--gse-semantic-border-focus)
+              );
           }
         }
       }

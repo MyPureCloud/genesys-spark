@@ -18,7 +18,7 @@
   @include button-text;
 
   inline-size: 100%;
-  min-inline-size: var(--gse-ui-button-icon-only-width);
+  min-inline-size: var(--gse-ui-button-iconOnly-width);
   block-size: var(--gse-ui-button-default-height);
   padding: var(--gse-ui-button-default-padding);
   overflow: hidden;
@@ -176,7 +176,10 @@
   ::slotted(button) {
     block-size: initial;
     padding: 0;
-    color: var(--gse-ui-link-default-foregroundColor);
+    color: var(
+      --gse-ui-link-default-foregroundColor,
+      var(--gse-ui-links-default-foregroundColor)
+    );
     background: none;
     border: none;
   }
@@ -184,13 +187,19 @@
   ::slotted(input[type='button'][disabled]),
   ::slotted(input[type='submit'][disabled]),
   ::slotted(button[disabled]) {
-    color: var(--gse-ui-link-disabled-foregroundColor);
+    color: var(
+      --gse-ui-link-disabled-foregroundColor,
+      var(--gse-ui-links-disabled-foregroundColor)
+    );
   }
 
   ::slotted(input[type='button']:hover:enabled),
   ::slotted(input[type='submit']:hover:enabled),
   ::slotted(button:hover:enabled) {
-    color: var(--gse-ui-link-hover-foregroundColor);
+    color: var(
+      --gse-ui-link-hover-foregroundColor,
+      var(--gse-ui-links-hover-foregroundColor)
+    );
     text-decoration: underline;
     background: none;
   }
@@ -198,7 +207,10 @@
   ::slotted(input[type='button']:active:enabled),
   ::slotted(input[type='submit']:active:enabled),
   ::slotted(button:active:enabled) {
-    color: var(--gse-ui-link-active-foregroundColor);
+    color: var(
+      --gse-ui-link-active-foregroundColor,
+      var(--gse-ui-links-active-foregroundColor)
+    );
     text-decoration: underline;
     background: none;
   }

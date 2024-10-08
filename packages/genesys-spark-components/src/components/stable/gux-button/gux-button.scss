@@ -30,10 +30,7 @@
 }
 
 ::slotted(*) {
-  padding-inline-start: var(
-    --gse-core-spacing-3xs
-  ); // COMUI-2156 add missing button tokens
-
+  padding-inline-start: 8px; // COMUI-2156 add missing button tokens
   vertical-align: middle;
 }
 
@@ -45,7 +42,7 @@ button {
   @include button-text;
 
   inline-size: 100%;
-  min-inline-size: var(--gse-ui-button-icon-only-width);
+  min-inline-size: var(--gse-ui-button-iconOnly-width);
   block-size: var(--gse-ui-button-default-height);
   padding: var(--gse-ui-button-default-padding);
   overflow: hidden;
@@ -64,6 +61,7 @@ button {
   }
 
   &[disabled] {
+    pointer-events: none;
     cursor: default;
     opacity: var(--gse-ui-button-disabled-opacity);
   }
@@ -81,7 +79,10 @@ button {
   &:focus-visible:enabled {
     @include focus.gux-focus-ring;
 
-    border-radius: var(--gse-semantic-focusRing-cornerRadius);
+    border-radius: var(
+      --gse-semantic-focusRing-cornerRadius,
+      var(--gse-semantic-focusOutline-sm-borderRadius)
+    );
   }
 
   &.gux-primary {
@@ -159,23 +160,35 @@ button {
     min-inline-size: initial;
     block-size: initial;
     padding: 0;
-    color: var(--gse-ui-link-default-foregroundColor);
+    color: var(
+      --gse-ui-link-default-foregroundColor,
+      var(--gse-ui-links-default-foregroundColor)
+    );
     background: none;
     border: none;
     border-radius: 0;
 
     &[disabled] {
-      color: var(--gse-ui-link-disabled-foregroundColor);
+      color: var(
+        --gse-ui-link-disabled-foregroundColor,
+        var(--gse-ui-links-disabled-foregroundColor)
+      );
     }
 
     &:hover:enabled {
-      color: var(--gse-ui-link-hover-foregroundColor);
+      color: var(
+        --gse-ui-link-hover-foregroundColor,
+        var(--gse-ui-links-hover-foregroundColor)
+      );
       text-decoration: underline;
       background: none;
     }
 
     &:active:enabled {
-      color: var(--gse-ui-link-active-foregroundColor);
+      color: var(
+        --gse-ui-link-active-foregroundColor,
+        var(--gse-ui-links-active-foregroundColor)
+      );
       text-decoration: underline;
       background: none;
     }

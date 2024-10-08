@@ -1,27 +1,7 @@
-button {
-  color: var(--gse-ui-button-ghost-default-foregroundColor);
-  cursor: pointer;
-  background: none;
-  border: none;
-
-  &:hover {
-    color: var(--gse-ui-button-ghost-hover-foregroundColor);
-  }
-
-  &:focus-visible {
-    border-radius: calc(
-      var(--gse-semantic-focusRing-cornerRadius) - var(
-          --gse-semantic-focusRing-offset
-        )
-    );
-    outline: var(--gse-semantic-focusRing-width) solid
-      var(--gse-semantic-color-focus);
-    outline-offset: var(--gse-semantic-focusRing-offset);
-  }
-
+gux-button {
   gux-icon {
-    width: var(--gse-ui-icon-size-sm);
-    height: var(--gse-ui-icon-size-sm);
+    width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+    height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
     padding-top: 4px;
   }
 }

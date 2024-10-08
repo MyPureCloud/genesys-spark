@@ -38,7 +38,10 @@ button {
   outline-offset: calc(var(--gse-ui-menu-option-focus-border-width) * -1);
 
   &:focus-visible:not(:disabled) {
-    border-radius: var(--gse-semantic-focusRing-cornerRadius);
+    border-radius: var(
+      --gse-semantic-focusRing-cornerRadius,
+      var(--gse-semantic-focusOutline-sm-borderRadius)
+    );
     outline: var(--gse-ui-menu-option-focus-border-width)
       var(--gse-ui-menu-option-focus-border-style)
       var(--gse-ui-menu-option-focus-border-color);

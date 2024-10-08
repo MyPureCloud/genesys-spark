@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type     | Default     |
-| ------------ | ------------- | ----------- | -------- | ----------- |
-| `totalPages` | `total-pages` |             | `number` | `undefined` |
+| Property     | Attribute     | Description | Type      | Default     |
+| ------------ | ------------- | ----------- | --------- | ----------- |
+| `disabled`   | `disabled`    |             | `boolean` | `false`     |
+| `totalPages` | `total-pages` |             | `number`  | `undefined` |
 
 
 ## Events
@@ -27,6 +28,7 @@
 
 ### Depends on
 
+- [gux-button](../../../gux-button)
 - [gux-icon](../../../gux-icon)
 - [gux-tooltip](../../../gux-tooltip)
 - [gux-popover](../../../gux-popover)
@@ -35,6 +37,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  gux-pagination-ellipsis-button --> gux-button
   gux-pagination-ellipsis-button --> gux-icon
   gux-pagination-ellipsis-button --> gux-tooltip
   gux-pagination-ellipsis-button --> gux-popover

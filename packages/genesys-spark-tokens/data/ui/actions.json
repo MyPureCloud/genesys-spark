@@ -76,6 +76,28 @@
         "type": "spacing"
       }
     },
+    "dismiss": {
+      "small": {
+        "height": {
+          "value": "{interactive.sm.size}",
+          "type": "sizing"
+        },
+        "width": {
+          "value": "{interactive.sm.size}",
+          "type": "sizing"
+        }
+      },
+      "medium": {
+        "height": {
+          "value": "{interactive.md.size}",
+          "type": "sizing"
+        },
+        "width": {
+          "value": "{interactive.md.size}",
+          "type": "sizing"
+        }
+      }
+    },
     "icon_only": {
       "width": {
         "value": "{interactive.md.size}",

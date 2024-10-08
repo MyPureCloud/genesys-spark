@@ -2,6 +2,91 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.88.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.88.0...v4.88.1) (2024-10-07)
+
+## [4.88.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.87.0...v4.88.0) (2024-10-03)
+
+
+### Features
+
+* **datepicker:** allow a width to be applied to the datepicker input ([06dff80](https://github.com/MyPureCloud/genesys-spark/commit/06dff80d30b1dac3c3492f87df09b05548ff30fd))
+
+
+### Bug Fixes
+
+* **visualization:** added more localizations ([5c3dd96](https://github.com/MyPureCloud/genesys-spark/commit/5c3dd963fc834f294857d3b98d9695edccf473a7))
+
+## [4.87.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.86.0...v4.87.0) (2024-10-02)
+
+
+### Features
+
+* **pagination:** disabled variant ([#589](https://github.com/MyPureCloud/genesys-spark/issues/589)) ([3c6a369](https://github.com/MyPureCloud/genesys-spark/commit/3c6a369b1ae565c0ba0e8c72ff3f9827c6f84266))
+
+## [4.86.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.85.1...v4.86.0) (2024-09-28)
+
+
+### Features
+
+* **dismiss-button:** adding small variant ([1df2dbb](https://github.com/MyPureCloud/genesys-spark/commit/1df2dbbccb0003455c5d4417a3dee278ea0bc88c))
+* **tokens:** added missing semantic z-index tokens ([8b8b4ec](https://github.com/MyPureCloud/genesys-spark/commit/8b8b4ec23bc753ab402f64b9ec5b0ff15c053019))
+* **tokens:** readded form body tokens ([b674a51](https://github.com/MyPureCloud/genesys-spark/commit/b674a51e334a572357be1deaced6ffd1c18dfc76))
+* **tokens:** readded form tokens ([ccf8f0f](https://github.com/MyPureCloud/genesys-spark/commit/ccf8f0faf042bfcf8e4caa57978b133234c70fa2))
+* **tokens:** readded some forms tokens ([82c32ee](https://github.com/MyPureCloud/genesys-spark/commit/82c32ee859238366a719327d81ef0ce08349698e))
+* **tokens:** updated figma styles and vars ([1aa0f1d](https://github.com/MyPureCloud/genesys-spark/commit/1aa0f1df9ea16520aa3c8f96f8c973e3df230244))
+
+
+### Bug Fixes
+
+* **form-field-range:** prevent error when resized before render ([#626](https://github.com/MyPureCloud/genesys-spark/issues/626)) ([2c369b6](https://github.com/MyPureCloud/genesys-spark/commit/2c369b68e6f74a198da40e8837190258147dbf27))
+* **other:** removed all core token references from components ([d19cb64](https://github.com/MyPureCloud/genesys-spark/commit/d19cb64d64bbf3bcc6b4122728ff639c8ce4f3ad))
+
+### [4.85.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.85.0...v4.85.1) (2024-09-27)
+
+
+### Bug Fixes
+
+* **accordion:** arrow not centered ([#624](https://github.com/MyPureCloud/genesys-spark/issues/624)) ([ddb12be](https://github.com/MyPureCloud/genesys-spark/commit/ddb12be216b9fb598f15f4bd125a76d1acccad8c))
+* **other:** added fallback to new token in label tooltip trigger ([011fc29](https://github.com/MyPureCloud/genesys-spark/commit/011fc293c9a23668c6218e0ae6022a08524777e8))
+* **other:** fixed all undefined token usage ([e07b71b](https://github.com/MyPureCloud/genesys-spark/commit/e07b71b07504b0093cc47becba8cab1d03d12ef0))
+* **other:** fixed avatar token issue ([b05d009](https://github.com/MyPureCloud/genesys-spark/commit/b05d0095356e975d17d5440820db4bc50b00ee16))
+* **other:** fixed tag height tokens ([bd2f58c](https://github.com/MyPureCloud/genesys-spark/commit/bd2f58ca6deaf2df11c74b37ac9e4f33aff9b1cb))
+* **other:** fixed token typo ([de596f9](https://github.com/MyPureCloud/genesys-spark/commit/de596f939f53fd41d669d2f9eef9d20101e1f460))
+* **other:** removed unnecessary letter-spacing token ([b04136b](https://github.com/MyPureCloud/genesys-spark/commit/b04136be337a3df54285eb23f614b8873e2f24ff))
+* **other:** removed unused subtext height token ([602d1a9](https://github.com/MyPureCloud/genesys-spark/commit/602d1a913c436920b7a0d6e2e622a3023b4d1ef9))
+
+## [4.85.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.84.0...v4.85.0) (2024-09-26)
+
+
+### Features
+
+* **langauge:** LOCAL-10116 adding placeholder file for hindi ([c14599e](https://github.com/MyPureCloud/genesys-spark/commit/c14599eb9f80bd23cd5c12e4ab51ec709d51e3ff))
+
+
+### Bug Fixes
+
+* **modal-legacy:** prevent focus ring cropping ([#619](https://github.com/MyPureCloud/genesys-spark/issues/619)) ([eca1f8f](https://github.com/MyPureCloud/genesys-spark/commit/eca1f8f7cb0e4f1f5d8edaf7790de9035a559fe1))
+
+## [4.84.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.83.1...v4.84.0) (2024-09-25)
+
+
+### Features
+
+* **cta group:** make responsive and allow buttons to truncate if necessary ([b0ad422](https://github.com/MyPureCloud/genesys-spark/commit/b0ad42291644b7302e58f84616558082b7b1e590))
+* **tokens:** generated figma vars and styles ([cbb0667](https://github.com/MyPureCloud/genesys-spark/commit/cbb06679c1fce06bf79c1ad47ad0ad9e5699a66c))
+
+
+### Bug Fixes
+
+* **other:** fixed new code token generation ([47804aa](https://github.com/MyPureCloud/genesys-spark/commit/47804aabdfb2db7724f7e18059a0edc610b09376))
+
+### [4.83.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.83.0...v4.83.1) (2024-09-20)
+
+
+### Bug Fixes
+
+* **pagination:** Remove last page duplication on simple layout ([#607](https://github.com/MyPureCloud/genesys-spark/issues/607)) ([e7d8f6a](https://github.com/MyPureCloud/genesys-spark/commit/e7d8f6a0315bfff2586615093703454566c1a841))
+
 ## [4.83.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.82.0...v4.83.0) (2024-09-13)
 
 

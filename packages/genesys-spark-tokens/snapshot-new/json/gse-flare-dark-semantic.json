@@ -1,4 +1,17 @@
 {
+  "z_index": {
+    "base": "0",
+    "show-focus": "1",
+    "sticky": "1",
+    "popup": "100",
+    "popover": "200",
+    "tooltip": "200",
+    "panel": "300",
+    "navbar": "400",
+    "sidebar": "400",
+    "toast": "500",
+    "modal": "600"
+  },
   "opacity": {
     "disabled": ".5",
     "shroud": ".8"
@@ -891,6 +904,14 @@
     }
   },
   "form_control": {
+    "form": {
+      "max_width": "600px",
+      "margin": "24px"
+    },
+    "form_body": {
+      "padding_bottom": "32px",
+      "gap": "16px"
+    },
     "text_input": {
       "lg": {
         "border_radius": "8px"
@@ -944,6 +965,17 @@
     "click_input": {
       "handle": {
         "border_width": "2px"
+      }
+    },
+    "form_header": {
+      "padding_bottom": "20px",
+      "gap": "4px"
+    },
+    "fieldset": {
+      "padding_bottom": "48px",
+      "header": {
+        "padding_bottom": "20px",
+        "gap": "4px"
       }
     }
   },
