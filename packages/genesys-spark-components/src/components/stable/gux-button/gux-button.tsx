@@ -106,6 +106,12 @@ export class GuxButton {
       if (child.tagName === 'GUX-ICON') {
         return true;
       }
+    } else if (
+      children.length === 2 &&
+      children[0].tagName === 'GUX-ICON' &&
+      children[1].tagName === 'GUX-TOOLTIP'
+    ) {
+      return true;
     }
 
     return false;

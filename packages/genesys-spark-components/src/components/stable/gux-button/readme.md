@@ -23,6 +23,20 @@ You can choose between two type (secondary and primary).
 |      | content     |
 
 
+## Dependencies
+
+### Depends on
+
+- [gux-tooltip-beta](../../beta/gux-tooltip-beta)
+
+### Graph
+```mermaid
+graph TD;
+  gux-button --> gux-tooltip-beta
+  gux-tooltip-beta --> gux-tooltip-base-beta
+  style gux-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
