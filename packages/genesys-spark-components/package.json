@@ -60,7 +60,7 @@
   },
   "types": "dist/types/index.d.ts",
   "dependencies": {
-    "@floating-ui/dom": "1.6.10",
+    "@floating-ui/dom": "^1.6.11",
     "@vvo/tzdb": "6.145.0",
     "google-libphonenumber": "3.2.38",
     "intl-messageformat": "10.5.14",
