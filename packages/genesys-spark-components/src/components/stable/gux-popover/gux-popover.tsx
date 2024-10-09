@@ -22,6 +22,7 @@ import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
 import { getSlot } from '@utils/dom/get-slot';
 import { findElementById } from '@utils/dom/find-element-by-id';
+import { ThrottleMethod } from '@utils/decorator/throttle-method';
 
 /**
  * @slot - popover content
@@ -201,8 +202,10 @@ export class GuxPopover {
     }
   }
 
+  @ThrottleMethod(100)
   private dismiss(): void {
     const dismissEvent = this.guxdismiss.emit();
+
     if (!dismissEvent.defaultPrevented) {
       this.isOpen = false;
     }
