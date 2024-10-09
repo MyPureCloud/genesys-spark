@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.88.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.88.1...v4.88.2) (2024-10-09)
+
+
+### Bug Fixes
+
+* **flyout-menu:** added flip to sub-menu ([8218a97](https://github.com/MyPureCloud/genesys-spark/commit/8218a977cf5122236250c2fc348e3b4d0adee387))
+* **segmented-control:** vertically center icons and text ([112ab9c](https://github.com/MyPureCloud/genesys-spark/commit/112ab9c7595c8057200b3c6806d58c944dd2142d))
+
 ### [4.88.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.88.0...v4.88.1) (2024-10-07)
 
 ## [4.88.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.87.0...v4.88.0) (2024-10-03)
