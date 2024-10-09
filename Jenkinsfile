@@ -117,7 +117,7 @@ webappPipeline {
                 withCredentials([
                   string(credentialsId: constants.credentials.npm,  variable: 'NPM_TOKEN')
                 ]) {
-                    def failures = []
+                    def failures = new ArrayList<String>()
 
                     def componentStatCode = sh(script: "npm publish --workspace=packages/genesys-spark-components ${publishOptions}",
                         label: 'Publish Components',
@@ -125,7 +125,7 @@ webappPipeline {
                         )
 
                     if(componentStatCode > 0) {
-                      failures.push('Publish Components')
+                      failures.add('Publish Components')
                     }
 
                     def chartStatCode = sh(script: "npm publish --workspace=packages/genesys-spark-chart-components ${publishOptions}",
@@ -134,7 +134,7 @@ webappPipeline {
                         )
 
                     if(chartStatCode > 0) {
-                      failures.push('Publish Chart Components')
+                      failures.add('Publish Chart Components')
                     }
 
                     def mainPackageStatCode = sh(script: "npm publish --workspace=packages/genesys-spark ${publishOptions}",
@@ -143,7 +143,7 @@ webappPipeline {
                     )
 
                     if(mainPackageStatCode > 0) {
-                      failures.push('Publish Main Package')
+                      failures.add('Publish Main Package')
                     }
 
                     sh(script: '''
@@ -160,7 +160,7 @@ webappPipeline {
                         )
 
                     if(reactStatCode > 0) {
-                      failures.push('Publish React Components')
+                      failures.add('Publish React Components')
                     }
 
                     def chartReactStatCode = sh(script: "npm publish --workspace=packages/genesys-spark-chart-components-react ${publishOptions}",
@@ -169,11 +169,11 @@ webappPipeline {
                         )
 
                     if(chartReactStatCode > 0) {
-                      failures.push('Publish Chart React Components')
+                      failures.add('Publish Chart React Components')
                     }
 
                     def notification = new com.genesys.jenkins.Notifications()
-                    if (failures.length) {
+                    if (failures.size()) {
                       notification.sendEmailViaMailchomp("Spark NPM Publish failures", mailer, "These packages failed to publish to NPM:\n" + failures.join('\n'))
                     }
                 }
