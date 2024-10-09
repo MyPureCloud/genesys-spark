@@ -464,6 +464,7 @@ export type GuxIconIconName =
   | 'refresh'
   | 'reset'
   | 'resource'
+  | 'restricted/custom/sparkles-solid'
   | 'retweet'
   | 'roster-chat'
   | 'roster-chat-disable'
