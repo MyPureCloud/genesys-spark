@@ -109,7 +109,7 @@ export class GuxButton {
     } else if (
       children.length === 2 &&
       children[0].tagName === 'GUX-ICON' &&
-      children[1].tagName === 'GUX-TOOLTIP'
+      ['GUX-TOOLTIP', 'GUX-TOOLTIP-BETA'].includes(children[1].tagName)
     ) {
       return true;
     }

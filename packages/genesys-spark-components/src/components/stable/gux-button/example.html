@@ -61,58 +61,114 @@
 </div>
 
 <h3>Title-like Tooltip</h3>
+<h4>Text with extra description</h4>
+<div class="container">
+  <gux-button onclick="notify(event)"
+    >Default<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+
+  <gux-button accent="primary" onclick="notify(event)"
+    >Primary<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+
+  <gux-button accent="secondary" onclick="notify(event)"
+    >Secondary<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+
+  <gux-button accent="tertiary" onclick="notify(event)"
+    >Tertiary<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+
+  <gux-button accent="ghost" onclick="notify(event)"
+    >Ghost<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+
+  <gux-button accent="danger" onclick="notify(event)"
+    >Danger<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+</div>
+
+<h4>Icon Only</h4>
 <div class="container">
   <gux-button onclick="notify(event)">
-    <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
-    <gux-tooltip
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta visual-only="true"
       ><span slot="content"
-        >This will be read by a screen reader</span
-      ></gux-tooltip
+        >Visual of screen reader text</span
+      ></gux-tooltip-beta
     >
   </gux-button>
 
   <gux-button accent="primary" onclick="notify(event)">
-    <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
-    <gux-tooltip
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta visual-only="true"
       ><span slot="content"
-        >This will be read by a screen reader</span
-      ></gux-tooltip
+        >Visual of screen reader text</span
+      ></gux-tooltip-beta
     >
   </gux-button>
 
   <gux-button accent="secondary" onclick="notify(event)">
-    <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
-    <gux-tooltip
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta visual-only="true"
       ><span slot="content"
-        >This will be read by a screen reader</span
-      ></gux-tooltip
+        >Visual of screen reader text</span
+      ></gux-tooltip-beta
     >
   </gux-button>
 
   <gux-button accent="tertiary" onclick="notify(event)">
-    <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
-    <gux-tooltip
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta visual-only="true"
       ><span slot="content"
-        >This will be read by a screen reader</span
-      ></gux-tooltip
+        >Visual of screen reader text</span
+      ></gux-tooltip-beta
     >
   </gux-button>
 
   <gux-button accent="ghost" onclick="notify(event)">
-    <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
-    <gux-tooltip
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta visual-only="true"
       ><span slot="content"
-        >This will be read by a screen reader</span
-      ></gux-tooltip
+        >Visual of screen reader text</span
+      ></gux-tooltip-beta
     >
   </gux-button>
 
   <gux-button accent="danger" onclick="notify(event)">
-    <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
-    <gux-tooltip
-      ><span slot="content"
-        >This will be read by a screen reader</span
-      ></gux-tooltip
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta visual-only="true"
+      ><span slot="content">Visual of screenreader text</span></gux-tooltip-beta
     >
   </gux-button>
 </div>
