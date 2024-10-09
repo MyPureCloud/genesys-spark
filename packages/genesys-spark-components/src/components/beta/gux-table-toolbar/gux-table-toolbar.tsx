@@ -91,7 +91,7 @@ export class GuxTableToolbar {
     return this.root?.querySelector('gux-table-toolbar-custom-action[slot]');
   }
 
-  get permanentActions(): HTMLGuxTableToolbarCustomActionElement[] | null {
+  get permanentActions(): HTMLGuxTableToolbarCustomActionElement[] {
     if (this.permanentSlot?.hasChildNodes) {
       return Array.from(
         this.permanentSlot?.querySelectorAll(
@@ -99,6 +99,7 @@ export class GuxTableToolbar {
         )
       );
     }
+    return [];
   }
 
   get menuActionsItems(): HTMLGuxTableToolbarCustomActionElement[] | null {
@@ -111,7 +112,7 @@ export class GuxTableToolbar {
     }
   }
 
-  get contextualActions(): HTMLGuxTableToolbarCustomActionElement[] | null {
+  get contextualActions(): HTMLGuxTableToolbarCustomActionElement[] {
     if (this.contextualSlot?.hasChildNodes) {
       return Array.from(
         this.contextualSlot?.querySelectorAll(
@@ -119,9 +120,10 @@ export class GuxTableToolbar {
         )
       );
     }
+    return [];
   }
 
-  get filterActions(): HTMLGuxTableToolbarCustomActionElement[] | null {
+  get filterActions(): HTMLGuxTableToolbarCustomActionElement[] {
     if (this.filterSlot?.hasChildNodes) {
       return Array.from(
         this.filterSlot?.querySelectorAll(
@@ -129,9 +131,10 @@ export class GuxTableToolbar {
         )
       );
     }
+    return [];
   }
 
-  get allFilterContextual(): HTMLGuxTableToolbarCustomActionElement[] | null {
+  get allFilterContextual(): HTMLGuxTableToolbarCustomActionElement[] {
     return this.filterActions?.concat(this.contextualActions);
   }
 
