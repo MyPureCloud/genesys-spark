@@ -1,6 +1,7 @@
 gux-dropdown {
   .zone-header {
-    padding: 8px 12px 4px; //TODO: COMUI-2478 token needed for padding
+    padding-block: 8px 4px;
+    padding-inline: 12px; //TODO: COMUI-2478 token needed for padding
     color: #6b7585; //TODO: COMUI-2478 need tp clarify token for zone header.
     text-transform: uppercase;
   }
@@ -9,7 +10,7 @@ gux-dropdown {
     padding: var(--gse-ui-menu-option-padding);
 
     &.gux-has-defaults {
-      height: auto;
+      block-size: auto;
     }
 
     .gux-option-wrapper {

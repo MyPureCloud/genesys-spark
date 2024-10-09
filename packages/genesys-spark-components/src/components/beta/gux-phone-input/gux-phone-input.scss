@@ -9,7 +9,7 @@
   flex: 1 1 auto;
   align-self: auto;
   order: 0;
-  width: 100%;
+  inline-size: 100%;
   margin-inline-start: 4px;
   overflow: hidden;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
@@ -31,9 +31,10 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  width: 100%;
-  height: var(--gse-ui-phoneInput-dropdown-height);
-  padding: 0 8px 0 0;
+  inline-size: 100%;
+  block-size: var(--gse-ui-phoneInput-dropdown-height);
+  padding-block: 0;
+  padding-inline: 0 8px;
   font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
@@ -49,7 +50,7 @@
   .gux-input {
     flex: 1;
     align-content: center;
-    height: 100%;
+    block-size: 100%;
     cursor: text;
   }
 
@@ -70,8 +71,8 @@
   flex-wrap: nowrap;
   gap: var(--gse-ui-phoneInput-dropdown-gap);
   align-items: center;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   padding: var(--gse-ui-phoneInput-dropdown-padding);
   font-family: inherit;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
@@ -92,12 +93,12 @@
     flex-wrap: nowrap;
     place-content: stretch flex-start;
     align-items: flex-start;
-    min-width: 0;
+    min-inline-size: 0;
 
     .gux-selected-option {
       display: flex;
       justify-content: center;
-      width: var(--gse-ui-phoneInput-dropdown-flag-width);
+      inline-size: var(--gse-ui-phoneInput-dropdown-flag-width);
       overflow: hidden;
 
       gux-icon {
@@ -115,8 +116,8 @@
     flex: 0 0 auto;
     align-self: auto;
     order: 0;
-    width: var(--gse-ui-phoneInput-dropdown-icon-width);
-    height: var(--gse-ui-phoneInput-dropdown-icon-height);
+    inline-size: var(--gse-ui-phoneInput-dropdown-icon-width);
+    block-size: var(--gse-ui-phoneInput-dropdown-icon-height);
     color: var(--gse-ui-phoneInput-dropdown-foregroundColor);
   }
 }
@@ -144,8 +145,8 @@
 
 .gux-listbox-container {
   box-sizing: border-box;
-  width: fit-content;
-  min-width: var(--gse-ui-phoneInput-dropdown-menu-minWidth);
+  inline-size: fit-content;
+  min-inline-size: var(--gse-ui-phoneInput-dropdown-menu-minWidth);
   margin: 0;
 }
 
@@ -153,23 +154,23 @@
   display: grid;
   grid-template-columns: 36px 1fr;
   align-items: center;
-  width: 100%;
+  inline-size: 100%;
 
   .gux-country-code {
-    text-align: right;
+    text-align: end;
   }
 
   gux-icon {
     position: relative;
     inset-inline-start: 4px;
-    width: var(--gse-ui-phoneInput-dropdown-icon-width);
-    height: var(--gse-ui-phoneInput-dropdown-icon-height);
+    inline-size: var(--gse-ui-phoneInput-dropdown-icon-width);
+    block-size: var(--gse-ui-phoneInput-dropdown-icon-height);
     color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
   }
 }
 
 .gux-region-select {
-  height: 100%;
+  block-size: 100%;
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
   &:focus-within {

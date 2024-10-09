@@ -6,23 +6,23 @@ button {
 }
 
 .gux-container {
-  height: var(--gse-ui-segmentedControl-height);
+  block-size: var(--gse-ui-segmentedControl-height);
   cursor: pointer;
   border-color: var(--gse-ui-segmentedControl-divider-color);
   border-style: var(--gse-ui-segmentedControl-divider-style);
   border-width: var(--gse-ui-segmentedControl-divider-width);
-  border-right: none;
+  border-inline-end: none;
   border-radius: var(--gse-ui-segmentedControl-button-middle-borderRadius);
 
   &.gux-start {
-    border-left-color: var(--gse-ui-segmentedControl-divider-color);
+    border-inline-start-color: var(--gse-ui-segmentedControl-divider-color);
     border-radius: var(--gse-ui-segmentedControl-button-start-borderRadius);
   }
 
   &.gux-end {
     border-style: var(--gse-ui-segmentedControl-divider-style);
     border-width: var(--gse-ui-segmentedControl-divider-width);
-    border-right-color: var(--gse-ui-segmentedControl-divider-color);
+    border-inline-end-color: var(--gse-ui-segmentedControl-divider-color);
     border-radius: var(--gse-ui-segmentedControl-button-end-borderRadius);
   }
 
@@ -37,7 +37,7 @@ button {
     gap: var(--gse-ui-segmentedControl-button-gap);
     place-content: stretch flex-start;
     align-items: center;
-    height: 100%;
+    block-size: 100%;
     padding: var(--gse-ui-segmentedControl-button-padding);
     line-height: 0;
     color: var(--gse-ui-segmentedControl-button-default-foregroundColor);
@@ -90,8 +90,8 @@ button {
 
     .gux-icon {
       slot[name='icon']::slotted(gux-icon) {
-        width: var(--gse-ui-icon-small-size);
-        height: var(--gse-ui-icon-small-size);
+        inline-size: var(--gse-ui-icon-small-size);
+        block-size: var(--gse-ui-icon-small-size);
       }
     }
   }

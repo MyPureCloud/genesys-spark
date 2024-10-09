@@ -22,8 +22,8 @@
 
 :host {
   display: inline-block;
-  width: fit-content;
-  height: fit-content;
+  inline-size: fit-content;
+  block-size: fit-content;
   line-height: 0;
   vertical-align: bottom;
   transform: scale(calc(2 / 3));
