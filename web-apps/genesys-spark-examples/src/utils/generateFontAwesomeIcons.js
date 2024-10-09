@@ -196,7 +196,8 @@ const icons = [
       'fa/wand-magic-sparkles-regular',
       'fa/wifi-regular',
       'fa/windows',
-      'fa/x-twitter'
+      'fa/x-twitter',
+      'restricted/custom/sparkles-solid'
     ]
   }
 ];
