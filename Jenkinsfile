@@ -174,7 +174,7 @@ webappPipeline {
 
                     def notification = new com.genesys.jenkins.Notifications()
                     if (failures.length) {
-                      notification.sendEmailViaMailchomp("Spark NPM Publish failures", mailer, "These packages failed to publish to NPM:\n" + failures.join('\n')
+                      notification.sendEmailViaMailchomp("Spark NPM Publish failures", mailer, "These packages failed to publish to NPM:\n" + failures.join('\n'))
                     }
                 }
             }
