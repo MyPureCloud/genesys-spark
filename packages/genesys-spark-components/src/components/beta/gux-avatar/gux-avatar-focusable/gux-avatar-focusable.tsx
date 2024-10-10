@@ -2,6 +2,7 @@ import { Component, h, JSX, Element, State, Host } from '@stencil/core';
 import { logWarn } from '@utils/error/log-error';
 
 @Component({
+  styleUrl: 'gux-avatar-focusable.scss',
   tag: 'gux-avatar-focusable-beta',
   shadow: true
 })
@@ -14,8 +15,12 @@ export class GuxAvatarFocusable {
   @State()
   private avatarElement: HTMLGuxAvatarBetaElement;
 
+  @State()
+  private grouped: boolean = false;
+
   componentWillLoad() {
     this.validateSlot();
+    this.grouped = this.root.parentElement?.tagName === 'GUX-AVATAR-GROUP-BETA';
   }
 
   private validateSlot(): void {
@@ -92,7 +97,10 @@ export class GuxAvatarFocusable {
 
   render(): JSX.Element {
     return (
-      <Host gs-avatar-size={this.avatarElement?.size ?? 'large'}>
+      <Host
+        gs-avatar-size={this.avatarElement?.size ?? 'large'}
+        gs-grouped={this.grouped}
+      >
         <slot></slot>
       </Host>
     ) as JSX.Element;
