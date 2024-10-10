@@ -40,13 +40,19 @@ export class GuxAllRowSelect {
   onCheck(event: CustomEvent): void {
     event.stopPropagation();
     this.selected = this.inputElement.checked;
-    this.internalallrowselectchange.emit(this.inputElement.checked);
+    this.internalallrowselectchange.emit(this.selected);
   }
 
   @Method()
   // eslint-disable-next-line @typescript-eslint/require-await
   async setIndeterminate(indeterminate: boolean = true): Promise<void> {
     this.inputElement.indeterminate = indeterminate;
+  }
+
+  @Method()
+  async setChecked(checked: boolean): Promise<void> {
+    this.selected = checked;
+    this.internalallrowselectchange.emit(this.selected);
   }
 
   async componentWillLoad(): Promise<void> {

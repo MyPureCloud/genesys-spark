@@ -22,6 +22,22 @@
 
 ## Methods
 
+### `setChecked(checked: boolean) => Promise<void>`
+
+
+
+#### Parameters
+
+| Name      | Type      | Description |
+| --------- | --------- | ----------- |
+| `checked` | `boolean` |             |
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 ### `setIndeterminate(indeterminate?: boolean) => Promise<void>`
 
 

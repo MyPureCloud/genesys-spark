@@ -438,11 +438,26 @@
 </gux-table>
 
 <h2>Object table with rows selection</h2>
+<ul>
+  <li>
+    Use the <strong>setChecked</strong> method on
+    <strong>gux-all-row-select</strong> to programatically manage the selected
+    state.
+  </li>
+  <li>
+    Use the <strong>setIndeterminate</strong> method to set the
+    indeterminate/unknown state on <strong>gux-all-row-select</strong>. Remember
+    to set it to false when the checkbox is checked or unchecked as it overrides
+    these states.
+  </li>
+</ul>
+<gux-button id="selectAll">Select all</gux-button>
+<gux-button id="deselecAll">Deselect all</gux-button>
 <gux-table object-table selectable-rows>
   <table slot="data">
     <thead>
       <tr data-row-id="head">
-        <th><gux-all-row-select></gux-all-row-select></th>
+        <th><gux-all-row-select id="allRowSelect"></gux-all-row-select></th>
         <th data-column-name="first-name">First name</th>
         <th data-column-name="last-name">Last name</th>
         <th data-column-name="age" data-cell-numeric>Age</th>
@@ -970,7 +985,21 @@
       }
 
 
-    })
+    });
+
+  const selectAll = document.getElementById('selectAll');
+  const deselectAll = document.getElementById('deselecAll');
+  const allRowSelect = document.getElementById('allRowSelect');
+
+  selectAll.addEventListener('click', () => {
+    allRowSelect.setIndeterminate(false);
+    allRowSelect.setChecked(true);
+  });
+
+  deselectAll.addEventListener('click', () => {
+    allRowSelect.setIndeterminate(false);
+    allRowSelect.setChecked(false);
+  });
   })()"
 >
   .not-used {
