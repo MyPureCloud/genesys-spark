@@ -52,12 +52,6 @@ export class GuxPopoverList {
   position: Placement = 'bottom';
 
   /**
-   * Indicate if the dismiss button is displayed
-   */
-  @Prop()
-  displayDismissButton: boolean;
-
-  /**
    * Close popover when the user clicks outside of its bounds
    */
   @Prop()
@@ -91,11 +85,7 @@ export class GuxPopoverList {
     const forElement = findElementById(this.root, this.for);
     const clickedForElement = clickPath.includes(forElement);
 
-    if (
-      (this.closeOnClickOutside || !this.displayDismissButton) &&
-      this.isOpen &&
-      !clickedForElement
-    ) {
+    if (this.closeOnClickOutside && this.isOpen && !clickedForElement) {
       this.dismiss();
     }
   }
@@ -211,11 +201,6 @@ export class GuxPopoverList {
           ref={(el: HTMLDivElement) => (this.arrowElement = el)}
           class="gux-arrow"
         ></div>
-        {this.displayDismissButton && (
-          <gux-dismiss-button
-            onClick={this.dismiss.bind(this)}
-          ></gux-dismiss-button>
-        )}
         <div class="gux-popover-content">
           <slot />
         </div>

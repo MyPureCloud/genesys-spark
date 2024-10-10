@@ -61,9 +61,9 @@
   "types": "dist/types/index.d.ts",
   "dependencies": {
     "@floating-ui/dom": "^1.6.11",
-    "@vvo/tzdb": "6.145.0",
+    "@vvo/tzdb": "^6.146.0",
     "google-libphonenumber": "3.2.38",
-    "intl-messageformat": "10.5.14",
+    "intl-messageformat": "^10.6.0",
     "requestanimationframe-timer": "3.0.3",
     "sortablejs": "1.15.3"
   },
@@ -76,7 +76,6 @@
     "@types/google-libphonenumber": "^7.4.30",
     "@types/jest": "^29.5.13",
     "@types/new-relic-browser": "^0.1118.2",
-    "@types/puppeteer": "^5.4.7",
     "@types/resize-observer-browser": "^0.1.9",
     "@types/sortablejs": "^1.15.8",
     "axe-core": "^4.10.0",
@@ -107,7 +106,7 @@
     "prettier": "^3.3.3",
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
-    "puppeteer": "^14.4.1",
+    "puppeteer": "^21.11.0",
     "resize-observer-polyfill": "^1.5.1",
     "rollup-plugin-copy": "^3.5.0",
     "semver-sort": "^1.0.0",
