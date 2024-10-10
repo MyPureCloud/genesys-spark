@@ -331,6 +331,68 @@ describe('gux-time-picker.service', () => {
     );
   });
 
+  describe('#getTimeDisplayValues with set boundaries', () => {
+    it(`should work as expected for 24h with 30 minute intervals and boundaries of 08:30-20:00`, async () => {
+      const minuteInterval = 30;
+      const clockType = '24h';
+      const min = '08:30';
+      const max = '20:00';
+      const expectedOutput = [
+        '08:30',
+        '09:00',
+        '09:30',
+        '10:00',
+        '10:30',
+        '11:00',
+        '11:30',
+        '12:00',
+        '12:30',
+        '13:00',
+        '13:30',
+        '14:00',
+        '14:30',
+        '15:00',
+        '15:30',
+        '16:00',
+        '16:30',
+        '17:00',
+        '17:30',
+        '18:00',
+        '18:30',
+        '19:00',
+        '19:30',
+        '20:00'
+      ];
+
+      expect(
+        getTimeDisplayValues(minuteInterval, clockType, min, max)
+      ).toStrictEqual(expectedOutput);
+    });
+
+    it(`should work as expected for 24h with 30 minute intervals and wrapped around boundaries of 22:00-02:30`, async () => {
+      const minuteInterval = 30;
+      const clockType = '24h';
+      const min = '22:00';
+      const max = '02:30';
+      const expectedOutput = [
+        '00:00',
+        '00:30',
+        '01:00',
+        '01:30',
+        '02:00',
+        '02:30',
+        '22:00',
+        '22:30',
+        '23:00',
+        '23:30'
+      ];
+
+      expect(
+        getTimeDisplayValues(minuteInterval, clockType, min, max)
+      ).toStrictEqual(expectedOutput);
+    });
+  });
+
   describe('#getLocaleClockType', () => {
     [
       { locale: 'ar' },
