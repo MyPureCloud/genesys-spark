@@ -8,15 +8,16 @@
 
 .gux-container {
   box-sizing: border-box;
-  width: var(--gse-ui-calendarMenu-month-monthCell-width);
-  height: var(--gse-ui-calendarMenu-month-monthCell-height);
-  padding: 10px 5px 9px; //TODO COMUI-2256
+  inline-size: var(--gse-ui-calendarMenu-month-monthCell-width);
+  block-size: var(--gse-ui-calendarMenu-month-monthCell-height);
+  padding-block: 10px 9px;
+  padding-inline: 5px; //TODO COMUI-2256
 
   button {
     all: unset;
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
     text-align: center;
     word-wrap: break-word;
     cursor: pointer;

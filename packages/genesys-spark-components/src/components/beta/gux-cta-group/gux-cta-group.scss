@@ -16,6 +16,6 @@
 
   ::slotted(gux-button) {
     flex: 0 1 auto;
-    min-width: 0;
+    min-inline-size: 0;
   }
 }

@@ -20,8 +20,8 @@
 
     .gux-change-photo-icon {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      inset-block-start: 50%;
+      inset-inline-start: 50%;
       z-index: var(--gse-semantic-zIndex-showFocus);
       display: inline-block;
       color: var(--gse-ui-avatar-hoverModal-foregroundColor);
@@ -30,10 +30,10 @@
 
     &::after {
       position: absolute;
-      top: var(--gse-ui-avatar-large-presenceRing-width);
-      left: var(--gse-ui-avatar-large-presenceRing-width);
-      width: var(--gse-ui-avatar-addChangeImage-hoverModal-shroudSize);
-      height: var(--gse-ui-avatar-addChangeImage-hoverModal-shroudSize);
+      inset-block-start: var(--gse-ui-avatar-large-presenceRing-width);
+      inset-inline-start: var(--gse-ui-avatar-large-presenceRing-width);
+      inline-size: var(--gse-ui-avatar-addChangeImage-hoverModal-shroudSize);
+      block-size: var(--gse-ui-avatar-addChangeImage-hoverModal-shroudSize);
       content: '';
       background-color: var(--gse-ui-avatar-hoverModal-shroudColor);
       border: var(--gse-ui-avatar-content-large-border-width)
