@@ -6,7 +6,9 @@ import {
   h,
   JSX,
   Listen,
-  Prop
+  Prop,
+  Watch,
+  State
 } from '@stencil/core';
 import {
   autoUpdate,
@@ -30,11 +32,11 @@ import { findElementById } from '@utils/dom/find-element-by-id';
 
 @Component({
   styleUrl: 'gux-popover.scss',
-  tag: 'gux-popover',
+  tag: 'gux-popover-beta',
   shadow: true
 })
 export class GuxPopover {
-  private popupElement: HTMLDivElement;
+  private popupElement: HTMLElement;
   private arrowElement: HTMLDivElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
 
@@ -45,7 +47,7 @@ export class GuxPopover {
    * Indicates the id of the element the popover should anchor to
    */
   @Prop()
-  for: string;
+  for!: string;
 
   /**
    * Indicate position of popover element arrow (follow floating ui placement attribute api)
@@ -76,6 +78,14 @@ export class GuxPopover {
    */
   @Event()
   guxdismiss: EventEmitter<void>;
+
+  @State()
+  private forElement: HTMLInputElement;
+
+  @Watch('for')
+  private updateForElement(): void {
+    this.forElement = this.getForElement();
+  }
 
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
@@ -113,10 +123,32 @@ export class GuxPopover {
     ) {
       this.dismiss();
     }
+
+    if (clickedForElement) {
+      this.popupElement.togglePopover();
+      this.isOpen = !this.isOpen;
+      this.runUpdatePosition();
+    }
   }
 
   get titleSlot(): HTMLSlotElement | null {
     return getSlot(this.root, 'title');
+  }
+
+  private getForElement(): HTMLInputElement {
+    if (this.for) {
+      const forElement = findElementById(
+        this.root,
+        this.for
+      ) as HTMLInputElement;
+      if (!forElement) {
+        this.logForAttributeError();
+      }
+
+      return forElement;
+    } else {
+      this.logForAttributeError();
+    }
   }
 
   private runUpdatePosition(): void {
@@ -205,18 +237,33 @@ export class GuxPopover {
     const dismissEvent = this.guxdismiss.emit();
     if (!dismissEvent.defaultPrevented) {
       this.isOpen = false;
+      this.popupElement.togglePopover();
+    }
+  }
+
+  private logForAttributeError(): void {
+    if (this.root.isConnected) {
+      console.error(
+        `gux-popover: invalid element supplied to 'for': "${this.for}"`
+      );
     }
   }
 
   connectedCallback(): void {
+    this.updateForElement();
     trackComponent(this.root, { variant: this.position });
   }
 
   componentDidLoad(): void {
+    if (!this.forElement) {
+      return;
+    }
+
+    this.forElement.popoverTargetElement = this.popupElement;
+
     if (this.isOpen) {
+      this.popupElement.togglePopover();
       this.runUpdatePosition();
-    } else {
-      this.popupElement.hidePopover();
     }
   }
 
@@ -250,10 +297,11 @@ export class GuxPopover {
       <div
         ref={(el: HTMLDivElement) => (this.popupElement = el)}
         class={{
-          'gux-hidden': !this.isOpen,
-          'gux-popover-wrapper': true
+          'gux-popover-wrapper': true,
+          'gux-hidden': !this.isOpen
         }}
         data-placement
+        popover="manual"
       >
         <div
           ref={(el: HTMLDivElement) => (this.arrowElement = el)}
