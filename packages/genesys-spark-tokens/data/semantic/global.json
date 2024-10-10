@@ -411,6 +411,18 @@
         "type": "spacing",
         "description": "The recommended padding for extra-small-sized interactive components."
       }
+    },
+    "x_small": {
+      "height": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is recommended for special interactive elements, such as color swatches in the Rich Text Editor."
+      },
+      "width": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is recommended for special interactive elements, such as color swatches in the Rich Text Editor."
+      }
     }
   },
   "focus_outline": {
@@ -609,6 +621,12 @@
         "value": "{border_width.1}",
         "type": "borderWidth",
         "description": "The recommended border width for the dividers within containers, like cards or menus or popovers."
+      }
+    },
+    "emphasis": {
+      "width": {
+        "value": "{size.4xs}",
+        "type": "sizing"
       }
     },
     "2xs": {
@@ -871,47 +889,22 @@
     }
   },
   "divider": {
-    "width": {
-      "value": "{size.6xs}",
-      "type": "sizing",
-      "description": "The default width of our divider, we usually represent dividers as rectangles on Figma instead of a single line layer."
-    },
-    "xs": {
-      "margin": {
-        "value": "{spacing.6xs}",
+    "medium": {
+      "padding": {
+        "value": "0 {spacing.4xs}",
         "type": "spacing"
       }
     },
-    "sm": {
-      "margin": {
-        "value": "{spacing.5xs}",
-        "type": "spacing"
-      }
-    },
-    "md": {
-      "margin": {
-        "value": "{spacing.4xs}",
-        "type": "spacing"
-      }
-    },
-    "lg": {
-      "margin": {
-        "value": "{spacing.3xs}",
-        "type": "spacing"
-      }
-    },
-    "track": {
-      "height": {
-        "value": "{size.4xs}",
-        "type": "sizing",
-        "description": "The height for track elements, like the track of the slider."
-      }
-    },
-    "indicator": {
+    "small": {
       "width": {
         "value": "{size.5xs}",
         "type": "sizing",
-        "description": "The recommended divider indicator width, used for the indicators of active tabs, for example"
+        "description": "This token is for dividers that are made with rectangles."
+      },
+      "height": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is for dividers that are made with rectangles."
       }
     }
   },
@@ -969,6 +962,20 @@
       "value": "{z_index.600}",
       "type": "zindex",
       "description": "The recommended z-index for modals."
+    }
+  },
+  "code": {
+    "sm": {
+      "regular": {
+        "value": {
+          "fontFamily": "{font_family.monospace.body}",
+          "fontWeight": "{font_weight.regular}",
+          "fontSize": "{font_size.xs}",
+          "lineHeight": "{line_height.2xs}"
+        },
+        "type": "typography",
+        "description": "This typography token is recommended to be used only for code blocks."
+      }
     }
   }
 }
