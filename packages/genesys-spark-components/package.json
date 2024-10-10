@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components",
-  "version": "3.131.2",
+  "version": "3.131.3",
   "description": "Common webcomponents",
   "license": "MIT",
   "main": "dist/stencil-wrapper.js",

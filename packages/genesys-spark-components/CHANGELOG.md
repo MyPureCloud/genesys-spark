@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.131.3](https://github.com/MyPureCloud/genesys-spark/compare/v3.131.2...v3.131.3) (2024-10-10)
+
+
+### Bug Fixes
+
+* **table-toolbar:** fix console errors when slots are absent ([7124489](https://github.com/MyPureCloud/genesys-spark/commit/7124489b916abdd6111c73e3059a9a4bf5678e8a))
+
 ### [3.131.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.131.1...v3.131.2) (2024-10-02)
 
 ### [3.131.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.131.0...v3.131.1) (2024-09-26)
