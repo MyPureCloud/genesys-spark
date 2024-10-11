@@ -4,8 +4,10 @@ import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import translationResources from './i18n/en.json';
 import { GuxRichTextEditorActionTypes } from './gux-rich-text-editor-action.types';
-import { calculateDisabledState } from '../gux-rich-text-editor.service';
-import { returnActionTypeIcon } from '../gux-rich-text-editor.service';
+import {
+  calculateDisabledState,
+  returnActionTypeIcon
+} from '../gux-rich-text-editor.service';
 
 @Component({
   tag: 'gux-rich-text-editor-action',
