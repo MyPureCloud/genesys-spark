@@ -1,10 +1,16 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 
+:host {
+  display: block;
+}
+
 .gux-rich-text-editor-container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 707px;
+  width: 100%;
+  max-width: 100%;
   height: 230px;
   padding: 8px 16px;
   overflow: auto;
