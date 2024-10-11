@@ -1,4 +1,4 @@
-import { Component, h, Prop, Element } from '@stencil/core';
+import { Component, h, Prop, Element, Host } from '@stencil/core';
 
 /**
  * @slot actions - Slot for gux-rich-text-editor-actions
@@ -36,10 +36,12 @@ export class GuxRichTextEditorActionGroup {
 
   render(): JSX.Element {
     return (
-      <div class="gux-action-group-container">
-        <slot></slot>
+      <Host>
+        <div class="gux-action-group-container">
+          <slot></slot>
+        </div>
         {this.renderActionGroupDivider()}
-      </div>
+      </Host>
     ) as JSX.Element;
   }
 }
