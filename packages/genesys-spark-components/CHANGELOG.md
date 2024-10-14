@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.131.4](https://github.com/MyPureCloud/genesys-spark/compare/v3.131.3...v3.131.4) (2024-10-14)
+
+
+### Bug Fixes
+
+* **gux-visualization:** fix memory leak in gux-visualization ([879731a](https://github.com/MyPureCloud/genesys-spark/commit/879731a874252994ce2c27b9fbe60c6f710f65dd))
+
 ### [3.131.3](https://github.com/MyPureCloud/genesys-spark/compare/v3.131.2...v3.131.3) (2024-10-10)
 
 
