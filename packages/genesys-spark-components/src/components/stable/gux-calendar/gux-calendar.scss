@@ -52,14 +52,8 @@
 .gux-calendar {
   margin-top: 2px;
   border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
-  box-shadow: var(
-      --gse-ui-calendarMenu-boxShadow-x,
-      var(--gse-ui-calendarMenu-boxShadow-offsetX)
-    )
-    var(
-      --gse-ui-calendarMenu-boxShadow-y,
-      var(--gse-ui-calendarMenu-boxShadow-offsetY)
-    )
+  box-shadow: var(--gse-ui-calendarMenu-boxShadow-offsetX)
+    var(--gse-ui-calendarMenu-boxShadow-offsetY)
     var(--gse-ui-calendarMenu-boxShadow-blur)
     var(--gse-ui-calendarMenu-boxShadow-spread)
     var(--gse-ui-calendarMenu-boxShadow-color);
@@ -100,8 +94,8 @@
       }
 
       gux-icon {
-        width: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
-        height: var(--gse-ui-icon-size-sm, var(--gse-ui-icon-small-size));
+        width: var(--gse-ui-icon-small-size);
+        height: var(--gse-ui-icon-small-size);
         pointer-events: none;
       }
     }
@@ -263,15 +257,8 @@
 
           &:focus-visible {
             border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
-            outline: var(
-                --gse-semantic-focusRing-default-border-width,
-                var(--gse-semantic-focusOutline-md-borderWidth)
-              )
-              solid
-              var(
-                --gse-semantic-focusRing-default-border-color,
-                var(--gse-semantic-border-focus)
-              );
+            outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
+              var(--gse-semantic-border-focus);
           }
         }
       }
