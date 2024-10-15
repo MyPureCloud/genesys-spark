@@ -149,7 +149,9 @@ export class GuxPopup {
   }
 
   componentDidLoad(): void {
-    this.runUpdatePosition();
+    if (this.expanded) {
+      this.runUpdatePosition();
+    }
   }
 
   componentDidUpdate(): void {
