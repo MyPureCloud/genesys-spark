@@ -1,4 +1,5 @@
 @Library('pipeline-library')
+import com.genesys.jenkins.Notifications
 
 Boolean isMainBranch = env.BRANCH_NAME == 'main'
 
@@ -64,7 +65,7 @@ webappPipeline {
         return readJSON(file: 'package.json').version
     }
     team = 'Core UI'
-    mailer = 'matthew.cheely@genesys.com, daragh.king@genesys.com, jordan.stith@genesys.com, thomas.dillon@genesys.com, katie.bobbe@genesys.com, gavin.everett@genesys.com, jason.evans@genesys.com'
+    mailer = 'CoreUI@genesys.com'
     chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
     nodeVersion = '20.x multiarch'
     testJob = 'no-tests'
@@ -116,28 +117,65 @@ webappPipeline {
                 withCredentials([
                   string(credentialsId: constants.credentials.npm,  variable: 'NPM_TOKEN')
                 ]) {
-                    sh(script: "npm publish --workspace=packages/genesys-spark-components ${publishOptions}",
-                        label: 'Publish Components')
+                    def failures = new ArrayList<String>()
 
-                    sh(script: "npm publish --workspace=packages/genesys-spark-chart-components ${publishOptions}",
-                        label: 'Publish Chart Components')
+                    def componentStatCode = sh(script: "npm publish --workspace=packages/genesys-spark-components ${publishOptions}",
+                        label: 'Publish Components',
+                        returnStatus: true
+                        )
 
-                    sh(script: "npm publish --workspace=packages/genesys-spark ${publishOptions}",
-                        label: 'Publish Main Package'
+                    if(componentStatCode > 0) {
+                      failures.add('Publish Components')
+                    }
+
+                    def chartStatCode = sh(script: "npm publish --workspace=packages/genesys-spark-chart-components ${publishOptions}",
+                        label: 'Publish Chart Components',
+                        returnStatus: true
+                        )
+
+                    if(chartStatCode > 0) {
+                      failures.add('Publish Chart Components')
+                    }
+
+                    def mainPackageStatCode = sh(script: "npm publish --workspace=packages/genesys-spark ${publishOptions}",
+                        label: 'Publish Main Package',
+                        returnStatus: true
                     )
+
+                    if(mainPackageStatCode > 0) {
+                      failures.add('Publish Main Package')
+                    }
 
                     sh(script: '''
                             RELEASE_VERSION="$(npm run --silent current-version)"
                             npm install --no-progress -P -E genesys-spark-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-components-react
                             npm install --no-progress -P -E genesys-spark-chart-components@${RELEASE_VERSION} --workspace=packages/genesys-spark-chart-components-react
                         ''',
-                        label: 'Set exact version dependency in React Components and Chart React Components')
+                        label: 'Set exact version dependency in React Components and Chart React Components',
+                        )
 
-                    sh(script: "npm publish --workspace=packages/genesys-spark-components-react ${publishOptions}",
-                        label: 'Publish React Components')
+                    def reactStatCode = sh(script: "npm publish --workspace=packages/genesys-spark-components-react ${publishOptions}",
+                        label: 'Publish React Components',
+                        returnStatus: true
+                        )
 
-                    sh(script: "npm publish --workspace=packages/genesys-spark-chart-components-react ${publishOptions}",
-                        label: 'Publish ChartReact Components')
+                    if(reactStatCode > 0) {
+                      failures.add('Publish React Components')
+                    }
+
+                    def chartReactStatCode = sh(script: "npm publish --workspace=packages/genesys-spark-chart-components-react ${publishOptions}",
+                        label: 'Publish Chart React Components',
+                        returnStatus: true
+                        )
+
+                    if(chartReactStatCode > 0) {
+                      failures.add('Publish Chart React Components')
+                    }
+
+                    def notification = new com.genesys.jenkins.Notifications()
+                    if (failures.size()) {
+                      notification.sendEmailViaMailchomp("Spark NPM Publish failures", mailer, "These packages failed to publish to NPM:\n" + failures.join('\n'))
+                    }
                 }
             }
 

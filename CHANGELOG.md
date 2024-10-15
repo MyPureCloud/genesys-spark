@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.89.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.88.2...v4.89.0) (2024-10-15)
+
+
+### Features
+
+* **modal:** using the cta-group in the modal ([4b99620](https://github.com/MyPureCloud/genesys-spark/commit/4b99620dcd5f3880d0ea0bf1c2655b18839deaa6))
+* **other:** now using themeable tokens ([3decebf](https://github.com/MyPureCloud/genesys-spark/commit/3decebf1f402488030e47198dbd6d7e8641e9eab))
+
+
+### Bug Fixes
+
+* **popover:** fix duplicate guxdismiss event when simultaneously clicking outside and focusout ([#634](https://github.com/MyPureCloud/genesys-spark/issues/634)) ([c1f97a8](https://github.com/MyPureCloud/genesys-spark/commit/c1f97a8e8b1897b8e3fe0a0e0df6bf11cab8d5a1))
+* **table-toolbar:** fix console errors when slots are absent ([f15403f](https://github.com/MyPureCloud/genesys-spark/commit/f15403f0544b6274e74d471a2ad3bd16e5fcff8a))
+* **visualization:** add height to chart container ([6ff0660](https://github.com/MyPureCloud/genesys-spark/commit/6ff0660dd705ce122785f563a9110d26d6902e64))
+
+### [4.88.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.88.1...v4.88.2) (2024-10-09)
+
+
+### Bug Fixes
+
+* **flyout-menu:** added flip to sub-menu ([8218a97](https://github.com/MyPureCloud/genesys-spark/commit/8218a977cf5122236250c2fc348e3b4d0adee387))
+* **segmented-control:** vertically center icons and text ([112ab9c](https://github.com/MyPureCloud/genesys-spark/commit/112ab9c7595c8057200b3c6806d58c944dd2142d))
+
+### [4.88.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.88.0...v4.88.1) (2024-10-07)
+
 ## [4.88.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.87.0...v4.88.0) (2024-10-03)
 
 

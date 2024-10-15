@@ -47,7 +47,7 @@ export function registerSparkComponents(opts?: registerOptions): Promise<void> {
   const SCRIPT_PATH = 'genesys-webcomponents.esm.js';
   const STYLE_PATH = opts?.theme
     ? `genesys-webcomponents-${opts.theme}.css`
-    : 'genesys-webcomponents.css';
+    : 'genesys-webcomponents-flare.css';
 
   const assetsOrigin = getComponentAssetsOrigin();
   const SCRIPT_SRC = `${assetsOrigin}${COMPONENT_ASSET_PREFIX}${SCRIPT_PATH}`;

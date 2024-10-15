@@ -21,6 +21,11 @@ export function setActionsIconOnlyProp(
 ): void {
   actionSets
     .flat()
-    .filter(action => action !== null && !action.hasAttribute('icon-only'))
+    .filter(
+      action =>
+        action !== null &&
+        action !== undefined &&
+        !action?.hasAttribute('icon-only')
+    )
     .forEach(action => (action.iconOnly = iconOnly));
 }

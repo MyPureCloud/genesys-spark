@@ -945,7 +945,7 @@ exports[`#render  should render component as expected (1) 1`] = `
           <gux-option value="America/Godthab">
             <div class="gux-option-wrapper">
               <div>
-                Godthab, Greenland (UTC-01:00)
+                Godthab, Greenland (UTC-02:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -1425,7 +1425,7 @@ exports[`#render  should render component as expected (1) 1`] = `
           <gux-option value="America/Nuuk">
             <div class="gux-option-wrapper">
               <div>
-                Nuuk, Greenland (UTC-01:00)
+                Nuuk, Greenland (UTC-02:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -5658,7 +5658,7 @@ exports[`#render  should render component as expected (1) 1`] = `
             <gux-option value="America/Godthab">
               <div class="gux-option-wrapper">
                 <div>
-                  Godthab, Greenland (UTC-01:00)
+                  Godthab, Greenland (UTC-02:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -6138,7 +6138,7 @@ exports[`#render  should render component as expected (1) 1`] = `
             <gux-option value="America/Nuuk">
               <div class="gux-option-wrapper">
                 <div>
-                  Nuuk, Greenland (UTC-01:00)
+                  Nuuk, Greenland (UTC-02:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -10376,7 +10376,7 @@ exports[`#render  should render component as expected (2) 1`] = `
           <gux-option value="America/Godthab">
             <div class="gux-option-wrapper">
               <div>
-                Godthab, Greenland (UTC-01:00)
+                Godthab, Greenland (UTC-02:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -10856,7 +10856,7 @@ exports[`#render  should render component as expected (2) 1`] = `
           <gux-option value="America/Nuuk">
             <div class="gux-option-wrapper">
               <div>
-                Nuuk, Greenland (UTC-01:00)
+                Nuuk, Greenland (UTC-02:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -15089,7 +15089,7 @@ exports[`#render  should render component as expected (2) 1`] = `
             <gux-option value="America/Godthab">
               <div class="gux-option-wrapper">
                 <div>
-                  Godthab, Greenland (UTC-01:00)
+                  Godthab, Greenland (UTC-02:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -15569,7 +15569,7 @@ exports[`#render  should render component as expected (2) 1`] = `
             <gux-option value="America/Nuuk">
               <div class="gux-option-wrapper">
                 <div>
-                  Nuuk, Greenland (UTC-01:00)
+                  Nuuk, Greenland (UTC-02:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -19819,7 +19819,7 @@ exports[`#render  should render component as expected (3) 1`] = `
           <gux-option value="America/Godthab">
             <div class="gux-option-wrapper">
               <div>
-                Godthab, Greenland (UTC-01:00)
+                Godthab, Greenland (UTC-02:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -20299,7 +20299,7 @@ exports[`#render  should render component as expected (3) 1`] = `
           <gux-option value="America/Nuuk">
             <div class="gux-option-wrapper">
               <div>
-                Nuuk, Greenland (UTC-01:00)
+                Nuuk, Greenland (UTC-02:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -24532,7 +24532,7 @@ exports[`#render  should render component as expected (3) 1`] = `
             <gux-option value="America/Godthab">
               <div class="gux-option-wrapper">
                 <div>
-                  Godthab, Greenland (UTC-01:00)
+                  Godthab, Greenland (UTC-02:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -25012,7 +25012,7 @@ exports[`#render  should render component as expected (3) 1`] = `
             <gux-option value="America/Nuuk">
               <div class="gux-option-wrapper">
                 <div>
-                  Nuuk, Greenland (UTC-01:00)
+                  Nuuk, Greenland (UTC-02:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
