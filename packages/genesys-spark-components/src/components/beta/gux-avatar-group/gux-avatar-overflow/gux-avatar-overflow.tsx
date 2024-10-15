@@ -1,7 +1,5 @@
-import { Component, h, JSX, Element, Prop, State } from '@stencil/core';
-import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+import { Component, h, JSX, Element, Prop, State, Listen } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
-import { randomHTMLId } from '@utils/dom/random-html-id';
 
 /**
  * @slot - Some list items with gux-avatar-focusable in them
@@ -12,49 +10,47 @@ import { randomHTMLId } from '@utils/dom/random-html-id';
   shadow: true
 })
 export class GuxAvatarFocusable {
-  private id = randomHTMLId('gux-avatar-overflow');
   @Element() root: HTMLElement;
 
   @Prop() count: number = 0;
 
-  @State() popoverOpen: boolean = false;
+  @State() expanded: boolean = false;
+
+  @Listen('internalcollapsed')
+  onInternalCollapsed(event: CustomEvent): void {
+    event.stopPropagation();
+    this.expanded = false;
+  }
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
   }
 
-  private togglePopover(): void {
-    this.popoverOpen = !this.popoverOpen;
-    if (this.popoverOpen) {
-      this.focusFirstItemInPopupList();
-    }
-  }
-
-  private focusFirstItemInPopupList(): void {
-    const listElement: HTMLGuxListElement = this.root.querySelector('gux-list');
-    afterNextRenderTimeout(() => {
-      void listElement?.guxFocusFirstItem();
-    });
+  private toggleOverflowList(): void {
+    this.expanded = !this.expanded;
   }
 
   render(): JSX.Element {
-    return [
-      <button
-        id={this.id}
-        class="gux-avatar-overflow"
-        onClick={() => this.togglePopover()}
+    return (
+      <gux-popup
+        expanded={this.expanded}
+        disabled={false}
+        exceedTargetWidth={true}
       >
-        <div class="gux-avatar-overflow-wrapper">
-          <div class="gux-avatar-overflow-content"> +{this.count}</div>
+        <div class="gux-target" slot="target">
+          <button
+            class="gux-avatar-overflow"
+            onClick={() => this.toggleOverflowList()}
+          >
+            <div class="gux-avatar-overflow-wrapper">
+              <div class="gux-avatar-overflow-content"> +{this.count}</div>
+            </div>
+          </button>
         </div>
-      </button>,
-      <gux-popover-list
-        for={this.id}
-        is-open={this.popoverOpen}
-        onGuxdismiss={() => (this.popoverOpen = false)}
-      >
-        <slot></slot>
-      </gux-popover-list>
-    ] as JSX.Element;
+        <div slot="popup" class="gux-list-container">
+          <slot></slot>
+        </div>
+      </gux-popup>
+    ) as JSX.Element;
   }
 }

@@ -2,6 +2,7 @@ gux-avatar-focusable-beta {
   a {
     display: inline-block;
     line-height: 0px;
+    border: 1px dotted orange;
     border-radius: 50%;
   }
 
@@ -12,6 +13,7 @@ gux-avatar-focusable-beta {
     cursor: pointer;
     background: none;
     border: none;
+    border: 1px dotted orange;
     border-radius: 50%;
   }
 }

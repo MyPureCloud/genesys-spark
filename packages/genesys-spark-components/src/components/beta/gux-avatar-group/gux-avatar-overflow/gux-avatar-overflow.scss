@@ -2,19 +2,28 @@
 
 .gux-avatar-overflow {
   position: relative;
+  box-sizing: border-box;
+  width: 100%;
   padding: 0;
   margin: 0;
   line-height: 0px;
   cursor: pointer;
   background: none;
   border: none;
+  border: 1px dotted greenyellow;
   border-radius: 50%;
 
   &:focus-visible {
     @include focus.gux-focus-ring-small;
   }
 
+  &:hover,
+  &:focus {
+    z-index: var(--gse-semantic-zIndex-showFocus);
+  }
+
   .gux-avatar-overflow-wrapper {
+    position: relative;
     display: flex;
     width: var(--gse-ui-avatar-small-size);
     height: var(--gse-ui-avatar-small-size);
@@ -42,4 +51,16 @@
       border-radius: 50%;
     }
   }
+}
+
+.gux-list-container {
+  box-sizing: border-box;
+  width: fit-content;
+  min-width: 200px;
+  margin: 0;
+  overflow: visible;
+  background: #fff;
+  border: 1px solid #c6c8ce;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 1px rgb(35 57 92 / 10%);
 }
