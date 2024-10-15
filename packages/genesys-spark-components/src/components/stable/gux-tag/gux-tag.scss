@@ -74,15 +74,9 @@
 
     &:focus-within {
       .gux-tag-remove-icon {
-        border-radius: var(
-          --gse-semantic-focusRing-cornerRadius,
-          var(--gse-semantic-focusOutline-sm-borderRadius)
-        );
-        outline: var(
-            --gse-semantic-focusRing-small-border-width,
-            var(--gse-semantic-focusOutline-sm-borderWidth)
-          )
-          solid var(--gse-semantic-color-focus, var(--gse-ui-color-focus));
+        border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
+        outline: var(--gse-semantic-focusOutline-sm-borderWidth) solid
+          var(--gse-ui-color-focus);
       }
     }
   }
