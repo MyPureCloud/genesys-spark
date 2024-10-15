@@ -471,7 +471,7 @@
     "toolbar": {
       "divider": {
         "color": {
-          "value": "{foreground.divider.default}",
+          "value": "{border.container.divider}",
           "type": "color"
         },
         "padding": {
