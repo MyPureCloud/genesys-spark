@@ -34,10 +34,7 @@
       outline: var(--gse-ui-monthPicker-calendarStates-focus-border-width)
         var(--gse-ui-monthPicker-calendarStates-focus-border-style)
         var(--gse-ui-monthPicker-calendarStates-focus-border-color);
-      outline-offset: var(
-        --gse-semantic-focusRing-offset,
-        var(--gse-semantic-focusOutline-offset)
-      );
+      outline-offset: var(--gse-semantic-focusOutline-offset);
     }
 
     &:hover:not(:disabled) {

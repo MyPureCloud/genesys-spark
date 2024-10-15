@@ -11,10 +11,7 @@
   }
 
   & gux-icon {
-    color: var(
-      --gse-ui-formControl-label-tooltipTrigger-optionalColor,
-      var(--gse-ui-formControl-label-tooltipTrigger-color)
-    );
+    color: var(--gse-ui-formControl-label-tooltipTrigger-color);
     vertical-align: bottom;
   }
 }
