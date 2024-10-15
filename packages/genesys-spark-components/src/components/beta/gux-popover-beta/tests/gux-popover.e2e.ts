@@ -1,6 +1,6 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
-describe('gux-popover', () => {
+describe('gux-popover-beta', () => {
   it('renders', async () => {
     const page = await newSparkE2EPage({
       html: `
@@ -8,15 +8,15 @@ describe('gux-popover', () => {
         <div id="popover-target">
           Example Element
         </div>
-        <gux-popover position="top" for="popover-target">
+        <gux-popover-beta position="top" for="popover-target">
           <span slot="title">Title</span>
           <div>popover content</div>
-        </gux-popover>
+        </gux-popover-beta>
       </div>
       `
     });
 
-    const element = await page.find('gux-popover');
+    const element = await page.find('gux-popover-beta');
     await a11yCheck(page);
     expect(element).toHaveAttribute('hydrated');
   });
@@ -28,14 +28,14 @@ describe('gux-popover', () => {
         <button id="popover-target">
           Example Element
         </button>
-        <gux-popover position="top" for="popover-target" display-dismiss-button is-open>
+        <gux-popover-beta position="top" for="popover-target" display-dismiss-button is-open>
           <div>popover content</div>
-        </gux-popover>
+        </gux-popover-beta>
       </div>
       `
     });
 
-    const component = await page.find('gux-popover');
+    const component = await page.find('gux-popover-beta');
     const guxdismiss = await component.spyOnEvent('guxdismiss');
     const button = await page.find('pierce/gux-dismiss-button');
     await button.click();
@@ -49,14 +49,14 @@ describe('gux-popover', () => {
         <div id="popover-target">
           Example Element
         </div>
-        <gux-popover position="top" for="popover-target">
+        <gux-popover-beta position="top" for="popover-target">
           <div>popover content</div>
-        </gux-popover>
+        </gux-popover-beta>
       </div>
       `
     });
 
-    const component = await page.find('gux-popover');
+    const component = await page.find('gux-popover-beta');
     component.setProperty('displayDismissDutton', false);
     await page.waitForChanges();
     const button = await page.find('pierce/gux-dismiss-button');

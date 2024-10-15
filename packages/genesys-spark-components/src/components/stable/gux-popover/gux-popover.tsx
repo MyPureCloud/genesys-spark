@@ -218,8 +218,6 @@ export class GuxPopover {
   componentDidLoad(): void {
     if (this.isOpen) {
       this.runUpdatePosition();
-    } else {
-      this.popupElement.hidePopover();
     }
   }
 

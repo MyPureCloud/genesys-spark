@@ -30,7 +30,7 @@ const html = `
     </gux-popover-beta>
   </div>`;
 
-describe('gux-popover', () => {
+describe('gux-popover-beta', () => {
   beforeAll(() => {
     Object.assign(MockHTMLElement.prototype, {
       showPopover: showPopover

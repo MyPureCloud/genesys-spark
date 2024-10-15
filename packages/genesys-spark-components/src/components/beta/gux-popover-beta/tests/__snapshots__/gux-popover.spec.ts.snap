@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-popover #render should render popover 1`] = `
+exports[`gux-popover-beta #render should render popover 1`] = `
 <gux-popover-beta for="popover-target" id="popover-example" is-open="false" position="top">
   <template shadowrootmode="open">
     <div class="gux-hidden gux-popover-wrapper" data-placement popover="manual">
