@@ -1,5 +1,5 @@
-@use '../../../../genesys-spark-tokens/dist-new/scss/gse-legacy-light-core';
-@use '../../../../genesys-spark-tokens/dist-new/scss/gse-legacy-light-semantic';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-legacy-light-core';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-legacy-light-semantic';
 
 :root {
   @include gse-legacy-light-core.tokens;
