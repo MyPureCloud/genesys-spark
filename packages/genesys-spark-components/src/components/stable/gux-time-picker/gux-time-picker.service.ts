@@ -12,7 +12,9 @@ import {
 
 export function getTimeDisplayValues(
   minuteInterval: GuxMinuteInterval,
-  clockType: GuxClockType
+  clockType: GuxClockType,
+  min?: string,
+  max?: string
 ): GuxISOHourMinute[] {
   const minuteOptions = [0, 15, 30, 45]
     .filter(option => Number.isInteger(option / minuteInterval))
@@ -22,13 +24,59 @@ export function getTimeDisplayValues(
       ? ['12', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']
       : Array.from(Array(24).keys()).map(x => String(x).padStart(2, '0'));
 
-  return hourOptions.reduce((acc, hourOption) => {
+  const hourOptionsFormatted = hourOptions.reduce((acc, hourOption) => {
     return acc.concat(
       minuteOptions.map(
         minuteOption => `${hourOption}:${minuteOption}`
       ) as GuxISOHourMinute[]
     );
   }, [] as GuxISOHourMinute[]);
+
+  return clockType === '24h'
+    ? applyHourBoundaries(hourOptionsFormatted, min, max)
+    : hourOptionsFormatted;
+}
+
+function applyHourBoundaries(hours: string[], min?: string, max?: string) {
+  // Check if min and max are wrapped around (e.g. min of 22:00 and max of 04:00)
+  if (min && max && hourToMilliseconds(min) > hourToMilliseconds(max)) {
+    hours = hours.filter(hour => {
+      const hourConverted = hourToMilliseconds(hour);
+      const minConverted = hourToMilliseconds(min);
+      const maxConverted = hourToMilliseconds(max);
+      const dayCeiling = hourToMilliseconds('23:59');
+
+      return (
+        (hourConverted >= minConverted && hourConverted < dayCeiling) ||
+        hourConverted <= maxConverted
+      );
+    });
+  } else {
+    // min and max are not wrapped around (e.g. min of 03:30 and max of 20:00)
+    if (min) {
+      hours = hours.filter(
+        hour => hourToMilliseconds(hour) >= hourToMilliseconds(min)
+      );
+    }
+    if (max) {
+      hours = hours.filter(
+        hour => hourToMilliseconds(hour) <= hourToMilliseconds(max)
+      );
+    }
+  }
+
+  return hours as GuxISOHourMinute[];
+}
+
+function hourToMilliseconds(hour: string): number {
+  // Convert the hour to milliseconds from midnight
+  const date = new Date();
+  const [hours, minutes] = hour.split(':');
+  date.setHours(parseFloat(hours));
+  date.setMinutes(parseFloat(minutes));
+  date.setSeconds(0);
+  const seconds = date.getTime();
+  return seconds;
 }
 
 export function getLocaleClockType(root: HTMLElement): GuxClockType {
