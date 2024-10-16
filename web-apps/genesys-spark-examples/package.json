@@ -22,11 +22,11 @@
     "genesys-spark": "file:../../packages/genesys-spark",
     "iframe-coordinator": "4.6.1",
     "monaco-editor": "^0.52.0",
-    "parse5": "^7.1.2"
+    "parse5": "7.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.7",
-    "@babel/preset-env": "^7.25.7",
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
     "@stencil/webpack": "0.0.6",
     "@types/copy-webpack-plugin": "^10.1.0",
     "@types/webpack-dev-server": "^4.7.2",
@@ -46,11 +46,11 @@
     "prettier": "^3.3.3",
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
-    "sass": "^1.79.4",
+    "sass": "^1.79.5",
     "sass-loader": "^16.0.2",
     "semver": "^7.6.3",
     "style-loader": "^4.0.0",
-    "stylelint": "^16.9.0",
+    "stylelint": "^16.10.0",
     "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^5.1.1",
