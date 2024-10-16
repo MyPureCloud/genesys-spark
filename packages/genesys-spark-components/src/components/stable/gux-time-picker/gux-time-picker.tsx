@@ -9,6 +9,8 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
 
+import { GuxFormFieldError } from '../gux-form-field/functional-components/functional-components';
+
 import {
   GuxClockType,
   GuxISOHourMinute,
@@ -70,6 +72,9 @@ export class GuxTimePicker {
   @State()
   expanded: boolean = false;
 
+  @State()
+  hasInputError: boolean = false;
+
   @Listen('focus')
   onFocus() {
     this.valueLastChange = this.value;
@@ -78,6 +83,26 @@ export class GuxTimePicker {
   @Listen('blur')
   onBlur() {
     if (this.valueLastChange !== this.value) {
+      // Format input time to match format found in the popup time list (e.g. "01:30" -> "1:30", "00:30" -> "12:30", etc)
+      const split = this.value.split(':');
+      const hourParsed = parseInt(split[0], 10);
+      let hour = hourParsed === 0 ? 12 : hourParsed;
+      hour = hour > 12 ? hour % 12 : hour;
+      const minutes = split[1];
+      const valueFormatted = `${hour}:${minutes}`;
+
+      // Check if the input value is in the popup time list
+      const valueIsValid = getTimeDisplayValues(
+        this.interval,
+        this.clockType
+      ).find(displayValue => displayValue === valueFormatted);
+
+      if (!valueIsValid) {
+        this.hasInputError = true;
+      } else {
+        this.hasInputError = false;
+      }
+
       simulateNativeEvent(this.root, 'change');
     }
   }
@@ -383,19 +408,33 @@ export class GuxTimePicker {
     ) as JSX.Element;
   }
 
+  private maybeRenderInputError(): JSX.Element {
+    return (
+      <GuxFormFieldError show={this.hasInputError}>
+        Enter a valid time
+      </GuxFormFieldError> // <div class='gux-error'>
+      //   <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative></gux-icon>
+    ) as //   <div class="gux-message">Enter a valid time</div>
+    // </div>
+    JSX.Element;
+  }
+
   render(): JSX.Element {
     return (
-      <gux-popup
-        class={{
-          'gux-time-picker': true,
-          'gux-error': this.hasError
-        }}
-        expanded={this.expanded}
-        disabled={this.disabled}
-      >
-        {this.renderTarget()}
-        {this.renderPopup()}
-      </gux-popup>
+      <div>
+        <gux-popup
+          class={{
+            'gux-time-picker': true,
+            'gux-error': this.hasError || this.hasInputError
+          }}
+          expanded={this.expanded}
+          disabled={this.disabled}
+        >
+          {this.renderTarget()}
+          {this.renderPopup()}
+        </gux-popup>
+        {this.maybeRenderInputError()}
+      </div>
     ) as JSX.Element;
   }
 }

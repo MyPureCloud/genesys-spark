@@ -1,5 +1,8 @@
 @use '~genesys-spark/dist/scss/mixins.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
+@use '../gux-form-field/functional-components/gux-form-field-error/gux-form-field-error.scss';
+
+@include gux-form-field-error.Style;
 
 .gux-time-picker {
   position: relative;
