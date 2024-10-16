@@ -107,6 +107,10 @@
     "text": {
       "value": "{body.sm.regular}",
       "type": "typography"
+    },
+    "target_offset": {
+      "value": "{container.lg.gap}",
+      "type": "spacing"
     }
   },
   "tag": {
@@ -115,16 +119,6 @@
       "type": "borderRadius"
     },
     "default": {
-      "background_color": {
-        "value": "{color.cornflower.800}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
-      "foreground_color": {
-        "value": "{color.white}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
       "bold": {
         "background_color": {
           "value": "{background.system.custom_accents.bold.accent_1}",
@@ -147,16 +141,6 @@
       }
     },
     "accent1": {
-      "background_color": {
-        "value": "{color.cornflower.200}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
-      "foreground_color": {
-        "value": "{color.cornflower.900}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
       "bold": {
         "background_color": {
           "value": "{background.system.custom_accents.bold.accent_2}",
@@ -179,16 +163,6 @@
       }
     },
     "accent2": {
-      "background_color": {
-        "value": "{color.islandaqua.400}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
-      "foreground_color": {
-        "value": "{color.cornflower.900}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
       "bold": {
         "background_color": {
           "value": "{background.system.custom_accents.bold.accent_3}",
@@ -211,16 +185,6 @@
       }
     },
     "accent3": {
-      "background_color": {
-        "value": "{color.islandaqua.800}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
-      "foreground_color": {
-        "value": "{color.white}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
       "bold": {
         "background_color": {
           "value": "{background.system.custom_accents.bold.accent_4}",
@@ -243,16 +207,6 @@
       }
     },
     "accent4": {
-      "background_color": {
-        "value": "#547688",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
-      "foreground_color": {
-        "value": "{color.white}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
       "bold": {
         "background_color": {
           "value": "{background.system.custom_accents.bold.accent_5}",
@@ -275,16 +229,6 @@
       }
     },
     "accent5": {
-      "background_color": {
-        "value": "#a5cae0",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
-      "foreground_color": {
-        "value": "{color.cornflower.900}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
       "bold": {
         "background_color": {
           "value": "{background.system.custom_accents.bold.accent_13}",
@@ -307,16 +251,6 @@
       }
     },
     "accent6": {
-      "background_color": {
-        "value": "{color.lavenderhaze.600}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
-      "foreground_color": {
-        "value": "{color.cornflower.900}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
       "subtle": {
         "background_color": {
           "value": "{background.system.custom_accents.subtle.accent_7}",
@@ -357,16 +291,6 @@
       }
     },
     "accent7": {
-      "background_color": {
-        "value": "#A05195",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
-      "foreground_color": {
-        "value": "{color.white}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
       "bold": {
         "background_color": {
           "value": "{background.system.custom_accents.bold.accent_8}",
@@ -393,16 +317,6 @@
       "type": "sizing"
     },
     "accent8": {
-      "background_color": {
-        "value": "#F95D6A",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
-      "foreground_color": {
-        "value": "{color.cornflower.900}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
       "bold": {
         "background_color": {
           "value": "{background.system.custom_accents.bold.accent_9}",
@@ -425,16 +339,6 @@
       }
     },
     "accent9": {
-      "background_color": {
-        "value": "#FE8F85",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
-      "foreground_color": {
-        "value": "{color.cornflower.900}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
       "bold": {
         "background_color": {
           "value": "{background.system.custom_accents.bold.accent_10}",
@@ -457,16 +361,6 @@
       }
     },
     "accent10": {
-      "background_color": {
-        "value": "#FFC650",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
-      "foreground_color": {
-        "value": "{color.cornflower.900}",
-        "type": "color",
-        "description": "To be deprecated in V5"
-      },
       "bold": {
         "background_color": {
           "value": "{background.system.custom_accents.bold.accent_11}",
@@ -541,7 +435,7 @@
     "info": {
       "bold": {
         "background_color": {
-          "value": "{foreground.system.info.accent}",
+          "value": "{background.system.info.tonal_high}",
           "type": "color"
         },
         "foreground_color": {
@@ -563,7 +457,7 @@
     "success": {
       "bold": {
         "background_color": {
-          "value": "{foreground.system.success.accent}",
+          "value": "{background.system.success.tonal_high}",
           "type": "color"
         },
         "foreground_color": {
@@ -585,7 +479,7 @@
     "warning": {
       "bold": {
         "background_color": {
-          "value": "{foreground.system.warning.accent}",
+          "value": "{background.system.warning.tonal_high}",
           "type": "color"
         },
         "foreground_color": {
@@ -607,7 +501,7 @@
     "error": {
       "bold": {
         "background_color": {
-          "value": "{foreground.system.error.accent}",
+          "value": "{background.system.error.tonal_high}",
           "type": "color"
         },
         "foreground_color": {
@@ -899,7 +793,7 @@
       },
       "hover": {
         "background_color": {
-          "value": "{color.blueberry.100}",
+          "value": "{background.interactive.ghost.hover}",
           "type": "color"
         },
         "foreground_color": {
@@ -913,7 +807,7 @@
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.primary.default}",
           "type": "color"
         }
       }
