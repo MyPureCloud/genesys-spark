@@ -291,7 +291,7 @@
       },
       "border_left": {
         "color": {
-          "value": "{border.container.emphasis.default}",
+          "value": "{border.container.edges.low_emphasis}",
           "type": "color"
         },
         "width": {

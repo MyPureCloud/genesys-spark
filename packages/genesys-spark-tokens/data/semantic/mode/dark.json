@@ -858,6 +858,10 @@
             "type": "color",
             "description": "This is used for default border for datatables"
           }
+        },
+        "low_emphasis": {
+          "value": "{theme.border.edges.emphasis.default}",
+          "type": "color"
         }
       },
       "high_constrast": {
@@ -880,13 +884,6 @@
           "value": "{theme.border.edges.active.10}",
           "type": "color",
           "description": "The color for the edge borders of high contrast surfaces that are on the active state."
-        }
-      },
-      "emphasis": {
-        "default": {
-          "value": "{color.lavenderhaze.700}",
-          "type": "color",
-          "description": "This border color can be used for subtle emphasis on containers, such as the quote block for the Rich Text Editor."
         }
       }
     },

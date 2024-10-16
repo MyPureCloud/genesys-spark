@@ -690,6 +690,12 @@
             "value": "{color_legacy.blue.60}",
             "type": "color"
           }
+        },
+        "emphasis": {
+          "default": {
+            "value": "{color.lavenderhaze.700}",
+            "type": "color"
+          }
         }
       }
     },

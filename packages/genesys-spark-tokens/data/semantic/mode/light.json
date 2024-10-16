@@ -858,6 +858,10 @@
             "type": "color",
             "description": "This is used for default border for datatables"
           }
+        },
+        "low_emphasis": {
+          "value": "{theme.border.edges.emphasis.default}",
+          "type": "color"
         }
       },
       "high_constrast": {
