@@ -1,10 +1,7 @@
 @use '~genesys-spark/dist/scss/typography.scss';
 
 ::slotted(button:active:enabled) {
-  color: var(
-    --gse-ui-link-active-foregroundColor,
-    var(--gse-ui-links-active-foregroundColor)
-  );
+  color: var(--gse-ui-links-active-foregroundColor);
   text-decoration: underline;
   background: none;
 }
@@ -25,13 +22,9 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
     overflow: hidden;
     border: none;
     border-radius: var(--gse-ui-modal-borderRadius);
-    box-shadow: var(
-        --gse-ui-modal-boxShadow-x,
-        var(--gse-ui-modal-boxShadow-offsetX)
-      )
-      var(--gse-ui-modal-boxShadow-y, var(--gse-ui-modal-boxShadow-offsetY))
-      var(--gse-ui-modal-boxShadow-blur) var(--gse-ui-modal-boxShadow-spread)
-      var(--gse-ui-modal-boxShadow-color);
+    box-shadow: var(--gse-ui-modal-boxShadow-offsetX)
+      var(--gse-ui-modal-boxShadow-offsetY) var(--gse-ui-modal-boxShadow-blur)
+      var(--gse-ui-modal-boxShadow-spread) var(--gse-ui-modal-boxShadow-color);
 
     &::backdrop {
       // token isn't working?

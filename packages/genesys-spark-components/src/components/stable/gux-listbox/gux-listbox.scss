@@ -13,15 +13,9 @@
 }
 
 :host(:focus-visible) {
-  outline: var(
-      --gse-semantic-focusRing-width,
-      var(--gse-semantic-focusOutline-md-borderWidth)
-    )
-    solid var(--gse-semantic-color-focus, var(--gse-ui-color-focus));
-  outline-offset: var(
-    --gse-semantic-focusRing-offset,
-    var(--gse-semantic-focusOutline-offset)
-  );
+  outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
+    var(--gse-ui-color-focus);
+  outline-offset: var(--gse-semantic-focusOutline-offset);
 }
 
 .gux-message-container {

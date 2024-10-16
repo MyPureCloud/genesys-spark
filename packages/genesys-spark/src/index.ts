@@ -45,9 +45,10 @@ export function loadSparkFonts(opts?: registerOptions): Promise<void> {
  */
 export function registerSparkComponents(opts?: registerOptions): Promise<void> {
   const SCRIPT_PATH = 'genesys-webcomponents.esm.js';
-  const STYLE_PATH = opts?.theme
-    ? `genesys-webcomponents-${opts.theme}.css`
-    : 'genesys-webcomponents-flare.css';
+  const STYLE_PATH =
+    opts?.theme === 'legacy'
+      ? `genesys-webcomponents-${opts.theme}.css`
+      : 'genesys-webcomponents.css';
 
   const assetsOrigin = getComponentAssetsOrigin();
   const SCRIPT_SRC = `${assetsOrigin}${COMPONENT_ASSET_PREFIX}${SCRIPT_PATH}`;

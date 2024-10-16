@@ -1,5 +1,5 @@
-@use '../../../../genesys-spark-tokens/dist-new/scss/gse-flare-dark-ui';
-@use '../../../../genesys-spark-tokens/dist-new/scss/gse-flare-light-ui';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-dark-ui';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-light-ui';
 
 :root {
   @include gse-flare-light-ui.tokens;
