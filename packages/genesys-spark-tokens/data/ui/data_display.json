@@ -352,7 +352,7 @@
         "type": "color"
       },
       "foreground_color": {
-        "value": "{color.cornflower.900}",
+        "value": "{foreground.container.high_emphasis}",
         "type": "color"
       },
       "count-display": {
@@ -433,7 +433,7 @@
         "type": "color"
       },
       "offline": {
-        "value": "linear-gradient(135deg, {color.cornflower.500} 0%, {color.cornflower.400} 100%)",
+        "value": "linear-gradient(135deg, {background.system.status.offline} 0%, {background.system.status.offline} 100%)",
         "type": "color"
       },
       "out_of_office": {
@@ -711,7 +711,7 @@
       },
       "initials_foreground": {
         "default": {
-          "value": "{color.cornflower.900}",
+          "value": "{foreground.container.high_emphasis}",
           "type": "color"
         },
         "inverse": {

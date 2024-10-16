@@ -386,8 +386,8 @@
     "focus": {
       "border": {
         "value": {
-          "color": "{color.blueberry.400}",
-          "width": "3px",
+          "color": "{border.focus}",
+          "width": "{focus_outline.md.border_width}",
           "style": "solid"
         },
         "type": "border"
@@ -412,33 +412,33 @@
       },
       "default": {
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.primary.default}",
           "type": "color"
         }
       },
       "hover": {
         "background_color": {
-          "value": "{color.blueberry.800}",
+          "value": "{background.interactive.primary.active}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.primary.active}",
           "type": "color"
         }
       },
       "selected": {
         "background_color": {
-          "value": "{color.blueberry.600}",
+          "value": "{background.interactive.primary.default}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.primary.active}",
           "type": "color"
         }
       },
       "disabled": {
         "background_color": {
-          "value": "{color.white}",
+          "value": "{background.container.elevated.default}",
           "type": "color"
         }
       },
@@ -458,50 +458,59 @@
       },
       "selected_panel": {
         "background_color": {
-          "value": "{color.blueberry.700}",
+          "value": "{background.interactive.primary.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{color.white}",
+          "value": "{foreground.interactive.primary.hover}",
           "type": "color"
         }
       },
       "return": {
         "default": {
           "background_color": {
-            "value": "{color.blueberry.900}",
+            "value": "{background.interactive.primary.hover}",
             "type": "color"
           },
           "foreground_color": {
-            "value": "{color.white}",
+            "value": "{foreground.interactive.primary.hover}",
             "type": "color"
           }
         },
         "hover": {
           "background_color": {
-            "value": "{color.blueberry.1000}",
+            "value": "{background.interactive.primary.active}",
             "type": "color"
           },
           "foreground_color": {
-            "value": "{color.white}",
+            "value": "{foreground.interactive.primary.active}",
             "type": "color"
           }
         },
         "selected": {
           "background_color": {
-            "value": "{color.blueberry.600}",
+            "value": "{background.interactive.primary.default}",
             "type": "color"
           },
           "foreground_color": {
-            "value": "{color.white}",
+            "value": "{foreground.interactive.primary.default}",
             "type": "color"
           }
         }
       },
       "tree_view": {
         "bar": {
-          "value": "#314669",
-          "type": "color"
+          "value": "{border.container.divider}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".3",
+                "space": "lch"
+              }
+            }
+          }
         }
       }
     },
@@ -526,8 +535,8 @@
     "tree_view": {
       "border": {
         "value": {
-          "color": "{color.cornflower.700}",
-          "width": "2px",
+          "color": "{global_nav.menu_option.tree_view.bar}",
+          "width": "{interactive.divider.lg.border_width}",
           "style": "solid"
         },
         "type": "border"
@@ -612,16 +621,16 @@
       },
       "frame": {
         "background_color": {
-          "value": "{color.white}",
+          "value": "{background.container.elevated.default}",
           "type": "color"
         },
         "stroke": {
-          "value": "{color.lavenderhaze.500}",
+          "value": "{border.container.edges.default}",
           "type": "color"
         }
       },
       "logo": {
-        "value": "#FF4F1F",
+        "value": "{foreground.container.special_accents.brand}",
         "type": "color",
         "description": "Brand Orange from Spark 1.0"
       },
@@ -629,21 +638,21 @@
         "closed": {
           "default": {
             "foreground_color": {
-              "value": "{color.blueberry.600}",
+              "value": "{background.interactive.primary.default}",
               "type": "color"
             }
           },
           "hover": {
             "background_color": {
-              "value": "{color.blueberry.700}",
+              "value": "{background.interactive.primary.hover}",
               "type": "color"
             },
             "foreground_color_stroke": {
-              "value": "{color.blueberry.600}",
+              "value": "{background.interactive.primary.default}",
               "type": "color"
             },
             "foreground_color": {
-              "value": "{color.white}",
+              "value": "{foreground.interactive.primary.default}",
               "type": "color"
             }
           }
@@ -651,17 +660,17 @@
         "open": {
           "default": {
             "foreground_color_stroke": {
-              "value": "{color.white}",
+              "value": "{foreground.interactive.primary.default}",
               "type": "color"
             }
           },
           "hover": {
             "background_color": {
-              "value": "{color.blueberry.700}",
+              "value": "{background.interactive.primary.hover}",
               "type": "color"
             },
             "foreground_color": {
-              "value": "{color.white}",
+              "value": "{foreground.interactive.primary.hover}",
               "type": "color"
             }
           }
