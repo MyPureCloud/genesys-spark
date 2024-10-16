@@ -1252,7 +1252,7 @@
           "border": {
             "value": {
               "color": "{border.form_control.text_input.active}",
-              "width": "{form_control.text_input.edges.border_width}",
+              "width": "{border_width.2}",
               "style": "dashed"
             },
             "type": "border"
@@ -1261,6 +1261,12 @@
         "min_height": {
           "value": "112px",
           "type": "sizing"
+        },
+        "background": {
+          "active": {
+            "value": "{background.interactive.secondary.default}",
+            "type": "color"
+          }
         }
       },
       "drop_zone_text": {
