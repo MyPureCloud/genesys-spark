@@ -205,6 +205,7 @@
   "--gse-ui-avatar-badge-away",
   "--gse-ui-calendarMenu-boxShadow-x",
   "--gse-ui-calendarMenu-boxShadow-y",
+  "--gse-ui-card-borderRadiusCopy",
   "--gse-ui-card-raised-boxShadow-x",
   "--gse-ui-card-raised-boxShadow-y",
   "--gse-ui-dataTableComposed-boxShadow-x",

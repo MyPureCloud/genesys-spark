@@ -171,8 +171,7 @@
   },
   "card": {
     "background-color": "#ffffff",
-    "border_radius": "16px",
-    "border_radius-copy": "16px",
+    "border_radius": "8px",
     "default": {
       "border": {
         "color": "#c6c8ce",
@@ -1736,7 +1735,7 @@
       "badge": {
         "margin_top": "8px"
       },
-      "border_radius": "16px",
+      "border_radius": "8px",
       "label": {
         "fontFamily": "Urbanist",
         "fontWeight": "700",
