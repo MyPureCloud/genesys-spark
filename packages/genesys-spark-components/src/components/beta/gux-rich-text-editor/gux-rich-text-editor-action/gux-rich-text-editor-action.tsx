@@ -56,7 +56,7 @@ export class GuxRichTextEditorAction {
         >
           <gux-icon
             icon-name={returnActionTypeIcon(this.action)}
-            decorative
+            screenreader-text={this.i18n(this.action)}
           ></gux-icon>
         </button>
         {this.renderTooltip()}
