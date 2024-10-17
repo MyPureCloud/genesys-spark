@@ -10,6 +10,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import translationResources from './i18n/en.json';
 
 import { GuxFormFieldError } from '../gux-form-field/functional-components/functional-components';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 
 import {
   GuxClockType,
@@ -44,6 +45,7 @@ export class GuxTimePicker {
   private minuteInputElement: HTMLInputElement;
   private i18n: GetI18nValue;
   private valueLastChange: GuxISOHourMinute;
+  private errorMessageId: string = randomHTMLId('gux-time-picker-eror');
 
   @Element()
   private root: HTMLElement;
@@ -292,6 +294,7 @@ export class GuxTimePicker {
     return (
       <div class="gux-input-time-container">
         <input
+          aria-describedby={this.errorMessageId}
           class="gux-input-time-hours"
           type="text"
           disabled={this.disabled}
@@ -303,6 +306,7 @@ export class GuxTimePicker {
         />
         <span class="gux-time-separator">{this.i18n('time-separator')}</span>
         <input
+          aria-describedby={this.errorMessageId}
           class="gux-input-time-minutes"
           type="text"
           disabled={this.disabled}
@@ -409,14 +413,12 @@ export class GuxTimePicker {
   }
 
   private maybeRenderInputError(): JSX.Element {
+    const error = 'Enter a valid time';
     return (
       <GuxFormFieldError show={this.hasInputError}>
-        Enter a valid time
-      </GuxFormFieldError> // <div class='gux-error'>
-      //   <gux-icon icon-name="fa/hexagon-exclamation-solid" decorative></gux-icon>
-    ) as //   <div class="gux-message">Enter a valid time</div>
-    // </div>
-    JSX.Element;
+        <span id={this.errorMessageId}>{error}</span>
+      </GuxFormFieldError>
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
