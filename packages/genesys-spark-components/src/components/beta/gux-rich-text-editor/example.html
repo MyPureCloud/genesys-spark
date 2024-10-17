@@ -64,6 +64,11 @@ const editor = new Editor({
   extensions: [StarterKit, Underline],
   content: 'Start typing here...',
   injectCSS: false,
+  editorProps: {
+    attributes: {
+      class: 'editor-styles'
+    },
+  },
 });
 
 // Map the action types to DOM elements and editor commands

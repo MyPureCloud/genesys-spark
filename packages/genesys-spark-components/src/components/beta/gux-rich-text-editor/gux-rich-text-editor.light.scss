@@ -1,13 +1,13 @@
-.prosemirror pre {
-  white-space: pre-wrap;
-}
-
-.tiptap {
+.editor-styles {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: #23395d;
   outline: none;
+
+  pre {
+    white-space: pre-wrap;
+  }
 
   p {
     margin: 0;
