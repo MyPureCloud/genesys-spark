@@ -173,6 +173,10 @@
             "type": "color"
           },
           "30": {
+            "value": "{color_legacy.green.80}",
+            "type": "color"
+          },
+          "35": {
             "value": "{color_legacy.green.60}",
             "type": "color"
           },
@@ -357,11 +361,11 @@
             "type": "color"
           },
           "40": {
-            "value": "{color.blueberry.600}",
+            "value": "{color.azure_blue.600}",
             "type": "color"
           },
           "50": {
-            "value": "{color.cornflower.600}",
+            "value": "{color.haze.600}",
             "type": "color"
           },
           "60": {
@@ -369,7 +373,7 @@
             "type": "color"
           },
           "70": {
-            "value": "{color.tomato.600}",
+            "value": "{color.genesys_orange.500}",
             "type": "color"
           }
         }

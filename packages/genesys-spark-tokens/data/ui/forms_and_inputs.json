@@ -419,7 +419,7 @@
         }
       },
       "padding": {
-        "value": "{container.xs.padding} {container.2xs.padding}",
+        "value": "{container.xs.padding} 1px",
         "type": "spacing"
       },
       "divider": {
@@ -454,7 +454,7 @@
             "type": "typography"
           },
           "foreground_color": {
-            "value": "{color.cornflower.800}",
+            "value": "{foreground.container.high_emphasis}",
             "type": "color"
           }
         },
@@ -469,7 +469,7 @@
             "type": "typography"
           },
           "foreground_color": {
-            "value": "{color.cornflower.600}",
+            "value": "{foreground.container.mid_emphasis}",
             "type": "color"
           }
         }
@@ -503,10 +503,6 @@
         }
       },
       "header_text": {
-        "foreground_color": {
-          "value": "{color.cornflower.600}",
-          "type": "color"
-        },
         "value": "{body.sm.bold}",
         "type": "typography"
       },
@@ -576,23 +572,11 @@
       },
       "default_text": {
         "value": "{body.sm.regular}",
-        "type": "typography",
-        "foreground_color": {
-          "value": "{color.cornflower.900}",
-          "type": "color"
-        },
-        "background_color": {
-          "value": "{color.cornflower.900}",
-          "type": "color"
-        }
+        "type": "typography"
       },
       "current_text": {
         "value": "{body.sm.bold}",
-        "type": "typography",
-        "foreground_color": {
-          "value": "{color.cornflower.600}",
-          "type": "color"
-        }
+        "type": "typography"
       },
       "focus_border_radius": {
         "value": "{theme.border_radius.focus.xlarge}",
@@ -670,23 +654,11 @@
     "date": {
       "default_text": {
         "value": "{body.sm.regular}",
-        "type": "typography",
-        "foreground_color": {
-          "value": "{color.cornflower.900}",
-          "type": "color"
-        },
-        "background_color": {
-          "value": "{color.cornflower.900}",
-          "type": "color"
-        }
+        "type": "typography"
       },
       "current_text": {
         "value": "{body.sm.bold}",
-        "type": "typography",
-        "foreground_color": {
-          "value": "{color.cornflower.600}",
-          "type": "color"
-        }
+        "type": "typography"
       },
       "selected": {
         "foreground_color": {
@@ -819,7 +791,7 @@
         "type": "spacing"
       },
       "background_color": {
-        "value": "{color.blueberry.100}",
+        "value": "{background.container.elevated.hover}",
         "type": "color"
       }
     },
@@ -836,22 +808,18 @@
       }
     },
     "icon_hover": {
-      "value": "{color.blueberry.700}",
+      "value": "{foreground.interactive.subtle.hover}",
       "type": "color"
     },
     "icon_focus": {
-      "value": "{color.blueberry.700}",
+      "value": "{foreground.interactive.subtle.active}",
       "type": "color"
     }
   },
   "toggle": {
     "label": {
       "value": "{body.sm.regular}",
-      "type": "typography",
-      "foreground_color": {
-        "value": "{color.cornflower.900}",
-        "type": "color"
-      }
+      "type": "typography"
     },
     "gap": {
       "value": "{form_control.field.click_input.gap}",
@@ -1293,18 +1261,18 @@
     "dropdown": {
       "hover": {
         "background_color": {
-          "value": "#EFF0FE",
+          "value": "{background.container.elevated.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "#CED2FC",
+          "value": "{background.container.elevated.active}",
           "type": "color"
         }
       },
       "foreground_color": {
-        "value": "#626E84",
+        "value": "{foreground.form_control.text_input.icon}",
         "type": "color"
       },
       "flag": {
@@ -1354,7 +1322,7 @@
     },
     "country_code": {
       "foreground_color": {
-        "value": "#626E84",
+        "value": "{foreground.container.high_emphasis}",
         "type": "color"
       }
     },

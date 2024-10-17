@@ -1,1 +1,6 @@
-[]
+[
+  "--gse-ui-tag-accent1-backgroundColor",
+  "--gse-ui-tag-accent1-foregroundColor",
+  "--gse-ui-tag-default-backgroundColor",
+  "--gse-ui-tag-default-foregroundColor"
+]
