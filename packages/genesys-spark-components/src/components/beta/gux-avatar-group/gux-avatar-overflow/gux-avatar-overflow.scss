@@ -1,0 +1,66 @@
+@use '~genesys-spark/dist/scss/focus.scss';
+
+.gux-avatar-overflow {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 0px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border: 1px dotted greenyellow;
+  border-radius: 50%;
+
+  &:focus-visible {
+    @include focus.gux-focus-ring-small;
+  }
+
+  &:hover,
+  &:focus {
+    z-index: var(--gse-semantic-zIndex-showFocus);
+  }
+
+  .gux-avatar-overflow-wrapper {
+    position: relative;
+    display: flex;
+    width: var(--gse-ui-avatar-small-size);
+    height: var(--gse-ui-avatar-small-size);
+
+    .gux-avatar-overflow-content {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(100% - var(--gse-ui-avatar-small-presenceRing-width) * 2);
+      height: calc(100% - var(--gse-ui-avatar-small-presenceRing-width) * 2);
+      margin: var(--gse-ui-avatar-small-presenceRing-width);
+      overflow: hidden;
+      font-family: var(--gse-ui-avatar-small-initials-fontFamily);
+      font-size: var(--gse-ui-avatar-small-initials-fontSize);
+      font-weight: var(--gse-ui-avatar-small-initials-fontWeight);
+      line-height: var(--gse-core-lineHeight-matchFontSize);
+      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+      background-color: var(
+        --gse-ui-avatar-media-initialsBackground-overflowCount
+      );
+      border: var(--gse-ui-avatar-content-default-border-width)
+        var(--gse-ui-avatar-content-default-border-style)
+        var(--gse-ui-avatar-content-default-border-color);
+      border-radius: 50%;
+    }
+  }
+}
+
+.gux-list-container {
+  box-sizing: border-box;
+  width: fit-content;
+  min-width: 200px;
+  margin: 0;
+  overflow: visible;
+  background: #fff;
+  border: 1px solid #c6c8ce;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 1px rgb(35 57 92 / 10%);
+}
