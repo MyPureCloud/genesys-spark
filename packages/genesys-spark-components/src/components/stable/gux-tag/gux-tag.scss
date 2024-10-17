@@ -18,8 +18,8 @@
   font-size: var(--gse-ui-tag-text-fontSize);
   font-weight: var(--gse-ui-tag-text-fontWeight);
   line-height: var(--gse-ui-tag-text-lineHeight);
-  color: var(--gse-ui-tag-default-foregroundColor);
-  background-color: var(--gse-ui-tag-default-backgroundColor);
+  color: var(--gse-ui-tag-default-bold-foregroundColor);
+  background-color: var(--gse-ui-tag-default-bold-backgroundColor);
   border-radius: var(--gse-ui-tag-borderRadius);
 
   &.gux-size-small {
