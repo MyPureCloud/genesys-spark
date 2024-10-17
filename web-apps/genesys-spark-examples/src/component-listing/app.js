@@ -46,6 +46,8 @@ export async function bootstrap() {
                   })
                   .join('')}
                   <div class="sticky-footer">
+                  <h2>Mode Switcher<sup> 𝜷</sup></h2>
+                  <gux-toggle id="mode-switcher" checked-label="Dark Mode" unchecked-label="Light Mode"></gux-toggle>
                   <h2>Resources</h2>
                     <a class="resources-link" href="https://github.com/MyPureCloud/genesys-spark/blob/main/docs/migration-guides/v4/readme.md" target="_blank">V3 -> V4 Migration Guide</a>
                     <a class="resources-link" href="https://spark.genesys.com" target="_blank">Spark 4.0 UX Documentation</a>
@@ -85,8 +87,23 @@ export async function bootstrap() {
       });
   }
 
+  function modeSwitchhHandler(event) {
+    const mode = event.detail ? 'dark' : 'light';
+
+    document.documentElement.setAttribute('flare-mode', mode);
+
+    Array.from(document.querySelectorAll('iframe'))
+      .map(iframe => iframe.contentDocument)
+      .forEach(doc => {
+        doc.documentElement.setAttribute('flare-mode', mode);
+      });
+  }
+
   const searchBox = document.getElementById('component-search-box');
   searchBox.addEventListener('input', searchHandler);
+
+  const modeSwitcher = document.getElementById('mode-switcher');
+  modeSwitcher.addEventListener('check', modeSwitchhHandler);
 
   function hashHandler() {
     const iframe = document.getElementById('componentFrame');
