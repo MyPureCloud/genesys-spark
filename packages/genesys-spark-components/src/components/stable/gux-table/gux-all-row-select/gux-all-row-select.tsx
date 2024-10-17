@@ -49,12 +49,6 @@ export class GuxAllRowSelect {
     this.inputElement.indeterminate = indeterminate;
   }
 
-  @Method()
-  async setChecked(checked: boolean): Promise<void> {
-    this.selected = checked;
-    this.internalallrowselectchange.emit(this.selected);
-  }
-
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(
       this.root,
