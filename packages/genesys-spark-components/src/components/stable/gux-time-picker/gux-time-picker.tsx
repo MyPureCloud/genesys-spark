@@ -9,6 +9,9 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
 
+import { GuxFormFieldError } from '../gux-form-field/functional-components/functional-components';
+import { randomHTMLId } from '@utils/dom/random-html-id';
+
 import {
   GuxClockType,
   GuxISOHourMinute,
@@ -42,6 +45,7 @@ export class GuxTimePicker {
   private minuteInputElement: HTMLInputElement;
   private i18n: GetI18nValue;
   private valueLastChange: GuxISOHourMinute;
+  private errorMessageId: string = randomHTMLId('gux-time-picker-eror');
 
   @Element()
   private root: HTMLElement;
@@ -76,6 +80,9 @@ export class GuxTimePicker {
   @State()
   expanded: boolean = false;
 
+  @State()
+  hasInputError: boolean = false;
+
   @Listen('focus')
   onFocus() {
     this.valueLastChange = this.value;
@@ -84,6 +91,26 @@ export class GuxTimePicker {
   @Listen('blur')
   onBlur() {
     if (this.valueLastChange !== this.value) {
+      // Format input time to match format found in the popup time list (e.g. "01:30" -> "1:30", "00:30" -> "12:30", etc)
+      const split = this.value.split(':');
+      const hourParsed = parseInt(split[0], 10);
+      let hour = hourParsed === 0 ? 12 : hourParsed;
+      hour = hour > 12 ? hour % 12 : hour;
+      const minutes = split[1];
+      const valueFormatted = `${hour}:${minutes}`;
+
+      // Check if the input value is in the popup time list
+      const valueIsValid = getTimeDisplayValues(
+        this.interval,
+        this.clockType
+      ).find(displayValue => displayValue === valueFormatted);
+
+      if (!valueIsValid) {
+        this.hasInputError = true;
+      } else {
+        this.hasInputError = false;
+      }
+
       simulateNativeEvent(this.root, 'change');
     }
   }
@@ -277,6 +304,7 @@ export class GuxTimePicker {
     return (
       <div class="gux-input-time-container">
         <input
+          aria-describedby={this.errorMessageId}
           class="gux-input-time-hours"
           type="text"
           disabled={this.disabled}
@@ -288,6 +316,7 @@ export class GuxTimePicker {
         />
         <span class="gux-time-separator">{this.i18n('time-separator')}</span>
         <input
+          aria-describedby={this.errorMessageId}
           class="gux-input-time-minutes"
           type="text"
           disabled={this.disabled}
@@ -396,19 +425,31 @@ export class GuxTimePicker {
     ) as JSX.Element;
   }
 
+  private maybeRenderInputError(): JSX.Element {
+    const error = 'Enter a valid time';
+    return (
+      <GuxFormFieldError show={this.hasInputError}>
+        <span id={this.errorMessageId}>{error}</span>
+      </GuxFormFieldError>
+    ) as JSX.Element;
+  }
+
   render(): JSX.Element {
     return (
-      <gux-popup
-        class={{
-          'gux-time-picker': true,
-          'gux-error': this.hasError
-        }}
-        expanded={this.expanded}
-        disabled={this.disabled}
-      >
-        {this.renderTarget()}
-        {this.renderPopup()}
-      </gux-popup>
+      <div>
+        <gux-popup
+          class={{
+            'gux-time-picker': true,
+            'gux-error': this.hasError || this.hasInputError
+          }}
+          expanded={this.expanded}
+          disabled={this.disabled}
+        >
+          {this.renderTarget()}
+          {this.renderPopup()}
+        </gux-popup>
+        {this.maybeRenderInputError()}
+      </div>
     ) as JSX.Element;
   }
 }
