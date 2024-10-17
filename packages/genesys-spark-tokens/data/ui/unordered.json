@@ -5,11 +5,7 @@
       "type": "color"
     },
     "border_radius": {
-      "value": "{theme.border_radius.container.large}",
-      "type": "borderRadius"
-    },
-    "border_radius-copy": {
-      "value": "{theme.border_radius.container.large}",
+      "value": "{theme.border_radius.container.medium}",
       "type": "borderRadius"
     },
     "default": {
