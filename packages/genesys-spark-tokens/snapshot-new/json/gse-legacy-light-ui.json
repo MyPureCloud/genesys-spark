@@ -172,7 +172,6 @@
   "card": {
     "background-color": "#ffffff",
     "border_radius": "4px",
-    "border_radius-copy": "4px",
     "default": {
       "border": {
         "color": "#b4bccb",
