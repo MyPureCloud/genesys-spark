@@ -23,20 +23,18 @@ button {
   width: 100%;
   padding-block: 3px;
   padding-inline: 3px;
-  border: 1px solid red;
 }
 
 .gux-avatar-group {
   display: flex;
-  border: 1px solid grey;
-  // width: 100%;
+  width: 100%;
 }
 
 .gux-overflow-list-item {
   display: flex;
   gap: 8px;
   align-items: center;
-  width: max-content;
+  width: 100%;
 }
 
 ::slotted(gux-avatar-focusable-beta.gux-hide),
