@@ -10,7 +10,7 @@ import {
 } from '@stencil/core';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { trackComponent } from '@utils/tracking/usage';
-import { GuxAvatarAccent } from './../gux-avatar/gux-avatar.types';
+import { GuxAvatarAccent } from '../gux-avatar/gux-avatar.types';
 import { randomHTMLId } from '@utils/dom/random-html-id';
 
 /**
