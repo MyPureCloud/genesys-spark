@@ -1,4 +1,6 @@
 import { newE2EPage, E2EPage } from '@stencil/core/testing';
+import { AxeResults } from 'axe-core';
+
 import { axeConfig } from './axeConfig';
 
 export async function a11yCheck(
@@ -14,9 +16,10 @@ export async function a11yCheck(
     axeExclusions,
     axeScanContext
   };
-  const axeResults = await page.evaluate(
+  const axeResults = (await page.evaluate(
     `window.axe.run('body > *', ${JSON.stringify(axeConfig)})`
-  );
+  )) as AxeResults;
+
   // eslint-disable-next-line
   expect(axeResults.violations).toHaveNoViolations(axeScanDetails);
 }
