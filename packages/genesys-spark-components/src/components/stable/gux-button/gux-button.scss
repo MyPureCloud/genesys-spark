@@ -34,6 +34,11 @@
   vertical-align: middle;
 }
 
+::slotted(gux-tooltip),
+::slotted(gux-tooltip-beta) {
+  padding-inline-start: 0;
+}
+
 ::slotted(*:first-child) {
   padding: 0;
 }

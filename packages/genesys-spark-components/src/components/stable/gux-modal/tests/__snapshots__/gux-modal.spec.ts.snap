@@ -161,7 +161,7 @@ exports[`gux-modal #render should render modal with a specified initial focus el
     </gux-button>
     <gux-button slot="dismiss">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>

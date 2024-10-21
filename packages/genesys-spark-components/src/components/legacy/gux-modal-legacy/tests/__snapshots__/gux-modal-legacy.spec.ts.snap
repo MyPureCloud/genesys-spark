@@ -46,7 +46,7 @@ exports[`gux-modal-legacy #render should render large modal 1`] = `
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -56,7 +56,7 @@ exports[`gux-modal-legacy #render should render large modal 1`] = `
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -112,7 +112,7 @@ exports[`gux-modal-legacy #render should render large modal 2`] = `
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -122,7 +122,7 @@ exports[`gux-modal-legacy #render should render large modal 2`] = `
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -178,7 +178,7 @@ exports[`gux-modal-legacy #render should render medium modal 1`] = `
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -188,7 +188,7 @@ exports[`gux-modal-legacy #render should render medium modal 1`] = `
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -244,7 +244,7 @@ exports[`gux-modal-legacy #render should render medium modal 2`] = `
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -254,7 +254,7 @@ exports[`gux-modal-legacy #render should render medium modal 2`] = `
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -310,7 +310,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
   <div slot="left-align-buttons">
     <gux-button id="cancelButton">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -320,7 +320,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -376,7 +376,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
   <div slot="left-align-buttons">
     <gux-button id="cancelButton">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -386,7 +386,7 @@ exports[`gux-modal-legacy #render should render modal with a specified initial f
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -442,7 +442,7 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -498,7 +498,7 @@ exports[`gux-modal-legacy #render should render modal with just left align butto
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -554,7 +554,7 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -610,7 +610,7 @@ exports[`gux-modal-legacy #render should render modal with just right align butt
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -660,7 +660,7 @@ exports[`gux-modal-legacy #render should render modal without a title 1`] = `
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -670,7 +670,7 @@ exports[`gux-modal-legacy #render should render modal without a title 1`] = `
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -720,7 +720,7 @@ exports[`gux-modal-legacy #render should render modal without a title 2`] = `
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -730,7 +730,7 @@ exports[`gux-modal-legacy #render should render modal without a title 2`] = `
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -862,7 +862,7 @@ exports[`gux-modal-legacy #render should render small modal 1`] = `
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -872,7 +872,7 @@ exports[`gux-modal-legacy #render should render small modal 1`] = `
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -928,7 +928,7 @@ exports[`gux-modal-legacy #render should render small modal 2`] = `
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -938,7 +938,7 @@ exports[`gux-modal-legacy #render should render small modal 2`] = `
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -994,7 +994,7 @@ exports[`gux-modal-legacy #render should render small modal by default 1`] = `
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -1004,7 +1004,7 @@ exports[`gux-modal-legacy #render should render small modal by default 1`] = `
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -1060,7 +1060,7 @@ exports[`gux-modal-legacy #render should render small modal by default 2`] = `
   <div slot="left-align-buttons">
     <gux-button>
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -1070,7 +1070,7 @@ exports[`gux-modal-legacy #render should render small modal by default 2`] = `
   <div slot="right-align-buttons">
     <gux-button accent="primary">
       <template shadowrootmode="open">
-        <button class="gux-primary" type="button">
+        <button class="gux-primary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
