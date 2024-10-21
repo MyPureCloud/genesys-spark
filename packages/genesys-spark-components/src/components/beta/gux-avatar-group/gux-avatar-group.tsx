@@ -4,7 +4,6 @@ import {
   JSX,
   Element,
   State,
-  readTask,
   Prop,
   writeTask
 } from '@stencil/core';
@@ -16,6 +15,8 @@ import { randomHTMLId } from '@utils/dom/random-html-id';
 /**
  * @slot - Some gux-avatars
  */
+
+const MAX_AVATARS = 7;
 @Component({
   styleUrl: 'gux-avatar-group.scss',
   tag: 'gux-avatar-group-beta',
@@ -25,7 +26,6 @@ export class GuxAvatarGroup {
   @Element()
   root: HTMLElement;
 
-  private resizeObserver?: ResizeObserver;
   private listItemClickListeners: Map<HTMLElement, (event: Event) => void> =
     new Map();
 
@@ -35,14 +35,14 @@ export class GuxAvatarGroup {
   @State()
   avatarList: HTMLGuxAvatarFocusableBetaElement[];
 
-  @State()
-  private overflowCount: number = 0;
-
-  @State()
-  private maxAvatarsToDisplay: number = 0;
-
   get countAvatars() {
     return this.avatarList.length ?? 0;
+  }
+
+  get overflowCount() {
+    return MAX_AVATARS < this.avatarList.length
+      ? this.avatarList.length - MAX_AVATARS
+      : 0;
   }
 
   async componentWillLoad(): Promise<void> {
@@ -61,36 +61,15 @@ export class GuxAvatarGroup {
     });
 
     trackComponent(this.root);
-    this.checkGroupContainerWidthForLayout();
   }
 
   componentDidLoad() {
-    if (!this.resizeObserver && window.ResizeObserver) {
-      this.resizeObserver = new ResizeObserver(() =>
-        readTask(() => {
-          this.checkGroupContainerWidthForLayout();
-        })
-      );
-    }
-
-    if (this.resizeObserver) {
-      this.resizeObserver.observe(
-        this.root.shadowRoot.querySelector('.gux-avatar-group')
-      );
-    }
-
     afterNextRenderTimeout(() => {
-      this.checkGroupContainerWidthForLayout();
-    }, 500);
+      this.updateGroupItems();
+    }, 250);
   }
 
   disconnectedCallback() {
-    if (this.resizeObserver) {
-      this.resizeObserver.unobserve(
-        this.root.shadowRoot.querySelector('.gux-avatar-group')
-      );
-    }
-
     if (this.listItemClickListeners.size > 0) {
       this.removeAllListeners();
     }
@@ -100,48 +79,9 @@ export class GuxAvatarGroup {
     return ((index % 12) + 1).toString();
   }
 
-  // Check the amount of avatars that should be hidden/visible and update display
-  private checkGroupContainerWidthForLayout() {
-    const container = this.root.shadowRoot.querySelector('.gux-avatar-group');
-    const containerWidth = container?.clientWidth ?? 0;
-    const newMaxAvatarsToDisplay = this.getMaxAvatarsToDisplay(containerWidth);
-
-    const newOverflowCount = Math.max(
-      0,
-      this.countAvatars - this.maxAvatarsToDisplay
-    );
-
-    if (
-      newMaxAvatarsToDisplay !== this.maxAvatarsToDisplay ||
-      newOverflowCount !== this.overflowCount
-    ) {
-      this.maxAvatarsToDisplay = newMaxAvatarsToDisplay;
-      this.overflowCount = newOverflowCount;
-      this.updateGroupItems();
-    }
-  }
-
-  // Determine the amount of avatars that can be displayed based on the current container width
-  private getMaxAvatarsToDisplay(containerWidth: number): number {
-    const minimumSize = 37;
-    const avatarWidth = 26;
-
-    const maxAvatarsToDisplay = Math.floor(
-      (containerWidth - minimumSize) / avatarWidth
-    );
-
-    if (containerWidth < minimumSize) {
-      return 0;
-    }
-
-    return maxAvatarsToDisplay < this.avatarLimit
-      ? maxAvatarsToDisplay
-      : this.avatarLimit;
-  }
-
   private updateGroupItems(): void {
     this.avatarList.forEach((avatar, index) => {
-      const shouldHide = index >= this.maxAvatarsToDisplay;
+      const shouldHide = index >= MAX_AVATARS;
       const isHidden = avatar.classList.contains('gux-hide');
 
       if (shouldHide && !isHidden) {
@@ -166,10 +106,12 @@ export class GuxAvatarGroup {
 
     // Create a new list item with the same id as the focusableAvatar
     const listItem = document.createElement('gux-list-item');
+
     listItem.id = focusableAvatar.id;
 
-    // Give is a class that makes it use flexbox layout
-    listItem.classList.add('gux-overflow-list-item');
+    // Give it a wrapper with a flexbox class
+    const listItemFlexbox = document.createElement('div');
+    listItemFlexbox.classList.add('gux-overflow-list-item');
 
     // Get the button or link within the cloned focusableAvatar
     // and set its tabIndex to -1 so it can't be tabbed to
@@ -200,7 +142,8 @@ export class GuxAvatarGroup {
         nameSpan.textContent = avatar.name;
 
         // Add cloned avatar and name span to list item
-        listItem.append(clonedFocusableAvatar, nameSpan);
+        listItemFlexbox.append(clonedFocusableAvatar, nameSpan);
+        listItem.appendChild(listItemFlexbox);
       }
     }
 
