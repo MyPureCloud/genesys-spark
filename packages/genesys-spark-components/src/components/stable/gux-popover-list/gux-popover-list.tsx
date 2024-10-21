@@ -125,6 +125,7 @@ export class GuxPopoverList {
 
     if (this.popupElement) {
       void computePosition(forElement, this.popupElement, {
+        strategy: 'fixed',
         placement: this.position,
         middleware: [
           offset(7),
