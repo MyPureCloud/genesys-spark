@@ -18,8 +18,9 @@ async function openWithClick(page: E2EPage) {
 
 async function unfilteredOptions(page: E2EPage) {
   const element = await page.find('gux-time-zone-picker-beta');
-  return element.shadowRoot.querySelectorAll(
-    `gux-dropdown gux-listbox gux-option:not(.gux-filtered)`
+
+  return await element.findAll(
+    'pierce/gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
   );
 }
 
@@ -42,7 +43,7 @@ describe('gux-time-zone-picker-beta', () => {
     await openWithClick(page);
     await a11yCheck(page, axeExclusions);
     let visibleItems = await unfilteredOptions(page);
-    expect(visibleItems.length).toBe(583);
+    expect(visibleItems.length).toBe(588);
 
     await page.keyboard.press('a');
     await page.keyboard.press('d');
@@ -63,7 +64,7 @@ describe('gux-time-zone-picker-beta', () => {
     await openWithClick(page);
     await a11yCheck(page, axeExclusions);
     let visibleItems = await unfilteredOptions(page);
-    expect(visibleItems.length).toBe(583);
+    expect(visibleItems.length).toBe(588);
 
     await page.keyboard.press('e');
     await page.keyboard.press('t');
