@@ -1,15 +1,36 @@
-gux-avatar-focusable-beta {
+@use '~genesys-spark/dist/scss/focus.scss';
+
+a:hover,
+button:hover,
+a:focus-visible,
+button:focus-visible {
+  z-index: var(--gse-semantic-zIndex-showFocus);
+}
+
+a {
+  display: inline-block;
   margin-inline-end: calc(-4px + var(--gse-ui-avatar-groupShapes-gap));
+  line-height: 0px;
+  border-radius: 50%;
+}
+
+.gux-hide {
+  display: none;
 }
 
 button {
   padding: 0;
-  margin: 0;
+  margin-inline-end: calc(-4px + var(--gse-ui-avatar-groupShapes-gap));
   line-height: 0px;
   cursor: pointer;
   background: none;
   border: none;
   border-radius: 50%;
+}
+
+a:focus-visible,
+button:focus-visible {
+  @include focus.gux-focus-ring-small;
 }
 
 .gux-avatar-group-wrapper {
@@ -30,9 +51,13 @@ button {
   gap: 8px;
   align-items: center;
   width: 100%;
-}
 
-gux-avatar-focusable-beta.gux-hide,
-.gux-overflow-hide {
-  display: none;
+  &:focus-within {
+    @include focus.gux-focus-ring-small;
+  }
+
+  button,
+  a {
+    margin: 0;
+  }
 }

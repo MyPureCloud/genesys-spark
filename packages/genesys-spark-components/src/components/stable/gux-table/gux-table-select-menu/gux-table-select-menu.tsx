@@ -48,6 +48,7 @@ export class GuxTableSelectMenu {
 
   private focusFirstItemInPopupList(): void {
     const listElement: HTMLGuxListElement = this.root.querySelector('gux-list');
+
     afterNextRenderTimeout(() => {
       void listElement?.guxFocusFirstItem();
     });

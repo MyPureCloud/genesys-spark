@@ -21,10 +21,6 @@ interface ProcessedAvatar {
   isOverflow: boolean;
 }
 
-/**
- * @slot - Some gux-avatars
- */
-
 @Component({
   styleUrl: 'gux-avatar-group.scss',
   tag: 'gux-avatar-group-beta',
@@ -33,9 +29,6 @@ interface ProcessedAvatar {
 export class GuxAvatarGroup {
   @Element()
   root: HTMLElement;
-
-  private listItemClickListeners: Map<HTMLElement, (event: Event) => void> =
-    new Map();
 
   @Prop()
   avatarLimit: number = 7;
@@ -56,10 +49,8 @@ export class GuxAvatarGroup {
     trackComponent(this.root);
   }
 
-  disconnectedCallback() {
-    if (this.listItemClickListeners.size > 0) {
-      this.removeAllListeners();
-    }
+  componentWillRender(): void {
+    this.processAvatars();
   }
 
   private getAccent(index): string {
@@ -91,86 +82,80 @@ export class GuxAvatarGroup {
     });
   }
 
-  private renderAvatar(
+  private renderInteractiveAvatar(
     avatar: ProcessedAvatar,
-    avatarSize: GuxAvatarSize
+    index: number
   ): JSX.Element {
+    const tabIndexVal = index === 0 ? 0 : -1;
     if (avatar.button) {
       return (
-        <button type={avatar.button.type} onClick={avatar.button.onclick}>
-          <gux-avatar-beta
-            size={avatarSize}
-            name={avatar.name}
-            accent={avatar.accent}
-          >
-            {avatar.img ? (
-              <img slot="image" src={avatar.img.src} alt={avatar.img.alt} />
-            ) : null}
-          </gux-avatar-beta>
+        <button
+          type="button"
+          onClick={avatar.button.onclick}
+          tabIndex={tabIndexVal}
+        >
+          {this.renderAvatar(avatar, 'small')}
         </button>
       ) as JSX.Element;
     } else if (avatar.link) {
       return (
-        <a href={avatar.link.href} target={avatar.link.target}>
-          <gux-avatar-beta
-            size={avatarSize}
-            name={avatar.name}
-            accent={avatar.accent}
-          >
-            {avatar.img ? (
-              <img slot="image" src={avatar.img.src} alt={avatar.img.alt} />
-            ) : null}
-          </gux-avatar-beta>
+        <a
+          href={avatar.link.href}
+          target={avatar.link.target}
+          tabIndex={tabIndexVal}
+        >
+          {this.renderAvatar(avatar, 'small')}
         </a>
       ) as JSX.Element;
     } else {
-      return (
-        <gux-avatar-beta
-          size={avatarSize}
-          name={avatar.name}
-          accent={avatar.accent}
-        >
-          {avatar.img ? (
-            <img slot="image" src={avatar.img.src} alt={avatar.img.alt} />
-          ) : null}
-        </gux-avatar-beta>
-      ) as JSX.Element;
+      return this.renderAvatar(avatar, 'small') as JSX.Element;
     }
   }
 
-  private renderListItem(avatar: ProcessedAvatar): JSX.Element {
-    const handleClick = (event: MouseEvent) =>
-      this.handleListItemClick(event, avatar);
-    this.listItemClickListeners.set(avatar.focusableAvatar, handleClick);
-
+  private renderAvatar(
+    avatar: ProcessedAvatar,
+    size: GuxAvatarSize
+  ): JSX.Element {
     return (
-      <gux-list-item key={avatar.name} onClick={handleClick}>
-        <div class="gux-overflow-list-item">
-          {this.renderAvatar(avatar, 'xsmall')}
-          {avatar.name}
-        </div>
-      </gux-list-item>
+      <gux-avatar-beta size={size} name={avatar.name} accent={avatar.accent}>
+        {avatar.img ? (
+          <img slot="image" src={avatar.img.src} alt={avatar.img.alt} />
+        ) : null}
+      </gux-avatar-beta>
     ) as JSX.Element;
   }
 
-  private handleListItemClick(
-    event: MouseEvent,
-    avatar: ProcessedAvatar
-  ): void {
+  private renderListItem(avatar: ProcessedAvatar): JSX.Element {
     if (avatar.button) {
-      event.preventDefault();
-      avatar.button.click();
+      return (
+        <gux-list-item key={avatar.name} onClick={avatar.button.onclick}>
+          <span class="gux-overflow-list-item">
+            {this.renderAvatar(avatar, 'xsmall')}
+            {avatar.name}
+          </span>
+        </gux-list-item>
+      ) as JSX.Element;
     } else if (avatar.link) {
-      event.preventDefault();
-      avatar.link.click();
+      return (
+        <gux-list-item key={avatar.name} onClick={() => avatar.link.click()}>
+          <span class="gux-overflow-list-item">
+            <a href={avatar.link.href} target={avatar.link.target}>
+              {this.renderAvatar(avatar, 'xsmall')}
+            </a>
+            {avatar.name}
+          </span>
+        </gux-list-item>
+      ) as JSX.Element;
+    } else {
+      return (
+        <gux-list-item key={avatar.name}>
+          <span class="gux-overflow-list-item">
+            {this.renderAvatar(avatar, 'xsmall')}
+            {avatar.name}
+          </span>
+        </gux-list-item>
+      ) as JSX.Element;
     }
-  }
-
-  private removeAllListeners() {
-    this.listItemClickListeners.forEach((listener, element) => {
-      element.removeEventListener('click', listener);
-    });
-    this.listItemClickListeners.clear();
   }
 
   render(): JSX.Element {
@@ -181,14 +166,12 @@ export class GuxAvatarGroup {
       avatar => avatar.isOverflow
     );
 
-    return (
+    return [
       <div class="gux-avatar-group-wrapper">
         <div class="gux-avatar-group">
-          {visibleAvatars.map(avatar => (
-            <gux-avatar-focusable-beta>
-              {this.renderAvatar(avatar, 'small')}
-            </gux-avatar-focusable-beta>
-          ))}
+          {visibleAvatars.map((avatar, index) =>
+            this.renderInteractiveAvatar(avatar, index)
+          )}
           {overflowAvatars.length > 0 && (
             <gux-avatar-overflow-beta count={overflowAvatars.length}>
               <gux-list>
@@ -198,6 +181,6 @@ export class GuxAvatarGroup {
           )}
         </div>
       </div>
-    ) as JSX.Element;
+    ] as JSX.Element;
   }
 }
