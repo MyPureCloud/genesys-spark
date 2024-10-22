@@ -1,6 +1,6 @@
 @mixin tokens {
   --gse-ui-color-focus: #7b88f7;
-  --gse-ui-formControl-input-contentText-fontFamily: "Noto Sans";
+  --gse-ui-formControl-input-contentText-fontFamily: 'Noto Sans';
   --gse-ui-formControl-input-contentText-fontWeight: 400;
   --gse-ui-formControl-input-contentText-fontSize: 12px;
   --gse-ui-formControl-input-contentText-lineHeight: 18px;
@@ -30,7 +30,7 @@
   --gse-ui-formControl-input-gap: 12px;
   --gse-ui-formControl-input-top: 8px;
   --gse-ui-formControl-input-padding: 8px 12px;
-  --gse-ui-formControl-input-prefixSufix-text-fontFamily: "Noto Sans";
+  --gse-ui-formControl-input-prefixSufix-text-fontFamily: 'Noto Sans';
   --gse-ui-formControl-input-prefixSufix-text-fontWeight: 700;
   --gse-ui-formControl-input-prefixSufix-text-fontSize: 14px;
   --gse-ui-formControl-input-prefixSufix-text-lineHeight: 20px;
@@ -50,16 +50,16 @@
   --gse-ui-formControl-input-spinbuttonIcon-size: 16px;
   --gse-ui-formControl-input-focusSelection-backgroundColor: #7b88f7;
   --gse-ui-formControl-label-padding: 0 0 8px 0;
-  --gse-ui-formControl-label-text-fontFamily: "Noto Sans";
+  --gse-ui-formControl-label-text-fontFamily: 'Noto Sans';
   --gse-ui-formControl-label-text-fontWeight: 400;
   --gse-ui-formControl-label-text-fontSize: 12px;
   --gse-ui-formControl-label-text-lineHeight: 18px;
-  --gse-ui-formControl-label-textBold-fontFamily: "Noto Sans";
+  --gse-ui-formControl-label-textBold-fontFamily: 'Noto Sans';
   --gse-ui-formControl-label-textBold-fontWeight: 600;
   --gse-ui-formControl-label-textBold-fontSize: 12px;
   --gse-ui-formControl-label-textBold-lineHeight: 18px;
   --gse-ui-formControl-label-labelColor: #1b2c48;
-  --gse-ui-formControl-label-indicator-text-fontFamily: "Noto Sans";
+  --gse-ui-formControl-label-indicator-text-fontFamily: 'Noto Sans';
   --gse-ui-formControl-label-indicator-text-fontWeight: 400;
   --gse-ui-formControl-label-indicator-text-fontSize: 12px;
   --gse-ui-formControl-label-indicator-text-lineHeight: 18px;
@@ -71,7 +71,7 @@
   --gse-ui-formControl-formField-gap: 4px;
   --gse-ui-formControl-group-gapItems: 8px;
   --gse-ui-formControl-helper-gap: 4px;
-  --gse-ui-formControl-helper-helperText-fontFamily: "Noto Sans";
+  --gse-ui-formControl-helper-helperText-fontFamily: 'Noto Sans';
   --gse-ui-formControl-helper-helperText-fontWeight: 400;
   --gse-ui-formControl-helper-helperText-fontSize: 12px;
   --gse-ui-formControl-helper-helperText-lineHeight: 18px;
@@ -126,7 +126,7 @@
   --gse-ui-tooltip-height: 32px;
   --gse-ui-tooltip-gap: 8px;
   --gse-ui-tooltip-borderRadius: 4px;
-  --gse-ui-tooltip-text-fontFamily: "Noto Sans";
+  --gse-ui-tooltip-text-fontFamily: 'Noto Sans';
   --gse-ui-tooltip-text-fontWeight: 400;
   --gse-ui-tooltip-text-fontSize: 12px;
   --gse-ui-tooltip-text-lineHeight: 18px;
@@ -173,7 +173,7 @@
   --gse-ui-tag-accent6-subtle-foregroundColor: #1b2c48;
   --gse-ui-tag-accent6-bold-backgroundColor: #8a5ecc;
   --gse-ui-tag-accent6-bold-foregroundColor: #ffffff;
-  --gse-ui-tag-text-fontFamily: "Noto Sans";
+  --gse-ui-tag-text-fontFamily: 'Noto Sans';
   --gse-ui-tag-text-fontWeight: 600;
   --gse-ui-tag-text-fontSize: 14px;
   --gse-ui-tag-text-lineHeight: 20px;
@@ -210,7 +210,7 @@
   --gse-ui-tag-small-height: 20px;
   --gse-ui-tag-large-height: 32px;
   --gse-ui-badge-borderRadius: 16px;
-  --gse-ui-badge-text-fontFamily: "Noto Sans";
+  --gse-ui-badge-text-fontFamily: 'Noto Sans';
   --gse-ui-badge-text-fontWeight: 600;
   --gse-ui-badge-text-fontSize: 12px;
   --gse-ui-badge-text-lineHeight: 18px;
@@ -263,11 +263,11 @@
   --gse-ui-alert-error-border-color: #f3a7b5;
   --gse-ui-alert-error-border-width: 1px;
   --gse-ui-alert-error-border-style: solid;
-  --gse-ui-alert-text-fontFamily: "Noto Sans";
+  --gse-ui-alert-text-fontFamily: 'Noto Sans';
   --gse-ui-alert-text-fontWeight: 400;
   --gse-ui-alert-text-fontSize: 12px;
   --gse-ui-alert-text-lineHeight: 18px;
-  --gse-ui-alert-emphasisText-fontFamily: "Noto Sans";
+  --gse-ui-alert-emphasisText-fontFamily: 'Noto Sans';
   --gse-ui-alert-emphasisText-fontWeight: 700;
   --gse-ui-alert-emphasisText-fontSize: 12px;
   --gse-ui-alert-emphasisText-lineHeight: 18px;
@@ -281,13 +281,13 @@
   --gse-ui-rating-star-gap: 8px;
   --gse-ui-breadcrumbs-primary-height: 20px;
   --gse-ui-breadcrumbs-primary-separator-padding: 0 12px;
-  --gse-ui-breadcrumbs-primary-separator-typography-fontFamily: "Noto Sans";
+  --gse-ui-breadcrumbs-primary-separator-typography-fontFamily: 'Noto Sans';
   --gse-ui-breadcrumbs-primary-separator-typography-fontWeight: 700;
   --gse-ui-breadcrumbs-primary-separator-typography-fontSize: 14px;
   --gse-ui-breadcrumbs-primary-separator-typography-lineHeight: 20px;
   --gse-ui-breadcrumbs-secondary-height: 16px;
   --gse-ui-breadcrumbs-secondary-separator-padding: 0 8px;
-  --gse-ui-breadcrumbs-secondary-separator-typography-fontFamily: "Noto Sans";
+  --gse-ui-breadcrumbs-secondary-separator-typography-fontFamily: 'Noto Sans';
   --gse-ui-breadcrumbs-secondary-separator-typography-fontWeight: 700;
   --gse-ui-breadcrumbs-secondary-separator-typography-fontSize: 14px;
   --gse-ui-breadcrumbs-secondary-separator-typography-lineHeight: 20px;
@@ -344,7 +344,7 @@
   --gse-ui-copyToClipboard-label-foregroundColor: #1b2c48;
   --gse-ui-copyToClipboard-label-padding: 2px 4px;
   --gse-ui-copyToClipboard-label-borderRadius: 4px;
-  --gse-ui-copyToClipboard-label-text-fontFamily: "Noto Sans";
+  --gse-ui-copyToClipboard-label-text-fontFamily: 'Noto Sans';
   --gse-ui-copyToClipboard-label-text-fontWeight: 600;
   --gse-ui-copyToClipboard-label-text-fontSize: 14px;
   --gse-ui-copyToClipboard-label-text-lineHeight: 20px;
@@ -403,7 +403,7 @@
   --gse-ui-button-danger-active-foregroundColor: #ffffff;
   --gse-ui-button-borderRadius: 4px;
   --gse-ui-button-disabled-opacity: 0.5;
-  --gse-ui-button-text-fontFamily: "Noto Sans";
+  --gse-ui-button-text-fontFamily: 'Noto Sans';
   --gse-ui-button-text-fontWeight: 700;
   --gse-ui-button-text-fontSize: 12px;
   --gse-ui-button-text-lineHeight: 18px;
@@ -433,31 +433,31 @@
   --gse-ui-links-asButton-height: 32px;
   --gse-ui-links-asButton-padding: 12px;
   --gse-ui-links-asButton-gap: 8px;
-  --gse-ui-links-asButton-text-fontFamily: "Noto Sans";
+  --gse-ui-links-asButton-text-fontFamily: 'Noto Sans';
   --gse-ui-links-asButton-text-fontWeight: 600;
   --gse-ui-links-asButton-text-fontSize: 14px;
   --gse-ui-links-asButton-text-lineHeight: 20px;
-  --gse-ui-links-asButton-underlinedText-fontFamily: "Noto Sans";
+  --gse-ui-links-asButton-underlinedText-fontFamily: 'Noto Sans';
   --gse-ui-links-asButton-underlinedText-fontWeight: 600;
   --gse-ui-links-asButton-underlinedText-fontSize: 14px;
   --gse-ui-links-asButton-underlinedText-lineHeight: 20px;
   --gse-ui-links-asButton-underlinedText-textDecoration: underline;
   --gse-ui-links-inLine-medium-height: 24px;
-  --gse-ui-links-inLine-medium-text-fontFamily: "Noto Sans";
+  --gse-ui-links-inLine-medium-text-fontFamily: 'Noto Sans';
   --gse-ui-links-inLine-medium-text-fontWeight: 600;
   --gse-ui-links-inLine-medium-text-fontSize: 14px;
   --gse-ui-links-inLine-medium-text-lineHeight: 20px;
-  --gse-ui-links-inLine-medium-underlinedText-fontFamily: "Noto Sans";
+  --gse-ui-links-inLine-medium-underlinedText-fontFamily: 'Noto Sans';
   --gse-ui-links-inLine-medium-underlinedText-fontWeight: 600;
   --gse-ui-links-inLine-medium-underlinedText-fontSize: 14px;
   --gse-ui-links-inLine-medium-underlinedText-lineHeight: 20px;
   --gse-ui-links-inLine-medium-underlinedText-textDecoration: underline;
   --gse-ui-links-inLine-small-height: 20px;
-  --gse-ui-links-inLine-small-text-fontFamily: "Noto Sans";
+  --gse-ui-links-inLine-small-text-fontFamily: 'Noto Sans';
   --gse-ui-links-inLine-small-text-fontWeight: 600;
   --gse-ui-links-inLine-small-text-fontSize: 12px;
   --gse-ui-links-inLine-small-text-lineHeight: 18px;
-  --gse-ui-links-inLine-small-underlinedText-fontFamily: "Noto Sans";
+  --gse-ui-links-inLine-small-underlinedText-fontFamily: 'Noto Sans';
   --gse-ui-links-inLine-small-underlinedText-fontWeight: 600;
   --gse-ui-links-inLine-small-underlinedText-fontSize: 12px;
   --gse-ui-links-inLine-small-underlinedText-lineHeight: 18px;
@@ -478,7 +478,7 @@
   --gse-ui-radioButton-icon-height: 16px;
   --gse-ui-radioButton-icon-width: 16px;
   --gse-ui-radioButton-label-foregroundColor: #1b2c48;
-  --gse-ui-radioButton-label-text-fontFamily: "Noto Sans";
+  --gse-ui-radioButton-label-text-fontFamily: 'Noto Sans';
   --gse-ui-radioButton-label-text-fontWeight: 400;
   --gse-ui-radioButton-label-text-fontSize: 12px;
   --gse-ui-radioButton-label-text-lineHeight: 18px;
@@ -499,7 +499,7 @@
   --gse-ui-checkbox-icon-height: 16px;
   --gse-ui-checkbox-icon-width: 16px;
   --gse-ui-checkbox-label-foregroundColor: #1b2c48;
-  --gse-ui-checkbox-label-text-fontFamily: "Noto Sans";
+  --gse-ui-checkbox-label-text-fontFamily: 'Noto Sans';
   --gse-ui-checkbox-label-text-fontWeight: 400;
   --gse-ui-checkbox-label-text-fontSize: 12px;
   --gse-ui-checkbox-label-text-lineHeight: 18px;
@@ -519,16 +519,16 @@
   --gse-ui-menu-option-height: 32px;
   --gse-ui-menu-option-startIcon-height: 16px;
   --gse-ui-menu-option-startIcon-width: 16px;
-  --gse-ui-menu-option-label-default-text-fontFamily: "Noto Sans";
+  --gse-ui-menu-option-label-default-text-fontFamily: 'Noto Sans';
   --gse-ui-menu-option-label-default-text-fontWeight: 400;
   --gse-ui-menu-option-label-default-text-fontSize: 12px;
   --gse-ui-menu-option-label-default-text-lineHeight: 18px;
-  --gse-ui-menu-option-label-active-text-fontFamily: "Noto Sans";
+  --gse-ui-menu-option-label-active-text-fontFamily: 'Noto Sans';
   --gse-ui-menu-option-label-active-text-fontWeight: 700;
   --gse-ui-menu-option-label-active-text-fontSize: 12px;
   --gse-ui-menu-option-label-active-text-lineHeight: 18px;
   --gse-ui-menu-option-label-foregroundColor: #1b2c48;
-  --gse-ui-menu-option-shortcut-text-fontFamily: "Noto Sans";
+  --gse-ui-menu-option-shortcut-text-fontFamily: 'Noto Sans';
   --gse-ui-menu-option-shortcut-text-fontWeight: 400;
   --gse-ui-menu-option-shortcut-text-fontSize: 14px;
   --gse-ui-menu-option-shortcut-text-lineHeight: 20px;
@@ -597,7 +597,7 @@
   --gse-ui-calendarMenu-day-range-height: 32px;
   --gse-ui-calendarMenu-day-input-height: 32px;
   --gse-ui-calendarMenu-day-input-width: 160px;
-  --gse-ui-calendarMenu-day-headerText-fontFamily: "Noto Sans";
+  --gse-ui-calendarMenu-day-headerText-fontFamily: 'Noto Sans';
   --gse-ui-calendarMenu-day-headerText-fontWeight: 700;
   --gse-ui-calendarMenu-day-headerText-fontSize: 12px;
   --gse-ui-calendarMenu-day-headerText-lineHeight: 18px;
@@ -610,17 +610,17 @@
   --gse-ui-calendarMenu-month-single-header-height: 48px;
   --gse-ui-calendarMenu-month-monthCell-width: 66px;
   --gse-ui-calendarMenu-month-monthCell-height: 48px;
-  --gse-ui-calendarMenu-month-headerText-fontFamily: "Noto Sans";
+  --gse-ui-calendarMenu-month-headerText-fontFamily: 'Noto Sans';
   --gse-ui-calendarMenu-month-headerText-fontWeight: 400;
   --gse-ui-calendarMenu-month-headerText-fontSize: 16px;
   --gse-ui-calendarMenu-month-headerText-lineHeight: 24px;
   --gse-ui-calendarMenu-month-range-vertical-width: 272px;
   --gse-ui-calendarMenu-month-range-vertical-height: 652px;
-  --gse-ui-calendarMenu-month-defaultText-fontFamily: "Noto Sans";
+  --gse-ui-calendarMenu-month-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-calendarMenu-month-defaultText-fontWeight: 400;
   --gse-ui-calendarMenu-month-defaultText-fontSize: 12px;
   --gse-ui-calendarMenu-month-defaultText-lineHeight: 18px;
-  --gse-ui-calendarMenu-month-currentText-fontFamily: "Noto Sans";
+  --gse-ui-calendarMenu-month-currentText-fontFamily: 'Noto Sans';
   --gse-ui-calendarMenu-month-currentText-fontWeight: 700;
   --gse-ui-calendarMenu-month-currentText-fontSize: 12px;
   --gse-ui-calendarMenu-month-currentText-lineHeight: 18px;
@@ -639,11 +639,11 @@
   --gse-ui-calendarMenu-header-padding: 12px 16px;
   --gse-ui-calendarMenu-header-arrow-padding: 8px;
   --gse-ui-calendarMenu-backgroundColor: #ffffff;
-  --gse-ui-calendarMenu-date-defaultText-fontFamily: "Noto Sans";
+  --gse-ui-calendarMenu-date-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-calendarMenu-date-defaultText-fontWeight: 400;
   --gse-ui-calendarMenu-date-defaultText-fontSize: 12px;
   --gse-ui-calendarMenu-date-defaultText-lineHeight: 18px;
-  --gse-ui-calendarMenu-date-currentText-fontFamily: "Noto Sans";
+  --gse-ui-calendarMenu-date-currentText-fontFamily: 'Noto Sans';
   --gse-ui-calendarMenu-date-currentText-fontWeight: 700;
   --gse-ui-calendarMenu-date-currentText-fontSize: 12px;
   --gse-ui-calendarMenu-date-currentText-lineHeight: 18px;
@@ -678,7 +678,7 @@
   --gse-ui-datePicker-focusCalendar-gap: 2px;
   --gse-ui-datePicker-iconHover: #3742a2;
   --gse-ui-datePicker-iconFocus: #3742a2;
-  --gse-ui-toggle-label-fontFamily: "Noto Sans";
+  --gse-ui-toggle-label-fontFamily: 'Noto Sans';
   --gse-ui-toggle-label-fontWeight: 400;
   --gse-ui-toggle-label-fontSize: 12px;
   --gse-ui-toggle-label-lineHeight: 18px;
@@ -738,7 +738,7 @@
   --gse-ui-timePicker-ampm-padding: 2px;
   --gse-ui-colorPicker-label-requiredSymbolColor: #e22245;
   --gse-ui-colorPicker-label-textColor: #1b2c48;
-  --gse-ui-colorPicker-label-text-fontFamily: "Noto Sans";
+  --gse-ui-colorPicker-label-text-fontFamily: 'Noto Sans';
   --gse-ui-colorPicker-label-text-fontWeight: 400;
   --gse-ui-colorPicker-label-text-fontSize: 12px;
   --gse-ui-colorPicker-label-text-lineHeight: 18px;
@@ -759,7 +759,7 @@
   --gse-ui-slider-handle-disabled-backgroundColor: #4856cb;
   --gse-ui-slider-handle-borderRadius: 100%;
   --gse-ui-slider-disabled-opacity: 0.5;
-  --gse-ui-slider-label-text-fontFamily: "Noto Sans";
+  --gse-ui-slider-label-text-fontFamily: 'Noto Sans';
   --gse-ui-slider-label-text-fontWeight: 600;
   --gse-ui-slider-label-text-fontSize: 14px;
   --gse-ui-slider-label-text-lineHeight: 20px;
@@ -842,7 +842,7 @@
   --gse-ui-selectorCard-descriptive-label-fontWeight: 700;
   --gse-ui-selectorCard-descriptive-label-fontSize: 16px;
   --gse-ui-selectorCard-descriptive-label-lineHeight: 24px;
-  --gse-ui-selectorCard-descriptive-description-fontFamily: "Noto Sans";
+  --gse-ui-selectorCard-descriptive-description-fontFamily: 'Noto Sans';
   --gse-ui-selectorCard-descriptive-description-fontWeight: 400;
   --gse-ui-selectorCard-descriptive-description-fontSize: 12px;
   --gse-ui-selectorCard-descriptive-description-lineHeight: 18px;
@@ -863,7 +863,7 @@
   --gse-ui-search-counter-divider-border-width: 1px;
   --gse-ui-search-counter-divider-border-style: solid;
   --gse-ui-search-counter-divider-foregroundColor: #a3a7b0;
-  --gse-ui-search-counter-text-fontFamily: "Noto Sans";
+  --gse-ui-search-counter-text-fontFamily: 'Noto Sans';
   --gse-ui-search-counter-text-fontWeight: 400;
   --gse-ui-search-counter-text-fontSize: 12px;
   --gse-ui-search-counter-text-lineHeight: 18px;
@@ -876,7 +876,7 @@
   --gse-ui-search-match-subsequentLevel-foregroundColour: #1b2c48;
   --gse-ui-search-match-subsequentLevel-backgroundColor: #daf0f4;
   --gse-ui-simpleFilter-gap: 16px;
-  --gse-ui-dataTableItems-header-text-fontFamily: "Noto Sans";
+  --gse-ui-dataTableItems-header-text-fontFamily: 'Noto Sans';
   --gse-ui-dataTableItems-header-text-fontWeight: 700;
   --gse-ui-dataTableItems-header-text-fontSize: 12px;
   --gse-ui-dataTableItems-header-text-lineHeight: 18px;
@@ -926,7 +926,7 @@
   --gse-ui-dataTableItems-cell-padding: 0 12px;
   --gse-ui-dataTableItems-cell-gap: 8px;
   --gse-ui-dataTableItems-cell-icon-foregroundColor: #1b2c48;
-  --gse-ui-dataTableItems-cell-text-fontFamily: "Noto Sans";
+  --gse-ui-dataTableItems-cell-text-fontFamily: 'Noto Sans';
   --gse-ui-dataTableItems-cell-text-fontWeight: 400;
   --gse-ui-dataTableItems-cell-text-fontSize: 12px;
   --gse-ui-dataTableItems-cell-text-lineHeight: 18px;
@@ -952,11 +952,11 @@
   --gse-ui-dataTableItems-tablePagination-divider-color: #c6c8ce;
   --gse-ui-dataTableItems-tablePagination-divider-width: 1px;
   --gse-ui-dataTableItems-tablePagination-divider-style: solid;
-  --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily: "Noto Sans";
+  --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-dataTableItems-tablePagination-defaultText-fontWeight: 400;
   --gse-ui-dataTableItems-tablePagination-defaultText-fontSize: 12px;
   --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight: 18px;
-  --gse-ui-dataTableItems-tablePagination-currentResultText-fontFamily: "Noto Sans";
+  --gse-ui-dataTableItems-tablePagination-currentResultText-fontFamily: 'Noto Sans';
   --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight: 700;
   --gse-ui-dataTableItems-tablePagination-currentResultText-fontSize: 12px;
   --gse-ui-dataTableItems-tablePagination-currentResultText-lineHeight: 18px;
@@ -974,12 +974,36 @@
   --gse-ui-avatar-large-initials-lineHeight: 1;
   --gse-ui-avatar-large-presenceRing-width: 4px;
   --gse-ui-avatar-large-ucIntegration-size: 32px;
-  --gse-ui-avatar-presenceRing-available: linear-gradient(135deg, #09b581 0%, #9de1cd 100%);
-  --gse-ui-avatar-presenceRing-busy: linear-gradient(135deg, #e22245 0%, #f3a7b5 100%);
-  --gse-ui-avatar-presenceRing-away: linear-gradient(135deg, #f8c73e 0%, #fce9b2 100%);
-  --gse-ui-avatar-presenceRing-onQueue: linear-gradient(135deg, #4856cb 0%, #9ca6f9 100%);
-  --gse-ui-avatar-presenceRing-offline: linear-gradient(135deg, #767c8d 0%, #a3a7b0 100%);
-  --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(135deg, #b74ba4 0%, #f5bfeb 100%);
+  --gse-ui-avatar-presenceRing-available: linear-gradient(
+    135deg,
+    #09b581 0%,
+    #9de1cd 100%
+  );
+  --gse-ui-avatar-presenceRing-busy: linear-gradient(
+    135deg,
+    #e22245 0%,
+    #f3a7b5 100%
+  );
+  --gse-ui-avatar-presenceRing-away: linear-gradient(
+    135deg,
+    #f8c73e 0%,
+    #fce9b2 100%
+  );
+  --gse-ui-avatar-presenceRing-onQueue: linear-gradient(
+    135deg,
+    #4856cb 0%,
+    #9ca6f9 100%
+  );
+  --gse-ui-avatar-presenceRing-offline: linear-gradient(
+    135deg,
+    #767c8d 0%,
+    #a3a7b0 100%
+  );
+  --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(
+    135deg,
+    #b74ba4 0%,
+    #f5bfeb 100%
+  );
   --gse-ui-avatar-medium-size: 48px;
   --gse-ui-avatar-medium-badge-size: 16px;
   --gse-ui-avatar-medium-focusRing-size: 50px;
@@ -1066,7 +1090,11 @@
   --gse-ui-avatar-focus: #7b88f7;
   --gse-ui-avatar-addChangeImage-hoverModal-shroudSize: 84px;
   --gse-ui-avatar-addChangeImage-icon-size: 16px;
-  --gse-ui-globalNav-sideMenu: linear-gradient(135deg, #09b581 0%, #9de1cd 100%);
+  --gse-ui-globalNav-sideMenu: linear-gradient(
+    135deg,
+    #09b581 0%,
+    #9de1cd 100%
+  );
   --gse-ui-globalNav-text-fontFamily: Roboto;
   --gse-ui-globalNav-text-lineHeight: 16px;
   --gse-ui-globalNav-text-fontSize: 12px;
@@ -1129,8 +1157,16 @@
   --gse-ui-globalNav-topBar-menuButton-open-hover-backgroundColor: #3742a2;
   --gse-ui-globalNav-topBar-menuButton-open-hover-foregroundColor: #ffffff;
   --gse-ui-globalNav-panel-panelTitle: #ffffff;
-  --gse-ui-globalNav-panel-primary: linear-gradient(127deg, #23395d 3.19%, #3e5374 225.06%);
-  --gse-ui-globalNav-panel-secondary: linear-gradient(358deg, #1b2b48 0.16%, #23395d 98.45%);
+  --gse-ui-globalNav-panel-primary: linear-gradient(
+    127deg,
+    #23395d 3.19%,
+    #3e5374 225.06%
+  );
+  --gse-ui-globalNav-panel-secondary: linear-gradient(
+    358deg,
+    #1b2b48 0.16%,
+    #23395d 98.45%
+  );
   --gse-ui-dataTableComposed-boxShadow-blur: 4px;
   --gse-ui-dataTableComposed-boxShadow-spread: 1px;
   --gse-ui-dataTableComposed-boxShadow-color: rgba(35, 57, 92, 0.1);
@@ -1145,7 +1181,7 @@
   --gse-ui-tabs-item-horizontal-fixedHeight: 40px;
   --gse-ui-tabs-item-horizontal-padding: 11px 12px 10px;
   --gse-ui-tabs-item-disableOpacity: 0.5;
-  --gse-ui-tabs-item-itemText-fontFamily: "Noto Sans";
+  --gse-ui-tabs-item-itemText-fontFamily: 'Noto Sans';
   --gse-ui-tabs-item-itemText-fontWeight: 400;
   --gse-ui-tabs-item-itemText-fontSize: 12px;
   --gse-ui-tabs-item-itemText-lineHeight: 18px;
@@ -1209,7 +1245,7 @@
   --gse-ui-advancedTabs-item-menuButton-activeColor: #1b2c48;
   --gse-ui-advancedTabs-item-menuButton-focus-height: 53px;
   --gse-ui-advancedTabs-item-menuButton-focus-width: 40px;
-  --gse-ui-advancedTabs-item-itemText-fontFamily: "Noto Sans";
+  --gse-ui-advancedTabs-item-itemText-fontFamily: 'Noto Sans';
   --gse-ui-advancedTabs-item-itemText-fontWeight: 400;
   --gse-ui-advancedTabs-item-itemText-fontSize: 12px;
   --gse-ui-advancedTabs-item-itemText-lineHeight: 18px;
@@ -1237,7 +1273,7 @@
   --gse-ui-toast-heading-fontWeight: 700;
   --gse-ui-toast-heading-fontSize: 16px;
   --gse-ui-toast-heading-lineHeight: 24px;
-  --gse-ui-toast-text-fontFamily: "Noto Sans";
+  --gse-ui-toast-text-fontFamily: 'Noto Sans';
   --gse-ui-toast-text-fontWeight: 400;
   --gse-ui-toast-text-fontSize: 14px;
   --gse-ui-toast-text-lineHeight: 20px;
@@ -1297,7 +1333,7 @@
   --gse-ui-popover-buttonsBar-gap: 8px;
   --gse-ui-popover-header-gap: 4px;
   --gse-ui-popover-spacer-height: 16px;
-  --gse-ui-popover-body-text-fontFamily: "Noto Sans";
+  --gse-ui-popover-body-text-fontFamily: 'Noto Sans';
   --gse-ui-popover-body-text-fontWeight: 400;
   --gse-ui-popover-body-text-fontSize: 14px;
   --gse-ui-popover-body-text-lineHeight: 20px;
@@ -1311,7 +1347,7 @@
   --gse-ui-progressAndLoading-spinner-base: #dee1fd;
   --gse-ui-progressAndLoading-spinner-large: 48px;
   --gse-ui-progressAndLoading-spinner-small: 16px;
-  --gse-ui-progressAndLoading-spinner-text-fontFamily: "Noto Sans";
+  --gse-ui-progressAndLoading-spinner-text-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-spinner-text-fontWeight: 600;
   --gse-ui-progressAndLoading-spinner-text-fontSize: 12px;
   --gse-ui-progressAndLoading-spinner-text-lineHeight: 18px;
@@ -1320,7 +1356,7 @@
   --gse-ui-progressAndLoading-loadingState-large-header-fontWeight: 700;
   --gse-ui-progressAndLoading-loadingState-large-header-fontSize: 24px;
   --gse-ui-progressAndLoading-loadingState-large-header-lineHeight: 32px;
-  --gse-ui-progressAndLoading-loadingState-large-subheader-fontFamily: "Noto Sans";
+  --gse-ui-progressAndLoading-loadingState-large-subheader-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-loadingState-large-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-loadingState-large-subheader-fontSize: 16px;
   --gse-ui-progressAndLoading-loadingState-large-subheader-lineHeight: 24px;
@@ -1329,7 +1365,7 @@
   --gse-ui-progressAndLoading-loadingState-medium-header-fontWeight: 700;
   --gse-ui-progressAndLoading-loadingState-medium-header-fontSize: 18px;
   --gse-ui-progressAndLoading-loadingState-medium-header-lineHeight: 27px;
-  --gse-ui-progressAndLoading-loadingState-medium-subheader-fontFamily: "Noto Sans";
+  --gse-ui-progressAndLoading-loadingState-medium-subheader-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-loadingState-medium-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-loadingState-medium-subheader-fontSize: 14px;
   --gse-ui-progressAndLoading-loadingState-medium-subheader-lineHeight: 20px;
@@ -1338,7 +1374,7 @@
   --gse-ui-progressAndLoading-loadingState-small-header-fontWeight: 700;
   --gse-ui-progressAndLoading-loadingState-small-header-fontSize: 16px;
   --gse-ui-progressAndLoading-loadingState-small-header-lineHeight: 24px;
-  --gse-ui-progressAndLoading-loadingState-small-subheader-fontFamily: "Noto Sans";
+  --gse-ui-progressAndLoading-loadingState-small-subheader-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-loadingState-small-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-loadingState-small-subheader-fontSize: 12px;
   --gse-ui-progressAndLoading-loadingState-small-subheader-lineHeight: 18px;
@@ -1354,7 +1390,7 @@
   --gse-ui-progressAndLoading-blankState-large-header-fontWeight: 700;
   --gse-ui-progressAndLoading-blankState-large-header-fontSize: 18px;
   --gse-ui-progressAndLoading-blankState-large-header-lineHeight: 27px;
-  --gse-ui-progressAndLoading-blankState-large-subheader-fontFamily: "Noto Sans";
+  --gse-ui-progressAndLoading-blankState-large-subheader-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-blankState-large-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-blankState-large-subheader-fontSize: 14px;
   --gse-ui-progressAndLoading-blankState-large-subheader-lineHeight: 20px;
@@ -1362,7 +1398,7 @@
   --gse-ui-progressAndLoading-blankState-small-header-fontWeight: 700;
   --gse-ui-progressAndLoading-blankState-small-header-fontSize: 14px;
   --gse-ui-progressAndLoading-blankState-small-header-lineHeight: 24px;
-  --gse-ui-progressAndLoading-blankState-small-subheader-fontFamily: "Noto Sans";
+  --gse-ui-progressAndLoading-blankState-small-subheader-fontFamily: 'Noto Sans';
   --gse-ui-progressAndLoading-blankState-small-subheader-fontWeight: 600;
   --gse-ui-progressAndLoading-blankState-small-subheader-fontSize: 12px;
   --gse-ui-progressAndLoading-blankState-small-subheader-lineHeight: 18px;
@@ -1391,7 +1427,7 @@
   --gse-ui-modalSideSheet-heading-fontWeight: 600;
   --gse-ui-modalSideSheet-heading-fontSize: 18px;
   --gse-ui-modalSideSheet-heading-lineHeight: 27px;
-  --gse-ui-modalSideSheet-description-fontFamily: "Noto Sans";
+  --gse-ui-modalSideSheet-description-fontFamily: 'Noto Sans';
   --gse-ui-modalSideSheet-description-fontWeight: 400;
   --gse-ui-modalSideSheet-description-fontSize: 12px;
   --gse-ui-modalSideSheet-description-lineHeight: 18px;
@@ -1422,7 +1458,7 @@
   --gse-ui-dynamicSideSheet-heading-fontWeight: 600;
   --gse-ui-dynamicSideSheet-heading-fontSize: 18px;
   --gse-ui-dynamicSideSheet-heading-lineHeight: 27px;
-  --gse-ui-dynamicSideSheet-description-fontFamily: "Noto Sans";
+  --gse-ui-dynamicSideSheet-description-fontFamily: 'Noto Sans';
   --gse-ui-dynamicSideSheet-description-fontWeight: 400;
   --gse-ui-dynamicSideSheet-description-fontSize: 12px;
   --gse-ui-dynamicSideSheet-description-lineHeight: 18px;
@@ -1445,7 +1481,7 @@
   --gse-ui-accordion-header-default-foreground-chevronIcon-closed: #3e5374;
   --gse-ui-accordion-header-default-foreground-chevronIcon-open: #1b2c48;
   --gse-ui-accordion-header-default-foreground-chevronIcon-hover: #23395d;
-  --gse-ui-accordion-header-label-defaultText-fontFamily: "Noto Sans";
+  --gse-ui-accordion-header-label-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-accordion-header-label-defaultText-fontWeight: 700;
   --gse-ui-accordion-header-label-defaultText-fontSize: 14px;
   --gse-ui-accordion-header-label-defaultText-lineHeight: 20px;
@@ -1470,15 +1506,15 @@
   --gse-ui-accordion-menuItem-selected-foreground-parentIconColor: #1b2c48;
   --gse-ui-accordion-menuItem-selected-backgroundColor: #ced2fc;
   --gse-ui-accordion-menuItem-focus-borderRadius: 4px;
-  --gse-ui-accordion-menuItem-label-defaultText-fontFamily: "Noto Sans";
+  --gse-ui-accordion-menuItem-label-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-accordion-menuItem-label-defaultText-fontWeight: 400;
   --gse-ui-accordion-menuItem-label-defaultText-fontSize: 12px;
   --gse-ui-accordion-menuItem-label-defaultText-lineHeight: 18px;
-  --gse-ui-accordion-menuItem-label-selectedText-fontFamily: "Noto Sans";
+  --gse-ui-accordion-menuItem-label-selectedText-fontFamily: 'Noto Sans';
   --gse-ui-accordion-menuItem-label-selectedText-fontWeight: 600;
   --gse-ui-accordion-menuItem-label-selectedText-fontSize: 12px;
   --gse-ui-accordion-menuItem-label-selectedText-lineHeight: 18px;
-  --gse-ui-accordion-menuItem-shortcut-text-fontFamily: "Noto Sans";
+  --gse-ui-accordion-menuItem-shortcut-text-fontFamily: 'Noto Sans';
   --gse-ui-accordion-menuItem-shortcut-text-fontWeight: 400;
   --gse-ui-accordion-menuItem-shortcut-text-fontSize: 14px;
   --gse-ui-accordion-menuItem-shortcut-text-lineHeight: 20px;
@@ -1489,7 +1525,7 @@
   --gse-ui-accordion-contentItem-gap: 16px;
   --gse-ui-accordion-contentItem-foregroundColor: #1b2c48;
   --gse-ui-accordion-contentItem-backgroundColor: #ffffff;
-  --gse-ui-accordion-contentItem-defaultText-fontFamily: "Noto Sans";
+  --gse-ui-accordion-contentItem-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-accordion-contentItem-defaultText-fontWeight: 400;
   --gse-ui-accordion-contentItem-defaultText-fontSize: 12px;
   --gse-ui-accordion-contentItem-defaultText-lineHeight: 18px;

@@ -330,8 +330,6 @@
   "--gse-ui-badge-warning-bold-foregroundColor",
   "--gse-ui-badge-warning-regular-backgroundColor",
   "--gse-ui-badge-warning-regular-foregroundColor",
-  "--gse-ui-blankState-backgroundColor",
-  "--gse-ui-blankState-borderRadius",
   "--gse-ui-blankState-foregroundColor",
   "--gse-ui-blankState-gapContent",
   "--gse-ui-blankState-gapMain",
