@@ -8,6 +8,15 @@ gux-table {
     white-space: nowrap;
     border-spacing: 0;
 
+    td,
+    th {
+      text-align: left;
+      border-color: var(--gse-ui-dataTableItems-divider-color);
+      border-style: var(--gse-ui-dataTableItems-divider-style);
+      border-width: 0 var(--gse-ui-dataTableItems-divider-width)
+        var(--gse-ui-dataTableItems-divider-width) 0;
+    }
+
     td {
       height: var(--gse-ui-dataTableItems-cell-default-height);
       padding: var(--gse-ui-dataTableItems-cell-padding);
@@ -36,19 +45,17 @@ gux-table {
       line-height: var(--gse-ui-dataTableItems-header-text-lineHeight);
       color: var(--gse-ui-dataTableItems-header-foregroundColor);
       background: var(--gse-ui-dataTableItems-header-defaultBackgroundColor);
+      border-style: var(--gse-ui-dataTableItems-divider-style);
+      border-bottom-color: var(
+        --gse-ui-dataTableItems-header-selectedIndicatorColor
+      );
+      border-bottom-width: var(
+        --gse-ui-dataTableItems-header-selectedBar-height
+      );
 
       &:has(gux-all-row-select) {
         width: var(--gse-ui-dataTableItems-header-multiselect-default-width);
       }
-    }
-
-    th,
-    td {
-      text-align: left;
-      border-color: var(--gse-ui-dataTableItems-divider-color);
-      border-style: var(--gse-ui-dataTableItems-divider-style);
-      border-width: 0 var(--gse-ui-dataTableItems-divider-width)
-        var(--gse-ui-dataTableItems-divider-width) 0;
     }
 
     th[data-cell-numeric],
