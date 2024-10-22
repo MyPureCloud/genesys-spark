@@ -183,6 +183,11 @@
           "type": "color",
           "description": "The default background color for smaller error elements like badges that need a slightly more saturated color that tonal_subtle because of their size."
         },
+        "tonal_high": {
+          "value": "{theme.background.system.error.30}",
+          "type": "color",
+          "description": "The default background color for bold error elements like bold badges."
+        },
         "tonal_subtle": {
           "value": "{theme.background.system.error.5}",
           "type": "color",
@@ -194,6 +199,11 @@
           "value": "{theme.background.system.warning.10}",
           "type": "color",
           "description": "The default background color for smaller warning elements like badges that need a slightly more saturated color that tonal_subtle because of their size."
+        },
+        "tonal_high": {
+          "value": "{theme.background.system.warning.30}",
+          "type": "color",
+          "description": "The default background color for bold warning elements like bold badges."
         },
         "tonal_subtle": {
           "value": "{theme.background.system.warning.5}",
@@ -207,6 +217,11 @@
           "type": "color",
           "description": "The default background color for smaller success elements like badges that need a slightly more saturated color that tonal_subtle because of their size."
         },
+        "tonal_high": {
+          "value": "{theme.background.system.success.30}",
+          "type": "color",
+          "description": "The default background color for bold success elements like bold badges."
+        },
         "tonal_subtle": {
           "value": "{theme.background.system.success.5}",
           "type": "color",
@@ -219,6 +234,11 @@
           "type": "color",
           "description": "The default background color for smaller info elements like badges that need a slightly more saturated color that tonal_subtle because of their size."
         },
+        "tonal_high": {
+          "value": "{theme.background.system.info.30}",
+          "type": "color",
+          "description": "The default background color for bold info elements like bold badges."
+        },
         "tonal_subtle": {
           "value": "{theme.background.system.info.5}",
           "type": "color",
@@ -230,6 +250,11 @@
           "value": "{theme.background.system.primary.10}",
           "type": "color",
           "description": "Although this tokens has the same value as tonal_subtle, it is needed to match the structure of the other statuses."
+        },
+        "tonal_high": {
+          "value": "{theme.background.system.primary.30}",
+          "type": "color",
+          "description": "Although this tokens has no current use, it is needed to match the structure of the other statuses."
         },
         "tonal_subtle": {
           "value": "{theme.background.system.primary.10}",

@@ -76,7 +76,8 @@
           "5": "#eefcea",
           "10": "#eefcea",
           "20": "#95c189",
-          "30": "#3c8527",
+          "30": "#95c189",
+          "35": "#3c8527",
           "40": "#205a10",
           "50": "#0d3d00"
         },
@@ -131,10 +132,10 @@
           "10": "#09b581",
           "20": "#e22245",
           "30": "#f8c73e",
-          "40": "#4856cb",
-          "50": "#626e84",
+          "40": "#2143a2",
+          "50": "#848891",
           "60": "#b74ba4",
-          "70": "#fe624d"
+          "70": "#ff451a"
         }
       }
     },
@@ -348,22 +349,27 @@
     "system": {
       "error": {
         "tonal_medium": "#fceaea",
+        "tonal_high": "#ea0b0b",
         "tonal_subtle": "#fceaea"
       },
       "warning": {
         "tonal_medium": "#fdf8ec",
+        "tonal_high": "#ffae00",
         "tonal_subtle": "#fdf8ec"
       },
       "success": {
         "tonal_medium": "#eefcea",
+        "tonal_high": "#95c189",
         "tonal_subtle": "#eefcea"
       },
       "info": {
         "tonal_medium": "#deeaff",
+        "tonal_high": "#2a60c8",
         "tonal_subtle": "#deeaff"
       },
       "primary": {
         "tonal_medium": "#deeaff",
+        "tonal_high": "#2a60c8",
         "tonal_subtle": "#deeaff"
       },
       "custom_accents": {
@@ -405,10 +411,10 @@
         "available": "#09b581",
         "busy": "#e22245",
         "away": "#f8c73e",
-        "on_queue": "#4856cb",
-        "offline": "#626e84",
+        "on_queue": "#2143a2",
+        "offline": "#848891",
         "out_of_office": "#b74ba4",
-        "notification": "#fe624d"
+        "notification": "#ff451a"
       }
     },
     "form_control": {
