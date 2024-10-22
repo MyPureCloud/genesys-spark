@@ -1,9 +1,4 @@
-// --gse-ui-avatar-media-initialsBackground-add: #ced2fc;
-// --gse-ui-avatar-media-initialsForeground-default: #1b2c48;
-// --gse-ui-avatar-media-initialsForeground-inverse: #ffffff;
-// --gse-ui-avatar-media-initialsForeground-add: #4856cb;
-
-::slotted(gux-avatar-focusable-beta) {
+gux-avatar-focusable-beta {
   margin-inline-end: calc(-4px + var(--gse-ui-avatar-groupShapes-gap));
 }
 
@@ -37,7 +32,7 @@ button {
   width: 100%;
 }
 
-::slotted(gux-avatar-focusable-beta.gux-hide),
+gux-avatar-focusable-beta.gux-hide,
 .gux-overflow-hide {
   display: none;
 }
