@@ -3,7 +3,7 @@ import globals from 'globals';
 
 export default [
   {
-    ignores: ['dist/', 'dist-new/', 'node_modules/']
+    ignores: ['dist/', 'node_modules/']
   },
   {
     languageOptions: {

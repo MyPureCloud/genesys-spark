@@ -1,7 +1,7 @@
-@use '../../../../genesys-spark-tokens/dist-new/scss/gse-flare-dark-core';
-@use '../../../../genesys-spark-tokens/dist-new/scss/gse-flare-dark-semantic';
-@use '../../../../genesys-spark-tokens/dist-new/scss/gse-flare-light-core';
-@use '../../../../genesys-spark-tokens/dist-new/scss/gse-flare-light-semantic';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-dark-core';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-dark-semantic';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-light-core';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-light-semantic';
 
 :root {
   @include gse-flare-light-core.tokens;

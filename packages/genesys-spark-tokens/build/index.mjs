@@ -1,26 +1,12 @@
-import {
-  cleanOldOutputFolder,
-  createThemes,
-  formatOutputFolder,
-  getAllTokenStudioFiles,
-  processTokenFile
-} from '../utils/index.mjs';
+import { cleanOldOutputFolder } from '../utils/clean-old-output-folder.mjs';
+import { createThemes } from '../utils/create-themes.mjs';
+import { formatOutputFolder } from '../utils/format-output-folder.mjs';
 
 const outputFolder = process.argv[2] || 'dist';
 
 cleanOldOutputFolder(outputFolder);
-cleanOldOutputFolder(`${outputFolder}-new`);
 
-// Token Generation
-const tokenStudioFiles = getAllTokenStudioFiles('data-old');
-
-for (const tokenStudioFile of tokenStudioFiles) {
-  await processTokenFile(outputFolder, tokenStudioFile);
-}
-
-// Theme Generation
-await createThemes('data', `${outputFolder}-new`);
+await createThemes('data', outputFolder);
 
 // Formatting
 formatOutputFolder(outputFolder);
-formatOutputFolder(`${outputFolder}-new`);
