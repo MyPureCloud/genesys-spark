@@ -7,7 +7,6 @@
       position="top"
       for="popover-target"
       is-open
-      display-dismiss-button
     >
       <span slot="title">Title</span>
       <div class="popover-content-wrapper">
@@ -31,7 +30,7 @@
 <style>
   .scroll-container {
     width: 900px;
-    height: 300px;
+    height: 400px;
     margin: auto;
     overflow: scroll;
     border: 1px solid #aaa;
@@ -59,6 +58,7 @@
 
   #popover-target {
     position: absolute;
+    top: 250px;
     left: 250px;
     display: inline-block;
     padding: 10px 15px;
