@@ -1,0 +1,35 @@
+/* This is necessary to override the position of the popover on the page. By default, an HTML popover will
+   render in the middle of the screen, which we do not want */
+:popover-open {
+  position: absolute;
+  inset: unset;
+}
+
+.gux-popover-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--gse-semantic-zIndex-popover);
+  display: inline-block;
+  padding: 8px 0; // TODO: COMUI-2257 - add missing token
+  background-color: var(--gse-ui-popover-backgroundColor);
+  border-radius: var(--gse-ui-popover-borderRadius);
+  box-shadow: var(
+      --gse-ui-popover-boxShadow-x,
+      var(--gse-ui-popover-boxShadow-offsetX)
+    )
+    var(--gse-ui-popover-boxShadow-y, var(--gse-ui-popover-boxShadow-offsetY))
+    var(--gse-ui-popover-boxShadow-blur) var(--gse-ui-popover-boxShadow-spread)
+    var(--gse-ui-tooltip-boxShadow-color);
+
+  &.gux-hidden {
+    display: none;
+  }
+
+  .gux-arrow {
+    position: absolute;
+    width: var(--gse-ui-popover-anchor-width);
+    height: var(--gse-ui-popover-anchor-width);
+    background: var(--gse-ui-popover-backgroundColor);
+  }
+}
