@@ -1499,7 +1499,7 @@
         "type": "spacing"
       },
       "border_radius": {
-        "value": "{theme.border_radius.container.medium}",
+        "value": "{theme.border_radius.container.small}",
         "type": "borderRadius"
       },
       "label": {
@@ -1545,7 +1545,7 @@
         }
       },
       "border_radius": {
-        "value": "{card.border_radius}",
+        "value": "{theme.border_radius.container.small}",
         "type": "borderRadius"
       },
       "label": {

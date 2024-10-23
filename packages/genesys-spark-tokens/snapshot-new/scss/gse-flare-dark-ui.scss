@@ -803,7 +803,7 @@
   --gse-ui-selectorCard-simple-maxHeight: 116px;
   --gse-ui-selectorCard-simple-padding: 12px;
   --gse-ui-selectorCard-simple-gap: 8px;
-  --gse-ui-selectorCard-simple-borderRadius: 8px;
+  --gse-ui-selectorCard-simple-borderRadius: 4px;
   --gse-ui-selectorCard-simple-label-fontFamily: Urbanist;
   --gse-ui-selectorCard-simple-label-fontWeight: 700;
   --gse-ui-selectorCard-simple-label-fontSize: 14px;
@@ -816,7 +816,7 @@
   --gse-ui-selectorCard-descriptive-gap: 8px;
   --gse-ui-selectorCard-descriptive-text-gap: 4px;
   --gse-ui-selectorCard-descriptive-badge-marginTop: 8px;
-  --gse-ui-selectorCard-descriptive-borderRadius: 8px;
+  --gse-ui-selectorCard-descriptive-borderRadius: 4px;
   --gse-ui-selectorCard-descriptive-label-fontFamily: Urbanist;
   --gse-ui-selectorCard-descriptive-label-fontWeight: 700;
   --gse-ui-selectorCard-descriptive-label-fontSize: 16px;
@@ -1261,7 +1261,7 @@
   --gse-ui-toast-gapText: 4px;
   --gse-ui-toast-gapButton: 16px;
   --gse-ui-toast-buttonBar-gap: 8px;
-  --gse-ui-toast-borderRadius: 8px;
+  --gse-ui-toast-borderRadius: 4px;
   --gse-ui-toast-boxShadow-blur: 4px;
   --gse-ui-toast-boxShadow-spread: 1px;
   --gse-ui-toast-boxShadow-color: rgba(35, 57, 92, 0.1);
@@ -1293,11 +1293,11 @@
   --gse-ui-modal-boxShadow-type: dropShadow;
   --gse-ui-modal-boxShadow-offsetX: 0;
   --gse-ui-modal-boxShadow-offsetY: 0;
-  --gse-ui-modal-borderRadius: 16px;
+  --gse-ui-modal-borderRadius: 8px;
   --gse-ui-modal-shroud-opacity: 0.8;
   --gse-ui-modal-dismissButton-paddingTop: 16px;
   --gse-ui-modal-dismissButton-paddingRight: 8px;
-  --gse-ui-popover-borderRadius: 8px;
+  --gse-ui-popover-borderRadius: 4px;
   --gse-ui-popover-boxShadow-blur: 8px;
   --gse-ui-popover-boxShadow-spread: 1px;
   --gse-ui-popover-boxShadow-color: rgba(35, 57, 92, 0.15);
