@@ -105,7 +105,7 @@
       }
     },
     "border_radius": {
-      "value": "{container.md.border_radius}",
+      "value": "{theme.border_radius.container.small}",
       "type": "borderRadius"
     },
     "box_shadow": {
@@ -195,7 +195,7 @@
       "type": "boxShadow"
     },
     "border_radius": {
-      "value": "{theme.border_radius.container.large}",
+      "value": "{theme.border_radius.container.medium}",
       "type": "borderRadius"
     },
     "shroud": {
@@ -217,7 +217,7 @@
   },
   "popover": {
     "border_radius": {
-      "value": "{container.md.border_radius}",
+      "value": "{theme.border_radius.container.small}",
       "type": "borderRadius"
     },
     "box_shadow": {
