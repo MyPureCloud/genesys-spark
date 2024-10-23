@@ -28,12 +28,6 @@
     cursor: default;
     user-select: none;
     opacity: 0.5;
-
-    .tiptap {
-      p {
-        user-select: none;
-      }
-    }
   }
 
   &:focus-within:not(.gux-disabled),

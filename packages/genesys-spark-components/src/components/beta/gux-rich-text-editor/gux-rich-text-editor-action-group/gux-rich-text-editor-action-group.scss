@@ -5,7 +5,7 @@
 
 :host([slot='global-actions']) {
   ::slotted(gux-rich-text-editor-action:last-child) {
-    margin-left: 20px; //Need to confirm with UX.
+    margin-left: 20px;
   }
 }
 
