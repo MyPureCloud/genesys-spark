@@ -236,7 +236,7 @@
           "10": "#829ce5"
         },
         "info": {
-          "10": "#c5bef1"
+          "10": "#bfc6d9"
         },
         "success": {
           "10": "#9de1cd"
@@ -559,7 +559,7 @@
       }
     },
     "system": {
-      "info": "#c5bef1",
+      "info": "#bfc6d9",
       "warning": "#fce9b2",
       "success": "#9de1cd",
       "error": "#f3a7b5",
