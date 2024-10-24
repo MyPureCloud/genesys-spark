@@ -179,7 +179,8 @@ export class GuxPopover {
           offset(7),
           flip({
             boundary:
-              document.querySelector('.scroll-container') || 'clippingAncestors'
+              // document.querySelector('.scroll-container') || 'clippingAncestors'
+              forElement.parentElement.parentElement || 'clippingAncestors'
           }),
           shift(),
           arrow({
