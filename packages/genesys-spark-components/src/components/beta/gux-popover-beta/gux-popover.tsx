@@ -17,8 +17,7 @@ import {
   flip,
   offset,
   Placement,
-  shift,
-  hide
+  shift
 } from '@floating-ui/dom';
 
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
@@ -177,9 +176,11 @@ export class GuxPopover {
       void computePosition(forElement, this.popupElement, {
         placement: this.position,
         middleware: [
-          hide(),
           offset(7),
-          flip(),
+          flip({
+            boundary:
+              document.querySelector('.scroll-container') || 'clippingAncestors'
+          }),
           shift(),
           arrow({
             element: this.arrowElement,
@@ -229,14 +230,6 @@ export class GuxPopover {
             bottom: '',
             [staticSide]: `${-arrowLen}px`,
             transform: `rotate(${arrowRotation}deg)`
-          });
-        }
-
-        if (middlewareData.hide) {
-          Object.assign(this.popupElement.style, {
-            visibility: middlewareData.hide.referenceHidden
-              ? 'hidden'
-              : 'visible'
           });
         }
       });
