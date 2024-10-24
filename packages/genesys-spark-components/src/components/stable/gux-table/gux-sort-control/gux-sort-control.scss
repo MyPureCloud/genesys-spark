@@ -11,12 +11,6 @@
   border-bottom: var(--gse-ui-dataTableItems-header-selectedBar-height) solid
     transparent;
 
-  &:focus-within {
-    border-bottom-color: var(
-      --gse-ui-dataTableItems-header-selectedIndicatorColor
-    );
-  }
-
   .gux-sort-button {
     all: unset;
     flex: 1 1 auto;
