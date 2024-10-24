@@ -1,0 +1,38 @@
+gux-avatar-focusable-beta {
+  margin-inline-end: calc(-4px + var(--gse-ui-avatar-groupShapes-gap));
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  line-height: 0px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.gux-avatar-group-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding-block: 3px;
+  padding-inline: 3px;
+}
+
+.gux-avatar-group {
+  display: flex;
+  width: 100%;
+}
+
+.gux-overflow-list-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+gux-avatar-focusable-beta.gux-hide,
+.gux-overflow-hide {
+  display: none;
+}

@@ -24,4 +24,10 @@ gux-avatar-focusable-beta {
     border: none;
     border-radius: 50%;
   }
+
+  &[gs-grouped]:hover,
+  &[gs-grouped]:has(button:focus-visible),
+  &[gs-grouped]:has(a:focus-visible) {
+    z-index: var(--gse-semantic-zIndex-showFocus);
+  }
 }
