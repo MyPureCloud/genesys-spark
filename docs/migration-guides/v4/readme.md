@@ -4,6 +4,7 @@
 - [Tokenization & CSS Variables](#tokenization-css-variables)
   - [Z-index CSS Variable Overrides](#z-index-css-variable-overrides)
 - [Default styles for HTML elements / CSS reset](#default-styles-for-html-elements-css-reset)
+- [Legacy Theme](#legacy-theme)
 - [Component Stability Changes](#component-stability-changes)
   - [V3 Beta Components Promoted to Stable in V4](#v3-beta-components-promoted-to-stable-in-v4)
     - [Component tag rename only, no API changes:](#component-tag-rename-only-no-api-changes)
@@ -67,6 +68,19 @@ The default z-index values and CSS variable overrides for components have been c
 ## Default styles for HTML elements / CSS reset
 
 As part of the alignment with the Spark design system, the default styles for HTML elements have changed. While this is not necessarily a breaking change, layouts and spacing of elements may look different after upgrading to V4. Read more about the Spark V4 typography on the [Spark Design System documentation site](https://spark.genesys.com/latest/foundations/typography/design-DZPjXguV)
+
+## Legacy Theme
+
+After the release of v4 the UX team received feedback on how the style changes from v3 to v4 were too large of a change to introduce to customers without notice.
+We have created a Legacy Theme for v4 that should allow teams to work past this concern and introduce the style change in a controlled manner.
+The legacy theme decouples the component API migration and the Flare style migration. Teams can migrate from v3 to v4 with the legacy theme first to minimize visual change and them follow up with a migration from the legacy theme to the latest Flare theme.
+
+```diff
+import { registerSparkComponents } from 'genesys-spark';
+
+- registerSparkComponents();
++ registerSparkComponents({theme: 'legacy'});
+```
 
 ## Component Stability Changes
 
