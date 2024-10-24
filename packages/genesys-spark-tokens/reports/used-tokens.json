@@ -624,6 +624,7 @@
   "--gse-ui-formControl-input-hover-border-color",
   "--gse-ui-formControl-input-hover-border-style",
   "--gse-ui-formControl-input-hover-border-width",
+  "--gse-ui-formControl-input-inputClearable-inputClearableColor",
   "--gse-ui-formControl-input-inputIcon-defaultColor",
   "--gse-ui-formControl-input-inputIcon-iconEndColor",
   "--gse-ui-formControl-input-inputIcon-size",

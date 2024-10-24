@@ -3020,7 +3020,7 @@
     "code_block": {
       "background_color": "#f6f7f9",
       "border": {
-        "color": "#c6c8ce",
+        "color": "#9faac6",
         "width": "1px",
         "style": "solid"
       },
@@ -3050,7 +3050,7 @@
         }
       },
       "border_left": {
-        "color": "#a8b4e2",
+        "color": "#6a6d75",
         "width": "4px"
       }
     },
@@ -3108,7 +3108,7 @@
     },
     "color_swatch": {
       "tomato": {
-        "default": "#fe8f85"
+        "default": "#ff451a"
       },
       "coral": {
         "default": "#ffbec9"
@@ -3123,13 +3123,13 @@
         "default": "#f5bfeb"
       },
       "blueberry": {
-        "default": "#ced2fc"
+        "default": "#adbff0"
       },
       "mineral": {
         "default": "#bcd6f0"
       },
       "islandaqua": {
-        "default": "#b5e2e8"
+        "default": "#81cbe5"
       },
       "width": "20px",
       "height": "20px",

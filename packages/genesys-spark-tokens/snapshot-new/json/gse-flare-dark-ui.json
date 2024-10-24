@@ -3018,14 +3018,14 @@
   },
   "rte": {
     "code_block": {
-      "background_color": "#f3f5fb",
+      "background_color": "#ebedf5",
       "border": {
-        "color": "#c6c8ce",
+        "color": "#9faac6",
         "width": "1px",
         "style": "solid"
       },
       "padding": "12px 8px",
-      "foreground_color": "#3e5374",
+      "foreground_color": "#4f5157",
       "sm": {
         "regular": {
           "fontFamily": "'Noto Sans Mono'",
@@ -3040,7 +3040,7 @@
       "container": {
         "gap": "8px"
       },
-      "foreground_color": "#3e5374",
+      "foreground_color": "#4f5157",
       "md": {
         "regular": {
           "fontFamily": "'Noto Sans'",
@@ -3050,12 +3050,12 @@
         }
       },
       "border_left": {
-        "color": "#a8b4e2",
+        "color": "#6a6d75",
         "width": "4px"
       }
     },
     "heading_1": {
-      "foreground_color": "#3e5374",
+      "foreground_color": "#4f5157",
       "semi_bold": {
         "fontFamily": "Urbanist",
         "fontWeight": "600",
@@ -3064,7 +3064,7 @@
       }
     },
     "heading_2": {
-      "foreground_color": "#3e5374",
+      "foreground_color": "#4f5157",
       "semi_bold": {
         "fontFamily": "Urbanist",
         "fontWeight": "600",
@@ -3073,7 +3073,7 @@
       }
     },
     "heading_3": {
-      "foreground_color": "#3e5374",
+      "foreground_color": "#4f5157",
       "semi_bold": {
         "fontFamily": "Urbanist",
         "fontWeight": "600",
@@ -3082,7 +3082,7 @@
       }
     },
     "paragraph": {
-      "foreground_color": "#3e5374",
+      "foreground_color": "#4f5157",
       "md": {
         "regular": {
           "fontFamily": "'Noto Sans'",
@@ -3108,7 +3108,7 @@
     },
     "color_swatch": {
       "tomato": {
-        "default": "#fe8f85"
+        "default": "#ff451a"
       },
       "coral": {
         "default": "#ffbec9"
@@ -3123,18 +3123,18 @@
         "default": "#f5bfeb"
       },
       "blueberry": {
-        "default": "#ced2fc"
+        "default": "#adbff0"
       },
       "mineral": {
         "default": "#bcd6f0"
       },
       "islandaqua": {
-        "default": "#b5e2e8"
+        "default": "#81cbe5"
       },
       "width": "20px",
       "height": "20px",
       "focus_border": {
-        "color": "#7b88f7",
+        "color": "#5476d5",
         "width": "2px",
         "style": "solid"
       }
@@ -3144,7 +3144,7 @@
     },
     "toolbar": {
       "divider": {
-        "color": "#c6c8ce",
+        "color": "#c1c6d4",
         "padding": "0 4px"
       }
     }

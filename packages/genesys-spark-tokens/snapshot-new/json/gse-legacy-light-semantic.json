@@ -132,14 +132,14 @@
           "120": "#fff793"
         },
         "color_swatch": {
-          "10": "#fe8f85",
+          "10": "#ff451a",
           "20": "#ffbec9",
           "30": "#c6dd98",
           "40": "#ffd173",
           "50": "#f5bfeb",
-          "60": "#ced2fc",
+          "60": "#adbff0",
           "70": "#bcd6f0",
-          "80": "#b5e2e8"
+          "80": "#81cbe5"
         },
         "status": {
           "10": "#09b581",
@@ -273,7 +273,7 @@
           "10": "#2a60c8"
         },
         "emphasis": {
-          "default": "#a8b4e2"
+          "default": "#6a6d75"
         }
       }
     },
@@ -338,14 +338,14 @@
         "active": "#520404"
       },
       "custom": {
-        "tomato": "#fe8f85",
+        "tomato": "#ff451a",
         "coral": "#ffbec9",
         "pear": "#c6dd98",
         "mango": "#ffd173",
         "raspberry": "#f5bfeb",
-        "blueberry": "#ced2fc",
+        "blueberry": "#adbff0",
         "mineral": "#bcd6f0",
-        "islandaqua": "#b5e2e8"
+        "islandaqua": "#81cbe5"
       }
     },
     "overlay": {
@@ -576,7 +576,7 @@
         "data_table": {
           "default": "#e2e6ee"
         },
-        "low_emphasis": "#a8b4e2"
+        "low_emphasis": "#6a6d75"
       },
       "high_constrast": {
         "default": "#4c5667",
