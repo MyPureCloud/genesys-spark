@@ -356,7 +356,7 @@
         },
         "color_swatch": {
           "10": {
-            "value": "{color.tomato.500}",
+            "value": "{color.genesys_orange.500}",
             "type": "color",
             "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
           },
@@ -381,7 +381,7 @@
             "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
           },
           "60": {
-            "value": "{color.blueberry.200}",
+            "value": "{color.azure_blue.200}",
             "type": "color",
             "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
           },
@@ -391,7 +391,7 @@
             "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
           },
           "80": {
-            "value": "{color.islandaqua.300}",
+            "value": "{color.island.300}",
             "type": "color",
             "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
           }
@@ -644,7 +644,7 @@
         },
         "emphasis": {
           "default": {
-            "value": "{color.lavenderhaze.700}",
+            "value": "{color.haze.700}",
             "type": "color"
           }
         }

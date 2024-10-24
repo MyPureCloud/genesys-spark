@@ -235,7 +235,7 @@
       },
       "border": {
         "value": {
-          "color": "{color.cornflower.300}",
+          "color": "{color.genesys_navy.300}",
           "width": "{border_width.1}",
           "style": "solid"
         },
