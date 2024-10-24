@@ -235,7 +235,7 @@
       },
       "border": {
         "value": {
-          "color": "{color.genesys_navy.300}",
+          "color": "{border.container.divider}",
           "width": "{border_width.1}",
           "style": "solid"
         },
@@ -252,10 +252,10 @@
       "sm": {
         "regular": {
           "value": {
-            "fontFamily": "{font_family.noto_sans_mono}",
-            "fontWeight": "{font_weight.regular}",
+            "fontFamily": "{theme.font_family.code.body}",
             "fontSize": "{font_size.xs}",
-            "lineHeight": "{line_height.2xs}"
+            "lineHeight": "{line_height.2xs}",
+            "fontWeight": "{font_weight.regular}"
           },
           "type": "typography",
           "description": "This typography token is recommended to be used only for code blocks."
@@ -365,11 +365,11 @@
     },
     "divider": {
       "width": {
-        "value": "{divider.small.width}",
+        "value": "{divider.sm.width}",
         "type": "sizing"
       },
       "height": {
-        "value": "{divider.small.height}",
+        "value": "{divider.sm.height}",
         "type": "sizing"
       }
     },
@@ -446,11 +446,11 @@
         }
       },
       "width": {
-        "value": "{interactive.x_small.width}",
+        "value": "{interactive.xs.width}",
         "type": "sizing"
       },
       "height": {
-        "value": "{interactive.x_small.height}",
+        "value": "{interactive.xs.height}",
         "type": "sizing"
       },
       "focus_border": {
@@ -475,7 +475,7 @@
           "type": "color"
         },
         "padding": {
-          "value": "{divider.medium.padding}",
+          "value": "{divider.md.padding}",
           "type": "spacing"
         }
       }

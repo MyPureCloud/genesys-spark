@@ -11,7 +11,7 @@
         "type": "fontFamilies",
         "description": "The font family we use for body and labels in this theme."
       },
-      "monospace": {
+      "code": {
         "body": {
           "value": "{font_family.noto_sans_mono}",
           "type": "fontFamilies",

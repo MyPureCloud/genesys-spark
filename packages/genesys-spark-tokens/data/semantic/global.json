@@ -410,9 +410,7 @@
         "value": "{spacing.5xs}",
         "type": "spacing",
         "description": "The recommended padding for extra-small-sized interactive components."
-      }
-    },
-    "x_small": {
+      },
       "height": {
         "value": "{size.sm}",
         "type": "sizing",
@@ -894,7 +892,7 @@
       "type": "sizing",
       "description": "The default width of our divider, we usually represent dividers as rectangles on Figma instead of a single line layer."
     },
-    "small": {
+    "sm": {
       "width": {
         "value": "{size.5xs}",
         "type": "sizing",
@@ -904,6 +902,10 @@
         "value": "{size.sm}",
         "type": "sizing",
         "description": "This token is for dividers that are made with rectangles."
+      },
+      "margin": {
+        "value": "{spacing.5xs}",
+        "type": "spacing"
       }
     },
     "xs": {
@@ -912,15 +914,13 @@
         "type": "spacing"
       }
     },
-    "sm": {
-      "margin": {
-        "value": "{spacing.5xs}",
-        "type": "spacing"
-      }
-    },
     "md": {
       "margin": {
         "value": "{spacing.4xs}",
+        "type": "spacing"
+      },
+      "padding": {
+        "value": "0 {spacing.4xs}",
         "type": "spacing"
       }
     },
@@ -942,12 +942,6 @@
         "value": "{size.5xs}",
         "type": "sizing",
         "description": "The recommended divider indicator width, used for the indicators of active tabs, for example"
-      }
-    },
-    "medium": {
-      "padding": {
-        "value": "0 {spacing.4xs}",
-        "type": "spacing"
       }
     }
   },
@@ -1011,7 +1005,7 @@
     "sm": {
       "regular": {
         "value": {
-          "fontFamily": "{theme.font_family.monospace.body}",
+          "fontFamily": "{theme.font_family.code.body}",
           "fontWeight": "{font_weight.regular}",
           "fontSize": "{font_size.xs}",
           "lineHeight": "{line_height.2xs}"
