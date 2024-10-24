@@ -102,6 +102,48 @@
           "type": "color",
           "description": "The background color of danger actions in the active state."
         }
+      },
+      "custom": {
+        "tomato": {
+          "value": "{theme.background.custom_accents.color_swatch.10}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "coral": {
+          "value": "{theme.background.custom_accents.color_swatch.20}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "pear": {
+          "value": "{theme.background.custom_accents.color_swatch.30}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "mango": {
+          "value": "{theme.background.custom_accents.color_swatch.40}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "raspberry": {
+          "value": "{theme.background.custom_accents.color_swatch.50}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "blueberry": {
+          "value": "{theme.background.custom_accents.color_swatch.60}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "mineral": {
+          "value": "{theme.background.custom_accents.color_swatch.70}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        },
+        "islandaqua": {
+          "value": "{theme.background.custom_accents.color_swatch.80}",
+          "type": "color",
+          "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+        }
       }
     },
     "overlay": {
@@ -841,6 +883,10 @@
             "type": "color",
             "description": "This is used for default border for datatables"
           }
+        },
+        "low_emphasis": {
+          "value": "{theme.border.edges.emphasis.default}",
+          "type": "color"
         }
       },
       "high_constrast": {

@@ -243,7 +243,8 @@
   "font_family": {
     "roboto": "Roboto",
     "urbanist": "Urbanist",
-    "noto_sans": "'Noto Sans'"
+    "noto_sans": "'Noto Sans'",
+    "noto_sans_mono": "'Noto Sans Mono'"
   },
   "font_size": {
     "xs": "12px",
@@ -295,6 +296,8 @@
     }
   },
   "size": {
+    "5xs": "2px",
+    "4xs": "4px",
     "xs": "16px",
     "sm": "20px",
     "md": "24px",
@@ -304,8 +307,6 @@
     "3xl": "98px",
     "2xs": "12px",
     "3xs": "8px",
-    "4xs": "4px",
-    "5xs": "2px",
     "6xs": "1px"
   },
   "text_decoration": {

@@ -203,6 +203,7 @@
   --gse-core-fontFamily-roboto: Roboto;
   --gse-core-fontFamily-urbanist: Urbanist;
   --gse-core-fontFamily-notoSans: 'Noto Sans';
+  --gse-core-fontFamily-notoSansMono: 'Noto Sans Mono';
   --gse-core-fontSize-xs: 12px;
   --gse-core-fontSize-sm: 14px;
   --gse-core-fontSize-md: 16px;
@@ -238,6 +239,8 @@
   --gse-core-elevation-high-type: dropShadow;
   --gse-core-elevation-high-offsetX: 0;
   --gse-core-elevation-high-offsetY: 0;
+  --gse-core-size-5xs: 2px;
+  --gse-core-size-4xs: 4px;
   --gse-core-size-xs: 16px;
   --gse-core-size-sm: 20px;
   --gse-core-size-md: 24px;
@@ -247,8 +250,6 @@
   --gse-core-size-3xl: 98px;
   --gse-core-size-2xs: 12px;
   --gse-core-size-3xs: 8px;
-  --gse-core-size-4xs: 4px;
-  --gse-core-size-5xs: 2px;
   --gse-core-size-6xs: 1px;
   --gse-core-textDecoration-underline: underline;
   --gse-core-colorLegacy-blue-10: #172b52;

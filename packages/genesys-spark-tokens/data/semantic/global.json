@@ -410,6 +410,16 @@
         "value": "{spacing.5xs}",
         "type": "spacing",
         "description": "The recommended padding for extra-small-sized interactive components."
+      },
+      "height": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is recommended for special interactive elements, such as color swatches in the Rich Text Editor."
+      },
+      "width": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is recommended for special interactive elements, such as color swatches in the Rich Text Editor."
       }
     }
   },
@@ -609,6 +619,12 @@
         "value": "{border_width.1}",
         "type": "borderWidth",
         "description": "The recommended border width for the dividers within containers, like cards or menus or popovers."
+      }
+    },
+    "emphasis": {
+      "width": {
+        "value": "{size.4xs}",
+        "type": "sizing"
       }
     },
     "2xs": {
@@ -876,21 +892,35 @@
       "type": "sizing",
       "description": "The default width of our divider, we usually represent dividers as rectangles on Figma instead of a single line layer."
     },
+    "sm": {
+      "width": {
+        "value": "{size.5xs}",
+        "type": "sizing",
+        "description": "This token is for dividers that are made with rectangles."
+      },
+      "height": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "This token is for dividers that are made with rectangles."
+      },
+      "margin": {
+        "value": "{spacing.5xs}",
+        "type": "spacing"
+      }
+    },
     "xs": {
       "margin": {
         "value": "{spacing.6xs}",
         "type": "spacing"
       }
     },
-    "sm": {
-      "margin": {
-        "value": "{spacing.5xs}",
-        "type": "spacing"
-      }
-    },
     "md": {
       "margin": {
         "value": "{spacing.4xs}",
+        "type": "spacing"
+      },
+      "padding": {
+        "value": "0 {spacing.4xs}",
         "type": "spacing"
       }
     },
@@ -969,6 +999,20 @@
       "value": "{z_index.600}",
       "type": "zindex",
       "description": "The recommended z-index for modals."
+    }
+  },
+  "code": {
+    "sm": {
+      "regular": {
+        "value": {
+          "fontFamily": "{theme.font_family.code.body}",
+          "fontWeight": "{font_weight.regular}",
+          "fontSize": "{font_size.xs}",
+          "lineHeight": "{line_height.2xs}"
+        },
+        "type": "typography",
+        "description": "This typography token is recommended to be used only for code blocks."
+      }
     }
   }
 }

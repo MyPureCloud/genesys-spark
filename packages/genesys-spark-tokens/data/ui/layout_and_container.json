@@ -226,5 +226,259 @@
         }
       }
     }
+  },
+  "rte": {
+    "code_block": {
+      "background_color": {
+        "value": "{background.container.page.tonal_medium}",
+        "type": "color"
+      },
+      "border": {
+        "value": {
+          "color": "{border.container.divider}",
+          "width": "{border_width.1}",
+          "style": "solid"
+        },
+        "type": "border"
+      },
+      "padding": {
+        "value": "{spacing.2xs} {spacing.3xs}",
+        "type": "spacing"
+      },
+      "foreground_color": {
+        "value": "{foreground.container.mid_emphasis}",
+        "type": "color"
+      },
+      "sm": {
+        "regular": {
+          "value": {
+            "fontFamily": "{theme.font_family.code.body}",
+            "fontSize": "{font_size.xs}",
+            "lineHeight": "{line_height.2xs}",
+            "fontWeight": "{font_weight.regular}"
+          },
+          "type": "typography",
+          "description": "This typography token is recommended to be used only for code blocks."
+        }
+      }
+    },
+    "quote_block": {
+      "margin": {
+        "value": "0 {spacing.md}",
+        "type": "spacing"
+      },
+      "container": {
+        "gap": {
+          "value": "{spacing.3xs}",
+          "type": "spacing"
+        }
+      },
+      "foreground_color": {
+        "value": "{foreground.container.mid_emphasis}",
+        "type": "color"
+      },
+      "md": {
+        "regular": {
+          "value": {
+            "fontFamily": "{theme.font_family.body}",
+            "fontWeight": "{font_weight.regular}",
+            "fontSize": "{font_size.sm}",
+            "lineHeight": "{line_height.sm}"
+          },
+          "type": "typography",
+          "description": "This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors."
+        }
+      },
+      "border_left": {
+        "color": {
+          "value": "{border.container.edges.low_emphasis}",
+          "type": "color"
+        },
+        "width": {
+          "value": "{container.emphasis.width}",
+          "type": "sizing"
+        }
+      }
+    },
+    "heading_1": {
+      "foreground_color": {
+        "value": "{foreground.container.mid_emphasis}",
+        "type": "color"
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.xl}",
+          "lineHeight": "{line_height.xl}"
+        },
+        "type": "typography"
+      }
+    },
+    "heading_2": {
+      "foreground_color": {
+        "value": "{foreground.container.mid_emphasis}",
+        "type": "color"
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.lg}",
+          "lineHeight": "{line_height.lg}"
+        },
+        "type": "typography"
+      }
+    },
+    "heading_3": {
+      "foreground_color": {
+        "value": "{foreground.container.mid_emphasis}",
+        "type": "color"
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.headings}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.md}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography"
+      }
+    },
+    "paragraph": {
+      "foreground_color": {
+        "value": "{foreground.container.mid_emphasis}",
+        "type": "color"
+      },
+      "md": {
+        "regular": {
+          "value": {
+            "fontFamily": "{theme.font_family.body}",
+            "fontWeight": "{font_weight.regular}",
+            "fontSize": "{font_size.sm}",
+            "lineHeight": "{line_height.sm}"
+          },
+          "type": "typography",
+          "description": "This is the typography style we use in most of our bodies of text like paragraphs; we usually pair it with medium emphasis colors."
+        }
+      }
+    },
+    "divider": {
+      "width": {
+        "value": "{divider.sm.width}",
+        "type": "sizing"
+      },
+      "height": {
+        "value": "{divider.sm.height}",
+        "type": "sizing"
+      }
+    },
+    "inner_container": {
+      "gap": {
+        "value": "{spacing.xs}",
+        "type": "spacing"
+      }
+    },
+    "content_container": {
+      "gap": {
+        "value": "{spacing.xs}",
+        "type": "spacing"
+      }
+    },
+    "padding": {
+      "value": "{spacing.3xs} {spacing.xs} {spacing.xs}",
+      "type": "spacing"
+    },
+    "menu_button": {
+      "height": {
+        "value": "{interactive.sm.size}",
+        "type": "sizing",
+        "description": "This height token is specific to the buttons that can be used within the Rich Text Editor menu."
+      }
+    },
+    "color_swatch": {
+      "tomato": {
+        "default": {
+          "value": "{background.interactive.custom.tomato}",
+          "type": "color"
+        }
+      },
+      "coral": {
+        "default": {
+          "value": "{background.interactive.custom.coral}",
+          "type": "color"
+        }
+      },
+      "pear": {
+        "default": {
+          "value": "{background.interactive.custom.pear}",
+          "type": "color"
+        }
+      },
+      "mango": {
+        "default": {
+          "value": "{background.interactive.custom.mango}",
+          "type": "color"
+        }
+      },
+      "raspberry": {
+        "default": {
+          "value": "{background.interactive.custom.raspberry}",
+          "type": "color"
+        }
+      },
+      "blueberry": {
+        "default": {
+          "value": "{background.interactive.custom.blueberry}",
+          "type": "color"
+        }
+      },
+      "mineral": {
+        "default": {
+          "value": "{background.interactive.custom.mineral}",
+          "type": "color"
+        }
+      },
+      "islandaqua": {
+        "default": {
+          "value": "{background.interactive.custom.islandaqua}",
+          "type": "color"
+        }
+      },
+      "width": {
+        "value": "{interactive.xs.width}",
+        "type": "sizing"
+      },
+      "height": {
+        "value": "{interactive.xs.height}",
+        "type": "sizing"
+      },
+      "focus_border": {
+        "value": {
+          "color": "{border.focus}",
+          "width": "{border_width.2}",
+          "style": "solid"
+        },
+        "type": "border"
+      }
+    },
+    "color_palette": {
+      "gap": {
+        "value": "{interactive.md.gap}",
+        "type": "spacing"
+      }
+    },
+    "toolbar": {
+      "divider": {
+        "color": {
+          "value": "{border.container.divider}",
+          "type": "color"
+        },
+        "padding": {
+          "value": "{divider.md.padding}",
+          "type": "spacing"
+        }
+      }
+    }
   }
 }
