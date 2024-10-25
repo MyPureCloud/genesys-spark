@@ -20,7 +20,7 @@
     "font_family": {
       "headings": "Roboto",
       "body": "Roboto",
-      "monospace": {
+      "code": {
         "body": "'Noto Sans Mono'"
       }
     },
@@ -834,9 +834,7 @@
     },
     "xs": {
       "size": "20px",
-      "padding": "2px"
-    },
-    "x_small": {
+      "padding": "2px",
       "height": "20px",
       "width": "20px"
     }
@@ -1038,18 +1036,17 @@
   },
   "divider": {
     "width": "1px",
-    "small": {
+    "sm": {
       "width": "2px",
-      "height": "20px"
+      "height": "20px",
+      "margin": "2px"
     },
     "xs": {
       "margin": "1px"
     },
-    "sm": {
-      "margin": "2px"
-    },
     "md": {
-      "margin": "4px"
+      "margin": "4px",
+      "padding": "0 4px"
     },
     "lg": {
       "margin": "8px"
@@ -1059,9 +1056,6 @@
     },
     "indicator": {
       "width": "2px"
-    },
-    "medium": {
-      "padding": "0 4px"
     }
   },
   "code": {

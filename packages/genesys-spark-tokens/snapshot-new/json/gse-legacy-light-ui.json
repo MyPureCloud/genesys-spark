@@ -3020,7 +3020,7 @@
     "code_block": {
       "background_color": "#f6f7f9",
       "border": {
-        "color": "#9faac6",
+        "color": "#b4bccb",
         "width": "1px",
         "style": "solid"
       },
@@ -3029,9 +3029,9 @@
       "sm": {
         "regular": {
           "fontFamily": "'Noto Sans Mono'",
-          "fontWeight": "400",
           "fontSize": "12px",
-          "lineHeight": "16px"
+          "lineHeight": "16px",
+          "fontWeight": "400"
         }
       }
     },
