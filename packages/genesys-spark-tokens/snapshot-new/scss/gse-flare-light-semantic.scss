@@ -14,6 +14,7 @@
   --gse-semantic-opacity-shroud: 0.8;
   --gse-semantic-theme-fontFamily-headings: Urbanist;
   --gse-semantic-theme-fontFamily-body: 'Noto Sans';
+  --gse-semantic-theme-fontFamily-code-body: 'Noto Sans Mono';
   --gse-semantic-theme-background-container-primary-10: #ffffff;
   --gse-semantic-theme-background-container-primary-20: #f5f6fa;
   --gse-semantic-theme-background-container-primary-30: #ebedf5;
@@ -87,6 +88,14 @@
   --gse-semantic-theme-background-customAccents-subtle-100: #ffb5a3;
   --gse-semantic-theme-background-customAccents-subtle-110: #ffdd96;
   --gse-semantic-theme-background-customAccents-subtle-120: #9fd6ea;
+  --gse-semantic-theme-background-customAccents-colorSwatch-10: #ff451a;
+  --gse-semantic-theme-background-customAccents-colorSwatch-20: #ffbec9;
+  --gse-semantic-theme-background-customAccents-colorSwatch-30: #c6dd98;
+  --gse-semantic-theme-background-customAccents-colorSwatch-40: #ffd173;
+  --gse-semantic-theme-background-customAccents-colorSwatch-50: #f5bfeb;
+  --gse-semantic-theme-background-customAccents-colorSwatch-60: #adbff0;
+  --gse-semantic-theme-background-customAccents-colorSwatch-70: #bcd6f0;
+  --gse-semantic-theme-background-customAccents-colorSwatch-80: #81cbe5;
   --gse-semantic-theme-background-customAccents-status-10: #09b581;
   --gse-semantic-theme-background-customAccents-status-20: #e22245;
   --gse-semantic-theme-background-customAccents-status-30: #f8c73e;
@@ -135,6 +144,7 @@
   --gse-semantic-theme-border-edges-hover-10: #5476d5;
   --gse-semantic-theme-border-edges-hover-20: #102251;
   --gse-semantic-theme-border-edges-active-10: #19327a;
+  --gse-semantic-theme-border-edges-emphasis-default: #6a6d75;
   --gse-semantic-theme-border-system-primary-10: #829ce5;
   --gse-semantic-theme-border-system-info-10: #c5bef1;
   --gse-semantic-theme-border-system-success-10: #9de1cd;
@@ -177,6 +187,14 @@
   --gse-semantic-background-interactive-danger-default: #e22245;
   --gse-semantic-background-interactive-danger-hover: #881429;
   --gse-semantic-background-interactive-danger-active: #440a15;
+  --gse-semantic-background-interactive-custom-tomato: #ff451a;
+  --gse-semantic-background-interactive-custom-coral: #ffbec9;
+  --gse-semantic-background-interactive-custom-pear: #c6dd98;
+  --gse-semantic-background-interactive-custom-mango: #ffd173;
+  --gse-semantic-background-interactive-custom-raspberry: #f5bfeb;
+  --gse-semantic-background-interactive-custom-blueberry: #adbff0;
+  --gse-semantic-background-interactive-custom-mineral: #bcd6f0;
+  --gse-semantic-background-interactive-custom-islandaqua: #81cbe5;
   --gse-semantic-background-overlay-shroud-default: #263b73cc;
   --gse-semantic-background-container-page-default: #ffffff;
   --gse-semantic-background-container-page-tonalSubtle: #f5f6fa;
@@ -307,6 +325,7 @@
   --gse-semantic-border-container-edges-active: #19327a;
   --gse-semantic-border-container-edges-highEmphasis: #3e4044;
   --gse-semantic-border-container-edges-dataTable-default: #cad1e1;
+  --gse-semantic-border-container-edges-lowEmphasis: #6a6d75;
   --gse-semantic-border-container-highConstrast-default: #4f5157;
   --gse-semantic-border-container-highConstrast-enabled: #2143a2;
   --gse-semantic-border-container-highConstrast-hover: #102251;
@@ -452,6 +471,8 @@
   --gse-semantic-interactive-xl-borderRadius: 100%;
   --gse-semantic-interactive-xs-size: 20px;
   --gse-semantic-interactive-xs-padding: 2px;
+  --gse-semantic-interactive-xs-height: 20px;
+  --gse-semantic-interactive-xs-width: 20px;
   --gse-semantic-focusOutline-full-borderRadius: 100%;
   --gse-semantic-focusOutline-xl-borderRadius: 20px;
   --gse-semantic-focusOutline-lg-borderRadius: 16px;
@@ -501,6 +522,7 @@
   --gse-semantic-container-xs-height: 20px;
   --gse-semantic-container-edges-borderWidth: 1px;
   --gse-semantic-container-divider-borderWidth: 1px;
+  --gse-semantic-container-emphasis-width: 4px;
   --gse-semantic-container-2xs-gap: 2px;
   --gse-semantic-container-2xs-padding: 2px;
   --gse-semantic-container-2xs-size: 12px;
@@ -541,10 +563,17 @@
   --gse-semantic-assets-xl-size: 48px;
   --gse-semantic-assets-xs-size: 8px;
   --gse-semantic-divider-width: 1px;
-  --gse-semantic-divider-xs-margin: 1px;
+  --gse-semantic-divider-sm-width: 2px;
+  --gse-semantic-divider-sm-height: 20px;
   --gse-semantic-divider-sm-margin: 2px;
+  --gse-semantic-divider-xs-margin: 1px;
   --gse-semantic-divider-md-margin: 4px;
+  --gse-semantic-divider-md-padding: 0 4px;
   --gse-semantic-divider-lg-margin: 8px;
   --gse-semantic-divider-track-height: 4px;
   --gse-semantic-divider-indicator-width: 2px;
+  --gse-semantic-code-sm-regular-fontFamily: 'Noto Sans Mono';
+  --gse-semantic-code-sm-regular-fontWeight: 400;
+  --gse-semantic-code-sm-regular-fontSize: 12px;
+  --gse-semantic-code-sm-regular-lineHeight: 16px;
 }

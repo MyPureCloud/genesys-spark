@@ -3015,5 +3015,138 @@
         "opacity": ".5"
       }
     }
+  },
+  "rte": {
+    "code_block": {
+      "background_color": "#ebedf5",
+      "border": {
+        "color": "#c1c6d4",
+        "width": "1px",
+        "style": "solid"
+      },
+      "padding": "12px 8px",
+      "foreground_color": "#4f5157",
+      "sm": {
+        "regular": {
+          "fontFamily": "'Noto Sans Mono'",
+          "fontSize": "12px",
+          "lineHeight": "16px",
+          "fontWeight": "400"
+        }
+      }
+    },
+    "quote_block": {
+      "margin": "0 24px",
+      "container": {
+        "gap": "8px"
+      },
+      "foreground_color": "#4f5157",
+      "md": {
+        "regular": {
+          "fontFamily": "'Noto Sans'",
+          "fontWeight": "400",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      },
+      "border_left": {
+        "color": "#6a6d75",
+        "width": "4px"
+      }
+    },
+    "heading_1": {
+      "foreground_color": "#4f5157",
+      "semi_bold": {
+        "fontFamily": "Urbanist",
+        "fontWeight": "600",
+        "fontSize": "24px",
+        "lineHeight": "32px"
+      }
+    },
+    "heading_2": {
+      "foreground_color": "#4f5157",
+      "semi_bold": {
+        "fontFamily": "Urbanist",
+        "fontWeight": "600",
+        "fontSize": "18px",
+        "lineHeight": "27px"
+      }
+    },
+    "heading_3": {
+      "foreground_color": "#4f5157",
+      "semi_bold": {
+        "fontFamily": "Urbanist",
+        "fontWeight": "600",
+        "fontSize": "16px",
+        "lineHeight": "24px"
+      }
+    },
+    "paragraph": {
+      "foreground_color": "#4f5157",
+      "md": {
+        "regular": {
+          "fontFamily": "'Noto Sans'",
+          "fontWeight": "400",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        }
+      }
+    },
+    "divider": {
+      "width": "2px",
+      "height": "20px"
+    },
+    "inner_container": {
+      "gap": "16px"
+    },
+    "content_container": {
+      "gap": "16px"
+    },
+    "padding": "8px 16px 16px",
+    "menu_button": {
+      "height": "24px"
+    },
+    "color_swatch": {
+      "tomato": {
+        "default": "#ff451a"
+      },
+      "coral": {
+        "default": "#ffbec9"
+      },
+      "pear": {
+        "default": "#c6dd98"
+      },
+      "mango": {
+        "default": "#ffd173"
+      },
+      "raspberry": {
+        "default": "#f5bfeb"
+      },
+      "blueberry": {
+        "default": "#adbff0"
+      },
+      "mineral": {
+        "default": "#bcd6f0"
+      },
+      "islandaqua": {
+        "default": "#81cbe5"
+      },
+      "width": "20px",
+      "height": "20px",
+      "focus_border": {
+        "color": "#5476d5",
+        "width": "2px",
+        "style": "solid"
+      }
+    },
+    "color_palette": {
+      "gap": "4px"
+    },
+    "toolbar": {
+      "divider": {
+        "color": "#c1c6d4",
+        "padding": "0 4px"
+      }
+    }
   }
 }

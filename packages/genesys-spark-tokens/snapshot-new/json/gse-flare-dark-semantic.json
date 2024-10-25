@@ -19,7 +19,10 @@
   "theme": {
     "font_family": {
       "headings": "Urbanist",
-      "body": "'Noto Sans'"
+      "body": "'Noto Sans'",
+      "code": {
+        "body": "'Noto Sans Mono'"
+      }
     },
     "background": {
       "container": {
@@ -128,6 +131,16 @@
           "110": "#ffdd96",
           "120": "#9fd6ea"
         },
+        "color_swatch": {
+          "10": "#ff451a",
+          "20": "#ffbec9",
+          "30": "#c6dd98",
+          "40": "#ffd173",
+          "50": "#f5bfeb",
+          "60": "#adbff0",
+          "70": "#bcd6f0",
+          "80": "#81cbe5"
+        },
         "status": {
           "10": "#09b581",
           "20": "#e22245",
@@ -229,6 +242,9 @@
         },
         "active": {
           "10": "#19327a"
+        },
+        "emphasis": {
+          "default": "#6a6d75"
         }
       },
       "system": {
@@ -320,6 +336,16 @@
         "default": "#e22245",
         "hover": "#881429",
         "active": "#440a15"
+      },
+      "custom": {
+        "tomato": "#ff451a",
+        "coral": "#ffbec9",
+        "pear": "#c6dd98",
+        "mango": "#ffd173",
+        "raspberry": "#f5bfeb",
+        "blueberry": "#adbff0",
+        "mineral": "#bcd6f0",
+        "islandaqua": "#81cbe5"
       }
     },
     "overlay": {
@@ -549,7 +575,8 @@
         "high_emphasis": "#3e4044",
         "data_table": {
           "default": "#cad1e1"
-        }
+        },
+        "low_emphasis": "#6a6d75"
       },
       "high_constrast": {
         "default": "#4f5157",
@@ -807,7 +834,9 @@
     },
     "xs": {
       "size": "20px",
-      "padding": "2px"
+      "padding": "2px",
+      "height": "20px",
+      "width": "20px"
     }
   },
   "focus_outline": {
@@ -893,6 +922,9 @@
     },
     "divider": {
       "border_width": "1px"
+    },
+    "emphasis": {
+      "width": "4px"
     },
     "2xs": {
       "gap": "2px",
@@ -1004,14 +1036,17 @@
   },
   "divider": {
     "width": "1px",
+    "sm": {
+      "width": "2px",
+      "height": "20px",
+      "margin": "2px"
+    },
     "xs": {
       "margin": "1px"
     },
-    "sm": {
-      "margin": "2px"
-    },
     "md": {
-      "margin": "4px"
+      "margin": "4px",
+      "padding": "0 4px"
     },
     "lg": {
       "margin": "8px"
@@ -1021,6 +1056,16 @@
     },
     "indicator": {
       "width": "2px"
+    }
+  },
+  "code": {
+    "sm": {
+      "regular": {
+        "fontFamily": "'Noto Sans Mono'",
+        "fontWeight": "400",
+        "fontSize": "12px",
+        "lineHeight": "16px"
+      }
     }
   }
 }
