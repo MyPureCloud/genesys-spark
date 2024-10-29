@@ -482,14 +482,6 @@
     "foreground_color": {
       "value": "{foreground.container.high_emphasis}",
       "type": "color"
-    },
-    "background_color": {
-      "value": "{color.transparent}",
-      "type": "color"
-    },
-    "border_radius": {
-      "value": "{container.md.border_radius}",
-      "type": "borderRadius"
     }
   },
   "modal_side_sheet": {
