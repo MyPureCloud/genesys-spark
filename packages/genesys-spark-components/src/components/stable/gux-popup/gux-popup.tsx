@@ -125,11 +125,16 @@ export class GuxPopup {
         }
       ).then(({ x, y, middlewareData }) => {
         const { referenceHidden } = middlewareData.hide;
-
-        Object.assign(this.popupElementContainer.style, {
-          left: `${x}px`,
-          top: `${y}px`
-        });
+        if (!isNaN(x)) {
+          Object.assign(this.popupElementContainer.style, {
+            left: `${x}px`
+          });
+        }
+        if (!isNaN(y)) {
+          Object.assign(this.popupElementContainer.style, {
+            top: `${y}px`
+          });
+        }
         if (referenceHidden) {
           this.popupElementContainer.classList.add('gux-sr-only-clip');
         } else {
