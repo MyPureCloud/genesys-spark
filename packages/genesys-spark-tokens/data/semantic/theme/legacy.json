@@ -719,6 +719,11 @@
         "small": {
           "value": "{border_radius.sm}",
           "type": "borderRadius"
+        },
+        "2xl": {
+          "value": "{border_radius.lg}",
+          "type": "borderRadius",
+          "description": "Used only for the toggle, since it needs to have the same value for legacy and flare."
         }
       },
       "container": {
@@ -775,6 +780,11 @@
         "xsmall": {
           "value": "{border_radius.sm}",
           "type": "borderRadius"
+        },
+        "2xl": {
+          "value": "{border_radius.lg}",
+          "type": "borderRadius",
+          "description": "Used only for the toggle, since it needs to have the same value for legacy and flare."
         }
       }
     }

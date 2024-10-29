@@ -719,6 +719,10 @@
         "small": {
           "value": "{border_radius.sm}",
           "type": "borderRadius"
+        },
+        "2xl": {
+          "value": "{border_radius.lg}",
+          "type": "borderRadius"
         }
       },
       "container": {
@@ -774,6 +778,10 @@
         },
         "xsmall": {
           "value": "{border_radius.xs}",
+          "type": "borderRadius"
+        },
+        "2xl": {
+          "value": "{border_radius.lg}",
           "type": "borderRadius"
         }
       }
