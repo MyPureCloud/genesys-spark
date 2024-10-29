@@ -168,7 +168,7 @@
 
         &::before {
           inset-block-start: var(--gse-ui-selectorCard-descriptive-gap);
-          inset-inline-end: var(--gse-ui-selectorCard-descriptive-gap);
+          inset-inline-end: var(--gse-ui-selectorCard-descriptive-padding);
           width: var(--gse-ui-icon-size-md, var(--gse-ui-icon-medium-size));
           height: var(--gse-ui-icon-size-md, var(--gse-ui-icon-medium-size));
         }
