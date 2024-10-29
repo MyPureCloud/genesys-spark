@@ -19,7 +19,10 @@
   "theme": {
     "font_family": {
       "headings": "Roboto",
-      "body": "Roboto"
+      "body": "Roboto",
+      "code": {
+        "body": "'Noto Sans Mono'"
+      }
     },
     "background": {
       "container": {
@@ -76,7 +79,8 @@
           "5": "#eefcea",
           "10": "#eefcea",
           "20": "#95c189",
-          "30": "#3c8527",
+          "30": "#95c189",
+          "35": "#3c8527",
           "40": "#205a10",
           "50": "#0d3d00"
         },
@@ -127,14 +131,24 @@
           "110": "#f8f3c6",
           "120": "#fff793"
         },
+        "color_swatch": {
+          "10": "#ff451a",
+          "20": "#ffbec9",
+          "30": "#c6dd98",
+          "40": "#ffd173",
+          "50": "#f5bfeb",
+          "60": "#adbff0",
+          "70": "#bcd6f0",
+          "80": "#81cbe5"
+        },
         "status": {
           "10": "#09b581",
           "20": "#e22245",
           "30": "#f8c73e",
-          "40": "#4856cb",
-          "50": "#626e84",
+          "40": "#2143a2",
+          "50": "#848891",
           "60": "#b74ba4",
-          "70": "#fe624d"
+          "70": "#ff451a"
         }
       }
     },
@@ -257,6 +271,9 @@
         },
         "active": {
           "10": "#2a60c8"
+        },
+        "emphasis": {
+          "default": "#6a6d75"
         }
       }
     },
@@ -319,6 +336,16 @@
         "default": "#ea0b0b",
         "hover": "#8f0707",
         "active": "#520404"
+      },
+      "custom": {
+        "tomato": "#ff451a",
+        "coral": "#ffbec9",
+        "pear": "#c6dd98",
+        "mango": "#ffd173",
+        "raspberry": "#f5bfeb",
+        "blueberry": "#adbff0",
+        "mineral": "#bcd6f0",
+        "islandaqua": "#81cbe5"
       }
     },
     "overlay": {
@@ -348,22 +375,27 @@
     "system": {
       "error": {
         "tonal_medium": "#fceaea",
+        "tonal_high": "#ea0b0b",
         "tonal_subtle": "#fceaea"
       },
       "warning": {
         "tonal_medium": "#fdf8ec",
+        "tonal_high": "#ffae00",
         "tonal_subtle": "#fdf8ec"
       },
       "success": {
         "tonal_medium": "#eefcea",
+        "tonal_high": "#95c189",
         "tonal_subtle": "#eefcea"
       },
       "info": {
         "tonal_medium": "#deeaff",
+        "tonal_high": "#2a60c8",
         "tonal_subtle": "#deeaff"
       },
       "primary": {
         "tonal_medium": "#deeaff",
+        "tonal_high": "#2a60c8",
         "tonal_subtle": "#deeaff"
       },
       "custom_accents": {
@@ -405,10 +437,10 @@
         "available": "#09b581",
         "busy": "#e22245",
         "away": "#f8c73e",
-        "on_queue": "#4856cb",
-        "offline": "#626e84",
+        "on_queue": "#2143a2",
+        "offline": "#848891",
         "out_of_office": "#b74ba4",
-        "notification": "#fe624d"
+        "notification": "#ff451a"
       }
     },
     "form_control": {
@@ -543,7 +575,8 @@
         "high_emphasis": "#2e394c",
         "data_table": {
           "default": "#e2e6ee"
-        }
+        },
+        "low_emphasis": "#6a6d75"
       },
       "high_constrast": {
         "default": "#4c5667",
@@ -801,7 +834,9 @@
     },
     "xs": {
       "size": "20px",
-      "padding": "2px"
+      "padding": "2px",
+      "height": "20px",
+      "width": "20px"
     }
   },
   "focus_outline": {
@@ -887,6 +922,9 @@
     },
     "divider": {
       "border_width": "1px"
+    },
+    "emphasis": {
+      "width": "4px"
     },
     "2xs": {
       "gap": "2px",
@@ -998,14 +1036,17 @@
   },
   "divider": {
     "width": "1px",
+    "sm": {
+      "width": "2px",
+      "height": "20px",
+      "margin": "2px"
+    },
     "xs": {
       "margin": "1px"
     },
-    "sm": {
-      "margin": "2px"
-    },
     "md": {
-      "margin": "4px"
+      "margin": "4px",
+      "padding": "0 4px"
     },
     "lg": {
       "margin": "8px"
@@ -1015,6 +1056,16 @@
     },
     "indicator": {
       "width": "2px"
+    }
+  },
+  "code": {
+    "sm": {
+      "regular": {
+        "fontFamily": "'Noto Sans Mono'",
+        "fontWeight": "400",
+        "fontSize": "12px",
+        "lineHeight": "16px"
+      }
     }
   }
 }
