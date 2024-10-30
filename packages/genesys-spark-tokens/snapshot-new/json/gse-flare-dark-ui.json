@@ -1693,7 +1693,7 @@
       "max_height": "116px",
       "padding": "12px",
       "gap": "8px",
-      "border_radius": "8px",
+      "border_radius": "4px",
       "label": {
         "fontFamily": "Urbanist",
         "fontWeight": "700",
@@ -1714,7 +1714,7 @@
       "badge": {
         "margin_top": "8px"
       },
-      "border_radius": "8px",
+      "border_radius": "4px",
       "label": {
         "fontFamily": "Urbanist",
         "fontWeight": "700",
@@ -2564,7 +2564,7 @@
     "button_bar": {
       "gap": "8px"
     },
-    "border_radius": "8px",
+    "border_radius": "4px",
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
@@ -2616,7 +2616,7 @@
       "offsetX": "0",
       "offsetY": "0"
     },
-    "border_radius": "16px",
+    "border_radius": "8px",
     "shroud": {
       "opacity": ".8"
     },
@@ -2626,7 +2626,7 @@
     }
   },
   "popover": {
-    "border_radius": "8px",
+    "border_radius": "4px",
     "box_shadow": {
       "blur": "8px",
       "spread": "1px",
