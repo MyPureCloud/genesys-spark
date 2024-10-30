@@ -5,7 +5,7 @@ exports[`gux-popup #render should render component as expected (1) 1`] = `
   <template shadowrootmode="open">
     <div aria-disabled="false" class="gux-target-container">
       <slot name="target"></slot>
-      <div class="gux-popup-container">
+      <div class="gux-popup-container gux-sr-only-clip" style="width: 0px; overflow: hidden; top: 2px;">
         <slot name="popup"></slot>
       </div>
     </div>
@@ -59,7 +59,7 @@ exports[`gux-popup #render should render component as expected (3) 1`] = `
   <template shadowrootmode="open">
     <div aria-disabled="true" class="gux-disabled gux-target-container">
       <slot name="target"></slot>
-      <div class="gux-popup-container">
+      <div class="gux-popup-container gux-sr-only-clip" style="width: 0px; overflow: hidden; top: 2px;">
         <slot name="popup"></slot>
       </div>
     </div>

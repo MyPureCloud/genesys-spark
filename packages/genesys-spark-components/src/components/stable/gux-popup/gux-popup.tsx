@@ -125,11 +125,16 @@ export class GuxPopup {
         }
       ).then(({ x, y, middlewareData }) => {
         const { referenceHidden } = middlewareData.hide;
-
-        Object.assign(this.popupElementContainer.style, {
-          left: `${x}px`,
-          top: `${y}px`
-        });
+        if (!isNaN(x)) {
+          Object.assign(this.popupElementContainer.style, {
+            left: `${x}px`
+          });
+        }
+        if (!isNaN(y)) {
+          Object.assign(this.popupElementContainer.style, {
+            top: `${y}px`
+          });
+        }
         if (referenceHidden) {
           this.popupElementContainer.classList.add('gux-sr-only-clip');
         } else {
@@ -148,8 +153,14 @@ export class GuxPopup {
     }
   }
 
+  // update position once on load to fix overflow in containers: COMUI-2883
+  // do not runUpdatePosition on load unless expanded to avoid performance issues: COMUI-3140
   componentDidLoad(): void {
-    this.runUpdatePosition();
+    if (this.expanded) {
+      this.runUpdatePosition();
+    } else {
+      this.updatePosition();
+    }
   }
 
   componentDidUpdate(): void {
