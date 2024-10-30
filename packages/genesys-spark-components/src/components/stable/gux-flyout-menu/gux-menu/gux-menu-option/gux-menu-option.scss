@@ -5,6 +5,7 @@
 
   .gux-menu-option-button {
     all: unset;
+    box-sizing: border-box;
     width: var(--gse-ui-flyoutMenu-width);
     height: var(--gse-ui-menu-option-height);
     padding: var(--gse-ui-menu-option-padding);
