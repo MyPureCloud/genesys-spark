@@ -39,7 +39,7 @@ exports[`gux-modal #render should render large modal 1`] = `
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -47,7 +47,7 @@ exports[`gux-modal #render should render large modal 1`] = `
     </gux-button>
     <gux-button slot="dismiss">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -96,7 +96,7 @@ exports[`gux-modal #render should render medium modal 1`] = `
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -104,7 +104,7 @@ exports[`gux-modal #render should render medium modal 1`] = `
     </gux-button>
     <gux-button slot="dismiss">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -153,7 +153,7 @@ exports[`gux-modal #render should render modal with a specified initial focus el
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -364,7 +364,7 @@ exports[`gux-modal #render should render modal without a title 1`] = `
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -372,7 +372,7 @@ exports[`gux-modal #render should render modal without a title 1`] = `
     </gux-button>
     <gux-button slot="dismiss">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -465,7 +465,7 @@ exports[`gux-modal #render should render small modal 1`] = `
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -473,7 +473,7 @@ exports[`gux-modal #render should render small modal 1`] = `
     </gux-button>
     <gux-button slot="dismiss">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -522,7 +522,7 @@ exports[`gux-modal #render should render small modal by default 1`] = `
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
@@ -530,7 +530,7 @@ exports[`gux-modal #render should render small modal by default 1`] = `
     </gux-button>
     <gux-button slot="dismiss">
       <template shadowrootmode="open">
-        <button class="gux-secondary" type="button">
+        <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
       </template>
