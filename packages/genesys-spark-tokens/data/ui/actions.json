@@ -416,7 +416,9 @@
       "gap": {
         "value": "{interactive.lg.gap}",
         "type": "spacing"
-      },
+      }
+    },
+    "standalone": {
       "text": {
         "value": "{body.md.semi_bold}",
         "type": "typography"

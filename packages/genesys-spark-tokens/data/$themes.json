@@ -1559,8 +1559,6 @@
       "selector_card.descriptive.label": "S:02a65768f61dda6bd37115709de05832e3345979,",
       "selector_card.descriptive.description": "S:0ad4da99a02ac60fe3357ae73dc456d404e1e693,",
       "form_control.label.text_bold": "S:22afc38d12f115786728cbf6ced9d523b581da91,",
-      "links.as_button.text": "S:6eec03c6b599b1fc63a47a3040fdb8a756c1abc0,",
-      "links.as_button.underlined_text": "S:5ab6f24c6c67d64d772ac7af31095bbf25ea86ff,",
       "links.in_line.medium.text": "S:0efdd4d8d8cb90f5d65bf1db51d2ea143948af40,",
       "links.in_line.medium.underlined_text": "S:70ad17bcc6bda6d7ac270b42f2fade466972326b,",
       "links.in_line.small.text": "S:058c9a189cabf7398ce92201c799034de6869e7c,",
@@ -1578,7 +1576,9 @@
       "rte.heading_1.semi_bold": "S:aa51c6175ed48e50bfacd75d53d7f12f0adab77e,",
       "rte.heading_2.semi_bold": "S:854c138eb0d9f1107cffcaea21fa76020a94fc37,",
       "rte.heading_3.semi_bold": "S:0eedd8fe217cd4f5513187fb7aca8c0ebc0ec0a7,",
-      "rte.paragraph.md.regular": "S:3e39ea8fc26e471ac2caab2acb5d0a72a46b1428,"
+      "rte.paragraph.md.regular": "S:3e39ea8fc26e471ac2caab2acb5d0a72a46b1428,",
+      "links.standalone.text": "S:6eec03c6b599b1fc63a47a3040fdb8a756c1abc0,",
+      "links.standalone.underlined_text": "S:5ab6f24c6c67d64d772ac7af31095bbf25ea86ff,"
     },
     "selectedTokenSets": {
       "ui/unordered": "enabled",
