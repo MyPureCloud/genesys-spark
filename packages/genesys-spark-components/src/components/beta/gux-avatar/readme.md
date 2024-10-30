@@ -52,6 +52,10 @@ Type: `Promise<void>`
 
 ## Dependencies
 
+### Used by
+
+ - [gux-avatar-group-beta](../gux-avatar-group)
+
 ### Depends on
 
 - [gux-icon](../../stable/gux-icon)
@@ -65,6 +69,7 @@ graph TD;
   gux-avatar-beta --> gux-screen-reader-beta
   gux-avatar-beta --> gux-tooltip-beta
   gux-tooltip-beta --> gux-tooltip-base-beta
+  gux-avatar-group-beta --> gux-avatar-beta
   style gux-avatar-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

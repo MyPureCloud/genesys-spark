@@ -1,36 +1,10 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 
-a:hover,
-button:hover,
-a:focus-visible,
-button:focus-visible {
-  z-index: var(--gse-semantic-zIndex-showFocus);
-}
+$gux-avatar-mask: "data:image/svg+xml,%3Csvg viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 13c0-2.6.7-5 1.8-7.2C21.5 2.3 17.5 0 13 0 5.8 0 0 5.8 0 13s5.8 13 13 13c4.5 0 8.5-2.3 10.8-5.8C22.7 18 22 15.6 22 13z' /%3E%3C/svg%3E";
 
-a {
-  display: inline-block;
-  margin-inline-end: calc(-4px + var(--gse-ui-avatar-groupShapes-gap));
-  line-height: 0px;
-  border-radius: 50%;
-}
-
-.gux-hide {
-  display: none;
-}
-
-button {
-  padding: 0;
-  margin-inline-end: calc(-4px + var(--gse-ui-avatar-groupShapes-gap));
-  line-height: 0px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  border-radius: 50%;
-}
-
-a:focus-visible,
-button:focus-visible {
-  @include focus.gux-focus-ring-small;
+@mixin mask {
+  -webkit-mask-image: url($gux-avatar-mask);
+  mask-image: url($gux-avatar-mask);
 }
 
 .gux-avatar-group-wrapper {
@@ -44,6 +18,61 @@ button:focus-visible {
 .gux-avatar-group {
   display: flex;
   width: 100%;
+
+  // TODO: udpate this var(--gse-ui-avatar-groupShapes-gap)
+  --gse-ui-avatar-groupShapes-gap: -6px;
+
+  button:not(:last-of-type),
+  a:not(:last-of-type) {
+    @include mask;
+  }
+
+  &.gux-avatar-group-overflow {
+    button,
+    a {
+      @include mask;
+    }
+  }
+
+  a:hover,
+  button:hover,
+  a:focus-visible,
+  button:focus-visible {
+    z-index: var(--gse-semantic-zIndex-showFocus);
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    mask: none;
+  }
+
+  a {
+    display: inline-block;
+    margin-inline-end: var(--gse-ui-avatar-groupShapes-gap);
+    line-height: 0px;
+    border-radius: 50%;
+  }
+
+  .gux-hide {
+    display: none;
+  }
+
+  button {
+    padding: 0;
+    margin-inline-end: var(--gse-ui-avatar-groupShapes-gap);
+    line-height: 0px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 50%;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    @include focus.gux-focus-ring-small;
+
+    background: var(--gse-ui-avatar-content-default-border-color);
+  }
 }
 
 .gux-overflow-list-item {

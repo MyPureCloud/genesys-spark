@@ -38,6 +38,7 @@
 
  - [gux-action-button](../gux-action-button)
  - [gux-advanced-dropdown-legacy](../../legacy/gux-advanced-dropdown-legacy)
+ - [gux-avatar-overflow-beta](../../beta/gux-avatar-group/gux-avatar-overflow)
  - [gux-button-multi](../gux-button-multi)
  - [gux-context-menu](../gux-context-menu)
  - [gux-dropdown](../gux-dropdown)
@@ -52,6 +53,7 @@
 graph TD;
   gux-action-button --> gux-popup
   gux-advanced-dropdown-legacy --> gux-popup
+  gux-avatar-overflow-beta --> gux-popup
   gux-button-multi --> gux-popup
   gux-context-menu --> gux-popup
   gux-dropdown --> gux-popup

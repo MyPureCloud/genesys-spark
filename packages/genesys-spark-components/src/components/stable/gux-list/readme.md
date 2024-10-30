@@ -63,6 +63,7 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-action-button](../gux-action-button)
+ - [gux-avatar-group-beta](../../beta/gux-avatar-group)
  - [gux-button-multi](../gux-button-multi)
  - [gux-context-menu](../gux-context-menu)
  - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
@@ -72,6 +73,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-action-button --> gux-list
+  gux-avatar-group-beta --> gux-list
   gux-button-multi --> gux-list
   gux-context-menu --> gux-list
   gux-table-toolbar-menu-button --> gux-list

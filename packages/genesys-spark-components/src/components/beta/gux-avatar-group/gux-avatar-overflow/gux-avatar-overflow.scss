@@ -14,11 +14,14 @@
 
   &:focus-visible {
     @include focus.gux-focus-ring-small;
+
+    background: var(--gse-ui-avatar-content-default-border-color);
   }
 
   &:hover,
   &:focus {
     z-index: var(--gse-semantic-zIndex-showFocus);
+    background: var(--gse-ui-avatar-content-default-border-color);
   }
 
   .gux-avatar-overflow-wrapper {

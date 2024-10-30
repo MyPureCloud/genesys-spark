@@ -4,11 +4,20 @@ import {
   JSX,
   Element,
   State,
-  Prop
+  Prop,
+  Listen
   // writeTask
 } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxAvatarAccent, GuxAvatarSize } from '../gux-avatar/gux-avatar.types';
+import {
+  first,
+  last,
+  next,
+  previous
+} from 'components/stable/gux-list/gux-list.service';
+
+const validFocusableItems = ['button', 'a', 'gux-avatar-overflow-beta'];
 
 interface ProcessedAvatar {
   focusableAvatar: HTMLGuxAvatarFocusableBetaElement;
@@ -27,6 +36,8 @@ interface ProcessedAvatar {
   shadow: true
 })
 export class GuxAvatarGroup {
+  private groupRef: HTMLElement;
+
   @Element()
   root: HTMLElement;
 
@@ -55,6 +66,28 @@ export class GuxAvatarGroup {
 
   private getAccent(index): string {
     return `${(index % 12) + 1}` as GuxAvatarAccent;
+  }
+
+  @Listen('keydown')
+  onKeyDown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'ArrowLeft':
+        event.preventDefault();
+        previous(this.groupRef, validFocusableItems);
+        break;
+      case 'ArrowRight':
+        event.preventDefault();
+        next(this.groupRef, validFocusableItems);
+        break;
+      case 'Home':
+        event.preventDefault();
+        first(this.groupRef, validFocusableItems);
+        break;
+      case 'End':
+        event.preventDefault();
+        last(this.groupRef, validFocusableItems);
+        break;
+    }
   }
 
   private processAvatars(): void {
@@ -93,6 +126,7 @@ export class GuxAvatarGroup {
           type="button"
           onClick={avatar.button.onclick}
           tabIndex={tabIndexVal}
+          role="listitem"
         >
           {this.renderAvatar(avatar, 'small')}
         </button>
@@ -103,12 +137,15 @@ export class GuxAvatarGroup {
           href={avatar.link.href}
           target={avatar.link.target}
           tabIndex={tabIndexVal}
+          role="listitem"
         >
           {this.renderAvatar(avatar, 'small')}
         </a>
       ) as JSX.Element;
     } else {
-      return this.renderAvatar(avatar, 'small') as JSX.Element;
+      return (
+        <span role="listitem">{this.renderAvatar(avatar, 'small')}</span>
+      ) as JSX.Element;
     }
   }
 
@@ -117,7 +154,14 @@ export class GuxAvatarGroup {
     size: GuxAvatarSize
   ): JSX.Element {
     return (
-      <gux-avatar-beta size={size} name={avatar.name} accent={avatar.accent}>
+      <gux-avatar-beta
+        size={size}
+        name={avatar.name}
+        accent={avatar.accent}
+        presence={avatar.avatar.presence}
+        label={avatar.avatar.label}
+        ring={avatar.avatar.ring}
+      >
         {avatar.img ? (
           <img slot="image" src={avatar.img.src} alt={avatar.img.alt} />
         ) : null}
@@ -168,7 +212,14 @@ export class GuxAvatarGroup {
 
     return [
       <div class="gux-avatar-group-wrapper">
-        <div class="gux-avatar-group">
+        <div
+          class={{
+            'gux-avatar-group': true,
+            'gux-avatar-group-overflow': overflowAvatars.length > 0
+          }}
+          ref={ref => (this.groupRef = ref)}
+          role="list"
+        >
           {visibleAvatars.map((avatar, index) =>
             this.renderInteractiveAvatar(avatar, index)
           )}

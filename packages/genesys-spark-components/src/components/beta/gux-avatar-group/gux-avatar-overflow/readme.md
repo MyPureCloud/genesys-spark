@@ -12,6 +12,31 @@
 | `count`  | `count`   |             | `number` | `0`     |
 
 
+## Slots
+
+| Slot | Description                                       |
+| ---- | ------------------------------------------------- |
+|      | Some list items with gux-avatar-focusable in them |
+
+
+## Dependencies
+
+### Used by
+
+ - [gux-avatar-group-beta](..)
+
+### Depends on
+
+- [gux-popup](../../../stable/gux-popup)
+
+### Graph
+```mermaid
+graph TD;
+  gux-avatar-overflow-beta --> gux-popup
+  gux-avatar-group-beta --> gux-avatar-overflow-beta
+  style gux-avatar-overflow-beta fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

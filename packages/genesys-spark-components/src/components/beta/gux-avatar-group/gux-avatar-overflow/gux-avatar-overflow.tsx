@@ -1,4 +1,13 @@
-import { Component, h, JSX, Element, Prop, State, Listen } from '@stencil/core';
+import {
+  Component,
+  h,
+  JSX,
+  Element,
+  Prop,
+  State,
+  Listen,
+  Method
+} from '@stencil/core';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { eventIsFrom } from '@utils/dom/event-is-from';
 import { trackComponent } from '@utils/tracking/usage';
@@ -32,7 +41,6 @@ export class GuxAvatarFocusable {
 
   private focusFirstItemInPopupList(): void {
     const listElement: HTMLGuxListElement = this.root.querySelector('gux-list');
-    console.log(listElement);
     afterNextRenderTimeout(() => {
       void listElement?.guxFocusFirstItem();
     });
@@ -40,48 +48,42 @@ export class GuxAvatarFocusable {
 
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
+    const target = event.target as HTMLElement;
     switch (event.key) {
       case 'ArrowDown':
-        if (eventIsFrom('.gux-avatar-overflow', event)) {
-          this.toggleOverflowList();
+        if (target.tagName === 'GUX-AVATAR-OVERFLOW-BETA') {
+          this.expanded = true;
           this.focusFirstItemInPopupList();
-          console.log('arrowdown');
         }
         break;
       case 'Enter':
-        if (eventIsFrom('.gux-avatar-overflow', event)) {
-          console.log('enter');
+        if (target.tagName === 'GUX-AVATAR-OVERFLOW-BETA') {
           void this.focusFirstItemInPopupList();
         }
         break;
       case 'Escape':
         if (eventIsFrom('gux-list', event)) {
-          console.log('escape from avatar oveflow');
           event.stopPropagation();
-          this.expanded = true;
+          this.expanded = false;
           this.overflowButtonElement?.focus();
         }
         break;
       case 'Tab':
-        this.expanded = true;
+        this.expanded = false;
         break;
     }
   }
 
-  // @Listen('keyup')
-  // onKeyup(event: KeyboardEvent): void {
-  //   switch (event.key) {
-  //     case ' ':
-  //       if (eventIsFrom('.gux-avatar-overflow', event)) {
-  //         console.log('keyp from avatar oveflow')
-  //         this.focusFirstItemInPopupList();
-  //       }
-  //   }
-  // }
+  /*
+   * Hide tooltip
+   */
+  @Method()
+  async focus(): Promise<void> {
+    return await this.overflowButtonElement?.focus();
+  }
 
   private toggleOverflowList(): void {
     this.expanded = !this.expanded;
-    this.focusFirstItemInPopupList();
   }
 
   render(): JSX.Element {
@@ -96,6 +98,8 @@ export class GuxAvatarFocusable {
             class="gux-avatar-overflow"
             ref={el => (this.overflowButtonElement = el)}
             onClick={() => this.toggleOverflowList()}
+            tabIndex={-1}
+            role="listitem"
           >
             <div class="gux-avatar-overflow-wrapper">
               <div class="gux-avatar-overflow-content"> +{this.count}</div>
