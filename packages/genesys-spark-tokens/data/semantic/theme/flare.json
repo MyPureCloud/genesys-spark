@@ -658,7 +658,7 @@
         },
         "info": {
           "10": {
-            "value": "{color.violet.200}",
+            "value": "{color.genesys_navy.200}",
             "type": "color"
           }
         },
