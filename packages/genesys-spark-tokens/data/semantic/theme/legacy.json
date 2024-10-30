@@ -10,6 +10,13 @@
         "value": "{font_family.roboto}",
         "type": "fontFamilies",
         "description": "The font family we use for body and labels in this theme."
+      },
+      "code": {
+        "body": {
+          "value": "{font_family.noto_sans_mono}",
+          "type": "fontFamilies",
+          "description": "The font family that is used for code blocks and snippets."
+        }
       }
     },
     "background": {
@@ -173,6 +180,10 @@
             "type": "color"
           },
           "30": {
+            "value": "{color_legacy.green.80}",
+            "type": "color"
+          },
+          "35": {
             "value": "{color_legacy.green.60}",
             "type": "color"
           },
@@ -343,6 +354,48 @@
             "type": "color"
           }
         },
+        "color_swatch": {
+          "10": {
+            "value": "{color.genesys_orange.500}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "20": {
+            "value": "{color.coral.300}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "30": {
+            "value": "{color.pear.400}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "40": {
+            "value": "{color.mango.500}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "50": {
+            "value": "{color.raspberry.300}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "60": {
+            "value": "{color.azure_blue.200}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "70": {
+            "value": "{color.mineral.300}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "80": {
+            "value": "{color.island.300}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          }
+        },
         "status": {
           "10": {
             "value": "{color.emerald.500}",
@@ -357,11 +410,11 @@
             "type": "color"
           },
           "40": {
-            "value": "{color.blueberry.600}",
+            "value": "{color.azure_blue.600}",
             "type": "color"
           },
           "50": {
-            "value": "{color.cornflower.600}",
+            "value": "{color.haze.600}",
             "type": "color"
           },
           "60": {
@@ -369,7 +422,7 @@
             "type": "color"
           },
           "70": {
-            "value": "{color.tomato.600}",
+            "value": "{color.genesys_orange.500}",
             "type": "color"
           }
         }
@@ -644,6 +697,12 @@
             "value": "{color_legacy.blue.60}",
             "type": "color"
           }
+        },
+        "emphasis": {
+          "default": {
+            "value": "{color.haze.700}",
+            "type": "color"
+          }
         }
       }
     },
@@ -660,6 +719,11 @@
         "small": {
           "value": "{border_radius.sm}",
           "type": "borderRadius"
+        },
+        "2xl": {
+          "value": "{border_radius.lg}",
+          "type": "borderRadius",
+          "description": "Used only for the toggle, since it needs to have the same value for legacy and flare."
         }
       },
       "container": {
@@ -716,6 +780,11 @@
         "xsmall": {
           "value": "{border_radius.sm}",
           "type": "borderRadius"
+        },
+        "2xl": {
+          "value": "{border_radius.lg}",
+          "type": "borderRadius",
+          "description": "Used only for the toggle, since it needs to have the same value for legacy and flare."
         }
       }
     }

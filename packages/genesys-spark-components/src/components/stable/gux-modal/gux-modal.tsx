@@ -13,6 +13,7 @@ import {
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { trackComponent } from '@utils/tracking/usage';
+import { hasSlot } from '@utils/dom/has-slot';
 
 import { GuxModalSize } from './gux-modal.types';
 
@@ -115,6 +116,18 @@ export class GuxModal {
     );
   }
 
+  private renderFooter(): JSX.Element {
+    if (hasSlot(this.root, 'footer')) {
+      return (
+        <footer>
+          <slot name="footer" />
+        </footer>
+      ) as JSX.Element;
+    } else {
+      return this.renderButtonFooter();
+    }
+  }
+
   render(): JSX.Element {
     const hasModalTitleSlot = this.hasModalTitleSlot();
     const titleID: string = randomHTMLId();
@@ -137,7 +150,7 @@ export class GuxModal {
               <slot name="content" />
             </p>
           </div>
-          {this.renderButtonFooter()}
+          {this.renderFooter()}
         </div>
       </dialog>
     ) as JSX.Element;

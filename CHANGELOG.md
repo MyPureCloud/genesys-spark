@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.91.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.91.0...v4.91.1) (2024-10-27)
+
+
+### Bug Fixes
+
+* **tokens:** updated token names based on pr feddback ([5a0d06a](https://github.com/MyPureCloud/genesys-spark/commit/5a0d06aafec96d24f3fc6a158b20602a469c14e3))
+
+## [4.91.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.90.0...v4.91.0) (2024-10-24)
+
+
+### Features
+
+* **table:** update select all on addition or removal of rows ([5258f47](https://github.com/MyPureCloud/genesys-spark/commit/5258f47bd6a3a3bea99bcc46073bf01b783ff786))
+* **tokens:** updated colors as described in GDS-2568 ([7a54c37](https://github.com/MyPureCloud/genesys-spark/commit/7a54c37cd8f7864cc516101d09008496d5cc5782))
+
+
+### Bug Fixes
+
+* **content-search:** fixed slotted input background color in legacy theme ([cb8cb2c](https://github.com/MyPureCloud/genesys-spark/commit/cb8cb2c799a5ed63c1359fa6bf92159c9cbc8edb))
+* **copy-to-clipboard:** fixed styles ([b92f5af](https://github.com/MyPureCloud/genesys-spark/commit/b92f5af9a68eb760a5175164387ccaef2c34afc0))
+* **datepicker:** remove background color on input ([0a13ff4](https://github.com/MyPureCloud/genesys-spark/commit/0a13ff400a6f21ac1b9d60d3cd3e39a568f7b280))
+* **form:** fix form-heading styles ([b48dd55](https://github.com/MyPureCloud/genesys-spark/commit/b48dd55071246bb4548b40cdcacff993caccc3b5))
+* **other:** form-field-input-clear-button fix styling ([9f786db](https://github.com/MyPureCloud/genesys-spark/commit/9f786db156ef7f712783f6b61380d7d0ce1d026a))
+* **popover-list:** change strategy to fixed ([9b4a091](https://github.com/MyPureCloud/genesys-spark/commit/9b4a091fb30c6e6a9ce4a9f82644464c5e58a21d))
+* **tokens:** fixed tokens as per UXQA review ([39fc277](https://github.com/MyPureCloud/genesys-spark/commit/39fc277e55ef4d74d01f440a3a5a3ce14f72f56b))
+
+## [4.90.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.89.0...v4.90.0) (2024-10-16)
+
+
+### Features
+
+* **time-picker:** Added min and max props ([bd94bb1](https://github.com/MyPureCloud/genesys-spark/commit/bd94bb16a37c6e23487ddf65a7f19ac65dd8f5b3))
+
+## [4.89.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.88.2...v4.89.0) (2024-10-15)
+
+
+### Features
+
+* **modal:** using the cta-group in the modal ([4b99620](https://github.com/MyPureCloud/genesys-spark/commit/4b99620dcd5f3880d0ea0bf1c2655b18839deaa6))
+* **other:** now using themeable tokens ([3decebf](https://github.com/MyPureCloud/genesys-spark/commit/3decebf1f402488030e47198dbd6d7e8641e9eab))
+
+
+### Bug Fixes
+
+* **popover:** fix duplicate guxdismiss event when simultaneously clicking outside and focusout ([#634](https://github.com/MyPureCloud/genesys-spark/issues/634)) ([c1f97a8](https://github.com/MyPureCloud/genesys-spark/commit/c1f97a8e8b1897b8e3fe0a0e0df6bf11cab8d5a1))
+* **table-toolbar:** fix console errors when slots are absent ([f15403f](https://github.com/MyPureCloud/genesys-spark/commit/f15403f0544b6274e74d471a2ad3bd16e5fcff8a))
+* **visualization:** add height to chart container ([6ff0660](https://github.com/MyPureCloud/genesys-spark/commit/6ff0660dd705ce122785f563a9110d26d6902e64))
+
 ### [4.88.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.88.1...v4.88.2) (2024-10-09)
 
 

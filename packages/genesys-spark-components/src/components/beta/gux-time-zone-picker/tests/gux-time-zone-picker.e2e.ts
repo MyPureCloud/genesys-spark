@@ -18,8 +18,9 @@ async function openWithClick(page: E2EPage) {
 
 async function unfilteredOptions(page: E2EPage) {
   const element = await page.find('gux-time-zone-picker-beta');
-  return element.shadowRoot.querySelectorAll(
-    `gux-dropdown gux-listbox gux-option:not(.gux-filtered)`
+
+  return await element.findAll(
+    'pierce/gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
   );
 }
 

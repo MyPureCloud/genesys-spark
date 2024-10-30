@@ -24,14 +24,9 @@ exports[`gux-modal #render should render large modal 1`] = `
             <slot name="content"></slot>
           </p>
         </div>
-        <div class="gux-button-footer">
-          <div class="gux-start-align-buttons">
-            <slot name="start-align-buttons"></slot>
-          </div>
-          <div class="gux-end-align-buttons">
-            <slot name="end-align-buttons"></slot>
-          </div>
-        </div>
+        <footer>
+          <slot name="footer"></slot>
+        </footer>
       </div>
     </dialog>
   </template>
@@ -41,20 +36,24 @@ exports[`gux-modal #render should render large modal 1`] = `
   <div slot="content">
     This contains the modal content.
   </div>
-  <div slot="start-align-buttons">
-    <gux-button-slot>
-      <button>
-        Cancel
-      </button>
-    </gux-button-slot>
-  </div>
-  <div slot="end-align-buttons">
-    <gux-button-slot accent="primary">
-      <button>
-        Accept
-      </button>
-    </gux-button-slot>
-  </div>
+  <gux-cta-group align="end" slot="footer">
+    <gux-button slot="primary">
+      <template shadowrootmode="open">
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </template>
+      Primary
+    </gux-button>
+    <gux-button slot="dismiss">
+      <template shadowrootmode="open">
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </template>
+      Cancel
+    </gux-button>
+  </gux-cta-group>
 </gux-modal>
 `;
 
@@ -82,14 +81,9 @@ exports[`gux-modal #render should render medium modal 1`] = `
             <slot name="content"></slot>
           </p>
         </div>
-        <div class="gux-button-footer">
-          <div class="gux-start-align-buttons">
-            <slot name="start-align-buttons"></slot>
-          </div>
-          <div class="gux-end-align-buttons">
-            <slot name="end-align-buttons"></slot>
-          </div>
-        </div>
+        <footer>
+          <slot name="footer"></slot>
+        </footer>
       </div>
     </dialog>
   </template>
@@ -99,20 +93,24 @@ exports[`gux-modal #render should render medium modal 1`] = `
   <div slot="content">
     This contains the modal content.
   </div>
-  <div slot="start-align-buttons">
-    <gux-button-slot>
-      <button>
-        Cancel
-      </button>
-    </gux-button-slot>
-  </div>
-  <div slot="end-align-buttons">
-    <gux-button-slot accent="primary">
-      <button>
-        Accept
-      </button>
-    </gux-button-slot>
-  </div>
+  <gux-cta-group align="end" slot="footer">
+    <gux-button slot="primary">
+      <template shadowrootmode="open">
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </template>
+      Primary
+    </gux-button>
+    <gux-button slot="dismiss">
+      <template shadowrootmode="open">
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </template>
+      Cancel
+    </gux-button>
+  </gux-cta-group>
 </gux-modal>
 `;
 
@@ -140,14 +138,9 @@ exports[`gux-modal #render should render modal with a specified initial focus el
             <slot name="content"></slot>
           </p>
         </div>
-        <div class="gux-button-footer">
-          <div class="gux-start-align-buttons">
-            <slot name="start-align-buttons"></slot>
-          </div>
-          <div class="gux-end-align-buttons">
-            <slot name="end-align-buttons"></slot>
-          </div>
-        </div>
+        <footer>
+          <slot name="footer"></slot>
+        </footer>
       </div>
     </dialog>
   </template>
@@ -157,8 +150,16 @@ exports[`gux-modal #render should render modal with a specified initial focus el
   <div slot="content">
     This contains the modal content.
   </div>
-  <div slot="start-align-buttons">
-    <gux-button id="cancelButton">
+  <gux-cta-group align="end" slot="footer">
+    <gux-button slot="primary">
+      <template shadowrootmode="open">
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </template>
+      Primary
+    </gux-button>
+    <gux-button slot="dismiss">
       <template shadowrootmode="open">
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
@@ -166,18 +167,11 @@ exports[`gux-modal #render should render modal with a specified initial focus el
       </template>
       Cancel
     </gux-button>
-  </div>
-  <div slot="end-align-buttons">
-    <gux-button-slot accent="primary">
-      <button>
-        Accept
-      </button>
-    </gux-button-slot>
-  </div>
+  </gux-cta-group>
 </gux-modal>
 `;
 
-exports[`gux-modal #render should render modal with just left align buttons 1`] = `
+exports[`gux-modal #render should render modal with just left align buttons (to be deprecated) 1`] = `
 <gux-modal size="small">
   <template shadowrootmode="open">
     <dialog aria-labelledby="gux-i">
@@ -228,7 +222,7 @@ exports[`gux-modal #render should render modal with just left align buttons 1`] 
 </gux-modal>
 `;
 
-exports[`gux-modal #render should render modal with just right align buttons 1`] = `
+exports[`gux-modal #render should render modal with just right align buttons (to be deprecated) 1`] = `
 <gux-modal size="small">
   <template shadowrootmode="open">
     <dialog aria-labelledby="gux-i">
@@ -268,6 +262,64 @@ exports[`gux-modal #render should render modal with just right align buttons 1`]
   </div>
   <div slot="content">
     This contains the modal content.
+  </div>
+  <div slot="end-align-buttons">
+    <gux-button-slot accent="primary">
+      <button>
+        Accept
+      </button>
+    </gux-button-slot>
+  </div>
+</gux-modal>
+`;
+
+exports[`gux-modal #render should render modal with separate button slots (to be deprecated) 1`] = `
+<gux-modal size="small">
+  <template shadowrootmode="open">
+    <dialog aria-labelledby="gux-i">
+      <div class="gux-modal-container gux-small">
+        <gux-dismiss-button>
+          <template shadowrootmode="open">
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </template>
+        </gux-dismiss-button>
+        <h1 class="gux-modal-header" id="gux-i">
+          <slot name="title"></slot>
+        </h1>
+        <div class="gux-modal-content">
+          <p>
+            <slot name="content"></slot>
+          </p>
+        </div>
+        <div class="gux-button-footer">
+          <div class="gux-start-align-buttons">
+            <slot name="start-align-buttons"></slot>
+          </div>
+          <div class="gux-end-align-buttons">
+            <slot name="end-align-buttons"></slot>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </template>
+  <div slot="title">
+    Modal Title
+  </div>
+  <div slot="content">
+    This contains the modal content.
+  </div>
+  <div slot="start-align-buttons">
+    <gux-button-slot>
+      <button>
+        Cancel
+      </button>
+    </gux-button-slot>
   </div>
   <div slot="end-align-buttons">
     <gux-button-slot accent="primary">
@@ -300,34 +352,33 @@ exports[`gux-modal #render should render modal without a title 1`] = `
             <slot name="content"></slot>
           </p>
         </div>
-        <div class="gux-button-footer">
-          <div class="gux-start-align-buttons">
-            <slot name="start-align-buttons"></slot>
-          </div>
-          <div class="gux-end-align-buttons">
-            <slot name="end-align-buttons"></slot>
-          </div>
-        </div>
+        <footer>
+          <slot name="footer"></slot>
+        </footer>
       </div>
     </dialog>
   </template>
   <div slot="content">
     This contains the modal content.
   </div>
-  <div slot="start-align-buttons">
-    <gux-button-slot>
-      <button>
-        Cancel
-      </button>
-    </gux-button-slot>
-  </div>
-  <div slot="end-align-buttons">
-    <gux-button-slot accent="primary">
-      <button>
-        Accept
-      </button>
-    </gux-button-slot>
-  </div>
+  <gux-cta-group align="end" slot="footer">
+    <gux-button slot="primary">
+      <template shadowrootmode="open">
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </template>
+      Primary
+    </gux-button>
+    <gux-button slot="dismiss">
+      <template shadowrootmode="open">
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </template>
+      Cancel
+    </gux-button>
+  </gux-cta-group>
 </gux-modal>
 `;
 
@@ -399,14 +450,9 @@ exports[`gux-modal #render should render small modal 1`] = `
             <slot name="content"></slot>
           </p>
         </div>
-        <div class="gux-button-footer">
-          <div class="gux-start-align-buttons">
-            <slot name="start-align-buttons"></slot>
-          </div>
-          <div class="gux-end-align-buttons">
-            <slot name="end-align-buttons"></slot>
-          </div>
-        </div>
+        <footer>
+          <slot name="footer"></slot>
+        </footer>
       </div>
     </dialog>
   </template>
@@ -416,20 +462,24 @@ exports[`gux-modal #render should render small modal 1`] = `
   <div slot="content">
     This contains the modal content.
   </div>
-  <div slot="start-align-buttons">
-    <gux-button-slot>
-      <button>
-        Cancel
-      </button>
-    </gux-button-slot>
-  </div>
-  <div slot="end-align-buttons">
-    <gux-button-slot accent="primary">
-      <button>
-        Accept
-      </button>
-    </gux-button-slot>
-  </div>
+  <gux-cta-group align="end" slot="footer">
+    <gux-button slot="primary">
+      <template shadowrootmode="open">
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </template>
+      Primary
+    </gux-button>
+    <gux-button slot="dismiss">
+      <template shadowrootmode="open">
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </template>
+      Cancel
+    </gux-button>
+  </gux-cta-group>
 </gux-modal>
 `;
 
@@ -457,14 +507,9 @@ exports[`gux-modal #render should render small modal by default 1`] = `
             <slot name="content"></slot>
           </p>
         </div>
-        <div class="gux-button-footer">
-          <div class="gux-start-align-buttons">
-            <slot name="start-align-buttons"></slot>
-          </div>
-          <div class="gux-end-align-buttons">
-            <slot name="end-align-buttons"></slot>
-          </div>
-        </div>
+        <footer>
+          <slot name="footer"></slot>
+        </footer>
       </div>
     </dialog>
   </template>
@@ -474,19 +519,23 @@ exports[`gux-modal #render should render small modal by default 1`] = `
   <div slot="content">
     This contains the modal content.
   </div>
-  <div slot="start-align-buttons">
-    <gux-button-slot>
-      <button>
-        Cancel
-      </button>
-    </gux-button-slot>
-  </div>
-  <div slot="end-align-buttons">
-    <gux-button-slot accent="primary">
-      <button>
-        Accept
-      </button>
-    </gux-button-slot>
-  </div>
+  <gux-cta-group align="end" slot="footer">
+    <gux-button slot="primary">
+      <template shadowrootmode="open">
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </template>
+      Primary
+    </gux-button>
+    <gux-button slot="dismiss">
+      <template shadowrootmode="open">
+        <button class="gux-secondary" type="button">
+          <slot></slot>
+        </button>
+      </template>
+      Cancel
+    </gux-button>
+  </gux-cta-group>
 </gux-modal>
 `;

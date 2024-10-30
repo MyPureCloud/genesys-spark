@@ -70,7 +70,7 @@ export class GuxCopyToClipboard {
     const iconName = this.getIconName(this.tooltipContent);
     if (iconName) {
       return (
-        <gux-icon icon-name={iconName} decorative></gux-icon>
+        <gux-icon icon-name={iconName} size="small" decorative></gux-icon>
       ) as JSX.Element;
     }
   }
@@ -102,7 +102,11 @@ export class GuxCopyToClipboard {
           {/* This is a named slot because we don't want it to be possible to slot a text node.
           Slotted text nodes are not targeted by `::slotted(*)` so they are not styled as expected. */}
           <slot name="content" />
-          <gux-icon icon-name="fa/copy-regular" decorative></gux-icon>
+          <gux-icon
+            icon-name="fa/copy-regular"
+            size="small"
+            decorative
+          ></gux-icon>
         </div>
         {this.renderTooltip()}
       </button>

@@ -99,6 +99,13 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
           display: none;
         }
       }
+
+      footer {
+        padding-right: var(--gse-ui-modal-padding);
+        padding-bottom: var(--gse-ui-modal-padding);
+        padding-left: var(--gse-ui-modal-padding);
+        margin-top: var(--gse-ui-modal-gap);
+      }
     }
 
     .gux-modal-container {
