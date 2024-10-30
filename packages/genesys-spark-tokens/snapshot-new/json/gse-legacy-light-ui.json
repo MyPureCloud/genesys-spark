@@ -1409,7 +1409,7 @@
           "background_color": "#2754ac"
         }
       },
-      "border_radius": "100%"
+      "border_radius": "16px"
     },
     "handle": {
       "width": "16px",
@@ -1455,7 +1455,7 @@
         "width": "2px",
         "style": "solid"
       },
-      "border_radius": "100%",
+      "border_radius": "16px",
       "offset": "1px"
     }
   },

@@ -281,7 +281,8 @@
       "interactive": {
         "xlarge": "100%",
         "large": "16px",
-        "small": "4px"
+        "small": "4px",
+        "2xl": "16px"
       },
       "container": {
         "large": "16px",
@@ -301,7 +302,8 @@
         "large": "16px",
         "medium": "8px",
         "small": "4px",
-        "xsmall": "2px"
+        "xsmall": "2px",
+        "2xl": "16px"
       }
     }
   },
