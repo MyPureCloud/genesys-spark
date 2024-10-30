@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.92.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.91.1...v4.92.0) (2024-10-30)
+
+
+### Features
+
+* **selector-cards:** update checkbox and radiobutton size ([a35d8b8](https://github.com/MyPureCloud/genesys-spark/commit/a35d8b8b2b4b581bc9116c3d5333ce7feff5f790))
+
+
+### Bug Fixes
+
+* **context-menu:** improve performance of popup subcomponent ([2ffe9d2](https://github.com/MyPureCloud/genesys-spark/commit/2ffe9d270e0fc9e0433cea930a8cd11cb7184bf2))
+* **flyout-menu:** apply box-sizing to flyout menu options ([42a667c](https://github.com/MyPureCloud/genesys-spark/commit/42a667c0d01e1f38368d0677e0d3b77ff500049b))
+* **selector-cards:** add badge to examples file ([70998cc](https://github.com/MyPureCloud/genesys-spark/commit/70998ccd460c35006e7ea63017def280563c5805))
+* **selector-cards:** update paddings ([79715c8](https://github.com/MyPureCloud/genesys-spark/commit/79715c8921dcc05cf0850e3b94a4d58294e3b3dc))
+* **tokens:** fixed toggle border radii tokens ([#678](https://github.com/MyPureCloud/genesys-spark/issues/678)) ([83678af](https://github.com/MyPureCloud/genesys-spark/commit/83678af7c45a1c9937ce5605a032b582542fa5e0))
+* **tokens:** regenerated figma styles and vars ([693ac04](https://github.com/MyPureCloud/genesys-spark/commit/693ac04b855df84963451bb38e633c45afd44584))
+* **tokens:** Updated info border color ([c6ed24d](https://github.com/MyPureCloud/genesys-spark/commit/c6ed24d3ebc9f677ef900c020387128ae1bb52eb))
+
 ### [4.91.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.91.0...v4.91.1) (2024-10-27)
 
 
