@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-button #render should render danger button 1`] = `"<gux-button accent="danger" hydrated=""><template shadowrootmode="open"><button id="button-ysum47nzkl" type="button" class="gux-danger"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render danger button: functionality 1`] = `"<gux-button accent="danger" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" class="gux-danger"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render default button 1`] = `"<gux-button hydrated=""><template shadowrootmode="open"><button id="button-ki70wh9k2d" type="button" class="gux-secondary"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render default button: functionality 1`] = `"<gux-button hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" class="gux-secondary"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled danger button 1`] = `"<gux-button accent="danger" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-pob4lvt16p" type="button" disabled="" class="gux-danger"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render disabled danger button: functionality 1`] = `"<gux-button accent="danger" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" disabled="" class="gux-danger"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled default button 1`] = `"<gux-button disabled="" hydrated=""><template shadowrootmode="open"><button id="button-0i3f65fp6n" type="button" disabled="" class="gux-secondary"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render disabled default button: functionality 1`] = `"<gux-button disabled="" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" disabled="" class="gux-secondary"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled ghost button 1`] = `"<gux-button accent="ghost" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-zq8yv1neqp" type="button" disabled="" class="gux-ghost"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render disabled ghost button: functionality 1`] = `"<gux-button accent="ghost" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" disabled="" class="gux-ghost"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled inline button 1`] = `"<gux-button accent="inline" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-66uxnucx7o" type="button" disabled="" class="gux-inline"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render disabled inline button: functionality 1`] = `"<gux-button accent="inline" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" disabled="" class="gux-inline"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled invalid button 1`] = `"<gux-button accent="invalid" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-8bb3znmybt" type="button" disabled="" class="gux-invalid"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render disabled invalid button: functionality 1`] = `"<gux-button accent="invalid" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" disabled="" class="gux-invalid"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled primary button 1`] = `"<gux-button accent="primary" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-apva8o578c" type="button" disabled="" class="gux-primary"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render disabled primary button: functionality 1`] = `"<gux-button accent="primary" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" disabled="" class="gux-primary"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled secondary button 1`] = `"<gux-button accent="secondary" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-7j2zbn5221" type="button" disabled="" class="gux-secondary"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render disabled secondary button: functionality 1`] = `"<gux-button accent="secondary" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" disabled="" class="gux-secondary"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render disabled tertiary button 1`] = `"<gux-button accent="tertiary" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-xqmbrq88yi" type="button" disabled="" class="gux-tertiary"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render disabled tertiary button: functionality 1`] = `"<gux-button accent="tertiary" disabled="" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" disabled="" class="gux-tertiary"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render ghost button 1`] = `"<gux-button accent="ghost" hydrated=""><template shadowrootmode="open"><button id="button-d32cmq7v0y" type="button" class="gux-ghost"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render ghost button: functionality 1`] = `"<gux-button accent="ghost" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" class="gux-ghost"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render inline button 1`] = `"<gux-button accent="inline" hydrated=""><template shadowrootmode="open"><button id="button-k95gix2zfx" type="button" class="gux-inline"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render inline button: functionality 1`] = `"<gux-button accent="inline" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" class="gux-inline"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render invalid button 1`] = `"<gux-button accent="invalid" hydrated=""><template shadowrootmode="open"><button id="button-fi3zol88ig" type="button" class="gux-invalid"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render invalid button: functionality 1`] = `"<gux-button accent="invalid" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" class="gux-invalid"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render primary button 1`] = `"<gux-button accent="primary" hydrated=""><template shadowrootmode="open"><button id="button-ygcgd9dxm1" type="button" class="gux-primary"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render primary button: functionality 1`] = `"<gux-button accent="primary" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" class="gux-primary"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render secondary button 1`] = `"<gux-button accent="secondary" hydrated=""><template shadowrootmode="open"><button id="button-b1u3q8e8pr" type="button" class="gux-secondary"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render secondary button: functionality 1`] = `"<gux-button accent="secondary" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" class="gux-secondary"><slot></slot></button></template>Button</gux-button>"`;
 
-exports[`gux-button #render should render tertiary button 1`] = `"<gux-button accent="tertiary" hydrated=""><template shadowrootmode="open"><button id="button-gybbyoj373" type="button" class="gux-tertiary"><slot></slot></button></template>Button</gux-button>"`;
+exports[`gux-button #render should render tertiary button: functionality 1`] = `"<gux-button accent="tertiary" hydrated=""><template shadowrootmode="open"><button id="button-i" type="button" class="gux-tertiary"><slot></slot></button></template>Button</gux-button>"`;
