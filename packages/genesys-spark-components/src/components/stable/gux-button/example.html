@@ -49,8 +49,8 @@
     <gux-icon
       icon-name="fa/diamond-regular"
       screenreader-text="This will be read by a screen reader"
-    ></gux-icon
-  ></gux-button>
+    ></gux-icon>
+  </gux-button>
 
   <gux-button accent="danger" onclick="notify(event)">
     <gux-icon
@@ -58,6 +58,121 @@
       screenreader-text="This will be read by a screen reader"
     ></gux-icon
   ></gux-button>
+</div>
+
+<h3>Title-like Tooltip</h3>
+<h4>Text with extra description</h4>
+<div class="container">
+  <gux-button onclick="notify(event)"
+    >Default<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+
+  <gux-button accent="primary" onclick="notify(event)"
+    >Primary<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+
+  <gux-button accent="secondary" onclick="notify(event)"
+    >Secondary<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+
+  <gux-button accent="tertiary" onclick="notify(event)"
+    >Tertiary<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+
+  <gux-button accent="ghost" onclick="notify(event)"
+    >Ghost<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+
+  <gux-button accent="danger" onclick="notify(event)"
+    >Danger<gux-tooltip-beta
+      ><span slot="content">Descriptive text</span></gux-tooltip-beta
+    ></gux-button
+  >
+</div>
+
+<h4>Icon Only</h4>
+<div class="container">
+  <gux-button onclick="notify(event)">
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta aria-hidden="true"
+      ><span slot="content"
+        >Visual of screen reader text</span
+      ></gux-tooltip-beta
+    >
+  </gux-button>
+
+  <gux-button accent="primary" onclick="notify(event)">
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta aria-hidden="true"
+      ><span slot="content"
+        >Visual of screen reader text</span
+      ></gux-tooltip-beta
+    >
+  </gux-button>
+
+  <gux-button accent="secondary" onclick="notify(event)">
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta aria-hidden="true"
+      ><span slot="content"
+        >Visual of screen reader text</span
+      ></gux-tooltip-beta
+    >
+  </gux-button>
+
+  <gux-button accent="tertiary" onclick="notify(event)">
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta aria-hidden="true"
+      ><span slot="content"
+        >Visual of screen reader text</span
+      ></gux-tooltip-beta
+    >
+  </gux-button>
+
+  <gux-button accent="ghost" onclick="notify(event)">
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta aria-hidden="true"
+      ><span slot="content"
+        >Visual of screen reader text</span
+      ></gux-tooltip-beta
+    >
+  </gux-button>
+
+  <gux-button accent="danger" onclick="notify(event)">
+    <gux-icon
+      icon-name="fa/diamond-regular"
+      screenreader-text="This will be read by a screen reader"
+    ></gux-icon>
+    <gux-tooltip-beta aria-hidden="true"
+      ><span slot="content"
+        >Visual of screen reader text</span
+      ></gux-tooltip-beta
+    >
+  </gux-button>
 </div>
 
 <h3>Text in span with icon</h3>
@@ -95,7 +210,7 @@
 
 <h3>Inline</h3>
 <div class="container">
-  <gux-button accent="inline" onclick="notify(event)">
+  <gux-button accent="inline" gux-title="tooltip" onclick="notify(event)">
     <div class="align-content">
       <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
       <span>Text in a span element</span>
@@ -137,8 +252,8 @@
     ><gux-icon
       icon-name="fa/diamond-regular"
       screenreader-text="This will be read by a screen reader"
-    ></gux-icon
-  ></gux-button>
+    ></gux-icon>
+  </gux-button>
 
   <gux-button disabled accent="primary" onclick="notify(event)">
     <gux-icon

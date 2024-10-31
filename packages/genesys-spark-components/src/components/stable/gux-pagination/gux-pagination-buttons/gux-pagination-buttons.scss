@@ -25,8 +25,8 @@ gux-pagination-buttons {
 
     .gux-pagination-buttons-list-container {
       display: flex;
-      flex-shrink: 0;
       flex-direction: row;
+      flex-shrink: 0;
       flex-wrap: nowrap;
       gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
       place-content: stretch center;
