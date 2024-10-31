@@ -32,7 +32,7 @@ describe('gux-tooltip-beta', () => {
         await a11yCheck(page);
 
         await element.hover();
-        await page.waitForChanges();
+        await page.waitForTimeout(2000);
 
         await a11yCheck(page);
 
