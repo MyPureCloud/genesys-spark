@@ -19,7 +19,7 @@ describe('gux-copy-to-clipboard', () => {
     const element = await page.find('gux-copy-to-clipboard');
 
     await element.hover();
-    await page.waitForChanges();
+    await page.waitForTimeout(2000);
 
     const tooltip = await element.find('pierce/gux-tooltip');
     await a11yCheck(page);
