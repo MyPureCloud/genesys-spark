@@ -1,5 +1,6 @@
 import { Component, Element, h, Host, JSX, Prop, State } from '@stencil/core';
 import { logWarn } from '@utils/error/log-error';
+import { GuxAvatarListItemElement } from './gux-avatar-list-item.types';
 
 /**
  * @slot - text
@@ -20,6 +21,9 @@ export class GuxListItem {
 
   @Prop()
   focusable: boolean = false;
+
+  @Prop()
+  interactiveElement: GuxAvatarListItemElement = 'button';
 
   @State()
   private slottedAvatar: HTMLGuxAvatarBetaElement;
@@ -129,13 +133,23 @@ export class GuxListItem {
   render(): JSX.Element {
     return (
       <Host role="listitem">
-        <button
-          ref={ref => (this.buttonRef = ref)}
-          type="button"
-          tabIndex={this.focusable ? 0 : -1}
-        >
-          <slot></slot>
-        </button>
+        {this.interactiveElement === 'link' ? (
+          <a
+            ref={ref => (this.buttonRef = ref)}
+            href="#"
+            tabIndex={this.focusable ? 0 : -1}
+          >
+            <slot></slot>
+          </a>
+        ) : (
+          <button
+            ref={ref => (this.buttonRef = ref)}
+            type="button"
+            tabIndex={this.focusable ? 0 : -1}
+          >
+            <slot></slot>
+          </button>
+        )}
       </Host>
     ) as JSX.Element;
   }

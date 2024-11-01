@@ -102,11 +102,12 @@ export class GuxAvatarFocusable {
               ref={el => (this.overflowButtonElement = el)}
               onClick={() => this.toggleOverflowList()}
               tabIndex={-1}
-              role="listitem"
+              aria-haspopup="true"
+              aria-expanded={this.expanded.toString()}
             >
-              <div class="gux-avatar-overflow-wrapper">
-                <div class="gux-avatar-overflow-content"> +{this.count}</div>
-              </div>
+              <span class="gux-avatar-overflow-wrapper">
+                <span class="gux-avatar-overflow-content"> +{this.count}</span>
+              </span>
             </button>
           </div>
           <div slot="popup" class="gux-list-container">

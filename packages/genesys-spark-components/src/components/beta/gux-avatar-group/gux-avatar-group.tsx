@@ -137,6 +137,7 @@ export class GuxAvatarGroup {
         <gux-avatar-list-item-beta
           onClick={() => avatar.link.click()}
           focusable={tabIndexVal}
+          interactive-element="link"
         >
           {this.renderAvatar(avatar, 'small')}
         </gux-avatar-list-item-beta>
@@ -216,7 +217,6 @@ export class GuxAvatarGroup {
           'gux-avatar-group-overflow': overflowAvatars.length > 0
         }}
         ref={ref => (this.groupRef = ref)}
-        role="list"
       >
         {visibleAvatars.map((avatar, index) =>
           this.renderVisibleListItem(avatar, index)
