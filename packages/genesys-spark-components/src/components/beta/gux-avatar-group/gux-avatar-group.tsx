@@ -17,7 +17,10 @@ import {
   previous
 } from 'components/stable/gux-list/gux-list.service';
 
-const validFocusableItems = ['gux-avatar-list-item-beta'];
+const validFocusableItems = [
+  'gux-avatar-list-item-beta',
+  'gux-avatar-overflow-beta'
+];
 
 interface ProcessedAvatar {
   focusableAvatar: HTMLGuxAvatarFocusableBetaElement;
@@ -37,7 +40,6 @@ interface ProcessedAvatar {
 })
 export class GuxAvatarGroup {
   private groupRef: HTMLElement;
-  private overflowRef: HTMLGuxAvatarOverflowBetaElement;
 
   @Element()
   root: HTMLElement;
@@ -221,20 +223,11 @@ export class GuxAvatarGroup {
         )}
 
         {overflowAvatars.length > 0 && (
-          <gux-avatar-list-item-beta
-            onFocusin={() => this.overflowRef.guxFocus()}
-          >
-            <gux-avatar-overflow-beta
-              count={overflowAvatars.length}
-              ref={ref => (this.overflowRef = ref)}
-            >
-              <gux-list>
-                {overflowAvatars.map(avatar =>
-                  this.renderPopupListItem(avatar)
-                )}
-              </gux-list>
-            </gux-avatar-overflow-beta>
-          </gux-avatar-list-item-beta>
+          <gux-avatar-overflow-beta count={overflowAvatars.length}>
+            <gux-list>
+              {overflowAvatars.map(avatar => this.renderPopupListItem(avatar))}
+            </gux-list>
+          </gux-avatar-overflow-beta>
         )}
       </div>
     ) as JSX.Element;

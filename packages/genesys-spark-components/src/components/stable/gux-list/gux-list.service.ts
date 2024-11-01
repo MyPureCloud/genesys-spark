@@ -78,6 +78,13 @@ function focusIndex(
     focusIndex += items.length;
   }
 
+  // This is needed to ensure avatar overflow items can be navigated in a list
+  if (items[focusIndex].tagName === 'GUX-AVATAR-OVERFLOW-BETA') {
+    const overflowItem = items[focusIndex] as HTMLGuxAvatarOverflowBetaElement;
+    overflowItem.guxFocus();
+    return;
+  }
+
   items[focusIndex]?.focus();
 }
 

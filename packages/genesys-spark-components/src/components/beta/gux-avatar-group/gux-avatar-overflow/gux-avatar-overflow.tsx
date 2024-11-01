@@ -6,7 +6,8 @@ import {
   Prop,
   State,
   Listen,
-  Method
+  Method,
+  Host
 } from '@stencil/core';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { eventIsFrom } from '@utils/dom/event-is-from';
@@ -41,6 +42,7 @@ export class GuxAvatarFocusable {
 
   private focusFirstItemInPopupList(): void {
     const listElement: HTMLGuxListElement = this.root.querySelector('gux-list');
+    listElement.focus();
     afterNextRenderTimeout(() => {
       void listElement?.guxFocusFirstItem();
     });
@@ -88,28 +90,30 @@ export class GuxAvatarFocusable {
 
   render(): JSX.Element {
     return (
-      <gux-popup
-        expanded={this.expanded}
-        disabled={false}
-        exceedTargetWidth={true}
-      >
-        <div class="gux-target" slot="target">
-          <button
-            class="gux-avatar-overflow"
-            ref={el => (this.overflowButtonElement = el)}
-            onClick={() => this.toggleOverflowList()}
-            tabIndex={-1}
-            role="listitem"
-          >
-            <div class="gux-avatar-overflow-wrapper">
-              <div class="gux-avatar-overflow-content"> +{this.count}</div>
-            </div>
-          </button>
-        </div>
-        <div slot="popup" class="gux-list-container">
-          <slot></slot>
-        </div>
-      </gux-popup>
+      <Host role="listitem">
+        <gux-popup
+          expanded={this.expanded}
+          disabled={false}
+          exceedTargetWidth={true}
+        >
+          <div class="gux-target" slot="target">
+            <button
+              class="gux-avatar-overflow"
+              ref={el => (this.overflowButtonElement = el)}
+              onClick={() => this.toggleOverflowList()}
+              tabIndex={-1}
+              role="listitem"
+            >
+              <div class="gux-avatar-overflow-wrapper">
+                <div class="gux-avatar-overflow-content"> +{this.count}</div>
+              </div>
+            </button>
+          </div>
+          <div slot="popup" class="gux-list-container">
+            <slot></slot>
+          </div>
+        </gux-popup>
+      </Host>
     ) as JSX.Element;
   }
 }

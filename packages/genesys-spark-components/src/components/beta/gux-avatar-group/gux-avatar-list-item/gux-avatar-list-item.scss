@@ -1,9 +1,11 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 
 :host {
-  width: var(--gse-ui-avatar-small-size);
-  height: var(--gse-ui-avatar-small-size);
+  width: 100%;
+  height: 32px;
+  text-align: start;
   border-radius: 50%;
+  outline: none;
 
   button {
     display: inline-block;
@@ -20,5 +22,52 @@
 
       background: var(--gse-ui-avatar-content-default-border-color);
     }
+
+    // &.gux-avatar-plus-name {
+    //   all: unset;
+    //   box-sizing: border-box;
+    //   width: 100%;
+    //   min-height: var(--gse-ui-menu-option-height);
+    //   padding: var(--gse-ui-menu-option-padding);
+    //   font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
+    //   font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
+    //   font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
+    //   line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
+    //   color: var(--gse-ui-menu-option-label-foregroundColor);
+    //   word-wrap: break-word;
+    //   cursor: pointer;
+    //   background-color: var(--gse-ui-menu-option-default-backgroundColor);
+    //   border: none;
+    //   outline: none;
+    //   outline-offset: calc(var(--gse-ui-menu-option-focus-border-width) * -1);
+
+    //   .gux-avatar-flex {
+    //     display: flex;
+    //     align-items: center;
+    //     gap: 8px;
+    //   }
+
+    //   &:focus-visible {
+    //     border-radius: var(
+    //       --gse-semantic-focusRing-cornerRadius,
+    //       var(--gse-semantic-focusOutline-sm-borderRadius)
+    //     );
+    //     outline: var(--gse-ui-menu-option-focus-border-width)
+    //       var(--gse-ui-menu-option-focus-border-style)
+    //       var(--gse-ui-menu-option-focus-border-color);
+    //   }
+
+    //   &:hover {
+    //     background: var(--gse-ui-menu-option-hover-backgroundColor);
+    //   }
+
+    //   &:active {
+    //     font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
+    //     font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
+    //     font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
+    //     line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
+    //     background: var(--gse-ui-menu-option-selected-backgroundColor);
+    //   }
+    // }
   }
 }

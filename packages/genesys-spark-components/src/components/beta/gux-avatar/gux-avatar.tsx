@@ -221,7 +221,11 @@ export class GuxAvatar {
   }
 
   private renderTooltip(): JSX.Element | null {
-    if (['A', 'BUTTON'].includes(this.parentElement.tagName)) {
+    if (
+      ['A', 'BUTTON', 'GUX-AVATAR-LIST-ITEM-BETA'].includes(
+        this.parentElement.tagName
+      )
+    ) {
       return (
         <gux-tooltip-beta placement="top" ref={el => (this.tooltip = el)}>
           <div slot="content">{this.getDescriptionText()}</div>
