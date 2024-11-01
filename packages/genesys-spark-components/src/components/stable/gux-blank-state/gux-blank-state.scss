@@ -1,4 +1,4 @@
-@use '../../../../../genesys-spark-tokens/dist/scss/_gse-ui-feedback'; // TODO: https://inindca.atlassian.net/browse/COMUI-2242
+$gse-ui-blankState-large-minWidth: 570px; // --gse-ui-blankState-large-minWidth
 
 :host {
   display: flex;
@@ -70,7 +70,7 @@
 }
 
 // https://bholmes.dev/blog/alternative-to-css-variable-media-queries/
-@container (width < #{gse-ui-feedback.$gse-ui-blankState-large-minWidth}) {
+@container (width < #{$gse-ui-blankState-large-minWidth}) {
   .gux-container {
     ::slotted(gux-icon) {
       width: var(--gse-ui-blankState-icon-size-sm);

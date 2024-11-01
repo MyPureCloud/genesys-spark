@@ -1,7 +1,5 @@
-@use '../../../../../genesys-spark-tokens/dist/scss/_gse-ui-feedback'; // TODO: https://inindca.atlassian.net/browse/COMUI-2242
-
-$small-breakpoint: gse-ui-feedback.$gse-ui-progressAndLoading-loadingState-small-width;
-$medium-breakpoint: gse-ui-feedback.$gse-ui-progressAndLoading-loadingState-medium-width;
+$small-breakpoint: 200px; // --gse-ui-progressAndLoading-loadingState-small-width;
+$medium-breakpoint: 400px; // --gse-ui-progressAndLoading-loadingState-medium-width;
 
 @mixin loadingStateFont($type) {
   font-family: var(

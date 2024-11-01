@@ -46,6 +46,10 @@ try {
   globSync(`${stylesInputFolder}/[^_]*.scss`)
     .sort()
     .forEach(file => {
+      if (file.endsWith('style.scss')) {
+        return;
+      }
+
       const newFilename = file
         .replace(stylesInputFolder, stylesOutputFolder)
         .replace('.scss', '.css');

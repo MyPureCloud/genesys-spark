@@ -1,44 +1,20 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 
 @mixin link-breadcrumb-primary-default {
-  font-family: var(
-    --gse-ui-link-inLine-medium-text-fontFamily,
-    var(--gse-ui-links-inLine-medium-text-fontFamily)
-  );
-  font-size: var(
-    --gse-ui-link-inLine-medium-text-fontSize,
-    var(--gse-ui-links-inLine-medium-text-fontSize)
-  );
-  font-weight: var(
-    --gse-ui-link-inLine-medium-text-fontWeight,
-    var(--gse-ui-links-inLine-medium-text-fontWeight)
-  );
-  line-height: var(
-    --gse-ui-link-inLine-medium-text-lineHeight,
-    var(--gse-ui-links-inLine-medium-text-lineHeight)
-  );
+  font-family: var(--gse-ui-links-inLine-medium-text-fontFamily);
+  font-size: var(--gse-ui-links-inLine-medium-text-fontSize);
+  font-weight: var(--gse-ui-links-inLine-medium-text-fontWeight);
+  line-height: var(--gse-ui-links-inLine-medium-text-lineHeight);
   text-decoration: none;
 }
 
 @mixin link-breadcrumb-primary-underline {
-  font-family: var(
-    --gse-ui-link-inLine-medium-underlinedText-fontFamily,
-    var(--gse-ui-links-inLine-medium-underlinedText-fontFamily)
-  );
-  font-size: var(
-    --gse-ui-link-inLine-medium-underlinedText-fontSize,
-    var(--gse-ui-links-inLine-medium-underlinedText-fontSize)
-  );
-  font-weight: var(
-    --gse-ui-link-inLine-medium-underlinedText-fontWeight,
-    var(--gse-ui-links-inLine-medium-underlinedText-fontWeight)
-  );
-  line-height: var(
-    --gse-ui-link-inLine-medium-underlinedText-lineHeight,
-    var(--gse-ui-links-inLine-medium-underlinedText-lineHeight)
-  );
+  font-family: var(--gse-ui-links-inLine-medium-underlinedText-fontFamily);
+  font-size: var(--gse-ui-links-inLine-medium-underlinedText-fontSize);
+  font-weight: var(--gse-ui-links-inLine-medium-underlinedText-fontWeight);
+  line-height: var(--gse-ui-links-inLine-medium-underlinedText-lineHeight);
   text-decoration: var(
-    --gse-ui-link-inLine-medium-underlinedText-textDecoration
+    --gse-ui-links-inLine-medium-underlinedText-textDecoration
   );
 }
 
@@ -57,45 +33,20 @@
 }
 
 @mixin link-breadcrumb-secondary-default {
-  font-family: var(
-    --gse-ui-link-inLine-small-text-fontFamily,
-    var(--gse-ui-links-inLine-small-text-fontFamily)
-  );
-  font-size: var(
-    --gse-ui-link-inLine-small-text-fontSize,
-    var(--gse-ui-links-inLine-small-text-fontSize)
-  );
-  font-weight: var(
-    --gse-ui-link-inLine-small-text-fontWeight,
-    var(--gse-ui-links-inLine-small-text-fontWeight)
-  );
-  line-height: var(
-    --gse-ui-link-inLine-small-text-lineHeight,
-    var(--gse-ui-links-inLine-small-text-lineHeight)
-  );
+  font-family: var(--gse-ui-links-inLine-small-text-fontFamily);
+  font-size: var(--gse-ui-links-inLine-small-text-fontSize);
+  font-weight: var(--gse-ui-links-inLine-small-text-fontWeight);
+  line-height: var(--gse-ui-links-inLine-small-text-lineHeight);
   text-decoration: none;
 }
 
 @mixin link-breadcrumb-secondary-underline {
-  font-family: var(
-    --gse-ui-link-inLine-small-underlinedText-fontFamily,
-    var(--gse-ui-links-inLine-small-underlinedText-fontFamily)
-  );
-  font-size: var(
-    --gse-ui-link-inLine-small-underlinedText-fontSize,
-    var(--gse-ui-links-inLine-small-underlinedText-fontSize)
-  );
-  font-weight: var(
-    --gse-ui-link-inLine-small-underlinedText-fontWeight,
-    var(--gse-ui-links-inLine-small-underlinedText-fontWeight)
-  );
-  line-height: var(
-    --gse-ui-link-inLine-small-underlinedText-lineHeight,
-    var(--gse-ui-links-inLine-small-underlinedText-lineHeight)
-  );
+  font-family: var(--gse-ui-links-inLine-small-underlinedText-fontFamily);
+  font-size: var(--gse-ui-links-inLine-small-underlinedText-fontSize);
+  font-weight: var(--gse-ui-links-inLine-small-underlinedText-fontWeight);
+  line-height: var(--gse-ui-links-inLine-small-underlinedText-lineHeight);
   text-decoration: var(
-    --gse-ui-link-inLine-small-underlinedText-textDecoration,
-    var(--gse-ui-links-inLine-small-underlinedText-textDecoration)
+    --gse-ui-links-inLine-small-underlinedText-textDecoration
   );
 }
 
@@ -124,56 +75,35 @@
   .gux-breadcrumb-content {
     @include link-breadcrumb-secondary-default;
 
-    color: var(
-      --gse-ui-link-default-foregroundColor,
-      var(--gse-ui-links-default-foregroundColor)
-    );
+    color: var(--gse-ui-links-default-foregroundColor);
     pointer-events: none;
 
     &.gux-active {
-      color: var(
-        --gse-ui-link-active-foregroundColor,
-        var(--gse-ui-links-active-foregroundColor)
-      );
+      color: var(--gse-ui-links-active-foregroundColor);
     }
 
     &.gux-link {
-      color: var(
-        --gse-ui-link-default-foregroundColor,
-        var(--gse-ui-links-default-foregroundColor)
-      );
+      color: var(--gse-ui-links-default-foregroundColor);
       pointer-events: initial;
 
       &:visited {
-        color: var(
-          --gse-ui-link-visited-foregroundColor,
-          var(--gse-ui-links-visited-foregroundColor)
-        );
+        color: var(--gse-ui-links-visited-foregroundColor);
       }
 
       &:hover {
         @include link-breadcrumb-secondary-underline;
 
-        color: var(
-          --gse-ui-link-hover-foregroundColor,
-          var(--gse-ui-links-hover-foregroundColor)
-        );
+        color: var(--gse-ui-links-hover-foregroundColor);
       }
 
       &:active {
-        color: var(
-          --gse-ui-link-active-foregroundColor,
-          var(--gse-ui-links-active-foregroundColor)
-        );
+        color: var(--gse-ui-links-active-foregroundColor);
       }
 
       &:focus-visible {
         @include focus.gux-focus-ring;
 
-        border-radius: var(
-          --gse-semantic-focusRing-cornerRadius,
-          var(--gse-semantic-focusOutline-sm-borderRadius)
-        );
+        border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
       }
     }
   }

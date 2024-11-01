@@ -3,10 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: var(
-      --gse-semantic-forms-formBody-paddingBottom,
-      var(--gse-semantic-formControl-formBody-paddingBottom)
-    );
+    margin-top: var(--gse-semantic-formControl-formBody-paddingBottom);
     border-top: var(--gse-ui-formFooter-separator-width)
       var(--gse-ui-formFooter-separator-style)
       var(--gse-ui-formFooter-separator-color);

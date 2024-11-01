@@ -2,6 +2,8 @@
  * This file combines all the exported library styles into a single stylesheet for consumption by applications.
  */
 
-@use '~genesys-spark/dist/scss/global.scss';
-@use '~genesys-spark/dist/scss/ui.scss';
+@use '~genesys-spark/dist/css/flare/global.css';
+@use '~genesys-spark/dist/css/flare/ui.css';
+@use '~genesys-spark/dist/css/global-focusable.css';
+@use '~genesys-spark/dist/css/global-typography.css';
 @use 'light-dom';
