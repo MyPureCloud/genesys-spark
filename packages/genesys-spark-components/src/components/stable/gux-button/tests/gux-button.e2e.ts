@@ -1,4 +1,21 @@
+import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
+
+async function newNonrandomE2EPage({
+  html
+}: {
+  html: string;
+}): Promise<E2EPage> {
+  const page = await newE2EPage();
+
+  await page.evaluateOnNewDocument(() => {
+    Math.random = () => 0.5;
+  });
+  await page.setContent(html);
+  await page.waitForChanges();
+
+  return page;
+}
 
 describe('gux-button', () => {
   describe('#render', () => {
@@ -84,19 +101,23 @@ describe('gux-button', () => {
         html: '<gux-button accent="invalid" disabled>Button</gux-button>'
       }
     ].forEach(({ description, html, clickable }) => {
-      it(description, async () => {
-        const page = await newSparkE2EPage({ html });
+      it(`${description}: functionality`, async () => {
+        const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-button');
         const onClickSpy = await element.spyOnEvent('click');
         const expectOnclickEvents = clickable ? 1 : 0;
 
-        await a11yCheck(page);
         expect(element.outerHTML).toMatchSnapshot();
 
         await element.click();
         await page.waitForChanges();
 
         expect(onClickSpy).toHaveReceivedEventTimes(expectOnclickEvents);
+      });
+
+      it(`${description}: accessible`, async () => {
+        const page = await newSparkE2EPage({ html });
+        await a11yCheck(page);
       });
     });
   });
