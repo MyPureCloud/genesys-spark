@@ -75,10 +75,10 @@ export class GuxAvatarFocusable {
   }
 
   /*
-   * Hide tooltip
+   * Focus the overflow button element.
    */
   @Method()
-  async focus(): Promise<void> {
+  async guxFocus(): Promise<void> {
     return await this.overflowButtonElement?.focus();
   }
 

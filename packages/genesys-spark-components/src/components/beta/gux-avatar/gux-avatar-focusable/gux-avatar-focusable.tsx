@@ -1,4 +1,4 @@
-import { Component, h, JSX, Element, State, Host } from '@stencil/core';
+import { Component, h, JSX, Element, State, Host, Method } from '@stencil/core';
 import { logWarn } from '@utils/error/log-error';
 
 @Component({
@@ -62,15 +62,16 @@ export class GuxAvatarFocusable {
   private handleKeyEvent(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Tab': {
-        if (
-          this.slottedElement.matches(':focus-visible') &&
-          this.avatarElement
-        ) {
-          void this.avatarElement?.showTooltip();
-          this.hideTooltipTimeout = setTimeout(() => {
-            void this.avatarElement?.hideTooltip();
-          }, 6000);
+        this.showAvatarTooltip();
+        break;
+      }
+      case 'ArrowRight':
+      case 'ArrowLeft': {
+        const parentElement = this.root.parentElement as HTMLElement;
+        if (parentElement.classList.contains('gux-avatar-group')) {
+          this.showAvatarTooltip();
         }
+
         break;
       }
       default: {
@@ -86,9 +87,26 @@ export class GuxAvatarFocusable {
     }
   }
 
+  /*
+   * Focus the interactive element
+   */
+  @Method()
+  async guxFocus(): Promise<void> {
+    return await this.slottedElement?.focus();
+  }
+
   private handleFocusOut(): void {
     void this.avatarElement?.hideTooltip();
     clearTimeout(this.hideTooltipTimeout);
+  }
+
+  private showAvatarTooltip(): void {
+    if (this.slottedElement.matches(':focus-visible') && this.avatarElement) {
+      void this.avatarElement?.showTooltip();
+      this.hideTooltipTimeout = setTimeout(() => {
+        void this.avatarElement?.hideTooltip();
+      }, 6000);
+    }
   }
 
   render(): JSX.Element {

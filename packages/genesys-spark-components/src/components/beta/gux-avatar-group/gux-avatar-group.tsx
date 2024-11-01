@@ -17,7 +17,7 @@ import {
   previous
 } from 'components/stable/gux-list/gux-list.service';
 
-const validFocusableItems = ['button', 'a', 'gux-avatar-overflow-beta'];
+const validFocusableItems = ['gux-avatar-list-item-beta'];
 
 interface ProcessedAvatar {
   focusableAvatar: HTMLGuxAvatarFocusableBetaElement;
@@ -37,6 +37,7 @@ interface ProcessedAvatar {
 })
 export class GuxAvatarGroup {
   private groupRef: HTMLElement;
+  private overflowRef: HTMLGuxAvatarOverflowBetaElement;
 
   @Element()
   root: HTMLElement;
@@ -115,36 +116,34 @@ export class GuxAvatarGroup {
     });
   }
 
-  private renderInteractiveAvatar(
+  private renderVisibleListItem(
     avatar: ProcessedAvatar,
     index: number
   ): JSX.Element {
-    const tabIndexVal = index === 0 ? 0 : -1;
+    const tabIndexVal = index === 0 ? true : false;
     if (avatar.button) {
       return (
-        <button
-          type="button"
+        <gux-avatar-list-item-beta
           onClick={avatar.button.onclick}
-          tabIndex={tabIndexVal}
-          role="listitem"
+          focusable={tabIndexVal}
         >
           {this.renderAvatar(avatar, 'small')}
-        </button>
+        </gux-avatar-list-item-beta>
       ) as JSX.Element;
     } else if (avatar.link) {
       return (
-        <a
-          href={avatar.link.href}
-          target={avatar.link.target}
-          tabIndex={tabIndexVal}
-          role="listitem"
+        <gux-avatar-list-item-beta
+          onClick={() => avatar.link.click()}
+          focusable={tabIndexVal}
         >
           {this.renderAvatar(avatar, 'small')}
-        </a>
+        </gux-avatar-list-item-beta>
       ) as JSX.Element;
     } else {
       return (
-        <span role="listitem">{this.renderAvatar(avatar, 'small')}</span>
+        <gux-avatar-list-item-beta focusable={tabIndexVal}>
+          {this.renderAvatar(avatar, 'small')}
+        </gux-avatar-list-item-beta>
       ) as JSX.Element;
     }
   }
@@ -169,37 +168,35 @@ export class GuxAvatarGroup {
     ) as JSX.Element;
   }
 
-  private renderListItem(avatar: ProcessedAvatar): JSX.Element {
+  private renderPopupListItem(avatar: ProcessedAvatar): JSX.Element {
     if (avatar.button) {
       return (
-        <gux-list-item key={avatar.name} onClick={avatar.button.onclick}>
-          <span class="gux-overflow-list-item">
-            {this.renderAvatar(avatar, 'xsmall')}
-            {avatar.name}
-          </span>
+        <gux-list-item onClick={avatar.button.onclick}>
+          {this.renderPopupListItemContent(avatar)}
         </gux-list-item>
       ) as JSX.Element;
     } else if (avatar.link) {
       return (
-        <gux-list-item key={avatar.name} onClick={() => avatar.link.click()}>
-          <span class="gux-overflow-list-item">
-            <a href={avatar.link.href} target={avatar.link.target}>
-              {this.renderAvatar(avatar, 'xsmall')}
-            </a>
-            {avatar.name}
-          </span>
+        <gux-list-item onClick={() => avatar.link.click()}>
+          {this.renderPopupListItemContent(avatar)}
         </gux-list-item>
       ) as JSX.Element;
     } else {
       return (
-        <gux-list-item key={avatar.name}>
-          <span class="gux-overflow-list-item">
-            {this.renderAvatar(avatar, 'xsmall')}
-            {avatar.name}
-          </span>
-        </gux-list-item>
+        <gux-list-item>{this.renderPopupListItemContent(avatar)}</gux-list-item>
       ) as JSX.Element;
     }
+  }
+
+  private renderPopupListItemContent(avatar: ProcessedAvatar): JSX.Element {
+    return (
+      <span class="gux-overflow-list-item">
+        {this.renderAvatar(avatar, 'xsmall')}
+        <span class="gux-overflow-list-item-name" aria-hidden="true">
+          {avatar.name}
+        </span>
+      </span>
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
@@ -210,28 +207,36 @@ export class GuxAvatarGroup {
       avatar => avatar.isOverflow
     );
 
-    return [
-      <div class="gux-avatar-group-wrapper">
-        <div
-          class={{
-            'gux-avatar-group': true,
-            'gux-avatar-group-overflow': overflowAvatars.length > 0
-          }}
-          ref={ref => (this.groupRef = ref)}
-          role="list"
-        >
-          {visibleAvatars.map((avatar, index) =>
-            this.renderInteractiveAvatar(avatar, index)
-          )}
-          {overflowAvatars.length > 0 && (
-            <gux-avatar-overflow-beta count={overflowAvatars.length}>
+    return (
+      <div
+        class={{
+          'gux-avatar-group': true,
+          'gux-avatar-group-overflow': overflowAvatars.length > 0
+        }}
+        ref={ref => (this.groupRef = ref)}
+        role="list"
+      >
+        {visibleAvatars.map((avatar, index) =>
+          this.renderVisibleListItem(avatar, index)
+        )}
+
+        {overflowAvatars.length > 0 && (
+          <gux-avatar-list-item-beta
+            onFocusin={() => this.overflowRef.guxFocus()}
+          >
+            <gux-avatar-overflow-beta
+              count={overflowAvatars.length}
+              ref={ref => (this.overflowRef = ref)}
+            >
               <gux-list>
-                {overflowAvatars.map(avatar => this.renderListItem(avatar))}
+                {overflowAvatars.map(avatar =>
+                  this.renderPopupListItem(avatar)
+                )}
               </gux-list>
             </gux-avatar-overflow-beta>
-          )}
-        </div>
+          </gux-avatar-list-item-beta>
+        )}
       </div>
-    ] as JSX.Element;
+    ) as JSX.Element;
   }
 }

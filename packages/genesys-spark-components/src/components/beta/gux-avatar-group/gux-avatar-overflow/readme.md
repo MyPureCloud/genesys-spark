@@ -12,6 +12,19 @@
 | `count`  | `count`   |             | `number` | `0`     |
 
 
+## Methods
+
+### `guxFocus() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Slots
 
 | Slot | Description                                       |

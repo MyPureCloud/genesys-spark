@@ -15,6 +15,7 @@
   &:focus-visible {
     @include focus.gux-focus-ring-small;
 
+    z-index: var(--gse-semantic-zIndex-showFocus);
     background: var(--gse-ui-avatar-content-default-border-color);
   }
 

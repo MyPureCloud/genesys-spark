@@ -7,86 +7,43 @@ $gux-avatar-mask: "data:image/svg+xml,%3Csvg viewBox='0 0 26 26' xmlns='http://w
   mask-image: url($gux-avatar-mask);
 }
 
-.gux-avatar-group-wrapper {
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  padding-block: 3px;
-  padding-inline: 3px;
-}
-
 .gux-avatar-group {
+  // --gse-ui-avatar-groupShapes-gap: -3px; //TODO: Remove after testing
+
   display: flex;
-  width: 100%;
+  width: fit-content;
+  padding-block: 3px; // Adding some space for the focus ring TODO: Add token
+  padding-inline: 3px 8px; // Adding some space for the focus ring TODO: Add token // Adding some space for the focus ring and negative margin TODO: Add token
 
-  // TODO: udpate this var(--gse-ui-avatar-groupShapes-gap)
-  --gse-ui-avatar-groupShapes-gap: -6px;
+  gux-avatar-list-item-beta {
+    margin-inline-end: var(--gse-ui-avatar-groupShapes-gap);
 
-  button:not(:last-of-type),
-  a:not(:last-of-type) {
-    @include mask;
-  }
-
-  &.gux-avatar-group-overflow {
-    button,
-    a {
+    &:not(:last-of-type) gux-avatar-beta {
       @include mask;
     }
   }
 
-  a:hover,
-  button:hover,
-  a:focus-visible,
-  button:focus-visible {
+  &.gux-avatar-group-overflow > gux-avatar-list-item-beta gux-avatar-beta {
+    @include mask;
+  }
+
+  gux-avatar-list-item-beta:hover,
+  gux-avatar-list-item-beta:focus-within {
     z-index: var(--gse-semantic-zIndex-showFocus);
-  }
-
-  a:focus-visible,
-  button:focus-visible {
-    mask: none;
-  }
-
-  a {
-    display: inline-block;
-    margin-inline-end: var(--gse-ui-avatar-groupShapes-gap);
-    line-height: 0px;
-    border-radius: 50%;
-  }
-
-  .gux-hide {
-    display: none;
-  }
-
-  button {
-    padding: 0;
-    margin-inline-end: var(--gse-ui-avatar-groupShapes-gap);
-    line-height: 0px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    border-radius: 50%;
-  }
-
-  a:focus-visible,
-  button:focus-visible {
-    @include focus.gux-focus-ring-small;
-
     background: var(--gse-ui-avatar-content-default-border-color);
-  }
-}
 
-.gux-overflow-list-item {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  width: 100%;
-
-  &:focus-within {
-    @include focus.gux-focus-ring-small;
+    gux-avatar-beta {
+      mask: none;
+    }
   }
 
-  button,
-  a {
-    margin: 0;
+  .gux-overflow-list-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    &:focus-within {
+      @include focus.gux-focus-ring-small;
+    }
   }
 }

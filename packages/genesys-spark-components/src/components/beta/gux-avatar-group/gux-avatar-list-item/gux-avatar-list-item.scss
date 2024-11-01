@@ -1,0 +1,24 @@
+@use '~genesys-spark/dist/scss/focus.scss';
+
+:host {
+  width: var(--gse-ui-avatar-small-size);
+  height: var(--gse-ui-avatar-small-size);
+  border-radius: 50%;
+
+  button {
+    display: inline-block;
+    padding: 0;
+    line-height: 0px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+
+    &:focus-visible {
+      @include focus.gux-focus-ring-small;
+
+      background: var(--gse-ui-avatar-content-default-border-color);
+    }
+  }
+}
