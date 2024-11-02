@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.93.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.92.0...v4.93.0) (2024-11-02)
+
+
+### Features
+
+* **other:** remove old token build infrastructure ([b6875bf](https://github.com/MyPureCloud/genesys-spark/commit/b6875bf2b94b0bce358adcd89074ecedc60354c6))
+
+
+### Bug Fixes
+
+* gux-button accessibility with icon-only and gux-title ([7f0e0af](https://github.com/MyPureCloud/genesys-spark/commit/7f0e0afbad290a5fd7b51b1b267826978923b4ca))
+
 ## [4.92.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.91.1...v4.92.0) (2024-10-30)
 
 
