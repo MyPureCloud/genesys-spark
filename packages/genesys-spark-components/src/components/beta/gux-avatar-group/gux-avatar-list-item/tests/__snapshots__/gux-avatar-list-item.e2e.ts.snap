@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-avatar-list-item #render should render component as expected (1) 1`] = `"<gux-avatar-list-item-beta role="listitem" hydrated=""><template shadowrootmode="open"><button type="button" tabindex="-1" class="gux-avatar-default"><slot></slot></button></template><gux-avatar-beta name="John Doe" hydrated=""></gux-avatar-beta></gux-avatar-list-item-beta>"`;
+
+exports[`gux-avatar-list-item #render should render component as expected (2) 1`] = `"<gux-avatar-list-item-beta interactive-element="a" role="listitem" hydrated=""><template shadowrootmode="open"><a href="#" class="gux-avatar-default" tabindex="-1"><slot></slot></a></template><gux-avatar-beta name="John Doe" hydrated=""></gux-avatar-beta></gux-avatar-list-item-beta>"`;
+
+exports[`gux-avatar-list-item #render should render component as expected (3) 1`] = `"<gux-avatar-list-item-beta focusable="true" role="listitem" hydrated=""><template shadowrootmode="open"><button type="button" tabindex="0" class="gux-avatar-default"><slot></slot></button></template><gux-avatar-beta name="John Doe" hydrated=""></gux-avatar-beta></gux-avatar-list-item-beta>"`;
+
+exports[`gux-avatar-list-item #render should render component as expected (4) 1`] = `"<gux-avatar-list-item-beta layout="plus-name" role="listitem" hydrated=""><template shadowrootmode="open"><button type="button" tabindex="-1" class="gux-avatar-plus-name"><span class="gux-avatar-flex"><slot></slot><span aria-hidden="true">John Doe</span></span></button></template><gux-avatar-beta name="John Doe" hydrated=""></gux-avatar-beta></gux-avatar-list-item-beta>"`;

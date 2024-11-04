@@ -41,11 +41,13 @@ Type: `Promise<void>`
 ### Depends on
 
 - [gux-popup](../../../stable/gux-popup)
+- [gux-list](../../../stable/gux-list)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-avatar-overflow-beta --> gux-popup
+  gux-avatar-overflow-beta --> gux-list
   gux-avatar-group-beta --> gux-avatar-overflow-beta
   style gux-avatar-overflow-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```

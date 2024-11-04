@@ -1,3 +1,3 @@
-export type GuxAvatarListItemElement = 'button' | 'link';
+export type GuxAvatarListItemElement = 'button' | 'a';
 
 export type GuxAvatarListItemLayout = 'default' | 'plus-name';

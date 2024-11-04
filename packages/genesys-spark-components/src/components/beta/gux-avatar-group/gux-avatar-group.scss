@@ -8,12 +8,10 @@ $gux-avatar-mask: "data:image/svg+xml,%3Csvg viewBox='0 0 26 26' xmlns='http://w
 }
 
 .gux-avatar-group {
-  --gse-ui-avatar-groupShapes-gap: -3px; //TODO: Remove after testing
-
   display: flex;
   width: fit-content;
-  padding-block: 3px; // Adding some space for the focus ring TODO: Add token
-  padding-inline: 3px 8px; // Adding some space for the focus ring TODO: Add token // Adding some space for the focus ring and negative margin TODO: Add token
+  padding-block: 3px; // TOOD: Get token. Adding some space for the focus ring
+  padding-inline: 3px 8px; // TOOD: Get token.  Adding some space for the focus ring
 
   gux-avatar-list-item-beta {
     margin-inline-end: var(--gse-ui-avatar-groupShapes-gap);
@@ -31,7 +29,7 @@ $gux-avatar-mask: "data:image/svg+xml,%3Csvg viewBox='0 0 26 26' xmlns='http://w
     }
   }
 
-  gux-list {
+  gux-avatar-overflow-beta {
     gux-avatar-list-item-beta {
       margin-inline-end: 0;
 

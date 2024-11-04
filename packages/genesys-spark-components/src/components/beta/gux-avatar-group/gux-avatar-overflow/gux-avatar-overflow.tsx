@@ -9,19 +9,20 @@ import {
   Method,
   Host
 } from '@stencil/core';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { eventIsFrom } from '@utils/dom/event-is-from';
 import { trackComponent } from '@utils/tracking/usage';
 
 /**
- * @slot - Some list items with gux-avatar-focusable in them
+ * @slot - List items
  */
 @Component({
   styleUrl: 'gux-avatar-overflow.scss',
   tag: 'gux-avatar-overflow-beta',
   shadow: true
 })
-export class GuxAvatarFocusable {
+export class GuxAvatarOverflow {
   private overflowButtonElement: HTMLButtonElement;
 
   @Element() root: HTMLElement;
@@ -41,11 +42,17 @@ export class GuxAvatarFocusable {
   }
 
   private focusFirstItemInPopupList(): void {
-    const listElement: HTMLGuxListElement = this.root.querySelector('gux-list');
+    const listElement: HTMLGuxListElement =
+      this.root.shadowRoot.querySelector('gux-list');
     listElement.focus();
     afterNextRenderTimeout(() => {
       void listElement?.guxFocusFirstItem();
     });
+  }
+
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside(): void {
+    this.expanded = false;
   }
 
   @Listen('keydown')
@@ -64,7 +71,7 @@ export class GuxAvatarFocusable {
         }
         break;
       case 'Escape':
-        if (eventIsFrom('gux-list', event)) {
+        if (eventIsFrom('gux-avatar-list-item-beta', event)) {
           event.stopPropagation();
           this.expanded = false;
           this.overflowButtonElement?.focus();
@@ -111,7 +118,9 @@ export class GuxAvatarFocusable {
             </button>
           </div>
           <div slot="popup" class="gux-list-container">
-            <slot></slot>
+            <gux-list>
+              <slot></slot>
+            </gux-list>
           </div>
         </gux-popup>
       </Host>

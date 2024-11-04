@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-avatar-overflow #render component with name type (1) for valid markup 1`] = `
+<gux-avatar-overflow-beta count="2" role="listitem">
+  <template shadowrootmode="open">
+    <gux-popup exceedtargetwidth="">
+      <div class="gux-target" slot="target">
+        <button aria-expanded="false" aria-haspopup="true" class="gux-avatar-overflow" tabindex="-1">
+          <span class="gux-avatar-overflow-wrapper">
+            <span class="gux-avatar-overflow-content">
+              +2
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="gux-list-container" slot="popup">
+        <gux-list>
+          <slot></slot>
+        </gux-list>
+      </div>
+    </gux-popup>
+  </template>
+</gux-avatar-overflow-beta>
+`;
+
+exports[`gux-avatar-overflow #render component with name type (2) for valid markup 1`] = `
+<gux-avatar-overflow-beta count="2" role="listitem">
+  <template shadowrootmode="open">
+    <gux-popup exceedtargetwidth="">
+      <div class="gux-target" slot="target">
+        <button aria-expanded="false" aria-haspopup="true" class="gux-avatar-overflow" tabindex="-1">
+          <span class="gux-avatar-overflow-wrapper">
+            <span class="gux-avatar-overflow-content">
+              +2
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="gux-list-container" slot="popup">
+        <gux-list>
+          <slot></slot>
+        </gux-list>
+      </div>
+    </gux-popup>
+  </template>
+  <li>
+    1
+  </li>
+  <li>
+    2
+  </li>
+</gux-avatar-overflow-beta>
+`;

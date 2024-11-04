@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-avatar-list-item #render component with name type (1) for valid markup 1`] = `
+<gux-avatar-list-item-beta role="listitem">
+  <template shadowrootmode="open">
+    <button class="gux-avatar-default" tabindex="-1" type="button">
+      <slot></slot>
+    </button>
+  </template>
+  <gux-avatar-beta name="John Doe"></gux-avatar-beta>
+</gux-avatar-list-item-beta>
+`;
+
+exports[`gux-avatar-list-item #render component with name type (2) for valid markup 1`] = `
+<gux-avatar-list-item-beta interactive-element="a" role="listitem">
+  <template shadowrootmode="open">
+    <a class="gux-avatar-default" href="#" tabindex="-1">
+      <slot></slot>
+    </a>
+  </template>
+  <gux-avatar-beta name="John Doe"></gux-avatar-beta>
+</gux-avatar-list-item-beta>
+`;
+
+exports[`gux-avatar-list-item #render component with name type (3) for valid markup 1`] = `
+<gux-avatar-list-item-beta focusable="true" role="listitem">
+  <template shadowrootmode="open">
+    <button class="gux-avatar-default" tabindex="0" type="button">
+      <slot></slot>
+    </button>
+  </template>
+  <gux-avatar-beta name="John Doe"></gux-avatar-beta>
+</gux-avatar-list-item-beta>
+`;
+
+exports[`gux-avatar-list-item #render component with name type (4) for valid markup 1`] = `
+<gux-avatar-list-item-beta layout="plus-name" role="listitem">
+  <template shadowrootmode="open">
+    <button class="gux-avatar-plus-name" tabindex="-1" type="button">
+      <span class="gux-avatar-flex">
+        <slot></slot>
+        <span aria-hidden="true"></span>
+      </span>
+    </button>
+  </template>
+  <gux-avatar-beta name="John Doe"></gux-avatar-beta>
+</gux-avatar-list-item-beta>
+`;

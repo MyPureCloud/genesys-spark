@@ -5,8 +5,4 @@
   place-content: stretch flex-start;
   align-items: flex-start;
   padding: var(--gse-ui-menu-padding);
-
-  &:focus-within {
-    background-color: aquamarine;
-  }
 }

@@ -1,12 +1,5 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 
-$gux-avatar-mask: "data:image/svg+xml,%3Csvg viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 13c0-2.6.7-5 1.8-7.2C21.5 2.3 17.5 0 13 0 5.8 0 0 5.8 0 13s5.8 13 13 13c4.5 0 8.5-2.3 10.8-5.8C22.7 18 22 15.6 22 13z' /%3E%3C/svg%3E";
-
-@mixin mask {
-  -webkit-mask-image: url($gux-avatar-mask);
-  mask-image: url($gux-avatar-mask);
-}
-
 :host {
   width: 100%;
   text-align: start;
@@ -35,8 +28,8 @@ $gux-avatar-mask: "data:image/svg+xml,%3Csvg viewBox='0 0 26 26' xmlns='http://w
     }
 
     &.gux-avatar-default {
-      width: 32px;
-      height: 32px;
+      width: 32px; //TODO: Get token for this
+      height: 32px; //TODO: Get token for this
     }
 
     &.gux-avatar-plus-name {

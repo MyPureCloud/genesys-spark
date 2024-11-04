@@ -14,8 +14,8 @@ import {
   tag: 'gux-avatar-list-item-beta',
   shadow: { delegatesFocus: true }
 })
-export class GuxListItem {
-  private buttonRef: HTMLElement;
+export class GuxAvatarListItem {
+  private interactiveRef: HTMLElement;
   private hideTooltipTimeout: ReturnType<typeof setTimeout>;
   private slottedOverflow: HTMLGuxAvatarOverflowBetaElement;
 
@@ -55,23 +55,25 @@ export class GuxListItem {
 
   componentDidLoad() {
     this.validateSlot();
-    this.buttonRef.addEventListener('keyup', (event: KeyboardEvent) => {
+    this.interactiveRef.addEventListener('keyup', (event: KeyboardEvent) => {
       this.handleKeyEvent(event);
     });
 
-    this.buttonRef.addEventListener('focusout', () => {
+    this.interactiveRef.addEventListener('focusout', () => {
       this.handleFocusOut();
     });
   }
 
   disconnectedCallback(): void {
-    this.buttonRef?.removeEventListener('keyup', (event: KeyboardEvent) =>
+    this.interactiveRef?.removeEventListener('keyup', (event: KeyboardEvent) =>
       this.handleKeyEvent(event)
     );
 
-    this.buttonRef?.removeEventListener('focusout', () =>
+    this.interactiveRef?.removeEventListener('focusout', () =>
       this.handleFocusOut()
     );
+
+    clearTimeout(this.hideTooltipTimeout);
   }
 
   private handleFocusOut(): void {
@@ -112,7 +114,10 @@ export class GuxListItem {
         break;
       }
       default: {
-        if (this.buttonRef.matches(':focus-visible') && this.slottedAvatar) {
+        if (
+          this.interactiveRef.matches(':focus-visible') &&
+          this.slottedAvatar
+        ) {
           if (this.slottedOverflow) {
             return;
           }
@@ -128,7 +133,7 @@ export class GuxListItem {
     if (this.slottedOverflow) {
       return;
     }
-    if (this.buttonRef.matches(':focus-visible') && this.slottedAvatar) {
+    if (this.interactiveRef.matches(':focus-visible') && this.slottedAvatar) {
       void this.slottedAvatar?.showTooltip();
       this.hideTooltipTimeout = setTimeout(() => {
         void this.slottedAvatar?.hideTooltip();
@@ -152,9 +157,9 @@ export class GuxListItem {
   render(): JSX.Element {
     return (
       <Host role="listitem">
-        {this.interactiveElement === 'link' ? (
+        {this.interactiveElement === 'a' ? (
           <a
-            ref={ref => (this.buttonRef = ref)}
+            ref={ref => (this.interactiveRef = ref)}
             href="#"
             class={{ [`gux-avatar-${this.layout}`]: true }}
             tabIndex={this.focusable ? 0 : -1}
@@ -163,7 +168,7 @@ export class GuxListItem {
           </a>
         ) : (
           <button
-            ref={ref => (this.buttonRef = ref)}
+            ref={ref => (this.interactiveRef = ref)}
             type="button"
             tabIndex={this.focusable ? 0 : -1}
             class={{ [`gux-avatar-${this.layout}`]: true }}

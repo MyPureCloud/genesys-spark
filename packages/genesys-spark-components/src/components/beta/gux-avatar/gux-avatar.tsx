@@ -226,6 +226,14 @@ export class GuxAvatar {
         this.parentElement.tagName
       )
     ) {
+      // Block tooltip if name is shown beside
+      if (this.parentElement.tagName === 'GUX-AVATAR-LIST-ITEM-BETA') {
+        const listItem = this.parentElement as HTMLGuxAvatarListItemBetaElement;
+        if (listItem.layout === 'plus-name') {
+          return;
+        }
+      }
+
       return (
         <gux-tooltip-beta placement="top" ref={el => (this.tooltip = el)}>
           <div slot="content">{this.getDescriptionText()}</div>

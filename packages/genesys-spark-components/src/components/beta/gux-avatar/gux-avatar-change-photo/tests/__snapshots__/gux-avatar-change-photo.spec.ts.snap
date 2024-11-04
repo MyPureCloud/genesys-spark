@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-avatar #render component with valid markup 1`] = `
+exports[`gux-avatar-change-photo #render component with valid markup 1`] = `
 <gux-avatar-change-photo-beta>
   <template shadowrootmode="open">
     <button aria-label="Change profile photo" class="gux-change-photo">

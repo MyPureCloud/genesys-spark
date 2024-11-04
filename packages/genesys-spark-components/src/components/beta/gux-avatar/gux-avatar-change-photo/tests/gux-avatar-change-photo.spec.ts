@@ -7,7 +7,7 @@ import { newSpecPage } from '@test/specTestUtils';
 import { GuxAvatarChangePhoto } from '../gux-avatar-change-photo';
 import { logWarn } from '../../../../../utils/error/log-error';
 
-describe('gux-avatar', () => {
+describe('gux-avatar-change-photo', () => {
   describe('#render', () => {
     it(`component with valid markup`, async () => {
       const html = `<gux-avatar-change-photo-beta>

@@ -1,4 +1,5 @@
 @use '~genesys-spark/dist/scss/focus.scss';
+@use '~genesys-spark/dist/scss/mixins.scss';
 
 .gux-avatar-overflow {
   position: relative;
@@ -56,14 +57,9 @@
   }
 }
 
+//
 .gux-list-container {
-  box-sizing: border-box;
-  width: fit-content;
   min-width: 200px;
-  margin: 0;
-  overflow: visible;
-  background: #fff;
-  border: 1px solid #c6c8ce;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px 1px rgb(35 57 92 / 10%);
+
+  @include mixins.gux-menu-container;
 }
