@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: var(--gse-ui-calendarMenu-month-single-header-height);
+    block-size: var(--gse-ui-calendarMenu-month-single-header-height);
     padding: var(--gse-ui-calendarMenu-header-padding);
     font-style: normal;
     font-weight: var(--gse-ui-calendarMenu-month-currentText-fontWeight);
@@ -25,7 +25,7 @@
     border-radius: var(--gse-ui-calendarMenu-single-header-borderRadius);
 
     .gux-header-month-and-year {
-      width: var(--gse-ui-calendarMenu-month-single-header-textWidth);
+      inline-size: var(--gse-ui-calendarMenu-month-single-header-textWidth);
       font-family: var(--gse-ui-calendarMenu-month-headerText-fontFamily);
       font-size: var(--gse-ui-calendarMenu-month-headerText-fontSize);
       line-height: var(--gse-ui-calendarMenu-month-headerText-lineHeight);
@@ -46,16 +46,15 @@
       }
 
       gux-icon {
-        width: 16px;
-        height: 16px;
+        inline-size: 16px;
+        block-size: 16px;
       }
     }
   }
 
   .gux-week-days {
-    padding-top: 24px;
-    padding-right: 24px;
-    padding-left: 24px;
+    padding-block-start: 24px;
+    padding-inline: 24px;
     font-family: var(--gse-ui-calendarMenu-day-headerText-fontFamily);
     font-size: var(--gse-ui-calendarMenu-day-headerText-fontSize);
     font-weight: var(--gse-ui-calendarMenu-day-headerText-fontWeight);
@@ -64,8 +63,8 @@
 
     .gux-week-day {
       display: inline-block;
-      width: var(--gse-ui-calendarMenu-day-date-size);
-      height: 16px;
+      inline-size: var(--gse-ui-calendarMenu-day-date-size);
+      block-size: 16px;
     }
   }
 
@@ -79,8 +78,8 @@
   .gux-content-week {
     .gux-content-date {
       display: inline-block;
-      width: var(--gse-ui-calendarMenu-day-date-size);
-      height: var(--gse-ui-calendarMenu-day-input-height);
+      inline-size: var(--gse-ui-calendarMenu-day-date-size);
+      block-size: var(--gse-ui-calendarMenu-day-input-height);
       font-family: var(--gse-ui-calendarMenu-date-currentText-fontFamily);
       font-size: var(--gse-ui-calendarMenu-date-defaultText-fontSize);
       font-style: normal;

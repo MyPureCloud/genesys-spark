@@ -3,8 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: var(--gse-semantic-formControl-formBody-paddingBottom);
-    border-top: var(--gse-ui-formFooter-separator-width)
+    margin-block-start: var(--gse-semantic-formControl-formBody-paddingBottom);
+    border-block-start: var(--gse-ui-formFooter-separator-width)
       var(--gse-ui-formFooter-separator-style)
       var(--gse-ui-formFooter-separator-color);
   }
@@ -12,9 +12,9 @@
 
 :host(.gux-form-footer-page-desktop) ::slotted(footer) {
   gap: var(--gse-ui-formFooter-page-desktop-gap);
-  padding: var(--gse-ui-formFooter-page-desktop-topPadding)
-    var(--gse-ui-formFooter-page-desktop-horizontalPadding)
-    var(--gse-ui-formFooter-page-desktop-bottomPadding)
+  padding-block: var(--gse-ui-formFooter-page-desktop-topPadding)
+    var(--gse-ui-formFooter-page-desktop-bottomPadding);
+  padding-inline: var(--gse-ui-formFooter-page-desktop-horizontalPadding)
     var(--gse-ui-formFooter-page-desktop-horizontalPadding);
 }
 
@@ -23,25 +23,25 @@
   gap: var(--gse-ui-formFooter-page-mobile-gap);
   align-items: stretch;
   justify-content: center;
-  padding: var(--gse-ui-formFooter-page-mobile-topPadding)
-    var(--gse-ui-formFooter-page-mobile-horizontalPadding)
-    var(--gse-ui-formFooter-page-mobile-bottomPadding)
+  padding-block: var(--gse-ui-formFooter-page-mobile-topPadding)
+    var(--gse-ui-formFooter-page-mobile-bottomPadding);
+  padding-inline: var(--gse-ui-formFooter-page-mobile-horizontalPadding)
     var(--gse-ui-formFooter-page-mobile-horizontalPadding);
 }
 
 :host(.gux-form-footer-side-sheet-desktop) ::slotted(footer) {
   gap: var(--gse-ui-formFooter-sideSheet-desktop-gap);
-  padding: var(--gse-ui-formFooter-sideSheet-desktop-topPadding)
-    var(--gse-ui-formFooter-sideSheet-desktop-horizontalPadding)
-    var(--gse-ui-formFooter-sideSheet-desktop-bottomPadding)
+  padding-block: var(--gse-ui-formFooter-sideSheet-desktop-topPadding)
+    var(--gse-ui-formFooter-sideSheet-desktop-bottomPadding);
+  padding-inline: var(--gse-ui-formFooter-sideSheet-desktop-horizontalPadding)
     var(--gse-ui-formFooter-sideSheet-desktop-horizontalPadding);
 }
 
 :host(.gux-form-footer-modal-desktop) ::slotted(footer) {
   gap: var(--gse-ui-formFooter-sideSheet-desktop-gap);
   justify-content: flex-end;
-  padding: var(--gse-ui-formFooter-modal-desktop-topPadding)
-    var(--gse-ui-formFooter-modal-desktop-horizontalPadding)
-    var(--gse-ui-formFooter-modal-desktop-bottomPadding)
+  padding-block: var(--gse-ui-formFooter-modal-desktop-topPadding)
+    var(--gse-ui-formFooter-modal-desktop-bottomPadding);
+  padding-inline: var(--gse-ui-formFooter-modal-desktop-horizontalPadding)
     var(--gse-ui-formFooter-modal-desktop-horizontalPadding);
 }

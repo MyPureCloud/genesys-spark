@@ -3,8 +3,10 @@
   "overrides": [
     {
       "files": [
+        "src/components/stable/gux-accordion/**/*.scss",
         "src/components/stable/gux-button/**/*.{scss,html}",
-        "src/components/stable/gux-button-slot/**/*.{scss,html}"
+        "src/components/stable/gux-button-slot/**/*.{scss,html}",
+        "src/components/beta/**/*.scss"
       ],
       "plugins": ["stylelint-use-logical-spec"],
       "rules": {
