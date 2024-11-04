@@ -23,7 +23,7 @@ import { trackComponent } from '@utils/tracking/usage';
  * @slot - collection of gux-list-item, gux-list-divider elements
  */
 
-const validFocusableItems = ['gux-list-item'];
+const validFocusableItems = ['gux-list-item', 'gux-avatar-list-item-beta'];
 
 @Component({
   styleUrl: 'gux-list.scss',

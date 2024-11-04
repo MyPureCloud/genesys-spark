@@ -8,7 +8,7 @@ $gux-avatar-mask: "data:image/svg+xml,%3Csvg viewBox='0 0 26 26' xmlns='http://w
 }
 
 .gux-avatar-group {
-  // --gse-ui-avatar-groupShapes-gap: -3px; //TODO: Remove after testing
+  --gse-ui-avatar-groupShapes-gap: -3px; //TODO: Remove after testing
 
   display: flex;
   width: fit-content;
@@ -18,36 +18,35 @@ $gux-avatar-mask: "data:image/svg+xml,%3Csvg viewBox='0 0 26 26' xmlns='http://w
   gux-avatar-list-item-beta {
     margin-inline-end: var(--gse-ui-avatar-groupShapes-gap);
 
-    &:not(:last-of-type) gux-avatar-beta {
+    gux-avatar-beta {
       @include mask;
     }
   }
 
-  &.gux-avatar-group-overflow > gux-avatar-list-item-beta gux-avatar-beta {
-    @include mask;
+  &.gux-avatar-no-overflow {
+    gux-avatar-list-item-beta:last-of-type {
+      gux-avatar-beta {
+        mask: none;
+      }
+    }
+  }
+
+  gux-list {
+    gux-avatar-list-item-beta {
+      margin-inline-end: 0;
+
+      gux-avatar-beta {
+        mask: none;
+      }
+    }
   }
 
   gux-avatar-list-item-beta:hover,
   gux-avatar-list-item-beta:focus-within {
     z-index: var(--gse-semantic-zIndex-showFocus);
-    background: var(--gse-ui-avatar-content-default-border-color);
 
     gux-avatar-beta {
       mask: none;
-    }
-  }
-
-  // gux-listbox {
-  //   border: none;
-  // }
-
-  .gux-overflow-list-item {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-
-    &:focus-within {
-      @include focus.gux-focus-ring-small;
     }
   }
 }
