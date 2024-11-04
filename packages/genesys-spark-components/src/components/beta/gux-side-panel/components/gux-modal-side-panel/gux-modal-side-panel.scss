@@ -1,0 +1,19 @@
+@use '../../mixins';
+
+dialog {
+  inset-inline-start: auto;
+  height: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: unset;
+  border: none;
+}
+
+dialog::backdrop {
+  background: var(--gse-ui-sidePanel-shroudColor);
+  opacity: var(--gse-ui-sidePanel-shroud-opacity);
+}
+
+slot[name='description']::slotted(*) {
+  @include mixins.slotted-description;
+}

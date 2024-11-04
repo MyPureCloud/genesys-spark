@@ -1,0 +1,959 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-modal-side-panel-beta renders correctly when open is false 1`] = `
+<gux-modal-side-panel-beta>
+  <template shadowrootmode="open">
+    <dialog aria-labelledby="gux-i">
+      <gux-side-panel-beta>
+        <template shadowrootmode="open">
+          <div class="gux-side-panel gux-side-panel-medium">
+            <header>
+              <gux-dismiss-button>
+                <template shadowrootmode="open">
+                  <gux-button-slot accent="ghost">
+                    <button title="Dismiss" type="button">
+                      <div class="gux-icon-container">
+                        <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                      </div>
+                    </button>
+                  </gux-button-slot>
+                </template>
+              </gux-dismiss-button>
+              <slot name="heading"></slot>
+            </header>
+            <div class="gux-side-panel-description">
+              <slot name="description"></slot>
+            </div>
+            <div class="gux-side-panel-content">
+              <slot name="content"></slot>
+            </div>
+            <footer>
+              <slot name="footer"></slot>
+            </footer>
+          </div>
+        </template>
+        <div id="gux-i" slot="heading">
+          <slot name="heading"></slot>
+        </div>
+        <div slot="description">
+          <slot name="description"></slot>
+        </div>
+        <div slot="content">
+          <slot name="content"></slot>
+        </div>
+        <div slot="footer">
+          <slot name="footer"></slot>
+        </div>
+      </gux-side-panel-beta>
+    </dialog>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="2" slot="heading">
+    <template shadowrootmode="open">
+      <h2>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h2>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-modal-side-panel-beta>
+`;
+
+exports[`gux-modal-side-panel-beta renders correctly when open is true 1`] = `
+<gux-modal-side-panel-beta open="">
+  <template shadowrootmode="open">
+    <dialog aria-labelledby="gux-i">
+      <gux-side-panel-beta>
+        <template shadowrootmode="open">
+          <div class="gux-side-panel gux-side-panel-medium">
+            <header>
+              <gux-dismiss-button>
+                <template shadowrootmode="open">
+                  <gux-button-slot accent="ghost">
+                    <button title="Dismiss" type="button">
+                      <div class="gux-icon-container">
+                        <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                      </div>
+                    </button>
+                  </gux-button-slot>
+                </template>
+              </gux-dismiss-button>
+              <slot name="heading"></slot>
+            </header>
+            <div class="gux-side-panel-description">
+              <slot name="description"></slot>
+            </div>
+            <div class="gux-side-panel-content">
+              <slot name="content"></slot>
+            </div>
+            <footer>
+              <slot name="footer"></slot>
+            </footer>
+          </div>
+        </template>
+        <div id="gux-i" slot="heading">
+          <slot name="heading"></slot>
+        </div>
+        <div slot="description">
+          <slot name="description"></slot>
+        </div>
+        <div slot="content">
+          <slot name="content"></slot>
+        </div>
+        <div slot="footer">
+          <slot name="footer"></slot>
+        </div>
+      </gux-side-panel-beta>
+    </dialog>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="2" slot="heading">
+    <template shadowrootmode="open">
+      <h2>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h2>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-modal-side-panel-beta>
+`;
+
+exports[`gux-modal-side-panel-beta renders correctly with large size 1`] = `
+<gux-modal-side-panel-beta size="large">
+  <template shadowrootmode="open">
+    <dialog aria-labelledby="gux-i">
+      <gux-side-panel-beta>
+        <template shadowrootmode="open">
+          <div class="gux-side-panel gux-side-panel-large">
+            <header>
+              <gux-dismiss-button>
+                <template shadowrootmode="open">
+                  <gux-button-slot accent="ghost">
+                    <button title="Dismiss" type="button">
+                      <div class="gux-icon-container">
+                        <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                      </div>
+                    </button>
+                  </gux-button-slot>
+                </template>
+              </gux-dismiss-button>
+              <slot name="heading"></slot>
+            </header>
+            <div class="gux-side-panel-description">
+              <slot name="description"></slot>
+            </div>
+            <div class="gux-side-panel-content">
+              <slot name="content"></slot>
+            </div>
+            <footer>
+              <slot name="footer"></slot>
+            </footer>
+          </div>
+        </template>
+        <div id="gux-i" slot="heading">
+          <slot name="heading"></slot>
+        </div>
+        <div slot="description">
+          <slot name="description"></slot>
+        </div>
+        <div slot="content">
+          <slot name="content"></slot>
+        </div>
+        <div slot="footer">
+          <slot name="footer"></slot>
+        </div>
+      </gux-side-panel-beta>
+    </dialog>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="2" slot="heading">
+    <template shadowrootmode="open">
+      <h2>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h2>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-modal-side-panel-beta>
+`;
+
+exports[`gux-modal-side-panel-beta renders correctly with medium size 1`] = `
+<gux-modal-side-panel-beta size="medium">
+  <template shadowrootmode="open">
+    <dialog aria-labelledby="gux-i">
+      <gux-side-panel-beta>
+        <template shadowrootmode="open">
+          <div class="gux-side-panel gux-side-panel-medium">
+            <header>
+              <gux-dismiss-button>
+                <template shadowrootmode="open">
+                  <gux-button-slot accent="ghost">
+                    <button title="Dismiss" type="button">
+                      <div class="gux-icon-container">
+                        <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                      </div>
+                    </button>
+                  </gux-button-slot>
+                </template>
+              </gux-dismiss-button>
+              <slot name="heading"></slot>
+            </header>
+            <div class="gux-side-panel-description">
+              <slot name="description"></slot>
+            </div>
+            <div class="gux-side-panel-content">
+              <slot name="content"></slot>
+            </div>
+            <footer>
+              <slot name="footer"></slot>
+            </footer>
+          </div>
+        </template>
+        <div id="gux-i" slot="heading">
+          <slot name="heading"></slot>
+        </div>
+        <div slot="description">
+          <slot name="description"></slot>
+        </div>
+        <div slot="content">
+          <slot name="content"></slot>
+        </div>
+        <div slot="footer">
+          <slot name="footer"></slot>
+        </div>
+      </gux-side-panel-beta>
+    </dialog>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="2" slot="heading">
+    <template shadowrootmode="open">
+      <h2>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h2>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-modal-side-panel-beta>
+`;
+
+exports[`gux-modal-side-panel-beta renders correctly with small size 1`] = `
+<gux-modal-side-panel-beta size="small">
+  <template shadowrootmode="open">
+    <dialog aria-labelledby="gux-i">
+      <gux-side-panel-beta>
+        <template shadowrootmode="open">
+          <div class="gux-side-panel gux-side-panel-small">
+            <header>
+              <gux-dismiss-button>
+                <template shadowrootmode="open">
+                  <gux-button-slot accent="ghost">
+                    <button title="Dismiss" type="button">
+                      <div class="gux-icon-container">
+                        <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                      </div>
+                    </button>
+                  </gux-button-slot>
+                </template>
+              </gux-dismiss-button>
+              <slot name="heading"></slot>
+            </header>
+            <div class="gux-side-panel-description">
+              <slot name="description"></slot>
+            </div>
+            <div class="gux-side-panel-content">
+              <slot name="content"></slot>
+            </div>
+            <footer>
+              <slot name="footer"></slot>
+            </footer>
+          </div>
+        </template>
+        <div id="gux-i" slot="heading">
+          <slot name="heading"></slot>
+        </div>
+        <div slot="description">
+          <slot name="description"></slot>
+        </div>
+        <div slot="content">
+          <slot name="content"></slot>
+        </div>
+        <div slot="footer">
+          <slot name="footer"></slot>
+        </div>
+      </gux-side-panel-beta>
+    </dialog>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="2" slot="heading">
+    <template shadowrootmode="open">
+      <h2>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h2>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-modal-side-panel-beta>
+`;
+
+exports[`gux-side-panel-beta renders correctly with h1 heading level 1`] = `
+<gux-side-panel-beta size="medium">
+  <template shadowrootmode="open">
+    <div class="gux-side-panel gux-side-panel-medium">
+      <header>
+        <gux-dismiss-button>
+          <template shadowrootmode="open">
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </template>
+        </gux-dismiss-button>
+        <slot name="heading"></slot>
+      </header>
+      <div class="gux-side-panel-description">
+        <slot name="description"></slot>
+      </div>
+      <div class="gux-side-panel-content">
+        <slot name="content"></slot>
+      </div>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="1" slot="heading">
+    <template shadowrootmode="open">
+      <h1>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h1>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-side-panel-beta>
+`;
+
+exports[`gux-side-panel-beta renders correctly with h2 heading level 1`] = `
+<gux-side-panel-beta size="medium">
+  <template shadowrootmode="open">
+    <div class="gux-side-panel gux-side-panel-medium">
+      <header>
+        <gux-dismiss-button>
+          <template shadowrootmode="open">
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </template>
+        </gux-dismiss-button>
+        <slot name="heading"></slot>
+      </header>
+      <div class="gux-side-panel-description">
+        <slot name="description"></slot>
+      </div>
+      <div class="gux-side-panel-content">
+        <slot name="content"></slot>
+      </div>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="2" slot="heading">
+    <template shadowrootmode="open">
+      <h2>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h2>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-side-panel-beta>
+`;
+
+exports[`gux-side-panel-beta renders correctly with h3 heading level 1`] = `
+<gux-side-panel-beta size="medium">
+  <template shadowrootmode="open">
+    <div class="gux-side-panel gux-side-panel-medium">
+      <header>
+        <gux-dismiss-button>
+          <template shadowrootmode="open">
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </template>
+        </gux-dismiss-button>
+        <slot name="heading"></slot>
+      </header>
+      <div class="gux-side-panel-description">
+        <slot name="description"></slot>
+      </div>
+      <div class="gux-side-panel-content">
+        <slot name="content"></slot>
+      </div>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="3" slot="heading">
+    <template shadowrootmode="open">
+      <h3>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h3>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-side-panel-beta>
+`;
+
+exports[`gux-side-panel-beta renders correctly with h4 heading level 1`] = `
+<gux-side-panel-beta size="medium">
+  <template shadowrootmode="open">
+    <div class="gux-side-panel gux-side-panel-medium">
+      <header>
+        <gux-dismiss-button>
+          <template shadowrootmode="open">
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </template>
+        </gux-dismiss-button>
+        <slot name="heading"></slot>
+      </header>
+      <div class="gux-side-panel-description">
+        <slot name="description"></slot>
+      </div>
+      <div class="gux-side-panel-content">
+        <slot name="content"></slot>
+      </div>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="4" slot="heading">
+    <template shadowrootmode="open">
+      <h4>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h4>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-side-panel-beta>
+`;
+
+exports[`gux-side-panel-beta renders correctly with h5 heading level 1`] = `
+<gux-side-panel-beta size="medium">
+  <template shadowrootmode="open">
+    <div class="gux-side-panel gux-side-panel-medium">
+      <header>
+        <gux-dismiss-button>
+          <template shadowrootmode="open">
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </template>
+        </gux-dismiss-button>
+        <slot name="heading"></slot>
+      </header>
+      <div class="gux-side-panel-description">
+        <slot name="description"></slot>
+      </div>
+      <div class="gux-side-panel-content">
+        <slot name="content"></slot>
+      </div>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="5" slot="heading">
+    <template shadowrootmode="open">
+      <h5>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h5>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-side-panel-beta>
+`;
+
+exports[`gux-side-panel-beta renders correctly with h6 heading level 1`] = `
+<gux-side-panel-beta size="medium">
+  <template shadowrootmode="open">
+    <div class="gux-side-panel gux-side-panel-medium">
+      <header>
+        <gux-dismiss-button>
+          <template shadowrootmode="open">
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </template>
+        </gux-dismiss-button>
+        <slot name="heading"></slot>
+      </header>
+      <div class="gux-side-panel-description">
+        <slot name="description"></slot>
+      </div>
+      <div class="gux-side-panel-content">
+        <slot name="content"></slot>
+      </div>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="6" slot="heading">
+    <template shadowrootmode="open">
+      <h6>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h6>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-side-panel-beta>
+`;
+
+exports[`gux-side-panel-beta renders correctly with large size 1`] = `
+<gux-side-panel-beta size="large">
+  <template shadowrootmode="open">
+    <div class="gux-side-panel gux-side-panel-large">
+      <header>
+        <gux-dismiss-button>
+          <template shadowrootmode="open">
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </template>
+        </gux-dismiss-button>
+        <slot name="heading"></slot>
+      </header>
+      <div class="gux-side-panel-description">
+        <slot name="description"></slot>
+      </div>
+      <div class="gux-side-panel-content">
+        <slot name="content"></slot>
+      </div>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="3" slot="heading">
+    <template shadowrootmode="open">
+      <h3>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h3>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-side-panel-beta>
+`;
+
+exports[`gux-side-panel-beta renders correctly with medium size 1`] = `
+<gux-side-panel-beta size="medium">
+  <template shadowrootmode="open">
+    <div class="gux-side-panel gux-side-panel-medium">
+      <header>
+        <gux-dismiss-button>
+          <template shadowrootmode="open">
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </template>
+        </gux-dismiss-button>
+        <slot name="heading"></slot>
+      </header>
+      <div class="gux-side-panel-description">
+        <slot name="description"></slot>
+      </div>
+      <div class="gux-side-panel-content">
+        <slot name="content"></slot>
+      </div>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="3" slot="heading">
+    <template shadowrootmode="open">
+      <h3>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h3>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-side-panel-beta>
+`;
+
+exports[`gux-side-panel-beta renders correctly with small size 1`] = `
+<gux-side-panel-beta size="small">
+  <template shadowrootmode="open">
+    <div class="gux-side-panel gux-side-panel-small">
+      <header>
+        <gux-dismiss-button>
+          <template shadowrootmode="open">
+            <gux-button-slot accent="ghost">
+              <button title="Dismiss" type="button">
+                <div class="gux-icon-container">
+                  <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+                </div>
+              </button>
+            </gux-button-slot>
+          </template>
+        </gux-dismiss-button>
+        <slot name="heading"></slot>
+      </header>
+      <div class="gux-side-panel-description">
+        <slot name="description"></slot>
+      </div>
+      <div class="gux-side-panel-content">
+        <slot name="content"></slot>
+      </div>
+      <footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>
+  </template>
+  <gux-side-panel-heading icon-name="fa/diamond-regular" level="3" slot="heading">
+    <template shadowrootmode="open">
+      <h3>
+        <gux-icon decorative="" icon-name="fa/diamond-regular" size="medium"></gux-icon>
+        <gux-truncate>
+          <slot></slot>
+        </gux-truncate>
+      </h3>
+    </template>
+    Side panel title
+  </gux-side-panel-heading>
+  <h2 slot="description">
+    Description goes here
+  </h2>
+  <div slot="content">
+    Content goes here.
+  </div>
+  <div slot="footer">
+    <gux-cta-group>
+      <gux-button slot="primary">
+        Primary
+      </gux-button>
+      <gux-button slot="secondary">
+        Secondary
+      </gux-button>
+      <gux-button slot="dismiss">
+        Dismiss
+      </gux-button>
+    </gux-cta-group>
+  </div>
+</gux-side-panel-beta>
+`;

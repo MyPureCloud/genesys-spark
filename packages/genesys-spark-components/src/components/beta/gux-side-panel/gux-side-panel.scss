@@ -1,0 +1,81 @@
+@use 'mixins';
+
+:host {
+  display: block;
+  width: fit-content;
+  height: 100%;
+}
+
+:host([size='large']) {
+  max-width: 50%;
+}
+
+.gux-side-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  background-color: var(--gse-ui-sidePanel-backgroundColor);
+  box-shadow: var(--gse-ui-sidePanel-boxShadow-offsetX)
+    var(--gse-ui-sidePanel-boxShadow-offsetY)
+    var(--gse-ui-sidePanel-boxShadow-blur)
+    var(--gse-ui-sidePanel-boxShadow-spread)
+    var(--gse-ui-sidePanel-boxShadow-color);
+
+  &.gux-side-panel-small {
+    width: 100%;
+    max-width: var(--gse-ui-sidePanel-widthSize-sm);
+  }
+
+  &.gux-side-panel-medium {
+    width: 100%;
+    max-width: var(--gse-ui-sidePanel-widthSize-md);
+  }
+
+  &.gux-side-panel-large {
+    width: 100%;
+    max-width: var(--gse-ui-sidePanel-widthSize-lg);
+  }
+
+  & > header {
+    position: relative;
+    padding: var(--gse-ui-sidePanel-header-padding);
+    border-bottom: var(--gse-ui-sidePanel-devider-width)
+      var(--gse-ui-sidePanel-devider-style)
+      var(--gse-ui-sidePanel-devider-color);
+
+    /* Take another look at this */
+    & gux-dismiss-button {
+      position: absolute;
+      top: -12px;
+      right: calc(
+        var(--gse-ui-modal-dismissButton-paddingRight) - var(
+            --gse-ui-sidePanel-header-dismiss-padding
+          )
+      );
+    }
+  }
+
+  & .gux-side-panel-content {
+    flex: 1 1 100%;
+    padding: var(--gse-ui-sidePanel-body-padding);
+    overflow-y: auto;
+    font-family: var(--gse-ui-sidePanel-description-fontFamily);
+    font-size: var(--gse-ui-sidePanel-description-fontSize);
+    font-weight: var(--gse-ui-sidePanel-description-fontWeight);
+    line-height: var(--gse-ui-sidePanel-description-lineHeight);
+  }
+
+  & > footer {
+    flex: 0 0 auto;
+    padding: var(--gse-ui-sidePanel-footer-padding);
+    border-top: var(--gse-ui-sidePanel-devider-width)
+      var(--gse-ui-sidePanel-devider-style)
+      var(--gse-ui-sidePanel-devider-color);
+  }
+}
+
+/* Take another look at this */
+.gux-side-panel-description ::slotted(*) {
+  @include mixins.slotted-description;
+}
