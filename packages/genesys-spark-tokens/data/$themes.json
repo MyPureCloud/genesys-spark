@@ -2480,9 +2480,9 @@
       "dynamic_side_sheet.footer.padding": "e34cf9bd5a65f03f024d8310eaf00b1a6df52bf1",
       "dynamic_side_sheet.width_size.sm": "f6f40cd55d9694f4af038ef9de3f43ea597d1b83",
       "dynamic_side_sheet.width_size.md": "e74b243b2b09918b0e8370f24c9e792e40c31abf",
-      "links.standalone.height": "e6bd3038d01ad73eae8e87cd2a48d3456d3148a1",
       "links.standalone.padding": "f53865e1622aa1e03234f91ea1fb333e637e036a",
-      "links.standalone.gap": "b0201df9c1aa51d3fae32092d113b87e8d417d40"
+      "links.standalone.gap": "b0201df9c1aa51d3fae32092d113b87e8d417d40",
+      "links.standalone.medium.height": "e6bd3038d01ad73eae8e87cd2a48d3456d3148a1"
     },
     "group": ".ui"
   }

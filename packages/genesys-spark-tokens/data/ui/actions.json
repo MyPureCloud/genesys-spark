@@ -405,9 +405,17 @@
   },
   "links": {
     "standalone": {
-      "height": {
-        "value": "{interactive.md.size}",
-        "type": "sizing"
+      "medium": {
+        "height": {
+          "value": "{interactive.md.size}",
+          "type": "sizing"
+        }
+      },
+      "small": {
+        "height": {
+          "value": "{interactive.sm.size}",
+          "type": "sizing"
+        }
       },
       "padding": {
         "value": "{interactive.lg.padding}",
