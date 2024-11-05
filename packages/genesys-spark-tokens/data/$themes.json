@@ -1790,9 +1790,6 @@
       "action_button.focus.height": "2d8294fb50954ab385e79e9a6d094036eba9af2a",
       "action_button.left_segment.gap": "6612e9289bf7077473e295600be04f8782b2f972",
       "action_button.border_radius": "f2411b15d6dbad9d76f608c0f2ee0c7e858fd188",
-      "links.as_button.height": "e6bd3038d01ad73eae8e87cd2a48d3456d3148a1",
-      "links.as_button.padding": "f53865e1622aa1e03234f91ea1fb333e637e036a",
-      "links.as_button.gap": "b0201df9c1aa51d3fae32092d113b87e8d417d40",
       "links.in_line.medium.height": "1e346f6214fefb8820ec4e9c997c1607087ebab2",
       "links.in_line.small.height": "aaab9b25951cd802995ed08e25f1af5b7d2e807f",
       "links.in_line.padding": "5cf3107e92f49bae81657a362827a8bc7aa7a238",
@@ -2482,7 +2479,10 @@
       "dynamic_side_sheet.body.padding_right": "adf439d26f602a29188a410e43d95f6731b907c0",
       "dynamic_side_sheet.footer.padding": "e34cf9bd5a65f03f024d8310eaf00b1a6df52bf1",
       "dynamic_side_sheet.width_size.sm": "f6f40cd55d9694f4af038ef9de3f43ea597d1b83",
-      "dynamic_side_sheet.width_size.md": "e74b243b2b09918b0e8370f24c9e792e40c31abf"
+      "dynamic_side_sheet.width_size.md": "e74b243b2b09918b0e8370f24c9e792e40c31abf",
+      "links.standalone.height": "e6bd3038d01ad73eae8e87cd2a48d3456d3148a1",
+      "links.standalone.padding": "f53865e1622aa1e03234f91ea1fb333e637e036a",
+      "links.standalone.gap": "b0201df9c1aa51d3fae32092d113b87e8d417d40"
     },
     "group": ".ui"
   }

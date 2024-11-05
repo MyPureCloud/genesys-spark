@@ -404,7 +404,7 @@
     }
   },
   "links": {
-    "as_button": {
+    "standalone": {
       "height": {
         "value": "{interactive.md.size}",
         "type": "sizing"
@@ -416,9 +416,7 @@
       "gap": {
         "value": "{interactive.lg.gap}",
         "type": "spacing"
-      }
-    },
-    "standalone": {
+      },
       "text": {
         "value": "{body.md.semi_bold}",
         "type": "typography"
