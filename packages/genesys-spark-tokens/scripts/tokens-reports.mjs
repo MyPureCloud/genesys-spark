@@ -38,11 +38,18 @@ const usedUndefinedTokenNames = usedTokenNames.filter(
     !definedTokenNames.includes(token) &&
     token !== '--gse-ui-progressAndLoading-loadingState-'
 );
+const unusedDefinedUiTokenNames = definedTokenNames.filter(
+  token => !usedTokenNames.includes(token) && token.startsWith('--gse-ui-')
+);
 
 const folder = 'reports';
 
 mkdirSync(join(projectPath, `/${folder}`), { recursive: true });
 
+writeFileSync(
+  join(projectPath, `/${folder}/unused-defined-ui-tokens.json`),
+  JSON.stringify(unusedDefinedUiTokenNames, null, 2) + '\n'
+);
 writeFileSync(
   join(projectPath, `/${folder}/used-tokens.json`),
   JSON.stringify(usedTokenNames, null, 2) + '\n'
