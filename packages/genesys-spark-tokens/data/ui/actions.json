@@ -409,12 +409,28 @@
         "height": {
           "value": "{interactive.md.size}",
           "type": "sizing"
+        },
+        "text": {
+          "value": "{body.md.semi_bold}",
+          "type": "typography"
+        },
+        "underlined_text": {
+          "value": "{body.md.link}",
+          "type": "typography"
         }
       },
       "small": {
         "height": {
           "value": "{interactive.sm.size}",
           "type": "sizing"
+        },
+        "text": {
+          "value": "{body.sm.semi_bold}",
+          "type": "typography"
+        },
+        "underlined_text": {
+          "value": "{body.sm.link}",
+          "type": "typography"
         }
       },
       "padding": {
@@ -424,14 +440,6 @@
       "gap": {
         "value": "{interactive.lg.gap}",
         "type": "spacing"
-      },
-      "text": {
-        "value": "{body.md.semi_bold}",
-        "type": "typography"
-      },
-      "underlined_text": {
-        "value": "{body.md.link}",
-        "type": "typography"
       }
     },
     "in_line": {

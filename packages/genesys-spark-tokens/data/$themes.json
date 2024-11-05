@@ -1578,7 +1578,9 @@
       "rte.heading_3.semi_bold": "S:0eedd8fe217cd4f5513187fb7aca8c0ebc0ec0a7,",
       "rte.paragraph.md.regular": "S:3e39ea8fc26e471ac2caab2acb5d0a72a46b1428,",
       "links.standalone.text": "S:6eec03c6b599b1fc63a47a3040fdb8a756c1abc0,",
-      "links.standalone.underlined_text": "S:5ab6f24c6c67d64d772ac7af31095bbf25ea86ff,"
+      "links.standalone.underlined_text": "S:5ab6f24c6c67d64d772ac7af31095bbf25ea86ff,",
+      "links.standalone.medium.text": "S:6eec03c6b599b1fc63a47a3040fdb8a756c1abc0,",
+      "links.standalone.medium.underlined_text": "S:5ab6f24c6c67d64d772ac7af31095bbf25ea86ff,"
     },
     "selectedTokenSets": {
       "ui/unordered": "enabled",
