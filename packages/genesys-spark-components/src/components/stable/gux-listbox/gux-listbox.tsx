@@ -70,6 +70,10 @@ export class GuxListbox {
   @Prop()
   filterType: GuxFilterTypes = 'none';
 
+  /* This is used by child components to keep track of this component's disabled state */
+  @Prop()
+  disabled: boolean = false;
+
   @Prop()
   emptyMessage: string;
 

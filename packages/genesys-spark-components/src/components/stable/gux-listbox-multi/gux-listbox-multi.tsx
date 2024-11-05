@@ -70,6 +70,10 @@ export class GuxListboxMulti {
   @Prop()
   emptyMessage: string;
 
+  /* This is used by child components to keep track of this component's disabled state */
+  @Prop()
+  disabled: boolean = false;
+
   @State()
   listboxOptions: HTMLGuxOptionMultiElement[] = [];
 
@@ -243,6 +247,7 @@ export class GuxListboxMulti {
     this.listboxOptions = (
       Array.from(this.root.children) as HTMLGuxOptionMultiElement[]
     ).filter(element => element.tagName === 'GUX-OPTION-MULTI');
+
     this.internallistboxoptionsupdated.emit();
   }
 

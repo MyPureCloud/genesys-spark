@@ -11,6 +11,8 @@ import {
   State
 } from '@stencil/core';
 
+import { getClosestElement } from '@utils/dom/get-closest-element';
+
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import translationResources from './i18n/en.json';
@@ -88,6 +90,15 @@ export class GuxOptionMulti {
     this.hasSubtext = hasSlot(this.root, 'subtext');
   }
 
+  private hasDisabledParent(): boolean {
+    const parentListbox = getClosestElement(
+      'gux-listbox-multi',
+      this.root
+    ) as HTMLGuxListboxElement;
+
+    return parentListbox?.disabled;
+  }
+
   // SVGs must be in DOM for tokenization to work
   renderSVGCheckbox(): JSX.Element {
     return this.selected
@@ -135,7 +146,7 @@ export class GuxOptionMulti {
         role="option"
         class={{
           'gux-active': this.active,
-          'gux-disabled': this.disabled,
+          'gux-disabled': this.disabled || this.hasDisabledParent(),
           'gux-filtered': this.filtered,
           'gux-selected': this.selected,
           'gux-show-subtext': this.hasSubtext
