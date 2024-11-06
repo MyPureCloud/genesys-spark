@@ -841,6 +841,7 @@
   "--gse-ui-search-counter-divider-border-color",
   "--gse-ui-search-counter-divider-border-style",
   "--gse-ui-search-counter-divider-border-width",
+  "--gse-ui-search-counter-divider-height",
   "--gse-ui-search-counter-gap",
   "--gse-ui-search-counter-hover-foregroundColor",
   "--gse-ui-search-counter-icon-height",

@@ -96,7 +96,7 @@
         "bold": {
           "accent_1": "#263b73",
           "accent_2": "#596ea6",
-          "accent_3": "#3ac49a",
+          "accent_3": "#54c6ab",
           "accent_4": "#056385",
           "accent_5": "#607732",
           "accent_6": "#467aae",
@@ -111,7 +111,7 @@
         "subtle": {
           "accent_1": "#9faac6",
           "accent_2": "#b2b7c4",
-          "accent_3": "#9de1cd",
+          "accent_3": "#cceee6",
           "accent_4": "#81cbe5",
           "accent_5": "#c6dd98",
           "accent_6": "#9ac1e8",
@@ -198,7 +198,7 @@
         "low_emphasis": "#c1c6d4"
       },
       "special_accents": {
-        "ai": "#8a5ecc",
+        "ai": "#1589b2",
         "brand": "#ff451a"
       }
     },

@@ -445,7 +445,6 @@
   "--gse-ui-rte-toolbar-divider-color",
   "--gse-ui-rte-toolbar-divider-padding",
   "--gse-ui-search-counter-divider-foregroundColor",
-  "--gse-ui-search-counter-divider-height",
   "--gse-ui-search-match-firstLevel-foregroundColour",
   "--gse-ui-search-match-subsequentLevel-foregroundColour",
   "--gse-ui-segmentedControl-border-color",
