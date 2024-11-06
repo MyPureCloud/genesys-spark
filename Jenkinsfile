@@ -1,6 +1,18 @@
 @Library('pipeline-library')
 import com.genesys.jenkins.Notifications
 
+def getPublishOptions(isMainBranch, isMaintenanceReleaseBranch, isBetaBranch) {
+   if (isMainBranch) {
+    return '--tag latest'
+   } else if (isMaintenanceReleaseBranch) {
+    return '--tag maintenance'
+   } else if (isBetaBranch) {
+    return '--tag beta'
+   }
+
+    return '--tag error'
+}
+
 Boolean isMainBranch = env.BRANCH_NAME == 'main'
 
 Boolean isMaintenanceReleaseBranch = env.BRANCH_NAME.startsWith('maintenance/')
@@ -14,7 +26,7 @@ Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch || isBetaBr
 Boolean isPublicBranch = isReleaseBranch || isFeatureBranch
 
 String releaseOptions = isBetaBranch ? '--prerelease beta' : ''
-String publishOptions = isBetaBranch ? '--tag beta' : ''
+String publishOptions = getPublishOptions(isMainBranch, isMaintenanceReleaseBranch, isBetaBranch)
 
 // We track this globally because it will later be passed to the documentation build
 String componentAssetsPath = ''
