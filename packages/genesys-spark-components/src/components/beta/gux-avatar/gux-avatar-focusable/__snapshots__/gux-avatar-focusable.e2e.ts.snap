@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`gux-avatar #render should render component as expected (1) 1`] = `"<gux-avatar-focusable-beta gs-avatar-size="large" hydrated=""><template shadowrootmode="open"><slot></slot></template> <button> <gux-avatar-beta name="Conor Darcy" hydrated=""></gux-avatar-beta> </button> </gux-avatar-focusable-beta>"`;
-
-exports[`gux-avatar #render should render component as expected (2) 1`] = `"<gux-avatar-focusable-beta gs-avatar-size="large" hydrated=""><template shadowrootmode="open"><slot></slot></template> <a href="#"> <gux-avatar-beta name="Conor Darcy" hydrated=""></gux-avatar-beta> </a> </gux-avatar-focusable-beta>"`;
-
-exports[`gux-avatar #render should render component as expected (3) 1`] = `"<gux-avatar-focusable-beta gs-avatar-size="large" hydrated=""><template shadowrootmode="open"><slot></slot></template> <gux-avatar-change-photo-beta hydrated=""> <gux-avatar-beta slot="avatar" name="Conor Darcy" hydrated=""></gux-avatar-beta> </gux-avatar-change-photo-beta> </gux-avatar-focusable-beta>"`;
