@@ -27,6 +27,9 @@ export class GuxSegmentedControl {
   @Prop({ mutable: true })
   value: string;
 
+  @Prop()
+  disabled: boolean = false; // This is used by child items
+
   @State()
   items: HTMLGuxSegmentedControlItemElement[] = [];
 

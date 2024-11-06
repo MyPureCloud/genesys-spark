@@ -30,6 +30,14 @@ button {
     border-radius: var(--gse-ui-segmentedControl-borderRadius);
   }
 
+  &.gux-parent-disabled {
+    border-color: color-mix(
+      in srgb,
+      var(--gse-ui-segmentedControl-divider-color) 50%,
+      rgb(0 0 0 / 0%)
+    ); // Token Issue: https://inindca.atlassian.net/browse/COMUI-3205
+  }
+
   .gux-segmented-control-item {
     display: flex;
     flex-direction: row;
