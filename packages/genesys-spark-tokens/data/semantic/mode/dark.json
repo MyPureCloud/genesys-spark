@@ -307,67 +307,67 @@
       "custom_accents": {
         "bold": {
           "accent_1": {
-            "value": "{theme.background.custom_accents.bold.10}",
+            "value": "{theme.background.custom_accents.bold.10d}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
           },
           "accent_2": {
-            "value": "{theme.background.custom_accents.bold.20}",
+            "value": "{theme.background.custom_accents.bold.20d}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
           },
           "accent_3": {
-            "value": "{theme.background.custom_accents.bold.30}",
+            "value": "{theme.background.custom_accents.bold.30d}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
           },
           "accent_4": {
-            "value": "{theme.background.custom_accents.bold.40}",
+            "value": "{theme.background.custom_accents.bold.40d}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
           },
           "accent_5": {
-            "value": "{theme.background.custom_accents.bold.50}",
+            "value": "{theme.background.custom_accents.bold.50d}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
           },
           "accent_6": {
-            "value": "{theme.background.custom_accents.bold.60}",
+            "value": "{theme.background.custom_accents.bold.60d}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
           },
           "accent_7": {
-            "value": "{theme.background.custom_accents.bold.70}",
+            "value": "{theme.background.custom_accents.bold.70d}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
           },
           "accent_8": {
-            "value": "{theme.background.custom_accents.bold.80}",
+            "value": "{theme.background.custom_accents.bold.80d}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
           },
           "accent_9": {
-            "value": "{theme.background.custom_accents.bold.90}",
+            "value": "{theme.background.custom_accents.bold.90d}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
           },
           "accent_10": {
-            "value": "{theme.background.custom_accents.bold.100}",
+            "value": "{theme.background.custom_accents.bold.100d}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
           },
           "accent_11": {
-            "value": "{theme.background.custom_accents.bold.110}",
+            "value": "{theme.background.custom_accents.bold.110d}",
             "type": "color",
             "description": "A custom accent used mostly for tags."
           },
           "accent_12": {
-            "value": "{theme.background.custom_accents.bold.120}",
+            "value": "{theme.background.custom_accents.bold.120d}",
             "type": "color",
             "description": "A custom accent used in search component"
           },
           "accent_13": {
-            "value": "{theme.background.custom_accents.bold.130}",
+            "value": "{theme.background.custom_accents.bold.130d}",
             "type": "color"
           }
         },
