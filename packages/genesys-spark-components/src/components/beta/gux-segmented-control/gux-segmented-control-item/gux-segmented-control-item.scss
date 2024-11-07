@@ -7,7 +7,6 @@ button {
 
 .gux-container {
   block-size: var(--gse-ui-segmentedControl-height);
-  cursor: pointer;
   border-color: var(--gse-ui-segmentedControl-divider-color);
   border-style: var(--gse-ui-segmentedControl-divider-style);
   border-width: var(--gse-ui-segmentedControl-divider-width);
@@ -49,6 +48,7 @@ button {
     padding: var(--gse-ui-segmentedControl-button-padding);
     line-height: 0;
     color: var(--gse-ui-segmentedControl-button-default-foregroundColor);
+    cursor: pointer;
     background-color: var(
       --gse-ui-segmentedControl-button-default-backgroundColor
     );
@@ -73,6 +73,7 @@ button {
     &[disabled] {
       color: var(--gse-ui-segmentedControl-button-disabled-foregroundColor);
       pointer-events: none;
+      cursor: default;
       background-color: var(
         --gse-ui-segmentedControl-button-disabled-backgroundColor
       );
