@@ -72,6 +72,7 @@ Type: `Promise<void>`
  - [gux-button](../../stable/gux-button)
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
  - [gux-label-info-beta](../gux-label-info)
+ - [gux-rich-text-editor-action](../gux-rich-text-editor/gux-rich-text-editor-action)
 
 ### Depends on
 
@@ -86,6 +87,7 @@ graph TD;
   gux-button --> gux-tooltip-beta
   gux-icon-tooltip-beta --> gux-tooltip-beta
   gux-label-info-beta --> gux-tooltip-beta
+  gux-rich-text-editor-action --> gux-tooltip-beta
   style gux-tooltip-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

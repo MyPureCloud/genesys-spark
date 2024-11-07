@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  flex-direction: row;
+}
+
+:host([slot='global-actions']) {
+  ::slotted(gux-rich-text-editor-action:last-child) {
+    margin-left: 83px; // Token Needed : COMUI-3190
+  }
+}
+
+.gux-action-group-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4px; // Token Needed : COMUI-3190
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.gux-divider {
+  width: var(--gse-ui-rte-divider-width);
+  height: var(--gse-ui-rte-divider-height);
+  margin: 6px 4px; // Token Needed  : COMUI-3190
+  background-color: #c6c8ce; // Token Needed : COMUI-3190
+}
