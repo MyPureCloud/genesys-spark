@@ -39,7 +39,11 @@ const usedUndefinedTokenNames = usedTokenNames.filter(
     token !== '--gse-ui-progressAndLoading-loadingState-'
 );
 const unusedDefinedUiTokenNames = definedTokenNames.filter(
-  token => !usedTokenNames.includes(token) && token.startsWith('--gse-ui-')
+  token =>
+    !usedTokenNames.includes(token) &&
+    token.startsWith('--gse-ui-') &&
+    !token.startsWith('--gse-ui-globalNav-') &&
+    !token.endsWith('-boxShadow-type')
 );
 
 const folder = 'reports';

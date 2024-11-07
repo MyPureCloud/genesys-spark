@@ -47,7 +47,7 @@
       var(--gse-ui-popover-boxShadow-offsetX)
         var(--gse-ui-popover-boxShadow-offsetY)
         calc(var(--gse-ui-popover-boxShadow-blur) / 2)
-        var(--gse-ui-tooltip-boxShadow-color)
+        var(--gse-ui-popover-boxShadow-color)
     ); // TODO: COMUI-2993 Replace this token with menu-specific token
 
     border-top: calc(var(--gse-ui-popover-anchor-width) / 2) solid
