@@ -54,7 +54,9 @@
   &.gux-dark {
     color: var(--gse-ui-tooltip-dark-foregroundColor);
     background-color: var(--gse-ui-tooltip-dark-backgroundColor);
-    border-color: var(--gse-ui-tooltip-dark-border-color);
+    border: var(--gse-ui-tooltip-dark-border-width)
+      var(--gse-ui-tooltip-dark-border-style)
+      var(--gse-ui-tooltip-dark-border-color);
 
     ::slotted(gux-icon) {
       align-self: center;

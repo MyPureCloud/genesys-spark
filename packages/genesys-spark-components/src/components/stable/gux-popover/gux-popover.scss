@@ -10,7 +10,7 @@
   border-radius: var(--gse-ui-popover-borderRadius);
   box-shadow: var(--gse-ui-popover-boxShadow-offsetX)
     var(--gse-ui-popover-boxShadow-offsetY) var(--gse-ui-popover-boxShadow-blur)
-    var(--gse-ui-popover-boxShadow-spread) var(--gse-ui-tooltip-boxShadow-color);
+    var(--gse-ui-popover-boxShadow-spread) var(--gse-ui-popover-boxShadow-color);
 
   &.gux-hidden {
     display: none;
@@ -33,7 +33,7 @@
       var(--gse-ui-popover-boxShadow-offsetX)
         var(--gse-ui-popover-boxShadow-offsetY)
         calc(var(--gse-ui-popover-boxShadow-blur) / 2)
-        var(--gse-ui-tooltip-boxShadow-color)
+        var(--gse-ui-popover-boxShadow-color)
     );
     border-top: calc(var(--gse-ui-popover-anchor-width) / 2) solid
       var(--gse-ui-popover-backgroundColor);
