@@ -247,7 +247,7 @@
     "border_radius": "16px",
     "default": {
       "bold": {
-        "background_color": "#263b73",
+        "background_color": "#3d538f",
         "foreground_color": "#ffffff"
       },
       "subtle": {
@@ -257,7 +257,7 @@
     },
     "accent1": {
       "bold": {
-        "background_color": "#596ea6",
+        "background_color": "#6a6d75",
         "foreground_color": "#ffffff"
       },
       "subtle": {
@@ -267,7 +267,7 @@
     },
     "accent2": {
       "bold": {
-        "background_color": "#3ac49a",
+        "background_color": "#327767",
         "foreground_color": "#2a2a2e"
       },
       "subtle": {
@@ -277,7 +277,7 @@
     },
     "accent3": {
       "bold": {
-        "background_color": "#056385",
+        "background_color": "#04445c",
         "foreground_color": "#ffffff"
       },
       "subtle": {
@@ -297,7 +297,7 @@
     },
     "accent5": {
       "bold": {
-        "background_color": "#5798d9",
+        "background_color": "#345b82",
         "foreground_color": "#2a2a2e"
       },
       "subtle": {
@@ -311,7 +311,7 @@
         "foreground_color": "#2a2a2e"
       },
       "bold": {
-        "background_color": "#8a5ecc",
+        "background_color": "#674699",
         "foreground_color": "#ffffff"
       }
     },
@@ -339,7 +339,7 @@
     "height": "20px",
     "accent8": {
       "bold": {
-        "background_color": "#ff5c77",
+        "background_color": "#993747",
         "foreground_color": "#2a2a2e"
       },
       "subtle": {
@@ -359,7 +359,7 @@
     },
     "accent10": {
       "bold": {
-        "background_color": "#ffc650",
+        "background_color": "#cc9e40",
         "foreground_color": "#2a2a2e"
       },
       "subtle": {
@@ -2116,17 +2116,17 @@
     },
     "media": {
       "initials_background": {
-        "default": "#263b73",
-        "accent1": "#596ea6",
+        "default": "#3d538f",
+        "accent1": "#6a6d75",
         "accent2": "#81cbe5",
-        "accent3": "#056385",
-        "accent4": "#467aae",
+        "accent3": "#04445c",
+        "accent4": "#233d57",
         "accent5": "#9ac1e8",
         "accent6": "#b2b7c4",
         "accent7": "#89387b",
-        "accent8": "#ff5c77",
+        "accent8": "#993747",
         "accent9": "#ff9dad",
-        "accent10": "#ffc650",
+        "accent10": "#cc9e40",
         "accent11": "#ffb5a3",
         "accent12": "#992910",
         "overflow_count": "#6a6d75",
