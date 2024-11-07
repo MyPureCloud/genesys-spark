@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.94.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.93.2...v4.94.0) (2024-11-07)
+
+
+### Features
+
+* **avatar:** use the same focus ring on small avatars ([#688](https://github.com/MyPureCloud/genesys-spark/issues/688)) ([1f63793](https://github.com/MyPureCloud/genesys-spark/commit/1f637939aa32f2a145f0ca179660350125133853))
+
 ### [4.93.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.93.1...v4.93.2) (2024-11-06)
 
 ### [4.93.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.93.0...v4.93.1) (2024-11-05)
