@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.95.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.94.0...v4.95.0) (2024-11-08)
+
+
+### Features
+
+* **other:** rich-text-editor ([f9e1fb9](https://github.com/MyPureCloud/genesys-spark/commit/f9e1fb98b283823e01dff1d6551711d8193c6346))
+
 ## [4.94.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.93.2...v4.94.0) (2024-11-07)
 
 
