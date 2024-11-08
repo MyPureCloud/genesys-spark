@@ -9,7 +9,7 @@ import {
   Event,
   EventEmitter
 } from '@stencil/core';
-import embed, { EmbedOptions, VisualizationSpec } from 'vega-embed';
+import embed, { EmbedOptions, VisualizationSpec, Result } from 'vega-embed';
 import { Spec as VgSpec } from 'vega';
 import { time } from '@redsift/d3-rs-intl';
 
@@ -44,6 +44,8 @@ export class GuxVisualization {
     actions: false,
     renderer: 'svg'
   };
+
+  private vegaEmbedResult?: Result;
 
   @Event()
   chartComponentReady: EventEmitter;
@@ -97,10 +99,19 @@ export class GuxVisualization {
         patchOption
       )
     ).then(result => {
+      // Finalize any previous embed, which will remove event listeners and other items to prevent memory leaks
+      this.vegaEmbedResult?.finalize();
+      this.vegaEmbedResult = result;
+
       result.view.addSignalListener('chartClick', (name, value) =>
         this.handleChartClick(name, value)
       );
     });
+  }
+
+  disconnectedCallback(): void {
+    this.vegaEmbedResult?.finalize();
+    this.vegaEmbedResult = undefined;
   }
 
   componentDidLoad() {
