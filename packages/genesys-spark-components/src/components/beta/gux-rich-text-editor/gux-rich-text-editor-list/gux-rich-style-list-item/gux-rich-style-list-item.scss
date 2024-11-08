@@ -1,0 +1,7 @@
+@use '../../../../stable/gux-list/list-item-default.scss';
+
+@include list-item-default.gux-list-item-default;
+
+::slotted(*) {
+  margin: 0;
+}

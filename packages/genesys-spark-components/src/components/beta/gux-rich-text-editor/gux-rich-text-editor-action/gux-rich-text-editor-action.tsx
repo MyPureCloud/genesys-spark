@@ -5,7 +5,7 @@ import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import translationResources from './i18n/en.json';
 import { GuxRichTextEditorActionTypes } from './gux-rich-text-editor-action.types';
 import {
-  calculateDisabledState,
+  hasDisabledParent,
   returnActionTypeIcon
 } from '../gux-rich-text-editor.service';
 
@@ -23,7 +23,7 @@ export class GuxRichTextEditorAction {
   @Prop()
   action: GuxRichTextEditorActionTypes;
 
-  @Prop({ mutable: true })
+  @Prop()
   disabled: boolean = false;
 
   @Prop()
@@ -32,7 +32,6 @@ export class GuxRichTextEditorAction {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.action });
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-    this.disabled = calculateDisabledState(this.root);
   }
 
   private renderTooltip(): JSX.Element {
@@ -50,8 +49,8 @@ export class GuxRichTextEditorAction {
       <gux-button-slot accent="ghost" icon-only>
         <button
           type="button"
-          disabled={this.disabled}
-          class={{ 'gux-is-active': this.isActive }}
+          disabled={this.disabled || hasDisabledParent(this.root)}
+          class={{ 'gux-is-pressed': this.isActive }}
           aria-pressed={this.isActive.toString()}
         >
           <gux-icon

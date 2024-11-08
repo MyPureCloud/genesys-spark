@@ -1,0 +1,8 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  place-content: stretch flex-start;
+  align-items: flex-start;
+  padding: var(--gse-ui-menu-padding);
+}
