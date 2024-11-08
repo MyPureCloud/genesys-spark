@@ -44,6 +44,7 @@
  - [gux-dropdown-multi](../gux-dropdown-multi)
  - [gux-month-picker-beta](../../beta/gux-month-picker)
  - [gux-phone-input-beta](../../beta/gux-phone-input)
+ - [gux-rich-text-editor-action-rich-style](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
  - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-time-picker](../gux-time-picker)
 
@@ -58,6 +59,7 @@ graph TD;
   gux-dropdown-multi --> gux-popup
   gux-month-picker-beta --> gux-popup
   gux-phone-input-beta --> gux-popup
+  gux-rich-text-editor-action-rich-style --> gux-popup
   gux-table-toolbar-menu-button --> gux-popup
   gux-time-picker --> gux-popup
   style gux-popup fill:#f9f,stroke:#333,stroke-width:4px

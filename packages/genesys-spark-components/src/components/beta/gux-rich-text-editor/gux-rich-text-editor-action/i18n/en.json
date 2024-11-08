@@ -10,5 +10,6 @@
   "clearFormatting": "Clear Formatting",
   "undo": "Undo",
   "redo": "Redo",
-  "delete": "Delete"
+  "delete": "Delete",
+  "richStyleDropdown": "Rich Style Dropdown"
 }

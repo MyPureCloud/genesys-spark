@@ -1,13 +1,13 @@
 import { getClosestElement } from 'genesys-spark-utils/get-closest-element';
 import { GuxRichTextEditorActionTypes } from './gux-rich-text-editor-action/gux-rich-text-editor-action.types';
 
-export function calculateDisabledState(root: HTMLElement): boolean {
+export function hasDisabledParent(root: HTMLElement): boolean {
   const getParent = getClosestElement(
     root,
     'gux-rich-text-editor-beta'
   ) as HTMLGuxRichTextEditorBetaElement;
 
-  return !!(getParent?.disabled || root?.hasAttribute('disabled'));
+  return getParent?.disabled;
 }
 
 export function returnActionTypeIcon(
