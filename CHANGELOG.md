@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.96.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.95.0...v4.96.0) (2024-11-10)
+
+
+### Features
+
+* **popover-beta:** Added popover-beta component that uses the native popover-api ([34232b9](https://github.com/MyPureCloud/genesys-spark/commit/34232b9b25ea6a7e6372d6ba42a405696f9b0cdc))
+
 ## [4.95.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.94.0...v4.95.0) (2024-11-08)
 
 
