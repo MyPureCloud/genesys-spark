@@ -1497,6 +1497,123 @@
       "padding": "2px"
     }
   },
+  "file_upload": {
+    "file_card": {
+      "border_radius": "4px",
+      "card_group": {
+        "gap": "8px"
+      },
+      "file_name": {
+        "text": {
+          "fontFamily": "Roboto",
+          "fontWeight": "400",
+          "fontSize": "12px",
+          "lineHeight": "18px"
+        },
+        "default": "#2e394c"
+      },
+      "error": {
+        "error_message": "#ea0b0b",
+        "error_helper": "#4c5667",
+        "text": {
+          "fontFamily": "Roboto",
+          "fontWeight": "400",
+          "fontSize": "12px",
+          "lineHeight": "18px"
+        }
+      },
+      "card": {
+        "padding": "2px 8px",
+        "gap": "4px",
+        "error_card": {
+          "file_name_section": {
+            "padding": "0 8px"
+          },
+          "error_text_section": {
+            "padding": "0 8px",
+            "gap": "4px"
+          },
+          "main_container": {
+            "padding": "4px 0 8px"
+          }
+        }
+      },
+      "main_container": {
+        "default": {
+          "border": {
+            "color": "#b4bccb",
+            "width": "1px",
+            "style": "solid"
+          }
+        },
+        "error": {
+          "border": {
+            "color": "#ea0b0b",
+            "width": "1px",
+            "style": "solid"
+          }
+        }
+      },
+      "box_shadow": {
+        "blur": "4px",
+        "spread": "1px",
+        "color": "rgba(35, 57, 92, 0.1)",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      },
+      "status_icon": {
+        "success": "#3c8527",
+        "error": "#ea0b0b"
+      },
+      "foreground_color": "#ffffff"
+    },
+    "drop_zone": {
+      "border_radius": "4px"
+    },
+    "label_helper": {
+      "gap": "4px"
+    },
+    "main_container": {
+      "gap": "12px"
+    },
+    "drag_and_drop": {
+      "drop_zone": {
+        "text": {
+          "fontFamily": "Roboto",
+          "fontWeight": "400",
+          "fontSize": "12px",
+          "lineHeight": "18px"
+        },
+        "default": {
+          "border": {
+            "color": "#6b7585",
+            "width": "1px",
+            "style": "dashed"
+          }
+        },
+        "active": {
+          "border": {
+            "color": "#2a60c8",
+            "width": "2px",
+            "style": "dashed"
+          }
+        },
+        "min_height": "112px",
+        "background": {
+          "active": "#e8ecf2"
+        }
+      },
+      "drop_zone_text": {
+        "color": "#2e394c"
+      }
+    },
+    "drag_drop": {
+      "btn_text": {
+        "gap": "12px"
+      }
+    }
+  },
   "color_picker": {
     "label": {
       "required_symbol_color": "#ea0b0b",

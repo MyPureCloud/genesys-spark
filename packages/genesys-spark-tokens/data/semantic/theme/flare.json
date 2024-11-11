@@ -618,6 +618,11 @@
           "05": {
             "value": "{color.haze.200}",
             "type": "color"
+          },
+          "00": {
+            "value": "{color.genesys_navy.200}",
+            "type": "color",
+            "description": "This border color should be used as an edge indicator together with elevation, eg. filecard sub-component within the file upload main component."
           }
         },
         "enabled": {

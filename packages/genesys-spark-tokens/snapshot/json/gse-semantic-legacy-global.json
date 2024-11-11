@@ -238,6 +238,9 @@
       "padding": "2px",
       "height": "20px",
       "width": "20px"
+    },
+    "4xl": {
+      "size": "112px"
     }
   },
   "focus_outline": {

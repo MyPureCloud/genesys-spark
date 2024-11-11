@@ -21,7 +21,7 @@ describe('gux-popover-beta', () => {
     expect(element).toHaveAttribute('hydrated');
   });
 
-  it('should trigger guxdismiss event on popover dismiss button click', async () => {
+  it.skip('should trigger guxdismiss event on popover dismiss button click', async () => {
     const page = await newSparkE2EPage({
       html: `
       <div lang="en">

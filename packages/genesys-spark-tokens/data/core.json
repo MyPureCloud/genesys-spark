@@ -1009,6 +1009,10 @@
       "value": "98px",
       "type": "sizing"
     },
+    "4xl": {
+      "value": "112px",
+      "type": "sizing"
+    },
     "2xs": {
       "value": "12px",
       "type": "sizing"

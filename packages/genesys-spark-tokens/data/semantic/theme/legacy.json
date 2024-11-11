@@ -674,6 +674,10 @@
           "05": {
             "value": "{color_legacy.grey.60}",
             "type": "color"
+          },
+          "00": {
+            "value": "{color_legacy.grey.30}",
+            "type": "color"
           }
         },
         "enabled": {
