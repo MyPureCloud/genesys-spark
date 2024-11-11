@@ -30,6 +30,8 @@ button {
   }
 
   &.gux-parent-disabled {
+    pointer-events: none;
+    user-select: none;
     border-color: color-mix(
       in srgb,
       var(--gse-ui-segmentedControl-divider-color) 50%,
