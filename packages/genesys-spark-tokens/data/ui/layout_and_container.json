@@ -365,7 +365,7 @@
     },
     "divider": {
       "width": {
-        "value": "{divider.sm.width}",
+        "value": "{divider.width}",
         "type": "sizing"
       },
       "height": {
