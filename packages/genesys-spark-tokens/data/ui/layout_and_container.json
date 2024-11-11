@@ -260,6 +260,10 @@
           "type": "typography",
           "description": "This typography token is recommended to be used only for code blocks."
         }
+      },
+      "border_radius": {
+        "value": "{interactive.sm.border_radius}",
+        "type": "borderRadius"
       }
     },
     "quote_block": {
@@ -291,11 +295,11 @@
       },
       "border_left": {
         "color": {
-          "value": "{border.container.edges.low_emphasis}",
+          "value": "{border.container.edges.mid_emphasis}",
           "type": "color"
         },
         "width": {
-          "value": "{container.emphasis.width}",
+          "value": "{divider.indicator.width}",
           "type": "sizing"
         }
       }
@@ -365,7 +369,7 @@
     },
     "divider": {
       "width": {
-        "value": "{divider.sm.width}",
+        "value": "{divider.width}",
         "type": "sizing"
       },
       "height": {
@@ -397,9 +401,9 @@
       }
     },
     "color_swatch": {
-      "tomato": {
+      "orange": {
         "default": {
-          "value": "{background.interactive.custom.tomato}",
+          "value": "{background.interactive.custom.orange}",
           "type": "color"
         }
       },
@@ -427,9 +431,9 @@
           "type": "color"
         }
       },
-      "blueberry": {
+      "azure": {
         "default": {
-          "value": "{background.interactive.custom.blueberry}",
+          "value": "{background.interactive.custom.azure}",
           "type": "color"
         }
       },
@@ -439,9 +443,9 @@
           "type": "color"
         }
       },
-      "islandaqua": {
+      "island": {
         "default": {
-          "value": "{background.interactive.custom.islandaqua}",
+          "value": "{background.interactive.custom.island}",
           "type": "color"
         }
       },
@@ -464,6 +468,16 @@
     },
     "color_palette": {
       "gap": {
+        "value": "{interactive.lg.gap}",
+        "type": "spacing"
+      },
+      "padding": {
+        "value": "{interactive.sm.padding} {interactive.lg.padding}",
+        "type": "spacing"
+      }
+    },
+    "toolbar_btn_group": {
+      "gap": {
         "value": "{interactive.md.gap}",
         "type": "spacing"
       }
@@ -474,8 +488,8 @@
           "value": "{border.container.divider}",
           "type": "color"
         },
-        "padding": {
-          "value": "{divider.md.padding}",
+        "margin": {
+          "value": "6px {divider.md.margin}",
           "type": "spacing"
         }
       }
@@ -536,6 +550,20 @@
           },
           "type": "border"
         }
+      }
+    },
+    "rte_menu": {
+      "background_color": {
+        "value": "{background.container.elevated.default}",
+        "type": "color"
+      },
+      "border": {
+        "value": {
+          "color": "{border.container.edges.default}",
+          "width": "{container.edges.border_width}",
+          "style": "solid"
+        },
+        "type": "border"
       }
     }
   }

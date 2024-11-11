@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 4px; // Token Needed : COMUI-3190
+  gap: var(--gse-ui-rte-toolbarBtnGroup-gap);
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -15,7 +15,6 @@
 .gux-divider {
   inline-size: var(--gse-ui-rte-divider-width);
   block-size: var(--gse-ui-rte-divider-height);
-  margin-block: 6px;
-  margin-inline: 4px; // Token Needed  : COMUI-3190
+  margin: var(--gse-ui-rte-toolbar-divider-margin);
   background-color: #c6c8ce; // Token Needed : COMUI-3190
 }

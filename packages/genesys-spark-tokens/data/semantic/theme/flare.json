@@ -657,7 +657,7 @@
         },
         "color_swatch": {
           "10": {
-            "value": "{color.genesys_orange.500}",
+            "value": "{color.genesys_orange.300}",
             "type": "color",
             "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
           },
@@ -1196,8 +1196,8 @@
             "value": "{color.haze.700}",
             "type": "color"
           },
-          "defaultd": {
-            "value": "{color.haze.400}",
+          "mid": {
+            "value": "{color.azure_blue.300}",
             "type": "color"
           }
         }

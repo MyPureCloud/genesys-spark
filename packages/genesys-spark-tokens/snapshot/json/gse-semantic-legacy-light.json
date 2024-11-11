@@ -32,14 +32,14 @@
         "active": "#520404"
       },
       "custom": {
-        "tomato": "#ff451a",
+        "orange": "#ff451a",
         "coral": "#ffbec9",
         "pear": "#c6dd98",
         "mango": "#ffd173",
         "raspberry": "#f5bfeb",
-        "blueberry": "#adbff0",
+        "azure": "#adbff0",
         "mineral": "#bcd6f0",
-        "islandaqua": "#81cbe5"
+        "island": "#81cbe5"
       }
     },
     "overlay": {
@@ -280,7 +280,8 @@
         "data_table": {
           "default": "#e2e6ee"
         },
-        "low_emphasis": "#6a6d75"
+        "low_emphasis": "#6a6d75",
+        "mid_emphasis": "#829ce5"
       },
       "high_constrast": {
         "default": "#6a6d75",
