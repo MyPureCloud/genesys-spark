@@ -203,18 +203,18 @@
     }
 
     .flex-example {
-      width: 250px;
-      min-width: 250px;
+      inline-size: 250px;
+      min-inline-size: 250px;
     }
 
     .flex-header {
-      width: fit-content;
+      inline-size: fit-content;
       margin: auto;
       font-weight: 400;
     }
 
     .flex-content {
-      width: fit-content;
+      inline-size: fit-content;
       margin: auto;
     }
 
@@ -222,12 +222,13 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 25px;
-      width: 600px;
-      margin-left: 150px;
+      inline-size: 600px;
+      margin-inline-start: 150px;
     }
 
     .grid-content {
-      padding: 20px 0;
+      padding-block: 20px;
+      padding-inline: 0;
       font-weight: bold;
       text-align: center;
       background-color: aliceblue;
@@ -236,7 +237,7 @@
     }
 
     p {
-      max-width: 600px;
+      max-inline-size: 600px;
     }
 
     strong {
