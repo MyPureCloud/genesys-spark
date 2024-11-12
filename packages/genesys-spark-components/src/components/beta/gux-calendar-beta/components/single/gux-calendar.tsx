@@ -1,4 +1,4 @@
-import { Component, Element, h, JSX, State } from '@stencil/core';
+import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
 import { IWeekElement, GuxCalendarDayOfWeek } from '../../gux-calendar.types';
 import { asIsoDate, fromIsoDate } from '@utils/date/iso-dates';
 import {
@@ -31,6 +31,13 @@ export class GuxCalendar {
 
   @State()
   private maxValue: Date;
+
+  @Listen('guxdayselected')
+  onDaySelected(event: CustomEvent<string>) {
+    const selectedDate = fromIsoDate(event.detail);
+    this.selectDate(selectedDate);
+    event.stopPropagation();
+  }
 
   private locale: string = 'en';
 
@@ -85,7 +92,7 @@ export class GuxCalendar {
     }
   }
 
-  private onDateClick(date: Date): void {
+  private selectDate(date: Date): void {
     if (this.isInvalidDate(date)) {
       return;
     }
@@ -116,21 +123,24 @@ export class GuxCalendar {
    * Focus the focused date
    */
   private focusDate() {
-    const target: HTMLTableCellElement = this.root.shadowRoot.querySelector(
-      `.gux-content-date[data-date="${this.focusedValue.getTime()}"]`
-    );
+    const isoDateStr = asIsoDate(this.focusedValue);
+    // Find the rendered element for the slot for the focused date
+    const target: HTMLElement = this.root.shadowRoot
+      .querySelector<HTMLSlotElement>(`slot[name="${isoDateStr}"]`)
+      .assignedNodes({ flatten: true })[0] as HTMLElement;
     if (target) {
       target.focus();
     }
   }
 
   private onKeyDown(event: KeyboardEvent): void {
+    console.log('KEYDOWN', event.key);
     switch (event.key) {
       case ' ':
         break;
       case 'Enter':
         event.preventDefault();
-        this.onDateClick(this.getFocusedValue());
+        this.selectDate(this.getFocusedValue());
         afterNextRenderTimeout(() => {
           this.focusDate();
         });
@@ -304,7 +314,7 @@ export class GuxCalendar {
 
   private renderContent(): JSX.Element {
     return (
-      <div class="gux-content">
+      <div onKeyDown={e => void this.onKeyDown(e)}>
         <div class="gux-week-days">
           {getWeekdays(this.locale, this.startDayOfWeek).map(
             day => (<div class="gux-week-day">{day}</div>) as JSX.Element
@@ -316,37 +326,22 @@ export class GuxCalendar {
             week =>
               (
                 <div class="gux-content-week">
-                  {week.dates.map(
-                    day =>
-                      (
-                        <div
-                          data-date={day.date.getTime()}
-                          onClick={() => this.onDateClick(day.date)}
-                          role="button"
+                  {week.dates.map(day => {
+                    const isoDateStr = asIsoDate(day.date);
+                    return (
+                      <slot key={isoDateStr} name={isoDateStr}>
+                        <gux-day
+                          day={isoDateStr}
                           aria-current={day.selected ? 'true' : 'false'}
-                          tabindex={day.selected || day.focused ? '0' : '-1'}
-                          onKeyDown={e => void this.onKeyDown(e)}
                           aria-disabled={day.disabled ? 'true' : 'false'}
+                          tabindex={day.selected || day.focused ? '0' : '-1'}
                           class={{
-                            'gux-content-date': true,
-                            'gux-disabled': day.disabled,
-                            'gux-current-month': day.inCurrentMonth,
-                            'gux-selected': day.selected,
-                            'gux-current-date': day.isCurrentDate
+                            'gux-muted': !day.inCurrentMonth
                           }}
-                        >
-                          <span class="gux-non-sr" aria-hidden="true">
-                            {day.date.getDate()}
-                          </span>
-                          <span class="gux-sr-only">
-                            <gux-date-beta
-                              datetime={day.date.toISOString()}
-                              format="long"
-                            ></gux-date-beta>
-                          </span>
-                        </div>
-                      ) as JSX.Element
-                  )}
+                        ></gux-day>
+                      </slot>
+                    ) as JSX.Element;
+                  })}
                 </div>
               ) as JSX.Element
           )}

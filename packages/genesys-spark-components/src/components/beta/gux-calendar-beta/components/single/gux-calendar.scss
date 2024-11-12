@@ -63,82 +63,87 @@
       color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
       text-align: center;
 
-      .gux-week-day {
-        display: inline-block;
-        inline-size: var(--gse-ui-calendarMenu-day-range-height);
-        block-size: var(--gse-ui-calendarMenu-day-range-width);
-      }
+    .gux-week-day {
+      display: inline-block;
+      inline-size: var(--gse-ui-calendarMenu-day-range-height);
+      block-size: var(--gse-ui-calendarMenu-day-range-width);
     }
+  }
 
-    .gux-content-week {
-      .gux-content-date {
-        display: inline-block;
-        inline-size: var(--gse-ui-calendarMenu-day-date-size);
-        block-size: var(--gse-ui-calendarMenu-day-input-height);
-        font-family: var(--gse-ui-calendarMenu-date-currentText-fontFamily);
-        font-size: var(--gse-ui-calendarMenu-date-defaultText-fontSize);
-        font-style: normal;
-        font-weight: var(--gse-ui-calendarMenu-date-defaultText-fontWeight);
-        line-height: 32px;
-        vertical-align: middle;
-        text-align: center;
-        outline: none;
+  .gux-content {
+    padding: var(--gse-ui-calendarMenu-dateBody-padding);
+    color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
+    background-color: var(--gse-ui-calendarMenu-backgroundColor);
+    border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
+  }
+
+  .gux-content-week {
+    .gux-content-date {
+      display: inline-block;
+      inline-size: var(--gse-ui-calendarMenu-day-date-size);
+      block-size: var(--gse-ui-calendarMenu-day-input-height);
+      font-family: var(--gse-ui-calendarMenu-date-currentText-fontFamily);
+      font-size: var(--gse-ui-calendarMenu-date-defaultText-fontSize);
+      font-style: normal;
+      font-weight: var(--gse-ui-calendarMenu-date-defaultText-fontWeight);
+      line-height: 32px;
+      color: #626e84;
+      text-align: center;
+      vertical-align: middle;
+      border: none;
+      outline: none;
+      opacity: var(--gse-ui-calendarMenu-disabled-opacity);
+
+      &.gux-current-month {
+        // TODO: Is this the correct token to use here?
+        color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
+        opacity: 1;
+      }
+
+      &.gux-hidden {
+        display: none;
+      }
+
+      &.gux-disabled {
+        pointer-events: none;
+      }
+
+      &.gux-selected {
+        color: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
+        background-color: var(
+          --gse-ui-calendarMenu-date-selected-backgroundColor
+        );
         border: none;
-        opacity: var(--gse-ui-calendarMenu-disabled-opacity);
-
-        &.gux-current-month {
-          // TODO: Is this the correct token to use here?
-          color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
-          opacity: 1;
-        }
-
-        &.gux-hidden {
-          display: none;
-        }
-
-        &.gux-disabled {
-          pointer-events: none;
-        }
-
-        &.gux-selected {
-          color: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
-          outline: none;
-          background-color: var(
-            --gse-ui-calendarMenu-date-selected-backgroundColor
-          );
-          border: none;
-          border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
-
-          &:hover {
-            background-color: var(
-              --gse-ui-calendarMenu-date-selected-hoverBackgroundColor
-            );
-          }
-        }
+        border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
+        outline: none;
 
         &:hover {
-          cursor: pointer;
           background-color: var(
-            --gse-ui-calendarMenu-date-hover-backgroundColor
+            --gse-ui-calendarMenu-date-selected-hoverBackgroundColor
           );
-          border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
         }
+      }
 
-        &:focus-visible {
-          border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
+      &:hover {
+        cursor: pointer;
+        background-color: var(--gse-ui-calendarMenu-date-hover-backgroundColor);
+        border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
+      }
 
-          @include focus.gux-focus-ring;
-        }
+      &:focus-visible {
+        border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
+        outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
+          var(--gse-semantic-border-focus);
+      }
 
-        .gux-sr-only {
-          @include mixins.gux-sr-only-clip;
-        }
+      .gux-sr-only {
+        @include mixins.gux-sr-only-clip;
+      }
 
-        &.gux-current-date {
-          font-family: var(--gse-ui-calendarMenu-month-currentText-fontFamily);
-          font-size: var(--gse-ui-calendarMenu-date-currentText-fontSize);
-          font-weight: var(--gse-ui-calendarMenu-date-currentText-fontWeight);
-        }
+      &.gux-current-date {
+        font-family: var(--gse-ui-calendarMenu-month-currentText-fontFamily);
+        font-size: var(--gse-ui-calendarMenu-date-currentText-fontSize);
+        font-weight: var(--gse-ui-calendarMenu-date-currentText-fontWeight);
       }
     }
   }
