@@ -4,7 +4,8 @@ import {
   goToNextMonth,
   validateHeaderMonth,
   validateSelectedDate,
-  getContentDateElement
+  getContentDateElement,
+  getSelectedDateElement
 } from '../services/tests.service';
 
 describe('gux-calendar', () => {
@@ -122,7 +123,7 @@ describe('gux-calendar', () => {
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await getSelectedDateElement(element);
         await selectedDate.click();
 
         // Press the down arrow key and then the enter key
@@ -140,7 +141,7 @@ describe('gux-calendar', () => {
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await getSelectedDateElement(element);
         await selectedDate.click();
 
         // Press the up arrow key and then the enter key
@@ -158,7 +159,7 @@ describe('gux-calendar', () => {
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await getSelectedDateElement(element);
         await selectedDate.click();
 
         // Press the right arrow key and then the enter key
@@ -176,7 +177,7 @@ describe('gux-calendar', () => {
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await getSelectedDateElement(element);
         await selectedDate.click();
 
         // Press the left arrow key and then the enter key
@@ -194,7 +195,7 @@ describe('gux-calendar', () => {
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await getSelectedDateElement(element);
         await selectedDate.click();
 
         // Press the left arrow key and then the enter key
@@ -212,7 +213,7 @@ describe('gux-calendar', () => {
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await getSelectedDateElement(element);
         await selectedDate.click();
 
         // Press the left arrow key and then the enter key
@@ -229,12 +230,15 @@ describe('gux-calendar', () => {
         html: defaultHtml
       });
       const element = await page.find('gux-calendar-beta');
+      const input = await element.find('input');
 
       // Go to next month
       await goToNextMonth(element, page);
 
       const contentDate = await getContentDateElement(element, 'June 19, 2023');
-      expect(contentDate.className).toContain('gux-disabled');
+      expect(contentDate.getAttribute('aria-disabled')).toBe('true');
+      const value = await input.getProperty('value');
+      expect(value).not.toBe('2023-06-19');
     });
 
     it('setting min prop causes a lower bound range to be implemented correctly', async () => {
@@ -242,6 +246,7 @@ describe('gux-calendar', () => {
         html: defaultHtml
       });
       const element = await page.find('gux-calendar-beta');
+      const input = await element.find('input');
 
       await goToPreviousMonth(element, page);
 
@@ -249,7 +254,10 @@ describe('gux-calendar', () => {
         element,
         'April 27, 2023'
       );
-      expect(contentDate.className).toContain('gux-disabled');
+      await contentDate.click();
+      expect(contentDate.getAttribute('aria-disabled')).toBe('true');
+      const value = await input.getProperty('value');
+      expect(value).not.toBe('2023-04-27');
     });
 
     it('tab index is set to 0 for selected date and -1 for non-selected date', async () => {
