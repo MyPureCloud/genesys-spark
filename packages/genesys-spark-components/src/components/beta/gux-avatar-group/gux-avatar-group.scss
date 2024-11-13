@@ -1,0 +1,46 @@
+.gux-avatar-group {
+  --avatar-presence-area-space: 6px;
+
+  display: flex;
+  inline-size: fit-content;
+  padding-block: var(--gse-semantic-interactive-sm-padding);
+  padding-inline: var(--gse-semantic-interactive-sm-padding)
+    var(--gse-semantic-interactive-lg-padding);
+  margin: 0;
+  list-style-type: none;
+
+  ::slotted(a) {
+    margin-inline-end: calc(
+      var(--gse-ui-avatar-groupSet-gap) - var(--avatar-presence-area-space)
+    );
+    line-height: 0;
+    border-radius: 50% !important;
+  }
+
+  ::slotted(gux-avatar-beta) {
+    margin-inline-end: calc(
+      var(--gse-ui-avatar-groupSet-gap) - var(--avatar-presence-area-space)
+    );
+  }
+
+  ::slotted(button) {
+    padding: 0;
+    margin: 0;
+    margin-inline-end: calc(
+      var(--gse-ui-avatar-groupSet-gap) - var(--avatar-presence-area-space)
+    );
+    line-height: 0px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 50%;
+  }
+
+  ::slotted(button:focus-visible),
+  ::slotted(button:hover),
+  ::slotted(a:focus-visible),
+  ::slotted(a:hover) {
+    position: relative;
+    z-index: var(--gse-semantic-zIndex-showFocus);
+  }
+}
