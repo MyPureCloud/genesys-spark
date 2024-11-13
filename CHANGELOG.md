@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.96.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.96.1...v4.96.2) (2024-11-13)
+
+
+### Bug Fixes
+
+* **rich-text-editor:** fix broken e2e tests ([7a478ad](https://github.com/MyPureCloud/genesys-spark/commit/7a478ad563641fc6116d271b32e5fc8730db20ec))
+
 ### [4.96.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.96.0...v4.96.1) (2024-11-12)
 
 ## [4.96.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.95.0...v4.96.0) (2024-11-10)
