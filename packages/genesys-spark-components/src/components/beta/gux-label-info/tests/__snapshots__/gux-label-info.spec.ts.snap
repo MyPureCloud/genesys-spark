@@ -9,7 +9,7 @@ exports[`gux-label-info-beta #render should render component as expected (1) 1`]
       </gux-screen-reader-beta>
       <gux-icon decorative="" icon-name="fa/circle-info-regular" size="small"></gux-icon>
       <gux-tooltip-beta placement="right">
-        <div slot="content"></div>
+        <span slot="content"></span>
       </gux-tooltip-beta>
     </div>
   </template>
@@ -25,9 +25,11 @@ exports[`gux-label-info-beta #render should render component as expected (2) 1`]
       </gux-screen-reader-beta>
       <gux-icon decorative="" icon-name="fa/circle-question-regular" size="small"></gux-icon>
       <gux-tooltip-beta placement="right">
-        <div slot="content">
-          This is some tooltip text
-        </div>
+        <span slot="content">
+          <span>
+            This is some tooltip text
+          </span>
+        </span>
       </gux-tooltip-beta>
     </div>
   </template>
@@ -46,7 +48,7 @@ exports[`gux-label-info-beta #render should render component as expected (3) 1`]
       </gux-screen-reader-beta>
       <gux-icon decorative="" icon-name="fa/circle-info-regular" size="small"></gux-icon>
       <gux-tooltip-beta placement="right">
-        <div slot="content"></div>
+        <span slot="content"></span>
       </gux-tooltip-beta>
     </div>
   </template>
@@ -62,9 +64,11 @@ exports[`gux-label-info-beta #render should render component as expected (4) 1`]
       </gux-screen-reader-beta>
       <gux-icon decorative="" icon-name="fa/circle-info-regular" size="small"></gux-icon>
       <gux-tooltip-beta placement="right">
-        <div slot="content">
-          This is some tooltip text
-        </div>
+        <span slot="content">
+          <span>
+            This is some tooltip text
+          </span>
+        </span>
       </gux-tooltip-beta>
     </div>
   </template>
@@ -75,6 +79,37 @@ exports[`gux-label-info-beta #render should render component as expected (4) 1`]
 `;
 
 exports[`gux-label-info-beta #render should render component as expected (5) 1`] = `
+<gux-label-info-beta>
+  <template shadowrootmode="open">
+    <div class="gux-label-info">
+      <gux-screen-reader-beta>
+        <slot name="content"></slot>
+      </gux-screen-reader-beta>
+      <gux-icon decorative="" icon-name="fa/circle-info-regular" size="small"></gux-icon>
+      <gux-tooltip-beta placement="right">
+        <span slot="content">
+          <span>
+            This is some
+            <b>
+              tooltip
+            </b>
+            text
+          </span>
+        </span>
+      </gux-tooltip-beta>
+    </div>
+  </template>
+  <span slot="content">
+    This is some
+    <b>
+      tooltip
+    </b>
+    text
+  </span>
+</gux-label-info-beta>
+`;
+
+exports[`gux-label-info-beta #render should render component as expected (6) 1`] = `
 <gux-label-info-beta variant="invalid-variant">
   <template shadowrootmode="open">
     <div class="gux-label-info">
@@ -83,9 +118,11 @@ exports[`gux-label-info-beta #render should render component as expected (5) 1`]
       </gux-screen-reader-beta>
       <gux-icon decorative="" icon-name="fa/circle-info-regular" size="small"></gux-icon>
       <gux-tooltip-beta placement="right">
-        <div slot="content">
-          This is an information tooltip
-        </div>
+        <span slot="content">
+          <span>
+            This is an information tooltip
+          </span>
+        </span>
       </gux-tooltip-beta>
     </div>
   </template>
