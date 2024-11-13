@@ -110,6 +110,7 @@ export class GuxAvatarGroup {
       <div
         class="gux-avatar-group"
         aria-label={this.i18n('avatarGroup', { count: this.count })}
+        role="group"
       >
         <slot onSlotchange={() => this.validateSlot()}></slot>
       </div>

@@ -12,7 +12,7 @@
     "changePhoto": "Change profile photo"
   },
   "gux-avatar-group": {
-    "avatarGroup": "avatar group containing {count} items. Use arrows to navigate."
+    "avatarGroup": "avatar group containing {count} items. Use left and right arrows to navigate."
   },
   "gux-badge": {
     "info": "badge with label: {label}, accent: info",
