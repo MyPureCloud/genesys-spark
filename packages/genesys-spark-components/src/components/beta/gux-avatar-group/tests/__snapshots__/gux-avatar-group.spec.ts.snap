@@ -3,7 +3,7 @@
 exports[`gux-avatar-group #render should render component as expected (1) 1`] = `
 <gux-avatar-group-beta avatar-limit="4">
   <template shadowrootmode="open">
-    <div aria-label="avatar group containing 10 items. Use arrows to navigate." class="gux-avatar-group">
+    <div aria-label="avatar group containing 10 items. Use left and right arrows to navigate." class="gux-avatar-group">
       <slot></slot>
     </div>
   </template>
@@ -43,7 +43,7 @@ exports[`gux-avatar-group #render should render component as expected (1) 1`] = 
 exports[`gux-avatar-group #render should render component as expected (2) 1`] = `
 <gux-avatar-group-beta>
   <template shadowrootmode="open">
-    <div aria-label="avatar group containing 10 items. Use arrows to navigate." class="gux-avatar-group">
+    <div aria-label="avatar group containing 10 items. Use left and right arrows to navigate." class="gux-avatar-group">
       <slot></slot>
     </div>
   </template>
@@ -103,7 +103,7 @@ exports[`gux-avatar-group #render should render component as expected (2) 1`] = 
 exports[`gux-avatar-group #render should render component as expected (3) 1`] = `
 <gux-avatar-group-beta>
   <template shadowrootmode="open">
-    <div aria-label="avatar group containing 6 items. Use arrows to navigate." class="gux-avatar-group">
+    <div aria-label="avatar group containing 6 items. Use left and right arrows to navigate." class="gux-avatar-group">
       <slot></slot>
     </div>
   </template>

@@ -61,7 +61,7 @@ export class GuxAvatarGroup {
       this.root.querySelectorAll('gux-avatar-beta')
     ) as HTMLGuxAvatarBetaElement[];
 
-    if (!this.avatars.length) {
+    if (this.avatars.length === 0) {
       logWarn(this.root, 'No avatars found in slot');
     }
 
