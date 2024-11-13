@@ -76,6 +76,10 @@ export async function createThemes(sourceFolder, outputFolder) {
 }
 
 function getPlatform(name, type, format, outputFolder) {
+  const themeName = name.match(/(?<=gse-).*(?=-)/)[0]; // We get the theme from the nme
+  const modeRegExp = new RegExp(`(?<=gse-${themeName}-).*`);
+  const modeName = name.match(modeRegExp)[0]; // we get the mode name
+
   return {
     [type]: {
       transformGroup: 'tokens-studio',
@@ -84,20 +88,41 @@ function getPlatform(name, type, format, outputFolder) {
       buildPath: `${outputFolder}/${type}/`,
       files: [
         {
-          destination: `${name}-core.${type}`,
+          //We only need one core file for everything
+          destination: `gse-core.${type}`,
           format,
           filter: token => {
             return token.filePath.endsWith('core.json');
           }
         },
         {
-          destination: `${name}-semantic.${type}`,
+          //We only need one set of semantic/theme tokens per theme
+          destination: `gse-${themeName}-semantic-theme.${type}`,
           format,
           filter: token => {
-            return token.filePath.includes('/semantic/');
+            return token.filePath.includes(`/semantic/theme/${themeName}`);
           }
         },
+
         {
+          // We do need 1 set of semantic/mode tokens per mode-theme permutation
+          destination: `${name}-semantic-mode.${type}`,
+          format,
+          filter: token => {
+            return token.filePath.includes(`/semantic/mode/${modeName}`);
+          }
+        },
+
+        {
+          destination: `${name}-semantic-global.${type}`,
+          format,
+          filter: token => {
+            return token.filePath.includes(`/semantic/global`);
+          }
+        },
+
+        {
+          // We do need 1 set of semantic/global tokens per mode-theme permutation
           destination: `${name}-ui.${type}`,
           format,
           filter: token => {

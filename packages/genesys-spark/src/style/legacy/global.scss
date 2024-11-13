@@ -1,7 +1,11 @@
-@use '../../../../genesys-spark-tokens/dist/scss/gse-legacy-light-core';
-@use '../../../../genesys-spark-tokens/dist/scss/gse-legacy-light-semantic';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-core';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-legacy-semantic-theme';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-legacy-light-semantic-global';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-legacy-light-semantic-mode';
 
 :root {
-  @include gse-legacy-light-core.tokens;
-  @include gse-legacy-light-semantic.tokens;
+  @include gse-core.tokens;
+  @include gse-legacy-semantic-theme.tokens;
+  @include gse-legacy-light-semantic-mode.tokens;
+  @include gse-legacy-light-semantic-global.tokens;
 }
