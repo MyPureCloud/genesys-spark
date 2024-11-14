@@ -3,12 +3,6 @@
   flex-direction: row;
 }
 
-:host([slot='global-actions']) {
-  ::slotted(gux-rich-text-editor-action:last-child) {
-    margin-inline-start: 83px; // Token Needed : COMUI-3190
-  }
-}
-
 .gux-action-group-container {
   display: flex;
   flex-direction: row;

@@ -17,7 +17,7 @@ exports[`gux-rich-text-editor should build and render 1`] = `
         <div class="gux-inserting-container">
           <slot name="inserting"></slot>
         </div>
-        <div class="gux-global-actions-container">
+        <div class="gux-global-action-container">
           <slot name="global-actions"></slot>
         </div>
       </div>
