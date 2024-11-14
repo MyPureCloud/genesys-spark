@@ -4,9 +4,9 @@ gux-button-multi {
     align-items: center;
 
     gux-icon {
-      width: var(--gse-ui-button-icon-size);
-      height: var(--gse-ui-button-icon-size);
-      padding-right: var(--gse-ui-button-gap);
+      inline-size: var(--gse-ui-button-icon-size);
+      block-size: var(--gse-ui-button-icon-size);
+      padding-inline-end: var(--gse-ui-button-gap);
     }
   }
 }

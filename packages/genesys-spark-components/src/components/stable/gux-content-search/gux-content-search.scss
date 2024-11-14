@@ -3,8 +3,8 @@
 
 :host {
   display: inline-block;
-  width: 300px; // TODO: GDS-2451 according to figma this should be a 320px token ?
-  min-width: 300px;
+  inline-size: 300px; // TODO: GDS-2451 according to figma this should be a 320px token ?
+  min-inline-size: 300px;
 }
 
 ::slotted(input[disabled]) {
@@ -15,8 +15,8 @@
   box-sizing: border-box;
   flex-shrink: 1;
   flex-basis: 100%;
-  width: 100%;
-  min-width: 20px; // TODO: GDS-2451 token to be added here
+  inline-size: 100%;
+  min-inline-size: 20px; // TODO: GDS-2451 token to be added here
   overflow: hidden;
   font-family: var(--gse-ui-search-counter-text-fontFamily);
   font-size: var(--gse-ui-search-counter-text-fontSize);
@@ -49,8 +49,8 @@
   display: flex;
   flex-direction: row;
   gap: var(--gse-ui-formControl-input-gap);
-  width: 100%;
-  height: var(--gse-ui-formControl-input-textfield-height);
+  inline-size: 100%;
+  block-size: var(--gse-ui-formControl-input-textfield-height);
   padding: var(--gse-ui-formControl-textarea-padding);
   cursor: text;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
@@ -101,8 +101,8 @@
     }
 
     gux-icon {
-      width: var(--gse-ui-search-counter-icon-width);
-      height: var(--gse-ui-search-counter-icon-height);
+      inline-size: var(--gse-ui-search-counter-icon-width);
+      block-size: var(--gse-ui-search-counter-icon-height);
       color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
     }
   }
@@ -118,14 +118,14 @@
     padding: 0;
 
     gux-icon {
-      width: var(--gse-ui-icon-small-size);
-      height: var(--gse-ui-icon-small-size);
+      inline-size: var(--gse-ui-icon-small-size);
+      block-size: var(--gse-ui-icon-small-size);
     }
 
     button {
       display: block;
       align-items: center;
-      height: var(--gse-ui-search-counter-icon-height);
+      block-size: var(--gse-ui-search-counter-icon-height);
       padding: 0;
       overflow: hidden;
       color: var(--gse-ui-search-counter-default-foregroundColor);
@@ -155,8 +155,8 @@
         align-items: center;
 
         gux-icon {
-          width: var(--gse-ui-icon-small-size);
-          height: var(--gse-ui-icon-small-size);
+          inline-size: var(--gse-ui-icon-small-size);
+          block-size: var(--gse-ui-icon-small-size);
         }
       }
     }
@@ -175,7 +175,7 @@
       .gux-navigation-divider {
         box-sizing: border-box;
         align-self: center;
-        height: 16px; // TODO: GDS-2451 - missing token for divider height
+        block-size: 16px; // TODO: GDS-2451 - missing token for divider height
         color: var(--gse-ui-search-counter-default-foregroundColor);
         border: 1px var(--gse-ui-search-counter-divider-border-style)
           var(--gse-ui-search-counter-divider-border-color);

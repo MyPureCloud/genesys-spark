@@ -42,7 +42,7 @@
 
 :host {
   display: block;
-  width: fit-content;
+  inline-size: fit-content;
 }
 
 .gux-datepicker {
@@ -65,10 +65,10 @@
     flex-wrap: nowrap;
     place-content: flex-start flex-start;
     align-items: center;
-    width: 100%;
+    inline-size: 100%;
 
     ~ .gux-datepicker-field {
-      margin-left: 20px; // TODO: COMUI-2299
+      margin-inline-start: 20px; // TODO: COMUI-2299
     }
 
     &.gux-above {
@@ -76,11 +76,11 @@
       align-items: self-start;
 
       .gux-datepicker-field-input {
-        margin-top: 0;
+        margin-block-start: 0;
       }
 
       .gux-datepicker-field-label {
-        margin-right: 0;
+        margin-inline-end: 0;
       }
     }
 
@@ -88,7 +88,7 @@
       flex: 0 1 auto;
       align-self: auto;
       order: 0;
-      margin-right: var(--gse-ui-formControl-helper-gap);
+      margin-inline-end: var(--gse-ui-formControl-helper-gap);
 
       @include gux-form-field.gse-ui-formControl-label-bold;
     }
@@ -101,8 +101,8 @@
       gap: var(--gse-ui-formControl-input-gap);
       place-content: stretch center;
       align-items: center;
-      width: 100%;
-      height: var(--gse-ui-formControl-input-textfield-height);
+      inline-size: 100%;
+      block-size: var(--gse-ui-formControl-input-textfield-height);
       padding: var(--gse-ui-formControl-input-padding);
       color: var(--gse-ui-formControl-input-populatedColor);
       white-space: nowrap;
@@ -137,7 +137,7 @@
           flex: 1 1 auto;
           align-self: auto;
           order: 0;
-          width: calc(
+          inline-size: calc(
             var(--gse-ui-calendarMenu-day-input-width) - var(
                 --gse-ui-icon-small-size
               )
@@ -196,8 +196,8 @@
           }
 
           gux-icon {
-            width: var(--gse-ui-icon-small-size);
-            height: var(--gse-ui-icon-small-size);
+            inline-size: var(--gse-ui-icon-small-size);
+            block-size: var(--gse-ui-icon-small-size);
           }
         }
       }
