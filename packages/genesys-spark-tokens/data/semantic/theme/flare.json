@@ -45,6 +45,30 @@
           "60": {
             "value": "{color.azure_blue.200}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.haze.950}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.haze.900}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.haze.850}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.azure_blue.1000}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
+          },
+          "60d": {
+            "value": "{color.azure_blue.950}",
+            "type": "color"
           }
         },
         "secondary": {
@@ -59,6 +83,18 @@
           "30": {
             "value": "{color.azure_blue.800}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.600}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.azure_blue.700}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
           }
         },
         "tertiary": {
@@ -68,6 +104,14 @@
           },
           "20": {
             "value": "{color.haze.300}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.transparent}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.haze.800}",
             "type": "color"
           }
         },
@@ -86,6 +130,22 @@
           },
           "40": {
             "value": "{color.haze.1000}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.haze.200}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.azure_blue.200}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.azure_blue.100}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.haze.50}",
             "type": "color"
           }
         }
@@ -366,7 +426,7 @@
             "type": "color"
           },
           "30": {
-            "value": "{color.emerald.200}",
+            "value": "{color.jade.200}",
             "type": "color"
           },
           "40": {
@@ -403,6 +463,54 @@
           },
           "120": {
             "value": "{color.island.200}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_navy.800}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.haze.850}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.jade.1000}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.island.900}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.pear.1000}",
+            "type": "color"
+          },
+          "60d": {
+            "value": "{color.mineral.1000}",
+            "type": "color"
+          },
+          "70d": {
+            "value": "{color.plum.1000}",
+            "type": "color"
+          },
+          "80d": {
+            "value": "{color.raspberry.1000}",
+            "type": "color"
+          },
+          "90d": {
+            "value": "{color.coral.1000}",
+            "type": "color"
+          },
+          "100d": {
+            "value": "{color.genesys_orange.900}",
+            "type": "color"
+          },
+          "110d": {
+            "value": "{color.mango.1000}",
+            "type": "color"
+          },
+          "120d": {
+            "value": "{color.island.900}",
             "type": "color"
           }
         },
@@ -446,6 +554,46 @@
             "value": "{color.island.300}",
             "type": "color",
             "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "10d": {
+            "value": "{color.genesys_orange.700}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "20d": {
+            "value": "{color.coral.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "30d": {
+            "value": "{color.pear.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "40d": {
+            "value": "{color.mango.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "50d": {
+            "value": "{color.raspberry.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "60d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "70d": {
+            "value": "{color.mineral.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "80d": {
+            "value": "{color.island.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
           }
         },
         "status": {
@@ -474,6 +622,34 @@
             "type": "color"
           },
           "70": {
+            "value": "{color.genesys_orange.500}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.emerald.500}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.pepper.500}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.honey.500}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.azure_blue.600}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.haze.600}",
+            "type": "color"
+          },
+          "60d": {
+            "value": "{color.raspberry.700}",
+            "type": "color"
+          },
+          "70d": {
             "value": "{color.genesys_orange.500}",
             "type": "color"
           }
