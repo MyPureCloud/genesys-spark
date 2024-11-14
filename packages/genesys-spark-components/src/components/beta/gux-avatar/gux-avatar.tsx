@@ -10,6 +10,7 @@ import {
 import { render8x8SVG, renderTeamsSVG, renderZoomSVG } from './svg-utils';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import defaultResources from './i18n/en.json';
+import { generateInitials } from '@utils/string/generate-initials';
 
 /**
  * @slot image - Avatar photo.
@@ -80,14 +81,6 @@ export class GuxAvatar {
    */
   @Prop()
   ucIntegration: GuxAvatarUcIntegrationApps = 'none';
-
-  private generateInitials(): string {
-    const nameArray = this.name?.split(' ') ?? [];
-    if (nameArray.length > 1) {
-      return nameArray[0].charAt(0) + nameArray[nameArray.length - 1].charAt(0);
-    }
-    return nameArray[0]?.charAt(0) + nameArray[0]?.charAt(1);
-  }
 
   private getAccent(): string {
     if (this.accent !== 'auto') {
@@ -278,7 +271,7 @@ export class GuxAvatar {
         <div class="gux-content">
           <slot name="image">
             <abbr aria-label={this.getDescriptionText()}>
-              {this.generateInitials()}
+              {generateInitials(this.name)}
             </abbr>
           </slot>
         </div>

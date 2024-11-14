@@ -17,7 +17,7 @@
 | Slot                       | Description                             |
 | -------------------------- | --------------------------------------- |
 | `"editor"`                 | Slot for the editor.                    |
-| `"global-actions"`         | Slot for global action.                 |
+| `"global-action"`          | Slot for global action.                 |
 | `"inserting"`              | Slot for inserting actions.             |
 | `"lists-indentation"`      | Slot for lists and indentation actions. |
 | `"text-styling"`           | Slot for text-styling actions.          |
