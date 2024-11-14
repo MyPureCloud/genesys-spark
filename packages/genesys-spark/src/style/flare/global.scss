@@ -1,18 +1,16 @@
 @use '../../../../genesys-spark-tokens/dist/scss/gse-core';
-@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-semantic-theme';
-@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-dark-semantic-global';
-@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-dark-semantic-mode';
-@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-light-semantic-global';
-@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-light-semantic-mode';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-semantic-flare';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-semantic-flare-global';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-semantic-flare-dark';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-semantic-flare-light';
 
 :root {
   @include gse-core.tokens;
-  @include gse-flare-semantic-theme.tokens;
-  @include gse-flare-light-semantic-mode.tokens;
-  @include gse-flare-light-semantic-global.tokens;
+  @include gse-semantic-flare.tokens;
+  @include gse-semantic-flare-global.tokens;
+  @include gse-semantic-flare-light.tokens;
 }
 
 [flare-mode='dark'] {
-  @include gse-flare-dark-semantic-mode.tokens;
-  @include gse-flare-dark-semantic-global.tokens;
+  @include gse-semantic-flare-dark.tokens;
 }
