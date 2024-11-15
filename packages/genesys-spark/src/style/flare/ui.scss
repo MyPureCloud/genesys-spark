@@ -1,10 +1,10 @@
-@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-dark-ui';
-@use '../../../../genesys-spark-tokens/dist/scss/gse-flare-light-ui';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-ui-flare-dark';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-ui-flare-light';
 
 :root {
-  @include gse-flare-light-ui.tokens;
+  @include gse-ui-flare-light.tokens;
 }
 
 [flare-mode='dark'] {
-  @include gse-flare-dark-ui.tokens;
+  @include gse-ui-flare-dark.tokens;
 }
