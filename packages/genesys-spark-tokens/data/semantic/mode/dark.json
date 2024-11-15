@@ -497,131 +497,131 @@
     "interactive": {
       "primary": {
         "default": {
-          "value": "{theme.foreground.secondary.10}",
+          "value": "{theme.foreground.secondary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a primary/default background."
         },
         "active": {
-          "value": "{theme.foreground.secondary.10}",
+          "value": "{theme.foreground.secondary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a primary/hover background."
         },
         "hover": {
-          "value": "{theme.foreground.secondary.10}",
+          "value": "{theme.foreground.secondary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a primary/active background."
         }
       },
       "secondary": {
         "default": {
-          "value": "{theme.foreground.tertiary.10}",
+          "value": "{theme.foreground.tertiary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a secondary/default background."
         },
         "active": {
-          "value": "{theme.foreground.tertiary.30}",
+          "value": "{theme.foreground.tertiary.30d}",
           "type": "color",
           "description": "The color for foreground elements that are over a secondary/active background."
         },
         "hover": {
-          "value": "{theme.foreground.tertiary.20}",
+          "value": "{theme.foreground.tertiary.20d}",
           "type": "color",
           "description": "The color for foreground elements that are over a secondary/hover background."
         }
       },
       "tertiary": {
         "default": {
-          "value": "{theme.foreground.tertiary.10}",
+          "value": "{theme.foreground.tertiary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a tertiary/default background."
         },
         "active": {
-          "value": "{theme.foreground.secondary.10}",
+          "value": "{theme.foreground.secondary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a tertiary/active background."
         },
         "hover": {
-          "value": "{theme.foreground.secondary.10}",
+          "value": "{theme.foreground.secondary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a tertiary/hover background."
         }
       },
       "ghost": {
         "default": {
-          "value": "{theme.foreground.tertiary.10}",
+          "value": "{theme.foreground.tertiary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a ghost/default background."
         },
         "active": {
-          "value": "{theme.foreground.tertiary.30}",
+          "value": "{theme.foreground.tertiary.30d}",
           "type": "color",
           "description": "The color for foreground elements that are over a ghost/active background."
         },
         "hover": {
-          "value": "{theme.foreground.tertiary.20}",
+          "value": "{theme.foreground.tertiary.20d}",
           "type": "color",
           "description": "The color for foreground elements that are over a ghost/hover background."
         }
       },
       "subtle": {
         "default": {
-          "value": "{theme.foreground.primary.10}",
+          "value": "{theme.foreground.primary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a subtle/default background."
         },
         "active": {
-          "value": "{theme.foreground.primary.30}",
+          "value": "{theme.foreground.primary.30d}",
           "type": "color",
           "description": "The color for foreground elements that are over a subtle/active background."
         },
         "hover": {
-          "value": "{theme.foreground.primary.20}",
+          "value": "{theme.foreground.primary.20d}",
           "type": "color",
           "description": "The color for foreground elements that are over a subtle/hover background."
         }
       },
       "danger": {
         "default": {
-          "value": "{theme.foreground.secondary.10}",
+          "value": "{theme.foreground.secondary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a danger/default background."
         },
         "active": {
-          "value": "{theme.foreground.secondary.10}",
+          "value": "{theme.foreground.secondary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a danger/active background."
         },
         "hover": {
-          "value": "{theme.foreground.secondary.10}",
+          "value": "{theme.foreground.secondary.10d}",
           "type": "color",
           "description": "The color for foreground elements that are over a danger/hover background."
         }
       },
       "link": {
         "default": {
-          "value": "{theme.foreground.link.10}",
+          "value": "{theme.foreground.link.10d}",
           "type": "color",
           "description": "The default color of links."
         },
         "active": {
-          "value": "{theme.foreground.link.30}",
+          "value": "{theme.foreground.link.30d}",
           "type": "color",
           "description": "The active color of links."
         },
         "hover": {
-          "value": "{theme.foreground.link.20}",
+          "value": "{theme.foreground.link.20d}",
           "type": "color",
           "description": "The hover color of links."
         },
         "visited": {
-          "value": "{theme.foreground.link.40}",
+          "value": "{theme.foreground.link.40d}",
           "type": "color",
           "description": "The  color of links when  they were already visited."
         }
       },
       "indicator": {
         "default": {
-          "value": "{theme.foreground.tertiary.05}",
+          "value": "{theme.foreground.tertiary.05d}",
           "type": "color",
           "description": "this is used to the selected indicator for the data table headers"
         }
@@ -629,45 +629,45 @@
     },
     "container": {
       "high_emphasis": {
-        "value": "{theme.foreground.primary.30}",
+        "value": "{theme.foreground.primary.30d}",
         "type": "color",
         "description": "The default color for high emphasis content on surfaces, like headings, subheadings, quotes or bold text."
       },
       "mid_emphasis": {
-        "value": "{theme.foreground.primary.10}",
+        "value": "{theme.foreground.primary.10d}",
         "type": "color",
         "description": "The default color for medium emphasis content on surfaces, like normal paragraphs."
       },
       "low_emphasis": {
-        "value": "{theme.foreground.secondary.30}",
+        "value": "{theme.foreground.secondary.30d}",
         "type": "color",
         "description": "The default color for low emphasis content on surfaces, like captions or fine print."
       },
       "high_contrast": {
         "high_emphasis": {
-          "value": "{theme.foreground.high_contrast.10}",
+          "value": "{theme.foreground.high_contrast.10d}",
           "type": "color",
           "description": "The default color for high emphasis content on high contrast surfaces, like headings, subheadings, quotes or bold text."
         },
         "mid_emphasis": {
-          "value": "{theme.foreground.high_contrast.20}",
+          "value": "{theme.foreground.high_contrast.20d}",
           "type": "color",
           "description": "The default color for medium emphasis content on high contrast surfaces, like normal paragraphs."
         },
         "low_emphasis": {
-          "value": "{theme.foreground.high_contrast.30}",
+          "value": "{theme.foreground.high_contrast.30d}",
           "type": "color",
           "description": "The default color for low emphasis content on high contrast surfaces, like captions or fine print."
         }
       },
       "special_accents": {
         "ai": {
-          "value": "{theme.foreground.special_accents.ai.10}",
+          "value": "{theme.foreground.special_accents.ai.10d}",
           "type": "color",
           "description": "The color for foreground content used to highlight an AI feature on a surface."
         },
         "brand": {
-          "value": "{theme.foreground.special_accents.brand.10}",
+          "value": "{theme.foreground.special_accents.brand.10d}",
           "type": "color",
           "description": "The brand color, mostly used for logos on surfaces."
         }
@@ -676,79 +676,79 @@
     "system": {
       "custom_accents": {
         "light": {
-          "value": "{theme.foreground.secondary.10}",
+          "value": "{theme.foreground.secondary.10d}",
           "type": "color",
           "description": "The recommended color for contetn that is on a custom accent background that doesn't pass the contrast check with the dark color."
         },
         "dark": {
-          "value": "{theme.foreground.primary.30}",
+          "value": "{theme.foreground.primary.30d}",
           "type": "color",
           "description": "The recommended color for contetn that is on a custom accent background that doesn't pass the contrast check with the light color."
         }
       },
       "progress_and_loading": {
         "default": {
-          "value": "{theme.foreground.primary.20}",
+          "value": "{theme.foreground.primary.20d}",
           "type": "color",
           "description": "The color for foreground content on progress_and_loading/default backgrounds."
         },
         "progressed": {
-          "value": "{theme.foreground.secondary.10}",
+          "value": "{theme.foreground.secondary.10d}",
           "type": "color",
           "description": "The color for foreground content on progress_and_loading/progressed backgrounds."
         }
       },
       "info": {
         "high_emphasis": {
-          "value": "{theme.foreground.primary.30}",
+          "value": "{theme.foreground.primary.30d}",
           "type": "color",
           "description": "The default color for high emphasis content on info backgrounds, like headings, subheadings, quotes or bold text or links."
         },
         "accent": {
-          "value": "{theme.foreground.system.info.10}",
+          "value": "{theme.foreground.system.info.10d}",
           "type": "color",
           "description": "The color for content on info backgrounds that we want to highlight, like the info icon on an alert."
         }
       },
       "success": {
         "high_emphasis": {
-          "value": "{theme.foreground.primary.30}",
+          "value": "{theme.foreground.primary.30d}",
           "type": "color",
           "description": "The default color for high emphasis content on success backgrounds, like headings, subheadings, quotes or bold text or links."
         },
         "accent": {
-          "value": "{theme.foreground.system.success.10}",
+          "value": "{theme.foreground.system.success.10d}",
           "type": "color",
           "description": "The color for content on success backgrounds that we want to highlight, like the info icon on an alert."
         }
       },
       "warning": {
         "high_emphasis": {
-          "value": "{theme.foreground.primary.30}",
+          "value": "{theme.foreground.primary.30d}",
           "type": "color",
           "description": "The default color for high emphasis content on warning backgrounds, like headings, subheadings, quotes or bold text or links."
         },
         "accent": {
-          "value": "{theme.foreground.system.warning.10}",
+          "value": "{theme.foreground.system.warning.10d}",
           "type": "color",
           "description": "The color for content on warning backgrounds that we want to highlight, like the info icon on an alert."
         }
       },
       "error": {
         "high_emphasis": {
-          "value": "{theme.foreground.primary.30}",
+          "value": "{theme.foreground.primary.30d}",
           "type": "color",
           "description": "The default color for high emphasis content on error backgrounds, like headings, subheadings, quotes or bold text or links."
         },
         "accent": {
-          "value": "{theme.foreground.system.error.10}",
+          "value": "{theme.foreground.system.error.10d}",
           "type": "color",
           "description": "The color for content on error backgrounds that we want to highlight, like the info icon on an alert."
         }
       },
       "icon": {
         "default": {
-          "value": "{theme.foreground.icon.10}",
+          "value": "{theme.foreground.icon.10d}",
           "type": "color",
           "description": "The color for foreground content on progress_and_loading/default backgrounds."
         }
@@ -757,77 +757,77 @@
     "form_control": {
       "help_text": {
         "default": {
-          "value": "{theme.foreground.secondary.30}",
+          "value": "{theme.foreground.secondary.30d}",
           "type": "color",
           "description": "The color we used for the default helper text."
         },
         "error": {
-          "value": "{theme.foreground.system.error.10}",
+          "value": "{theme.foreground.system.error.10d}",
           "type": "color",
           "description": "The color we used for the error helper text."
         }
       },
       "text_input": {
         "placeholder": {
-          "value": "{theme.foreground.secondary.30}",
+          "value": "{theme.foreground.secondary.30d}",
           "type": "color",
           "description": "The default color of placeholder content on an input."
         },
         "populated": {
-          "value": "{theme.foreground.primary.30}",
+          "value": "{theme.foreground.primary.30d}",
           "type": "color",
           "description": "The default color of populated content on an input."
         },
         "icon": {
-          "value": "{theme.foreground.secondary.30}",
+          "value": "{theme.foreground.secondary.30d}",
           "type": "color",
           "description": "The default color of icons on an input."
         }
       },
       "click_input": {
         "enabled": {
-          "value": "{theme.foreground.form_control.click_input.50}",
+          "value": "{theme.foreground.form_control.click_input.50d}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are enabled but not selected."
         },
         "selected": {
-          "value": "{theme.foreground.form_control.click_input.10}",
+          "value": "{theme.foreground.form_control.click_input.10d}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are selected."
         },
         "hover": {
-          "value": "{theme.foreground.form_control.click_input.20}",
+          "value": "{theme.foreground.form_control.click_input.20d}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are on the hover state."
         },
         "active": {
-          "value": "{theme.foreground.form_control.click_input.30}",
+          "value": "{theme.foreground.form_control.click_input.30d}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are on the active state."
         },
         "error": {
-          "value": "{theme.foreground.system.error.10}",
+          "value": "{theme.foreground.system.error.10d}",
           "type": "color"
         }
       },
       "label": {
         "default": {
-          "value": "{theme.foreground.primary.30}",
+          "value": "{theme.foreground.primary.30d}",
           "type": "color",
           "description": "The color for the content of input labels."
         },
         "required_accent": {
-          "value": "{theme.foreground.system.error.10}",
+          "value": "{theme.foreground.system.error.10d}",
           "type": "color",
           "description": "The color we used for the required indicator."
         },
         "optional_accent": {
-          "value": "{theme.foreground.primary.10}",
+          "value": "{theme.foreground.primary.10d}",
           "type": "color",
           "description": "The color we used for optional indicator in labels"
         },
         "tooltip": {
-          "value": "{theme.foreground.primary.10}",
+          "value": "{theme.foreground.primary.10d}",
           "type": "color",
           "description": "The color we used for tooltip in labels"
         }
@@ -914,27 +914,27 @@
     },
     "system": {
       "info": {
-        "value": "{theme.border.system.info.10}",
+        "value": "{theme.border.system.info.10d}",
         "type": "color",
         "description": "The default borders for elements that have a feedback/info background."
       },
       "warning": {
-        "value": "{theme.border.system.warning.10}",
+        "value": "{theme.border.system.warning.10d}",
         "type": "color",
         "description": "The default borders for elements that have a feedback/warning background."
       },
       "success": {
-        "value": "{theme.border.system.success.10}",
+        "value": "{theme.border.system.success.10d}",
         "type": "color",
         "description": "The default borders for elements that have a feedback/success background."
       },
       "error": {
-        "value": "{theme.border.system.error.10}",
+        "value": "{theme.border.system.error.10d}",
         "type": "color",
         "description": "The default borders for elements that have a feedback/error background."
       },
       "primary": {
-        "value": "{theme.border.system.primary.10}",
+        "value": "{theme.border.system.primary.10d}",
         "type": "color",
         "description": "The default borders for elements that have a feedback/primary background."
       }
@@ -972,22 +972,22 @@
     "form_control": {
       "text_input": {
         "default": {
-          "value": "{theme.border.inputs.default.10}",
+          "value": "{theme.border.inputs.default.10d}",
           "type": "color",
           "description": "The border for inputs edges in the default state."
         },
         "hover": {
-          "value": "{theme.border.inputs.hover.10}",
+          "value": "{theme.border.inputs.hover.10d}",
           "type": "color",
           "description": "The border for inputs edges in the hover state."
         },
         "active": {
-          "value": "{theme.border.inputs.active.10}",
+          "value": "{theme.border.inputs.active.10d}",
           "type": "color",
           "description": "The border for inputs edges in the active state."
         },
         "error": {
-          "value": "{theme.border.system.error.20}",
+          "value": "{theme.border.system.error.20d}",
           "type": "color",
           "description": "The border for inputs edges in the error state."
         }

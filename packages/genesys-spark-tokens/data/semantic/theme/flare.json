@@ -669,6 +669,18 @@
         "30": {
           "value": "{color.haze.900}",
           "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.400}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.haze.200}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.white}",
+          "type": "color"
         }
       },
       "secondary": {
@@ -682,6 +694,18 @@
         },
         "30": {
           "value": "{color.haze.700}",
+          "type": "color"
+        },
+        "10d": {
+          "value": "{color.white}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.haze.200}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.haze.300}",
           "type": "color"
         }
       },
@@ -698,7 +722,23 @@
           "value": "{color.azure_blue.800}",
           "type": "color"
         },
+        "10d": {
+          "value": "{color.white}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.white}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.white}",
+          "type": "color"
+        },
         "05": {
+          "value": "{color.azure_blue.400}",
+          "type": "color"
+        },
+        "05d": {
           "value": "{color.azure_blue.400}",
           "type": "color"
         }
@@ -715,6 +755,18 @@
         "30": {
           "value": "{color.haze.300}",
           "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.950}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.haze.850}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.haze.800}",
+          "type": "color"
         }
       },
       "system": {
@@ -722,11 +774,19 @@
           "10": {
             "value": "{color.azure_blue.500}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.600}",
+            "type": "color"
           }
         },
         "info": {
           "10": {
             "value": "{color.genesys_navy.600}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_navy.500}",
             "type": "color"
           }
         },
@@ -734,17 +794,29 @@
           "10": {
             "value": "{color.emerald.600}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.emerald.500}",
+            "type": "color"
           }
         },
         "warning": {
           "10": {
             "value": "{color.honey.700}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.honey.500}",
+            "type": "color"
           }
         },
         "error": {
           "10": {
             "value": "{color.pepper.600}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.pepper.400}",
             "type": "color"
           }
         }
@@ -754,11 +826,19 @@
           "10": {
             "value": "{color.genesys_orange.500}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_orange.500}",
+            "type": "color"
           }
         },
         "ai": {
           "10": {
-            "value": "{color.plum.700}",
+            "value": "{color.island.600}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.island.600}",
             "type": "color"
           }
         }
@@ -779,11 +859,31 @@
         "40": {
           "value": "{color.genesys_navy.600}",
           "type": "color"
+        },
+        "10d": {
+          "value": "{color.azure_blue.300}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.azure_blue.200}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.azure_blue.100}",
+          "type": "color"
+        },
+        "40d": {
+          "value": "{color.genesys_navy.400}",
+          "type": "color"
         }
       },
       "icon": {
         "10": {
           "value": "{color.haze.800}",
+          "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.400}",
           "type": "color"
         }
       },
@@ -803,6 +903,22 @@
           },
           "50": {
             "value": "{color.haze.500}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.600}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.azure_blue.300}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.azure_blue.200}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.haze.600}",
             "type": "color"
           }
         }
@@ -882,11 +998,19 @@
           "10": {
             "value": "{color.azure_blue.300}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
           }
         },
         "info": {
           "10": {
             "value": "{color.genesys_navy.200}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_navy.700}",
             "type": "color"
           }
         },
@@ -894,11 +1018,19 @@
           "10": {
             "value": "{color.emerald.200}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.emerald.800}",
+            "type": "color"
           }
         },
         "warning": {
           "10": {
             "value": "{color.honey.200}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.honey.800}",
             "type": "color"
           }
         },
@@ -910,6 +1042,14 @@
           "20": {
             "value": "{color.pepper.500}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.pepper.800}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.pepper.700}",
+            "type": "color"
           }
         }
       },
@@ -918,17 +1058,29 @@
           "10": {
             "value": "{color.haze.500}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.haze.600}",
+            "type": "color"
           }
         },
         "hover": {
           "10": {
             "value": "{color.azure_blue.700}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.300}",
+            "type": "color"
           }
         },
         "active": {
           "10": {
             "value": "{color.azure_blue.800}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.200}",
             "type": "color"
           }
         }

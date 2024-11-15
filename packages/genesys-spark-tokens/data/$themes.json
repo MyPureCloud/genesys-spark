@@ -467,7 +467,6 @@
       "theme.foreground.special_accents.brand.10": "74e460bdd0bc6b96f7d21d20bb53c20411675b43",
       "theme.foreground.special_accents.ai.10": "dcbdddd82c8d629b88fce1ce9eeafde1ea1b9fc4",
       "theme.foreground.link.10": "70d553c8f6735ac7b346d6d7cae5036f0ddf6b8d",
-      "theme.foreground.link.20": "32f531511fec06fd106dd2cb0c28f06523592242",
       "theme.foreground.link.30": "d31afee2e1b8269c630f25bfc51c3f61951a0825",
       "theme.foreground.link.40": "bb2000780e55438b7c238fe1a3b9c7bfa98ca315",
       "theme.foreground.icon.10": "9acf4d616ac45efd99157735b40ac2b674d06f7d",
@@ -513,7 +512,8 @@
       "theme.border_radius.focus.small": "79675ae64f8c132f3956a5861008315ec50541de",
       "theme.border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354",
       "theme.border_radius.interactive.2xl": "7e8377a4bb6a40fca0cf85a464c6f52e64c6adc5",
-      "theme.border_radius.focus.2xl": "9d8bb0ddec01dd872daab3618d8f07c102ed5690"
+      "theme.border_radius.focus.2xl": "9d8bb0ddec01dd872daab3618d8f07c102ed5690",
+      "theme.foreground.link.20": "32f531511fec06fd106dd2cb0c28f06523592242"
     }
   },
   {
@@ -639,7 +639,6 @@
       "theme.foreground.special_accents.brand.10": "74e460bdd0bc6b96f7d21d20bb53c20411675b43",
       "theme.foreground.special_accents.ai.10": "dcbdddd82c8d629b88fce1ce9eeafde1ea1b9fc4",
       "theme.foreground.link.10": "70d553c8f6735ac7b346d6d7cae5036f0ddf6b8d",
-      "theme.foreground.link.20": "32f531511fec06fd106dd2cb0c28f06523592242",
       "theme.foreground.link.30": "d31afee2e1b8269c630f25bfc51c3f61951a0825",
       "theme.foreground.link.40": "bb2000780e55438b7c238fe1a3b9c7bfa98ca315",
       "theme.foreground.icon.10": "9acf4d616ac45efd99157735b40ac2b674d06f7d",
@@ -685,7 +684,8 @@
       "theme.border_radius.focus.small": "79675ae64f8c132f3956a5861008315ec50541de",
       "theme.border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354",
       "theme.border_radius.interactive.2xl": "7e8377a4bb6a40fca0cf85a464c6f52e64c6adc5",
-      "theme.border_radius.focus.2xl": "9d8bb0ddec01dd872daab3618d8f07c102ed5690"
+      "theme.border_radius.focus.2xl": "9d8bb0ddec01dd872daab3618d8f07c102ed5690",
+      "theme.foreground.link.20": "32f531511fec06fd106dd2cb0c28f06523592242"
     }
   },
   {
