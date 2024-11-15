@@ -1,7 +1,7 @@
 :host {
   display: block;
-  height: var(--gse-ui-dataTableItems-cell-tablePagination-height);
-  border-top: var(--gse-ui-dataTableItems-tablePagination-divider-width)
+  block-size: var(--gse-ui-dataTableItems-cell-tablePagination-height);
+  border-block-start: var(--gse-ui-dataTableItems-tablePagination-divider-width)
     var(--gse-ui-dataTableItems-tablePagination-divider-style)
     var(--gse-ui-dataTableItems-tablePagination-divider-color);
 }
@@ -48,6 +48,6 @@
   }
 
   .gux-pagination-change:first-child {
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 }

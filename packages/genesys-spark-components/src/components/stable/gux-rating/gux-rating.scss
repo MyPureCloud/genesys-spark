@@ -2,7 +2,7 @@
 
 :host {
   display: inline-block;
-  min-width: fit-content;
+  min-inline-size: fit-content;
   user-select: none;
 }
 
@@ -27,8 +27,8 @@
 
   gux-icon {
     flex: 0 0 auto;
-    width: var(--gse-ui-rating-size);
-    height: var(--gse-ui-rating-size);
+    inline-size: var(--gse-ui-rating-size);
+    block-size: var(--gse-ui-rating-size);
     color: var(--gse-ui-rating-default-color);
 
     &:hover:not(.gux-disabled) {

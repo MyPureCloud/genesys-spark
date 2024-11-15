@@ -12,7 +12,7 @@
   gap: var(--gse-ui-tag-removable-gap);
   place-content: stretch flex-start;
   align-items: center;
-  height: var(--gse-ui-tag-small-height);
+  block-size: var(--gse-ui-tag-small-height);
   padding: var(--gse-ui-tag-padding);
   font-family: var(--gse-ui-tag-text-fontFamily);
   font-size: var(--gse-ui-tag-text-fontSize);
@@ -23,11 +23,11 @@
   border-radius: var(--gse-ui-tag-borderRadius);
 
   &.gux-size-small {
-    height: var(--gse-ui-tag-small-height);
+    block-size: var(--gse-ui-tag-small-height);
   }
 
   &.gux-size-large {
-    height: var(--gse-ui-tag-large-height);
+    block-size: var(--gse-ui-tag-large-height);
   }
 
   &.gux-disabled {
@@ -67,9 +67,9 @@
     }
 
     .gux-tag-remove-icon {
-      width: var(--gse-ui-tag-button-size);
-      height: var(--gse-ui-tag-button-size);
-      margin-right: -4px;
+      inline-size: var(--gse-ui-tag-button-size);
+      block-size: var(--gse-ui-tag-button-size);
+      margin-inline-end: -4px;
     }
 
     &:focus-within {
