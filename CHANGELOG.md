@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.96.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.96.2...v4.96.3) (2024-11-15)
+
+
+### Bug Fixes
+
+* **visualization:** Add chart memory leak fix from components v3 ([851374d](https://github.com/MyPureCloud/genesys-spark/commit/851374dd821bb5f73a4e3b77f7869b1e6c6c22b4))
+
 ### [4.96.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.96.1...v4.96.2) (2024-11-13)
 
 
