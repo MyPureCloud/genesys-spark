@@ -132,7 +132,6 @@ function getSiblings(element: Element) {
 
 function setTabIndex(element: Element, newIndex: number) {
   const button = getGroupItemButton(element);
-  console.log(button);
   if (button) {
     button.tabIndex = newIndex;
   } else {

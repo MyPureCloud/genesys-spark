@@ -129,18 +129,6 @@ export class GuxAvatarGroupItem {
       case 'ArrowLeft':
         event.stopPropagation();
         break;
-      case 'Enter':
-        event.stopPropagation();
-        break;
-    }
-  }
-
-  @Listen('keyup')
-  onKeyup(event: KeyboardEvent): void {
-    switch (event.key) {
-      case ' ':
-        event.stopPropagation();
-        break;
     }
   }
 
@@ -158,7 +146,7 @@ export class GuxAvatarGroupItem {
         aria-label={this.getDescriptionText()}
         tabIndex={this.taxIndexVal}
         ref={el => (this.buttonElement = el)}
-        onClick={() => this.handleClick()}
+        onClick={this.handleClick.bind(this)}
         class={{
           'gux-avatar': true,
           [`gux-accent-${this.getAccent()}`]: true,
