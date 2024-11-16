@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.97.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.96.3...v4.97.0) (2024-11-16)
+
+
+### Features
+
+* **tokens:** modified building script ([8274a36](https://github.com/MyPureCloud/genesys-spark/commit/8274a36831ec2428b5ada4dec433f593deda7b5c))
+
 ### [4.96.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.96.2...v4.96.3) (2024-11-15)
 
 
