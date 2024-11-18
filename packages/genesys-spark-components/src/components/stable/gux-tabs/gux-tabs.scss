@@ -4,7 +4,7 @@
 
   .gux-tabs {
     display: flex;
-    height: 100%;
+    block-size: 100%;
 
     &:not(.gux-vertical) {
       flex-direction: column;
@@ -14,7 +14,7 @@
   .gux-panel-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    min-height: 0;
+    block-size: 100%;
+    min-block-size: 0;
   }
 }

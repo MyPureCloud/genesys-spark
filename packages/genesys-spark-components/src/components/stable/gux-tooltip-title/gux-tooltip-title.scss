@@ -5,7 +5,7 @@ gux-tooltip-title {
 gux-tooltip {
   font-weight: normal;
   line-height: normal;
-  text-align: left;
+  text-align: start;
   overflow-wrap: break-word;
   white-space: normal;
 }
@@ -28,16 +28,16 @@ gux-tooltip {
 .gux-tooltip-icon-decorative {
   .gux-title-container {
     position: relative;
-    margin-left: 20px;
+    margin-inline-start: 20px;
 
     gux-icon,
     ::slotted(gux-icon) {
       position: absolute;
-      top: 1px;
-      left: -20px;
+      inset-block-start: 1px;
+      inset-inline-start: -20px;
       flex-shrink: 0;
-      width: 16px;
-      height: 16px;
+      inline-size: 16px;
+      block-size: 16px;
     }
   }
 }

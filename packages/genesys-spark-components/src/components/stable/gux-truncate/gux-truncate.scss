@@ -1,6 +1,6 @@
 :host {
   display: block;
-  width: 100%;
+  inline-size: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -24,7 +24,7 @@
 gux-tooltip {
   font-weight: normal;
   line-height: normal;
-  text-align: left;
+  text-align: start;
   overflow-wrap: break-word;
   white-space: normal;
 }
