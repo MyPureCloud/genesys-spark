@@ -1772,7 +1772,8 @@
           "width": "1px",
           "style": "solid"
         },
-        "foreground_color": "#a3a8b5"
+        "foreground_color": "#a3a8b5",
+        "height": "16px"
       },
       "text": {
         "fontFamily": "'Noto Sans'",

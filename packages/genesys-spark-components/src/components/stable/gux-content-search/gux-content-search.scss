@@ -1,10 +1,10 @@
 // Variables part
-@use '~genesys-spark/dist/scss/focus.scss';
+@use "~genesys-spark/dist/scss/focus.scss";
 
 :host {
   display: inline-block;
-  inline-size: 300px; // TODO: GDS-2451 according to figma this should be a 320px token ?
-  min-inline-size: 300px;
+  inline-size: var(--gse-ui-search-width);
+  min-inline-size: var(--gse-ui-search-width);
 }
 
 ::slotted(input[disabled]) {
@@ -16,7 +16,6 @@
   flex-shrink: 1;
   flex-basis: 100%;
   inline-size: 100%;
-  min-inline-size: 20px; // TODO: GDS-2451 token to be added here
   overflow: hidden;
   font-family: var(--gse-ui-search-counter-text-fontFamily);
   font-size: var(--gse-ui-search-counter-text-fontSize);
@@ -55,8 +54,7 @@
   cursor: text;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   background-image: none;
-  border: var(--gse-ui-formControl-input-default-border-width)
-    var(--gse-ui-formControl-input-default-border-style)
+  border: var(--gse-ui-formControl-input-default-border-width) var(--gse-ui-formControl-input-default-border-style)
     var(--gse-ui-formControl-input-default-border-color);
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
@@ -73,19 +71,16 @@
 
   &:focus-visible,
   &:focus-within {
-    border: var(--gse-ui-formControl-input-active-border-width)
-      var(--gse-ui-formControl-input-active-border-style)
+    border: var(--gse-ui-formControl-input-active-border-width) var(--gse-ui-formControl-input-active-border-style)
       var(--gse-ui-formControl-input-active-border-color);
     border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
-    outline: var(--gse-ui-formControl-input-focus-border-width)
-      var(--gse-ui-formControl-input-focus-border-style)
+    outline: var(--gse-ui-formControl-input-focus-border-width) var(--gse-ui-formControl-input-focus-border-style)
       var(--gse-ui-formControl-input-focus-border-color);
     outline-offset: var(--gse-semantic-focusOutline-offset);
   }
 
   &:not(:disabled):not(.gux-disabled):hover {
-    border: var(--gse-ui-formControl-input-hover-border-width)
-      var(--gse-ui-formControl-input-hover-border-style)
+    border: var(--gse-ui-formControl-input-hover-border-width) var(--gse-ui-formControl-input-hover-border-style)
       var(--gse-ui-formControl-input-hover-border-color);
   }
 
@@ -175,9 +170,9 @@
       .gux-navigation-divider {
         box-sizing: border-box;
         align-self: center;
-        block-size: 16px; // TODO: GDS-2451 - missing token for divider height
+        block-size: var(--gse-ui-search-counter-divider-height);
         color: var(--gse-ui-search-counter-default-foregroundColor);
-        border: 1px var(--gse-ui-search-counter-divider-border-style)
+        border: var(--gse-ui-search-counter-divider-border-width) var(--gse-ui-search-counter-divider-border-style)
           var(--gse-ui-search-counter-divider-border-color);
       }
 
