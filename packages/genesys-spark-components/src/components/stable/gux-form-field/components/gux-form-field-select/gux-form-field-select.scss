@@ -21,9 +21,9 @@
   flex: 1 1 auto;
   align-self: auto;
   order: 0;
-  width: 100%;
-  height: var(--gse-ui-formControl-input-textfield-height);
-  padding-left: var(--gse-ui-formControl-input-gap);
+  inline-size: 100%;
+  block-size: var(--gse-ui-formControl-input-textfield-height);
+  padding-inline-start: var(--gse-ui-formControl-input-gap);
   color: var(--gse-ui-formControl-input-populatedColor);
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -52,7 +52,7 @@
       gap: var(--gse-ui-formControl-input-gap);
       place-content: stretch center;
       align-items: center;
-      width: 100%;
+      inline-size: 100%;
       font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
       font-size: var(--gse-ui-formControl-input-contentText-fontSize);
       font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
@@ -78,10 +78,10 @@
 
       gux-icon {
         position: absolute;
-        top: 0;
-        right: 0;
-        width: var(--gse-ui-formControl-input-inputIcon-size);
-        height: var(--gse-ui-formControl-input-inputIcon-size);
+        inset-block-start: 0;
+        inset-inline-end: 0;
+        inline-size: var(--gse-ui-formControl-input-inputIcon-size);
+        block-size: var(--gse-ui-formControl-input-inputIcon-size);
         margin: var(--gse-ui-formControl-input-padding);
         pointer-events: none;
       }

@@ -21,7 +21,7 @@
   flex: 1 1 auto;
   align-self: auto;
   order: 0;
-  width: 100%;
+  inline-size: 100%;
   overflow: hidden;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   text-overflow: ellipsis;
@@ -58,8 +58,8 @@ slot[name='suffix'] {
       gap: var(--gse-ui-formControl-input-gap);
       place-content: stretch center;
       align-items: center;
-      width: 100%;
-      height: var(--gse-ui-formControl-input-textfield-height);
+      inline-size: 100%;
+      block-size: var(--gse-ui-formControl-input-textfield-height);
       padding: var(--gse-ui-formControl-input-padding);
       font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
       font-size: var(--gse-ui-formControl-input-contentText-fontSize);
@@ -76,7 +76,7 @@ slot[name='suffix'] {
 
       &.gux-has-suffix:not(&.gux-has-prefix) {
         ::slotted(input) {
-          text-align: right;
+          text-align: end;
         }
       }
 
