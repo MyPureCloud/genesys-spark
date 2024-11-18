@@ -261,6 +261,7 @@
     "container": {
       "divider": "#c1c6d4",
       "edges": {
+        "default_light": "#bfc6d9",
         "default": "#c1c6d4",
         "hover": "#5476d5",
         "error": "#e22245",

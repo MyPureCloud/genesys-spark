@@ -847,6 +847,11 @@
         "description": "The default color for dividers inside surfaces."
       },
       "edges": {
+        "default_light": {
+          "value": "{theme.border.edges.default.00}",
+          "type": "color",
+          "description": "The default color for containers that also have elevation, for eg. filecard sub-component for file upload main component."
+        },
         "default": {
           "value": "{theme.border.edges.default.10}",
           "type": "color",
