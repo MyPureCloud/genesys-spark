@@ -13,8 +13,8 @@ button {
   }
 
   gux-icon {
-    width: var(--gse-ui-icon-small-size);
-    height: var(--gse-ui-icon-small-size);
+    inline-size: var(--gse-ui-icon-small-size);
+    block-size: var(--gse-ui-icon-small-size);
     border-radius: var(--gse-ui-formControl-input-borderRadius);
   }
 

@@ -1,5 +1,5 @@
 // Variables part
-@use "~genesys-spark/dist/scss/focus.scss";
+@use '~genesys-spark/dist/scss/focus.scss';
 
 :host {
   display: inline-block;
@@ -54,7 +54,8 @@
   cursor: text;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   background-image: none;
-  border: var(--gse-ui-formControl-input-default-border-width) var(--gse-ui-formControl-input-default-border-style)
+  border: var(--gse-ui-formControl-input-default-border-width)
+    var(--gse-ui-formControl-input-default-border-style)
     var(--gse-ui-formControl-input-default-border-color);
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
@@ -71,16 +72,19 @@
 
   &:focus-visible,
   &:focus-within {
-    border: var(--gse-ui-formControl-input-active-border-width) var(--gse-ui-formControl-input-active-border-style)
+    border: var(--gse-ui-formControl-input-active-border-width)
+      var(--gse-ui-formControl-input-active-border-style)
       var(--gse-ui-formControl-input-active-border-color);
     border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
-    outline: var(--gse-ui-formControl-input-focus-border-width) var(--gse-ui-formControl-input-focus-border-style)
+    outline: var(--gse-ui-formControl-input-focus-border-width)
+      var(--gse-ui-formControl-input-focus-border-style)
       var(--gse-ui-formControl-input-focus-border-color);
     outline-offset: var(--gse-semantic-focusOutline-offset);
   }
 
   &:not(:disabled):not(.gux-disabled):hover {
-    border: var(--gse-ui-formControl-input-hover-border-width) var(--gse-ui-formControl-input-hover-border-style)
+    border: var(--gse-ui-formControl-input-hover-border-width)
+      var(--gse-ui-formControl-input-hover-border-style)
       var(--gse-ui-formControl-input-hover-border-color);
   }
 
@@ -172,7 +176,8 @@
         align-self: center;
         block-size: var(--gse-ui-search-counter-divider-height);
         color: var(--gse-ui-search-counter-default-foregroundColor);
-        border: var(--gse-ui-search-counter-divider-border-width) var(--gse-ui-search-counter-divider-border-style)
+        border: var(--gse-ui-search-counter-divider-border-width)
+          var(--gse-ui-search-counter-divider-border-style)
           var(--gse-ui-search-counter-divider-border-color);
       }
 
