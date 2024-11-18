@@ -6,7 +6,7 @@ gux-pagination-buttons {
     gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
     place-content: stretch flex-end;
     align-items: center;
-    margin-left: var(
+    margin-inline-start: var(
       --gse-ui-dataTableItems-tablePagination-recordsetControls-gap
     );
 

@@ -7,8 +7,7 @@
         "src/components/stable/gux-button/**/*.{scss,html}",
         "src/components/stable/gux-button-slot/**/*.{scss,html}",
         "src/components/beta/**/*.{scss,html}",
-        "src/components/stable/gux-**/*.scss",
-        "src/components/stable/gux-form-field/**/*.scss"
+        "src/components/stable/**/*.scss"
       ],
       "plugins": ["stylelint-use-logical-spec"],
       "rules": {

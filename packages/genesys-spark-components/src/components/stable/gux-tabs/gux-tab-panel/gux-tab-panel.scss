@@ -7,7 +7,7 @@ $tabPanelHeightOffset: $tabListHeight + $tabListBorderBottomHeight +
   $tabListMarginBottom;
 
 :host {
-  height: calc(100% - $tabPanelHeightOffset);
+  block-size: calc(100% - $tabPanelHeightOffset);
 }
 
 :host(:not([hidden])) {

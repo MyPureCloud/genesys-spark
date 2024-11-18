@@ -2,29 +2,29 @@
 
 gux-tabs {
   &[orientation='vertical'] {
-    height: 100%;
+    block-size: 100%;
 
     > gux-tab-list {
       .gux-tab-container {
         display: flex;
         flex-direction: column;
-        width: var(--gse-ui-tabs-set-vertical-width);
-        height: 100%;
-        margin-right: var(--gse-ui-tabs-set-vertical-marginRight);
-        border-right: var(--gse-ui-tabs-item-divider-horizontal-height) solid
-          var(--gse-ui-tabs-item-divider-dividerColor);
+        inline-size: var(--gse-ui-tabs-set-vertical-width);
+        block-size: 100%;
+        margin-inline-end: var(--gse-ui-tabs-set-vertical-marginRight);
+        border-inline-end: var(--gse-ui-tabs-item-divider-horizontal-height)
+          solid var(--gse-ui-tabs-item-divider-dividerColor);
 
         .gux-scroll-button-container {
-          width: 100%;
+          inline-size: 100%;
 
           button {
-            width: 100%;
+            inline-size: 100%;
           }
         }
 
         .gux-scrollable-section {
           flex-direction: column;
-          height: 100%;
+          block-size: 100%;
           overflow-y: auto;
           scrollbar-width: none; /* Firefox */
           -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -32,8 +32,8 @@ gux-tabs {
 
           &::-webkit-scrollbar {
             /* WebKit */
-            width: 0;
-            height: 0;
+            inline-size: 0;
+            block-size: 0;
           }
         }
       }
@@ -43,10 +43,10 @@ gux-tabs {
   &:not([orientation='vertical']) {
     > gux-tab-list {
       .gux-tab-container {
-        height: var(--gse-ui-tabs-set-horizontal-height);
-        margin-bottom: var(--gse-ui-tabs-set-horizontal-marginBottom);
-        border-bottom: var(--gse-ui-tabs-item-divider-horizontal-height) solid
-          var(--gse-ui-tabs-item-divider-dividerColor);
+        block-size: var(--gse-ui-tabs-set-horizontal-height);
+        margin-block-end: var(--gse-ui-tabs-set-horizontal-marginBottom);
+        border-block-end: var(--gse-ui-tabs-item-divider-horizontal-height)
+          solid var(--gse-ui-tabs-item-divider-dividerColor);
       }
 
       .gux-scrollable-section {
@@ -58,7 +58,7 @@ gux-tabs {
   .gux-tab-container {
     box-sizing: content-box;
     display: flex;
-    width: 100%;
+    inline-size: 100%;
     overflow: hidden;
     background-color: transparent;
   }
@@ -70,7 +70,7 @@ gux-tabs {
     scrollbar-width: none;
 
     &::-webkit-scrollbar {
-      height: 0;
+      block-size: 0;
     }
   }
 
@@ -82,8 +82,8 @@ gux-tabs {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 28px;
-      height: 40px;
+      inline-size: 28px;
+      block-size: 40px;
       color: #202937;
       cursor: pointer;
       background-color: #e2e6ee;
@@ -91,8 +91,8 @@ gux-tabs {
       border-radius: 4px;
 
       gux-icon {
-        width: 16px;
-        height: 16px;
+        inline-size: 16px;
+        block-size: 16px;
       }
 
       &:hover:not(:disabled) {

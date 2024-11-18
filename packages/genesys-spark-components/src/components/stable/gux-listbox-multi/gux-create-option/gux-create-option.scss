@@ -7,7 +7,7 @@
   flex-wrap: nowrap;
   align-content: stretch;
   align-items: center;
-  min-height: var(--gse-ui-menu-option-height);
+  min-block-size: var(--gse-ui-menu-option-height);
   padding: var(--gse-ui-menu-option-padding);
   font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
   font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
@@ -40,9 +40,9 @@
   }
 
   gux-icon {
-    width: var(--gse-ui-menu-option-startIcon-width);
-    height: var(--gse-ui-menu-option-startIcon-height);
-    padding-right: var(--gse-ui-menu-option-gap);
+    inline-size: var(--gse-ui-menu-option-startIcon-width);
+    block-size: var(--gse-ui-menu-option-startIcon-height);
+    padding-inline-end: var(--gse-ui-menu-option-gap);
   }
 
   .gux-option {
