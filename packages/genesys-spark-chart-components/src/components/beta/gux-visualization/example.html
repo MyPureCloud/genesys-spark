@@ -23,6 +23,12 @@
 <h3>Multi line chart with legend and grid line hover</h3>
 <gux-visualization-beta id="spark-multi-line"> </gux-visualization-beta>
 
+<h3>Basic scatter chart</h3>
+<gux-visualization-beta id="spark-scatter"> </gux-visualization-beta>
+
+<h3>Scatter chart with hover</h3>
+<gux-visualization-beta id="spark-scatter-hover"> </gux-visualization-beta>
+
 <h2>Default</h2>
 <gux-visualization-beta id="chart-1"> </gux-visualization-beta>
 
@@ -233,7 +239,8 @@
           bandPaddingOuter: 0.4 // padding between leftmost/rightmost column/bar from axes
         },
         legend: {
-          symbolType: 'circle'
+          symbolType: 'circle',
+          title: null
         },
         bar: {
           color: '#0D7482',
@@ -336,7 +343,8 @@
           labelAngle: 0
         },
         legend: {
-          symbolType: 'circle'
+          symbolType: 'circle',
+          title: null
         },
         bar: {
           width: { band: .7 } // decrease width of bars so that there is space between grouped bars
@@ -392,7 +400,8 @@
           gridColor: '#F2F2F3'
         },
         legend: {
-          symbolType: 'circle'
+          symbolType: 'circle',
+          title: null
         },
         scale: {
           bandPaddingInner: 0.4, // padding between columns / bars
@@ -451,7 +460,8 @@
           bandPaddingOuter: 0.4 // padding between leftmost/rightmost column/bar from axes
         },
         legend: {
-          symbolType: 'circle'
+          symbolType: 'circle',
+          title: null
         },
         bar: {
           color: '#0D7482',
@@ -539,7 +549,8 @@
           labelAngle: 0
         },
         legend: {
-          symbolType: 'circle'
+          symbolType: 'circle',
+          title: null
         },
         bar: {
           height: { band: .7 } // decrease height of bars so that there is space between grouped bars
@@ -611,7 +622,8 @@
           labelAngle: 0
         },
         legend: {
-          symbolType: 'circle'
+          symbolType: 'circle',
+          title: null
         },
         line: {
           stroke: '#0D7482',
@@ -673,7 +685,8 @@
           labelAngle: 0
         },
         legend: {
-          symbolType: 'circle'
+          symbolType: 'circle',
+          title: null
         }
       },
       encoding: {
@@ -746,6 +759,147 @@
 
     setChartExample(visualizationSpecSparkMultiLine, '#spark-multi-line');
 
+    /** Spark line examples **/
+
+const visualizationSpecSparkScatter = {
+  $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+  data: {'values': [
+          {xValue: '1', 'value': 5, 'category': 'A'},
+          {xValue: '1', 'value': 4, 'category': 'B'},
+          {xValue: '1', 'value': 3, 'category': 'C'},
+          {xValue: '1', 'value': 5, 'category': 'B'},
+          {xValue: '1.5', 'value': 4, 'category': 'A'},
+          {xValue: '1.5', 'value': 3, 'category': 'C'},
+          {xValue: '1.5', 'value': 3, 'category': 'B'},
+          {xValue: '2', 'value': 3.5, 'category': 'A'},
+          {xValue: '2', 'value': 4, 'category': 'C'},
+          {xValue: '3', 'value': 2, 'category': 'B'},
+          {xValue: '3', 'value': 2.5, 'category': 'A'},
+          {xValue: '3', 'value': 3.5, 'category': 'B'},
+          {xValue: '3', 'value': 2, 'category': 'A'},
+          {xValue: '3', 'value': 1, 'category': 'B'},
+          {xValue: '4', 'value': 1.5, 'category': 'A'},
+          {xValue: '4', 'value': 1, 'category': 'C'},
+          {xValue: '4', 'value': 1.4, 'category': 'A'},
+          {xValue: '4', 'value': .2, 'category': 'A'},
+          {xValue: '4', 'value': .5, 'category': 'B'},
+        ]
+      },
+
+  config: {
+    font: 'Noto Sans',
+    autosize: 'fit',
+    axis: {
+      ticks: false,
+      titlePadding: 8,
+      titleFontSize: '12',
+      titleFontWeight: '700',
+      labelColor: '#1B2C48',
+      labelFontWeight: '400',
+      labelFontSize: '12',
+      labelPadding: '8',
+      domainColor:'#A3A7B0',
+      gridColor: '#F2F2F3'
+    },
+    axisX: {
+      labelAngle: 0
+    },
+    legend: {
+      symbolType: 'circle',
+      title: null
+    },
+    line: {
+      stroke: '#0D7482',
+    }
+  },
+  layer: [
+  {
+    mark: { type: 'point', tooltip: true },
+    encoding: {
+      x: { field: 'xValue', type: 'quantitative'},
+      y: { field: 'value', type: 'quantitative' },
+      color: {'field': 'category', 'type': 'nominal', scale: {range: ['#0D7482', '#5798D9', '#CDACFF']}},
+    }
+  }
+]
+};
+
+setChartExample(visualizationSpecSparkScatter, '#spark-scatter');
+
+const visualizationSpecSparkScatterHover = {
+  $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+  data: {'values': [
+          {xValue: '1', 'value': 5, 'category': 'A'},
+          {xValue: '1', 'value': 4, 'category': 'B'},
+          {xValue: '1', 'value': 3, 'category': 'C'},
+          {xValue: '1', 'value': 5, 'category': 'B'},
+          {xValue: '1.5', 'value': 4, 'category': 'A'},
+          {xValue: '1.5', 'value': 3, 'category': 'C'},
+          {xValue: '1.5', 'value': 3, 'category': 'B'},
+          {xValue: '2', 'value': 3.5, 'category': 'A'},
+          {xValue: '2', 'value': 4, 'category': 'C'},
+          {xValue: '3', 'value': 2, 'category': 'B'},
+          {xValue: '3', 'value': 2.5, 'category': 'A'},
+          {xValue: '3', 'value': 3.5, 'category': 'B'},
+          {xValue: '3', 'value': 2, 'category': 'A'},
+          {xValue: '3', 'value': 1, 'category': 'B'},
+          {xValue: '4', 'value': 1.5, 'category': 'A'},
+          {xValue: '4', 'value': 1, 'category': 'C'},
+          {xValue: '4', 'value': 1.4, 'category': 'A'},
+          {xValue: '4', 'value': .2, 'category': 'A'},
+          {xValue: '4', 'value': .5, 'category': 'B'},
+        ]
+      },
+
+  config: {
+    font: 'Noto Sans',
+    autosize: 'fit',
+    axis: {
+      ticks: false,
+      titlePadding: 8,
+      titleFontSize: '12',
+      titleFontWeight: '700',
+      labelColor: '#1B2C48',
+      labelFontWeight: '400',
+      labelFontSize: '12',
+      labelPadding: '8',
+      domainColor:'#A3A7B0',
+      gridColor: '#F2F2F3'
+    },
+    axisX: {
+      labelAngle: 0
+    },
+    legend: {
+      symbolType: 'circle',
+      title: null
+    },
+    line: {
+      stroke: '#0D7482',
+    }
+  },
+  layer: [
+  {
+    mark: { type: 'point', tooltip: true },
+    params: [{ name: 'hover',
+      select: { type: 'point', on: 'pointerover',
+      fields: ['category'],
+      },
+      bind: { legend: 'mouseover'}
+    }],
+    encoding: {
+      x: { field: 'xValue', type: 'quantitative'},
+      y: { field: 'value', type: 'quantitative' },
+      color: {'field': 'category', 'type': 'nominal', scale: {range: ['#0D7482', '#5798D9', '#CDACFF']}},
+      strokeOpacity: {
+          condition: { param: 'hover', value: 1},
+          value: 0.25
+        },
+    }
+  }
+]
+};
+
+setChartExample(visualizationSpecSparkScatterHover, '#spark-scatter-hover');
 
   })()"
 >
