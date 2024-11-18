@@ -3,6 +3,10 @@
 @use '~genesys-spark/dist/scss/checkbox-icons.scss';
 @use '~genesys-spark/dist/scss/radio-icons.scss';
 
+:host {
+  display: flex;
+}
+
 ::slotted(*) {
   cursor: pointer;
 }
@@ -101,6 +105,8 @@
 }
 
 .gux-selector-card {
+  display: flex;
+  flex: 1 0 auto;
   inline-size: fit-content;
 
   .gux-content {
@@ -113,7 +119,6 @@
     inline-size: var(--gse-ui-selectorCard-simple-minWidth);
     min-inline-size: var(--gse-ui-selectorCard-simple-minWidth);
     max-inline-size: var(--gse-ui-selectorCard-simple-maxWidth);
-    block-size: fit-content;
     min-block-size: var(--gse-ui-selectorCard-simple-minHeight);
     max-block-size: var(--gse-ui-selectorCard-simple-maxHeight);
     padding: var(--gse-ui-selectorCard-simple-padding);
