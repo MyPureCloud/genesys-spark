@@ -929,30 +929,6 @@
         }
       }
     },
-    "modal": {
-      "desktop": {
-        "bottom_padding": {
-          "value": "{container.md.padding}",
-          "type": "spacing",
-          "description": "The recommended vertical padding for the form footer content."
-        },
-        "top_padding": {
-          "value": "{container.md.padding}",
-          "type": "spacing",
-          "description": "The recommended vertical padding for the form footer content."
-        },
-        "horizontal_padding": {
-          "value": "{container.xl.padding}",
-          "type": "spacing",
-          "description": "The recommended vertical padding for the form footer content."
-        },
-        "gap": {
-          "value": "{container.lg.gap}",
-          "type": "spacing",
-          "description": "The recommended vertical padding for the form footer content."
-        }
-      }
-    },
     "background_color": {
       "value": "{background.container.elevated.default}",
       "type": "color"

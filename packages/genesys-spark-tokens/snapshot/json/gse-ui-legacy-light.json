@@ -628,14 +628,6 @@
         "gap": "16px"
       }
     },
-    "modal": {
-      "desktop": {
-        "bottom_padding": "16px",
-        "top_padding": "16px",
-        "horizontal_padding": "32px",
-        "gap": "16px"
-      }
-    },
     "background_color": "#ffffff",
     "border": {
       "color": "#2a60c8",
