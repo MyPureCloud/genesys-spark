@@ -3,3 +3,19 @@
   flex-direction: row;
   justify-content: center;
 }
+
+// COMUI-3240: This is a Workaround for a safari repaint bug
+input.gux-safari-bug-workaround-1,
+input.gux-safari-bug-workaround-2 {
+  animation: repaint 1ms;
+}
+
+@keyframes repaint {
+  from {
+    width: 99.999%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
