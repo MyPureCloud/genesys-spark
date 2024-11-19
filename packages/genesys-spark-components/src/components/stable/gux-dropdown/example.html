@@ -379,7 +379,7 @@
 
   <h2>Set list max height</h2>
   <gux-dropdown placeholder="Select an animal">
-    <gux-listbox style="max-height: 100px" aria-label="Animals">
+    <gux-listbox style="max-block-size: 100px" aria-label="Animals">
       <gux-option value="a">Ant</gux-option>
       <gux-option value="b">Bat</gux-option>
       <gux-option value="c">Cat</gux-option>
@@ -545,7 +545,7 @@
   <h2>List wider than dropdown input</h2>
 
   <gux-dropdown placeholder="Select an animal" exceed-target-width>
-    <gux-listbox aria-label="Animals" style="width: 300px">
+    <gux-listbox aria-label="Animals" style="inline-size: 300px">
       <gux-option value="a">Ant</gux-option>
       <gux-option value="b">Bat</gux-option>
       <gux-option value="c">Cat</gux-option>
@@ -557,7 +557,7 @@
   <gux-dropdown
     filter-type="starts-with"
     placeholder="Select an option"
-    style="max-width: 150px"
+    style="max-inline-size: 150px"
   >
     <gux-listbox aria-label="Options">
       <gux-option value="a" dir="auto">עברית ואז english</gux-option>
@@ -605,7 +605,7 @@
 })()"
 >
   form {
-    width: 200px;
+    inline-size: 200px;
   }
 
   gux-dropdown + gux-button {
