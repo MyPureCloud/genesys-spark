@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.98.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.97.0...v4.98.0) (2024-11-19)
+
+
+### Features
+
+* **form-footer:** Remove modal-desktop variant and tokens ([#709](https://github.com/MyPureCloud/genesys-spark/issues/709)) ([2ec4146](https://github.com/MyPureCloud/genesys-spark/commit/2ec41468a83a0b5bb1c3f0bb112238e86179ea73))
+* **selector-cards:** stretch height ([#710](https://github.com/MyPureCloud/genesys-spark/issues/710)) ([0a70c76](https://github.com/MyPureCloud/genesys-spark/commit/0a70c762f9d19e145f83d39e26c0ae9fe484f074))
+
+
+### Bug Fixes
+
+* **content-search:** add missing tokens ([2e3c6f2](https://github.com/MyPureCloud/genesys-spark/commit/2e3c6f2714bd93941580bff29f6fb751ad5d90f9))
+
 ## [4.97.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.96.3...v4.97.0) (2024-11-16)
 
 
