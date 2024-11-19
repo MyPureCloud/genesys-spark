@@ -419,7 +419,7 @@
 
   <h2>Set list max height</h2>
   <gux-dropdown-multi placeholder="Select an animal">
-    <gux-listbox-multi style="max-height: 100px" aria-label="Animals">
+    <gux-listbox-multi style="max-block-size: 100px" aria-label="Animals">
       <gux-option-multi value="a">Ant</gux-option-multi>
       <gux-option-multi value="b">Bat</gux-option-multi>
       <gux-option-multi value="c">Cat</gux-option-multi>
@@ -477,7 +477,7 @@
 
   <h2>List wider than dropdown input</h2>
   <gux-dropdown-multi placeholder="Select an animal" exceed-target-width>
-    <gux-listbox-multi aria-label="Animals" style="width: 300px">
+    <gux-listbox-multi aria-label="Animals" style="inline-size: 300px">
       <gux-option-multi value="a">Ant</gux-option-multi>
       <gux-option-multi value="b">Bat</gux-option-multi>
       <gux-option-multi value="c">Cat</gux-option-multi>
@@ -528,6 +528,6 @@
 })()"
 >
   form {
-    width: 200px;
+    inline-size: 200px;
   }
 </style>

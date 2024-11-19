@@ -173,7 +173,7 @@
 
 <h2>Table with gux-truncate</h2>
 <gux-table>
-  <table style="width: 100%; table-layout: fixed" slot="data">
+  <table style="inline-size: 100%; table-layout: fixed" slot="data">
     <thead>
       <tr>
         <th data-column-name="first-name">First name</th>
@@ -213,7 +213,7 @@
 </gux-table>
 
 <h2>Data table with scroll</h2>
-<gux-table style="height: 150px">
+<gux-table style="block-size: 150px">
   <table slot="data">
     <thead>
       <tr>
@@ -544,7 +544,7 @@
 </gux-table>
 
 <h2>Data table with scroll and row selection</h2>
-<gux-table style="height: 150px">
+<gux-table style="block-size: 150px">
   <table slot="data">
     <thead>
       <tr>
@@ -687,7 +687,7 @@
 </gux-table>
 
 <h2>Data table with table select menu</h2>
-<gux-table style="height: 150px">
+<gux-table style="block-size: 150px">
   <table slot="data">
     <thead>
       <tr>
@@ -979,13 +979,13 @@
 
   .gux-sticky-cell {
     position: sticky;
-    left: 0;
+    inset-inline-start: 0;
     z-index: 1;
   }
 
   .gux-sticky-cell-2 {
     position: sticky;
-    left: 89px;
+    inset-inline-start: 89px;
     z-index: 1;
   }
 
