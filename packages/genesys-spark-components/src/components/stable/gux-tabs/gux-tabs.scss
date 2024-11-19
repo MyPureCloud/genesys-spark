@@ -13,6 +13,7 @@
 
   .gux-panel-container {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     block-size: 100%;
     min-block-size: 0;
