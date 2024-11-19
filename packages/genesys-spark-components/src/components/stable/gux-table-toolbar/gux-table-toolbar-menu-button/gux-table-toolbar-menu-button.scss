@@ -1,4 +1,4 @@
-@use '~genesys-spark/dist/scss/mixins.scss';
+@use "~genesys-spark/dist/scss/mixins.scss";
 
 :host {
   display: none;
@@ -11,16 +11,15 @@
 }
 
 .gux-menu-button {
-  button {
-    color: var(--gse-ui-button-secondary-default-foregroundColor);
-    cursor: grab;
-    background-color: var(--gse-ui-button-secondary-default-backgroundColor);
-    border: none;
+  display: flex;
+  color: var(--gse-ui-button-secondary-default-foregroundColor);
+  cursor: pointer;
+  border: none;
 
-    gux-icon {
-      inline-size: var(--gse-ui-icon-small-size);
-      block-size: var(--gse-ui-icon-small-size);
-    }
+  gux-icon {
+    inline-size: var(--gse-ui-icon-small-size);
+    block-size: var(--gse-ui-icon-small-size);
+    align-self: center;
   }
 }
 
