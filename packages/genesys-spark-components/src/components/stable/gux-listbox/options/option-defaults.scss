@@ -7,7 +7,7 @@
     gap: var(--gse-ui-menu-option-gap);
     place-content: stretch center;
     align-items: center;
-    height: var(--gse-ui-menu-option-height);
+    block-size: var(--gse-ui-menu-option-height);
     padding: var(--gse-ui-menu-option-padding);
     font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
     font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
@@ -18,7 +18,7 @@
     cursor: pointer;
 
     .gux-option-wrapper {
-      width: 100%;
+      inline-size: 100%;
     }
 
     .gux-slot-container {
@@ -59,7 +59,7 @@
 
   :host(.gux-show-subtext) {
     place-content: stretch flex-start;
-    height: auto;
+    block-size: auto;
 
     .gux-option-wrapper {
       display: flex;

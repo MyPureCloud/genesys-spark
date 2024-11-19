@@ -1,5 +1,5 @@
 :host {
-  width: 100%;
+  inline-size: 100%;
   text-align: start;
   outline: none;
 }
@@ -13,17 +13,17 @@
 }
 
 ::slotted(gux-icon) {
-  width: var(--gse-ui-menu-option-startIcon-height);
-  height: var(--gse-ui-menu-option-startIcon-height);
-  margin-right: var(--gse-ui-menu-option-gap);
+  inline-size: var(--gse-ui-menu-option-startIcon-height);
+  block-size: var(--gse-ui-menu-option-startIcon-height);
+  margin-inline-end: var(--gse-ui-menu-option-gap);
   vertical-align: middle;
 }
 
 button {
   all: unset;
   box-sizing: border-box;
-  width: 100%;
-  min-height: var(--gse-ui-menu-option-height);
+  inline-size: 100%;
+  min-block-size: var(--gse-ui-menu-option-height);
   padding: var(--gse-ui-menu-option-padding);
   font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
   font-size: var(--gse-ui-menu-option-label-default-text-fontSize);

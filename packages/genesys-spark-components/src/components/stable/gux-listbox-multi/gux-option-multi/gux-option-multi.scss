@@ -8,7 +8,7 @@
   gap: var(--gse-ui-menu-option-gap);
   align-content: stretch;
   align-items: center;
-  min-height: var(--gse-ui-menu-option-height);
+  min-block-size: var(--gse-ui-menu-option-height);
   padding: var(--gse-ui-menu-option-padding);
   font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
   font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
@@ -19,15 +19,15 @@
   cursor: pointer;
 
   .gux-option-wrapper {
-    width: 100%;
+    inline-size: 100%;
   }
 
   .gux-checkbox-container {
     position: relative;
     display: inline-block;
-    min-width: var(--gse-ui-menu-option-startIcon-width);
-    max-width: var(--gse-ui-menu-option-startIcon-width);
-    height: var(--gse-ui-menu-option-startIcon-height);
+    min-inline-size: var(--gse-ui-menu-option-startIcon-width);
+    max-inline-size: var(--gse-ui-menu-option-startIcon-width);
+    block-size: var(--gse-ui-menu-option-startIcon-height);
     content: '';
 
     > path {
@@ -72,7 +72,7 @@
 
   &:host(.gux-show-subtext) {
     place-content: stretch flex-start;
-    height: auto;
+    block-size: auto;
 
     .gux-option-wrapper {
       display: flex;

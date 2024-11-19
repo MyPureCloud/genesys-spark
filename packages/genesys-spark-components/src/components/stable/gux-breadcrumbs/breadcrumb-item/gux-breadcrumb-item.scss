@@ -70,7 +70,7 @@
   flex-wrap: nowrap;
   place-content: flex-start flex-start;
   align-items: center;
-  min-height: var(--gse-ui-breadcrumbs-secondary-height);
+  min-block-size: var(--gse-ui-breadcrumbs-secondary-height);
 
   .gux-breadcrumb-content {
     @include link-breadcrumb-secondary-default;
@@ -115,7 +115,7 @@
   }
 
   &.gux-primary {
-    min-height: var(--gse-ui-breadcrumbs-primary-height);
+    min-block-size: var(--gse-ui-breadcrumbs-primary-height);
 
     .gux-breadcrumb-content {
       @include link-breadcrumb-primary-default;

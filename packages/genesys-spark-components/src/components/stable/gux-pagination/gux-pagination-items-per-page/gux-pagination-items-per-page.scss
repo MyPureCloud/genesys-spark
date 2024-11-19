@@ -17,13 +17,13 @@ gux-pagination-items-per-page {
     .gux-pagination-items-per-page-picker {
       gux-dropdown {
         display: inline-block;
-        width: fit-content;
+        inline-size: fit-content;
       }
     }
 
     gux-dropdown {
       div.gux-dropdown .gux-options.gux-opened {
-        bottom: 100%;
+        inset-block-end: 100%;
         display: flex;
         flex-direction: column-reverse;
       }

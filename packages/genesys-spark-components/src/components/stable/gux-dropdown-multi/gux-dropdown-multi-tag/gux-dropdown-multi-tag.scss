@@ -12,7 +12,7 @@
   flex-wrap: nowrap;
   place-content: stretch flex-start;
   align-items: center;
-  height: var(--gse-ui-tag-small-height);
+  block-size: var(--gse-ui-tag-small-height);
   padding: var(--gse-ui-tag-removable-padding);
   font-family: var(--gse-ui-tag-text-fontFamily);
   font-size: var(--gse-ui-tag-text-fontSize);
@@ -30,15 +30,15 @@
     display: flex;
     place-content: center center;
     align-items: center;
-    margin-left: var(--gse-ui-tag-removable-gap);
+    margin-inline-start: var(--gse-ui-tag-removable-gap);
 
     &:not(:disabled):hover {
       cursor: pointer;
     }
 
     .gux-tag-remove-icon {
-      width: var(--gse-ui-tag-button-size);
-      height: var(--gse-ui-tag-button-size);
+      inline-size: var(--gse-ui-tag-button-size);
+      block-size: var(--gse-ui-tag-button-size);
     }
 
     &:focus-within {

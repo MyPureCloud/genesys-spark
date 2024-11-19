@@ -5,7 +5,7 @@
 :host {
   gux-icon {
     flex-shrink: 0;
-    width: var(--gse-ui-menu-option-startIcon-width);
-    height: var(--gse-ui-menu-option-startIcon-height);
+    inline-size: var(--gse-ui-menu-option-startIcon-width);
+    block-size: var(--gse-ui-menu-option-startIcon-height);
   }
 }
