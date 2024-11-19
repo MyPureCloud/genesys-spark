@@ -11,16 +11,15 @@
 }
 
 .gux-menu-button {
-  button {
-    color: var(--gse-ui-button-secondary-default-foregroundColor);
-    cursor: grab;
-    background-color: var(--gse-ui-button-secondary-default-backgroundColor);
-    border: none;
+  display: flex;
+  color: var(--gse-ui-button-secondary-default-foregroundColor);
+  cursor: pointer;
+  border: none;
 
-    gux-icon {
-      width: var(--gse-ui-icon-small-size);
-      height: var(--gse-ui-icon-small-size);
-    }
+  gux-icon {
+    align-self: center;
+    width: var(--gse-ui-icon-small-size);
+    height: var(--gse-ui-icon-small-size);
   }
 }
 

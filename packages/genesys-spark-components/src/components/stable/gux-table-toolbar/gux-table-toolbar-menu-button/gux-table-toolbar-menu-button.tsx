@@ -23,7 +23,6 @@ import { afterNextRender } from '@utils/dom/after-next-render';
 export class GuxTableToolbarMenuButton {
   listElement: HTMLGuxListElement;
   dropdownButton: HTMLElement;
-  private tooltipTitleElement: HTMLGuxTooltipTitleElement;
 
   private i18n: GetI18nValue;
 
@@ -80,16 +79,6 @@ export class GuxTableToolbarMenuButton {
     }
   }
 
-  @Listen('focusin')
-  onFocusin() {
-    void this.tooltipTitleElement.setShowTooltip();
-  }
-
-  @Listen('focusout')
-  onFocusout() {
-    void this.tooltipTitleElement.setHideTooltip();
-  }
-
   private toggle(): void {
     this.expanded = !this.expanded;
     if (this.expanded) {
@@ -114,6 +103,16 @@ export class GuxTableToolbarMenuButton {
     });
   }
 
+  private renderTooltip(): JSX.Element {
+    if (!this.expanded) {
+      return (
+        <gux-tooltip-beta>
+          <div slot="content">{this.i18n('additionalActions')}</div>
+        </gux-tooltip-beta>
+      ) as JSX.Element;
+    }
+  }
+
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     trackComponent(this.root);
@@ -124,22 +123,17 @@ export class GuxTableToolbarMenuButton {
       <Host class={{ 'gux-show-menu': this.showMenu }}>
         <gux-popup expanded={this.expanded} exceed-target-width>
           <div slot="target" class="gux-toolbar-menu-container">
-            <gux-button-slot class="gux-menu-button">
+            <gux-button-slot accent="secondary">
               <button
+                class="gux-menu-button"
                 type="button"
                 ref={el => (this.dropdownButton = el)}
                 onMouseUp={() => this.toggle()}
                 aria-haspopup="true"
                 aria-expanded={this.expanded.toString()}
               >
-                <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
-                  <span>
-                    <gux-icon
-                      screenreader-text={this.i18n('additionalActions')}
-                      icon-name="fa/ellipsis-regular"
-                    ></gux-icon>
-                  </span>
-                </gux-tooltip-title>
+                <gux-icon decorative icon-name="fa/ellipsis-regular"></gux-icon>
+                {this.renderTooltip()}
               </button>
             </gux-button-slot>
           </div>
