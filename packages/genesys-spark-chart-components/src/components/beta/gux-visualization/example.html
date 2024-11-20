@@ -29,6 +29,12 @@
 <h3>Scatter chart with hover</h3>
 <gux-visualization-beta id="spark-scatter-hover"> </gux-visualization-beta>
 
+<h3>Donut chart with hover</h3>
+<gux-visualization-beta id="spark-donut"> </gux-visualization-beta>
+
+<h3>Pie chart with hover</h3>
+<gux-visualization-beta id="spark-pie"> </gux-visualization-beta>
+
 <h2>Default</h2>
 <gux-visualization-beta id="chart-1"> </gux-visualization-beta>
 
@@ -900,6 +906,130 @@ const visualizationSpecSparkScatterHover = {
 };
 
 setChartExample(visualizationSpecSparkScatterHover, '#spark-scatter-hover');
+
+const visualizationSpecSparkDonut = {
+  $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+  'data': {
+        'values': [
+          {'category': 'a', 'value': 4},
+          {'category': 'b', 'value': 6},
+          {'category': 'c', 'value': 10},
+          {'category': 'd', 'value': 3},
+          {'category': 'e', 'value': 7}
+        ]
+      },
+  config: {
+    font: 'Noto Sans',
+    autosize: 'fit',
+    axis: {
+      ticks: false,
+      titlePadding: 8,
+      titleFontSize: '12',
+      titleFontWeight: '700',
+      labelColor: '#1B2C48',
+      labelFontWeight: '400',
+      labelFontSize: '12',
+      labelPadding: '8',
+      domainColor:'#A3A7B0',
+      gridColor: '#F2F2F3'
+    },
+    axisX: {
+      labelAngle: 0
+    },
+    legend: {
+      symbolType: 'circle',
+      title: null
+    },
+    line: {
+      stroke: '#0D7482',
+    }
+  },
+  encoding: {
+      theta: {'field': 'value', 'type': 'quantitative', 'stack': true},
+      color: {'field': 'category', 'type': 'nominal', scale: {range: ['#0D7482', '#5798D9', '#CDACFF', '#89387B', '#FF5C77']}},
+      fillOpacity: {
+        condition: { param: 'hover', value: 1},
+        value: 0.25
+      },
+  },
+  layer: [
+    {
+      mark: {'type': 'arc', 'outerRadius': 80, 'innerRadius': 60, stroke: '#fff', tooltip: true},
+      params: [{
+        name: 'hover',
+        select: {
+          type: 'point', on: 'pointerover',
+          fields: ['category'],
+        },
+        bind: { legend: 'mouseover'}
+    }],
+    }
+  ]
+};
+
+setChartExample(visualizationSpecSparkDonut, '#spark-donut');
+
+const visualizationSpecSparkPie = {
+  $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+  'data': {
+        'values': [
+          {'category': 'a', 'value': 4},
+          {'category': 'b', 'value': 6},
+          {'category': 'c', 'value': 10},
+          {'category': 'd', 'value': 3},
+          {'category': 'e', 'value': 7}
+        ]
+      },
+  config: {
+    font: 'Noto Sans',
+    autosize: 'fit',
+    axis: {
+      ticks: false,
+      titlePadding: 8,
+      titleFontSize: '12',
+      titleFontWeight: '700',
+      labelColor: '#1B2C48',
+      labelFontWeight: '400',
+      labelFontSize: '12',
+      labelPadding: '8',
+      domainColor:'#A3A7B0',
+      gridColor: '#F2F2F3'
+    },
+    axisX: {
+      labelAngle: 0
+    },
+    legend: {
+      symbolType: 'circle',
+      title: null
+    },
+    line: {
+      stroke: '#0D7482',
+    }
+  },
+  encoding: {
+      theta: {'field': 'value', 'type': 'quantitative', 'stack': true},
+      color: {'field': 'category', 'type': 'nominal', scale: {range: ['#0D7482', '#5798D9', '#CDACFF', '#89387B', '#FF5C77']}},
+      fillOpacity: {
+        condition: { param: 'hover', value: 1},
+        value: 0.25
+      },
+  },
+  layer: [
+    {
+      mark: {'type': 'arc', 'outerRadius': 80, stroke: '#fff', tooltip: true},
+      params: [{
+        name: 'hover',
+        select: {
+          type: 'point', on: 'pointerover',
+          fields: ['category'],
+        },
+        bind: { legend: 'mouseover'}
+    }],
+    }
+  ]
+};
+
+setChartExample(visualizationSpecSparkPie, '#spark-pie');
 
   })()"
 >
