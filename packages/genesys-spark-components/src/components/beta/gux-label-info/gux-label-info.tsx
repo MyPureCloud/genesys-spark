@@ -4,7 +4,7 @@ import { Placement } from '@floating-ui/dom';
 
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxLabelInfoVariant } from './gux-label-info.types';
-import { getSlot } from '@utils/dom/get-slot';
+import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 
 /**
  * @slot content - Required slot for tooltip and screenreader content
@@ -53,22 +53,11 @@ export class GuxLabelInfo {
     return await this.tooltipElement.hideTooltip();
   }
 
-  private getSlotContent(): JSX.Element | null {
-    const slotElement = getSlot(this.root, 'content') as HTMLSlotElement;
-    if (!slotElement) {
-      return null;
-    }
-
-    return h('span', {
-      innerHTML: slotElement.innerHTML
-    }) as JSX.Element;
-  }
-
   render(): JSX.Element {
     return (
       <div class="gux-label-info">
         <gux-screen-reader-beta>
-          <slot name="content"></slot>
+          {getSlotTextContent(this.root, 'content')}
         </gux-screen-reader-beta>
         <gux-icon
           icon-name={this.getVariantIcon(this.variant)}
@@ -79,7 +68,7 @@ export class GuxLabelInfo {
           placement={this.placement}
           ref={el => (this.tooltipElement = el)}
         >
-          <span slot="content">{this.getSlotContent()}</span>
+          <slot name="content"></slot>
         </gux-tooltip-beta>
       </div>
     ) as JSX.Element;
