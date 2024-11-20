@@ -786,7 +786,7 @@
       },
       "click_input": {
         "enabled": {
-          "value": "{theme.foreground.form_control.click_input.50}",
+          "value": "{theme.foreground.form_control.click_input.40}",
           "type": "color",
           "description": "The color we use for foreground elements on click-based inputs when they are enabled but not selected."
         },
@@ -848,7 +848,7 @@
       },
       "edges": {
         "default_light": {
-          "value": "{theme.border.edges.default.00}",
+          "value": "{theme.border.edges.default.0}",
           "type": "color",
           "description": "The default color for containers that also have elevation, for eg. filecard sub-component for file upload main component."
         },
@@ -884,7 +884,7 @@
         },
         "data_table": {
           "default": {
-            "value": "{theme.border.edges.default.05}",
+            "value": "{theme.border.edges.default.5}",
             "type": "color",
             "description": "This is used for default border for datatables"
           }
