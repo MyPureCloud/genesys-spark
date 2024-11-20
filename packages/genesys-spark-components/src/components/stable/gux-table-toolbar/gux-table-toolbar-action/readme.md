@@ -7,12 +7,13 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type                                                                 | Default       |
-| ---------- | ----------- | ----------- | -------------------------------------------------------------------- | ------------- |
-| `accent`   | `accent`    |             | `"ghost" \| "primary" \| "secondary"`                                | `'secondary'` |
-| `action`   | `action`    |             | `"add" \| "delete" \| "export" \| "import" \| "refresh" \| "revert"` | `undefined`   |
-| `disabled` | `disabled`  |             | `boolean`                                                            | `false`       |
-| `iconOnly` | `icon-only` |             | `boolean`                                                            | `false`       |
+| Property          | Attribute          | Description                                                                 | Type                                                                 | Default       |
+| ----------------- | ------------------ | --------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------- |
+| `accent`          | `accent`           |                                                                             | `"ghost" \| "primary" \| "secondary"`                                | `'secondary'` |
+| `action`          | `action`           |                                                                             | `"add" \| "delete" \| "export" \| "import" \| "refresh" \| "revert"` | `undefined`   |
+| `condensedLayout` | `condensed-layout` | This is meant to be an internal property. It is not recommended to be used. | `boolean`                                                            | `false`       |
+| `disabled`        | `disabled`         |                                                                             | `boolean`                                                            | `false`       |
+| `iconOnly`        | `icon-only`        |                                                                             | `boolean`                                                            | `false`       |
 
 
 ## Dependencies

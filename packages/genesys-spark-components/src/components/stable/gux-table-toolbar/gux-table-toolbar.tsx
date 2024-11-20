@@ -162,6 +162,7 @@ export class GuxTableToolbar {
     this.displayedLayout = 'full';
     setActionsIconOnlyProp(
       false,
+      false,
       this.primaryAction,
       ...this.allFilterContextual,
       ...this.permanentActions
@@ -172,6 +173,7 @@ export class GuxTableToolbar {
     this.displayedLayout = 'iconOnly';
     setActionsIconOnlyProp(
       true,
+      false,
       this.primaryAction,
       ...this.allFilterContextual,
       ...this.permanentActions
@@ -184,6 +186,7 @@ export class GuxTableToolbar {
     setAccent(this.primaryAction, 'primary');
     setActionsIconOnlyProp(
       true,
+      false,
       this.primaryAction,
       ...this.allFilterContextual,
       ...this.permanentActions
@@ -204,9 +207,9 @@ export class GuxTableToolbar {
     if (this.primaryAction) {
       this.menuActionSlot?.appendChild(this.primaryAction);
     }
-    setActionsIconOnlyProp(true, ...this.allFilterContextual);
-    setActionsIconOnlyProp(false, ...this.permanentActions);
-    setActionsIconOnlyProp(false, this.primaryAction);
+    setActionsIconOnlyProp(true, true, ...this.allFilterContextual);
+    setActionsIconOnlyProp(false, true, ...this.permanentActions);
+    setActionsIconOnlyProp(false, true, this.primaryAction);
     setAccent(this.menuActionsItems, 'ghost');
   }
 

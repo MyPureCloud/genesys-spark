@@ -17,15 +17,16 @@ export function setAccent(
 
 export function setActionsIconOnlyProp(
   iconOnly: boolean,
+  condensedLayout: boolean,
   ...actionSets: HTMLGuxTableToolbarCustomActionElement[]
 ): void {
   actionSets
     .flat()
-    .filter(
-      action =>
-        action !== null &&
-        action !== undefined &&
-        !action?.hasAttribute('icon-only')
-    )
-    .forEach(action => (action.iconOnly = iconOnly));
+    .filter(action => action !== null && action !== undefined)
+    .forEach(action => {
+      if (!action.hasAttribute('icon-only')) {
+        action.iconOnly = iconOnly;
+      }
+      action.condensedLayout = condensedLayout;
+    });
 }

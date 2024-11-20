@@ -30,6 +30,12 @@ export class GuxTableToolbarAction {
   @Prop()
   disabled: boolean = false;
 
+  /**
+   * This is meant to be an internal property. It is not recommended to be used.
+   */
+  @Prop()
+  condensedLayout: boolean = false;
+
   @Listen('click', { capture: true })
   handleClick(event: MouseEvent): void {
     if (this.disabled) {
@@ -69,7 +75,7 @@ export class GuxTableToolbarAction {
   render(): JSX.Element {
     return (
       <gux-table-toolbar-custom-action
-        icon-only={this.iconOnly}
+        icon-only={this.iconOnly && !this.condensedLayout}
         accent={this.accent}
         disabled={this.disabled}
       >

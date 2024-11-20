@@ -25,6 +25,12 @@ export class GuxTableToolbarCustomAction {
   @Prop()
   disabled: boolean = false;
 
+  /**
+   * This is meant to be an internal property. It is not recommended to be used.
+   */
+  @Prop()
+  condensedLayout: boolean = false;
+
   @Listen('click', { capture: true })
   handleClick(event: MouseEvent): void {
     if (this.disabled) {
@@ -52,7 +58,9 @@ export class GuxTableToolbarCustomAction {
       <gux-button-slot accent={this.accent}>
         <button disabled={this.disabled} type="button" class="gux-action-title">
           <slot name="icon" />
-          <span class={{ 'gux-sr-only': this.iconOnly }}>
+          <span
+            class={{ 'gux-sr-only': this.iconOnly && !this.condensedLayout }}
+          >
             <slot name="text" />
           </span>
         </button>

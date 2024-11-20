@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property    | Attribute   | Description | Type                                                                         | Default          |
-| ----------- | ----------- | ----------- | ---------------------------------------------------------------------------- | ---------------- |
-| `placement` | `placement` |             | `"modal-desktop" \| "page-desktop" \| "page-mobile" \| "side-sheet-desktop"` | `'page-desktop'` |
+| Property    | Attribute   | Description | Type                                                      | Default          |
+| ----------- | ----------- | ----------- | --------------------------------------------------------- | ---------------- |
+| `placement` | `placement` |             | `"page-desktop" \| "page-mobile" \| "side-sheet-desktop"` | `'page-desktop'` |
 
 
 ## Slots
