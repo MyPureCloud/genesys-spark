@@ -17,6 +17,12 @@
 <h3>Multi bar with interactive legend hover</h3>
 <gux-visualization-beta id="spark-multi-bar"> </gux-visualization-beta>
 
+<h3>Basic line chart</h3>
+<gux-visualization-beta id="spark-line"> </gux-visualization-beta>
+
+<h3>Multi line chart with legend and grid line hover</h3>
+<gux-visualization-beta id="spark-multi-line"> </gux-visualization-beta>
+
 <h2>Default</h2>
 <gux-visualization-beta id="chart-1"> </gux-visualization-beta>
 
@@ -569,6 +575,177 @@
     };
 
     setChartExample(visualizationSpecSparkMultiBar, '#spark-multi-bar');
+
+    /** Spark line examples **/
+
+    const visualizationSpecSparkLine = {
+      $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+      data: {'values': [
+          {'month': '2024-01-01', 'value': 4},
+          {'month': '2024-02-01', 'value': 6},
+          {'month': '2024-03-01', 'value': 10},
+          {'month': '2024-04-01', 'value': 3},
+          {'month': '2024-05-01', 'value': 10},
+          {'month': '2024-06-01', 'value': 20}
+        ]
+      },
+
+      width: 'container',
+
+      config: {
+        font: 'Noto Sans',
+        autosize: 'fit',
+        axis: {
+          ticks: false,
+          titlePadding: 8,
+          titleFontSize: '12',
+          titleFontWeight: '700',
+          labelColor: '#1B2C48',
+          labelFontWeight: '400',
+          labelFontSize: '12',
+          labelPadding: '8',
+          domainColor:'#A3A7B0',
+          gridColor: '#F2F2F3'
+        },
+        axisX: {
+          labelAngle: 0
+        },
+        legend: {
+          symbolType: 'circle'
+        },
+        line: {
+          stroke: '#0D7482',
+        }
+      },
+      layer: [
+      {
+        mark: { type: 'line', tooltip: true, stroke: '#0D7482' },
+        params: [
+          { name: 'hover', select: { type: 'point', on: 'pointerover'}},
+          { name: 'select', select: 'point'}
+        ],
+        encoding: {
+          x: { field: 'month', type: 'temporal'},
+          y: { field: 'value', type: 'quantitative' }
+        }
+      }
+    ]
+    };
+
+    setChartExample(visualizationSpecSparkLine, '#spark-line');
+
+    const visualizationSpecSparkMultiLine = {
+      $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+      data: {'values': [
+          {'month': '2024-01-01', 'value': 5, 'category': 'A', 'tooltipA': 5, 'tooltipB': 2, 'tooltipC': 4},
+          {'month': '2024-01-01', 'value': 2, 'category': 'B', 'tooltipA': 5, 'tooltipB': 2, 'tooltipC': 4},
+          {'month': '2024-01-01', 'value': 4, 'category': 'C', 'tooltipA': 5, 'tooltipB': 2, 'tooltipC': 4},
+          {'month': '2024-02-01', 'value': 1, 'category': 'A','tooltipA': 1, 'tooltipB': 10, 'tooltipC': 9},
+          {'month': '2024-02-01', 'value': 10, 'category': 'B','tooltipA': 1, 'tooltipB': 10, 'tooltipC': 9},
+          {'month': '2024-02-01', 'value': 9, 'category': 'C','tooltipA': 1, 'tooltipB': 10, 'tooltipC': 9},
+          {'month': '2024-03-01', 'value': 10, 'category': 'A', 'tooltipA': 10, 'tooltipB': 8, 'tooltipC': 3},
+          {'month': '2024-03-01', 'value': 8, 'category': 'B','tooltipA': 10, 'tooltipB': 8, 'tooltipC': 3},
+          {'month': '2024-03-01', 'value': 3, 'category': 'C', 'tooltipA': 10, 'tooltipB': 8, 'tooltipC': 3},
+          {'month': '2024-04-01', 'value': 6, 'category': 'A','tooltipA': 6, 'tooltipB': 2, 'tooltipC': 5},
+          {'month': '2024-04-01', 'value': 2, 'category': 'B','tooltipA': 6, 'tooltipB': 2, 'tooltipC': 5},
+          {'month': '2024-04-01', 'value': 5, 'category': 'C','tooltipA': 6, 'tooltipB': 2, 'tooltipC': 5}
+        ]
+      },
+
+      width: 'container',
+
+      config: {
+        font: 'Noto Sans',
+        autosize: 'fit',
+        axis: {
+          ticks: false,
+          titlePadding: 8,
+          titleFontSize: '12',
+          titleFontWeight: '700',
+          labelColor: '#1B2C48',
+          labelFontWeight: '400',
+          labelFontSize: '12',
+          labelPadding: '8',
+          domainColor:'#A3A7B0',
+          gridColor: '#F2F2F3'
+        },
+        axisX: {
+          labelAngle: 0
+        },
+        legend: {
+          symbolType: 'circle'
+        }
+      },
+      encoding: {
+          x: { field: 'month', type: 'temporal' },
+          y: { field: 'value', type: 'quantitative' },
+          color: {'field': 'category', 'type': 'nominal', scale: {range: ['#0D7482', '#5798D9', '#CDACFF']}},
+          strokeOpacity: {
+          condition: { param: 'legendHover', value: 1},
+          value: 0.25
+        },
+      },
+      layer: [
+      {
+        mark: { type: 'line', point: 'transparent' },
+        params: [
+          { name: 'select', select: 'point'},
+          {
+          name: 'legendHover',
+          select: {type: 'point', fields: ['category']},
+          bind: { legend: 'mouseover'}
+        }],
+
+        },
+        {
+          mark: 'point',
+          params: [ {
+            name: 'label',
+            'select': {
+              type: 'point',
+              fields: ['month'],
+              nearest: true,
+              on: 'pointerover',
+              clear: 'pointerup'
+            }
+          }],
+          encoding: {
+            tooltip: [
+            { field: 'tooltipA', type: 'quantitative', title: 'A'},
+            { field: 'tooltipB', type: 'quantitative', title: 'B'},
+            { field: 'tooltipC', type: 'quantitative', title: 'C'}
+          ],
+            opacity: {
+              condition: {
+                param: 'label',
+                empty: false,
+                value: 1
+              },
+              value: 0
+            }
+          }
+        },
+        {
+          mark: {type: 'rule', strokeDash: [3,2]},
+          encoding: {
+            x: {type: 'temporal', field: 'month'},
+            y: { aggregate: 'max'},
+            color: '#F2F2F3',
+            opacity: {
+              condition: {
+                param: 'label',
+                empty: false,
+                value: .1
+              },
+              value: 0
+            }
+          }
+          },
+    ]
+    };
+
+    setChartExample(visualizationSpecSparkMultiLine, '#spark-multi-line');
+
 
   })()"
 >
