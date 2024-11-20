@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.98.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.98.0...v4.98.1) (2024-11-20)
+
+
+### Bug Fixes
+
+* **table-toolbar:** hide tooltip when menu is expanded ([d744ff9](https://github.com/MyPureCloud/genesys-spark/commit/d744ff910d07b509c0cd50b9697c93a20e67672c))
+
 ## [4.98.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.97.0...v4.98.0) (2024-11-19)
 
 
