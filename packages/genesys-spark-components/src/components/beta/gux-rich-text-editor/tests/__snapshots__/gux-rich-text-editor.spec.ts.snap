@@ -18,7 +18,7 @@ exports[`gux-rich-text-editor should build and render 1`] = `
           <slot name="inserting"></slot>
         </div>
         <div class="gux-global-action-container">
-          <slot name="global-actions"></slot>
+          <slot name="global-action"></slot>
         </div>
       </div>
       <slot name="editor"></slot>
@@ -41,11 +41,7 @@ exports[`gux-rich-text-editor should build and render 1`] = `
     <gux-rich-text-editor-action action="codeblock"></gux-rich-text-editor-action>
     <gux-rich-text-editor-action action="blockQuote"></gux-rich-text-editor-action>
   </gux-rich-text-editor-action-group>
-  <gux-rich-text-editor-action-group slot="global-actions">
-    <gux-rich-text-editor-action action="undo"></gux-rich-text-editor-action>
-    <gux-rich-text-editor-action action="redo"></gux-rich-text-editor-action>
-    <gux-rich-text-editor-action action="delete"></gux-rich-text-editor-action>
-  </gux-rich-text-editor-action-group>
+  <gux-rich-text-editor-action action="delete" slot="global-action"></gux-rich-text-editor-action>
   <div class="editorElement" slot="editor"></div>
 </gux-rich-text-editor-beta>
 `;

@@ -6,7 +6,7 @@ import { hasSlot } from '@utils/dom/has-slot';
  * @slot text-styling - Slot for text-styling actions.
  * @slot lists-indentation - Slot for lists and indentation actions.
  * @slot inserting - Slot for inserting actions.
- * @slot global-actions - Slot for global action.
+ * @slot global-action - Slot for global action.
  * @slot editor - Slot for the editor.
  */
 
@@ -59,7 +59,7 @@ export class GuxRichTextEditor {
   }
 
   private renderGlobalAction(): JSX.Element | null {
-    return this.renderSlot('global-actions', 'gux-global-action-container');
+    return this.renderSlot('global-action', 'gux-global-action-container');
   }
 
   render(): JSX.Element {
