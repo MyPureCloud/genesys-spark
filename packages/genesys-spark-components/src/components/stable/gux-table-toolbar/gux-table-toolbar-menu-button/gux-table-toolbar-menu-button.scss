@@ -1,4 +1,4 @@
-@use "~genesys-spark/dist/scss/mixins.scss";
+@use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
   display: none;
@@ -17,9 +17,9 @@
   border: none;
 
   gux-icon {
+    align-self: center;
     inline-size: var(--gse-ui-icon-small-size);
     block-size: var(--gse-ui-icon-small-size);
-    align-self: center;
   }
 }
 

@@ -47,12 +47,14 @@ Type: `Promise<void>`
 
 ### Depends on
 
+- [gux-screen-reader-beta](../gux-screen-reader)
 - [gux-icon](../../stable/gux-icon)
 - [gux-tooltip-beta](../gux-tooltip-beta)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-label-info-beta --> gux-screen-reader-beta
   gux-label-info-beta --> gux-icon
   gux-label-info-beta --> gux-tooltip-beta
   gux-tooltip-beta --> gux-tooltip-base-beta

@@ -12,10 +12,10 @@ input.gux-safari-bug-workaround-2 {
 
 @keyframes repaint {
   from {
-    width: 99.999%;
+    inline-size: 99.999%;
   }
 
   to {
-    width: 100%;
+    inline-size: 100%;
   }
 }
