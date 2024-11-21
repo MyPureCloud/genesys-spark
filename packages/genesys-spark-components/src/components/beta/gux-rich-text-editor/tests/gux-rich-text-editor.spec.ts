@@ -38,11 +38,10 @@ describe('gux-rich-text-editor', () => {
       action="blockQuote"
     ></gux-rich-text-editor-action>
   </gux-rich-text-editor-action-group>
-  <gux-rich-text-editor-action-group slot="global-actions">
-    <gux-rich-text-editor-action action="undo"></gux-rich-text-editor-action>
-    <gux-rich-text-editor-action action="redo"></gux-rich-text-editor-action>
-    <gux-rich-text-editor-action action="delete"></gux-rich-text-editor-action>
-  </gux-rich-text-editor-action-group>
+  <gux-rich-text-editor-action
+    slot="global-action"
+    action="delete"
+  ></gux-rich-text-editor-action>
   <div class="editorElement" slot="editor"></div>
 </gux-rich-text-editor-beta>
     `;

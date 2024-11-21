@@ -14,14 +14,14 @@
 
 ## Slots
 
-| Slot                       | Description                            |
-| -------------------------- | -------------------------------------- |
-| `"editor"`                 | Slot for the editor                    |
-| `"global-actions"`         | Slot for global actions                |
-| `"inserting"`              | Slot for inserting actions             |
-| `"lists-indentation"`      | Slot for lists and indentation actions |
-| `"text-styling"`           | Slot for text-styling actions          |
-| `"typographical-emphasis"` | Slot for typographical actions         |
+| Slot                       | Description                             |
+| -------------------------- | --------------------------------------- |
+| `"editor"`                 | Slot for the editor.                    |
+| `"global-actions"`         | Slot for global action.                 |
+| `"inserting"`              | Slot for inserting actions.             |
+| `"lists-indentation"`      | Slot for lists and indentation actions. |
+| `"text-styling"`           | Slot for text-styling actions.          |
+| `"typographical-emphasis"` | Slot for typographical actions.         |
 
 
 ----------------------------------------------

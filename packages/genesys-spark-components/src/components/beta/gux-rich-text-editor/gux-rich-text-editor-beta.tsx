@@ -2,12 +2,12 @@ import { Component, h, JSX, Element, Prop } from '@stencil/core';
 import { hasSlot } from '@utils/dom/has-slot';
 
 /**
- * @slot typographical-emphasis - Slot for typographical actions
- * @slot text-styling - Slot for text-styling actions
- * @slot lists-indentation - Slot for lists and indentation actions
- * @slot inserting - Slot for inserting actions
- * @slot global-actions - Slot for global actions
- * @slot editor - Slot for the editor
+ * @slot typographical-emphasis - Slot for typographical actions.
+ * @slot text-styling - Slot for text-styling actions.
+ * @slot lists-indentation - Slot for lists and indentation actions.
+ * @slot inserting - Slot for inserting actions.
+ * @slot global-action - Slot for global action.
+ * @slot editor - Slot for the editor.
  */
 
 @Component({
@@ -58,8 +58,8 @@ export class GuxRichTextEditor {
     return this.renderSlot('inserting', 'gux-inserting-container');
   }
 
-  private renderGlobalActions(): JSX.Element | null {
-    return this.renderSlot('global-actions', 'gux-global-actions-container');
+  private renderGlobalAction(): JSX.Element | null {
+    return this.renderSlot('global-action', 'gux-global-action-container');
   }
 
   render(): JSX.Element {
@@ -75,7 +75,7 @@ export class GuxRichTextEditor {
           {this.renderTextStyling()}
           {this.renderListsIndentation()}
           {this.renderInserting()}
-          {this.renderGlobalActions()}
+          {this.renderGlobalAction()}
         </div>
         <slot name="editor"></slot>
       </div>
