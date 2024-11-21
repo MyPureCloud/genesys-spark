@@ -1,10 +1,8 @@
-import { Component, h, Element, Listen, JSX, Prop, State } from '@stencil/core';
+import { Component, h, Element, Listen, JSX, Prop } from '@stencil/core';
 
 import { getClosestElement } from '@utils/dom/get-closest-element';
 import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 import { hasSlot } from '@utils/dom/has-slot';
-
-import { GuxSegmentedControlItemPosition } from './gux-segmented-control-item.types';
 
 /**
  * @slot icon - optional slot for an icon
@@ -34,42 +32,44 @@ export class GuxSegmentedControlItem {
   @Prop()
   iconOnly: boolean = false;
 
-  @State()
-  position: GuxSegmentedControlItemPosition;
-
   @Listen('click')
   onClick(e: MouseEvent): void {
-    if (this.disabled) {
+    if (this.disabled || this.hasDisabledParent()) {
       e.stopPropagation();
     }
   }
 
-  private isInStartPosition(
-    switchItem: HTMLGuxSegmentedControlItemElement
-  ): boolean {
+  private isInStartPosition(): boolean {
     const parentSegmentControl = getClosestElement(
       'gux-segmented-control-beta',
-      switchItem
+      this.root
     ) as HTMLGuxSegmentedControlBetaElement;
 
     const children = Array.from(parentSegmentControl.children);
-    const index = children.findIndex(i => i === switchItem);
+    const index = children.findIndex(i => i === this.root);
 
     return index === 0;
   }
 
-  private isInEndPosition(
-    switchItem: HTMLGuxSegmentedControlItemElement
-  ): boolean {
+  private isInEndPosition(): boolean {
     const parentSegmentControl = getClosestElement(
       'gux-segmented-control-beta',
-      switchItem
+      this.root
     ) as HTMLGuxSegmentedControlBetaElement;
 
     const children = Array.from(parentSegmentControl.children);
-    const index = children.findIndex(i => i === switchItem);
+    const index = children.findIndex(i => i === this.root);
 
     return index === children.length - 1;
+  }
+
+  private hasDisabledParent(): boolean {
+    const parentSegmentControl = getClosestElement(
+      'gux-segmented-control-beta',
+      this.root
+    ) as HTMLGuxSegmentedControlBetaElement;
+
+    return parentSegmentControl.disabled;
   }
 
   private renderTooltip(): JSX.Element {
@@ -102,8 +102,9 @@ export class GuxSegmentedControlItem {
       <div
         class={{
           'gux-container': true,
-          'gux-start': this.isInStartPosition(this.root),
-          'gux-end': this.isInEndPosition(this.root)
+          'gux-parent-disabled': this.hasDisabledParent(),
+          'gux-start': this.isInStartPosition(),
+          'gux-end': this.isInEndPosition()
         }}
       >
         <button
@@ -113,7 +114,7 @@ export class GuxSegmentedControlItem {
             'gux-selected': this.selected
           }}
           type="button"
-          disabled={this.disabled}
+          disabled={this.disabled || this.hasDisabledParent()}
         >
           {this.renderIconSlot()}
           <div

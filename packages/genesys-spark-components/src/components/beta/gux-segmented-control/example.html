@@ -92,6 +92,33 @@
   </gux-segmented-control-beta>
 </div>
 
+<h2>Text</h2>
+
+<div>
+  <gux-segmented-control-beta
+    value="day"
+    disabled
+    onchange="notify(event)"
+    oninput="notify(event)"
+  >
+    <gux-segmented-control-item value="month">
+      <div slot="text">Month</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="week">
+      <div slot="text">Week</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="day">
+      <div slot="text">Day</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="hour" disabled>
+      <div slot="text">Hour</div>
+    </gux-segmented-control-item>
+    <gux-segmented-control-item value="minute">
+      <div slot="text">Minute</div>
+    </gux-segmented-control-item>
+  </gux-segmented-control-beta>
+</div>
+
 <h2>Get value</h2>
 
 <gux-segmented-control-beta id="get-value" value="day">
