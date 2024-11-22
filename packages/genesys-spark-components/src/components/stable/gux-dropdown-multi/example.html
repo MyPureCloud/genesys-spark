@@ -366,10 +366,16 @@
   >
 
   <h2>Disabled</h2>
-  <gux-dropdown-multi value="a" disabled>
+  <gux-button
+    onclick="(function() {
+      document.getElementById('disabled-state-dropdown').toggleAttribute('disabled');
+  })()"
+    >Toggle disabled state</gux-button
+  >
+  <gux-dropdown-multi id="disabled-state-dropdown" value="a" disabled="true">
     <gux-listbox-multi aria-label="Animals">
       <gux-option-multi value="a">Ant</gux-option-multi>
-      <gux-option-multi value="b">Bat</gux-option-multi>
+      <gux-option-multi value="b" disabled>Bat</gux-option-multi>
       <gux-option-multi value="c">Cat</gux-option-multi>
       <gux-option-multi value="d">Dog</gux-option-multi>
     </gux-listbox-multi>

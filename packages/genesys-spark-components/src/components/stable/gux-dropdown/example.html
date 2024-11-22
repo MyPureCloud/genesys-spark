@@ -326,11 +326,17 @@
   >
 
   <h2>Disabled</h2>
-  <gux-dropdown value="a" disabled>
+  <gux-button
+    onclick="(function() {
+      document.getElementById('disabled-state-dropdown').toggleAttribute('disabled');
+  })()"
+    >Toggle disabled state</gux-button
+  >
+  <gux-dropdown id="disabled-state-dropdown" value="a" disabled="true">
     <gux-listbox aria-label="Animals">
       <gux-option value="a">Ant</gux-option>
       <gux-option value="b">Bat</gux-option>
-      <gux-option value="c">Cat</gux-option>
+      <gux-option value="c" disabled>Cat</gux-option>
       <gux-option value="d">Dog</gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -445,7 +451,13 @@
 
   <h3>Icon Options</h3>
 
-  <gux-dropdown>
+  <gux-button
+    onclick="(function() {
+      document.getElementById('icon-options-dropdown').toggleAttribute('disabled');
+  })()"
+    >Toggle disabled state</gux-button
+  >
+  <gux-dropdown id="icon-options-dropdown" disabled="false">
     <gux-listbox aria-label="Users">
       <gux-option-icon
         icon-name="user"

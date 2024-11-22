@@ -10,6 +10,7 @@ import {
   State
 } from '@stencil/core';
 
+import { getClosestElement } from '@utils/dom/get-closest-element';
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { hasSlot } from '@utils/dom/has-slot';
 
@@ -93,6 +94,14 @@ export class GuxOptionIcon {
     return this.selected ? 'true' : 'false';
   }
 
+  private hasDisabledParent(): boolean {
+    const parentListbox = getClosestElement(
+      'gux-listbox',
+      this.root
+    ) as HTMLGuxListboxElement;
+    return parentListbox?.disabled;
+  }
+
   render(): JSX.Element {
     let iconStyle = null;
     // If the icon color is set and we don't have a background highlight that
@@ -106,7 +115,7 @@ export class GuxOptionIcon {
         role="option"
         class={{
           'gux-active': this.active,
-          'gux-disabled': this.disabled,
+          'gux-disabled': this.disabled || this.hasDisabledParent(),
           'gux-filtered': this.filtered,
           'gux-hovered': this.hovered,
           'gux-selected': this.selected,

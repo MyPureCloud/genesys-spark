@@ -9,6 +9,8 @@ import {
   State
 } from '@stencil/core';
 
+import { getClosestElement } from '@utils/dom/get-closest-element';
+
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { hasSlot } from '@utils/dom/has-slot';
 
@@ -71,13 +73,22 @@ export class GuxOption {
     return this.selected ? 'true' : 'false';
   }
 
+  private hasDisabledParent(): boolean {
+    const parentListbox = getClosestElement(
+      'gux-listbox',
+      this.root
+    ) as HTMLGuxListboxElement;
+
+    return parentListbox?.disabled;
+  }
+
   render(): JSX.Element {
     return (
       <Host
         role="option"
         class={{
           'gux-active': this.active,
-          'gux-disabled': this.disabled,
+          'gux-disabled': this.disabled || this.hasDisabledParent(),
           'gux-filtered': this.filtered,
           'gux-selected': this.selected,
           'gux-show-subtext': this.hasSubtext
