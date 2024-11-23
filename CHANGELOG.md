@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.100.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.98.1...v4.100.0) (2024-11-23)
+
+
+### Features
+
+* **copy-to-clipboard:** detect overflow in tooltip position ([#611](https://github.com/MyPureCloud/genesys-spark/issues/611)) ([d40fffc](https://github.com/MyPureCloud/genesys-spark/commit/d40fffc6d09b6b2ae134b83c4ed8f85e7f2d3b4e))
+* **segmented-control:** added disabled state ([3216cad](https://github.com/MyPureCloud/genesys-spark/commit/3216caddb3dd31f34a86511b8c78ad2b06fca5e0))
+* **tabs:** tab panel will now fill its container ([095a50a](https://github.com/MyPureCloud/genesys-spark/commit/095a50a6b2955b5850c914a785113c7de5f8ab1a))
+
+
+### Bug Fixes
+
+* **label-info:** Pass formatting through to tooltip ([#703](https://github.com/MyPureCloud/genesys-spark/issues/703)) ([4bfabc6](https://github.com/MyPureCloud/genesys-spark/commit/4bfabc6ed6e2967c762b6ca96f4451b4b8331618))
+* **listbox:** Added disabled prop ([eca263c](https://github.com/MyPureCloud/genesys-spark/commit/eca263c351678322ca1b49ccd3ff73e090a235a7))
+* **table:** added safari repaint bug workaround ([2d30548](https://github.com/MyPureCloud/genesys-spark/commit/2d3054809aeafc862edf765bd5dcb199dcc562ba))
+* **tabs:** add optional chaining operator for initalisation ([794f8be](https://github.com/MyPureCloud/genesys-spark/commit/794f8bec6f0caee1597fed69283e7dbb88338436))
+
 ### [4.98.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.98.0...v4.98.1) (2024-11-20)
 
 
