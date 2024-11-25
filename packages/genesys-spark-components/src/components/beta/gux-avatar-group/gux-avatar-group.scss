@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  align-items: center;
+  inline-size: fit-content;
+  padding-block: var(--gse-semantic-interactive-sm-padding);
+  padding-inline: var(--gse-semantic-interactive-sm-padding)
+    var(--gse-semantic-interactive-md-padding);
+
+  &:focus-visible {
+    outline: none;
+  }
+}

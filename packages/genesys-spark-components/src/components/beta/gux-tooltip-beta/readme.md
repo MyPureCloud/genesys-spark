@@ -69,6 +69,7 @@ Type: `Promise<void>`
 
  - [gux-avatar-beta](../gux-avatar)
  - [gux-avatar-change-photo-beta](../gux-avatar/gux-avatar-change-photo)
+ - [gux-avatar-group-item-beta](../gux-avatar-group/gux-avatar-group-item)
  - [gux-button](../../stable/gux-button)
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
  - [gux-label-info-beta](../gux-label-info)
@@ -85,6 +86,7 @@ graph TD;
   gux-tooltip-beta --> gux-tooltip-base-beta
   gux-avatar-beta --> gux-tooltip-beta
   gux-avatar-change-photo-beta --> gux-tooltip-beta
+  gux-avatar-group-item-beta --> gux-tooltip-beta
   gux-button --> gux-tooltip-beta
   gux-icon-tooltip-beta --> gux-tooltip-beta
   gux-label-info-beta --> gux-tooltip-beta

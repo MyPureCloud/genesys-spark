@@ -1,5 +1,3 @@
-@use '~genesys-spark/dist/scss/focus.scss';
-
 :host {
   position: relative;
   display: inline-block;
@@ -34,7 +32,7 @@
     font-family: var(--gse-ui-avatar-large-initials-fontFamily);
     font-size: var(--gse-ui-avatar-large-initials-fontSize);
     font-weight: var(--gse-ui-avatar-large-initials-fontWeight);
-    line-height: 1;
+    line-height: var(--gse-ui-avatar-small-initials-lineHeight);
     color: var(--gse-ui-avatar-media-initialsForeground-inverse);
     text-transform: uppercase;
     background-color: var(--gse-ui-avatar-media-initialsBackground-default);
