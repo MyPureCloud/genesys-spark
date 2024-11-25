@@ -441,6 +441,20 @@
   "gux-radial-loading": {
     "loading": "Loading"
   },
+  "gux-rich-text-editor-action": {
+    "bold": "Bold",
+    "italic": "Italic",
+    "underline": "Underline",
+    "strike": "Strike",
+    "codeblock": "Code Block",
+    "blockQuote": "Block Quote",
+    "orderedList": "Ordered List",
+    "bulletList": "Bullet List",
+    "clearFormatting": "Clear Formatting",
+    "undo": "Undo",
+    "redo": "Redo",
+    "delete": "Delete"
+  },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
   },

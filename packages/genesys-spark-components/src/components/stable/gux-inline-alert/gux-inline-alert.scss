@@ -2,7 +2,7 @@
 
 :host {
   display: flex;
-  width: fit-content;
+  inline-size: fit-content;
 }
 
 .gux-inline-alert {
@@ -19,9 +19,9 @@
   gux-icon {
     flex-shrink: 0;
     align-self: flex-start;
-    width: var(--gse-ui-icon-small-size);
-    height: var(--gse-ui-icon-small-size);
-    margin-top: 1px;
+    inline-size: var(--gse-ui-icon-small-size);
+    block-size: var(--gse-ui-icon-small-size);
+    margin-block-start: 1px;
   }
 
   gux-tooltip-title {

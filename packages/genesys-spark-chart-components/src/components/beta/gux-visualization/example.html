@@ -11,55 +11,47 @@
 <h3>Stacked column</h3>
 <gux-visualization-beta id="spark-stacked-column"> </gux-visualization-beta>
 
+<h3>Basic bar chart</h3>
+<gux-visualization-beta id="spark-bar"> </gux-visualization-beta>
+
+<h3>Multi bar with interactive legend hover</h3>
+<gux-visualization-beta id="spark-multi-bar"> </gux-visualization-beta>
+
+<h3>Basic line chart</h3>
+<gux-visualization-beta id="spark-line"> </gux-visualization-beta>
+
+<h3>Multi line chart with legend and grid line hover</h3>
+<gux-visualization-beta id="spark-multi-line"> </gux-visualization-beta>
+
 <h2>Default</h2>
 <gux-visualization-beta id="chart-1"> </gux-visualization-beta>
 
-<h2>English</h2>
-<gux-visualization-beta id="chart-2" lang="en"> </gux-visualization-beta>
-
-<h2>German</h2>
-<gux-visualization-beta id="chart-3" lang="de"> </gux-visualization-beta>
-
-<h2>Unknown</h2>
-<gux-visualization-beta id="chart-4" lang="xx"> </gux-visualization-beta>
-
-<h2>Default Again</h2>
-<gux-visualization-beta id="chart-5"> </gux-visualization-beta>
-
 <h2>Default Pie</h2>
-<gux-visualization-beta id="chart-6"> </gux-visualization-beta>
+<gux-visualization-beta id="chart-2"> </gux-visualization-beta>
 
 <h2>Default Donut</h2>
-<gux-visualization-beta id="chart-7"> </gux-visualization-beta>
-
-<h2>Default Column</h2>
-<gux-visualization-beta id="chart-8"> </gux-visualization-beta>
+<gux-visualization-beta id="chart-3"> </gux-visualization-beta>
 
 <h2>Column Stacked</h2>
-<gux-visualization-beta id="chart-9"> </gux-visualization-beta>
+<gux-visualization-beta id="chart-4"> </gux-visualization-beta>
 
 <h2>Column Layered</h2>
-<gux-visualization-beta id="chart-10"> </gux-visualization-beta>
+<gux-visualization-beta id="chart-5"> </gux-visualization-beta>
+
+<h2>Default Column</h2>
+<gux-visualization-beta id="chart-6"> </gux-visualization-beta>
 
 <h2>Line Chart with Tooltips</h2>
-<gux-visualization-beta id="chart-11"> </gux-visualization-beta>
+<gux-visualization-beta id="chart-7"> </gux-visualization-beta>
 
 <style
   onload="(function() {
-    const sparkColumn = document.querySelector('#spark-column');
-    const sparkMultiColumn = document.querySelector('#spark-multi-column');
-    const sparkStackedColumn = document.querySelector('#spark-stacked-column');
-    const chart1 = document.querySelector('#chart-1');
-    const chart2 = document.querySelector('#chart-2');
-    const chart3 = document.querySelector('#chart-3');
-    const chart4 = document.querySelector('#chart-4');
-    const chart5 = document.querySelector('#chart-5');
-    const chart6 = document.querySelector('#chart-6');
-    const chart7 = document.querySelector('#chart-7');
-    const chart8 = document.querySelector('#chart-8');
-    const chart9 = document.querySelector('#chart-9');
-    const chart10 = document.querySelector('#chart-10');
-    const chart11 = document.querySelector('#chart-11');
+
+    const setChartExample = (visualizationSpec, chartId) => {
+      const element = document.querySelector(chartId);
+      element.visualizationSpec = visualizationSpec;
+
+    }
 
     const visualizationSpecLine = {
       '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
@@ -73,6 +65,8 @@
         'y': {'aggregate': 'mean', 'field': 'temp_max'}
       }
     };
+
+    setChartExample(visualizationSpecLine, '#chart-1');
 
     const visualizationSpecPie = {
       '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
@@ -100,6 +94,8 @@
       }],
       'view': {'stroke': null}
     };
+
+    setChartExample(visualizationSpecPie, '#chart-2');
 
     const visualizationSpecDonut = {
       '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
@@ -133,6 +129,8 @@
       ]
     };
 
+    setChartExample(visualizationSpecDonut, '#chart-3');
+
     const visualizationSpecColumnStacked = {
       '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
       'data': {'url': 'https://vega.github.io/editor/data/seattle-weather.csv'},
@@ -145,6 +143,8 @@
 
       }
     };
+
+    setChartExample(visualizationSpecColumnStacked, '#chart-4');
 
     const visualizationSpecColumnLayered = {
       '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
@@ -159,6 +159,8 @@
       }
     };
 
+    setChartExample(visualizationSpecColumnLayered, '#chart-5');
+
     const visualizationSpecColumn = {
       '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
       'data': {'url': 'https://vega.github.io/editor/data/seattle-weather.csv'},
@@ -170,6 +172,8 @@
 
       }
     };
+
+    setChartExample(visualizationSpecColumn, '#chart-6');
 
     const visualizationSpecLineAllPoints = {
       '$schema': 'https://vega.github.io/schema/vega-lite/v5.json',
@@ -186,6 +190,10 @@
         'tooltip': {'field': 'temp_max', 'type': 'quantitative'}
       }
     };
+
+    setChartExample(visualizationSpecLineAllPoints, '#chart-7');
+
+    /** Spark column examples **/
 
     const visualizationSpecSparkColumn = {
       $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
@@ -275,6 +283,8 @@
     ]
   };
 
+  setChartExample(visualizationSpecSparkColumn, '#spark-column');
+
     const visualizationSpecSparkMultiColumn = {
       $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
       data: {'values': [
@@ -361,6 +371,8 @@
       }
     };
 
+    setChartExample(visualizationSpecSparkMultiColumn, '#spark-multi-column');
+
     const visualizationSpecSparkColumnStacked = {
       $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
       data: {'url': 'https://vega.github.io/editor/data/seattle-weather.csv'},
@@ -397,20 +409,343 @@
       }
     };
 
-    sparkColumn.visualizationSpec = visualizationSpecSparkColumn;
-    sparkMultiColumn.visualizationSpec = visualizationSpecSparkMultiColumn;
-    sparkStackedColumn.visualizationSpec = visualizationSpecSparkColumnStacked;
-    chart1.visualizationSpec = visualizationSpecLine;
-    chart2.visualizationSpec = visualizationSpecLine;
-    chart3.visualizationSpec = visualizationSpecLine;
-    chart4.visualizationSpec = visualizationSpecLine;
-    chart5.visualizationSpec = visualizationSpecLine;
-    chart6.visualizationSpec = visualizationSpecPie;
-    chart7.visualizationSpec = visualizationSpecDonut;
-    chart8.visualizationSpec = visualizationSpecColumn;
-    chart9.visualizationSpec = visualizationSpecColumnStacked;
-    chart10.visualizationSpec = visualizationSpecColumnLayered;
-    chart11.visualizationSpec = visualizationSpecLineAllPoints;
+    setChartExample(visualizationSpecSparkColumnStacked, '#spark-stacked-column');
+
+    /** Spark bar examples **/
+
+    const visualizationSpecSparkBar = {
+      $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+      data: {'values': [
+          {'category': 'a', 'value': 4},
+          {'category': 'b', 'value': 6},
+          {'category': 'c', 'value': 10},
+          {'category': 'd', 'value': 3},
+          {'category': 'e', 'value': 10},
+          {'category': 'f', 'value': 20}
+        ]
+      },
+
+      width: 'container',
+
+      config: {
+        font: 'Noto Sans',
+        autosize: 'fit',
+        axis: {
+          ticks: false,
+          titlePadding: 8,
+          titleFontSize: '12',
+          titleFontWeight: '700',
+          labelColor: '#1B2C48',
+          labelFontWeight: '400',
+          labelFontSize: '12',
+          labelPadding: '8',
+          domainColor:'#A3A7B0',
+          gridColor: '#F2F2F3'
+        },
+        axisX: {
+          labelAngle: 0
+
+        },
+        scale: {
+          bandPaddingInner: 0.4, // padding between columns / bars
+          bandPaddingOuter: 0.4 // padding between leftmost/rightmost column/bar from axes
+        },
+        legend: {
+          symbolType: 'circle'
+        },
+        bar: {
+          color: '#0D7482',
+        }
+      },
+      layer: [
+      {
+        mark: { type: 'bar', tooltip: true, stroke: '#7B88F7' },
+        params: [
+          { name: 'hover', select: { type: 'point', on: 'pointerover'}},
+          { name: 'select', select: 'point'}
+        ],
+        encoding: {
+          y: { field: 'category', type: 'nominal' },
+         x: { field: 'value', type: 'quantitative' },
+          fillOpacity: {
+            condition: { param: 'hover', value: 1},
+            value: 0.25
+          },
+          strokeWidth: {
+            condition: [
+            {
+              param: 'select',
+              empty: false,
+              value: 2
+            },
+          ],
+            value: 0
+          }
+        }
+      }
+    ]
+  };
+
+   setChartExample(visualizationSpecSparkBar, '#spark-bar');
+
+   const visualizationSpecSparkMultiBar = {
+      $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+      data: {'values': [
+          {'category': 'a', 'group': '1', 'value': 4},
+          {'category': 'a', 'group': '2', 'value': 7},
+          {'category': 'a', 'group': '3', 'value': 2},
+          {'category': 'b', 'group': '1', 'value': 6},
+          {'category': 'b', 'group': '2', 'value': 3},
+          {'category': 'b', 'group': '3', 'value': 2},
+          {'category': 'c', 'group': '1', 'value': 10},
+          {'category': 'c', 'group': '2', 'value': 4},
+          {'category': 'c', 'group': '3', 'value': 1},
+          {'category': 'd', 'group': '1', 'value': 3},
+          {'category': 'd', 'group': '2', 'value': 1},
+          {'category': 'd', 'group': '3', 'value': 9},
+          {'category': 'e', 'group': '1', 'value': 10},
+          {'category': 'e', 'group': '2', 'value': 9},
+          {'category': 'e', 'group': '3', 'value': 8}
+        ]
+      },
+      params: [
+        { name: 'hover', select: { type: 'point', on: 'pointerover'}},
+        { name: 'select', select: 'point'},
+        {
+          name: 'legendHover',
+          select: {type: 'point', on: 'pointerover', fields: ['group']},
+          bind: { legend: 'mouseover'}
+        }
+      ],
+      width: 'container',
+      mark: { type: 'bar', tooltip: true, stroke: '#7B88F7' },
+      // general properties that apply to the entire chart
+      config: {
+        font: 'Noto Sans',
+        autosize: 'fit',
+        axis: {
+          ticks: false,
+          titlePadding: 8,
+          titleFontSize: '12',
+          titleFontWeight: '700',
+          labelColor: '#1B2C48',
+          labelFontWeight: '400',
+          labelFontSize: '12',
+          labelPadding: '8',
+          domainColor:'#A3A7B0',
+          gridColor: '#F2F2F3'
+        },
+        axisX: {
+          labelAngle: 0
+        },
+        legend: {
+          symbolType: 'circle'
+        },
+        bar: {
+          height: { band: .7 } // decrease height of bars so that there is space between grouped bars
+        },
+        scale: {
+          bandPaddingInner: 0.4, // padding between columns / bars
+          bandPaddingOuter: 0.4 // padding between leftmost/rightmost column/bar from axes
+        },
+      },
+      encoding: {
+        y: { field: 'category', type: 'nominal' },
+        x: { field: 'value', type: 'quantitative' },
+        yOffset: { field: 'group' },
+        color: {
+          field: 'group',
+          scale: {range: ['#0D7482', '#5798D9', '#CDACFF']},
+        },
+        fillOpacity: {
+          condition: { param: 'legendHover', value: 1},
+          value: 0.25
+        },
+        strokeWidth: {
+          condition: [
+          {
+            param: 'select',
+            empty: false,
+            value: 2
+          },
+        ],
+          value: 0
+        }
+      }
+    };
+
+    setChartExample(visualizationSpecSparkMultiBar, '#spark-multi-bar');
+
+    /** Spark line examples **/
+
+    const visualizationSpecSparkLine = {
+      $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+      data: {'values': [
+          {'month': '2024-01-01', 'value': 4},
+          {'month': '2024-02-01', 'value': 6},
+          {'month': '2024-03-01', 'value': 10},
+          {'month': '2024-04-01', 'value': 3},
+          {'month': '2024-05-01', 'value': 10},
+          {'month': '2024-06-01', 'value': 20}
+        ]
+      },
+
+      width: 'container',
+
+      config: {
+        font: 'Noto Sans',
+        autosize: 'fit',
+        axis: {
+          ticks: false,
+          titlePadding: 8,
+          titleFontSize: '12',
+          titleFontWeight: '700',
+          labelColor: '#1B2C48',
+          labelFontWeight: '400',
+          labelFontSize: '12',
+          labelPadding: '8',
+          domainColor:'#A3A7B0',
+          gridColor: '#F2F2F3'
+        },
+        axisX: {
+          labelAngle: 0
+        },
+        legend: {
+          symbolType: 'circle'
+        },
+        line: {
+          stroke: '#0D7482',
+        }
+      },
+      layer: [
+      {
+        mark: { type: 'line', tooltip: true, stroke: '#0D7482' },
+        params: [
+          { name: 'hover', select: { type: 'point', on: 'pointerover'}},
+          { name: 'select', select: 'point'}
+        ],
+        encoding: {
+          x: { field: 'month', type: 'temporal'},
+          y: { field: 'value', type: 'quantitative' }
+        }
+      }
+    ]
+    };
+
+    setChartExample(visualizationSpecSparkLine, '#spark-line');
+
+    const visualizationSpecSparkMultiLine = {
+      $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+      data: {'values': [
+          {'month': '2024-01-01', 'value': 5, 'category': 'A', 'tooltipA': 5, 'tooltipB': 2, 'tooltipC': 4},
+          {'month': '2024-01-01', 'value': 2, 'category': 'B', 'tooltipA': 5, 'tooltipB': 2, 'tooltipC': 4},
+          {'month': '2024-01-01', 'value': 4, 'category': 'C', 'tooltipA': 5, 'tooltipB': 2, 'tooltipC': 4},
+          {'month': '2024-02-01', 'value': 1, 'category': 'A','tooltipA': 1, 'tooltipB': 10, 'tooltipC': 9},
+          {'month': '2024-02-01', 'value': 10, 'category': 'B','tooltipA': 1, 'tooltipB': 10, 'tooltipC': 9},
+          {'month': '2024-02-01', 'value': 9, 'category': 'C','tooltipA': 1, 'tooltipB': 10, 'tooltipC': 9},
+          {'month': '2024-03-01', 'value': 10, 'category': 'A', 'tooltipA': 10, 'tooltipB': 8, 'tooltipC': 3},
+          {'month': '2024-03-01', 'value': 8, 'category': 'B','tooltipA': 10, 'tooltipB': 8, 'tooltipC': 3},
+          {'month': '2024-03-01', 'value': 3, 'category': 'C', 'tooltipA': 10, 'tooltipB': 8, 'tooltipC': 3},
+          {'month': '2024-04-01', 'value': 6, 'category': 'A','tooltipA': 6, 'tooltipB': 2, 'tooltipC': 5},
+          {'month': '2024-04-01', 'value': 2, 'category': 'B','tooltipA': 6, 'tooltipB': 2, 'tooltipC': 5},
+          {'month': '2024-04-01', 'value': 5, 'category': 'C','tooltipA': 6, 'tooltipB': 2, 'tooltipC': 5}
+        ]
+      },
+
+      width: 'container',
+
+      config: {
+        font: 'Noto Sans',
+        autosize: 'fit',
+        axis: {
+          ticks: false,
+          titlePadding: 8,
+          titleFontSize: '12',
+          titleFontWeight: '700',
+          labelColor: '#1B2C48',
+          labelFontWeight: '400',
+          labelFontSize: '12',
+          labelPadding: '8',
+          domainColor:'#A3A7B0',
+          gridColor: '#F2F2F3'
+        },
+        axisX: {
+          labelAngle: 0
+        },
+        legend: {
+          symbolType: 'circle'
+        }
+      },
+      encoding: {
+          x: { field: 'month', type: 'temporal' },
+          y: { field: 'value', type: 'quantitative' },
+          color: {'field': 'category', 'type': 'nominal', scale: {range: ['#0D7482', '#5798D9', '#CDACFF']}},
+          strokeOpacity: {
+          condition: { param: 'legendHover', value: 1},
+          value: 0.25
+        },
+      },
+      layer: [
+      {
+        mark: { type: 'line', point: 'transparent' },
+        params: [
+          { name: 'select', select: 'point'},
+          {
+          name: 'legendHover',
+          select: {type: 'point', fields: ['category']},
+          bind: { legend: 'mouseover'}
+        }],
+
+        },
+        {
+          mark: 'point',
+          params: [ {
+            name: 'label',
+            'select': {
+              type: 'point',
+              fields: ['month'],
+              nearest: true,
+              on: 'pointerover',
+              clear: 'pointerup'
+            }
+          }],
+          encoding: {
+            tooltip: [
+            { field: 'tooltipA', type: 'quantitative', title: 'A'},
+            { field: 'tooltipB', type: 'quantitative', title: 'B'},
+            { field: 'tooltipC', type: 'quantitative', title: 'C'}
+          ],
+            opacity: {
+              condition: {
+                param: 'label',
+                empty: false,
+                value: 1
+              },
+              value: 0
+            }
+          }
+        },
+        {
+          mark: {type: 'rule', strokeDash: [3,2]},
+          encoding: {
+            x: {type: 'temporal', field: 'month'},
+            y: { aggregate: 'max'},
+            color: '#F2F2F3',
+            opacity: {
+              condition: {
+                param: 'label',
+                empty: false,
+                value: .1
+              },
+              value: 0
+            }
+          }
+          },
+    ]
+    };
+
+    setChartExample(visualizationSpecSparkMultiLine, '#spark-multi-line');
+
 
   })()"
 >

@@ -1,0 +1,70 @@
+<h1>gux-popover</h1>
+<div class="scroll-container">
+  <div class="scroll-interior">
+    <gux-button id="popover-target">Example Element</gux-button>
+    <gux-popover-beta
+      id="popover-example"
+      position="top"
+      for="popover-target"
+      is-open
+    >
+      <span slot="title">Title</span>
+      <div class="popover-content-wrapper">
+        <div>Popover Content</div>
+        <gux-cta-group align="end">
+          <gux-button slot="primary" onclick="notify(event)"
+            >Action 3</gux-button
+          >
+          <gux-button slot="secondary" onclick="notify(event)"
+            >Action 2</gux-button
+          >
+          <gux-button slot="dismiss" onclick="notify(event)"
+            >Action 1</gux-button
+          >
+        </gux-cta-group>
+      </div>
+    </gux-popover-beta>
+  </div>
+</div>
+
+<style>
+  .scroll-container {
+    inline-size: 900px;
+    block-size: 400px;
+    margin: auto;
+    overflow: scroll;
+    border: 1px solid #aaa;
+  }
+
+  .scroll-interior {
+    position: relative;
+    inline-size: 600px;
+    block-size: 600px;
+    background-color: #fff;
+  }
+
+  .popover-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .popover-content {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    inline-size: 280px;
+  }
+
+  #popover-target {
+    position: absolute;
+    inset-block-start: 250px;
+    inset-inline-start: 250px;
+    display: inline-block;
+    padding-block: 10px;
+    padding-inline: 15px;
+    background-color: #fdfdfd;
+    border: 1px #e4e9f0;
+    box-shadow: 0 0 2px fade(#202937, 24%);
+  }
+</style>

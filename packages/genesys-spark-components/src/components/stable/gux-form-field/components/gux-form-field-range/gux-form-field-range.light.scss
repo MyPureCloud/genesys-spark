@@ -14,15 +14,15 @@ $contrast: 5%;
 $slider-border: #b4bccb;
 
 @mixin gux-track {
-  width: $track-width;
-  height: $track-height;
+  inline-size: $track-width;
+  block-size: $track-height;
   cursor: pointer;
 }
 
 @mixin gux-thumb {
   display: block;
-  width: $thumb-diameter;
-  height: $thumb-diameter;
+  inline-size: $thumb-diameter;
+  block-size: $thumb-diameter;
   cursor: pointer;
   background: $handle-enabled-background;
   border-radius: $handle-border-radius;
@@ -31,11 +31,12 @@ $slider-border: #b4bccb;
 gux-form-field-range {
   input[type='range'] {
     position: absolute;
-    width: 100%;
-    width: $track-width;
-    height: $track-height;
-    margin: calc($thumb-diameter / 2) 0;
-    margin-top: calc(-1 * calc($thumb-diameter / 2));
+    inline-size: 100%;
+    inline-size: $track-width;
+    block-size: $track-height;
+    margin-block: calc($thumb-diameter / 2);
+    margin-block-start: calc(-1 * calc($thumb-diameter / 2));
+    margin-inline: 0;
     -webkit-appearance: none;
     background: transparent;
 
@@ -52,7 +53,9 @@ gux-form-field-range {
     &::-webkit-slider-thumb {
       @include gux-thumb;
 
-      margin-top: calc(calc($track-height / 2) - calc($thumb-diameter / 2));
+      margin-block-start: calc(
+        calc($track-height / 2) - calc($thumb-diameter / 2)
+      );
       -webkit-appearance: none;
       border: 0 solid $range-active; // For firefox
     }
@@ -70,7 +73,9 @@ gux-form-field-range {
     &::-moz-range-thumb {
       @include gux-thumb;
 
-      margin-top: calc(calc($track-height / 2) - calc($thumb-diameter / 2));
+      margin-block-start: calc(
+        calc($track-height / 2) - calc($thumb-diameter / 2)
+      );
       border: 0 solid $range-active; // For firefox
     }
 

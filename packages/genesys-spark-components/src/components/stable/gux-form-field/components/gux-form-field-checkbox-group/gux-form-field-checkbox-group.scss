@@ -24,21 +24,21 @@
 }
 
 ::slotted(gux-form-field-checkbox) {
-  padding-top: var(--gse-ui-formControl-group-gapItems);
+  padding-block-start: var(--gse-ui-formControl-group-gapItems);
 }
 
 ::slotted(gux-form-field-checkbox:first-of-type) {
-  padding-top: 0;
+  padding-block-start: 0;
 }
 
 :host(.gux-group-checkbox) {
   ::slotted(gux-form-field-checkbox) {
     // need token COMUI-2994
-    padding-left: 24px;
+    padding-inline-start: 24px;
   }
 
   slot[name='group-checkbox']::slotted(gux-form-field-checkbox) {
-    padding-left: 0;
+    padding-inline-start: 0;
   }
 }
 

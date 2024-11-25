@@ -23,7 +23,7 @@ export async function createThemes(sourceFolder, outputFolder) {
   delete themes['gse-legacy-dark-ui'];
 
   const sdThemes = Object.entries(themes).map(([name, tokensets]) => {
-    const baseName = name.replace(/-ui$/, '');
+    const [prefix, theme, mode] = name.split('-');
 
     return new StyleDictionary(
       {
@@ -60,8 +60,15 @@ export async function createThemes(sourceFolder, outputFolder) {
           }
         },
         platforms: Object.assign(
-          getPlatform(baseName, 'scss', 'css/variables', outputFolder),
-          getPlatform(baseName, 'json', 'json/nested', outputFolder)
+          getPlatform(
+            prefix,
+            theme,
+            mode,
+            'scss',
+            'css/variables',
+            outputFolder
+          ),
+          getPlatform(prefix, theme, mode, 'json', 'json/nested', outputFolder)
         )
       },
       {
@@ -75,30 +82,44 @@ export async function createThemes(sourceFolder, outputFolder) {
   }
 }
 
-function getPlatform(name, type, format, outputFolder) {
+function getPlatform(prefix, theme, mode, type, format, outputFolder) {
   return {
     [type]: {
       transformGroup: 'tokens-studio',
       transforms: ['color/gse', 'name/gse'],
-      prefix: 'gse',
+      prefix,
       buildPath: `${outputFolder}/${type}/`,
       files: [
         {
-          destination: `${name}-core.${type}`,
+          destination: `${prefix}-core.${type}`,
           format,
           filter: token => {
             return token.filePath.endsWith('core.json');
           }
         },
         {
-          destination: `${name}-semantic.${type}`,
+          destination: `${prefix}-semantic-${theme}.${type}`,
           format,
           filter: token => {
-            return token.filePath.includes('/semantic/');
+            return token.filePath.includes(`/semantic/theme/${theme}`);
           }
         },
         {
-          destination: `${name}-ui.${type}`,
+          destination: `${prefix}-semantic-${theme}-global.${type}`,
+          format,
+          filter: token => {
+            return token.filePath.includes(`/semantic/global`);
+          }
+        },
+        {
+          destination: `${prefix}-semantic-${theme}-${mode}.${type}`,
+          format,
+          filter: token => {
+            return token.filePath.includes(`/semantic/mode/${mode}`);
+          }
+        },
+        {
+          destination: `${prefix}-ui-${theme}-${mode}.${type}`,
           format,
           filter: token => {
             return token.filePath.includes('/ui/');

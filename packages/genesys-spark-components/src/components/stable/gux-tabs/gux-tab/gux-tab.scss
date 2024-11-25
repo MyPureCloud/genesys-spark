@@ -1,24 +1,24 @@
 gux-tabs[orientation='vertical'] > gux-tab-list {
   gux-tab {
     box-sizing: border-box;
-    border-right: var(--gse-ui-tabs-item-divider-vertical-width) solid
+    border-inline-end: var(--gse-ui-tabs-item-divider-vertical-width) solid
       var(--gse-ui-tabs-item-divider-dividerColor);
 
     .gux-tab {
       display: flex;
       justify-content: flex-end;
-      width: var(--gse-ui-tabs-set-vertical-width);
-      height: var(--gse-ui-tabs-item-vertical-fixedHeight);
+      inline-size: var(--gse-ui-tabs-set-vertical-width);
+      block-size: var(--gse-ui-tabs-item-vertical-fixedHeight);
       padding: var(--gse-ui-tabs-item-vertical-padding);
-      border-right: var(--gse-ui-tabs-item-indicator-vertical-width) solid
+      border-inline-end: var(--gse-ui-tabs-item-indicator-vertical-width) solid
         transparent;
 
       &.gux-active {
-        border-right-color: var(--gse-ui-tabs-item-indicator-activeColor);
+        border-inline-end-color: var(--gse-ui-tabs-item-indicator-activeColor);
       }
 
       &:hover:not(.gux-active):not(.gux-disabled) {
-        border-right-color: var(--gse-ui-tabs-item-indicator-hoverColor);
+        border-inline-end-color: var(--gse-ui-tabs-item-indicator-hoverColor);
       }
     }
   }
@@ -27,18 +27,18 @@ gux-tabs[orientation='vertical'] > gux-tab-list {
 gux-tabs:not([orientation='vertical']) > gux-tab-list {
   .gux-tab {
     box-sizing: border-box;
-    max-width: 160px;
-    height: var(--gse-ui-tabs-item-horizontal-fixedHeight);
+    max-inline-size: 160px;
+    block-size: var(--gse-ui-tabs-item-horizontal-fixedHeight);
     padding: var(--gse-ui-tabs-item-horizontal-padding);
-    border-bottom: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
+    border-block-end: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
       transparent;
 
     &.gux-active {
-      border-bottom-color: var(--gse-ui-tabs-item-indicator-activeColor);
+      border-block-end-color: var(--gse-ui-tabs-item-indicator-activeColor);
     }
 
     &:hover:not(.gux-active):not(.gux-disabled) {
-      border-bottom-color: var(--gse-ui-tabs-item-indicator-hoverColor);
+      border-block-end-color: var(--gse-ui-tabs-item-indicator-hoverColor);
     }
 
     gux-tooltip-title {
@@ -59,12 +59,12 @@ gux-tabs[alignment='full-width'] > gux-tab-list {
   }
 
   gux-tab {
-    width: 100%;
-    max-width: 100%;
+    inline-size: 100%;
+    max-inline-size: 100%;
 
     .gux-tab {
-      width: 100%;
-      max-width: 100%;
+      inline-size: 100%;
+      max-inline-size: 100%;
     }
   }
 }
@@ -75,7 +75,7 @@ gux-tab {
   .gux-tab {
     display: flex;
     align-items: center;
-    height: var(--gse-ui-tabs-item-height);
+    block-size: var(--gse-ui-tabs-item-height);
     font-family: var(--gse-ui-tabs-item-itemText-fontFamily);
     font-size: var(--gse-ui-tabs-item-itemText-fontSize);
     font-weight: var(--gse-ui-tabs-item-itemText-fontWeight);

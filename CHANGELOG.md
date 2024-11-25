@@ -2,6 +2,91 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.100.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.98.1...v4.100.0) (2024-11-23)
+
+
+### Features
+
+* **copy-to-clipboard:** detect overflow in tooltip position ([#611](https://github.com/MyPureCloud/genesys-spark/issues/611)) ([d40fffc](https://github.com/MyPureCloud/genesys-spark/commit/d40fffc6d09b6b2ae134b83c4ed8f85e7f2d3b4e))
+* **segmented-control:** added disabled state ([3216cad](https://github.com/MyPureCloud/genesys-spark/commit/3216caddb3dd31f34a86511b8c78ad2b06fca5e0))
+* **tabs:** tab panel will now fill its container ([095a50a](https://github.com/MyPureCloud/genesys-spark/commit/095a50a6b2955b5850c914a785113c7de5f8ab1a))
+
+
+### Bug Fixes
+
+* **label-info:** Pass formatting through to tooltip ([#703](https://github.com/MyPureCloud/genesys-spark/issues/703)) ([4bfabc6](https://github.com/MyPureCloud/genesys-spark/commit/4bfabc6ed6e2967c762b6ca96f4451b4b8331618))
+* **listbox:** Added disabled prop ([eca263c](https://github.com/MyPureCloud/genesys-spark/commit/eca263c351678322ca1b49ccd3ff73e090a235a7))
+* **table:** added safari repaint bug workaround ([2d30548](https://github.com/MyPureCloud/genesys-spark/commit/2d3054809aeafc862edf765bd5dcb199dcc562ba))
+* **tabs:** add optional chaining operator for initalisation ([794f8be](https://github.com/MyPureCloud/genesys-spark/commit/794f8bec6f0caee1597fed69283e7dbb88338436))
+
+### [4.98.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.98.0...v4.98.1) (2024-11-20)
+
+
+### Bug Fixes
+
+* **table-toolbar:** hide tooltip when menu is expanded ([d744ff9](https://github.com/MyPureCloud/genesys-spark/commit/d744ff910d07b509c0cd50b9697c93a20e67672c))
+
+## [4.98.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.97.0...v4.98.0) (2024-11-19)
+
+
+### Features
+
+* **form-footer:** Remove modal-desktop variant and tokens ([#709](https://github.com/MyPureCloud/genesys-spark/issues/709)) ([2ec4146](https://github.com/MyPureCloud/genesys-spark/commit/2ec41468a83a0b5bb1c3f0bb112238e86179ea73))
+* **selector-cards:** stretch height ([#710](https://github.com/MyPureCloud/genesys-spark/issues/710)) ([0a70c76](https://github.com/MyPureCloud/genesys-spark/commit/0a70c762f9d19e145f83d39e26c0ae9fe484f074))
+
+
+### Bug Fixes
+
+* **content-search:** add missing tokens ([2e3c6f2](https://github.com/MyPureCloud/genesys-spark/commit/2e3c6f2714bd93941580bff29f6fb751ad5d90f9))
+
+## [4.97.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.96.3...v4.97.0) (2024-11-16)
+
+
+### Features
+
+* **tokens:** modified building script ([8274a36](https://github.com/MyPureCloud/genesys-spark/commit/8274a36831ec2428b5ada4dec433f593deda7b5c))
+
+### [4.96.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.96.2...v4.96.3) (2024-11-15)
+
+
+### Bug Fixes
+
+* **visualization:** Add chart memory leak fix from components v3 ([851374d](https://github.com/MyPureCloud/genesys-spark/commit/851374dd821bb5f73a4e3b77f7869b1e6c6c22b4))
+
+### [4.96.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.96.1...v4.96.2) (2024-11-13)
+
+
+### Bug Fixes
+
+* **rich-text-editor:** fix broken e2e tests ([7a478ad](https://github.com/MyPureCloud/genesys-spark/commit/7a478ad563641fc6116d271b32e5fc8730db20ec))
+
+### [4.96.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.96.0...v4.96.1) (2024-11-12)
+
+## [4.96.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.95.0...v4.96.0) (2024-11-10)
+
+
+### Features
+
+* **popover-beta:** Added popover-beta component that uses the native popover-api ([34232b9](https://github.com/MyPureCloud/genesys-spark/commit/34232b9b25ea6a7e6372d6ba42a405696f9b0cdc))
+
+## [4.95.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.94.0...v4.95.0) (2024-11-08)
+
+
+### Features
+
+* **other:** rich-text-editor ([f9e1fb9](https://github.com/MyPureCloud/genesys-spark/commit/f9e1fb98b283823e01dff1d6551711d8193c6346))
+
+## [4.94.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.93.2...v4.94.0) (2024-11-07)
+
+
+### Features
+
+* **avatar:** use the same focus ring on small avatars ([#688](https://github.com/MyPureCloud/genesys-spark/issues/688)) ([1f63793](https://github.com/MyPureCloud/genesys-spark/commit/1f637939aa32f2a145f0ca179660350125133853))
+
+### [4.93.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.93.1...v4.93.2) (2024-11-06)
+
+### [4.93.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.93.0...v4.93.1) (2024-11-05)
+
 ## [4.93.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.92.0...v4.93.0) (2024-11-02)
 
 

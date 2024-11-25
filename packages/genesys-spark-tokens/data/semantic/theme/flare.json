@@ -45,6 +45,30 @@
           "60": {
             "value": "{color.azure_blue.200}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.haze.950}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.haze.900}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.haze.850}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.azure_blue.1000}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
+          },
+          "60d": {
+            "value": "{color.azure_blue.950}",
+            "type": "color"
           }
         },
         "secondary": {
@@ -59,6 +83,18 @@
           "30": {
             "value": "{color.azure_blue.800}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.600}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.azure_blue.700}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
           }
         },
         "tertiary": {
@@ -68,6 +104,14 @@
           },
           "20": {
             "value": "{color.haze.300}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.transparent}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.haze.800}",
             "type": "color"
           }
         },
@@ -87,6 +131,22 @@
           "40": {
             "value": "{color.haze.1000}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.haze.200}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.azure_blue.200}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.azure_blue.100}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.haze.50}",
+            "type": "color"
           }
         }
       },
@@ -99,12 +159,33 @@
           "20": {
             "value": "{color.haze.300}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.haze.950}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.haze.600}",
+            "type": "color"
           }
         }
       },
       "overlay": {
         "10": {
           "value": "{color.genesys_navy.700}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": "{opacity.80}",
+                "space": "srgb"
+              }
+            }
+          }
+        },
+        "10d": {
+          "value": "{color.azure_blue.1000}",
           "type": "color",
           "$extensions": {
             "studio.tokens": {
@@ -138,6 +219,26 @@
           "50": {
             "value": "{color.azure_blue.900}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.azure_blue.600}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.azure_blue.500}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.azure_blue.900}",
+            "type": "color"
           }
         },
         "info": {
@@ -162,6 +263,30 @@
             "type": "color"
           },
           "50": {
+            "value": "{color.genesys_navy.900}",
+            "type": "color"
+          },
+          "5d": {
+            "value": "{color.genesys_navy.900}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_navy.700}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.genesys_navy.800}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.genesys_navy.600}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.genesys_navy.500}",
+            "type": "color"
+          },
+          "50d": {
             "value": "{color.genesys_navy.900}",
             "type": "color"
           }
@@ -194,6 +319,34 @@
           "50": {
             "value": "{color.emerald.900}",
             "type": "color"
+          },
+          "5d": {
+            "value": "{color.emerald.1000}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.emerald.800}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.emerald.800}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.emerald.700}",
+            "type": "color"
+          },
+          "35d": {
+            "value": "{color.emerald.600}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.emerald.500}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.emerald.900}",
+            "type": "color"
           }
         },
         "warning": {
@@ -218,6 +371,30 @@
             "type": "color"
           },
           "50": {
+            "value": "{color.honey.900}",
+            "type": "color"
+          },
+          "5d": {
+            "value": "{color.honey.900}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.honey.800}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.honey.800}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.honey.600}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.honey.500}",
+            "type": "color"
+          },
+          "50d": {
             "value": "{color.honey.900}",
             "type": "color"
           }
@@ -246,6 +423,30 @@
           "50": {
             "value": "{color.pepper.900}",
             "type": "color"
+          },
+          "5d": {
+            "value": "{color.pepper.1000}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.pepper.900}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.pepper.800}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.pepper.700}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.pepper.500}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.pepper.900}",
+            "type": "color"
           }
         }
       },
@@ -260,7 +461,7 @@
             "type": "color"
           },
           "30": {
-            "value": "{color.emerald.400}",
+            "value": "{color.jade.600}",
             "type": "color"
           },
           "40": {
@@ -302,6 +503,58 @@
           "130": {
             "value": "{color.mineral.600}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_navy.600}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.haze.700}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.jade.800}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.island.800}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.pear.800}",
+            "type": "color"
+          },
+          "60d": {
+            "value": "{color.mineral.900}",
+            "type": "color"
+          },
+          "70d": {
+            "value": "{color.plum.800}",
+            "type": "color"
+          },
+          "80d": {
+            "value": "{color.raspberry.800}",
+            "type": "color"
+          },
+          "90d": {
+            "value": "{color.coral.800}",
+            "type": "color"
+          },
+          "100d": {
+            "value": "{color.genesys_orange.700}",
+            "type": "color"
+          },
+          "110d": {
+            "value": "{color.mango.700}",
+            "type": "color"
+          },
+          "120d": {
+            "value": "{color.island.900}",
+            "type": "color"
+          },
+          "130d": {
+            "value": "{color.mineral.800}",
+            "type": "color"
           }
         },
         "subtle": {
@@ -314,7 +567,7 @@
             "type": "color"
           },
           "30": {
-            "value": "{color.emerald.200}",
+            "value": "{color.jade.200}",
             "type": "color"
           },
           "40": {
@@ -351,6 +604,54 @@
           },
           "120": {
             "value": "{color.island.200}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_navy.800}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.haze.850}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.jade.1000}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.island.900}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.pear.1000}",
+            "type": "color"
+          },
+          "60d": {
+            "value": "{color.mineral.1000}",
+            "type": "color"
+          },
+          "70d": {
+            "value": "{color.plum.1000}",
+            "type": "color"
+          },
+          "80d": {
+            "value": "{color.raspberry.1000}",
+            "type": "color"
+          },
+          "90d": {
+            "value": "{color.coral.1000}",
+            "type": "color"
+          },
+          "100d": {
+            "value": "{color.genesys_orange.900}",
+            "type": "color"
+          },
+          "110d": {
+            "value": "{color.mango.1000}",
+            "type": "color"
+          },
+          "120d": {
+            "value": "{color.island.900}",
             "type": "color"
           }
         },
@@ -394,6 +695,46 @@
             "value": "{color.island.300}",
             "type": "color",
             "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "10d": {
+            "value": "{color.genesys_orange.700}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "20d": {
+            "value": "{color.coral.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "30d": {
+            "value": "{color.pear.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "40d": {
+            "value": "{color.mango.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "50d": {
+            "value": "{color.raspberry.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "60d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "70d": {
+            "value": "{color.mineral.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
+          },
+          "80d": {
+            "value": "{color.island.900}",
+            "type": "color",
+            "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
           }
         },
         "status": {
@@ -424,6 +765,34 @@
           "70": {
             "value": "{color.genesys_orange.500}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.emerald.500}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.pepper.500}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.honey.500}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.azure_blue.600}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.haze.600}",
+            "type": "color"
+          },
+          "60d": {
+            "value": "{color.raspberry.700}",
+            "type": "color"
+          },
+          "70d": {
+            "value": "{color.genesys_orange.500}",
+            "type": "color"
           }
         }
       }
@@ -441,6 +810,18 @@
         "30": {
           "value": "{color.haze.900}",
           "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.400}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.haze.200}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.white}",
+          "type": "color"
         }
       },
       "secondary": {
@@ -454,6 +835,18 @@
         },
         "30": {
           "value": "{color.haze.700}",
+          "type": "color"
+        },
+        "10d": {
+          "value": "{color.white}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.haze.200}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.haze.300}",
           "type": "color"
         }
       },
@@ -470,7 +863,23 @@
           "value": "{color.azure_blue.800}",
           "type": "color"
         },
+        "10d": {
+          "value": "{color.white}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.white}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.white}",
+          "type": "color"
+        },
         "05": {
+          "value": "{color.azure_blue.400}",
+          "type": "color"
+        },
+        "05d": {
           "value": "{color.azure_blue.400}",
           "type": "color"
         }
@@ -487,6 +896,18 @@
         "30": {
           "value": "{color.haze.300}",
           "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.950}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.haze.850}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.haze.800}",
+          "type": "color"
         }
       },
       "system": {
@@ -494,11 +915,19 @@
           "10": {
             "value": "{color.azure_blue.500}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.600}",
+            "type": "color"
           }
         },
         "info": {
           "10": {
             "value": "{color.genesys_navy.600}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_navy.500}",
             "type": "color"
           }
         },
@@ -506,17 +935,29 @@
           "10": {
             "value": "{color.emerald.600}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.emerald.500}",
+            "type": "color"
           }
         },
         "warning": {
           "10": {
             "value": "{color.honey.700}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.honey.500}",
+            "type": "color"
           }
         },
         "error": {
           "10": {
             "value": "{color.pepper.600}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.pepper.400}",
             "type": "color"
           }
         }
@@ -526,11 +967,19 @@
           "10": {
             "value": "{color.genesys_orange.500}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_orange.500}",
+            "type": "color"
           }
         },
         "ai": {
           "10": {
-            "value": "{color.plum.700}",
+            "value": "{color.island.600}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.island.600}",
             "type": "color"
           }
         }
@@ -551,11 +1000,31 @@
         "40": {
           "value": "{color.genesys_navy.600}",
           "type": "color"
+        },
+        "10d": {
+          "value": "{color.azure_blue.300}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.azure_blue.200}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.azure_blue.100}",
+          "type": "color"
+        },
+        "40d": {
+          "value": "{color.genesys_navy.400}",
+          "type": "color"
         }
       },
       "icon": {
         "10": {
           "value": "{color.haze.800}",
+          "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.400}",
           "type": "color"
         }
       },
@@ -573,8 +1042,24 @@
             "value": "{color.azure_blue.800}",
             "type": "color"
           },
-          "50": {
+          "40": {
             "value": "{color.haze.500}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.600}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.azure_blue.300}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.azure_blue.200}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.haze.600}",
             "type": "color"
           }
         }
@@ -583,6 +1068,10 @@
     "border": {
       "focus": {
         "10": {
+          "value": "{color.azure_blue.400}",
+          "type": "color"
+        },
+        "10d": {
           "value": "{color.azure_blue.400}",
           "type": "color"
         }
@@ -599,10 +1088,31 @@
         "30": {
           "value": "{color.azure_blue.600}",
           "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.950}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.haze.800}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.azure_blue.600}",
+          "type": "color"
         }
       },
       "edges": {
         "default": {
+          "0": {
+            "value": "{color.genesys_navy.200}",
+            "type": "color",
+            "description": "This border color should be used as an edge indicator together with elevation, eg. filecard sub-component within the file upload main component."
+          },
+          "5": {
+            "value": "{color.haze.200}",
+            "type": "color"
+          },
           "10": {
             "value": "{color.haze.300}",
             "type": "color"
@@ -615,13 +1125,34 @@
             "value": "{color.haze.850}",
             "type": "color"
           },
-          "05": {
+          "10d": {
+            "value": "{color.haze.800}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.haze.300}",
+            "type": "color"
+          },
+          "30d": {
             "value": "{color.haze.200}",
             "type": "color"
+          },
+          "5d": {
+            "value": "{color.haze.850}",
+            "type": "color"
+          },
+          "0d": {
+            "value": "{color.genesys_navy.950}",
+            "type": "color",
+            "description": "This border color should be used as an edge indicator together with elevation, eg. filecard sub-component within the file upload main component."
           }
         },
         "enabled": {
           "10": {
+            "value": "{color.azure_blue.600}",
+            "type": "color"
+          },
+          "10d": {
             "value": "{color.azure_blue.600}",
             "type": "color"
           }
@@ -634,17 +1165,33 @@
           "20": {
             "value": "{color.azure_blue.800}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.400}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.azure_blue.700}",
+            "type": "color"
           }
         },
         "active": {
           "10": {
             "value": "{color.azure_blue.700}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
           }
         },
         "emphasis": {
           "default": {
             "value": "{color.haze.700}",
+            "type": "color"
+          },
+          "defaultd": {
+            "value": "{color.haze.400}",
             "type": "color"
           }
         }
@@ -654,11 +1201,19 @@
           "10": {
             "value": "{color.azure_blue.300}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
           }
         },
         "info": {
           "10": {
             "value": "{color.genesys_navy.200}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_navy.700}",
             "type": "color"
           }
         },
@@ -666,11 +1221,19 @@
           "10": {
             "value": "{color.emerald.200}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.emerald.800}",
+            "type": "color"
           }
         },
         "warning": {
           "10": {
             "value": "{color.honey.200}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.honey.800}",
             "type": "color"
           }
         },
@@ -682,6 +1245,14 @@
           "20": {
             "value": "{color.pepper.500}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.pepper.800}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.pepper.700}",
+            "type": "color"
           }
         }
       },
@@ -690,17 +1261,29 @@
           "10": {
             "value": "{color.haze.500}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.haze.600}",
+            "type": "color"
           }
         },
         "hover": {
           "10": {
             "value": "{color.azure_blue.700}",
             "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.300}",
+            "type": "color"
           }
         },
         "active": {
           "10": {
             "value": "{color.azure_blue.800}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.200}",
             "type": "color"
           }
         }

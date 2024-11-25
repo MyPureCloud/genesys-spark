@@ -38,8 +38,8 @@
   flex-wrap: nowrap;
   place-content: stretch center;
   align-items: center;
-  width: 100%;
-  height: var(--gse-ui-formControl-input-textfield-height);
+  inline-size: 100%;
+  block-size: var(--gse-ui-formControl-input-textfield-height);
   font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
@@ -62,7 +62,7 @@
 
 .gux-field {
   &.gux-input-field {
-    height: var(--gse-ui-formControl-input-contentText-lineHeight);
+    block-size: var(--gse-ui-formControl-input-contentText-lineHeight);
   }
 
   .gux-field-content {
@@ -73,8 +73,8 @@
     flex-wrap: nowrap;
     place-content: stretch flex-start;
     align-items: flex-start;
-    min-width: 0;
-    height: var(--gse-ui-formControl-input-contentText-lineHeight);
+    min-inline-size: 0;
+    block-size: var(--gse-ui-formControl-input-contentText-lineHeight);
 
     .gux-filter,
     .gux-selected-option,
@@ -93,12 +93,12 @@
 
     .gux-filter {
       position: relative;
-      height: 100%;
-      padding-left: 0;
+      block-size: 100%;
+      padding-inline-start: 0;
 
       .gux-filter-input {
         all: unset;
-        width: 100%;
+        inline-size: 100%;
         color: transparent;
         caret-color: var(--gse-ui-formControl-input-populatedColor);
       }
@@ -130,9 +130,9 @@
     flex: 0 0 auto;
     align-self: auto;
     order: 0;
-    width: var(--gse-ui-formControl-input-inputIcon-size);
-    height: var(--gse-ui-formControl-input-inputIcon-size);
-    padding-left: var(--gse-ui-dropdown-gap);
+    inline-size: var(--gse-ui-formControl-input-inputIcon-size);
+    block-size: var(--gse-ui-formControl-input-inputIcon-size);
+    padding-inline-start: var(--gse-ui-dropdown-gap);
     color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
   }
 }
@@ -162,8 +162,8 @@
   }
 
   .gux-field-button {
-    width: auto;
-    height: var(--gse-ui-formControl-input-contentText-lineHeight);
+    inline-size: auto;
+    block-size: var(--gse-ui-formControl-input-contentText-lineHeight);
     margin: 0;
     background: inherit;
     border: none;

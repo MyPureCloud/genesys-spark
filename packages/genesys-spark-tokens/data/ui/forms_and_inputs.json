@@ -1069,6 +1069,190 @@
       }
     }
   },
+  "file_upload": {
+    "file_card": {
+      "border_radius": {
+        "value": "{interactive.sm.border_radius}",
+        "type": "borderRadius"
+      },
+      "card_group": {
+        "gap": {
+          "value": "{container.sm.gap}",
+          "type": "spacing"
+        }
+      },
+      "file_name": {
+        "text": {
+          "value": "{body.sm.regular}",
+          "type": "typography"
+        },
+        "default": {
+          "value": "{foreground.form_control.text_input.populated}",
+          "type": "color"
+        }
+      },
+      "error": {
+        "error_message": {
+          "value": "{foreground.form_control.help_text.error}",
+          "type": "color"
+        },
+        "error_helper": {
+          "value": "{foreground.form_control.help_text.default}",
+          "type": "color"
+        },
+        "text": {
+          "value": "{body.sm.regular}",
+          "type": "typography"
+        }
+      },
+      "card": {
+        "padding": {
+          "value": "{container.2xs.padding} {container.xs.padding}",
+          "type": "spacing"
+        },
+        "gap": {
+          "value": "{container.xs.gap}",
+          "type": "spacing"
+        },
+        "error_card": {
+          "file_name_section": {
+            "padding": {
+              "value": "0 {container.xs.padding}",
+              "type": "spacing"
+            }
+          },
+          "error_text_section": {
+            "padding": {
+              "value": "0 {container.xs.padding}",
+              "type": "spacing"
+            },
+            "gap": {
+              "value": "{container.xs.gap}",
+              "type": "spacing"
+            }
+          },
+          "main_container": {
+            "padding": {
+              "value": "{interactive.sm.padding} 0 {interactive.md.padding}",
+              "type": "spacing",
+              "description": "This token is to be updated after the themes release. (There was no appropriate token in the container category and did not want to modify existing ones.)"
+            }
+          }
+        }
+      },
+      "main_container": {
+        "default": {
+          "border": {
+            "value": {
+              "color": "{border.container.edges.default}",
+              "width": "{form_control.text_input.edges.border_width}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
+        },
+        "error": {
+          "border": {
+            "value": {
+              "color": "{border.container.edges.error}",
+              "width": "{form_control.text_input.edges.border_width}",
+              "style": "solid"
+            },
+            "type": "border"
+          }
+        }
+      },
+      "box_shadow": {
+        "value": "{elevation.low}",
+        "type": "boxShadow",
+        "description": "The shadow we used for small-sized components like tooltips."
+      },
+      "status_icon": {
+        "success": {
+          "value": "{foreground.system.success.accent}",
+          "type": "color"
+        },
+        "error": {
+          "value": "{foreground.system.error.accent}",
+          "type": "color"
+        }
+      },
+      "foreground_color": {
+        "value": "{foreground.container.high_contrast.high_emphasis}",
+        "type": "color"
+      }
+    },
+    "drop_zone": {
+      "border_radius": {
+        "value": "{interactive.sm.border_radius}",
+        "type": "borderRadius"
+      }
+    },
+    "label_helper": {
+      "gap": {
+        "value": "{container.xs.gap}",
+        "type": "spacing"
+      }
+    },
+    "main_container": {
+      "gap": {
+        "value": "{container.md.gap}",
+        "type": "spacing"
+      }
+    },
+    "drag_and_drop": {
+      "drop_zone": {
+        "text": {
+          "value": "{body.sm.regular}",
+          "type": "typography"
+        },
+        "default": {
+          "border": {
+            "value": {
+              "color": "{border.form_control.text_input.default}",
+              "width": "{form_control.text_input.edges.border_width}",
+              "style": "dashed"
+            },
+            "type": "border"
+          }
+        },
+        "active": {
+          "border": {
+            "value": {
+              "color": "{border.form_control.text_input.active}",
+              "width": "{border_width.2}",
+              "style": "dashed"
+            },
+            "type": "border"
+          }
+        },
+        "min_height": {
+          "value": "{interactive.4xl.size}",
+          "type": "sizing"
+        },
+        "background": {
+          "active": {
+            "value": "{background.interactive.secondary.default}",
+            "type": "color"
+          }
+        }
+      },
+      "drop_zone_text": {
+        "color": {
+          "value": "{foreground.form_control.text_input.populated}",
+          "type": "color"
+        }
+      }
+    },
+    "drag_drop": {
+      "btn_text": {
+        "gap": {
+          "value": "{container.md.gap}",
+          "type": "spacing"
+        }
+      }
+    }
+  },
   "color_picker": {
     "label": {
       "required_symbol_color": {

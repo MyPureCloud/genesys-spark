@@ -35,7 +35,7 @@
     }
 
     .gux-toggle-error {
-      float: right;
+      float: inline-end;
     }
   }
 
@@ -46,7 +46,7 @@
     gap: var(--gse-ui-toggle-gap);
     place-content: stretch flex-start;
     align-items: center;
-    width: fit-content;
+    inline-size: fit-content;
     cursor: pointer;
 
     .gux-toggle-label {
@@ -64,6 +64,7 @@
           font-family: var(--gse-ui-toggle-label-fontFamily);
           font-size: var(--gse-ui-toggle-label-fontSize);
           font-weight: var(--gse-ui-toggle-label-fontWeight);
+          line-height: var(--gse-ui-toggle-label-lineHeight);
           color: var(--gse-ui-formControl-label-labelColor);
           word-wrap: break-word;
 
@@ -102,8 +103,8 @@
         flex: 0 1 auto;
         align-self: auto;
         order: 0;
-        width: var(--gse-ui-button-icon-size);
-        height: var(--gse-ui-button-icon-size);
+        inline-size: var(--gse-ui-button-icon-size);
+        block-size: var(--gse-ui-button-icon-size);
         color: var(--gse-ui-formControl-helper-errorColor);
       }
 

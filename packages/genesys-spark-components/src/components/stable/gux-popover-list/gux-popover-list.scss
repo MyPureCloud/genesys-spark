@@ -1,15 +1,16 @@
 .gux-popover-wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   z-index: var(--gse-semantic-zIndex-popover);
   display: inline-block;
-  padding: 8px 0; // TODO: COMUI-2257 - add missing token
+  padding-block: 8px;
+  padding-inline: 0; // TODO: COMUI-2257 - add missing token
   background-color: var(--gse-ui-popover-backgroundColor);
   border-radius: var(--gse-ui-popover-borderRadius);
   box-shadow: var(--gse-ui-popover-boxShadow-offsetX)
     var(--gse-ui-popover-boxShadow-offsetY) var(--gse-ui-popover-boxShadow-blur)
-    var(--gse-ui-popover-boxShadow-spread) var(--gse-ui-tooltip-boxShadow-color);
+    var(--gse-ui-popover-boxShadow-spread) var(--gse-ui-popover-boxShadow-color);
 
   &.gux-hidden {
     display: none;
@@ -17,8 +18,8 @@
 
   .gux-arrow {
     position: absolute;
-    width: var(--gse-ui-popover-anchor-width);
-    height: var(--gse-ui-popover-anchor-width);
+    inline-size: var(--gse-ui-popover-anchor-width);
+    block-size: var(--gse-ui-popover-anchor-width);
     background: var(--gse-ui-popover-backgroundColor);
   }
 }

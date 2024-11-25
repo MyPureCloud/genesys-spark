@@ -1,0 +1,40 @@
+.editor-styles {
+  font-family: var(--gse-ui-rte-paragraph-md-regular-fontFamily);
+  font-size: var(--gse-ui-rte-paragraph-md-regular-fontSize);
+  font-weight: var(--gse-ui-rte-paragraph-md-regular-fontWeight);
+  line-height: var(--gse-ui-rte-paragraph-md-regular-lineHeight);
+  color: var(--gse-ui-rte-paragraph-foregroundColor);
+  outline: none;
+
+  p {
+    margin: 0;
+  }
+
+  blockquote {
+    margin: var(--gse-ui-rte-quoteBlock-margin);
+    border-inline-start: 2px solid #a8b4e2; // Token Required : COMUI-3190
+
+    p {
+      margin-inline-start: var(--gse-ui-rte-quoteBlock-container-gap);
+      font-family: var(--gse-ui-rte-quoteBlock-md-regular-fontFamily);
+      font-size: var(--gse-ui-rte-quoteBlock-md-regular-fontSize);
+      font-weight: var(--gse-ui-rte-quoteBlock-md-regular-fontWeight);
+      line-height: var(--gse-ui-rte-quoteBlock-md-regular-lineHeight);
+      color: var(--gse-ui-rte-quoteBlock-foregroundColor);
+    }
+  }
+
+  pre {
+    font-family: var(--gse-ui-rte-codeBlock-sm-regular-fontFamily);
+    font-size: var(--gse-ui-rte-codeBlock-sm-regular-fontSize);
+    font-weight: var(--gse-ui-rte-codeBlock-sm-regular-fontWeight);
+    line-height: var(--gse-ui-rte-codeBlock-sm-regular-lineHeight);
+    color: var(--gse-ui-rte-codeBlock-foregroundColor);
+    white-space: pre-wrap;
+    background-color: var(--gse-ui-rte-codeBlock-backgroundColor);
+    border: var(--gse-ui-rte-codeBlock-border-width)
+      var(--gse-ui-rte-codeBlock-border-style)
+      var(--gse-ui-rte-codeBlock-border-color);
+    border-radius: 4px; // Token Required : COMUI-3190
+  }
+}

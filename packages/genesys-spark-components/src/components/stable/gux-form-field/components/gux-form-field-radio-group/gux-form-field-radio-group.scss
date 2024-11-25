@@ -18,11 +18,11 @@
 }
 
 ::slotted(gux-form-field-radio) {
-  padding-top: var(--gse-ui-formControl-group-gapItems);
+  padding-block-start: var(--gse-ui-formControl-group-gapItems);
 }
 
 ::slotted(gux-form-field-radio:first-of-type) {
-  padding-top: 0;
+  padding-block-start: 0;
 }
 
 :host([disabled]) {

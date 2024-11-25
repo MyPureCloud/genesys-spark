@@ -25,6 +25,10 @@
         "foreground_color": {
           "value": "{border.form_control.text_input.default}",
           "type": "color"
+        },
+        "height": {
+          "value": "{assets.sm.size}",
+          "type": "sizing"
         }
       },
       "text": {

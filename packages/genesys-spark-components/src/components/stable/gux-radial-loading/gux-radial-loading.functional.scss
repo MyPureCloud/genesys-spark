@@ -77,8 +77,8 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
   div[role='progressbar'] {
     .gux-svg-container {
       display: block;
-      width: var(--gse-ui-progressAndLoading-spinner-large);
-      height: var(--gse-ui-progressAndLoading-spinner-large);
+      inline-size: var(--gse-ui-progressAndLoading-spinner-large);
+      block-size: var(--gse-ui-progressAndLoading-spinner-large);
 
       .gux-dynamic-circle,
       .gux-dynamic-circle-mask {
@@ -119,8 +119,8 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
 
     &.gux-input {
       .gux-svg-container {
-        width: var(--gse-ui-progressAndLoading-spinner-small);
-        height: var(--gse-ui-progressAndLoading-spinner-small);
+        inline-size: var(--gse-ui-progressAndLoading-spinner-small);
+        block-size: var(--gse-ui-progressAndLoading-spinner-small);
 
         .gux-dynamic-circle {
           fill: none;

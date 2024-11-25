@@ -19,7 +19,7 @@
   background-color: var(
     --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor
   );
-  border-top: var(--gse-ui-dataTableItems-tablePagination-divider-width)
+  border-block-start: var(--gse-ui-dataTableItems-tablePagination-divider-width)
     var(--gse-ui-dataTableItems-tablePagination-divider-style)
     var(--gse-ui-dataTableItems-tablePagination-divider-color);
 
@@ -46,7 +46,7 @@
   }
 
   gux-icon {
-    width: var(--gse-ui-button-icon-size);
-    height: var(--gse-ui-button-icon-size);
+    inline-size: var(--gse-ui-button-icon-size);
+    block-size: var(--gse-ui-button-icon-size);
   }
 }

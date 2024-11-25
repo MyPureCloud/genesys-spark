@@ -14,22 +14,22 @@
 }
 
 .gux-action-button-container {
-  min-width: 128px;
+  min-inline-size: 128px;
 
   & > * {
     vertical-align: middle;
   }
 
   .gux-action-button {
-    width: calc(100% - 33px);
-    margin-right: 1px;
+    inline-size: calc(100% - 33px);
+    margin-inline-end: 1px;
 
     button {
-      width: 100%;
-      max-width: none;
+      inline-size: 100%;
+      max-inline-size: none;
       text-align: center;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
     }
   }
 
@@ -38,21 +38,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: var(--gse-ui-button-iconOnly-width);
+      inline-size: var(--gse-ui-button-iconOnly-width);
       padding: 0;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      border-start-start-radius: 0;
+      border-end-start-radius: 0;
 
       gux-icon {
-        width: var(--gse-ui-button-icon-size);
-        height: var(--gse-ui-button-icon-size);
+        inline-size: var(--gse-ui-button-icon-size);
+        block-size: var(--gse-ui-button-icon-size);
       }
     }
   }
 
   .gux-list-container {
-    max-width: 220px;
-    max-height: var(--gse-ui-menu-maxHeight);
+    max-inline-size: 220px;
+    max-block-size: var(--gse-ui-menu-maxHeight);
 
     @include mixins.gux-menu-container;
   }

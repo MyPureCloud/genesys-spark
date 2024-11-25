@@ -8,8 +8,8 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
-  margin-bottom: 16px; //TODO https://inindca.atlassian.net/browse/COMUI-2444
+  inline-size: 100%;
+  margin-block-end: 16px; //TODO https://inindca.atlassian.net/browse/COMUI-2444
   background-color: var(--gse-ui-advancedTabs-set-backgroundColor);
 
   .gux-scrollable-section {
@@ -18,14 +18,14 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
+    inline-size: 100%;
     overflow-x: auto;
     scrollbar-width: none;
-    border-bottom: 1px solid var(--gse-ui-advancedTabs-divider-dividerColor); //TODO https://inindca.atlassian.net/browse/COMUI-2444
+    border-block-end: 1px solid var(--gse-ui-advancedTabs-divider-dividerColor); //TODO https://inindca.atlassian.net/browse/COMUI-2444
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
-      height: 0;
+      block-size: 0;
     }
 
     .gux-tablist {

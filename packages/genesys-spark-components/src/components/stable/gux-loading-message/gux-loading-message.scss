@@ -27,7 +27,7 @@ $medium-breakpoint: 400px; // --gse-ui-progressAndLoading-loadingState-medium-wi
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: var(--gse-ui-progressAndLoading-loadingState-large-width);
+  max-inline-size: var(--gse-ui-progressAndLoading-loadingState-large-width);
   color: var(--gse-ui-progressAndLoading-textColor);
   text-align: center;
 }
@@ -36,13 +36,13 @@ $medium-breakpoint: 400px; // --gse-ui-progressAndLoading-loadingState-medium-wi
 @container (width > #{$medium-breakpoint}) {
   .gux-container {
     .gux-primary-message {
-      margin-top: var(--gse-ui-progressAndLoading-large-gap);
+      margin-block-start: var(--gse-ui-progressAndLoading-large-gap);
 
       @include loadingStateFont('large-header');
     }
 
     .gux-additional-guidance {
-      margin-top: var(--gse-ui-progressAndLoading-large-gapText);
+      margin-block-start: var(--gse-ui-progressAndLoading-large-gapText);
 
       @include loadingStateFont('large-subheader');
     }
@@ -53,13 +53,13 @@ $medium-breakpoint: 400px; // --gse-ui-progressAndLoading-loadingState-medium-wi
 @container (width > #{$small-breakpoint}) and (width <=#{$medium-breakpoint}) {
   .gux-container {
     .gux-primary-message {
-      margin-top: var(--gse-ui-progressAndLoading-medium-gap);
+      margin-block-start: var(--gse-ui-progressAndLoading-medium-gap);
 
       @include loadingStateFont('medium-header');
     }
 
     .gux-additional-guidance {
-      margin-top: var(--gse-ui-progressAndLoading-medium-gapText);
+      margin-block-start: var(--gse-ui-progressAndLoading-medium-gapText);
 
       @include loadingStateFont('medium-subheader');
     }
@@ -70,13 +70,13 @@ $medium-breakpoint: 400px; // --gse-ui-progressAndLoading-loadingState-medium-wi
 @container (width <=#{$small-breakpoint}) {
   .gux-container {
     .gux-primary-message {
-      margin-top: var(--gse-ui-progressAndLoading-small-gap);
+      margin-block-start: var(--gse-ui-progressAndLoading-small-gap);
 
       @include loadingStateFont('small-header');
     }
 
     .gux-additional-guidance {
-      margin-top: var(--gse-ui-progressAndLoading-small-gapText);
+      margin-block-start: var(--gse-ui-progressAndLoading-small-gapText);
 
       @include loadingStateFont('small-subheader');
     }

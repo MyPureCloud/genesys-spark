@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-avatar-focusable #render component type (1) with valid markup 1`] = `
-<gux-avatar-focusable-beta gs-avatar-size="large">
+<gux-avatar-focusable-beta>
   <template shadowrootmode="open">
     <slot></slot>
   </template>
@@ -12,7 +12,7 @@ exports[`gux-avatar-focusable #render component type (1) with valid markup 1`] =
 `;
 
 exports[`gux-avatar-focusable #render component type (2) with valid markup 1`] = `
-<gux-avatar-focusable-beta gs-avatar-size="large">
+<gux-avatar-focusable-beta>
   <template shadowrootmode="open">
     <slot></slot>
   </template>
@@ -23,7 +23,7 @@ exports[`gux-avatar-focusable #render component type (2) with valid markup 1`] =
 `;
 
 exports[`gux-avatar-focusable #render component type (3) with valid markup 1`] = `
-<gux-avatar-focusable-beta gs-avatar-size="large">
+<gux-avatar-focusable-beta>
   <template shadowrootmode="open">
     <slot></slot>
   </template>

@@ -3,18 +3,22 @@
 @use '~genesys-spark/dist/scss/checkbox-icons.scss';
 @use '~genesys-spark/dist/scss/radio-icons.scss';
 
+:host {
+  display: flex;
+}
+
 ::slotted(*) {
   cursor: pointer;
 }
 
 ::slotted(gux-icon) {
-  width: var(--gse-ui-icon-medium-size);
-  height: var(--gse-ui-icon-medium-size);
+  inline-size: var(--gse-ui-icon-medium-size);
+  block-size: var(--gse-ui-icon-medium-size);
   color: var(--gse-ui-selectorCard-ilustrativeIcon-foregroundColor);
 }
 
 ::slotted(label) {
-  width: 100%;
+  inline-size: 100%;
   font-family: var(--gse-ui-selectorCard-simple-label-fontFamily);
   font-size: var(--gse-ui-selectorCard-simple-label-fontSize);
   font-weight: var(--gse-ui-selectorCard-simple-label-fontWeight);
@@ -25,9 +29,9 @@
 ::slotted(input[type='radio']),
 ::slotted(input[type='checkbox']) {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  inset-block-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
   margin: 0;
   color: var(--gse-ui-radioButton-icon-default-unselectedForegroundColor);
   -webkit-appearance: none;
@@ -44,8 +48,8 @@
     inset-inline-end: var(--gse-ui-selectorCard-descriptive-text-gap);
     display: inline-grid;
     grid-area: 1/1;
-    width: var(--gse-ui-radioButton-icon-width);
-    height: var(--gse-ui-radioButton-icon-height);
+    inline-size: var(--gse-ui-radioButton-icon-width);
+    block-size: var(--gse-ui-radioButton-icon-height);
     color: var(--gse-ui-radioButton-icon-default-unselectedForegroundColor);
     text-align: center;
     vertical-align: middle;
@@ -101,7 +105,9 @@
 }
 
 .gux-selector-card {
-  width: fit-content;
+  display: flex;
+  flex: 1 0 auto;
+  inline-size: fit-content;
 
   .gux-content {
     position: relative;
@@ -110,12 +116,11 @@
     flex-direction: column;
     gap: var(--gse-ui-selectorCard-descriptive-text-gap);
     align-items: center;
-    width: var(--gse-ui-selectorCard-simple-minWidth);
-    min-width: var(--gse-ui-selectorCard-simple-minWidth);
-    max-width: var(--gse-ui-selectorCard-simple-maxWidth);
-    height: fit-content;
-    min-height: var(--gse-ui-selectorCard-simple-minHeight);
-    max-height: var(--gse-ui-selectorCard-simple-maxHeight);
+    inline-size: var(--gse-ui-selectorCard-simple-minWidth);
+    min-inline-size: var(--gse-ui-selectorCard-simple-minWidth);
+    max-inline-size: var(--gse-ui-selectorCard-simple-maxWidth);
+    min-block-size: var(--gse-ui-selectorCard-simple-minHeight);
+    max-block-size: var(--gse-ui-selectorCard-simple-maxHeight);
     padding: var(--gse-ui-selectorCard-simple-padding);
     text-align: center;
     background-color: var(--gse-ui-selectorCard-default-backgroundColor);
@@ -140,11 +145,11 @@
   &.gux-descriptive {
     .gux-content {
       align-items: flex-start;
-      width: var(--gse-ui-selectorCard-descriptive-minWidth);
-      min-width: var(--gse-ui-selectorCard-descriptive-minWidth);
-      max-width: var(--gse-ui-selectorCard-descriptive-maxWidth);
-      min-height: var(--gse-ui-selectorCard-descriptive-minHeight);
-      max-height: var(--gse-ui-selectorCard-descriptive-maxHeight);
+      inline-size: var(--gse-ui-selectorCard-descriptive-minWidth);
+      min-inline-size: var(--gse-ui-selectorCard-descriptive-minWidth);
+      max-inline-size: var(--gse-ui-selectorCard-descriptive-maxWidth);
+      min-block-size: var(--gse-ui-selectorCard-descriptive-minHeight);
+      max-block-size: var(--gse-ui-selectorCard-descriptive-maxHeight);
       padding: var(--gse-ui-selectorCard-descriptive-padding);
       text-align: start;
       white-space: normal;
@@ -158,25 +163,27 @@
       }
 
       ::slotted(gux-badge) {
-        margin-top: var(--gse-ui-selectorCard-descriptive-badge-marginTop);
+        margin-block-start: var(
+          --gse-ui-selectorCard-descriptive-badge-marginTop
+        );
       }
 
       ::slotted(input[type='radio']),
       ::slotted(input[type='checkbox']) {
-        left: 0;
+        inset-inline-start: 0;
         border-radius: var(--gse-ui-selectorCard-descriptive-borderRadius);
 
         &::before {
           inset-block-start: var(--gse-ui-selectorCard-descriptive-gap);
           inset-inline-end: var(--gse-ui-selectorCard-descriptive-padding);
-          width: var(--gse-ui-icon-small-size);
-          height: var(--gse-ui-icon-small-size);
+          inline-size: var(--gse-ui-icon-small-size);
+          block-size: var(--gse-ui-icon-small-size);
         }
       }
 
       ::slotted(label) {
         display: block;
-        margin-bottom: var(--gse-ui-selectorCard-descriptive-text-gap);
+        margin-block-end: var(--gse-ui-selectorCard-descriptive-text-gap);
         font-family: var(--gse-ui-selectorCard-descriptive-label-fontFamily);
         font-size: var(--gse-ui-selectorCard-descriptive-label-fontSize);
         font-weight: var(--gse-ui-selectorCard-descriptive-label-fontWeight);
@@ -184,9 +191,9 @@
       }
 
       ::slotted(gux-icon) {
-        width: var(--gse-ui-icon-large-size);
-        height: var(--gse-ui-icon-large-size);
-        margin-bottom: var(--gse-ui-selectorCard-descriptive-gap);
+        inline-size: var(--gse-ui-icon-large-size);
+        block-size: var(--gse-ui-icon-large-size);
+        margin-block-end: var(--gse-ui-selectorCard-descriptive-gap);
       }
     }
   }

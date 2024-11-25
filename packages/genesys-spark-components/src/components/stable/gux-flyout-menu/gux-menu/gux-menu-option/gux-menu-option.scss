@@ -6,8 +6,8 @@
   .gux-menu-option-button {
     all: unset;
     box-sizing: border-box;
-    width: var(--gse-ui-flyoutMenu-width);
-    height: var(--gse-ui-menu-option-height);
+    inline-size: var(--gse-ui-flyoutMenu-width);
+    block-size: var(--gse-ui-menu-option-height);
     padding: var(--gse-ui-menu-option-padding);
     line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
     color: var(--gse-ui-menu-option-label-foregroundColor);

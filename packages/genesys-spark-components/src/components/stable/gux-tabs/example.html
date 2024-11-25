@@ -78,7 +78,12 @@
 <h2>Example 3 -- tabs left alignment in a resizable container</h2>
 
 <div
-  style="width: 300px; overflow: auto; resize: both; border: 1px dotted black"
+  style="
+    inline-size: 300px;
+    overflow: auto;
+    resize: both;
+    border: 1px dotted black;
+  "
 >
   <gux-tabs class="example">
     <gux-tab-list slot="tab-list">
@@ -99,7 +104,12 @@
 <h2>Example 4 -- tabs vertical alignment in a resizable container</h2>
 
 <div
-  style="height: 300px; overflow: auto; resize: both; border: 1px dotted black"
+  style="
+    block-size: 300px;
+    overflow: auto;
+    resize: both;
+    border: 1px dotted black;
+  "
 >
   <gux-tabs orientation="vertical" class="example">
     <gux-tab-list slot="tab-list">
@@ -231,7 +241,7 @@
   fill the available space
 </h2>
 
-<gux-tabs class="example" style="display: block; height: 400px">
+<gux-tabs class="example" style="display: block; block-size: 400px">
   <gux-tab-list slot="tab-list">
     <gux-tab tab-id="10-1">Tab Header 1</gux-tab>
     <gux-tab tab-id="10-2">Tab Header 2</gux-tab>

@@ -1,5 +1,4 @@
 export type GuxFormFooterPlacement =
   | 'page-desktop'
   | 'page-mobile'
-  | 'side-sheet-desktop'
-  | 'modal-desktop';
+  | 'side-sheet-desktop';

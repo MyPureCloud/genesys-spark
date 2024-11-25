@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-chart-components-react",
-  "version": "4.93.0",
+  "version": "4.100.0",
   "description": "",
   "license": "MIT",
   "main": "dist/index.js",
@@ -29,9 +29,9 @@
   "devDependencies": {
     "@types/react": "17.0.76",
     "@types/react-dom": "^17.0.22",
-    "eslint": "^9.12.0",
+    "eslint": "^9.15.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
-    "globals": "^15.11.0",
+    "globals": "^15.12.0",
     "lint-staged": "^15.2.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",

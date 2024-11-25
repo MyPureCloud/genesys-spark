@@ -2,8 +2,8 @@
   position: fixed;
   z-index: var(--gse-semantic-zIndex-tooltip);
   display: none;
-  width: max-content;
-  max-width: 250px;
+  inline-size: max-content;
+  max-inline-size: 250px;
   pointer-events: none;
   border-radius: var(--gse-ui-tooltip-borderRadius);
   box-shadow: var(--gse-ui-tooltip-boxShadow-offsetX)
@@ -40,13 +40,13 @@
 
   ::slotted(gux-icon) {
     align-self: center;
-    width: var(--gse-ui-icon-small-size);
-    height: var(--gse-ui-icon-small-size);
+    inline-size: var(--gse-ui-icon-small-size);
+    block-size: var(--gse-ui-icon-small-size);
     color: var(--gse-ui-tooltip-light-foregroundColor);
   }
 
   ::slotted(*) {
-    width: 100%;
+    inline-size: 100%;
     overflow-wrap: break-word;
     white-space: normal;
   }
@@ -54,12 +54,14 @@
   &.gux-dark {
     color: var(--gse-ui-tooltip-dark-foregroundColor);
     background-color: var(--gse-ui-tooltip-dark-backgroundColor);
-    border-color: var(--gse-ui-tooltip-dark-border-color);
+    border: var(--gse-ui-tooltip-dark-border-width)
+      var(--gse-ui-tooltip-dark-border-style)
+      var(--gse-ui-tooltip-dark-border-color);
 
     ::slotted(gux-icon) {
       align-self: center;
-      width: var(--gse-ui-icon-small-size);
-      height: var(--gse-ui-icon-small-size);
+      inline-size: var(--gse-ui-icon-small-size);
+      block-size: var(--gse-ui-icon-small-size);
       color: var(--gse-ui-tooltip-dark-iconColor);
     }
   }

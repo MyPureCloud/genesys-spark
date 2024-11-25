@@ -5,7 +5,11 @@
   gux-form-field-dropdown element
 </p>
 
-<form onchange="notify(event)" oninput="notify(event)" style="max-width: 400px">
+<form
+  onchange="notify(event)"
+  oninput="notify(event)"
+  style="max-inline-size: 400px"
+>
   <h2>Dropdown (single select)</h2>
   <p>slot a gux-dropdown into a gux-form-field-dropdown element</p>
   <fieldset>
@@ -410,7 +414,7 @@
 
 <style>
   gux-form-field-dropdown {
-    width: 350px;
+    inline-size: 350px;
     margin: 10px;
   }
 </style>

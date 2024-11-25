@@ -25,8 +25,8 @@ iframe {
 
 nav {
   display: flex;
-  flex-direction: column;
   flex-shrink: 0;
+  flex-direction: column;
   min-width: 180px;
   overflow-y: auto;
   border-right: 1px solid #dae1e8;
@@ -53,6 +53,19 @@ nav {
     padding-bottom: 20px;
     background-color: #fdfdfd;
     box-shadow: 0 0 10px rgb(32 41 55 / 20%);
+
+    #mode-switcher-section {
+      display: none;
+
+      &.enabled {
+        display: block;
+      }
+
+      #mode-switcher {
+        padding: 10px 15px;
+        margin: 0;
+      }
+    }
 
     h2 {
       padding: 10px 15px;

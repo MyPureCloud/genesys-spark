@@ -92,7 +92,7 @@ export class GuxAvatarFocusable {
 
   render(): JSX.Element {
     return (
-      <Host gs-avatar-size={this.avatarElement?.size ?? 'large'}>
+      <Host>
         <slot></slot>
       </Host>
     ) as JSX.Element;

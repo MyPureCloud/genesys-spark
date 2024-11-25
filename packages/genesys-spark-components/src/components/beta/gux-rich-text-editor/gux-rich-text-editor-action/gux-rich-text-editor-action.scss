@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+gux-button-slot {
+  inline-size: var(--gse-ui-button-iconOnly-width);
+  block-size: var(--gse-ui-button-default-height);
+
+  button.gux-is-active {
+    color: var(--gse-ui-button-ghost-active-foregroundColor);
+    background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+  }
+
+  gux-icon {
+    inline-size: var(--gse-ui-button-icon-size);
+    block-size: var(--gse-ui-button-icon-size);
+  }
+}

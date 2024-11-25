@@ -27,8 +27,8 @@
   .gux-display {
     display: inline-flex;
     align-items: center;
-    min-width: 100px;
-    padding-right: var(--gse-ui-formControl-input-gap);
+    min-inline-size: 100px;
+    padding-inline-end: var(--gse-ui-formControl-input-gap);
     font-family: var(--gse-ui-formControl-label-text-fontFamily);
     font-size: var(--gse-ui-formControl-label-text-fontSize);
     font-weight: var(--gse-ui-formControl-label-text-fontWeight);
@@ -39,7 +39,7 @@
       outline: none;
 
       &:not(:first-child) {
-        margin-left: 4px;
+        margin-inline-start: 4px;
       }
 
       &:focus-visible {
@@ -79,8 +79,8 @@
     }
 
     gux-icon {
-      width: var(--gse-ui-icon-small-size);
-      height: var(--gse-ui-icon-small-size);
+      inline-size: var(--gse-ui-icon-small-size);
+      block-size: var(--gse-ui-icon-small-size);
     }
 
     &.gux-expanded {

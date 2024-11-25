@@ -17,20 +17,20 @@ $gse-ui-blankState-large-minWidth: 570px; // --gse-ui-blankState-large-minWidth
   color: var(--gse-ui-blankState-foregroundColor);
 
   .gux-image {
-    padding-bottom: var(--gse-ui-blankState-gapMain);
+    padding-block-end: var(--gse-ui-blankState-gapMain);
   }
 
   .gux-message {
-    padding-bottom: var(--gse-ui-blankState-gapMessage);
+    padding-block-end: var(--gse-ui-blankState-gapMessage);
   }
 
   .gux-guidance {
-    padding-bottom: var(--gse-ui-blankState-gapContent);
+    padding-block-end: var(--gse-ui-blankState-gapContent);
   }
 
   ::slotted(gux-icon) {
-    width: var(--gse-ui-blankState-icon-size-lg);
-    height: var(--gse-ui-blankState-icon-size-lg);
+    inline-size: var(--gse-ui-blankState-icon-size-lg);
+    block-size: var(--gse-ui-blankState-icon-size-lg);
     color: var(--gse-ui-blankState-iconColor);
   }
 
@@ -73,8 +73,8 @@ $gse-ui-blankState-large-minWidth: 570px; // --gse-ui-blankState-large-minWidth
 @container (width < #{$gse-ui-blankState-large-minWidth}) {
   .gux-container {
     ::slotted(gux-icon) {
-      width: var(--gse-ui-blankState-icon-size-sm);
-      height: var(--gse-ui-blankState-icon-size-sm);
+      inline-size: var(--gse-ui-blankState-icon-size-sm);
+      block-size: var(--gse-ui-blankState-icon-size-sm);
     }
 
     slot[name='primary-message'] {

@@ -1,0 +1,66 @@
+/* This is necessary to override the position of the popover on the page. By default, an HTML popover will
+   render in the middle of the screen, which we do not want */
+:popover-open {
+  position: absolute;
+  inset: unset;
+}
+
+.gux-popover-wrapper {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  min-inline-size: 280px; // TODO: add new token once UX has added it: GDS-2672
+  padding: var(--gse-ui-popover-gap);
+  overflow: hidden;
+  background-color: var(--gse-ui-popover-backgroundColor);
+  border: none;
+  border-radius: var(--gse-ui-popover-borderRadius);
+  box-shadow: var(--gse-ui-popover-boxShadow-offsetX)
+    var(--gse-ui-popover-boxShadow-offsetY) var(--gse-ui-popover-boxShadow-blur)
+    var(--gse-ui-popover-boxShadow-spread) var(--gse-ui-tooltip-boxShadow-color);
+
+  .gux-arrow {
+    position: absolute;
+    inline-size: var(--gse-ui-popover-anchor-width);
+    block-size: var(--gse-ui-popover-anchor-height);
+
+    /* 4px padding leaves some space for the shadow to bleed into */
+    padding-block-end: 4px;
+    overflow: hidden;
+  }
+
+  /* // TODO: COMUI-3210 - Arrow currently does not show  */
+  .gux-arrow-caret {
+    inline-size: 0;
+    block-size: 0;
+    filter: drop-shadow(
+      var(--gse-ui-popover-boxShadow-offsetX)
+        var(--gse-ui-popover-boxShadow-offsetY)
+        calc(var(--gse-ui-popover-boxShadow-blur) / 2)
+        var(--gse-ui-tooltip-boxShadow-color)
+    );
+    border-block-start: calc(var(--gse-ui-popover-anchor-width) / 2) solid
+      var(--gse-ui-popover-backgroundColor);
+    border-inline-start: calc(var(--gse-ui-popover-anchor-width) / 2) solid
+      transparent;
+    border-inline-end: calc(var(--gse-ui-popover-anchor-width) / 2) solid
+      transparent;
+  }
+
+  .gux-popover-header {
+    display: flex;
+    flex-direction: row;
+    place-content: center space-between;
+    align-items: center;
+    padding-block-end: var(--gse-ui-popover-gap);
+    font-family: var(--gse-ui-popover-title-text-fontFamily);
+    font-size: var(--gse-ui-popover-title-text-fontSize);
+    font-weight: var(--gse-ui-popover-title-text-fontWeight);
+    line-height: var(--gse-ui-popover-title-text-lineHeight);
+    color: var(--gse-ui-popover-headerColor);
+  }
+
+  gux-dismiss-button {
+    float: inline-end;
+  }
+}
