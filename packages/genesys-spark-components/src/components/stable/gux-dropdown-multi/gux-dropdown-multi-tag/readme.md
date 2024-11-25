@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property         | Attribute         | Description       | Type      | Default |
-| ---------------- | ----------------- | ----------------- | --------- | ------- |
-| `disabled`       | `disabled`        | Tag is removable. | `boolean` | `false` |
-| `numberSelected` | `number-selected` |                   | `number`  | `0`     |
+| Property         | Attribute         | Description      | Type      | Default |
+| ---------------- | ----------------- | ---------------- | --------- | ------- |
+| `disabled`       | `disabled`        | Tag is disabled. | `boolean` | `false` |
+| `numberSelected` | `number-selected` |                  | `number`  | `0`     |
 
 
 ## Events
