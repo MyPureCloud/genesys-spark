@@ -2,24 +2,24 @@
 
 :host {
   display: block;
-  max-width: fit-content;
+  max-inline-size: fit-content;
   white-space: normal;
 }
 
 gux-icon {
-  width: var(--gse-ui-icon-small-size);
-  height: var(--gse-ui-icon-small-size);
+  inline-size: var(--gse-ui-icon-small-size);
+  block-size: var(--gse-ui-icon-small-size);
   color: var(--gse-ui-button-ghost-default-foregroundColor);
 }
 
 button {
-  height: var(--gse-ui-button-default-height);
+  block-size: var(--gse-ui-button-default-height);
   padding: var(--gse-ui-button-default-paddingIconOnly);
   border-radius: var(--gse-ui-button-borderRadius);
 }
 
 button.gux-compact {
-  height: var(--gse-ui-button-compact-height);
+  block-size: var(--gse-ui-button-compact-height);
   padding: var(--gse-ui-button-compact-paddingIconOnly);
 }
 
@@ -44,8 +44,8 @@ button[disabled] {
 }
 
 .gux-list-container {
-  width: var(--gse-ui-contextMenu-menu-width);
-  max-height: var(--gse-ui-contextMenu-menu-maxHeight);
+  inline-size: var(--gse-ui-contextMenu-menu-width);
+  max-block-size: var(--gse-ui-contextMenu-menu-maxHeight);
 
   @include mixins.gux-menu-container;
 }

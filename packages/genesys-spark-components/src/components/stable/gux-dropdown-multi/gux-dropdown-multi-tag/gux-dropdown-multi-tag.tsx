@@ -31,7 +31,7 @@ export class GuxDropdownMultiTag {
   internalclearselected: EventEmitter<string>;
 
   /**
-   * Tag is removable.
+   * Tag is disabled.
    */
   @Prop()
   disabled: boolean = false;
@@ -47,11 +47,13 @@ export class GuxDropdownMultiTag {
     switch (event.key) {
       case 'Backspace':
       case 'Delete':
-        this.removeTag();
+        this.removeTag(event);
     }
   }
 
-  private removeTag(): void {
+  private removeTag(event: Event): void {
+    event.stopPropagation();
+
     if (this.disabled) {
       return;
     }

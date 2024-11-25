@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type                                                                                                                                                                   | Default     |
-| ---------- | ----------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `action`   | `action`    |             | `"blockQuote" \| "bold" \| "bulletedList" \| "clearFormatting" \| "codeblock" \| "delete" \| "italic" \| "orderedList" \| "redo" \| "strike" \| "underline" \| "undo"` | `undefined` |
-| `disabled` | `disabled`  |             | `boolean`                                                                                                                                                              | `false`     |
-| `isActive` | `is-active` |             | `boolean`                                                                                                                                                              | `false`     |
+| Property   | Attribute   | Description | Type                                                                                                                                                                 | Default     |
+| ---------- | ----------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `action`   | `action`    |             | `"blockQuote" \| "bold" \| "bulletList" \| "clearFormatting" \| "codeblock" \| "delete" \| "italic" \| "orderedList" \| "redo" \| "strike" \| "underline" \| "undo"` | `undefined` |
+| `disabled` | `disabled`  |             | `boolean`                                                                                                                                                            | `false`     |
+| `isActive` | `is-active` |             | `boolean`                                                                                                                                                            | `false`     |
 
 
 ## Dependencies

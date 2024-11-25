@@ -9,18 +9,18 @@
 
 gux-button-slot {
   position: absolute;
-  top: var(--gse-ui-modal-dismissButton-paddingTop);
-  right: var(--gse-ui-modal-dismissButton-paddingRight);
-  width: var(--gse-ui-button-dismiss-medium-width);
-  height: var(--gse-ui-button-dismiss-medium-height);
+  inset-block-start: var(--gse-ui-modal-dismissButton-paddingTop);
+  inset-inline-end: var(--gse-ui-modal-dismissButton-paddingRight);
+  inline-size: var(--gse-ui-button-dismiss-medium-width);
+  block-size: var(--gse-ui-button-dismiss-medium-height);
 
   &.gux-dismiss-small {
-    width: var(--gse-ui-button-dismiss-small-width);
-    height: var(--gse-ui-button-dismiss-small-height);
+    inline-size: var(--gse-ui-button-dismiss-small-width);
+    block-size: var(--gse-ui-button-dismiss-small-height);
 
     button {
-      width: var(--gse-ui-button-dismiss-small-width);
-      height: var(
+      inline-size: var(--gse-ui-button-dismiss-small-width);
+      block-size: var(
         --gse-ui-button-dismiss-small-height
       ); // button doesn't stay the same height for the small one without this
 
@@ -43,8 +43,8 @@ gux-button-slot {
       flex: 0 0 auto;
       align-self: auto;
       order: 0;
-      width: 16px;
-      height: 16px;
+      inline-size: 16px;
+      block-size: 16px;
       color: var(--gse-ui-dismissButton-foregroundColor);
     }
   }

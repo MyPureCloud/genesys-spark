@@ -44,23 +44,23 @@ gux-tab-advanced {
     display: flex;
     align-items: center;
     border-color: transparent;
-    border-top-width: var(--gse-ui-advancedTabs-item-indicator-height);
-    border-bottom-style: solid;
-    border-bottom-width: var(--gse-ui-advancedTabs-item-indicator-height);
+    border-block-start-width: var(--gse-ui-advancedTabs-item-indicator-height);
+    border-block-end-style: solid;
+    border-block-end-width: var(--gse-ui-advancedTabs-item-indicator-height);
 
     .gux-buttons {
       display: flex;
       flex: 1 1 0;
       gap: var(--gse-ui-advancedTabs-item-gap);
       align-items: center;
-      width: var(--gse-ui-advancedTabs-item-width);
-      min-width: 0;
+      inline-size: var(--gse-ui-advancedTabs-item-width);
+      min-inline-size: 0;
 
       .gux-tab-button {
         all: unset;
         flex: 1 1 0;
-        width: 100px;
-        min-width: 0;
+        inline-size: 100px;
+        min-inline-size: 0;
         padding: var(--gse-ui-advancedTabs-item-padding);
 
         &:focus-visible {
@@ -86,8 +86,8 @@ gux-tab-advanced {
     .gux-tab-options {
       .gux-tab-options-trigger {
         gux-icon {
-          width: var(--gse-ui-icon-small-size);
-          height: var(--gse-ui-icon-small-size);
+          inline-size: var(--gse-ui-icon-small-size);
+          block-size: var(--gse-ui-icon-small-size);
         }
       }
 
@@ -97,26 +97,26 @@ gux-tab-advanced {
     }
 
     .gux-divider {
-      width: var(--gse-ui-advancedTabs-item-divider-right-width);
-      height: var(--gse-ui-advancedTabs-item-divider-right-height);
+      inline-size: var(--gse-ui-advancedTabs-item-divider-right-width);
+      block-size: var(--gse-ui-advancedTabs-item-divider-right-height);
       background-color: var(--gse-ui-advancedTabs-divider-dividerColor);
     }
 
     &:hover:not(.gux-disabled),
     &:focus-within {
-      border-bottom-color: var(
+      border-block-end-color: var(
         --gse-ui-advancedTabs-item-indicator-activeColor
       );
     }
 
     &.gux-selected {
       background-color: var(--gse-ui-advancedTabs-item-backgroundColor);
-      border-bottom-color: var(
+      border-block-end-color: var(
         --gse-ui-advancedTabs-item-indicator-activeColor
       );
 
       &.gux-disabled {
-        border-bottom-color: color-mix(
+        border-block-end-color: color-mix(
           in srgb,
           var(--gse-ui-advancedTabs-item-indicator-activeColor) 50%,
           white

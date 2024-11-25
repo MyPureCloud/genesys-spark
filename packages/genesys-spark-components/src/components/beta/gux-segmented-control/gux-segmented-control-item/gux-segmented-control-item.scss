@@ -7,7 +7,6 @@ button {
 
 .gux-container {
   block-size: var(--gse-ui-segmentedControl-height);
-  cursor: pointer;
   border-color: var(--gse-ui-segmentedControl-divider-color);
   border-style: var(--gse-ui-segmentedControl-divider-style);
   border-width: var(--gse-ui-segmentedControl-divider-width);
@@ -30,6 +29,16 @@ button {
     border-radius: var(--gse-ui-segmentedControl-borderRadius);
   }
 
+  &.gux-parent-disabled {
+    pointer-events: none;
+    user-select: none;
+    border-color: color-mix(
+      in srgb,
+      var(--gse-ui-segmentedControl-divider-color) 50%,
+      rgb(0 0 0 / 0%)
+    ); // Token Issue: https://inindca.atlassian.net/browse/COMUI-3205
+  }
+
   .gux-segmented-control-item {
     display: flex;
     flex-direction: row;
@@ -41,6 +50,7 @@ button {
     padding: var(--gse-ui-segmentedControl-button-padding);
     line-height: 0;
     color: var(--gse-ui-segmentedControl-button-default-foregroundColor);
+    cursor: pointer;
     background-color: var(
       --gse-ui-segmentedControl-button-default-backgroundColor
     );
@@ -65,6 +75,7 @@ button {
     &[disabled] {
       color: var(--gse-ui-segmentedControl-button-disabled-foregroundColor);
       pointer-events: none;
+      cursor: default;
       background-color: var(
         --gse-ui-segmentedControl-button-disabled-backgroundColor
       );

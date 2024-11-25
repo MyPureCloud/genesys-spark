@@ -6,13 +6,13 @@
   flex-wrap: nowrap;
   place-content: flex-start flex-start;
   align-items: center;
-  border-top: var(--gse-ui-dataTableItems-header-selectedBar-height) solid
-    transparent;
-  border-bottom: var(--gse-ui-dataTableItems-header-selectedBar-height) solid
+  border-block-start: var(--gse-ui-dataTableItems-header-selectedBar-height)
+    solid transparent;
+  border-block-end: var(--gse-ui-dataTableItems-header-selectedBar-height) solid
     transparent;
 
   &:focus-within {
-    border-bottom-color: var(
+    border-block-end-color: var(
       --gse-ui-dataTableItems-header-selectedIndicatorColor
     );
   }
@@ -25,16 +25,19 @@
     cursor: pointer;
 
     .gux-sort-icon {
-      float: right;
-      width: var(--gse-ui-icon-small-size);
-      height: var(--gse-ui-icon-small-size);
-      margin: 0 var(--gse-ui-dataTableItems-header-gap);
+      float: inline-end;
+      inline-size: var(--gse-ui-icon-small-size);
+      block-size: var(--gse-ui-icon-small-size);
+      margin-block: 0;
+      margin-inline: var(--gse-ui-dataTableItems-header-gap);
       color: var(--gse-ui-dataTableItems-header-sort-foregroundColor);
 
       &.gux-left {
-        float: left;
+        float: inline-start;
         // left side doesn't have the resize spacer, so compensating for that
-        margin-left: calc(2px + var(--gse-ui-dataTableItems-header-gap));
+        margin-inline-start: calc(
+          2px + var(--gse-ui-dataTableItems-header-gap)
+        );
       }
     }
   }
@@ -43,6 +46,6 @@
     flex: 0 1 auto;
     align-self: stretch;
     order: 0;
-    width: 2px;
+    inline-size: 2px;
   }
 }

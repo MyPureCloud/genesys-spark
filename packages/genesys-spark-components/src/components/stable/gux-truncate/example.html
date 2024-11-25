@@ -2,19 +2,19 @@
 <span>A tooltip with the full text shows on hover</span>
 <h2>Text node slot</h2>
 <div class="example">
-  <gux-truncate style="width: 40px"> Some text to truncate </gux-truncate>
+  <gux-truncate style="inline-size: 40px"> Some text to truncate </gux-truncate>
 </div>
 
 <h2>Span slot</h2>
 <div class="example">
-  <gux-truncate style="width: 40px">
+  <gux-truncate style="inline-size: 40px">
     <span>Some text to truncate in a span</span>
   </gux-truncate>
 </div>
 
 <h2>Div slot</h2>
 <div class="example">
-  <gux-truncate style="width: 40px">
+  <gux-truncate style="inline-size: 40px">
     <div>Div <span>with a span</span> inside</div>
   </gux-truncate>
 </div>
@@ -22,7 +22,7 @@
 <h2>Multi line truncation</h2>
 <div
   class="example"
-  style="width: 100px; padding: 1px; border: 1px solid black"
+  style="inline-size: 100px; padding: 1px; border: 1px solid black"
 >
   <gux-truncate max-lines="3">
     This is a long text that should be truncated after three lines of wrapped
@@ -32,7 +32,7 @@
 
 <h2>Resizable examples</h2>
 
-<div class="example" style="width: 100px">
+<div class="example" style="inline-size: 100px">
   <gux-truncate
     style="overflow: hidden; resize: horizontal; border: 1px dotted"
   >
@@ -40,7 +40,7 @@
   </gux-truncate>
 </div>
 
-<div class="example" style="width: 100px">
+<div class="example" style="inline-size: 100px">
   <gux-truncate
     max-lines="3"
     style="overflow: hidden; resize: both; border: 1px dotted"
@@ -52,7 +52,7 @@
 
 <h2>Within a Table</h2>
 <gux-table>
-  <table style="width: 100%; table-layout: fixed" slot="data">
+  <table style="inline-size: 100%; table-layout: fixed" slot="data">
     <thead>
       <tr>
         <th data-column-name="first-name">First name</th>
@@ -97,7 +97,7 @@
 
 <h2>Tooltip in sync with slotted content</h2>
 <div class="example">
-  <gux-truncate style="width: 100px">
+  <gux-truncate style="inline-size: 100px">
     <span id="changeContentExample">Change Me</span>
   </gux-truncate>
 
@@ -106,7 +106,7 @@
 
 <h2>Programmatically show tooltip</h2>
 <div class="example">
-  <gux-truncate id="onFocusExampleTarget" style="width: 70px">
+  <gux-truncate id="onFocusExampleTarget" style="inline-size: 70px">
     Programmatically show and hide tooltip
   </gux-truncate>
   <gux-button id="showTooltipButton">Show Tooltip</gux-button>
@@ -141,6 +141,6 @@
   )()"
 >
   .example {
-    margin-top: 10px;
+    margin-block-start: 10px;
   }
 </style>

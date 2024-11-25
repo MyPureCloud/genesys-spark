@@ -1,13 +1,13 @@
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 .gux-container {
-  width: 320px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
-  min-width: 320px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+  inline-size: 320px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+  min-inline-size: 320px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
   padding: var(--gse-ui-dataTableItems-editColumn-editColumnContent-padding);
 
   .gux-search {
     gux-content-search {
-      width: 100%;
+      inline-size: 100%;
 
       // Hide native input search clear button
       input[type='search']::-webkit-search-decoration,
@@ -22,7 +22,7 @@
 
   .gux-select {
     padding: var(--gse-ui-dataTableItems-editColumn-editColumnContent-padding);
-    margin-left: (
+    margin-inline-start: (
       16px + 8px
     ); //TODO https://inindca.atlassian.net/browse/COMUI-2314
   }

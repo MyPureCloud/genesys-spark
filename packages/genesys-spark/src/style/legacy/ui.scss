@@ -1,5 +1,5 @@
-@use '../../../../genesys-spark-tokens/dist/scss/gse-legacy-light-ui';
+@use '../../../../genesys-spark-tokens/dist/scss/gse-ui-legacy-light';
 
 :root {
-  @include gse-legacy-light-ui.tokens;
+  @include gse-ui-legacy-light.tokens;
 }

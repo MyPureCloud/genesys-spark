@@ -69,10 +69,12 @@ Type: `Promise<void>`
 
  - [gux-avatar-beta](../gux-avatar)
  - [gux-avatar-change-photo-beta](../gux-avatar/gux-avatar-change-photo)
+ - [gux-avatar-group-item-beta](../gux-avatar-group/gux-avatar-group-item)
  - [gux-button](../../stable/gux-button)
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
  - [gux-label-info-beta](../gux-label-info)
  - [gux-rich-text-editor-action](../gux-rich-text-editor/gux-rich-text-editor-action)
+ - [gux-table-toolbar-menu-button](../../stable/gux-table-toolbar/gux-table-toolbar-menu-button)
 
 ### Depends on
 
@@ -84,10 +86,12 @@ graph TD;
   gux-tooltip-beta --> gux-tooltip-base-beta
   gux-avatar-beta --> gux-tooltip-beta
   gux-avatar-change-photo-beta --> gux-tooltip-beta
+  gux-avatar-group-item-beta --> gux-tooltip-beta
   gux-button --> gux-tooltip-beta
   gux-icon-tooltip-beta --> gux-tooltip-beta
   gux-label-info-beta --> gux-tooltip-beta
   gux-rich-text-editor-action --> gux-tooltip-beta
+  gux-table-toolbar-menu-button --> gux-tooltip-beta
   style gux-tooltip-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

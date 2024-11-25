@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--gse-ui-rte-innerContainer-gap);
-  inline-size: fit-content;
+  inline-size: 100%;
   max-inline-size: 100%;
   padding: var(--gse-ui-rte-padding);
   overflow: auto;
@@ -21,6 +21,10 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+
+    .gux-global-action-container {
+      margin-inline-start: auto;
+    }
   }
 
   &.gux-disabled {
@@ -33,7 +37,7 @@
     opacity: 0.5;
   }
 
-  &:active {
+  &:active:enabled {
     border: var(--gse-ui-rte-mainContainer-active-border-width)
       var(--gse-ui-rte-mainContainer-active-border-color)
       var(--gse-ui-rte-mainContainer-active-border-style);

@@ -4,19 +4,19 @@ gux-table {
   }
 
   table {
-    width: 100%;
+    inline-size: 100%;
     white-space: nowrap;
     border-spacing: 0;
 
     td {
-      height: var(--gse-ui-dataTableItems-cell-default-height);
+      block-size: var(--gse-ui-dataTableItems-cell-default-height);
       padding: var(--gse-ui-dataTableItems-cell-padding);
       font-family: var(--gse-ui-dataTableItems-cell-text-fontFamily);
       font-size: var(--gse-ui-dataTableItems-cell-text-fontSize);
       font-weight: var(--gse-ui-dataTableItems-cell-text-fontWeight);
       line-height: var(--gse-ui-dataTableItems-cell-text-lineHeight);
       color: var(--gse-ui-dataTableItems-cell-foregroundColor);
-      text-align: left;
+      text-align: start;
 
       gux-icon {
         color: var(--gse-ui-dataTableItems-cell-icon-foregroundColor);
@@ -28,7 +28,7 @@ gux-table {
     }
 
     th {
-      height: var(--gse-ui-dataTableItems-header-default-height);
+      block-size: var(--gse-ui-dataTableItems-header-default-height);
       padding: var(--gse-ui-dataTableItems-header-padding);
       font-family: var(--gse-ui-dataTableItems-header-text-fontFamily);
       font-size: var(--gse-ui-dataTableItems-header-text-fontSize);
@@ -38,13 +38,15 @@ gux-table {
       background: var(--gse-ui-dataTableItems-header-defaultBackgroundColor);
 
       &:has(gux-all-row-select) {
-        width: var(--gse-ui-dataTableItems-header-multiselect-default-width);
+        inline-size: var(
+          --gse-ui-dataTableItems-header-multiselect-default-width
+        );
       }
     }
 
     th,
     td {
-      text-align: left;
+      text-align: start;
       border-color: var(--gse-ui-dataTableItems-divider-color);
       border-style: var(--gse-ui-dataTableItems-divider-style);
       border-width: 0 var(--gse-ui-dataTableItems-divider-width)
@@ -55,31 +57,33 @@ gux-table {
     td[data-cell-numeric],
     th[data-cell-action],
     td[data-cell-action] {
-      text-align: right;
+      text-align: end;
     }
 
     // This is a fallback as the :has selector is currently not supported by firefox. To be removed once released: COMUI-1652
     tr[data-row-id] {
       td:first-child {
-        width: var(
+        inline-size: var(
           --gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width
         );
       }
 
       th:first-child {
-        width: var(--gse-ui-dataTableItems-header-multiselect-default-width);
+        inline-size: var(
+          --gse-ui-dataTableItems-header-multiselect-default-width
+        );
       }
     }
 
     th:last-child,
     td:last-child {
-      border-right-width: 0;
+      border-inline-end-width: 0;
     }
 
     thead {
       position: sticky;
-      top: 0;
-      z-index: var(--gse-semantic-zIndex-tooltip);
+      inset-block-start: 0;
+      z-index: var(--gse-semantic-zIndex-sticky);
 
       th {
         position: relative;
@@ -108,23 +112,27 @@ gux-table {
 
   &[gs-compact] {
     th {
-      height: var(--gse-ui-dataTableItems-header-compact-height);
+      block-size: var(--gse-ui-dataTableItems-header-compact-height);
     }
 
     tr[data-row-id] th:first-child {
-      width: var(--gse-ui-dataTableItems-header-multiselect-compact-width);
+      inline-size: var(
+        --gse-ui-dataTableItems-header-multiselect-compact-width
+      );
     }
 
     th:has(gux-all-row-select) {
-      width: var(--gse-ui-dataTableItems-header-multiselect-compact-width);
+      inline-size: var(
+        --gse-ui-dataTableItems-header-multiselect-compact-width
+      );
     }
 
     td {
-      height: var(--gse-ui-dataTableItems-cell-compact-height);
+      block-size: var(--gse-ui-dataTableItems-cell-compact-height);
     }
 
     tr[data-row-id] td:first-child {
-      width: var(
+      inline-size: var(
         --gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width
       );
     }
@@ -148,14 +156,14 @@ gux-table {
 
 // used to ensure gux-sort-control arrow doesn't overlap header text when columns are resized
 th:not([data-cell-action]):not([data-cell-numeric]):has(> gux-sort-control) {
-  padding-right: calc(
+  padding-inline-end: calc(
     2 * var(--gse-ui-dataTableItems-header-gap) + var(--gse-ui-icon-small-size)
   ) !important;
 }
 
 th[data-cell-numeric]:has(> gux-sort-control),
 th[data-cell-action]:has(> gux-sort-control) {
-  padding-left: calc(
+  padding-inline-start: calc(
     2 * var(--gse-ui-dataTableItems-header-gap) + var(--gse-ui-icon-small-size) +
       2px
   ) !important;

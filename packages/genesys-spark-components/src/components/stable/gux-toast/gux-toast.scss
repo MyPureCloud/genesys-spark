@@ -6,9 +6,9 @@
   gap: var(--gse-ui-toast-gap);
   place-content: stretch flex-start;
   align-items: flex-start;
-  width: var(--gse-ui-toast-wrappingWidth);
+  inline-size: var(--gse-ui-toast-wrappingWidth);
   padding: var(--gse-ui-toast-margin);
-  margin-bottom: var(--gse-ui-toast-stacking-gap);
+  margin-block-end: var(--gse-ui-toast-stacking-gap);
   border-radius: var(--gse-ui-toast-borderRadius);
   box-shadow: var(--gse-ui-toast-boxShadow-offsetX)
     var(--gse-ui-toast-boxShadow-offsetY) var(--gse-ui-toast-boxShadow-blur)
@@ -16,13 +16,13 @@
 
   .gux-icon {
     ::slotted(gux-icon) {
-      width: var(--gse-ui-toast-icon) !important;
-      height: var(--gse-ui-toast-icon) !important;
+      inline-size: var(--gse-ui-toast-icon) !important;
+      block-size: var(--gse-ui-toast-icon) !important;
     }
 
     gux-icon {
-      width: var(--gse-ui-toast-icon) !important;
-      height: var(--gse-ui-toast-icon) !important;
+      inline-size: var(--gse-ui-toast-icon) !important;
+      block-size: var(--gse-ui-toast-icon) !important;
     }
 
     &.gux-icon-error {
@@ -77,7 +77,7 @@
     }
 
     .gux-buttons-bar {
-      width: 100%;
+      inline-size: 100%;
 
       ::slotted(a) {
         font-family: var(

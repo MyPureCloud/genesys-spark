@@ -421,6 +421,13 @@
         "type": "sizing",
         "description": "This token is recommended for special interactive elements, such as color swatches in the Rich Text Editor."
       }
+    },
+    "4xl": {
+      "size": {
+        "value": "{size.4xl}",
+        "type": "sizing",
+        "description": "The recommended token for very large interactive elements, such as the drop zone within the file upload drag and drop component."
+      }
     }
   },
   "focus_outline": {

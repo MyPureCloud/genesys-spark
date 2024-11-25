@@ -28,7 +28,7 @@ export function returnActionTypeIcon(
       return 'fa/quote-right-regular';
     case 'orderedList':
       return 'fa/list-ol-regular';
-    case 'bulletedList':
+    case 'bulletList':
       return 'fa/list-ul-regular';
     case 'clearFormatting':
       return 'fa/eraser-regular';

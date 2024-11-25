@@ -1,6 +1,6 @@
 :host {
   flex-direction: column;
-  width: fit-content;
+  inline-size: fit-content;
   padding: var(--gse-ui-menu-padding);
   background-color: var(--gse-ui-flyoutMenu-backgroundColor);
   border: none;

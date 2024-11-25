@@ -37,33 +37,32 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       flex-direction: column;
 
       &.gux-small {
-        width: var(--gse-ui-modal-small-width);
-        max-height: min(368px, 100vh - 2 * #{24px});
+        inline-size: var(--gse-ui-modal-small-width);
+        max-block-size: min(368px, 100vh - 2 * #{24px});
       }
 
       &.gux-medium {
-        width: min(var(--gse-ui-modal-medium-width), 100vw - 48px);
-        max-height: min(640px, 100vh - 2 * #{24px});
+        inline-size: min(var(--gse-ui-modal-medium-width), 100vw - 48px);
+        max-block-size: min(640px, 100vh - 2 * #{24px});
       }
 
       &.gux-large {
-        width: min(var(--gse-ui-modal-large-width), 100vw - 48px);
-        max-height: min(640px, 100vh - 2 * #{24px});
+        inline-size: min(var(--gse-ui-modal-large-width), 100vw - 48px);
+        max-block-size: min(640px, 100vh - 2 * #{24px});
       }
 
       &.gux-dynamic {
-        max-width: calc(100vw - 2 * 24px);
-        max-height: calc(100vh - 2 * 24px);
+        max-inline-size: calc(100vw - 2 * 24px);
+        max-block-size: calc(100vh - 2 * 24px);
 
         .gux-modal-content {
-          max-height: none;
+          max-block-size: none;
         }
       }
 
       .gux-modal-header {
-        padding-top: var(--gse-ui-modal-padding);
-        padding-right: var(--gse-ui-modal-padding);
-        padding-left: var(--gse-ui-modal-padding);
+        padding-block-start: var(--gse-ui-modal-padding);
+        padding-inline: var(--gse-ui-modal-padding);
         margin: 0;
         font-family: var(--gse-ui-modal-heading-fontFamily);
         font-size: var(--gse-ui-modal-heading-fontSize);
@@ -73,20 +72,18 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       }
 
       .gux-modal-content {
-        max-height: 432px;
-        padding-right: var(--gse-ui-modal-padding);
-        padding-left: var(--gse-ui-modal-padding);
-        margin-top: var(--gse-ui-modal-gap);
+        max-block-size: 432px;
+        padding-inline: var(--gse-ui-modal-padding);
+        margin-block-start: var(--gse-ui-modal-gap);
         overflow-y: auto;
       }
 
       .gux-button-footer {
         display: flex;
         justify-content: space-between;
-        padding-right: var(--gse-ui-modal-padding);
-        padding-bottom: var(--gse-ui-modal-padding);
-        padding-left: var(--gse-ui-modal-padding);
-        margin-top: var(--gse-ui-modal-gap);
+        padding-block-end: var(--gse-ui-modal-padding);
+        padding-inline: var(--gse-ui-modal-padding);
+        margin-block-start: var(--gse-ui-modal-gap);
 
         &.gux-no-buttons {
           display: none;
@@ -94,10 +91,9 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       }
 
       footer {
-        padding-right: var(--gse-ui-modal-padding);
-        padding-bottom: var(--gse-ui-modal-padding);
-        padding-left: var(--gse-ui-modal-padding);
-        margin-top: var(--gse-ui-modal-gap);
+        padding-block-end: var(--gse-ui-modal-padding);
+        padding-inline: var(--gse-ui-modal-padding);
+        margin-block-start: var(--gse-ui-modal-gap);
       }
     }
 
@@ -106,8 +102,8 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
         &.gux-small,
         &.gux-medium,
         &.gux-large {
-          width: 100%;
-          height: 100%;
+          inline-size: 100%;
+          block-size: 100%;
         }
       }
     }

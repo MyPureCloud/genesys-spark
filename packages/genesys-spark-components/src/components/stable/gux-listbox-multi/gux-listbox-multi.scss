@@ -1,7 +1,7 @@
 :host {
   box-sizing: border-box;
   display: block;
-  max-height: var(--gse-ui-menu-maxHeight);
+  max-block-size: var(--gse-ui-menu-maxHeight);
   padding: var(--gse-ui-menu-padding);
   overflow-y: auto;
   scrollbar-color: var(--gse-ui-menu-scrollbar-foregroundColor);
@@ -24,7 +24,7 @@
 
   .gux-no-matches {
     box-sizing: border-box;
-    height: var(--gse-ui-menu-option-height);
+    block-size: var(--gse-ui-menu-option-height);
     font-family: var(
       --gse-ui-dropdown-menu-emptyState-subheader-text-fontFamily
     );

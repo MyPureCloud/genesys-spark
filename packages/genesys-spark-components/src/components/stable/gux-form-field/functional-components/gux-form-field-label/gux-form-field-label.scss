@@ -12,15 +12,15 @@
 
     &.gux-beside {
       position: relative;
-      top: var(--gse-ui-formControl-input-top);
-      width: fit-content;
-      min-width: var(--gse-ui-formControl-input-textfield-minWidth);
-      max-width: fit-content;
-      margin-right: var(--gse-ui-formControl-group-gapItems);
+      inset-block-start: var(--gse-ui-formControl-input-top);
+      inline-size: fit-content;
+      min-inline-size: var(--gse-ui-formControl-input-textfield-minWidth);
+      max-inline-size: fit-content;
+      margin-inline-end: var(--gse-ui-formControl-group-gapItems);
     }
 
     &.gux-above {
-      padding-bottom: var(--gse-ui-formControl-formField-gap);
+      padding-block-end: var(--gse-ui-formControl-formField-gap);
     }
 
     &.gux-screenreader {

@@ -103,8 +103,8 @@ export class GuxTabs {
       this.activeTab = panels[0].tabId;
     }
 
-    void tabList.guxSetActive(this.activeTab);
-    panels.forEach(
+    void tabList?.guxSetActive(this.activeTab);
+    panels?.forEach(
       panel => void panel.guxSetActive(panel.tabId === this.activeTab)
     );
   }

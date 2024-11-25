@@ -20,16 +20,16 @@
       align-items: center;
 
       gux-icon {
-        width: var(--gse-ui-button-icon-size);
-        height: var(--gse-ui-button-icon-size);
-        margin-left: var(--gse-ui-button-gap);
+        inline-size: var(--gse-ui-button-icon-size);
+        block-size: var(--gse-ui-button-icon-size);
+        margin-inline-start: var(--gse-ui-button-gap);
       }
     }
   }
 }
 
 .gux-list-container {
-  max-width: 220px;
+  max-inline-size: 220px;
 
   @include mixins.gux-menu-container;
 }

@@ -54,6 +54,19 @@ nav {
     background-color: #fdfdfd;
     box-shadow: 0 0 10px rgb(32 41 55 / 20%);
 
+    #mode-switcher-section {
+      display: none;
+
+      &.enabled {
+        display: block;
+      }
+
+      #mode-switcher {
+        padding: 10px 15px;
+        margin: 0;
+      }
+    }
+
     h2 {
       padding: 10px 15px;
       margin: 0;

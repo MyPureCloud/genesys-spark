@@ -50,7 +50,7 @@
 }
 
 .gux-calendar {
-  margin-top: 2px;
+  margin-block-start: 2px;
   border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
   box-shadow: var(--gse-ui-calendarMenu-boxShadow-offsetX)
     var(--gse-ui-calendarMenu-boxShadow-offsetY)
@@ -64,7 +64,7 @@
     gap: var(--gse-ui-calendarMenu-header-gap);
     align-items: center;
     justify-content: space-between;
-    height: var(--gse-ui-calendarMenu-month-single-header-height);
+    block-size: var(--gse-ui-calendarMenu-month-single-header-height);
     padding: var(--gse-ui-calendarMenu-header-padding);
     font-weight: var(--gse-ui-calendarMenu-month-currentText-fontWeight);
     color: var(--gse-ui-calendarMenu-header-foregroundColor);
@@ -86,16 +86,16 @@
       }
 
       &.gux-left {
-        left: 18px;
+        inset-inline-start: 18px;
       }
 
       &.gux-right {
-        right: 18px;
+        inset-inline-end: 18px;
       }
 
       gux-icon {
-        width: var(--gse-ui-icon-small-size);
-        height: var(--gse-ui-icon-small-size);
+        inline-size: var(--gse-ui-icon-small-size);
+        block-size: var(--gse-ui-icon-small-size);
         pointer-events: none;
       }
     }
@@ -103,13 +103,13 @@
     .gux-month-list {
       display: flex;
       justify-content: space-between;
-      width: 100%;
+      inline-size: 100%;
       font-family: var(--gse-ui-calendarMenu-month-headerText-fontFamily);
       font-size: var(--gse-ui-calendarMenu-month-headerText-fontSize);
       line-height: var(--gse-ui-calendarMenu-month-headerText-lineHeight);
 
       label {
-        width: 100%;
+        inline-size: 100%;
         text-align: center;
       }
     }
@@ -118,26 +118,26 @@
   .gux-content {
     display: flex;
     align-items: flex-start;
-    height: var(--gse-ui-calendarMenu-height);
+    block-size: var(--gse-ui-calendarMenu-height);
     padding: var(--gse-ui-calendarMenu-dateBody-padding);
     color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
     background-color: var(--gse-ui-calendarMenu-backgroundColor);
     border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
 
     table {
-      width: var(--gse-ui-calendarMenu-day-input-width);
-      text-align: left;
+      inline-size: var(--gse-ui-calendarMenu-day-input-width);
+      text-align: start;
       table-layout: fixed;
       border-spacing: 0;
       -ms-user-select: none;
       user-select: none;
 
       &:not(:last-child) {
-        padding-right: 24px; // TODO: use token?
+        padding-inline-end: 24px; // TODO: use token?
       }
 
       tr {
-        height: var(--gse-ui-calendarMenu-day-input-height);
+        block-size: var(--gse-ui-calendarMenu-day-input-height);
 
         &:empty {
           display: none;
@@ -145,8 +145,8 @@
 
         th,
         td {
-          width: var(--gse-ui-calendarMenu-day-date-size);
-          height: var(--gse-ui-calendarMenu-day-date-size);
+          inline-size: var(--gse-ui-calendarMenu-day-date-size);
+          block-size: var(--gse-ui-calendarMenu-day-date-size);
           padding: 0;
           margin: 0;
           text-align: center;
@@ -197,8 +197,8 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              width: var(--gse-ui-calendarMenu-day-date-size);
-              height: var(--gse-ui-calendarMenu-day-date-size);
+              inline-size: var(--gse-ui-calendarMenu-day-date-size);
+              block-size: var(--gse-ui-calendarMenu-day-date-size);
               background-color: var(
                 --gse-ui-calendarMenu-date-selected-backgroundColor
               );

@@ -16,16 +16,8 @@ export class GuxRichTextEditorActionGroup {
   @Prop()
   hideActionDivider: boolean = false;
 
-  private shouldHideDivider(): boolean {
-    return this.hideActionDivider || this.isGlobalActionsSlot();
-  }
-
-  private isGlobalActionsSlot(): boolean {
-    return this.root.getAttribute('slot') === 'global-actions';
-  }
-
   private renderActionGroupDivider(): JSX.Element {
-    if (!this.shouldHideDivider()) {
+    if (!this.hideActionDivider) {
       return (<div class="gux-divider"></div>) as JSX.Element;
     }
   }

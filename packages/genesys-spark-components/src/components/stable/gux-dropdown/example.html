@@ -326,11 +326,17 @@
   >
 
   <h2>Disabled</h2>
-  <gux-dropdown value="a" disabled>
+  <gux-button
+    onclick="(function() {
+      document.getElementById('disabled-state-dropdown').toggleAttribute('disabled');
+  })()"
+    >Toggle disabled state</gux-button
+  >
+  <gux-dropdown id="disabled-state-dropdown" value="a" disabled="true">
     <gux-listbox aria-label="Animals">
       <gux-option value="a">Ant</gux-option>
       <gux-option value="b">Bat</gux-option>
-      <gux-option value="c">Cat</gux-option>
+      <gux-option value="c" disabled>Cat</gux-option>
       <gux-option value="d">Dog</gux-option>
     </gux-listbox>
   </gux-dropdown>
@@ -379,7 +385,7 @@
 
   <h2>Set list max height</h2>
   <gux-dropdown placeholder="Select an animal">
-    <gux-listbox style="max-height: 100px" aria-label="Animals">
+    <gux-listbox style="max-block-size: 100px" aria-label="Animals">
       <gux-option value="a">Ant</gux-option>
       <gux-option value="b">Bat</gux-option>
       <gux-option value="c">Cat</gux-option>
@@ -445,7 +451,13 @@
 
   <h3>Icon Options</h3>
 
-  <gux-dropdown>
+  <gux-button
+    onclick="(function() {
+      document.getElementById('icon-options-dropdown').toggleAttribute('disabled');
+  })()"
+    >Toggle disabled state</gux-button
+  >
+  <gux-dropdown id="icon-options-dropdown" disabled="false">
     <gux-listbox aria-label="Users">
       <gux-option-icon
         icon-name="user"
@@ -545,7 +557,7 @@
   <h2>List wider than dropdown input</h2>
 
   <gux-dropdown placeholder="Select an animal" exceed-target-width>
-    <gux-listbox aria-label="Animals" style="width: 300px">
+    <gux-listbox aria-label="Animals" style="inline-size: 300px">
       <gux-option value="a">Ant</gux-option>
       <gux-option value="b">Bat</gux-option>
       <gux-option value="c">Cat</gux-option>
@@ -557,7 +569,7 @@
   <gux-dropdown
     filter-type="starts-with"
     placeholder="Select an option"
-    style="max-width: 150px"
+    style="max-inline-size: 150px"
   >
     <gux-listbox aria-label="Options">
       <gux-option value="a" dir="auto">עברית ואז english</gux-option>
@@ -605,7 +617,7 @@
 })()"
 >
   form {
-    width: 200px;
+    inline-size: 200px;
   }
 
   gux-dropdown + gux-button {

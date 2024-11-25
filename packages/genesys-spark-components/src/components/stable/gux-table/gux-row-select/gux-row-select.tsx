@@ -55,6 +55,11 @@ export class GuxRowSelect {
       <gux-form-field-checkbox label-position="screenreader">
         <input
           ref={el => (this.inputElement = el)}
+          class={
+            this.selected
+              ? 'gux-safari-bug-workaround-1'
+              : 'gux-safari-bug-workaround-2'
+          } // COMUI-3240: This is a Workaround for a safari repaint bug
           slot="input"
           id={this.id}
           type="checkbox"

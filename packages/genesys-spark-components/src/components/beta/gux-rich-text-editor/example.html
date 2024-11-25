@@ -15,25 +15,26 @@
   </gux-rich-text-editor-action-group>
   <gux-rich-text-editor-action-group slot="lists-indentation">
     <gux-rich-text-editor-action
-      action="bulletedList"
+      action="bulletList"
     ></gux-rich-text-editor-action>
     <gux-rich-text-editor-action
       action="orderedList"
     ></gux-rich-text-editor-action>
   </gux-rich-text-editor-action-group>
-  <gux-rich-text-editor-action-group slot="inserting">
+  <gux-rich-text-editor-action-group slot="inserting" hide-action-divider>
     <gux-rich-text-editor-action
       action="codeblock"
     ></gux-rich-text-editor-action>
     <gux-rich-text-editor-action
       action="blockQuote"
     ></gux-rich-text-editor-action>
-  </gux-rich-text-editor-action-group>
-  <gux-rich-text-editor-action-group slot="global-actions">
     <gux-rich-text-editor-action action="undo"></gux-rich-text-editor-action>
     <gux-rich-text-editor-action action="redo"></gux-rich-text-editor-action>
-    <gux-rich-text-editor-action action="delete"></gux-rich-text-editor-action>
   </gux-rich-text-editor-action-group>
+  <gux-rich-text-editor-action
+    slot="global-action"
+    action="delete"
+  ></gux-rich-text-editor-action>
   <div class="editorElement" slot="editor"></div>
 </gux-rich-text-editor-beta>
 
@@ -45,10 +46,25 @@
     <gux-rich-text-editor-action
       action="underline"
     ></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="strike"></gux-rich-text-editor-action>
+  </gux-rich-text-editor-action-group>
+  <div class="editorElement" slot="editor"></div>
+</gux-rich-text-editor-beta>
+
+<h2>No action divider</h2>
+<gux-rich-text-editor-beta>
+  <gux-rich-text-editor-action-group
+    slot="typographical-emphasis"
+    hide-action-divider
+  >
+    <gux-rich-text-editor-action action="bold"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="italic"></gux-rich-text-editor-action>
     <gux-rich-text-editor-action
-      action="strike"
-    ></gux-rich-text-editor-action> </gux-rich-text-editor-action-group
-  >v>
+      action="underline"
+    ></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="strike"></gux-rich-text-editor-action>
+  </gux-rich-text-editor-action-group>
+  <div class="editorElement" slot="editor"></div>
 </gux-rich-text-editor-beta>
 
 <style
@@ -80,7 +96,7 @@ const actionsConfig = [
   { action: 'codeBlock', command: 'toggleCodeBlock', selector: 'gux-rich-text-editor-action[action=codeblock]' },
   { action: 'blockquote', command: 'toggleBlockquote', selector: 'gux-rich-text-editor-action[action=blockQuote]' },
   { action: 'orderedList', command: 'toggleOrderedList', selector: 'gux-rich-text-editor-action[action=orderedList]' },
-  { action: 'bulletList', command: 'toggleBulletList', selector: 'gux-rich-text-editor-action[action=bulletedList]' },
+  { action: 'bulletList', command: 'toggleBulletList', selector: 'gux-rich-text-editor-action[action=bulletList]' },
   { action: 'clearFormatting', command: 'unsetAllMarks', selector: 'gux-rich-text-editor-action[action=clearFormatting]' },
   { action: 'undo', command: 'undo', selector: 'gux-rich-text-editor-action[action=undo]' },
   { action: 'redo', command: 'redo', selector: 'gux-rich-text-editor-action[action=redo]' },

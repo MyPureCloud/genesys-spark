@@ -13,8 +13,9 @@
 
 .gux-container {
   nav {
-    width: fit-content;
-    margin: 40px auto;
+    inline-size: fit-content;
+    margin-block: 40px;
+    margin-inline: auto;
 
     ul {
       padding: 0;

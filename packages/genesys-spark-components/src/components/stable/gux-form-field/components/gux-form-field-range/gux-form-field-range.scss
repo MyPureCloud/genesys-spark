@@ -38,15 +38,15 @@ $track-height: var(--gse-ui-slider-bar-height);
 $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
 
 @mixin gux-track {
-  width: $track-width;
-  height: $track-height;
+  inline-size: $track-width;
+  block-size: $track-height;
   cursor: pointer;
 }
 
 @mixin gux-thumb {
   display: block;
-  width: var($gse-ui-slider-handle-width);
-  height: var($gse-ui-slider-handle-height);
+  inline-size: var($gse-ui-slider-handle-width);
+  block-size: var($gse-ui-slider-handle-height);
   cursor: pointer;
   border-radius: var(--gse-ui-slider-handle-borderRadius);
 }
@@ -61,11 +61,12 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
 
 ::slotted(input[type='range']) {
   position: absolute;
-  width: 100%;
-  width: $track-width;
-  height: $track-height;
-  margin: $thumb-diameter 0;
-  margin-top: calc(-1 * calc($thumb-diameter + $track-height));
+  inline-size: 100%;
+  inline-size: $track-width;
+  block-size: $track-height;
+  margin-block: $thumb-diameter;
+  margin-block-start: calc(-1 * calc($thumb-diameter + $track-height));
+  margin-inline: 0;
   -webkit-appearance: none;
   background: transparent;
 }
@@ -85,7 +86,7 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
     place-content: stretch flex-start;
     align-items: center;
     // We will not use a token for this height style below
-    height: 32px;
+    block-size: 32px;
     font-size: var(--gse-ui-slider-label-text-fontSize);
 
     &.gux-disabled {
@@ -106,15 +107,16 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
       }
 
       .gux-track {
-        width: 100%;
-        height: $track-height;
+        inline-size: 100%;
+        block-size: $track-height;
         // We are not using a token for this margin below since it this 6px margin is used to center position the head on the track
-        margin: 6px 0;
+        margin-block: 6px;
+        margin-inline: 0;
         background: var(--gse-ui-slider-bar-default-backgroundColor);
         border-radius: var(--gse-ui-slider-track-borderRadius);
 
         .gux-progress {
-          height: $track-height;
+          block-size: $track-height;
           background-color: $range-active;
           border-radius: var(--gse-ui-slider-track-borderRadius);
         }
@@ -125,12 +127,13 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
       flex: 0 1 auto;
       align-self: auto;
       order: 0;
-      margin: 0 0 0 var(--gux-spacing-medium);
+      margin-block: 0;
+      margin-inline: var(--gux-spacing-medium) 0;
       font-family: var(--gse-ui-slider-label-text-fontFamily);
       font-size: var(--gse-ui-slider-label-text-fontSize);
       font-weight: var(--gse-ui-slider-label-text-fontWeight);
       line-height: var(--gse-ui-slider-label-text-lineHeight);
-      text-align: right;
+      text-align: end;
 
       &.gux-hidden {
         display: none;
