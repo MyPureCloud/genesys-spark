@@ -406,7 +406,6 @@
   "--gse-ui-selectorCard-error-border-width",
   "--gse-ui-selectorCard-error-selectedIndicator-foregroundColor",
   "--gse-ui-sidePanel-closeColor",
-  "--gse-ui-sidePanel-descriptionColor",
   "--gse-ui-sidePanel-header-gap",
   "--gse-ui-simpleFilter-gap",
   "--gse-ui-slider-focusRing-borderRadius",
