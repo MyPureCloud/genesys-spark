@@ -8,4 +8,8 @@
     inline-size: var(--gse-ui-menu-option-startIcon-width);
     block-size: var(--gse-ui-menu-option-startIcon-height);
   }
+
+  .gux-option-wrapper {
+    min-inline-size: 0;
+  }
 }
