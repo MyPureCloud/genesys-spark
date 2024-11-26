@@ -18,6 +18,12 @@ gux-table {
       color: var(--gse-ui-dataTableItems-cell-foregroundColor);
       text-align: start;
 
+      &:has(gux-row-select) {
+        inline-size: var(
+          --gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width
+        );
+      }
+
       gux-icon {
         color: var(--gse-ui-dataTableItems-cell-icon-foregroundColor);
       }
@@ -58,12 +64,6 @@ gux-table {
     th[data-cell-action],
     td[data-cell-action] {
       text-align: end;
-    }
-
-    td:has(gux-row-select) {
-      inline-size: var(
-        --gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width
-      );
     }
 
     th:has(gux-all-row-select) {
@@ -110,22 +110,22 @@ gux-table {
   &[gs-compact] {
     th {
       block-size: var(--gse-ui-dataTableItems-header-compact-height);
-    }
 
-    th:has(gux-all-row-select) {
-      inline-size: var(
-        --gse-ui-dataTableItems-header-multiselect-compact-width
-      );
+      &:has(gux-all-row-select) {
+        inline-size: var(
+          --gse-ui-dataTableItems-header-multiselect-compact-width
+        );
+      }
     }
 
     td {
       block-size: var(--gse-ui-dataTableItems-cell-compact-height);
-    }
 
-    td:has(gux-row-select) {
-      inline-size: var(
-        --gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width
-      );
+      &:has(gux-row-select) {
+        inline-size: var(
+          --gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width
+        );
+      }
     }
   }
 
