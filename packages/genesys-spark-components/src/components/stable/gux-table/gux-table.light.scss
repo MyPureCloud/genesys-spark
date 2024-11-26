@@ -112,12 +112,6 @@ gux-table {
       block-size: var(--gse-ui-dataTableItems-header-compact-height);
     }
 
-    //tr[data-row-id] th:first-child {
-    //  inline-size: var(
-    //    --gse-ui-dataTableItems-header-multiselect-compact-width
-    //  );
-    //}
-
     th:has(gux-all-row-select) {
       inline-size: var(
         --gse-ui-dataTableItems-header-multiselect-compact-width
