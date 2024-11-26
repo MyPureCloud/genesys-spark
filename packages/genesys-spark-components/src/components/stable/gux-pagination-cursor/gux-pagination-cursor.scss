@@ -46,6 +46,7 @@
   }
 
   gux-icon {
+    display: flex;
     inline-size: var(--gse-ui-button-icon-size);
     block-size: var(--gse-ui-button-icon-size);
   }
