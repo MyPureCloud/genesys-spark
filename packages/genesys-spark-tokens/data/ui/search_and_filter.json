@@ -57,21 +57,21 @@
     "match": {
       "first_level": {
         "background_color": {
-          "value": "{theme.background.custom_accents.bold.120}",
+          "value": "{background.form_control.search.matching_text.first_level}",
           "type": "color"
         },
         "foreground_colour": {
-          "value": "{foreground.form_control.text_input.populated}",
+          "value": "{foreground.form_control.search.matching_text}",
           "type": "color"
         }
       },
       "subsequent_level": {
         "foreground_colour": {
-          "value": "{foreground.form_control.text_input.populated}",
+          "value": "{foreground.form_control.search.matching_text}",
           "type": "color"
         },
         "background_color": {
-          "value": "{theme.background.custom_accents.subtle.120}",
+          "value": "{background.form_control.search.matching_text.subsequent_level}",
           "type": "color"
         }
       }

@@ -56,7 +56,7 @@
         "type": "color"
       },
       "fixed_background_color": {
-        "value": "{background.container.page.tonal_high}",
+        "value": "{background.interactive.secondary.default}",
         "type": "color"
       },
       "foreground_color": {
@@ -619,13 +619,13 @@
       },
       "foreground_default": {
         "color": {
-          "value": "{foreground.container.high_contrast.high_emphasis}",
+          "value": "{color.white}",
           "type": "color"
         }
       },
       "foreground_dark": {
         "color": {
-          "value": "{foreground.container.mid_emphasis}",
+          "value": "{color.haze.800}",
           "type": "color"
         }
       },
@@ -701,7 +701,7 @@
           "type": "color"
         },
         "overflow_count": {
-          "value": "{foreground.container.low_emphasis}",
+          "value": "{background.system.custom_accents.subtle.accent_2}",
           "type": "color"
         },
         "add": {
@@ -853,7 +853,7 @@
   },
   "data_table_composed": {
     "box_shadow": {
-      "value": "{elevation.low}",
+      "value": "{container.sm.box_shadow}",
       "type": "boxShadow"
     },
     "width": {

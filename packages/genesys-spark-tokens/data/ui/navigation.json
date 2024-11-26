@@ -334,7 +334,7 @@
     },
     "set": {
       "background_color": {
-        "value": "{background.container.page.tonal_medium}",
+        "value": "{background.container.page.tonal_subtle}",
         "type": "color"
       },
       "standard": {
