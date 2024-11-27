@@ -578,6 +578,12 @@
             "type": "color"
           }
         }
+      },
+      "search": {
+        "10": {
+          "value": "{color.haze.900}",
+          "type": "color"
+        }
       }
     },
     "border": {

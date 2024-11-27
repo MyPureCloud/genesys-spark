@@ -97,7 +97,7 @@
   --gse-ui-card-raised-border-style: solid;
   --gse-ui-card-raised-boxShadow-blur: 6px;
   --gse-ui-card-raised-boxShadow-spread: 1px;
-  --gse-ui-card-raised-boxShadow-color: rgba(35, 57, 92, 0.12);
+  --gse-ui-card-raised-boxShadow-color: #28324326;
   --gse-ui-card-raised-boxShadow-type: dropShadow;
   --gse-ui-card-raised-boxShadow-offsetX: 0;
   --gse-ui-card-raised-boxShadow-offsetY: 0;
@@ -110,7 +110,7 @@
   --gse-ui-tooltip-light-border-style: solid;
   --gse-ui-tooltip-light-backgroundColor: #ffffff;
   --gse-ui-tooltip-light-foregroundColor: #2e394c;
-  --gse-ui-tooltip-dark-border-color: #2e394c;
+  --gse-ui-tooltip-dark-border-color: #6a6d75;
   --gse-ui-tooltip-dark-border-width: 1px;
   --gse-ui-tooltip-dark-border-style: solid;
   --gse-ui-tooltip-dark-backgroundColor: #283243;
@@ -118,7 +118,7 @@
   --gse-ui-tooltip-dark-iconColor: #ffffff;
   --gse-ui-tooltip-boxShadow-blur: 6px;
   --gse-ui-tooltip-boxShadow-spread: 1px;
-  --gse-ui-tooltip-boxShadow-color: rgba(35, 57, 92, 0.12);
+  --gse-ui-tooltip-boxShadow-color: #28324326;
   --gse-ui-tooltip-boxShadow-type: dropShadow;
   --gse-ui-tooltip-boxShadow-offsetX: 0;
   --gse-ui-tooltip-boxShadow-offsetY: 0;
@@ -279,19 +279,19 @@
   --gse-ui-segmentedControl-button-end-borderRadius: 0 4px 4px 0;
   --gse-ui-segmentedControl-button-disabled-opacity: 0.5;
   --gse-ui-segmentedControl-button-disabled-backgroundColor: rgba(0, 0, 0, 0);
-  --gse-ui-segmentedControl-button-disabled-foregroundColor: #2a60c8;
+  --gse-ui-segmentedControl-button-disabled-foregroundColor: #2e394c;
   --gse-ui-segmentedControl-button-default-backgroundColor: rgba(0, 0, 0, 0);
-  --gse-ui-segmentedControl-button-default-foregroundColor: #2a60c8;
+  --gse-ui-segmentedControl-button-default-foregroundColor: #2e394c;
   --gse-ui-segmentedControl-button-hover-backgroundColor: #deeaff;
-  --gse-ui-segmentedControl-button-hover-foregroundColor: #2754ac;
+  --gse-ui-segmentedControl-button-hover-foregroundColor: #2e394c;
   --gse-ui-segmentedControl-button-active-backgroundColor: #2a60c8;
   --gse-ui-segmentedControl-button-active-foregroundColor: #ffffff;
   --gse-ui-segmentedControl-borderRadius: 4px;
   --gse-ui-segmentedControl-height: 32px;
-  --gse-ui-segmentedControl-border-color: #2a60c8;
+  --gse-ui-segmentedControl-border-color: #2e394c;
   --gse-ui-segmentedControl-border-width: 1px;
   --gse-ui-segmentedControl-border-style: solid;
-  --gse-ui-segmentedControl-divider-color: #2a60c8;
+  --gse-ui-segmentedControl-divider-color: #2e394c;
   --gse-ui-segmentedControl-divider-width: 1px;
   --gse-ui-segmentedControl-divider-style: solid;
   --gse-ui-segmentedControl-iconOnly-padding: 0 8px;
@@ -534,7 +534,7 @@
   --gse-ui-menu-border-style: solid;
   --gse-ui-menu-boxShadow-blur: 4px;
   --gse-ui-menu-boxShadow-spread: 1px;
-  --gse-ui-menu-boxShadow-color: rgba(35, 57, 92, 0.1);
+  --gse-ui-menu-boxShadow-color: #28324326;
   --gse-ui-menu-boxShadow-type: dropShadow;
   --gse-ui-menu-boxShadow-offsetX: 0;
   --gse-ui-menu-boxShadow-offsetY: 0;
@@ -641,7 +641,7 @@
   --gse-ui-calendarMenu-monthBody-gap: 2px;
   --gse-ui-calendarMenu-boxShadow-blur: 4px;
   --gse-ui-calendarMenu-boxShadow-spread: 1px;
-  --gse-ui-calendarMenu-boxShadow-color: rgba(35, 57, 92, 0.1);
+  --gse-ui-calendarMenu-boxShadow-color: #28324326;
   --gse-ui-calendarMenu-boxShadow-type: dropShadow;
   --gse-ui-calendarMenu-boxShadow-offsetX: 0;
   --gse-ui-calendarMenu-boxShadow-offsetY: 0;
@@ -738,7 +738,7 @@
   --gse-ui-fileUpload-fileCard-mainContainer-error-border-style: solid;
   --gse-ui-fileUpload-fileCard-boxShadow-blur: 4px;
   --gse-ui-fileUpload-fileCard-boxShadow-spread: 1px;
-  --gse-ui-fileUpload-fileCard-boxShadow-color: rgba(35, 57, 92, 0.1);
+  --gse-ui-fileUpload-fileCard-boxShadow-color: #28324326;
   --gse-ui-fileUpload-fileCard-boxShadow-type: dropShadow;
   --gse-ui-fileUpload-fileCard-boxShadow-offsetX: 0;
   --gse-ui-fileUpload-fileCard-boxShadow-offsetY: 0;
@@ -899,8 +899,8 @@
   --gse-ui-search-counter-icon-width: 16px;
   --gse-ui-search-width: 320px;
   --gse-ui-search-match-firstLevel-backgroundColor: #ffef27;
-  --gse-ui-search-match-firstLevel-foregroundColour: #2e394c;
-  --gse-ui-search-match-subsequentLevel-foregroundColour: #2e394c;
+  --gse-ui-search-match-firstLevel-foregroundColour: #2a2a2e;
+  --gse-ui-search-match-subsequentLevel-foregroundColour: #2a2a2e;
   --gse-ui-search-match-subsequentLevel-backgroundColor: #fff793;
   --gse-ui-simpleFilter-gap: 16px;
   --gse-ui-dataTableItems-header-text-fontFamily: Roboto;
@@ -917,7 +917,7 @@
   --gse-ui-dataTableItems-header-multiselect-compact-selectedBar-width: 64px;
   --gse-ui-dataTableItems-header-selectedIndicatorColor: #75a8ff;
   --gse-ui-dataTableItems-header-defaultBackgroundColor: #ffffff;
-  --gse-ui-dataTableItems-header-fixedBackgroundColor: #deeaff;
+  --gse-ui-dataTableItems-header-fixedBackgroundColor: #e8ecf2;
   --gse-ui-dataTableItems-header-foregroundColor: #2e394c;
   --gse-ui-dataTableItems-header-sort-foregroundColor: #4c5667;
   --gse-ui-dataTableItems-header-default-height: 40px;
@@ -1068,7 +1068,7 @@
   --gse-ui-avatar-badge-outOfOffice: #b74ba4;
   --gse-ui-avatar-badge-notification-color: #ff451a;
   --gse-ui-avatar-badge-foregroundDefault-color: #ffffff;
-  --gse-ui-avatar-badge-foregroundDark-color: #3e4a5b;
+  --gse-ui-avatar-badge-foregroundDark-color: #4f5157;
   --gse-ui-avatar-badge-notifications-icon-margin: 4px;
   --gse-ui-avatar-badge-queue-icon-margin: 4px;
   --gse-ui-avatar-media-initialsBackground-default: #203b73;
@@ -1084,7 +1084,7 @@
   --gse-ui-avatar-media-initialsBackground-accent10: #ddd933;
   --gse-ui-avatar-media-initialsBackground-accent11: #fcd276;
   --gse-ui-avatar-media-initialsBackground-accent12: #755000;
-  --gse-ui-avatar-media-initialsBackground-overflowCount: #4c5667;
+  --gse-ui-avatar-media-initialsBackground-overflowCount: #d9e4ff;
   --gse-ui-avatar-media-initialsBackground-add: #e8ecf2;
   --gse-ui-avatar-media-initialsForeground-default: #2e394c;
   --gse-ui-avatar-media-initialsForeground-inverse: #ffffff;
@@ -1196,7 +1196,7 @@
   );
   --gse-ui-dataTableComposed-boxShadow-blur: 4px;
   --gse-ui-dataTableComposed-boxShadow-spread: 1px;
-  --gse-ui-dataTableComposed-boxShadow-color: rgba(35, 57, 92, 0.1);
+  --gse-ui-dataTableComposed-boxShadow-color: #28324326;
   --gse-ui-dataTableComposed-boxShadow-type: dropShadow;
   --gse-ui-dataTableComposed-boxShadow-offsetX: 0;
   --gse-ui-dataTableComposed-boxShadow-offsetY: 0;
@@ -1278,7 +1278,7 @@
   --gse-ui-advancedTabs-item-itemText-lineHeight: 18px;
   --gse-ui-advancedTabs-button-add-height: 45px;
   --gse-ui-advancedTabs-button-arrow-height: 48px;
-  --gse-ui-advancedTabs-set-backgroundColor: #f6f7f9;
+  --gse-ui-advancedTabs-set-backgroundColor: #fdfdfd;
   --gse-ui-advancedTabs-set-standard-width: 920px;
   --gse-ui-toast-closeButtonColor: #3e4a5b;
   --gse-ui-toast-success-backgroundColor: #ffffff;
@@ -1312,7 +1312,7 @@
   --gse-ui-toast-borderRadius: 4px;
   --gse-ui-toast-boxShadow-blur: 4px;
   --gse-ui-toast-boxShadow-spread: 1px;
-  --gse-ui-toast-boxShadow-color: rgba(35, 57, 92, 0.1);
+  --gse-ui-toast-boxShadow-color: #28324326;
   --gse-ui-toast-boxShadow-type: dropShadow;
   --gse-ui-toast-boxShadow-offsetX: 0;
   --gse-ui-toast-boxShadow-offsetY: 0;
@@ -1337,7 +1337,7 @@
   --gse-ui-modal-buttonBar-gap: 8px;
   --gse-ui-modal-boxShadow-blur: 8px;
   --gse-ui-modal-boxShadow-spread: 1px;
-  --gse-ui-modal-boxShadow-color: rgba(35, 57, 92, 0.15);
+  --gse-ui-modal-boxShadow-color: #28324326;
   --gse-ui-modal-boxShadow-type: dropShadow;
   --gse-ui-modal-boxShadow-offsetX: 0;
   --gse-ui-modal-boxShadow-offsetY: 0;
@@ -1348,7 +1348,7 @@
   --gse-ui-popover-borderRadius: 4px;
   --gse-ui-popover-boxShadow-blur: 8px;
   --gse-ui-popover-boxShadow-spread: 1px;
-  --gse-ui-popover-boxShadow-color: rgba(35, 57, 92, 0.15);
+  --gse-ui-popover-boxShadow-color: #28324326;
   --gse-ui-popover-boxShadow-type: dropShadow;
   --gse-ui-popover-boxShadow-offsetX: 0;
   --gse-ui-popover-boxShadow-offsetY: 0;
@@ -1476,7 +1476,7 @@
   --gse-ui-dynamicSideSheet-dividerColor: #b4bccb;
   --gse-ui-dynamicSideSheet-boxShadow-blur: 6px;
   --gse-ui-dynamicSideSheet-boxShadow-spread: 1px;
-  --gse-ui-dynamicSideSheet-boxShadow-color: rgba(35, 57, 92, 0.12);
+  --gse-ui-dynamicSideSheet-boxShadow-color: #28324326;
   --gse-ui-dynamicSideSheet-boxShadow-type: dropShadow;
   --gse-ui-dynamicSideSheet-boxShadow-offsetX: 0;
   --gse-ui-dynamicSideSheet-boxShadow-offsetY: 0;

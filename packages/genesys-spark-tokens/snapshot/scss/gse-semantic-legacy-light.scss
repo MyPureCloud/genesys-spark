@@ -88,6 +88,8 @@
   --gse-semantic-background-system-status-notification: #ff451a;
   --gse-semantic-background-formControl-clickInput-track: #6b7585;
   --gse-semantic-background-formControl-textInput-track: #f6f7f9;
+  --gse-semantic-background-formControl-search-matchingText-firstLevel: #ffef27;
+  --gse-semantic-background-formControl-search-matchingText-subsequentLevel: #fff793;
   --gse-semantic-foreground-interactive-primary-default: #ffffff;
   --gse-semantic-foreground-interactive-primary-active: #ffffff;
   --gse-semantic-foreground-interactive-primary-hover: #ffffff;
@@ -146,6 +148,7 @@
   --gse-semantic-foreground-formControl-label-requiredAccent: #ea0b0b;
   --gse-semantic-foreground-formControl-label-optionalAccent: #3e4a5b;
   --gse-semantic-foreground-formControl-label-tooltip: #3e4a5b;
+  --gse-semantic-foreground-formControl-search-matchingText: #2a2a2e;
   --gse-semantic-border-focus: #aac9ff;
   --gse-semantic-border-container-divider: #b4bccb;
   --gse-semantic-border-container-edges-defaultLight: #b4bccb;
@@ -157,7 +160,7 @@
   --gse-semantic-border-container-edges-highEmphasis: #2e394c;
   --gse-semantic-border-container-edges-dataTable-default: #e2e6ee;
   --gse-semantic-border-container-edges-lowEmphasis: #6a6d75;
-  --gse-semantic-border-container-highConstrast-default: #4c5667;
+  --gse-semantic-border-container-highConstrast-default: #6a6d75;
   --gse-semantic-border-container-highConstrast-enabled: #2a60c8;
   --gse-semantic-border-container-highConstrast-hover: #23478f;
   --gse-semantic-border-container-highConstrast-active: #2a60c8;
@@ -174,4 +177,23 @@
   --gse-semantic-border-formControl-textInput-hover: #2754ac;
   --gse-semantic-border-formControl-textInput-active: #2a60c8;
   --gse-semantic-border-formControl-textInput-error: #ea0b0b;
+  --gse-semantic-container-lg-boxShadow-blur: 8px;
+  --gse-semantic-container-lg-boxShadow-spread: 1px;
+  --gse-semantic-container-lg-boxShadow-color: #28324326;
+  --gse-semantic-container-lg-boxShadow-type: dropShadow;
+  --gse-semantic-container-lg-boxShadow-offsetX: 0;
+  --gse-semantic-container-lg-boxShadow-offsetY: 0;
+  --gse-semantic-container-md-boxShadow-blur: 6px;
+  --gse-semantic-container-md-boxShadow-spread: 1px;
+  --gse-semantic-container-md-boxShadow-color: #28324326;
+  --gse-semantic-container-md-boxShadow-type: dropShadow;
+  --gse-semantic-container-md-boxShadow-offsetX: 0;
+  --gse-semantic-container-md-boxShadow-offsetY: 0;
+  --gse-semantic-container-sm-boxShadow-blur: 4px;
+  --gse-semantic-container-sm-boxShadow-spread: 1px;
+  --gse-semantic-container-sm-boxShadow-color: #28324326;
+  --gse-semantic-container-sm-boxShadow-type: dropShadow;
+  --gse-semantic-container-sm-boxShadow-offsetX: 0;
+  --gse-semantic-container-sm-boxShadow-offsetY: 0;
+  --gse-semantic-effects-boxShadow: #28324326;
 }

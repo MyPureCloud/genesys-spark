@@ -143,6 +143,12 @@
       },
       "text_input": {
         "track": "#ffffff"
+      },
+      "search": {
+        "matching_text": {
+          "first_level": "#81cbe5",
+          "subsequent_level": "#9fd6ea"
+        }
       }
     }
   },
@@ -253,6 +259,9 @@
         "required_accent": "#b51b37",
         "optional_accent": "#4f5157",
         "tooltip": "#4f5157"
+      },
+      "search": {
+        "matching_text": "#2a2a2e"
       }
     }
   },
@@ -274,7 +283,7 @@
         "low_emphasis": "#6a6d75"
       },
       "high_constrast": {
-        "default": "#4f5157",
+        "default": "#6a6d75",
         "enabled": "#2143a2",
         "hover": "#102251",
         "active": "#19327a"
@@ -309,5 +318,40 @@
         "error": "#e22245"
       }
     }
+  },
+  "container": {
+    "lg": {
+      "box_shadow": {
+        "blur": "8px",
+        "spread": "1px",
+        "color": "#2a2a2e26",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      }
+    },
+    "md": {
+      "box_shadow": {
+        "blur": "6px",
+        "spread": "1px",
+        "color": "#2a2a2e26",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      }
+    },
+    "sm": {
+      "box_shadow": {
+        "blur": "4px",
+        "spread": "1px",
+        "color": "#2a2a2e26",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      }
+    }
+  },
+  "effects": {
+    "box_shadow": "#2a2a2e26"
   }
 }

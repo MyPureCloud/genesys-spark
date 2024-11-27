@@ -65,7 +65,7 @@
     "dark": {
       "border": {
         "value": {
-          "color": "{border.container.edges.high_emphasis}",
+          "color": "{border.container.high_constrast.default}",
           "width": "{container.edges.border_width}",
           "style": "solid"
         },
@@ -439,7 +439,7 @@
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.container.high_contrast.high_emphasis}",
+          "value": "{foreground.system.custom_accents.light}",
           "type": "color"
         }
       },
@@ -505,7 +505,7 @@
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.container.high_contrast.high_emphasis}",
+          "value": "{foreground.system.custom_accents.light}",
           "type": "color"
         }
       },
@@ -773,21 +773,21 @@
           "type": "opacity"
         },
         "background_color": {
-          "value": "{background.interactive.tertiary.default}",
+          "value": "{background.interactive.ghost.default}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{background.interactive.primary.default}",
+          "value": "{foreground.interactive.ghost.hover}",
           "type": "color"
         }
       },
       "default": {
         "background_color": {
-          "value": "{background.interactive.tertiary.default}",
+          "value": "{background.interactive.ghost.default}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{background.interactive.primary.default}",
+          "value": "{foreground.interactive.ghost.default}",
           "type": "color"
         }
       },
@@ -797,7 +797,7 @@
           "type": "color"
         },
         "foreground_color": {
-          "value": "{background.interactive.primary.hover}",
+          "value": "{foreground.interactive.ghost.hover}",
           "type": "color"
         }
       },
@@ -822,7 +822,7 @@
     },
     "border": {
       "value": {
-        "color": "{border.container.edges.enabled}",
+        "color": "{foreground.interactive.tertiary.default}",
         "width": "{container.edges.border_width}",
         "style": "solid"
       },
@@ -830,7 +830,7 @@
     },
     "divider": {
       "value": {
-        "color": "{border.container.edges.enabled}",
+        "color": "{foreground.interactive.tertiary.default}",
         "width": "{container.divider.border_width}",
         "style": "solid"
       },

@@ -490,6 +490,20 @@
           "type": "color",
           "description": "The default background color for inputs."
         }
+      },
+      "search": {
+        "matching_text": {
+          "first_level": {
+            "value": "{theme.background.custom_accents.bold.120}",
+            "type": "color",
+            "description": "The color of the highlight of the text that matches a search query on the first level."
+          },
+          "subsequent_level": {
+            "value": "{theme.background.custom_accents.subtle.120}",
+            "type": "color",
+            "description": "The color of the highlight of the text that matches a search query on a subsequent level."
+          }
+        }
       }
     }
   },
@@ -831,6 +845,13 @@
           "type": "color",
           "description": "The color we used for tooltip in labels"
         }
+      },
+      "search": {
+        "matching_text": {
+          "value": "{theme.foreground.search.10}",
+          "type": "color",
+          "description": "The color for text that matches a search query."
+        }
       }
     }
   },
@@ -896,7 +917,7 @@
       },
       "high_constrast": {
         "default": {
-          "value": "{theme.border.edges.default.20}",
+          "value": "{theme.border.edges.emphasis.default}",
           "type": "color",
           "description": "The default color for the edge borders of high contrast surfaces."
         },
@@ -995,6 +1016,65 @@
           "value": "{theme.border.system.error.20}",
           "type": "color",
           "description": "The border for inputs edges in the error state."
+        }
+      }
+    }
+  },
+  "container": {
+    "lg": {
+      "box_shadow": {
+        "value": {
+          "x": "0",
+          "y": "0",
+          "blur": "8px",
+          "spread": "1px",
+          "color": "{effects.box_shadow}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "The recommended box shadow for large containers, like modals or popovers."
+      }
+    },
+    "md": {
+      "box_shadow": {
+        "value": {
+          "x": "0",
+          "y": "0",
+          "blur": "6px",
+          "spread": "1px",
+          "color": "{effects.box_shadow}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "The shadow we used for medium-sized components like elevated cards or menus."
+      }
+    },
+    "sm": {
+      "box_shadow": {
+        "value": {
+          "x": "0",
+          "y": "0",
+          "blur": "4px",
+          "spread": "1px",
+          "color": "{effects.box_shadow}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "The shadow we used for small-sized components like tooltips."
+      }
+    }
+  },
+  "effects": {
+    "box_shadow": {
+      "value": "{theme.background.container.high_contrast.10}",
+      "type": "color",
+      "$extensions": {
+        "studio.tokens": {
+          "modify": {
+            "type": "alpha",
+            "value": "0.15",
+            "space": "srgb"
+          }
         }
       }
     }
