@@ -1,4 +1,21 @@
+import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
+
+async function newNonrandomE2EPage({
+  html
+}: {
+  html: string;
+}): Promise<E2EPage> {
+  const page = await newE2EPage();
+
+  await page.evaluateOnNewDocument(() => {
+    Math.random = () => 0.5;
+  });
+  await page.setContent(html);
+  await page.waitForChanges();
+
+  return page;
+}
 
 describe('side panel', () => {
   it('should render', async () => {
@@ -7,7 +24,7 @@ describe('side panel', () => {
             <gux-side-panel-heading
               slot="heading"
               level="3"
-              icon="fa/diamond-regular"
+              icon-name="fa/diamond-regular"
             >
               Side panel title
             </gux-side-panel-heading>
@@ -37,7 +54,7 @@ describe('modal side panel', () => {
             <gux-side-panel-heading
               slot="heading"
               level="2"
-              icon="fa/diamond-regular"
+              icon-name="fa/diamond-regular"
             >
               Side panel title
             </gux-side-panel-heading>
@@ -55,11 +72,14 @@ describe('modal side panel', () => {
           </gux-modal-side-panel-beta>`;
 
   it('should render', async () => {
-    const page = await newSparkE2EPage({ html });
+    const page = await newNonrandomE2EPage({ html });
     const element = await page.find('gux-modal-side-panel-beta');
 
     expect(element.outerHTML).toMatchSnapshot();
+  });
 
+  it('should pass accessibility tests', async () => {
+    const page = await newSparkE2EPage({ html });
     await a11yCheck(page);
   });
 
@@ -80,15 +100,15 @@ describe('modal side panel', () => {
     const page = await newSparkE2EPage({ html });
     const element = await page.find('gux-modal-side-panel-beta');
     const dialog = await page.find('pierce/dialog');
-    const dismissButton = await page.find(
-      'pierce/gux-dismiss-button >>> button'
-    );
+    const dismissButton = await page.find('pierce/gux-dismiss-button');
+    const innerDismissButton = await dismissButton.find('pierce/button');
 
     element.setAttribute('open', '');
     await page.waitForChanges();
     expect(await dialog.isVisible()).toBe(true);
 
-    await dismissButton.click();
+    await innerDismissButton.click();
+
     await page.waitForChanges();
     expect(await dialog.isVisible()).toBe(false);
   });

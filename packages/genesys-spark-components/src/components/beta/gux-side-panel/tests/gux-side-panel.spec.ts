@@ -3,14 +3,13 @@ import { MockHTMLElement } from '@stencil/core/mock-doc';
 import { GuxSidePanel } from '../gux-side-panel';
 import { GuxSidePanelHeading } from '../components/gux-side-panel-heading/gux-side-panel-heading';
 import { GuxModalSidePanel } from '../components/gux-modal-side-panel/gux-modal-side-panel';
-import { GuxDismissButton } from '../../../stable/gux-dismiss-button/gux-dismiss-button';
 
 describe('gux-side-panel-beta', () => {
   it.each(['small', 'medium', 'large'])(
     'renders correctly with %s size',
     async size => {
       const page = await newSpecPage({
-        components: [GuxSidePanel, GuxSidePanelHeading, GuxDismissButton],
+        components: [GuxSidePanel, GuxSidePanelHeading],
         html: `
         <gux-side-panel-beta size="${size}">
           <gux-side-panel-heading
@@ -43,7 +42,7 @@ describe('gux-side-panel-beta', () => {
     'renders correctly with h%d heading level',
     async headingLevel => {
       const page = await newSpecPage({
-        components: [GuxSidePanel, GuxSidePanelHeading, GuxDismissButton],
+        components: [GuxSidePanel, GuxSidePanelHeading],
         html: `
         <gux-side-panel-beta size="medium">
           <gux-side-panel-heading
@@ -74,7 +73,7 @@ describe('gux-side-panel-beta', () => {
 
   it('emits sidePanelDismiss event when dismissed', async () => {
     const page = await newSpecPage({
-      components: [GuxSidePanel, GuxSidePanelHeading, GuxDismissButton],
+      components: [GuxSidePanel, GuxSidePanelHeading],
       html: `
         <gux-side-panel-beta>
           <gux-side-panel-heading
@@ -123,12 +122,7 @@ describe('gux-modal-side-panel-beta', () => {
 
   it.each([true, false])('renders correctly when open is %p', async open => {
     const page = await newSpecPage({
-      components: [
-        GuxModalSidePanel,
-        GuxSidePanel,
-        GuxSidePanelHeading,
-        GuxDismissButton
-      ],
+      components: [GuxModalSidePanel, GuxSidePanel, GuxSidePanelHeading],
       html: `
           <gux-modal-side-panel-beta ${open ? 'open' : ''}>
             <gux-side-panel-heading
@@ -160,12 +154,7 @@ describe('gux-modal-side-panel-beta', () => {
     'renders correctly with %s size',
     async size => {
       const page = await newSpecPage({
-        components: [
-          GuxModalSidePanel,
-          GuxSidePanel,
-          GuxSidePanelHeading,
-          GuxDismissButton
-        ],
+        components: [GuxModalSidePanel, GuxSidePanel, GuxSidePanelHeading],
         html: `
         <gux-modal-side-panel-beta size="${size}">
           <gux-side-panel-heading
@@ -196,12 +185,7 @@ describe('gux-modal-side-panel-beta', () => {
 
   it('closes the modal side panel when the escape key is pressed', async () => {
     const page = await newSpecPage({
-      components: [
-        GuxModalSidePanel,
-        GuxSidePanel,
-        GuxSidePanelHeading,
-        GuxDismissButton
-      ],
+      components: [GuxModalSidePanel, GuxSidePanel, GuxSidePanelHeading],
       html: `
         <gux-modal-side-panel-beta open>
           <gux-side-panel-heading
@@ -239,12 +223,7 @@ describe('gux-modal-side-panel-beta', () => {
 
   it('should call showModal & close methods when called', async () => {
     const page = await newSpecPage({
-      components: [
-        GuxModalSidePanel,
-        GuxSidePanel,
-        GuxSidePanelHeading,
-        GuxDismissButton
-      ],
+      components: [GuxModalSidePanel, GuxSidePanel, GuxSidePanelHeading],
       html: `
         <gux-modal-side-panel-beta>
           <gux-side-panel-heading
