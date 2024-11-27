@@ -56,6 +56,10 @@
     }
   }
 
+  & .gux-side-panel-description {
+    margin: var(--gse-ui-sidePanel-description-padding) !important;
+  }
+
   & .gux-side-panel-content {
     display: flex;
     flex: 1 1 100%;
