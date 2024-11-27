@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-chart-components-react",
-  "version": "4.100.0",
+  "version": "4.101.1",
   "description": "",
   "license": "MIT",
   "main": "dist/index.js",

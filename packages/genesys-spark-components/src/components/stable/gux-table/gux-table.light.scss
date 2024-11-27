@@ -18,6 +18,12 @@ gux-table {
       color: var(--gse-ui-dataTableItems-cell-foregroundColor);
       text-align: start;
 
+      &:has(gux-row-select) {
+        inline-size: var(
+          --gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width
+        );
+      }
+
       gux-icon {
         color: var(--gse-ui-dataTableItems-cell-icon-foregroundColor);
       }
@@ -60,19 +66,10 @@ gux-table {
       text-align: end;
     }
 
-    // This is a fallback as the :has selector is currently not supported by firefox. To be removed once released: COMUI-1652
-    tr[data-row-id] {
-      td:first-child {
-        inline-size: var(
-          --gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width
-        );
-      }
-
-      th:first-child {
-        inline-size: var(
-          --gse-ui-dataTableItems-header-multiselect-default-width
-        );
-      }
+    th:has(gux-all-row-select) {
+      inline-size: var(
+        --gse-ui-dataTableItems-header-multiselect-default-width
+      );
     }
 
     th:last-child,
@@ -113,28 +110,22 @@ gux-table {
   &[gs-compact] {
     th {
       block-size: var(--gse-ui-dataTableItems-header-compact-height);
-    }
 
-    tr[data-row-id] th:first-child {
-      inline-size: var(
-        --gse-ui-dataTableItems-header-multiselect-compact-width
-      );
-    }
-
-    th:has(gux-all-row-select) {
-      inline-size: var(
-        --gse-ui-dataTableItems-header-multiselect-compact-width
-      );
+      &:has(gux-all-row-select) {
+        inline-size: var(
+          --gse-ui-dataTableItems-header-multiselect-compact-width
+        );
+      }
     }
 
     td {
       block-size: var(--gse-ui-dataTableItems-cell-compact-height);
-    }
 
-    tr[data-row-id] td:first-child {
-      inline-size: var(
-        --gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width
-      );
+      &:has(gux-row-select) {
+        inline-size: var(
+          --gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width
+        );
+      }
     }
   }
 
