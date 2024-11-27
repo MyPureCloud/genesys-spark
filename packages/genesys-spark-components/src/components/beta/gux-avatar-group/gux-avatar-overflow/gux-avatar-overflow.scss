@@ -1,0 +1,78 @@
+@use '~genesys-spark/dist/scss/focus.scss';
+@use '~genesys-spark/dist/scss/mixins.scss';
+
+:host {
+  display: block;
+  margin-inline-end: var(--gse-ui-avatar-groupSet-gap);
+}
+
+.gux-avatar-overflow {
+  position: relative;
+  box-sizing: border-box;
+  inline-size: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 0px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 50%;
+
+  &:focus-visible {
+    @include focus.gux-focus-ring;
+  }
+
+  &:hover,
+  &:focus {
+    z-index: var(--gse-semantic-zIndex-showFocus);
+  }
+
+  .gux-avatar-overflow-wrapper {
+    position: relative;
+    display: flex;
+
+    .gux-avatar-overflow-content {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      inline-size: var(--gse-ui-avatar-small-content-size);
+      block-size: var(--gse-ui-avatar-small-content-size);
+      overflow: hidden;
+      font-family: var(--gse-ui-avatar-small-initials-fontFamily);
+      font-size: var(--gse-ui-avatar-small-initials-fontSize);
+      font-weight: var(--gse-ui-avatar-small-initials-fontWeight);
+      line-height: var(--gse-core-lineHeight-matchFontSize);
+      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      background-color: var(
+        --gse-ui-avatar-media-initialsBackground-overflowCount
+      );
+      border-radius: 50%;
+    }
+  }
+}
+
+.gux-menu-wrapper {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: var(--gse-semantic-zIndex-popup);
+  flex-direction: column;
+  max-block-size: var(--gse-ui-menu-maxHeight);
+  padding: var(--gse-ui-menu-padding);
+  margin: 0;
+  overflow-y: auto;
+  visibility: hidden;
+  background-color: var(--gse-ui-menu-backgroundColor);
+  border: none;
+  border: var(--gse-semantic-container-edges-borderWidth) solid
+    var(--gse-semantic-border-container-edges-default);
+  border-radius: var(--gse-ui-menu-borderRadius);
+  box-shadow: var(--gse-ui-menu-boxShadow-offsetX)
+    var(--gse-ui-menu-boxShadow-offsetY) var(--gse-ui-menu-boxShadow-blur)
+    var(--gse-ui-menu-boxShadow-spread) var(--gse-ui-menu-boxShadow-color);
+
+  &.gux-shown {
+    visibility: visible;
+  }
+}

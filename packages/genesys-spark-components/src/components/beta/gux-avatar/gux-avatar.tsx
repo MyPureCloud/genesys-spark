@@ -11,6 +11,7 @@ import { render8x8SVG, renderTeamsSVG, renderZoomSVG } from './svg-utils';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import defaultResources from './i18n/en.json';
 import { generateInitials } from '@utils/string/generate-initials';
+import { getAvatarAccentClass } from './gux-avatar.service';
 
 /**
  * @slot image - Avatar photo.
@@ -81,16 +82,6 @@ export class GuxAvatar {
    */
   @Prop()
   ucIntegration: GuxAvatarUcIntegrationApps = 'none';
-
-  private getAccent(): string {
-    if (this.accent !== 'auto') {
-      return this.accent;
-    }
-    const hashedName = this.name
-      .split('')
-      .reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    return (hashedName % 12).toString();
-  }
 
   private validatingInputs(): void {
     const avatarImage = this.root.querySelector('img');
@@ -265,7 +256,7 @@ export class GuxAvatar {
           [`gux-${this.presence}`]: this.ring || this.badge,
           [`gux-${this.size}`]: true,
           'gux-ring': this.ring,
-          [`gux-accent-${this.getAccent()}`]: true
+          [getAvatarAccentClass(this.accent, this.name)]: true
         }}
       >
         <div class="gux-content">
