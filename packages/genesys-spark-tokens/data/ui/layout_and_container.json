@@ -548,10 +548,6 @@
       "value": "{foreground.container.high_emphasis}",
       "type": "color"
     },
-    "close_color": {
-      "value": "{foreground.interactive.subtle.default}",
-      "type": "color"
-    },
     "box_shadow": {
       "value": "{container.md.box_shadow}",
       "type": "boxShadow"
@@ -579,10 +575,6 @@
     "header": {
       "icon_gap": {
         "value": "{container.md.gap}",
-        "type": "spacing"
-      },
-      "gap": {
-        "value": "{container.lg.gap}",
         "type": "spacing"
       },
       "padding": {
@@ -632,7 +624,7 @@
       "value": "{modal.shroud_color}",
       "type": "color"
     },
-    "devider": {
+    "divider": {
       "value": {
         "color": "{border.container.divider}",
         "width": "{border_width.1}",
