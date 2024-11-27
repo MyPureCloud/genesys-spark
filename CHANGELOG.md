@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.101.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.101.0...v4.101.1) (2024-11-27)
+
+
+### Bug Fixes
+
+* **dropdown:** fix option-icon alignment ([8bd4f1c](https://github.com/MyPureCloud/genesys-spark/commit/8bd4f1c3c87591d2af42c58e60df4784a15c1a2c))
+* **pagination-cursor:** Fixed alignment of icon ([ad476c2](https://github.com/MyPureCloud/genesys-spark/commit/ad476c228e2588a59c6bbc31ed92e63ba5c9e2b4))
+
 ## [4.101.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.100.0...v4.101.0) (2024-11-26)
 
 
