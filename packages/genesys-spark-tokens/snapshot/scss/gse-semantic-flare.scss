@@ -11,9 +11,9 @@
   --gse-semantic-theme-background-container-primary-10d: #1e1e21;
   --gse-semantic-theme-background-container-primary-20d: #2a2a2e;
   --gse-semantic-theme-background-container-primary-30d: #3e4044;
-  --gse-semantic-theme-background-container-primary-40d: #040814;
+  --gse-semantic-theme-background-container-primary-40d: #3e4044;
   --gse-semantic-theme-background-container-primary-50d: #102251;
-  --gse-semantic-theme-background-container-primary-60d: #081129;
+  --gse-semantic-theme-background-container-primary-60d: #19327a;
   --gse-semantic-theme-background-container-secondary-10: #2143a2;
   --gse-semantic-theme-background-container-secondary-20: #19327a;
   --gse-semantic-theme-background-container-secondary-30: #102251;
@@ -28,7 +28,7 @@
   --gse-semantic-theme-background-container-highContrast-20: #0c193d;
   --gse-semantic-theme-background-container-highContrast-30: #081129;
   --gse-semantic-theme-background-container-highContrast-40: #131315;
-  --gse-semantic-theme-background-container-highContrast-10d: #cad1e1;
+  --gse-semantic-theme-background-container-highContrast-10d: #ffffff;
   --gse-semantic-theme-background-container-highContrast-20d: #adbff0;
   --gse-semantic-theme-background-container-highContrast-30d: #d5def7;
   --gse-semantic-theme-background-container-highContrast-40d: #f5f6fa;
@@ -121,7 +121,7 @@
   --gse-semantic-theme-background-customAccents-bold-80d: #89387b;
   --gse-semantic-theme-background-customAccents-bold-90d: #993747;
   --gse-semantic-theme-background-customAccents-bold-100d: #992910;
-  --gse-semantic-theme-background-customAccents-bold-110d: #cc9e40;
+  --gse-semantic-theme-background-customAccents-bold-110d: #664f20;
   --gse-semantic-theme-background-customAccents-bold-120d: #003447;
   --gse-semantic-theme-background-customAccents-bold-130d: #345b82;
   --gse-semantic-theme-background-customAccents-subtle-10: #9faac6;
@@ -232,10 +232,11 @@
   --gse-semantic-theme-foreground-formControl-clickInput-20: #19327a;
   --gse-semantic-theme-foreground-formControl-clickInput-30: #102251;
   --gse-semantic-theme-foreground-formControl-clickInput-40: #a3a8b5;
-  --gse-semantic-theme-foreground-formControl-clickInput-10d: #2143a2;
+  --gse-semantic-theme-foreground-formControl-clickInput-10d: #5476d5;
   --gse-semantic-theme-foreground-formControl-clickInput-20d: #829ce5;
   --gse-semantic-theme-foreground-formControl-clickInput-30d: #adbff0;
   --gse-semantic-theme-foreground-formControl-clickInput-40d: #848891;
+  --gse-semantic-theme-foreground-search-10: #2a2a2e;
   --gse-semantic-theme-border-focus-10: #5476d5;
   --gse-semantic-theme-border-focus-10d: #5476d5;
   --gse-semantic-theme-border-divider-10: #ffffff;
@@ -258,10 +259,10 @@
   --gse-semantic-theme-border-edges-enabled-10d: #2143a2;
   --gse-semantic-theme-border-edges-hover-10: #5476d5;
   --gse-semantic-theme-border-edges-hover-20: #102251;
-  --gse-semantic-theme-border-edges-hover-10d: #5476d5;
+  --gse-semantic-theme-border-edges-hover-10d: #2954cb;
   --gse-semantic-theme-border-edges-hover-20d: #19327a;
   --gse-semantic-theme-border-edges-active-10: #19327a;
-  --gse-semantic-theme-border-edges-active-10d: #102251;
+  --gse-semantic-theme-border-edges-active-10d: #5476d5;
   --gse-semantic-theme-border-edges-emphasis-default: #6a6d75;
   --gse-semantic-theme-border-edges-emphasis-defaultd: #b2b7c4;
   --gse-semantic-theme-border-system-primary-10: #829ce5;
@@ -275,7 +276,7 @@
   --gse-semantic-theme-border-system-error-10: #f3a7b5;
   --gse-semantic-theme-border-system-error-20: #e22245;
   --gse-semantic-theme-border-system-error-10d: #5a0e1c;
-  --gse-semantic-theme-border-system-error-20d: #881429;
+  --gse-semantic-theme-border-system-error-20d: #e22245;
   --gse-semantic-theme-border-inputs-default-10: #a3a8b5;
   --gse-semantic-theme-border-inputs-default-10d: #848891;
   --gse-semantic-theme-border-inputs-hover-10: #19327a;

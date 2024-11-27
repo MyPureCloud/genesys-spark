@@ -188,7 +188,7 @@
       "box_shadow": {
         "blur": "6px",
         "spread": "1px",
-        "color": "rgba(35, 57, 92, 0.12)",
+        "color": "#28324326",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
@@ -215,7 +215,7 @@
     },
     "dark": {
       "border": {
-        "color": "#2e394c",
+        "color": "#6a6d75",
         "width": "1px",
         "style": "solid"
       },
@@ -226,7 +226,7 @@
     "box_shadow": {
       "blur": "6px",
       "spread": "1px",
-      "color": "rgba(35, 57, 92, 0.12)",
+      "color": "#28324326",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -566,15 +566,15 @@
       "disabled": {
         "opacity": ".5",
         "background_color": "rgba(0, 0, 0, 0)",
-        "foreground_color": "#2a60c8"
+        "foreground_color": "#2e394c"
       },
       "default": {
         "background_color": "rgba(0, 0, 0, 0)",
-        "foreground_color": "#2a60c8"
+        "foreground_color": "#2e394c"
       },
       "hover": {
         "background_color": "#deeaff",
-        "foreground_color": "#2754ac"
+        "foreground_color": "#2e394c"
       },
       "active": {
         "background_color": "#2a60c8",
@@ -584,12 +584,12 @@
     "border_radius": "4px",
     "height": "32px",
     "border": {
-      "color": "#2a60c8",
+      "color": "#2e394c",
       "width": "1px",
       "style": "solid"
     },
     "divider": {
-      "color": "#2a60c8",
+      "color": "#2e394c",
       "width": "1px",
       "style": "solid"
     },
@@ -1106,7 +1106,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35, 57, 92, 0.1)",
+      "color": "#28324326",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -1331,7 +1331,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35, 57, 92, 0.1)",
+      "color": "#28324326",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -1549,7 +1549,7 @@
       "box_shadow": {
         "blur": "4px",
         "spread": "1px",
-        "color": "rgba(35, 57, 92, 0.1)",
+        "color": "#28324326",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
@@ -1900,10 +1900,10 @@
     "match": {
       "first_level": {
         "background_color": "#ffef27",
-        "foreground_colour": "#2e394c"
+        "foreground_colour": "#2a2a2e"
       },
       "subsequent_level": {
-        "foreground_colour": "#2e394c",
+        "foreground_colour": "#2a2a2e",
         "background_color": "#fff793"
       }
     }
@@ -1939,7 +1939,7 @@
       },
       "selected_indicator_color": "#75a8ff",
       "default_background_color": "#ffffff",
-      "fixed_background_color": "#deeaff",
+      "fixed_background_color": "#e8ecf2",
       "foreground_color": "#2e394c",
       "sort": {
         "foreground_color": "#4c5667"
@@ -2211,7 +2211,7 @@
         "color": "#ffffff"
       },
       "foreground_dark": {
-        "color": "#3e4a5b"
+        "color": "#4f5157"
       },
       "notifications": {
         "icon": {
@@ -2239,7 +2239,7 @@
         "accent10": "#ddd933",
         "accent11": "#fcd276",
         "accent12": "#755000",
-        "overflow_count": "#4c5667",
+        "overflow_count": "#d9e4ff",
         "add": "#e8ecf2"
       },
       "initials_foreground": {
@@ -2458,7 +2458,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35, 57, 92, 0.1)",
+      "color": "#28324326",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2622,7 +2622,7 @@
       }
     },
     "set": {
-      "background_color": "#f6f7f9",
+      "background_color": "#fdfdfd",
       "standard": {
         "width": "920px"
       }
@@ -2678,7 +2678,7 @@
     "box_shadow": {
       "blur": "4px",
       "spread": "1px",
-      "color": "rgba(35, 57, 92, 0.1)",
+      "color": "#28324326",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2721,7 +2721,7 @@
     "box_shadow": {
       "blur": "8px",
       "spread": "1px",
-      "color": "rgba(35, 57, 92, 0.15)",
+      "color": "#28324326",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2740,7 +2740,7 @@
     "box_shadow": {
       "blur": "8px",
       "spread": "1px",
-      "color": "rgba(35, 57, 92, 0.15)",
+      "color": "#28324326",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
@@ -2962,7 +2962,7 @@
     "box_shadow": {
       "blur": "6px",
       "spread": "1px",
-      "color": "rgba(35, 57, 92, 0.12)",
+      "color": "#28324326",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
