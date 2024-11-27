@@ -3211,7 +3211,6 @@
   "side_panel": {
     "background_color": "#ffffff",
     "header_color": "#2a2a2e",
-    "close_color": "#4f5157",
     "box_shadow": {
       "blur": "6px",
       "spread": "1px",
@@ -3240,7 +3239,6 @@
     },
     "header": {
       "icon_gap": "12px",
-      "gap": "16px",
       "padding": "24px 24px 16px",
       "dismiss": {
         "padding": "4px"
@@ -3261,7 +3259,7 @@
       "opacity": ".8"
     },
     "shroud_color": "#263b73cc",
-    "devider": {
+    "divider": {
       "color": "#c1c6d4",
       "width": "1px",
       "style": "solid"

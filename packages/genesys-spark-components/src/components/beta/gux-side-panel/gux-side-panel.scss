@@ -40,9 +40,9 @@
   & > header {
     position: relative;
     padding: var(--gse-ui-sidePanel-header-padding);
-    border-block-end: var(--gse-ui-sidePanel-devider-width)
-      var(--gse-ui-sidePanel-devider-style)
-      var(--gse-ui-sidePanel-devider-color);
+    border-block-end: var(--gse-ui-sidePanel-divider-width)
+      var(--gse-ui-sidePanel-divider-style)
+      var(--gse-ui-sidePanel-divider-color);
 
     /* Take another look at this in COMUI-3250 */
     & gux-dismiss-button {
@@ -71,9 +71,9 @@
   & > footer {
     flex: 0 0 auto;
     padding: var(--gse-ui-sidePanel-footer-padding);
-    border-block-start: var(--gse-ui-sidePanel-devider-width)
-      var(--gse-ui-sidePanel-devider-style)
-      var(--gse-ui-sidePanel-devider-color);
+    border-block-start: var(--gse-ui-sidePanel-divider-width)
+      var(--gse-ui-sidePanel-divider-style)
+      var(--gse-ui-sidePanel-divider-color);
   }
 }
 
