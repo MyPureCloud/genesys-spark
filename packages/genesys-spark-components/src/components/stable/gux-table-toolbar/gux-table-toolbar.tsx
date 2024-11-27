@@ -259,7 +259,11 @@ export class GuxTableToolbar {
 
   render(): JSX.Element {
     return (
-      <Host role="toolbar" aria-orientation="horizontal">
+      <Host
+        role="toolbar"
+        aria-orientation="horizontal"
+        gs-layout={this.displayedLayout}
+      >
         <div class="search-filter-container">
           <slot name="search-and-filter"></slot>
         </div>
