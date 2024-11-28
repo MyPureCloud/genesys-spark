@@ -19,7 +19,7 @@ describe('gux-popover-list', () => {
       `
     });
 
-    const element = await page.find('gux-popover-list');
+    const element = await page.find('gux-popover-list-beta');
     await a11yCheck(page);
     expect(element).toHaveAttribute('hydrated');
   });

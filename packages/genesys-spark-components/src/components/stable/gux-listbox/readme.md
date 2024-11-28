@@ -12,6 +12,7 @@ from a list of options.
 
 | Property       | Attribute       | Description | Type                                  | Default     |
 | -------------- | --------------- | ----------- | ------------------------------------- | ----------- |
+| `disabled`     | `disabled`      |             | `boolean`                             | `false`     |
 | `emptyMessage` | `empty-message` |             | `string`                              | `undefined` |
 | `filter`       | `filter`        |             | `string`                              | `''`        |
 | `filterType`   | `filter-type`   |             | `"custom" \| "none" \| "starts-with"` | `'none'`    |
