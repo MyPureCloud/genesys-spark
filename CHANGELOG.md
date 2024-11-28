@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.102.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.101.1...v4.102.0) (2024-11-28)
+
+
+### Features
+
+* **tokens:** dark mode pt2 ([176cc3e](https://github.com/MyPureCloud/genesys-spark/commit/176cc3e42de98b405064e6f6a8ab37a4182195eb))
+
+
+### Bug Fixes
+
+* **table-toolbar:** always show label when in the condensed display ([a1967e4](https://github.com/MyPureCloud/genesys-spark/commit/a1967e461d16bb8fba44ef025589f99d8a212da7))
+
 ### [4.101.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.101.0...v4.101.1) (2024-11-27)
 
 
