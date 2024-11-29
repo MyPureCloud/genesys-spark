@@ -1,0 +1,70 @@
+<h1>gux-form-field-file-beta</h1>
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-form-field-file-beta drop-and-drag>
+    <label slot="label">Upload a profile picture</label>
+
+    <input type="file" name="files[]" slot="input" multiple />
+
+    <gux-label-info-beta slot="label-info">
+      <span slot="content">This is some <b>tooltip</b> text</span>
+    </gux-label-info-beta>
+
+    <span slot="help">
+      <div>Maximum file size is 25MB.</div>
+      <div>Supported file types are JPG and PNG.</div>
+    </span>
+    <span slot="error">This is an error message</span>
+  </gux-form-field-file-beta>
+</form>
+
+<hr />
+<gux-button-slot>
+  <button
+    type="button"
+    onclick="(function () {
+      Array.from(document.querySelectorAll('gux-form-field-file-beta')).forEach(component => {
+        component.toggleAttribute('drop-and-drag');
+      });
+    })()"
+  >
+    Toggle Drop and Drag
+  </button>
+</gux-button-slot>
+
+<gux-button-slot>
+  <button
+    type="button"
+    onclick="(function () {
+      Array.from(document.querySelectorAll('gux-form-field-file-beta')).forEach(component => {
+        const input = component.querySelector('input');
+
+        input.disabled = !input.disabled;
+      });
+    })()"
+  >
+    Toggle Disabled State
+  </button>
+</gux-button-slot>
+
+<gux-button-slot>
+  <button
+    type="button"
+    onclick="(function () {
+      Array.from(document.querySelectorAll('gux-form-field-file-beta')).forEach(component => {
+        component.classList.toggle('narrow');
+      });
+    })()"
+  >
+    Toggle Width Restriction
+  </button>
+</gux-button-slot>
+
+<style>
+  gux-form-field-file-beta {
+    margin: 20px;
+  }
+
+  .narrow {
+    inline-size: 200px;
+  }
+</style>
