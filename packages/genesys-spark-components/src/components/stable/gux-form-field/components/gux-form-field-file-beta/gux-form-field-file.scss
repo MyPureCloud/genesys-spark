@@ -1,0 +1,41 @@
+@use '../../gux-form-field.scss';
+@use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
+@use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
+@use '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
+@use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+
+@include gux-form-field-container.Style;
+@include gux-form-field-error.Style;
+@include gux-form-field-label.Style;
+@include gux-form-field-help.Style;
+
+:host {
+  display: block;
+}
+
+::slotted(label) {
+  @include gux-form-field.gse-ui-formControl-label-bold;
+}
+
+.gux-input-and-error-container {
+  flex-grow: 1;
+}
+
+.gux-file-list {
+  &.gux-disabled {
+    opacity: 0.5;
+  }
+
+  .gux-file-list-item {
+    display: flex;
+    align-items: center;
+    block-size: 32px;
+    margin-block: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+
+    .gux-file-name {
+      margin-inline: 10px;
+    }
+  }
+}
