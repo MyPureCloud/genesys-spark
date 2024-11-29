@@ -17,6 +17,7 @@ This component is meant for use in other components as a dismiss button.
 
 ### Used by
 
+ - [gux-form-field-file-beta](../gux-form-field/components/gux-form-field-file-beta)
  - [gux-modal](../gux-modal)
  - [gux-modal-legacy](../../legacy/gux-modal-legacy)
  - [gux-notification-toast-legacy](../../legacy/gux-notification-toast-legacy)
@@ -38,6 +39,7 @@ This component is meant for use in other components as a dismiss button.
 graph TD;
   gux-dismiss-button --> gux-button-slot
   gux-dismiss-button --> gux-icon
+  gux-form-field-file-beta --> gux-dismiss-button
   gux-modal --> gux-dismiss-button
   gux-modal-legacy --> gux-dismiss-button
   gux-notification-toast-legacy --> gux-dismiss-button
