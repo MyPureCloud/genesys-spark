@@ -94,6 +94,10 @@
   "gux-form-field-dropdown": {
     "required": "Required"
   },
+  "gux-form-field-file-beta": {
+    "clickToUpload": "Click to upload",
+    "dragAndDropInstructions": "Drag and drop files here or"
+  },
   "gux-form-field-input-clear-button": {
     "clear": "Clear"
   },
