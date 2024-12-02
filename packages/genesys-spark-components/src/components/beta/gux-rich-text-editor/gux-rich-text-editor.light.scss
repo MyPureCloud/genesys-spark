@@ -25,6 +25,7 @@
   }
 
   pre {
+    padding: var(--gse-ui-rte-codeBlock-padding);
     font-family: var(--gse-ui-rte-codeBlock-sm-regular-fontFamily);
     font-size: var(--gse-ui-rte-codeBlock-sm-regular-fontSize);
     font-weight: var(--gse-ui-rte-codeBlock-sm-regular-fontWeight);
