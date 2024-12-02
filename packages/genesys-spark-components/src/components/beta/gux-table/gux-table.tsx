@@ -42,9 +42,11 @@ export class GuxTable {
   root: HTMLElement;
 
   private resizeObserver: ResizeObserver;
-  private slotObserver: MutationObserver = new MutationObserver(() =>
-    forceUpdate(this)
-  );
+  private slotObserver: MutationObserver = new MutationObserver(() => {
+    forceUpdate(this);
+    this.prepareSelectableRows();
+  });
+
   private i18n: GetI18nValue;
   private columnResizeState: GuxTableColumnResizeState | null;
   private tableId: string = randomHTMLId('gux-table');
