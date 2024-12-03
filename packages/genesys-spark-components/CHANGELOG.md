@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.132.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.131.4...v3.132.0) (2024-12-03)
+
+
+### Features
+
+* **icon:** adding new icons ([#738](https://github.com/MyPureCloud/genesys-spark/issues/738)) ([1b1f84e](https://github.com/MyPureCloud/genesys-spark/commit/1b1f84efa04c264fa31fe9662059eb9204a8b4da))
+
+
+### Bug Fixes
+
+* **table:** updating select all status when row removed from dom ([1aa4c9d](https://github.com/MyPureCloud/genesys-spark/commit/1aa4c9d92c1df5b558b395a88bdaffb4fca10622))
+
 ### [3.131.4](https://github.com/MyPureCloud/genesys-spark/compare/v3.131.3...v3.131.4) (2024-10-14)
 
 
