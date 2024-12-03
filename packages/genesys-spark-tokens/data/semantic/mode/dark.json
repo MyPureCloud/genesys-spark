@@ -25,12 +25,12 @@
           "description": "The background color of secondary actions in the default state."
         },
         "hover": {
-          "value": "{theme.background.container.primary.50d}",
+          "value": "{theme.background.container.primary.60d}",
           "type": "color",
           "description": "The background color of secondary actions in the hover state."
         },
         "active": {
-          "value": "{theme.background.container.primary.60d}",
+          "value": "{theme.background.container.primary.50d}",
           "type": "color",
           "description": "The background color of secondary actions in the active state."
         }
@@ -59,12 +59,12 @@
           "description": "The background color of dismissal actions in the default state."
         },
         "hover": {
-          "value": "{theme.background.container.primary.50d}",
+          "value": "{theme.background.container.primary.60d}",
           "type": "color",
           "description": "The background color of dismissal actions in the hover state."
         },
         "active": {
-          "value": "{theme.background.container.primary.60d}",
+          "value": "{theme.background.container.primary.50d}",
           "type": "color",
           "description": "The background color of dismissal actions in the active state."
         }
@@ -104,7 +104,7 @@
         }
       },
       "custom": {
-        "tomato": {
+        "orange": {
           "value": "{theme.background.custom_accents.color_swatch.10d}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
@@ -129,7 +129,7 @@
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         },
-        "blueberry": {
+        "azure": {
           "value": "{theme.background.custom_accents.color_swatch.60d}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
@@ -139,7 +139,7 @@
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         },
-        "islandaqua": {
+        "island": {
           "value": "{theme.background.custom_accents.color_swatch.80d}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
@@ -168,7 +168,7 @@
           "description": "A more subtle background color for a page, ideal for highlight surfaces that are over the background, for example, a dashboard with different panels."
         },
         "tonal_medium": {
-          "value": "{theme.background.container.primary.30d}",
+          "value": "{theme.background.container.primary.20d}",
           "type": "color",
           "description": "The background color to highlight elements in the background, for example, the row of a table."
         },
@@ -435,12 +435,12 @@
       },
       "progress_and_loading": {
         "default": {
-          "value": "{theme.background.system.primary.10d}",
+          "value": "{theme.background.container.primary.40d}",
           "type": "color",
           "description": "The color to indicate that this progress has not been achieved."
         },
         "progressed": {
-          "value": "{theme.background.container.secondary.10}",
+          "value": "{theme.foreground.tertiary.05d}",
           "type": "color",
           "description": "The color to indicate that this progress in a component."
         }
@@ -479,7 +479,7 @@
     "form_control": {
       "click_input": {
         "track": {
-          "value": "{theme.background.container.tertiary.20d}",
+          "value": "{theme.foreground.form_control.click_input.40d}",
           "type": "color",
           "description": "The color used for the tracks of click-based components,like the container of the toggle or the track of the slider."
         }
@@ -489,6 +489,20 @@
           "value": "{theme.background.form_control.input.10d}",
           "type": "color",
           "description": "The default background color for inputs."
+        }
+      },
+      "search": {
+        "matching_text": {
+          "first_level": {
+            "value": "{theme.background.custom_accents.bold.120}",
+            "type": "color",
+            "description": "The color of the highlight of the text that matches a search query on a first level."
+          },
+          "subsequent_level": {
+            "value": "{theme.background.custom_accents.subtle.120}",
+            "type": "color",
+            "description": "The color of the highlight of the text that matches a search query on a subsequent level."
+          }
         }
       }
     }
@@ -831,6 +845,13 @@
           "type": "color",
           "description": "The color we used for tooltip in labels"
         }
+      },
+      "search": {
+        "matching_text": {
+          "value": "{theme.foreground.search.10}",
+          "type": "color",
+          "description": "The color for text that matches a search query."
+        }
       }
     }
   },
@@ -886,6 +907,10 @@
         },
         "low_emphasis": {
           "value": "{theme.border.edges.emphasis.default}",
+          "type": "color"
+        },
+        "mid_emphasis": {
+          "value": "{theme.border.edges.emphasis.mid}",
           "type": "color"
         }
       },
@@ -990,6 +1015,65 @@
           "value": "{theme.border.system.error.20d}",
           "type": "color",
           "description": "The border for inputs edges in the error state."
+        }
+      }
+    }
+  },
+  "container": {
+    "lg": {
+      "box_shadow": {
+        "value": {
+          "x": "0",
+          "y": "0",
+          "blur": "8px",
+          "spread": "1px",
+          "color": "{effects.box_shadow}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "The recommended box shadow for large containers, like modals or popovers."
+      }
+    },
+    "md": {
+      "box_shadow": {
+        "value": {
+          "x": "0",
+          "y": "0",
+          "blur": "6px",
+          "spread": "1px",
+          "color": "{effects.box_shadow}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "The shadow we used for medium-sized components like elevated cards or menus."
+      }
+    },
+    "sm": {
+      "box_shadow": {
+        "value": {
+          "x": "0",
+          "y": "0",
+          "blur": "4px",
+          "spread": "1px",
+          "color": "{effects.box_shadow}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "The shadow we used for small-sized components like tooltips."
+      }
+    }
+  },
+  "effects": {
+    "box_shadow": {
+      "value": "{color.black}",
+      "type": "color",
+      "$extensions": {
+        "studio.tokens": {
+          "modify": {
+            "type": "alpha",
+            "value": "0.70",
+            "space": "srgb"
+          }
         }
       }
     }

@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.103.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.102.2...v4.103.0) (2024-12-03)
+
+
+### Features
+
+* **icon:** new icons and genesys icon update ([#736](https://github.com/MyPureCloud/genesys-spark/issues/736)) ([7ead8d0](https://github.com/MyPureCloud/genesys-spark/commit/7ead8d0fa558ae7d5d306e73c7597433a192b060))
+
+
+### Bug Fixes
+
+* **button-multi:** fixed accessibility warning ([1d8506e](https://github.com/MyPureCloud/genesys-spark/commit/1d8506e37840be789b3d0d0d973155393594c771))
+
+### [4.102.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.102.1...v4.102.2) (2024-11-30)
+
+
+### Bug Fixes
+
+* **table:** z-index issues with gux-truncate ([7ff69ec](https://github.com/MyPureCloud/genesys-spark/commit/7ff69ec52924b816ac8003144e3f7e1bd9dbecb0))
+
+### [4.102.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.102.0...v4.102.1) (2024-11-29)
+
+## [4.102.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.101.1...v4.102.0) (2024-11-28)
+
+
+### Features
+
+* **tokens:** dark mode pt2 ([176cc3e](https://github.com/MyPureCloud/genesys-spark/commit/176cc3e42de98b405064e6f6a8ab37a4182195eb))
+
+
+### Bug Fixes
+
+* **table-toolbar:** always show label when in the condensed display ([a1967e4](https://github.com/MyPureCloud/genesys-spark/commit/a1967e461d16bb8fba44ef025589f99d8a212da7))
+
 ### [4.101.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.101.0...v4.101.1) (2024-11-27)
 
 

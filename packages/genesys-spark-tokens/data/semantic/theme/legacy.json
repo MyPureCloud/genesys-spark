@@ -578,6 +578,12 @@
             "type": "color"
           }
         }
+      },
+      "search": {
+        "10": {
+          "value": "{color.haze.900}",
+          "type": "color"
+        }
       }
     },
     "border": {
@@ -705,6 +711,10 @@
         "emphasis": {
           "default": {
             "value": "{color.haze.700}",
+            "type": "color"
+          },
+          "mid": {
+            "value": "{color.azure_blue.300}",
             "type": "color"
           }
         }

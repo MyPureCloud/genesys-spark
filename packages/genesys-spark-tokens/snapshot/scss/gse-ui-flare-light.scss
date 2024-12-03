@@ -97,7 +97,7 @@
   --gse-ui-card-raised-border-style: solid;
   --gse-ui-card-raised-boxShadow-blur: 6px;
   --gse-ui-card-raised-boxShadow-spread: 1px;
-  --gse-ui-card-raised-boxShadow-color: rgba(35, 57, 92, 0.12);
+  --gse-ui-card-raised-boxShadow-color: #2a2a2e26;
   --gse-ui-card-raised-boxShadow-type: dropShadow;
   --gse-ui-card-raised-boxShadow-offsetX: 0;
   --gse-ui-card-raised-boxShadow-offsetY: 0;
@@ -110,7 +110,7 @@
   --gse-ui-tooltip-light-border-style: solid;
   --gse-ui-tooltip-light-backgroundColor: #ffffff;
   --gse-ui-tooltip-light-foregroundColor: #2a2a2e;
-  --gse-ui-tooltip-dark-border-color: #3e4044;
+  --gse-ui-tooltip-dark-border-color: #6a6d75;
   --gse-ui-tooltip-dark-border-width: 1px;
   --gse-ui-tooltip-dark-border-style: solid;
   --gse-ui-tooltip-dark-backgroundColor: #2a2a2e;
@@ -118,7 +118,7 @@
   --gse-ui-tooltip-dark-iconColor: #ffffff;
   --gse-ui-tooltip-boxShadow-blur: 6px;
   --gse-ui-tooltip-boxShadow-spread: 1px;
-  --gse-ui-tooltip-boxShadow-color: rgba(35, 57, 92, 0.12);
+  --gse-ui-tooltip-boxShadow-color: #2a2a2e26;
   --gse-ui-tooltip-boxShadow-type: dropShadow;
   --gse-ui-tooltip-boxShadow-offsetX: 0;
   --gse-ui-tooltip-boxShadow-offsetY: 0;
@@ -279,7 +279,7 @@
   --gse-ui-segmentedControl-button-end-borderRadius: 0 4px 4px 0;
   --gse-ui-segmentedControl-button-disabled-opacity: 0.5;
   --gse-ui-segmentedControl-button-disabled-backgroundColor: rgba(0, 0, 0, 0);
-  --gse-ui-segmentedControl-button-disabled-foregroundColor: #2143a2;
+  --gse-ui-segmentedControl-button-disabled-foregroundColor: #19327a;
   --gse-ui-segmentedControl-button-default-backgroundColor: rgba(0, 0, 0, 0);
   --gse-ui-segmentedControl-button-default-foregroundColor: #2143a2;
   --gse-ui-segmentedControl-button-hover-backgroundColor: #d5def7;
@@ -534,7 +534,7 @@
   --gse-ui-menu-border-style: solid;
   --gse-ui-menu-boxShadow-blur: 4px;
   --gse-ui-menu-boxShadow-spread: 1px;
-  --gse-ui-menu-boxShadow-color: rgba(35, 57, 92, 0.1);
+  --gse-ui-menu-boxShadow-color: #2a2a2e26;
   --gse-ui-menu-boxShadow-type: dropShadow;
   --gse-ui-menu-boxShadow-offsetX: 0;
   --gse-ui-menu-boxShadow-offsetY: 0;
@@ -641,7 +641,7 @@
   --gse-ui-calendarMenu-monthBody-gap: 2px;
   --gse-ui-calendarMenu-boxShadow-blur: 4px;
   --gse-ui-calendarMenu-boxShadow-spread: 1px;
-  --gse-ui-calendarMenu-boxShadow-color: rgba(35, 57, 92, 0.1);
+  --gse-ui-calendarMenu-boxShadow-color: #2a2a2e26;
   --gse-ui-calendarMenu-boxShadow-type: dropShadow;
   --gse-ui-calendarMenu-boxShadow-offsetX: 0;
   --gse-ui-calendarMenu-boxShadow-offsetY: 0;
@@ -738,7 +738,7 @@
   --gse-ui-fileUpload-fileCard-mainContainer-error-border-style: solid;
   --gse-ui-fileUpload-fileCard-boxShadow-blur: 4px;
   --gse-ui-fileUpload-fileCard-boxShadow-spread: 1px;
-  --gse-ui-fileUpload-fileCard-boxShadow-color: rgba(35, 57, 92, 0.1);
+  --gse-ui-fileUpload-fileCard-boxShadow-color: #2a2a2e26;
   --gse-ui-fileUpload-fileCard-boxShadow-type: dropShadow;
   --gse-ui-fileUpload-fileCard-boxShadow-offsetX: 0;
   --gse-ui-fileUpload-fileCard-boxShadow-offsetY: 0;
@@ -917,7 +917,7 @@
   --gse-ui-dataTableItems-header-multiselect-compact-selectedBar-width: 64px;
   --gse-ui-dataTableItems-header-selectedIndicatorColor: #5476d5;
   --gse-ui-dataTableItems-header-defaultBackgroundColor: #ffffff;
-  --gse-ui-dataTableItems-header-fixedBackgroundColor: #d5def7;
+  --gse-ui-dataTableItems-header-fixedBackgroundColor: #eff3ff;
   --gse-ui-dataTableItems-header-foregroundColor: #2a2a2e;
   --gse-ui-dataTableItems-header-sort-foregroundColor: #6a6d75;
   --gse-ui-dataTableItems-header-default-height: 40px;
@@ -1084,7 +1084,7 @@
   --gse-ui-avatar-media-initialsBackground-accent10: #ffc650;
   --gse-ui-avatar-media-initialsBackground-accent11: #ffb5a3;
   --gse-ui-avatar-media-initialsBackground-accent12: #992910;
-  --gse-ui-avatar-media-initialsBackground-overflowCount: #6a6d75;
+  --gse-ui-avatar-media-initialsBackground-overflowCount: #b2b7c4;
   --gse-ui-avatar-media-initialsBackground-add: #eff3ff;
   --gse-ui-avatar-media-initialsForeground-default: #2a2a2e;
   --gse-ui-avatar-media-initialsForeground-inverse: #ffffff;
@@ -1196,7 +1196,7 @@
   );
   --gse-ui-dataTableComposed-boxShadow-blur: 4px;
   --gse-ui-dataTableComposed-boxShadow-spread: 1px;
-  --gse-ui-dataTableComposed-boxShadow-color: rgba(35, 57, 92, 0.1);
+  --gse-ui-dataTableComposed-boxShadow-color: #2a2a2e26;
   --gse-ui-dataTableComposed-boxShadow-type: dropShadow;
   --gse-ui-dataTableComposed-boxShadow-offsetX: 0;
   --gse-ui-dataTableComposed-boxShadow-offsetY: 0;
@@ -1278,7 +1278,7 @@
   --gse-ui-advancedTabs-item-itemText-lineHeight: 18px;
   --gse-ui-advancedTabs-button-add-height: 45px;
   --gse-ui-advancedTabs-button-arrow-height: 48px;
-  --gse-ui-advancedTabs-set-backgroundColor: #ebedf5;
+  --gse-ui-advancedTabs-set-backgroundColor: #f5f6fa;
   --gse-ui-advancedTabs-set-standard-width: 920px;
   --gse-ui-toast-closeButtonColor: #4f5157;
   --gse-ui-toast-success-backgroundColor: #ffffff;
@@ -1312,7 +1312,7 @@
   --gse-ui-toast-borderRadius: 4px;
   --gse-ui-toast-boxShadow-blur: 4px;
   --gse-ui-toast-boxShadow-spread: 1px;
-  --gse-ui-toast-boxShadow-color: rgba(35, 57, 92, 0.1);
+  --gse-ui-toast-boxShadow-color: #2a2a2e26;
   --gse-ui-toast-boxShadow-type: dropShadow;
   --gse-ui-toast-boxShadow-offsetX: 0;
   --gse-ui-toast-boxShadow-offsetY: 0;
@@ -1337,7 +1337,7 @@
   --gse-ui-modal-buttonBar-gap: 8px;
   --gse-ui-modal-boxShadow-blur: 8px;
   --gse-ui-modal-boxShadow-spread: 1px;
-  --gse-ui-modal-boxShadow-color: rgba(35, 57, 92, 0.15);
+  --gse-ui-modal-boxShadow-color: #2a2a2e26;
   --gse-ui-modal-boxShadow-type: dropShadow;
   --gse-ui-modal-boxShadow-offsetX: 0;
   --gse-ui-modal-boxShadow-offsetY: 0;
@@ -1348,7 +1348,7 @@
   --gse-ui-popover-borderRadius: 4px;
   --gse-ui-popover-boxShadow-blur: 8px;
   --gse-ui-popover-boxShadow-spread: 1px;
-  --gse-ui-popover-boxShadow-color: rgba(35, 57, 92, 0.15);
+  --gse-ui-popover-boxShadow-color: #2a2a2e26;
   --gse-ui-popover-boxShadow-type: dropShadow;
   --gse-ui-popover-boxShadow-offsetX: 0;
   --gse-ui-popover-boxShadow-offsetY: 0;
@@ -1515,6 +1515,7 @@
   --gse-ui-rte-codeBlock-sm-regular-fontSize: 12px;
   --gse-ui-rte-codeBlock-sm-regular-lineHeight: 16px;
   --gse-ui-rte-codeBlock-sm-regular-fontWeight: 400;
+  --gse-ui-rte-codeBlock-borderRadius: 4px;
   --gse-ui-rte-quoteBlock-margin: 0 24px;
   --gse-ui-rte-quoteBlock-container-gap: 8px;
   --gse-ui-rte-quoteBlock-foregroundColor: #4f5157;
@@ -1522,8 +1523,8 @@
   --gse-ui-rte-quoteBlock-md-regular-fontWeight: 400;
   --gse-ui-rte-quoteBlock-md-regular-fontSize: 14px;
   --gse-ui-rte-quoteBlock-md-regular-lineHeight: 20px;
-  --gse-ui-rte-quoteBlock-borderLeft-color: #6a6d75;
-  --gse-ui-rte-quoteBlock-borderLeft-width: 4px;
+  --gse-ui-rte-quoteBlock-borderLeft-color: #829ce5;
+  --gse-ui-rte-quoteBlock-borderLeft-width: 2px;
   --gse-ui-rte-heading_1-foregroundColor: #4f5157;
   --gse-ui-rte-heading_1-semiBold-fontFamily: Urbanist;
   --gse-ui-rte-heading_1-semiBold-fontWeight: 600;
@@ -1544,28 +1545,30 @@
   --gse-ui-rte-paragraph-md-regular-fontWeight: 400;
   --gse-ui-rte-paragraph-md-regular-fontSize: 14px;
   --gse-ui-rte-paragraph-md-regular-lineHeight: 20px;
-  --gse-ui-rte-divider-width: 2px;
+  --gse-ui-rte-divider-width: 1px;
   --gse-ui-rte-divider-height: 20px;
   --gse-ui-rte-innerContainer-gap: 16px;
   --gse-ui-rte-contentContainer-gap: 16px;
   --gse-ui-rte-padding: 8px 16px 16px;
   --gse-ui-rte-menuButton-height: 24px;
-  --gse-ui-rte-colorSwatch-tomato-default: #ff451a;
+  --gse-ui-rte-colorSwatch-orange-default: #ff8f76;
   --gse-ui-rte-colorSwatch-coral-default: #ffbec9;
   --gse-ui-rte-colorSwatch-pear-default: #c6dd98;
   --gse-ui-rte-colorSwatch-mango-default: #ffd173;
   --gse-ui-rte-colorSwatch-raspberry-default: #f5bfeb;
-  --gse-ui-rte-colorSwatch-blueberry-default: #adbff0;
+  --gse-ui-rte-colorSwatch-azure-default: #adbff0;
   --gse-ui-rte-colorSwatch-mineral-default: #bcd6f0;
-  --gse-ui-rte-colorSwatch-islandaqua-default: #81cbe5;
+  --gse-ui-rte-colorSwatch-island-default: #81cbe5;
   --gse-ui-rte-colorSwatch-width: 20px;
   --gse-ui-rte-colorSwatch-height: 20px;
   --gse-ui-rte-colorSwatch-focusBorder-color: #5476d5;
   --gse-ui-rte-colorSwatch-focusBorder-width: 2px;
   --gse-ui-rte-colorSwatch-focusBorder-style: solid;
-  --gse-ui-rte-colorPalette-gap: 4px;
+  --gse-ui-rte-colorPalette-gap: 8px;
+  --gse-ui-rte-colorPalette-padding: 4px 12px;
+  --gse-ui-rte-toolbarBtnGroup-gap: 4px;
   --gse-ui-rte-toolbar-divider-color: #c1c6d4;
-  --gse-ui-rte-toolbar-divider-padding: 0 4px;
+  --gse-ui-rte-toolbar-divider-margin: 6px 4px;
   --gse-ui-rte-container-borderRadius: 4px;
   --gse-ui-rte-mainContainer-default-border-color: #a3a8b5;
   --gse-ui-rte-mainContainer-default-border-width: 1px;
@@ -1613,4 +1616,8 @@
   --gse-ui-sidePanel-divider-color: #c1c6d4;
   --gse-ui-sidePanel-divider-width: 1px;
   --gse-ui-sidePanel-divider-style: solid;
+  --gse-ui-rte-rteMenu-backgroundColor: #ffffff;
+  --gse-ui-rte-rteMenu-border-color: #c1c6d4;
+  --gse-ui-rte-rteMenu-border-width: 1px;
+  --gse-ui-rte-rteMenu-border-style: solid;
 }

@@ -32,14 +32,14 @@
         "active": "#440a15"
       },
       "custom": {
-        "tomato": "#ff451a",
+        "orange": "#ff8f76",
         "coral": "#ffbec9",
         "pear": "#c6dd98",
         "mango": "#ffd173",
         "raspberry": "#f5bfeb",
-        "blueberry": "#adbff0",
+        "azure": "#adbff0",
         "mineral": "#bcd6f0",
-        "islandaqua": "#81cbe5"
+        "island": "#81cbe5"
       }
     },
     "overlay": {
@@ -143,6 +143,12 @@
       },
       "text_input": {
         "track": "#ffffff"
+      },
+      "search": {
+        "matching_text": {
+          "first_level": "#81cbe5",
+          "subsequent_level": "#9fd6ea"
+        }
       }
     }
   },
@@ -253,6 +259,9 @@
         "required_accent": "#b51b37",
         "optional_accent": "#4f5157",
         "tooltip": "#4f5157"
+      },
+      "search": {
+        "matching_text": "#2a2a2e"
       }
     }
   },
@@ -271,10 +280,11 @@
         "data_table": {
           "default": "#cad1e1"
         },
-        "low_emphasis": "#6a6d75"
+        "low_emphasis": "#6a6d75",
+        "mid_emphasis": "#829ce5"
       },
       "high_constrast": {
-        "default": "#4f5157",
+        "default": "#6a6d75",
         "enabled": "#2143a2",
         "hover": "#102251",
         "active": "#19327a"
@@ -309,5 +319,40 @@
         "error": "#e22245"
       }
     }
+  },
+  "container": {
+    "lg": {
+      "box_shadow": {
+        "blur": "8px",
+        "spread": "1px",
+        "color": "#2a2a2e26",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      }
+    },
+    "md": {
+      "box_shadow": {
+        "blur": "6px",
+        "spread": "1px",
+        "color": "#2a2a2e26",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      }
+    },
+    "sm": {
+      "box_shadow": {
+        "blur": "4px",
+        "spread": "1px",
+        "color": "#2a2a2e26",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      }
+    }
+  },
+  "effects": {
+    "box_shadow": "#2a2a2e26"
   }
 }

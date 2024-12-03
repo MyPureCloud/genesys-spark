@@ -7,9 +7,9 @@
         "active": "#102251"
       },
       "secondary": {
-        "default": "#040814",
-        "hover": "#102251",
-        "active": "#081129"
+        "default": "#3e4044",
+        "hover": "#19327a",
+        "active": "#102251"
       },
       "tertiary": {
         "default": "rgba(0, 0, 0, 0)",
@@ -18,13 +18,13 @@
       },
       "ghost": {
         "default": "rgba(0, 0, 0, 0)",
-        "hover": "#102251",
-        "active": "#081129"
+        "hover": "#19327a",
+        "active": "#102251"
       },
       "subtle": {
         "default": "#1e1e21",
         "hover": "#102251",
-        "active": "#081129"
+        "active": "#19327a"
       },
       "danger": {
         "default": "#881429",
@@ -32,14 +32,14 @@
         "active": "#440a15"
       },
       "custom": {
-        "tomato": "#992910",
+        "orange": "#992910",
         "coral": "#662530",
         "pear": "#404f22",
         "mango": "#664f20",
         "raspberry": "#5c2652",
-        "blueberry": "#102251",
+        "azure": "#102251",
         "mineral": "#233d57",
-        "islandaqua": "#003447"
+        "island": "#003447"
       }
     },
     "overlay": {
@@ -51,17 +51,17 @@
       "page": {
         "default": "#1e1e21",
         "tonal_subtle": "#2a2a2e",
-        "tonal_medium": "#3e4044",
+        "tonal_medium": "#2a2a2e",
         "tonal_high": "#102251"
       },
       "elevated": {
         "default": "#1e1e21",
-        "hover": "#040814",
-        "active": "#081129",
+        "hover": "#3e4044",
+        "active": "#19327a",
         "error": "#440a15"
       },
       "high_constrast": {
-        "default": "#cad1e1",
+        "default": "#ffffff",
         "hover": "#d5def7",
         "active": "#adbff0"
       }
@@ -104,7 +104,7 @@
           "accent_8": "#89387b",
           "accent_9": "#993747",
           "accent_10": "#992910",
-          "accent_11": "#cc9e40",
+          "accent_11": "#664f20",
           "accent_12": "#003447",
           "accent_13": "#345b82"
         },
@@ -124,8 +124,8 @@
         }
       },
       "progress_and_loading": {
-        "default": "#102251",
-        "progressed": "#2143a2"
+        "default": "#3e4044",
+        "progressed": "#5476d5"
       },
       "status": {
         "available": "#09b581",
@@ -139,10 +139,16 @@
     },
     "form_control": {
       "click_input": {
-        "track": "#4f5157"
+        "track": "#848891"
       },
       "text_input": {
         "track": "#1e1e21"
+      },
+      "search": {
+        "matching_text": {
+          "first_level": "#81cbe5",
+          "subsequent_level": "#9fd6ea"
+        }
       }
     }
   },
@@ -243,7 +249,7 @@
       },
       "click_input": {
         "enabled": "#848891",
-        "selected": "#2143a2",
+        "selected": "#5476d5",
         "hover": "#829ce5",
         "active": "#adbff0",
         "error": "#e84e6a"
@@ -253,6 +259,9 @@
         "required_accent": "#e84e6a",
         "optional_accent": "#b2b7c4",
         "tooltip": "#b2b7c4"
+      },
+      "search": {
+        "matching_text": "#2a2a2e"
       }
     }
   },
@@ -262,21 +271,22 @@
       "divider": "#4f5157",
       "edges": {
         "default": "#4f5157",
-        "hover": "#5476d5",
+        "hover": "#2954cb",
         "error": "#881429",
         "enabled": "#2143a2",
-        "active": "#102251",
+        "active": "#5476d5",
         "high_emphasis": "#cad1e1",
         "data_table": {
           "default": "#3e4044"
         },
-        "low_emphasis": "#6a6d75"
+        "low_emphasis": "#6a6d75",
+        "mid_emphasis": "#829ce5"
       },
       "high_constrast": {
         "default": "#c1c6d4",
         "enabled": "#2143a2",
         "hover": "#19327a",
-        "active": "#102251"
+        "active": "#5476d5"
       }
     },
     "system": {
@@ -305,8 +315,43 @@
         "default": "#848891",
         "hover": "#829ce5",
         "active": "#adbff0",
-        "error": "#881429"
+        "error": "#e22245"
       }
     }
+  },
+  "container": {
+    "lg": {
+      "box_shadow": {
+        "blur": "8px",
+        "spread": "1px",
+        "color": "#000000b3",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      }
+    },
+    "md": {
+      "box_shadow": {
+        "blur": "6px",
+        "spread": "1px",
+        "color": "#000000b3",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      }
+    },
+    "sm": {
+      "box_shadow": {
+        "blur": "4px",
+        "spread": "1px",
+        "color": "#000000b3",
+        "type": "dropShadow",
+        "offsetX": "0",
+        "offsetY": "0"
+      }
+    }
+  },
+  "effects": {
+    "box_shadow": "#000000b3"
   }
 }

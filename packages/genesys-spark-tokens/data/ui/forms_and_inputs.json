@@ -768,7 +768,7 @@
       }
     },
     "box_shadow": {
-      "value": "{data_table_composed.box_shadow}",
+      "value": "{container.sm.box_shadow}",
       "type": "boxShadow"
     }
   },
@@ -922,7 +922,7 @@
         "border": {
           "value": {
             "width": "{form_control.click_input.handle.border_width}",
-            "color": "{border.container.edges.enabled}",
+            "color": "{toggle.handle.foreground_color}",
             "style": "solid"
           },
           "type": "border"
@@ -932,7 +932,7 @@
         "border": {
           "value": {
             "width": "{form_control.click_input.handle.border_width}",
-            "color": "{border.container.edges.enabled}",
+            "color": "{toggle.handle.foreground_color}",
             "style": "solid"
           },
           "type": "border"
@@ -1163,7 +1163,7 @@
         }
       },
       "box_shadow": {
-        "value": "{elevation.low}",
+        "value": "{container.sm.box_shadow}",
         "type": "boxShadow",
         "description": "The shadow we used for small-sized components like tooltips."
       },
@@ -1323,25 +1323,25 @@
       },
       "default": {
         "background_color": {
-          "value": "{background.interactive.primary.default}",
+          "value": "{foreground.form_control.click_input.selected}",
           "type": "color"
         }
       },
       "hover": {
         "background_color": {
-          "value": "{background.interactive.primary.hover}",
+          "value": "{foreground.form_control.click_input.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "{background.interactive.primary.active}",
+          "value": "{foreground.form_control.click_input.active}",
           "type": "color"
         }
       },
       "disabled": {
         "background_color": {
-          "value": "{background.interactive.primary.default}",
+          "value": "{foreground.form_control.click_input.selected}",
           "type": "color"
         }
       },
@@ -1369,7 +1369,7 @@
     "bar": {
       "selected": {
         "background_color": {
-          "value": "{button.primary.default.background_color}",
+          "value": "{foreground.form_control.click_input.selected}",
           "type": "color"
         }
       },

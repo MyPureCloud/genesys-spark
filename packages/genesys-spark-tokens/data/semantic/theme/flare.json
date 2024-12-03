@@ -59,7 +59,7 @@
             "type": "color"
           },
           "40d": {
-            "value": "{color.azure_blue.1000}",
+            "value": "{color.haze.850}",
             "type": "color"
           },
           "50d": {
@@ -67,7 +67,7 @@
             "type": "color"
           },
           "60d": {
-            "value": "{color.azure_blue.950}",
+            "value": "{color.azure_blue.700}",
             "type": "color"
           }
         },
@@ -133,7 +133,7 @@
             "type": "color"
           },
           "10d": {
-            "value": "{color.haze.200}",
+            "value": "{color.white}",
             "type": "color"
           },
           "20d": {
@@ -545,7 +545,7 @@
             "type": "color"
           },
           "110d": {
-            "value": "{color.mango.700}",
+            "value": "{color.mango.900}",
             "type": "color"
           },
           "120d": {
@@ -657,7 +657,7 @@
         },
         "color_swatch": {
           "10": {
-            "value": "{color.genesys_orange.500}",
+            "value": "{color.genesys_orange.300}",
             "type": "color",
             "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
           },
@@ -1047,7 +1047,7 @@
             "type": "color"
           },
           "10d": {
-            "value": "{color.azure_blue.600}",
+            "value": "{color.azure_blue.400}",
             "type": "color"
           },
           "20d": {
@@ -1062,6 +1062,12 @@
             "value": "{color.haze.600}",
             "type": "color"
           }
+        }
+      },
+      "search": {
+        "10": {
+          "value": "{color.haze.900}",
+          "type": "color"
         }
       }
     },
@@ -1167,7 +1173,7 @@
             "type": "color"
           },
           "10d": {
-            "value": "{color.azure_blue.400}",
+            "value": "{color.azure_blue.500}",
             "type": "color"
           },
           "20d": {
@@ -1181,7 +1187,7 @@
             "type": "color"
           },
           "10d": {
-            "value": "{color.azure_blue.800}",
+            "value": "{color.azure_blue.400}",
             "type": "color"
           }
         },
@@ -1190,8 +1196,8 @@
             "value": "{color.haze.700}",
             "type": "color"
           },
-          "defaultd": {
-            "value": "{color.haze.400}",
+          "mid": {
+            "value": "{color.azure_blue.300}",
             "type": "color"
           }
         }
@@ -1251,7 +1257,7 @@
             "type": "color"
           },
           "20d": {
-            "value": "{color.pepper.700}",
+            "value": "{color.pepper.500}",
             "type": "color"
           }
         }
