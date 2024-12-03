@@ -23,17 +23,17 @@
     var(--gse-ui-sidePanel-boxShadow-color);
 
   &.gux-side-panel-small {
-    inline-size: 100%;
+    inline-size: var(--gse-ui-sidePanel-widthSize-sm);
     max-inline-size: var(--gse-ui-sidePanel-widthSize-sm);
   }
 
   &.gux-side-panel-medium {
-    inline-size: 100%;
+    inline-size: var(--gse-ui-sidePanel-widthSize-md);
     max-inline-size: var(--gse-ui-sidePanel-widthSize-md);
   }
 
   &.gux-side-panel-large {
-    inline-size: 100%;
+    inline-size: var(--gse-ui-sidePanel-widthSize-lg);
     max-inline-size: var(--gse-ui-sidePanel-widthSize-lg);
   }
 
@@ -44,15 +44,19 @@
       var(--gse-ui-sidePanel-divider-style)
       var(--gse-ui-sidePanel-divider-color);
 
-    /* Take another look at this in COMUI-3250 */
     & gux-dismiss-button {
       position: absolute;
-      inset-block-start: -12px;
+      inset-block-start: calc(
+        var(--gse-ui-sidePanel-header-dismiss-padding) - var(
+            --gse-ui-modal-dismissButton-paddingTop
+          )
+      );
       inset-inline-end: calc(
         var(--gse-ui-modal-dismissButton-paddingRight) - var(
             --gse-ui-sidePanel-header-dismiss-padding
           )
       );
+      display: block;
     }
   }
 

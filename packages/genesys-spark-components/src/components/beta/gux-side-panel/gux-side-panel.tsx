@@ -61,7 +61,10 @@ export class GuxSidePanel {
         }}
       >
         <header>
-          <gux-dismiss-button onClick={this.onDismissHandler.bind(this)} />
+          <gux-dismiss-button
+            position="inherit"
+            onClick={this.onDismissHandler.bind(this)}
+          />
           <slot name="heading" />
         </header>
         {this.renderDescription()}
