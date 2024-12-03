@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.103.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.102.2...v4.103.0) (2024-12-03)
+
+
+### Features
+
+* **icon:** new icons and genesys icon update ([#736](https://github.com/MyPureCloud/genesys-spark/issues/736)) ([7ead8d0](https://github.com/MyPureCloud/genesys-spark/commit/7ead8d0fa558ae7d5d306e73c7597433a192b060))
+
+
+### Bug Fixes
+
+* **button-multi:** fixed accessibility warning ([1d8506e](https://github.com/MyPureCloud/genesys-spark/commit/1d8506e37840be789b3d0d0d973155393594c771))
+
 ### [4.102.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.102.1...v4.102.2) (2024-11-30)
 
 
