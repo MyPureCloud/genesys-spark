@@ -1585,11 +1585,15 @@
   --gse-ui-rte-mainContainer-focus-border-color: #5476d5;
   --gse-ui-rte-mainContainer-focus-border-width: 2px;
   --gse-ui-rte-mainContainer-focus-border-style: solid;
+  --gse-ui-rte-rteMenu-backgroundColor: #1e1e21;
+  --gse-ui-rte-rteMenu-border-color: #4f5157;
+  --gse-ui-rte-rteMenu-border-width: 1px;
+  --gse-ui-rte-rteMenu-border-style: solid;
   --gse-ui-sidePanel-backgroundColor: #1e1e21;
   --gse-ui-sidePanel-headerColor: #ffffff;
   --gse-ui-sidePanel-boxShadow-blur: 6px;
   --gse-ui-sidePanel-boxShadow-spread: 1px;
-  --gse-ui-sidePanel-boxShadow-color: rgba(35, 57, 92, 0.12);
+  --gse-ui-sidePanel-boxShadow-color: #000000b3;
   --gse-ui-sidePanel-boxShadow-type: dropShadow;
   --gse-ui-sidePanel-boxShadow-offsetX: 0;
   --gse-ui-sidePanel-boxShadow-offsetY: 0;
@@ -1616,8 +1620,4 @@
   --gse-ui-sidePanel-divider-color: #4f5157;
   --gse-ui-sidePanel-divider-width: 1px;
   --gse-ui-sidePanel-divider-style: solid;
-  --gse-ui-rte-rteMenu-backgroundColor: #1e1e21;
-  --gse-ui-rte-rteMenu-border-color: #4f5157;
-  --gse-ui-rte-rteMenu-border-width: 1px;
-  --gse-ui-rte-rteMenu-border-style: solid;
 }

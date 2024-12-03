@@ -14,6 +14,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  inline-size: 100vw;
   block-size: inherit;
   background-color: var(--gse-ui-sidePanel-backgroundColor);
   box-shadow: var(--gse-ui-sidePanel-boxShadow-offsetX)
@@ -23,17 +24,14 @@
     var(--gse-ui-sidePanel-boxShadow-color);
 
   &.gux-side-panel-small {
-    inline-size: var(--gse-ui-sidePanel-widthSize-sm);
     max-inline-size: var(--gse-ui-sidePanel-widthSize-sm);
   }
 
   &.gux-side-panel-medium {
-    inline-size: var(--gse-ui-sidePanel-widthSize-md);
     max-inline-size: var(--gse-ui-sidePanel-widthSize-md);
   }
 
   &.gux-side-panel-large {
-    inline-size: var(--gse-ui-sidePanel-widthSize-lg);
     max-inline-size: var(--gse-ui-sidePanel-widthSize-lg);
   }
 

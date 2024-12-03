@@ -4,6 +4,7 @@ This component is meant for use in other components as a dismiss button.
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property   | Attribute  | Description | Type                      | Default      |
@@ -11,20 +12,21 @@ This component is meant for use in other components as a dismiss button.
 | `position` | `position` |             | `"absolute" \| "inherit"` | `'absolute'` |
 | `size`     | `size`     |             | `"medium" \| "small"`     | `'medium'`   |
 
+
 ## Dependencies
 
 ### Used by
 
-- [gux-modal](../gux-modal)
-- [gux-modal-legacy](../../legacy/gux-modal-legacy)
-- [gux-notification-toast-legacy](../../legacy/gux-notification-toast-legacy)
-- [gux-popover](../gux-popover)
-- [gux-popover-beta](../../beta/gux-popover-beta)
-- [gux-popover-list](../gux-popover-list)
-- [gux-popover-list-beta](../../beta/gux-popover-list-beta)
-- [gux-side-panel-beta](../../beta/gux-side-panel)
-- [gux-simple-toast-legacy](../../legacy/gux-simple-toast-legacy)
-- [gux-toast](../gux-toast)
+ - [gux-modal](../gux-modal)
+ - [gux-modal-legacy](../../legacy/gux-modal-legacy)
+ - [gux-notification-toast-legacy](../../legacy/gux-notification-toast-legacy)
+ - [gux-popover](../gux-popover)
+ - [gux-popover-beta](../../beta/gux-popover-beta)
+ - [gux-popover-list](../gux-popover-list)
+ - [gux-popover-list-beta](../../beta/gux-popover-list-beta)
+ - [gux-side-panel-beta](../../beta/gux-side-panel)
+ - [gux-simple-toast-legacy](../../legacy/gux-simple-toast-legacy)
+ - [gux-toast](../gux-toast)
 
 ### Depends on
 
@@ -32,7 +34,6 @@ This component is meant for use in other components as a dismiss button.
 - [gux-icon](../gux-icon)
 
 ### Graph
-
 ```mermaid
 graph TD;
   gux-dismiss-button --> gux-button-slot
@@ -43,13 +44,13 @@ graph TD;
   gux-popover --> gux-dismiss-button
   gux-popover-beta --> gux-dismiss-button
   gux-popover-list --> gux-dismiss-button
-  gux-side-panel-beta --> gux-dismiss-button
   gux-popover-list-beta --> gux-dismiss-button
+  gux-side-panel-beta --> gux-dismiss-button
   gux-simple-toast-legacy --> gux-dismiss-button
   gux-toast --> gux-dismiss-button
   style gux-dismiss-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

@@ -3227,7 +3227,7 @@
     "box_shadow": {
       "blur": "6px",
       "spread": "1px",
-      "color": "rgba(35, 57, 92, 0.12)",
+      "color": "#000000b3",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
