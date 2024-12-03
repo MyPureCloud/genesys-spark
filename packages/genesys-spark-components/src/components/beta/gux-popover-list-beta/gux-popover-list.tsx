@@ -207,9 +207,6 @@ export class GuxPopoverList {
 
   connectedCallback(): void {
     trackComponent(this.root, { variant: this.position });
-  }
-
-  componentWillLoad(): void {
     this.listElement = this.root.querySelector('gux-list');
   }
 
