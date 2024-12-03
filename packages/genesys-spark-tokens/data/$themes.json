@@ -1544,7 +1544,6 @@
       "form_control.helper.helper_text": "S:7d8fc2584f291f7cd5ac92553d467a935a80ec90,",
       "copy_to_clipboard.label.text": "S:7c3a305e7fd0db3f7020ecfc094b0c841c56491b,",
       "tooltip.text": "S:4748aabec034934edd5d0a76f44d611b31e426c7,",
-      "tag.text": "S:1d3f8a03d0e21141301f73aa193ef19a81db1edf,",
       "badge.text": "S:0373ab61c1d1aaee57e2b3a7e36d4b7ef782d18c,",
       "alert.text": "S:42158214986f4508fe4ace2ea49f28948bc9ff92,",
       "alert.emphasis_text": "S:99ba98c9010250bc101ef4f8cbff1539559cee3a,",
@@ -1596,7 +1595,8 @@
       "file_upload.file_card.box_shadow": "S:bed2f3a6179d9517e8ad0c7831d7935391595bd1,",
       "file_upload.file_card.file_name.text": "S:67f9399bf792ddcfa02f79ac72feb34688a42f1d,",
       "file_upload.file_card.error.text": "S:4968bd3593c24ae3d7aa8a140e7d2033216e540b,",
-      "file_upload.drag_and_drop.drop_zone.text": "S:254a83f91130074262afac21b43c45bb5f0f33d0,"
+      "file_upload.drag_and_drop.drop_zone.text": "S:254a83f91130074262afac21b43c45bb5f0f33d0,",
+      "tag.text_large": "S:1d3f8a03d0e21141301f73aa193ef19a81db1edf,"
     },
     "selectedTokenSets": {
       "ui/unordered": "enabled",
