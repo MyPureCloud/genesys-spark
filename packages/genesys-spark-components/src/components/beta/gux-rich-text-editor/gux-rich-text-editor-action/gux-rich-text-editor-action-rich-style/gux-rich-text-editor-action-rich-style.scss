@@ -1,0 +1,26 @@
+@use '~genesys-spark/dist/scss/mixins.scss';
+
+:host {
+  display: block;
+}
+
+gux-button-slot {
+  button {
+    display: flex;
+    flex-direction: row;
+    gap: 4px; // Token Required : COMUI-3190
+    align-items: center;
+    justify-content: center;
+
+    &.gux-is-pressed {
+      color: var(--gse-ui-button-ghost-active-foregroundColor);
+      background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+    }
+  }
+}
+
+.gux-list-container {
+  inline-size: 214px; // Token Required : COMUI-3190
+
+  @include mixins.gux-menu-container;
+}
