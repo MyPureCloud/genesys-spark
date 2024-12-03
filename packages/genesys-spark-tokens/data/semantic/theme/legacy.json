@@ -712,6 +712,10 @@
           "default": {
             "value": "{color.haze.700}",
             "type": "color"
+          },
+          "mid": {
+            "value": "{color.azure_blue.300}",
+            "type": "color"
           }
         }
       }

@@ -12,7 +12,8 @@
 
   blockquote {
     margin: var(--gse-ui-rte-quoteBlock-margin);
-    border-inline-start: 2px solid #a8b4e2; // Token Required : COMUI-3190
+    border-inline-start: var(--gse-ui-rte-quoteBlock-borderLeft-width) solid
+      var(--gse-ui-rte-quoteBlock-borderLeft-color);
 
     p {
       margin-inline-start: var(--gse-ui-rte-quoteBlock-container-gap);
@@ -35,7 +36,7 @@
     background-color: var(--gse-ui-rte-codeBlock-backgroundColor);
     border: var(--gse-ui-rte-codeBlock-border-width)
       var(--gse-ui-rte-codeBlock-border-style)
-      var(--gse-ui-rte-codeBlock-border-color);
-    border-radius: 4px; // Token Required : COMUI-3190
+      (--gse-ui-rte-codeblock-border-color);
+    border-radius: var(--gse-ui-rte-codeBlock-borderRadius);
   }
 }

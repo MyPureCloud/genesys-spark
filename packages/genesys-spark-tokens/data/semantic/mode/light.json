@@ -104,7 +104,7 @@
         }
       },
       "custom": {
-        "tomato": {
+        "orange": {
           "value": "{theme.background.custom_accents.color_swatch.10}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
@@ -129,7 +129,7 @@
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         },
-        "blueberry": {
+        "azure": {
           "value": "{theme.background.custom_accents.color_swatch.60}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
@@ -139,7 +139,7 @@
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         },
-        "islandaqua": {
+        "island": {
           "value": "{theme.background.custom_accents.color_swatch.80}",
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
@@ -912,6 +912,10 @@
         },
         "low_emphasis": {
           "value": "{theme.border.edges.emphasis.default}",
+          "type": "color"
+        },
+        "mid_emphasis": {
+          "value": "{theme.border.edges.emphasis.mid}",
           "type": "color"
         }
       },
