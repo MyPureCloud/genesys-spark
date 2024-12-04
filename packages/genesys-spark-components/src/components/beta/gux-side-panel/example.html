@@ -1,0 +1,145 @@
+<div id="side-panel-wrapper">
+  <div id="content">
+    <h1>Side Panel</h1>
+
+    <p>
+      You can listen to the 'sidePanelDismiss' event on the
+      `gux-side-panel-beta` element to know when the side panel is to be
+      hidden/removed.
+    </p>
+
+    <gux-button accent="secondary" id="toggle-small">Toggle small</gux-button>
+    <gux-button accent="secondary" id="toggle-medium">Toggle medium</gux-button>
+
+    <h2>Modal Side Panel</h2>
+
+    <p>You can show/hide the `gux-modal-side-panel` via two mechanisms:</p>
+    <ol>
+      <li>
+        Use the `showModal()` and `close()` methods on a `gux-modal-side-panel`
+        element
+      </li>
+      <li>Set the `open` property or attribute on `gux-modal-side-panel`</li>
+    </ol>
+
+    <gux-modal-side-panel-beta id="modal-example">
+      <gux-side-panel-heading
+        slot="heading"
+        level="3"
+        icon-name="fa/diamond-regular"
+      >
+        Side panel title
+      </gux-side-panel-heading>
+      <h2 slot="description">Pellentesque habitant morbi tristique sen</h2>
+      <div slot="content">
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+        leo.
+      </div>
+      <div slot="footer">
+        <gux-cta-group>
+          <gux-button slot="primary">Primary</gux-button>
+          <gux-button slot="secondary">Secondary</gux-button>
+          <gux-button
+            slot="dismiss"
+            onclick="document.getElementById('modal-example').close()"
+            >Dismiss</gux-button
+          >
+        </gux-cta-group>
+      </div>
+    </gux-modal-side-panel-beta>
+
+    <gux-button accent="secondary" id="modal-small">Show small</gux-button>
+    <gux-button accent="secondary" id="modal-medium">Show medium</gux-button>
+    <gux-button accent="secondary" id="modal-large">Show large</gux-button>
+  </div>
+
+  <gux-side-panel-beta size="medium" id="dynamic-example">
+    <gux-side-panel-heading
+      slot="heading"
+      level="3"
+      icon-name="fa/diamond-regular"
+    >
+      Side panel title
+    </gux-side-panel-heading>
+    <h2 slot="description">Pellentesque habitant morbi tristique sen</h2>
+    <div slot="content">
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </div>
+    <div slot="footer">
+      <gux-cta-group>
+        <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+        <gux-button slot="secondary" onclick="notify(event)"
+          >Secondary</gux-button
+        >
+        <gux-button
+          slot="dismiss"
+          onclick="document.getElementById('dynamic-example').style.display = 'none'"
+          >Dismiss</gux-button
+        >
+      </gux-cta-group>
+    </div>
+  </gux-side-panel-beta>
+</div>
+
+<style
+  onload="(function () {
+  const modalSidePanel = document.getElementById('modal-example');
+  const dynamicSidePanel = document.getElementById('dynamic-example');
+  
+  document.getElementById('modal-small').addEventListener('click', function () {
+    modalSidePanel.setAttribute('size', 'small');
+    modalSidePanel.showModal();
+  });
+
+  document.getElementById('modal-medium').addEventListener('click', function () {
+    modalSidePanel.setAttribute('size', 'medium');
+    modalSidePanel.showModal();
+  });
+
+  document.getElementById('modal-large').addEventListener('click', function () {
+    modalSidePanel.setAttribute('size', 'large');
+    modalSidePanel.showModal();
+  });
+
+  document.getElementById('toggle-small').addEventListener('click', function () {
+    dynamicSidePanel.size = 'small';
+    dynamicSidePanel.style.display = 'block';
+  });
+
+  document.getElementById('toggle-medium').addEventListener('click', function () {
+    dynamicSidePanel.size = 'medium';
+    dynamicSidePanel.style.display = 'block';
+  });
+
+  dynamicSidePanel.addEventListener('sidePanelDismiss', event => {
+    dynamicSidePanel.style.display = dynamicSidePanel.style.display === 'none' ? 'block' : 'none';
+  });
+  modalSidePanel.addEventListener('modalSidePanelDismiss', event => notify(event));
+})()"
+>
+  .preview {
+    padding: 0 !important;
+    overflow-x: hidden;
+  }
+
+  #side-panel-wrapper {
+    display: flex;
+    block-size: 100%;
+  }
+
+  #content {
+    flex: 1 1 auto;
+    padding-block: 27px;
+    padding-inline: 30px;
+  }
+
+  gux-side-panel-beta {
+    flex: 0 1 auto;
+  }
+</style>

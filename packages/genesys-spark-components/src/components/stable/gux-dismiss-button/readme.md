@@ -24,6 +24,7 @@ This component is meant for use in other components as a dismiss button.
  - [gux-popover-beta](../../beta/gux-popover-beta)
  - [gux-popover-list](../gux-popover-list)
  - [gux-popover-list-beta](../../beta/gux-popover-list-beta)
+ - [gux-side-panel-beta](../../beta/gux-side-panel)
  - [gux-simple-toast-legacy](../../legacy/gux-simple-toast-legacy)
  - [gux-toast](../gux-toast)
 
@@ -44,6 +45,7 @@ graph TD;
   gux-popover-beta --> gux-dismiss-button
   gux-popover-list --> gux-dismiss-button
   gux-popover-list-beta --> gux-dismiss-button
+  gux-side-panel-beta --> gux-dismiss-button
   gux-simple-toast-legacy --> gux-dismiss-button
   gux-toast --> gux-dismiss-button
   style gux-dismiss-button fill:#f9f,stroke:#333,stroke-width:4px

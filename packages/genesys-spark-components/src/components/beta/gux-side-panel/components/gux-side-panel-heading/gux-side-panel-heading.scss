@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: flex;
+  flex: 0 0 auto;
+  gap: var(--gse-ui-sidePanel-header-iconGap);
+  align-items: center;
+  inline-size: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: var(--gse-ui-sidePanel-heading-text-fontFamily);
+  font-size: var(--gse-ui-sidePanel-heading-text-fontSize);
+  font-weight: var(--gse-ui-sidePanel-heading-text-fontWeight);
+  line-height: var(--gse-ui-sidePanel-heading-text-lineHeight);
+  color: var(--gse-ui-sidePanel-headerColor);
+}
