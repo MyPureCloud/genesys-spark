@@ -2116,7 +2116,7 @@
       "available": "linear-gradient(135deg, #079167 0%, #9de1cd 100%)",
       "busy": "linear-gradient(135deg, #b51b37 0%, #f3a7b5 100%)",
       "away": "linear-gradient(135deg, #9a7b25 0%, #fce9b2 100%)",
-      "on-queue": "linear-gradient(135deg, #2143a2 0%, #829ce5 100%)",
+      "on-queue": "linear-gradient(135deg, #2143a2 0%, #2143a2 100%)",
       "offline": "linear-gradient(135deg, #848891 0%, #848891 100%)",
       "out_of_office": "linear-gradient(135deg, #b74ba4 0%, #f5bfeb 100%)"
     },
@@ -3143,7 +3143,8 @@
           "lineHeight": "16px",
           "fontWeight": "400"
         }
-      }
+      },
+      "border_radius": "4px"
     },
     "quote_block": {
       "margin": "0 24px",
@@ -3160,8 +3161,8 @@
         }
       },
       "border_left": {
-        "color": "#6a6d75",
-        "width": "4px"
+        "color": "#829ce5",
+        "width": "2px"
       }
     },
     "heading_1": {
@@ -3203,7 +3204,7 @@
       }
     },
     "divider": {
-      "width": "2px",
+      "width": "1px",
       "height": "20px"
     },
     "inner_container": {
@@ -3217,8 +3218,8 @@
       "height": "24px"
     },
     "color_swatch": {
-      "tomato": {
-        "default": "#ff451a"
+      "orange": {
+        "default": "#ff8f76"
       },
       "coral": {
         "default": "#ffbec9"
@@ -3232,13 +3233,13 @@
       "raspberry": {
         "default": "#f5bfeb"
       },
-      "blueberry": {
+      "azure": {
         "default": "#adbff0"
       },
       "mineral": {
         "default": "#bcd6f0"
       },
-      "islandaqua": {
+      "island": {
         "default": "#81cbe5"
       },
       "width": "20px",
@@ -3250,12 +3251,16 @@
       }
     },
     "color_palette": {
+      "gap": "8px",
+      "padding": "4px 12px"
+    },
+    "toolbar_btn_group": {
       "gap": "4px"
     },
     "toolbar": {
       "divider": {
         "color": "#c1c6d4",
-        "padding": "0 4px"
+        "margin": "6px 4px"
       }
     },
     "container": {
@@ -3296,6 +3301,14 @@
           "width": "2px",
           "style": "solid"
         }
+      }
+    },
+    "rte_menu": {
+      "background_color": "#ffffff",
+      "border": {
+        "color": "#c1c6d4",
+        "width": "1px",
+        "style": "solid"
       }
     }
   }

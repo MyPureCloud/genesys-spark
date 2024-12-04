@@ -895,7 +895,7 @@
         }
       },
       "border_radius": {
-        "value": "{theme.border_radius.interactive.2xl}",
+        "value": "{theme.border_radius.container.large}",
         "type": "borderRadius"
       }
     },
@@ -977,7 +977,7 @@
         "type": "border"
       },
       "border_radius": {
-        "value": "{theme.border_radius.interactive.2xl}",
+        "value": "{theme.border_radius.container.large}",
         "type": "borderRadius"
       },
       "offset": {

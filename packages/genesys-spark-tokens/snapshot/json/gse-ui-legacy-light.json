@@ -1403,7 +1403,7 @@
           "background_color": "#2754ac"
         }
       },
-      "border_radius": "16px"
+      "border_radius": "4px"
     },
     "handle": {
       "width": "16px",
@@ -1449,7 +1449,7 @@
         "width": "2px",
         "style": "solid"
       },
-      "border_radius": "16px",
+      "border_radius": "4px",
       "offset": "1px"
     }
   },
@@ -2116,7 +2116,7 @@
       "available": "linear-gradient(135deg, #3c8527 0%, #95c189 100%)",
       "busy": "linear-gradient(135deg, #ea0b0b 0%, #f37a7a 100%)",
       "away": "linear-gradient(135deg, #ffae00 0%, #fcd276 100%)",
-      "on-queue": "linear-gradient(135deg, #2a60c8 0%, #75a8ff 100%)",
+      "on-queue": "linear-gradient(135deg, #2143a2 0%, #2143a2 100%)",
       "offline": "linear-gradient(135deg, #848891 0%, #848891 100%)",
       "out_of_office": "linear-gradient(135deg, #b74ba4 0%, #f5bfeb 100%)"
     },
@@ -3143,7 +3143,8 @@
           "lineHeight": "16px",
           "fontWeight": "400"
         }
-      }
+      },
+      "border_radius": "4px"
     },
     "quote_block": {
       "margin": "0 24px",
@@ -3160,8 +3161,8 @@
         }
       },
       "border_left": {
-        "color": "#6a6d75",
-        "width": "4px"
+        "color": "#829ce5",
+        "width": "2px"
       }
     },
     "heading_1": {
@@ -3203,7 +3204,7 @@
       }
     },
     "divider": {
-      "width": "2px",
+      "width": "1px",
       "height": "20px"
     },
     "inner_container": {
@@ -3217,7 +3218,7 @@
       "height": "24px"
     },
     "color_swatch": {
-      "tomato": {
+      "orange": {
         "default": "#ff451a"
       },
       "coral": {
@@ -3232,13 +3233,13 @@
       "raspberry": {
         "default": "#f5bfeb"
       },
-      "blueberry": {
+      "azure": {
         "default": "#adbff0"
       },
       "mineral": {
         "default": "#bcd6f0"
       },
-      "islandaqua": {
+      "island": {
         "default": "#81cbe5"
       },
       "width": "20px",
@@ -3250,12 +3251,16 @@
       }
     },
     "color_palette": {
+      "gap": "8px",
+      "padding": "4px 12px"
+    },
+    "toolbar_btn_group": {
       "gap": "4px"
     },
     "toolbar": {
       "divider": {
         "color": "#b4bccb",
-        "padding": "0 4px"
+        "margin": "6px 4px"
       }
     },
     "container": {
@@ -3296,6 +3301,14 @@
           "width": "2px",
           "style": "solid"
         }
+      }
+    },
+    "rte_menu": {
+      "background_color": "#ffffff",
+      "border": {
+        "color": "#b4bccb",
+        "width": "1px",
+        "style": "solid"
       }
     }
   }

@@ -8,8 +8,8 @@
       },
       "secondary": {
         "default": "#3e4044",
-        "hover": "#19327a",
-        "active": "#102251"
+        "hover": "#4f5157",
+        "active": "#6a6d75"
       },
       "tertiary": {
         "default": "rgba(0, 0, 0, 0)",
@@ -18,13 +18,13 @@
       },
       "ghost": {
         "default": "rgba(0, 0, 0, 0)",
-        "hover": "#19327a",
-        "active": "#102251"
+        "hover": "#4f5157",
+        "active": "#6a6d75"
       },
       "subtle": {
         "default": "#1e1e21",
-        "hover": "#102251",
-        "active": "#19327a"
+        "hover": "#4f5157",
+        "active": "#6a6d75"
       },
       "danger": {
         "default": "#881429",
@@ -32,14 +32,14 @@
         "active": "#440a15"
       },
       "custom": {
-        "tomato": "#992910",
+        "orange": "#992910",
         "coral": "#662530",
         "pear": "#404f22",
         "mango": "#664f20",
         "raspberry": "#5c2652",
-        "blueberry": "#102251",
+        "azure": "#102251",
         "mineral": "#233d57",
-        "islandaqua": "#003447"
+        "island": "#003447"
       }
     },
     "overlay": {
@@ -52,12 +52,12 @@
         "default": "#1e1e21",
         "tonal_subtle": "#2a2a2e",
         "tonal_medium": "#2a2a2e",
-        "tonal_high": "#102251"
+        "tonal_high": "#6a6d75"
       },
       "elevated": {
         "default": "#1e1e21",
         "hover": "#3e4044",
-        "active": "#19327a",
+        "active": "#4f5157",
         "error": "#440a15"
       },
       "high_constrast": {
@@ -118,7 +118,7 @@
           "accent_7": "#34234d",
           "accent_8": "#451c3e",
           "accent_9": "#4d1c24",
-          "accent_10": "#4d1508",
+          "accent_10": "#661c0a",
           "accent_11": "#4d3b18",
           "accent_12": "#003447"
         }
@@ -279,7 +279,8 @@
         "data_table": {
           "default": "#3e4044"
         },
-        "low_emphasis": "#6a6d75"
+        "low_emphasis": "#6a6d75",
+        "mid_emphasis": "#829ce5"
       },
       "high_constrast": {
         "default": "#c1c6d4",

@@ -63,11 +63,11 @@
             "type": "color"
           },
           "50d": {
-            "value": "{color.azure_blue.800}",
+            "value": "{color.haze.700}",
             "type": "color"
           },
           "60d": {
-            "value": "{color.azure_blue.700}",
+            "value": "{color.haze.800}",
             "type": "color"
           }
         },
@@ -643,7 +643,7 @@
             "type": "color"
           },
           "100d": {
-            "value": "{color.genesys_orange.900}",
+            "value": "{color.genesys_orange.800}",
             "type": "color"
           },
           "110d": {
@@ -657,7 +657,7 @@
         },
         "color_swatch": {
           "10": {
-            "value": "{color.genesys_orange.500}",
+            "value": "{color.genesys_orange.300}",
             "type": "color",
             "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
           },
@@ -1196,8 +1196,8 @@
             "value": "{color.haze.700}",
             "type": "color"
           },
-          "defaultd": {
-            "value": "{color.haze.400}",
+          "mid": {
+            "value": "{color.azure_blue.300}",
             "type": "color"
           }
         }

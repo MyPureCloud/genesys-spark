@@ -118,6 +118,7 @@ export class GuxButtonMulti {
     if (isOpen) {
       this.open.emit();
     } else {
+      this.listElement.blur();
       this.close.emit();
     }
   }

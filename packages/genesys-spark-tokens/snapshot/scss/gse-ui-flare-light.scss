@@ -1019,7 +1019,7 @@
   --gse-ui-avatar-presenceRing-onQueue: linear-gradient(
     135deg,
     #2143a2 0%,
-    #829ce5 100%
+    #2143a2 100%
   );
   --gse-ui-avatar-presenceRing-offline: linear-gradient(
     135deg,
@@ -1572,6 +1572,7 @@
   --gse-ui-rte-codeBlock-sm-regular-fontSize: 12px;
   --gse-ui-rte-codeBlock-sm-regular-lineHeight: 16px;
   --gse-ui-rte-codeBlock-sm-regular-fontWeight: 400;
+  --gse-ui-rte-codeBlock-borderRadius: 4px;
   --gse-ui-rte-quoteBlock-margin: 0 24px;
   --gse-ui-rte-quoteBlock-container-gap: 8px;
   --gse-ui-rte-quoteBlock-foregroundColor: #4f5157;
@@ -1579,8 +1580,8 @@
   --gse-ui-rte-quoteBlock-md-regular-fontWeight: 400;
   --gse-ui-rte-quoteBlock-md-regular-fontSize: 14px;
   --gse-ui-rte-quoteBlock-md-regular-lineHeight: 20px;
-  --gse-ui-rte-quoteBlock-borderLeft-color: #6a6d75;
-  --gse-ui-rte-quoteBlock-borderLeft-width: 4px;
+  --gse-ui-rte-quoteBlock-borderLeft-color: #829ce5;
+  --gse-ui-rte-quoteBlock-borderLeft-width: 2px;
   --gse-ui-rte-heading_1-foregroundColor: #4f5157;
   --gse-ui-rte-heading_1-semiBold-fontFamily: Urbanist;
   --gse-ui-rte-heading_1-semiBold-fontWeight: 600;
@@ -1601,28 +1602,30 @@
   --gse-ui-rte-paragraph-md-regular-fontWeight: 400;
   --gse-ui-rte-paragraph-md-regular-fontSize: 14px;
   --gse-ui-rte-paragraph-md-regular-lineHeight: 20px;
-  --gse-ui-rte-divider-width: 2px;
+  --gse-ui-rte-divider-width: 1px;
   --gse-ui-rte-divider-height: 20px;
   --gse-ui-rte-innerContainer-gap: 16px;
   --gse-ui-rte-contentContainer-gap: 16px;
   --gse-ui-rte-padding: 8px 16px 16px;
   --gse-ui-rte-menuButton-height: 24px;
-  --gse-ui-rte-colorSwatch-tomato-default: #ff451a;
+  --gse-ui-rte-colorSwatch-orange-default: #ff8f76;
   --gse-ui-rte-colorSwatch-coral-default: #ffbec9;
   --gse-ui-rte-colorSwatch-pear-default: #c6dd98;
   --gse-ui-rte-colorSwatch-mango-default: #ffd173;
   --gse-ui-rte-colorSwatch-raspberry-default: #f5bfeb;
-  --gse-ui-rte-colorSwatch-blueberry-default: #adbff0;
+  --gse-ui-rte-colorSwatch-azure-default: #adbff0;
   --gse-ui-rte-colorSwatch-mineral-default: #bcd6f0;
-  --gse-ui-rte-colorSwatch-islandaqua-default: #81cbe5;
+  --gse-ui-rte-colorSwatch-island-default: #81cbe5;
   --gse-ui-rte-colorSwatch-width: 20px;
   --gse-ui-rte-colorSwatch-height: 20px;
   --gse-ui-rte-colorSwatch-focusBorder-color: #5476d5;
   --gse-ui-rte-colorSwatch-focusBorder-width: 2px;
   --gse-ui-rte-colorSwatch-focusBorder-style: solid;
-  --gse-ui-rte-colorPalette-gap: 4px;
+  --gse-ui-rte-colorPalette-gap: 8px;
+  --gse-ui-rte-colorPalette-padding: 4px 12px;
+  --gse-ui-rte-toolbarBtnGroup-gap: 4px;
   --gse-ui-rte-toolbar-divider-color: #c1c6d4;
-  --gse-ui-rte-toolbar-divider-padding: 0 4px;
+  --gse-ui-rte-toolbar-divider-margin: 6px 4px;
   --gse-ui-rte-container-borderRadius: 4px;
   --gse-ui-rte-mainContainer-default-border-color: #a3a8b5;
   --gse-ui-rte-mainContainer-default-border-width: 1px;
@@ -1639,4 +1642,8 @@
   --gse-ui-rte-mainContainer-focus-border-color: #5476d5;
   --gse-ui-rte-mainContainer-focus-border-width: 2px;
   --gse-ui-rte-mainContainer-focus-border-style: solid;
+  --gse-ui-rte-rteMenu-backgroundColor: #ffffff;
+  --gse-ui-rte-rteMenu-border-color: #c1c6d4;
+  --gse-ui-rte-rteMenu-border-width: 1px;
+  --gse-ui-rte-rteMenu-border-style: solid;
 }
