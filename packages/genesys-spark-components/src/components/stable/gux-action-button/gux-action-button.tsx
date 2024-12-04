@@ -134,6 +134,7 @@ export class GuxActionButton {
     if (isOpen) {
       this.open.emit();
     } else {
+      this.listElement.blur();
       this.close.emit();
     }
   }
