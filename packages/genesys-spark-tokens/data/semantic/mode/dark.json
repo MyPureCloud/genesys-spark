@@ -76,12 +76,12 @@
           "description": "The background color of subtle dismissal actions, like close buttons on modals; in the default state."
         },
         "hover": {
-          "value": "{theme.background.container.primary.50d}",
+          "value": "{theme.background.container.primary.60d}",
           "type": "color",
           "description": "The background color of subtle dismissal actions, like close buttons on modals; in the hover state."
         },
         "active": {
-          "value": "{theme.background.container.primary.60d}",
+          "value": "{theme.background.container.primary.50d}",
           "type": "color",
           "description": "The background color of subtle dismissal actions, like close buttons on modals; in the active state."
         }

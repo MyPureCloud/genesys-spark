@@ -2114,7 +2114,7 @@
       "available": "linear-gradient(135deg, #079167 0%, #9de1cd 100%)",
       "busy": "linear-gradient(135deg, #b51b37 0%, #f3a7b5 100%)",
       "away": "linear-gradient(135deg, #9a7b25 0%, #fce9b2 100%)",
-      "on-queue": "linear-gradient(135deg, #2143a2 0%, #829ce5 100%)",
+      "on-queue": "linear-gradient(135deg, #2143a2 0%, #2143a2 100%)",
       "offline": "linear-gradient(135deg, #848891 0%, #848891 100%)",
       "out_of_office": "linear-gradient(135deg, #b74ba4 0%, #f5bfeb 100%)"
     },
