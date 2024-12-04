@@ -63,11 +63,11 @@
             "type": "color"
           },
           "50d": {
-            "value": "{color.azure_blue.800}",
+            "value": "{color.haze.700}",
             "type": "color"
           },
           "60d": {
-            "value": "{color.azure_blue.700}",
+            "value": "{color.haze.800}",
             "type": "color"
           }
         },
@@ -643,7 +643,7 @@
             "type": "color"
           },
           "100d": {
-            "value": "{color.genesys_orange.900}",
+            "value": "{color.genesys_orange.800}",
             "type": "color"
           },
           "110d": {

@@ -429,7 +429,7 @@
         "type": "color"
       },
       "on-queue": {
-        "value": "linear-gradient(135deg, {background.interactive.primary.default} 0%, {border.system.primary} 100%)",
+        "value": "linear-gradient(135deg, {background.system.status.on_queue} 0%, {background.system.status.on_queue} 100%)",
         "type": "color"
       },
       "offline": {
