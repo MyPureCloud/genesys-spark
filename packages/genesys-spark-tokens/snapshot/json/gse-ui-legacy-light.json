@@ -835,7 +835,9 @@
     "as_button": {
       "height": "32px",
       "padding": "12px",
-      "gap": "8px",
+      "gap": "8px"
+    },
+    "standalone": {
       "text": {
         "fontFamily": "Roboto",
         "fontWeight": "600",

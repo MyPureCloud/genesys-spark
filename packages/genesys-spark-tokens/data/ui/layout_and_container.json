@@ -365,7 +365,7 @@
     },
     "divider": {
       "width": {
-        "value": "{divider.sm.width}",
+        "value": "{divider.width}",
         "type": "sizing"
       },
       "height": {
@@ -468,14 +468,20 @@
         "type": "spacing"
       }
     },
+    "toolbar_btn_group": {
+      "gap": {
+        "value": "{interactive.md.gap}",
+        "type": "spacing"
+      }
+    },
     "toolbar": {
       "divider": {
         "color": {
           "value": "{border.container.divider}",
           "type": "color"
         },
-        "padding": {
-          "value": "{divider.md.padding}",
+        "margin": {
+          "value": "6px {divider.md.margin}",
           "type": "spacing"
         }
       }

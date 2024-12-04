@@ -371,7 +371,7 @@
       "type": "boxShadow"
     },
     "padding": {
-      "value": "{container.xs.padding} 1px",
+      "value": "{container.xs.padding} 0px",
       "type": "spacing"
     },
     "background_color": {
