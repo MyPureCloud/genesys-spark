@@ -659,6 +659,12 @@
         "style": "solid"
       },
       "type": "border"
+    },
+    "shoud": {
+      "min_width": {
+        "value": "{spacing.lg}",
+        "type": "spacing"
+      }
     }
   }
 }
