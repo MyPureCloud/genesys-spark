@@ -14,7 +14,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  inline-size: 100vw;
+  inline-size: calc(100vw - var(--gse-ui-sidePanel-shoud-minWidth));
   block-size: inherit;
   background-color: var(--gse-ui-sidePanel-backgroundColor);
   box-shadow: var(--gse-ui-sidePanel-boxShadow-offsetX)

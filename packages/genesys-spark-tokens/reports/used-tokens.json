@@ -951,6 +951,7 @@
   "--gse-ui-sidePanel-heading-text-fontSize",
   "--gse-ui-sidePanel-heading-text-fontWeight",
   "--gse-ui-sidePanel-heading-text-lineHeight",
+  "--gse-ui-sidePanel-shoud-minWidth",
   "--gse-ui-sidePanel-shroud-opacity",
   "--gse-ui-sidePanel-shroudColor",
   "--gse-ui-sidePanel-widthSize-lg",

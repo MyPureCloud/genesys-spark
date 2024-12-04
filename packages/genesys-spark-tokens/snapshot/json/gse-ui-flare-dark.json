@@ -3276,6 +3276,9 @@
       "color": "#4f5157",
       "width": "1px",
       "style": "solid"
+    },
+    "shoud": {
+      "min_width": "32px"
     }
   }
 }
