@@ -14,20 +14,20 @@
   align-items: center;
   block-size: var(--gse-ui-tag-small-height);
   padding: var(--gse-ui-tag-padding);
-  font-family: var(--gse-ui-tag-text-fontFamily);
-  font-size: var(--gse-ui-tag-text-fontSize);
-  font-weight: var(--gse-ui-tag-text-fontWeight);
-  line-height: var(--gse-ui-tag-text-lineHeight);
+  font-family: var(--gse-ui-tag-textSmall-fontFamily);
+  font-size: var(--gse-ui-tag-textSmall-fontSize);
+  font-weight: var(--gse-ui-tag-textSmall-fontWeight);
+  line-height: var(--gse-ui-tag-textSmall-lineHeight);
   color: var(--gse-ui-tag-default-bold-foregroundColor);
   background-color: var(--gse-ui-tag-default-bold-backgroundColor);
   border-radius: var(--gse-ui-tag-borderRadius);
 
-  &.gux-size-small {
-    block-size: var(--gse-ui-tag-small-height);
-  }
-
   &.gux-size-large {
     block-size: var(--gse-ui-tag-large-height);
+    font-family: var(--gse-ui-tag-textLarge-fontFamily);
+    font-size: var(--gse-ui-tag-textLarge-fontSize);
+    font-weight: var(--gse-ui-tag-textLarge-fontWeight);
+    line-height: var(--gse-ui-tag-textLarge-lineHeight);
   }
 
   &.gux-disabled {
