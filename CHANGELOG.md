@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.104.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.103.1...v4.104.0) (2024-12-05)
+
+
+### Features
+
+* **side panel:** side panel component ([55bad59](https://github.com/MyPureCloud/genesys-spark/commit/55bad59dbb3f09c5cb549237679f425b010f6c15))
+* **tokens:** dark mode tokens part 3 ([437e44d](https://github.com/MyPureCloud/genesys-spark/commit/437e44d495d47bb8878069bd8601236ed7f5bce1))
+
 ### [4.103.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.103.0...v4.103.1) (2024-12-04)
 
 ## [4.103.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.102.2...v4.103.0) (2024-12-03)
