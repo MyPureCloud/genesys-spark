@@ -315,11 +315,17 @@
         "foreground_color": "#ffffff"
       }
     },
-    "text": {
+    "text_large": {
       "fontFamily": "Roboto",
       "fontWeight": "600",
       "fontSize": "14px",
       "lineHeight": "20px"
+    },
+    "text_small": {
+      "fontFamily": "Roboto",
+      "fontWeight": "600",
+      "fontSize": "12px",
+      "lineHeight": "18px"
     },
     "padding": "0 12px",
     "removable": {
