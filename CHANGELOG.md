@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.104.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.104.0...v4.104.1) (2024-12-06)
+
+
+### Bug Fixes
+
+* **action-button:** fixed accessibility warning ([4ff1eb8](https://github.com/MyPureCloud/genesys-spark/commit/4ff1eb89cba76a1b26fa440a88b462f551ccd2cf))
+* **tag:** addition of new tag text tokens for seperating variants ([7a16be0](https://github.com/MyPureCloud/genesys-spark/commit/7a16be0949c2a59b3c662b9c1ae99b333f43122f))
+
 ## [4.104.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.103.1...v4.104.0) (2024-12-05)
 
 
