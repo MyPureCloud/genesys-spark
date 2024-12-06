@@ -183,7 +183,6 @@ export async function bootstrap(exampleCode, callback) {
   const updateCode = createEditor(editor, newCode => {
     const ast = parseFragment(newCode);
     const html = serialize(ast);
-
     updatePreview(html);
     attributesPanel.updateFromTree(ast);
     eventsPanel.updateFromTree(ast);
