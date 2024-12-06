@@ -30,21 +30,25 @@ function getTokenNames(filesGlob) {
     .filter((item, pos, array) => !pos || item != array[pos - 1]);
 }
 
-const definedTokenNames = getTokenNames(definedTokenFilesGlob);
-const usedTokenNames = getTokenNames(usedTokenFilesGlob);
+const definedTokenNames = getTokenNames(definedTokenFilesGlob).sort();
+const usedTokenNames = getTokenNames(usedTokenFilesGlob).sort();
 
-const usedUndefinedTokenNames = usedTokenNames.filter(
-  token =>
-    !definedTokenNames.includes(token) &&
-    token !== '--gse-ui-progressAndLoading-loadingState-'
-);
-const unusedDefinedUiTokenNames = definedTokenNames.filter(
-  token =>
-    !usedTokenNames.includes(token) &&
-    token.startsWith('--gse-ui-') &&
-    !token.startsWith('--gse-ui-globalNav-') &&
-    !token.endsWith('-boxShadow-type')
-);
+const usedUndefinedTokenNames = usedTokenNames
+  .filter(
+    token =>
+      !definedTokenNames.includes(token) &&
+      token !== '--gse-ui-progressAndLoading-loadingState-'
+  )
+  .sort();
+const unusedDefinedUiTokenNames = definedTokenNames
+  .filter(
+    token =>
+      !usedTokenNames.includes(token) &&
+      token.startsWith('--gse-ui-') &&
+      !token.startsWith('--gse-ui-globalNav-') &&
+      !token.endsWith('-boxShadow-type')
+  )
+  .sort();
 
 const folder = 'reports';
 

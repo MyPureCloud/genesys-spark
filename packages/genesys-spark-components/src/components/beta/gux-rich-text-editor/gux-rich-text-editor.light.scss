@@ -36,7 +36,7 @@
     background-color: var(--gse-ui-rte-codeBlock-backgroundColor);
     border: var(--gse-ui-rte-codeBlock-border-width)
       var(--gse-ui-rte-codeBlock-border-style)
-      (--gse-ui-rte-codeblock-border-color);
+      var(--gse-ui-rte-codeBlock-border-color);
     border-radius: var(--gse-ui-rte-codeBlock-borderRadius);
   }
 }
