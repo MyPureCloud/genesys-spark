@@ -838,23 +838,41 @@
     }
   },
   "links": {
-    "as_button": {
-      "height": "32px",
-      "padding": "12px",
-      "gap": "8px",
-      "text": {
-        "fontFamily": "'Noto Sans'",
-        "fontWeight": "600",
-        "fontSize": "14px",
-        "lineHeight": "20px"
+    "standalone": {
+      "medium": {
+        "height": "32px",
+        "text": {
+          "fontFamily": "'Noto Sans'",
+          "fontWeight": "600",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "underlined_text": {
+          "fontFamily": "'Noto Sans'",
+          "fontWeight": "600",
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "textDecoration": "underline"
+        }
       },
-      "underlined_text": {
-        "fontFamily": "'Noto Sans'",
-        "fontWeight": "600",
-        "fontSize": "14px",
-        "lineHeight": "20px",
-        "textDecoration": "underline"
-      }
+      "small": {
+        "height": "24px",
+        "text": {
+          "fontFamily": "'Noto Sans'",
+          "fontWeight": "600",
+          "fontSize": "12px",
+          "lineHeight": "18px"
+        },
+        "underlined_text": {
+          "fontFamily": "'Noto Sans'",
+          "fontWeight": "600",
+          "fontSize": "12px",
+          "lineHeight": "18px",
+          "textDecoration": "underline"
+        }
+      },
+      "padding": "12px",
+      "gap": "8px"
     },
     "in_line": {
       "medium": {
@@ -1117,7 +1135,7 @@
       "offsetX": "0",
       "offsetY": "0"
     },
-    "padding": "8px 1px",
+    "padding": "8px 0px",
     "background_color": "#1e1e21",
     "scrollbar": {
       "foreground_color": "#b2b7c4"

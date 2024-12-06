@@ -81,7 +81,9 @@ export class GuxToast {
   private renderLink(): JSX.Element {
     return (
       <div class="gux-buttons-bar">
-        <slot name="link" />
+        <gux-link-beta standalone>
+          <slot name="link" />
+        </gux-link-beta>
       </div>
     ) as JSX.Element;
   }
