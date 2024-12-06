@@ -272,8 +272,12 @@
         }
       }
     },
-    "text": {
+    "text_large": {
       "value": "{body.md.semi_bold}",
+      "type": "typography"
+    },
+    "text_small": {
+      "value": "{body.sm.semi_bold}",
       "type": "typography"
     },
     "padding": {

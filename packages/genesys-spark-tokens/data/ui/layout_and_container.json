@@ -572,5 +572,105 @@
         "type": "border"
       }
     }
+  },
+  "side_panel": {
+    "background_color": {
+      "value": "{background.container.elevated.default}",
+      "type": "color"
+    },
+    "header_color": {
+      "value": "{foreground.container.high_emphasis}",
+      "type": "color"
+    },
+    "box_shadow": {
+      "value": "{container.md.box_shadow}",
+      "type": "boxShadow"
+    },
+    "description_color": {
+      "value": "{foreground.container.mid_emphasis}",
+      "type": "color"
+    },
+    "heading": {
+      "text": {
+        "value": "{heading.md.semi_bold}",
+        "type": "typography"
+      }
+    },
+    "description": {
+      "text": {
+        "value": "{body.sm.regular}",
+        "type": "typography"
+      },
+      "padding": {
+        "value": "{container.lg.gap} {container.lg.padding} 0",
+        "type": "spacing"
+      }
+    },
+    "header": {
+      "icon_gap": {
+        "value": "{container.md.gap}",
+        "type": "spacing"
+      },
+      "padding": {
+        "value": "{container.lg.padding} {container.lg.padding} {container.lg.gap}",
+        "type": "spacing"
+      },
+      "dismiss": {
+        "padding": {
+          "value": "{container.xs.gap}",
+          "type": "spacing"
+        }
+      }
+    },
+    "body": {
+      "padding": {
+        "value": "{container.lg.padding}",
+        "type": "spacing"
+      }
+    },
+    "footer": {
+      "padding": {
+        "value": "{container.lg.gap} {container.lg.padding}",
+        "type": "spacing"
+      }
+    },
+    "width_size": {
+      "sm": {
+        "value": "400px",
+        "type": "sizing"
+      },
+      "md": {
+        "value": "560px",
+        "type": "sizing"
+      },
+      "lg": {
+        "value": "960px",
+        "type": "sizing"
+      }
+    },
+    "shroud": {
+      "opacity": {
+        "value": "{opacity.shroud}",
+        "type": "opacity"
+      }
+    },
+    "shroud_color": {
+      "value": "{modal.shroud_color}",
+      "type": "color"
+    },
+    "divider": {
+      "value": {
+        "color": "{border.container.divider}",
+        "width": "{border_width.1}",
+        "style": "solid"
+      },
+      "type": "border"
+    },
+    "shoud": {
+      "min_width": {
+        "value": "{spacing.lg}",
+        "type": "spacing"
+      }
+    }
   }
 }
