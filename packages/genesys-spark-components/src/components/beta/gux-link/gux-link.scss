@@ -1,6 +1,13 @@
 @use '~genesys-spark/dist/scss/_typography';
 @use '~genesys-spark/dist/scss/focus';
 
+/**
+ *  All of the '!important' flags should be removed in v5
+ *  They are added to override a global styling set to all <a> elements.
+ *  This global styling should also be removed in v5
+ *  Jira ticket for that: https://inindca.atlassian.net/browse/COMUI-3265
+ */
+
 :host {
   block-size: var(--gse-ui-links-inLine-medium-height);
   padding-block: var(--gse-ui-links-inLine-padding);
