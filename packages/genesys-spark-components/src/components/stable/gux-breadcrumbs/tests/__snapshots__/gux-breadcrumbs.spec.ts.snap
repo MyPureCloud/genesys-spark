@@ -37,9 +37,11 @@ exports[`gux-breadcrumbs #render should render component as expected (2) 1`] = `
   <gux-breadcrumb-item href="#" role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
-        <a class="gux-breadcrumb-content gux-link" href="#">
-          <slot></slot>
-        </a>
+        <gux-link-beta size="medium" standalone="">
+          <a href="#">
+            <slot></slot>
+          </a>
+        </gux-link-beta>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
@@ -85,9 +87,11 @@ exports[`gux-breadcrumbs #render should render component as expected (3) 1`] = `
   <gux-breadcrumb-item href="#" role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
-        <a class="gux-breadcrumb-content gux-link" href="#">
-          <slot></slot>
-        </a>
+        <gux-link-beta size="medium" standalone="">
+          <a href="#">
+            <slot></slot>
+          </a>
+        </gux-link-beta>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
@@ -133,9 +137,11 @@ exports[`gux-breadcrumbs #render should render component as expected (4) 1`] = `
   <gux-breadcrumb-item href="#" role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-primary">
-        <a class="gux-breadcrumb-content gux-link" href="#">
-          <slot></slot>
-        </a>
+        <gux-link-beta size="medium" standalone="">
+          <a href="#">
+            <slot></slot>
+          </a>
+        </gux-link-beta>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
@@ -181,9 +187,11 @@ exports[`gux-breadcrumbs #render should render component as expected (5) 1`] = `
   <gux-breadcrumb-item href="#" role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-secondary">
-        <a class="gux-breadcrumb-content gux-link" href="#">
-          <slot></slot>
-        </a>
+        <gux-link-beta size="small" standalone="">
+          <a href="#">
+            <slot></slot>
+          </a>
+        </gux-link-beta>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
@@ -229,9 +237,11 @@ exports[`gux-breadcrumbs #render should render component as expected (6) 1`] = `
   <gux-breadcrumb-item href="#" role="listitem">
     <template shadowrootmode="open">
       <span class="gux-breadcrumb-generation gux-invalid">
-        <a class="gux-breadcrumb-content gux-link" href="#">
-          <slot></slot>
-        </a>
+        <gux-link-beta size="medium" standalone="">
+          <a href="#">
+            <slot></slot>
+          </a>
+        </gux-link-beta>
         <span aria-hidden="true" class="gux-breadcrumb-separator">
           /
         </span>
