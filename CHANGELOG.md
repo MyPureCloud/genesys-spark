@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.105.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.104.1...v4.105.0) (2024-12-07)
+
+
+### Features
+
+* **token:** fix figma variables ([5d737f8](https://github.com/MyPureCloud/genesys-spark/commit/5d737f87f62431420eae7181e48ce73dea919aeb))
+* **tokens:** fix up figma vars ([d92adb5](https://github.com/MyPureCloud/genesys-spark/commit/d92adb558aafdc2c7f593654a15a4400f94fe8b7))
+
 ### [4.104.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.104.0...v4.104.1) (2024-12-06)
 
 
