@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-link-beta #render should render component as expected (1) 1`] = `"<gux-link-beta size="medium" hydrated=""><template shadowrootmode="open"><slot></slot></template><a href="#">Link</a></gux-link-beta>"`;
+
+exports[`gux-link-beta #render should render component as expected (2) 1`] = `"<gux-link-beta size="small" hydrated=""><template shadowrootmode="open"><slot></slot></template><a href="#">Link</a></gux-link-beta>"`;
+
+exports[`gux-link-beta #render should render component as expected (3) 1`] = `"<gux-link-beta standalone="" size="medium" hydrated=""><template shadowrootmode="open"><slot></slot></template><a href="#">Link</a></gux-link-beta>"`;
+
+exports[`gux-link-beta #render should render component as expected (4) 1`] = `"<gux-link-beta size="small" standalone="" hydrated=""><template shadowrootmode="open"><slot></slot></template><a href="#">Link</a></gux-link-beta>"`;
+
+exports[`gux-link-beta #render should render component as expected (5) 1`] = `"<gux-link-beta standalone="" size="medium" hydrated=""><template shadowrootmode="open"><slot></slot></template><a href="#">Link<gux-icon icon-name="external-link" decorative="" size="inherit" hydrated=""></gux-icon></a></gux-link-beta>"`;

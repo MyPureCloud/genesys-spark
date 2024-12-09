@@ -40,7 +40,7 @@ export class GuxBreadcrumbItem {
     return children[children.length - 1] === this.root;
   }
 
-  private getBreadcrumb(): JSX.Element {
+  private getBreadcrumb(accent: GuxBreadcrumbAccent): JSX.Element {
     if (this.isActiveBreadcrumb()) {
       return (
         <span class="gux-breadcrumb-content gux-active" aria-current="page">
@@ -51,9 +51,14 @@ export class GuxBreadcrumbItem {
 
     if (this.href) {
       return (
-        <a class="gux-breadcrumb-content gux-link" href={this.href}>
-          <slot />
-        </a>
+        <gux-link-beta
+          size={accent === 'secondary' ? 'small' : 'medium'}
+          standalone
+        >
+          <a href={this.href}>
+            <slot />
+          </a>
+        </gux-link-beta>
       ) as JSX.Element;
     }
 
@@ -82,7 +87,7 @@ export class GuxBreadcrumbItem {
     return (
       <Host role="listitem">
         <span class={`gux-breadcrumb-generation gux-${accent}`}>
-          {this.getBreadcrumb()}
+          {this.getBreadcrumb(accent)}
           {this.getSeparatorIcon()}
         </span>
       </Host>
