@@ -9,12 +9,10 @@
  */
 
 :host {
-  block-size: var(--gse-ui-links-inLine-medium-height);
   padding-block: var(--gse-ui-links-inLine-padding);
 
   ::slotted(a) {
     inline-size: fit-content;
-    block-size: var(--gse-ui-links-inLine-medium-height);
     font-family: var(--gse-ui-links-inLine-medium-text-fontFamily),
       var(--gse-semantic-theme-fontFamily-body), sans-serif;
     font-size: var(--gse-ui-links-inLine-medium-text-fontSize);
@@ -42,10 +40,7 @@
 }
 
 :host([size='small']) {
-  block-size: var(--gse-ui-links-inLine-small-height);
-
   ::slotted(a) {
-    block-size: var(--gse-ui-links-inLine-small-height);
     font-family: var(--gse-ui-links-inLine-small-text-fontFamily),
       var(--gse-semantic-theme-fontFamily-body), sans-serif;
     font-size: var(--gse-ui-links-inLine-small-text-fontSize);
@@ -56,7 +51,6 @@
 
 :host([standalone]) {
   display: block;
-  block-size: var(--gse-ui-links-standalone-medium-height);
   padding-block: var(--gse-ui-links-standalone-padding);
 
   ::slotted(a) {
@@ -64,7 +58,6 @@
     gap: var(--gse-ui-links-standalone-gap);
     align-items: center;
     inline-size: fit-content;
-    block-size: var(--gse-ui-links-standalone-medium-height);
     font-family: var(--gse-ui-links-standalone-medium-text-fontFamily),
       var(--gse-semantic-theme-fontFamily-body), sans-serif;
     font-size: var(--gse-ui-links-standalone-medium-text-fontSize);
@@ -94,10 +87,7 @@
 }
 
 :host([size='small'][standalone]) {
-  block-size: var(--gse-ui-links-standalone-small-height);
-
   ::slotted(a) {
-    block-size: var(--gse-ui-links-standalone-small-height);
     font-family: var(--gse-ui-links-standalone-small-text-fontFamily),
       var(--gse-semantic-theme-fontFamily-body), sans-serif;
     font-size: var(--gse-ui-links-standalone-small-text-fontSize);
