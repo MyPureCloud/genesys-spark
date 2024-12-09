@@ -4,7 +4,7 @@ import { GuxToast } from '../gux-toast';
 const components = [GuxToast];
 const language = 'en';
 
-describe('gux-simple-toast-legacy', () => {
+describe('gux-toast', () => {
   describe('#render', () => {
     [
       {

@@ -22,13 +22,13 @@ body {
     z-index: 1;
     overflow-y: hidden;
 
-    gux-action-toast-legacy {
+    gux-toast {
       transition: all 0.5s ease-in-out;
       animation-name: slidein;
       animation-duration: 0.5s;
     }
 
-    gux-action-toast-legacy.hide {
+    gux-toast.hide {
       opacity: 0;
     }
 
