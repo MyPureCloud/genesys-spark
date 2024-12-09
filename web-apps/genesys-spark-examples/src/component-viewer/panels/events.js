@@ -94,16 +94,15 @@ export default class EventsPanel {
     }
 
     const notification = toHTML(`
-      <gux-action-toast-legacy accent="neutral">
-        <gux-icon slot="icon" icon-name="alert-info" decorative></gux-icon>
+      <gux-toast toast-type="info" aria-live="polite">
         <div slot="title">${title}</div>
         <dl slot="message">
-          <dt ${data ? '' : 'hidden'}>detail</dt>
-          <dd ${data ? '' : 'hidden'}>${data}</dd>
-          <dt>target</dt>
-          <dd>${targetId}</dd>
+          <span class="gux-body-sm-bold">target: </span>
+          <span>${targetId}</span>
+          <span class="gux-body-sm-bold" ${data ? '' : 'hidden'}>, detail:</span>
+          <span ${data ? '' : 'hidden'}>${data}</span>
         </dl>
-      </gux-action-toast-legacy>
+      </gux-toast>
     `);
 
     setTimeout(function () {
