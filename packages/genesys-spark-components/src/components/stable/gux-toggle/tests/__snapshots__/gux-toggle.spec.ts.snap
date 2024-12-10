@@ -69,7 +69,7 @@ exports[`gux-toggle #render should render component as expected (4) 1`] = `
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
-          <div aria-checked="false" aria-disabled="false" aria-labelledby="gux-toggle-label-i" class="gux-toggle-slider" role="checkbox" tabindex="0">
+          <div aria-checked="false" aria-disabled="false" aria-label="On" class="gux-toggle-slider" role="checkbox" tabindex="0">
             <div class="gux-slider">
               <div class="gux-switch">
                 <gux-icon decorative="" icon-name="fa/check-solid"></gux-icon>
@@ -107,7 +107,7 @@ exports[`gux-toggle #render should render component as expected (5) 1`] = `
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
-          <div aria-checked="true" aria-disabled="false" aria-labelledby="gux-toggle-label-i" class="gux-checked gux-toggle-slider" role="checkbox" tabindex="0">
+          <div aria-checked="true" aria-disabled="false" aria-label="on" class="gux-checked gux-toggle-slider" role="checkbox" tabindex="0">
             <div class="gux-slider">
               <div class="gux-switch">
                 <gux-icon decorative="" icon-name="fa/check-solid"></gux-icon>
@@ -145,7 +145,7 @@ exports[`gux-toggle #render should render component as expected (6) 1`] = `
     <div class="gux-toggle-container gux-toggle-label-left">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
-          <div aria-checked="false" aria-disabled="false" aria-labelledby="gux-toggle-label-i" class="gux-toggle-slider" role="checkbox" tabindex="0">
+          <div aria-checked="false" aria-disabled="false" aria-label="On" class="gux-toggle-slider" role="checkbox" tabindex="0">
             <div class="gux-slider">
               <div class="gux-switch">
                 <gux-icon decorative="" icon-name="fa/check-solid"></gux-icon>
@@ -183,7 +183,7 @@ exports[`gux-toggle #render should render component as expected (7) 1`] = `
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
-          <div aria-checked="true" aria-disabled="false" aria-labelledby="gux-toggle-label-i" class="gux-checked gux-toggle-slider" role="checkbox" tabindex="0">
+          <div aria-checked="true" aria-disabled="false" aria-label="on" class="gux-checked gux-toggle-slider" role="checkbox" tabindex="0">
             <div class="gux-slider">
               <div class="gux-switch">
                 <gux-icon decorative="" icon-name="fa/check-solid"></gux-icon>
@@ -221,7 +221,7 @@ exports[`gux-toggle #render should render component as expected (8) 1`] = `
     <div class="gux-toggle-container gux-toggle-label-left">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
-          <div aria-checked="false" aria-disabled="false" aria-labelledby="gux-toggle-label-i" class="gux-toggle-slider" role="checkbox" tabindex="0">
+          <div aria-checked="false" aria-disabled="false" aria-label="This is a long label for the toggle to test how it works" class="gux-toggle-slider" role="checkbox" tabindex="0">
             <div class="gux-slider">
               <div class="gux-switch">
                 <gux-icon decorative="" icon-name="fa/check-solid"></gux-icon>
@@ -259,7 +259,7 @@ exports[`gux-toggle #render should render component as expected (9) 1`] = `
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
-          <div aria-checked="true" aria-disabled="false" aria-labelledby="gux-toggle-label-i" class="gux-checked gux-toggle-slider" role="checkbox" tabindex="0">
+          <div aria-checked="true" aria-disabled="false" aria-label="This is a long label for the toggle to test how it works" class="gux-checked gux-toggle-slider" role="checkbox" tabindex="0">
             <div class="gux-slider">
               <div class="gux-switch">
                 <gux-icon decorative="" icon-name="fa/check-solid"></gux-icon>
