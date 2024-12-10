@@ -24,11 +24,7 @@ export class GuxToggleSlider {
   errorId: string = '';
 
   componentDidLoad(): void {
-    if (this.labelId) {
-      this.checkboxElement?.setAttribute('aria-labelledby', this.labelId);
-    } else {
-      this.checkboxElement?.setAttribute('aria-label', this.guxAriaLabel);
-    }
+    this.checkboxElement?.setAttribute('aria-label', this.guxAriaLabel);
     if (this.errorId) {
       this.checkboxElement?.setAttribute('aria-describedby', this.errorId);
     }
