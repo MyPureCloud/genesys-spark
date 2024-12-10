@@ -106,11 +106,13 @@ export async function bootstrap() {
   }
 
   function modeSwitchHandler() {
+    //Get the mode to change to
     const mode =
       document.documentElement.getAttribute('flare-mode') == 'dark'
         ? 'light'
         : 'dark';
 
+    //Change the toggle icon and tooltip on the top navbar
     document.documentElement.setAttribute('flare-mode', mode);
     document
       .getElementById('mode-action-icon')
@@ -121,6 +123,7 @@ export async function bootstrap() {
     document.getElementById('mode-action-tooltip').innerText =
       `Toggle ${mode == 'light' ? 'Dark' : 'Light'} Mode`;
 
+    //Chagne the mode of the iframes
     Array.from(document.querySelectorAll('iframe'))
       .map(iframe => iframe.contentDocument)
       .forEach(doc => {
@@ -141,18 +144,11 @@ export async function bootstrap() {
     const iframe = document.getElementById('componentFrame');
     const hash = window.location.hash || `#${components[0]}`;
 
-    iframe.src = `./${hash.slice(1)}.html`;
+    //When changing the src of the iframe change its mode
+    //Using url params so it can also change in supernova
+    const mode = document.documentElement.getAttribute('flare-mode') ?? 'light';
 
-    const currentMode =
-      document.documentElement.getAttribute('flare-mode') ?? 'light';
-
-    setTimeout(() => {
-      Array.from(document.querySelectorAll('iframe'))
-        .map(iframe => iframe.contentDocument)
-        .forEach(doc => {
-          doc.documentElement.setAttribute('flare-mode', currentMode);
-        });
-    }, 100);
+    iframe.src = `./${hash.slice(1)}.html?flare-mode=${mode}`;
   }
 
   function onHashChange() {
