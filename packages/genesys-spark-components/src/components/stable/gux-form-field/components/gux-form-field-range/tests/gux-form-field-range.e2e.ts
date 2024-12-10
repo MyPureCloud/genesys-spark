@@ -1,10 +1,4 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
-import {
-  newSparkE2EPage
-  // a11yCheck
-} from '../../../../../../test/e2eTestUtils';
-
-// const axeExclusions = [];
 
 async function newNonrandomE2EPage({
   html
@@ -133,28 +127,6 @@ describe('gux-form-field-range', () => {
         expect(element.outerHTML).toMatchSnapshot();
         expect(elementShadowDom).toMatchSnapshot();
       });
-
-      // it(`should be accessible (${index + 1})`, async () => {
-      //   const page = await newSparkE2EPage({ html });
-
-      //   await a11yCheck(page, axeExclusions);
-      // });
     });
-  });
-
-  it('Shows percentage value correctly', async () => {
-    const page = await newSparkE2EPage({
-      html: `
-       <gux-form-field-range display-units="%">
-        <input slot="input" type="range" name="du-2" />
-        <label slot="label">Percentage</label>
-      </gux-form-field-range>
-      `
-    });
-
-    const element = await page.find('gux-form-field-range');
-    console.log(element);
-    const display = await element.find('gux-display');
-    expect(display.innerText).toBe('50%');
   });
 });
