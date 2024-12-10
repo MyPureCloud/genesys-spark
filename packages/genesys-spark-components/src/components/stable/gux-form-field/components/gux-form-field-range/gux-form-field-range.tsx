@@ -48,7 +48,7 @@ import { OnResize } from '@utils/decorator/on-resize';
   tag: 'gux-form-field-range',
   shadow: true
 })
-export class GuxFormFieldRange {
+export class GuxFormField {
   private input: HTMLInputElement;
   private label: HTMLLabelElement;
   private labelInfo: HTMLGuxLabelInfoBetaElement;

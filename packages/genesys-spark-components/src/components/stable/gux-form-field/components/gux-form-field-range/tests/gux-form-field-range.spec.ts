@@ -1,8 +1,8 @@
 import { newSpecPage } from '@test/specTestUtils';
 
-import { GuxFormFieldRange } from '../gux-form-field-range';
+import { GuxFormField } from '../gux-form-field-range';
 
-const components = [GuxFormFieldRange];
+const components = [GuxFormField];
 const language = 'en';
 
 describe('gux-form-field-range', () => {
@@ -15,7 +15,7 @@ describe('gux-form-field-range', () => {
     `;
     const page = await newSpecPage({ components, html, language });
 
-    expect(page.rootInstance).toBeInstanceOf(GuxFormFieldRange);
+    expect(page.rootInstance).toBeInstanceOf(GuxFormField);
   });
 
   describe('#render', () => {
