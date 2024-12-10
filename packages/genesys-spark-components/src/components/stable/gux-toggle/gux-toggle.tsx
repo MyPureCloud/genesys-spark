@@ -90,6 +90,7 @@ export class GuxToggle {
   private getAriaLabel(): string {
     return (
       this.root.getAttribute('aria-label') ||
+      this.checkedLabel ||
       this.root.title ||
       this.i18n('defaultAriaLabel')
     );
