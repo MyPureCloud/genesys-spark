@@ -19,6 +19,19 @@
 |      | content     |
 
 
+## Dependencies
+
+### Depends on
+
+- [gux-link-beta](../../../beta/gux-link)
+
+### Graph
+```mermaid
+graph TD;
+  gux-breadcrumb-item --> gux-link-beta
+  style gux-breadcrumb-item fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
