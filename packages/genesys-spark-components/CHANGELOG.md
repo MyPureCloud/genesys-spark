@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.132.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.132.0...v3.132.1) (2024-12-11)
+
+
+### Bug Fixes
+
+* **toggle:** screen reader label set to checked label ([31d5508](https://github.com/MyPureCloud/genesys-spark/commit/31d550806509ed6ea3db0ab0ad3fd0c8df95692d))
+
 ## [3.132.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.131.4...v3.132.0) (2024-12-03)
 
 
