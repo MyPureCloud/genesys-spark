@@ -406,10 +406,6 @@
   "links": {
     "standalone": {
       "medium": {
-        "height": {
-          "value": "{interactive.md.size}",
-          "type": "sizing"
-        },
         "text": {
           "value": "{body.md.semi_bold}",
           "type": "typography"
@@ -420,10 +416,6 @@
         }
       },
       "small": {
-        "height": {
-          "value": "{interactive.sm.size}",
-          "type": "sizing"
-        },
         "text": {
           "value": "{body.sm.semi_bold}",
           "type": "typography"
@@ -434,7 +426,7 @@
         }
       },
       "padding": {
-        "value": "{interactive.lg.padding}",
+        "value": "{interactive.md.padding} 0",
         "type": "spacing"
       },
       "gap": {
@@ -444,10 +436,6 @@
     },
     "in_line": {
       "medium": {
-        "height": {
-          "value": "{interactive.sm.size}",
-          "type": "sizing"
-        },
         "text": {
           "value": "{body.md.semi_bold}",
           "type": "typography"
@@ -458,10 +446,6 @@
         }
       },
       "small": {
-        "height": {
-          "value": "{interactive.xs.size}",
-          "type": "sizing"
-        },
         "text": {
           "value": "{body.sm.semi_bold}",
           "type": "typography"

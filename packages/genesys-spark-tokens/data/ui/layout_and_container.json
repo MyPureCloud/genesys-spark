@@ -482,12 +482,6 @@
         "type": "spacing"
       }
     },
-    "toolbar_btn_group": {
-      "gap": {
-        "value": "{interactive.md.gap}",
-        "type": "spacing"
-      }
-    },
     "toolbar": {
       "divider": {
         "color": {
