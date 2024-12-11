@@ -1,6 +1,6 @@
 # gux-action-button manual accessibility testing status
 
-**Last Updated:** Wed Feb 02 2022 16:33:24 GMT-0500 (Eastern Standard Time)
+**Last Updated:** 2024-12-11T10:19:46.309Z
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
 | ✅ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html) | - |
