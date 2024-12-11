@@ -840,7 +840,6 @@
   "links": {
     "standalone": {
       "medium": {
-        "height": "32px",
         "text": {
           "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
@@ -856,7 +855,6 @@
         }
       },
       "small": {
-        "height": "24px",
         "text": {
           "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
@@ -871,12 +869,11 @@
           "textDecoration": "underline"
         }
       },
-      "padding": "12px",
+      "padding": "8px 0",
       "gap": "8px"
     },
     "in_line": {
       "medium": {
-        "height": "24px",
         "text": {
           "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
@@ -892,7 +889,6 @@
         }
       },
       "small": {
-        "height": "20px",
         "text": {
           "fontFamily": "'Noto Sans'",
           "fontWeight": "600",
