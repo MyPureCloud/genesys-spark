@@ -14,7 +14,6 @@ import { GuxCopyToClipboardContent } from './gux-copy-to-clipboard.types';
 })
 export class GuxCopyToClipboard {
   private i18n: GetI18nValue;
-  private copyButton: HTMLButtonElement;
 
   @Element()
   private root: HTMLElement;
@@ -30,14 +29,6 @@ export class GuxCopyToClipboard {
   @Listen('focusout')
   onFocusout() {
     this.resetTooltip();
-  }
-
-  @Listen('focus')
-  onFocus() {
-    // when copy button is focused by keyboard it will have `:focus-visible` pseudo class
-    if (this.copyButton.matches(':focus-visible')) {
-      this.tooltipContent = 'enterToCopy';
-    }
   }
 
   private resetTooltip() {
@@ -95,7 +86,6 @@ export class GuxCopyToClipboard {
     return (
       <button
         class="gux-copy-to-clipboard-wrapper"
-        ref={el => (this.copyButton = el)}
         onClick={this.onCopyToClipboard.bind(this)}
       >
         <div class="gux-copy-content">
