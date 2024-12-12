@@ -456,7 +456,7 @@
         }
       },
       "padding": {
-        "value": "{interactive.sm.padding}",
+        "value": "{interactive.sm.padding} 0",
         "type": "spacing"
       }
     },
