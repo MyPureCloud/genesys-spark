@@ -3,7 +3,7 @@
 **Last Updated:** 2024-12-12T11:40:09.195Z
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
-| ❌ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) | COMUI-3310 - Enter key not to be used when expanding the dropdown |
+| ❌ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) | [COMUI-3310](https://inindca.atlassian.net/browse/COMUI-3310) - Enter key not to be used when expanding the dropdown |
 | ✅ | [2.1.2 No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) | - |
 | ✅ | [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) | - |
 | ✅ | [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) | - |
