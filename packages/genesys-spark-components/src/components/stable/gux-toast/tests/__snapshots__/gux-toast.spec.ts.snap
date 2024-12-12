@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-simple-toast-legacy #render should render action toast 1`] = `
+exports[`gux-toast #render should render action toast 1`] = `
 <gux-toast toast-type="action">
   <template shadowrootmode="open">
     <div class="gux-toast gux-toast-action">
@@ -44,7 +44,7 @@ exports[`gux-simple-toast-legacy #render should render action toast 1`] = `
 </gux-toast>
 `;
 
-exports[`gux-simple-toast-legacy #render should render error toast 1`] = `
+exports[`gux-toast #render should render error toast 1`] = `
 <gux-toast toast-type="error">
   <template shadowrootmode="open">
     <div class="gux-toast gux-toast-error">
@@ -79,7 +79,7 @@ exports[`gux-simple-toast-legacy #render should render error toast 1`] = `
 </gux-toast>
 `;
 
-exports[`gux-simple-toast-legacy #render should render info toast 1`] = `
+exports[`gux-toast #render should render info toast 1`] = `
 <gux-toast toast-type="info">
   <template shadowrootmode="open">
     <div class="gux-toast gux-toast-info">
@@ -114,7 +114,7 @@ exports[`gux-simple-toast-legacy #render should render info toast 1`] = `
 </gux-toast>
 `;
 
-exports[`gux-simple-toast-legacy #render should render success toast 1`] = `
+exports[`gux-toast #render should render success toast 1`] = `
 <gux-toast toast-type="success">
   <template shadowrootmode="open">
     <div class="gux-toast gux-toast-success">
@@ -149,7 +149,7 @@ exports[`gux-simple-toast-legacy #render should render success toast 1`] = `
 </gux-toast>
 `;
 
-exports[`gux-simple-toast-legacy #render should render warning toast 1`] = `
+exports[`gux-toast #render should render warning toast 1`] = `
 <gux-toast toast-type="warning">
   <template shadowrootmode="open">
     <div class="gux-toast gux-toast-warning">
