@@ -869,7 +869,7 @@
           "textDecoration": "underline"
         }
       },
-      "padding": "8px 0",
+      "padding": "8px",
       "gap": "8px"
     },
     "in_line": {
