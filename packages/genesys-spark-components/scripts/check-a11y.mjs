@@ -150,11 +150,20 @@ function getA11yRuleQuestions() {
 }
 
 function createComponentList(componentStability) {
+  const componentList = [];
   const list = readdirSync(
     join(__dirname, `../src/components/${componentStability}`)
   );
-  const componentList = [];
   list.forEach(result => {
+    if (result.startsWith('gux')) {
+      componentList.push(result);
+    }
+  });
+
+  const formFieldComponentList = readdirSync(
+    join(__dirname, `../src/components/stable/gux-form-field/components`)
+  );
+  formFieldComponentList.forEach(result => {
     if (result.startsWith('gux')) {
       componentList.push(result);
     }
@@ -175,10 +184,19 @@ function getMarkdown(componentName, a11yRuleAnswers) {
 }
 
 function outputFile(componentStability, componentName, markdownContent) {
-  const targetPath = join(
-    __dirname,
-    `../src/components/${componentStability}/${componentName}/a11yManualChecklist.md`
-  );
+  let targetPath;
+  if (componentName.startsWith('gux-form-field-')) {
+    targetPath = join(
+      __dirname,
+      `../src/components/${componentStability}/gux-form-field/components/${componentName}/a11yManualChecklist.md`
+    );
+  } else {
+    targetPath = join(
+      __dirname,
+      `../src/components/${componentStability}/${componentName}/a11yManualChecklist.md`
+    );
+  }
+
   writeFileSync(targetPath, markdownContent);
   console.info(
     `A markdown file containing the manual testing results has been added to ../src/components/${componentStability}/${componentName}`
