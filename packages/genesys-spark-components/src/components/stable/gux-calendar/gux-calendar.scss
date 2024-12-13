@@ -1,57 +1,13 @@
-/**
-@prop gse-ui-calendarMenu-day-headerText-fontFamily
-@prop gse-ui-calendarMenu-day-headerText-lineHeight
-@prop gse-ui-calendarMenu-day-headerText-fontSize
-@prop gse-ui-calendarMenu-day-headerText-fontWeight
-@prop gse-ui-calendarMenu-day-date-size
-@prop gse-ui-calendarMenu-month-headerText-fontFamily
-@prop gse-ui-calendarMenu-month-headerText-lineHeight
-@prop gse-ui-calendarMenu-month-headerText-fontSize
-@prop gse-ui-calendarMenu-month-single-header-height
-@prop gse-ui-calendarMenu-month-focusBorderRadius
-@prop gse-ui-calendarMenu-dateBody-padding
-@prop gse-ui-calendarMenu-header-backgroundColor
-@prop gse-ui-calendarMenu-header-foregroundColor
-@prop gse-ui-calendarMenu-header-gap
-@prop gse-ui-calendarMenu-header-padding
-@prop gse-ui-calendarMenu-backgroundColor
-@prop gse-ui-calendarMenu-date-defaultText-fontFamily
-@prop gse-ui-calendarMenu-date-defaultText-lineHeight
-@prop gse-ui-calendarMenu-date-defaultText-fontSize
-@prop gse-ui-calendarMenu-date-defaultText-fontWeight
-@prop gse-ui-calendarMenu-date-currentText-fontFamily
-@prop gse-ui-calendarMenu-date-currentText-lineHeight
-@prop gse-ui-calendarMenu-date-currentText-fontSize
-@prop gse-ui-calendarMenu-date-currentText-fontWeight
-@prop gse-ui-calendarMenu-date-selected-foregroundColor
-@prop gse-ui-calendarMenu-date-selected-backgroundColor
-@prop gse-ui-calendarMenu-date-selected-hoverBackgroundColor
-@prop gse-ui-calendarMenu-date-hover-backgroundColor
-@prop gse-ui-calendarMenu-date-range-backgroundColor
-@prop gse-ui-calendarMenu-date-default-foregroundColor
-@prop gse-ui-calendarMenu-single-header-borderRadius
-@prop gse-ui-calendarMenu-single-body-borderRadius
-@prop gse-ui-calendarMenu-disabled-opacity
-@prop gse-ui-calendarMenu-boxShadow-color
-@prop gse-ui-calendarMenu-boxShadow-type
-@prop gse-ui-calendarMenu-boxShadow-offsetX
-@prop gse-ui-calendarMenu-boxShadow-offsetY
-@prop gse-ui-calendarMenu-boxShadow-blur
-@prop gse-ui-calendarMenu-boxShadow-spread
-@prop gse-ui-calendarMenu-day-range-height - Not used since this value is already calculated from using other tokens
-@prop gse-ui-calendarMenu-day-input-height - Not used since this value is already calculated from using other tokens
-*/
-
+@use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
-// Style
 :host {
   display: inline-block;
 }
 
 .gux-calendar {
   margin-block-start: 2px;
-  border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
+  border-radius: 8px; // --gse-ui-calendarMenu-single-header-borderRadius and --gse-ui-calendarMenu-single-body-borderRadius need to be combined
   box-shadow: var(--gse-ui-calendarMenu-boxShadow-offsetX)
     var(--gse-ui-calendarMenu-boxShadow-offsetY)
     var(--gse-ui-calendarMenu-boxShadow-blur)
@@ -213,11 +169,15 @@
           }
 
           &.gux-start-date {
-            border-radius: 16px 0 0 16px; // TODO: COMUI-2299
+            border-radius: var(
+              --gse-ui-calendarMenu-range-date-startDate-borderRadius
+            );
           }
 
           &.gux-end-date {
-            border-radius: 0 16px 16px 0; // TODO: COMUI-2299
+            border-radius: var(
+              --gse-ui-calendarMenu-range-date-endDate-borderRadius
+            );
           }
 
           &:hover:not(&.gux-start-date):not(&.gux-end-date):not(
@@ -257,8 +217,8 @@
 
           &:focus-visible {
             border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
-            outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
-              var(--gse-semantic-border-focus);
+
+            @include focus.gux-focus-ring;
           }
         }
       }
