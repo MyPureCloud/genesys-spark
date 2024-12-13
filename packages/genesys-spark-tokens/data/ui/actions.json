@@ -426,7 +426,7 @@
         }
       },
       "padding": {
-        "value": "{interactive.md.padding} 0",
+        "value": "{interactive.md.padding}",
         "type": "spacing"
       },
       "gap": {
@@ -456,7 +456,7 @@
         }
       },
       "padding": {
-        "value": "{interactive.sm.padding} 0",
+        "value": "{interactive.sm.padding}",
         "type": "spacing"
       }
     },
