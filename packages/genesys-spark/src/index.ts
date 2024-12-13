@@ -78,11 +78,22 @@ export function registerSparkComponents(opts?: registerOptions): Promise<void> {
 /**
  * TODO
  */
-export function registerSparkChartComponents(): Promise<void> {
+export function registerSparkChartComponents(
+  opts?: registerOptions
+): Promise<void> {
   const SCRIPT_PATH = 'genesys-chart-webcomponents.esm.js';
 
   const assetsOrigin = getChartComponentAssetsOrigin();
-  const SCRIPT_SRC = `${assetsOrigin}${CHART_COMPONENT_ASSET_PREFIX}${SCRIPT_PATH}`;
+  let assetsUrl = `${assetsOrigin}${CHART_COMPONENT_ASSET_PREFIX}`;
+
+  if (opts?.assetsUrl) {
+    assetsUrl = opts.assetsUrl;
+    if (!assetsUrl.endsWith('/')) {
+      assetsUrl += '/';
+    }
+  }
+
+  const SCRIPT_SRC = `${assetsUrl}${SCRIPT_PATH}`;
 
   return Promise.all([checkAndLoadScript(SCRIPT_SRC)]).then();
 }
