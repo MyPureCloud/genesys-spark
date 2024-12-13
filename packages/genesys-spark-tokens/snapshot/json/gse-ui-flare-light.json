@@ -921,7 +921,9 @@
     "visited": {
       "foregroundColor": "#3d538f"
     },
-    "border_radius": "0"
+    "focus_outline": {
+      "border_radius": "4px"
+    }
   },
   "radio_button": {
     "icon": {

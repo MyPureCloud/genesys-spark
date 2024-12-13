@@ -271,6 +271,7 @@
   "--gse-ui-formFooter-border-style",
   "--gse-ui-formFooter-border-width",
   "--gse-ui-icon-color",
+  "--gse-ui-links-focusOutline-borderRadius",
   "--gse-ui-links-icon",
   "--gse-ui-links-inLine-medium-underlinedText-fontFamily",
   "--gse-ui-links-inLine-medium-underlinedText-fontSize",

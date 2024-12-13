@@ -19,7 +19,7 @@
     font-weight: var(--gse-ui-links-inLine-medium-text-fontWeight);
     line-height: var(--gse-ui-links-inLine-medium-text-lineHeight);
     color: var(--gse-ui-links-default-foregroundColor) !important;
-    border-radius: var(--gse-ui-links-borderRadius);
+    border-radius: var(--gse-ui-links-focusOutline-borderRadius) !important;
   }
 
   ::slotted(a:hover) {
@@ -67,7 +67,9 @@
   }
 
   ::slotted(a:hover) {
-    font-family: var(--gse-ui-links-standalone-medium-underlinedText-fontFamily),
+    font-family: var(
+        --gse-ui-links-standalone-medium-underlinedText-fontFamily
+      ),
       var(--gse-semantic-theme-fontFamily-body), sans-serif;
     font-size: var(--gse-ui-links-standalone-medium-underlinedText-fontSize);
     font-weight: var(
