@@ -18,7 +18,9 @@ export class GuxLink {
   standalone: boolean = false;
 
   componentWillLoad(): void {
-    trackComponent(this.root);
+    trackComponent(this.root, {
+      variant: this.size + (this.standalone ? '-standalone' : '')
+    });
   }
 
   private checkBreadcrumbParent(): boolean {
