@@ -1,6 +1,6 @@
-# gux-action-button manual accessibility testing status
+# gux-pagination manual accessibility testing status
 
-**Last Updated:** 2024-12-12T09:15:54.546Z
+**Last Updated:** 2024-12-12T13:23:40.528Z
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
 | ✅ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) | - |
@@ -9,7 +9,7 @@
 | ✅ | [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) | - |
 | ✅ | [2.4.11 Focus Not Obscured](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum) | - |
 | ✅ | [2.5.3 Label in Name](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html#dfn-name) | - |
-| ✅ | [2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements) | - |
+| ✅ | [2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements) | N/A |
 | ✅ | [3.2.1 On Focus](https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html) | - |
 | ✅ | [3.2.2 On Input](https://www.w3.org/WAI/WCAG22/Understanding/on-input.html) | - |
 | ✅ | [3.3.1 Error Identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) | - |

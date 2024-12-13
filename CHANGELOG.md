@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.105.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.105.3...v4.105.4) (2024-12-13)
+
+### [4.105.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.105.2...v4.105.3) (2024-12-12)
+
+
+### Bug Fixes
+
+* **other:** check-a11y ([956d3cf](https://github.com/MyPureCloud/genesys-spark/commit/956d3cf22a8dd8667e1a3f20cf3804bb90c77a88))
+
+### [4.105.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.105.1...v4.105.2) (2024-12-11)
+
+
+### Bug Fixes
+
+* **toggle:** screen reader label set to checked label ([3b93f46](https://github.com/MyPureCloud/genesys-spark/commit/3b93f464ca02afc2f6bd59fec01125b44422a4e3))
+
+### [4.105.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.105.0...v4.105.1) (2024-12-10)
+
+## [4.105.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.104.1...v4.105.0) (2024-12-07)
+
+
+### Features
+
+* **token:** fix figma variables ([5d737f8](https://github.com/MyPureCloud/genesys-spark/commit/5d737f87f62431420eae7181e48ce73dea919aeb))
+* **tokens:** fix up figma vars ([d92adb5](https://github.com/MyPureCloud/genesys-spark/commit/d92adb558aafdc2c7f593654a15a4400f94fe8b7))
+
 ### [4.104.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.104.0...v4.104.1) (2024-12-06)
 
 
