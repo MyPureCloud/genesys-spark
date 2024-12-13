@@ -494,9 +494,11 @@
         "type": "color"
       }
     },
-    "border_radius": {
-      "value": "0",
-      "type": "borderRadius"
+    "focus_outline": {
+      "border_radius": {
+        "value": "{focus_outline.sm.border_radius}",
+        "type": "borderRadius"
+      }
     }
   }
 }

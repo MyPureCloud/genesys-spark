@@ -1827,7 +1827,6 @@
       "links.hover.foregroundColor": "90a326763bc7ce1fc6a18695f1ec480f6c11ffde",
       "links.active.foregroundColor": "eb44f9e6b47e245fb8ccc2bf1036f400e645d3e4",
       "links.visited.foregroundColor": "5386a69cc4e5903ff924640dc868cb9acf50ab58",
-      "links.border_radius": "a493cde8df5c30a507335b9c356b72deb058176d",
       "form_control.input.disabled.opacity": "bd24a866582d19e37e0f31fb79358ee74e7a1456",
       "form_control.input.border_radius": "e68f08dc8c312096b042f7ec96d21e27c1830c89",
       "form_control.input.background_color": "fe7d4683ebda46180fbfffdaa1650a97d03a4c4e",
@@ -2504,7 +2503,8 @@
       "blank_state.gap_main": "69de3be05eeb22851286036d89111acb7e4c627a",
       "blank_state.gap_content": "15ff02c5635d64e3b7783047132a288e1c544c29",
       "blank_state.icon_color": "03e52d060cdc4dcc32623015a44f91f0b07bffa8",
-      "blank_state.foreground_color": "f40fea58f608d3c2a0ffa2cd3028fe44621a01ff"
+      "blank_state.foreground_color": "f40fea58f608d3c2a0ffa2cd3028fe44621a01ff",
+      "links.focus_outline.border_radius": "a493cde8df5c30a507335b9c356b72deb058176d"
     },
     "group": ".ui"
   }
