@@ -1,0 +1,65 @@
+@mixin gux-list-item-default {
+  :host {
+    width: 100%;
+    text-align: start;
+    outline: none;
+  }
+
+  :host([disabled]) {
+    pointer-events: none;
+  }
+
+  :host([disabled='false']) {
+    pointer-events: auto;
+  }
+
+  ::slotted(gux-icon) {
+    width: var(--gse-ui-menu-option-startIcon-height);
+    height: var(--gse-ui-menu-option-startIcon-height);
+    margin-right: var(--gse-ui-menu-option-gap);
+    vertical-align: middle;
+  }
+
+  button {
+    all: unset;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: var(--gse-ui-menu-option-height);
+    padding: var(--gse-ui-menu-option-padding);
+    font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
+    font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
+    font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
+    line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
+    color: var(--gse-ui-menu-option-label-foregroundColor);
+    word-wrap: break-word;
+    cursor: pointer;
+    background-color: var(--gse-ui-menu-option-default-backgroundColor);
+    border: none;
+    outline: none;
+    outline-offset: calc(var(--gse-ui-menu-option-focus-border-width) * -1);
+
+    &:focus-visible:not(:disabled) {
+      border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
+      outline: var(--gse-ui-menu-option-focus-border-width)
+        var(--gse-ui-menu-option-focus-border-style)
+        var(--gse-ui-menu-option-focus-border-color);
+    }
+
+    &:hover:not(:disabled) {
+      background: var(--gse-ui-menu-option-hover-backgroundColor);
+    }
+
+    &:active:not(:disabled) {
+      font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
+      font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
+      font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
+      line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
+      background: var(--gse-ui-menu-option-selected-backgroundColor);
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: var(--gse-ui-menu-option-disabled-opacity);
+    }
+  }
+}
