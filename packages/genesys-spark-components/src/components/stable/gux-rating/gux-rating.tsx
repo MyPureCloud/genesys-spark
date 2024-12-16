@@ -73,17 +73,22 @@ export class GuxRating {
 
     switch (event.key) {
       case 'ArrowUp':
+      case 'ArrowRight':
         event.preventDefault();
         this.updateRatingValue(this.value + increment);
         break;
+
       case 'ArrowDown':
+      case 'ArrowLeft':
         event.preventDefault();
         this.updateRatingValue(this.value - increment);
         break;
+
       case 'End':
         event.preventDefault();
         this.updateRatingValue(Infinity);
         break;
+
       case 'Home':
         event.preventDefault();
         this.updateRatingValue(-Infinity);
