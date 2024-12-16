@@ -6,7 +6,7 @@
   "warning": "badge with label: {label}, accent: warning",
   "warning-bold": "badge with label: {label}, accent: warning bold",
   "error": "badge with label: {label}, accent: error",
-  "error-bold": "badge with label: {label}, accent: error error",
+  "error-bold": "badge with label: {label}, accent: error bold",
   "inherit": "badge with label: {label}",
   "inherit-bold": "badge with label: {label}, bold"
 }

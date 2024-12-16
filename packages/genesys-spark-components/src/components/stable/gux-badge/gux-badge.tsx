@@ -41,7 +41,12 @@ export class GuxBadge {
 
   private renderBadgeTitle(): JSX.Element {
     return (
-      <gux-tooltip-title>
+      /*
+        NVDA will announce items as 'clickable' if event handlers are detected.
+        In this case, the hover event handler is used on the tooltip-title.
+        Since this is not useful for screen reader users, we hide the tooltip-title.
+      */
+      <gux-tooltip-title aria-hidden="true">
         <span>
           <slot
             aria-hidden="true"
