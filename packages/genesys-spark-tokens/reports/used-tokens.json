@@ -2,6 +2,7 @@
   "--gse-core-fontWeight-bold",
   "--gse-core-fontWeight-regular",
   "--gse-core-fontWeight-semiBold",
+  "--gse-semantic-background-container-elevated-default",
   "--gse-semantic-body-lg-bold-fontWeight",
   "--gse-semantic-body-lg-regular-fontFamily",
   "--gse-semantic-body-lg-regular-fontSize",
