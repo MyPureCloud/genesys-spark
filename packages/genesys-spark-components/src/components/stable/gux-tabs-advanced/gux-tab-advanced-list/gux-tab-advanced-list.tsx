@@ -639,7 +639,7 @@ export class GuxTabAdvancedList {
     return (
       <div>
         {this.hasScrollbar ? (
-          <gux-button-slot class="gux-scroll-button" accent="ghost">
+          <gux-button-slot class="gux-scroll-button" accent="ghost" icon-only>
             <button
               tabindex="-1"
               onDragOver={() => this.getScrollDirection(direction)}
