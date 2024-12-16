@@ -340,7 +340,7 @@
     },
     "lg": {
       "border_radius": {
-        "value": "{theme.border_radius.interactive.large}",
+        "value": "{theme.border_radius.interactive.2xl}",
         "type": "borderRadius",
         "description": "The recommended large border-radius for interactive component. Eg Tags"
       },
