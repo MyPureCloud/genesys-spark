@@ -294,7 +294,7 @@ describe('gux-rating', () => {
             },
             {
               press: 'ArrowRight',
-              expectedStarCounts: { emptyStars: 3, fullStars: 2, halfStars: 0 }
+              expectedStarCounts: { emptyStars: 2, fullStars: 3, halfStars: 0 }
             },
             {
               press: 'ArrowUp',
@@ -302,7 +302,7 @@ describe('gux-rating', () => {
             },
             {
               press: 'ArrowLeft',
-              expectedStarCounts: { emptyStars: 3, fullStars: 2, halfStars: 0 }
+              expectedStarCounts: { emptyStars: 4, fullStars: 1, halfStars: 0 }
             },
             {
               press: 'Home',
@@ -339,7 +339,7 @@ describe('gux-rating', () => {
             },
             {
               press: 'ArrowRight',
-              expectedStarCounts: { emptyStars: 2, fullStars: 2, halfStars: 1 }
+              expectedStarCounts: { emptyStars: 2, fullStars: 3, halfStars: 0 }
             },
             {
               press: 'ArrowUp',
@@ -347,7 +347,7 @@ describe('gux-rating', () => {
             },
             {
               press: 'ArrowLeft',
-              expectedStarCounts: { emptyStars: 2, fullStars: 2, halfStars: 1 }
+              expectedStarCounts: { emptyStars: 3, fullStars: 2, halfStars: 0 }
             },
             {
               press: 'Home',
