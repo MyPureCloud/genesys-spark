@@ -1,5 +1,5 @@
-$border: 1px solid #c3cad4;
-$soft-border: 1px solid #dae1e8;
+$border: 1px solid var(--gse-semantic-border-container-edges-default);
+$soft-border: 1px solid var(--gse-semantic-border-container-edges-lowEmphasis);
 
 html,
 body {
@@ -7,7 +7,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background-color: #fdfdfd;
+  background-color: var(--gse-semantic-background-container-page-default);
 }
 
 .component-viewer.content {
@@ -62,19 +62,9 @@ body {
     flex-grow: 1;
     padding: 27px 30px;
     overflow-y: auto;
-    color: #ff4f1f;
-    background-color: #fff793;
+    color: var(--gse-semantic-foreground-container-highEmphasis);
+    background-color: var(--gse-semantic-background-container-page-default);
     border-bottom: $border;
-
-    &.gux-light-theme {
-      color: #33383d;
-      background-color: #fdfdfd;
-    }
-
-    &.gux-dark-theme {
-      color: #fdfdfd;
-      background-color: #393845;
-    }
   }
 
   > .editor {
@@ -95,7 +85,7 @@ body {
   height: 100%;
   overflow: auto;
   line-height: 1.4em;
-  color: #33383d;
+  color: var(--gse-semantic-foreground-container-highEmphasis);
 
   summary {
     margin: 5px;

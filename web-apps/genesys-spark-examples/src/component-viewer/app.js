@@ -168,6 +168,11 @@ export async function bootstrap(exampleCode, callback) {
   const url = window.location.href.split('/');
   const component = url[url.length - 1].replace('.html', '');
   const sparkLink = SparkLinks[component];
+  //Using url params to set the mode so it can also change in supernova
+  const urlParams = new URLSearchParams(window.location.search);
+  const modeParam = urlParams.get('flare-mode') ?? 'light';
+  document.documentElement.setAttribute('flare-mode', modeParam);
+
   let sparkLinkAnchor;
   if (sparkLink && sparkLink !== '') {
     sparkLinkAnchor = toHTML(
@@ -183,7 +188,6 @@ export async function bootstrap(exampleCode, callback) {
   const updateCode = createEditor(editor, newCode => {
     const ast = parseFragment(newCode);
     const html = serialize(ast);
-
     updatePreview(html);
     attributesPanel.updateFromTree(ast);
     eventsPanel.updateFromTree(ast);
