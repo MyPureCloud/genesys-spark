@@ -273,6 +273,7 @@ export class GuxCalendar {
           onClick={() => this.setNewFocusedMonth(-1)}
         >
           <gux-icon
+            size="small"
             decorative
             icon-name="custom/chevron-left-small-regular"
           ></gux-icon>
@@ -292,6 +293,7 @@ export class GuxCalendar {
           onClick={() => this.setNewFocusedMonth(1)}
         >
           <gux-icon
+            size="small"
             decorative
             icon-name="custom/chevron-right-small-regular"
           ></gux-icon>
@@ -302,14 +304,14 @@ export class GuxCalendar {
 
   private renderContent(): JSX.Element {
     return (
-      <div>
+      <div class="gux-content">
         <div class="gux-week-days">
           {getWeekdays(this.locale, this.startDayOfWeek).map(
             day => (<div class="gux-week-day">{day}</div>) as JSX.Element
           )}
         </div>
 
-        <div class="gux-content">
+        <div>
           {this.getMonthDays().map(
             week =>
               (

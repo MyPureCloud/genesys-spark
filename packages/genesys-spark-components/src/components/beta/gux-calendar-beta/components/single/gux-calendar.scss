@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 .gux-calendar-beta {
@@ -7,9 +8,12 @@
   font-family: var(--gse-ui-calendarMenu-month-defaultText-fontFamily);
   font-size: var(--gse-ui-calendarMenu-month-defaultText-fontSize);
   background: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
-  border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
-  // TODO: Get box-shadow token working instead of hardcoding
-  box-shadow: rgb(34 37 41 / 24%) 0 2px 4px;
+  border-radius: 8px; // --gse-ui-calendarMenu-single-header-borderRadius and --gse-ui-calendarMenu-single-body-borderRadius need to be combined
+  box-shadow: var(--gse-ui-calendarMenu-boxShadow-offsetX)
+    var(--gse-ui-calendarMenu-boxShadow-offsetY)
+    var(--gse-ui-calendarMenu-boxShadow-blur)
+    var(--gse-ui-calendarMenu-boxShadow-spread)
+    var(--gse-ui-calendarMenu-boxShadow-color);
 
   .gux-header {
     display: flex;
@@ -34,6 +38,7 @@
 
     .gux-left,
     .gux-right {
+      block-size: 100%;
       color: var(--gse-ui-calendarMenu-header-foregroundColor);
       cursor: pointer;
       background: none;
@@ -41,107 +46,103 @@
       outline: none;
 
       &:focus-visible {
-        outline: 2px solid #aac9ff;
-        outline-offset: 1px;
+        @include focus.gux-focus-ring;
       }
-
-      gux-icon {
-        inline-size: 16px;
-        block-size: 16px;
-      }
-    }
-  }
-
-  .gux-week-days {
-    padding-block-start: 24px;
-    padding-inline: 24px;
-    font-family: var(--gse-ui-calendarMenu-day-headerText-fontFamily);
-    font-size: var(--gse-ui-calendarMenu-day-headerText-fontSize);
-    font-weight: var(--gse-ui-calendarMenu-day-headerText-fontWeight);
-    color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
-    text-align: center;
-
-    .gux-week-day {
-      display: inline-block;
-      inline-size: var(--gse-ui-calendarMenu-day-date-size);
-      block-size: 16px;
     }
   }
 
   .gux-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gse-ui-calendarMenu-dateBody-gap);
     padding: var(--gse-ui-calendarMenu-dateBody-padding);
-    color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
+    color: var(--gse-ui-calendarMenu-date-default-foregroundColor);
     background-color: var(--gse-ui-calendarMenu-backgroundColor);
     border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
-  }
 
-  .gux-content-week {
-    .gux-content-date {
-      display: inline-block;
-      inline-size: var(--gse-ui-calendarMenu-day-date-size);
-      block-size: var(--gse-ui-calendarMenu-day-input-height);
-      font-family: var(--gse-ui-calendarMenu-date-currentText-fontFamily);
-      font-size: var(--gse-ui-calendarMenu-date-defaultText-fontSize);
-      font-style: normal;
-      font-weight: var(--gse-ui-calendarMenu-date-defaultText-fontWeight);
-      line-height: 32px;
-      color: #626e84;
+    .gux-week-days {
+      font-family: var(--gse-ui-calendarMenu-day-headerText-fontFamily);
+      font-size: var(--gse-ui-calendarMenu-day-headerText-fontSize);
+      font-weight: var(--gse-ui-calendarMenu-day-headerText-fontWeight);
+      color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
       text-align: center;
-      vertical-align: middle;
-      border: none;
-      outline: none;
-      opacity: var(--gse-ui-calendarMenu-disabled-opacity);
 
-      &.gux-current-month {
-        // TODO: Is this the correct token to use here?
-        color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
-        opacity: 1;
+      .gux-week-day {
+        display: inline-block;
+        inline-size: var(--gse-ui-calendarMenu-day-range-height);
+        block-size: var(--gse-ui-calendarMenu-day-range-width);
       }
+    }
 
-      &.gux-hidden {
-        display: none;
-      }
-
-      &.gux-disabled {
-        pointer-events: none;
-      }
-
-      &.gux-selected {
-        color: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
-        background-color: var(
-          --gse-ui-calendarMenu-date-selected-backgroundColor
-        );
+    .gux-content-week {
+      .gux-content-date {
+        display: inline-block;
+        inline-size: var(--gse-ui-calendarMenu-day-date-size);
+        block-size: var(--gse-ui-calendarMenu-day-input-height);
+        font-family: var(--gse-ui-calendarMenu-date-currentText-fontFamily);
+        font-size: var(--gse-ui-calendarMenu-date-defaultText-fontSize);
+        font-style: normal;
+        font-weight: var(--gse-ui-calendarMenu-date-defaultText-fontWeight);
+        line-height: 32px;
+        text-align: center;
+        vertical-align: middle;
         border: none;
-        border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
         outline: none;
+        opacity: var(--gse-ui-calendarMenu-disabled-opacity);
+
+        &.gux-current-month {
+          // TODO: Is this the correct token to use here?
+          color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
+          opacity: 1;
+        }
+
+        &.gux-hidden {
+          display: none;
+        }
+
+        &.gux-disabled {
+          pointer-events: none;
+        }
+
+        &.gux-selected {
+          color: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
+          background-color: var(
+            --gse-ui-calendarMenu-date-selected-backgroundColor
+          );
+          border: none;
+          border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
+          outline: none;
+
+          &:hover {
+            background-color: var(
+              --gse-ui-calendarMenu-date-selected-hoverBackgroundColor
+            );
+          }
+        }
 
         &:hover {
+          cursor: pointer;
           background-color: var(
-            --gse-ui-calendarMenu-date-selected-hoverBackgroundColor
+            --gse-ui-calendarMenu-date-hover-backgroundColor
           );
+          border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
         }
-      }
 
-      &:hover {
-        cursor: pointer;
-        background-color: var(--gse-ui-calendarMenu-date-hover-backgroundColor);
-        border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
-      }
+        &:focus-visible {
+          border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
 
-      &:focus-visible {
-        border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
-        outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
-          var(--gse-semantic-border-focus);
-      }
+          @include focus.gux-focus-ring;
+        }
 
-      .gux-sr-only {
-        @include mixins.gux-sr-only-clip;
-      }
+        .gux-sr-only {
+          @include mixins.gux-sr-only-clip;
+        }
 
-      &.gux-current-date {
-        font-family: var(--gse-ui-calendarMenu-month-currentText-fontFamily);
-        font-size: var(--gse-ui-calendarMenu-date-currentText-fontSize);
-        font-weight: var(--gse-ui-calendarMenu-date-currentText-fontWeight);
+        &.gux-current-date {
+          font-family: var(--gse-ui-calendarMenu-month-currentText-fontFamily);
+          font-size: var(--gse-ui-calendarMenu-date-currentText-fontSize);
+          font-weight: var(--gse-ui-calendarMenu-date-currentText-fontWeight);
+        }
       }
     }
   }
