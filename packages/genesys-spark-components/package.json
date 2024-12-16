@@ -65,7 +65,7 @@
     "google-libphonenumber": "3.2.38",
     "intl-messageformat": "10.7.0",
     "requestanimationframe-timer": "3.0.3",
-    "sortablejs": "1.15.3"
+    "sortablejs": "1.15.6"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
