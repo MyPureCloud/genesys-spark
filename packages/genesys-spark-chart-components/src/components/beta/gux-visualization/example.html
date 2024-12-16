@@ -11,7 +11,7 @@
 <h3>Stacked column</h3>
 <gux-visualization-beta id="spark-stacked-column"> </gux-visualization-beta>
 
-<h3>Basic bar chart</h3>
+<h3>Basic bar chart with target line</h3>
 <gux-visualization-beta id="spark-bar"> </gux-visualization-beta>
 
 <h3>Multi bar with interactive legend hover</h3>
@@ -253,21 +253,6 @@
         }
       },
       layer: [
-        { data: { values: [{}] },
-
-        mark: {
-            type: 'rule',
-            color: '#FE8F85',
-            strokeDash: [4, 2],
-            size: 2
-        },
-
-        encoding: {
-            y: {
-                datum: 4
-            }
-        }
-      },
       {
         mark: { type: 'bar', tooltip: true, stroke: '#7B88F7' },
         params: [
@@ -291,6 +276,21 @@
           ],
             value: 0
           }
+        }
+      },
+      {
+        data: { values: [{}] },
+
+        mark: {
+          type: 'rule',
+          color: '#FE8F85',
+          strokeDash: [4, 2],
+          size: 2
+        },
+        encoding: {
+            y: {
+                datum: 4
+            }
         }
       }
     ]
@@ -497,6 +497,21 @@
           ],
             value: 0
           }
+        }
+      },
+      {
+        data: { values: [{}] },
+
+        mark: {
+          type: 'rule',
+          color: '#FE8F85',
+          strokeDash: [4, 2],
+          size: 2
+        },
+        encoding: {
+            x: {
+                datum: 4
+            }
         }
       }
     ]
