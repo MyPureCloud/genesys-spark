@@ -838,27 +838,8 @@
     }
   },
   "links": {
-    "as_button": {
-      "height": "32px",
-      "padding": "12px",
-      "gap": "8px",
-      "text": {
-        "fontFamily": "Roboto",
-        "fontWeight": "600",
-        "fontSize": "14px",
-        "lineHeight": "20px"
-      },
-      "underlined_text": {
-        "fontFamily": "Roboto",
-        "fontWeight": "600",
-        "fontSize": "14px",
-        "lineHeight": "20px",
-        "textDecoration": "underline"
-      }
-    },
-    "in_line": {
+    "standalone": {
       "medium": {
-        "height": "24px",
         "text": {
           "fontFamily": "Roboto",
           "fontWeight": "600",
@@ -874,7 +855,40 @@
         }
       },
       "small": {
-        "height": "20px",
+        "text": {
+          "fontFamily": "Roboto",
+          "fontWeight": "600",
+          "fontSize": "12px",
+          "lineHeight": "18px"
+        },
+        "underlined_text": {
+          "fontFamily": "Roboto",
+          "fontWeight": "600",
+          "fontSize": "12px",
+          "lineHeight": "18px",
+          "textDecoration": "underline"
+        }
+      },
+      "padding": "8px",
+      "gap": "8px"
+    },
+    "in_line": {
+      "medium": {
+        "text": {
+          "fontFamily": "Roboto",
+          "fontWeight": "600",
+          "fontSize": "14px",
+          "lineHeight": "20px"
+        },
+        "underlined_text": {
+          "fontFamily": "Roboto",
+          "fontWeight": "600",
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "textDecoration": "underline"
+        }
+      },
+      "small": {
         "text": {
           "fontFamily": "Roboto",
           "fontWeight": "600",
@@ -907,7 +921,9 @@
     "visited": {
       "foregroundColor": "#8452cf"
     },
-    "border_radius": "0"
+    "focus_outline": {
+      "border_radius": "4px"
+    }
   },
   "radio_button": {
     "icon": {
@@ -1117,7 +1133,7 @@
       "offsetX": "0",
       "offsetY": "0"
     },
-    "padding": "8px 1px",
+    "padding": "8px 0px",
     "background_color": "#ffffff",
     "scrollbar": {
       "foreground_color": "#3e4a5b"

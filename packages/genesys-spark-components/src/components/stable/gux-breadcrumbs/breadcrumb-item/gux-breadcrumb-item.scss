@@ -8,16 +8,6 @@
   text-decoration: none;
 }
 
-@mixin link-breadcrumb-primary-underline {
-  font-family: var(--gse-ui-links-inLine-medium-underlinedText-fontFamily);
-  font-size: var(--gse-ui-links-inLine-medium-underlinedText-fontSize);
-  font-weight: var(--gse-ui-links-inLine-medium-underlinedText-fontWeight);
-  line-height: var(--gse-ui-links-inLine-medium-underlinedText-lineHeight);
-  text-decoration: var(
-    --gse-ui-links-inLine-medium-underlinedText-textDecoration
-  );
-}
-
 @mixin link-breadcrumb-primary-separator {
   padding: var(--gse-ui-breadcrumbs-primary-separator-padding);
   font-family: var(
@@ -38,16 +28,6 @@
   font-weight: var(--gse-ui-links-inLine-small-text-fontWeight);
   line-height: var(--gse-ui-links-inLine-small-text-lineHeight);
   text-decoration: none;
-}
-
-@mixin link-breadcrumb-secondary-underline {
-  font-family: var(--gse-ui-links-inLine-small-underlinedText-fontFamily);
-  font-size: var(--gse-ui-links-inLine-small-underlinedText-fontSize);
-  font-weight: var(--gse-ui-links-inLine-small-underlinedText-fontWeight);
-  line-height: var(--gse-ui-links-inLine-small-underlinedText-lineHeight);
-  text-decoration: var(
-    --gse-ui-links-inLine-small-underlinedText-textDecoration
-  );
 }
 
 @mixin link-breadcrumb-secondary-separator {
@@ -81,31 +61,6 @@
     &.gux-active {
       color: var(--gse-ui-links-active-foregroundColor);
     }
-
-    &.gux-link {
-      color: var(--gse-ui-links-default-foregroundColor);
-      pointer-events: initial;
-
-      &:visited {
-        color: var(--gse-ui-links-visited-foregroundColor);
-      }
-
-      &:hover {
-        @include link-breadcrumb-secondary-underline;
-
-        color: var(--gse-ui-links-hover-foregroundColor);
-      }
-
-      &:active {
-        color: var(--gse-ui-links-active-foregroundColor);
-      }
-
-      &:focus-visible {
-        @include focus.gux-focus-ring;
-
-        border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
-      }
-    }
   }
 
   .gux-breadcrumb-separator {
@@ -119,12 +74,6 @@
 
     .gux-breadcrumb-content {
       @include link-breadcrumb-primary-default;
-
-      &.gux-link {
-        &:hover {
-          @include link-breadcrumb-primary-underline;
-        }
-      }
     }
 
     .gux-breadcrumb-separator {

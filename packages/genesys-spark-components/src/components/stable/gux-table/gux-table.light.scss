@@ -155,7 +155,7 @@ th:not([data-cell-action]):not([data-cell-numeric]):has(> gux-sort-control) {
 th[data-cell-numeric]:has(> gux-sort-control),
 th[data-cell-action]:has(> gux-sort-control) {
   padding-inline-start: calc(
-    2 * var(--gse-ui-dataTableItems-header-gap) +
-      var(--gse-ui-icon-small-size) + 2px
+    2 * var(--gse-ui-dataTableItems-header-gap) + var(--gse-ui-icon-small-size) +
+      2px
   ) !important;
 }

@@ -404,34 +404,8 @@
     }
   },
   "links": {
-    "as_button": {
-      "height": {
-        "value": "{interactive.md.size}",
-        "type": "sizing"
-      },
-      "padding": {
-        "value": "{interactive.lg.padding}",
-        "type": "spacing"
-      },
-      "gap": {
-        "value": "{interactive.lg.gap}",
-        "type": "spacing"
-      },
-      "text": {
-        "value": "{body.md.semi_bold}",
-        "type": "typography"
-      },
-      "underlined_text": {
-        "value": "{body.md.link}",
-        "type": "typography"
-      }
-    },
-    "in_line": {
+    "standalone": {
       "medium": {
-        "height": {
-          "value": "{interactive.sm.size}",
-          "type": "sizing"
-        },
         "text": {
           "value": "{body.md.semi_bold}",
           "type": "typography"
@@ -442,10 +416,36 @@
         }
       },
       "small": {
-        "height": {
-          "value": "{interactive.xs.size}",
-          "type": "sizing"
+        "text": {
+          "value": "{body.sm.semi_bold}",
+          "type": "typography"
         },
+        "underlined_text": {
+          "value": "{body.sm.link}",
+          "type": "typography"
+        }
+      },
+      "padding": {
+        "value": "{interactive.md.padding}",
+        "type": "spacing"
+      },
+      "gap": {
+        "value": "{interactive.lg.gap}",
+        "type": "spacing"
+      }
+    },
+    "in_line": {
+      "medium": {
+        "text": {
+          "value": "{body.md.semi_bold}",
+          "type": "typography"
+        },
+        "underlined_text": {
+          "value": "{body.md.link}",
+          "type": "typography"
+        }
+      },
+      "small": {
         "text": {
           "value": "{body.sm.semi_bold}",
           "type": "typography"
@@ -494,9 +494,11 @@
         "type": "color"
       }
     },
-    "border_radius": {
-      "value": "0",
-      "type": "borderRadius"
+    "focus_outline": {
+      "border_radius": {
+        "value": "{focus_outline.sm.border_radius}",
+        "type": "borderRadius"
+      }
     }
   }
 }

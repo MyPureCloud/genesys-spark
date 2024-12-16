@@ -36,6 +36,7 @@
 ### Depends on
 
 - [gux-icon](../gux-icon)
+- [gux-link-beta](../../beta/gux-link)
 - [gux-cta-group](../../beta/gux-cta-group)
 - [gux-button-slot](../gux-button-slot)
 - [gux-truncate](../gux-truncate)
@@ -45,6 +46,7 @@
 ```mermaid
 graph TD;
   gux-toast --> gux-icon
+  gux-toast --> gux-link-beta
   gux-toast --> gux-cta-group
   gux-toast --> gux-button-slot
   gux-toast --> gux-truncate
