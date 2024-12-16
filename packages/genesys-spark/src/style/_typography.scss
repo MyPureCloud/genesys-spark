@@ -278,7 +278,7 @@
 @mixin ui-anchor {
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
-  border-radius: var(--gse-ui-links-borderRadius);
+  border-radius: 0;
 
   &:hover {
     color: var(--gse-ui-links-hover-foregroundColor);
