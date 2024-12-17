@@ -27,6 +27,7 @@ $gux-form-field-number-step-button-size: 14px;
   padding-block-end: 0;
   overflow: hidden;
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  color: var(--gse-ui-formControl-input-populatedColor);
   text-align: end;
   text-overflow: ellipsis;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
