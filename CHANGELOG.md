@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.106.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.105.5...v4.106.0) (2024-12-17)
+
+
+### Features
+
+* **link:** adding beta component for hyperlinks ([ad51353](https://github.com/MyPureCloud/genesys-spark/commit/ad5135346b3112247d1c7f739f7eee3ec9d607ad))
+* **rating:** can now increment the value using left and right arrows ([073288e](https://github.com/MyPureCloud/genesys-spark/commit/073288ef56b1df89237a4cbdea3d5c137959a958))
+* **rich-text-editor:** addition of rich style feature ([d41b748](https://github.com/MyPureCloud/genesys-spark/commit/d41b748ec7565b68328e0aedb0fafc3ca8697c1c))
+* **tokens:** added support for dark mode on the component viewer ([a7ebb51](https://github.com/MyPureCloud/genesys-spark/commit/a7ebb51a8fde07b40ba52fc314372905dc6072f2))
+* **tokens:** updated playground styles ([5f46a04](https://github.com/MyPureCloud/genesys-spark/commit/5f46a047a181524542030e45294f66e5ef07f330))
+
+
+### Bug Fixes
+
+* **calendar:** style changes in preparation for dark mode ([e695325](https://github.com/MyPureCloud/genesys-spark/commit/e695325cd0631344ba9e305ffecfedc64802668a))
+
 ### [4.105.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.105.4...v4.105.5) (2024-12-14)
 
 
