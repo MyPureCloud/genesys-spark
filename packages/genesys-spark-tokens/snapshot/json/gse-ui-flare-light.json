@@ -1469,7 +1469,7 @@
         "width": "2px",
         "style": "solid"
       },
-      "border_radius": "16px",
+      "border_radius": "20px",
       "offset": "1px"
     }
   },

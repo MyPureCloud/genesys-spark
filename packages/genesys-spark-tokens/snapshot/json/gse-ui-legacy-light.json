@@ -1423,7 +1423,7 @@
           "background_color": "#2754ac"
         }
       },
-      "border_radius": "4px"
+      "border_radius": "16px"
     },
     "handle": {
       "width": "16px",
@@ -1458,7 +1458,7 @@
       },
       "background_color": "#ffffff",
       "foreground_color": "#2a60c8",
-      "border_radius": "4px"
+      "border_radius": "16px"
     },
     "disabled": {
       "opacity": ".5"
@@ -1469,7 +1469,7 @@
         "width": "2px",
         "style": "solid"
       },
-      "border_radius": "4px",
+      "border_radius": "16px",
       "offset": "1px"
     }
   },

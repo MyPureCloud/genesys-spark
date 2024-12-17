@@ -895,7 +895,7 @@
         }
       },
       "border_radius": {
-        "value": "{theme.border_radius.container.large}",
+        "value": "{interactive.lg.border_radius}",
         "type": "borderRadius"
       }
     },
@@ -957,7 +957,7 @@
         "type": "color"
       },
       "border_radius": {
-        "value": "{theme.border_radius.container.large}",
+        "value": "{interactive.lg.border_radius}",
         "type": "borderRadius"
       }
     },
@@ -977,7 +977,7 @@
         "type": "border"
       },
       "border_radius": {
-        "value": "{theme.border_radius.container.large}",
+        "value": "{focus_outline.xl.border_radius}",
         "type": "borderRadius"
       },
       "offset": {
