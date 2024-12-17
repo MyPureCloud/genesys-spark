@@ -1,14 +1,20 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 
 // Variables part
-$range-active: var(--gse-ui-slider-bar-selected-backgroundColor);
-$thumb-diameter: var(--gse-ui-slider-handle-width);
+$range-active: var(--gse-ui-rangeSlider-bar-selected-backgroundColor);
+$thumb-diameter: var(--gse-ui-rangeSlider-handle-width);
 $track-width: 100%;
-$track-height: var(--gse-ui-slider-bar-height);
+$track-height: var(--gse-ui-rangeSlider-bar-height);
 $track-radius: 0;
-$handle-enabled-background: var(--gse-ui-slider-handle-default-backgroundColor);
-$handle-hover-background: var(--gse-ui-slider-handle-hover-backgroundColor);
-$handle-active-background: var(--gse-ui-slider-handle-active-backgroundColor);
+$handle-enabled-background: var(
+  --gse-ui-rangeSlider-handle-default-backgroundColor
+);
+$handle-hover-background: var(
+  --gse-ui-rangeSlider-handle-hover-backgroundColor
+);
+$handle-active-background: var(
+  --gse-ui-rangeSlider-handle-active-backgroundColor
+);
 $handle-border-radius: 100%;
 $contrast: 5%;
 $slider-border: #b4bccb;

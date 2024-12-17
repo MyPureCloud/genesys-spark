@@ -32,10 +32,10 @@
 @include gux-form-field-help.Style;
 
 // Variables part
-$range-active: var(--gse-ui-slider-bar-selected-backgroundColor);
+$range-active: var(--gse-ui-rangeSlider-bar-selected-backgroundColor);
 $track-width: 100%;
-$track-height: var(--gse-ui-slider-bar-height);
-$thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
+$track-height: var(--gse-ui-rangeSlider-bar-height);
+$thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-width) / 2);
 
 @mixin gux-track {
   inline-size: $track-width;
@@ -48,7 +48,7 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
   inline-size: var($gse-ui-slider-handle-width);
   block-size: var($gse-ui-slider-handle-height);
   cursor: pointer;
-  border-radius: var(--gse-ui-slider-handle-borderRadius);
+  border-radius: var(--gse-ui-rangeSlider-handle-borderRadius);
 }
 
 :host {
@@ -82,15 +82,15 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--gse-ui-slider-gap);
+    gap: var(--gse-ui-rangeSlider-gap);
     place-content: stretch flex-start;
     align-items: center;
     // We will not use a token for this height style below
     block-size: 32px;
-    font-size: var(--gse-ui-slider-label-text-fontSize);
+    font-size: var(--gse-ui-rangeSlider-label-text-fontSize);
 
     &.gux-disabled {
-      opacity: var(--gse-ui-slider-disabled-opacity);
+      opacity: var(--gse-ui-rangeSlider-disabled-opacity);
     }
 
     .gux-range {
@@ -112,13 +112,13 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
         // We are not using a token for this margin below since it this 6px margin is used to center position the head on the track
         margin-block: 6px;
         margin-inline: 0;
-        background: var(--gse-ui-slider-bar-default-backgroundColor);
-        border-radius: var(--gse-ui-slider-track-borderRadius);
+        background: var(--gse-ui-rangeSlider-bar-default-backgroundColor);
+        border-radius: var(--gse-ui-rangeSlider-track-borderRadius);
 
         .gux-progress {
           block-size: $track-height;
           background-color: $range-active;
-          border-radius: var(--gse-ui-slider-track-borderRadius);
+          border-radius: var(--gse-ui-rangeSlider-track-borderRadius);
         }
       }
     }
@@ -129,10 +129,10 @@ $thumb-diameter: calc(var(--gse-ui-slider-handle-width) / 2);
       order: 0;
       margin-block: 0;
       margin-inline: var(--gux-spacing-medium) 0;
-      font-family: var(--gse-ui-slider-label-text-fontFamily);
-      font-size: var(--gse-ui-slider-label-text-fontSize);
-      font-weight: var(--gse-ui-slider-label-text-fontWeight);
-      line-height: var(--gse-ui-slider-label-text-lineHeight);
+      font-family: var(--gse-ui-rangeSlider-label-text-fontFamily);
+      font-size: var(--gse-ui-rangeSlider-label-text-fontSize);
+      font-weight: var(--gse-ui-rangeSlider-label-text-fontWeight);
+      line-height: var(--gse-ui-rangeSlider-label-text-lineHeight);
       text-align: end;
 
       &.gux-hidden {
