@@ -13,6 +13,11 @@ const COMPONENT_ASSET_PREFIX = '__COMPONENT_ASSET_PREFIX__';
 const CHART_COMPONENT_ASSET_PREFIX = '__CHART_COMPONENT_ASSET_PREFIX__';
 
 interface registerOptions {
+  /**
+   * Optional base URL to use for component assets like JS and CSS (i.e. where dist/genesys-webcomponents is hosted).
+   * This is meant for testing. In production, assets should be loaded from the default CDN location.
+   */
+  assetsUrl?: string;
   theme?: 'flare' | 'legacy';
 }
 
@@ -51,8 +56,17 @@ export function registerSparkComponents(opts?: registerOptions): Promise<void> {
       : 'genesys-webcomponents.css';
 
   const assetsOrigin = getComponentAssetsOrigin();
-  const SCRIPT_SRC = `${assetsOrigin}${COMPONENT_ASSET_PREFIX}${SCRIPT_PATH}`;
-  const STYLE_HREF = `${assetsOrigin}${COMPONENT_ASSET_PREFIX}${STYLE_PATH}`;
+  let assetsUrl = `${assetsOrigin}${COMPONENT_ASSET_PREFIX}`;
+
+  if (opts?.assetsUrl) {
+    assetsUrl = opts.assetsUrl;
+    if (!assetsUrl.endsWith('/')) {
+      assetsUrl += '/';
+    }
+  }
+
+  const SCRIPT_SRC = `${assetsUrl}${SCRIPT_PATH}`;
+  const STYLE_HREF = `${assetsUrl}${STYLE_PATH}`;
 
   return Promise.all([
     checkAndLoadScript(SCRIPT_SRC),
@@ -64,11 +78,22 @@ export function registerSparkComponents(opts?: registerOptions): Promise<void> {
 /**
  * TODO
  */
-export function registerSparkChartComponents(): Promise<void> {
+export function registerSparkChartComponents(
+  opts?: registerOptions
+): Promise<void> {
   const SCRIPT_PATH = 'genesys-chart-webcomponents.esm.js';
 
   const assetsOrigin = getChartComponentAssetsOrigin();
-  const SCRIPT_SRC = `${assetsOrigin}${CHART_COMPONENT_ASSET_PREFIX}${SCRIPT_PATH}`;
+  let assetsUrl = `${assetsOrigin}${CHART_COMPONENT_ASSET_PREFIX}`;
+
+  if (opts?.assetsUrl) {
+    assetsUrl = opts.assetsUrl;
+    if (!assetsUrl.endsWith('/')) {
+      assetsUrl += '/';
+    }
+  }
+
+  const SCRIPT_SRC = `${assetsUrl}${SCRIPT_PATH}`;
 
   return Promise.all([checkAndLoadScript(SCRIPT_SRC)]).then();
 }
