@@ -76,37 +76,22 @@ gux-tabs {
 
   .gux-scroll-button-container {
     display: flex;
-    border-radius: 4px; // TODO: COMUI-2341. Should we use button tokens here ?
+    align-items: center;
+    justify-content: center;
+    block-size: 100%;
+    background-color: var(--gse-ui-advancedTabs-set-backgroundColor);
+    border-radius: var(
+      --gse-ui-button-borderRadius
+    ); // TODO: COMUI-2341. Should we use button tokens here ?
 
-    .gux-scroll-button {
+    gux-button-slot {
+      block-size: 100%;
+    }
+
+    button {
       display: flex;
       align-items: center;
-      justify-content: center;
-      inline-size: 28px;
-      block-size: 40px;
-      color: #202937;
-      cursor: pointer;
-      background-color: #e2e6ee;
-      border: none;
-      border-radius: 4px;
-
-      gux-icon {
-        inline-size: 16px;
-        block-size: 16px;
-      }
-
-      &:hover:not(:disabled) {
-        background-color: #d7dce5;
-      }
-
-      &:active:not(:disabled) {
-        background-color: color.adjust(#e2e6ee, $lightness: -5%);
-      }
-
-      &:disabled {
-        cursor: default;
-        opacity: 0.5;
-      }
+      block-size: 100%;
     }
   }
 }

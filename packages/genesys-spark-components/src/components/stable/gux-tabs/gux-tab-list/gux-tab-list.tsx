@@ -355,19 +355,22 @@ export class GuxTabList {
     return (
       <div class="gux-scroll-button-container">
         {this.hasHorizontalScrollbar || this.hasVerticalScrollbar ? (
-          <button
-            disabled={this.getButtonDisabled(direction)}
-            tabindex="-1"
-            title={this.i18n(direction)}
-            aria-label={this.i18n(direction)}
-            class="gux-scroll-button"
-            onClick={() => this.getScrollDirection(direction)}
-          >
-            <gux-icon
-              icon-name={this.getChevronIconName(direction)}
-              decorative={true}
-            />
-          </button>
+          <gux-button-slot accent="ghost" icon-only>
+            <button
+              class="gux-scroll-button"
+              disabled={this.getButtonDisabled(direction)}
+              tabindex="-1"
+              title={this.i18n(direction)}
+              aria-label={this.i18n(direction)}
+              onClick={() => this.getScrollDirection(direction)}
+            >
+              <gux-icon
+                icon-name={this.getChevronIconName(direction)}
+                decorative={true}
+                size="small"
+              />
+            </button>
+          </gux-button-slot>
         ) : null}
       </div>
     ) as JSX.Element;
