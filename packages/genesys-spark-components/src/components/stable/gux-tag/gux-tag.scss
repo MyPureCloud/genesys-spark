@@ -32,15 +32,8 @@
 
   &.gux-disabled {
     position: relative;
-
-    &::before {
-      position: absolute;
-      inset: 0;
-      content: '';
-      background-color: #fff;
-      border-radius: var(--gse-ui-tag-borderRadius);
-      opacity: var(--gse-ui-tag-disabled-opacity);
-    }
+    user-select: none;
+    opacity: var(--gse-ui-tag-disabled-opacity);
   }
 
   gux-tooltip-title {
