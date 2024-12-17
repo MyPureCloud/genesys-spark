@@ -23,7 +23,7 @@ describe('gux-time-picker', () => {
     const valueMinutes = await inputMinutes.getProperty('value');
 
     await a11yCheck(page);
-    expect(valueHours).toBe('9');
+    expect(valueHours).toBe('09');
     expect(valueMinutes).toBe('00');
   });
 
