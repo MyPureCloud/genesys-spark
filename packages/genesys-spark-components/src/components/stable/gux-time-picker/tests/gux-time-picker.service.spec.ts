@@ -610,7 +610,7 @@ describe('gux-time-picker.service', () => {
       { input: '12:00', clockType: '24h', expectedOutput: '12' },
       { input: '12:00', clockType: '12h', expectedOutput: '12' },
       { input: '20:00', clockType: '24h', expectedOutput: '20' },
-      { input: '20:00', clockType: '12h', expectedOutput: '8' }
+      { input: '20:00', clockType: '12h', expectedOutput: '08' }
     ].forEach(
       ({
         input,
