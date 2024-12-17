@@ -1311,7 +1311,7 @@
       "type": "spacing"
     }
   },
-  "slider": {
+  "range_slider": {
     "handle": {
       "width": {
         "value": "{interactive.xs.size}",
@@ -1398,6 +1398,12 @@
       "border_radius": {
         "value": "{theme.border_radius.interactive.small}",
         "type": "borderRadius"
+      }
+    },
+    "set": {
+      "height": {
+        "value": "{interactive.xs.size}",
+        "type": "sizing"
       }
     }
   },
