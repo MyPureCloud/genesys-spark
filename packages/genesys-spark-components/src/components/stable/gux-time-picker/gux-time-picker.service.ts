@@ -144,8 +144,7 @@ export function getDisplayValue(
 
   if (clockType === '12h') {
     const parsedHour = parseInt(hour, 10) % 12 || 12;
-    const leadingZero = parsedHour < 10 ? '0' : '';
-    const fullHour = `${leadingZero}${parsedHour.toString()}`;
+    const fullHour = parsedHour.toString().padStart(2, '0');
     return `${fullHour}:${minute}`;
   }
 
