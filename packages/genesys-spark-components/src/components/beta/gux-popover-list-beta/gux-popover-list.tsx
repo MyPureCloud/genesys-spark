@@ -18,6 +18,7 @@ import {
   shift,
   hide
 } from '@floating-ui/dom';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
@@ -76,6 +77,8 @@ export class GuxPopoverList {
   @Event()
   guxdismiss: EventEmitter<void>;
 
+  private listElement: HTMLGuxListElement;
+
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
@@ -104,6 +107,10 @@ export class GuxPopoverList {
       this.popupElement.togglePopover();
       this.isOpen = !this.isOpen;
       this.runUpdatePosition();
+
+      if (this.isOpen) {
+        this.focusFirstItemInPopupList();
+      }
     }
   }
 
@@ -192,14 +199,22 @@ export class GuxPopoverList {
     }
   }
 
+  private focusFirstItemInPopupList(): void {
+    afterNextRenderTimeout(() => {
+      void this.listElement.guxFocusFirstItem();
+    });
+  }
+
   connectedCallback(): void {
     trackComponent(this.root, { variant: this.position });
+    this.listElement = this.root.querySelector('gux-list');
   }
 
   componentDidLoad(): void {
     if (this.isOpen) {
       this.popupElement.togglePopover();
       this.runUpdatePosition();
+      this.focusFirstItemInPopupList();
     }
   }
 
