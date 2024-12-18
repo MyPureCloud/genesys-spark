@@ -1,6 +1,6 @@
 # gux-button manual accessibility testing status
 
-**Last Updated:** 2024-12-16T12:19:35.928Z
+**Last Updated:** 2024-12-18T09:34:21.608Z
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
 | ✅ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) | - |
@@ -12,7 +12,7 @@
 | ✅ | [2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements) | - |
 | ✅ | [3.2.1 On Focus](https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html) | - |
 | ✅ | [3.2.2 On Input](https://www.w3.org/WAI/WCAG22/Understanding/on-input.html) | - |
-| ✅ | [3.3.1 Error Identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) | y |
-| ✅ | [3.2.2 Labels or Instructions](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) | y |
+| ✅ | [3.3.1 Error Identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) | - |
+| ✅ | [3.2.2 Labels or Instructions](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) | - |
 | ✅ | [4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) | - |
 | ✅ | [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) | - |
