@@ -1,30 +1,3 @@
-/*
-@prop gse-ui-formControl-input-focus-border-width
-@prop gse-ui-formControl-input-focus-border-style
-@prop gse-ui-formControl-input-focus-border-color
-@prop gse-ui-formControl-input-active-border-width
-@prop gse-ui-formControl-input-active-border-style
-@prop gse-ui-formControl-input-active-border-color
-@prop gse-ui-formControl-focusRing-borderRadius
-@prop gse-ui-datePicker-disabled-opacity
-@prop gse-ui-formControl-label-text-fontSize
-@prop gse-ui-formControl-input-textfield-height
-@prop gse-ui-formControl-input-padding
-@prop gse-ui-formControl-input-contentText-fontFamily
-@prop gse-ui-formControl-input-contentText-fontSize
-@prop gse-ui-formControl-input-contentText-lineHeight
-@prop gse-ui-formControl-input-populatedColor
-@prop gse-ui-formControl-input-backgroundColor
-@prop gse-ui-formControl-input-default-border-width
-@prop gse-ui-formControl-input-default-border-style
-@prop gse-ui-formControl-input-default-border-color
-@prop gse-ui-formControl-input-borderRadius
-@prop gse-ui-calendarMenu-day-input-width
-@prop gse-ui-formControl-input-inputIcon-iconEndColor
-@prop gse-ui-actionButton-borderRadius
-@prop gse-ui-icon-size-sm
-*/
-
 @use '../gux-form-field/gux-form-field.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
@@ -33,8 +6,7 @@
     var(--gse-ui-formControl-input-active-border-style)
     var(--gse-ui-formControl-input-active-border-color);
   border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
-  outline: 2px
-    // TODO: COMUI-2299 - Design needs to update --gse-ui-formControl-input-focus-border-width token to be 2px instead of 3px
+  outline: var(--gse-ui-formControl-input-focus-border-width)
     var(--gse-ui-formControl-input-focus-border-style)
     var(--gse-ui-formControl-input-focus-border-color);
   outline-offset: var(--gse-semantic-focusOutline-offset);
@@ -68,7 +40,7 @@
     inline-size: 100%;
 
     ~ .gux-datepicker-field {
-      margin-inline-start: 20px; // TODO: COMUI-2299
+      margin-inline-start: var(--gse-ui-datePicker-range-gap);
     }
 
     &.gux-above {
@@ -148,6 +120,7 @@
           font-size: var(--gse-ui-formControl-input-contentText-fontSize);
           line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
           color: var(--gse-ui-formControl-input-populatedColor);
+          background-color: transparent;
           border: none;
           outline: none;
 
