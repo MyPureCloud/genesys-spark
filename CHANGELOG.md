@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.107.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.106.0...v4.107.0) (2024-12-18)
+
+
+### Features
+
+* **tokens:** aligned toggle bordfer radius style ([3ccc091](https://github.com/MyPureCloud/genesys-spark/commit/3ccc091eafc2064b8bd33bcf2f2710138ba365d1))
+* **tokens:** generated CSS vars ([0d1b99a](https://github.com/MyPureCloud/genesys-spark/commit/0d1b99ab86cdcf8b6ecaf1565cb3f32cae04bea1))
+
 ## [4.106.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.105.5...v4.106.0) (2024-12-17)
 
 
