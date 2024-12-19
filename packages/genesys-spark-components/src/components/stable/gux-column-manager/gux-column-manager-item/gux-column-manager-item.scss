@@ -3,13 +3,17 @@
 
 :host([gs-reorder-indicator='above']) {
   .gux-container {
-    border-block-start-color: #aac9ff; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+    border-block-start-color: var(
+      --gse-ui-dataTableItems-editColumn-editColumnItem-drop-borderColor
+    );
   }
 }
 
 :host([gs-reorder-indicator='below']) {
   .gux-container {
-    border-block-end-color: #aac9ff; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+    border-block-end-color: var(
+      --gse-ui-dataTableItems-editColumn-editColumnItem-drop-borderColor
+    );
   }
 }
 
@@ -25,11 +29,15 @@
   border-block-end: 2px solid transparent; //TODO https://inindca.atlassian.net/browse/COMUI-2314
 
   &.gux-drop-above {
-    border-block-start-color: #aac9ff; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+    border-block-start-color: var(
+      --gse-ui-dataTableItems-editColumn-editColumnItem-drop-borderColor
+    );
   }
 
   &.gux-drop-below {
-    border-block-end-color: #aac9ff; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+    border-block-end-color: var(
+      --gse-ui-dataTableItems-editColumn-editColumnItem-drop-borderColor
+    );
   }
 
   &.gux-dragging {
@@ -44,35 +52,37 @@
     flex: 0 1 auto;
     align-self: auto;
     order: 0;
-    color: #596373; //TODO https://inindca.atlassian.net/browse/COMUI-2314
+    color: var(
+      --gse-ui-dataTableItems-editColumn-editColumnItem-foregroundColor
+    );
     cursor: grab;
     border-radius: 4px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
-
-    gux-icon {
-      inline-size: var(--gse-ui-icon-small-size);
-      block-size: var(--gse-ui-icon-small-size);
-    }
-
-    &.gux-reordering {
-      &:focus-visible {
-        gux-icon {
-          color: #2a60c8; //TODO https://inindca.atlassian.net/browse/COMUI-2314
-        }
-      }
-    }
 
     &:active {
       pointer-events: none;
       cursor: grabbing !important;
     }
 
+    &:active,
+    &:focus-visible {
+      gux-icon {
+        color: var(
+          --gse-ui-dataTableItems-editColumn-editColumnItem-active-foregroundColor
+        );
+      }
+    }
+
+    &:hover {
+      gux-icon {
+        color: var(
+          --gse-ui-dataTableItems-editColumn-editColumnItem-hover-foregroundColor
+        );
+      }
+    }
+
     &:hover,
     &:focus-visible {
       @include focus.gux-focus-ring-small;
-
-      gux-icon {
-        color: #2a60c8; //TODO https://inindca.atlassian.net/browse/COMUI-2314
-      }
     }
   }
 

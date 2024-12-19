@@ -2056,7 +2056,16 @@
       "edit_column_item": {
         "gap": "8px",
         "foreground_color": "#b2b7c4",
-        "height": "18px"
+        "height": "18px",
+        "hover": {
+          "foreground_color": "#829ce5"
+        },
+        "active": {
+          "foreground_color": "#adbff0"
+        },
+        "drop": {
+          "border_color": "#2954cb"
+        }
       },
       "edit_column_content": {
         "gap": "10px",
