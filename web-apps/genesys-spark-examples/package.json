@@ -22,7 +22,7 @@
     "genesys-spark": "file:../../packages/genesys-spark",
     "iframe-coordinator": "4.6.1",
     "monaco-editor": "^0.52.0",
-    "parse5": "7.1.2"
+    "parse5": "7.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
