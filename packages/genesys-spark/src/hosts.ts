@@ -27,7 +27,7 @@ export function getComponentAssetsOrigin(): string {
   if (IS_DEV_MODE == true) {
     // This conditional is optimized out in production due to @rollup/plugin-replace
     // and rollup's dead code elimination
-    return 'http://localhost:3733';
+    return `http://${window.location.hostname}:3733`;
   }
 
   return getAssetsOrigin();
@@ -37,7 +37,7 @@ export function getChartComponentAssetsOrigin(): string {
   if (IS_DEV_MODE == true) {
     // This conditional is optimized out in production due to @rollup/plugin-replace
     // and rollup's dead code elimination
-    return 'http://localhost:3734';
+    return `http://${window.location.hostname}:3734`;
   }
 
   return getAssetsOrigin();
