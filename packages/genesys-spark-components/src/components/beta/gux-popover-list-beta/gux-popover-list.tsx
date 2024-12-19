@@ -102,16 +102,6 @@ export class GuxPopoverList {
     ) {
       this.dismiss();
     }
-
-    if (clickedForElement) {
-      this.popupElement.togglePopover();
-      this.isOpen = !this.isOpen;
-      this.runUpdatePosition();
-
-      if (this.isOpen) {
-        this.focusFirstItemInPopupList();
-      }
-    }
   }
 
   private runUpdatePosition(): void {
@@ -208,6 +198,18 @@ export class GuxPopoverList {
   connectedCallback(): void {
     trackComponent(this.root, { variant: this.position });
     this.listElement = this.root.querySelector('gux-list');
+
+    // Display popover list on target element click
+    const forElement = findElementById(this.root, this.for);
+    forElement.addEventListener('click', () => {
+      this.popupElement.togglePopover();
+      this.isOpen = !this.isOpen;
+      this.runUpdatePosition();
+
+      if (this.isOpen) {
+        this.focusFirstItemInPopupList();
+      }
+    });
   }
 
   componentDidLoad(): void {
