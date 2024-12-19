@@ -33,6 +33,7 @@
  - [gux-rich-text-editor-action-rich-style](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
+ - [gux-tab-list](../gux-tabs/gux-tab-list)
  - [gux-table-toolbar-custom-action](../gux-table-toolbar/gux-table-toolbar-custom-action)
  - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-toast](../gux-toast)
@@ -52,6 +53,7 @@ graph TD;
   gux-rich-text-editor-action-rich-style --> gux-button-slot
   gux-tab-advanced --> gux-button-slot
   gux-tab-advanced-list --> gux-button-slot
+  gux-tab-list --> gux-button-slot
   gux-table-toolbar-custom-action --> gux-button-slot
   gux-table-toolbar-menu-button --> gux-button-slot
   gux-toast --> gux-button-slot
