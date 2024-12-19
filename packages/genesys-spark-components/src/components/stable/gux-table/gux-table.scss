@@ -26,8 +26,8 @@
     align-items: center;
     justify-content: center;
     block-size: calc(100% - var(--gse-ui-dataTableItems-header-default-height));
-    color: #596373;
-    background: #fdfdfd;
+    color: var(--gse-semantic-foreground-container-lowEmphasis);
+    background: var(--gse-semantic-background-container-page-tonalSubtle);
 
     @include typography.heading-lg;
   }
