@@ -21,7 +21,7 @@ export function getTimeDisplayValues(
     .map(x => String(x).padStart(2, '0'));
   const hourOptions =
     clockType === '12h'
-      ? ['12', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']
+      ? ['12', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11']
       : Array.from(Array(24).keys()).map(x => String(x).padStart(2, '0'));
 
   const hourOptionsFormatted = hourOptions.reduce((acc, hourOption) => {
@@ -143,7 +143,9 @@ export function getDisplayValue(
   const [hour, minute] = value.split(':');
 
   if (clockType === '12h') {
-    return `${(parseInt(hour, 10) % 12 || 12).toString()}:${minute}`;
+    const parsedHour = parseInt(hour, 10) % 12 || 12;
+    const fullHour = parsedHour.toString().padStart(2, '0');
+    return `${fullHour}:${minute}`;
   }
 
   return `${hour}:${minute}`;
