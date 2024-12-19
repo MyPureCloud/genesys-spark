@@ -277,6 +277,24 @@
         "height": {
           "value": "18px",
           "type": "sizing"
+        },
+        "hover": {
+          "foreground_color": {
+            "value": "{foreground.form_control.click_input.hover}",
+            "type": "color"
+          }
+        },
+        "active": {
+          "foreground_color": {
+            "value": "{foreground.form_control.click_input.active}",
+            "type": "color"
+          }
+        },
+        "drop": {
+          "border_color": {
+            "value": "{border.container.edges.hover}",
+            "type": "color"
+          }
         }
       },
       "edit_column_content": {
