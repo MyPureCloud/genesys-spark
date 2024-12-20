@@ -1,6 +1,6 @@
-# gux-radial-loading manual accessibility testing status
+# gux-loading-message manual accessibility testing status
 
-**Last Updated:** 2024-12-19T11:39:06.938Z
+**Last Updated:** 2024-12-19T11:38:41.060Z
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
 | ✅ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) | - |
@@ -15,4 +15,4 @@
 | ✅ | [3.3.1 Error Identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) | - |
 | ✅ | [3.2.2 Labels or Instructions](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) | - |
 | ✅ | [4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) | - |
-| ✅ | [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) | progressbar role has an implicit live region attribute |
+| ✅ | [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) | - |
