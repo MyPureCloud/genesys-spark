@@ -16,5 +16,5 @@
   inline-size: var(--gse-ui-rte-divider-width);
   block-size: var(--gse-ui-rte-divider-height);
   margin: var(--gse-ui-rte-toolbar-divider-margin);
-  background-color: #c6c8ce; // Token Needed : COMUI-3190
+  background-color: var(--gse-ui-rte-toolbar-divider-color);
 }
