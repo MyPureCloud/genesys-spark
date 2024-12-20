@@ -9,7 +9,6 @@
   align-items: center;
   justify-content: flex-start;
   inline-size: 100%;
-  margin-block-end: 16px; //TODO https://inindca.atlassian.net/browse/COMUI-2444
   background-color: var(--gse-ui-advancedTabs-set-backgroundColor);
 
   .gux-scrollable-section {
@@ -21,7 +20,9 @@
     inline-size: 100%;
     overflow-x: auto;
     scrollbar-width: none;
-    border-block-end: 1px solid var(--gse-ui-advancedTabs-divider-dividerColor); //TODO https://inindca.atlassian.net/browse/COMUI-2444
+    border-block-end: var(--gse-ui-advancedTabs-item-divider-border-width)
+      var(--gse-ui-advancedTabs-item-divider-border-style)
+      var(--gse-ui-advancedTabs-item-divider-border-color);
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {

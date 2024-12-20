@@ -2593,8 +2593,7 @@
           "color": "#aac9ff",
           "width": "2px",
           "style": "solid"
-        },
-        "border-copy": "4px"
+        }
       },
       "background_color": "#ffffff",
       "border_radius": "4px 4px 0 0",
@@ -2611,6 +2610,11 @@
         "right": {
           "height": "32px",
           "width": "1px"
+        },
+        "border": {
+          "color": "#b4bccb",
+          "width": "1px",
+          "style": "solid"
         }
       },
       "text": {
@@ -2642,6 +2646,9 @@
         "fontWeight": "400",
         "fontSize": "12px",
         "lineHeight": "18px"
+      },
+      "disabled": {
+        "opacity": ".5"
       }
     },
     "button": {

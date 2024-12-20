@@ -1261,7 +1261,6 @@
   --gse-ui-advancedTabs-item-focus-border-color: #5476d5;
   --gse-ui-advancedTabs-item-focus-border-width: 2px;
   --gse-ui-advancedTabs-item-focus-border-style: solid;
-  --gse-ui-advancedTabs-item-focus-borderCopy: 4px;
   --gse-ui-advancedTabs-item-backgroundColor: #1e1e21;
   --gse-ui-advancedTabs-item-borderRadius: 4px 4px 0 0;
   --gse-ui-advancedTabs-item-height: 48px;
@@ -1271,6 +1270,9 @@
   --gse-ui-advancedTabs-item-divider-bottom-height: 1px;
   --gse-ui-advancedTabs-item-divider-right-height: 32px;
   --gse-ui-advancedTabs-item-divider-right-width: 1px;
+  --gse-ui-advancedTabs-item-divider-border-color: #4f5157;
+  --gse-ui-advancedTabs-item-divider-border-width: 1px;
+  --gse-ui-advancedTabs-item-divider-border-style: solid;
   --gse-ui-advancedTabs-item-text-color: #ffffff;
   --gse-ui-advancedTabs-item-text-height: 9px;
   --gse-ui-advancedTabs-item-indicator-hoverColor: #2143a2;
@@ -1289,6 +1291,7 @@
   --gse-ui-advancedTabs-item-itemText-fontWeight: 400;
   --gse-ui-advancedTabs-item-itemText-fontSize: 12px;
   --gse-ui-advancedTabs-item-itemText-lineHeight: 18px;
+  --gse-ui-advancedTabs-item-disabled-opacity: 0.5;
   --gse-ui-advancedTabs-button-add-height: 45px;
   --gse-ui-advancedTabs-button-arrow-height: 48px;
   --gse-ui-advancedTabs-set-backgroundColor: #2a2a2e;
