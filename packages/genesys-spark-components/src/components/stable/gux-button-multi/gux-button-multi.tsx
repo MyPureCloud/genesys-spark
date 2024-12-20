@@ -27,7 +27,9 @@ import {
 @Component({
   styleUrl: 'gux-button-multi.scss',
   tag: 'gux-button-multi',
-  shadow: true
+  shadow: {
+    delegatesFocus: true
+  }
 })
 export class GuxButtonMulti {
   @Element()

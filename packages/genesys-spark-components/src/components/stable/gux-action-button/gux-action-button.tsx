@@ -31,7 +31,9 @@ import {
 @Component({
   styleUrl: 'gux-action-button.scss',
   tag: 'gux-action-button',
-  shadow: true
+  shadow: {
+    delegatesFocus: true
+  }
 })
 export class GuxActionButton {
   private dropdownButton: HTMLElement;
