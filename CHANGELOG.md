@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.108.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.107.2...v4.108.0) (2024-12-21)
+
+
+### Features
+
+* **tokens:** Added missing advanced tabs tokens ([adce425](https://github.com/MyPureCloud/genesys-spark/commit/adce4256e4c8ed242a880c1943a8f02641df75cc))
+
+
+### Bug Fixes
+
+* **button-multi:** component now delegates focus ([2567642](https://github.com/MyPureCloud/genesys-spark/commit/25676420c0b93a07460c93b6241cee170155b8a1))
+* **time-picker:** Added leading zero to hour ([bb2ba9a](https://github.com/MyPureCloud/genesys-spark/commit/bb2ba9a58aa08033d7cee2a5a84daa87ec7c0ff4))
+
 ### [4.107.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.107.1...v4.107.2) (2024-12-20)
 
 ### [4.107.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.107.0...v4.107.1) (2024-12-19)
