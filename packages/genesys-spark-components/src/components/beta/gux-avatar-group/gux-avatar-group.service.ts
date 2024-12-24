@@ -1,8 +1,5 @@
 import { getClosestElement } from '@utils/dom/get-closest-element';
-
-export type GuxAvatarGroupChild =
-  | HTMLGuxAvatarGroupItemBetaElement
-  | HTMLGuxAvatarOverflowBetaElement;
+import { GuxAvatarGroupChild } from './gux-avatar-group.types';
 
 export function groupKeyboardNavigation(
   event: KeyboardEvent,
