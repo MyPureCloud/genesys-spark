@@ -4,36 +4,31 @@ import {
   JSX,
   Prop,
   Element,
-  Listen,
   Method,
+  Listen,
   Host
 } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
-import { GuxAvatarAccent } from '../gux-avatar-group.types';
-import { groupKeyboardNavigation } from '../gux-avatar-group.service';
+import { GuxAvatarAccent } from '../../gux-avatar-group.types';
 import { generateInitials } from '@utils/string/generate-initials';
+import { overflowNavigation } from '../gux-avatar-overflow.service';
 
 /**
  * @slot image - Avatar photo.
  */
 
 @Component({
-  styleUrl: 'gux-avatar-group-item.scss',
-  tag: 'gux-avatar-group-item-beta',
+  styleUrl: 'gux-avatar-overflow-item.scss',
+  tag: 'gux-avatar-overflow-item-beta',
   shadow: true
 })
-export class GuxAvatarGroupItem {
+export class GuxAvatarOverflowItem {
   private buttonElement: HTMLButtonElement;
-  private tooltip: HTMLGuxTooltipBetaElement;
 
   @Element()
   root: HTMLElement;
 
-  /**
-   * Name which is shown as initials. Should be formatted 'Lastname Firstname' for JA, zhCN and KO names.
-   * Names without blank space will show first 2 characters of string.
-   */
   @Prop()
   name: string;
 
@@ -60,25 +55,9 @@ export class GuxAvatarGroupItem {
     this.buttonElement.focus();
   }
 
-  /*
-   * Hide tooltip
-   */
-  @Method()
-  async hideTooltip(): Promise<void> {
-    return await this.tooltip.hideTooltip();
-  }
-
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
-    groupKeyboardNavigation(event, this.root);
-  }
-
-  private isLastItemInGroup(): boolean {
-    const parent = this.root.parentElement as HTMLGuxAvatarGroupBetaElement;
-    const children = Array.from(parent.children);
-    const index = children.findIndex(i => i === this.root);
-
-    return index === children.length - 1;
+    overflowNavigation(event, this.root);
   }
 
   private getAccent(): string {
@@ -86,7 +65,7 @@ export class GuxAvatarGroupItem {
       return `gux-accent-${this.accent}`;
     }
     const hashedName = this.name
-      .split('')
+      ?.split('')
       .reduce((acc, char) => acc + char.charCodeAt(0), 0);
     const hashedNameAccent = (hashedName % 12).toString();
     return `gux-accent-${hashedNameAccent}`;
@@ -95,7 +74,7 @@ export class GuxAvatarGroupItem {
   private validatingInputs(): void {
     const avatarImage = this.root.querySelector('img');
     if (!this.name) {
-      logWarn(this.root, 'Name prop is required for accessibility');
+      logWarn(this.root, 'Name prop is required');
     }
 
     if (avatarImage && !avatarImage.getAttribute('alt')) {
@@ -111,25 +90,20 @@ export class GuxAvatarGroupItem {
           aria-label={this.name}
           tabIndex={-1}
           ref={el => (this.buttonElement = el)}
-          class={{
-            'gux-avatar': true,
-            [this.getAccent()]: true,
-            'gux-last-item': this.isLastItemInGroup()
-          }}
         >
-          <slot name="image">
-            <span class="gux-avatar-initials" aria-hidden="true">
-              {generateInitials(this.name)}
-            </span>
-          </slot>
-          <gux-tooltip-beta
-            aria-hidden="true"
-            visual-only
-            placement="top"
-            ref={el => (this.tooltip = el)}
+          <span
+            class={{
+              'gux-avatar': true,
+              [this.getAccent()]: true
+            }}
           >
-            <div slot="content">{this.name}</div>
-          </gux-tooltip-beta>
+            <slot name="image">
+              <span class="gux-avatar-initials" aria-hidden="true">
+                {generateInitials(this.name)}
+              </span>
+            </slot>
+          </span>
+          <span>{this.name}</span>
         </button>
       </Host>
     ) as JSX.Element;
