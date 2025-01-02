@@ -134,7 +134,6 @@ export class GuxCalendar {
   }
 
   private onKeyDown(event: KeyboardEvent): void {
-    console.log('KEYDOWN', event.key);
     switch (event.key) {
       case ' ':
         break;
