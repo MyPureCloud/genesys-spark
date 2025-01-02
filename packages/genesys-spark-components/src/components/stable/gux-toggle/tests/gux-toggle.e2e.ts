@@ -98,7 +98,7 @@ describe('gux-toggle', () => {
         const element = await page.find('gux-toggle');
         await a11yCheck(page, axeExclusions);
 
-        expect(element.innerHTML).toMatchSnapshot();
+        expect(element.outerHTML).toMatchSnapshot();
       });
     });
   });
