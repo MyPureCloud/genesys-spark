@@ -42,6 +42,7 @@
     <gux-rich-text-editor-action
       action="blockQuote"
     ></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action-link></gux-rich-text-editor-action-link>
     <gux-rich-text-editor-action action="undo"></gux-rich-text-editor-action>
     <gux-rich-text-editor-action action="redo"></gux-rich-text-editor-action>
   </gux-rich-text-editor-action-group>
@@ -84,22 +85,29 @@
 <style
   onload="(function () {
   (async () => {
+  // This example code uses Tiptap 2.0.
+  // However, it can be configured or adapted to work with other editors of your choice.
+
   // Import required editor and extension modules
   // - Editor: Main class to create and manipulate the text editor.
   // - StarterKit: Provides basic functionality like bold, italic, lists, etc.
   // - Underline: Adds underline support to the editor.
-  // - Heading: Adds heading levels (H1, H2, H3) to the editor.
+  // - Link : Creates a hyperlink for highlighted text.
   const { Editor } = await import('https://cdn.jsdelivr.net/npm/@tiptap/core@2.2.2/+esm');
   const StarterKit = (await import('https://cdn.jsdelivr.net/npm/@tiptap/starter-kit@2.2.2/+esm')).default;
   const Underline = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-underline@2.2.2/+esm')).default;
-  const Heading = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-heading@2.7.4/+esm')).default;
+  const Link = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-link@2.7.4/+esm')).default;
+  const Highlight = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-highlight@2.7.4/+esm')).default;
     
 // Initialize the editor
 const editor = new Editor({
   element: document.querySelector('.editorElement'),
-  extensions: [StarterKit, Underline,  Heading.configure({
-      levels: [1, 2, 3], // Allows heading levels 1, 2, and 3.
-    })],
+  extensions: [StarterKit, Underline, Highlight
+    ,Link.configure({
+      openOnClick: true,      // Automatically opens links when clicked.
+      autolink: false,         // Automatically creates links when typing URLs.
+      defaultProtocol: 'https', // Default protocol for links if not specified.
+    }),],
   content: 'Start typing here...',
   injectCSS: false,
   editorProps: {
@@ -152,10 +160,16 @@ function updateActionState() {
 }
 
 // Attach event listeners to the editor
-// These listeners update the action state when the editor's content or selection changes.
+// These listeners update the action states when the editor's content or selection changes.
 editor.on('transaction', updateActionState);
-editor.on('selectionUpdate', updateActionState);
+editor.on('selectionUpdate', handleSelectionUpdate);
 
+function handleSelectionUpdate() {
+  updateActionState();
+  applyTextToInput();
+}
+
+/* Heading action  */
 
 // Apply heading styles (H1, H2, H3, paragraph) by listening for clicks on specific typography settings.
 const heading1 = document.querySelector(`gux-rich-style-list-item[value='heading-1']`);
@@ -178,6 +192,60 @@ paragraph.addEventListener('click', () => {
   editor.commands.setParagraph();
 })
 
+/* Link action  */
+/* The code below is just an example and can be altered to your preference. */
+
+// Global variable to store the starting position of the selected text in the text editor.
+let selectedTextStartPosition = 0;
+
+// Flag to prevent the applyTextToInput function from running during a link update.
+let isLinkActionInProgress = false;
+
+// Event listener for the Link action.
+// Adds or updates a hyperlink when a user specifies a URL.
+const linkAction = document.querySelector('gux-rich-text-editor-action-link');
+linkAction.addEventListener('linkOptions', (event) => {
+  isLinkActionInProgress = true;
+  // Retrieve the text to display value and calculate its end position.
+  const textToDisplay = event.detail.textToDisplay;
+  const selectedTextEndPosition = selectedTextStartPosition + textToDisplay.length;
+
+  // Insert the specified text and apply the link to it.
+  editor.commands.insertContent(textToDisplay);
+  editor.commands.setTextSelection({ from: selectedTextStartPosition, to: selectedTextEndPosition });
+  editor.chain().focus().extendMarkRange('link').setLink({ href: event.detail.href }).run();
+
+  // Allow selection updates again after the link action is complete.
+  isLinkActionInProgress = false;
+});
+
+// Updates the 'Text to display' input with the currently selected text in the editor.
+function applyTextToInput() {
+  // Skip updating the input if a link action is in progress.
+  if (isLinkActionInProgress) {
+    return;
+  }
+
+  // Get the current selection range and the selected text.
+  const { view, state } = editor;
+  const { from, to } = view.state.selection;
+  const selectedText = state.doc.textBetween(from, to, '');
+
+  // Store the starting position of the selected text.
+  selectedTextStartPosition = from;
+
+  // Access the shadow DOM of the `gux-rich-text-editor-action-link` component.
+  const shadowRoot = linkAction.shadowRoot;
+  if (shadowRoot) {
+    // Query the 'Text to display' input element inside the shadow DOM.
+    const textInput = shadowRoot.querySelector('#textToDisplay');
+    if (textInput) {
+      // Set the value of the input to the selected text.
+      textInput.value = selectedText;
+    }
+  }
+}
+  
 })();
 
   })()"
