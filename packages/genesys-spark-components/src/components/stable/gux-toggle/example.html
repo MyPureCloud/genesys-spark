@@ -1,79 +1,56 @@
+<h1>gux-toggle</h1>
+
+<p>
+  For accessibility reasons, we will be deprecating the
+  <strong>checkedLabel</strong> and <strong>uncheckedLabel</strong> props in v5.
+  Instead, use only the <strong>label</strong> prop as demonstrated below.
+</p>
+
 <div class="container">
-  <h1>gux-toggle</h1>
-  <gux-toggle checked-label="On" unchecked-label="Off"></gux-toggle>
+  <gux-toggle label="Dark Mode"></gux-toggle>
 
-  <gux-toggle checked-label="On" unchecked-label="Off" checked></gux-toggle>
+  <gux-toggle label="Dark Mode" checked></gux-toggle>
 
-  <gux-toggle
-    checked-label="Active"
-    unchecked-label="Inactive"
-    label-position="left"
-  ></gux-toggle>
+  <gux-toggle label="Dark Mode" label-position="left"></gux-toggle>
 
-  <gux-toggle checked-label="On" unchecked-label="Off" disabled></gux-toggle>
+  <gux-toggle label="Dark Mode" disabled></gux-toggle>
 
-  <gux-toggle
-    class="loading"
-    checked-label="Active"
-    unchecked-label="Inactive"
-    loading
-  ></gux-toggle>
+  <h3>Loading</h3>
+
+  <gux-toggle class="loading" label="Dark Mode" loading></gux-toggle>
+
+  <gux-toggle class="loading" label="Dark Mode" checked loading></gux-toggle>
+
+  <h3>Error Message</h3>
 
   <gux-toggle
-    class="loading"
-    checked-label="Active"
-    unchecked-label="Inactive"
-    checked
-    loading
-  ></gux-toggle>
-
-  <gux-toggle
-    checked-label="This is another long label for the toggle to show how it works"
-    unchecked-label="This is short"
-  ></gux-toggle>
-
-  <gux-toggle
-    checked-label="On"
-    unchecked-label="Off"
+    label="Dark Mode"
     error-message="This is an error message"
   ></gux-toggle>
 
   <gux-toggle
-    checked-label="On"
-    unchecked-label="Off"
+    label="Dark Mode"
     label-position="left"
     error-message="This is another error message"
   ></gux-toggle>
 
   <!-- inline gux-toggle -->
-  <div>
-    <gux-toggle
-      display-inline
-      checked-label="On"
-      unchecked-label="Off is long"
-    ></gux-toggle>
-    <gux-toggle
-      display-inline
-      checked-label="On"
-      unchecked-label="Off is long"
-      checked
-    ></gux-toggle>
-  </div>
-  <div>
-    <gux-toggle
-      display-inline
-      label-position="left"
-      checked-label="On"
-      unchecked-label="Off is long"
-    ></gux-toggle>
-    <gux-toggle
-      display-inline
-      label-position="left"
-      checked-label="On"
-      unchecked-label="Off is long"
-      checked
-    ></gux-toggle>
-  </div>
+  <h3>Inline</h3>
+  <gux-toggle display-inline label="Dark Mode"></gux-toggle>
+  <gux-toggle display-inline label="Dark Mode" checked></gux-toggle>
+</div>
+<div>
+  <gux-toggle
+    display-inline
+    label-position="left"
+    label="Dark Mode"
+  ></gux-toggle>
+  <gux-toggle
+    display-inline
+    label-position="left"
+    label="Dark Mode"
+    checked
+  ></gux-toggle>
 </div>
 
 <style
