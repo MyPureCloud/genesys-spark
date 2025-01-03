@@ -1,3 +1,6 @@
+import { getClosestElement } from '@utils/dom/get-closest-element';
+import { GuxAvatarGroupChild } from './gux-avatar-group.types';
+
 export function groupKeyboardNavigation(
   event: KeyboardEvent,
   currentElement: Element
@@ -34,7 +37,7 @@ export function groupKeyboardNavigation(
 }
 
 export function resetFocusableSibling(element: Element) {
-  const focusableSibling = getSiblings(element).find((sibling: Element) => {
+  const focusableSibling = getGroupItems(element).find((sibling: Element) => {
     const button = getGroupItemButton(sibling);
     return button && button.tabIndex !== -1;
   });
@@ -51,30 +54,37 @@ export function setFocusTarget(element: Element): void {
 function focusFirstSibling(currentElement: Element): void {
   const firstFocusableElement = getFirstFocusableElement(
     currentElement
-  ) as HTMLGuxAvatarGroupItemBetaElement;
+  ) as GuxAvatarGroupChild;
 
   if (firstFocusableElement) {
     void firstFocusableElement.guxFocus();
-    void setItemTabIndex(firstFocusableElement, 0);
     void resetFocusableSibling(firstFocusableElement);
+    void setItemTabIndex(firstFocusableElement, 0);
   }
 }
 
 function focusLastSibling(currentElement: Element): void {
   const lastFocusableElement = getLastFocusableElement(
     currentElement
-  ) as HTMLGuxAvatarGroupItemBetaElement;
+  ) as GuxAvatarGroupChild;
 
   if (lastFocusableElement) {
     void lastFocusableElement.guxFocus();
-    void setItemTabIndex(lastFocusableElement, 0);
     void resetFocusableSibling(lastFocusableElement);
+    void setItemTabIndex(lastFocusableElement, 0);
   }
 }
 
 function focusPreviousSiblingLoop(currentElement: Element): void {
-  const previousFocusableElement =
-    currentElement.previousElementSibling as HTMLGuxAvatarGroupItemBetaElement;
+  const groupItems = getGroupItems(currentElement);
+  const currentElementIndex = groupItems.findIndex(
+    (item: Element) => item === currentElement
+  );
+
+  const previousIndex = (currentElementIndex - 1) % groupItems.length;
+  const previousFocusableElement = groupItems[
+    previousIndex
+  ] as GuxAvatarGroupChild;
 
   setItemTabIndex(currentElement, -1);
 
@@ -87,51 +97,56 @@ function focusPreviousSiblingLoop(currentElement: Element): void {
 }
 
 function focusNextSiblingLoop(currentElement: Element): void {
-  const nextFocusableElement =
-    currentElement.nextElementSibling as HTMLGuxAvatarGroupItemBetaElement;
+  const groupItems = getGroupItems(currentElement);
+  const currentElementIndex = groupItems.findIndex(
+    (item: Element) => item === currentElement
+  );
+
+  const nextIndex = (currentElementIndex + 1) % groupItems.length;
+  if (nextIndex === 0) {
+    focusFirstSibling(currentElement);
+  }
+  const nextFocusableElement = groupItems[nextIndex] as GuxAvatarGroupChild;
+
   setItemTabIndex(currentElement, -1);
 
-  if (nextFocusableElement) {
+  if (nextFocusableElement !== null) {
     void nextFocusableElement.guxFocus();
     void setItemTabIndex(nextFocusableElement, 0);
-  } else {
-    focusFirstSibling(currentElement);
   }
 }
 
 function getFirstFocusableElement(currentElement: Element): Element {
-  let firstFocusableElement = currentElement;
-
-  while (firstFocusableElement.previousElementSibling !== null) {
-    firstFocusableElement = firstFocusableElement.previousElementSibling;
-  }
-
-  return firstFocusableElement;
+  return getGroupItems(currentElement)[0];
 }
 
 function getLastFocusableElement(currentElement: Element): Element {
-  let lastFocusableElement = currentElement;
-
-  while (lastFocusableElement.nextElementSibling !== null) {
-    lastFocusableElement = lastFocusableElement.nextElementSibling;
-  }
-
-  return lastFocusableElement;
+  const groupItems = getGroupItems(currentElement);
+  return groupItems[groupItems.length - 1];
 }
 
 function getGroupItemButton(element: Element): HTMLButtonElement {
   return element.shadowRoot?.querySelector('button') as HTMLButtonElement;
 }
 
-function getSiblings(element: Element): Element[] {
-  const siblings = Array.from(element.parentElement.children);
+function getGroupItems(element: Element): Element[] {
+  const group = getClosestElement(
+    'gux-avatar-group-beta',
+    element as HTMLElement
+  ) as Element;
 
-  // Early return for performance when there are no siblings
-  if (siblings.length <= 1) {
-    return [];
+  const slottedItems = Array.from(
+    group.querySelectorAll('gux-avatar-group-item-beta')
+  ).filter(child => !isHidden(child)) as GuxAvatarGroupChild[];
+
+  const overflow = group.shadowRoot.querySelector(
+    'gux-avatar-overflow-beta'
+  ) as HTMLGuxAvatarOverflowBetaElement;
+  if (overflow) {
+    slottedItems.push(overflow);
   }
 
-  return siblings.filter(child => child !== element);
+  return slottedItems as GuxAvatarGroupChild[];
 }
 
 function setItemTabIndex(element: Element, newIndex: number) {
@@ -139,6 +154,9 @@ function setItemTabIndex(element: Element, newIndex: number) {
   if (button) {
     button.tabIndex = newIndex;
   } else {
-    console.log('No button found in the gux-avatar-group-item element');
+    console.log('No button found in the element');
   }
+}
+function isHidden(element: Element): boolean {
+  return element.classList.contains('gux-hidden');
 }

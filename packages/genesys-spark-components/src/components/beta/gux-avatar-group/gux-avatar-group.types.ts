@@ -15,3 +15,9 @@ export type GuxAvatarAccent =
   | '10'
   | '11'
   | '12';
+
+export type GuxAvatarGroupQuantity = 1 | 2 | 3 | 4 | 5 | 6 | 7;
+
+export type GuxAvatarGroupChild =
+  | HTMLGuxAvatarGroupItemBetaElement
+  | HTMLGuxAvatarOverflowBetaElement;

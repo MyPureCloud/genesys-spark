@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-avatar-overflow-beta #render should render 0 avatars 1`] = `
+<gux-avatar-overflow-beta role="menuitem">
+  <template shadowrootmode="open">
+    <button aria-expanded="false" aria-haspopup="true" class="gux-avatar-overflow" tabindex="-1">
+      <span class="gux-avatar-overflow-wrapper">
+        <span class="gux-avatar-overflow-content">
+          +0
+        </span>
+      </span>
+    </button>
+    <div class="gux-menu-wrapper">
+      <div class="gux-menu-content" role="menu">
+        <slot></slot>
+      </div>
+    </div>
+  </template>
+</gux-avatar-overflow-beta>
+`;
+
+exports[`gux-avatar-overflow-beta #render should render 1 avatar 1`] = `
+<gux-avatar-overflow-beta role="menuitem">
+  <template shadowrootmode="open">
+    <button aria-expanded="false" aria-haspopup="true" class="gux-avatar-overflow" tabindex="-1">
+      <span class="gux-avatar-overflow-wrapper">
+        <span class="gux-avatar-overflow-content">
+          +1
+        </span>
+      </span>
+    </button>
+    <div class="gux-menu-wrapper">
+      <div class="gux-menu-content" role="menu">
+        <slot></slot>
+      </div>
+    </div>
+  </template>
+  <gux-avatar-overflow-item-beta role="menuitem">
+    <template shadowrootmode="open">
+      <button tabindex="-1" type="button">
+        <span class="gux-accent-NaN gux-avatar">
+          <slot name="image">
+            <span aria-hidden="true" class="gux-avatar-initials">
+              NaN
+            </span>
+          </slot>
+        </span>
+        <span></span>
+      </button>
+    </template>
+    <img alt="John Smith" src="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  </gux-avatar-overflow-item-beta>
+</gux-avatar-overflow-beta>
+`;
+
+exports[`gux-avatar-overflow-beta #render should render 2 avatars 1`] = `
+<gux-avatar-overflow-beta role="menuitem">
+  <template shadowrootmode="open">
+    <button aria-expanded="false" aria-haspopup="true" class="gux-avatar-overflow" tabindex="-1">
+      <span class="gux-avatar-overflow-wrapper">
+        <span class="gux-avatar-overflow-content">
+          +2
+        </span>
+      </span>
+    </button>
+    <div class="gux-menu-wrapper">
+      <div class="gux-menu-content" role="menu">
+        <slot></slot>
+      </div>
+    </div>
+  </template>
+  <gux-avatar-overflow-item-beta role="menuitem">
+    <template shadowrootmode="open">
+      <button tabindex="-1" type="button">
+        <span class="gux-accent-NaN gux-avatar">
+          <slot name="image">
+            <span aria-hidden="true" class="gux-avatar-initials">
+              NaN
+            </span>
+          </slot>
+        </span>
+        <span></span>
+      </button>
+    </template>
+    <img alt="John Smith" src="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  </gux-avatar-overflow-item-beta>
+  <gux-avatar-overflow-item-beta role="menuitem">
+    <template shadowrootmode="open">
+      <button tabindex="-1" type="button">
+        <span class="gux-accent-NaN gux-avatar">
+          <slot name="image">
+            <span aria-hidden="true" class="gux-avatar-initials">
+              NaN
+            </span>
+          </slot>
+        </span>
+        <span></span>
+      </button>
+    </template>
+    <img alt="Jane Smith" src="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  </gux-avatar-overflow-item-beta>
+</gux-avatar-overflow-beta>
+`;
+
+exports[`gux-avatar-overflow-beta #render should render 3 avatars 1`] = `
+<gux-avatar-overflow-beta role="menuitem">
+  <template shadowrootmode="open">
+    <button aria-expanded="false" aria-haspopup="true" class="gux-avatar-overflow" tabindex="-1">
+      <span class="gux-avatar-overflow-wrapper">
+        <span class="gux-avatar-overflow-content">
+          +3
+        </span>
+      </span>
+    </button>
+    <div class="gux-menu-wrapper">
+      <div class="gux-menu-content" role="menu">
+        <slot></slot>
+      </div>
+    </div>
+  </template>
+  <gux-avatar-overflow-item-beta role="menuitem">
+    <template shadowrootmode="open">
+      <button tabindex="-1" type="button">
+        <span class="gux-accent-NaN gux-avatar">
+          <slot name="image">
+            <span aria-hidden="true" class="gux-avatar-initials">
+              NaN
+            </span>
+          </slot>
+        </span>
+        <span></span>
+      </button>
+    </template>
+    <img alt="John Smith" src="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  </gux-avatar-overflow-item-beta>
+  <gux-avatar-overflow-item-beta role="menuitem">
+    <template shadowrootmode="open">
+      <button tabindex="-1" type="button">
+        <span class="gux-accent-NaN gux-avatar">
+          <slot name="image">
+            <span aria-hidden="true" class="gux-avatar-initials">
+              NaN
+            </span>
+          </slot>
+        </span>
+        <span></span>
+      </button>
+    </template>
+    <img alt="Jane Smith" src="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  </gux-avatar-overflow-item-beta>
+  <gux-avatar-overflow-item-beta role="menuitem">
+    <template shadowrootmode="open">
+      <button tabindex="-1" type="button">
+        <span class="gux-accent-NaN gux-avatar">
+          <slot name="image">
+            <span aria-hidden="true" class="gux-avatar-initials">
+              NaN
+            </span>
+          </slot>
+        </span>
+        <span></span>
+      </button>
+    </template>
+    <img alt="John Doe" src="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  </gux-avatar-overflow-item-beta>
+</gux-avatar-overflow-beta>
+`;
+
+exports[`gux-avatar-overflow-beta should build 1`] = `
+<gux-avatar-overflow-beta role="menuitem">
+  <template shadowrootmode="open">
+    <button aria-expanded="false" aria-haspopup="true" class="gux-avatar-overflow" tabindex="-1">
+      <span class="gux-avatar-overflow-wrapper">
+        <span class="gux-avatar-overflow-content">
+          +3
+        </span>
+      </span>
+    </button>
+    <div class="gux-menu-wrapper">
+      <div class="gux-menu-content" role="menu">
+        <slot></slot>
+      </div>
+    </div>
+  </template>
+  <gux-avatar-overflow-item-beta role="menuitem">
+    <template shadowrootmode="open">
+      <button tabindex="-1" type="button">
+        <span class="gux-accent-NaN gux-avatar">
+          <slot name="image">
+            <span aria-hidden="true" class="gux-avatar-initials">
+              NaN
+            </span>
+          </slot>
+        </span>
+        <span></span>
+      </button>
+    </template>
+    <img alt="John Smith" src="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  </gux-avatar-overflow-item-beta>
+  <gux-avatar-overflow-item-beta role="menuitem">
+    <template shadowrootmode="open">
+      <button tabindex="-1" type="button">
+        <span class="gux-accent-NaN gux-avatar">
+          <slot name="image">
+            <span aria-hidden="true" class="gux-avatar-initials">
+              NaN
+            </span>
+          </slot>
+        </span>
+        <span></span>
+      </button>
+    </template>
+    <img alt="Jane Smith" src="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  </gux-avatar-overflow-item-beta>
+  <gux-avatar-overflow-item-beta role="menuitem">
+    <template shadowrootmode="open">
+      <button tabindex="-1" type="button">
+        <span class="gux-accent-NaN gux-avatar">
+          <slot name="image">
+            <span aria-hidden="true" class="gux-avatar-initials">
+              NaN
+            </span>
+          </slot>
+        </span>
+        <span></span>
+      </button>
+    </template>
+    <img alt="John Doe" src="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+  </gux-avatar-overflow-item-beta>
+</gux-avatar-overflow-beta>
+`;

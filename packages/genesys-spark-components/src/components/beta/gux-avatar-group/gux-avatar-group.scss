@@ -10,3 +10,7 @@
     outline: none;
   }
 }
+
+::slotted(gux-avatar-group-item-beta.gux-hidden) {
+  display: none;
+}
