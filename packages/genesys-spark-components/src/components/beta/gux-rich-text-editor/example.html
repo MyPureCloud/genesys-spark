@@ -42,6 +42,7 @@
     <gux-rich-text-editor-action
       action="blockQuote"
     ></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action-link></gux-rich-text-editor-action-link>
     <gux-rich-text-editor-action action="undo"></gux-rich-text-editor-action>
     <gux-rich-text-editor-action action="redo"></gux-rich-text-editor-action>
   </gux-rich-text-editor-action-group>
@@ -89,17 +90,23 @@
   // - StarterKit: Provides basic functionality like bold, italic, lists, etc.
   // - Underline: Adds underline support to the editor.
   // - Heading: Adds heading levels (H1, H2, H3) to the editor.
+  // - Link : Creates a hyperlink for highlighted text.
   const { Editor } = await import('https://cdn.jsdelivr.net/npm/@tiptap/core@2.2.2/+esm');
   const StarterKit = (await import('https://cdn.jsdelivr.net/npm/@tiptap/starter-kit@2.2.2/+esm')).default;
   const Underline = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-underline@2.2.2/+esm')).default;
   const Heading = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-heading@2.7.4/+esm')).default;
+  const Link = (await import('https://cdn.jsdelivr.net/npm/@tiptap/extension-link@2.7.4/+esm')).default;
     
 // Initialize the editor
 const editor = new Editor({
   element: document.querySelector('.editorElement'),
   extensions: [StarterKit, Underline,  Heading.configure({
       levels: [1, 2, 3], // Allows heading levels 1, 2, and 3.
-    })],
+    }),Link.configure({
+      openOnClick: true,      // Automatically opens links when clicked.
+      autolink: true,         // Automatically creates links when typing URLs.
+      defaultProtocol: 'https', // Default protocol for links if not specified.
+    }),],
   content: 'Start typing here...',
   injectCSS: false,
   editorProps: {
@@ -152,9 +159,14 @@ function updateActionState() {
 }
 
 // Attach event listeners to the editor
-// These listeners update the action state when the editor's content or selection changes.
+// These listeners update the action states when the editor's content or selection changes.
 editor.on('transaction', updateActionState);
-editor.on('selectionUpdate', updateActionState);
+editor.on('selectionUpdate', handleSelectionUpdate);
+
+function handleSelectionUpdate() {
+  updateActionState();
+  applyTextToInput();
+}
 
 
 // Apply heading styles (H1, H2, H3, paragraph) by listening for clicks on specific typography settings.
@@ -178,6 +190,35 @@ paragraph.addEventListener('click', () => {
   editor.commands.setParagraph();
 })
 
+// Event listeners for the Link action.
+// Adds or updates a hyper link when a user specifies a URL.
+const linkAction = document.querySelector('gux-rich-text-editor-action-link');
+linkAction.addEventListener('linkOptions', (event) => {
+  editor.commands.insertContent(event.detail.textToDisplay);
+  editor.chain().focus().extendMarkRange('link').setLink({href: event.detail.href }).run();
+});
+
+
+
+
+// On click of the link action applies the highlighted text to the 'Text to display' input.
+function applyTextToInput() {
+const { view, state } = editor;
+const { from, to } = view.state.selection
+const text = state.doc.textBetween(from, to, '')
+
+  // Access the shadow DOM of the `gux-rich-text-editor-action-link`
+  const shadowRoot = linkAction.shadowRoot;
+  if (shadowRoot) {
+    // Query the `<input>` element inside the shadow DOM
+    const textInput = shadowRoot.querySelector('#textToDisplay');
+    if (textInput) {
+      // Set the value of the input
+      textInput.value = text;
+    } 
+  }
+}
+  
 })();
 
   })()"

@@ -17,11 +17,13 @@
 
 ### Used by
 
+ - [gux-rich-text-editor-action-link](../gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
  - [gux-toast](../../stable/gux-toast)
 
 ### Graph
 ```mermaid
 graph TD;
+  gux-rich-text-editor-action-link --> gux-cta-group
   gux-toast --> gux-cta-group
   style gux-cta-group fill:#f9f,stroke:#333,stroke-width:4px
 ```

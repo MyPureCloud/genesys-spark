@@ -28,6 +28,7 @@ You can choose between two type (secondary and primary).
 ### Used by
 
  - [gux-pagination-ellipsis-button](../gux-pagination/gux-pagination-buttons/gux-pagination-ellipsis-button)
+ - [gux-rich-text-editor-action-link](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
 
 ### Depends on
 
@@ -39,6 +40,7 @@ graph TD;
   gux-button --> gux-tooltip-beta
   gux-tooltip-beta --> gux-tooltip-base-beta
   gux-pagination-ellipsis-button --> gux-button
+  gux-rich-text-editor-action-link --> gux-button
   style gux-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
