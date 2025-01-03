@@ -42,8 +42,13 @@ export class GuxToggle {
   loading: boolean = false;
 
   @Prop()
+  label: string;
+
+  // Deprecated, remove in v5 COMUI-3368
+  @Prop()
   checkedLabel: string;
 
+  //Deprecated, remove in v5 COMUI-3368
   @Prop()
   uncheckedLabel: string;
 
@@ -90,6 +95,7 @@ export class GuxToggle {
   private getAriaLabel(): string {
     return (
       this.root.getAttribute('aria-label') ||
+      this.label ||
       this.checkedLabel ||
       this.root.title ||
       this.i18n('defaultAriaLabel')
@@ -116,7 +122,20 @@ export class GuxToggle {
   }
 
   private renderLabel(): JSX.Element {
-    if (this.uncheckedLabel && this.checkedLabel) {
+    if (this.label) {
+      return (
+        <div class="gux-toggle-label-and-error">
+          <div class="gux-toggle-label">
+            <div class="gux-toggle-label-text">
+              <span class="gux-toggle-label-text-inner">
+                <span id={this.labelId}>{this.label}</span>
+                {this.renderLoading()}
+              </span>
+            </div>
+          </div>
+        </div>
+      ) as JSX.Element;
+    } else if (this.uncheckedLabel && this.checkedLabel) {
       const labelText = this.checked ? this.checkedLabel : this.uncheckedLabel;
 
       return (

@@ -1,17 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-toggle #render should render component as expected (1) 1`] = `""`;
+exports[`gux-toggle #render should render component as expected (1) 1`] = `"<gux-toggle lang=\\"en\\" label=\\"On\\" hydrated=\\"\\"></gux-toggle>"`;
 
-exports[`gux-toggle #render should render component as expected (2) 1`] = `""`;
+exports[`gux-toggle #render should render component as expected (2) 1`] = `"<gux-toggle lang=\\"en\\" checked=\\"\\" label=\\"on\\" hydrated=\\"\\"></gux-toggle>"`;
 
-exports[`gux-toggle #render should render component as expected (3) 1`] = `""`;
+exports[`gux-toggle #render should render component as expected (3) 1`] = `"<gux-toggle lang=\\"en\\" id=\\"disabledToggle\\" label=\\"On\\" disabled=\\"\\" hydrated=\\"\\"></gux-toggle>"`;
 
-exports[`gux-toggle #render should render component as expected (4) 1`] = `""`;
+exports[`gux-toggle #render should render component as expected (4) 1`] = `"<gux-toggle lang=\\"en\\" id=\\"disabledToggle\\" checked=\\"\\" label=\\"on\\" disabled=\\"\\" hydrated=\\"\\"></gux-toggle>"`;
 
-exports[`gux-toggle #render should render component as expected (5) 1`] = `""`;
+exports[`gux-toggle #render should render component as expected (5) 1`] = `"<gux-toggle lang=\\"en\\" label=\\"On\\" label-position=\\"left\\" hydrated=\\"\\"></gux-toggle>"`;
 
-exports[`gux-toggle #render should render component as expected (6) 1`] = `""`;
+exports[`gux-toggle #render should render component as expected (6) 1`] = `"<gux-toggle lang=\\"en\\" checked=\\"\\" label=\\"on\\" label-position=\\"right\\" hydrated=\\"\\"></gux-toggle>"`;
 
-exports[`gux-toggle #render should render component as expected (7) 1`] = `""`;
+exports[`gux-toggle #render should render component as expected (7) 1`] = `"<gux-toggle lang=\\"en\\" label=\\"This is a long label for the toggle to test how it works\\" label-position=\\"left\\" hydrated=\\"\\"></gux-toggle>"`;
 
-exports[`gux-toggle #render should render component as expected (8) 1`] = `""`;
+exports[`gux-toggle #render should render component as expected (8) 1`] = `"<gux-toggle lang=\\"en\\" checked=\\"\\" label=\\"This is a long label for the toggle to test how it works\\" label-position=\\"right\\" hydrated=\\"\\"></gux-toggle>"`;
+
+exports[`gux-toggle #render should render component as expected (9) 1`] = `"<gux-toggle lang=\\"en\\" checked-label=\\"On\\" unchecked-label=\\"Off\\" hydrated=\\"\\"></gux-toggle>"`;
+
+exports[`gux-toggle #render should render component as expected (10) 1`] = `"<gux-toggle lang=\\"en\\" checked=\\"\\" checked-label=\\"on\\" unchecked-label=\\"off\\" hydrated=\\"\\"></gux-toggle>"`;
+
+exports[`gux-toggle #render should render component as expected (11) 1`] = `"<gux-toggle lang=\\"en\\" id=\\"disabledToggle\\" checked-label=\\"On\\" unchecked-label=\\"Off\\" disabled=\\"\\" hydrated=\\"\\"></gux-toggle>"`;
+
+exports[`gux-toggle #render should render component as expected (12) 1`] = `"<gux-toggle lang=\\"en\\" id=\\"disabledToggle\\" checked=\\"\\" checked-label=\\"on\\" unchecked-label=\\"off\\" disabled=\\"\\" hydrated=\\"\\"></gux-toggle>"`;
+
+exports[`gux-toggle #render should render component as expected (13) 1`] = `"<gux-toggle lang=\\"en\\" checked-label=\\"On\\" unchecked-label=\\"Off\\" label-position=\\"left\\" hydrated=\\"\\"></gux-toggle>"`;
+
+exports[`gux-toggle #render should render component as expected (14) 1`] = `"<gux-toggle lang=\\"en\\" checked=\\"\\" checked-label=\\"on\\" unchecked-label=\\"off\\" label-position=\\"right\\" hydrated=\\"\\"></gux-toggle>"`;
+
+exports[`gux-toggle #render should render component as expected (15) 1`] = `"<gux-toggle lang=\\"en\\" checked-label=\\"This is a long label for the toggle to test how it works\\" unchecked-label=\\"This is another long label for the toggle to test how it works\\" label-position=\\"left\\" hydrated=\\"\\"></gux-toggle>"`;
+
+exports[`gux-toggle #render should render component as expected (16) 1`] = `"<gux-toggle lang=\\"en\\" checked=\\"\\" checked-label=\\"This is a long label for the toggle to test how it works\\" unchecked-label=\\"This is another long label for the toggle to test how it works\\" label-position=\\"right\\" hydrated=\\"\\"></gux-toggle>"`;

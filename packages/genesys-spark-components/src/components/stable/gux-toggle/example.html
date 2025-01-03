@@ -1,5 +1,63 @@
 <div class="container">
   <h1>gux-toggle</h1>
+
+  <p>
+    For accessibility reasons, we will be deprecating the
+    <strong>checkedLabel</strong> and <strong>uncheckedLabel</strong> props in
+    v5. Instead, use only the <strong>label</strong> prop as demonstrated below.
+  </p>
+
+  <div class="container">
+    <gux-toggle label="Dark Mode"></gux-toggle>
+
+    <gux-toggle label="Dark Mode" checked></gux-toggle>
+
+    <gux-toggle label="Dark Mode" label-position="left"></gux-toggle>
+
+    <gux-toggle label="Dark Mode" disabled></gux-toggle>
+
+    <h3>Loading</h3>
+
+    <gux-toggle class="loading" label="Dark Mode" loading></gux-toggle>
+
+    <gux-toggle class="loading" label="Dark Mode" checked loading></gux-toggle>
+
+    <h3>Error Message</h3>
+
+    <gux-toggle
+      label="Dark Mode"
+      error-message="This is an error message"
+    ></gux-toggle>
+
+    <gux-toggle
+      label="Dark Mode"
+      label-position="left"
+      error-message="This is another error message"
+    ></gux-toggle>
+
+    <!-- inline gux-toggle -->
+    <h3>Inline</h3>
+    <gux-toggle display-inline label="Dark Mode"></gux-toggle>
+    <gux-toggle display-inline label="Dark Mode" checked></gux-toggle>
+  </div>
+  <div>
+    <gux-toggle
+      display-inline
+      label-position="left"
+      label="Dark Mode"
+    ></gux-toggle>
+    <gux-toggle
+      display-inline
+      label-position="left"
+      label="Dark Mode"
+      checked
+    ></gux-toggle>
+  </div>
+
+  <div>
+    Legacy -- checked-label and unchecked-label should not be used for
+    accessibility reasons and will be deprecated in v5
+  </div>
   <gux-toggle checked-label="On" unchecked-label="Off"></gux-toggle>
 
   <gux-toggle checked-label="On" unchecked-label="Off" checked></gux-toggle>
