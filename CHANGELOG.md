@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.108.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.108.0...v4.108.1) (2025-01-04)
+
+
+### Bug Fixes
+
+* **toggle:** a11y deprecate checked and unchecked labels ([f033c7e](https://github.com/MyPureCloud/genesys-spark/commit/f033c7e1640f33c7f2e88e989f8137a2a45db638))
+
 ## [4.108.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.107.2...v4.108.0) (2024-12-21)
 
 
