@@ -158,7 +158,7 @@
     "container": {
       "page": {
         "default": {
-          "value": "{theme.background.container.primary.10d}",
+          "value": "{theme.background.container.primary.30d}",
           "type": "color",
           "description": "The default background color for a page."
         },
@@ -168,7 +168,7 @@
           "description": "A more subtle background color for a page, ideal for highlight surfaces that are over the background, for example, a dashboard with different panels."
         },
         "tonal_medium": {
-          "value": "{theme.background.container.primary.20d}",
+          "value": "{theme.background.container.primary.10d}",
           "type": "color",
           "description": "The background color to highlight elements in the background, for example, the row of a table."
         },
@@ -180,7 +180,7 @@
       },
       "elevated": {
         "default": {
-          "value": "{theme.background.container.primary.10d}",
+          "value": "{background.container.page.default}",
           "type": "color",
           "description": "The background color for the default state of an elevated surface like modals, popovers, cards, etc."
         },
