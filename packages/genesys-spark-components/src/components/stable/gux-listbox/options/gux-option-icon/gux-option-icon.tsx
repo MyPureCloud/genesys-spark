@@ -42,6 +42,9 @@ export class GuxOptionIcon {
   iconColor: string;
 
   @Prop()
+  iconPosition: 'start' | 'end' = 'start';
+
+  @Prop()
   active: boolean = false;
 
   @Prop()
@@ -119,7 +122,8 @@ export class GuxOptionIcon {
           'gux-filtered': this.filtered,
           'gux-hovered': this.hovered,
           'gux-selected': this.selected,
-          'gux-show-subtext': this.hasSubtext
+          'gux-show-subtext': this.hasSubtext,
+          'gux-icon-position-end': this.iconPosition === 'end'
         }}
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}
