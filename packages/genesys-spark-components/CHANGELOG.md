@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.132.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.132.1...v3.132.2) (2025-01-07)
+
+
+### Bug Fixes
+
+* **gux-toggle:** a11y add support for single label ([31d4061](https://github.com/MyPureCloud/genesys-spark/commit/31d406172206002ec2a3023188d9d6d9abe8c9fd))
+
 ### [3.132.1](https://github.com/MyPureCloud/genesys-spark/compare/v3.132.0...v3.132.1) (2024-12-11)
 
 
