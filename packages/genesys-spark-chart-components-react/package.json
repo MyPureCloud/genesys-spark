@@ -19,7 +19,7 @@
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "dependencies": {
-    "genesys-spark-chart-components": "^4.105.0"
+    "genesys-spark-chart-components": "^4.108.2"
   },
   "peerDependencies": {
     "@types/react": "16 - 18",
@@ -28,11 +28,11 @@
   },
   "devDependencies": {
     "@types/react": "17.0.76",
-    "@types/react-dom": "^17.0.22",
-    "eslint": "^9.16.0",
+    "@types/react-dom": "^17.0.26",
+    "eslint": "^9.17.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
-    "globals": "^15.13.0",
-    "lint-staged": "^15.2.10",
+    "globals": "^15.14.0",
+    "lint-staged": "^15.3.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.4.2",
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",

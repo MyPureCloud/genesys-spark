@@ -852,6 +852,7 @@
   "--gse-ui-rte-quoteBlock-md-regular-fontSize",
   "--gse-ui-rte-quoteBlock-md-regular-fontWeight",
   "--gse-ui-rte-quoteBlock-md-regular-lineHeight",
+  "--gse-ui-rte-toolbar-divider-color",
   "--gse-ui-rte-toolbar-divider-margin",
   "--gse-ui-rte-toolbarBtnGroup-gap",
   "--gse-ui-search-counter-default-foregroundColor",

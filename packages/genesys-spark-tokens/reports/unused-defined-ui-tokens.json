@@ -394,7 +394,6 @@
   "--gse-ui-rte-rteMenu-border-color",
   "--gse-ui-rte-rteMenu-border-style",
   "--gse-ui-rte-rteMenu-border-width",
-  "--gse-ui-rte-toolbar-divider-color",
   "--gse-ui-search-counter-divider-foregroundColor",
   "--gse-ui-search-match-firstLevel-foregroundColour",
   "--gse-ui-search-match-subsequentLevel-foregroundColour",
