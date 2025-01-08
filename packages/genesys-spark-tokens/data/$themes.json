@@ -956,6 +956,7 @@
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
       "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc",
       "effects.box_shadow": "a4a2ead0767d9cb80a6c9e18d58bc2336fe7b44d",
+      "background.container.elevated.header": "c636cdde58acd3bf5b994313bbb812209d88bf08",
       "border.container.edges.default_light": "bb2a37d7619262576d1c47e4ed06e6ba022db8d3"
     }
   },
@@ -1181,7 +1182,8 @@
       "border.form_control.text_input.hover": "b17184819c452568acfcd801a4fe6f1447fff6fd",
       "border.form_control.text_input.active": "e1b4aa0aabf2c98798f4a4398cd595662788d885",
       "border.form_control.text_input.error": "fda8b6c47004e0aed432433f4bf02d3876416ccc",
-      "effects.box_shadow": "a4a2ead0767d9cb80a6c9e18d58bc2336fe7b44d"
+      "effects.box_shadow": "a4a2ead0767d9cb80a6c9e18d58bc2336fe7b44d",
+      "background.container.elevated.header": "c636cdde58acd3bf5b994313bbb812209d88bf08"
     }
   },
   {
