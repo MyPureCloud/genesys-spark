@@ -50,8 +50,7 @@ Completed V3 Basic Migration:
 
 Steps:
 
-- Rename the `left-align-buttons` slot `start-align-buttons`
-- Rename the `right-align-buttons` slot `end-align-buttons`
+- Replace the `left-align-buttons` and `right-align-buttons` slots with a `footer` slot. Refer to `gux-cta-group` docs for the preferred way to implement the `footer` slot [Spark WCL Playground](https://apps.inindca.com/common-ui-docs/packages/genesys-webcomponents/)
 - Use `gux-button-slot` components instead of `gux-button`
 - Remove the `initial-focus` attribute from the `gux-modal` element. Instead, place the `autofocus` attribute on the element that you wish to focus first
 - Remove the `trap-focus` attribute from the `gux-modal` element. The gux-modal uses the [dialog HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) internally, which manages trap focus within the modal
@@ -64,20 +63,20 @@ Steps:
 +<gux-modal size="small">
   <div slot="title">Modal Title</div>
   <div slot="content">This contains the modal content.</div>
++  <gux-cta-group slot="footer">
 -  <div slot="left-align-buttons">
-+  <div slot="start-align-buttons">
 -    <gux-button type="button" accent="primary">Accept</gux-button>
-+    <gux-button-slot accent="primary">
++    <gux-button-slot slot="primary">
 +       <button type="button">Accept</button>
 +    </gux-button-slot>
-  </div>
+- </div>
 - <div slot="right-align-buttons">
-+ <div slot="end-align-buttons">
 -    <gux-button type="button">Cancel</gux-button>
-+    <gux-button-slot>
++    <gux-button-slot slot="dismiss">
 +       <button autofocus type="button">Cancel</button>
 +    </gux-button-slot>
-  </div>
+- </div>
++ </gux-cta-group>
 -</gux-modal-legacy>
 +</gux-modal>
 ```
