@@ -9,7 +9,7 @@ const __dirname = dirname(__filename);
 // The description of each success criterion is copied directly from the WCAG Understanding Success Criteria pages
 const a11yRules = [
   {
-    id: '1.1.1',
+    id: '111',
     title: '1.1.1 Non-text Content',
     description:
       'All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed in the link',
