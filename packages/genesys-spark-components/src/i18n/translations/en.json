@@ -453,7 +453,12 @@
     "undo": "Undo",
     "redo": "Redo",
     "delete": "Delete",
-    "richStyleDropdown": "Rich Style Dropdown"
+    "richStyleDropdown": "Rich Style Dropdown",
+    "link": "Link",
+    "insert": "Insert",
+    "cancel": "Cancel",
+    "linkAddress": "Link Address",
+    "textToDisplay": "Text to display"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"

@@ -10,6 +10,10 @@
     margin: 0;
   }
 
+  a {
+    cursor: pointer;
+  }
+
   blockquote {
     margin: var(--gse-ui-rte-quoteBlock-margin);
     border-inline-start: var(--gse-ui-rte-quoteBlock-borderLeft-width) solid

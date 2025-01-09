@@ -5,7 +5,7 @@
   z-index: var(--gse-semantic-zIndex-popover);
   display: inline-block;
   min-inline-size: 280px;
-  padding: var(--gse-ui-popover-gap);
+  padding: var(--gse-ui-popover-padding);
   background-color: var(--gse-ui-popover-backgroundColor);
   border-radius: var(--gse-ui-popover-borderRadius);
   box-shadow: var(--gse-ui-popover-boxShadow-offsetX)
