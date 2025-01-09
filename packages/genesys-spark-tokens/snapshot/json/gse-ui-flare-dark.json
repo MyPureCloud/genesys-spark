@@ -2280,9 +2280,9 @@
       }
     },
     "hover_modal": {
-      "shroud-color": "#040814cc",
+      "shroud-color": "#040814a3",
       "foreground-color": "#1e1e21",
-      "opacity": ".8"
+      "opacity": ".64"
     },
     "content": {
       "border_radius": "100%",
@@ -2731,7 +2731,7 @@
     "close_button_color": "#b2b7c4",
     "header_color": "#ffffff",
     "background_color": "#1e1e21",
-    "shroud_color": "#040814cc",
+    "shroud_color": "#040814a3",
     "header": {
       "gap": "12px"
     },
@@ -2766,7 +2766,7 @@
     },
     "border_radius": "8px",
     "shroud": {
-      "opacity": ".8"
+      "opacity": ".64"
     },
     "dismiss_button": {
       "padding_top": "16px",
@@ -3307,9 +3307,9 @@
       "lg": "960px"
     },
     "shroud": {
-      "opacity": ".8"
+      "opacity": ".64"
     },
-    "shroud_color": "#040814cc",
+    "shroud_color": "#040814a3",
     "divider": {
       "color": "#4f5157",
       "width": "1px",

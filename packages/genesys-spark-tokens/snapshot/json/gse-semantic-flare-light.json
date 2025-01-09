@@ -44,7 +44,7 @@
     },
     "overlay": {
       "shroud": {
-        "default": "#263b73cc"
+        "default": "#263b73a3"
       }
     },
     "container": {
