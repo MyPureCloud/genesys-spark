@@ -1,32 +1,19 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
-import { a11yCheck } from '../../../../test/e2eTestUtils';
+import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
 
-const axeExclusions = [
-  {
-    issueId: 'duplicate-id-aria',
-    exclusionReason:
-      'Test uses seeded value for Math.random, so duplicate ids are expected'
-  }
-];
+const axeExclusions = [];
 
-async function newNonrandomE2EPage(
-  {
-    html
-  }: {
-    html: string;
-  },
-  lang: string = 'en'
-): Promise<E2EPage> {
+async function newNonrandomE2EPage({
+  html
+}: {
+  html: string;
+}): Promise<E2EPage> {
   const page = await newE2EPage();
 
   await page.evaluateOnNewDocument(() => {
     Math.random = () => 0.5;
   });
-  await page.setContent(`<div lang=${lang}>${html}</div>`);
-  await page.waitForChanges();
-  await page.addScriptTag({
-    path: '../../node_modules/axe-core/axe.min.js'
-  });
+  await page.setContent(html);
   await page.waitForChanges();
 
   return page;
@@ -199,18 +186,25 @@ describe('gux-table', () => {
       it(description, async () => {
         const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-table');
-        await a11yCheck(page, axeExclusions);
 
         expect(element).toHaveAttribute('hydrated');
         expect(element.outerHTML).toMatchSnapshot();
       });
+
       it(`${description} with i18n strings`, async () => {
-        const page = await newNonrandomE2EPage({ html }, 'ja');
+        const page = await newNonrandomE2EPage({
+          html: `<div lang=ja>${html}</div>`
+        });
         const element = await page.find('gux-table');
-        await a11yCheck(page, axeExclusions);
 
         expect(element).toHaveAttribute('hydrated');
         expect(element.outerHTML).toMatchSnapshot();
+      });
+
+      it(`${description} accessibility`, async () => {
+        const page = await newSparkE2EPage({ html });
+
+        await a11yCheck(page, axeExclusions);
       });
     });
   });
