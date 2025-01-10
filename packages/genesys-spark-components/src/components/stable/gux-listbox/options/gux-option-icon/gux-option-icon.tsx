@@ -105,7 +105,11 @@ export class GuxOptionIcon {
     return parentListbox?.disabled;
   }
 
-  render(): JSX.Element {
+  private renderMaybeIcon(position: 'start' | 'end'): JSX.Element {
+    if (position !== this.iconPosition) {
+      return null;
+    }
+
     let iconStyle = null;
     // If the icon color is set and we don't have a background highlight that
     // might cause contrast problems, set the color style.
@@ -113,6 +117,17 @@ export class GuxOptionIcon {
       iconStyle = { color: this.iconColor };
     }
 
+    return (
+      <gux-icon
+        decorative={this.iconSrText == null}
+        screenreader-text={this.iconSrText}
+        icon-name={this.iconName}
+        style={iconStyle}
+      ></gux-icon>
+    ) as JSX.Element;
+  }
+
+  render(): JSX.Element {
     return (
       <Host
         role="option"
@@ -122,24 +137,19 @@ export class GuxOptionIcon {
           'gux-filtered': this.filtered,
           'gux-hovered': this.hovered,
           'gux-selected': this.selected,
-          'gux-show-subtext': this.hasSubtext,
-          'gux-icon-position-end': this.iconPosition === 'end'
+          'gux-show-subtext': this.hasSubtext
         }}
         aria-selected={this.getAriaSelected()}
         aria-disabled={this.disabled.toString()}
       >
-        <gux-icon
-          decorative={this.iconSrText == null}
-          screenreader-text={this.iconSrText}
-          icon-name={this.iconName}
-          style={iconStyle}
-        ></gux-icon>
+        {this.renderMaybeIcon('start')}
         <div class="gux-option-wrapper">
           <gux-truncate ref={el => (this.truncateElement = el)}>
             <slot />
           </gux-truncate>
           <slot onSlotchange={() => this.onSubtextChange()} name="subtext" />
         </div>
+        {this.renderMaybeIcon('end')}
       </Host>
     ) as JSX.Element;
   }
