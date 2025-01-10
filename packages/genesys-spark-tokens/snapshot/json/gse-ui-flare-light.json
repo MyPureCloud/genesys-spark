@@ -552,7 +552,7 @@
       }
     },
     "separator": {
-      "color": "#c1c6d4"
+      "color": "#dce1ed"
     },
     "border_radius": "0"
   },
@@ -1139,7 +1139,7 @@
       "foreground_color": "#4f5157"
     },
     "divider": {
-      "background_color": "#c1c6d4",
+      "background_color": "#dce1ed",
       "margin": "4px 0 8px 0",
       "height": "1px"
     },
@@ -2077,7 +2077,7 @@
         "gap": "4px"
       },
       "gap": "4px",
-      "divider_color": "#c1c6d4",
+      "divider_color": "#dce1ed",
       "divider": {
         "width": "1px",
         "height": "32px"
@@ -2090,7 +2090,7 @@
       },
       "padding": "12px",
       "divider": {
-        "color": "#c1c6d4",
+        "color": "#dce1ed",
         "width": "1px",
         "style": "solid"
       },
@@ -2425,7 +2425,7 @@
         }
       },
       "tree_view": {
-        "bar": "#c1c6d44d"
+        "bar": "#dce1ed4d"
       }
     },
     "button_return": {
@@ -2436,7 +2436,7 @@
     },
     "tree_view": {
       "border": {
-        "color": "#c1c6d44d",
+        "color": "#dce1ed4d",
         "width": "2px",
         "style": "solid"
       },
@@ -2524,7 +2524,7 @@
           "height": "40px",
           "width": "1px"
         },
-        "divider_color": "#c1c6d4"
+        "divider_color": "#dce1ed"
       },
       "indicator": {
         "vertical": {
@@ -2582,7 +2582,7 @@
   },
   "advanced_tabs": {
     "divider": {
-      "divider_color": "#c1c6d4"
+      "divider_color": "#dce1ed"
     },
     "item": {
       "padding": "11px 12px 10px",
@@ -2612,7 +2612,7 @@
           "width": "1px"
         },
         "border": {
-          "color": "#c1c6d4",
+          "color": "#dce1ed",
           "width": "1px",
           "style": "solid"
         }
@@ -3054,7 +3054,7 @@
     },
     "wrapper": {
       "divider_border": {
-        "color": "#c1c6d4",
+        "color": "#dce1ed",
         "width": "1px",
         "style": "solid"
       }
@@ -3077,7 +3077,7 @@
     "code_block": {
       "background_color": "#ebedf5",
       "border": {
-        "color": "#c1c6d4",
+        "color": "#dce1ed",
         "width": "1px",
         "style": "solid"
       },
@@ -3206,7 +3206,7 @@
     },
     "toolbar": {
       "divider": {
-        "color": "#c1c6d4",
+        "color": "#dce1ed",
         "margin": "6px 4px"
       }
     },
@@ -3311,7 +3311,7 @@
     },
     "shroud_color": "#263b73cc",
     "divider": {
-      "color": "#c1c6d4",
+      "color": "#dce1ed",
       "width": "1px",
       "style": "solid"
     },

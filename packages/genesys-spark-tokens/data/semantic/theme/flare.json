@@ -47,15 +47,15 @@
             "type": "color"
           },
           "10d": {
-            "value": "{color.haze.950}",
+            "value": "{color.haze.1000}",
             "type": "color"
           },
           "20d": {
-            "value": "{color.haze.900}",
+            "value": "{color.haze.950}",
             "type": "color"
           },
           "30d": {
-            "value": "{color.haze.850}",
+            "value": "{color.haze.900}",
             "type": "color"
           },
           "40d": {
@@ -1088,7 +1088,7 @@
           "type": "color"
         },
         "20": {
-          "value": "{color.haze.300}",
+          "value": "{color.haze.150}",
           "type": "color"
         },
         "30": {

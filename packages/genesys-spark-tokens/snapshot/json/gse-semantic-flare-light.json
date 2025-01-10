@@ -58,7 +58,8 @@
         "default": "#ffffff",
         "hover": "#eff3ff",
         "active": "#adbff0",
-        "error": "#f3a7b5"
+        "error": "#f3a7b5",
+        "header": "#f5f6fa"
       },
       "high_constrast": {
         "default": "#2a2a2e",
@@ -268,7 +269,7 @@
   "border": {
     "focus": "#5476d5",
     "container": {
-      "divider": "#c1c6d4",
+      "divider": "#dce1ed",
       "edges": {
         "default_light": "#bfc6d9",
         "default": "#c1c6d4",

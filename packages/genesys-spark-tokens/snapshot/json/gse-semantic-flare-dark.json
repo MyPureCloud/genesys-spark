@@ -22,7 +22,7 @@
         "active": "#6a6d75"
       },
       "subtle": {
-        "default": "#1e1e21",
+        "default": "#131315",
         "hover": "#4f5157",
         "active": "#6a6d75"
       },
@@ -49,16 +49,17 @@
     },
     "container": {
       "page": {
-        "default": "#1e1e21",
-        "tonal_subtle": "#2a2a2e",
-        "tonal_medium": "#2a2a2e",
+        "default": "#2a2a2e",
+        "tonal_subtle": "#1e1e21",
+        "tonal_medium": "#131315",
         "tonal_high": "#6a6d75"
       },
       "elevated": {
         "default": "#1e1e21",
         "hover": "#3e4044",
         "active": "#4f5157",
-        "error": "#440a15"
+        "error": "#440a15",
+        "header": "#2a2a2e"
       },
       "high_constrast": {
         "default": "#ffffff",

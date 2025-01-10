@@ -182,7 +182,7 @@
         "default": {
           "value": "{theme.background.container.primary.10}",
           "type": "color",
-          "description": "The background color for the default state of an elevated surface like modals, popovers, cards, etc."
+          "description": "The background color for the default state of an elevated surfaces like modals, popovers, cards, widgets, side panels, gadgets, etc."
         },
         "hover": {
           "value": "{theme.background.container.primary.40}",
@@ -198,6 +198,11 @@
           "value": "{theme.background.system.error.10}",
           "type": "color",
           "description": "The color of surfaces that are in an error state."
+        },
+        "header": {
+          "value": "{theme.background.container.primary.20}",
+          "type": "color",
+          "description": "The background color for the header section of elevated surfaces, such as widgets, gadgets or cards."
         }
       },
       "high_constrast": {
