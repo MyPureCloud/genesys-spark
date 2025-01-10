@@ -32,6 +32,9 @@ export class GuxRichTextEditorActionLink {
   @Prop()
   disabled: boolean = false;
 
+  @Prop()
+  isActive: boolean = false;
+
   @State()
   isOpen: boolean = false;
 
@@ -97,9 +100,9 @@ export class GuxRichTextEditorActionLink {
   private renderTooltip(): JSX.Element {
     if (!this.disabled) {
       return (
-        <gux-tooltip>
+        <gux-tooltip-beta>
           <div slot="content">{this.i18n('link')}</div>
-        </gux-tooltip>
+        </gux-tooltip-beta>
       ) as JSX.Element;
     }
   }
@@ -110,7 +113,7 @@ export class GuxRichTextEditorActionLink {
         <gux-button-slot accent="ghost" icon-only>
           <button
             id="popover-target"
-            class={{ 'gux-is-pressed': this.isOpen }}
+            class={{ 'gux-is-pressed': this.isActive || this.isOpen }}
             onClick={() => this.togglePopover()}
             ref={el => (this.actionButton = el)}
             type="button"
@@ -118,6 +121,7 @@ export class GuxRichTextEditorActionLink {
             aria-label={this.i18n('link')}
             aria-haspopup="true"
             aria-expanded={this.isOpen.toString()}
+            aria-pressed={this.isActive.toString()}
           >
             <gux-icon
               size="small"
