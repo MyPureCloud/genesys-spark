@@ -201,7 +201,12 @@
 
 .gux-selected-icon {
   display: flex;
+  flex-direction: row;
   align-items: center;
+
+  &.gux-icon-position-end {
+    flex-direction: row-reverse;
+  }
 
   gux-icon {
     inline-size: var(--gse-ui-formControl-input-inputIcon-size);

@@ -451,12 +451,6 @@
 
   <h3>Icon Options</h3>
 
-  <gux-button
-    onclick="(function() {
-      document.getElementById('icon-options-dropdown').toggleAttribute('disabled');
-  })()"
-    >Toggle disabled state</gux-button
-  >
   <gux-dropdown id="icon-options-dropdown" disabled="false">
     <gux-listbox aria-label="Users">
       <gux-option-icon
@@ -477,6 +471,42 @@
       <gux-option-icon
         icon-name="user"
         icon-color="#e08915"
+        icon-sr-text="Screenreader information about the icon goes here, if needed"
+        value="michelangelo"
+        >Michelangelo
+      </gux-option-icon>
+    </gux-listbox>
+  </gux-dropdown>
+
+  <h4>Icon Position End</h4>
+
+  <gux-dropdown id="icon-options-dropdown" disabled="false">
+    <gux-listbox aria-label="Users">
+      <gux-option-icon
+        icon-name="user"
+        icon-color="var(--gux-blue-60)"
+        icon-position="end"
+        value="leonardo"
+        >Leonardo</gux-option-icon
+      >
+      <gux-option-icon
+        icon-name="user"
+        icon-color="#8452cf"
+        value="donatello"
+        icon-position="end"
+        >Donatello</gux-option-icon
+      >
+      <gux-option-icon
+        icon-name="user"
+        icon-color="rgb(234, 11, 11)"
+        icon-position="end"
+        value="raphael"
+        >Raphael</gux-option-icon
+      >
+      <gux-option-icon
+        icon-name="user"
+        icon-color="#e08915"
+        icon-position="end"
         icon-sr-text="Screenreader information about the icon goes here, if needed"
         value="michelangelo"
         >Michelangelo

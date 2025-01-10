@@ -456,7 +456,12 @@ export class GuxDropdown {
       iconStyle = { color: iconOption.iconColor };
     }
     return (
-      <span class="gux-selected-icon">
+      <span
+        class={{
+          'gux-selected-icon': true,
+          'gux-icon-position-end': iconOption.iconPosition === 'end'
+        }}
+      >
         <gux-icon
           icon-name={iconOption.iconName}
           style={iconStyle}
