@@ -39,6 +39,9 @@ export class GuxButton {
   @Prop()
   accent: GuxButtonAccent = 'secondary';
 
+  @Prop()
+  autofocus: boolean = false;
+
   @State()
   iconOnly: boolean;
 
@@ -61,6 +64,7 @@ export class GuxButton {
           'gux-icon-only': this.iconOnly
         }}
         aria-label={this.guxTitle}
+        autofocus={this.autofocus}
       >
         <slot onSlotchange={this.slotChanged.bind(this)} />
       </button>,
