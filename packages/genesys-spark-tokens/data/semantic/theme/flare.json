@@ -178,7 +178,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": "{opacity.80}",
+                "value": "{opacity.64}",
                 "space": "srgb"
               }
             }
@@ -191,7 +191,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": "{opacity.80}",
+                "value": "{opacity.64}",
                 "space": "srgb"
               }
             }

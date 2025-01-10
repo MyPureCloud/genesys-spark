@@ -328,7 +328,6 @@
   "--gse-ui-popover-buttonsBar-gap",
   "--gse-ui-popover-closeButtonColor",
   "--gse-ui-popover-header-gap",
-  "--gse-ui-popover-padding",
   "--gse-ui-popover-spacer-height",
   "--gse-ui-progressAndLoading-loadingState-large-header-fontFamily",
   "--gse-ui-progressAndLoading-loadingState-large-header-fontSize",

@@ -27,9 +27,7 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       var(--gse-ui-modal-boxShadow-spread) var(--gse-ui-modal-boxShadow-color);
 
     &::backdrop {
-      // token isn't working?
-      // background: var(--gse-ui-modal-shroudColor);
-      background: #4d6182cc;
+      background: var(--gse-ui-modal-shroudColor);
     }
 
     .gux-modal-container {

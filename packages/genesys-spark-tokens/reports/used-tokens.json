@@ -740,6 +740,7 @@
   "--gse-ui-popover-boxShadow-spread",
   "--gse-ui-popover-gap",
   "--gse-ui-popover-headerColor",
+  "--gse-ui-popover-padding",
   "--gse-ui-popover-title-text-fontFamily",
   "--gse-ui-popover-title-text-fontSize",
   "--gse-ui-popover-title-text-fontWeight",

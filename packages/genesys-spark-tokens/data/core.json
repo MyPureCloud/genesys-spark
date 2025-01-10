@@ -1529,6 +1529,10 @@
       "value": ".5",
       "type": "opacity"
     },
+    "64": {
+      "value": ".64",
+      "type": "opacity"
+    },
     "80": {
       "value": ".8",
       "type": "opacity"

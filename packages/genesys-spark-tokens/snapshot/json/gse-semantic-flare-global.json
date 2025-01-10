@@ -14,7 +14,7 @@
   },
   "opacity": {
     "disabled": ".5",
-    "shroud": ".8"
+    "shroud": ".64"
   },
   "container": {
     "lg": {
