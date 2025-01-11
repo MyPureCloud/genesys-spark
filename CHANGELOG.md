@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.110.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.109.1...v4.110.0) (2025-01-11)
+
+
+### Features
+
+* **button:** added autofocus property ([77002f9](https://github.com/MyPureCloud/genesys-spark/commit/77002f9c3c2eef936045c4c444444d065063249f))
+* **dropdown:** option icon position added ([a7397af](https://github.com/MyPureCloud/genesys-spark/commit/a7397af6fd2606e3022aa93bd9b43656b83d1014))
+* **tokens:** Added a background color for the widget headers ([f4854e9](https://github.com/MyPureCloud/genesys-spark/commit/f4854e95f10c3a5f1f0059d8f569115b4461ef61))
+* **tokens:** generated CSS vars ([dc62a1a](https://github.com/MyPureCloud/genesys-spark/commit/dc62a1aa93f85abce0fdb139a4f14e3f4a3e60cc))
+* **tokens:** updated modal backdrop ([c294306](https://github.com/MyPureCloud/genesys-spark/commit/c294306f83672bf122aa72cad731fd678cdfac68))
+* **tokens:** Updated surface token values ([6caffb8](https://github.com/MyPureCloud/genesys-spark/commit/6caffb8b14c87994651d3bfddd49d5d4d30a6e52))
+
+
+### Bug Fixes
+
+* **modal:** fixed backdrop color ([90a4d94](https://github.com/MyPureCloud/genesys-spark/commit/90a4d94ff1b19e882f09d09b36a14e9fb07c746d))
+
 ### [4.109.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.109.0...v4.109.1) (2025-01-10)
 
 ## [4.109.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.108.3...v4.109.0) (2025-01-09)
