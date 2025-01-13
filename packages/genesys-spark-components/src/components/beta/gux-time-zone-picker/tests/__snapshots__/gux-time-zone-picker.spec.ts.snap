@@ -1617,7 +1617,7 @@ exports[`#render  should render component as expected (1) 1`] = `
           <gux-option value="America/Scoresbysund">
             <div class="gux-option-wrapper">
               <div>
-                Scoresbysund, Greenland (UTC+00:00)
+                Scoresbysund, Greenland (UTC-02:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -1929,7 +1929,7 @@ exports[`#render  should render component as expected (1) 1`] = `
           <gux-option value="Asia/Aqtau">
             <div class="gux-option-wrapper">
               <div>
-                Aqtau, Kazakhstan (UTC+05:00)
+                Aqtau, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -1937,7 +1937,7 @@ exports[`#render  should render component as expected (1) 1`] = `
           <gux-option value="Asia/Aqtobe">
             <div class="gux-option-wrapper">
               <div>
-                Aqtobe, Kazakhstan (UTC+05:00)
+                Aqtobe, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -1961,7 +1961,7 @@ exports[`#render  should render component as expected (1) 1`] = `
           <gux-option value="Asia/Atyrau">
             <div class="gux-option-wrapper">
               <div>
-                Atyrau, Kazakhstan (UTC+05:00)
+                Atyrau, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -2401,7 +2401,7 @@ exports[`#render  should render component as expected (1) 1`] = `
           <gux-option value="Asia/Oral">
             <div class="gux-option-wrapper">
               <div>
-                Oral, Kazakhstan (UTC+05:00)
+                Oral, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -2449,7 +2449,7 @@ exports[`#render  should render component as expected (1) 1`] = `
           <gux-option value="Asia/Qyzylorda">
             <div class="gux-option-wrapper">
               <div>
-                Qyzylorda, Kazakhstan (UTC+05:00)
+                Qyzylorda, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -6330,7 +6330,7 @@ exports[`#render  should render component as expected (1) 1`] = `
             <gux-option value="America/Scoresbysund">
               <div class="gux-option-wrapper">
                 <div>
-                  Scoresbysund, Greenland (UTC+00:00)
+                  Scoresbysund, Greenland (UTC-02:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -6642,7 +6642,7 @@ exports[`#render  should render component as expected (1) 1`] = `
             <gux-option value="Asia/Aqtau">
               <div class="gux-option-wrapper">
                 <div>
-                  Aqtau, Kazakhstan (UTC+05:00)
+                  Aqtau, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -6650,7 +6650,7 @@ exports[`#render  should render component as expected (1) 1`] = `
             <gux-option value="Asia/Aqtobe">
               <div class="gux-option-wrapper">
                 <div>
-                  Aqtobe, Kazakhstan (UTC+05:00)
+                  Aqtobe, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -6674,7 +6674,7 @@ exports[`#render  should render component as expected (1) 1`] = `
             <gux-option value="Asia/Atyrau">
               <div class="gux-option-wrapper">
                 <div>
-                  Atyrau, Kazakhstan (UTC+05:00)
+                  Atyrau, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -7114,7 +7114,7 @@ exports[`#render  should render component as expected (1) 1`] = `
             <gux-option value="Asia/Oral">
               <div class="gux-option-wrapper">
                 <div>
-                  Oral, Kazakhstan (UTC+05:00)
+                  Oral, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -7162,7 +7162,7 @@ exports[`#render  should render component as expected (1) 1`] = `
             <gux-option value="Asia/Qyzylorda">
               <div class="gux-option-wrapper">
                 <div>
-                  Qyzylorda, Kazakhstan (UTC+05:00)
+                  Qyzylorda, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -11048,7 +11048,7 @@ exports[`#render  should render component as expected (2) 1`] = `
           <gux-option value="America/Scoresbysund">
             <div class="gux-option-wrapper">
               <div>
-                Scoresbysund, Greenland (UTC+00:00)
+                Scoresbysund, Greenland (UTC-02:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -11360,7 +11360,7 @@ exports[`#render  should render component as expected (2) 1`] = `
           <gux-option value="Asia/Aqtau">
             <div class="gux-option-wrapper">
               <div>
-                Aqtau, Kazakhstan (UTC+05:00)
+                Aqtau, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -11368,7 +11368,7 @@ exports[`#render  should render component as expected (2) 1`] = `
           <gux-option value="Asia/Aqtobe">
             <div class="gux-option-wrapper">
               <div>
-                Aqtobe, Kazakhstan (UTC+05:00)
+                Aqtobe, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -11392,7 +11392,7 @@ exports[`#render  should render component as expected (2) 1`] = `
           <gux-option value="Asia/Atyrau">
             <div class="gux-option-wrapper">
               <div>
-                Atyrau, Kazakhstan (UTC+05:00)
+                Atyrau, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -11832,7 +11832,7 @@ exports[`#render  should render component as expected (2) 1`] = `
           <gux-option value="Asia/Oral">
             <div class="gux-option-wrapper">
               <div>
-                Oral, Kazakhstan (UTC+05:00)
+                Oral, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -11880,7 +11880,7 @@ exports[`#render  should render component as expected (2) 1`] = `
           <gux-option value="Asia/Qyzylorda">
             <div class="gux-option-wrapper">
               <div>
-                Qyzylorda, Kazakhstan (UTC+05:00)
+                Qyzylorda, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -15761,7 +15761,7 @@ exports[`#render  should render component as expected (2) 1`] = `
             <gux-option value="America/Scoresbysund">
               <div class="gux-option-wrapper">
                 <div>
-                  Scoresbysund, Greenland (UTC+00:00)
+                  Scoresbysund, Greenland (UTC-02:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -16073,7 +16073,7 @@ exports[`#render  should render component as expected (2) 1`] = `
             <gux-option value="Asia/Aqtau">
               <div class="gux-option-wrapper">
                 <div>
-                  Aqtau, Kazakhstan (UTC+05:00)
+                  Aqtau, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -16081,7 +16081,7 @@ exports[`#render  should render component as expected (2) 1`] = `
             <gux-option value="Asia/Aqtobe">
               <div class="gux-option-wrapper">
                 <div>
-                  Aqtobe, Kazakhstan (UTC+05:00)
+                  Aqtobe, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -16105,7 +16105,7 @@ exports[`#render  should render component as expected (2) 1`] = `
             <gux-option value="Asia/Atyrau">
               <div class="gux-option-wrapper">
                 <div>
-                  Atyrau, Kazakhstan (UTC+05:00)
+                  Atyrau, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -16545,7 +16545,7 @@ exports[`#render  should render component as expected (2) 1`] = `
             <gux-option value="Asia/Oral">
               <div class="gux-option-wrapper">
                 <div>
-                  Oral, Kazakhstan (UTC+05:00)
+                  Oral, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -16593,7 +16593,7 @@ exports[`#render  should render component as expected (2) 1`] = `
             <gux-option value="Asia/Qyzylorda">
               <div class="gux-option-wrapper">
                 <div>
-                  Qyzylorda, Kazakhstan (UTC+05:00)
+                  Qyzylorda, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -20491,7 +20491,7 @@ exports[`#render  should render component as expected (3) 1`] = `
           <gux-option value="America/Scoresbysund">
             <div class="gux-option-wrapper">
               <div>
-                Scoresbysund, Greenland (UTC+00:00)
+                Scoresbysund, Greenland (UTC-02:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -20803,7 +20803,7 @@ exports[`#render  should render component as expected (3) 1`] = `
           <gux-option value="Asia/Aqtau">
             <div class="gux-option-wrapper">
               <div>
-                Aqtau, Kazakhstan (UTC+05:00)
+                Aqtau, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -20811,7 +20811,7 @@ exports[`#render  should render component as expected (3) 1`] = `
           <gux-option value="Asia/Aqtobe">
             <div class="gux-option-wrapper">
               <div>
-                Aqtobe, Kazakhstan (UTC+05:00)
+                Aqtobe, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -20835,7 +20835,7 @@ exports[`#render  should render component as expected (3) 1`] = `
           <gux-option value="Asia/Atyrau">
             <div class="gux-option-wrapper">
               <div>
-                Atyrau, Kazakhstan (UTC+05:00)
+                Atyrau, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -21275,7 +21275,7 @@ exports[`#render  should render component as expected (3) 1`] = `
           <gux-option value="Asia/Oral">
             <div class="gux-option-wrapper">
               <div>
-                Oral, Kazakhstan (UTC+05:00)
+                Oral, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -21323,7 +21323,7 @@ exports[`#render  should render component as expected (3) 1`] = `
           <gux-option value="Asia/Qyzylorda">
             <div class="gux-option-wrapper">
               <div>
-                Qyzylorda, Kazakhstan (UTC+05:00)
+                Qyzylorda, Kazakhstan (UTC+06:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -25204,7 +25204,7 @@ exports[`#render  should render component as expected (3) 1`] = `
             <gux-option value="America/Scoresbysund">
               <div class="gux-option-wrapper">
                 <div>
-                  Scoresbysund, Greenland (UTC+00:00)
+                  Scoresbysund, Greenland (UTC-02:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -25516,7 +25516,7 @@ exports[`#render  should render component as expected (3) 1`] = `
             <gux-option value="Asia/Aqtau">
               <div class="gux-option-wrapper">
                 <div>
-                  Aqtau, Kazakhstan (UTC+05:00)
+                  Aqtau, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -25524,7 +25524,7 @@ exports[`#render  should render component as expected (3) 1`] = `
             <gux-option value="Asia/Aqtobe">
               <div class="gux-option-wrapper">
                 <div>
-                  Aqtobe, Kazakhstan (UTC+05:00)
+                  Aqtobe, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -25548,7 +25548,7 @@ exports[`#render  should render component as expected (3) 1`] = `
             <gux-option value="Asia/Atyrau">
               <div class="gux-option-wrapper">
                 <div>
-                  Atyrau, Kazakhstan (UTC+05:00)
+                  Atyrau, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -25988,7 +25988,7 @@ exports[`#render  should render component as expected (3) 1`] = `
             <gux-option value="Asia/Oral">
               <div class="gux-option-wrapper">
                 <div>
-                  Oral, Kazakhstan (UTC+05:00)
+                  Oral, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -26036,7 +26036,7 @@ exports[`#render  should render component as expected (3) 1`] = `
             <gux-option value="Asia/Qyzylorda">
               <div class="gux-option-wrapper">
                 <div>
-                  Qyzylorda, Kazakhstan (UTC+05:00)
+                  Qyzylorda, Kazakhstan (UTC+06:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
