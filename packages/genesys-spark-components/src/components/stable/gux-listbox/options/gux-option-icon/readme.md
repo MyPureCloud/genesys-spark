@@ -7,17 +7,18 @@
 
 ## Properties
 
-| Property     | Attribute      | Description | Type      | Default     |
-| ------------ | -------------- | ----------- | --------- | ----------- |
-| `active`     | `active`       |             | `boolean` | `false`     |
-| `disabled`   | `disabled`     |             | `boolean` | `false`     |
-| `filtered`   | `filtered`     |             | `boolean` | `false`     |
-| `hovered`    | `hovered`      |             | `boolean` | `false`     |
-| `iconColor`  | `icon-color`   |             | `string`  | `undefined` |
-| `iconName`   | `icon-name`    |             | `string`  | `undefined` |
-| `iconSrText` | `icon-sr-text` |             | `string`  | `undefined` |
-| `selected`   | `selected`     |             | `boolean` | `false`     |
-| `value`      | `value`        |             | `string`  | `undefined` |
+| Property       | Attribute       | Description | Type               | Default     |
+| -------------- | --------------- | ----------- | ------------------ | ----------- |
+| `active`       | `active`        |             | `boolean`          | `false`     |
+| `disabled`     | `disabled`      |             | `boolean`          | `false`     |
+| `filtered`     | `filtered`      |             | `boolean`          | `false`     |
+| `hovered`      | `hovered`       |             | `boolean`          | `false`     |
+| `iconColor`    | `icon-color`    |             | `string`           | `undefined` |
+| `iconName`     | `icon-name`     |             | `string`           | `undefined` |
+| `iconPosition` | `icon-position` |             | `"end" \| "start"` | `'start'`   |
+| `iconSrText`   | `icon-sr-text`  |             | `string`           | `undefined` |
+| `selected`     | `selected`      |             | `boolean`          | `false`     |
+| `value`        | `value`         |             | `string`           | `undefined` |
 
 
 ## Slots

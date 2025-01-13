@@ -8,12 +8,13 @@ You can choose between two type (secondary and primary).
 
 ## Properties
 
-| Property   | Attribute   | Description                               | Type                                                                        | Default       |
-| ---------- | ----------- | ----------------------------------------- | --------------------------------------------------------------------------- | ------------- |
-| `accent`   | `accent`    |                                           | `"danger" \| "ghost" \| "inline" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
-| `disabled` | `disabled`  | Indicate if the button is disabled or not | `boolean`                                                                   | `false`       |
-| `guxTitle` | `gux-title` | The component title                       | `string`                                                                    | `undefined`   |
-| `type`     | `type`      | The component button type                 | `"button" \| "reset" \| "submit"`                                           | `'button'`    |
+| Property    | Attribute   | Description                               | Type                                                                        | Default       |
+| ----------- | ----------- | ----------------------------------------- | --------------------------------------------------------------------------- | ------------- |
+| `accent`    | `accent`    |                                           | `"danger" \| "ghost" \| "inline" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
+| `autofocus` | `autofocus` |                                           | `boolean`                                                                   | `false`       |
+| `disabled`  | `disabled`  | Indicate if the button is disabled or not | `boolean`                                                                   | `false`       |
+| `guxTitle`  | `gux-title` | The component title                       | `string`                                                                    | `undefined`   |
+| `type`      | `type`      | The component button type                 | `"button" \| "reset" \| "submit"`                                           | `'button'`    |
 
 
 ## Slots
