@@ -6,7 +6,9 @@ import {
   Listen,
   JSX,
   Prop,
-  State
+  State,
+  Watch,
+  forceUpdate
 } from '@stencil/core';
 
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
@@ -47,6 +49,13 @@ export class GuxSegmentedControl {
       simulateNativeEvent(this.root, 'input');
       simulateNativeEvent(this.root, 'change');
     }
+  }
+
+  @Watch('disabled')
+  watchDisabled(): void {
+    this.items.forEach(switchItem => {
+      forceUpdate(switchItem);
+    });
   }
 
   private slotChanged(): void {
