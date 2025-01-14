@@ -1535,7 +1535,6 @@
       "calendar_menu.date.current_text": "S:87b245f7ee7c5ecea48680f35a03e2e52e27e50a,",
       "toggle.label": "S:61e3e13f68ff6df87dd51195d941cee108f707c3,",
       "color_picker.label.text": "S:71d2e26901474650cafa14fca5b51aac770c6c34,",
-      "slider.label.text": "S:e3316f5ef27b989de71b87f66159be9fcd2ece6b,",
       "form_control.input.content_text": "S:eb0eaab8c7b317a599e17e5185ad2c9bf86a0ee5,",
       "form_control.input.prefix_sufix.text": "S:ed5286ce31443a4346dc177d56812f90f6f1b243,",
       "form_control.label.text": "S:628ae8172661b2baca6becb7789b8fa0f853dd8b,",
@@ -1600,7 +1599,8 @@
       "tag.text_large": "S:1d3f8a03d0e21141301f73aa193ef19a81db1edf,",
       "tag.text_small": "S:148e69e969ba4155158122d4107221039900f502,",
       "links.standalone.small.text": "S:ea0e6bb1842db6b0059d825780b3d78706991abc,",
-      "links.standalone.small.underlined_text": "S:07dcc0cc87ea8d8686b6f1339b49f9947f0e4e32,"
+      "links.standalone.small.underlined_text": "S:07dcc0cc87ea8d8686b6f1339b49f9947f0e4e32,",
+      "range_slider.label.text": "S:e3316f5ef27b989de71b87f66159be9fcd2ece6b,"
     },
     "selectedTokenSets": {
       "ui/unordered": "enabled",
@@ -2026,21 +2026,6 @@
       "color_picker.input.swatch_sizing": "0a21c243a60178d508afa274e08198518ff30cc7",
       "color_picker.input.swatch_border_radius": "7ce702ecbfa68d3112e2cbef3585b3158bb0664c",
       "color_picker.gap": "226a45d75c9d366720f22afde292147f3bb6e389",
-      "slider.handle.width": "1b590946c40fcf66c735a17b808ae8b1e5d59899",
-      "slider.handle.height": "5d5fde812f085bdfd5f2669f242e15ef6947a288",
-      "slider.handle.default.background_color": "d15d3493180f28d29044e1405636d3d99f0d47a5",
-      "slider.handle.hover.background_color": "70794674cba2016781c6fccc85732bf81bff31df",
-      "slider.handle.active.background_color": "4f6c1c9ffb76b3e5e31e407af1dd8d51cd0594fd",
-      "slider.handle.disabled.background_color": "05a470dc89243caba2703a5ebd676e0535c73a61",
-      "slider.handle.border_radius": "19f8c84aac4ff098aef95061fbf320e22ad7b15f",
-      "slider.disabled.opacity": "f1f529008e5ac2f9304c6478312e028bc2b6d4b3",
-      "slider.label.foreground_color": "d5bc929f59eb6ca70e031c5dd5b04ba74053f4bb",
-      "slider.bar.selected.background_color": "1b02a09224641ce65dd60e4df223175ad630d293",
-      "slider.bar.default.background_color": "e8f5a1b43cd7eabeeefea83d7c40513af08bd393",
-      "slider.bar.height": "2d6ba3dad887becb119035dd49f4b3814f83d37c",
-      "slider.gap": "ce4a45b9fd1b54cc73f4b8cd4c24922971f70392",
-      "slider.focus_ring.border_radius": "6f64737097bba6db6aa7c7f8680c65d7c8422e43",
-      "slider.track.border_radius": "5c76f5ed2c6ae8b83be905fea18d09539f44807f",
       "flyout_menu.anchor.height": "89e30ae7bc336c99affe616c9a162e8ab13515de",
       "flyout_menu.anchor.width": "0061cb13adadb574a2928a27a968f937e62df0d5",
       "flyout_menu.width": "9a1d4dee4e0b790715317e6ec3dace38f2b4641e",
@@ -2502,7 +2487,15 @@
       "blank_state.gap_main": "69de3be05eeb22851286036d89111acb7e4c627a",
       "blank_state.gap_content": "15ff02c5635d64e3b7783047132a288e1c544c29",
       "blank_state.icon_color": "03e52d060cdc4dcc32623015a44f91f0b07bffa8",
-      "blank_state.foreground_color": "f40fea58f608d3c2a0ffa2cd3028fe44621a01ff"
+      "blank_state.foreground_color": "f40fea58f608d3c2a0ffa2cd3028fe44621a01ff",
+      "range_slider.handle.width": "1b590946c40fcf66c735a17b808ae8b1e5d59899",
+      "range_slider.handle.height": "5d5fde812f085bdfd5f2669f242e15ef6947a288",
+      "range_slider.bar.height": "2d6ba3dad887becb119035dd49f4b3814f83d37c",
+      "range_slider.gap": "ce4a45b9fd1b54cc73f4b8cd4c24922971f70392",
+      "range_slider.handle.border_radius": "19f8c84aac4ff098aef95061fbf320e22ad7b15f",
+      "range_slider.focus_ring.border_radius": "6f64737097bba6db6aa7c7f8680c65d7c8422e43",
+      "range_slider.track.border_radius": "5c76f5ed2c6ae8b83be905fea18d09539f44807f",
+      "range_slider.disabled.opacity": "f1f529008e5ac2f9304c6478312e028bc2b6d4b3"
     },
     "group": ".ui"
   }
