@@ -15,10 +15,10 @@ exports[`gux-form-field-number #render clearable should render component as expe
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -60,10 +60,10 @@ exports[`gux-form-field-number #render clearable should render component as expe
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -105,10 +105,10 @@ exports[`gux-form-field-number #render clearable should render component as expe
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -149,10 +149,10 @@ exports[`gux-form-field-number #render clearable should render component as expe
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -193,10 +193,10 @@ exports[`gux-form-field-number #render clearable should render component as expe
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" disabled="" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" disabled="" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" disabled="" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" disabled="" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -237,10 +237,10 @@ exports[`gux-form-field-number #render help should render component as expected 
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -284,10 +284,10 @@ exports[`gux-form-field-number #render indicator marks should render component a
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -328,10 +328,10 @@ exports[`gux-form-field-number #render indicator marks should render component a
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -372,10 +372,10 @@ exports[`gux-form-field-number #render indicator marks should render component a
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -416,10 +416,10 @@ exports[`gux-form-field-number #render input attributes should render component 
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -460,10 +460,10 @@ exports[`gux-form-field-number #render input attributes should render component 
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" disabled="" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" disabled="" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" disabled="" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" disabled="" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -504,10 +504,10 @@ exports[`gux-form-field-number #render input attributes should render component 
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -548,10 +548,10 @@ exports[`gux-form-field-number #render label-info should render component as exp
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -597,10 +597,10 @@ exports[`gux-form-field-number #render label-position should render component as
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -641,10 +641,10 @@ exports[`gux-form-field-number #render label-position should render component as
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -685,10 +685,10 @@ exports[`gux-form-field-number #render label-position should render component as
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
@@ -729,10 +729,10 @@ exports[`gux-form-field-number #render label-position should render component as
             <slot name="input"></slot>
           </div>
           <div class="gux-step-buttons-container">
-            <button class="gux-step-button" tabindex="-1" title="Increment" type="button">
+            <button class="gux-step-button" title="Increment" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-up-small-regular"></gux-icon>
             </button>
-            <button class="gux-step-button" tabindex="-1" title="Decrement" type="button">
+            <button class="gux-step-button" title="Decrement" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
             </button>
           </div>
