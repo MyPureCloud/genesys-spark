@@ -1091,5 +1091,15 @@
         }
       }
     }
+  },
+  "charts": {
+    "categorical_data": {
+      "category1": {
+        "subtle": {
+          "value": "{theme.charts.categorical_data.category.10}",
+          "type": "color"
+        }
+      }
+    }
   }
 }

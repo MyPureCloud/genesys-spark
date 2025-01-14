@@ -16,7 +16,8 @@
       "elevation.high": "S:120a65ca683c835ca116a5ac37131b8d73c4ef1e,"
     },
     "selectedTokenSets": {
-      "core": "enabled"
+      "core": "enabled",
+      "ui-charts/charts": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:28327:137965",
     "$figmaModeId": "28327:0",
@@ -351,7 +352,8 @@
     "name": "flare",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "semantic/theme/flare": "enabled"
+      "semantic/theme/flare": "enabled",
+      "ui-charts/charts": "disabled"
     },
     "group": "theme",
     "$figmaCollectionId": "VariableCollectionId:28327:138243",
@@ -665,7 +667,8 @@
     "name": "legacy",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "semantic/theme/legacy": "enabled"
+      "semantic/theme/legacy": "enabled",
+      "ui-charts/charts": "disabled"
     },
     "group": "theme",
     "$figmaCollectionId": "VariableCollectionId:28327:138243",
@@ -871,7 +874,8 @@
     },
     "selectedTokenSets": {
       "semantic/mode/light": "enabled",
-      "semantic/global": "enabled"
+      "semantic/global": "enabled",
+      "ui-charts/charts": "disabled"
     },
     "group": "mode",
     "$figmaCollectionId": "VariableCollectionId:28327:138365",
@@ -1203,7 +1207,8 @@
     },
     "selectedTokenSets": {
       "semantic/mode/dark": "enabled",
-      "semantic/global": "enabled"
+      "semantic/global": "enabled",
+      "ui-charts/charts": "disabled"
     },
     "group": "mode",
     "$figmaCollectionId": "VariableCollectionId:28327:138365",
@@ -1628,7 +1633,8 @@
       "ui/data_display": "enabled",
       "ui/navigation": "enabled",
       "ui/feedback": "enabled",
-      "ui/layout_and_container": "enabled"
+      "ui/layout_and_container": "enabled",
+      "ui-charts/charts": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:8987:36891",
     "$figmaModeId": "28327:5",
@@ -2544,5 +2550,14 @@
       "blank_state.foreground_color": "f40fea58f608d3c2a0ffa2cd3028fe44621a01ff"
     },
     "group": ".ui"
+  },
+  {
+    "id": "6be63bd911b8ec27c2fb46dafd2bdd22c0e7d0d7",
+    "name": "ui",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "ui-charts/charts": "enabled"
+    },
+    "group": ".ui-charts"
   }
 ]

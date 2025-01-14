@@ -1374,6 +1374,16 @@
           "type": "borderRadius"
         }
       }
+    },
+    "charts": {
+      "categorical_data": {
+        "category": {
+          "10": {
+            "value": "{color.islandaqua.400}",
+            "type": "color"
+          }
+        }
+      }
     }
   }
 }
