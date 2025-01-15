@@ -1065,7 +1065,7 @@
         "background_color": "#eff3ff"
       },
       "selected": {
-        "background_color": "#adbff0"
+        "background_color": "#d5def7"
       },
       "disabled": {
         "opacity": ".5"
@@ -3010,7 +3010,7 @@
           "start_shortcut_color": "#2a2a2e",
           "parent_icon_color": "#2a2a2e"
         },
-        "background_color": "#adbff0"
+        "background_color": "#d5def7"
       },
       "focus": {
         "border_radius": "4px"
