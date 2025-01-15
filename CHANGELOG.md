@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.111.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.110.1...v4.111.0) (2025-01-15)
+
+
+### Features
+
+* override CDN URL via assetsUrl option to registerSparkChartComponents ([126aa55](https://github.com/MyPureCloud/genesys-spark/commit/126aa554bc433635710c06a2d3463eb14cc27626))
+* override CDN URL via assetsUrl option to registerSparkComponents ([759e948](https://github.com/MyPureCloud/genesys-spark/commit/759e948943871a795e78c0ff6863f9adfb60c5d6))
+
+
+### Bug Fixes
+
+* **segmented-control:** fix disabled state for segmented-control items ([e35017c](https://github.com/MyPureCloud/genesys-spark/commit/e35017c927579056102b3740ec1bf9e6223c7812))
+
 ### [4.110.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.110.0...v4.110.1) (2025-01-14)
 
 ## [4.110.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.109.1...v4.110.0) (2025-01-11)
