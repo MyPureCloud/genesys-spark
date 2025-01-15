@@ -24,21 +24,36 @@
 }
 
 .gux-drop-container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  margin-block: 10px;
+  gap: var(--gse-ui-fileUpload-dragDrop-btnText-gap);
+  margin-block: var(--gse-ui-fileUpload-mainContainer-gap);
   margin-inline: 0;
+  font-family: var(--gse-ui-fileUpload-dragAndDrop-dropZone-text-fontFamily);
+  font-size: var(--gse-ui-fileUpload-dragAndDrop-dropZone-text-fontSize);
+  font-weight: var(--gse-ui-fileUpload-dragAndDrop-dropZone-text-fontWeight);
+  line-height: var(--gse-ui-fileUpload-dragAndDrop-dropZone-text-lineHeight);
+  color: var(--gse-ui-fileUpload-dragAndDrop-dropZoneText-color);
 
   &.gux-drop-zone {
     place-content: stretch center;
     align-items: center;
+    min-block-size: var(--gse-ui-fileUpload-dragAndDrop-dropZone-minHeight);
     padding: 20px;
-    border: 2px dashed blue;
-    border-radius: 5px;
+    border: var(--gse-ui-fileUpload-dragAndDrop-dropZone-default-border-width)
+      var(--gse-ui-fileUpload-dragAndDrop-dropZone-default-border-style)
+      var(--gse-ui-fileUpload-dragAndDrop-dropZone-default-border-color);
+    border-radius: var(--gse-ui-fileUpload-dropZone-borderRadius);
 
     &.gux-drag-over:not(.gux-disabled) {
-      background-color: #0000ff20;
+      background-color: var(
+        --gse-ui-fileUpload-dragAndDrop-dropZone-background-active
+      );
+      border: var(--gse-ui-fileUpload-dragAndDrop-dropZone-active-border-width)
+        var(--gse-ui-fileUpload-dragAndDrop-dropZone-active-border-style)
+        var(--gse-ui-fileUpload-dragAndDrop-dropZone-active-border-color);
     }
 
     &.gux-disabled {
@@ -65,20 +80,8 @@
 }
 
 .gux-file-list {
-  &.gux-disabled {
-    opacity: 0.5;
-  }
-
-  .gux-file-list-item {
-    display: flex;
-    align-items: center;
-    block-size: 32px;
-    margin-block: 5px;
-    border: 1px solid grey;
-    border-radius: 5px;
-
-    .gux-file-name {
-      margin-inline: 10px;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  gap: var(--gse-ui-fileUpload-fileCard-cardGroup-gap);
+  inline-size: 100%;
 }

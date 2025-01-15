@@ -1,6 +1,6 @@
 <h1>gux-form-field-file-beta</h1>
 <form onchange="notify(event)" oninput="notify(event)">
-  <gux-form-field-file-beta drop-and-drag>
+  <gux-form-field-file-beta drag-and-drop>
     <label slot="label">Upload a profile picture</label>
 
     <input type="file" name="files[]" slot="input" multiple />
@@ -23,11 +23,11 @@
     type="button"
     onclick="(function () {
       Array.from(document.querySelectorAll('gux-form-field-file-beta')).forEach(component => {
-        component.toggleAttribute('drop-and-drag');
+        component.toggleAttribute('drag-and-drop');
       });
     })()"
   >
-    Toggle Drop and Drag
+    Toggle Drag and Drop
   </button>
 </gux-button-slot>
 
@@ -51,6 +51,21 @@
     type="button"
     onclick="(function () {
       Array.from(document.querySelectorAll('gux-form-field-file-beta')).forEach(component => {
+        const input = component.querySelector('input');
+
+        input.multiple = !input.multiple;
+      });
+    })()"
+  >
+    Toggle Multiple State
+  </button>
+</gux-button-slot>
+
+<gux-button-slot>
+  <button
+    type="button"
+    onclick="(function () {
+      Array.from(document.querySelectorAll('gux-form-field-file-beta')).forEach(component => {
         component.classList.toggle('narrow');
       });
     })()"
@@ -59,6 +74,45 @@
   </button>
 </gux-button-slot>
 
+<gux-form-field-file-beta drag-and-drop>
+  <label slot="label">Upload a profile picture</label>
+
+  <input type="file" name="files[]" slot="input" multiple />
+
+  <gux-label-info-beta slot="label-info">
+    <span slot="content">This is some <b>tooltip</b> text</span>
+  </gux-label-info-beta>
+
+  <span slot="help">
+    <div>Maximum file size is 25MB.</div>
+    <div>Supported file types are JPG and PNG.</div>
+  </span>
+  <span slot="error">This is an error message</span>
+
+  <gux-file-list-item
+    slot="file-0"
+    name="File 0"
+    index="0"
+  ></gux-file-list-item>
+  <gux-file-list-item
+    slot="file-1"
+    name="File 1"
+    index="1"
+    status="loading"
+  ></gux-file-list-item>
+  <gux-file-list-item
+    slot="file-2"
+    name="File 2"
+    index="2"
+    status="success"
+  ></gux-file-list-item>
+  <gux-file-list-item slot="file-3" name="File 3" index="3" status="error">
+    <div slot="additional-info-header">File exceeds size limit</div>
+    <div slot="additional-info-content">
+      Upload a file that has a max size of 1GB.
+    </div>
+  </gux-file-list-item>
+</gux-form-field-file-beta>
 <style>
   gux-form-field-file-beta {
     margin: 20px;
@@ -66,5 +120,12 @@
 
   .narrow {
     inline-size: 200px;
+  }
+
+  .gux-file-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gse-ui-fileUpload-fileCard-cardGroup-gap);
+    inline-size: 100%;
   }
 </style>

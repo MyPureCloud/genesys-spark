@@ -1,0 +1,6 @@
+{
+  "removeFile": "Remove {filename} file",
+  "uploadingFile": "Uploading {filename} file",
+  "success": "{filename} file uploaded successfully",
+  "error": "{filename} file has an error"
+}
