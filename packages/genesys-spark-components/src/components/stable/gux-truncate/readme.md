@@ -47,7 +47,7 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-dropdown](../gux-dropdown)
- - [gux-form-field-file-beta](../gux-form-field/components/gux-form-field-file-beta)
+ - [gux-file-list-item](../gux-form-field/components/gux-form-field-file-beta/components/gux-file-list-item)
  - [gux-notification-toast-legacy](../../legacy/gux-notification-toast-legacy)
  - [gux-option](../gux-listbox/options/gux-option)
  - [gux-option-icon](../gux-listbox/options/gux-option-icon)
@@ -67,7 +67,7 @@ Type: `Promise<void>`
 graph TD;
   gux-truncate --> gux-tooltip
   gux-dropdown --> gux-truncate
-  gux-form-field-file-beta --> gux-truncate
+  gux-file-list-item --> gux-truncate
   gux-notification-toast-legacy --> gux-truncate
   gux-option --> gux-truncate
   gux-option-icon --> gux-truncate

@@ -64,3 +64,20 @@ export function onRequiredChange(
 
   return observer;
 }
+
+export function onMultipleChange(
+  element: HTMLInputElement,
+  callback: (multiple: boolean) => void
+): MutationObserver {
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      if (mutation.attributeName === 'multiple') {
+        callback(element.multiple);
+      }
+    });
+  });
+
+  observer.observe(element, { attributes: true });
+
+  return observer;
+}

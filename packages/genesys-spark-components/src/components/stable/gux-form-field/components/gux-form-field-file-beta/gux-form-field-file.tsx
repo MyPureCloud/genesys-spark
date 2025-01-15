@@ -26,7 +26,8 @@ import { getSlottedInput, validateFormIds } from '../../gux-form-field.service';
 import { preventBrowserValidationStyling } from '@utils/dom/prevent-browser-validation-styling';
 import {
   onDisabledChange,
-  onRequiredChange
+  onRequiredChange,
+  onMultipleChange
 } from '@utils/dom/on-attribute-change';
 
 import componentResources from './i18n/en.json';
@@ -51,6 +52,7 @@ export class GuxFormFieldFileBeta {
   private labelInfo: HTMLGuxLabelInfoBetaElement;
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
+  private multipleObserver: MutationObserver;
   private hideLabelInfoTimeout: ReturnType<typeof setTimeout>;
 
   @Element()
@@ -65,7 +67,7 @@ export class GuxFormFieldFileBeta {
   indicatorMark: GuxFormFieldIndicatorMark = 'required';
 
   @Prop()
-  dropAndDrag: boolean = false;
+  dragAndDrop: boolean = false;
 
   @State()
   private disabled: boolean = false;
@@ -114,6 +116,12 @@ export class GuxFormFieldFileBeta {
     clearTimeout(this.hideLabelInfoTimeout);
   }
 
+  @Listen('guxremovefile')
+  onGuxRemoveFile(event: CustomEvent): void {
+    console.log('guxremovefile', event);
+    this.removeFile(event.detail);
+  }
+
   async componentWillLoad(): Promise<void> {
     this.getI18nValue = await buildI18nForComponent(
       this.root,
@@ -130,12 +138,9 @@ export class GuxFormFieldFileBeta {
   }
 
   disconnectedCallback(): void {
-    if (this.disabledObserver) {
-      this.disabledObserver.disconnect();
-    }
-    if (this.requiredObserver) {
-      this.requiredObserver.disconnect();
-    }
+    this.disabledObserver?.disconnect();
+    this.requiredObserver?.disconnect();
+    this.multipleObserver?.disconnect();
   }
 
   render(): JSX.Element {
@@ -189,8 +194,36 @@ export class GuxFormFieldFileBeta {
         this.required = required;
       }
     );
+    this.multipleObserver = onMultipleChange(this.input, () => {
+      forceUpdate(this.root);
+    });
 
     validateFormIds(this.root, this.input);
+  }
+
+  private getDropZoneText(): string {
+    if (this.input.multiple) {
+      return this.getI18nValue('dragAndDropFilesInstructions');
+    } else {
+      return this.getI18nValue('dragAndDropFileInstructions');
+    }
+  }
+
+  private getProxyButtonText(): string {
+    if (this.dragAndDrop) {
+      return this.getI18nValue('clickToUpload');
+    } else if (this.input.multiple) {
+      if (this.input.files.length > 0) {
+        return this.getI18nValue('changeFiles');
+      }
+
+      return this.getI18nValue('uploadFiles');
+    } else {
+      if (this.input.files.length > 0) {
+        return this.getI18nValue('changeFile');
+      }
+      return this.getI18nValue('uploadFile');
+    }
   }
 
   private removeFile(index: number): void {
@@ -271,45 +304,24 @@ export class GuxFormFieldFileBeta {
     this.dropContainer.classList.remove('gux-drag-over');
   }
 
-  private renderFileDismissButton(index: number): JSX.Element {
-    if (this.disabled) {
-      return null;
-    }
-
-    return (
-      <gux-dismiss-button
-        aria-hidden="true"
-        tabIndex={-1}
-        onClick={() => this.removeFile(index)}
-        position="inherit"
-      ></gux-dismiss-button>
-    ) as JSX.Element;
-  }
-
   private renderFileList(): JSX.Element {
-    const fileList = this.input.files || new DataTransfer().files;
-    const files = Array.from(fileList);
+    const files = Array.from(this.input.files || new DataTransfer().files);
 
     if (files.length === 0) {
       return null;
     }
 
     return (
-      <div
-        class={{
-          'gux-file-list': true,
-          'gux-disabled': this.disabled
-        }}
-      >
+      <div class="gux-file-list">
         {files.map((file, index) => {
           return (
-            <div class="gux-file-list-item">
-              <gux-truncate>
-                <span class="gux-file-name">{file.name}</span>
-              </gux-truncate>
-
-              {this.renderFileDismissButton(index)}
-            </div>
+            <slot name={`file-${index}`}>
+              <gux-file-list-item
+                name={file.name}
+                index={index}
+                disabled={this.disabled}
+              ></gux-file-list-item>
+            </slot>
           ) as JSX.Element;
         })}
       </div>
@@ -322,7 +334,7 @@ export class GuxFormFieldFileBeta {
         ref={el => (this.dropContainer = el)}
         class={{
           'gux-drop-container': true,
-          'gux-drop-zone': this.dropAndDrag,
+          'gux-drop-zone': this.dragAndDrop,
           'gux-disabled': this.disabled
         }}
         onDrop={event => this.onDrop(event)}
@@ -330,10 +342,8 @@ export class GuxFormFieldFileBeta {
         onDragEnter={event => this.onDragEnter(event)}
         onDragLeave={event => this.onDragLeave(event)}
       >
-        {this.dropAndDrag && (
-          <div class="gux-drag-and-drop-text">
-            {this.getI18nValue('dragAndDropInstructions')}
-          </div>
+        {this.dragAndDrop && (
+          <div class="gux-drag-and-drop-text">{this.getDropZoneText()}</div>
         )}
 
         <div class="gux-proxy-button">
@@ -344,7 +354,7 @@ export class GuxFormFieldFileBeta {
               disabled={this.disabled}
               onClick={e => this.onProxyFileButtonClick(e)}
             >
-              <div>{this.getI18nValue('clickToUpload')}</div>
+              <div>{this.getProxyButtonText()}</div>
             </button>
           </gux-button-slot>
 
