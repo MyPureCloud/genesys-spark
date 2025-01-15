@@ -7,7 +7,7 @@
 | ✅ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) | - |
 | ✅ | [2.1.2 No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) | - |
 | ✅ | [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) | - |
-| ❌ | [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) | Focus ring is not visible when opening the dropdown initially but it is activated when arrow kets are pressed. |
+| ❌ | [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) | [COMUI-3412](https://inindca.atlassian.net/browse/COMUI-3412): Focus ring is not visible when opening the dropdown initially but it is activated when arrow kets are pressed. |
 | ✅ | [2.4.11 Focus Not Obscured](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum) | - |
 | ✅ | [2.5.3 Label in Name](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html#dfn-name) | - |
 | ✅ | [2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements) | - |
