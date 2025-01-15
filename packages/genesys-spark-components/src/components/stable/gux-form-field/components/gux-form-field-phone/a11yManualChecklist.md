@@ -8,7 +8,7 @@
 | ✅ | [2.1.2 No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) | - |
 | ✅ | [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) | - |
 | ✅ | [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) | - |
-| ❌ | [2.4.11 Focus Not Obscured](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum) | When the dropdown is focused, focus ring is still visible on the input itself obscuring the dropdown focus ring |
+| ❌ | [2.4.11 Focus Not Obscured](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum) | [COMUI-3415](https://inindca.atlassian.net/browse/COMUI-3415): When the dropdown is focused, focus ring is still visible on the input itself obscuring the dropdown focus ring |
 | ✅ | [2.5.3 Label in Name](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html#dfn-name) | - |
 | ✅ | [2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements) | - |
 | ✅ | [3.2.1 On Focus](https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html) | - |
