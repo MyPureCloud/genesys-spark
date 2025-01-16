@@ -202,6 +202,10 @@
         "header": {
           "value": "{theme.background.container.primary.30d}",
           "type": "color"
+        },
+        "active_subtle": {
+          "value": "{theme.background.container.primary.60d}",
+          "type": "color"
         }
       },
       "high_constrast": {

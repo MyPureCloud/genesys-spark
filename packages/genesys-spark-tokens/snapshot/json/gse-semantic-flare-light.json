@@ -59,7 +59,8 @@
         "hover": "#eff3ff",
         "active": "#adbff0",
         "error": "#f3a7b5",
-        "header": "#f5f6fa"
+        "header": "#f5f6fa",
+        "active_subtle": "#d5def7"
       },
       "high_constrast": {
         "default": "#2a2a2e",

@@ -203,6 +203,10 @@
           "value": "{theme.background.container.primary.20}",
           "type": "color",
           "description": "The background color for the header section of elevated surfaces, such as widgets, gadgets or cards."
+        },
+        "active_subtle": {
+          "value": "{theme.background.container.primary.50}",
+          "type": "color"
         }
       },
       "high_constrast": {
