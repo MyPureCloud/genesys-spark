@@ -18,6 +18,7 @@ import {
   shift,
   hide
 } from '@floating-ui/dom';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { trackComponent } from '@utils/tracking/usage';
@@ -76,6 +77,8 @@ export class GuxPopoverList {
   @Event()
   guxdismiss: EventEmitter<void>;
 
+  private listElement: HTMLGuxListElement;
+
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
@@ -98,12 +101,6 @@ export class GuxPopoverList {
       !clickedForElement
     ) {
       this.dismiss();
-    }
-
-    if (clickedForElement) {
-      this.popupElement.togglePopover();
-      this.isOpen = !this.isOpen;
-      this.runUpdatePosition();
     }
   }
 
@@ -192,8 +189,32 @@ export class GuxPopoverList {
     }
   }
 
+  private focusFirstItemInPopupList(): void {
+    afterNextRenderTimeout(() => {
+      void this.listElement.guxFocusFirstItem();
+    });
+  }
+
   connectedCallback(): void {
     trackComponent(this.root, { variant: this.position });
+    this.listElement = this.root.querySelector('gux-list');
+    const forElement = findElementById(this.root, this.for);
+
+    forElement.addEventListener('keydown', (event: KeyboardEvent) => {
+      this.popupElement.togglePopover();
+      this.isOpen = !this.isOpen;
+      this.runUpdatePosition();
+
+      if ((this.isOpen && event.key == 'Enter') || event.key == ' ') {
+        this.focusFirstItemInPopupList();
+      }
+    });
+
+    forElement.addEventListener('mouseup', () => {
+      this.popupElement.togglePopover();
+      this.isOpen = !this.isOpen;
+      this.runUpdatePosition();
+    });
   }
 
   componentDidLoad(): void {
