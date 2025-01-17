@@ -99,7 +99,7 @@ body {
 
   .title {
     padding: 5px 0;
-    margin: 0 0 10px -7px;
+    margin: 0 0 0 -7px;
     font-size: 14px;
     border-bottom: $soft-border;
   }
@@ -110,7 +110,10 @@ body {
     border-bottom: $border;
 
     .attribute-group {
-      padding-bottom: 5px;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 10px;
+      padding-bottom: 10px;
     }
   }
 
@@ -126,33 +129,6 @@ body {
           font-weight: 800;
         }
       }
-    }
-  }
-
-  .attribute-group label {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 7px;
-    cursor: pointer;
-
-    span {
-      flex-grow: 0;
-      min-width: 100px;
-    }
-
-    select,
-    textarea,
-    input:not([type='checkbox']) {
-      flex-grow: 1;
-      padding: 7px 10px;
-      border: $border;
-      border-radius: 5px;
-    }
-
-    select,
-    input[type='checkbox'] {
-      cursor: pointer;
     }
   }
 }
