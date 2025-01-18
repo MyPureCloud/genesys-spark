@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.111.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.2...v4.111.3) (2025-01-18)
+
+
+### Bug Fixes
+
+* **popover-list-beta:** Focus first list item on popover show ([06302f9](https://github.com/MyPureCloud/genesys-spark/commit/06302f91473487daecba1e8e4329cbc0f44b3e0f))
+
 ### [4.111.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.1...v4.111.2) (2025-01-17)
 
 ### [4.111.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.0...v4.111.1) (2025-01-16)
