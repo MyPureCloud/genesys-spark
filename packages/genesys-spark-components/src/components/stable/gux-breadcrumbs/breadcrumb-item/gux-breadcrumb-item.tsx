@@ -1,6 +1,7 @@
-import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
+import { Component, Element, h, JSX, Prop } from '@stencil/core';
 
 import { logError } from '@utils/error/log-error';
+import { Aria } from '@utils/decorator/aria';
 
 import { GuxBreadcrumbAccent } from '../gux-breadcrumbs.types';
 
@@ -15,6 +16,9 @@ import { GuxBreadcrumbAccent } from '../gux-breadcrumbs.types';
 })
 export class GuxBreadcrumbItem {
   @Element()
+  @Aria({
+    role: 'listitem'
+  })
   private root: HTMLElement;
 
   @Prop()
@@ -85,12 +89,10 @@ export class GuxBreadcrumbItem {
     const accent: GuxBreadcrumbAccent = this.getAccent();
 
     return (
-      <Host role="listitem">
-        <span class={`gux-breadcrumb-generation gux-${accent}`}>
-          {this.getBreadcrumb(accent)}
-          {this.getSeparatorIcon()}
-        </span>
-      </Host>
+      <span class={`gux-breadcrumb-generation gux-${accent}`}>
+        {this.getBreadcrumb(accent)}
+        {this.getSeparatorIcon()}
+      </span>
     ) as JSX.Element;
   }
 }
