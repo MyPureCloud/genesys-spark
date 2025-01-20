@@ -11,6 +11,7 @@ import {
 import { GuxTableToolbarLayout } from './gux-table-toolbar.types';
 import { OnResize } from '@utils/decorator/on-resize';
 import { OnMutation } from '@utils/decorator/on-mutation';
+import { Aria } from '@utils/decorator/aria';
 import { trackComponent } from '@utils/tracking/usage';
 import { setAccent, setActionsIconOnlyProp } from './gux-table-toolbar.service';
 import { getSlot } from '@utils/dom/get-slot';
@@ -32,6 +33,10 @@ import { logWarn } from '@utils/error/log-error';
 })
 export class GuxTableToolbar {
   @Element()
+  @Aria({
+    role: 'toolbar',
+    ariaOrientation: 'horizontal'
+  })
   root: HTMLElement;
 
   @State()
@@ -277,11 +282,7 @@ export class GuxTableToolbar {
 
   render(): JSX.Element {
     return (
-      <Host
-        role="toolbar"
-        aria-orientation="horizontal"
-        gs-layout={this.displayedLayout}
-      >
+      <Host gs-layout={this.displayedLayout}>
         <div class="search-filter-container">
           <slot name="search-and-filter"></slot>
         </div>
