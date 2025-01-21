@@ -349,6 +349,7 @@ export class GuxMonthPicker {
         <gux-icon
           icon-name="fa/calendar-regular"
           screenreader-text={this.i18n('toggleCalendar')}
+          size="small"
         ></gux-icon>
       </button>
     ) as JSX.Element;

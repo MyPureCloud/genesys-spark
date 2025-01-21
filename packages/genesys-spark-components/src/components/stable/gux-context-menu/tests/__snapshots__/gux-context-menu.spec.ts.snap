@@ -7,7 +7,7 @@ exports[`gux-context-menu renders 1`] = `
       <div class="gux-button-container" slot="target">
         <gux-button-slot accent="ghost">
           <button aria-expanded="false" aria-haspopup="true" id="gux-i" type="button">
-            <gux-icon icon-name="fa/ellipsis-vertical-regular" screenreader-text="Context menu"></gux-icon>
+            <gux-icon icon-name="fa/ellipsis-vertical-regular" screenreader-text="Context menu" size="small"></gux-icon>
           </button>
         </gux-button-slot>
       </div>

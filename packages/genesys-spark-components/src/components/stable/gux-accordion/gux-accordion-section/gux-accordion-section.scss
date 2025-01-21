@@ -114,11 +114,6 @@ section.gux-disabled {
     transition: transform 0.5s ease;
     transform-origin: center;
 
-    gux-icon {
-      inline-size: var(--gse-ui-accordion-header-chevronIcon);
-      block-size: var(--gse-ui-accordion-header-chevronIcon);
-    }
-
     &.gux-arrow-position-start {
       order: -1;
       margin-inline-end: var(--gse-ui-accordion-header-gap);

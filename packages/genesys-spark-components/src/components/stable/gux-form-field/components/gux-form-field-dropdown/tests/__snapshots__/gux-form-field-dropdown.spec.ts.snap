@@ -41,7 +41,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -152,7 +152,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -265,7 +265,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -376,7 +376,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -484,7 +484,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -592,7 +592,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -700,7 +700,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -808,7 +808,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -916,7 +916,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -1024,7 +1024,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -1132,7 +1132,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -1240,7 +1240,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -1348,7 +1348,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -1456,7 +1456,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi label-info 
                   Select...
                 </div>
               </div>
-              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+              <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
           <div class="gux-listbox-container" slot="popup">
@@ -1568,7 +1568,7 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
         <slot slot="popup"></slot>
@@ -1662,7 +1662,7 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
         <slot slot="popup"></slot>
@@ -1756,7 +1756,7 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
         <slot slot="popup"></slot>
@@ -1850,7 +1850,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
         <slot slot="popup"></slot>
@@ -1944,7 +1944,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
         <slot slot="popup"></slot>
@@ -2038,7 +2038,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
         <slot slot="popup"></slot>
@@ -2132,7 +2132,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
         <slot slot="popup"></slot>
@@ -2226,7 +2226,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
         <slot slot="popup"></slot>
@@ -2320,7 +2320,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
         <slot slot="popup"></slot>
@@ -2414,7 +2414,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
                 Select...
               </div>
             </div>
-            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
         <slot slot="popup"></slot>
