@@ -18,6 +18,7 @@
 
  - [gux-avatar-beta](../gux-avatar)
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
+ - [gux-inline-alert](../../stable/gux-inline-alert)
  - [gux-label-info-beta](../gux-label-info)
 
 ### Graph
@@ -25,6 +26,7 @@
 graph TD;
   gux-avatar-beta --> gux-screen-reader-beta
   gux-icon-tooltip-beta --> gux-screen-reader-beta
+  gux-inline-alert --> gux-screen-reader-beta
   gux-label-info-beta --> gux-screen-reader-beta
   style gux-screen-reader-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
