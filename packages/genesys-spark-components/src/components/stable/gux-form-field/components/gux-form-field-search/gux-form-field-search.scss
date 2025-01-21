@@ -81,12 +81,10 @@
         opacity: var(--gse-ui-formControl-input-disabled-opacity);
       }
 
-      gux-icon[icon-name='search'] {
+      gux-icon[icon-name='fa/magnifying-glass-regular'] {
         flex: 0 0 auto;
         align-self: auto;
         order: 0;
-        inline-size: var(--gse-ui-formControl-input-inputIcon-size);
-        block-size: var(--gse-ui-formControl-input-inputIcon-size);
         color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
       }
 

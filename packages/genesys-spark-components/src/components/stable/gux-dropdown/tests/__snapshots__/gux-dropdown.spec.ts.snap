@@ -330,7 +330,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
       </template>
       <gux-option-icon aria-disabled="false" aria-selected="false" class="gux-show-subtext" icon-color="var(--gux-blue-60)" icon-name="user" id="gux-option-icon-i" role="option" value="leonardo">
         <template shadowrootmode="open">
-          <gux-icon decorative="" icon-name="user" style="color: var(--gux-blue-60);"></gux-icon>
+          <gux-icon decorative="" icon-name="user" size="small" style="color: var(--gux-blue-60);"></gux-icon>
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
@@ -345,7 +345,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
       </gux-option-icon>
       <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#8452cf" icon-name="user" id="gux-option-icon-i" role="option" value="donatello">
         <template shadowrootmode="open">
-          <gux-icon decorative="" icon-name="user" style="color: #8452cf;"></gux-icon>
+          <gux-icon decorative="" icon-name="user" size="small" style="color: #8452cf;"></gux-icon>
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
@@ -370,7 +370,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
       </template>
       <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="rgb(234, 11, 11)" icon-name="user" id="gux-option-icon-i" role="option" value="raphael">
         <template shadowrootmode="open">
-          <gux-icon decorative="" icon-name="user" style="color: rgb(234, 11, 11);"></gux-icon>
+          <gux-icon decorative="" icon-name="user" size="small" style="color: rgb(234, 11, 11);"></gux-icon>
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
@@ -382,7 +382,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
       </gux-option-icon>
       <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#e08915" icon-name="user" icon-sr-text="Screenreader information about the icon goes here, if needed" id="gux-option-icon-i" role="option" value="michelangelo">
         <template shadowrootmode="open">
-          <gux-icon icon-name="user" screenreader-text="Screenreader information about the icon goes here, if needed" style="color: #e08915;"></gux-icon>
+          <gux-icon icon-name="user" screenreader-text="Screenreader information about the icon goes here, if needed" size="small" style="color: #e08915;"></gux-icon>
           <div class="gux-option-wrapper">
             <gux-truncate>
               <slot></slot>
@@ -420,7 +420,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-icon 1`]
     </template>
     <gux-option-icon aria-disabled="false" aria-selected="false" class="gux-show-subtext" icon-color="var(--gux-blue-60)" icon-name="user" id="gux-option-icon-i" role="option" value="leonardo">
       <template shadowrootmode="open">
-        <gux-icon decorative="" icon-name="user" style="color: var(--gux-blue-60);"></gux-icon>
+        <gux-icon decorative="" icon-name="user" size="small" style="color: var(--gux-blue-60);"></gux-icon>
         <div class="gux-option-wrapper">
           <gux-truncate>
             <slot></slot>
@@ -435,7 +435,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-icon 1`]
     </gux-option-icon>
     <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#8452cf" icon-name="user" id="gux-option-icon-i" role="option" value="donatello">
       <template shadowrootmode="open">
-        <gux-icon decorative="" icon-name="user" style="color: #8452cf;"></gux-icon>
+        <gux-icon decorative="" icon-name="user" size="small" style="color: #8452cf;"></gux-icon>
         <div class="gux-option-wrapper">
           <gux-truncate>
             <slot></slot>
@@ -447,7 +447,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-icon 1`]
     </gux-option-icon>
     <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="rgb(234, 11, 11)" icon-name="user" id="gux-option-icon-i" role="option" value="raphael">
       <template shadowrootmode="open">
-        <gux-icon decorative="" icon-name="user" style="color: rgb(234, 11, 11);"></gux-icon>
+        <gux-icon decorative="" icon-name="user" size="small" style="color: rgb(234, 11, 11);"></gux-icon>
         <div class="gux-option-wrapper">
           <gux-truncate>
             <slot></slot>
@@ -459,7 +459,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-icon 1`]
     </gux-option-icon>
     <gux-option-icon aria-disabled="false" aria-selected="false" icon-color="#e08915" icon-name="user" icon-sr-text="Screenreader information about the icon goes here, if needed" id="gux-option-icon-i" role="option" value="michelangelo">
       <template shadowrootmode="open">
-        <gux-icon icon-name="user" screenreader-text="Screenreader information about the icon goes here, if needed" style="color: #e08915;"></gux-icon>
+        <gux-icon icon-name="user" screenreader-text="Screenreader information about the icon goes here, if needed" size="small" style="color: #e08915;"></gux-icon>
         <div class="gux-option-wrapper">
           <gux-truncate>
             <slot></slot>

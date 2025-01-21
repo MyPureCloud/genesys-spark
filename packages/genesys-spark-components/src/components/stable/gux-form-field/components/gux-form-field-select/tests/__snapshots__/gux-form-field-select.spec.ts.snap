@@ -13,11 +13,11 @@ exports[`gux-form-field-select #render error should render component as expected
         <div class="gux-input gux-input-error">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error gux-show">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -63,11 +63,11 @@ exports[`gux-form-field-select #render help should render component as expected 
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -113,11 +113,11 @@ exports[`gux-form-field-select #render indicator marks should render component a
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -160,11 +160,11 @@ exports[`gux-form-field-select #render indicator marks should render component a
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -207,11 +207,11 @@ exports[`gux-form-field-select #render indicator marks should render component a
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -254,11 +254,11 @@ exports[`gux-form-field-select #render input attributes should render component 
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -301,11 +301,11 @@ exports[`gux-form-field-select #render input attributes should render component 
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -348,11 +348,11 @@ exports[`gux-form-field-select #render input attributes should render component 
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -395,11 +395,11 @@ exports[`gux-form-field-select #render label-info should render component as exp
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -447,11 +447,11 @@ exports[`gux-form-field-select #render label-position should render component as
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -494,11 +494,11 @@ exports[`gux-form-field-select #render label-position should render component as
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -541,11 +541,11 @@ exports[`gux-form-field-select #render label-position should render component as
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -588,11 +588,11 @@ exports[`gux-form-field-select #render label-position should render component as
         <div class="gux-input">
           <div class="gux-input-container">
             <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>

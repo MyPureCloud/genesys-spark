@@ -123,6 +123,7 @@ export class GuxOptionIcon {
         screenreader-text={this.iconSrText}
         icon-name={this.iconName}
         style={iconStyle}
+        size="small"
       ></gux-icon>
     ) as JSX.Element;
   }

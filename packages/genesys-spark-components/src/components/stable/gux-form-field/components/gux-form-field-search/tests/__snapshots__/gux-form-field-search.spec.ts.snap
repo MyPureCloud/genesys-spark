@@ -12,12 +12,12 @@ exports[`gux-form-field-search #render error should render component as expected
       <div class="gux-input-and-error-container">
         <div class="gux-input gux-input-error">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
           </div>
         </div>
         <div class="gux-form-field-error gux-show">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -52,12 +52,12 @@ exports[`gux-form-field-search #render help should render component as expected 
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -92,13 +92,13 @@ exports[`gux-form-field-search #render indicator marks should render component a
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -130,13 +130,13 @@ exports[`gux-form-field-search #render indicator marks should render component a
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -168,13 +168,13 @@ exports[`gux-form-field-search #render indicator marks should render component a
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -206,13 +206,13 @@ exports[`gux-form-field-search #render input attributes should render component 
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -244,12 +244,12 @@ exports[`gux-form-field-search #render input attributes should render component 
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-disabled gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -281,13 +281,13 @@ exports[`gux-form-field-search #render input attributes should render component 
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -319,12 +319,12 @@ exports[`gux-form-field-search #render label-info should render component as exp
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -361,13 +361,13 @@ exports[`gux-form-field-search #render label-position should render component as
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -399,13 +399,13 @@ exports[`gux-form-field-search #render label-position should render component as
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -437,13 +437,13 @@ exports[`gux-form-field-search #render label-position should render component as
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -475,13 +475,13 @@ exports[`gux-form-field-search #render label-position should render component as
       <div class="gux-input-and-error-container">
         <div class="gux-input">
           <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular"></gux-icon>
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
             <slot name="input"></slot>
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>

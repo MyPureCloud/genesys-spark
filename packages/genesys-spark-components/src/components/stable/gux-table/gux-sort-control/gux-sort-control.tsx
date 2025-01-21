@@ -179,6 +179,7 @@ export class GuxSortControl {
               'gux-sort-icon': true,
               'gux-left': this.isLeftAlignIcon
             }}
+            size="small"
             icon-name={this.getIconName(this.sort)}
             decorative
           ></gux-icon>

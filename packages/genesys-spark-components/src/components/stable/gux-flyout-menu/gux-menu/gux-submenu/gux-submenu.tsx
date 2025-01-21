@@ -233,6 +233,7 @@ export class GuxSubmenu {
             class="gux-submenu-open-icon"
             icon-name="custom/chevron-right-small-regular"
             decorative
+            size="small"
           ></gux-icon>
         </button>
         <div

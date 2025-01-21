@@ -19,7 +19,7 @@ exports[`gux-form-field-phone #render error should render component as expected 
           </div>
         </div>
         <div class="gux-form-field-error gux-show">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -61,7 +61,7 @@ exports[`gux-form-field-phone #render help should render component as expected 1
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -103,7 +103,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -142,7 +142,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -181,7 +181,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -220,7 +220,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -259,7 +259,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -298,7 +298,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
@@ -337,7 +337,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
           </div>
         </div>
         <div class="gux-form-field-error">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
           </div>
