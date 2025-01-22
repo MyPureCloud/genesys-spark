@@ -286,6 +286,7 @@ export class GuxFormFieldNumber {
       <div class="gux-step-buttons-container">
         <button
           class="gux-step-button"
+          tabIndex={-1}
           type="button"
           title={getI18nValue('increment')}
           disabled={disabled}
@@ -299,6 +300,7 @@ export class GuxFormFieldNumber {
 
         <button
           class="gux-step-button"
+          tabIndex={-1}
           type="button"
           title={getI18nValue('decrement')}
           disabled={disabled}
