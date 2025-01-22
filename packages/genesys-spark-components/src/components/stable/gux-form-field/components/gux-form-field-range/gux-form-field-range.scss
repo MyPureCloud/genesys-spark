@@ -84,8 +84,7 @@ $thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-height) / 2);
     gap: var(--gse-ui-rangeSlider-gap);
     place-content: stretch flex-start;
     align-items: center;
-    // We will not use a token for this height style below
-    block-size: 32px;
+    block-size: var(--gse-ui-rangeSlider-set-height);
     font-size: var(--gse-ui-rangeSlider-label-text-fontSize);
 
     &.gux-disabled {
@@ -139,4 +138,8 @@ $thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-height) / 2);
       }
     }
   }
+}
+
+.gux-form-field-label.gux-beside {
+  inset-block-start: 0;
 }
