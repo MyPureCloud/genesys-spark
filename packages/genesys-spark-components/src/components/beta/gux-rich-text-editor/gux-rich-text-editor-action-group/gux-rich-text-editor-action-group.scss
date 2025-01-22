@@ -3,6 +3,16 @@
   flex-direction: row;
 }
 
+:host(.gux-hidden) {
+  .gux-divider {
+    display: none;
+  }
+
+  ::slotted(:not(gux-rich-text-editor-action-link)) {
+    display: none;
+  }
+}
+
 .gux-action-group-container {
   display: flex;
   flex-direction: row;

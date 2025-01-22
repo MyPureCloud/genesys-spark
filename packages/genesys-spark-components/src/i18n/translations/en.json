@@ -484,7 +484,8 @@
     "raspberry": "Raspberry",
     "blue": "Azure Blue",
     "mineral": "Mineral",
-    "island": "Island"
+    "island": "Island",
+    "additionalActions": "Additional Actions"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"

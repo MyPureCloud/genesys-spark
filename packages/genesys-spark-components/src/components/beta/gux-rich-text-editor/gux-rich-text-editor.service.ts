@@ -42,3 +42,64 @@ export function returnActionTypeIcon(
       return 'fa/bold-regular';
   }
 }
+
+/**
+ * Extracts an attribute from a action and adds it to the actions array.
+ */
+function addAction(actions: string[], element: Element, attribute: string) {
+  const value = (element as HTMLElement).getAttribute(attribute);
+  if (value) {
+    actions.push(value);
+  }
+}
+
+/**
+ * This function is used for lists eg rich-style and highlight.
+ * Extracts a list of values from child elements and adds them to the actions array with a prefix. eg(rich-style and highlight).
+ */
+function addListActions(
+  actions: string[],
+  parent: Element,
+  selector: string,
+  prefix: string,
+  attribute: string = ''
+) {
+  Array.from(parent.querySelectorAll(selector)).forEach(item => {
+    const value = attribute
+      ? (item as HTMLElement).getAttribute(attribute)
+      : (item as HTMLElement).innerHTML;
+    if (value) {
+      actions.push(`${prefix}-${value}`);
+    }
+  });
+}
+
+export function getActionsFromGroup(
+  root: HTMLElement,
+  selector: string,
+  hiddenClass: string
+): string[] {
+  const actionGroup = root.querySelector(selector);
+  if (!actionGroup || !actionGroup.classList.contains(hiddenClass)) {
+    return [];
+  }
+
+  return Array.from(actionGroup.children).reduce<string[]>((actions, child) => {
+    const tagName = child.tagName;
+
+    if (tagName === 'GUX-RICH-TEXT-EDITOR-ACTION') {
+      addAction(actions, child, 'action');
+    } else if (tagName === 'GUX-RICH-TEXT-EDITOR-ACTION-RICH-STYLE') {
+      addListActions(actions, child, 'gux-rich-style-list-item', 'rich-style');
+    } else if (tagName === 'GUX-RICH-TEXT-EDITOR-ACTION-TEXT-HIGHLIGHT') {
+      addListActions(
+        actions,
+        child,
+        'gux-rich-highlight-list-item',
+        'highlight',
+        'highlight'
+      );
+    }
+    return actions;
+  }, []);
+}

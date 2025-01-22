@@ -46,6 +46,7 @@
  - [gux-phone-input-beta](../../beta/gux-phone-input)
  - [gux-rich-text-editor-action-rich-style](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
  - [gux-rich-text-editor-action-text-highlight](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-text-highlight)
+ - [gux-rich-text-editor-menu](../../beta/gux-rich-text-editor/gux-rich-text-editor-menu)
  - [gux-table-toolbar-menu-button](../gux-table-toolbar/gux-table-toolbar-menu-button)
  - [gux-time-picker](../gux-time-picker)
 
@@ -62,6 +63,7 @@ graph TD;
   gux-phone-input-beta --> gux-popup
   gux-rich-text-editor-action-rich-style --> gux-popup
   gux-rich-text-editor-action-text-highlight --> gux-popup
+  gux-rich-text-editor-menu --> gux-popup
   gux-table-toolbar-menu-button --> gux-popup
   gux-time-picker --> gux-popup
   style gux-popup fill:#f9f,stroke:#333,stroke-width:4px
