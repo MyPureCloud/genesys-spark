@@ -83,6 +83,11 @@ export function validateFormIds(
     error.setAttribute('id', errorId);
     describedByIds.push(errorId);
 
+    if (input instanceof HTMLInputElement) {
+      input.setAttribute('aria-invalid', 'true');
+      input.setAttribute('aria-errormessage', errorId);
+    }
+
     if (describedByIds) {
       input.setAttribute('aria-describedby', describedByIds.join(' '));
     }

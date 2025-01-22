@@ -61,9 +61,38 @@ describe('gux-form-field-checkbox', () => {
     `
     ].forEach((html, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
+        const page = await newSpecPage({
+          components,
+          html,
+          language
+        });
+
+        // wait for change inside component
+        await page.waitForChanges();
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
+    describe('when the component has an error slot', () => {
+      it('should apply aria invalid and errormessage', async () => {
+        const html = `
+          <gux-form-field-checkbox>
+            <input slot="input" type="checkbox" name="food-1[]" value="pizza"/>
+            <label slot="label">Pizza</label>
+            <span slot="error">This is an error message</span>
+          </gux-form-field-checkbox>
+        `;
         const page = await newSpecPage({ components, html, language });
 
-        expect(page.root).toMatchSnapshot();
+        await page.waitForChanges();
+
+        expect(
+          page.root.querySelector('input').getAttribute('aria-invalid')
+        ).toBe('true');
+
+        expect(
+          page.root.querySelector('input').getAttribute('aria-errormessage')
+        ).toBeDefined();
       });
     });
   });
