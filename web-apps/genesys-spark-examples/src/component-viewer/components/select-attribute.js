@@ -26,7 +26,7 @@ export const selectAttribute = (
   });
 
   const element = toHTML(`
-    <gux-form-field-select>
+    <gux-form-field-select label-position="above">
       <select slot="input" name="select">
         ${options.map(
           o => `

@@ -6,7 +6,7 @@ export const textAttribute = (name, astNode, parent, renderCallback) => {
   const value = matchingAttr ? matchingAttr.value : '';
 
   const element = toHTML(`
-    <gux-form-field-text-like>
+    <gux-form-field-text-like label-position="above">
       <input slot="input" type="text" value="${value}" />
       <label slot="label">${name}:</label>
     </gux-form-field-text-like>`);
