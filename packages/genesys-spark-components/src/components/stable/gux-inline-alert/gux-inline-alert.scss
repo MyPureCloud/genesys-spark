@@ -1,5 +1,3 @@
-@use '~genesys-spark/dist/scss/mixins.scss';
-
 :host {
   display: flex;
   inline-size: fit-content;
@@ -39,10 +37,6 @@
 
   .gux-content {
     flex: 1 1 auto;
-  }
-
-  .gux-sr-only {
-    @include mixins.gux-sr-only-clip;
   }
 
   &.gux-info {

@@ -6,9 +6,9 @@ exports[`gux-inline-alert #render should render component as expected (1) 1`] = 
     <div class="gux-info gux-inline-alert">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/circle-info-solid"></gux-icon>
-        <div class="gux-sr-only">
+        <gux-screen-reader-beta>
           Information alert with message
-        </div>
+        </gux-screen-reader-beta>
         <div class="gux-content">
           <slot name="content">
             <slot></slot>
@@ -29,9 +29,9 @@ exports[`gux-inline-alert #render should render component as expected (2) 1`] = 
     <div class="gux-inline-alert gux-success">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/circle-check-solid"></gux-icon>
-        <div class="gux-sr-only">
+        <gux-screen-reader-beta>
           Success alert with message
-        </div>
+        </gux-screen-reader-beta>
         <div class="gux-content">
           <slot name="content">
             <slot></slot>
@@ -52,9 +52,9 @@ exports[`gux-inline-alert #render should render component as expected (3) 1`] = 
     <div class="gux-inline-alert gux-warning">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/triangle-exclamation-solid"></gux-icon>
-        <div class="gux-sr-only">
+        <gux-screen-reader-beta>
           Warning alert with message
-        </div>
+        </gux-screen-reader-beta>
         <div class="gux-content">
           <slot name="content">
             <slot></slot>
@@ -75,9 +75,9 @@ exports[`gux-inline-alert #render should render component as expected (4) 1`] = 
     <div class="gux-error gux-inline-alert">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
-        <div class="gux-sr-only">
+        <gux-screen-reader-beta>
           Error alert with message
-        </div>
+        </gux-screen-reader-beta>
         <div class="gux-content">
           <slot name="content">
             <slot></slot>
