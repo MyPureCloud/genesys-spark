@@ -35,7 +35,7 @@
 $range-active: var(--gse-ui-rangeSlider-bar-selected-backgroundColor);
 $track-width: 100%;
 $track-height: var(--gse-ui-rangeSlider-bar-height);
-$thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-width) / 2);
+$thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-height) / 2);
 
 @mixin gux-track {
   inline-size: $track-width;
@@ -45,8 +45,8 @@ $thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-width) / 2);
 
 @mixin gux-thumb {
   display: block;
-  inline-size: var($gse-ui-slider-handle-width);
-  block-size: var($gse-ui-slider-handle-height);
+  inline-size: var(--gse-ui-rangeSlider-handle-width);
+  block-size: var(--gse-ui-rangeSlider-handle-height);
   cursor: pointer;
   border-radius: var(--gse-ui-rangeSlider-handle-borderRadius);
 }
@@ -61,7 +61,6 @@ $thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-width) / 2);
 
 ::slotted(input[type='range']) {
   position: absolute;
-  inline-size: 100%;
   inline-size: $track-width;
   block-size: $track-height;
   margin-block: $thumb-diameter;
@@ -85,8 +84,7 @@ $thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-width) / 2);
     gap: var(--gse-ui-rangeSlider-gap);
     place-content: stretch flex-start;
     align-items: center;
-    // We will not use a token for this height style below
-    block-size: 32px;
+    block-size: var(--gse-ui-rangeSlider-set-height);
     font-size: var(--gse-ui-rangeSlider-label-text-fontSize);
 
     &.gux-disabled {
@@ -140,4 +138,8 @@ $thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-width) / 2);
       }
     }
   }
+}
+
+.gux-form-field-label.gux-beside {
+  inset-block-start: 0;
 }
