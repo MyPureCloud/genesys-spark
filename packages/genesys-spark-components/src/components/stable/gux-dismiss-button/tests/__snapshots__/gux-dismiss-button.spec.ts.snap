@@ -6,7 +6,7 @@ exports[`gux-dismiss-button #render should render component as expected (1) 1`] 
     <gux-button-slot accent="ghost">
       <button title="Dismiss" type="button">
         <div class="gux-icon-container">
-          <gux-icon decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/xmark-large-regular" size="small"></gux-icon>
         </div>
       </button>
     </gux-button-slot>

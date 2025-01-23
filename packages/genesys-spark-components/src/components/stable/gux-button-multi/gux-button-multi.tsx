@@ -184,6 +184,7 @@ export class GuxButtonMulti {
             >
               <slot name="title" />
               <gux-icon
+                size="small"
                 decorative
                 icon-name="custom/chevron-down-small-regular"
               ></gux-icon>

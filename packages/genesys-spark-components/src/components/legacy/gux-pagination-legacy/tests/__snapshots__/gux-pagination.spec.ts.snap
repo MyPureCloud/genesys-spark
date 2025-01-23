@@ -30,7 +30,7 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>
@@ -174,7 +174,7 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>
@@ -318,7 +318,7 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>
@@ -462,7 +462,7 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>
@@ -606,7 +606,7 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>
@@ -750,7 +750,7 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>
@@ -894,7 +894,7 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>
@@ -1038,7 +1038,7 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>
@@ -1182,7 +1182,7 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>
@@ -1378,7 +1378,7 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>
@@ -1522,7 +1522,7 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>
@@ -1666,7 +1666,7 @@ exports[`gux-pagination-legacy #render should render current page as 1 when tota
                             </gux-truncate>
                           </div>
                         </div>
-                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown"></gux-icon>
+                        <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
                       </button>
                     </div>
                     <slot slot="popup"></slot>

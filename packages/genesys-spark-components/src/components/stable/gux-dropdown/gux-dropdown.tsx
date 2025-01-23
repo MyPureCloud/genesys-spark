@@ -466,6 +466,7 @@ export class GuxDropdown {
           icon-name={iconOption.iconName}
           style={iconStyle}
           decorative
+          size="small"
         ></gux-icon>
         <gux-truncate ref={el => (this.truncateElement = el)}>
           {iconOption.textContent}
@@ -542,6 +543,7 @@ export class GuxDropdown {
               'gux-expand-icon': true
             }}
             screenreader-text={this.i18n('dropdown')}
+            size="small"
             iconName={
               this.expanded
                 ? 'custom/chevron-up-small-regular'

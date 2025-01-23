@@ -582,6 +582,7 @@ export class GuxDropdownMulti {
             class={{
               'gux-expand-icon': true
             }}
+            size="small"
             screenreader-text={this.i18n('dropdown')}
             iconName="custom/chevron-down-small-regular"
           ></gux-icon>

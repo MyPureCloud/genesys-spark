@@ -744,7 +744,11 @@ export class GuxDatepicker {
         aria-label={this.i18n('toggleCalendar')}
         disabled={this.disabled}
       >
-        <gux-icon decorative icon-name="fa/calendar-regular"></gux-icon>
+        <gux-icon
+          decorative
+          icon-name="fa/calendar-regular"
+          size="small"
+        ></gux-icon>
       </button>
     ) as JSX.Element;
   }

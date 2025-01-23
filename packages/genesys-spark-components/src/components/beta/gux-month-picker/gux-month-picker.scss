@@ -78,11 +78,6 @@
       color: var(--gse-ui-monthPicker-calendarStates-disabledColor);
     }
 
-    gux-icon {
-      inline-size: var(--gse-ui-icon-small-size);
-      block-size: var(--gse-ui-icon-small-size);
-    }
-
     &.gux-expanded {
       color: var(--gse-ui-monthPicker-calendarStates-activeColor);
     }

@@ -176,6 +176,7 @@ export class GuxContextMenu {
                     this.screenreaderText ||
                     this.i18n('contextMenuScreenreaderText')
                   }
+                  size="small"
                 ></gux-icon>
               </button>
             </gux-button-slot>

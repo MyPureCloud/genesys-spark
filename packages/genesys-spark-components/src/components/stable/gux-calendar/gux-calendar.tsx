@@ -530,6 +530,7 @@ export class GuxCalendar {
             aria-hidden="true"
           >
             <gux-icon
+              size="small"
               decorative
               icon-name="custom/chevron-left-small-regular"
             ></gux-icon>
@@ -543,6 +544,7 @@ export class GuxCalendar {
             aria-hidden="true"
           >
             <gux-icon
+              size="small"
               decorative
               icon-name="custom/chevron-right-small-regular"
             ></gux-icon>

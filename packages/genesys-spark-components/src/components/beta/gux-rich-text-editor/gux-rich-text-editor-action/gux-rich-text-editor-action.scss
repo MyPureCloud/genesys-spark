@@ -10,9 +10,4 @@ gux-button-slot {
     color: var(--gse-ui-button-ghost-active-foregroundColor);
     background-color: var(--gse-ui-button-ghost-active-backgroundColor);
   }
-
-  gux-icon {
-    inline-size: var(--gse-ui-button-icon-size);
-    block-size: var(--gse-ui-button-icon-size);
-  }
 }
