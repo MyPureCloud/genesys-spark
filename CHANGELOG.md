@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.111.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.4...v4.111.5) (2025-01-23)
+
+
+### Bug Fixes
+
+* **inline-alert:** fix screen-reader stylings ([bb03887](https://github.com/MyPureCloud/genesys-spark/commit/bb0388731aa00830c8184cb9d49b316ce3153c76))
+* **other:** fixed example docs event and attribute sections ([b9bbb98](https://github.com/MyPureCloud/genesys-spark/commit/b9bbb98da112b172abf76a52852305e0f41c388c))
+
 ### [4.111.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.3...v4.111.4) (2025-01-21)
 
 ### [4.111.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.2...v4.111.3) (2025-01-18)
