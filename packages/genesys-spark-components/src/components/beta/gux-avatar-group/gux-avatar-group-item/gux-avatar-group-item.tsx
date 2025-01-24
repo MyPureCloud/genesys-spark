@@ -5,13 +5,15 @@ import {
   Prop,
   Element,
   Listen,
-  Method
+  Method,
+  Host
 } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
-import { GuxAvatarAccent } from './gux-avatar-group-item.types';
 import { groupKeyboardNavigation } from '../gux-avatar-group.service';
 import { generateInitials } from '@utils/string/generate-initials';
+import { getAvatarAccentClass } from 'components/beta/gux-avatar/gux-avatar.service';
+import { GuxAvatarAccent } from 'components/beta/gux-avatar/gux-avatar.types';
 
 /**
  * @slot image - Avatar photo.
@@ -20,10 +22,9 @@ import { generateInitials } from '@utils/string/generate-initials';
 @Component({
   styleUrl: 'gux-avatar-group-item.scss',
   tag: 'gux-avatar-group-item-beta',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxAvatarGroupItem {
-  private buttonElement: HTMLButtonElement;
   private tooltip: HTMLGuxTooltipBetaElement;
 
   @Element()
@@ -51,15 +52,6 @@ export class GuxAvatarGroupItem {
   }
 
   /*
-   * Focus button element
-   */
-  @Method()
-  // eslint-disable-next-line @typescript-eslint/require-await
-  async guxFocus(): Promise<void> {
-    this.buttonElement.focus();
-  }
-
-  /*
    * Hide tooltip
    */
   @Method()
@@ -80,17 +72,6 @@ export class GuxAvatarGroupItem {
     return index === children.length - 1;
   }
 
-  private getAccent(): string {
-    if (this.accent !== 'auto') {
-      return `gux-accent-${this.accent}`;
-    }
-    const hashedName = this.name
-      .split('')
-      .reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    const hashedNameAccent = (hashedName % 12).toString();
-    return `gux-accent-${hashedNameAccent}`;
-  }
-
   private validatingInputs(): void {
     const avatarImage = this.root.querySelector('img');
     if (!this.name) {
@@ -104,32 +85,32 @@ export class GuxAvatarGroupItem {
 
   render(): JSX.Element {
     return (
-      <button
-        type="button"
-        role="menuitem"
-        aria-label={this.name}
-        tabIndex={-1}
-        ref={el => (this.buttonElement = el)}
-        class={{
-          'gux-avatar': true,
-          [this.getAccent()]: true,
-          'gux-last-item': this.isLastItemInGroup()
-        }}
-      >
-        <slot name="image">
-          <span class="gux-avatar-initials" aria-hidden="true">
-            {generateInitials(this.name)}
-          </span>
-        </slot>
-        <gux-tooltip-beta
-          aria-hidden="true"
-          visual-only
-          placement="top"
-          ref={el => (this.tooltip = el)}
+      <Host role="menuitem">
+        <button
+          type="button"
+          aria-label={this.name}
+          tabIndex={-1}
+          class={{
+            'gux-avatar': true,
+            [getAvatarAccentClass(this.accent, this.name)]: true,
+            'gux-last-item': this.isLastItemInGroup()
+          }}
         >
-          <div slot="content">{this.name}</div>
-        </gux-tooltip-beta>
-      </button>
+          <slot name="image">
+            <span class="gux-avatar-initials" aria-hidden="true">
+              {generateInitials(this.name)}
+            </span>
+          </slot>
+          <gux-tooltip-beta
+            aria-hidden="true"
+            visual-only
+            placement="top"
+            ref={el => (this.tooltip = el)}
+          >
+            <div slot="content">{this.name}</div>
+          </gux-tooltip-beta>
+        </button>
+      </Host>
     ) as JSX.Element;
   }
 }

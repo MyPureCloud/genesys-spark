@@ -1,53 +1,419 @@
 <h2>gux-avatar-group-beta</h2>
 
+<h3>Summary</h3>
+A group that can contain <mark>gux-avatar-group-item-beta</mark> tags. A tooltip
+will be displayed for each group item on focus or hover.
+
 <gux-avatar-group-beta>
-  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 0)">
+  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
     <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy"
   /></gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta
     name="Elliot Fitzgerald"
-    onclick="notify(event, 1)"
-  ></gux-avatar-group-item-beta>
-  <gux-avatar-group-item-beta
-    name="Greg Hayes"
     onclick="notify(event, 2)"
   ></gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta
-    name="Iseult Jones"
+    name="Greg Hayes"
     onclick="notify(event, 3)"
   ></gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta
-    name="John King"
+    name="Iseult Jones"
     onclick="notify(event, 4)"
   ></gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta
-    name="Larissa Mendez"
+    name="John King"
+    onclick="notify(event, 5)"
+  ></gux-avatar-group-item-beta>
+</gux-avatar-group-beta>
+
+<h4>Group Focus Example</h4>
+<gux-avatar-group-beta tabindex="0">
+  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Elliot Fitzgerald"
+    onclick="notify(event, 2)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Greg Hayes"
+    onclick="notify(event, 3)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Iseult Jones"
+    onclick="notify(event, 4)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="John King"
+    onclick="notify(event, 5)"
+  ></gux-avatar-group-item-beta>
+</gux-avatar-group-beta>
+
+<h3>Properties</h3>
+<h4>quantity</h4>
+The quantity property indicates the number of group items that will be displayed
+outside of the overflow menu. The minimum is 1 and the maximum is 7 (7 is also
+the default amount).
+
+<gux-avatar-group-beta quantity="1">
+  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Elliot Fitzgerald"
+    onclick="notify(event, 2)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Greg Hayes"
+    onclick="notify(event, 3)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Iseult Jones"
+    onclick="notify(event, 4)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="John King"
     onclick="notify(event, 5)"
   ></gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta
-    name="Nancy Omaha"
+    name="Larissa Mendez"
     onclick="notify(event, 6)"
   ></gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta
-    name="Paul Quinn"
+    name="Nancy Omaha"
     onclick="notify(event, 7)"
   ></gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta
-    name="Roisin Smyth"
+    name="Paul Quinn"
     onclick="notify(event, 8)"
   ></gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta
-    name="Thomas Underwood"
+    name="Roisin Smyth"
     onclick="notify(event, 9)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Thomas Underwood"
+    onclick="notify(event, 10)"
   >
     <img slot="image" src="https://i.pravatar.cc/300" alt="Thomas Underwood"
   /></gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta
     name="Valerie Wall"
-    onclick="notify(event, 10)"
+    onclick="notify(event, 11)"
   ></gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta
     name="Xavier Yarrow"
-    onclick="notify(event ,11)"
+    onclick="notify(event ,12)"
+  ></gux-avatar-group-item-beta>
+</gux-avatar-group-beta>
+
+<gux-avatar-group-beta quantity="2">
+  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Elliot Fitzgerald"
+    onclick="notify(event, 2)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Greg Hayes"
+    onclick="notify(event, 3)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Iseult Jones"
+    onclick="notify(event, 4)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="John King"
+    onclick="notify(event, 5)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Larissa Mendez"
+    onclick="notify(event, 6)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Nancy Omaha"
+    onclick="notify(event, 7)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Paul Quinn"
+    onclick="notify(event, 8)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Roisin Smyth"
+    onclick="notify(event, 9)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Thomas Underwood"
+    onclick="notify(event, 10)"
+  >
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Thomas Underwood"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Valerie Wall"
+    onclick="notify(event, 11)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Xavier Yarrow"
+    onclick="notify(event ,12)"
+  ></gux-avatar-group-item-beta>
+</gux-avatar-group-beta>
+
+<gux-avatar-group-beta quantity="3">
+  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Elliot Fitzgerald"
+    onclick="notify(event, 2)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Greg Hayes"
+    onclick="notify(event, 3)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Iseult Jones"
+    onclick="notify(event, 4)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="John King"
+    onclick="notify(event, 5)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Larissa Mendez"
+    onclick="notify(event, 6)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Nancy Omaha"
+    onclick="notify(event, 7)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Paul Quinn"
+    onclick="notify(event, 8)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Roisin Smyth"
+    onclick="notify(event, 9)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Thomas Underwood"
+    onclick="notify(event, 10)"
+  >
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Thomas Underwood"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Valerie Wall"
+    onclick="notify(event, 11)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Xavier Yarrow"
+    onclick="notify(event ,12)"
+  ></gux-avatar-group-item-beta>
+</gux-avatar-group-beta>
+
+<gux-avatar-group-beta quantity="4">
+  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Elliot Fitzgerald"
+    onclick="notify(event, 2)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Greg Hayes"
+    onclick="notify(event, 3)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Iseult Jones"
+    onclick="notify(event, 4)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="John King"
+    onclick="notify(event, 5)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Larissa Mendez"
+    onclick="notify(event, 6)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Nancy Omaha"
+    onclick="notify(event, 7)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Paul Quinn"
+    onclick="notify(event, 8)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Roisin Smyth"
+    onclick="notify(event, 9)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Thomas Underwood"
+    onclick="notify(event, 10)"
+  >
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Thomas Underwood"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Valerie Wall"
+    onclick="notify(event, 11)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Xavier Yarrow"
+    onclick="notify(event ,12)"
+  ></gux-avatar-group-item-beta>
+</gux-avatar-group-beta>
+
+<gux-avatar-group-beta quantity="5">
+  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Elliot Fitzgerald"
+    onclick="notify(event, 2)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Greg Hayes"
+    onclick="notify(event, 3)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Iseult Jones"
+    onclick="notify(event, 4)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="John King"
+    onclick="notify(event, 5)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Larissa Mendez"
+    onclick="notify(event, 6)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Nancy Omaha"
+    onclick="notify(event, 7)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Paul Quinn"
+    onclick="notify(event, 8)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Roisin Smyth"
+    onclick="notify(event, 9)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Thomas Underwood"
+    onclick="notify(event, 10)"
+  >
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Thomas Underwood"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Valerie Wall"
+    onclick="notify(event, 11)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Xavier Yarrow"
+    onclick="notify(event ,12)"
+  ></gux-avatar-group-item-beta>
+</gux-avatar-group-beta>
+
+<gux-avatar-group-beta quantity="6">
+  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Elliot Fitzgerald"
+    onclick="notify(event, 2)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Greg Hayes"
+    onclick="notify(event, 3)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Iseult Jones"
+    onclick="notify(event, 4)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="John King"
+    onclick="notify(event, 5)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Larissa Mendez"
+    onclick="notify(event, 6)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Nancy Omaha"
+    onclick="notify(event, 7)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Paul Quinn"
+    onclick="notify(event, 8)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Roisin Smyth"
+    onclick="notify(event, 9)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Thomas Underwood"
+    onclick="notify(event, 10)"
+  >
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Thomas Underwood"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Valerie Wall"
+    onclick="notify(event, 11)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Xavier Yarrow"
+    onclick="notify(event ,12)"
+  ></gux-avatar-group-item-beta>
+</gux-avatar-group-beta>
+<gux-avatar-group-beta>
+  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Elliot Fitzgerald"
+    onclick="notify(event, 2)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Greg Hayes"
+    onclick="notify(event, 3)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Iseult Jones"
+    onclick="notify(event, 4)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="John King"
+    onclick="notify(event, 5)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Larissa Mendez"
+    onclick="notify(event, 6)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Nancy Omaha"
+    onclick="notify(event, 7)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Paul Quinn"
+    onclick="notify(event, 8)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Roisin Smyth"
+    onclick="notify(event, 9)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Thomas Underwood"
+    onclick="notify(event, 10)"
+  >
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Thomas Underwood"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Valerie Wall"
+    onclick="notify(event, 11)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Xavier Yarrow"
+    onclick="notify(event ,12)"
   ></gux-avatar-group-item-beta>
 </gux-avatar-group-beta>
