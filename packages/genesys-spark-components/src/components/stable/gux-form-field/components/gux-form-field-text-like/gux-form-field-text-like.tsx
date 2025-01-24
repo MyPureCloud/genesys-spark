@@ -34,10 +34,12 @@ import {
   getComputedLabelPosition,
   validateFormIds,
   setSlotAriaDescribedby,
-  getSlottedInput
+  getSlottedInput,
+  linkInputAndLoadingElements
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 import { focusInputElement } from '@utils/dom/focus-input-element';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 
 /**
  * @slot input - Required slot for input tag
@@ -60,6 +62,7 @@ export class GuxFormFieldTextLike {
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
   private hideLabelInfoTimeout: ReturnType<typeof setTimeout>;
+  private loadingElementId = randomHTMLId('gux-radial-loading');
 
   @Element()
   private root: HTMLElement;
@@ -153,7 +156,10 @@ export class GuxFormFieldTextLike {
   private renderRadialLoading(): JSX.Element {
     if (this.loading) {
       return (
-        <gux-radial-loading context="input"></gux-radial-loading>
+        <gux-radial-loading
+          id={this.loadingElementId}
+          context="input"
+        ></gux-radial-loading>
       ) as JSX.Element;
     }
   }
@@ -281,6 +287,8 @@ export class GuxFormFieldTextLike {
     );
 
     validateFormIds(this.root, this.input);
+
+    linkInputAndLoadingElements(this.input, this.loadingElementId);
   }
 
   private setLabel(): void {
