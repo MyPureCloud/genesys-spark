@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.112.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.6...v4.112.0) (2025-01-25)
+
+
+### Features
+
+* **avatar-group:** overflow ([#806](https://github.com/MyPureCloud/genesys-spark/issues/806)) ([8317321](https://github.com/MyPureCloud/genesys-spark/commit/8317321fa42368c927e66e937440f742bac336b1))
+* **tokens:** reorganize figma styles ([#858](https://github.com/MyPureCloud/genesys-spark/issues/858)) ([f1cc36e](https://github.com/MyPureCloud/genesys-spark/commit/f1cc36e92ebcb14db3753550bbcf1f5bfdbe1470))
+
 ### [4.111.6](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.5...v4.111.6) (2025-01-24)
 
 ### [4.111.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.4...v4.111.5) (2025-01-23)
