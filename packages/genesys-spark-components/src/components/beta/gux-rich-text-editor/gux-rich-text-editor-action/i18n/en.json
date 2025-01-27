@@ -12,9 +12,20 @@
   "redo": "Redo",
   "delete": "Delete",
   "richStyleDropdown": "Rich Style Dropdown",
+  "richStyle": "Rich Style",
   "link": "Link",
   "insert": "Insert",
   "cancel": "Cancel",
   "linkAddress": "Link Address",
-  "textToDisplay": "Text to display"
+  "textToDisplay": "Text to display",
+  "textHighlight": "Text Highlight",
+  "noHighlight": "No Highlight",
+  "orange": "Orange",
+  "coral": "Coral",
+  "pear": "Pear",
+  "mango": "Mango",
+  "raspberry": "Raspberry",
+  "blue": "Azure Blue",
+  "mineral": "Mineral",
+  "island": "Island"
 }

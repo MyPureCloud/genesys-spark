@@ -144,6 +144,7 @@ export class GuxAccordionSection {
               <gux-icon
                 decorative
                 icon-name="custom/chevron-down-small-regular"
+                size="small"
               ></gux-icon>
             </div>
           </button>

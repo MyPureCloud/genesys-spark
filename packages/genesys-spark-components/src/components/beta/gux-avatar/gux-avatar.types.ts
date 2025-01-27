@@ -1,24 +1,16 @@
+import { GUX_AVATAR_AUTO_ACCENT } from './gux-avatar.service';
+
 export type GuxAvatarSize = 'xsmall' | 'small' | 'medium' | 'large';
 
 export type GuxAvatarUcIntegrationApps = 'teams' | 'zoom' | '8x8' | 'none';
+
+type GuxAvatarAutoAccent = `${(typeof GUX_AVATAR_AUTO_ACCENT)[number]}`;
 
 export type GuxAvatarAccent =
   | 'default'
   | 'auto'
   | 'inherit'
-  | '0'
-  | '1'
-  | '2'
-  | '3'
-  | '4'
-  | '5'
-  | '6'
-  | '7'
-  | '8'
-  | '9'
-  | '10'
-  | '11'
-  | '12';
+  | GuxAvatarAutoAccent;
 
 export type GuxAvatarPresence =
   | 'available'

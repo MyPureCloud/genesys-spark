@@ -23,6 +23,36 @@
         ><p>Paragraph</p></gux-rich-style-list-item
       >
     </gux-rich-text-editor-action-rich-style>
+    <gux-rich-text-editor-action-text-highlight>
+      <gux-rich-highlight-list-item
+        highlight="orange"
+      ></gux-rich-highlight-list-item>
+      <gux-rich-highlight-list-item
+        highlight="coral"
+      ></gux-rich-highlight-list-item>
+      <gux-rich-highlight-list-item
+        highlight="pear"
+      ></gux-rich-highlight-list-item>
+      <gux-rich-highlight-list-item
+        highlight="mango"
+      ></gux-rich-highlight-list-item>
+      <gux-rich-highlight-list-item
+        highlight="raspberry"
+      ></gux-rich-highlight-list-item>
+      <gux-rich-highlight-list-item
+        highlight="blue"
+      ></gux-rich-highlight-list-item>
+      <gux-rich-highlight-list-item
+        highlight="mineral"
+      ></gux-rich-highlight-list-item>
+      <gux-rich-highlight-list-item
+        highlight="island"
+      ></gux-rich-highlight-list-item>
+      <gux-rich-highlight-list-item
+        class="custom-highlight"
+        highlight="inherit"
+      ></gux-rich-highlight-list-item>
+    </gux-rich-text-editor-action-text-highlight>
     <gux-rich-text-editor-action
       action="clearFormatting"
     ></gux-rich-text-editor-action>
@@ -102,7 +132,7 @@
 // Initialize the editor
 const editor = new Editor({
   element: document.querySelector('.editorElement'),
-  extensions: [StarterKit, Underline, Highlight
+  extensions: [StarterKit, Underline, Highlight.configure({ multicolor: true })
     ,Link.configure({
       openOnClick: true,      // Automatically opens links when clicked.
       autolink: false,         // Automatically creates links when typing URLs.
@@ -133,7 +163,9 @@ const actionsConfig = [
   { action: 'clearFormatting', command: 'unsetAllMarks', selector: 'gux-rich-text-editor-action[action=clearFormatting]' },
   { action: 'undo', command: 'undo', selector: 'gux-rich-text-editor-action[action=undo]' },
   { action: 'redo', command: 'redo', selector: 'gux-rich-text-editor-action[action=redo]' },
-  { action: 'delete', command: 'delete', selector: 'gux-rich-text-editor-action[action=delete]' }
+  { action: 'delete', command: 'delete', selector: 'gux-rich-text-editor-action[action=delete]' },
+  { action: 'highlight', command: '', selector: 'gux-rich-text-editor-action-text-highlight' },
+  { action: 'link', command: '', selector: 'gux-rich-text-editor-action-link' }
 ];
 
 // Map actions to DOM elements and attach click event listeners
@@ -144,7 +176,7 @@ const actions = actionsConfig.map(({ action, command, selector }) => {
 
   // Add click event listener for toggling editor command
   element.addEventListener('click', () => {
-   command == 'delete' ? editor.commands.deleteNode('paragraph') : editor.chain().focus()[command]().run();
+   command == 'delete' ? editor.commands.deleteNode('paragraph') :  command ? editor.chain().focus()[command]().run() : null;
   });
 
   return { element, action };
@@ -245,11 +277,67 @@ function applyTextToInput() {
     }
   }
 }
-  
+
+/* Text Highlight Action */
+const orangeTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='orange']`);
+orangeTextHighlightAction.addEventListener('click', () => {
+  editor.chain().focus().toggleHighlight({ color: '#FF8F76' }).run()
+})
+const coralTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='coral']`);
+coralTextHighlightAction.addEventListener('click', () => {
+  editor.chain().focus().toggleHighlight({ color: '#FFBEC9;' }).run()
+})
+
+const pearTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='pear']`);
+pearTextHighlightAction.addEventListener('click', () => {
+  editor.chain().focus().toggleHighlight({ color: '#c6dd98;' }).run()
+})
+
+const mangoTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='mango']`);
+mangoTextHighlightAction.addEventListener('click', () => {
+  editor.chain().focus().toggleHighlight({ color: '#FFD173' }).run()
+})
+
+const raspberryTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='raspberry']`);
+raspberryTextHighlightAction.addEventListener('click', () => {
+  editor.chain().focus().toggleHighlight({ color: '#F5BFEB' }).run()
+})
+
+const azureBlueTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='blue']`);
+azureBlueTextHighlightAction.addEventListener('click', () => {
+  editor.chain().focus().toggleHighlight({ color: '#ABDFF0' }).run()
+})
+
+const mineralTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='mineral']`);
+mineralTextHighlightAction.addEventListener('click', () => {
+  editor.chain().focus().toggleHighlight({ color: '#BCD6F0' }).run()
+})
+
+const islandTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='island']`);
+islandTextHighlightAction.addEventListener('click', () => {
+  editor.chain().focus().toggleHighlight({ color: '#81CBE5' }).run()
+})
+
+// If using multiple inherits then it will be better to use an ID instead.
+const inheritTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='inherit']`);
+inheritTextHighlightAction.addEventListener('click', () => {
+  editor.chain().focus().toggleHighlight({ color: '#808000;' }).run()
+})
+
+//Listening for 'No Highlight' event and unsetting the highlight when event is received.
+const textHighlightAction = document.querySelector('gux-rich-text-editor-action-text-highlight');
+textHighlightAction.addEventListener('noHighlightAction', (event) => { 
+  editor.chain().focus().unsetHighlight().run();
+})
 })();
 
   })()"
 >
+  .custom-highlight {
+    color: #808000;
+    background-color: #808000;
+  }
+
   .not-used {
     -custom-noop: noop;
   }

@@ -116,8 +116,6 @@
     flex: 0 0 auto;
     align-self: auto;
     order: 0;
-    inline-size: var(--gse-ui-phoneInput-dropdown-icon-width);
-    block-size: var(--gse-ui-phoneInput-dropdown-icon-height);
     color: var(--gse-ui-phoneInput-dropdown-foregroundColor);
   }
 }
@@ -163,8 +161,6 @@
   gux-icon {
     position: relative;
     inset-inline-start: 4px;
-    inline-size: var(--gse-ui-phoneInput-dropdown-icon-width);
-    block-size: var(--gse-ui-phoneInput-dropdown-icon-height);
     color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
   }
 }

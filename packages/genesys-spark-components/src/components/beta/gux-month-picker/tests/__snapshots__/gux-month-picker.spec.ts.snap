@@ -14,7 +14,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -22,13 +22,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 ٢٠٢٢
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -178,7 +178,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -186,13 +186,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -342,7 +342,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -350,13 +350,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -506,7 +506,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -514,13 +514,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -670,7 +670,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -678,13 +678,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -834,7 +834,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -842,13 +842,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -998,7 +998,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -1006,13 +1006,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -1162,7 +1162,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -1170,13 +1170,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -1326,7 +1326,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -1334,13 +1334,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -1490,7 +1490,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -1498,13 +1498,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -1654,7 +1654,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -1662,13 +1662,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -1818,7 +1818,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -1826,13 +1826,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -1982,7 +1982,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -1990,13 +1990,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022年
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -2146,7 +2146,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -2154,13 +2154,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022년
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -2310,7 +2310,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -2318,13 +2318,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -2474,7 +2474,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -2482,13 +2482,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -2638,7 +2638,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -2646,13 +2646,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -2802,7 +2802,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -2810,13 +2810,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -2966,7 +2966,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -2974,13 +2974,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -3130,7 +3130,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -3138,13 +3138,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -3294,7 +3294,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -3302,13 +3302,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -3458,7 +3458,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -3466,13 +3466,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 พ.ศ. 2565
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -3622,7 +3622,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -3630,13 +3630,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -3786,7 +3786,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -3794,13 +3794,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -3950,7 +3950,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -3958,13 +3958,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022年
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -4114,7 +4114,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -4122,13 +4122,13 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022年
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -4278,7 +4278,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -4286,13 +4286,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 ٢٠٢٢
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -4442,7 +4442,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -4450,13 +4450,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -4606,7 +4606,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -4614,13 +4614,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -4770,7 +4770,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -4778,13 +4778,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -4934,7 +4934,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -4942,13 +4942,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -5098,7 +5098,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -5106,13 +5106,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -5262,7 +5262,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -5270,13 +5270,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -5426,7 +5426,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -5434,13 +5434,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -5590,7 +5590,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -5598,13 +5598,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -5754,7 +5754,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -5762,13 +5762,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -5918,7 +5918,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -5926,13 +5926,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -6082,7 +6082,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -6090,13 +6090,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -6246,7 +6246,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -6254,13 +6254,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022年
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -6410,7 +6410,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -6418,13 +6418,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022년
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -6574,7 +6574,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -6582,13 +6582,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -6738,7 +6738,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -6746,13 +6746,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -6902,7 +6902,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -6910,13 +6910,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -7066,7 +7066,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -7074,13 +7074,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -7230,7 +7230,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -7238,13 +7238,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -7394,7 +7394,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -7402,13 +7402,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -7558,7 +7558,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -7566,13 +7566,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -7722,7 +7722,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -7730,13 +7730,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 พ.ศ. 2565
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -7886,7 +7886,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -7894,13 +7894,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -8050,7 +8050,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -8058,13 +8058,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -8214,7 +8214,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -8222,13 +8222,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022年
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">
@@ -8378,7 +8378,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           </div>
         </span>
         <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view"></gux-icon>
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
         </button>
       </div>
       <gux-month-calendar slot="popup">
@@ -8386,13 +8386,13 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
           <div class="gux-month-calendar">
             <div class="gux-year-header">
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021"></gux-icon>
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
               </button>
               <div>
                 2022年
               </div>
               <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023"></gux-icon>
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
               </button>
             </div>
             <gux-month-list role="list">

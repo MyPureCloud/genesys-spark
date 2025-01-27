@@ -277,6 +277,7 @@ export class GuxMonthCalendar {
               currentYear: parseInt(this.year),
               changeYear: parseInt(this.year) - 1
             })}
+            size="small"
           ></gux-icon>
         </button>
         <div>{this.getYearLabel(this.year)}</div>
@@ -294,6 +295,7 @@ export class GuxMonthCalendar {
               currentYear: parseInt(this.year),
               changeYear: parseInt(this.year) + 1
             })}
+            size="small"
           ></gux-icon>
         </button>
       </div>

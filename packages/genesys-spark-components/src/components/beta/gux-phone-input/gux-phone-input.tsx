@@ -492,6 +492,7 @@ export class GuxPhoneInput {
       return (
         <gux-icon
           class="gux-expand-icon"
+          size="small"
           iconName="custom/chevron-down-small-regular"
           decorative
         />
@@ -533,6 +534,7 @@ export class GuxPhoneInput {
           ></gux-flag-icon-beta>
         ) : (
           <gux-icon
+            size="small"
             icon-name="fa/earth-africa-regular"
             screenreader-text={this.i18n('unknownRegion')}
           ></gux-icon>
@@ -585,7 +587,11 @@ export class GuxPhoneInput {
       (
         <gux-option value="">
           <span class="gux-option-content">
-            <gux-icon icon-name="fa/earth-africa-regular" decorative></gux-icon>
+            <gux-icon
+              icon-name="fa/earth-africa-regular"
+              decorative
+              size="small"
+            ></gux-icon>
             <span>
               {this.i18n('unknownRegion')}{' '}
               <span class="gux-country-code">(+)</span>
