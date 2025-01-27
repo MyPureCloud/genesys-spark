@@ -4,14 +4,14 @@ exports[`gux-rich-text-editor-action-link should build and render 1`] = `
 <gux-rich-text-editor-action-link>
   <template shadowrootmode="open">
     <gux-button-slot accent="ghost" icon-only="">
-      <button aria-expanded="false" aria-haspopup="true" aria-label="Link" id="popover-target" type="button">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="Link" aria-pressed="false" id="popover-target" type="button">
         <gux-icon decorative="" icon-name="fa/link-simple-regular" size="small"></gux-icon>
       </button>
-      <gux-tooltip>
+      <gux-tooltip-beta>
         <div slot="content">
           Link
         </div>
-      </gux-tooltip>
+      </gux-tooltip-beta>
     </gux-button-slot>
     <gux-popover for="popover-target">
       <div class="gux-popover-content-wrapper">

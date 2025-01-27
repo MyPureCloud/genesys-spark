@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type      | Default |
-| ---------- | ---------- | ----------- | --------- | ------- |
-| `disabled` | `disabled` |             | `boolean` | `false` |
+| Property   | Attribute   | Description | Type      | Default |
+| ---------- | ----------- | ----------- | --------- | ------- |
+| `disabled` | `disabled`  |             | `boolean` | `false` |
+| `isActive` | `is-active` |             | `boolean` | `false` |
 
 
 ## Events
