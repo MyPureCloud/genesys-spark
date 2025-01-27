@@ -112,6 +112,21 @@ describe('gux-form-field-number', () => {
       });
     });
 
+    describe('error', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-number>
+        <input slot="input" type="number" name="e-1" value="10" />
+        <label slot="label">Default</label>
+        <span slot="error">This is an error message</span>
+      </gux-form-field-number>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
     describe('label-info', () => {
       it('should render component as expected', async () => {
         const html = `

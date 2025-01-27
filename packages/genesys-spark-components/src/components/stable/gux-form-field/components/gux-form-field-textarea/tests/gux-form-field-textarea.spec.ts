@@ -108,6 +108,21 @@ describe('gux-form-field-textarea', () => {
       });
     });
 
+    describe('error', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-textarea>
+        <textarea slot="input" name="textarea"></textarea>
+        <label slot="label">Default</label>
+        <span slot="error">This is an error message</span>
+      </gux-form-field-textarea>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
     describe('label-info', () => {
       it('should render component as expected', async () => {
         const html = `
