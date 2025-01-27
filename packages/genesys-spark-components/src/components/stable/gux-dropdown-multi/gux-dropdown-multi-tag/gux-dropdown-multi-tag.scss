@@ -37,11 +37,6 @@
       cursor: pointer;
     }
 
-    .gux-tag-remove-icon {
-      inline-size: var(--gse-ui-tag-button-size);
-      block-size: var(--gse-ui-tag-button-size);
-    }
-
     &:focus-within {
       .gux-tag-remove-icon {
         @include focus.gux-focus-ring-small;

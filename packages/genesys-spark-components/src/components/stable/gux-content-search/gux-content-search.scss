@@ -100,8 +100,6 @@
     }
 
     gux-icon {
-      inline-size: var(--gse-ui-search-counter-icon-width);
-      block-size: var(--gse-ui-search-counter-icon-height);
       color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
     }
   }
@@ -115,11 +113,6 @@
     place-content: center flex-end;
     align-items: center;
     padding: 0;
-
-    gux-icon {
-      inline-size: var(--gse-ui-icon-small-size);
-      block-size: var(--gse-ui-icon-small-size);
-    }
 
     button {
       display: block;

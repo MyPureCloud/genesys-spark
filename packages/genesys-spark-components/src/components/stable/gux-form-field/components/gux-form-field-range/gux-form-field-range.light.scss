@@ -2,7 +2,8 @@
 
 // Variables part
 $range-active: var(--gse-ui-rangeSlider-bar-selected-backgroundColor);
-$thumb-diameter: var(--gse-ui-rangeSlider-handle-width);
+$thumb-block-size: var(--gse-ui-rangeSlider-handle-height);
+$thumb-inline-size: var(--gse-ui-rangeSlider-handle-width);
 $track-width: 100%;
 $track-height: var(--gse-ui-rangeSlider-bar-height);
 $track-radius: 0;
@@ -27,8 +28,8 @@ $slider-border: #b4bccb;
 
 @mixin gux-thumb {
   display: block;
-  inline-size: $thumb-diameter;
-  block-size: $thumb-diameter;
+  inline-size: $thumb-inline-size;
+  block-size: $thumb-block-size;
   cursor: pointer;
   background: $handle-enabled-background;
   border-radius: $handle-border-radius;
@@ -37,11 +38,10 @@ $slider-border: #b4bccb;
 gux-form-field-range {
   input[type='range'] {
     position: absolute;
-    inline-size: 100%;
     inline-size: $track-width;
     block-size: $track-height;
-    margin-block: calc($thumb-diameter / 2);
-    margin-block-start: calc(-1 * calc($thumb-diameter / 2));
+    margin-block: calc($thumb-block-size / 2);
+    margin-block-start: calc(-1 * calc($thumb-block-size / 2));
     margin-inline: 0;
     -webkit-appearance: none;
     background: transparent;
@@ -60,7 +60,7 @@ gux-form-field-range {
       @include gux-thumb;
 
       margin-block-start: calc(
-        calc($track-height / 2) - calc($thumb-diameter / 2)
+        calc($track-height / 2) - calc($thumb-block-size / 2)
       );
       -webkit-appearance: none;
       border: 0 solid $range-active; // For firefox
@@ -80,7 +80,7 @@ gux-form-field-range {
       @include gux-thumb;
 
       margin-block-start: calc(
-        calc($track-height / 2) - calc($thumb-diameter / 2)
+        calc($track-height / 2) - calc($thumb-block-size / 2)
       );
       border: 0 solid $range-active; // For firefox
     }
@@ -91,7 +91,7 @@ gux-form-field-range {
       color: transparent;
       background: transparent;
       border-color: transparent;
-      border-width: $thumb-diameter 0;
+      border-width: $thumb-block-size 0;
     }
 
     &::-ms-fill-lower {

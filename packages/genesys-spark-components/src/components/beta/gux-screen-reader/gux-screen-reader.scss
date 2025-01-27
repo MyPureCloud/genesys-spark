@@ -1,5 +1,9 @@
 @use '~genesys-spark/dist/scss/mixins.scss';
 
+:host {
+  position: relative;
+}
+
 .gux-sr-only {
   @include mixins.gux-sr-only-clip;
 }

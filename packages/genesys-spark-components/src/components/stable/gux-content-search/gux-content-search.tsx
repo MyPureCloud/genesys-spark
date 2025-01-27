@@ -110,6 +110,7 @@ export class GuxContentSearch {
       >
         <div class="gux-search-icon">
           <gux-icon
+            size="small"
             decorative
             icon-name="fa/magnifying-glass-regular"
           ></gux-icon>
@@ -150,7 +151,11 @@ export class GuxContentSearch {
                 onClick={() => this.previousClick()}
                 disabled={disableNavigationPanel}
               >
-                <gux-icon decorative icon-name="fa/caret-up-solid"></gux-icon>
+                <gux-icon
+                  decorative
+                  icon-name="fa/caret-up-solid"
+                  size="small"
+                ></gux-icon>
               </button>
               <button
                 type="button"
@@ -160,7 +165,11 @@ export class GuxContentSearch {
                 onClick={() => this.nextClick()}
                 disabled={disableNavigationPanel}
               >
-                <gux-icon decorative icon-name="fa/caret-down-solid"></gux-icon>
+                <gux-icon
+                  decorative
+                  icon-name="fa/caret-down-solid"
+                  size="small"
+                ></gux-icon>
               </button>
             </div>
             <div class="gux-navigation-divider" />
@@ -173,7 +182,11 @@ export class GuxContentSearch {
             onClick={() => void this.clear()}
             disabled={disableNavigationPanel}
           >
-            <gux-icon icon-name="fa/xmark-large-regular" decorative></gux-icon>
+            <gux-icon
+              icon-name="fa/xmark-large-regular"
+              decorative
+              size="small"
+            ></gux-icon>
           </button>
         </div>
       ) as JSX.Element;

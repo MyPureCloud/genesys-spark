@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-rich-text-editor-action-text-highlight should build and render 1`] = `
+<gux-rich-text-editor-action-text-highlight>
+  <template shadowrootmode="open">
+    <gux-popup exceedtargetwidth="" placement="bottom-start">
+      <gux-button-slot accent="ghost" icon-only="" slot="target">
+        <button aria-expanded="false" aria-haspopup="true" aria-pressed="false" type="button">
+          <gux-icon icon-name="fa/highlighter-line-regular" screenreader-text="Text Highlight" size="small"></gux-icon>
+        </button>
+        <gux-tooltip-beta>
+          <div slot="content">
+            Text Highlight
+          </div>
+        </gux-tooltip-beta>
+      </gux-button-slot>
+      <div class="gux-text-highlight-popup" slot="popup">
+        <gux-button-slot accent="tertiary">
+          <button type="button">
+            <gux-truncate max-lines="1">
+              No Highlight
+            </gux-truncate>
+          </button>
+        </gux-button-slot>
+        <gux-rich-text-editor-list>
+          <slot></slot>
+        </gux-rich-text-editor-list>
+      </div>
+    </gux-popup>
+  </template>
+  <gux-rich-highlight-list-item highlight="tomato"></gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="coral"></gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="pear"></gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="mango"></gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="raspberry"></gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="blueberry"></gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="mineral"></gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item highlight="islandaqua"></gux-rich-highlight-list-item>
+  <gux-rich-highlight-list-item class="custom-highlight" highlight="inherit"></gux-rich-highlight-list-item>
+</gux-rich-text-editor-action-text-highlight>
+`;

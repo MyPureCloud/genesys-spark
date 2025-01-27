@@ -227,6 +227,7 @@ export class GuxActionButton {
                 <gux-icon
                   decorative
                   icon-name="custom/chevron-down-small-regular"
+                  size="small"
                 ></gux-icon>
               </button>
             </gux-button-slot>

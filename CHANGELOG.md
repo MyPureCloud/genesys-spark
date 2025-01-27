@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.112.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.6...v4.112.0) (2025-01-25)
+
+
+### Features
+
+* **avatar-group:** overflow ([#806](https://github.com/MyPureCloud/genesys-spark/issues/806)) ([8317321](https://github.com/MyPureCloud/genesys-spark/commit/8317321fa42368c927e66e937440f742bac336b1))
+* **tokens:** reorganize figma styles ([#858](https://github.com/MyPureCloud/genesys-spark/issues/858)) ([f1cc36e](https://github.com/MyPureCloud/genesys-spark/commit/f1cc36e92ebcb14db3753550bbcf1f5bfdbe1470))
+
+### [4.111.6](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.5...v4.111.6) (2025-01-24)
+
+### [4.111.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.4...v4.111.5) (2025-01-23)
+
+
+### Bug Fixes
+
+* **inline-alert:** fix screen-reader stylings ([bb03887](https://github.com/MyPureCloud/genesys-spark/commit/bb0388731aa00830c8184cb9d49b316ce3153c76))
+* **other:** fixed example docs event and attribute sections ([b9bbb98](https://github.com/MyPureCloud/genesys-spark/commit/b9bbb98da112b172abf76a52852305e0f41c388c))
+
+### [4.111.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.3...v4.111.4) (2025-01-21)
+
+### [4.111.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.2...v4.111.3) (2025-01-18)
+
+
+### Bug Fixes
+
+* **popover-list-beta:** Focus first list item on popover show ([06302f9](https://github.com/MyPureCloud/genesys-spark/commit/06302f91473487daecba1e8e4329cbc0f44b3e0f))
+
 ### [4.111.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.1...v4.111.2) (2025-01-17)
 
 ### [4.111.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.0...v4.111.1) (2025-01-16)

@@ -15,16 +15,6 @@
 
 ## Methods
 
-### `guxFocus() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
 ### `hideTooltip() => Promise<void>`
 
 

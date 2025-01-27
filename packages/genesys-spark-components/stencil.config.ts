@@ -2,7 +2,7 @@ import { Config } from '@stencil/core';
 import { Credentials } from '@stencil/core/internal';
 import { sass } from '@stencil/sass';
 import copy from 'rollup-plugin-copy';
-import generateMetadata from './scripts/generate-component-data';
+import { componentMetadataGenerator } from './scripts/component-metadata-generator';
 import { reactOutputTarget } from '@stencil/react-output-target';
 
 const testConsoleReporter =
@@ -39,7 +39,11 @@ export const config: Config = {
       componentCorePackage: 'genesys-spark-components',
       proxiesFile:
         '../genesys-spark-components-react/stencil-generated/index.ts'
-    })
+    }),
+    {
+      type: 'docs-custom',
+      generator: componentMetadataGenerator
+    }
   ],
   plugins: [sass()],
   rollupPlugins: {
@@ -55,13 +59,7 @@ export const config: Config = {
           }
         ],
         verbose: true
-      }),
-      {
-        name: 'generate-metadata',
-        buildEnd() {
-          generateMetadata();
-        }
-      }
+      })
     ]
   },
   testing: {

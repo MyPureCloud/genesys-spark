@@ -13,7 +13,7 @@ export const checkboxAttribute = (name, astNode, parent, renderCallback) => {
     : '';
 
   const element = toHTML(`
-    <gux-form-field-checkbox>
+    <gux-form-field-checkbox label-position="above">
       <label slot="label" for="${checkboxId}">${name}</label>
       <input slot="input" type="checkbox" value="${name}" id="${checkboxId}" ${isChecked}>
     </gux-form-field-checkbox>`);

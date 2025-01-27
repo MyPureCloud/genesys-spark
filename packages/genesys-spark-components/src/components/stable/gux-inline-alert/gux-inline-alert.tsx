@@ -52,7 +52,9 @@ export class GuxAlert {
       >
         <div class="gux-message-wrapper">
           <gux-icon icon-name={this.getIcon(this.accent)} decorative></gux-icon>
-          <div class="gux-sr-only">{this.i18n(this.accent)}</div>
+          <gux-screen-reader-beta>
+            {this.i18n(this.accent)}
+          </gux-screen-reader-beta>
           <div class="gux-content">
             <slot name="content">
               <slot />

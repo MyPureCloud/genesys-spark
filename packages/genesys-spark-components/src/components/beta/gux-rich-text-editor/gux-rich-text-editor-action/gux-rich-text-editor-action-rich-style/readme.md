@@ -25,6 +25,7 @@
 ### Depends on
 
 - [gux-truncate](../../../../stable/gux-truncate)
+- [gux-tooltip](../../../../stable/gux-tooltip)
 - [gux-rich-text-editor-list](../../gux-rich-text-editor-list)
 - [gux-button-slot](../../../../stable/gux-button-slot)
 - [gux-icon](../../../../stable/gux-icon)
@@ -34,6 +35,7 @@
 ```mermaid
 graph TD;
   gux-rich-text-editor-action-rich-style --> gux-truncate
+  gux-rich-text-editor-action-rich-style --> gux-tooltip
   gux-rich-text-editor-action-rich-style --> gux-rich-text-editor-list
   gux-rich-text-editor-action-rich-style --> gux-button-slot
   gux-rich-text-editor-action-rich-style --> gux-icon

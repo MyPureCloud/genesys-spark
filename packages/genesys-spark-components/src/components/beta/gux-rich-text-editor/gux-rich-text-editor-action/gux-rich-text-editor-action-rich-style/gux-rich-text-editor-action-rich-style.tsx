@@ -190,6 +190,16 @@ export class GuxRichTextEditorActionRichStyle {
     ) as JSX.Element;
   }
 
+  private renderTooltip(): JSX.Element {
+    if (!this.disabled && !this.expanded) {
+      return (
+        <gux-tooltip-beta>
+          <div slot="content">{this.i18n('richStyle')}</div>
+        </gux-tooltip-beta>
+      ) as JSX.Element;
+    }
+  }
+
   private onActionButtonClick(): void {
     this.expanded = !this.expanded;
     if (this.expanded) {
@@ -242,6 +252,7 @@ export class GuxRichTextEditorActionRichStyle {
         >
           {this.renderTargetDisplay()}
           <gux-icon
+            size="small"
             icon-name={
               this.expanded
                 ? 'custom/chevron-up-small-regular'
@@ -250,6 +261,7 @@ export class GuxRichTextEditorActionRichStyle {
             screenreader-text={this.i18n('richStyleDropdown')}
           ></gux-icon>
         </button>
+        {this.renderTooltip()}
       </gux-button-slot>
     ) as JSX.Element;
   }
