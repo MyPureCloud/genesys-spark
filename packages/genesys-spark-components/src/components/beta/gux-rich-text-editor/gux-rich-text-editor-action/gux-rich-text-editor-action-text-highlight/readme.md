@@ -31,7 +31,7 @@
 
 ### Depends on
 
-- [gux-tooltip](../../../../stable/gux-tooltip)
+- [gux-tooltip-beta](../../../gux-tooltip-beta)
 - [gux-button-slot](../../../../stable/gux-button-slot)
 - [gux-truncate](../../../../stable/gux-truncate)
 - [gux-rich-text-editor-list](../../gux-rich-text-editor-list)
@@ -41,12 +41,13 @@
 ### Graph
 ```mermaid
 graph TD;
-  gux-rich-text-editor-action-text-highlight --> gux-tooltip
+  gux-rich-text-editor-action-text-highlight --> gux-tooltip-beta
   gux-rich-text-editor-action-text-highlight --> gux-button-slot
   gux-rich-text-editor-action-text-highlight --> gux-truncate
   gux-rich-text-editor-action-text-highlight --> gux-rich-text-editor-list
   gux-rich-text-editor-action-text-highlight --> gux-icon
   gux-rich-text-editor-action-text-highlight --> gux-popup
+  gux-tooltip-beta --> gux-tooltip-base-beta
   gux-truncate --> gux-tooltip
   style gux-rich-text-editor-action-text-highlight fill:#f9f,stroke:#333,stroke-width:4px
 ```

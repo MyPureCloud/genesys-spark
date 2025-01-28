@@ -18,12 +18,13 @@
 
 ### Depends on
 
-- [gux-tooltip](../../../../stable/gux-tooltip)
+- [gux-tooltip-beta](../../../gux-tooltip-beta)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-rich-highlight-list-item --> gux-tooltip
+  gux-rich-highlight-list-item --> gux-tooltip-beta
+  gux-tooltip-beta --> gux-tooltip-base-beta
   style gux-rich-highlight-list-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
