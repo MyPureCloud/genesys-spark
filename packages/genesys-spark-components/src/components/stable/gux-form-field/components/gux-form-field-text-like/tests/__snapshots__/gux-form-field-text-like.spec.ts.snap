@@ -31,7 +31,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -70,7 +70,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -109,7 +109,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -147,7 +147,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -185,7 +185,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
       </div>
     </div>
   </template>
-  <input disabled="" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" disabled="" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -223,7 +223,7 @@ exports[`gux-form-field-text-like #render help should render component as expect
       </div>
     </div>
   </template>
-  <input aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" name="e-1" slot="input" type="text">
+  <input aria-describedby="gux-form-field-help-i gux-radial-loading-i" id="gux-form-field-input-i" name="e-1" slot="input" type="text">
   <label for="gux-form-field-input-i" slot="label">
     Default
   </label>
@@ -264,7 +264,7 @@ exports[`gux-form-field-text-like #render indicator marks should render componen
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -302,7 +302,7 @@ exports[`gux-form-field-text-like #render indicator marks should render componen
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -340,7 +340,7 @@ exports[`gux-form-field-text-like #render indicator marks should render componen
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -378,7 +378,7 @@ exports[`gux-form-field-text-like #render input attributes should render compone
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -416,7 +416,7 @@ exports[`gux-form-field-text-like #render input attributes should render compone
       </div>
     </div>
   </template>
-  <input disabled="" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" disabled="" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -454,7 +454,7 @@ exports[`gux-form-field-text-like #render input attributes should render compone
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" required="" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" required="" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -492,7 +492,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="email" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="email" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -530,7 +530,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="password" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="password" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -568,7 +568,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -606,7 +606,7 @@ exports[`gux-form-field-text-like #render label-info should render component as 
       </div>
     </div>
   </template>
-  <input aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" name="e-1" slot="input" type="text">
+  <input aria-describedby="gux-label-info-beta-i gux-radial-loading-i" id="gux-form-field-input-i" name="e-1" slot="input" type="text">
   <label for="gux-form-field-input-i" slot="label">
     Default
   </label>
@@ -649,7 +649,7 @@ exports[`gux-form-field-text-like #render label-position should render component
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -687,7 +687,7 @@ exports[`gux-form-field-text-like #render label-position should render component
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -725,7 +725,7 @@ exports[`gux-form-field-text-like #render label-position should render component
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -763,7 +763,7 @@ exports[`gux-form-field-text-like #render label-position should render component
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -801,7 +801,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -822,7 +822,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
           <div class="gux-input-container">
             <slot name="prefix"></slot>
             <slot name="input"></slot>
-            <gux-radial-loading context="input"></gux-radial-loading>
+            <gux-radial-loading context="input" id="gux-radial-loading-i"></gux-radial-loading>
             <slot name="suffix"></slot>
           </div>
         </div>
@@ -840,7 +840,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -861,7 +861,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
           <div class="gux-input-container">
             <slot name="prefix"></slot>
             <slot name="input"></slot>
-            <gux-radial-loading context="input"></gux-radial-loading>
+            <gux-radial-loading context="input" id="gux-radial-loading-i"></gux-radial-loading>
             <slot name="suffix"></slot>
           </div>
         </div>
@@ -879,7 +879,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -917,7 +917,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -938,7 +938,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
           <div class="gux-disabled gux-input-container">
             <slot name="prefix"></slot>
             <slot name="input"></slot>
-            <gux-radial-loading context="input"></gux-radial-loading>
+            <gux-radial-loading context="input" id="gux-radial-loading-i"></gux-radial-loading>
             <slot name="suffix"></slot>
           </div>
         </div>
@@ -956,7 +956,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
       </div>
     </div>
   </template>
-  <input disabled="" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i" disabled="" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -997,7 +997,7 @@ exports[`gux-form-field-text-like #render prefix should render component as expe
   <span id="gux-prefix-i" slot="prefix">
     Prefix
   </span>
-  <input aria-describedby="gux-prefix-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i gux-prefix-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
@@ -1035,7 +1035,7 @@ exports[`gux-form-field-text-like #render suffix should render component as expe
       </div>
     </div>
   </template>
-  <input aria-describedby="gux-suffix-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
+  <input aria-describedby="gux-radial-loading-i gux-suffix-i" id="gux-form-field-input-i" slot="input" type="text" value="Sample text">
   <span id="gux-suffix-i" slot="suffix">
     Suffix
   </span>
