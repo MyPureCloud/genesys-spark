@@ -24,7 +24,7 @@
 
 ### Depends on
 
-- [gux-tooltip](../../../../stable/gux-tooltip)
+- [gux-tooltip-beta](../../../gux-tooltip-beta)
 - [gux-button-slot](../../../../stable/gux-button-slot)
 - [gux-icon](../../../../stable/gux-icon)
 - [gux-popover](../../../../stable/gux-popover)
@@ -35,13 +35,14 @@
 ### Graph
 ```mermaid
 graph TD;
-  gux-rich-text-editor-action-link --> gux-tooltip
+  gux-rich-text-editor-action-link --> gux-tooltip-beta
   gux-rich-text-editor-action-link --> gux-button-slot
   gux-rich-text-editor-action-link --> gux-icon
   gux-rich-text-editor-action-link --> gux-popover
   gux-rich-text-editor-action-link --> gux-form-field-text-like
   gux-rich-text-editor-action-link --> gux-cta-group
   gux-rich-text-editor-action-link --> gux-button
+  gux-tooltip-beta --> gux-tooltip-base-beta
   gux-popover --> gux-dismiss-button
   gux-dismiss-button --> gux-button-slot
   gux-dismiss-button --> gux-icon
@@ -51,7 +52,6 @@ graph TD;
   gux-form-field-text-like --> gux-icon
   gux-form-field-input-clear-button --> gux-icon
   gux-button --> gux-tooltip-beta
-  gux-tooltip-beta --> gux-tooltip-base-beta
   style gux-rich-text-editor-action-link fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
