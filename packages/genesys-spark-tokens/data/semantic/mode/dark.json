@@ -224,6 +224,40 @@
           "type": "color",
           "description": "The background color for the active state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards."
         }
+      },
+      "chat_bubble": {
+        "agent": {
+          "value": "{theme.background.custom_accents.chat_bubble.10d}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from the agent."
+        },
+        "costumer": {
+          "value": "{theme.background.custom_accents.chat_bubble.20d}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from a costumer."
+        },
+        "bot": {
+          "value": "{theme.background.custom_accents.chat_bubble.30d}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from a bot."
+        },
+        "public": {
+          "value": "{theme.background.custom_accents.chat_bubble.40d}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that are sent to a public channel."
+        },
+        "digital_consultation": {
+          "value": "{theme.background.custom_accents.chat_bubble.50d}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from a digital consultation."
+        }
+      },
+      "text_highlight": {
+        "default": {
+          "value": "{theme.background.custom_accents.color_swatch.40d}",
+          "type": "color",
+          "description": "This is the default color for text highlights in bodies of text."
+        }
       }
     },
     "system": {

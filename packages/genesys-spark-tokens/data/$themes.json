@@ -735,7 +735,17 @@
       "theme.charts.sparkline.neutral": "9c2fd517252179ba12acf8897c177f207db7d5f0",
       "theme.charts.sparkline.neutrald": "a3ad15ad1098c6c949e2299e0e1a01fdc6f57b44",
       "theme.charts.sparkline.trendline": "a90b9794ec56a72826851dbc4831f2c4e82c35f4",
-      "theme.charts.sparkline.trendlined": "4f11bd13af0aceda42fbabffcf0c0b6b8437cc89"
+      "theme.charts.sparkline.trendlined": "4f11bd13af0aceda42fbabffcf0c0b6b8437cc89",
+      "theme.background.custom_accents.chat_bubble.10": "10b594be7312315ad64961568548332dac543cdb",
+      "theme.background.custom_accents.chat_bubble.10d": "49890ec960a7a1afadece31ee75d5df18c6fe3b1",
+      "theme.background.custom_accents.chat_bubble.20": "cc07283b3b20bc0ebcf14a7b219cfcee9162afb5",
+      "theme.background.custom_accents.chat_bubble.20d": "e92dcdca3f40781a104b6e9bee64f43d4a1ed62f",
+      "theme.background.custom_accents.chat_bubble.30": "903cdbd80e7266063620d2127f99416195aca719",
+      "theme.background.custom_accents.chat_bubble.30d": "840d29b0ae965ac06e8bd3008ad3de2215d104bc",
+      "theme.background.custom_accents.chat_bubble.40": "4b98dcc3312fab83ef5d9744d6c5c78bbb072070",
+      "theme.background.custom_accents.chat_bubble.40d": "123d9ba451b58c45ebd9d224e4518fa57f7410fc",
+      "theme.background.custom_accents.chat_bubble.50d": "51a6451749d1fdba2473d4f8e68d80e51dab08e6",
+      "theme.background.custom_accents.chat_bubble.50": "4ec322a311c8b3d37ec549884f93e1b91df6d1f1"
     }
   },
   {
@@ -1290,7 +1300,13 @@
       "divider.md.margin": "8fb165c6645c0d9f60f61fcc426d198171a726fa",
       "divider.lg.margin": "5d432756d8444d409fcdb00d0b4ed77c6e7be614",
       "divider.track.height": "f1c63787a307fac3b283f37770e640b22057b696",
-      "divider.indicator.width": "1b4065d1235b51d87485b5a91c794c8422e0ffcc"
+      "divider.indicator.width": "1b4065d1235b51d87485b5a91c794c8422e0ffcc",
+      "background.container.chat_bubble.agent": "76646d024a196a394fcd3e3847481002f57e52cf",
+      "background.container.chat_bubble.costumer": "570325e1833d353b588a26bbb403da6712085e2c",
+      "background.container.chat_bubble.bot": "015c1a0924f5d058295d06534ea38a3644001894",
+      "background.container.chat_bubble.public": "49296fb5025e0ff38f5f939fef0eb85422be7506",
+      "background.container.chat_bubble.digital_consultation": "54417da76ab56d01aeb739a0a280cbf3b75ce199",
+      "background.container.text_highlight.default": "39c040e3ca3853e56d91dc1c4f53897bd8dd2584"
     }
   },
   {
@@ -1671,7 +1687,13 @@
       "divider.md.margin": "8fb165c6645c0d9f60f61fcc426d198171a726fa",
       "divider.lg.margin": "5d432756d8444d409fcdb00d0b4ed77c6e7be614",
       "divider.track.height": "f1c63787a307fac3b283f37770e640b22057b696",
-      "divider.indicator.width": "1b4065d1235b51d87485b5a91c794c8422e0ffcc"
+      "divider.indicator.width": "1b4065d1235b51d87485b5a91c794c8422e0ffcc",
+      "background.container.chat_bubble.agent": "76646d024a196a394fcd3e3847481002f57e52cf",
+      "background.container.chat_bubble.costumer": "570325e1833d353b588a26bbb403da6712085e2c",
+      "background.container.chat_bubble.bot": "015c1a0924f5d058295d06534ea38a3644001894",
+      "background.container.chat_bubble.public": "49296fb5025e0ff38f5f939fef0eb85422be7506",
+      "background.container.chat_bubble.digital_consultation": "54417da76ab56d01aeb739a0a280cbf3b75ce199",
+      "background.container.text_highlight.default": "39c040e3ca3853e56d91dc1c4f53897bd8dd2584"
     }
   },
   {

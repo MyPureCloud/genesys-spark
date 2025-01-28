@@ -225,6 +225,40 @@
           "type": "color",
           "description": "The background color for the active state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards."
         }
+      },
+      "chat_bubble": {
+        "agent": {
+          "value": "{theme.background.custom_accents.chat_bubble.10}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from the agent."
+        },
+        "costumer": {
+          "value": "{theme.background.custom_accents.chat_bubble.20}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from a costumer."
+        },
+        "bot": {
+          "value": "{theme.background.custom_accents.chat_bubble.30}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from a bot."
+        },
+        "public": {
+          "value": "{theme.background.custom_accents.chat_bubble.40}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that are sent to a public channel."
+        },
+        "digital_consultation": {
+          "value": "{theme.background.custom_accents.chat_bubble.50}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from a digital consultation."
+        }
+      },
+      "text_highlight": {
+        "default": {
+          "value": "{theme.background.custom_accents.color_swatch.40}",
+          "type": "color",
+          "description": "This is the default color for text highlights in bodies of text."
+        }
       }
     },
     "system": {
@@ -377,7 +411,8 @@
           },
           "accent_13": {
             "value": "{theme.background.custom_accents.bold.130}",
-            "type": "color"
+            "type": "color",
+            "description": "A custom accent used mostly for tags."
           }
         },
         "subtle": {
@@ -438,7 +473,7 @@
           "accent_12": {
             "value": "{theme.background.custom_accents.subtle.120}",
             "type": "color",
-            "description": "A custom accent used in search component"
+            "description": "A custom accent used mostly for tags."
           }
         }
       },
