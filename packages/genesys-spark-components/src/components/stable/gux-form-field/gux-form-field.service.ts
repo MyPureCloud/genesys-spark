@@ -30,6 +30,29 @@ export function getComputedLabelPosition(
   }
 }
 
+export function validateLoadingElement(
+  input:
+    | HTMLInputElement
+    | HTMLSelectElement
+    | HTMLTextAreaElement
+    | HTMLGuxTimePickerElement
+    | HTMLGuxPhoneInputBetaElement
+    | HTMLGuxTimeZonePickerBetaElement,
+  loadingElementId: string
+): void {
+  const describedByIds =
+    input
+      .getAttribute('aria-describedby')
+      ?.split(' ')
+      .filter(id => !id.startsWith(`gux-form-field-loading`)) || [];
+
+  describedByIds.push(loadingElementId);
+
+  if (describedByIds) {
+    input.setAttribute('aria-describedby', describedByIds.join(' '));
+  }
+}
+
 export function validateFormIds(
   root: HTMLElement,
   input:
