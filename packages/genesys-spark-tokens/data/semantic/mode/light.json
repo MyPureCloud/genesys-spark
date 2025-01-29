@@ -1138,6 +1138,48 @@
         "value": "{theme.charts.categorical_data.subtle}",
         "type": "color"
       }
+    },
+    "numerical_data": {
+      "level1": {
+        "value": "{theme.charts.numerical_data.level1}",
+        "type": "color"
+      },
+      "level2": {
+        "value": "{theme.charts.numerical_data.level2}",
+        "type": "color"
+      },
+      "level3": {
+        "value": "{theme.charts.numerical_data.level3}",
+        "type": "color"
+      },
+      "level4": {
+        "value": "{theme.charts.numerical_data.level4}",
+        "type": "color"
+      },
+      "level5": {
+        "value": "{theme.charts.numerical_data.level5}",
+        "type": "color"
+      },
+      "level6": {
+        "value": "{theme.charts.numerical_data.level6}",
+        "type": "color"
+      },
+      "level7": {
+        "value": "{theme.charts.numerical_data.level7}",
+        "type": "color"
+      },
+      "level8": {
+        "value": "{theme.charts.numerical_data.level8}",
+        "type": "color"
+      },
+      "level9": {
+        "value": "{theme.charts.numerical_data.level9}",
+        "type": "color"
+      },
+      "level10": {
+        "value": "{theme.charts.numerical_data.level10}",
+        "type": "color"
+      }
     }
   }
 }

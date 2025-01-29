@@ -1465,6 +1465,88 @@
           "value": "{color.haze.600}",
           "type": "color"
         }
+      },
+      "numerical_data": {
+        "level1": {
+          "value": "{color.island.100}",
+          "type": "color"
+        },
+        "level1d": {
+          "value": "{color.island.50}",
+          "type": "color"
+        },
+        "level2": {
+          "value": "{color.island.200}",
+          "type": "color"
+        },
+        "level2d": {
+          "value": "{color.island.100}",
+          "type": "color"
+        },
+        "level3": {
+          "value": "{color.island.300}",
+          "type": "color"
+        },
+        "level3d": {
+          "value": "{color.island.200}",
+          "type": "color"
+        },
+        "level4": {
+          "value": "{color.island.400}",
+          "type": "color"
+        },
+        "level4d": {
+          "value": "{color.island.300}",
+          "type": "color"
+        },
+        "level5": {
+          "value": "{color.island.500}",
+          "type": "color"
+        },
+        "level5d": {
+          "value": "{color.island.400}",
+          "type": "color"
+        },
+        "level6": {
+          "value": "{color.island.600}",
+          "type": "color"
+        },
+        "level6d": {
+          "value": "{color.island.500}",
+          "type": "color"
+        },
+        "level7": {
+          "value": "{color.island.700}",
+          "type": "color"
+        },
+        "level7d": {
+          "value": "{color.island.600}",
+          "type": "color"
+        },
+        "level8": {
+          "value": "{color.island.800}",
+          "type": "color"
+        },
+        "level8d": {
+          "value": "{color.island.700}",
+          "type": "color"
+        },
+        "level9": {
+          "value": "{color.island.950}",
+          "type": "color"
+        },
+        "level9d": {
+          "value": "{color.island.800}",
+          "type": "color"
+        },
+        "level10": {
+          "value": "{color.island.1000}",
+          "type": "color"
+        },
+        "level10d": {
+          "value": "{color.island.900}",
+          "type": "color"
+        }
       }
     }
   }
