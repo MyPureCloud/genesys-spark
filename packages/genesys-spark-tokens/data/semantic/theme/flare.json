@@ -1547,6 +1547,40 @@
           "value": "{color.island.900}",
           "type": "color"
         }
+      },
+      "foreground": {
+        "10": {
+          "value": "{color.white}",
+          "type": "color"
+        },
+        "20": {
+          "value": "{color.haze.700}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color.haze.800}",
+          "type": "color"
+        },
+        "40": {
+          "value": "{color.haze.900}",
+          "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.900}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.haze.300}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.haze.300}",
+          "type": "color"
+        },
+        "40d": {
+          "value": "{color.white}",
+          "type": "color"
+        }
       }
     }
   }

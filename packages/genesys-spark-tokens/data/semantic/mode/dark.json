@@ -1174,6 +1174,26 @@
         "value": "{theme.charts.numerical_data.level10d}",
         "type": "color"
       }
+    },
+    "placeholder": {
+      "default": {
+        "value": "{theme.charts.foreground.20d}",
+        "type": "color"
+      }
+    },
+    "foreground": {
+      "high_emphasis": {
+        "value": "{theme.charts.foreground.40d}",
+        "type": "color"
+      },
+      "high_emphasis_inverse": {
+        "value": "{theme.charts.foreground.10d}",
+        "type": "color"
+      },
+      "mid_emphasis": {
+        "value": "{theme.charts.foreground.30d}",
+        "type": "color"
+      }
     }
   }
 }
