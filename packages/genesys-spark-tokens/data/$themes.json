@@ -995,7 +995,7 @@
       "container.md.box_shadow": "S:528906ea7cc3b9f753cdbb7339aaa4ac485b0164,",
       "container.sm.box_shadow": "S:fc4cb660747af4fd2fce04097a0fa2c1b038e78a,",
       "form_control.paragraph.text": "S:571dadc482f56dfdf79d08c1ff477d5a14280b08,",
-      "code.sm.regular": "S:1807215d3a348769e26ae841c2ba120d0d1d6be6,"
+      "code.sm.regular": "S:685288d9585befd80c8ee78e8466380e292be4aa,"
     },
     "selectedTokenSets": {
       "semantic/mode/dark": "enabled",
@@ -1284,11 +1284,11 @@
       "modal_side_sheet.heading": "S:6e14b84d81c86186d71b0292637946d6fff245ad,",
       "modal_side_sheet.description": "S:0e27c85b82f35e626ca2c801b8080d2a477c93b2,",
       "rte.code_block.sm.regular": "S:1a140615cdfb221fffe6a24add1f1a98ec8ce717,",
-      "rte.quote_block.md.regular": "S:a2000a5e645aee2d04b7b19a8db99b4ffb26ee59,",
+      "rte.quote_block.md.regular": "S:c87a8c3365eaa089fbab759277032b20b0e60a63,",
       "rte.heading_1.semi_bold": "S:1b9674bc4e10bffdc92f98fda0d613351fb249cf,",
       "rte.heading_2.semi_bold": "S:46777cdf09c2486d77fb47b28c831aa66f81611b,",
       "rte.heading_3.semi_bold": "S:16980c829069f31aa979cbb19f00094334e29bdb,",
-      "rte.paragraph.md.regular": "S:7b43cbb054feee76b6d6b865b2c40634c5c857d5,",
+      "rte.paragraph.md.regular": "S:6086248fd111a4b5b4f9df9e02db1d3e03448fbc,",
       "side_panel.box_shadow": "S:fffbfcc9cdb84dee899c96b60a2a1172e27d3fd9,",
       "side_panel.description.text": "S:592f2ea2d4886502d23dc268ee3a7c8c1813fadf,",
       "side_panel.heading.text": "S:f7366e6a0adbdb9920ef61a405da215daba0344b,",

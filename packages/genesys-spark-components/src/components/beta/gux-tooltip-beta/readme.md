@@ -73,7 +73,11 @@ Type: `Promise<void>`
  - [gux-button](../../stable/gux-button)
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
  - [gux-label-info-beta](../gux-label-info)
+ - [gux-rich-highlight-list-item](../gux-rich-text-editor/gux-rich-text-editor-list/gux-rich-highlight-list-item)
  - [gux-rich-text-editor-action](../gux-rich-text-editor/gux-rich-text-editor-action)
+ - [gux-rich-text-editor-action-link](../gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
+ - [gux-rich-text-editor-action-rich-style](../gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
+ - [gux-rich-text-editor-action-text-highlight](../gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-text-highlight)
  - [gux-table-toolbar-menu-button](../../stable/gux-table-toolbar/gux-table-toolbar-menu-button)
 
 ### Depends on
@@ -90,7 +94,11 @@ graph TD;
   gux-button --> gux-tooltip-beta
   gux-icon-tooltip-beta --> gux-tooltip-beta
   gux-label-info-beta --> gux-tooltip-beta
+  gux-rich-highlight-list-item --> gux-tooltip-beta
   gux-rich-text-editor-action --> gux-tooltip-beta
+  gux-rich-text-editor-action-link --> gux-tooltip-beta
+  gux-rich-text-editor-action-rich-style --> gux-tooltip-beta
+  gux-rich-text-editor-action-text-highlight --> gux-tooltip-beta
   gux-table-toolbar-menu-button --> gux-tooltip-beta
   style gux-tooltip-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -1,3 +1,296 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-avatar-group #render should render component as expected 1`] = `"<gux-avatar-group-beta role="menu" hydrated=""><template shadowrootmode="open"><slot></slot></template> <gux-avatar-group-item-beta name="Conor Darcy" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Elliot Fitzgerald" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Greg Hayes" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Iseult Jones" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="John King" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Larissa Mendez" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Nancy Omaha" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Paul Quinn" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Roisin Smyth" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Thomas U." hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Valerie Wall" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Xavier Yarrow" hydrated=""></gux-avatar-group-item-beta> </gux-avatar-group-beta>"`;
+exports[`gux-avatar-group #interaction should handles tabindex on navigation as expected with overflow 1`] = `
+Page {
+  "_e2eClose": [Function],
+  "_e2eElements": [
+    <gux-avatar-group-beta hydrated="" quantity="2" role="menu">
+  <template shadowrootmode="open">
+    <slot></slot>
+    <gux-avatar-overflow-beta hydrated="" role="menuitem">
+      <gux-avatar-overflow-item-beta hydrated="" role="menuitem"></gux-avatar-overflow-item-beta>
+    </gux-avatar-overflow-beta>
+  </template>
+  <gux-avatar-group-item-beta hydrated="" name="Conor Darcy" role="menuitem"></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta hydrated="" name="Elliot Fitzgerald" role="menuitem"></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta hidden="" hydrated="" name="Greg Hayes" role="menuitem"></gux-avatar-group-item-beta>
+</gux-avatar-group-beta>,
+    <gux-avatar-group-item-beta hydrated="" name="Conor Darcy" role="menuitem">
+  <template shadowrootmode="open">
+    <button aria-label="Conor Darcy" class="gux-accent-0 gux-avatar" tabindex="0" type="button">
+      <slot name="image">
+        <span aria-hidden="true" class="gux-avatar-initials">
+          CD
+        </span>
+      </slot>
+      <gux-tooltip-beta aria-hidden="true" hydrated="" id="gux-tooltip-i" role="tooltip" visual-only="">
+        <div slot="content">
+          Conor Darcy
+        </div>
+      </gux-tooltip-beta>
+    </button>
+  </template>
+</gux-avatar-group-item-beta>,
+    <button aria-label="Conor Darcy" class="gux-accent-0 gux-avatar" tabindex="0" type="button">
+  <slot name="image">
+    <span aria-hidden="true" class="gux-avatar-initials">
+      CD
+    </span>
+  </slot>
+  <gux-tooltip-beta aria-hidden="true" hydrated="" id="gux-tooltip-i" role="tooltip" visual-only="">
+    <div slot="content">
+      Conor Darcy
+    </div>
+  </gux-tooltip-beta>
+</button>,
+    <gux-avatar-group-item-beta hydrated="" name="Elliot Fitzgerald" role="menuitem">
+  <template shadowrootmode="open">
+    <button aria-label="Elliot Fitzgerald" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
+      <slot name="image">
+        <span aria-hidden="true" class="gux-avatar-initials">
+          EF
+        </span>
+      </slot>
+      <gux-tooltip-beta aria-hidden="true" hydrated="" id="gux-tooltip-i" visual-only="">
+        <div slot="content">
+          Elliot Fitzgerald
+        </div>
+      </gux-tooltip-beta>
+    </button>
+  </template>
+</gux-avatar-group-item-beta>,
+    <button aria-label="Elliot Fitzgerald" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
+  <slot name="image">
+    <span aria-hidden="true" class="gux-avatar-initials">
+      EF
+    </span>
+  </slot>
+  <gux-tooltip-beta aria-hidden="true" hydrated="" id="gux-tooltip-i" visual-only="">
+    <div slot="content">
+      Elliot Fitzgerald
+    </div>
+  </gux-tooltip-beta>
+</button>,
+    <gux-avatar-overflow-beta hydrated="" role="menuitem">
+  <template shadowrootmode="open">
+    <button aria-expanded="false" aria-haspopup="true" class="gux-avatar-overflow" tabindex="-1">
+      <span class="gux-avatar-overflow-wrapper">
+        <span class="gux-avatar-overflow-content">
+          +1
+        </span>
+      </span>
+    </button>
+    <div class="gux-menu-wrapper">
+      <div class="gux-menu-content" role="menu">
+        <slot></slot>
+      </div>
+    </div>
+  </template>
+  <gux-avatar-overflow-item-beta hydrated="" role="menuitem"></gux-avatar-overflow-item-beta>
+</gux-avatar-overflow-beta>,
+    <button aria-expanded="false" aria-haspopup="true" class="gux-avatar-overflow" tabindex="-1">
+  <span class="gux-avatar-overflow-wrapper">
+    <span class="gux-avatar-overflow-content">
+      +1
+    </span>
+  </span>
+</button>,
+  ],
+  "_e2eEventIds": 0,
+  "_e2eEvents": Map {},
+  "_e2eGoto": [Function],
+  "close": [Function],
+  "compareScreenshot": [Function],
+  "debugger": [Function],
+  "emitter": {
+    "all": Map {
+      "console" => [
+        [Function],
+      ],
+      "pageerror" => [
+        [Function],
+      ],
+      "requestfailed" => [
+        [Function],
+      ],
+      "request" => [
+        [Function],
+      ],
+    },
+    "emit": [Function],
+    "off": [Function],
+    "on": [Function],
+  },
+  "eventsMap": Map {
+    "console" => [
+      [Function],
+    ],
+    "pageerror" => [
+      [Function],
+    ],
+    "requestfailed" => [
+      [Function],
+    ],
+    "request" => [
+      [Function],
+    ],
+  },
+  "find": [Function],
+  "findAll": [Function],
+  "getDiagnostics": [Function],
+  "goto": [Function],
+  "setContent": [Function],
+  "spyOnEvent": [Function],
+  "waitForChanges": [Function],
+  "waitForEvent": [Function],
+}
+`;
+
+exports[`gux-avatar-group #interaction should handles tabindex on navigation as expected without overflow 1`] = `
+Page {
+  "_e2eClose": [Function],
+  "_e2eElements": [
+    <gux-avatar-group-beta hydrated="" role="menu">
+  <template shadowrootmode="open">
+    <slot></slot>
+  </template>
+  <gux-avatar-group-item-beta hydrated="" name="Conor Darcy" role="menuitem"></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta hydrated="" name="Elliot Fitzgerald" role="menuitem"></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta hydrated="" name="Greg Hayes" role="menuitem"></gux-avatar-group-item-beta>
+</gux-avatar-group-beta>,
+    <gux-avatar-group-item-beta hydrated="" name="Conor Darcy" role="menuitem">
+  <template shadowrootmode="open">
+    <button aria-label="Conor Darcy" class="gux-accent-0 gux-avatar" tabindex="0" type="button">
+      <slot name="image">
+        <span aria-hidden="true" class="gux-avatar-initials">
+          CD
+        </span>
+      </slot>
+      <gux-tooltip-beta aria-hidden="true" hydrated="" id="gux-tooltip-i" role="tooltip" visual-only="">
+        <div slot="content">
+          Conor Darcy
+        </div>
+      </gux-tooltip-beta>
+    </button>
+  </template>
+</gux-avatar-group-item-beta>,
+    <button aria-label="Conor Darcy" class="gux-accent-0 gux-avatar" tabindex="0" type="button">
+  <slot name="image">
+    <span aria-hidden="true" class="gux-avatar-initials">
+      CD
+    </span>
+  </slot>
+  <gux-tooltip-beta aria-hidden="true" hydrated="" id="gux-tooltip-i" role="tooltip" visual-only="">
+    <div slot="content">
+      Conor Darcy
+    </div>
+  </gux-tooltip-beta>
+</button>,
+    <gux-avatar-group-item-beta hydrated="" name="Elliot Fitzgerald" role="menuitem">
+  <template shadowrootmode="open">
+    <button aria-label="Elliot Fitzgerald" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
+      <slot name="image">
+        <span aria-hidden="true" class="gux-avatar-initials">
+          EF
+        </span>
+      </slot>
+      <gux-tooltip-beta aria-hidden="true" hydrated="" id="gux-tooltip-i" visual-only="">
+        <div slot="content">
+          Elliot Fitzgerald
+        </div>
+      </gux-tooltip-beta>
+    </button>
+  </template>
+</gux-avatar-group-item-beta>,
+    <button aria-label="Elliot Fitzgerald" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
+  <slot name="image">
+    <span aria-hidden="true" class="gux-avatar-initials">
+      EF
+    </span>
+  </slot>
+  <gux-tooltip-beta aria-hidden="true" hydrated="" id="gux-tooltip-i" visual-only="">
+    <div slot="content">
+      Elliot Fitzgerald
+    </div>
+  </gux-tooltip-beta>
+</button>,
+    <gux-avatar-group-item-beta hydrated="" name="Greg Hayes" role="menuitem">
+  <template shadowrootmode="open">
+    <button aria-label="Greg Hayes" class="gux-accent-3 gux-avatar gux-last-item" tabindex="-1" type="button">
+      <slot name="image">
+        <span aria-hidden="true" class="gux-avatar-initials">
+          GH
+        </span>
+      </slot>
+      <gux-tooltip-beta aria-hidden="true" hydrated="" id="gux-tooltip-i" visual-only="">
+        <div slot="content">
+          Greg Hayes
+        </div>
+      </gux-tooltip-beta>
+    </button>
+  </template>
+</gux-avatar-group-item-beta>,
+    <button aria-label="Greg Hayes" class="gux-accent-3 gux-avatar gux-last-item" tabindex="-1" type="button">
+  <slot name="image">
+    <span aria-hidden="true" class="gux-avatar-initials">
+      GH
+    </span>
+  </slot>
+  <gux-tooltip-beta aria-hidden="true" hydrated="" id="gux-tooltip-i" visual-only="">
+    <div slot="content">
+      Greg Hayes
+    </div>
+  </gux-tooltip-beta>
+</button>,
+  ],
+  "_e2eEventIds": 0,
+  "_e2eEvents": Map {},
+  "_e2eGoto": [Function],
+  "close": [Function],
+  "compareScreenshot": [Function],
+  "debugger": [Function],
+  "emitter": {
+    "all": Map {
+      "console" => [
+        [Function],
+      ],
+      "pageerror" => [
+        [Function],
+      ],
+      "requestfailed" => [
+        [Function],
+      ],
+      "request" => [
+        [Function],
+      ],
+    },
+    "emit": [Function],
+    "off": [Function],
+    "on": [Function],
+  },
+  "eventsMap": Map {
+    "console" => [
+      [Function],
+    ],
+    "pageerror" => [
+      [Function],
+    ],
+    "requestfailed" => [
+      [Function],
+    ],
+    "request" => [
+      [Function],
+    ],
+  },
+  "find": [Function],
+  "findAll": [Function],
+  "getDiagnostics": [Function],
+  "goto": [Function],
+  "setContent": [Function],
+  "spyOnEvent": [Function],
+  "waitForChanges": [Function],
+  "waitForEvent": [Function],
+}
+`;
+
+exports[`gux-avatar-group #render should render component as expected 1`] = `"<gux-avatar-group-beta role="menu" hydrated=""><template shadowrootmode="open"><slot></slot><gux-avatar-overflow-beta role="menuitem" hydrated=""><gux-avatar-overflow-item-beta role="menuitem" hydrated=""></gux-avatar-overflow-item-beta><gux-avatar-overflow-item-beta role="menuitem" hydrated=""></gux-avatar-overflow-item-beta><gux-avatar-overflow-item-beta role="menuitem" hydrated=""></gux-avatar-overflow-item-beta><gux-avatar-overflow-item-beta role="menuitem" hydrated=""></gux-avatar-overflow-item-beta><gux-avatar-overflow-item-beta role="menuitem" hydrated=""></gux-avatar-overflow-item-beta></gux-avatar-overflow-beta></template> <gux-avatar-group-item-beta name="Conor Darcy" role="menuitem" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Elliot Fitzgerald" role="menuitem" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Greg Hayes" role="menuitem" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Iseult Jones" role="menuitem" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="John King" role="menuitem" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Larissa Mendez" role="menuitem" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Nancy Omaha" role="menuitem" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Paul Quinn" hidden="" role="menuitem" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Roisin Smyth" hidden="" role="menuitem" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Thomas U." hidden="" role="menuitem" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Valerie Wall" hidden="" role="menuitem" hydrated=""></gux-avatar-group-item-beta> <gux-avatar-group-item-beta name="Xavier Yarrow" hidden="" role="menuitem" hydrated=""></gux-avatar-group-item-beta> </gux-avatar-group-beta>"`;

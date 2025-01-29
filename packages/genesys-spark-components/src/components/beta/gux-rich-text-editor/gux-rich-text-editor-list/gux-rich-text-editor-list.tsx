@@ -20,10 +20,13 @@ import {
 } from '../../../stable/gux-list/gux-list.service';
 
 /**
- * @slot - collection of gux-rich-style-list-item elements
+ * @slot - collection of gux-rich-style-list-item or gux-rich-highlight-list-item elements.
  */
 
-const validFocusableItems = ['gux-rich-style-list-item'];
+const validFocusableItems = [
+  'gux-rich-style-list-item',
+  'gux-rich-highlight-list-item'
+];
 
 @Component({
   tag: 'gux-rich-text-editor-list',
@@ -38,7 +41,7 @@ export class GuxRichTextEditorList {
   value: string;
 
   @State()
-  listItems: HTMLGuxRichStyleListItemElement[] = [];
+  listItems: HTMLElement[] = [];
 
   @Event()
   internallistitemsupdated: EventEmitter;
@@ -47,17 +50,34 @@ export class GuxRichTextEditorList {
     return this.root.querySelector('slot');
   }
 
-  get listItemElements(): HTMLGuxRichStyleListItemElement[] {
+  get listItemElements(): HTMLElement[] {
     const assignedElements = this.listItemsSlot?.assignedElements();
 
     if (assignedElements) {
-      return Array.from(assignedElements as HTMLGuxRichStyleListItemElement[]);
+      return Array.from(assignedElements as HTMLElement[]);
     }
+
     return [];
   }
 
+  //Set the first gux-rich-highlight-list-item tab-index to 0 so we can tab to the list of colors.
+  private handleHighlighItemsNavigation(): void {
+    if (this.listItemsSlot) {
+      const firstHighlightItem = this.listItemsSlot
+        .assignedElements()
+        .find(
+          el => el.tagName.toLowerCase() === 'gux-rich-highlight-list-item'
+        );
+      if (firstHighlightItem) {
+        const buttonElement =
+          firstHighlightItem.shadowRoot.querySelector('button');
+        buttonElement.tabIndex = 0;
+      }
+    }
+  }
+
   private setListItems(): void {
-    this.listItems = this.listItemElements as HTMLGuxRichStyleListItemElement[];
+    this.listItems = this.listItemElements as HTMLElement[];
     this.internallistitemsupdated.emit();
   }
 
@@ -65,27 +85,35 @@ export class GuxRichTextEditorList {
     trackComponent(this.root);
 
     this.setListItems();
+    this.handleHighlighItemsNavigation();
   }
 
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
-    switch (event.key) {
-      case 'ArrowUp':
-        event.preventDefault();
-        previous(this.root, validFocusableItems);
-        break;
-      case 'Home':
-        event.preventDefault();
-        first(this.root, validFocusableItems);
-        break;
-      case 'ArrowDown':
-        event.preventDefault();
-        next(this.root, validFocusableItems);
-        break;
-      case 'End':
-        event.preventDefault();
-        last(this.root, validFocusableItems);
-        break;
+    const target = event.target as HTMLElement;
+
+    if (!target) {
+      return;
+    }
+
+    const keyHandlers = {
+      ArrowUp: () => previous(this.root, validFocusableItems),
+      ArrowDown: () => next(this.root, validFocusableItems),
+      Home: () => first(this.root, validFocusableItems),
+      End: () => last(this.root, validFocusableItems)
+    };
+
+    if (target.matches('gux-rich-highlight-list-item')) {
+      Object.assign(keyHandlers, {
+        ArrowLeft: () => previous(this.root, validFocusableItems),
+        ArrowRight: () => next(this.root, validFocusableItems)
+      });
+    }
+
+    const handler = keyHandlers[event.key];
+    if (handler) {
+      event.preventDefault();
+      handler();
     }
   }
 
@@ -101,14 +129,9 @@ export class GuxRichTextEditorList {
     last(this.root, validFocusableItems);
   }
 
-  private renderFocusTarget(): JSX.Element {
-    return (<span tabindex="-1" aria-hidden="true"></span>) as JSX.Element;
-  }
-
   render(): JSX.Element {
     return (
       <Host role="list">
-        {this.renderFocusTarget()}
         <slot onSlotchange={() => this.setListItems()}></slot>
       </Host>
     );
