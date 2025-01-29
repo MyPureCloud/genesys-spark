@@ -257,8 +257,10 @@ export class GuxListboxMulti {
         listboxOption.value
       );
       if (this.filterType !== 'custom') {
-        listboxOption.filtered = !listboxOption.textContent
-          .trim()
+        listboxOption.filtered = !listboxOption.shadowRoot
+          .querySelector('slot')
+          ?.assignedNodes()[0]
+          ?.textContent.trim()
           .toLowerCase()
           .startsWith(this.textInput.toLowerCase());
       }

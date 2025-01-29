@@ -190,9 +190,9 @@ export function onClickedOption(
 
 let timer: NodeJS.Timeout;
 let searchStringState: string = '';
-// While there is less than 1s between keypresses that will be considered one search operation.
+// While there is less than 1s between key presses that will be considered one search operation.
 // After 1s the next keypress will be considered the start of a new search.
-// This is a mimic/approximation of the native select elements functionality.
+// This is a mimic/approximation of the native select element`s functionality.
 const continueSearchMaxInterval = 1000;
 
 export function goToOption(list: HTMLGuxListboxElement, letter: string): void {
@@ -211,8 +211,10 @@ export function matchOption(
   matchString: string
 ): boolean {
   //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
-  return option.textContent
-    .trim()
+  return option.shadowRoot
+    .querySelector('slot')
+    ?.assignedNodes()[0]
+    ?.textContent.trim()
     .toLowerCase()
     .startsWith(matchString.toLowerCase());
 }

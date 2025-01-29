@@ -347,7 +347,7 @@ export class GuxDropdownMulti {
   }
 
   private getOptionElementByValue(value: string): HTMLGuxOptionElement[] {
-    const listboxOptionElements = Array.from(
+    const listboxOptionElements: HTMLGuxOptionElement[] = Array.from(
       this.root.querySelectorAll('gux-option-multi')
     );
     const values = value ? value.split(',') : undefined;
@@ -458,9 +458,9 @@ export class GuxDropdownMulti {
     if (textInputLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, textInput);
       if (option && this.filterType !== 'custom') {
-        const optionSlotTextContent = option.querySelector(
-          '[gux-slot-container]'
-        )?.textContent;
+        const optionSlotTextContent = option.shadowRoot
+          .querySelector('slot')
+          ?.assignedNodes()[0]?.textContent;
         return optionSlotTextContent?.substring(textInputLength);
       }
 
