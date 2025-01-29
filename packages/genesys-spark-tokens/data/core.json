@@ -202,8 +202,12 @@
         "value": "#452F66",
         "type": "color"
       },
-      "1000": {
+      "950": {
         "value": "#34234D",
+        "type": "color"
+      },
+      "1000": {
+        "value": "#282136",
         "type": "color"
       }
     },
@@ -681,7 +685,7 @@
         "type": "color"
       },
       "1000": {
-        "value": "#00161f",
+        "value": "#052A38",
         "type": "color"
       }
     },
@@ -727,7 +731,7 @@
         "type": "color"
       },
       "950": {
-        "value": "#330e05",
+        "value": "#2F1007",
         "type": "color"
       },
       "1000": {
