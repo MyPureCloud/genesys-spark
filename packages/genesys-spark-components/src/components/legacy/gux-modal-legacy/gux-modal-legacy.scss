@@ -16,12 +16,7 @@
 @prop $gse-ui-modal-medium-width
 @prop $gse-ui-modal-large-width
 @prop $gse-ui-modal-buttonBar-gap
-@prop $gse-ui-modal-boxShadow-offsetX
-@prop $gse-ui-modal-boxShadow-offsetY
-@prop $gse-ui-modal-boxShadow-blur
-@prop $gse-ui-modal-boxShadow-spread
-@prop $gse-ui-modal-boxShadow-color
-@prop $gse-ui-modal-boxShadow-type
+@prop $gse-ui-modal-boxShadow
 @prop $gse-ui-modal-borderRadius
 @prop $gse-ui-modal-opacity - Skipped (this is incoporated into the gse-ui-modal-shroudColor token and is no longer needed. Thinking about asking design team to remove this token to avoid confusion)
 */
@@ -66,9 +61,7 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
       background: var(--gse-ui-modal-backgroundColor);
       border: 1px solid #b4bccb; // TODO: COMUI-2300
       border-radius: var(--gse-ui-modal-borderRadius);
-      box-shadow: var(--gse-ui-modal-boxShadow-offsetX)
-        var(--gse-ui-modal-boxShadow-offsetY) var(--gse-ui-modal-boxShadow-blur)
-        var(--gse-ui-modal-boxShadow-spread) var(--gse-ui-modal-boxShadow-color);
+      box-shadow: var(--gse-ui-modal-boxShadow);
 
       &.gux-small {
         width: var(--gse-ui-modal-small-width);

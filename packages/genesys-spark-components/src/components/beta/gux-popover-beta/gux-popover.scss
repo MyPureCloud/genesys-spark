@@ -15,9 +15,7 @@
   background-color: var(--gse-ui-popover-backgroundColor);
   border: none;
   border-radius: var(--gse-ui-popover-borderRadius);
-  box-shadow: var(--gse-ui-popover-boxShadow-offsetX)
-    var(--gse-ui-popover-boxShadow-offsetY) var(--gse-ui-popover-boxShadow-blur)
-    var(--gse-ui-popover-boxShadow-spread) var(--gse-ui-tooltip-boxShadow-color);
+  box-shadow: var(--gse-ui-popover-boxShadow);
 
   .gux-arrow {
     position: absolute;
@@ -33,12 +31,7 @@
   .gux-arrow-caret {
     inline-size: 0;
     block-size: 0;
-    filter: drop-shadow(
-      var(--gse-ui-popover-boxShadow-offsetX)
-        var(--gse-ui-popover-boxShadow-offsetY)
-        calc(var(--gse-ui-popover-boxShadow-blur) / 2)
-        var(--gse-ui-tooltip-boxShadow-color)
-    );
+    filter: drop-shadow(0 0 4px var(--gse-semantic-effects-boxShadow));
     border-block-start: calc(var(--gse-ui-popover-anchor-width) / 2) solid
       var(--gse-ui-popover-backgroundColor);
     border-inline-start: calc(var(--gse-ui-popover-anchor-width) / 2) solid

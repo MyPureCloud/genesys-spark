@@ -22,9 +22,7 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
     overflow: hidden;
     border: none;
     border-radius: var(--gse-ui-modal-borderRadius);
-    box-shadow: var(--gse-ui-modal-boxShadow-offsetX)
-      var(--gse-ui-modal-boxShadow-offsetY) var(--gse-ui-modal-boxShadow-blur)
-      var(--gse-ui-modal-boxShadow-spread) var(--gse-ui-modal-boxShadow-color);
+    box-shadow: var(--gse-ui-modal-boxShadow);
 
     &::backdrop {
       background: var(--gse-ui-modal-shroudColor);
