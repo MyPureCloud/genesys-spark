@@ -67,8 +67,6 @@ describe('gux-form-field-checkbox', () => {
           language
         });
 
-        // wait for change inside component
-        await page.waitForChanges();
         expect(page.root).toMatchSnapshot();
       });
     });
@@ -83,8 +81,6 @@ describe('gux-form-field-checkbox', () => {
           </gux-form-field-checkbox>
         `;
         const page = await newSpecPage({ components, html, language });
-
-        await page.waitForChanges();
 
         expect(
           page.root.querySelector('input').getAttribute('aria-invalid')

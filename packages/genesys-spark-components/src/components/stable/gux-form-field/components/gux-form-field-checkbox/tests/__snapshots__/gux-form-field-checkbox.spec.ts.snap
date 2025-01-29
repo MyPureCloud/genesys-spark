@@ -95,7 +95,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (3)
       </div>
     </div>
   </template>
-  <input aria-describedby="gux-form-field-error-i" aria-errormessage="gux-form-field-error-i" aria-invalid="true" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
+  <input aria-describedby="gux-form-field-error-i" aria-invalid="true" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
   <label for="gux-form-field-input-i" slot="label">
     Pizza
   </label>
@@ -166,7 +166,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (5)
       </div>
     </div>
   </template>
-  <input aria-describedby="gux-form-field-error-i" aria-errormessage="gux-form-field-error-i" aria-invalid="true" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
+  <input aria-describedby="gux-form-field-error-i" aria-invalid="true" id="gux-form-field-input-i" name="food-1[]" slot="input" type="checkbox" value="pizza">
   <label for="gux-form-field-input-i" slot="label">
     Pizza
   </label>
