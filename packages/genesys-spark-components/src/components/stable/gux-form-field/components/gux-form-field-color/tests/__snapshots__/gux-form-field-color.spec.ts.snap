@@ -1,5 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`gux-form-field-color #render error should render component as expected 1`] = `
+<gux-form-field-color>
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-input-error">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error gux-show">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input aria-describedby="gux-form-field-error-i" aria-invalid="true" id="gux-form-field-input-i" name="e-1" slot="input" type="color" value="#cc3ebe">
+  <label for="gux-form-field-input-i" slot="label">
+    Default
+  </label>
+  <span id="gux-form-field-error-i" slot="error">
+    This is an error message
+  </span>
+</gux-form-field-color>
+`;
+
 exports[`gux-form-field-color #render help should render component as expected 1`] = `
 <gux-form-field-color>
   <template shadowrootmode="open">

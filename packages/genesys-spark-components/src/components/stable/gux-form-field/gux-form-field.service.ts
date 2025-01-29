@@ -83,6 +83,14 @@ export function validateFormIds(
     error.setAttribute('id', errorId);
     describedByIds.push(errorId);
 
+    if (
+      input.tagName === 'INPUT' ||
+      input.tagName === 'SELECT' ||
+      input.tagName === 'TEXTAREA'
+    ) {
+      input.setAttribute('aria-invalid', 'true');
+    }
+
     if (describedByIds) {
       input.setAttribute('aria-describedby', describedByIds.join(' '));
     }

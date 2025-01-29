@@ -120,6 +120,27 @@ describe('gux-form-field-file', () => {
       });
     });
 
+    describe('error', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-file>
+        <label slot="label">Upload a profile picture</label>
+        <input
+          slot="input"
+          type="file"
+          id="avatar"
+          name="avatar"
+          accept="image/png, image/jpeg"
+        />
+        <span slot="error">This is an error message </span>
+      </gux-form-field-file>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
     describe('label-info', () => {
       it('should render component as expected', async () => {
         const html = `
