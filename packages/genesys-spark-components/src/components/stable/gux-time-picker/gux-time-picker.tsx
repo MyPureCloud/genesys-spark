@@ -1,4 +1,13 @@
-import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  JSX,
+  Listen,
+  Prop,
+  State,
+  Watch
+} from '@stencil/core';
 
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
@@ -8,6 +17,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
+import { logError } from '../../../utils/error/log-error';
 
 import {
   GuxClockType,
@@ -109,9 +119,25 @@ export class GuxTimePicker {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.clockType = this.clockType || getLocaleClockType(this.root);
 
+    this.validateValueFormat();
     if (this.clockType == '12h' && (this.min || this.max)) {
-      console.error('clock type must be "24h" when using min/max props');
+      logError(this.root, 'clock type must be "24h" when using min/max props');
     }
+  }
+
+  @Watch('value')
+  private validateValueFormat() {
+    if (!this.isValidTimeFormat()) {
+      logError(
+        this.root,
+        `"${this.value}" is not a valid value format. Format must be "hh:mm" or "h:mm". Falling back to 00:00 default value`
+      );
+      this.value = '00:00';
+    }
+  }
+
+  private isValidTimeFormat() {
+    return typeof this.value === 'string' && /^\d{1,2}:\d{2}$/.test(this.value);
   }
 
   private updateValue(
@@ -131,7 +157,7 @@ export class GuxTimePicker {
     }
   }
 
-  private valueToId(value: string): string {
+  private valueToId(value: GuxISOHourMinute): string {
     return `gux-id-${value.replace(':', '-')}`;
   }
 
