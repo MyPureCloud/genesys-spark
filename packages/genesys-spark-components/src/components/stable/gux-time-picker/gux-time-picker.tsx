@@ -119,20 +119,23 @@ export class GuxTimePicker {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.clockType = this.clockType || getLocaleClockType(this.root);
 
-    this.validateValueFormat();
+    this.validateValueFormat(this.value, '00:00');
     if (this.clockType == '12h' && (this.min || this.max)) {
       logError(this.root, 'clock type must be "24h" when using min/max props');
     }
   }
 
   @Watch('value')
-  private validateValueFormat() {
+  private validateValueFormat(
+    newValue: GuxISOHourMinute,
+    oldValue: GuxISOHourMinute
+  ) {
     if (!this.isValidTimeFormat()) {
       logError(
         this.root,
-        `"${this.value}" is not a valid value format. Format must be "hh:mm" or "h:mm". Falling back to 00:00 default value`
+        `"${newValue}" is not a valid value format. Format must be "hh:mm" or "h:mm". Falling back to previous value: "${oldValue}"`
       );
-      this.value = '00:00';
+      this.value = oldValue;
     }
   }
 
