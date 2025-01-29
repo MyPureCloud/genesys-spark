@@ -94,7 +94,7 @@ export default class EventsPanel {
     }
 
     const notification = toHTML(`
-      <gux-toast toast-type="info" aria-live="polite">
+      <gux-toast toast-type="info">
         <div slot="title">${title}</div>
         <dl slot="message">
           <span class="gux-body-sm-bold">target: </span>
