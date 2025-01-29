@@ -314,36 +314,40 @@ export class GuxCalendar {
   private renderContent(): JSX.Element {
     return (
       <div onKeyDown={e => void this.onKeyDown(e)}>
-        <div class="gux-week-days">
-          {getWeekdays(this.locale, this.startDayOfWeek).map(
-            day => (<div class="gux-week-day">{day}</div>) as JSX.Element
-          )}
-        </div>
-
-        <div>
-          {this.getMonthDays().map(
-            week =>
-              (
-                <div class="gux-content-week">
-                  {week.dates.map(day => {
-                    const isoDateStr = asIsoDate(day.date);
-                    return (
-                      <slot key={isoDateStr} name={isoDateStr}>
-                        <gux-day
-                          day={isoDateStr}
+        <div class="gux-content">
+          <div class="gux-week-days">
+            {getWeekdays(this.locale, this.startDayOfWeek).map(
+              day => (<div class="gux-week-day">{day}</div>) as JSX.Element
+            )}
+          </div>
+          <div>
+            {this.getMonthDays().map(
+              week =>
+                (
+                  <div class="gux-content-week">
+                    {week.dates.map(day => {
+                      const isoDateStr = asIsoDate(day.date);
+                      return (
+                        <gux-focus-proxy
                           aria-current={day.selected ? 'true' : 'false'}
                           aria-disabled={day.disabled ? 'true' : 'false'}
                           tabindex={day.selected || day.focused ? '0' : '-1'}
-                          class={{
-                            'gux-muted': !day.inCurrentMonth
-                          }}
-                        ></gux-day>
-                      </slot>
-                    ) as JSX.Element;
-                  })}
-                </div>
-              ) as JSX.Element
-          )}
+                        >
+                          <slot key={isoDateStr} name={isoDateStr}>
+                            <gux-day-beta
+                              day={isoDateStr}
+                              class={{
+                                'gux-muted': !day.inCurrentMonth
+                              }}
+                            ></gux-day-beta>
+                          </slot>
+                        </gux-focus-proxy>
+                      ) as JSX.Element;
+                    })}
+                  </div>
+                ) as JSX.Element
+            )}
+          </div>
         </div>
       </div>
     ) as JSX.Element;
