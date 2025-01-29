@@ -53,7 +53,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (1)
           <label for="gux-form-field-input-i" slot="label">
             Page 0 of 0
           </label>
-          <input id="gux-form-field-input-i" slot="input" type="text" value="0">
+          <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="0">
         </gux-form-field-text-like>
       </div>
       <div>
@@ -129,7 +129,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (2)
           <label for="gux-form-field-input-i" slot="label">
             Page 1 of 10
           </label>
-          <input id="gux-form-field-input-i" slot="input" type="text" value="1">
+          <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="1">
         </gux-form-field-text-like>
       </div>
       <div>
@@ -205,7 +205,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (3)
           <label for="gux-form-field-input-i" slot="label">
             Page 5 of 10
           </label>
-          <input id="gux-form-field-input-i" slot="input" type="text" value="5">
+          <input aria-describedby="gux-radial-loading-i" id="gux-form-field-input-i" slot="input" type="text" value="5">
         </gux-form-field-text-like>
       </div>
       <div>
