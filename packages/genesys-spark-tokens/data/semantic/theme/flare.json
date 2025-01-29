@@ -1377,11 +1377,93 @@
     },
     "charts": {
       "categorical_data": {
-        "category": {
-          "10": {
-            "value": "{color.islandaqua.400}",
-            "type": "color"
-          }
+        "category1": {
+          "value": "{color.island.700}",
+          "type": "color"
+        },
+        "category1d": {
+          "value": "{color.island.400}",
+          "type": "color"
+        },
+        "category2": {
+          "value": "{color.mineral.600}",
+          "type": "color"
+        },
+        "category2d": {
+          "value": "{color.mineral.700}",
+          "type": "color"
+        },
+        "category3": {
+          "value": "{color.plum.600}",
+          "type": "color"
+        },
+        "category3d": {
+          "value": "{color.plum.600}",
+          "type": "color"
+        },
+        "category4": {
+          "value": "{color.raspberry.800}",
+          "type": "color"
+        },
+        "category4d": {
+          "value": "{color.raspberry.600}",
+          "type": "color"
+        },
+        "category5": {
+          "value": "{color.coral.600}",
+          "type": "color"
+        },
+        "category5d": {
+          "value": "{color.coral.600}",
+          "type": "color"
+        },
+        "category6": {
+          "value": "{color.genesys_orange.200}",
+          "type": "color"
+        },
+        "category6d": {
+          "value": "{color.genesys_orange.600}",
+          "type": "color"
+        },
+        "category7": {
+          "value": "{color.mango.600}",
+          "type": "color"
+        },
+        "category7d": {
+          "value": "{color.mango.600}",
+          "type": "color"
+        },
+        "category8": {
+          "value": "{color.pear.400}",
+          "type": "color"
+        },
+        "category8d": {
+          "value": "{color.pear.600}",
+          "type": "color"
+        },
+        "category9": {
+          "value": "{color.jade.600}",
+          "type": "color"
+        },
+        "category9d": {
+          "value": "{color.jade.600}",
+          "type": "color"
+        },
+        "category10": {
+          "value": "{color.genesys_navy.700}",
+          "type": "color"
+        },
+        "category10d": {
+          "value": "{color.genesys_navy.600}",
+          "type": "color"
+        },
+        "subtle": {
+          "value": "{color.haze.200}",
+          "type": "color"
+        },
+        "subtled": {
+          "value": "{color.haze.600}",
+          "type": "color"
         }
       }
     }

@@ -1089,10 +1089,48 @@
   "charts": {
     "categorical_data": {
       "category1": {
-        "subtle": {
-          "value": "{theme.charts.categorical_data.category.10}",
-          "type": "color"
-        }
+        "value": "{theme.charts.categorical_data.category1d}",
+        "type": "color"
+      },
+      "category2": {
+        "value": "{theme.charts.categorical_data.category2d}",
+        "type": "color"
+      },
+      "category3": {
+        "value": "{theme.charts.categorical_data.category3d}",
+        "type": "color"
+      },
+      "category4": {
+        "value": "{theme.charts.categorical_data.category4d}",
+        "type": "color"
+      },
+      "category5": {
+        "value": "{theme.charts.categorical_data.category5d}",
+        "type": "color"
+      },
+      "category6": {
+        "value": "{theme.charts.categorical_data.category6d}",
+        "type": "color"
+      },
+      "category7": {
+        "value": "{theme.charts.categorical_data.category7d}",
+        "type": "color"
+      },
+      "category8": {
+        "value": "{theme.charts.categorical_data.category8d}",
+        "type": "color"
+      },
+      "category9": {
+        "value": "{theme.charts.categorical_data.category9d}",
+        "type": "color"
+      },
+      "category10": {
+        "value": "{theme.charts.categorical_data.category10d}",
+        "type": "color"
+      },
+      "subtle": {
+        "value": "{theme.charts.categorical_data.subtled}",
+        "type": "color"
       }
     }
   }
