@@ -14,7 +14,7 @@ import * as sparkIntl from '../../../genesys-spark-utils/intl';
 
 @Component({
   styleUrl: 'gux-day.scss',
-  tag: 'gux-day',
+  tag: 'gux-day-beta',
   shadow: { delegatesFocus: true }
 })
 export class GuxDay {
