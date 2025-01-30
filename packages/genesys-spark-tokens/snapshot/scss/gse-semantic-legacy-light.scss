@@ -180,23 +180,8 @@
   --gse-semantic-border-formControl-textInput-hover: #2754ac;
   --gse-semantic-border-formControl-textInput-active: #2a60c8;
   --gse-semantic-border-formControl-textInput-error: #ea0b0b;
-  --gse-semantic-container-lg-boxShadow-blur: 8px;
-  --gse-semantic-container-lg-boxShadow-spread: 1px;
-  --gse-semantic-container-lg-boxShadow-color: #28324326;
-  --gse-semantic-container-lg-boxShadow-type: dropShadow;
-  --gse-semantic-container-lg-boxShadow-offsetX: 0;
-  --gse-semantic-container-lg-boxShadow-offsetY: 0;
-  --gse-semantic-container-md-boxShadow-blur: 6px;
-  --gse-semantic-container-md-boxShadow-spread: 1px;
-  --gse-semantic-container-md-boxShadow-color: #28324326;
-  --gse-semantic-container-md-boxShadow-type: dropShadow;
-  --gse-semantic-container-md-boxShadow-offsetX: 0;
-  --gse-semantic-container-md-boxShadow-offsetY: 0;
-  --gse-semantic-container-sm-boxShadow-blur: 4px;
-  --gse-semantic-container-sm-boxShadow-spread: 1px;
-  --gse-semantic-container-sm-boxShadow-color: #28324326;
-  --gse-semantic-container-sm-boxShadow-type: dropShadow;
-  --gse-semantic-container-sm-boxShadow-offsetX: 0;
-  --gse-semantic-container-sm-boxShadow-offsetY: 0;
+  --gse-semantic-container-lg-boxShadow: 0 0 8px 1px #28324326;
+  --gse-semantic-container-md-boxShadow: 0 0 6px 1px #28324326;
+  --gse-semantic-container-sm-boxShadow: 0 0 4px 1px #28324326;
   --gse-semantic-effects-boxShadow: #28324326;
 }

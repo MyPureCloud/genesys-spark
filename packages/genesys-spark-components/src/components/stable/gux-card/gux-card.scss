@@ -22,11 +22,7 @@
     border: var(--gse-ui-card-raised-border-width)
       var(--gse-ui-card-raised-border-style)
       var(--gse-ui-card-raised-border-color);
-    box-shadow: var(--gse-ui-card-raised-boxShadow-offsetX)
-      var(--gse-ui-card-raised-boxShadow-offsetY)
-      var(--gse-ui-card-raised-boxShadow-blur)
-      var(--gse-ui-card-raised-boxShadow-spread)
-      var(--gse-ui-card-raised-boxShadow-color);
+    box-shadow: var(--gse-ui-card-raised-boxShadow);
   }
 
   &.gux-borderless {
