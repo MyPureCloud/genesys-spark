@@ -657,7 +657,57 @@
       "theme.border.system.error.20d": "019a3de76e6fe09ceeed170955feada8f88bd4e0",
       "theme.border.inputs.default.10d": "02c55acedc9a412b6a3b9104f9677ec64d1e49ac",
       "theme.border.inputs.hover.10d": "400bf3914fa7293c587204374bc4e9f8ed6b886e",
-      "theme.border.inputs.active.10d": "7bf212e54c1347b2dc6a722ef9f19050197f2ff0"
+      "theme.border.inputs.active.10d": "7bf212e54c1347b2dc6a722ef9f19050197f2ff0",
+      "theme.charts.categorical_data.category1": "7d7e221279bca75d568e43b696986a54a2ec1b40",
+      "theme.charts.categorical_data.category1d": "fd4c9e01ae6e43d379816c9bf2a1393c3fb93c80",
+      "theme.charts.categorical_data.category2": "321a74aad490f83995e57b79563ad4824a0bb2a3",
+      "theme.charts.categorical_data.category2d": "14d2a689516cd1564fc84264fd321b7510f4609a",
+      "theme.charts.categorical_data.category3": "c31bbee1b614dbdf796b2c6ae193543f9c05b3ba",
+      "theme.charts.categorical_data.category3d": "f85806fb2f61e2b56cefdc824c889d031ef76ae7",
+      "theme.charts.categorical_data.category4": "f078ab8d3143f5b6b2dea9bd52ebb8c205480af2",
+      "theme.charts.categorical_data.category4d": "1c2a6c95adffc0be958b878be8dc66e20df08172",
+      "theme.charts.categorical_data.category5": "de8ccf7bb3bfb468737e624a95c05c9123c5bebc",
+      "theme.charts.categorical_data.category5d": "09fa64c8eb972122e0fda99cdf970537edf24b60",
+      "theme.charts.categorical_data.category6": "08de3fc8d8532bcdb04bf39b34a471453fe8b79c",
+      "theme.charts.categorical_data.category6d": "3baf211ca80dec9b0d6210f25a8020929e0bcd21",
+      "theme.charts.categorical_data.category7": "ef0877bccebdfe4c68efe62671f37b622fdb98d0",
+      "theme.charts.categorical_data.category7d": "e20ef95cffeb7f868963c515b24616ff10d4f2b9",
+      "theme.charts.categorical_data.category8": "d56a8bab00a2253055057e98153940ed25622e10",
+      "theme.charts.categorical_data.category8d": "84a94e6ac755dcade528457780250f30288dc74d",
+      "theme.charts.categorical_data.category9": "b52761a59ae5b200724082b1b108d1af710c9280",
+      "theme.charts.categorical_data.category9d": "7cf0595a1002ec47568f1348b49f95f7048e5405",
+      "theme.charts.categorical_data.category10": "9911817056cc22a4d26d90e3132c3616f0c201c7",
+      "theme.charts.categorical_data.category10d": "8c9e75872ece696e263639e16b111d9cf5902ef2",
+      "theme.charts.categorical_data.subtle": "eb504159617e0cda1d9bb293094da16876a7c76f",
+      "theme.charts.categorical_data.subtled": "c21b898c0fb02fb8e038074f1cc6e2fc6b3a141a",
+      "theme.charts.numerical_data.level1": "5d423b6f1677951e87532b572983e0b8b6018d24",
+      "theme.charts.numerical_data.level1d": "e205c7439d1779309d0fec3834a4ab840da5b021",
+      "theme.charts.numerical_data.level2": "23a45d3b4255c840bfb1220527b7b613b9286335",
+      "theme.charts.numerical_data.level2d": "bf65e19b6924e28717f68efb7746c6c598f84099",
+      "theme.charts.numerical_data.level3": "b3da8fc24e48769240d2617c8f7b71e39b895108",
+      "theme.charts.numerical_data.level3d": "33a6b4db636bd12b5f8794098b88fadbae13e0e9",
+      "theme.charts.numerical_data.level4": "f0ac156214213f71810d31b740083f6449a0c72a",
+      "theme.charts.numerical_data.level4d": "21b7effdb56a30e5d5d52926b5c566e7b49afa96",
+      "theme.charts.numerical_data.level5": "5d79ff212e06c8cdabe25d8a48c1f8c0ad00d13e",
+      "theme.charts.numerical_data.level5d": "72aefc8c18c0b78a231c7bfcc6654e561498de7b",
+      "theme.charts.numerical_data.level6": "511b41679a507ccf27c80c915203f52faf2eabd3",
+      "theme.charts.numerical_data.level6d": "7872040c90751c824bed31571ebfb3b457eed45d",
+      "theme.charts.numerical_data.level7": "843c5e1c306ab61a9a657e456e7287b82fa79422",
+      "theme.charts.numerical_data.level7d": "b9c16b044b9b36a47b343ad516609b8f1ac796f8",
+      "theme.charts.numerical_data.level8": "039c474cf064d2ead5462e3b11b1ec105d3692c1",
+      "theme.charts.numerical_data.level8d": "9e6a1f7ec4ad0a4f4a1b16e90346103fa5a8d7cb",
+      "theme.charts.numerical_data.level9": "b68bd1ab38c07246eb780d21fb763e4b107b6804",
+      "theme.charts.numerical_data.level9d": "fc6e74beac233ddeb55996793bf285c247f044bc",
+      "theme.charts.numerical_data.level10": "80417108eee27fc58f51ccca8692a1a3073b0d04",
+      "theme.charts.numerical_data.level10d": "ca19ac12bcc531ee372845be1d33ea11a0d011e3",
+      "theme.charts.foreground.10": "71c3760770a4feb0f5e98755565017ead38f293c",
+      "theme.charts.foreground.20": "7b25a5eff9ba74d7713c872d74d9c12881be7d34",
+      "theme.charts.foreground.30": "1431dc753cedc7c990c6ccb461350ab6e2f9782b",
+      "theme.charts.foreground.40": "7777cfb535d312701b55b68ec325a7ee61c89a83",
+      "theme.charts.foreground.10d": "7935c0ec8d76c9b83a1b95e59f8ff6735f96baf0",
+      "theme.charts.foreground.20d": "ffcd8f3d50e6f26fcc91121c7eaaf999734f7f23",
+      "theme.charts.foreground.30d": "3b0bc84655f26dffc8387894227f6ecfdde99641",
+      "theme.charts.foreground.40d": "6c6e57f032d151583b01133ea2bef9b9932f99c0"
     }
   },
   {
@@ -832,7 +882,8 @@
       "theme.border_radius.focus.medium": "f2c87579ac1f11a371eb5b6301658e0775da31fa",
       "theme.border_radius.focus.small": "79675ae64f8c132f3956a5861008315ec50541de",
       "theme.border_radius.focus.xsmall": "7017c23009096a6d3defc5bdbae86968cdfc2354",
-      "theme.border_radius.focus.2xl": "9d8bb0ddec01dd872daab3618d8f07c102ed5690"
+      "theme.border_radius.focus.2xl": "9d8bb0ddec01dd872daab3618d8f07c102ed5690",
+      "theme.charts.categorical_data.category.10": "9aaff35f5ebf97f7b281ff79546511a7f0afbff3"
     }
   },
   {
@@ -1162,7 +1213,32 @@
       "divider.md.margin": "8fb165c6645c0d9f60f61fcc426d198171a726fa",
       "divider.lg.margin": "5d432756d8444d409fcdb00d0b4ed77c6e7be614",
       "divider.track.height": "f1c63787a307fac3b283f37770e640b22057b696",
-      "divider.indicator.width": "1b4065d1235b51d87485b5a91c794c8422e0ffcc"
+      "divider.indicator.width": "1b4065d1235b51d87485b5a91c794c8422e0ffcc",
+      "charts.categorical_data.category1": "659b300b63fc2bc82f74027190b753c593da8db6",
+      "charts.categorical_data.category2": "ace038aa2e5e3f292fa56c9417b52497997b4c5c",
+      "charts.categorical_data.category3": "d95dedcdf4d342c0f3e9b87911365ed332807d51",
+      "charts.categorical_data.category4": "7c5de6f4926af495833e3fb9ba9f6daafa648018",
+      "charts.categorical_data.category5": "7a39b5d7ba3e060e9016886a2c59af8acca4f3f8",
+      "charts.categorical_data.category6": "00391066214c6565950e3b550f470c7d365b8c74",
+      "charts.categorical_data.category7": "7e681952b93fcb68388bf5aaae7296bb4f52e838",
+      "charts.categorical_data.category8": "ef56a89ef23439850e094d3abe3db524a990c3b1",
+      "charts.categorical_data.category9": "8dcdb407d42e59a0b988bafc38dced4051b1e692",
+      "charts.categorical_data.category10": "96bab868a752426de44970b2e5f51e19b02ac74b",
+      "charts.categorical_data.subtle": "d230fe0485dda946a8f5f035b4de0a23f726efcd",
+      "charts.numerical_data.level1": "3047c04b0b09b39979601fb85268aa424fb2d21b",
+      "charts.numerical_data.level2": "c2bf25ef58a78b6dd5be30ce1bdfb1ed4a7b4fc7",
+      "charts.numerical_data.level3": "e57263287c78920785234dba22a14328d9b5dff1",
+      "charts.numerical_data.level4": "9e636e95a050fe229a056e2ff38ed91a76a42274",
+      "charts.numerical_data.level5": "9ea10493cd005f4a80dd4de4689cf1e3a4eaf1fa",
+      "charts.numerical_data.level6": "c72630daadd3472573c521300e864667f82be6e0",
+      "charts.numerical_data.level7": "2989a2dbc89973884c77846538c9bfcd4fa20a49",
+      "charts.numerical_data.level8": "d4bfa907bc4eedd23cfff214cc5c257d98e2aeff",
+      "charts.numerical_data.level9": "c2e275e6ec2c7e04dfb5f5b7c1aae5c68d07d548",
+      "charts.numerical_data.level10": "17dfbcd5d654b896a420e820308f8063949009a1",
+      "charts.placeholder.default": "283efae9f2ce0ca972ec98ca4bde3b3fb599d981",
+      "charts.foreground.high_emphasis": "97daa7b0e297cdec47ad01d75847de381b560756",
+      "charts.foreground.high_emphasis_inverse": "c33afb359c43510ebcdade8ef437eac447a50fb4",
+      "charts.foreground.mid_emphasis": "2f358245e0cedddaba33f28a21362b57211dde1c"
     }
   },
   {
@@ -1493,7 +1569,32 @@
       "divider.md.margin": "8fb165c6645c0d9f60f61fcc426d198171a726fa",
       "divider.lg.margin": "5d432756d8444d409fcdb00d0b4ed77c6e7be614",
       "divider.track.height": "f1c63787a307fac3b283f37770e640b22057b696",
-      "divider.indicator.width": "1b4065d1235b51d87485b5a91c794c8422e0ffcc"
+      "divider.indicator.width": "1b4065d1235b51d87485b5a91c794c8422e0ffcc",
+      "charts.categorical_data.category1": "659b300b63fc2bc82f74027190b753c593da8db6",
+      "charts.categorical_data.category2": "ace038aa2e5e3f292fa56c9417b52497997b4c5c",
+      "charts.categorical_data.category3": "d95dedcdf4d342c0f3e9b87911365ed332807d51",
+      "charts.categorical_data.category4": "7c5de6f4926af495833e3fb9ba9f6daafa648018",
+      "charts.categorical_data.category5": "7a39b5d7ba3e060e9016886a2c59af8acca4f3f8",
+      "charts.categorical_data.category6": "00391066214c6565950e3b550f470c7d365b8c74",
+      "charts.categorical_data.category7": "7e681952b93fcb68388bf5aaae7296bb4f52e838",
+      "charts.categorical_data.category8": "ef56a89ef23439850e094d3abe3db524a990c3b1",
+      "charts.categorical_data.category9": "8dcdb407d42e59a0b988bafc38dced4051b1e692",
+      "charts.categorical_data.category10": "96bab868a752426de44970b2e5f51e19b02ac74b",
+      "charts.categorical_data.subtle": "d230fe0485dda946a8f5f035b4de0a23f726efcd",
+      "charts.numerical_data.level1": "3047c04b0b09b39979601fb85268aa424fb2d21b",
+      "charts.numerical_data.level2": "c2bf25ef58a78b6dd5be30ce1bdfb1ed4a7b4fc7",
+      "charts.numerical_data.level3": "e57263287c78920785234dba22a14328d9b5dff1",
+      "charts.numerical_data.level4": "9e636e95a050fe229a056e2ff38ed91a76a42274",
+      "charts.numerical_data.level5": "9ea10493cd005f4a80dd4de4689cf1e3a4eaf1fa",
+      "charts.numerical_data.level6": "c72630daadd3472573c521300e864667f82be6e0",
+      "charts.numerical_data.level7": "2989a2dbc89973884c77846538c9bfcd4fa20a49",
+      "charts.numerical_data.level8": "d4bfa907bc4eedd23cfff214cc5c257d98e2aeff",
+      "charts.numerical_data.level9": "c2e275e6ec2c7e04dfb5f5b7c1aae5c68d07d548",
+      "charts.numerical_data.level10": "17dfbcd5d654b896a420e820308f8063949009a1",
+      "charts.placeholder.default": "283efae9f2ce0ca972ec98ca4bde3b3fb599d981",
+      "charts.foreground.high_emphasis": "97daa7b0e297cdec47ad01d75847de381b560756",
+      "charts.foreground.high_emphasis_inverse": "c33afb359c43510ebcdade8ef437eac447a50fb4",
+      "charts.foreground.mid_emphasis": "2f358245e0cedddaba33f28a21362b57211dde1c"
     }
   },
   {
@@ -1628,7 +1729,8 @@
       "ui/data_display": "enabled",
       "ui/navigation": "enabled",
       "ui/feedback": "enabled",
-      "ui/layout_and_container": "enabled"
+      "ui/layout_and_container": "enabled",
+      "ui-charts/charts": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:8987:36891",
     "$figmaModeId": "28327:5",
@@ -2544,14 +2646,5 @@
       "blank_state.foreground_color": "f40fea58f608d3c2a0ffa2cd3028fe44621a01ff"
     },
     "group": ".ui"
-  },
-  {
-    "id": "6be63bd911b8ec27c2fb46dafd2bdd22c0e7d0d7",
-    "name": "ui",
-    "$figmaStyleReferences": {},
-    "selectedTokenSets": {
-      "ui-charts/charts": "enabled"
-    },
-    "group": ".ui-charts"
   }
 ]
