@@ -471,10 +471,31 @@ export class GuxDropdownMulti {
   private renderTargetDisplay(): JSX.Element {
     return (
       <div class="gux-placeholder">
-        {this.placeholder || this.i18n('noSelection')}
         {this.getSrSelectedText()}
+        {this.getSelectedOptionText() ||
+          this.placeholder ||
+          this.i18n('noSelection')}
       </div>
     ) as JSX.Element;
+  }
+
+  private getSelectedOptionText(): string | false {
+    const selectedListboxOptionElement = this.getOptionElementByValue(
+      this.value
+    );
+
+    if (selectedListboxOptionElement?.length) {
+      return selectedListboxOptionElement
+        .map(option => {
+          return option.shadowRoot
+            ?.querySelector('slot')
+            ?.assignedNodes()[0]
+            .textContent.trim();
+        })
+        .join(', ');
+    }
+
+    return false;
   }
 
   private getSrSelectedText(): JSX.Element {
