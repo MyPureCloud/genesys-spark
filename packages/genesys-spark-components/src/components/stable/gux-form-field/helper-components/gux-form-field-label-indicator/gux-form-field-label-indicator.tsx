@@ -4,7 +4,7 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
 
-import { GuxFormFieldLabelIndicatorVariant } from './gux-form-field-label-indicator.types';
+import { GuxFormFieldIndicatorMark } from '../../gux-form-field.types';
 
 import translationResources from './i18n/en.json';
 
@@ -19,7 +19,7 @@ export class GuxFormFieldLabelIndicator {
   private root: HTMLElement;
 
   @Prop()
-  variant: GuxFormFieldLabelIndicatorVariant = 'required';
+  variant: GuxFormFieldIndicatorMark = 'required';
 
   @Prop()
   required: boolean = false;
