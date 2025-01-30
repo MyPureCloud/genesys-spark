@@ -1984,11 +1984,6 @@
         "width": "229px"
       }
     },
-    "divider": {
-      "color": "#cad1e1",
-      "width": "1px",
-      "style": "solid"
-    },
     "scrollbar": {
       "border_radius": "45px",
       "foreground_color": "#6a6d75"
@@ -2114,6 +2109,13 @@
       "count-display": {
         "gap": "4px"
       }
+    }
+  },
+  "data_table": {
+    "border": {
+      "color": "#cad1e1",
+      "width": "1px",
+      "style": "solid"
     }
   },
   "avatar": {
