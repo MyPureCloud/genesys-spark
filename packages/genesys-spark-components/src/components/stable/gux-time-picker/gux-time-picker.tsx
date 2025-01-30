@@ -130,7 +130,7 @@ export class GuxTimePicker {
     newValue: GuxISOHourMinute,
     oldValue: GuxISOHourMinute
   ) {
-    if (!this.isValidTimeFormat()) {
+    if (!this.isValidTimeFormat(newValue)) {
       logError(
         this.root,
         `"${newValue}" is not a valid value format. Format must be "hh:mm" or "h:mm". Falling back to previous value: "${oldValue}"`
@@ -139,8 +139,8 @@ export class GuxTimePicker {
     }
   }
 
-  private isValidTimeFormat() {
-    return typeof this.value === 'string' && /^\d{1,2}:\d{2}$/.test(this.value);
+  private isValidTimeFormat(value: GuxISOHourMinute) {
+    return typeof value === 'string' && /^\d{1,2}:\d{2}$/.test(value);
   }
 
   private updateValue(
