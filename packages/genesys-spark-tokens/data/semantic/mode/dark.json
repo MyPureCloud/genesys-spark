@@ -1090,47 +1090,58 @@
     "categorical_data": {
       "category1": {
         "value": "{theme.charts.categorical_data.category1d}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category2": {
         "value": "{theme.charts.categorical_data.category2d}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category3": {
         "value": "{theme.charts.categorical_data.category3d}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category4": {
         "value": "{theme.charts.categorical_data.category4d}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category5": {
         "value": "{theme.charts.categorical_data.category5d}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category6": {
         "value": "{theme.charts.categorical_data.category6d}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category7": {
         "value": "{theme.charts.categorical_data.category7d}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category8": {
         "value": "{theme.charts.categorical_data.category8d}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category9": {
         "value": "{theme.charts.categorical_data.category9d}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category10": {
         "value": "{theme.charts.categorical_data.category10d}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "subtle": {
         "value": "{theme.charts.categorical_data.subtled}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       }
     },
     "numerical_data": {
@@ -1193,6 +1204,25 @@
       "mid_emphasis": {
         "value": "{theme.charts.foreground.30d}",
         "type": "color"
+      }
+    },
+    "border": {
+      "axis": {
+        "value": "{theme.charts.border.30d}",
+        "type": "color",
+        "description": "Our default color for chart's axis."
+      },
+      "grid": {
+        "default": {
+          "value": "{theme.charts.border.10d}",
+          "type": "color",
+          "description": "The color for chart's grids on the default state."
+        },
+        "hover": {
+          "value": "{theme.charts.border.20d}",
+          "type": "color",
+          "description": "The color for chart's grids on the hover state."
+        }
       }
     }
   }

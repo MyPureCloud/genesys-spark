@@ -707,7 +707,13 @@
       "theme.charts.foreground.10d": "7935c0ec8d76c9b83a1b95e59f8ff6735f96baf0",
       "theme.charts.foreground.20d": "ffcd8f3d50e6f26fcc91121c7eaaf999734f7f23",
       "theme.charts.foreground.30d": "3b0bc84655f26dffc8387894227f6ecfdde99641",
-      "theme.charts.foreground.40d": "6c6e57f032d151583b01133ea2bef9b9932f99c0"
+      "theme.charts.foreground.40d": "6c6e57f032d151583b01133ea2bef9b9932f99c0",
+      "theme.charts.border.10": "6e0c728bdd50cb714ad5f6560661b95f31612430",
+      "theme.charts.border.10d": "9303ccbd1537f363b450b0e87288b54626a63972",
+      "theme.charts.border.20": "0af79f50d6d48743094d89641cb3235288f35601",
+      "theme.charts.border.20d": "879a1a4f0c54287c6c81528175c210a9460adb20",
+      "theme.charts.border.30": "1a5d173f5c056808c1220f7e6895bc831567a3b6",
+      "theme.charts.border.30d": "086b1eb7f959b6e0e82ab10ef7299912f060742a"
     }
   },
   {
@@ -1238,7 +1244,10 @@
       "charts.placeholder.default": "283efae9f2ce0ca972ec98ca4bde3b3fb599d981",
       "charts.foreground.high_emphasis": "97daa7b0e297cdec47ad01d75847de381b560756",
       "charts.foreground.high_emphasis_inverse": "c33afb359c43510ebcdade8ef437eac447a50fb4",
-      "charts.foreground.mid_emphasis": "2f358245e0cedddaba33f28a21362b57211dde1c"
+      "charts.foreground.mid_emphasis": "2f358245e0cedddaba33f28a21362b57211dde1c",
+      "charts.border.axis": "1d67a70ae7336f9a67573b8264dd892bc0030b43",
+      "charts.border.grid.default": "b8dfc01703a2611ab43a74b1a96528fd927d5093",
+      "charts.border.grid.hover": "e6f76bb9bff3b4455a3627e0c348505acf741796"
     }
   },
   {
@@ -1594,7 +1603,10 @@
       "charts.placeholder.default": "283efae9f2ce0ca972ec98ca4bde3b3fb599d981",
       "charts.foreground.high_emphasis": "97daa7b0e297cdec47ad01d75847de381b560756",
       "charts.foreground.high_emphasis_inverse": "c33afb359c43510ebcdade8ef437eac447a50fb4",
-      "charts.foreground.mid_emphasis": "2f358245e0cedddaba33f28a21362b57211dde1c"
+      "charts.foreground.mid_emphasis": "2f358245e0cedddaba33f28a21362b57211dde1c",
+      "charts.border.axis": "1d67a70ae7336f9a67573b8264dd892bc0030b43",
+      "charts.border.grid.default": "b8dfc01703a2611ab43a74b1a96528fd927d5093",
+      "charts.border.grid.hover": "e6f76bb9bff3b4455a3627e0c348505acf741796"
     }
   },
   {

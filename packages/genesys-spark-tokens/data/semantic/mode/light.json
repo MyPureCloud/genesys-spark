@@ -1096,109 +1096,153 @@
     "categorical_data": {
       "category1": {
         "value": "{theme.charts.categorical_data.category1}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category2": {
         "value": "{theme.charts.categorical_data.category2}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category3": {
         "value": "{theme.charts.categorical_data.category3}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category4": {
         "value": "{theme.charts.categorical_data.category4}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category5": {
         "value": "{theme.charts.categorical_data.category5}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category6": {
         "value": "{theme.charts.categorical_data.category6}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category7": {
         "value": "{theme.charts.categorical_data.category7}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category8": {
         "value": "{theme.charts.categorical_data.category8}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category9": {
         "value": "{theme.charts.categorical_data.category9}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "category10": {
         "value": "{theme.charts.categorical_data.category10}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       },
       "subtle": {
         "value": "{theme.charts.categorical_data.subtle}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific category in charts."
       }
     },
     "numerical_data": {
       "level1": {
         "value": "{theme.charts.numerical_data.level1}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
       },
       "level2": {
         "value": "{theme.charts.numerical_data.level2}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
       },
       "level3": {
         "value": "{theme.charts.numerical_data.level3}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
       },
       "level4": {
         "value": "{theme.charts.numerical_data.level4}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
       },
       "level5": {
         "value": "{theme.charts.numerical_data.level5}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
       },
       "level6": {
         "value": "{theme.charts.numerical_data.level6}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
       },
       "level7": {
         "value": "{theme.charts.numerical_data.level7}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
       },
       "level8": {
         "value": "{theme.charts.numerical_data.level8}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
       },
       "level9": {
         "value": "{theme.charts.numerical_data.level9}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
       },
       "level10": {
         "value": "{theme.charts.numerical_data.level10}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
       }
     },
     "placeholder": {
       "default": {
         "value": "{theme.charts.foreground.20}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color for placeholder values in charts."
       }
     },
     "foreground": {
       "high_emphasis": {
         "value": "{theme.charts.foreground.40}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color for headings and labels in charts."
       },
       "high_emphasis_inverse": {
         "value": "{theme.charts.foreground.10}",
-        "type": "color"
+        "type": "color",
+        "description": "We use this color for headings and labels that don't pass the contrast check with the default high_emphasis color in charts."
       },
       "mid_emphasis": {
         "value": "{theme.charts.foreground.30}",
-        "type": "color"
+        "type": "color",
+        "description": "We label legends in charts."
+      }
+    },
+    "border": {
+      "axis": {
+        "value": "{theme.charts.border.30}",
+        "type": "color",
+        "description": "Our default color for chart's axis."
+      },
+      "grid": {
+        "default": {
+          "value": "{theme.charts.border.10}",
+          "type": "color",
+          "description": "The color for chart's grids on the default state."
+        },
+        "hover": {
+          "value": "{theme.charts.border.20}",
+          "type": "color",
+          "description": "The color for chart's grids on the hover state."
+        }
       }
     }
   }

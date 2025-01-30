@@ -1581,6 +1581,32 @@
           "value": "{color.white}",
           "type": "color"
         }
+      },
+      "border": {
+        "10": {
+          "value": "{color.haze.100}",
+          "type": "color"
+        },
+        "20": {
+          "value": "{color.haze.300}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color.haze.400}",
+          "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.850}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.haze.600}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.haze.500}",
+          "type": "color"
+        }
       }
     }
   }
