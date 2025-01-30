@@ -287,12 +287,12 @@ export class GuxFormFieldTextLike {
     );
 
     validateFormIds(this.root, this.input);
+
+    validateLoadingElement(this.input, this.loadingElementId);
   }
 
   private setLabel(): void {
     this.label = this.root.querySelector('label[slot="label"]');
-
-    validateLoadingElement(this.input, this.loadingElementId);
 
     this.computedLabelPosition = getComputedLabelPosition(
       this.label,
