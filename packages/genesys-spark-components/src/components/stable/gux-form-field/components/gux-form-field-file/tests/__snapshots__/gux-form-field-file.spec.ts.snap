@@ -1,5 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`gux-form-field-file #render error should render component as expected 1`] = `
+<gux-form-field-file>
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <slot name="input"></slot>
+        <div class="gux-form-field-error gux-show">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <label for="avatar" slot="label">
+    Upload a profile picture
+  </label>
+  <input accept="image/png, image/jpeg" aria-describedby="gux-form-field-error-i" aria-invalid="true" id="avatar" name="avatar" slot="input" type="file">
+  <span id="gux-form-field-error-i" slot="error">
+    This is an error message
+  </span>
+</gux-form-field-file>
+`;
+
 exports[`gux-form-field-file #render help should render component as expected 1`] = `
 <gux-form-field-file>
   <template shadowrootmode="open">

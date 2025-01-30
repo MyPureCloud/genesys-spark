@@ -9,11 +9,7 @@
   font-size: var(--gse-ui-calendarMenu-month-defaultText-fontSize);
   background: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
   border-radius: 8px; // --gse-ui-calendarMenu-single-header-borderRadius and --gse-ui-calendarMenu-single-body-borderRadius need to be combined
-  box-shadow: var(--gse-ui-calendarMenu-boxShadow-offsetX)
-    var(--gse-ui-calendarMenu-boxShadow-offsetY)
-    var(--gse-ui-calendarMenu-boxShadow-blur)
-    var(--gse-ui-calendarMenu-boxShadow-spread)
-    var(--gse-ui-calendarMenu-boxShadow-color);
+  box-shadow: var(--gse-ui-calendarMenu-boxShadow);
 
   .gux-header {
     display: flex;

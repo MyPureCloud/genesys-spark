@@ -29,16 +29,11 @@
   .gux-no-matches {
     box-sizing: border-box;
     block-size: var(--gse-ui-menu-option-height);
-    font-family: var(
-      --gse-ui-dropdown-menu-emptyState-subheader-text-fontFamily
-    );
-    font-size: var(--gse-ui-dropdown-menu-emptyState-subheader-text-fontSize);
-    font-weight: var(
-      --gse-ui-dropdown-menu-emptyState-subheader-text-fontWeight
-    );
-    line-height: var(
-      --gse-ui-dropdown-menu-emptyState-subheader-text-lineHeight
-    );
-    color: var(--gse-ui-dropdown-menu-emptyState-subheader-foregroundColor);
+    padding-block: var(--gse-ui-dropdown-gap);
+    font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
+    font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
+    font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
+    line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
+    color: var(--gse-ui-menu-option-label-foregroundColor);
   }
 }

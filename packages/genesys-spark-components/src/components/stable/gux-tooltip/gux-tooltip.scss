@@ -6,9 +6,7 @@
   max-inline-size: 250px;
   pointer-events: none;
   border-radius: var(--gse-ui-tooltip-borderRadius);
-  box-shadow: var(--gse-ui-tooltip-boxShadow-offsetX)
-    var(--gse-ui-tooltip-boxShadow-offsetY) var(--gse-ui-tooltip-boxShadow-blur)
-    var(--gse-ui-tooltip-boxShadow-spread) var(--gse-ui-tooltip-boxShadow-color);
+  box-shadow: var(--gse-ui-tooltip-boxShadow);
   opacity: 0;
 }
 

@@ -109,6 +109,25 @@ describe('gux-form-field-select', () => {
       });
     });
 
+    describe('error', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-select>
+        <select slot="input" name="e-1">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+        <label slot="label">Default</label>
+        <span slot="error">This is an error message</span>
+      </gux-form-field-select>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
     describe('label-info', () => {
       it('should render component as expected', async () => {
         const html = `
