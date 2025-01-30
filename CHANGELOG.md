@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.114.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.113.1...v4.114.0) (2025-01-30)
+
+
+### Features
+
+* **form-field-checkbox:** adding aria attributes to help with error accessibility ([05f5ce2](https://github.com/MyPureCloud/genesys-spark/commit/05f5ce2cbef0bfaa53a60de57eacb0e282162383))
+
 ### [4.113.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.113.0...v4.113.1) (2025-01-29)
 
 ## [4.113.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.112.0...v4.113.0) (2025-01-28)
