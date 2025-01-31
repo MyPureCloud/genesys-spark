@@ -211,10 +211,14 @@ export function matchOption(
   matchString: string
 ): boolean {
   //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
-  return option.shadowRoot
-    .querySelector('slot')
-    ?.assignedNodes()[0]
+  return getOptionDefaultSlot(option)
     ?.textContent.trim()
     .toLowerCase()
     .startsWith(matchString.toLowerCase());
+}
+
+export function getOptionDefaultSlot(
+  option: ListboxOptionElement
+): Node | undefined {
+  return option.shadowRoot.querySelector('slot')?.assignedNodes()[0];
 }

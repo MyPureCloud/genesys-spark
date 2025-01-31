@@ -24,7 +24,8 @@ import translationResources from './i18n/en.json';
 
 import {
   getSearchOption,
-  setInitialActiveOption
+  setInitialActiveOption,
+  getOptionDefaultSlot
 } from '../gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
@@ -458,9 +459,7 @@ export class GuxDropdownMulti {
     if (textInputLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, textInput);
       if (option && this.filterType !== 'custom') {
-        const optionSlotTextContent = option.shadowRoot
-          .querySelector('slot')
-          ?.assignedNodes()[0]?.textContent;
+        const optionSlotTextContent = getOptionDefaultSlot(option)?.textContent;
         return optionSlotTextContent?.substring(textInputLength);
       }
 
@@ -479,20 +478,20 @@ export class GuxDropdownMulti {
     ) as JSX.Element;
   }
 
-  private getSelectedOptionText(): string | false {
+  private getSelectedOptionText(): JSX.Element | false {
     const selectedListboxOptionElement = this.getOptionElementByValue(
       this.value
     );
 
     if (selectedListboxOptionElement?.length) {
-      return selectedListboxOptionElement
-        .map(option => {
-          return option.shadowRoot
-            ?.querySelector('slot')
-            ?.assignedNodes()[0]
-            .textContent.trim();
-        })
-        .join(', ');
+      return [
+        selectedListboxOptionElement
+          .map(option => {
+            return getOptionDefaultSlot(option)?.textContent.trim();
+          })
+          .join(', '),
+        <div class="gux-sr-only">{this.placeholder}</div>
+      ] as JSX.Element;
     }
 
     return false;

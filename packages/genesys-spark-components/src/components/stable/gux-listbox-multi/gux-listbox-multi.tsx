@@ -25,7 +25,8 @@ import {
   setLastOptionActive,
   setNextOptionActive,
   setPreviousOptionActive,
-  hasActiveOption
+  hasActiveOption,
+  getOptionDefaultSlot
 } from '../gux-listbox/gux-listbox.service';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
@@ -257,9 +258,7 @@ export class GuxListboxMulti {
         listboxOption.value
       );
       if (this.filterType !== 'custom') {
-        listboxOption.filtered = !listboxOption.shadowRoot
-          .querySelector('slot')
-          ?.assignedNodes()[0]
+        listboxOption.filtered = !getOptionDefaultSlot(listboxOption)
           ?.textContent.trim()
           .toLowerCase()
           .startsWith(this.textInput.toLowerCase());
