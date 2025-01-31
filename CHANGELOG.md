@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.114.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.114.0...v4.114.1) (2025-01-31)
+
+
+### Bug Fixes
+
+* **form-field-text-like:** fixed input font ([c954e63](https://github.com/MyPureCloud/genesys-spark/commit/c954e6382b698398dea28cda986a6a4fd4246cf9))
+* **other:** dont expand shadow tokens ([2a25d17](https://github.com/MyPureCloud/genesys-spark/commit/2a25d17b845592bfb4c7c97c4ba0d8bfd53edd53))
+
 ## [4.114.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.113.1...v4.114.0) (2025-01-30)
 
 
