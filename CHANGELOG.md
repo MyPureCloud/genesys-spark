@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.114.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.114.1...v4.114.2) (2025-02-01)
+
+
+### Bug Fixes
+
+* **tabs:** fix vertical tabs scroll button regression ([14aa1b1](https://github.com/MyPureCloud/genesys-spark/commit/14aa1b1a43d2999259a6048acd1de6e7e25467b4))
+
 ### [4.114.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.114.0...v4.114.1) (2025-01-31)
 
 
