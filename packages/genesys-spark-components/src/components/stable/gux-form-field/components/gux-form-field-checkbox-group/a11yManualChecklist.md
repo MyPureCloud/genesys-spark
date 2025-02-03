@@ -1,6 +1,6 @@
-# gux-toast manual accessibility testing status
+# gux-form-field-checkbox-group manual accessibility testing status
 
-**Last Updated:** 2025-01-29T22:29:27.948Z
+**Last Updated:** 2025-01-16T11:30:31.187Z
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
 | ✅ | [1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) | - |

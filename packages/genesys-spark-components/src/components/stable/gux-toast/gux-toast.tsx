@@ -13,6 +13,7 @@ import { trackComponent } from '@utils/tracking/usage';
 
 import { GuxToastTypes } from './gux-toast.types';
 import { hasSlot } from '@utils/dom/has-slot';
+import { logWarn } from '@utils/error/log-error';
 
 /**
  * @slot icon - Required slot for toast type of action
@@ -53,6 +54,24 @@ export class GuxToast {
     this.hasSecondaryButton = hasSlot(this.root, 'secondary-button');
 
     this.hasLink = hasSlot(this.root, 'link');
+  }
+
+  componentDidLoad(): void {
+    this.checkAriaLive();
+  }
+
+  private checkAriaLive() {
+    let parent = this.root.parentElement;
+    while (parent) {
+      if (parent.hasAttribute('aria-live')) {
+        return;
+      }
+      parent = parent.parentElement;
+    }
+    logWarn(
+      this.root,
+      'gux-toast must have a parent element with an `aria-live` attribute'
+    );
   }
 
   private renderToastIcon(): JSX.Element {

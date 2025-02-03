@@ -17,11 +17,7 @@
   inline-size: calc(100vw - var(--gse-ui-sidePanel-shoud-minWidth));
   block-size: inherit;
   background-color: var(--gse-ui-sidePanel-backgroundColor);
-  box-shadow: var(--gse-ui-sidePanel-boxShadow-offsetX)
-    var(--gse-ui-sidePanel-boxShadow-offsetY)
-    var(--gse-ui-sidePanel-boxShadow-blur)
-    var(--gse-ui-sidePanel-boxShadow-spread)
-    var(--gse-ui-sidePanel-boxShadow-color);
+  box-shadow: var(--gse-ui-sidePanel-boxShadow);
 
   &.gux-side-panel-small {
     max-inline-size: var(--gse-ui-sidePanel-widthSize-sm);

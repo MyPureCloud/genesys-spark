@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.114.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.114.1...v4.114.2) (2025-02-01)
+
+
+### Bug Fixes
+
+* **tabs:** fix vertical tabs scroll button regression ([14aa1b1](https://github.com/MyPureCloud/genesys-spark/commit/14aa1b1a43d2999259a6048acd1de6e7e25467b4))
+
+### [4.114.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.114.0...v4.114.1) (2025-01-31)
+
+
+### Bug Fixes
+
+* **form-field-text-like:** fixed input font ([c954e63](https://github.com/MyPureCloud/genesys-spark/commit/c954e6382b698398dea28cda986a6a4fd4246cf9))
+* **other:** dont expand shadow tokens ([2a25d17](https://github.com/MyPureCloud/genesys-spark/commit/2a25d17b845592bfb4c7c97c4ba0d8bfd53edd53))
+
+## [4.114.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.113.1...v4.114.0) (2025-01-30)
+
+
+### Features
+
+* **form-field-checkbox:** adding aria attributes to help with error accessibility ([05f5ce2](https://github.com/MyPureCloud/genesys-spark/commit/05f5ce2cbef0bfaa53a60de57eacb0e282162383))
+
+### [4.113.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.113.0...v4.113.1) (2025-01-29)
+
+## [4.113.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.112.0...v4.113.0) (2025-01-28)
+
+
+### Features
+
+* **form-field-number:** allowing increment and decerment buttons to be accessible from a keyboard ([62d983d](https://github.com/MyPureCloud/genesys-spark/commit/62d983d2b1dd841c5c7615a1c1ac9a82dc668c22))
+* **rich-text-editor:** addition of color picker feature ([27d1180](https://github.com/MyPureCloud/genesys-spark/commit/27d1180640c92166a2944758215fd03ed68fda58))
+
 ## [4.112.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.111.6...v4.112.0) (2025-01-25)
 
 

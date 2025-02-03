@@ -29,9 +29,6 @@ export async function createThemes(sourceFolder, outputFolder) {
       {
         source: tokensets.map(tokenset => `${sourceFolder}/${tokenset}.json`),
         preprocessors: ['tokens-studio'],
-        expand: {
-          typesMap: expandTypesMap
-        },
         hooks: {
           transforms: {
             'color/gse': {
@@ -89,6 +86,21 @@ function getPlatform(prefix, theme, mode, type, format, outputFolder) {
       transforms: ['color/gse', 'name/gse'],
       prefix,
       buildPath: `${outputFolder}/${type}/`,
+      expand: {
+        typesMap: expandTypesMap,
+        // eslint-disable-next-line no-unused-vars
+        exclude: (token, config, platformConfig) => {
+          if (type === 'json') {
+            return false;
+          }
+
+          return [
+            // "border",
+            'shadow'
+            // "typography"
+          ].includes(token.type);
+        }
+      },
       files: [
         {
           destination: `${prefix}-core.${type}`,

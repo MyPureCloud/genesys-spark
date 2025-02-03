@@ -5,9 +5,5 @@
   padding: var(--gse-ui-calendarMenu-monthBody-padding);
   background-color: var(--gse-ui-calendarMenu-backgroundColor);
   border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
-  box-shadow: var(--gse-ui-calendarMenu-boxShadow-offsetX)
-    var(--gse-ui-calendarMenu-boxShadow-offsetY)
-    var(--gse-ui-calendarMenu-boxShadow-blur)
-    var(--gse-ui-calendarMenu-boxShadow-spread)
-    var(--gse-ui-calendarMenu-boxShadow-color);
+  box-shadow: var(--gse-ui-calendarMenu-boxShadow);
 }

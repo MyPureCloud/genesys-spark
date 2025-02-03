@@ -90,6 +90,21 @@ describe('gux-form-field-color', () => {
       });
     });
 
+    describe('error', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-color>
+        <input slot="input" type="color" name="e-1" value="#cc3ebe" />
+        <label slot="label">Default</label>
+        <span slot="error">This is an error message</span>
+      </gux-form-field-color>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
     it('should render the label info when provided', async () => {
       const html = `
             <gux-form-field-color>

@@ -23,7 +23,10 @@
   order: 0;
   inline-size: 100%;
   overflow: hidden;
+  font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
+  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   color: var(--gse-ui-formControl-input-populatedColor);
   text-overflow: ellipsis;
   background-color: var(--gse-ui-formControl-input-backgroundColor);

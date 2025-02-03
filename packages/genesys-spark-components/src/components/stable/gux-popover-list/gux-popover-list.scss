@@ -8,9 +8,7 @@
   padding-inline: 0; // TODO: COMUI-2257 - add missing token
   background-color: var(--gse-ui-popover-backgroundColor);
   border-radius: var(--gse-ui-popover-borderRadius);
-  box-shadow: var(--gse-ui-popover-boxShadow-offsetX)
-    var(--gse-ui-popover-boxShadow-offsetY) var(--gse-ui-popover-boxShadow-blur)
-    var(--gse-ui-popover-boxShadow-spread) var(--gse-ui-popover-boxShadow-color);
+  box-shadow: var(--gse-ui-popover-boxShadow);
 
   &.gux-hidden {
     display: none;

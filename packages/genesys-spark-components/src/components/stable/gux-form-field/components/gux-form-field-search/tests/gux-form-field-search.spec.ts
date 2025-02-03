@@ -90,6 +90,21 @@ describe('gux-form-field-search', () => {
       });
     });
 
+    describe('error', () => {
+      it('should render component as expected', async () => {
+        const html = `
+        <gux-form-field-search>
+        <input slot="input" type="search" name="e-1" />
+        <label slot="label">Default</label>
+        <span slot="error">This is an error message</span>
+      </gux-form-field-search>
+        `;
+        const page = await newSpecPage({ components, html, language });
+
+        expect(page.root).toMatchSnapshot();
+      });
+    });
+
     describe('label-info', () => {
       it('should render component as expected', async () => {
         const html = `
