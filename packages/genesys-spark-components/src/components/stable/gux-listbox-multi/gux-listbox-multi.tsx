@@ -257,7 +257,7 @@ export class GuxListboxMulti {
       listboxOption.selected = this.getSelectedValues().includes(
         listboxOption.value
       );
-      if (this.filterType !== 'custom') {
+      if (this.filterType !== 'custom' && this.filterType !== 'none') {
         listboxOption.filtered = !getOptionDefaultSlot(listboxOption)
           ?.textContent.trim()
           .toLowerCase()

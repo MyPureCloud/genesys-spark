@@ -459,7 +459,8 @@ export class GuxDropdownMulti {
     if (textInputLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, textInput);
       if (option && this.filterType !== 'custom') {
-        const optionSlotTextContent = getOptionDefaultSlot(option)?.textContent;
+        const optionSlotTextContent =
+          getOptionDefaultSlot(option)?.textContent.trim();
         return optionSlotTextContent?.substring(textInputLength);
       }
 
