@@ -82,14 +82,6 @@ export class GuxButtonMulti {
         this.isOpen = false;
         break;
       }
-      case 'ArrowDown':
-      case 'Enter':
-        if (composedPath.includes(this.dropdownButton)) {
-          event.preventDefault();
-          this.isOpen = true;
-          this.focusFirstItemInPopupList();
-        }
-        break;
     }
   }
 
