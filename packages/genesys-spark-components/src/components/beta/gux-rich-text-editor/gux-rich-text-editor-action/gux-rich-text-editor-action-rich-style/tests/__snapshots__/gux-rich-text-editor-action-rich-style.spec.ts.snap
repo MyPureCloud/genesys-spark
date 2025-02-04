@@ -4,9 +4,11 @@ exports[`gux-rich-text-editor-action-rich-style should build and render 1`] = `
 <gux-rich-text-editor-action-rich-style>
   <template shadowrootmode="open">
     <gux-popup exceedtargetwidth="" placement="bottom-start">
-      <gux-button-slot accent="ghost" slot="target">
+      <gux-button-slot accent="ghost" icon-only="" slot="target">
         <button aria-expanded="false" aria-haspopup="true" type="button">
-          <gux-icon icon-name="custom/chevron-down-small-regular" screenreader-text="Rich Style Dropdown" size="small"></gux-icon>
+          <div class="gux-target-display">
+            <gux-icon icon-name="custom/chevron-down-small-regular" screenreader-text="Rich Style Dropdown"></gux-icon>
+          </div>
         </button>
         <gux-tooltip-beta>
           <div slot="content">
