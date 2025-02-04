@@ -29,6 +29,7 @@ import {
   onRequiredChange,
   onMultipleChange
 } from '@utils/dom/on-attribute-change';
+import simulateNativeEvent from '@utils/dom/simulate-native-event';
 
 import componentResources from './i18n/en.json';
 
@@ -118,7 +119,6 @@ export class GuxFormFieldFileBeta {
 
   @Listen('guxremovefile')
   onGuxRemoveFile(event: CustomEvent): void {
-    console.log('guxremovefile', event);
     this.removeFile(event.detail);
   }
 
@@ -236,7 +236,13 @@ export class GuxFormFieldFileBeta {
       }
     }
 
-    this.input.files = dt.files;
+    this.modifyInputFiles(dt.files);
+  }
+
+  private modifyInputFiles(files: FileList): void {
+    this.input.files = files;
+    simulateNativeEvent(this.root, 'input');
+    simulateNativeEvent(this.root, 'change');
     forceUpdate(this.root);
   }
 
@@ -269,26 +275,16 @@ export class GuxFormFieldFileBeta {
       const item = newFileList[i];
 
       if (item.kind === 'file' && item.webkitGetAsEntry().isFile) {
-        console.log(item, item.webkitGetAsEntry());
         dt.items.add(item.getAsFile());
       }
     }
 
-    this.input.files = dt.files;
     this.dropContainer.classList.remove('gux-drag-over');
-    forceUpdate(this.root);
+
+    this.modifyInputFiles(dt.files);
   }
 
   private onDragOver(event: DragEvent): void {
-    event.preventDefault();
-    event.stopPropagation();
-
-    if (!this.disabled) {
-      this.dropContainer.classList.add('gux-drag-over');
-    }
-  }
-
-  private onDragEnter(event: DragEvent): void {
     event.preventDefault();
     event.stopPropagation();
 
@@ -339,7 +335,7 @@ export class GuxFormFieldFileBeta {
         }}
         onDrop={event => this.onDrop(event)}
         onDragOver={event => this.onDragOver(event)}
-        onDragEnter={event => this.onDragEnter(event)}
+        onDragEnter={event => this.onDragOver(event)}
         onDragLeave={event => this.onDragLeave(event)}
       >
         {this.dragAndDrop && (
