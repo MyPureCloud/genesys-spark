@@ -51,7 +51,11 @@ function registerObserver(
 
   store.set(key, observer);
 
-  observer.observe(getElement(key));
+  const element = getElement(key);
+
+  if (element instanceof Element) {
+    observer.observe(element);
+  }
 }
 
 function deregisterObserver(
