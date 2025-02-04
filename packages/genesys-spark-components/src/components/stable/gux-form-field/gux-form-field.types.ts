@@ -1,3 +1,3 @@
 export type GuxFormFieldLabelPosition = 'above' | 'beside' | 'screenreader';
 
-export type GuxFormFieldIndicatorMark = 'required' | 'optional';
+export type GuxFormFieldIndicatorMark = 'required' | 'optional' | 'none';
