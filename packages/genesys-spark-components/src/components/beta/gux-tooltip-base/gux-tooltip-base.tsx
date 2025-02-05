@@ -50,6 +50,7 @@ export class GuxTooltipBase {
 
   private cleanupUpdatePosition: () => void;
   private id: string = randomHTMLId('gux-tooltip-base');
+  private hideDelayTimeout: ReturnType<typeof setTimeout>;
 
   @Element()
   private root: HTMLElement;
@@ -96,6 +97,16 @@ export class GuxTooltipBase {
     if (event.key === 'Escape' && this.isShown) {
       this.hide();
     }
+  }
+
+  @Listen('pointerenter')
+  handlePointerenter() {
+    this.show();
+  }
+
+  @Listen('pointerleave')
+  handlePointerleave() {
+    this.hide();
   }
 
   /*
@@ -156,6 +167,7 @@ export class GuxTooltipBase {
     });
   }
   private show(): void {
+    clearTimeout(this.hideDelayTimeout);
     this.isShown = true;
     afterNextRender(() => {
       this.runUpdatePosition();
@@ -163,10 +175,13 @@ export class GuxTooltipBase {
   }
 
   private hide(): void {
-    if (this.cleanupUpdatePosition) {
-      this.cleanupUpdatePosition();
-    }
-    this.isShown = false;
+    this.hideDelayTimeout = setTimeout(() => {
+      this.isShown = false;
+
+      if (this.cleanupUpdatePosition) {
+        this.cleanupUpdatePosition();
+      }
+    }, 350);
   }
 
   private setForElement(): void {
