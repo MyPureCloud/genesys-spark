@@ -50,6 +50,7 @@ export class GuxTimePicker {
   private clockButton: HTMLButtonElement;
   private hourInputElement: HTMLInputElement;
   private minuteInputElement: HTMLInputElement;
+  private amPmElement: HTMLButtonElement;
   private i18n: GetI18nValue;
   private valueLastChange: GuxISOHourMinute;
 
@@ -175,6 +176,24 @@ export class GuxTimePicker {
 
     if (this.expanded) {
       this.focusRelevantItemInPopupList();
+    }
+  }
+
+  private onTargetClick(event: MouseEvent): void {
+    const clickPath = event.composedPath();
+    const clickedClockButton = clickPath.includes(this.clockButton);
+    const clickedAmPmButton = clickPath.includes(this.amPmElement);
+    const clickedHourInput = clickPath.includes(this.hourInputElement);
+    const clickedMinuteInput = clickPath.includes(this.minuteInputElement);
+
+    // Toggle the dropdown if you click in the padded area of the target container
+    if (
+      !clickedClockButton &&
+      !clickedAmPmButton &&
+      !clickedMinuteInput &&
+      !clickedHourInput
+    ) {
+      this.toggleDropdown();
     }
   }
 
@@ -340,6 +359,7 @@ export class GuxTimePicker {
           aria-label={this.i18n('toggleAmPM', { amOrPm: this.getAmPmString() })}
           onClick={(e: MouseEvent) => this.toggleAmPm(e)}
           onKeyDown={(e: KeyboardEvent) => this.onAmPmButtonKeyDown(e)}
+          ref={el => (this.amPmElement = el)}
         >
           <div
             class={{
@@ -403,7 +423,11 @@ export class GuxTimePicker {
 
   private renderTarget(): JSX.Element {
     return (
-      <div class="gux-input-time" slot="target">
+      <div
+        class="gux-input-time"
+        slot="target"
+        onClick={this.onTargetClick.bind(this)}
+      >
         {this.renderNumberInput()}
         {this.renderAmPmSelector()}
         {this.renderClockButton()}
