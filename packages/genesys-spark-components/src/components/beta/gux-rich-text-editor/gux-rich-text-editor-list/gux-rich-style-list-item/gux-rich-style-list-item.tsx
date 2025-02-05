@@ -75,7 +75,9 @@ export class GuxRichStyleListItem {
           tabIndex={-1}
           disabled={this.disabled}
         >
-          <slot></slot>
+          <gux-truncate max-lines={1}>
+            <slot></slot>
+          </gux-truncate>
         </button>
       </Host>
     ) as JSX.Element;
