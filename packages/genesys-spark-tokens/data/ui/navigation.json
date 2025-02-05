@@ -703,7 +703,7 @@
     },
     "panel": {
       "panel_title": {
-        "value": "{color.white}",
+        "value": "{foreground.system.custom_accents.light}",
         "type": "color"
       },
       "primary": {
@@ -711,7 +711,7 @@
         "type": "color"
       },
       "secondary": {
-        "value": "linear-gradient(358deg, #1B2B48 0.16%, #23395D 98.45%)",
+        "value": "linear-gradient(358deg, {background.container.global_nav.desktop.menu_panel.secondary_top-left_value} 0.16%, {background.container.global_nav.desktop.menu_panel.secondary_bottom-right_value} 98.45%)",
         "type": "color"
       }
     }
