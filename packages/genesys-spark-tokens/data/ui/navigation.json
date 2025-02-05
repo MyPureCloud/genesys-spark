@@ -417,33 +417,33 @@
       },
       "default": {
         "foreground_color": {
-          "value": "{foreground.interactive.primary.default}",
+          "value": "{foreground.interactive.global_nav.desktop.level2.default}",
           "type": "color"
         }
       },
       "hover": {
         "background_color": {
-          "value": "{background.interactive.primary.active}",
+          "value": "{background.interactive.global_nav.desktop.option.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.primary.active}",
+          "value": "{foreground.interactive.global_nav.desktop.level2.hover}",
           "type": "color"
         }
       },
       "selected": {
         "background_color": {
-          "value": "{background.interactive.primary.default}",
+          "value": "{background.interactive.global_nav.desktop.option.active_selected}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.primary.active}",
+          "value": "{foreground.interactive.global_nav.desktop.level2.selected}",
           "type": "color"
         }
       },
       "disabled": {
-        "background_color": {
-          "value": "{background.container.elevated.default}",
+        "foreground_color": {
+          "value": "{foreground.interactive.global_nav.desktop.level2.disabled}",
           "type": "color"
         }
       },
@@ -463,58 +463,77 @@
       },
       "selected_panel": {
         "background_color": {
-          "value": "{background.interactive.primary.hover}",
+          "value": "{background.interactive.global_nav.desktop.option.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.primary.hover}",
+          "value": "{foreground.interactive.global_nav.desktop.level2.hover}",
           "type": "color"
         }
       },
       "return": {
         "default": {
           "background_color": {
-            "value": "{background.interactive.primary.hover}",
+            "value": "{background.interactive.global_nav.desktop.return.default}",
             "type": "color"
           },
           "foreground_color": {
-            "value": "{foreground.interactive.primary.hover}",
+            "value": "{foreground.interactive.global_nav.desktop.return.default}",
             "type": "color"
           }
         },
         "hover": {
           "background_color": {
-            "value": "{background.interactive.primary.active}",
+            "value": "{background.interactive.global_nav.desktop.return.hover}",
             "type": "color"
           },
           "foreground_color": {
-            "value": "{foreground.interactive.primary.active}",
+            "value": "{foreground.interactive.global_nav.desktop.return.hover}",
             "type": "color"
           }
         },
         "selected": {
           "background_color": {
-            "value": "{background.interactive.primary.default}",
+            "value": "{background.interactive.global_nav.desktop.return.selected}",
             "type": "color"
           },
           "foreground_color": {
-            "value": "{foreground.interactive.primary.default}",
+            "value": "{foreground.interactive.global_nav.desktop.return.selected}",
             "type": "color"
           }
         }
       },
       "tree_view": {
         "bar": {
-          "value": "{border.container.divider}",
-          "type": "color",
-          "$extensions": {
-            "studio.tokens": {
-              "modify": {
-                "type": "alpha",
-                "value": ".3",
-                "space": "lch"
-              }
-            }
+          "value": "{border.container.global_nav.tree_view.bar}",
+          "type": "color"
+        }
+      },
+      "new_tab": {
+        "default": {
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.default}",
+            "type": "color"
+          }
+        },
+        "hover": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.new_tab.hover}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.hover}",
+            "type": "color"
+          }
+        },
+        "selected": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.new_tab.selected}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.selected}",
+            "type": "color"
           }
         }
       }
@@ -637,27 +656,27 @@
       "logo": {
         "value": "{foreground.container.special_accents.brand}",
         "type": "color",
-        "description": "Brand Orange from Spark 1.0"
+        "description": "Brand Orange"
       },
       "menu_button": {
         "closed": {
           "default": {
             "foreground_color": {
-              "value": "{background.interactive.primary.default}",
+              "value": "{foreground.interactive.global_nav.desktop.menu.closed_default}",
               "type": "color"
             }
           },
           "hover": {
             "background_color": {
-              "value": "{background.interactive.primary.hover}",
+              "value": "{background.interactive.global_nav.desktop.menu.closed_hover}",
               "type": "color"
             },
             "foreground_color_stroke": {
-              "value": "{background.interactive.primary.default}",
+              "value": "{foreground.interactive.global_nav.desktop.menu.closed_default}",
               "type": "color"
             },
             "foreground_color": {
-              "value": "{foreground.interactive.primary.default}",
+              "value": "{foreground.interactive.global_nav.desktop.menu.closed_hover}",
               "type": "color"
             }
           }
@@ -665,17 +684,17 @@
         "open": {
           "default": {
             "foreground_color_stroke": {
-              "value": "{foreground.interactive.primary.default}",
+              "value": "{foreground.interactive.global_nav.desktop.menu.open_default}",
               "type": "color"
             }
           },
           "hover": {
             "background_color": {
-              "value": "{background.interactive.primary.hover}",
+              "value": "{background.interactive.global_nav.desktop.menu.open_hover}",
               "type": "color"
             },
             "foreground_color": {
-              "value": "{foreground.interactive.primary.hover}",
+              "value": "{foreground.interactive.global_nav.desktop.menu.open_hover}",
               "type": "color"
             }
           }
@@ -688,7 +707,7 @@
         "type": "color"
       },
       "primary": {
-        "value": "linear-gradient(127deg, #23395D 3.19%, #3E5374 225.06%)",
+        "value": "linear-gradient(127deg, {background.container.global_nav.desktop.menu_panel.primary_top-left_value} 3.19%, {background.container.global_nav.desktop.menu_panel.primary_bottom-right_value} 225.06%)",
         "type": "color"
       },
       "secondary": {

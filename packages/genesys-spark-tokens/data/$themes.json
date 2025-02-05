@@ -1699,7 +1699,6 @@
       "global_nav.menu_option.hover.foreground_color": "91f62cab7be3e60940cb41915f8275f38d35a2d0",
       "global_nav.menu_option.selected.background_color": "4d0e44dfb23080cdb46e7c65e1df66d2bcea5837",
       "global_nav.menu_option.selected.foreground_color": "a8dc0260d6f65b34512303184968477d6a595298",
-      "global_nav.menu_option.disabled.background_color": "570d2f10b3048b9b59b7e53ec06b8ae2057169c0",
       "global_nav.menu_option.selected_panel.background_color": "ad02e41bb26fdd852ad751ca445441988033189c",
       "global_nav.menu_option.selected_panel.foreground_color": "0ae80fb3c2be274863dd68ad8cf25bd71fd11735",
       "global_nav.menu_option.return.default.background_color": "e890258456f34408d318261746be5e130eb4f27c",
@@ -1747,7 +1746,8 @@
       "progress_and_loading.spinner.base": "cb0858bc2e1ce3e673a944df93b7f3256b6e29e5",
       "progress_and_loading.text_color": "f8045493666bddb0be0c0c2b85a010ae6598f38f",
       "blank_state.icon_color": "03e52d060cdc4dcc32623015a44f91f0b07bffa8",
-      "blank_state.foreground_color": "f40fea58f608d3c2a0ffa2cd3028fe44621a01ff"
+      "blank_state.foreground_color": "f40fea58f608d3c2a0ffa2cd3028fe44621a01ff",
+      "global_nav.menu_option.disabled.foreground_color": "570d2f10b3048b9b59b7e53ec06b8ae2057169c0"
     },
     "group": ".ui"
   }

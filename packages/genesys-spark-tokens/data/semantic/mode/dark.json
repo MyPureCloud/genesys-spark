@@ -147,21 +147,38 @@
       },
       "global_nav": {
         "desktop": {
-          "level1": {
+          "option": {
             "hover": {
               "value": "{theme.background.custom_accents.global_nav.10d}",
               "type": "color",
-              "description": "The background color for the hover state of the navigation buttons in the menu panel level 1 of the global navigation."
+              "description": "The background color for the hover state of options in the menu panel of the global navigation."
             },
             "active_panel": {
               "value": "{theme.background.custom_accents.global_nav.20d}",
               "type": "color",
-              "description": "The background color for the active-panel state of the navigation buttons in the menu panel level 1 of the global navigation."
+              "description": "The background color for the active-panel state of the options in the menu panel of the global navigation."
             },
             "active_selected": {
               "value": "{theme.background.custom_accents.global_nav.30d}",
               "type": "color",
-              "description": "The background color for the active-selected state of the navigation buttons in the menu panel level 1 of the global navigation."
+              "description": "The background color for the active-selected state of the options in the menu panel of the global navigation."
+            }
+          },
+          "return": {
+            "default": {
+              "value": "{theme.background.custom_accents.global_nav.10d}",
+              "type": "color",
+              "description": "The background color for the default state of the navigation buttons in the return button of the global navigation."
+            },
+            "hover": {
+              "value": "{theme.background.custom_accents.global_nav.20d}",
+              "type": "color",
+              "description": "The background color for the hover state of the navigation buttons in the return button of the global navigation."
+            },
+            "selected": {
+              "value": "{theme.background.custom_accents.global_nav.30d}",
+              "type": "color",
+              "description": "The background color for the selected state of the return button in the menu panel of the global navigation."
             }
           },
           "menu": {
@@ -176,18 +193,6 @@
               "description": "The background color for the open-hover state of the navigation buttons in the menu button of the global navigation."
             }
           },
-          "level2": {
-            "hover": {
-              "value": "{theme.background.custom_accents.global_nav.10d}",
-              "type": "color",
-              "description": "The background color for the hover state of the navigation buttons in the menu panel level 2 of the global navigation."
-            },
-            "selected": {
-              "value": "{theme.background.custom_accents.global_nav.30d}",
-              "type": "color",
-              "description": "The background color for the active-selected state of the navigation buttons in the menu panel level 2 of the global navigation."
-            }
-          },
           "new_tab": {
             "hover": {
               "value": "{theme.background.custom_accents.global_nav.10d}",
@@ -198,18 +203,6 @@
               "value": "{theme.background.custom_accents.global_nav.30d}",
               "type": "color",
               "description": "The background color for the selected state of the navigation buttons in the new tab button of the global navigation."
-            }
-          },
-          "return": {
-            "default": {
-              "value": "{theme.background.custom_accents.global_nav.10d}",
-              "type": "color",
-              "description": "The background color for the default state of the navigation buttons in the return button of the global navigation."
-            },
-            "hover": {
-              "value": "{theme.background.custom_accents.global_nav.30d}",
-              "type": "color",
-              "description": "The background color for the hover state of the navigation buttons in the return button of the global navigation."
             }
           }
         }
@@ -860,6 +853,11 @@
               "value": "{theme.foreground.special_accents.global_nav.desktop.10d}",
               "type": "color",
               "description": "The foreground color for the hover state of the return button of the global navigation."
+            },
+            "selected": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10d}",
+              "type": "color",
+              "description": "The foreground color for the selected state of the return button of the global navigation."
             }
           }
         }
