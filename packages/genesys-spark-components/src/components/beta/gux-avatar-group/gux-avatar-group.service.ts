@@ -139,14 +139,24 @@ function getGroupItems(element: Element): Element[] {
   ) as Element;
 
   const slottedItems = Array.from(
-    group.querySelectorAll('gux-avatar-group-item-beta')
+    group.querySelectorAll(
+      'gux-avatar-group-item-beta, gux-avatar-group-add-item-beta'
+    )
   ).filter(child => !isHidden(child)) as GuxAvatarGroupChild[];
 
   const overflow = group.shadowRoot.querySelector(
     'gux-avatar-overflow-beta'
   ) as HTMLGuxAvatarOverflowBetaElement;
+
   if (overflow) {
+    const addToGroup = group.shadowRoot.querySelector(
+      'gux-avatar-group-add-item-beta'
+    ) as HTMLGuxAvatarGroupAddItemBetaElement;
+
     slottedItems.push(overflow);
+    if (addToGroup) {
+      slottedItems.push(addToGroup);
+    }
   }
 
   return slottedItems as GuxAvatarGroupChild[];

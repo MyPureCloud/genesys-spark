@@ -49,11 +49,60 @@ will be displayed for each group item on focus or hover.
   ></gux-avatar-group-item-beta>
 </gux-avatar-group-beta>
 
+<h4>Add to Group</h4>
+Slot a <mark>gux-avatar-group-add-item-beta</mark> tag at the end to display add
+to group option
+
+<gux-avatar-group-beta>
+  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Elliot Fitzgerald"
+    onclick="notify(event, 2)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Greg Hayes"
+    onclick="notify(event, 3)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Iseult Jones"
+    onclick="notify(event, 4)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="John King"
+    onclick="notify(event, 5)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-add-item-beta></gux-avatar-group-add-item-beta>
+</gux-avatar-group-beta>
+
+<gux-avatar-group-beta quantity="2">
+  <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
+    <img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy"
+  /></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Elliot Fitzgerald"
+    onclick="notify(event, 2)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Greg Hayes"
+    onclick="notify(event, 3)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="Iseult Jones"
+    onclick="notify(event, 4)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-item-beta
+    name="John King"
+    onclick="notify(event, 5)"
+  ></gux-avatar-group-item-beta>
+  <gux-avatar-group-add-item-beta></gux-avatar-group-add-item-beta>
+</gux-avatar-group-beta>
+
 <h3>Properties</h3>
 <h4>quantity</h4>
 The quantity property indicates the number of group items that will be displayed
-outside of the overflow menu. The minimum is 1 and the maximum is 7 (7 is also
-the default amount).
+outside of the overflow menu.
 
 <gux-avatar-group-beta quantity="1">
   <gux-avatar-group-item-beta name="Conor Darcy" onclick="notify(event, 1)">
