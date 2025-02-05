@@ -1,4 +1,12 @@
-import { Component, Element, h, JSX, Listen, Method } from '@stencil/core';
+import {
+  AttachInternals,
+  Component,
+  Element,
+  h,
+  JSX,
+  Listen,
+  Method
+} from '@stencil/core';
 
 import { menuNavigation } from '../gux-menu.common';
 
@@ -9,13 +17,20 @@ import { menuNavigation } from '../gux-menu.common';
 @Component({
   styleUrl: 'gux-menu-option.scss',
   tag: 'gux-menu-option',
-  shadow: true
+  shadow: true,
+  formAssociated: true
 })
 export class GuxMenuOption {
   private buttonElement: HTMLButtonElement;
 
+  @AttachInternals() internals: ElementInternals;
+
   @Element()
   private root: HTMLElement;
+
+  connectedCallback(): void {
+    this.internals.role = 'menuitem';
+  }
 
   /**
    * Focus on the components button element
@@ -52,7 +67,6 @@ export class GuxMenuOption {
       <button
         type="button"
         class="gux-menu-option-button"
-        role="menuitem"
         aria-haspopup="false"
         tabIndex={-1}
         ref={el => (this.buttonElement = el)}
