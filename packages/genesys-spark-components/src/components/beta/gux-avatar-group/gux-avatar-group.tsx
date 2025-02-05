@@ -91,11 +91,15 @@ export class GuxAvatarGroup {
   }
 
   private hideCurrentTooltip(event: Event) {
-    const target = event.target as HTMLGuxAvatarGroupItemBetaElement;
+    const target = event.target as HTMLElement;
     const groupItems = this.getGroupItems();
+    const addToGroup = this.root.shadowRoot.querySelector(
+      'gux-avatar-group-add-item-beta'
+    ) as HTMLGuxAvatarGroupAddItemBetaElement;
+    const itemsWithTooltip = [...groupItems, addToGroup];
 
-    const focusedChild = groupItems.find(child =>
-      child.matches(':focus-within')
+    const focusedChild = itemsWithTooltip.find(child =>
+      child?.matches(':focus-within')
     );
 
     if (focusedChild && focusedChild !== target) {
@@ -123,7 +127,10 @@ export class GuxAvatarGroup {
       );
     }
 
-    const validTagNames = ['GUX-AVATAR-GROUP-ITEM-BETA'];
+    const validTagNames = [
+      'GUX-AVATAR-GROUP-ITEM-BETA',
+      'GUX-AVATAR-GROUP-ADD-ITEM-BETA'
+    ];
     const invalidElements = childElements.some(
       el => !validTagNames.includes(el.tagName)
     );
@@ -139,7 +146,9 @@ export class GuxAvatarGroup {
   private renderOverflowMenu(): JSX.Element | null {
     if (this.root.children.length > this.quantity) {
       const overflowItems = this.processedGroupItems.filter(
-        item => item.isOverflow
+        item =>
+          item.isOverflow &&
+          item.groupItem.tagName === 'GUX-AVATAR-GROUP-ITEM-BETA'
       );
 
       return (
@@ -166,11 +175,25 @@ export class GuxAvatarGroup {
     }
   }
 
+  private renderAddToGroup(): JSX.Element | null {
+    const hasAddToGroup = this.processedGroupItems.find(
+      item => item.groupItem.tagName === 'GUX-AVATAR-GROUP-ADD-ITEM-BETA'
+    );
+    if (hasAddToGroup && this.root.children.length > this.quantity) {
+      return (
+        <gux-avatar-group-add-item-beta class="gux-add-item-overflow"></gux-avatar-group-add-item-beta>
+      ) as JSX.Element;
+    } else {
+      return null;
+    }
+  }
+
   render(): JSX.Element {
     return (
       <Host role="menu" onClick={this.handleClick.bind(this)}>
         <slot></slot>
         {this.renderOverflowMenu()}
+        {this.renderAddToGroup()}
       </Host>
     ) as JSX.Element;
   }
