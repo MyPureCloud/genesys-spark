@@ -4,7 +4,6 @@
   display: none;
   inline-size: max-content;
   max-inline-size: 250px;
-  pointer-events: none;
   border-radius: var(--gse-ui-tooltip-borderRadius);
   box-shadow: var(--gse-ui-tooltip-boxShadow);
   opacity: 0;
@@ -14,7 +13,6 @@
   display: block;
   animation-name: fade-in;
   animation-duration: 250ms;
-  animation-delay: 350ms;
   animation-fill-mode: forwards;
 }
 
@@ -30,6 +28,7 @@
   font-weight: var(--gse-ui-tooltip-text-fontWeight);
   line-height: var(--gse-ui-tooltip-text-lineHeight);
   color: var(--gse-ui-tooltip-light-foregroundColor);
+  pointer-events: none;
   background-color: var(--gse-ui-tooltip-light-backgroundColor);
   border: var(--gse-ui-tooltip-light-border-width)
     var(--gse-ui-tooltip-light-border-style)
