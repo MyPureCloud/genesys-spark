@@ -71,6 +71,7 @@
  - [gux-rich-text-editor-action-link](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
  - [gux-rich-text-editor-action-rich-style](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
  - [gux-rich-text-editor-action-text-highlight](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-text-highlight)
+ - [gux-rich-text-editor-sub-list](../../beta/gux-rich-text-editor/gux-rich-text-editor-list/gux-rich-text-editor-sub-list)
  - [gux-side-panel-heading](../../beta/gux-side-panel/components/gux-side-panel-heading)
  - [gux-sort-control](../gux-table/gux-sort-control)
  - [gux-submenu](../gux-flyout-menu/gux-menu/gux-submenu)
@@ -141,6 +142,7 @@ graph TD;
   gux-rich-text-editor-action-link --> gux-icon
   gux-rich-text-editor-action-rich-style --> gux-icon
   gux-rich-text-editor-action-text-highlight --> gux-icon
+  gux-rich-text-editor-sub-list --> gux-icon
   gux-side-panel-heading --> gux-icon
   gux-sort-control --> gux-icon
   gux-submenu --> gux-icon

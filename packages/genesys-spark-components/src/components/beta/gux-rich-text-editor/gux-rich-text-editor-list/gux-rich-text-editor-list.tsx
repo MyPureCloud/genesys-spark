@@ -20,12 +20,13 @@ import {
 } from '../../../stable/gux-list/gux-list.service';
 
 /**
- * @slot - collection of gux-rich-style-list-item or gux-rich-highlight-list-item elements.
+ * @slot - collection of gux-rich-style-list-item, gux-rich-highlight-list-item or gux-rich-text-editor-sub-list elements.
  */
 
 const validFocusableItems = [
   'gux-rich-style-list-item',
-  'gux-rich-highlight-list-item'
+  'gux-rich-highlight-list-item',
+  'gux-rich-text-editor-sub-list'
 ];
 
 @Component({

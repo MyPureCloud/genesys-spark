@@ -35,6 +35,9 @@ export class GuxRichTextEditorActionRichStyle {
   @Prop({ mutable: true })
   value: string;
 
+  @Prop()
+  isMenu: boolean = false;
+
   @State()
   expanded: boolean = false;
 
@@ -184,6 +187,33 @@ export class GuxRichTextEditorActionRichStyle {
     }
   }
 
+  private renderMenu(): JSX.Element {
+    if (this.isMenu) {
+      return (
+        <gux-icon
+          class="gux-menu"
+          size="small"
+          icon-name="fa/ellipsis-vertical-regular"
+          screenreader-text={this.i18n('additionalActions')}
+        ></gux-icon>
+      );
+    } else {
+      return (
+        <div class="gux-target-display">
+          {this.renderTargetDisplay()}
+          <gux-icon
+            icon-name={
+              this.expanded
+                ? 'custom/chevron-up-small-regular'
+                : 'custom/chevron-down-small-regular'
+            }
+            screenreader-text={this.i18n('richStyleDropdown')}
+          ></gux-icon>
+        </div>
+      );
+    }
+  }
+
   private renderListItem(item: HTMLGuxRichTextEditorListElement): JSX.Element {
     return (
       <gux-truncate max-lines={1}>{item.textContent}</gux-truncate>
@@ -194,7 +224,11 @@ export class GuxRichTextEditorActionRichStyle {
     if (!this.disabled && !this.expanded) {
       return (
         <gux-tooltip-beta>
-          <div slot="content">{this.i18n('richStyle')}</div>
+          <div slot="content">
+            {this.isMenu
+              ? this.i18n('additionalActions')
+              : this.i18n('richStyle')}
+          </div>
         </gux-tooltip-beta>
       ) as JSX.Element;
     }
@@ -240,7 +274,7 @@ export class GuxRichTextEditorActionRichStyle {
 
   private renderTarget(): JSX.Element {
     return (
-      <gux-button-slot accent="ghost" slot="target">
+      <gux-button-slot accent="ghost" slot="target" icon-only>
         <button
           type="button"
           ref={el => (this.actionButton = el)}
@@ -250,16 +284,7 @@ export class GuxRichTextEditorActionRichStyle {
           aria-haspopup="true"
           aria-expanded={this.expanded.toString()}
         >
-          {this.renderTargetDisplay()}
-          <gux-icon
-            size="small"
-            icon-name={
-              this.expanded
-                ? 'custom/chevron-up-small-regular'
-                : 'custom/chevron-down-small-regular'
-            }
-            screenreader-text={this.i18n('richStyleDropdown')}
-          ></gux-icon>
+          {this.renderMenu()}
         </button>
         {this.renderTooltip()}
       </gux-button-slot>

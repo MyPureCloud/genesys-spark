@@ -1,4 +1,12 @@
-import { Component, h, Element, Prop, Host, Listen } from '@stencil/core';
+import {
+  Component,
+  h,
+  Element,
+  Prop,
+  Host,
+  Listen,
+  Method
+} from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { getClosestElement } from '@utils/dom/get-closest-element';
 
@@ -12,14 +20,23 @@ import { getClosestElement } from '@utils/dom/get-closest-element';
   shadow: { delegatesFocus: true }
 })
 export class GuxRichStyleListItem {
+  private richStyleElement: HTMLButtonElement;
+
   @Element()
   root: HTMLGuxRichStyleListItemElement;
 
   @Prop()
   disabled: boolean = false;
 
-  @Prop()
+  // Reflect is used here so we can access the value in the light DOM for executing actions.
+  @Prop({ reflect: true })
   value: string;
+
+  @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
+  async guxFocus(): Promise<void> {
+    this.richStyleElement.focus();
+  }
 
   @Listen('mouseup')
   onMouseUp(): void {
@@ -52,8 +69,15 @@ export class GuxRichStyleListItem {
   render(): JSX.Element {
     return (
       <Host role="listitem">
-        <button type="button" tabIndex={-1} disabled={this.disabled}>
-          <slot></slot>
+        <button
+          type="button"
+          ref={el => (this.richStyleElement = el)}
+          tabIndex={-1}
+          disabled={this.disabled}
+        >
+          <gux-truncate max-lines={1}>
+            <slot></slot>
+          </gux-truncate>
         </button>
       </Host>
     ) as JSX.Element;

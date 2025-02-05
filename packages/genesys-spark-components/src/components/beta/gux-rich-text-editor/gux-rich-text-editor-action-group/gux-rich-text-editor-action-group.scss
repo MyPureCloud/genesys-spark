@@ -3,6 +3,10 @@
   flex-direction: row;
 }
 
+:host(.gux-hidden) {
+  display: none;
+}
+
 .gux-action-group-container {
   display: flex;
   flex-direction: row;
