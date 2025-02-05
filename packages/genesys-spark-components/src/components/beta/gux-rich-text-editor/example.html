@@ -654,6 +654,7 @@ const actionsMenu = {
     'mineral': () => editor.chain().focus().toggleHighlight({ color: '#BCD6F0' }).run(),
     'island': () => editor.chain().focus().toggleHighlight({ color: '#81CBE5' }).run(),
     'inherit': () => editor.chain().focus().toggleHighlight({ color: '#808000' }).run(),
+    'noHighlightAction': () => editor.chain().focus().unsetHighlight().run()
   };
 
 //Listen for the guxToggleAction event and execute the relevant action based on the actionsMenu list.

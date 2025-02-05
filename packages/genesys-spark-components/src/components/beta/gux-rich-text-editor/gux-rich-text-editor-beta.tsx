@@ -220,6 +220,14 @@ export class GuxRichTextEditor {
                   </gux-rich-style-list-item>
                 );
               })}
+              <gux-rich-style-list-item
+                onClick={() => this.guxToggleAction.emit('noHighlightAction')}
+                value="noHighlight"
+              >
+                <gux-truncate max-lines={1}>
+                  {this.i18n('noHighlight')}
+                </gux-truncate>
+              </gux-rich-style-list-item>
             </gux-rich-text-editor-sub-list>
           )}
         </gux-rich-text-editor-action-rich-style>
