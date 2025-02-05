@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.115.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.114.2...v4.115.0) (2025-02-05)
+
+
+### Features
+
+* **form-field-label-indicator:** addd none variant ([0f1a95f](https://github.com/MyPureCloud/genesys-spark/commit/0f1a95fe80771e3efb6637c5948722dbfa791f1f))
+
 ### [4.114.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.114.1...v4.114.2) (2025-02-01)
 
 
