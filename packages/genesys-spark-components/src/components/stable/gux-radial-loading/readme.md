@@ -22,6 +22,7 @@ Otherwise, if the loading is unknown, and no percentage is provided, it instead 
 
  - [gux-dropdown](../gux-dropdown)
  - [gux-dropdown-multi](../gux-dropdown-multi)
+ - [gux-file-list-item](../gux-form-field/components/gux-form-field-file-beta/components/gux-file-list-item)
  - [gux-form-field-text-like](../gux-form-field/components/gux-form-field-text-like)
  - [gux-listbox](../gux-listbox)
  - [gux-listbox-multi](../gux-listbox-multi)
@@ -34,6 +35,7 @@ Otherwise, if the loading is unknown, and no percentage is provided, it instead 
 graph TD;
   gux-dropdown --> gux-radial-loading
   gux-dropdown-multi --> gux-radial-loading
+  gux-file-list-item --> gux-radial-loading
   gux-form-field-text-like --> gux-radial-loading
   gux-listbox --> gux-radial-loading
   gux-listbox-multi --> gux-radial-loading
