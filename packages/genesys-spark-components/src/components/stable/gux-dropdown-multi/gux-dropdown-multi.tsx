@@ -24,7 +24,8 @@ import translationResources from './i18n/en.json';
 
 import {
   getSearchOption,
-  setInitialActiveOption
+  setInitialActiveOption,
+  getOptionDefaultSlot
 } from '../gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
@@ -347,7 +348,7 @@ export class GuxDropdownMulti {
   }
 
   private getOptionElementByValue(value: string): HTMLGuxOptionElement[] {
-    const listboxOptionElements = Array.from(
+    const listboxOptionElements: HTMLGuxOptionElement[] = Array.from(
       this.root.querySelectorAll('gux-option-multi')
     );
     const values = value ? value.split(',') : undefined;
@@ -458,9 +459,8 @@ export class GuxDropdownMulti {
     if (textInputLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, textInput);
       if (option && this.filterType !== 'custom') {
-        const optionSlotTextContent = option.querySelector(
-          '[gux-slot-container]'
-        )?.textContent;
+        const optionSlotTextContent =
+          getOptionDefaultSlot(option)?.textContent.trim();
         return optionSlotTextContent?.substring(textInputLength);
       }
 
@@ -471,10 +471,31 @@ export class GuxDropdownMulti {
   private renderTargetDisplay(): JSX.Element {
     return (
       <div class="gux-placeholder">
-        {this.placeholder || this.i18n('noSelection')}
         {this.getSrSelectedText()}
+        {this.getSelectedOptionText() ||
+          this.placeholder ||
+          this.i18n('noSelection')}
       </div>
     ) as JSX.Element;
+  }
+
+  private getSelectedOptionText(): JSX.Element | false {
+    const selectedListboxOptionElement = this.getOptionElementByValue(
+      this.value
+    );
+
+    if (selectedListboxOptionElement?.length) {
+      return [
+        selectedListboxOptionElement
+          .map(option => {
+            return getOptionDefaultSlot(option)?.textContent.trim();
+          })
+          .join(', '),
+        <div class="gux-sr-only">{this.placeholder}</div>
+      ] as JSX.Element;
+    }
+
+    return false;
   }
 
   private getSrSelectedText(): JSX.Element {

@@ -213,7 +213,7 @@ export class GuxListbox {
   componentWillRender(): void {
     this.listboxOptions.forEach(listboxOption => {
       listboxOption.selected = listboxOption.value === this.value;
-      if (this.filterType !== 'custom') {
+      if (this.filterType !== 'custom' && this.filterType !== 'none') {
         listboxOption.filtered = !matchOption(listboxOption, this.filter);
       }
     });

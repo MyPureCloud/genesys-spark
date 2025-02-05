@@ -26,7 +26,8 @@ import translationResources from './i18n/en.json';
 import {
   getSearchOption,
   getListOptions,
-  setInitialActiveOption
+  setInitialActiveOption,
+  getOptionDefaultSlot
 } from '../gux-listbox/gux-listbox.service';
 import {
   ListboxOptionElement,
@@ -387,7 +388,9 @@ export class GuxDropdown {
       const option = getSearchOption(this.listboxElement, filter);
       if (option && this.filterType !== 'custom') {
         //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
-        return option.textContent.trim().substring(filterLength);
+        const optionSlotTextContent =
+          getOptionDefaultSlot(option)?.textContent.trim();
+        return optionSlotTextContent?.substring(filterLength);
       }
     }
 
