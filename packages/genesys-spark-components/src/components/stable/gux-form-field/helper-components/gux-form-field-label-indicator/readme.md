@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                       | Default      |
-| ---------- | ---------- | ----------- | -------------------------- | ------------ |
-| `required` | `required` |             | `boolean`                  | `false`      |
-| `variant`  | `variant`  |             | `"optional" \| "required"` | `'required'` |
+| Property   | Attribute  | Description | Type                                 | Default      |
+| ---------- | ---------- | ----------- | ------------------------------------ | ------------ |
+| `required` | `required` |             | `boolean`                            | `false`      |
+| `variant`  | `variant`  |             | `"none" \| "optional" \| "required"` | `'required'` |
 
 
 ## Dependencies

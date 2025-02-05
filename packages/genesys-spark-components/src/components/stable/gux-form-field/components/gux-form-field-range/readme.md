@@ -10,7 +10,7 @@
 | Property         | Attribute          | Description                                                                                                                                                                                                                                                                     | Type                                    | Default      |
 | ---------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------ |
 | `displayUnits`   | `display-units`    |                                                                                                                                                                                                                                                                                 | `string`                                | `undefined`  |
-| `indicatorMark`  | `indicator-mark`   | Field indicator mark which can show *, (optional) or blank Defaults to required. When set to required, the component will display * for required fields and blank for optional When set to optional, the component will display (optional) for optional and blank for required. | `"optional" \| "required"`              | `'required'` |
+| `indicatorMark`  | `indicator-mark`   | Field indicator mark which can show *, (optional) or blank Defaults to required. When set to required, the component will display * for required fields and blank for optional When set to optional, the component will display (optional) for optional and blank for required. | `"none" \| "optional" \| "required"`    | `'required'` |
 | `labelPosition`  | `label-position`   |                                                                                                                                                                                                                                                                                 | `"above" \| "beside" \| "screenreader"` | `undefined`  |
 | `valueInTooltip` | `value-in-tooltip` |                                                                                                                                                                                                                                                                                 | `boolean`                               | `undefined`  |
 
@@ -30,7 +30,7 @@
 
 ### Depends on
 
-- [gux-form-field-label-indicator](../../helper-components/gux-form-field-optional-indicator)
+- [gux-form-field-label-indicator](../../helper-components/gux-form-field-label-indicator)
 - [gux-tooltip-base-beta](../../../../beta/gux-tooltip-base)
 - [gux-icon](../../../gux-icon)
 
