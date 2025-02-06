@@ -11,13 +11,24 @@
   inline-size: 100%;
   background-color: var(--gse-ui-advancedTabs-set-backgroundColor);
 
+  button {
+    block-size: var(--gse-ui-button-default-height);
+    padding: var(--gse-ui-button-default-paddingIconOnly);
+    border-radius: var(--gse-ui-button-borderRadius);
+  }
+
+  [slot='add-tab'] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .gux-scrollable-section {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
-    inline-size: 100%;
     overflow-x: auto;
     scrollbar-width: none;
     border-block-end: var(--gse-ui-advancedTabs-item-divider-border-width)
