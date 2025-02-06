@@ -343,7 +343,7 @@ export class GuxFormFieldFileBeta {
         )}
 
         <div class="gux-proxy-button">
-          <gux-button-slot>
+          <gux-button-slot accent="tertiary">
             <button
               tabIndex={-1}
               type="button"
