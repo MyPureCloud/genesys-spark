@@ -156,11 +156,11 @@
               "type": "color"
             },
             "20": {
-              "value": "{color.genesys_navy.600}",
+              "value": "{color.genesys_navy.700}",
               "type": "color"
             },
             "30": {
-              "value": "{color.genesys_navy.700}",
+              "value": "{color.genesys_navy.800}",
               "type": "color"
             },
             "40": {
