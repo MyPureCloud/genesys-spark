@@ -97,12 +97,12 @@
   "gux-form-field-input-clear-button": {
     "clear": "Clear"
   },
+  "gux-form-field-label-indicator": {
+    "optional": "optional"
+  },
   "gux-form-field-number": {
     "increment": "Increment",
     "decrement": "Decrement"
-  },
-  "gux-form-field-optional-indicator": {
-    "optional": "optional"
   },
   "gux-form-field-phone": {
     "required": "Required"
