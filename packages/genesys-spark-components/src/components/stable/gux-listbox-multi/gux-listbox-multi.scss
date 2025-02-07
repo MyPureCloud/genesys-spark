@@ -3,7 +3,7 @@
   display: block;
   max-block-size: var(--gse-ui-menu-maxHeight);
   padding: var(--gse-ui-menu-padding);
-  overflow-y: auto;
+  overflow: hidden auto;
   scrollbar-color: var(--gse-ui-menu-scrollbar-foregroundColor);
   background: var(--gse-ui-menu-backgroundColor);
   border: var(--gse-ui-menu-border-width) var(--gse-ui-menu-border-style)
