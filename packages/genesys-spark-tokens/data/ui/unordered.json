@@ -952,5 +952,23 @@
       "type": "color",
       "description": "Created to support the legacy border focus token"
     }
+  },
+  "status_glyph": {
+    "negative": {
+      "value": "{foreground.system.error.accent}",
+      "type": "color"
+    },
+    "positive": {
+      "value": "{foreground.system.success.accent}",
+      "type": "color"
+    },
+    "neutral": {
+      "value": "{foreground.system.warning.accent}",
+      "type": "color"
+    },
+    "information": {
+      "value": "{foreground.system.info.accent}",
+      "type": "color"
+    }
   }
 }

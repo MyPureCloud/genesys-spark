@@ -641,6 +641,12 @@
       "style": "solid"
     }
   },
+  "status_glyph": {
+    "negative": "#b51b37",
+    "positive": "#079167",
+    "neutral": "#9a7b25",
+    "information": "#3d538f"
+  },
   "copy_to_clipboard": {
     "label": {
       "active": {
@@ -2114,6 +2120,36 @@
       "count-display": {
         "gap": "4px"
       }
+    },
+    "inline_dropdown": {
+      "gap": "12px",
+      "text": "#2a2a2e",
+      "hover": "#d5def7",
+      "active": "#adbff0",
+      "border_radius": "4px",
+      "label": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "400",
+        "fontSize": "12px",
+        "lineHeight": "18px"
+      },
+      "chevron": {
+        "hover": "#19327a",
+        "active": "#102251",
+        "default": "#4f5157"
+      }
+    },
+    "status_indicator": {
+      "gap": "8px",
+      "hover": "#adbff0",
+      "border_radius": "4px",
+      "label": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "400",
+        "fontSize": "12px",
+        "lineHeight": "18px"
+      },
+      "text": "#2a2a2e"
     }
   },
   "avatar": {
