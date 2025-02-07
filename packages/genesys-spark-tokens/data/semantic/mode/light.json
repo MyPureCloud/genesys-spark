@@ -1151,62 +1151,71 @@
       }
     },
     "numerical_data": {
-      "level1": {
-        "value": "{theme.charts.numerical_data.level1}",
-        "type": "color",
-        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
+      "single_color": {
+        "level1": {
+          "value": "{theme.charts.numerical_data.single_color.level1}",
+          "type": "color",
+          "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
+        },
+        "level2": {
+          "value": "{theme.charts.numerical_data.single_color.level2}",
+          "type": "color",
+          "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
+        },
+        "level3": {
+          "value": "{theme.charts.numerical_data.single_color.level3}",
+          "type": "color",
+          "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
+        },
+        "level4": {
+          "value": "{theme.charts.numerical_data.single_color.level4}",
+          "type": "color",
+          "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
+        },
+        "level5": {
+          "value": "{theme.charts.numerical_data.single_color.level5}",
+          "type": "color",
+          "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
+        },
+        "level6": {
+          "value": "{theme.charts.numerical_data.single_color.level6}",
+          "type": "color",
+          "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
+        },
+        "level7": {
+          "value": "{theme.charts.numerical_data.single_color.level7}",
+          "type": "color",
+          "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
+        },
+        "level8": {
+          "value": "{theme.charts.numerical_data.single_color.level8}",
+          "type": "color",
+          "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
+        },
+        "level9": {
+          "value": "{theme.charts.numerical_data.single_color.level9}",
+          "type": "color",
+          "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
+        },
+        "level10": {
+          "value": "{theme.charts.numerical_data.single_color.level10}",
+          "type": "color",
+          "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
+        }
       },
-      "level2": {
-        "value": "{theme.charts.numerical_data.level2}",
-        "type": "color",
-        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
-      },
-      "level3": {
-        "value": "{theme.charts.numerical_data.level3}",
-        "type": "color",
-        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
-      },
-      "level4": {
-        "value": "{theme.charts.numerical_data.level4}",
-        "type": "color",
-        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
-      },
-      "level5": {
-        "value": "{theme.charts.numerical_data.level5}",
-        "type": "color",
-        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
-      },
-      "level6": {
-        "value": "{theme.charts.numerical_data.level6}",
-        "type": "color",
-        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
-      },
-      "level7": {
-        "value": "{theme.charts.numerical_data.level7}",
-        "type": "color",
-        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
-      },
-      "level8": {
-        "value": "{theme.charts.numerical_data.level8}",
-        "type": "color",
-        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
-      },
-      "level9": {
-        "value": "{theme.charts.numerical_data.level9}",
-        "type": "color",
-        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
-      },
-      "level10": {
-        "value": "{theme.charts.numerical_data.level10}",
-        "type": "color",
-        "description": "We use this color to identify a specific range of data in numerical charts like heatmaps."
-      }
-    },
-    "placeholder": {
-      "default": {
-        "value": "{theme.charts.foreground.20}",
-        "type": "color",
-        "description": "We use this color for placeholder values in charts."
+      "multi_color": {
+        "green": {
+          "value": "{theme.charts.numerical_data.multi_color.green}",
+          "type": "color"
+        },
+        "red": {
+          "value": "{theme.charts.numerical_data.multi_color.red}",
+          "type": "color"
+        },
+        "yellow": {
+          "value": "{theme.charts.numerical_data.multi_color.yellow}",
+          "type": "color"
+        }
       }
     },
     "foreground": {
@@ -1243,6 +1252,60 @@
           "type": "color",
           "description": "The color for chart's grids on the hover state."
         }
+      }
+    },
+    "target_line": {
+      "default": {
+        "value": "{theme.charts.target_line.10}",
+        "type": "color"
+      }
+    },
+    "point_fill": {
+      "default": {
+        "value": "{theme.charts.fill.10}",
+        "type": "color"
+      }
+    },
+    "stroke": {
+      "default": {
+        "value": "{theme.charts.fill.10}",
+        "type": "color"
+      }
+    },
+    "background": {
+      "placeholder": {
+        "default": {
+          "value": "{theme.charts.background.10}",
+          "type": "color"
+        }
+      }
+    },
+    "track": {
+      "default": {
+        "value": "{theme.charts.background.10}",
+        "type": "color"
+      }
+    },
+    "sparkline": {
+      "mono": {
+        "value": "{theme.charts.sparkline.mono}",
+        "type": "color"
+      },
+      "negative": {
+        "value": "{theme.charts.sparkline.negative}",
+        "type": "color"
+      },
+      "positive": {
+        "value": "{theme.charts.sparkline.positive}",
+        "type": "color"
+      },
+      "neutral": {
+        "value": "{theme.charts.sparkline.neutral}",
+        "type": "color"
+      },
+      "trendline": {
+        "value": "{theme.charts.sparkline.trendline}",
+        "type": "color"
       }
     }
   }

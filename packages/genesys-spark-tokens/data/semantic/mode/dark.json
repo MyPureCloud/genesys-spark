@@ -1145,51 +1145,61 @@
       }
     },
     "numerical_data": {
-      "level1": {
-        "value": "{theme.charts.numerical_data.level1d}",
-        "type": "color"
+      "single_color": {
+        "level1": {
+          "value": "{theme.charts.numerical_data.single_color.level1d}",
+          "type": "color"
+        },
+        "level2": {
+          "value": "{theme.charts.numerical_data.single_color.level2d}",
+          "type": "color"
+        },
+        "level3": {
+          "value": "{theme.charts.numerical_data.single_color.level3d}",
+          "type": "color"
+        },
+        "level4": {
+          "value": "{theme.charts.numerical_data.single_color.level4d}",
+          "type": "color"
+        },
+        "level5": {
+          "value": "{theme.charts.numerical_data.single_color.level5d}",
+          "type": "color"
+        },
+        "level6": {
+          "value": "{theme.charts.numerical_data.single_color.level6d}",
+          "type": "color"
+        },
+        "level7": {
+          "value": "{theme.charts.numerical_data.single_color.level7d}",
+          "type": "color"
+        },
+        "level8": {
+          "value": "{theme.charts.numerical_data.single_color.level8d}",
+          "type": "color"
+        },
+        "level9": {
+          "value": "{theme.charts.numerical_data.single_color.level9d}",
+          "type": "color"
+        },
+        "level10": {
+          "value": "{theme.charts.numerical_data.single_color.level10d}",
+          "type": "color"
+        }
       },
-      "level2": {
-        "value": "{theme.charts.numerical_data.level2d}",
-        "type": "color"
-      },
-      "level3": {
-        "value": "{theme.charts.numerical_data.level3d}",
-        "type": "color"
-      },
-      "level4": {
-        "value": "{theme.charts.numerical_data.level4d}",
-        "type": "color"
-      },
-      "level5": {
-        "value": "{theme.charts.numerical_data.level5d}",
-        "type": "color"
-      },
-      "level6": {
-        "value": "{theme.charts.numerical_data.level6d}",
-        "type": "color"
-      },
-      "level7": {
-        "value": "{theme.charts.numerical_data.level7d}",
-        "type": "color"
-      },
-      "level8": {
-        "value": "{theme.charts.numerical_data.level8d}",
-        "type": "color"
-      },
-      "level9": {
-        "value": "{theme.charts.numerical_data.level9d}",
-        "type": "color"
-      },
-      "level10": {
-        "value": "{theme.charts.numerical_data.level10d}",
-        "type": "color"
-      }
-    },
-    "placeholder": {
-      "default": {
-        "value": "{theme.charts.foreground.20d}",
-        "type": "color"
+      "multi_color": {
+        "green": {
+          "value": "{theme.charts.numerical_data.multi_color.greend}",
+          "type": "color"
+        },
+        "red": {
+          "value": "{theme.charts.numerical_data.multi_color.redd}",
+          "type": "color"
+        },
+        "yellow": {
+          "value": "{theme.charts.numerical_data.multi_color.yellowd}",
+          "type": "color"
+        }
       }
     },
     "foreground": {
@@ -1223,6 +1233,60 @@
           "type": "color",
           "description": "The color for chart's grids on the hover state."
         }
+      }
+    },
+    "target_line": {
+      "default": {
+        "value": "{theme.charts.target_line.10d}",
+        "type": "color"
+      }
+    },
+    "point_fill": {
+      "default": {
+        "value": "{theme.charts.fill.10d}",
+        "type": "color"
+      }
+    },
+    "stroke": {
+      "default": {
+        "value": "{theme.charts.fill.10d}",
+        "type": "color"
+      }
+    },
+    "background": {
+      "placeholder": {
+        "default": {
+          "value": "{theme.charts.background.10d}",
+          "type": "color"
+        }
+      }
+    },
+    "track": {
+      "default": {
+        "value": "{theme.charts.background.10d}",
+        "type": "color"
+      }
+    },
+    "sparkline": {
+      "mono": {
+        "value": "{theme.charts.sparkline.monod}",
+        "type": "color"
+      },
+      "negative": {
+        "value": "{theme.charts.sparkline.negatived}",
+        "type": "color"
+      },
+      "positive": {
+        "value": "{theme.charts.sparkline.positived}",
+        "type": "color"
+      },
+      "neutral": {
+        "value": "{theme.charts.sparkline.neutrald}",
+        "type": "color"
+      },
+      "trendline": {
+        "value": "{theme.charts.sparkline.trendlined}",
+        "type": "color"
       }
     }
   }
