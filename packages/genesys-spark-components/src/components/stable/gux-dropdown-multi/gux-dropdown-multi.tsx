@@ -352,12 +352,10 @@ export class GuxDropdownMulti {
       this.root.querySelectorAll('gux-option-multi')
     );
     const values = value ? value.split(',') : [];
-    // if (values) {
+
     return listboxOptionElements.filter(element =>
       values.includes(element.value)
     );
-    // }
-    // return;
   }
 
   private fieldButtonClick(): void {
