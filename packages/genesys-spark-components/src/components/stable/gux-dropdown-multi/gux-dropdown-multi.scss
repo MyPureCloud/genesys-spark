@@ -101,6 +101,10 @@
         inline-size: 100%;
         color: transparent;
         caret-color: var(--gse-ui-formControl-input-populatedColor);
+
+        &:placeholder-shown {
+          text-overflow: ellipsis;
+        }
       }
 
       .gux-filter-display {

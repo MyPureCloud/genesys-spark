@@ -230,7 +230,7 @@ export class GuxDropdownMulti {
   onClearselected(event: CustomEvent): void {
     event.stopPropagation();
 
-    this.updateValue('');
+    this.updateValue(undefined);
     if (this.listboxElement) {
       this.listboxElement.value = undefined;
     }
@@ -351,13 +351,13 @@ export class GuxDropdownMulti {
     const listboxOptionElements: HTMLGuxOptionElement[] = Array.from(
       this.root.querySelectorAll('gux-option-multi')
     );
-    const values = value ? value.split(',') : undefined;
-    if (values) {
-      return listboxOptionElements.filter(element =>
-        values.includes(element.value)
-      );
-    }
-    return;
+    const values = value ? value.split(',') : [];
+    // if (values) {
+    return listboxOptionElements.filter(element =>
+      values.includes(element.value)
+    );
+    // }
+    // return;
   }
 
   private fieldButtonClick(): void {
@@ -480,29 +480,29 @@ export class GuxDropdownMulti {
   }
 
   private getSelectedOptionText(): JSX.Element | false {
-    const selectedListboxOptionElement = this.getOptionElementByValue(
-      this.value
-    );
+    const selectedElementString = this.getSelectedOptionValueString();
 
-    if (selectedListboxOptionElement?.length) {
-      return [
-        selectedListboxOptionElement
-          .map(option => {
-            return getOptionDefaultSlot(option)?.textContent.trim();
-          })
-          .join(', '),
-        <div class="gux-sr-only">{this.placeholder}</div>
-      ] as JSX.Element;
-    }
+    return selectedElementString
+      ? ([
+          selectedElementString,
+          <div class="gux-sr-only">{this.placeholder}</div>
+        ] as JSX.Element)
+      : false;
+  }
 
-    return false;
+  private getSelectedOptionValueString(): string {
+    return this.getOptionElementByValue(this.value)
+      .map(option => {
+        return getOptionDefaultSlot(option)?.textContent.trim();
+      })
+      .join(', ');
   }
 
   private getSrSelectedText(): JSX.Element {
     const selectedListboxOptionElement = this.getOptionElementByValue(
       this.value
     );
-    if (selectedListboxOptionElement?.length) {
+    if (selectedListboxOptionElement.length) {
       return (
         <span class="gux-sr-only">
           {this.i18n('numberSelected', {
@@ -521,6 +521,7 @@ export class GuxDropdownMulti {
 
   private renderTag(): JSX.Element {
     const selectedValues = this.value?.split(',') || [];
+    console.log(selectedValues);
     if (selectedValues.length) {
       return (
         <gux-dropdown-multi-tag
@@ -546,7 +547,11 @@ export class GuxDropdownMulti {
               <div class="input-and-dropdown-button">
                 <input
                   onClick={this.fieldButtonInputClick.bind(this)}
-                  placeholder={this.placeholder || this.i18n('noSelection')}
+                  placeholder={
+                    this.getSelectedOptionValueString() ||
+                    this.placeholder ||
+                    this.i18n('noSelection')
+                  }
                   class="gux-filter-input"
                   type="text"
                   aria-label={this.getInputAriaLabel()}
