@@ -45,6 +45,12 @@ gux-tab-advanced {
     }
 
     .gux-tab-options {
+      button {
+        block-size: var(--gse-ui-button-default-height);
+        padding: var(--gse-ui-button-default-paddingIconOnly);
+        border-radius: var(--gse-ui-button-borderRadius);
+      }
+
       .gux-tab-options-trigger {
         gux-icon {
           inline-size: var(--gse-ui-icon-small-size);

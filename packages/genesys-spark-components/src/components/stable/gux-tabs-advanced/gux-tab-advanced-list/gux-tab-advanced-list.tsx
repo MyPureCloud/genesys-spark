@@ -589,10 +589,9 @@ export class GuxTabAdvancedList {
           >
             <slot></slot>
           </div>
-          {this.renderAddButton()}
         </div>
-
         {this.renderScrollButton('scrollRight')}
+        {this.renderAddButton()}
       </div>
     ] as JSX.Element;
   }
@@ -609,13 +608,14 @@ export class GuxTabAdvancedList {
     return (
       <div>
         {this.showNewTabButton ? (
-          <gux-button-slot class="gux-add-button" accent="ghost">
+          <gux-button-slot accent="ghost">
             <button
               onClick={() => this.newTab.emit()}
               disabled={this.disableAddTabButton}
             >
               <slot name="add-tab">
                 <gux-icon
+                  size="small"
                   icon-name="fa/plus-regular"
                   screenreader-text={
                     this.disableAddTabButton
@@ -646,6 +646,7 @@ export class GuxTabAdvancedList {
               onClick={() => this.getScrollDirection(direction)}
             >
               <gux-icon
+                size="small"
                 icon-name={this.getChevronIconName(direction)}
                 screenreader-text={this.i18n(direction)}
               />
