@@ -88,11 +88,26 @@
   "gux-dropdown-multi-tag": {
     "clearSelection": "Clear {numberSelected} selected items"
   },
+  "gux-file-list-item": {
+    "removeFile": "Remove {filename} file",
+    "uploadingFile": "Uploading {filename} file",
+    "success": "{filename} file uploaded successfully",
+    "error": "{filename} file has an error"
+  },
   "gux-form-field-checkbox-group": {
     "required": "Required"
   },
   "gux-form-field-dropdown": {
     "required": "Required"
+  },
+  "gux-form-field-file-beta": {
+    "uploadFile": "Upload file",
+    "uploadFiles": "Upload files",
+    "changeFile": "Change file",
+    "changeFiles": "Change files",
+    "clickToUpload": "Click to upload",
+    "dragAndDropFileInstructions": "Drag and drop a file here or",
+    "dragAndDropFilesInstructions": "Drag and drop files here or"
   },
   "gux-form-field-input-clear-button": {
     "clear": "Clear"

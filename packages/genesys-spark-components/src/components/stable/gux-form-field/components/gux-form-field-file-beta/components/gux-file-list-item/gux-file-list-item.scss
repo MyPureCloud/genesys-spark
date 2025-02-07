@@ -1,0 +1,87 @@
+:host {
+  display: block;
+}
+
+.gux-file-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--gse-ui-fileUpload-fileCard-foregroundColor);
+  border: var(--gse-ui-fileUpload-fileCard-mainContainer-default-border-width)
+    var(--gse-ui-fileUpload-fileCard-mainContainer-default-border-style)
+    var(--gse-ui-fileUpload-fileCard-mainContainer-default-border-color);
+  border-radius: var(--gse-ui-fileUpload-fileCard-borderRadius);
+  box-shadow: var(--gse-ui-fileUpload-fileCard-boxShadow);
+
+  &.gux-disabled {
+    opacity: 0.5;
+  }
+
+  &.gux-error {
+    padding-block-start: 0;
+    border: var(--gse-ui-fileUpload-fileCard-mainContainer-error-border-width)
+      var(--gse-ui-fileUpload-fileCard-mainContainer-error-border-style)
+      var(--gse-ui-fileUpload-fileCard-mainContainer-error-border-color);
+  }
+
+  .gux-info {
+    box-sizing: border-box;
+    display: flex;
+    gap: var(--gse-ui-fileUpload-fileCard-card-gap);
+    align-items: center;
+    inline-size: 100%;
+    block-size: 32px;
+    padding: var(--gse-ui-fileUpload-fileCard-card-padding);
+
+    .gux-file-name {
+      font-family: var(--gse-ui-fileUpload-fileCard-fileName-text-fontFamily);
+      font-size: var(--gse-ui-fileUpload-fileCard-fileName-text-fontSize);
+      font-weight: var(--gse-ui-fileUpload-fileCard-fileName-text-fontWeight);
+      line-height: var(--gse-ui-fileUpload-fileCard-fileName-text-lineHeight);
+      color: var(--gse-ui-fileUpload-fileCard-fileName-default);
+    }
+
+    .gux-indicator {
+      &[icon-name='fa/circle-check-solid'] {
+        --gse-ui-formControl-label-tooltipTrigger-color: var(
+          --gse-ui-fileUpload-fileCard-statusIcon-success
+        );
+      }
+
+      &[icon-name='fa/hexagon-exclamation-solid'] {
+        --gse-ui-formControl-label-tooltipTrigger-color: var(
+          --gse-ui-fileUpload-fileCard-statusIcon-error
+        );
+      }
+    }
+  }
+
+  .gux-additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gse-ui-fileUpload-fileCard-card-errorCard-errorTextSection-gap);
+    inline-size: 100%;
+    padding: var(
+      --gse-ui-fileUpload-fileCard-card-errorCard-mainContainer-padding
+    );
+    font-family: var(--gse-ui-fileUpload-fileCard-error-text-fontFamily);
+    font-size: var(--gse-ui-fileUpload-fileCard-error-text-fontSize);
+    font-weight: var(--gse-ui-fileUpload-fileCard-error-text-fontWeight);
+    line-height: var(--gse-ui-fileUpload-fileCard-error-text-lineHeight);
+    border-block-start: var(
+        --gse-ui-fileUpload-fileCard-mainContainer-default-border-width
+      )
+      var(--gse-ui-fileUpload-fileCard-mainContainer-default-border-style)
+      var(--gse-ui-fileUpload-fileCard-mainContainer-default-border-color);
+
+    .gux-additional-info-header {
+      padding: var(--gse-ui-fileUpload-fileCard-card-padding);
+      color: var(--gse-ui-fileUpload-fileCard-error-errorMessage);
+    }
+
+    .gux-additional-info-content {
+      padding: var(--gse-ui-fileUpload-fileCard-card-padding);
+      color: var(--gse-ui-fileUpload-fileCard-error-errorHelper);
+    }
+  }
+}
