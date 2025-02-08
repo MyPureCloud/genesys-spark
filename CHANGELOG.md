@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.116.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.115.1...v4.116.0) (2025-02-08)
+
+
+### Features
+
+* **form-field-file-beta:** added new component ([703acc3](https://github.com/MyPureCloud/genesys-spark/commit/703acc31f0fe65bac73a9d96cdb2f8a8539619d4))
+
+
+### Bug Fixes
+
+* **listbox-multi:** hide horizontal scrollbar ([c50ace4](https://github.com/MyPureCloud/genesys-spark/commit/c50ace4bfd7af0b5f127b088fcc0b7f5185ac4f3))
+* **tabs-advanced:** change render position of add tab button ([284e2b1](https://github.com/MyPureCloud/genesys-spark/commit/284e2b1aaa5ce663268597b15340b9efc70789c8))
+
 ### [4.115.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.115.0...v4.115.1) (2025-02-06)
 
 ## [4.115.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.114.2...v4.115.0) (2025-02-05)
