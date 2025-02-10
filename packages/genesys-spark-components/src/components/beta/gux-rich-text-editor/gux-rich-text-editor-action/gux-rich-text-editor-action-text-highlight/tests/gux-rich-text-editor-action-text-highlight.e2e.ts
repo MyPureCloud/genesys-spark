@@ -67,6 +67,7 @@ describe('gux-rich-text-editor-action-text-highlight', () => {
         const element = await page.find(
           'gux-rich-text-editor-action-text-highlight'
         );
+
         expect(element.outerHTML).toMatchSnapshot();
       });
 

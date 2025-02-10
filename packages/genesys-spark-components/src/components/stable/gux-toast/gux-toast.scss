@@ -10,9 +10,7 @@
   padding: var(--gse-ui-toast-margin);
   margin-block-end: var(--gse-ui-toast-stacking-gap);
   border-radius: var(--gse-ui-toast-borderRadius);
-  box-shadow: var(--gse-ui-toast-boxShadow-offsetX)
-    var(--gse-ui-toast-boxShadow-offsetY) var(--gse-ui-toast-boxShadow-blur)
-    var(--gse-ui-toast-boxShadow-spread) var(--gse-ui-toast-boxShadow-color);
+  box-shadow: var(--gse-ui-toast-boxShadow);
 
   .gux-icon {
     ::slotted(gux-icon) {

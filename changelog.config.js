@@ -4,11 +4,13 @@ const CHART_COMPONENT_SPECS = require('genesys-spark-chart-components/build/comp
 const componentSpecs = Object.assign(COMPONENT_SPECS, CHART_COMPONENT_SPECS);
 
 const getComponentSpec = function () {
-  const scopeList = ['other'];
-  for (const [key] of Object.entries(componentSpecs)) {
-    scopeList.push(key.replace('gux-', ''));
-  }
-  return scopeList;
+  const componentList = Object.keys(componentSpecs).map(key =>
+    key.replace('gux-', '')
+  );
+  const additionalList = ['form-field'];
+  const scopeList = componentList.concat(additionalList).sort();
+
+  return ['other'].concat(scopeList);
 };
 
 module.exports = {

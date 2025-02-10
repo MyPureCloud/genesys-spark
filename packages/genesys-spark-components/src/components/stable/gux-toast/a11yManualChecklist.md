@@ -1,8 +1,9 @@
 # gux-toast manual accessibility testing status
 
-**Last Updated:** 2024-12-18T22:58:18.844Z
+**Last Updated:** 2025-01-29T22:29:27.948Z
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
+| ✅ | [1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) | - |
 | ✅ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) | - |
 | ✅ | [2.1.2 No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) | - |
 | ✅ | [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) | - |
@@ -15,4 +16,4 @@
 | ✅ | [3.3.1 Error Identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) | - |
 | ✅ | [3.2.2 Labels or Instructions](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) | - |
 | ✅ | [4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) | - |
-| ❌ | [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) | [COMUI-3358](https://inindca.atlassian.net/browse/COMUI-3358) aria-live is not working as expected when it is set on the `gux-toast` component itself. It is only working when set on parent `div` |
+| ✅ | [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) | - |

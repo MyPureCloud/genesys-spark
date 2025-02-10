@@ -2,12 +2,12 @@
 
 <h2>Gux Success Toast</h2>
 
-<gux-toast toast-type="success" aria-live="polite">
+<gux-toast toast-type="success">
   <div slot="title">Success Example</div>
   <div slot="message">This is an example message</div>
 </gux-toast>
 
-<gux-toast toast-type="success" aria-live="polite">
+<gux-toast toast-type="success">
   <div slot="title">Success Example with Link</div>
   <div slot="message">This is an example message</div>
   <a slot="link" href="#"
@@ -15,11 +15,11 @@
   ></a>
 </gux-toast>
 
-<gux-toast toast-type="success" aria-live="polite">
+<gux-toast toast-type="success">
   <div slot="message">Success toast without Title</div>
 </gux-toast>
 
-<gux-toast toast-type="success" aria-live="polite">
+<gux-toast toast-type="success">
   <div slot="message">Success toast with Link without Title</div>
   <a slot="link" href="#"
     >Link<gux-icon icon-name="external-link" decorative></gux-icon
@@ -28,12 +28,12 @@
 
 <h2>Gux Warning Toast</h2>
 
-<gux-toast toast-type="warning" aria-live="polite">
+<gux-toast toast-type="warning">
   <div slot="title">Warning Example</div>
   <div slot="message">This is an example message</div>
 </gux-toast>
 
-<gux-toast toast-type="warning" aria-live="polite">
+<gux-toast toast-type="warning">
   <div slot="title">Warning Example with Link</div>
   <div slot="message">This is an example message</div>
   <a slot="link" href="#"
@@ -41,11 +41,11 @@
   ></a>
 </gux-toast>
 
-<gux-toast toast-type="warning" aria-live="polite">
+<gux-toast toast-type="warning">
   <div slot="message">Warning toast without Title</div>
 </gux-toast>
 
-<gux-toast toast-type="warning" aria-live="polite">
+<gux-toast toast-type="warning">
   <div slot="message">Warning toast with Link without Title</div>
   <a slot="link" href="#"
     >Link<gux-icon icon-name="external-link" decorative></gux-icon
@@ -54,12 +54,12 @@
 
 <h2>Gux Error Toast</h2>
 
-<gux-toast toast-type="error" aria-live="polite">
+<gux-toast toast-type="error">
   <div slot="title">Error Example</div>
   <div slot="message">This is an example message</div>
 </gux-toast>
 
-<gux-toast toast-type="error" aria-live="polite">
+<gux-toast toast-type="error">
   <div slot="title">Error Example with Link</div>
   <div slot="message">This is an example message</div>
   <a slot="link" href="#"
@@ -67,7 +67,7 @@
   ></a>
 </gux-toast>
 
-<gux-toast toast-type="error" aria-live="polite">
+<gux-toast toast-type="error">
   <div slot="message">Error toast without Title</div>
 </gux-toast>
 
@@ -80,12 +80,12 @@
 
 <h2>Gux Info Toast</h2>
 
-<gux-toast toast-type="info" aria-live="polite">
+<gux-toast toast-type="info">
   <div slot="title">Info Example</div>
   <div slot="message">This is an example message</div>
 </gux-toast>
 
-<gux-toast toast-type="info" aria-live="polite">
+<gux-toast toast-type="info">
   <div slot="title">Info Example with Link</div>
   <div slot="message">This is an example message</div>
   <a slot="link" href="#"
@@ -93,11 +93,11 @@
   ></a>
 </gux-toast>
 
-<gux-toast toast-type="info" aria-live="polite">
+<gux-toast toast-type="info">
   <div slot="message">Info toast without Title</div>
 </gux-toast>
 
-<gux-toast toast-type="info" aria-live="polite">
+<gux-toast toast-type="info">
   <div slot="message">Info toast with Link without Title</div>
   <a slot="link" href="#"
     >Link<gux-icon icon-name="external-link" decorative></gux-icon
@@ -106,7 +106,7 @@
 
 <h2>Gux Action Toast</h2>
 
-<gux-toast toast-type="action" aria-live="polite">
+<gux-toast toast-type="action">
   <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative></gux-icon>
   <div slot="title">1 Action</div>
   <div slot="message">This is an example message</div>
@@ -115,7 +115,7 @@
   </button>
 </gux-toast>
 
-<gux-toast toast-type="action" aria-live="polite">
+<gux-toast toast-type="action">
   <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative></gux-icon>
   <div slot="title">2 Actions</div>
   <div slot="message">This is an example message</div>
@@ -127,7 +127,7 @@
   </button>
 </gux-toast>
 
-<gux-toast toast-type="action" aria-live="polite">
+<gux-toast toast-type="action">
   <gux-icon slot="icon" icon-name="fa/diamond-regular" decorative></gux-icon>
   <div slot="message">Action Toast with no Title</div>
   <button slot="primary-button" type="button" onclick="notify(event)">
@@ -137,3 +137,23 @@
     Action 2
   </button>
 </gux-toast>
+
+<h2>Toast aria-live example</h2>
+<p>
+  The container that toasts are added to must have `aria-live` attribute set to
+  `polite`
+</p>
+
+<div id="toastContainer" aria-live="polite"></div>
+
+<gux-button
+  onclick="(function() {
+    const toastContainer = document.getElementById('toastContainer');
+    const toast = document.createElement('gux-toast');
+    toast.setAttribute('alert-type', 'success')
+    toast.innerHTML = `<div slot='title'>Success Example</div><div slot='message'>This is an example message</div>`
+
+    toastContainer.appendChild(toast);
+  })()"
+  >New Toast</gux-button
+>

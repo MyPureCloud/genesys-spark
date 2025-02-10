@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                       | Default      |
-| ---------- | ---------- | ----------- | -------------------------- | ------------ |
-| `required` | `required` |             | `boolean`                  | `false`      |
-| `variant`  | `variant`  |             | `"optional" \| "required"` | `'required'` |
+| Property   | Attribute  | Description | Type                                 | Default      |
+| ---------- | ---------- | ----------- | ------------------------------------ | ------------ |
+| `required` | `required` |             | `boolean`                            | `false`      |
+| `variant`  | `variant`  |             | `"none" \| "optional" \| "required"` | `'required'` |
 
 
 ## Dependencies
@@ -21,6 +21,7 @@
  - [gux-form-field-color](../../components/gux-form-field-color)
  - [gux-form-field-dropdown](../../components/gux-form-field-dropdown)
  - [gux-form-field-file](../../components/gux-form-field-file)
+ - [gux-form-field-file-beta](../../components/gux-form-field-file-beta)
  - [gux-form-field-number](../../components/gux-form-field-number)
  - [gux-form-field-phone](../../components/gux-form-field-phone)
  - [gux-form-field-radio-group-beta](../../components/gux-form-field-radio-group)
@@ -39,6 +40,7 @@ graph TD;
   gux-form-field-color --> gux-form-field-label-indicator
   gux-form-field-dropdown --> gux-form-field-label-indicator
   gux-form-field-file --> gux-form-field-label-indicator
+  gux-form-field-file-beta --> gux-form-field-label-indicator
   gux-form-field-number --> gux-form-field-label-indicator
   gux-form-field-phone --> gux-form-field-label-indicator
   gux-form-field-radio-group-beta --> gux-form-field-label-indicator

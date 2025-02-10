@@ -44,7 +44,7 @@ function createLayout() {
           <div id="spark-link-container" class="spark-link"></div>
         </div>
       </gux-disclosure-button-legacy>
-      <div class="notification"></div>
+      <div class="notification" aria-live="polite"></div>
     </div>
   `);
 

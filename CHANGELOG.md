@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.116.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.115.1...v4.116.0) (2025-02-08)
+
+
+### Features
+
+* **form-field-file-beta:** added new component ([703acc3](https://github.com/MyPureCloud/genesys-spark/commit/703acc31f0fe65bac73a9d96cdb2f8a8539619d4))
+
+
+### Bug Fixes
+
+* **listbox-multi:** hide horizontal scrollbar ([c50ace4](https://github.com/MyPureCloud/genesys-spark/commit/c50ace4bfd7af0b5f127b088fcc0b7f5185ac4f3))
+* **tabs-advanced:** change render position of add tab button ([284e2b1](https://github.com/MyPureCloud/genesys-spark/commit/284e2b1aaa5ce663268597b15340b9efc70789c8))
+
+### [4.115.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.115.0...v4.115.1) (2025-02-06)
+
+## [4.115.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.114.2...v4.115.0) (2025-02-05)
+
+
+### Features
+
+* **form-field-label-indicator:** addd none variant ([0f1a95f](https://github.com/MyPureCloud/genesys-spark/commit/0f1a95fe80771e3efb6637c5948722dbfa791f1f))
+
+### [4.114.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.114.1...v4.114.2) (2025-02-01)
+
+
+### Bug Fixes
+
+* **tabs:** fix vertical tabs scroll button regression ([14aa1b1](https://github.com/MyPureCloud/genesys-spark/commit/14aa1b1a43d2999259a6048acd1de6e7e25467b4))
+
+### [4.114.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.114.0...v4.114.1) (2025-01-31)
+
+
+### Bug Fixes
+
+* **form-field-text-like:** fixed input font ([c954e63](https://github.com/MyPureCloud/genesys-spark/commit/c954e6382b698398dea28cda986a6a4fd4246cf9))
+* **other:** dont expand shadow tokens ([2a25d17](https://github.com/MyPureCloud/genesys-spark/commit/2a25d17b845592bfb4c7c97c4ba0d8bfd53edd53))
+
+## [4.114.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.113.1...v4.114.0) (2025-01-30)
+
+
+### Features
+
+* **form-field-checkbox:** adding aria attributes to help with error accessibility ([05f5ce2](https://github.com/MyPureCloud/genesys-spark/commit/05f5ce2cbef0bfaa53a60de57eacb0e282162383))
+
 ### [4.113.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.113.0...v4.113.1) (2025-01-29)
 
 ## [4.113.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.112.0...v4.113.0) (2025-01-28)

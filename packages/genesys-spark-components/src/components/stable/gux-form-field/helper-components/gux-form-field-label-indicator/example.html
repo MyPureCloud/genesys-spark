@@ -1,0 +1,58 @@
+<h1>gux-form-field Indicator Mark</h1>
+
+<h2>Examples</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>Indicator Mark</legend>
+
+    <h3>Default</h3>
+    <gux-form-field-textarea>
+      <textarea slot="input" name="textarea" required></textarea>
+      <label slot="label">Required field</label>
+    </gux-form-field-textarea>
+
+    <gux-form-field-textarea>
+      <textarea slot="input" name="textarea"></textarea>
+      <label slot="label">Optional field</label>
+    </gux-form-field-textarea>
+
+    <h3>Required</h3>
+    <gux-form-field-textarea indicator-mark="required">
+      <textarea slot="input" name="textarea" required></textarea>
+      <label slot="label">Required field</label>
+    </gux-form-field-textarea>
+
+    <gux-form-field-textarea indicator-mark="required">
+      <textarea slot="input" name="textarea"></textarea>
+      <label slot="label">Optional field</label>
+    </gux-form-field-textarea>
+
+    <h3>Optional</h3>
+    <gux-form-field-textarea indicator-mark="optional">
+      <textarea slot="input" name="textarea" required></textarea>
+      <label slot="label">Required field</label>
+    </gux-form-field-textarea>
+
+    <gux-form-field-textarea indicator-mark="optional">
+      <textarea slot="input" name="textarea"></textarea>
+      <label slot="label">Optional field</label>
+    </gux-form-field-textarea>
+
+    <h3>None</h3>
+    <gux-form-field-textarea indicator-mark="none">
+      <textarea slot="input" name="textarea" required></textarea>
+      <label slot="label">Required field</label>
+    </gux-form-field-textarea>
+
+    <gux-form-field-textarea indicator-mark="none">
+      <textarea slot="input" name="textarea"></textarea>
+      <label slot="label">Optional field</label>
+    </gux-form-field-textarea>
+  </fieldset>
+</form>
+
+<style>
+  gux-form-field-textarea {
+    margin: 10px;
+  }
+</style>

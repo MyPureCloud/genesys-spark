@@ -12,7 +12,10 @@
   inline-size: 100%;
   margin-inline-start: 4px;
   overflow: hidden;
+  font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
+  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   color: var(--gse-ui-formControl-input-populatedColor);
   text-overflow: ellipsis;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
@@ -75,7 +78,9 @@
   block-size: 100%;
   padding: var(--gse-ui-phoneInput-dropdown-padding);
   font-family: inherit;
+  font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
+  font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
   line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   cursor: pointer;
   border-radius: var(--gse-ui-formControl-input-borderRadius) 0 0
