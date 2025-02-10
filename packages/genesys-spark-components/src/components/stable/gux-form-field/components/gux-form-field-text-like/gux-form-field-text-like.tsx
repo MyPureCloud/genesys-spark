@@ -34,8 +34,8 @@ import {
   getComputedLabelPosition,
   validateFormIds,
   setSlotAriaDescribedby,
-  getSlottedInput,
-  validateLoadingElement
+  getSlottedInput
+  // setLoadingAriaDescribedBy
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 import { focusInputElement } from '@utils/dom/focus-input-element';
@@ -156,10 +156,7 @@ export class GuxFormFieldTextLike {
   private renderRadialLoading(): JSX.Element {
     if (this.loading) {
       return (
-        <gux-radial-loading
-          id={this.loadingElementId}
-          context="input"
-        ></gux-radial-loading>
+        <gux-radial-loading context="input"></gux-radial-loading>
       ) as JSX.Element;
     }
   }
@@ -180,6 +177,10 @@ export class GuxFormFieldTextLike {
 
     if (this.hasSuffix) {
       setSlotAriaDescribedby(this.root, this.input, 'suffix');
+    }
+
+    if (this.loading) {
+      setSlotAriaDescribedby(this.root, this.input, 'loading');
     }
 
     trackComponent(this.root, { variant: this.variant });
@@ -288,7 +289,7 @@ export class GuxFormFieldTextLike {
 
     validateFormIds(this.root, this.input);
 
-    validateLoadingElement(this.input, this.loadingElementId);
+    // setLoadingAriaDescribedBy(this.input, this.loadingElementId);
   }
 
   private setLabel(): void {
