@@ -38,6 +38,7 @@
     place-content: flex-start flex-start;
     align-items: center;
     inline-size: 100%;
+    background-color: var(--gse-ui-formControl-input-backgroundColor);
 
     ~ .gux-datepicker-field {
       margin-inline-start: var(--gse-ui-datePicker-range-gap);
