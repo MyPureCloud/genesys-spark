@@ -43,6 +43,10 @@
     color: var(--gse-ui-tooltip-light-foregroundColor);
   }
 
+  .arrow {
+    position: absolute;
+  }
+
   ::slotted(*) {
     inline-size: 100%;
     overflow-wrap: break-word;

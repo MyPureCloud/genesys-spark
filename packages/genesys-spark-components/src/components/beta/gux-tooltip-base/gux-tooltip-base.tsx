@@ -17,7 +17,8 @@ import {
   hide,
   offset,
   shift,
-  Placement
+  Placement,
+  arrow
 } from '@floating-ui/dom';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
@@ -50,6 +51,9 @@ export class GuxTooltipBase {
 
   private cleanupUpdatePosition: () => void;
   private id: string = randomHTMLId('gux-tooltip-base');
+
+  @Element()
+  private arrowEl: HTMLElement;
 
   @Element()
   private root: HTMLElement;
@@ -138,7 +142,8 @@ export class GuxTooltipBase {
       flip(),
       shift(),
       hide(),
-      overflowDetection()
+      overflowDetection(),
+      arrow({ element: this.arrowEl })
     ];
 
     void computePosition(this.forElement, this.root, {
@@ -151,6 +156,15 @@ export class GuxTooltipBase {
         top: `${y - this.offsetY}px`,
         visibility: middlewareData.hide?.referenceHidden ? 'hidden' : 'visible'
       });
+
+      if (middlewareData.arrow) {
+        const { x: arrowX, y: arrowY } = middlewareData.arrow;
+
+        Object.assign(this.arrowEl.style, {
+          left: arrowX != null ? `${arrowX}px` : '',
+          top: arrowY != null ? `${arrowY}px` : ''
+        });
+      }
       //data-placement needed on the for e2e tests.
       this.root.setAttribute('data-placement', this.placement);
     });
@@ -170,6 +184,8 @@ export class GuxTooltipBase {
   }
 
   private setForElement(): void {
+    this.arrowEl = this.root.shadowRoot.querySelector('#arrow');
+    // this.arrowEl = this.root.querySelector('#arrow');
     if (this.forElement) {
       if (!this.visualOnly) {
         const tooltipId = this.tooltipId ? this.tooltipId : this.id;
@@ -230,6 +246,7 @@ export class GuxTooltipBase {
           data-placement={this.placement}
         >
           <slot name="content" />
+          <div id="arrow"></div>
         </div>
       </Host>
     ) as JSX.Element;
