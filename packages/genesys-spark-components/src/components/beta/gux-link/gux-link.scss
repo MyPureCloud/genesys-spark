@@ -13,7 +13,8 @@
 
   ::slotted(a) {
     inline-size: fit-content;
-    font-family: var(--gse-ui-links-inLine-medium-text-fontFamily),
+    font-family:
+      var(--gse-ui-links-inLine-medium-text-fontFamily),
       var(--gse-semantic-theme-fontFamily-body), sans-serif;
     font-size: var(--gse-ui-links-inLine-medium-text-fontSize);
     font-weight: var(--gse-ui-links-inLine-medium-text-fontWeight);
@@ -41,7 +42,8 @@
 
 :host([size='small']) {
   ::slotted(a) {
-    font-family: var(--gse-ui-links-inLine-small-text-fontFamily),
+    font-family:
+      var(--gse-ui-links-inLine-small-text-fontFamily),
       var(--gse-semantic-theme-fontFamily-body), sans-serif;
     font-size: var(--gse-ui-links-inLine-small-text-fontSize);
     font-weight: var(--gse-ui-links-inLine-small-text-fontWeight);
@@ -58,7 +60,8 @@
     gap: var(--gse-ui-links-standalone-gap);
     align-items: center;
     inline-size: fit-content;
-    font-family: var(--gse-ui-links-standalone-medium-text-fontFamily),
+    font-family:
+      var(--gse-ui-links-standalone-medium-text-fontFamily),
       var(--gse-semantic-theme-fontFamily-body), sans-serif;
     font-size: var(--gse-ui-links-standalone-medium-text-fontSize);
     font-weight: var(--gse-ui-links-standalone-medium-text-fontWeight);
@@ -67,9 +70,8 @@
   }
 
   ::slotted(a:hover) {
-    font-family: var(
-        --gse-ui-links-standalone-medium-underlinedText-fontFamily
-      ),
+    font-family:
+      var(--gse-ui-links-standalone-medium-underlinedText-fontFamily),
       var(--gse-semantic-theme-fontFamily-body), sans-serif;
     font-size: var(--gse-ui-links-standalone-medium-underlinedText-fontSize);
     font-weight: var(
@@ -90,7 +92,8 @@
 
 :host([size='small'][standalone]) {
   ::slotted(a) {
-    font-family: var(--gse-ui-links-standalone-small-text-fontFamily),
+    font-family:
+      var(--gse-ui-links-standalone-small-text-fontFamily),
       var(--gse-semantic-theme-fontFamily-body), sans-serif;
     font-size: var(--gse-ui-links-standalone-small-text-fontSize);
     font-weight: var(--gse-ui-links-standalone-small-text-fontWeight);
@@ -98,7 +101,8 @@
   }
 
   ::slotted(a:hover) {
-    font-family: var(--gse-ui-links-standalone-small-underlinedText-fontFamily),
+    font-family:
+      var(--gse-ui-links-standalone-small-underlinedText-fontFamily),
       var(--gse-semantic-theme-fontFamily-body), sans-serif;
     font-size: var(--gse-ui-links-standalone-small-underlinedText-fontSize);
     font-weight: var(--gse-ui-links-standalone-small-underlinedText-fontWeight);
