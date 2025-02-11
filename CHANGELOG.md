@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.117.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.116.0...v4.117.0) (2025-02-11)
+
+
+### Features
+
+* **flyout-menu:** Add role to light dom for menuitem ([#875](https://github.com/MyPureCloud/genesys-spark/issues/875)) ([43ca0ba](https://github.com/MyPureCloud/genesys-spark/commit/43ca0ba0be3607517337a100760e59ee3fc1d360))
+
+
+### Bug Fixes
+
+* **button-multi:** Fixed keyboard accessibility ([1565b48](https://github.com/MyPureCloud/genesys-spark/commit/1565b4801f8b665df4f0037e2cdd28b69b0d4288))
+* **datepicker:** add background color to datepicker ([81a824a](https://github.com/MyPureCloud/genesys-spark/commit/81a824ac5f8d3b77e5a65f2e6ccfdda5b7d877d1))
+* **time-picker:** handle invalid values ([a76c1bc](https://github.com/MyPureCloud/genesys-spark/commit/a76c1bcd1018ccbe08f7e5b140a2d01529f799f3))
+
 ## [4.116.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.115.1...v4.116.0) (2025-02-08)
 
 
