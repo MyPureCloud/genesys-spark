@@ -481,7 +481,6 @@ export class GuxDropdownMulti {
 
   private getSelectedOptionText(): JSX.Element | false {
     const selectedElementString = this.getSelectedOptionValueString();
-    console.log(selectedElementString);
 
     return selectedElementString
       ? ([
