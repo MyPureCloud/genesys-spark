@@ -64,7 +64,7 @@ describe('gux-button-multi', () => {
     const onOpen = await page.spyOnEvent('open');
     const onClose = await page.spyOnEvent('close');
 
-    await pressDropdownButton(page, 'ArrowDown');
+    await pressDropdownButton(page, 'Space');
     await pressActionItemButton(page, 'Escape');
 
     expect(onOpen).toHaveReceivedEventTimes(1);
