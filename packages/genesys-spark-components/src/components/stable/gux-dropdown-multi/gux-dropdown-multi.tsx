@@ -220,7 +220,9 @@ export class GuxDropdownMulti {
   @Listen('internallistboxoptionsupdated')
   onInternallistboxoptionsupdated(event: CustomEvent): void {
     event.stopPropagation();
-    forceUpdate(this.root);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => forceUpdate(this.root));
+    });
   }
 
   /**
@@ -479,6 +481,7 @@ export class GuxDropdownMulti {
 
   private getSelectedOptionText(): JSX.Element | false {
     const selectedElementString = this.getSelectedOptionValueString();
+    console.log(selectedElementString);
 
     return selectedElementString
       ? ([
@@ -519,7 +522,6 @@ export class GuxDropdownMulti {
 
   private renderTag(): JSX.Element {
     const selectedValues = this.value?.split(',') || [];
-    console.log(selectedValues);
     if (selectedValues.length) {
       return (
         <gux-dropdown-multi-tag
