@@ -68,7 +68,7 @@
     "@types/puppeteer": "^5.4.7",
     "axe-core": "^4.10.2",
     "axe-live": "^1.0.1",
-    "eslint": "^9.20.0",
+    "eslint": "^9.20.1",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "file-loader": "^6.2.0",
     "genesys-spark-tokens": "file:../genesys-spark-tokens",
