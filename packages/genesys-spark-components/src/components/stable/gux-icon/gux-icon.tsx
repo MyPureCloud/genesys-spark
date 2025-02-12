@@ -96,6 +96,8 @@ export class GuxIcon {
   private getSvgWithAriaAttributes(svgText: string): string {
     const svgElement = new DOMParser().parseFromString(svgText, 'image/svg+xml')
       .firstChild as SVGElement;
+    svgElement.setAttribute('role', 'img');
+
     if (this.decorative) {
       svgElement.setAttribute('aria-hidden', String(this.decorative));
     } else {
