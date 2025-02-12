@@ -51,8 +51,8 @@ button {
   block-size: var(--gse-ui-button-default-height);
   padding: var(--gse-ui-button-default-padding);
   overflow: hidden;
-  color: var(--gse-ui-button-secondary-default-foregroundColor);
   text-overflow: ellipsis;
+  color: var(--gse-ui-button-secondary-default-foregroundColor);
   white-space: nowrap;
   pointer-events: auto;
   cursor: pointer;

@@ -42,9 +42,9 @@ button {
     }
 
     gux-icon[icon-name='fa/copy-regular'] {
+      visibility: hidden;
       flex-shrink: 0;
       padding: var(--gse-ui-copyToClipboard-iconContainer-padding);
-      visibility: hidden;
       background-color: var(
         --gse-ui-copyToClipboard-label-active-backgroundColor
       );

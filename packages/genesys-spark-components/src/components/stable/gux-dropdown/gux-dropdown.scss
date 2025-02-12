@@ -153,8 +153,8 @@
     border: none;
 
     &:focus {
-      border: none;
       outline: none;
+      border: none;
     }
   }
 
@@ -162,9 +162,9 @@
     inline-size: auto;
     block-size: var(--gse-ui-formControl-input-contentText-lineHeight);
     margin: 0;
+    outline: none;
     background: inherit;
     border: none;
-    outline: none;
     box-shadow: none;
 
     &:focus {

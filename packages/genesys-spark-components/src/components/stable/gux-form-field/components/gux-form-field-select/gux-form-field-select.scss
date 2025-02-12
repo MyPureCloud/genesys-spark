@@ -28,10 +28,10 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  outline: none;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
   border-radius: var(--gse-ui-formControl-input-borderRadius);
-  outline: none;
 
   &::placeholder {
     color: var(--gse-ui-formControl-input-placeholderColor);
@@ -87,14 +87,14 @@
       }
 
       &:focus-within {
-        border: var(--gse-ui-formControl-input-active-border-width)
-          var(--gse-ui-formControl-input-active-border-style)
-          var(--gse-ui-formControl-input-active-border-color);
-        border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
         outline: var(--gse-ui-formControl-input-focus-border-width)
           var(--gse-ui-formControl-input-focus-border-style)
           var(--gse-ui-formControl-input-focus-border-color);
         outline-offset: var(--gse-semantic-focusOutline-offset);
+        border: var(--gse-ui-formControl-input-active-border-width)
+          var(--gse-ui-formControl-input-active-border-style)
+          var(--gse-ui-formControl-input-active-border-color);
+        border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
       }
     }
 

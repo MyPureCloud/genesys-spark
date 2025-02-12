@@ -12,11 +12,11 @@ gux-form-field-radio {
   }
 
   input[type='radio']:focus-visible::before {
-    border-radius: var(--gse-ui-radioButton-focus-borderRadius);
     outline: var(--gse-ui-radioButton-focus-border-width)
       var(--gse-ui-radioButton-focus-border-style)
       var(--gse-ui-radioButton-focus-border-color);
     outline-offset: 1px;
+    border-radius: var(--gse-ui-radioButton-focus-borderRadius);
   }
 
   input[type='radio']:not(:checked)::before {

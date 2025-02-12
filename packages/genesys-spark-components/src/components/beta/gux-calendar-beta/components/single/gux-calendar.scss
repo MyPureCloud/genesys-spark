@@ -37,9 +37,9 @@
       block-size: 100%;
       color: var(--gse-ui-calendarMenu-header-foregroundColor);
       cursor: pointer;
+      outline: none;
       background: none;
       border: none;
-      outline: none;
 
       &:focus-visible {
         @include focus.gux-focus-ring;
@@ -80,10 +80,10 @@
         font-style: normal;
         font-weight: var(--gse-ui-calendarMenu-date-defaultText-fontWeight);
         line-height: 32px;
-        text-align: center;
         vertical-align: middle;
-        border: none;
+        text-align: center;
         outline: none;
+        border: none;
         opacity: var(--gse-ui-calendarMenu-disabled-opacity);
 
         &.gux-current-month {
@@ -102,12 +102,12 @@
 
         &.gux-selected {
           color: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
+          outline: none;
           background-color: var(
             --gse-ui-calendarMenu-date-selected-backgroundColor
           );
           border: none;
           border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
-          outline: none;
 
           &:hover {
             background-color: var(

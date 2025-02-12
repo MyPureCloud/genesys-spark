@@ -17,18 +17,18 @@
   flex-basis: 100%;
   inline-size: 100%;
   overflow: hidden;
+  text-overflow: ellipsis;
   font-family: var(--gse-ui-search-counter-text-fontFamily);
   font-size: var(--gse-ui-search-counter-text-fontSize);
   font-weight: var(--gse-ui-search-counter-text-fontWeight);
   line-height: var(--gse-ui-search-counter-text-lineHeight);
   color: var(--gse-ui-formControl-input-populatedColor);
-  text-overflow: ellipsis;
   white-space: nowrap;
+  outline: none;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   background-image: none;
   border: 0;
   border-radius: 0;
-  outline: none;
 
   &::placeholder {
     color: var(--gse-ui-formControl-input-populatedColor);
@@ -37,8 +37,8 @@
   &.gux-focused,
   &:focus,
   &:focus-visible {
-    border: 0;
     outline: none;
+    border: 0;
     box-shadow: none;
   }
 }
@@ -72,14 +72,14 @@
 
   &:focus-visible,
   &:focus-within {
-    border: var(--gse-ui-formControl-input-active-border-width)
-      var(--gse-ui-formControl-input-active-border-style)
-      var(--gse-ui-formControl-input-active-border-color);
-    border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
     outline: var(--gse-ui-formControl-input-focus-border-width)
       var(--gse-ui-formControl-input-focus-border-style)
       var(--gse-ui-formControl-input-focus-border-color);
     outline-offset: var(--gse-semantic-focusOutline-offset);
+    border: var(--gse-ui-formControl-input-active-border-width)
+      var(--gse-ui-formControl-input-active-border-style)
+      var(--gse-ui-formControl-input-active-border-color);
+    border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
   }
 
   &:not(:disabled):not(.gux-disabled):hover {
@@ -122,10 +122,10 @@
       overflow: hidden;
       color: var(--gse-ui-search-counter-default-foregroundColor);
       cursor: pointer;
+      outline: none;
       background: none;
       border: none;
       border-radius: var(--gse-ui-button-borderRadius);
-      outline: none;
 
       &:disabled {
         pointer-events: none;

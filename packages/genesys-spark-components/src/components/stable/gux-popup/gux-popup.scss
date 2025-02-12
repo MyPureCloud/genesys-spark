@@ -11,8 +11,8 @@
 .gux-popup-container {
   position: fixed;
   z-index: var(--gse-semantic-zIndex-popup);
-  inline-size: max-content;
   visibility: hidden;
+  inline-size: max-content;
   background-color: var(--gse-ui-menu-backgroundColor);
 
   &.gux-expanded {

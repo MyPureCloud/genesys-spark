@@ -27,10 +27,10 @@ gux-tab-advanced {
         &:focus-visible {
           @include focus.gux-focus-ring;
 
-          border-radius: var(--gse-ui-advancedTabs-item-focus-borderRadius);
           outline-offset: calc(
             -1 * var(--gse-semantic-focusOutline-md-borderWidth)
           );
+          border-radius: var(--gse-ui-advancedTabs-item-focus-borderRadius);
         }
 
         .gux-tab-button-text {

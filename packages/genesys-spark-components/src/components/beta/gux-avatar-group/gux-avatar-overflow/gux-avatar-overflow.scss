@@ -57,12 +57,12 @@
   inset-block-start: 0;
   inset-inline-start: 0;
   z-index: var(--gse-semantic-zIndex-popup);
+  visibility: hidden;
   flex-direction: column;
   max-block-size: var(--gse-ui-menu-maxHeight);
   padding: var(--gse-ui-menu-padding);
   margin: 0;
   overflow-y: auto;
-  visibility: hidden;
   background-color: var(--gse-ui-menu-backgroundColor);
   border: none;
   border: var(--gse-semantic-container-edges-borderWidth) solid

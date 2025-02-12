@@ -111,8 +111,8 @@ section.gux-disabled {
     margin-inline-start: var(--gse-ui-accordion-header-gap);
     line-height: 0;
     color: var(--gse-ui-accordion-header-default-foreground-chevronIcon-closed);
-    transition: transform 0.5s ease;
     transform-origin: center;
+    transition: transform 0.5s ease;
 
     &.gux-arrow-position-start {
       order: -1;
@@ -126,11 +126,11 @@ section.gux-disabled {
   }
 
   &:focus-visible {
-    border-radius: var(--gse-ui-accordion-menuItem-focus-borderRadius);
     outline: var(--gse-ui-accordion-focusBorder-width)
       var(--gse-ui-accordion-focusBorder-style)
       var(--gse-ui-accordion-focusBorder-color);
     outline-offset: var(--gse-ui-accordion-focus-offset-gap);
+    border-radius: var(--gse-ui-accordion-menuItem-focus-borderRadius);
   }
 
   &:hover {

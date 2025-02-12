@@ -64,13 +64,13 @@
   inline-size: var(--gse-ui-checkbox-icon-width);
   block-size: var(--gse-ui-checkbox-icon-height);
   margin: 0;
-  text-align: center;
   vertical-align: middle;
+  text-align: center;
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
-  border: 0;
   outline: none;
+  border: 0;
 }
 
 ::slotted(input[type='checkbox'])::before {
@@ -80,11 +80,11 @@
 }
 
 ::slotted(input[type='checkbox']:focus-visible) {
-  border-radius: var(--gse-ui-checkbox-focus-borderRadiusSmall);
   outline: var(--gse-ui-checkbox-focus-border-width)
     var(--gse-ui-checkbox-focus-border-style)
     var(--gse-ui-checkbox-focus-border-color);
   outline-offset: var(--gse-ui-checkbox-focus-offset);
+  border-radius: var(--gse-ui-checkbox-focus-borderRadiusSmall);
 }
 
 ::slotted(input[type='checkbox']:not(:checked))::before {
@@ -138,6 +138,6 @@
   font-size: 12px; // -- missing font-size token https://inindca.atlassian.net/browse/COMUI-1672
   font-weight: var(--gse-ui-checkbox-label-text-fontWeight);
   line-height: var(--gse-ui-checkbox-label-text-lineHeight);
-  color: var(--gse-ui-checkbox-label-foregroundColor);
   vertical-align: middle;
+  color: var(--gse-ui-checkbox-label-foregroundColor);
 }
