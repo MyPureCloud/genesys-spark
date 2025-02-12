@@ -16,6 +16,7 @@
     "ui/data_display",
     "ui/layout_and_container",
     "ui/navigation",
-    "ui/feedback"
+    "ui/feedback",
+    "ui-charts/charts"
   ]
 }

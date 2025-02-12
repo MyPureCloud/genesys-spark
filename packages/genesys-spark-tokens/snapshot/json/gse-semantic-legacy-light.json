@@ -356,5 +356,107 @@
   },
   "effects": {
     "box_shadow": "#28324326"
+  },
+  "charts": {
+    "categorical_data": {
+      "category1": {
+        "default": "#056385",
+        "shading": "#4d90a8"
+      },
+      "category2": {
+        "default": "#5798d9",
+        "shading": "#88b6e4"
+      },
+      "category3": {
+        "default": "#ac75ff",
+        "shading": "#c49dff"
+      },
+      "category4": {
+        "default": "#89387b",
+        "shading": "#ab72a1"
+      },
+      "category5": {
+        "default": "#ff5c77",
+        "shading": "#ff8b9e"
+      },
+      "category6": {
+        "default": "#ffb5a3",
+        "shading": "#ffcabe"
+      },
+      "category7": {
+        "default": "#ffc650",
+        "shading": "#ffd783"
+      },
+      "category8": {
+        "default": "#c6dd98",
+        "shading": "#d7e7b6"
+      },
+      "category9": {
+        "default": "#54c6ab",
+        "shading": "#86d7c3"
+      },
+      "category10": {
+        "default": "#263b73",
+        "shading": "#65749c"
+      },
+      "subtle": {
+        "default": "#cad1e1"
+      }
+    },
+    "numerical_data": {
+      "single_color": {
+        "level1": "#cdeaf5",
+        "level2": "#9fd6ea",
+        "level3": "#81cbe5",
+        "level4": "#53bee5",
+        "level5": "#28afe0",
+        "level6": "#1589b2",
+        "level7": "#056385",
+        "level8": "#04445c",
+        "level9": "#002533",
+        "level10": "#00161f"
+      },
+      "multi_color": {
+        "green": "#81cbe5",
+        "red": "#ff9dad",
+        "yellow": "#ffdd96"
+      }
+    },
+    "foreground": {
+      "high_emphasis": "#2a2a2e",
+      "high_emphasis_inverse": "#ffffff",
+      "mid_emphasis": "#4f5157"
+    },
+    "border": {
+      "axis": "#b2b7c4",
+      "grid": {
+        "default": "#ebedf5",
+        "hover": "#c1c6d4"
+      }
+    },
+    "target_line": {
+      "default": "#ff8f76"
+    },
+    "point_fill": {
+      "default": "#ffffff"
+    },
+    "stroke": {
+      "default": "#ffffff"
+    },
+    "background": {
+      "placeholder": {
+        "default": "#ebedf5"
+      }
+    },
+    "track": {
+      "default": "#ebedf5"
+    },
+    "sparkline": {
+      "mono": "#2754ac",
+      "negative": "#ea0b0b",
+      "positive": "#95c189",
+      "neutral": "#75a8ff",
+      "trendline": "#deeaff"
+    }
   }
 }

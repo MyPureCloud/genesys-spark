@@ -1085,5 +1085,371 @@
         }
       }
     }
+  },
+  "charts": {
+    "categorical_data": {
+      "category1": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category1d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category1.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category2": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category2d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category2.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category3": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category3d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category3.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category4": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category4d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category4.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category5": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category5d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category5.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category6": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category6d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category6.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category7": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category7d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category7.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category8": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category8d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category8.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category9": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category9d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category9.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category10": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category10d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category10.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "subtle": {
+        "default": {
+          "value": "{theme.charts.categorical_data.subtled}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        }
+      }
+    },
+    "numerical_data": {
+      "single_color": {
+        "level1": {
+          "value": "{theme.charts.numerical_data.single_color.level1d}",
+          "type": "color"
+        },
+        "level2": {
+          "value": "{theme.charts.numerical_data.single_color.level2d}",
+          "type": "color"
+        },
+        "level3": {
+          "value": "{theme.charts.numerical_data.single_color.level3d}",
+          "type": "color"
+        },
+        "level4": {
+          "value": "{theme.charts.numerical_data.single_color.level4d}",
+          "type": "color"
+        },
+        "level5": {
+          "value": "{theme.charts.numerical_data.single_color.level5d}",
+          "type": "color"
+        },
+        "level6": {
+          "value": "{theme.charts.numerical_data.single_color.level6d}",
+          "type": "color"
+        },
+        "level7": {
+          "value": "{theme.charts.numerical_data.single_color.level7d}",
+          "type": "color"
+        },
+        "level8": {
+          "value": "{theme.charts.numerical_data.single_color.level8d}",
+          "type": "color"
+        },
+        "level9": {
+          "value": "{theme.charts.numerical_data.single_color.level9d}",
+          "type": "color"
+        },
+        "level10": {
+          "value": "{theme.charts.numerical_data.single_color.level10d}",
+          "type": "color"
+        }
+      },
+      "multi_color": {
+        "green": {
+          "value": "{theme.charts.numerical_data.multi_color.greend}",
+          "type": "color"
+        },
+        "red": {
+          "value": "{theme.charts.numerical_data.multi_color.redd}",
+          "type": "color"
+        },
+        "yellow": {
+          "value": "{theme.charts.numerical_data.multi_color.yellowd}",
+          "type": "color"
+        }
+      }
+    },
+    "foreground": {
+      "high_emphasis": {
+        "value": "{theme.charts.foreground.40d}",
+        "type": "color"
+      },
+      "high_emphasis_inverse": {
+        "value": "{theme.charts.foreground.10d}",
+        "type": "color"
+      },
+      "mid_emphasis": {
+        "value": "{theme.charts.foreground.30d}",
+        "type": "color"
+      }
+    },
+    "border": {
+      "axis": {
+        "value": "{theme.charts.border.30d}",
+        "type": "color",
+        "description": "Our default color for chart's axis."
+      },
+      "grid": {
+        "default": {
+          "value": "{theme.charts.border.10d}",
+          "type": "color",
+          "description": "The color for chart's grids on the default state."
+        },
+        "hover": {
+          "value": "{theme.charts.border.20d}",
+          "type": "color",
+          "description": "The color for chart's grids on the hover state."
+        }
+      }
+    },
+    "target_line": {
+      "default": {
+        "value": "{theme.charts.target_line.10d}",
+        "type": "color"
+      }
+    },
+    "point_fill": {
+      "default": {
+        "value": "{theme.charts.fill.10d}",
+        "type": "color"
+      }
+    },
+    "stroke": {
+      "default": {
+        "value": "{theme.charts.fill.10d}",
+        "type": "color"
+      }
+    },
+    "background": {
+      "placeholder": {
+        "default": {
+          "value": "{theme.charts.background.10d}",
+          "type": "color"
+        }
+      }
+    },
+    "track": {
+      "default": {
+        "value": "{theme.charts.background.10d}",
+        "type": "color"
+      }
+    },
+    "sparkline": {
+      "mono": {
+        "value": "{theme.charts.sparkline.monod}",
+        "type": "color"
+      },
+      "negative": {
+        "value": "{theme.charts.sparkline.negatived}",
+        "type": "color"
+      },
+      "positive": {
+        "value": "{theme.charts.sparkline.positived}",
+        "type": "color"
+      },
+      "neutral": {
+        "value": "{theme.charts.sparkline.neutrald}",
+        "type": "color"
+      },
+      "trendline": {
+        "value": "{theme.charts.sparkline.trendlined}",
+        "type": "color"
+      }
+    }
   }
 }
