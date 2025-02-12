@@ -25,7 +25,8 @@ import {
   setLastOptionActive,
   setNextOptionActive,
   setPreviousOptionActive,
-  hasActiveOption
+  hasActiveOption,
+  getOptionDefaultSlot
 } from '../gux-listbox/gux-listbox.service';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
@@ -256,9 +257,9 @@ export class GuxListboxMulti {
       listboxOption.selected = this.getSelectedValues().includes(
         listboxOption.value
       );
-      if (this.filterType !== 'custom') {
-        listboxOption.filtered = !listboxOption.textContent
-          .trim()
+      if (this.filterType !== 'custom' && this.filterType !== 'none') {
+        listboxOption.filtered = !getOptionDefaultSlot(listboxOption)
+          ?.textContent.trim()
           .toLowerCase()
           .startsWith(this.textInput.toLowerCase());
       }
@@ -270,9 +271,8 @@ export class GuxListboxMulti {
       const newArray = [...this.getSelectedValues(), newValue];
       this.value = newArray.join(',');
     } else {
-      this.value = this.getSelectedValues()
-        .filter(e => e !== newValue)
-        .join(',');
+      const newArray = this.getSelectedValues().filter(e => e !== newValue);
+      this.value = newArray.length ? newArray.join(',') : undefined;
     }
     simulateNativeEvent(this.root, 'input');
     simulateNativeEvent(this.root, 'change');

@@ -1,6 +1,6 @@
-# gux-dropdown manual accessibility testing status
+# gux-dropdown-multi manual accessibility testing status
 
-**Last Updated:** 2025-02-06T12:50:30.071Z
+**Last Updated:** 2025-02-03T13:16:14.697Z
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
 | ✅ | [1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) | - |
