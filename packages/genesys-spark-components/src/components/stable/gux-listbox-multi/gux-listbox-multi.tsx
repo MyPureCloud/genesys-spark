@@ -271,9 +271,8 @@ export class GuxListboxMulti {
       const newArray = [...this.getSelectedValues(), newValue];
       this.value = newArray.join(',');
     } else {
-      this.value = this.getSelectedValues()
-        .filter(e => e !== newValue)
-        .join(',');
+      const newArray = this.getSelectedValues().filter(e => e !== newValue);
+      this.value = newArray.length ? newArray.join(',') : undefined;
     }
     simulateNativeEvent(this.root, 'input');
     simulateNativeEvent(this.root, 'change');
