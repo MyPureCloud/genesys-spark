@@ -56,7 +56,7 @@
     "stylelint-config-standard": "^36.0.1",
     "stylelint-scss": "^6.11.0",
     "webpack": "^5.97.1",
-    "webpack-cli": "^5.1.4",
+    "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
   },
   "prettier": "prettier-config-genesys-spark-components"
