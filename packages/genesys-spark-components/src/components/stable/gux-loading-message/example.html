@@ -51,7 +51,33 @@
   ></gux-radial-progress>
 </gux-loading-message>
 
-<style>
+<h2>Announced</h2>
+<div id="announce"></div>
+
+<style
+  onload='(function () {
+    setInterval(() => {
+        const html = window.toHTML(`
+        <gux-loading-message>
+          <div slot="primary-message">The content is loading...</div>
+          <div slot="additional-guidance">Thank you for waiting.</div>
+          <gux-radial-progress
+            slot="progress"
+            value="1"
+            max="10"
+            screenreader-text="loading"
+          ></gux-radial-progress>
+        </gux-loading-message>
+        `);
+
+        document.getElementById("announce").appendChild(html);
+
+        setTimeout(() => {
+          document.getElementById("announce").innerHTML = "";
+        }, 5000)
+    }, 10000);
+})()'
+>
   .resizing {
     inline-size: 250px;
     overflow: auto;
