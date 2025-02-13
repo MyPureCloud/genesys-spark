@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.118.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.117.1...v4.118.0) (2025-02-13)
+
+
+### Features
+
+* **tokens:** Added chart subgroups ([e543498](https://github.com/MyPureCloud/genesys-spark/commit/e5434984da3f5204cd3942e0143c2d97ab796501))
+* **tokens:** Added charts' grid and axis tokens ([0343305](https://github.com/MyPureCloud/genesys-spark/commit/03433055c72a448ce0285c31feef2cc83a3f158b))
+* **tokens:** added missing semantic tokens ([af0186d](https://github.com/MyPureCloud/genesys-spark/commit/af0186dd21d16defdada72c6ade906a61b056551))
+* **tokens:** Generated CSS vars ([d05ac35](https://github.com/MyPureCloud/genesys-spark/commit/d05ac35f0537771440ad55cc73c43a20c9229ba3))
+* **tokens:** Generated spark's data semantic Figma vars ([6d75b5b](https://github.com/MyPureCloud/genesys-spark/commit/6d75b5bf91a5f6c295ab7e5d441826bd91c206b8))
+
+
+### Bug Fixes
+
+* **dismiss-button:** fixed small size css ([be79bbd](https://github.com/MyPureCloud/genesys-spark/commit/be79bbd2e1473d6473d2b870e58042ce0248e731))
+* **dropdown-multi:** typeahead text not showing ([b71c2b1](https://github.com/MyPureCloud/genesys-spark/commit/b71c2b18b327c1f733f59b9a4da9818f55b02b89))
+
 ### [4.117.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.117.0...v4.117.1) (2025-02-12)
 
 ## [4.117.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.116.0...v4.117.0) (2025-02-11)
