@@ -11,9 +11,9 @@ gux-table-select-menu {
     padding: 0;
     margin-inline-start: var(--gse-ui-dataTableItems-header-gap);
     color: var(--gse-ui-dataTableItems-cell-chevron-foregroundColor);
+    outline: none;
     background-color: inherit;
     border: none;
-    outline: none;
 
     &:focus-visible {
       // TODO: COMUI-2393 need focus ring tokens for table-select-menu dropdown button ?

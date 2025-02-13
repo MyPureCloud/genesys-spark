@@ -49,11 +49,11 @@ gux-toggle-slider {
     }
 
     &:focus-visible {
-      border-radius: var(--gse-ui-toggle-focus-borderRadius);
       outline: var(--gse-ui-toggle-focus-border-width)
         var(--gse-ui-toggle-focus-border-style)
         var(--gse-ui-toggle-focus-border-color);
       outline-offset: var(--gse-ui-toggle-focus-offset);
+      border-radius: var(--gse-ui-toggle-focus-borderRadius);
     }
 
     .gux-slider {

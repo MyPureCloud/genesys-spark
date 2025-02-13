@@ -43,10 +43,6 @@
   .gux-arrow-caret {
     inline-size: 0;
     block-size: 0;
-    filter: drop-shadow(
-      0 0 4px var(--gse-semantic-effects-boxShadow)
-    ); // TODO: COMUI-2993 Replace this token with menu-specific token
-
     border-block-start: calc(var(--gse-ui-popover-anchor-width) / 2) solid
       var(--gse-ui-popover-backgroundColor); // TODO: COMUI-2993 Replace this token with menu-specific token
 
@@ -55,5 +51,9 @@
 
     border-inline-end: calc(var(--gse-ui-popover-anchor-width) / 2) solid
       transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
+
+    filter: drop-shadow(
+      0 0 4px var(--gse-semantic-effects-boxShadow)
+    ); // TODO: COMUI-2993 Replace this token with menu-specific token
   }
 }

@@ -81,14 +81,14 @@
   inline-size: var(--gse-ui-radioButton-icon-width);
   block-size: var(--gse-ui-radioButton-icon-height);
   margin: 0;
+  vertical-align: middle;
   color: var(--gse-ui-radioButton-icon-default-unselectedForegroundColor);
   text-align: center;
-  vertical-align: middle;
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
-  border: 0;
   outline: none;
+  border: 0;
 }
 
 ::slotted(input[type='radio'])::before {
@@ -98,11 +98,11 @@
 }
 
 ::slotted(input[type='radio']:focus-visible) {
-  border-radius: var(--gse-ui-radioButton-focus-borderRadius);
   outline: var(--gse-ui-radioButton-focus-border-width)
     var(--gse-ui-radioButton-focus-border-style)
     var(--gse-ui-radioButton-focus-border-color);
   outline-offset: var(--gse-semantic-focusOutline-offset);
+  border-radius: var(--gse-ui-radioButton-focus-borderRadius);
 }
 
 ::slotted(input[type='radio']:not(:checked))::before {
@@ -140,6 +140,6 @@
   font-size: var(--gse-ui-formControl-label-text-fontSize);
   font-weight: var(--gse-ui-radioButton-label-text-fontWeight);
   line-height: var(--gse-ui-radioButton-label-text-lineHeight);
-  color: var(--gse-ui-radioButton-label-foregroundColor);
   vertical-align: middle;
+  color: var(--gse-ui-radioButton-label-foregroundColor);
 }

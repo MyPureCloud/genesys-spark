@@ -92,11 +92,10 @@ button {
     &:focus-visible {
       position: relative;
       z-index: var(--gse-semantic-zIndex-showFocus);
+      outline-offset: var(--gse-ui-segmentedControl-focus-offset);
       border-radius: var(--gse-ui-segmentedControl-borderRadius);
 
       @include focus.gux-focus-ring;
-
-      outline-offset: var(--gse-ui-segmentedControl-focus-offset);
     }
 
     .gux-icon {

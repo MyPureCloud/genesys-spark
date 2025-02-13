@@ -90,14 +90,14 @@ gux-pagination-buttons-legacy {
         border: none;
 
         &:focus-visible {
+          outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
+            var(--gse-ui-color-focus);
+          outline-offset: var(--gse-semantic-focusOutline-offset);
           border-radius: calc(
             var(--gse-semantic-focusOutline-sm-borderRadius) - var(
                 --gse-semantic-focusOutline-offset
               )
           );
-          outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
-            var(--gse-ui-color-focus);
-          outline-offset: var(--gse-semantic-focusOutline-offset);
         }
 
         &.gux-current {

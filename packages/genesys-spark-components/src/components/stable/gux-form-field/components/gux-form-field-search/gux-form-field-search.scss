@@ -23,15 +23,15 @@
   order: 0;
   inline-size: 100%;
   overflow: hidden;
+  text-overflow: ellipsis;
   font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
   line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   color: var(--gse-ui-formControl-input-populatedColor);
-  text-overflow: ellipsis;
+  outline: none;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
-  outline: none;
 
   &::placeholder {
     color: var(--gse-ui-formControl-input-placeholderColor);
@@ -91,14 +91,14 @@
       }
 
       &:focus-within {
-        border: var(--gse-ui-formControl-input-active-border-width)
-          var(--gse-ui-formControl-input-active-border-style)
-          var(--gse-ui-formControl-input-active-border-color);
-        border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
         outline: var(--gse-ui-formControl-input-focus-border-width)
           var(--gse-ui-formControl-input-focus-border-style)
           var(--gse-ui-formControl-input-focus-border-color);
         outline-offset: var(--gse-semantic-focusOutline-offset);
+        border: var(--gse-ui-formControl-input-active-border-width)
+          var(--gse-ui-formControl-input-active-border-style)
+          var(--gse-ui-formControl-input-active-border-color);
+        border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
       }
 
       &:hover:not(.gux-disabled) {

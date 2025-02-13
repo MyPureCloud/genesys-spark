@@ -1,5 +1,11 @@
-import NewRelicBrowser from 'new-relic-browser';
 import packageInfo from '../../../package.json';
+
+interface NewRelicBrowser {
+  addPageAction: (
+    name: string,
+    metadata: { [key: string]: string | number }
+  ) => void;
+}
 
 // The number of actions to process every interval
 const ACTION_BATCH_SIZE = 20;
@@ -144,6 +150,6 @@ export function getVersionEvent(packageInfoVersion: string): LibraryEvent {
 // Get NewRelic types working
 declare global {
   interface Window {
-    newrelic?: typeof NewRelicBrowser;
+    newrelic?: NewRelicBrowser;
   }
 }

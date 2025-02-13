@@ -22,16 +22,16 @@ button {
   color: var(--gse-ui-menu-option-label-foregroundColor);
   word-wrap: break-word;
   cursor: pointer;
-  background-color: var(--gse-ui-menu-option-default-backgroundColor);
-  border: none;
   outline: none;
   outline-offset: calc(var(--gse-ui-menu-option-focus-border-width) * -1);
+  background-color: var(--gse-ui-menu-option-default-backgroundColor);
+  border: none;
 
   &:focus-visible {
-    border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
     outline: var(--gse-ui-menu-option-focus-border-width)
       var(--gse-ui-menu-option-focus-border-style)
       var(--gse-ui-menu-option-focus-border-color);
+    border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
   }
 
   &:hover {

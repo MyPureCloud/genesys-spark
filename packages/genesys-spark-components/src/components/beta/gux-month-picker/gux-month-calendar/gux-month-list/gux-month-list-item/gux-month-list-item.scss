@@ -21,9 +21,9 @@
     text-align: center;
     word-wrap: break-word;
     cursor: pointer;
+    outline: none;
     border: none;
     border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
-    outline: none;
 
     &.gux-selected {
       color: var(--gse-ui-calendarMenu-month-selected-foregroundColor);
@@ -31,11 +31,11 @@
     }
 
     &:focus-visible:not(:disabled) {
-      border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
       outline: var(--gse-ui-monthPicker-calendarStates-focus-border-width)
         var(--gse-ui-monthPicker-calendarStates-focus-border-style)
         var(--gse-ui-monthPicker-calendarStates-focus-border-color);
       outline-offset: var(--gse-semantic-focusOutline-offset);
+      border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
     }
 
     &:hover:not(:disabled) {

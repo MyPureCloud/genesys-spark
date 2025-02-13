@@ -33,11 +33,11 @@
   line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   color: var(--gse-ui-formControl-input-populatedColor);
   resize: vertical;
+  outline: none;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   background-image: none;
   border: none;
   border-radius: var(--gse-ui-formControl-input-borderRadius);
-  outline: none;
 
   @include gux-textarea-sizing-properties;
 
@@ -57,21 +57,21 @@
   .gux-input {
     position: relative;
     display: flex;
+    outline: none;
     border: var(--gse-ui-formControl-input-default-border-width)
       var(--gse-ui-formControl-input-default-border-style)
       var(--gse-ui-formControl-input-default-border-color);
     border-radius: var(--gse-ui-formControl-input-borderRadius);
-    outline: none;
 
     &:focus-within {
-      border: var(--gse-ui-formControl-input-active-border-width)
-        var(--gse-ui-formControl-input-active-border-style)
-        var(--gse-ui-formControl-input-active-border-color);
-      border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
       outline: var(--gse-ui-formControl-input-focus-border-width)
         var(--gse-ui-formControl-input-focus-border-style)
         var(--gse-ui-formControl-input-focus-border-color);
       outline-offset: var(--gse-semantic-focusOutline-offset);
+      border: var(--gse-ui-formControl-input-active-border-width)
+        var(--gse-ui-formControl-input-active-border-style)
+        var(--gse-ui-formControl-input-active-border-color);
+      border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
     }
 
     &:hover:not(.gux-disabled) {
@@ -107,6 +107,9 @@
       overflow-wrap: anywhere;
 
       &::after {
+        /* Hidden from view, clicks, and screen readers */
+        visibility: hidden;
+
         /* Place on top of each other */
         grid-row-start: 1;
         grid-row-end: 2;
@@ -115,9 +118,6 @@
 
         /* This is how textarea text behaves */
         white-space: pre-wrap;
-
-        /* Hidden from view, clicks, and screen readers */
-        visibility: hidden;
 
         /* Note the weird space! Needed to preventy jumpy behavior */
         content: attr(data-replicated-value) ' ';

@@ -12,15 +12,15 @@
   inline-size: 100%;
   margin-inline-start: 4px;
   overflow: hidden;
+  text-overflow: ellipsis;
   font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
   font-size: var(--gse-ui-formControl-input-contentText-fontSize);
   font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
   line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
   color: var(--gse-ui-formControl-input-populatedColor);
-  text-overflow: ellipsis;
+  outline: none;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
-  outline: none;
 
   &.gux-disabled {
     -webkit-user-select: none;
@@ -127,11 +127,11 @@
 
 .gux-field-button {
   box-sizing: border-box;
+  outline: none;
   background-color: var(--gse-ui-formControl-input-backgroundColor);
   border: none;
   border-radius: var(--gse-ui-formControl-input-borderRadius) 0 0
     var(--gse-ui-formControl-input-borderRadius);
-  outline: none;
 
   &.gux-expanded {
     background-color: var(--gse-ui-phoneInput-dropdown-active-backgroundColor);

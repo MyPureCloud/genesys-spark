@@ -52,10 +52,10 @@
     position: fixed;
     inset-block-start: 0;
     inset-inline-start: 0;
+    visibility: hidden;
     flex-direction: column;
     padding: var(--gse-ui-menu-padding);
     margin: 0;
-    visibility: hidden;
     background-color: var(--gse-ui-menu-backgroundColor);
     border: none;
     border-radius: var(--gse-ui-menu-borderRadius);

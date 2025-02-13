@@ -52,9 +52,9 @@
       padding: 0;
       font-size: var(--gse-ui-formControl-label-text-fontSize);
       color: var(--gse-ui-formControl-input-populatedColor);
+      outline: none;
       background-color: var(--gse-ui-formControl-input-backgroundColor);
       border: none;
-      outline: none;
 
       &.gux-input-time-hours {
         text-align: end;
@@ -76,9 +76,9 @@
       font-weight: var(--gse-ui-formControl-input-prefixSufix-text-fontWeight);
       line-height: var(--gse-ui-formControl-input-prefixSufix-text-lineHeight);
       color: var(--gse-ui-formControl-input-populatedColor);
+      outline: none;
       background: transparent;
       border: none;
-      outline: none;
 
       &:focus-visible {
         @include focus.gux-focus-ring-small;
@@ -107,9 +107,9 @@
       order: 0;
       padding: 0;
       color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
+      outline: none;
       background: transparent;
       border: none;
-      outline: none;
 
       &.gux-active:not(:disabled) {
         color: var(--gse-ui-timePicker-clockStates-activeColor);

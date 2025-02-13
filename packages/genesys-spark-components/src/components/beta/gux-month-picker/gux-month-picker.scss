@@ -14,14 +14,14 @@
   border-radius: var(--gse-ui-formControl-input-borderRadius);
 
   &:focus-within {
-    border: var(--gse-ui-formControl-input-active-border-width)
-      var(--gse-ui-formControl-input-active-border-style)
-      var(--gse-ui-formControl-input-active-border-color);
-    border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
     outline: var(--gse-ui-formControl-input-focus-border-width)
       var(--gse-ui-formControl-input-focus-border-style)
       var(--gse-ui-formControl-input-focus-border-color);
     outline-offset: var(--gse-semantic-focusOutline-offset);
+    border: var(--gse-ui-formControl-input-active-border-width)
+      var(--gse-ui-formControl-input-active-border-style)
+      var(--gse-ui-formControl-input-active-border-color);
+    border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
   }
 
   .gux-display {
@@ -55,13 +55,13 @@
     border: none;
 
     &:focus-visible {
-      border-radius: var(
-        --gse-ui-calendarMenu-month-calendarButton-focusBorderRadius
-      );
       outline: var(--gse-ui-monthPicker-calendarStates-focus-border-width)
         var(--gse-ui-monthPicker-calendarStates-focus-border-style)
         var(--gse-ui-monthPicker-calendarStates-focus-border-color);
       outline-offset: var(--gse-semantic-focusOutline-offset);
+      border-radius: var(
+        --gse-ui-calendarMenu-month-calendarButton-focusBorderRadius
+      );
     }
 
     &:not(:disabled):hover {

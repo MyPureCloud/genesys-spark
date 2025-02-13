@@ -36,11 +36,11 @@
   color: var(--gse-ui-radioButton-icon-default-unselectedForegroundColor);
   -webkit-appearance: none;
   appearance: none;
+  outline: none;
   border: var(--gse-ui-selectorCard-unselected-border-width)
     var(--gse-ui-selectorCard-unselected-border-style)
     var(--gse-ui-selectorCard-unselected-border-color);
   border-radius: var(--gse-ui-selectorCard-simple-borderRadius);
-  outline: none;
 
   &::before {
     position: absolute;
@@ -50,9 +50,9 @@
     grid-area: 1/1;
     inline-size: var(--gse-ui-radioButton-icon-width);
     block-size: var(--gse-ui-radioButton-icon-height);
+    vertical-align: middle;
     color: var(--gse-ui-radioButton-icon-default-unselectedForegroundColor);
     text-align: center;
-    vertical-align: middle;
     content: '';
   }
 }
