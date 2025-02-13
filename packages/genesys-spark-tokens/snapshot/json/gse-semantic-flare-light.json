@@ -66,6 +66,16 @@
         "default": "#2a2a2e",
         "hover": "#081129",
         "active": "#0c193d"
+      },
+      "chat_bubble": {
+        "agent": "#f5f6fa",
+        "costumer": "#e6f4fa",
+        "bot": "#ffece8",
+        "public": "#fff4dc",
+        "digital_consultation": "#eee3ff"
+      },
+      "text_highlight": {
+        "default": "#ffd173"
       }
     },
     "system": {
@@ -414,7 +424,7 @@
         "level7": "#056385",
         "level8": "#04445c",
         "level9": "#002533",
-        "level10": "#00161f"
+        "level10": "#052a38"
       },
       "multi_color": {
         "green": "#81cbe5",

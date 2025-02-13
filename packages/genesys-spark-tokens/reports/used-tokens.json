@@ -29,6 +29,7 @@
   "--gse-semantic-border-container-edges-default",
   "--gse-semantic-border-focus",
   "--gse-semantic-container-edges-borderWidth",
+  "--gse-semantic-effects-boxShadow",
   "--gse-semantic-focusOutline-md-borderWidth",
   "--gse-semantic-focusOutline-offset",
   "--gse-semantic-focusOutline-sm-borderRadius",

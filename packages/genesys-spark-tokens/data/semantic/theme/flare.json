@@ -631,7 +631,7 @@
             "type": "color"
           },
           "70d": {
-            "value": "{color.plum.1000}",
+            "value": "{color.plum.950}",
             "type": "color"
           },
           "80d": {
@@ -792,6 +792,48 @@
           },
           "70d": {
             "value": "{color.genesys_orange.500}",
+            "type": "color"
+          }
+        },
+        "chat_bubble": {
+          "10": {
+            "value": "{color.haze.50}",
+            "type": "color"
+          },
+          "20": {
+            "value": "{color.island.50}",
+            "type": "color"
+          },
+          "30": {
+            "value": "{color.genesys_orange.50}",
+            "type": "color"
+          },
+          "40": {
+            "value": "{color.mango.100}",
+            "type": "color"
+          },
+          "50": {
+            "value": "{color.plum.100}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.haze.1000}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.island.950}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.genesys_orange.950}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.honey.900}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.plum.1000}",
             "type": "color"
           }
         }

@@ -66,6 +66,16 @@
         "default": "#ffffff",
         "hover": "#d5def7",
         "active": "#adbff0"
+      },
+      "chat_bubble": {
+        "agent": "#131315",
+        "costumer": "#002533",
+        "bot": "#2f1007",
+        "public": "#3d300c",
+        "digital_consultation": "#282136"
+      },
+      "text_highlight": {
+        "default": "#664f20"
       }
     },
     "system": {
