@@ -283,6 +283,12 @@
         "value": "{container.3xs.size}",
         "type": "sizing"
       }
+    },
+    "container": {
+      "min_width": {
+        "value": "288px",
+        "type": "sizing"
+      }
     }
   },
   "progress_and_loading": {
