@@ -42,7 +42,7 @@
     "postcss-html": "^1.8.0",
     "postcss-less": "^6.0.0",
     "postcss-scss": "^4.0.9",
-    "prettier": "^3.5.0",
+    "prettier": "^3.5.1",
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
     "sass": "^1.84.0",
