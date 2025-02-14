@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.119.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.118.0...v4.119.0) (2025-02-14)
+
+
+### Features
+
+* **tokens:** created tokens for chat bubbles ([6261393](https://github.com/MyPureCloud/genesys-spark/commit/6261393b95f9fe2e54bea27876f52f93a82462f5))
+* **tokens:** generated CSS vars ([c1d09c5](https://github.com/MyPureCloud/genesys-spark/commit/c1d09c5dc38846a593b86fbed0e9461dbebb0216))
+* **tokens:** Updated chat bubble tokens values ([2811f43](https://github.com/MyPureCloud/genesys-spark/commit/2811f43438a52afe5f9e53d6759ecd1bc430fdaa))
+
+
+### Bug Fixes
+
+* **icon:** added img role to svg ([b9ca988](https://github.com/MyPureCloud/genesys-spark/commit/b9ca9884067449346004b351011bac34c8209eae))
+* **tooltip:** improved accessibility ([c42ab86](https://github.com/MyPureCloud/genesys-spark/commit/c42ab8641755845aa128780d4529eec36bbdf80d))
+
 ## [4.118.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.117.1...v4.118.0) (2025-02-13)
 
 
