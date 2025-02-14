@@ -1,0 +1,208 @@
+{
+  "pie_chart": {
+    "segment": {
+      "category1": {
+        "default": {
+          "value": "{charts.categorical_data.category1.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category1.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "category10": {
+        "default": {
+          "value": "{charts.categorical_data.category10.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category10.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "category2": {
+        "default": {
+          "value": "{charts.categorical_data.category2.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category2.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "category3": {
+        "default": {
+          "value": "{charts.categorical_data.category3.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category3.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "category4": {
+        "default": {
+          "value": "{charts.categorical_data.category4.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category4.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "category5": {
+        "default": {
+          "value": "{charts.categorical_data.category5.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category5.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "category6": {
+        "default": {
+          "value": "{charts.categorical_data.category6.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category6.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "category7": {
+        "default": {
+          "value": "{charts.categorical_data.category7.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category7.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "category8": {
+        "default": {
+          "value": "{charts.categorical_data.category8.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category8.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "category9": {
+        "default": {
+          "value": "{charts.categorical_data.category9.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category9.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "chartMessage": {
+        "default": {
+          "value": "{charts.background.placeholder.default}",
+          "type": "color"
+        }
+      },
+      "stroke": {
+        "default": {
+          "value": "{charts.stroke.default}",
+          "type": "color"
+        }
+      }
+    }
+  }
+}

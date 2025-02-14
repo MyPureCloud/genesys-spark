@@ -1,0 +1,334 @@
+{
+  "charts-shared": {
+    "center_title": {
+      "subtitle": {
+        "default": {
+          "value": "{charts.foreground.high_emphasis}",
+          "type": "color"
+        }
+      },
+      "title": {
+        "default": {
+          "value": "{charts.foreground.high_emphasis}",
+          "type": "color"
+        }
+      }
+    },
+    "chart_header": {
+      "subtitle": {
+        "default": {
+          "value": "{charts.foreground.high_emphasis}",
+          "type": "color"
+        }
+      },
+      "title": {
+        "default": {
+          "value": "{charts.foreground.high_emphasis}",
+          "type": "color"
+        }
+      },
+      "spacing-bottom": {
+        "value": "{spacing.md}",
+        "type": "spacing"
+      }
+    },
+    "chart_messages": {
+      "message": {
+        "default": {
+          "value": "{charts.foreground.high_emphasis}",
+          "type": "color"
+        }
+      },
+      "empty": {
+        "icon": {
+          "default": {
+            "value": "{foreground.system.warning.accent}",
+            "type": "color"
+          }
+        }
+      },
+      "error": {
+        "icon": {
+          "default": {
+            "value": "{foreground.system.error.accent}",
+            "type": "color"
+          }
+        }
+      },
+      "loading": {
+        "icon": {
+          "default": {
+            "value": "{background.system.progress_and_loading.progressed}",
+            "type": "color"
+          },
+          "track": {
+            "value": "{background.system.progress_and_loading.default}",
+            "type": "color"
+          }
+        }
+      },
+      "icon": {
+        "spacing-bottom": {
+          "value": "{spacing.4xs}",
+          "type": "spacing"
+        }
+      }
+    },
+    "legend": {
+      "dot": {
+        "category1": {
+          "value": "{charts.categorical_data.category1.default}",
+          "type": "color"
+        },
+        "category10": {
+          "value": "{charts.categorical_data.category10.default}",
+          "type": "color"
+        },
+        "category2": {
+          "value": "{charts.categorical_data.category2.default}",
+          "type": "color"
+        },
+        "category3": {
+          "value": "{charts.categorical_data.category3.default}",
+          "type": "color"
+        },
+        "category4": {
+          "value": "{charts.categorical_data.category4.default}",
+          "type": "color"
+        },
+        "category5": {
+          "value": "{charts.categorical_data.category5.default}",
+          "type": "color"
+        },
+        "category6": {
+          "value": "{charts.categorical_data.category6.default}",
+          "type": "color"
+        },
+        "category7": {
+          "value": "{charts.categorical_data.category7.default}",
+          "type": "color"
+        },
+        "category8": {
+          "value": "{charts.categorical_data.category8.default}",
+          "type": "color"
+        },
+        "category9": {
+          "value": "{charts.categorical_data.category9.default}",
+          "type": "color"
+        },
+        "placeholder": {
+          "value": "{charts.foreground.mid_emphasis}",
+          "type": "color"
+        },
+        "spacing-right": {
+          "value": "{spacing.4xs}",
+          "type": "spacing"
+        }
+      },
+      "label": {
+        "default": {
+          "value": "{charts.foreground.mid_emphasis}",
+          "type": "color"
+        }
+      },
+      "horizontal": {
+        "series_item": {
+          "spacing-right": {
+            "value": "{spacing.xs}",
+            "type": "spacing"
+          }
+        }
+      },
+      "vertical": {
+        "series_item": {
+          "spacing-bottom": {
+            "value": "{spacing.xs}",
+            "type": "spacing"
+          }
+        }
+      },
+      "spacing-left": {
+        "value": "{spacing.md}",
+        "type": "spacing"
+      },
+      "spacing-top": {
+        "value": "{spacing.md}",
+        "type": "spacing"
+      }
+    },
+    "axis": {
+      "x": {
+        "spacing-bottom": {
+          "value": "{spacing.4xs}",
+          "type": "spacing"
+        }
+      },
+      "y": {
+        "spacing-left": {
+          "value": "{spacing.3xs}",
+          "type": "spacing"
+        }
+      },
+      "default": {
+        "value": "{charts.border.axis}",
+        "type": "color"
+      }
+    },
+    "grid_line": {
+      "horizontal": {
+        "last": {
+          "spacing-top": {
+            "value": "{spacing.md}",
+            "type": "spacing"
+          }
+        }
+      },
+      "vertical": {
+        "first": {
+          "spacing-left": {
+            "value": "{spacing.md}",
+            "type": "spacing"
+          }
+        },
+        "last": {
+          "spacing-right": {
+            "value": "{spacing.md}",
+            "type": "spacing"
+          }
+        }
+      },
+      "default": {
+        "value": "{charts.border.grid.default}",
+        "type": "color"
+      },
+      "hover": {
+        "value": "{charts.border.grid.hover}",
+        "type": "color"
+      }
+    },
+    "label": {
+      "x": {
+        "spacing-bottom": {
+          "value": "{spacing.4xs}",
+          "type": "spacing"
+        }
+      },
+      "y": {
+        "spacing-left": {
+          "value": "{spacing.3xs}",
+          "type": "spacing"
+        }
+      },
+      "default": {
+        "value": "{charts.foreground.high_emphasis}",
+        "type": "color"
+      }
+    },
+    "axis_title": {
+      "default": {
+        "value": "{charts.foreground.high_emphasis}",
+        "type": "color"
+      }
+    },
+    "focus": {
+      "default": {
+        "value": "{border.focus}",
+        "type": "color"
+      }
+    },
+    "target_line": {
+      "default": {
+        "value": "{charts.target_line.default}",
+        "type": "color"
+      }
+    }
+  },
+  "charts_shared": {
+    "anatomy": {
+      "axis_title": {
+        "value": "{body.sm.bold}",
+        "type": "typography"
+      },
+      "label": {
+        "value": "{body.sm.regular}",
+        "type": "typography"
+      }
+    },
+    "header": {
+      "chart_title": {
+        "value": "{heading.md.bold}",
+        "type": "typography"
+      },
+      "chart_subtitle": {
+        "value": "{body.md.regular}",
+        "type": "typography"
+      }
+    },
+    "legend": {
+      "label": {
+        "value": "{body.sm.regular}",
+        "type": "typography"
+      }
+    },
+    "messages": {
+      "message": {
+        "value": "{body.sm.regular}",
+        "type": "typography"
+      }
+    },
+    "center_title": {
+      "title": {
+        "md": {
+          "value": "{heading.xl.bold}",
+          "type": "typography"
+        },
+        "xs": {
+          "value": "{heading.md.bold}",
+          "type": "typography"
+        },
+        "sm": {
+          "value": "{heading.lg.bold}",
+          "type": "typography"
+        },
+        "lg": {
+          "value": "{heading.2xl.bold}",
+          "type": "typography"
+        },
+        "xl": {
+          "value": "{heading.3xl.bold}",
+          "type": "typography"
+        },
+        "2xl": {
+          "value": "{heading.4xl.bold}",
+          "type": "typography"
+        }
+      },
+      "subtitle": {
+        "md": {
+          "value": "{body.md.regular}",
+          "type": "typography"
+        },
+        "xs": {
+          "value": "{body.xs.regular}",
+          "type": "typography"
+        },
+        "sm": {
+          "value": "{body.sm.regular}",
+          "type": "typography"
+        },
+        "lg": {
+          "value": "{body.lg.regular}",
+          "type": "typography"
+        },
+        "xl": {
+          "value": "{body.xl.regular}",
+          "type": "typography"
+        },
+        "2xl": {
+          "value": "{body.2xl.regular}",
+          "type": "typography"
+        }
+      }
+    }
+  }
+}

@@ -17,6 +17,18 @@
     "ui/layout_and_container",
     "ui/navigation",
     "ui/feedback",
-    "ui-charts/charts"
+    "ui-charts/area_chart",
+    "ui-charts/bar_chart",
+    "ui-charts/bubble_chart",
+    "ui-charts/column_chart",
+    "ui-charts/donut_chart",
+    "ui-charts/gauge_chart",
+    "ui-charts/heatmap",
+    "ui-charts/line_chart",
+    "ui-charts/pie_chart",
+    "ui-charts/sankey_alluvial",
+    "ui-charts/scatter_chart",
+    "ui-charts/sparkline",
+    "ui-charts/shared"
   ]
 }

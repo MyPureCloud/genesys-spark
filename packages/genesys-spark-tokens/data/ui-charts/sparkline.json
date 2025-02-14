@@ -1,0 +1,34 @@
+{
+  "sparkline": {
+    "mono": {
+      "default": {
+        "value": "{charts.sparkline.mono}",
+        "type": "color"
+      }
+    },
+    "negative": {
+      "default": {
+        "value": "{charts.sparkline.negative}",
+        "type": "color"
+      }
+    },
+    "neutral": {
+      "default": {
+        "value": "{charts.sparkline.neutral}",
+        "type": "color"
+      }
+    },
+    "positive": {
+      "default": {
+        "value": "{charts.sparkline.positive}",
+        "type": "color"
+      }
+    },
+    "trendline": {
+      "default": {
+        "value": "{charts.sparkline.trendline}",
+        "type": "color"
+      }
+    }
+  }
+}

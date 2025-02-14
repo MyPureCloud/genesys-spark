@@ -152,6 +152,87 @@
         "fontSize": "16px",
         "lineHeight": "24px"
       }
+    },
+    "xs": {
+      "regular": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "400",
+        "fontSize": "12px",
+        "lineHeight": "18px"
+      },
+      "link": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "600",
+        "fontSize": "10px",
+        "lineHeight": "14px",
+        "textDecoration": "underline"
+      },
+      "bold": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "700",
+        "fontSize": "10px",
+        "lineHeight": "14px"
+      },
+      "semi_bold": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "600",
+        "fontSize": "10px",
+        "lineHeight": "14px"
+      }
+    },
+    "xl": {
+      "regular": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "400",
+        "fontSize": "18px",
+        "lineHeight": "24px"
+      },
+      "link": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "600",
+        "fontSize": "18px",
+        "lineHeight": "24px",
+        "textDecoration": "underline"
+      },
+      "bold": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "700",
+        "fontSize": "18px",
+        "lineHeight": "24px"
+      },
+      "semi_bold": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "600",
+        "fontSize": "18px",
+        "lineHeight": "24px"
+      }
+    },
+    "2xl": {
+      "regular": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "400",
+        "fontSize": "24px",
+        "lineHeight": "32px"
+      },
+      "link": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "600",
+        "fontSize": "24px",
+        "lineHeight": "32px",
+        "textDecoration": "underline"
+      },
+      "bold": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "700",
+        "fontSize": "24px",
+        "lineHeight": "32px"
+      },
+      "semi_bold": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "600",
+        "fontSize": "24px",
+        "lineHeight": "32px"
+      }
     }
   },
   "heading": {
@@ -232,6 +313,30 @@
       "lineHeight": "16px",
       "textCase": "uppercase",
       "letterSpacing": "1px"
+    },
+    "2xl": {
+      "bold": {
+        "fontFamily": "Urbanist",
+        "fontWeight": "700",
+        "fontSize": "48px",
+        "lineHeight": "58px"
+      }
+    },
+    "3xl": {
+      "bold": {
+        "fontFamily": "Urbanist",
+        "fontWeight": "700",
+        "fontSize": "60px",
+        "lineHeight": "72px"
+      }
+    },
+    "4xl": {
+      "bold": {
+        "fontFamily": "Urbanist",
+        "fontWeight": "700",
+        "fontSize": "72px",
+        "lineHeight": "86px"
+      }
     }
   },
   "subheading": {

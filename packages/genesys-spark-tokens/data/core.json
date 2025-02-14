@@ -871,6 +871,10 @@
       "value": "12px",
       "type": "fontSizes"
     },
+    "2xs": {
+      "value": "10px",
+      "type": "fontSizes"
+    },
     "sm": {
       "value": "14px",
       "type": "fontSizes"
@@ -889,6 +893,22 @@
     },
     "xxl": {
       "value": "36px",
+      "type": "fontSizes"
+    },
+    "3xl": {
+      "value": "48px",
+      "type": "fontSizes"
+    },
+    "4xl": {
+      "value": "56px",
+      "type": "fontSizes"
+    },
+    "5xl": {
+      "value": "60px",
+      "type": "fontSizes"
+    },
+    "6xl": {
+      "value": "72px",
       "type": "fontSizes"
     }
   },
@@ -909,6 +929,10 @@
   "line_height": {
     "2xs": {
       "value": "16px",
+      "type": "lineHeights"
+    },
+    "3xs": {
+      "value": "14px",
       "type": "lineHeights"
     },
     "xs": {
@@ -933,6 +957,22 @@
     },
     "2xl": {
       "value": "44px",
+      "type": "lineHeights"
+    },
+    "3xl": {
+      "value": "58px",
+      "type": "lineHeights"
+    },
+    "4xl": {
+      "value": "64px",
+      "type": "lineHeights"
+    },
+    "5xl": {
+      "value": "72px",
+      "type": "lineHeights"
+    },
+    "6xl": {
+      "value": "86px",
       "type": "lineHeights"
     },
     "match_font_size": {
