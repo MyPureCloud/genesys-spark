@@ -438,12 +438,12 @@ export class GuxDropdown {
   }
 
   private renderOption(option: HTMLGuxOptionElement): JSX.Element {
-    let optionText = option.textContent;
+    let optionText = option.textContent.trim();
     if (hasSlot(option, 'subtext')) {
       const subtext = option.querySelector('[slot=subtext]');
       optionText = optionText.substring(
         0,
-        optionText.length - subtext.textContent.length
+        optionText.length - subtext.textContent.trim().length
       );
     }
     return (
