@@ -78,6 +78,16 @@ export class GuxTab {
     return this.active;
   }
 
+  private getTabIndex(): number | null {
+    if (this.guxDisabled) {
+      return null;
+    }
+    if (this.active) {
+      return 0;
+    }
+    return -1;
+  }
+
   render(): JSX.Element {
     return (
       <button
@@ -87,12 +97,12 @@ export class GuxTab {
           'gux-active': this.active
         }}
         type="button"
-        aria-disabled={this.guxDisabled.toString()}
+        disabled={this.guxDisabled}
         id={`gux-${this.tabId}-tab`}
         role="tab"
         aria-controls={`gux-${this.tabId}-panel`}
         aria-selected={this.active.toString()}
-        tabIndex={this.active ? 0 : -1}
+        tabIndex={this.getTabIndex()}
         ref={el => (this.buttonElement = el)}
       >
         <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>

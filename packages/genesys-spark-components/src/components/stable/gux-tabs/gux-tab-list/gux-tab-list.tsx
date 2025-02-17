@@ -140,7 +140,9 @@ export class GuxTabList {
   }
 
   private setTabTriggers(): void {
-    this.tabTriggers = this.root.querySelectorAll('gux-tab');
+    this.tabTriggers = this.root.querySelectorAll(
+      'gux-tab:not([gux-disabled])'
+    );
     if (this.tabTriggers) {
       this.triggerIds = Array.from(this.tabTriggers)
         .map(trigger => `gux-${trigger.getAttribute('tab-id')}-tab`)
