@@ -1,12 +1,13 @@
 # gux-tag manual accessibility testing status
 
-**Last Updated:** 2024-12-13T22:32:26.682Z
+**Last Updated:** 2025-02-17T11:55:11.961Z
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
+| ✅ | [1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) | - |
 | ✅ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) | - |
 | ✅ | [2.1.2 No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) | - |
 | ✅ | [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) | - |
-| ❌ | [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) | [COMUI-3350](https://inindca.atlassian.net/browse/COMUI-3350) Focus indicator isn't always visible on some tag backgrounds (such as blue) |
+| ✅ | [2.4.7 Focus Visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html) | - |
 | ✅ | [2.4.11 Focus Not Obscured](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum) | - |
 | ✅ | [2.5.3 Label in Name](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html#dfn-name) | - |
 | ✅ | [2.5.7 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements) | - |

@@ -1,5 +1,7 @@
 @use '~genesys-spark/dist/scss/mixins.scss';
 
+$focus-outline-offset: 5px;
+
 :host {
   display: inline-block;
   border-radius: var(--gse-ui-tag-borderRadius);
@@ -28,6 +30,10 @@
     font-size: var(--gse-ui-tag-textLarge-fontSize);
     font-weight: var(--gse-ui-tag-textLarge-fontWeight);
     line-height: var(--gse-ui-tag-textLarge-lineHeight);
+
+    .gux-tag-remove-button:focus-within .gux-tag-remove-icon {
+      outline-offset: $focus-outline-offset * 2;
+    }
   }
 
   &.gux-disabled {
@@ -67,8 +73,9 @@
 
     &:focus-within {
       .gux-tag-remove-icon {
-        outline: var(--gse-semantic-focusOutline-sm-borderWidth) solid
+        outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
           var(--gse-ui-color-focus);
+        outline-offset: $focus-outline-offset;
         border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
       }
     }
