@@ -1,0 +1,305 @@
+{
+  "heatmap": {
+    "numerical_tile": {
+      "level1": {
+        "default": {
+          "value": "{charts.numerical_data.single_color.level1}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.single_color.level1}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "level10": {
+        "default": {
+          "value": "{charts.numerical_data.single_color.level10}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.single_color.level10}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "level2": {
+        "default": {
+          "value": "{charts.numerical_data.single_color.level2}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.single_color.level2}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "level3": {
+        "default": {
+          "value": "{charts.numerical_data.single_color.level3}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.single_color.level3}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "level4": {
+        "default": {
+          "value": "{charts.numerical_data.single_color.level4}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.single_color.level4}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "level5": {
+        "default": {
+          "value": "{charts.numerical_data.single_color.level5}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.single_color.level5}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "level6": {
+        "default": {
+          "value": "{charts.numerical_data.single_color.level6}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.single_color.level6}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "level7": {
+        "default": {
+          "value": "{charts.numerical_data.single_color.level7}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.single_color.level7}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "level8": {
+        "default": {
+          "value": "{charts.numerical_data.single_color.level8}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.single_color.level8}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "level9": {
+        "default": {
+          "value": "{charts.numerical_data.single_color.level9}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.single_color.level9}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      }
+    },
+    "categorical_tile": {
+      "green": {
+        "default": {
+          "value": "{charts.numerical_data.multi_color.green}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.multi_color.green}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "red": {
+        "default": {
+          "value": "{charts.numerical_data.multi_color.red}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.multi_color.red}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "yellow": {
+        "default": {
+          "value": "{charts.numerical_data.multi_color.yellow}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.numerical_data.multi_color.yellow}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tile_label": {
+      "default": {
+        "value": "{charts.foreground.high_emphasis}",
+        "type": "color"
+      },
+      "inverse": {
+        "value": "{charts.foreground.high_emphasis_inverse}",
+        "type": "color"
+      }
+    },
+    "chartMessage": {
+      "background": {
+        "default": {
+          "value": "{charts.background.placeholder.default}",
+          "type": "color"
+        }
+      }
+    },
+    "legend": {
+      "categorical": {
+        "green": {
+          "value": "{charts.numerical_data.multi_color.green}",
+          "type": "color"
+        },
+        "red": {
+          "value": "{charts.numerical_data.multi_color.red}",
+          "type": "color"
+        },
+        "yellow": {
+          "value": "{charts.numerical_data.multi_color.yellow}",
+          "type": "color"
+        }
+      },
+      "gradient": {
+        "spacing-bottom": {
+          "value": "{spacing.4xs}",
+          "type": "spacing"
+        }
+      },
+      "label": {
+        "value": "{body.sm.regular}",
+        "type": "typography"
+      }
+    },
+    "tile": {
+      "label": {
+        "value": "{body.sm.regular}",
+        "type": "typography"
+      }
+    }
+  }
+}

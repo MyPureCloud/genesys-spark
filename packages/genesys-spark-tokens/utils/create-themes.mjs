@@ -134,7 +134,7 @@ function getPlatform(prefix, theme, mode, type, format, outputFolder) {
           destination: `${prefix}-ui-${theme}-${mode}.${type}`,
           format,
           filter: token => {
-            return token.filePath.includes('/ui/');
+            return token.filePath.includes('/ui');
           }
         }
       ],

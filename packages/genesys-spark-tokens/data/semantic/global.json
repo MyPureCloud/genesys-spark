@@ -128,6 +128,135 @@
         "type": "typography",
         "description": "This is the typography style we use to add moderate emphasis in bodies of text, like introductory paragraphs after a heading; we usually pair it with medium or high emphasis colors."
       }
+    },
+    "xs": {
+      "regular": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.regular}",
+          "fontSize": "{font_size.xs}",
+          "lineHeight": "{line_height.xs}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use in 2xs donut and gauge chart subtitles; we usually pair it with medium emphasis colors."
+      },
+      "link": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.2xs}",
+          "lineHeight": "{line_height.3xs}",
+          "textDecoration": "{text_decoration.underline}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use for hyperlinks in 2xs donut and gauge chart subtitles; we usually pair it with link colors."
+      },
+      "bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.2xs}",
+          "lineHeight": "{line_height.3xs}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add great emphasis in 2xs donut and gauge chart subtitles; we usually pair it with high emphasis colors."
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.2xs}",
+          "lineHeight": "{line_height.3xs}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add moderate emphasis to 2xs donut and gauge chart subtitles; we usually pair it with medium or high emphasis colors."
+      }
+    },
+    "xl": {
+      "regular": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.regular}",
+          "fontSize": "{font_size.lg}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use in large donut and gauge chart subtitles; we usually pair it with medium emphasis colors."
+      },
+      "link": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.lg}",
+          "lineHeight": "{line_height.md}",
+          "textDecoration": "{text_decoration.underline}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use for hyperlinks in large donut and gauge chart subtitles; we usually pair it with link colors."
+      },
+      "bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.lg}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add great emphasis in large donut and gauge chart subtitles; we usually pair it with high emphasis colors."
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.lg}",
+          "lineHeight": "{line_height.md}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add moderate emphasis in large donut and gauge chart subtitles; we usually pair it with medium or high emphasis colors."
+      }
+    },
+    "2xl": {
+      "regular": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.regular}",
+          "fontSize": "{font_size.xl}",
+          "lineHeight": "{line_height.xl}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use in extra-large donut and gauge chart subtitles; we usually pair it with medium emphasis colors."
+      },
+      "link": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.xl}",
+          "lineHeight": "{line_height.xl}",
+          "textDecoration": "{text_decoration.underline}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use for hyperlinks in extra-large donut and gauge chart subtitles; we usually pair it with link colors."
+      },
+      "bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.xl}",
+          "lineHeight": "{line_height.xl}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add great emphasis in extra-large donut and gauge chart subtitles; we usually pair it with high emphasis colors."
+      },
+      "semi_bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.body}",
+          "fontWeight": "{font_weight.semi_bold}",
+          "fontSize": "{font_size.xl}",
+          "lineHeight": "{line_height.xl}"
+        },
+        "type": "typography",
+        "description": "This is the typography style we use to add moderate emphasis in extra-large donut and gauge chart subtitles; we usually pair it with medium or high emphasis colors."
+      }
     }
   },
   "heading": {
@@ -252,6 +381,42 @@
       },
       "type": "typography",
       "description": "We use this typography style for header's eyebrows, meaning a little text that go just above the header that can give more context on the header below.Eyebrows a re meant to be concise and not full sentences, if you need to give more context try using an subheading.\n\nWe usually pair it with low emphasis colors."
+    },
+    "2xl": {
+      "bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.headings}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.3xl}",
+          "lineHeight": "{line_height.3xl}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for large donut and gauge chart headers."
+      }
+    },
+    "3xl": {
+      "bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.headings}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.5xl}",
+          "lineHeight": "{line_height.5xl}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for extra-large donut and gauge chart headers."
+      }
+    },
+    "4xl": {
+      "bold": {
+        "value": {
+          "fontFamily": "{theme.font_family.headings}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.6xl}",
+          "lineHeight": "{line_height.6xl}"
+        },
+        "type": "typography",
+        "description": "We use this typography style for 2-extra-large donut and gauge chart headers."
+      }
     }
   },
   "subheading": {
