@@ -29,6 +29,7 @@ import {
 } from '../gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 /**
  * @slot - for a gux-listbox-multi containing gux-option-multi children
  */
@@ -568,9 +569,11 @@ export class GuxDropdownMulti {
     }
   }
 
+  private uniquePopupID = randomHTMLId('gux-popup');
+
   private renderPopup(): JSX.Element {
     return (
-      <div slot="popup" class="gux-listbox-container">
+      <div slot="popup" id={this.uniquePopupID} class="gux-listbox-container">
         <slot />
       </div>
     ) as JSX.Element;
@@ -591,14 +594,16 @@ export class GuxDropdownMulti {
         slot="target"
       >
         {this.renderFilterInputField()}
-        <button
-          type="button"
-          class="gux-field gux-field-button"
-          disabled={this.disabled}
+        <div
+          class="gux-field gux-field-combobox"
+          role="combobox"
+          aria-disabled={this.disabled}
           onClick={this.fieldButtonClick.bind(this)}
           ref={el => (this.fieldButtonElement = el)}
           aria-haspopup="listbox"
           aria-expanded={this.expanded.toString()}
+          aria-controls={this.uniquePopupID}
+          tabIndex={this.disabled ? -1 : 0}
         >
           {this.renderTargetContent()}
           {this.renderTag()}
@@ -611,7 +616,7 @@ export class GuxDropdownMulti {
             screenreader-text={this.i18n('dropdown')}
             iconName="custom/chevron-down-small-regular"
           ></gux-icon>
-        </button>
+        </div>
       </div>
     ) as JSX.Element;
   }
