@@ -378,6 +378,7 @@
   "--gse-ui-calendarMenu-month-focusBorderRadius",
   "--gse-ui-calendarMenu-month-headerText-fontFamily",
   "--gse-ui-calendarMenu-month-headerText-fontSize",
+  "--gse-ui-calendarMenu-month-headerText-fontWeight",
   "--gse-ui-calendarMenu-month-headerText-lineHeight",
   "--gse-ui-calendarMenu-month-hover-backgroundColor",
   "--gse-ui-calendarMenu-month-monthCell-height",

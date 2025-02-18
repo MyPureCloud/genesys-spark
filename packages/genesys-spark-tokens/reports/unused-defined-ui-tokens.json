@@ -126,7 +126,6 @@
   "--gse-ui-button-compact-padding",
   "--gse-ui-calendarMenu-month-defaultText-fontWeight",
   "--gse-ui-calendarMenu-month-defaultText-lineHeight",
-  "--gse-ui-calendarMenu-month-headerText-fontWeight",
   "--gse-ui-calendarMenu-month-range-vertical-height",
   "--gse-ui-calendarMenu-month-range-vertical-width",
   "--gse-ui-calendarMenu-month-selected-hoverBackgroundColor",
