@@ -1,0 +1,321 @@
+@use './focus.scss';
+
+/*
+ * Typography styles and mixins.
+ */
+
+/* Headings */
+@mixin _heading-xl {
+  font-family:
+    var(--gse-semantic-heading-xl-bold-fontFamily),
+    var(--gse-semantic-theme-fontFamily-headings), sans-serif;
+  font-size: var(--gse-semantic-heading-xl-bold-fontSize);
+  line-height: var(--gse-semantic-heading-xl-bold-lineHeight);
+}
+
+@mixin _heading-lg {
+  font-family:
+    var(--gse-semantic-heading-lg-bold-fontFamily),
+    var(--gse-semantic-theme-fontFamily-headings), sans-serif;
+  font-size: var(--gse-semantic-heading-lg-bold-fontSize);
+  line-height: var(--gse-semantic-heading-lg-bold-lineHeight);
+}
+
+@mixin _heading-md {
+  font-family:
+    var(--gse-semantic-heading-md-bold-fontFamily),
+    var(--gse-semantic-theme-fontFamily-headings), sans-serif;
+  font-size: var(--gse-semantic-heading-md-bold-fontSize);
+  line-height: var(--gse-semantic-heading-md-bold-lineHeight);
+}
+
+@mixin _heading-sm {
+  font-family:
+    var(--gse-semantic-heading-sm-bold-fontFamily),
+    var(--gse-semantic-theme-fontFamily-headings), sans-serif;
+  font-size: var(--gse-semantic-heading-sm-bold-fontSize);
+  line-height: var(--gse-semantic-heading-sm-bold-lineHeight);
+}
+
+@mixin _heading-xs {
+  font-family:
+    var(--gse-semantic-heading-xs-bold-fontFamily),
+    var(--gse-semantic-theme-fontFamily-headings), sans-serif;
+  font-size: var(--gse-semantic-heading-xs-bold-fontSize);
+  line-height: var(--gse-semantic-heading-xs-bold-lineHeight);
+}
+
+@mixin _heading-subheading {
+  font-family:
+    var(--gse-semantic-subheading-regular-fontFamily),
+    var(--gse-semantic-theme-fontFamily-headings), sans-serif;
+  font-size: var(--gse-semantic-subheading-regular-fontSize);
+  line-height: var(--gse-semantic-subheading-regular-lineHeight);
+}
+
+@mixin _heading-overline {
+  font-family:
+    var(--gse-semantic-heading-overline-fontFamily),
+    var(--gse-semantic-theme-fontFamily-headings), sans-serif;
+  font-size: var(--gse-semantic-heading-overline-fontSize);
+  line-height: var(--gse-semantic-heading-overline-lineHeight);
+  text-transform: var(--gse-semantic-heading-overline-textCase);
+  letter-spacing: var(--gse-semantic-heading-overline-letterSpacing);
+}
+
+@mixin heading-xl-bold {
+  @include _heading-xl;
+
+  font-weight: var(--gse-semantic-heading-xl-bold-fontWeight);
+}
+
+@mixin heading-xl-semiBold {
+  @include _heading-xl;
+
+  font-weight: var(--gse-semantic-heading-lg-semiBold-fontWeight);
+}
+
+@mixin heading-xl {
+  @include heading-xl-bold;
+}
+
+@mixin heading-lg-bold {
+  @include _heading-lg;
+
+  font-weight: var(--gse-semantic-heading-lg-bold-fontWeight);
+}
+
+@mixin heading-lg-semiBold {
+  @include _heading-lg;
+
+  font-weight: var(--gse-semantic-heading-lg-semiBold-fontWeight);
+}
+
+@mixin heading-lg {
+  @include heading-lg-bold;
+}
+
+@mixin heading-md-bold {
+  @include _heading-md;
+
+  font-weight: var(--gse-semantic-heading-md-bold-fontWeight);
+}
+
+@mixin heading-md-semiBold {
+  @include _heading-md;
+
+  font-weight: var(--gse-semantic-heading-md-semiBold-fontWeight);
+}
+
+@mixin heading-md {
+  @include heading-md-bold;
+}
+
+@mixin heading-sm-bold {
+  @include _heading-sm;
+
+  font-weight: var(--gse-semantic-heading-sm-bold-fontWeight);
+}
+
+@mixin heading-sm-semiBold {
+  @include _heading-sm;
+
+  font-weight: var(--gse-semantic-heading-sm-semiBold-fontWeight);
+}
+
+@mixin heading-sm {
+  @include heading-sm-bold;
+}
+
+@mixin heading-xs-bold {
+  @include _heading-xs;
+
+  font-weight: var(--gse-semantic-heading-xs-bold-fontWeight);
+}
+
+@mixin heading-xs-semiBold {
+  @include _heading-xs;
+
+  font-weight: var(--gse-semantic-heading-xs-semiBold-fontWeight);
+}
+
+@mixin heading-xs {
+  @include heading-xs-bold;
+}
+
+@mixin heading-subheading-bold {
+  @include _heading-subheading;
+
+  font-weight: var(--gse-semantic-subheading-bold-fontWeight);
+}
+
+@mixin heading-subheading-semiBold {
+  @include _heading-subheading;
+
+  font-weight: var(--gse-semantic-subheading-semiBold-fontWeight);
+}
+
+@mixin heading-subheading-regular {
+  @include _heading-subheading;
+
+  font-weight: var(--gse-semantic-subheading-regular-fontWeight);
+}
+
+@mixin heading-subheading {
+  @include heading-subheading-bold;
+}
+
+@mixin heading-overline {
+  @include _heading-overline;
+
+  font-weight: var(
+    --gse-semantic-heading-overline-fontWeight
+  ); //TODO token for this is wrong
+}
+
+/* Body Copy */
+@mixin _body-lg {
+  font-family:
+    var(--gse-semantic-body-lg-regular-fontFamily),
+    var(--gse-semantic-theme-fontFamily-body), sans-serif;
+  font-size: var(--gse-semantic-body-lg-regular-fontSize);
+  line-height: var(--gse-semantic-body-lg-regular-lineHeight);
+}
+
+@mixin _body-md {
+  font-family:
+    var(--gse-semantic-body-md-regular-fontFamily),
+    var(--gse-semantic-theme-fontFamily-body), sans-serif;
+  font-size: var(--gse-semantic-body-md-regular-fontSize);
+  line-height: var(--gse-semantic-body-md-regular-lineHeight);
+}
+
+@mixin _body-sm {
+  font-family:
+    var(--gse-semantic-body-sm-regular-fontFamily),
+    var(--gse-semantic-theme-fontFamily-body), sans-serif;
+  font-size: var(--gse-semantic-body-sm-regular-fontSize);
+  line-height: var(--gse-semantic-body-sm-regular-lineHeight);
+}
+
+@mixin body-lg-regular {
+  @include _body-lg;
+
+  font-weight: var(--gse-semantic-body-lg-regular-fontWeight);
+}
+
+@mixin body-lg-semiBold {
+  @include _body-lg;
+
+  font-weight: var(--gse-semantic-body-lg-semiBold-fontWeight);
+}
+
+@mixin body-lg-bold {
+  @include _body-lg;
+
+  font-weight: var(--gse-semantic-body-lg-bold-fontWeight);
+}
+
+@mixin body-md-regular {
+  @include _body-md;
+
+  font-weight: var(--gse-semantic-body-md-regular-fontWeight);
+}
+
+@mixin body-md-semiBold {
+  @include _body-md;
+
+  font-weight: var(--gse-semantic-body-md-semiBold-fontWeight);
+}
+
+@mixin body-md-bold {
+  @include _body-md;
+
+  font-weight: var(--gse-semantic-body-md-bold-fontWeight);
+}
+
+@mixin body-sm-regular {
+  @include _body-sm;
+
+  font-weight: var(--gse-semantic-body-sm-regular-fontWeight);
+}
+
+@mixin body-sm-semiBold {
+  @include _body-sm;
+
+  font-weight: var(--gse-semantic-body-sm-semiBold-fontWeight);
+}
+
+@mixin body-sm-bold {
+  @include _body-sm;
+
+  font-weight: var(--gse-semantic-body-sm-bold-fontWeight);
+}
+
+@mixin ui-button {
+  font-family:
+    var(--gse-semantic-body-md-regular-fontFamily),
+    var(--gse-semantic-theme-fontFamily-body), sans-serif;
+  font-size: var(--gse-semantic-body-md-regular-fontSize);
+  font-weight: var(--gse-core-fontWeight-semiBold);
+  line-height: var(--gse-semantic-body-md-regular-lineHeight);
+}
+
+@mixin ui-link {
+  font-family:
+    var(--gse-semantic-body-md-regular-fontFamily),
+    var(--gse-semantic-theme-fontFamily-body), sans-serif;
+  font-size: var(--gse-semantic-body-md-regular-fontSize);
+  font-weight: var(--gse-core-fontWeight-regular);
+  line-height: var(--gse-semantic-body-md-regular-lineHeight);
+}
+
+@mixin ui-label {
+  font-family:
+    var(--gse-semantic-body-sm-regular-fontFamily),
+    var(--gse-semantic-theme-fontFamily-body), sans-serif;
+  font-size: var(--gse-semantic-body-sm-regular-fontSize);
+  font-weight: var(--gse-core-fontWeight-bold);
+  line-height: var(--gse-semantic-body-sm-regular-lineHeight);
+}
+
+@mixin ui-placeholder {
+  font-family:
+    var(--gse-semantic-body-sm-regular-fontFamily),
+    var(--gse-semantic-theme-fontFamily-body), sans-serif;
+  font-size: var(--gse-semantic-body-sm-regular-fontSize);
+  font-weight: var(--gse-core-fontWeight-regular);
+  line-height: var(--gse-semantic-body-sm-regular-lineHeight);
+}
+
+/* Anchor */
+@mixin ui-anchor {
+  color: var(--gse-ui-links-default-foregroundColor);
+  text-decoration: underline;
+  border-radius: 0;
+
+  &:hover {
+    color: var(--gse-ui-links-hover-foregroundColor);
+  }
+
+  &:active {
+    color: var(--gse-ui-links-active-foregroundColor);
+  }
+
+  &:visited {
+    color: var(--gse-ui-links-visited-foregroundColor);
+  }
+
+  &:focus-visible {
+    @include focus.gux-focus-ring;
+  }
+}
+
+@mixin ui-anchor-table {
+  @include ui-anchor;
+
+  // https://sass-lang.com/documentation/breaking-changes/mixed-decls/
+  & {
+    text-decoration: none;
+  }
+}
