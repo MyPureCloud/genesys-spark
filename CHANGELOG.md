@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.120.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.119.1...v4.120.0) (2025-02-18)
+
+
+### Features
+
+* **dropdown-multi:** accessibility improbvement ([7162304](https://github.com/MyPureCloud/genesys-spark/commit/7162304c8209369c92860ee54227d4b66ad5506d))
+* **tabs:** disabled tab is not focusable ([42a525a](https://github.com/MyPureCloud/genesys-spark/commit/42a525a1aa7b7e30fdc5c8d0b4afaf8c9a01396b))
+* **tokens:** added spark data ui tokens ([83e74c7](https://github.com/MyPureCloud/genesys-spark/commit/83e74c7c112df55d19a1b5b83b1ad448275dd338))
+
+
+### Bug Fixes
+
+* **option-multi:** truncate long text ([#895](https://github.com/MyPureCloud/genesys-spark/issues/895)) ([6d2d8c2](https://github.com/MyPureCloud/genesys-spark/commit/6d2d8c2e0b9ca5c1bb0d14d293b1b0806127d03b))
+
 ### [4.119.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.119.0...v4.119.1) (2025-02-15)
 
 ## [4.119.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.118.0...v4.119.0) (2025-02-14)
