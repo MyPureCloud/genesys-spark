@@ -491,16 +491,6 @@
             "value": "{foreground.interactive.global_nav.desktop.return.hover}",
             "type": "color"
           }
-        },
-        "selected": {
-          "background_color": {
-            "value": "{background.interactive.global_nav.desktop.return.selected}",
-            "type": "color"
-          },
-          "foreground_color": {
-            "value": "{foreground.interactive.global_nav.desktop.return.selected}",
-            "type": "color"
-          }
         }
       },
       "tree_view": {
@@ -657,6 +647,11 @@
         "value": "{foreground.container.special_accents.brand}",
         "type": "color",
         "description": "Brand Orange"
+      },
+      "page_title": {
+        "value": "{foreground.container.special_accents.global_nav}",
+        "type": "color",
+        "description": "Accent color for global navigation page title"
       },
       "menu_button": {
         "closed": {

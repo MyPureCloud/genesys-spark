@@ -159,14 +159,14 @@
               "description": "The background color for the active-panel state of the options in the menu panel of the global navigation."
             },
             "active_selected": {
-              "value": "{theme.background.custom_accents.global_nav.30}",
+              "value": "{theme.background.custom_accents.global_nav.20}",
               "type": "color",
               "description": "The background color for the active-selected state of the options in the menu panel of the global navigation."
             }
           },
           "return": {
             "default": {
-              "value": "{theme.background.custom_accents.global_nav.10}",
+              "value": "{theme.background.custom_accents.global_nav.30}",
               "type": "color",
               "description": "The background color for the default state of the navigation buttons in the return button of the global navigation."
             },
@@ -174,11 +174,6 @@
               "value": "{theme.background.custom_accents.global_nav.20}",
               "type": "color",
               "description": "The background color for the hover state of the navigation buttons in the return button of the global navigation."
-            },
-            "selected": {
-              "value": "{theme.background.custom_accents.global_nav.30}",
-              "type": "color",
-              "description": "The background color for the selected state of the return button in the menu panel of the global navigation."
             }
           },
           "menu": {
@@ -907,6 +902,11 @@
           "value": "{theme.foreground.special_accents.brand.10}",
           "type": "color",
           "description": "The brand color, mostly used for logos on surfaces."
+        },
+        "global_nav": {
+          "value": "{theme.foreground.special_accents.global_nav.desktop.50}",
+          "type": "color",
+          "description": "Accent color, mostly used for accents in the Global Navigation such as current page"
         }
       }
     },

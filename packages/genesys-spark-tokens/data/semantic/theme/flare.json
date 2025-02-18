@@ -875,11 +875,11 @@
             "type": "color"
           },
           "20d": {
-            "value": "{color.azure_blue.800}",
+            "value": "{color.azure_blue.700}",
             "type": "color"
           },
           "30d": {
-            "value": "{color.azure_blue.700}",
+            "value": "{color.azure_blue.800}",
             "type": "color"
           }
         }
@@ -1087,6 +1087,14 @@
             },
             "40": {
               "value": "{color.azure_blue.100}",
+              "type": "color"
+            },
+            "50": {
+              "value": "{color.genesys_navy.800}",
+              "type": "color"
+            },
+            "50d": {
+              "value": "{color.white}",
               "type": "color"
             },
             "10d": {
