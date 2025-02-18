@@ -555,7 +555,7 @@
         }
       },
       "header_text": {
-        "value": "{body.lg.regular}",
+        "value": "{body.lg.bold}",
         "type": "typography"
       },
       "range": {
