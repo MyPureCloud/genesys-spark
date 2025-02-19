@@ -1181,8 +1181,17 @@
         },
         "panel": {
           "divider": {
-            "value": "{theme.border.edges.global_nav.20}0",
+            "value": "{theme.border.edges.global_nav.20}",
             "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0",
+                  "space": "lch"
+                }
+              }
+            },
             "description": "The border color at the right of the panel of the global navigation."
           }
         },
