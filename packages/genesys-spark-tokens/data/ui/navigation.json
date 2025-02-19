@@ -697,6 +697,10 @@
       }
     },
     "panel": {
+      "stroke": {
+        "value": "{border.container.global_nav.panel.divider}",
+        "type": "color"
+      },
       "panel_title": {
         "value": "{foreground.system.custom_accents.light}",
         "type": "color"

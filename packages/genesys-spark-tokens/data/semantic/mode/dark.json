@@ -1173,6 +1173,13 @@
             "description": "The border color at the bottom of the top command bar of the global navigation."
           }
         },
+        "panel": {
+          "divider": {
+            "value": "{theme.border.edges.global_nav.20d}",
+            "type": "color",
+            "description": "The border color at the right of the panel of the global navigation."
+          }
+        },
         "menu_button": {
           "closed_hover": {
             "value": "{theme.foreground.special_accents.global_nav.desktop.30d}",
