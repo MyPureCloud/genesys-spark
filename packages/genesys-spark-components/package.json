@@ -70,7 +70,7 @@
   "devDependencies": {
     "@babel/core": "^7.26.8",
     "@babel/preset-env": "^7.26.8",
-    "@stencil/core": "4.20.0",
+    "@stencil/core": "4.26.0",
     "@stencil/react-output-target": "^0.5.3",
     "@stencil/sass": "^3.0.12",
     "@types/google-libphonenumber": "^7.4.30",
