@@ -85,7 +85,7 @@ export class GuxList {
   }
 
   private renderFocusTarget(): JSX.Element {
-    return (<span tabindex="-1" aria-hidden="true"></span>) as JSX.Element;
+    return (<span tabindex="-1"></span>) as JSX.Element;
   }
 
   render(): JSX.Element {
