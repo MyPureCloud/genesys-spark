@@ -5,6 +5,7 @@ const icons = [
       'custom/add-column-before',
       'custom/add-row-after',
       'custom/add-row-before',
+      'custom/amb',
       'custom/binoculars-slash-regular',
       'custom/carousel',
       'custom/clipboard-list-slash-regular',
@@ -31,6 +32,7 @@ const icons = [
       'custom/person-running',
       'custom/quick-reply',
       'custom/redo-regular',
+      'custom/sun-bright-slash',
       'custom/three-button',
       'custom/undo-regular',
       'custom/wrap-text-inline',
@@ -157,6 +159,7 @@ const icons = [
       'fa/map-solid',
       'fa/memo-circle-check-regular',
       'fa/message-bot-regular',
+      'fa/message-plus-regular',
       'fa/message-regular',
       'fa/microchip-solid',
       'fa/microsoft',
@@ -206,6 +209,7 @@ const icons = [
       'fa/wand-magic-sparkles-regular',
       'fa/wifi-regular',
       'fa/windows',
+      'fa/wrench-regular',
       'fa/x-twitter',
       'restricted/custom/sparkles-solid'
     ]
