@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.121.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.120.0...v4.121.0) (2025-02-19)
+
+
+### Features
+
+* **tokens:** modified calendar header text ([5391bb2](https://github.com/MyPureCloud/genesys-spark/commit/5391bb21fada48e54f1171840e6274ed4706a86b))
+
 ## [4.120.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.119.1...v4.120.0) (2025-02-18)
 
 
