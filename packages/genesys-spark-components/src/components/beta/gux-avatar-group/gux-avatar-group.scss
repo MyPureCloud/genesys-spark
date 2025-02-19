@@ -12,3 +12,8 @@
 :host(:focus-visible) {
   @include focus.gux-focus-ring;
 }
+
+.gux-add-item-overflow {
+  // + 2px to offset the minus margin on the other side
+  padding-inline-start: calc(var(--gse-core-spacing-4xs) + 2px);
+}
