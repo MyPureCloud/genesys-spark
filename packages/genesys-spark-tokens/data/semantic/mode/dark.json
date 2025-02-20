@@ -1186,6 +1186,12 @@
             "type": "color",
             "description": "The border color for the closed-hover state of the menu button of the global navigation."
           }
+        },
+        "side_menu": {
+          "divider": {
+            "value": "{theme.border.edges.global_nav.30d}",
+            "type": "color"
+          }
         }
       }
     },
