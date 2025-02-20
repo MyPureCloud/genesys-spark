@@ -159,14 +159,14 @@
               "description": "The background color for the active-panel state of the options in the menu panel of the global navigation."
             },
             "active_selected": {
-              "value": "{theme.background.custom_accents.global_nav.20}",
+              "value": "{theme.background.custom_accents.global_nav.30}",
               "type": "color",
               "description": "The background color for the active-selected state of the options in the menu panel of the global navigation."
             }
           },
           "return": {
             "default": {
-              "value": "{theme.background.custom_accents.global_nav.20}",
+              "value": "{theme.background.custom_accents.global_nav.30}",
               "type": "color",
               "description": "The background color for the default state of the navigation buttons in the return button of the global navigation."
             },
