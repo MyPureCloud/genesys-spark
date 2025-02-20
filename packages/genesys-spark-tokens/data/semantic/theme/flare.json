@@ -1352,12 +1352,20 @@
             "value": "{color.haze.200}",
             "type": "color"
           },
+          "30": {
+            "value": "{color.haze.200}",
+            "type": "color"
+          },
           "10d": {
             "value": "{color.genesys_navy.700}",
             "type": "color"
           },
           "20d": {
             "value": "{color.haze.850}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.transparent}",
             "type": "color"
           }
         }

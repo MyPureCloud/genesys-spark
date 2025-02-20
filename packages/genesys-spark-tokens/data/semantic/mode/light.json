@@ -166,12 +166,12 @@
           },
           "return": {
             "default": {
-              "value": "{theme.background.custom_accents.global_nav.30}",
+              "value": "{theme.background.custom_accents.global_nav.20}",
               "type": "color",
               "description": "The background color for the default state of the navigation buttons in the return button of the global navigation."
             },
             "hover": {
-              "value": "{theme.background.custom_accents.global_nav.20}",
+              "value": "{theme.background.custom_accents.global_nav.30}",
               "type": "color",
               "description": "The background color for the hover state of the navigation buttons in the return button of the global navigation."
             }
@@ -195,7 +195,7 @@
               "description": "The background color for the hover state of the navigation buttons in the new tab button of the global navigation."
             },
             "selected": {
-              "value": "{theme.background.custom_accents.global_nav.30}",
+              "value": "{theme.background.custom_accents.global_nav.20}",
               "type": "color",
               "description": "The background color for the selected state of the navigation buttons in the new tab button of the global navigation."
             }
@@ -1200,6 +1200,12 @@
             "value": "{theme.foreground.special_accents.global_nav.desktop.30}",
             "type": "color",
             "description": "The border color for the closed-hover state of the menu button of the global navigation."
+          }
+        },
+        "side_menu": {
+          "divider": {
+            "value": "{theme.border.edges.global_nav.30}",
+            "type": "color"
           }
         }
       }

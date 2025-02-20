@@ -616,6 +616,10 @@
       "padding": {
         "value": "{container.md.padding} {container.lg.padding}",
         "type": "spacing"
+      },
+      "divider": {
+        "value": "{border.container.global_nav.side_menu.divider}",
+        "type": "color"
       }
     },
     "top_bar": {
