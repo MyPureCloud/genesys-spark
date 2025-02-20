@@ -18,7 +18,8 @@ export class GuxRichStyleListItem {
   @Prop()
   disabled: boolean = false;
 
-  @Prop()
+  // Reflect is used here so we can access the value in the light DOM for executing actions.
+  @Prop({ reflect: true })
   value: string;
 
   @Listen('mouseup')
@@ -53,7 +54,9 @@ export class GuxRichStyleListItem {
     return (
       <Host role="listitem">
         <button type="button" tabIndex={-1} disabled={this.disabled}>
-          <slot></slot>
+          <gux-truncate max-lines={1}>
+            <slot></slot>
+          </gux-truncate>
         </button>
       </Host>
     ) as JSX.Element;

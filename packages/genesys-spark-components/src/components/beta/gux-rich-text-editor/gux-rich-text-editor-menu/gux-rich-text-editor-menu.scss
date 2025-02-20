@@ -1,0 +1,20 @@
+@use '~genesys-spark/dist/scss/mixins.scss';
+
+:host {
+  display: block;
+  max-inline-size: fit-content;
+  white-space: normal;
+}
+
+button {
+  block-size: var(--gse-ui-button-default-height);
+  padding: var(--gse-ui-button-default-paddingIconOnly);
+  border-radius: var(--gse-ui-button-borderRadius);
+}
+
+.gux-list-container {
+  inline-size: var(--gse-ui-contextMenu-menu-width);
+  max-block-size: var(--gse-ui-contextMenu-menu-maxHeight);
+
+  @include mixins.gux-menu-container;
+}
