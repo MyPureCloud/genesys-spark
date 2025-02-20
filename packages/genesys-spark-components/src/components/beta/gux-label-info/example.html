@@ -14,3 +14,18 @@
 <gux-label-info-beta variant="info">
   <span slot="content">This is an information tooltip</span>
 </gux-label-info-beta>
+
+<h2>With gux-form-field-dropdown</h2>
+<gux-form-field-dropdown>
+  <gux-dropdown-multi>
+    <gux-listbox>
+      <gux-option-multi value="a" disabled>Ant</gux-option-multi>
+      <gux-option-multi value="b">Bat</gux-option-multi>
+      <gux-option-multi value="c">Cat</gux-option-multi>
+    </gux-listbox>
+  </gux-dropdown-multi>
+  <label slot="label">Default</label>
+  <gux-label-info-beta slot="label-info">
+    <span slot="content">This is some tooltip text</span>
+  </gux-label-info-beta>
+</gux-form-field-dropdown>
