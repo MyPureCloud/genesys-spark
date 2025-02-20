@@ -296,7 +296,7 @@
               "description": "The top-left color value in the gradient background of our menu panel level 1 for the desktop global navigation."
             },
             "primary_bottom-right_value": {
-              "value": "{theme.background.container.global_nav.desktop.30d}",
+              "value": "{theme.background.container.global_nav.desktop.40d}",
               "type": "color",
               "description": "The bottom-right color value in the gradient background of our menu panel level 1 for the desktop global navigation."
             },
