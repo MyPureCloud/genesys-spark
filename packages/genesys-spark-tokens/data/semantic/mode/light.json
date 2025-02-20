@@ -166,7 +166,7 @@
           },
           "return": {
             "default": {
-              "value": "{theme.background.custom_accents.global_nav.30}",
+              "value": "{theme.background.custom_accents.global_nav.20}",
               "type": "color",
               "description": "The background color for the default state of the navigation buttons in the return button of the global navigation."
             },
