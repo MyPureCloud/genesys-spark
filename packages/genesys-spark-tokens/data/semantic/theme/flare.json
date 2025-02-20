@@ -1353,7 +1353,7 @@
             "type": "color"
           },
           "30": {
-            "value": "{color.haze.200}",
+            "value": "{color.transparent}",
             "type": "color"
           },
           "10d": {
@@ -1365,7 +1365,7 @@
             "type": "color"
           },
           "30d": {
-            "value": "{color.transparent}",
+            "value": "{color.haze.200}",
             "type": "color"
           }
         }
