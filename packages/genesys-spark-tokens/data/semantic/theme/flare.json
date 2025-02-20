@@ -1365,7 +1365,7 @@
             "type": "color"
           },
           "30d": {
-            "value": "{color.haze.200}",
+            "value": "{color.haze.850}",
             "type": "color"
           }
         }
