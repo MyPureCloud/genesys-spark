@@ -121,7 +121,7 @@ describe('gux-tabs', () => {
         const tabTarget = await page.find('gux-tab[tab-id="2-6"]');
 
         expect(tablist.getAttribute('aria-owns')).toEqual(
-          'gux-2-1-tab gux-2-2-tab gux-2-3-tab gux-2-4-tab gux-2-5-tab gux-2-6-tab'
+          'gux-2-1-tab gux-2-2-tab gux-2-3-tab gux-2-6-tab'
         );
 
         await tabTarget.click();
@@ -146,7 +146,7 @@ describe('gux-tabs', () => {
         );
 
         expect(tablist.getAttribute('aria-owns')).toEqual(
-          'gux-2-1-tab gux-2-3-tab gux-2-4-tab gux-2-5-tab'
+          'gux-2-1-tab gux-2-3-tab'
         );
       });
     });

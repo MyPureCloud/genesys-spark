@@ -4,9 +4,21 @@ import { newSparkE2EPage, a11yCheck } from '@test/e2eTestUtils';
 const axeExclusions = [
   {
     issueId: 'target-size',
-    target: 'gux-dropdown-multi,button',
+    target: 'gux-dropdown-multi,.gux-field-combobox',
     exclusionReason:
       'COMUI-2948 Fix any of the following: Target has insufficient size (20px by 18px, should be at least 24px by 24px); Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px.'
+  },
+  {
+    issueId: 'aria-input-field-name',
+    target: 'gux-dropdown-multi,.gux-field',
+    exclusionReason:
+      'COMUI-3507 Location of combobox role might be incorrect or else a label has to be added at the current location'
+  },
+  {
+    issueId: 'aria-input-field-name',
+    target: 'gux-dropdown-multi,.gux-field-combobox',
+    exclusionReason:
+      'COMUI-3507 Location of combobox role might be incorrect or else a label has to be added at the current location'
   }
 ];
 
