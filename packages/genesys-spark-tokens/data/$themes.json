@@ -1949,7 +1949,8 @@
       "ui-charts/sankey_alluvial": "enabled",
       "ui-charts/scatter_chart": "enabled",
       "ui-charts/sparkline": "enabled",
-      "ui-charts/shared": "enabled"
+      "ui-charts/shared": "enabled",
+      "ui/deprecated": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:8987:36891",
     "$figmaModeId": "28327:5",

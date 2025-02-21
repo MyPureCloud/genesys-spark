@@ -1,0 +1,14 @@
+{
+  "calendar_menu": {
+    "month": {
+      "default_text": {
+        "value": "{body.sm.regular}",
+        "type": "typography"
+      },
+      "current_text": {
+        "value": "{body.sm.bold}",
+        "type": "typography"
+      }
+    }
+  }
+}

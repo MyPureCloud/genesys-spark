@@ -570,14 +570,6 @@
           }
         }
       },
-      "default_text": {
-        "value": "{body.sm.regular}",
-        "type": "typography"
-      },
-      "current_text": {
-        "value": "{body.sm.bold}",
-        "type": "typography"
-      },
       "focus_border_radius": {
         "value": "{theme.border_radius.focus.xlarge}",
         "type": "borderRadius"
