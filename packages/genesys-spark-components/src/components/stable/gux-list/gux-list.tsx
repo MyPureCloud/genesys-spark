@@ -28,7 +28,7 @@ const validFocusableItems = ['gux-list-item'];
 @Component({
   styleUrl: 'gux-list.scss',
   tag: 'gux-list',
-  shadow: { delegatesFocus: true }
+  shadow: true
 })
 export class GuxList {
   @Element()
@@ -84,14 +84,9 @@ export class GuxList {
     last(this.root, validFocusableItems);
   }
 
-  private renderFocusTarget(): JSX.Element {
-    return (<span tabindex="-1"></span>) as JSX.Element;
-  }
-
   render(): JSX.Element {
     return (
-      <Host role="list">
-        {this.renderFocusTarget()}
+      <Host tabindex="-1" role="list">
         <slot></slot>
       </Host>
     ) as JSX.Element;

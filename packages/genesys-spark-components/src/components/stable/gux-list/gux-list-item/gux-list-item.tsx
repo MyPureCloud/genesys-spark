@@ -1,6 +1,4 @@
-import { Component, Element, h, Host, JSX, Listen, Prop } from '@stencil/core';
-
-import { getClosestElement } from '@utils/dom/get-closest-element';
+import { Component, Element, h, Host, JSX, Prop } from '@stencil/core';
 
 /**
  * @slot - text
@@ -17,27 +15,6 @@ export class GuxListItem {
 
   @Prop()
   disabled: boolean = false;
-
-  @Listen('mouseup')
-  onMouseup(): void {
-    this.focusParentList();
-  }
-
-  @Listen('mouseover')
-  onMouseover(): void {
-    this.focusParentList();
-  }
-
-  private focusParentList(): void {
-    const parentList = getClosestElement('gux-list', this.root) as HTMLElement;
-
-    if (parentList && parentList.shadowRoot.activeElement === null) {
-      this.root.blur();
-      parentList.focus({
-        preventScroll: true
-      });
-    }
-  }
 
   render(): JSX.Element {
     return (
