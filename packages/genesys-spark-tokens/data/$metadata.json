@@ -27,6 +27,7 @@
     "ui-charts/sankey_alluvial",
     "ui-charts/scatter_chart",
     "ui-charts/sparkline",
-    "ui-charts/shared"
+    "ui-charts/shared",
+    "ui/deprecated"
   ]
 }
