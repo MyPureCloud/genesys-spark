@@ -37,7 +37,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (1)
                   </div>
                 </div>
                 <div class="gux-form-field-error">
-                  <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
                   <div class="gux-message">
                     <slot name="error"></slot>
                   </div>
@@ -113,7 +113,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (2)
                   </div>
                 </div>
                 <div class="gux-form-field-error">
-                  <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
                   <div class="gux-message">
                     <slot name="error"></slot>
                   </div>
@@ -189,7 +189,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (3)
                   </div>
                 </div>
                 <div class="gux-form-field-error">
-                  <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+                  <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
                   <div class="gux-message">
                     <slot name="error"></slot>
                   </div>

@@ -51,7 +51,7 @@ export class GuxAlert {
         }}
       >
         <div class="gux-message-wrapper">
-          <gux-icon icon-name={this.getIcon(this.accent)} decorative></gux-icon>
+          <gux-icon icon-name={this.getIcon(this.accent)} decorative size="small"></gux-icon>
           <gux-screen-reader-beta>
             {this.i18n(this.accent)}
           </gux-screen-reader-beta>

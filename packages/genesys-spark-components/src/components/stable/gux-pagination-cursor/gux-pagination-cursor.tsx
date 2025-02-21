@@ -83,6 +83,7 @@ export class GuxPaginationCursor {
             <gux-icon
               iconName="custom/chevron-left-small-regular"
               screenreader-text={this.i18n('previous')}
+              size="small"
             ></gux-icon>
           </button>
         </gux-button-slot>
@@ -96,6 +97,7 @@ export class GuxPaginationCursor {
             <gux-icon
               iconName="custom/chevron-right-small-regular"
               screenreader-text={this.i18n('next')}
+              size="small"
             ></gux-icon>
           </button>
         </gux-button-slot>
@@ -116,6 +118,7 @@ export class GuxPaginationCursor {
               <gux-icon
                 decorative
                 iconName="custom/chevron-left-small-regular"
+                size="small"
               ></gux-icon>
               <span>{this.i18n('previous')}</span>
             </div>
@@ -132,6 +135,7 @@ export class GuxPaginationCursor {
               <gux-icon
                 decorative
                 iconName="custom/chevron-right-small-regular"
+                size="small"
               ></gux-icon>
             </div>
           </button>

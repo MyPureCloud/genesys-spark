@@ -14,7 +14,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </div>
       <slot></slot>
       <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
         <div class="gux-message">
           <slot name="group-error"></slot>
         </div>
@@ -52,7 +52,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </div>
       <slot></slot>
       <div class="gux-form-field-error gux-show">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
         <div class="gux-message">
           <slot name="group-error"></slot>
         </div>
@@ -108,7 +108,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </div>
       <slot></slot>
       <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
         <div class="gux-message">
           <slot name="group-error"></slot>
         </div>
@@ -173,7 +173,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </div>
       <slot></slot>
       <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
         <div class="gux-message">
           <slot name="group-error"></slot>
         </div>
@@ -235,7 +235,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </div>
       <slot></slot>
       <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
         <div class="gux-message">
           <slot name="group-error"></slot>
         </div>
@@ -291,7 +291,7 @@ exports[`gux-form-field-radio-beta #render should render component as expected (
       </div>
       <slot></slot>
       <div class="gux-form-field-error">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid"></gux-icon>
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
         <div class="gux-message">
           <slot name="group-error"></slot>
         </div>
