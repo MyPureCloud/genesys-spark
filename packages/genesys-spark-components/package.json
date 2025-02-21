@@ -70,7 +70,7 @@
   "devDependencies": {
     "@babel/core": "^7.26.8",
     "@babel/preset-env": "^7.26.8",
-    "@stencil/core": "4.20.0",
+    "@stencil/core": "4.22.3",
     "@stencil/react-output-target": "^0.5.3",
     "@stencil/sass": "^3.0.12",
     "@types/google-libphonenumber": "^7.4.30",
@@ -106,7 +106,6 @@
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
     "puppeteer": "^14.4.1",
-    "resize-observer-polyfill": "^1.5.1",
     "rollup-plugin-copy": "^3.5.0",
     "semver-sort": "^1.0.0",
     "smob": "^1.5.0",

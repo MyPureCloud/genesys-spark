@@ -60,7 +60,7 @@
   "devDependencies": {
     "@babel/core": "^7.26.8",
     "@babel/preset-env": "^7.26.8",
-    "@stencil/core": "4.20.0",
+    "@stencil/core": "4.22.3",
     "@stencil/react-output-target": "^0.5.3",
     "@stencil/sass": "^3.0.12",
     "@types/jest": "^29.5.14",
