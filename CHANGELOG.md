@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.123.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.122.0...v4.123.0) (2025-02-21)
+
+
+### Features
+
+* **rich-text-editor:** addition of responsive design ([dd85bab](https://github.com/MyPureCloud/genesys-spark/commit/dd85bab518d2e0db37f6feca9d60569eb89c768d))
+
 ## [4.122.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.121.0...v4.122.0) (2025-02-20)
 
 
