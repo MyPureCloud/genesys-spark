@@ -10,13 +10,13 @@
   </gux-rich-text-editor-action-group>
   <gux-rich-text-editor-action-group slot="text-styling">
     <gux-rich-text-editor-action-rich-style value="paragraph">
-      <gux-rich-style-list-item value="heading-1"
+      <gux-rich-style-list-item value="heading1"
         ><h1>Heading 1</h1></gux-rich-style-list-item
       >
-      <gux-rich-style-list-item value="heading-2"
+      <gux-rich-style-list-item value="heading2"
         ><h2>Heading 2</h2></gux-rich-style-list-item
       >
-      <gux-rich-style-list-item value="heading-3"
+      <gux-rich-style-list-item value="heading3"
         ><h3>Heading 3</h3></gux-rich-style-list-item
       >
       <gux-rich-style-list-item value="paragraph"
@@ -65,7 +65,7 @@
       action="orderedList"
     ></gux-rich-text-editor-action>
   </gux-rich-text-editor-action-group>
-  <gux-rich-text-editor-action-group slot="inserting" hide-action-divider>
+  <gux-rich-text-editor-action-group slot="inserting">
     <gux-rich-text-editor-action
       action="codeblock"
     ></gux-rich-text-editor-action>
@@ -111,6 +111,299 @@
   </gux-rich-text-editor-action-group>
   <div class="editorElement" slot="editor"></div>
 </gux-rich-text-editor-beta>
+
+<h2>Responsive Design with context menu</h2>
+<div class="responsive-examples">
+  <h2>Inline Size of 500px</h2>
+  <div style="inline-size: 500px">
+    <gux-rich-text-editor-beta>
+      <gux-rich-text-editor-action-group slot="typographical-emphasis">
+        <gux-rich-text-editor-action
+          action="bold"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="italic"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="underline"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="strike"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action-group slot="text-styling">
+        <gux-rich-text-editor-action-rich-style value="paragraph">
+          <gux-rich-style-list-item value="heading1"
+            ><h1>Heading 1</h1></gux-rich-style-list-item
+          >
+          <gux-rich-style-list-item value="heading2"
+            ><h2>Heading 2</h2></gux-rich-style-list-item
+          >
+          <gux-rich-style-list-item value="heading3"
+            ><h3>Heading 3</h3></gux-rich-style-list-item
+          >
+          <gux-rich-style-list-item value="paragraph"
+            ><p>Paragraph</p></gux-rich-style-list-item
+          >
+        </gux-rich-text-editor-action-rich-style>
+        <gux-rich-text-editor-action-text-highlight>
+          <gux-rich-highlight-list-item
+            highlight="orange"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="coral"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="pear"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="mango"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="raspberry"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="blue"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="mineral"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="island"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            class="custom-highlight"
+            highlight="inherit"
+          ></gux-rich-highlight-list-item>
+        </gux-rich-text-editor-action-text-highlight>
+        <gux-rich-text-editor-action
+          action="clearFormatting"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action-group slot="lists-indentation">
+        <gux-rich-text-editor-action
+          action="bulletList"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="orderedList"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action-group slot="inserting">
+        <gux-rich-text-editor-action
+          action="codeblock"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="blockQuote"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action-link></gux-rich-text-editor-action-link>
+        <gux-rich-text-editor-action
+          action="undo"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="redo"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action
+        slot="global-action"
+        action="delete"
+      ></gux-rich-text-editor-action>
+      <div class="editorElement" slot="editor"></div>
+    </gux-rich-text-editor-beta>
+  </div>
+
+  <h2>Inline Size of 400px</h2>
+  <div style="inline-size: 400px">
+    <gux-rich-text-editor-beta>
+      <gux-rich-text-editor-action-group slot="typographical-emphasis">
+        <gux-rich-text-editor-action
+          action="bold"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="italic"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="underline"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="strike"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action-group slot="text-styling">
+        <gux-rich-text-editor-action-rich-style value="paragraph">
+          <gux-rich-style-list-item value="heading-1"
+            ><h1>Heading 1</h1></gux-rich-style-list-item
+          >
+          <gux-rich-style-list-item value="heading-2"
+            ><h2>Heading 2</h2></gux-rich-style-list-item
+          >
+          <gux-rich-style-list-item value="heading-3"
+            ><h3>Heading 3</h3></gux-rich-style-list-item
+          >
+          <gux-rich-style-list-item value="paragraph"
+            ><p>Paragraph</p></gux-rich-style-list-item
+          >
+        </gux-rich-text-editor-action-rich-style>
+        <gux-rich-text-editor-action-text-highlight>
+          <gux-rich-highlight-list-item
+            highlight="orange"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="coral"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="pear"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="mango"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="raspberry"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="blue"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="mineral"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="island"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            class="custom-highlight"
+            highlight="inherit"
+          ></gux-rich-highlight-list-item>
+        </gux-rich-text-editor-action-text-highlight>
+        <gux-rich-text-editor-action
+          action="clearFormatting"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action-group slot="lists-indentation">
+        <gux-rich-text-editor-action
+          action="bulletList"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="orderedList"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action-group slot="inserting">
+        <gux-rich-text-editor-action
+          action="codeblock"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="blockQuote"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action-link></gux-rich-text-editor-action-link>
+        <gux-rich-text-editor-action
+          action="undo"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="redo"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action
+        slot="global-action"
+        action="delete"
+      ></gux-rich-text-editor-action>
+      <div class="editorElement" slot="editor"></div>
+    </gux-rich-text-editor-beta>
+  </div>
+  <h2>Inline Size of 200px</h2>
+  <div style="inline-size: 200px">
+    <gux-rich-text-editor-beta>
+      <gux-rich-text-editor-action-group slot="typographical-emphasis">
+        <gux-rich-text-editor-action
+          action="bold"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="italic"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="underline"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="strike"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action-group slot="text-styling">
+        <gux-rich-text-editor-action-rich-style value="paragraph">
+          <gux-rich-style-list-item value="heading1"
+            ><h1>Heading 1</h1></gux-rich-style-list-item
+          >
+          <gux-rich-style-list-item value="heading2"
+            ><h2>Heading 2</h2></gux-rich-style-list-item
+          >
+          <gux-rich-style-list-item value="heading3"
+            ><h3>Heading 3</h3></gux-rich-style-list-item
+          >
+          <gux-rich-style-list-item value="paragraph"
+            ><p>Paragraph</p></gux-rich-style-list-item
+          >
+        </gux-rich-text-editor-action-rich-style>
+        <gux-rich-text-editor-action-text-highlight>
+          <gux-rich-highlight-list-item
+            highlight="orange"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="coral"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="pear"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="mango"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="raspberry"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="blue"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="mineral"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            highlight="island"
+          ></gux-rich-highlight-list-item>
+          <gux-rich-highlight-list-item
+            class="custom-highlight"
+            highlight="inherit"
+          ></gux-rich-highlight-list-item>
+        </gux-rich-text-editor-action-text-highlight>
+        <gux-rich-text-editor-action
+          action="clearFormatting"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action-group slot="lists-indentation">
+        <gux-rich-text-editor-action
+          action="bulletList"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="orderedList"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action-group slot="inserting">
+        <gux-rich-text-editor-action
+          action="codeblock"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="blockQuote"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action-link></gux-rich-text-editor-action-link>
+        <gux-rich-text-editor-action
+          action="undo"
+        ></gux-rich-text-editor-action>
+        <gux-rich-text-editor-action
+          action="redo"
+        ></gux-rich-text-editor-action>
+      </gux-rich-text-editor-action-group>
+      <gux-rich-text-editor-action
+        slot="global-action"
+        action="delete"
+      ></gux-rich-text-editor-action>
+      <div class="editorElement" slot="editor"></div>
+    </gux-rich-text-editor-beta>
+  </div>
+</div>
 
 <style
   onload="(function () {
@@ -172,10 +465,10 @@ const actionsConfig = [
 // Each action is associated with a button or UI element that executes a command in the editor when clicked.
 // If the action is 'delete', it will remove a paragraph node, otherwise, it will toggle the specified formatting.
 const actions = actionsConfig.map(({ action, command, selector }) => {
-  const element = document.querySelector(selector);
+  const element = document?.querySelector(selector);
 
   // Add click event listener for toggling editor command
-  element.addEventListener('click', () => {
+  element?.addEventListener('click', () => {
    command == 'delete' ? editor.commands.deleteNode('paragraph') :  command ? editor.chain().focus()[command]().run() : null;
   });
 
@@ -204,17 +497,17 @@ function handleSelectionUpdate() {
 /* Heading action  */
 
 // Apply heading styles (H1, H2, H3, paragraph) by listening for clicks on specific typography settings.
-const heading1 = document.querySelector(`gux-rich-style-list-item[value='heading-1']`);
+const heading1 = document.querySelector(`gux-rich-style-list-item[value='heading1']`);
 heading1.addEventListener('click', () => {
   editor.chain().focus().toggleHeading({ level: 1 }).run();
 });
 
-const heading2 = document.querySelector(`gux-rich-style-list-item[value='heading-2']`);
+const heading2 = document.querySelector(`gux-rich-style-list-item[value='heading2']`);
 heading2.addEventListener('click', () => {
   editor.chain().focus().toggleHeading({ level: 2 }).run();
 });
 
-const heading3 = document.querySelector(`gux-rich-style-list-item[value='heading-3']`);
+const heading3 = document.querySelector(`gux-rich-style-list-item[value='heading3']`);
 heading3.addEventListener('click', () => {
   editor.chain().focus().toggleHeading({ level: 3 }).run();
 });
@@ -281,54 +574,96 @@ function applyTextToInput() {
 /* Text Highlight Action */
 const orangeTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='orange']`);
 orangeTextHighlightAction.addEventListener('click', () => {
-  editor.chain().focus().toggleHighlight({ color: '#FF8F76' }).run()
+  editor.chain().focus().toggleHighlight({ color: '#FF8F76' }).run();
 })
 const coralTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='coral']`);
 coralTextHighlightAction.addEventListener('click', () => {
-  editor.chain().focus().toggleHighlight({ color: '#FFBEC9;' }).run()
+  editor.chain().focus().toggleHighlight({ color: '#FFBEC9;' }).run();
 })
 
 const pearTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='pear']`);
 pearTextHighlightAction.addEventListener('click', () => {
-  editor.chain().focus().toggleHighlight({ color: '#c6dd98;' }).run()
+  editor.chain().focus().toggleHighlight({ color: '#c6dd98;' }).run();
 })
 
 const mangoTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='mango']`);
 mangoTextHighlightAction.addEventListener('click', () => {
-  editor.chain().focus().toggleHighlight({ color: '#FFD173' }).run()
+  editor.chain().focus().toggleHighlight({ color: '#FFD173' }).run();
 })
 
 const raspberryTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='raspberry']`);
 raspberryTextHighlightAction.addEventListener('click', () => {
-  editor.chain().focus().toggleHighlight({ color: '#F5BFEB' }).run()
+  editor.chain().focus().toggleHighlight({ color: '#F5BFEB' }).run();
 })
 
 const azureBlueTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='blue']`);
 azureBlueTextHighlightAction.addEventListener('click', () => {
-  editor.chain().focus().toggleHighlight({ color: '#ABDFF0' }).run()
+  editor.chain().focus().toggleHighlight({ color: '#ABDFF0' }).run();
 })
 
 const mineralTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='mineral']`);
 mineralTextHighlightAction.addEventListener('click', () => {
-  editor.chain().focus().toggleHighlight({ color: '#BCD6F0' }).run()
+  editor.chain().focus().toggleHighlight({ color: '#BCD6F0' }).run();
 })
 
 const islandTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='island']`);
 islandTextHighlightAction.addEventListener('click', () => {
-  editor.chain().focus().toggleHighlight({ color: '#81CBE5' }).run()
+  editor.chain().focus().toggleHighlight({ color: '#81CBE5' }).run();
 })
 
 // If using multiple inherits then it will be better to use an ID instead.
 const inheritTextHighlightAction = document.querySelector(`gux-rich-highlight-list-item[highlight='inherit']`);
 inheritTextHighlightAction.addEventListener('click', () => {
-  editor.chain().focus().toggleHighlight({ color: '#808000;' }).run()
+  editor.chain().focus().toggleHighlight({ color: '#808000;' }).run();
 })
 
 //Listening for 'No Highlight' event and unsetting the highlight when event is received.
 const textHighlightAction = document.querySelector('gux-rich-text-editor-action-text-highlight');
 textHighlightAction.addEventListener('noHighlightAction', (event) => { 
   editor.chain().focus().unsetHighlight().run();
-})
+});
+
+// When items in the condensed menu are clicked you can retrieve them via their value by listening to the guxToggleAction event.
+const richTextEditor = document.querySelector('gux-rich-text-editor-beta');
+
+const actionsMenu = {
+    //Text Formatting
+    bold: () => editor.chain().focus().toggleBold().run(),
+    italic: () => editor.chain().focus().toggleItalic().run(),
+    strike: () => editor.chain().focus().toggleStrike().run(),
+    underline: () => editor.chain().focus().toggleUnderline().run(),
+    codeblock: () => editor.chain().focus().toggleCodeBlock().run(),
+    blockQuote: () => editor.chain().focus().toggleBlockquote().run(),
+    orderedList: () => editor.chain().focus().toggleOrderedList().run(),
+    bulletList: () => editor.chain().focus().toggleBulletList().run(),
+    clearFormatting: () => editor.chain().focus().unsetAllMarks().run(),
+    undo: () => editor.chain().focus().undo().run(),
+    redo: () => editor.chain().focus().redo().run(),
+    //Heading Styles
+    'Heading 1': () => editor.chain().focus().toggleHeading({ level: 1 }).run(),
+    'Heading 2': () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
+    'Heading 3': () => editor.chain().focus().toggleHeading({ level: 3 }).run(),
+    'Paragraph': () => editor.commands.setParagraph(),
+    // Highlight Colors
+    'orange': () => editor.chain().focus().toggleHighlight({ color: '#FF8F76' }).run(),
+    'coral': () => editor.chain().focus().toggleHighlight({ color: '#FFBEC9' }).run(),
+    'pear': () => editor.chain().focus().toggleHighlight({ color: '#c6dd98' }).run(),
+    'mango': () => editor.chain().focus().toggleHighlight({ color: '#FFD173' }).run(),
+    'raspberry': () => editor.chain().focus().toggleHighlight({ color: '#F5BFEB' }).run(),
+    'blue': () => editor.chain().focus().toggleHighlight({ color: '#ABDFF0' }).run(),
+    'mineral': () => editor.chain().focus().toggleHighlight({ color: '#BCD6F0' }).run(),
+    'island': () => editor.chain().focus().toggleHighlight({ color: '#81CBE5' }).run(),
+    'inherit': () => editor.chain().focus().toggleHighlight({ color: '#808000' }).run(),
+    'noHighlightAction': () => editor.chain().focus().unsetHighlight().run()
+  };
+
+//Listen for the guxToggleAction event and execute the relevant action based on the actionsMenu list.
+richTextEditor.addEventListener('guxToggleAction', (event) => {
+  if (actionsMenu[event.detail]) {
+    actionsMenu[event.detail]();
+  }
+});
+
 })();
 
   })()"
@@ -336,6 +671,12 @@ textHighlightAction.addEventListener('noHighlightAction', (event) => {
   .custom-highlight {
     color: #808000;
     background-color: #808000;
+  }
+
+  .responsive-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .not-used {

@@ -20,6 +20,7 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
     justify-content: space-between;
     padding: 0;
     overflow: hidden;
+    background-color: var(--gse-ui-modal-backgroundColor);
     border: none;
     border-radius: var(--gse-ui-modal-borderRadius);
     box-shadow: var(--gse-ui-modal-boxShadow);
@@ -72,6 +73,7 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
         padding-inline: var(--gse-ui-modal-padding);
         margin-block-start: var(--gse-ui-modal-gap);
         overflow-y: auto;
+        color: var(--gse-semantic-foreground-container-highEmphasis);
       }
 
       .gux-button-footer {

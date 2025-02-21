@@ -14,6 +14,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import translationResources from '../i18n/en.json';
 import { afterNextRender } from '@utils/dom/after-next-render';
+import { hasDisabledParent } from '../../gux-rich-text-editor.service';
 
 @Component({
   tag: 'gux-rich-text-editor-action-link',
@@ -117,7 +118,7 @@ export class GuxRichTextEditorActionLink {
             onClick={() => this.togglePopover()}
             ref={el => (this.actionButton = el)}
             type="button"
-            disabled={this.disabled}
+            disabled={this.disabled || hasDisabledParent(this.root)}
             aria-label={this.i18n('link')}
             aria-haspopup="true"
             aria-expanded={this.isOpen.toString()}

@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.123.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.122.0...v4.123.0) (2025-02-21)
+
+
+### Features
+
+* **rich-text-editor:** addition of responsive design ([dd85bab](https://github.com/MyPureCloud/genesys-spark/commit/dd85bab518d2e0db37f6feca9d60569eb89c768d))
+
+## [4.122.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.121.0...v4.122.0) (2025-02-20)
+
+
+### Features
+
+* **avatar-group-beta:** add to group ([#874](https://github.com/MyPureCloud/genesys-spark/issues/874)) ([080d871](https://github.com/MyPureCloud/genesys-spark/commit/080d87164cfe7c29ba7a1fe2eaf2aeb1d07714ca))
+
 ## [4.121.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.120.0...v4.121.0) (2025-02-19)
 
 

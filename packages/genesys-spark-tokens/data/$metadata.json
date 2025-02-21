@@ -1,7 +1,5 @@
 {
   "tokenSetOrder": [
-    "core_deprecated",
-    "semantic_deprecated",
     "core",
     "semantic/theme/flare",
     "semantic/theme/legacy",

@@ -167,6 +167,7 @@ export class GuxToggle {
             <gux-icon
               icon-name="fa/hexagon-exclamation-regular"
               decorative
+              size="small"
             ></gux-icon>
             <div class="gux-toggle-error-message">{this.errorMessage}</div>
           </div>

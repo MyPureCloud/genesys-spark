@@ -52,8 +52,10 @@ Type: `Promise<void>`
  - [gux-option](../gux-listbox/options/gux-option)
  - [gux-option-icon](../gux-listbox/options/gux-option-icon)
  - [gux-option-multi](../gux-listbox-multi/gux-option-multi)
+ - [gux-rich-style-list-item](../../beta/gux-rich-text-editor/gux-rich-text-editor-list/gux-rich-style-list-item)
  - [gux-rich-text-editor-action-rich-style](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
  - [gux-rich-text-editor-action-text-highlight](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-text-highlight)
+ - [gux-rich-text-editor-beta](../../beta/gux-rich-text-editor)
  - [gux-side-panel-heading](../../beta/gux-side-panel/components/gux-side-panel-heading)
  - [gux-simple-toast-legacy](../../legacy/gux-simple-toast-legacy)
  - [gux-toast](../gux-toast)
@@ -72,8 +74,10 @@ graph TD;
   gux-option --> gux-truncate
   gux-option-icon --> gux-truncate
   gux-option-multi --> gux-truncate
+  gux-rich-style-list-item --> gux-truncate
   gux-rich-text-editor-action-rich-style --> gux-truncate
   gux-rich-text-editor-action-text-highlight --> gux-truncate
+  gux-rich-text-editor-beta --> gux-truncate
   gux-side-panel-heading --> gux-truncate
   gux-simple-toast-legacy --> gux-truncate
   gux-toast --> gux-truncate

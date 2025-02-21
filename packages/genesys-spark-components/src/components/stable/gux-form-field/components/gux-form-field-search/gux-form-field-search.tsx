@@ -189,6 +189,7 @@ export class GuxFormFieldSearch {
               <gux-icon
                 icon-name="fa/magnifying-glass-regular"
                 decorative
+                size="small"
               ></gux-icon>
               <slot name="input" />
               {this.clearable && this.hasContent && !this.disabled && (

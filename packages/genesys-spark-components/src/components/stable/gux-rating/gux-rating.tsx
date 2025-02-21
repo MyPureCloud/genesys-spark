@@ -128,7 +128,9 @@ export class GuxRating {
       }, [] as string[])
       .map(
         iconName =>
-          (<gux-icon icon-name={iconName} decorative></gux-icon>) as JSX.Element
+          (
+            <gux-icon icon-name={iconName} decorative size="small"></gux-icon>
+          ) as JSX.Element
       );
   }
 

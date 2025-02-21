@@ -120,6 +120,7 @@ export class GuxTableSelectMenu {
           <gux-icon
             icon-name="custom/chevron-down-small-regular"
             screenreader-text={this.i18n('tableOptions')}
+            size="small"
           ></gux-icon>
         </button>,
         <gux-popover-list
