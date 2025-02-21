@@ -16,7 +16,8 @@
       "elevation.high": "S:120a65ca683c835ca116a5ac37131b8d73c4ef1e,"
     },
     "selectedTokenSets": {
-      "core": "enabled"
+      "core": "enabled",
+      "deprecated": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:28327:137965",
     "$figmaModeId": "28327:0",
@@ -362,7 +363,8 @@
     "name": "flare",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "semantic/theme/flare": "enabled"
+      "semantic/theme/flare": "enabled",
+      "deprecated": "disabled"
     },
     "group": "theme",
     "$figmaCollectionId": "VariableCollectionId:28327:138243",
@@ -764,7 +766,8 @@
     "name": "legacy",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "semantic/theme/legacy": "enabled"
+      "semantic/theme/legacy": "enabled",
+      "deprecated": "disabled"
     },
     "group": "theme",
     "$figmaCollectionId": "VariableCollectionId:28327:138243",
@@ -1008,7 +1011,8 @@
     },
     "selectedTokenSets": {
       "semantic/mode/light": "enabled",
-      "semantic/global": "enabled"
+      "semantic/global": "enabled",
+      "deprecated": "disabled"
     },
     "group": "mode",
     "$figmaCollectionId": "VariableCollectionId:28327:138365",
@@ -1411,7 +1415,8 @@
     },
     "selectedTokenSets": {
       "semantic/mode/dark": "enabled",
-      "semantic/global": "enabled"
+      "semantic/global": "enabled",
+      "deprecated": "disabled"
     },
     "group": "mode",
     "$figmaCollectionId": "VariableCollectionId:28327:138365",
@@ -1926,7 +1931,8 @@
       "ui-charts/sankey_alluvial": "enabled",
       "ui-charts/scatter_chart": "enabled",
       "ui-charts/sparkline": "enabled",
-      "ui-charts/shared": "enabled"
+      "ui-charts/shared": "enabled",
+      "deprecated": "disabled"
     },
     "$figmaCollectionId": "VariableCollectionId:8987:36891",
     "$figmaModeId": "28327:5",
