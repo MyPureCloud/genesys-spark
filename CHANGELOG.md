@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.124.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.123.0...v4.124.0) (2025-02-22)
+
+
+### Features
+
+* **token:** removed deprecated sets ([1307a32](https://github.com/MyPureCloud/genesys-spark/commit/1307a32e2708388c2373daa2e30553753ae206d4))
+
+
+### Bug Fixes
+
+* **modal:** fixed backgroud color token ([14de7f1](https://github.com/MyPureCloud/genesys-spark/commit/14de7f197b312a7469eca48c132970498e966b3c))
+
 ## [4.123.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.122.0...v4.123.0) (2025-02-21)
 
 
