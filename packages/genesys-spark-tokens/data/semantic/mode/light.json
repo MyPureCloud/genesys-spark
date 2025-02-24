@@ -259,6 +259,11 @@
           "type": "color",
           "description": "This is the default color for text highlights in bodies of text."
         }
+      },
+      "transparent": {
+        "value": "{background.container.page.default}",
+        "type": "color",
+        "description": "A transparent color for general utility like fades"
       }
     },
     "system": {

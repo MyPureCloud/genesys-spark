@@ -1746,7 +1746,7 @@
           "type": "color"
         },
         "trendlined": {
-          "value": "{color.haze.600}",
+          "value": "{color.haze.700}",
           "type": "color"
         }
       }
