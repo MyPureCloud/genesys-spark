@@ -1,0 +1,50 @@
+/* Button */
+button:focus-visible {
+  outline: var(--gse-semantic-focusOutline-md-borderWidth) solid var(--gse-semantic-border-focus);
+  outline-offset: var(--gse-semantic-focusOutline-offset);
+}
+
+/* Input */
+input:focus-visible {
+  outline: var(--gse-semantic-focusOutline-md-borderWidth) solid var(--gse-semantic-border-focus);
+  outline-offset: var(--gse-semantic-focusOutline-offset);
+}
+
+/* Helper classes */
+.gux-focus-ring-focused:focus {
+  outline: var(--gse-semantic-focusOutline-md-borderWidth) solid var(--gse-semantic-border-focus);
+  outline-offset: var(--gse-semantic-focusOutline-offset);
+}
+
+.gux-focus-ring-focused-within:focus-within {
+  outline: var(--gse-semantic-focusOutline-md-borderWidth) solid var(--gse-semantic-border-focus);
+  outline-offset: var(--gse-semantic-focusOutline-offset);
+}
+
+.gux-focus-ring-focused-visible:focus-visible {
+  outline: var(--gse-semantic-focusOutline-md-borderWidth) solid var(--gse-semantic-border-focus);
+  outline-offset: var(--gse-semantic-focusOutline-offset);
+}
+
+.gux-focus-ring-small-focused:focus {
+  outline: var(--gse-semantic-focusOutline-sm-borderWidth) solid var(--gse-semantic-border-focus);
+}
+
+.gux-focus-ring-small-focused-within:focus-within {
+  outline: var(--gse-semantic-focusOutline-sm-borderWidth) solid var(--gse-semantic-border-focus);
+}
+
+.gux-focus-ring-small-focused-visible:focus-visible {
+  outline: var(--gse-semantic-focusOutline-sm-borderWidth) solid var(--gse-semantic-border-focus);
+}
+
+.gux-focus-ring {
+  outline: var(--gse-semantic-focusOutline-md-borderWidth) solid var(--gse-semantic-border-focus);
+  outline-offset: var(--gse-semantic-focusOutline-offset);
+}
+
+.gux-focus-ring-small {
+  outline: var(--gse-semantic-focusOutline-sm-borderWidth) solid var(--gse-semantic-border-focus);
+}
+
+/*# sourceMappingURL=global-focusable.css.map */

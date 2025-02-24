@@ -5,7 +5,7 @@ import { merge } from 'smob';
 
 export default [
   {
-    ignores: ['node_modules/', 'dist/']
+    ignores: ['node_modules/', 'dist/', 'snapshot/']
   },
   {
     languageOptions: {
@@ -29,7 +29,7 @@ export default [
     )
   ),
   {
-    files: ['**/*.config.{js,mjs}'],
+    files: ['**/*.config.js', '**/*.mjs'],
     languageOptions: {
       globals: {
         ...globals.node

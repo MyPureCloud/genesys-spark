@@ -1,0 +1,167 @@
+@use './typography.scss';
+
+//Header
+
+h1 {
+  @include typography.heading-xl;
+}
+
+h2 {
+  @include typography.heading-lg;
+}
+
+h3 {
+  @include typography.heading-md;
+}
+
+h4,
+h5,
+h6 {
+  @include typography.heading-sm;
+}
+
+.gux-heading-xl,
+.gux-heading-xl-bold {
+  @include typography.heading-xl-bold;
+}
+
+.gux-heading-xl-semibold {
+  @include typography.heading-xl-semiBold;
+}
+
+.gux-heading-lg,
+.gux-heading-lg-bold {
+  @include typography.heading-lg-bold;
+}
+
+.gux-heading-lg-semibold {
+  @include typography.heading-lg-semiBold;
+}
+
+.gux-heading-md,
+.gux-heading-md-bold {
+  @include typography.heading-md-bold;
+}
+
+.gux-heading-md-semibold {
+  @include typography.heading-md-semiBold;
+}
+
+.gux-heading-sm,
+.gux-heading-sm-bold {
+  @include typography.heading-sm-bold;
+}
+
+.gux-heading-sm-semibold {
+  @include typography.heading-sm-semiBold;
+}
+
+.gux-heading-xs,
+.gux-heading-xs-bold {
+  @include typography.heading-xs-bold;
+}
+
+.gux-heading-xs-semibold {
+  @include typography.heading-xs-semiBold;
+}
+
+.gux-heading-subheading-regular {
+  @include typography.heading-subheading-regular;
+}
+
+.gux-heading-subheading,
+.gux-heading-subheading-bold {
+  @include typography.heading-subheading-bold;
+}
+
+.gux-heading-subheading-semibold {
+  @include typography.heading-subheading-semiBold;
+}
+
+.gux-heading-overline {
+  @include typography.heading-overline;
+}
+
+// Body
+
+body {
+  @include typography.body-sm-regular;
+}
+
+.gux-body-lg-regular {
+  @include typography.body-lg-regular;
+}
+
+.gux-body-lg-semibold {
+  @include typography.body-lg-semiBold;
+}
+
+.gux-body-lg-bold {
+  @include typography.body-lg-bold;
+}
+
+.gux-body-md-regular {
+  @include typography.body-md-regular;
+}
+
+.gux-body-md-semibold {
+  @include typography.body-md-semiBold;
+}
+
+.gux-body-md-bold {
+  @include typography.body-md-bold;
+}
+
+.gux-body-sm-regular {
+  @include typography.body-sm-regular;
+}
+
+.gux-body-sm-semibold {
+  @include typography.body-sm-semiBold;
+}
+
+.gux-body-sm-bold {
+  @include typography.body-sm-bold;
+}
+
+//Components
+
+.gux-ui-button {
+  @include typography.ui-button;
+}
+
+.gux-ui-link {
+  @include typography.ui-link;
+}
+
+.gux-ui-label {
+  @include typography.ui-label;
+}
+
+.gux-ui-placeholder {
+  @include typography.ui-placeholder;
+}
+
+// Anchor
+
+a {
+  @include typography.ui-anchor;
+}
+
+table a {
+  @include typography.ui-anchor-table;
+}
+
+.gux-ui-anchor {
+  @include typography.ui-anchor;
+}
+
+.gux-anchor-table {
+  @include typography.ui-anchor-table;
+}
+
+.gux-icon-anchor {
+  .gux-icon {
+    padding-right: var(--gse-ui-links-inLine-padding);
+  }
+}

@@ -3,6 +3,7 @@ import dts from 'rollup-plugin-dts';
 import esbuild from 'rollup-plugin-esbuild';
 
 const IS_DEV_MODE = process.env.ROLLUP_WATCH === 'true';
+const FOLDER = process.env.OUTDIR || 'dist';
 
 export default [
   {
@@ -26,7 +27,7 @@ export default [
     ],
     output: [
       {
-        file: `dist/index.js`,
+        file: `${FOLDER}/index.js`,
         sourcemap: IS_DEV_MODE ? 'inline' : false
       }
     ]
@@ -49,7 +50,7 @@ export default [
       dts()
     ],
     output: {
-      file: `dist/index.d.ts`,
+      file: `${FOLDER}/index.d.ts`,
       format: 'es'
     }
   }

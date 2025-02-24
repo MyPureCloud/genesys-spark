@@ -42,6 +42,7 @@
     "prettier.root": "prettier --log-level silent --ignore-unknown --write .",
     "prettier.workspaces": "npm run prettier --workspaces --if-present",
     "release": "standard-version",
+    "snapshot": "npm run snapshot --workspaces --if-present",
     "start": "run-pty start.json",
     "test": "npm run test --workspaces --if-present",
     "test.ci": "npm run test.ci --workspaces --if-present",
