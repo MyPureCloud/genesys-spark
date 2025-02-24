@@ -226,6 +226,8 @@ export class GuxPhoneInput {
       this.phoneUtil
     );
     this.initialValueParse();
+
+    trackComponent(this.root);
   }
 
   componentDidRender(): void {
@@ -237,10 +239,6 @@ export class GuxPhoneInput {
   componentDidLoad(): void {
     this.setInput();
     this.setListBox();
-  }
-
-  componentWillRender(): void {
-    trackComponent(this.root);
   }
 
   private initialValueParse(): void {
