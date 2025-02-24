@@ -1449,7 +1449,7 @@
         "description": "We use this color for headings and labels in charts."
       },
       "high_emphasis_inverse": {
-        "value": "{theme.charts.foreground.10d}",
+        "value": "{theme.charts.foreground.10}",
         "type": "color",
         "description":"Deprecated"
       },

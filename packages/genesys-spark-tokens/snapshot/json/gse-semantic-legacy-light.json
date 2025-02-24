@@ -441,6 +441,7 @@
     },
     "foreground": {
       "high_emphasis": "#2a2a2e",
+      "high_emphasis_inverse": "#ffffff",
       "mid_emphasis": "#4f5157"
     },
     "border": {
