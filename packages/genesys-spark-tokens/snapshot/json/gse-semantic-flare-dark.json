@@ -247,6 +247,11 @@
       },
       "icon": {
         "default": "#b2b7c4"
+      },
+      "indicators": {
+        "positive": "#09b581",
+        "negative": "#e84e6a",
+        "neutral": "#c1c6d4"
       }
     },
     "form_control": {
@@ -429,11 +434,12 @@
         "green": "#53bee5",
         "red": "#ff7d92",
         "yellow": "#ffd173"
-      }
+      },
+      "high_emphasis": "#2a2a2e",
+      "high_emphasis_inverse": "#ffffff"
     },
     "foreground": {
       "high_emphasis": "#ffffff",
-      "high_emphasis_inverse": "#2a2a2e",
       "mid_emphasis": "#c1c6d4"
     },
     "border": {

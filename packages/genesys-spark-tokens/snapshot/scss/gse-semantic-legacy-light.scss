@@ -142,6 +142,9 @@
   --gse-semantic-foreground-system-error-highEmphasis: #2e394c;
   --gse-semantic-foreground-system-error-accent: #ea0b0b;
   --gse-semantic-foreground-system-icon-default: #2e394c;
+  --gse-semantic-foreground-system-indicators-positive: #3c8527;
+  --gse-semantic-foreground-system-indicators-negative: #ea0b0b;
+  --gse-semantic-foreground-system-indicators-neutral: #4c5667;
   --gse-semantic-foreground-formControl-helpText-default: #4c5667;
   --gse-semantic-foreground-formControl-helpText-error: #ea0b0b;
   --gse-semantic-foreground-formControl-textInput-placeholder: #4c5667;
@@ -224,8 +227,9 @@
   --gse-semantic-charts-numericalData-multiColor-green: #81cbe5;
   --gse-semantic-charts-numericalData-multiColor-red: #ff9dad;
   --gse-semantic-charts-numericalData-multiColor-yellow: #ffdd96;
+  --gse-semantic-charts-numericalData-highEmphasisInverse: #ffffff;
+  --gse-semantic-charts-numericalData-highEmphasis: #2a2a2e;
   --gse-semantic-charts-foreground-highEmphasis: #2a2a2e;
-  --gse-semantic-charts-foreground-highEmphasisInverse: #ffffff;
   --gse-semantic-charts-foreground-midEmphasis: #4f5157;
   --gse-semantic-charts-border-axis: #b2b7c4;
   --gse-semantic-charts-border-grid-default: #ebedf5;

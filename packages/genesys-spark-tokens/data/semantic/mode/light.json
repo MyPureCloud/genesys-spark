@@ -810,6 +810,23 @@
           "type": "color",
           "description": "The color for foreground content on progress_and_loading/default backgrounds."
         }
+      },
+      "indicators": {
+        "positive": {
+          "value": "{foreground.system.success.accent}",
+          "type": "color",
+          "description": "We use this color for indicating a positive, like, a positive trend in a chart, a positive review, etc."
+        },
+        "negative": {
+          "value": "{foreground.system.error.accent}",
+          "type": "color",
+          "description": "We use this color for indicating a negative, like, a negative trend in a chart, a negative review, a reduction, etc."
+        },
+        "neutral": {
+          "value": "{foreground.container.low_emphasis}",
+          "type": "color",
+          "description": "We use this color for indicating a neutral trend, like, a neutral trend in a chart."
+        }
       }
     },
     "form_control": {
@@ -1413,6 +1430,16 @@
           "value": "{theme.charts.numerical_data.multi_color.yellow}",
           "type": "color"
         }
+      },
+      "high_emphasis_inverse": {
+        "value": "{theme.charts.foreground.10}",
+        "type": "color",
+        "description": "We use this color for labels that don't pass the contrast check with the default high_emphasis color on heatmaps tiles."
+      },
+      "high_emphasis": {
+        "value": "{theme.charts.foreground.40}",
+        "type": "color",
+        "description": "We use this color for the label's color on heatmaps tiles."
       }
     },
     "foreground": {
@@ -1422,9 +1449,9 @@
         "description": "We use this color for headings and labels in charts."
       },
       "high_emphasis_inverse": {
-        "value": "{theme.charts.foreground.10}",
+        "value": "{theme.charts.foreground.10d}",
         "type": "color",
-        "description": "We use this color for headings and labels that don't pass the contrast check with the default high_emphasis color in charts."
+        "description":"Deprecated"
       },
       "mid_emphasis": {
         "value": "{theme.charts.foreground.30}",
