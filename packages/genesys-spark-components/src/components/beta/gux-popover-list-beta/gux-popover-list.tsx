@@ -40,6 +40,7 @@ export class GuxPopoverList {
 
   @Element()
   private root: HTMLElement;
+  private forElement: HTMLElement;
 
   /**
    * Indicates the id of the element the popover should anchor to
@@ -83,8 +84,11 @@ export class GuxPopoverList {
   onKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Tab':
+        this.dismiss();
+        break;
       case 'Escape':
         this.dismiss();
+        this.forElement.focus();
         break;
     }
   }
@@ -198,19 +202,21 @@ export class GuxPopoverList {
   connectedCallback(): void {
     trackComponent(this.root, { variant: this.position });
     this.listElement = this.root.querySelector('gux-list');
-    const forElement = findElementById(this.root, this.for);
+    this.forElement = findElementById(this.root, this.for);
 
-    forElement.addEventListener('keydown', (event: KeyboardEvent) => {
-      this.popupElement.togglePopover();
-      this.isOpen = !this.isOpen;
-      this.runUpdatePosition();
-
-      if ((this.isOpen && event.key == 'Enter') || event.key == ' ') {
-        this.focusFirstItemInPopupList();
+    this.forElement.addEventListener('keydown', (event: KeyboardEvent) => {
+      switch (event.key) {
+        case 'Enter':
+        case ' ':
+          this.popupElement.togglePopover();
+          this.isOpen = !this.isOpen;
+          this.runUpdatePosition();
+          this.focusFirstItemInPopupList();
+          break;
       }
     });
 
-    forElement.addEventListener('mouseup', () => {
+    this.forElement.addEventListener('mouseup', () => {
       this.popupElement.togglePopover();
       this.isOpen = !this.isOpen;
       this.runUpdatePosition();

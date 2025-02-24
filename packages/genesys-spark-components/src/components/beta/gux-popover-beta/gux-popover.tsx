@@ -92,7 +92,7 @@ export class GuxPopover {
   onKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Escape':
-        this.dismiss();
+        this.forElement.focus();
         break;
     }
   }
@@ -124,12 +124,6 @@ export class GuxPopover {
     ) {
       this.dismiss();
     }
-
-    if (clickedForElement) {
-      this.popupElement.togglePopover();
-      this.isOpen = !this.isOpen;
-      this.runUpdatePosition();
-    }
   }
 
   get titleSlot(): HTMLSlotElement | null {
@@ -150,6 +144,12 @@ export class GuxPopover {
     } else {
       this.logForAttributeError();
     }
+  }
+
+  private focusPopup(): void {
+    const autofocusElement: HTMLElement =
+      this.root.querySelector('[autoFocus]');
+    autofocusElement?.focus();
   }
 
   private runUpdatePosition(): void {
@@ -263,6 +263,23 @@ export class GuxPopover {
   connectedCallback(): void {
     this.updateForElement();
     trackComponent(this.root, { variant: this.position });
+    this.forElement.addEventListener('keydown', (event: KeyboardEvent) => {
+      switch (event.key) {
+        case 'Enter':
+        case ' ':
+          this.popupElement.togglePopover();
+          this.isOpen = !this.isOpen;
+          this.runUpdatePosition();
+          this.focusPopup();
+          break;
+      }
+    });
+
+    this.forElement.addEventListener('mouseup', () => {
+      this.popupElement.togglePopover();
+      this.isOpen = !this.isOpen;
+      this.runUpdatePosition();
+    });
   }
 
   componentDidLoad(): void {
