@@ -94,10 +94,10 @@ gux-tab {
     }
 
     &:focus-visible {
-      outline: none;
-      border: var(--gse-ui-tabs-focusRing-border-width)
+      outline: var(--gse-ui-tabs-focusRing-border-width)
         var(--gse-ui-tabs-focusRing-border-style)
         var(--gse-ui-tabs-focusRing-border-color);
+      outline-offset: calc(var(--gse-ui-tabs-focusRing-border-width) * -1);
       border-radius: var(--gse-ui-tabs-focusRing-borderRadius);
     }
 
