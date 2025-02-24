@@ -22,9 +22,13 @@ export class GuxBlankState {
   @State()
   private hasCallToAction: boolean = false;
 
+  @State()
+  private hasGuidance: boolean = false;
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     this.hasCallToAction = hasSlot(this.root, 'call-to-action');
+    this.hasGuidance = hasSlot(this.root, 'additional-guidance');
   }
 
   private renderCallToActionSlot(): JSX.Element {
@@ -37,10 +41,21 @@ export class GuxBlankState {
     }
   }
 
+  private renderGuidanceSlot(): JSX.Element {
+    if (this.hasGuidance) {
+      return (
+        <div class="gux-guidance">
+          <slot name="additional-guidance"></slot>
+        </div>
+      ) as JSX.Element;
+    }
+  }
+
   componentWillLoad() {
     trackComponent(this.root);
 
     this.hasCallToAction = hasSlot(this.root, 'call-to-action');
+    this.hasGuidance = hasSlot(this.root, 'additional-guidance');
   }
 
   render(): JSX.Element {
@@ -52,9 +67,7 @@ export class GuxBlankState {
         <div class="gux-message">
           <slot name="primary-message"></slot>
         </div>
-        <div class="gux-guidance">
-          <slot name="additional-guidance"></slot>
-        </div>
+        {this.renderGuidanceSlot()}
         {this.renderCallToActionSlot()}
       </div>
     ) as JSX.Element;
