@@ -3,23 +3,14 @@ jest.mock('../../../../../utils/error/log-error.ts', () => ({
   logWarn: jest.fn()
 }));
 
-import { newSpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@test/specTestUtils';
 import { GuxAvatarOverflow } from '../gux-avatar-overflow';
 import { GuxAvatarOverflowItem } from '../gux-avatar-overflow-item/gux-avatar-overflow-item';
 
 const components = [GuxAvatarOverflow, GuxAvatarOverflowItem];
 
 describe('gux-avatar-overflow-beta', () => {
-  beforeAll(() => {
-    global.ResizeObserver = class ResizeObserver {
-      observe() {}
-      unobserve() {}
-      disconnect() {}
-    };
-  });
-
   afterAll(() => {
-    delete global.ResizeObserver;
     jest.clearAllTimers();
   });
 

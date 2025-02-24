@@ -17,7 +17,7 @@
 | `min`       | `min`        |             | `string`                               | `undefined` |
 | `required`  | `required`   |             | `boolean`                              | `false`     |
 | `step`      | `step`       |             | `1 \| 10 \| 15 \| 20 \| 30 \| 5 \| 60` | `1`         |
-| `value`     | `value`      |             | ``${string}:${string}``                | `'00:00'`   |
+| `value`     | `value`      |             | `` `${string}:${string}` ``            | `'00:00'`   |
 
 
 ## Dependencies
