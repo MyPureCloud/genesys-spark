@@ -61,6 +61,7 @@
   "types": "dist/types/index.d.ts",
   "dependencies": {
     "@floating-ui/dom": "^1.6.13",
+    "@js-temporal/polyfill": "^0.4.4",
     "@vvo/tzdb": "6.161.0",
     "google-libphonenumber": "3.2.40",
     "intl-messageformat": "10.7.15",

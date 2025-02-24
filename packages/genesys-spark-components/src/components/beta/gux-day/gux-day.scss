@@ -36,8 +36,8 @@
   opacity: var(--gse-ui-calendarMenu-disabled-opacity);
 }
 
-// The button should have no styles
 button {
+  // The button should have no default styles
   @include mixins.gux-empty-button;
 
   inline-size: 100%;
@@ -51,8 +51,13 @@ button {
   vertical-align: middle;
   cursor: pointer;
 }
-// The button should not have a focus outline, it is handled with :focus-within
-// on :host
+
 button:focus {
+  // The button should not have a focus outline, it is handled with :focus-within
+  // on :host
   outline: none;
+}
+
+.gux-sr-only {
+  @include mixins.gux-sr-only-clip;
 }
