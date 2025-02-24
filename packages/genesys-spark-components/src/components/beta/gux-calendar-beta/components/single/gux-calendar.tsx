@@ -1,19 +1,24 @@
 import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
 import { IWeekElement, GuxCalendarDayOfWeek } from '../../gux-calendar.types';
-import { asIsoDate, fromIsoDate } from '@utils/date/iso-dates';
 import {
   getWeekdays,
   getFirstOfMonth,
-  getDateAsMonthYear,
-  firstDateInMonth
+  localizedYearMonth,
+  firstDateInWeek
 } from '../../services/calendar.service';
-import { getDesiredLocale, getStartOfWeek } from '../../../../../i18n';
-import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
+import {
+  getDesiredLocale,
+  getFirstDayOfWeek,
+  buildI18nForComponent,
+  GetI18nValue
+} from '../../../../../i18n';
 import translationResources from '../../i18n/en.json';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { logError } from '@utils/error/log-error';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
+import { Temporal } from '@js-temporal/polyfill';
 
+const DAY_INTERVAL = Temporal.Duration.from({ days: 1 });
 @Component({
   styleUrl: 'gux-calendar.scss',
   tag: 'gux-calendar-beta',
@@ -24,17 +29,17 @@ export class GuxCalendar {
   root: HTMLElement;
 
   @State()
-  private focusedValue: Date;
+  private focusedValue: Temporal.PlainDate;
 
   @State()
-  private minValue: Date;
+  private minValue: Temporal.PlainDate | null;
 
   @State()
-  private maxValue: Date;
+  private maxValue: Temporal.PlainDate | null;
 
   @Listen('guxdayselected')
   onDaySelected(event: CustomEvent<string>) {
-    const selectedDate = fromIsoDate(event.detail);
+    const selectedDate = Temporal.PlainDate.from(event.detail);
     this.selectDate(selectedDate);
     event.stopPropagation();
   }
@@ -72,48 +77,57 @@ export class GuxCalendar {
         10
       ) as GuxCalendarDayOfWeek;
     }
-    this.startDayOfWeek = this.startDayOfWeek || getStartOfWeek(this.locale);
+    this.startDayOfWeek = this.startDayOfWeek || getFirstDayOfWeek(this.locale);
 
     this.i18n = await buildI18nForComponent(this.root, translationResources);
 
     if (this.slottedInput.value) {
-      this.focusedValue = fromIsoDate(this.slottedInput.value);
+      this.focusedValue = Temporal.PlainDate.from(this.slottedInput.value);
     }
 
     // Set min value from the "min" input prop
     if (this.slottedInput.min) {
-      this.minValue = new Date(this.slottedInput.min);
-      this.minValue.setHours(0, 0, 0, 0);
+      this.minValue = Temporal.PlainDate.from(this.slottedInput.min);
     }
     // Set max value from the "max" input prop
     if (this.slottedInput.max) {
-      this.maxValue = new Date(this.slottedInput.max);
-      this.maxValue.setHours(0, 0, 0, 0);
+      this.maxValue = Temporal.PlainDate.from(this.slottedInput.max);
     }
+
+    console.log('START OF WEEK:', this.startDayOfWeek);
   }
 
-  private selectDate(date: Date): void {
+  private selectDate(date: Temporal.PlainDate): void {
     if (this.isInvalidDate(date)) {
       return;
     }
-    this.focusedValue = new Date(date.getTime());
-    this.slottedInput.value = asIsoDate(date);
+    this.focusedValue = date;
+    this.slottedInput.value = date.toString();
     simulateNativeEvent(this.root, 'input');
   }
 
-  private setDateAfterArrowKeyPress(
-    event: KeyboardEvent,
-    newDayValue: number
-  ): void {
-    event.preventDefault();
-    this.focusedValue = new Date(
-      this.getFocusedValue().getFullYear(),
-      this.getFocusedValue().getMonth(),
-      this.getFocusedValue().getDate() + newDayValue,
-      0,
-      0,
-      0
-    );
+  /**
+   * Shifts the focused date by the provided interval
+   * @param event
+   * @param interval A Temporal-compatible interval definition
+   */
+  private shiftFocusedDate(interval: Temporal.DurationLike): void {
+    const shiftInterval = Temporal.Duration.from(interval);
+    let newFocusedValue = this.focusedValue.add(shiftInterval);
+    // Clamp to the valid range
+    if (
+      this.minValue &&
+      Temporal.PlainDate.compare(newFocusedValue, this.minValue) == -1
+    ) {
+      newFocusedValue = this.minValue;
+    } else if (
+      this.maxValue &&
+      Temporal.PlainDate.compare(newFocusedValue, this.maxValue) == 1
+    ) {
+      newFocusedValue = this.maxValue;
+    }
+
+    this.focusedValue = newFocusedValue;
     afterNextRenderTimeout(() => {
       this.focusDate();
     });
@@ -123,7 +137,7 @@ export class GuxCalendar {
    * Focus the focused date
    */
   private focusDate() {
-    const isoDateStr = asIsoDate(this.focusedValue);
+    const isoDateStr = this.focusedValue.toString();
     // Find the rendered element for the slot for the focused date
     const target: HTMLElement = this.root.shadowRoot
       .querySelector<HTMLSlotElement>(`slot[name="${isoDateStr}"]`)
@@ -137,68 +151,57 @@ export class GuxCalendar {
     switch (event.key) {
       case ' ':
         break;
-      case 'Enter':
-        event.preventDefault();
-        this.selectDate(this.getFocusedValue());
-        afterNextRenderTimeout(() => {
-          this.focusDate();
-        });
-        break;
       case 'ArrowDown':
-        this.setDateAfterArrowKeyPress(event, 7);
+        event.preventDefault();
+        this.shiftFocusedDate({ weeks: 1 });
         break;
       case 'ArrowUp':
-        this.setDateAfterArrowKeyPress(event, -7);
+        event.preventDefault();
+        this.shiftFocusedDate({ weeks: -1 });
         break;
       case 'ArrowLeft':
-        this.setDateAfterArrowKeyPress(event, -1);
+        event.preventDefault();
+        this.shiftFocusedDate({ days: -1 });
         break;
       case 'ArrowRight':
-        this.setDateAfterArrowKeyPress(event, 1);
+        event.preventDefault();
+        this.shiftFocusedDate({ days: 1 });
         break;
       case 'PageUp':
         event.preventDefault();
-        this.setNewFocusedMonth(1);
-        afterNextRenderTimeout(() => {
-          this.focusDate();
-        });
+        this.shiftFocusedDate({ months: 1 });
         break;
       case 'PageDown':
         event.preventDefault();
-        this.setNewFocusedMonth(-1);
-        afterNextRenderTimeout(() => {
-          this.focusDate();
-        });
+        this.shiftFocusedDate({ months: -1 });
         break;
     }
   }
 
-  private isInvalidDate(date: Date): boolean {
+  /**
+   * Returns true if the date is less than the min date or greater than the max date
+   */
+  private isInvalidDate(date: Temporal.PlainDate): boolean {
     return (
-      (this.minValue && date.getTime() <= this.minValue.getTime()) ||
-      (this.maxValue && date.getTime() > this.maxValue.getTime())
+      (this.minValue &&
+        Temporal.PlainDate.compare(date, this.minValue) == -1) ||
+      (this.maxValue && Temporal.PlainDate.compare(date, this.maxValue) == 1)
     );
   }
 
   private getMonthDays(): IWeekElement[] {
     const firstOfMonth = getFirstOfMonth(this.getFocusedValue());
     const weeks = [];
-    let currentWeek = { dates: [] };
+    let currentWeek: IWeekElement = { dates: [] };
     let weekDayIndex = 0;
-    const currentMonth = firstOfMonth.getMonth();
+    const currentMonth = firstOfMonth.month;
     const selectedValue = this.getSelectedValue();
-    const firstOfMonthDate = new Date(firstOfMonth.getTime());
-    const currentDate = firstDateInMonth(
-      currentMonth,
-      firstOfMonthDate.getFullYear(),
-      this.startDayOfWeek
-    );
+    let currentDate = firstDateInWeek(firstOfMonth, this.startDayOfWeek);
 
     // Generate all of the dates in the current month
     for (let d = 0; d < this.MONTH_DATE_COUNT + 1; d += 1) {
       const selected =
-        selectedValue.getTime() === currentDate.getTime() &&
-        this.focusedValue !== undefined;
+        selectedValue.equals(currentDate) && this.focusedValue !== undefined;
 
       if (weekDayIndex > 0 && weekDayIndex % 7 === 0) {
         weeks.push(currentWeek);
@@ -211,60 +214,40 @@ export class GuxCalendar {
       const disabled = this.isInvalidDate(currentDate);
 
       const focused =
-        this.getFocusedValue()?.getTime() === currentDate.getTime() &&
-        this.getFocusedValue()?.getTime() !== selectedValue.getTime(); // Do not show preview value for date if it's already selected
+        this.getFocusedValue().equals(currentDate) &&
+        !this.getFocusedValue().equals(selectedValue); // Do not show preview value for date if it's already selected
 
-      const today = new Date();
+      const today = Temporal.Now.plainDateISO();
 
       currentWeek.dates.push({
-        date: new Date(currentDate),
+        date: Temporal.PlainDate.from(currentDate),
         disabled,
-        inCurrentMonth: currentMonth === currentDate.getMonth() && !disabled,
-        selected: selected && selectedValue,
+        inCurrentMonth: currentMonth === currentDate.month && !disabled,
+        selected: selected,
         focused,
-        isCurrentDate:
-          currentDate.getDate() === today.getDate() &&
-          currentDate.getMonth() === today.getMonth() &&
-          currentDate.getFullYear() === today.getFullYear()
+        isCurrentDate: currentDate.equals(today)
       });
       weekDayIndex += 1;
-      currentDate.setDate(currentDate.getDate() + 1);
+      currentDate = currentDate.add(DAY_INTERVAL);
     }
 
-    return weeks as IWeekElement[];
+    return weeks;
   }
 
-  private getFocusedValue(): Date {
+  private getFocusedValue(): Temporal.PlainDate {
     if (this.focusedValue) {
       return this.focusedValue;
     }
     return this.getSelectedValue();
   }
 
-  private changeMonth(newMonthValue: number): Date {
-    return new Date(
-      this.getFocusedValue().getFullYear(),
-      this.getFocusedValue().getMonth() + newMonthValue,
-      1,
-      0,
-      0,
-      0
-    );
-  }
-
-  private setNewFocusedMonth(newMonthValue: number): void {
-    this.focusedValue = this.changeMonth(newMonthValue);
-  }
-
-  private getSelectedValue(): Date {
+  private getSelectedValue(): Temporal.PlainDate {
     if (this.slottedInput.value) {
-      const value = fromIsoDate(this.slottedInput.value);
+      const value = Temporal.PlainDate.from(this.slottedInput.value);
       return value;
     }
 
-    const now = new Date();
-    now.setHours(0, 0, 0, 0);
-    return now;
+    return Temporal.Now.plainDateISO();
   }
 
   private renderHeader(): JSX.Element {
@@ -274,12 +257,12 @@ export class GuxCalendar {
           type="button"
           class="gux-left"
           aria-label={this.i18n('previousMonth', {
-            localizedPreviousMonthAndYear: getDateAsMonthYear(
-              this.changeMonth(-1),
+            localizedPreviousMonthAndYear: localizedYearMonth(
+              this.getFocusedValue().add({ months: -1 }),
               this.locale
             )
           })}
-          onClick={() => this.setNewFocusedMonth(-1)}
+          onClick={() => this.shiftFocusedDate({ months: -1 })}
         >
           <gux-icon
             size="small"
@@ -288,18 +271,18 @@ export class GuxCalendar {
           ></gux-icon>
         </button>
         <span class="gux-header-month-and-year">
-          {getDateAsMonthYear(this.getFocusedValue(), this.locale)}
+          {localizedYearMonth(this.getFocusedValue(), this.locale)}
         </span>
         <button
           type="button"
           class="gux-right"
           aria-label={this.i18n('nextMonth', {
-            localizedNextMonthAndYear: getDateAsMonthYear(
-              this.changeMonth(1),
+            localizedNextMonthAndYear: localizedYearMonth(
+              this.getFocusedValue().add({ months: 1 }),
               this.locale
             )
           })}
-          onClick={() => this.setNewFocusedMonth(1)}
+          onClick={() => this.shiftFocusedDate({ months: 1 })}
         >
           <gux-icon
             size="small"
@@ -326,7 +309,7 @@ export class GuxCalendar {
                 (
                   <div class="gux-content-week">
                     {week.dates.map(day => {
-                      const isoDateStr = asIsoDate(day.date);
+                      const isoDateStr = day.date.toString();
                       return (
                         <gux-focus-proxy
                           aria-current={day.selected ? 'true' : 'false'}

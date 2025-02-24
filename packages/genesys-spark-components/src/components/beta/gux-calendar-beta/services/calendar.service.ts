@@ -1,7 +1,14 @@
-import { capitalizeFirstLetter } from '@utils/string/capitalize-first-letter';
+import { Temporal } from '@js-temporal/polyfill';
 
-export function getFirstOfMonth(date: Date): Date {
-  return new Date(date.getFullYear(), date.getMonth(), 1, 0, 0, 0);
+/**
+ * Given a date, return the first day of the month that date is in.
+ */
+export function getFirstOfMonth(date: Temporal.PlainDate): Temporal.PlainDate {
+  return Temporal.PlainDate.from({
+    day: 1,
+    month: date.month,
+    year: date.year
+  });
 }
 
 export function getWeekdays(
@@ -21,10 +28,11 @@ export function getWeekdays(
   return rotateArray(days, startDayOfWeek);
 }
 
-export function getDateAsMonthYear(date: Date, locale: string) {
-  return capitalizeFirstLetter(
-    date.toLocaleDateString(locale, { year: 'numeric', month: 'long' })
-  );
+export function localizedYearMonth(
+  date: Temporal.PlainDate,
+  locale: string
+): string {
+  return date.toLocaleString(locale, { year: 'numeric', month: 'long' });
 }
 
 function rotateArray(arr: string[], n: number): string[] {
@@ -32,18 +40,23 @@ function rotateArray(arr: string[], n: number): string[] {
   return arr.concat(arr.splice(0, times));
 }
 
-export function firstDateInMonth(
-  month: number,
-  year: number,
+/**
+ * Given a starting date and the first day of the week, find the first date of
+ * the week of the provided date. For example, February 1st 2025 is a Saturday.
+ * If the first day of the week is considered Monday (1), this function would
+ * return a date of 2027-01-27.
+ * @param date The date we want to find the start of the week for
+ * @param startDayOfWeek The day that should be considered the first day of the week
+ * @returns The first day of the first week of the provided month
+ */
+export function firstDateInWeek(
+  date: Temporal.PlainDate,
   startDayOfWeek: number
-) {
-  const startDate = new Date(year, month, 1, 0, 0, 0, 0);
-  const firstDayOfMonth = startDate.getDay();
-  const firstDayOffset = (-1 * (startDayOfWeek - firstDayOfMonth - 7)) % 7;
-  const firstDateInMonth = new Date(
-    startDate.getTime() - firstDayOffset * (86400 * 1000)
-  );
-  firstDateInMonth.setHours(0, 0, 0, 0);
-
-  return firstDateInMonth;
+): Temporal.PlainDate {
+  let dayDelta = startDayOfWeek - date.dayOfWeek;
+  if (dayDelta > 0) {
+    dayDelta = dayDelta - 7;
+  }
+  const interval = Temporal.Duration.from({ days: dayDelta });
+  return date.add(interval);
 }
