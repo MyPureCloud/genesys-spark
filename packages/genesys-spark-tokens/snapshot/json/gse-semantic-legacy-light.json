@@ -247,6 +247,11 @@
       },
       "icon": {
         "default": "#2e394c"
+      },
+      "indicators": {
+        "positive": "#3c8527",
+        "negative": "#ea0b0b",
+        "neutral": "#4c5667"
       }
     },
     "form_control": {
@@ -430,7 +435,9 @@
         "green": "#81cbe5",
         "red": "#ff9dad",
         "yellow": "#ffdd96"
-      }
+      },
+      "high_emphasis_inverse": "#ffffff",
+      "high_emphasis": "#2a2a2e"
     },
     "foreground": {
       "high_emphasis": "#2a2a2e",

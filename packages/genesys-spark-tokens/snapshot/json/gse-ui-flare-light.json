@@ -3654,6 +3654,10 @@
       "default": "#056385",
       "track": "#ebedf5",
       "chartMessage": "#ebedf5"
+    },
+    "indicator": {
+      "positive": "#079167",
+      "negative": "#b51b37"
     }
   },
   "heatmap": {
@@ -4051,16 +4055,20 @@
   },
   "sparkline": {
     "mono": {
-      "default": "#19327a"
+      "default": "#19327a",
+      "reduced": "#19327a33"
+    },
+    "positive": {
+      "reduced": "#09b58133",
+      "default": "#09b581"
     },
     "negative": {
+      "reduced": "#e2224533",
       "default": "#e22245"
     },
     "neutral": {
+      "reduced": "#9faac633",
       "default": "#9faac6"
-    },
-    "positive": {
-      "default": "#09b581"
     },
     "trendline": {
       "default": "#dfe3ec"

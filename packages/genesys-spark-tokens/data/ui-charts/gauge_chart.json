@@ -13,6 +13,16 @@
         "value": "{charts.background.placeholder.default}",
         "type": "color"
       }
+    },
+    "indicator": {
+      "positive": {
+        "value": "{foreground.system.indicators.positive}",
+        "type": "color"
+      },
+      "negative": {
+        "value": "{foreground.system.indicators.negative}",
+        "type": "color"
+      }
     }
   }
 }
