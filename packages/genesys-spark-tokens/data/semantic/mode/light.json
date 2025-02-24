@@ -1451,7 +1451,7 @@
       "high_emphasis_inverse": {
         "value": "{theme.charts.foreground.10}",
         "type": "color",
-        "description":"Deprecated"
+        "description": "Deprecated"
       },
       "mid_emphasis": {
         "value": "{theme.charts.foreground.30}",
