@@ -1710,11 +1710,11 @@
       },
       "sparkline": {
         "mono": {
-          "value": "{theme.background.system.primary.40}",
+          "value": "{color.azure_blue.600}",
           "type": "color"
         },
         "monod": {
-          "value": "{theme.background.system.primary.40d}",
+          "value": "{color.azure_blue.400}",
           "type": "color"
         },
         "negative": {
@@ -1742,11 +1742,11 @@
           "type": "color"
         },
         "trendline": {
-          "value": "{color.genesys_navy.200}",
+          "value": "{color.haze.200}",
           "type": "color"
         },
         "trendlined": {
-          "value": "{color.genesys_navy.500}",
+          "value": "{color.haze.600}",
           "type": "color"
         }
       }
