@@ -76,7 +76,8 @@
       },
       "text_highlight": {
         "default": "#ffd173"
-      }
+      },
+      "transparent": "#fff0"
     },
     "system": {
       "error": {
@@ -247,6 +248,11 @@
       },
       "icon": {
         "default": "#2e394c"
+      },
+      "indicators": {
+        "positive": "#3c8527",
+        "negative": "#ea0b0b",
+        "neutral": "#4c5667"
       }
     },
     "form_control": {
@@ -371,43 +377,43 @@
     "categorical_data": {
       "category1": {
         "default": "#056385",
-        "shading": "#4d90a8"
+        "shading": "#82b1c2"
       },
       "category2": {
         "default": "#5798d9",
-        "shading": "#88b6e4"
+        "shading": "#abccec"
       },
       "category3": {
         "default": "#ac75ff",
-        "shading": "#c49dff"
+        "shading": "#d5baff"
       },
       "category4": {
         "default": "#89387b",
-        "shading": "#ab72a1"
+        "shading": "#c49bbd"
       },
       "category5": {
         "default": "#ff5c77",
-        "shading": "#ff8b9e"
+        "shading": "#ffadbb"
       },
       "category6": {
         "default": "#ffb5a3",
-        "shading": "#ffcabe"
+        "shading": "#ffdad1"
       },
       "category7": {
         "default": "#ffc650",
-        "shading": "#ffd783"
+        "shading": "#ffe3a7"
       },
       "category8": {
         "default": "#c6dd98",
-        "shading": "#d7e7b6"
+        "shading": "#e3eecc"
       },
       "category9": {
         "default": "#54c6ab",
-        "shading": "#86d7c3"
+        "shading": "#aae3d5"
       },
       "category10": {
         "default": "#263b73",
-        "shading": "#65749c"
+        "shading": "#939db9"
       },
       "subtle": {
         "default": "#cad1e1"
@@ -430,7 +436,9 @@
         "green": "#81cbe5",
         "red": "#ff9dad",
         "yellow": "#ffdd96"
-      }
+      },
+      "high_emphasis_inverse": "#ffffff",
+      "high_emphasis": "#2a2a2e"
     },
     "foreground": {
       "high_emphasis": "#2a2a2e",

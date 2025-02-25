@@ -533,16 +533,16 @@
         "10d": "#3e4044"
       },
       "sparkline": {
-        "mono": "#19327a",
-        "monod": "#2954cb",
-        "negative": "#e22245",
-        "negatived": "#881429",
-        "positive": "#09b581",
-        "positived": "#056d4d",
+        "mono": "#2143a2",
+        "monod": "#5476d5",
+        "negative": "#b51b37",
+        "negatived": "#e84e6a",
+        "positive": "#079167",
+        "positived": "#09b581",
         "neutral": "#9faac6",
-        "neutrald": "#152550",
-        "trendline": "#dfe3ec",
-        "trendlined": "#263b73"
+        "neutrald": "#808db2",
+        "trendline": "#cad1e1",
+        "trendlined": "#6a6d75"
       }
     }
   }

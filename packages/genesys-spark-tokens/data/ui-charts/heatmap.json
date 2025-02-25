@@ -253,11 +253,11 @@
     },
     "tile_label": {
       "default": {
-        "value": "{charts.foreground.high_emphasis}",
+        "value": "{charts.numerical_data.high_emphasis}",
         "type": "color"
       },
       "inverse": {
-        "value": "{charts.foreground.high_emphasis_inverse}",
+        "value": "{charts.numerical_data.high_emphasis_inverse}",
         "type": "color"
       }
     },

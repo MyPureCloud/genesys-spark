@@ -3430,44 +3430,44 @@
     },
     "shading": {
       "category1": {
-        "default": "#4d90a8",
-        "reduced": "#4d90a840"
+        "default": "#82b1c2",
+        "reduced": "#82b1c240"
       },
       "category10": {
-        "default": "#65749c",
-        "reduced": "#65749c40"
+        "default": "#939db9",
+        "reduced": "#939db940"
       },
       "category2": {
-        "default": "#88b6e4",
-        "reduced": "#88b6e440"
+        "default": "#abccec",
+        "reduced": "#abccec40"
       },
       "category3": {
-        "default": "#c49dff",
-        "reduced": "#c49dff40"
+        "default": "#d5baff",
+        "reduced": "#d5baff40"
       },
       "category4": {
-        "default": "#ab72a1",
-        "reduced": "#ab72a140"
+        "default": "#c49bbd",
+        "reduced": "#c49bbd40"
       },
       "category5": {
-        "default": "#ff8b9e",
-        "reduced": "#ff8b9e40"
+        "default": "#ffadbb",
+        "reduced": "#ffadbb40"
       },
       "category6": {
-        "default": "#ffcabe",
-        "reduced": "#ffcabe40"
+        "default": "#ffdad1",
+        "reduced": "#ffdad140"
       },
       "category7": {
-        "default": "#ffd783",
-        "reduced": "#ffd78340"
+        "default": "#ffe3a7",
+        "reduced": "#ffe3a740"
       },
       "category8": {
-        "default": "#d7e7b6",
-        "reduced": "#d7e7b640"
+        "default": "#e3eecc",
+        "reduced": "#e3eecc40"
       },
       "category9": {
-        "default": "#86d7c3",
-        "reduced": "#86d7c340"
+        "default": "#aae3d5",
+        "reduced": "#aae3d540"
       }
     }
   },
@@ -3654,6 +3654,10 @@
       "default": "#056385",
       "track": "#ebedf5",
       "chartMessage": "#ebedf5"
+    },
+    "indicator": {
+      "positive": "#079167",
+      "negative": "#b51b37"
     }
   },
   "heatmap": {
@@ -4051,19 +4055,23 @@
   },
   "sparkline": {
     "mono": {
-      "default": "#19327a"
-    },
-    "negative": {
-      "default": "#e22245"
-    },
-    "neutral": {
-      "default": "#9faac6"
+      "default": "#2143a2",
+      "reduced": "#2143a266"
     },
     "positive": {
-      "default": "#09b581"
+      "reduced": "#07916766",
+      "default": "#079167"
+    },
+    "negative": {
+      "reduced": "#b51b3766",
+      "default": "#b51b37"
+    },
+    "neutral": {
+      "reduced": "#9faac666",
+      "default": "#9faac6"
     },
     "trendline": {
-      "default": "#dfe3ec"
+      "default": "#cad1e1"
     }
   },
   "charts-shared": {

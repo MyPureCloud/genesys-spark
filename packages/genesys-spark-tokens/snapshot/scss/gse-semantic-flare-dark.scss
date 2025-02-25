@@ -45,6 +45,7 @@
   --gse-semantic-background-container-chatBubble-public: #3d300c;
   --gse-semantic-background-container-chatBubble-digitalConsultation: #282136;
   --gse-semantic-background-container-textHighlight-default: #664f20;
+  --gse-semantic-background-container-transparent: #2a2a2e00;
   --gse-semantic-background-system-error-tonalMedium: #440a15;
   --gse-semantic-background-system-error-tonalHigh: #881429;
   --gse-semantic-background-system-error-tonalSubtle: #2d070e;
@@ -142,6 +143,9 @@
   --gse-semantic-foreground-system-error-highEmphasis: #ffffff;
   --gse-semantic-foreground-system-error-accent: #e84e6a;
   --gse-semantic-foreground-system-icon-default: #b2b7c4;
+  --gse-semantic-foreground-system-indicators-positive: #09b581;
+  --gse-semantic-foreground-system-indicators-negative: #e84e6a;
+  --gse-semantic-foreground-system-indicators-neutral: #c1c6d4;
   --gse-semantic-foreground-formControl-helpText-default: #c1c6d4;
   --gse-semantic-foreground-formControl-helpText-error: #e84e6a;
   --gse-semantic-foreground-formControl-textInput-placeholder: #c1c6d4;
@@ -223,6 +227,8 @@
   --gse-semantic-charts-numericalData-multiColor-green: #53bee5;
   --gse-semantic-charts-numericalData-multiColor-red: #ff7d92;
   --gse-semantic-charts-numericalData-multiColor-yellow: #ffd173;
+  --gse-semantic-charts-numericalData-highEmphasis: #2a2a2e;
+  --gse-semantic-charts-numericalData-highEmphasisInverse: #ffffff;
   --gse-semantic-charts-foreground-highEmphasis: #ffffff;
   --gse-semantic-charts-foreground-highEmphasisInverse: #2a2a2e;
   --gse-semantic-charts-foreground-midEmphasis: #c1c6d4;
@@ -234,9 +240,9 @@
   --gse-semantic-charts-stroke-default: #1e1e21;
   --gse-semantic-charts-background-placeholder-default: #3e4044;
   --gse-semantic-charts-track-default: #3e4044;
-  --gse-semantic-charts-sparkline-mono: #2954cb;
-  --gse-semantic-charts-sparkline-negative: #881429;
-  --gse-semantic-charts-sparkline-positive: #056d4d;
-  --gse-semantic-charts-sparkline-neutral: #152550;
-  --gse-semantic-charts-sparkline-trendline: #263b73;
+  --gse-semantic-charts-sparkline-mono: #5476d5;
+  --gse-semantic-charts-sparkline-negative: #e84e6a;
+  --gse-semantic-charts-sparkline-positive: #09b581;
+  --gse-semantic-charts-sparkline-neutral: #808db2;
+  --gse-semantic-charts-sparkline-trendline: #6a6d75;
 }

@@ -258,6 +258,20 @@
           "type": "color",
           "description": "This is the default color for text highlights in bodies of text."
         }
+      },
+      "transparent": {
+        "value": "{background.container.page.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "A transparent color for general utility like fades"
       }
     },
     "system": {
@@ -807,6 +821,23 @@
           "value": "{theme.foreground.icon.10d}",
           "type": "color",
           "description": "The color for foreground content on progress_and_loading/default backgrounds."
+        }
+      },
+      "indicators": {
+        "positive": {
+          "value": "{foreground.system.success.accent}",
+          "type": "color",
+          "description": "We use this color for indicating a positive, like, a positive trend in a chart, a positive review, etc."
+        },
+        "negative": {
+          "value": "{foreground.system.error.accent}",
+          "type": "color",
+          "description": "We use this color for indicating a negative, like, a negative trend in a chart, a negative review, a reduction, etc."
+        },
+        "neutral": {
+          "value": "{foreground.container.low_emphasis}",
+          "type": "color",
+          "description": "We use this color for indicating a neutral trend, like, a neutral trend in a chart."
         }
       }
     },
@@ -1396,6 +1427,16 @@
           "value": "{theme.charts.numerical_data.multi_color.yellowd}",
           "type": "color"
         }
+      },
+      "high_emphasis": {
+        "value": "{theme.charts.foreground.40}",
+        "type": "color",
+        "description": "We use this color for the label's color on heatmaps tiles."
+      },
+      "high_emphasis_inverse": {
+        "value": "{theme.charts.foreground.10}",
+        "type": "color",
+        "description": "We use this color for labels that don't pass the contrast check with the default high_emphasis color on heatmaps tiles."
       }
     },
     "foreground": {
@@ -1405,7 +1446,8 @@
       },
       "high_emphasis_inverse": {
         "value": "{theme.charts.foreground.10d}",
-        "type": "color"
+        "type": "color",
+        "description": "Deprecated"
       },
       "mid_emphasis": {
         "value": "{theme.charts.foreground.30d}",
