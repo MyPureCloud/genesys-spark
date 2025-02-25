@@ -433,7 +433,7 @@
       },
       "panel_selected": {
         "background_color": {
-          "value": "{background.interactive.global_nav.desktop.option.active_selected}",
+          "value": "{background.interactive.global_nav.desktop.option.active_panel}",
           "type": "color"
         },
         "foreground_color": {
@@ -463,7 +463,7 @@
       },
       "active_selected": {
         "background_color": {
-          "value": "{background.interactive.global_nav.desktop.option.active_panel}",
+          "value": "{background.interactive.global_nav.desktop.option.active_selected}",
           "type": "color"
         },
         "foreground_color": {
