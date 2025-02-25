@@ -101,16 +101,15 @@ webappPipeline {
             sh('git fetch --tags')
         }
     }
+    prepareStep = {
+        sh('npm ci')
+    }
     ciTests = {
-        // Skip module install if it ran during the version check
-        if (!fileExists('node_modules')) {
-            sh('npm ci')
-        }
-        sh('npm run test.ci')
         sh('npm run build --workspace=packages/genesys-spark-tokens')
         sh('npm run build --workspace=packages/genesys-spark')
         sh('npm run stencil --workspace=packages/genesys-spark-components')
         sh('npm run lint')
+        sh('npm run test.ci')
     }
     buildStep = { assetPrefix ->
         // All of the useful stencil output lives under /genesys-webcomponents, so
