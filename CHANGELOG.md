@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.124.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.124.0...v4.124.1) (2025-02-25)
+
+
+### Bug Fixes
+
+* **flag-icon-beta:** improved components accessibility ([e108d1e](https://github.com/MyPureCloud/genesys-spark/commit/e108d1e3ab9d6dfb70447a495f1bcd12d2881499))
+* **tooltip:** add animation delay for when showing tooltip ([823423b](https://github.com/MyPureCloud/genesys-spark/commit/823423b474268ecc4fd00aedcd4b205ca9429647))
+
 ## [4.124.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.123.0...v4.124.0) (2025-02-22)
 
 
