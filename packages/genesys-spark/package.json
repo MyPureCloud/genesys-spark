@@ -11,10 +11,11 @@
   ],
   "scripts": {
     "prebuild": "npm run prebuild.clean",
-    "build": "npm run build.style-sheets && npm run build.rollup",
+    "build": "npm run build.style-sheets && npm run build.rollup && npm run build.token-files",
     "postbuild": "npm run postbuild.generate-component-data",
     "build.rollup": "rollup -c",
     "build.style-sheets": "./scripts/build-style-sheets.sh",
+    "build.token-files": "./scripts/build-token-files.mjs",
     "dev": "rollup -c --watch",
     "eslint": "eslint . --fix",
     "lint-all": "npm-run-all \"stylelint\" \"eslint\" \"prettier\" \"prettier-package-json\"",
