@@ -431,7 +431,7 @@
           "type": "color"
         }
       },
-      "selected": {
+      "panel_selected": {
         "background_color": {
           "value": "{background.interactive.global_nav.desktop.option.active_selected}",
           "type": "color"
@@ -461,9 +461,9 @@
         "value": "{opacity.disabled}",
         "type": "opacity"
       },
-      "selected_panel": {
+      "active_selected": {
         "background_color": {
-          "value": "{background.interactive.global_nav.desktop.option.hover}",
+          "value": "{background.interactive.global_nav.desktop.option.active_panel}",
           "type": "color"
         },
         "foreground_color": {
