@@ -1710,43 +1710,43 @@
       },
       "sparkline": {
         "mono": {
-          "value": "{theme.background.system.primary.40}",
+          "value": "{color.azure_blue.600}",
           "type": "color"
         },
         "monod": {
-          "value": "{theme.background.system.primary.40d}",
+          "value": "{color.azure_blue.400}",
           "type": "color"
         },
         "negative": {
-          "value": "{theme.background.system.error.30}",
+          "value": "{theme.foreground.system.error.10}",
           "type": "color"
         },
         "negatived": {
-          "value": "{theme.background.system.error.30d}",
+          "value": "{theme.foreground.system.error.10d}",
           "type": "color"
         },
         "positive": {
-          "value": "{theme.background.system.success.30}",
+          "value": "{theme.foreground.system.success.10}",
           "type": "color"
         },
         "positived": {
-          "value": "{theme.background.system.success.30d}",
+          "value": "{theme.foreground.system.success.10d}",
           "type": "color"
         },
         "neutral": {
-          "value": "{theme.background.system.info.20}",
+          "value": "{color.genesys_navy.300}",
           "type": "color"
         },
         "neutrald": {
-          "value": "{theme.background.system.info.20d}",
+          "value": "{color.genesys_navy.400}",
           "type": "color"
         },
         "trendline": {
-          "value": "{theme.background.system.info.10}",
+          "value": "{color.haze.200}",
           "type": "color"
         },
         "trendlined": {
-          "value": "{theme.background.system.info.10d}",
+          "value": "{color.haze.700}",
           "type": "color"
         }
       }

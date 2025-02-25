@@ -76,7 +76,8 @@
       },
       "text_highlight": {
         "default": "#664f20"
-      }
+      },
+      "transparent": "#2a2a2e00"
     },
     "system": {
       "error": {
@@ -247,6 +248,11 @@
       },
       "icon": {
         "default": "#b2b7c4"
+      },
+      "indicators": {
+        "positive": "#09b581",
+        "negative": "#e84e6a",
+        "neutral": "#c1c6d4"
       }
     },
     "form_control": {
@@ -429,7 +435,9 @@
         "green": "#53bee5",
         "red": "#ff7d92",
         "yellow": "#ffd173"
-      }
+      },
+      "high_emphasis": "#2a2a2e",
+      "high_emphasis_inverse": "#ffffff"
     },
     "foreground": {
       "high_emphasis": "#ffffff",
@@ -461,11 +469,11 @@
       "default": "#3e4044"
     },
     "sparkline": {
-      "mono": "#2954cb",
-      "negative": "#881429",
-      "positive": "#056d4d",
-      "neutral": "#152550",
-      "trendline": "#263b73"
+      "mono": "#5476d5",
+      "negative": "#e84e6a",
+      "positive": "#09b581",
+      "neutral": "#808db2",
+      "trendline": "#6a6d75"
     }
   }
 }
