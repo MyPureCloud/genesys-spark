@@ -7,7 +7,7 @@ import {
   findDayElement,
   findSelectedDayElement,
   validateFocusedDay
-} from '../services/tests.service';
+} from './tests.service';
 
 describe('gux-calendar', () => {
   const MIN_DATE = '2023-04-15';

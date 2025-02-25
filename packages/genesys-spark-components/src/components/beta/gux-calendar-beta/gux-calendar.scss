@@ -70,7 +70,7 @@
       block-size: var(--gse-ui-calendarMenu-day-range-width);
     }
   }
-  
+
   gux-focus-proxy[aria-current='true'] gux-day-beta,
   gux-focus-proxy[aria-current='true'] ::slotted(gux-day-beta) {
     //TODO: Pull a mixin style from gux-day-beta instead of duplicating

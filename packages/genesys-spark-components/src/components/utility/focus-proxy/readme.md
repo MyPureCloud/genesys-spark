@@ -25,7 +25,7 @@ slotted button from tab order unless the current item is flagged as focused.
 
 ### Used by
 
- - [gux-calendar-beta](../../beta/gux-calendar-beta/components/single)
+ - [gux-calendar-beta](../../beta/gux-calendar-beta)
 
 ### Graph
 ```mermaid

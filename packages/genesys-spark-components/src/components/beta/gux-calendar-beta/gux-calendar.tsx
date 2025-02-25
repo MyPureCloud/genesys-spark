@@ -1,18 +1,18 @@
 import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
-import { IWeekElement, GuxCalendarDayOfWeek } from '../../gux-calendar.types';
+import { IWeekElement, GuxCalendarDayOfWeek } from './gux-calendar.types';
 import {
   getWeekdays,
   getFirstOfMonth,
   localizedYearMonth,
   firstDateInWeek
-} from '../../services/calendar.service';
+} from './services/calendar.service';
 import {
   getDesiredLocale,
   getFirstDayOfWeek,
   buildI18nForComponent,
   GetI18nValue
-} from '../../../../../i18n';
-import translationResources from '../../i18n/en.json';
+} from '../../../i18n';
+import translationResources from './i18n/en.json';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { logError } from '@utils/error/log-error';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';

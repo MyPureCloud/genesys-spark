@@ -1,5 +1,5 @@
 import { newSpecPage } from '@test/specTestUtils';
-import { GuxCalendar } from '../components/single/gux-calendar';
+import { GuxCalendar } from '../gux-calendar';
 
 const components = [GuxCalendar];
 const language = 'en';

@@ -29,7 +29,7 @@ should not be used stand-alone.
 
 ### Used by
 
- - [gux-calendar-beta](../gux-calendar-beta/components/single)
+ - [gux-calendar-beta](../gux-calendar-beta)
 
 ### Graph
 ```mermaid
