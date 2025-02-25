@@ -30,6 +30,7 @@
     "list-component-tracking": "./scripts/list-component-tracking.js",
     "list-i18n-files": "./scripts/list-i18n-files.js",
     "list-light-dom-components": "./scripts/list-light-dom-components.js",
+    "list-missing-translations": "./scripts/list-missing-translations.js",
     "list-shadow-explicitly-set": "./scripts/list-shadow-explicitly-set.js",
     "predev.public": "npm run predev",
     "prepare": "npm run i18n",
