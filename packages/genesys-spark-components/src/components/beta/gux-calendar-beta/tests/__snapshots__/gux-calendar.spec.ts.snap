@@ -16,168 +16,254 @@ exports[`gux-calendar renders 1`] = `
           <gux-icon decorative="" icon-name="custom/chevron-right-small-regular" size="small"></gux-icon>
         </button>
       </div>
-      <div class="gux-content">
-        <div class="gux-week-days">
-          <div class="gux-week-day">
-            S
+      <div>
+        <div class="gux-content">
+          <div class="gux-week-days">
+            <div class="gux-week-day">
+              S
+            </div>
+            <div class="gux-week-day">
+              M
+            </div>
+            <div class="gux-week-day">
+              T
+            </div>
+            <div class="gux-week-day">
+              W
+            </div>
+            <div class="gux-week-day">
+              T
+            </div>
+            <div class="gux-week-day">
+              F
+            </div>
+            <div class="gux-week-day">
+              S
+            </div>
           </div>
-          <div class="gux-week-day">
-            M
-          </div>
-          <div class="gux-week-day">
-            T
-          </div>
-          <div class="gux-week-day">
-            W
-          </div>
-          <div class="gux-week-day">
-            T
-          </div>
-          <div class="gux-week-day">
-            F
-          </div>
-          <div class="gux-week-day">
-            S
-          </div>
-        </div>
-        <div>
-          <div class="gux-content-week">
-            <slot name="2023-04-30">
-              <gux-day aria-current="false" aria-disabled="false" class="gux-muted" day="2023-04-30" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-01">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-01" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-02">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-02" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-03">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-03" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-04">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-04" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-05">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-05" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-06">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-06" tabindex="-1"></gux-day>
-            </slot>
-          </div>
-          <div class="gux-content-week">
-            <slot name="2023-05-07">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-07" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-08">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-08" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-09">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-09" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-10">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-10" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-11">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-11" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-12">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-12" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-13">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-13" tabindex="-1"></gux-day>
-            </slot>
-          </div>
-          <div class="gux-content-week">
-            <slot name="2023-05-14">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-14" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-15">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-15" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-16">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-16" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-17">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-17" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-18">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-18" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-19">
-              <gux-day aria-current="true" aria-disabled="false" day="2023-05-19" tabindex="0"></gux-day>
-            </slot>
-            <slot name="2023-05-20">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-20" tabindex="-1"></gux-day>
-            </slot>
-          </div>
-          <div class="gux-content-week">
-            <slot name="2023-05-21">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-21" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-22">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-22" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-23">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-23" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-24">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-24" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-25">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-25" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-26">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-26" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-27">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-27" tabindex="-1"></gux-day>
-            </slot>
-          </div>
-          <div class="gux-content-week">
-            <slot name="2023-05-28">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-28" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-29">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-29" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-30">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-30" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-05-31">
-              <gux-day aria-current="false" aria-disabled="false" day="2023-05-31" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-06-01">
-              <gux-day aria-current="false" aria-disabled="false" class="gux-muted" day="2023-06-01" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-06-02">
-              <gux-day aria-current="false" aria-disabled="false" class="gux-muted" day="2023-06-02" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-06-03">
-              <gux-day aria-current="false" aria-disabled="false" class="gux-muted" day="2023-06-03" tabindex="-1"></gux-day>
-            </slot>
-          </div>
-          <div class="gux-content-week">
-            <slot name="2023-06-04">
-              <gux-day aria-current="false" aria-disabled="false" class="gux-muted" day="2023-06-04" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-06-05">
-              <gux-day aria-current="false" aria-disabled="false" class="gux-muted" day="2023-06-05" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-06-06">
-              <gux-day aria-current="false" aria-disabled="false" class="gux-muted" day="2023-06-06" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-06-07">
-              <gux-day aria-current="false" aria-disabled="false" class="gux-muted" day="2023-06-07" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-06-08">
-              <gux-day aria-current="false" aria-disabled="false" class="gux-muted" day="2023-06-08" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-06-09">
-              <gux-day aria-current="false" aria-disabled="false" class="gux-muted" day="2023-06-09" tabindex="-1"></gux-day>
-            </slot>
-            <slot name="2023-06-10">
-              <gux-day aria-current="false" aria-disabled="false" class="gux-muted" day="2023-06-10" tabindex="-1"></gux-day>
-            </slot>
+          <div>
+            <div class="gux-content-week">
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-04-30">
+                  <gux-day-beta class="gux-muted" day="2023-04-30"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-01">
+                  <gux-day-beta day="2023-05-01"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-02">
+                  <gux-day-beta day="2023-05-02"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-03">
+                  <gux-day-beta day="2023-05-03"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-04">
+                  <gux-day-beta day="2023-05-04"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-05">
+                  <gux-day-beta day="2023-05-05"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-06">
+                  <gux-day-beta day="2023-05-06"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+            </div>
+            <div class="gux-content-week">
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-07">
+                  <gux-day-beta day="2023-05-07"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-08">
+                  <gux-day-beta day="2023-05-08"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-09">
+                  <gux-day-beta day="2023-05-09"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-10">
+                  <gux-day-beta day="2023-05-10"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-11">
+                  <gux-day-beta day="2023-05-11"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-12">
+                  <gux-day-beta day="2023-05-12"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-13">
+                  <gux-day-beta day="2023-05-13"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+            </div>
+            <div class="gux-content-week">
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-14">
+                  <gux-day-beta day="2023-05-14"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-15">
+                  <gux-day-beta day="2023-05-15"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-16">
+                  <gux-day-beta day="2023-05-16"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-17">
+                  <gux-day-beta day="2023-05-17"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-18">
+                  <gux-day-beta day="2023-05-18"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="true" aria-disabled="false" tabindex="0">
+                <slot name="2023-05-19">
+                  <gux-day-beta day="2023-05-19"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-20">
+                  <gux-day-beta day="2023-05-20"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+            </div>
+            <div class="gux-content-week">
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-21">
+                  <gux-day-beta day="2023-05-21"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-22">
+                  <gux-day-beta day="2023-05-22"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-23">
+                  <gux-day-beta day="2023-05-23"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-24">
+                  <gux-day-beta day="2023-05-24"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-25">
+                  <gux-day-beta day="2023-05-25"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-26">
+                  <gux-day-beta day="2023-05-26"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-27">
+                  <gux-day-beta day="2023-05-27"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+            </div>
+            <div class="gux-content-week">
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-28">
+                  <gux-day-beta day="2023-05-28"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-29">
+                  <gux-day-beta day="2023-05-29"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-30">
+                  <gux-day-beta day="2023-05-30"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-05-31">
+                  <gux-day-beta day="2023-05-31"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-06-01">
+                  <gux-day-beta class="gux-muted" day="2023-06-01"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-06-02">
+                  <gux-day-beta class="gux-muted" day="2023-06-02"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-06-03">
+                  <gux-day-beta class="gux-muted" day="2023-06-03"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+            </div>
+            <div class="gux-content-week">
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-06-04">
+                  <gux-day-beta class="gux-muted" day="2023-06-04"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-06-05">
+                  <gux-day-beta class="gux-muted" day="2023-06-05"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-06-06">
+                  <gux-day-beta class="gux-muted" day="2023-06-06"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-06-07">
+                  <gux-day-beta class="gux-muted" day="2023-06-07"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-06-08">
+                  <gux-day-beta class="gux-muted" day="2023-06-08"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-06-09">
+                  <gux-day-beta class="gux-muted" day="2023-06-09"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+              <gux-focus-proxy aria-current="false" aria-disabled="false" tabindex="-1">
+                <slot name="2023-06-10">
+                  <gux-day-beta class="gux-muted" day="2023-06-10"></gux-day-beta>
+                </slot>
+              </gux-focus-proxy>
+            </div>
           </div>
         </div>
       </div>

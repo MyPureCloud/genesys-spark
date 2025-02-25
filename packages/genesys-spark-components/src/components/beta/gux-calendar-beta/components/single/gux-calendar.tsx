@@ -18,7 +18,6 @@ import { logError } from '@utils/error/log-error';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { Temporal } from '@js-temporal/polyfill';
 
-const DAY_INTERVAL = Temporal.Duration.from({ days: 1 });
 @Component({
   styleUrl: 'gux-calendar.scss',
   tag: 'gux-calendar-beta',
@@ -222,13 +221,13 @@ export class GuxCalendar {
       currentWeek.dates.push({
         date: Temporal.PlainDate.from(currentDate),
         disabled,
-        inCurrentMonth: currentMonth === currentDate.month && !disabled,
+        inCurrentMonth: currentMonth === currentDate.month,
         selected: selected,
         focused,
         isCurrentDate: currentDate.equals(today)
       });
       weekDayIndex += 1;
-      currentDate = currentDate.add(DAY_INTERVAL);
+      currentDate = currentDate.add({ days: 1 });
     }
 
     return weeks;

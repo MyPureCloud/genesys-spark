@@ -63,14 +63,18 @@ export class GuxDay {
     this.readDateFromProp();
     const locale = getDesiredLocale(this.root);
     this.dayFormatter = sparkIntl.dateTimeFormat(locale, { day: 'numeric' });
-    this.readerFormatter = sparkIntl.dateTimeFormat(locale);
+    this.readerFormatter = sparkIntl.dateTimeFormat(locale, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
   }
 
   render(): JSX.Element {
     return (
       <button onClick={() => this.daySelected.emit(this.day)} type="button">
         <slot>
-          <span class="gux-non-sr">
+          <span aria-hidden="true">
             {formatPlainDate(this.dayFormatter, this.date)}
           </span>
           <span class="gux-sr-only">

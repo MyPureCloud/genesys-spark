@@ -1,21 +1,12 @@
+import { Temporal } from '@js-temporal/polyfill';
 import { E2EElement, E2EPage } from '@stencil/core/testing';
-import { asIsoDate } from '@utils/date/iso-dates';
 
 export async function validateSelectedDate(
   element: E2EElement,
-  expectedMonthAndYear: string,
-  expectedDay: string
+  expectedDate: string
 ) {
-  const currentMonthAndYear = await element.find(
-    'pierce/.gux-header-month-and-year'
-  );
-  const selectedDate = await element.find(
-    'pierce/gux-day[aria-current="true"]'
-  );
-  expect(currentMonthAndYear.innerHTML).toBe(expectedMonthAndYear);
-  expect(selectedDate.shadowRoot).toEqualText(
-    `<button type="button"><slot>${expectedDay}</slot></button>`
-  );
+  const selectedDayElement = await findSelectedDayElement(element);
+  await validateDate(selectedDayElement, expectedDate);
 }
 
 export async function validateHeaderMonth(
@@ -28,19 +19,29 @@ export async function validateHeaderMonth(
   expect(currentMonthAndYear.innerHTML).toBe(expectedMonthAndYear);
 }
 
-export async function getSelectedDateElement(
-  calendarElement: E2EElement
+export async function findSelectedDayElement(
+  element: E2EElement
 ): Promise<E2EElement> {
-  return calendarElement.find('pierce/[aria-current="true"]');
+  const selectedFocusProxy = await element.find(
+    'pierce/gux-focus-proxy[aria-current="true"]'
+  );
+  return selectedFocusProxy.find('gux-day-beta');
 }
 
-export async function getContentDateElement(
+export async function validateFocusedDay(
   element: E2EElement,
-  dateAsMonthDayYear: string
+  expectedDate: string
+): Promise<void> {
+  const focusedElement = await element.find('pierce/:focus');
+  await validateDate(focusedElement, expectedDate);
+}
+
+export async function findDayElement(
+  element: E2EElement,
+  isoDate: string
 ): Promise<E2EElement> {
-  const dateStr = asIsoDate(new Date(dateAsMonthDayYear));
-  console.log('Finding: ');
-  return await element.find(`pierce/slot[name="${dateStr}"] gux-day`);
+  console.log(`Finding day element for: ${isoDate}`);
+  return await element.find(`pierce/slot[name="${isoDate}"] gux-day-beta`);
 }
 
 export async function goToPreviousMonth(
@@ -59,4 +60,16 @@ export async function goToNextMonth(
   const button = await element.find('pierce/.gux-right');
   await button.click();
   return await page.waitForChanges();
+}
+
+async function validateDate(
+  element: E2EElement,
+  expectedDate: string
+): Promise<void> {
+  const expectedLabel = Temporal.PlainDate.from(expectedDate).toLocaleString(
+    'en-US',
+    { day: 'numeric', month: 'long', year: 'numeric' }
+  );
+  const labelElement = await element.find('pierce/.gux-sr-only');
+  expect(labelElement.textContent).toBe(expectedLabel);
 }
