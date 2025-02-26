@@ -1,0 +1,90 @@
+{
+  "sparkline": {
+    "mono": {
+      "default": {
+        "value": "{charts.sparkline.mono}",
+        "type": "color"
+      },
+      "reduced": {
+        "value": "{sparkline.mono.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.4",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "We use the reduce color for the top part of the sparkline fade."
+      }
+    },
+    "positive": {
+      "reduced": {
+        "value": "{sparkline.positive.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.4",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "We use the reduce color for the top part of the sparkline fade."
+      },
+      "default": {
+        "value": "{charts.sparkline.positive}",
+        "type": "color"
+      }
+    },
+    "negative": {
+      "reduced": {
+        "value": "{sparkline.negative.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.4",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "We use the reduce color for the top part of the sparkline fade."
+      },
+      "default": {
+        "value": "{charts.sparkline.negative}",
+        "type": "color"
+      }
+    },
+    "neutral": {
+      "reduced": {
+        "value": "{sparkline.neutral.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0.4",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "We use the reduce color for the top part of the sparkline fade."
+      },
+      "default": {
+        "value": "{charts.sparkline.neutral}",
+        "type": "color"
+      }
+    },
+    "trendline": {
+      "default": {
+        "value": "{charts.sparkline.trendline}",
+        "type": "color"
+      }
+    }
+  }
+}

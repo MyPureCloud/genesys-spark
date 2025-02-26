@@ -24,10 +24,12 @@ import translationResources from './i18n/en.json';
 
 import {
   getSearchOption,
-  setInitialActiveOption
+  setInitialActiveOption,
+  getOptionDefaultSlot
 } from '../gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 /**
  * @slot - for a gux-listbox-multi containing gux-option-multi children
  */
@@ -219,7 +221,9 @@ export class GuxDropdownMulti {
   @Listen('internallistboxoptionsupdated')
   onInternallistboxoptionsupdated(event: CustomEvent): void {
     event.stopPropagation();
-    forceUpdate(this.root);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => forceUpdate(this.root));
+    });
   }
 
   /**
@@ -229,7 +233,7 @@ export class GuxDropdownMulti {
   onClearselected(event: CustomEvent): void {
     event.stopPropagation();
 
-    this.updateValue('');
+    this.updateValue(undefined);
     if (this.listboxElement) {
       this.listboxElement.value = undefined;
     }
@@ -347,16 +351,14 @@ export class GuxDropdownMulti {
   }
 
   private getOptionElementByValue(value: string): HTMLGuxOptionElement[] {
-    const listboxOptionElements = Array.from(
+    const listboxOptionElements: HTMLGuxOptionElement[] = Array.from(
       this.root.querySelectorAll('gux-option-multi')
     );
-    const values = value ? value.split(',') : undefined;
-    if (values) {
-      return listboxOptionElements.filter(element =>
-        values.includes(element.value)
-      );
-    }
-    return;
+    const values = value ? value.split(',') : [];
+
+    return listboxOptionElements.filter(element =>
+      values.includes(element.value)
+    );
   }
 
   private fieldButtonClick(): void {
@@ -458,9 +460,8 @@ export class GuxDropdownMulti {
     if (textInputLength > 0 && !this.loading) {
       const option = getSearchOption(this.listboxElement, textInput);
       if (option && this.filterType !== 'custom') {
-        const optionSlotTextContent = option.querySelector(
-          '[gux-slot-container]'
-        )?.textContent;
+        const optionSlotTextContent =
+          getOptionDefaultSlot(option)?.textContent.trim();
         return optionSlotTextContent?.substring(textInputLength);
       }
 
@@ -471,17 +472,38 @@ export class GuxDropdownMulti {
   private renderTargetDisplay(): JSX.Element {
     return (
       <div class="gux-placeholder">
-        {this.placeholder || this.i18n('noSelection')}
         {this.getSrSelectedText()}
+        {this.getSelectedOptionText() ||
+          this.placeholder ||
+          this.i18n('noSelection')}
       </div>
     ) as JSX.Element;
+  }
+
+  private getSelectedOptionText(): JSX.Element | false {
+    const selectedElementString = this.getSelectedOptionValueString();
+
+    return selectedElementString
+      ? ([
+          selectedElementString,
+          <div class="gux-sr-only">{this.placeholder}</div>
+        ] as JSX.Element)
+      : false;
+  }
+
+  private getSelectedOptionValueString(): string {
+    return this.getOptionElementByValue(this.value)
+      .map(option => {
+        return getOptionDefaultSlot(option)?.textContent.trim();
+      })
+      .join(', ');
   }
 
   private getSrSelectedText(): JSX.Element {
     const selectedListboxOptionElement = this.getOptionElementByValue(
       this.value
     );
-    if (selectedListboxOptionElement?.length) {
+    if (selectedListboxOptionElement.length) {
       return (
         <span class="gux-sr-only">
           {this.i18n('numberSelected', {
@@ -525,7 +547,11 @@ export class GuxDropdownMulti {
               <div class="input-and-dropdown-button">
                 <input
                   onClick={this.fieldButtonInputClick.bind(this)}
-                  placeholder={this.placeholder || this.i18n('noSelection')}
+                  placeholder={
+                    this.getSelectedOptionValueString() ||
+                    this.placeholder ||
+                    this.i18n('noSelection')
+                  }
                   class="gux-filter-input"
                   type="text"
                   aria-label={this.getInputAriaLabel()}
@@ -543,9 +569,11 @@ export class GuxDropdownMulti {
     }
   }
 
+  private uniquePopupID = randomHTMLId('gux-popup');
+
   private renderPopup(): JSX.Element {
     return (
-      <div slot="popup" class="gux-listbox-container">
+      <div slot="popup" id={this.uniquePopupID} class="gux-listbox-container">
         <slot />
       </div>
     ) as JSX.Element;
@@ -566,14 +594,16 @@ export class GuxDropdownMulti {
         slot="target"
       >
         {this.renderFilterInputField()}
-        <button
-          type="button"
-          class="gux-field gux-field-button"
-          disabled={this.disabled}
+        <div
+          class="gux-field gux-field-combobox"
+          role="combobox"
+          aria-disabled={this.disabled}
           onClick={this.fieldButtonClick.bind(this)}
           ref={el => (this.fieldButtonElement = el)}
           aria-haspopup="listbox"
           aria-expanded={this.expanded.toString()}
+          aria-controls={this.uniquePopupID}
+          tabIndex={this.disabled ? -1 : 0}
         >
           {this.renderTargetContent()}
           {this.renderTag()}
@@ -586,7 +616,7 @@ export class GuxDropdownMulti {
             screenreader-text={this.i18n('dropdown')}
             iconName="custom/chevron-down-small-regular"
           ></gux-icon>
-        </button>
+        </div>
       </div>
     ) as JSX.Element;
   }

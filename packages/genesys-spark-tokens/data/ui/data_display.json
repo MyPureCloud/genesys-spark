@@ -371,6 +371,68 @@
           "type": "spacing"
         }
       }
+    },
+    "inline_dropdown": {
+      "gap": {
+        "value": "{interactive.xl.gap}",
+        "type": "spacing"
+      },
+      "text": {
+        "value": "{foreground.form_control.label.default}",
+        "type": "color"
+      },
+      "hover": {
+        "value": "{background.interactive.secondary.hover}",
+        "type": "color"
+      },
+      "active": {
+        "value": "{background.interactive.secondary.active}",
+        "type": "color"
+      },
+      "border_radius": {
+        "value": "{interactive.sm.border_radius}",
+        "type": "borderRadius"
+      },
+      "label": {
+        "value": "{body.sm.regular}",
+        "type": "typography"
+      },
+      "chevron": {
+        "hover": {
+          "value": "{foreground.interactive.ghost.hover}",
+          "type": "color"
+        },
+        "active": {
+          "value": "{foreground.interactive.ghost.active}",
+          "type": "color"
+        },
+        "default": {
+          "value": "{icon.color}",
+          "type": "color"
+        }
+      }
+    },
+    "status_indicator": {
+      "gap": {
+        "value": "{interactive.lg.gap}",
+        "type": "spacing"
+      },
+      "hover": {
+        "value": "{background.interactive.secondary.active}",
+        "type": "color"
+      },
+      "border_radius": {
+        "value": "{interactive.sm.border_radius}",
+        "type": "borderRadius"
+      },
+      "label": {
+        "value": "{body.sm.regular}",
+        "type": "typography"
+      },
+      "text": {
+        "value": "{foreground.form_control.label.default}",
+        "type": "color"
+      }
     }
   },
   "data_table": {

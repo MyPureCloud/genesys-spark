@@ -27,8 +27,6 @@
 
   gux-icon {
     flex: 0 0 auto;
-    inline-size: var(--gse-ui-rating-size);
-    block-size: var(--gse-ui-rating-size);
     color: var(--gse-ui-rating-default-color);
 
     &:hover:not(.gux-disabled) {

@@ -25,12 +25,16 @@
 
 - [gux-avatar-overflow-beta](gux-avatar-overflow)
 - [gux-avatar-overflow-item-beta](./gux-avatar-overflow/gux-avatar-overflow-item)
+- [gux-avatar-group-add-item-beta](gux-avatar-group-add-item)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-avatar-group-beta --> gux-avatar-overflow-beta
   gux-avatar-group-beta --> gux-avatar-overflow-item-beta
+  gux-avatar-group-beta --> gux-avatar-group-add-item-beta
+  gux-avatar-group-add-item-beta --> gux-tooltip-beta
+  gux-tooltip-beta --> gux-tooltip-base-beta
   style gux-avatar-group-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

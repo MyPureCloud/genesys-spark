@@ -224,6 +224,54 @@
           "type": "color",
           "description": "The background color for the active state of a surface that needs to pop up in pages with a lot of content, like tooltips on dashboards."
         }
+      },
+      "chat_bubble": {
+        "agent": {
+          "value": "{theme.background.custom_accents.chat_bubble.10d}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from the agent."
+        },
+        "costumer": {
+          "value": "{theme.background.custom_accents.chat_bubble.20d}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from a costumer."
+        },
+        "bot": {
+          "value": "{theme.background.custom_accents.chat_bubble.30d}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from a bot."
+        },
+        "public": {
+          "value": "{theme.background.custom_accents.chat_bubble.40d}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that are sent to a public channel."
+        },
+        "digital_consultation": {
+          "value": "{theme.background.custom_accents.chat_bubble.50d}",
+          "type": "color",
+          "description": "This color is used as the background color of chat bubbles that come from a digital consultation."
+        }
+      },
+      "text_highlight": {
+        "default": {
+          "value": "{theme.background.custom_accents.color_swatch.40d}",
+          "type": "color",
+          "description": "This is the default color for text highlights in bodies of text."
+        }
+      },
+      "transparent": {
+        "value": "{background.container.page.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "A transparent color for general utility like fades"
       }
     },
     "system": {
@@ -774,6 +822,23 @@
           "type": "color",
           "description": "The color for foreground content on progress_and_loading/default backgrounds."
         }
+      },
+      "indicators": {
+        "positive": {
+          "value": "{foreground.system.success.accent}",
+          "type": "color",
+          "description": "We use this color for indicating a positive, like, a positive trend in a chart, a positive review, etc."
+        },
+        "negative": {
+          "value": "{foreground.system.error.accent}",
+          "type": "color",
+          "description": "We use this color for indicating a negative, like, a negative trend in a chart, a negative review, a reduction, etc."
+        },
+        "neutral": {
+          "value": "{foreground.container.low_emphasis}",
+          "type": "color",
+          "description": "We use this color for indicating a neutral trend, like, a neutral trend in a chart."
+        }
       }
     },
     "form_control": {
@@ -1083,6 +1148,383 @@
             "space": "srgb"
           }
         }
+      }
+    }
+  },
+  "charts": {
+    "categorical_data": {
+      "category1": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category1d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category1.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category2": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category2d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category2.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category3": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category3d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category3.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category4": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category4d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category4.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category5": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category5d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category5.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category6": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category6d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category6.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category7": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category7d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category7.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category8": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category8d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category8.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category9": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category9d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category9.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "category10": {
+        "default": {
+          "value": "{theme.charts.categorical_data.category10d}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        },
+        "shading": {
+          "value": "{charts.categorical_data.category10.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": "0.29",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        }
+      },
+      "subtle": {
+        "default": {
+          "value": "{theme.charts.categorical_data.subtled}",
+          "type": "color",
+          "description": "We use this color to identify a specific category in charts."
+        }
+      }
+    },
+    "numerical_data": {
+      "single_color": {
+        "level1": {
+          "value": "{theme.charts.numerical_data.single_color.level1d}",
+          "type": "color"
+        },
+        "level2": {
+          "value": "{theme.charts.numerical_data.single_color.level2d}",
+          "type": "color"
+        },
+        "level3": {
+          "value": "{theme.charts.numerical_data.single_color.level3d}",
+          "type": "color"
+        },
+        "level4": {
+          "value": "{theme.charts.numerical_data.single_color.level4d}",
+          "type": "color"
+        },
+        "level5": {
+          "value": "{theme.charts.numerical_data.single_color.level5d}",
+          "type": "color"
+        },
+        "level6": {
+          "value": "{theme.charts.numerical_data.single_color.level6d}",
+          "type": "color"
+        },
+        "level7": {
+          "value": "{theme.charts.numerical_data.single_color.level7d}",
+          "type": "color"
+        },
+        "level8": {
+          "value": "{theme.charts.numerical_data.single_color.level8d}",
+          "type": "color"
+        },
+        "level9": {
+          "value": "{theme.charts.numerical_data.single_color.level9d}",
+          "type": "color"
+        },
+        "level10": {
+          "value": "{theme.charts.numerical_data.single_color.level10d}",
+          "type": "color"
+        }
+      },
+      "multi_color": {
+        "green": {
+          "value": "{theme.charts.numerical_data.multi_color.greend}",
+          "type": "color"
+        },
+        "red": {
+          "value": "{theme.charts.numerical_data.multi_color.redd}",
+          "type": "color"
+        },
+        "yellow": {
+          "value": "{theme.charts.numerical_data.multi_color.yellowd}",
+          "type": "color"
+        }
+      },
+      "high_emphasis": {
+        "value": "{theme.charts.foreground.40}",
+        "type": "color",
+        "description": "We use this color for the label's color on heatmaps tiles."
+      },
+      "high_emphasis_inverse": {
+        "value": "{theme.charts.foreground.10}",
+        "type": "color",
+        "description": "We use this color for labels that don't pass the contrast check with the default high_emphasis color on heatmaps tiles."
+      }
+    },
+    "foreground": {
+      "high_emphasis": {
+        "value": "{theme.charts.foreground.40d}",
+        "type": "color"
+      },
+      "high_emphasis_inverse": {
+        "value": "{theme.charts.foreground.10d}",
+        "type": "color",
+        "description": "Deprecated"
+      },
+      "mid_emphasis": {
+        "value": "{theme.charts.foreground.30d}",
+        "type": "color"
+      }
+    },
+    "border": {
+      "axis": {
+        "value": "{theme.charts.border.30d}",
+        "type": "color",
+        "description": "Our default color for chart's axis."
+      },
+      "grid": {
+        "default": {
+          "value": "{theme.charts.border.10d}",
+          "type": "color",
+          "description": "The color for chart's grids on the default state."
+        },
+        "hover": {
+          "value": "{theme.charts.border.20d}",
+          "type": "color",
+          "description": "The color for chart's grids on the hover state."
+        }
+      }
+    },
+    "target_line": {
+      "default": {
+        "value": "{theme.charts.target_line.10d}",
+        "type": "color"
+      }
+    },
+    "point_fill": {
+      "default": {
+        "value": "{theme.charts.fill.10d}",
+        "type": "color"
+      }
+    },
+    "stroke": {
+      "default": {
+        "value": "{theme.charts.fill.10d}",
+        "type": "color"
+      }
+    },
+    "background": {
+      "placeholder": {
+        "default": {
+          "value": "{theme.charts.background.10d}",
+          "type": "color"
+        }
+      }
+    },
+    "track": {
+      "default": {
+        "value": "{theme.charts.background.10d}",
+        "type": "color"
+      }
+    },
+    "sparkline": {
+      "mono": {
+        "value": "{theme.charts.sparkline.monod}",
+        "type": "color"
+      },
+      "negative": {
+        "value": "{theme.charts.sparkline.negatived}",
+        "type": "color"
+      },
+      "positive": {
+        "value": "{theme.charts.sparkline.positived}",
+        "type": "color"
+      },
+      "neutral": {
+        "value": "{theme.charts.sparkline.neutrald}",
+        "type": "color"
+      },
+      "trendline": {
+        "value": "{theme.charts.sparkline.trendlined}",
+        "type": "color"
       }
     }
   }

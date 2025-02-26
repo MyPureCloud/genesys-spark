@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-tab should render 1`] = `
+GuxTab {
+  "buttonElement": <button aria-controls="gux-undefined-panel" aria-selected="false" class="gux-tab" id="gux-undefined-tab" role="tab" tabindex="-1" type="button">
+  <gux-tooltip-title>
+    <span></span>
+  </gux-tooltip-title>
+</button>,
+  "internalactivatetabpanel": {
+    "emit": [Function],
+  },
+  "tooltipTitleElement": <gux-tooltip-title>
+    <span></span>
+  </gux-tooltip-title>,
+}
+`;
+
+exports[`gux-tab should render disabled 1`] = `
+GuxTab {
+  "buttonElement": <button aria-controls="gux-undefined-panel" aria-selected="false" class="gux-disabled gux-tab" disabled="" id="gux-undefined-tab" role="tab" type="button">
+  <gux-tooltip-title>
+    <span></span>
+  </gux-tooltip-title>
+</button>,
+  "internalactivatetabpanel": {
+    "emit": [Function],
+  },
+  "tooltipTitleElement": <gux-tooltip-title>
+    <span></span>
+  </gux-tooltip-title>,
+}
+`;

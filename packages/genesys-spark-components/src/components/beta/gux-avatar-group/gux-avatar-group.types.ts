@@ -1,3 +1,4 @@
 export type GuxAvatarGroupChild =
   | HTMLGuxAvatarGroupItemBetaElement
-  | HTMLGuxAvatarOverflowBetaElement;
+  | HTMLGuxAvatarOverflowBetaElement
+  | HTMLGuxAvatarGroupAddItemBetaElement;

@@ -1,4 +1,13 @@
-import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  JSX,
+  Listen,
+  Prop,
+  State,
+  Watch
+} from '@stencil/core';
 
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
@@ -8,6 +17,7 @@ import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import { trackComponent } from '@utils/tracking/usage';
 
 import translationResources from './i18n/en.json';
+import { logError } from '../../../utils/error/log-error';
 
 import {
   GuxClockType,
@@ -40,6 +50,7 @@ export class GuxTimePicker {
   private clockButton: HTMLButtonElement;
   private hourInputElement: HTMLInputElement;
   private minuteInputElement: HTMLInputElement;
+  private amPmElement: HTMLButtonElement;
   private i18n: GetI18nValue;
   private valueLastChange: GuxISOHourMinute;
 
@@ -109,9 +120,28 @@ export class GuxTimePicker {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.clockType = this.clockType || getLocaleClockType(this.root);
 
+    this.validateValueFormat(this.value, '00:00');
     if (this.clockType == '12h' && (this.min || this.max)) {
-      console.error('clock type must be "24h" when using min/max props');
+      logError(this.root, 'clock type must be "24h" when using min/max props');
     }
+  }
+
+  @Watch('value')
+  private validateValueFormat(
+    newValue: GuxISOHourMinute,
+    oldValue: GuxISOHourMinute
+  ) {
+    if (!this.isValidTimeFormat(newValue)) {
+      logError(
+        this.root,
+        `"${newValue}" is not a valid value format. Format must be "hh:mm" or "h:mm". Falling back to previous value: "${oldValue}"`
+      );
+      this.value = oldValue;
+    }
+  }
+
+  private isValidTimeFormat(value: GuxISOHourMinute) {
+    return typeof value === 'string' && /^\d{1,2}:\d{2}$/.test(value);
   }
 
   private updateValue(
@@ -131,7 +161,7 @@ export class GuxTimePicker {
     }
   }
 
-  private valueToId(value: string): string {
+  private valueToId(value: GuxISOHourMinute): string {
     return `gux-id-${value.replace(':', '-')}`;
   }
 
@@ -146,6 +176,24 @@ export class GuxTimePicker {
 
     if (this.expanded) {
       this.focusRelevantItemInPopupList();
+    }
+  }
+
+  private onTargetClick(event: MouseEvent): void {
+    const clickPath = event.composedPath();
+    const clickedClockButton = clickPath.includes(this.clockButton);
+    const clickedAmPmButton = clickPath.includes(this.amPmElement);
+    const clickedHourInput = clickPath.includes(this.hourInputElement);
+    const clickedMinuteInput = clickPath.includes(this.minuteInputElement);
+
+    // Toggle the dropdown if you click in the padded area of the target container
+    if (
+      !clickedClockButton &&
+      !clickedAmPmButton &&
+      !clickedMinuteInput &&
+      !clickedHourInput
+    ) {
+      this.toggleDropdown();
     }
   }
 
@@ -311,6 +359,7 @@ export class GuxTimePicker {
           aria-label={this.i18n('toggleAmPM', { amOrPm: this.getAmPmString() })}
           onClick={(e: MouseEvent) => this.toggleAmPm(e)}
           onKeyDown={(e: KeyboardEvent) => this.onAmPmButtonKeyDown(e)}
+          ref={el => (this.amPmElement = el)}
         >
           <div
             class={{
@@ -347,7 +396,11 @@ export class GuxTimePicker {
         onClick={this.toggleDropdown.bind(this)}
         ref={el => (this.clockButton = el)}
       >
-        <gux-icon decorative icon-name="fa/clock-regular"></gux-icon>
+        <gux-icon
+          decorative
+          icon-name="fa/clock-regular"
+          size="small"
+        ></gux-icon>
       </button>
     ) as JSX.Element;
   }
@@ -374,7 +427,11 @@ export class GuxTimePicker {
 
   private renderTarget(): JSX.Element {
     return (
-      <div class="gux-input-time" slot="target">
+      <div
+        class="gux-input-time"
+        slot="target"
+        onClick={this.onTargetClick.bind(this)}
+      >
         {this.renderNumberInput()}
         {this.renderAmPmSelector()}
         {this.renderClockButton()}

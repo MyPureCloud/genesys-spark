@@ -132,7 +132,11 @@ export class GuxTableToolbarMenuButton {
                 aria-haspopup="true"
                 aria-expanded={this.expanded.toString()}
               >
-                <gux-icon icon-name="fa/ellipsis-regular" decorative></gux-icon>
+                <gux-icon
+                  icon-name="fa/ellipsis-regular"
+                  size="small"
+                  decorative
+                ></gux-icon>
                 {this.renderTooltip()}
               </button>
             </gux-button-slot>

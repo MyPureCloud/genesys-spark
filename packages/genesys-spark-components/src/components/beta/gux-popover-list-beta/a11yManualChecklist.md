@@ -1,8 +1,9 @@
 # gux-popover-list-beta manual accessibility testing status
 
-**Last Updated:** 2025-01-02T10:05:48.364Z
+**Last Updated:** 2025-02-18T20:07:38.227Z
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
+| ✅ | [1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) | - |
 | ✅ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) | - |
 | ✅ | [2.1.2 No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) | - |
 | ✅ | [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) | - |

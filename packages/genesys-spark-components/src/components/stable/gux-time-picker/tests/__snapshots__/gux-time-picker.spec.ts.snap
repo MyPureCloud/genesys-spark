@@ -13,7 +13,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -110,7 +110,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -207,7 +207,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -304,7 +304,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -409,7 +409,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           </div>
         </button>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -470,7 +470,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -567,7 +567,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -664,7 +664,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -761,7 +761,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -858,7 +858,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -955,7 +955,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -1052,7 +1052,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -1149,7 +1149,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -1246,7 +1246,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -1343,7 +1343,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -1440,7 +1440,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -1537,7 +1537,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -1634,7 +1634,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -1731,7 +1731,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -1828,7 +1828,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -1925,7 +1925,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -2022,7 +2022,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -2119,7 +2119,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -2216,7 +2216,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -2313,7 +2313,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -2410,7 +2410,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -2515,7 +2515,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           </div>
         </button>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -2576,7 +2576,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -2673,7 +2673,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -2770,7 +2770,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -2875,7 +2875,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           </div>
         </button>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -2936,7 +2936,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -3033,7 +3033,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -3130,7 +3130,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -3227,7 +3227,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -3324,7 +3324,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -3421,7 +3421,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -3518,7 +3518,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -3615,7 +3615,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -3720,7 +3720,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           </div>
         </button>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -3781,7 +3781,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -3878,7 +3878,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -3975,7 +3975,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -4072,7 +4072,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -4169,7 +4169,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -4266,7 +4266,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -4363,7 +4363,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -4460,7 +4460,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -4557,7 +4557,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -4654,7 +4654,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -4751,7 +4751,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">
@@ -4856,7 +4856,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           </div>
         </button>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
       </div>
       <div class="gux-list-container" slot="popup">

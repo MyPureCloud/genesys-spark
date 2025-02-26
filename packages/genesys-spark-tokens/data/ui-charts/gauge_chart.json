@@ -1,0 +1,28 @@
+{
+  "gauge_chart": {
+    "segment": {
+      "default": {
+        "value": "{charts.categorical_data.category1.default}",
+        "type": "color"
+      },
+      "track": {
+        "value": "{charts.track.default}",
+        "type": "color"
+      },
+      "chartMessage": {
+        "value": "{charts.background.placeholder.default}",
+        "type": "color"
+      }
+    },
+    "indicator": {
+      "positive": {
+        "value": "{foreground.system.indicators.positive}",
+        "type": "color"
+      },
+      "negative": {
+        "value": "{foreground.system.indicators.negative}",
+        "type": "color"
+      }
+    }
+  }
+}

@@ -631,7 +631,7 @@
             "type": "color"
           },
           "70d": {
-            "value": "{color.plum.1000}",
+            "value": "{color.plum.950}",
             "type": "color"
           },
           "80d": {
@@ -792,6 +792,48 @@
           },
           "70d": {
             "value": "{color.genesys_orange.500}",
+            "type": "color"
+          }
+        },
+        "chat_bubble": {
+          "10": {
+            "value": "{color.haze.50}",
+            "type": "color"
+          },
+          "20": {
+            "value": "{color.island.50}",
+            "type": "color"
+          },
+          "30": {
+            "value": "{color.genesys_orange.50}",
+            "type": "color"
+          },
+          "40": {
+            "value": "{color.mango.100}",
+            "type": "color"
+          },
+          "50": {
+            "value": "{color.plum.100}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.haze.1000}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.island.950}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.genesys_orange.950}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.honey.900}",
+            "type": "color"
+          },
+          "50d": {
+            "value": "{color.plum.1000}",
             "type": "color"
           }
         }
@@ -1372,6 +1414,340 @@
         "2xl": {
           "value": "{border_radius.lg}",
           "type": "borderRadius"
+        }
+      }
+    },
+    "charts": {
+      "categorical_data": {
+        "category1": {
+          "value": "{color.island.700}",
+          "type": "color"
+        },
+        "category1d": {
+          "value": "{color.island.400}",
+          "type": "color"
+        },
+        "category2": {
+          "value": "{color.mineral.600}",
+          "type": "color"
+        },
+        "category2d": {
+          "value": "{color.mineral.700}",
+          "type": "color"
+        },
+        "category3": {
+          "value": "{color.plum.600}",
+          "type": "color"
+        },
+        "category3d": {
+          "value": "{color.plum.600}",
+          "type": "color"
+        },
+        "category4": {
+          "value": "{color.raspberry.800}",
+          "type": "color"
+        },
+        "category4d": {
+          "value": "{color.raspberry.600}",
+          "type": "color"
+        },
+        "category5": {
+          "value": "{color.coral.600}",
+          "type": "color"
+        },
+        "category5d": {
+          "value": "{color.coral.600}",
+          "type": "color"
+        },
+        "category6": {
+          "value": "{color.genesys_orange.200}",
+          "type": "color"
+        },
+        "category6d": {
+          "value": "{color.genesys_orange.600}",
+          "type": "color"
+        },
+        "category7": {
+          "value": "{color.mango.600}",
+          "type": "color"
+        },
+        "category7d": {
+          "value": "{color.mango.600}",
+          "type": "color"
+        },
+        "category8": {
+          "value": "{color.pear.400}",
+          "type": "color"
+        },
+        "category8d": {
+          "value": "{color.pear.600}",
+          "type": "color"
+        },
+        "category9": {
+          "value": "{color.jade.600}",
+          "type": "color"
+        },
+        "category9d": {
+          "value": "{color.jade.600}",
+          "type": "color"
+        },
+        "category10": {
+          "value": "{color.genesys_navy.700}",
+          "type": "color"
+        },
+        "category10d": {
+          "value": "{color.genesys_navy.600}",
+          "type": "color"
+        },
+        "subtle": {
+          "value": "{color.haze.200}",
+          "type": "color"
+        },
+        "subtled": {
+          "value": "{color.haze.600}",
+          "type": "color"
+        }
+      },
+      "numerical_data": {
+        "single_color": {
+          "level1": {
+            "value": "{color.island.100}",
+            "type": "color"
+          },
+          "level1d": {
+            "value": "{color.island.50}",
+            "type": "color"
+          },
+          "level2": {
+            "value": "{color.island.200}",
+            "type": "color"
+          },
+          "level2d": {
+            "value": "{color.island.100}",
+            "type": "color"
+          },
+          "level3": {
+            "value": "{color.island.300}",
+            "type": "color"
+          },
+          "level3d": {
+            "value": "{color.island.200}",
+            "type": "color"
+          },
+          "level4": {
+            "value": "{color.island.400}",
+            "type": "color"
+          },
+          "level4d": {
+            "value": "{color.island.300}",
+            "type": "color"
+          },
+          "level5": {
+            "value": "{color.island.500}",
+            "type": "color"
+          },
+          "level5d": {
+            "value": "{color.island.400}",
+            "type": "color"
+          },
+          "level6": {
+            "value": "{color.island.600}",
+            "type": "color"
+          },
+          "level6d": {
+            "value": "{color.island.500}",
+            "type": "color"
+          },
+          "level7": {
+            "value": "{color.island.700}",
+            "type": "color"
+          },
+          "level7d": {
+            "value": "{color.island.600}",
+            "type": "color"
+          },
+          "level8": {
+            "value": "{color.island.800}",
+            "type": "color"
+          },
+          "level8d": {
+            "value": "{color.island.700}",
+            "type": "color"
+          },
+          "level9": {
+            "value": "{color.island.950}",
+            "type": "color"
+          },
+          "level9d": {
+            "value": "{color.island.800}",
+            "type": "color"
+          },
+          "level10": {
+            "value": "{color.island.1000}",
+            "type": "color"
+          },
+          "level10d": {
+            "value": "{color.island.900}",
+            "type": "color"
+          }
+        },
+        "multi_color": {
+          "green": {
+            "value": "{color.island.300}",
+            "type": "color"
+          },
+          "greend": {
+            "value": "{color.island.400}",
+            "type": "color"
+          },
+          "red": {
+            "value": "{color.coral.400}",
+            "type": "color"
+          },
+          "redd": {
+            "value": "{color.coral.500}",
+            "type": "color"
+          },
+          "yellow": {
+            "value": "{color.mango.400}",
+            "type": "color"
+          },
+          "yellowd": {
+            "value": "{color.mango.500}",
+            "type": "color"
+          }
+        }
+      },
+      "foreground": {
+        "10": {
+          "value": "{color.white}",
+          "type": "color"
+        },
+        "20": {
+          "value": "{color.haze.700}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color.haze.800}",
+          "type": "color"
+        },
+        "40": {
+          "value": "{color.haze.900}",
+          "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.900}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.haze.300}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.haze.300}",
+          "type": "color"
+        },
+        "40d": {
+          "value": "{color.white}",
+          "type": "color"
+        }
+      },
+      "border": {
+        "10": {
+          "value": "{color.haze.100}",
+          "type": "color"
+        },
+        "20": {
+          "value": "{color.haze.300}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color.haze.400}",
+          "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.850}",
+          "type": "color"
+        },
+        "20d": {
+          "value": "{color.haze.600}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.haze.500}",
+          "type": "color"
+        }
+      },
+      "target_line": {
+        "10": {
+          "value": "{color.genesys_orange.300}",
+          "type": "color"
+        },
+        "10d": {
+          "value": "{color.genesys_orange.300}",
+          "type": "color"
+        }
+      },
+      "fill": {
+        "10": {
+          "value": "{color.white}",
+          "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.950}",
+          "type": "color"
+        }
+      },
+      "background": {
+        "10": {
+          "value": "{color.haze.100}",
+          "type": "color"
+        },
+        "10d": {
+          "value": "{color.haze.850}",
+          "type": "color"
+        }
+      },
+      "sparkline": {
+        "mono": {
+          "value": "{color.azure_blue.600}",
+          "type": "color"
+        },
+        "monod": {
+          "value": "{color.azure_blue.400}",
+          "type": "color"
+        },
+        "negative": {
+          "value": "{theme.foreground.system.error.10}",
+          "type": "color"
+        },
+        "negatived": {
+          "value": "{theme.foreground.system.error.10d}",
+          "type": "color"
+        },
+        "positive": {
+          "value": "{theme.foreground.system.success.10}",
+          "type": "color"
+        },
+        "positived": {
+          "value": "{theme.foreground.system.success.10d}",
+          "type": "color"
+        },
+        "neutral": {
+          "value": "{color.genesys_navy.300}",
+          "type": "color"
+        },
+        "neutrald": {
+          "value": "{color.genesys_navy.400}",
+          "type": "color"
+        },
+        "trendline": {
+          "value": "{color.haze.200}",
+          "type": "color"
+        },
+        "trendlined": {
+          "value": "{color.haze.700}",
+          "type": "color"
         }
       }
     }

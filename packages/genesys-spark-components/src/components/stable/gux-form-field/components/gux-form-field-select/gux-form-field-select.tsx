@@ -159,6 +159,7 @@ export class GuxFormFieldSelect {
               <gux-icon
                 icon-name="custom/chevron-down-small-regular"
                 decorative
+                size="small"
               ></gux-icon>
             </div>
           </div>

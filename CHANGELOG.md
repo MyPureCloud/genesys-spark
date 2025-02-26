@@ -2,6 +2,124 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.125.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.124.1...v4.125.0) (2025-02-26)
+
+
+### Features
+
+* **tokens:** Updated spark data tokens ([fd0d07d](https://github.com/MyPureCloud/genesys-spark/commit/fd0d07df0c9911b8a7333210fcbe82aeeb690a93))
+
+
+### Bug Fixes
+
+* **blank-state:** hide guidance when not provided ([#933](https://github.com/MyPureCloud/genesys-spark/issues/933)) ([f1f7517](https://github.com/MyPureCloud/genesys-spark/commit/f1f75170428e6eb74d34a4e7ecb2aa608ab15254))
+* **side-panel-beta:** remove flex display from content ([66e18c7](https://github.com/MyPureCloud/genesys-spark/commit/66e18c7c8823348fab05051f7168b01ce47d7f4b))
+
+### [4.124.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.124.0...v4.124.1) (2025-02-25)
+
+
+### Bug Fixes
+
+* **flag-icon-beta:** improved components accessibility ([e108d1e](https://github.com/MyPureCloud/genesys-spark/commit/e108d1e3ab9d6dfb70447a495f1bcd12d2881499))
+* **tooltip:** add animation delay for when showing tooltip ([823423b](https://github.com/MyPureCloud/genesys-spark/commit/823423b474268ecc4fd00aedcd4b205ca9429647))
+
+## [4.124.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.123.0...v4.124.0) (2025-02-22)
+
+
+### Features
+
+* **token:** removed deprecated sets ([1307a32](https://github.com/MyPureCloud/genesys-spark/commit/1307a32e2708388c2373daa2e30553753ae206d4))
+
+
+### Bug Fixes
+
+* **modal:** fixed backgroud color token ([14de7f1](https://github.com/MyPureCloud/genesys-spark/commit/14de7f197b312a7469eca48c132970498e966b3c))
+
+## [4.123.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.122.0...v4.123.0) (2025-02-21)
+
+
+### Features
+
+* **rich-text-editor:** addition of responsive design ([dd85bab](https://github.com/MyPureCloud/genesys-spark/commit/dd85bab518d2e0db37f6feca9d60569eb89c768d))
+
+## [4.122.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.121.0...v4.122.0) (2025-02-20)
+
+
+### Features
+
+* **avatar-group-beta:** add to group ([#874](https://github.com/MyPureCloud/genesys-spark/issues/874)) ([080d871](https://github.com/MyPureCloud/genesys-spark/commit/080d87164cfe7c29ba7a1fe2eaf2aeb1d07714ca))
+
+## [4.121.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.120.0...v4.121.0) (2025-02-19)
+
+
+### Features
+
+* **tokens:** modified calendar header text ([5391bb2](https://github.com/MyPureCloud/genesys-spark/commit/5391bb21fada48e54f1171840e6274ed4706a86b))
+
+## [4.120.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.119.1...v4.120.0) (2025-02-18)
+
+
+### Features
+
+* **dropdown-multi:** accessibility improbvement ([7162304](https://github.com/MyPureCloud/genesys-spark/commit/7162304c8209369c92860ee54227d4b66ad5506d))
+* **tabs:** disabled tab is not focusable ([42a525a](https://github.com/MyPureCloud/genesys-spark/commit/42a525a1aa7b7e30fdc5c8d0b4afaf8c9a01396b))
+* **tokens:** added spark data ui tokens ([83e74c7](https://github.com/MyPureCloud/genesys-spark/commit/83e74c7c112df55d19a1b5b83b1ad448275dd338))
+
+
+### Bug Fixes
+
+* **option-multi:** truncate long text ([#895](https://github.com/MyPureCloud/genesys-spark/issues/895)) ([6d2d8c2](https://github.com/MyPureCloud/genesys-spark/commit/6d2d8c2e0b9ca5c1bb0d14d293b1b0806127d03b))
+
+### [4.119.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.119.0...v4.119.1) (2025-02-15)
+
+## [4.119.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.118.0...v4.119.0) (2025-02-14)
+
+
+### Features
+
+* **tokens:** created tokens for chat bubbles ([6261393](https://github.com/MyPureCloud/genesys-spark/commit/6261393b95f9fe2e54bea27876f52f93a82462f5))
+* **tokens:** generated CSS vars ([c1d09c5](https://github.com/MyPureCloud/genesys-spark/commit/c1d09c5dc38846a593b86fbed0e9461dbebb0216))
+* **tokens:** Updated chat bubble tokens values ([2811f43](https://github.com/MyPureCloud/genesys-spark/commit/2811f43438a52afe5f9e53d6759ecd1bc430fdaa))
+
+
+### Bug Fixes
+
+* **icon:** added img role to svg ([b9ca988](https://github.com/MyPureCloud/genesys-spark/commit/b9ca9884067449346004b351011bac34c8209eae))
+* **tooltip:** improved accessibility ([c42ab86](https://github.com/MyPureCloud/genesys-spark/commit/c42ab8641755845aa128780d4529eec36bbdf80d))
+
+## [4.118.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.117.1...v4.118.0) (2025-02-13)
+
+
+### Features
+
+* **tokens:** Added chart subgroups ([e543498](https://github.com/MyPureCloud/genesys-spark/commit/e5434984da3f5204cd3942e0143c2d97ab796501))
+* **tokens:** Added charts' grid and axis tokens ([0343305](https://github.com/MyPureCloud/genesys-spark/commit/03433055c72a448ce0285c31feef2cc83a3f158b))
+* **tokens:** added missing semantic tokens ([af0186d](https://github.com/MyPureCloud/genesys-spark/commit/af0186dd21d16defdada72c6ade906a61b056551))
+* **tokens:** Generated CSS vars ([d05ac35](https://github.com/MyPureCloud/genesys-spark/commit/d05ac35f0537771440ad55cc73c43a20c9229ba3))
+* **tokens:** Generated spark's data semantic Figma vars ([6d75b5b](https://github.com/MyPureCloud/genesys-spark/commit/6d75b5bf91a5f6c295ab7e5d441826bd91c206b8))
+
+
+### Bug Fixes
+
+* **dismiss-button:** fixed small size css ([be79bbd](https://github.com/MyPureCloud/genesys-spark/commit/be79bbd2e1473d6473d2b870e58042ce0248e731))
+* **dropdown-multi:** typeahead text not showing ([b71c2b1](https://github.com/MyPureCloud/genesys-spark/commit/b71c2b18b327c1f733f59b9a4da9818f55b02b89))
+
+### [4.117.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.117.0...v4.117.1) (2025-02-12)
+
+## [4.117.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.116.0...v4.117.0) (2025-02-11)
+
+
+### Features
+
+* **flyout-menu:** Add role to light dom for menuitem ([#875](https://github.com/MyPureCloud/genesys-spark/issues/875)) ([43ca0ba](https://github.com/MyPureCloud/genesys-spark/commit/43ca0ba0be3607517337a100760e59ee3fc1d360))
+
+
+### Bug Fixes
+
+* **button-multi:** Fixed keyboard accessibility ([1565b48](https://github.com/MyPureCloud/genesys-spark/commit/1565b4801f8b665df4f0037e2cdd28b69b0d4288))
+* **datepicker:** add background color to datepicker ([81a824a](https://github.com/MyPureCloud/genesys-spark/commit/81a824ac5f8d3b77e5a65f2e6ccfdda5b7d877d1))
+* **time-picker:** handle invalid values ([a76c1bc](https://github.com/MyPureCloud/genesys-spark/commit/a76c1bcd1018ccbe08f7e5b140a2d01529f799f3))
+
 ## [4.116.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.115.1...v4.116.0) (2025-02-08)
 
 

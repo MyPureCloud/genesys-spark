@@ -1,0 +1,39 @@
+@use '../../../../stable/gux-list/list-item-default.scss';
+
+@include list-item-default.gux-list-item-default;
+
+::slotted(*) {
+  margin: 0;
+}
+
+button {
+  &.gux-sub-list-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  gux-icon {
+    align-self: center;
+    color: var(--gse-ui-menu-option-parentIcon-selected-foregroundColor);
+  }
+}
+
+.gux-sub-list-wrapper {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  flex-direction: column;
+  inline-size: 130px; // Token Required;
+  padding: var(--gse-ui-menu-padding);
+  margin: 0;
+  visibility: hidden;
+  background-color: var(--gse-ui-menu-backgroundColor);
+  border: none;
+  border-radius: var(--gse-ui-menu-borderRadius);
+  box-shadow: var(--gse-ui-menu-boxShadow);
+
+  &.gux-shown {
+    visibility: visible;
+  }
+}

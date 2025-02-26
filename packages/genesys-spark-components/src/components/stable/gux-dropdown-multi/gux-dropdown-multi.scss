@@ -11,7 +11,7 @@
 }
 
 .gux-error {
-  &.gux-target-container-collapsed .gux-field-button,
+  &.gux-target-container-collapsed .gux-field-combobox,
   &.gux-target-container-expanded {
     border: var(--gse-ui-formControl-input-error-border-width)
       var(--gse-ui-formControl-input-error-border-style)
@@ -20,7 +20,7 @@
 }
 
 .gux-disabled {
-  &.gux-target-container-collapsed .gux-field-button,
+  &.gux-target-container-collapsed .gux-field-combobox,
   &.gux-target-container-expanded {
     user-select: none;
     border: var(--gse-ui-formControl-input-disabled-border-width)
@@ -53,7 +53,7 @@
   padding: var(--gse-ui-formControl-input-padding);
 }
 
-.gux-target-container-collapsed .gux-field-button:hover,
+.gux-target-container-collapsed .gux-field-combobox:hover,
 .gux-target-container-expanded:hover {
   border: var(--gse-ui-formControl-input-hover-border-width)
     var(--gse-ui-formControl-input-hover-border-style)
@@ -101,6 +101,10 @@
         inline-size: 100%;
         color: transparent;
         caret-color: var(--gse-ui-formControl-input-populatedColor);
+
+        &:placeholder-shown {
+          text-overflow: ellipsis;
+        }
       }
 
       .gux-filter-display {
@@ -159,7 +163,7 @@
     }
   }
 
-  .gux-field-button {
+  .gux-field-combobox {
     inline-size: auto;
     block-size: var(--gse-ui-formControl-input-contentText-lineHeight);
     margin: 0;
@@ -174,7 +178,7 @@
   }
 }
 
-.gux-target-container-collapsed .gux-field-button {
+.gux-target-container-collapsed .gux-field-combobox {
   border: var(--gse-ui-formControl-input-default-border-width)
     var(--gse-ui-formControl-input-default-border-style)
     var(--gse-ui-formControl-input-default-border-color);

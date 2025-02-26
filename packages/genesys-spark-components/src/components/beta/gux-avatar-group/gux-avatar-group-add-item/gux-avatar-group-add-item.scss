@@ -1,0 +1,33 @@
+@use '~genesys-spark/dist/scss/focus.scss';
+
+button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--gse-ui-avatar-small-content-size);
+  block-size: var(--gse-ui-avatar-small-content-size);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: var(--gse-ui-avatar-small-initials-fontFamily);
+  font-size: var(--gse-ui-avatar-small-initials-fontSize);
+  font-weight: var(--gse-ui-avatar-small-initials-fontWeight);
+  line-height: var(--gse-ui-avatar-small-initials-lineHeight);
+  color: var(--gse-ui-avatar-media-initialsForeground-add);
+  cursor: pointer;
+  background: none;
+  background-color: var(--gse-ui-avatar-media-initialsBackground-add);
+  border: none;
+  border-radius: 50%;
+
+  &:focus-visible,
+  &:hover {
+    position: relative;
+    z-index: var(--gse-semantic-zIndex-showFocus);
+  }
+
+  &:focus-visible {
+    @include focus.gux-focus-ring;
+  }
+}

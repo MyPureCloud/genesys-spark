@@ -6,11 +6,13 @@
 
 gux-button-slot {
   button {
-    display: flex;
-    flex-direction: row;
-    gap: 4px; // Token Required : COMUI-3190
-    align-items: center;
-    justify-content: center;
+    .gux-target-display {
+      display: flex;
+      flex-direction: row;
+      gap: 4px; // Token Required : COMUI-3190
+      align-items: center;
+      justify-content: center;
+    }
 
     &.gux-is-pressed {
       color: var(--gse-ui-button-ghost-active-foregroundColor);

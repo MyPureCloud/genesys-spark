@@ -1,0 +1,63 @@
+{
+  "bar_chart": {
+    "bar": {
+      "category1": {
+        "default": {
+          "value": "{charts.categorical_data.category1.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category1.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "category2": {
+        "default": {
+          "value": "{charts.categorical_data.category2.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category2.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      },
+      "category3": {
+        "default": {
+          "value": "{charts.categorical_data.category3.default}",
+          "type": "color"
+        },
+        "reduced": {
+          "value": "{charts.categorical_data.category3.default}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "lch"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

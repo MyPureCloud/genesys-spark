@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.116.0",
+  "version": "4.125.0",
   "description": "Common webcomponents",
   "license": "MIT",
   "scripts": {
@@ -42,6 +42,7 @@
     "prettier.root": "prettier --log-level silent --ignore-unknown --write .",
     "prettier.workspaces": "npm run prettier --workspaces --if-present",
     "release": "standard-version",
+    "snapshot": "npm run snapshot --workspaces --if-present",
     "start": "run-pty start.json",
     "test": "npm run test --workspaces --if-present",
     "test.ci": "npm run test.ci --workspaces --if-present",
@@ -62,18 +63,18 @@
     "./web-apps/*"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "commitizen": "^4.3.1",
     "cross-replace": "^0.2.0",
-    "eslint": "^9.17.0",
+    "eslint": "^9.20.1",
     "eslint-config-genesys-spark-components": "^0.0.1",
     "git-cz": "^4.9.0",
-    "globals": "^15.14.0",
+    "globals": "^15.15.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.3.0",
+    "lint-staged": "^15.4.3",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.1",
     "prettier-config-genesys-spark-components": "^0.0.1",
     "run-pty": "^5.0.0",
     "standard-version": "^9.5.0"

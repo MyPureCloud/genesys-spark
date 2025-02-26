@@ -4,7 +4,14 @@ import {
   a11yCheck
 } from '../../../../../../test/e2eTestUtils';
 
-const axeExclusions = [];
+const axeExclusions = [
+  {
+    issueId: 'aria-input-field-name',
+    target: 'gux-dropdown-multi,.gux-field',
+    exclusionReason:
+      'COMUI-3507 Location of combobox role might be incorrect or else a label has to be added at the current location'
+  }
+];
 
 async function newNonrandomE2EPage({
   html
