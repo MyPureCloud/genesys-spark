@@ -368,6 +368,7 @@ $gse-semantic-background-container-page-tonalHigh: var(--gse-semantic-background
 $gse-semantic-background-container-page-tonalMedium: var(--gse-semantic-background-container-page-tonalMedium);
 $gse-semantic-background-container-page-tonalSubtle: var(--gse-semantic-background-container-page-tonalSubtle);
 $gse-semantic-background-container-textHighlight-default: var(--gse-semantic-background-container-textHighlight-default);
+$gse-semantic-background-container-transparent: var(--gse-semantic-background-container-transparent);
 $gse-semantic-background-formControl-clickInput-track: var(--gse-semantic-background-formControl-clickInput-track);
 $gse-semantic-background-formControl-search-matchingText-firstLevel: var(--gse-semantic-background-formControl-search-matchingText-firstLevel);
 $gse-semantic-background-formControl-search-matchingText-subsequentLevel: var(--gse-semantic-background-formControl-search-matchingText-subsequentLevel);
@@ -607,6 +608,8 @@ $gse-semantic-charts-categoricalData-subtle-default: var(--gse-semantic-charts-c
 $gse-semantic-charts-foreground-highEmphasis: var(--gse-semantic-charts-foreground-highEmphasis);
 $gse-semantic-charts-foreground-highEmphasisInverse: var(--gse-semantic-charts-foreground-highEmphasisInverse);
 $gse-semantic-charts-foreground-midEmphasis: var(--gse-semantic-charts-foreground-midEmphasis);
+$gse-semantic-charts-numericalData-highEmphasis: var(--gse-semantic-charts-numericalData-highEmphasis);
+$gse-semantic-charts-numericalData-highEmphasisInverse: var(--gse-semantic-charts-numericalData-highEmphasisInverse);
 $gse-semantic-charts-numericalData-multiColor-green: var(--gse-semantic-charts-numericalData-multiColor-green);
 $gse-semantic-charts-numericalData-multiColor-red: var(--gse-semantic-charts-numericalData-multiColor-red);
 $gse-semantic-charts-numericalData-multiColor-yellow: var(--gse-semantic-charts-numericalData-multiColor-yellow);
@@ -736,6 +739,9 @@ $gse-semantic-foreground-system-customAccents-light: var(--gse-semantic-foregrou
 $gse-semantic-foreground-system-error-accent: var(--gse-semantic-foreground-system-error-accent);
 $gse-semantic-foreground-system-error-highEmphasis: var(--gse-semantic-foreground-system-error-highEmphasis);
 $gse-semantic-foreground-system-icon-default: var(--gse-semantic-foreground-system-icon-default);
+$gse-semantic-foreground-system-indicators-negative: var(--gse-semantic-foreground-system-indicators-negative);
+$gse-semantic-foreground-system-indicators-neutral: var(--gse-semantic-foreground-system-indicators-neutral);
+$gse-semantic-foreground-system-indicators-positive: var(--gse-semantic-foreground-system-indicators-positive);
 $gse-semantic-foreground-system-info-accent: var(--gse-semantic-foreground-system-info-accent);
 $gse-semantic-foreground-system-info-highEmphasis: var(--gse-semantic-foreground-system-info-highEmphasis);
 $gse-semantic-foreground-system-progressAndLoading-default: var(--gse-semantic-foreground-system-progressAndLoading-default);
