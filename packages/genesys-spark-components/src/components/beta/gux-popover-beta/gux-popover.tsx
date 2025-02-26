@@ -86,6 +86,7 @@ export class GuxPopover {
   @Watch('for')
   private updateForElement(): void {
     this.forElement = this.getForElement();
+    this.forElement.setAttribute('aria-haspopup', 'true');
   }
 
   @Listen('keydown')
@@ -149,7 +150,11 @@ export class GuxPopover {
   private focusPopup(): void {
     const autofocusElement: HTMLElement =
       this.root.querySelector('[autoFocus]');
-    autofocusElement?.focus();
+    if (autofocusElement) {
+      autofocusElement?.focus();
+    } else {
+      this.popupElement.focus();
+    }
   }
 
   private runUpdatePosition(): void {
@@ -260,26 +265,38 @@ export class GuxPopover {
     }
   }
 
+  disconnect: () => void = undefined;
+
+  onKeydown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Enter':
+      case ' ':
+        this.popupElement.togglePopover();
+        this.isOpen = !this.isOpen;
+        this.runUpdatePosition();
+        this.focusPopup();
+        break;
+    }
+  }
+
+  onMouseup(): void {
+    this.popupElement.togglePopover();
+    this.isOpen = !this.isOpen;
+    this.runUpdatePosition();
+  }
+
   connectedCallback(): void {
     this.updateForElement();
     trackComponent(this.root, { variant: this.position });
-    this.forElement.addEventListener('keydown', (event: KeyboardEvent) => {
-      switch (event.key) {
-        case 'Enter':
-        case ' ':
-          this.popupElement.togglePopover();
-          this.isOpen = !this.isOpen;
-          this.runUpdatePosition();
-          this.focusPopup();
-          break;
-      }
-    });
+    const keydownHandler = this.onKeydown.bind(this);
+    this.forElement.addEventListener('keydown', keydownHandler);
+    const mouseupHandler = this.onMouseup.bind(this);
+    this.forElement.addEventListener('mouseup', mouseupHandler);
 
-    this.forElement.addEventListener('mouseup', () => {
-      this.popupElement.togglePopover();
-      this.isOpen = !this.isOpen;
-      this.runUpdatePosition();
-    });
+    this.disconnect = () => {
+      this.forElement.removeEventListener('keydown', keydownHandler);
+      this.forElement.removeEventListener('mouseup', mouseupHandler);
+    };
   }
 
   componentDidLoad(): void {
@@ -307,6 +324,7 @@ export class GuxPopover {
     if (this.cleanupUpdatePosition) {
       this.cleanupUpdatePosition();
     }
+    this.disconnect();
   }
 
   private renderDismissButton(): JSX.Element {
@@ -330,6 +348,7 @@ export class GuxPopover {
         }}
         data-placement
         popover="manual"
+        tabindex="-1"
       >
         <div
           ref={(el: HTMLDivElement) => (this.arrowElement = el)}

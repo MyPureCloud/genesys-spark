@@ -199,28 +199,40 @@ export class GuxPopoverList {
     });
   }
 
+  disconnect: () => void = undefined;
+
+  onKeydown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Enter':
+      case ' ':
+        this.popupElement.togglePopover();
+        this.isOpen = !this.isOpen;
+        this.runUpdatePosition();
+        this.focusFirstItemInPopupList();
+        break;
+    }
+  }
+
+  onMouseup(): void {
+    this.popupElement.togglePopover();
+    this.isOpen = !this.isOpen;
+    this.runUpdatePosition();
+  }
   connectedCallback(): void {
     trackComponent(this.root, { variant: this.position });
     this.listElement = this.root.querySelector('gux-list');
     this.forElement = findElementById(this.root, this.for);
+    this.forElement.setAttribute('aria-haspopup', 'true');
 
-    this.forElement.addEventListener('keydown', (event: KeyboardEvent) => {
-      switch (event.key) {
-        case 'Enter':
-        case ' ':
-          this.popupElement.togglePopover();
-          this.isOpen = !this.isOpen;
-          this.runUpdatePosition();
-          this.focusFirstItemInPopupList();
-          break;
-      }
-    });
+    const keydownHandler = this.onKeydown.bind(this);
+    this.forElement.addEventListener('keydown', keydownHandler);
+    const mouseupHandler = this.onMouseup.bind(this);
+    this.forElement.addEventListener('mouseup', mouseupHandler);
 
-    this.forElement.addEventListener('mouseup', () => {
-      this.popupElement.togglePopover();
-      this.isOpen = !this.isOpen;
-      this.runUpdatePosition();
-    });
+    this.disconnect = () => {
+      this.forElement.removeEventListener('keydown', keydownHandler);
+      this.forElement.removeEventListener('mouseup', mouseupHandler);
+    };
   }
 
   componentDidLoad(): void {
@@ -242,6 +254,7 @@ export class GuxPopoverList {
     if (this.cleanupUpdatePosition) {
       this.cleanupUpdatePosition();
     }
+    this.disconnect();
   }
 
   render(): JSX.Element {
