@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property | Attribute | Description                                                     | Type                    | Default     |
-| -------- | --------- | --------------------------------------------------------------- | ----------------------- | ----------- |
-| `max`    | `max`     | The max year and month selectable in ISO8601 format (yyyy-mm)   | ``${string}-${string}`` | `undefined` |
-| `min`    | `min`     | The min year and month selectable in ISO8601 format (yyyy-mm)   | ``${string}-${string}`` | `undefined` |
-| `value`  | `value`   | The current selected year and month in ISO8601 format (yyyy-mm) | ``${string}-${string}`` | `undefined` |
+| Property | Attribute | Description                                                     | Type                        | Default     |
+| -------- | --------- | --------------------------------------------------------------- | --------------------------- | ----------- |
+| `max`    | `max`     | The max year and month selectable in ISO8601 format (yyyy-mm)   | `` `${string}-${string}` `` | `undefined` |
+| `min`    | `min`     | The min year and month selectable in ISO8601 format (yyyy-mm)   | `` `${string}-${string}` `` | `undefined` |
+| `value`  | `value`   | The current selected year and month in ISO8601 format (yyyy-mm) | `` `${string}-${string}` `` | `undefined` |
 
 
 ## Methods
