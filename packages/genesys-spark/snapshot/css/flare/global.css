@@ -724,16 +724,16 @@
   --gse-semantic-theme-charts-fill-10d: #1e1e21;
   --gse-semantic-theme-charts-background-10: #ebedf5;
   --gse-semantic-theme-charts-background-10d: #3e4044;
-  --gse-semantic-theme-charts-sparkline-mono: #19327a;
-  --gse-semantic-theme-charts-sparkline-monod: #2954cb;
-  --gse-semantic-theme-charts-sparkline-negative: #e22245;
-  --gse-semantic-theme-charts-sparkline-negatived: #881429;
-  --gse-semantic-theme-charts-sparkline-positive: #09b581;
-  --gse-semantic-theme-charts-sparkline-positived: #056d4d;
+  --gse-semantic-theme-charts-sparkline-mono: #2143a2;
+  --gse-semantic-theme-charts-sparkline-monod: #5476d5;
+  --gse-semantic-theme-charts-sparkline-negative: #b51b37;
+  --gse-semantic-theme-charts-sparkline-negatived: #e84e6a;
+  --gse-semantic-theme-charts-sparkline-positive: #079167;
+  --gse-semantic-theme-charts-sparkline-positived: #09b581;
   --gse-semantic-theme-charts-sparkline-neutral: #9faac6;
-  --gse-semantic-theme-charts-sparkline-neutrald: #152550;
-  --gse-semantic-theme-charts-sparkline-trendline: #dfe3ec;
-  --gse-semantic-theme-charts-sparkline-trendlined: #263b73;
+  --gse-semantic-theme-charts-sparkline-neutrald: #808db2;
+  --gse-semantic-theme-charts-sparkline-trendline: #cad1e1;
+  --gse-semantic-theme-charts-sparkline-trendlined: #6a6d75;
   --gse-semantic-zIndex-base: 0;
   --gse-semantic-zIndex-showFocus: 1;
   --gse-semantic-zIndex-sticky: 1;
@@ -1072,6 +1072,7 @@
   --gse-semantic-background-container-chatBubble-public: #fff4dc;
   --gse-semantic-background-container-chatBubble-digitalConsultation: #eee3ff;
   --gse-semantic-background-container-textHighlight-default: #ffd173;
+  --gse-semantic-background-container-transparent: #fff0;
   --gse-semantic-background-system-error-tonalMedium: #f3a7b5;
   --gse-semantic-background-system-error-tonalHigh: #e22245;
   --gse-semantic-background-system-error-tonalSubtle: #f9d3da;
@@ -1169,6 +1170,9 @@
   --gse-semantic-foreground-system-error-highEmphasis: #2a2a2e;
   --gse-semantic-foreground-system-error-accent: #b51b37;
   --gse-semantic-foreground-system-icon-default: #4f5157;
+  --gse-semantic-foreground-system-indicators-positive: #079167;
+  --gse-semantic-foreground-system-indicators-negative: #b51b37;
+  --gse-semantic-foreground-system-indicators-neutral: #6a6d75;
   --gse-semantic-foreground-formControl-helpText-default: #6a6d75;
   --gse-semantic-foreground-formControl-helpText-error: #b51b37;
   --gse-semantic-foreground-formControl-textInput-placeholder: #6a6d75;
@@ -1218,25 +1222,25 @@
   --gse-semantic-container-sm-boxShadow: 0 0 4px 1px #2a2a2e26;
   --gse-semantic-effects-boxShadow: #2a2a2e26;
   --gse-semantic-charts-categoricalData-category1-default: #056385;
-  --gse-semantic-charts-categoricalData-category1-shading: #4d90a8;
+  --gse-semantic-charts-categoricalData-category1-shading: #82b1c2;
   --gse-semantic-charts-categoricalData-category2-default: #5798d9;
-  --gse-semantic-charts-categoricalData-category2-shading: #88b6e4;
+  --gse-semantic-charts-categoricalData-category2-shading: #abccec;
   --gse-semantic-charts-categoricalData-category3-default: #ac75ff;
-  --gse-semantic-charts-categoricalData-category3-shading: #c49dff;
+  --gse-semantic-charts-categoricalData-category3-shading: #d5baff;
   --gse-semantic-charts-categoricalData-category4-default: #89387b;
-  --gse-semantic-charts-categoricalData-category4-shading: #ab72a1;
+  --gse-semantic-charts-categoricalData-category4-shading: #c49bbd;
   --gse-semantic-charts-categoricalData-category5-default: #ff5c77;
-  --gse-semantic-charts-categoricalData-category5-shading: #ff8b9e;
+  --gse-semantic-charts-categoricalData-category5-shading: #ffadbb;
   --gse-semantic-charts-categoricalData-category6-default: #ffb5a3;
-  --gse-semantic-charts-categoricalData-category6-shading: #ffcabe;
+  --gse-semantic-charts-categoricalData-category6-shading: #ffdad1;
   --gse-semantic-charts-categoricalData-category7-default: #ffc650;
-  --gse-semantic-charts-categoricalData-category7-shading: #ffd783;
+  --gse-semantic-charts-categoricalData-category7-shading: #ffe3a7;
   --gse-semantic-charts-categoricalData-category8-default: #c6dd98;
-  --gse-semantic-charts-categoricalData-category8-shading: #d7e7b6;
+  --gse-semantic-charts-categoricalData-category8-shading: #e3eecc;
   --gse-semantic-charts-categoricalData-category9-default: #54c6ab;
-  --gse-semantic-charts-categoricalData-category9-shading: #86d7c3;
+  --gse-semantic-charts-categoricalData-category9-shading: #aae3d5;
   --gse-semantic-charts-categoricalData-category10-default: #263b73;
-  --gse-semantic-charts-categoricalData-category10-shading: #65749c;
+  --gse-semantic-charts-categoricalData-category10-shading: #939db9;
   --gse-semantic-charts-categoricalData-subtle-default: #cad1e1;
   --gse-semantic-charts-numericalData-singleColor-level1: #cdeaf5;
   --gse-semantic-charts-numericalData-singleColor-level2: #9fd6ea;
@@ -1251,6 +1255,8 @@
   --gse-semantic-charts-numericalData-multiColor-green: #81cbe5;
   --gse-semantic-charts-numericalData-multiColor-red: #ff9dad;
   --gse-semantic-charts-numericalData-multiColor-yellow: #ffdd96;
+  --gse-semantic-charts-numericalData-highEmphasisInverse: #ffffff;
+  --gse-semantic-charts-numericalData-highEmphasis: #2a2a2e;
   --gse-semantic-charts-foreground-highEmphasis: #2a2a2e;
   --gse-semantic-charts-foreground-highEmphasisInverse: #ffffff;
   --gse-semantic-charts-foreground-midEmphasis: #4f5157;
@@ -1262,11 +1268,11 @@
   --gse-semantic-charts-stroke-default: #ffffff;
   --gse-semantic-charts-background-placeholder-default: #ebedf5;
   --gse-semantic-charts-track-default: #ebedf5;
-  --gse-semantic-charts-sparkline-mono: #19327a;
-  --gse-semantic-charts-sparkline-negative: #e22245;
-  --gse-semantic-charts-sparkline-positive: #09b581;
+  --gse-semantic-charts-sparkline-mono: #2143a2;
+  --gse-semantic-charts-sparkline-negative: #b51b37;
+  --gse-semantic-charts-sparkline-positive: #079167;
   --gse-semantic-charts-sparkline-neutral: #9faac6;
-  --gse-semantic-charts-sparkline-trendline: #dfe3ec;
+  --gse-semantic-charts-sparkline-trendline: #cad1e1;
 }
 
 [flare-mode=dark] {
@@ -1316,6 +1322,7 @@
   --gse-semantic-background-container-chatBubble-public: #3d300c;
   --gse-semantic-background-container-chatBubble-digitalConsultation: #282136;
   --gse-semantic-background-container-textHighlight-default: #664f20;
+  --gse-semantic-background-container-transparent: #2a2a2e00;
   --gse-semantic-background-system-error-tonalMedium: #440a15;
   --gse-semantic-background-system-error-tonalHigh: #881429;
   --gse-semantic-background-system-error-tonalSubtle: #2d070e;
@@ -1413,6 +1420,9 @@
   --gse-semantic-foreground-system-error-highEmphasis: #ffffff;
   --gse-semantic-foreground-system-error-accent: #e84e6a;
   --gse-semantic-foreground-system-icon-default: #b2b7c4;
+  --gse-semantic-foreground-system-indicators-positive: #09b581;
+  --gse-semantic-foreground-system-indicators-negative: #e84e6a;
+  --gse-semantic-foreground-system-indicators-neutral: #c1c6d4;
   --gse-semantic-foreground-formControl-helpText-default: #c1c6d4;
   --gse-semantic-foreground-formControl-helpText-error: #e84e6a;
   --gse-semantic-foreground-formControl-textInput-placeholder: #c1c6d4;
@@ -1494,6 +1504,8 @@
   --gse-semantic-charts-numericalData-multiColor-green: #53bee5;
   --gse-semantic-charts-numericalData-multiColor-red: #ff7d92;
   --gse-semantic-charts-numericalData-multiColor-yellow: #ffd173;
+  --gse-semantic-charts-numericalData-highEmphasis: #2a2a2e;
+  --gse-semantic-charts-numericalData-highEmphasisInverse: #ffffff;
   --gse-semantic-charts-foreground-highEmphasis: #ffffff;
   --gse-semantic-charts-foreground-highEmphasisInverse: #2a2a2e;
   --gse-semantic-charts-foreground-midEmphasis: #c1c6d4;
@@ -1505,11 +1517,11 @@
   --gse-semantic-charts-stroke-default: #1e1e21;
   --gse-semantic-charts-background-placeholder-default: #3e4044;
   --gse-semantic-charts-track-default: #3e4044;
-  --gse-semantic-charts-sparkline-mono: #2954cb;
-  --gse-semantic-charts-sparkline-negative: #881429;
-  --gse-semantic-charts-sparkline-positive: #056d4d;
-  --gse-semantic-charts-sparkline-neutral: #152550;
-  --gse-semantic-charts-sparkline-trendline: #263b73;
+  --gse-semantic-charts-sparkline-mono: #5476d5;
+  --gse-semantic-charts-sparkline-negative: #e84e6a;
+  --gse-semantic-charts-sparkline-positive: #09b581;
+  --gse-semantic-charts-sparkline-neutral: #808db2;
+  --gse-semantic-charts-sparkline-trendline: #6a6d75;
 }
 
 /*# sourceMappingURL=global.css.map */

@@ -25,7 +25,7 @@
     "prettier-package-json": "prettier-package-json --write ./package.json",
     "snapshot": "OUTDIR=snapshot npm run build",
     "stylelint": "stylelint --fix \"**/*.{css,html,scss}\"",
-    "test": "npm run test.unit",
+    "test": "npm run test.snapshot && npm run test.unit",
     "test.ci": "npm run test",
     "test.snapshot": "./scripts/snapshot.mjs",
     "test.unit": "jest",
