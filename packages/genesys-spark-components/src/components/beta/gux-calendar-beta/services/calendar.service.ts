@@ -27,17 +27,16 @@ export function getWeekdays(
 
   return rotateArray(days, startDayOfWeek);
 }
+function rotateArray(arr: string[], n: number): string[] {
+  const times = n % arr.length;
+  return arr.concat(arr.splice(0, times));
+}
 
 export function localizedYearMonth(
   date: Temporal.PlainDate,
   locale: string
 ): string {
   return date.toLocaleString(locale, { year: 'numeric', month: 'long' });
-}
-
-function rotateArray(arr: string[], n: number): string[] {
-  const times = n % arr.length;
-  return arr.concat(arr.splice(0, times));
 }
 
 /**
@@ -57,6 +56,5 @@ export function firstDateInWeek(
   if (dayDelta > 0) {
     dayDelta = dayDelta - 7;
   }
-  const interval = Temporal.Duration.from({ days: dayDelta });
-  return date.add(interval);
+  return date.add({ days: dayDelta });
 }

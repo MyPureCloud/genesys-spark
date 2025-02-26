@@ -4,9 +4,9 @@
   display: inline-block;
   inline-size: var(--gse-ui-calendarMenu-day-date-size);
   block-size: var(--gse-ui-calendarMenu-day-input-height);
+  outline: none;
   border: none;
   border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
-  outline: none;
 }
 
 :host(:hover) {
@@ -14,7 +14,6 @@
 }
 
 :host(:focus-within) {
-  border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
   outline: var(
       --gse-semantic-focusRing-default-border-width,
       var(--gse-semantic-focusOutline-md-borderWidth)
@@ -24,9 +23,10 @@
       --gse-semantic-focusRing-default-border-color,
       var(--gse-semantic-border-focus)
     );
+  border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
 }
 
-:host([aria-current='true']) {
+:host([gux-selected]) {
   color: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
   background-color: var(--gse-ui-calendarMenu-date-selected-backgroundColor);
 }
@@ -47,8 +47,8 @@ button {
   font-style: normal;
   font-weight: var(--gse-ui-calendarMenu-date-defaultText-fontWeight);
   line-height: 32px;
-  text-align: center;
   vertical-align: middle;
+  text-align: center;
   cursor: pointer;
 }
 

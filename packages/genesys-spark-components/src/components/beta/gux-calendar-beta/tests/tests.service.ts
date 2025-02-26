@@ -40,7 +40,6 @@ export async function findDayElement(
   element: E2EElement,
   isoDate: string
 ): Promise<E2EElement> {
-  console.log(`Finding day element for: ${isoDate}`);
   return await element.find(`pierce/slot[name="${isoDate}"] gux-day-beta`);
 }
 

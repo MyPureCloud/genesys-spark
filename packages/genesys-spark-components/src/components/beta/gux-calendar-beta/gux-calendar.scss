@@ -71,11 +71,7 @@
     }
   }
 
-  gux-focus-proxy[aria-current='true'] gux-day-beta,
-  gux-focus-proxy[aria-current='true'] ::slotted(gux-day-beta) {
-    //TODO: Pull a mixin style from gux-day-beta instead of duplicating
-    //TODO: how to deal with slotted custom backgrounds
-    color: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
-    background-color: var(--gse-ui-calendarMenu-date-selected-backgroundColor);
+  gux-focus-proxy[aria-disabled='true'] {
+    pointer-events: none;
   }
 }

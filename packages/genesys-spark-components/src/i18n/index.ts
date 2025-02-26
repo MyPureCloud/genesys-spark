@@ -132,6 +132,10 @@ export function getStartOfWeek(
  * Get the 1-indexed first day of the week for a given locale, where 1 represents
  * Monday. This is the preferred format, as it aligns with the scheme used in the
  * upcoming browser Temporal APIs.
+ *
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/dayOfWeek
+ *
  * @param locale
  * @returns A number representing the first day of the week where 1 is Monday
  */
@@ -147,6 +151,6 @@ export function getFirstDayOfWeek(
   // - Shift legacy days "left" 1 place: `legacyFirstDay - 1`
   // - Take a true mathematical modulo: `((n % d) + d) % d` (where d is 7)
   //    to get back to the correct range
-  // - Add 1 to make the list 1 - indexed.
+  // - Add 1 to make the list 1-indexed.
   return (((((legacyFirstDay - 1) % 7) + 7) % 7) + 1) as FirstDayOfWeek;
 }
