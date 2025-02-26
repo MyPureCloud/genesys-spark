@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.125.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.124.1...v4.125.0) (2025-02-26)
+
+
+### Features
+
+* **tokens:** Updated spark data tokens ([fd0d07d](https://github.com/MyPureCloud/genesys-spark/commit/fd0d07df0c9911b8a7333210fcbe82aeeb690a93))
+
+
+### Bug Fixes
+
+* **blank-state:** hide guidance when not provided ([#933](https://github.com/MyPureCloud/genesys-spark/issues/933)) ([f1f7517](https://github.com/MyPureCloud/genesys-spark/commit/f1f75170428e6eb74d34a4e7ecb2aa608ab15254))
+* **side-panel-beta:** remove flex display from content ([66e18c7](https://github.com/MyPureCloud/genesys-spark/commit/66e18c7c8823348fab05051f7168b01ce47d7f4b))
+
 ### [4.124.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.124.0...v4.124.1) (2025-02-25)
 
 
