@@ -147,7 +147,7 @@
       },
       "padding": "8px 0 0 0",
       "icon": {
-        "padding": "1px 0 1px 0"
+        "padding": "1rem"
       },
       "padding_small": "4px 0 0 0",
       "error_padding": "4px 0 0 0",
