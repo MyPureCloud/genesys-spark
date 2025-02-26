@@ -273,6 +273,11 @@
           }
         },
         "description": "A transparent color for general utility like fades"
+      },
+      "canvas": {
+        "value": "{theme.background.container.primary.45}",
+        "type": "color",
+        "description": "We use the canvas color for backgrounds that are meant to be used as a canvas, for example, archiect's boards."
       }
     },
     "system": {

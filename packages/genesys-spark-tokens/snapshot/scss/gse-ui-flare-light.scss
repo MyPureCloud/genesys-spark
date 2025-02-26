@@ -113,7 +113,7 @@
   --gse-ui-calendarMenu-month-selected-foregroundColor: #ffffff;
   --gse-ui-calendarMenu-month-selected-backgroundColor: #2143a2;
   --gse-ui-calendarMenu-month-selected-hoverBackgroundColor: #19327a;
-  --gse-ui-calendarMenu-month-hover-backgroundColor: #eff3ff;
+  --gse-ui-calendarMenu-month-hover-backgroundColor: #e7e9f9;
   --gse-ui-calendarMenu-day-range-width: 16px;
   --gse-ui-calendarMenu-day-range-height: 32px;
   --gse-ui-calendarMenu-day-input-height: 32px;
@@ -144,7 +144,7 @@
   --gse-ui-calendarMenu-date-selected-foregroundColor: #ffffff;
   --gse-ui-calendarMenu-date-selected-backgroundColor: #2143a2;
   --gse-ui-calendarMenu-date-selected-hoverBackgroundColor: #19327a;
-  --gse-ui-calendarMenu-date-hover-backgroundColor: #eff3ff;
+  --gse-ui-calendarMenu-date-hover-backgroundColor: #e7e9f9;
   --gse-ui-calendarMenu-date-range-backgroundColor: #d5def7;
   --gse-ui-calendarMenu-date-default-foregroundColor: #2a2a2e;
   --gse-ui-calendarMenu-single-header-borderRadius: 8px 8px 0 0;
@@ -419,7 +419,7 @@
   --gse-ui-button-primary-hover-foregroundColor: #ffffff;
   --gse-ui-button-primary-active-backgroundColor: #102251;
   --gse-ui-button-primary-active-foregroundColor: #ffffff;
-  --gse-ui-button-secondary-default-backgroundColor: #eff3ff;
+  --gse-ui-button-secondary-default-backgroundColor: #e7e9f9;
   --gse-ui-button-secondary-default-foregroundColor: #2143a2;
   --gse-ui-button-secondary-hover-backgroundColor: #d5def7;
   --gse-ui-button-secondary-hover-foregroundColor: #19327a;
@@ -585,7 +585,7 @@
   --gse-ui-menu-option-shortcut-text-lineHeight: 20px;
   --gse-ui-menu-option-shortcut-default-foregroundColor: #6a6d75;
   --gse-ui-menu-option-shortcut-selected-foregroundColor: #2a2a2e;
-  --gse-ui-menu-option-hover-backgroundColor: #eff3ff;
+  --gse-ui-menu-option-hover-backgroundColor: #e7e9f9;
   --gse-ui-menu-option-selected-backgroundColor: #d5def7;
   --gse-ui-menu-option-disabled-opacity: 0.5;
   --gse-ui-menu-option-checkbox-unchecked-default-foregroundColor: #a3a8b5;
@@ -642,7 +642,7 @@
   --gse-ui-datePicker-range-gap: 24px;
   --gse-ui-datePicker-startEndInput-gap: 8px;
   --gse-ui-datePicker-dateTyped-gap: 10px;
-  --gse-ui-datePicker-dateTyped-backgroundColor: #eff3ff;
+  --gse-ui-datePicker-dateTyped-backgroundColor: #e7e9f9;
   --gse-ui-datePicker-disabled-opacity: 0.5;
   --gse-ui-datePicker-focusCalendar-gap: 2px;
   --gse-ui-datePicker-iconHover: #3e4044;
@@ -661,7 +661,7 @@
   --gse-ui-toggle-track-disabled-on-backgroundColor: #2143a2;
   --gse-ui-toggle-track-error-off-backgroundColor: #f3a7b5;
   --gse-ui-toggle-track-error-on-backgroundColor: #b51b37;
-  --gse-ui-toggle-track-hover-off-backgroundColor: #eff3ff;
+  --gse-ui-toggle-track-hover-off-backgroundColor: #e7e9f9;
   --gse-ui-toggle-track-hover-on-backgroundColor: #19327a;
   --gse-ui-toggle-track-borderRadius: 16px;
   --gse-ui-toggle-handle-width: 16px;
@@ -748,7 +748,7 @@
   --gse-ui-fileUpload-dragAndDrop-dropZone-active-border-width: 2px;
   --gse-ui-fileUpload-dragAndDrop-dropZone-active-border-style: dashed;
   --gse-ui-fileUpload-dragAndDrop-dropZone-minHeight: 112px;
-  --gse-ui-fileUpload-dragAndDrop-dropZone-background-active: #eff3ff;
+  --gse-ui-fileUpload-dragAndDrop-dropZone-background-active: #e7e9f9;
   --gse-ui-fileUpload-dragAndDrop-dropZoneText-color: #2a2a2e;
   --gse-ui-fileUpload-dragDrop-btnText-gap: 12px;
   --gse-ui-colorPicker-label-requiredSymbolColor: #b51b37;
@@ -794,7 +794,7 @@
   --gse-ui-flyoutMenu-parenting-gap: 8px;
   --gse-ui-flyoutMenu-backgroundColor: #ffffff;
   --gse-ui-flyoutMenu-arrow-borderRadius: 4px;
-  --gse-ui-phoneInput-dropdown-hover-backgroundColor: #eff3ff;
+  --gse-ui-phoneInput-dropdown-hover-backgroundColor: #e7e9f9;
   --gse-ui-phoneInput-dropdown-active-backgroundColor: #adbff0;
   --gse-ui-phoneInput-dropdown-foregroundColor: #6a6d75;
   --gse-ui-phoneInput-dropdown-flag-height: 12px;
@@ -825,7 +825,7 @@
   --gse-ui-selectorCard-default-backgroundColor: #ffffff;
   --gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor: #2143a2;
   --gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor: #a3a8b5;
-  --gse-ui-selectorCard-hover-backgroundColor: #eff3ff;
+  --gse-ui-selectorCard-hover-backgroundColor: #e7e9f9;
   --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor: #19327a;
   --gse-ui-selectorCard-active-backgroundColor: #adbff0;
   --gse-ui-selectorCard-active-selectedIndicator-foregroundColor: #102251;
@@ -907,7 +907,7 @@
   --gse-ui-dataTableItems-header-multiselect-compact-selectedBar-width: 64px;
   --gse-ui-dataTableItems-header-selectedIndicatorColor: #5476d5;
   --gse-ui-dataTableItems-header-defaultBackgroundColor: #ffffff;
-  --gse-ui-dataTableItems-header-fixedBackgroundColor: #eff3ff;
+  --gse-ui-dataTableItems-header-fixedBackgroundColor: #e7e9f9;
   --gse-ui-dataTableItems-header-foregroundColor: #2a2a2e;
   --gse-ui-dataTableItems-header-sort-foregroundColor: #6a6d75;
   --gse-ui-dataTableItems-header-default-height: 40px;
@@ -1098,7 +1098,7 @@
   --gse-ui-avatar-media-initialsBackground-accent11: #ffb5a3;
   --gse-ui-avatar-media-initialsBackground-accent12: #992910;
   --gse-ui-avatar-media-initialsBackground-overflowCount: #b2b7c4;
-  --gse-ui-avatar-media-initialsBackground-add: #eff3ff;
+  --gse-ui-avatar-media-initialsBackground-add: #e7e9f9;
   --gse-ui-avatar-media-initialsForeground-default: #2a2a2e;
   --gse-ui-avatar-media-initialsForeground-inverse: #ffffff;
   --gse-ui-avatar-media-initialsForeground-add: #2143a2;
@@ -1465,7 +1465,7 @@
   --gse-ui-accordion-menuItem-hover-foreground-labelColor: #2a2a2e;
   --gse-ui-accordion-menuItem-hover-foreground-startShortcutColor: #6a6d75;
   --gse-ui-accordion-menuItem-hover-foreground-parentIconColor: #3e4044;
-  --gse-ui-accordion-menuItem-hover-backgroundColor: #eff3ff;
+  --gse-ui-accordion-menuItem-hover-backgroundColor: #e7e9f9;
   --gse-ui-accordion-menuItem-selected-foreground-startIconColor: #2a2a2e;
   --gse-ui-accordion-menuItem-selected-foreground-labelColor: #2a2a2e;
   --gse-ui-accordion-menuItem-selected-foreground-startShortcutColor: #2a2a2e;

@@ -35,7 +35,21 @@
             "type": "color"
           },
           "40": {
-            "value": "{color.azure_blue.50}",
+            "value": "{color.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.15",
+                  "space": "lch",
+                  "color": "{color.azure_blue.400}"
+                }
+              }
+            }
+          },
+          "45": {
+            "value": "{color.genesys_navy.50}",
             "type": "color"
           },
           "50": {
@@ -58,16 +72,54 @@
             "value": "{color.haze.900}",
             "type": "color"
           },
-          "40d": {
+          "35d": {
             "value": "{color.haze.850}",
             "type": "color"
           },
+          "40d": {
+            "value": "{color.haze.850}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.25",
+                  "space": "hsl",
+                  "color": "{color.azure_blue.400}"
+                }
+              }
+            }
+          },
           "50d": {
-            "value": "{color.haze.700}",
-            "type": "color"
+            "value": "{color.haze.850}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.35",
+                  "space": "hsl",
+                  "color": "{color.azure_blue.400}"
+                }
+              }
+            }
           },
           "60d": {
-            "value": "{color.haze.800}",
+            "value": "{color.haze.850}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.35",
+                  "space": "lch",
+                  "color": "{color.azure_blue.500}"
+                }
+              }
+            }
+          },
+          "45d": {
+            "value": "{color.genesys_navy.900}",
             "type": "color"
           }
         },
