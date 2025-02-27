@@ -6,56 +6,49 @@
 
 /* Headings */
 @mixin _heading-xl {
-  font-family:
-    var(--gse-semantic-heading-xl-bold-fontFamily),
+  font-family: var(--gse-semantic-heading-xl-bold-fontFamily),
     var(--gse-semantic-theme-fontFamily-headings), sans-serif;
   font-size: var(--gse-semantic-heading-xl-bold-fontSize);
   line-height: var(--gse-semantic-heading-xl-bold-lineHeight);
 }
 
 @mixin _heading-lg {
-  font-family:
-    var(--gse-semantic-heading-lg-bold-fontFamily),
+  font-family: var(--gse-semantic-heading-lg-bold-fontFamily),
     var(--gse-semantic-theme-fontFamily-headings), sans-serif;
   font-size: var(--gse-semantic-heading-lg-bold-fontSize);
   line-height: var(--gse-semantic-heading-lg-bold-lineHeight);
 }
 
 @mixin _heading-md {
-  font-family:
-    var(--gse-semantic-heading-md-bold-fontFamily),
+  font-family: var(--gse-semantic-heading-md-bold-fontFamily),
     var(--gse-semantic-theme-fontFamily-headings), sans-serif;
   font-size: var(--gse-semantic-heading-md-bold-fontSize);
   line-height: var(--gse-semantic-heading-md-bold-lineHeight);
 }
 
 @mixin _heading-sm {
-  font-family:
-    var(--gse-semantic-heading-sm-bold-fontFamily),
+  font-family: var(--gse-semantic-heading-sm-bold-fontFamily),
     var(--gse-semantic-theme-fontFamily-headings), sans-serif;
   font-size: var(--gse-semantic-heading-sm-bold-fontSize);
   line-height: var(--gse-semantic-heading-sm-bold-lineHeight);
 }
 
 @mixin _heading-xs {
-  font-family:
-    var(--gse-semantic-heading-xs-bold-fontFamily),
+  font-family: var(--gse-semantic-heading-xs-bold-fontFamily),
     var(--gse-semantic-theme-fontFamily-headings), sans-serif;
   font-size: var(--gse-semantic-heading-xs-bold-fontSize);
   line-height: var(--gse-semantic-heading-xs-bold-lineHeight);
 }
 
 @mixin _heading-subheading {
-  font-family:
-    var(--gse-semantic-subheading-regular-fontFamily),
+  font-family: var(--gse-semantic-subheading-regular-fontFamily),
     var(--gse-semantic-theme-fontFamily-headings), sans-serif;
   font-size: var(--gse-semantic-subheading-regular-fontSize);
   line-height: var(--gse-semantic-subheading-regular-lineHeight);
 }
 
 @mixin _heading-overline {
-  font-family:
-    var(--gse-semantic-heading-overline-fontFamily),
+  font-family: var(--gse-semantic-heading-overline-fontFamily),
     var(--gse-semantic-theme-fontFamily-headings), sans-serif;
   font-size: var(--gse-semantic-heading-overline-fontSize);
   line-height: var(--gse-semantic-heading-overline-lineHeight);
@@ -175,24 +168,21 @@
 
 /* Body Copy */
 @mixin _body-lg {
-  font-family:
-    var(--gse-semantic-body-lg-regular-fontFamily),
+  font-family: var(--gse-semantic-body-lg-regular-fontFamily),
     var(--gse-semantic-theme-fontFamily-body), sans-serif;
   font-size: var(--gse-semantic-body-lg-regular-fontSize);
   line-height: var(--gse-semantic-body-lg-regular-lineHeight);
 }
 
 @mixin _body-md {
-  font-family:
-    var(--gse-semantic-body-md-regular-fontFamily),
+  font-family: var(--gse-semantic-body-md-regular-fontFamily),
     var(--gse-semantic-theme-fontFamily-body), sans-serif;
   font-size: var(--gse-semantic-body-md-regular-fontSize);
   line-height: var(--gse-semantic-body-md-regular-lineHeight);
 }
 
 @mixin _body-sm {
-  font-family:
-    var(--gse-semantic-body-sm-regular-fontFamily),
+  font-family: var(--gse-semantic-body-sm-regular-fontFamily),
     var(--gse-semantic-theme-fontFamily-body), sans-serif;
   font-size: var(--gse-semantic-body-sm-regular-fontSize);
   line-height: var(--gse-semantic-body-sm-regular-lineHeight);
@@ -253,8 +243,7 @@
 }
 
 @mixin ui-button {
-  font-family:
-    var(--gse-semantic-body-md-regular-fontFamily),
+  font-family: var(--gse-semantic-body-md-regular-fontFamily),
     var(--gse-semantic-theme-fontFamily-body), sans-serif;
   font-size: var(--gse-semantic-body-md-regular-fontSize);
   font-weight: var(--gse-core-fontWeight-semiBold);
@@ -262,8 +251,7 @@
 }
 
 @mixin ui-link {
-  font-family:
-    var(--gse-semantic-body-md-regular-fontFamily),
+  font-family: var(--gse-semantic-body-md-regular-fontFamily),
     var(--gse-semantic-theme-fontFamily-body), sans-serif;
   font-size: var(--gse-semantic-body-md-regular-fontSize);
   font-weight: var(--gse-core-fontWeight-regular);
@@ -271,8 +259,7 @@
 }
 
 @mixin ui-label {
-  font-family:
-    var(--gse-semantic-body-sm-regular-fontFamily),
+  font-family: var(--gse-semantic-body-sm-regular-fontFamily),
     var(--gse-semantic-theme-fontFamily-body), sans-serif;
   font-size: var(--gse-semantic-body-sm-regular-fontSize);
   font-weight: var(--gse-core-fontWeight-bold);
@@ -280,8 +267,7 @@
 }
 
 @mixin ui-placeholder {
-  font-family:
-    var(--gse-semantic-body-sm-regular-fontFamily),
+  font-family: var(--gse-semantic-body-sm-regular-fontFamily),
     var(--gse-semantic-theme-fontFamily-body), sans-serif;
   font-size: var(--gse-semantic-body-sm-regular-fontSize);
   font-weight: var(--gse-core-fontWeight-regular);

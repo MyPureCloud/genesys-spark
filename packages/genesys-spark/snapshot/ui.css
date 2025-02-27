@@ -76,7 +76,7 @@
   --gse-ui-formControl-helper-helperText-fontSize: 12px;
   --gse-ui-formControl-helper-helperText-lineHeight: 18px;
   --gse-ui-formControl-helper-padding: 8px 0 0 0;
-  --gse-ui-formControl-helper-icon-padding: 1rem;
+  --gse-ui-formControl-helper-icon-padding: 1px 0 1px 0;
   --gse-ui-formControl-helper-paddingSmall: 4px 0 0 0;
   --gse-ui-formControl-helper-errorPadding: 4px 0 0 0;
   --gse-ui-formControl-helper-defaultColor: #6a6d75;
@@ -918,9 +918,6 @@
   --gse-ui-dataTableItems-header-gap: 8px;
   --gse-ui-dataTableItems-header-selectedBar-height: 3px;
   --gse-ui-dataTableItems-header-selectedBar-width: 229px;
-  --gse-ui-dataTableItems-divider-color: #cad1e1;
-  --gse-ui-dataTableItems-divider-width: 1px;
-  --gse-ui-dataTableItems-divider-style: solid;
   --gse-ui-dataTableItems-scrollbar-borderRadius: 45px;
   --gse-ui-dataTableItems-scrollbar-foregroundColor: #6a6d75;
   --gse-ui-dataTableItems-cell-altBackgroundColor: #ebedf5;
@@ -1003,6 +1000,9 @@
   --gse-ui-dataTableItems-statusIndicator-label-fontSize: 12px;
   --gse-ui-dataTableItems-statusIndicator-label-lineHeight: 18px;
   --gse-ui-dataTableItems-statusIndicator-text: #2a2a2e;
+  --gse-ui-dataTable-border-color: #cad1e1;
+  --gse-ui-dataTable-border-width: 1px;
+  --gse-ui-dataTable-border-style: solid;
   --gse-ui-avatar-groupShapes-gap: -4px;
   --gse-ui-avatar-large-size: 96px;
   --gse-ui-avatar-large-badge-size: 24px;
@@ -2150,7 +2150,7 @@
   --gse-ui-formControl-helper-helperText-fontSize: 12px;
   --gse-ui-formControl-helper-helperText-lineHeight: 18px;
   --gse-ui-formControl-helper-padding: 8px 0 0 0;
-  --gse-ui-formControl-helper-icon-padding: 1rem;
+  --gse-ui-formControl-helper-icon-padding: 1px 0 1px 0;
   --gse-ui-formControl-helper-paddingSmall: 4px 0 0 0;
   --gse-ui-formControl-helper-errorPadding: 4px 0 0 0;
   --gse-ui-formControl-helper-defaultColor: #c1c6d4;
@@ -2992,9 +2992,6 @@
   --gse-ui-dataTableItems-header-gap: 8px;
   --gse-ui-dataTableItems-header-selectedBar-height: 3px;
   --gse-ui-dataTableItems-header-selectedBar-width: 229px;
-  --gse-ui-dataTableItems-divider-color: #3e4044;
-  --gse-ui-dataTableItems-divider-width: 1px;
-  --gse-ui-dataTableItems-divider-style: solid;
   --gse-ui-dataTableItems-scrollbar-borderRadius: 45px;
   --gse-ui-dataTableItems-scrollbar-foregroundColor: #c1c6d4;
   --gse-ui-dataTableItems-cell-altBackgroundColor: #131315;
@@ -3077,6 +3074,9 @@
   --gse-ui-dataTableItems-statusIndicator-label-fontSize: 12px;
   --gse-ui-dataTableItems-statusIndicator-label-lineHeight: 18px;
   --gse-ui-dataTableItems-statusIndicator-text: #ffffff;
+  --gse-ui-dataTable-border-color: #3e4044;
+  --gse-ui-dataTable-border-width: 1px;
+  --gse-ui-dataTable-border-style: solid;
   --gse-ui-avatar-groupShapes-gap: -4px;
   --gse-ui-avatar-large-size: 96px;
   --gse-ui-avatar-large-badge-size: 24px;
