@@ -154,12 +154,12 @@
               "description": "The background color for the hover state of options in the menu panel of the global navigation."
             },
             "active_panel": {
-              "value": "{theme.background.custom_accents.global_nav.20d}",
+              "value": "{theme.background.custom_accents.global_nav.30d}",
               "type": "color",
               "description": "The background color for the active-panel state of the options in the menu panel of the global navigation."
             },
             "active_selected": {
-              "value": "{theme.background.custom_accents.global_nav.30d}",
+              "value": "{theme.background.custom_accents.global_nav.20d}",
               "type": "color",
               "description": "The background color for the active-selected state of the options in the menu panel of the global navigation."
             }
