@@ -46,7 +46,11 @@ export class GuxPaginationItemCountsBeta implements ComponentInterface {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.root, paginationResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      paginationResources,
+      'gux-pagination-item-counts-beta'
+    );
   }
 
   private getPaginationItemCountsRange(): JSX.Element {
