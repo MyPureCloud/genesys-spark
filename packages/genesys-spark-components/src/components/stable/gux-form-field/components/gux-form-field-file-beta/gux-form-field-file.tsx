@@ -82,6 +82,9 @@ export class GuxFormFieldFileBeta {
   @State()
   private required: boolean = false;
 
+  @State()
+  private multiple: boolean = false;
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
@@ -161,11 +164,11 @@ export class GuxFormFieldFileBeta {
 
           {this.renderInputSlot()}
 
-          {this.renderFileList()}
-
           <GuxFormFieldError show={this.hasError}>
             <slot name="error" />
           </GuxFormFieldError>
+
+          {this.renderFileList()}
         </div>
       </GuxFormFieldContainer>
     ) as JSX.Element;
@@ -181,6 +184,7 @@ export class GuxFormFieldFileBeta {
     preventBrowserValidationStyling(this.input);
     this.disabled = this.input.disabled;
     this.required = this.input.required;
+    this.multiple = this.input.multiple;
 
     this.disabledObserver = onDisabledChange(
       this.input,
@@ -194,15 +198,18 @@ export class GuxFormFieldFileBeta {
         this.required = required;
       }
     );
-    this.multipleObserver = onMultipleChange(this.input, () => {
-      forceUpdate(this.root);
-    });
+    this.multipleObserver = onMultipleChange(
+      this.input,
+      (multiple: boolean) => {
+        this.multiple = multiple;
+      }
+    );
 
     validateFormIds(this.root, this.input);
   }
 
   private getDropZoneText(): string {
-    if (this.input.multiple) {
+    if (this.multiple) {
       return this.getI18nValue('dragAndDropFilesInstructions');
     } else {
       return this.getI18nValue('dragAndDropFileInstructions');
@@ -212,7 +219,7 @@ export class GuxFormFieldFileBeta {
   private getProxyButtonText(): string {
     if (this.dragAndDrop) {
       return this.getI18nValue('clickToUpload');
-    } else if (this.input.multiple) {
+    } else if (this.multiple) {
       if (this.input.files.length > 0) {
         return this.getI18nValue('changeFiles');
       }
@@ -267,8 +274,10 @@ export class GuxFormFieldFileBeta {
 
     const dt = new DataTransfer();
 
-    for (let i = 0; i < currentFileList.length; i++) {
-      dt.items.add(currentFileList[i]);
+    if (this.multiple) {
+      for (let i = 0; i < currentFileList.length; i++) {
+        dt.items.add(currentFileList[i]);
+      }
     }
 
     for (let i = 0; i < newFileList.length; i++) {
@@ -276,6 +285,10 @@ export class GuxFormFieldFileBeta {
 
       if (item.kind === 'file' && item.webkitGetAsEntry().isFile) {
         dt.items.add(item.getAsFile());
+
+        if (!this.multiple) {
+          break;
+        }
       }
     }
 
