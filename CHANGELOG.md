@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.126.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.125.0...v4.126.0) (2025-02-27)
+
+
+### Features
+
+* **other:** added less and sass tokens ([0c7a90b](https://github.com/MyPureCloud/genesys-spark/commit/0c7a90b5c621dd07fecc2c35303d87ee63bb4951))
+
 ## [4.125.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.124.1...v4.125.0) (2025-02-26)
 
 
