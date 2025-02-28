@@ -141,7 +141,11 @@ export class GuxPaginationButtonsBeta {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.root, paginationResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      paginationResources,
+      'gux-pagination-buttons-beta'
+    );
   }
 
   render(): JSX.Element {

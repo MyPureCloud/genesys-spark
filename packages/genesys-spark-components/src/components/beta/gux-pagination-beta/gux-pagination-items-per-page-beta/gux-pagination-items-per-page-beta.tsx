@@ -41,7 +41,11 @@ export class GuxPaginationItemsPerPageBeta implements ComponentInterface {
   }
 
   async componentWillLoad(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.root, paginationResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      paginationResources,
+      'gux-pagination-items-per-page-beta'
+    );
   }
 
   private getDropdown(): JSX.Element {
