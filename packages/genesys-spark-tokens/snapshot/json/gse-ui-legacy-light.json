@@ -169,6 +169,173 @@
       "border_radius": "4px"
     }
   },
+  "calendar_menu": {
+    "month": {
+      "default_text": {
+        "fontFamily": "Roboto",
+        "fontWeight": "400",
+        "fontSize": "12px",
+        "lineHeight": "18px"
+      },
+      "current_text": {
+        "fontFamily": "Roboto",
+        "fontWeight": "700",
+        "fontSize": "12px",
+        "lineHeight": "18px"
+      },
+      "default": {
+        "foreground_color": "#2e394c"
+      },
+      "single": {
+        "header": {
+          "text_width": "154px",
+          "width": "218px",
+          "height": "48px"
+        }
+      },
+      "month_cell": {
+        "width": "66px",
+        "height": "48px"
+      },
+      "header_text": {
+        "fontFamily": "Roboto",
+        "fontWeight": "700",
+        "fontSize": "16px",
+        "lineHeight": "24px"
+      },
+      "range": {
+        "vertical": {
+          "width": "272px",
+          "height": "652px"
+        }
+      },
+      "focus_border_radius": "16px",
+      "border_radius": "4px",
+      "calendar_button": {
+        "focus_border_radius": "4px"
+      },
+      "selected": {
+        "foreground_color": "#ffffff",
+        "background_color": "#2a60c8",
+        "hover_background_color": "#2754ac"
+      },
+      "hover": {
+        "background_color": "#e8ecf2"
+      }
+    },
+    "day": {
+      "range": {
+        "width": "16px",
+        "height": "32px"
+      },
+      "input": {
+        "height": "32px",
+        "width": "160px"
+      },
+      "header_text": {
+        "fontFamily": "Roboto",
+        "fontWeight": "700",
+        "fontSize": "12px",
+        "lineHeight": "18px"
+      },
+      "date": {
+        "size": "32px"
+      }
+    },
+    "height": "234px",
+    "width": "250px",
+    "date_body": {
+      "padding": "16px 24px",
+      "gap": "8px"
+    },
+    "header": {
+      "background_color": "#2a60c8",
+      "foreground_color": "#ffffff",
+      "gap": "8px",
+      "padding": "12px 16px",
+      "arrow": {
+        "padding": "8px"
+      }
+    },
+    "background_color": "#ffffff",
+    "date": {
+      "default_text": {
+        "fontFamily": "Roboto",
+        "fontWeight": "400",
+        "fontSize": "12px",
+        "lineHeight": "18px"
+      },
+      "current_text": {
+        "fontFamily": "Roboto",
+        "fontWeight": "700",
+        "fontSize": "12px",
+        "lineHeight": "18px"
+      },
+      "selected": {
+        "foreground_color": "#ffffff",
+        "background_color": "#2a60c8",
+        "hover_background_color": "#2754ac"
+      },
+      "hover": {
+        "background_color": "#e8ecf2"
+      },
+      "range": {
+        "background_color": "#deeaff"
+      },
+      "default": {
+        "foreground_color": "#2e394c"
+      }
+    },
+    "single": {
+      "header": {
+        "border_radius": "4px 4px 0 0"
+      },
+      "body": {
+        "border_radius": "0 0 4px 4px"
+      }
+    },
+    "range": {
+      "header": {
+        "first_month": {
+          "border_radius": "4px 0 0 0"
+        },
+        "second_month": {
+          "border_radius": "0 4px 0 0"
+        }
+      },
+      "body": {
+        "first_month": {
+          "border_radius": "0 0 0 4px"
+        },
+        "second_month": {
+          "border_radius": "0 0 4px 0"
+        }
+      },
+      "date": {
+        "end_date": {
+          "border_radius": "0 4px 4px 0"
+        },
+        "start_date": {
+          "border_radius": "4px  0 0 4px"
+        }
+      }
+    },
+    "disabled": {
+      "opacity": ".5"
+    },
+    "month_body": {
+      "padding": "16px 24px",
+      "gap": "2px"
+    },
+    "box_shadow": {
+      "blur": "4px",
+      "spread": "1px",
+      "color": "#28324326",
+      "type": "dropShadow",
+      "offsetX": "0",
+      "offsetY": "0"
+    }
+  },
   "card": {
     "background-color": "#ffffff",
     "border_radius": "4px",
@@ -1197,173 +1364,6 @@
       }
     },
     "gap": "4px"
-  },
-  "calendar_menu": {
-    "day": {
-      "range": {
-        "width": "16px",
-        "height": "32px"
-      },
-      "input": {
-        "height": "32px",
-        "width": "160px"
-      },
-      "header_text": {
-        "fontFamily": "Roboto",
-        "fontWeight": "700",
-        "fontSize": "12px",
-        "lineHeight": "18px"
-      },
-      "date": {
-        "size": "32px"
-      }
-    },
-    "height": "234px",
-    "width": "250px",
-    "month": {
-      "default": {
-        "foreground_color": "#2e394c"
-      },
-      "single": {
-        "header": {
-          "text_width": "154px",
-          "width": "218px",
-          "height": "48px"
-        }
-      },
-      "month_cell": {
-        "width": "66px",
-        "height": "48px"
-      },
-      "header_text": {
-        "fontFamily": "Roboto",
-        "fontWeight": "700",
-        "fontSize": "16px",
-        "lineHeight": "24px"
-      },
-      "range": {
-        "vertical": {
-          "width": "272px",
-          "height": "652px"
-        }
-      },
-      "default_text": {
-        "fontFamily": "Roboto",
-        "fontWeight": "400",
-        "fontSize": "12px",
-        "lineHeight": "18px"
-      },
-      "current_text": {
-        "fontFamily": "Roboto",
-        "fontWeight": "700",
-        "fontSize": "12px",
-        "lineHeight": "18px"
-      },
-      "focus_border_radius": "16px",
-      "border_radius": "4px",
-      "calendar_button": {
-        "focus_border_radius": "4px"
-      },
-      "selected": {
-        "foreground_color": "#ffffff",
-        "background_color": "#2a60c8",
-        "hover_background_color": "#2754ac"
-      },
-      "hover": {
-        "background_color": "#e8ecf2"
-      }
-    },
-    "date_body": {
-      "padding": "16px 24px",
-      "gap": "8px"
-    },
-    "header": {
-      "background_color": "#2a60c8",
-      "foreground_color": "#ffffff",
-      "gap": "8px",
-      "padding": "12px 16px",
-      "arrow": {
-        "padding": "8px"
-      }
-    },
-    "background_color": "#ffffff",
-    "date": {
-      "default_text": {
-        "fontFamily": "Roboto",
-        "fontWeight": "400",
-        "fontSize": "12px",
-        "lineHeight": "18px"
-      },
-      "current_text": {
-        "fontFamily": "Roboto",
-        "fontWeight": "700",
-        "fontSize": "12px",
-        "lineHeight": "18px"
-      },
-      "selected": {
-        "foreground_color": "#ffffff",
-        "background_color": "#2a60c8",
-        "hover_background_color": "#2754ac"
-      },
-      "hover": {
-        "background_color": "#e8ecf2"
-      },
-      "range": {
-        "background_color": "#deeaff"
-      },
-      "default": {
-        "foreground_color": "#2e394c"
-      }
-    },
-    "single": {
-      "header": {
-        "border_radius": "4px 4px 0 0"
-      },
-      "body": {
-        "border_radius": "0 0 4px 4px"
-      }
-    },
-    "range": {
-      "header": {
-        "first_month": {
-          "border_radius": "4px 0 0 0"
-        },
-        "second_month": {
-          "border_radius": "0 4px 0 0"
-        }
-      },
-      "body": {
-        "first_month": {
-          "border_radius": "0 0 0 4px"
-        },
-        "second_month": {
-          "border_radius": "0 0 4px 0"
-        }
-      },
-      "date": {
-        "end_date": {
-          "border_radius": "0 4px 4px 0"
-        },
-        "start_date": {
-          "border_radius": "4px  0 0 4px"
-        }
-      }
-    },
-    "disabled": {
-      "opacity": ".5"
-    },
-    "month_body": {
-      "padding": "16px 24px",
-      "gap": "2px"
-    },
-    "box_shadow": {
-      "blur": "4px",
-      "spread": "1px",
-      "color": "#28324326",
-      "type": "dropShadow",
-      "offsetX": "0",
-      "offsetY": "0"
-    }
   },
   "date_picker": {
     "range": {
