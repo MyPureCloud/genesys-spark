@@ -38,6 +38,10 @@
             "value": "{color_legacy.grey.70}",
             "type": "color"
           },
+          "45": {
+            "value": "{color.genesys_navy.50}",
+            "type": "color"
+          },
           "50": {
             "value": "{color_legacy.blue.100}",
             "type": "color"

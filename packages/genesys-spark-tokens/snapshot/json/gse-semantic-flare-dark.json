@@ -7,9 +7,9 @@
         "active": "#102251"
       },
       "secondary": {
-        "default": "#3e4044",
-        "hover": "#4f5157",
-        "active": "#6a6d75"
+        "default": "#465066",
+        "hover": "#475675",
+        "active": "#354a72"
       },
       "tertiary": {
         "default": "rgba(0, 0, 0, 0)",
@@ -18,13 +18,13 @@
       },
       "ghost": {
         "default": "rgba(0, 0, 0, 0)",
-        "hover": "#4f5157",
-        "active": "#6a6d75"
+        "hover": "#475675",
+        "active": "#354a72"
       },
       "subtle": {
         "default": "#131315",
-        "hover": "#4f5157",
-        "active": "#6a6d75"
+        "hover": "#475675",
+        "active": "#354a72"
       },
       "danger": {
         "default": "#881429",
@@ -52,15 +52,15 @@
         "default": "#2a2a2e",
         "tonal_subtle": "#1e1e21",
         "tonal_medium": "#131315",
-        "tonal_high": "#6a6d75"
+        "tonal_high": "#475675"
       },
       "elevated": {
-        "default": "#1e1e21",
-        "hover": "#3e4044",
-        "active": "#4f5157",
+        "default": "#2a2a2e",
+        "hover": "#465066",
+        "active": "#475675",
         "error": "#440a15",
-        "header": "#2a2a2e",
-        "active_subtle": "#4f5157"
+        "header": "#3e4044",
+        "active_subtle": "#475675"
       },
       "high_constrast": {
         "default": "#ffffff",
@@ -77,7 +77,8 @@
       "text_highlight": {
         "default": "#664f20"
       },
-      "transparent": "#2a2a2e00"
+      "transparent": "#2a2a2e00",
+      "canvas": "#141c34"
     },
     "system": {
       "error": {
@@ -137,7 +138,7 @@
         }
       },
       "progress_and_loading": {
-        "default": "#3e4044",
+        "default": "#465066",
         "progressed": "#5476d5"
       },
       "status": {

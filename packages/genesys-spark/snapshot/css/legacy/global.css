@@ -352,6 +352,7 @@
   --gse-semantic-theme-background-container-primary-20: #fdfdfd;
   --gse-semantic-theme-background-container-primary-30: #f6f7f9;
   --gse-semantic-theme-background-container-primary-40: #e8ecf2;
+  --gse-semantic-theme-background-container-primary-45: #f0f1f5;
   --gse-semantic-theme-background-container-primary-50: #deeaff;
   --gse-semantic-theme-background-container-primary-60: #e2e6ee;
   --gse-semantic-theme-background-container-secondary-10: #2a60c8;
@@ -895,6 +896,7 @@
   --gse-semantic-background-container-chatBubble-digitalConsultation: #eee3ff;
   --gse-semantic-background-container-textHighlight-default: #ffd173;
   --gse-semantic-background-container-transparent: #fff0;
+  --gse-semantic-background-container-canvas: #f0f1f5;
   --gse-semantic-background-system-error-tonalMedium: #fceaea;
   --gse-semantic-background-system-error-tonalHigh: #ea0b0b;
   --gse-semantic-background-system-error-tonalSubtle: #fceaea;

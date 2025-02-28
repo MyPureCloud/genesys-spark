@@ -77,7 +77,8 @@
       "text_highlight": {
         "default": "#ffd173"
       },
-      "transparent": "#fff0"
+      "transparent": "#fff0",
+      "canvas": "#f0f1f5"
     },
     "system": {
       "error": {

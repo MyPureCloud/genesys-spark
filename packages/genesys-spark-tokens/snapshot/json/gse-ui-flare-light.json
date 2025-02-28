@@ -220,7 +220,7 @@
         "hover_background_color": "#19327a"
       },
       "hover": {
-        "background_color": "#eff3ff"
+        "background_color": "#e7e9f9"
       }
     },
     "day": {
@@ -277,7 +277,7 @@
         "hover_background_color": "#19327a"
       },
       "hover": {
-        "background_color": "#eff3ff"
+        "background_color": "#e7e9f9"
       },
       "range": {
         "background_color": "#d5def7"
@@ -893,7 +893,7 @@
     },
     "secondary": {
       "default": {
-        "background_color": "#eff3ff",
+        "background_color": "#e7e9f9",
         "foreground_color": "#2143a2"
       },
       "hover": {
@@ -1235,7 +1235,7 @@
         }
       },
       "hover": {
-        "background_color": "#eff3ff"
+        "background_color": "#e7e9f9"
       },
       "selected": {
         "background_color": "#d5def7"
@@ -1374,7 +1374,7 @@
     },
     "date_typed": {
       "gap": "10px",
-      "background_color": "#eff3ff"
+      "background_color": "#e7e9f9"
     },
     "disabled": {
       "opacity": ".5"
@@ -1423,7 +1423,7 @@
       },
       "hover": {
         "off": {
-          "background_color": "#eff3ff"
+          "background_color": "#e7e9f9"
         },
         "on": {
           "background_color": "#19327a"
@@ -1621,7 +1621,7 @@
         },
         "min_height": "112px",
         "background": {
-          "active": "#eff3ff"
+          "active": "#e7e9f9"
         }
       },
       "drop_zone_text": {
@@ -1730,7 +1730,7 @@
   "phone_input": {
     "dropdown": {
       "hover": {
-        "background_color": "#eff3ff"
+        "background_color": "#e7e9f9"
       },
       "active": {
         "background_color": "#adbff0"
@@ -1804,7 +1804,7 @@
       }
     },
     "hover": {
-      "background_color": "#eff3ff",
+      "background_color": "#e7e9f9",
       "selected_indicator": {
         "foreground_color": "#19327a"
       }
@@ -1970,7 +1970,7 @@
       },
       "selected_indicator_color": "#5476d5",
       "default_background_color": "#ffffff",
-      "fixed_background_color": "#eff3ff",
+      "fixed_background_color": "#e7e9f9",
       "foreground_color": "#2a2a2e",
       "sort": {
         "foreground_color": "#6a6d75"
@@ -2310,7 +2310,7 @@
         "accent11": "#ffb5a3",
         "accent12": "#992910",
         "overflow_count": "#b2b7c4",
-        "add": "#eff3ff"
+        "add": "#e7e9f9"
       },
       "initials_foreground": {
         "default": "#2a2a2e",
@@ -3037,7 +3037,7 @@
           "start_shortcut_color": "#6a6d75",
           "parent_icon_color": "#3e4044"
         },
-        "background_color": "#eff3ff"
+        "background_color": "#e7e9f9"
       },
       "selected": {
         "foreground": {
