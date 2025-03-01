@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.133.4](https://github.com/MyPureCloud/genesys-spark/compare/v3.133.3...v3.133.4) (2025-03-01)
+
+
+### Bug Fixes
+
+* **pagination-beta:** fixed translations ([bf68ca7](https://github.com/MyPureCloud/genesys-spark/commit/bf68ca7fa67bca9f2ae1c12e1bc4ba7f3b334cb9))
+
 ### [3.133.3](https://github.com/MyPureCloud/genesys-spark/compare/v3.133.2...v3.133.3) (2025-02-27)
 
 ### [3.133.2](https://github.com/MyPureCloud/genesys-spark/compare/v3.133.1...v3.133.2) (2025-02-21)
