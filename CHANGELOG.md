@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.127.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.126.0...v4.127.0) (2025-03-01)
+
+
+### Features
+
+* **tokens:** created the new deprecated set ([3feb47d](https://github.com/MyPureCloud/genesys-spark/commit/3feb47d0b9c672919811a6d1b1b89cfa769b736d))
+* **tokens:** rearrange $themes file ([b148c98](https://github.com/MyPureCloud/genesys-spark/commit/b148c98744c94f27779786379ac44dc107534bc9))
+
 ## [4.126.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.125.0...v4.126.0) (2025-02-27)
 
 
