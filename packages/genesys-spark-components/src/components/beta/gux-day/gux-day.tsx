@@ -15,9 +15,8 @@ import { Temporal } from '@js-temporal/polyfill';
 import { formatPlainDate } from '@utils/date/temporal';
 
 /**
- * The gux-day component is how we render a day within an calendar. Custom-styled
- * instances can be slotted in to exiting calendars by users of Spark, but it
- * should not be used stand-alone.
+ * The gux-day component is how we render a day within an calendar. It should
+ * not be used stand-alone.
  */
 @Component({
   styleUrl: 'gux-day.scss',
@@ -74,9 +73,7 @@ export class GuxDay {
     return (
       <button onClick={() => this.daySelected.emit(this.day)} type="button">
         <slot>
-          <span aria-hidden="true">
-            {formatPlainDate(this.dayFormatter, this.date)}
-          </span>
+          <span aria-hidden="true">{this.date.day}</span>
           <span class="gux-sr-only">
             {formatPlainDate(this.readerFormatter, this.date)}
           </span>

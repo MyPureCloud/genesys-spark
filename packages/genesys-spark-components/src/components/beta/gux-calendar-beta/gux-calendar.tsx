@@ -1,4 +1,14 @@
-import { Component, Element, h, JSX, Listen, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  forceUpdate,
+  h,
+  JSX,
+  Listen,
+  Method,
+  Prop,
+  State
+} from '@stencil/core';
 import { IWeekElement, GuxCalendarDayOfWeek } from './gux-calendar.types';
 import {
   getWeekdays,
@@ -26,6 +36,17 @@ import { Temporal } from '@js-temporal/polyfill';
 export class GuxCalendar {
   @Element()
   root: HTMLElement;
+
+  // The start day of the week based on user's locale
+  // Some locales will have the start day of the week be different than others
+  @Prop()
+  startDayOfWeek: GuxCalendarDayOfWeek;
+
+  @Method()
+  async guxForceUpdate(): Promise<void> {
+    this.readSlottedInputState();
+    forceUpdate(this.root);
+  }
 
   /**
    * The date that receives focus when selecting a specific day. This also
@@ -56,12 +77,19 @@ export class GuxCalendar {
   // Total number of dates that will display for each month in the calendar
   private MONTH_DATE_COUNT: number = 42;
 
-  // Keeps track of the start day of the week based on user's locale
-  // Some locales will have the start day of the week be different than others
-  private startDayOfWeek: GuxCalendarDayOfWeek;
-
   private get slottedInput(): HTMLInputElement {
     return this.root.querySelector('input[type="date"]');
+  }
+
+  private readSlottedInputState(): void {
+    // Set min value from the "min" input prop
+    if (this.slottedInput.min) {
+      this.minValue = Temporal.PlainDate.from(this.slottedInput.min);
+    }
+    // Set max value from the "max" input prop
+    if (this.slottedInput.max) {
+      this.maxValue = Temporal.PlainDate.from(this.slottedInput.max);
+    }
   }
 
   async componentWillLoad(): Promise<void> {
@@ -75,13 +103,6 @@ export class GuxCalendar {
     this.locale = getDesiredLocale(this.root);
 
     // Set start day of week
-    const startDayOfWeek = this.slottedInput.getAttribute('start-day-of-week');
-    if (startDayOfWeek?.length) {
-      this.startDayOfWeek = parseInt(
-        startDayOfWeek,
-        10
-      ) as GuxCalendarDayOfWeek;
-    }
     this.startDayOfWeek = this.startDayOfWeek || getFirstDayOfWeek(this.locale);
 
     this.i18n = await buildI18nForComponent(this.root, translationResources);
@@ -91,69 +112,27 @@ export class GuxCalendar {
       this.focusDate = selectedDate;
     }
 
-    // Set min value from the "min" input prop
-    if (this.slottedInput.min) {
-      this.minValue = Temporal.PlainDate.from(this.slottedInput.min);
-    }
-    // Set max value from the "max" input prop
-    if (this.slottedInput.max) {
-      this.maxValue = Temporal.PlainDate.from(this.slottedInput.max);
-    }
-  }
-
-  async componentDidRender() {
-    // Because the selection state may be set on slotted attributes, we have
-    // to update it after rendering.
-    this.renderDateSelection();
+    this.readSlottedInputState();
   }
 
   /**
    * Finds the `gux-day` element corresponding to the provided
-   * date string, whether rendered by this component or slotted.
+   * date string.
    * @param dateStr The date to find in ISO format
    */
   private getGuxDayForDate(dateStr: string): HTMLElement | null {
-    return (
-      this.root.shadowRoot
-        // Find the slot for the date
-        .querySelector<HTMLSlotElement>(`slot[name="${dateStr}"]`)
-        // Get the first of the rendered items for that slot
-        ?.assignedNodes({ flatten: true })[0] as HTMLElement
-    );
+    return this.root.shadowRoot.querySelector(`.day-${dateStr}`);
   }
 
   private selectDate(date: Temporal.PlainDate): void {
     if (this.isInvalidDate(date)) {
       return;
     }
-    const oldDateStr = this.slottedInput.value;
     const newDateStr = date.toString();
     this.focusDate = date;
     this.slottedInput.value = newDateStr;
 
-    afterNextRenderTimeout(() => {
-      this.renderDateSelection(oldDateStr);
-    });
-
     simulateNativeEvent(this.root, 'input');
-  }
-
-  /**
-   * Clears the `gux-selected` attribute on the old element and add it
-   * to the new element. This enables styling of the selected state in
-   * the gux-day element in a way that can be used by slotted elements.
-   */
-  private renderDateSelection(oldDateStr?: string): void {
-    const selectedDate = this.getSelectedDate();
-    if (oldDateStr) {
-      const oldSelectedElement = this.getGuxDayForDate(oldDateStr);
-      oldSelectedElement?.removeAttribute('gux-selected');
-    }
-
-    if (selectedDate) {
-      const newSelectedElement = this.getGuxDayForDate(selectedDate.toString());
-      newSelectedElement?.setAttribute('gux-selected', '');
-    }
   }
 
   /**
@@ -347,20 +326,16 @@ export class GuxCalendar {
                     {week.dates.map(day => {
                       const isoDateStr = day.date.toString();
                       return (
-                        <gux-focus-proxy
+                        <gux-day-beta
+                          day={isoDateStr}
                           aria-current={day.selected ? 'true' : 'false'}
                           aria-disabled={day.disabled ? 'true' : 'false'}
                           tabindex={day.selected || day.focused ? '0' : '-1'}
-                        >
-                          <slot key={isoDateStr} name={isoDateStr}>
-                            <gux-day-beta
-                              day={isoDateStr}
-                              class={{
-                                'gux-muted': !day.inCurrentMonth || day.disabled
-                              }}
-                            ></gux-day-beta>
-                          </slot>
-                        </gux-focus-proxy>
+                          class={`
+                            ${!day.inCurrentMonth || day.disabled ? 'gux-muted' : ''}
+                            day-${isoDateStr}  
+                          `}
+                        ></gux-day-beta>
                       ) as JSX.Element;
                     })}
                   </div>
@@ -375,7 +350,11 @@ export class GuxCalendar {
   render(): JSX.Element {
     return (
       <div class="gux-calendar-beta">
-        <slot />
+        <slot
+          onSlotchange={() => {
+            this.readSlottedInputState();
+          }}
+        />
         {this.renderHeader()}
         {this.renderContent()}
       </div>

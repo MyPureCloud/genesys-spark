@@ -5,25 +5,6 @@
   <input type="date" value="2023-05-19" />
 </gux-calendar-beta>
 
-<h2>Customized Date Styles</h2>
-<style>
-  .my-custom-day:not([gux-selected]) {
-    background: red;
-  }
-
-  .my-custom-day:focus-within {
-    outline-color: green;
-  }
-</style>
-<gux-calendar-beta oninput="notify(event)">
-  <input type="date" value="2023-05-19" min="2023-05-10" />
-  <gux-day-beta
-    slot="2023-05-15"
-    day="2023-05-15"
-    class="my-custom-day"
-  ></gux-day-beta>
-</gux-calendar-beta>
-
 <h2>Empty Date Selection</h2>
 <gux-calendar-beta oninput="notify(event)">
   <input type="date" />
@@ -38,20 +19,20 @@
 <div class="container">
   <div class="item">
     <h3>Monday</h3>
-    <gux-calendar-beta oninput="notify(event)">
-      <input type="date" value="2023-07-28" start-day-of-week="1" />
+    <gux-calendar-beta start-day-of-week="1" oninput="notify(event)">
+      <input type="date" value="2023-07-28" />
     </gux-calendar-beta>
   </div>
   <div class="item">
     <h3>Saturday</h3>
-    <gux-calendar-beta oninput="notify(event)">
-      <input type="date" value="2023-07-28" start-day-of-week="6" />
+    <gux-calendar-beta start-day-of-week="6" oninput="notify(event)">
+      <input type="date" value="2023-07-28" />
     </gux-calendar-beta>
   </div>
   <div class="item">
     <h3>Sunday</h3>
-    <gux-calendar-beta oninput="notify(event)">
-      <input type="date" value="2023-07-28" start-day-of-week="7" />
+    <gux-calendar-beta start-day-of-week="7" oninput="notify(event)">
+      <input type="date" value="2023-07-28" />
     </gux-calendar-beta>
   </div>
 </div>
