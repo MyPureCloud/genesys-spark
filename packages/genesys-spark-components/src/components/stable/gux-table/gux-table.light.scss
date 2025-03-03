@@ -3,6 +3,12 @@ gux-table {
     box-sizing: border-box;
   }
 
+  & {
+    border-color: var(--gse-ui-dataTable-border-color);
+    border-style: var(--gse-ui-dataTable-border-style);
+    border-width: var(--gse-ui-dataTable-border-width);
+  }
+
   table {
     inline-size: 100%;
     white-space: nowrap;
@@ -53,10 +59,10 @@ gux-table {
     th,
     td {
       text-align: start;
-      border-color: var(--gse-ui-dataTableItems-divider-color);
-      border-style: var(--gse-ui-dataTableItems-divider-style);
-      border-width: 0 var(--gse-ui-dataTableItems-divider-width)
-        var(--gse-ui-dataTableItems-divider-width) 0;
+      border-color: var(--gse-ui-dataTable-border-color);
+      border-style: var(--gse-ui-dataTable-border-style);
+      border-width: 0 var(--gse-ui-dataTable-border-width)
+        var(--gse-ui-dataTable-border-width) 0;
     }
 
     th[data-cell-numeric],

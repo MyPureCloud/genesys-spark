@@ -2540,6 +2540,13 @@
     "width": "2px",
     "style": "solid"
   },
+  "data_table": {
+    "border": {
+      "color": "#cad1e1",
+      "width": "1px",
+      "style": "solid"
+    }
+  },
   "tabs": {
     "item": {
       "height": "40px",
