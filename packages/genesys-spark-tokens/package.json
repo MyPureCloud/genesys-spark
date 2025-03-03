@@ -10,8 +10,9 @@
   "scripts": {
     "build": "node build/index.mjs",
     "eslint": "eslint . --fix",
-    "lint-all": "npm-run-all \"eslint\" \"prettier\" \"prettier-package-json\"",
+    "lint-all": "npm-run-all \"eslint\" \"prettier\" \"prettier-package-json\" \"normalise-themes\"",
     "lint-staged": "lint-staged --concurrent false",
+    "normalise-themes": "node scripts/normalise-themes.mjs",
     "prettier": "prettier --log-level silent --ignore-unknown --write .",
     "prettier-package-json": "prettier-package-json --write ./package.json",
     "snapshot": "node build/index.mjs snapshot && npm run tokens-reports",

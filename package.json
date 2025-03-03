@@ -27,7 +27,7 @@
     "lint-staged": "npm-run-all \"lint-staged.*\"",
     "lint-staged.root": "lint-staged --concurrent false",
     "lint-staged.workspaces": "npm run lint-staged --workspaces --if-present",
-    "new-tokens-data": "npm run snapshot --workspace=packages/genesys-spark-tokens",
+    "new-tokens-data": "npm run lint && npm run build && npm run snapshot",
     "playground.angular": "run-pty playground.angular.json",
     "playground.angular.start": "cd ./playground/angular-v13 && npm install && npm start",
     "playground.ember": "run-pty playground.ember.json",
