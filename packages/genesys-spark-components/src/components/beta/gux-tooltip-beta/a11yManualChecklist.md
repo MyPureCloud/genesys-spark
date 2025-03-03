@@ -15,5 +15,5 @@
 | ✅ | [3.2.2 On Input](https://www.w3.org/WAI/WCAG22/Understanding/on-input.html) | - |
 | ✅ | [3.3.1 Error Identification](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html) | - |
 | ✅ | [3.2.2 Labels or Instructions](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html) | - |
-| ✅ | [4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html) | - |
+| ❌ | [4.1.2: Name, Role, Value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html) | COMUI-819 tooltip text is not accessible to the screenreader in one scenario: if it is put in a paragraph around text or anything not focusable, then it doesn’t get read out by Voiceover. |
 | ✅ | [4.1.3 Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html) | - |
