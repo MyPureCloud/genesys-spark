@@ -91,15 +91,15 @@
       flex-wrap: nowrap;
       gap: var(--gse-ui-toggle-gap);
       place-content: stretch flex-start;
-      align-items: flex-start;
-      align-items: center;
       padding: var(--gse-ui-formControl-helper-errorPadding);
+      font-family: var(--gse-ui-toggle-label-fontFamily);
       font-size: var(--gse-ui-toggle-label-fontSize);
+      font-weight: var(--gse-ui-toggle-label-fontWeight);
+      line-height: var(--gse-ui-toggle-label-lineHeight);
       color: var(--gse-ui-formControl-helper-errorColor);
 
       gux-icon {
         flex: 0 1 auto;
-        align-self: auto;
         order: 0;
         color: var(--gse-ui-formControl-helper-errorColor);
       }

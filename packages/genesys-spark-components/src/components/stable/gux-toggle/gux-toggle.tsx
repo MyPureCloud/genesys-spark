@@ -165,7 +165,7 @@ export class GuxToggle {
         <div id={this.errorId} class="gux-toggle-error">
           <div class="gux-toggle-error-container">
             <gux-icon
-              icon-name="fa/hexagon-exclamation-regular"
+              icon-name="fa/hexagon-exclamation-solid"
               decorative
               size="small"
             ></gux-icon>
