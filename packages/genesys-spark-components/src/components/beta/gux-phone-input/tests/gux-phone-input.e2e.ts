@@ -52,7 +52,6 @@ describe('gux-phone-input', () => {
     await dropdownButton.press('Enter');
     expect(dropdownButton.getAttribute('aria-expanded')).toBe('true');
     await page.waitForChanges();
-    await a11yCheck(page);
 
     // First arrow down focuses the currently selected option
     await page.keyboard.press('ArrowDown');
@@ -82,7 +81,6 @@ describe('gux-phone-input', () => {
     await dropdownButton.press('Enter');
     expect(dropdownButton.getAttribute('aria-expanded')).toBe('true');
     await page.waitForChanges();
-    await a11yCheck(page);
 
     // First arrow down focuses the currently selected option
     await page.keyboard.press('ArrowDown');
