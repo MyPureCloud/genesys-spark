@@ -39,7 +39,7 @@ export class GuxCalendar {
 
   // The start day of the week based on user's locale
   // Some locales will have the start day of the week be different than others
-  @Prop()
+  @Prop({ mutable: true })
   startDayOfWeek: GuxCalendarDayOfWeek;
 
   @Method()

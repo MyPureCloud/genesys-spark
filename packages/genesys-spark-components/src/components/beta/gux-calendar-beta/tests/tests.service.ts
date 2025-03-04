@@ -22,10 +22,7 @@ export async function validateHeaderMonth(
 export async function findSelectedDayElement(
   element: E2EElement
 ): Promise<E2EElement> {
-  const selectedFocusProxy = await element.find(
-    'pierce/gux-focus-proxy[aria-current="true"]'
-  );
-  return selectedFocusProxy.find('gux-day-beta');
+  return element.find('pierce/gux-day-beta[aria-current="true"]');
 }
 
 export async function validateFocusedDay(
@@ -40,7 +37,7 @@ export async function findDayElement(
   element: E2EElement,
   isoDate: string
 ): Promise<E2EElement> {
-  return await element.find(`pierce/slot[name="${isoDate}"] gux-day-beta`);
+  return await element.find(`pierce/.day-${isoDate}`);
 }
 
 export async function goToPreviousMonth(

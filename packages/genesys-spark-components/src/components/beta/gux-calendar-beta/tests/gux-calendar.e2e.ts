@@ -286,14 +286,14 @@ describe('gux-calendar', () => {
       });
       const element = await page.find('gux-calendar-beta');
 
-      const selectedFocusProxy = await element.find(
-        'pierce/gux-focus-proxy[aria-current="true"]'
+      const selectedFocusTarget = await element.find(
+        'pierce/gux-day-beta[aria-current="true"]'
       );
-      const nonSelectedFocusProxy = await element.find(
-        'pierce/gux-focus-proxy:not([aria-current="true"])'
+      const nonSelectedFocusTarget = await element.find(
+        'pierce/gux-day-beta:not([aria-current="true"])'
       );
-      expect(selectedFocusProxy.tabIndex).toBe(0);
-      expect(nonSelectedFocusProxy.tabIndex).toBe(-1);
+      expect(selectedFocusTarget.tabIndex).toBe(0);
+      expect(nonSelectedFocusTarget.tabIndex).toBe(-1);
     });
   });
 });
