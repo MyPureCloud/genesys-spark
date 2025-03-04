@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.128.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.127.0...v4.128.0) (2025-03-04)
+
+
+### Features
+
+* **dropdown-multi:** reverting combobox change ([ce02320](https://github.com/MyPureCloud/genesys-spark/commit/ce02320a7c08a22bacd762f1153db81fd87b607d))
+* **table:** updating table borders ([dec4cc1](https://github.com/MyPureCloud/genesys-spark/commit/dec4cc155835721a5d39db26187cfdb123b797db))
+
+
+### Bug Fixes
+
+* **popover-beta:** fix popover-beta and popover-beta-list keyboard a11y ([f32be33](https://github.com/MyPureCloud/genesys-spark/commit/f32be33c0ff10ae134fa49807b06ed62367310d2))
+
 ## [4.127.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.126.0...v4.127.0) (2025-03-01)
 
 
