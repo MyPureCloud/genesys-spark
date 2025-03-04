@@ -1,4 +1,5 @@
 @use '~genesys-spark/dist/scss/mixins.scss';
+@use '~genesys-spark/dist/scss/focus.scss';
 
 :host {
   display: inline-block;
@@ -14,15 +15,8 @@
 }
 
 :host(:focus-within) {
-  outline: var(
-      --gse-semantic-focusRing-default-border-width,
-      var(--gse-semantic-focusOutline-md-borderWidth)
-    )
-    solid
-    var(
-      --gse-semantic-focusRing-default-border-color,
-      var(--gse-semantic-border-focus)
-    );
+  @include focus.gux-focus-ring;
+
   border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
 }
 

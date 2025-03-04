@@ -7,9 +7,8 @@
 
 ## Overview
 
-The gux-day component is how we render a day within an calendar. Custom-styled
-instances can be slotted in to exiting calendars by users of Spark, but it
-should not be used stand-alone.
+The gux-day component is how we render a day within an calendar. It should
+not be used stand-alone.
 
 ## Properties
 
