@@ -1,8 +1,9 @@
 # gux-button-slot manual accessibility testing status
 
-**Last Updated:** 2024-12-17T16:12:07.145Z
+**Last Updated:** 2025-03-03T10:59:48.812Z
 | Pass | WCAG Success Criterion | Notes |
 | --- | --- | --- |
+| ✅ | [1.1.1 Non-text Content](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html) | - |
 | ✅ | [2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html) | - |
 | ✅ | [2.1.2 No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html) | - |
 | ✅ | [2.4.3 Focus Order](https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html) | - |
