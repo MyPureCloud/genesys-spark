@@ -15,6 +15,7 @@
     "ui/layout_and_container",
     "ui/navigation",
     "ui/feedback",
+    "ui/deprecated",
     "ui-charts/area_chart",
     "ui-charts/bar_chart",
     "ui-charts/bubble_chart",
@@ -27,7 +28,6 @@
     "ui-charts/sankey_alluvial",
     "ui-charts/scatter_chart",
     "ui-charts/sparkline",
-    "ui-charts/shared",
-    "ui/deprecated"
+    "ui-charts/shared"
   ]
 }

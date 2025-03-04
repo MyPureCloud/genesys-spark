@@ -1027,7 +1027,7 @@
         },
         "success": {
           "10": {
-            "value": "{color.emerald.600}",
+            "value": "{color.emerald.700}",
             "type": "color"
           },
           "10d": {
