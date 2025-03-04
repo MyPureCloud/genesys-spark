@@ -9,7 +9,7 @@ const html = `
 </gux-calendar-beta>
 `;
 
-describe('gux-calendar', () => {
+describe('gux-calendar-beta', () => {
   it('should build', async () => {
     const page = await newSpecPage({ components, html, language });
 

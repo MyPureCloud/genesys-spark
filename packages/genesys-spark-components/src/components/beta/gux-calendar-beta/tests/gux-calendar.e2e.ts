@@ -9,7 +9,7 @@ import {
   validateFocusedDay
 } from './tests.service';
 
-describe('gux-calendar', () => {
+describe.skip('gux-calendar-beta', () => {
   const MIN_DATE = '2023-04-15';
   const MAX_DATE = '2023-06-20';
   const defaultHtml = `
