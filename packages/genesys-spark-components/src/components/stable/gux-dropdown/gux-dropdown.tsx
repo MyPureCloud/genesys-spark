@@ -438,13 +438,10 @@ export class GuxDropdown {
   }
 
   private renderOption(option: HTMLGuxOptionElement): JSX.Element {
-    let optionText = option.textContent;
+    let optionText = option.textContent.trim();
     if (hasSlot(option, 'subtext')) {
       const subtext = option.querySelector('[slot=subtext]');
-      optionText = optionText.substring(
-        0,
-        optionText.length - subtext.textContent.length
-      );
+      optionText = optionText.replace(subtext.textContent, '');
     }
     return (
       <gux-truncate ref={el => (this.truncateElement = el)} dir="auto">
