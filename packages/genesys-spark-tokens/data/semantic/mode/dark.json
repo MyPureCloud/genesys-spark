@@ -280,15 +280,49 @@
       },
       "special_accents": {
         "ai": {
-          "top_left": {
-            "value": "{theme.background.custom_accents.ai.10d}",
-            "type": "color",
-            "description": "This is the top left color that the ai gradient uses for container elements."
+          "tonal_medium": {
+            "top_left": {
+              "value": "{theme.background.custom_accents.ai.10d}",
+              "type": "color",
+              "description": "This is the top left color that the ai gradient uses for container elements."
+            },
+            "bottom_right": {
+              "value": "{theme.background.custom_accents.ai.20d}",
+              "type": "color",
+              "description": "This is the bottom right color that the ai gradient uses for container elements."
+            }
           },
-          "bottom_right": {
-            "value": "{theme.background.custom_accents.ai.20d}",
-            "type": "color",
-            "description": "This is the bottom right color that the ai gradient uses for container elements."
+          "tonal_subtle": {
+            "top_left": {
+              "value": "{theme.background.custom_accents.ai.10d}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.65",
+                    "space": "lch",
+                    "color": "{background.container.page.default}"
+                  }
+                }
+              },
+              "description": "This is the top left color that the ai gradient uses for container elements."
+            },
+            "bottom_right": {
+              "value": "{theme.background.custom_accents.ai.20d}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": ".75",
+                    "space": "lch",
+                    "color": "{background.container.page.default}"
+                  }
+                }
+              },
+              "description": "This is the bottom right color that the ai gradient uses for container elements."
+            }
           }
         }
       }
