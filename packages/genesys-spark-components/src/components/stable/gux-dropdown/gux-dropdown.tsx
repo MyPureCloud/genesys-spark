@@ -441,10 +441,7 @@ export class GuxDropdown {
     let optionText = option.textContent.trim();
     if (hasSlot(option, 'subtext')) {
       const subtext = option.querySelector('[slot=subtext]');
-      optionText = optionText.substring(
-        0,
-        optionText.length - subtext.textContent.trim().length
-      );
+      optionText = optionText.replace(subtext.textContent, '');
     }
     return (
       <gux-truncate ref={el => (this.truncateElement = el)} dir="auto">
