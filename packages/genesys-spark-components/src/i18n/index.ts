@@ -110,7 +110,13 @@ function findLocaleInDom(element: HTMLElement): string {
 }
 
 type WeekStartDayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
-
+/**
+ * Get the 0-indexed first day of the week for a given locale, where 0 represents
+ * Sunday. This should be considered deprecated, as newer browser APIs use
+ * a different day-of-week indexing scheme, provided by `getFirstDayOfWeek`
+ * @param locale
+ * @returns A number representing the first day of the week where 0 is Sunday
+ */
 export function getStartOfWeek(
   locale: string = DEFAULT_LOCALE
 ): WeekStartDayOfWeek {
@@ -120,4 +126,31 @@ export function getStartOfWeek(
       ? startOfWeekData[locale]
       : startOfWeekData[DEFAULT_LOCALE]
   ) as WeekStartDayOfWeek;
+}
+
+/**
+ * Get the 1-indexed first day of the week for a given locale, where 1 represents
+ * Monday. This is the preferred format, as it aligns with the scheme used in the
+ * upcoming browser Temporal APIs.
+ *
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/dayOfWeek
+ *
+ * @param locale
+ * @returns A number representing the first day of the week where 1 is Monday
+ */
+type FirstDayOfWeek = 1 | 2 | 3 | 4 | 5 | 6 | 7;
+export function getFirstDayOfWeek(
+  locale: string = DEFAULT_LOCALE
+): FirstDayOfWeek {
+  // Eventually, we can hopefully convert all of this to:
+  // `new Locale(locale).getWeekInfo().firstDay`
+  // Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
+  const legacyFirstDay = getStartOfWeek(locale);
+  // This looks crazy, but it's the following:
+  // - Shift legacy days "left" 1 place: `legacyFirstDay - 1`
+  // - Take a true mathematical modulo: `((n % d) + d) % d` (where d is 7)
+  //    to get back to the correct range
+  // - Add 1 to make the list 1-indexed.
+  return (((((legacyFirstDay - 1) % 7) + 7) % 7) + 1) as FirstDayOfWeek;
 }

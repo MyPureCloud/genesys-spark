@@ -11,6 +11,7 @@ export default [
       reportUnusedDisableDirectives: false
     },
     rules: {
+      'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
       '@typescript-eslint/no-inferrable-types': 'off',
       '@typescript-eslint/no-redundant-type-constituents': 'off',
       '@typescript-eslint/no-unsafe-enum-comparison': 'off'
