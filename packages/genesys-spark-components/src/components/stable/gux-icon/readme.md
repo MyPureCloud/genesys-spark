@@ -42,6 +42,7 @@
  - [gux-form-field-checkbox](../gux-form-field/components/gux-form-field-checkbox)
  - [gux-form-field-checkbox-group-beta](../gux-form-field/components/gux-form-field-checkbox-group)
  - [gux-form-field-color](../gux-form-field/components/gux-form-field-color)
+ - [gux-form-field-date-beta](../gux-form-field/components/gux-form-field-date)
  - [gux-form-field-dropdown](../gux-form-field/components/gux-form-field-dropdown)
  - [gux-form-field-file](../gux-form-field/components/gux-form-field-file)
  - [gux-form-field-file-beta](../gux-form-field/components/gux-form-field-file-beta)
@@ -116,6 +117,7 @@ graph TD;
   gux-form-field-checkbox --> gux-icon
   gux-form-field-checkbox-group-beta --> gux-icon
   gux-form-field-color --> gux-icon
+  gux-form-field-date-beta --> gux-icon
   gux-form-field-dropdown --> gux-icon
   gux-form-field-file --> gux-icon
   gux-form-field-file-beta --> gux-icon
