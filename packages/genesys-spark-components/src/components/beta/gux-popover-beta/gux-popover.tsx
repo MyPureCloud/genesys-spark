@@ -127,7 +127,7 @@ export class GuxPopover {
     }
   }
 
-  get titleSlot(): HTMLSlotElement | null {
+  get titleSlot(): HTMLElement | null {
     return getSlot(this.root, 'title');
   }
 
