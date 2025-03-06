@@ -1,0 +1,259 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-form-field-date #render help should render component as expected 1`] = `"<gux-form-field-date hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input"><div class="gux-input-container"><gux-icon icon-name="fa/magnifying-glass-regular" size="inherit" hydrated=""></gux-icon><slot name="input"></slot></div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help gux-show"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="date" name="e-1" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-date>"`;
+
+exports[`gux-form-field-date #render help should render component as expected 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <gux-icon hydrated="" icon-name="fa/magnifying-glass-regular" size="inherit"></gux-icon>
+        <slot name="input"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help gux-show">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-date #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-date lang="en" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input"><div class="gux-input-container"><gux-icon icon-name="fa/magnifying-glass-regular" size="inherit" hydrated=""></gux-icon><slot name="input"></slot><gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button></div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="date" value="Sample date" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-date>"`;
+
+exports[`gux-form-field-date #render input attributes should render component as expected (1) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <gux-icon hydrated="" icon-name="fa/magnifying-glass-regular" size="inherit"></gux-icon>
+        <slot name="input"></slot>
+        <gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-date #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-date lang="en" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input"><div class="gux-input-container gux-disabled"><gux-icon icon-name="fa/magnifying-glass-regular" size="inherit" hydrated=""></gux-icon><slot name="input"></slot></div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="date" value="Sample date" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-date>"`;
+
+exports[`gux-form-field-date #render input attributes should render component as expected (2) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-disabled gux-input-container">
+        <gux-icon hydrated="" icon-name="fa/magnifying-glass-regular" size="inherit"></gux-icon>
+        <slot name="input"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-date #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-date lang="en" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-required gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""><span class="gux-form-field-label-indicator-required" aria-hidden="true">*</span></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input"><div class="gux-input-container"><gux-icon icon-name="fa/magnifying-glass-regular" size="inherit" hydrated=""></gux-icon><slot name="input"></slot><gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button></div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="date" value="Sample date" required="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-date>"`;
+
+exports[`gux-form-field-date #render input attributes should render component as expected (3) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label gux-required">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated="">
+      <span aria-hidden="true" class="gux-form-field-label-indicator-required">
+        *
+      </span>
+    </gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <gux-icon hydrated="" icon-name="fa/magnifying-glass-regular" size="inherit"></gux-icon>
+        <slot name="input"></slot>
+        <gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-date #render label-position should render component as expected (1) 1`] = `"<gux-form-field-date lang="en" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input"><div class="gux-input-container"><gux-icon icon-name="fa/magnifying-glass-regular" size="inherit" hydrated=""></gux-icon><slot name="input"></slot><gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button></div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="date" value="Sample date" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-date>"`;
+
+exports[`gux-form-field-date #render label-position should render component as expected (1) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <gux-icon hydrated="" icon-name="fa/magnifying-glass-regular" size="inherit"></gux-icon>
+        <slot name="input"></slot>
+        <gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-date #render label-position should render component as expected (2) 1`] = `"<gux-form-field-date lang="en" label-position="above" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input"><div class="gux-input-container"><gux-icon icon-name="fa/magnifying-glass-regular" size="inherit" hydrated=""></gux-icon><slot name="input"></slot><gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button></div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="date" value="Sample date" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-date>"`;
+
+exports[`gux-form-field-date #render label-position should render component as expected (2) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <gux-icon hydrated="" icon-name="fa/magnifying-glass-regular" size="inherit"></gux-icon>
+        <slot name="input"></slot>
+        <gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-date #render label-position should render component as expected (3) 1`] = `"<gux-form-field-date lang="en" label-position="beside" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input"><div class="gux-input-container"><gux-icon icon-name="fa/magnifying-glass-regular" size="inherit" hydrated=""></gux-icon><slot name="input"></slot><gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button></div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="date" value="Sample date" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-date>"`;
+
+exports[`gux-form-field-date #render label-position should render component as expected (3) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <gux-icon hydrated="" icon-name="fa/magnifying-glass-regular" size="inherit"></gux-icon>
+        <slot name="input"></slot>
+        <gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-date #render label-position should render component as expected (4) 1`] = `"<gux-form-field-date lang="en" label-position="screenreader" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-screenreader"><div class="gux-form-field-label gux-screenreader"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input"><div class="gux-input-container"><gux-icon icon-name="fa/magnifying-glass-regular" size="inherit" hydrated=""></gux-icon><slot name="input"></slot><gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button></div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="date" value="Sample date" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-date>"`;
+
+exports[`gux-form-field-date #render label-position should render component as expected (4) 2`] = `
+<div class="gux-form-field-container gux-screenreader">
+  <div class="gux-form-field-label gux-screenreader">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-input">
+      <div class="gux-input-container">
+        <gux-icon hydrated="" icon-name="fa/magnifying-glass-regular" size="inherit"></gux-icon>
+        <slot name="input"></slot>
+        <gux-form-field-input-clear-button hydrated=""></gux-form-field-input-clear-button>
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
