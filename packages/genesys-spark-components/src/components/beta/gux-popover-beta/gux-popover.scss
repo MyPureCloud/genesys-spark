@@ -9,7 +9,6 @@
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: 0;
-  min-inline-size: 280px; // TODO: add new token once UX has added it: GDS-2672
   padding: var(--gse-ui-popover-padding);
   overflow: hidden;
   background-color: var(--gse-ui-popover-backgroundColor);
