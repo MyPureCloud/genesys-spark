@@ -4,10 +4,10 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type                                                                        | Default       |
-| ---------- | ----------- | ----------- | --------------------------------------------------------------------------- | ------------- |
-| `accent`   | `accent`    |             | `"danger" \| "ghost" \| "inline" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
-| `iconOnly` | `icon-only` |             | `boolean`                                                                   | `undefined`   |
+| Property   | Attribute   | Description | Type                                                                                        | Default       |
+| ---------- | ----------- | ----------- | ------------------------------------------------------------------------------------------- | ------------- |
+| `accent`   | `accent`    |             | `"danger" \| "ghost" \| "inline" \| "input-icon" \| "primary" \| "secondary" \| "tertiary"` | `'secondary'` |
+| `iconOnly` | `icon-only` |             | `boolean`                                                                                   | `undefined`   |
 
 
 ## Slots
@@ -27,6 +27,7 @@
  - [gux-context-menu](../gux-context-menu)
  - [gux-dismiss-button](../gux-dismiss-button)
  - [gux-file-list-item](../gux-form-field/components/gux-form-field-file-beta/components/gux-file-list-item)
+ - [gux-form-field-date-beta](../gux-form-field/components/gux-form-field-date)
  - [gux-form-field-file-beta](../gux-form-field/components/gux-form-field-file-beta)
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-pagination-buttons-legacy](../../legacy/gux-pagination-legacy/gux-pagination-buttons-legacy)
@@ -52,6 +53,7 @@ graph TD;
   gux-context-menu --> gux-button-slot
   gux-dismiss-button --> gux-button-slot
   gux-file-list-item --> gux-button-slot
+  gux-form-field-date-beta --> gux-button-slot
   gux-form-field-file-beta --> gux-button-slot
   gux-pagination-buttons --> gux-button-slot
   gux-pagination-buttons-legacy --> gux-button-slot
