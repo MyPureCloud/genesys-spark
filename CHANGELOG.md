@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.129.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.129.0...v4.129.1) (2025-03-06)
+
+
+### Bug Fixes
+
+* **tab:** focus ring cut off on bottom ([e573840](https://github.com/MyPureCloud/genesys-spark/commit/e5738406dcf59714a1bdb04ec215111c0a8385bc))
+
 ## [4.129.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.128.0...v4.129.0) (2025-03-05)
 
 
