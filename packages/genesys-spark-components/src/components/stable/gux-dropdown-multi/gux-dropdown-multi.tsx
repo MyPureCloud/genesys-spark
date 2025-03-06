@@ -175,7 +175,7 @@ export class GuxDropdownMulti {
    */
   @Method()
   getSelectedValues(): Promise<string[]> {
-    return Promise.resolve(this.value?.split(',') || []);
+    return Promise.resolve(this.value?.split(',').filter(i => i !== '') || []);
   }
 
   @Listen('keydown')
@@ -353,7 +353,7 @@ export class GuxDropdownMulti {
     const listboxOptionElements: HTMLGuxOptionElement[] = Array.from(
       this.root.querySelectorAll('gux-option-multi')
     );
-    const values = value ? value.split(',') : [];
+    const values = value && value !== '' ? value.split(',') : [];
 
     return listboxOptionElements.filter(element =>
       values.includes(element.value)
@@ -520,7 +520,8 @@ export class GuxDropdownMulti {
   }
 
   private renderTag(): JSX.Element {
-    const selectedValues = this.value?.split(',') || [];
+    const selectedValues =
+      this.value && this.value !== '' ? this.value.split(',') : [];
     if (selectedValues.length) {
       return (
         <gux-dropdown-multi-tag
