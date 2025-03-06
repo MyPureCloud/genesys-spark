@@ -9,6 +9,7 @@
 
 ### Used by
 
+ - [gux-form-field-date-beta](../../components/gux-form-field-date)
  - [gux-form-field-number](../../components/gux-form-field-number)
  - [gux-form-field-search](../../components/gux-form-field-search)
  - [gux-form-field-text-like](../../components/gux-form-field-text-like)
@@ -21,6 +22,7 @@
 ```mermaid
 graph TD;
   gux-form-field-input-clear-button --> gux-icon
+  gux-form-field-date-beta --> gux-form-field-input-clear-button
   gux-form-field-number --> gux-form-field-input-clear-button
   gux-form-field-search --> gux-form-field-input-clear-button
   gux-form-field-text-like --> gux-form-field-input-clear-button
