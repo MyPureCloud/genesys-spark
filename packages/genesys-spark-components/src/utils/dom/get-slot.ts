@@ -9,4 +9,3 @@ export function getSlot(element: HTMLElement, slotName: string): Element {
   }
 
   return null;
-}
