@@ -18,6 +18,7 @@
 
  - [gux-context-menu](../../stable/gux-context-menu)
  - [gux-file-list-item](../../stable/gux-form-field/components/gux-form-field-file-beta/components/gux-file-list-item)
+ - [gux-form-field-date-beta](../../stable/gux-form-field/components/gux-form-field-date)
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
  - [gux-inline-alert](../../stable/gux-inline-alert)
  - [gux-label-info-beta](../gux-label-info)
@@ -28,6 +29,7 @@
 graph TD;
   gux-context-menu --> gux-screen-reader-beta
   gux-file-list-item --> gux-screen-reader-beta
+  gux-form-field-date-beta --> gux-screen-reader-beta
   gux-icon-tooltip-beta --> gux-screen-reader-beta
   gux-inline-alert --> gux-screen-reader-beta
   gux-label-info-beta --> gux-screen-reader-beta
