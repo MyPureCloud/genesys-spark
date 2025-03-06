@@ -449,7 +449,7 @@
       },
       "regular": {
         "background_color": {
-          "value": "{background.system.info.tonal_medium}",
+          "value": "{background.system.info.tonal_subtle}",
           "type": "color"
         },
         "foreground_color": {
@@ -471,7 +471,7 @@
       },
       "regular": {
         "background_color": {
-          "value": "{background.system.success.tonal_medium}",
+          "value": "{background.system.success.tonal_subtle}",
           "type": "color"
         },
         "foreground_color": {

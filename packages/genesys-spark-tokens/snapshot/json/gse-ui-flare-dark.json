@@ -570,7 +570,7 @@
         "foreground_color": "#ffffff"
       },
       "regular": {
-        "background_color": "#263b73",
+        "background_color": "#141c34",
         "foreground_color": "#ffffff"
       }
     },
@@ -580,7 +580,7 @@
         "foreground_color": "#ffffff"
       },
       "regular": {
-        "background_color": "#044834",
+        "background_color": "#02241a",
         "foreground_color": "#ffffff"
       }
     },
