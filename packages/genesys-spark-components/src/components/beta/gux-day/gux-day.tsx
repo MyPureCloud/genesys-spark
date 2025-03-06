@@ -1,14 +1,4 @@
-import {
-  Component,
-  Element,
-  Event,
-  EventEmitter,
-  h,
-  JSX,
-  Prop,
-  State,
-  Watch
-} from '@stencil/core';
+import { Component, Element, h, JSX, Prop, State, Watch } from '@stencil/core';
 import { getDesiredLocale } from 'i18n';
 import * as sparkIntl from '../../../genesys-spark-utils/intl';
 import { Temporal } from '@js-temporal/polyfill';
@@ -41,9 +31,6 @@ export class GuxDay {
     this.readDateFromProp();
   }
 
-  @Event({ eventName: 'guxdayselected' })
-  daySelected: EventEmitter<string>;
-
   /* Formatter for displaying the numeric day of the month */
   dayFormatter: Intl.DateTimeFormat;
 
@@ -61,7 +48,6 @@ export class GuxDay {
   async connectedCallback(): Promise<void> {
     this.readDateFromProp();
     const locale = getDesiredLocale(this.root);
-    this.dayFormatter = sparkIntl.dateTimeFormat(locale, { day: 'numeric' });
     this.readerFormatter = sparkIntl.dateTimeFormat(locale, {
       year: 'numeric',
       month: 'long',
@@ -71,7 +57,7 @@ export class GuxDay {
 
   render(): JSX.Element {
     return (
-      <button onClick={() => this.daySelected.emit(this.day)} type="button">
+      <button type="button">
         <slot>
           <span aria-hidden="true">{this.date.day}</span>
           <span class="gux-sr-only">

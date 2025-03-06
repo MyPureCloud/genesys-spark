@@ -25,5 +25,10 @@ export function formatPlainDate(
   formatDate.setFullYear(date.year);
   formatDate.setMonth(date.month - 1);
   formatDate.setDate(date.day);
+  formatDate.setHours(12);
+  formatDate.setMinutes(0);
+  formatDate.setSeconds(0);
+  formatDate.setMilliseconds(0);
+
   return formatter.format(formatDate);
 }

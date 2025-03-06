@@ -4,7 +4,6 @@ import {
   forceUpdate,
   h,
   JSX,
-  Listen,
   Method,
   Prop,
   State
@@ -63,9 +62,12 @@ export class GuxCalendar {
   @State()
   private maxValue: Temporal.PlainDate | null;
 
-  @Listen('guxdayselected')
-  onDaySelected(event: CustomEvent<string>) {
-    const selectedDate = Temporal.PlainDate.from(event.detail);
+  detectDayClick(event: MouseEvent) {
+    if (!((event.target as HTMLElement).tagName === 'GUX-DAY-BETA')) {
+      return;
+    }
+    const dayElement = event.target as HTMLGuxDayBetaElement;
+    const selectedDate = Temporal.PlainDate.from(dayElement.day);
     this.selectDate(selectedDate);
     event.stopPropagation();
   }
@@ -133,6 +135,7 @@ export class GuxCalendar {
     this.slottedInput.value = newDateStr;
 
     simulateNativeEvent(this.root, 'input');
+    simulateNativeEvent(this.root, 'change');
   }
 
   /**
@@ -311,7 +314,10 @@ export class GuxCalendar {
 
   private renderContent(): JSX.Element {
     return (
-      <div onKeyDown={e => void this.onKeyDown(e)}>
+      <div
+        onKeyDown={e => void this.onKeyDown(e)}
+        onClick={e => void this.detectDayClick(e)}
+      >
         <div class="gux-content">
           <div class="gux-week-days">
             {getWeekdays(this.locale, this.startDayOfWeek).map(
