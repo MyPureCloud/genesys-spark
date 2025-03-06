@@ -277,6 +277,54 @@
         "value": "{theme.background.container.primary.45d}",
         "type": "color",
         "description": "We use the canvas color for backgrounds that are meant to be used as a canvas, for example, archiect's boards."
+      },
+      "special_accents": {
+        "ai": {
+          "tonal_medium": {
+            "top_left": {
+              "value": "{theme.background.custom_accents.ai.10d}",
+              "type": "color",
+              "description": "This is the top left color that the ai gradient uses for container elements."
+            },
+            "bottom_right": {
+              "value": "{theme.background.custom_accents.ai.20d}",
+              "type": "color",
+              "description": "This is the bottom right color that the ai gradient uses for container elements."
+            }
+          },
+          "tonal_subtle": {
+            "top_left": {
+              "value": "{theme.background.custom_accents.ai.10d}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": "0.75",
+                    "space": "lch",
+                    "color": "{background.container.page.default}"
+                  }
+                }
+              },
+              "description": "This is the top left color that the ai gradient uses for container elements."
+            },
+            "bottom_right": {
+              "value": "{theme.background.custom_accents.ai.20d}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": ".75",
+                    "space": "lch",
+                    "color": "{background.container.page.default}"
+                  }
+                }
+              },
+              "description": "This is the bottom right color that the ai gradient uses for container elements."
+            }
+          }
+        }
       }
     },
     "system": {
@@ -745,6 +793,18 @@
           "value": "{theme.foreground.special_accents.brand.10d}",
           "type": "color",
           "description": "The brand color, mostly used for logos on surfaces."
+        },
+        "ai_gradient": {
+          "top_left": {
+            "value": "{theme.foreground.custom_accents.ai.10d}",
+            "type": "color",
+            "description": "This is the top left color that the ai gradient uses for icons and text"
+          },
+          "bottom_right": {
+            "value": "{theme.foreground.custom_accents.ai.20d}",
+            "type": "color",
+            "description": "This is the bottom right color that the ai gradient uses for icons and text"
+          }
         }
       }
     },
@@ -1012,6 +1072,20 @@
           "value": "{theme.border.edges.active.10d}",
           "type": "color",
           "description": "The color for the edge borders of high contrast surfaces that are on the active state."
+        }
+      },
+      "special_accents": {
+        "ai": {
+          "top_left": {
+            "value": "{theme.border.custom_accents.ai.10d}",
+            "type": "color",
+            "description": "This is the top left color that the ai gradient uses for borders."
+          },
+          "bottom_right": {
+            "value": "{theme.border.custom_accents.ai.20d}",
+            "type": "color",
+            "description": "This is the bottom right color that the ai gradient uses for borders."
+          }
         }
       }
     },
