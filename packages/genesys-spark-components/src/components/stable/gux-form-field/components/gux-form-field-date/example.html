@@ -1,0 +1,166 @@
+<h1>gux-form-field-date-beta</h1>
+
+<p>slot a input[type=date] element into a gux-form-field-date-beta element</p>
+
+<h2>Examples</h2>
+<form onchange="notify(event)" oninput="notify(event)">
+  <fieldset>
+    <legend>Label Position</legend>
+
+    <gux-form-field-date-beta>
+      <input slot="input" type="date" name="lp-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-date-beta>
+
+    <gux-form-field-date-beta>
+      <input slot="input" type="date" name="lp-2" />
+      <label slot="label">Default long label</label>
+    </gux-form-field-date-beta>
+
+    <gux-form-field-date-beta label-position="above">
+      <input slot="input" type="date" name="lp-3" />
+      <label slot="label">Above</label>
+    </gux-form-field-date-beta>
+
+    <gux-form-field-date-beta label-position="beside">
+      <input slot="input" type="date" name="lp-4" />
+      <label slot="label">Beside</label>
+    </gux-form-field-date-beta>
+
+    <gux-form-field-date-beta label-position="screenreader">
+      <input slot="input" type="date" name="lp-5" />
+      <label slot="label">Screenreader</label>
+    </gux-form-field-date-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Input attributes</legend>
+
+    <gux-form-field-date-beta>
+      <input slot="input" type="date" name="a-1" disabled />
+      <label slot="label">Disabled</label>
+    </gux-form-field-date-beta>
+
+    <gux-form-field-date-beta>
+      <input slot="input" type="date" name="a-2" required />
+      <label slot="label">Required</label>
+    </gux-form-field-date-beta>
+
+    <gux-form-field-date-beta>
+      <input slot="input" type="date" name="a-3" placeholder="Enter date" />
+      <label slot="label">Placeholder</label>
+    </gux-form-field-date-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Error</legend>
+
+    <gux-form-field-date-beta>
+      <input slot="input" type="date" name="e-1" />
+      <label slot="label">Default</label>
+      <span slot="error">This is an error message</span>
+    </gux-form-field-date-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Help</legend>
+
+    <gux-form-field-date-beta>
+      <input slot="input" type="date" name="e-1" />
+      <label slot="label">Default</label>
+      <span slot="help">This is a help message</span>
+    </gux-form-field-date-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Label Info</legend>
+
+    <gux-form-field-date-beta>
+      <input slot="input" type="date" name="e-1" />
+      <label slot="label">Default</label>
+      <gux-label-info-beta slot="label-info">
+        <span slot="content">This is some tooltip text</span>
+      </gux-label-info-beta>
+    </gux-form-field-date-beta>
+  </fieldset>
+
+  <fieldset>
+    <legend>Indicator Mark</legend>
+    <a href="gux-form-field-label-indicator.html"
+      >Click here for usage examples</a
+    >
+  </fieldset>
+
+  <fieldset>
+    <legend>Programmatically set value</legend>
+
+    <gux-form-field-date-beta id="a">
+      <input slot="input" type="date" name="a-5" placeholder="Enter date" />
+      <label slot="label">Random Date</label>
+    </gux-form-field-date-beta>
+
+    <gux-button-slot>
+      <button
+        type="button"
+        onclick="(function () {
+          const formField = document.getElementById('a');
+          const input = document.querySelector('[name=a-5]');
+          input.value = '';
+          formField.guxForceUpdate();
+        })()"
+      >
+        Clear field
+      </button>
+    </gux-button-slot>
+
+    <gux-button-slot>
+      <button
+        type="button"
+        onclick="(function () {
+
+          const randomDate = new Date(Math.floor(Date.now()) * Math.random()).toISOString().substring(0, 10);
+          const formField = document.getElementById('a');
+          const input = document.querySelector('[name=a-5]');
+
+          input.value = randomDate;
+          formField.guxForceUpdate();
+        })()"
+      >
+        Set field to random number
+      </button>
+    </gux-button-slot>
+  </fieldset>
+</form>
+
+<h2>Languages</h2>
+<div id="languages-container"></div>
+
+<style
+  onload="(function () {
+  const languagesContainer = document.getElementById('languages-container');
+  [
+    'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
+    'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
+    'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
+  ].forEach((lang) => {
+    const html = window.toHTML([
+      '<div lang=' + lang + '>',
+        '<gux-form-field-date-beta label-position=above>',
+          '<input slot=input type=date />',
+          '<label slot=label>' + lang + '</label>',
+        '</gux-form-field-date-beta>',
+      '</div>'
+    ].join(''));
+    languagesContainer.appendChild(html);
+  });
+})()"
+>
+  #languages-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  gux-form-field-date-beta {
+    margin: 10px;
+  }
+</style>

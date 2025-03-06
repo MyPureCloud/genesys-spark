@@ -58,6 +58,9 @@ export class GuxPopup {
   @Prop()
   exceedTargetWidth: boolean = false;
 
+  @Prop()
+  fitPopupContent: boolean = false;
+
   /**
    * set if parent component design is inline
    */
@@ -94,6 +97,7 @@ export class GuxPopup {
     if (this.targetElementContainer && this.popupElementContainer) {
       const exceedTargetWidth = this.exceedTargetWidth;
       const inline = this.inline;
+      const fitPopupContent = this.fitPopupContent;
       void computePosition(
         this.targetElementContainer,
         this.popupElementContainer,
@@ -111,7 +115,9 @@ export class GuxPopup {
                 availableWidth: number;
                 availableHeight: number;
               }) {
-                if (exceedTargetWidth && !inline) {
+                if (fitPopupContent) {
+                  return;
+                } else if (exceedTargetWidth && !inline) {
                   // These elements should be at least as wide the target but can expand beyond
                   Object.assign(elements.floating.style, {
                     minWidth: `${rects.reference.width}px`
