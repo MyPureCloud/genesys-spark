@@ -78,7 +78,19 @@
         "default": "#ffd173"
       },
       "transparent": "#fff0",
-      "canvas": "#f0f1f5"
+      "canvas": "#f0f1f5",
+      "special_accents": {
+        "ai": {
+          "tonal_medium": {
+            "top_left": "#cdeaf5",
+            "bottom_right": "#c5bef1"
+          },
+          "tonal_subtle": {
+            "top_left": "#ebf7fb",
+            "bottom_right": "#e8e5fa"
+          }
+        }
+      }
     },
     "system": {
       "error": {
@@ -219,7 +231,11 @@
       },
       "special_accents": {
         "ai": "#8a5ecc",
-        "brand": "#ff4f1f"
+        "brand": "#ff4f1f",
+        "ai_gradient": {
+          "top_left": "#28afe0",
+          "bottom_right": "#6e5ddb"
+        }
       }
     },
     "system": {
@@ -307,6 +323,12 @@
         "enabled": "#2a60c8",
         "hover": "#23478f",
         "active": "#2a60c8"
+      },
+      "special_accents": {
+        "ai": {
+          "top_left": "#28afe0",
+          "bottom_right": "#8b7de2"
+        }
       }
     },
     "system": {
