@@ -58,6 +58,9 @@ export class GuxPopup {
   @Prop()
   exceedTargetWidth: boolean = false;
 
+  @Prop()
+  fitPopupContent: boolean = false;
+
   /**
    * This event will run when the popup transitions to an expanded state.
    */
@@ -87,6 +90,7 @@ export class GuxPopup {
   private updatePosition(): void {
     if (this.targetElementContainer && this.popupElementContainer) {
       const exceedTargetWidth = this.exceedTargetWidth;
+      const fitPopupContent = this.fitPopupContent;
       void computePosition(
         this.targetElementContainer,
         this.popupElementContainer,
@@ -104,7 +108,9 @@ export class GuxPopup {
                 availableWidth: number;
                 availableHeight: number;
               }) {
-                if (exceedTargetWidth) {
+                if (fitPopupContent) {
+                  return;
+                } else if (exceedTargetWidth) {
                   // These elements should be at least as wide the target but can expand beyond
                   Object.assign(elements.floating.style, {
                     minWidth: `${rects.reference.width}px`
