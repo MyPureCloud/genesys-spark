@@ -579,6 +579,90 @@
           "value": "{theme.background.custom_accents.status.60d}",
           "type": "color"
         },
+        "available_reduced": {
+          "value": "{theme.background.custom_accents.status.10}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
+        "busy_reduced": {
+          "value": "{background.system.status.busy}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
+        "away_reduced": {
+          "value": "{background.system.status.away}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
+        "on_queue_reduced": {
+          "value": "{background.system.status.on_queue}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
+        "offline_reduced": {
+          "value": "{background.system.status.offline}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
+        "out_of_office_reduced": {
+          "value": "{background.system.status.out_of_office}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
         "notification": {
           "value": "{theme.background.custom_accents.status.70d}",
           "type": "color"
