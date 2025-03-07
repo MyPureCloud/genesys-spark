@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.130.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.129.1...v4.130.0) (2025-03-07)
+
+
+### Features
+
+* **badge:** change regular badge token color for info and success variant in dark mode ([727dece](https://github.com/MyPureCloud/genesys-spark/commit/727dece5d74026c130940fbb419f84aaa36b3e86))
+* **tokens:** Added AI tokens ([854c020](https://github.com/MyPureCloud/genesys-spark/commit/854c0200ab73970443bca71fa385ea82addf5bdf))
+* **tokens:** generate Figma variables ([98088cf](https://github.com/MyPureCloud/genesys-spark/commit/98088cf93f7c475469326394f8874bb7864a3a70))
+* **tokens:** Generated CSS vars ([219537f](https://github.com/MyPureCloud/genesys-spark/commit/219537fe1d3e43923ff37726ecd9ad74736db5b8))
+* **tokens:** Updated ai tonal subtle ([9ebc080](https://github.com/MyPureCloud/genesys-spark/commit/9ebc08051ee967db158a70b49f948ecc26aec4e5))
+* **tokens:** Updated AI tonal subtle accent ([e1274e5](https://github.com/MyPureCloud/genesys-spark/commit/e1274e54192899ef4f7246f127633df022ffb365))
+
+
+### Bug Fixes
+
+* **option:** trim whitespace for subtext selection ([#899](https://github.com/MyPureCloud/genesys-spark/issues/899)) ([513d706](https://github.com/MyPureCloud/genesys-spark/commit/513d706192872138a882d585ee3a29ba54be8d4b))
+* **popover:** removed min width ([2e04e09](https://github.com/MyPureCloud/genesys-spark/commit/2e04e095a27d75ece483346b5cd87be8ecdbb2b5))
+
 ### [4.129.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.129.0...v4.129.1) (2025-03-06)
 
 
