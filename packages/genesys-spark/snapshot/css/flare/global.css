@@ -523,7 +523,7 @@
   --gse-semantic-theme-background-customAccents-status-10d: #09b581;
   --gse-semantic-theme-background-customAccents-status-20d: #e22245;
   --gse-semantic-theme-background-customAccents-status-30d: #f8c73e;
-  --gse-semantic-theme-background-customAccents-status-40d: #2143a2;
+  --gse-semantic-theme-background-customAccents-status-40d: #2954cb;
   --gse-semantic-theme-background-customAccents-status-50d: #848891;
   --gse-semantic-theme-background-customAccents-status-60d: #b74ba4;
   --gse-semantic-theme-background-customAccents-status-70d: #ff451a;
@@ -571,7 +571,7 @@
   --gse-semantic-theme-foreground-system-primary-10d: #2143a2;
   --gse-semantic-theme-foreground-system-info-10: #3d538f;
   --gse-semantic-theme-foreground-system-info-10d: #596ea6;
-  --gse-semantic-theme-foreground-system-success-10: #079167;
+  --gse-semantic-theme-foreground-system-success-10: #056d4d;
   --gse-semantic-theme-foreground-system-success-10d: #09b581;
   --gse-semantic-theme-foreground-system-warning-10: #9a7b25;
   --gse-semantic-theme-foreground-system-warning-10d: #f8c73e;
@@ -743,7 +743,7 @@
   --gse-semantic-theme-charts-sparkline-monod: #5476d5;
   --gse-semantic-theme-charts-sparkline-negative: #b51b37;
   --gse-semantic-theme-charts-sparkline-negatived: #e84e6a;
-  --gse-semantic-theme-charts-sparkline-positive: #079167;
+  --gse-semantic-theme-charts-sparkline-positive: #056d4d;
   --gse-semantic-theme-charts-sparkline-positived: #09b581;
   --gse-semantic-theme-charts-sparkline-neutral: #9faac6;
   --gse-semantic-theme-charts-sparkline-neutrald: #808db2;
@@ -844,8 +844,8 @@
   --gse-semantic-body-lg-semiBold-lineHeight: 24px;
   --gse-semantic-body-xs-regular-fontFamily: "Noto Sans";
   --gse-semantic-body-xs-regular-fontWeight: 400;
-  --gse-semantic-body-xs-regular-fontSize: 12px;
-  --gse-semantic-body-xs-regular-lineHeight: 18px;
+  --gse-semantic-body-xs-regular-fontSize: 10px;
+  --gse-semantic-body-xs-regular-lineHeight: 14px;
   --gse-semantic-body-xs-link-fontFamily: "Noto Sans";
   --gse-semantic-body-xs-link-fontWeight: 600;
   --gse-semantic-body-xs-link-fontSize: 10px;
@@ -1141,6 +1141,12 @@
   --gse-semantic-background-system-status-onQueue: #2143a2;
   --gse-semantic-background-system-status-offline: #848891;
   --gse-semantic-background-system-status-outOfOffice: #b74ba4;
+  --gse-semantic-background-system-status-availableReduced: #9de1cd;
+  --gse-semantic-background-system-status-busyReduced: #f3a7b5;
+  --gse-semantic-background-system-status-awayReduced: #fce9b2;
+  --gse-semantic-background-system-status-onQueueReduced: #a6b4da;
+  --gse-semantic-background-system-status-offlineReduced: #cecfd3;
+  --gse-semantic-background-system-status-outOfOfficeReduced: #e2b7db;
   --gse-semantic-background-system-status-notification: #ff451a;
   --gse-semantic-background-formControl-clickInput-track: #c1c6d4;
   --gse-semantic-background-formControl-textInput-track: #ffffff;
@@ -1186,13 +1192,13 @@
   --gse-semantic-foreground-system-info-highEmphasis: #2a2a2e;
   --gse-semantic-foreground-system-info-accent: #3d538f;
   --gse-semantic-foreground-system-success-highEmphasis: #2a2a2e;
-  --gse-semantic-foreground-system-success-accent: #079167;
+  --gse-semantic-foreground-system-success-accent: #056d4d;
   --gse-semantic-foreground-system-warning-highEmphasis: #2a2a2e;
   --gse-semantic-foreground-system-warning-accent: #9a7b25;
   --gse-semantic-foreground-system-error-highEmphasis: #2a2a2e;
   --gse-semantic-foreground-system-error-accent: #b51b37;
   --gse-semantic-foreground-system-icon-default: #4f5157;
-  --gse-semantic-foreground-system-indicators-positive: #079167;
+  --gse-semantic-foreground-system-indicators-positive: #056d4d;
   --gse-semantic-foreground-system-indicators-negative: #b51b37;
   --gse-semantic-foreground-system-indicators-neutral: #6a6d75;
   --gse-semantic-foreground-formControl-helpText-default: #6a6d75;
@@ -1294,7 +1300,7 @@
   --gse-semantic-charts-track-default: #ebedf5;
   --gse-semantic-charts-sparkline-mono: #2143a2;
   --gse-semantic-charts-sparkline-negative: #b51b37;
-  --gse-semantic-charts-sparkline-positive: #079167;
+  --gse-semantic-charts-sparkline-positive: #056d4d;
   --gse-semantic-charts-sparkline-neutral: #9faac6;
   --gse-semantic-charts-sparkline-trendline: #cad1e1;
 }
@@ -1397,9 +1403,15 @@
   --gse-semantic-background-system-status-available: #09b581;
   --gse-semantic-background-system-status-busy: #e22245;
   --gse-semantic-background-system-status-away: #f8c73e;
-  --gse-semantic-background-system-status-onQueue: #2143a2;
+  --gse-semantic-background-system-status-onQueue: #2954cb;
   --gse-semantic-background-system-status-offline: #848891;
   --gse-semantic-background-system-status-outOfOffice: #b74ba4;
+  --gse-semantic-background-system-status-availableReduced: #1d624f;
+  --gse-semantic-background-system-status-busyReduced: #742737;
+  --gse-semantic-background-system-status-awayReduced: #7c6934;
+  --gse-semantic-background-system-status-onQueueReduced: #2a3b6d;
+  --gse-semantic-background-system-status-offlineReduced: #4e5056;
+  --gse-semantic-background-system-status-outOfOfficeReduced: #62375d;
   --gse-semantic-background-system-status-notification: #ff451a;
   --gse-semantic-background-formControl-clickInput-track: #848891;
   --gse-semantic-background-formControl-textInput-track: #1e1e21;
