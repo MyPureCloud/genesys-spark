@@ -354,7 +354,7 @@ export class GuxDropdownMulti {
     const listboxOptionElements: HTMLGuxOptionElement[] = Array.from(
       this.root.querySelectorAll('gux-option-multi')
     );
-    const values = value && value !== '' ? value.split(',') : [];
+    const values = convertValueToArray(value);
 
     return listboxOptionElements.filter(element =>
       values.includes(element.value)
