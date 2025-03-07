@@ -336,6 +336,32 @@
       "offsetY": "0"
     }
   },
+  "date_picker": {
+    "range": {
+      "gap": "24px"
+    },
+    "range_label_side": {
+      "gap": "24px"
+    },
+    "range_label_top": {
+      "gap": "4px"
+    },
+    "start_end_input": {
+      "gap": "8px"
+    },
+    "date_typed": {
+      "gap": "10px",
+      "background_color": "#465066"
+    },
+    "disabled": {
+      "opacity": ".5"
+    },
+    "focus_calendar": {
+      "gap": "2px"
+    },
+    "icon_hover": "#cad1e1",
+    "icon_focus": "#ffffff"
+  },
   "card": {
     "background-color": "#2a2a2e",
     "border_radius": "8px",
@@ -1364,26 +1390,6 @@
       }
     },
     "gap": "4px"
-  },
-  "date_picker": {
-    "range": {
-      "gap": "24px"
-    },
-    "start_end_input": {
-      "gap": "8px"
-    },
-    "date_typed": {
-      "gap": "10px",
-      "background_color": "#465066"
-    },
-    "disabled": {
-      "opacity": ".5"
-    },
-    "focus_calendar": {
-      "gap": "2px"
-    },
-    "icon_hover": "#cad1e1",
-    "icon_focus": "#ffffff"
   },
   "toggle": {
     "label": {

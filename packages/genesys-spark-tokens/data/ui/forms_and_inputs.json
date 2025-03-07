@@ -765,9 +765,15 @@
     }
   },
   "date_picker": {
-    "range": {
+    "range_label_side": {
       "gap": {
         "value": "{spacing.md}",
+        "type": "spacing"
+      }
+    },
+    "range_label_top": {
+      "gap": {
+        "value": "{spacing.4xs}",
         "type": "spacing"
       }
     },

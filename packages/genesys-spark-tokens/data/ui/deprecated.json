@@ -10,5 +10,13 @@
         "type": "typography"
       }
     }
+  },
+  "date_picker": {
+    "range": {
+      "gap": {
+        "value": "{spacing.md}",
+        "type": "spacing"
+      }
+    }
   }
 }

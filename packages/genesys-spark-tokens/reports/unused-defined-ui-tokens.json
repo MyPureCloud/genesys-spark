@@ -673,6 +673,8 @@
   "--gse-ui-datePicker-dateTyped-backgroundColor",
   "--gse-ui-datePicker-dateTyped-gap",
   "--gse-ui-datePicker-iconFocus",
+  "--gse-ui-datePicker-rangeLabelSide-gap",
+  "--gse-ui-datePicker-rangeLabelTop-gap",
   "--gse-ui-datePicker-startEndInput-gap",
   "--gse-ui-dropdown-menu-emptyState-header-foregroundColor",
   "--gse-ui-dropdown-menu-emptyState-header-text-fontFamily",
