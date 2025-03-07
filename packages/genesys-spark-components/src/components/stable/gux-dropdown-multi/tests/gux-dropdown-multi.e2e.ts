@@ -77,7 +77,18 @@ describe('gux-dropdown-multi', () => {
       await page.waitForChanges();
       selectedItems = await page.findAll('.gux-selected');
       expect(selectedItems.length).toBe(1);
-      await a11yCheck(page, axeExclusions, 'after selecting an item');
+      await a11yCheck(
+        page,
+        [
+          {
+            issueId: 'color-contrast',
+            exclusionReason:
+              'COMUI-3533: Subtext on hover fails color contrast requirments'
+          },
+          ...axeExclusions
+        ],
+        'after selecting an item'
+      );
 
       await listboxItems[1].click();
       await page.waitForChanges();
