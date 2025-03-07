@@ -222,3 +222,7 @@ export function getOptionDefaultSlot(
 ): Node | undefined {
   return option.shadowRoot.querySelector('slot')?.assignedNodes()[0];
 }
+
+export function convertValueToArray(value: string): string[] {
+  return value ? value.split(',') : [];
+}

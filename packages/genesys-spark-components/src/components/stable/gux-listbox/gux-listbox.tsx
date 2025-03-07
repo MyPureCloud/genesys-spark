@@ -26,7 +26,8 @@ import {
   setLastOptionActive,
   setNextOptionActive,
   setPreviousOptionActive,
-  matchOption
+  matchOption,
+  convertValueToArray
 } from './gux-listbox.service';
 import {
   ListboxOptionElement,
@@ -186,9 +187,7 @@ export class GuxListbox {
   }
 
   private setListboxOptions(): void {
-    if (this.value) {
-      this.selectedValues = this.value.split(',');
-    }
+    this.selectedValues = convertValueToArray(this.value);
 
     this.listboxOptions = getListOptions(this.root);
     this.internallistboxoptionsupdated.emit();

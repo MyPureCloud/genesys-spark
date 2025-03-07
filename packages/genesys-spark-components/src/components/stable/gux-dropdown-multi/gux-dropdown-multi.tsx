@@ -25,7 +25,8 @@ import translationResources from './i18n/en.json';
 import {
   getSearchOption,
   setInitialActiveOption,
-  getOptionDefaultSlot
+  getOptionDefaultSlot,
+  convertValueToArray
 } from '../gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
@@ -175,7 +176,7 @@ export class GuxDropdownMulti {
    */
   @Method()
   getSelectedValues(): Promise<string[]> {
-    return Promise.resolve(this.value?.split(',').filter(i => i !== '') || []);
+    return Promise.resolve(convertValueToArray(this.value));
   }
 
   @Listen('keydown')
@@ -520,8 +521,7 @@ export class GuxDropdownMulti {
   }
 
   private renderTag(): JSX.Element {
-    const selectedValues =
-      this.value && this.value !== '' ? this.value.split(',') : [];
+    const selectedValues = convertValueToArray(this.value);
     if (selectedValues.length) {
       return (
         <gux-dropdown-multi-tag
