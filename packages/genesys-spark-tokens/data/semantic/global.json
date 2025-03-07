@@ -134,8 +134,8 @@
         "value": {
           "fontFamily": "{theme.font_family.body}",
           "fontWeight": "{font_weight.regular}",
-          "fontSize": "{font_size.xs}",
-          "lineHeight": "{line_height.xs}"
+          "fontSize": "{font_size.2xs}",
+          "lineHeight": "{line_height.3xs}"
         },
         "type": "typography",
         "description": "This is the typography style we use in 2xs donut and gauge chart subtitles; we usually pair it with medium emphasis colors."

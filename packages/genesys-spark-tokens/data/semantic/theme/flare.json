@@ -831,7 +831,7 @@
             "type": "color"
           },
           "40d": {
-            "value": "{color.azure_blue.600}",
+            "value": "{color.azure_blue.500}",
             "type": "color"
           },
           "50d": {
@@ -1045,7 +1045,7 @@
         },
         "success": {
           "10": {
-            "value": "{color.emerald.600}",
+            "value": "{color.emerald.700}",
             "type": "color"
           },
           "10d": {

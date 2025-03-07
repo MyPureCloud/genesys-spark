@@ -160,6 +160,12 @@
         "on_queue": "#2143a2",
         "offline": "#848891",
         "out_of_office": "#b74ba4",
+        "available_reduced": "#9de1cd",
+        "busy_reduced": "#f3a7b5",
+        "away_reduced": "#fce9b2",
+        "on_queue_reduced": "#a6b4da",
+        "offline_reduced": "#cecfd3",
+        "out_of_office_reduced": "#e2b7db",
         "notification": "#ff451a"
       }
     },

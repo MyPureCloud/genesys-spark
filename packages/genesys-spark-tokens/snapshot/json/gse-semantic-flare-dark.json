@@ -157,9 +157,15 @@
         "available": "#09b581",
         "busy": "#e22245",
         "away": "#f8c73e",
-        "on_queue": "#2143a2",
+        "on_queue": "#2954cb",
         "offline": "#848891",
         "out_of_office": "#b74ba4",
+        "available_reduced": "#1d624f",
+        "busy_reduced": "#742737",
+        "away_reduced": "#7c6934",
+        "on_queue_reduced": "#2a3b6d",
+        "offline_reduced": "#4e5056",
+        "out_of_office_reduced": "#62375d",
         "notification": "#ff451a"
       }
     },

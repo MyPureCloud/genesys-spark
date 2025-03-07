@@ -1016,34 +1016,46 @@
   --gse-ui-avatar-large-ucIntegration-size: 32px;
   --gse-ui-avatar-presenceRing-available: linear-gradient(
     135deg,
-    #3c8527 0%,
-    #95c189 100%
+    #09b581 0%,
+    #9de1cd 100%
   );
   --gse-ui-avatar-presenceRing-busy: linear-gradient(
     135deg,
-    #ea0b0b 0%,
-    #f37a7a 100%
+    #e22245 0%,
+    #f3a7b5 100%
   );
   --gse-ui-avatar-presenceRing-away: linear-gradient(
     135deg,
-    #ffae00 0%,
-    #fcd276 100%
+    #f8c73e 0%,
+    #fce9b2 100%
   );
   --gse-ui-avatar-presenceRing-onQueue: linear-gradient(
     135deg,
     #2143a2 0%,
-    #2143a2 100%
+    #a6b4da 100%
   );
   --gse-ui-avatar-presenceRing-offline: linear-gradient(
     135deg,
     #848891 0%,
-    #848891 100%
+    #cecfd3 100%
   );
   --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(
     135deg,
     #b74ba4 0%,
-    #f5bfeb 100%
+    #e2b7db 100%
   );
+  --gse-ui-avatar-presenceRing-plainColors-available-default: #09b581;
+  --gse-ui-avatar-presenceRing-plainColors-available-reduced: #9de1cd;
+  --gse-ui-avatar-presenceRing-plainColors-busy-default: #e22245;
+  --gse-ui-avatar-presenceRing-plainColors-busy-reduced: #f3a7b5;
+  --gse-ui-avatar-presenceRing-plainColors-away-default: #f8c73e;
+  --gse-ui-avatar-presenceRing-plainColors-away-reduced: #fce9b2;
+  --gse-ui-avatar-presenceRing-plainColors-onQueue-default: #2143a2;
+  --gse-ui-avatar-presenceRing-plainColors-onQueue-reduced: #a6b4da;
+  --gse-ui-avatar-presenceRing-plainColors-offline-default: #848891;
+  --gse-ui-avatar-presenceRing-plainColors-offline-reduced: #cecfd3;
+  --gse-ui-avatar-presenceRing-plainColors-outOfOffice-default: #b74ba4;
+  --gse-ui-avatar-presenceRing-plainColors-outOfOffice-reduced: #e2b7db;
   --gse-ui-avatar-medium-size: 48px;
   --gse-ui-avatar-medium-badge-size: 16px;
   --gse-ui-avatar-medium-focusRing-size: 50px;
@@ -2055,8 +2067,8 @@
   --gse-ui-charts-chartsShared-centerTitle-subtitle-md-lineHeight: 20px;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontFamily: Roboto;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontWeight: 400;
-  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontSize: 12px;
-  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-lineHeight: 18px;
+  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontSize: 10px;
+  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-lineHeight: 14px;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontFamily: Roboto;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontWeight: 400;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontSize: 12px;

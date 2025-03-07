@@ -2181,12 +2181,38 @@
       }
     },
     "presence_ring": {
-      "available": "linear-gradient(135deg, #09b581 0%, #044834 100%)",
-      "busy": "linear-gradient(135deg, #e84e6a 0%, #5a0e1c 100%)",
-      "away": "linear-gradient(135deg, #f8c73e 0%, #6c5619 100%)",
-      "on-queue": "linear-gradient(135deg, #2143a2 0%, #2143a2 100%)",
-      "offline": "linear-gradient(135deg, #848891 0%, #848891 100%)",
-      "out_of_office": "linear-gradient(135deg, #b74ba4 0%, #f5bfeb 100%)"
+      "available": "linear-gradient(135deg, #09b581 0%, #1d624f 100%)",
+      "busy": "linear-gradient(135deg, #e22245 0%, #742737 100%)",
+      "away": "linear-gradient(135deg, #f8c73e 0%, #7c6934 100%)",
+      "on-queue": "linear-gradient(135deg, #2954cb 0%, #2a3b6d 100%)",
+      "offline": "linear-gradient(135deg, #848891 0%, #4e5056 100%)",
+      "out_of_office": "linear-gradient(135deg, #b74ba4 0%, #62375d 100%)",
+      "plain_colors": {
+        "available": {
+          "default": "#09b581",
+          "reduced": "#1d624f"
+        },
+        "busy": {
+          "default": "#e22245",
+          "reduced": "#742737"
+        },
+        "away": {
+          "default": "#f8c73e",
+          "reduced": "#7c6934"
+        },
+        "on_queue": {
+          "default": "#2954cb",
+          "reduced": "#2a3b6d"
+        },
+        "offline": {
+          "default": "#848891",
+          "reduced": "#4e5056"
+        },
+        "out_of_office": {
+          "default": "#b74ba4",
+          "reduced": "#62375d"
+        }
+      }
     },
     "medium": {
       "size": "48px",
@@ -2268,7 +2294,7 @@
         }
       },
       "on-queue": {
-        "color": "#2143a2"
+        "color": "#2954cb"
       },
       "offline": {
         "color": "#848891"
@@ -4293,8 +4319,8 @@
         "xs": {
           "fontFamily": "'Noto Sans'",
           "fontWeight": "400",
-          "fontSize": "12px",
-          "lineHeight": "18px"
+          "fontSize": "10px",
+          "lineHeight": "14px"
         },
         "sm": {
           "fontFamily": "'Noto Sans'",

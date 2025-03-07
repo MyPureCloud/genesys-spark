@@ -157,8 +157,8 @@
       "regular": {
         "fontFamily": "Roboto",
         "fontWeight": "400",
-        "fontSize": "12px",
-        "lineHeight": "18px"
+        "fontSize": "10px",
+        "lineHeight": "14px"
       },
       "link": {
         "fontFamily": "Roboto",
