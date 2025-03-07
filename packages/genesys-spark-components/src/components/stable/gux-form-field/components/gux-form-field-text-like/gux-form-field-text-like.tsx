@@ -35,9 +35,11 @@ import {
   validateFormIds,
   setSlotAriaDescribedby,
   getSlottedInput
+  // setLoadingAriaDescribedBy
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 import { focusInputElement } from '@utils/dom/focus-input-element';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 
 /**
  * @slot input - Required slot for input tag
@@ -60,6 +62,7 @@ export class GuxFormFieldTextLike {
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
   private hideLabelInfoTimeout: ReturnType<typeof setTimeout>;
+  private loadingElementId = randomHTMLId('gux-radial-loading');
 
   @Element()
   private root: HTMLElement;
@@ -176,6 +179,10 @@ export class GuxFormFieldTextLike {
       setSlotAriaDescribedby(this.root, this.input, 'suffix');
     }
 
+    if (this.loading) {
+      setSlotAriaDescribedby(this.root, this.input, 'loading');
+    }
+
     trackComponent(this.root, { variant: this.variant });
   }
 
@@ -281,6 +288,8 @@ export class GuxFormFieldTextLike {
     );
 
     validateFormIds(this.root, this.input);
+
+    // setLoadingAriaDescribedBy(this.input, this.loadingElementId);
   }
 
   private setLabel(): void {
