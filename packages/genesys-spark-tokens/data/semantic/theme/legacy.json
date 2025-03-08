@@ -588,7 +588,19 @@
       "special_accents": {
         "brand": {
           "10": {
-            "value": "{color_legacy.brand.brand_orange}",
+            "value": "{color.genesys_orange.500}",
+            "type": "color"
+          },
+          "20": {
+            "value": "{color.genesys_navy.950}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_orange.500}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.white}",
             "type": "color"
           }
         },
