@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.130.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.130.0...v4.130.1) (2025-03-08)
+
+
+### Bug Fixes
+
+* **dropdown-multi:** fixing issue when user sets value to empty string ([3ff8ee3](https://github.com/MyPureCloud/genesys-spark/commit/3ff8ee37aca327aa8e9600ee6ac47f4e48e4c171))
+* **segmented-control-item:** fixed focus shape ([d8e4bae](https://github.com/MyPureCloud/genesys-spark/commit/d8e4bae4e62c80082ede8f0d8affcdbdabea4c03))
+
 ## [4.130.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.129.1...v4.130.0) (2025-03-07)
 
 
