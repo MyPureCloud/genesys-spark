@@ -21,7 +21,17 @@ function getTokenNames(filesGlob) {
       return acc.concat(readFileSync(file).toString().split('\n'));
     }, [])
     .map(line => line.trim())
-    .filter(line => line.includes('--gse'))
+    .filter(
+      line =>
+        line.includes('--gse') ||
+        line.includes('ui.$gse') ||
+        line.includes('global.$gse')
+    )
+    .map(line => {
+      return line
+        .replaceAll('ui.$gse', '--gse')
+        .replaceAll('global.$gse', '--gse');
+    })
     .map(line => {
       return line.match(/--gse-[A-Za-z0-9\-_]*/g);
     })

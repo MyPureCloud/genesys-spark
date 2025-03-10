@@ -1,10 +1,11 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 @mixin button-text {
-  font-family: var(--gse-ui-button-text-fontFamily);
-  font-size: var(--gse-ui-button-text-fontSize);
-  font-weight: var(--gse-ui-button-text-fontWeight);
-  line-height: var(--gse-ui-button-text-lineHeight);
+  font-family: ui.$gse-ui-button-text-fontFamily;
+  font-size: ui.$gse-ui-button-text-fontSize;
+  font-weight: ui.$gse-ui-button-text-fontWeight;
+  line-height: ui.$gse-ui-button-text-lineHeight;
 }
 
 :host {
@@ -38,7 +39,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      inline-size: var(--gse-ui-button-iconOnly-width);
+      inline-size: ui.$gse-ui-button-iconOnly-width;
       padding: 0;
       border-start-start-radius: 0;
       border-end-start-radius: 0;
@@ -47,7 +48,7 @@
 
   .gux-list-container {
     max-inline-size: 220px;
-    max-block-size: var(--gse-ui-menu-maxHeight);
+    max-block-size: ui.$gse-ui-menu-maxHeight;
 
     @include mixins.gux-menu-container;
   }
