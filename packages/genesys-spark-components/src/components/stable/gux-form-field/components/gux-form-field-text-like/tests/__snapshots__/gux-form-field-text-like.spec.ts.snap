@@ -863,7 +863,9 @@ exports[`gux-form-field-text-like #render loading should render component as exp
           <div class="gux-input-container">
             <slot name="prefix"></slot>
             <slot name="input"></slot>
-            <gux-radial-loading context="input"></gux-radial-loading>
+            <div role="status">
+              <gux-radial-loading context="input"></gux-radial-loading>
+            </div>
             <slot name="suffix"></slot>
           </div>
         </div>
@@ -902,7 +904,9 @@ exports[`gux-form-field-text-like #render loading should render component as exp
           <div class="gux-input-container">
             <slot name="prefix"></slot>
             <slot name="input"></slot>
-            <gux-radial-loading context="input"></gux-radial-loading>
+            <div role="status">
+              <gux-radial-loading context="input"></gux-radial-loading>
+            </div>
             <slot name="suffix"></slot>
           </div>
         </div>
@@ -979,7 +983,9 @@ exports[`gux-form-field-text-like #render loading should render component as exp
           <div class="gux-disabled gux-input-container">
             <slot name="prefix"></slot>
             <slot name="input"></slot>
-            <gux-radial-loading context="input"></gux-radial-loading>
+            <div role="status">
+              <gux-radial-loading context="input"></gux-radial-loading>
+            </div>
             <slot name="suffix"></slot>
           </div>
         </div>
