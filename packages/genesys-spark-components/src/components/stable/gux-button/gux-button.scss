@@ -1,10 +1,12 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 @mixin button-text {
-  font-family: var(--gse-ui-button-text-fontFamily);
-  font-size: var(--gse-ui-button-text-fontSize);
-  font-weight: var(--gse-ui-button-text-fontWeight);
-  line-height: var(--gse-ui-button-text-lineHeight);
+  font-family: ui.$gse-ui-button-text-fontFamily;
+  font-size: ui.$gse-ui-button-text-fontSize;
+  font-weight: ui.$gse-ui-button-text-fontWeight;
+  line-height: ui.$gse-ui-button-text-lineHeight;
 }
 
 // Style
@@ -25,12 +27,12 @@
 }
 
 ::slotted(gux-icon) {
-  inline-size: var(--gse-ui-button-icon-size);
-  block-size: var(--gse-ui-button-icon-size);
+  inline-size: ui.$gse-ui-button-icon-size;
+  block-size: ui.$gse-ui-button-icon-size;
 }
 
 ::slotted(*) {
-  padding-inline-start: 8px; // COMUI-2156 add missing button tokens
+  padding-inline-start: ui.$gse-ui-button-gap;
   vertical-align: middle;
 }
 
@@ -47,114 +49,113 @@ button {
   @include button-text;
 
   inline-size: 100%;
-  min-inline-size: var(--gse-ui-button-iconOnly-width);
-  block-size: var(--gse-ui-button-default-height);
-  padding: var(--gse-ui-button-default-padding);
+  min-inline-size: ui.$gse-ui-button-iconOnly-width;
+  block-size: ui.$gse-ui-button-default-height;
+  padding: ui.$gse-ui-button-default-padding;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--gse-ui-button-secondary-default-foregroundColor);
+  color: ui.$gse-ui-button-secondary-default-foregroundColor;
   white-space: nowrap;
   pointer-events: auto;
   cursor: pointer;
-  background-color: var(--gse-ui-button-secondary-default-backgroundColor);
+  background-color: ui.$gse-ui-button-secondary-default-backgroundColor;
   border: none;
-  border-radius: var(--gse-ui-button-borderRadius);
+  border-radius: ui.$gse-ui-button-borderRadius;
 
   &.gux-icon-only {
     display: inline-flex;
-    padding: var(--gse-ui-button-default-paddingIconOnly);
+    padding: ui.$gse-ui-button-default-paddingIconOnly;
   }
 
   &[disabled] {
     pointer-events: none;
     cursor: default;
-    opacity: var(--gse-ui-button-disabled-opacity);
+    opacity: ui.$gse-ui-button-disabled-opacity;
   }
 
   &:hover:enabled {
-    color: var(--gse-ui-button-secondary-hover-foregroundColor);
-    background-color: var(--gse-ui-button-secondary-hover-backgroundColor);
+    color: ui.$gse-ui-button-secondary-hover-foregroundColor;
+    background-color: ui.$gse-ui-button-secondary-hover-backgroundColor;
   }
 
   &:active:enabled {
-    color: var(--gse-ui-button-secondary-active-foregroundColor);
-    background-color: var(--gse-ui-button-secondary-active-backgroundColor);
+    color: ui.$gse-ui-button-secondary-active-foregroundColor;
+    background-color: ui.$gse-ui-button-secondary-active-backgroundColor;
   }
 
   &:focus-visible:enabled {
     @include focus.gux-focus-ring;
 
-    border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
+    border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
   }
 
   &.gux-primary {
-    color: var(--gse-ui-button-primary-default-foregroundColor);
-    background-color: var(--gse-ui-button-primary-default-backgroundColor);
+    color: ui.$gse-ui-button-primary-default-foregroundColor;
+    background-color: ui.$gse-ui-button-primary-default-backgroundColor;
 
     &:hover:enabled {
-      color: var(--gse-ui-button-primary-hover-foregroundColor);
-      background-color: var(--gse-ui-button-primary-hover-backgroundColor);
+      color: ui.$gse-ui-button-primary-hover-foregroundColor;
+      background-color: ui.$gse-ui-button-primary-hover-backgroundColor;
     }
 
     &:active:enabled {
-      color: var(--gse-ui-button-primary-active-foregroundColor);
-      background-color: var(--gse-ui-button-primary-active-backgroundColor);
+      color: ui.$gse-ui-button-primary-active-foregroundColor;
+      background-color: ui.$gse-ui-button-primary-active-backgroundColor;
     }
   }
 
   &.gux-tertiary {
-    color: var(--gse-ui-button-tertiary-default-foregroundColor);
-    background-color: var(--gse-ui-button-tertiary-default-backgroundColor);
-    border-color: var(--gse-ui-button-tertiary-default-border-color);
-    border-style: var(--gse-ui-button-tertiary-default-border-style);
-    border-width: var(--gse-ui-button-tertiary-default-border-width);
+    color: ui.$gse-ui-button-tertiary-default-foregroundColor;
+    background-color: ui.$gse-ui-button-tertiary-default-backgroundColor;
+    border-color: ui.$gse-ui-button-tertiary-default-border-color;
+    border-style: ui.$gse-ui-button-tertiary-default-border-style;
+    border-width: ui.$gse-ui-button-tertiary-default-border-width;
 
     &.gux-icon-only {
       padding: calc(
-        var(--gse-ui-button-default-paddingIconOnly) - var(
-            --gse-ui-button-tertiary-default-border-width
-          )
+        ui.$gse-ui-button-default-paddingIconOnly -
+          ui.$gse-ui-button-tertiary-default-border-width
       );
     }
 
     &:hover:enabled {
-      color: var(--gse-ui-button-tertiary-hover-foregroundColor);
-      background-color: var(--gse-ui-button-tertiary-hover-backgroundColor);
+      color: ui.$gse-ui-button-tertiary-hover-foregroundColor;
+      background-color: ui.$gse-ui-button-tertiary-hover-backgroundColor;
     }
 
     &:active:enabled {
-      color: var(--gse-ui-button-tertiary-active-foregroundColor);
-      background-color: var(--gse-ui-button-tertiary-active-backgroundColor);
+      color: ui.$gse-ui-button-tertiary-active-foregroundColor;
+      background-color: ui.$gse-ui-button-tertiary-active-backgroundColor;
     }
   }
 
   &.gux-ghost {
-    color: var(--gse-ui-button-ghost-default-foregroundColor);
-    background-color: var(--gse-ui-button-ghost-default-backgroundColor);
+    color: ui.$gse-ui-button-ghost-default-foregroundColor;
+    background-color: ui.$gse-ui-button-ghost-default-backgroundColor;
 
     &:hover:enabled {
-      color: var(--gse-ui-button-ghost-hover-foregroundColor);
-      background-color: var(--gse-ui-button-ghost-hover-backgroundColor);
+      color: ui.$gse-ui-button-ghost-hover-foregroundColor;
+      background-color: ui.$gse-ui-button-ghost-hover-backgroundColor;
     }
 
     &:active:enabled {
-      color: var(--gse-ui-button-ghost-active-foregroundColor);
-      background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+      color: ui.$gse-ui-button-ghost-active-foregroundColor;
+      background-color: ui.$gse-ui-button-ghost-active-backgroundColor;
     }
   }
 
   &.gux-danger {
-    color: var(--gse-ui-button-danger-default-foregroundColor);
-    background-color: var(--gse-ui-button-danger-default-backgroundColor);
+    color: ui.$gse-ui-button-danger-default-foregroundColor;
+    background-color: ui.$gse-ui-button-danger-default-backgroundColor;
 
     &:hover:enabled {
-      color: var(--gse-ui-button-danger-hover-foregroundColor);
-      background-color: var(--gse-ui-button-danger-hover-backgroundColor);
+      color: ui.$gse-ui-button-danger-hover-foregroundColor;
+      background-color: ui.$gse-ui-button-danger-hover-backgroundColor;
     }
 
     &:active:enabled {
-      color: var(--gse-ui-button-danger-active-foregroundColor);
-      background-color: var(--gse-ui-button-danger-active-backgroundColor);
+      color: ui.$gse-ui-button-danger-active-foregroundColor;
+      background-color: ui.$gse-ui-button-danger-active-backgroundColor;
     }
   }
 
@@ -162,23 +163,23 @@ button {
     min-inline-size: initial;
     block-size: initial;
     padding: 0;
-    color: var(--gse-ui-links-default-foregroundColor);
+    color: ui.$gse-ui-links-default-foregroundColor;
     background: none;
     border: none;
     border-radius: 0;
 
     &[disabled] {
-      color: var(--gse-ui-links-disabled-foregroundColor);
+      color: ui.$gse-ui-links-disabled-foregroundColor;
     }
 
     &:hover:enabled {
-      color: var(--gse-ui-links-hover-foregroundColor);
+      color: ui.$gse-ui-links-hover-foregroundColor;
       text-decoration: underline;
       background: none;
     }
 
     &:active:enabled {
-      color: var(--gse-ui-links-active-foregroundColor);
+      color: ui.$gse-ui-links-active-foregroundColor;
       text-decoration: underline;
       background: none;
     }

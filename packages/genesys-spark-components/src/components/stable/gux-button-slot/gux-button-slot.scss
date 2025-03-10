@@ -1,10 +1,11 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 @mixin button-text {
-  font-family: var(--gse-ui-button-text-fontFamily);
-  font-size: var(--gse-ui-button-text-fontSize);
-  font-weight: var(--gse-ui-button-text-fontWeight);
-  line-height: var(--gse-ui-button-text-lineHeight);
+  font-family: ui.$gse-ui-button-text-fontFamily;
+  font-size: ui.$gse-ui-button-text-fontSize;
+  font-weight: ui.$gse-ui-button-text-fontWeight;
+  line-height: ui.$gse-ui-button-text-lineHeight;
 }
 
 :host {
@@ -18,25 +19,25 @@
   @include button-text;
 
   inline-size: 100%;
-  min-inline-size: var(--gse-ui-button-iconOnly-width);
-  block-size: var(--gse-ui-button-default-height);
-  padding: var(--gse-ui-button-default-padding);
+  min-inline-size: ui.$gse-ui-button-iconOnly-width;
+  block-size: ui.$gse-ui-button-default-height;
+  padding: ui.$gse-ui-button-default-padding;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--gse-ui-button-secondary-default-foregroundColor);
+  color: ui.$gse-ui-button-secondary-default-foregroundColor;
   white-space: nowrap;
   pointer-events: auto;
   cursor: pointer;
-  background-color: var(--gse-ui-button-secondary-default-backgroundColor);
+  background-color: ui.$gse-ui-button-secondary-default-backgroundColor;
   border: none;
-  border-radius: var(--gse-ui-button-borderRadius);
+  border-radius: ui.$gse-ui-button-borderRadius;
 }
 
 :host([icon-only]) {
   ::slotted(input[type='button']),
   ::slotted(input[type='submit']),
   ::slotted(button) {
-    padding: var(--gse-ui-button-default-paddingIconOnly);
+    padding: ui.$gse-ui-button-default-paddingIconOnly;
   }
 }
 
@@ -44,7 +45,7 @@
 ::slotted(input[type='submit'][disabled]),
 ::slotted(button[disabled]) {
   cursor: default;
-  opacity: var(--gse-ui-button-disabled-opacity);
+  opacity: ui.$gse-ui-button-disabled-opacity;
 }
 
 ::slotted(input[type='button']:focus),
@@ -62,37 +63,37 @@
 ::slotted(input[type='button']:hover:enabled),
 ::slotted(input[type='submit']:hover:enabled),
 ::slotted(button:hover:enabled) {
-  color: var(--gse-ui-button-secondary-hover-foregroundColor);
-  background-color: var(--gse-ui-button-secondary-hover-backgroundColor);
+  color: ui.$gse-ui-button-secondary-hover-foregroundColor;
+  background-color: ui.$gse-ui-button-secondary-hover-backgroundColor;
 }
 
 ::slotted(input[type='button']:active:enabled),
 ::slotted(input[type='submit']:active:enabled),
 ::slotted(button:active:enabled) {
-  color: var(--gse-ui-button-secondary-active-foregroundColor);
-  background-color: var(--gse-ui-button-secondary-active-backgroundColor);
+  color: ui.$gse-ui-button-secondary-active-foregroundColor;
+  background-color: ui.$gse-ui-button-secondary-active-backgroundColor;
 }
 
 :host([accent='primary']) {
   ::slotted(input[type='button']),
   ::slotted(input[type='submit']),
   ::slotted(button) {
-    color: var(--gse-ui-button-primary-default-foregroundColor);
-    background-color: var(--gse-ui-button-primary-default-backgroundColor);
+    color: ui.$gse-ui-button-primary-default-foregroundColor;
+    background-color: ui.$gse-ui-button-primary-default-backgroundColor;
   }
 
   ::slotted(input[type='button']:hover:enabled),
   ::slotted(input[type='submit']:hover:enabled),
   ::slotted(button:hover:enabled) {
-    color: var(--gse-ui-button-primary-hover-foregroundColor);
-    background-color: var(--gse-ui-button-primary-hover-backgroundColor);
+    color: ui.$gse-ui-button-primary-hover-foregroundColor;
+    background-color: ui.$gse-ui-button-primary-hover-backgroundColor;
   }
 
   ::slotted(input[type='button']:active:enabled),
   ::slotted(input[type='submit']:active:enabled),
   ::slotted(button:active:enabled) {
-    color: var(--gse-ui-button-primary-active-foregroundColor);
-    background-color: var(--gse-ui-button-primary-active-backgroundColor);
+    color: ui.$gse-ui-button-primary-active-foregroundColor;
+    background-color: ui.$gse-ui-button-primary-active-backgroundColor;
   }
 }
 
@@ -100,25 +101,25 @@
   ::slotted(input[type='button']),
   ::slotted(input[type='submit']),
   ::slotted(button) {
-    color: var(--gse-ui-button-tertiary-default-foregroundColor);
-    background-color: var(--gse-ui-button-tertiary-default-backgroundColor);
-    border-color: var(--gse-ui-button-tertiary-default-border-color);
-    border-style: var(--gse-ui-button-tertiary-default-border-style);
-    border-width: var(--gse-ui-button-tertiary-default-border-width);
+    color: ui.$gse-ui-button-tertiary-default-foregroundColor;
+    background-color: ui.$gse-ui-button-tertiary-default-backgroundColor;
+    border-color: ui.$gse-ui-button-tertiary-default-border-color;
+    border-style: ui.$gse-ui-button-tertiary-default-border-style;
+    border-width: ui.$gse-ui-button-tertiary-default-border-width;
   }
 
   ::slotted(input[type='button']:hover:enabled),
   ::slotted(input[type='submit']:hover:enabled),
   ::slotted(button:hover:enabled) {
-    color: var(--gse-ui-button-tertiary-hover-foregroundColor);
-    background-color: var(--gse-ui-button-tertiary-hover-backgroundColor);
+    color: ui.$gse-ui-button-tertiary-hover-foregroundColor;
+    background-color: ui.$gse-ui-button-tertiary-hover-backgroundColor;
   }
 
   ::slotted(input[type='button']:active:enabled),
   ::slotted(input[type='submit']:active:enabled),
   ::slotted(button:active:enabled) {
-    color: var(--gse-ui-button-tertiary-active-foregroundColor);
-    background-color: var(--gse-ui-button-tertiary-active-backgroundColor);
+    color: ui.$gse-ui-button-tertiary-active-foregroundColor;
+    background-color: ui.$gse-ui-button-tertiary-active-backgroundColor;
   }
 }
 
@@ -126,22 +127,22 @@
   ::slotted(input[type='button']),
   ::slotted(input[type='submit']),
   ::slotted(button) {
-    color: var(--gse-ui-button-ghost-default-foregroundColor);
-    background-color: var(--gse-ui-button-ghost-default-backgroundColor);
+    color: ui.$gse-ui-button-ghost-default-foregroundColor;
+    background-color: ui.$gse-ui-button-ghost-default-backgroundColor;
   }
 
   ::slotted(input[type='button']:hover:enabled),
   ::slotted(input[type='submit']:hover:enabled),
   ::slotted(button:hover:enabled) {
-    color: var(--gse-ui-button-ghost-hover-foregroundColor);
-    background-color: var(--gse-ui-button-ghost-hover-backgroundColor);
+    color: ui.$gse-ui-button-ghost-hover-foregroundColor;
+    background-color: ui.$gse-ui-button-ghost-hover-backgroundColor;
   }
 
   ::slotted(input[type='button']:active:enabled),
   ::slotted(input[type='submit']:active:enabled),
   ::slotted(button:active:enabled) {
-    color: var(--gse-ui-button-ghost-active-foregroundColor);
-    background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+    color: ui.$gse-ui-button-ghost-active-foregroundColor;
+    background-color: ui.$gse-ui-button-ghost-active-backgroundColor;
   }
 }
 
@@ -149,22 +150,22 @@
   ::slotted(input[type='button']),
   ::slotted(input[type='submit']),
   ::slotted(button) {
-    color: var(--gse-ui-button-danger-default-foregroundColor);
-    background-color: var(--gse-ui-button-danger-default-backgroundColor);
+    color: ui.$gse-ui-button-danger-default-foregroundColor;
+    background-color: ui.$gse-ui-button-danger-default-backgroundColor;
   }
 
   ::slotted(input[type='button']:hover:enabled),
   ::slotted(input[type='submit']:hover:enabled),
   ::slotted(button:hover:enabled) {
-    color: var(--gse-ui-button-danger-hover-foregroundColor);
-    background-color: var(--gse-ui-button-danger-hover-backgroundColor);
+    color: ui.$gse-ui-button-danger-hover-foregroundColor;
+    background-color: ui.$gse-ui-button-danger-hover-backgroundColor;
   }
 
   ::slotted(input[type='button']:active:enabled),
   ::slotted(input[type='submit']:active:enabled),
   ::slotted(button:active:enabled) {
-    color: var(--gse-ui-button-danger-active-foregroundColor);
-    background-color: var(--gse-ui-button-danger-active-backgroundColor);
+    color: ui.$gse-ui-button-danger-active-foregroundColor;
+    background-color: ui.$gse-ui-button-danger-active-backgroundColor;
   }
 }
 
@@ -176,7 +177,7 @@
   ::slotted(button) {
     block-size: initial;
     padding: 0;
-    color: var(--gse-ui-links-default-foregroundColor);
+    color: ui.$gse-ui-links-default-foregroundColor;
     background: none;
     border: none;
   }
@@ -184,13 +185,13 @@
   ::slotted(input[type='button'][disabled]),
   ::slotted(input[type='submit'][disabled]),
   ::slotted(button[disabled]) {
-    color: var(--gse-ui-links-disabled-foregroundColor);
+    color: ui.$gse-ui-links-disabled-foregroundColor;
   }
 
   ::slotted(input[type='button']:hover:enabled),
   ::slotted(input[type='submit']:hover:enabled),
   ::slotted(button:hover:enabled) {
-    color: var(--gse-ui-links-hover-foregroundColor);
+    color: ui.$gse-ui-links-hover-foregroundColor;
     text-decoration: underline;
     background: none;
   }
@@ -198,7 +199,7 @@
   ::slotted(input[type='button']:active:enabled),
   ::slotted(input[type='submit']:active:enabled),
   ::slotted(button:active:enabled) {
-    color: var(--gse-ui-links-active-foregroundColor);
+    color: ui.$gse-ui-links-active-foregroundColor;
     text-decoration: underline;
     background: none;
   }
