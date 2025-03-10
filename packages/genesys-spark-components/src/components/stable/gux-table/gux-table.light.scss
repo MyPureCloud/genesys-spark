@@ -104,6 +104,10 @@ gux-table {
         background-color: var(--gse-ui-dataTableItems-cell-altBackgroundColor);
       }
 
+      tr:last-child td {
+        border-block-end-width: 0;
+      }
+
       tr:hover td,
       tr:nth-child(2n):hover td {
         background-color: var(
