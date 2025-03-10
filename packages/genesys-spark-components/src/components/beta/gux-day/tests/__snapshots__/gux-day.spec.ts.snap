@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-day renders 1`] = `
+<gux-day-beta day="2025-03-05">
+  <template shadowrootmode="open">
+    <button type="button">
+      <slot>
+        <span aria-hidden="true">
+          5
+        </span>
+        <span class="gux-sr-only">
+          March 5, 2025
+        </span>
+      </slot>
+    </button>
+  </template>
+</gux-day-beta>
+`;
