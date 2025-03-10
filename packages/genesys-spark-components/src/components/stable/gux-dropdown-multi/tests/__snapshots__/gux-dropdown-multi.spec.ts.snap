@@ -74,3 +74,78 @@ exports[`gux-dropdown #render should render as expected 1`] = `
   </gux-listbox-multi>
 </gux-dropdown-multi>
 `;
+
+exports[`gux-dropdown #render should render with selected items as expected 1`] = `
+<gux-dropdown-multi>
+  <template shadowrootmode="open">
+    <div class="gux-dropdown-container">
+      <gux-popup>
+        <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+            <div class="gux-field-content">
+              <div class="gux-placeholder">
+                Select...
+              </div>
+            </div>
+            <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
+          </button>
+        </div>
+        <div class="gux-listbox-container" slot="popup">
+          <slot></slot>
+        </div>
+      </gux-popup>
+    </div>
+  </template>
+  <gux-listbox-multi aria-label="Animals" aria-multiselectable="true" role="listbox" tabindex="0">
+    <template shadowrootmode="open">
+      <slot></slot>
+      <slot name="create"></slot>
+    </template>
+    <gux-option-multi aria-disabled="true" aria-selected="false" class="gux-disabled" disabled="" id="gux-option-multi-i" role="option" value="a">
+      <template shadowrootmode="open">
+        <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+        </svg>
+        <div class="gux-option-wrapper">
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+          <slot name="subtext"></slot>
+        </div>
+      </template>
+      Ant
+    </gux-option-multi>
+    <gux-option-multi aria-disabled="false" aria-selected="false" id="gux-option-multi-i" role="option" selected="" value="b">
+      <template shadowrootmode="open">
+        <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+        </svg>
+        <div class="gux-option-wrapper">
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+          <slot name="subtext"></slot>
+        </div>
+      </template>
+      Bat
+    </gux-option-multi>
+    <gux-option-multi aria-disabled="false" aria-selected="false" class="gux-show-subtext" id="gux-option-multi-i" role="option" selected="" value="c">
+      <template shadowrootmode="open">
+        <svg class="gux-checkbox-container" viewBox="1 1 13 13" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M11 2.5H4C3.17157 2.5 2.5 3.17157 2.5 4V11C2.5 11.8284 3.17157 12.5 4 12.5H11C11.8284 12.5 12.5 11.8284 12.5 11V4C12.5 3.17157 11.8284 2.5 11 2.5ZM4 1C2.34315 1 1 2.34315 1 4V11C1 12.6569 2.34315 14 4 14H11C12.6569 14 14 12.6569 14 11V4C14 2.34315 12.6569 1 11 1H4Z" fill-rule="evenodd"></path>
+        </svg>
+        <div class="gux-option-wrapper">
+          <gux-truncate>
+            <slot></slot>
+          </gux-truncate>
+          <slot name="subtext"></slot>
+        </div>
+      </template>
+      Cat
+      <span slot="subtext">
+        Medium
+      </span>
+    </gux-option-multi>
+  </gux-listbox-multi>
+</gux-dropdown-multi>
+`;

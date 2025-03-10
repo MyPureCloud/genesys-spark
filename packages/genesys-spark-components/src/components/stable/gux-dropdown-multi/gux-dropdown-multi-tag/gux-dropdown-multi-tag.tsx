@@ -62,11 +62,17 @@ export class GuxDropdownMultiTag {
 
   private renderRemoveButton(): JSX.Element {
     return (
-      <button
+      <div
         class="gux-tag-remove-button"
         onClick={this.removeTag.bind(this)}
-        type="button"
-        disabled={this.disabled}
+        role="button"
+        tabindex="0"
+        aria-disabled={this.disabled.toString()}
+        onKeyDown={(e: KeyboardEvent) => {
+          if (e.key === 'Enter') {
+            this.removeTag(e);
+          }
+        }}
       >
         <gux-icon
           class="gux-tag-remove-icon"
@@ -76,7 +82,7 @@ export class GuxDropdownMultiTag {
             numberSelected: this.numberSelected.toString()
           })}
         />
-      </button>
+      </div>
     ) as JSX.Element;
   }
 
