@@ -160,6 +160,12 @@
         "on_queue": "#2143a2",
         "offline": "#848891",
         "out_of_office": "#b74ba4",
+        "available_reduced": "#9de1cd",
+        "busy_reduced": "#f3a7b5",
+        "away_reduced": "#fce9b2",
+        "on_queue_reduced": "#a6b4da",
+        "offline_reduced": "#cecfd3",
+        "out_of_office_reduced": "#e2b7db",
         "notification": "#ff451a"
       }
     },
@@ -253,7 +259,7 @@
       },
       "success": {
         "high_emphasis": "#2a2a2e",
-        "accent": "#079167"
+        "accent": "#056d4d"
       },
       "warning": {
         "high_emphasis": "#2a2a2e",
@@ -267,7 +273,7 @@
         "default": "#4f5157"
       },
       "indicators": {
-        "positive": "#079167",
+        "positive": "#056d4d",
         "negative": "#b51b37",
         "neutral": "#6a6d75"
       }
@@ -495,7 +501,7 @@
     "sparkline": {
       "mono": "#2143a2",
       "negative": "#b51b37",
-      "positive": "#079167",
+      "positive": "#056d4d",
       "neutral": "#9faac6",
       "trendline": "#cad1e1"
     }

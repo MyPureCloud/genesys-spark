@@ -497,28 +497,90 @@
     },
     "presence_ring": {
       "available": {
-        "value": "linear-gradient(135deg, {foreground.system.success.accent} 0%, {border.system.success} 100%)",
+        "value": "linear-gradient(135deg, {avatar.presence_ring.plain_colors.available.default} 0%, {avatar.presence_ring.plain_colors.available.reduced} 100%)",
         "type": "color"
       },
       "busy": {
-        "value": "linear-gradient(135deg, {foreground.system.error.accent} 0%, {border.system.error} 100%)",
+        "value": "linear-gradient(135deg, {avatar.presence_ring.plain_colors.busy.default} 0%, {avatar.presence_ring.plain_colors.busy.reduced} 100%)",
         "type": "color"
       },
       "away": {
-        "value": "linear-gradient(135deg, {foreground.system.warning.accent} 0%, {border.system.warning} 100%)",
+        "value": "linear-gradient(135deg, {avatar.presence_ring.plain_colors.away.default} 0%, {avatar.presence_ring.plain_colors.away.reduced} 100%)",
         "type": "color"
       },
       "on-queue": {
-        "value": "linear-gradient(135deg, {background.system.status.on_queue} 0%, {background.system.status.on_queue} 100%)",
+        "value": "linear-gradient(135deg, {avatar.presence_ring.plain_colors.on_queue.default} 0%, {avatar.presence_ring.plain_colors.on_queue.reduced} 100%)",
         "type": "color"
       },
       "offline": {
-        "value": "linear-gradient(135deg, {background.system.status.offline} 0%, {background.system.status.offline} 100%)",
+        "value": "linear-gradient(135deg, {avatar.presence_ring.plain_colors.offline.default} 0%, {avatar.presence_ring.plain_colors.offline.reduced} 100%)",
         "type": "color"
       },
       "out_of_office": {
-        "value": "linear-gradient(135deg, #B74BA4 0%, #F5BFEB 100%)",
+        "value": "linear-gradient(135deg, {avatar.presence_ring.plain_colors.out_of_office.default} 0%, {avatar.presence_ring.plain_colors.out_of_office.reduced} 100%)",
         "type": "color"
+      },
+      "plain_colors": {
+        "available": {
+          "default": {
+            "value": "{background.system.status.available}",
+            "type": "color"
+          },
+          "reduced": {
+            "value": "{background.system.status.available_reduced}",
+            "type": "color"
+          }
+        },
+        "busy": {
+          "default": {
+            "value": "{background.system.status.busy}",
+            "type": "color"
+          },
+          "reduced": {
+            "value": "{background.system.status.busy_reduced}",
+            "type": "color"
+          }
+        },
+        "away": {
+          "default": {
+            "value": "{background.system.status.away}",
+            "type": "color"
+          },
+          "reduced": {
+            "value": "{background.system.status.away_reduced}",
+            "type": "color"
+          }
+        },
+        "on_queue": {
+          "default": {
+            "value": "{background.system.status.on_queue}",
+            "type": "color"
+          },
+          "reduced": {
+            "value": "{background.system.status.on_queue_reduced}",
+            "type": "color"
+          }
+        },
+        "offline": {
+          "default": {
+            "value": "{background.system.status.offline}",
+            "type": "color"
+          },
+          "reduced": {
+            "value": "{background.system.status.offline_reduced}",
+            "type": "color"
+          }
+        },
+        "out_of_office": {
+          "default": {
+            "value": "{background.system.status.out_of_office}",
+            "type": "color"
+          },
+          "reduced": {
+            "value": "{background.system.status.out_of_office_reduced}",
+            "type": "color"
+          }
+        }
       }
     },
     "medium": {

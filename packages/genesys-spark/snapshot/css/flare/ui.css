@@ -292,7 +292,7 @@
   --gse-ui-alert-info-border-style: solid;
   --gse-ui-alert-success-backgroundColor: #cef0e6;
   --gse-ui-alert-success-foregroundColor: #2a2a2e;
-  --gse-ui-alert-success-iconColor: #079167;
+  --gse-ui-alert-success-iconColor: #056d4d;
   --gse-ui-alert-success-border-color: #9de1cd;
   --gse-ui-alert-success-border-width: 1px;
   --gse-ui-alert-success-border-style: solid;
@@ -382,7 +382,7 @@
   --gse-ui-formFooter-border-width: 1px;
   --gse-ui-formFooter-border-style: solid;
   --gse-ui-statusGlyph-negative: #b51b37;
-  --gse-ui-statusGlyph-positive: #079167;
+  --gse-ui-statusGlyph-positive: #056d4d;
   --gse-ui-statusGlyph-neutral: #9a7b25;
   --gse-ui-statusGlyph-information: #3d538f;
   --gse-ui-copyToClipboard-label-active-backgroundColor: #adbff0;
@@ -397,7 +397,7 @@
   --gse-ui-copyToClipboard-gap: 8px;
   --gse-ui-copyToClipboard-contentContainer-gap: 4px;
   --gse-ui-copyToClipboard-iconContainer-padding: 4px;
-  --gse-ui-copyToClipboard-tooltipIcon-success-foregroundColor: #079167;
+  --gse-ui-copyToClipboard-tooltipIcon-success-foregroundColor: #056d4d;
   --gse-ui-copyToClipboard-tooltipIcon-error-foregroundColor: #b51b37;
   --gse-ui-dismissButton-foregroundColor: #4f5157;
   --gse-ui-button-default-height: 32px;
@@ -731,7 +731,7 @@
   --gse-ui-fileUpload-fileCard-mainContainer-error-border-width: 1px;
   --gse-ui-fileUpload-fileCard-mainContainer-error-border-style: solid;
   --gse-ui-fileUpload-fileCard-boxShadow: 0 0 4px 1px #2a2a2e26;
-  --gse-ui-fileUpload-fileCard-statusIcon-success: #079167;
+  --gse-ui-fileUpload-fileCard-statusIcon-success: #056d4d;
   --gse-ui-fileUpload-fileCard-statusIcon-error: #b51b37;
   --gse-ui-fileUpload-fileCard-foregroundColor: #ffffff;
   --gse-ui-fileUpload-dropZone-borderRadius: 4px;
@@ -1016,34 +1016,46 @@
   --gse-ui-avatar-large-ucIntegration-size: 32px;
   --gse-ui-avatar-presenceRing-available: linear-gradient(
     135deg,
-    #079167 0%,
+    #09b581 0%,
     #9de1cd 100%
   );
   --gse-ui-avatar-presenceRing-busy: linear-gradient(
     135deg,
-    #b51b37 0%,
+    #e22245 0%,
     #f3a7b5 100%
   );
   --gse-ui-avatar-presenceRing-away: linear-gradient(
     135deg,
-    #9a7b25 0%,
+    #f8c73e 0%,
     #fce9b2 100%
   );
   --gse-ui-avatar-presenceRing-onQueue: linear-gradient(
     135deg,
     #2143a2 0%,
-    #2143a2 100%
+    #a6b4da 100%
   );
   --gse-ui-avatar-presenceRing-offline: linear-gradient(
     135deg,
     #848891 0%,
-    #848891 100%
+    #cecfd3 100%
   );
   --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(
     135deg,
     #b74ba4 0%,
-    #f5bfeb 100%
+    #e2b7db 100%
   );
+  --gse-ui-avatar-presenceRing-plainColors-available-default: #09b581;
+  --gse-ui-avatar-presenceRing-plainColors-available-reduced: #9de1cd;
+  --gse-ui-avatar-presenceRing-plainColors-busy-default: #e22245;
+  --gse-ui-avatar-presenceRing-plainColors-busy-reduced: #f3a7b5;
+  --gse-ui-avatar-presenceRing-plainColors-away-default: #f8c73e;
+  --gse-ui-avatar-presenceRing-plainColors-away-reduced: #fce9b2;
+  --gse-ui-avatar-presenceRing-plainColors-onQueue-default: #2143a2;
+  --gse-ui-avatar-presenceRing-plainColors-onQueue-reduced: #a6b4da;
+  --gse-ui-avatar-presenceRing-plainColors-offline-default: #848891;
+  --gse-ui-avatar-presenceRing-plainColors-offline-reduced: #cecfd3;
+  --gse-ui-avatar-presenceRing-plainColors-outOfOffice-default: #b74ba4;
+  --gse-ui-avatar-presenceRing-plainColors-outOfOffice-reduced: #e2b7db;
   --gse-ui-avatar-medium-size: 48px;
   --gse-ui-avatar-medium-badge-size: 16px;
   --gse-ui-avatar-medium-focusRing-size: 50px;
@@ -1297,7 +1309,7 @@
   --gse-ui-toast-closeButtonColor: #4f5157;
   --gse-ui-toast-success-backgroundColor: #ffffff;
   --gse-ui-toast-success-foregroundColor: #2a2a2e;
-  --gse-ui-toast-success-iconColor: #079167;
+  --gse-ui-toast-success-iconColor: #056d4d;
   --gse-ui-toast-warning-backgroundColor: #ffffff;
   --gse-ui-toast-warning-foregroundColor: #2a2a2e;
   --gse-ui-toast-warning-iconColor: #9a7b25;
@@ -1763,7 +1775,7 @@
   --gse-ui-charts-gaugeChart-segment-default: #056385;
   --gse-ui-charts-gaugeChart-segment-track: #ebedf5;
   --gse-ui-charts-gaugeChart-segment-chartMessage: #ebedf5;
-  --gse-ui-charts-gaugeChart-indicator-positive: #079167;
+  --gse-ui-charts-gaugeChart-indicator-positive: #056d4d;
   --gse-ui-charts-gaugeChart-indicator-negative: #b51b37;
   --gse-ui-charts-heatmap-numericalTile-level1-default: #cdeaf5;
   --gse-ui-charts-heatmap-numericalTile-level1-reduced: #cdeaf540;
@@ -1952,8 +1964,8 @@
   --gse-ui-charts-scatterChart-dotOutline-category9-reduced: #54c6ab40;
   --gse-ui-charts-sparkline-mono-default: #2143a2;
   --gse-ui-charts-sparkline-mono-reduced: #2143a266;
-  --gse-ui-charts-sparkline-positive-reduced: #07916766;
-  --gse-ui-charts-sparkline-positive-default: #079167;
+  --gse-ui-charts-sparkline-positive-reduced: #056d4d66;
+  --gse-ui-charts-sparkline-positive-default: #056d4d;
   --gse-ui-charts-sparkline-negative-reduced: #b51b3766;
   --gse-ui-charts-sparkline-negative-default: #b51b37;
   --gse-ui-charts-sparkline-neutral-reduced: #9faac666;
@@ -2055,8 +2067,8 @@
   --gse-ui-charts-chartsShared-centerTitle-subtitle-md-lineHeight: 20px;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontFamily: "Noto Sans";
   --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontWeight: 400;
-  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontSize: 12px;
-  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-lineHeight: 18px;
+  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontSize: 10px;
+  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-lineHeight: 14px;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontFamily: "Noto Sans";
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontWeight: 400;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontSize: 12px;
@@ -3094,33 +3106,45 @@
   --gse-ui-avatar-presenceRing-available: linear-gradient(
     135deg,
     #09b581 0%,
-    #044834 100%
+    #1d624f 100%
   );
   --gse-ui-avatar-presenceRing-busy: linear-gradient(
     135deg,
-    #e84e6a 0%,
-    #5a0e1c 100%
+    #e22245 0%,
+    #742737 100%
   );
   --gse-ui-avatar-presenceRing-away: linear-gradient(
     135deg,
     #f8c73e 0%,
-    #6c5619 100%
+    #7c6934 100%
   );
   --gse-ui-avatar-presenceRing-onQueue: linear-gradient(
     135deg,
-    #2143a2 0%,
-    #2143a2 100%
+    #2954cb 0%,
+    #2a3b6d 100%
   );
   --gse-ui-avatar-presenceRing-offline: linear-gradient(
     135deg,
     #848891 0%,
-    #848891 100%
+    #4e5056 100%
   );
   --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(
     135deg,
     #b74ba4 0%,
-    #f5bfeb 100%
+    #62375d 100%
   );
+  --gse-ui-avatar-presenceRing-plainColors-available-default: #09b581;
+  --gse-ui-avatar-presenceRing-plainColors-available-reduced: #1d624f;
+  --gse-ui-avatar-presenceRing-plainColors-busy-default: #e22245;
+  --gse-ui-avatar-presenceRing-plainColors-busy-reduced: #742737;
+  --gse-ui-avatar-presenceRing-plainColors-away-default: #f8c73e;
+  --gse-ui-avatar-presenceRing-plainColors-away-reduced: #7c6934;
+  --gse-ui-avatar-presenceRing-plainColors-onQueue-default: #2954cb;
+  --gse-ui-avatar-presenceRing-plainColors-onQueue-reduced: #2a3b6d;
+  --gse-ui-avatar-presenceRing-plainColors-offline-default: #848891;
+  --gse-ui-avatar-presenceRing-plainColors-offline-reduced: #4e5056;
+  --gse-ui-avatar-presenceRing-plainColors-outOfOffice-default: #b74ba4;
+  --gse-ui-avatar-presenceRing-plainColors-outOfOffice-reduced: #62375d;
   --gse-ui-avatar-medium-size: 48px;
   --gse-ui-avatar-medium-badge-size: 16px;
   --gse-ui-avatar-medium-focusRing-size: 50px;
@@ -3153,7 +3177,7 @@
   --gse-ui-avatar-badge-busy-icon-margin: 2px;
   --gse-ui-avatar-badge-away-color: #f8c73e;
   --gse-ui-avatar-badge-away-icon-margin: 2px;
-  --gse-ui-avatar-badge-onQueue-color: #2143a2;
+  --gse-ui-avatar-badge-onQueue-color: #2954cb;
   --gse-ui-avatar-badge-offline-color: #848891;
   --gse-ui-avatar-badge-outOfOffice: #b74ba4;
   --gse-ui-avatar-badge-notification-color: #ff451a;
@@ -4132,8 +4156,8 @@
   --gse-ui-charts-chartsShared-centerTitle-subtitle-md-lineHeight: 20px;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontFamily: "Noto Sans";
   --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontWeight: 400;
-  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontSize: 12px;
-  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-lineHeight: 18px;
+  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontSize: 10px;
+  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-lineHeight: 14px;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontFamily: "Noto Sans";
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontWeight: 400;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontSize: 12px;
