@@ -1,47 +1,36 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 @mixin link-breadcrumb-primary-default {
-  font-family: var(--gse-ui-links-inLine-medium-text-fontFamily);
-  font-size: var(--gse-ui-links-inLine-medium-text-fontSize);
-  font-weight: var(--gse-ui-links-inLine-medium-text-fontWeight);
-  line-height: var(--gse-ui-links-inLine-medium-text-lineHeight);
+  font-family: ui.$gse-ui-links-inLine-medium-text-fontFamily;
+  font-size: ui.$gse-ui-links-inLine-medium-text-fontSize;
+  font-weight: ui.$gse-ui-links-inLine-medium-text-fontWeight;
+  line-height: ui.$gse-ui-links-inLine-medium-text-lineHeight;
   text-decoration: none;
 }
 
 @mixin link-breadcrumb-primary-separator {
-  padding: var(--gse-ui-breadcrumbs-primary-separator-padding);
-  font-family: var(
-    --gse-ui-breadcrumbs-primary-separator-typography-fontFamily
-  );
-  font-size: var(--gse-ui-breadcrumbs-primary-separator-typography-fontSize);
-  font-weight: var(
-    --gse-ui-breadcrumbs-primary-separator-typography-fontWeight
-  );
-  line-height: var(
-    --gse-ui-breadcrumbs-primary-separator-typography-lineHeight
-  );
+  padding: ui.$gse-ui-breadcrumbs-primary-separator-padding;
+  font-family: ui.$gse-ui-breadcrumbs-primary-separator-typography-fontFamily;
+  font-size: ui.$gse-ui-breadcrumbs-primary-separator-typography-fontSize;
+  font-weight: ui.$gse-ui-breadcrumbs-primary-separator-typography-fontWeight;
+  line-height: ui.$gse-ui-breadcrumbs-primary-separator-typography-lineHeight;
 }
 
 @mixin link-breadcrumb-secondary-default {
-  font-family: var(--gse-ui-links-inLine-small-text-fontFamily);
-  font-size: var(--gse-ui-links-inLine-small-text-fontSize);
-  font-weight: var(--gse-ui-links-inLine-small-text-fontWeight);
-  line-height: var(--gse-ui-links-inLine-small-text-lineHeight);
+  font-family: ui.$gse-ui-links-inLine-small-text-fontFamily;
+  font-size: ui.$gse-ui-links-inLine-small-text-fontSize;
+  font-weight: ui.$gse-ui-links-inLine-small-text-fontWeight;
+  line-height: ui.$gse-ui-links-inLine-small-text-lineHeight;
   text-decoration: none;
 }
 
 @mixin link-breadcrumb-secondary-separator {
-  padding: var(--gse-ui-breadcrumbs-secondary-separator-padding);
-  font-family: var(
-    --gse-ui-breadcrumbs-secondary-separator-typography-fontFamily
-  );
-  font-size: var(--gse-ui-breadcrumbs-secondary-separator-typography-fontSize);
-  font-weight: var(
-    --gse-ui-breadcrumbs-secondary-separator-typography-fontWeight
-  );
-  line-height: var(
-    --gse-ui-breadcrumbs-secondary-separator-typography-lineHeight
-  );
+  padding: ui.$gse-ui-breadcrumbs-secondary-separator-padding;
+  font-family: ui.$gse-ui-breadcrumbs-secondary-separator-typography-fontFamily;
+  font-size: ui.$gse-ui-breadcrumbs-secondary-separator-typography-fontSize;
+  font-weight: ui.$gse-ui-breadcrumbs-secondary-separator-typography-fontWeight;
+  line-height: ui.$gse-ui-breadcrumbs-secondary-separator-typography-lineHeight;
 }
 
 .gux-breadcrumb-generation {
@@ -50,27 +39,27 @@
   flex-wrap: nowrap;
   place-content: flex-start flex-start;
   align-items: center;
-  min-block-size: var(--gse-ui-breadcrumbs-secondary-height);
+  min-block-size: ui.$gse-ui-breadcrumbs-secondary-height;
 
   .gux-breadcrumb-content {
     @include link-breadcrumb-secondary-default;
 
-    color: var(--gse-ui-links-default-foregroundColor);
+    color: ui.$gse-ui-links-default-foregroundColor;
     pointer-events: none;
 
     &.gux-active {
-      color: var(--gse-ui-links-active-foregroundColor);
+      color: ui.$gse-ui-links-active-foregroundColor;
     }
   }
 
   .gux-breadcrumb-separator {
     @include link-breadcrumb-secondary-separator;
 
-    color: var(--gse-ui-breadcrumbs-separator-color);
+    color: ui.$gse-ui-breadcrumbs-separator-color;
   }
 
   &.gux-primary {
-    min-block-size: var(--gse-ui-breadcrumbs-primary-height);
+    min-block-size: ui.$gse-ui-breadcrumbs-primary-height;
 
     .gux-breadcrumb-content {
       @include link-breadcrumb-primary-default;
