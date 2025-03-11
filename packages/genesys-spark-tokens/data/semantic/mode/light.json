@@ -880,6 +880,11 @@
           "type": "color",
           "description": "The brand color, mostly used for logos on surfaces."
         },
+        "brand_secondary": {
+          "value": "{theme.foreground.special_accents.brand.20}",
+          "type": "color",
+          "description": "The complimentary brand color, mostly used for text that accompany logos."
+        },
         "ai_gradient": {
           "top_left": {
             "value": "{theme.foreground.custom_accents.ai.10}",

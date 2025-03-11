@@ -469,7 +469,10 @@
   --gse-semantic-theme-foreground-system-success-10: #3c8527;
   --gse-semantic-theme-foreground-system-warning-10: #ffae00;
   --gse-semantic-theme-foreground-system-error-10: #ea0b0b;
-  --gse-semantic-theme-foreground-specialAccents-brand-10: #ff4f1f;
+  --gse-semantic-theme-foreground-specialAccents-brand-10: #ff451a;
+  --gse-semantic-theme-foreground-specialAccents-brand-20: #141929;
+  --gse-semantic-theme-foreground-specialAccents-brand-10d: #ff451a;
+  --gse-semantic-theme-foreground-specialAccents-brand-20d: #ffffff;
   --gse-semantic-theme-foreground-specialAccents-ai-10: #8a5ecc;
   --gse-semantic-theme-foreground-link-10: #2a60c8;
   --gse-semantic-theme-foreground-link-20: #2754ac;
@@ -1002,7 +1005,8 @@
   --gse-semantic-foreground-container-highContrast-midEmphasis: #eff1f5;
   --gse-semantic-foreground-container-highContrast-lowEmphasis: #b4bccb;
   --gse-semantic-foreground-container-specialAccents-ai: #8a5ecc;
-  --gse-semantic-foreground-container-specialAccents-brand: #ff4f1f;
+  --gse-semantic-foreground-container-specialAccents-brand: #ff451a;
+  --gse-semantic-foreground-container-specialAccents-brandSecondary: #141929;
   --gse-semantic-foreground-container-specialAccents-aiGradient-topLeft: #28afe0;
   --gse-semantic-foreground-container-specialAccents-aiGradient-bottomRight: #6e5ddb;
   --gse-semantic-foreground-system-customAccents-light: #ffffff;

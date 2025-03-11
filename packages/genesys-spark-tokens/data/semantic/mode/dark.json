@@ -889,6 +889,11 @@
             "type": "color",
             "description": "This is the bottom right color that the ai gradient uses for icons and text"
           }
+        },
+        "brand_secondary": {
+          "value": "{theme.foreground.special_accents.brand.20d}",
+          "type": "color",
+          "description": "The complimentary brand color, mostly used for text that accompany logos."
         }
       }
     },
