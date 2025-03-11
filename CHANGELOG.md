@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.131.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.130.1...v4.131.0) (2025-03-11)
+
+
+### Features
+
+* **table:** removing double border at bottom of the table ([934c700](https://github.com/MyPureCloud/genesys-spark/commit/934c7000e3b12b8c8a2a7d43d071a5856ffb5ccb))
+* **tokens:** General dark mode fixes ([b738167](https://github.com/MyPureCloud/genesys-spark/commit/b7381677c1112579a08b33d7c07e5cd9e620089b))
+* **tokens:** generated CSS vars ([1a94625](https://github.com/MyPureCloud/genesys-spark/commit/1a94625138be66c45c3e024fa0af17381f44e110))
+* **tokens:** generated figma vars ([fca08f7](https://github.com/MyPureCloud/genesys-spark/commit/fca08f79f003dddf0eeb5fa1789e4aefad8cc12f))
+* **tokens:** Ran linter ([a7e8e8d](https://github.com/MyPureCloud/genesys-spark/commit/a7e8e8de1bef425b575607458915103c46877eeb))
+
 ### [4.130.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.130.0...v4.130.1) (2025-03-08)
 
 
