@@ -5,11 +5,12 @@
 
 ## Properties
 
-| Property           | Attribute           | Description                                                                    | Type      | Default |
-| ------------------ | ------------------- | ------------------------------------------------------------------------------ | --------- | ------- |
-| `compact`          | `compact`           | Indicates button density style. Intended to be paired with gux-table property. | `boolean` | `false` |
-| `disabled`         | `disabled`          | Controls the disabled state of the internal button                             | `boolean` | `false` |
-| `screenreaderText` | `screenreader-text` | Screenreader text for context menu button defaults to "context menu"           | `string`  | `''`    |
+| Property           | Attribute           | Description                                                                    | Type                                                                                                                                                                 | Default          |
+| ------------------ | ------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `compact`          | `compact`           | Indicates button density style. Intended to be paired with gux-table property. | `boolean`                                                                                                                                                            | `false`          |
+| `disabled`         | `disabled`          | Controls the disabled state of the internal button                             | `boolean`                                                                                                                                                            | `false`          |
+| `placement`        | `placement`         | Placement of the popup defaults to is "bottom-start"                           | `"bottom" \| "bottom-end" \| "bottom-start" \| "left" \| "left-end" \| "left-start" \| "right" \| "right-end" \| "right-start" \| "top" \| "top-end" \| "top-start"` | `'bottom-start'` |
+| `screenreaderText` | `screenreader-text` | Screenreader text for context menu button defaults to "context menu"           | `string`                                                                                                                                                             | `''`             |
 
 
 ## Dependencies
