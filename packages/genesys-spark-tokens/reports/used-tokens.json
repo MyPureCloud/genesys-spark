@@ -4,6 +4,7 @@
   "--gse-core-fontWeight-semiBold",
   "--gse-core-lineHeight-matchFontSize",
   "--gse-core-spacing-4xs",
+  "--gse-core-spacing-5xs",
   "--gse-semantic-background-container-elevated-default",
   "--gse-semantic-background-container-page-tonalSubtle",
   "--gse-semantic-body-lg-bold-fontWeight",

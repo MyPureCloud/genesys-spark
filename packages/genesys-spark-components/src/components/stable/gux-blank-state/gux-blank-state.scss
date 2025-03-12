@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 $gse-ui-blankState-large-minWidth: 570px; // --gse-ui-blankState-large-minWidth
 
 :host {
@@ -13,58 +15,42 @@ $gse-ui-blankState-large-minWidth: 570px; // --gse-ui-blankState-large-minWidth
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--gse-ui-blankState-padding);
-  color: var(--gse-ui-blankState-foregroundColor);
+  padding: ui.$gse-ui-blankState-padding;
+  color: ui.$gse-ui-blankState-foregroundColor;
 
   .gux-image {
-    padding-block-end: var(--gse-ui-blankState-gapMain);
+    padding-block-end: ui.$gse-ui-blankState-gapMain;
   }
 
   .gux-message {
-    padding-block-end: var(--gse-ui-blankState-gapMessage);
+    padding-block-end: ui.$gse-ui-blankState-gapMessage;
   }
 
   .gux-guidance {
-    padding-block-end: var(--gse-ui-blankState-gapContent);
+    padding-block-end: ui.$gse-ui-blankState-gapContent;
   }
 
   ::slotted(gux-icon) {
-    inline-size: var(--gse-ui-blankState-icon-size-lg);
-    block-size: var(--gse-ui-blankState-icon-size-lg);
-    color: var(--gse-ui-blankState-iconColor);
+    inline-size: ui.$gse-ui-blankState-icon-size-lg;
+    block-size: ui.$gse-ui-blankState-icon-size-lg;
+    color: ui.$gse-ui-blankState-iconColor;
   }
 
   slot[name='primary-message'] {
-    font-family: var(
-      --gse-ui-progressAndLoading-blankState-large-header-fontFamily
-    );
-    font-size: var(
-      --gse-ui-progressAndLoading-blankState-large-header-fontSize
-    );
-    font-weight: var(
-      --gse-ui-progressAndLoading-blankState-large-header-fontWeight
-    );
-    line-height: var(
-      --gse-ui-progressAndLoading-blankState-large-header-lineHeight
-    );
-    color: var(--gse-ui-blankState-foregroundColor);
+    font-family: ui.$gse-ui-progressAndLoading-blankState-large-header-fontFamily;
+    font-size: ui.$gse-ui-progressAndLoading-blankState-large-header-fontSize;
+    font-weight: ui.$gse-ui-progressAndLoading-blankState-large-header-fontWeight;
+    line-height: ui.$gse-ui-progressAndLoading-blankState-large-header-lineHeight;
+    color: ui.$gse-ui-blankState-foregroundColor;
     text-align: center;
   }
 
   slot[name='additional-guidance'] {
-    font-family: var(
-      --gse-ui-progressAndLoading-blankState-large-subheader-fontFamily
-    );
-    font-size: var(
-      --gse-ui-progressAndLoading-blankState-large-subheader-fontSize
-    );
-    font-weight: var(
-      --gse-ui-progressAndLoading-blankState-large-subheader-fontWeight
-    );
-    line-height: var(
-      --gse-ui-progressAndLoading-blankState-large-subheader-lineHeight
-    );
-    color: var(--gse-ui-blankState-foregroundColor);
+    font-family: ui.$gse-ui-progressAndLoading-blankState-large-subheader-fontFamily;
+    font-size: ui.$gse-ui-progressAndLoading-blankState-large-subheader-fontSize;
+    font-weight: ui.$gse-ui-progressAndLoading-blankState-large-subheader-fontWeight;
+    line-height: ui.$gse-ui-progressAndLoading-blankState-large-subheader-lineHeight;
+    color: ui.$gse-ui-blankState-foregroundColor;
     text-align: center;
   }
 }
@@ -73,38 +59,22 @@ $gse-ui-blankState-large-minWidth: 570px; // --gse-ui-blankState-large-minWidth
 @container (width < #{$gse-ui-blankState-large-minWidth}) {
   .gux-container {
     ::slotted(gux-icon) {
-      inline-size: var(--gse-ui-blankState-icon-size-sm);
-      block-size: var(--gse-ui-blankState-icon-size-sm);
+      inline-size: ui.$gse-ui-blankState-icon-size-sm;
+      block-size: ui.$gse-ui-blankState-icon-size-sm;
     }
 
     slot[name='primary-message'] {
-      font-family: var(
-        --gse-ui-progressAndLoading-blankState-small-header-fontFamily
-      );
-      font-size: var(
-        --gse-ui-progressAndLoading-blankState-small-header-fontSize
-      );
-      font-weight: var(
-        --gse-ui-progressAndLoading-blankState-small-header-fontWeight
-      );
-      line-height: var(
-        --gse-ui-progressAndLoading-blankState-small-header-lineHeight
-      );
+      font-family: ui.$gse-ui-progressAndLoading-blankState-small-header-fontFamily;
+      font-size: ui.$gse-ui-progressAndLoading-blankState-small-header-fontSize;
+      font-weight: ui.$gse-ui-progressAndLoading-blankState-small-header-fontWeight;
+      line-height: ui.$gse-ui-progressAndLoading-blankState-small-header-lineHeight;
     }
 
     slot[name='additional-guidance'] {
-      font-family: var(
-        --gse-ui-progressAndLoading-blankState-small-subheader-fontFamily
-      );
-      font-size: var(
-        --gse-ui-progressAndLoading-blankState-small-subheader-fontSize
-      );
-      font-weight: var(
-        --gse-ui-progressAndLoading-blankState-small-subheader-fontWeight
-      );
-      line-height: var(
-        --gse-ui-progressAndLoading-blankState-small-subheader-lineHeight
-      );
+      font-family: ui.$gse-ui-progressAndLoading-blankState-small-subheader-fontFamily;
+      font-size: ui.$gse-ui-progressAndLoading-blankState-small-subheader-fontSize;
+      font-weight: ui.$gse-ui-progressAndLoading-blankState-small-subheader-fontWeight;
+      line-height: ui.$gse-ui-progressAndLoading-blankState-small-subheader-lineHeight;
     }
   }
 }

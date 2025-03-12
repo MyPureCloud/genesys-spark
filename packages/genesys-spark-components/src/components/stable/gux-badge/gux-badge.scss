@@ -1,25 +1,26 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 // Style
 :host {
   display: inline-block;
   block-size: fit-content;
-  border-radius: var(--gse-ui-badge-borderRadius);
+  border-radius: ui.$gse-ui-badge-borderRadius;
 }
 
 .gux-badge {
   display: flex;
   flex-direction: row;
-  gap: var(--gse-ui-badge-gap);
+  gap: ui.$gse-ui-badge-gap;
   align-items: center;
   justify-content: center;
-  block-size: var(--gse-ui-badge-height);
-  padding: var(--gse-ui-badge-padding);
-  font-family: var(--gse-ui-badge-text-fontFamily);
-  font-size: var(--gse-ui-badge-text-fontSize);
-  font-weight: var(--gse-ui-badge-text-fontWeight);
-  line-height: var(--gse-ui-badge-text-lineHeight);
-  border-radius: var(--gse-ui-badge-borderRadius);
+  block-size: ui.$gse-ui-badge-height;
+  padding: ui.$gse-ui-badge-padding;
+  font-family: ui.$gse-ui-badge-text-fontFamily;
+  font-size: ui.$gse-ui-badge-text-fontSize;
+  font-weight: ui.$gse-ui-badge-text-fontWeight;
+  line-height: ui.$gse-ui-badge-text-lineHeight;
+  border-radius: ui.$gse-ui-badge-borderRadius;
 
   gux-tooltip-title {
     white-space: nowrap;
@@ -30,42 +31,42 @@
   }
 
   &.gux-info {
-    color: var(--gse-ui-badge-info-regular-foregroundColor);
-    background-color: var(--gse-ui-badge-info-regular-backgroundColor);
+    color: ui.$gse-ui-badge-info-regular-foregroundColor;
+    background-color: ui.$gse-ui-badge-info-regular-backgroundColor;
 
     &.gux-bold {
-      color: var(--gse-ui-badge-info-bold-foregroundColor);
-      background-color: var(--gse-ui-badge-info-bold-backgroundColor);
+      color: ui.$gse-ui-badge-info-bold-foregroundColor;
+      background-color: ui.$gse-ui-badge-info-bold-backgroundColor;
     }
   }
 
   &.gux-error {
-    color: var(--gse-ui-badge-error-regular-foregroundColor);
-    background-color: var(--gse-ui-badge-error-regular-backgroundColor);
+    color: ui.$gse-ui-badge-error-regular-foregroundColor;
+    background-color: ui.$gse-ui-badge-error-regular-backgroundColor;
 
     &.gux-bold {
-      color: var(--gse-ui-badge-error-bold-foregroundColor);
-      background-color: var(--gse-ui-badge-error-bold-backgroundColor);
+      color: ui.$gse-ui-badge-error-bold-foregroundColor;
+      background-color: ui.$gse-ui-badge-error-bold-backgroundColor;
     }
   }
 
   &.gux-warning {
-    color: var(--gse-ui-badge-warning-regular-foregroundColor);
-    background-color: var(--gse-ui-badge-warning-regular-backgroundColor);
+    color: ui.$gse-ui-badge-warning-regular-foregroundColor;
+    background-color: ui.$gse-ui-badge-warning-regular-backgroundColor;
 
     &.gux-bold {
-      color: var(--gse-ui-badge-warning-bold-foregroundColor);
-      background-color: var(--gse-ui-badge-warning-bold-backgroundColor);
+      color: ui.$gse-ui-badge-warning-bold-foregroundColor;
+      background-color: ui.$gse-ui-badge-warning-bold-backgroundColor;
     }
   }
 
   &.gux-success {
-    color: var(--gse-ui-badge-success-regular-foregroundColor);
-    background-color: var(--gse-ui-badge-success-regular-backgroundColor);
+    color: ui.$gse-ui-badge-success-regular-foregroundColor;
+    background-color: ui.$gse-ui-badge-success-regular-backgroundColor;
 
     &.gux-bold {
-      color: var(--gse-ui-badge-success-bold-foregroundColor);
-      background-color: var(--gse-ui-badge-success-bold-backgroundColor);
+      color: ui.$gse-ui-badge-success-bold-foregroundColor;
+      background-color: ui.$gse-ui-badge-success-bold-backgroundColor;
     }
   }
 
