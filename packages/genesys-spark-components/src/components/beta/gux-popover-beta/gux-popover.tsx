@@ -271,6 +271,7 @@ export class GuxPopover {
     switch (event.key) {
       case 'Enter':
       case ' ':
+        event.preventDefault();
         this.popupElement.togglePopover();
         this.isOpen = !this.isOpen;
         this.runUpdatePosition();
