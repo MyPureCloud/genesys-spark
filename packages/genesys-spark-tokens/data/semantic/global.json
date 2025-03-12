@@ -566,15 +566,15 @@
       }
     },
     "xs": {
-      "size": {
-        "value": "{size.sm}",
-        "type": "sizing",
-        "description": "The recommended size for small-sized interactive components. For example small link."
-      },
       "padding": {
         "value": "{spacing.5xs}",
         "type": "spacing",
         "description": "The recommended padding for extra-small-sized interactive components."
+      },
+      "size": {
+        "value": "{size.sm}",
+        "type": "sizing",
+        "description": "The recommended size for small-sized interactive components. For example small link."
       },
       "height": {
         "value": "{size.sm}",
