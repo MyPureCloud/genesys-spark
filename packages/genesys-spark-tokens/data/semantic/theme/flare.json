@@ -569,7 +569,7 @@
             "type": "color"
           },
           "40d": {
-            "value": "{color.island.800}",
+            "value": "{color.island.700}",
             "type": "color"
           },
           "50d": {
@@ -601,8 +601,18 @@
             "type": "color"
           },
           "120d": {
-            "value": "{color.island.900}",
-            "type": "color"
+            "value": "{color.island.600}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.25",
+                  "space": "lch",
+                  "color": "{color.island.700} "
+                }
+              }
+            }
           },
           "130d": {
             "value": "{color.mineral.800}",
@@ -703,7 +713,7 @@
             "type": "color"
           },
           "120d": {
-            "value": "{color.island.900}",
+            "value": "{color.island.800}",
             "type": "color"
           }
         },
