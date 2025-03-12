@@ -40,6 +40,27 @@
         "azure": "#102251",
         "mineral": "#233d57",
         "island": "#003447"
+      },
+      "global_nav": {
+        "desktop": {
+          "option": {
+            "hover": "#0c193d",
+            "active_panel": "#102251",
+            "active_selected": "#19327a"
+          },
+          "return": {
+            "default": "#19327a",
+            "hover": "#102251"
+          },
+          "menu": {
+            "closed_hover": "#0c193d",
+            "open_hover": "#0c193d"
+          },
+          "new_tab": {
+            "hover": "#0c193d",
+            "selected": "#102251"
+          }
+        }
       }
     },
     "overlay": {
@@ -89,6 +110,21 @@
             "top_left": "#313644",
             "bottom_right": "#2f2f44"
           }
+        }
+      },
+      "global_nav": {
+        "desktop": {
+          "top_command_bar": "#1e1e21",
+          "menu_panel": {
+            "primary_top-left_value": "#141c34",
+            "primary_bottom-right_value": "#141929",
+            "secondary_top-left_value": "#141929",
+            "secondary_bottom-right_value": "#131315"
+          }
+        },
+        "mobile": {
+          "header": "#1e1e21",
+          "footer": "#141c34"
         }
       }
     },
@@ -224,6 +260,39 @@
       },
       "indicator": {
         "default": "#5476d5"
+      },
+      "global_nav": {
+        "desktop": {
+          "level1": {
+            "default": "#ffffff",
+            "hover": "#ffffff",
+            "active_panel": "#ffffff",
+            "active_selected": "#ffffff",
+            "disabled": "#ffffff"
+          },
+          "menu": {
+            "closed_default": "#ffffff",
+            "closed_hover": "#d5def7",
+            "open_default": "#ffffff",
+            "open_hover": "#d5def7"
+          },
+          "level2": {
+            "default": "#ffffff",
+            "hover": "#ffffff",
+            "selected": "#ffffff",
+            "disabled": "#ffffff"
+          },
+          "new_tab": {
+            "default": "#ffffff",
+            "hover": "#ffffff",
+            "selected": "#ffffff"
+          },
+          "return": {
+            "default": "#ffffff",
+            "hover": "#ffffff",
+            "selected": "#ffffff"
+          }
+        }
       }
     },
     "container": {
@@ -242,7 +311,8 @@
           "top_left": "#9fd6ea",
           "bottom_right": "#a89ee9"
         },
-        "brand_secondary": "#ffffff"
+        "brand_secondary": "#ffffff",
+        "global_nav": "#ffffff"
       }
     },
     "system": {
@@ -334,6 +404,23 @@
         "ai": {
           "top_left": "#056385",
           "bottom_right": "#6e5ddb"
+        }
+      },
+      "global_nav": {
+        "tree_view": {
+          "bar": "#263b73"
+        },
+        "top_command_bar": {
+          "divider": "#3e4044"
+        },
+        "panel": {
+          "divider": "#3e4044"
+        },
+        "menu_button": {
+          "closed_hover": "#d5def7"
+        },
+        "side_menu": {
+          "divider": "#3e4044"
         }
       }
     },

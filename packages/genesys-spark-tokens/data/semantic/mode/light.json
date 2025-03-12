@@ -144,6 +144,63 @@
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         }
+      },
+      "global_nav": {
+        "desktop": {
+          "option": {
+            "hover": {
+              "value": "{theme.background.custom_accents.global_nav.10}",
+              "type": "color",
+              "description": "The background color for the hover state of options in the menu panel of the global navigation."
+            },
+            "active_panel": {
+              "value": "{theme.background.custom_accents.global_nav.20}",
+              "type": "color",
+              "description": "The background color for the active-panel state of the options in the menu panel of the global navigation."
+            },
+            "active_selected": {
+              "value": "{theme.background.custom_accents.global_nav.30}",
+              "type": "color",
+              "description": "The background color for the active-selected state of the options in the menu panel of the global navigation."
+            }
+          },
+          "return": {
+            "default": {
+              "value": "{theme.background.custom_accents.global_nav.20}",
+              "type": "color",
+              "description": "The background color for the default state of the navigation buttons in the return button of the global navigation."
+            },
+            "hover": {
+              "value": "{theme.background.custom_accents.global_nav.30}",
+              "type": "color",
+              "description": "The background color for the hover state of the navigation buttons in the return button of the global navigation."
+            }
+          },
+          "menu": {
+            "closed_hover": {
+              "value": "{theme.background.custom_accents.global_nav.10}",
+              "type": "color",
+              "description": "The background color for the closed-hover state of the navigation buttons in the menu button of the global navigation."
+            },
+            "open_hover": {
+              "value": "{theme.background.custom_accents.global_nav.10}",
+              "type": "color",
+              "description": "The background color for the open-hover state of the navigation buttons in the menu button of the global navigation."
+            }
+          },
+          "new_tab": {
+            "hover": {
+              "value": "{theme.background.custom_accents.global_nav.10}",
+              "type": "color",
+              "description": "The background color for the hover state of the navigation buttons in the new tab button of the global navigation."
+            },
+            "selected": {
+              "value": "{theme.background.custom_accents.global_nav.20}",
+              "type": "color",
+              "description": "The background color for the selected state of the navigation buttons in the new tab button of the global navigation."
+            }
+          }
+        }
       }
     },
     "overlay": {
@@ -324,6 +381,49 @@
               },
               "description": "This is the bottom right color that the ai gradient uses for container elements."
             }
+          }
+        }
+      },
+      "global_nav": {
+        "desktop": {
+          "top_command_bar": {
+            "value": "{theme.background.container.global_nav.desktop.10}",
+            "type": "color",
+            "description": "The background color of the top command bar for the desktop global navigation."
+          },
+          "menu_panel": {
+            "primary_top-left_value": {
+              "value": "{theme.background.container.global_nav.desktop.20}",
+              "type": "color",
+              "description": "The top-left color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            },
+            "primary_bottom-right_value": {
+              "value": "{theme.background.container.global_nav.desktop.40}",
+              "type": "color",
+              "description": "The bottom-right color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            },
+            "secondary_top-left_value": {
+              "value": "{theme.background.container.global_nav.desktop.40}",
+              "type": "color",
+              "description": "The  top-left color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
+            },
+            "secondary_bottom-right_value": {
+              "value": "{theme.background.container.global_nav.desktop.50}",
+              "type": "color",
+              "description": "The bottom-right color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
+            }
+          }
+        },
+        "mobile": {
+          "header": {
+            "value": "{theme.background.container.global_nav.mobile.10}",
+            "type": "color",
+            "description": "The background color of the header bar for the mobile global navigation."
+          },
+          "footer": {
+            "value": "{theme.background.container.global_nav.mobile.20}",
+            "type": "color",
+            "description": "The background color of the footer for the mobile global navigation."
           }
         }
       }
@@ -834,6 +934,115 @@
           "type": "color",
           "description": "this is used to the selected indicator for the data table headers"
         }
+      },
+      "global_nav": {
+        "desktop": {
+          "level1": {
+            "default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the default state of the navigation buttons in the menu panel level 1 of the global navigation."
+            },
+            "hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the hover state of the navigation buttons in the menu panel level 1 of the global navigation."
+            },
+            "active_panel": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The background color for the active-panel state of the navigation buttons in the menu panel level 1 of the global navigation."
+            },
+            "active_selected": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the active-selected state of the navigation buttons in the menu panel level 1 of the global navigation."
+            },
+            "disabled": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the disabled state of the navigation buttons in the menu panel level 1 of the global navigation."
+            }
+          },
+          "menu": {
+            "closed_default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.20}",
+              "type": "color",
+              "description": "The foreground color for the closed-default state of the menu button of the global navigation."
+            },
+            "closed_hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the closed-hover state of the menu button of the global navigation."
+            },
+            "open_default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the open-default state of the menu button of the global navigation."
+            },
+            "open_hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.40}",
+              "type": "color",
+              "description": "The foreground color for the open-hover state of the menu button of the global navigation."
+            }
+          },
+          "level2": {
+            "default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the default state of the navigation buttons in the menu panel level 2 of the global navigation."
+            },
+            "hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the hover state of the navigation buttons in the menu panel level 2 of the global navigation."
+            },
+            "selected": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the selected state of the navigation buttons in the menu panel level 2 of the global navigation."
+            },
+            "disabled": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the disabled state of the navigation buttons in the menu panel level 2 of the global navigation."
+            }
+          },
+          "new_tab": {
+            "default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the default state of the new tab button of the global navigation."
+            },
+            "hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the hover state of the new tab button of the global navigation."
+            },
+            "selected": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the selected state of the new tab button of the global navigation."
+            }
+          },
+          "return": {
+            "default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the default state of the return button of the global navigation."
+            },
+            "hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the hover state of the return button of the global navigation."
+            },
+            "selected": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the selected state of the return button of the global navigation."
+            }
+          }
+        }
       }
     },
     "container": {
@@ -896,6 +1105,11 @@
             "type": "color",
             "description": "This is the bottom right color that the ai gradient uses for icons and text"
           }
+        },
+        "global_nav": {
+          "value": "{theme.foreground.special_accents.global_nav.desktop.50}",
+          "type": "color",
+          "description": "Accent color, mostly used for accents in the Global Navigation such as current page"
         }
       }
     },
@@ -1181,6 +1395,51 @@
             "value": "{theme.border.custom_accents.ai.20}",
             "type": "color",
             "description": "This is the bottom right color that the ai gradient uses for borders."
+          }
+        }
+      },
+      "global_nav": {
+        "tree_view": {
+          "bar": {
+            "value": "{theme.border.edges.global_nav.10}",
+            "type": "color",
+            "description": "The border color on the left of tree view of the global navigation."
+          }
+        },
+        "top_command_bar": {
+          "divider": {
+            "value": "{theme.border.edges.global_nav.20}",
+            "type": "color",
+            "description": "The border color at the bottom of the top command bar of the global navigation."
+          }
+        },
+        "panel": {
+          "divider": {
+            "value": "{theme.border.edges.global_nav.20}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0",
+                  "space": "lch"
+                }
+              }
+            },
+            "description": "The border color at the right of the panel of the global navigation."
+          }
+        },
+        "menu_button": {
+          "closed_hover": {
+            "value": "{theme.foreground.special_accents.global_nav.desktop.30}",
+            "type": "color",
+            "description": "The border color for the closed-hover state of the menu button of the global navigation."
+          }
+        },
+        "side_menu": {
+          "divider": {
+            "value": "{theme.border.edges.global_nav.30}",
+            "type": "color"
           }
         }
       }

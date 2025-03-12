@@ -200,6 +200,68 @@
             "value": "{color.haze.50}",
             "type": "color"
           }
+        },
+        "global_nav": {
+          "desktop": {
+            "10": {
+              "value": "{color.white}",
+              "type": "color"
+            },
+            "20": {
+              "value": "{color.genesys_navy.600}",
+              "type": "color"
+            },
+            "30": {
+              "value": "{color.genesys_navy.800}",
+              "type": "color"
+            },
+            "40": {
+              "value": "{color.genesys_navy.700}",
+              "type": "color"
+            },
+            "50": {
+              "value": "{color.genesys_navy.800}",
+              "type": "color"
+            },
+            "10d": {
+              "value": "{color.haze.950}",
+              "type": "color"
+            },
+            "20d": {
+              "value": "{color.genesys_navy.900}",
+              "type": "color"
+            },
+            "30d": {
+              "value": "{color.genesys_navy.1000}",
+              "type": "color"
+            },
+            "40d": {
+              "value": "{color.genesys_navy.950}",
+              "type": "color"
+            },
+            "50d": {
+              "value": "{color.haze.1000}",
+              "type": "color"
+            }
+          },
+          "mobile": {
+            "10": {
+              "value": "{color.haze.950}",
+              "type": "color"
+            },
+            "20": {
+              "value": "{color.genesys_navy.100}",
+              "type": "color"
+            },
+            "10d": {
+              "value": "{color.haze.950}",
+              "type": "color"
+            },
+            "20d": {
+              "value": "{color.genesys_navy.900}",
+              "type": "color"
+            }
+          }
         }
       },
       "form_control": {
@@ -916,6 +978,32 @@
             "value": "{color.island.700}",
             "type": "color"
           }
+        },
+        "global_nav": {
+          "10": {
+            "value": "{color.azure_blue.700}",
+            "type": "color"
+          },
+          "20": {
+            "value": "{color.azure_blue.600}",
+            "type": "color"
+          },
+          "30": {
+            "value": "{color.azure_blue.500}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.900}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.azure_blue.700}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
+          }
         }
       }
     },
@@ -1111,6 +1199,60 @@
           "10d": {
             "value": "{color.island.600}",
             "type": "color"
+          }
+        },
+        "global_nav": {
+          "desktop": {
+            "10": {
+              "value": "{color.white}",
+              "type": "color"
+            },
+            "20": {
+              "value": "{color.azure_blue.600}",
+              "type": "color"
+            },
+            "30": {
+              "value": "{color.azure_blue.700}",
+              "type": "color"
+            },
+            "40": {
+              "value": "{color.azure_blue.100}",
+              "type": "color"
+            },
+            "50": {
+              "value": "{color.genesys_navy.800}",
+              "type": "color"
+            },
+            "50d": {
+              "value": "{color.white}",
+              "type": "color"
+            },
+            "10d": {
+              "value": "{color.white}",
+              "type": "color"
+            },
+            "20d": {
+              "value": "{color.white}",
+              "type": "color"
+            },
+            "30d": {
+              "value": "{color.azure_blue.100}",
+              "type": "color"
+            },
+            "40d": {
+              "value": "{color.azure_blue.100}",
+              "type": "color"
+            }
+          },
+          "mobile": {
+            "10": {
+              "value": "{color.white}",
+              "type": "color"
+            },
+            "10d": {
+              "value": "{color.white}",
+              "type": "color"
+            }
           }
         }
       },
@@ -1352,6 +1494,32 @@
           },
           "mid": {
             "value": "{color.azure_blue.300}",
+            "type": "color"
+          }
+        },
+        "global_nav": {
+          "10": {
+            "value": "{color.genesys_navy.600}",
+            "type": "color"
+          },
+          "20": {
+            "value": "{color.haze.200}",
+            "type": "color"
+          },
+          "30": {
+            "value": "{color.transparent}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.genesys_navy.700}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.haze.850}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.haze.850}",
             "type": "color"
           }
         }
