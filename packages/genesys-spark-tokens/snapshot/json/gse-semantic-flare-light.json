@@ -238,6 +238,7 @@
       "special_accents": {
         "ai": "#1589b2",
         "brand": "#ff451a",
+        "brand_secondary": "#141929",
         "ai_gradient": {
           "top_left": "#28afe0",
           "bottom_right": "#6e5ddb"

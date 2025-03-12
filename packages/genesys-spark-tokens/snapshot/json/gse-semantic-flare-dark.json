@@ -241,7 +241,8 @@
         "ai_gradient": {
           "top_left": "#9fd6ea",
           "bottom_right": "#a89ee9"
-        }
+        },
+        "brand_secondary": "#ffffff"
       }
     },
     "system": {
