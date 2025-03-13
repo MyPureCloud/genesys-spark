@@ -151,15 +151,23 @@ function relativeTimeFormat(localeOrOptions, options) {
 function determineDisplayLocale(element = document.body) {
   var _a;
   const domLocale = (_a = getClosestElement(element, "*[lang]")) == null ? void 0 : _a.lang;
-  if (!domLocale || browserHasRegionData(domLocale)) {
+  const domLocaleWithOverride = domLocaleOverride(domLocale);
+  if (!domLocaleWithOverride || browserHasRegionData(domLocaleWithOverride)) {
     return navigator.language;
   } else {
-    return domLocale;
+    return domLocaleWithOverride;
   }
 }
 function browserHasRegionData(localeString) {
   var _a;
   return browserLocaleOverride(localeString) || localeString.length == 2 && ((_a = navigator.language) == null ? void 0 : _a.startsWith(`${localeString}-`));
+}
+function domLocaleOverride(localeString) {
+  if ((localeString == null ? void 0 : localeString.toLowerCase()) === "en-us") {
+    return "en";
+  } else {
+    return localeString;
+  }
 }
 function browserLocaleOverride(localeString) {
   var _a, _b;
