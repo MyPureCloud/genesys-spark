@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-list #render should render component as expected 1`] = `
-<gux-list id="list" role="list">
+<gux-list id="list" role="list" tabindex="-1">
   <template shadowrootmode="open">
-    <span aria-hidden="true" tabindex="-1"></span>
     <slot></slot>
   </template>
   <gux-list-item role="listitem">
