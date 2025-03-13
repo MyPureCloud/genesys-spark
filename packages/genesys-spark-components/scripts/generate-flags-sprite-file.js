@@ -46,16 +46,23 @@ export type GuxFlagCode = ${flagCodes.map(code => `'${code}'`).join(' | ')};\n`
       ...results.properties
     };
 
-    const styleSheet = templater(
-      { sprites, spritesheet },
-      {
-        format: 'scss',
-        formatOpts: {
-          variableNameTransforms: ['toLowerCase']
+    const styleSheet =
+      `` +
+      templater(
+        { sprites, spritesheet },
+        {
+          format: 'scss',
+          formatOpts: {
+            variableNameTransforms: ['toLowerCase']
+          }
         }
-      }
-    );
+      );
 
-    fs.writeFileSync(styleSheetPath, styleSheet);
+    const modifiedStylesheet = `@use 'sass:list';
+
+    ${styleSheet.replaceAll('nth(', 'list.nth(')}
+    `;
+
+    fs.writeFileSync(styleSheetPath, modifiedStylesheet);
   }
 });
