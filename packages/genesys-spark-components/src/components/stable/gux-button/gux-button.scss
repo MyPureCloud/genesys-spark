@@ -37,7 +37,8 @@
 }
 
 ::slotted(gux-tooltip),
-::slotted(gux-tooltip-beta) {
+::slotted(gux-tooltip-beta),
+::slotted(gux-screenreader-beta) {
   padding-inline-start: 0;
 }
 
