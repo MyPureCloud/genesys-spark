@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.132.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.131.0...v4.132.0) (2025-03-13)
+
+
+### Features
+
+* **context-menu:** added placement option of popup menu ([4901b1a](https://github.com/MyPureCloud/genesys-spark/commit/4901b1a7695c1d1d6b85a1b6687a08388c5076cc))
+* **tokens:** added brand colors ([6091c6a](https://github.com/MyPureCloud/genesys-spark/commit/6091c6ae0a272438a32c7e466ccd4f703355ce95))
+
+
+### Bug Fixes
+
+* **other:** getSlot function now only looks at direct children ([6d461d5](https://github.com/MyPureCloud/genesys-spark/commit/6d461d560006fa7cbd8d42c40cd9bdb9b0e8dae5))
+
 ## [4.131.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.130.1...v4.131.0) (2025-03-11)
 
 
