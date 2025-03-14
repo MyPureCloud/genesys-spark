@@ -21,14 +21,14 @@
     "tokens-reports": "node scripts/tokens-reports.mjs"
   },
   "devDependencies": {
-    "@tokens-studio/sd-transforms": "^1.2.9",
+    "@tokens-studio/sd-transforms": "^1.2.12",
     "change-case": "^5.4.4",
     "dir-compare": "^5.0.0",
-    "eslint": "^9.21.0",
+    "eslint": "^9.22.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "glob": "^11.0.1",
     "globals": "^16.0.0",
-    "lint-staged": "^15.4.3",
+    "lint-staged": "^15.5.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.5.3",
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",
