@@ -1246,6 +1246,10 @@
         "30d": {
           "value": "{color.azure_blue.600}",
           "type": "color"
+        },
+        "40d": {
+          "value": "{color.azure_blue.200}",
+          "type": "color"
         }
       },
       "edges": {
