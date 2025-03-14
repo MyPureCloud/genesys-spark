@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.132.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.132.0...v4.132.1) (2025-03-14)
+
+
+### Bug Fixes
+
+* **other:** update localization logic to treat `en-us` dom lang as `en` ([cdb2e11](https://github.com/MyPureCloud/genesys-spark/commit/cdb2e116089371acba78ca0d84bdae3b75683f5b))
+* **popover-beta:** add preventDefault when opening popover ([06d492e](https://github.com/MyPureCloud/genesys-spark/commit/06d492ed8c2f319604f94f1c8fdf6111a9d89df4))
+
 ## [4.132.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.131.0...v4.132.0) (2025-03-13)
 
 
