@@ -759,6 +759,12 @@
           "type": "borderRadius"
         }
       },
+      "selected": {
+        "border_radius": {
+          "value": "{theme.border_radius.container.small}",
+          "type": "borderRadius"
+        }
+      },
       "middle": {
         "border_radius": {
           "value": "0",

@@ -2148,6 +2148,7 @@
       "breadcrumbs.separator.color": "5c6ae92648b02d9ddf098be8d91e0fab335c6645",
       "breadcrumbs.border_radius": "78630522a3d4a5508711f97c1a2ed85b754fa2ef",
       "segmented_control.button.gap": "b9ea50de532ef24a6919b01071b9265dab1dc23e",
+      "segmented_control.button.selected.border_radius": "6ef2c0abf06a377b1ad4b28de4e2cb430b279330",
       "segmented_control.button.middle.border_radius": "ebfa483bd42a8aee4119101177bdfffa70b7dd6a",
       "segmented_control.button.disabled.opacity": "85d6f9974a72e4bf4a16f6771af7113d38917928",
       "segmented_control.button.disabled.background_color": "312c173943ba2a8faeb0a5e98b822ca5e687ad1d",
