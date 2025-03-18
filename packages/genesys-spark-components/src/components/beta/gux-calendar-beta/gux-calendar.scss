@@ -1,6 +1,11 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
+.gux-calendar-beta.gux-disabled {
+  pointer-events: none;
+  opacity: var(--gse-ui-calendarMenu-disabled-opacity);
+}
+
 .gux-calendar-beta {
   box-sizing: border-box;
   display: inline-flex;
@@ -69,9 +74,5 @@
       inline-size: var(--gse-ui-calendarMenu-day-range-height);
       block-size: var(--gse-ui-calendarMenu-day-range-width);
     }
-  }
-
-  gux-focus-proxy[aria-disabled='true'] {
-    pointer-events: none;
   }
 }

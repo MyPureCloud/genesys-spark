@@ -264,7 +264,7 @@ export class GuxCalendar {
 
       currentWeek.dates.push({
         date: Temporal.PlainDate.from(currentDate),
-        disabled: this.isInvalidDate(currentDate) || this.disabled,
+        disabled: this.isInvalidDate(currentDate),
         inCurrentMonth: currentMonth === currentDate.month,
         selected: selectedValue?.equals(currentDate),
         focused: this.getFocusDate().equals(currentDate),
@@ -375,7 +375,7 @@ export class GuxCalendar {
 
   render(): JSX.Element {
     return (
-      <div class="gux-calendar-beta">
+      <div class={`gux-calendar-beta ${this.disabled ? 'gux-disabled' : ''}`}>
         <slot
           onSlotchange={() => {
             this.onSlotChange();

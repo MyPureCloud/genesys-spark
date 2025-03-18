@@ -25,7 +25,7 @@
   background-color: var(--gse-ui-calendarMenu-date-selected-backgroundColor);
 }
 
-:host([aria-disabled='true']),
+:host(:disabled),
 :host(.gux-muted) {
   opacity: var(--gse-ui-calendarMenu-disabled-opacity);
 }
