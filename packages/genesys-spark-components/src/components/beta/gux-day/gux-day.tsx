@@ -21,6 +21,10 @@ export class GuxDay {
   @Prop()
   day: string;
 
+  /* Disables the element */
+  @Prop()
+  disabled: boolean;
+
   /* JS Date object, derived from the `day` attribute */
   @State()
   date: Temporal.PlainDate;
@@ -57,7 +61,7 @@ export class GuxDay {
 
   render(): JSX.Element {
     return (
-      <button type="button">
+      <button type="button" disabled={this.disabled}>
         <slot>
           <span aria-hidden="true">{this.date.day}</span>
           <span class="gux-sr-only">

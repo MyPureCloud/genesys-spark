@@ -151,8 +151,9 @@ export class GuxCalendar {
       return;
     }
     const newDateStr = date.toString();
-    this.focusDate = date;
     this.slottedInput.value = newDateStr;
+    this.focusDate = date;
+    this.focusOnFocusDate();
 
     simulateNativeEvent(this.root, 'input');
     simulateNativeEvent(this.root, 'change');
@@ -354,7 +355,7 @@ export class GuxCalendar {
                         <gux-day-beta
                           day={isoDateStr}
                           aria-current={day.selected ? 'true' : 'false'}
-                          aria-disabled={day.disabled ? 'true' : 'false'}
+                          disabled={day.disabled ? true : false}
                           tabindex={day.selected || day.focused ? '0' : '-1'}
                           class={`
                             ${!day.inCurrentMonth || day.disabled ? 'gux-muted' : ''}
