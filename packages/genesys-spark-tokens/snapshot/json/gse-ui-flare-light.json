@@ -730,6 +730,9 @@
       "start": {
         "border_radius": "4px 0 0 4px"
       },
+      "selected": {
+        "border_radius": "4px"
+      },
       "middle": {
         "border_radius": "0"
       },
@@ -742,27 +745,27 @@
         "foreground_color": "#19327a"
       },
       "default": {
-        "background_color": "rgba(0, 0, 0, 0)",
+        "background_color": "#ffffff",
         "foreground_color": "#2143a2"
       },
       "hover": {
-        "background_color": "#d5def7",
-        "foreground_color": "#19327a"
+        "background_color": "#e7e9f9",
+        "foreground_color": "#102251"
       },
       "active": {
-        "background_color": "#2143a2",
-        "foreground_color": "#ffffff"
+        "background_color": "#adbff0",
+        "foreground_color": "#102251"
       }
     },
     "border_radius": "4px",
     "height": "32px",
     "border": {
-      "color": "#2143a2",
+      "color": "#829ce5",
       "width": "1px",
       "style": "solid"
     },
     "divider": {
-      "color": "#2143a2",
+      "color": "#829ce5",
       "width": "1px",
       "style": "solid"
     },

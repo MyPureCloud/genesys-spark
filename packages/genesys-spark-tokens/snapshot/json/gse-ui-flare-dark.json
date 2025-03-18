@@ -730,6 +730,9 @@
       "start": {
         "border_radius": "4px 0 0 4px"
       },
+      "selected": {
+        "border_radius": "4px"
+      },
       "middle": {
         "border_radius": "0"
       },
@@ -739,30 +742,30 @@
       "disabled": {
         "opacity": ".5",
         "background_color": "rgba(0, 0, 0, 0)",
-        "foreground_color": "#ffffff"
+        "foreground_color": "#d5def7"
       },
       "default": {
-        "background_color": "rgba(0, 0, 0, 0)",
-        "foreground_color": "#ffffff"
+        "background_color": "#1e1e21",
+        "foreground_color": "#829ce5"
       },
       "hover": {
-        "background_color": "#475675",
-        "foreground_color": "#ffffff"
+        "background_color": "#465066",
+        "foreground_color": "#d5def7"
       },
       "active": {
-        "background_color": "#2143a2",
-        "foreground_color": "#ffffff"
+        "background_color": "#354a72",
+        "foreground_color": "#d5def7"
       }
     },
     "border_radius": "4px",
     "height": "32px",
     "border": {
-      "color": "#ffffff",
+      "color": "#829ce5",
       "width": "1px",
       "style": "solid"
     },
     "divider": {
-      "color": "#ffffff",
+      "color": "#829ce5",
       "width": "1px",
       "style": "solid"
     },
@@ -908,16 +911,16 @@
     "tertiary": {
       "default": {
         "background_color": "rgba(0, 0, 0, 0)",
-        "foreground_color": "#ffffff",
+        "foreground_color": "#adbff0",
         "border": {
-          "color": "#ffffff",
+          "color": "#adbff0",
           "width": "1px",
           "style": "solid"
         }
       },
       "hover": {
         "background_color": "#19327a",
-        "foreground_color": "#ffffff"
+        "foreground_color": "#d5def7"
       },
       "active": {
         "background_color": "#102251",
@@ -927,11 +930,11 @@
     "ghost": {
       "default": {
         "background_color": "rgba(0, 0, 0, 0)",
-        "foreground_color": "#ffffff"
+        "foreground_color": "#adbff0"
       },
       "hover": {
         "background_color": "#475675",
-        "foreground_color": "#ffffff"
+        "foreground_color": "#d5def7"
       },
       "active": {
         "background_color": "#354a72",
@@ -983,7 +986,7 @@
     "border_radius": "4px",
     "tertiary": {
       "divider": {
-        "color": "#2143a2",
+        "color": "#adbff0",
         "width": "2px",
         "style": "solid"
       }
@@ -2134,7 +2137,7 @@
         "lineHeight": "18px"
       },
       "chevron": {
-        "hover": "#ffffff",
+        "hover": "#d5def7",
         "active": "#ffffff",
         "default": "#b2b7c4"
       }
