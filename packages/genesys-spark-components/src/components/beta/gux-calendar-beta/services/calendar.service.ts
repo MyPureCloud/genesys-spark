@@ -58,3 +58,70 @@ export function firstDateInWeek(
   }
   return date.add({ days: dayDelta });
 }
+
+type SynchronizerMappings<Source, Dest> = {
+  [Property in keyof Dest & keyof Source]: (
+    source: Source[Property]
+  ) => Dest[Property];
+};
+interface AttributeSynchronizerOptions<S extends HTMLElement, D> {
+  readFrom: S;
+  writeTo: D;
+  mappings: SynchronizerMappings<S, D>;
+}
+
+export class AttributeSynchronizer<S extends HTMLElement, D> {
+  sourceElement: S;
+  writeTarget: D;
+  mappings: SynchronizerMappings<S, D>;
+  observer: MutationObserver;
+
+  constructor(options: AttributeSynchronizerOptions<S, D>) {
+    this.writeTarget = options.writeTo;
+    this.mappings = options.mappings;
+
+    this.observer = new MutationObserver(changes => {
+      changes.forEach(change => {
+        const name = change.attributeName;
+        this.syncAttribute(name);
+      });
+    });
+
+    this.setSourceElement(options.readFrom);
+  }
+
+  /**
+   * Changes the source element attributes are copied from. Usually called in
+   * response to a `slotchange` event.
+   * @param sourceElement
+   */
+  public setSourceElement(sourceElement: S) {
+    this.observer.disconnect(); // Stop observing any previously observed element
+    this.sourceElement = sourceElement; // Start reading from the new source
+    this.syncAll(); // Sync data from the new source
+    // Start the observer back up with the new source
+    this.observer.observe(sourceElement, {
+      attributes: true,
+      attributeFilter: Object.keys(this.mappings)
+    });
+  }
+
+  /**
+   * Disconnects the synchronization between the source and destination elements.
+   * Should be called to clean up when the relationship is no longer needed,
+   * typically on `disconnectedCallback`.
+   */
+  public disconnect() {
+    this.observer.disconnect();
+  }
+
+  private syncAll() {
+    Object.keys(this.mappings).forEach(name => {
+      this.writeTarget[name] = this.mappings[name](this.sourceElement[name]);
+    });
+  }
+
+  private syncAttribute(name: string) {
+    this.writeTarget[name] = this.mappings[name](this.sourceElement[name]);
+  }
+}

@@ -13,7 +13,8 @@ import {
   getWeekdays,
   getFirstOfMonth,
   localizedYearMonth,
-  firstDateInWeek
+  firstDateInWeek,
+  AttributeSynchronizer
 } from './services/calendar.service';
 import {
   getDesiredLocale,
@@ -43,7 +44,6 @@ export class GuxCalendar {
 
   @Method()
   async guxForceUpdate(): Promise<void> {
-    this.readSlottedInputState();
     forceUpdate(this.root);
   }
 
@@ -57,20 +57,18 @@ export class GuxCalendar {
   private focusDate: Temporal.PlainDate = Temporal.Now.plainDateISO();
 
   @State()
-  private minValue: Temporal.PlainDate | null;
+  min: Temporal.PlainDate | null;
 
   @State()
-  private maxValue: Temporal.PlainDate | null;
+  max: Temporal.PlainDate | null;
 
-  detectDayClick(event: MouseEvent) {
-    if (!((event.target as HTMLElement).tagName === 'GUX-DAY-BETA')) {
-      return;
-    }
-    const dayElement = event.target as HTMLGuxDayBetaElement;
-    const selectedDate = Temporal.PlainDate.from(dayElement.day);
-    this.selectDate(selectedDate);
-    event.stopPropagation();
-  }
+  @State()
+  disabled: boolean = false;
+
+  private attributeSynchronizer: AttributeSynchronizer<
+    HTMLInputElement,
+    GuxCalendar
+  >;
 
   private locale: string = 'en';
 
@@ -81,17 +79,6 @@ export class GuxCalendar {
 
   private get slottedInput(): HTMLInputElement {
     return this.root.querySelector('input[type="date"]');
-  }
-
-  private readSlottedInputState(): void {
-    // Set min value from the "min" input prop
-    if (this.slottedInput.min) {
-      this.minValue = Temporal.PlainDate.from(this.slottedInput.min);
-    }
-    // Set max value from the "max" input prop
-    if (this.slottedInput.max) {
-      this.maxValue = Temporal.PlainDate.from(this.slottedInput.max);
-    }
   }
 
   async componentWillLoad(): Promise<void> {
@@ -114,7 +101,40 @@ export class GuxCalendar {
       this.focusDate = selectedDate;
     }
 
-    this.readSlottedInputState();
+    this.attributeSynchronizer = new AttributeSynchronizer<
+      HTMLInputElement,
+      GuxCalendar
+    >({
+      readFrom: this.slottedInput,
+      writeTo: this,
+      mappings: {
+        min: (val: string) => {
+          return val ? Temporal.PlainDate.from(val) : undefined;
+        },
+        max: (val: string) => {
+          return val ? Temporal.PlainDate.from(val) : undefined;
+        },
+        disabled: val => val
+      }
+    });
+  }
+
+  onSlotChange() {
+    this.attributeSynchronizer.setSourceElement(this.slottedInput);
+  }
+
+  async disconnectedCallback() {
+    this.attributeSynchronizer.disconnect();
+  }
+
+  private detectDayClick(event: MouseEvent) {
+    if (!((event.target as HTMLElement).tagName === 'GUX-DAY-BETA')) {
+      return;
+    }
+    const dayElement = event.target as HTMLGuxDayBetaElement;
+    const selectedDate = Temporal.PlainDate.from(dayElement.day);
+    this.selectDate(selectedDate);
+    event.stopPropagation();
   }
 
   /**
@@ -147,15 +167,15 @@ export class GuxCalendar {
     let newFocusedValue = this.focusDate.add(shiftInterval);
     // Clamp to the valid range
     if (
-      this.minValue &&
-      Temporal.PlainDate.compare(newFocusedValue, this.minValue) == -1
+      this.min &&
+      Temporal.PlainDate.compare(newFocusedValue, this.min) == -1
     ) {
-      newFocusedValue = this.minValue;
+      newFocusedValue = this.min;
     } else if (
-      this.maxValue &&
-      Temporal.PlainDate.compare(newFocusedValue, this.maxValue) == 1
+      this.max &&
+      Temporal.PlainDate.compare(newFocusedValue, this.max) == 1
     ) {
-      newFocusedValue = this.maxValue;
+      newFocusedValue = this.max;
     }
 
     this.focusDate = newFocusedValue;
@@ -217,9 +237,8 @@ export class GuxCalendar {
    */
   private isInvalidDate(date: Temporal.PlainDate): boolean {
     return (
-      (this.minValue &&
-        Temporal.PlainDate.compare(date, this.minValue) == -1) ||
-      (this.maxValue && Temporal.PlainDate.compare(date, this.maxValue) == 1)
+      (this.min && Temporal.PlainDate.compare(date, this.min) == -1) ||
+      (this.max && Temporal.PlainDate.compare(date, this.max) == 1)
     );
   }
 
@@ -244,7 +263,7 @@ export class GuxCalendar {
 
       currentWeek.dates.push({
         date: Temporal.PlainDate.from(currentDate),
-        disabled: this.isInvalidDate(currentDate),
+        disabled: this.isInvalidDate(currentDate) || this.disabled,
         inCurrentMonth: currentMonth === currentDate.month,
         selected: selectedValue?.equals(currentDate),
         focused: this.getFocusDate().equals(currentDate),
@@ -358,7 +377,7 @@ export class GuxCalendar {
       <div class="gux-calendar-beta">
         <slot
           onSlotchange={() => {
-            this.readSlottedInputState();
+            this.onSlotChange();
           }}
         />
         {this.renderHeader()}
