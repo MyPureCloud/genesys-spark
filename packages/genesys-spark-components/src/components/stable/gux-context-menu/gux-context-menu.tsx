@@ -179,13 +179,14 @@ export class GuxContextMenu {
                 aria-expanded={this.isOpen.toString()}
                 disabled={this.disabled}
               >
+                <gux-screen-reader-beta>
+                  {this.screenreaderText ||
+                    this.i18n('contextMenuScreenreaderText')}
+                </gux-screen-reader-beta>
                 <gux-icon
                   icon-name="fa/ellipsis-vertical-regular"
-                  screenreader-text={
-                    this.screenreaderText ||
-                    this.i18n('contextMenuScreenreaderText')
-                  }
                   size="small"
+                  decorative
                 ></gux-icon>
               </button>
             </gux-button-slot>
