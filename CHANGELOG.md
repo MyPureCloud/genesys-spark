@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.132.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.132.2...v4.132.3) (2025-03-19)
+
+
+### Bug Fixes
+
+* **copy-to-clipboard:** display none when hidden ([#982](https://github.com/MyPureCloud/genesys-spark/issues/982)) ([cf39991](https://github.com/MyPureCloud/genesys-spark/commit/cf399919e0378ac83889c75f7c84b22c79b28f29))
+
 ### [4.132.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.132.1...v4.132.2) (2025-03-15)
 
 ### [4.132.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.132.0...v4.132.1) (2025-03-14)
