@@ -36,7 +36,7 @@ export class GuxModalSidePanel {
   @Prop()
   size: GuxSidePanelSize = 'medium';
 
-  private dialogElement: HTMLDialogElement;
+  private dialogElement: HTMLDialogElement | null = null;
   @Watch('open')
   syncOpenState() {
     if (this.open) {
@@ -81,10 +81,19 @@ export class GuxModalSidePanel {
     trackComponent(this.root, { variant: this.size });
   }
 
+  componentDidLoad(): void {
+    if (this.open) {
+      this.dialogElement.showModal();
+    }
+  }
+
   render(): JSX.Element {
     const titleID: string = randomHTMLId();
     return (
-      <dialog ref={el => (this.dialogElement = el)} aria-labelledby={titleID}>
+      <dialog
+        ref={el => (this.dialogElement = el as HTMLDialogElement)}
+        aria-labelledby={titleID}
+      >
         <gux-side-panel-beta size={this.size}>
           <div slot="heading" id={titleID}>
             <slot name="heading" />

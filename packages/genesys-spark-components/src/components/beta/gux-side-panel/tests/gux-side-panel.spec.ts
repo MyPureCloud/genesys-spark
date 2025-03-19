@@ -147,6 +147,12 @@ describe('gux-modal-side-panel-beta', () => {
         `
     });
 
+    if (open) {
+      expect(showModal).toHaveBeenCalled();
+    } else {
+      expect(showModal).not.toHaveBeenCalled();
+    }
+
     expect(page.root).toMatchSnapshot();
   });
 
