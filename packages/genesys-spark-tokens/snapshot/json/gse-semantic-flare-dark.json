@@ -197,14 +197,14 @@
         "hover": "#ffffff"
       },
       "tertiary": {
-        "default": "#ffffff",
+        "default": "#adbff0",
         "active": "#ffffff",
-        "hover": "#ffffff"
+        "hover": "#d5def7"
       },
       "ghost": {
-        "default": "#ffffff",
+        "default": "#adbff0",
         "active": "#ffffff",
-        "hover": "#ffffff"
+        "hover": "#d5def7"
       },
       "subtle": {
         "default": "#b2b7c4",
@@ -352,7 +352,7 @@
         "divider": "#1e1e21"
       },
       "tertiary": {
-        "divider": "#2143a2"
+        "divider": "#adbff0"
       },
       "danger": {
         "divider": "#1e1e21"

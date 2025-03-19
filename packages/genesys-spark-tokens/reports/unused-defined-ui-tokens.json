@@ -837,6 +837,7 @@
   "--gse-ui-segmentedControl-border-color",
   "--gse-ui-segmentedControl-border-style",
   "--gse-ui-segmentedControl-border-width",
+  "--gse-ui-segmentedControl-button-selected-borderRadius",
   "--gse-ui-selectorCard-descriptive-description-fontFamily",
   "--gse-ui-selectorCard-descriptive-description-fontSize",
   "--gse-ui-selectorCard-descriptive-description-fontWeight",

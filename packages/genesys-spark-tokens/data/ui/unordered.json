@@ -759,6 +759,12 @@
           "type": "borderRadius"
         }
       },
+      "selected": {
+        "border_radius": {
+          "value": "{theme.border_radius.container.small}",
+          "type": "borderRadius"
+        }
+      },
       "middle": {
         "border_radius": {
           "value": "0",
@@ -787,31 +793,31 @@
       },
       "default": {
         "background_color": {
-          "value": "{background.interactive.ghost.default}",
+          "value": "{background.form_control.text_input.track}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.ghost.default}",
+          "value": "{foreground.interactive.link.default}",
           "type": "color"
         }
       },
       "hover": {
         "background_color": {
-          "value": "{background.interactive.ghost.hover}",
+          "value": "{background.container.elevated.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.ghost.hover}",
+          "value": "{foreground.interactive.link.active}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "{background.interactive.primary.default}",
+          "value": "{background.interactive.secondary.active}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.primary.default}",
+          "value": "{foreground.interactive.link.active}",
           "type": "color"
         }
       }
@@ -826,7 +832,7 @@
     },
     "border": {
       "value": {
-        "color": "{foreground.interactive.tertiary.default}",
+        "color": "{border.container.edges.mid_emphasis}",
         "width": "{container.edges.border_width}",
         "style": "solid"
       },
@@ -834,7 +840,7 @@
     },
     "divider": {
       "value": {
-        "color": "{foreground.interactive.tertiary.default}",
+        "color": "{border.container.edges.mid_emphasis}",
         "width": "{container.divider.border_width}",
         "style": "solid"
       },

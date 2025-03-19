@@ -738,7 +738,7 @@
       },
       "tertiary": {
         "default": {
-          "value": "{theme.foreground.tertiary.10d}",
+          "value": "{theme.foreground.link.20d}",
           "type": "color",
           "description": "The color for foreground elements that are over a tertiary/default background."
         },
@@ -748,14 +748,14 @@
           "description": "The color for foreground elements that are over a tertiary/active background."
         },
         "hover": {
-          "value": "{theme.foreground.secondary.10d}",
+          "value": "{theme.foreground.link.30d}",
           "type": "color",
           "description": "The color for foreground elements that are over a tertiary/hover background."
         }
       },
       "ghost": {
         "default": {
-          "value": "{theme.foreground.tertiary.10d}",
+          "value": "{theme.foreground.link.20d}",
           "type": "color",
           "description": "The color for foreground elements that are over a ghost/default background."
         },
@@ -765,7 +765,7 @@
           "description": "The color for foreground elements that are over a ghost/active background."
         },
         "hover": {
-          "value": "{theme.foreground.tertiary.20d}",
+          "value": "{theme.foreground.link.30d}",
           "type": "color",
           "description": "The color for foreground elements that are over a ghost/hover background."
         }
@@ -1222,7 +1222,7 @@
       },
       "tertiary": {
         "divider": {
-          "value": "{theme.border.divider.30d}",
+          "value": "{theme.border.divider.40d}",
           "type": "color",
           "description": "The color for dividers inside interactive/tertiary elements."
         }
