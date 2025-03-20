@@ -95,7 +95,7 @@ function browserHasRegionData(localeString: string): boolean {
 // Currently, login page and web-directory store the English user selection as `en-us`.
 // We will remove this override once those apps migrate from using en-us to en as part of a future epic.
 function domLocaleOverride(localeString: string): string {
-  if (localeString.toLowerCase() === 'en-us') {
+  if (localeString?.toLowerCase() === 'en-us') {
     return 'en';
   } else {
     return localeString;
