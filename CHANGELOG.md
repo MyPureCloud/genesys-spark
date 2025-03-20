@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.133.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.132.3...v4.133.0) (2025-03-20)
+
+
+### Features
+
+* **tokens:** Generated CSS vars ([0a68a4d](https://github.com/MyPureCloud/genesys-spark/commit/0a68a4d1b1bfb76f7cca701beeb4357ca9d80bbc))
+* **tokens:** generated Figma vars ([c051bdf](https://github.com/MyPureCloud/genesys-spark/commit/c051bdfcac1e6af77b6164f12c891e9e732b275a))
+* **tokens:** Generated figma vars ([3929131](https://github.com/MyPureCloud/genesys-spark/commit/392913128b05ed2ff8623789471de37bd1eaf2e6))
+* **tokens:** Updated segmented control tokens ([d929453](https://github.com/MyPureCloud/genesys-spark/commit/d92945351fea8f7df148a0605d182f82eb009ac7))
+* **tokens:** updated tertiary and ghost buttons ([0b95235](https://github.com/MyPureCloud/genesys-spark/commit/0b952352be1de0fd361248e6a4f944429d10441a))
+
 ### [4.132.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.132.2...v4.132.3) (2025-03-19)
 
 
