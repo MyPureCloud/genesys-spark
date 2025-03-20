@@ -8,7 +8,8 @@ import {
   Listen,
   Prop,
   Watch,
-  State
+  State,
+  Method
 } from '@stencil/core';
 import {
   autoUpdate,
@@ -125,6 +126,11 @@ export class GuxPopover {
     ) {
       this.dismiss();
     }
+  }
+
+  @Method()
+  async guxDismissPopover(): Promise<void> {
+    this.dismiss();
   }
 
   get titleSlot(): Element | null {
