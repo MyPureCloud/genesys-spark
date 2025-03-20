@@ -175,9 +175,9 @@ export function getValue(
 export function getHourDisplayValue(
   value: GuxISOHourMinute,
   clockType: GuxClockType
-): string {
+): number {
   const [hour] = getDisplayValue(value, clockType).split(':');
-  return hour;
+  return parseInt(hour, 10);
 }
 
 export function getMinuteDisplayValue(value: GuxISOHourMinute): string {

@@ -326,7 +326,7 @@ export class GuxTimePicker {
       <div class="gux-input-time-container">
         <input
           class="gux-input-time-hours"
-          type="text"
+          type="number"
           disabled={this.disabled}
           value={getHourDisplayValue(this.value, this.clockType)}
           onKeyDown={e => this.onHourKeyDown(e)}
@@ -337,7 +337,7 @@ export class GuxTimePicker {
         <span class="gux-time-separator">{this.i18n('time-separator')}</span>
         <input
           class="gux-input-time-minutes"
-          type="text"
+          type="number"
           disabled={this.disabled}
           value={getMinuteDisplayValue(this.value)}
           onKeyDown={e => this.onMinuteKeyDown(e)}
