@@ -364,7 +364,7 @@
     "selectedTokenSets": {
       "semantic/theme/flare": "enabled"
     },
-    "group": "theme",
+    "group": ".theme",
     "$figmaCollectionId": "VariableCollectionId:28327:138243",
     "$figmaModeId": "28327:1",
     "$figmaVariableReferences": {
@@ -784,7 +784,7 @@
     "selectedTokenSets": {
       "semantic/theme/legacy": "enabled"
     },
-    "group": "theme",
+    "group": ".theme",
     "$figmaCollectionId": "VariableCollectionId:28327:138243",
     "$figmaModeId": "28327:2",
     "$figmaVariableReferences": {
