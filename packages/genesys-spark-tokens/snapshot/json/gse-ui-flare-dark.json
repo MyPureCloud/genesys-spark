@@ -444,7 +444,7 @@
     },
     "accent3": {
       "bold": {
-        "background_color": "#04445c",
+        "background_color": "#056385",
         "foreground_color": "#ffffff"
       },
       "subtle": {
@@ -2328,7 +2328,7 @@
         "default": "#3d538f",
         "accent1": "#6a6d75",
         "accent2": "#003447",
-        "accent3": "#04445c",
+        "accent3": "#056385",
         "accent4": "#233d57",
         "accent5": "#1a2e41",
         "accent6": "#3e4044",
