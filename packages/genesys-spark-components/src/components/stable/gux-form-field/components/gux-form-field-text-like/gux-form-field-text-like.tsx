@@ -220,7 +220,7 @@ export class GuxFormFieldTextLike {
             >
               <slot name="prefix" />
               <slot name="input" />
-              {this.renderRadialLoading()}
+              <div role="status">{this.renderRadialLoading()}</div>
               <slot name="suffix" />
               {this.clearable && this.hasContent && !this.disabled && (
                 <gux-form-field-input-clear-button
