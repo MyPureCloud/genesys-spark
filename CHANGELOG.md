@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.134.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.133.0...v4.134.0) (2025-03-21)
+
+
+### Features
+
+* **tokens:** Adjusted figma collections ([7671788](https://github.com/MyPureCloud/genesys-spark/commit/76717888885e8ef94aa9d8fe22bf4c1e089c3387))
+* **tokens:** changed the themes name ([34b3b12](https://github.com/MyPureCloud/genesys-spark/commit/34b3b129e3953a38d5606b86c8d0e7e42a1cb833))
+* **tokens:** ran linter ([60a0e7b](https://github.com/MyPureCloud/genesys-spark/commit/60a0e7b98ca926148a2fa9439d35481cf80345f0))
+* **tokens:** reverted ai color id value ([0cecba1](https://github.com/MyPureCloud/genesys-spark/commit/0cecba119895bd2f5e2faee479f90ccbf405a1dd))
+* **tokens:** Updated custom accents values ([#990](https://github.com/MyPureCloud/genesys-spark/issues/990)) ([2b58a70](https://github.com/MyPureCloud/genesys-spark/commit/2b58a704842ea5d06b30cad3b7d6c40f86f38b73))
+
 ## [4.133.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.132.3...v4.133.0) (2025-03-20)
 
 
