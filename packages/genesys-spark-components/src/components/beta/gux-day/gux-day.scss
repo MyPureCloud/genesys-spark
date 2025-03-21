@@ -1,0 +1,57 @@
+@use '~genesys-spark/dist/scss/mixins.scss';
+@use '~genesys-spark/dist/scss/focus.scss';
+
+:host {
+  display: inline-block;
+  inline-size: var(--gse-ui-calendarMenu-day-date-size);
+  block-size: var(--gse-ui-calendarMenu-day-input-height);
+  outline: none;
+  border: none;
+  border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
+}
+
+:host(:hover) {
+  background-color: var(--gse-ui-calendarMenu-date-hover-backgroundColor);
+}
+
+:host(:focus-within) {
+  @include focus.gux-focus-ring;
+
+  border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
+}
+
+:host([aria-current='true']) {
+  color: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
+  background-color: var(--gse-ui-calendarMenu-date-selected-backgroundColor);
+}
+
+:host(:disabled),
+:host(.gux-muted) {
+  opacity: var(--gse-ui-calendarMenu-disabled-opacity);
+}
+
+button {
+  // The button should have no default styles
+  @include mixins.gux-empty-button;
+
+  inline-size: 100%;
+  block-size: 100%;
+  font-family: var(--gse-ui-calendarMenu-date-currentText-fontFamily);
+  font-size: var(--gse-ui-calendarMenu-date-defaultText-fontSize);
+  font-style: normal;
+  font-weight: var(--gse-ui-calendarMenu-date-defaultText-fontWeight);
+  line-height: 32px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:focus {
+  // The button should not have a focus outline, it is handled with :focus-within
+  // on :host
+  outline: none;
+}
+
+.gux-sr-only {
+  @include mixins.gux-sr-only-clip;
+}
