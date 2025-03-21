@@ -63,7 +63,11 @@ export class GuxTimeZoneBeta {
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
-    this.i18n = await buildI18nForComponent(this.root, translationResources);
+    this.i18n = await buildI18nForComponent(
+      this.root,
+      translationResources,
+      'gux-time-zone-picker'
+    );
   }
 
   render() {
