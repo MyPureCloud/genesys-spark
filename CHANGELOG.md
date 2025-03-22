@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.134.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.134.0...v4.134.1) (2025-03-22)
+
+
+### Bug Fixes
+
+* **form-field-file-beta:** moved error slot location ([424cc0e](https://github.com/MyPureCloud/genesys-spark/commit/424cc0e01a40c0a9338705d678b35e714f0505ed))
+* **time-zone-beta:** fix translations ([#992](https://github.com/MyPureCloud/genesys-spark/issues/992)) ([09df918](https://github.com/MyPureCloud/genesys-spark/commit/09df9180d3d5733fe20185eec4d4e18058846149))
+
 ## [4.134.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.133.0...v4.134.0) (2025-03-21)
 
 
