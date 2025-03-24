@@ -120,6 +120,14 @@ exports[`gux-date #render regional dates #render different languages should work
 </gux-date-beta>
 `;
 
+exports[`gux-date #render regional dates #render different languages should work as expected for hi 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    गुरुवार, 7 जुलाई 2022
+  </template>
+</gux-date-beta>
+`;
+
 exports[`gux-date #render regional dates #render different languages should work as expected for it 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
@@ -4012,6 +4020,14 @@ exports[`gux-date #render using non regional dates #render different languages s
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
     יום חמישי, 7 ביולי 2022
+  </template>
+</gux-date-beta>
+`;
+
+exports[`gux-date #render using non regional dates #render different languages should work as expected for hi 1`] = `
+<gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
+  <template shadowrootmode="open">
+    गुरुवार, 7 जुलाई 2022
   </template>
 </gux-date-beta>
 `;

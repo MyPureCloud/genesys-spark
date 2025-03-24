@@ -1,3 +1,5 @@
+import { languageList } from '../../../../i18n/languageList';
+
 import {
   getTimeDisplayValues,
   getLocaleClockType,
@@ -394,34 +396,7 @@ describe('gux-time-picker.service', () => {
   });
 
   describe('#getLocaleClockType', () => {
-    [
-      { locale: 'ar' },
-      { locale: 'cs' },
-      { locale: 'da' },
-      { locale: 'de' },
-      { locale: 'en' },
-      { locale: 'es-es' },
-      { locale: 'es' },
-      { locale: 'fi' },
-      { locale: 'fr-ca' },
-      { locale: 'fr' },
-      { locale: 'he' },
-      { locale: 'it' },
-      { locale: 'ja' },
-      { locale: 'ko' },
-      { locale: 'nl' },
-      { locale: 'no' },
-      { locale: 'pl' },
-      { locale: 'pt-br' },
-      { locale: 'pt-pt' },
-      { locale: 'ru' },
-      { locale: 'sv' },
-      { locale: 'th' },
-      { locale: 'tr' },
-      { locale: 'uk' },
-      { locale: 'zh-cn' },
-      { locale: 'zh-tw' }
-    ].forEach(({ locale }: { locale: string }) => {
+    languageList.forEach((locale: string) => {
       it(`should work as expected for "${locale}"`, async () => {
         const element = document.createElement('div');
         element.setAttribute('lang', locale);
@@ -433,12 +408,7 @@ describe('gux-time-picker.service', () => {
       });
     });
 
-    [
-      { locale: 'ar' },
-      { locale: 'ko' },
-      { locale: 'zh-cn' },
-      { locale: 'zh-tw' }
-    ].forEach(({ locale }: { locale: string }) => {
+    ['ar', 'ko', 'zh-cn', 'zh-tw'].forEach((locale: string) => {
       it(`should return "24h" for "${locale}" as the localization team specifically requested that`, async () => {
         const element = document.createElement('div');
         element.setAttribute('lang', locale);

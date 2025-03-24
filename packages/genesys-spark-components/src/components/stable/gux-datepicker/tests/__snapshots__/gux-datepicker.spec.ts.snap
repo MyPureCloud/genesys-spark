@@ -598,6 +598,29 @@ exports[`gux-datepicker #render using non regional dates should render component
 </gux-datepicker>
 `;
 
+exports[`gux-datepicker #render using non regional dates should render component as expected (1) 27`] = `
+<gux-datepicker value="1997-08-15">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
+          Date
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="08/15/1997">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
 exports[`gux-datepicker #render using non regional dates should render component as expected (2) 1`] = `
 <gux-datepicker format="mm/dd/yy" value="1997-08-15">
   <template shadowrootmode="open">
@@ -1174,6 +1197,29 @@ exports[`gux-datepicker #render using non regional dates should render component
 `;
 
 exports[`gux-datepicker #render using non regional dates should render component as expected (2) 26`] = `
+<gux-datepicker format="mm/dd/yy" value="1997-08-15">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
+          Date
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="08/15/97">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using non regional dates should render component as expected (2) 27`] = `
 <gux-datepicker format="mm/dd/yy" value="1997-08-15">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -1794,6 +1840,29 @@ exports[`gux-datepicker #render using non regional dates should render component
 </gux-datepicker>
 `;
 
+exports[`gux-datepicker #render using non regional dates should render component as expected (3) 27`] = `
+<gux-datepicker format="mm.dd.yyyy" value="1997-08-15">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
+          Date
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="08.15.1997">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
 exports[`gux-datepicker #render using non regional dates should render component as expected (4) 1`] = `
 <gux-datepicker disabled="" value="1997-08-15">
   <template shadowrootmode="open">
@@ -2370,6 +2439,29 @@ exports[`gux-datepicker #render using non regional dates should render component
 `;
 
 exports[`gux-datepicker #render using non regional dates should render component as expected (4) 26`] = `
+<gux-datepicker disabled="" value="1997-08-15">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker gux-disabled">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
+          Date
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input disabled="" id="gux-datepicker-i" type="text" value="08/15/1997">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using non regional dates should render component as expected (4) 27`] = `
 <gux-datepicker disabled="" value="1997-08-15">
   <template shadowrootmode="open">
     <div class="gux-datepicker gux-disabled">
@@ -3293,6 +3385,42 @@ exports[`gux-datepicker #render using non regional dates should render component
 `;
 
 exports[`gux-datepicker #render using non regional dates should render component as expected (5) 26`] = `
+<gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="11/25/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="12/02/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using non regional dates should render component as expected (5) 27`] = `
 <gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -4264,6 +4392,42 @@ exports[`gux-datepicker #render using non regional dates should render component
 </gux-datepicker>
 `;
 
+exports[`gux-datepicker #render using non regional dates should render component as expected (6) 27`] = `
+<gux-datepicker max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="11/25/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="12/02/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
 exports[`gux-datepicker #render using non regional dates should render component as expected (7) 1`] = `
 <gux-datepicker format="mm.dd.yyyy" max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
@@ -5165,6 +5329,42 @@ exports[`gux-datepicker #render using non regional dates should render component
 `;
 
 exports[`gux-datepicker #render using non regional dates should render component as expected (7) 26`] = `
+<gux-datepicker format="mm.dd.yyyy" max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="11.25.2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="12.02.2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using non regional dates should render component as expected (7) 27`] = `
 <gux-datepicker format="mm.dd.yyyy" max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -6136,6 +6336,42 @@ exports[`gux-datepicker #render using non regional dates should render component
 </gux-datepicker>
 `;
 
+exports[`gux-datepicker #render using non regional dates should render component as expected (8) 27`] = `
+<gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker gux-disabled">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input disabled="" id="gux-datepicker-i" type="text" value="11/25/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input disabled="" id="gux-datepicker-i" type="text" value="12/02/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
 exports[`gux-datepicker #render using non regional dates should render component as expected (9) 1`] = `
 <gux-datepicker start-day-of-week="6" value="1997-08-15">
   <template shadowrootmode="open">
@@ -6734,6 +6970,29 @@ exports[`gux-datepicker #render using non regional dates should render component
 </gux-datepicker>
 `;
 
+exports[`gux-datepicker #render using non regional dates should render component as expected (9) 27`] = `
+<gux-datepicker start-day-of-week="6" value="1997-08-15">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
+          Date
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="08/15/1997">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" startdayofweek="6" tabindex="-1" value="1997-08-15"></gux-calendar>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
 exports[`gux-datepicker #render using regional dates should render component as expected (1) 1`] = `
 <gux-datepicker value="1997-08-15">
   <template shadowrootmode="open">
@@ -7020,7 +7279,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="1997/08/15">
+            <input id="gux-datepicker-i" type="text" value="15/08/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -7043,7 +7302,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="1997.08.15.">
+            <input id="gux-datepicker-i" type="text" value="1997/08/15">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -7066,7 +7325,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15-08-1997">
+            <input id="gux-datepicker-i" type="text" value="1997.08.15.">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -7089,7 +7348,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15.08.1997">
+            <input id="gux-datepicker-i" type="text" value="15-08-1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -7135,7 +7394,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15/08/1997">
+            <input id="gux-datepicker-i" type="text" value="15.08.1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -7181,7 +7440,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15.08.1997">
+            <input id="gux-datepicker-i" type="text" value="15/08/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -7204,7 +7463,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="1997-08-15">
+            <input id="gux-datepicker-i" type="text" value="15.08.1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -7227,7 +7486,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15/08/1997">
+            <input id="gux-datepicker-i" type="text" value="1997-08-15">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -7250,7 +7509,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15.08.1997">
+            <input id="gux-datepicker-i" type="text" value="15/08/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -7296,7 +7555,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="1997/08/15">
+            <input id="gux-datepicker-i" type="text" value="15.08.1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -7310,6 +7569,29 @@ exports[`gux-datepicker #render using regional dates should render component as 
 `;
 
 exports[`gux-datepicker #render using regional dates should render component as expected (1) 26`] = `
+<gux-datepicker value="1997-08-15">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
+          Date
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="1997/08/15">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (1) 27`] = `
 <gux-datepicker value="1997-08-15">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -7930,6 +8212,29 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
+exports[`gux-datepicker #render using regional dates should render component as expected (2) 27`] = `
+<gux-datepicker format="mm/dd/yy" value="1997-08-15">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
+          Date
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="08/15/97">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
 exports[`gux-datepicker #render using regional dates should render component as expected (3) 1`] = `
 <gux-datepicker format="mm.dd.yyyy" value="1997-08-15">
   <template shadowrootmode="open">
@@ -8528,6 +8833,29 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
+exports[`gux-datepicker #render using regional dates should render component as expected (3) 27`] = `
+<gux-datepicker format="mm.dd.yyyy" value="1997-08-15">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
+          Date
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="08.15.1997">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
 exports[`gux-datepicker #render using regional dates should render component as expected (4) 1`] = `
 <gux-datepicker disabled="" value="1997-08-15">
   <template shadowrootmode="open">
@@ -8814,7 +9142,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="1997/08/15">
+            <input disabled="" id="gux-datepicker-i" type="text" value="15/08/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -8837,7 +9165,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="1997.08.15.">
+            <input disabled="" id="gux-datepicker-i" type="text" value="1997/08/15">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -8860,7 +9188,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="15-08-1997">
+            <input disabled="" id="gux-datepicker-i" type="text" value="1997.08.15.">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -8883,7 +9211,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="15.08.1997">
+            <input disabled="" id="gux-datepicker-i" type="text" value="15-08-1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -8929,7 +9257,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="15/08/1997">
+            <input disabled="" id="gux-datepicker-i" type="text" value="15.08.1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -8975,7 +9303,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="15.08.1997">
+            <input disabled="" id="gux-datepicker-i" type="text" value="15/08/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -8998,7 +9326,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="1997-08-15">
+            <input disabled="" id="gux-datepicker-i" type="text" value="15.08.1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -9021,7 +9349,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="15/08/1997">
+            <input disabled="" id="gux-datepicker-i" type="text" value="1997-08-15">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -9044,7 +9372,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="15.08.1997">
+            <input disabled="" id="gux-datepicker-i" type="text" value="15/08/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -9090,7 +9418,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="1997/08/15">
+            <input disabled="" id="gux-datepicker-i" type="text" value="15.08.1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -9104,6 +9432,29 @@ exports[`gux-datepicker #render using regional dates should render component as 
 `;
 
 exports[`gux-datepicker #render using regional dates should render component as expected (4) 26`] = `
+<gux-datepicker disabled="" value="1997-08-15">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker gux-disabled">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
+          Date
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input disabled="" id="gux-datepicker-i" type="text" value="1997/08/15">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" tabindex="-1" value="1997-08-15"></gux-calendar>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (4) 27`] = `
 <gux-datepicker disabled="" value="1997-08-15">
   <template shadowrootmode="open">
     <div class="gux-datepicker gux-disabled">
@@ -9568,6 +9919,42 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="25/11/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="02/12/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (5) 14`] = `
+<gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="2019/11/25">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
@@ -9594,7 +9981,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (5) 14`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (5) 15`] = `
 <gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -9630,7 +10017,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (5) 15`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (5) 16`] = `
 <gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -9655,42 +10042,6 @@ exports[`gux-datepicker #render using regional dates should render component as 
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="02-12-2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-</gux-datepicker>
-`;
-
-exports[`gux-datepicker #render using regional dates should render component as expected (5) 16`] = `
-<gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <template shadowrootmode="open">
-    <div class="gux-datepicker">
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          Start
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="25.11.2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
-        </div>
-      </div>
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          End
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="02.12.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -9748,7 +10099,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="25/11/2019">
+            <input id="gux-datepicker-i" type="text" value="25.11.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -9762,7 +10113,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="02/12/2019">
+            <input id="gux-datepicker-i" type="text" value="02.12.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -9820,6 +10171,42 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="25/11/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="02/12/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (5) 21`] = `
+<gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="25.11.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
@@ -9846,7 +10233,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (5) 21`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (5) 22`] = `
 <gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -9882,7 +10269,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (5) 22`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (5) 23`] = `
 <gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -9907,42 +10294,6 @@ exports[`gux-datepicker #render using regional dates should render component as 
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="02/12/2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-</gux-datepicker>
-`;
-
-exports[`gux-datepicker #render using regional dates should render component as expected (5) 23`] = `
-<gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <template shadowrootmode="open">
-    <div class="gux-datepicker">
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          Start
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="25.11.2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
-        </div>
-      </div>
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          End
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="02.12.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -10000,6 +10351,42 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="25.11.2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="02.12.2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (5) 26`] = `
+<gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="2019/11/25">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
@@ -10026,7 +10413,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (5) 26`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (5) 27`] = `
 <gux-datepicker mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -10504,6 +10891,42 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="25/11/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="02/12/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (6) 14`] = `
+<gux-datepicker max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="2019/11/25">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
@@ -10530,7 +10953,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (6) 14`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (6) 15`] = `
 <gux-datepicker max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -10566,7 +10989,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (6) 15`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (6) 16`] = `
 <gux-datepicker max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -10591,42 +11014,6 @@ exports[`gux-datepicker #render using regional dates should render component as 
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="02-12-2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-</gux-datepicker>
-`;
-
-exports[`gux-datepicker #render using regional dates should render component as expected (6) 16`] = `
-<gux-datepicker max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <template shadowrootmode="open">
-    <div class="gux-datepicker">
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          Start
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="25.11.2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
-        </div>
-      </div>
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          End
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="02.12.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -10684,7 +11071,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="25/11/2019">
+            <input id="gux-datepicker-i" type="text" value="25.11.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -10698,7 +11085,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="02/12/2019">
+            <input id="gux-datepicker-i" type="text" value="02.12.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -10756,6 +11143,42 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="25/11/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="02/12/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (6) 21`] = `
+<gux-datepicker max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="25.11.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
@@ -10782,7 +11205,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (6) 21`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (6) 22`] = `
 <gux-datepicker max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -10818,7 +11241,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (6) 22`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (6) 23`] = `
 <gux-datepicker max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -10843,42 +11266,6 @@ exports[`gux-datepicker #render using regional dates should render component as 
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="02/12/2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-</gux-datepicker>
-`;
-
-exports[`gux-datepicker #render using regional dates should render component as expected (6) 23`] = `
-<gux-datepicker max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <template shadowrootmode="open">
-    <div class="gux-datepicker">
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          Start
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="25.11.2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
-        </div>
-      </div>
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          End
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="02.12.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -10936,6 +11323,42 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="25.11.2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="02.12.2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (6) 26`] = `
+<gux-datepicker max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
             <input id="gux-datepicker-i" type="text" value="2019/11/25">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
@@ -10962,7 +11385,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (6) 26`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (6) 27`] = `
 <gux-datepicker max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
@@ -11934,6 +12357,42 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
+exports[`gux-datepicker #render using regional dates should render component as expected (7) 27`] = `
+<gux-datepicker format="mm.dd.yyyy" max-date="2019-12-31" min-date="2019-11-10" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="11.25.2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="2019-12-31" mindate="2019-11-10" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="12.02.2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
 exports[`gux-datepicker #render using regional dates should render component as expected (8) 1`] = `
 <gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
@@ -12376,6 +12835,42 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
+            <input disabled="" id="gux-datepicker-i" type="text" value="25/11/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input disabled="" id="gux-datepicker-i" type="text" value="02/12/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (8) 14`] = `
+<gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker gux-disabled">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
             <input disabled="" id="gux-datepicker-i" type="text" value="2019/11/25">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
@@ -12402,7 +12897,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (8) 14`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (8) 15`] = `
 <gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker gux-disabled">
@@ -12438,7 +12933,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (8) 15`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (8) 16`] = `
 <gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker gux-disabled">
@@ -12463,42 +12958,6 @@ exports[`gux-datepicker #render using regional dates should render component as 
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
             <input disabled="" id="gux-datepicker-i" type="text" value="02-12-2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-</gux-datepicker>
-`;
-
-exports[`gux-datepicker #render using regional dates should render component as expected (8) 16`] = `
-<gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <template shadowrootmode="open">
-    <div class="gux-datepicker gux-disabled">
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          Start
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="25.11.2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
-        </div>
-      </div>
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          End
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="02.12.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -12556,7 +13015,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="25/11/2019">
+            <input disabled="" id="gux-datepicker-i" type="text" value="25.11.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -12570,7 +13029,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="02/12/2019">
+            <input disabled="" id="gux-datepicker-i" type="text" value="02.12.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -12628,6 +13087,42 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
+            <input disabled="" id="gux-datepicker-i" type="text" value="25/11/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input disabled="" id="gux-datepicker-i" type="text" value="02/12/2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (8) 21`] = `
+<gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker gux-disabled">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
             <input disabled="" id="gux-datepicker-i" type="text" value="25.11.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
@@ -12654,7 +13149,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (8) 21`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (8) 22`] = `
 <gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker gux-disabled">
@@ -12690,7 +13185,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (8) 22`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (8) 23`] = `
 <gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker gux-disabled">
@@ -12715,42 +13210,6 @@ exports[`gux-datepicker #render using regional dates should render component as 
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
             <input disabled="" id="gux-datepicker-i" type="text" value="02/12/2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-</gux-datepicker>
-`;
-
-exports[`gux-datepicker #render using regional dates should render component as expected (8) 23`] = `
-<gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
-  <template shadowrootmode="open">
-    <div class="gux-datepicker gux-disabled">
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          Start
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="25.11.2019">
-            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
-              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
-            </button>
-          </div>
-          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
-        </div>
-      </div>
-      <div class="gux-datepicker-field">
-        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
-          End
-        </label>
-        <div class="gux-datepicker-field-input">
-          <div class="gux-datepicker-field-text-input">
-            <input disabled="" id="gux-datepicker-i" type="text" value="02.12.2019">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -12808,6 +13267,42 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
+            <input disabled="" id="gux-datepicker-i" type="text" value="25.11.2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="range" numberofmonths="2" tabindex="-1" value="2019-11-25/2019-12-02"></gux-calendar>
+        </div>
+      </div>
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          End
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input disabled="" id="gux-datepicker-i" type="text" value="02.12.2019">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (8) 26`] = `
+<gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker gux-disabled">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label" htmlfor="gux-datepicker-i">
+          Start
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
             <input disabled="" id="gux-datepicker-i" type="text" value="2019/11/25">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" disabled="" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
@@ -12834,7 +13329,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
 </gux-datepicker>
 `;
 
-exports[`gux-datepicker #render using regional dates should render component as expected (8) 26`] = `
+exports[`gux-datepicker #render using regional dates should render component as expected (8) 27`] = `
 <gux-datepicker disabled="" mode="range" number-of-months="2" value="2019-11-25/2019-12-02">
   <template shadowrootmode="open">
     <div class="gux-datepicker gux-disabled">
@@ -13156,7 +13651,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="1997/08/15">
+            <input id="gux-datepicker-i" type="text" value="15/08/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -13179,7 +13674,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="1997.08.15.">
+            <input id="gux-datepicker-i" type="text" value="1997/08/15">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -13202,7 +13697,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15-08-1997">
+            <input id="gux-datepicker-i" type="text" value="1997.08.15.">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -13225,7 +13720,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15.08.1997">
+            <input id="gux-datepicker-i" type="text" value="15-08-1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -13271,7 +13766,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15/08/1997">
+            <input id="gux-datepicker-i" type="text" value="15.08.1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -13317,7 +13812,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15.08.1997">
+            <input id="gux-datepicker-i" type="text" value="15/08/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -13340,7 +13835,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="1997-08-15">
+            <input id="gux-datepicker-i" type="text" value="15.08.1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -13363,7 +13858,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15/08/1997">
+            <input id="gux-datepicker-i" type="text" value="1997-08-15">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -13386,7 +13881,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="15.08.1997">
+            <input id="gux-datepicker-i" type="text" value="15/08/1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -13432,7 +13927,7 @@ exports[`gux-datepicker #render using regional dates should render component as 
         </label>
         <div class="gux-datepicker-field-input">
           <div class="gux-datepicker-field-text-input">
-            <input id="gux-datepicker-i" type="text" value="1997/08/15">
+            <input id="gux-datepicker-i" type="text" value="15.08.1997">
             <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
               <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
             </button>
@@ -13446,6 +13941,29 @@ exports[`gux-datepicker #render using regional dates should render component as 
 `;
 
 exports[`gux-datepicker #render using regional dates should render component as expected (9) 26`] = `
+<gux-datepicker start-day-of-week="6" value="1997-08-15">
+  <template shadowrootmode="open">
+    <div class="gux-datepicker">
+      <div class="gux-datepicker-field">
+        <label class="gux-datepicker-field-label gux-sr-only" htmlfor="gux-datepicker-i">
+          Date
+        </label>
+        <div class="gux-datepicker-field-input">
+          <div class="gux-datepicker-field-text-input">
+            <input id="gux-datepicker-i" type="text" value="1997/08/15">
+            <button aria-expanded="false" aria-label="Toggle calendar view" class="gux-calendar-toggle-button" type="button">
+              <gux-icon decorative="" icon-name="fa/calendar-regular" size="small"></gux-icon>
+            </button>
+          </div>
+          <gux-calendar maxdate="" mindate="" mode="single" numberofmonths="1" startdayofweek="6" tabindex="-1" value="1997-08-15"></gux-calendar>
+        </div>
+      </div>
+    </div>
+  </template>
+</gux-datepicker>
+`;
+
+exports[`gux-datepicker #render using regional dates should render component as expected (9) 27`] = `
 <gux-datepicker start-day-of-week="6" value="1997-08-15">
   <template shadowrootmode="open">
     <div class="gux-datepicker">
