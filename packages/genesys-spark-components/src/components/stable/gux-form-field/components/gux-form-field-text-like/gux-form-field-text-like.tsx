@@ -153,7 +153,9 @@ export class GuxFormFieldTextLike {
   private renderRadialLoading(): JSX.Element {
     if (this.loading) {
       return (
-        <gux-radial-loading context="input"></gux-radial-loading>
+        <div role="status">
+          <gux-radial-loading context="input"></gux-radial-loading>
+        </div>
       ) as JSX.Element;
     }
   }
@@ -220,7 +222,7 @@ export class GuxFormFieldTextLike {
             >
               <slot name="prefix" />
               <slot name="input" />
-              <div role="status">{this.renderRadialLoading()}</div>
+              {this.renderRadialLoading()}
               <slot name="suffix" />
               {this.clearable && this.hasContent && !this.disabled && (
                 <gux-form-field-input-clear-button
