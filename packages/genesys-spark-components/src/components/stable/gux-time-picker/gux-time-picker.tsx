@@ -333,6 +333,11 @@ export class GuxTimePicker {
           aria-label={this.i18n('hoursInput')}
           pattern={getHoursPattern(this.clockType)}
           ref={el => (this.hourInputElement = el)}
+          role="spinbutton"
+          aria-valuenow={getHourDisplayValue(this.value, this.clockType)}
+          aria-valuetext={getHourDisplayValue(this.value, this.clockType)}
+          aria-valuemin={1}
+          aria-valuemax={this.clockType === '24h' ? 23 : 12}
         />
         <span class="gux-time-separator">{this.i18n('time-separator')}</span>
         <input
@@ -344,6 +349,11 @@ export class GuxTimePicker {
           aria-label={this.i18n('minutesInput')}
           pattern={getMinutesPattern()}
           ref={el => (this.minuteInputElement = el)}
+          role="spinbutton"
+          aria-valuenow={getMinuteDisplayValue(this.value)}
+          aria-valuetext={getMinuteDisplayValue(this.value)}
+          aria-valuemin={0}
+          aria-valuemax={59}
         />
       </div>
     ) as JSX.Element;
