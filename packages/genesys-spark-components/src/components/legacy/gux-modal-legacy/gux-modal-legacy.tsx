@@ -95,7 +95,7 @@ export class GuxModalLegacy {
         aria-labelledby={hasModalTitleSlot ? titleID : null}
       >
         <div class={`gux-modal-container gux-${this.size}`}>
-          {this.renderModalTrapFocusEl()}
+          {this.renderTrapFocusEl(this.trapFocus, this.dismissButton)}
 
           {hasModalTitleSlot && (
             <h1 class="gux-modal-header" id={titleID}>
@@ -128,7 +128,7 @@ export class GuxModalLegacy {
               </div>
             </div>
           )}
-          {this.renderModalTrapFocusEl()}
+          {this.renderTrapFocusEl(this.trapFocus, this.dismissButton)}
         </div>
       </div>
     ) as JSX.Element;
@@ -136,10 +136,13 @@ export class GuxModalLegacy {
 
   // When trap-focus is enabled, focusing this element
   // will immediately redirect focus back to the dismiss button at the top of the modal.
-  private renderModalTrapFocusEl(): JSX.Element {
-    if (this.trapFocus) {
+  private renderTrapFocusEl(
+    trapFocus: boolean,
+    target: HTMLElement
+  ): JSX.Element {
+    if (trapFocus) {
       return (
-        <span onFocus={() => this.dismissButton.focus()} tabindex="0"></span>
+        <span onFocus={() => target.focus()} tabindex="0"></span>
       ) as JSX.Element;
     }
   }
