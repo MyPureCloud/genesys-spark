@@ -16,8 +16,18 @@ const cssFilesGlob = path.join(cssFileFolder, '*.css');
 
 const cssFiles = globSync(cssFilesGlob);
 
-function writeToDistTokensFolder(filename, fileContent) {
+function writeToTokensBetaFolder(filename, fileContent) {
   const folder = path.join(projectPath, `${FOLDER}/beta/tokens/flare`);
+
+  if (!fs.existsSync(folder)) {
+    fs.mkdirSync(folder, { recursive: true });
+  }
+
+  fs.writeFileSync(path.join(folder, filename), fileContent);
+}
+
+function writeToTokensFolder(filename, fileContent) {
+  const folder = path.join(projectPath, `${FOLDER}/tokens/flare`);
 
   if (!fs.existsSync(folder)) {
     fs.mkdirSync(folder, { recursive: true });
@@ -59,6 +69,9 @@ cssFiles.forEach(cssFile => {
   const lessFileName = cssFileName.replace('.css', '.less');
   const lessFileContent = getLessFileContent(cssCustomProperties);
 
-  writeToDistTokensFolder(scssFileName, scssFileContent);
-  writeToDistTokensFolder(lessFileName, lessFileContent);
+  writeToTokensBetaFolder(scssFileName, scssFileContent);
+  writeToTokensBetaFolder(lessFileName, lessFileContent);
+
+  writeToTokensFolder(scssFileName, scssFileContent);
+  writeToTokensFolder(lessFileName, lessFileContent);
 });
