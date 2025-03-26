@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.135.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.134.2...v4.135.0) (2025-03-26)
+
+
+### Features
+
+* **modal side panel:** modal is visible when open prop is initially set ([52b4383](https://github.com/MyPureCloud/genesys-spark/commit/52b4383337a2a6e0fc41a10bd237a548457300d9))
+
 ### [4.134.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.134.1...v4.134.2) (2025-03-25)
 
 ### [4.134.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.134.0...v4.134.1) (2025-03-22)
