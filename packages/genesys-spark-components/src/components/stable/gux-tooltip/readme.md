@@ -69,6 +69,7 @@ Type: `Promise<void>`
  - [gux-copy-to-clipboard](../gux-copy-to-clipboard)
  - [gux-pagination-ellipsis-button](../gux-pagination/gux-pagination-buttons/gux-pagination-ellipsis-button)
  - [gux-segmented-control-item](../../beta/gux-segmented-control/gux-segmented-control-item)
+ - [gux-status-indicator-beta](../../beta/gux-status-indicator)
  - [gux-table-toolbar-custom-action](../gux-table-toolbar/gux-table-toolbar-custom-action)
  - [gux-tooltip-title](../gux-tooltip-title)
  - [gux-truncate](../gux-truncate)
@@ -79,6 +80,7 @@ graph TD;
   gux-copy-to-clipboard --> gux-tooltip
   gux-pagination-ellipsis-button --> gux-tooltip
   gux-segmented-control-item --> gux-tooltip
+  gux-status-indicator-beta --> gux-tooltip
   gux-table-toolbar-custom-action --> gux-tooltip
   gux-tooltip-title --> gux-tooltip
   gux-truncate --> gux-tooltip
