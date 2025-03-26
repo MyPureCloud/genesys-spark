@@ -259,7 +259,7 @@ export class GuxPopover {
     const dismissEvent = this.guxdismiss.emit();
     if (!dismissEvent.defaultPrevented) {
       this.isOpen = false;
-      this.popupElement.togglePopover();
+      this.popupElement.hidePopover();
     }
   }
 
