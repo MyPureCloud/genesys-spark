@@ -27,7 +27,7 @@ export class GuxTooltipPointer {
   @Element()
   private root: HTMLElement;
   private baseTooltip: HTMLGuxTooltipBaseBetaElement;
-  private id: string = randomHTMLId('gux-tooltip-mouse');
+  private id: string = randomHTMLId('gux-tooltip-pointer');
   private tooltipObserver: MutationObserver;
 
   @State()
