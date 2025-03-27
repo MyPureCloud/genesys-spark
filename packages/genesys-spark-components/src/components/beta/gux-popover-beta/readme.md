@@ -28,6 +28,19 @@
 | `guxdismiss` | Fired when a user dismisses the popover | `CustomEvent<void>` |
 
 
+## Methods
+
+### `guxDismissPopover() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Slots
 
 | Slot      | Description            |
