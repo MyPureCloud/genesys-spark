@@ -1,0 +1,50 @@
+<section>
+  <div class="flex-container">
+    <div class="flex-example">
+      <h4 class="flex-header">Button</h4>
+      <div class="flex-content">
+        <gux-button id="button-example">Hover</gux-button>
+        <gux-tooltip-pointer-beta for="button-example">
+          <div slot="content">Tooltip for button</div>
+        </gux-tooltip-pointer-beta>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .flex-example {
+    inline-size: 250px;
+    min-inline-size: 250px;
+  }
+
+  .flex-header {
+    inline-size: fit-content;
+    margin: auto;
+    font-weight: 400;
+  }
+
+  .flex-content {
+    inline-size: fit-content;
+    margin: auto;
+  }
+
+  #button-example {
+    inline-size: 1000px;
+  }
+
+  p {
+    max-inline-size: 600px;
+  }
+
+  strong {
+    background-color: yellow;
+  }
+</style>
