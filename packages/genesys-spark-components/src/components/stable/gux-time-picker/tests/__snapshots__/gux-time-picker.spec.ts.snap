@@ -1045,12 +1045,20 @@ exports[`gux-time-picker #render using non regional dates should render as expec
     <gux-popup class="gux-time-picker">
       <div class="gux-input-time" slot="target">
         <div class="gux-input-time-container">
-          <input aria-label="Input hours" class="gux-input-time-hours" pattern="^([01]?[0-9]|2[0-3])$" type="text" value="09">
+          <input aria-label="Input hours" class="gux-input-time-hours" pattern="^(0?[1-9]|1[012])$" type="text" value="09">
           <span class="gux-time-separator">
             :
           </span>
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
+        <button aria-label="AM selected, click to toggle" class="gux-input-time-am-pm-selector" type="button">
+          <div class="gux-meridiem gux-visible">
+            AM
+          </div>
+          <div class="gux-meridiem">
+            PM
+          </div>
+        </button>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
           <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
@@ -1058,7 +1066,7 @@ exports[`gux-time-picker #render using non regional dates should render as expec
       <div class="gux-list-container" slot="popup">
         <gux-list>
           <gux-list-item id="gux-id-00-00">
-            00:00
+            12:00
           </gux-list-item>
           <gux-list-item id="gux-id-01-00">
             01:00
@@ -1092,42 +1100,6 @@ exports[`gux-time-picker #render using non regional dates should render as expec
           </gux-list-item>
           <gux-list-item id="gux-id-11-00">
             11:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-12-00">
-            12:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-13-00">
-            13:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-14-00">
-            14:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-15-00">
-            15:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-16-00">
-            16:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-17-00">
-            17:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-18-00">
-            18:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-19-00">
-            19:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-20-00">
-            20:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-21-00">
-            21:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-22-00">
-            22:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-23-00">
-            23:00
           </gux-list-item>
         </gux-list>
       </div>
@@ -2494,6 +2466,103 @@ exports[`gux-time-picker #render using non regional dates should render as expec
 </gux-time-picker>
 `;
 
+exports[`gux-time-picker #render using non regional dates should render as expected 27`] = `
+<gux-time-picker value="09:00">
+  <template shadowrootmode="open">
+    <gux-popup class="gux-time-picker">
+      <div class="gux-input-time" slot="target">
+        <div class="gux-input-time-container">
+          <input aria-label="Input hours" class="gux-input-time-hours" pattern="^([01]?[0-9]|2[0-3])$" type="text" value="09">
+          <span class="gux-time-separator">
+            :
+          </span>
+          <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
+        </div>
+        <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
+        </button>
+      </div>
+      <div class="gux-list-container" slot="popup">
+        <gux-list>
+          <gux-list-item id="gux-id-00-00">
+            00:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-01-00">
+            01:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-02-00">
+            02:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-03-00">
+            03:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-04-00">
+            04:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-05-00">
+            05:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-06-00">
+            06:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-07-00">
+            07:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-08-00">
+            08:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-09-00">
+            09:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-10-00">
+            10:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-11-00">
+            11:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-12-00">
+            12:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-13-00">
+            13:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-14-00">
+            14:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-15-00">
+            15:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-16-00">
+            16:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-17-00">
+            17:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-18-00">
+            18:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-19-00">
+            19:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-20-00">
+            20:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-21-00">
+            21:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-22-00">
+            22:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-23-00">
+            23:00
+          </gux-list-item>
+        </gux-list>
+      </div>
+    </gux-popup>
+  </template>
+</gux-time-picker>
+`;
+
 exports[`gux-time-picker #render using regional dates should render as expected 1`] = `
 <gux-time-picker value="09:00">
   <template shadowrootmode="open">
@@ -3511,12 +3580,20 @@ exports[`gux-time-picker #render using regional dates should render as expected 
     <gux-popup class="gux-time-picker">
       <div class="gux-input-time" slot="target">
         <div class="gux-input-time-container">
-          <input aria-label="Input hours" class="gux-input-time-hours" pattern="^([01]?[0-9]|2[0-3])$" type="text" value="09">
+          <input aria-label="Input hours" class="gux-input-time-hours" pattern="^(0?[1-9]|1[012])$" type="text" value="09">
           <span class="gux-time-separator">
             :
           </span>
           <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
         </div>
+        <button aria-label="AM selected, click to toggle" class="gux-input-time-am-pm-selector" type="button">
+          <div class="gux-meridiem gux-visible">
+            AM
+          </div>
+          <div class="gux-meridiem">
+            PM
+          </div>
+        </button>
         <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
           <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
         </button>
@@ -3524,7 +3601,7 @@ exports[`gux-time-picker #render using regional dates should render as expected 
       <div class="gux-list-container" slot="popup">
         <gux-list>
           <gux-list-item id="gux-id-00-00">
-            00:00
+            12:00
           </gux-list-item>
           <gux-list-item id="gux-id-01-00">
             01:00
@@ -3558,42 +3635,6 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           </gux-list-item>
           <gux-list-item id="gux-id-11-00">
             11:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-12-00">
-            12:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-13-00">
-            13:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-14-00">
-            14:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-15-00">
-            15:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-16-00">
-            16:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-17-00">
-            17:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-18-00">
-            18:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-19-00">
-            19:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-20-00">
-            20:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-21-00">
-            21:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-22-00">
-            22:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-23-00">
-            23:00
           </gux-list-item>
         </gux-list>
       </div>
@@ -3705,75 +3746,6 @@ exports[`gux-time-picker #render using regional dates should render as expected 
     <gux-popup class="gux-time-picker">
       <div class="gux-input-time" slot="target">
         <div class="gux-input-time-container">
-          <input aria-label="Input hours" class="gux-input-time-hours" pattern="^(0?[1-9]|1[012])$" type="text" value="09">
-          <span class="gux-time-separator">
-            :
-          </span>
-          <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
-        </div>
-        <button aria-label="AM selected, click to toggle" class="gux-input-time-am-pm-selector" type="button">
-          <div class="gux-meridiem gux-visible">
-            AM
-          </div>
-          <div class="gux-meridiem">
-            PM
-          </div>
-        </button>
-        <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
-          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
-        </button>
-      </div>
-      <div class="gux-list-container" slot="popup">
-        <gux-list>
-          <gux-list-item id="gux-id-00-00">
-            12:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-01-00">
-            01:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-02-00">
-            02:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-03-00">
-            03:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-04-00">
-            04:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-05-00">
-            05:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-06-00">
-            06:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-07-00">
-            07:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-08-00">
-            08:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-09-00">
-            09:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-10-00">
-            10:00
-          </gux-list-item>
-          <gux-list-item id="gux-id-11-00">
-            11:00
-          </gux-list-item>
-        </gux-list>
-      </div>
-    </gux-popup>
-  </template>
-</gux-time-picker>
-`;
-
-exports[`gux-time-picker #render using regional dates should render as expected 15`] = `
-<gux-time-picker value="09:00">
-  <template shadowrootmode="open">
-    <gux-popup class="gux-time-picker">
-      <div class="gux-input-time" slot="target">
-        <div class="gux-input-time-container">
           <input aria-label="Input hours" class="gux-input-time-hours" pattern="^([01]?[0-9]|2[0-3])$" type="text" value="09">
           <span class="gux-time-separator">
             :
@@ -3857,6 +3829,75 @@ exports[`gux-time-picker #render using regional dates should render as expected 
           </gux-list-item>
           <gux-list-item id="gux-id-23-00">
             23:00
+          </gux-list-item>
+        </gux-list>
+      </div>
+    </gux-popup>
+  </template>
+</gux-time-picker>
+`;
+
+exports[`gux-time-picker #render using regional dates should render as expected 15`] = `
+<gux-time-picker value="09:00">
+  <template shadowrootmode="open">
+    <gux-popup class="gux-time-picker">
+      <div class="gux-input-time" slot="target">
+        <div class="gux-input-time-container">
+          <input aria-label="Input hours" class="gux-input-time-hours" pattern="^(0?[1-9]|1[012])$" type="text" value="09">
+          <span class="gux-time-separator">
+            :
+          </span>
+          <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
+        </div>
+        <button aria-label="AM selected, click to toggle" class="gux-input-time-am-pm-selector" type="button">
+          <div class="gux-meridiem gux-visible">
+            AM
+          </div>
+          <div class="gux-meridiem">
+            PM
+          </div>
+        </button>
+        <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
+        </button>
+      </div>
+      <div class="gux-list-container" slot="popup">
+        <gux-list>
+          <gux-list-item id="gux-id-00-00">
+            12:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-01-00">
+            01:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-02-00">
+            02:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-03-00">
+            03:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-04-00">
+            04:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-05-00">
+            05:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-06-00">
+            06:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-07-00">
+            07:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-08-00">
+            08:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-09-00">
+            09:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-10-00">
+            10:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-11-00">
+            11:00
           </gux-list-item>
         </gux-list>
       </div>
@@ -4836,6 +4877,103 @@ exports[`gux-time-picker #render using regional dates should render as expected 
 `;
 
 exports[`gux-time-picker #render using regional dates should render as expected 26`] = `
+<gux-time-picker value="09:00">
+  <template shadowrootmode="open">
+    <gux-popup class="gux-time-picker">
+      <div class="gux-input-time" slot="target">
+        <div class="gux-input-time-container">
+          <input aria-label="Input hours" class="gux-input-time-hours" pattern="^([01]?[0-9]|2[0-3])$" type="text" value="09">
+          <span class="gux-time-separator">
+            :
+          </span>
+          <input aria-label="Input minutes" class="gux-input-time-minutes" pattern="^[0-5][0-9]$" type="text" value="00">
+        </div>
+        <button aria-expanded="false" aria-label="Toggle suggested times" class="gux-clock-button" type="button">
+          <gux-icon decorative="" icon-name="fa/clock-regular" size="small"></gux-icon>
+        </button>
+      </div>
+      <div class="gux-list-container" slot="popup">
+        <gux-list>
+          <gux-list-item id="gux-id-00-00">
+            00:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-01-00">
+            01:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-02-00">
+            02:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-03-00">
+            03:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-04-00">
+            04:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-05-00">
+            05:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-06-00">
+            06:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-07-00">
+            07:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-08-00">
+            08:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-09-00">
+            09:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-10-00">
+            10:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-11-00">
+            11:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-12-00">
+            12:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-13-00">
+            13:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-14-00">
+            14:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-15-00">
+            15:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-16-00">
+            16:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-17-00">
+            17:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-18-00">
+            18:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-19-00">
+            19:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-20-00">
+            20:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-21-00">
+            21:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-22-00">
+            22:00
+          </gux-list-item>
+          <gux-list-item id="gux-id-23-00">
+            23:00
+          </gux-list-item>
+        </gux-list>
+      </div>
+    </gux-popup>
+  </template>
+</gux-time-picker>
+`;
+
+exports[`gux-time-picker #render using regional dates should render as expected 27`] = `
 <gux-time-picker value="09:00">
   <template shadowrootmode="open">
     <gux-popup class="gux-time-picker">
