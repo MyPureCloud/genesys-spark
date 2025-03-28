@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.136.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.135.0...v4.136.0) (2025-03-28)
+
+
+### Features
+
+* **other:** scss and less tokens are now out of beta ([134b224](https://github.com/MyPureCloud/genesys-spark/commit/134b224a67335fe7dcbf0dcb14e815b859b9dfc5))
+* **other:** update global navigation tokens ([4649fca](https://github.com/MyPureCloud/genesys-spark/commit/4649fcacb2da7ad7df8f51776c7ddae22d7a01e7))
+
+
+### Bug Fixes
+
+* **datepicker:** background-color should not include label ([62fb456](https://github.com/MyPureCloud/genesys-spark/commit/62fb456a3f2b5fe8e21f57c0535b840e495be554))
+
 ## [4.135.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.134.2...v4.135.0) (2025-03-26)
 
 
