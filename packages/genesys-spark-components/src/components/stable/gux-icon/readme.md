@@ -26,7 +26,7 @@
  - [gux-avatar-change-photo-beta](../../beta/gux-avatar/gux-avatar-change-photo)
  - [gux-button-multi](../gux-button-multi)
  - [gux-calendar](../gux-calendar)
- - [gux-calendar-beta](../../beta/gux-calendar-beta/components/single)
+ - [gux-calendar-beta](../../beta/gux-calendar-beta)
  - [gux-column-manager-item](../gux-column-manager/gux-column-manager-item)
  - [gux-content-search](../gux-content-search)
  - [gux-context-menu](../gux-context-menu)
