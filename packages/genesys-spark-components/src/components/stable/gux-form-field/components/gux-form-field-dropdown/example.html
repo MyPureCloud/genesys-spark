@@ -15,7 +15,7 @@
   <fieldset>
     <legend>Label Position</legend>
     <gux-form-field-dropdown>
-      <gux-dropdown>
+      <gux-dropdown filter-type="starts-with">
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -26,7 +26,7 @@
     </gux-form-field-dropdown>
 
     <gux-form-field-dropdown>
-      <gux-dropdown>
+      <gux-dropdown filter-type="starts-with">
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -37,7 +37,7 @@
     </gux-form-field-dropdown>
 
     <gux-form-field-dropdown label-position="above">
-      <gux-dropdown>
+      <gux-dropdown filter-type="starts-with">
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -48,7 +48,7 @@
     </gux-form-field-dropdown>
 
     <gux-form-field-dropdown label-position="beside">
-      <gux-dropdown>
+      <gux-dropdown filter-type="starts-with">
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -58,7 +58,7 @@
       <label slot="label">Beside</label>
     </gux-form-field-dropdown>
     <gux-form-field-dropdown label-position="screenreader">
-      <gux-dropdown>
+      <gux-dropdown filter-type="starts-with">
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -71,7 +71,7 @@
   <fieldset>
     <legend>Input Attributes</legend>
     <gux-form-field-dropdown>
-      <gux-dropdown disabled>
+      <gux-dropdown filter-type="starts-with" disabled>
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -81,7 +81,7 @@
       <label slot="label">Disabled</label>
     </gux-form-field-dropdown>
     <gux-form-field-dropdown>
-      <gux-dropdown required>
+      <gux-dropdown filter-type="starts-with" required>
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -91,7 +91,7 @@
       <label slot="label">Required</label>
     </gux-form-field-dropdown>
     <gux-form-field-dropdown>
-      <gux-dropdown value="c">
+      <gux-dropdown filter-type="starts-with" value="c">
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -100,7 +100,7 @@
       </gux-dropdown>
       <label slot="label">Value Set</label>
     </gux-form-field-dropdown>
-    <gux-form-field-dropdown>
+    <gux-form-field-dropdown filter-type="starts-with">
       <gux-dropdown filter-type="starts-with">
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
@@ -120,7 +120,7 @@
   <fieldset>
     <legend>Error</legend>
     <gux-form-field-dropdown>
-      <gux-dropdown>
+      <gux-dropdown filter-type="starts-with">
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -131,7 +131,7 @@
       <span slot="error">This is an error message</span>
     </gux-form-field-dropdown>
     <gux-form-field-dropdown>
-      <gux-dropdown required>
+      <gux-dropdown filter-type="starts-with" required>
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -146,7 +146,7 @@
   <fieldset>
     <legend>Help</legend>
     <gux-form-field-dropdown>
-      <gux-dropdown>
+      <gux-dropdown filter-type="starts-with">
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -157,7 +157,7 @@
       <span slot="help">This is a help message</span>
     </gux-form-field-dropdown>
     <gux-form-field-dropdown>
-      <gux-dropdown required>
+      <gux-dropdown filter-type="starts-with" required>
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -171,7 +171,7 @@
   <fieldset>
     <legend>Label Info</legend>
     <gux-form-field-dropdown>
-      <gux-dropdown>
+      <gux-dropdown filter-type="starts-with">
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -199,7 +199,7 @@
   <fieldset>
     <legend>Label Position</legend>
     <gux-form-field-dropdown>
-      <gux-dropdown-multi>
+      <gux-dropdown-multi filter-type="starts-with">
         <gux-listbox-multi>
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
@@ -210,7 +210,7 @@
     </gux-form-field-dropdown>
 
     <gux-form-field-dropdown>
-      <gux-dropdown-multi>
+      <gux-dropdown-multi filter-type="starts-with">
         <gux-listbox-multi>
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
@@ -221,7 +221,7 @@
     </gux-form-field-dropdown>
 
     <gux-form-field-dropdown label-position="above">
-      <gux-dropdown-multi>
+      <gux-dropdown-multi filter-type="starts-with">
         <gux-listbox-multi>
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
@@ -232,8 +232,8 @@
     </gux-form-field-dropdown>
 
     <gux-form-field-dropdown label-position="beside">
-      <gux-dropdown-multi>
-        <gux-listbox-multi>
+      <gux-dropdown-multi filter-type="starts-with">
+        <gux-listbox-multi filter-type="starts-with">
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
           <gux-option-multi value="c">Cat</gux-option-multi>
@@ -242,7 +242,7 @@
       <label slot="label">Beside</label>
     </gux-form-field-dropdown>
     <gux-form-field-dropdown label-position="screenreader">
-      <gux-dropdown-multi>
+      <gux-dropdown-multi filter-type="starts-with">
         <gux-listbox-multi>
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
@@ -255,7 +255,7 @@
   <fieldset>
     <legend>Input Attributes</legend>
     <gux-form-field-dropdown>
-      <gux-dropdown-multi disabled>
+      <gux-dropdown-multi filter-type="starts-with" disabled>
         <gux-listbox-multi>
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
@@ -265,7 +265,7 @@
       <label slot="label">Disabled</label>
     </gux-form-field-dropdown>
     <gux-form-field-dropdown>
-      <gux-dropdown-multi required>
+      <gux-dropdown-multi filter-type="starts-with" required>
         <gux-listbox-multi>
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
@@ -275,7 +275,7 @@
       <label slot="label">Required</label>
     </gux-form-field-dropdown>
     <gux-form-field-dropdown>
-      <gux-dropdown-multi value="b,c">
+      <gux-dropdown-multi filter-type="starts-with" value="b,c">
         <gux-listbox-multi>
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
@@ -304,8 +304,8 @@
   <fieldset>
     <legend>Error</legend>
     <gux-form-field-dropdown>
-      <gux-dropdown-multi>
-        <gux-listbox-multi>
+      <gux-dropdown-multi filter-type="starts-with">
+        <gux-listbox-multi filter-type="starts-with">
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
           <gux-option-multi value="c">Cat</gux-option-multi>
@@ -316,7 +316,7 @@
     </gux-form-field-dropdown>
     <gux-form-field-dropdown>
       <gux-dropdown-multi required>
-        <gux-listbox-multi>
+        <gux-listbox-multi filter-type="starts-with">
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
           <gux-option-multi value="c">Cat</gux-option-multi>
@@ -330,8 +330,8 @@
   <fieldset>
     <legend>Help</legend>
     <gux-form-field-dropdown>
-      <gux-dropdown-multi>
-        <gux-listbox-multi>
+      <gux-dropdown-multi filter-type="starts-with">
+        <gux-listbox-multi filter-type="starts-with">
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
           <gux-option-multi value="c">Cat</gux-option-multi>
@@ -341,7 +341,7 @@
       <span slot="help">This is a help message</span>
     </gux-form-field-dropdown>
     <gux-form-field-dropdown>
-      <gux-dropdown-multi required>
+      <gux-dropdown-multi filter-type="starts-with" required>
         <gux-listbox-multi>
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
@@ -356,7 +356,7 @@
     <legend>Label Info</legend>
 
     <gux-form-field-dropdown>
-      <gux-dropdown-multi>
+      <gux-dropdown-multi filter-type="starts-with">
         <gux-listbox>
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
