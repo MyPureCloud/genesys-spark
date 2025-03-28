@@ -1,4 +1,4 @@
-# gux-tooltip-mouse-beta
+# gux-tooltip-pointer-beta
 
 
 
@@ -54,8 +54,8 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  gux-tooltip-mouse-beta --> gux-tooltip-base-beta
-  style gux-tooltip-mouse-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-tooltip-pointer-beta --> gux-tooltip-base-beta
+  style gux-tooltip-pointer-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

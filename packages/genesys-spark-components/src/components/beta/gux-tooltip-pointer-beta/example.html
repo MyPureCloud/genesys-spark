@@ -1,4 +1,71 @@
+<h1>gux-tooltip-pointer-beta</h1>
+<h2>Summary</h2>
+<p>Simple tooltip that is displayed when hovering over a linked node.</p>
+
 <section>
+  <h3>Default Behavior</h3>
+  <p>
+    By default, the tooltip will be displayed when hovering over the parent
+    node. Default positioning is beneath the node. The tooltip is not restricted
+    by the parent's overflow style. If the text is sufficiently long, it will
+    wrap into multiple lines.
+  </p>
+
+  <p class="no-overflow">
+    <strong>Hover</strong> over this paragraph to see an example of a tooltip
+    extending beyond a node with hidden overflow.
+    <gux-tooltip-pointer-beta>
+      <span slot="content">Default behavior example</span>
+    </gux-tooltip-pointer-beta>
+  </p>
+
+  <p>
+    <strong>Hover</strong> over this paragraph to seen an example of a tooltip
+    with more text.
+    <gux-tooltip-pointer-beta>
+      <span slot="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac odio a
+        dolor semper vehicula at ut nulla. Proin pellentesque neque sollicitudin
+        iaculis efficitur.
+      </span>
+    </gux-tooltip-pointer-beta>
+  </p>
+</section>
+
+<h2>Properties</h2>
+
+<section>
+  <h3>accent</h3>
+  <p>Applies styles for color variants.</p>
+  <div class="flex-container">
+    <div class="flex-example">
+      <h4 class="flex-header">light</h4>
+      <div class="flex-content">
+        <gux-button
+          >Hover<gux-tooltip-pointer-beta accent="light">
+            <div slot="content">Tooltip with light accent</div>
+          </gux-tooltip-pointer-beta></gux-button
+        >
+      </div>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">dark</h4>
+      <div class="flex-content">
+        <gux-button
+          >Hover<gux-tooltip-pointer-beta accent="dark">
+            <div slot="content">Tooltip with dark accent</div>
+          </gux-tooltip-pointer-beta></gux-button
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>for</h3>
+  <p>
+    Links the tooltip to an element by <em>id</em> instead of its parent node.
+  </p>
   <div class="flex-container">
     <div class="flex-example">
       <h4 class="flex-header">Button</h4>
@@ -9,42 +76,185 @@
         </gux-tooltip-pointer-beta>
       </div>
     </div>
+    <div class="flex-example">
+      <h4 class="flex-header">Icon</h4>
+      <div class="flex-content">
+        <gux-icon
+          id="icon-example"
+          icon-name="user-add"
+          screenreader-text="add John Smith to contact list"
+          >Hover
+        </gux-icon>
+        <gux-tooltip-pointer-beta for="icon-example">
+          <div slot="content">Tooltip for icon</div>
+        </gux-tooltip-pointer-beta>
+      </div>
+    </div>
+    <div class="flex-example">
+      <h4 class="flex-header">Text</h4>
+      <div class="flex-content">
+        <div>
+          Hover over the <strong id="text-example">highlighted</strong> text.
+        </div>
+        <gux-tooltip-pointer-beta for="text-example">
+          <div slot="content">Tooltip for text</div>
+        </gux-tooltip-pointer-beta>
+      </div>
+    </div>
   </div>
 </section>
 
-<style>
-  .flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+<section>
+  <h3>placement</h3>
+  <p>
+    Indicates preferred placement of the tooltip. Tooltip will shift based on
+    available space.
+  </p>
+  <div class="grid-example">
+    <div></div>
+    <div class="grid-content" id="top-start">top-start</div>
+    <div class="grid-content" id="top">top</div>
+    <div class="grid-content" id="top-end">top-end</div>
+    <div></div>
+    <div class="grid-content" id="left-start">left-start</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="grid-content" id="right-start">right-start</div>
+    <div class="grid-content" id="left">left</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="grid-content" id="right">right</div>
+    <div class="grid-content" id="left-end">left-end</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="grid-content" id="right-end">right-end</div>
+    <div></div>
+    <div class="grid-content" id="bottom-start">bottom-start</div>
+    <div class="grid-content" id="bottom">bottom</div>
+    <div class="grid-content" id="bottom-end">bottom-end</div>
+    <div></div>
 
-  .flex-example {
-    inline-size: 250px;
-    min-inline-size: 250px;
-  }
+    <gux-tooltip-pointer-beta for="top-start" placement="top-start">
+      <div slot="content">Top start tooltip</div>
+    </gux-tooltip-pointer-beta>
+    <gux-tooltip-pointer-beta for="top" placement="top">
+      <div slot="content">Top tooltip</div>
+    </gux-tooltip-pointer-beta>
+    <gux-tooltip-pointer-beta for="top-end" placement="top-end">
+      <div slot="content">Top end tooltip</div>
+    </gux-tooltip-pointer-beta>
+    <gux-tooltip-pointer-beta for="left-start" placement="left-start">
+      <div slot="content">Left start tooltip</div>
+    </gux-tooltip-pointer-beta>
+    <gux-tooltip-pointer-beta for="right-start" placement="right-start">
+      <div slot="content">Right start tooltip</div>
+    </gux-tooltip-pointer-beta>
+    <gux-tooltip-pointer-beta for="left" placement="left">
+      <div slot="content">Left tooltip</div>
+    </gux-tooltip-pointer-beta>
+    <gux-tooltip-pointer-beta for="right" placement="right">
+      <div slot="content">Right tooltip</div>
+    </gux-tooltip-pointer-beta>
+    <gux-tooltip-pointer-beta for="left-end" placement="left-end">
+      <div slot="content">Left end tooltip</div>
+    </gux-tooltip-pointer-beta>
+    <gux-tooltip-pointer-beta for="right-end" placement="right-end">
+      <div slot="content">Right end tooltip</div>
+    </gux-tooltip-pointer-beta>
+    <gux-tooltip-pointer-beta for="bottom-start" placement="bottom-start">
+      <div slot="content">Bottom start tooltip</div>
+    </gux-tooltip-pointer-beta>
+    <gux-tooltip-pointer-beta for="bottom" placement="bottom"
+      ><div slot="content">Bottom tooltip</div>
+    </gux-tooltip-pointer-beta>
+    <gux-tooltip-pointer-beta for="bottom-end" placement="bottom-end">
+      <div slot="content">Bottom end tooltip</div>
+    </gux-tooltip-pointer-beta>
+  </div>
 
-  .flex-header {
-    inline-size: fit-content;
-    margin: auto;
-    font-weight: 400;
-  }
+  <h2>Large Target Element</h2>
+  <section>
+    <div id="large-target-element" class="grid-content">Follows Pointer</div>
+    <gux-tooltip-pointer-beta for="large-target-element">
+      <div slot="content">Tooltip for button</div>
+    </gux-tooltip-pointer-beta>
+  </section>
 
-  .flex-content {
-    inline-size: fit-content;
-    margin: auto;
-  }
+  <h2>Methods</h2>
 
-  #button-example {
-    inline-size: 1000px;
-  }
+  <section>
+    <h3>hideTooltip</h3>
+    <code>hideTooltip() =&gt; Promise&lt;void&gt;</code>
+    <p>Hides the tooltip if it is currently visible.</p>
+  </section>
 
-  p {
-    max-inline-size: 600px;
-  }
+  <section>
+    <h3>showTooltip</h3>
+    <code>showTooltip() =&gt; Promise&lt;void&gt;</code>
+    <p>Show the tooltip if it is currently hidden.</p>
+  </section>
 
-  strong {
-    background-color: yellow;
-  }
-</style>
+  <style>
+    .no-overflow {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .flex-example {
+      inline-size: 250px;
+      min-inline-size: 250px;
+    }
+
+    .flex-header {
+      inline-size: fit-content;
+      margin: auto;
+      font-weight: 400;
+    }
+
+    .flex-content {
+      inline-size: fit-content;
+      margin: auto;
+    }
+
+    .grid-example {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+      inline-size: 600px;
+      margin-inline-start: 150px;
+    }
+
+    .grid-content {
+      padding-block: 20px;
+      padding-inline: 0;
+      font-weight: bold;
+      text-align: center;
+      background-color: aliceblue;
+      border: 1px solid lightblue;
+      border-radius: 5px;
+    }
+
+    #large-target-element {
+      inline-size: 1000px;
+      block-size: 500px;
+    }
+
+    p {
+      max-inline-size: 600px;
+    }
+
+    strong {
+      background-color: yellow;
+    }
+  </style>
+</section>

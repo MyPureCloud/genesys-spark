@@ -243,8 +243,8 @@ export class GuxTooltipBase {
           left: cursorX,
           bottom: cursorY,
           right: cursorX,
-          width: 20,
-          height: 20
+          width: 10,
+          height: 10
         };
       }
     };
