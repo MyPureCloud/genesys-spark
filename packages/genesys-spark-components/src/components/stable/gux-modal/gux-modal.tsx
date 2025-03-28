@@ -23,6 +23,7 @@ import { GuxModalSize } from './gux-modal.types';
   shadow: { delegatesFocus: true }
 })
 export class GuxModal {
+  private dismissButton: HTMLGuxDismissButtonElement;
   private dialogElement: HTMLDialogElement;
 
   @Element()
@@ -41,6 +42,15 @@ export class GuxModal {
    */
   @Prop({ mutable: true })
   open: boolean = false;
+
+  /**
+   * This property is for teams who have a UX issue becasue they are displaying a modal in their iframe.
+   * This will "trap" tab stops in the modal ignoring all the parts of the app outside the clients iframe
+   * that are not inert and should be accessible. This is obviously an accessibility violation and bad UX but
+   * by adding this property that can be addresses seperatly to a move to v4.
+   */
+  @Prop()
+  inaccessibleTabTrap: boolean = false;
 
   /**
    * Fired when a user dismisses the modal
@@ -139,8 +149,10 @@ export class GuxModal {
         aria-labelledby={hasModalTitleSlot ? titleID : null}
       >
         <div class={`gux-modal-container gux-${this.size}`}>
+          {this.renderTabTrapEl(this.inaccessibleTabTrap, this.dismissButton)}
           <gux-dismiss-button
             onClick={this.onDismissHandler.bind(this)}
+            ref={el => (this.dismissButton = el)}
           ></gux-dismiss-button>
 
           {hasModalTitleSlot && this.renderTitle(titleID)}
@@ -151,6 +163,7 @@ export class GuxModal {
             </p>
           </div>
           {this.renderFooter()}
+          {this.renderTabTrapEl(this.inaccessibleTabTrap, this.dismissButton)}
         </div>
       </dialog>
     ) as JSX.Element;
@@ -189,5 +202,15 @@ export class GuxModal {
 
   private onDismissHandler(): void {
     this.open = false;
+  }
+
+  // When trap-focus is enabled, focusing this element
+  // will immediately redirect focus back to the dismiss button at the top of the modal.
+  private renderTabTrapEl(tabTrap: boolean, target: HTMLElement): JSX.Element {
+    if (tabTrap) {
+      return (
+        <span onFocus={() => target.focus()} tabindex="0"></span>
+      ) as JSX.Element;
+    }
   }
 }

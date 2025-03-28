@@ -57,6 +57,7 @@ Steps:
 - There are two mechanisms for showing/hiding modals in v4, to support both of the common approaches we see.
   - You can render the modal, and use the `showModal` and `close` methods on the `gux-modal` element to show and hide it.
   - Alternatively, if you only want to render the modal when visible, add the `open` attribute to have it render in an initially open state
+- If you were relying on the `trap-focus` attribute that was present in v3 in an inaccessible way you can use the new `inaccessible-tab-trap` attribute to get that functionality in v4. This will be an accessibility violation and you should look to fix the UX of your app so that it is not required ASAP.
 
 ```diff
 -<gux-modal initial-focus="#cancel-button" size="small">
