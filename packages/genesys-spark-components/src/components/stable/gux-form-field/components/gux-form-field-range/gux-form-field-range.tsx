@@ -296,7 +296,7 @@ export class GuxFormField {
             <gux-tooltip-base-beta
               ref={el => (this.tooltipElement = el)}
               forElement={this.containerElement}
-              offsetY={-10}
+              offsetY={10}
               placement="top"
             >
               <span slot="content">{this.getDisplayValue()}</span>

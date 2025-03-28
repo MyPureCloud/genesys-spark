@@ -17,7 +17,8 @@ import {
   hide,
   offset,
   shift,
-  Placement
+  Placement,
+  ReferenceElement
 } from '@floating-ui/dom';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
@@ -45,7 +46,8 @@ export class GuxTooltipBase {
       ['pointerenter', this.pointerenterHandler],
       ['pointerleave', this.pointerleaveHandler],
       ['focusin', this.focusinHandler],
-      ['focusout', this.focusoutHandler]
+      ['focusout', this.focusoutHandler],
+      ['mousemove', this.handlePointerMove.bind(this)]
     ]);
 
   private cleanupUpdatePosition: () => void;
@@ -86,11 +88,17 @@ export class GuxTooltipBase {
   @Prop()
   visualOnly: boolean = false;
 
+  @Prop()
+  followMouse: boolean = false;
+
   /**
    * If tooltip is shown or not
    */
   @State()
   isShown: boolean = false;
+
+  @State()
+  refElement: ReferenceElement;
 
   @Listen('keydown', { target: 'window', passive: true })
   handleKeyDown(event: KeyboardEvent) {
@@ -107,6 +115,15 @@ export class GuxTooltipBase {
   @Listen('pointerleave')
   handlePointerleave() {
     this.hide();
+  }
+
+  @Listen('mousemove')
+  handlePointerMove(event: MouseEvent) {
+    if (this.followMouse) {
+      event.preventDefault();
+      this.refElement = this.getRefElement(event.clientX, event.clientY);
+      this.runUpdatePosition();
+    }
   }
 
   /*
@@ -130,20 +147,22 @@ export class GuxTooltipBase {
   @Watch('offsetX')
   @Watch('offsetY')
   private runUpdatePosition(): void {
+    const ref =
+      this.followMouse && this.refElement ? this.refElement : this.forElement;
     this.cleanupUpdatePosition = autoUpdate(
-      this.forElement,
+      ref,
       this.root,
-      () => this.updatePosition(),
+      () => this.updatePosition(ref),
       {
         ancestorScroll: true,
         elementResize: true,
-        animationFrame: false,
+        animationFrame: this.followMouse,
         ancestorResize: true
       }
     );
   }
 
-  private updatePosition(): void {
+  private updatePosition(ref: ReferenceElement): void {
     const middleware = [
       offset(16),
       flip(),
@@ -152,14 +171,14 @@ export class GuxTooltipBase {
       overflowDetection()
     ];
 
-    void computePosition(this.forElement, this.root, {
+    void computePosition(ref, this.root, {
       placement: this.placement,
       strategy: 'fixed',
       middleware: middleware
     }).then(({ x, y, middlewareData }) => {
       Object.assign(this.root.style, {
         left: `${x + this.offsetX}px`,
-        top: `${y - this.offsetY}px`,
+        top: `${y + this.offsetY}px`,
         visibility: middlewareData.hide?.referenceHidden ? 'hidden' : 'visible'
       });
       //data-placement needed on the for e2e tests.
@@ -177,6 +196,7 @@ export class GuxTooltipBase {
   private hide(): void {
     this.hideDelayTimeout = setTimeout(() => {
       this.isShown = false;
+      this.refElement = undefined;
 
       if (this.cleanupUpdatePosition) {
         this.cleanupUpdatePosition();
@@ -207,10 +227,27 @@ export class GuxTooltipBase {
     }
   }
 
-  @Watch('forElement') //@ts-expect-error: unused warning because is is only used by decorator
+  @Watch('forElement') //@ts-expect-error: unused warning because is only used by decorator
   private updateForElement(): void {
     this.disconnectForElement();
     this.setForElement();
+  }
+
+  private getRefElement(cursorX: number, cursorY: number): ReferenceElement {
+    return {
+      getBoundingClientRect() {
+        return {
+          x: cursorX,
+          y: cursorY,
+          top: cursorY,
+          left: cursorX,
+          bottom: cursorY,
+          right: cursorX,
+          width: 10,
+          height: 10
+        };
+      }
+    };
   }
 
   connectedCallback(): void {
