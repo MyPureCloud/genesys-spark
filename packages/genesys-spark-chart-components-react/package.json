@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/react": "17.0.76",
     "@types/react-dom": "^17.0.26",
-    "eslint": "^9.22.0",
+    "eslint": "^9.23.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "globals": "^16.0.0",
     "lint-staged": "^15.5.0",
