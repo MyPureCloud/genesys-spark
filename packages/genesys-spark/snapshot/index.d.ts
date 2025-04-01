@@ -34,7 +34,12 @@ declare const intl_determineDisplayLocale: typeof determineDisplayLocale;
 declare const intl_getFormat: typeof getFormat;
 declare const intl_relativeTimeFormat: typeof relativeTimeFormat;
 declare namespace intl {
-  export { intl_dateTimeFormat as dateTimeFormat, intl_determineDisplayLocale as determineDisplayLocale, intl_getFormat as getFormat, intl_relativeTimeFormat as relativeTimeFormat };
+  export {
+    intl_dateTimeFormat as dateTimeFormat,
+    intl_determineDisplayLocale as determineDisplayLocale,
+    intl_getFormat as getFormat,
+    intl_relativeTimeFormat as relativeTimeFormat,
+  };
 }
 
 interface registerOptions {
