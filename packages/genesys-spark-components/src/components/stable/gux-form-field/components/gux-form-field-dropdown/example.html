@@ -69,32 +69,6 @@
     </gux-form-field-dropdown>
   </fieldset>
   <fieldset>
-    <legend>Filterable</legend>
-    <gux-form-field-dropdown>
-      <gux-dropdown filter-type="starts-with" placeholder="Select an animal">
-        <gux-listbox aria-label="Animals">
-          <gux-option-group-beta label="Group 1">
-            <gux-option value="a">Ant</gux-option>
-            <gux-option value="b">Bat</gux-option>
-            <gux-option value="c" disabled>Cat</gux-option>
-            <gux-option value="d">Dog</gux-option>
-          </gux-option-group-beta>
-          <gux-option-group-beta label="Group 2">
-            <gux-option value="e">Eel</gux-option>
-            <gux-option value="f">Frog</gux-option>
-            <gux-option value="g">Goat</gux-option>
-            <gux-option value="aaa">Antelope</gux-option>
-          </gux-option-group-beta>
-          <gux-option-group-beta label="Group 3">
-            <gux-option value="h">Horse</gux-option>
-            <gux-option value="i">Ibis</gux-option>
-            <gux-option value="aa">Aardvark</gux-option>
-          </gux-option-group-beta>
-        </gux-listbox>
-      </gux-dropdown>
-    </gux-form-field-dropdown>
-  </fieldset>
-  <fieldset>
     <legend>Input Attributes</legend>
     <gux-form-field-dropdown>
       <gux-dropdown disabled>
@@ -127,7 +101,7 @@
       <label slot="label">Value Set</label>
     </gux-form-field-dropdown>
     <gux-form-field-dropdown>
-      <gux-dropdown>
+      <gux-dropdown filter-type="starts-with">
         <gux-listbox>
           <gux-option value="a" disabled>Ant</gux-option>
           <gux-option value="b">Bat</gux-option>
@@ -311,7 +285,7 @@
       <label slot="label">Value Set</label>
     </gux-form-field-dropdown>
     <gux-form-field-dropdown>
-      <gux-dropdown-multi>
+      <gux-dropdown-multi filter-type="starts-with">
         <gux-listbox-multi>
           <gux-option-multi value="a" disabled>Ant</gux-option-multi>
           <gux-option-multi value="b">Bat</gux-option-multi>
