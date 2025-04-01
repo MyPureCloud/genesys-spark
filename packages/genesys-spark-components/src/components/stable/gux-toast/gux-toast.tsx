@@ -47,6 +47,9 @@ export class GuxToast {
   @State()
   hasSecondaryButton: boolean = false;
 
+  @Prop()
+  hideDismissButton: boolean = false;
+
   componentWillLoad(): void {
     trackComponent(this.root, { variant: this.toastType });
 
@@ -146,11 +149,12 @@ export class GuxToast {
             this.hasPrimaryButton &&
             this.renderActions()}
         </div>
-
-        <gux-dismiss-button
-          position="inherit"
-          onClick={this.onDismissClickHandler.bind(this)}
-        ></gux-dismiss-button>
+        {!this.hideDismissButton && (
+          <gux-dismiss-button
+            position="inherit"
+            onClick={this.onDismissClickHandler.bind(this)}
+          ></gux-dismiss-button>
+        )}
       </div>
     ) as JSX.Element;
   }

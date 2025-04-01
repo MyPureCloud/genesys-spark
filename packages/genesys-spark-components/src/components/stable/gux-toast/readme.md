@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type                                                      | Default     |
-| ----------- | ------------ | ----------- | --------------------------------------------------------- | ----------- |
-| `toastType` | `toast-type` |             | `"action" \| "error" \| "info" \| "success" \| "warning"` | `'success'` |
+| Property            | Attribute             | Description | Type                                                      | Default     |
+| ------------------- | --------------------- | ----------- | --------------------------------------------------------- | ----------- |
+| `hideDismissButton` | `hide-dismiss-button` |             | `boolean`                                                 | `false`     |
+| `toastType`         | `toast-type`          |             | `"action" \| "error" \| "info" \| "success" \| "warning"` | `'success'` |
 
 
 ## Events
