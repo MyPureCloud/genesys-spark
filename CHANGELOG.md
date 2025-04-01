@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.137.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.136.0...v4.137.0) (2025-04-01)
+
+
+### Features
+
+* **calendar-beta:** Switch to using Temporal API polyfill for dates ([5cbbd35](https://github.com/MyPureCloud/genesys-spark/commit/5cbbd358aec2ce2382b557731ab5dc31db7e8408))
+
+
+### Bug Fixes
+
+* **popover:** dismiss button moved out of title element ([058b480](https://github.com/MyPureCloud/genesys-spark/commit/058b480e104a2927b2d2e620e5d85f8a78d492eb))
+
 ## [4.136.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.135.0...v4.136.0) (2025-03-28)
 
 
