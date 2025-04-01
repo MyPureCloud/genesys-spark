@@ -37,21 +37,6 @@
     border-block-end: var(--gse-ui-sidePanel-divider-width)
       var(--gse-ui-sidePanel-divider-style)
       var(--gse-ui-sidePanel-divider-color);
-
-    & gux-dismiss-button {
-      position: absolute;
-      inset-block-start: calc(
-        var(--gse-ui-sidePanel-header-dismiss-padding) - var(
-            --gse-ui-modal-dismissButton-paddingTop
-          )
-      );
-      inset-inline-end: calc(
-        var(--gse-ui-modal-dismissButton-paddingRight) - var(
-            --gse-ui-sidePanel-header-dismiss-padding
-          )
-      );
-      display: block;
-    }
   }
 
   & .gux-side-panel-description {
