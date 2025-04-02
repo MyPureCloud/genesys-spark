@@ -19,7 +19,7 @@
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "dependencies": {
-    "genesys-spark-chart-components": "^4.129.0"
+    "genesys-spark-chart-components": "^4.137.1"
   },
   "peerDependencies": {
     "@types/react": "16 - 18",
