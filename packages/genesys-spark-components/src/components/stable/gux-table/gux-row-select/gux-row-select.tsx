@@ -13,6 +13,9 @@ import { buildI18nForComponent, GetI18nValue } from '../../../../i18n';
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import tableResources from '../i18n/en.json';
 
+/**
+ * @slot label - input label.
+ */
 @Component({
   styleUrl: 'gux-row-select.scss',
   tag: 'gux-row-select',
@@ -67,8 +70,9 @@ export class GuxRowSelect {
           disabled={this.disabled}
         />
         <label slot="label" htmlFor={this.id}>
-          &#8203;
-          <span>{this.i18n('selectTableRow')}</span>
+          <slot name="label">
+            <span>{this.i18n('selectAllTableRows')}</span>
+          </slot>
         </label>
       </gux-form-field-checkbox>
     ) as JSX.Element;
