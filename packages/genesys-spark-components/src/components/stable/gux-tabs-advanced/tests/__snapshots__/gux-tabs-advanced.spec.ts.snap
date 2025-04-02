@@ -95,13 +95,13 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
       <div>
         <gux-button-slot accent="ghost">
           <button>
+            <slot-fb hidden="" name="add-tab">
+              <gux-icon icon-name="fa/plus-regular" screenreader-text="Add View" size="small"></gux-icon>
+            </slot-fb>
             <div slot="add-tab">
               <gux-icon decorative="" icon-name="file-preview"></gux-icon>
               Add View
             </div>
-            <slot-fb hidden="" name="add-tab">
-              <gux-icon icon-name="fa/plus-regular" screenreader-text="Add View" size="small"></gux-icon>
-            </slot-fb>
           </button>
         </gux-button-slot>
       </div>

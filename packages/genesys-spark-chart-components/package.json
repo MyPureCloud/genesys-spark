@@ -60,9 +60,9 @@
   "devDependencies": {
     "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
-    "@stencil/core": "4.22.3",
+    "@stencil/core": "4.23.2",
     "@stencil/react-output-target": "^0.5.3",
-    "@stencil/sass": "^3.2.0",
+    "@stencil/sass": "^3.2.1",
     "@types/jest": "^29.5.14",
     "@types/puppeteer": "^5.4.7",
     "axe-core": "^4.10.3",

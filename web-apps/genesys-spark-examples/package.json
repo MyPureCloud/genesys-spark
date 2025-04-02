@@ -45,7 +45,7 @@
     "prettier": "^3.5.3",
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
-    "sass": "^1.86.0",
+    "sass": "^1.86.1",
     "sass-loader": "^16.0.5",
     "semver": "^7.7.1",
     "style-loader": "^4.0.0",
