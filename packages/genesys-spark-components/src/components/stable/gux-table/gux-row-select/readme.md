@@ -20,6 +20,13 @@
 | `internalrowselectchange` |             | `CustomEvent<any>` |
 
 
+## Slots
+
+| Slot      | Description  |
+| --------- | ------------ |
+| `"label"` | input label. |
+
+
 ## Dependencies
 
 ### Depends on

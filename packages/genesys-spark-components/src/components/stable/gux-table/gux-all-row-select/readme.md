@@ -39,6 +39,13 @@ Type: `Promise<void>`
 
 
 
+## Slots
+
+| Slot      | Description  |
+| --------- | ------------ |
+| `"label"` | input label. |
+
+
 ## Dependencies
 
 ### Depends on
