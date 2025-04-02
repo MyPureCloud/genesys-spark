@@ -19,6 +19,7 @@
 
 - [gux-popup](../gux-popup)
 - [gux-button-slot](../gux-button-slot)
+- [gux-screen-reader-beta](../../beta/gux-screen-reader)
 - [gux-icon](../gux-icon)
 - [gux-list](../gux-list)
 
@@ -27,6 +28,7 @@
 graph TD;
   gux-context-menu --> gux-popup
   gux-context-menu --> gux-button-slot
+  gux-context-menu --> gux-screen-reader-beta
   gux-context-menu --> gux-icon
   gux-context-menu --> gux-list
   style gux-context-menu fill:#f9f,stroke:#333,stroke-width:4px
