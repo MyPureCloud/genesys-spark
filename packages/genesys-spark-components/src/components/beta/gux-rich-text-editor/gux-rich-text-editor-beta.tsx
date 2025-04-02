@@ -15,6 +15,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import { getActionsFromGroup } from './gux-rich-text-editor.service';
 import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import translationResources from './gux-rich-text-editor-action/i18n/en.json';
+import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 
 /**
  * @slot typographical-emphasis - Slot for typographical actions.
@@ -69,7 +70,10 @@ export class GuxRichTextEditor {
   }
 
   componentDidLoad(): void {
-    this.checkResponsiveLayout();
+    // This timeout is required to calculate the correct size of the containers when the component loads. By including a timeout of 1 second the containers calculate correctly.
+    afterNextRenderTimeout(() => {
+      this.checkResponsiveLayout();
+    });
   }
 
   componentDidUpdate(): void {
