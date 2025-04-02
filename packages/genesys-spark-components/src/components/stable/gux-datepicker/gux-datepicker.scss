@@ -2,14 +2,14 @@
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 @mixin gse-ui-focus {
-  outline: var(--gse-ui-formControl-input-focus-border-width)
-    var(--gse-ui-formControl-input-focus-border-style)
-    var(--gse-ui-formControl-input-focus-border-color);
-  outline-offset: var(--gse-semantic-focusOutline-offset);
   border: var(--gse-ui-formControl-input-active-border-width)
     var(--gse-ui-formControl-input-active-border-style)
     var(--gse-ui-formControl-input-active-border-color);
   border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+  outline: var(--gse-ui-formControl-input-focus-border-width)
+    var(--gse-ui-formControl-input-focus-border-style)
+    var(--gse-ui-formControl-input-focus-border-color);
+  outline-offset: var(--gse-semantic-focusOutline-offset);
 }
 
 :host {
@@ -38,7 +38,6 @@
     place-content: flex-start flex-start;
     align-items: center;
     inline-size: 100%;
-    background-color: var(--gse-ui-formControl-input-backgroundColor);
 
     ~ .gux-datepicker-field {
       margin-inline-start: var(--gse-ui-datePicker-range-gap);
@@ -79,6 +78,7 @@
       padding: var(--gse-ui-formControl-input-padding);
       color: var(--gse-ui-formControl-input-populatedColor);
       white-space: nowrap;
+      background-color: var(--gse-ui-formControl-input-backgroundColor);
       background-image: none;
       border: var(--gse-ui-formControl-input-default-border-width)
         var(--gse-ui-formControl-input-default-border-style)
@@ -122,9 +122,9 @@
           font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
           line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
           color: var(--gse-ui-formControl-input-populatedColor);
-          outline: none;
-          background-color: transparent;
+          background-color: var(--gse-ui-formControl-input-backgroundColor);
           border: none;
+          outline: none;
 
           &::placeholder {
             color: var(--gse-ui-formControl-input-placeholderColor);
@@ -149,19 +149,19 @@
           order: 0;
           padding: 0;
           color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
-          outline: none;
           background: transparent;
           border: none;
           border-radius: var(--gse-ui-actionButton-borderRadius);
+          outline: none;
 
           &:focus-within {
             @include gse-ui-focus;
 
-            outline-offset: var(--gse-ui-datePicker-focusCalendar-gap);
             border: none;
             border-radius: var(
               --gse-ui-calendarMenu-month-calendarButton-focusBorderRadius
             );
+            outline-offset: var(--gse-ui-datePicker-focusCalendar-gap);
           }
 
           &:not(:disabled):focus-visible,

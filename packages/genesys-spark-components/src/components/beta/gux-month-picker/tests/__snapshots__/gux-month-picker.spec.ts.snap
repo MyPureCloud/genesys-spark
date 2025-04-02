@@ -1810,6 +1810,170 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
     <gux-popup exceed-target-width="">
       <div class="gux-target" slot="target">
         <span class="gux-display">
+          <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="जनवरी 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            जनवरी
+          </div>
+          <div aria-label="Year" aria-valuemin="0" aria-valuenow="2022" aria-valuetext="जनवरी 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            2022
+          </div>
+        </span>
+        <button class="gux-popup-toggle" type="button">
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
+        </button>
+      </div>
+      <gux-month-calendar slot="popup">
+        <template shadowrootmode="open">
+          <div class="gux-month-calendar">
+            <div class="gux-year-header">
+              <button class="gux-year-change" type="button">
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
+              </button>
+              <div>
+                2022
+              </div>
+              <button class="gux-year-change" type="button">
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
+              </button>
+            </div>
+            <gux-month-list role="list">
+              <template shadowrootmode="open">
+                <slot></slot>
+              </template>
+              <gux-month-list-item aria-label="जनवरी 2022" aria-selected="true" role="listitem" value="2022-01">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button class="gux-selected" tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                जन॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="फ़रवरी 2022" role="listitem" value="2022-02">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                फ़र॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="मार्च 2022" role="listitem" value="2022-03">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                मार्च
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="अप्रैल 2022" role="listitem" value="2022-04">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                अप्रैल
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="मई 2022" role="listitem" value="2022-05">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                मई
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="जून 2022" role="listitem" value="2022-06">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                जून
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="जुलाई 2022" role="listitem" value="2022-07">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                जुल॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="अगस्त 2022" role="listitem" value="2022-08">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                अग॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="सितंबर 2022" role="listitem" value="2022-09">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                सित॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="अक्तूबर 2022" role="listitem" value="2022-10">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                अक्तू॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="नवंबर 2022" role="listitem" value="2022-11">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                नव॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="दिसंबर 2022" role="listitem" value="2022-12">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                दिस॰
+              </gux-month-list-item>
+            </gux-month-list>
+          </div>
+        </template>
+      </gux-month-calendar>
+    </gux-popup>
+  </template>
+</gux-month-picker-beta>
+`;
+
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 13`] = `
+<gux-month-picker-beta value="2022-01">
+  <template shadowrootmode="open">
+    <gux-popup exceed-target-width="">
+      <div class="gux-target" slot="target">
+        <span class="gux-display">
           <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="gennaio 2022" class="gux-spinner" role="spinbutton" tabindex="0">
             gennaio
           </div>
@@ -1968,7 +2132,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 13`] = `
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 14`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -2132,7 +2296,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 14`] = `
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 15`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -2296,7 +2460,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 15`] = `
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 16`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -2460,7 +2624,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 16`] = `
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 17`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -2624,7 +2788,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 17`] = `
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 18`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -2778,170 +2942,6 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   </div>
                 </template>
                 gru
-              </gux-month-list-item>
-            </gux-month-list>
-          </div>
-        </template>
-      </gux-month-calendar>
-    </gux-popup>
-  </template>
-</gux-month-picker-beta>
-`;
-
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 18`] = `
-<gux-month-picker-beta value="2022-01">
-  <template shadowrootmode="open">
-    <gux-popup exceed-target-width="">
-      <div class="gux-target" slot="target">
-        <span class="gux-display">
-          <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="janeiro de 2022" class="gux-spinner" role="spinbutton" tabindex="0">
-            janeiro
-          </div>
-          <div aria-label="Year" aria-valuemin="0" aria-valuenow="2022" aria-valuetext="janeiro de 2022" class="gux-spinner" role="spinbutton" tabindex="0">
-            2022
-          </div>
-        </span>
-        <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
-        </button>
-      </div>
-      <gux-month-calendar slot="popup">
-        <template shadowrootmode="open">
-          <div class="gux-month-calendar">
-            <div class="gux-year-header">
-              <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
-              </button>
-              <div>
-                2022
-              </div>
-              <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
-              </button>
-            </div>
-            <gux-month-list role="list">
-              <template shadowrootmode="open">
-                <slot></slot>
-              </template>
-              <gux-month-list-item aria-label="janeiro de 2022" aria-selected="true" role="listitem" value="2022-01">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button class="gux-selected" tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                jan.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="fevereiro de 2022" role="listitem" value="2022-02">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                fev.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="março de 2022" role="listitem" value="2022-03">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                mar.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="abril de 2022" role="listitem" value="2022-04">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                abr.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="maio de 2022" role="listitem" value="2022-05">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                mai.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="junho de 2022" role="listitem" value="2022-06">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                jun.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="julho de 2022" role="listitem" value="2022-07">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                jul.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="agosto de 2022" role="listitem" value="2022-08">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                ago.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="setembro de 2022" role="listitem" value="2022-09">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                set.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="outubro de 2022" role="listitem" value="2022-10">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                out.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="novembro de 2022" role="listitem" value="2022-11">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                nov.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="dezembro de 2022" role="listitem" value="2022-12">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                dez.
               </gux-month-list-item>
             </gux-month-list>
           </div>
@@ -3122,6 +3122,170 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
     <gux-popup exceed-target-width="">
       <div class="gux-target" slot="target">
         <span class="gux-display">
+          <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="janeiro de 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            janeiro
+          </div>
+          <div aria-label="Year" aria-valuemin="0" aria-valuenow="2022" aria-valuetext="janeiro de 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            2022
+          </div>
+        </span>
+        <button class="gux-popup-toggle" type="button">
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
+        </button>
+      </div>
+      <gux-month-calendar slot="popup">
+        <template shadowrootmode="open">
+          <div class="gux-month-calendar">
+            <div class="gux-year-header">
+              <button class="gux-year-change" type="button">
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
+              </button>
+              <div>
+                2022
+              </div>
+              <button class="gux-year-change" type="button">
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
+              </button>
+            </div>
+            <gux-month-list role="list">
+              <template shadowrootmode="open">
+                <slot></slot>
+              </template>
+              <gux-month-list-item aria-label="janeiro de 2022" aria-selected="true" role="listitem" value="2022-01">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button class="gux-selected" tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                jan.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="fevereiro de 2022" role="listitem" value="2022-02">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                fev.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="março de 2022" role="listitem" value="2022-03">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                mar.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="abril de 2022" role="listitem" value="2022-04">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                abr.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="maio de 2022" role="listitem" value="2022-05">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                mai.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="junho de 2022" role="listitem" value="2022-06">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                jun.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="julho de 2022" role="listitem" value="2022-07">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                jul.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="agosto de 2022" role="listitem" value="2022-08">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                ago.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="setembro de 2022" role="listitem" value="2022-09">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                set.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="outubro de 2022" role="listitem" value="2022-10">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                out.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="novembro de 2022" role="listitem" value="2022-11">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                nov.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="dezembro de 2022" role="listitem" value="2022-12">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                dez.
+              </gux-month-list-item>
+            </gux-month-list>
+          </div>
+        </template>
+      </gux-month-calendar>
+    </gux-popup>
+  </template>
+</gux-month-picker-beta>
+`;
+
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 21`] = `
+<gux-month-picker-beta value="2022-01">
+  <template shadowrootmode="open">
+    <gux-popup exceed-target-width="">
+      <div class="gux-target" slot="target">
+        <span class="gux-display">
           <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="январь 2022 г." class="gux-spinner" role="spinbutton" tabindex="0">
             январь
           </div>
@@ -3280,7 +3444,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 21`] = `
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 22`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -3444,7 +3608,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 22`] = `
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 23`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -3608,7 +3772,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 23`] = `
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 24`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -3772,7 +3936,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 24`] = `
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 25`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -3936,7 +4100,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 25`] = `
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 26`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -4100,7 +4264,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 26`] = `
+exports[`gux-month-picker-beta #render using non regional dates should render the component as expected 27`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -6074,6 +6238,170 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
     <gux-popup exceed-target-width="">
       <div class="gux-target" slot="target">
         <span class="gux-display">
+          <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="जनवरी 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            जनवरी
+          </div>
+          <div aria-label="Year" aria-valuemin="0" aria-valuenow="2022" aria-valuetext="जनवरी 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            2022
+          </div>
+        </span>
+        <button class="gux-popup-toggle" type="button">
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
+        </button>
+      </div>
+      <gux-month-calendar slot="popup">
+        <template shadowrootmode="open">
+          <div class="gux-month-calendar">
+            <div class="gux-year-header">
+              <button class="gux-year-change" type="button">
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
+              </button>
+              <div>
+                2022
+              </div>
+              <button class="gux-year-change" type="button">
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
+              </button>
+            </div>
+            <gux-month-list role="list">
+              <template shadowrootmode="open">
+                <slot></slot>
+              </template>
+              <gux-month-list-item aria-label="जनवरी 2022" aria-selected="true" role="listitem" value="2022-01">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button class="gux-selected" tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                जन॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="फ़रवरी 2022" role="listitem" value="2022-02">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                फ़र॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="मार्च 2022" role="listitem" value="2022-03">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                मार्च
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="अप्रैल 2022" role="listitem" value="2022-04">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                अप्रैल
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="मई 2022" role="listitem" value="2022-05">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                मई
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="जून 2022" role="listitem" value="2022-06">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                जून
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="जुलाई 2022" role="listitem" value="2022-07">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                जुल॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="अगस्त 2022" role="listitem" value="2022-08">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                अग॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="सितंबर 2022" role="listitem" value="2022-09">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                सित॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="अक्तूबर 2022" role="listitem" value="2022-10">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                अक्तू॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="नवंबर 2022" role="listitem" value="2022-11">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                नव॰
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="दिसंबर 2022" role="listitem" value="2022-12">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                दिस॰
+              </gux-month-list-item>
+            </gux-month-list>
+          </div>
+        </template>
+      </gux-month-calendar>
+    </gux-popup>
+  </template>
+</gux-month-picker-beta>
+`;
+
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 13`] = `
+<gux-month-picker-beta value="2022-01">
+  <template shadowrootmode="open">
+    <gux-popup exceed-target-width="">
+      <div class="gux-target" slot="target">
+        <span class="gux-display">
           <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="gennaio 2022" class="gux-spinner" role="spinbutton" tabindex="0">
             gennaio
           </div>
@@ -6232,7 +6560,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 13`] = `
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 14`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -6396,7 +6724,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 14`] = `
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 15`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -6560,7 +6888,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 15`] = `
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 16`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -6724,7 +7052,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 16`] = `
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 17`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -6888,7 +7216,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 17`] = `
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 18`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -7042,170 +7370,6 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   </div>
                 </template>
                 gru
-              </gux-month-list-item>
-            </gux-month-list>
-          </div>
-        </template>
-      </gux-month-calendar>
-    </gux-popup>
-  </template>
-</gux-month-picker-beta>
-`;
-
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 18`] = `
-<gux-month-picker-beta value="2022-01">
-  <template shadowrootmode="open">
-    <gux-popup exceed-target-width="">
-      <div class="gux-target" slot="target">
-        <span class="gux-display">
-          <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="janeiro de 2022" class="gux-spinner" role="spinbutton" tabindex="0">
-            janeiro
-          </div>
-          <div aria-label="Year" aria-valuemin="0" aria-valuenow="2022" aria-valuetext="janeiro de 2022" class="gux-spinner" role="spinbutton" tabindex="0">
-            2022
-          </div>
-        </span>
-        <button class="gux-popup-toggle" type="button">
-          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
-        </button>
-      </div>
-      <gux-month-calendar slot="popup">
-        <template shadowrootmode="open">
-          <div class="gux-month-calendar">
-            <div class="gux-year-header">
-              <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
-              </button>
-              <div>
-                2022
-              </div>
-              <button class="gux-year-change" type="button">
-                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
-              </button>
-            </div>
-            <gux-month-list role="list">
-              <template shadowrootmode="open">
-                <slot></slot>
-              </template>
-              <gux-month-list-item aria-label="janeiro de 2022" aria-selected="true" role="listitem" value="2022-01">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button class="gux-selected" tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                jan.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="fevereiro de 2022" role="listitem" value="2022-02">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                fev.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="março de 2022" role="listitem" value="2022-03">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                mar.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="abril de 2022" role="listitem" value="2022-04">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                abr.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="maio de 2022" role="listitem" value="2022-05">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                mai.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="junho de 2022" role="listitem" value="2022-06">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                jun.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="julho de 2022" role="listitem" value="2022-07">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                jul.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="agosto de 2022" role="listitem" value="2022-08">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                ago.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="setembro de 2022" role="listitem" value="2022-09">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                set.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="outubro de 2022" role="listitem" value="2022-10">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                out.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="novembro de 2022" role="listitem" value="2022-11">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                nov.
-              </gux-month-list-item>
-              <gux-month-list-item aria-label="dezembro de 2022" role="listitem" value="2022-12">
-                <template shadowrootmode="open">
-                  <div class="gux-container">
-                    <button tabindex="-1" type="button">
-                      <slot></slot>
-                    </button>
-                  </div>
-                </template>
-                dez.
               </gux-month-list-item>
             </gux-month-list>
           </div>
@@ -7386,6 +7550,170 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
     <gux-popup exceed-target-width="">
       <div class="gux-target" slot="target">
         <span class="gux-display">
+          <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="janeiro de 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            janeiro
+          </div>
+          <div aria-label="Year" aria-valuemin="0" aria-valuenow="2022" aria-valuetext="janeiro de 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            2022
+          </div>
+        </span>
+        <button class="gux-popup-toggle" type="button">
+          <gux-icon icon-name="fa/calendar-regular" screenreader-text="Toggle month calendar view" size="small"></gux-icon>
+        </button>
+      </div>
+      <gux-month-calendar slot="popup">
+        <template shadowrootmode="open">
+          <div class="gux-month-calendar">
+            <div class="gux-year-header">
+              <button class="gux-year-change" type="button">
+                <gux-icon icon-name="custom/chevron-left-small-regular" screenreader-text="Current year is 2022, Click to change year to 2021" size="small"></gux-icon>
+              </button>
+              <div>
+                2022
+              </div>
+              <button class="gux-year-change" type="button">
+                <gux-icon icon-name="custom/chevron-right-small-regular" screenreader-text="Current year is 2022, Click to change year to 2023" size="small"></gux-icon>
+              </button>
+            </div>
+            <gux-month-list role="list">
+              <template shadowrootmode="open">
+                <slot></slot>
+              </template>
+              <gux-month-list-item aria-label="janeiro de 2022" aria-selected="true" role="listitem" value="2022-01">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button class="gux-selected" tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                jan.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="fevereiro de 2022" role="listitem" value="2022-02">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                fev.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="março de 2022" role="listitem" value="2022-03">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                mar.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="abril de 2022" role="listitem" value="2022-04">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                abr.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="maio de 2022" role="listitem" value="2022-05">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                mai.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="junho de 2022" role="listitem" value="2022-06">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                jun.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="julho de 2022" role="listitem" value="2022-07">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                jul.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="agosto de 2022" role="listitem" value="2022-08">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                ago.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="setembro de 2022" role="listitem" value="2022-09">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                set.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="outubro de 2022" role="listitem" value="2022-10">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                out.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="novembro de 2022" role="listitem" value="2022-11">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                nov.
+              </gux-month-list-item>
+              <gux-month-list-item aria-label="dezembro de 2022" role="listitem" value="2022-12">
+                <template shadowrootmode="open">
+                  <div class="gux-container">
+                    <button tabindex="-1" type="button">
+                      <slot></slot>
+                    </button>
+                  </div>
+                </template>
+                dez.
+              </gux-month-list-item>
+            </gux-month-list>
+          </div>
+        </template>
+      </gux-month-calendar>
+    </gux-popup>
+  </template>
+</gux-month-picker-beta>
+`;
+
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 21`] = `
+<gux-month-picker-beta value="2022-01">
+  <template shadowrootmode="open">
+    <gux-popup exceed-target-width="">
+      <div class="gux-target" slot="target">
+        <span class="gux-display">
           <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="январь 2022 г." class="gux-spinner" role="spinbutton" tabindex="0">
             январь
           </div>
@@ -7544,7 +7872,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 21`] = `
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 22`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -7708,7 +8036,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 22`] = `
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 23`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -7872,7 +8200,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 23`] = `
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 24`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -8036,7 +8364,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 24`] = `
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 25`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -8200,7 +8528,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 25`] = `
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 26`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">
@@ -8364,7 +8692,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
 </gux-month-picker-beta>
 `;
 
-exports[`gux-month-picker-beta #render using regional dates should render the component as expected 26`] = `
+exports[`gux-month-picker-beta #render using regional dates should render the component as expected 27`] = `
 <gux-month-picker-beta value="2022-01">
   <template shadowrootmode="open">
     <gux-popup exceed-target-width="">

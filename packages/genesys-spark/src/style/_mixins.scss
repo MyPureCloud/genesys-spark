@@ -31,9 +31,9 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
-    white-space: nowrap;
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
+    white-space: nowrap;
   }
 }
 
@@ -46,4 +46,12 @@
   border-width: var(--gse-ui-menu-border-width);
   border-radius: var(--gse-ui-menu-borderRadius);
   box-shadow: var(--gse-ui-menu-boxShadow);
+}
+
+@mixin gux-empty-button {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  background: none;
+  border: none;
 }

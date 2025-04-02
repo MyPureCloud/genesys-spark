@@ -394,8 +394,8 @@
       "border_radius": "100%"
     },
     "xs": {
-      "size": "20px",
       "padding": "2px",
+      "size": "20px",
       "height": "20px",
       "width": "20px"
     },

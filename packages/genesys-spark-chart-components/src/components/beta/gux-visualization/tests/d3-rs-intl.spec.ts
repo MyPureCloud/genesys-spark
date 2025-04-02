@@ -989,6 +989,97 @@ describe('@redsift/d3-rs-intl', () => {
         }
       },
       {
+        locale: 'hi',
+        expectedOutput: {
+          date: '%-m/%-d/%Y',
+          dateTime: '%x, %X',
+          days: [
+            'Sunday',
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday'
+          ],
+          default: {
+            date: '%-m/%-d/%Y',
+            dateTime: '%x, %X',
+            days: [
+              'Sunday',
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+              'Friday',
+              'Saturday'
+            ],
+            months: [
+              'January',
+              'February',
+              'March',
+              'April',
+              'May',
+              'June',
+              'July',
+              'August',
+              'September',
+              'October',
+              'November',
+              'December'
+            ],
+            periods: ['AM', 'PM'],
+            shortDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            shortMonths: [
+              'Jan',
+              'Feb',
+              'Mar',
+              'Apr',
+              'May',
+              'Jun',
+              'Jul',
+              'Aug',
+              'Sep',
+              'Oct',
+              'Nov',
+              'Dec'
+            ],
+            time: '%-I:%M:%S %p'
+          },
+          months: [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December'
+          ],
+          periods: ['AM', 'PM'],
+          shortDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+          shortMonths: [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec'
+          ],
+          time: '%-I:%M:%S %p'
+        }
+      },
+      {
         locale: 'it',
         expectedOutput: {
           dateTime: '%A %e %B %Y, %X',

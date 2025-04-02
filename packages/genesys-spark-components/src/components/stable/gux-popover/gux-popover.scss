@@ -26,13 +26,13 @@
   .gux-arrow-caret {
     inline-size: 0;
     block-size: 0;
+    filter: drop-shadow(0 0 4px var(--gse-semantic-effects-boxShadow));
     border-block-start: calc(var(--gse-ui-popover-anchor-width) / 2) solid
       var(--gse-ui-popover-backgroundColor);
     border-inline-start: calc(var(--gse-ui-popover-anchor-width) / 2) solid
       transparent;
     border-inline-end: calc(var(--gse-ui-popover-anchor-width) / 2) solid
       transparent;
-    filter: drop-shadow(0 0 4px var(--gse-semantic-effects-boxShadow));
   }
 
   .gux-popover-header {
@@ -46,9 +46,5 @@
     font-weight: var(--gse-ui-popover-title-text-fontWeight);
     line-height: var(--gse-ui-popover-title-text-lineHeight);
     color: var(--gse-ui-popover-headerColor);
-  }
-
-  gux-dismiss-button {
-    float: inline-end;
   }
 }

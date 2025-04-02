@@ -10,5 +10,47 @@
         "type": "typography"
       }
     }
+  },
+  "global_nav": {
+    "menu_option": {
+      "selected": {
+        "background_color": {
+          "value": "{background.interactive.global_nav.desktop.option.active_panel}",
+          "type": "color"
+        },
+        "foreground_color": {
+          "value": "{foreground.interactive.global_nav.desktop.level2.selected}",
+          "type": "color"
+        }
+      },
+      "disabled": {
+        "background_color": {
+          "value": "{background.container.elevated.default}",
+          "type": "color"
+        }
+      },
+      "selected_panel": {
+        "background_color": {
+          "value": "{background.interactive.global_nav.desktop.option.active_selected}",
+          "type": "color"
+        },
+        "foreground_color": {
+          "value": "{foreground.interactive.global_nav.desktop.level2.hover}",
+          "type": "color"
+        }
+      },
+      "return": {
+        "selected": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.new_tab.selected}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.global_nav.desktop.return.selected}",
+            "type": "color"
+          }
+        }
+      }
+    }
   }
 }

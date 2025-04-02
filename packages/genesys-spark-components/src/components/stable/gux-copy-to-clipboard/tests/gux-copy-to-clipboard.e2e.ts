@@ -2,7 +2,7 @@ import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
 const html = `
   <gux-copy-to-clipboard lang="en">
-    <div slot="content>Test</div>
+    <div slot="content">Test</div>
   </gux-copy-to-clipboard>
 `;
 

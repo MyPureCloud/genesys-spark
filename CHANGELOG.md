@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.137.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.0...v4.137.1) (2025-04-02)
+
+## [4.137.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.136.0...v4.137.0) (2025-04-01)
+
+
+### Features
+
+* **calendar-beta:** Switch to using Temporal API polyfill for dates ([5cbbd35](https://github.com/MyPureCloud/genesys-spark/commit/5cbbd358aec2ce2382b557731ab5dc31db7e8408))
+
+
+### Bug Fixes
+
+* **popover:** dismiss button moved out of title element ([058b480](https://github.com/MyPureCloud/genesys-spark/commit/058b480e104a2927b2d2e620e5d85f8a78d492eb))
+
+## [4.136.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.135.0...v4.136.0) (2025-03-28)
+
+
+### Features
+
+* **other:** scss and less tokens are now out of beta ([134b224](https://github.com/MyPureCloud/genesys-spark/commit/134b224a67335fe7dcbf0dcb14e815b859b9dfc5))
+* **other:** update global navigation tokens ([4649fca](https://github.com/MyPureCloud/genesys-spark/commit/4649fcacb2da7ad7df8f51776c7ddae22d7a01e7))
+
+
+### Bug Fixes
+
+* **datepicker:** background-color should not include label ([62fb456](https://github.com/MyPureCloud/genesys-spark/commit/62fb456a3f2b5fe8e21f57c0535b840e495be554))
+
+## [4.135.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.134.2...v4.135.0) (2025-03-26)
+
+
+### Features
+
+* **modal side panel:** modal is visible when open prop is initially set ([52b4383](https://github.com/MyPureCloud/genesys-spark/commit/52b4383337a2a6e0fc41a10bd237a548457300d9))
+
+### [4.134.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.134.1...v4.134.2) (2025-03-25)
+
 ### [4.134.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.134.0...v4.134.1) (2025-03-22)
 
 
