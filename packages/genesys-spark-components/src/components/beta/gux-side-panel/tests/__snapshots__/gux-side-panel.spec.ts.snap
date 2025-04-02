@@ -8,9 +8,9 @@ exports[`gux-modal-side-panel-beta renders correctly when open is false 1`] = `
         <template shadowrootmode="open">
           <div class="gux-side-panel gux-side-panel-medium">
             <header>
-              <gux-dismiss-button position="inherit"></gux-dismiss-button>
               <slot name="heading"></slot>
             </header>
+            <gux-dismiss-button></gux-dismiss-button>
             <div class="gux-side-panel-description">
               <slot name="description"></slot>
             </div>
@@ -78,9 +78,9 @@ exports[`gux-modal-side-panel-beta renders correctly when open is true 1`] = `
         <template shadowrootmode="open">
           <div class="gux-side-panel gux-side-panel-medium">
             <header>
-              <gux-dismiss-button position="inherit"></gux-dismiss-button>
               <slot name="heading"></slot>
             </header>
+            <gux-dismiss-button></gux-dismiss-button>
             <div class="gux-side-panel-description">
               <slot name="description"></slot>
             </div>
@@ -148,9 +148,9 @@ exports[`gux-modal-side-panel-beta renders correctly with large size 1`] = `
         <template shadowrootmode="open">
           <div class="gux-side-panel gux-side-panel-large">
             <header>
-              <gux-dismiss-button position="inherit"></gux-dismiss-button>
               <slot name="heading"></slot>
             </header>
+            <gux-dismiss-button></gux-dismiss-button>
             <div class="gux-side-panel-description">
               <slot name="description"></slot>
             </div>
@@ -218,9 +218,9 @@ exports[`gux-modal-side-panel-beta renders correctly with medium size 1`] = `
         <template shadowrootmode="open">
           <div class="gux-side-panel gux-side-panel-medium">
             <header>
-              <gux-dismiss-button position="inherit"></gux-dismiss-button>
               <slot name="heading"></slot>
             </header>
+            <gux-dismiss-button></gux-dismiss-button>
             <div class="gux-side-panel-description">
               <slot name="description"></slot>
             </div>
@@ -288,9 +288,9 @@ exports[`gux-modal-side-panel-beta renders correctly with small size 1`] = `
         <template shadowrootmode="open">
           <div class="gux-side-panel gux-side-panel-small">
             <header>
-              <gux-dismiss-button position="inherit"></gux-dismiss-button>
               <slot name="heading"></slot>
             </header>
+            <gux-dismiss-button></gux-dismiss-button>
             <div class="gux-side-panel-description">
               <slot name="description"></slot>
             </div>
@@ -355,9 +355,9 @@ exports[`gux-side-panel-beta renders correctly with h1 heading level 1`] = `
   <template shadowrootmode="open">
     <div class="gux-side-panel gux-side-panel-medium">
       <header>
-        <gux-dismiss-button position="inherit"></gux-dismiss-button>
         <slot name="heading"></slot>
       </header>
+      <gux-dismiss-button></gux-dismiss-button>
       <div class="gux-side-panel-description">
         <slot name="description"></slot>
       </div>
@@ -407,9 +407,9 @@ exports[`gux-side-panel-beta renders correctly with h2 heading level 1`] = `
   <template shadowrootmode="open">
     <div class="gux-side-panel gux-side-panel-medium">
       <header>
-        <gux-dismiss-button position="inherit"></gux-dismiss-button>
         <slot name="heading"></slot>
       </header>
+      <gux-dismiss-button></gux-dismiss-button>
       <div class="gux-side-panel-description">
         <slot name="description"></slot>
       </div>
@@ -459,9 +459,9 @@ exports[`gux-side-panel-beta renders correctly with h3 heading level 1`] = `
   <template shadowrootmode="open">
     <div class="gux-side-panel gux-side-panel-medium">
       <header>
-        <gux-dismiss-button position="inherit"></gux-dismiss-button>
         <slot name="heading"></slot>
       </header>
+      <gux-dismiss-button></gux-dismiss-button>
       <div class="gux-side-panel-description">
         <slot name="description"></slot>
       </div>
@@ -511,9 +511,9 @@ exports[`gux-side-panel-beta renders correctly with h4 heading level 1`] = `
   <template shadowrootmode="open">
     <div class="gux-side-panel gux-side-panel-medium">
       <header>
-        <gux-dismiss-button position="inherit"></gux-dismiss-button>
         <slot name="heading"></slot>
       </header>
+      <gux-dismiss-button></gux-dismiss-button>
       <div class="gux-side-panel-description">
         <slot name="description"></slot>
       </div>
@@ -563,9 +563,9 @@ exports[`gux-side-panel-beta renders correctly with h5 heading level 1`] = `
   <template shadowrootmode="open">
     <div class="gux-side-panel gux-side-panel-medium">
       <header>
-        <gux-dismiss-button position="inherit"></gux-dismiss-button>
         <slot name="heading"></slot>
       </header>
+      <gux-dismiss-button></gux-dismiss-button>
       <div class="gux-side-panel-description">
         <slot name="description"></slot>
       </div>
@@ -615,9 +615,9 @@ exports[`gux-side-panel-beta renders correctly with h6 heading level 1`] = `
   <template shadowrootmode="open">
     <div class="gux-side-panel gux-side-panel-medium">
       <header>
-        <gux-dismiss-button position="inherit"></gux-dismiss-button>
         <slot name="heading"></slot>
       </header>
+      <gux-dismiss-button></gux-dismiss-button>
       <div class="gux-side-panel-description">
         <slot name="description"></slot>
       </div>
@@ -667,9 +667,9 @@ exports[`gux-side-panel-beta renders correctly with large size 1`] = `
   <template shadowrootmode="open">
     <div class="gux-side-panel gux-side-panel-large">
       <header>
-        <gux-dismiss-button position="inherit"></gux-dismiss-button>
         <slot name="heading"></slot>
       </header>
+      <gux-dismiss-button></gux-dismiss-button>
       <div class="gux-side-panel-description">
         <slot name="description"></slot>
       </div>
@@ -719,9 +719,9 @@ exports[`gux-side-panel-beta renders correctly with medium size 1`] = `
   <template shadowrootmode="open">
     <div class="gux-side-panel gux-side-panel-medium">
       <header>
-        <gux-dismiss-button position="inherit"></gux-dismiss-button>
         <slot name="heading"></slot>
       </header>
+      <gux-dismiss-button></gux-dismiss-button>
       <div class="gux-side-panel-description">
         <slot name="description"></slot>
       </div>
@@ -771,9 +771,9 @@ exports[`gux-side-panel-beta renders correctly with small size 1`] = `
   <template shadowrootmode="open">
     <div class="gux-side-panel gux-side-panel-small">
       <header>
-        <gux-dismiss-button position="inherit"></gux-dismiss-button>
         <slot name="heading"></slot>
       </header>
+      <gux-dismiss-button></gux-dismiss-button>
       <div class="gux-side-panel-description">
         <slot name="description"></slot>
       </div>
