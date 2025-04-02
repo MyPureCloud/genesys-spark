@@ -334,8 +334,8 @@ export class GuxTimePicker {
           aria-label={this.i18n('hoursInput')}
           pattern={getHoursPattern(this.clockType)}
           ref={el => (this.hourInputElement = el)}
-          aria-valuenow={getHourDisplayValue(this.value, this.clockType)}
           aria-valuetext={getHourDisplayValue(this.value, this.clockType)}
+          aria-valuenow={getHourDisplayValue(this.value, this.clockType)}
           aria-valuemin={this.clockType === '24h' ? 0 : 1}
           aria-valuemax={this.clockType === '24h' ? 23 : 12}
         />
@@ -350,8 +350,8 @@ export class GuxTimePicker {
           aria-label={this.i18n('minutesInput')}
           pattern={getMinutesPattern()}
           ref={el => (this.minuteInputElement = el)}
-          aria-valuenow={getMinuteDisplayValue(this.value)}
           aria-valuetext={getMinuteDisplayValue(this.value)}
+          aria-valuenow={getMinuteDisplayValue(this.value)}
           aria-valuemin={0}
           aria-valuemax={59}
         />
