@@ -33,7 +33,6 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (1)
                   <div class="gux-input-container">
                     <slot name="prefix"></slot>
                     <slot name="input"></slot>
-                    <div role="status"></div>
                     <slot name="suffix"></slot>
                   </div>
                 </div>
@@ -110,7 +109,6 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (2)
                   <div class="gux-input-container">
                     <slot name="prefix"></slot>
                     <slot name="input"></slot>
-                    <div role="status"></div>
                     <slot name="suffix"></slot>
                   </div>
                 </div>
@@ -187,7 +185,6 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (3)
                   <div class="gux-input-container">
                     <slot name="prefix"></slot>
                     <slot name="input"></slot>
-                    <div role="status"></div>
                     <slot name="suffix"></slot>
                   </div>
                 </div>
