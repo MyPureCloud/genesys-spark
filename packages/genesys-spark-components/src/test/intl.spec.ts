@@ -3,7 +3,7 @@ import {
   dateTimeFormat,
   getFormat,
   relativeTimeFormat
-} from '../src/utils/intl';
+} from '../genesys-spark-utils/intl';
 
 describe('The intl module', () => {
   beforeEach(() => {
