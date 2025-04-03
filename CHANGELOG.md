@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.137.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.1...v4.137.2) (2025-04-03)
+
+
+### Bug Fixes
+
+* **context-menu:** Move label from icon to screenreader-beta ([#977](https://github.com/MyPureCloud/genesys-spark/issues/977)) ([e8fae05](https://github.com/MyPureCloud/genesys-spark/commit/e8fae0540d98f8223069414d9c1316703db053f9))
+* **dismiss-button:** fixed allignment ([5bd8b13](https://github.com/MyPureCloud/genesys-spark/commit/5bd8b131defb83a8fa49eb27701320f86efeec3a))
+* **tooltip:** fix invalid html on examples page ([aeb294f](https://github.com/MyPureCloud/genesys-spark/commit/aeb294f2e7187caa078d680c3f90790fa34c3507))
+
 ### [4.137.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.0...v4.137.1) (2025-04-02)
 
 ## [4.137.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.136.0...v4.137.0) (2025-04-01)
