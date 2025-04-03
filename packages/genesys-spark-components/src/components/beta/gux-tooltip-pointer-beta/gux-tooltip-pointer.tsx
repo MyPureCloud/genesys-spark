@@ -45,8 +45,8 @@ export class GuxTooltipPointer {
   @Prop()
   accent: GuxTooltipAccent = 'light';
 
-  @Prop()
-  placement: Placement;
+  @Prop({ mutable: true })
+  placement: Placement = 'bottom-start';
 
   /**
    * Determines whether the text in the tooltip is read by screenreaders.
@@ -77,7 +77,7 @@ export class GuxTooltipPointer {
   }
 
   componentWillLoad(): void {
-    trackComponent(this.root);
+    trackComponent(this.root, { variant: this.placement });
   }
 
   componentDidLoad(): void {
@@ -121,7 +121,7 @@ export class GuxTooltipPointer {
   private logForAttributeError(): void {
     if (this.root.isConnected) {
       console.error(
-        `gux-tooltip: invalid element supplied to 'for': "${this.for}"`
+        `gux-tooltip-pointer: invalid element supplied to 'for': "${this.for}"`
       );
     }
   }
