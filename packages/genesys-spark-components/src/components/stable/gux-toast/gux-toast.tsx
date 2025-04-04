@@ -32,6 +32,9 @@ export class GuxToast {
   @Prop()
   toastType: GuxToastTypes = 'success';
 
+  @Prop()
+  dismissible: boolean = true;
+
   @Event()
   guxdismiss: EventEmitter<void>;
 
@@ -146,11 +149,12 @@ export class GuxToast {
             this.hasPrimaryButton &&
             this.renderActions()}
         </div>
-
-        <gux-dismiss-button
-          position="inherit"
-          onClick={this.onDismissClickHandler.bind(this)}
-        ></gux-dismiss-button>
+        {this.dismissible && (
+          <gux-dismiss-button
+            position="inherit"
+            onClick={this.onDismissClickHandler.bind(this)}
+          ></gux-dismiss-button>
+        )}
       </div>
     ) as JSX.Element;
   }

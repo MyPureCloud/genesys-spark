@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type                                                      | Default     |
-| ----------- | ------------ | ----------- | --------------------------------------------------------- | ----------- |
-| `toastType` | `toast-type` |             | `"action" \| "error" \| "info" \| "success" \| "warning"` | `'success'` |
+| Property      | Attribute     | Description | Type                                                      | Default     |
+| ------------- | ------------- | ----------- | --------------------------------------------------------- | ----------- |
+| `dismissible` | `dismissible` |             | `boolean`                                                 | `true`      |
+| `toastType`   | `toast-type`  |             | `"action" \| "error" \| "info" \| "success" \| "warning"` | `'success'` |
 
 
 ## Events
