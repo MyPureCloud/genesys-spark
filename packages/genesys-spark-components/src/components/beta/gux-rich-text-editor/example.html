@@ -114,6 +114,95 @@
 
 <h2>Responsive Design with context menu</h2>
 <div class="responsive-examples">
+  <h2>Responsive container</h2>
+  <gux-rich-text-editor-beta style="inline-size: 500px; resize: both">
+    <gux-rich-text-editor-action-group slot="typographical-emphasis">
+      <gux-rich-text-editor-action action="bold"></gux-rich-text-editor-action>
+      <gux-rich-text-editor-action
+        action="italic"
+      ></gux-rich-text-editor-action>
+      <gux-rich-text-editor-action
+        action="underline"
+      ></gux-rich-text-editor-action>
+      <gux-rich-text-editor-action
+        action="strike"
+      ></gux-rich-text-editor-action>
+    </gux-rich-text-editor-action-group>
+    <gux-rich-text-editor-action-group slot="text-styling">
+      <gux-rich-text-editor-action-rich-style value="paragraph">
+        <gux-rich-style-list-item value="heading1"
+          ><h1>Heading 1</h1></gux-rich-style-list-item
+        >
+        <gux-rich-style-list-item value="heading2"
+          ><h2>Heading 2</h2></gux-rich-style-list-item
+        >
+        <gux-rich-style-list-item value="heading3"
+          ><h3>Heading 3</h3></gux-rich-style-list-item
+        >
+        <gux-rich-style-list-item value="paragraph"
+          ><p>Paragraph</p></gux-rich-style-list-item
+        >
+      </gux-rich-text-editor-action-rich-style>
+      <gux-rich-text-editor-action-text-highlight>
+        <gux-rich-highlight-list-item
+          highlight="orange"
+        ></gux-rich-highlight-list-item>
+        <gux-rich-highlight-list-item
+          highlight="coral"
+        ></gux-rich-highlight-list-item>
+        <gux-rich-highlight-list-item
+          highlight="pear"
+        ></gux-rich-highlight-list-item>
+        <gux-rich-highlight-list-item
+          highlight="mango"
+        ></gux-rich-highlight-list-item>
+        <gux-rich-highlight-list-item
+          highlight="raspberry"
+        ></gux-rich-highlight-list-item>
+        <gux-rich-highlight-list-item
+          highlight="blue"
+        ></gux-rich-highlight-list-item>
+        <gux-rich-highlight-list-item
+          highlight="mineral"
+        ></gux-rich-highlight-list-item>
+        <gux-rich-highlight-list-item
+          highlight="island"
+        ></gux-rich-highlight-list-item>
+        <gux-rich-highlight-list-item
+          class="custom-highlight"
+          highlight="inherit"
+        ></gux-rich-highlight-list-item>
+      </gux-rich-text-editor-action-text-highlight>
+      <gux-rich-text-editor-action
+        action="clearFormatting"
+      ></gux-rich-text-editor-action>
+    </gux-rich-text-editor-action-group>
+    <gux-rich-text-editor-action-group slot="lists-indentation">
+      <gux-rich-text-editor-action
+        action="bulletList"
+      ></gux-rich-text-editor-action>
+      <gux-rich-text-editor-action
+        action="orderedList"
+      ></gux-rich-text-editor-action>
+    </gux-rich-text-editor-action-group>
+    <gux-rich-text-editor-action-group slot="inserting">
+      <gux-rich-text-editor-action
+        action="codeblock"
+      ></gux-rich-text-editor-action>
+      <gux-rich-text-editor-action
+        action="blockQuote"
+      ></gux-rich-text-editor-action>
+      <gux-rich-text-editor-action-link></gux-rich-text-editor-action-link>
+      <gux-rich-text-editor-action action="undo"></gux-rich-text-editor-action>
+      <gux-rich-text-editor-action action="redo"></gux-rich-text-editor-action>
+    </gux-rich-text-editor-action-group>
+    <gux-rich-text-editor-action
+      slot="global-action"
+      action="delete"
+    ></gux-rich-text-editor-action>
+    <div class="editorElement" slot="editor"></div>
+  </gux-rich-text-editor-beta>
+
   <h2>Inline Size of 500px</h2>
   <div style="inline-size: 500px">
     <gux-rich-text-editor-beta>
