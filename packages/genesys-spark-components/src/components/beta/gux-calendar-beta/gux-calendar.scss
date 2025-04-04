@@ -42,9 +42,9 @@
       block-size: 100%;
       color: var(--gse-ui-calendarMenu-header-foregroundColor);
       cursor: pointer;
-      outline: none;
       background: none;
       border: none;
+      outline: none;
 
       &:focus-visible {
         @include focus.gux-focus-ring;

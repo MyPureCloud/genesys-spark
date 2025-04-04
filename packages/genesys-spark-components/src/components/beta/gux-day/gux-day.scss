@@ -5,9 +5,9 @@
   display: inline-block;
   inline-size: var(--gse-ui-calendarMenu-day-date-size);
   block-size: var(--gse-ui-calendarMenu-day-input-height);
-  outline: none;
   border: none;
   border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
+  outline: none;
 }
 
 :host(:hover) {
@@ -41,8 +41,8 @@ button {
   font-style: normal;
   font-weight: var(--gse-ui-calendarMenu-date-defaultText-fontWeight);
   line-height: 32px;
-  vertical-align: middle;
   text-align: center;
+  vertical-align: middle;
   cursor: pointer;
 }
 
