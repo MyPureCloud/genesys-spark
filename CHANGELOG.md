@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.138.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.2...v4.138.0) (2025-04-05)
+
+
+### Features
+
+* **tooltip-pointer-beta:** adding tooltip that follows pointer when it enters target element ([265d4a6](https://github.com/MyPureCloud/genesys-spark/commit/265d4a6fdc2f5ad8e8669bad23a4ea300fa7122f))
+
 ### [4.137.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.1...v4.137.2) (2025-04-03)
 
 
