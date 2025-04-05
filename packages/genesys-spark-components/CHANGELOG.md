@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.133.7](https://github.com/MyPureCloud/genesys-spark/compare/v3.133.6...v3.133.7) (2025-04-05)
+
+
+### Bug Fixes
+
+* **other:** update localization logic to treat en-us dom lang as en ([045b6b3](https://github.com/MyPureCloud/genesys-spark/commit/045b6b3bbc409aa97b5efef8dbc6e35cbd80f8ea))
+
 ### [3.133.6](https://github.com/MyPureCloud/genesys-spark/compare/v3.133.5...v3.133.6) (2025-04-03)
 
 ### [3.133.5](https://github.com/MyPureCloud/genesys-spark/compare/v3.133.4...v3.133.5) (2025-03-06)
