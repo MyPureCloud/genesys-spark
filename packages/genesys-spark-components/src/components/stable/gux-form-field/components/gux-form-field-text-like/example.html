@@ -214,6 +214,14 @@
   </fieldset>
 
   <fieldset>
+    <legend>Loading dynamically set</legend>
+    <gux-form-field-text-like id="dynamic-loading" loading>
+      <input slot="input" type="text" name="e-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-text-like>
+  </fieldset>
+
+  <fieldset>
     <legend>Label Info</legend>
     <gux-form-field-text-like loading>
       <input slot="input" type="text" name="e-1" />
@@ -232,7 +240,13 @@
   </fieldset>
 </form>
 
-<style>
+<style
+  onload="(function () {
+  window.setInterval(() => {
+    document.getElementById('dynamic-loading').toggleAttribute('loading');
+  }, 3000);
+})()"
+>
   gux-form-field-text-like {
     margin: 10px;
   }

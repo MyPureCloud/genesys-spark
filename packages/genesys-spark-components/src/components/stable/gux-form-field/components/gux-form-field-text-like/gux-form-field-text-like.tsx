@@ -153,7 +153,9 @@ export class GuxFormFieldTextLike {
   private renderRadialLoading(): JSX.Element {
     if (this.loading) {
       return (
-        <gux-radial-loading context="input"></gux-radial-loading>
+        <div role="status">
+          <gux-radial-loading context="input"></gux-radial-loading>
+        </div>
       ) as JSX.Element;
     }
   }
