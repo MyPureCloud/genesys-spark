@@ -146,10 +146,6 @@ export class GuxTooltip {
     );
   }
 
-  private handleToolTip(): void {
-    this.show();
-  }
-
   private updatePosition(): void {
     const middleware = [
       offset(16),
