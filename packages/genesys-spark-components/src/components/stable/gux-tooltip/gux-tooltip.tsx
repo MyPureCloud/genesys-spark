@@ -26,7 +26,6 @@ import { findElementById } from '@utils/dom/find-element-by-id';
 import { afterNextRender } from '@utils/dom/after-next-render';
 import { GuxTooltipAccent } from './gux-tooltip-types';
 import { overflowDetection } from '@utils/dom/overflow-detection';
-
 /**
  * @slot content - Slot for content
  */
@@ -40,7 +39,7 @@ export class GuxTooltip {
 
   private pointerenterHandler: EventListener = () => this.show();
   private pointerleaveHandler: EventListener = () => this.hide();
-  private focusinHandler: EventListener = () => this.show();
+  private focusinHandler: EventListener = () => this.handleFocusIn();
   private focusoutHandler: EventListener = () => this.hide();
 
   private forElementListeners: Map<string, EventListenerOrEventListenerObject> =
@@ -79,6 +78,9 @@ export class GuxTooltip {
   @State()
   isShown: boolean = false;
 
+  @State()
+  isTabSwitch: boolean = false;
+
   @Listen('keydown', { target: 'window', passive: true })
   handleKeyDown(event: KeyboardEvent) {
     if (event.key === 'Escape' && this.isShown) {
@@ -94,6 +96,14 @@ export class GuxTooltip {
   @Listen('pointerleave')
   handlePointerleave() {
     this.hide();
+  }
+
+  @Listen('visibilitychange', { target: 'document' })
+  handleVisibilityChange() {
+    if (document.visibilityState === 'visible') {
+      // Tab regained visibility due to a a tab-switch.
+      this.isTabSwitch = true;
+    }
   }
 
   /*
@@ -114,6 +124,14 @@ export class GuxTooltip {
     this.hide();
   }
 
+  private handleFocusIn(): void {
+    if (!this.isTabSwitch) {
+      // Only show tooltip if not triggered by tab switch
+      this.show();
+    }
+    this.isTabSwitch = false; // Reset flag
+  }
+
   private runUpdatePosition(): void {
     this.cleanupUpdatePosition = autoUpdate(
       this.forElement,
@@ -126,6 +144,10 @@ export class GuxTooltip {
         ancestorResize: true
       }
     );
+  }
+
+  private handleToolTip(): void {
+    this.show();
   }
 
   private updatePosition(): void {
