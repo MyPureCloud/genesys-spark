@@ -92,9 +92,6 @@
 
 .gux-target-container-expanded {
   background-color: var(--gse-ui-dataTableItems-inlineDropdown-active);
-  // border: var(--gse-ui-formControl-input-active-border-width)
-  //   var(--gse-ui-formControl-input-active-border-style)
-  //   var(--gse-ui-formControl-input-active-border-color);
   border-radius: var(--gse-ui-dataTableItems-statusIndicator-borderRadius);
 
   &:focus-visible {

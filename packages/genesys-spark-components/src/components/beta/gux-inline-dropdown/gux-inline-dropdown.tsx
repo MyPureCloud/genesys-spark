@@ -62,14 +62,6 @@ export class GuxDropdown {
   @Prop()
   placeholder: string;
 
-  /**
-   * allows dropdown popup to be wider than input
-   * defaults to fitting content if width is not specified for listbox
-   * default min-width is set to width of input
-   */
-  @Prop()
-  exceedTargetWidth: boolean = false;
-
   @State()
   private expanded: boolean = false;
 
@@ -301,7 +293,6 @@ export class GuxDropdown {
       case 'gux-option-icon':
         return this.renderIconOption(item as HTMLGuxOptionIconElement);
       case 'gux-option-status-beta':
-        console.log(item);
         return this.renderStatusOption(item as HTMLGuxOptionStatusBetaElement);
       default:
         // eslint-disable-next-line no-case-declarations
@@ -412,10 +403,7 @@ export class GuxDropdown {
 
   render(): JSX.Element {
     return (
-      <gux-popup
-        expanded={this.expanded}
-        exceedTargetWidth={this.exceedTargetWidth}
-      >
+      <gux-popup expanded={this.expanded} inline={true}>
         {this.renderTarget()}
         {this.renderPopup()}
       </gux-popup>
