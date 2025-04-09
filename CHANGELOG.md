@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.138.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.0...v4.138.1) (2025-04-09)
+
+
+### Bug Fixes
+
+* **action-button:** fix focus rings being obscured ([14098b2](https://github.com/MyPureCloud/genesys-spark/commit/14098b2bb724cfe6b28b2e8a2fbfa8accd9c539e))
+* **dropdown:** Remove subtext from selected gux-option-icon text ([#1020](https://github.com/MyPureCloud/genesys-spark/issues/1020)) ([f6f60b5](https://github.com/MyPureCloud/genesys-spark/commit/f6f60b5dfa3e01f449bc3dc84ee7fa6bd4513f45))
+
+## [4.138.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.2...v4.138.0) (2025-04-05)
+
+
+### Features
+
+* **tooltip-pointer-beta:** adding tooltip that follows pointer when it enters target element ([265d4a6](https://github.com/MyPureCloud/genesys-spark/commit/265d4a6fdc2f5ad8e8669bad23a4ea300fa7122f))
+
+### [4.137.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.1...v4.137.2) (2025-04-03)
+
+
+### Bug Fixes
+
+* **context-menu:** Move label from icon to screenreader-beta ([#977](https://github.com/MyPureCloud/genesys-spark/issues/977)) ([e8fae05](https://github.com/MyPureCloud/genesys-spark/commit/e8fae0540d98f8223069414d9c1316703db053f9))
+* **dismiss-button:** fixed allignment ([5bd8b13](https://github.com/MyPureCloud/genesys-spark/commit/5bd8b131defb83a8fa49eb27701320f86efeec3a))
+* **tooltip:** fix invalid html on examples page ([aeb294f](https://github.com/MyPureCloud/genesys-spark/commit/aeb294f2e7187caa078d680c3f90790fa34c3507))
+
+### [4.137.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.0...v4.137.1) (2025-04-02)
+
+## [4.137.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.136.0...v4.137.0) (2025-04-01)
+
+
+### Features
+
+* **calendar-beta:** Switch to using Temporal API polyfill for dates ([5cbbd35](https://github.com/MyPureCloud/genesys-spark/commit/5cbbd358aec2ce2382b557731ab5dc31db7e8408))
+
+
+### Bug Fixes
+
+* **popover:** dismiss button moved out of title element ([058b480](https://github.com/MyPureCloud/genesys-spark/commit/058b480e104a2927b2d2e620e5d85f8a78d492eb))
+
 ## [4.136.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.135.0...v4.136.0) (2025-03-28)
 
 

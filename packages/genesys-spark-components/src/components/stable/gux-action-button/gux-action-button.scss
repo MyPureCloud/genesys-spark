@@ -1,5 +1,6 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
+@use '~genesys-spark/dist/scss/focus.scss';
 
 @mixin button-text {
   font-family: ui.$gse-ui-button-text-fontFamily;
@@ -31,6 +32,10 @@
       text-align: center;
       border-start-end-radius: 0;
       border-end-end-radius: 0;
+
+      &:focus-visible:enabled {
+        position: relative;
+      }
     }
   }
 

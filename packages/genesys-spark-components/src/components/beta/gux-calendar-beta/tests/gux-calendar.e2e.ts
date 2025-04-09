@@ -4,13 +4,17 @@ import {
   goToNextMonth,
   validateHeaderMonth,
   validateSelectedDate,
-  getContentDateElement
-} from '../services/tests.service';
+  findDayElement,
+  findSelectedDayElement,
+  validateFocusedDay
+} from './tests.service';
 
 describe('gux-calendar', () => {
+  const MIN_DATE = '2023-04-15';
+  const MAX_DATE = '2023-06-20';
   const defaultHtml = `
     <gux-calendar-beta>
-      <input type="date" value="2023-05-19" min="2023-04-28" max="2023-06-18" />
+      <input type="date" value="2023-05-19" min="${MIN_DATE}" max="${MAX_DATE}" />
     </gux-calendar-beta>
     `;
 
@@ -33,7 +37,6 @@ describe('gux-calendar', () => {
       await validateHeaderMonth(element, 'May 2023');
 
       await goToNextMonth(element, page);
-      // await a11yCheck(page);
 
       // Validate that the new month after clicking the right arrow is June, 2023
       await validateHeaderMonth(element, 'June 2023');
@@ -63,7 +66,7 @@ describe('gux-calendar', () => {
       const element = await page.find('gux-calendar-beta');
 
       // Validate that the selected date on page load is May 19, 2023
-      await validateSelectedDate(element, 'May 2023', '19');
+      await validateSelectedDate(element, '2023-05-19');
     });
 
     it('clicking on a date in the current month causes the date to be selected', async () => {
@@ -73,12 +76,12 @@ describe('gux-calendar', () => {
 
       // Find May 10, 2023 in the calendar and click it so that it will be selected
       const element = await page.find('gux-calendar-beta');
-      const contentDate = await getContentDateElement(element, 'May 10, 2023');
+      const contentDate = await findDayElement(element, '2023-05-10');
       await contentDate.click();
       await page.waitForChanges();
 
       // Validate that clicking on May 10, 2023 causes it to be selected
-      await validateSelectedDate(element, 'May 2023', '10');
+      await validateSelectedDate(element, '2023-05-10');
     });
 
     it('clicking on a date in the next month causes the date to be selected', async () => {
@@ -88,12 +91,12 @@ describe('gux-calendar', () => {
 
       // Find June 1, 2023 in the calendar and click it so that it will be selected
       const element = await page.find('gux-calendar-beta');
-      const contentDate = await getContentDateElement(element, 'June 1, 2023');
+      const contentDate = await findDayElement(element, '2023-06-01');
       await contentDate.click();
       await page.waitForChanges();
 
       // Validate that clicking on June 1, 2023 causes it to be selected
-      await validateSelectedDate(element, 'June 2023', '1');
+      await validateSelectedDate(element, '2023-06-01');
     });
 
     it('clicking on a date in the previous month causes the date to be selected', async () => {
@@ -103,124 +106,146 @@ describe('gux-calendar', () => {
 
       // Find April 30, 2023 in the calendar and click it so that it will be selected
       const element = await page.find('gux-calendar-beta');
-      const contentDate = await getContentDateElement(
-        element,
-        'April 30, 2023'
-      );
+      const contentDate = await findDayElement(element, '2023-04-30');
       await contentDate.click();
       await page.waitForChanges();
 
       // Validate that clicking on April 30, 2023 causes it to be selected
-      await validateSelectedDate(element, 'April 2023', '30');
+      await validateSelectedDate(element, '2023-04-30');
     });
 
-    describe('arrow key and page up/down navigation', () => {
-      it('pressing the down arrow key and then the enter key cause the selected date to increment by 1 week', async () => {
+    describe('keyboard navigation', () => {
+      it('pressing the down arrow key causes the focused date to increment by 1 week', async () => {
         const page = await newSparkE2EPage({
           html: defaultHtml
         });
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await findSelectedDayElement(element);
         await selectedDate.click();
 
-        // Press the down arrow key and then the enter key
         await page.keyboard.press('ArrowDown');
-        await page.keyboard.press('Enter');
         await page.waitForChanges();
 
-        await validateSelectedDate(element, 'May 2023', '26');
+        await validateFocusedDay(element, '2023-05-26');
       });
 
-      it('pressing the up arrow key and then the enter key cause the selected date to decrement by 1 week', async () => {
+      it('pressing the up arrow key causes the focused date to decrement by 1 week', async () => {
         const page = await newSparkE2EPage({
           html: defaultHtml
         });
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await findSelectedDayElement(element);
         await selectedDate.click();
 
-        // Press the up arrow key and then the enter key
         await page.keyboard.press('ArrowUp');
-        await page.keyboard.press('Enter');
         await page.waitForChanges();
 
-        await validateSelectedDate(element, 'May 2023', '12');
+        await validateFocusedDay(element, '2023-05-12');
       });
 
-      it('pressing the right arrow key and then the enter key cause the selected date to increment by 1 day', async () => {
+      it('pressing the right arrow key causes the focused date to increment by 1 day', async () => {
         const page = await newSparkE2EPage({
           html: defaultHtml
         });
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await findSelectedDayElement(element);
         await selectedDate.click();
 
-        // Press the right arrow key and then the enter key
         await page.keyboard.press('ArrowRight');
-        await page.keyboard.press('Enter');
         await page.waitForChanges();
 
-        await validateSelectedDate(element, 'May 2023', '20');
+        await validateFocusedDay(element, '2023-05-20');
       });
 
-      it('pressing the left arrow key and then the enter key cause the selected date to decrement by 1 day', async () => {
+      it('pressing the left arrow key causes the focused date to decrement by 1 day', async () => {
         const page = await newSparkE2EPage({
           html: defaultHtml
         });
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await findSelectedDayElement(element);
         await selectedDate.click();
 
-        // Press the left arrow key and then the enter key
         await page.keyboard.press('ArrowLeft');
-        await page.keyboard.press('Enter');
         await page.waitForChanges();
 
-        await validateSelectedDate(element, 'May 2023', '18');
+        await validateFocusedDay(element, '2023-05-18');
       });
 
-      it('pressing the page down key causes the current month to decrement by 1 month', async () => {
+      it('pressing the page down key causes the focused day to decrement by 1 month', async () => {
         const page = await newSparkE2EPage({
           html: defaultHtml
         });
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await findSelectedDayElement(element);
         await selectedDate.click();
 
-        // Press the left arrow key and then the enter key
         await page.keyboard.press('PageDown');
-        await page.keyboard.press('Enter');
         await page.waitForChanges();
 
         await validateHeaderMonth(element, 'April 2023');
+        await validateFocusedDay(element, '2023-04-19');
       });
 
-      it('pressing the page up key causes the current month to increment by 1 month', async () => {
+      it('pressing the page up key causes the focused day to increment by 1 month', async () => {
         const page = await newSparkE2EPage({
           html: defaultHtml
         });
         const element = await page.find('gux-calendar-beta');
 
         // First click the selected date to get focus on the calendar
-        const selectedDate = await element.find('pierce/.gux-selected');
+        const selectedDate = await findSelectedDayElement(element);
         await selectedDate.click();
 
-        // Press the left arrow key and then the enter key
         await page.keyboard.press('PageUp');
-        await page.keyboard.press('Enter');
         await page.waitForChanges();
 
-        await validateHeaderMonth(element, 'June 2023');
+        await validateFocusedDay(element, '2023-06-19');
+      });
+
+      it("won't go below the minimum date", async () => {
+        const page = await newSparkE2EPage({
+          html: defaultHtml
+        });
+        const element = await page.find('gux-calendar-beta');
+
+        // First click the selected date to get focus on the calendar
+        const selectedDate = await findSelectedDayElement(element);
+        await selectedDate.click();
+
+        await page.keyboard.press('PageDown');
+        await page.waitForChanges();
+        await page.keyboard.press('PageDown');
+        await page.waitForChanges();
+
+        await validateFocusedDay(element, MIN_DATE);
+      });
+
+      it("won't go above the maximum date", async () => {
+        const page = await newSparkE2EPage({
+          html: defaultHtml
+        });
+        const element = await page.find('gux-calendar-beta');
+
+        // First click the selected date to get focus on the calendar
+        const selectedDate = await findSelectedDayElement(element);
+        await selectedDate.click();
+
+        await page.keyboard.press('PageUp');
+        await page.waitForChanges();
+        await page.keyboard.press('PageUp');
+        await page.waitForChanges();
+
+        await validateFocusedDay(element, MAX_DATE);
       });
     });
 
@@ -229,12 +254,15 @@ describe('gux-calendar', () => {
         html: defaultHtml
       });
       const element = await page.find('gux-calendar-beta');
+      const input = await element.find('input');
 
       // Go to next month
       await goToNextMonth(element, page);
 
-      const contentDate = await getContentDateElement(element, 'June 19, 2023');
-      expect(contentDate.className).toContain('gux-disabled');
+      const contentDate = await findDayElement(element, '2023-06-30');
+      await contentDate.click();
+      const value = await input.getProperty('value');
+      expect(value).not.toBe('2023-06-30');
     });
 
     it('setting min prop causes a lower bound range to be implemented correctly', async () => {
@@ -242,14 +270,14 @@ describe('gux-calendar', () => {
         html: defaultHtml
       });
       const element = await page.find('gux-calendar-beta');
+      const input = await element.find('input');
 
       await goToPreviousMonth(element, page);
 
-      const contentDate = await getContentDateElement(
-        element,
-        'April 27, 2023'
-      );
-      expect(contentDate.className).toContain('gux-disabled');
+      const contentDate = await findDayElement(element, '2023-04-01');
+      await contentDate.click();
+      const value = await input.getProperty('value');
+      expect(value).not.toBe('2023-04-01');
     });
 
     it('tab index is set to 0 for selected date and -1 for non-selected date', async () => {
@@ -258,13 +286,14 @@ describe('gux-calendar', () => {
       });
       const element = await page.find('gux-calendar-beta');
 
-      const selectedDate = await getContentDateElement(element, 'May 19, 2023');
-      const nonSelectedDate = await getContentDateElement(
-        element,
-        'May 20, 2023'
+      const selectedFocusTarget = await element.find(
+        'pierce/gux-day-beta[aria-current="true"]'
       );
-      expect(selectedDate.tabIndex).toBe(0);
-      expect(nonSelectedDate.tabIndex).toBe(-1);
+      const nonSelectedFocusTarget = await element.find(
+        'pierce/gux-day-beta:not([aria-current="true"])'
+      );
+      expect(selectedFocusTarget.tabIndex).toBe(0);
+      expect(nonSelectedFocusTarget.tabIndex).toBe(-1);
     });
   });
 });

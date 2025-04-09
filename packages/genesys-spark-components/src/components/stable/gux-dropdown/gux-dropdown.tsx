@@ -455,8 +455,15 @@ export class GuxDropdown {
 
   private renderIconOption(iconOption: HTMLGuxOptionIconElement): JSX.Element {
     let iconStyle = null;
+    let optionText = iconOption.textContent;
+
     if (iconOption.iconColor !== null) {
       iconStyle = { color: iconOption.iconColor };
+    }
+
+    if (hasSlot(iconOption, 'subtext')) {
+      const subtext = iconOption.querySelector('[slot=subtext]');
+      optionText = optionText.replace(subtext.textContent, '');
     }
     return (
       <span
@@ -472,7 +479,7 @@ export class GuxDropdown {
           size="small"
         ></gux-icon>
         <gux-truncate ref={el => (this.truncateElement = el)}>
-          {iconOption.textContent}
+          {optionText}
         </gux-truncate>
       </span>
     ) as JSX.Element;

@@ -1,16 +1,7 @@
-:host {
-  // all these to be removed when token issues are fixed
-  // COMUI-3125 -> COMUI-3126 subtask
-  --gse-ui-button-dismiss-medium-width: 32px;
-  --gse-ui-button-dismiss-medium-height: 32px;
-  --gse-ui-button-dismiss-small-width: 24px;
-  --gse-ui-button-dismiss-small-height: 24px;
-}
-
 gux-button-slot {
   position: absolute;
-  inset-block-start: var(--gse-ui-modal-dismissButton-paddingTop);
-  inset-inline-end: var(--gse-ui-modal-dismissButton-paddingRight);
+  inset-block-start: 4px;
+  inset-inline-end: 4px;
   inline-size: var(--gse-ui-button-dismiss-medium-width);
   block-size: var(--gse-ui-button-dismiss-medium-height);
 
@@ -31,6 +22,8 @@ gux-button-slot {
 
   &.gux-inherit {
     position: inherit;
+    inset-block-start: inherit;
+    inset-inline-end: inherit;
   }
 
   .gux-icon-container {
