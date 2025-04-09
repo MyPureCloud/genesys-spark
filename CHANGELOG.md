@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.138.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.0...v4.138.1) (2025-04-09)
+
+
+### Bug Fixes
+
+* **action-button:** fix focus rings being obscured ([14098b2](https://github.com/MyPureCloud/genesys-spark/commit/14098b2bb724cfe6b28b2e8a2fbfa8accd9c539e))
+* **dropdown:** Remove subtext from selected gux-option-icon text ([#1020](https://github.com/MyPureCloud/genesys-spark/issues/1020)) ([f6f60b5](https://github.com/MyPureCloud/genesys-spark/commit/f6f60b5dfa3e01f449bc3dc84ee7fa6bd4513f45))
+
 ## [4.138.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.2...v4.138.0) (2025-04-05)
 
 
