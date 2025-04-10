@@ -41,21 +41,19 @@
     <div class="flex-example">
       <h4 class="flex-header">light</h4>
       <div class="flex-content">
-        <gux-button
-          >Hover<gux-tooltip-beta accent="light">
-            <div slot="content">Tooltip with light accent</div>
-          </gux-tooltip-beta></gux-button
-        >
+        <gux-button id="tooltip-light-accent">Hover</gux-button>
+        <gux-tooltip-beta for="tooltip-light-accent" accent="light">
+          <div slot="content">Tooltip with light accent</div>
+        </gux-tooltip-beta>
       </div>
     </div>
     <div class="flex-example">
       <h4 class="flex-header">dark</h4>
       <div class="flex-content">
-        <gux-button
-          >Hover<gux-tooltip-beta accent="dark">
-            <div slot="content">Tooltip with dark accent</div>
-          </gux-tooltip-beta></gux-button
-        >
+        <gux-button id="tooltip-dark-accent">Hover</gux-button>
+        <gux-tooltip-beta for="tooltip-dark-accent" accent="dark">
+          <div slot="content">Tooltip with dark accent</div>
+        </gux-tooltip-beta>
       </div>
     </div>
   </div>

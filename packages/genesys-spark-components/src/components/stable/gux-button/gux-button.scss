@@ -68,7 +68,6 @@ button {
   }
 
   &[disabled] {
-    pointer-events: none;
     cursor: default;
     opacity: ui.$gse-ui-button-disabled-opacity;
   }
