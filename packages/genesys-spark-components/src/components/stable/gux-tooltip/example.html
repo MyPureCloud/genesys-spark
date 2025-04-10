@@ -28,7 +28,6 @@
       </span>
     </gux-tooltip>
   </p>
-  <div></div>
 </section>
 
 <h2>Properties</h2>
@@ -49,10 +48,11 @@
     <div class="flex-example">
       <h4 class="flex-header">dark</h4>
       <div class="flex-content">
-        <gux-button id="tooltip-dark-accent">Hover</gux-button>
-        <gux-tooltip for="tooltip-dark-accent" accent="dark">
-          <div slot="content">Tooltip with dark accent</div>
-        </gux-tooltip>
+        <gux-button disabled
+          >test<gux-tooltip accent="dark">
+            <div slot="content">Tooltip with dark accent</div>
+          </gux-tooltip></gux-button
+        >
       </div>
     </div>
   </div>
