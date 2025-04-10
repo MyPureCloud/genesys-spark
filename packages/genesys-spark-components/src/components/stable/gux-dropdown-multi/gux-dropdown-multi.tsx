@@ -212,6 +212,11 @@ export class GuxDropdownMulti {
         if (this.canCreateNewOption() && this.isActiveElement()) {
           this.emitCreateOption();
         }
+        setInitialActiveOption(this.listboxElement);
+        return;
+      case ' ':
+        setInitialActiveOption(this.listboxElement);
+        return;
     }
   }
 

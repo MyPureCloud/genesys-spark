@@ -147,6 +147,10 @@ export class GuxDropdown {
           setInitialActiveOption(this.listboxElement);
         }
         return;
+      case 'Enter':
+      case ' ':
+        setInitialActiveOption(this.listboxElement);
+        return;
     }
   }
 
