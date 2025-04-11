@@ -94,7 +94,7 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
 
       .gux-dynamic-circle-mask {
         display: none;
-        stroke: white;
+        stroke: var(--gse-semantic-background-container-page-default);
         stroke-width: $largeSpinnerBorder - $thinSpinnerBorder;
       }
 
