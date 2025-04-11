@@ -164,7 +164,7 @@ export class GuxTooltipBase {
 
   private updatePosition(ref: ReferenceElement): void {
     const middleware = [
-      offset(16),
+      offset(12),
       flip(),
       shift(),
       hide(),
