@@ -31,7 +31,12 @@ export function isOptionGroup(item: Element): boolean {
 }
 
 export function isOption(item: Element): boolean {
-  const optionTypes = ['GUX-OPTION', 'GUX-OPTION-ICON', 'GUX-OPTION-MULTI'];
+  const optionTypes = [
+    'GUX-OPTION',
+    'GUX-OPTION-ICON',
+    'GUX-OPTION-MULTI',
+    'GUX-OPTION-STATUS-BETA'
+  ];
   return optionTypes.includes(item.tagName);
 }
 

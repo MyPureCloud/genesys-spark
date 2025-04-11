@@ -1,0 +1,212 @@
+@use '~genesys-spark/dist/scss/status-icons.scss';
+
+@mixin gux-input-focus-border {
+  outline: var(--gse-ui-formControl-input-focus-border-width)
+    var(--gse-ui-formControl-input-focus-border-style)
+    var(--gse-ui-formControl-input-focus-border-color);
+  outline-offset: var(--gse-semantic-focusOutline-offset);
+}
+
+:host {
+  box-sizing: border-box;
+}
+
+::slotted(gux-listbox) {
+  inline-size: fit-content;
+}
+
+.gux-field,
+.gux-target-container-expanded {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  place-content: stretch center;
+  align-items: center;
+  block-size: var(--gse-ui-formControl-input-textfield-height);
+  font-family: var(--gse-ui-dataTableItems-inlineDropdown-label-fontFamily);
+  font-size: var(--gse-ui-dataTableItems-inlineDropdown-label-fontSize);
+  font-weight: var(--gse-ui-dataTableItems-inlineDropdown-label-fontWeight);
+  line-height: var(--gse-ui-dataTableItems-inlineDropdown-label-lineHeight);
+  cursor: pointer;
+  background-color: var(--gse-ui-formControl-input-backgroundColor);
+}
+
+.gux-target-container-expanded,
+.gux-target-container-collapsed .gux-field {
+  // to do need token
+  padding-block: 4px;
+  padding-inline: 8px;
+}
+
+.gux-target-container-collapsed .gux-field-button:hover,
+.gux-target-container-expanded:hover {
+  background-color: var(--gse-ui-dataTableItems-statusIndicator-hover);
+}
+
+.gux-field {
+  &.gux-input-field {
+    block-size: var(--gse-ui-dataTableItems-inlineDropdown-label-lineHeight);
+  }
+
+  .gux-field-content {
+    // COMUI-1650 consider updating default z-index values
+    // Default value for popup is 2, and this tooltip must show on top
+    --gux-zindex-tooltip: 3;
+
+    display: inline-flex;
+    flex: 1 1 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    place-content: stretch flex-start;
+    align-items: flex-start;
+    min-inline-size: 0;
+    block-size: var(--gse-ui-dataTableItems-inlineDropdown-label-lineHeight);
+
+    .gux-filter,
+    .gux-selected-option,
+    .gux-placeholder {
+      flex: 1 1 auto;
+      align-self: auto;
+      order: 0;
+      padding: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .gux-placeholder {
+      color: var(--gse-ui-dataTableItems-inlineDropdown-text);
+    }
+  }
+
+  .gux-expand-icon {
+    flex: 0 0 auto;
+    align-self: auto;
+    order: 0;
+    padding-inline-start: var(--gse-ui-dataTableItems-inlineDropdown-gap);
+    color: var(--gse-ui-dataTableItems-inlineDropdown-chevron-default);
+  }
+}
+
+.gux-target-container-expanded {
+  background-color: var(--gse-ui-dataTableItems-inlineDropdown-active);
+  border-radius: var(--gse-ui-dataTableItems-statusIndicator-borderRadius);
+
+  &:focus-visible {
+    @include gux-input-focus-border;
+  }
+
+  &:focus-within:has(:focus-visible) {
+    @include gux-input-focus-border;
+  }
+
+  .gux-filter-input {
+    background-color: inherit;
+    border: none;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+
+  .gux-field-button {
+    inline-size: auto;
+    block-size: var(--gse-ui-dataTableItems-inlineDropdown-label-lineHeight);
+    margin: 0;
+    outline: none;
+    background: inherit;
+    border: none;
+    box-shadow: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.gux-target-container-collapsed .gux-field-button {
+  border-radius: var(--gse-ui-dataTableItems-statusIndicator-borderRadius);
+
+  &:focus-visible {
+    @include gux-input-focus-border;
+  }
+
+  &:focus-within:has(:focus-visible) {
+    @include gux-input-focus-border;
+  }
+}
+
+::slotted(gux-listbox) {
+  outline: none;
+  box-shadow: var(--gse-ui-menu-boxShadow);
+}
+
+// Selected option styles
+
+.gux-selected-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &.gux-icon-position-end {
+    flex-direction: row-reverse;
+  }
+
+  gux-icon {
+    padding-inline-end: var(--gse-ui-dataTableItems-inlineDropdown-gap);
+  }
+}
+
+// status option styles
+
+.gux-status-indicator {
+  display: inline-flex;
+  gap: var(--gse-ui-dataTableItems-statusIndicator-gap);
+  align-items: center;
+}
+
+.gux-status-icon {
+  display: inline-flex;
+}
+
+.gux-status-icon::before {
+  content: '';
+}
+
+.gux-status-icon-info::before {
+  @include status-icons.information;
+
+  inline-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+  block-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+  background: var(--gse-ui-statusGlyph-information);
+}
+
+.gux-status-icon-warning::before {
+  inline-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+  block-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+
+  @include status-icons.warning;
+
+  background: var(--gse-ui-statusGlyph-neutral);
+}
+
+.gux-status-icon-error::before {
+  inline-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+  block-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+
+  @include status-icons.error;
+
+  background: var(--gse-ui-statusGlyph-negative);
+}
+
+.gux-status-icon-success::before {
+  inline-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+  block-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+
+  @include status-icons.active;
+
+  background: var(--gse-ui-statusGlyph-positive);
+}

@@ -59,6 +59,12 @@ export class GuxPopup {
   exceedTargetWidth: boolean = false;
 
   /**
+   * set if parent component design is inline
+   */
+  @Prop()
+  inline: boolean = false;
+
+  /**
    * This event will run when the popup transitions to an expanded state.
    */
   @Event()
@@ -87,6 +93,7 @@ export class GuxPopup {
   private updatePosition(): void {
     if (this.targetElementContainer && this.popupElementContainer) {
       const exceedTargetWidth = this.exceedTargetWidth;
+      const inline = this.inline;
       void computePosition(
         this.targetElementContainer,
         this.popupElementContainer,
@@ -104,12 +111,12 @@ export class GuxPopup {
                 availableWidth: number;
                 availableHeight: number;
               }) {
-                if (exceedTargetWidth) {
+                if (exceedTargetWidth && !inline) {
                   // These elements should be at least as wide the target but can expand beyond
                   Object.assign(elements.floating.style, {
                     minWidth: `${rects.reference.width}px`
                   });
-                } else {
+                } else if (!inline) {
                   // Everything else is constrained to the width of the target.
                   // Note: if the contents overflow the flip and shift middleware will not detect it
                   Object.assign(elements.floating.style, {

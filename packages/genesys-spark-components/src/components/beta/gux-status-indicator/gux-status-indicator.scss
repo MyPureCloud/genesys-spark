@@ -1,0 +1,63 @@
+@use '~genesys-spark/dist/scss/status-icons.scss';
+
+.gux-status-indicator {
+  display: inline-flex;
+  gap: var(--gse-ui-dataTableItems-statusIndicator-gap);
+  align-items: center;
+  padding: var(--gse-ui-dataTableItems-statusIndicator-gap);
+  font-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+  line-height: var(--gse-ui-dataTableItems-statusIndicator-label-lineHeight);
+  border-radius: var(--gse-ui-dataTableItems-statusIndicator-borderRadius);
+
+  &:hover {
+    cursor: default;
+    background-color: var(--gse-ui-dataTableItems-statusIndicator-hover);
+  }
+}
+
+.gux-status-indicator-text {
+  color: var(--gse-ui-dataTableItems-statusIndicator-text);
+}
+
+.gux-status-icon {
+  display: inline-flex;
+}
+
+.gux-status-icon::before {
+  content: '';
+}
+
+.gux-status-icon-info::before {
+  @include status-icons.information;
+
+  inline-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+  block-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+  background: var(--gse-ui-statusGlyph-information);
+}
+
+.gux-status-icon-warning::before {
+  inline-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+  block-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+
+  @include status-icons.warning;
+
+  background: var(--gse-ui-statusGlyph-neutral);
+}
+
+.gux-status-icon-error::before {
+  inline-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+  block-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+
+  @include status-icons.error;
+
+  background: var(--gse-ui-statusGlyph-negative);
+}
+
+.gux-status-icon-success::before {
+  inline-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+  block-size: var(--gse-ui-dataTableItems-statusIndicator-label-fontSize);
+
+  @include status-icons.active;
+
+  background: var(--gse-ui-statusGlyph-positive);
+}

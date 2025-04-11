@@ -1,0 +1,33 @@
+<h1>gux-inline-dropdown</h1>
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-inline-dropdown-beta>
+    <gux-listbox aria-label="status">
+      <gux-option-status-beta value="info" accent="info">
+        <span>Information</span>
+      </gux-option-status-beta>
+      <gux-option-status-beta value="success" accent="success">
+        Success
+      </gux-option-status-beta>
+      <gux-option-status-beta value="warning" accent="warning">
+        Inactive
+      </gux-option-status-beta>
+      <gux-option-status-beta value="error" accent="error">
+        Deleted
+      </gux-option-status-beta>
+    </gux-listbox>
+  </gux-inline-dropdown-beta>
+
+  <gux-inline-dropdown-beta>
+    <gux-listbox aria-label="Countries">
+      <gux-option value="AFG">Afghanistan</gux-option>
+      <gux-option value="ALA">Åland Islands</gux-option>
+      <gux-option value="ALB">Albania</gux-option>
+      <gux-option value="DZA">Algeria</gux-option>
+      <gux-option value="ASM">American Samoa</gux-option>
+      <gux-option value="AND">Andorra</gux-option>
+      <gux-option value="AGO">Angola</gux-option>
+      <gux-option value="AIA">Anguilla</gux-option>
+      <gux-option value="ZWE">Zimbabwe</gux-option>
+    </gux-listbox>
+  </gux-inline-dropdown-beta>
+</form>
