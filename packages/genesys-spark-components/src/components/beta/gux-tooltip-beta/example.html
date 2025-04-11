@@ -187,6 +187,18 @@
     <p>Show the tooltip if it is currently hidden.</p>
   </section>
 
+  <h2>Using a gux-button with a gux-tooltip-beta</h2>
+  <gux-button id="tooltip-light">Hover</gux-button>
+  <gux-tooltip-beta for="tooltip-light" accent="light">
+    <div slot="content">Tooltip with light accent</div>
+  </gux-tooltip-beta>
+
+  <h3>Disabled gux-button with gux-tooltip</h3>
+  <gux-button disabled id="tooltip-dark">Hover</gux-button>
+  <gux-tooltip-beta for="tooltip-dark" accent="dark">
+    <div slot="content">Tooltip with dark accent</div>
+  </gux-tooltip-beta>
+
   <style>
     .no-overflow {
       position: relative;

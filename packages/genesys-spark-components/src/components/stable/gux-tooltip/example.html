@@ -48,11 +48,10 @@
     <div class="flex-example">
       <h4 class="flex-header">dark</h4>
       <div class="flex-content">
-        <gux-button disabled
-          >test<gux-tooltip accent="dark">
-            <div slot="content">Tooltip with dark accent</div>
-          </gux-tooltip></gux-button
-        >
+        <gux-button id="tooltip-dark-accent">Hover</gux-button>
+        <gux-tooltip for="tooltip-dark-accent" accent="dark">
+          <div slot="content">Tooltip with dark accent</div>
+        </gux-tooltip>
       </div>
     </div>
   </div>
@@ -185,6 +184,18 @@
     <code>showTooltip() =&gt; Promise&lt;void&gt;</code>
     <p>Show the tooltip if it is currently hidden.</p>
   </section>
+
+  <h2>Using a gux-button with a gux-tooltip</h2>
+  <gux-button id="tooltip-light">Hover</gux-button>
+  <gux-tooltip for="tooltip-light" accent="light">
+    <div slot="content">Tooltip with light accent</div>
+  </gux-tooltip>
+
+  <h3>Disabled gux-button with gux-tooltip</h3>
+  <gux-button disabled id="tooltip-dark">Hover</gux-button>
+  <gux-tooltip for="tooltip-dark" accent="dark">
+    <div slot="content">Tooltip with dark accent</div>
+  </gux-tooltip>
 
   <style>
     .no-overflow {
