@@ -13,6 +13,18 @@ def getPublishOptions(isMainBranch, isMaintenanceReleaseBranch, isBetaBranch) {
     return '--tag error'
 }
 
+pipeline {
+    agent any
+
+    stages {
+        stage('Print Message') {
+            steps {
+                echo 'hello brad'
+            }
+        }
+    }
+}
+
 Boolean isMainBranch = env.BRANCH_NAME == 'main'
 
 Boolean isMaintenanceReleaseBranch = env.BRANCH_NAME.startsWith('maintenance/')
