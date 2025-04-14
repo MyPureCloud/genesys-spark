@@ -61,24 +61,24 @@
 <style>
   .table-placeholder {
     padding: 10px;
-    color: #f1f1f1;
     text-align: center;
     background-image: linear-gradient(
       45deg,
-      #f1f1f1 25%,
+      var(--gse-semantic-background-container-page-tonalSubtle) 25%,
       transparent 25%,
       transparent 50%,
-      #f1f1f1 50%,
-      #f1f1f1 75%,
+      var(--gse-semantic-background-container-page-tonalSubtle) 50%,
+      var(--gse-semantic-background-container-page-tonalSubtle) 75%,
       transparent 75%,
-      #fff
+      var(--gse-semantic-background-container-page-default)
     );
     background-size: 5px 5px;
   }
 
   .table-placeholder::before {
     padding: 5px;
+    color: var(--gse-semantic-foreground-container-lowEmphasis);
     content: 'Table Placeholder';
-    background-color: white;
+    background-color: var(--gse-semantic-background-container-page-default);
   }
 </style>
