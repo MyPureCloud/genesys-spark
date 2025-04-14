@@ -12,7 +12,7 @@
   flex-direction: column;
   font-family: var(--gse-ui-calendarMenu-month-defaultText-fontFamily);
   font-size: var(--gse-ui-calendarMenu-month-defaultText-fontSize);
-  background: var(--gse-ui-calendarMenu-date-selected-foregroundColor);
+  background: var(--gse-ui-calendarMenu-backgroundColor);
   border-radius: 8px; // --gse-ui-calendarMenu-single-header-borderRadius and --gse-ui-calendarMenu-single-body-borderRadius need to be combined
   box-shadow: var(--gse-ui-calendarMenu-boxShadow);
 
