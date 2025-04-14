@@ -278,7 +278,7 @@
   }
 
   &.gux-available {
-    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+    background-color: var(--gse-semantic-background-container-elevated-default);
 
     &.gux-small,
     &.gux-xsmall {
@@ -322,7 +322,7 @@
   }
 
   &.gux-offline {
-    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+    background-color: var(--gse-semantic-background-container-elevated-default);
 
     &.gux-small,
     &.gux-xsmall {
@@ -335,7 +335,7 @@
   }
 
   &.gux-out-of-office {
-    background-color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+    background-color: var(--gse-semantic-background-container-elevated-default);
 
     &.gux-small,
     &.gux-xsmall {
