@@ -6,6 +6,7 @@
   "--gse-core-spacing-4xs",
   "--gse-core-spacing-5xs",
   "--gse-semantic-background-container-elevated-default",
+  "--gse-semantic-background-container-page-default",
   "--gse-semantic-background-container-page-tonalSubtle",
   "--gse-semantic-body-lg-bold-fontWeight",
   "--gse-semantic-body-lg-regular-fontFamily",
