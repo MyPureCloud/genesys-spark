@@ -64,7 +64,7 @@
     "@js-temporal/polyfill": "^0.4.4",
     "@vvo/tzdb": "6.161.0",
     "google-libphonenumber": "3.2.40",
-    "intl-messageformat": "10.7.15",
+    "intl-messageformat": "10.7.16",
     "requestanimationframe-timer": "3.0.3",
     "sortablejs": "1.15.6"
   },
