@@ -1,6 +1,94 @@
 <h1>gux-button</h1>
+<h2>Icon Button Accessible labelling - Examples for comparison</h2>
+<h3>Standard text button</h3>
+<p><b>NVDA: </b><i>clickable button Default</i></p>
+<p><b>Clickable?</b> Yes</p>
+<gux-button onclick="notify(event)">Default</gux-button>
 
-<h2>Enabled</h2>
+<h3>Text in span with icon</h3>
+<p><b>NVDA: </b><i>clickable button clickable Default</i></p>
+<p><b>Clickable?</b> Yes</p>
+<gux-button onclick="notify(event)">
+  <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
+  <span>Default</span>
+</gux-button>
+
+<h3>Icon with screenreader text</h3>
+<p><b>NVDA: </b><i>clickable button graphic Icon with screen reader text</i></p>
+<p><b>Clickable?</b> No</p>
+<gux-button onclick="notify(event)"
+  ><gux-icon
+    icon-name="fa/diamond-regular"
+    screenreader-text="Icon with screen reader text"
+  ></gux-icon
+></gux-button>
+<h3>Icon with aria label</h3>
+<p>
+  <b>NVDA: </b><i>clickable button graphic clickable Icon with aria label</i>
+</p>
+<p><b>Clickable?</b> Yes</p>
+
+<gux-button onclick="notify(event)"
+  ><gux-icon
+    icon-name="fa/diamond-regular"
+    decorative
+    role="img"
+    aria-label="Icon with aria label"
+  ></gux-icon
+></gux-button>
+
+<h3>Button with Gux-title</h3>
+<p>
+  Note: Not possible to set aria label on the button within gux-button without
+  using gux-title currently
+</p>
+<p><b>NVDA: </b><i>clickable button Gux-button with icon using gux-title</i></p>
+<p><b>Clickable?</b> Yes</p>
+<gux-button
+  onclick="notify(event)"
+  gux-title="Gux-button with icon using gux-title"
+  ><gux-icon icon-name="fa/diamond-regular" decorative></gux-icon
+></gux-button>
+
+<h3>Button with Screenreader text</h3>
+<p>
+  <b>NVDA: </b
+  ><i>clickable button clickable Button with gux-screen-reader-beta</i>
+</p>
+<p><b>Clickable?</b> Yes</p>
+<gux-button accent="danger" onclick="notify(event)">
+  <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
+  <gux-screen-reader-beta>
+    Button with gux-screen-reader-beta
+  </gux-screen-reader-beta>
+</gux-button>
+
+<h3>Button plus svg without gux-icon</h3>
+<p>
+  <b>NVDA: </b
+  ><i>clickable button graphic clickable Icon with screen reader text</i>
+</p>
+<p><b>Clickable?</b> Yes</p>
+<gux-button accent="danger" onclick="notify(event)">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 16 16"
+    role="img"
+    aria-hidden="false"
+    aria-label="Icon with screen reader text"
+  >
+    <g clip-path="url(#clip0_11902_178428)">
+      <path
+        d="M7.11559 0.366211C7.60309 -0.12207 8.39684 -0.12207 8.88434 0.366211L15.6343 7.11559C16.1218 7.60309 16.1218 8.39684 15.6343 8.88434L8.88434 15.6343C8.39684 16.1218 7.60309 16.1218 7.11559 15.6343L0.366211 8.88434C-0.12207 8.39684 -0.12207 7.60309 0.366211 7.11559L7.11559 0.366211ZM7.99996 1.6034L1.6034 7.99996L7.99996 14.3968L14.3968 7.99996L7.99996 1.6034Z"
+      ></path>
+    </g>
+    <defs>
+      <clipPath><rect></rect></clipPath>
+    </defs>
+  </svg>
+</gux-button>
+
+<!-- <h2>Enabled</h2>
 <h3>Text Only</h3>
 <div class="container">
   <gux-button onclick="notify(event)">Default</gux-button>
@@ -353,4 +441,4 @@
     block-size: 16px;
     padding-inline-end: 4px;
   }
-</style>
+</style> -->
