@@ -1,8 +1,5 @@
+@use 'sass:color';
 @use '~genesys-spark/dist/scss/focus.scss';
-
-$background-color: #f6f7f9;
-$menu-shadow: rgba(#202937, 0.24);
-$menu-background-color: #fdfdfd;
 
 :host {
   color: #2e394c;
@@ -32,7 +29,7 @@ gux-popup {
       background-image: none;
       border: 1px solid #6b7585;
       border-radius: 4px;
-      box-shadow: inset 0 0 4px rgba(#202937, 0.16);
+      box-shadow: inset 0 0 4px rgb(32 41 55 / 16%);
 
       .gux-select-placeholder,
       .gux-select-value {
@@ -78,7 +75,7 @@ gux-popup {
     background: #fdfdfd;
     border: 1px solid #b4bccb;
     border-radius: 4px;
-    box-shadow: 0 0 2px 0 $menu-shadow;
+    box-shadow: 0 0 2px 0 rgb(32 41 55 / 24%);
 
     .gux-dropdown-menu-container {
       gux-form-field-search {
@@ -101,7 +98,7 @@ gux-popup {
     margin: 0;
     overflow-y: auto;
     color: #2e394c;
-    background: $menu-background-color;
+    background: #fdfdfd;
     border-radius: 4px;
     box-shadow: none;
   }

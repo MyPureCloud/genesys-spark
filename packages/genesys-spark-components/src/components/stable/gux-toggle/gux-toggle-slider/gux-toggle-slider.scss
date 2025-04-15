@@ -60,8 +60,8 @@ gux-toggle-slider {
       position: absolute;
       inset: 0;
       background-color: var(--gse-ui-toggle-track-enabled-off-backgroundColor);
-      border-radius: calc($toggle-height / 2);
-      transition: background-color $slider-transition-duration ease;
+      border-radius: calc(#{$toggle-height} / 2);
+      transition: background-color #{$slider-transition-duration} ease;
 
       &:hover {
         background-color: var(--gse-ui-toggle-track-hover-off-backgroundColor);
@@ -69,9 +69,9 @@ gux-toggle-slider {
 
       .gux-switch {
         position: absolute;
-        inset-block-end: calc(calc($toggle-height - $slider-diameter) / 2);
-        inset-inline-start: calc(($toggle-height - $slider-diameter) / 2);
-        inline-size: calc($slider-diameter - 4px);
+        inset-block-end: calc((#{$toggle-height} - #{$slider-diameter}) / 2);
+        inset-inline-start: calc((#{$toggle-height} - #{$slider-diameter}) / 2);
+        inline-size: calc(#{$slider-diameter} - 4px);
         block-size: calc(var(--gse-ui-toggle-handle-height) - 4px);
         color: var(--gse-ui-toggle-handle-foregroundColor);
         content: '';
@@ -85,17 +85,12 @@ gux-toggle-slider {
         gux-icon {
           position: absolute;
           inset: 0;
-          inline-size: calc(
-            $slider-diameter - 6px
-          ); // TODO : COMUI-2528 token needs to be created for 10px as 16px is too big for icon.
-
-          block-size: calc(
-            $slider-diameter - 6px
-          ); // TODO : COMUI-2528 token needs to be created for 10px as 16px is too big for icon.
-
+          // TODO : COMUI-2528 token needs to be created for 10px as 16px is too big for icon.
+          inline-size: calc(#{$slider-diameter} - 6px);
+          block-size: calc(#{$slider-diameter} - 6px);
           margin: auto;
           color: var(--gse-ui-toggle-handle-backgroundColor);
-          transition: color $slider-transition-duration linear;
+          transition: color #{$slider-transition-duration} linear;
         }
       }
     }
@@ -127,7 +122,7 @@ gux-toggle-slider {
         }
 
         .gux-switch {
-          transform: translateX($slider-transition);
+          transform: translateX(#{$slider-transition});
 
           gux-icon {
             color: var(--gse-ui-toggle-handle-foregroundColor);

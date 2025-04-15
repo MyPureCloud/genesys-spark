@@ -64,7 +64,7 @@ $thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-height) / 2);
   inline-size: $track-width;
   block-size: $track-height;
   margin-block: $thumb-diameter;
-  margin-block-start: calc(-1 * calc($thumb-diameter + $track-height));
+  margin-block-start: calc(-1 * (#{$thumb-diameter} + #{$track-height}));
   margin-inline: 0;
   -webkit-appearance: none;
   background: transparent;
