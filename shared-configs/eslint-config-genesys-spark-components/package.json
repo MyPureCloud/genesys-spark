@@ -23,7 +23,7 @@
     "prettier": "^3.5.3",
     "prettier-config-genesys-spark-components": "file:../prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
-    "typescript-eslint": "^8.29.1"
+    "typescript-eslint": "^8.30.1"
   },
   "prettier": "prettier-config-genesys-spark-components"
 }
