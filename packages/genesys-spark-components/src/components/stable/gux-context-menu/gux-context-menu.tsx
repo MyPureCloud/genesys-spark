@@ -8,6 +8,7 @@ import {
   Listen,
   Host
 } from '@stencil/core';
+import { Placement } from '@floating-ui/dom';
 
 import { randomHTMLId } from '@utils/dom/random-html-id';
 import { trackComponent } from '@utils/tracking/usage';
@@ -49,6 +50,13 @@ export class GuxContextMenu {
    */
   @Prop()
   screenreaderText: string = '';
+
+  /**
+   * Placement of the popup
+   * defaults to is "bottom-start"
+   */
+  @Prop()
+  placement: Placement = 'bottom-start';
 
   /**
    * Controls the visibility of the popover list
@@ -154,6 +162,7 @@ export class GuxContextMenu {
     return (
       <Host>
         <gux-popup
+          placement={this.placement}
           expanded={this.isOpen}
           offset={4} // --gse-ui-contextMenu-gap TODO: Should use the json token as part of COMUI-2480
           exceed-target-width
@@ -170,13 +179,14 @@ export class GuxContextMenu {
                 aria-expanded={this.isOpen.toString()}
                 disabled={this.disabled}
               >
+                <gux-screen-reader-beta>
+                  {this.screenreaderText ||
+                    this.i18n('contextMenuScreenreaderText')}
+                </gux-screen-reader-beta>
                 <gux-icon
                   icon-name="fa/ellipsis-vertical-regular"
-                  screenreader-text={
-                    this.screenreaderText ||
-                    this.i18n('contextMenuScreenreaderText')
-                  }
                   size="small"
+                  decorative
                 ></gux-icon>
               </button>
             </gux-button-slot>

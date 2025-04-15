@@ -2,6 +2,260 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.138.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.2...v4.138.3) (2025-04-15)
+
+
+### Bug Fixes
+
+* **avatar-beta:** fixed presence icons in dark mode ([e33b22b](https://github.com/MyPureCloud/genesys-spark/commit/e33b22b96bb9a23cc23e69a3a4cf936ec5ade4f6))
+* **calendar-beta:** fixed token reference ([b11783c](https://github.com/MyPureCloud/genesys-spark/commit/b11783c1edb104c0716ffdd607e4fbb55710e9d3))
+* **card:** fixed example page dark mode appearance ([cd5b4d3](https://github.com/MyPureCloud/genesys-spark/commit/cd5b4d3e5e86e2fa7c71f002c0375e6bf6a8676d))
+* **list:** fixed example page dark mode appearance ([bf7d4e7](https://github.com/MyPureCloud/genesys-spark/commit/bf7d4e70bfff47300a7e473e3032350405850869))
+* **pagination:** fixed example pages dark mode appearance ([8bd5b36](https://github.com/MyPureCloud/genesys-spark/commit/8bd5b363a6b163b84ece1c8e6e9c9f5766f5c385))
+* **popover:** fixed example pages dark mode appearance ([5701f5f](https://github.com/MyPureCloud/genesys-spark/commit/5701f5f162883eefc1192b664ba0cd3671aafd56))
+* **radial-loading:** fixed dark mode appearance ([e707440](https://github.com/MyPureCloud/genesys-spark/commit/e70744013025ac3f14e2a90088992c95e7b80fb6))
+* **tooltip:** fixed example page dark mode appearance ([3db06f1](https://github.com/MyPureCloud/genesys-spark/commit/3db06f14d9d809add5ea943a4a271bb5cc03bf1b))
+* **tooltip:** update offset from 16px to 12px ([d41134a](https://github.com/MyPureCloud/genesys-spark/commit/d41134a74b3cd8945450c5ac584dfc9e1d9a64cc))
+
+### [4.138.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.1...v4.138.2) (2025-04-11)
+
+### [4.138.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.0...v4.138.1) (2025-04-09)
+
+
+### Bug Fixes
+
+* **action-button:** fix focus rings being obscured ([14098b2](https://github.com/MyPureCloud/genesys-spark/commit/14098b2bb724cfe6b28b2e8a2fbfa8accd9c539e))
+* **dropdown:** Remove subtext from selected gux-option-icon text ([#1020](https://github.com/MyPureCloud/genesys-spark/issues/1020)) ([f6f60b5](https://github.com/MyPureCloud/genesys-spark/commit/f6f60b5dfa3e01f449bc3dc84ee7fa6bd4513f45))
+
+## [4.138.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.2...v4.138.0) (2025-04-05)
+
+
+### Features
+
+* **tooltip-pointer-beta:** adding tooltip that follows pointer when it enters target element ([265d4a6](https://github.com/MyPureCloud/genesys-spark/commit/265d4a6fdc2f5ad8e8669bad23a4ea300fa7122f))
+
+### [4.137.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.1...v4.137.2) (2025-04-03)
+
+
+### Bug Fixes
+
+* **context-menu:** Move label from icon to screenreader-beta ([#977](https://github.com/MyPureCloud/genesys-spark/issues/977)) ([e8fae05](https://github.com/MyPureCloud/genesys-spark/commit/e8fae0540d98f8223069414d9c1316703db053f9))
+* **dismiss-button:** fixed allignment ([5bd8b13](https://github.com/MyPureCloud/genesys-spark/commit/5bd8b131defb83a8fa49eb27701320f86efeec3a))
+* **tooltip:** fix invalid html on examples page ([aeb294f](https://github.com/MyPureCloud/genesys-spark/commit/aeb294f2e7187caa078d680c3f90790fa34c3507))
+
+### [4.137.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.137.0...v4.137.1) (2025-04-02)
+
+## [4.137.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.136.0...v4.137.0) (2025-04-01)
+
+
+### Features
+
+* **calendar-beta:** Switch to using Temporal API polyfill for dates ([5cbbd35](https://github.com/MyPureCloud/genesys-spark/commit/5cbbd358aec2ce2382b557731ab5dc31db7e8408))
+
+
+### Bug Fixes
+
+* **popover:** dismiss button moved out of title element ([058b480](https://github.com/MyPureCloud/genesys-spark/commit/058b480e104a2927b2d2e620e5d85f8a78d492eb))
+
+## [4.136.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.135.0...v4.136.0) (2025-03-28)
+
+
+### Features
+
+* **other:** scss and less tokens are now out of beta ([134b224](https://github.com/MyPureCloud/genesys-spark/commit/134b224a67335fe7dcbf0dcb14e815b859b9dfc5))
+* **other:** update global navigation tokens ([4649fca](https://github.com/MyPureCloud/genesys-spark/commit/4649fcacb2da7ad7df8f51776c7ddae22d7a01e7))
+
+
+### Bug Fixes
+
+* **datepicker:** background-color should not include label ([62fb456](https://github.com/MyPureCloud/genesys-spark/commit/62fb456a3f2b5fe8e21f57c0535b840e495be554))
+
+## [4.135.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.134.2...v4.135.0) (2025-03-26)
+
+
+### Features
+
+* **modal side panel:** modal is visible when open prop is initially set ([52b4383](https://github.com/MyPureCloud/genesys-spark/commit/52b4383337a2a6e0fc41a10bd237a548457300d9))
+
+### [4.134.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.134.1...v4.134.2) (2025-03-25)
+
+### [4.134.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.134.0...v4.134.1) (2025-03-22)
+
+
+### Bug Fixes
+
+* **form-field-file-beta:** moved error slot location ([424cc0e](https://github.com/MyPureCloud/genesys-spark/commit/424cc0e01a40c0a9338705d678b35e714f0505ed))
+* **time-zone-beta:** fix translations ([#992](https://github.com/MyPureCloud/genesys-spark/issues/992)) ([09df918](https://github.com/MyPureCloud/genesys-spark/commit/09df9180d3d5733fe20185eec4d4e18058846149))
+
+## [4.134.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.133.0...v4.134.0) (2025-03-21)
+
+
+### Features
+
+* **tokens:** Adjusted figma collections ([7671788](https://github.com/MyPureCloud/genesys-spark/commit/76717888885e8ef94aa9d8fe22bf4c1e089c3387))
+* **tokens:** changed the themes name ([34b3b12](https://github.com/MyPureCloud/genesys-spark/commit/34b3b129e3953a38d5606b86c8d0e7e42a1cb833))
+* **tokens:** ran linter ([60a0e7b](https://github.com/MyPureCloud/genesys-spark/commit/60a0e7b98ca926148a2fa9439d35481cf80345f0))
+* **tokens:** reverted ai color id value ([0cecba1](https://github.com/MyPureCloud/genesys-spark/commit/0cecba119895bd2f5e2faee479f90ccbf405a1dd))
+* **tokens:** Updated custom accents values ([#990](https://github.com/MyPureCloud/genesys-spark/issues/990)) ([2b58a70](https://github.com/MyPureCloud/genesys-spark/commit/2b58a704842ea5d06b30cad3b7d6c40f86f38b73))
+
+## [4.133.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.132.3...v4.133.0) (2025-03-20)
+
+
+### Features
+
+* **tokens:** Generated CSS vars ([0a68a4d](https://github.com/MyPureCloud/genesys-spark/commit/0a68a4d1b1bfb76f7cca701beeb4357ca9d80bbc))
+* **tokens:** generated Figma vars ([c051bdf](https://github.com/MyPureCloud/genesys-spark/commit/c051bdfcac1e6af77b6164f12c891e9e732b275a))
+* **tokens:** Generated figma vars ([3929131](https://github.com/MyPureCloud/genesys-spark/commit/392913128b05ed2ff8623789471de37bd1eaf2e6))
+* **tokens:** Updated segmented control tokens ([d929453](https://github.com/MyPureCloud/genesys-spark/commit/d92945351fea8f7df148a0605d182f82eb009ac7))
+* **tokens:** updated tertiary and ghost buttons ([0b95235](https://github.com/MyPureCloud/genesys-spark/commit/0b952352be1de0fd361248e6a4f944429d10441a))
+
+### [4.132.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.132.2...v4.132.3) (2025-03-19)
+
+
+### Bug Fixes
+
+* **copy-to-clipboard:** display none when hidden ([#982](https://github.com/MyPureCloud/genesys-spark/issues/982)) ([cf39991](https://github.com/MyPureCloud/genesys-spark/commit/cf399919e0378ac83889c75f7c84b22c79b28f29))
+
+### [4.132.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.132.1...v4.132.2) (2025-03-15)
+
+### [4.132.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.132.0...v4.132.1) (2025-03-14)
+
+
+### Bug Fixes
+
+* **other:** update localization logic to treat `en-us` dom lang as `en` ([cdb2e11](https://github.com/MyPureCloud/genesys-spark/commit/cdb2e116089371acba78ca0d84bdae3b75683f5b))
+* **popover-beta:** add preventDefault when opening popover ([06d492e](https://github.com/MyPureCloud/genesys-spark/commit/06d492ed8c2f319604f94f1c8fdf6111a9d89df4))
+
+## [4.132.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.131.0...v4.132.0) (2025-03-13)
+
+
+### Features
+
+* **context-menu:** added placement option of popup menu ([4901b1a](https://github.com/MyPureCloud/genesys-spark/commit/4901b1a7695c1d1d6b85a1b6687a08388c5076cc))
+* **tokens:** added brand colors ([6091c6a](https://github.com/MyPureCloud/genesys-spark/commit/6091c6ae0a272438a32c7e466ccd4f703355ce95))
+
+
+### Bug Fixes
+
+* **other:** getSlot function now only looks at direct children ([6d461d5](https://github.com/MyPureCloud/genesys-spark/commit/6d461d560006fa7cbd8d42c40cd9bdb9b0e8dae5))
+
+## [4.131.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.130.1...v4.131.0) (2025-03-11)
+
+
+### Features
+
+* **table:** removing double border at bottom of the table ([934c700](https://github.com/MyPureCloud/genesys-spark/commit/934c7000e3b12b8c8a2a7d43d071a5856ffb5ccb))
+* **tokens:** General dark mode fixes ([b738167](https://github.com/MyPureCloud/genesys-spark/commit/b7381677c1112579a08b33d7c07e5cd9e620089b))
+* **tokens:** generated CSS vars ([1a94625](https://github.com/MyPureCloud/genesys-spark/commit/1a94625138be66c45c3e024fa0af17381f44e110))
+* **tokens:** generated figma vars ([fca08f7](https://github.com/MyPureCloud/genesys-spark/commit/fca08f79f003dddf0eeb5fa1789e4aefad8cc12f))
+* **tokens:** Ran linter ([a7e8e8d](https://github.com/MyPureCloud/genesys-spark/commit/a7e8e8de1bef425b575607458915103c46877eeb))
+
+### [4.130.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.130.0...v4.130.1) (2025-03-08)
+
+
+### Bug Fixes
+
+* **dropdown-multi:** fixing issue when user sets value to empty string ([3ff8ee3](https://github.com/MyPureCloud/genesys-spark/commit/3ff8ee37aca327aa8e9600ee6ac47f4e48e4c171))
+* **segmented-control-item:** fixed focus shape ([d8e4bae](https://github.com/MyPureCloud/genesys-spark/commit/d8e4bae4e62c80082ede8f0d8affcdbdabea4c03))
+
+## [4.130.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.129.1...v4.130.0) (2025-03-07)
+
+
+### Features
+
+* **badge:** change regular badge token color for info and success variant in dark mode ([727dece](https://github.com/MyPureCloud/genesys-spark/commit/727dece5d74026c130940fbb419f84aaa36b3e86))
+* **tokens:** Added AI tokens ([854c020](https://github.com/MyPureCloud/genesys-spark/commit/854c0200ab73970443bca71fa385ea82addf5bdf))
+* **tokens:** generate Figma variables ([98088cf](https://github.com/MyPureCloud/genesys-spark/commit/98088cf93f7c475469326394f8874bb7864a3a70))
+* **tokens:** Generated CSS vars ([219537f](https://github.com/MyPureCloud/genesys-spark/commit/219537fe1d3e43923ff37726ecd9ad74736db5b8))
+* **tokens:** Updated ai tonal subtle ([9ebc080](https://github.com/MyPureCloud/genesys-spark/commit/9ebc08051ee967db158a70b49f948ecc26aec4e5))
+* **tokens:** Updated AI tonal subtle accent ([e1274e5](https://github.com/MyPureCloud/genesys-spark/commit/e1274e54192899ef4f7246f127633df022ffb365))
+
+
+### Bug Fixes
+
+* **option:** trim whitespace for subtext selection ([#899](https://github.com/MyPureCloud/genesys-spark/issues/899)) ([513d706](https://github.com/MyPureCloud/genesys-spark/commit/513d706192872138a882d585ee3a29ba54be8d4b))
+* **popover:** removed min width ([2e04e09](https://github.com/MyPureCloud/genesys-spark/commit/2e04e095a27d75ece483346b5cd87be8ecdbb2b5))
+
+### [4.129.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.129.0...v4.129.1) (2025-03-06)
+
+
+### Bug Fixes
+
+* **tab:** focus ring cut off on bottom ([e573840](https://github.com/MyPureCloud/genesys-spark/commit/e5738406dcf59714a1bdb04ec215111c0a8385bc))
+
+## [4.129.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.128.0...v4.129.0) (2025-03-05)
+
+
+### Features
+
+* **icon:** added new icons ([c98779a](https://github.com/MyPureCloud/genesys-spark/commit/c98779aed65aace8cccd278602b25136f1c84352))
+
+
+### Bug Fixes
+
+* **toggle:** changed toggle error icon ([ac0210e](https://github.com/MyPureCloud/genesys-spark/commit/ac0210e0ecc8a7ef439fabdf4ead2d6f34e54c8d))
+
+## [4.128.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.127.0...v4.128.0) (2025-03-04)
+
+
+### Features
+
+* **dropdown-multi:** reverting combobox change ([ce02320](https://github.com/MyPureCloud/genesys-spark/commit/ce02320a7c08a22bacd762f1153db81fd87b607d))
+* **table:** updating table borders ([dec4cc1](https://github.com/MyPureCloud/genesys-spark/commit/dec4cc155835721a5d39db26187cfdb123b797db))
+
+
+### Bug Fixes
+
+* **popover-beta:** fix popover-beta and popover-beta-list keyboard a11y ([f32be33](https://github.com/MyPureCloud/genesys-spark/commit/f32be33c0ff10ae134fa49807b06ed62367310d2))
+
+## [4.127.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.126.0...v4.127.0) (2025-03-01)
+
+
+### Features
+
+* **tokens:** created the new deprecated set ([3feb47d](https://github.com/MyPureCloud/genesys-spark/commit/3feb47d0b9c672919811a6d1b1b89cfa769b736d))
+* **tokens:** rearrange $themes file ([b148c98](https://github.com/MyPureCloud/genesys-spark/commit/b148c98744c94f27779786379ac44dc107534bc9))
+
+## [4.126.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.125.0...v4.126.0) (2025-02-27)
+
+
+### Features
+
+* **other:** added less and sass tokens ([0c7a90b](https://github.com/MyPureCloud/genesys-spark/commit/0c7a90b5c621dd07fecc2c35303d87ee63bb4951))
+
+## [4.125.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.124.1...v4.125.0) (2025-02-26)
+
+
+### Features
+
+* **tokens:** Updated spark data tokens ([fd0d07d](https://github.com/MyPureCloud/genesys-spark/commit/fd0d07df0c9911b8a7333210fcbe82aeeb690a93))
+
+
+### Bug Fixes
+
+* **blank-state:** hide guidance when not provided ([#933](https://github.com/MyPureCloud/genesys-spark/issues/933)) ([f1f7517](https://github.com/MyPureCloud/genesys-spark/commit/f1f75170428e6eb74d34a4e7ecb2aa608ab15254))
+* **side-panel-beta:** remove flex display from content ([66e18c7](https://github.com/MyPureCloud/genesys-spark/commit/66e18c7c8823348fab05051f7168b01ce47d7f4b))
+
+### [4.124.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.124.0...v4.124.1) (2025-02-25)
+
+
+### Bug Fixes
+
+* **flag-icon-beta:** improved components accessibility ([e108d1e](https://github.com/MyPureCloud/genesys-spark/commit/e108d1e3ab9d6dfb70447a495f1bcd12d2881499))
+* **tooltip:** add animation delay for when showing tooltip ([823423b](https://github.com/MyPureCloud/genesys-spark/commit/823423b474268ecc4fd00aedcd4b205ca9429647))
+
+## [4.124.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.123.0...v4.124.0) (2025-02-22)
+
+
+### Features
+
+* **token:** removed deprecated sets ([1307a32](https://github.com/MyPureCloud/genesys-spark/commit/1307a32e2708388c2373daa2e30553753ae206d4))
+
+
+### Bug Fixes
+
+* **modal:** fixed backgroud color token ([14de7f1](https://github.com/MyPureCloud/genesys-spark/commit/14de7f197b312a7469eca48c132970498e966b3c))
+
 ## [4.123.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.122.0...v4.123.0) (2025-02-21)
 
 

@@ -16,6 +16,12 @@ button {
   &.gux-start {
     border-inline-start-color: var(--gse-ui-segmentedControl-divider-color);
     border-radius: var(--gse-ui-segmentedControl-button-start-borderRadius);
+
+    .gux-segmented-control-item {
+      &:focus-visible {
+        border-radius: var(--gse-ui-segmentedControl-button-start-borderRadius);
+      }
+    }
   }
 
   &.gux-end {
@@ -23,6 +29,12 @@ button {
     border-width: var(--gse-ui-segmentedControl-divider-width);
     border-inline-end-color: var(--gse-ui-segmentedControl-divider-color);
     border-radius: var(--gse-ui-segmentedControl-button-end-borderRadius);
+
+    .gux-segmented-control-item {
+      &:focus-visible {
+        border-radius: var(--gse-ui-segmentedControl-button-end-borderRadius);
+      }
+    }
   }
 
   &.gux-start.gux-end {
@@ -93,7 +105,6 @@ button {
       position: relative;
       z-index: var(--gse-semantic-zIndex-showFocus);
       outline-offset: var(--gse-ui-segmentedControl-focus-offset);
-      border-radius: var(--gse-ui-segmentedControl-borderRadius);
 
       @include focus.gux-focus-ring;
     }

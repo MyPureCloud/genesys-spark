@@ -26,7 +26,8 @@ import {
   setNextOptionActive,
   setPreviousOptionActive,
   hasActiveOption,
-  getOptionDefaultSlot
+  getOptionDefaultSlot,
+  convertValueToArray
 } from '../gux-listbox/gux-listbox.service';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
@@ -226,12 +227,8 @@ export class GuxListboxMulti {
   }
 
   // value as an array
-  private getSelectedValues() {
-    if (this.value) {
-      return this.value.split(',');
-    } else {
-      return [];
-    }
+  private getSelectedValues(): string[] {
+    return convertValueToArray(this.value);
   }
 
   private updateOnSlotChange(): void {

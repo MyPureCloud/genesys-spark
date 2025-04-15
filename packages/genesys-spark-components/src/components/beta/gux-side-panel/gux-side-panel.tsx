@@ -3,6 +3,7 @@ import {
   Event,
   EventEmitter,
   h,
+  Host,
   Element,
   Prop
 } from '@stencil/core';
@@ -54,27 +55,28 @@ export class GuxSidePanel {
 
   render(): JSX.Element {
     return (
-      <div
-        class={{
-          'gux-side-panel': true,
-          [`gux-side-panel-${this.size}`]: true
-        }}
-      >
-        <header>
+      <Host role="complementary">
+        <div
+          class={{
+            'gux-side-panel': true,
+            [`gux-side-panel-${this.size}`]: true
+          }}
+        >
+          <header>
+            <slot name="heading" />
+          </header>
           <gux-dismiss-button
-            position="inherit"
             onClick={this.onDismissHandler.bind(this)}
-          />
-          <slot name="heading" />
-        </header>
-        {this.renderDescription()}
-        <div class="gux-side-panel-content">
-          <slot name="content" />
+          ></gux-dismiss-button>
+          {this.renderDescription()}
+          <div class="gux-side-panel-content">
+            <slot name="content" />
+          </div>
+          <footer>
+            <slot name="footer" />
+          </footer>
         </div>
-        <footer>
-          <slot name="footer" />
-        </footer>
-      </div>
+      </Host>
     ) as JSX.Element;
   }
 }

@@ -68,12 +68,13 @@ export function determineDisplayLocale(
 ): string {
   const domLocale = (getClosestElement(element, '*[lang]') as HTMLElement)
     ?.lang;
-  if (!domLocale || browserHasRegionData(domLocale)) {
+  const domLocaleWithOverride = domLocaleOverride(domLocale);
+  if (!domLocaleWithOverride || browserHasRegionData(domLocaleWithOverride)) {
     // If we can't find a locale in the DOM, or we find a locale without a region that matches the
     // users's browser locale, use the browser locale.
     return navigator.language;
   } else {
-    return domLocale;
+    return domLocaleWithOverride;
   }
 }
 
@@ -89,6 +90,16 @@ function browserHasRegionData(localeString: string): boolean {
     (localeString.length == 2 &&
       navigator.language?.startsWith(`${localeString}-`))
   );
+}
+
+// Currently, login page and web-directory store the English user selection as `en-us`.
+// We will remove this override once those apps migrate from using en-us to en as part of a future epic.
+function domLocaleOverride(localeString: string): string {
+  if (localeString?.toLowerCase() === 'en-us') {
+    return 'en';
+  } else {
+    return localeString;
+  }
 }
 
 function browserLocaleOverride(localeString: string): boolean {

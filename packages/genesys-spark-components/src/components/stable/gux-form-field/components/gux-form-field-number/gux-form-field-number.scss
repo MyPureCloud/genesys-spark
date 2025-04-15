@@ -106,7 +106,7 @@ $gux-form-field-number-step-button-size: 14px;
 }
 
 .gux-step-buttons-container {
-  flex: 0 1 $gux-form-field-number-step-button-size;
+  flex: 0 1 #{$gux-form-field-number-step-button-size};
   align-self: auto;
   order: 0;
   margin-inline-start: var(--gse-ui-formControl-spinButton-gap);

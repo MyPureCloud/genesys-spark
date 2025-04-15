@@ -60,7 +60,7 @@ export class GuxPopover {
    * Indicate if the dismiss button is displayed
    */
   @Prop()
-  displayDismissButton: boolean;
+  displayDismissButton: boolean = false;
 
   /**
    * Close popover when the user clicks outside of its bounds
@@ -86,13 +86,14 @@ export class GuxPopover {
   @Watch('for')
   private updateForElement(): void {
     this.forElement = this.getForElement();
+    this.forElement.setAttribute('aria-haspopup', 'true');
   }
 
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Escape':
-        this.dismiss();
+        this.forElement.focus();
         break;
     }
   }
@@ -124,15 +125,9 @@ export class GuxPopover {
     ) {
       this.dismiss();
     }
-
-    if (clickedForElement) {
-      this.popupElement.togglePopover();
-      this.isOpen = !this.isOpen;
-      this.runUpdatePosition();
-    }
   }
 
-  get titleSlot(): HTMLSlotElement | null {
+  get titleSlot(): Element | null {
     return getSlot(this.root, 'title');
   }
 
@@ -149,6 +144,16 @@ export class GuxPopover {
       return forElement;
     } else {
       this.logForAttributeError();
+    }
+  }
+
+  private focusPopup(): void {
+    const autofocusElement: HTMLElement =
+      this.root.querySelector('[autoFocus]');
+    if (autofocusElement) {
+      autofocusElement?.focus();
+    } else {
+      this.popupElement.focus();
     }
   }
 
@@ -260,9 +265,39 @@ export class GuxPopover {
     }
   }
 
+  disconnect: () => void = undefined;
+
+  onKeydown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Enter':
+      case ' ':
+        event.preventDefault();
+        this.popupElement.togglePopover();
+        this.isOpen = !this.isOpen;
+        this.runUpdatePosition();
+        this.focusPopup();
+        break;
+    }
+  }
+
+  onMouseup(): void {
+    this.popupElement.togglePopover();
+    this.isOpen = !this.isOpen;
+    this.runUpdatePosition();
+  }
+
   connectedCallback(): void {
     this.updateForElement();
     trackComponent(this.root, { variant: this.position });
+    const keydownHandler = this.onKeydown.bind(this);
+    this.forElement.addEventListener('keydown', keydownHandler);
+    const mouseupHandler = this.onMouseup.bind(this);
+    this.forElement.addEventListener('mouseup', mouseupHandler);
+
+    this.disconnect = () => {
+      this.forElement.removeEventListener('keydown', keydownHandler);
+      this.forElement.removeEventListener('mouseup', mouseupHandler);
+    };
   }
 
   componentDidLoad(): void {
@@ -290,17 +325,7 @@ export class GuxPopover {
     if (this.cleanupUpdatePosition) {
       this.cleanupUpdatePosition();
     }
-  }
-
-  private renderDismissButton(): JSX.Element {
-    if (this.displayDismissButton) {
-      return (
-        <gux-dismiss-button
-          onClick={this.dismiss.bind(this)}
-          position="inherit"
-        ></gux-dismiss-button>
-      ) as JSX.Element;
-    }
+    this.disconnect();
   }
 
   render(): JSX.Element {
@@ -313,6 +338,7 @@ export class GuxPopover {
         }}
         data-placement
         popover="manual"
+        tabindex="-1"
       >
         <div
           ref={(el: HTMLDivElement) => (this.arrowElement = el)}
@@ -320,9 +346,13 @@ export class GuxPopover {
         >
           <div class="gux-arrow-caret"></div>
         </div>
+        {this.displayDismissButton && (
+          <gux-dismiss-button
+            onClick={this.dismiss.bind(this)}
+          ></gux-dismiss-button>
+        )}
         <div class={{ 'gux-popover-header': Boolean(this.titleSlot) }}>
           <slot name="title"></slot>
-          {this.renderDismissButton()}
         </div>
         <div class="gux-popover-content">
           <slot />

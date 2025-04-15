@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-tooltip-pointer-beta #remove should remove component as expected (1) 1`] = `
+<body>
+  <div aria-describedby="gux-tooltip-pointer-i">
+    <div>
+      Element
+    </div>
+  </div>
+</body>
+`;
+
+exports[`gux-tooltip-pointer-beta #remove should remove component as expected (2) 1`] = `
+<body>
+  <div>
+    <div aria-describedby="gux-tooltip-pointer-i" id="element">
+      Element
+    </div>
+  </div>
+</body>
+`;
+
+exports[`gux-tooltip-pointer-beta #render should render component as expected (1) 1`] = `
+<body>
+  <div aria-describedby="gux-tooltip-pointer-i">
+    <div>
+      Element
+    </div>
+    <gux-tooltip-pointer-beta id="gux-tooltip-pointer-i">
+      <template shadowrootmode="open">
+        <gux-tooltip-base-beta>
+          <template shadowrootmode="open">
+            <div class="gux-container gux-light" data-placement="bottom-start">
+              <slot name="content"></slot>
+            </div>
+          </template>
+          <span slot="content">
+            <slot name="content">
+              <slot></slot>
+            </slot>
+          </span>
+        </gux-tooltip-base-beta>
+      </template>
+      <span slot="content">
+        Tooltip
+      </span>
+    </gux-tooltip-pointer-beta>
+  </div>
+</body>
+`;
+
+exports[`gux-tooltip-pointer-beta #render should render component as expected (2) 1`] = `
+<body>
+  <div>
+    <div aria-describedby="gux-tooltip-pointer-i" id="element">
+      Element
+    </div>
+    <gux-tooltip-pointer-beta for="element" id="gux-tooltip-pointer-i">
+      <template shadowrootmode="open">
+        <gux-tooltip-base-beta>
+          <template shadowrootmode="open">
+            <div class="gux-container gux-light" data-placement="bottom-start">
+              <slot name="content"></slot>
+            </div>
+          </template>
+          <span slot="content">
+            <slot name="content">
+              <slot></slot>
+            </slot>
+          </span>
+        </gux-tooltip-base-beta>
+      </template>
+      <div slot="content">
+        Tooltip
+      </div>
+    </gux-tooltip-pointer-beta>
+  </div>
+</body>
+`;

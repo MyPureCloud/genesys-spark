@@ -4,21 +4,21 @@ import { newSparkE2EPage, a11yCheck } from '@test/e2eTestUtils';
 const axeExclusions = [
   {
     issueId: 'target-size',
-    target: 'gux-dropdown-multi,.gux-field-combobox',
+    target: 'gux-dropdown-multi,button',
     exclusionReason:
       'COMUI-2948 Fix any of the following: Target has insufficient size (20px by 18px, should be at least 24px by 24px); Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px.'
   },
   {
-    issueId: 'aria-input-field-name',
-    target: 'gux-dropdown-multi,.gux-field',
+    issueId: 'target-size',
+    target: 'gux-dropdown-multi,gux-dropdown-multi-tag,.gux-tag-remove-button',
     exclusionReason:
-      'COMUI-3507 Location of combobox role might be incorrect or else a label has to be added at the current location'
+      'COMUI-2948 Fix any of the following: Target has insufficient size (20px by 18px, should be at least 24px by 24px); Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px.'
   },
   {
-    issueId: 'aria-input-field-name',
-    target: 'gux-dropdown-multi,.gux-field-combobox',
+    issueId: 'nested-interactive',
+    target: 'gux-dropdown-multi,.gux-field',
     exclusionReason:
-      'COMUI-3507 Location of combobox role might be incorrect or else a label has to be added at the current location'
+      'COMUI-2948 Element has focusable descendants. Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies.'
   }
 ];
 
@@ -77,6 +77,18 @@ describe('gux-dropdown-multi', () => {
       await page.waitForChanges();
       selectedItems = await page.findAll('.gux-selected');
       expect(selectedItems.length).toBe(1);
+      await a11yCheck(
+        page,
+        [
+          {
+            issueId: 'color-contrast',
+            exclusionReason:
+              'COMUI-3533: Subtext on hover fails color contrast requirments'
+          },
+          ...axeExclusions
+        ],
+        'after selecting an item'
+      );
 
       await listboxItems[1].click();
       await page.waitForChanges();

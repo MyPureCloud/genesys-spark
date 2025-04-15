@@ -84,10 +84,171 @@
   --gse-ui-formControl-helper-iconSize: 16px;
   --gse-ui-formControl-spinButton-gap: 8px;
   --gse-ui-formControl-spinner-track: #5476d5;
-  --gse-ui-formControl-spinner-errorColor: #3e4044;
+  --gse-ui-formControl-spinner-errorColor: #465066;
   --gse-ui-formControl-textarea-padding: 8px;
   --gse-ui-formControl-focusRing-borderRadius: 4px;
-  --gse-ui-card-backgroundColor: #1e1e21;
+  --gse-ui-calendarMenu-month-defaultText-fontFamily: 'Noto Sans';
+  --gse-ui-calendarMenu-month-defaultText-fontWeight: 400;
+  --gse-ui-calendarMenu-month-defaultText-fontSize: 12px;
+  --gse-ui-calendarMenu-month-defaultText-lineHeight: 18px;
+  --gse-ui-calendarMenu-month-currentText-fontFamily: 'Noto Sans';
+  --gse-ui-calendarMenu-month-currentText-fontWeight: 700;
+  --gse-ui-calendarMenu-month-currentText-fontSize: 12px;
+  --gse-ui-calendarMenu-month-currentText-lineHeight: 18px;
+  --gse-ui-calendarMenu-month-default-foregroundColor: #ffffff;
+  --gse-ui-calendarMenu-month-single-header-textWidth: 154px;
+  --gse-ui-calendarMenu-month-single-header-width: 218px;
+  --gse-ui-calendarMenu-month-single-header-height: 48px;
+  --gse-ui-calendarMenu-month-monthCell-width: 66px;
+  --gse-ui-calendarMenu-month-monthCell-height: 48px;
+  --gse-ui-calendarMenu-month-headerText-fontFamily: 'Noto Sans';
+  --gse-ui-calendarMenu-month-headerText-fontWeight: 700;
+  --gse-ui-calendarMenu-month-headerText-fontSize: 16px;
+  --gse-ui-calendarMenu-month-headerText-lineHeight: 24px;
+  --gse-ui-calendarMenu-month-range-vertical-width: 272px;
+  --gse-ui-calendarMenu-month-range-vertical-height: 652px;
+  --gse-ui-calendarMenu-month-focusBorderRadius: 20px;
+  --gse-ui-calendarMenu-month-borderRadius: 16px;
+  --gse-ui-calendarMenu-month-calendarButton-focusBorderRadius: 4px;
+  --gse-ui-calendarMenu-month-selected-foregroundColor: #ffffff;
+  --gse-ui-calendarMenu-month-selected-backgroundColor: #2143a2;
+  --gse-ui-calendarMenu-month-selected-hoverBackgroundColor: #19327a;
+  --gse-ui-calendarMenu-month-hover-backgroundColor: #465066;
+  --gse-ui-calendarMenu-day-range-width: 16px;
+  --gse-ui-calendarMenu-day-range-height: 32px;
+  --gse-ui-calendarMenu-day-input-height: 32px;
+  --gse-ui-calendarMenu-day-input-width: 160px;
+  --gse-ui-calendarMenu-day-headerText-fontFamily: 'Noto Sans';
+  --gse-ui-calendarMenu-day-headerText-fontWeight: 700;
+  --gse-ui-calendarMenu-day-headerText-fontSize: 12px;
+  --gse-ui-calendarMenu-day-headerText-lineHeight: 18px;
+  --gse-ui-calendarMenu-day-date-size: 32px;
+  --gse-ui-calendarMenu-height: 234px;
+  --gse-ui-calendarMenu-width: 250px;
+  --gse-ui-calendarMenu-dateBody-padding: 16px 24px;
+  --gse-ui-calendarMenu-dateBody-gap: 8px;
+  --gse-ui-calendarMenu-header-backgroundColor: #2143a2;
+  --gse-ui-calendarMenu-header-foregroundColor: #ffffff;
+  --gse-ui-calendarMenu-header-gap: 8px;
+  --gse-ui-calendarMenu-header-padding: 12px 16px;
+  --gse-ui-calendarMenu-header-arrow-padding: 8px;
+  --gse-ui-calendarMenu-backgroundColor: #2a2a2e;
+  --gse-ui-calendarMenu-date-defaultText-fontFamily: 'Noto Sans';
+  --gse-ui-calendarMenu-date-defaultText-fontWeight: 400;
+  --gse-ui-calendarMenu-date-defaultText-fontSize: 12px;
+  --gse-ui-calendarMenu-date-defaultText-lineHeight: 18px;
+  --gse-ui-calendarMenu-date-currentText-fontFamily: 'Noto Sans';
+  --gse-ui-calendarMenu-date-currentText-fontWeight: 700;
+  --gse-ui-calendarMenu-date-currentText-fontSize: 12px;
+  --gse-ui-calendarMenu-date-currentText-lineHeight: 18px;
+  --gse-ui-calendarMenu-date-selected-foregroundColor: #ffffff;
+  --gse-ui-calendarMenu-date-selected-backgroundColor: #2143a2;
+  --gse-ui-calendarMenu-date-selected-hoverBackgroundColor: #19327a;
+  --gse-ui-calendarMenu-date-hover-backgroundColor: #465066;
+  --gse-ui-calendarMenu-date-range-backgroundColor: #475675;
+  --gse-ui-calendarMenu-date-default-foregroundColor: #ffffff;
+  --gse-ui-calendarMenu-single-header-borderRadius: 8px 8px 0 0;
+  --gse-ui-calendarMenu-single-body-borderRadius: 0 0 8px 8px;
+  --gse-ui-calendarMenu-range-header-firstMonth-borderRadius: 8px 0 0 0;
+  --gse-ui-calendarMenu-range-header-secondMonth-borderRadius: 0 8px 0 0;
+  --gse-ui-calendarMenu-range-body-firstMonth-borderRadius: 0 0 0 8px;
+  --gse-ui-calendarMenu-range-body-secondMonth-borderRadius: 0 0 8px 0;
+  --gse-ui-calendarMenu-range-date-endDate-borderRadius: 0 16px 16px 0;
+  --gse-ui-calendarMenu-range-date-startDate-borderRadius: 16px 0 0 16px;
+  --gse-ui-calendarMenu-disabled-opacity: 0.5;
+  --gse-ui-calendarMenu-monthBody-padding: 16px 24px;
+  --gse-ui-calendarMenu-monthBody-gap: 2px;
+  --gse-ui-calendarMenu-boxShadow: 0 0 4px 1px #000000b3;
+  --gse-ui-globalNav-menuOption-selected-backgroundColor: #102251;
+  --gse-ui-globalNav-menuOption-selected-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-disabled-backgroundColor: #2a2a2e;
+  --gse-ui-globalNav-menuOption-disabled-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-selectedPanel-backgroundColor: #19327a;
+  --gse-ui-globalNav-menuOption-selectedPanel-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-return-selected-backgroundColor: #102251;
+  --gse-ui-globalNav-menuOption-return-selected-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-return-default-backgroundColor: #19327a;
+  --gse-ui-globalNav-menuOption-return-default-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-return-hover-backgroundColor: #102251;
+  --gse-ui-globalNav-menuOption-return-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-height: 32px;
+  --gse-ui-globalNav-menuOption-width: 248px;
+  --gse-ui-globalNav-menuOption-padding: 0px 12px;
+  --gse-ui-globalNav-menuOption-gap: 8px;
+  --gse-ui-globalNav-menuOption-default-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-hover-backgroundColor: #0c193d;
+  --gse-ui-globalNav-menuOption-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-panelSelected-backgroundColor: #102251;
+  --gse-ui-globalNav-menuOption-panelSelected-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-focus-borderRadius: 8px;
+  --gse-ui-globalNav-menuOption-borderRadius: 4px;
+  --gse-ui-globalNav-menuOption-disableOpacity: 0.5;
+  --gse-ui-globalNav-menuOption-activeSelected-backgroundColor: #19327a;
+  --gse-ui-globalNav-menuOption-activeSelected-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-treeView-bar: #263b73;
+  --gse-ui-globalNav-menuOption-newTab-default-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-newTab-hover-backgroundColor: #0c193d;
+  --gse-ui-globalNav-menuOption-newTab-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-newTab-selected-backgroundColor: #102251;
+  --gse-ui-globalNav-menuOption-newTab-selected-foregroundColor: #ffffff;
+  --gse-ui-globalNav-sideMenu: linear-gradient(
+    135deg,
+    #09b581 0%,
+    #9de1cd 100%
+  );
+  --gse-ui-globalNav-text-fontFamily: 'Noto Sans';
+  --gse-ui-globalNav-text-fontWeight: 700;
+  --gse-ui-globalNav-text-fontSize: 12px;
+  --gse-ui-globalNav-text-lineHeight: 18px;
+  --gse-ui-globalNav-toggle-onQueue-text-fontFamily: Roboto;
+  --gse-ui-globalNav-toggle-onQueue-text-lineHeight: 16px;
+  --gse-ui-globalNav-toggle-onQueue-text-fontSize: 12px;
+  --gse-ui-globalNav-toggle-onQueue-text-fontWeight: 600;
+  --gse-ui-globalNav-toggle-gap: 16px;
+  --gse-ui-globalNav-toggle-offQueue-text-fontFamily: Roboto;
+  --gse-ui-globalNav-toggle-offQueue-text-lineHeight: 16px;
+  --gse-ui-globalNav-toggle-offQueue-text-fontSize: 12px;
+  --gse-ui-globalNav-toggle-offQueue-text-fontWeight: 400;
+  --gse-ui-globalNav-focus-border-color: #5476d5;
+  --gse-ui-globalNav-focus-border-width: 2px;
+  --gse-ui-globalNav-focus-border-style: solid;
+  --gse-ui-globalNav-buttonReturn-height: 48px;
+  --gse-ui-globalNav-buttonReturn-width: 280px;
+  --gse-ui-globalNav-buttonReturn-padding: 16px 28px;
+  --gse-ui-globalNav-buttonReturn-gap: 12px;
+  --gse-ui-globalNav-treeView-border-color: #263b73;
+  --gse-ui-globalNav-treeView-border-width: 2px;
+  --gse-ui-globalNav-treeView-border-style: solid;
+  --gse-ui-globalNav-treeView-gap: 8px;
+  --gse-ui-globalNav-treeView-width: 224px;
+  --gse-ui-globalNav-bar-padding: 8px 12px;
+  --gse-ui-globalNav-topBar-items-gap: 16px;
+  --gse-ui-globalNav-topBar-padding: 16px 24px;
+  --gse-ui-globalNav-topBar-height: 64px;
+  --gse-ui-globalNav-topBar-frame-backgroundColor: #1e1e21;
+  --gse-ui-globalNav-topBar-frame-stroke: #3e4044;
+  --gse-ui-globalNav-topBar-logo: #ff451a;
+  --gse-ui-globalNav-topBar-pageTitle: #ffffff;
+  --gse-ui-globalNav-topBar-menuButton-closed-default-foregroundColor: #ffffff;
+  --gse-ui-globalNav-topBar-menuButton-closed-hover-backgroundColor: #0c193d;
+  --gse-ui-globalNav-topBar-menuButton-closed-hover-foregroundColorStroke: #ffffff;
+  --gse-ui-globalNav-topBar-menuButton-closed-hover-foregroundColor: #d5def7;
+  --gse-ui-globalNav-topBar-menuButton-open-default-foregroundColorStroke: #ffffff;
+  --gse-ui-globalNav-topBar-menuButton-open-hover-backgroundColor: #0c193d;
+  --gse-ui-globalNav-topBar-menuButton-open-hover-foregroundColor: #d5def7;
+  --gse-ui-globalNav-panel-stroke: #3e4044;
+  --gse-ui-globalNav-panel-panelTitle: #ffffff;
+  --gse-ui-globalNav-panel-primary: linear-gradient(
+    127deg,
+    #141c34 3.19%,
+    #141929 225.06%
+  );
+  --gse-ui-globalNav-panel-secondary: linear-gradient(
+    358deg,
+    #141929 0.16%,
+    #131315 98.45%
+  );
+  --gse-ui-card-backgroundColor: #2a2a2e;
   --gse-ui-card-borderRadius: 8px;
   --gse-ui-card-default-border-color: #4f5157;
   --gse-ui-card-default-border-width: 1px;
@@ -134,7 +295,7 @@
   --gse-ui-tag-accent2-bold-foregroundColor: #ffffff;
   --gse-ui-tag-accent2-subtle-backgroundColor: #193b33;
   --gse-ui-tag-accent2-subtle-foregroundColor: #ffffff;
-  --gse-ui-tag-accent3-bold-backgroundColor: #04445c;
+  --gse-ui-tag-accent3-bold-backgroundColor: #056385;
   --gse-ui-tag-accent3-bold-foregroundColor: #ffffff;
   --gse-ui-tag-accent3-subtle-backgroundColor: #003447;
   --gse-ui-tag-accent3-subtle-foregroundColor: #ffffff;
@@ -192,11 +353,11 @@
   --gse-ui-badge-gap: 4px;
   --gse-ui-badge-info-bold-backgroundColor: #3d538f;
   --gse-ui-badge-info-bold-foregroundColor: #ffffff;
-  --gse-ui-badge-info-regular-backgroundColor: #263b73;
+  --gse-ui-badge-info-regular-backgroundColor: #141c34;
   --gse-ui-badge-info-regular-foregroundColor: #ffffff;
   --gse-ui-badge-success-bold-backgroundColor: #056d4d;
   --gse-ui-badge-success-bold-foregroundColor: #ffffff;
-  --gse-ui-badge-success-regular-backgroundColor: #044834;
+  --gse-ui-badge-success-regular-backgroundColor: #02241a;
   --gse-ui-badge-success-regular-foregroundColor: #ffffff;
   --gse-ui-badge-warning-bold-backgroundColor: #c9a132;
   --gse-ui-badge-warning-bold-foregroundColor: #ffffff;
@@ -269,23 +430,24 @@
   --gse-ui-segmentedControl-button-padding: 0 12px;
   --gse-ui-segmentedControl-button-gap: 8px;
   --gse-ui-segmentedControl-button-start-borderRadius: 4px 0 0 4px;
+  --gse-ui-segmentedControl-button-selected-borderRadius: 4px;
   --gse-ui-segmentedControl-button-middle-borderRadius: 0;
   --gse-ui-segmentedControl-button-end-borderRadius: 0 4px 4px 0;
   --gse-ui-segmentedControl-button-disabled-opacity: 0.5;
   --gse-ui-segmentedControl-button-disabled-backgroundColor: rgba(0, 0, 0, 0);
-  --gse-ui-segmentedControl-button-disabled-foregroundColor: #ffffff;
-  --gse-ui-segmentedControl-button-default-backgroundColor: rgba(0, 0, 0, 0);
-  --gse-ui-segmentedControl-button-default-foregroundColor: #ffffff;
-  --gse-ui-segmentedControl-button-hover-backgroundColor: #4f5157;
-  --gse-ui-segmentedControl-button-hover-foregroundColor: #ffffff;
-  --gse-ui-segmentedControl-button-active-backgroundColor: #2143a2;
-  --gse-ui-segmentedControl-button-active-foregroundColor: #ffffff;
+  --gse-ui-segmentedControl-button-disabled-foregroundColor: #d5def7;
+  --gse-ui-segmentedControl-button-default-backgroundColor: #1e1e21;
+  --gse-ui-segmentedControl-button-default-foregroundColor: #829ce5;
+  --gse-ui-segmentedControl-button-hover-backgroundColor: #465066;
+  --gse-ui-segmentedControl-button-hover-foregroundColor: #d5def7;
+  --gse-ui-segmentedControl-button-active-backgroundColor: #354a72;
+  --gse-ui-segmentedControl-button-active-foregroundColor: #d5def7;
   --gse-ui-segmentedControl-borderRadius: 4px;
   --gse-ui-segmentedControl-height: 32px;
-  --gse-ui-segmentedControl-border-color: #ffffff;
+  --gse-ui-segmentedControl-border-color: #829ce5;
   --gse-ui-segmentedControl-border-width: 1px;
   --gse-ui-segmentedControl-border-style: solid;
-  --gse-ui-segmentedControl-divider-color: #ffffff;
+  --gse-ui-segmentedControl-divider-color: #829ce5;
   --gse-ui-segmentedControl-divider-width: 1px;
   --gse-ui-segmentedControl-divider-style: solid;
   --gse-ui-segmentedControl-iconOnly-padding: 0 8px;
@@ -305,7 +467,7 @@
   --gse-ui-formFooter-sideSheet-desktop-topPadding: 16px;
   --gse-ui-formFooter-sideSheet-desktop-horizontalPadding: 24px;
   --gse-ui-formFooter-sideSheet-desktop-gap: 16px;
-  --gse-ui-formFooter-backgroundColor: #1e1e21;
+  --gse-ui-formFooter-backgroundColor: #2a2a2e;
   --gse-ui-formFooter-border-color: #5476d5;
   --gse-ui-formFooter-border-width: 1px;
   --gse-ui-formFooter-border-style: solid;
@@ -313,7 +475,7 @@
   --gse-ui-statusGlyph-positive: #09b581;
   --gse-ui-statusGlyph-neutral: #f8c73e;
   --gse-ui-statusGlyph-information: #596ea6;
-  --gse-ui-copyToClipboard-label-active-backgroundColor: #4f5157;
+  --gse-ui-copyToClipboard-label-active-backgroundColor: #475675;
   --gse-ui-copyToClipboard-label-foregroundColor: #ffffff;
   --gse-ui-copyToClipboard-label-padding: 2px 4px;
   --gse-ui-copyToClipboard-label-borderRadius: 4px;
@@ -347,26 +509,26 @@
   --gse-ui-button-primary-hover-foregroundColor: #ffffff;
   --gse-ui-button-primary-active-backgroundColor: #102251;
   --gse-ui-button-primary-active-foregroundColor: #ffffff;
-  --gse-ui-button-secondary-default-backgroundColor: #3e4044;
+  --gse-ui-button-secondary-default-backgroundColor: #465066;
   --gse-ui-button-secondary-default-foregroundColor: #ffffff;
-  --gse-ui-button-secondary-hover-backgroundColor: #4f5157;
+  --gse-ui-button-secondary-hover-backgroundColor: #475675;
   --gse-ui-button-secondary-hover-foregroundColor: #ffffff;
-  --gse-ui-button-secondary-active-backgroundColor: #6a6d75;
+  --gse-ui-button-secondary-active-backgroundColor: #354a72;
   --gse-ui-button-secondary-active-foregroundColor: #ffffff;
   --gse-ui-button-tertiary-default-backgroundColor: rgba(0, 0, 0, 0);
-  --gse-ui-button-tertiary-default-foregroundColor: #ffffff;
-  --gse-ui-button-tertiary-default-border-color: #ffffff;
+  --gse-ui-button-tertiary-default-foregroundColor: #adbff0;
+  --gse-ui-button-tertiary-default-border-color: #adbff0;
   --gse-ui-button-tertiary-default-border-width: 1px;
   --gse-ui-button-tertiary-default-border-style: solid;
   --gse-ui-button-tertiary-hover-backgroundColor: #19327a;
-  --gse-ui-button-tertiary-hover-foregroundColor: #ffffff;
+  --gse-ui-button-tertiary-hover-foregroundColor: #d5def7;
   --gse-ui-button-tertiary-active-backgroundColor: #102251;
   --gse-ui-button-tertiary-active-foregroundColor: #ffffff;
   --gse-ui-button-ghost-default-backgroundColor: rgba(0, 0, 0, 0);
-  --gse-ui-button-ghost-default-foregroundColor: #ffffff;
-  --gse-ui-button-ghost-hover-backgroundColor: #4f5157;
-  --gse-ui-button-ghost-hover-foregroundColor: #ffffff;
-  --gse-ui-button-ghost-active-backgroundColor: #6a6d75;
+  --gse-ui-button-ghost-default-foregroundColor: #adbff0;
+  --gse-ui-button-ghost-hover-backgroundColor: #475675;
+  --gse-ui-button-ghost-hover-foregroundColor: #d5def7;
+  --gse-ui-button-ghost-active-backgroundColor: #354a72;
   --gse-ui-button-ghost-active-foregroundColor: #ffffff;
   --gse-ui-button-danger-default-backgroundColor: #881429;
   --gse-ui-button-danger-default-foregroundColor: #ffffff;
@@ -391,7 +553,7 @@
   --gse-ui-actionButton-leftSegment-focusBorderRadius: 16px 0 0 16px;
   --gse-ui-actionButton-leftSegment-borderRadius: 4px 0 0 4px;
   --gse-ui-actionButton-borderRadius: 4px;
-  --gse-ui-actionButton-tertiary-divider-color: #2143a2;
+  --gse-ui-actionButton-tertiary-divider-color: #adbff0;
   --gse-ui-actionButton-tertiary-divider-width: 2px;
   --gse-ui-actionButton-tertiary-divider-style: solid;
   --gse-ui-actionButton-primary-divider-color: #1e1e21;
@@ -513,8 +675,8 @@
   --gse-ui-menu-option-shortcut-text-lineHeight: 20px;
   --gse-ui-menu-option-shortcut-default-foregroundColor: #c1c6d4;
   --gse-ui-menu-option-shortcut-selected-foregroundColor: #ffffff;
-  --gse-ui-menu-option-hover-backgroundColor: #3e4044;
-  --gse-ui-menu-option-selected-backgroundColor: #4f5157;
+  --gse-ui-menu-option-hover-backgroundColor: #465066;
+  --gse-ui-menu-option-selected-backgroundColor: #475675;
   --gse-ui-menu-option-disabled-opacity: 0.5;
   --gse-ui-menu-option-checkbox-unchecked-default-foregroundColor: #848891;
   --gse-ui-menu-option-checkbox-unchecked-hover-foregroundColor: #829ce5;
@@ -530,7 +692,7 @@
   --gse-ui-menu-option-focus-border-color: #5476d5;
   --gse-ui-menu-option-focus-border-width: 1px;
   --gse-ui-menu-option-focus-border-style: solid;
-  --gse-ui-menu-option-default-backgroundColor: #1e1e21;
+  --gse-ui-menu-option-default-backgroundColor: #2a2a2e;
   --gse-ui-menu-maxHeight: 344px;
   --gse-ui-menu-borderRadius: 4px;
   --gse-ui-menu-border-color: #4f5157;
@@ -538,7 +700,7 @@
   --gse-ui-menu-border-style: solid;
   --gse-ui-menu-boxShadow: 0 0 4px 1px #000000b3;
   --gse-ui-menu-padding: 8px 0px;
-  --gse-ui-menu-backgroundColor: #1e1e21;
+  --gse-ui-menu-backgroundColor: #2a2a2e;
   --gse-ui-menu-scrollbar-foregroundColor: #b2b7c4;
   --gse-ui-menu-divider-backgroundColor: #4f5157;
   --gse-ui-menu-divider-margin: 4px 0 8px 0;
@@ -567,82 +729,10 @@
   --gse-ui-dropdown-menu-emptyState-subheader-text-fontSize: 12px;
   --gse-ui-dropdown-menu-emptyState-subheader-foregroundColor: #b2b7c4;
   --gse-ui-dropdown-gap: 4px;
-  --gse-ui-calendarMenu-day-range-width: 16px;
-  --gse-ui-calendarMenu-day-range-height: 32px;
-  --gse-ui-calendarMenu-day-input-height: 32px;
-  --gse-ui-calendarMenu-day-input-width: 160px;
-  --gse-ui-calendarMenu-day-headerText-fontFamily: 'Noto Sans';
-  --gse-ui-calendarMenu-day-headerText-fontWeight: 700;
-  --gse-ui-calendarMenu-day-headerText-fontSize: 12px;
-  --gse-ui-calendarMenu-day-headerText-lineHeight: 18px;
-  --gse-ui-calendarMenu-day-date-size: 32px;
-  --gse-ui-calendarMenu-height: 234px;
-  --gse-ui-calendarMenu-width: 250px;
-  --gse-ui-calendarMenu-month-default-foregroundColor: #ffffff;
-  --gse-ui-calendarMenu-month-single-header-textWidth: 154px;
-  --gse-ui-calendarMenu-month-single-header-width: 218px;
-  --gse-ui-calendarMenu-month-single-header-height: 48px;
-  --gse-ui-calendarMenu-month-monthCell-width: 66px;
-  --gse-ui-calendarMenu-month-monthCell-height: 48px;
-  --gse-ui-calendarMenu-month-headerText-fontFamily: 'Noto Sans';
-  --gse-ui-calendarMenu-month-headerText-fontWeight: 700;
-  --gse-ui-calendarMenu-month-headerText-fontSize: 16px;
-  --gse-ui-calendarMenu-month-headerText-lineHeight: 24px;
-  --gse-ui-calendarMenu-month-range-vertical-width: 272px;
-  --gse-ui-calendarMenu-month-range-vertical-height: 652px;
-  --gse-ui-calendarMenu-month-defaultText-fontFamily: 'Noto Sans';
-  --gse-ui-calendarMenu-month-defaultText-fontWeight: 400;
-  --gse-ui-calendarMenu-month-defaultText-fontSize: 12px;
-  --gse-ui-calendarMenu-month-defaultText-lineHeight: 18px;
-  --gse-ui-calendarMenu-month-currentText-fontFamily: 'Noto Sans';
-  --gse-ui-calendarMenu-month-currentText-fontWeight: 700;
-  --gse-ui-calendarMenu-month-currentText-fontSize: 12px;
-  --gse-ui-calendarMenu-month-currentText-lineHeight: 18px;
-  --gse-ui-calendarMenu-month-focusBorderRadius: 20px;
-  --gse-ui-calendarMenu-month-borderRadius: 16px;
-  --gse-ui-calendarMenu-month-calendarButton-focusBorderRadius: 4px;
-  --gse-ui-calendarMenu-month-selected-foregroundColor: #ffffff;
-  --gse-ui-calendarMenu-month-selected-backgroundColor: #2143a2;
-  --gse-ui-calendarMenu-month-selected-hoverBackgroundColor: #19327a;
-  --gse-ui-calendarMenu-month-hover-backgroundColor: #3e4044;
-  --gse-ui-calendarMenu-dateBody-padding: 16px 24px;
-  --gse-ui-calendarMenu-dateBody-gap: 8px;
-  --gse-ui-calendarMenu-header-backgroundColor: #2143a2;
-  --gse-ui-calendarMenu-header-foregroundColor: #ffffff;
-  --gse-ui-calendarMenu-header-gap: 8px;
-  --gse-ui-calendarMenu-header-padding: 12px 16px;
-  --gse-ui-calendarMenu-header-arrow-padding: 8px;
-  --gse-ui-calendarMenu-backgroundColor: #1e1e21;
-  --gse-ui-calendarMenu-date-defaultText-fontFamily: 'Noto Sans';
-  --gse-ui-calendarMenu-date-defaultText-fontWeight: 400;
-  --gse-ui-calendarMenu-date-defaultText-fontSize: 12px;
-  --gse-ui-calendarMenu-date-defaultText-lineHeight: 18px;
-  --gse-ui-calendarMenu-date-currentText-fontFamily: 'Noto Sans';
-  --gse-ui-calendarMenu-date-currentText-fontWeight: 700;
-  --gse-ui-calendarMenu-date-currentText-fontSize: 12px;
-  --gse-ui-calendarMenu-date-currentText-lineHeight: 18px;
-  --gse-ui-calendarMenu-date-selected-foregroundColor: #ffffff;
-  --gse-ui-calendarMenu-date-selected-backgroundColor: #2143a2;
-  --gse-ui-calendarMenu-date-selected-hoverBackgroundColor: #19327a;
-  --gse-ui-calendarMenu-date-hover-backgroundColor: #3e4044;
-  --gse-ui-calendarMenu-date-range-backgroundColor: #4f5157;
-  --gse-ui-calendarMenu-date-default-foregroundColor: #ffffff;
-  --gse-ui-calendarMenu-single-header-borderRadius: 8px 8px 0 0;
-  --gse-ui-calendarMenu-single-body-borderRadius: 0 0 8px 8px;
-  --gse-ui-calendarMenu-range-header-firstMonth-borderRadius: 8px 0 0 0;
-  --gse-ui-calendarMenu-range-header-secondMonth-borderRadius: 0 8px 0 0;
-  --gse-ui-calendarMenu-range-body-firstMonth-borderRadius: 0 0 0 8px;
-  --gse-ui-calendarMenu-range-body-secondMonth-borderRadius: 0 0 8px 0;
-  --gse-ui-calendarMenu-range-date-endDate-borderRadius: 0 16px 16px 0;
-  --gse-ui-calendarMenu-range-date-startDate-borderRadius: 16px 0 0 16px;
-  --gse-ui-calendarMenu-disabled-opacity: 0.5;
-  --gse-ui-calendarMenu-monthBody-padding: 16px 24px;
-  --gse-ui-calendarMenu-monthBody-gap: 2px;
-  --gse-ui-calendarMenu-boxShadow: 0 0 4px 1px #000000b3;
   --gse-ui-datePicker-range-gap: 24px;
   --gse-ui-datePicker-startEndInput-gap: 8px;
   --gse-ui-datePicker-dateTyped-gap: 10px;
-  --gse-ui-datePicker-dateTyped-backgroundColor: #3e4044;
+  --gse-ui-datePicker-dateTyped-backgroundColor: #465066;
   --gse-ui-datePicker-disabled-opacity: 0.5;
   --gse-ui-datePicker-focusCalendar-gap: 2px;
   --gse-ui-datePicker-iconHover: #cad1e1;
@@ -661,7 +751,7 @@
   --gse-ui-toggle-track-disabled-on-backgroundColor: #5476d5;
   --gse-ui-toggle-track-error-off-backgroundColor: #440a15;
   --gse-ui-toggle-track-error-on-backgroundColor: #e84e6a;
-  --gse-ui-toggle-track-hover-off-backgroundColor: #3e4044;
+  --gse-ui-toggle-track-hover-off-backgroundColor: #465066;
   --gse-ui-toggle-track-hover-on-backgroundColor: #829ce5;
   --gse-ui-toggle-track-borderRadius: 16px;
   --gse-ui-toggle-handle-width: 16px;
@@ -678,7 +768,7 @@
   --gse-ui-toggle-handle-error-border-color: #881429;
   --gse-ui-toggle-handle-error-border-width: 2px;
   --gse-ui-toggle-handle-error-border-style: solid;
-  --gse-ui-toggle-handle-backgroundColor: #1e1e21;
+  --gse-ui-toggle-handle-backgroundColor: #2a2a2e;
   --gse-ui-toggle-handle-foregroundColor: #5476d5;
   --gse-ui-toggle-handle-borderRadius: 16px;
   --gse-ui-toggle-disabled-opacity: 0.5;
@@ -748,7 +838,7 @@
   --gse-ui-fileUpload-dragAndDrop-dropZone-active-border-width: 2px;
   --gse-ui-fileUpload-dragAndDrop-dropZone-active-border-style: dashed;
   --gse-ui-fileUpload-dragAndDrop-dropZone-minHeight: 112px;
-  --gse-ui-fileUpload-dragAndDrop-dropZone-background-active: #3e4044;
+  --gse-ui-fileUpload-dragAndDrop-dropZone-background-active: #465066;
   --gse-ui-fileUpload-dragAndDrop-dropZoneText-color: #ffffff;
   --gse-ui-fileUpload-dragDrop-btnText-gap: 12px;
   --gse-ui-colorPicker-label-requiredSymbolColor: #e84e6a;
@@ -792,10 +882,10 @@
   --gse-ui-flyoutMenu-borderRadius: 4px;
   --gse-ui-flyoutMenu-padding: 8px 0px;
   --gse-ui-flyoutMenu-parenting-gap: 8px;
-  --gse-ui-flyoutMenu-backgroundColor: #1e1e21;
+  --gse-ui-flyoutMenu-backgroundColor: #2a2a2e;
   --gse-ui-flyoutMenu-arrow-borderRadius: 4px;
-  --gse-ui-phoneInput-dropdown-hover-backgroundColor: #3e4044;
-  --gse-ui-phoneInput-dropdown-active-backgroundColor: #4f5157;
+  --gse-ui-phoneInput-dropdown-hover-backgroundColor: #465066;
+  --gse-ui-phoneInput-dropdown-active-backgroundColor: #475675;
   --gse-ui-phoneInput-dropdown-foregroundColor: #c1c6d4;
   --gse-ui-phoneInput-dropdown-flag-height: 12px;
   --gse-ui-phoneInput-dropdown-flag-width: 16px;
@@ -822,12 +912,12 @@
   --gse-ui-monthPicker-calendarStates-focus-border-style: solid;
   --gse-ui-selectorCard-ilustrativeIcon-foregroundColor: #b2b7c4;
   --gse-ui-selectorCard-text-foregroundColor: #ffffff;
-  --gse-ui-selectorCard-default-backgroundColor: #1e1e21;
+  --gse-ui-selectorCard-default-backgroundColor: #2a2a2e;
   --gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor: #5476d5;
   --gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor: #848891;
-  --gse-ui-selectorCard-hover-backgroundColor: #3e4044;
+  --gse-ui-selectorCard-hover-backgroundColor: #465066;
   --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor: #829ce5;
-  --gse-ui-selectorCard-active-backgroundColor: #4f5157;
+  --gse-ui-selectorCard-active-backgroundColor: #475675;
   --gse-ui-selectorCard-active-selectedIndicator-foregroundColor: #adbff0;
   --gse-ui-selectorCard-error-backgroundColor: #440a15;
   --gse-ui-selectorCard-error-selectedIndicator-foregroundColor: #e84e6a;
@@ -869,7 +959,7 @@
   --gse-ui-selectorCard-selected-border-width: 1px;
   --gse-ui-selectorCard-selected-border-style: solid;
   --gse-ui-selectorCard-disabled-opacity: 0.5;
-  --gse-ui-selectorCard-disabled-backgroundColor: #1e1e21;
+  --gse-ui-selectorCard-disabled-backgroundColor: #2a2a2e;
   --gse-ui-selectorCard-disabled-selectedIndicator-selected-foregroundColor: #5476d5;
   --gse-ui-selectorCard-disabled-selectedIndicator-unselected-foregroundColor: #848891;
   --gse-ui-ctaGroup-gap: 8px;
@@ -907,7 +997,7 @@
   --gse-ui-dataTableItems-header-multiselect-compact-selectedBar-width: 64px;
   --gse-ui-dataTableItems-header-selectedIndicatorColor: #5476d5;
   --gse-ui-dataTableItems-header-defaultBackgroundColor: #2a2a2e;
-  --gse-ui-dataTableItems-header-fixedBackgroundColor: #3e4044;
+  --gse-ui-dataTableItems-header-fixedBackgroundColor: #465066;
   --gse-ui-dataTableItems-header-foregroundColor: #ffffff;
   --gse-ui-dataTableItems-header-sort-foregroundColor: #c1c6d4;
   --gse-ui-dataTableItems-header-default-height: 40px;
@@ -925,7 +1015,7 @@
   --gse-ui-dataTableItems-scrollbar-foregroundColor: #c1c6d4;
   --gse-ui-dataTableItems-cell-altBackgroundColor: #131315;
   --gse-ui-dataTableItems-cell-defaultBackgroundColor: #2a2a2e;
-  --gse-ui-dataTableItems-cell-hoverBackgroundColor: #6a6d75;
+  --gse-ui-dataTableItems-cell-hoverBackgroundColor: #475675;
   --gse-ui-dataTableItems-cell-foregroundColor: #ffffff;
   --gse-ui-dataTableItems-cell-chevron-foregroundColor: #c1c6d4;
   --gse-ui-dataTableItems-cell-multiselect-default-height: 40px;
@@ -985,18 +1075,18 @@
   --gse-ui-dataTableItems-tablePagination-countDisplay-gap: 4px;
   --gse-ui-dataTableItems-inlineDropdown-gap: 12px;
   --gse-ui-dataTableItems-inlineDropdown-text: #ffffff;
-  --gse-ui-dataTableItems-inlineDropdown-hover: #4f5157;
-  --gse-ui-dataTableItems-inlineDropdown-active: #6a6d75;
+  --gse-ui-dataTableItems-inlineDropdown-hover: #475675;
+  --gse-ui-dataTableItems-inlineDropdown-active: #354a72;
   --gse-ui-dataTableItems-inlineDropdown-borderRadius: 4px;
   --gse-ui-dataTableItems-inlineDropdown-label-fontFamily: 'Noto Sans';
   --gse-ui-dataTableItems-inlineDropdown-label-fontWeight: 400;
   --gse-ui-dataTableItems-inlineDropdown-label-fontSize: 12px;
   --gse-ui-dataTableItems-inlineDropdown-label-lineHeight: 18px;
-  --gse-ui-dataTableItems-inlineDropdown-chevron-hover: #ffffff;
+  --gse-ui-dataTableItems-inlineDropdown-chevron-hover: #d5def7;
   --gse-ui-dataTableItems-inlineDropdown-chevron-active: #ffffff;
   --gse-ui-dataTableItems-inlineDropdown-chevron-default: #b2b7c4;
   --gse-ui-dataTableItems-statusIndicator-gap: 8px;
-  --gse-ui-dataTableItems-statusIndicator-hover: #6a6d75;
+  --gse-ui-dataTableItems-statusIndicator-hover: #354a72;
   --gse-ui-dataTableItems-statusIndicator-borderRadius: 4px;
   --gse-ui-dataTableItems-statusIndicator-label-fontFamily: 'Noto Sans';
   --gse-ui-dataTableItems-statusIndicator-label-fontWeight: 400;
@@ -1017,33 +1107,45 @@
   --gse-ui-avatar-presenceRing-available: linear-gradient(
     135deg,
     #09b581 0%,
-    #044834 100%
+    #1d624f 100%
   );
   --gse-ui-avatar-presenceRing-busy: linear-gradient(
     135deg,
-    #e84e6a 0%,
-    #5a0e1c 100%
+    #e22245 0%,
+    #742737 100%
   );
   --gse-ui-avatar-presenceRing-away: linear-gradient(
     135deg,
     #f8c73e 0%,
-    #6c5619 100%
+    #7c6934 100%
   );
   --gse-ui-avatar-presenceRing-onQueue: linear-gradient(
     135deg,
-    #2143a2 0%,
-    #2143a2 100%
+    #2954cb 0%,
+    #2a3b6d 100%
   );
   --gse-ui-avatar-presenceRing-offline: linear-gradient(
     135deg,
     #848891 0%,
-    #848891 100%
+    #4e5056 100%
   );
   --gse-ui-avatar-presenceRing-outOfOffice: linear-gradient(
     135deg,
     #b74ba4 0%,
-    #f5bfeb 100%
+    #62375d 100%
   );
+  --gse-ui-avatar-presenceRing-plainColors-available-default: #09b581;
+  --gse-ui-avatar-presenceRing-plainColors-available-reduced: #1d624f;
+  --gse-ui-avatar-presenceRing-plainColors-busy-default: #e22245;
+  --gse-ui-avatar-presenceRing-plainColors-busy-reduced: #742737;
+  --gse-ui-avatar-presenceRing-plainColors-away-default: #f8c73e;
+  --gse-ui-avatar-presenceRing-plainColors-away-reduced: #7c6934;
+  --gse-ui-avatar-presenceRing-plainColors-onQueue-default: #2954cb;
+  --gse-ui-avatar-presenceRing-plainColors-onQueue-reduced: #2a3b6d;
+  --gse-ui-avatar-presenceRing-plainColors-offline-default: #848891;
+  --gse-ui-avatar-presenceRing-plainColors-offline-reduced: #4e5056;
+  --gse-ui-avatar-presenceRing-plainColors-outOfOffice-default: #b74ba4;
+  --gse-ui-avatar-presenceRing-plainColors-outOfOffice-reduced: #62375d;
   --gse-ui-avatar-medium-size: 48px;
   --gse-ui-avatar-medium-badge-size: 16px;
   --gse-ui-avatar-medium-focusRing-size: 50px;
@@ -1076,7 +1178,7 @@
   --gse-ui-avatar-badge-busy-icon-margin: 2px;
   --gse-ui-avatar-badge-away-color: #f8c73e;
   --gse-ui-avatar-badge-away-icon-margin: 2px;
-  --gse-ui-avatar-badge-onQueue-color: #2143a2;
+  --gse-ui-avatar-badge-onQueue-color: #2954cb;
   --gse-ui-avatar-badge-offline-color: #848891;
   --gse-ui-avatar-badge-outOfOffice: #b74ba4;
   --gse-ui-avatar-badge-notification-color: #ff451a;
@@ -1087,7 +1189,7 @@
   --gse-ui-avatar-media-initialsBackground-default: #3d538f;
   --gse-ui-avatar-media-initialsBackground-accent1: #6a6d75;
   --gse-ui-avatar-media-initialsBackground-accent2: #003447;
-  --gse-ui-avatar-media-initialsBackground-accent3: #04445c;
+  --gse-ui-avatar-media-initialsBackground-accent3: #056385;
   --gse-ui-avatar-media-initialsBackground-accent4: #233d57;
   --gse-ui-avatar-media-initialsBackground-accent5: #1a2e41;
   --gse-ui-avatar-media-initialsBackground-accent6: #3e4044;
@@ -1098,7 +1200,7 @@
   --gse-ui-avatar-media-initialsBackground-accent11: #661c0a;
   --gse-ui-avatar-media-initialsBackground-accent12: #992910;
   --gse-ui-avatar-media-initialsBackground-overflowCount: #3e4044;
-  --gse-ui-avatar-media-initialsBackground-add: #3e4044;
+  --gse-ui-avatar-media-initialsBackground-add: #465066;
   --gse-ui-avatar-media-initialsForeground-default: #ffffff;
   --gse-ui-avatar-media-initialsForeground-inverse: #ffffff;
   --gse-ui-avatar-media-initialsForeground-add: #ffffff;
@@ -1106,10 +1208,10 @@
   --gse-ui-avatar-hoverModal-foregroundColor: #1e1e21;
   --gse-ui-avatar-hoverModal-opacity: 0.64;
   --gse-ui-avatar-content-borderRadius: 100%;
-  --gse-ui-avatar-content-default-border-color: #1e1e21;
+  --gse-ui-avatar-content-default-border-color: #2a2a2e;
   --gse-ui-avatar-content-default-border-width: 1px;
   --gse-ui-avatar-content-default-border-style: solid;
-  --gse-ui-avatar-content-large-border-color: #1e1e21;
+  --gse-ui-avatar-content-large-border-color: #2a2a2e;
   --gse-ui-avatar-content-large-border-width: 2px;
   --gse-ui-avatar-content-large-border-style: solid;
   --gse-ui-avatar-groupSet-gap: -2px;
@@ -1130,88 +1232,14 @@
   --gse-ui-avatar-focus: #5476d5;
   --gse-ui-avatar-addChangeImage-hoverModal-shroudSize: 84px;
   --gse-ui-avatar-addChangeImage-icon-size: 16px;
-  --gse-ui-globalNav-sideMenu: linear-gradient(
-    135deg,
-    #09b581 0%,
-    #9de1cd 100%
-  );
-  --gse-ui-globalNav-text-fontFamily: Roboto;
-  --gse-ui-globalNav-text-lineHeight: 16px;
-  --gse-ui-globalNav-text-fontSize: 12px;
-  --gse-ui-globalNav-text-fontWeight: 700;
-  --gse-ui-globalNav-toggle-onQueue-text-fontFamily: Roboto;
-  --gse-ui-globalNav-toggle-onQueue-text-lineHeight: 16px;
-  --gse-ui-globalNav-toggle-onQueue-text-fontSize: 12px;
-  --gse-ui-globalNav-toggle-onQueue-text-fontWeight: 600;
-  --gse-ui-globalNav-toggle-gap: 16px;
-  --gse-ui-globalNav-toggle-offQueue-text-fontFamily: Roboto;
-  --gse-ui-globalNav-toggle-offQueue-text-lineHeight: 16px;
-  --gse-ui-globalNav-toggle-offQueue-text-fontSize: 12px;
-  --gse-ui-globalNav-toggle-offQueue-text-fontWeight: 400;
-  --gse-ui-globalNav-focus-border-color: #5476d5;
-  --gse-ui-globalNav-focus-border-width: 2px;
-  --gse-ui-globalNav-focus-border-style: solid;
-  --gse-ui-globalNav-menuOption-height: 32px;
-  --gse-ui-globalNav-menuOption-width: 248px;
-  --gse-ui-globalNav-menuOption-padding: 0px 12px;
-  --gse-ui-globalNav-menuOption-gap: 8px;
-  --gse-ui-globalNav-menuOption-default-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-hover-backgroundColor: #102251;
-  --gse-ui-globalNav-menuOption-hover-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-selected-backgroundColor: #2143a2;
-  --gse-ui-globalNav-menuOption-selected-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-disabled-backgroundColor: #1e1e21;
-  --gse-ui-globalNav-menuOption-focus-borderRadius: 8px;
-  --gse-ui-globalNav-menuOption-borderRadius: 4px;
-  --gse-ui-globalNav-menuOption-disableOpacity: 0.5;
-  --gse-ui-globalNav-menuOption-selectedPanel-backgroundColor: #19327a;
-  --gse-ui-globalNav-menuOption-selectedPanel-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-return-default-backgroundColor: #19327a;
-  --gse-ui-globalNav-menuOption-return-default-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-return-hover-backgroundColor: #102251;
-  --gse-ui-globalNav-menuOption-return-hover-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-return-selected-backgroundColor: #2143a2;
-  --gse-ui-globalNav-menuOption-return-selected-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-treeView-bar: #4f51574d;
-  --gse-ui-globalNav-buttonReturn-height: 48px;
-  --gse-ui-globalNav-buttonReturn-width: 280px;
-  --gse-ui-globalNav-buttonReturn-padding: 16px 28px;
-  --gse-ui-globalNav-buttonReturn-gap: 12px;
-  --gse-ui-globalNav-treeView-border-color: #4f51574d;
-  --gse-ui-globalNav-treeView-border-width: 2px;
-  --gse-ui-globalNav-treeView-border-style: solid;
-  --gse-ui-globalNav-treeView-gap: 8px;
-  --gse-ui-globalNav-treeView-width: 224px;
-  --gse-ui-globalNav-bar-padding: 8px 12px;
-  --gse-ui-globalNav-topBar-items-gap: 16px;
-  --gse-ui-globalNav-topBar-padding: 16px 24px;
-  --gse-ui-globalNav-topBar-height: 64px;
-  --gse-ui-globalNav-topBar-frame-backgroundColor: #1e1e21;
-  --gse-ui-globalNav-topBar-frame-stroke: #4f5157;
-  --gse-ui-globalNav-topBar-logo: #ff451a;
-  --gse-ui-globalNav-topBar-menuButton-closed-default-foregroundColor: #2143a2;
-  --gse-ui-globalNav-topBar-menuButton-closed-hover-backgroundColor: #19327a;
-  --gse-ui-globalNav-topBar-menuButton-closed-hover-foregroundColorStroke: #2143a2;
-  --gse-ui-globalNav-topBar-menuButton-closed-hover-foregroundColor: #ffffff;
-  --gse-ui-globalNav-topBar-menuButton-open-default-foregroundColorStroke: #ffffff;
-  --gse-ui-globalNav-topBar-menuButton-open-hover-backgroundColor: #19327a;
-  --gse-ui-globalNav-topBar-menuButton-open-hover-foregroundColor: #ffffff;
-  --gse-ui-globalNav-panel-panelTitle: #ffffff;
-  --gse-ui-globalNav-panel-primary: linear-gradient(
-    127deg,
-    #23395d 3.19%,
-    #3e5374 225.06%
-  );
-  --gse-ui-globalNav-panel-secondary: linear-gradient(
-    358deg,
-    #1b2b48 0.16%,
-    #23395d 98.45%
-  );
   --gse-ui-dataTableComposed-boxShadow: 0 0 4px 1px #000000b3;
   --gse-ui-dataTableComposed-width: 1440px;
   --gse-ui-focus-color: #5476d5;
   --gse-ui-focus-width: 2px;
   --gse-ui-focus-style: solid;
+  --gse-ui-dataTable-border-color: #3e4044;
+  --gse-ui-dataTable-border-width: 1px;
+  --gse-ui-dataTable-border-style: solid;
   --gse-ui-tabs-item-height: 40px;
   --gse-ui-tabs-item-horizontal-fixedHeight: 40px;
   --gse-ui-tabs-item-horizontal-padding: 11px 12px 10px;
@@ -1256,7 +1284,7 @@
   --gse-ui-advancedTabs-item-focus-border-color: #5476d5;
   --gse-ui-advancedTabs-item-focus-border-width: 2px;
   --gse-ui-advancedTabs-item-focus-border-style: solid;
-  --gse-ui-advancedTabs-item-backgroundColor: #1e1e21;
+  --gse-ui-advancedTabs-item-backgroundColor: #2a2a2e;
   --gse-ui-advancedTabs-item-borderRadius: 4px 4px 0 0;
   --gse-ui-advancedTabs-item-height: 48px;
   --gse-ui-advancedTabs-item-width: 151px;
@@ -1292,19 +1320,19 @@
   --gse-ui-advancedTabs-set-backgroundColor: #1e1e21;
   --gse-ui-advancedTabs-set-standard-width: 920px;
   --gse-ui-toast-closeButtonColor: #b2b7c4;
-  --gse-ui-toast-success-backgroundColor: #1e1e21;
+  --gse-ui-toast-success-backgroundColor: #2a2a2e;
   --gse-ui-toast-success-foregroundColor: #ffffff;
   --gse-ui-toast-success-iconColor: #09b581;
-  --gse-ui-toast-warning-backgroundColor: #1e1e21;
+  --gse-ui-toast-warning-backgroundColor: #2a2a2e;
   --gse-ui-toast-warning-foregroundColor: #ffffff;
   --gse-ui-toast-warning-iconColor: #f8c73e;
-  --gse-ui-toast-info-backgroundColor: #1e1e21;
+  --gse-ui-toast-info-backgroundColor: #2a2a2e;
   --gse-ui-toast-info-foregroundColor: #ffffff;
   --gse-ui-toast-info-iconColor: #596ea6;
-  --gse-ui-toast-action-backgroundColor: #1e1e21;
+  --gse-ui-toast-action-backgroundColor: #2a2a2e;
   --gse-ui-toast-action-foregroundColor: #ffffff;
   --gse-ui-toast-action-iconColor: #2143a2;
-  --gse-ui-toast-error-backgroundColor: #1e1e21;
+  --gse-ui-toast-error-backgroundColor: #2a2a2e;
   --gse-ui-toast-error-foregroundColor: #ffffff;
   --gse-ui-toast-error-iconColor: #e84e6a;
   --gse-ui-toast-heading-fontFamily: Urbanist;
@@ -1327,7 +1355,7 @@
   --gse-ui-toast-stacking-gap: 4px;
   --gse-ui-modal-closeButtonColor: #b2b7c4;
   --gse-ui-modal-headerColor: #ffffff;
-  --gse-ui-modal-backgroundColor: #1e1e21;
+  --gse-ui-modal-backgroundColor: #2a2a2e;
   --gse-ui-modal-shroudColor: #040814a3;
   --gse-ui-modal-header-gap: 12px;
   --gse-ui-modal-padding: 32px;
@@ -1350,7 +1378,7 @@
   --gse-ui-popover-boxShadow: 0 0 8px 1px #000000b3;
   --gse-ui-popover-closeButtonColor: #b2b7c4;
   --gse-ui-popover-headerColor: #ffffff;
-  --gse-ui-popover-backgroundColor: #1e1e21;
+  --gse-ui-popover-backgroundColor: #2a2a2e;
   --gse-ui-popover-gap: 16px;
   --gse-ui-popover-padding: 24px;
   --gse-ui-popover-buttonsBar-gap: 8px;
@@ -1367,7 +1395,7 @@
   --gse-ui-popover-anchor-width: 20px;
   --gse-ui-popover-anchor-height: 8px;
   --gse-ui-progressAndLoading-spinner-foreground: #5476d5;
-  --gse-ui-progressAndLoading-spinner-base: #3e4044;
+  --gse-ui-progressAndLoading-spinner-base: #465066;
   --gse-ui-progressAndLoading-spinner-large: 48px;
   --gse-ui-progressAndLoading-spinner-small: 16px;
   --gse-ui-progressAndLoading-spinner-text-fontFamily: 'Noto Sans';
@@ -1465,12 +1493,12 @@
   --gse-ui-accordion-menuItem-hover-foreground-labelColor: #ffffff;
   --gse-ui-accordion-menuItem-hover-foreground-startShortcutColor: #c1c6d4;
   --gse-ui-accordion-menuItem-hover-foreground-parentIconColor: #cad1e1;
-  --gse-ui-accordion-menuItem-hover-backgroundColor: #3e4044;
+  --gse-ui-accordion-menuItem-hover-backgroundColor: #465066;
   --gse-ui-accordion-menuItem-selected-foreground-startIconColor: #ffffff;
   --gse-ui-accordion-menuItem-selected-foreground-labelColor: #ffffff;
   --gse-ui-accordion-menuItem-selected-foreground-startShortcutColor: #ffffff;
   --gse-ui-accordion-menuItem-selected-foreground-parentIconColor: #ffffff;
-  --gse-ui-accordion-menuItem-selected-backgroundColor: #4f5157;
+  --gse-ui-accordion-menuItem-selected-backgroundColor: #475675;
   --gse-ui-accordion-menuItem-focus-borderRadius: 4px;
   --gse-ui-accordion-menuItem-label-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-accordion-menuItem-label-defaultText-fontWeight: 400;
@@ -1490,7 +1518,7 @@
   --gse-ui-accordion-contentItem-padding: 16px;
   --gse-ui-accordion-contentItem-gap: 16px;
   --gse-ui-accordion-contentItem-foregroundColor: #ffffff;
-  --gse-ui-accordion-contentItem-backgroundColor: #1e1e21;
+  --gse-ui-accordion-contentItem-backgroundColor: #2a2a2e;
   --gse-ui-accordion-contentItem-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-accordion-contentItem-defaultText-fontWeight: 400;
   --gse-ui-accordion-contentItem-defaultText-fontSize: 12px;
@@ -1581,11 +1609,11 @@
   --gse-ui-rte-mainContainer-focus-border-color: #5476d5;
   --gse-ui-rte-mainContainer-focus-border-width: 2px;
   --gse-ui-rte-mainContainer-focus-border-style: solid;
-  --gse-ui-rte-rteMenu-backgroundColor: #1e1e21;
+  --gse-ui-rte-rteMenu-backgroundColor: #2a2a2e;
   --gse-ui-rte-rteMenu-border-color: #4f5157;
   --gse-ui-rte-rteMenu-border-width: 1px;
   --gse-ui-rte-rteMenu-border-style: solid;
-  --gse-ui-sidePanel-backgroundColor: #1e1e21;
+  --gse-ui-sidePanel-backgroundColor: #2a2a2e;
   --gse-ui-sidePanel-headerColor: #ffffff;
   --gse-ui-sidePanel-boxShadow: 0 0 6px 1px #000000b3;
   --gse-ui-sidePanel-descriptionColor: #b2b7c4;
@@ -1760,6 +1788,8 @@
   --gse-ui-charts-gaugeChart-segment-default: #53bee5;
   --gse-ui-charts-gaugeChart-segment-track: #3e4044;
   --gse-ui-charts-gaugeChart-segment-chartMessage: #3e4044;
+  --gse-ui-charts-gaugeChart-indicator-positive: #09b581;
+  --gse-ui-charts-gaugeChart-indicator-negative: #e84e6a;
   --gse-ui-charts-heatmap-numericalTile-level1-default: #e6f4fa;
   --gse-ui-charts-heatmap-numericalTile-level1-reduced: #e6f4fa40;
   --gse-ui-charts-heatmap-numericalTile-level10-default: #003447;
@@ -1786,8 +1816,8 @@
   --gse-ui-charts-heatmap-categoricalTile-red-reduced: #ff7d9240;
   --gse-ui-charts-heatmap-categoricalTile-yellow-default: #ffd173;
   --gse-ui-charts-heatmap-categoricalTile-yellow-reduced: #ffd17340;
-  --gse-ui-charts-heatmap-tileLabel-default: #ffffff;
-  --gse-ui-charts-heatmap-tileLabel-inverse: #2a2a2e;
+  --gse-ui-charts-heatmap-tileLabel-default: #2a2a2e;
+  --gse-ui-charts-heatmap-tileLabel-inverse: #ffffff;
   --gse-ui-charts-heatmap-chartMessage-background-default: #3e4044;
   --gse-ui-charts-heatmap-legend-categorical-green: #53bee5;
   --gse-ui-charts-heatmap-legend-categorical-red: #ff7d92;
@@ -1945,11 +1975,15 @@
   --gse-ui-charts-scatterChart-dotOutline-category8-reduced: #a0c65440;
   --gse-ui-charts-scatterChart-dotOutline-category9-default: #54c6ab;
   --gse-ui-charts-scatterChart-dotOutline-category9-reduced: #54c6ab40;
-  --gse-ui-charts-sparkline-mono-default: #2954cb;
-  --gse-ui-charts-sparkline-negative-default: #881429;
-  --gse-ui-charts-sparkline-neutral-default: #152550;
-  --gse-ui-charts-sparkline-positive-default: #056d4d;
-  --gse-ui-charts-sparkline-trendline-default: #263b73;
+  --gse-ui-charts-sparkline-mono-default: #5476d5;
+  --gse-ui-charts-sparkline-mono-reduced: #5476d566;
+  --gse-ui-charts-sparkline-positive-reduced: #09b58166;
+  --gse-ui-charts-sparkline-positive-default: #09b581;
+  --gse-ui-charts-sparkline-negative-reduced: #e84e6a66;
+  --gse-ui-charts-sparkline-negative-default: #e84e6a;
+  --gse-ui-charts-sparkline-neutral-reduced: #808db266;
+  --gse-ui-charts-sparkline-neutral-default: #808db2;
+  --gse-ui-charts-sparkline-trendline-default: #6a6d75;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-default: #ffffff;
   --gse-ui-charts-chartsShared-centerTitle-title-default: #ffffff;
   --gse-ui-charts-chartsShared-chartHeader-subtitle-default: #ffffff;
@@ -1959,7 +1993,7 @@
   --gse-ui-charts-chartsShared-chartMessages-empty-icon-default: #f8c73e;
   --gse-ui-charts-chartsShared-chartMessages-error-icon-default: #e84e6a;
   --gse-ui-charts-chartsShared-chartMessages-loading-icon-default: #5476d5;
-  --gse-ui-charts-chartsShared-chartMessages-loading-icon-track: #3e4044;
+  --gse-ui-charts-chartsShared-chartMessages-loading-icon-track: #465066;
   --gse-ui-charts-chartsShared-chartMessages-icon-spacingBottom: 4px;
   --gse-ui-charts-chartsShared-legend-dot-category1: #53bee5;
   --gse-ui-charts-chartsShared-legend-dot-category10: #3d538f;
@@ -2046,8 +2080,8 @@
   --gse-ui-charts-chartsShared-centerTitle-subtitle-md-lineHeight: 20px;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontFamily: 'Noto Sans';
   --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontWeight: 400;
-  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontSize: 12px;
-  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-lineHeight: 18px;
+  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-fontSize: 10px;
+  --gse-ui-charts-chartsShared-centerTitle-subtitle-xs-lineHeight: 14px;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontFamily: 'Noto Sans';
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontWeight: 400;
   --gse-ui-charts-chartsShared-centerTitle-subtitle-sm-fontSize: 12px;

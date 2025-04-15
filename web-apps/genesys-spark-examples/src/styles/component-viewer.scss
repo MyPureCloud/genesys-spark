@@ -133,29 +133,6 @@ body {
   }
 }
 
-.tab {
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
-}
-
-.tab button {
-  float: left;
-  padding: 14px 16px;
-  cursor: pointer;
-  outline: none;
-  background-color: inherit;
-  border: none;
-  transition: 0.3s;
-}
-
-.tab button:hover {
-  background-color: #ddd;
-}
-
-.tab button.active {
-  background-color: #ccc;
-}
-
 .spark-link {
   position: relative;
   text-align: center;

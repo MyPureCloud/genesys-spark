@@ -12,27 +12,27 @@
 
 <h2>Single Date Selection with min and max set</h2>
 <gux-calendar-beta oninput="notify(event)">
-  <input type="date" value="2023-05-19" min="2023-04-28" max="2023-06-18" />
+  <input type="date" value="2023-05-19" min="2023-05-13" max="2023-05-20" />
 </gux-calendar-beta>
 
 <h2>Start day of week</h2>
 <div class="container">
   <div class="item">
     <h3>Monday</h3>
-    <gux-calendar-beta oninput="notify(event)">
-      <input type="date" value="2023-07-28" start-day-of-week="1" />
+    <gux-calendar-beta start-day-of-week="1" oninput="notify(event)">
+      <input type="date" value="2023-07-28" />
     </gux-calendar-beta>
   </div>
   <div class="item">
     <h3>Saturday</h3>
-    <gux-calendar-beta oninput="notify(event)">
-      <input type="date" value="2023-07-28" start-day-of-week="6" />
+    <gux-calendar-beta start-day-of-week="6" oninput="notify(event)">
+      <input type="date" value="2023-07-28" />
     </gux-calendar-beta>
   </div>
   <div class="item">
     <h3>Sunday</h3>
-    <gux-calendar-beta oninput="notify(event)">
-      <input type="date" value="2023-07-28" start-day-of-week="7" />
+    <gux-calendar-beta start-day-of-week="7" oninput="notify(event)">
+      <input type="date" value="2023-07-28" />
     </gux-calendar-beta>
   </div>
 </div>
@@ -46,8 +46,8 @@
   onload="(function () {
   const languagesContainer = document.getElementById('languages-container');
   [
-    'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi','fr-ca',
-    'fr', 'he','it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
+    'ar', 'cs', 'da', 'de', 'en', 'es-es', 'es', 'fi', 'fr-ca',
+    'fr', 'he', 'hi', 'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt-br',
     'pt-pt', 'ru', 'sv', 'th', 'tr', 'uk', 'zh-cn', 'zh-tw'
   ].forEach((lang) => {
     const today = new Date().toLocaleDateString('fr-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });

@@ -14,7 +14,10 @@ const flagDir = `${basePath}/region-flags`;
 const constantPath = `${basePath}/sprites.generated.ts`;
 const styleSheetPath = `${basePath}/sprites.generated.scss`;
 
-const src = fs.readdirSync(flagDir).map(file => `${flagDir}/${file}`);
+const files = fs.readdirSync(flagDir);
+
+const src = files.map(file => `${flagDir}/${file}`);
+const flagCodes = files.map(file => file.replace('.png', ''));
 
 spriteSmith.run({ src }, function (err, results) {
   if (err) {
@@ -26,7 +29,9 @@ spriteSmith.run({ src }, function (err, results) {
       constantPath,
       `export const spritesheetDataUrl = 'data:image/png;base64,${results.image.toString(
         'base64'
-      )}';\n`
+      )}';
+
+export type GuxFlagCode = ${flagCodes.map(code => `'${code}'`).join(' | ')};\n`
     );
 
     const sprites = Object.entries(results.coordinates).map(
@@ -41,16 +46,23 @@ spriteSmith.run({ src }, function (err, results) {
       ...results.properties
     };
 
-    const styleSheet = templater(
-      { sprites, spritesheet },
-      {
-        format: 'scss',
-        formatOpts: {
-          variableNameTransforms: ['toLowerCase']
+    const styleSheet =
+      `` +
+      templater(
+        { sprites, spritesheet },
+        {
+          format: 'scss',
+          formatOpts: {
+            variableNameTransforms: ['toLowerCase']
+          }
         }
-      }
-    );
+      );
 
-    fs.writeFileSync(styleSheetPath, styleSheet);
+    const modifiedStylesheet = `@use 'sass:list';
+
+    ${styleSheet.replaceAll('nth(', 'list.nth(')}
+    `;
+
+    fs.writeFileSync(styleSheetPath, modifiedStylesheet);
   }
 });

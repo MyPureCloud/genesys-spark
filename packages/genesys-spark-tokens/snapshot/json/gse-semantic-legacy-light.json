@@ -40,6 +40,27 @@
         "azure": "#adbff0",
         "mineral": "#bcd6f0",
         "island": "#81cbe5"
+      },
+      "global_nav": {
+        "desktop": {
+          "option": {
+            "hover": "#19327a",
+            "active_panel": "#2143a2",
+            "active_selected": "#2954cb"
+          },
+          "return": {
+            "default": "#2143a2",
+            "hover": "#2954cb"
+          },
+          "menu": {
+            "closed_hover": "#19327a",
+            "open_hover": "#19327a"
+          },
+          "new_tab": {
+            "hover": "#19327a",
+            "selected": "#2143a2"
+          }
+        }
       }
     },
     "overlay": {
@@ -76,6 +97,35 @@
       },
       "text_highlight": {
         "default": "#ffd173"
+      },
+      "transparent": "#fff0",
+      "canvas": "#f0f1f5",
+      "special_accents": {
+        "ai": {
+          "tonal_medium": {
+            "top_left": "#cdeaf5",
+            "bottom_right": "#c5bef1"
+          },
+          "tonal_subtle": {
+            "top_left": "#ebf7fb",
+            "bottom_right": "#e8e5fa"
+          }
+        }
+      },
+      "global_nav": {
+        "desktop": {
+          "top_command_bar": "#ffffff",
+          "menu_panel": {
+            "primary_top-left_value": "#3d538f",
+            "primary_bottom-right_value": "#263b73",
+            "secondary_top-left_value": "#263b73",
+            "secondary_bottom-right_value": "#152550"
+          }
+        },
+        "mobile": {
+          "header": "#1e1e21",
+          "footer": "#dfe3ec"
+        }
       }
     },
     "system": {
@@ -146,6 +196,12 @@
         "on_queue": "#2143a2",
         "offline": "#848891",
         "out_of_office": "#b74ba4",
+        "available_reduced": "#9de1cd",
+        "busy_reduced": "#f3a7b5",
+        "away_reduced": "#fce9b2",
+        "on_queue_reduced": "#a6b4da",
+        "offline_reduced": "#cecfd3",
+        "out_of_office_reduced": "#e2b7db",
         "notification": "#ff451a"
       }
     },
@@ -204,6 +260,39 @@
       },
       "indicator": {
         "default": "#75a8ff"
+      },
+      "global_nav": {
+        "desktop": {
+          "level1": {
+            "default": "#ffffff",
+            "hover": "#ffffff",
+            "active_panel": "#ffffff",
+            "active_selected": "#ffffff",
+            "disabled": "#ffffff"
+          },
+          "menu": {
+            "closed_default": "#2143a2",
+            "closed_hover": "#ffffff",
+            "open_default": "#ffffff",
+            "open_hover": "#d5def7"
+          },
+          "level2": {
+            "default": "#ffffff",
+            "hover": "#ffffff",
+            "selected": "#ffffff",
+            "disabled": "#ffffff"
+          },
+          "new_tab": {
+            "default": "#ffffff",
+            "hover": "#ffffff",
+            "selected": "#ffffff"
+          },
+          "return": {
+            "default": "#ffffff",
+            "hover": "#ffffff",
+            "selected": "#ffffff"
+          }
+        }
       }
     },
     "container": {
@@ -217,7 +306,13 @@
       },
       "special_accents": {
         "ai": "#8a5ecc",
-        "brand": "#ff4f1f"
+        "brand": "#ff451a",
+        "brand_secondary": "#141929",
+        "ai_gradient": {
+          "top_left": "#28afe0",
+          "bottom_right": "#6e5ddb"
+        },
+        "global_nav": "#152550"
       }
     },
     "system": {
@@ -247,6 +342,11 @@
       },
       "icon": {
         "default": "#2e394c"
+      },
+      "indicators": {
+        "positive": "#3c8527",
+        "negative": "#ea0b0b",
+        "neutral": "#4c5667"
       }
     },
     "form_control": {
@@ -300,6 +400,29 @@
         "enabled": "#2a60c8",
         "hover": "#23478f",
         "active": "#2a60c8"
+      },
+      "special_accents": {
+        "ai": {
+          "top_left": "#28afe0",
+          "bottom_right": "#8b7de2"
+        }
+      },
+      "global_nav": {
+        "tree_view": {
+          "bar": "#3d538f"
+        },
+        "top_command_bar": {
+          "divider": "#cad1e1"
+        },
+        "panel": {
+          "divider": "#cad1e100"
+        },
+        "menu_button": {
+          "closed_hover": "#19327a"
+        },
+        "side_menu": {
+          "divider": "rgba(0, 0, 0, 0)"
+        }
       }
     },
     "system": {
@@ -371,43 +494,43 @@
     "categorical_data": {
       "category1": {
         "default": "#056385",
-        "shading": "#4d90a8"
+        "shading": "#82b1c2"
       },
       "category2": {
         "default": "#5798d9",
-        "shading": "#88b6e4"
+        "shading": "#abccec"
       },
       "category3": {
         "default": "#ac75ff",
-        "shading": "#c49dff"
+        "shading": "#d5baff"
       },
       "category4": {
         "default": "#89387b",
-        "shading": "#ab72a1"
+        "shading": "#c49bbd"
       },
       "category5": {
         "default": "#ff5c77",
-        "shading": "#ff8b9e"
+        "shading": "#ffadbb"
       },
       "category6": {
         "default": "#ffb5a3",
-        "shading": "#ffcabe"
+        "shading": "#ffdad1"
       },
       "category7": {
         "default": "#ffc650",
-        "shading": "#ffd783"
+        "shading": "#ffe3a7"
       },
       "category8": {
         "default": "#c6dd98",
-        "shading": "#d7e7b6"
+        "shading": "#e3eecc"
       },
       "category9": {
         "default": "#54c6ab",
-        "shading": "#86d7c3"
+        "shading": "#aae3d5"
       },
       "category10": {
         "default": "#263b73",
-        "shading": "#65749c"
+        "shading": "#939db9"
       },
       "subtle": {
         "default": "#cad1e1"
@@ -430,7 +553,9 @@
         "green": "#81cbe5",
         "red": "#ff9dad",
         "yellow": "#ffdd96"
-      }
+      },
+      "high_emphasis_inverse": "#ffffff",
+      "high_emphasis": "#2a2a2e"
     },
     "foreground": {
       "high_emphasis": "#2a2a2e",

@@ -58,7 +58,7 @@ export class GuxPopover {
    * Indicate if the dismiss button is displayed
    */
   @Prop()
-  displayDismissButton: boolean;
+  displayDismissButton: boolean = false;
 
   /**
    * Close popover when the user clicks outside of its bounds
@@ -116,7 +116,7 @@ export class GuxPopover {
     }
   }
 
-  get titleSlot(): HTMLSlotElement | null {
+  get titleSlot(): Element | null {
     return getSlot(this.root, 'title');
   }
 
@@ -235,17 +235,6 @@ export class GuxPopover {
     }
   }
 
-  private renderDismissButton(): JSX.Element {
-    if (this.displayDismissButton) {
-      return (
-        <gux-dismiss-button
-          onClick={this.dismiss.bind(this)}
-          position="inherit"
-        ></gux-dismiss-button>
-      ) as JSX.Element;
-    }
-  }
-
   render(): JSX.Element {
     return (
       <div
@@ -262,9 +251,13 @@ export class GuxPopover {
         >
           <div class="gux-arrow-caret"></div>
         </div>
+        {this.displayDismissButton && (
+          <gux-dismiss-button
+            onClick={this.dismiss.bind(this)}
+          ></gux-dismiss-button>
+        )}
         <div class={{ 'gux-popover-header': Boolean(this.titleSlot) }}>
           <slot name="title"></slot>
-          {this.renderDismissButton()}
         </div>
         <div class="gux-popover-content">
           <slot />

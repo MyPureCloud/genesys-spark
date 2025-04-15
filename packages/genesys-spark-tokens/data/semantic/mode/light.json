@@ -144,6 +144,63 @@
           "type": "color",
           "description": "This color is used for color swatches, for eg. in the Rich Text Editor's text highlight menu."
         }
+      },
+      "global_nav": {
+        "desktop": {
+          "option": {
+            "hover": {
+              "value": "{theme.background.custom_accents.global_nav.10}",
+              "type": "color",
+              "description": "The background color for the hover state of options in the menu panel of the global navigation."
+            },
+            "active_panel": {
+              "value": "{theme.background.custom_accents.global_nav.20}",
+              "type": "color",
+              "description": "The background color for the active-panel state of the options in the menu panel of the global navigation."
+            },
+            "active_selected": {
+              "value": "{theme.background.custom_accents.global_nav.30}",
+              "type": "color",
+              "description": "The background color for the active-selected state of the options in the menu panel of the global navigation."
+            }
+          },
+          "return": {
+            "default": {
+              "value": "{theme.background.custom_accents.global_nav.20}",
+              "type": "color",
+              "description": "The background color for the default state of the navigation buttons in the return button of the global navigation."
+            },
+            "hover": {
+              "value": "{theme.background.custom_accents.global_nav.30}",
+              "type": "color",
+              "description": "The background color for the hover state of the navigation buttons in the return button of the global navigation."
+            }
+          },
+          "menu": {
+            "closed_hover": {
+              "value": "{theme.background.custom_accents.global_nav.10}",
+              "type": "color",
+              "description": "The background color for the closed-hover state of the navigation buttons in the menu button of the global navigation."
+            },
+            "open_hover": {
+              "value": "{theme.background.custom_accents.global_nav.10}",
+              "type": "color",
+              "description": "The background color for the open-hover state of the navigation buttons in the menu button of the global navigation."
+            }
+          },
+          "new_tab": {
+            "hover": {
+              "value": "{theme.background.custom_accents.global_nav.10}",
+              "type": "color",
+              "description": "The background color for the hover state of the navigation buttons in the new tab button of the global navigation."
+            },
+            "selected": {
+              "value": "{theme.background.custom_accents.global_nav.20}",
+              "type": "color",
+              "description": "The background color for the selected state of the navigation buttons in the new tab button of the global navigation."
+            }
+          }
+        }
       }
     },
     "overlay": {
@@ -258,6 +315,116 @@
           "value": "{theme.background.custom_accents.color_swatch.40}",
           "type": "color",
           "description": "This is the default color for text highlights in bodies of text."
+        }
+      },
+      "transparent": {
+        "value": "{background.container.page.default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "alpha",
+              "value": "0",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "A transparent color for general utility like fades"
+      },
+      "canvas": {
+        "value": "{theme.background.container.primary.45}",
+        "type": "color",
+        "description": "We use the canvas color for backgrounds that are meant to be used as a canvas, for example, archiect's boards."
+      },
+      "special_accents": {
+        "ai": {
+          "tonal_medium": {
+            "top_left": {
+              "value": "{theme.background.custom_accents.ai.10}",
+              "type": "color",
+              "description": "This is the top left color that the ai gradient uses for container elements."
+            },
+            "bottom_right": {
+              "value": "{theme.background.custom_accents.ai.20}",
+              "type": "color",
+              "description": "This is the bottom right color that the ai gradient uses for container elements."
+            }
+          },
+          "tonal_subtle": {
+            "top_left": {
+              "value": "{theme.background.custom_accents.ai.10}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": ".6",
+                    "space": "lch",
+                    "color": "{background.container.page.default}"
+                  }
+                }
+              },
+              "description": "This is the top left color that the ai gradient uses for container elements."
+            },
+            "bottom_right": {
+              "value": "{theme.background.custom_accents.ai.20}",
+              "type": "color",
+              "$extensions": {
+                "studio.tokens": {
+                  "modify": {
+                    "type": "mix",
+                    "value": ".6",
+                    "space": "lch",
+                    "color": "{background.container.page.default}"
+                  }
+                }
+              },
+              "description": "This is the bottom right color that the ai gradient uses for container elements."
+            }
+          }
+        }
+      },
+      "global_nav": {
+        "desktop": {
+          "top_command_bar": {
+            "value": "{theme.background.container.global_nav.desktop.10}",
+            "type": "color",
+            "description": "The background color of the top command bar for the desktop global navigation."
+          },
+          "menu_panel": {
+            "primary_top-left_value": {
+              "value": "{theme.background.container.global_nav.desktop.20}",
+              "type": "color",
+              "description": "The top-left color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            },
+            "primary_bottom-right_value": {
+              "value": "{theme.background.container.global_nav.desktop.40}",
+              "type": "color",
+              "description": "The bottom-right color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            },
+            "secondary_top-left_value": {
+              "value": "{theme.background.container.global_nav.desktop.40}",
+              "type": "color",
+              "description": "The  top-left color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
+            },
+            "secondary_bottom-right_value": {
+              "value": "{theme.background.container.global_nav.desktop.50}",
+              "type": "color",
+              "description": "The bottom-right color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
+            }
+          }
+        },
+        "mobile": {
+          "header": {
+            "value": "{theme.background.container.global_nav.mobile.10}",
+            "type": "color",
+            "description": "The background color of the header bar for the mobile global navigation."
+          },
+          "footer": {
+            "value": "{theme.background.container.global_nav.mobile.20}",
+            "type": "color",
+            "description": "The background color of the footer for the mobile global navigation."
+          }
         }
       }
     },
@@ -514,6 +681,90 @@
           "value": "{theme.background.custom_accents.status.60}",
           "type": "color"
         },
+        "available_reduced": {
+          "value": "{theme.background.custom_accents.status.10}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
+        "busy_reduced": {
+          "value": "{background.system.status.busy}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
+        "away_reduced": {
+          "value": "{background.system.status.away}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
+        "on_queue_reduced": {
+          "value": "{background.system.status.on_queue}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
+        "offline_reduced": {
+          "value": "{background.system.status.offline}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
+        "out_of_office_reduced": {
+          "value": "{background.system.status.out_of_office}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "mix",
+                "value": ".6",
+                "space": "srgb",
+                "color": "{background.container.page.default}"
+              }
+            }
+          }
+        },
         "notification": {
           "value": "{theme.background.custom_accents.status.70}",
           "type": "color"
@@ -683,6 +934,115 @@
           "type": "color",
           "description": "this is used to the selected indicator for the data table headers"
         }
+      },
+      "global_nav": {
+        "desktop": {
+          "level1": {
+            "default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the default state of the navigation buttons in the menu panel level 1 of the global navigation."
+            },
+            "hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the hover state of the navigation buttons in the menu panel level 1 of the global navigation."
+            },
+            "active_panel": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The background color for the active-panel state of the navigation buttons in the menu panel level 1 of the global navigation."
+            },
+            "active_selected": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the active-selected state of the navigation buttons in the menu panel level 1 of the global navigation."
+            },
+            "disabled": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the disabled state of the navigation buttons in the menu panel level 1 of the global navigation."
+            }
+          },
+          "menu": {
+            "closed_default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.20}",
+              "type": "color",
+              "description": "The foreground color for the closed-default state of the menu button of the global navigation."
+            },
+            "closed_hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the closed-hover state of the menu button of the global navigation."
+            },
+            "open_default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the open-default state of the menu button of the global navigation."
+            },
+            "open_hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.40}",
+              "type": "color",
+              "description": "The foreground color for the open-hover state of the menu button of the global navigation."
+            }
+          },
+          "level2": {
+            "default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the default state of the navigation buttons in the menu panel level 2 of the global navigation."
+            },
+            "hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the hover state of the navigation buttons in the menu panel level 2 of the global navigation."
+            },
+            "selected": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the selected state of the navigation buttons in the menu panel level 2 of the global navigation."
+            },
+            "disabled": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the disabled state of the navigation buttons in the menu panel level 2 of the global navigation."
+            }
+          },
+          "new_tab": {
+            "default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the default state of the new tab button of the global navigation."
+            },
+            "hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the hover state of the new tab button of the global navigation."
+            },
+            "selected": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the selected state of the new tab button of the global navigation."
+            }
+          },
+          "return": {
+            "default": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the default state of the return button of the global navigation."
+            },
+            "hover": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the hover state of the return button of the global navigation."
+            },
+            "selected": {
+              "value": "{theme.foreground.special_accents.global_nav.desktop.10}",
+              "type": "color",
+              "description": "The foreground color for the selected state of the return button of the global navigation."
+            }
+          }
+        }
       }
     },
     "container": {
@@ -728,6 +1088,28 @@
           "value": "{theme.foreground.special_accents.brand.10}",
           "type": "color",
           "description": "The brand color, mostly used for logos on surfaces."
+        },
+        "brand_secondary": {
+          "value": "{theme.foreground.special_accents.brand.20}",
+          "type": "color",
+          "description": "The complimentary brand color, mostly used for text that accompany logos."
+        },
+        "ai_gradient": {
+          "top_left": {
+            "value": "{theme.foreground.custom_accents.ai.10}",
+            "type": "color",
+            "description": "This is the top left color that the ai gradient uses for icons and text"
+          },
+          "bottom_right": {
+            "value": "{theme.foreground.custom_accents.ai.20}",
+            "type": "color",
+            "description": "This is the bottom right color that the ai gradient uses for icons and text"
+          }
+        },
+        "global_nav": {
+          "value": "{theme.foreground.special_accents.global_nav.desktop.50}",
+          "type": "color",
+          "description": "Accent color, mostly used for accents in the Global Navigation such as current page"
         }
       }
     },
@@ -809,6 +1191,23 @@
           "value": "{theme.foreground.icon.10}",
           "type": "color",
           "description": "The color for foreground content on progress_and_loading/default backgrounds."
+        }
+      },
+      "indicators": {
+        "positive": {
+          "value": "{foreground.system.success.accent}",
+          "type": "color",
+          "description": "We use this color for indicating a positive, like, a positive trend in a chart, a positive review, etc."
+        },
+        "negative": {
+          "value": "{foreground.system.error.accent}",
+          "type": "color",
+          "description": "We use this color for indicating a negative, like, a negative trend in a chart, a negative review, a reduction, etc."
+        },
+        "neutral": {
+          "value": "{foreground.container.low_emphasis}",
+          "type": "color",
+          "description": "We use this color for indicating a neutral trend, like, a neutral trend in a chart."
         }
       }
     },
@@ -984,6 +1383,65 @@
           "type": "color",
           "description": "The color for the edge borders of high contrast surfaces that are on the active state."
         }
+      },
+      "special_accents": {
+        "ai": {
+          "top_left": {
+            "value": "{theme.border.custom_accents.ai.10}",
+            "type": "color",
+            "description": "This is the top left color that the ai gradient uses for borders."
+          },
+          "bottom_right": {
+            "value": "{theme.border.custom_accents.ai.20}",
+            "type": "color",
+            "description": "This is the bottom right color that the ai gradient uses for borders."
+          }
+        }
+      },
+      "global_nav": {
+        "tree_view": {
+          "bar": {
+            "value": "{theme.border.edges.global_nav.10}",
+            "type": "color",
+            "description": "The border color on the left of tree view of the global navigation."
+          }
+        },
+        "top_command_bar": {
+          "divider": {
+            "value": "{theme.border.edges.global_nav.20}",
+            "type": "color",
+            "description": "The border color at the bottom of the top command bar of the global navigation."
+          }
+        },
+        "panel": {
+          "divider": {
+            "value": "{theme.border.edges.global_nav.20}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0",
+                  "space": "lch"
+                }
+              }
+            },
+            "description": "The border color at the right of the panel of the global navigation."
+          }
+        },
+        "menu_button": {
+          "closed_hover": {
+            "value": "{theme.foreground.special_accents.global_nav.desktop.30}",
+            "type": "color",
+            "description": "The border color for the closed-hover state of the menu button of the global navigation."
+          }
+        },
+        "side_menu": {
+          "divider": {
+            "value": "{theme.border.edges.global_nav.30}",
+            "type": "color"
+          }
+        }
       }
     },
     "system": {
@@ -1142,7 +1600,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "mix",
-                "value": "0.29",
+                "value": "0.5",
                 "space": "srgb",
                 "color": "{background.container.page.default}"
               }
@@ -1163,7 +1621,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "mix",
-                "value": "0.29",
+                "value": "0.5",
                 "space": "srgb",
                 "color": "{background.container.page.default}"
               }
@@ -1184,7 +1642,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "mix",
-                "value": "0.29",
+                "value": "0.5",
                 "space": "srgb",
                 "color": "{background.container.page.default}"
               }
@@ -1205,7 +1663,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "mix",
-                "value": "0.29",
+                "value": "0.5",
                 "space": "srgb",
                 "color": "{background.container.page.default}"
               }
@@ -1226,7 +1684,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "mix",
-                "value": "0.29",
+                "value": "0.5",
                 "space": "srgb",
                 "color": "{background.container.page.default}"
               }
@@ -1247,7 +1705,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "mix",
-                "value": "0.29",
+                "value": "0.5",
                 "space": "srgb",
                 "color": "{background.container.page.default}"
               }
@@ -1268,7 +1726,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "mix",
-                "value": "0.29",
+                "value": "0.5",
                 "space": "srgb",
                 "color": "{background.container.page.default}"
               }
@@ -1289,7 +1747,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "mix",
-                "value": "0.29",
+                "value": "0.5",
                 "space": "srgb",
                 "color": "{background.container.page.default}"
               }
@@ -1310,7 +1768,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "mix",
-                "value": "0.29",
+                "value": "0.5",
                 "space": "srgb",
                 "color": "{background.container.page.default}"
               }
@@ -1331,7 +1789,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "mix",
-                "value": "0.29",
+                "value": "0.5",
                 "space": "srgb",
                 "color": "{background.container.page.default}"
               }
@@ -1413,6 +1871,16 @@
           "value": "{theme.charts.numerical_data.multi_color.yellow}",
           "type": "color"
         }
+      },
+      "high_emphasis_inverse": {
+        "value": "{theme.charts.foreground.10}",
+        "type": "color",
+        "description": "We use this color for labels that don't pass the contrast check with the default high_emphasis color on heatmaps tiles."
+      },
+      "high_emphasis": {
+        "value": "{theme.charts.foreground.40}",
+        "type": "color",
+        "description": "We use this color for the label's color on heatmaps tiles."
       }
     },
     "foreground": {
@@ -1424,7 +1892,7 @@
       "high_emphasis_inverse": {
         "value": "{theme.charts.foreground.10}",
         "type": "color",
-        "description": "We use this color for headings and labels that don't pass the contrast check with the default high_emphasis color in charts."
+        "description": "Deprecated"
       },
       "mid_emphasis": {
         "value": "{theme.charts.foreground.30}",

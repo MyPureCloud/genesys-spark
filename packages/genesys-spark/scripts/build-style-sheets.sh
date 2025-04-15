@@ -1,10 +1,14 @@
 #!/bin/bash
 
-sass src/style/reset.scss dist/reset.css
-sass src/style/global.scss dist/global.css
-sass src/style/ui.scss dist/ui.css
+FOLDER="${OUTDIR:-dist}"
 
-sass src/style:dist/css
+sass --version
 
-mkdir -p dist/scss/
-cp src/style/*.scss dist/scss/
+sass src/style/reset.scss $FOLDER/reset.css
+sass src/style/global.scss $FOLDER/global.css
+sass src/style/ui.scss $FOLDER/ui.css
+
+sass src/style:$FOLDER/css
+
+mkdir -p $FOLDER/scss/
+cp src/style/*.scss $FOLDER/scss/

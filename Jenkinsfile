@@ -2,13 +2,13 @@
 import com.genesys.jenkins.Notifications
 
 def getPublishOptions(isMainBranch, isMaintenanceReleaseBranch, isBetaBranch) {
-   if (isMainBranch) {
-    return '--tag latest'
+    if (isMainBranch) {
+        return '--tag latest'
    } else if (isMaintenanceReleaseBranch) {
-    return '--tag maintenance'
+        return '--tag maintenance'
    } else if (isBetaBranch) {
-    return '--tag beta'
-   }
+        return '--tag beta'
+    }
 
     return '--tag error'
 }
@@ -69,7 +69,7 @@ webappPipeline {
                 returnStdout: true
             ).trim()
 
-            if (unexpectedChanges != "") {
+            if (unexpectedChanges != '') {
                 error("I found uncommited changes that should not exist:\n${unexpectedChanges}")
             }
         }
@@ -77,6 +77,7 @@ webappPipeline {
         return readJSON(file: 'package.json').version
     }
     team = 'Core UI'
+    jiraProjectKey = 'COMUI'
     mailer = 'CoreUI@genesys.com'
     chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
     nodeVersion = '20.x multiarch'
@@ -101,16 +102,15 @@ webappPipeline {
             sh('git fetch --tags')
         }
     }
+    prepareStep = {
+        sh('npm ci')
+    }
     ciTests = {
-        // Skip module install if it ran during the version check
-        if (!fileExists('node_modules')) {
-            sh('npm ci')
-        }
-        sh('npm run test.ci')
         sh('npm run build --workspace=packages/genesys-spark-tokens')
         sh('npm run build --workspace=packages/genesys-spark')
         sh('npm run stencil --workspace=packages/genesys-spark-components')
         sh('npm run lint')
+        sh('npm run test.ci')
     }
     buildStep = { assetPrefix ->
         // All of the useful stencil output lives under /genesys-webcomponents, so
@@ -136,8 +136,8 @@ webappPipeline {
                         returnStatus: true
                         )
 
-                    if(componentStatCode > 0) {
-                      failures.add('Publish Components')
+                    if (componentStatCode > 0) {
+                        failures.add('Publish Components')
                     }
 
                     def chartStatCode = sh(script: "npm publish --workspace=packages/genesys-spark-chart-components ${publishOptions}",
@@ -145,8 +145,8 @@ webappPipeline {
                         returnStatus: true
                         )
 
-                    if(chartStatCode > 0) {
-                      failures.add('Publish Chart Components')
+                    if (chartStatCode > 0) {
+                        failures.add('Publish Chart Components')
                     }
 
                     def mainPackageStatCode = sh(script: "npm publish --workspace=packages/genesys-spark ${publishOptions}",
@@ -154,8 +154,8 @@ webappPipeline {
                         returnStatus: true
                     )
 
-                    if(mainPackageStatCode > 0) {
-                      failures.add('Publish Main Package')
+                    if (mainPackageStatCode > 0) {
+                        failures.add('Publish Main Package')
                     }
 
                     sh(script: '''
@@ -171,8 +171,8 @@ webappPipeline {
                         returnStatus: true
                         )
 
-                    if(reactStatCode > 0) {
-                      failures.add('Publish React Components')
+                    if (reactStatCode > 0) {
+                        failures.add('Publish React Components')
                     }
 
                     def chartReactStatCode = sh(script: "npm publish --workspace=packages/genesys-spark-chart-components-react ${publishOptions}",
@@ -180,13 +180,13 @@ webappPipeline {
                         returnStatus: true
                         )
 
-                    if(chartReactStatCode > 0) {
-                      failures.add('Publish Chart React Components')
+                    if (chartReactStatCode > 0) {
+                        failures.add('Publish Chart React Components')
                     }
 
                     def notification = new com.genesys.jenkins.Notifications()
                     if (failures.size()) {
-                      notification.sendEmailViaMailchomp("Spark NPM Publish failures", mailer, "These packages failed to publish to NPM:\n" + failures.join('\n'))
+                        notification.sendEmailViaMailchomp('Spark NPM Publish failures', mailer, 'These packages failed to publish to NPM:\n' + failures.join('\n'))
                     }
                 }
             }

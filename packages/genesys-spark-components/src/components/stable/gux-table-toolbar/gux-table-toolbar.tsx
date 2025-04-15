@@ -78,19 +78,19 @@ export class GuxTableToolbar {
     return this.root.shadowRoot.querySelector('.search-filter-container');
   }
 
-  get filterSlot(): HTMLSlotElement | null {
+  get filterSlot(): Element | null {
     return getSlot(this.root, 'search-and-filter');
   }
 
-  get menuActionSlot(): HTMLSlotElement | null {
+  get menuActionSlot(): Element | null {
     return getSlot(this.root, 'menu-actions');
   }
 
-  get permanentSlot(): HTMLSlotElement | null {
+  get permanentSlot(): Element | null {
     return getSlot(this.root, 'permanent-actions');
   }
 
-  get contextualSlot(): HTMLSlotElement | null {
+  get contextualSlot(): Element | null {
     return getSlot(this.root, 'contextual-actions');
   }
 

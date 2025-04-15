@@ -91,7 +91,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 12`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07/07/22, 13:35
+    7/7/22, 1:35 pm
   </template>
 </gux-date-time-beta>
 `;
@@ -99,7 +99,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 13`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    2022/07/07 13:35
+    07/07/22, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -107,7 +107,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 14`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    22. 7. 7. 오후 1:35
+    2022/07/07 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -115,7 +115,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 15`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07-07-2022 13:35
+    22. 7. 7. 오후 1:35
   </template>
 </gux-date-time-beta>
 `;
@@ -123,7 +123,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 16`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07.07.2022, 13:35
+    07-07-2022 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -131,7 +131,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 17`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    7.07.2022, 13:35
+    07.07.2022, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -139,7 +139,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 18`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07/07/2022, 13:35
+    7.07.2022, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -147,7 +147,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 19`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07/07/22, 13:35
+    07/07/2022, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -155,7 +155,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 20`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07.07.2022, 13:35
+    07/07/22, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -163,7 +163,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 21`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    2022-07-07 13:35
+    07.07.2022, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -171,7 +171,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 22`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    7/7/65 13:35
+    2022-07-07 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -179,7 +179,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 23`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    7.07.2022 13:35
+    7/7/65 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -187,7 +187,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 24`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07.07.22, 13:35
+    7.07.2022 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -195,12 +195,20 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 25`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    2022/7/7 13:35
+    07.07.22, 13:35
   </template>
 </gux-date-time-beta>
 `;
 
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 26`] = `
+<gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
+  <template shadowrootmode="open">
+    2022/7/7 13:35
+  </template>
+</gux-date-time-beta>
+`;
+
+exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 27`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
     2022/7/7 下午1:35
@@ -299,7 +307,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 12`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 lug 2022, 13:35:30
+    7 जुल॰ 2022, 1:35:30 pm
   </template>
 </gux-date-time-beta>
 `;
@@ -307,7 +315,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 13`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    2022/07/07 13:35:30
+    7 lug 2022, 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -315,7 +323,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 14`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    2022. 7. 7. 오후 1:35:30
+    2022/07/07 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -323,7 +331,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 15`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 jul 2022 13:35:30
+    2022. 7. 7. 오후 1:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -331,7 +339,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 16`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7. juli 2022, 13:35:30
+    7 jul 2022 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -339,7 +347,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 17`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 lip 2022, 13:35:30
+    7. juli 2022, 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -347,7 +355,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 18`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 de jul. de 2022, 13:35:30
+    7 lip 2022, 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -355,7 +363,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 19`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    07/07/2022, 13:35:30
+    7 de jul. de 2022, 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -363,7 +371,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 20`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 июл. 2022 г., 13:35:30
+    07/07/2022, 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -371,7 +379,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 21`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 juli 2022 13:35:30
+    7 июл. 2022 г., 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -379,7 +387,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 22`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 ก.ค. 2565 13:35:30
+    7 juli 2022 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -387,7 +395,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 23`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 Tem 2022 13:35:30
+    7 ก.ค. 2565 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -395,7 +403,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 24`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 лип. 2022 р., 13:35:30
+    7 Tem 2022 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -403,12 +411,20 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 25`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    2022年7月7日 13:35:30
+    7 лип. 2022 р., 13:35:30
   </template>
 </gux-date-time-beta>
 `;
 
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 26`] = `
+<gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
+  <template shadowrootmode="open">
+    2022年7月7日 13:35:30
+  </template>
+</gux-date-time-beta>
+`;
+
+exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 27`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
     2022年7月7日 下午1:35:30
@@ -507,7 +523,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 12`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    giovedì 7 luglio 2022 alle ore 13:35:30 Tempo coordinato universale
+    गुरुवार, 7 जुलाई 2022 को 1:35:30 pm समन्वित वैश्विक समय बजे
   </template>
 </gux-date-time-beta>
 `;
@@ -515,7 +531,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 13`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    2022年7月7日木曜日 13時35分30秒 協定世界時
+    giovedì 7 luglio 2022 alle ore 13:35:30 Tempo coordinato universale
   </template>
 </gux-date-time-beta>
 `;
@@ -523,7 +539,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 14`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    2022년 7월 7일 목요일 오후 1시 35분 30초 협정 세계시
+    2022年7月7日木曜日 13時35分30秒 協定世界時
   </template>
 </gux-date-time-beta>
 `;
@@ -531,7 +547,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 15`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    donderdag 7 juli 2022 om 13:35:30 gecoördineerde wereldtijd
+    2022년 7월 7일 목요일 오후 1시 35분 30초 협정 세계시
   </template>
 </gux-date-time-beta>
 `;
@@ -539,7 +555,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 16`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    torsdag 7. juli 2022 kl. 13:35:30 koordinert universaltid
+    donderdag 7 juli 2022 om 13:35:30 gecoördineerde wereldtijd
   </template>
 </gux-date-time-beta>
 `;
@@ -547,7 +563,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 17`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    czwartek, 7 lipca 2022 13:35:30 uniwersalny czas koordynowany
+    torsdag 7. juli 2022 kl. 13:35:30 koordinert universaltid
   </template>
 </gux-date-time-beta>
 `;
@@ -555,7 +571,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 18`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    quinta-feira, 7 de julho de 2022 às 13:35:30 Horário Universal Coordenado
+    czwartek, 7 lipca 2022 13:35:30 uniwersalny czas koordynowany
   </template>
 </gux-date-time-beta>
 `;
@@ -563,7 +579,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 19`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    quinta-feira, 7 de julho de 2022 às 13:35:30 Hora Coordenada Universal
+    quinta-feira, 7 de julho de 2022 às 13:35:30 Horário Universal Coordenado
   </template>
 </gux-date-time-beta>
 `;
@@ -571,7 +587,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 20`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    четверг, 7 июля 2022 г. в 13:35:30 Всемирное координированное время
+    quinta-feira, 7 de julho de 2022 às 13:35:30 Hora Coordenada Universal
   </template>
 </gux-date-time-beta>
 `;
@@ -579,7 +595,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 21`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    torsdag 7 juli 2022 kl. 13:35:30 koordinerad universell tid
+    четверг, 7 июля 2022 г. в 13:35:30 Всемирное координированное время
   </template>
 </gux-date-time-beta>
 `;
@@ -587,7 +603,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 22`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    วันพฤหัสบดีที่ 7 กรกฎาคม พ.ศ. 2565 เวลา 13 นาฬิกา 35 นาที 30 วินาที เวลาสากลเชิงพิกัด
+    torsdag 7 juli 2022 kl. 13:35:30 koordinerad universell tid
   </template>
 </gux-date-time-beta>
 `;
@@ -595,7 +611,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 23`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    7 Temmuz 2022 Perşembe 13:35:30 Eş Güdümlü Evrensel Zaman
+    วันพฤหัสบดีที่ 7 กรกฎาคม พ.ศ. 2565 เวลา 13 นาฬิกา 35 นาที 30 วินาที เวลาสากลเชิงพิกัด
   </template>
 </gux-date-time-beta>
 `;
@@ -603,7 +619,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 24`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    четвер, 7 липня 2022 р. о 13:35:30 за всесвітнім координованим часом
+    7 Temmuz 2022 Perşembe 13:35:30 Eş Güdümlü Evrensel Zaman
   </template>
 </gux-date-time-beta>
 `;
@@ -611,12 +627,20 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 25`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    2022年7月7日星期四 协调世界时 13:35:30
+    четвер, 7 липня 2022 р. о 13:35:30 за всесвітнім координованим часом
   </template>
 </gux-date-time-beta>
 `;
 
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 26`] = `
+<gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
+  <template shadowrootmode="open">
+    2022年7月7日星期四 协调世界时 13:35:30
+  </template>
+</gux-date-time-beta>
+`;
+
+exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 27`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
     2022年7月7日 星期四 下午1:35:30 [世界標準時間]
@@ -715,7 +739,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 12`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 luglio 2022 alle ore 13:35:30 UTC
+    7 जुलाई 2022 को 1:35:30 pm UTC बजे
   </template>
 </gux-date-time-beta>
 `;
@@ -723,7 +747,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 13`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    2022年7月7日 13:35:30 UTC
+    7 luglio 2022 alle ore 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -731,7 +755,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 14`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    2022년 7월 7일 오후 1시 35분 30초 UTC
+    2022年7月7日 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -739,7 +763,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 15`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 juli 2022 om 13:35:30 UTC
+    2022년 7월 7일 오후 1시 35분 30초 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -747,7 +771,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 16`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7. juli 2022 kl. 13:35:30 UTC
+    7 juli 2022 om 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -755,7 +779,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 17`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 lipca 2022 13:35:30 UTC
+    7. juli 2022 kl. 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -763,7 +787,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 18`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 de julho de 2022 às 13:35:30 UTC
+    7 lipca 2022 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -779,7 +803,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 20`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 июля 2022 г. в 13:35:30 UTC
+    7 de julho de 2022 às 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -787,7 +811,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 21`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 juli 2022 kl. 13:35:30 UTC
+    7 июля 2022 г. в 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -795,7 +819,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 22`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 กรกฎาคม 2565 เวลา 13 นาฬิกา 35 นาที 30 วินาที UTC
+    7 juli 2022 kl. 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -803,7 +827,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 23`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 Temmuz 2022 13:35:30 UTC
+    7 กรกฎาคม 2565 เวลา 13 นาฬิกา 35 นาที 30 วินาที UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -811,7 +835,7 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 24`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 липня 2022 р. о 13:35:30 UTC
+    7 Temmuz 2022 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -819,12 +843,20 @@ exports[`gux-date-time #render using non regional dates #render different dateti
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 25`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    2022年7月7日 UTC 13:35:30
+    7 липня 2022 р. о 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
 
 exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 26`] = `
+<gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
+  <template shadowrootmode="open">
+    2022年7月7日 UTC 13:35:30
+  </template>
+</gux-date-time-beta>
+`;
+
+exports[`gux-date-time #render using non regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 27`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
     2022年7月7日 下午1:35:30 [UTC]
@@ -4579,7 +4611,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 12`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07/07/22, 13:35
+    7/7/22, 1:35 pm
   </template>
 </gux-date-time-beta>
 `;
@@ -4587,7 +4619,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 13`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    2022/07/07 13:35
+    07/07/22, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4595,7 +4627,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 14`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    22. 7. 7. 오후 1:35
+    2022/07/07 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4603,7 +4635,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 15`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07-07-2022 13:35
+    22. 7. 7. 오후 1:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4611,7 +4643,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 16`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07.07.2022, 13:35
+    07-07-2022 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4619,7 +4651,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 17`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    7.07.2022, 13:35
+    07.07.2022, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4627,7 +4659,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 18`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07/07/2022, 13:35
+    7.07.2022, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4635,7 +4667,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 19`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07/07/22, 13:35
+    07/07/2022, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4643,7 +4675,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 20`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07.07.2022, 13:35
+    07/07/22, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4651,7 +4683,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 21`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    2022-07-07 13:35
+    07.07.2022, 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4659,7 +4691,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 22`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    7/7/65 13:35
+    2022-07-07 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4667,7 +4699,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 23`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    7.07.2022 13:35
+    7/7/65 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4675,7 +4707,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 24`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    07.07.22, 13:35
+    7.07.2022 13:35
   </template>
 </gux-date-time-beta>
 `;
@@ -4683,12 +4715,20 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 25`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
-    2022/7/7 13:35
+    07.07.22, 13:35
   </template>
 </gux-date-time-beta>
 `;
 
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 26`] = `
+<gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
+  <template shadowrootmode="open">
+    2022/7/7 13:35
+  </template>
+</gux-date-time-beta>
+`;
+
+exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (1) 27`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="short">
   <template shadowrootmode="open">
     2022/7/7 下午1:35
@@ -4787,7 +4827,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 12`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 lug 2022, 13:35:30
+    7 जुल॰ 2022, 1:35:30 pm
   </template>
 </gux-date-time-beta>
 `;
@@ -4795,7 +4835,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 13`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    2022/07/07 13:35:30
+    7 lug 2022, 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4803,7 +4843,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 14`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    2022. 7. 7. 오후 1:35:30
+    2022/07/07 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4811,7 +4851,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 15`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 jul 2022 13:35:30
+    2022. 7. 7. 오후 1:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4819,7 +4859,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 16`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7. juli 2022, 13:35:30
+    7 jul 2022 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4827,7 +4867,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 17`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 lip 2022, 13:35:30
+    7. juli 2022, 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4835,7 +4875,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 18`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 de jul. de 2022, 13:35:30
+    7 lip 2022, 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4843,7 +4883,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 19`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    07/07/2022, 13:35:30
+    7 de jul. de 2022, 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4851,7 +4891,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 20`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 июл. 2022 г., 13:35:30
+    07/07/2022, 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4859,7 +4899,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 21`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 juli 2022 13:35:30
+    7 июл. 2022 г., 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4867,7 +4907,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 22`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 ก.ค. 2565 13:35:30
+    7 juli 2022 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4875,7 +4915,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 23`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 Tem 2022 13:35:30
+    7 ก.ค. 2565 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4883,7 +4923,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 24`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    7 лип. 2022 р., 13:35:30
+    7 Tem 2022 13:35:30
   </template>
 </gux-date-time-beta>
 `;
@@ -4891,12 +4931,20 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 25`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
-    2022年7月7日 13:35:30
+    7 лип. 2022 р., 13:35:30
   </template>
 </gux-date-time-beta>
 `;
 
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 26`] = `
+<gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
+  <template shadowrootmode="open">
+    2022年7月7日 13:35:30
+  </template>
+</gux-date-time-beta>
+`;
+
+exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (2) 27`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="medium">
   <template shadowrootmode="open">
     2022年7月7日 下午1:35:30
@@ -4995,7 +5043,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 12`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    giovedì 7 luglio 2022 alle ore 13:35:30 Tempo coordinato universale
+    गुरुवार, 7 जुलाई 2022 को 1:35:30 pm समन्वित वैश्विक समय बजे
   </template>
 </gux-date-time-beta>
 `;
@@ -5003,7 +5051,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 13`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    2022年7月7日木曜日 13時35分30秒 協定世界時
+    giovedì 7 luglio 2022 alle ore 13:35:30 Tempo coordinato universale
   </template>
 </gux-date-time-beta>
 `;
@@ -5011,7 +5059,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 14`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    2022년 7월 7일 목요일 오후 1시 35분 30초 협정 세계시
+    2022年7月7日木曜日 13時35分30秒 協定世界時
   </template>
 </gux-date-time-beta>
 `;
@@ -5019,7 +5067,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 15`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    donderdag 7 juli 2022 om 13:35:30 gecoördineerde wereldtijd
+    2022년 7월 7일 목요일 오후 1시 35분 30초 협정 세계시
   </template>
 </gux-date-time-beta>
 `;
@@ -5027,7 +5075,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 16`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    torsdag 7. juli 2022 kl. 13:35:30 koordinert universaltid
+    donderdag 7 juli 2022 om 13:35:30 gecoördineerde wereldtijd
   </template>
 </gux-date-time-beta>
 `;
@@ -5035,7 +5083,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 17`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    czwartek, 7 lipca 2022 13:35:30 uniwersalny czas koordynowany
+    torsdag 7. juli 2022 kl. 13:35:30 koordinert universaltid
   </template>
 </gux-date-time-beta>
 `;
@@ -5043,7 +5091,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 18`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    quinta-feira, 7 de julho de 2022 às 13:35:30 Horário Universal Coordenado
+    czwartek, 7 lipca 2022 13:35:30 uniwersalny czas koordynowany
   </template>
 </gux-date-time-beta>
 `;
@@ -5051,7 +5099,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 19`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    quinta-feira, 7 de julho de 2022 às 13:35:30 Hora Coordenada Universal
+    quinta-feira, 7 de julho de 2022 às 13:35:30 Horário Universal Coordenado
   </template>
 </gux-date-time-beta>
 `;
@@ -5059,7 +5107,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 20`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    четверг, 7 июля 2022 г. в 13:35:30 Всемирное координированное время
+    quinta-feira, 7 de julho de 2022 às 13:35:30 Hora Coordenada Universal
   </template>
 </gux-date-time-beta>
 `;
@@ -5067,7 +5115,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 21`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    torsdag 7 juli 2022 kl. 13:35:30 koordinerad universell tid
+    четверг, 7 июля 2022 г. в 13:35:30 Всемирное координированное время
   </template>
 </gux-date-time-beta>
 `;
@@ -5075,7 +5123,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 22`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    วันพฤหัสบดีที่ 7 กรกฎาคม พ.ศ. 2565 เวลา 13 นาฬิกา 35 นาที 30 วินาที เวลาสากลเชิงพิกัด
+    torsdag 7 juli 2022 kl. 13:35:30 koordinerad universell tid
   </template>
 </gux-date-time-beta>
 `;
@@ -5083,7 +5131,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 23`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    7 Temmuz 2022 Perşembe 13:35:30 Eş Güdümlü Evrensel Zaman
+    วันพฤหัสบดีที่ 7 กรกฎาคม พ.ศ. 2565 เวลา 13 นาฬิกา 35 นาที 30 วินาที เวลาสากลเชิงพิกัด
   </template>
 </gux-date-time-beta>
 `;
@@ -5091,7 +5139,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 24`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    четвер, 7 липня 2022 р. о 13:35:30 за всесвітнім координованим часом
+    7 Temmuz 2022 Perşembe 13:35:30 Eş Güdümlü Evrensel Zaman
   </template>
 </gux-date-time-beta>
 `;
@@ -5099,12 +5147,20 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 25`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
-    2022年7月7日星期四 协调世界时 13:35:30
+    четвер, 7 липня 2022 р. о 13:35:30 за всесвітнім координованим часом
   </template>
 </gux-date-time-beta>
 `;
 
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 26`] = `
+<gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
+  <template shadowrootmode="open">
+    2022年7月7日星期四 协调世界时 13:35:30
+  </template>
+</gux-date-time-beta>
+`;
+
+exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (3) 27`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="full">
   <template shadowrootmode="open">
     2022年7月7日 星期四 下午1:35:30 [世界標準時間]
@@ -5203,7 +5259,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 12`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 luglio 2022 alle ore 13:35:30 UTC
+    7 जुलाई 2022 को 1:35:30 pm UTC बजे
   </template>
 </gux-date-time-beta>
 `;
@@ -5211,7 +5267,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 13`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    2022年7月7日 13:35:30 UTC
+    7 luglio 2022 alle ore 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -5219,7 +5275,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 14`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    2022년 7월 7일 오후 1시 35분 30초 UTC
+    2022年7月7日 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -5227,7 +5283,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 15`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 juli 2022 om 13:35:30 UTC
+    2022년 7월 7일 오후 1시 35분 30초 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -5235,7 +5291,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 16`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7. juli 2022 kl. 13:35:30 UTC
+    7 juli 2022 om 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -5243,7 +5299,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 17`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 lipca 2022 13:35:30 UTC
+    7. juli 2022 kl. 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -5251,7 +5307,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 18`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 de julho de 2022 às 13:35:30 UTC
+    7 lipca 2022 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -5267,7 +5323,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 20`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 июля 2022 г. в 13:35:30 UTC
+    7 de julho de 2022 às 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -5275,7 +5331,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 21`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 juli 2022 kl. 13:35:30 UTC
+    7 июля 2022 г. в 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -5283,7 +5339,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 22`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 กรกฎาคม 2565 เวลา 13 นาฬิกา 35 นาที 30 วินาที UTC
+    7 juli 2022 kl. 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -5291,7 +5347,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 23`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 Temmuz 2022 13:35:30 UTC
+    7 กรกฎาคม 2565 เวลา 13 นาฬิกา 35 นาที 30 วินาที UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -5299,7 +5355,7 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 24`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    7 липня 2022 р. о 13:35:30 UTC
+    7 Temmuz 2022 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
@@ -5307,12 +5363,20 @@ exports[`gux-date-time #render using regional dates #render different datetime f
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 25`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
-    2022年7月7日 UTC 13:35:30
+    7 липня 2022 р. о 13:35:30 UTC
   </template>
 </gux-date-time-beta>
 `;
 
 exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 26`] = `
+<gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
+  <template shadowrootmode="open">
+    2022年7月7日 UTC 13:35:30
+  </template>
+</gux-date-time-beta>
+`;
+
+exports[`gux-date-time #render using regional dates #render different datetime formats eg(short,medium,full,long) should render component as expected (4) 27`] = `
 <gux-date-time-beta datetime="2022-07-07T13:35:30.100Z" format="long">
   <template shadowrootmode="open">
     2022年7月7日 下午1:35:30 [UTC]

@@ -10,6 +10,7 @@ export const languageList = [
   'fr-ca',
   'fr',
   'he',
+  'hi',
   'it',
   'ja',
   'ko',

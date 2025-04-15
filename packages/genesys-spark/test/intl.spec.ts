@@ -49,6 +49,15 @@ describe('The intl module', () => {
       document.body.setAttribute('lang', 'yy');
       expect(determineDisplayLocale()).toBe('yy-YY');
     });
+    // Test dom region override
+    test('If the dom language is set to en-US, and the browser language is regional variant of English, use the browser region', () => {
+      Object.defineProperty(window.navigator, 'language', {
+        value: 'en-GB',
+        configurable: true
+      });
+      document.body.setAttribute('lang', 'en-US');
+      expect(determineDisplayLocale()).toBe('en-GB');
+    });
     // Test browser region overrides
     test('If the language attribute is zh-TW (Traditional Chinese Taiwan) and the browser language is Hong Kong then use the browser region', () => {
       Object.defineProperty(window.navigator, 'language', {

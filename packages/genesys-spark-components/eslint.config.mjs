@@ -72,6 +72,7 @@ export default [
   {
     files: ['**/*.{spec,e2e}.ts'],
     rules: {
+      'no-console': 'error',
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
       '@typescript-eslint/no-unsafe-argument': 'off',

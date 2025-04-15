@@ -1,5 +1,6 @@
 {
   "*": "prettier --ignore-unknown --write",
   "*.{ts,tsx,js,jsx}": "eslint --fix ",
-  "package.json": ["prettier-package-json --write"]
+  "package.json": ["prettier-package-json --write"],
+  "data/$themes.json": ["npm run normalise-themes"]
 }

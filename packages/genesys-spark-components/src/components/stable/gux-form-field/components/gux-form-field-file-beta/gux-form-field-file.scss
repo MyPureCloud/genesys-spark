@@ -20,7 +20,10 @@
 }
 
 .gux-input-and-error-container {
+  display: flex;
   flex-grow: 1;
+  flex-direction: column;
+  gap: var(--gse-ui-fileUpload-mainContainer-gap);
 }
 
 .gux-drop-container {
@@ -29,7 +32,6 @@
   flex-direction: column;
   flex-wrap: nowrap;
   gap: var(--gse-ui-fileUpload-dragDrop-btnText-gap);
-  margin-block: var(--gse-ui-fileUpload-mainContainer-gap);
   margin-inline: 0;
   font-family: var(--gse-ui-fileUpload-dragAndDrop-dropZone-text-fontFamily);
   font-size: var(--gse-ui-fileUpload-dragAndDrop-dropZone-text-fontSize);

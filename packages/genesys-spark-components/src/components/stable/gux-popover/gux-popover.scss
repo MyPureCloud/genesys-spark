@@ -4,7 +4,6 @@
   inset-inline-start: 0;
   z-index: var(--gse-semantic-zIndex-popover);
   display: inline-block;
-  min-inline-size: 280px;
   padding: var(--gse-ui-popover-padding);
   background-color: var(--gse-ui-popover-backgroundColor);
   border-radius: var(--gse-ui-popover-borderRadius);
@@ -47,9 +46,5 @@
     font-weight: var(--gse-ui-popover-title-text-fontWeight);
     line-height: var(--gse-ui-popover-title-text-lineHeight);
     color: var(--gse-ui-popover-headerColor);
-  }
-
-  gux-dismiss-button {
-    float: inline-end;
   }
 }

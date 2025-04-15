@@ -1,12 +1,14 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 gux-button-multi {
   [slot='title'] {
     display: inline-flex;
     align-items: center;
 
     gux-icon {
-      inline-size: var(--gse-ui-button-icon-size);
-      block-size: var(--gse-ui-button-icon-size);
-      padding-inline-end: var(--gse-ui-button-gap);
+      inline-size: ui.$gse-ui-button-icon-size;
+      block-size: ui.$gse-ui-button-icon-size;
+      padding-inline-end: ui.$gse-ui-button-gap;
     }
   }
 }

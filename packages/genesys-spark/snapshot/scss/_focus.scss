@@ -1,0 +1,10 @@
+@mixin gux-focus-ring {
+  outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
+    var(--gse-semantic-border-focus);
+  outline-offset: var(--gse-semantic-focusOutline-offset);
+}
+
+@mixin gux-focus-ring-small {
+  outline: var(--gse-semantic-focusOutline-sm-borderWidth) solid
+    var(--gse-semantic-border-focus);
+}

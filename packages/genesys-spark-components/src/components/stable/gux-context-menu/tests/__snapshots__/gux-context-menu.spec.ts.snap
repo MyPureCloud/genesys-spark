@@ -3,11 +3,14 @@
 exports[`gux-context-menu renders 1`] = `
 <gux-context-menu>
   <template shadowrootmode="open">
-    <gux-popup exceed-target-width="" offset="4">
+    <gux-popup exceed-target-width="" offset="4" placement="bottom-start">
       <div class="gux-button-container" slot="target">
         <gux-button-slot accent="ghost">
           <button aria-expanded="false" aria-haspopup="true" id="gux-i" type="button">
-            <gux-icon icon-name="fa/ellipsis-vertical-regular" screenreader-text="Context menu" size="small"></gux-icon>
+            <gux-screen-reader-beta>
+              Context menu
+            </gux-screen-reader-beta>
+            <gux-icon decorative="" icon-name="fa/ellipsis-vertical-regular" size="small"></gux-icon>
           </button>
         </gux-button-slot>
       </div>
