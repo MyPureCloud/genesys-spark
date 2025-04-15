@@ -40,7 +40,7 @@ gux-switch-legacy {
   > gux-switch-item {
     .gux-switch-item {
       padding: 0 8px 4px;
-      border-bottom: 1px solid $inactive-small;
+      border-bottom: 1px solid #{$inactive-small};
 
       &:focus-visible,
       &:hover {
@@ -86,7 +86,7 @@ gux-switch-legacy {
         @include typography.body-sm-regular;
 
         padding: 0 4px;
-        border-bottom: 1px solid $inactive-small;
+        border-bottom: 1px solid #{$inactive-small};
 
         &:focus-visible,
         &:hover {

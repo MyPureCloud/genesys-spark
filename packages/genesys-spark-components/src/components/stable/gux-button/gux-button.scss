@@ -111,11 +111,9 @@ button {
     border-style: ui.$gse-ui-button-tertiary-default-border-style;
     border-width: ui.$gse-ui-button-tertiary-default-border-width;
 
+    /* prettier-ignore */
     &.gux-icon-only {
-      padding: calc(
-        ui.$gse-ui-button-default-paddingIconOnly -
-          ui.$gse-ui-button-tertiary-default-border-width
-      );
+      padding: calc(ui.$gse-ui-button-default-paddingIconOnly - ui.$gse-ui-button-tertiary-default-border-width);
     }
 
     &:hover:enabled {
