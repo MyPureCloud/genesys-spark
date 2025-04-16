@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 $focus-outline-offset: 5px;
@@ -73,10 +74,10 @@ $focus-outline-offset: 5px;
 
     &:focus-within {
       .gux-tag-remove-icon {
-        outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
+        outline: global.$gse-semantic-focusOutline-md-borderWidth solid
           var(--gse-ui-color-focus);
         outline-offset: $focus-outline-offset;
-        border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
+        border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
       }
     }
   }

@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+
 @mixin gux-list-item-default {
   :host {
     inline-size: 100%;
@@ -42,7 +44,7 @@
       outline: var(--gse-ui-menu-option-focus-border-width)
         var(--gse-ui-menu-option-focus-border-style)
         var(--gse-ui-menu-option-focus-border-color);
-      border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
+      border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
     }
 
     &:hover:not(:disabled) {

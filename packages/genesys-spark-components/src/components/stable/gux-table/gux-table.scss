@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '~genesys-spark/dist/scss/typography.scss';
 
 :host {
@@ -26,8 +27,8 @@
     align-items: center;
     justify-content: center;
     block-size: calc(100% - var(--gse-ui-dataTableItems-header-default-height));
-    color: var(--gse-semantic-foreground-container-lowEmphasis);
-    background: var(--gse-semantic-background-container-page-tonalSubtle);
+    color: global.$gse-semantic-foreground-container-lowEmphasis;
+    background: global.$gse-semantic-background-container-page-tonalSubtle;
 
     @include typography.heading-lg;
   }

@@ -1,8 +1,10 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+
 .gux-popover-wrapper {
   position: fixed;
   inset-block-start: 0;
   inset-inline-start: 0;
-  z-index: var(--gse-semantic-zIndex-popover);
+  z-index: global.$gse-semantic-zIndex-popover;
   display: inline-block;
   padding-block: 8px;
   padding-inline: 0; // TODO: COMUI-2257 - add missing token

@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 :host {
@@ -9,8 +10,8 @@
 :host(:host:focus-visible) {
   @include focus.gux-focus-ring-small;
 
-  outline-offset: var(--gse-semantic-focusOutline-offset);
-  box-shadow: 0 0 0 1px var(--gse-semantic-border-focus);
+  outline-offset: global.$gse-semantic-focusOutline-offset;
+  box-shadow: 0 0 0 1px global.$gse-semantic-border-focus;
 }
 
 .gux-rating-star-container {

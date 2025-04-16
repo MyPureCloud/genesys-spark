@@ -1,25 +1,4 @@
-/*
-@prop --gse-ui-radioButton-icon-default-unselectedForegroundColor
-@prop --gse-ui-radioButton-icon-default-selectedForegroundColor
-@prop --gse-ui-radioButton-icon-hover-foregroundColor
-@prop --gse-ui-radioButton-icon-active-foregroundColor
-@prop --gse-ui-radioButton-icon-error-foregroundColor
-@prop --gse-ui-radioButton-icon-height
-@prop --gse-ui-radioButton-icon-width
-@prop --gse-ui-radioButton-label-foregroundColor
-@prop --gse-ui-radioButton-label-text-fontFamily
-@prop --gse-ui-radioButton-label-text-fontWeight
-@prop --gse-ui-radioButton-label-text-lineHeight
-@prop --gse-ui-radioButton-gap
-@prop --gse-ui-radioButton-helper-padding
-@prop --gse-ui-radioButton-helper-gap
-@prop --gse-ui-radioButton-disabled-opacity
-@prop --gse-ui-radioButton-focus-border-color
-@prop --gse-ui-radioButton-focus-border-width
-@prop --gse-ui-radioButton-focus-border-style
-@prop --gse-ui-radioButton-focus-borderRadius
-@prop --gse-ui-radioButton-focus-offset
-*/
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '~genesys-spark/dist/scss/radio-icons.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
@@ -101,7 +80,7 @@
   outline: var(--gse-ui-radioButton-focus-border-width)
     var(--gse-ui-radioButton-focus-border-style)
     var(--gse-ui-radioButton-focus-border-color);
-  outline-offset: var(--gse-semantic-focusOutline-offset);
+  outline-offset: global.$gse-semantic-focusOutline-offset;
   border-radius: var(--gse-ui-radioButton-focus-borderRadius);
 }
 

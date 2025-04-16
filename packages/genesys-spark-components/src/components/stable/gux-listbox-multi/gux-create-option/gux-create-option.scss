@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
@@ -28,7 +29,7 @@
       var(--gse-ui-menu-option-focus-border-style)
       var(--gse-ui-menu-option-focus-border-color);
     outline-offset: -2px;
-    border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
+    border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
   }
 
   &:host(.gux-hovered:not([disabled])) {

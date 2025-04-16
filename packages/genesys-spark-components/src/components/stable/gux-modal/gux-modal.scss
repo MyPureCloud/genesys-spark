@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '~genesys-spark/dist/scss/typography.scss';
 
 ::slotted(button:active:enabled) {
@@ -73,7 +74,7 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
         padding-inline: var(--gse-ui-modal-padding);
         margin-block-start: var(--gse-ui-modal-gap);
         overflow-y: auto;
-        color: var(--gse-semantic-foreground-container-highEmphasis);
+        color: global.$gse-semantic-foreground-container-highEmphasis;
       }
 
       .gux-button-footer {
