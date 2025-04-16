@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 gux-tab-advanced {
@@ -28,7 +29,7 @@ gux-tab-advanced {
           @include focus.gux-focus-ring;
 
           outline-offset: calc(
-            -1 * var(--gse-semantic-focusOutline-md-borderWidth)
+            -1 * #{global.$gse-semantic-focusOutline-md-borderWidth}
           );
           border-radius: var(--gse-ui-advancedTabs-item-focus-borderRadius);
         }

@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+
 :host {
   box-sizing: border-box;
   display: block;
@@ -13,9 +15,9 @@
 }
 
 :host(:focus-visible) {
-  outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
+  outline: global.$gse-semantic-focusOutline-md-borderWidth solid
     var(--gse-ui-color-focus);
-  outline-offset: var(--gse-semantic-focusOutline-offset);
+  outline-offset: global.$gse-semantic-focusOutline-offset;
 }
 
 .gux-message-container {

@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
@@ -92,7 +93,7 @@
         outline: var(--gse-ui-formControl-input-focus-border-width)
           var(--gse-ui-formControl-input-focus-border-style)
           var(--gse-ui-formControl-input-focus-border-color);
-        outline-offset: var(--gse-semantic-focusOutline-offset);
+        outline-offset: global.$gse-semantic-focusOutline-offset;
         border: var(--gse-ui-formControl-input-active-border-width)
           var(--gse-ui-formControl-input-active-border-style)
           var(--gse-ui-formControl-input-active-border-color);

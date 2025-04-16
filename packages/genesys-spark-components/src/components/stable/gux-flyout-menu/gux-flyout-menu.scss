@@ -1,8 +1,9 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 // Style
 :host {
-  z-index: var(--gse-semantic-zIndex-popover);
+  z-index: global.$gse-semantic-zIndex-popover;
   color: var(--gse-ui-menu-option-label-foregroundColor);
   cursor: default;
 }
@@ -53,7 +54,7 @@
       transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
 
     filter: drop-shadow(
-      0 0 4px var(--gse-semantic-effects-boxShadow)
+      0 0 4px #{global.$gse-semantic-effects-boxShadow}
     ); // TODO: COMUI-2993 Replace this token with menu-specific token
   }
 }

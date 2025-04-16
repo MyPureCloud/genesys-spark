@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use 'sass:math';
 
 $largeSpinnerSize: 48; // Linked to --gse-ui-progressAndLoading-spinner-large
@@ -95,7 +96,7 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
 
       .gux-dynamic-circle-mask {
         display: none;
-        stroke: var(--gse-semantic-background-container-page-default);
+        stroke: global.$gse-semantic-background-container-page-default;
         stroke-width: $largeSpinnerBorder - $thinSpinnerBorder;
       }
 
