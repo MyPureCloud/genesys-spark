@@ -1058,7 +1058,7 @@
     "secondary": {
       "default": {
         "background_color": "#e8ecf2",
-        "foreground_color": "#2e394c"
+        "foreground_color": "#2a60c8"
       },
       "hover": {
         "background_color": "#deeaff",
@@ -1072,9 +1072,9 @@
     "tertiary": {
       "default": {
         "background_color": "rgba(0, 0, 0, 0)",
-        "foreground_color": "#2e394c",
+        "foreground_color": "#2a60c8",
         "border": {
-          "color": "#2e394c",
+          "color": "#2a60c8",
           "width": "1px",
           "style": "solid"
         }
@@ -1091,7 +1091,7 @@
     "ghost": {
       "default": {
         "background_color": "rgba(0, 0, 0, 0)",
-        "foreground_color": "#2e394c"
+        "foreground_color": "#2a60c8"
       },
       "hover": {
         "background_color": "#deeaff",
@@ -2505,7 +2505,7 @@
       "initials_foreground": {
         "default": "#2e394c",
         "inverse": "#ffffff",
-        "add": "#2e394c"
+        "add": "#2a60c8"
       }
     },
     "hover_modal": {
