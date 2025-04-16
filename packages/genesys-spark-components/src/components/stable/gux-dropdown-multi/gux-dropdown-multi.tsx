@@ -212,6 +212,15 @@ export class GuxDropdownMulti {
         if (this.canCreateNewOption() && this.isActiveElement()) {
           this.emitCreateOption();
         }
+        if (!this.expanded && !this.isFilterable()) {
+          setInitialActiveOption(this.listboxElement);
+        }
+        return;
+      case ' ':
+        if (!this.expanded && !this.isFilterable()) {
+          setInitialActiveOption(this.listboxElement);
+        }
+        return;
     }
   }
 
