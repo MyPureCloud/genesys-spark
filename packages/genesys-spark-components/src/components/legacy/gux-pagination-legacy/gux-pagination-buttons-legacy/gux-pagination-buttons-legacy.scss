@@ -1,15 +1,18 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 @mixin gse-ui-dataTableItems-tablePagination-typography {
   font-family: var(
     --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
   );
-  font-size: var(--gse-ui-dataTableItems-tablePagination-defaultText-fontSize);
+  font-size: ui.$gse-ui-dataTableItems-tablePagination-defaultText-fontSize;
   font-weight: var(
     --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
   );
   line-height: var(
     --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
   );
-  color: var(--gse-ui-button-ghost-default-foregroundColor);
+  color: ui.$gse-ui-button-ghost-default-foregroundColor;
 }
 
 gux-pagination-buttons-legacy {
@@ -17,7 +20,7 @@ gux-pagination-buttons-legacy {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+    gap: ui.$gse-ui-dataTableItems-tablePagination-recordsetControls-gap;
     place-content: stretch flex-end;
     align-items: center;
     margin-left: var(
@@ -42,7 +45,7 @@ gux-pagination-buttons-legacy {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+      gap: ui.$gse-ui-dataTableItems-tablePagination-recordsetControls-gap;
       place-content: stretch center;
       align-items: center;
 
@@ -68,7 +71,7 @@ gux-pagination-buttons-legacy {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+      gap: ui.$gse-ui-dataTableItems-tablePagination-recordsetControls-gap;
       place-content: stretch center;
       align-items: center;
 
@@ -90,43 +93,42 @@ gux-pagination-buttons-legacy {
         border: none;
 
         &:focus-visible {
-          outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
-            var(--gse-ui-color-focus);
-          outline-offset: var(--gse-semantic-focusOutline-offset);
+          outline: global.$gse-semantic-focusOutline-md-borderWidth solid
+            ui.$gse-ui-color-focus;
+          outline-offset: global.$gse-semantic-focusOutline-offset;
           border-radius: calc(
-            var(--gse-semantic-focusOutline-sm-borderRadius) - var(
-                --gse-semantic-focusOutline-offset
-              )
+            #{global.$gse-semantic-focusOutline-sm-borderRadius} -
+              #{global.$gse-semantic-focusOutline-offset}
           );
         }
 
         &.gux-current {
-          padding-right: var(--gse-ui-dataTableItems-tablePagination-padding);
-          padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
-          background-color: var(--gse-ui-button-ghost-active-backgroundColor);
-          border-radius: var(--gse-ui-button-borderRadius);
+          padding-right: ui.$gse-ui-dataTableItems-tablePagination-padding;
+          padding-left: ui.$gse-ui-dataTableItems-tablePagination-padding;
+          background-color: ui.$gse-ui-button-ghost-active-backgroundColor;
+          border-radius: ui.$gse-ui-button-borderRadius;
 
           @include gse-ui-dataTableItems-tablePagination-typography;
         }
 
         &.gux-target {
-          padding-right: var(--gse-ui-dataTableItems-tablePagination-padding);
-          padding-left: var(--gse-ui-dataTableItems-tablePagination-padding);
+          padding-right: ui.$gse-ui-dataTableItems-tablePagination-padding;
+          padding-left: ui.$gse-ui-dataTableItems-tablePagination-padding;
           cursor: pointer;
 
           @include gse-ui-dataTableItems-tablePagination-typography;
 
           &:hover {
-            color: var(--gse-ui-button-ghost-hover-foregroundColor);
-            background-color: var(--gse-ui-button-ghost-hover-backgroundColor);
-            border-radius: var(--gse-ui-button-borderRadius);
+            color: ui.$gse-ui-button-ghost-hover-foregroundColor;
+            background-color: ui.$gse-ui-button-ghost-hover-backgroundColor;
+            border-radius: ui.$gse-ui-button-borderRadius;
           }
         }
       }
     }
 
     .gux-pagination-buttons-spacer {
-      width: var(--gse-ui-dataTableItems-tablePagination-padding);
+      width: ui.$gse-ui-dataTableItems-tablePagination-padding;
     }
   }
 }
