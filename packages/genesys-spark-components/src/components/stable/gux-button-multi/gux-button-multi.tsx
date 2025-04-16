@@ -59,6 +59,12 @@ export class GuxButtonMulti {
   accent: GuxButtonMultiAccent = 'secondary';
 
   /**
+   * Aria label for button tag
+   */
+  @Prop()
+  guxAriaLabel: string = '';
+
+  /**
    * It is used to open or not the list.
    */
   @Prop({ mutable: true })
@@ -173,6 +179,7 @@ export class GuxButtonMulti {
               onMouseUp={() => this.toggle()}
               aria-haspopup="true"
               aria-expanded={this.isOpen.toString()}
+              aria-label={this.guxAriaLabel}
             >
               <slot name="title" />
               <gux-icon
