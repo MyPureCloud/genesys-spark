@@ -173,6 +173,15 @@ export class GuxPhoneInput {
     this.displayType = this.parsePhoneNumberType(format);
   }
 
+  @Watch('hasError')
+  onHasError(hasError: boolean): void {
+    if (hasError) {
+      this.inputElement.setAttribute('aria-invalid', 'true');
+    } else {
+      this.inputElement.removeAttribute('aria-invalid');
+    }
+  }
+
   @Listen('internallistboxoptionsupdated')
   onInternallistboxoptionsupdated(event: CustomEvent): void {
     event.stopPropagation();
@@ -239,6 +248,10 @@ export class GuxPhoneInput {
   componentDidLoad(): void {
     this.setInput();
     this.setListBox();
+
+    if (this.hasError) {
+      this.inputElement.setAttribute('aria-invalid', 'true');
+    }
   }
 
   private initialValueParse(): void {

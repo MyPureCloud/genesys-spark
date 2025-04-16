@@ -90,6 +90,12 @@ export class GuxFormFieldRadioGroupBeta {
     if (radioSlots) {
       radioSlots.forEach(item => {
         item.hasGroupError = hasGroupError;
+        const radioInput = item.querySelector('input');
+        if (hasGroupError) {
+          radioInput.setAttribute('aria-invalid', 'true');
+        } else {
+          radioInput.removeAttribute('aria-invalid');
+        }
       });
     }
   }

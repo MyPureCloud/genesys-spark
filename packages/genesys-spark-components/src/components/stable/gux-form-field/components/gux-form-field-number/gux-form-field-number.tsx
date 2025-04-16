@@ -7,7 +7,8 @@ import {
   Listen,
   Method,
   Prop,
-  State
+  State,
+  Watch
 } from '@stencil/core';
 
 import { buildI18nForComponent, GetI18nValue } from '../../../../../i18n';
@@ -101,6 +102,15 @@ export class GuxFormFieldNumber {
   @State()
   private hasHelp: boolean = false;
 
+  @Watch('hasError')
+  onHasError(hasError: boolean): void {
+    if (hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    } else {
+      this.input.removeAttribute('aria-invalid');
+    }
+  }
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
@@ -157,6 +167,10 @@ export class GuxFormFieldNumber {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+
+    if (this.hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    }
 
     trackComponent(this.root, { variant: this.variant });
   }

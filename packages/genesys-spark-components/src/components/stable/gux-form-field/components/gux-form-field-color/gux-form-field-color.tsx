@@ -1,4 +1,13 @@
-import { Component, Element, h, JSX, Listen, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  JSX,
+  Listen,
+  Prop,
+  State,
+  Watch
+} from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
@@ -74,6 +83,15 @@ export class GuxFormFieldColor {
   @State()
   private hasHelp: boolean = false;
 
+  @Watch('hasError')
+  onHasError(hasError: boolean): void {
+    if (hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    } else {
+      this.input.removeAttribute('aria-invalid');
+    }
+  }
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
@@ -116,6 +134,10 @@ export class GuxFormFieldColor {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+
+    if (this.hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    }
 
     trackComponent(this.root, { variant: this.variant });
   }

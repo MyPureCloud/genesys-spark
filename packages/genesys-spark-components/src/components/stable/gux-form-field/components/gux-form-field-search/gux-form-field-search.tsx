@@ -7,7 +7,8 @@ import {
   State,
   Method,
   forceUpdate,
-  Listen
+  Listen,
+  Watch
 } from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
@@ -93,6 +94,15 @@ export class GuxFormFieldSearch {
   @State()
   private hasHelp: boolean = false;
 
+  @Watch('hasError')
+  onHasError(hasError: boolean): void {
+    if (hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    } else {
+      this.input.removeAttribute('aria-invalid');
+    }
+  }
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
@@ -145,6 +155,10 @@ export class GuxFormFieldSearch {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+
+    if (this.hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    }
 
     trackComponent(this.root, { variant: this.variant });
   }

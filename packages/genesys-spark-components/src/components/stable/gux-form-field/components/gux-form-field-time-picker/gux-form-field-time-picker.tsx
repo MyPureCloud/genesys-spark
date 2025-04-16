@@ -147,6 +147,10 @@ export class GuxFormFieldTimePicker {
     this.hasHelp = hasSlot(this.root, 'help');
     this.hasLabelInfo = hasSlot(this.root, 'label-info');
 
+    if (this.hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    }
+
     trackComponent(this.root, { variant: this.variant });
   }
 

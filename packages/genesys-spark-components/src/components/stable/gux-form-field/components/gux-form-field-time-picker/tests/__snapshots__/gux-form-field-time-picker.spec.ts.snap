@@ -18,7 +18,7 @@ exports[`gux-form-field-time-picker #render help should render component as expe
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -60,7 +60,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -99,7 +99,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -138,7 +138,7 @@ exports[`gux-form-field-time-picker #render intervals should render component as
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -177,7 +177,7 @@ exports[`gux-form-field-time-picker #render label-info should render component a
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -221,7 +221,7 @@ exports[`gux-form-field-time-picker #render label-position indicator marks shoul
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -260,7 +260,7 @@ exports[`gux-form-field-time-picker #render label-position indicator marks shoul
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -299,7 +299,7 @@ exports[`gux-form-field-time-picker #render label-position indicator marks shoul
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -338,7 +338,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -377,7 +377,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -416,7 +416,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -455,7 +455,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>

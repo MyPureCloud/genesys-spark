@@ -13,7 +13,7 @@ exports[`gux-form-field-radio #render should render component as expected (1) 1`
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -47,7 +47,7 @@ exports[`gux-form-field-radio #render should render component as expected (2) 1`
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -81,7 +81,7 @@ exports[`gux-form-field-radio #render should render component as expected (3) 1`
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error gux-show">
+        <div aria-live="assertive" class="gux-form-field-error gux-show" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -118,7 +118,7 @@ exports[`gux-form-field-radio #render should render component as expected (4) 1`
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -152,7 +152,7 @@ exports[`gux-form-field-radio #render should render component as expected (5) 1`
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error gux-show">
+        <div aria-live="assertive" class="gux-form-field-error gux-show" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -189,7 +189,7 @@ exports[`gux-form-field-radio #render should render component as expected (6) 1`
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error gux-show">
+        <div aria-live="assertive" class="gux-form-field-error gux-show" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -226,7 +226,7 @@ exports[`gux-form-field-radio #render should render component as expected (7) 1`
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -263,7 +263,7 @@ exports[`gux-form-field-radio #render should render component as expected (8) 1`
         </div>
       </div>
       <div class="error-and-help-text">
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>

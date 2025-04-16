@@ -1,4 +1,13 @@
-import { Component, State, Element, JSX, Prop, h, Listen } from '@stencil/core';
+import {
+  Component,
+  State,
+  Element,
+  JSX,
+  Prop,
+  h,
+  Listen,
+  Watch
+} from '@stencil/core';
 import { OnMutation } from '@utils/decorator/on-mutation';
 import { hasSlot } from '@utils/dom/has-slot';
 import { trackComponent } from '@utils/tracking/usage';
@@ -66,6 +75,15 @@ export class GuxFormFieldFile {
   @State()
   private required: boolean = false;
 
+  @Watch('hasError')
+  onHasError(hasError: boolean): void {
+    if (hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    } else {
+      this.input.removeAttribute('aria-invalid');
+    }
+  }
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
@@ -108,6 +126,10 @@ export class GuxFormFieldFile {
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
     this.labelInfo = this.root.querySelector('[slot=label-info]');
+
+    if (this.hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    }
 
     trackComponent(this.root, { variant: this.variant });
   }

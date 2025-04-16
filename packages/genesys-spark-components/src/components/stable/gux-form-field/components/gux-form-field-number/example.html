@@ -5,219 +5,55 @@
 <h2>Examples</h2>
 <form onchange="notify(event)" oninput="notify(event)">
   <fieldset>
-    <legend>Clearable</legend>
-
-    <gux-form-field-number>
-      <input slot="input" type="number" name="c-1" value="10" />
-      <label slot="label">Default</label>
-    </gux-form-field-number>
-
-    <gux-form-field-number clearable>
-      <input slot="input" type="number" name="c-2" value="10" />
-      <label slot="label">True</label>
-    </gux-form-field-number>
-
-    <gux-form-field-number clearable>
-      <input slot="input" type="number" name="c-3" value="10" disabled />
-      <label slot="label">True and disabled</label>
-    </gux-form-field-number>
-
-    <gux-form-field-number clearable="false">
-      <input slot="input" type="number" name="c-4" value="10" />
-      <label slot="label">False</label>
-    </gux-form-field-number>
-  </fieldset>
-
-  <fieldset>
-    <legend>Label Position</legend>
-
-    <gux-form-field-number>
-      <input slot="input" type="number" name="lp-1" value="10" />
-      <label slot="label">Default</label>
-    </gux-form-field-number>
-
-    <gux-form-field-number>
-      <input slot="input" type="number" name="lp-2" value="10" />
-      <label slot="label">Default long label</label>
-    </gux-form-field-number>
-
-    <gux-form-field-number label-position="above">
-      <input slot="input" type="number" name="lp-3" value="10" />
-      <label slot="label">Above</label>
-    </gux-form-field-number>
-
-    <gux-form-field-number label-position="beside">
-      <input slot="input" type="number" name="lp-4" value="10" />
-      <label slot="label">Beside</label>
-    </gux-form-field-number>
-
-    <gux-form-field-number label-position="screenreader">
-      <input slot="input" type="number" name="lp-5" value="10" />
-      <label slot="label">Screenreader</label>
-    </gux-form-field-number>
-  </fieldset>
-
-  <fieldset>
-    <legend>Input attributes</legend>
-
-    <gux-form-field-number>
-      <input slot="input" type="number" name="a-1" value="10" disabled />
-      <label slot="label">Disabled</label>
-    </gux-form-field-number>
-
-    <gux-form-field-number>
-      <input slot="input" type="number" name="a-2" value="10" required />
-      <label slot="label">Required</label>
-    </gux-form-field-number>
-
-    <gux-form-field-number>
-      <input slot="input" type="number" name="a-3" placeholder="Enter number" />
-      <label slot="label">Placeholder</label>
-    </gux-form-field-number>
-
-    <gux-form-field-number>
-      <input
-        slot="input"
-        type="number"
-        name="a-2"
-        value="10"
-        step="5"
-        min="-25"
-        max="25"
-      />
-      <label slot="label">Step / Min / Max</label>
-    </gux-form-field-number>
-  </fieldset>
-
-  <fieldset>
     <legend>Error</legend>
 
-    <gux-form-field-number>
+    <gux-form-field-number id="numberField">
       <input slot="input" type="number" name="e-1" value="10" />
       <label slot="label">Default</label>
-      <span slot="error">This is an error message</span>
     </gux-form-field-number>
-  </fieldset>
-
-  <fieldset>
-    <legend>Help</legend>
 
     <gux-form-field-number>
       <input slot="input" type="number" name="e-1" value="10" />
       <label slot="label">Default</label>
-      <span slot="help">This is a help message</span>
     </gux-form-field-number>
   </fieldset>
 
-  <fieldset>
-    <legend>Label Info</legend>
+  <style
+    onload="(function () {
 
-    <gux-form-field-number>
-      <input slot="input" type="number" name="e-1" value="10" />
-      <label slot="label">Default</label>
-      <gux-label-info-beta slot="label-info">
-        <span slot="content">This is some tooltip text</span>
-      </gux-label-info-beta>
-    </gux-form-field-number>
-  </fieldset>
 
-  <fieldset>
-    <legend>Indicator Mark</legend>
-    <a href="gux-form-field-label-indicator.html"
-      >Click here for usage examples</a
-    >
-  </fieldset>
 
-  <fieldset>
-    <legend>Programmatically set value</legend>
+const input = document.querySelector(`#numberField input[slot='input']`);
+  // Get the parent gux-form-field-number component
+  const formField = document.querySelector('#numberField');
 
-    <gux-form-field-number id="p" clearable>
-      <input slot="input" type="number" name="p-1" />
-      <label slot="label">Random number</label>
-    </gux-form-field-number>
+  const announce = document.querySelector('#announce');
 
-    <gux-button-slot>
-      <button
-        type="button"
-        onclick="(function () {
-          const formField = document.getElementById('p');
-          const input = document.querySelector('[name=p-1]');
+  
+  input.addEventListener('focusout', () => {
+  // Check if the error span doesn't already exist to avoid duplicates
+  if (!formField.querySelector(`span[slot='error']`)) {
+    const errorSpan = document.createElement('span');
+    errorSpan.setAttribute('slot', 'error');
+    errorSpan.textContent = 'Error Confirmed';
+    formField.appendChild(errorSpan);
+  }
+});
+ 
 
-          input.value = '';
-          formField.guxForceUpdate();
-        })()"
-      >
-        Clear field
-      </button>
-    </gux-button-slot>
+})()"
+  >
+    .form-container {
+      display: inline-flex;
+      flex-direction: column;
+    }
 
-    <gux-button-slot>
-      <button
-        type="button"
-        onclick="(function () {
-          const randomNumber = Math.floor(Math.random() * 10000);
-          const formField = document.getElementById('p');
-          const input = document.querySelector('[name=p-1]');
+    .width::part(input-section) {
+      inline-size: 108px;
+    }
 
-          input.value = randomNumber;
-          formField.guxForceUpdate();
-        })()"
-      >
-        Set field to random number
-      </button>
-    </gux-button-slot>
-  </fieldset>
+    gux-form-field-number {
+      margin: 10px;
+    }
+  </style>
 </form>
-
-<fieldset>
-  <legend>Setting the input size</legend>
-  <p>
-    To set the size of an input create a class with the desired width and apply
-    this class to the input element.
-  </p>
-
-  <gux-form-field-number class="width" label-position="beside">
-    <input slot="input" type="number" name="e-1" value="10" />
-    <label slot="label">I am long label</label>
-    <span slot="error">Short error message</span>
-  </gux-form-field-number>
-
-  <gux-form-field-number label-position="beside">
-    <input
-      style="inline-size: 200px"
-      slot="input"
-      type="number"
-      name="e-1"
-      value="10"
-    />
-    <label slot="label">I am long label</label>
-    <span slot="error"
-      >This is an error message with a very long text message very very
-      long</span
-    >
-  </gux-form-field-number>
-
-  <gux-form-field-number label-position="beside">
-    <input slot="input" type="number" name="e-1" value="10" />
-    <label slot="label">I am long label</label>
-    <span slot="error"
-      >This is an error message with a very long text message very very
-      long</span
-    >
-  </gux-form-field-number>
-</fieldset>
-
-<style>
-  .form-container {
-    display: inline-flex;
-    flex-direction: column;
-  }
-
-  .width::part(input-section) {
-    inline-size: 108px;
-  }
-
-  gux-form-field-number {
-    margin: 10px;
-  }
-</style>

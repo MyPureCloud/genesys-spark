@@ -13,7 +13,7 @@ exports[`gux-form-field-textarea #render error should render component as expect
         <div class="gux-input gux-input-error gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error gux-show">
+        <div aria-live="assertive" class="gux-form-field-error gux-show" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -49,7 +49,7 @@ exports[`gux-form-field-textarea #render help should render component as expecte
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -85,7 +85,7 @@ exports[`gux-form-field-textarea #render indicator marks should render component
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -118,7 +118,7 @@ exports[`gux-form-field-textarea #render indicator marks should render component
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -151,7 +151,7 @@ exports[`gux-form-field-textarea #render indicator marks should render component
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -184,7 +184,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -217,7 +217,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -250,7 +250,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -283,7 +283,7 @@ exports[`gux-form-field-textarea #render label-info should render component as e
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -321,7 +321,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -354,7 +354,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -387,7 +387,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -420,7 +420,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -453,7 +453,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
         <div class="gux-input gux-resize-undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -486,7 +486,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
         <div class="gux-input gux-resize-auto" data-replicated-value="undefined">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -519,7 +519,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
         <div class="gux-input gux-resize-manual">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -552,7 +552,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
         <div class="gux-input gux-resize-none">
           <slot name="input"></slot>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>

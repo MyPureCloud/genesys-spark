@@ -94,6 +94,13 @@ export class GuxFormFieldCheckboxGroupBeta {
     if (checkboxSlots) {
       checkboxSlots.forEach(item => {
         item.hasGroupError = hasGroupError;
+
+        const checkboxInput = item.querySelector('input');
+        if (hasGroupError) {
+          checkboxInput.setAttribute('aria-invalid', 'true');
+        } else {
+          checkboxInput.removeAttribute('aria-invalid');
+        }
       });
     }
   }

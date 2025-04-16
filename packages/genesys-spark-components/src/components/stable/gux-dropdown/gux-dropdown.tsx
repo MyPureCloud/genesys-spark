@@ -118,6 +118,15 @@ export class GuxDropdown {
     }
   }
 
+  @Watch('hasError')
+  onHasError(hasError: boolean): void {
+    if (hasError) {
+      this.fieldButtonElement?.setAttribute('aria-invalid', 'true');
+    } else {
+      this.fieldButtonElement?.removeAttribute('aria-invalid');
+    }
+  }
+
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
@@ -246,6 +255,10 @@ export class GuxDropdown {
 
   componentDidLoad(): void {
     this.applyListboxEventListeners();
+
+    if (this.hasError) {
+      this.fieldButtonElement.setAttribute('aria-invalid', 'true');
+    }
   }
 
   componentWillRender(): void {

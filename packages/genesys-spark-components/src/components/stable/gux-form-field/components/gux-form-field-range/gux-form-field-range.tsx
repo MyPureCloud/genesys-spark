@@ -7,7 +7,8 @@ import {
   JSX,
   Listen,
   Prop,
-  State
+  State,
+  Watch
 } from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
@@ -104,6 +105,15 @@ export class GuxFormField {
   @State()
   private valueWatcherId: ReturnType<typeof setTimeout>;
 
+  @Watch('hasError')
+  onHasError(hasError: boolean): void {
+    if (hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    } else {
+      this.input.removeAttribute('aria-invalid');
+    }
+  }
+
   @Listen('input')
   onInput(e: MouseEvent): void {
     const input = e.target as HTMLInputElement;
@@ -165,6 +175,10 @@ export class GuxFormField {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+
+    if (this.hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    }
 
     trackComponent(this.root, { variant: this.variant });
   }

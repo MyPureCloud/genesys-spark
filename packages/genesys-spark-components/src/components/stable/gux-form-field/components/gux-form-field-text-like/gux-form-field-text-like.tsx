@@ -7,7 +7,8 @@ import {
   Method,
   Prop,
   State,
-  Listen
+  Listen,
+  Watch
 } from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
@@ -105,6 +106,15 @@ export class GuxFormFieldTextLike {
   @State()
   private hasHelp: boolean = false;
 
+  @Watch('hasError')
+  onHasError(hasError: boolean): void {
+    if (hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    } else {
+      this.input.removeAttribute('aria-invalid');
+    }
+  }
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
@@ -176,6 +186,10 @@ export class GuxFormFieldTextLike {
 
     if (this.hasSuffix) {
       setSlotAriaDescribedby(this.root, this.input, 'suffix');
+    }
+
+    if (this.hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
     }
 
     trackComponent(this.root, { variant: this.variant });

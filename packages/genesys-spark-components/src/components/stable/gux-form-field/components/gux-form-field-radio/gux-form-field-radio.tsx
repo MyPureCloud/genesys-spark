@@ -1,4 +1,13 @@
-import { Component, Element, h, Host, JSX, Prop, State } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Host,
+  JSX,
+  Prop,
+  State,
+  Watch
+} from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
@@ -47,6 +56,15 @@ export class GuxFormFieldRadio {
   @Prop()
   hasGroupDisabled: boolean = false;
 
+  @Watch('hasError')
+  onHasError(hasError: boolean): void {
+    if (hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    } else {
+      this.input.removeAttribute('aria-invalid');
+    }
+  }
+
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     this.hasError = hasSlot(this.root, 'error');
@@ -58,6 +76,10 @@ export class GuxFormFieldRadio {
 
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+
+    if (this.hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    }
 
     trackComponent(this.root);
   }

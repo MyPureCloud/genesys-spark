@@ -18,7 +18,7 @@ exports[`gux-form-field-phone #render error should render component as expected 
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error gux-show">
+        <div aria-live="assertive" class="gux-form-field-error gux-show" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -60,7 +60,7 @@ exports[`gux-form-field-phone #render help should render component as expected 1
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -102,7 +102,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -141,7 +141,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -180,7 +180,7 @@ exports[`gux-form-field-phone #render label-position indicator marks should rend
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -219,7 +219,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -258,7 +258,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -297,7 +297,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -336,7 +336,7 @@ exports[`gux-form-field-phone #render label-position should render component as 
             <slot></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div aria-live="assertive" class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
