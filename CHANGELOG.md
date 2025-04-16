@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.138.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.3...v4.138.4) (2025-04-16)
+
+
+### Bug Fixes
+
+* **list:** address accessibility console error ([0198e4a](https://github.com/MyPureCloud/genesys-spark/commit/0198e4aaf9c2be8de5f022b7f75031e6406f2b3c))
+* **list:** remove invalid focus target descendant from list ([c5365ab](https://github.com/MyPureCloud/genesys-spark/commit/c5365aba74489f8ac36a3cf3906172d64351901f))
+* **rich-text-editor-beta:** add selector for resize ability ([9104ff8](https://github.com/MyPureCloud/genesys-spark/commit/9104ff8179fc6dca2d1a13b8bcce7740534ff58a))
+* **rich-text-editor-beta:** container now inherits size from host ([2b91f3c](https://github.com/MyPureCloud/genesys-spark/commit/2b91f3c7e0cf76df2a20316ba109fd6339f42d24))
+
+### [4.138.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.2...v4.138.3) (2025-04-15)
+
+
+### Bug Fixes
+
+* **avatar-beta:** fixed presence icons in dark mode ([e33b22b](https://github.com/MyPureCloud/genesys-spark/commit/e33b22b96bb9a23cc23e69a3a4cf936ec5ade4f6))
+* **calendar-beta:** fixed token reference ([b11783c](https://github.com/MyPureCloud/genesys-spark/commit/b11783c1edb104c0716ffdd607e4fbb55710e9d3))
+* **card:** fixed example page dark mode appearance ([cd5b4d3](https://github.com/MyPureCloud/genesys-spark/commit/cd5b4d3e5e86e2fa7c71f002c0375e6bf6a8676d))
+* **list:** fixed example page dark mode appearance ([bf7d4e7](https://github.com/MyPureCloud/genesys-spark/commit/bf7d4e70bfff47300a7e473e3032350405850869))
+* **pagination:** fixed example pages dark mode appearance ([8bd5b36](https://github.com/MyPureCloud/genesys-spark/commit/8bd5b363a6b163b84ece1c8e6e9c9f5766f5c385))
+* **popover:** fixed example pages dark mode appearance ([5701f5f](https://github.com/MyPureCloud/genesys-spark/commit/5701f5f162883eefc1192b664ba0cd3671aafd56))
+* **radial-loading:** fixed dark mode appearance ([e707440](https://github.com/MyPureCloud/genesys-spark/commit/e70744013025ac3f14e2a90088992c95e7b80fb6))
+* **tooltip:** fixed example page dark mode appearance ([3db06f1](https://github.com/MyPureCloud/genesys-spark/commit/3db06f14d9d809add5ea943a4a271bb5cc03bf1b))
+* **tooltip:** update offset from 16px to 12px ([d41134a](https://github.com/MyPureCloud/genesys-spark/commit/d41134a74b3cd8945450c5ac584dfc9e1d9a64cc))
+
+### [4.138.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.1...v4.138.2) (2025-04-11)
+
 ### [4.138.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.0...v4.138.1) (2025-04-09)
 
 

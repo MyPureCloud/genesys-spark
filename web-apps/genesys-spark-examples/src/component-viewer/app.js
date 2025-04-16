@@ -20,12 +20,7 @@ function createLayout() {
   const template = toHTML(`
     <div class="component-viewer content" role="main">
       <div class="left-column">
-        <div class="tab" hidden>
-          <button class="tablinks light active">Light Theme</button>
-          <button class="tablinks dark">Dark Theme</button>
-          <button class="tablinks inherited">Inherited Theme</button>
-        </div>
-        <div class="preview gux-light-theme"></div>
+        <div class="preview"></div>
           <gux-toggle class="editor-toggle" checked checked-label="Code Editor Visible" unchecked-label="Code Editor Hidden"></gux-toggle>
         <div class="editor"></div>
       </div>
@@ -50,9 +45,6 @@ function createLayout() {
 
   document.body.appendChild(template);
 
-  const inheritedThemeButton = template.querySelector('.tablinks.inherited');
-  const lightThemeButton = template.querySelector('.tablinks.light');
-  const darkThemeButton = template.querySelector('.tablinks.dark');
   const preview = template.querySelector('.preview');
   const attribute = template.querySelector('.attributes');
   const events = template.querySelector('.events');
@@ -94,9 +86,6 @@ function createLayout() {
   }
 
   return {
-    inheritedThemeButton,
-    lightThemeButton,
-    darkThemeButton,
     preview,
     attribute,
     events,
@@ -106,49 +95,14 @@ function createLayout() {
   };
 }
 
-function setNewTheme(theme, panel, button, buttons) {
-  // Clear Old Theme
-  panel.classList.remove(
-    'gux-inherited-theme',
-    'gux-light-theme',
-    'gux-dark-theme'
-  );
-  buttons.forEach(btn => btn.classList.remove('active'));
-
-  // Set New Theme
-  panel.classList.add(theme);
-  button.classList.add('active');
-}
-
 export async function bootstrap(exampleCode, callback) {
   await Promise.all([
     registerSparkComponents(),
     registerSparkChartComponents()
   ]);
 
-  const {
-    inheritedThemeButton,
-    lightThemeButton,
-    darkThemeButton,
-    preview,
-    attribute,
-    events,
-    notification,
-    editor,
-    editorToggle
-  } = createLayout();
-
-  //Theme Setter
-  const buttons = [inheritedThemeButton, lightThemeButton, darkThemeButton];
-  inheritedThemeButton.addEventListener('click', () =>
-    setNewTheme('gux-inherited-theme', preview, inheritedThemeButton, buttons)
-  );
-  lightThemeButton.addEventListener('click', () =>
-    setNewTheme('gux-light-theme', preview, lightThemeButton, buttons)
-  );
-  darkThemeButton.addEventListener('click', () =>
-    setNewTheme('gux-dark-theme', preview, darkThemeButton, buttons)
-  );
+  const { preview, attribute, events, notification, editor, editorToggle } =
+    createLayout();
 
   editorToggle.addEventListener('check', active => {
     if (active.detail) {

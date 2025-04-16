@@ -130,7 +130,7 @@ export class GuxTooltip {
 
   private updatePosition(): void {
     const middleware = [
-      offset(16),
+      offset(12),
       flip(),
       shift(),
       hide(),

@@ -22,7 +22,7 @@
 
   .gux-select {
     padding: var(--gse-ui-dataTableItems-editColumn-editColumnContent-padding);
-    margin-inline-start: (
+    margin-inline-start: calc(
       16px + 8px
     ); //TODO https://inindca.atlassian.net/browse/COMUI-2314
   }

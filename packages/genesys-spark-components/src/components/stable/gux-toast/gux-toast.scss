@@ -71,6 +71,7 @@
         font-family: var(--gse-ui-toast-text-fontFamily);
         font-size: var(--gse-ui-toast-text-fontSize);
         line-height: var(--gse-ui-toast-text-lineHeight);
+        word-break: break-all;
       }
     }
 
