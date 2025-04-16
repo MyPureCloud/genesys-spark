@@ -48,10 +48,7 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(
-      --gse-semantic-foreground-container-highEmphasis
-    ); // TODO: COMUI-2300
-
+    color: var(--gse-semantic-foreground-container-highEmphasis);
     background: var(--gse-ui-modal-shroudColor);
 
     .gux-modal-container {
