@@ -1,4 +1,5 @@
 @use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 :host {
@@ -16,22 +17,22 @@
 
 .gux-rating-star-container {
   display: flex;
-  gap: var(--gse-ui-rating-star-gap);
+  gap: ui.$gse-ui-rating-star-gap;
   justify-content: space-between;
-  color: var(--gse-ui-rating-default-color);
+  color: ui.$gse-ui-rating-default-color;
 
   &.gux-disabled {
-    color: var(--gse-ui-rating-disabled-color);
+    color: ui.$gse-ui-rating-disabled-color;
     pointer-events: none;
-    opacity: var(--gse-ui-rating-disabled-opacity);
+    opacity: ui.$gse-ui-rating-disabled-opacity;
   }
 
   gux-icon {
     flex: 0 0 auto;
-    color: var(--gse-ui-rating-default-color);
+    color: ui.$gse-ui-rating-default-color;
 
     &:hover:not(.gux-disabled) {
-      color: var(--gse-ui-rating-hover-color);
+      color: ui.$gse-ui-rating-hover-color;
     }
   }
 }

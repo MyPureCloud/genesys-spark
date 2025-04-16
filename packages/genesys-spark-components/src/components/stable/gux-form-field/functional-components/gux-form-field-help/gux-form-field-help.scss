@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 /* stylelint-disable-next-line selector-class-pattern */
 @mixin Style {
   .gux-form-field-help {
@@ -7,11 +9,11 @@
     place-content: stretch flex-start;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-block-start: var(--gse-ui-formControl-formField-gap);
-    font-family: var(--gse-ui-formControl-helper-helperText-fontFamily);
-    font-size: var(--gse-ui-formControl-helper-helperText-fontSize);
-    line-height: var(--gse-ui-formControl-helper-helperText-lineHeight);
-    color: var(--gse-ui-formControl-helper-defaultColor);
+    padding-block-start: ui.$gse-ui-formControl-formField-gap;
+    font-family: ui.$gse-ui-formControl-helper-helperText-fontFamily;
+    font-size: ui.$gse-ui-formControl-helper-helperText-fontSize;
+    line-height: ui.$gse-ui-formControl-helper-helperText-lineHeight;
+    color: ui.$gse-ui-formControl-helper-defaultColor;
 
     &.gux-show {
       display: flex;

@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 @mixin focus-and-hover-copy-content {
   ::slotted(*) {
     background-color: var(
@@ -21,20 +23,20 @@ button {
 
   .gux-copy-content {
     display: inherit;
-    gap: var(--gse-ui-copyToClipboard-contentContainer-gap);
+    gap: ui.$gse-ui-copyToClipboard-contentContainer-gap;
     align-items: inherit;
     max-inline-size: 100%;
     cursor: pointer;
 
     ::slotted(*) {
-      padding: var(--gse-ui-copyToClipboard-label-padding);
-      font-family: var(--gse-ui-copyToClipboard-label-text-fontFamily);
-      font-size: var(--gse-ui-copyToClipboard-label-text-fontSize);
-      font-weight: var(--gse-ui-copyToClipboard-label-text-fontWeight);
-      line-height: var(--gse-ui-copyToClipboard-label-text-lineHeight);
-      color: var(--gse-ui-copyToClipboard-label-foregroundColor);
-      text-decoration: var(--gse-ui-copyToClipboard-label-text-textDecoration);
-      border-radius: var(--gse-ui-copyToClipboard-label-borderRadius);
+      padding: ui.$gse-ui-copyToClipboard-label-padding;
+      font-family: ui.$gse-ui-copyToClipboard-label-text-fontFamily;
+      font-size: ui.$gse-ui-copyToClipboard-label-text-fontSize;
+      font-weight: ui.$gse-ui-copyToClipboard-label-text-fontWeight;
+      line-height: ui.$gse-ui-copyToClipboard-label-text-lineHeight;
+      color: ui.$gse-ui-copyToClipboard-label-foregroundColor;
+      text-decoration: ui.$gse-ui-copyToClipboard-label-text-textDecoration;
+      border-radius: ui.$gse-ui-copyToClipboard-label-borderRadius;
     }
 
     &:hover {
@@ -44,11 +46,11 @@ button {
     gux-icon[icon-name='fa/copy-regular'] {
       visibility: hidden;
       flex-shrink: 0;
-      padding: var(--gse-ui-copyToClipboard-iconContainer-padding);
+      padding: ui.$gse-ui-copyToClipboard-iconContainer-padding;
       background-color: var(
         --gse-ui-copyToClipboard-label-active-backgroundColor
       );
-      border-radius: var(--gse-ui-copyToClipboard-label-borderRadius);
+      border-radius: ui.$gse-ui-copyToClipboard-label-borderRadius;
     }
   }
 
@@ -73,11 +75,11 @@ gux-tooltip.gux-show {
 
   gux-icon {
     &[icon-name='fa/circle-check-solid'] {
-      color: var(--gse-ui-copyToClipboard-tooltipIcon-success-foregroundColor);
+      color: ui.$gse-ui-copyToClipboard-tooltipIcon-success-foregroundColor;
     }
 
     &[icon-name='fa/circle-xmark-solid'] {
-      color: var(--gse-ui-copyToClipboard-tooltipIcon-error-foregroundColor);
+      color: ui.$gse-ui-copyToClipboard-tooltipIcon-error-foregroundColor;
     }
   }
 }

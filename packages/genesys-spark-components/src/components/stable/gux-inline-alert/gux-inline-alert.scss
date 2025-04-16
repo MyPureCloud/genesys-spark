@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: flex;
   inline-size: fit-content;
@@ -10,9 +12,9 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--gse-ui-alert-padding);
+  padding: ui.$gse-ui-alert-padding;
   border: 1px solid;
-  border-radius: var(--gse-ui-alert-borderRadius);
+  border-radius: ui.$gse-ui-alert-borderRadius;
 
   gux-icon {
     flex-shrink: 0;
@@ -26,11 +28,11 @@
 
   .gux-message-wrapper {
     display: flex;
-    gap: var(--gse-ui-alert-gap);
-    font-family: var(--gse-ui-alert-text-fontFamily);
-    font-size: var(--gse-ui-alert-text-fontSize);
-    font-weight: var(--gse-ui-alert-text-fontWeight);
-    line-height: var(--gse-ui-alert-text-lineHeight);
+    gap: ui.$gse-ui-alert-gap;
+    font-family: ui.$gse-ui-alert-text-fontFamily;
+    font-size: ui.$gse-ui-alert-text-fontSize;
+    font-weight: ui.$gse-ui-alert-text-fontWeight;
+    line-height: ui.$gse-ui-alert-text-lineHeight;
   }
 
   .gux-content {
@@ -38,50 +40,48 @@
   }
 
   &.gux-info {
-    color: var(--gse-ui-alert-info-foregroundColor);
-    background-color: var(--gse-ui-alert-info-backgroundColor);
-    border: var(--gse-ui-alert-info-border-width)
-      var(--gse-ui-alert-info-border-style)
-      var(--gse-ui-alert-info-border-color);
+    color: ui.$gse-ui-alert-info-foregroundColor;
+    background-color: ui.$gse-ui-alert-info-backgroundColor;
+    border: ui.$gse-ui-alert-info-border-width
+      ui.$gse-ui-alert-info-border-style ui.$gse-ui-alert-info-border-color;
 
     gux-icon {
-      color: var(--gse-ui-alert-info-iconColor);
+      color: ui.$gse-ui-alert-info-iconColor;
     }
   }
 
   &.gux-error {
-    color: var(--gse-ui-alert-error-foregroundColor);
-    background-color: var(--gse-ui-alert-error-backgroundColor);
-    border: var(--gse-ui-alert-error-border-width)
-      var(--gse-ui-alert-error-border-style)
-      var(--gse-ui-alert-error-border-color);
+    color: ui.$gse-ui-alert-error-foregroundColor;
+    background-color: ui.$gse-ui-alert-error-backgroundColor;
+    border: ui.$gse-ui-alert-error-border-width
+      ui.$gse-ui-alert-error-border-style ui.$gse-ui-alert-error-border-color;
 
     gux-icon {
-      color: var(--gse-ui-alert-error-iconColor);
+      color: ui.$gse-ui-alert-error-iconColor;
     }
   }
 
   &.gux-warning {
-    color: var(--gse-ui-alert-warning-foregroundColor);
-    background-color: var(--gse-ui-alert-warning-backgroundColor);
-    border: var(--gse-ui-alert-warning-border-width)
-      var(--gse-ui-alert-warning-border-style)
-      var(--gse-ui-alert-warning-border-color);
+    color: ui.$gse-ui-alert-warning-foregroundColor;
+    background-color: ui.$gse-ui-alert-warning-backgroundColor;
+    border: ui.$gse-ui-alert-warning-border-width
+      ui.$gse-ui-alert-warning-border-style
+      ui.$gse-ui-alert-warning-border-color;
 
     gux-icon {
-      color: var(--gse-ui-alert-warning-iconColor);
+      color: ui.$gse-ui-alert-warning-iconColor;
     }
   }
 
   &.gux-success {
-    color: var(--gse-ui-alert-success-foregroundColor);
-    background-color: var(--gse-ui-alert-success-backgroundColor);
-    border: var(--gse-ui-alert-success-border-width)
-      var(--gse-ui-alert-success-border-style)
-      var(--gse-ui-alert-success-border-color);
+    color: ui.$gse-ui-alert-success-foregroundColor;
+    background-color: ui.$gse-ui-alert-success-backgroundColor;
+    border: ui.$gse-ui-alert-success-border-width
+      ui.$gse-ui-alert-success-border-style
+      ui.$gse-ui-alert-success-border-color;
 
     gux-icon {
-      color: var(--gse-ui-alert-success-iconColor);
+      color: ui.$gse-ui-alert-success-iconColor;
     }
   }
 }

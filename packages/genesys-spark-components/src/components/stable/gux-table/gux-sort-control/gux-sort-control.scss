@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 .gux-container {
   position: absolute;
   inset: 0;
@@ -6,9 +8,9 @@
   flex-wrap: nowrap;
   place-content: flex-start flex-start;
   align-items: center;
-  border-block-start: var(--gse-ui-dataTableItems-header-selectedBar-height)
-    solid transparent;
-  border-block-end: var(--gse-ui-dataTableItems-header-selectedBar-height) solid
+  border-block-start: ui.$gse-ui-dataTableItems-header-selectedBar-height solid
+    transparent;
+  border-block-end: ui.$gse-ui-dataTableItems-header-selectedBar-height solid
     transparent;
 
   &:focus-within {
@@ -27,14 +29,14 @@
     .gux-sort-icon {
       float: inline-end;
       margin-block: 0;
-      margin-inline: var(--gse-ui-dataTableItems-header-gap);
-      color: var(--gse-ui-dataTableItems-header-sort-foregroundColor);
+      margin-inline: ui.$gse-ui-dataTableItems-header-gap;
+      color: ui.$gse-ui-dataTableItems-header-sort-foregroundColor;
 
       &.gux-left {
         float: inline-start;
         // left side doesn't have the resize spacer, so compensating for that
         margin-inline-start: calc(
-          2px + var(--gse-ui-dataTableItems-header-gap)
+          2px + #{ui.$gse-ui-dataTableItems-header-gap}
         );
       }
     }

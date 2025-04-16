@@ -1,12 +1,14 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   position: relative;
   display: flex;
   inline-size: 100%;
-  block-size: var(--gse-ui-menu-divider-height);
+  block-size: ui.$gse-ui-menu-divider-height;
   padding: 0;
-  margin: var(--gse-ui-menu-divider-margin);
+  margin: ui.$gse-ui-menu-divider-margin;
   pointer-events: none;
   cursor: pointer;
   cursor: default;
-  background-color: var(--gse-ui-menu-divider-backgroundColor);
+  background-color: ui.$gse-ui-menu-divider-backgroundColor;
 }

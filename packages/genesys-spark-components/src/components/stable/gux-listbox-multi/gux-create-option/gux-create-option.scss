@@ -1,4 +1,5 @@
 @use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
@@ -8,32 +9,32 @@
   flex-wrap: nowrap;
   align-content: stretch;
   align-items: center;
-  min-block-size: var(--gse-ui-menu-option-height);
-  padding: var(--gse-ui-menu-option-padding);
-  font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
-  font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
-  font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
-  line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
-  color: var(--gse-ui-menu-option-label-foregroundColor);
+  min-block-size: ui.$gse-ui-menu-option-height;
+  padding: ui.$gse-ui-menu-option-padding;
+  font-family: ui.$gse-ui-menu-option-label-default-text-fontFamily;
+  font-size: ui.$gse-ui-menu-option-label-default-text-fontSize;
+  font-weight: ui.$gse-ui-menu-option-label-default-text-fontWeight;
+  line-height: ui.$gse-ui-menu-option-label-default-text-lineHeight;
+  color: ui.$gse-ui-menu-option-label-foregroundColor;
   word-wrap: break-word;
   cursor: pointer;
 
   &:host(.gux-disabled) {
     pointer-events: none;
     cursor: default;
-    opacity: var(--gse-ui-menu-option-disabled-opacity);
+    opacity: ui.$gse-ui-menu-option-disabled-opacity;
   }
 
   &:host(.gux-active) {
-    outline: var(--gse-ui-menu-option-focus-border-width)
-      var(--gse-ui-menu-option-focus-border-style)
-      var(--gse-ui-menu-option-focus-border-color);
+    outline: ui.$gse-ui-menu-option-focus-border-width
+      ui.$gse-ui-menu-option-focus-border-style
+      ui.$gse-ui-menu-option-focus-border-color;
     outline-offset: -2px;
     border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
   }
 
   &:host(.gux-hovered:not([disabled])) {
-    background: var(--gse-ui-menu-option-hover-backgroundColor);
+    background: ui.$gse-ui-menu-option-hover-backgroundColor;
   }
 
   &:host(.gux-filtered) {
@@ -41,7 +42,7 @@
   }
 
   gux-icon {
-    padding-inline-end: var(--gse-ui-menu-option-gap);
+    padding-inline-end: ui.$gse-ui-menu-option-gap;
   }
 
   .gux-option {

@@ -1,4 +1,5 @@
 @use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 gux-tab-advanced {
@@ -6,16 +7,16 @@ gux-tab-advanced {
     display: flex;
     align-items: center;
     border-color: transparent;
-    border-block-start-width: var(--gse-ui-advancedTabs-item-indicator-height);
+    border-block-start-width: ui.$gse-ui-advancedTabs-item-indicator-height;
     border-block-end-style: solid;
-    border-block-end-width: var(--gse-ui-advancedTabs-item-indicator-height);
+    border-block-end-width: ui.$gse-ui-advancedTabs-item-indicator-height;
 
     .gux-buttons {
       display: flex;
       flex: 1 1 0;
-      gap: var(--gse-ui-advancedTabs-item-gap);
+      gap: ui.$gse-ui-advancedTabs-item-gap;
       align-items: center;
-      inline-size: var(--gse-ui-advancedTabs-item-width);
+      inline-size: ui.$gse-ui-advancedTabs-item-width;
       min-inline-size: 0;
 
       .gux-tab-button {
@@ -23,7 +24,7 @@ gux-tab-advanced {
         flex: 1 1 0;
         inline-size: 100px;
         min-inline-size: 0;
-        padding: var(--gse-ui-advancedTabs-item-padding);
+        padding: ui.$gse-ui-advancedTabs-item-padding;
 
         &:focus-visible {
           @include focus.gux-focus-ring;
@@ -31,15 +32,15 @@ gux-tab-advanced {
           outline-offset: calc(
             -1 * #{global.$gse-semantic-focusOutline-md-borderWidth}
           );
-          border-radius: var(--gse-ui-advancedTabs-item-focus-borderRadius);
+          border-radius: ui.$gse-ui-advancedTabs-item-focus-borderRadius;
         }
 
         .gux-tab-button-text {
-          font-family: var(--gse-ui-advancedTabs-item-itemText-fontFamily);
-          font-size: var(--gse-ui-advancedTabs-item-itemText-fontSize);
-          font-weight: var(--gse-ui-advancedTabs-item-itemText-fontWeight);
-          line-height: var(--gse-ui-advancedTabs-item-itemText-lineHeight);
-          color: var(--gse-ui-advancedTabs-item-text-color);
+          font-family: ui.$gse-ui-advancedTabs-item-itemText-fontFamily;
+          font-size: ui.$gse-ui-advancedTabs-item-itemText-fontSize;
+          font-weight: ui.$gse-ui-advancedTabs-item-itemText-fontWeight;
+          line-height: ui.$gse-ui-advancedTabs-item-itemText-lineHeight;
+          color: ui.$gse-ui-advancedTabs-item-text-color;
           white-space: nowrap;
         }
       }
@@ -47,15 +48,15 @@ gux-tab-advanced {
 
     .gux-tab-options {
       button {
-        block-size: var(--gse-ui-button-default-height);
-        padding: var(--gse-ui-button-default-paddingIconOnly);
-        border-radius: var(--gse-ui-button-borderRadius);
+        block-size: ui.$gse-ui-button-default-height;
+        padding: ui.$gse-ui-button-default-paddingIconOnly;
+        border-radius: ui.$gse-ui-button-borderRadius;
       }
 
       .gux-tab-options-trigger {
         gux-icon {
-          inline-size: var(--gse-ui-icon-small-size);
-          block-size: var(--gse-ui-icon-small-size);
+          inline-size: ui.$gse-ui-icon-small-size;
+          block-size: ui.$gse-ui-icon-small-size;
         }
       }
 
@@ -65,9 +66,9 @@ gux-tab-advanced {
     }
 
     .gux-divider {
-      inline-size: var(--gse-ui-advancedTabs-item-divider-right-width);
-      block-size: var(--gse-ui-advancedTabs-item-divider-right-height);
-      background-color: var(--gse-ui-advancedTabs-divider-dividerColor);
+      inline-size: ui.$gse-ui-advancedTabs-item-divider-right-width;
+      block-size: ui.$gse-ui-advancedTabs-item-divider-right-height;
+      background-color: ui.$gse-ui-advancedTabs-divider-dividerColor;
     }
 
     &:hover:not(.gux-disabled),
@@ -78,13 +79,13 @@ gux-tab-advanced {
     }
 
     &.gux-selected {
-      background-color: var(--gse-ui-advancedTabs-item-backgroundColor);
+      background-color: ui.$gse-ui-advancedTabs-item-backgroundColor;
       border-block-end-color: var(
         --gse-ui-advancedTabs-item-indicator-activeColor
       );
 
       &.gux-disabled {
-        opacity: var(--gse-ui-advancedTabs-item-disabled-opacity);
+        opacity: ui.$gse-ui-advancedTabs-item-disabled-opacity;
       }
     }
 
@@ -92,7 +93,7 @@ gux-tab-advanced {
       .gux-buttons {
         .gux-tab-button {
           .gux-tab-button-text {
-            opacity: var(--gse-ui-advancedTabs-item-disabled-opacity);
+            opacity: ui.$gse-ui-advancedTabs-item-disabled-opacity;
           }
         }
       }
