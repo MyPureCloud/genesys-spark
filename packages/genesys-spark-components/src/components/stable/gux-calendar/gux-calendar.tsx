@@ -150,10 +150,6 @@ export class GuxCalendar {
       0,
       0
     );
-    // Wait for render before focusing preview date
-    afterNextRenderTimeout(() => {
-      void this.focusPreviewDate();
-    });
   }
 
   async setValueAndEmit(value: Date | [Date, Date]) {
@@ -432,10 +428,22 @@ export class GuxCalendar {
       case 'PageUp':
         this.incrementPreviewDateByMonth(1);
         this.onDateMouseEnter(this.previewValue);
+
+        // Wait for render before focusing preview date
+        afterNextRenderTimeout(() => {
+          void this.focusPreviewDate();
+        });
+
         break;
       case 'PageDown':
         this.incrementPreviewDateByMonth(-1);
         this.onDateMouseEnter(this.previewValue);
+
+        // Wait for render before focusing preview date
+        afterNextRenderTimeout(() => {
+          void this.focusPreviewDate();
+        });
+
         break;
     }
   }
@@ -526,8 +534,6 @@ export class GuxCalendar {
             type="button"
             class="gux-left"
             onClick={() => this.incrementPreviewDateByMonth(-1)}
-            tabindex="-1"
-            aria-hidden="true"
           >
             <gux-icon
               size="small"
@@ -540,8 +546,6 @@ export class GuxCalendar {
             type="button"
             class="gux-right"
             onClick={() => this.incrementPreviewDateByMonth(1)}
-            tabindex="-1"
-            aria-hidden="true"
           >
             <gux-icon
               size="small"
