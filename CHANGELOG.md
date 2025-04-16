@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.138.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.3...v4.138.4) (2025-04-16)
+
+
+### Bug Fixes
+
+* **list:** address accessibility console error ([0198e4a](https://github.com/MyPureCloud/genesys-spark/commit/0198e4aaf9c2be8de5f022b7f75031e6406f2b3c))
+* **list:** remove invalid focus target descendant from list ([c5365ab](https://github.com/MyPureCloud/genesys-spark/commit/c5365aba74489f8ac36a3cf3906172d64351901f))
+* **rich-text-editor-beta:** add selector for resize ability ([9104ff8](https://github.com/MyPureCloud/genesys-spark/commit/9104ff8179fc6dca2d1a13b8bcce7740534ff58a))
+* **rich-text-editor-beta:** container now inherits size from host ([2b91f3c](https://github.com/MyPureCloud/genesys-spark/commit/2b91f3c7e0cf76df2a20316ba109fd6339f42d24))
+
 ### [4.138.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.2...v4.138.3) (2025-04-15)
 
 
