@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
@@ -7,7 +8,7 @@
 .gux-text-highlight-popup {
   display: flex;
   flex-direction: column;
-  gap: var(--gse-ui-rte-colorPalette-gap);
+  gap: ui.$gse-ui-rte-colorPalette-gap;
   inline-size: 104px; // Token Required : COMUI-3190
   padding: 12px; // Token Required : COMUI-3190
 
@@ -17,7 +18,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: var(--gse-ui-rte-colorPalette-gap);
+    gap: ui.$gse-ui-rte-colorPalette-gap;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 0;
@@ -25,17 +26,17 @@
 
   gux-button-slot {
     align-self: center;
-    block-size: var(--gse-ui-rte-menuButton-height);
+    block-size: ui.$gse-ui-rte-menuButton-height;
 
     button {
-      block-size: var(--gse-ui-rte-menuButton-height);
+      block-size: ui.$gse-ui-rte-menuButton-height;
     }
   }
 }
 
 gux-button-slot {
   button.gux-is-pressed {
-    color: var(--gse-ui-button-ghost-active-foregroundColor);
-    background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+    color: ui.$gse-ui-button-ghost-active-foregroundColor;
+    background-color: ui.$gse-ui-button-ghost-active-backgroundColor;
   }
 }

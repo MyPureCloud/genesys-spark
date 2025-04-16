@@ -1,39 +1,42 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: inline-block;
 }
 
 .gux-target {
   display: inline-flex;
-  gap: var(--gse-ui-formControl-input-gap);
-  padding: var(--gse-ui-formControl-textarea-padding);
+  gap: ui.$gse-ui-formControl-input-gap;
+  padding: ui.$gse-ui-formControl-textarea-padding;
   cursor: pointer;
-  background-color: var(--gse-ui-calendarMenu-backgroundColor);
-  border: var(--gse-ui-formControl-input-default-border-width)
-    var(--gse-ui-formControl-input-default-border-style)
-    var(--gse-ui-formControl-input-default-border-color);
-  border-radius: var(--gse-ui-formControl-input-borderRadius);
+  background-color: ui.$gse-ui-calendarMenu-backgroundColor;
+  border: ui.$gse-ui-formControl-input-default-border-width
+    ui.$gse-ui-formControl-input-default-border-style
+    ui.$gse-ui-formControl-input-default-border-color;
+  border-radius: ui.$gse-ui-formControl-input-borderRadius;
 
   &:focus-within {
-    outline: var(--gse-ui-formControl-input-focus-border-width)
-      var(--gse-ui-formControl-input-focus-border-style)
-      var(--gse-ui-formControl-input-focus-border-color);
-    outline-offset: var(--gse-semantic-focusOutline-offset);
-    border: var(--gse-ui-formControl-input-active-border-width)
-      var(--gse-ui-formControl-input-active-border-style)
-      var(--gse-ui-formControl-input-active-border-color);
-    border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+    outline: ui.$gse-ui-formControl-input-focus-border-width
+      ui.$gse-ui-formControl-input-focus-border-style
+      ui.$gse-ui-formControl-input-focus-border-color;
+    outline-offset: global.$gse-semantic-focusOutline-offset;
+    border: ui.$gse-ui-formControl-input-active-border-width
+      ui.$gse-ui-formControl-input-active-border-style
+      ui.$gse-ui-formControl-input-active-border-color;
+    border-radius: ui.$gse-ui-formControl-focusRing-borderRadius;
   }
 
   .gux-display {
     display: inline-flex;
     align-items: center;
     min-inline-size: 100px;
-    padding-inline-end: var(--gse-ui-formControl-input-gap);
-    font-family: var(--gse-ui-formControl-label-text-fontFamily);
-    font-size: var(--gse-ui-formControl-label-text-fontSize);
-    font-weight: var(--gse-ui-formControl-label-text-fontWeight);
-    line-height: var(--gse-ui-formControl-label-text-lineHeight);
-    color: var(--gse-ui-formControl-label-labelColor);
+    padding-inline-end: ui.$gse-ui-formControl-input-gap;
+    font-family: ui.$gse-ui-formControl-label-text-fontFamily;
+    font-size: ui.$gse-ui-formControl-label-text-fontSize;
+    font-weight: ui.$gse-ui-formControl-label-text-fontWeight;
+    line-height: ui.$gse-ui-formControl-label-text-lineHeight;
+    color: ui.$gse-ui-formControl-label-labelColor;
 
     .gux-spinner {
       outline: none;
@@ -43,43 +46,43 @@
       }
 
       &:focus-visible {
-        background: var(--gse-ui-calendarMenu-month-hover-backgroundColor);
+        background: ui.$gse-ui-calendarMenu-month-hover-backgroundColor;
       }
     }
   }
 
   .gux-popup-toggle {
     justify-content: right;
-    color: var(--gse-ui-monthPicker-calendarStates-defaultColor);
+    color: ui.$gse-ui-monthPicker-calendarStates-defaultColor;
     background: transparent;
     border: none;
 
     &:focus-visible {
-      outline: var(--gse-ui-monthPicker-calendarStates-focus-border-width)
-        var(--gse-ui-monthPicker-calendarStates-focus-border-style)
-        var(--gse-ui-monthPicker-calendarStates-focus-border-color);
-      outline-offset: var(--gse-semantic-focusOutline-offset);
+      outline: ui.$gse-ui-monthPicker-calendarStates-focus-border-width
+        ui.$gse-ui-monthPicker-calendarStates-focus-border-style
+        ui.$gse-ui-monthPicker-calendarStates-focus-border-color;
+      outline-offset: global.$gse-semantic-focusOutline-offset;
       border-radius: var(
         --gse-ui-calendarMenu-month-calendarButton-focusBorderRadius
       );
     }
 
     &:not(:disabled):hover {
-      color: var(--gse-ui-monthPicker-calendarStates-hoverColor);
+      color: ui.$gse-ui-monthPicker-calendarStates-hoverColor;
       cursor: pointer;
     }
 
     &:not(:disabled):focus {
-      color: var(--gse-ui-monthPicker-calendarStates-activeColor);
+      color: ui.$gse-ui-monthPicker-calendarStates-activeColor;
       cursor: pointer;
     }
 
     &:disabled {
-      color: var(--gse-ui-monthPicker-calendarStates-disabledColor);
+      color: ui.$gse-ui-monthPicker-calendarStates-disabledColor;
     }
 
     &.gux-expanded {
-      color: var(--gse-ui-monthPicker-calendarStates-activeColor);
+      color: ui.$gse-ui-monthPicker-calendarStates-activeColor;
     }
   }
 }

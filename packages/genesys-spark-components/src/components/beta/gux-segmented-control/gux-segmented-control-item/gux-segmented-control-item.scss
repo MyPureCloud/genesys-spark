@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
@@ -6,39 +8,39 @@ button {
 }
 
 .gux-container {
-  block-size: var(--gse-ui-segmentedControl-height);
-  border-color: var(--gse-ui-segmentedControl-divider-color);
-  border-style: var(--gse-ui-segmentedControl-divider-style);
-  border-width: var(--gse-ui-segmentedControl-divider-width);
+  block-size: ui.$gse-ui-segmentedControl-height;
+  border-color: ui.$gse-ui-segmentedControl-divider-color;
+  border-style: ui.$gse-ui-segmentedControl-divider-style;
+  border-width: ui.$gse-ui-segmentedControl-divider-width;
   border-inline-end: none;
-  border-radius: var(--gse-ui-segmentedControl-button-middle-borderRadius);
+  border-radius: ui.$gse-ui-segmentedControl-button-middle-borderRadius;
 
   &.gux-start {
-    border-inline-start-color: var(--gse-ui-segmentedControl-divider-color);
-    border-radius: var(--gse-ui-segmentedControl-button-start-borderRadius);
+    border-inline-start-color: ui.$gse-ui-segmentedControl-divider-color;
+    border-radius: ui.$gse-ui-segmentedControl-button-start-borderRadius;
 
     .gux-segmented-control-item {
       &:focus-visible {
-        border-radius: var(--gse-ui-segmentedControl-button-start-borderRadius);
+        border-radius: ui.$gse-ui-segmentedControl-button-start-borderRadius;
       }
     }
   }
 
   &.gux-end {
-    border-style: var(--gse-ui-segmentedControl-divider-style);
-    border-width: var(--gse-ui-segmentedControl-divider-width);
-    border-inline-end-color: var(--gse-ui-segmentedControl-divider-color);
-    border-radius: var(--gse-ui-segmentedControl-button-end-borderRadius);
+    border-style: ui.$gse-ui-segmentedControl-divider-style;
+    border-width: ui.$gse-ui-segmentedControl-divider-width;
+    border-inline-end-color: ui.$gse-ui-segmentedControl-divider-color;
+    border-radius: ui.$gse-ui-segmentedControl-button-end-borderRadius;
 
     .gux-segmented-control-item {
       &:focus-visible {
-        border-radius: var(--gse-ui-segmentedControl-button-end-borderRadius);
+        border-radius: ui.$gse-ui-segmentedControl-button-end-borderRadius;
       }
     }
   }
 
   &.gux-start.gux-end {
-    border-radius: var(--gse-ui-segmentedControl-borderRadius);
+    border-radius: ui.$gse-ui-segmentedControl-borderRadius;
   }
 
   &.gux-parent-disabled {
@@ -46,7 +48,7 @@ button {
     user-select: none;
     border-color: color-mix(
       in srgb,
-      var(--gse-ui-segmentedControl-divider-color) 50%,
+      #{ui.$gse-ui-segmentedControl-divider-color} 50%,
       rgb(0 0 0 / 0%)
     ); // Token Issue: https://inindca.atlassian.net/browse/COMUI-3205
   }
@@ -55,20 +57,20 @@ button {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--gse-ui-segmentedControl-button-gap);
+    gap: ui.$gse-ui-segmentedControl-button-gap;
     place-content: stretch flex-start;
     align-items: center;
     block-size: 100%;
-    padding: var(--gse-ui-segmentedControl-button-padding);
+    padding: ui.$gse-ui-segmentedControl-button-padding;
     line-height: 0;
-    color: var(--gse-ui-segmentedControl-button-default-foregroundColor);
+    color: ui.$gse-ui-segmentedControl-button-default-foregroundColor;
     cursor: pointer;
     background-color: var(
       --gse-ui-segmentedControl-button-default-backgroundColor
     );
 
     &.gux-icon-only {
-      padding: var(--gse-ui-segmentedControl-iconOnly-padding);
+      padding: ui.$gse-ui-segmentedControl-iconOnly-padding;
 
       .gux-text {
         &.gux-icon-only {
@@ -78,24 +80,24 @@ button {
     }
 
     &:hover {
-      color: var(--gse-ui-segmentedControl-button-hover-foregroundColor);
+      color: ui.$gse-ui-segmentedControl-button-hover-foregroundColor;
       background-color: var(
         --gse-ui-segmentedControl-button-hover-backgroundColor
       );
     }
 
     &[disabled] {
-      color: var(--gse-ui-segmentedControl-button-disabled-foregroundColor);
+      color: ui.$gse-ui-segmentedControl-button-disabled-foregroundColor;
       pointer-events: none;
       cursor: default;
       background-color: var(
         --gse-ui-segmentedControl-button-disabled-backgroundColor
       );
-      opacity: var(--gse-ui-segmentedControl-button-disabled-opacity);
+      opacity: ui.$gse-ui-segmentedControl-button-disabled-opacity;
     }
 
     &.gux-selected {
-      color: var(--gse-ui-segmentedControl-button-active-foregroundColor);
+      color: ui.$gse-ui-segmentedControl-button-active-foregroundColor;
       background-color: var(
         --gse-ui-segmentedControl-button-active-backgroundColor
       );
@@ -103,16 +105,16 @@ button {
 
     &:focus-visible {
       position: relative;
-      z-index: var(--gse-semantic-zIndex-showFocus);
-      outline-offset: var(--gse-ui-segmentedControl-focus-offset);
+      z-index: global.$gse-semantic-zIndex-showFocus;
+      outline-offset: ui.$gse-ui-segmentedControl-focus-offset;
 
       @include focus.gux-focus-ring;
     }
 
     .gux-icon {
       slot[name='icon']::slotted(gux-icon) {
-        inline-size: var(--gse-ui-icon-small-size);
-        block-size: var(--gse-ui-icon-small-size);
+        inline-size: ui.$gse-ui-icon-small-size;
+        block-size: ui.$gse-ui-icon-small-size;
       }
     }
   }

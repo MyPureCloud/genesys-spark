@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
@@ -15,8 +16,8 @@ gux-button-slot {
     }
 
     &.gux-is-pressed {
-      color: var(--gse-ui-button-ghost-active-foregroundColor);
-      background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+      color: ui.$gse-ui-button-ghost-active-foregroundColor;
+      background-color: ui.$gse-ui-button-ghost-active-backgroundColor;
     }
   }
 }

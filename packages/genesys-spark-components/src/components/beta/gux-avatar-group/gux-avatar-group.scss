@@ -1,12 +1,13 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 :host {
   display: flex;
   align-items: center;
   inline-size: fit-content;
-  padding-block: var(--gse-semantic-interactive-sm-padding);
-  padding-inline: var(--gse-semantic-interactive-sm-padding)
-    var(--gse-semantic-interactive-md-padding);
+  padding-block: global.$gse-semantic-interactive-sm-padding;
+  padding-inline: global.$gse-semantic-interactive-sm-padding
+    global.$gse-semantic-interactive-md-padding;
 }
 
 :host(:focus-visible) {
@@ -15,5 +16,5 @@
 
 .gux-add-item-overflow {
   // + 2px to offset the minus margin on the other side
-  padding-inline-start: calc(var(--gse-core-spacing-4xs) + 2px);
+  padding-inline-start: calc(global.$gse-core-spacing-4xs + 2px);
 }

@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '../../../../stable/gux-list/list-item-default.scss';
 
 @include list-item-default.gux-list-item-default;
@@ -15,7 +16,7 @@ button {
 
   gux-icon {
     align-self: center;
-    color: var(--gse-ui-menu-option-parentIcon-selected-foregroundColor);
+    color: ui.$gse-ui-menu-option-parentIcon-selected-foregroundColor;
   }
 }
 
@@ -26,12 +27,12 @@ button {
   visibility: hidden;
   flex-direction: column;
   inline-size: 130px; // Token Required;
-  padding: var(--gse-ui-menu-padding);
+  padding: ui.$gse-ui-menu-padding;
   margin: 0;
-  background-color: var(--gse-ui-menu-backgroundColor);
+  background-color: ui.$gse-ui-menu-backgroundColor;
   border: none;
-  border-radius: var(--gse-ui-menu-borderRadius);
-  box-shadow: var(--gse-ui-menu-boxShadow);
+  border-radius: ui.$gse-ui-menu-borderRadius;
+  box-shadow: ui.$gse-ui-menu-boxShadow;
 
   &.gux-shown {
     visibility: visible;

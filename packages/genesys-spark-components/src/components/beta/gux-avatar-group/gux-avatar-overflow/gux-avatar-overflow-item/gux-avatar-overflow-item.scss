@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 ::slotted(img) {
@@ -10,40 +12,40 @@ button {
   all: unset;
   box-sizing: border-box;
   display: flex;
-  gap: var(--gse-ui-menu-option-gap);
+  gap: ui.$gse-ui-menu-option-gap;
   align-items: center;
   inline-size: 100%;
-  min-block-size: var(--gse-ui-menu-option-height);
-  padding: var(--gse-ui-menu-option-padding);
-  font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
-  font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
-  font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
-  line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
-  color: var(--gse-ui-menu-option-label-foregroundColor);
+  min-block-size: ui.$gse-ui-menu-option-height;
+  padding: ui.$gse-ui-menu-option-padding;
+  font-family: ui.$gse-ui-menu-option-label-default-text-fontFamily;
+  font-size: ui.$gse-ui-menu-option-label-default-text-fontSize;
+  font-weight: ui.$gse-ui-menu-option-label-default-text-fontWeight;
+  line-height: ui.$gse-ui-menu-option-label-default-text-lineHeight;
+  color: ui.$gse-ui-menu-option-label-foregroundColor;
   word-wrap: break-word;
   cursor: pointer;
   outline: none;
-  outline-offset: calc(var(--gse-ui-menu-option-focus-border-width) * -1);
-  background-color: var(--gse-ui-menu-option-default-backgroundColor);
+  outline-offset: calc(ui.$gse-ui-menu-option-focus-border-width * -1);
+  background-color: ui.$gse-ui-menu-option-default-backgroundColor;
   border: none;
 
   &:focus-visible {
-    outline: var(--gse-ui-menu-option-focus-border-width)
-      var(--gse-ui-menu-option-focus-border-style)
-      var(--gse-ui-menu-option-focus-border-color);
-    border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
+    outline: ui.$gse-ui-menu-option-focus-border-width
+      ui.$gse-ui-menu-option-focus-border-style
+      ui.$gse-ui-menu-option-focus-border-color;
+    border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
   }
 
   &:hover {
-    background: var(--gse-ui-menu-option-hover-backgroundColor);
+    background: ui.$gse-ui-menu-option-hover-backgroundColor;
   }
 
   &:active {
-    font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
-    font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
-    font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
-    line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
-    background: var(--gse-ui-menu-option-selected-backgroundColor);
+    font-family: ui.$gse-ui-menu-option-label-active-text-fontFamily;
+    font-size: ui.$gse-ui-menu-option-label-active-text-fontSize;
+    font-weight: ui.$gse-ui-menu-option-label-active-text-fontWeight;
+    line-height: ui.$gse-ui-menu-option-label-active-text-lineHeight;
+    background: ui.$gse-ui-menu-option-selected-backgroundColor;
   }
 
   .gux-avatar {
@@ -51,84 +53,84 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    inline-size: var(--gse-ui-avatar-xsmall-content-size);
-    block-size: var(--gse-ui-avatar-xsmall-content-size);
+    inline-size: ui.$gse-ui-avatar-xsmall-content-size;
+    block-size: ui.$gse-ui-avatar-xsmall-content-size;
     padding: 0;
     margin: 0;
     overflow: hidden;
-    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+    color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
     cursor: pointer;
     background: none;
-    background-color: var(--gse-ui-avatar-media-initialsBackground-default);
+    background-color: ui.$gse-ui-avatar-media-initialsBackground-default;
     border: none;
     border-radius: 50%;
 
     .gux-avatar-initials {
-      font-family: var(--gse-ui-avatar-small-initials-fontFamily);
-      font-size: var(--gse-ui-avatar-xsmall-initials-fontSize);
-      font-weight: var(--gse-ui-avatar-xsmall-initials-fontWeight);
-      line-height: var(--gse-ui-avatar-small-initials-lineHeight);
+      font-family: ui.$gse-ui-avatar-small-initials-fontFamily;
+      font-size: ui.$gse-ui-avatar-xsmall-initials-fontSize;
+      font-weight: ui.$gse-ui-avatar-xsmall-initials-fontWeight;
+      line-height: ui.$gse-ui-avatar-small-initials-lineHeight;
       text-transform: uppercase;
     }
 
     &.gux-accent-1 {
-      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent1);
+      color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent1;
     }
 
     &.gux-accent-2 {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent2);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent2;
     }
 
     &.gux-accent-3 {
-      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent3);
+      color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent3;
     }
 
     &.gux-accent-4 {
-      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent4);
+      color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent4;
     }
 
     &.gux-accent-5 {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent5);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent5;
     }
 
     &.gux-accent-6 {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent6);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent6;
     }
 
     &.gux-accent-7 {
-      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent7);
+      color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent7;
     }
 
     &.gux-accent-8 {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent8);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent8;
     }
 
     &.gux-accent-9 {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent9);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent9;
     }
 
     &.gux-accent-10 {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent10);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent10;
     }
 
     &.gux-accent-11 {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent11);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent11;
     }
 
     &.gux-accent-12 {
-      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent12);
+      color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent12;
     }
 
     &.gux-accent-inherit {

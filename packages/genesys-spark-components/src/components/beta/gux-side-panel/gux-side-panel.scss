@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use 'mixins';
 
 :host {
@@ -14,52 +15,50 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  inline-size: calc(100vw - var(--gse-ui-sidePanel-shoud-minWidth));
+  inline-size: calc(100vw - ui.$gse-ui-sidePanel-shoud-minWidth);
   block-size: inherit;
-  background-color: var(--gse-ui-sidePanel-backgroundColor);
-  box-shadow: var(--gse-ui-sidePanel-boxShadow);
+  background-color: ui.$gse-ui-sidePanel-backgroundColor;
+  box-shadow: ui.$gse-ui-sidePanel-boxShadow;
 
   &.gux-side-panel-small {
-    max-inline-size: var(--gse-ui-sidePanel-widthSize-sm);
+    max-inline-size: ui.$gse-ui-sidePanel-widthSize-sm;
   }
 
   &.gux-side-panel-medium {
-    max-inline-size: var(--gse-ui-sidePanel-widthSize-md);
+    max-inline-size: ui.$gse-ui-sidePanel-widthSize-md;
   }
 
   &.gux-side-panel-large {
-    max-inline-size: var(--gse-ui-sidePanel-widthSize-lg);
+    max-inline-size: ui.$gse-ui-sidePanel-widthSize-lg;
   }
 
   & > header {
     position: relative;
-    padding: var(--gse-ui-sidePanel-header-padding);
-    border-block-end: var(--gse-ui-sidePanel-divider-width)
-      var(--gse-ui-sidePanel-divider-style)
-      var(--gse-ui-sidePanel-divider-color);
+    padding: ui.$gse-ui-sidePanel-header-padding;
+    border-block-end: ui.$gse-ui-sidePanel-divider-width
+      ui.$gse-ui-sidePanel-divider-style ui.$gse-ui-sidePanel-divider-color;
   }
 
   & .gux-side-panel-description {
-    margin: var(--gse-ui-sidePanel-description-padding) !important;
+    margin: ui.$gse-ui-sidePanel-description-padding !important;
   }
 
   & .gux-side-panel-content {
     flex: 1 1 100%;
-    padding: var(--gse-ui-sidePanel-body-padding);
+    padding: ui.$gse-ui-sidePanel-body-padding;
     overflow-y: auto;
-    font-family: var(--gse-ui-sidePanel-description-text-fontFamily);
-    font-size: var(--gse-ui-sidePanel-description-text-fontSize);
-    font-weight: var(--gse-ui-sidePanel-description-text-fontWeight);
-    line-height: var(--gse-ui-sidePanel-description-text-lineHeight);
-    color: var(--gse-ui-sidePanel-descriptionColor);
+    font-family: ui.$gse-ui-sidePanel-description-text-fontFamily;
+    font-size: ui.$gse-ui-sidePanel-description-text-fontSize;
+    font-weight: ui.$gse-ui-sidePanel-description-text-fontWeight;
+    line-height: ui.$gse-ui-sidePanel-description-text-lineHeight;
+    color: ui.$gse-ui-sidePanel-descriptionColor;
   }
 
   & > footer {
     flex: 0 0 auto;
-    padding: var(--gse-ui-sidePanel-footer-padding);
-    border-block-start: var(--gse-ui-sidePanel-divider-width)
-      var(--gse-ui-sidePanel-divider-style)
-      var(--gse-ui-sidePanel-divider-color);
+    padding: ui.$gse-ui-sidePanel-footer-padding;
+    border-block-start: ui.$gse-ui-sidePanel-divider-width
+      ui.$gse-ui-sidePanel-divider-style ui.$gse-ui-sidePanel-divider-color;
   }
 }
 

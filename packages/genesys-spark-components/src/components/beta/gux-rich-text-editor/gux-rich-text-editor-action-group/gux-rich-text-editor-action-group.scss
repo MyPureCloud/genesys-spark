@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: flex;
   flex-direction: row;
@@ -17,14 +19,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: var(--gse-ui-rte-toolbarBtnGroup-gap);
+  gap: ui.$gse-ui-rte-toolbarBtnGroup-gap;
   align-items: flex-start;
   justify-content: flex-start;
 }
 
 .gux-divider {
-  inline-size: var(--gse-ui-rte-divider-width);
-  block-size: var(--gse-ui-rte-divider-height);
-  margin: var(--gse-ui-rte-toolbar-divider-margin);
-  background-color: var(--gse-ui-rte-toolbar-divider-color);
+  inline-size: ui.$gse-ui-rte-divider-width;
+  block-size: ui.$gse-ui-rte-divider-height;
+  margin: ui.$gse-ui-rte-toolbar-divider-margin;
+  background-color: ui.$gse-ui-rte-toolbar-divider-color;
 }

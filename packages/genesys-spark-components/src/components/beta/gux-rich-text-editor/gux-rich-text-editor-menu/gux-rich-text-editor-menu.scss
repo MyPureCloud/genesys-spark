@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
@@ -7,14 +8,14 @@
 }
 
 button {
-  block-size: var(--gse-ui-button-default-height);
-  padding: var(--gse-ui-button-default-paddingIconOnly);
-  border-radius: var(--gse-ui-button-borderRadius);
+  block-size: ui.$gse-ui-button-default-height;
+  padding: ui.$gse-ui-button-default-paddingIconOnly;
+  border-radius: ui.$gse-ui-button-borderRadius;
 }
 
 .gux-list-container {
-  inline-size: var(--gse-ui-contextMenu-menu-width);
-  max-block-size: var(--gse-ui-contextMenu-menu-maxHeight);
+  inline-size: ui.$gse-ui-contextMenu-menu-width;
+  max-block-size: ui.$gse-ui-contextMenu-menu-maxHeight;
 
   @include mixins.gux-menu-container;
 }

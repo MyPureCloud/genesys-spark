@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/_typography';
 @use '~genesys-spark/dist/scss/focus';
 
@@ -9,30 +11,30 @@
  */
 
 :host {
-  padding-block: var(--gse-ui-links-inLine-padding);
+  padding-block: ui.$gse-ui-links-inLine-padding;
 
   ::slotted(a) {
     inline-size: fit-content;
     font-family:
-      var(--gse-ui-links-inLine-medium-text-fontFamily),
-      var(--gse-semantic-theme-fontFamily-body), sans-serif;
-    font-size: var(--gse-ui-links-inLine-medium-text-fontSize);
-    font-weight: var(--gse-ui-links-inLine-medium-text-fontWeight);
-    line-height: var(--gse-ui-links-inLine-medium-text-lineHeight);
-    color: var(--gse-ui-links-default-foregroundColor) !important;
-    border-radius: var(--gse-ui-links-focusOutline-borderRadius) !important;
+      ui.$gse-ui-links-inLine-medium-text-fontFamily,
+      global.$gse-semantic-theme-fontFamily-body, sans-serif;
+    font-size: ui.$gse-ui-links-inLine-medium-text-fontSize;
+    font-weight: ui.$gse-ui-links-inLine-medium-text-fontWeight;
+    line-height: ui.$gse-ui-links-inLine-medium-text-lineHeight;
+    color: ui.$gse-ui-links-default-foregroundColor !important;
+    border-radius: ui.$gse-ui-links-focusOutline-borderRadius !important;
   }
 
   ::slotted(a:hover) {
-    color: var(--gse-ui-links-hover-foregroundColor) !important;
+    color: ui.$gse-ui-links-hover-foregroundColor !important;
   }
 
   ::slotted(a:active) {
-    color: var(--gse-ui-links-active-foregroundColor) !important;
+    color: ui.$gse-ui-links-active-foregroundColor !important;
   }
 
   ::slotted(a:visited) {
-    color: var(--gse-ui-links-visited-foregroundColor) !important;
+    color: ui.$gse-ui-links-visited-foregroundColor !important;
   }
 
   ::slotted(a:focus-visible) {
@@ -43,37 +45,37 @@
 :host([size='small']) {
   ::slotted(a) {
     font-family:
-      var(--gse-ui-links-inLine-small-text-fontFamily),
-      var(--gse-semantic-theme-fontFamily-body), sans-serif;
-    font-size: var(--gse-ui-links-inLine-small-text-fontSize);
-    font-weight: var(--gse-ui-links-inLine-small-text-fontWeight);
-    line-height: var(--gse-ui-links-inLine-small-text-lineHeight);
+      ui.$gse-ui-links-inLine-small-text-fontFamily,
+      global.$gse-semantic-theme-fontFamily-body, sans-serif;
+    font-size: ui.$gse-ui-links-inLine-small-text-fontSize;
+    font-weight: ui.$gse-ui-links-inLine-small-text-fontWeight;
+    line-height: ui.$gse-ui-links-inLine-small-text-lineHeight;
   }
 }
 
 :host([standalone]) {
   display: block;
-  padding-block: var(--gse-ui-links-standalone-padding);
+  padding-block: ui.$gse-ui-links-standalone-padding;
 
   ::slotted(a) {
     display: flex;
-    gap: var(--gse-ui-links-standalone-gap);
+    gap: ui.$gse-ui-links-standalone-gap;
     align-items: center;
     inline-size: fit-content;
     font-family:
-      var(--gse-ui-links-standalone-medium-text-fontFamily),
-      var(--gse-semantic-theme-fontFamily-body), sans-serif;
-    font-size: var(--gse-ui-links-standalone-medium-text-fontSize);
-    font-weight: var(--gse-ui-links-standalone-medium-text-fontWeight);
-    line-height: var(--gse-ui-links-standalone-medium-text-lineHeight);
+      ui.$gse-ui-links-standalone-medium-text-fontFamily,
+      global.$gse-semantic-theme-fontFamily-body, sans-serif;
+    font-size: ui.$gse-ui-links-standalone-medium-text-fontSize;
+    font-weight: ui.$gse-ui-links-standalone-medium-text-fontWeight;
+    line-height: ui.$gse-ui-links-standalone-medium-text-lineHeight;
     text-decoration: none !important;
   }
 
   ::slotted(a:hover) {
     font-family:
-      var(--gse-ui-links-standalone-medium-underlinedText-fontFamily),
-      var(--gse-semantic-theme-fontFamily-body), sans-serif;
-    font-size: var(--gse-ui-links-standalone-medium-underlinedText-fontSize);
+      ui.$gse-ui-links-standalone-medium-underlinedText-fontFamily,
+      global.$gse-semantic-theme-fontFamily-body, sans-serif;
+    font-size: ui.$gse-ui-links-standalone-medium-underlinedText-fontSize;
     font-weight: var(
       --gse-ui-links-standalone-medium-underlinedText-fontWeight
     );
@@ -93,20 +95,20 @@
 :host([size='small'][standalone]) {
   ::slotted(a) {
     font-family:
-      var(--gse-ui-links-standalone-small-text-fontFamily),
-      var(--gse-semantic-theme-fontFamily-body), sans-serif;
-    font-size: var(--gse-ui-links-standalone-small-text-fontSize);
-    font-weight: var(--gse-ui-links-standalone-small-text-fontWeight);
-    line-height: var(--gse-ui-links-standalone-small-text-lineHeight);
+      ui.$gse-ui-links-standalone-small-text-fontFamily,
+      global.$gse-semantic-theme-fontFamily-body, sans-serif;
+    font-size: ui.$gse-ui-links-standalone-small-text-fontSize;
+    font-weight: ui.$gse-ui-links-standalone-small-text-fontWeight;
+    line-height: ui.$gse-ui-links-standalone-small-text-lineHeight;
   }
 
   ::slotted(a:hover) {
     font-family:
-      var(--gse-ui-links-standalone-small-underlinedText-fontFamily),
-      var(--gse-semantic-theme-fontFamily-body), sans-serif;
-    font-size: var(--gse-ui-links-standalone-small-underlinedText-fontSize);
-    font-weight: var(--gse-ui-links-standalone-small-underlinedText-fontWeight);
-    line-height: var(--gse-ui-links-standalone-small-underlinedText-lineHeight);
+      ui.$gse-ui-links-standalone-small-underlinedText-fontFamily,
+      global.$gse-semantic-theme-fontFamily-body, sans-serif;
+    font-size: ui.$gse-ui-links-standalone-small-underlinedText-fontSize;
+    font-weight: ui.$gse-ui-links-standalone-small-underlinedText-fontWeight;
+    line-height: ui.$gse-ui-links-standalone-small-underlinedText-lineHeight;
     text-decoration: var(
       --gse-ui-links-standalone-small-underlinedText-textDecoration
     ) !important;
