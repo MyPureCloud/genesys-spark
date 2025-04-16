@@ -1,24 +1,26 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 gux-tabs[orientation='vertical'] > gux-tab-list {
   gux-tab {
     box-sizing: border-box;
-    border-inline-end: var(--gse-ui-tabs-item-divider-vertical-width) solid
-      var(--gse-ui-tabs-item-divider-dividerColor);
+    border-inline-end: ui.$gse-ui-tabs-item-divider-vertical-width solid
+      ui.$gse-ui-tabs-item-divider-dividerColor;
 
     .gux-tab {
       display: flex;
       justify-content: flex-end;
-      inline-size: var(--gse-ui-tabs-set-vertical-width);
-      block-size: var(--gse-ui-tabs-item-vertical-fixedHeight);
-      padding: var(--gse-ui-tabs-item-vertical-padding);
-      border-inline-end: var(--gse-ui-tabs-item-indicator-vertical-width) solid
+      inline-size: ui.$gse-ui-tabs-set-vertical-width;
+      block-size: ui.$gse-ui-tabs-item-vertical-fixedHeight;
+      padding: ui.$gse-ui-tabs-item-vertical-padding;
+      border-inline-end: ui.$gse-ui-tabs-item-indicator-vertical-width solid
         transparent;
 
       &.gux-active {
-        border-inline-end-color: var(--gse-ui-tabs-item-indicator-activeColor);
+        border-inline-end-color: ui.$gse-ui-tabs-item-indicator-activeColor;
       }
 
       &:hover:not(.gux-active):not(.gux-disabled) {
-        border-inline-end-color: var(--gse-ui-tabs-item-indicator-hoverColor);
+        border-inline-end-color: ui.$gse-ui-tabs-item-indicator-hoverColor;
       }
     }
   }
@@ -28,17 +30,17 @@ gux-tabs:not([orientation='vertical']) > gux-tab-list {
   .gux-tab {
     box-sizing: border-box;
     max-inline-size: 160px;
-    block-size: var(--gse-ui-tabs-item-horizontal-fixedHeight);
-    padding: var(--gse-ui-tabs-item-horizontal-padding);
-    border-block-end: var(--gse-ui-tabs-item-indicator-horizontal-height) solid
+    block-size: ui.$gse-ui-tabs-item-horizontal-fixedHeight;
+    padding: ui.$gse-ui-tabs-item-horizontal-padding;
+    border-block-end: ui.$gse-ui-tabs-item-indicator-horizontal-height solid
       transparent;
 
     &.gux-active {
-      border-block-end-color: var(--gse-ui-tabs-item-indicator-activeColor);
+      border-block-end-color: ui.$gse-ui-tabs-item-indicator-activeColor;
     }
 
     &:hover:not(.gux-active):not(.gux-disabled) {
-      border-block-end-color: var(--gse-ui-tabs-item-indicator-hoverColor);
+      border-block-end-color: ui.$gse-ui-tabs-item-indicator-hoverColor;
     }
 
     gux-tooltip-title {
@@ -75,12 +77,12 @@ gux-tab {
   .gux-tab {
     display: flex;
     align-items: center;
-    block-size: var(--gse-ui-tabs-item-height);
-    font-family: var(--gse-ui-tabs-item-itemText-fontFamily);
-    font-size: var(--gse-ui-tabs-item-itemText-fontSize);
-    font-weight: var(--gse-ui-tabs-item-itemText-fontWeight);
-    line-height: var(--gse-ui-tabs-item-itemText-lineHeight);
-    color: var(--gse-ui-tabs-item-itemTextColor);
+    block-size: ui.$gse-ui-tabs-item-height;
+    font-family: ui.$gse-ui-tabs-item-itemText-fontFamily;
+    font-size: ui.$gse-ui-tabs-item-itemText-fontSize;
+    font-weight: ui.$gse-ui-tabs-item-itemText-fontWeight;
+    line-height: ui.$gse-ui-tabs-item-itemText-lineHeight;
+    color: ui.$gse-ui-tabs-item-itemTextColor;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -89,16 +91,16 @@ gux-tab {
       cursor: default;
 
       gux-tooltip-title {
-        opacity: var(--gse-ui-tabs-item-disableOpacity);
+        opacity: ui.$gse-ui-tabs-item-disableOpacity;
       }
     }
 
     &:focus-visible {
-      outline: var(--gse-ui-tabs-focusRing-border-width)
-        var(--gse-ui-tabs-focusRing-border-style)
-        var(--gse-ui-tabs-focusRing-border-color);
-      outline-offset: calc(var(--gse-ui-tabs-focusRing-border-width) * -1);
-      border-radius: var(--gse-ui-tabs-focusRing-borderRadius);
+      outline: ui.$gse-ui-tabs-focusRing-border-width
+        ui.$gse-ui-tabs-focusRing-border-style
+        ui.$gse-ui-tabs-focusRing-border-color;
+      outline-offset: calc(#{ui.$gse-ui-tabs-focusRing-border-width} * -1);
+      border-radius: ui.$gse-ui-tabs-focusRing-borderRadius;
     }
 
     gux-tooltip-title {

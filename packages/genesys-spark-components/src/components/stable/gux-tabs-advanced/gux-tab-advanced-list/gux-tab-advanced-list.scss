@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/typography.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
@@ -9,12 +10,12 @@
   align-items: center;
   justify-content: flex-start;
   inline-size: 100%;
-  background-color: var(--gse-ui-advancedTabs-set-backgroundColor);
+  background-color: ui.$gse-ui-advancedTabs-set-backgroundColor;
 
   button {
-    block-size: var(--gse-ui-button-default-height);
-    padding: var(--gse-ui-button-default-paddingIconOnly);
-    border-radius: var(--gse-ui-button-borderRadius);
+    block-size: ui.$gse-ui-button-default-height;
+    padding: ui.$gse-ui-button-default-paddingIconOnly;
+    border-radius: ui.$gse-ui-button-borderRadius;
   }
 
   [slot='add-tab'] {
@@ -31,9 +32,9 @@
     justify-content: flex-start;
     overflow-x: auto;
     scrollbar-width: none;
-    border-block-end: var(--gse-ui-advancedTabs-item-divider-border-width)
-      var(--gse-ui-advancedTabs-item-divider-border-style)
-      var(--gse-ui-advancedTabs-item-divider-border-color);
+    border-block-end: ui.$gse-ui-advancedTabs-item-divider-border-width
+      ui.$gse-ui-advancedTabs-item-divider-border-style
+      ui.$gse-ui-advancedTabs-item-divider-border-color;
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {

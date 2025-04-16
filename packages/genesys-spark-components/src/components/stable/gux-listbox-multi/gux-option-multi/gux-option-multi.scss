@@ -1,4 +1,5 @@
 @use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
@@ -6,16 +7,16 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: var(--gse-ui-menu-option-gap);
+  gap: ui.$gse-ui-menu-option-gap;
   align-content: stretch;
   align-items: center;
-  min-block-size: var(--gse-ui-menu-option-height);
-  padding: var(--gse-ui-menu-option-padding);
-  font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
-  font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
-  font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
-  line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
-  color: var(--gse-ui-menu-option-label-foregroundColor);
+  min-block-size: ui.$gse-ui-menu-option-height;
+  padding: ui.$gse-ui-menu-option-padding;
+  font-family: ui.$gse-ui-menu-option-label-default-text-fontFamily;
+  font-size: ui.$gse-ui-menu-option-label-default-text-fontSize;
+  font-weight: ui.$gse-ui-menu-option-label-default-text-fontWeight;
+  line-height: ui.$gse-ui-menu-option-label-default-text-lineHeight;
+  color: ui.$gse-ui-menu-option-label-foregroundColor;
   word-wrap: break-word;
   cursor: pointer;
 
@@ -27,9 +28,9 @@
   .gux-checkbox-container {
     position: relative;
     display: inline-block;
-    min-inline-size: var(--gse-ui-menu-option-startIcon-width);
-    max-inline-size: var(--gse-ui-menu-option-startIcon-width);
-    block-size: var(--gse-ui-menu-option-startIcon-height);
+    min-inline-size: ui.$gse-ui-menu-option-startIcon-width;
+    max-inline-size: ui.$gse-ui-menu-option-startIcon-width;
+    block-size: ui.$gse-ui-menu-option-startIcon-height;
     content: '';
 
     > path {
@@ -40,34 +41,34 @@
   }
 
   &:host(.gux-disabled) {
-    opacity: var(--gse-ui-menu-option-disabled-opacity);
+    opacity: ui.$gse-ui-menu-option-disabled-opacity;
 
     @include mixins.gux-disabled-pointer;
   }
 
   &:host(:active:not(:disabled)) {
-    font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
-    font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
-    font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
-    line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
+    font-family: ui.$gse-ui-menu-option-label-active-text-fontFamily;
+    font-size: ui.$gse-ui-menu-option-label-active-text-fontSize;
+    font-weight: ui.$gse-ui-menu-option-label-active-text-fontWeight;
+    line-height: ui.$gse-ui-menu-option-label-active-text-lineHeight;
   }
 
   &:host(.gux-selected) {
-    font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
-    font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
-    font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
-    line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
-    background-color: var(--gse-ui-menu-option-selected-backgroundColor);
+    font-family: ui.$gse-ui-menu-option-label-active-text-fontFamily;
+    font-size: ui.$gse-ui-menu-option-label-active-text-fontSize;
+    font-weight: ui.$gse-ui-menu-option-label-active-text-fontWeight;
+    line-height: ui.$gse-ui-menu-option-label-active-text-lineHeight;
+    background-color: ui.$gse-ui-menu-option-selected-backgroundColor;
 
     .gux-checkbox-container > path {
-      fill: var(--gse-ui-menu-option-checkbox-checked-default-foregroundColor);
+      fill: ui.$gse-ui-menu-option-checkbox-checked-default-foregroundColor;
     }
   }
 
   &:host(.gux-active) {
-    outline: var(--gse-ui-menu-option-focus-border-width)
-      var(--gse-ui-menu-option-focus-border-style)
-      var(--gse-ui-menu-option-focus-border-color);
+    outline: ui.$gse-ui-menu-option-focus-border-width
+      ui.$gse-ui-menu-option-focus-border-style
+      ui.$gse-ui-menu-option-focus-border-color;
     outline-offset: -2px;
     border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
   }
@@ -82,17 +83,17 @@
     }
 
     slot[name='subtext']::slotted(*) {
-      font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
-      color: var(--gse-ui-menu-groupedMenu-subtext-foregroundColor);
+      font-weight: ui.$gse-ui-menu-option-label-default-text-fontWeight;
+      color: ui.$gse-ui-menu-groupedMenu-subtext-foregroundColor;
     }
   }
 
   &:host(:hover:not([disabled])) {
-    background-color: var(--gse-ui-menu-option-hover-backgroundColor);
+    background-color: ui.$gse-ui-menu-option-hover-backgroundColor;
 
     &:host(.gux-selected) {
       .gux-checkbox-container > path {
-        fill: var(--gse-ui-menu-option-checkbox-checked-hover-foregroundColor);
+        fill: ui.$gse-ui-menu-option-checkbox-checked-hover-foregroundColor;
       }
     }
 

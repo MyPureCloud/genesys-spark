@@ -1,10 +1,11 @@
 @use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 // Style
 :host {
   z-index: global.$gse-semantic-zIndex-popover;
-  color: var(--gse-ui-menu-option-label-foregroundColor);
+  color: ui.$gse-ui-menu-option-label-foregroundColor;
   cursor: default;
 }
 
@@ -20,7 +21,7 @@
   position: fixed;
   display: none;
   border: none;
-  border-radius: var(--gse-ui-menu-borderRadius);
+  border-radius: ui.$gse-ui-menu-borderRadius;
 
   &.gux-shown {
     display: flex;
@@ -44,13 +45,13 @@
   .gux-arrow-caret {
     inline-size: 0;
     block-size: 0;
-    border-block-start: calc(var(--gse-ui-popover-anchor-width) / 2) solid
-      var(--gse-ui-popover-backgroundColor); // TODO: COMUI-2993 Replace this token with menu-specific token
+    border-block-start: calc(ui.$gse-ui-popover-anchor-width) / 2 solid
+      ui.$gse-ui-popover-backgroundColor; // TODO: COMUI-2993 Replace this token with menu-specific token
 
-    border-inline-start: calc(var(--gse-ui-popover-anchor-width) / 2) solid
+    border-inline-start: calc(ui.$gse-ui-popover-anchor-width) / 2 solid
       transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
 
-    border-inline-end: calc(var(--gse-ui-popover-anchor-width) / 2) solid
+    border-inline-end: calc(ui.$gse-ui-popover-anchor-width) / 2 solid
       transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
 
     filter: drop-shadow(

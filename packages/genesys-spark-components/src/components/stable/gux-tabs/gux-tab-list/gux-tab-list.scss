@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use 'sass:color';
 
 gux-tabs {
@@ -8,11 +9,11 @@ gux-tabs {
       .gux-tab-container {
         display: flex;
         flex-direction: column;
-        inline-size: var(--gse-ui-tabs-set-vertical-width);
+        inline-size: ui.$gse-ui-tabs-set-vertical-width;
         block-size: 100%;
-        margin-inline-end: var(--gse-ui-tabs-set-vertical-marginRight);
-        border-inline-end: var(--gse-ui-tabs-item-divider-horizontal-height)
-          solid var(--gse-ui-tabs-item-divider-dividerColor);
+        margin-inline-end: ui.$gse-ui-tabs-set-vertical-marginRight;
+        border-inline-end: ui.$gse-ui-tabs-item-divider-horizontal-height solid
+          ui.$gse-ui-tabs-item-divider-dividerColor;
 
         .gux-scroll-button-container {
           inline-size: 100%;
@@ -43,10 +44,10 @@ gux-tabs {
   &:not([orientation='vertical']) {
     > gux-tab-list {
       .gux-tab-container {
-        block-size: var(--gse-ui-tabs-set-horizontal-height);
-        margin-block-end: var(--gse-ui-tabs-set-horizontal-marginBottom);
-        border-block-end: var(--gse-ui-tabs-item-divider-horizontal-height)
-          solid var(--gse-ui-tabs-item-divider-dividerColor);
+        block-size: ui.$gse-ui-tabs-set-horizontal-height;
+        margin-block-end: ui.$gse-ui-tabs-set-horizontal-marginBottom;
+        border-block-end: ui.$gse-ui-tabs-item-divider-horizontal-height solid
+          ui.$gse-ui-tabs-item-divider-dividerColor;
       }
 
       .gux-scrollable-section {
@@ -78,7 +79,7 @@ gux-tabs {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--gse-ui-advancedTabs-set-backgroundColor);
+    background-color: ui.$gse-ui-advancedTabs-set-backgroundColor;
     border-radius: var(
       --gse-ui-button-borderRadius
     ); // TODO: COMUI-2341. Should we use button tokens here ?

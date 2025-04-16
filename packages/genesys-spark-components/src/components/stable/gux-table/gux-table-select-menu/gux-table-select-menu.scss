@@ -1,16 +1,17 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 gux-table-select-menu {
   display: inline-flex;
-  font-family: var(--gse-ui-popover-body-text-fontFamily);
-  font-size: var(--gse-ui-popover-body-text-fontSize);
-  font-weight: var(--gse-ui-popover-body-text-fontWeight);
-  line-height: var(--gse-ui-popover-body-text-lineHeight);
+  font-family: ui.$gse-ui-popover-body-text-fontFamily;
+  font-size: ui.$gse-ui-popover-body-text-fontSize;
+  font-weight: ui.$gse-ui-popover-body-text-fontWeight;
+  line-height: ui.$gse-ui-popover-body-text-lineHeight;
 
   .gux-select-menu-button {
     padding: 0;
-    margin-inline-start: var(--gse-ui-dataTableItems-header-gap);
-    color: var(--gse-ui-dataTableItems-cell-chevron-foregroundColor);
+    margin-inline-start: ui.$gse-ui-dataTableItems-header-gap;
+    color: ui.$gse-ui-dataTableItems-cell-chevron-foregroundColor;
     outline: none;
     background-color: inherit;
     border: none;

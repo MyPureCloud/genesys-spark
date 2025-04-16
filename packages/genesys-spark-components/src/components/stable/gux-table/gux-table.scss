@@ -1,4 +1,5 @@
 @use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/typography.scss';
 
 :host {
@@ -12,7 +13,7 @@
     .gux-table-container {
       max-block-size: 100%;
       overflow: auto;
-      scrollbar-color: var(--gse-ui-dataTableItems-scrollbar-foregroundColor);
+      scrollbar-color: ui.$gse-ui-dataTableItems-scrollbar-foregroundColor;
       scrollbar-width: thin;
 
       &.gux-column-resizing-hover,
@@ -26,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    block-size: calc(100% - var(--gse-ui-dataTableItems-header-default-height));
+    block-size: calc(100% - ui.$gse-ui-dataTableItems-header-default-height);
     color: global.$gse-semantic-foreground-container-lowEmphasis;
     background: global.$gse-semantic-background-container-page-tonalSubtle;
 

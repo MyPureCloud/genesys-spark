@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
@@ -21,7 +22,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: var(--gse-ui-dataTableItems-editColumn-editColumnItem-gap);
+  gap: ui.$gse-ui-dataTableItems-editColumn-editColumnItem-gap;
   place-content: stretch flex-start;
   align-items: center;
   margin-block-end: -2px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
@@ -96,7 +97,7 @@
       position: absolute;
       inset-block-start: 1px;
       inset-inline-start: calc(
-        var(--gse-ui-icon-small-size) + var(--gse-ui-checkbox-gap)
+        #{ui.$gse-ui-icon-small-size} + #{ui.$gse-ui-checkbox-gap}
       ); //TODO https://inindca.atlassian.net/browse/COMUI-2314
 
       color: transparent;

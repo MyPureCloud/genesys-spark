@@ -1,9 +1,11 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   flex-direction: column;
   inline-size: fit-content;
-  padding: var(--gse-ui-menu-padding);
-  background-color: var(--gse-ui-flyoutMenu-backgroundColor);
+  padding: ui.$gse-ui-menu-padding;
+  background-color: ui.$gse-ui-flyoutMenu-backgroundColor;
   border: none;
-  border-radius: var(--gse-ui-menu-borderRadius);
-  box-shadow: var(--gse-ui-menu-boxShadow);
+  border-radius: ui.$gse-ui-menu-borderRadius;
+  box-shadow: ui.$gse-ui-menu-boxShadow;
 }
