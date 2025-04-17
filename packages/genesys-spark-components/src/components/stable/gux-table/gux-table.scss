@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    block-size: calc(100% - ui.$gse-ui-dataTableItems-header-default-height);
+    block-size: calc(100% - #{ui.$gse-ui-dataTableItems-header-default-height});
     color: global.$gse-semantic-foreground-container-lowEmphasis;
     background: global.$gse-semantic-background-container-page-tonalSubtle;
 

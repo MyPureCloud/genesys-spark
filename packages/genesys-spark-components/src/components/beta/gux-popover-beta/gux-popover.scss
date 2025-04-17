@@ -34,11 +34,11 @@
   .gux-arrow-caret {
     inline-size: 0;
     block-size: 0;
-    border-block-start: calc(ui.$gse-ui-popover-anchor-width / 2) solid
+    border-block-start: calc(#{ui.$gse-ui-popover-anchor-width} / 2) solid
       ui.$gse-ui-popover-backgroundColor;
-    border-inline-start: calc(ui.$gse-ui-popover-anchor-width / 2) solid
+    border-inline-start: calc(#{ui.$gse-ui-popover-anchor-width} / 2) solid
       transparent;
-    border-inline-end: calc(ui.$gse-ui-popover-anchor-width / 2) solid
+    border-inline-end: calc(#{ui.$gse-ui-popover-anchor-width} / 2) solid
       transparent;
     filter: drop-shadow(0 0 4px global.$gse-semantic-effects-boxShadow);
   }
