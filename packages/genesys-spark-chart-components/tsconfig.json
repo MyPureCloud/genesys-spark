@@ -3,7 +3,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "lib": ["dom", "es2017", "ES2020.Intl"],
+    "lib": ["dom", "es2017"],
     "skipLibCheck": true,
     "jsx": "react",
     "jsxFactory": "h",
