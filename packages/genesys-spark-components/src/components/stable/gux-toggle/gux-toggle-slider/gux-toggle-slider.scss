@@ -3,8 +3,8 @@
 
 $toggle-height: ui.$gse-ui-toggle-track-height;
 $toggle-width: ui.$gse-ui-toggle-track-width;
-$slider-diameter: calc(ui.$gse-ui-toggle-handle-width);
-$slider-transition: calc($toggle-width - $toggle-height);
+$slider-diameter: ui.$gse-ui-toggle-handle-width;
+$slider-transition: calc(#{$toggle-width} - #{$toggle-height});
 $slider-transition-duration: 0.2s; // TODO: COMUI-2509 - we are hardcoding this animation duration until design comes back with a token
 
 gux-toggle-slider {

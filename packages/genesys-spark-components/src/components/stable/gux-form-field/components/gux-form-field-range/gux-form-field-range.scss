@@ -15,7 +15,7 @@
 $range-active: ui.$gse-ui-rangeSlider-bar-selected-backgroundColor;
 $track-width: 100%;
 $track-height: ui.$gse-ui-rangeSlider-bar-height;
-$thumb-diameter: calc(ui.$gse-ui-rangeSlider-handle-height) / 2;
+$thumb-diameter: calc(#{ui.$gse-ui-rangeSlider-handle-height} / 2);
 
 @mixin gux-track {
   inline-size: $track-width;

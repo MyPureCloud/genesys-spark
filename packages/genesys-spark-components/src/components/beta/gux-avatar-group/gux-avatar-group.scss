@@ -16,5 +16,5 @@
 
 .gux-add-item-overflow {
   // + 2px to offset the minus margin on the other side
-  padding-inline-start: calc(global.$gse-core-spacing-4xs + 2px);
+  padding-inline-start: calc(#{global.$gse-core-spacing-4xs} + 2px);
 }

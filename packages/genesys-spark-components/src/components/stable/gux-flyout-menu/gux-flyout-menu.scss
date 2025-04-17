@@ -45,13 +45,13 @@
   .gux-arrow-caret {
     inline-size: 0;
     block-size: 0;
-    border-block-start: calc(ui.$gse-ui-popover-anchor-width) / 2 solid
+    border-block-start: calc(#{ui.$gse-ui-popover-anchor-width} / 2) solid
       ui.$gse-ui-popover-backgroundColor; // TODO: COMUI-2993 Replace this token with menu-specific token
 
-    border-inline-start: calc(ui.$gse-ui-popover-anchor-width) / 2 solid
+    border-inline-start: calc(#{ui.$gse-ui-popover-anchor-width} / 2) solid
       transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
 
-    border-inline-end: calc(ui.$gse-ui-popover-anchor-width) / 2 solid
+    border-inline-end: calc(#{ui.$gse-ui-popover-anchor-width} / 2) solid
       transparent; // TODO: COMUI-2993 Replace this token with menu-specific token
 
     filter: drop-shadow(
