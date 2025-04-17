@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.138.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.4...v4.138.5) (2025-04-17)
+
+
+### Bug Fixes
+
+* **popover-beta:** add method to close popover ([daac3a3](https://github.com/MyPureCloud/genesys-spark/commit/daac3a3ea05d2cb2b68ed61d8325486747104a48))
+* **toast:** Break word on message ([#1036](https://github.com/MyPureCloud/genesys-spark/issues/1036)) ([612c505](https://github.com/MyPureCloud/genesys-spark/commit/612c5057e396d03a7c4909fb6099f1a8d3fc3dd8))
+
 ### [4.138.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.3...v4.138.4) (2025-04-16)
 
 
