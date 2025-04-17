@@ -106,6 +106,12 @@ export class GuxFormFieldNumber {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+
+    if (this.hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    } else {
+      this.input.removeAttribute('aria-invalid');
+    }
   }
 
   @Listen('keyup')
@@ -157,6 +163,10 @@ export class GuxFormFieldNumber {
     this.labelInfo = this.root.querySelector('[slot=label-info]');
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
+
+    if (this.hasError) {
+      this.input.setAttribute('aria-invalid', 'true');
+    }
 
     trackComponent(this.root, { variant: this.variant });
   }
@@ -215,9 +225,11 @@ export class GuxFormFieldNumber {
               this.disabled
             )}
           </div>
-          <GuxFormFieldError show={this.hasError}>
-            <slot name="error" />
-          </GuxFormFieldError>
+          <div role="alert" aria-live="assertive">
+            <GuxFormFieldError show={this.hasError}>
+              <slot name="error" />
+            </GuxFormFieldError>
+          </div>
           <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
             <slot name="help" />
           </GuxFormFieldHelp>
