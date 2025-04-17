@@ -1,8 +1,10 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: block;
-  border-top: var(--gse-ui-dataTableItems-tablePagination-divider-width)
-    var(--gse-ui-dataTableItems-tablePagination-divider-style)
-    var(--gse-ui-dataTableItems-tablePagination-divider-color);
+  border-top: ui.$gse-ui-dataTableItems-tablePagination-divider-width
+    ui.$gse-ui-dataTableItems-tablePagination-divider-style
+    ui.$gse-ui-dataTableItems-tablePagination-divider-color;
 }
 
 .gux-pagination-container {
@@ -11,8 +13,8 @@
   flex-wrap: nowrap;
   place-content: stretch space-between;
   align-items: center;
-  height: var(--gse-ui-dataTableItems-cell-tablePagination-height);
-  padding: var(--gse-ui-dataTableItems-tablePagination-padding);
+  height: ui.$gse-ui-dataTableItems-cell-tablePagination-height;
+  padding: ui.$gse-ui-dataTableItems-tablePagination-padding;
   background-color: var(
     --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor
   );
@@ -22,7 +24,7 @@
     flex: 1 1 auto;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+    gap: ui.$gse-ui-dataTableItems-tablePagination-recordsetControls-gap;
     place-content: stretch flex-start;
     align-items: center;
     align-self: auto;

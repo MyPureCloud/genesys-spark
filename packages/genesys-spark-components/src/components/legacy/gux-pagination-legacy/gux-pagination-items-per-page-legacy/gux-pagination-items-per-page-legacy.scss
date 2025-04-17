@@ -1,9 +1,11 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 gux-pagination-items-per-page-legacy {
   .gux-pagination-items-per-page-container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+    gap: ui.$gse-ui-dataTableItems-tablePagination-recordsetControls-gap;
     place-content: stretch center;
     align-items: center;
 
@@ -34,7 +36,7 @@ gux-pagination-items-per-page-legacy {
       line-height: var(
         --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
       );
-      color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
+      color: ui.$gse-ui-dataTableItems-tablePagination-foregroundColor;
     }
   }
 }

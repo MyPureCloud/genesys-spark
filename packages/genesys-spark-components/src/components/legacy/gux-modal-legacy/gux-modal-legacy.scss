@@ -1,30 +1,9 @@
-/*
-@prop $gse-ui-modal-closeButtonColor // TODO: COMUI-2300 - follow up later when dismiss button has been tokenized
-@prop $gse-ui-modal-headerColor
-@prop $gse-ui-modal-backgroundColor
-@prop $gse-ui-modal-shroudColor
-@prop $gse-ui-modal-header-gap
-@prop $gse-ui-modal-padding
-@prop $gse-ui-modal-gap
-@prop $gse-ui-modal-heading-fontFamily
-@prop $gse-ui-modal-heading-lineHeight
-@prop $gse-ui-modal-heading-fontSize
-@prop $gse-ui-modal-heading-fontWeight
-@prop $gse-ui-modal-heading-letterSpacing
-@prop $gse-ui-modal-icon // TODO: COMUI-2300 - follow up later when dismiss button has been tokenized
-@prop $gse-ui-modal-small-width
-@prop $gse-ui-modal-medium-width
-@prop $gse-ui-modal-large-width
-@prop $gse-ui-modal-buttonBar-gap
-@prop $gse-ui-modal-boxShadow
-@prop $gse-ui-modal-borderRadius
-@prop $gse-ui-modal-opacity - Skipped (this is incoporated into the gse-ui-modal-shroudColor token and is no longer needed. Thinking about asking design team to remove this token to avoid confusion)
-*/
-
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/typography.scss';
 
 ::slotted(button:active:enabled) {
-  color: var(--gse-ui-links-active-foregroundColor);
+  color: ui.$gse-ui-links-active-foregroundColor;
   text-decoration: underline;
   background: none;
 }
@@ -32,7 +11,7 @@
 slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
   display: flex;
   flex-direction: row;
-  gap: var(--gse-ui-modal-buttonBar-gap);
+  gap: ui.$gse-ui-modal-buttonBar-gap;
   align-content: flex-start;
   align-items: center;
 }
@@ -44,12 +23,12 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
   .gux-modal {
     position: fixed;
     inset: 0;
-    z-index: var(--gse-semantic-zIndex-modal);
+    z-index: global.$gse-semantic-zIndex-modal;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--gse-semantic-foreground-container-highEmphasis);
-    background: var(--gse-ui-modal-shroudColor);
+    color: global.$gse-semantic-foreground-container-highEmphasis;
+    background: ui.$gse-ui-modal-shroudColor;
 
     .gux-modal-container {
       position: relative;
@@ -57,24 +36,24 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: var(--gse-ui-modal-padding) 0;
-      background: var(--gse-ui-modal-backgroundColor);
-      border: 1px solid var(--gse-semantic-border-container-edges-default); // TODO: COMUI-2300
-      border-radius: var(--gse-ui-modal-borderRadius);
-      box-shadow: var(--gse-ui-modal-boxShadow);
+      padding: ui.$gse-ui-modal-padding 0;
+      background: ui.$gse-ui-modal-backgroundColor;
+      border: 1px solid global.$gse-semantic-border-container-edges-default;
+      border-radius: ui.$gse-ui-modal-borderRadius;
+      box-shadow: ui.$gse-ui-modal-boxShadow;
 
       &.gux-small {
-        width: var(--gse-ui-modal-small-width);
+        width: ui.$gse-ui-modal-small-width;
         max-height: min(368px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
       }
 
       &.gux-medium {
-        width: var(--gse-ui-modal-medium-width);
+        width: ui.$gse-ui-modal-medium-width;
         max-height: min(640px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
       }
 
       &.gux-large {
-        width: var(--gse-ui-modal-large-width);
+        width: ui.$gse-ui-modal-large-width;
         max-height: min(640px, 100vh - 2 * #{24px}); // TODO: COMUI-2300
       }
 
@@ -88,22 +67,22 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
       }
 
       .gux-modal-header {
-        padding: 0 var(--gse-ui-modal-padding);
+        padding: 0 ui.$gse-ui-modal-padding;
         margin: 0;
-        font-family: var(--gse-ui-modal-heading-fontFamily);
-        font-size: var(--gse-ui-modal-heading-fontSize);
-        font-weight: var(--gse-ui-modal-heading-fontWeight);
-        line-height: var(--gse-ui-modal-heading-fontFamily);
-        color: var(--gse-ui-modal-headerColor);
+        font-family: ui.$gse-ui-modal-heading-fontFamily;
+        font-size: ui.$gse-ui-modal-heading-fontSize;
+        font-weight: ui.$gse-ui-modal-heading-fontWeight;
+        line-height: ui.$gse-ui-modal-heading-fontFamily;
+        color: ui.$gse-ui-modal-headerColor;
 
         @include typography.heading-xl;
       }
 
       .gux-modal-content {
         max-height: 432px; // TODO: COMUI-2300
-        padding: 0 var(--gse-ui-modal-padding);
-        margin-top: var(--gse-ui-modal-gap);
-        margin-bottom: var(--gse-ui-modal-gap);
+        padding: 0 ui.$gse-ui-modal-padding;
+        margin-top: ui.$gse-ui-modal-gap;
+        margin-bottom: ui.$gse-ui-modal-gap;
         overflow-y: auto;
 
         &.gux-no-buttons {
@@ -114,7 +93,7 @@ slot[name='left-align-buttons']::slotted(:not(button, gux-button)) {
       .gux-button-footer {
         display: flex;
         justify-content: space-between;
-        padding: 0 var(--gse-ui-modal-padding);
+        padding: 0 ui.$gse-ui-modal-padding;
       }
     }
 
