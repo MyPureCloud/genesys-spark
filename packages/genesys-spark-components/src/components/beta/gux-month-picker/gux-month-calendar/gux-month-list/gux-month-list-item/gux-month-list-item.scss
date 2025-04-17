@@ -1,3 +1,6 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host([disabled]) {
   pointer-events: none;
 }
@@ -8,8 +11,8 @@
 
 .gux-container {
   box-sizing: border-box;
-  inline-size: var(--gse-ui-calendarMenu-month-monthCell-width);
-  block-size: var(--gse-ui-calendarMenu-month-monthCell-height);
+  inline-size: ui.$gse-ui-calendarMenu-month-monthCell-width;
+  block-size: ui.$gse-ui-calendarMenu-month-monthCell-height;
   padding-block: 10px 9px;
   padding-inline: 5px; //TODO COMUI-2256
 
@@ -23,29 +26,29 @@
     cursor: pointer;
     outline: none;
     border: none;
-    border-radius: var(--gse-ui-calendarMenu-month-borderRadius);
+    border-radius: ui.$gse-ui-calendarMenu-month-borderRadius;
 
     &.gux-selected {
-      color: var(--gse-ui-calendarMenu-month-selected-foregroundColor);
-      background: var(--gse-ui-calendarMenu-month-selected-backgroundColor);
+      color: ui.$gse-ui-calendarMenu-month-selected-foregroundColor;
+      background: ui.$gse-ui-calendarMenu-month-selected-backgroundColor;
     }
 
     &:focus-visible:not(:disabled) {
-      outline: var(--gse-ui-monthPicker-calendarStates-focus-border-width)
-        var(--gse-ui-monthPicker-calendarStates-focus-border-style)
-        var(--gse-ui-monthPicker-calendarStates-focus-border-color);
-      outline-offset: var(--gse-semantic-focusOutline-offset);
-      border-radius: var(--gse-ui-calendarMenu-month-focusBorderRadius);
+      outline: ui.$gse-ui-monthPicker-calendarStates-focus-border-width
+        ui.$gse-ui-monthPicker-calendarStates-focus-border-style
+        ui.$gse-ui-monthPicker-calendarStates-focus-border-color;
+      outline-offset: global.$gse-semantic-focusOutline-offset;
+      border-radius: ui.$gse-ui-calendarMenu-month-focusBorderRadius;
     }
 
     &:hover:not(:disabled) {
-      color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
-      background: var(--gse-ui-calendarMenu-month-hover-backgroundColor);
+      color: ui.$gse-ui-calendarMenu-month-default-foregroundColor;
+      background: ui.$gse-ui-calendarMenu-month-hover-backgroundColor;
     }
 
     &:disabled {
       cursor: default;
-      opacity: var(--gse-ui-calendarMenu-disabled-opacity);
+      opacity: ui.$gse-ui-calendarMenu-disabled-opacity;
     }
   }
 }

@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 @use '~genesys-spark/dist/scss/checkbox-icons.scss';
@@ -12,18 +13,18 @@
 }
 
 ::slotted(gux-icon) {
-  inline-size: var(--gse-ui-icon-medium-size);
-  block-size: var(--gse-ui-icon-medium-size);
-  color: var(--gse-ui-selectorCard-ilustrativeIcon-foregroundColor);
+  inline-size: ui.$gse-ui-icon-medium-size;
+  block-size: ui.$gse-ui-icon-medium-size;
+  color: ui.$gse-ui-selectorCard-ilustrativeIcon-foregroundColor;
 }
 
 ::slotted(label) {
   inline-size: 100%;
-  font-family: var(--gse-ui-selectorCard-simple-label-fontFamily);
-  font-size: var(--gse-ui-selectorCard-simple-label-fontSize);
-  font-weight: var(--gse-ui-selectorCard-simple-label-fontWeight);
-  line-height: var(--gse-ui-selectorCard-simple-label-lineHeight);
-  color: var(--gse-ui-selectorCard-text-foregroundColor);
+  font-family: ui.$gse-ui-selectorCard-simple-label-fontFamily;
+  font-size: ui.$gse-ui-selectorCard-simple-label-fontSize;
+  font-weight: ui.$gse-ui-selectorCard-simple-label-fontWeight;
+  line-height: ui.$gse-ui-selectorCard-simple-label-lineHeight;
+  color: ui.$gse-ui-selectorCard-text-foregroundColor;
 }
 
 ::slotted(input[type='radio']),
@@ -33,25 +34,25 @@
   inline-size: 100%;
   block-size: 100%;
   margin: 0;
-  color: var(--gse-ui-radioButton-icon-default-unselectedForegroundColor);
+  color: ui.$gse-ui-radioButton-icon-default-unselectedForegroundColor;
   -webkit-appearance: none;
   appearance: none;
   outline: none;
-  border: var(--gse-ui-selectorCard-unselected-border-width)
-    var(--gse-ui-selectorCard-unselected-border-style)
-    var(--gse-ui-selectorCard-unselected-border-color);
-  border-radius: var(--gse-ui-selectorCard-simple-borderRadius);
+  border: ui.$gse-ui-selectorCard-unselected-border-width
+    ui.$gse-ui-selectorCard-unselected-border-style
+    ui.$gse-ui-selectorCard-unselected-border-color;
+  border-radius: ui.$gse-ui-selectorCard-simple-borderRadius;
 
   &::before {
     position: absolute;
-    inset-block-start: var(--gse-ui-selectorCard-descriptive-text-gap);
-    inset-inline-end: var(--gse-ui-selectorCard-descriptive-text-gap);
+    inset-block-start: ui.$gse-ui-selectorCard-descriptive-text-gap;
+    inset-inline-end: ui.$gse-ui-selectorCard-descriptive-text-gap;
     display: inline-grid;
     grid-area: 1/1;
-    inline-size: var(--gse-ui-radioButton-icon-width);
-    block-size: var(--gse-ui-radioButton-icon-height);
+    inline-size: ui.$gse-ui-radioButton-icon-width;
+    block-size: ui.$gse-ui-radioButton-icon-height;
     vertical-align: middle;
-    color: var(--gse-ui-radioButton-icon-default-unselectedForegroundColor);
+    color: ui.$gse-ui-radioButton-icon-default-unselectedForegroundColor;
     text-align: center;
     content: '';
   }
@@ -63,9 +64,9 @@
 
 ::slotted(input[type='radio']:checked),
 ::slotted(input[type='checkbox']:checked) {
-  border: var(--gse-ui-selectorCard-selected-border-width)
-    var(--gse-ui-selectorCard-selected-border-style)
-    var(--gse-ui-selectorCard-selected-border-color);
+  border: ui.$gse-ui-selectorCard-selected-border-width
+    ui.$gse-ui-selectorCard-selected-border-style
+    ui.$gse-ui-selectorCard-selected-border-color;
 
   &::before {
     background-color: var(
@@ -85,7 +86,7 @@
 ::slotted(input[type='checkbox']:disabled) {
   pointer-events: none;
   cursor: not-allowed;
-  opacity: var(--gse-ui-radioButton-disabled-opacity);
+  opacity: ui.$gse-ui-radioButton-disabled-opacity;
 }
 
 ::slotted(input[type='radio'])::before {
@@ -114,17 +115,17 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: var(--gse-ui-selectorCard-descriptive-text-gap);
+    gap: ui.$gse-ui-selectorCard-descriptive-text-gap;
     align-items: center;
-    inline-size: var(--gse-ui-selectorCard-simple-minWidth);
-    min-inline-size: var(--gse-ui-selectorCard-simple-minWidth);
-    max-inline-size: var(--gse-ui-selectorCard-simple-maxWidth);
-    min-block-size: var(--gse-ui-selectorCard-simple-minHeight);
-    max-block-size: var(--gse-ui-selectorCard-simple-maxHeight);
-    padding: var(--gse-ui-selectorCard-simple-padding);
+    inline-size: ui.$gse-ui-selectorCard-simple-minWidth;
+    min-inline-size: ui.$gse-ui-selectorCard-simple-minWidth;
+    max-inline-size: ui.$gse-ui-selectorCard-simple-maxWidth;
+    min-block-size: ui.$gse-ui-selectorCard-simple-minHeight;
+    max-block-size: ui.$gse-ui-selectorCard-simple-maxHeight;
+    padding: ui.$gse-ui-selectorCard-simple-padding;
     text-align: center;
-    background-color: var(--gse-ui-selectorCard-default-backgroundColor);
-    border-radius: var(--gse-ui-selectorCard-simple-borderRadius);
+    background-color: ui.$gse-ui-selectorCard-default-backgroundColor;
+    border-radius: ui.$gse-ui-selectorCard-simple-borderRadius;
 
     .gux-label-container {
       display: -webkit-box;
@@ -145,15 +146,15 @@
   &.gux-descriptive {
     .gux-content {
       align-items: flex-start;
-      inline-size: var(--gse-ui-selectorCard-descriptive-minWidth);
-      min-inline-size: var(--gse-ui-selectorCard-descriptive-minWidth);
-      max-inline-size: var(--gse-ui-selectorCard-descriptive-maxWidth);
-      min-block-size: var(--gse-ui-selectorCard-descriptive-minHeight);
-      max-block-size: var(--gse-ui-selectorCard-descriptive-maxHeight);
-      padding: var(--gse-ui-selectorCard-descriptive-padding);
+      inline-size: ui.$gse-ui-selectorCard-descriptive-minWidth;
+      min-inline-size: ui.$gse-ui-selectorCard-descriptive-minWidth;
+      max-inline-size: ui.$gse-ui-selectorCard-descriptive-maxWidth;
+      min-block-size: ui.$gse-ui-selectorCard-descriptive-minHeight;
+      max-block-size: ui.$gse-ui-selectorCard-descriptive-maxHeight;
+      padding: ui.$gse-ui-selectorCard-descriptive-padding;
       text-align: start;
       white-space: normal;
-      border-radius: var(--gse-ui-selectorCard-descriptive-borderRadius);
+      border-radius: ui.$gse-ui-selectorCard-descriptive-borderRadius;
 
       .gux-description-container {
         display: -webkit-box;
@@ -171,29 +172,29 @@
       ::slotted(input[type='radio']),
       ::slotted(input[type='checkbox']) {
         inset-inline-start: 0;
-        border-radius: var(--gse-ui-selectorCard-descriptive-borderRadius);
+        border-radius: ui.$gse-ui-selectorCard-descriptive-borderRadius;
 
         &::before {
-          inset-block-start: var(--gse-ui-selectorCard-descriptive-gap);
-          inset-inline-end: var(--gse-ui-selectorCard-descriptive-padding);
-          inline-size: var(--gse-ui-icon-small-size);
-          block-size: var(--gse-ui-icon-small-size);
+          inset-block-start: ui.$gse-ui-selectorCard-descriptive-gap;
+          inset-inline-end: ui.$gse-ui-selectorCard-descriptive-padding;
+          inline-size: ui.$gse-ui-icon-small-size;
+          block-size: ui.$gse-ui-icon-small-size;
         }
       }
 
       ::slotted(label) {
         display: block;
-        margin-block-end: var(--gse-ui-selectorCard-descriptive-text-gap);
-        font-family: var(--gse-ui-selectorCard-descriptive-label-fontFamily);
-        font-size: var(--gse-ui-selectorCard-descriptive-label-fontSize);
-        font-weight: var(--gse-ui-selectorCard-descriptive-label-fontWeight);
-        line-height: var(--gse-ui-selectorCard-descriptive-label-lineHeight);
+        margin-block-end: ui.$gse-ui-selectorCard-descriptive-text-gap;
+        font-family: ui.$gse-ui-selectorCard-descriptive-label-fontFamily;
+        font-size: ui.$gse-ui-selectorCard-descriptive-label-fontSize;
+        font-weight: ui.$gse-ui-selectorCard-descriptive-label-fontWeight;
+        line-height: ui.$gse-ui-selectorCard-descriptive-label-lineHeight;
       }
 
       ::slotted(gux-icon) {
-        inline-size: var(--gse-ui-icon-large-size);
-        block-size: var(--gse-ui-icon-large-size);
-        margin-block-end: var(--gse-ui-selectorCard-descriptive-gap);
+        inline-size: ui.$gse-ui-icon-large-size;
+        block-size: ui.$gse-ui-icon-large-size;
+        margin-block-end: ui.$gse-ui-selectorCard-descriptive-gap;
       }
     }
   }
@@ -206,15 +207,15 @@
       pointer-events: none;
       -webkit-user-select: none; /* Safari */
       user-select: none;
-      background-color: var(--gse-ui-selectorCard-disabled-backgroundColor);
-      opacity: var(--gse-ui-selectorCard-disabled-opacity);
+      background-color: ui.$gse-ui-selectorCard-disabled-backgroundColor;
+      opacity: ui.$gse-ui-selectorCard-disabled-opacity;
     }
   }
 
   &:hover:not(:disabled) {
     .gux-content {
       cursor: pointer;
-      background-color: var(--gse-ui-selectorCard-hover-backgroundColor);
+      background-color: ui.$gse-ui-selectorCard-hover-backgroundColor;
 
       ::slotted(input[type='radio'])::before,
       ::slotted(input[type='checkbox'])::before {
@@ -227,7 +228,7 @@
 
   &:active:not(:disabled) {
     .gux-content {
-      background-color: var(--gse-ui-selectorCard-active-backgroundColor);
+      background-color: ui.$gse-ui-selectorCard-active-backgroundColor;
 
       ::slotted(input[type='radio'])::before,
       ::slotted(input[type='checkbox'])::before {

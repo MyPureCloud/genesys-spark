@@ -1,3 +1,6 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 /* This is necessary to override the position of the popover on the page. By default, an HTML popover will
    render in the middle of the screen, which we do not want */
 :popover-open {
@@ -9,18 +12,18 @@
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: 0;
-  padding: var(--gse-ui-popover-padding);
+  padding: ui.$gse-ui-popover-padding;
   overflow: hidden;
-  color: var(--gse-semantic-foreground-container-highEmphasis);
-  background-color: var(--gse-ui-popover-backgroundColor);
+  color: global.$gse-semantic-foreground-container-highEmphasis;
+  background-color: ui.$gse-ui-popover-backgroundColor;
   border: none;
-  border-radius: var(--gse-ui-popover-borderRadius);
-  box-shadow: var(--gse-ui-popover-boxShadow);
+  border-radius: ui.$gse-ui-popover-borderRadius;
+  box-shadow: ui.$gse-ui-popover-boxShadow;
 
   .gux-arrow {
     position: absolute;
-    inline-size: var(--gse-ui-popover-anchor-width);
-    block-size: var(--gse-ui-popover-anchor-height);
+    inline-size: ui.$gse-ui-popover-anchor-width;
+    block-size: ui.$gse-ui-popover-anchor-height;
 
     /* 4px padding leaves some space for the shadow to bleed into */
     padding-block-end: 4px;
@@ -31,13 +34,13 @@
   .gux-arrow-caret {
     inline-size: 0;
     block-size: 0;
-    border-block-start: calc(var(--gse-ui-popover-anchor-width) / 2) solid
-      var(--gse-ui-popover-backgroundColor);
-    border-inline-start: calc(var(--gse-ui-popover-anchor-width) / 2) solid
+    border-block-start: calc(ui.$gse-ui-popover-anchor-width / 2) solid
+      ui.$gse-ui-popover-backgroundColor;
+    border-inline-start: calc(ui.$gse-ui-popover-anchor-width / 2) solid
       transparent;
-    border-inline-end: calc(var(--gse-ui-popover-anchor-width) / 2) solid
+    border-inline-end: calc(ui.$gse-ui-popover-anchor-width / 2) solid
       transparent;
-    filter: drop-shadow(0 0 4px var(--gse-semantic-effects-boxShadow));
+    filter: drop-shadow(0 0 4px global.$gse-semantic-effects-boxShadow);
   }
 
   .gux-popover-header {
@@ -45,11 +48,11 @@
     flex-direction: row;
     place-content: center space-between;
     align-items: center;
-    padding-block-end: var(--gse-ui-popover-gap);
-    font-family: var(--gse-ui-popover-title-text-fontFamily);
-    font-size: var(--gse-ui-popover-title-text-fontSize);
-    font-weight: var(--gse-ui-popover-title-text-fontWeight);
-    line-height: var(--gse-ui-popover-title-text-lineHeight);
-    color: var(--gse-ui-popover-headerColor);
+    padding-block-end: ui.$gse-ui-popover-gap;
+    font-family: ui.$gse-ui-popover-title-text-fontFamily;
+    font-size: ui.$gse-ui-popover-title-text-fontSize;
+    font-weight: ui.$gse-ui-popover-title-text-fontWeight;
+    line-height: ui.$gse-ui-popover-title-text-lineHeight;
+    color: ui.$gse-ui-popover-headerColor;
   }
 }

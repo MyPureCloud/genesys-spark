@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 gux-dropdown {
   .zone-header {
     padding-block: 8px 4px;
@@ -7,7 +9,7 @@ gux-dropdown {
   }
 
   gux-option {
-    padding: var(--gse-ui-menu-option-padding);
+    padding: ui.$gse-ui-menu-option-padding;
 
     &.gux-has-defaults {
       block-size: auto;

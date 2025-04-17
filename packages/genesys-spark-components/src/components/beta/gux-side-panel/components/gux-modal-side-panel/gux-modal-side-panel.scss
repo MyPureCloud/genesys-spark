@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '../../mixins';
 
 dialog {
@@ -10,8 +11,8 @@ dialog {
 }
 
 dialog::backdrop {
-  background: var(--gse-ui-sidePanel-shroudColor);
-  opacity: var(--gse-ui-sidePanel-shroud-opacity);
+  background: ui.$gse-ui-sidePanel-shroudColor;
+  opacity: ui.$gse-ui-sidePanel-shroud-opacity;
 }
 
 slot[name='description']::slotted(*) {

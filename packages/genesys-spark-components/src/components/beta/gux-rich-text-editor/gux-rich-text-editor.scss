@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: block;
 }
@@ -11,18 +13,18 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: var(--gse-ui-rte-innerContainer-gap);
+  gap: ui.$gse-ui-rte-innerContainer-gap;
   inline-size: 100%;
   max-inline-size: 100%;
   block-size: 100%;
   max-block-size: 100%;
-  padding: var(--gse-ui-rte-padding);
+  padding: ui.$gse-ui-rte-padding;
   overflow: hidden scroll;
-  background-color: var(--gse-ui-formControl-input-backgroundColor);
-  border: var(--gse-ui-rte-mainContainer-default-border-width)
-    var(--gse-ui-rte-mainContainer-default-border-color)
-    var(--gse-ui-rte-mainContainer-default-border-style);
-  border-radius: var(--gse-ui-rte-container-borderRadius);
+  background-color: ui.$gse-ui-formControl-input-backgroundColor;
+  border: ui.$gse-ui-rte-mainContainer-default-border-width
+    ui.$gse-ui-rte-mainContainer-default-border-color
+    ui.$gse-ui-rte-mainContainer-default-border-style;
+  border-radius: ui.$gse-ui-rte-container-borderRadius;
 
   .gux-rich-text-editor-toolbar-container {
     display: flex;
@@ -38,28 +40,28 @@
     pointer-events: none;
     cursor: default;
     user-select: none;
-    border: var(--gse-ui-rte-mainContainer-disabled-border-width)
-      var(--gse-ui-rte-mainContainer-disabled-border-color)
-      var(--gse-ui-rte-mainContainer-disabled-border-style);
+    border: ui.$gse-ui-rte-mainContainer-disabled-border-width
+      ui.$gse-ui-rte-mainContainer-disabled-border-color
+      ui.$gse-ui-rte-mainContainer-disabled-border-style;
     opacity: 0.5;
   }
 
   &:active:enabled {
-    border: var(--gse-ui-rte-mainContainer-active-border-width)
-      var(--gse-ui-rte-mainContainer-active-border-color)
-      var(--gse-ui-rte-mainContainer-active-border-style);
+    border: ui.$gse-ui-rte-mainContainer-active-border-width
+      ui.$gse-ui-rte-mainContainer-active-border-color
+      ui.$gse-ui-rte-mainContainer-active-border-style;
   }
 
   &:focus-within:not(.gux-disabled),
   &:hover:not(.gux-disabled) {
-    border: var(--gse-ui-rte-mainContainer-hover-border-width)
-      var(--gse-ui-rte-mainContainer-hover-border-color)
-      var(--gse-ui-rte-mainContainer-hover-border-style);
+    border: ui.$gse-ui-rte-mainContainer-hover-border-width
+      ui.$gse-ui-rte-mainContainer-hover-border-color
+      ui.$gse-ui-rte-mainContainer-hover-border-style;
   }
 
   &:focus-within:not(.gux-disabled) {
-    outline: var(--gse-ui-rte-mainContainer-focus-border-width)
-      var(--gse-ui-rte-mainContainer-focus-border-color)
-      var(--gse-ui-rte-mainContainer-focus-border-style);
+    outline: ui.$gse-ui-rte-mainContainer-focus-border-width
+      ui.$gse-ui-rte-mainContainer-focus-border-color
+      ui.$gse-ui-rte-mainContainer-focus-border-style;
   }
 }

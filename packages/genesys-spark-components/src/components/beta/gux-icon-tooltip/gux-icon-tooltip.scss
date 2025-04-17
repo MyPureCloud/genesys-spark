@@ -1,10 +1,12 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 .gux-icon-tooltip {
   inline-size: fit-content;
   padding: 0;
   line-height: 0;
   background-color: transparent;
   border: none;
-  border-radius: var(--gse-ui-formControl-label-tooltipTrigger-borderRadius);
+  border-radius: ui.$gse-ui-formControl-label-tooltipTrigger-borderRadius;
 
   gux-tooltip {
     padding-inline-start: 0;
@@ -12,6 +14,6 @@
 
   & gux-icon {
     vertical-align: bottom;
-    color: var(--gse-ui-formControl-label-tooltipTrigger-color);
+    color: ui.$gse-ui-formControl-label-tooltipTrigger-color;
   }
 }

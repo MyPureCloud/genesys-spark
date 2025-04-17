@@ -1,11 +1,13 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+
 gux-form-beta {
   form {
-    max-inline-size: var(--gse-semantic-formControl-form-maxWidth);
+    max-inline-size: global.$gse-semantic-formControl-form-maxWidth;
 
     header {
       display: flex;
       flex-direction: column;
-      gap: var(--gse-semantic-formControl-formHeader-gap);
+      gap: global.$gse-semantic-formControl-formHeader-gap;
       padding-block-end: var(
         --gse-semantic-formControl-fieldset-header-paddingBottom
       );
@@ -13,33 +15,33 @@ gux-form-beta {
 
       gux-form-heading {
         margin: 0;
-        font-family: var(--gse-semantic-body-lg-semiBold-fontFamily) !important;
-        font-size: var(--gse-semantic-body-lg-semiBold-fontSize) !important;
-        font-weight: var(--gse-semantic-body-lg-semiBold-fontWeight) !important;
-        line-height: var(--gse-semantic-body-lg-semiBold-lineHeight) !important;
-        color: var(--gse-semantic-foreground-container-highEmphasis) !important;
+        font-family: global.$gse-semantic-body-lg-semiBold-fontFamily !important;
+        font-size: global.$gse-semantic-body-lg-semiBold-fontSize !important;
+        font-weight: global.$gse-semantic-body-lg-semiBold-fontWeight !important;
+        line-height: global.$gse-semantic-body-lg-semiBold-lineHeight !important;
+        color: global.$gse-semantic-foreground-container-highEmphasis !important;
       }
     }
 
     gux-form-description {
       margin: 0 !important;
-      font-family: var(--gse-semantic-body-sm-regular-fontFamily) !important;
-      font-size: var(--gse-semantic-body-sm-regular-fontSize) !important;
-      font-weight: var(--gse-semantic-body-sm-regular-fontWeight) !important;
-      line-height: var(--gse-semantic-body-sm-regular-lineHeight) !important;
-      color: var(--gse-semantic-foreground-container-midEmphasis) !important;
+      font-family: global.$gse-semantic-body-sm-regular-fontFamily !important;
+      font-size: global.$gse-semantic-body-sm-regular-fontSize !important;
+      font-weight: global.$gse-semantic-body-sm-regular-fontWeight !important;
+      line-height: global.$gse-semantic-body-sm-regular-lineHeight !important;
+      color: global.$gse-semantic-foreground-container-midEmphasis !important;
     }
 
     fieldset {
       all: unset;
       display: flex;
       flex-direction: column;
-      gap: var(--gse-semantic-formControl-formBody-gap);
+      gap: global.$gse-semantic-formControl-formBody-gap;
 
       legend {
         display: flex;
         flex-direction: column;
-        gap: var(--gse-semantic-formControl-fieldset-header-gap);
+        gap: global.$gse-semantic-formControl-fieldset-header-gap;
         padding-block-end: var(
           --gse-semantic-formControl-fieldset-paddingBottom
         );
@@ -51,7 +53,7 @@ gux-form-beta {
           font-family: var(
             --gse-semantic-heading-md-bold-fontFamily
           ) !important;
-          font-size: var(--gse-semantic-heading-md-bold-fontSize) !important;
+          font-size: global.$gse-semantic-heading-md-bold-fontSize !important;
           font-weight: var(
             --gse-semantic-heading-md-bold-fontWeight
           ) !important;
@@ -67,17 +69,17 @@ gux-form-beta {
 
     /* Applies a 48px padding-bottom to any <fieldset> that is not immediately followed by a <gux-form-footer>. */
     fieldset:not(:has(+ gux-form-footer)) {
-      padding-block-end: var(--gse-semantic-formControl-fieldset-paddingBottom);
+      padding-block-end: global.$gse-semantic-formControl-fieldset-paddingBottom;
     }
 
     /* Apply a margin-top of 16px to all other children within the form, except fieldset, gux-form-footer, and the first element after header or fieldset */
     > *:not(fieldset):not(gux-form-footer):not(header + *):not(fieldset + *) {
-      margin-block-start: var(--gse-semantic-formControl-formBody-gap);
+      margin-block-start: global.$gse-semantic-formControl-formBody-gap;
     }
   }
 
   /* Apply padding to all elements except the gux-form-footer where it is not needed */
   form > *:not(gux-form-footer) {
-    padding-inline: var(--gse-semantic-formControl-form-margin);
+    padding-inline: global.$gse-semantic-formControl-form-margin;
   }
 }

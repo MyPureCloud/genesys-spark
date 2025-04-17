@@ -1,9 +1,11 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
   display: block;
-  margin-inline-end: var(--gse-ui-avatar-groupSet-gap);
+  margin-inline-end: ui.$gse-ui-avatar-groupSet-gap;
 }
 
 .gux-avatar-overflow {
@@ -24,7 +26,7 @@
 
   &:hover,
   &:focus {
-    z-index: var(--gse-semantic-zIndex-showFocus);
+    z-index: global.$gse-semantic-zIndex-showFocus;
   }
 
   .gux-avatar-overflow-wrapper {
@@ -36,14 +38,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      inline-size: var(--gse-ui-avatar-small-content-size);
-      block-size: var(--gse-ui-avatar-small-content-size);
+      inline-size: ui.$gse-ui-avatar-small-content-size;
+      block-size: ui.$gse-ui-avatar-small-content-size;
       overflow: hidden;
-      font-family: var(--gse-ui-avatar-small-initials-fontFamily);
-      font-size: var(--gse-ui-avatar-small-initials-fontSize);
-      font-weight: var(--gse-ui-avatar-small-initials-fontWeight);
-      line-height: var(--gse-core-lineHeight-matchFontSize);
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
+      font-family: ui.$gse-ui-avatar-small-initials-fontFamily;
+      font-size: ui.$gse-ui-avatar-small-initials-fontSize;
+      font-weight: ui.$gse-ui-avatar-small-initials-fontWeight;
+      line-height: global.$gse-core-lineHeight-matchFontSize;
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
       background-color: var(
         --gse-ui-avatar-media-initialsBackground-overflowCount
       );
@@ -56,19 +58,19 @@
   position: fixed;
   inset-block-start: 0;
   inset-inline-start: 0;
-  z-index: var(--gse-semantic-zIndex-popup);
+  z-index: global.$gse-semantic-zIndex-popup;
   visibility: hidden;
   flex-direction: column;
-  max-block-size: var(--gse-ui-menu-maxHeight);
-  padding: var(--gse-ui-menu-padding);
+  max-block-size: ui.$gse-ui-menu-maxHeight;
+  padding: ui.$gse-ui-menu-padding;
   margin: 0;
   overflow-y: auto;
-  background-color: var(--gse-ui-menu-backgroundColor);
+  background-color: ui.$gse-ui-menu-backgroundColor;
   border: none;
-  border: var(--gse-semantic-container-edges-borderWidth) solid
-    var(--gse-semantic-border-container-edges-default);
-  border-radius: var(--gse-ui-menu-borderRadius);
-  box-shadow: var(--gse-ui-menu-boxShadow);
+  border: global.$gse-semantic-container-edges-borderWidth solid
+    global.$gse-semantic-border-container-edges-default;
+  border-radius: ui.$gse-ui-menu-borderRadius;
+  box-shadow: ui.$gse-ui-menu-boxShadow;
 
   &.gux-shown {
     visibility: visible;
