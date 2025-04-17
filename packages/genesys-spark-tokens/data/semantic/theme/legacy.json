@@ -571,7 +571,7 @@
       },
       "tertiary": {
         "10": {
-          "value": "{color_legacy.black.50}",
+          "value": "{color_legacy.blue.60}",
           "type": "color"
         },
         "20": {

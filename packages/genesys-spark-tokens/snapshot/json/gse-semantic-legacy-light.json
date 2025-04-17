@@ -228,17 +228,17 @@
         "hover": "#ffffff"
       },
       "secondary": {
-        "default": "#2e394c",
+        "default": "#2a60c8",
         "active": "#2e394c",
         "hover": "#2e394c"
       },
       "tertiary": {
-        "default": "#2e394c",
+        "default": "#2a60c8",
         "active": "#ffffff",
         "hover": "#ffffff"
       },
       "ghost": {
-        "default": "#2e394c",
+        "default": "#2a60c8",
         "active": "#2e394c",
         "hover": "#2e394c"
       },
