@@ -1,0 +1,24 @@
+$gux-status-icon-error: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' %3E%3Cpath d='M0.236102 6.88C-0.0787008 6.33785 -0.0787008 5.66215 0.236102 5.12L2.36477 1.38C2.67957 0.837853 3.24922 0.5 3.87133 0.5H8.12867C8.75078 0.5 9.32043 0.837853 9.63523 1.38L11.7639 5.12C12.0787 5.66215 12.0787 6.33785 11.7639 6.88L9.63523 10.62C9.32043 11.1621 8.75078 11.5 8.12867 11.5H3.87133C3.24922 11.5 2.67957 11.1621 2.36477 10.62L0.236102 6.88Z' /%3E%3C/svg%3E";
+$gux-status-icon-active: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' %3E%3Cpath d='M6 0C7.59 0 9.12 0.629997 10.245 1.755C11.37 2.88 12 4.41 12 6C12 7.59 11.37 9.12 10.245 10.245C9.12 11.37 7.59 12 6 12C4.41 12 2.88 11.37 1.755 10.245C0.629997 9.12 0 7.59 0 6C0 4.41 0.629997 2.88 1.755 1.755C2.88 0.629997 4.41 0 6 0Z' /%3E%3C/svg%3E";
+$gux-status-icon-warning: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' %3E%3Cpath d='M6.16516 0.749268C6.49521 0.749268 6.80275 0.921791 6.97527 1.21434L12.0386 9.8407C12.2111 10.1332 12.2111 10.4933 12.0386 10.7783C11.8735 11.0709 11.5585 11.2509 11.2285 11.2509H1.10186C0.764303 11.2509 0.456764 11.0709 0.291738 10.7783C0.126712 10.4858 0.126712 10.1257 0.291738 9.8407L5.35504 1.21434C5.52757 0.929292 5.8276 0.749268 6.16516 0.749268Z' /%3E%3C/svg%3E";
+$gux-status-icon-information: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' %3E%3Cpath d='M6 0C7.59 0 9.12 0.629997 10.245 1.755C11.37 2.88 12 4.41 12 6C12 7.59 11.37 9.12 10.245 10.245C9.12 11.37 7.59 12 6 12C4.41 12 2.88 11.37 1.755 10.245C0.629997 9.12 0 7.59 0 6C0 4.41 0.629997 2.88 1.755 1.755C2.88 0.629997 4.41 0 6 0Z' /%3E%3C/svg%3E";
+
+@mixin error {
+  -webkit-mask-image: url($gux-status-icon-error);
+  mask-image: url($gux-status-icon-error);
+}
+
+@mixin active {
+  -webkit-mask-image: url($gux-status-icon-active);
+  mask-image: url($gux-status-icon-active);
+}
+
+@mixin warning {
+  -webkit-mask-image: url($gux-status-icon-warning);
+  mask-image: url($gux-status-icon-warning);
+}
+
+@mixin information {
+  -webkit-mask-image: url($gux-status-icon-information);
+  mask-image: url($gux-status-icon-information);
+}
