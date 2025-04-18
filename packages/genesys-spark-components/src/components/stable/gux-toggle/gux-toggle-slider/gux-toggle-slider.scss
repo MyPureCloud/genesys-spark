@@ -1,9 +1,10 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use 'sass:math';
 
-$toggle-height: var(--gse-ui-toggle-track-height);
-$toggle-width: var(--gse-ui-toggle-track-width);
-$slider-diameter: calc(var(--gse-ui-toggle-handle-width));
-$slider-transition: calc($toggle-width - $toggle-height);
+$toggle-height: ui.$gse-ui-toggle-track-height;
+$toggle-width: ui.$gse-ui-toggle-track-width;
+$slider-diameter: ui.$gse-ui-toggle-handle-width;
+$slider-transition: calc(#{$toggle-width} - #{$toggle-height});
 $slider-transition-duration: 0.2s; // TODO: COMUI-2509 - we are hardcoding this animation duration until design comes back with a token
 
 gux-toggle-slider {
@@ -21,22 +22,22 @@ gux-toggle-slider {
     inline-size: $toggle-width;
     block-size: $toggle-height;
     cursor: pointer;
-    border-radius: var(--gse-ui-toggle-track-borderRadius);
+    border-radius: ui.$gse-ui-toggle-track-borderRadius;
 
     &.gux-error {
       .gux-slider {
-        background-color: var(--gse-ui-toggle-track-error-off-backgroundColor);
+        background-color: ui.$gse-ui-toggle-track-error-off-backgroundColor;
 
         .gux-switch {
-          border: var(--gse-ui-toggle-handle-error-border-width)
-            var(--gse-ui-toggle-handle-error-border-style)
-            var(--gse-ui-toggle-handle-error-border-color);
+          border: ui.$gse-ui-toggle-handle-error-border-width
+            ui.$gse-ui-toggle-handle-error-border-style
+            ui.$gse-ui-toggle-handle-error-border-color;
         }
       }
 
       &.gux-checked {
         .gux-slider {
-          background-color: var(--gse-ui-toggle-track-error-on-backgroundColor);
+          background-color: ui.$gse-ui-toggle-track-error-on-backgroundColor;
         }
       }
     }
@@ -44,27 +45,27 @@ gux-toggle-slider {
     &.gux-disabled {
       pointer-events: none;
       cursor: default;
-      background-color: var(--gse-ui-toggle-track-disabled-off-backgroundColor);
-      opacity: var(--gse-ui-toggle-disabled-opacity);
+      background-color: ui.$gse-ui-toggle-track-disabled-off-backgroundColor;
+      opacity: ui.$gse-ui-toggle-disabled-opacity;
     }
 
     &:focus-visible {
-      outline: var(--gse-ui-toggle-focus-border-width)
-        var(--gse-ui-toggle-focus-border-style)
-        var(--gse-ui-toggle-focus-border-color);
-      outline-offset: var(--gse-ui-toggle-focus-offset);
-      border-radius: var(--gse-ui-toggle-focus-borderRadius);
+      outline: ui.$gse-ui-toggle-focus-border-width
+        ui.$gse-ui-toggle-focus-border-style
+        ui.$gse-ui-toggle-focus-border-color;
+      outline-offset: ui.$gse-ui-toggle-focus-offset;
+      border-radius: ui.$gse-ui-toggle-focus-borderRadius;
     }
 
     .gux-slider {
       position: absolute;
       inset: 0;
-      background-color: var(--gse-ui-toggle-track-enabled-off-backgroundColor);
+      background-color: ui.$gse-ui-toggle-track-enabled-off-backgroundColor;
       border-radius: calc(#{$toggle-height} / 2);
       transition: background-color #{$slider-transition-duration} ease;
 
       &:hover {
-        background-color: var(--gse-ui-toggle-track-hover-off-backgroundColor);
+        background-color: ui.$gse-ui-toggle-track-hover-off-backgroundColor;
       }
 
       .gux-switch {
@@ -72,14 +73,14 @@ gux-toggle-slider {
         inset-block-end: calc((#{$toggle-height} - #{$slider-diameter}) / 2);
         inset-inline-start: calc((#{$toggle-height} - #{$slider-diameter}) / 2);
         inline-size: calc(#{$slider-diameter} - 4px);
-        block-size: calc(var(--gse-ui-toggle-handle-height) - 4px);
-        color: var(--gse-ui-toggle-handle-foregroundColor);
+        block-size: calc(#{ui.$gse-ui-toggle-handle-height} - 4px);
+        color: ui.$gse-ui-toggle-handle-foregroundColor;
         content: '';
-        background-color: var(--gse-ui-toggle-handle-backgroundColor);
-        border: var(--gse-ui-toggle-handle-enabled-border-width)
-          var(--gse-ui-toggle-handle-enabled-border-style)
-          var(--gse-ui-toggle-handle-enabled-border-color);
-        border-radius: var(--gse-ui-toggle-handle-borderRadius);
+        background-color: ui.$gse-ui-toggle-handle-backgroundColor;
+        border: ui.$gse-ui-toggle-handle-enabled-border-width
+          ui.$gse-ui-toggle-handle-enabled-border-style
+          ui.$gse-ui-toggle-handle-enabled-border-color;
+        border-radius: ui.$gse-ui-toggle-handle-borderRadius;
         transition: $slider-transition-duration;
 
         gux-icon {
@@ -89,7 +90,7 @@ gux-toggle-slider {
           inline-size: calc(#{$slider-diameter} - 6px);
           block-size: calc(#{$slider-diameter} - 6px);
           margin: auto;
-          color: var(--gse-ui-toggle-handle-backgroundColor);
+          color: ui.$gse-ui-toggle-handle-backgroundColor;
           transition: color #{$slider-transition-duration} linear;
         }
       }
@@ -97,7 +98,7 @@ gux-toggle-slider {
 
     &.gux-checked {
       .gux-slider {
-        background-color: var(--gse-ui-toggle-track-enabled-on-backgroundColor);
+        background-color: ui.$gse-ui-toggle-track-enabled-on-backgroundColor;
 
         &.gux-disabled {
           background-color: var(
@@ -105,19 +106,19 @@ gux-toggle-slider {
           );
 
           .gux-switch {
-            border: var(--gse-ui-toggle-handle-disabled-border-width)
-              var(--gse-ui-toggle-handle-disabled-border-style)
-              var(--gse-ui-toggle-handle-disabled-border-color);
+            border: ui.$gse-ui-toggle-handle-disabled-border-width
+              ui.$gse-ui-toggle-handle-disabled-border-style
+              ui.$gse-ui-toggle-handle-disabled-border-color;
           }
         }
 
         &:hover {
-          background-color: var(--gse-ui-toggle-track-hover-on-backgroundColor);
+          background-color: ui.$gse-ui-toggle-track-hover-on-backgroundColor;
 
           .gux-switch {
-            border: var(--gse-ui-toggle-handle-hover-border-width)
-              var(--gse-ui-toggle-handle-hover-border-style)
-              var(--gse-ui-toggle-handle-hover-border-color);
+            border: ui.$gse-ui-toggle-handle-hover-border-width
+              ui.$gse-ui-toggle-handle-hover-border-style
+              ui.$gse-ui-toggle-handle-hover-border-color;
           }
         }
 
@@ -125,7 +126,7 @@ gux-toggle-slider {
           transform: translateX(#{$slider-transition});
 
           gux-icon {
-            color: var(--gse-ui-toggle-handle-foregroundColor);
+            color: ui.$gse-ui-toggle-handle-foregroundColor;
             opacity: 1;
             transition: opacity math.div($slider-transition-duration, 2) linear;
             transition-delay: math.div($slider-transition-duration, 2);

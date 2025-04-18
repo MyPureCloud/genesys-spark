@@ -1,24 +1,4 @@
-/* Tokens
-@prop $gse-ui-slider-handle-width
-@prop $gse-ui-slider-handle-height
-@prop $gse-ui-slider-handle-default-backgroundColor
-@prop $gse-ui-slider-handle-hover-backgroundColor
-@prop $gse-ui-slider-handle-active-backgroundColor
-@prop $gse-ui-slider-handle-disabled-backgroundColor
-@prop $gse-ui-slider-handle-borderRadius
-@prop $gse-ui-slider-disabled-opacity
-@prop $gse-ui-slider-label-text-fontFamily
-@prop $gse-ui-slider-label-text-fontWeight
-@prop $gse-ui-slider-label-text-lineHeight
-@prop $gse-ui-slider-label-text-fontSize
-@prop $gse-ui-slider-label-foregroundColor
-@prop $gse-ui-slider-bar-selected-backgroundColor
-@prop $gse-ui-slider-bar-default-backgroundColor
-@prop $gse-ui-slider-bar-height
-@prop $gse-ui-slider-gap
-@prop $gse-ui-slider-focusRing-borderRadius
-**/
-
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/typography.scss';
 @use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
@@ -32,10 +12,10 @@
 @include gux-form-field-help.Style;
 
 // Variables part
-$range-active: var(--gse-ui-rangeSlider-bar-selected-backgroundColor);
+$range-active: ui.$gse-ui-rangeSlider-bar-selected-backgroundColor;
 $track-width: 100%;
-$track-height: var(--gse-ui-rangeSlider-bar-height);
-$thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-height) / 2);
+$track-height: ui.$gse-ui-rangeSlider-bar-height;
+$thumb-diameter: calc(#{ui.$gse-ui-rangeSlider-handle-height} / 2);
 
 @mixin gux-track {
   inline-size: $track-width;
@@ -45,10 +25,10 @@ $thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-height) / 2);
 
 @mixin gux-thumb {
   display: block;
-  inline-size: var(--gse-ui-rangeSlider-handle-width);
-  block-size: var(--gse-ui-rangeSlider-handle-height);
+  inline-size: ui.$gse-ui-rangeSlider-handle-width;
+  block-size: ui.$gse-ui-rangeSlider-handle-height;
   cursor: pointer;
-  border-radius: var(--gse-ui-rangeSlider-handle-borderRadius);
+  border-radius: ui.$gse-ui-rangeSlider-handle-borderRadius;
 }
 
 :host {
@@ -81,14 +61,14 @@ $thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-height) / 2);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--gse-ui-rangeSlider-gap);
+    gap: ui.$gse-ui-rangeSlider-gap;
     place-content: stretch flex-start;
     align-items: center;
-    block-size: var(--gse-ui-rangeSlider-set-height);
-    font-size: var(--gse-ui-rangeSlider-label-text-fontSize);
+    block-size: ui.$gse-ui-rangeSlider-set-height;
+    font-size: ui.$gse-ui-rangeSlider-label-text-fontSize;
 
     &.gux-disabled {
-      opacity: var(--gse-ui-rangeSlider-disabled-opacity);
+      opacity: ui.$gse-ui-rangeSlider-disabled-opacity;
     }
 
     .gux-range {
@@ -110,13 +90,13 @@ $thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-height) / 2);
         // We are not using a token for this margin below since it this 6px margin is used to center position the head on the track
         margin-block: 6px;
         margin-inline: 0;
-        background: var(--gse-ui-rangeSlider-bar-default-backgroundColor);
-        border-radius: var(--gse-ui-rangeSlider-track-borderRadius);
+        background: ui.$gse-ui-rangeSlider-bar-default-backgroundColor;
+        border-radius: ui.$gse-ui-rangeSlider-track-borderRadius;
 
         .gux-progress {
           block-size: $track-height;
           background-color: $range-active;
-          border-radius: var(--gse-ui-rangeSlider-track-borderRadius);
+          border-radius: ui.$gse-ui-rangeSlider-track-borderRadius;
         }
       }
     }
@@ -127,10 +107,10 @@ $thumb-diameter: calc(var(--gse-ui-rangeSlider-handle-height) / 2);
       order: 0;
       margin-block: 0;
       margin-inline: var(--gux-spacing-medium) 0;
-      font-family: var(--gse-ui-rangeSlider-label-text-fontFamily);
-      font-size: var(--gse-ui-rangeSlider-label-text-fontSize);
-      font-weight: var(--gse-ui-rangeSlider-label-text-fontWeight);
-      line-height: var(--gse-ui-rangeSlider-label-text-lineHeight);
+      font-family: ui.$gse-ui-rangeSlider-label-text-fontFamily;
+      font-size: ui.$gse-ui-rangeSlider-label-text-fontSize;
+      font-weight: ui.$gse-ui-rangeSlider-label-text-fontWeight;
+      line-height: ui.$gse-ui-rangeSlider-label-text-lineHeight;
       text-align: end;
 
       &.gux-hidden {

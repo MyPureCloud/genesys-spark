@@ -1,35 +1,37 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 $focus-outline-offset: 5px;
 
 :host {
   display: inline-block;
-  border-radius: var(--gse-ui-tag-borderRadius);
+  border-radius: ui.$gse-ui-tag-borderRadius;
 }
 
 .gux-tag {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: var(--gse-ui-tag-removable-gap);
+  gap: ui.$gse-ui-tag-removable-gap;
   place-content: stretch flex-start;
   align-items: center;
-  block-size: var(--gse-ui-tag-small-height);
-  padding: var(--gse-ui-tag-padding);
-  font-family: var(--gse-ui-tag-textSmall-fontFamily);
-  font-size: var(--gse-ui-tag-textSmall-fontSize);
-  font-weight: var(--gse-ui-tag-textSmall-fontWeight);
-  line-height: var(--gse-ui-tag-textSmall-lineHeight);
-  color: var(--gse-ui-tag-default-bold-foregroundColor);
-  background-color: var(--gse-ui-tag-default-bold-backgroundColor);
-  border-radius: var(--gse-ui-tag-borderRadius);
+  block-size: ui.$gse-ui-tag-small-height;
+  padding: ui.$gse-ui-tag-padding;
+  font-family: ui.$gse-ui-tag-textSmall-fontFamily;
+  font-size: ui.$gse-ui-tag-textSmall-fontSize;
+  font-weight: ui.$gse-ui-tag-textSmall-fontWeight;
+  line-height: ui.$gse-ui-tag-textSmall-lineHeight;
+  color: ui.$gse-ui-tag-default-bold-foregroundColor;
+  background-color: ui.$gse-ui-tag-default-bold-backgroundColor;
+  border-radius: ui.$gse-ui-tag-borderRadius;
 
   &.gux-size-large {
-    block-size: var(--gse-ui-tag-large-height);
-    font-family: var(--gse-ui-tag-textLarge-fontFamily);
-    font-size: var(--gse-ui-tag-textLarge-fontSize);
-    font-weight: var(--gse-ui-tag-textLarge-fontWeight);
-    line-height: var(--gse-ui-tag-textLarge-lineHeight);
+    block-size: ui.$gse-ui-tag-large-height;
+    font-family: ui.$gse-ui-tag-textLarge-fontFamily;
+    font-size: ui.$gse-ui-tag-textLarge-fontSize;
+    font-weight: ui.$gse-ui-tag-textLarge-fontWeight;
+    line-height: ui.$gse-ui-tag-textLarge-lineHeight;
 
     .gux-tag-remove-button:focus-within .gux-tag-remove-icon {
       outline-offset: $focus-outline-offset * 2;
@@ -39,7 +41,7 @@ $focus-outline-offset: 5px;
   &.gux-disabled {
     position: relative;
     user-select: none;
-    opacity: var(--gse-ui-tag-disabled-opacity);
+    opacity: ui.$gse-ui-tag-disabled-opacity;
   }
 
   gux-tooltip-title {
@@ -47,7 +49,7 @@ $focus-outline-offset: 5px;
     cursor: default;
 
     ::slotted(gux-icon) {
-      font-size: var(--gse-ui-tag-button-size);
+      font-size: ui.$gse-ui-tag-button-size;
     }
   }
 
@@ -66,128 +68,128 @@ $focus-outline-offset: 5px;
     }
 
     .gux-tag-remove-icon {
-      inline-size: var(--gse-ui-tag-button-size);
-      block-size: var(--gse-ui-tag-button-size);
+      inline-size: ui.$gse-ui-tag-button-size;
+      block-size: ui.$gse-ui-tag-button-size;
       margin-inline-end: -4px;
     }
 
     &:focus-within {
       .gux-tag-remove-icon {
-        outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
-          var(--gse-ui-color-focus);
+        outline: global.$gse-semantic-focusOutline-md-borderWidth solid
+          ui.$gse-ui-color-focus;
         outline-offset: $focus-outline-offset;
-        border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
+        border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
       }
     }
   }
 
   &.gux-accent-default {
-    color: var(--gse-ui-tag-default-bold-foregroundColor);
-    background-color: var(--gse-ui-tag-default-bold-backgroundColor);
+    color: ui.$gse-ui-tag-default-bold-foregroundColor;
+    background-color: ui.$gse-ui-tag-default-bold-backgroundColor;
 
     &.gux-emphasis-subtle {
-      color: var(--gse-ui-tag-default-subtle-foregroundColor);
-      background-color: var(--gse-ui-tag-default-subtle-backgroundColor);
+      color: ui.$gse-ui-tag-default-subtle-foregroundColor;
+      background-color: ui.$gse-ui-tag-default-subtle-backgroundColor;
     }
   }
 
   &.gux-accent-1 {
-    color: var(--gse-ui-tag-accent1-bold-foregroundColor);
-    background-color: var(--gse-ui-tag-accent1-bold-backgroundColor);
+    color: ui.$gse-ui-tag-accent1-bold-foregroundColor;
+    background-color: ui.$gse-ui-tag-accent1-bold-backgroundColor;
 
     &.gux-emphasis-subtle {
-      color: var(--gse-ui-tag-accent1-subtle-foregroundColor);
-      background-color: var(--gse-ui-tag-accent1-subtle-backgroundColor);
+      color: ui.$gse-ui-tag-accent1-subtle-foregroundColor;
+      background-color: ui.$gse-ui-tag-accent1-subtle-backgroundColor;
     }
   }
 
   &.gux-accent-2 {
-    color: var(--gse-ui-tag-accent2-bold-foregroundColor);
-    background-color: var(--gse-ui-tag-accent2-bold-backgroundColor);
+    color: ui.$gse-ui-tag-accent2-bold-foregroundColor;
+    background-color: ui.$gse-ui-tag-accent2-bold-backgroundColor;
 
     &.gux-emphasis-subtle {
-      color: var(--gse-ui-tag-accent2-subtle-foregroundColor);
-      background-color: var(--gse-ui-tag-accent2-subtle-backgroundColor);
+      color: ui.$gse-ui-tag-accent2-subtle-foregroundColor;
+      background-color: ui.$gse-ui-tag-accent2-subtle-backgroundColor;
     }
   }
 
   &.gux-accent-3 {
-    color: var(--gse-ui-tag-accent3-bold-foregroundColor);
-    background-color: var(--gse-ui-tag-accent3-bold-backgroundColor);
+    color: ui.$gse-ui-tag-accent3-bold-foregroundColor;
+    background-color: ui.$gse-ui-tag-accent3-bold-backgroundColor;
 
     &.gux-emphasis-subtle {
-      color: var(--gse-ui-tag-accent3-subtle-foregroundColor);
-      background-color: var(--gse-ui-tag-accent3-subtle-backgroundColor);
+      color: ui.$gse-ui-tag-accent3-subtle-foregroundColor;
+      background-color: ui.$gse-ui-tag-accent3-subtle-backgroundColor;
     }
   }
 
   &.gux-accent-4 {
-    color: var(--gse-ui-tag-accent4-bold-foregroundColor);
-    background-color: var(--gse-ui-tag-accent4-bold-backgroundColor);
+    color: ui.$gse-ui-tag-accent4-bold-foregroundColor;
+    background-color: ui.$gse-ui-tag-accent4-bold-backgroundColor;
 
     &.gux-emphasis-subtle {
-      color: var(--gse-ui-tag-accent4-subtle-foregroundColor);
-      background-color: var(--gse-ui-tag-accent4-subtle-backgroundColor);
+      color: ui.$gse-ui-tag-accent4-subtle-foregroundColor;
+      background-color: ui.$gse-ui-tag-accent4-subtle-backgroundColor;
     }
   }
 
   &.gux-accent-5 {
-    color: var(--gse-ui-tag-accent5-bold-foregroundColor);
-    background-color: var(--gse-ui-tag-accent5-bold-backgroundColor);
+    color: ui.$gse-ui-tag-accent5-bold-foregroundColor;
+    background-color: ui.$gse-ui-tag-accent5-bold-backgroundColor;
 
     &.gux-emphasis-subtle {
-      color: var(--gse-ui-tag-accent5-subtle-foregroundColor);
-      background-color: var(--gse-ui-tag-accent5-subtle-backgroundColor);
+      color: ui.$gse-ui-tag-accent5-subtle-foregroundColor;
+      background-color: ui.$gse-ui-tag-accent5-subtle-backgroundColor;
     }
   }
 
   &.gux-accent-6 {
-    color: var(--gse-ui-tag-accent6-bold-foregroundColor);
-    background-color: var(--gse-ui-tag-accent6-bold-backgroundColor);
+    color: ui.$gse-ui-tag-accent6-bold-foregroundColor;
+    background-color: ui.$gse-ui-tag-accent6-bold-backgroundColor;
 
     &.gux-emphasis-subtle {
-      color: var(--gse-ui-tag-accent6-subtle-foregroundColor);
-      background-color: var(--gse-ui-tag-accent6-subtle-backgroundColor);
+      color: ui.$gse-ui-tag-accent6-subtle-foregroundColor;
+      background-color: ui.$gse-ui-tag-accent6-subtle-backgroundColor;
     }
   }
 
   &.gux-accent-7 {
-    color: var(--gse-ui-tag-accent7-bold-foregroundColor);
-    background-color: var(--gse-ui-tag-accent7-bold-backgroundColor);
+    color: ui.$gse-ui-tag-accent7-bold-foregroundColor;
+    background-color: ui.$gse-ui-tag-accent7-bold-backgroundColor;
 
     &.gux-emphasis-subtle {
-      color: var(--gse-ui-tag-accent7-subtle-foregroundColor);
-      background-color: var(--gse-ui-tag-accent7-subtle-backgroundColor);
+      color: ui.$gse-ui-tag-accent7-subtle-foregroundColor;
+      background-color: ui.$gse-ui-tag-accent7-subtle-backgroundColor;
     }
   }
 
   &.gux-accent-8 {
-    color: var(--gse-ui-tag-accent8-bold-foregroundColor);
-    background-color: var(--gse-ui-tag-accent8-bold-backgroundColor);
+    color: ui.$gse-ui-tag-accent8-bold-foregroundColor;
+    background-color: ui.$gse-ui-tag-accent8-bold-backgroundColor;
 
     &.gux-emphasis-subtle {
-      color: var(--gse-ui-tag-accent8-subtle-foregroundColor);
-      background-color: var(--gse-ui-tag-accent8-subtle-backgroundColor);
+      color: ui.$gse-ui-tag-accent8-subtle-foregroundColor;
+      background-color: ui.$gse-ui-tag-accent8-subtle-backgroundColor;
     }
   }
 
   &.gux-accent-9 {
-    color: var(--gse-ui-tag-accent9-bold-foregroundColor);
-    background-color: var(--gse-ui-tag-accent9-bold-backgroundColor);
+    color: ui.$gse-ui-tag-accent9-bold-foregroundColor;
+    background-color: ui.$gse-ui-tag-accent9-bold-backgroundColor;
 
     &.gux-emphasis-subtle {
-      color: var(--gse-ui-tag-accent9-subtle-foregroundColor);
-      background-color: var(--gse-ui-tag-accent9-subtle-backgroundColor);
+      color: ui.$gse-ui-tag-accent9-subtle-foregroundColor;
+      background-color: ui.$gse-ui-tag-accent9-subtle-backgroundColor;
     }
   }
 
   &.gux-accent-10 {
-    color: var(--gse-ui-tag-accent10-bold-foregroundColor);
-    background-color: var(--gse-ui-tag-accent10-bold-backgroundColor);
+    color: ui.$gse-ui-tag-accent10-bold-foregroundColor;
+    background-color: ui.$gse-ui-tag-accent10-bold-backgroundColor;
 
     &.gux-emphasis-subtle {
-      color: var(--gse-ui-tag-accent10-subtle-foregroundColor);
-      background-color: var(--gse-ui-tag-accent10-subtle-backgroundColor);
+      color: ui.$gse-ui-tag-accent10-subtle-foregroundColor;
+      background-color: ui.$gse-ui-tag-accent10-subtle-backgroundColor;
     }
   }
 

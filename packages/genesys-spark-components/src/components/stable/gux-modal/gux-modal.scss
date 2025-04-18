@@ -1,7 +1,9 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/typography.scss';
 
 ::slotted(button:active:enabled) {
-  color: var(--gse-ui-links-active-foregroundColor);
+  color: ui.$gse-ui-links-active-foregroundColor;
   text-decoration: underline;
   background: none;
 }
@@ -9,7 +11,7 @@
 slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
   display: flex;
   flex-direction: row;
-  gap: var(--gse-ui-modal-buttonBar-gap);
+  gap: ui.$gse-ui-modal-buttonBar-gap;
   align-content: flex-start;
   align-items: center;
 }
@@ -20,13 +22,13 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
     justify-content: space-between;
     padding: 0;
     overflow: hidden;
-    background-color: var(--gse-ui-modal-backgroundColor);
+    background-color: ui.$gse-ui-modal-backgroundColor;
     border: none;
-    border-radius: var(--gse-ui-modal-borderRadius);
-    box-shadow: var(--gse-ui-modal-boxShadow);
+    border-radius: ui.$gse-ui-modal-borderRadius;
+    box-shadow: ui.$gse-ui-modal-boxShadow;
 
     &::backdrop {
-      background: var(--gse-ui-modal-shroudColor);
+      background: ui.$gse-ui-modal-shroudColor;
     }
 
     .gux-modal-container {
@@ -34,17 +36,17 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       flex-direction: column;
 
       &.gux-small {
-        inline-size: var(--gse-ui-modal-small-width);
+        inline-size: ui.$gse-ui-modal-small-width;
         max-block-size: min(368px, 100vh - 2 * #{24px});
       }
 
       &.gux-medium {
-        inline-size: min(var(--gse-ui-modal-medium-width), 100vw - 48px);
+        inline-size: min(#{ui.$gse-ui-modal-medium-width}, 100vw - 48px);
         max-block-size: min(640px, 100vh - 2 * #{24px});
       }
 
       &.gux-large {
-        inline-size: min(var(--gse-ui-modal-large-width), 100vw - 48px);
+        inline-size: min(#{ui.$gse-ui-modal-large-width}, 100vw - 48px);
         max-block-size: min(640px, 100vh - 2 * #{24px});
       }
 
@@ -58,30 +60,30 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       }
 
       .gux-modal-header {
-        padding-block-start: var(--gse-ui-modal-padding);
-        padding-inline: var(--gse-ui-modal-padding);
+        padding-block-start: ui.$gse-ui-modal-padding;
+        padding-inline: ui.$gse-ui-modal-padding;
         margin: 0;
-        font-family: var(--gse-ui-modal-heading-fontFamily);
-        font-size: var(--gse-ui-modal-heading-fontSize);
-        font-weight: var(--gse-ui-modal-heading-fontWeight);
-        line-height: var(--gse-ui-modal-heading-lineHeight);
-        color: var(--gse-ui-modal-headerColor);
+        font-family: ui.$gse-ui-modal-heading-fontFamily;
+        font-size: ui.$gse-ui-modal-heading-fontSize;
+        font-weight: ui.$gse-ui-modal-heading-fontWeight;
+        line-height: ui.$gse-ui-modal-heading-lineHeight;
+        color: ui.$gse-ui-modal-headerColor;
       }
 
       .gux-modal-content {
         max-block-size: 432px;
-        padding-inline: var(--gse-ui-modal-padding);
-        margin-block-start: var(--gse-ui-modal-gap);
+        padding-inline: ui.$gse-ui-modal-padding;
+        margin-block-start: ui.$gse-ui-modal-gap;
         overflow-y: auto;
-        color: var(--gse-semantic-foreground-container-highEmphasis);
+        color: global.$gse-semantic-foreground-container-highEmphasis;
       }
 
       .gux-button-footer {
         display: flex;
         justify-content: space-between;
-        padding-block-end: var(--gse-ui-modal-padding);
-        padding-inline: var(--gse-ui-modal-padding);
-        margin-block-start: var(--gse-ui-modal-gap);
+        padding-block-end: ui.$gse-ui-modal-padding;
+        padding-inline: ui.$gse-ui-modal-padding;
+        margin-block-start: ui.$gse-ui-modal-gap;
 
         &.gux-no-buttons {
           display: none;
@@ -89,9 +91,9 @@ slot[name='start-align-buttons']::slotted(:not(button, gux-button-slot)) {
       }
 
       footer {
-        padding-block-end: var(--gse-ui-modal-padding);
-        padding-inline: var(--gse-ui-modal-padding);
-        margin-block-start: var(--gse-ui-modal-gap);
+        padding-block-end: ui.$gse-ui-modal-padding;
+        padding-inline: ui.$gse-ui-modal-padding;
+        margin-block-start: ui.$gse-ui-modal-gap;
       }
     }
 

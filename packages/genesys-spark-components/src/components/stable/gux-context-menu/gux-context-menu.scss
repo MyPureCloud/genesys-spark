@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
@@ -7,43 +8,43 @@
 }
 
 gux-icon {
-  color: var(--gse-ui-button-ghost-default-foregroundColor);
+  color: ui.$gse-ui-button-ghost-default-foregroundColor;
 }
 
 button {
-  block-size: var(--gse-ui-button-default-height);
-  padding: var(--gse-ui-button-default-paddingIconOnly);
-  border-radius: var(--gse-ui-button-borderRadius);
+  block-size: ui.$gse-ui-button-default-height;
+  padding: ui.$gse-ui-button-default-paddingIconOnly;
+  border-radius: ui.$gse-ui-button-borderRadius;
 }
 
 button.gux-compact {
-  block-size: var(--gse-ui-button-compact-height);
-  padding: var(--gse-ui-button-compact-paddingIconOnly);
+  block-size: ui.$gse-ui-button-compact-height;
+  padding: ui.$gse-ui-button-compact-paddingIconOnly;
 }
 
 button:hover:enabled {
-  background-color: var(--gse-ui-button-ghost-hover-backgroundColor);
+  background-color: ui.$gse-ui-button-ghost-hover-backgroundColor;
 
   gux-icon {
-    color: var(--gse-ui-button-ghost-hover-foregroundColor);
+    color: ui.$gse-ui-button-ghost-hover-foregroundColor;
   }
 }
 
 button:active:enabled {
-  background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+  background-color: ui.$gse-ui-button-ghost-active-backgroundColor;
 
   gux-icon {
-    color: var(--gse-ui-button-ghost-active-foregroundColor);
+    color: ui.$gse-ui-button-ghost-active-foregroundColor;
   }
 }
 
 button[disabled] {
-  opacity: var(--gse-ui-button-disabled-opacity);
+  opacity: ui.$gse-ui-button-disabled-opacity;
 }
 
 .gux-list-container {
-  inline-size: var(--gse-ui-contextMenu-menu-width);
-  max-block-size: var(--gse-ui-contextMenu-menu-maxHeight);
+  inline-size: ui.$gse-ui-contextMenu-menu-width;
+  max-block-size: ui.$gse-ui-contextMenu-menu-maxHeight;
 
   @include mixins.gux-menu-container;
 }

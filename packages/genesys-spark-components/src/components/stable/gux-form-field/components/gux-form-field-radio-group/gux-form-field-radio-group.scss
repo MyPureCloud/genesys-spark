@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-fieldset-container/gux-form-field-fieldset-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
@@ -18,7 +19,7 @@
 }
 
 ::slotted(gux-form-field-radio) {
-  padding-block-start: var(--gse-ui-formControl-group-gapItems);
+  padding-block-start: ui.$gse-ui-formControl-group-gapItems;
 }
 
 ::slotted(gux-form-field-radio:first-of-type) {
@@ -27,7 +28,7 @@
 
 :host([disabled]) {
   ::slotted(label) {
-    opacity: var(--gse-ui-formControl-input-disabled-opacity);
+    opacity: ui.$gse-ui-formControl-input-disabled-opacity;
   }
 }
 

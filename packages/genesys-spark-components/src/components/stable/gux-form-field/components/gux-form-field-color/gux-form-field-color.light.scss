@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 gux-form-field-color {
   input {
     &:focus,
@@ -13,10 +15,10 @@ gux-form-field-color {
 
     &::-webkit-color-swatch,
     &::-moz-color-swatch {
-      inline-size: var(--gse-ui-colorPicker-input-swatchSizing);
-      block-size: var(--gse-ui-colorPicker-input-swatchSizing);
+      inline-size: ui.$gse-ui-colorPicker-input-swatchSizing;
+      block-size: ui.$gse-ui-colorPicker-input-swatchSizing;
       border: none;
-      border-radius: var(--gse-ui-colorPicker-input-swatchBorderRadius);
+      border-radius: ui.$gse-ui-colorPicker-input-swatchBorderRadius;
     }
   }
 }

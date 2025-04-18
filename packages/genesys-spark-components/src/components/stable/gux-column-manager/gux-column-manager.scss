@@ -1,9 +1,10 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 .gux-container {
   inline-size: 320px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
   min-inline-size: 320px; //TODO https://inindca.atlassian.net/browse/COMUI-2314
-  padding: var(--gse-ui-dataTableItems-editColumn-editColumnContent-padding);
+  padding: ui.$gse-ui-dataTableItems-editColumn-editColumnContent-padding;
 
   .gux-search {
     gux-content-search {
@@ -21,7 +22,7 @@
   }
 
   .gux-select {
-    padding: var(--gse-ui-dataTableItems-editColumn-editColumnContent-padding);
+    padding: ui.$gse-ui-dataTableItems-editColumn-editColumnContent-padding;
     margin-inline-start: calc(
       16px + 8px
     ); //TODO https://inindca.atlassian.net/browse/COMUI-2314

@@ -2,6 +2,7 @@
 //  - https://bugs.webkit.org/show_bug.cgi?id=223814
 //  - https://bugs.webkit.org/show_bug.cgi?id=178237#attach_442680
 
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/checkbox-icons.scss';
 
 gux-form-field-checkbox {
@@ -12,17 +13,17 @@ gux-form-field-checkbox {
   }
 
   input[type='checkbox']:focus-visible {
-    outline: var(--gse-ui-checkbox-focus-border-width)
-      var(--gse-ui-checkbox-focus-border-style)
-      var(--gse-ui-checkbox-focus-border-color);
-    outline-offset: var(--gse-ui-checkbox-focus-offset);
-    border-radius: var(--gse-ui-checkbox-focus-borderRadiusSmall);
+    outline: ui.$gse-ui-checkbox-focus-border-width
+      ui.$gse-ui-checkbox-focus-border-style
+      ui.$gse-ui-checkbox-focus-border-color;
+    outline-offset: ui.$gse-ui-checkbox-focus-offset;
+    border-radius: ui.$gse-ui-checkbox-focus-borderRadiusSmall;
   }
 
   input[type='checkbox']:not(:checked)::before {
     @include checkbox-icons.unchecked;
 
-    background: var(--gse-ui-checkbox-icon-default-unselectedForegroundColor);
+    background: ui.$gse-ui-checkbox-icon-default-unselectedForegroundColor;
   }
 
   input[type='checkbox']:not(:checked):not(:disabled):not(
@@ -30,55 +31,55 @@ gux-form-field-checkbox {
     ):hover::before {
     @include checkbox-icons.unchecked-hover;
 
-    background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
+    background: ui.$gse-ui-checkbox-icon-hover-foregroundColor;
   }
 
   input[type='checkbox']:checked:not(:disabled):hover::before {
     @include checkbox-icons.checked-hover;
 
-    background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
+    background: ui.$gse-ui-checkbox-icon-hover-foregroundColor;
   }
 
   input[type='checkbox']:checked::before {
     @include checkbox-icons.checked;
 
-    background: var(--gse-ui-checkbox-icon-default-selectedForegroundColor);
+    background: ui.$gse-ui-checkbox-icon-default-selectedForegroundColor;
   }
 
   input[type='checkbox']:indeterminate::before {
     @include checkbox-icons.indeterminate;
 
-    background: var(--gse-ui-checkbox-icon-default-selectedForegroundColor);
+    background: ui.$gse-ui-checkbox-icon-default-selectedForegroundColor;
   }
 
   input[type='checkbox']:not(:disabled):indeterminate:hover {
     @include checkbox-icons.indeterminate-hover;
 
-    background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
+    background: ui.$gse-ui-checkbox-icon-hover-foregroundColor;
   }
 
   input[type='checkbox']:disabled::before {
     cursor: not-allowed;
-    opacity: var(--gse-ui-checkbox-disabled-opacity);
+    opacity: ui.$gse-ui-checkbox-disabled-opacity;
   }
 
   &.gux-input-error {
     input[type='checkbox']:not(:checked)::before {
       @include checkbox-icons.unchecked-error;
 
-      background: var(--gse-ui-checkbox-icon-error-foregroundColor);
+      background: ui.$gse-ui-checkbox-icon-error-foregroundColor;
     }
 
     input[type='checkbox']:checked::before {
       @include checkbox-icons.checked-error;
 
-      background: var(--gse-ui-checkbox-icon-error-foregroundColor);
+      background: ui.$gse-ui-checkbox-icon-error-foregroundColor;
     }
 
     input[type='checkbox']:indeterminate::before {
       @include checkbox-icons.indeterminate-error;
 
-      background: var(--gse-ui-checkbox-icon-error-foregroundColor);
+      background: ui.$gse-ui-checkbox-icon-error-foregroundColor;
     }
   }
 }

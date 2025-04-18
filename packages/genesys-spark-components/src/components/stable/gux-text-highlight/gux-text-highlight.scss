@@ -1,6 +1,8 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 span {
   mark {
-    background-color: var(--gse-ui-search-match-firstLevel-backgroundColor);
+    background-color: ui.$gse-ui-search-match-firstLevel-backgroundColor;
   }
 }
 

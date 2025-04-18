@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
@@ -12,7 +13,7 @@
 
 .gux-menu-button {
   display: flex;
-  color: var(--gse-ui-button-secondary-default-foregroundColor);
+  color: ui.$gse-ui-button-secondary-default-foregroundColor;
   cursor: pointer;
   border: none;
 

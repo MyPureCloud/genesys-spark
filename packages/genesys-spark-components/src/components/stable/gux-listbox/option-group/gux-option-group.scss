@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/typography.scss';
 
 .gux-option-group {
@@ -7,8 +8,8 @@
 
   .gux-option-group-label {
     display: block;
-    padding: var(--gse-ui-menu-groupedMenu-title-padding);
-    color: var(--gse-ui-menu-groupedMenu-title-foregroundColor);
+    padding: ui.$gse-ui-menu-groupedMenu-title-padding;
+    color: ui.$gse-ui-menu-groupedMenu-title-foregroundColor;
 
     @include typography.heading-overline;
   }

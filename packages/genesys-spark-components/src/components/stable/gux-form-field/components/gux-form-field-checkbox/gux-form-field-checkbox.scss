@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
@@ -14,13 +15,13 @@
   ::slotted(input[type='checkbox']:not(:checked))::before {
     @include checkbox-icons.unchecked-error;
 
-    background: var(--gse-ui-checkbox-icon-error-foregroundColor);
+    background: ui.$gse-ui-checkbox-icon-error-foregroundColor;
   }
 
   ::slotted(input[type='checkbox']:checked)::before {
     @include checkbox-icons.checked-error;
 
-    background: var(--gse-ui-checkbox-icon-error-foregroundColor);
+    background: ui.$gse-ui-checkbox-icon-error-foregroundColor;
   }
 
   ::slotted(
@@ -30,19 +31,19 @@
     )::before {
     @include checkbox-icons.unchecked-error;
 
-    background: var(--gse-ui-checkbox-icon-error-foregroundColor);
+    background: ui.$gse-ui-checkbox-icon-error-foregroundColor;
   }
 
   ::slotted(input[type='checkbox']:indeterminate)::before {
     @include checkbox-icons.indeterminate-error;
 
-    background: var(--gse-ui-checkbox-icon-error-foregroundColor);
+    background: ui.$gse-ui-checkbox-icon-error-foregroundColor;
   }
 }
 
 :host(.gux-disabled) {
   cursor: not-allowed;
-  opacity: var(--gse-ui-checkbox-disabled-opacity);
+  opacity: ui.$gse-ui-checkbox-disabled-opacity;
 
   ::slotted(label) {
     cursor: not-allowed;
@@ -52,7 +53,7 @@
 .gux-input-label {
   display: inline-flex;
   flex-direction: row;
-  gap: var(--gse-ui-checkbox-gap);
+  gap: ui.$gse-ui-checkbox-gap;
 
   .gux-label-screenreader {
     @include mixins.gux-sr-only;
@@ -61,8 +62,8 @@
 
 ::slotted(input[type='checkbox']) {
   display: inline-grid;
-  inline-size: var(--gse-ui-checkbox-icon-width);
-  block-size: var(--gse-ui-checkbox-icon-height);
+  inline-size: ui.$gse-ui-checkbox-icon-width;
+  block-size: ui.$gse-ui-checkbox-icon-height;
   margin: 0;
   vertical-align: middle;
   text-align: center;
@@ -80,17 +81,17 @@
 }
 
 ::slotted(input[type='checkbox']:focus-visible) {
-  outline: var(--gse-ui-checkbox-focus-border-width)
-    var(--gse-ui-checkbox-focus-border-style)
-    var(--gse-ui-checkbox-focus-border-color);
-  outline-offset: var(--gse-ui-checkbox-focus-offset);
-  border-radius: var(--gse-ui-checkbox-focus-borderRadiusSmall);
+  outline: ui.$gse-ui-checkbox-focus-border-width
+    ui.$gse-ui-checkbox-focus-border-style
+    ui.$gse-ui-checkbox-focus-border-color;
+  outline-offset: ui.$gse-ui-checkbox-focus-offset;
+  border-radius: ui.$gse-ui-checkbox-focus-borderRadiusSmall;
 }
 
 ::slotted(input[type='checkbox']:not(:checked))::before {
   @include checkbox-icons.unchecked;
 
-  background: var(--gse-ui-checkbox-icon-default-unselectedForegroundColor);
+  background: ui.$gse-ui-checkbox-icon-default-unselectedForegroundColor;
 }
 
 ::slotted(
@@ -100,44 +101,44 @@
   )::before {
   @include checkbox-icons.unchecked-hover;
 
-  background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
+  background: ui.$gse-ui-checkbox-icon-hover-foregroundColor;
 }
 
 ::slotted(input[type='checkbox']:checked:not(:disabled):hover) {
   @include checkbox-icons.checked-hover;
 
-  background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
+  background: ui.$gse-ui-checkbox-icon-hover-foregroundColor;
 }
 
 ::slotted(input[type='checkbox']:not(:disabled):indeterminate:hover) {
   @include checkbox-icons.indeterminate-hover;
 
-  background: var(--gse-ui-checkbox-icon-hover-foregroundColor);
+  background: ui.$gse-ui-checkbox-icon-hover-foregroundColor;
 }
 
 ::slotted(input[type='checkbox']:checked)::before {
   @include checkbox-icons.checked;
 
-  background: var(--gse-ui-checkbox-icon-default-selectedForegroundColor);
+  background: ui.$gse-ui-checkbox-icon-default-selectedForegroundColor;
 }
 
 ::slotted(input[type='checkbox']:indeterminate)::before {
   @include checkbox-icons.indeterminate;
 
-  background: var(--gse-ui-checkbox-icon-default-selectedForegroundColor);
+  background: ui.$gse-ui-checkbox-icon-default-selectedForegroundColor;
 }
 
 ::slotted(input[type='checkbox']:disabled)::before {
   cursor: not-allowed;
-  opacity: var(--gse-ui-checkbox-disabled-opacity);
+  opacity: ui.$gse-ui-checkbox-disabled-opacity;
 }
 
 ::slotted(label) {
   display: inline-block;
-  font-family: var(--gse-ui-checkbox-label-text-fontFamily);
+  font-family: ui.$gse-ui-checkbox-label-text-fontFamily;
   font-size: 12px; // -- missing font-size token https://inindca.atlassian.net/browse/COMUI-1672
-  font-weight: var(--gse-ui-checkbox-label-text-fontWeight);
-  line-height: var(--gse-ui-checkbox-label-text-lineHeight);
+  font-weight: ui.$gse-ui-checkbox-label-text-fontWeight;
+  line-height: ui.$gse-ui-checkbox-label-text-lineHeight;
   vertical-align: middle;
-  color: var(--gse-ui-checkbox-label-foregroundColor);
+  color: ui.$gse-ui-checkbox-label-foregroundColor;
 }

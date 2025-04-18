@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: block;
   inline-size: fit-content;
@@ -5,29 +7,26 @@
 
 .gux-card {
   box-sizing: border-box;
-  padding: var(--gse-ui-card-padding);
-  background-color: var(--gse-ui-card-backgroundColor);
-  border: var(--gse-ui-card-default-border-width)
-    var(--gse-ui-card-default-border-style)
-    var(--gse-ui-card-default-border-color);
-  border-radius: var(--gse-ui-card-borderRadius);
+  padding: ui.$gse-ui-card-padding;
+  background-color: ui.$gse-ui-card-backgroundColor;
+  border: ui.$gse-ui-card-default-border-width
+    ui.$gse-ui-card-default-border-style ui.$gse-ui-card-default-border-color;
+  border-radius: ui.$gse-ui-card-borderRadius;
 
   &.gux-bordered {
-    border: var(--gse-ui-card-default-border-width)
-      var(--gse-ui-card-default-border-style)
-      var(--gse-ui-card-default-border-color);
+    border: ui.$gse-ui-card-default-border-width
+      ui.$gse-ui-card-default-border-style ui.$gse-ui-card-default-border-color;
   }
 
   &.gux-raised {
-    border: var(--gse-ui-card-raised-border-width)
-      var(--gse-ui-card-raised-border-style)
-      var(--gse-ui-card-raised-border-color);
-    box-shadow: var(--gse-ui-card-raised-boxShadow);
+    border: ui.$gse-ui-card-raised-border-width
+      ui.$gse-ui-card-raised-border-style ui.$gse-ui-card-raised-border-color;
+    box-shadow: ui.$gse-ui-card-raised-boxShadow;
   }
 
   &.gux-borderless {
-    border: var(--gse-ui-card-borderless-border-width)
-      var(--gse-ui-card-borderless-border-style)
-      var(--gse-ui-card-borderless-border-color);
+    border: ui.$gse-ui-card-borderless-border-width
+      ui.$gse-ui-card-borderless-border-style
+      ui.$gse-ui-card-borderless-border-color;
   }
 }

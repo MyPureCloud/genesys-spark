@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
@@ -11,5 +12,5 @@
 ::slotted(a) {
   padding: 12px;
   font-size: 2rem;
-  background-color: var(--gse-semantic-background-container-elevated-default);
+  background-color: global.$gse-semantic-background-container-elevated-default;
 }

@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 /* stylelint-disable-next-line selector-class-pattern */
@@ -7,20 +8,20 @@
     flex: 1 0 auto;
 
     ::slotted(gux-label-info-beta) {
-      padding-inline-start: var(--gse-ui-formControl-formField-gap);
+      padding-inline-start: ui.$gse-ui-formControl-formField-gap;
     }
 
     &.gux-beside {
       position: relative;
-      inset-block-start: var(--gse-ui-formControl-input-top);
+      inset-block-start: ui.$gse-ui-formControl-input-top;
       inline-size: fit-content;
-      min-inline-size: var(--gse-ui-formControl-input-textfield-minWidth);
+      min-inline-size: ui.$gse-ui-formControl-input-textfield-minWidth;
       max-inline-size: fit-content;
-      margin-inline-end: var(--gse-ui-formControl-group-gapItems);
+      margin-inline-end: ui.$gse-ui-formControl-group-gapItems;
     }
 
     &.gux-above {
-      padding-block-end: var(--gse-ui-formControl-formField-gap);
+      padding-block-end: ui.$gse-ui-formControl-formField-gap;
     }
 
     &.gux-screenreader {

@@ -1,15 +1,17 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 @mixin gse-ui-formControl-label {
-  font-family: var(--gse-ui-formControl-label-text-fontFamily);
-  font-size: var(--gse-ui-formControl-label-text-fontSize);
-  font-weight: var(--gse-ui-formControl-label-text-fontWeight);
-  line-height: var(--gse-ui-formControl-label-text-lineHeight);
-  color: var(--gse-ui-formControl-label-labelColor);
+  font-family: ui.$gse-ui-formControl-label-text-fontFamily;
+  font-size: ui.$gse-ui-formControl-label-text-fontSize;
+  font-weight: ui.$gse-ui-formControl-label-text-fontWeight;
+  line-height: ui.$gse-ui-formControl-label-text-lineHeight;
+  color: ui.$gse-ui-formControl-label-labelColor;
 }
 
 @mixin gse-ui-formControl-label-bold {
-  font-family: var(--gse-ui-formControl-label-textBold-fontFamily);
-  font-size: var(--gse-ui-formControl-label-textBold-fontSize);
-  font-weight: var(--gse-ui-formControl-label-textBold-fontWeight);
-  line-height: var(--gse-ui-formControl-label-textBold-lineHeight);
-  color: var(--gse-ui-formControl-label-labelColor);
+  font-family: ui.$gse-ui-formControl-label-textBold-fontFamily;
+  font-size: ui.$gse-ui-formControl-label-textBold-fontSize;
+  font-weight: ui.$gse-ui-formControl-label-textBold-fontWeight;
+  line-height: ui.$gse-ui-formControl-label-textBold-lineHeight;
+  color: ui.$gse-ui-formControl-label-labelColor;
 }

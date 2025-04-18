@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: block;
   outline: none;
@@ -15,7 +17,7 @@
     .gux-toggle-input {
       .gux-toggle-label {
         .gux-toggle-label-text {
-          opacity: var(--gse-ui-toggle-disabled-opacity);
+          opacity: ui.$gse-ui-toggle-disabled-opacity;
         }
       }
     }
@@ -41,7 +43,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--gse-ui-toggle-gap);
+    gap: ui.$gse-ui-toggle-gap;
     place-content: stretch flex-start;
     align-items: center;
     inline-size: fit-content;
@@ -59,11 +61,11 @@
         .gux-toggle-label-text-inner {
           position: relative;
           grid-area: inner-div;
-          font-family: var(--gse-ui-toggle-label-fontFamily);
-          font-size: var(--gse-ui-toggle-label-fontSize);
-          font-weight: var(--gse-ui-toggle-label-fontWeight);
-          line-height: var(--gse-ui-toggle-label-lineHeight);
-          color: var(--gse-ui-formControl-label-labelColor);
+          font-family: ui.$gse-ui-toggle-label-fontFamily;
+          font-size: ui.$gse-ui-toggle-label-fontSize;
+          font-weight: ui.$gse-ui-toggle-label-fontWeight;
+          line-height: ui.$gse-ui-toggle-label-lineHeight;
+          color: ui.$gse-ui-formControl-label-labelColor;
           word-wrap: break-word;
 
           &.gux-hidden {
@@ -89,19 +91,19 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: var(--gse-ui-toggle-gap);
+      gap: ui.$gse-ui-toggle-gap;
       place-content: stretch flex-start;
-      padding: var(--gse-ui-formControl-helper-errorPadding);
-      font-family: var(--gse-ui-toggle-label-fontFamily);
-      font-size: var(--gse-ui-toggle-label-fontSize);
-      font-weight: var(--gse-ui-toggle-label-fontWeight);
-      line-height: var(--gse-ui-toggle-label-lineHeight);
-      color: var(--gse-ui-formControl-helper-errorColor);
+      padding: ui.$gse-ui-formControl-helper-errorPadding;
+      font-family: ui.$gse-ui-toggle-label-fontFamily;
+      font-size: ui.$gse-ui-toggle-label-fontSize;
+      font-weight: ui.$gse-ui-toggle-label-fontWeight;
+      line-height: ui.$gse-ui-toggle-label-lineHeight;
+      color: ui.$gse-ui-formControl-helper-errorColor;
 
       gux-icon {
         flex: 0 1 auto;
         order: 0;
-        color: var(--gse-ui-formControl-helper-errorColor);
+        color: ui.$gse-ui-formControl-helper-errorColor;
       }
 
       .gux-toggle-error-message {

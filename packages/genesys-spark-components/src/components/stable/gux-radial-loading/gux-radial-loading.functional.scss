@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use 'sass:math';
 
 $largeSpinnerSize: 48; // Linked to --gse-ui-progressAndLoading-spinner-large
@@ -78,13 +80,13 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
   div[role='progressbar'] {
     .gux-svg-container {
       display: block;
-      inline-size: var(--gse-ui-progressAndLoading-spinner-large);
-      block-size: var(--gse-ui-progressAndLoading-spinner-large);
+      inline-size: ui.$gse-ui-progressAndLoading-spinner-large;
+      block-size: ui.$gse-ui-progressAndLoading-spinner-large;
 
       .gux-dynamic-circle,
       .gux-dynamic-circle-mask {
         fill: none;
-        stroke: var(--gse-ui-progressAndLoading-spinner-foreground);
+        stroke: ui.$gse-ui-progressAndLoading-spinner-foreground;
         stroke-width: $largeSpinnerBorder;
         transform-origin: 50% 50%;
         animation-name: largeSpin;
@@ -95,13 +97,13 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
 
       .gux-dynamic-circle-mask {
         display: none;
-        stroke: var(--gse-semantic-background-container-page-default);
+        stroke: global.$gse-semantic-background-container-page-default;
         stroke-width: $largeSpinnerBorder - $thinSpinnerBorder;
       }
 
       .gux-static-circle {
         fill: none;
-        stroke: var(--gse-ui-progressAndLoading-spinner-base);
+        stroke: ui.$gse-ui-progressAndLoading-spinner-base;
         stroke-width: $largeSpinnerBorder;
       }
     }
@@ -120,12 +122,12 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
 
     &.gux-input {
       .gux-svg-container {
-        inline-size: var(--gse-ui-progressAndLoading-spinner-small);
-        block-size: var(--gse-ui-progressAndLoading-spinner-small);
+        inline-size: ui.$gse-ui-progressAndLoading-spinner-small;
+        block-size: ui.$gse-ui-progressAndLoading-spinner-small;
 
         .gux-dynamic-circle {
           fill: none;
-          stroke: var(--gse-ui-progressAndLoading-spinner-foreground);
+          stroke: ui.$gse-ui-progressAndLoading-spinner-foreground;
           stroke-width: $smallSpinnerBorder;
           transform-origin: 50% 50%;
           animation-name: smallSpin;
@@ -135,7 +137,7 @@ $largeThinCircumference: (math.$pi * ($largeSpinnerSize - $thinSpinnerBorder));
         }
 
         .gux-static-circle {
-          stroke: var(--gse-ui-progressAndLoading-spinner-base);
+          stroke: ui.$gse-ui-progressAndLoading-spinner-base;
           stroke-width: $smallSpinnerBorder;
         }
       }

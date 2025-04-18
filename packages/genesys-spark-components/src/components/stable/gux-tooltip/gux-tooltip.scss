@@ -1,11 +1,14 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   position: fixed;
-  z-index: var(--gse-semantic-zIndex-tooltip);
+  z-index: global.$gse-semantic-zIndex-tooltip;
   display: none;
   inline-size: max-content;
   max-inline-size: 250px;
-  border-radius: var(--gse-ui-tooltip-borderRadius);
-  box-shadow: var(--gse-ui-tooltip-boxShadow);
+  border-radius: ui.$gse-ui-tooltip-borderRadius;
+  box-shadow: ui.$gse-ui-tooltip-boxShadow;
   opacity: 0;
 }
 
@@ -21,26 +24,25 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  gap: var(--gse-ui-tooltip-gap);
+  gap: ui.$gse-ui-tooltip-gap;
   place-content: center flex-start;
-  padding: var(--gse-ui-tooltip-padding);
-  font-family: var(--gse-ui-tooltip-text-fontFamily);
-  font-size: var(--gse-ui-tooltip-text-fontSize);
-  font-weight: var(--gse-ui-tooltip-text-fontWeight);
-  line-height: var(--gse-ui-tooltip-text-lineHeight);
-  color: var(--gse-ui-tooltip-light-foregroundColor);
+  padding: ui.$gse-ui-tooltip-padding;
+  font-family: ui.$gse-ui-tooltip-text-fontFamily;
+  font-size: ui.$gse-ui-tooltip-text-fontSize;
+  font-weight: ui.$gse-ui-tooltip-text-fontWeight;
+  line-height: ui.$gse-ui-tooltip-text-lineHeight;
+  color: ui.$gse-ui-tooltip-light-foregroundColor;
   pointer-events: none;
-  background-color: var(--gse-ui-tooltip-light-backgroundColor);
-  border: var(--gse-ui-tooltip-light-border-width)
-    var(--gse-ui-tooltip-light-border-style)
-    var(--gse-ui-tooltip-light-border-color);
-  border-radius: var(--gse-ui-tooltip-borderRadius);
+  background-color: ui.$gse-ui-tooltip-light-backgroundColor;
+  border: ui.$gse-ui-tooltip-light-border-width
+    ui.$gse-ui-tooltip-light-border-style ui.$gse-ui-tooltip-light-border-color;
+  border-radius: ui.$gse-ui-tooltip-borderRadius;
 
   ::slotted(gux-icon) {
     align-self: center;
-    inline-size: var(--gse-ui-icon-small-size);
-    block-size: var(--gse-ui-icon-small-size);
-    color: var(--gse-ui-tooltip-light-foregroundColor);
+    inline-size: ui.$gse-ui-icon-small-size;
+    block-size: ui.$gse-ui-icon-small-size;
+    color: ui.$gse-ui-tooltip-light-foregroundColor;
   }
 
   ::slotted(*) {
@@ -50,17 +52,16 @@
   }
 
   &.gux-dark {
-    color: var(--gse-ui-tooltip-dark-foregroundColor);
-    background-color: var(--gse-ui-tooltip-dark-backgroundColor);
-    border: var(--gse-ui-tooltip-dark-border-width)
-      var(--gse-ui-tooltip-dark-border-style)
-      var(--gse-ui-tooltip-dark-border-color);
+    color: ui.$gse-ui-tooltip-dark-foregroundColor;
+    background-color: ui.$gse-ui-tooltip-dark-backgroundColor;
+    border: ui.$gse-ui-tooltip-dark-border-width
+      ui.$gse-ui-tooltip-dark-border-style ui.$gse-ui-tooltip-dark-border-color;
 
     ::slotted(gux-icon) {
       align-self: center;
-      inline-size: var(--gse-ui-icon-small-size);
-      block-size: var(--gse-ui-icon-small-size);
-      color: var(--gse-ui-tooltip-dark-iconColor);
+      inline-size: ui.$gse-ui-icon-small-size;
+      block-size: ui.$gse-ui-icon-small-size;
+      color: ui.$gse-ui-tooltip-dark-iconColor;
     }
   }
 }

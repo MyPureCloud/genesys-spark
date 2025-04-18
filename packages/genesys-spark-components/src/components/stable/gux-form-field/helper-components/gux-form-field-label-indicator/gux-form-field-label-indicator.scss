@@ -1,13 +1,15 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 .gux-form-field-label-indicator-required {
-  padding-inline-start: var(--gse-ui-formControl-formField-gap);
-  color: var(--gse-ui-formControl-label-indicator-requiredColor);
+  padding-inline-start: ui.$gse-ui-formControl-formField-gap;
+  color: ui.$gse-ui-formControl-label-indicator-requiredColor;
 }
 
 .gux-form-field-label-indicator-optional {
-  margin-inline-start: var(--gse-ui-formControl-formField-gap);
-  font-family: var(--gse-ui-formControl-label-indicator-text-fontFamily);
-  font-size: var(--gse-ui-formControl-label-indicator-text-fontSize);
-  font-weight: var(--gse-ui-formControl-label-indicator-text-fontWeight);
-  line-height: var(--gse-ui-formControl-label-indicator-text-lineHeight);
-  color: var(--gse-ui-formControl-label-indicator-optionalColor);
+  margin-inline-start: ui.$gse-ui-formControl-formField-gap;
+  font-family: ui.$gse-ui-formControl-label-indicator-text-fontFamily;
+  font-size: ui.$gse-ui-formControl-label-indicator-text-fontSize;
+  font-weight: ui.$gse-ui-formControl-label-indicator-text-fontWeight;
+  line-height: ui.$gse-ui-formControl-label-indicator-text-lineHeight;
+  color: ui.$gse-ui-formControl-label-indicator-optionalColor;
 }

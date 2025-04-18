@@ -1,8 +1,9 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
-$tabListHeight: var(--gse-ui-tabs-set-horizontal-height);
-$tabListBorderBottomHeight: var(--gse-ui-tabs-set-divider-horizontal-height);
-$tabListMarginBottom: var(--gse-ui-tabs-set-horizontal-marginBottom);
+$tabListHeight: ui.$gse-ui-tabs-set-horizontal-height;
+$tabListBorderBottomHeight: ui.$gse-ui-tabs-set-divider-horizontal-height;
+$tabListMarginBottom: ui.$gse-ui-tabs-set-horizontal-marginBottom;
 $tabPanelHeightOffset: $tabListHeight + $tabListBorderBottomHeight +
   $tabListMarginBottom;
 
