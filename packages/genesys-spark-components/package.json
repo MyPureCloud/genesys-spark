@@ -45,6 +45,8 @@
     "test.ci.spec": "TZ=UTC stencil test --spec --maxWorkers=1 --workerIdleMemoryLimit=500MB",
     "test.e2e": "TZ=UTC stencil test --e2e",
     "test.e2e.update-snapshot": "TZ=UTC stencil test --e2e --updateSnapshot",
+    "test.playwright": "playwright test",
+    "test.playwright.ui": "playwright test --ui",
     "test.screenshot": "TZ=UTC stencil test --e2e --screenshot",
     "test.unit": "TZ=UTC stencil build dev && stencil test --spec",
     "test.unit.update-snapshot": "TZ=UTC stencil test --spec --updateSnapshot",
@@ -69,9 +71,12 @@
     "sortablejs": "1.15.6"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
     "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
+    "@playwright/test": "1.51.0",
     "@stencil/core": "4.23.2",
+    "@stencil/playwright": "^0.2.1",
     "@stencil/react-output-target": "^0.5.3",
     "@stencil/sass": "^3.2.0",
     "@types/google-libphonenumber": "^7.4.30",
