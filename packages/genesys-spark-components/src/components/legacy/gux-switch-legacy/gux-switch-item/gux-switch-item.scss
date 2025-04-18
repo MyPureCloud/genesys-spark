@@ -1,18 +1,20 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/typography.scss';
 
 $icon-off: #99a4b8;
-$icon-on: #2e394c;
-$hover-on: #2a60c8;
-$inactive-small: #e2e6ee;
-$active-tab: #75a8ff;
+$icon-on: ui.$gse-ui-segmentedControl-button-disabled-foregroundColor;
+$hover-on: ui.$gse-ui-segmentedControl-button-default-foregroundColor;
+$inactive-small: ui.$gse-ui-segmentedControl-button-active-backgroundColor;
+$active-tab: ui.$gse-ui-segmentedControl-button-active-foregroundColor;
 
 gux-switch-item {
   > .gux-switch-item {
     @include typography.body-sm-regular;
 
     font: unset;
-    color: #2e394c;
+    color: global.$gse-semantic-foreground-container-highEmphasis;
     text-align: center;
     outline: none;
     background: none;
@@ -45,7 +47,8 @@ gux-switch-legacy {
       &:focus-visible,
       &:hover {
         padding: 0 8px 1px;
-        border-bottom: 4px solid #2a60c8;
+        border-bottom: 4px solid
+          #{ui.$gse-ui-segmentedControl-button-default-foregroundColor};
 
         > gux-icon {
           svg {
@@ -69,7 +72,8 @@ gux-switch-legacy {
     &.gux-selected {
       .gux-switch-item {
         padding: 0 8px 1px;
-        border-bottom: 4px solid #2a60c8;
+        border-bottom: 4px solid
+          #{ui.$gse-ui-segmentedControl-button-default-foregroundColor};
 
         > gux-icon {
           svg {
