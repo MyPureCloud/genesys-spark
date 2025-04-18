@@ -1,6 +1,8 @@
 node_modules/
 build/
 dist/
+www/
+test-results/
 .stencil/
 
 src/components.d.ts
