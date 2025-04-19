@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.139.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.5...v4.139.0) (2025-04-19)
+
+
+### Features
+
+* **styles:** updated styles on modal-legacy and example pages ([f8f8d4d](https://github.com/MyPureCloud/genesys-spark/commit/f8f8d4da3763cb1e20f63d119930ccb5353bdbbd))
+* **styles:** updated styles on warning icons ([4ab024f](https://github.com/MyPureCloud/genesys-spark/commit/4ab024f35999541d1ef371272d93b398dc5fa456))
+
+
+### Bug Fixes
+
+* **button:** fixed legacy tertiary button color ([be66b7d](https://github.com/MyPureCloud/genesys-spark/commit/be66b7d33d6a0ba407daec1e6acdbbe186525e04))
+* **dropdown:** subtext included in selected option ([#1050](https://github.com/MyPureCloud/genesys-spark/issues/1050)) ([ba9dccb](https://github.com/MyPureCloud/genesys-spark/commit/ba9dccb7874e67a2ca6a7a9fba003a49fff8ee95))
+* **other:** improved legacy components dark mode implementation ([b45b8bb](https://github.com/MyPureCloud/genesys-spark/commit/b45b8bb07978a16b231094e43a5483de4ecbc2a2))
+
 ### [4.138.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.4...v4.138.5) (2025-04-17)
 
 
