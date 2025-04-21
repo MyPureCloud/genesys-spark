@@ -21,14 +21,12 @@ describe('side panel', () => {
   it('should render', async () => {
     const page = await newSparkE2EPage({
       html: `<gux-side-panel-beta>
-            <gux-side-panel-heading
-              slot="heading"
-              level="3"
-              icon-name="fa/diamond-regular"
-            >
-              Side panel title
-            </gux-side-panel-heading>
-            <h2 slot="description">Description goes here</h2>
+            <gux-side-panel-header slot="header">
+              <gux-side-panel-heading slot="title" level="3">
+                Side panel title
+              </gux-side-panel-heading>
+              <h2 slot="description">Description goes here</h2>
+            </gux-side-panel-header>
             <div slot="content">
               Content goes here.
             </div>
@@ -51,14 +49,12 @@ describe('side panel', () => {
 
 describe('modal side panel', () => {
   const html = `<gux-modal-side-panel-beta>
-            <gux-side-panel-heading
-              slot="heading"
-              level="2"
-              icon-name="fa/diamond-regular"
-            >
-              Side panel title
-            </gux-side-panel-heading>
-            <h2 slot="description">Description goes here</h2>
+            <gux-side-panel-header slot="header">
+              <gux-side-panel-heading slot="title" level="2">
+                Side panel title
+              </gux-side-panel-heading>
+              <h2 slot="description">Description goes here</h2>
+            </gux-side-panel-header>
             <div slot="content">
               Content goes here.
             </div>

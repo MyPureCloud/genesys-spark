@@ -3,35 +3,43 @@ import { MockHTMLElement } from '@stencil/core/mock-doc';
 import { GuxSidePanel } from '../gux-side-panel';
 import { GuxSidePanelHeading } from '../components/gux-side-panel-heading/gux-side-panel-heading';
 import { GuxModalSidePanel } from '../components/gux-modal-side-panel/gux-modal-side-panel';
+import { minimalPanel, maximumPanel } from './gux-side-panel.common';
 
 describe('gux-side-panel-beta', () => {
+  it('renders correctly with minimal panel', async () => {
+    const page = await newSpecPage({
+      components: [GuxSidePanel, GuxSidePanelHeading],
+      html: minimalPanel
+    });
+
+    expect(page.root).toMatchSnapshot();
+  });
+
+  it('renders correctly with maximum panel', async () => {
+    const page = await newSpecPage({
+      components: [GuxSidePanel, GuxSidePanelHeading],
+      html: maximumPanel
+    });
+
+    expect(page.root).toMatchSnapshot();
+  });
+
   it.each(['small', 'medium', 'large'])(
     'renders correctly with %s size',
     async size => {
       const page = await newSpecPage({
         components: [GuxSidePanel, GuxSidePanelHeading],
-        html: `
-        <gux-side-panel-beta size="${size}">
-          <gux-side-panel-heading
-            slot="heading"
-            level="3"
-            icon-name="fa/diamond-regular"
-          >
-            Side panel title
-          </gux-side-panel-heading>
-          <h2 slot="description">Description goes here</h2>
+        html: `<gux-side-panel-beta size="${size}">
+          <gux-side-panel-header slot="header">
+            <gux-side-panel-heading slot="title">The Heading</gux-side-panel-heading>
+          </gux-side-panel-header>
           <div slot="content">
-            Content goes here.
-          </div>
-          <div slot="footer">
-            <gux-cta-group>
-              <gux-button slot="primary">Primary</gux-button>
-              <gux-button slot="secondary">Secondary</gux-button>
-              <gux-button slot="dismiss">Dismiss</gux-button>
-            </gux-cta-group>
-          </div>
-        </gux-side-panel-beta>
-      `
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </div>
+        </gux-side-panel-beta>`
       });
 
       expect(page.root).toMatchSnapshot();
@@ -43,28 +51,17 @@ describe('gux-side-panel-beta', () => {
     async headingLevel => {
       const page = await newSpecPage({
         components: [GuxSidePanel, GuxSidePanelHeading],
-        html: `
-        <gux-side-panel-beta size="medium">
-          <gux-side-panel-heading
-            slot="heading"
-            level="${headingLevel}"
-            icon-name="fa/diamond-regular"
-          >
-            Side panel title
-          </gux-side-panel-heading>
-          <h2 slot="description">Description goes here</h2>
+        html: `<gux-side-panel-beta>
+          <gux-side-panel-header slot="header">
+            <gux-side-panel-heading slot="title" level="${headingLevel}">The Heading</gux-side-panel-heading>
+          </gux-side-panel-header>
           <div slot="content">
-            Content goes here.
-          </div>
-          <div slot="footer">
-            <gux-cta-group>
-              <gux-button slot="primary">Primary</gux-button>
-              <gux-button slot="secondary">Secondary</gux-button>
-              <gux-button slot="dismiss">Dismiss</gux-button>
-            </gux-cta-group>
-          </div>
-        </gux-side-panel-beta>
-      `
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </div>
+        </gux-side-panel-beta>`
       });
 
       expect(page.root).toMatchSnapshot();
@@ -74,20 +71,17 @@ describe('gux-side-panel-beta', () => {
   it('emits sidePanelDismiss event when dismissed', async () => {
     const page = await newSpecPage({
       components: [GuxSidePanel, GuxSidePanelHeading],
-      html: `
-        <gux-side-panel-beta>
-          <gux-side-panel-heading
-            slot="heading"
-            level="3"
-            icon-name="fa/diamond-regular"
-          >
-            Side panel title
-          </gux-side-panel-heading
-          <div slot="description">Description</div>
-          <div slot="content">Content</div>
-          <div slot="footer">Footer</div>
-        </gux-side-panel-beta>
-      `
+      html: `<gux-side-panel-beta>
+          <gux-side-panel-header slot="header">
+            <gux-side-panel-heading slot="title">The Heading</gux-side-panel-heading>
+          </gux-side-panel-header>
+          <div slot="content">
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </div>
+        </gux-side-panel-beta>`
     });
 
     const dismissButton =
@@ -125,24 +119,15 @@ describe('gux-modal-side-panel-beta', () => {
       components: [GuxModalSidePanel, GuxSidePanel, GuxSidePanelHeading],
       html: `
           <gux-modal-side-panel-beta ${open ? 'open' : ''}>
-            <gux-side-panel-heading
-              slot="heading"
-              level="2"
-              icon-name="fa/diamond-regular"
-            >
-              Side panel title
-            </gux-side-panel-heading>
-            <h2 slot="description">Description goes here</h2>
-            <div slot="content">
-              Content goes here.
-            </div>
-            <div slot="footer">
-              <gux-cta-group>
-                <gux-button slot="primary">Primary</gux-button>
-                <gux-button slot="secondary">Secondary</gux-button>
-                <gux-button slot="dismiss">Dismiss</gux-button>
-              </gux-cta-group>
-            </div>
+            <gux-side-panel-header slot="header">
+            <gux-side-panel-heading slot="title">The Heading</gux-side-panel-heading>
+          </gux-side-panel-header>
+          <div slot="content">
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </div>
           </gux-modal-side-panel-beta>
         `
     });
@@ -163,24 +148,15 @@ describe('gux-modal-side-panel-beta', () => {
         components: [GuxModalSidePanel, GuxSidePanel, GuxSidePanelHeading],
         html: `
         <gux-modal-side-panel-beta size="${size}">
-          <gux-side-panel-heading
-            slot="heading"
-            level="2"
-            icon-name="fa/diamond-regular"
-          >
-            Side panel title
-          </gux-side-panel-heading>
-          <h2 slot="description">Description goes here</h2>
+          <gux-side-panel-header slot="header">
+            <gux-side-panel-heading slot="title">The Heading</gux-side-panel-heading>
+          </gux-side-panel-header>
           <div slot="content">
-            Content goes here.
-          </div>
-          <div slot="footer">
-            <gux-cta-group>
-              <gux-button slot="primary">Primary</gux-button>
-              <gux-button slot="secondary">Secondary</gux-button>
-              <gux-button slot="dismiss">Dismiss</gux-button>
-            </gux-cta-group>
-          </div>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </div>
         </gux-modal-side-panel-beta>
       `
       });
@@ -194,24 +170,15 @@ describe('gux-modal-side-panel-beta', () => {
       components: [GuxModalSidePanel, GuxSidePanel, GuxSidePanelHeading],
       html: `
         <gux-modal-side-panel-beta open>
-          <gux-side-panel-heading
-            slot="heading"
-            level="2"
-            icon-name="fa/diamond-regular"
-          >
-            Side panel title
-          </gux-side-panel-heading>
-          <h2 slot="description">Description goes here</h2>
+          <gux-side-panel-header slot="header">
+            <gux-side-panel-heading slot="title">The Heading</gux-side-panel-heading>
+          </gux-side-panel-header>
           <div slot="content">
-            Content goes here.
-          </div>
-          <div slot="footer">
-            <gux-cta-group>
-              <gux-button slot="primary">Primary</gux-button>
-              <gux-button slot="secondary">Secondary</gux-button>
-              <gux-button slot="dismiss">Dismiss</gux-button>
-            </gux-cta-group>
-          </div>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </div>
         </gux-modal-side-panel-beta>
       `
     });
@@ -232,24 +199,15 @@ describe('gux-modal-side-panel-beta', () => {
       components: [GuxModalSidePanel, GuxSidePanel, GuxSidePanelHeading],
       html: `
         <gux-modal-side-panel-beta>
-          <gux-side-panel-heading
-            slot="heading"
-            level="2"
-            icon-name="fa/diamond-regular"
-          >
-            Side panel title
-          </gux-side-panel-heading>
-          <h2 slot="description">Description goes here</h2>
+          <gux-side-panel-header slot="header">
+            <gux-side-panel-heading slot="title">The Heading</gux-side-panel-heading>
+          </gux-side-panel-header>
           <div slot="content">
-            Content goes here.
-          </div>
-          <div slot="footer">
-            <gux-cta-group>
-              <gux-button slot="primary">Primary</gux-button>
-              <gux-button slot="secondary">Secondary</gux-button>
-              <gux-button slot="dismiss">Dismiss</gux-button>
-            </gux-cta-group>
-          </div>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </div>
         </gux-modal-side-panel-beta>
       `
     });

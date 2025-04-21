@@ -1,0 +1,32 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
+:host {
+  display: block;
+  padding: ui.$gse-ui-sidePanel-header-padding;
+}
+
+.title-block {
+  display: flex;
+  gap: ui.$gse-ui-sidePanel-header-titleBlock-iconGap;
+  padding: ui.$gse-ui-sidePanel-header-titleBlock-padding;
+}
+
+.icon {
+  flex: 0 0 auto;
+  align-content: center;
+}
+
+.gux-title-description {
+  flex: 1 1 auto;
+  inline-size: 1px;
+  font-family: ui.$gse-ui-sidePanel-description-text-fontFamily;
+  font-size: ui.$gse-ui-sidePanel-description-text-fontSize;
+  font-weight: ui.$gse-ui-sidePanel-description-text-fontWeight;
+  line-height: ui.$gse-ui-sidePanel-description-text-lineHeight;
+  color: ui.$gse-ui-sidePanel-descriptionColor;
+}
+
+.badge {
+  flex: 0 0 auto;
+  align-content: center;
+}

@@ -50,7 +50,7 @@ Type: `Promise<void>`
 | `"content"`     | The content of the side panel          |
 | `"description"` | Optional description of the side panel |
 | `"footer"`      | The footer of the side panel           |
-| `"heading"`     | The heading of the side panel          |
+| `"header"`      | The header of the side panel           |
 
 
 ## Dependencies

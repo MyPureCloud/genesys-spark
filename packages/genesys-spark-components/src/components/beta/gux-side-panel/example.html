@@ -2,14 +2,32 @@
   <div id="content">
     <h1>Side Panel</h1>
 
+    <gux-inline-alert accent="warning">
+      <div slot="content">
+        The API for this component has changed from v4.167.0
+        <br />
+        <a
+          target="_blank"
+          href="https://github.com/GenesysCloud/genesys-spark-components/blob/main/packages/genesys-spark-components/src/components/beta/gux-side-panel/BREAKING_CHANGES.md"
+          >More information & migration steps</a
+        >.
+      </div>
+    </gux-inline-alert>
+
     <p>
-      You can listen to the 'sidePanelDismiss' event on the
-      `gux-side-panel-beta` element to know when the side panel is to be
+      You can listen for the 'sidePanelDismiss' or 'modalSidePanelDismiss' event
+      on the relevant side panel element to know when the side panel is to be
       hidden/removed.
     </p>
 
     <gux-button accent="secondary" id="toggle-small">Toggle small</gux-button>
     <gux-button accent="secondary" id="toggle-medium">Toggle medium</gux-button>
+
+    <h2>Side Panel with Tabs</h2>
+
+    <gux-button accent="secondary" id="toggle-tabsPanel"
+      >Toggle panel with tabs</gux-button
+    >
 
     <h2>Modal Side Panel</h2>
 
@@ -22,56 +40,39 @@
       <li>Set the `open` property or attribute on `gux-modal-side-panel`</li>
     </ol>
 
-    <gux-modal-side-panel-beta id="modal-example">
-      <gux-side-panel-heading
-        slot="heading"
-        level="3"
-        icon-name="fa/diamond-regular"
-      >
-        Side panel title
-      </gux-side-panel-heading>
-      <h2 slot="description">Pellentesque habitant morbi tristique sen</h2>
-      <div slot="content">
-        Pellentesque habitant morbi tristique senectus et netus et malesuada
-        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
-        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
-        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
-        leo.
-      </div>
-      <div slot="footer">
-        <gux-cta-group>
-          <gux-button slot="primary">Primary</gux-button>
-          <gux-button slot="secondary">Secondary</gux-button>
-          <gux-button
-            slot="dismiss"
-            onclick="document.getElementById('modal-example').close()"
-            >Dismiss</gux-button
-          >
-        </gux-cta-group>
-      </div>
-    </gux-modal-side-panel-beta>
-
     <gux-button accent="secondary" id="modal-small">Show small</gux-button>
     <gux-button accent="secondary" id="modal-medium">Show medium</gux-button>
     <gux-button accent="secondary" id="modal-large">Show large</gux-button>
+
+    <h2>Heading sizes</h2>
+
+    <gux-button accent="secondary" id="toggle-headingSize"
+      >Toggle heading size</gux-button
+    >
   </div>
 
   <gux-side-panel-beta size="medium" id="dynamic-example">
-    <gux-side-panel-heading
-      slot="heading"
-      level="3"
-      icon-name="fa/diamond-regular"
-    >
-      Side panel title
-    </gux-side-panel-heading>
-    <h2 slot="description">Pellentesque habitant morbi tristique sen</h2>
+    <gux-side-panel-header slot="header">
+      <gux-side-panel-heading slot="title"
+        >Side Panel Heading</gux-side-panel-heading
+      >
+      <gux-icon
+        slot="icon"
+        decorative
+        size="medium"
+        icon-name="user-add"
+        screenreader-text="add John Smith to contact list"
+      ></gux-icon>
+      <div slot="description">This is a description of the side panel</div>
+      <gux-badge slot="badge">New</gux-badge>
+    </gux-side-panel-header>
     <div slot="content">
       Pellentesque habitant morbi tristique senectus et netus et malesuada fames
       ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
       tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
       Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
     </div>
-    <div slot="footer">
+    <footer slot="footer" aria-label="Side panel footer">
       <gux-cta-group>
         <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
         <gux-button slot="secondary" onclick="notify(event)"
@@ -83,44 +84,201 @@
           >Dismiss</gux-button
         >
       </gux-cta-group>
-    </div>
+    </footer>
   </gux-side-panel-beta>
+
+  <gux-side-panel-beta size="medium" id="tabs-example">
+    <gux-side-panel-header slot="header">
+      <gux-side-panel-heading slot="title"
+        >Side Panel with Tabs</gux-side-panel-heading
+      >
+      <gux-icon
+        slot="icon"
+        decorative
+        size="medium"
+        icon-name="user-add"
+        screenreader-text="add John Smith to contact list"
+      ></gux-icon>
+      <div slot="description">This is a description of the side panel</div>
+      <gux-badge slot="badge">New</gux-badge>
+    </gux-side-panel-header>
+    <gux-tabs slot="tabs">
+      <gux-tab-list slot="tab-list">
+        <gux-tab tab-id="2-1">Tab Header 1</gux-tab>
+        <gux-tab tab-id="2-2">Tab Header 2</gux-tab>
+        <gux-tab tab-id="2-3">Tab Header 3</gux-tab>
+      </gux-tab-list>
+      <gux-tab-panel tab-id="2-1"
+        >Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+        leo.</gux-tab-panel
+      >
+      <gux-tab-panel tab-id="2-2">Tab content 2</gux-tab-panel>
+      <gux-tab-panel tab-id="2-3">Tab content 3</gux-tab-panel>
+      <gux-tab-panel tab-id="2-4">Tab content 4</gux-tab-panel>
+      <gux-tab-panel tab-id="2-5">Tab content 5</gux-tab-panel>
+    </gux-tabs>
+    <footer slot="footer" aria-label="Side panel footer">
+      <gux-cta-group>
+        <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+        <gux-button slot="secondary" onclick="notify(event)"
+          >Secondary</gux-button
+        >
+        <gux-button
+          slot="dismiss"
+          onclick="document.getElementById('dynamic-example').style.display = 'none'"
+          >Dismiss</gux-button
+        >
+      </gux-cta-group>
+    </footer>
+  </gux-side-panel-beta>
+
+  <gux-modal-side-panel-beta id="modal-example">
+    <gux-side-panel-header slot="header">
+      <gux-side-panel-heading slot="title"
+        >Modal Side Panel</gux-side-panel-heading
+      >
+
+      <gux-icon
+        slot="icon"
+        decorative
+        size="medium"
+        icon-name="user-add"
+        screenreader-text="add John Smith to contact list"
+      ></gux-icon>
+      <div slot="description">This is a description of the side panel</div>
+      <gux-badge slot="badge">New</gux-badge>
+    </gux-side-panel-header>
+    <gux-tabs slot="tabs">
+      <gux-tab-list slot="tab-list">
+        <gux-tab tab-id="2-1">Tab Header 1</gux-tab>
+        <gux-tab tab-id="2-2">Tab Header 2</gux-tab>
+        <gux-tab tab-id="2-3">Tab Header 3</gux-tab>
+      </gux-tab-list>
+      <gux-tab-panel tab-id="2-1"
+        >Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+        ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+        egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend
+        leo.</gux-tab-panel
+      >
+      <gux-tab-panel tab-id="2-2">Tab content 2</gux-tab-panel>
+      <gux-tab-panel tab-id="2-3">Tab content 3</gux-tab-panel>
+      <gux-tab-panel tab-id="2-4">Tab content 4</gux-tab-panel>
+      <gux-tab-panel tab-id="2-5">Tab content 5</gux-tab-panel>
+    </gux-tabs>
+    <div slot="content">
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+      tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+      Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+    </div>
+    <footer slot="footer" aria-label="Side panel footer">
+      <gux-cta-group>
+        <gux-button slot="primary" onclick="notify(event)">Primary</gux-button>
+        <gux-button slot="secondary" onclick="notify(event)"
+          >Secondary</gux-button
+        >
+        <gux-button
+          slot="dismiss"
+          onclick="document.getElementById('modal-example').close()"
+          >Dismiss</gux-button
+        >
+      </gux-cta-group>
+    </footer>
+  </gux-modal-side-panel-beta>
 </div>
 
 <style
   onload="(function () {
+  'use strict';
+ 
   const modalSidePanel = document.getElementById('modal-example');
   const dynamicSidePanel = document.getElementById('dynamic-example');
+  const tabsSidePanel = document.getElementById('tabs-example');
+
+  // Buttons
+  const modalSmall = document.getElementById('modal-small');
+  const modalMedium = document.getElementById('modal-medium');
+  const modalLarge = document.getElementById('modal-large');
+  const toggleSmall = document.getElementById('toggle-small');
+  const toggleMedium = document.getElementById('toggle-medium');
+  const toggleTabsPanel = document.getElementById('toggle-tabsPanel');
+  const toggleHeadingSize = document.getElementById('toggle-headingSize');
+
+  function hideAllPanels() {
+    dynamicSidePanel.style.display = 'none';
+    tabsSidePanel.style.display = 'none';
+  }
+
+  function showPanel(panel, size = null) {
+    hideAllPanels();
+    if (size) {
+      panel.setAttribute('size', size);
+    }
+    panel.style.display = 'block';
+  }
+
+  function togglePanel(panel) {
+    const isVisible = panel.style.display !== 'none';
+    panel.style.display = isVisible ? 'none' : 'block';
+  }
   
-  document.getElementById('modal-small').addEventListener('click', function () {
+  // Event handlers
+  function notify(event) {
+    console.log('Button clicked:', event.target.textContent);
+  }
+  
+
+  modalSmall.addEventListener('click', function () {
     modalSidePanel.setAttribute('size', 'small');
     modalSidePanel.showModal();
   });
 
-  document.getElementById('modal-medium').addEventListener('click', function () {
+  modalMedium.addEventListener('click', function () {
     modalSidePanel.setAttribute('size', 'medium');
     modalSidePanel.showModal();
   });
 
-  document.getElementById('modal-large').addEventListener('click', function () {
+  modalLarge.addEventListener('click', function () {
     modalSidePanel.setAttribute('size', 'large');
     modalSidePanel.showModal();
   });
 
-  document.getElementById('toggle-small').addEventListener('click', function () {
-    dynamicSidePanel.size = 'small';
-    dynamicSidePanel.style.display = 'block';
+  toggleSmall.addEventListener('click', function () {
+    showPanel(dynamicSidePanel, 'small');
   });
 
-  document.getElementById('toggle-medium').addEventListener('click', function () {
-    dynamicSidePanel.size = 'medium';
-    dynamicSidePanel.style.display = 'block';
+  toggleMedium.addEventListener('click', function () {
+    showPanel(dynamicSidePanel, 'medium');
   });
 
-  dynamicSidePanel.addEventListener('sidePanelDismiss', event => {
-    dynamicSidePanel.style.display = dynamicSidePanel.style.display === 'none' ? 'block' : 'none';
+  toggleTabsPanel.addEventListener('click', function () {
+    showPanel(tabsSidePanel);
   });
-  modalSidePanel.addEventListener('modalSidePanelDismiss', event => notify(event));
+
+  toggleHeadingSize.addEventListener('click', function () {
+    const headings = document.querySelectorAll('gux-side-panel-heading');
+    headings.forEach(heading => {
+      const currentSize = heading.getAttribute('size');
+      const newSize = currentSize === 'large' ? 'default' : 'large';
+      heading.setAttribute('size', newSize);
+    });
+  });
+
+  dynamicSidePanel.addEventListener('sidePanelDismiss', function(event) {
+    togglePanel(dynamicSidePanel);
+  });
+
+  modalSidePanel.addEventListener('modalSidePanelDismiss', function(event) {
+    notify(event);
+  });
+
+  tabsSidePanel.addEventListener('sidePanelDismiss', function(event) {
+    togglePanel(tabsSidePanel);
+  });
 })()"
 >
   .preview {
@@ -137,9 +295,14 @@
     flex: 1 1 auto;
     padding-block: 27px;
     padding-inline: 30px;
+    overflow-y: auto;
   }
 
   gux-side-panel-beta {
     flex: 0 1 auto;
+  }
+
+  #tabs-example {
+    display: none;
   }
 </style>

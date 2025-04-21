@@ -19,12 +19,12 @@
 
 ## Slots
 
-| Slot            | Description                       |
-| --------------- | --------------------------------- |
-| `"content"`     | Required slot for the content     |
-| `"description"` | Optional slot for the description |
-| `"footer"`      | Optional slot for the footer      |
-| `"heading"`     | Required slot for the heading     |
+| Slot        | Description                   |
+| ----------- | ----------------------------- |
+| `"content"` | Required slot for the content |
+| `"footer"`  | Optional slot for the footer  |
+| `"header"`  | Required slot for the header  |
+| `"tabs"`    | Optional slot for the tabs    |
 
 
 ## Dependencies
