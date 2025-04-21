@@ -585,8 +585,12 @@
       "type": "color"
     },
     "heading": {
-      "text": {
+      "md_text": {
         "value": "{heading.md.semi_bold}",
+        "type": "typography"
+      },
+      "lg_text": {
+        "value": "{heading.lg.semi_bold}",
         "type": "typography"
       }
     },
@@ -663,6 +667,12 @@
     "shoud": {
       "min_width": {
         "value": "{spacing.lg}",
+        "type": "spacing"
+      }
+    },
+    "title-block": {
+      "padding": {
+        "value": "0 {container.xl.padding} {container.md.padding} {container.lg.padding}",
         "type": "spacing"
       }
     }
