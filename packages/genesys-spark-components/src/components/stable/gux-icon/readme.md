@@ -1,7 +1,5 @@
 # gux-icon
 
-
-
 <!-- Auto Generated Below -->
 
 
@@ -76,7 +74,6 @@
  - [gux-rich-text-editor-action-text-highlight](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-text-highlight)
  - [gux-rich-text-editor-menu](../../beta/gux-rich-text-editor/gux-rich-text-editor-menu)
  - [gux-rich-text-editor-sub-list](../../beta/gux-rich-text-editor/gux-rich-text-editor-list/gux-rich-text-editor-sub-list)
- - [gux-side-panel-heading](../../beta/gux-side-panel/components/gux-side-panel-heading)
  - [gux-sort-control](../gux-table/gux-sort-control)
  - [gux-step](../../beta/gux-stepper/gux-step)
  - [gux-submenu](../gux-flyout-menu/gux-menu/gux-submenu)
@@ -152,7 +149,6 @@ graph TD;
   gux-rich-text-editor-action-text-highlight --> gux-icon
   gux-rich-text-editor-menu --> gux-icon
   gux-rich-text-editor-sub-list --> gux-icon
-  gux-side-panel-heading --> gux-icon
   gux-sort-control --> gux-icon
   gux-step --> gux-icon
   gux-submenu --> gux-icon

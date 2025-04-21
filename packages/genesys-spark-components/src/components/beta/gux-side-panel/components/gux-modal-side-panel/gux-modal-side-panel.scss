@@ -1,5 +1,4 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
-@use '../../mixins';
 
 dialog {
   inset-inline-start: auto;
@@ -21,6 +20,13 @@ dialog::backdrop {
   opacity: ui.$gse-ui-sidePanel-shroud-opacity;
 }
 
-slot[name='description']::slotted(*) {
-  @include mixins.slotted-description;
+::slotted(footer) {
+  flex: 0 0 auto;
+  padding: ui.$gse-ui-sidePanel-footer-padding;
+  border-block-start: ui.$gse-ui-sidePanel-divider-width
+    ui.$gse-ui-sidePanel-divider-style ui.$gse-ui-sidePanel-divider-color;
+}
+
+::slotted(gux-side-panel-header) {
+  border-block-end: none;
 }
