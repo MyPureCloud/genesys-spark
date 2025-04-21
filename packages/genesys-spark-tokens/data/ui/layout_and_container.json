@@ -585,8 +585,12 @@
       "type": "color"
     },
     "heading": {
-      "text": {
+      "md_text": {
         "value": "{heading.md.semi_bold}",
+        "type": "typography"
+      },
+      "lg_text": {
+        "value": "{heading.lg.semi_bold}",
         "type": "typography"
       }
     },
@@ -598,20 +602,45 @@
       "padding": {
         "value": "{container.lg.gap} {container.lg.padding} 0",
         "type": "spacing"
+      },
+      "max_height": {
+        "value": "36",
+        "type": "sizing"
       }
     },
     "header": {
-      "icon_gap": {
-        "value": "{container.md.gap}",
+      "padding": {
+        "value": "{container.lg.padding} 0 0 0",
         "type": "spacing"
       },
-      "padding": {
-        "value": "{container.lg.padding} {container.lg.padding} {container.lg.gap}",
-        "type": "spacing"
+      "title_block": {
+        "icon_gap": {
+          "value": "{container.md.gap}",
+          "type": "spacing"
+        },
+        "padding": {
+          "value": "0 {container.xl.padding} {container.md.padding} {container.lg.padding}",
+          "type": "spacing"
+        }
+      },
+      "icon_gap": {
+        "value": "{container.md.gap}",
+        "type": "spacing",
+        "description": "DEPRECATED"
       },
       "dismiss": {
         "padding": {
           "value": "{container.xs.gap}",
+          "type": "spacing"
+        }
+      },
+      "tabset": {
+        "left-padding": {
+          "value": "0 0 0 {container.sm.padding}",
+          "type": "spacing"
+        },
+        "right-padding": {
+          "value": "0 {container.sm.padding} 0 0",
           "type": "spacing"
         }
       }
@@ -663,6 +692,12 @@
     "shoud": {
       "min_width": {
         "value": "{spacing.lg}",
+        "type": "spacing"
+      }
+    },
+    "title-block": {
+      "padding": {
+        "value": "0 {container.xl.padding} {container.md.padding} {container.lg.padding}",
         "type": "spacing"
       }
     }
