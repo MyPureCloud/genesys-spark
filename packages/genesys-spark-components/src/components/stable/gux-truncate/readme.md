@@ -48,10 +48,12 @@ Type: `Promise<void>`
 
  - [gux-dropdown](../gux-dropdown)
  - [gux-file-list-item](../gux-form-field/components/gux-form-field-file-beta/components/gux-file-list-item)
+ - [gux-inline-dropdown-beta](../../beta/gux-inline-dropdown)
  - [gux-notification-toast-legacy](../../legacy/gux-notification-toast-legacy)
  - [gux-option](../gux-listbox/options/gux-option)
  - [gux-option-icon](../gux-listbox/options/gux-option-icon)
  - [gux-option-multi](../gux-listbox-multi/gux-option-multi)
+ - [gux-option-status-beta](../../beta/gux-option-status)
  - [gux-rich-style-list-item](../../beta/gux-rich-text-editor/gux-rich-text-editor-list/gux-rich-style-list-item)
  - [gux-rich-text-editor-action-rich-style](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
  - [gux-rich-text-editor-action-text-highlight](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-text-highlight)
@@ -70,10 +72,12 @@ graph TD;
   gux-truncate --> gux-tooltip
   gux-dropdown --> gux-truncate
   gux-file-list-item --> gux-truncate
+  gux-inline-dropdown-beta --> gux-truncate
   gux-notification-toast-legacy --> gux-truncate
   gux-option --> gux-truncate
   gux-option-icon --> gux-truncate
   gux-option-multi --> gux-truncate
+  gux-option-status-beta --> gux-truncate
   gux-rich-style-list-item --> gux-truncate
   gux-rich-text-editor-action-rich-style --> gux-truncate
   gux-rich-text-editor-action-text-highlight --> gux-truncate

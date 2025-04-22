@@ -389,6 +389,11 @@
     "warning": "Warning alert with message",
     "error": "Error alert with message"
   },
+  "gux-inline-dropdown": {
+    "filterResults": "Type to filter dropdown results",
+    "noSelection": "Select...",
+    "dropdown": "Dropdown"
+  },
   "gux-listbox": {
     "noMatches": "No matches",
     "loading": "Loading..."
@@ -409,6 +414,12 @@
   },
   "gux-option-multi": {
     "removeCustomElementInstructions": ", unselecting this custom option will remove it from the list"
+  },
+  "gux-option-status": {
+    "information": "Information",
+    "success": "Success",
+    "warning": "Inactive",
+    "error": "Deleted"
   },
   "gux-pagination-buttons": {
     "page": "Page",
@@ -741,6 +752,12 @@
   },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
+  },
+  "gux-status-indicator": {
+    "information": "Information",
+    "success": "Success",
+    "warning": "Inactive",
+    "error": "Deleted"
   },
   "gux-table": {
     "emptyMessage": "No data available",

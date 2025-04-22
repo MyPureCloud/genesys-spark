@@ -15,8 +15,6 @@ import {
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
-import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
-import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
 import { afterNextRender } from '@utils/dom/after-next-render';
 import { trackComponent } from '@utils/tracking/usage';
 import { OnMutation } from '@utils/decorator/on-mutation';
@@ -24,16 +22,13 @@ import { OnMutation } from '@utils/decorator/on-mutation';
 import translationResources from './i18n/en.json';
 
 import {
-  getSearchOption,
   getListOptions,
-  setInitialActiveOption,
-  getOptionDefaultSlot
-} from '../gux-listbox/gux-listbox.service';
+  setInitialActiveOption
+} from '../../stable/gux-listbox/gux-listbox.service';
 import {
   ListboxOptionElement,
   ValidOptionTag
-} from '../gux-listbox/options/option-types';
-import { GuxFilterTypes } from './gux-dropdown.types';
+} from '../../stable/gux-listbox/options/option-types';
 import { hasSlot } from '@utils/dom/has-slot';
 
 /**
@@ -45,14 +40,13 @@ import { hasSlot } from '@utils/dom/has-slot';
  * @slot - for a gux-listbox containing ValidDropdownOption children
  */
 @Component({
-  styleUrl: 'gux-dropdown.scss',
-  tag: 'gux-dropdown',
+  styleUrl: 'gux-inline-dropdown.scss',
+  tag: 'gux-inline-dropdown-beta',
   shadow: { delegatesFocus: true }
 })
 export class GuxDropdown {
   private i18n: GetI18nValue;
   private fieldButtonElement: HTMLElement;
-  private filterElement: HTMLInputElement;
   private listboxElement: HTMLGuxListboxElement;
   private truncateElement: HTMLGuxTruncateElement;
 
@@ -63,93 +57,33 @@ export class GuxDropdown {
   value: string;
 
   @Prop()
-  disabled: boolean = false;
-
-  @Prop()
   required: boolean = false;
-
-  @Prop()
-  loading: boolean = false;
 
   @Prop()
   placeholder: string;
 
-  @Prop()
-  filterType: GuxFilterTypes = 'none';
-
-  @Prop()
-  hasError: boolean = false;
-
-  /**
-   * allows dropdown popup to be wider than input
-   * defaults to fitting content if width is not specified for listbox
-   * default min-width is set to width of input
-   */
-  @Prop()
-  exceedTargetWidth: boolean = false;
-
   @State()
   private expanded: boolean = false;
-
-  @State()
-  private filter: string = '';
-
-  @Watch('expanded')
-  watchExpanded(expanded: boolean) {
-    if (!expanded) {
-      this.filter = '';
-    }
-  }
 
   @Watch('value')
   watchValue(newValue: string) {
     this.validateValue(newValue, this.listboxElement);
   }
 
-  @Watch('filter')
-  handleFilter(filter: string) {
-    this.guxfilter.emit(filter);
-  }
-
-  @Watch('disabled')
-  watchDisabled(disabled: boolean) {
-    if (disabled) {
-      this.expanded = false;
-    }
-  }
-
   @Listen('keydown')
   onKeydown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Escape':
-        if (this.isFilterable()) {
-          if (document.activeElement === this.listboxElement) {
-            return this.filterElement.focus();
-          }
-        }
         this.collapseListbox('focusFieldButton');
         return;
       case 'Tab':
-        if (this.shiftTabFromFilterListbox(event)) {
-          event.preventDefault();
-          return this.filterElement.focus();
-        } else if (this.shiftTabFromExpandedFilterInput(event)) {
-          event.preventDefault();
-          return this.collapseListbox('focusFieldButton');
-        } else {
-          this.collapseListbox('noFocusChange');
-        }
+        this.collapseListbox('noFocusChange');
+
         return;
       case 'ArrowDown':
         if (this.activeElementNotListbox()) {
           event.preventDefault();
           this.expanded = true;
-          setInitialActiveOption(this.listboxElement);
-        }
-        return;
-      case 'Enter':
-      case ' ':
-        if (!this.expanded && !this.isFilterable()) {
           setInitialActiveOption(this.listboxElement);
         }
         return;
@@ -193,9 +127,6 @@ export class GuxDropdown {
   @Event()
   guxcollapsed: EventEmitter<void>;
 
-  @Event()
-  private guxfilter: EventEmitter<string>;
-
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
     if (this.listboxElement) {
@@ -214,10 +145,6 @@ export class GuxDropdown {
     if (this.listboxElement) {
       afterNextRender(() => {
         this.listboxElement.focus();
-
-        if (this.isFilterable() && this.filterElement) {
-          this.filterElement.focus();
-        }
       });
     }
   }
@@ -238,10 +165,6 @@ export class GuxDropdown {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
-
-    onInputDisabledStateChange(this.root, () => {
-      forceUpdate(this.root);
-    });
   }
 
   componentDidLoad(): void {
@@ -251,9 +174,6 @@ export class GuxDropdown {
   componentWillRender(): void {
     if (this.listboxElement) {
       this.validateValue(this.value, this.listboxElement);
-      this.listboxElement.loading = this.loading;
-      this.listboxElement.filterType = this.filterType;
-      this.listboxElement.filter = this.filter;
     }
   }
   private showTooltip(): void {
@@ -300,10 +220,6 @@ export class GuxDropdown {
     }
   }
 
-  private isFilterable() {
-    return this.filterType === 'starts-with' || this.filterType === 'custom';
-  }
-
   get optionElements(): Array<ListboxOptionElement> {
     return getListOptions(this.listboxElement);
   }
@@ -318,53 +234,8 @@ export class GuxDropdown {
     this.expanded = !this.expanded;
   }
 
-  private filterInput(event: InputEvent): void {
-    event.stopPropagation();
-    this.filter = this.filterElement.value;
-  }
-
-  private shiftTabFromExpandedFilterInput(event: KeyboardEvent): boolean {
-    return (
-      event.shiftKey &&
-      this.isFilterable() &&
-      this.expanded &&
-      !(document.activeElement === this.listboxElement)
-    );
-  }
-
-  private shiftTabFromFilterListbox(event: KeyboardEvent): boolean {
-    return (
-      event.shiftKey &&
-      this.isFilterable() &&
-      document.activeElement === this.listboxElement
-    );
-  }
-
   private activeElementNotListbox(): boolean {
     return document.activeElement !== this.listboxElement;
-  }
-
-  private filterKeydown(event: KeyboardEvent): void {
-    switch (event.key) {
-      case 'ArrowDown':
-        event.stopImmediatePropagation();
-        event.preventDefault();
-        this.listboxElement.focus();
-        setInitialActiveOption(this.listboxElement);
-        return;
-      case 'Enter':
-        void this.listboxElement.guxSelectActive();
-        event.preventDefault();
-        return;
-    }
-  }
-
-  private filterKeyup(event: KeyboardEvent): void {
-    switch (event.key) {
-      case ' ':
-        event.preventDefault();
-        return;
-    }
   }
 
   private collapseListbox(
@@ -386,21 +257,6 @@ export class GuxDropdown {
       simulateNativeEvent(this.root, 'change');
     }
     this.collapseListbox('focusFieldButton');
-  }
-
-  private getTypeaheadText(filter: string): string {
-    const filterLength = filter.length;
-    if (filterLength > 0 && !this.loading) {
-      const option = getSearchOption(this.listboxElement, filter);
-      if (option && this.filterType !== 'custom') {
-        //The text content needs to be trimmed as white space can occur around the textContent if options are populated asynchronously.
-        const optionSlotTextContent =
-          getOptionDefaultSlot(option)?.textContent.trim();
-        return optionSlotTextContent?.substring(filterLength);
-      }
-    }
-
-    return '';
   }
 
   private renderTargetDisplay(): JSX.Element {
@@ -437,7 +293,7 @@ export class GuxDropdown {
       case 'gux-option-icon':
         return this.renderIconOption(item as HTMLGuxOptionIconElement);
       case 'gux-option-status-beta':
-        return this.renderIconOption(item as HTMLGuxOptionIconElement);
+        return this.renderStatusOption(item as HTMLGuxOptionStatusBetaElement);
       default:
         // eslint-disable-next-line no-case-declarations
         const _exhaustiveCheck: never = tag;
@@ -446,11 +302,13 @@ export class GuxDropdown {
   }
 
   private renderOption(option: HTMLGuxOptionElement): JSX.Element {
-    let optionText = option.textContent.trim();
+    let optionText = option.textContent;
     if (hasSlot(option, 'subtext')) {
-      // TODO: use getOptionDefaultSlot(option)?.textContent.trim() once Stencil fix for assignedNodes test issue is in (v4.27.2) - COMUI-3655
       const subtext = option.querySelector('[slot=subtext]');
-      optionText = optionText.replace(subtext.textContent.trim(), '');
+      optionText = optionText.substring(
+        0,
+        optionText.length - subtext.textContent.length
+      );
     }
     return (
       <gux-truncate ref={el => (this.truncateElement = el)} dir="auto">
@@ -461,15 +319,8 @@ export class GuxDropdown {
 
   private renderIconOption(iconOption: HTMLGuxOptionIconElement): JSX.Element {
     let iconStyle = null;
-    let optionText = iconOption.textContent;
-
     if (iconOption.iconColor !== null) {
       iconStyle = { color: iconOption.iconColor };
-    }
-
-    if (hasSlot(iconOption, 'subtext')) {
-      const subtext = iconOption.querySelector('[slot=subtext]');
-      optionText = optionText.replace(subtext.textContent, '');
     }
     return (
       <span
@@ -485,42 +336,24 @@ export class GuxDropdown {
           size="small"
         ></gux-icon>
         <gux-truncate ref={el => (this.truncateElement = el)}>
-          {optionText}
+          {iconOption.textContent}
         </gux-truncate>
       </span>
     ) as JSX.Element;
   }
 
-  private renderFilterInputField(): JSX.Element {
-    if (this.expanded && this.isFilterable()) {
-      return (
-        <div class="gux-field gux-input-field" dir="auto">
-          <div class="gux-field-content">
-            <div class="gux-filter">
-              <div class="gux-filter-display">
-                <span class="gux-filter-text">{this.filter}</span>
-                <span class="gux-filter-suggestion">
-                  {this.getTypeaheadText(this.filter)}
-                </span>
-              </div>
-              <div class="input-and-dropdown-button">
-                <input
-                  onClick={this.fieldButtonClick.bind(this)}
-                  class="gux-filter-input"
-                  type="text"
-                  aria-label={this.i18n('filterResults')}
-                  ref={el => (this.filterElement = el)}
-                  onInput={this.filterInput.bind(this)}
-                  onKeyDown={this.filterKeydown.bind(this)}
-                  onKeyUp={this.filterKeyup.bind(this)}
-                  disabled={this.disabled}
-                ></input>
-              </div>
-            </div>
-          </div>
-        </div>
-      ) as JSX.Element;
-    }
+  private renderStatusOption(
+    statusOption: HTMLGuxOptionStatusBetaElement
+  ): JSX.Element {
+    const optionText = statusOption.textContent;
+    return (
+      <div class="gux-status-indicator">
+        <span
+          class={`gux-status-icon gux-status-icon-${statusOption.accent}`}
+        ></span>
+        <div class="gux-status-indicator-text">{optionText}</div>
+      </div>
+    ) as JSX.Element;
   }
 
   private renderPopup(): JSX.Element {
@@ -531,20 +364,13 @@ export class GuxDropdown {
     return (
       <div
         class={{
-          'gux-target-container-expanded': this.expanded && this.isFilterable(),
-          'gux-target-container-collapsed': !(
-            this.expanded && this.isFilterable()
-          ),
-          'gux-error': this.hasError,
-          'gux-disabled': this.disabled
+          'gux-target-container-collapsed': true
         }}
         slot="target"
       >
-        {this.renderFilterInputField()}
         <button
           type="button"
           class="gux-field gux-field-button"
-          disabled={calculateInputDisabledState(this.root)}
           onClick={this.fieldButtonClick.bind(this)}
           onFocusin={this.showTooltip.bind(this)}
           onFocusout={this.hideTooltip.bind(this)}
@@ -553,7 +379,6 @@ export class GuxDropdown {
           aria-expanded={this.expanded.toString()}
         >
           {this.renderTargetContent()}
-          {this.renderRadialLoading()}
           <gux-icon
             class={{
               'gux-expand-icon': true
@@ -571,28 +396,14 @@ export class GuxDropdown {
     ) as JSX.Element;
   }
   private renderTargetContent(): JSX.Element {
-    if (!(this.expanded && this.isFilterable())) {
-      return (
-        <div class="gux-field-content">{this.renderTargetDisplay()}</div>
-      ) as JSX.Element;
-    }
-  }
-
-  private renderRadialLoading(): JSX.Element {
-    if (this.loading && !this.expanded) {
-      return (
-        <gux-radial-loading context="input"></gux-radial-loading>
-      ) as JSX.Element;
-    }
+    return (
+      <div class="gux-field-content">{this.renderTargetDisplay()}</div>
+    ) as JSX.Element;
   }
 
   render(): JSX.Element {
     return (
-      <gux-popup
-        expanded={this.expanded && (!this.loading || this.isFilterable())}
-        disabled={this.disabled || (this.loading && !this.isFilterable())}
-        exceedTargetWidth={this.exceedTargetWidth}
-      >
+      <gux-popup expanded={this.expanded} inline={true}>
         {this.renderTarget()}
         {this.renderPopup()}
       </gux-popup>
