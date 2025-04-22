@@ -1,17 +1,19 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 gux-button-slot {
   position: absolute;
   inset-block-start: 4px;
   inset-inline-end: 4px;
-  inline-size: var(--gse-ui-button-dismiss-medium-width);
-  block-size: var(--gse-ui-button-dismiss-medium-height);
+  inline-size: ui.$gse-ui-button-dismiss-medium-width;
+  block-size: ui.$gse-ui-button-dismiss-medium-height;
 
   &.gux-dismiss-small {
-    inline-size: var(--gse-ui-button-dismiss-small-width);
-    block-size: var(--gse-ui-button-dismiss-small-height);
+    inline-size: ui.$gse-ui-button-dismiss-small-width;
+    block-size: ui.$gse-ui-button-dismiss-small-height;
 
     button {
-      inline-size: var(--gse-ui-button-dismiss-small-width);
-      min-inline-size: var(--gse-ui-button-dismiss-small-width);
+      inline-size: ui.$gse-ui-button-dismiss-small-width;
+      min-inline-size: ui.$gse-ui-button-dismiss-small-width;
       block-size: var(
         --gse-ui-button-dismiss-small-height
       ); // button doesn't stay the same height for the small one without this
@@ -37,7 +39,7 @@ gux-button-slot {
       flex: 0 0 auto;
       align-self: auto;
       order: 0;
-      color: var(--gse-ui-dismissButton-foregroundColor);
+      color: ui.$gse-ui-dismissButton-foregroundColor;
     }
   }
 }

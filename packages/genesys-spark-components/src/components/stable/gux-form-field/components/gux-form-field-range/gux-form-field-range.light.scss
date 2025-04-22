@@ -1,11 +1,12 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 // Variables part
-$range-active: var(--gse-ui-rangeSlider-bar-selected-backgroundColor);
-$thumb-block-size: var(--gse-ui-rangeSlider-handle-height);
-$thumb-inline-size: var(--gse-ui-rangeSlider-handle-width);
+$range-active: ui.$gse-ui-rangeSlider-bar-selected-backgroundColor;
+$thumb-block-size: ui.$gse-ui-rangeSlider-handle-height;
+$thumb-inline-size: ui.$gse-ui-rangeSlider-handle-width;
 $track-width: 100%;
-$track-height: var(--gse-ui-rangeSlider-bar-height);
+$track-height: ui.$gse-ui-rangeSlider-bar-height;
 $track-radius: 0;
 $handle-enabled-background: var(
   --gse-ui-rangeSlider-handle-default-backgroundColor

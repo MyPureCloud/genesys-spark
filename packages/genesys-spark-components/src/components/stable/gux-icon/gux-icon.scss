@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: inline-flex;
   inline-size: 1em;
@@ -5,18 +7,18 @@
 }
 
 :host([size='small']) {
-  inline-size: var(--gse-ui-icon-small-size);
-  block-size: var(--gse-ui-icon-small-size);
+  inline-size: ui.$gse-ui-icon-small-size;
+  block-size: ui.$gse-ui-icon-small-size;
 }
 
 :host([size='medium']) {
-  inline-size: var(--gse-ui-icon-medium-size);
-  block-size: var(--gse-ui-icon-medium-size);
+  inline-size: ui.$gse-ui-icon-medium-size;
+  block-size: ui.$gse-ui-icon-medium-size;
 }
 
 :host([size='large']) {
-  inline-size: var(--gse-ui-icon-large-size);
-  block-size: var(--gse-ui-icon-large-size);
+  inline-size: ui.$gse-ui-icon-large-size;
+  block-size: ui.$gse-ui-icon-large-size;
 }
 
 .gux-icon-container {

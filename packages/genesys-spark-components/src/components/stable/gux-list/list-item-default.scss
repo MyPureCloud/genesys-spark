@@ -1,3 +1,6 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 @mixin gux-list-item-default {
   :host {
     inline-size: 100%;
@@ -14,9 +17,9 @@
   }
 
   ::slotted(gux-icon) {
-    inline-size: var(--gse-ui-menu-option-startIcon-height);
-    block-size: var(--gse-ui-menu-option-startIcon-height);
-    margin-inline-end: var(--gse-ui-menu-option-gap);
+    inline-size: ui.$gse-ui-menu-option-startIcon-height;
+    block-size: ui.$gse-ui-menu-option-startIcon-height;
+    margin-inline-end: ui.$gse-ui-menu-option-gap;
     vertical-align: middle;
   }
 
@@ -24,42 +27,42 @@
     all: unset;
     box-sizing: border-box;
     inline-size: 100%;
-    min-block-size: var(--gse-ui-menu-option-height);
-    padding: var(--gse-ui-menu-option-padding);
-    font-family: var(--gse-ui-menu-option-label-default-text-fontFamily);
-    font-size: var(--gse-ui-menu-option-label-default-text-fontSize);
-    font-weight: var(--gse-ui-menu-option-label-default-text-fontWeight);
-    line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
-    color: var(--gse-ui-menu-option-label-foregroundColor);
+    min-block-size: ui.$gse-ui-menu-option-height;
+    padding: ui.$gse-ui-menu-option-padding;
+    font-family: ui.$gse-ui-menu-option-label-default-text-fontFamily;
+    font-size: ui.$gse-ui-menu-option-label-default-text-fontSize;
+    font-weight: ui.$gse-ui-menu-option-label-default-text-fontWeight;
+    line-height: ui.$gse-ui-menu-option-label-default-text-lineHeight;
+    color: ui.$gse-ui-menu-option-label-foregroundColor;
     word-wrap: break-word;
     cursor: pointer;
     outline: none;
-    outline-offset: calc(var(--gse-ui-menu-option-focus-border-width) * -1);
-    background-color: var(--gse-ui-menu-option-default-backgroundColor);
+    outline-offset: calc(#{ui.$gse-ui-menu-option-focus-border-width} * -1);
+    background-color: ui.$gse-ui-menu-option-default-backgroundColor;
     border: none;
 
     &:focus-visible:not(:disabled) {
-      outline: var(--gse-ui-menu-option-focus-border-width)
-        var(--gse-ui-menu-option-focus-border-style)
-        var(--gse-ui-menu-option-focus-border-color);
-      border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
+      outline: ui.$gse-ui-menu-option-focus-border-width
+        ui.$gse-ui-menu-option-focus-border-style
+        ui.$gse-ui-menu-option-focus-border-color;
+      border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
     }
 
     &:hover:not(:disabled) {
-      background: var(--gse-ui-menu-option-hover-backgroundColor);
+      background: ui.$gse-ui-menu-option-hover-backgroundColor;
     }
 
     &:active:not(:disabled) {
-      font-family: var(--gse-ui-menu-option-label-active-text-fontFamily);
-      font-size: var(--gse-ui-menu-option-label-active-text-fontSize);
-      font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
-      line-height: var(--gse-ui-menu-option-label-active-text-lineHeight);
-      background: var(--gse-ui-menu-option-selected-backgroundColor);
+      font-family: ui.$gse-ui-menu-option-label-active-text-fontFamily;
+      font-size: ui.$gse-ui-menu-option-label-active-text-fontSize;
+      font-weight: ui.$gse-ui-menu-option-label-active-text-fontWeight;
+      line-height: ui.$gse-ui-menu-option-label-active-text-lineHeight;
+      background: ui.$gse-ui-menu-option-selected-backgroundColor;
     }
 
     &:disabled {
       cursor: default;
-      opacity: var(--gse-ui-menu-option-disabled-opacity);
+      opacity: ui.$gse-ui-menu-option-disabled-opacity;
     }
   }
 }

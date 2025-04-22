@@ -1,14 +1,17 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 .gux-popover-wrapper {
   position: fixed;
   inset-block-start: 0;
   inset-inline-start: 0;
-  z-index: var(--gse-semantic-zIndex-popover);
+  z-index: global.$gse-semantic-zIndex-popover;
   display: inline-block;
   padding-block: 8px;
   padding-inline: 0; // TODO: COMUI-2257 - add missing token
-  background-color: var(--gse-ui-popover-backgroundColor);
-  border-radius: var(--gse-ui-popover-borderRadius);
-  box-shadow: var(--gse-ui-popover-boxShadow);
+  background-color: ui.$gse-ui-popover-backgroundColor;
+  border-radius: ui.$gse-ui-popover-borderRadius;
+  box-shadow: ui.$gse-ui-popover-boxShadow;
 
   &.gux-hidden {
     display: none;
@@ -16,8 +19,8 @@
 
   .gux-arrow {
     position: absolute;
-    inline-size: var(--gse-ui-popover-anchor-width);
-    block-size: var(--gse-ui-popover-anchor-width);
-    background: var(--gse-ui-popover-backgroundColor);
+    inline-size: ui.$gse-ui-popover-anchor-width;
+    block-size: ui.$gse-ui-popover-anchor-width;
+    background: ui.$gse-ui-popover-backgroundColor;
   }
 }

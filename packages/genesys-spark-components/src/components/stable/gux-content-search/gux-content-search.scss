@@ -1,14 +1,15 @@
-// Variables part
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 :host {
   display: inline-block;
-  inline-size: var(--gse-ui-search-width);
-  min-inline-size: var(--gse-ui-search-width);
+  inline-size: ui.$gse-ui-search-width;
+  min-inline-size: ui.$gse-ui-search-width;
 }
 
 ::slotted(input[disabled]) {
-  opacity: var(--gse-ui-formControl-input-disabled-opacity);
+  opacity: ui.$gse-ui-formControl-input-disabled-opacity;
 }
 
 ::slotted(input) {
@@ -18,20 +19,20 @@
   inline-size: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: var(--gse-ui-search-counter-text-fontFamily);
-  font-size: var(--gse-ui-search-counter-text-fontSize);
-  font-weight: var(--gse-ui-search-counter-text-fontWeight);
-  line-height: var(--gse-ui-search-counter-text-lineHeight);
-  color: var(--gse-ui-formControl-input-populatedColor);
+  font-family: ui.$gse-ui-search-counter-text-fontFamily;
+  font-size: ui.$gse-ui-search-counter-text-fontSize;
+  font-weight: ui.$gse-ui-search-counter-text-fontWeight;
+  line-height: ui.$gse-ui-search-counter-text-lineHeight;
+  color: ui.$gse-ui-formControl-input-populatedColor;
   white-space: nowrap;
   outline: none;
-  background-color: var(--gse-ui-formControl-input-backgroundColor);
+  background-color: ui.$gse-ui-formControl-input-backgroundColor;
   background-image: none;
   border: 0;
   border-radius: 0;
 
   &::placeholder {
-    color: var(--gse-ui-formControl-input-populatedColor);
+    color: ui.$gse-ui-formControl-input-populatedColor;
   }
 
   &.gux-focused,
@@ -47,17 +48,17 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  gap: var(--gse-ui-formControl-input-gap);
+  gap: ui.$gse-ui-formControl-input-gap;
   inline-size: 100%;
-  block-size: var(--gse-ui-formControl-input-textfield-height);
-  padding: var(--gse-ui-formControl-textarea-padding);
+  block-size: ui.$gse-ui-formControl-input-textfield-height;
+  padding: ui.$gse-ui-formControl-textarea-padding;
   cursor: text;
-  background-color: var(--gse-ui-formControl-input-backgroundColor);
+  background-color: ui.$gse-ui-formControl-input-backgroundColor;
   background-image: none;
-  border: var(--gse-ui-formControl-input-default-border-width)
-    var(--gse-ui-formControl-input-default-border-style)
-    var(--gse-ui-formControl-input-default-border-color);
-  border-radius: var(--gse-ui-formControl-input-borderRadius);
+  border: ui.$gse-ui-formControl-input-default-border-width
+    ui.$gse-ui-formControl-input-default-border-style
+    ui.$gse-ui-formControl-input-default-border-color;
+  border-radius: ui.$gse-ui-formControl-input-borderRadius;
 
   gux-truncate {
     display: flex;
@@ -67,25 +68,25 @@
   &.gux-disabled {
     pointer-events: none;
     cursor: default;
-    opacity: var(--gse-ui-formControl-input-disabled-opacity);
+    opacity: ui.$gse-ui-formControl-input-disabled-opacity;
   }
 
   &:focus-visible,
   &:focus-within {
-    outline: var(--gse-ui-formControl-input-focus-border-width)
-      var(--gse-ui-formControl-input-focus-border-style)
-      var(--gse-ui-formControl-input-focus-border-color);
-    outline-offset: var(--gse-semantic-focusOutline-offset);
-    border: var(--gse-ui-formControl-input-active-border-width)
-      var(--gse-ui-formControl-input-active-border-style)
-      var(--gse-ui-formControl-input-active-border-color);
-    border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+    outline: ui.$gse-ui-formControl-input-focus-border-width
+      ui.$gse-ui-formControl-input-focus-border-style
+      ui.$gse-ui-formControl-input-focus-border-color;
+    outline-offset: global.$gse-semantic-focusOutline-offset;
+    border: ui.$gse-ui-formControl-input-active-border-width
+      ui.$gse-ui-formControl-input-active-border-style
+      ui.$gse-ui-formControl-input-active-border-color;
+    border-radius: ui.$gse-ui-formControl-focusRing-borderRadius;
   }
 
   &:not(:disabled):not(.gux-disabled):hover {
-    border: var(--gse-ui-formControl-input-hover-border-width)
-      var(--gse-ui-formControl-input-hover-border-style)
-      var(--gse-ui-formControl-input-hover-border-color);
+    border: ui.$gse-ui-formControl-input-hover-border-width
+      ui.$gse-ui-formControl-input-hover-border-style
+      ui.$gse-ui-formControl-input-hover-border-color;
   }
 
   .gux-search-icon {
@@ -96,11 +97,11 @@
     &:disabled {
       pointer-events: none;
       cursor: default;
-      opacity: var(--gse-ui-formControl-input-disabled-opacity);
+      opacity: ui.$gse-ui-formControl-input-disabled-opacity;
     }
 
     gux-icon {
-      color: var(--gse-ui-formControl-input-inputIcon-defaultColor);
+      color: ui.$gse-ui-formControl-input-inputIcon-defaultColor;
     }
   }
 
@@ -109,7 +110,7 @@
     display: flex;
     flex-grow: 1;
     flex-shrink: 0;
-    gap: var(--gse-ui-formControl-input-gap);
+    gap: ui.$gse-ui-formControl-input-gap;
     place-content: center flex-end;
     align-items: center;
     padding: 0;
@@ -117,25 +118,25 @@
     button {
       display: block;
       align-items: center;
-      block-size: var(--gse-ui-search-counter-icon-height);
+      block-size: ui.$gse-ui-search-counter-icon-height;
       padding: 0;
       overflow: hidden;
-      color: var(--gse-ui-search-counter-default-foregroundColor);
+      color: ui.$gse-ui-search-counter-default-foregroundColor;
       cursor: pointer;
       outline: none;
       background: none;
       border: none;
-      border-radius: var(--gse-ui-button-borderRadius);
+      border-radius: ui.$gse-ui-button-borderRadius;
 
       &:disabled {
         pointer-events: none;
         cursor: default;
-        opacity: var(--gse-ui-formControl-input-disabled-opacity);
+        opacity: ui.$gse-ui-formControl-input-disabled-opacity;
       }
 
       &:not(:disabled):hover,
       &:not(:disabled):focus-visible {
-        color: var(--gse-ui-search-counter-hover-foregroundColor);
+        color: ui.$gse-ui-search-counter-hover-foregroundColor;
       }
 
       &:not(.gux-clear-button):focus-visible:enabled {
@@ -147,8 +148,8 @@
         align-items: center;
 
         gux-icon {
-          inline-size: var(--gse-ui-icon-small-size);
-          block-size: var(--gse-ui-icon-small-size);
+          inline-size: ui.$gse-ui-icon-small-size;
+          block-size: ui.$gse-ui-icon-small-size;
         }
       }
     }
@@ -156,22 +157,22 @@
     .gux-navigation-disabled {
       pointer-events: auto;
       cursor: default;
-      opacity: var(--gse-ui-formControl-input-disabled-opacity);
+      opacity: ui.$gse-ui-formControl-input-disabled-opacity;
     }
 
     .gux-navigation-panel {
       display: flex;
-      gap: var(--gse-ui-search-counter-gap);
+      gap: ui.$gse-ui-search-counter-gap;
       align-items: center;
 
       .gux-navigation-divider {
         box-sizing: border-box;
         align-self: center;
-        block-size: var(--gse-ui-search-counter-divider-height);
-        color: var(--gse-ui-search-counter-default-foregroundColor);
-        border: var(--gse-ui-search-counter-divider-border-width)
-          var(--gse-ui-search-counter-divider-border-style)
-          var(--gse-ui-search-counter-divider-border-color);
+        block-size: ui.$gse-ui-search-counter-divider-height;
+        color: ui.$gse-ui-search-counter-default-foregroundColor;
+        border: ui.$gse-ui-search-counter-divider-border-width
+          ui.$gse-ui-search-counter-divider-border-style
+          ui.$gse-ui-search-counter-divider-border-color;
       }
 
       .gux-navigation-buttons {
@@ -181,7 +182,7 @@
 
       .gux-navigation-result {
         align-items: center;
-        color: var(--gse-ui-search-counter-default-foregroundColor);
+        color: ui.$gse-ui-search-counter-default-foregroundColor;
         white-space: nowrap;
       }
 

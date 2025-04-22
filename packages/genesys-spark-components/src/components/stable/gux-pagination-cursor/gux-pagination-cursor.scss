@@ -1,32 +1,34 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
   place-content: stretch space-between;
   align-items: flex-start;
-  padding: var(--gse-ui-dataTableItems-tablePagination-padding);
+  padding: ui.$gse-ui-dataTableItems-tablePagination-padding;
   font-family: var(
     --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
   );
-  font-size: var(--gse-ui-dataTableItems-tablePagination-defaultText-fontSize);
+  font-size: ui.$gse-ui-dataTableItems-tablePagination-defaultText-fontSize;
   font-weight: var(
     --gse-ui-dataTableItems-tablePagination-defaultText-fontWeight
   );
   line-height: var(
     --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
   );
-  color: var(--gse-ui-dataTableItems-tablePagination-foregroundColor);
+  color: ui.$gse-ui-dataTableItems-tablePagination-foregroundColor;
   background-color: var(
     --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor
   );
-  border-block-start: var(--gse-ui-dataTableItems-tablePagination-divider-width)
-    var(--gse-ui-dataTableItems-tablePagination-divider-style)
-    var(--gse-ui-dataTableItems-tablePagination-divider-color);
+  border-block-start: ui.$gse-ui-dataTableItems-tablePagination-divider-width
+    ui.$gse-ui-dataTableItems-tablePagination-divider-style
+    ui.$gse-ui-dataTableItems-tablePagination-divider-color;
 
   .gux-pagination-button-container {
     display: flex;
     flex-wrap: nowrap;
-    gap: var(--gse-ui-dataTableItems-tablePagination-recordsetControls-gap);
+    gap: ui.$gse-ui-dataTableItems-tablePagination-recordsetControls-gap;
     align-content: center;
   }
 
@@ -34,7 +36,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--gse-ui-button-gap);
+    gap: ui.$gse-ui-button-gap;
     align-content: center;
     align-items: center;
 

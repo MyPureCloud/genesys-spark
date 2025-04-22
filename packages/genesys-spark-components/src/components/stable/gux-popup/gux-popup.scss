@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 .gux-target-container {
@@ -10,10 +12,10 @@
 
 .gux-popup-container {
   position: fixed;
-  z-index: var(--gse-semantic-zIndex-popup);
+  z-index: global.$gse-semantic-zIndex-popup;
   visibility: hidden;
   inline-size: max-content;
-  background-color: var(--gse-ui-menu-backgroundColor);
+  background-color: ui.$gse-ui-menu-backgroundColor;
 
   &.gux-expanded {
     visibility: visible;

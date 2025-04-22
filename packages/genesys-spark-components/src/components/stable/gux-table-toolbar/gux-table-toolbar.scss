@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 @mixin gux-toolbar-prevent-initial-flicker-workaround {
   visibility: hidden;
   transition: visibility 0s 0.5s; /* Delay visibility of toolbar for 0.5s */
@@ -15,19 +17,19 @@
   align-items: center;
   justify-content: space-between;
   inline-size: 100%;
-  max-block-size: var(--gse-ui-dataTableItems-tableToolbar-height);
+  max-block-size: ui.$gse-ui-dataTableItems-tableToolbar-height;
 
   @include gux-toolbar-prevent-initial-flicker-workaround;
 
   .search-filter-container {
     min-inline-size: 260px;
-    padding-inline-end: var(--gse-ui-dataTableItems-tableToolbar-gap);
+    padding-inline-end: ui.$gse-ui-dataTableItems-tableToolbar-gap;
   }
 
   slot[name='search-and-filter']::slotted(*) {
     display: flex;
     flex-direction: row;
-    gap: var(--gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap);
+    gap: ui.$gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap;
     align-content: flex-start;
     align-items: center;
   }
@@ -42,30 +44,30 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-inline-start: var(--gse-ui-dataTableItems-tableToolbar-gap);
+    padding-inline-start: ui.$gse-ui-dataTableItems-tableToolbar-gap;
 
     slot[name='permanent-actions']::slotted(*),
     slot[name='contextual-actions']::slotted(*) {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: var(--gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap);
+      gap: ui.$gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap;
       align-content: flex-end;
       align-items: center;
     }
 
     .gux-contextual-wrapper {
-      padding-inline-end: var(--gse-ui-dataTableItems-tableToolbar-gap);
-      border-inline-end: var(--gse-ui-dataTableItems-tableToolbar-divider-width)
-        solid var(--gse-ui-dataTableItems-tableToolbar-dividerColor);
+      padding-inline-end: ui.$gse-ui-dataTableItems-tableToolbar-gap;
+      border-inline-end: ui.$gse-ui-dataTableItems-tableToolbar-divider-width
+        solid ui.$gse-ui-dataTableItems-tableToolbar-dividerColor;
     }
 
     .gux-permanent-menu-primary-wrapper {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: var(--gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap);
-      margin-inline-start: var(--gse-ui-dataTableItems-tableToolbar-gap);
+      gap: ui.$gse-ui-dataTableItems-tableToolbar-tableToolbarGroup-gap;
+      margin-inline-start: ui.$gse-ui-dataTableItems-tableToolbar-gap;
     }
   }
 }

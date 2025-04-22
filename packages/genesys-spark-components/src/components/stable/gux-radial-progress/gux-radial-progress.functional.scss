@@ -1,13 +1,15 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 @mixin gux-percentage-state-style {
   div[role='progressbar'] {
     .gux-svg-container {
       display: block;
-      inline-size: var(--gse-ui-progressAndLoading-spinner-large);
-      block-size: var(--gse-ui-progressAndLoading-spinner-large);
+      inline-size: ui.$gse-ui-progressAndLoading-spinner-large;
+      block-size: ui.$gse-ui-progressAndLoading-spinner-large;
 
       .gux-dynamic-circle {
         fill: none;
-        stroke: var(--gse-ui-progressAndLoading-spinner-foreground);
+        stroke: ui.$gse-ui-progressAndLoading-spinner-foreground;
         stroke-width: 4; //TODO https://inindca.atlassian.net/browse/COMUI-2226
         transform: rotate(-90deg);
         transform-origin: 50% 50%;
@@ -15,17 +17,17 @@
 
       .gux-static-circle {
         fill: none;
-        stroke: var(--gse-ui-progressAndLoading-spinner-base);
+        stroke: ui.$gse-ui-progressAndLoading-spinner-base;
         stroke-width: 4; //TODO https://inindca.atlassian.net/browse/COMUI-2226
       }
 
       .gux-percentage {
-        font-family: var(--gse-ui-progressAndLoading-spinner-text-fontFamily);
-        font-size: var(--gse-ui-progressAndLoading-spinner-text-fontSize);
-        font-weight: var(--gse-ui-progressAndLoading-spinner-text-fontWeight);
-        line-height: var(--gse-ui-progressAndLoading-spinner-text-lineHeight);
+        font-family: ui.$gse-ui-progressAndLoading-spinner-text-fontFamily;
+        font-size: ui.$gse-ui-progressAndLoading-spinner-text-fontSize;
+        font-weight: ui.$gse-ui-progressAndLoading-spinner-text-fontWeight;
+        line-height: ui.$gse-ui-progressAndLoading-spinner-text-lineHeight;
         text-anchor: middle;
-        fill: var(--gse-ui-progressAndLoading-textColor);
+        fill: ui.$gse-ui-progressAndLoading-textColor;
       }
     }
   }

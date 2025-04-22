@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '../../gux-form-field.scss';
 @use '../../functional-components/gux-form-field-container/gux-form-field-container.scss';
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
@@ -21,24 +23,24 @@
   flex: 0 1 auto;
   align-self: auto;
   order: 0;
-  inline-size: var(--gse-ui-colorPicker-input-swatchSizing);
-  min-inline-size: var(--gse-ui-colorPicker-input-swatchSizing);
-  block-size: var(--gse-ui-colorPicker-input-swatchSizing);
+  inline-size: ui.$gse-ui-colorPicker-input-swatchSizing;
+  min-inline-size: ui.$gse-ui-colorPicker-input-swatchSizing;
+  block-size: ui.$gse-ui-colorPicker-input-swatchSizing;
   padding: 0;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
-  font-size: var(--gse-ui-formControl-input-contentText-fontSize);
-  font-weight: var(--gse-ui-formControl-input-contentText-fontWeight);
-  line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
-  color: var(--gse-ui-formControl-input-populatedColor);
+  font-family: ui.$gse-ui-formControl-input-contentText-fontFamily;
+  font-size: ui.$gse-ui-formControl-input-contentText-fontSize;
+  font-weight: ui.$gse-ui-formControl-input-contentText-fontWeight;
+  line-height: ui.$gse-ui-formControl-input-contentText-lineHeight;
+  color: ui.$gse-ui-formControl-input-populatedColor;
   text-align: end;
   outline: none;
-  background-color: var(--gse-ui-formControl-input-backgroundColor);
+  background-color: ui.$gse-ui-formControl-input-backgroundColor;
   border: none;
 
   &::placeholder {
-    color: var(--gse-ui-formControl-input-placeholderColor);
+    color: ui.$gse-ui-formControl-input-placeholderColor;
     opacity: 1; // TODO:  COMUI-2187
   }
 }
@@ -58,48 +60,48 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: var(--gse-ui-formControl-input-gap);
+      gap: ui.$gse-ui-formControl-input-gap;
       place-content: stretch center;
       align-items: center;
       align-self: auto;
       order: 0;
-      inline-size: var(--gse-ui-formControl-input-colorPicker-size);
-      block-size: var(--gse-ui-formControl-input-colorPicker-size);
-      font-family: var(--gse-ui-formControl-input-contentText-fontFamily);
-      font-size: var(--gse-ui-formControl-input-contentText-fontSize);
-      line-height: var(--gse-ui-formControl-input-contentText-lineHeight);
-      color: var(--gse-ui-formControl-input-populatedColor);
-      background-color: var(--gse-ui-formControl-input-backgroundColor);
+      inline-size: ui.$gse-ui-formControl-input-colorPicker-size;
+      block-size: ui.$gse-ui-formControl-input-colorPicker-size;
+      font-family: ui.$gse-ui-formControl-input-contentText-fontFamily;
+      font-size: ui.$gse-ui-formControl-input-contentText-fontSize;
+      line-height: ui.$gse-ui-formControl-input-contentText-lineHeight;
+      color: ui.$gse-ui-formControl-input-populatedColor;
+      background-color: ui.$gse-ui-formControl-input-backgroundColor;
       background-image: none;
-      border: var(--gse-ui-formControl-input-default-border-width)
-        var(--gse-ui-formControl-input-default-border-style)
-        var(--gse-ui-formControl-input-default-border-color);
-      border-radius: var(--gse-ui-formControl-input-borderRadius);
+      border: ui.$gse-ui-formControl-input-default-border-width
+        ui.$gse-ui-formControl-input-default-border-style
+        ui.$gse-ui-formControl-input-default-border-color;
+      border-radius: ui.$gse-ui-formControl-input-borderRadius;
 
       &.gux-disabled {
-        opacity: var(--gse-ui-formControl-input-disabled-opacity);
+        opacity: ui.$gse-ui-formControl-input-disabled-opacity;
       }
 
       &:focus-within {
-        outline: var(--gse-ui-formControl-input-focus-border-width)
-          var(--gse-ui-formControl-input-focus-border-style)
-          var(--gse-ui-formControl-input-focus-border-color);
-        outline-offset: var(--gse-semantic-focusOutline-offset);
-        border: var(--gse-ui-formControl-input-active-border-width)
-          var(--gse-ui-formControl-input-active-border-style)
-          var(--gse-ui-formControl-input-active-border-color);
-        border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+        outline: ui.$gse-ui-formControl-input-focus-border-width
+          ui.$gse-ui-formControl-input-focus-border-style
+          ui.$gse-ui-formControl-input-focus-border-color;
+        outline-offset: global.$gse-semantic-focusOutline-offset;
+        border: ui.$gse-ui-formControl-input-active-border-width
+          ui.$gse-ui-formControl-input-active-border-style
+          ui.$gse-ui-formControl-input-active-border-color;
+        border-radius: ui.$gse-ui-formControl-focusRing-borderRadius;
       }
 
       &:hover {
         cursor: pointer;
-        border-color: var(--gse-ui-formControl-input-hover-border-color);
+        border-color: ui.$gse-ui-formControl-input-hover-border-color;
       }
     }
 
     &.gux-input-error {
       .gux-input-container {
-        border-color: var(--gse-ui-formControl-input-error-border-color);
+        border-color: ui.$gse-ui-formControl-input-error-border-color;
       }
     }
   }
