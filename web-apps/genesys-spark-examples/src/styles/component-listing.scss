@@ -36,11 +36,7 @@ main {
   }
 
   #mode-switcher-section {
-    display: none;
-
-    &.enabled {
-      display: block;
-    }
+    display: block;
   }
 
   .divider {
