@@ -2,16 +2,10 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 
 @mixin gse-ui-dataTableItems-tablePagination-typography {
-  font-family: var(
-    --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
-  );
+  font-family: ui.$gse-ui-dataTableItems-tablePagination-defaultText-fontFamily;
   font-size: ui.$gse-ui-dataTableItems-tablePagination-defaultText-fontSize;
-  font-weight: var(
-    --gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight
-  );
-  line-height: var(
-    --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
-  );
+  font-weight: ui.$gse-ui-dataTableItems-tablePagination-currentResultText-fontWeight;
+  line-height: ui.$gse-ui-dataTableItems-tablePagination-defaultText-lineHeight;
   color: ui.$gse-ui-button-ghost-default-foregroundColor;
 }
 
@@ -23,9 +17,7 @@ gux-pagination-buttons-legacy {
     gap: ui.$gse-ui-dataTableItems-tablePagination-recordsetControls-gap;
     place-content: stretch flex-end;
     align-items: center;
-    margin-left: var(
-      --gse-ui-dataTableItems-tablePagination-recordsetControls-gap
-    );
+    margin-left: ui.$gse-ui-dataTableItems-tablePagination-recordsetControls-gap;
 
     &.gux-expanded {
       justify-content: center;
@@ -77,18 +69,10 @@ gux-pagination-buttons-legacy {
 
       .gux-pagination-buttons-list-button {
         height: 32px;
-        padding-right: var(
-          --gse-ui-dataTableItems-tablePagination-countDisplay-gap
-        );
-        padding-left: var(
-          --gse-ui-dataTableItems-tablePagination-countDisplay-gap
-        );
-        margin-right: var(
-          --gse-ui-dataTableItems-tablePagination-countDisplay-gap
-        );
-        margin-left: var(
-          --gse-ui-dataTableItems-tablePagination-countDisplay-gap
-        );
+        padding-right: ui.$gse-ui-dataTableItems-tablePagination-countDisplay-gap;
+        padding-left: ui.$gse-ui-dataTableItems-tablePagination-countDisplay-gap;
+        margin-right: ui.$gse-ui-dataTableItems-tablePagination-countDisplay-gap;
+        margin-left: ui.$gse-ui-dataTableItems-tablePagination-countDisplay-gap;
         background: inherit;
         border: none;
 

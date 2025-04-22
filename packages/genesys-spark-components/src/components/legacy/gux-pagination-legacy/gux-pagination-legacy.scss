@@ -15,9 +15,7 @@
   align-items: center;
   height: ui.$gse-ui-dataTableItems-cell-tablePagination-height;
   padding: ui.$gse-ui-dataTableItems-tablePagination-padding;
-  background-color: var(
-    --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor
-  );
+  background-color: ui.$gse-ui-dataTableItems-tablePagination-defaultBackgroundColor;
 
   .gux-pagination-info {
     display: flex;

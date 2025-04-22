@@ -73,16 +73,12 @@ gux-tab-advanced {
 
     &:hover:not(.gux-disabled),
     &:focus-within {
-      border-block-end-color: var(
-        --gse-ui-advancedTabs-item-indicator-activeColor
-      );
+      border-block-end-color: ui.$gse-ui-advancedTabs-item-indicator-activeColor;
     }
 
     &.gux-selected {
       background-color: ui.$gse-ui-advancedTabs-item-backgroundColor;
-      border-block-end-color: var(
-        --gse-ui-advancedTabs-item-indicator-activeColor
-      );
+      border-block-end-color: ui.$gse-ui-advancedTabs-item-indicator-activeColor;
 
       &.gux-disabled {
         opacity: ui.$gse-ui-advancedTabs-item-disabled-opacity;

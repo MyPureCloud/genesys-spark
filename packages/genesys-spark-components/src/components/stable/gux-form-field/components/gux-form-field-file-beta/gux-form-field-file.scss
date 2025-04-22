@@ -51,9 +51,7 @@
     border-radius: ui.$gse-ui-fileUpload-dropZone-borderRadius;
 
     &.gux-drag-over:not(.gux-disabled) {
-      background-color: var(
-        --gse-ui-fileUpload-dragAndDrop-dropZone-background-active
-      );
+      background-color: ui.$gse-ui-fileUpload-dragAndDrop-dropZone-background-active;
       border: ui.$gse-ui-fileUpload-dragAndDrop-dropZone-active-border-width
         ui.$gse-ui-fileUpload-dragAndDrop-dropZone-active-border-style
         ui.$gse-ui-fileUpload-dragAndDrop-dropZone-active-border-color;

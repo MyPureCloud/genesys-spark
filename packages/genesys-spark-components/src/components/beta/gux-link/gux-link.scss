@@ -76,15 +76,9 @@
       ui.$gse-ui-links-standalone-medium-underlinedText-fontFamily,
       global.$gse-semantic-theme-fontFamily-body, sans-serif;
     font-size: ui.$gse-ui-links-standalone-medium-underlinedText-fontSize;
-    font-weight: var(
-      --gse-ui-links-standalone-medium-underlinedText-fontWeight
-    );
-    line-height: var(
-      --gse-ui-links-standalone-medium-underlinedText-lineHeight
-    );
-    text-decoration: var(
-      --gse-ui-links-standalone-medium-underlinedText-textDecoration
-    ) !important;
+    font-weight: ui.$gse-ui-links-standalone-medium-underlinedText-fontWeight;
+    line-height: ui.$gse-ui-links-standalone-medium-underlinedText-lineHeight;
+    text-decoration: ui.$gse-ui-links-standalone-medium-underlinedText-textDecoration !important;
   }
 
   ::slotted(a:active) {
@@ -109,9 +103,7 @@
     font-size: ui.$gse-ui-links-standalone-small-underlinedText-fontSize;
     font-weight: ui.$gse-ui-links-standalone-small-underlinedText-fontWeight;
     line-height: ui.$gse-ui-links-standalone-small-underlinedText-lineHeight;
-    text-decoration: var(
-      --gse-ui-links-standalone-small-underlinedText-textDecoration
-    ) !important;
+    text-decoration: ui.$gse-ui-links-standalone-small-underlinedText-textDecoration !important;
   }
 }
 

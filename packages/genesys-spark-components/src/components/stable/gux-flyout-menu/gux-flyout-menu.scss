@@ -29,13 +29,8 @@
 
   .gux-arrow {
     position: absolute;
-    inline-size: var(
-      --gse-ui-popover-anchor-width
-    ); // TODO: COMUI-2993 Replace this token with menu-specific token
-
-    block-size: var(
-      --gse-ui-popover-anchor-height
-    ); // TODO: COMUI-2993 Replace this token with menu-specific token
+    inline-size: ui.$gse-ui-popover-anchor-width; // TODO: COMUI-2993 Replace this token with menu-specific token
+    block-size: ui.$gse-ui-popover-anchor-height; // TODO: COMUI-2993 Replace this token with menu-specific token
 
     /* 4px padding leaves some space for the shadow to bleed into */
     padding-block-end: 4px;

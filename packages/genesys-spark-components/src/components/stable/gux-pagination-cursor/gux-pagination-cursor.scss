@@ -7,20 +7,12 @@
   place-content: stretch space-between;
   align-items: flex-start;
   padding: ui.$gse-ui-dataTableItems-tablePagination-padding;
-  font-family: var(
-    --gse-ui-dataTableItems-tablePagination-defaultText-fontFamily
-  );
+  font-family: ui.$gse-ui-dataTableItems-tablePagination-defaultText-fontFamily;
   font-size: ui.$gse-ui-dataTableItems-tablePagination-defaultText-fontSize;
-  font-weight: var(
-    --gse-ui-dataTableItems-tablePagination-defaultText-fontWeight
-  );
-  line-height: var(
-    --gse-ui-dataTableItems-tablePagination-defaultText-lineHeight
-  );
+  font-weight: ui.$gse-ui-dataTableItems-tablePagination-defaultText-fontWeight;
+  line-height: ui.$gse-ui-dataTableItems-tablePagination-defaultText-lineHeight;
   color: ui.$gse-ui-dataTableItems-tablePagination-foregroundColor;
-  background-color: var(
-    --gse-ui-dataTableItems-tablePagination-defaultBackgroundColor
-  );
+  background-color: ui.$gse-ui-dataTableItems-tablePagination-defaultBackgroundColor;
   border-block-start: ui.$gse-ui-dataTableItems-tablePagination-divider-width
     ui.$gse-ui-dataTableItems-tablePagination-divider-style
     ui.$gse-ui-dataTableItems-tablePagination-divider-color;

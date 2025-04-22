@@ -14,10 +14,7 @@ gux-button-slot {
     button {
       inline-size: ui.$gse-ui-button-dismiss-small-width;
       min-inline-size: ui.$gse-ui-button-dismiss-small-width;
-      block-size: var(
-        --gse-ui-button-dismiss-small-height
-      ); // button doesn't stay the same height for the small one without this
-
+      block-size: ui.$gse-ui-button-dismiss-small-height; // button doesn't stay the same height for the small one without this
       padding: 0;
     }
   }

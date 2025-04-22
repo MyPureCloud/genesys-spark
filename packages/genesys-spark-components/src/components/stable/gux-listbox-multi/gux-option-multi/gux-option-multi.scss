@@ -34,9 +34,7 @@
     content: '';
 
     > path {
-      fill: var(
-        --gse-ui-menu-option-checkbox-unchecked-default-foregroundColor
-      );
+      fill: ui.$gse-ui-menu-option-checkbox-unchecked-default-foregroundColor;
     }
   }
 
@@ -99,9 +97,7 @@
 
     &:host(:not(.gux-selected)) {
       .gux-checkbox-container > path {
-        fill: var(
-          --gse-ui-menu-option-checkbox-unchecked-hover-foregroundColor
-        );
+        fill: ui.$gse-ui-menu-option-checkbox-unchecked-hover-foregroundColor;
       }
     }
   }
