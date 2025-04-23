@@ -80,9 +80,7 @@ gux-tabs {
     align-items: center;
     justify-content: center;
     background-color: ui.$gse-ui-advancedTabs-set-backgroundColor;
-    border-radius: var(
-      --gse-ui-button-borderRadius
-    ); // TODO: COMUI-2341. Should we use button tokens here ?
+    border-radius: ui.$gse-ui-button-borderRadius; // TODO: COMUI-2341. Should we use button tokens here ?
 
     gux-button-slot {
       inline-size: 100%;

@@ -28,9 +28,7 @@ gux-table {
       text-align: start;
 
       &:has(gux-row-select) {
-        inline-size: var(
-          --gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width
-        );
+        inline-size: ui.$gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width;
       }
 
       gux-icon {
@@ -53,9 +51,7 @@ gux-table {
       background: ui.$gse-ui-dataTableItems-header-defaultBackgroundColor;
 
       &:has(gux-all-row-select) {
-        inline-size: var(
-          --gse-ui-dataTableItems-header-multiselect-default-width
-        );
+        inline-size: ui.$gse-ui-dataTableItems-header-multiselect-default-width;
       }
     }
 
@@ -76,9 +72,7 @@ gux-table {
     }
 
     th:has(gux-all-row-select) {
-      inline-size: var(
-        --gse-ui-dataTableItems-header-multiselect-default-width
-      );
+      inline-size: ui.$gse-ui-dataTableItems-header-multiselect-default-width;
     }
 
     th:last-child,
@@ -98,9 +92,7 @@ gux-table {
 
     tbody {
       tr td {
-        background-color: var(
-          --gse-ui-dataTableItems-cell-defaultBackgroundColor
-        );
+        background-color: ui.$gse-ui-dataTableItems-cell-defaultBackgroundColor;
       }
 
       tr:nth-child(2n) td {
@@ -113,9 +105,7 @@ gux-table {
 
       tr:hover td,
       tr:nth-child(2n):hover td {
-        background-color: var(
-          --gse-ui-dataTableItems-cell-hoverBackgroundColor
-        );
+        background-color: ui.$gse-ui-dataTableItems-cell-hoverBackgroundColor;
       }
     }
   }
@@ -125,9 +115,7 @@ gux-table {
       block-size: ui.$gse-ui-dataTableItems-header-compact-height;
 
       &:has(gux-all-row-select) {
-        inline-size: var(
-          --gse-ui-dataTableItems-header-multiselect-compact-width
-        );
+        inline-size: ui.$gse-ui-dataTableItems-header-multiselect-compact-width;
       }
     }
 
@@ -135,9 +123,7 @@ gux-table {
       block-size: ui.$gse-ui-dataTableItems-cell-compact-height;
 
       &:has(gux-row-select) {
-        inline-size: var(
-          --gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width
-        );
+        inline-size: ui.$gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width;
       }
     }
   }

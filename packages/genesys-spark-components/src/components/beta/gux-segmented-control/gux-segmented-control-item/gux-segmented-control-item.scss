@@ -65,9 +65,7 @@ button {
     line-height: 0;
     color: ui.$gse-ui-segmentedControl-button-default-foregroundColor;
     cursor: pointer;
-    background-color: var(
-      --gse-ui-segmentedControl-button-default-backgroundColor
-    );
+    background-color: ui.$gse-ui-segmentedControl-button-default-backgroundColor;
 
     &.gux-icon-only {
       padding: ui.$gse-ui-segmentedControl-iconOnly-padding;
@@ -81,26 +79,20 @@ button {
 
     &:hover {
       color: ui.$gse-ui-segmentedControl-button-hover-foregroundColor;
-      background-color: var(
-        --gse-ui-segmentedControl-button-hover-backgroundColor
-      );
+      background-color: ui.$gse-ui-segmentedControl-button-hover-backgroundColor;
     }
 
     &[disabled] {
       color: ui.$gse-ui-segmentedControl-button-disabled-foregroundColor;
       pointer-events: none;
       cursor: default;
-      background-color: var(
-        --gse-ui-segmentedControl-button-disabled-backgroundColor
-      );
+      background-color: ui.$gse-ui-segmentedControl-button-disabled-backgroundColor;
       opacity: ui.$gse-ui-segmentedControl-button-disabled-opacity;
     }
 
     &.gux-selected {
       color: ui.$gse-ui-segmentedControl-button-active-foregroundColor;
-      background-color: var(
-        --gse-ui-segmentedControl-button-active-backgroundColor
-      );
+      background-color: ui.$gse-ui-segmentedControl-button-active-backgroundColor;
     }
 
     &:focus-visible {

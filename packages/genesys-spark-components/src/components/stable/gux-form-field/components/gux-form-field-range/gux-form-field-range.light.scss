@@ -8,15 +8,9 @@ $thumb-inline-size: ui.$gse-ui-rangeSlider-handle-width;
 $track-width: 100%;
 $track-height: ui.$gse-ui-rangeSlider-bar-height;
 $track-radius: 0;
-$handle-enabled-background: var(
-  --gse-ui-rangeSlider-handle-default-backgroundColor
-);
-$handle-hover-background: var(
-  --gse-ui-rangeSlider-handle-hover-backgroundColor
-);
-$handle-active-background: var(
-  --gse-ui-rangeSlider-handle-active-backgroundColor
-);
+$handle-enabled-background: ui.$gse-ui-rangeSlider-handle-default-backgroundColor;
+$handle-hover-background: ui.$gse-ui-rangeSlider-handle-hover-backgroundColor;
+$handle-active-background: ui.$gse-ui-rangeSlider-handle-active-backgroundColor;
 $handle-border-radius: 100%;
 $contrast: 5%;
 $slider-border: #b4bccb;

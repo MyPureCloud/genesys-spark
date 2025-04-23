@@ -69,17 +69,13 @@
     ui.$gse-ui-selectorCard-selected-border-color;
 
   &::before {
-    background-color: var(
-      --gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor
-    );
+    background-color: ui.$gse-ui-selectorCard-default-selectedIndicator-selected-foregroundColor;
   }
 }
 
 ::slotted(input[type='radio']:not(:checked))::before,
 ::slotted(input[type='checkbox']:not(:checked))::before {
-  background-color: var(
-    --gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor
-  );
+  background-color: ui.$gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor;
 }
 
 ::slotted(input[type='radio']:disabled),
@@ -164,9 +160,7 @@
       }
 
       ::slotted(gux-badge) {
-        margin-block-start: var(
-          --gse-ui-selectorCard-descriptive-badge-marginTop
-        );
+        margin-block-start: ui.$gse-ui-selectorCard-descriptive-badge-marginTop;
       }
 
       ::slotted(input[type='radio']),
@@ -219,9 +213,7 @@
 
       ::slotted(input[type='radio'])::before,
       ::slotted(input[type='checkbox'])::before {
-        background-color: var(
-          --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor
-        );
+        background-color: ui.$gse-ui-selectorCard-hover-selectedIndicator-foregroundColor;
       }
     }
   }
@@ -232,9 +224,7 @@
 
       ::slotted(input[type='radio'])::before,
       ::slotted(input[type='checkbox'])::before {
-        background-color: var(
-          --gse-ui-selectorCard-active-selectedIndicator-foregroundColor
-        );
+        background-color: ui.$gse-ui-selectorCard-active-selectedIndicator-foregroundColor;
       }
     }
   }

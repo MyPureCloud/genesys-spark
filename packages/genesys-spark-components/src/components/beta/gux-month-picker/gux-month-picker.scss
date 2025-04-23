@@ -62,9 +62,7 @@
         ui.$gse-ui-monthPicker-calendarStates-focus-border-style
         ui.$gse-ui-monthPicker-calendarStates-focus-border-color;
       outline-offset: global.$gse-semantic-focusOutline-offset;
-      border-radius: var(
-        --gse-ui-calendarMenu-month-calendarButton-focusBorderRadius
-      );
+      border-radius: ui.$gse-ui-calendarMenu-month-calendarButton-focusBorderRadius;
     }
 
     &:not(:disabled):hover {

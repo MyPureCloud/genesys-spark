@@ -101,9 +101,7 @@ gux-toggle-slider {
         background-color: ui.$gse-ui-toggle-track-enabled-on-backgroundColor;
 
         &.gux-disabled {
-          background-color: var(
-            --gse-ui-toggle-track-disabled-on-backgroundColor
-          );
+          background-color: ui.$gse-ui-toggle-track-disabled-on-backgroundColor;
 
           .gux-switch {
             border: ui.$gse-ui-toggle-handle-disabled-border-width

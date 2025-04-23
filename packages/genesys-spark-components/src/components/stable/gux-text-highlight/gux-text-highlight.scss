@@ -8,8 +8,6 @@ span {
 
 .gux-dimmed {
   mark {
-    background-color: var(
-      --gse-ui-search-match-subsequentLevel-backgroundColor
-    );
+    background-color: ui.$gse-ui-search-match-subsequentLevel-backgroundColor;
   }
 }

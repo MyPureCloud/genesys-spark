@@ -23,9 +23,7 @@ gux-form-field-radio {
   input[type='radio']:not(:checked)::before {
     @include radio-icons.unchecked;
 
-    background: var(
-      --gse-ui-radioButton-icon-default-unselectedForegroundColor
-    );
+    background: ui.$gse-ui-radioButton-icon-default-unselectedForegroundColor;
   }
 
   input[type='radio']:not(:checked):not(:disabled):hover::before {

@@ -160,9 +160,7 @@
 
             outline-offset: ui.$gse-ui-datePicker-focusCalendar-gap;
             border: none;
-            border-radius: var(
-              --gse-ui-calendarMenu-month-calendarButton-focusBorderRadius
-            );
+            border-radius: ui.$gse-ui-calendarMenu-month-calendarButton-focusBorderRadius;
           }
 
           &:not(:disabled):focus-visible,

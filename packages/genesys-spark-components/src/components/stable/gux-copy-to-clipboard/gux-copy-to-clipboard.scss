@@ -2,9 +2,7 @@
 
 @mixin focus-and-hover-copy-content {
   ::slotted(*) {
-    background-color: var(
-      --gse-ui-copyToClipboard-label-active-backgroundColor
-    );
+    background-color: ui.$gse-ui-copyToClipboard-label-active-backgroundColor;
   }
 
   gux-icon[icon-name='fa/copy-regular'] {
@@ -47,9 +45,7 @@ button {
       visibility: hidden;
       flex-shrink: 0;
       padding: ui.$gse-ui-copyToClipboard-iconContainer-padding;
-      background-color: var(
-        --gse-ui-copyToClipboard-label-active-backgroundColor
-      );
+      background-color: ui.$gse-ui-copyToClipboard-label-active-backgroundColor;
       border-radius: ui.$gse-ui-copyToClipboard-label-borderRadius;
     }
   }

@@ -119,30 +119,22 @@
           cursor: pointer;
 
           &.gux-hovered {
-            background-color: var(
-              --gse-ui-calendarMenu-date-range-backgroundColor
-            );
+            background-color: ui.$gse-ui-calendarMenu-date-range-backgroundColor;
           }
 
           &.gux-selected {
             color: ui.$gse-ui-calendarMenu-date-selected-foregroundColor;
-            background-color: var(
-              --gse-ui-calendarMenu-date-selected-backgroundColor
-            );
+            background-color: ui.$gse-ui-calendarMenu-date-selected-backgroundColor;
             border-radius: ui.$gse-ui-calendarMenu-month-borderRadius;
 
             &:hover:not(&.gux-start-date):not(&.gux-end-date) {
-              background-color: var(
-                --gse-ui-calendarMenu-date-selected-hoverBackgroundColor
-              );
+              background-color: ui.$gse-ui-calendarMenu-date-selected-hoverBackgroundColor;
             }
           }
 
           &.gux-start-date,
           &.gux-end-date {
-            background-color: var(
-              --gse-ui-calendarMenu-date-range-backgroundColor
-            );
+            background-color: ui.$gse-ui-calendarMenu-date-range-backgroundColor;
 
             .gux-date {
               display: flex;
@@ -150,37 +142,27 @@
               justify-content: center;
               inline-size: ui.$gse-ui-calendarMenu-day-date-size;
               block-size: ui.$gse-ui-calendarMenu-day-date-size;
-              background-color: var(
-                --gse-ui-calendarMenu-date-selected-backgroundColor
-              );
+              background-color: ui.$gse-ui-calendarMenu-date-selected-backgroundColor;
               border-radius: ui.$gse-ui-calendarMenu-month-borderRadius;
 
               &:hover {
-                background-color: var(
-                  --gse-ui-calendarMenu-date-selected-hoverBackgroundColor
-                );
+                background-color: ui.$gse-ui-calendarMenu-date-selected-hoverBackgroundColor;
               }
             }
           }
 
           &.gux-start-date {
-            border-radius: var(
-              --gse-ui-calendarMenu-range-date-startDate-borderRadius
-            );
+            border-radius: ui.$gse-ui-calendarMenu-range-date-startDate-borderRadius;
           }
 
           &.gux-end-date {
-            border-radius: var(
-              --gse-ui-calendarMenu-range-date-endDate-borderRadius
-            );
+            border-radius: ui.$gse-ui-calendarMenu-range-date-endDate-borderRadius;
           }
 
           &:hover:not(&.gux-start-date):not(&.gux-end-date):not(
               &.gux-hovered
             ):not(&.gux-selected) {
-            background-color: var(
-              --gse-ui-calendarMenu-date-hover-backgroundColor
-            );
+            background-color: ui.$gse-ui-calendarMenu-date-hover-backgroundColor;
             border-radius: ui.$gse-ui-calendarMenu-month-borderRadius;
           }
 
@@ -193,9 +175,7 @@
             opacity: ui.$gse-ui-calendarMenu-disabled-opacity;
 
             &:hover {
-              background-color: var(
-                --gse-ui-calendarMenu-date-hover-backgroundColor
-              );
+              background-color: ui.$gse-ui-calendarMenu-date-hover-backgroundColor;
             }
 
             &.gux-hidden {

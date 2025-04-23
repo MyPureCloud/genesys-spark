@@ -14,9 +14,7 @@
     transparent;
 
   &:focus-within {
-    border-block-end-color: var(
-      --gse-ui-dataTableItems-header-selectedIndicatorColor
-    );
+    border-block-end-color: ui.$gse-ui-dataTableItems-header-selectedIndicatorColor;
   }
 
   .gux-sort-button {
