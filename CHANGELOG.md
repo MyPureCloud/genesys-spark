@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.141.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.140.0...v4.141.0) (2025-04-23)
+
+
+### Features
+
+* **button-multi:** improve screenreader experience ([#1045](https://github.com/MyPureCloud/genesys-spark/issues/1045)) ([a053a78](https://github.com/MyPureCloud/genesys-spark/commit/a053a785fdeb1ed2d6a81747d83f0b5f2d3d3375))
+* **other:** Added official dark mode support ([8fb5dff](https://github.com/MyPureCloud/genesys-spark/commit/8fb5dfffafb5c5809f94c1f038f2f9bbf7818ec6))
+
+
+### Bug Fixes
+
+* **dropdown-multi:** add render timeout when slot content changes ([e6f0a63](https://github.com/MyPureCloud/genesys-spark/commit/e6f0a6385531cc2d726429a6117b7479bb770ac1))
+
 ## [4.140.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.139.0...v4.140.0) (2025-04-23)
 
 
