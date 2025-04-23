@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.140.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.139.0...v4.140.0) (2025-04-23)
+
+
+### Features
+
+* **inline-dropdown-beta:** add new component ([34367bc](https://github.com/MyPureCloud/genesys-spark/commit/34367bcc6f4e5bf6a110425f131e5b7cf336d90b))
+
+
+### Bug Fixes
+
+* **form-field-file-beta:** small UX fixes ([e79e207](https://github.com/MyPureCloud/genesys-spark/commit/e79e2075afce145a70fbe14ae72f3bbbe6d10f50))
+
 ## [4.139.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.5...v4.139.0) (2025-04-19)
 
 
