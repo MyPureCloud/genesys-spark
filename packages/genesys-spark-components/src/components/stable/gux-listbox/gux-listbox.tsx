@@ -188,7 +188,6 @@ export class GuxListbox {
 
   private setListboxOptions(): void {
     this.selectedValues = convertValueToArray(this.value);
-
     this.listboxOptions = getListOptions(this.root);
     this.internallistboxoptionsupdated.emit();
   }

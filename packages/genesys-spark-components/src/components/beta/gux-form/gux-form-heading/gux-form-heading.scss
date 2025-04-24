@@ -1,8 +1,10 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+
 ::slotted(*) {
   margin: 0;
-  font-family: var(--gse-semantic-body-lg-semiBold-fontFamily) !important;
-  font-size: var(--gse-semantic-body-lg-semiBold-fontSize) !important;
-  font-weight: var(--gse-semantic-body-lg-semiBold-fontWeight) !important;
-  line-height: var(--gse-semantic-body-lg-semiBold-lineHeight) !important;
-  color: var(--gse-semantic-foreground-container-highEmphasis) !important;
+  font-family: global.$gse-semantic-body-lg-semiBold-fontFamily !important;
+  font-size: global.$gse-semantic-body-lg-semiBold-fontSize !important;
+  font-weight: global.$gse-semantic-body-lg-semiBold-fontWeight !important;
+  line-height: global.$gse-semantic-body-lg-semiBold-lineHeight !important;
+  color: global.$gse-semantic-foreground-container-highEmphasis !important;
 }

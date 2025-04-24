@@ -147,6 +147,12 @@ export class GuxDropdown {
           setInitialActiveOption(this.listboxElement);
         }
         return;
+      case 'Enter':
+      case ' ':
+        if (!this.expanded && !this.isFilterable()) {
+          setInitialActiveOption(this.listboxElement);
+        }
+        return;
     }
   }
 
@@ -430,6 +436,8 @@ export class GuxDropdown {
         return this.renderOption(item as HTMLGuxOptionElement);
       case 'gux-option-icon':
         return this.renderIconOption(item as HTMLGuxOptionIconElement);
+      case 'gux-option-status-beta':
+        return this.renderIconOption(item as HTMLGuxOptionIconElement);
       default:
         // eslint-disable-next-line no-case-declarations
         const _exhaustiveCheck: never = tag;
@@ -440,9 +448,9 @@ export class GuxDropdown {
   private renderOption(option: HTMLGuxOptionElement): JSX.Element {
     let optionText = option.textContent.trim();
     if (hasSlot(option, 'subtext')) {
-      // TODO: use getOptionDefaultSlot(option)?.textContent.trim() once Stencil fix for assignedNodes test issue is in (v4.27.2)
+      // TODO: use getOptionDefaultSlot(option)?.textContent.trim() once Stencil fix for assignedNodes test issue is in (v4.27.2) - COMUI-3655
       const subtext = option.querySelector('[slot=subtext]');
-      optionText = optionText.replace(subtext.textContent, '');
+      optionText = optionText.replace(subtext.textContent.trim(), '');
     }
     return (
       <gux-truncate ref={el => (this.truncateElement = el)} dir="auto">

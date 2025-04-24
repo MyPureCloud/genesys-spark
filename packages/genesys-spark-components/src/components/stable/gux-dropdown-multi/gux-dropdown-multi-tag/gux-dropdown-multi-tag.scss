@@ -1,3 +1,4 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 @use '~genesys-spark/dist/scss/mixins.scss';
 
@@ -12,15 +13,15 @@
   flex-wrap: nowrap;
   place-content: stretch flex-start;
   align-items: center;
-  block-size: var(--gse-ui-tag-small-height);
-  padding: var(--gse-ui-tag-removable-padding);
-  font-family: var(--gse-ui-tag-textLarge-fontFamily);
-  font-size: var(--gse-ui-tag-textLarge-fontSize);
-  font-weight: var(--gse-ui-tag-textLarge-fontWeight);
-  line-height: var(--gse-ui-tag-textLarge-lineHeight);
-  color: var(--gse-ui-tag-accent1-bold-foregroundColor);
-  background-color: var(--gse-ui-tag-accent1-bold-backgroundColor);
-  border-radius: var(--gse-ui-tag-borderRadius);
+  block-size: ui.$gse-ui-tag-small-height;
+  padding: ui.$gse-ui-tag-removable-padding;
+  font-family: ui.$gse-ui-tag-textLarge-fontFamily;
+  font-size: ui.$gse-ui-tag-textLarge-fontSize;
+  font-weight: ui.$gse-ui-tag-textLarge-fontWeight;
+  line-height: ui.$gse-ui-tag-textLarge-lineHeight;
+  color: ui.$gse-ui-tag-accent1-bold-foregroundColor;
+  background-color: ui.$gse-ui-tag-accent1-bold-backgroundColor;
+  border-radius: ui.$gse-ui-tag-borderRadius;
 
   .gux-sr-only {
     @include mixins.gux-sr-only-clip;
@@ -31,7 +32,7 @@
     display: flex;
     place-content: center center;
     align-items: center;
-    margin-inline-start: var(--gse-ui-tag-removable-gap);
+    margin-inline-start: ui.$gse-ui-tag-removable-gap;
 
     &:not(:disabled):hover {
       cursor: pointer;
@@ -45,6 +46,6 @@
   }
 
   &.gux-disabled {
-    opacity: var(--gse-ui-tag-disabled-opacity);
+    opacity: ui.$gse-ui-tag-disabled-opacity;
   }
 }

@@ -1,5 +1,7 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 .gux-selector-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gse-ui-selectorCard-simple-gap);
+  gap: ui.$gse-ui-selectorCard-simple-gap;
 }

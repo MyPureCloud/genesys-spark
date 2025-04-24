@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 .gux-change-photo {
@@ -22,25 +24,25 @@
       position: absolute;
       inset-block-start: 50%;
       inset-inline-start: 50%;
-      z-index: var(--gse-semantic-zIndex-showFocus);
+      z-index: global.$gse-semantic-zIndex-showFocus;
       display: inline-block;
-      color: var(--gse-ui-avatar-hoverModal-foregroundColor);
+      color: ui.$gse-ui-avatar-hoverModal-foregroundColor;
       transform: translate(-50%, -50%);
     }
 
     &::after {
       position: absolute;
-      inset-block-start: var(--gse-ui-avatar-large-presenceRing-width);
-      inset-inline-start: var(--gse-ui-avatar-large-presenceRing-width);
-      inline-size: var(--gse-ui-avatar-addChangeImage-hoverModal-shroudSize);
-      block-size: var(--gse-ui-avatar-addChangeImage-hoverModal-shroudSize);
+      inset-block-start: ui.$gse-ui-avatar-large-presenceRing-width;
+      inset-inline-start: ui.$gse-ui-avatar-large-presenceRing-width;
+      inline-size: ui.$gse-ui-avatar-addChangeImage-hoverModal-shroudSize;
+      block-size: ui.$gse-ui-avatar-addChangeImage-hoverModal-shroudSize;
       content: '';
-      background-color: var(--gse-ui-avatar-hoverModal-shroudColor);
-      border: var(--gse-ui-avatar-content-large-border-width)
-        var(--gse-ui-avatar-content-default-border-style)
-        var(--gse-ui-avatar-content-default-border-color);
+      background-color: ui.$gse-ui-avatar-hoverModal-shroudColor;
+      border: ui.$gse-ui-avatar-content-large-border-width
+        ui.$gse-ui-avatar-content-default-border-style
+        ui.$gse-ui-avatar-content-default-border-color;
       border-radius: 50%;
-      opacity: var(--gse-ui-avatar-hoverModal-opacity);
+      opacity: ui.$gse-ui-avatar-hoverModal-opacity;
       transition: background-color 0.5s ease;
     }
   }

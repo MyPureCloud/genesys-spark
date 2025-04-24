@@ -1,12 +1,15 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 gux-table {
   * {
     box-sizing: border-box;
   }
 
   & {
-    border-color: var(--gse-ui-dataTable-border-color);
-    border-style: var(--gse-ui-dataTable-border-style);
-    border-width: var(--gse-ui-dataTable-border-width);
+    border-color: ui.$gse-ui-dataTable-border-color;
+    border-style: ui.$gse-ui-dataTable-border-style;
+    border-width: ui.$gse-ui-dataTable-border-width;
   }
 
   table {
@@ -15,23 +18,21 @@ gux-table {
     border-spacing: 0;
 
     td {
-      block-size: var(--gse-ui-dataTableItems-cell-default-height);
-      padding: var(--gse-ui-dataTableItems-cell-padding);
-      font-family: var(--gse-ui-dataTableItems-cell-text-fontFamily);
-      font-size: var(--gse-ui-dataTableItems-cell-text-fontSize);
-      font-weight: var(--gse-ui-dataTableItems-cell-text-fontWeight);
-      line-height: var(--gse-ui-dataTableItems-cell-text-lineHeight);
-      color: var(--gse-ui-dataTableItems-cell-foregroundColor);
+      block-size: ui.$gse-ui-dataTableItems-cell-default-height;
+      padding: ui.$gse-ui-dataTableItems-cell-padding;
+      font-family: ui.$gse-ui-dataTableItems-cell-text-fontFamily;
+      font-size: ui.$gse-ui-dataTableItems-cell-text-fontSize;
+      font-weight: ui.$gse-ui-dataTableItems-cell-text-fontWeight;
+      line-height: ui.$gse-ui-dataTableItems-cell-text-lineHeight;
+      color: ui.$gse-ui-dataTableItems-cell-foregroundColor;
       text-align: start;
 
       &:has(gux-row-select) {
-        inline-size: var(
-          --gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width
-        );
+        inline-size: ui.$gse-ui-dataTableItems-cell-multiselect-checkboxCell-default-width;
       }
 
       gux-icon {
-        color: var(--gse-ui-dataTableItems-cell-icon-foregroundColor);
+        color: ui.$gse-ui-dataTableItems-cell-icon-foregroundColor;
       }
 
       gux-button > gux-icon {
@@ -40,29 +41,27 @@ gux-table {
     }
 
     th {
-      block-size: var(--gse-ui-dataTableItems-header-default-height);
-      padding: var(--gse-ui-dataTableItems-header-padding);
-      font-family: var(--gse-ui-dataTableItems-header-text-fontFamily);
-      font-size: var(--gse-ui-dataTableItems-header-text-fontSize);
-      font-weight: var(--gse-ui-dataTableItems-header-text-fontWeight);
-      line-height: var(--gse-ui-dataTableItems-header-text-lineHeight);
-      color: var(--gse-ui-dataTableItems-header-foregroundColor);
-      background: var(--gse-ui-dataTableItems-header-defaultBackgroundColor);
+      block-size: ui.$gse-ui-dataTableItems-header-default-height;
+      padding: ui.$gse-ui-dataTableItems-header-padding;
+      font-family: ui.$gse-ui-dataTableItems-header-text-fontFamily;
+      font-size: ui.$gse-ui-dataTableItems-header-text-fontSize;
+      font-weight: ui.$gse-ui-dataTableItems-header-text-fontWeight;
+      line-height: ui.$gse-ui-dataTableItems-header-text-lineHeight;
+      color: ui.$gse-ui-dataTableItems-header-foregroundColor;
+      background: ui.$gse-ui-dataTableItems-header-defaultBackgroundColor;
 
       &:has(gux-all-row-select) {
-        inline-size: var(
-          --gse-ui-dataTableItems-header-multiselect-default-width
-        );
+        inline-size: ui.$gse-ui-dataTableItems-header-multiselect-default-width;
       }
     }
 
     th,
     td {
       text-align: start;
-      border-color: var(--gse-ui-dataTable-border-color);
-      border-style: var(--gse-ui-dataTable-border-style);
-      border-width: 0 var(--gse-ui-dataTable-border-width)
-        var(--gse-ui-dataTable-border-width) 0;
+      border-color: ui.$gse-ui-dataTable-border-color;
+      border-style: ui.$gse-ui-dataTable-border-style;
+      border-width: 0 ui.$gse-ui-dataTable-border-width
+        ui.$gse-ui-dataTable-border-width 0;
     }
 
     th[data-cell-numeric],
@@ -73,9 +72,7 @@ gux-table {
     }
 
     th:has(gux-all-row-select) {
-      inline-size: var(
-        --gse-ui-dataTableItems-header-multiselect-default-width
-      );
+      inline-size: ui.$gse-ui-dataTableItems-header-multiselect-default-width;
     }
 
     th:last-child,
@@ -86,7 +83,7 @@ gux-table {
     thead {
       position: sticky;
       inset-block-start: 0;
-      z-index: var(--gse-semantic-zIndex-sticky);
+      z-index: global.$gse-semantic-zIndex-sticky;
 
       th {
         position: relative;
@@ -95,13 +92,11 @@ gux-table {
 
     tbody {
       tr td {
-        background-color: var(
-          --gse-ui-dataTableItems-cell-defaultBackgroundColor
-        );
+        background-color: ui.$gse-ui-dataTableItems-cell-defaultBackgroundColor;
       }
 
       tr:nth-child(2n) td {
-        background-color: var(--gse-ui-dataTableItems-cell-altBackgroundColor);
+        background-color: ui.$gse-ui-dataTableItems-cell-altBackgroundColor;
       }
 
       tr:last-child td {
@@ -110,31 +105,25 @@ gux-table {
 
       tr:hover td,
       tr:nth-child(2n):hover td {
-        background-color: var(
-          --gse-ui-dataTableItems-cell-hoverBackgroundColor
-        );
+        background-color: ui.$gse-ui-dataTableItems-cell-hoverBackgroundColor;
       }
     }
   }
 
   &[gs-compact] {
     th {
-      block-size: var(--gse-ui-dataTableItems-header-compact-height);
+      block-size: ui.$gse-ui-dataTableItems-header-compact-height;
 
       &:has(gux-all-row-select) {
-        inline-size: var(
-          --gse-ui-dataTableItems-header-multiselect-compact-width
-        );
+        inline-size: ui.$gse-ui-dataTableItems-header-multiselect-compact-width;
       }
     }
 
     td {
-      block-size: var(--gse-ui-dataTableItems-cell-compact-height);
+      block-size: ui.$gse-ui-dataTableItems-cell-compact-height;
 
       &:has(gux-row-select) {
-        inline-size: var(
-          --gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width
-        );
+        inline-size: ui.$gse-ui-dataTableItems-cell-multiselect-checkboxCell-compact-width;
       }
     }
   }
@@ -148,7 +137,7 @@ gux-table {
 
       tr[data-selected-row] {
         td {
-          background: var(--gse-ui-dataTableItems-cell-hoverBackgroundColor);
+          background: ui.$gse-ui-dataTableItems-cell-hoverBackgroundColor;
         }
       }
     }
@@ -158,14 +147,14 @@ gux-table {
 // used to ensure gux-sort-control arrow doesn't overlap header text when columns are resized
 th:not([data-cell-action]):not([data-cell-numeric]):has(> gux-sort-control) {
   padding-inline-end: calc(
-    2 * var(--gse-ui-dataTableItems-header-gap) + var(--gse-ui-icon-small-size)
+    2 * #{ui.$gse-ui-dataTableItems-header-gap} + #{ui.$gse-ui-icon-small-size}
   ) !important;
 }
 
 th[data-cell-numeric]:has(> gux-sort-control),
 th[data-cell-action]:has(> gux-sort-control) {
   padding-inline-start: calc(
-    2 * var(--gse-ui-dataTableItems-header-gap) +
-      var(--gse-ui-icon-small-size) + 2px
+    2 * #{ui.$gse-ui-dataTableItems-header-gap} +
+      #{ui.$gse-ui-icon-small-size} + 2px
   ) !important;
 }

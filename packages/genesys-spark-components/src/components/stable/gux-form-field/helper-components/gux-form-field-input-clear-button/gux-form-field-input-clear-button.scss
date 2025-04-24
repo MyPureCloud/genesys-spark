@@ -1,19 +1,21 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 button {
   display: flex;
   padding: 0;
-  color: var(--gse-ui-formControl-input-inputClearable-inputClearableColor);
+  color: ui.$gse-ui-formControl-input-inputClearable-inputClearableColor;
   background: transparent;
   border: none;
-  border-radius: var(--gse-ui-formControl-input-borderRadius);
+  border-radius: ui.$gse-ui-formControl-input-borderRadius;
 
   &:not(:disabled):focus-visible,
   &:not(:disabled):hover {
-    color: var(--gse-ui-formControl-input-inputIcon-iconEndColor);
+    color: ui.$gse-ui-formControl-input-inputIcon-iconEndColor;
     cursor: pointer;
   }
 
   gux-icon {
-    border-radius: var(--gse-ui-formControl-input-borderRadius);
+    border-radius: ui.$gse-ui-formControl-input-borderRadius;
   }
 
   &:focus {
@@ -22,13 +24,13 @@ button {
 
   &:focus-visible:enabled {
     gux-icon {
-      outline: var(--gse-ui-formControl-input-focus-border-width)
-        var(--gse-ui-formControl-input-focus-border-style)
-        var(--gse-ui-formControl-input-focus-border-color);
-      border: var(--gse-ui-formControl-input-active-border-width)
-        var(--gse-ui-formControl-input-active-border-style)
-        var(--gse-ui-formControl-input-active-border-color);
-      border-radius: var(--gse-ui-formControl-focusRing-borderRadius);
+      outline: ui.$gse-ui-formControl-input-focus-border-width
+        ui.$gse-ui-formControl-input-focus-border-style
+        ui.$gse-ui-formControl-input-focus-border-color;
+      border: ui.$gse-ui-formControl-input-active-border-width
+        ui.$gse-ui-formControl-input-active-border-style
+        ui.$gse-ui-formControl-input-active-border-color;
+      border-radius: ui.$gse-ui-formControl-focusRing-borderRadius;
     }
   }
 }

@@ -1,9 +1,11 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: var(--gse-ui-calendarMenu-monthBody-padding);
-  background-color: var(--gse-ui-calendarMenu-backgroundColor);
-  border-radius: var(--gse-ui-calendarMenu-single-body-borderRadius);
-  box-shadow: var(--gse-ui-calendarMenu-boxShadow);
+  padding: ui.$gse-ui-calendarMenu-monthBody-padding;
+  background-color: ui.$gse-ui-calendarMenu-backgroundColor;
+  border-radius: ui.$gse-ui-calendarMenu-single-body-borderRadius;
+  box-shadow: ui.$gse-ui-calendarMenu-boxShadow;
 }

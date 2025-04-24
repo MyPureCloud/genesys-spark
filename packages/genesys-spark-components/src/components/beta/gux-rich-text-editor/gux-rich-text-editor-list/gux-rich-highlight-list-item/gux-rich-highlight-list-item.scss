@@ -1,14 +1,16 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
 :host {
   display: block;
-  border-radius: var(--gse-ui-button-borderRadius);
+  border-radius: ui.$gse-ui-button-borderRadius;
 }
 
 .gux-highlight {
-  inline-size: var(--gse-ui-rte-colorSwatch-width);
-  block-size: var(--gse-ui-rte-colorSwatch-height);
-  border-radius: var(--gse-ui-button-borderRadius);
+  inline-size: ui.$gse-ui-rte-colorSwatch-width;
+  block-size: ui.$gse-ui-rte-colorSwatch-height;
+  border-radius: ui.$gse-ui-button-borderRadius;
 
   button {
     all: unset;
@@ -19,40 +21,40 @@
     &:focus-visible {
       @include focus.gux-focus-ring-small;
 
-      border-radius: var(--gse-semantic-focusOutline-sm-borderRadius);
+      border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
     }
   }
 
   &.gux-orange {
-    background-color: var(--gse-ui-rte-colorSwatch-orange-default);
+    background-color: ui.$gse-ui-rte-colorSwatch-orange-default;
   }
 
   &.gux-coral {
-    background-color: var(--gse-ui-rte-colorSwatch-coral-default);
+    background-color: ui.$gse-ui-rte-colorSwatch-coral-default;
   }
 
   &.gux-pear {
-    background-color: var(--gse-ui-rte-colorSwatch-pear-default);
+    background-color: ui.$gse-ui-rte-colorSwatch-pear-default;
   }
 
   &.gux-raspberry {
-    background-color: var(--gse-ui-rte-colorSwatch-raspberry-default);
+    background-color: ui.$gse-ui-rte-colorSwatch-raspberry-default;
   }
 
   &.gux-mango {
-    background-color: var(--gse-ui-rte-colorSwatch-mango-default);
+    background-color: ui.$gse-ui-rte-colorSwatch-mango-default;
   }
 
   &.gux-blue {
-    background-color: var(--gse-ui-rte-colorSwatch-azure-default);
+    background-color: ui.$gse-ui-rte-colorSwatch-azure-default;
   }
 
   &.gux-mineral {
-    background-color: var(--gse-ui-rte-colorSwatch-mineral-default);
+    background-color: ui.$gse-ui-rte-colorSwatch-mineral-default;
   }
 
   &.gux-island {
-    background-color: var(--gse-ui-rte-colorSwatch-island-default);
+    background-color: ui.$gse-ui-rte-colorSwatch-island-default;
   }
 
   &.gux-inherit {

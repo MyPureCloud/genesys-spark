@@ -1,3 +1,6 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   position: relative;
   display: inline-block;
@@ -15,8 +18,8 @@
 
 .gux-avatar {
   position: relative;
-  inline-size: var(--gse-ui-avatar-large-size);
-  block-size: var(--gse-ui-avatar-large-size);
+  inline-size: ui.$gse-ui-avatar-large-size;
+  block-size: ui.$gse-ui-avatar-large-size;
   overflow: hidden;
   border-radius: 50%;
 
@@ -25,37 +28,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    inline-size: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
-    block-size: calc(100% - var(--gse-ui-avatar-large-presenceRing-width) * 2);
-    margin: var(--gse-ui-avatar-large-presenceRing-width);
+    inline-size: calc(100% - #{ui.$gse-ui-avatar-large-presenceRing-width} * 2);
+    block-size: calc(100% - #{ui.$gse-ui-avatar-large-presenceRing-width} * 2);
+    margin: ui.$gse-ui-avatar-large-presenceRing-width;
     overflow: hidden;
-    font-family: var(--gse-ui-avatar-large-initials-fontFamily);
-    font-size: var(--gse-ui-avatar-large-initials-fontSize);
-    font-weight: var(--gse-ui-avatar-large-initials-fontWeight);
-    line-height: var(--gse-ui-avatar-small-initials-lineHeight);
-    color: var(--gse-ui-avatar-media-initialsForeground-inverse);
+    font-family: ui.$gse-ui-avatar-large-initials-fontFamily;
+    font-size: ui.$gse-ui-avatar-large-initials-fontSize;
+    font-weight: ui.$gse-ui-avatar-large-initials-fontWeight;
+    line-height: ui.$gse-ui-avatar-small-initials-lineHeight;
+    color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
     text-transform: uppercase;
-    background-color: var(--gse-ui-avatar-media-initialsBackground-default);
-    border: var(--gse-ui-avatar-content-large-border-width)
-      var(--gse-ui-avatar-content-default-border-style)
-      var(--gse-ui-avatar-content-default-border-color);
+    background-color: ui.$gse-ui-avatar-media-initialsBackground-default;
+    border: ui.$gse-ui-avatar-content-large-border-width
+      ui.$gse-ui-avatar-content-default-border-style
+      ui.$gse-ui-avatar-content-default-border-color;
     border-radius: 50%;
   }
 
   &.gux-medium {
-    inline-size: var(--gse-ui-avatar-medium-size);
-    block-size: var(--gse-ui-avatar-medium-size);
+    inline-size: ui.$gse-ui-avatar-medium-size;
+    block-size: ui.$gse-ui-avatar-medium-size;
 
     & .gux-content {
       inline-size: calc(
-        100% - var(--gse-ui-avatar-medium-presenceRing-width) * 2
+        100% - #{ui.$gse-ui-avatar-medium-presenceRing-width} * 2
       );
       block-size: calc(
-        100% - var(--gse-ui-avatar-medium-presenceRing-width) * 2
+        100% - #{ui.$gse-ui-avatar-medium-presenceRing-width} * 2
       );
-      margin: var(--gse-ui-avatar-medium-presenceRing-width);
-      font-size: var(--gse-ui-avatar-medium-initials-fontSize);
-      font-weight: var(--gse-ui-avatar-medium-initials-fontWeight);
+      margin: ui.$gse-ui-avatar-medium-presenceRing-width;
+      font-size: ui.$gse-ui-avatar-medium-initials-fontSize;
+      font-weight: ui.$gse-ui-avatar-medium-initials-fontWeight;
     }
   }
 
@@ -63,125 +66,125 @@
   &.gux-small,
   &.gux-xsmall {
     & .gux-content {
-      border-width: var(--gse-ui-avatar-content-default-border-width);
+      border-width: ui.$gse-ui-avatar-content-default-border-width;
     }
   }
 
   &.gux-small {
-    inline-size: var(--gse-ui-avatar-small-size);
-    block-size: var(--gse-ui-avatar-small-size);
+    inline-size: ui.$gse-ui-avatar-small-size;
+    block-size: ui.$gse-ui-avatar-small-size;
 
     & .gux-content {
       inline-size: calc(
-        100% - var(--gse-ui-avatar-small-presenceRing-width) * 2
+        100% - #{ui.$gse-ui-avatar-small-presenceRing-width} * 2
       );
       block-size: calc(
-        100% - var(--gse-ui-avatar-small-presenceRing-width) * 2
+        100% - #{ui.$gse-ui-avatar-small-presenceRing-width} * 2
       );
-      margin: var(--gse-ui-avatar-small-presenceRing-width);
-      font-size: var(--gse-ui-avatar-small-initials-fontSize);
-      font-weight: var(--gse-ui-avatar-small-initials-fontWeight);
+      margin: ui.$gse-ui-avatar-small-presenceRing-width;
+      font-size: ui.$gse-ui-avatar-small-initials-fontSize;
+      font-weight: ui.$gse-ui-avatar-small-initials-fontWeight;
     }
   }
 
   &.gux-xsmall {
-    inline-size: var(--gse-ui-avatar-xsmall-size);
-    block-size: var(--gse-ui-avatar-xsmall-size);
+    inline-size: ui.$gse-ui-avatar-xsmall-size;
+    block-size: ui.$gse-ui-avatar-xsmall-size;
 
     & .gux-content {
       inline-size: calc(
-        100% - var(--gse-ui-avatar-xsmall-presenceRing-width) * 2
+        100% - #{ui.$gse-ui-avatar-xsmall-presenceRing-width} * 2
       );
       block-size: calc(
-        100% - var(--gse-ui-avatar-xsmall-presenceRing-width) * 2
+        100% - #{ui.$gse-ui-avatar-xsmall-presenceRing-width} * 2
       );
-      margin: var(--gse-ui-avatar-xsmall-presenceRing-width);
-      font-size: var(--gse-ui-avatar-xsmall-initials-fontSize);
-      font-weight: var(--gse-ui-avatar-xsmall-initials-fontWeight);
+      margin: ui.$gse-ui-avatar-xsmall-presenceRing-width;
+      font-size: ui.$gse-ui-avatar-xsmall-initials-fontSize;
+      font-weight: ui.$gse-ui-avatar-xsmall-initials-fontWeight;
     }
   }
 
   &.gux-accent-1 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent1);
+      color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent1;
     }
   }
 
   &.gux-accent-2 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent2);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent2;
     }
   }
 
   &.gux-accent-3 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent3);
+      color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent3;
     }
   }
 
   &.gux-accent-4 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent4);
+      color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent4;
     }
   }
 
   &.gux-accent-5 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent5);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent5;
     }
   }
 
   &.gux-accent-6 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent6);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent6;
     }
   }
 
   &.gux-accent-7 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent7);
+      color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent7;
     }
   }
 
   &.gux-accent-8 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent8);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent8;
     }
   }
 
   &.gux-accent-9 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent9);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent9;
     }
   }
 
   &.gux-accent-10 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent10);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent10;
     }
   }
 
   &.gux-accent-11 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-default);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent11);
+      color: ui.$gse-ui-avatar-media-initialsForeground-default;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent11;
     }
   }
 
   &.gux-accent-12 {
     .gux-content {
-      color: var(--gse-ui-avatar-media-initialsForeground-inverse);
-      background-color: var(--gse-ui-avatar-media-initialsBackground-accent12);
+      color: ui.$gse-ui-avatar-media-initialsForeground-inverse;
+      background-color: ui.$gse-ui-avatar-media-initialsBackground-accent12;
     }
   }
 
@@ -194,31 +197,31 @@
 
   &.gux-ring {
     &.gux-available {
-      background: var(--gse-ui-avatar-presenceRing-available);
+      background: ui.$gse-ui-avatar-presenceRing-available;
     }
 
     &.gux-away,
     &.gux-break,
     &.gux-meal,
     &.gux-training {
-      background: var(--gse-ui-avatar-presenceRing-away);
+      background: ui.$gse-ui-avatar-presenceRing-away;
     }
 
     &.gux-busy,
     &.gux-meeting {
-      background: var(--gse-ui-avatar-presenceRing-busy);
+      background: ui.$gse-ui-avatar-presenceRing-busy;
     }
 
     &.gux-offline {
-      background: var(--gse-ui-avatar-presenceRing-offline);
+      background: ui.$gse-ui-avatar-presenceRing-offline;
     }
 
     &.gux-out-of-office {
-      background: var(--gse-ui-avatar-presenceRing-outOfOffice);
+      background: ui.$gse-ui-avatar-presenceRing-outOfOffice;
     }
 
     &.gux-on-queue {
-      background: var(--gse-ui-avatar-presenceRing-onQueue);
+      background: ui.$gse-ui-avatar-presenceRing-onQueue;
     }
   }
 }
@@ -227,7 +230,7 @@
   position: absolute;
   inset-block-end: 0;
   inset-inline-end: 0;
-  z-index: var(--gse-semantic-zIndex-showFocus);
+  z-index: global.$gse-semantic-zIndex-showFocus;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,42 +238,42 @@
 
 .gux-avatar-badge {
   position: absolute;
-  inset-block-start: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
-  inset-inline-end: calc(var(--gse-ui-avatar-content-large-border-width) * -1);
-  z-index: var(--gse-semantic-zIndex-showFocus);
+  inset-block-start: calc(#{ui.$gse-ui-avatar-content-large-border-width} * -1);
+  inset-inline-end: calc(#{ui.$gse-ui-avatar-content-large-border-width} * -1);
+  z-index: global.$gse-semantic-zIndex-showFocus;
   display: flex;
   align-items: center;
   justify-content: center;
-  inline-size: var(--gse-ui-avatar-large-badge-size);
-  block-size: var(--gse-ui-avatar-large-badge-size);
-  border-color: var(--gse-ui-avatar-content-default-border-color);
-  border-style: var(--gse-ui-avatar-content-default-border-style);
-  border-width: var(--gse-ui-avatar-content-large-border-width);
+  inline-size: ui.$gse-ui-avatar-large-badge-size;
+  block-size: ui.$gse-ui-avatar-large-badge-size;
+  border-color: ui.$gse-ui-avatar-content-default-border-color;
+  border-style: ui.$gse-ui-avatar-content-default-border-style;
+  border-width: ui.$gse-ui-avatar-content-large-border-width;
   border-radius: 50%;
 
   &.gux-medium {
     inset-block-start: calc(
-      var(--gse-ui-avatar-content-default-border-width) * -1
+      #{ui.$gse-ui-avatar-content-default-border-width} * -1
     );
     inset-inline-end: calc(
-      var(--gse-ui-avatar-content-default-border-width) * -1
+      #{ui.$gse-ui-avatar-content-default-border-width} * -1
     );
-    inline-size: var(--gse-ui-avatar-medium-badge-size);
-    block-size: var(--gse-ui-avatar-medium-badge-size);
-    border-width: var(--gse-ui-avatar-content-default-border-width);
+    inline-size: ui.$gse-ui-avatar-medium-badge-size;
+    block-size: ui.$gse-ui-avatar-medium-badge-size;
+    border-width: ui.$gse-ui-avatar-content-default-border-width;
   }
 
   &.gux-small,
   &.gux-xsmall {
     inset-block-start: calc(
-      var(--gse-ui-avatar-content-default-border-width) * -1
+      #{ui.$gse-ui-avatar-content-default-border-width} * -1
     );
     inset-inline-end: calc(
-      var(--gse-ui-avatar-content-default-border-width) * -1
+      #{ui.$gse-ui-avatar-content-default-border-width} * -1
     );
-    inline-size: var(--gse-ui-avatar-small-badge-size);
-    block-size: var(--gse-ui-avatar-small-badge-size);
-    border-width: var(--gse-ui-avatar-content-default-border-width);
+    inline-size: ui.$gse-ui-avatar-small-badge-size;
+    block-size: ui.$gse-ui-avatar-small-badge-size;
+    border-width: ui.$gse-ui-avatar-content-default-border-width;
 
     & gux-icon {
       display: none;
@@ -278,15 +281,15 @@
   }
 
   &.gux-available {
-    background-color: var(--gse-semantic-background-container-elevated-default);
+    background-color: global.$gse-semantic-background-container-elevated-default;
 
     &.gux-small,
     &.gux-xsmall {
-      background-color: var(--gse-ui-avatar-badge-available-color);
+      background-color: ui.$gse-ui-avatar-badge-available-color;
     }
 
     & gux-icon {
-      color: var(--gse-ui-avatar-badge-available-color);
+      color: ui.$gse-ui-avatar-badge-available-color;
     }
   }
 
@@ -294,65 +297,65 @@
   &.gux-break,
   &.gux-meal,
   &.gux-training {
-    background-color: var(--gse-ui-avatar-badge-away-color);
+    background-color: ui.$gse-ui-avatar-badge-away-color;
 
     & gux-icon {
-      margin: var(--gse-ui-avatar-badge-away-icon-margin);
-      color: var(--gse-ui-avatar-badge-foregroundDark-color);
+      margin: ui.$gse-ui-avatar-badge-away-icon-margin;
+      color: ui.$gse-ui-avatar-badge-foregroundDark-color;
     }
   }
 
   &.gux-busy,
   &.gux-meeting {
-    background-color: var(--gse-ui-avatar-badge-busy-color);
+    background-color: ui.$gse-ui-avatar-badge-busy-color;
 
     & gux-icon {
-      margin: var(--gse-ui-avatar-badge-busy-icon-margin);
-      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+      margin: ui.$gse-ui-avatar-badge-busy-icon-margin;
+      color: ui.$gse-ui-avatar-badge-foregroundDefault-color;
     }
   }
 
   &.gux-notifications {
-    background-color: var(--gse-ui-avatar-badge-notification-color);
+    background-color: ui.$gse-ui-avatar-badge-notification-color;
 
     & gux-icon {
-      margin: var(--gse-ui-avatar-badge-notifications-icon-margin);
-      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+      margin: ui.$gse-ui-avatar-badge-notifications-icon-margin;
+      color: ui.$gse-ui-avatar-badge-foregroundDefault-color;
     }
   }
 
   &.gux-offline {
-    background-color: var(--gse-semantic-background-container-elevated-default);
+    background-color: global.$gse-semantic-background-container-elevated-default;
 
     &.gux-small,
     &.gux-xsmall {
-      background-color: var(--gse-ui-avatar-badge-offline-color);
+      background-color: ui.$gse-ui-avatar-badge-offline-color;
     }
 
     & gux-icon {
-      color: var(--gse-ui-avatar-badge-offline-color);
+      color: ui.$gse-ui-avatar-badge-offline-color;
     }
   }
 
   &.gux-out-of-office {
-    background-color: var(--gse-semantic-background-container-elevated-default);
+    background-color: global.$gse-semantic-background-container-elevated-default;
 
     &.gux-small,
     &.gux-xsmall {
-      background-color: var(--gse-ui-avatar-badge-outOfOffice);
+      background-color: ui.$gse-ui-avatar-badge-outOfOffice;
     }
 
     & gux-icon {
-      color: var(--gse-ui-avatar-badge-outOfOffice);
+      color: ui.$gse-ui-avatar-badge-outOfOffice;
     }
   }
 
   &.gux-on-queue {
-    background-color: var(--gse-ui-avatar-badge-onQueue-color);
+    background-color: ui.$gse-ui-avatar-badge-onQueue-color;
 
     & gux-icon {
-      margin: var(--gse-ui-avatar-badge-queue-icon-margin);
-      color: var(--gse-ui-avatar-badge-foregroundDefault-color);
+      margin: ui.$gse-ui-avatar-badge-queue-icon-margin;
+      color: ui.$gse-ui-avatar-badge-foregroundDefault-color;
     }
   }
 

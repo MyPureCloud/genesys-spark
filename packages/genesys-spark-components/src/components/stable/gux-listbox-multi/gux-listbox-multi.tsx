@@ -38,6 +38,7 @@ import { afterNextRender } from '@utils/dom/after-next-render';
 
 import translationResources from './i18n/en.json';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
+import { OnMutation } from '@utils/decorator/on-mutation';
 
 /**
  * @slot - collection of gux-option-multi elements
@@ -87,6 +88,13 @@ export class GuxListboxMulti {
 
   @Prop({ mutable: true })
   hasExactMatch: boolean = false;
+
+  @OnMutation({ childList: true, subtree: true })
+  onMutation(): void {
+    afterNextRender(() => {
+      this.updateOnSlotChange();
+    });
+  }
 
   @Listen('blur')
   onBlur(): void {
@@ -245,7 +253,6 @@ export class GuxListboxMulti {
     this.listboxOptions = (
       Array.from(this.root.children) as HTMLGuxOptionMultiElement[]
     ).filter(element => element.tagName === 'GUX-OPTION-MULTI');
-
     this.internallistboxoptionsupdated.emit();
   }
 
@@ -254,6 +261,7 @@ export class GuxListboxMulti {
       listboxOption.selected = this.getSelectedValues().includes(
         listboxOption.value
       );
+
       if (this.filterType !== 'custom' && this.filterType !== 'none') {
         listboxOption.filtered = !getOptionDefaultSlot(listboxOption)
           ?.textContent.trim()

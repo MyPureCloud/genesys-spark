@@ -1,6 +1,6 @@
 <h1>gux-form-field-file-beta</h1>
 <form onchange="notify(event)" oninput="notify(event)">
-  <gux-form-field-file-beta drag-and-drop>
+  <gux-form-field-file-beta id="example-1" drag-and-drop>
     <label slot="label">Upload a profile picture</label>
 
     <input type="file" name="files[]" slot="input" multiple />
@@ -13,7 +13,6 @@
       <div>Maximum file size is 25MB.</div>
       <div>Supported file types are JPG and PNG.</div>
     </span>
-    <span slot="error">This is an error message</span>
   </gux-form-field-file-beta>
 </form>
 
@@ -22,9 +21,9 @@
   <button
     type="button"
     onclick="(function () {
-      Array.from(document.querySelectorAll('gux-form-field-file-beta')).forEach(component => {
-        component.toggleAttribute('drag-and-drop');
-      });
+      const component = document.getElementById('example-1');
+
+      component.toggleAttribute('drag-and-drop');
     })()"
   >
     Toggle Drag and Drop
@@ -35,11 +34,10 @@
   <button
     type="button"
     onclick="(function () {
-      Array.from(document.querySelectorAll('gux-form-field-file-beta')).forEach(component => {
-        const input = component.querySelector('input');
+      const component = document.getElementById('example-1');
+      const input = component.querySelector('input');
 
-        input.disabled = !input.disabled;
-      });
+      input.disabled = !input.disabled;
     })()"
   >
     Toggle Disabled State
@@ -50,11 +48,28 @@
   <button
     type="button"
     onclick="(function () {
-      Array.from(document.querySelectorAll('gux-form-field-file-beta')).forEach(component => {
-        const input = component.querySelector('input');
+      const component = document.getElementById('example-1');
+      const error = component.querySelector('[slot=error]');
 
-        input.multiple = !input.multiple;
-      });
+      if (error) {
+        error.remove();
+      } else {
+        component.appendChild(window.toHTML(`<span slot=error>This is an error message</span>`));
+      }
+    })()"
+  >
+    Toggle Error State
+  </button>
+</gux-button-slot>
+
+<gux-button-slot>
+  <button
+    type="button"
+    onclick="(function () {
+      const component = document.getElementById('example-1');
+      const input = component.querySelector('input');
+
+      input.multiple = !input.multiple;
     })()"
   >
     Toggle Multiple State
@@ -65,9 +80,9 @@
   <button
     type="button"
     onclick="(function () {
-      Array.from(document.querySelectorAll('gux-form-field-file-beta')).forEach(component => {
-        component.classList.toggle('narrow');
-      });
+      const component = document.getElementById('example-1');
+
+      component.classList.toggle('narrow');
     })()"
   >
     Toggle Width Restriction
@@ -93,7 +108,6 @@ cards
     <div>Maximum file size is 25MB.</div>
     <div>Supported file types are JPG and PNG.</div>
   </span>
-  <span slot="error">This is an error message</span>
 
   <gux-file-list-item
     slot="file-0"

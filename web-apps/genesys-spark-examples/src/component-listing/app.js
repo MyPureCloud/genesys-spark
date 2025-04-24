@@ -58,7 +58,7 @@ export async function bootstrap() {
                   .join('')}
                   </div>
                   <div class="sticky-footer">
-                    <h2 id="mode-switcher-enabler">Resources</h2>
+                    <h2>Resources</h2>
                     <a class="resources-link" href="https://github.com/MyPureCloud/genesys-spark/blob/main/docs/migration-guides/v4/readme.md" target="_blank">V3 -> V4 Migration Guide</a>
                     <a class="resources-link" href="https://spark.genesys.com" target="_blank">Spark 4.0 UX Documentation</a>
                     <a class="resources-link" href="https://github.com/MyPureCloud/genesys-spark/blob/main/README.md#genesys-web-components" target="_blank">Genesys Spark Components README</a>
@@ -98,12 +98,6 @@ export async function bootstrap() {
       });
   }
 
-  function modeSwitchEnablerHandler(event) {
-    if (event.detail >= 5) {
-      document.getElementById('mode-switcher-section').classList.add('enabled');
-    }
-  }
-
   function modeSwitchHandler() {
     //Get the mode to change to
     const mode =
@@ -132,9 +126,6 @@ export async function bootstrap() {
 
   const searchBox = document.getElementById('component-search-box');
   searchBox.addEventListener('input', searchHandler);
-
-  const modeSwitcherEnabler = document.getElementById('mode-switcher-enabler');
-  modeSwitcherEnabler.addEventListener('click', modeSwitchEnablerHandler);
 
   const modeSwitcher = document.getElementById('mode-switcher');
   modeSwitcher.addEventListener('click', modeSwitchHandler);

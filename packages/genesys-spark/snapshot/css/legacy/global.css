@@ -467,7 +467,7 @@
   --gse-semantic-theme-foreground-secondary-10: #ffffff;
   --gse-semantic-theme-foreground-secondary-20: #596373;
   --gse-semantic-theme-foreground-secondary-30: #4c5667;
-  --gse-semantic-theme-foreground-tertiary-10: #2e394c;
+  --gse-semantic-theme-foreground-tertiary-10: #2a60c8;
   --gse-semantic-theme-foreground-tertiary-20: #2e394c;
   --gse-semantic-theme-foreground-tertiary-30: #2e394c;
   --gse-semantic-theme-foreground-tertiary-05: #75a8ff;
@@ -1014,13 +1014,13 @@
   --gse-semantic-foreground-interactive-primary-default: #ffffff;
   --gse-semantic-foreground-interactive-primary-active: #ffffff;
   --gse-semantic-foreground-interactive-primary-hover: #ffffff;
-  --gse-semantic-foreground-interactive-secondary-default: #2e394c;
+  --gse-semantic-foreground-interactive-secondary-default: #2a60c8;
   --gse-semantic-foreground-interactive-secondary-active: #2e394c;
   --gse-semantic-foreground-interactive-secondary-hover: #2e394c;
-  --gse-semantic-foreground-interactive-tertiary-default: #2e394c;
+  --gse-semantic-foreground-interactive-tertiary-default: #2a60c8;
   --gse-semantic-foreground-interactive-tertiary-active: #ffffff;
   --gse-semantic-foreground-interactive-tertiary-hover: #ffffff;
-  --gse-semantic-foreground-interactive-ghost-default: #2e394c;
+  --gse-semantic-foreground-interactive-ghost-default: #2a60c8;
   --gse-semantic-foreground-interactive-ghost-active: #2e394c;
   --gse-semantic-foreground-interactive-ghost-hover: #2e394c;
   --gse-semantic-foreground-interactive-subtle-default: #3e4a5b;

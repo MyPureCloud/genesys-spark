@@ -1,18 +1,21 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 .gux-month-calendar {
   flex-wrap: wrap;
-  inline-size: var(--gse-ui-calendarMenu-width);
-  box-shadow: var(--gse-ui-calendarMenu-boxShadow);
+  inline-size: ui.$gse-ui-calendarMenu-width;
+  box-shadow: ui.$gse-ui-calendarMenu-boxShadow;
 
   &.gux-hidden {
     display: none;
   }
 
   .gux-current-month {
-    font-family: var(--gse-ui-calendarMenu-month-currentText-fontFamily);
-    font-size: var(--gse-ui-calendarMenu-month-currentText-fontSize);
-    font-weight: var(--gse-ui-calendarMenu-month-currentText-fontWeight);
-    line-height: var(--gse-ui-calendarMenu-month-currentText-lineHeight);
-    color: var(--gse-ui-calendarMenu-month-default-foregroundColor);
+    font-family: ui.$gse-ui-calendarMenu-month-currentText-fontFamily;
+    font-size: ui.$gse-ui-calendarMenu-month-currentText-fontSize;
+    font-weight: ui.$gse-ui-calendarMenu-month-currentText-fontWeight;
+    line-height: ui.$gse-ui-calendarMenu-month-currentText-lineHeight;
+    color: ui.$gse-ui-calendarMenu-month-default-foregroundColor;
   }
 
   .gux-year-header {
@@ -20,18 +23,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    block-size: var(--gse-ui-calendarMenu-month-single-header-height);
-    padding: var(--gse-ui-calendarMenu-header-padding);
-    font-family: var(--gse-ui-calendarMenu-day-headerText-fontFamily);
-    font-size: var(--gse-ui-calendarMenu-day-headerText-fontSize);
-    font-weight: var(--gse-ui-calendarMenu-day-headerText-fontWeight);
-    line-height: var(--gse-ui-calendarMenu-day-headerText-lineHeight);
-    color: var(--gse-ui-calendarMenu-header-foregroundColor);
-    background-color: var(--gse-ui-calendarMenu-header-backgroundColor);
-    border-radius: var(--gse-ui-calendarMenu-single-header-borderRadius);
+    block-size: ui.$gse-ui-calendarMenu-month-single-header-height;
+    padding: ui.$gse-ui-calendarMenu-header-padding;
+    font-family: ui.$gse-ui-calendarMenu-day-headerText-fontFamily;
+    font-size: ui.$gse-ui-calendarMenu-day-headerText-fontSize;
+    font-weight: ui.$gse-ui-calendarMenu-day-headerText-fontWeight;
+    line-height: ui.$gse-ui-calendarMenu-day-headerText-lineHeight;
+    color: ui.$gse-ui-calendarMenu-header-foregroundColor;
+    background-color: ui.$gse-ui-calendarMenu-header-backgroundColor;
+    border-radius: ui.$gse-ui-calendarMenu-single-header-borderRadius;
 
     button {
-      padding: var(--gse-ui-calendarMenu-header-arrow-padding);
+      padding: ui.$gse-ui-calendarMenu-header-arrow-padding;
       color: inherit;
       cursor: pointer;
       outline: none;
@@ -39,20 +42,19 @@
       border: none;
 
       &:focus-visible {
-        outline: var(--gse-semantic-focusOutline-md-borderWidth) solid
-          var(--gse-ui-color-focus);
-        outline-offset: var(--gse-semantic-focusOutline-offset);
+        outline: global.$gse-semantic-focusOutline-md-borderWidth solid
+          ui.$gse-ui-color-focus;
+        outline-offset: global.$gse-semantic-focusOutline-offset;
         border-radius: calc(
-          var(--gse-semantic-focusOutline-sm-borderRadius) - var(
-              --gse-semantic-focusOutline-offset
-            )
+          #{global.$gse-semantic-focusOutline-sm-borderRadius} -
+            #{global.$gse-semantic-focusOutline-offset}
         );
       }
 
       &.gux-year-change {
         &:disabled {
           cursor: default;
-          opacity: var(--gse-ui-calendarMenu-disabled-opacity);
+          opacity: ui.$gse-ui-calendarMenu-disabled-opacity;
         }
       }
 

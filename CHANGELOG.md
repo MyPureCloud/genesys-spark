@@ -2,6 +2,79 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.141.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.140.0...v4.141.0) (2025-04-23)
+
+
+### Features
+
+* **button-multi:** improve screenreader experience ([#1045](https://github.com/MyPureCloud/genesys-spark/issues/1045)) ([a053a78](https://github.com/MyPureCloud/genesys-spark/commit/a053a785fdeb1ed2d6a81747d83f0b5f2d3d3375))
+* **other:** Added official dark mode support ([8fb5dff](https://github.com/MyPureCloud/genesys-spark/commit/8fb5dfffafb5c5809f94c1f038f2f9bbf7818ec6))
+
+
+### Bug Fixes
+
+* **dropdown-multi:** add render timeout when slot content changes ([e6f0a63](https://github.com/MyPureCloud/genesys-spark/commit/e6f0a6385531cc2d726429a6117b7479bb770ac1))
+
+## [4.140.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.139.0...v4.140.0) (2025-04-23)
+
+
+### Features
+
+* **inline-dropdown-beta:** add new component ([34367bc](https://github.com/MyPureCloud/genesys-spark/commit/34367bcc6f4e5bf6a110425f131e5b7cf336d90b))
+
+
+### Bug Fixes
+
+* **form-field-file-beta:** small UX fixes ([e79e207](https://github.com/MyPureCloud/genesys-spark/commit/e79e2075afce145a70fbe14ae72f3bbbe6d10f50))
+
+## [4.139.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.5...v4.139.0) (2025-04-19)
+
+
+### Features
+
+* **styles:** updated styles on modal-legacy and example pages ([f8f8d4d](https://github.com/MyPureCloud/genesys-spark/commit/f8f8d4da3763cb1e20f63d119930ccb5353bdbbd))
+* **styles:** updated styles on warning icons ([4ab024f](https://github.com/MyPureCloud/genesys-spark/commit/4ab024f35999541d1ef371272d93b398dc5fa456))
+
+
+### Bug Fixes
+
+* **button:** fixed legacy tertiary button color ([be66b7d](https://github.com/MyPureCloud/genesys-spark/commit/be66b7d33d6a0ba407daec1e6acdbbe186525e04))
+* **dropdown:** subtext included in selected option ([#1050](https://github.com/MyPureCloud/genesys-spark/issues/1050)) ([ba9dccb](https://github.com/MyPureCloud/genesys-spark/commit/ba9dccb7874e67a2ca6a7a9fba003a49fff8ee95))
+* **other:** improved legacy components dark mode implementation ([b45b8bb](https://github.com/MyPureCloud/genesys-spark/commit/b45b8bb07978a16b231094e43a5483de4ecbc2a2))
+
+### [4.138.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.4...v4.138.5) (2025-04-17)
+
+
+### Bug Fixes
+
+* **popover-beta:** add method to close popover ([daac3a3](https://github.com/MyPureCloud/genesys-spark/commit/daac3a3ea05d2cb2b68ed61d8325486747104a48))
+* **toast:** Break word on message ([#1036](https://github.com/MyPureCloud/genesys-spark/issues/1036)) ([612c505](https://github.com/MyPureCloud/genesys-spark/commit/612c5057e396d03a7c4909fb6099f1a8d3fc3dd8))
+
+### [4.138.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.3...v4.138.4) (2025-04-16)
+
+
+### Bug Fixes
+
+* **list:** address accessibility console error ([0198e4a](https://github.com/MyPureCloud/genesys-spark/commit/0198e4aaf9c2be8de5f022b7f75031e6406f2b3c))
+* **list:** remove invalid focus target descendant from list ([c5365ab](https://github.com/MyPureCloud/genesys-spark/commit/c5365aba74489f8ac36a3cf3906172d64351901f))
+* **rich-text-editor-beta:** add selector for resize ability ([9104ff8](https://github.com/MyPureCloud/genesys-spark/commit/9104ff8179fc6dca2d1a13b8bcce7740534ff58a))
+* **rich-text-editor-beta:** container now inherits size from host ([2b91f3c](https://github.com/MyPureCloud/genesys-spark/commit/2b91f3c7e0cf76df2a20316ba109fd6339f42d24))
+
+### [4.138.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.2...v4.138.3) (2025-04-15)
+
+
+### Bug Fixes
+
+* **avatar-beta:** fixed presence icons in dark mode ([e33b22b](https://github.com/MyPureCloud/genesys-spark/commit/e33b22b96bb9a23cc23e69a3a4cf936ec5ade4f6))
+* **calendar-beta:** fixed token reference ([b11783c](https://github.com/MyPureCloud/genesys-spark/commit/b11783c1edb104c0716ffdd607e4fbb55710e9d3))
+* **card:** fixed example page dark mode appearance ([cd5b4d3](https://github.com/MyPureCloud/genesys-spark/commit/cd5b4d3e5e86e2fa7c71f002c0375e6bf6a8676d))
+* **list:** fixed example page dark mode appearance ([bf7d4e7](https://github.com/MyPureCloud/genesys-spark/commit/bf7d4e70bfff47300a7e473e3032350405850869))
+* **pagination:** fixed example pages dark mode appearance ([8bd5b36](https://github.com/MyPureCloud/genesys-spark/commit/8bd5b363a6b163b84ece1c8e6e9c9f5766f5c385))
+* **popover:** fixed example pages dark mode appearance ([5701f5f](https://github.com/MyPureCloud/genesys-spark/commit/5701f5f162883eefc1192b664ba0cd3671aafd56))
+* **radial-loading:** fixed dark mode appearance ([e707440](https://github.com/MyPureCloud/genesys-spark/commit/e70744013025ac3f14e2a90088992c95e7b80fb6))
+* **tooltip:** fixed example page dark mode appearance ([3db06f1](https://github.com/MyPureCloud/genesys-spark/commit/3db06f14d9d809add5ea943a4a271bb5cc03bf1b))
+* **tooltip:** update offset from 16px to 12px ([d41134a](https://github.com/MyPureCloud/genesys-spark/commit/d41134a74b3cd8945450c5ac584dfc9e1d9a64cc))
+
 ### [4.138.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.1...v4.138.2) (2025-04-11)
 
 ### [4.138.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.138.0...v4.138.1) (2025-04-09)

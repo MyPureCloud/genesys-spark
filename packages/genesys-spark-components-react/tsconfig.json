@@ -7,6 +7,7 @@
     "outDir": "dist",
     "jsx": "react",
     "esModuleInterop": true,
+    "lib": ["ES2021.Intl"],
     "paths": {
       "genesys-spark-components": ["../genesys-spark-components/dist/types"]
     }

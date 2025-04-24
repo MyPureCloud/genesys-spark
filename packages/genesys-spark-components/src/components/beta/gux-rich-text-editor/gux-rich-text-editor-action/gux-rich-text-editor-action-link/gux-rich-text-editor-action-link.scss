@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: block;
 }
@@ -6,16 +8,16 @@ gux-popover {
   div.gux-popover-content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: var(--gse-ui-popover-gap);
+    gap: ui.$gse-ui-popover-gap;
   }
 }
 
 gux-button-slot {
-  inline-size: var(--gse-ui-button-iconOnly-width);
-  block-size: var(--gse-ui-button-default-height);
+  inline-size: ui.$gse-ui-button-iconOnly-width;
+  block-size: ui.$gse-ui-button-default-height;
 
   button.gux-is-pressed {
-    color: var(--gse-ui-button-ghost-active-foregroundColor);
-    background-color: var(--gse-ui-button-ghost-active-backgroundColor);
+    color: ui.$gse-ui-button-ghost-active-foregroundColor;
+    background-color: ui.$gse-ui-button-ghost-active-backgroundColor;
   }
 }

@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 :host {
   display: block;
   flex: 1 1 auto;
@@ -11,29 +13,29 @@
     flex-wrap: nowrap;
     place-content: stretch flex-start;
     align-items: center;
-    inline-size: var(--gse-ui-flyoutMenu-width);
-    block-size: var(--gse-ui-menu-option-height);
-    padding: var(--gse-ui-menu-option-padding);
-    line-height: var(--gse-ui-menu-option-label-default-text-lineHeight);
-    color: var(--gse-ui-menu-option-label-foregroundColor);
-    background-color: var(--gse-ui-menu-option-default-backgroundColor);
+    inline-size: ui.$gse-ui-flyoutMenu-width;
+    block-size: ui.$gse-ui-menu-option-height;
+    padding: ui.$gse-ui-menu-option-padding;
+    line-height: ui.$gse-ui-menu-option-label-default-text-lineHeight;
+    color: ui.$gse-ui-menu-option-label-foregroundColor;
+    background-color: ui.$gse-ui-menu-option-default-backgroundColor;
 
     &:focus-within,
     &:hover {
-      background-color: var(--gse-ui-menu-option-hover-backgroundColor);
+      background-color: ui.$gse-ui-menu-option-hover-backgroundColor;
     }
 
     &.gux-submenu-button-active {
-      font-weight: var(--gse-ui-menu-option-label-active-text-fontWeight);
-      color: var(--gse-ui-menu-option-shortcut-selected-foregroundColor);
-      background-color: var(--gse-ui-menu-option-selected-backgroundColor);
+      font-weight: ui.$gse-ui-menu-option-label-active-text-fontWeight;
+      color: ui.$gse-ui-menu-option-shortcut-selected-foregroundColor;
+      background-color: ui.$gse-ui-menu-option-selected-backgroundColor;
     }
 
     .gux-submenu-button-text {
       flex: 1 1 auto;
       align-self: auto;
       order: 0;
-      margin-inline-end: var(--gse-ui-menu-option-gap);
+      margin-inline-end: ui.$gse-ui-menu-option-gap;
       overflow-x: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -52,12 +54,12 @@
     inset-inline-start: 0;
     visibility: hidden;
     flex-direction: column;
-    padding: var(--gse-ui-menu-padding);
+    padding: ui.$gse-ui-menu-padding;
     margin: 0;
-    background-color: var(--gse-ui-menu-backgroundColor);
+    background-color: ui.$gse-ui-menu-backgroundColor;
     border: none;
-    border-radius: var(--gse-ui-menu-borderRadius);
-    box-shadow: var(--gse-ui-menu-boxShadow);
+    border-radius: ui.$gse-ui-menu-borderRadius;
+    box-shadow: ui.$gse-ui-menu-boxShadow;
 
     &.gux-shown {
       visibility: visible;

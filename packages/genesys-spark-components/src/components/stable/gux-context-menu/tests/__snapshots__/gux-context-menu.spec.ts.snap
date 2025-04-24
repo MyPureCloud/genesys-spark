@@ -15,9 +15,8 @@ exports[`gux-context-menu renders 1`] = `
         </gux-button-slot>
       </div>
       <div class="gux-list-container" slot="popup">
-        <gux-list role="list">
+        <gux-list role="list" tabindex="-1">
           <template shadowrootmode="open">
-            <span aria-hidden="true" tabindex="-1"></span>
             <slot></slot>
           </template>
           <slot></slot>

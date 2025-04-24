@@ -1,8 +1,10 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 @mixin slotted-description {
   margin: 0;
-  font-family: var(--gse-ui-sidePanel-description-text-fontFamily) !important;
-  font-size: var(--gse-ui-sidePanel-description-text-fontSize) !important;
-  font-weight: var(--gse-ui-sidePanel-description-text-fontWeight) !important;
-  line-height: var(--gse-ui-sidePanel-description-text-lineHeight) !important;
-  color: var(--gse-ui-sidePanel-descriptionColor) !important;
+  font-family: ui.$gse-ui-sidePanel-description-text-fontFamily !important;
+  font-size: ui.$gse-ui-sidePanel-description-text-fontSize !important;
+  font-weight: ui.$gse-ui-sidePanel-description-text-fontWeight !important;
+  line-height: ui.$gse-ui-sidePanel-description-text-lineHeight !important;
+  color: ui.$gse-ui-sidePanel-descriptionColor !important;
 }
