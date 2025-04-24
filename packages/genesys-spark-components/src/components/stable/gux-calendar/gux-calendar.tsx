@@ -426,6 +426,7 @@ export class GuxCalendar {
         });
         break;
       case 'PageUp':
+        event.preventDefault();
         this.incrementPreviewDateByMonth(1);
         this.onDateMouseEnter(this.previewValue);
 
@@ -436,6 +437,7 @@ export class GuxCalendar {
 
         break;
       case 'PageDown':
+        event.preventDefault();
         this.incrementPreviewDateByMonth(-1);
         this.onDateMouseEnter(this.previewValue);
 
