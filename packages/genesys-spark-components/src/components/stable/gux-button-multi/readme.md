@@ -5,11 +5,12 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                         | Type                                     | Default       |
-| ---------- | ---------- | ----------------------------------- | ---------------------------------------- | ------------- |
-| `accent`   | `accent`   |                                     | `"primary" \| "secondary" \| "tertiary"` | `'secondary'` |
-| `disabled` | `disabled` | Disables the action button.         | `boolean`                                | `false`       |
-| `isOpen`   | `is-open`  | It is used to open or not the list. | `boolean`                                | `false`       |
+| Property       | Attribute        | Description                         | Type                                     | Default       |
+| -------------- | ---------------- | ----------------------------------- | ---------------------------------------- | ------------- |
+| `accent`       | `accent`         |                                     | `"primary" \| "secondary" \| "tertiary"` | `'secondary'` |
+| `disabled`     | `disabled`       | Disables the action button.         | `boolean`                                | `false`       |
+| `guxAriaLabel` | `gux-aria-label` | Aria label for button tag           | `string`                                 | `''`          |
+| `isOpen`       | `is-open`        | It is used to open or not the list. | `boolean`                                | `false`       |
 
 
 ## Events
