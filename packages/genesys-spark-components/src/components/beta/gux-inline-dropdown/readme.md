@@ -12,12 +12,11 @@ gux-dropdown-types.ts, then following the resulting compiler errors.
 
 ## Properties
 
-| Property            | Attribute             | Description                                                                                                                                               | Type      | Default     |
-| ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ----------- |
-| `exceedTargetWidth` | `exceed-target-width` | allows dropdown popup to be wider than input defaults to fitting content if width is not specified for listbox default min-width is set to width of input | `boolean` | `false`     |
-| `placeholder`       | `placeholder`         |                                                                                                                                                           | `string`  | `undefined` |
-| `required`          | `required`            |                                                                                                                                                           | `boolean` | `false`     |
-| `value`             | `value`               |                                                                                                                                                           | `string`  | `undefined` |
+| Property      | Attribute     | Description | Type      | Default     |
+| ------------- | ------------- | ----------- | --------- | ----------- |
+| `placeholder` | `placeholder` |             | `string`  | `undefined` |
+| `required`    | `required`    |             | `boolean` | `false`     |
+| `value`       | `value`       |             | `string`  | `undefined` |
 
 
 ## Events
