@@ -43,6 +43,11 @@ export const config: Config = {
     {
       type: 'docs-custom',
       generator: componentMetadataGenerator
+    },
+    {
+      type: 'www',
+      serviceWorker: null,
+      copy: [{ src: '**/*.html' }, { src: '**/*.css' }]
     }
   ],
   plugins: [sass()],
