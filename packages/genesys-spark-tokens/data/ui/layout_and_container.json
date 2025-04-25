@@ -602,6 +602,10 @@
       "padding": {
         "value": "{container.lg.gap} {container.lg.padding} 0",
         "type": "spacing"
+      },
+      "max_height": {
+        "value": "36",
+        "type": "sizing"
       }
     },
     "header": {
