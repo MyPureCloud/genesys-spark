@@ -21,7 +21,7 @@
   "dependencies": {
     "genesys-spark": "file:../../packages/genesys-spark",
     "monaco-editor": "^0.52.2",
-    "parse5": "7.2.1"
+    "parse5": "^7.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
@@ -31,10 +31,10 @@
     "@types/webpack-dev-server": "^4.7.2",
     "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^7.1.2",
-    "eslint": "^9.24.0",
+    "eslint": "^9.25.1",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "file-loader": "^6.2.0",
-    "glob": "^11.0.1",
+    "glob": "^11.0.2",
     "globals": "^16.0.0",
     "lint-staged": "^15.5.1",
     "monaco-editor-webpack-plugin": "^7.1.0",
@@ -45,17 +45,17 @@
     "prettier": "^3.5.3",
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
-    "sass": "^1.86.3",
+    "sass": "^1.87.0",
     "sass-loader": "^16.0.5",
     "semver": "^7.7.1",
     "style-loader": "^4.0.0",
-    "stylelint": "^16.18.0",
+    "stylelint": "^16.19.0",
     "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-standard": "^38.0.0",
     "stylelint-scss": "^6.11.1",
-    "webpack": "5.97.1",
+    "webpack": "^5.99.6",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1"
   },

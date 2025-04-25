@@ -1,4 +1,4 @@
-# gux-status-dropdown
+# gux-inline-dropdown
 
 <!-- Auto Generated Below -->
 
