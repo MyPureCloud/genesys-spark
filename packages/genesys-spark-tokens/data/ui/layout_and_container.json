@@ -605,17 +605,33 @@
       }
     },
     "header": {
-      "icon_gap": {
-        "value": "{container.md.gap}",
+      "padding": {
+        "value": "{container.lg.padding} 0 0 0",
         "type": "spacing"
       },
-      "padding": {
-        "value": "{container.lg.padding} {container.lg.padding} {container.lg.gap}",
-        "type": "spacing"
+      "title_block": {
+        "icon_gap": {
+          "value": "{container.md.gap}",
+          "type": "spacing"
+        },
+        "padding": {
+          "value": "0 {container.xl.padding} {container.md.padding} {container.lg.padding}",
+          "type": "spacing"
+        }
       },
       "dismiss": {
         "padding": {
           "value": "{container.xs.gap}",
+          "type": "spacing"
+        }
+      },
+      "tabset": {
+        "left-padding": {
+          "value": "0 0 0 {container.sm.padding}",
+          "type": "spacing"
+        },
+        "right-padding": {
+          "value": "0 {container.sm.padding} 0 0",
           "type": "spacing"
         }
       }
