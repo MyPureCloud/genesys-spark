@@ -96,6 +96,7 @@ export const config: Config = {
   },
   devServer: {
     port: 3733,
-    https
+    https,
+    root: '.'
   }
 };
