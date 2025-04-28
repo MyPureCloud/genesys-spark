@@ -8,7 +8,16 @@
 }
 
 :host {
-  box-sizing: border-box;
+  display: inline-flex;
+  inline-size: fit-content;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+:host(.gux-has-table-parent) {
+  position: relative;
+  // todo add token for inline padding
+  inset-inline-start: -8px;
 }
 
 ::slotted(gux-listbox) {
@@ -30,7 +39,7 @@
   font-weight: var(--gse-ui-dataTableItems-inlineDropdown-label-fontWeight);
   line-height: var(--gse-ui-dataTableItems-inlineDropdown-label-lineHeight);
   cursor: pointer;
-  background-color: var(--gse-ui-formControl-input-backgroundColor);
+  background-color: inherit;
 }
 
 .gux-target-container-expanded,

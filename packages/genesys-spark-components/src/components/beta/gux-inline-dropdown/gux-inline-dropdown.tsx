@@ -169,6 +169,7 @@ export class GuxDropdown {
 
   componentDidLoad(): void {
     this.applyListboxEventListeners();
+    this.applyTableStyle();
   }
 
   componentWillRender(): void {
@@ -200,6 +201,12 @@ export class GuxDropdown {
     if (selectedListboxOptionElement) {
       listboxElement.value = newValue;
       return;
+    }
+  }
+
+  private applyTableStyle(): void {
+    if (this.root.parentElement?.tagName.toLowerCase() === 'td') {
+      this.root.classList.add('gux-has-table-parent');
     }
   }
 
