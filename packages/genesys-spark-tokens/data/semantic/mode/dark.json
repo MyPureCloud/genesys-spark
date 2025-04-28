@@ -1134,6 +1134,16 @@
           "value": "{theme.foreground.secondary.10d}",
           "type": "color",
           "description": "The color for foreground content on progress_and_loading/progressed backgrounds."
+        },
+        "completed": {
+          "value": "{theme.foreground.tertiary.10d}",
+          "type": "color",
+          "description": "The color for foreground content on progress_and_loading/completed foreground"
+        },
+        "incompleted": {
+          "value": "{theme.foreground.high_contrast.30}",
+          "type": "color",
+          "description": "The color for foreground content on progress_and_loading/incompleted foreground"
         }
       },
       "info": {
