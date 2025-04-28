@@ -14,7 +14,7 @@ const tablistHtml = `
       <gux-tab gux-disabled tab-id="2-4"
         >Tab Header 4</gux-tab
       >
-      <gux-tab gux-disabled tab-id="2-5"
+      <gux-tab gux-disabled="true" tab-id="2-5"
         >Tab Header 5</gux-tab
       >
     </gux-tab-list>
