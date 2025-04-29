@@ -16,6 +16,7 @@ import { getActionsFromGroup } from './gux-rich-text-editor.service';
 import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import translationResources from './gux-rich-text-editor-action/i18n/en.json';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+import { OnMutation } from '@utils/decorator/on-mutation';
 
 /**
  * @slot typographical-emphasis - Slot for typographical actions.
@@ -52,6 +53,9 @@ export class GuxRichTextEditor {
   @State()
   insertingActions: string[] = [];
 
+  @State()
+  hasToolbar: boolean = false;
+
   // This event is emitted when an action has been selected from the menu in the shadowDOM.
   @Event({ composed: true })
   guxToggleAction: EventEmitter<string>;
@@ -64,12 +68,18 @@ export class GuxRichTextEditor {
     });
   }
 
+  @OnMutation({ childList: true, subtree: true })
+  onMutation(): void {
+    this.hasToolbar = this.hasToolbarChildren();
+  }
+
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
   }
 
   componentDidLoad(): void {
+    this.hasToolbar = this.hasToolbarChildren();
     // This timeout is required to calculate the correct size of the containers when the component loads. By including a timeout of 1 second the containers calculate correctly.
     afterNextRenderTimeout(() => {
       this.checkResponsiveLayout();
@@ -288,12 +298,25 @@ export class GuxRichTextEditor {
     return this.renderSlot('global-action', 'gux-global-action-container');
   }
 
+  private hasToolbarChildren(): boolean {
+    const children = [
+      this.renderTypographicalEmphasis(),
+      this.renderTextStyling(),
+      this.renderListsIndentation(),
+      this.renderInserting(),
+      this.renderTextEditorMenu(),
+      this.renderGlobalAction()
+    ].filter(child => child !== null && child !== undefined);
+    return children.length > 0;
+  }
+
   render(): JSX.Element {
     return (
       <div
         class={{
           'gux-rich-text-editor-container': true,
-          'gux-disabled': this.disabled
+          'gux-disabled': this.disabled,
+          'gux-toolbar-hidden': !this.hasToolbar
         }}
       >
         <div class="gux-rich-text-editor-toolbar-container">
