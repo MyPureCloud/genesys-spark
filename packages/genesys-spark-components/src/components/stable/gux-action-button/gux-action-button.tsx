@@ -206,6 +206,7 @@ export class GuxActionButton {
                 type={this.type}
                 disabled={this.disabled}
                 onClick={() => this.onActionClick()}
+                data-testid="action-button"
               >
                 <slot name="title" />
               </button>
@@ -223,6 +224,7 @@ export class GuxActionButton {
                 aria-haspopup="true"
                 aria-expanded={this.isOpen.toString()}
                 aria-label={this.i18n('moreOptions')}
+                data-testid="dropdown-button"
               >
                 <gux-icon
                   decorative
