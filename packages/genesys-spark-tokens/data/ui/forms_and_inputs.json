@@ -762,6 +762,12 @@
     "box_shadow": {
       "value": "{container.sm.box_shadow}",
       "type": "boxShadow"
+    },
+    "cta_group": {
+      "height": {
+        "value": "68px",
+        "type": "sizing"
+      }
     }
   },
   "date_picker": {
