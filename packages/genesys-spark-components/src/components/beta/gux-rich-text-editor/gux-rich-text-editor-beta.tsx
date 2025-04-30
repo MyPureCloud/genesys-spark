@@ -299,15 +299,14 @@ export class GuxRichTextEditor {
   }
 
   private hasToolbarChildren(): boolean {
-    const children = [
+    return [
       this.renderTypographicalEmphasis(),
       this.renderTextStyling(),
       this.renderListsIndentation(),
       this.renderInserting(),
       this.renderTextEditorMenu(),
       this.renderGlobalAction()
-    ].filter(child => child !== null && child !== undefined);
-    return children.length > 0;
+    ].some(child => child !== null && child !== undefined);
   }
 
   render(): JSX.Element {
