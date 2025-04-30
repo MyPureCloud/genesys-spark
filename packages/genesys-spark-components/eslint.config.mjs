@@ -9,6 +9,7 @@ export default [
       'node_modules/',
       'build/',
       'dist/',
+      'public/',
       'src/components/**/*.md',
       'src/components.d.ts',
       'src/components/legacy/',

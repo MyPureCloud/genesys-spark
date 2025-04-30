@@ -44,7 +44,7 @@ async function setupPage(page: E2EPage) {
       url: 'https://apps.inindca.com/webfonts/noto-sans.css'
     }),
     page.addStyleTag({
-      path: 'www/build/genesys-webcomponents.css'
+      path: 'public/build/genesys-webcomponents.css'
     }),
     page.addStyleTag({
       content: `
