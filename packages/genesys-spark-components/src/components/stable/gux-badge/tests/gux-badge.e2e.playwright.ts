@@ -1,7 +1,7 @@
-import { analyze, setContent, test } from '@test/playwrightTestUtils';
+import { checkRenders, test } from '@test/playwrightTestUtils';
 
 test.describe('gux-badge', () => {
-  [
+  checkRenders([
     '<gux-badge>Badge</gux-badge>',
     '<gux-badge accent="info">Badge</gux-badge>',
     '<gux-badge accent="success">Badge</gux-badge>',
@@ -26,12 +26,5 @@ test.describe('gux-badge', () => {
     // '<gux-badge bold accent="warning"><gux-icon icon-name="subtract" decorative></gux-icon>Badge</gux-badge>',
     '<gux-badge bold accent="error"><gux-icon icon-name="subtract" decorative></gux-icon>Badge</gux-badge>',
     '<gux-badge bold accent="inherit"><gux-icon icon-name="subtract" decorative></gux-icon>Badge</gux-badge>'
-  ].forEach((html, index) => {
-    test(`should render component as expected (${index + 1})`, async ({
-      page
-    }) => {
-      await setContent(page, html);
-      await analyze(page);
-    });
-  });
+  ]);
 });

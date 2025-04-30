@@ -1,6 +1,6 @@
 import { AxeResults } from 'axe-core';
 import { expect } from '@playwright/test';
-import { E2EPage } from '@stencil/playwright';
+import { test, E2EPage } from '@stencil/playwright';
 import AxeBuilder from '@axe-core/playwright';
 
 const modes = ['light', 'dark'] as const;
@@ -60,6 +60,17 @@ async function setupPage(page: E2EPage) {
 export async function setContent(page: E2EPage, html: string) {
   await page.setContent(html);
   await setupPage(page);
+}
+
+export async function checkRenders(htmls: string[]) {
+  htmls.forEach((html, index) => {
+    test(`should render component as expected (${index + 1})`, async ({
+      page
+    }) => {
+      await setContent(page, html);
+      await analyze(page);
+    });
+  });
 }
 
 export { test, E2EPage } from '@stencil/playwright';

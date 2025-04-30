@@ -1,94 +1,29 @@
-import { analyze, expect, setContent, test } from '@test/playwrightTestUtils';
+import {
+  checkRenders,
+  expect,
+  setContent,
+  test
+} from '@test/playwrightTestUtils';
 
 test.describe('gux-button', () => {
-  [
-    {
-      clickable: true,
-      description: 'should render default button',
-      html: '<gux-button>Button</gux-button>'
-    },
-    {
-      clickable: true,
-      description: 'should render primary button',
-      html: '<gux-button accent="primary">Button</gux-button>'
-    },
-    {
-      clickable: true,
-      description: 'should render secondary button',
-      html: '<gux-button accent="secondary">Button</gux-button>'
-    },
-    {
-      clickable: true,
-      description: 'should render tertiary button',
-      html: '<gux-button accent="tertiary">Button</gux-button>'
-    },
-    {
-      clickable: true,
-      description: 'should render ghost button',
-      html: '<gux-button accent="ghost">Button</gux-button>'
-    },
-    {
-      clickable: true,
-      description: 'should render danger button',
-      html: '<gux-button accent="danger">Button</gux-button>'
-    },
-    {
-      clickable: true,
-      description: 'should render inline button',
-      html: '<gux-button accent="inline">Button</gux-button>'
-    },
-    {
-      clickable: true,
-      description: 'should render invalid button',
-      html: '<gux-button accent="invalid">Button</gux-button>'
-    },
-    {
-      clickable: false,
-      description: 'should render disabled default button',
-      html: '<gux-button disabled>Button</gux-button>'
-    },
-    {
-      clickable: false,
-      description: 'should render disabled primary button',
-      html: '<gux-button accent="primary" disabled>Button</gux-button>'
-    },
-    {
-      clickable: false,
-      description: 'should render disabled secondary button',
-      html: '<gux-button accent="secondary" disabled>Button</gux-button>'
-    },
-    {
-      clickable: false,
-      description: 'should render disabled tertiary button',
-      html: '<gux-button accent="tertiary" disabled>Button</gux-button>'
-    },
-    {
-      clickable: false,
-      description: 'should render disabled ghost button',
-      html: '<gux-button accent="ghost" disabled>Button</gux-button>'
-    },
-    {
-      clickable: false,
-      description: 'should render disabled danger button',
-      html: '<gux-button accent="danger" disabled>Button</gux-button>'
-    },
-    {
-      clickable: false,
-      description: 'should render disabled inline button',
-      html: '<gux-button accent="inline" disabled>Button</gux-button>'
-    },
-    {
-      clickable: false,
-      description: 'should render disabled invalid button',
-      html: '<gux-button accent="invalid" disabled>Button</gux-button>'
-    }
-  ].forEach(({ description, html }) => {
-    test(description, async ({ page }) => {
-      await setContent(page, html);
-
-      await analyze(page);
-    });
-  });
+  checkRenders([
+    '<gux-button>Button</gux-button>',
+    '<gux-button accent="primary">Button</gux-button>',
+    '<gux-button accent="secondary">Button</gux-button>',
+    '<gux-button accent="tertiary">Button</gux-button>',
+    '<gux-button accent="ghost">Button</gux-button>',
+    '<gux-button accent="danger">Button</gux-button>',
+    '<gux-button accent="inline">Button</gux-button>',
+    '<gux-button accent="invalid">Button</gux-button>',
+    '<gux-button disabled>Button</gux-button>',
+    '<gux-button accent="primary" disabled>Button</gux-button>',
+    '<gux-button accent="secondary" disabled>Button</gux-button>',
+    '<gux-button accent="tertiary" disabled>Button</gux-button>',
+    '<gux-button accent="ghost" disabled>Button</gux-button>',
+    '<gux-button accent="danger" disabled>Button</gux-button>',
+    '<gux-button accent="inline" disabled>Button</gux-button>',
+    '<gux-button accent="invalid" disabled>Button</gux-button>'
+  ]);
 
   test('should fire a click event when an enabled button slot content is clicked', async ({
     page

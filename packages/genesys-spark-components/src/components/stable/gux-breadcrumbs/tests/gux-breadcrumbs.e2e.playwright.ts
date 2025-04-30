@@ -1,7 +1,7 @@
-import { analyze, setContent, test } from '@test/playwrightTestUtils';
+import { checkRenders, test } from '@test/playwrightTestUtils';
 
 test.describe('gux-breadcrumbs', () => {
-  [
+  checkRenders([
     `<gux-breadcrumbs lang="en"></gux-breadcrumbs>`,
     `
       <gux-breadcrumbs lang="en">
@@ -38,12 +38,5 @@ test.describe('gux-breadcrumbs', () => {
         <gux-breadcrumb-item>Current</gux-breadcrumb-item>
       </gux-breadcrumbs>
     `
-  ].forEach((html, index) => {
-    test(`should render component as expected (${index + 1})`, async ({
-      page
-    }) => {
-      await setContent(page, html);
-      await analyze(page);
-    });
-  });
+  ]);
 });

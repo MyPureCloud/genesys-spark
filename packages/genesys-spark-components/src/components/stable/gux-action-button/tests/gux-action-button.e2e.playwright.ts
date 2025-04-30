@@ -1,5 +1,5 @@
 import {
-  analyze,
+  checkRenders,
   expect,
   E2EPage,
   setContent,
@@ -18,13 +18,16 @@ test.describe('gux-action-button', () => {
   </gux-action-button>
   `;
 
-  async function disableActionButton(page: E2EPage): Promise<void> {
-    const element = page.locator('gux-action-button');
-    await element.evaluate(element =>
-      element.setAttribute('disabled', 'disabled')
-    );
-    await page.waitForChanges();
-  }
+  const disabledHtml = `
+  <gux-action-button lang="en" accent="primary" disabled>
+    <div slot="title">Primary</div>
+    <gux-list-item onclick="notify(event)">Test 1</gux-list-item>
+    <gux-list-item onclick="notify(event)">Test 2</gux-list-item>
+    <gux-list-item onclick="notify(event)">Test 3</gux-list-item>
+    <gux-list-divider></gux-list-divider>
+    <gux-list-item onclick="notify(event)">Test 4</gux-list-item>
+  </gux-action-button>
+  `;
 
   async function clickActionButton(page: E2EPage): Promise<void> {
     await page.getByTestId('action-button').click({ force: true }); // https://github.com/microsoft/playwright/issues/13576
@@ -48,14 +51,7 @@ test.describe('gux-action-button', () => {
     await page.getByTestId('list-item-button').first().press(keypress);
   }
 
-  test('renders', async ({ page }) => {
-    await setContent(page, html);
-    await analyze(page);
-
-    await clickDropdownButton(page);
-
-    await analyze(page);
-  });
+  checkRenders([html, disabledHtml]);
 
   test('should fire actionClick event if not disabled', async ({ page }) => {
     await setContent(page, html);
@@ -68,11 +64,9 @@ test.describe('gux-action-button', () => {
   });
 
   test('should not fire actionClick event if disabled', async ({ page }) => {
-    await setContent(page, html);
+    await setContent(page, disabledHtml);
 
     const onActionClick = await page.spyOnEvent('actionClick');
-
-    await disableActionButton(page);
 
     await clickActionButton(page);
 
@@ -110,11 +104,9 @@ test.describe('gux-action-button', () => {
   });
 
   test('should not fire open event if disabled on click', async ({ page }) => {
-    await setContent(page, html);
+    await setContent(page, disabledHtml);
 
     const onOpen = await page.spyOnEvent('open');
-
-    await disableActionButton(page);
 
     await clickDropdownButton(page);
 
@@ -124,12 +116,10 @@ test.describe('gux-action-button', () => {
   test('should not fire open event if disabled using the keyboard', async ({
     page
   }) => {
-    await setContent(page, html);
+    await setContent(page, disabledHtml);
 
     const onOpen = await page.spyOnEvent('open');
     const onClose = await page.spyOnEvent('close');
-
-    await disableActionButton(page);
 
     await clickActionButton(page);
 
