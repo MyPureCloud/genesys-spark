@@ -3,26 +3,14 @@ jest.mock('../../../../utils/decorator/on-resize', () => ({
   OnResize: jest.fn()
 }));
 
-import { newSpecPage } from '@test/specTestUtils';
-
+import { checkRenders } from '@test/specTestUtils';
 import { GuxTruncate } from '../gux-truncate';
+import { renderConfigs } from './gux-truncate.common';
 
 const components = [GuxTruncate];
-const language = 'en';
 
 describe('gux-truncate', () => {
   describe('#render', () => {
-    [
-      '<gux-truncate>Some text to truncate</gux-truncate>',
-      '<gux-truncate><span>Some text to truncate in a span</span></gux-truncate>',
-      '<gux-truncate><div>Div <span>with a span</span> inside</div></gux-truncate>',
-      '<gux-truncate>This is a long text that should be truncated after three lines of wrapped text</gux-truncate>'
-    ].forEach((html, index) => {
-      it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newSpecPage({ components, html, language });
-
-        expect(page.root).toMatchSnapshot();
-      });
-    });
+    checkRenders(renderConfigs, components);
   });
 });

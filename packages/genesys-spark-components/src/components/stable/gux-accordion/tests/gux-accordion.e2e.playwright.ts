@@ -2,7 +2,8 @@ import { checkRenders, test } from '@test/playwrightTestUtils';
 
 test.describe('gux-accordion', () => {
   checkRenders([
-    `
+    {
+      html: `
     <gux-accordion>
       <gux-accordion-section>
         <h2 slot="header">First Section</h2>
@@ -38,5 +39,6 @@ test.describe('gux-accordion', () => {
         <div slot="content">Sample Content</div>
       </gux-accordion-section>
     </gux-accordion>`
+    }
   ]);
 });
