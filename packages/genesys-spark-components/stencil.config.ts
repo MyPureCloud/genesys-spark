@@ -46,6 +46,7 @@ export const config: Config = {
     },
     {
       type: 'www',
+      dir: 'public',
       serviceWorker: null,
       copy: [{ src: '**/*.html' }, { src: '**/*.css' }]
     }
@@ -96,7 +97,6 @@ export const config: Config = {
   },
   devServer: {
     port: 3733,
-    https,
-    root: '.'
+    https
   }
 };

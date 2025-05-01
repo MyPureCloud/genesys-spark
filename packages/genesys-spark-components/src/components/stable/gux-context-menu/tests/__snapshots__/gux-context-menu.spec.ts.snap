@@ -26,7 +26,7 @@ exports[`gux-context-menu renders 1`] = `
   </template>
   <gux-list-item onclick="notify(event)" role="listitem">
     <template shadowrootmode="open">
-      <button tabindex="-1" type="button">
+      <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
     </template>
@@ -34,7 +34,7 @@ exports[`gux-context-menu renders 1`] = `
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
     <template shadowrootmode="open">
-      <button tabindex="-1" type="button">
+      <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
     </template>
@@ -42,7 +42,7 @@ exports[`gux-context-menu renders 1`] = `
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
     <template shadowrootmode="open">
-      <button tabindex="-1" type="button">
+      <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
     </template>

@@ -1,7 +1,7 @@
 node_modules/
 build/
 dist/
-www/
+public/
 test-results/
 .stencil/
 

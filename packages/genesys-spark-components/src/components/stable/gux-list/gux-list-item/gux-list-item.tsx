@@ -19,7 +19,12 @@ export class GuxListItem {
   render(): JSX.Element {
     return (
       <Host role="listitem">
-        <button type="button" tabIndex={-1} disabled={this.disabled}>
+        <button
+          type="button"
+          tabIndex={-1}
+          disabled={this.disabled}
+          data-testid="list-item-button"
+        >
           <slot></slot>
         </button>
       </Host>

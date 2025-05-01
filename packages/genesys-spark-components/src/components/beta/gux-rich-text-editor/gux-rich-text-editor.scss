@@ -26,6 +26,10 @@
     ui.$gse-ui-rte-mainContainer-default-border-style;
   border-radius: ui.$gse-ui-rte-container-borderRadius;
 
+  &.gux-toolbar-hidden {
+    gap: 0;
+  }
+
   .gux-rich-text-editor-toolbar-container {
     display: flex;
     flex-direction: row;

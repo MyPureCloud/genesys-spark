@@ -8,8 +8,8 @@ export default [
     ignores: [
       'node_modules/',
       'build/',
-      'www/',
       'dist/',
+      'public/',
       'src/components/**/*.md',
       'src/components.d.ts',
       'src/components/legacy/',

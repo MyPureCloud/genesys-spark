@@ -7,12 +7,12 @@ exports[`gux-action-button renders 1`] = `
       <gux-popup exceed-target-width="" placement="bottom-end">
         <div class="gux-action-button-container" slot="target">
           <gux-button-slot accent="primary" class="gux-action-button">
-            <button type="button">
+            <button data-testid="action-button" type="button">
               <slot name="title"></slot>
             </button>
           </gux-button-slot>
           <gux-button-slot accent="primary" class="gux-dropdown-button">
-            <button aria-expanded="false" aria-haspopup="true" aria-label="More options" type="button">
+            <button aria-expanded="false" aria-haspopup="true" aria-label="More options" data-testid="dropdown-button" type="button">
               <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
             </button>
           </gux-button-slot>
@@ -33,7 +33,7 @@ exports[`gux-action-button renders 1`] = `
   </div>
   <gux-list-item onclick="notify(event)" role="listitem">
     <template shadowrootmode="open">
-      <button tabindex="-1" type="button">
+      <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
     </template>
@@ -41,7 +41,7 @@ exports[`gux-action-button renders 1`] = `
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
     <template shadowrootmode="open">
-      <button tabindex="-1" type="button">
+      <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
     </template>
@@ -49,7 +49,7 @@ exports[`gux-action-button renders 1`] = `
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
     <template shadowrootmode="open">
-      <button tabindex="-1" type="button">
+      <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
     </template>
@@ -60,7 +60,7 @@ exports[`gux-action-button renders 1`] = `
   </gux-list-divider>
   <gux-list-item onclick="notify(event)" role="listitem">
     <template shadowrootmode="open">
-      <button tabindex="-1" type="button">
+      <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
     </template>
