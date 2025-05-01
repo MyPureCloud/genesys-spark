@@ -14,6 +14,7 @@ import { hasSlot } from '@utils/dom/has-slot';
   shadow: true
 })
 export class GuxStatusIndicator {
+  private statusIndicatorContainerElement: HTMLElement;
   @Element()
   root: HTMLElement;
 
@@ -22,6 +23,18 @@ export class GuxStatusIndicator {
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.accent });
+  }
+
+  componentDidLoad(): void {
+    this.applyTableStyle();
+  }
+
+  private applyTableStyle(): void {
+    if (this.root.parentElement?.tagName.toLowerCase() === 'td') {
+      this.statusIndicatorContainerElement.classList.add(
+        'gux-has-table-parent'
+      );
+    }
   }
 
   private renderTooltip(): JSX.Element {
@@ -36,7 +49,10 @@ export class GuxStatusIndicator {
 
   render(): JSX.Element {
     return (
-      <div class="gux-status-indicator">
+      <div
+        class="gux-status-indicator"
+        ref={(el: HTMLElement) => (this.statusIndicatorContainerElement = el)}
+      >
         <span class={`gux-status-icon gux-status-icon-${this.accent}`}></span>
         <div class="gux-status-indicator-text">
           <slot />

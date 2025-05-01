@@ -14,9 +14,9 @@
   max-inline-size: 100%;
 }
 
-:host(.gux-has-table-parent) {
+.gux-has-table-parent {
   position: relative;
-  // todo add token for inline padding
+  // COMUI-3720 todo add token for inline padding
   inset-inline-start: -8px;
 }
 
@@ -44,7 +44,7 @@
 
 .gux-target-container-expanded,
 .gux-target-container-collapsed .gux-field {
-  // to do need token
+  // COMUI-3720 todo: add tokens
   padding-block: 4px;
   padding-inline: 8px;
 }
