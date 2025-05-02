@@ -11,7 +11,6 @@ export const GuxFormFieldError: FunctionalComponent<GuxFormFieldErrorProps> = (
   return (
     <div
       role="alert"
-      aria-live="assertive"
       class={{
         'gux-form-field-error': true,
         'gux-show': show

@@ -57,6 +57,7 @@ export class GuxFormFieldCheckbox {
   @Prop()
   hasGroupDisabled: boolean = false;
 
+  @Watch('hasGroupError')
   @Watch('hasError')
   onHasError(hasError: boolean): void {
     if (hasError) {
@@ -78,7 +79,7 @@ export class GuxFormFieldCheckbox {
     this.hasError = hasSlot(this.root, 'error');
     this.hasHelp = hasSlot(this.root, 'help');
 
-    if (this.hasError) {
+    if (this.hasError || this.hasGroupError) {
       this.input.setAttribute('aria-invalid', 'true');
     }
 

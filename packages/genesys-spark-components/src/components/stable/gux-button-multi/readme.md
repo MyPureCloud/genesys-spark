@@ -1,4 +1,4 @@
-# gux-buttom-multi
+# gux-button-multi
 
 <!-- Auto Generated Below -->
 
