@@ -1,68 +1,24 @@
-import { newSpecPage } from '@test/specTestUtils';
+import { checkRenders, newSpecPage } from '@test/specTestUtils';
+
 import { GuxSimpleToast } from '../gux-simple-toast';
+
+import { renderConfig, renderConfigs } from './gux-simple-toast.common';
 
 const components = [GuxSimpleToast];
 const language = 'en';
 
 describe('gux-simple-toast-legacy', () => {
   describe('#render', () => {
-    [
-      {
-        description: 'should render neutral simple toast',
-        html: `
-          <gux-simple-toast-legacy accent="neutral">
-            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-            <div slot="message">This is the message</div>
-          </gux-simple-toast-legacy>
-        `
-      },
-      {
-        description: 'should render positive simple toast',
-        html: `
-          <gux-simple-toast-legacy accent="positive">
-            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-            <div slot="message">This is the message</div>
-          </gux-simple-toast-legacy>
-        `
-      },
-      {
-        description: 'should render alert simple toast',
-        html: `
-          <gux-simple-toast-legacy accent="alert">
-            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-            <div slot="message">This is the message</div>
-          </gux-simple-toast-legacy>
-        `
-      },
-      {
-        description: 'should render warning simple toast',
-        html: `
-          <gux-simple-toast-legacy accent="warning">
-            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-            <div slot="message">This is the message</div>
-          </gux-simple-toast-legacy>
-        `
-      }
-    ].forEach(({ description, html }) => {
-      it(description, async () => {
-        const page = await newSpecPage({ components, html, language });
-
-        expect(page.rootInstance).toBeInstanceOf(GuxSimpleToast);
-
-        expect(page.root).toMatchSnapshot();
-      });
-    });
+    checkRenders(renderConfigs, components);
   });
 
-  describe('dismiss', () => {
+  describe('#interactions', () => {
     it('click dismiss button', async () => {
-      const html = `
-        <gux-simple-toast-legacy accent="neutral">
-          <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-          <div slot="message">This is the message</div>
-        </gux-simple-toast-legacy>
-      `;
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({
+        components,
+        html: renderConfig.html,
+        language
+      });
       const element = page.root as HTMLElement;
       const dismissButton =
         element.shadowRoot.querySelector('gux-dismiss-button');
@@ -78,17 +34,15 @@ describe('gux-simple-toast-legacy', () => {
 
       expect(guxdismissSpy).toHaveBeenCalled();
       expect(clickSpy).not.toHaveBeenCalled();
-      expect(elementRemoveSpy).toBeCalledWith();
+      expect(elementRemoveSpy).toHaveBeenCalledWith();
     });
 
     it('click dismiss button and prevent default', async () => {
-      const html = `
-        <gux-simple-toast-legacy accent="neutral">
-          <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-          <div slot="message">This is the message</div>
-        </gux-simple-toast-legacy>
-      `;
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({
+        components,
+        html: renderConfig.html,
+        language
+      });
       const element = page.root as HTMLElement;
       const dismissButton =
         element.shadowRoot.querySelector('gux-dismiss-button');
@@ -101,7 +55,9 @@ describe('gux-simple-toast-legacy', () => {
       dismissButton.click();
       await page.waitForChanges();
 
-      expect(elementRemoveSpy).not.toBeCalled();
+      expect(elementRemoveSpy).not.toHaveBeenCalled();
+
+      element.remove();
     });
   });
 });

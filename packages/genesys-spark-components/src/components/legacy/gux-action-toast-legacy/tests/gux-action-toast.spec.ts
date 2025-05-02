@@ -1,32 +1,14 @@
-import { newSpecPage } from '@test/specTestUtils';
-import { GuxActionToast } from '../gux-action-toast';
+import { checkRenders } from '@test/specTestUtils';
 
-const components = [GuxActionToast];
-const language = 'en';
+import { GuxActionToast } from '../gux-action-toast';
+import { GuxButton } from '../../../stable/gux-button/gux-button';
+
+import { renderConfigs } from './gux-action-toast.common';
+
+const components = [GuxActionToast, GuxButton];
 
 describe('gux-action-toast', () => {
   describe('#render', () => {
-    [
-      {
-        description: 'should render action toast',
-        html: `
-          <gux-action-toast-legacy accent="neutral">
-            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-            <div slot="title">Title</div>
-            <div slot="message">This is the message</div>
-            <gux-button slot="negative-button">Reject</gux-button>
-            <gux-button slot="positive-button" accent="primary">Accept</gux-button>
-          </gux-action-toast-legacy>
-        `
-      }
-    ].forEach(({ description, html }) => {
-      it(description, async () => {
-        const page = await newSpecPage({ components, html, language });
-
-        expect(page.rootInstance).toBeInstanceOf(GuxActionToast);
-
-        expect(page.root).toMatchSnapshot();
-      });
-    });
+    checkRenders(renderConfigs, components);
   });
 });
