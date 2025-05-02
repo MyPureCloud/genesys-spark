@@ -1,73 +1,22 @@
-import { newSpecPage } from '@test/specTestUtils';
+import { checkRenders, newSpecPage } from '@test/specTestUtils';
 import { GuxNotificationToast } from '../gux-notification-toast';
+import { renderConfig, renderConfigs } from './gux-notification-toast.common';
 
 const components = [GuxNotificationToast];
 const language = 'en';
 
 describe('gux-notification-toast-legacy', () => {
   describe('#render', () => {
-    [
-      {
-        description: 'should render neutral notification toast',
-        html: `
-          <gux-notification-toast-legacy accent="neutral">
-            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-            <div slot="title">Title</div>
-            <div slot="message">This is the message</div>
-          </gux-notification-toast-legacy>
-        `
-      },
-      {
-        description: 'should render positive notification toast',
-        html: `
-          <gux-notification-toast-legacy accent="positive">
-            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-            <div slot="title">Title</div>
-            <div slot="message">This is the message</div>
-          </gux-notification-toast-legacy>
-        `
-      },
-      {
-        description: 'should render alert notification toast',
-        html: `
-          <gux-notification-toast-legacy accent="alert">
-            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-            <div slot="title">Title</div>
-            <div slot="message">This is the message</div>
-          </gux-notification-toast-legacy>
-        `
-      },
-      {
-        description: 'should render warning notification toast',
-        html: `
-          <gux-notification-toast-legacy accent="warning">
-            <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-            <div slot="title">Title</div>
-            <div slot="message">This is the message</div>
-          </gux-notification-toast-legacy>
-        `
-      }
-    ].forEach(({ description, html }) => {
-      it(description, async () => {
-        const page = await newSpecPage({ components, html, language });
-
-        expect(page.rootInstance).toBeInstanceOf(GuxNotificationToast);
-
-        expect(page.root).toMatchSnapshot();
-      });
-    });
+    checkRenders(renderConfigs, components);
   });
 
-  describe('dismiss', () => {
+  describe('#interactions', () => {
     it('click dismiss button', async () => {
-      const html = `
-        <gux-notification-toast-legacy accent="neutral">
-          <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-          <div slot="title">Title</div>
-          <div slot="message">This is the message</div>
-        </gux-notification-toast-legacy>
-      `;
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({
+        components,
+        html: renderConfig.html,
+        language
+      });
       const element = page.root as HTMLElement;
       const dismissButton =
         element.shadowRoot.querySelector('gux-dismiss-button');
@@ -83,18 +32,15 @@ describe('gux-notification-toast-legacy', () => {
 
       expect(guxdismissSpy).toHaveBeenCalled();
       expect(clickSpy).not.toHaveBeenCalled();
-      expect(elementRemoveSpy).toBeCalledWith();
+      expect(elementRemoveSpy).toHaveBeenCalledWith();
     });
 
     it('click dismiss button and prevent default', async () => {
-      const html = `
-        <gux-notification-toast-legacy accent="neutral">
-          <gux-icon slot="icon" icon-name="user-add" decorative></gux-icon>
-          <div slot="title">Title</div>
-          <div slot="message">This is the message</div>
-        </gux-notification-toast-legacy>
-      `;
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({
+        components,
+        html: renderConfig.html,
+        language
+      });
       const element = page.root as HTMLElement;
       const dismissButton =
         element.shadowRoot.querySelector('gux-dismiss-button');
@@ -107,7 +53,7 @@ describe('gux-notification-toast-legacy', () => {
       dismissButton.click();
       await page.waitForChanges();
 
-      expect(elementRemoveSpy).not.toBeCalled();
+      expect(elementRemoveSpy).not.toHaveBeenCalled();
     });
   });
 });

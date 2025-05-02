@@ -30,8 +30,8 @@ async function runAxe(page: E2EPage): Promise<AxeResults> {
 
 export async function analyze(
   page: E2EPage,
-  extraActions: ExtraActionsFn = () => Promise.resolve(),
-  element: string
+  element?: string,
+  extraActions: ExtraActionsFn = () => Promise.resolve()
 ) {
   for (const mode of modes) {
     await setMode(page, mode);
@@ -45,8 +45,10 @@ export async function snap(page: E2EPage, element: string) {
 
   if (await page.locator('gux-tooltip').isVisible()) {
     expect(await page.screenshot()).toMatchSnapshot();
-  } else {
+  } else if (element && (await page.locator(element).isVisible())) {
     expect(await page.locator(element).screenshot()).toMatchSnapshot();
+  } else {
+    expect(await page.screenshot()).toMatchSnapshot();
   }
 }
 
@@ -79,7 +81,7 @@ export async function setContent(page: E2EPage, html: string) {
 
 export async function checkRenders(
   renderConfigs: RenderConfig[],
-  element: string,
+  element?: string,
   extraActions: ExtraActionsFn = () => Promise.resolve()
 ) {
   renderConfigs.forEach(({ description, html }, index) => {
@@ -87,7 +89,7 @@ export async function checkRenders(
       description || `should render component as expected (${index + 1})`,
       async ({ page }) => {
         await setContent(page, html);
-        await analyze(page, extraActions, element);
+        await analyze(page, element, extraActions);
       }
     );
   });

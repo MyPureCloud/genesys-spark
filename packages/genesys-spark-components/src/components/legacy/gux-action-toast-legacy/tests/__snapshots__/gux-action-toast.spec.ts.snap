@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-action-toast #render should render action toast 1`] = `
-<gux-action-toast-legacy accent="neutral">
+<gux-action-toast-legacy accent="neutral" lang="en">
   <template shadowrootmode="open">
     <div class="gux-header">
       <div class="gux-icon">
@@ -31,9 +31,19 @@ exports[`gux-action-toast #render should render action toast 1`] = `
     This is the message
   </div>
   <gux-button slot="negative-button">
+    <template shadowrootmode="open">
+      <button class="gux-secondary" id="button-i" type="button">
+        <slot></slot>
+      </button>
+    </template>
     Reject
   </gux-button>
   <gux-button accent="primary" slot="positive-button">
+    <template shadowrootmode="open">
+      <button class="gux-primary" id="button-i" type="button">
+        <slot></slot>
+      </button>
+    </template>
     Accept
   </gux-button>
 </gux-action-toast-legacy>
