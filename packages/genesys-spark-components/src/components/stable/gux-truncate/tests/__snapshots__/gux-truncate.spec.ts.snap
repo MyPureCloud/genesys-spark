@@ -1,34 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-truncate #render should render component as expected (1) 1`] = `
-<gux-truncate>
-  <template shadowrootmode="open">
-    <div>
-      <span class="gux-truncate-slot-container">
-        <slot></slot>
-      </span>
-    </div>
-  </template>
-  Some text to truncate
-</gux-truncate>
-`;
-
-exports[`gux-truncate #render should render component as expected (2) 1`] = `
-<gux-truncate>
-  <template shadowrootmode="open">
-    <div>
-      <span class="gux-truncate-slot-container">
-        <slot></slot>
-      </span>
-    </div>
-  </template>
-  <span>
-    Some text to truncate in a span
-  </span>
-</gux-truncate>
-`;
-
-exports[`gux-truncate #render should render component as expected (3) 1`] = `
+exports[`gux-truncate #render should not truncate slotted div if it is not overflowing 1`] = `
 <gux-truncate>
   <template shadowrootmode="open">
     <div>
@@ -47,7 +19,7 @@ exports[`gux-truncate #render should render component as expected (3) 1`] = `
 </gux-truncate>
 `;
 
-exports[`gux-truncate #render should render component as expected (4) 1`] = `
+exports[`gux-truncate #render should not truncate slotted span if it is not overflowing 1`] = `
 <gux-truncate>
   <template shadowrootmode="open">
     <div>
@@ -56,6 +28,94 @@ exports[`gux-truncate #render should render component as expected (4) 1`] = `
       </span>
     </div>
   </template>
+  <span>
+    Some text to truncate in a span
+  </span>
+</gux-truncate>
+`;
+
+exports[`gux-truncate #render should not truncate slotted text node if it is not overflowing 1`] = `
+<gux-truncate>
+  <template shadowrootmode="open">
+    <div>
+      <span class="gux-truncate-slot-container">
+        <slot></slot>
+      </span>
+    </div>
+  </template>
+  Some text to truncate
+</gux-truncate>
+`;
+
+exports[`gux-truncate #render should truncate after max lines displayed 1`] = `
+<gux-truncate max-lines="3">
+  <template shadowrootmode="open">
+    <div class="gux-truncate-multi-line">
+      <span class="gux-truncate-slot-container" style="webkit-line-clamp: 3;">
+        <slot></slot>
+      </span>
+    </div>
+  </template>
   This is a long text that should be truncated after three lines of wrapped text
+</gux-truncate>
+`;
+
+exports[`gux-truncate #render should truncate in a table cell 1`] = `
+<gux-truncate>
+  <template shadowrootmode="open">
+    <div>
+      <span class="gux-truncate-slot-container">
+        <slot></slot>
+      </span>
+    </div>
+  </template>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</gux-truncate>
+`;
+
+exports[`gux-truncate #render should truncate slotted div 1`] = `
+<gux-truncate style="inline-size: 100px;">
+  <template shadowrootmode="open">
+    <div>
+      <span class="gux-truncate-slot-container">
+        <slot></slot>
+      </span>
+    </div>
+  </template>
+  <div>
+    Div
+    <span>
+      with a span
+    </span>
+    inside
+  </div>
+</gux-truncate>
+`;
+
+exports[`gux-truncate #render should truncate slotted span 1`] = `
+<gux-truncate style="inline-size: 100px;">
+  <template shadowrootmode="open">
+    <div>
+      <span class="gux-truncate-slot-container">
+        <slot></slot>
+      </span>
+    </div>
+  </template>
+  <span>
+    Some text to truncate in a span
+  </span>
+</gux-truncate>
+`;
+
+exports[`gux-truncate #render should truncate slotted text node 1`] = `
+<gux-truncate style="inline-size: 100px;">
+  <template shadowrootmode="open">
+    <div>
+      <span class="gux-truncate-slot-container">
+        <slot></slot>
+      </span>
+    </div>
+  </template>
+  Some text to truncate
 </gux-truncate>
 `;

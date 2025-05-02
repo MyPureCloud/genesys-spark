@@ -2,6 +2,7 @@ import { AxeResults } from 'axe-core';
 import { expect } from '@playwright/test';
 import { test, E2EPage } from '@stencil/playwright';
 import AxeBuilder from '@axe-core/playwright';
+import { RenderConfig } from './commonTestUtils';
 
 const modes = ['light', 'dark'] as const;
 type Mode = (typeof modes)[number];
@@ -27,12 +28,20 @@ async function runAxe(page: E2EPage): Promise<AxeResults> {
     .analyze();
 }
 
-export async function analyze(page: E2EPage) {
+export async function analyze(
+  page: E2EPage,
+  extraActions: ExtraActionsFn = () => Promise.resolve()
+) {
   for (const mode of modes) {
     await setMode(page, mode);
-    expect((await runAxe(page)).violations).toHaveLength(0);
-    expect(await page.screenshot()).toMatchSnapshot();
+    await extraActions(page);
+    await snap(page);
   }
+}
+
+export async function snap(page: E2EPage) {
+  expect((await runAxe(page)).violations).toHaveLength(0);
+  expect(await page.screenshot()).toMatchSnapshot();
 }
 
 async function setupPage(page: E2EPage) {
@@ -62,16 +71,23 @@ export async function setContent(page: E2EPage, html: string) {
   await setupPage(page);
 }
 
-export async function checkRenders(htmls: string[]) {
-  htmls.forEach((html, index) => {
-    test(`should render component as expected (${index + 1})`, async ({
-      page
-    }) => {
-      await setContent(page, html);
-      await analyze(page);
-    });
+export async function checkRenders(
+  renderConfigs: RenderConfig[],
+  extraActions: ExtraActionsFn = () => Promise.resolve()
+) {
+  renderConfigs.forEach(({ description, html }, index) => {
+    test(
+      description || `should render component as expected (${index + 1})`,
+      async ({ page }) => {
+        await setContent(page, html);
+        await analyze(page, extraActions);
+      }
+    );
   });
 }
 
+type ExtraActionsFn = (page: E2EPage) => Promise<void>;
+
+export { RenderConfig } from './commonTestUtils';
 export { test, E2EPage } from '@stencil/playwright';
 export { expect } from '@playwright/test';
