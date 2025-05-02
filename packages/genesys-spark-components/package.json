@@ -88,6 +88,7 @@
     "axe-live": "^1.0.1",
     "eslint": "^9.25.1",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
+    "eslint-plugin-playwright": "^2.2.0",
     "file-loader": "^6.2.0",
     "genesys-spark-tokens": "file:../genesys-spark-tokens",
     "glob": "^11.0.2",

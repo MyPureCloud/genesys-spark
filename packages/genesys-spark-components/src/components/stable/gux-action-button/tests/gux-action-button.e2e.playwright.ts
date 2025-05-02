@@ -30,10 +30,12 @@ test.describe('gux-action-button', () => {
   `;
 
   async function clickActionButton(page: E2EPage): Promise<void> {
+    // eslint-disable-next-line playwright/no-force-option
     await page.getByTestId('action-button').click({ force: true }); // https://github.com/microsoft/playwright/issues/13576
   }
 
   async function clickDropdownButton(page: E2EPage): Promise<void> {
+    // eslint-disable-next-line playwright/no-force-option
     await page.getByTestId('dropdown-button').click({ force: true }); // https://github.com/microsoft/playwright/issues/13576
   }
 
