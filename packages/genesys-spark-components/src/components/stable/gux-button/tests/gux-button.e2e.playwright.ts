@@ -6,24 +6,27 @@ import {
 } from '@test/playwrightTestUtils';
 
 test.describe('gux-button', () => {
-  checkRenders([
-    { html: '<gux-button>Button</gux-button>' },
-    { html: '<gux-button accent="primary">Button</gux-button>' },
-    { html: '<gux-button accent="secondary">Button</gux-button>' },
-    { html: '<gux-button accent="tertiary">Button</gux-button>' },
-    { html: '<gux-button accent="ghost">Button</gux-button>' },
-    { html: '<gux-button accent="danger">Button</gux-button>' },
-    { html: '<gux-button accent="inline">Button</gux-button>' },
-    { html: '<gux-button accent="invalid">Button</gux-button>' },
-    { html: '<gux-button disabled>Button</gux-button>' },
-    { html: '<gux-button accent="primary" disabled>Button</gux-button>' },
-    { html: '<gux-button accent="secondary" disabled>Button</gux-button>' },
-    { html: '<gux-button accent="tertiary" disabled>Button</gux-button>' },
-    { html: '<gux-button accent="ghost" disabled>Button</gux-button>' },
-    { html: '<gux-button accent="danger" disabled>Button</gux-button>' },
-    { html: '<gux-button accent="inline" disabled>Button</gux-button>' },
-    { html: '<gux-button accent="invalid" disabled>Button</gux-button>' }
-  ]);
+  checkRenders(
+    [
+      { html: '<gux-button>Button</gux-button>' },
+      { html: '<gux-button accent="primary">Button</gux-button>' },
+      { html: '<gux-button accent="secondary">Button</gux-button>' },
+      { html: '<gux-button accent="tertiary">Button</gux-button>' },
+      { html: '<gux-button accent="ghost">Button</gux-button>' },
+      { html: '<gux-button accent="danger">Button</gux-button>' },
+      { html: '<gux-button accent="inline">Button</gux-button>' },
+      { html: '<gux-button accent="invalid">Button</gux-button>' },
+      { html: '<gux-button disabled>Button</gux-button>' },
+      { html: '<gux-button accent="primary" disabled>Button</gux-button>' },
+      { html: '<gux-button accent="secondary" disabled>Button</gux-button>' },
+      { html: '<gux-button accent="tertiary" disabled>Button</gux-button>' },
+      { html: '<gux-button accent="ghost" disabled>Button</gux-button>' },
+      { html: '<gux-button accent="danger" disabled>Button</gux-button>' },
+      { html: '<gux-button accent="inline" disabled>Button</gux-button>' },
+      { html: '<gux-button accent="invalid" disabled>Button</gux-button>' }
+    ],
+    'gux-button'
+  );
 
   test('should fire a click event when an enabled button slot content is clicked', async ({
     page
