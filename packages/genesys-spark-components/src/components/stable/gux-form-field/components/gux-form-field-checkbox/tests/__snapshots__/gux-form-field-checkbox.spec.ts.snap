@@ -13,7 +13,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (1)
         </div>
       </div>
       <div class="error-and-help-text">
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -47,7 +47,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (2)
         </div>
       </div>
       <div class="error-and-help-text">
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -81,7 +81,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (3)
         </div>
       </div>
       <div class="error-and-help-text">
-        <div aria-live="assertive" class="gux-form-field-error gux-show" role="alert">
+        <div class="gux-form-field-error gux-show" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -118,7 +118,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (4)
         </div>
       </div>
       <div class="error-and-help-text">
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -152,7 +152,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (5)
         </div>
       </div>
       <div class="error-and-help-text">
-        <div aria-live="assertive" class="gux-form-field-error gux-show" role="alert">
+        <div class="gux-form-field-error gux-show" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -189,7 +189,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (6)
         </div>
       </div>
       <div class="error-and-help-text">
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>

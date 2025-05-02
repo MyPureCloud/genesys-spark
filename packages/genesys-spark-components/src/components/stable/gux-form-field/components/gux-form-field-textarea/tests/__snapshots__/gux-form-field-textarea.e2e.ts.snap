@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-textarea #render help should render component as expected 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help gux-show"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" name="textarea" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"></textarea> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render help should render component as expected 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help gux-show"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" name="textarea" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"></textarea> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render help should render component as expected 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -13,7 +13,7 @@ exports[`gux-form-field-textarea #render help should render component as expecte
     <div class="gux-input gux-resize-undefined">
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
@@ -28,7 +28,7 @@ exports[`gux-form-field-textarea #render help should render component as expecte
 </div>
 `;
 
-exports[`gux-form-field-textarea #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render input attributes should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render input attributes should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -41,7 +41,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
     <div class="gux-input gux-resize-undefined">
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
@@ -56,7 +56,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
 </div>
 `;
 
-exports[`gux-form-field-textarea #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined gux-disabled"><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" disabled="" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render input attributes should render component as expected (2) 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined gux-disabled"><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" disabled="" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render input attributes should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -69,7 +69,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
     <div class="gux-disabled gux-input gux-resize-undefined">
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
@@ -84,7 +84,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
 </div>
 `;
 
-exports[`gux-form-field-textarea #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-required gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""><span class="gux-form-field-label-indicator-required" aria-hidden="true">*</span></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" required="" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render input attributes should render component as expected (3) 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-required gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""><span class="gux-form-field-label-indicator-required" aria-hidden="true">*</span></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" required="" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render input attributes should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -101,7 +101,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
     <div class="gux-input gux-resize-undefined">
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
@@ -116,7 +116,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
 </div>
 `;
 
-exports[`gux-form-field-textarea #render label-position should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render label-position should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render label-position should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -129,7 +129,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
     <div class="gux-input gux-resize-undefined">
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
@@ -144,7 +144,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
 </div>
 `;
 
-exports[`gux-form-field-textarea #render label-position should render component as expected (2) 1`] = `"<gux-form-field-textarea label-position="above" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render label-position should render component as expected (2) 1`] = `"<gux-form-field-textarea label-position="above" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render label-position should render component as expected (2) 2`] = `
 <div class="gux-above gux-form-field-container">
@@ -157,7 +157,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
     <div class="gux-input gux-resize-undefined">
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
@@ -172,7 +172,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
 </div>
 `;
 
-exports[`gux-form-field-textarea #render label-position should render component as expected (3) 1`] = `"<gux-form-field-textarea label-position="beside" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render label-position should render component as expected (3) 1`] = `"<gux-form-field-textarea label-position="beside" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render label-position should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -185,7 +185,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
     <div class="gux-input gux-resize-undefined">
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
@@ -200,7 +200,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
 </div>
 `;
 
-exports[`gux-form-field-textarea #render label-position should render component as expected (4) 1`] = `"<gux-form-field-textarea label-position="screenreader" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-screenreader"><div class="gux-form-field-label gux-screenreader"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render label-position should render component as expected (4) 1`] = `"<gux-form-field-textarea label-position="screenreader" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-screenreader"><div class="gux-form-field-label gux-screenreader"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render label-position should render component as expected (4) 2`] = `
 <div class="gux-form-field-container gux-screenreader">
@@ -213,7 +213,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
     <div class="gux-input gux-resize-undefined">
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
@@ -228,7 +228,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
 </div>
 `;
 
-exports[`gux-form-field-textarea #render resize should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render resize should render component as expected (1) 1`] = `"<gux-form-field-textarea hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-undefined"><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render resize should render component as expected (1) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -241,7 +241,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
     <div class="gux-input gux-resize-undefined">
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
@@ -256,7 +256,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
 </div>
 `;
 
-exports[`gux-form-field-textarea #render resize should render component as expected (2) 1`] = `"<gux-form-field-textarea resize="auto" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-auto" data-replicated-value><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render resize should render component as expected (2) 1`] = `"<gux-form-field-textarea resize="auto" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-auto" data-replicated-value><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render resize should render component as expected (2) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -269,7 +269,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
     <div class="gux-input gux-resize-auto" data-replicated-value>
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
@@ -284,7 +284,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
 </div>
 `;
 
-exports[`gux-form-field-textarea #render resize should render component as expected (3) 1`] = `"<gux-form-field-textarea resize="manual" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-manual"><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render resize should render component as expected (3) 1`] = `"<gux-form-field-textarea resize="manual" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-manual"><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render resize should render component as expected (3) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -297,7 +297,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
     <div class="gux-input gux-resize-manual">
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>
@@ -312,7 +312,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
 </div>
 `;
 
-exports[`gux-form-field-textarea #render resize should render component as expected (4) 1`] = `"<gux-form-field-textarea resize="none" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-none"><slot name="input"></slot></div><div role="alert" aria-live="assertive" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
+exports[`gux-form-field-textarea #render resize should render component as expected (4) 1`] = `"<gux-form-field-textarea resize="none" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-input gux-resize-none"><slot name="input"></slot></div><div role="alert" class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="small" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div></template> <textarea slot="input" id="gux-form-field-input-i"></textarea> <label slot="label" for="gux-form-field-input-i">Label</label> </gux-form-field-textarea>"`;
 
 exports[`gux-form-field-textarea #render resize should render component as expected (4) 2`] = `
 <div class="gux-beside gux-form-field-container">
@@ -325,7 +325,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
     <div class="gux-input gux-resize-none">
       <slot name="input"></slot>
     </div>
-    <div aria-live="assertive" class="gux-form-field-error" role="alert">
+    <div class="gux-form-field-error" role="alert">
       <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
       <div class="gux-message">
         <slot name="error"></slot>

@@ -16,7 +16,7 @@ exports[`gux-form-field-search #render error should render component as expected
             <slot name="input"></slot>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error gux-show" role="alert">
+        <div class="gux-form-field-error gux-show" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -56,7 +56,7 @@ exports[`gux-form-field-search #render help should render component as expected 
             <slot name="input"></slot>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -97,7 +97,7 @@ exports[`gux-form-field-search #render indicator marks should render component a
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -135,7 +135,7 @@ exports[`gux-form-field-search #render indicator marks should render component a
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -173,7 +173,7 @@ exports[`gux-form-field-search #render indicator marks should render component a
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -211,7 +211,7 @@ exports[`gux-form-field-search #render input attributes should render component 
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -248,7 +248,7 @@ exports[`gux-form-field-search #render input attributes should render component 
             <slot name="input"></slot>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -286,7 +286,7 @@ exports[`gux-form-field-search #render input attributes should render component 
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -323,7 +323,7 @@ exports[`gux-form-field-search #render label-info should render component as exp
             <slot name="input"></slot>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -366,7 +366,7 @@ exports[`gux-form-field-search #render label-position should render component as
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -404,7 +404,7 @@ exports[`gux-form-field-search #render label-position should render component as
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -442,7 +442,7 @@ exports[`gux-form-field-search #render label-position should render component as
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -480,7 +480,7 @@ exports[`gux-form-field-search #render label-position should render component as
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
-        <div aria-live="assertive" class="gux-form-field-error" role="alert">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>

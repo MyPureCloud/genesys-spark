@@ -36,7 +36,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (1)
                     <slot name="suffix"></slot>
                   </div>
                 </div>
-                <div aria-live="assertive" class="gux-form-field-error" role="alert">
+                <div class="gux-form-field-error" role="alert">
                   <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
                   <div class="gux-message">
                     <slot name="error"></slot>
@@ -112,7 +112,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (2)
                     <slot name="suffix"></slot>
                   </div>
                 </div>
-                <div aria-live="assertive" class="gux-form-field-error" role="alert">
+                <div class="gux-form-field-error" role="alert">
                   <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
                   <div class="gux-message">
                     <slot name="error"></slot>
@@ -188,7 +188,7 @@ exports[`gux-pagination-item-counts-legacy #render should render as expected (3)
                     <slot name="suffix"></slot>
                   </div>
                 </div>
-                <div aria-live="assertive" class="gux-form-field-error" role="alert">
+                <div class="gux-form-field-error" role="alert">
                   <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
                   <div class="gux-message">
                     <slot name="error"></slot>
