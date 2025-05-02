@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.142.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.142.0...v4.142.1) (2025-05-02)
+
+
+### Bug Fixes
+
+* **rich-text-editor-beta:** remove gap when there is no toolbar ([d3321ad](https://github.com/MyPureCloud/genesys-spark/commit/d3321ade9c4095ff15283097046b821f7463babf))
+
 ## [4.142.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.141.1...v4.142.0) (2025-04-29)
 
 
