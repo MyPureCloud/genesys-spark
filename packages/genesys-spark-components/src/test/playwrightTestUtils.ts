@@ -30,18 +30,19 @@ async function runAxe(page: E2EPage): Promise<AxeResults> {
 
 export async function analyze(
   page: E2EPage,
-  extraActions: ExtraActionsFn = () => Promise.resolve()
+  extraActions: ExtraActionsFn = () => Promise.resolve(),
+  element: string
 ) {
   for (const mode of modes) {
     await setMode(page, mode);
     await extraActions(page);
-    await snap(page);
+    await snap(page, element);
   }
 }
 
-export async function snap(page: E2EPage) {
+export async function snap(page: E2EPage, element: string) {
   expect((await runAxe(page)).violations).toHaveLength(0);
-  expect(await page.screenshot()).toMatchSnapshot();
+  expect(await page.locator(element).screenshot()).toMatchSnapshot();
 }
 
 async function setupPage(page: E2EPage) {
@@ -73,6 +74,7 @@ export async function setContent(page: E2EPage, html: string) {
 
 export async function checkRenders(
   renderConfigs: RenderConfig[],
+  element: string,
   extraActions: ExtraActionsFn = () => Promise.resolve()
 ) {
   renderConfigs.forEach(({ description, html }, index) => {
@@ -80,7 +82,7 @@ export async function checkRenders(
       description || `should render component as expected (${index + 1})`,
       async ({ page }) => {
         await setContent(page, html);
-        await analyze(page, extraActions);
+        await analyze(page, extraActions, element);
       }
     );
   });

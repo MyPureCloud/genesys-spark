@@ -51,7 +51,7 @@ test.describe('gux-action-button', () => {
     await page.getByTestId('list-item-button').first().press(keypress);
   }
 
-  checkRenders([{ html: html }, { html: disabledHtml }]);
+  checkRenders([{ html: html }, { html: disabledHtml }], 'gux-action-button');
 
   test('should fire actionClick event if not disabled', async ({ page }) => {
     await setContent(page, html);

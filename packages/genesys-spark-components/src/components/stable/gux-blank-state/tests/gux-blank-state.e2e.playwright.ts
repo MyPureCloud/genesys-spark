@@ -1,9 +1,10 @@
 import { checkRenders, test } from '@test/playwrightTestUtils';
 
 test.describe('gux-blank-state', () => {
-  checkRenders([
-    {
-      html: `
+  checkRenders(
+    [
+      {
+        html: `
     <gux-blank-state lang="en">
       <gux-icon slot="image" icon-name="bot" decorative="true"></gux-icon>
       <div slot="primary-message">Sorry, something went wrong.</div>
@@ -13,6 +14,8 @@ test.describe('gux-blank-state', () => {
       </button>
     </gux-blank-state>
     `
-    }
-  ]);
+      }
+    ],
+    'gux-blank-state'
+  );
 });
