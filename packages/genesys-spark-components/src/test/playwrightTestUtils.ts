@@ -42,7 +42,12 @@ export async function analyze(
 
 export async function snap(page: E2EPage, element: string) {
   expect((await runAxe(page)).violations).toHaveLength(0);
-  expect(await page.locator(element).screenshot()).toMatchSnapshot();
+
+  if (await page.locator('gux-tooltip').isVisible()) {
+    expect(await page.screenshot()).toMatchSnapshot();
+  } else {
+    expect(await page.locator(element).screenshot()).toMatchSnapshot();
+  }
 }
 
 async function setupPage(page: E2EPage) {
