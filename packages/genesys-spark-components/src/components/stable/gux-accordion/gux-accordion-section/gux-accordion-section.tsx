@@ -27,7 +27,7 @@ import {
 @Component({
   styleUrl: 'gux-accordion-section.scss',
   tag: 'gux-accordion-section',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxAccordionSection {
   private sectionId: string = randomHTMLId('gux-accordion-section');

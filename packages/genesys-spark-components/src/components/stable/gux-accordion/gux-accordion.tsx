@@ -9,7 +9,7 @@ import { trackComponent } from '@utils/tracking/usage';
 @Component({
   styleUrl: 'gux-accordion.scss',
   tag: 'gux-accordion',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxAccordion {
   @Element()
