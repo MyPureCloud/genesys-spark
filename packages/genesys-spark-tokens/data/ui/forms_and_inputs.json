@@ -1791,5 +1791,13 @@
       "value": "{container.sm.gap}",
       "type": "spacing"
     }
+  },
+  "calendar": {
+    "cta_group": {
+      "padding": {
+        "value": "18px {container.lg.padding}",
+        "type": "spacing"
+      }
+    }
   }
 }
