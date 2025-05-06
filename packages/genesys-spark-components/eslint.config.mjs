@@ -1,5 +1,6 @@
 import genesysSparkConfig from 'eslint-config-genesys-spark-components';
 import genesysSparkTypescriptConfig from 'eslint-config-genesys-spark-components/typescript.mjs';
+import playwright from 'eslint-plugin-playwright';
 import globals from 'globals';
 import { merge } from 'smob';
 
@@ -82,5 +83,9 @@ export default [
       '@typescript-eslint/unbound-method': 'off',
       '@typescript-eslint/require-await': 'off'
     }
+  },
+  {
+    ...playwright.configs['flat/recommended'],
+    files: ['**/*.e2e.playwright.ts']
   }
 ];
