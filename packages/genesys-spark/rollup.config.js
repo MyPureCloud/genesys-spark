@@ -13,7 +13,7 @@ export default [
         values: {
           IS_DEV_MODE: IS_DEV_MODE,
           __COMPONENT_ASSET_PREFIX__: IS_DEV_MODE
-            ? '/dist/genesys-webcomponents/'
+            ? '/build/'
             : process.env.COMPONENT_ASSETS_PATH,
           __CHART_COMPONENT_ASSET_PREFIX__: IS_DEV_MODE
             ? '/dist/genesys-chart-webcomponents/'
@@ -39,7 +39,7 @@ export default [
         values: {
           IS_DEV_MODE: IS_DEV_MODE,
           __COMPONENT_ASSET_PREFIX__: IS_DEV_MODE
-            ? '/dist/genesys-webcomponents/'
+            ? '/build/'
             : process.env.COMPONENT_ASSETS_PATH,
           __CHART_COMPONENT_ASSET_PREFIX__: IS_DEV_MODE
             ? '/dist/genesys-chart-webcomponents/'
