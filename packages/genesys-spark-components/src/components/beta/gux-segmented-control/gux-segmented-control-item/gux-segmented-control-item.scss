@@ -66,10 +66,8 @@ button {
     &.gux-icon-only {
       padding: ui.$gse-ui-segmentedControl-iconOnly-padding;
 
-      .gux-text {
-        &.gux-icon-only {
-          @include mixins.gux-sr-only-clip;
-        }
+      .gux-screenreader-text {
+        @include mixins.gux-sr-only-clip;
       }
     }
 
