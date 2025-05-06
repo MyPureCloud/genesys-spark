@@ -117,8 +117,7 @@ export class GuxTableToolbarMenuButton {
   }
 
   get slotItems(): Element[] {
-    // Extracting the slot's items to avoid passing nested slots to gux-list.
-    // Passing a nested slot to gux-list was causing the gux-list.service's method getGuxListFocusableItems to get hung up
+    // Extracting the slot's items to avoid passing nested slots to gux-list, and also to use gux-list-item
     const slot = this.root.querySelector('slot');
     const element = slot.assignedElements()[0] as HTMLElement;
     return Array.from(element.children);
