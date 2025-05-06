@@ -76,6 +76,9 @@ export class GuxTableToolbarMenuButton {
         }
         break;
       }
+      case 'Escape': {
+        this.dropdownButton.focus();
+      }
     }
   }
 
