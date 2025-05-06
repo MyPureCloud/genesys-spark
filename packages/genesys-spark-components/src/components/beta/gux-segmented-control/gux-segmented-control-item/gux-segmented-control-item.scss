@@ -20,9 +20,7 @@ button {
     border-radius: ui.$gse-ui-segmentedControl-button-start-borderRadius;
 
     .gux-segmented-control-item {
-      &:focus-visible {
-        border-radius: ui.$gse-ui-segmentedControl-button-start-borderRadius;
-      }
+      border-radius: 3px 0 0 3px; // TODO: Replace with token COMUI-3729
     }
   }
 
@@ -33,9 +31,7 @@ button {
     border-radius: ui.$gse-ui-segmentedControl-button-end-borderRadius;
 
     .gux-segmented-control-item {
-      &:focus-visible {
-        border-radius: ui.$gse-ui-segmentedControl-button-end-borderRadius;
-      }
+      border-radius: 0 3px 3px 0; // TODO: Replace with token COMUI-3729
     }
   }
 
