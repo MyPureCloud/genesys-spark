@@ -116,13 +116,6 @@ export class GuxTableToolbarMenuButton {
     }
   }
 
-  get slotItems(): Element[] {
-    // Extracting the slot's items to avoid passing nested slots to gux-list, and also to use gux-list-item
-    const slot = this.root.querySelector('slot');
-    const element = slot.assignedElements()[0] as HTMLElement;
-    return Array.from(element.children);
-  }
-
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     trackComponent(this.root);
