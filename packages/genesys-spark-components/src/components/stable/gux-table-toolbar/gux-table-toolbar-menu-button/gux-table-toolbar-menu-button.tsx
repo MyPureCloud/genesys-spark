@@ -152,15 +152,8 @@ export class GuxTableToolbarMenuButton {
             </gux-button-slot>
           </div>
           <div class="gux-list-container" slot="popup">
-            <gux-list
-              id="gux-table-toolbar-menu-button-list"
-              ref={el => (this.listElement = el)}
-            >
-              {this.slotItems.map(item => {
-                return (
-                  <gux-list-item innerHTML={item.outerHTML}></gux-list-item>
-                );
-              })}
+            <gux-list ref={el => (this.listElement = el)}>
+              <slot />
             </gux-list>
           </div>
         </gux-popup>

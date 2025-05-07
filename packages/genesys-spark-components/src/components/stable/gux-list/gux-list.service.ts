@@ -1,7 +1,17 @@
 function getRootChildren(root: HTMLElement): Element[] {
   const slot = root.querySelector('slot');
 
-  return slot ? slot.assignedElements() : Array.from(root.children);
+  if (slot) {
+    // I think it'd be better to have more of a dynamic way to flatten the slot's assigned elements instead of this hacky way but first wanted
+    // to see if this is going down the right path before I enhance this code to be more dynamic
+    const elements = slot.assignedElements({ flatten: true });
+    if (elements.length === 1) {
+      return Array.from(elements[0]?.children);
+    }
+    return elements;
+  }
+
+  return Array.from(root.children);
 }
 
 function getGuxListFocusableItems(
