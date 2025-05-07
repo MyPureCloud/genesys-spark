@@ -823,7 +823,7 @@
       },
       "secondary": {
         "default": {
-          "value": "{theme.foreground.tertiary.10}",
+          "value": "{theme.foreground.tertiary.20}",
           "type": "color",
           "description": "The color for foreground elements that are over a secondary/default background."
         },
