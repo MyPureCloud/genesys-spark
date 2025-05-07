@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property   | Attribute   | Description                     | Type     | Default     |
-| ---------- | ----------- | ------------------------------- | -------- | ----------- |
-| `maxLines` | `max-lines` | Lines to wrap before truncating | `number` | `undefined` |
+| Property           | Attribute           | Description                     | Type                                                                                                                                                                 | Default          |
+| ------------------ | ------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `maxLines`         | `max-lines`         | Lines to wrap before truncating | `number`                                                                                                                                                             | `undefined`      |
+| `tooltipPlacement` | `tooltip-placement` | Lines to wrap before truncating | `"bottom" \| "bottom-end" \| "bottom-start" \| "left" \| "left-end" \| "left-start" \| "right" \| "right-end" \| "right-start" \| "top" \| "top-end" \| "top-start"` | `'bottom-start'` |
 
 
 ## Methods
