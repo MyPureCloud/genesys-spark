@@ -113,7 +113,6 @@
     flex-direction: column;
     gap: ui.$gse-ui-selectorCard-descriptive-text-gap;
     align-items: center;
-    inline-size: ui.$gse-ui-selectorCard-simple-minWidth;
     min-inline-size: ui.$gse-ui-selectorCard-simple-minWidth;
     max-inline-size: ui.$gse-ui-selectorCard-simple-maxWidth;
     min-block-size: ui.$gse-ui-selectorCard-simple-minHeight;
@@ -128,6 +127,7 @@
       overflow: hidden;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
+      line-clamp: 2;
     }
 
     .gux-icon {
@@ -142,7 +142,6 @@
   &.gux-descriptive {
     .gux-content {
       align-items: flex-start;
-      inline-size: ui.$gse-ui-selectorCard-descriptive-minWidth;
       min-inline-size: ui.$gse-ui-selectorCard-descriptive-minWidth;
       max-inline-size: ui.$gse-ui-selectorCard-descriptive-maxWidth;
       min-block-size: ui.$gse-ui-selectorCard-descriptive-minHeight;
@@ -157,6 +156,7 @@
         overflow: hidden;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
+        line-clamp: 3;
       }
 
       ::slotted(gux-badge) {
