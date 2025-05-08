@@ -43,6 +43,7 @@ export type GuxIconIconName =
   | 'bolt'
   | 'bot'
   | 'branch'
+  | 'brand/google'
   | 'bug'
   | 'bus'
   | 'calendar'
