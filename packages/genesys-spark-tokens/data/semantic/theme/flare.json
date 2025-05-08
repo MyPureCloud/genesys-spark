@@ -298,6 +298,18 @@
             }
           }
         },
+        "25": {
+          "value": "{color.azure_blue.200}",
+          "type": "color"
+        },
+        "30": {
+          "value": "{color.azure_blue.100}",
+          "type": "color"
+        },
+        "40": {
+          "value": "{color.white}",
+          "type": "color"
+        },
         "10d": {
           "value": "{color.azure_blue.1000}",
           "type": "color",

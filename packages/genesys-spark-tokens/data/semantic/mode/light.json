@@ -210,6 +210,16 @@
           "type": "color",
           "description": "The default color for modals overlays."
         }
+      },
+      "surface": {
+        "default": {
+          "value": "#",
+          "type": "color"
+        },
+        "hover": {
+          "value": "#",
+          "type": "color"
+        }
       }
     },
     "container": {
