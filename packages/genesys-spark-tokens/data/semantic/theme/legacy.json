@@ -574,6 +574,11 @@
           "value": "{color_legacy.blue.60}",
           "type": "color"
         },
+        "15": {
+          "value": "{color_legacy.black.50}",
+          "type": "color",
+          "description": "Added because legacy has a different color for some elements, blue for ones, black fro others and flare only has blue."
+        },
         "20": {
           "value": "{color_legacy.black.50}",
           "type": "color"
