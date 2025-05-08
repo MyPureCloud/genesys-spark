@@ -1,0 +1,1037 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gux-form-field-range #render should render component as expected (1) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-1" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Default</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (1) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (2) 1`] = `"<gux-form-field-range display-units="%" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50%</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-2" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Percentage</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (2) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50%
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (3) 1`] = `"<gux-form-field-range display-units="px" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container gux-disabled"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50px</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-3" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Pixels</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (3) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-disabled gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50px
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (4) 1`] = `"<gux-form-field-range value-in-tooltip="" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container" aria-describedby="gux-tooltip-base-i"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot><gux-tooltip-base-beta id="gux-tooltip-base-i" role="tooltip" hydrated=""><span slot="content">50</span></gux-tooltip-base-beta></div><div class="gux-display gux-hidden">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-1" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Default</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (4) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div aria-describedby="gux-tooltip-base-i" class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+        <gux-tooltip-base-beta hydrated="" id="gux-tooltip-base-i" role="tooltip">
+          <span slot="content">
+            50
+          </span>
+        </gux-tooltip-base-beta>
+      </div>
+      <div class="gux-display gux-hidden">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (5) 1`] = `"<gux-form-field-range value-in-tooltip="" display-units="%" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container" aria-describedby="gux-tooltip-base-i"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot><gux-tooltip-base-beta id="gux-tooltip-base-i" role="tooltip" hydrated=""><span slot="content">50%</span></gux-tooltip-base-beta></div><div class="gux-display gux-hidden">50%</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-2" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Percentage</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (5) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div aria-describedby="gux-tooltip-base-i" class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+        <gux-tooltip-base-beta hydrated="" id="gux-tooltip-base-i" role="tooltip">
+          <span slot="content">
+            50%
+          </span>
+        </gux-tooltip-base-beta>
+      </div>
+      <div class="gux-display gux-hidden">
+        50%
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (6) 1`] = `"<gux-form-field-range label-position="above" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="lp-3" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Above</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (6) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (7) 1`] = `"<gux-form-field-range label-position="beside" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="lp-4" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Beside</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (7) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (8) 1`] = `"<gux-form-field-range label-position="screenreader" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-screenreader"><div class="gux-form-field-label gux-screenreader"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="lp-5" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Screenreader</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (8) 2`] = `
+<div class="gux-form-field-container gux-screenreader">
+  <div class="gux-form-field-label gux-screenreader">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (9) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above gux-required"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""><span class="gux-form-field-label-indicator-required" aria-hidden="true">*</span></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="a-2" required="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Required</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (9) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label gux-required">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated="">
+      <span aria-hidden="true" class="gux-form-field-label-indicator-required">
+        *
+      </span>
+    </gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (10) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 70%;"></div></div><slot name="input"></slot></div><div class="gux-display">10</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="a-2" value="10" step="5" min="-25" max="25" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Step / Min / Max</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (10) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 70%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        10
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (11) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error gux-show"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="e-1" id="gux-form-field-input-i" aria-describedby="gux-form-field-error-i"> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="error" id="gux-form-field-error-i">This is an error message</span> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (11) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error gux-show">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (12) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help gux-show"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="e-1" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (12) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help gux-show">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (13) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="e-1" id="gux-form-field-input-i" aria-describedby="gux-label-info-beta-i"> <label slot="label" for="gux-form-field-input-i">Label Info</label> <gux-label-info-beta slot="label-info" id="gux-label-info-beta-i" hydrated=""> <span slot="content">This is some tooltip text</span> </gux-label-info-beta> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (13) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected (14) 1`] = `"<gux-form-field-range indicator-mark="optional" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above gux-required"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-1" required="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Indicator Mark</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected (14) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label gux-required">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (1) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-1" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Default</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (1) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (2) 1`] = `"<gux-form-field-range display-units="%" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50%</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-2" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Percentage</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (2) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50%
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (3) 1`] = `"<gux-form-field-range display-units="px" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container gux-disabled"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50px</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-3" disabled="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Pixels</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (3) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-disabled gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50px
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (4) 1`] = `"<gux-form-field-range value-in-tooltip="" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container" aria-describedby="gux-tooltip-base-i"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot><gux-tooltip-base-beta id="gux-tooltip-base-i" role="tooltip" hydrated=""><span slot="content">50</span></gux-tooltip-base-beta></div><div class="gux-display gux-hidden">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-1" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Default</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (4) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div aria-describedby="gux-tooltip-base-i" class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+        <gux-tooltip-base-beta hydrated="" id="gux-tooltip-base-i" role="tooltip">
+          <span slot="content">
+            50
+          </span>
+        </gux-tooltip-base-beta>
+      </div>
+      <div class="gux-display gux-hidden">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (5) 1`] = `"<gux-form-field-range value-in-tooltip="" display-units="%" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container" aria-describedby="gux-tooltip-base-i"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot><gux-tooltip-base-beta id="gux-tooltip-base-i" role="tooltip" hydrated=""><span slot="content">50%</span></gux-tooltip-base-beta></div><div class="gux-display gux-hidden">50%</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-2" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Percentage</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (5) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div aria-describedby="gux-tooltip-base-i" class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+        <gux-tooltip-base-beta hydrated="" id="gux-tooltip-base-i" role="tooltip">
+          <span slot="content">
+            50%
+          </span>
+        </gux-tooltip-base-beta>
+      </div>
+      <div class="gux-display gux-hidden">
+        50%
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (6) 1`] = `"<gux-form-field-range label-position="above" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="lp-3" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Above</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (6) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (7) 1`] = `"<gux-form-field-range label-position="beside" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="lp-4" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Beside</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (7) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (8) 1`] = `"<gux-form-field-range label-position="screenreader" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-screenreader"><div class="gux-form-field-label gux-screenreader"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="lp-5" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Screenreader</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (8) 2`] = `
+<div class="gux-form-field-container gux-screenreader">
+  <div class="gux-form-field-label gux-screenreader">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (9) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above gux-required"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""><span class="gux-form-field-label-indicator-required" aria-hidden="true">*</span></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="a-2" required="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Required</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (9) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label gux-required">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated="">
+      <span aria-hidden="true" class="gux-form-field-label-indicator-required">
+        *
+      </span>
+    </gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (10) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 70%;"></div></div><slot name="input"></slot></div><div class="gux-display">10</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="a-2" value="10" step="5" min="-25" max="25" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Step / Min / Max</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (10) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 70%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        10
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (11) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error gux-show"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="e-1" id="gux-form-field-input-i" aria-describedby="gux-form-field-error-i"> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="error" id="gux-form-field-error-i">This is an error message</span> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (11) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error gux-show">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (12) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-beside"><div class="gux-form-field-label gux-beside"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help gux-show"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="e-1" id="gux-form-field-input-i" aria-describedby="gux-form-field-help-i"> <label slot="label" for="gux-form-field-input-i">Default</label> <span slot="help" id="gux-form-field-help-i">This is a help message</span> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (12) 2`] = `
+<div class="gux-beside gux-form-field-container">
+  <div class="gux-beside gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help gux-show">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (13) 1`] = `"<gux-form-field-range hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="e-1" id="gux-form-field-input-i" aria-describedby="gux-label-info-beta-i"> <label slot="label" for="gux-form-field-input-i">Label Info</label> <gux-label-info-beta slot="label-info" id="gux-label-info-beta-i" hydrated=""> <span slot="content">This is some tooltip text</span> </gux-label-info-beta> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (13) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`gux-form-field-range #render should render component as expected b (14) 1`] = `"<gux-form-field-range indicator-mark="optional" hydrated=""><template shadowrootmode="open"><div class="gux-form-field-container gux-above"><div class="gux-form-field-label gux-above gux-required"><slot name="label"></slot><gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator><slot name="label-info"></slot></div><div class="gux-input-and-error-container"><div class="gux-range-input-container"><div class="gux-range"><div class="gux-track"><div class="gux-progress" style="width: 50%;"></div></div><slot name="input"></slot></div><div class="gux-display">50</div></div><div class="gux-form-field-error"><gux-icon icon-name="fa/hexagon-exclamation-solid" size="inherit" hydrated=""></gux-icon><div class="gux-message"><slot name="error"></slot></div></div><div class="gux-form-field-help"><div class="gux-message"><slot name="help"></slot></div></div></div></div><style>.gux-form-field-label-indicator-required{padding-inline-start:var(--gse-ui-formControl-formField-gap);color:var(--gse-ui-formControl-label-indicator-requiredColor)}.gux-form-field-label-indicator-optional{margin-inline-start:var(--gse-ui-formControl-formField-gap);font-family:var(--gse-ui-formControl-label-indicator-text-fontFamily);font-size:var(--gse-ui-formControl-label-indicator-text-fontSize);font-weight:var(--gse-ui-formControl-label-indicator-text-fontWeight);line-height:var(--gse-ui-formControl-label-indicator-text-lineHeight);color:var(--gse-ui-formControl-label-indicator-optionalColor)}</style></template> <input slot="input" type="range" name="du-1" required="" id="gux-form-field-input-i"> <label slot="label" for="gux-form-field-input-i">Indicator Mark</label> </gux-form-field-range>"`;
+
+exports[`gux-form-field-range #render should render component as expected b (14) 2`] = `
+<div class="gux-above gux-form-field-container">
+  <div class="gux-above gux-form-field-label gux-required">
+    <slot name="label"></slot>
+    <gux-form-field-label-indicator hydrated=""></gux-form-field-label-indicator>
+    <slot name="label-info"></slot>
+  </div>
+  <div class="gux-input-and-error-container">
+    <div class="gux-range-input-container">
+      <div class="gux-range">
+        <div class="gux-track">
+          <div class="gux-progress" style="width: 50%;"></div>
+        </div>
+        <slot name="input"></slot>
+      </div>
+      <div class="gux-display">
+        50
+      </div>
+    </div>
+    <div class="gux-form-field-error">
+      <gux-icon hydrated="" icon-name="fa/hexagon-exclamation-solid" size="inherit"></gux-icon>
+      <div class="gux-message">
+        <slot name="error"></slot>
+      </div>
+    </div>
+    <div class="gux-form-field-help">
+      <div class="gux-message">
+        <slot name="help"></slot>
+      </div>
+    </div>
+  </div>
+</div>
+`;
