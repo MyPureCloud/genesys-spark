@@ -334,6 +334,7 @@
       },
       "warning": {
         "high_emphasis": "#ffffff",
+        "high_emphasis_inverse": "#2a2a2e",
         "accent": "#f8c73e"
       },
       "error": {

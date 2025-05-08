@@ -949,6 +949,7 @@ table a {
   --gse-semantic-theme-foreground-secondary-20d: #cad1e1;
   --gse-semantic-theme-foreground-secondary-30d: #c1c6d4;
   --gse-semantic-theme-foreground-tertiary-10: #2143a2;
+  --gse-semantic-theme-foreground-tertiary-15: #2143a2;
   --gse-semantic-theme-foreground-tertiary-20: #19327a;
   --gse-semantic-theme-foreground-tertiary-30: #102251;
   --gse-semantic-theme-foreground-tertiary-10d: #ffffff;
@@ -1648,6 +1649,7 @@ table a {
   --gse-semantic-foreground-system-success-accent: #056d4d;
   --gse-semantic-foreground-system-warning-highEmphasis: #2a2a2e;
   --gse-semantic-foreground-system-warning-accent: #9a7b25;
+  --gse-semantic-foreground-system-warning-highEmphasisInverse: #2a2a2e;
   --gse-semantic-foreground-system-error-highEmphasis: #2a2a2e;
   --gse-semantic-foreground-system-error-accent: #b51b37;
   --gse-semantic-foreground-system-icon-default: #4f5157;
@@ -1954,6 +1956,7 @@ table a {
   --gse-semantic-foreground-system-success-highEmphasis: #ffffff;
   --gse-semantic-foreground-system-success-accent: #09b581;
   --gse-semantic-foreground-system-warning-highEmphasis: #ffffff;
+  --gse-semantic-foreground-system-warning-highEmphasisInverse: #2a2a2e;
   --gse-semantic-foreground-system-warning-accent: #f8c73e;
   --gse-semantic-foreground-system-error-highEmphasis: #ffffff;
   --gse-semantic-foreground-system-error-accent: #e84e6a;

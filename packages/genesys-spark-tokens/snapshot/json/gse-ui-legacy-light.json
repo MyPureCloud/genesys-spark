@@ -1058,7 +1058,7 @@
     "secondary": {
       "default": {
         "background_color": "#e8ecf2",
-        "foreground_color": "#2a60c8"
+        "foreground_color": "#2e394c"
       },
       "hover": {
         "background_color": "#deeaff",
@@ -2505,7 +2505,7 @@
       "initials_foreground": {
         "default": "#2e394c",
         "inverse": "#ffffff",
-        "add": "#2a60c8"
+        "add": "#2e394c"
       }
     },
     "hover_modal": {

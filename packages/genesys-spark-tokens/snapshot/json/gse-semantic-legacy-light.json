@@ -228,7 +228,7 @@
         "hover": "#ffffff"
       },
       "secondary": {
-        "default": "#2a60c8",
+        "default": "#2e394c",
         "active": "#2e394c",
         "hover": "#2e394c"
       },
@@ -334,7 +334,8 @@
       },
       "warning": {
         "high_emphasis": "#2e394c",
-        "accent": "#ffae00"
+        "accent": "#ffae00",
+        "high_emphasis_inverse": "#2e394c"
       },
       "error": {
         "high_emphasis": "#2e394c",
