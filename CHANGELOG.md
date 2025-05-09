@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.143.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.143.0...v4.143.1) (2025-05-09)
+
+
+### Bug Fixes
+
+* **selector-card-beta:** removed explicit width ([5dd99cf](https://github.com/MyPureCloud/genesys-spark/commit/5dd99cf152a750f4bfaa106e2ec14dfba62ac415))
+
 ## [4.143.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.142.3...v4.143.0) (2025-05-08)
 
 
