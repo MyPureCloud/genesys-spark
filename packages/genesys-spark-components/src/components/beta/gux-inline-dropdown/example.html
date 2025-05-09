@@ -1,33 +1,124 @@
 <h1>gux-inline-dropdown</h1>
 <form onchange="notify(event)" oninput="notify(event)">
-  <gux-inline-dropdown-beta>
-    <gux-listbox aria-label="status">
-      <gux-option-status-beta value="info" accent="info">
-        <span>Information</span>
-      </gux-option-status-beta>
-      <gux-option-status-beta value="success" accent="success">
-        Success
-      </gux-option-status-beta>
-      <gux-option-status-beta value="warning" accent="warning">
-        Inactive
-      </gux-option-status-beta>
-      <gux-option-status-beta value="error" accent="error">
-        Deleted
-      </gux-option-status-beta>
-    </gux-listbox>
-  </gux-inline-dropdown-beta>
+  <h2>With gux-option-status-beta</h2>
+  <div>
+    <gux-inline-dropdown-beta>
+      <gux-listbox aria-label="status">
+        <gux-option-status-beta value="info" accent="info">
+          <span>Information</span>
+        </gux-option-status-beta>
+        <gux-option-status-beta value="success" accent="success">
+          Success
+        </gux-option-status-beta>
+        <gux-option-status-beta value="warning" accent="warning">
+          Inactive
+        </gux-option-status-beta>
+        <gux-option-status-beta value="error" accent="error">
+          Deleted
+        </gux-option-status-beta>
+      </gux-listbox>
+    </gux-inline-dropdown-beta>
+  </div>
 
-  <gux-inline-dropdown-beta>
-    <gux-listbox aria-label="Countries">
-      <gux-option value="AFG">Afghanistan</gux-option>
-      <gux-option value="ALA">Åland Islands</gux-option>
-      <gux-option value="ALB">Albania</gux-option>
-      <gux-option value="DZA">Algeria</gux-option>
-      <gux-option value="ASM">American Samoa</gux-option>
-      <gux-option value="AND">Andorra</gux-option>
-      <gux-option value="AGO">Angola</gux-option>
-      <gux-option value="AIA">Anguilla</gux-option>
-      <gux-option value="ZWE">Zimbabwe</gux-option>
-    </gux-listbox>
-  </gux-inline-dropdown-beta>
+  <h2>With gux-option</h2>
+  <div>
+    <gux-inline-dropdown-beta>
+      <gux-listbox aria-label="Countries">
+        <gux-option value="AFG">Afghanistan</gux-option>
+        <gux-option value="ALA">Åland Islands</gux-option>
+        <gux-option value="ALB">Albania</gux-option>
+        <gux-option value="DZA">Algeria</gux-option>
+        <gux-option value="ASM">American Samoa</gux-option>
+        <gux-option value="AND">Andorra</gux-option>
+        <gux-option value="AGO">Angola</gux-option>
+        <gux-option value="AIA">Anguilla</gux-option>
+        <gux-option value="ZWE">Zimbabwe</gux-option>
+      </gux-listbox>
+    </gux-inline-dropdown-beta>
+  </div>
 </form>
+<h2>Usage within a table</h2>
+<gux-table>
+  <table slot="data">
+    <thead>
+      <tr>
+        <th data-column-name="first-name">First name</th>
+        <th data-column-name="last-name">Last name</th>
+        <th data-colum-name="status">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>Not Applicable</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td>
+          <gux-inline-dropdown-beta>
+            <gux-listbox aria-label="status">
+              <gux-option-status-beta value="info" accent="info">
+                <span>Information</span>
+              </gux-option-status-beta>
+              <gux-option-status-beta value="success" accent="success">
+                Success
+              </gux-option-status-beta>
+              <gux-option-status-beta value="warning" accent="warning">
+                Inactive
+              </gux-option-status-beta>
+              <gux-option-status-beta value="error" accent="error">
+                Deleted
+              </gux-option-status-beta>
+            </gux-listbox>
+          </gux-inline-dropdown-beta>
+        </td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td>
+          <gux-inline-dropdown-beta>
+            <gux-listbox aria-label="status">
+              <gux-option-status-beta value="info" accent="info">
+                <span>Information</span>
+              </gux-option-status-beta>
+              <gux-option-status-beta value="success" accent="success">
+                Success
+              </gux-option-status-beta>
+              <gux-option-status-beta value="warning" accent="warning">
+                Inactive
+              </gux-option-status-beta>
+              <gux-option-status-beta value="error" accent="error">
+                Deleted
+              </gux-option-status-beta>
+            </gux-listbox>
+          </gux-inline-dropdown-beta>
+        </td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td>
+          <gux-inline-dropdown-beta>
+            <gux-listbox aria-label="status">
+              <gux-option-status-beta value="info" accent="info">
+                <span>Information</span>
+              </gux-option-status-beta>
+              <gux-option-status-beta value="success" accent="success">
+                Success
+              </gux-option-status-beta>
+              <gux-option-status-beta value="warning" accent="warning">
+                Inactive
+              </gux-option-status-beta>
+              <gux-option-status-beta value="error" accent="error">
+                Deleted
+              </gux-option-status-beta>
+            </gux-listbox>
+          </gux-inline-dropdown-beta>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table>

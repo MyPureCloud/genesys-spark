@@ -48,6 +48,7 @@ export class GuxDropdown {
   private i18n: GetI18nValue;
   private fieldButtonElement: HTMLElement;
   private listboxElement: HTMLGuxListboxElement;
+  private popupElement: HTMLGuxPopupElement;
   private truncateElement: HTMLGuxTruncateElement;
 
   @Element()
@@ -169,6 +170,7 @@ export class GuxDropdown {
 
   componentDidLoad(): void {
     this.applyListboxEventListeners();
+    this.applyTableStyle();
   }
 
   componentWillRender(): void {
@@ -200,6 +202,12 @@ export class GuxDropdown {
     if (selectedListboxOptionElement) {
       listboxElement.value = newValue;
       return;
+    }
+  }
+
+  private applyTableStyle(): void {
+    if (this.root.parentElement?.tagName.toLowerCase() === 'td') {
+      this.popupElement.classList.add('gux-has-table-parent');
     }
   }
 
@@ -403,7 +411,11 @@ export class GuxDropdown {
 
   render(): JSX.Element {
     return (
-      <gux-popup expanded={this.expanded} inline={true}>
+      <gux-popup
+        expanded={this.expanded}
+        inline={true}
+        ref={(el: HTMLGuxPopupElement) => (this.popupElement = el)}
+      >
         {this.renderTarget()}
         {this.renderPopup()}
       </gux-popup>

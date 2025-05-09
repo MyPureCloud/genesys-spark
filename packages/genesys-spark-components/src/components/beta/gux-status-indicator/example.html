@@ -17,3 +17,41 @@
   Inactive
   <span slot="tooltip-text">User has been inactive for 10 minutes</span>
 </gux-status-indicator-beta>
+
+<h2>Usage within a table</h2>
+<gux-table>
+  <table slot="data">
+    <thead>
+      <tr>
+        <th data-column-name="first-name">First name</th>
+        <th data-column-name="last-name">Last name</th>
+        <th data-colum-name="status">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>Not Applicable</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td>
+          <gux-status-indicator-beta accent="warning">
+            Inactive
+          </gux-status-indicator-beta>
+        </td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td>
+          <gux-status-indicator-beta accent="success">
+            Success
+          </gux-status-indicator-beta>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table>

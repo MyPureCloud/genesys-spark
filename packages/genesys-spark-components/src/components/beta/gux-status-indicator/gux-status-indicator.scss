@@ -15,6 +15,12 @@
   }
 }
 
+.gux-has-table-parent {
+  position: relative;
+  // COMUI-3720 todo add token for inline padding
+  inset-inline-start: -8px;
+}
+
 .gux-status-indicator-text {
   color: var(--gse-ui-dataTableItems-statusIndicator-text);
 }
