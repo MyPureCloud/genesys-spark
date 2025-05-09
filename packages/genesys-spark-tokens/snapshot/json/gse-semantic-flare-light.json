@@ -334,7 +334,8 @@
       },
       "warning": {
         "high_emphasis": "#2a2a2e",
-        "accent": "#9a7b25"
+        "accent": "#9a7b25",
+        "high_emphasis_inverse": "#2a2a2e"
       },
       "error": {
         "high_emphasis": "#2a2a2e",

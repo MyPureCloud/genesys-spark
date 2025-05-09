@@ -823,7 +823,7 @@
       },
       "secondary": {
         "default": {
-          "value": "{theme.foreground.tertiary.10}",
+          "value": "{theme.foreground.tertiary.15}",
           "type": "color",
           "description": "The color for foreground elements that are over a secondary/default background."
         },
@@ -1172,6 +1172,11 @@
           "value": "{theme.foreground.system.warning.10}",
           "type": "color",
           "description": "The color for content on warning backgrounds that we want to highlight, like the info icon on an alert."
+        },
+        "high_emphasis_inverse": {
+          "value": "{theme.foreground.primary.30}",
+          "type": "color",
+          "description": "The default color for high emphasis content on bold warning backgrounds, like the label of a badge."
         }
       },
       "error": {

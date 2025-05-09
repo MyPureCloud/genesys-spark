@@ -1065,6 +1065,11 @@
           "value": "{color.azure_blue.600}",
           "type": "color"
         },
+        "15": {
+          "value": "{color.azure_blue.600}",
+          "type": "color",
+          "description": "Added because legacy has a different color for some elements, blue for ones, black fro others and flare only has blue."
+        },
         "20": {
           "value": "{color.azure_blue.700}",
           "type": "color"

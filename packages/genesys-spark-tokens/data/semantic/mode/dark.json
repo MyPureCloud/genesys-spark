@@ -1166,6 +1166,11 @@
           "type": "color",
           "description": "The default color for high emphasis content on warning backgrounds, like headings, subheadings, quotes or bold text or links."
         },
+        "high_emphasis_inverse": {
+          "value": "{theme.foreground.primary.30}",
+          "type": "color",
+          "description": "The default color for high emphasis content on bold warning backgrounds, like the label of a badge."
+        },
         "accent": {
           "value": "{theme.foreground.system.warning.10d}",
           "type": "color",
