@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (1) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="25" layout="full" total-items="1000">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -144,7 +144,7 @@ exports[`gux-pagination-legacy #render should render as expected (1) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (2) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="50" layout="full" total-items="1000">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -288,7 +288,7 @@ exports[`gux-pagination-legacy #render should render as expected (2) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (3) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="75" layout="full" total-items="1000">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -432,7 +432,7 @@ exports[`gux-pagination-legacy #render should render as expected (3) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (4) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="100" layout="full" total-items="1000">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -576,7 +576,7 @@ exports[`gux-pagination-legacy #render should render as expected (4) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (5) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="25" layout="full" total-items="1000">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -720,7 +720,7 @@ exports[`gux-pagination-legacy #render should render as expected (5) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (6) 1`] = `
 <gux-pagination-legacy current-page="10" items-per-page="25" layout="full" total-items="1000">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -864,7 +864,7 @@ exports[`gux-pagination-legacy #render should render as expected (6) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (7) 1`] = `
 <gux-pagination-legacy current-page="10" items-per-page="50" layout="full" total-items="1000">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -1008,7 +1008,7 @@ exports[`gux-pagination-legacy #render should render as expected (7) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (8) 1`] = `
 <gux-pagination-legacy current-page="10" items-per-page="75" layout="full" total-items="1000">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -1152,7 +1152,7 @@ exports[`gux-pagination-legacy #render should render as expected (8) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (9) 1`] = `
 <gux-pagination-legacy current-page="10" items-per-page="100" layout="full" total-items="1000">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -1296,7 +1296,7 @@ exports[`gux-pagination-legacy #render should render as expected (9) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render as expected (10) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (10) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="25" layout="small" total-items="1000">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -1348,7 +1348,72 @@ exports[`gux-pagination-legacy #render should render as expected (10) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (11) 1`] = `
+<gux-pagination-legacy current-page="1" items-per-page="25" layout="expanded" total-items="1000">
+  <template shadowrootmode="open">
+    <div class="gux-pagination-container">
+      <div class="gux-pagination-change">
+        <gux-pagination-buttons-legacy current-page="1" total-pages="40">
+          <div class="gux-expanded gux-pagination-buttons-container">
+            <div class="gux-pagination-buttons-group">
+              <gux-button-slot accent="ghost">
+                <button disabled="" title="First">
+                  <gux-icon decorative="" icon-name="fa/chevrons-left-regular"></gux-icon>
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button disabled="" title="Previous">
+                  <gux-icon decorative="" icon-name="custom/chevron-left-small-regular"></gux-icon>
+                </button>
+              </gux-button-slot>
+            </div>
+            <div class="gux-pagination-buttons-list-container">
+              <button class="gux-current gux-pagination-buttons-list-button">
+                1
+              </button>
+              <button class="gux-pagination-buttons-list-button gux-target">
+                2
+              </button>
+              <button class="gux-pagination-buttons-list-button gux-target">
+                3
+              </button>
+              <button class="gux-pagination-buttons-list-button gux-target">
+                4
+              </button>
+              <button class="gux-pagination-buttons-list-button gux-target">
+                5
+              </button>
+              <button class="gux-pagination-buttons-list-button gux-target">
+                6
+              </button>
+              <button class="gux-pagination-buttons-list-button gux-target">
+                ...
+              </button>
+              <button class="gux-pagination-buttons-list-button gux-target">
+                40
+              </button>
+            </div>
+            <div class="gux-pagination-buttons-group">
+              <gux-button-slot accent="ghost">
+                <button title="Next">
+                  <gux-icon decorative="" icon-name="custom/chevron-right-small-regular"></gux-icon>
+                </button>
+              </gux-button-slot>
+              <gux-button-slot accent="ghost">
+                <button title="Last">
+                  <gux-icon decorative="" icon-name="fa/chevrons-right-regular"></gux-icon>
+                </button>
+              </gux-button-slot>
+            </div>
+          </div>
+        </gux-pagination-buttons-legacy>
+      </div>
+    </div>
+  </template>
+</gux-pagination-legacy>
+`;
+
+exports[`gux-pagination-legacy #render should render component as expected (12) 1`] = `
 <gux-pagination-legacy current-page="-3" items-per-page="25" layout="full" total-items="1000">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -1492,7 +1557,7 @@ exports[`gux-pagination-legacy #render should render as expected (11) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (13) 1`] = `
 <gux-pagination-legacy current-page="-3" items-per-page="25" layout="full" total-items="1">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">
@@ -1636,7 +1701,7 @@ exports[`gux-pagination-legacy #render should render as expected (12) 1`] = `
 </gux-pagination-legacy>
 `;
 
-exports[`gux-pagination-legacy #render should render current page as 1 when total items is 0 1`] = `
+exports[`gux-pagination-legacy #render should render component as expected (14) 1`] = `
 <gux-pagination-legacy current-page="1" items-per-page="25" layout="full" total-items="0">
   <template shadowrootmode="open">
     <div class="gux-pagination-container">

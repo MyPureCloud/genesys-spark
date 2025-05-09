@@ -1,33 +1,25 @@
-import { newSpecPage } from '@test/specTestUtils';
+import { checkRenders, newSpecPage } from '@test/specTestUtils';
 
 import { GuxSwitch } from '../gux-switch';
 import { GuxSwitchItem } from '../gux-switch-item/gux-switch-item';
 
+import { renderConfig } from './gux-switch.common';
+
 const components = [GuxSwitch, GuxSwitchItem];
-const html = `
-  <gux-switch-legacy layout="small" value="day">
-    <gux-switch-item value="month">Month</gux-switch-item>
-    <gux-switch-item value="week">Week</gux-switch-item>
-    <gux-switch-item value="day">Day</gux-switch-item>
-    <gux-switch-item value="hour" disabled>Hour</gux-switch-item>
-    <gux-switch-item value="minute">Minute</gux-switch-item>
-  </gux-switch-legacy>
-`;
 const language = 'en';
 
 describe('gux-switch-legacy', () => {
   describe('#render', () => {
-    it(`should render as expected`, async () => {
-      const page = await newSpecPage({ components, html, language });
-
-      expect(page.rootInstance).toBeInstanceOf(GuxSwitch);
-      expect(page.root).toMatchSnapshot();
-    });
+    checkRenders([renderConfig], components);
   });
 
   describe('#interactions', () => {
     it(`should change value on gux-switch-item click`, async () => {
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({
+        components,
+        html: renderConfig.html,
+        language
+      });
       const element = page.root as HTMLGuxSwitchLegacyElement;
       const guxSwitchItemMinute: HTMLGuxSwitchItemElement =
         page.root.querySelector('gux-switch-item[value=minute]');
@@ -41,7 +33,11 @@ describe('gux-switch-legacy', () => {
     });
 
     it(`should not change value on gux-switch-item click if it is disabled`, async () => {
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({
+        components,
+        html: renderConfig.html,
+        language
+      });
       const element = page.root as HTMLGuxSwitchLegacyElement;
       const guxSwitchItemHour: HTMLGuxSwitchItemElement =
         page.root.querySelector('gux-switch-item[value=hour]');
@@ -56,7 +52,11 @@ describe('gux-switch-legacy', () => {
     });
 
     it(`should emit a 'change' and 'input' event when a new item is selected`, async () => {
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({
+        components,
+        html: renderConfig.html,
+        language
+      });
       const element = page.root as HTMLGuxSwitchLegacyElement;
       const guxSwitchItemMinute: HTMLGuxSwitchItemElement =
         page.root.querySelector('gux-switch-item[value=minute]');
@@ -78,7 +78,11 @@ describe('gux-switch-legacy', () => {
     });
 
     it(`should not emit a 'change' and 'input' event when the selected item is reselected`, async () => {
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({
+        components,
+        html: renderConfig.html,
+        language
+      });
       const element = page.root as HTMLGuxSwitchLegacyElement;
       const guxSwitchItemDay: HTMLGuxSwitchItemElement =
         page.root.querySelector('gux-switch-item[value=day]');
@@ -100,7 +104,11 @@ describe('gux-switch-legacy', () => {
     });
 
     it(`should not emit a 'change' or 'input' event when a disabled item is selected`, async () => {
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({
+        components,
+        html: renderConfig.html,
+        language
+      });
       const element = page.root as HTMLGuxSwitchLegacyElement;
       const guxSwitchItemHour: HTMLGuxSwitchItemElement =
         page.root.querySelector('gux-switch-item[value=hour]');
@@ -124,7 +132,11 @@ describe('gux-switch-legacy', () => {
 
   describe('onSlotchange', () => {
     it(`should set selected items as expected`, async () => {
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({
+        components,
+        html: renderConfig.html,
+        language
+      });
       const element = document.querySelector('gux-switch-legacy');
 
       const newItem = document.createElement('gux-switch-item');
@@ -139,7 +151,11 @@ describe('gux-switch-legacy', () => {
 
     // onSlotchange is not getting called as expected in the unit tests so it tested manually below
     it('manually call onSlotchange methods', async () => {
-      const page = await newSpecPage({ components, html, language });
+      const page = await newSpecPage({
+        components,
+        html: renderConfig.html,
+        language
+      });
       const elementController: GuxSwitch = page.rootInstance;
 
       expect(elementController.switchItems).toHaveLength(0);
