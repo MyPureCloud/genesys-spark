@@ -113,18 +113,21 @@ export class GuxSegmentedControlItem {
             'gux-icon-only': this.iconOnly,
             'gux-selected': this.selected
           }}
+          aria-label={
+            this.iconOnly ? getSlotTextContent(this.root, 'text') : null
+          }
           type="button"
           disabled={this.disabled || this.hasDisabledParent()}
         >
           {this.renderIconSlot()}
-          <div
+          <span
+            aria-hidden={this.iconOnly ? 'true' : null}
             class={{
-              'gux-text': true,
-              'gux-icon-only': this.iconOnly
+              'gux-screenreader-text': this.iconOnly
             }}
           >
             <slot name="text" />
-          </div>
+          </span>
         </button>
         {this.renderTooltip()}
       </div>
