@@ -105,7 +105,7 @@ export class GuxTabList {
     }
   }
 
-  @OnMutation({ childList: true, subtree: true })
+  @OnMutation({ childList: true, subtree: true, attributes: true })
   onMutation(): void {
     this.setTabTriggers();
   }
@@ -113,6 +113,12 @@ export class GuxTabList {
   @Method()
   // eslint-disable-next-line @typescript-eslint/require-await
   async guxSetActive(activeTab: string): Promise<void> {
+    const allTabs = this.root.querySelectorAll('gux-tab');
+
+    allTabs.forEach(tab => {
+      void tab.guxSetActive(false);
+    });
+
     this.tabTriggers.forEach((tabTrigger, index) => {
       const active = tabTrigger.tabId === activeTab;
 
