@@ -244,6 +244,7 @@ export class GuxPopover {
           'gux-popover-wrapper': true
         }}
         data-placement
+        tabindex="-1"
       >
         <div
           ref={(el: HTMLDivElement) => (this.arrowElement = el)}
