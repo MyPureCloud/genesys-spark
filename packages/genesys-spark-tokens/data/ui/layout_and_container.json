@@ -623,6 +623,11 @@
           "type": "spacing"
         }
       },
+      "icon_gap": {
+        "value": "{container.md.gap}",
+        "type": "spacing",
+        "description": "DEPRECATED"
+      },
       "dismiss": {
         "padding": {
           "value": "{container.xs.gap}",
