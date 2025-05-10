@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.144.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.143.1...v4.144.0) (2025-05-10)
+
+
+### Features
+
+* **tokens:** Added tertiary 15 color for legacy labels ([701cd94](https://github.com/MyPureCloud/genesys-spark/commit/701cd946fe649725121b236046385b940e6a6b15))
+* **tokens:** Generated CSS vars ([8b569df](https://github.com/MyPureCloud/genesys-spark/commit/8b569dfa88092ae45700c7c0632a99fed250efd7))
+* **tokens:** generated figma vars ([c973759](https://github.com/MyPureCloud/genesys-spark/commit/c9737593c35e6000cee77f34bfcd1aee7fcc77be))
+* **tokens:** Generated figma vars ([5a3e69b](https://github.com/MyPureCloud/genesys-spark/commit/5a3e69b421514d5c61ebed657c1bc81603ab5603))
+* **tokens:** updated legacy secondary color to match v3 ([2d708f0](https://github.com/MyPureCloud/genesys-spark/commit/2d708f00eb17a2e29a449e6861c05e55ecfa92b3))
+* **tokens:** Updated warning badge value ([8797048](https://github.com/MyPureCloud/genesys-spark/commit/879704802fb7766ff76723366c425c369cd2b9fe))
+
+
+### Bug Fixes
+
+* **inline-dropdown-beta:** address UX feedback ([fca55b0](https://github.com/MyPureCloud/genesys-spark/commit/fca55b0872b59ecf5fb14cd970a9a15540694b5d))
+
 ### [4.143.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.143.0...v4.143.1) (2025-05-09)
 
 
