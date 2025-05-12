@@ -1,6 +1,10 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '../../mixins';
 
+:host {
+  background: red;
+}
+
 dialog {
   inset-inline-start: auto;
   block-size: 100%;
@@ -8,6 +12,16 @@ dialog {
   padding: 0;
   margin: unset;
   border: none;
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in-out;
+
+  &.open {
+    transform: translateX(0%);
+  }
+}
+
+.dialog-wrapper:has(dialog[open]) dialog {
+  transform: translateX(0%);
 }
 
 dialog::backdrop {
