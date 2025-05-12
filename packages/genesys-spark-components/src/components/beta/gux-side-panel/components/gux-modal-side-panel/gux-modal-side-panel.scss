@@ -1,10 +1,6 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '../../mixins';
 
-:host {
-  background: red;
-}
-
 dialog {
   inset-inline-start: auto;
   block-size: 100%;
