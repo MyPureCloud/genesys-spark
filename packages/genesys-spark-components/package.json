@@ -38,7 +38,7 @@
     "stencil": "stencil build --prod",
     "stencil.dev": "stencil build --dev --watch --serve --no-open",
     "stylelint": "stylelint --fix \"**/*.{css,html,scss}\"",
-    "svgo": "find ./src/components/stable/gux-icon/icons/**/*.svg -type f ! -path '*/legacy/*' -exec svgo {} +",
+    "svgo": "find ./src/components/stable/gux-icon/icons/**/*.svg -type f ! -path '*/legacy/*' ! -path '*/brand/*'  -exec svgo {} +",
     "test": "TZ=UTC stencil test --spec --e2e",
     "test.ci": "TZ=UTC npm run test.ci.spec",
     "test.ci.e2e": "TZ=UTC stencil test --e2e --maxWorkers=1 --workerIdleMemoryLimit=500MB",

@@ -183,6 +183,15 @@ function generateComponentPage(exampleMarkup) {
     );
   }
 
+  if (withHtml.includes('${BRAND_ICON_EXAMPLE_LIST}')) {
+    withHtml = withHtml.replace(
+      '${BRAND_ICON_EXAMPLE_LIST}',
+      generateIconListHTML(
+        '../../packages/genesys-spark-components/src/components/stable/gux-icon/icons/brand/**/*.svg'
+      )
+    );
+  }
+
   return withHtml;
 }
 
