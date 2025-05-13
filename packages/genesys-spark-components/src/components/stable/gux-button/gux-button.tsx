@@ -31,12 +31,6 @@ export class GuxButton {
   guxTitle: string;
 
   /**
-   * Aria label for button tag
-   */
-  @Prop()
-  guxAriaLabel: string;
-
-  /**
    * Indicate if the button is disabled or not
    */
   @Prop()
@@ -69,7 +63,7 @@ export class GuxButton {
           [`gux-${this.accent}`]: true,
           'gux-icon-only': this.iconOnly
         }}
-        aria-label={this.guxAriaLabel ?? this.guxTitle}
+        aria-label={this.guxTitle}
         autofocus={this.autofocus}
       >
         <slot onSlotchange={this.slotChanged.bind(this)} />
