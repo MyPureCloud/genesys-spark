@@ -7,6 +7,7 @@ import {
   Method,
   Prop
 } from '@stencil/core';
+import { Placement } from '@floating-ui/dom';
 
 import { OnMutation } from '@utils/decorator/on-mutation';
 import { OnResize } from '@utils/decorator/on-resize';
@@ -32,6 +33,12 @@ export class GuxTruncate {
    */
   @Prop()
   maxLines: number;
+
+  /**
+   * Lines to wrap before truncating
+   */
+  @Prop()
+  tooltipPlacement: Placement = 'bottom-start';
 
   @Method()
   async setShowTooltip() {
@@ -69,7 +76,11 @@ export class GuxTruncate {
   private renderTooltip(): JSX.Element {
     if (this.needsTruncation()) {
       return (
-        <gux-tooltip aria-hidden="true" ref={el => (this.tooltipElement = el)}>
+        <gux-tooltip
+          placement={this.tooltipPlacement}
+          aria-hidden="true"
+          ref={el => (this.tooltipElement = el)}
+        >
           <div slot="content">{this.getTooltipContent()}</div>
         </gux-tooltip>
       ) as JSX.Element;
