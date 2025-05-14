@@ -812,6 +812,36 @@
     "icon_focus": {
       "value": "{foreground.interactive.subtle.active}",
       "type": "color"
+    },
+    "date_time": {
+      "input_right": {
+        "border_radius": {
+          "value": "0px {container.sm.border_radius} {container.sm.border_radius} 0px",
+          "type": "borderRadius"
+        },
+        "focus": {
+          "border_radius": {
+            "value": "0px {container.sm.border_radius} {container.sm.border_radius} 0px",
+            "type": "borderRadius"
+          }
+        }
+      },
+      "input_left": {
+        "border_radius": {
+          "value": "{container.sm.border_radius} 0px 0px {container.sm.border_radius}",
+          "type": "borderRadius"
+        },
+        "focus": {
+          "border_radius": {
+            "value": "{container.sm.border_radius} 0px 0px {container.sm.border_radius}",
+            "type": "borderRadius"
+          }
+        }
+      },
+      "gap": {
+        "value": "-1px",
+        "type": "spacing"
+      }
     }
   },
   "toggle": {
