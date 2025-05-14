@@ -101,6 +101,26 @@
       >Click here for usage examples</a
     >
   </fieldset>
+
+  <fieldset>
+    <legend>Accessibility</legend>
+    <h3>Error</h3>
+    <h4>
+      When indicating an error state it is good to apply an aria-invalid
+      attribute to the input element. The aria-invalid attribute is used to
+      indicate that the value entered into an input field is not in a format or
+      a value the application will accept.
+    </h4>
+    <h4>
+      We also apply the role="alert" to the error state internally so that the
+      error is read immediately when displayed.
+    </h4>
+
+    <gux-form-field-time-picker label-position="above">
+      <gux-time-picker id="timePickerInput" value="09:00"></gux-time-picker>
+      <label slot="label">Select Time</label>
+    </gux-form-field-time-picker>
+  </fieldset>
 </form>
 
 <h2>Languages</h2>
@@ -135,6 +155,31 @@
 
       languagesContainer.appendChild(html);
     });
+
+  const timePickerInput = document.querySelector('#timePickerInput');
+  const formField = timePickerInput.closest('gux-form-field-time-picker');
+  let isErrorShown = false;
+
+  setInterval(() => {
+    if (isErrorShown) {
+      // Remove error span
+      const errorSpan = formField.querySelector('span[slot=error]');
+      if (errorSpan) {
+        errorSpan.remove();
+      }
+      // Remove aria-invalid
+      timePickerInput.removeAttribute('aria-invalid');
+    } else {
+      // Create and add error span
+      const errorSpan = document.createElement('span');
+      errorSpan.setAttribute('slot', 'error');
+      errorSpan.textContent = 'This is an error message';
+      formField.appendChild(errorSpan);
+      // Add aria-invalid
+      timePickerInput.setAttribute('aria-invalid', 'true');
+    }
+    isErrorShown = !isErrorShown;
+  }, 5000);
 })()"
 >
   #languages-container {

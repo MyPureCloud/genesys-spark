@@ -133,7 +133,66 @@ cards
     </div>
   </gux-file-list-item>
 </gux-form-field-file-beta>
-<style>
+
+<h2>Accessibility</h2>
+
+<h3>Error</h3>
+<h4>
+  When indicating an error state it is good to apply an aria-invalid attribute
+  to the input element. The aria-invalid attribute is used to indicate that the
+  value entered into an input field is not in a format or a value the
+  application will accept.
+</h4>
+<h4>
+  We also apply the role="alert" to the error state internally so that the error
+  is read immediately when displayed.
+</h4>
+
+<form onchange="notify(event)" oninput="notify(event)">
+  <gux-form-field-file-beta id="example-1" drag-and-drop>
+    <label slot="label">Upload a profile picture</label>
+
+    <input id="fileInput" type="file" name="files[]" slot="input" multiple />
+
+    <gux-label-info-beta slot="label-info">
+      <span slot="content">This is some <b>tooltip</b> text</span>
+    </gux-label-info-beta>
+
+    <span slot="help">
+      <div>Maximum file size is 25MB.</div>
+      <div>Supported file types are JPG and PNG.</div>
+    </span>
+  </gux-form-field-file-beta>
+</form>
+
+<style
+  onload="(function () {
+  const fileInput = document.querySelector('#fileInput');
+  const formField = fileInput.closest('gux-form-field-file-beta');
+  let isErrorShown = false;
+
+  setInterval(() => {
+    if (isErrorShown) {
+      // Remove error span
+      const errorSpan = formField.querySelector('span[slot=error]');
+      if (errorSpan) {
+        errorSpan.remove();
+      }
+      // Remove aria-invalid
+      fileInput.removeAttribute('aria-invalid');
+    } else {
+      // Create and add error span
+      const errorSpan = document.createElement('span');
+      errorSpan.setAttribute('slot', 'error');
+      errorSpan.textContent = 'This is an error message';
+      formField.appendChild(errorSpan);
+      // Add aria-invalid
+      fileInput.setAttribute('aria-invalid', 'true');
+    }
+    isErrorShown = !isErrorShown;
+  }, 5000);
+  })()"
+>
   gux-form-field-file-beta {
     margin: 20px;
   }

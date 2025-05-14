@@ -207,7 +207,55 @@
   </gux-form-field-number>
 </fieldset>
 
-<style>
+<fieldset>
+  <h2>Accessibility</h2>
+
+  <h3>Error</h3>
+  <h4>
+    When indicating an error state it is good to apply an aria-invalid attribute
+    to the input element. The aria-invalid attribute is used to indicate that
+    the value entered into an input field is not in a format or a value the
+    application will accept.
+  </h4>
+  <h4>
+    We also apply the role="alert" to the error state internally so that the
+    error is read immediately when displayed.
+  </h4>
+
+  <gux-form-field-number label-position="beside">
+    <input id="numberInput" slot="input" type="number" name="e-1" value="10" />
+    <label slot="label">I am long label</label>
+  </gux-form-field-number>
+</fieldset>
+
+<style
+  onload="(function () {
+  const numberInput = document.querySelector('#numberInput');
+  const formField = numberInput.closest('gux-form-field-number');
+  let isErrorShown = false;
+
+  setInterval(() => {
+    if (isErrorShown) {
+      // Remove error span
+      const errorSpan = formField.querySelector('span[slot=error]');
+      if (errorSpan) {
+        errorSpan.remove();
+      }
+      // Remove aria-invalid
+      numberInput.removeAttribute('aria-invalid');
+    } else {
+      // Create and add error span
+      const errorSpan = document.createElement('span');
+      errorSpan.setAttribute('slot', 'error');
+      errorSpan.textContent = 'This is an error message';
+      formField.appendChild(errorSpan);
+      // Add aria-invalid
+      numberInput.setAttribute('aria-invalid', 'true');
+    }
+    isErrorShown = !isErrorShown;
+  }, 5000);
+  })()"
+>
   .form-container {
     display: inline-flex;
     flex-direction: column;

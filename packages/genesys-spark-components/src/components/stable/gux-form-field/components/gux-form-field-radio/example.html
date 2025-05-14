@@ -39,4 +39,63 @@
     <label slot="label">Spaghetti</label>
     <span slot="help">This is a help message</span>
   </gux-form-field-radio>
+
+  <h2>Accessibility</h2>
+
+  <h3>Error</h3>
+  <h4>
+    When indicating an error state it is good to apply an aria-invalid attribute
+    to the input element. The aria-invalid attribute is used to indicate that
+    the value entered into an input field is not in a format or a value the
+    application will accept.
+  </h4>
+  <h4>
+    We also apply the role="alert" to the error state internally so that the
+    error is read immediately when displayed.
+  </h4>
+
+  <gux-form-field-radio>
+    <input
+      id="radioInput"
+      slot="input"
+      type="radio"
+      name="food-1"
+      value="spaghetti"
+    />
+    <label slot="label">Spaghetti</label>
+    <span slot="help">This is a help message</span>
+  </gux-form-field-radio>
 </form>
+
+<style
+  onload="(function () {
+  const radioInput = document.querySelector('#radioInput');
+  const formField = radioInput.closest('gux-form-field-radio');
+  let isErrorShown = false;
+
+  setInterval(() => {
+    if (isErrorShown) {
+      // Remove error span
+      const errorSpan = formField.querySelector('span[slot=error]');
+      if (errorSpan) {
+        errorSpan.remove();
+      }
+      // Remove aria-invalid
+      radioInput.removeAttribute('aria-invalid');
+    } else {
+      // Create and add error span
+      const errorSpan = document.createElement('span');
+      errorSpan.setAttribute('slot', 'error');
+      errorSpan.textContent = 'This is an error message';
+      formField.appendChild(errorSpan);
+      // Add aria-invalid
+      radioInput.setAttribute('aria-invalid', 'true');
+    }
+    isErrorShown = !isErrorShown;
+  }, 5000);
+  })()"
+>
+  .not-used {
+    -custom-noop: noop;
+  }
+</style>
