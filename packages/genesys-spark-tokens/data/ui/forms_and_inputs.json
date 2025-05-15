@@ -434,7 +434,7 @@
       },
       "subtext": {
         "foreground_color": {
-          "value": "{foreground.container.low_emphasis}",
+          "value": "{foreground.container.mid_emphasis}",
           "type": "color"
         }
       }
