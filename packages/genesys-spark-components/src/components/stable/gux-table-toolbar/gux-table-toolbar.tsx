@@ -87,7 +87,12 @@ export class GuxTableToolbar {
   }
 
   get permanentSlot(): Element | null {
-    return getSlot(this.root, 'permanent-actions');
+    // If permanent actions are not located at the root, then they are assumed to be located within the menu actions.
+    // Permanent actions will be located in the menu actions if the previous display layout was condensed.
+    return (
+      getSlot(this.root, 'permanent-actions') ||
+      getSlot(this.menuActionSlot as HTMLElement, 'permanent-actions')
+    );
   }
 
   get contextualSlot(): Element | null {
