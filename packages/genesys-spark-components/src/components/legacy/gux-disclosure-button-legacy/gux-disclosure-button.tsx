@@ -104,6 +104,7 @@ export class GuxDisclosureButtonLegacy {
           aria-controls={this.panelId}
           aria-expanded={this.isOpen.toString()}
           aria-label={this.label || this.i18n('defaultLabel')}
+          data-testid="disclosure-button"
         >
           <gux-icon icon-name={`${this.icon}`} decorative></gux-icon>
         </button>

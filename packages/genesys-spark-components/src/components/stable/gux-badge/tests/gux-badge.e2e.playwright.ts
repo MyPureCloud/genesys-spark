@@ -12,7 +12,7 @@ test.describe('gux-badge', () => {
       { html: '<gux-badge bold>Badge</gux-badge>' },
       { html: '<gux-badge bold accent="info">Badge</gux-badge>' },
       { html: '<gux-badge bold accent="success">Badge</gux-badge>' },
-      // { html: '<gux-badge bold accent="warning">Badge</gux-badge>' },
+      { html: '<gux-badge bold accent="warning">Badge</gux-badge>' },
       { html: '<gux-badge bold accent="error">Badge</gux-badge>' },
       { html: '<gux-badge bold accent="inherit">Badge</gux-badge>' },
       {
@@ -42,7 +42,9 @@ test.describe('gux-badge', () => {
       {
         html: '<gux-badge bold accent="success"><gux-icon icon-name="subtract" decorative></gux-icon>Badge</gux-badge>'
       },
-      // { html: '<gux-badge bold accent="warning"><gux-icon icon-name="subtract" decorative></gux-icon>Badge</gux-badge>' },
+      {
+        html: '<gux-badge bold accent="warning"><gux-icon icon-name="subtract" decorative></gux-icon>Badge</gux-badge>'
+      },
       {
         html: '<gux-badge bold accent="error"><gux-icon icon-name="subtract" decorative></gux-icon>Badge</gux-badge>'
       },

@@ -50,7 +50,11 @@ test.describe('gux-action-button', () => {
     page: E2EPage,
     keypress: string
   ): Promise<void> {
-    await page.getByTestId('list-item-button').first().press(keypress);
+    await page
+      .locator('gux-list-item')
+      .first()
+      .getByTestId('list-item-button')
+      .press(keypress);
   }
 
   checkRenders([{ html: html }, { html: disabledHtml }], 'gux-action-button');
