@@ -31,6 +31,12 @@ export class GuxButton {
   guxTitle: string;
 
   /**
+   * Aria label for button tag
+   */
+  @Prop()
+  guxAriaLabel: string;
+
+  /**
    * Indicate if the button is disabled or not
    */
   @Prop()
@@ -63,7 +69,7 @@ export class GuxButton {
           [`gux-${this.accent}`]: true,
           'gux-icon-only': this.iconOnly
         }}
-        aria-label={this.guxTitle}
+        aria-label={this.guxAriaLabel ?? this.guxTitle}
         autofocus={this.autofocus}
       >
         <slot onSlotchange={this.slotChanged.bind(this)} />
@@ -113,7 +119,9 @@ export class GuxButton {
     } else if (
       children.length === 2 &&
       children[0].tagName === 'GUX-ICON' &&
-      ['GUX-TOOLTIP', 'GUX-TOOLTIP-BETA'].includes(children[1].tagName)
+      ['GUX-TOOLTIP', 'GUX-TOOLTIP-BETA', 'GUX-SCREEN-READER-BETA'].includes(
+        children[1].tagName
+      )
     ) {
       return true;
     }
