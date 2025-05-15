@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.145.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.144.0...v4.145.0) (2025-05-15)
+
+
+### Features
+
+* **icon:** added google brand icon ([a170259](https://github.com/MyPureCloud/genesys-spark/commit/a170259a5cffcc81f0f2cebebd2b76a78304f795))
+* **segmented-control-item:** Add aria-current to selected item ([#1069](https://github.com/MyPureCloud/genesys-spark/issues/1069)) ([4fb3e88](https://github.com/MyPureCloud/genesys-spark/commit/4fb3e88eacb3b86f03e4664c1488aa80d1b89f9b))
+* **truncate:** added new tooltip-placement attribute ([bb07aa9](https://github.com/MyPureCloud/genesys-spark/commit/bb07aa9500dd977864b8c16b0a50c8bb8fa049ef))
+
 ## [4.144.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.143.1...v4.144.0) (2025-05-10)
 
 
