@@ -64,7 +64,7 @@
 <gux-avatar-beta name="Gillian Middleton" accent="auto"></gux-avatar-beta>
 <gux-avatar-beta name="Dorka Hajnal" accent="auto"></gux-avatar-beta>
 
-<h2>Dynamic Example</h2>
+<!-- <h2>Dynamic Example</h2>
 
 <div class="dynamic-example-wrapper">
   <div class="control">
@@ -180,7 +180,7 @@
     ring="false"
     badge="false"
   ></gux-avatar-beta>
-</div>
+</div> -->
 
 <h2>Presences</h2>
 <h3>Ring</h3>
@@ -536,13 +536,14 @@
 <h3>Button</h3>
 <div class="wrapped-examples">
   <gux-avatar-focusable-beta>
-    <button onclick="notify(event)">
-      <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
+    <button onclick="notify(event)" aria-label="Conor Darcy">
+      <gux-avatar-beta aria-hidden="true" name="Conor Darcy"></gux-avatar-beta>
     </button>
   </gux-avatar-focusable-beta>
   <gux-avatar-focusable-beta>
-    <button onclick="notify(event)">
+    <button onclick="notify(event)" aria-label="Conor Darcy, (Available)">
       <gux-avatar-beta
+        aria-hidden="true"
         name="Conor Darcy"
         presence="available"
         label="Available"
