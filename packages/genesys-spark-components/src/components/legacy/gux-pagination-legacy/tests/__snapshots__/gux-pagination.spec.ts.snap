@@ -43,7 +43,7 @@ exports[`gux-pagination-legacy #render should render component as expected (1) 1
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -54,7 +54,7 @@ exports[`gux-pagination-legacy #render should render component as expected (1) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -65,7 +65,7 @@ exports[`gux-pagination-legacy #render should render component as expected (1) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -76,7 +76,7 @@ exports[`gux-pagination-legacy #render should render component as expected (1) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -187,7 +187,7 @@ exports[`gux-pagination-legacy #render should render component as expected (2) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -198,7 +198,7 @@ exports[`gux-pagination-legacy #render should render component as expected (2) 1
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -209,7 +209,7 @@ exports[`gux-pagination-legacy #render should render component as expected (2) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -220,7 +220,7 @@ exports[`gux-pagination-legacy #render should render component as expected (2) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -331,7 +331,7 @@ exports[`gux-pagination-legacy #render should render component as expected (3) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -342,7 +342,7 @@ exports[`gux-pagination-legacy #render should render component as expected (3) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -353,7 +353,7 @@ exports[`gux-pagination-legacy #render should render component as expected (3) 1
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -364,7 +364,7 @@ exports[`gux-pagination-legacy #render should render component as expected (3) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -475,7 +475,7 @@ exports[`gux-pagination-legacy #render should render component as expected (4) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -486,7 +486,7 @@ exports[`gux-pagination-legacy #render should render component as expected (4) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -497,7 +497,7 @@ exports[`gux-pagination-legacy #render should render component as expected (4) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -508,7 +508,7 @@ exports[`gux-pagination-legacy #render should render component as expected (4) 1
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -619,7 +619,7 @@ exports[`gux-pagination-legacy #render should render component as expected (5) 1
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -630,7 +630,7 @@ exports[`gux-pagination-legacy #render should render component as expected (5) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -641,7 +641,7 @@ exports[`gux-pagination-legacy #render should render component as expected (5) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -652,7 +652,7 @@ exports[`gux-pagination-legacy #render should render component as expected (5) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -763,7 +763,7 @@ exports[`gux-pagination-legacy #render should render component as expected (6) 1
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -774,7 +774,7 @@ exports[`gux-pagination-legacy #render should render component as expected (6) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -785,7 +785,7 @@ exports[`gux-pagination-legacy #render should render component as expected (6) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -796,7 +796,7 @@ exports[`gux-pagination-legacy #render should render component as expected (6) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -907,7 +907,7 @@ exports[`gux-pagination-legacy #render should render component as expected (7) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -918,7 +918,7 @@ exports[`gux-pagination-legacy #render should render component as expected (7) 1
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -929,7 +929,7 @@ exports[`gux-pagination-legacy #render should render component as expected (7) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -940,7 +940,7 @@ exports[`gux-pagination-legacy #render should render component as expected (7) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1051,7 +1051,7 @@ exports[`gux-pagination-legacy #render should render component as expected (8) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1062,7 +1062,7 @@ exports[`gux-pagination-legacy #render should render component as expected (8) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1073,7 +1073,7 @@ exports[`gux-pagination-legacy #render should render component as expected (8) 1
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1084,7 +1084,7 @@ exports[`gux-pagination-legacy #render should render component as expected (8) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1195,7 +1195,7 @@ exports[`gux-pagination-legacy #render should render component as expected (9) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1206,7 +1206,7 @@ exports[`gux-pagination-legacy #render should render component as expected (9) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1217,7 +1217,7 @@ exports[`gux-pagination-legacy #render should render component as expected (9) 1
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1228,7 +1228,7 @@ exports[`gux-pagination-legacy #render should render component as expected (9) 1
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1456,7 +1456,7 @@ exports[`gux-pagination-legacy #render should render component as expected (12) 
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1467,7 +1467,7 @@ exports[`gux-pagination-legacy #render should render component as expected (12) 
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1478,7 +1478,7 @@ exports[`gux-pagination-legacy #render should render component as expected (12) 
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1489,7 +1489,7 @@ exports[`gux-pagination-legacy #render should render component as expected (12) 
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1600,7 +1600,7 @@ exports[`gux-pagination-legacy #render should render component as expected (13) 
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1611,7 +1611,7 @@ exports[`gux-pagination-legacy #render should render component as expected (13) 
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1622,7 +1622,7 @@ exports[`gux-pagination-legacy #render should render component as expected (13) 
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1633,7 +1633,7 @@ exports[`gux-pagination-legacy #render should render component as expected (13) 
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1744,7 +1744,7 @@ exports[`gux-pagination-legacy #render should render component as expected (14) 
                   <gux-option aria-disabled="false" aria-selected="true" class="gux-selected" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1755,7 +1755,7 @@ exports[`gux-pagination-legacy #render should render component as expected (14) 
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1766,7 +1766,7 @@ exports[`gux-pagination-legacy #render should render component as expected (14) 
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
@@ -1777,7 +1777,7 @@ exports[`gux-pagination-legacy #render should render component as expected (14) 
                   <gux-option aria-disabled="false" aria-selected="false" id="gux-option-i" role="option">
                     <template shadowrootmode="open">
                       <div class="gux-option-wrapper">
-                        <gux-truncate>
+                        <gux-truncate tooltip-placement="right">
                           <slot></slot>
                         </gux-truncate>
                         <slot name="subtext"></slot>
