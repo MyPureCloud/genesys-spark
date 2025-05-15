@@ -49,7 +49,7 @@ export class GuxAvatarChangePhoto {
           decorative
         ></gux-icon>
         <slot name="avatar" />
-        <gux-tooltip-beta placement="top">
+        <gux-tooltip-beta placement="top" visualOnly>
           <div slot="content">{this.i18n('changePhoto')}</div>
         </gux-tooltip-beta>
       </button>
