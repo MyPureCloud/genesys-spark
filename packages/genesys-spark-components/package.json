@@ -51,7 +51,7 @@
     "test.screenshot": "TZ=UTC stencil test --e2e --screenshot",
     "test.unit": "TZ=UTC stencil build dev && stencil test --spec",
     "test.unit.update-snapshot": "TZ=UTC stencil test --spec --updateSnapshot",
-    "test.update-snapshot": "TZ=UTC stencil test --spec --e2e --updateSnapshot",
+    "test.update-snapshot": "TZ=UTC stencil test --spec --e2e --updateSnapshot; playwright test --update-snapshots",
     "test.watch": "TZ=UTC stencil test --spec --e2e --watch",
     "update-en-i18n": "./scripts/update-en-i18n.js",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
