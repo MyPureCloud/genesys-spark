@@ -981,7 +981,7 @@
   "copy_to_clipboard": {
     "label": {
       "active": {
-        "background_color": "#adbff0"
+        "background_color": "#d5def7"
       },
       "foreground_color": "#2a2a2e",
       "padding": "2px 4px",
@@ -1897,7 +1897,7 @@
         "background_color": "#e7e9f9"
       },
       "active": {
-        "background_color": "#adbff0"
+        "background_color": "#d5def7"
       },
       "foreground_color": "#6a6d75",
       "flag": {
@@ -1974,7 +1974,7 @@
       }
     },
     "active": {
-      "background_color": "#adbff0",
+      "background_color": "#d5def7",
       "selected_indicator": {
         "foreground_color": "#102251"
       }

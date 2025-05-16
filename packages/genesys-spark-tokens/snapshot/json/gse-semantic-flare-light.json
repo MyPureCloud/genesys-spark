@@ -78,7 +78,7 @@
       "elevated": {
         "default": "#ffffff",
         "hover": "#e7e9f9",
-        "active": "#adbff0",
+        "active": "#d5def7",
         "error": "#f3a7b5",
         "header": "#f5f6fa",
         "active_subtle": "#d5def7"

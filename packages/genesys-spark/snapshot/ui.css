@@ -475,7 +475,7 @@
   --gse-ui-statusGlyph-positive: #056d4d;
   --gse-ui-statusGlyph-neutral: #9a7b25;
   --gse-ui-statusGlyph-information: #3d538f;
-  --gse-ui-copyToClipboard-label-active-backgroundColor: #adbff0;
+  --gse-ui-copyToClipboard-label-active-backgroundColor: #d5def7;
   --gse-ui-copyToClipboard-label-foregroundColor: #2a2a2e;
   --gse-ui-copyToClipboard-label-padding: 2px 4px;
   --gse-ui-copyToClipboard-label-borderRadius: 4px;
@@ -885,7 +885,7 @@
   --gse-ui-flyoutMenu-backgroundColor: #ffffff;
   --gse-ui-flyoutMenu-arrow-borderRadius: 4px;
   --gse-ui-phoneInput-dropdown-hover-backgroundColor: #e7e9f9;
-  --gse-ui-phoneInput-dropdown-active-backgroundColor: #adbff0;
+  --gse-ui-phoneInput-dropdown-active-backgroundColor: #d5def7;
   --gse-ui-phoneInput-dropdown-foregroundColor: #6a6d75;
   --gse-ui-phoneInput-dropdown-flag-height: 12px;
   --gse-ui-phoneInput-dropdown-flag-width: 16px;
@@ -917,7 +917,7 @@
   --gse-ui-selectorCard-default-selectedIndicator-unselected-foregroundColor: #a3a8b5;
   --gse-ui-selectorCard-hover-backgroundColor: #e7e9f9;
   --gse-ui-selectorCard-hover-selectedIndicator-foregroundColor: #19327a;
-  --gse-ui-selectorCard-active-backgroundColor: #adbff0;
+  --gse-ui-selectorCard-active-backgroundColor: #d5def7;
   --gse-ui-selectorCard-active-selectedIndicator-foregroundColor: #102251;
   --gse-ui-selectorCard-error-backgroundColor: #f3a7b5;
   --gse-ui-selectorCard-error-selectedIndicator-foregroundColor: #b51b37;
