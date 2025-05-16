@@ -131,7 +131,10 @@ export class GuxTooltip {
   private updatePosition(): void {
     const middleware = [
       offset(12),
-      flip(),
+      flip({
+        fallbackAxisSideDirection: 'start',
+        crossAxis: false
+      }),
       shift(),
       hide(),
       overflowDetection()

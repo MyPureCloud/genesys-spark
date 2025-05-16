@@ -145,7 +145,10 @@ export class GuxOptionIcon {
       >
         {this.renderMaybeIcon('start')}
         <div class="gux-option-wrapper">
-          <gux-truncate ref={el => (this.truncateElement = el)}>
+          <gux-truncate
+            tooltip-placement="right"
+            ref={el => (this.truncateElement = el)}
+          >
             <slot />
           </gux-truncate>
           <slot onSlotchange={() => this.onSubtextChange()} name="subtext" />

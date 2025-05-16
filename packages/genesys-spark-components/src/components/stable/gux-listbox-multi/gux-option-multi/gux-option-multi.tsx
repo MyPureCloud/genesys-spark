@@ -158,7 +158,10 @@ export class GuxOptionMulti {
         {/* The gux-slot-container attribute is used in gux-listbox-multi and gux-dropdown-multi as a selector to get the slotted gux-option-multi text.
         This attribute is required because we need to get the slotted text and exclude the screen reader text. */}
         <div class="gux-option-wrapper">
-          <gux-truncate ref={el => (this.truncateElement = el)}>
+          <gux-truncate
+            tooltip-placement="right"
+            ref={el => (this.truncateElement = el)}
+          >
             <slot />
           </gux-truncate>
           <slot onSlotchange={() => this.onSubtextChange()} name="subtext" />

@@ -97,7 +97,10 @@ export class GuxOption {
         aria-disabled={this.disabled.toString()}
       >
         <div class="gux-option-wrapper">
-          <gux-truncate ref={el => (this.truncateElement = el)}>
+          <gux-truncate
+            tooltip-placement="right"
+            ref={el => (this.truncateElement = el)}
+          >
             <slot />
           </gux-truncate>
           <slot onSlotchange={() => this.onSubtextChange()} name="subtext" />
