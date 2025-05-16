@@ -18,6 +18,7 @@ button {
 }
 
 button.gux-compact {
+  min-inline-size: ui.$gse-ui-contextMenu-button-compact;
   block-size: ui.$gse-ui-button-compact-height;
   padding: ui.$gse-ui-button-compact-paddingIconOnly;
 }
