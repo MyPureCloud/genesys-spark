@@ -2062,6 +2062,100 @@
   "cta_group": {
     "gap": "8px"
   },
+  "stepper": {
+    "icon": {
+      "height": "16px",
+      "width": "16px",
+      "completed": {
+        "selected_foreground_color": "#2143a2"
+      },
+      "active": {
+        "foreground_color": "#2143a2"
+      },
+      "error": {
+        "foreground_color": "#b51b37"
+      },
+      "incompleted": {
+        "foreground_color": "#3e4044"
+      }
+    },
+    "bar": {
+      "horizontal": {
+        "height": "3px"
+      },
+      "vertical": {
+        "width": "3px"
+      },
+      "completed": {
+        "selected_foreground_color": "#2143a2"
+      },
+      "active": {
+        "foreground_color": "#2143a2"
+      },
+      "error": {
+        "foreground_color": "#b51b37"
+      },
+      "incompleted": {
+        "foreground_color": "#c1c6d4"
+      }
+    },
+    "step": {
+      "horizontal": {
+        "min_width": "128px",
+        "body": {
+          "margin_right": "16px"
+        },
+        "gap": "12px"
+      },
+      "vertical": {
+        "min_height": "90px",
+        "body": {
+          "margin_right": "16px",
+          "margin_top": "4px"
+        },
+        "gap": "12px"
+      },
+      "gap": "12px",
+      "text": {
+        "gap": "4px"
+      },
+      "focus": {
+        "border": {
+          "color": "#5476d5",
+          "width": "2px",
+          "style": "solid"
+        },
+        "border_radius": "4px"
+      },
+      "disabled": {
+        "opacity": ".5"
+      }
+    },
+    "focus": {
+      "offset": "2px"
+    },
+    "title": {
+      "hover": "#2143a2",
+      "default": "#3e4044"
+    },
+    "default": {
+      "text": {
+        "fontFamily": "Urbanist",
+        "fontWeight": "700",
+        "fontSize": "14px",
+        "lineHeight": "16px"
+      }
+    },
+    "hover": {
+      "text": {
+        "fontFamily": "Urbanist",
+        "fontWeight": "700",
+        "fontSize": "14px",
+        "lineHeight": "16px",
+        "textDecoration": "underline"
+      }
+    }
+  },
   "search": {
     "counter": {
       "default": {

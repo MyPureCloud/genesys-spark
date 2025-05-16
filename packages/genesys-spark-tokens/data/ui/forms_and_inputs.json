@@ -1785,5 +1785,186 @@
       "value": "{container.sm.gap}",
       "type": "spacing"
     }
+  },
+  "stepper": {
+    "icon": {
+      "height": {
+        "value": "{assets.sm.size}",
+        "type": "sizing"
+      },
+      "width": {
+        "value": "{assets.sm.size}",
+        "type": "sizing"
+      },
+      "completed": {
+        "selected_foreground_color": {
+          "value": "{foreground.system.progress_and_loading.completed}",
+          "type": "color"
+        }
+      },
+      "active": {
+        "foreground_color": {
+          "value": "{foreground.system.progress_and_loading.completed}",
+          "type": "color"
+        }
+      },
+      "error": {
+        "foreground_color": {
+          "value": "{foreground.system.indicators.negative}",
+          "type": "color"
+        }
+      },
+      "incompleted": {
+        "foreground_color": {
+          "value": "{foreground.system.progress_and_loading.default}",
+          "type": "color"
+        }
+      }
+    },
+    "bar": {
+      "horizontal": {
+        "height": {
+          "value": "3px",
+          "type": "sizing"
+        }
+      },
+      "vertical": {
+        "width": {
+          "value": "3px",
+          "type": "sizing"
+        }
+      },
+      "completed": {
+        "selected_foreground_color": {
+          "value": "{foreground.system.progress_and_loading.completed}",
+          "type": "color"
+        }
+      },
+      "active": {
+        "foreground_color": {
+          "value": "{foreground.system.progress_and_loading.completed}",
+          "type": "color"
+        }
+      },
+      "error": {
+        "foreground_color": {
+          "value": "{foreground.system.indicators.negative}",
+          "type": "color"
+        }
+      },
+      "incompleted": {
+        "foreground_color": {
+          "value": "{foreground.system.progress_and_loading.incompleted}",
+          "type": "color"
+        }
+      }
+    },
+    "step": {
+      "horizontal": {
+        "min_width": {
+          "value": "128px",
+          "type": "sizing"
+        },
+        "body": {
+          "margin_right": {
+            "value": "{progress_and_loading.medium.gap}",
+            "type": "spacing"
+          }
+        },
+        "gap": {
+          "value": "{progress_and_loading.small.gap}",
+          "type": "spacing"
+        }
+      },
+      "vertical": {
+        "min_height": {
+          "value": "90px",
+          "type": "sizing"
+        },
+        "body": {
+          "margin_right": {
+            "value": "{progress_and_loading.medium.gap}",
+            "type": "spacing"
+          },
+          "margin_top": {
+            "value": "{progress_and_loading.small.gap_text}",
+            "type": "spacing"
+          }
+        },
+        "gap": {
+          "value": "{progress_and_loading.small.gap}",
+          "type": "spacing"
+        }
+      },
+      "gap": {
+        "value": "{progress_and_loading.small.gap}",
+        "type": "spacing"
+      },
+      "text": {
+        "gap": {
+          "value": "{progress_and_loading.small.gap_text}",
+          "type": "spacing"
+        }
+      },
+      "focus": {
+        "border": {
+          "value": {
+            "color": "{border.focus}",
+            "width": "{focus_outline.md.border_width}",
+            "style": "solid"
+          },
+          "type": "border"
+        },
+        "border_radius": {
+          "value": "{interactive.sm.border_radius}",
+          "type": "borderRadius"
+        }
+      },
+      "disabled": {
+        "opacity": {
+          "value": "{opacity.disabled}",
+          "type": "opacity"
+        }
+      }
+    },
+    "focus": {
+      "offset": {
+        "value": "2px",
+        "type": "spacing"
+      }
+    },
+    "title": {
+      "hover": {
+        "value": "{foreground.system.progress_and_loading.completed}",
+        "type": "color"
+      },
+      "default": {
+        "value": "{foreground.system.progress_and_loading.default}",
+        "type": "color"
+      }
+    },
+    "default": {
+      "text": {
+        "value": {
+          "fontFamily": "{theme.font_family.headings}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.sm}",
+          "lineHeight": "{line_height.2xs}"
+        },
+        "type": "typography"
+      }
+    },
+    "hover": {
+      "text": {
+        "value": {
+          "fontFamily": "{theme.font_family.headings}",
+          "fontWeight": "{font_weight.bold}",
+          "fontSize": "{font_size.sm}",
+          "lineHeight": "{line_height.2xs}",
+          "textDecoration": "{text_decoration.underline}"
+        },
+        "type": "typography"
+      }
+    }
   }
 }

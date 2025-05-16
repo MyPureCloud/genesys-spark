@@ -1268,6 +1268,8 @@
   --gse-semantic-foreground-system-customAccents-dark: #2a2a2e;
   --gse-semantic-foreground-system-progressAndLoading-default: #3e4044;
   --gse-semantic-foreground-system-progressAndLoading-progressed: #ffffff;
+  --gse-semantic-foreground-system-progressAndLoading-completed: #2143a2;
+  --gse-semantic-foreground-system-progressAndLoading-incompleted: #c1c6d4;
   --gse-semantic-foreground-system-info-highEmphasis: #2a2a2e;
   --gse-semantic-foreground-system-info-accent: #3d538f;
   --gse-semantic-foreground-system-success-highEmphasis: #2a2a2e;
@@ -1576,6 +1578,8 @@
   --gse-semantic-foreground-system-customAccents-dark: #ffffff;
   --gse-semantic-foreground-system-progressAndLoading-default: #cad1e1;
   --gse-semantic-foreground-system-progressAndLoading-progressed: #ffffff;
+  --gse-semantic-foreground-system-progressAndLoading-completed: #ffffff;
+  --gse-semantic-foreground-system-progressAndLoading-incompleted: #c1c6d4;
   --gse-semantic-foreground-system-info-highEmphasis: #ffffff;
   --gse-semantic-foreground-system-info-accent: #596ea6;
   --gse-semantic-foreground-system-success-highEmphasis: #ffffff;

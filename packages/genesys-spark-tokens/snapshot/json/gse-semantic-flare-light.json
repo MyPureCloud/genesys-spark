@@ -322,7 +322,9 @@
       },
       "progress_and_loading": {
         "default": "#3e4044",
-        "progressed": "#ffffff"
+        "progressed": "#ffffff",
+        "completed": "#2143a2",
+        "incompleted": "#c1c6d4"
       },
       "info": {
         "high_emphasis": "#2a2a2e",
