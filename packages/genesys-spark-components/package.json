@@ -28,6 +28,7 @@
     "lint-staged": "lint-staged --concurrent false",
     "list-checked-a11y-components": "node scripts/list-checked-a11y-components.js",
     "list-component-tracking": "./scripts/list-component-tracking.js",
+    "list-e2e-only-files": "./scripts/list-e2e-only-files.js",
     "list-i18n-files": "./scripts/list-i18n-files.js",
     "list-light-dom-components": "./scripts/list-light-dom-components.js",
     "list-shadow-explicitly-set": "./scripts/list-shadow-explicitly-set.js",
