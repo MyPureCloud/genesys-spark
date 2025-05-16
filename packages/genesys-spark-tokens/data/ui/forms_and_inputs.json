@@ -253,7 +253,7 @@
       },
       "selected": {
         "background_color": {
-          "value": "{background.container.elevated.active_subtle}",
+          "value": "{background.container.elevated.active}",
           "type": "color"
         }
       },
