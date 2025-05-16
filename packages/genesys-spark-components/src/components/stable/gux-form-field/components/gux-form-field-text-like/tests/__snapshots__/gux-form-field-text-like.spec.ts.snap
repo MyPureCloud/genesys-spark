@@ -17,7 +17,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -56,7 +56,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -95,7 +95,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
             <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -133,7 +133,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -171,7 +171,7 @@ exports[`gux-form-field-text-like #render clearable should render component as e
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -209,7 +209,7 @@ exports[`gux-form-field-text-like #render error should render component as expec
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error gux-show">
+        <div class="gux-form-field-error gux-show" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -250,7 +250,7 @@ exports[`gux-form-field-text-like #render help should render component as expect
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -291,7 +291,7 @@ exports[`gux-form-field-text-like #render indicator marks should render componen
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -329,7 +329,7 @@ exports[`gux-form-field-text-like #render indicator marks should render componen
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -367,7 +367,7 @@ exports[`gux-form-field-text-like #render indicator marks should render componen
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -405,7 +405,7 @@ exports[`gux-form-field-text-like #render input attributes should render compone
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -443,7 +443,7 @@ exports[`gux-form-field-text-like #render input attributes should render compone
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -481,7 +481,7 @@ exports[`gux-form-field-text-like #render input attributes should render compone
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -519,7 +519,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -557,7 +557,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -595,7 +595,7 @@ exports[`gux-form-field-text-like #render input type attribute should render com
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -633,7 +633,7 @@ exports[`gux-form-field-text-like #render label-info should render component as 
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -676,7 +676,7 @@ exports[`gux-form-field-text-like #render label-position should render component
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -714,7 +714,7 @@ exports[`gux-form-field-text-like #render label-position should render component
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -752,7 +752,7 @@ exports[`gux-form-field-text-like #render label-position should render component
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -790,7 +790,7 @@ exports[`gux-form-field-text-like #render label-position should render component
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -828,7 +828,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -869,7 +869,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -910,7 +910,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -948,7 +948,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -989,7 +989,7 @@ exports[`gux-form-field-text-like #render loading should render component as exp
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -1027,7 +1027,7 @@ exports[`gux-form-field-text-like #render prefix should render component as expe
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>
@@ -1068,7 +1068,7 @@ exports[`gux-form-field-text-like #render suffix should render component as expe
             <slot name="suffix"></slot>
           </div>
         </div>
-        <div class="gux-form-field-error">
+        <div class="gux-form-field-error" role="alert">
           <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
           <div class="gux-message">
             <slot name="error"></slot>

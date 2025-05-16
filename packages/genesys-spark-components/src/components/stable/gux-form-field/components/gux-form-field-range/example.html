@@ -136,4 +136,61 @@
       >Click here for usage examples</a
     >
   </fieldset>
+
+  <fieldset>
+    <legend>Accessibility</legend>
+
+    <h3>Error</h3>
+    <h4>
+      When indicating an error state it is good to apply an aria-invalid
+      attribute to the input element. The aria-invalid attribute is used to
+      indicate that the value entered into an input field is not in a format or
+      a value the application will accept.
+    </h4>
+    <h4>
+      We also apply the role="alert" to the error state internally so that the
+      error is read immediately when displayed.
+    </h4>
+
+    <gux-form-field-range>
+      <input id="rangeInput" slot="input" type="range" name="e-1" />
+      <label slot="label">Label Info</label>
+      <gux-label-info-beta slot="label-info">
+        <span slot="content">This is some tooltip text</span>
+      </gux-label-info-beta>
+    </gux-form-field-range>
+  </fieldset>
 </form>
+
+<style
+  onload="(function () {
+  const rangeInput = document.querySelector('#rangeInput');
+  const formField = rangeInput.closest('gux-form-field-range');
+  let isErrorShown = false;
+
+  setInterval(() => {
+    if (isErrorShown) {
+      // Remove error span
+      const errorSpan = formField.querySelector('span[slot=error]');
+      if (errorSpan) {
+        errorSpan.remove();
+      }
+      // Remove aria-invalid
+      rangeInput.removeAttribute('aria-invalid');
+    } else {
+      // Create and add error span
+      const errorSpan = document.createElement('span');
+      errorSpan.setAttribute('slot', 'error');
+      errorSpan.textContent = 'This is an error message';
+      formField.appendChild(errorSpan);
+      // Add aria-invalid
+      rangeInput.setAttribute('aria-invalid', 'true');
+    }
+    isErrorShown = !isErrorShown;
+  }, 5000);
+  })()"
+>
+  .not-used {
+    -custom-noop: noop;
+  }
+</style>

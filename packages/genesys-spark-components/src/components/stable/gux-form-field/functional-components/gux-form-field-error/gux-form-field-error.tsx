@@ -10,6 +10,7 @@ export const GuxFormFieldError: FunctionalComponent<GuxFormFieldErrorProps> = (
 ): VNode => {
   return (
     <div
+      role="alert"
       class={{
         'gux-form-field-error': true,
         'gux-show': show

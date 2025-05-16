@@ -133,9 +133,61 @@
       >Click here for usage examples</a
     >
   </fieldset>
+
+  <fieldset>
+    <legend>Accessibility</legend>
+
+    <h3>Error</h3>
+    <h4>
+      When indicating an error state it is good to apply an aria-invalid
+      attribute to the input element. The aria-invalid attribute is used to
+      indicate that the value entered into an input field is not in a format or
+      a value the application will accept.
+    </h4>
+    <h4>
+      We also apply the role="alert" to the error state internally so that the
+      error is read immediately when displayed.
+    </h4>
+
+    <gux-form-field-select>
+      <select id="selectInput" slot="input" name="e-1">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <label slot="label">Default</label>
+    </gux-form-field-select>
+  </fieldset>
 </form>
 
-<style>
+<style
+  onload="(function () {
+  const selectInput = document.querySelector('#selectInput');
+  const formField = selectInput.closest('gux-form-field-select');
+  let isErrorShown = false;
+
+  setInterval(() => {
+    if (isErrorShown) {
+      // Remove error span
+      const errorSpan = formField.querySelector('span[slot=error]');
+      if (errorSpan) {
+        errorSpan.remove();
+      }
+      // Remove aria-invalid
+      selectInput.removeAttribute('aria-invalid');
+    } else {
+      // Create and add error span
+      const errorSpan = document.createElement('span');
+      errorSpan.setAttribute('slot', 'error');
+      errorSpan.textContent = 'This is an error message';
+      formField.appendChild(errorSpan);
+      // Add aria-invalid
+      selectInput.setAttribute('aria-invalid', 'true');
+    }
+    isErrorShown = !isErrorShown;
+  }, 5000);
+  })()"
+>
   gux-form-field-select {
     margin: 10px;
   }

@@ -199,4 +199,76 @@
       </gux-form-field-radio>
     </gux-form-field-radio-group-beta>
   </form>
+
+  <h2>Accessibility</h2>
+
+  <h3>Error</h3>
+  <h4>
+    When indicating an error state it is good to apply an aria-invalid attribute
+    to the input element. The aria-invalid attribute is used to indicate that
+    the value entered into an input field is not in a format or a value the
+    application will accept.
+  </h4>
+  <h4>
+    We also apply the role="alert" to the error state internally so that the
+    error is read immediately when displayed.
+  </h4>
+
+  <form onchange="notify(event)" oninput="notify(event)">
+    <gux-form-field-radio-group-beta id="radioGroup" indicator-mark="optional">
+      <label slot="group-label">Food</label>
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="pizza" />
+        <label slot="label">Pizza</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="sandwich" />
+        <label slot="label">Sandwich</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="sushi" />
+        <label slot="label">Sushi</label>
+      </gux-form-field-radio>
+
+      <gux-form-field-radio>
+        <input slot="input" type="radio" name="food-1" value="spaghetti" />
+        <label slot="label">Spaghetti</label>
+      </gux-form-field-radio>
+    </gux-form-field-radio-group-beta>
+  </form>
 </form>
+
+<style
+  onload="(function () {
+  const radioGroup = document.querySelector('#radioGroup');
+  const formField = radioGroup.closest('gux-form-field-radio-group-beta');
+  let isErrorShown = false;
+
+  setInterval(() => {
+    if (isErrorShown) {
+      // Remove error span
+      const errorSpan = formField.querySelector('span[slot=group-error]');
+      if (errorSpan) {
+        errorSpan.remove();
+      }
+      // Remove aria-invalid
+      radioGroup.removeAttribute('aria-invalid');
+    } else {
+      // Create and add error span
+      const errorSpan = document.createElement('span');
+      errorSpan.setAttribute('slot', 'group-error');
+      errorSpan.textContent = 'Subject to availability';
+      formField.appendChild(errorSpan);
+      // Add aria-invalid
+      radioGroup.setAttribute('aria-invalid', 'true');
+    }
+    isErrorShown = !isErrorShown;
+  }, 5000);
+  })()"
+>
+  .not-used {
+    -custom-noop: noop;
+  }
+</style>

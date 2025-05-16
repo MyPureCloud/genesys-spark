@@ -110,9 +110,64 @@
       >Click here for usage examples</a
     >
   </fieldset>
+
+  <fieldset>
+    <legend>Accessibility</legend>
+
+    <h3>Error</h3>
+    <h4>
+      When indicating an error state it is good to apply an aria-invalid
+      attribute to the input element. The aria-invalid attribute is used to
+      indicate that the value entered into an input field is not in a format or
+      a value the application will accept.
+    </h4>
+    <h4>
+      We also apply the role="alert" to the error state internally so that the
+      error is read immediately when displayed.
+    </h4>
+
+    <gux-form-field-time-zone-picker label-position="beside">
+      <gux-time-zone-picker-beta
+        id="timeZoneInput"
+        role="textbox"
+        value="Etc/GMT+1"
+        workspace-default="Etc/GMT"
+        local-default="America/Detroit"
+      >
+      </gux-time-zone-picker-beta>
+      <label slot="label">Select Time Zone</label>
+    </gux-form-field-time-zone-picker>
+  </fieldset>
 </form>
 
-<style>
+<style
+  onload="(function () {
+  const checkboxInput = document.querySelector('#timeZoneInput');
+  const formField = checkboxInput.closest('gux-form-field-time-zone-picker');
+  let isErrorShown = false;
+
+  setInterval(() => {
+    if (isErrorShown) {
+      // Remove error span
+      const errorSpan = formField.querySelector('span[slot=error]');
+      if (errorSpan) {
+        errorSpan.remove();
+      }
+      // Remove aria-invalid
+      checkboxInput.removeAttribute('aria-invalid');
+    } else {
+      // Create and add error span
+      const errorSpan = document.createElement('span');
+      errorSpan.setAttribute('slot', 'error');
+      errorSpan.textContent = 'This is an error message';
+      formField.appendChild(errorSpan);
+      // Add aria-invalid
+      checkboxInput.setAttribute('aria-invalid', 'true');
+    }
+    isErrorShown = !isErrorShown;
+  }, 5000);
+  })()"
+>
   .gap-above {
     margin-block-start: 8px;
   }
