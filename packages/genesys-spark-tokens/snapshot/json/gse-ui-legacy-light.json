@@ -2062,6 +2062,100 @@
   "cta_group": {
     "gap": "8px"
   },
+  "stepper": {
+    "icon": {
+      "height": "16px",
+      "width": "16px",
+      "completed": {
+        "selected_foreground_color": "#2a60c8"
+      },
+      "active": {
+        "foreground_color": "#2a60c8"
+      },
+      "error": {
+        "foreground_color": "#ea0b0b"
+      },
+      "incompleted": {
+        "foreground_color": "#2e394c"
+      }
+    },
+    "bar": {
+      "horizontal": {
+        "height": "3px"
+      },
+      "vertical": {
+        "width": "3px"
+      },
+      "completed": {
+        "selected_foreground_color": "#2a60c8"
+      },
+      "active": {
+        "foreground_color": "#2a60c8"
+      },
+      "error": {
+        "foreground_color": "#ea0b0b"
+      },
+      "incompleted": {
+        "foreground_color": "#b4bccb"
+      }
+    },
+    "step": {
+      "horizontal": {
+        "min_width": "128px",
+        "body": {
+          "margin_right": "16px"
+        },
+        "gap": "12px"
+      },
+      "vertical": {
+        "min_height": "90px",
+        "body": {
+          "margin_right": "16px",
+          "margin_top": "4px"
+        },
+        "gap": "12px"
+      },
+      "gap": "12px",
+      "text": {
+        "gap": "4px"
+      },
+      "focus": {
+        "border": {
+          "color": "#aac9ff",
+          "width": "2px",
+          "style": "solid"
+        },
+        "border_radius": "4px"
+      },
+      "disabled": {
+        "opacity": ".5"
+      }
+    },
+    "focus": {
+      "offset": "2px"
+    },
+    "title": {
+      "hover": "#2a60c8",
+      "default": "#2e394c"
+    },
+    "default": {
+      "text": {
+        "fontFamily": "Roboto",
+        "fontWeight": "700",
+        "fontSize": "14px",
+        "lineHeight": "16px"
+      }
+    },
+    "hover": {
+      "text": {
+        "fontFamily": "Roboto",
+        "fontWeight": "700",
+        "fontSize": "14px",
+        "lineHeight": "16px",
+        "textDecoration": "underline"
+      }
+    }
+  },
   "search": {
     "counter": {
       "default": {
