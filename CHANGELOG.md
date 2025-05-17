@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.146.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.145.1...v4.146.0) (2025-05-17)
+
+
+### Features
+
+* **form-field:** announcing error states ([a80e4cc](https://github.com/MyPureCloud/genesys-spark/commit/a80e4cc0d488b486286184860631886c84079c85))
+* **other:** add tokens for stepper component ([e91211b](https://github.com/MyPureCloud/genesys-spark/commit/e91211b551c291f00fabb8129fbec5c630ea0958))
+
+
+### Bug Fixes
+
+* **context-menu:** Make inline-size of compact variant 24px ([#1090](https://github.com/MyPureCloud/genesys-spark/issues/1090)) ([c8f1e48](https://github.com/MyPureCloud/genesys-spark/commit/c8f1e4879cfee44fc7432205f1175960958c38c5))
+* **dropdown:** change tooltip placement to default to the right ([2fab4c4](https://github.com/MyPureCloud/genesys-spark/commit/2fab4c44d564f1ae9ffea8a5fe3396106354e413))
+
 ### [4.145.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.145.0...v4.145.1) (2025-05-16)
 
 
