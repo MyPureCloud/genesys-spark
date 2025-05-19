@@ -1,6 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-inline-alert #render should render component as expected (1) 1`] = `
+exports[`gux-inline-alert #render "error" accent inline alert 1`] = `
+<gux-inline-alert accent="error">
+  <template shadowrootmode="open">
+    <div class="gux-error gux-inline-alert">
+      <div class="gux-message-wrapper">
+        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+        <gux-screen-reader-beta>
+          Error alert with message
+        </gux-screen-reader-beta>
+        <div class="gux-content">
+          <slot name="content">
+            <slot></slot>
+          </slot>
+        </div>
+      </div>
+    </div>
+  </template>
+  <div slot="content">
+    Note: This is a warning alert.
+  </div>
+</gux-inline-alert>
+`;
+
+exports[`gux-inline-alert #render "info" accent inline alert 1`] = `
 <gux-inline-alert accent="info">
   <template shadowrootmode="open">
     <div class="gux-info gux-inline-alert">
@@ -23,7 +46,7 @@ exports[`gux-inline-alert #render should render component as expected (1) 1`] = 
 </gux-inline-alert>
 `;
 
-exports[`gux-inline-alert #render should render component as expected (2) 1`] = `
+exports[`gux-inline-alert #render "success" accent inline alert 1`] = `
 <gux-inline-alert accent="success">
   <template shadowrootmode="open">
     <div class="gux-inline-alert gux-success">
@@ -46,7 +69,7 @@ exports[`gux-inline-alert #render should render component as expected (2) 1`] = 
 </gux-inline-alert>
 `;
 
-exports[`gux-inline-alert #render should render component as expected (3) 1`] = `
+exports[`gux-inline-alert #render "warning" accent inline alert 1`] = `
 <gux-inline-alert accent="warning">
   <template shadowrootmode="open">
     <div class="gux-inline-alert gux-warning">
@@ -54,29 +77,6 @@ exports[`gux-inline-alert #render should render component as expected (3) 1`] = 
         <gux-icon decorative="" icon-name="fa/triangle-exclamation-solid" size="small"></gux-icon>
         <gux-screen-reader-beta>
           Warning alert with message
-        </gux-screen-reader-beta>
-        <div class="gux-content">
-          <slot name="content">
-            <slot></slot>
-          </slot>
-        </div>
-      </div>
-    </div>
-  </template>
-  <div slot="content">
-    Note: This is a warning alert.
-  </div>
-</gux-inline-alert>
-`;
-
-exports[`gux-inline-alert #render should render component as expected (4) 1`] = `
-<gux-inline-alert accent="error">
-  <template shadowrootmode="open">
-    <div class="gux-error gux-inline-alert">
-      <div class="gux-message-wrapper">
-        <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-        <gux-screen-reader-beta>
-          Error alert with message
         </gux-screen-reader-beta>
         <div class="gux-content">
           <slot name="content">
