@@ -625,7 +625,6 @@
   "--gse-ui-colorPicker-label-text-lineHeight",
   "--gse-ui-colorPicker-label-textColor",
   "--gse-ui-contextMenu-borderRadius",
-  "--gse-ui-contextMenu-button-compact",
   "--gse-ui-contextMenu-button-default",
   "--gse-ui-copyToClipboard-gap",
   "--gse-ui-dataTableComposed-boxShadow",
