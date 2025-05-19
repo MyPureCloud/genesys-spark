@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-loading-message #render should render the component as expected 1`] = `
+exports[`gux-loading-message #render should render component as expected (1) 1`] = `
 <gux-loading-message>
   <template shadowrootmode="open">
     <div aria-live="assertive" class="gux-container" role="alert">
@@ -21,6 +21,6 @@ exports[`gux-loading-message #render should render the component as expected 1`]
   <span slot="additional-guidance">
     Thank you for waiting.
   </span>
-  <gux-radial-progress slot="progress"></gux-radial-progress>
+  <gux-radial-progress max="10" screenreader-text="loading" slot="progress" value="1"></gux-radial-progress>
 </gux-loading-message>
 `;
