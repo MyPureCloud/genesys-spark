@@ -430,6 +430,7 @@
   "--gse-ui-color-focus",
   "--gse-ui-colorPicker-input-swatchBorderRadius",
   "--gse-ui-colorPicker-input-swatchSizing",
+  "--gse-ui-contextMenu-button-compact",
   "--gse-ui-contextMenu-menu-maxHeight",
   "--gse-ui-contextMenu-menu-width",
   "--gse-ui-copyToClipboard-contentContainer-gap",
