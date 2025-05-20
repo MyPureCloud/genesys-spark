@@ -23,8 +23,8 @@ describe('gux-calendar', () => {
       return [];
     };
   });
-  it('builds', () => {
-    component.componentWillLoad();
+  it('builds', async () => {
+    await component.componentWillLoad();
     component.render();
     expect(component).toBeTruthy();
   });
