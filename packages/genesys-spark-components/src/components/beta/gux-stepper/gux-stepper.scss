@@ -1,0 +1,11 @@
+.gux-stepper {
+  display: flex;
+
+  &.gux-stepper-horizontal {
+    flex-direction: row;
+  }
+
+  &.gux-stepper-vertical {
+    flex-direction: column;
+  }
+}

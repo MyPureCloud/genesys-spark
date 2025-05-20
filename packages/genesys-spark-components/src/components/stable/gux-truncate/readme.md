@@ -61,6 +61,7 @@ Type: `Promise<void>`
  - [gux-rich-text-editor-beta](../../beta/gux-rich-text-editor)
  - [gux-side-panel-heading](../../beta/gux-side-panel/components/gux-side-panel-heading)
  - [gux-simple-toast-legacy](../../legacy/gux-simple-toast-legacy)
+ - [gux-step-beta](../../beta/gux-stepper/gux-step)
  - [gux-toast](../gux-toast)
 
 ### Depends on
@@ -85,6 +86,7 @@ graph TD;
   gux-rich-text-editor-beta --> gux-truncate
   gux-side-panel-heading --> gux-truncate
   gux-simple-toast-legacy --> gux-truncate
+  gux-step-beta --> gux-truncate
   gux-toast --> gux-truncate
   style gux-truncate fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -1,0 +1,121 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
+.gux-step-horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: ui.$gse-ui-stepper-step-gap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  inline-size: 220px; // Token Required.
+  min-inline-size: ui.$gse-ui-stepper-step-horizontal-minWidth;
+  padding-block: ui.$gse-ui-stepper-step-horizontal-gap 0;
+  padding-inline: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  gux-icon {
+    align-self: flex-start;
+  }
+
+  &.gux-status-incomplete {
+    color: ui.$gse-ui-stepper-icon-incompleted-foregroundColor;
+    border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
+      ui.$gse-ui-stepper-bar-incompleted-foregroundColor solid;
+  }
+
+  &.gux-status-complete {
+    color: ui.$gse-ui-stepper-icon-completed-selectedForegroundColor;
+    border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
+      ui.$gse-ui-stepper-icon-completed-selectedForegroundColor solid;
+  }
+
+  &.gux-status-active {
+    color: ui.$gse-ui-stepper-icon-active-foregroundColor;
+    border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
+      ui.$gse-ui-stepper-bar-active-foregroundColor solid;
+  }
+
+  &.gux-status-error {
+    color: ui.$gse-ui-stepper-icon-error-foregroundColor;
+    border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
+      ui.$gse-ui-stepper-bar-error-foregroundColor solid;
+  }
+}
+
+.gux-step-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: ui.$gse-ui-stepper-step-vertical-gap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-block: 0;
+  padding-inline: ui.$gse-ui-stepper-step-vertical-gap 0;
+  margin-block-start: ui.$gse-ui-stepper-step-vertical-body-marginTop;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  &.gux-status-incomplete {
+    color: ui.$gse-ui-stepper-icon-incompleted-foregroundColor;
+    border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
+      ui.$gse-ui-stepper-bar-incompleted-foregroundColor solid;
+  }
+
+  &.gux-status-complete {
+    color: ui.$gse-ui-stepper-icon-completed-selectedForegroundColor;
+    border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
+      ui.$gse-ui-stepper-icon-completed-selectedForegroundColor solid;
+  }
+
+  &.gux-status-active {
+    color: ui.$gse-ui-stepper-icon-active-foregroundColor;
+    border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
+      ui.$gse-ui-stepper-bar-active-foregroundColor solid;
+  }
+
+  &.gux-status-error {
+    color: ui.$gse-ui-stepper-icon-error-foregroundColor;
+    border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
+      ui.$gse-ui-stepper-bar-error-foregroundColor solid;
+  }
+}
+
+.gux-step-information {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: ui.$gse-ui-stepper-step-text-gap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-inline-end: ui.$gse-ui-stepper-step-horizontal-body-marginRight;
+
+  gux-truncate {
+    text-align: start;
+  }
+
+  slot[name='title'] {
+    font-family: ui.$gse-ui-stepper-default-text-fontFamily;
+    font-size: ui.$gse-ui-stepper-default-text-fontSize;
+    font-weight: ui.$gse-ui-stepper-default-text-fontWeight;
+    line-height: ui.$gse-ui-stepper-default-text-lineHeight;
+    color: ui.$gse-ui-stepper-title-default;
+
+    &:hover {
+      font-family: ui.$gse-ui-stepper-default-text-fontFamily;
+      font-size: ui.$gse-ui-stepper-default-text-fontSize;
+      font-weight: ui.$gse-ui-stepper-default-text-fontWeight;
+      line-height: ui.$gse-ui-stepper-default-text-lineHeight;
+      color: ui.$gse-ui-stepper-title-default;
+      text-decoration: ui.$gse-ui-stepper-hover-text-textDecoration;
+    }
+  }
+
+  slot[name='helper'] {
+    font-family: ui.$gse-ui-stepper-default-text-fontFamily;
+    font-size: ui.$gse-ui-stepper-default-text-fontSize;
+    font-weight: ui.$gse-ui-stepper-default-text-fontWeight;
+    line-height: ui.$gse-ui-stepper-default-text-lineHeight;
+    color: ui.$gse-ui-stepper-title-default;
+  }
+}

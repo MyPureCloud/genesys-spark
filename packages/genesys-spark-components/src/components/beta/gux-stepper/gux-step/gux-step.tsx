@@ -1,0 +1,84 @@
+import { Component, Element, Prop, h } from '@stencil/core';
+import { trackComponent } from '@utils/tracking/usage';
+import { GuxStepperOrientation, GuxStepStatus } from '../gux-stepper.types';
+import { getClosestElement } from 'genesys-spark-utils/get-closest-element';
+
+/**
+ * @slot title - Slot for title.
+ * @slot helper - Optional slot for help message.
+ */
+
+@Component({
+  tag: 'gux-step-beta',
+  styleUrl: 'gux-step.scss',
+  shadow: true
+})
+export class GuxStep {
+  @Element()
+  private root: HTMLElement;
+
+  @Prop()
+  status: GuxStepStatus = 'incomplete';
+
+  @Prop()
+  disabled: boolean = false;
+
+  componentWillLoad(): void {
+    trackComponent(this.root);
+  }
+
+  private getStepperOrientation(): GuxStepperOrientation {
+    const getParent = getClosestElement(
+      this.root,
+      'gux-stepper-beta'
+    ) as HTMLGuxRichTextEditorBetaElement;
+
+    return getParent?.getAttribute('orientation') as GuxStepperOrientation;
+  }
+
+  private getStatusIcon(status: GuxStepStatus): string {
+    switch (status) {
+      case 'incomplete':
+        return 'fa/circle-check-solid';
+      case 'completed':
+        return 'fa/circle-check-solid';
+      case 'active':
+        return 'fa/circle-check-solid'; // to be changed to fa/circle-half-stroke-regular
+      case 'error':
+        return 'fa/hexagon-exclamation-solid';
+      default:
+        return 'fa/circle-check-solid'; // to be changed to fa/circle-dashed-regular
+    }
+  }
+
+  render(): JSX.Element {
+    return (
+      <button
+        class={{
+          [`gux-step-${this.getStepperOrientation()}`]: true,
+          'gux-disabled': this.disabled,
+          [`gux-status-${this.status}`]: true
+        }}
+        type="button"
+        disabled={this.disabled}
+        role="tab"
+        aria-current={this.status.toString() === 'active'}
+        aria-disabled={this.disabled}
+      >
+        <gux-icon
+          size="small"
+          icon-name={this.getStatusIcon(this.status)}
+          decorative
+        ></gux-icon>
+        <div class="gux-step-information">
+          <gux-truncate maxLines={1}>
+            <slot name="title"></slot>
+          </gux-truncate>
+          <gux-truncate maxLines={1}>
+            <slot name="helper"></slot>
+          </gux-truncate>
+        </div>
+      </button>
+    ) as JSX.Element;
+  }
+}
