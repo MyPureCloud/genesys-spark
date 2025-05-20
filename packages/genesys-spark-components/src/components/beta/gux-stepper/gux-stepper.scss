@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  .gux-stepper {
+    display: flex;
+    block-size: 100%;
+
+    &.gux-stepper-horizontal {
+      flex-direction: row;
+    }
+
+    &.gux-stepper-vertical {
+      flex-direction: column;
+    }
+  }
+}
