@@ -1,0 +1,86 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
+:host {
+  inline-size: 100%;
+  max-inline-size: 100%;
+}
+
+.gux-stepper {
+  display: flex;
+  flex-direction: row;
+  gap: var(--step-gap);
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-inline-size: var(--stepper-min-inline-size, 0);
+  min-block-size: var(--stepper-min-block-size, 0);
+  padding-block: var(--stepper-padding-block, 0);
+  padding-inline: var(--stepper-padding-inline, 0);
+  background-color: transparent;
+  border: none;
+
+  gux-icon {
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-block-start: var(--stepper-step-body-margin, 0);
+  }
+
+  &.gux-step-incomplete {
+    color: ui.$gse-ui-stepper-icon-incompleted-foregroundColor;
+    border-block-start: var(--stepper-border-block-start-incomplete, none);
+    border-inline-start: var(--stepper-border-inline-start-incomplete);
+  }
+
+  &.gux-step-completed {
+    color: ui.$gse-ui-stepper-icon-completed-selectedForegroundColor;
+    border-block-start: var(--stepper-border-block-start-completed, none);
+    border-inline-start: var(--stepper-border-inline-start-completed, none);
+  }
+
+  &.gux-step-error {
+    color: ui.$gse-ui-stepper-icon-error-foregroundColor;
+    border-block-start: var(--stepper-border-block-start-error, none);
+    border-inline-start: var(--stepper-border-inline-start-error, none);
+  }
+
+  &.gux-active {
+    color: ui.$gse-ui-stepper-icon-active-foregroundColor;
+    border-block-start: var(--stepper-border-block-start-active, none);
+    border-inline-start: var(--stepper-border-inline-start-active, none);
+  }
+
+  > .gux-step-information {
+    margin-block-start: var(--stepper-step-body-margin, 0);
+  }
+}
+
+.gux-step-information {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: ui.$gse-ui-stepper-step-text-gap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-inline-end: ui.$gse-ui-stepper-step-horizontal-body-marginRight;
+
+  slot[name='helper'] {
+    font-family: ui.$gse-ui-formControl-helper-helperText-fontFamily;
+    font-size: ui.$gse-ui-formControl-helper-helperText-fontSize;
+    font-weight: ui.$gse-ui-formControl-helper-helperText-fontWeight;
+    line-height: ui.$gse-ui-formControl-helper-helperText-lineHeight;
+    color: ui.$gse-ui-formControl-helper-defaultColor;
+  }
+}
+
+.gux-disabled {
+  pointer-events: none;
+  cursor: default;
+  user-select: none;
+
+  > * {
+    opacity: ui.$gse-ui-stepper-step-disabled-opacity;
+  }
+}
+
+gux-truncate {
+  text-align: start;
+}
