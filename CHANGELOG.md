@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.148.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.147.0...v4.148.0) (2025-05-21)
+
+
+### Features
+
+* **icon:** Add new icons ([#1088](https://github.com/MyPureCloud/genesys-spark/issues/1088)) ([48668c7](https://github.com/MyPureCloud/genesys-spark/commit/48668c7c7a56678bcda75f904baf6644dd416cc2))
+
 ## [4.147.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.146.0...v4.147.0) (2025-05-20)
 
 
