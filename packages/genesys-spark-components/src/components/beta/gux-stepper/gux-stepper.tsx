@@ -36,6 +36,7 @@ export class GuxStepper {
           [`gux-stepper-${this.orientation}`]: true,
           'gux-disabled': this.disabled
         }}
+        aria-orientation={this.orientation}
       >
         <slot />
       </div>
