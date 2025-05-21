@@ -33,7 +33,8 @@ export class GuxStepper {
       <div
         class={{
           'gux-stepper': true,
-          [`gux-stepper-${this.orientation}`]: true
+          [`gux-stepper-${this.orientation}`]: true,
+          'gux-disabled': this.disabled
         }}
       >
         <slot />

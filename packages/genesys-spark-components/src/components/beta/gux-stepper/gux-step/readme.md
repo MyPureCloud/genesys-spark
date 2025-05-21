@@ -10,7 +10,7 @@
 | Property   | Attribute  | Description | Type                                                 | Default        |
 | ---------- | ---------- | ----------- | ---------------------------------------------------- | -------------- |
 | `disabled` | `disabled` |             | `boolean`                                            | `false`        |
-| `status`   | `status`   |             | `"active" \| "completed" \| "error" \| "incomplete"` | `"incomplete"` |
+| `status`   | `status`   |             | `"active" \| "completed" \| "error" \| "incomplete"` | `'incomplete'` |
 
 
 ## Slots

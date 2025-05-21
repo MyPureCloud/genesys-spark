@@ -1,7 +1,7 @@
 import { Component, Element, Prop, h } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
-import { GuxStepperOrientation, GuxStepStatus } from '../gux-stepper.types';
-import { getClosestElement } from 'genesys-spark-utils/get-closest-element';
+import { GuxStepStatus } from '../gux-stepper.types';
+import { getAttributeFromParent } from '@utils/dom/get-attribute-from-parent';
 
 /**
  * @slot title - Slot for title.
@@ -27,15 +27,6 @@ export class GuxStep {
     trackComponent(this.root);
   }
 
-  private getStepperOrientation(): GuxStepperOrientation {
-    const getParent = getClosestElement(
-      this.root,
-      'gux-stepper-beta'
-    ) as HTMLGuxRichTextEditorBetaElement;
-
-    return getParent?.getAttribute('orientation') as GuxStepperOrientation;
-  }
-
   private getStatusIcon(status: GuxStepStatus): string {
     switch (status) {
       case 'incomplete':
@@ -55,7 +46,8 @@ export class GuxStep {
     return (
       <button
         class={{
-          [`gux-step-${this.getStepperOrientation()}`]: true,
+          [`gux-step-${getAttributeFromParent('gux-stepper-beta', this.root, 'orientation') ?? 'horizontal'}`]:
+            true,
           'gux-disabled': this.disabled,
           [`gux-status-${this.status}`]: true
         }}
@@ -63,7 +55,7 @@ export class GuxStep {
         disabled={this.disabled}
         role="tab"
         aria-current={this.status.toString() === 'active'}
-        aria-disabled={this.disabled}
+        aria-disabled={this.disabled.toString()}
       >
         <gux-icon
           size="small"
