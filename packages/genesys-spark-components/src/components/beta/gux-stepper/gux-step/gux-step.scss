@@ -18,25 +18,25 @@
     align-self: flex-start;
   }
 
-  &.gux-status-incomplete {
+  &.gux-step-incomplete {
     color: ui.$gse-ui-stepper-icon-incompleted-foregroundColor;
     border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-bar-incompleted-foregroundColor solid;
   }
 
-  &.gux-status-complete {
+  &.gux-step-complete {
     color: ui.$gse-ui-stepper-icon-completed-selectedForegroundColor;
     border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-icon-completed-selectedForegroundColor solid;
   }
 
-  &.gux-status-active {
+  &.gux-step-active {
     color: ui.$gse-ui-stepper-icon-active-foregroundColor;
     border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-bar-active-foregroundColor solid;
   }
 
-  &.gux-status-error {
+  &.gux-step-error {
     color: ui.$gse-ui-stepper-icon-error-foregroundColor;
     border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-bar-error-foregroundColor solid;
@@ -61,25 +61,25 @@
     margin-block-start: ui.$gse-ui-stepper-step-vertical-body-marginTop;
   }
 
-  &.gux-status-incomplete {
+  &.gux-step-incomplete {
     color: ui.$gse-ui-stepper-icon-incompleted-foregroundColor;
     border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-bar-incompleted-foregroundColor solid;
   }
 
-  &.gux-status-complete {
+  &.gux-step-complete {
     color: ui.$gse-ui-stepper-icon-completed-selectedForegroundColor;
     border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-icon-completed-selectedForegroundColor solid;
   }
 
-  &.gux-status-active {
+  &.gux-step-active {
     color: ui.$gse-ui-stepper-icon-active-foregroundColor;
     border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-bar-active-foregroundColor solid;
   }
 
-  &.gux-status-error {
+  &.gux-step-error {
     color: ui.$gse-ui-stepper-icon-error-foregroundColor;
     border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-bar-error-foregroundColor solid;
@@ -126,7 +126,10 @@
   pointer-events: none;
   cursor: default;
   user-select: none;
-  opacity: ui.$gse-ui-stepper-step-disabled-opacity;
+
+  > * {
+    opacity: ui.$gse-ui-stepper-step-disabled-opacity;
+  }
 }
 
 gux-truncate {

@@ -44,16 +44,13 @@ export class GuxStep {
 
   render(): JSX.Element {
     return (
-      <button
+      <div
         class={{
           [`gux-step-${getAttributeFromParent('gux-stepper-beta', this.root, 'orientation') ?? 'horizontal'}`]:
             true,
           'gux-disabled': this.disabled,
-          [`gux-status-${this.status}`]: true
+          [`gux-step-${this.status}`]: true
         }}
-        type="button"
-        disabled={this.disabled}
-        role="tab"
         aria-current={this.status.toString() === 'active'}
         aria-disabled={this.disabled.toString()}
       >
@@ -70,7 +67,7 @@ export class GuxStep {
             <slot name="helper"></slot>
           </gux-truncate>
         </div>
-      </button>
+      </div>
     ) as JSX.Element;
   }
 }
