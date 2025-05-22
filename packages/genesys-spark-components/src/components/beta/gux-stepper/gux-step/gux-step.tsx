@@ -4,7 +4,7 @@ import { GuxStepStatus } from '../gux-stepper.types';
 import { getAttributeFromParent } from '@utils/dom/get-attribute-from-parent';
 
 /**
- * @slot title - Slot for title.
+ * @slot title - Slot for gux-step-title element.
  * @slot helper - Optional slot for help message.
  */
 
@@ -48,8 +48,8 @@ export class GuxStep {
         class={{
           [`gux-step-${getAttributeFromParent('gux-stepper-beta', this.root, 'orientation') ?? 'horizontal'}`]:
             true,
-          'gux-disabled': this.disabled,
-          [`gux-step-${this.status}`]: true
+          [`gux-step-${this.status}`]: true,
+          'gux-disabled': this.disabled
         }}
         aria-current={this.status.toString() === 'active'}
         aria-disabled={this.disabled.toString()}
@@ -60,9 +60,7 @@ export class GuxStep {
           decorative
         ></gux-icon>
         <div class="gux-step-information">
-          <gux-truncate maxLines={1}>
-            <slot name="title"></slot>
-          </gux-truncate>
+          <slot name="title"></slot>
           <gux-truncate maxLines={1}>
             <slot name="helper"></slot>
           </gux-truncate>

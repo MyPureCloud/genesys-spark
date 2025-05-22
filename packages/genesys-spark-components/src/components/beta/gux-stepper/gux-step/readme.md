@@ -15,10 +15,10 @@
 
 ## Slots
 
-| Slot       | Description                     |
-| ---------- | ------------------------------- |
-| `"helper"` | Optional slot for help message. |
-| `"title"`  | Slot for title.                 |
+| Slot       | Description                      |
+| ---------- | -------------------------------- |
+| `"helper"` | Optional slot for help message.  |
+| `"title"`  | Slot for gux-step-title element. |
 
 
 ## Dependencies

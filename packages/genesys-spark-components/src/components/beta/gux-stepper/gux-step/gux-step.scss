@@ -10,7 +10,6 @@
   min-inline-size: ui.$gse-ui-stepper-step-horizontal-minWidth;
   padding-block: ui.$gse-ui-stepper-step-horizontal-gap 0;
   padding-inline: 0;
-  cursor: pointer;
   background-color: transparent;
   border: none;
 
@@ -52,7 +51,6 @@
   min-block-size: ui.$gse-ui-stepper-step-vertical-minHeight;
   padding-block: 0;
   padding-inline: ui.$gse-ui-stepper-step-vertical-gap 0;
-  cursor: pointer;
   background-color: transparent;
   border: none;
 
@@ -84,6 +82,10 @@
     border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-bar-error-foregroundColor solid;
   }
+
+  > .gux-step-information {
+    margin-block-start: ui.$gse-ui-stepper-step-vertical-body-marginTop;
+  }
 }
 
 .gux-step-information {
@@ -91,27 +93,9 @@
   flex: 1 0 0;
   flex-direction: column;
   gap: ui.$gse-ui-stepper-step-text-gap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  margin-block-start: ui.$gse-ui-stepper-step-vertical-body-marginTop;
   margin-inline-end: ui.$gse-ui-stepper-step-horizontal-body-marginRight;
-
-  slot[name='title'] {
-    font-family: ui.$gse-ui-stepper-default-text-fontFamily;
-    font-size: ui.$gse-ui-stepper-default-text-fontSize;
-    font-weight: ui.$gse-ui-stepper-default-text-fontWeight;
-    line-height: ui.$gse-ui-stepper-default-text-lineHeight;
-    color: ui.$gse-ui-stepper-title-default;
-
-    &:hover:not(.gux-disabled) {
-      font-family: ui.$gse-ui-stepper-hover-text-fontFamily;
-      font-size: ui.$gse-ui-stepper-hover-text-fontSize;
-      font-weight: ui.$gse-ui-stepper-hover-text-fontWeight;
-      line-height: ui.$gse-ui-stepper-hover-text-lineHeight;
-      color: ui.$gse-ui-stepper-title-hover;
-      text-decoration: ui.$gse-ui-stepper-hover-text-textDecoration;
-    }
-  }
 
   slot[name='helper'] {
     font-family: ui.$gse-ui-formControl-helper-helperText-fontFamily;
