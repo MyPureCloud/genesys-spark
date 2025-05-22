@@ -31,17 +31,24 @@ async function runAxe(page: E2EPage): Promise<AxeResults> {
 export async function analyze(
   page: E2EPage,
   element?: string,
-  extraActions: ExtraActionsFn = () => Promise.resolve()
+  extraActions: ExtraActionsFn = () => Promise.resolve(),
+  performA11yCheck: boolean = true
 ) {
   for (const mode of modes) {
     await setMode(page, mode);
     await extraActions(page);
-    await snap(page, element);
+    await snap(page, element, performA11yCheck);
   }
 }
 
-export async function snap(page: E2EPage, element: string) {
-  expect((await runAxe(page)).violations).toHaveLength(0);
+export async function snap(
+  page: E2EPage,
+  element?: string,
+  performA11yCheck: boolean = true
+) {
+  if (performA11yCheck) {
+    expect((await runAxe(page)).violations).toHaveLength(0);
+  }
 
   if (await page.locator('gux-tooltip').isVisible()) {
     expect(await page.screenshot()).toMatchSnapshot();
@@ -82,14 +89,15 @@ export async function setContent(page: E2EPage, html: string) {
 export async function checkRenders(
   renderConfigs: RenderConfig[],
   element?: string,
-  extraActions: ExtraActionsFn = () => Promise.resolve()
+  extraActions: ExtraActionsFn = () => Promise.resolve(),
+  performA11yCheck: boolean = true
 ) {
   renderConfigs.forEach(({ description, html }, index) => {
     test(
       description || `should render component as expected (${index + 1})`,
       async ({ page }) => {
         await setContent(page, html);
-        await analyze(page, element, extraActions);
+        await analyze(page, element, extraActions, performA11yCheck);
       }
     );
   });
