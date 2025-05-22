@@ -282,7 +282,16 @@ export class GuxTableToolbar {
             <slot name="permanent-actions"></slot>
             <gux-table-toolbar-menu-button show-menu={this.renderMenu()}>
               {/* <slot name="menu-actions"></slot> */}
-              <slot name="menu-actions-list-items"></slot>
+
+              <gux-table-toolbar-custom-action>
+                <span slot="text">Filter</span>
+                <gux-icon slot="icon" icon-name="filter" decorative></gux-icon>
+              </gux-table-toolbar-custom-action>
+
+              <gux-table-toolbar-custom-action>
+                <span slot="text">Filter</span>
+                <gux-icon slot="icon" icon-name="filter" decorative></gux-icon>
+              </gux-table-toolbar-custom-action>
             </gux-table-toolbar-menu-button>
             <slot name="primary-action"></slot>
           </div>

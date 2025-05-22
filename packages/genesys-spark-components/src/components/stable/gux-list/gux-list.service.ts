@@ -4,10 +4,10 @@ function getRootChildren(root: HTMLElement): Element[] {
   if (slot) {
     // I think it'd be better to have more of a dynamic way to flatten the slot's assigned elements instead of this hacky way but first wanted
     // to see if this is going down the right path before I enhance this code to be more dynamic
-    const elements = slot.assignedElements({ flatten: true });
-    if (elements.length === 1 && elements[0].tagName !== 'GUX-LIST-ITEM') {
-      return Array.from(elements[0]?.children);
-    }
+    const elements = slot.assignedElements();
+    // if (elements.length === 1 && elements[0].tagName !== 'GUX-LIST-ITEM') {
+    //   return Array.from(elements[0]?.children);
+    // }
     return elements;
   }
 
