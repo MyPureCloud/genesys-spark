@@ -83,9 +83,7 @@ export class GuxTableToolbar {
   }
 
   get menuActionSlot(): Element | null {
-    const menuActions = getSlot(this.root, 'menu-actions');
-    const menuActionsListItems = getSlot(this.root, 'menu-actions-list-items');
-    return menuActionsListItems ? menuActionsListItems : menuActions;
+    return getSlot(this.root, 'menu-actions');
   }
 
   get permanentSlot(): Element | null {
