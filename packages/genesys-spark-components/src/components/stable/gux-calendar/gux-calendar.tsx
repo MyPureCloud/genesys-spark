@@ -24,8 +24,13 @@ import {
 
 import { trackComponent } from '@utils/tracking/usage';
 import { CalendarModes } from '../../../common-enums';
-import { getDesiredLocale, getStartOfWeek } from '../../../i18n';
-
+import {
+  GetI18nValue,
+  buildI18nForComponent,
+  getDesiredLocale,
+  getStartOfWeek
+} from '../../../i18n';
+import translationResources from './i18n/en.json';
 import {
   firstDateInMonth,
   getWeekdays,
@@ -44,6 +49,8 @@ import {
   shadow: true
 })
 export class GuxCalendar {
+  private i18n: GetI18nValue;
+
   @Element()
   root: HTMLElement;
 
@@ -450,8 +457,9 @@ export class GuxCalendar {
     }
   }
 
-  componentWillLoad() {
+  async componentWillLoad(): Promise<void> {
     trackComponent(this.root, { variant: this.mode });
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.locale = getDesiredLocale(this.root);
 
     this.startDayOfWeek = this.startDayOfWeek || getStartOfWeek(this.locale);
@@ -535,6 +543,7 @@ export class GuxCalendar {
           <button
             type="button"
             class="gux-left"
+            aria-label={this.i18n('previousMonth')}
             onClick={() => this.incrementPreviewDateByMonth(-1)}
           >
             <gux-icon
@@ -547,6 +556,7 @@ export class GuxCalendar {
           <button
             type="button"
             class="gux-right"
+            aria-label={this.i18n('nextMonth')}
             onClick={() => this.incrementPreviewDateByMonth(1)}
           >
             <gux-icon

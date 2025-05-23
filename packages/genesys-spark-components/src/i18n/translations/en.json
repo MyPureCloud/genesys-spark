@@ -29,6 +29,10 @@
   "gux-breadcrumbs": {
     "breadcrumbs": "Breadcrumbs"
   },
+  "gux-calendar": {
+    "previousMonth": "Go to the previous month",
+    "nextMonth": "Go to the next month"
+  },
   "gux-calendar-beta": {
     "previousMonth": "Previous month: {localizedPreviousMonthAndYear}",
     "nextMonth": "Next month: {localizedNextMonthAndYear}"
