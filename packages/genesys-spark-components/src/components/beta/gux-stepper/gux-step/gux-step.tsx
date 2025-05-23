@@ -1,4 +1,14 @@
-import { Component, Element, Prop, h } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Prop,
+  State,
+  Event,
+  EventEmitter,
+  Listen,
+  Method,
+  h
+} from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxStepStatus } from '../gux-stepper.types';
 import { getAttributeFromParent } from '@utils/dom/get-attribute-from-parent';
@@ -20,8 +30,32 @@ export class GuxStep {
   @Prop()
   status: GuxStepStatus = 'incomplete';
 
+  /**
+   * Step id for the step
+   */
+  @Prop()
+  stepId: string;
+
   @Prop()
   disabled: boolean = false;
+
+  @State()
+  active: boolean = false;
+
+  @Event()
+  internalactivatestep: EventEmitter<string>;
+
+  @Listen('internalactivestepchange')
+  onClick() {
+    if (!this.active && !this.disabled) {
+      this.internalactivatestep.emit(this.stepId);
+    }
+  }
+
+  @Method()
+  async guxSetActive(active: boolean): Promise<void> {
+    this.active = active;
+  }
 
   componentWillLoad(): void {
     trackComponent(this.root);
@@ -30,15 +64,13 @@ export class GuxStep {
   private getStatusIcon(status: GuxStepStatus): string {
     switch (status) {
       case 'incomplete':
-        return 'fa/circle-check-solid';
+        return 'fa/circle-check-solid'; // to be changed to fa/circle-dashed-regular
       case 'completed':
         return 'fa/circle-check-solid';
-      case 'active':
-        return 'fa/circle-check-solid'; // to be changed to fa/circle-half-stroke-regular
       case 'error':
         return 'fa/hexagon-exclamation-solid';
       default:
-        return 'fa/circle-check-solid'; // to be changed to fa/circle-dashed-regular
+        return 'fa/circle-check-solid';
     }
   }
 
@@ -49,14 +81,17 @@ export class GuxStep {
           [`gux-step-${getAttributeFromParent('gux-stepper-beta', this.root, 'orientation') ?? 'horizontal'}`]:
             true,
           [`gux-step-${this.status}`]: true,
-          'gux-disabled': this.disabled
+          'gux-disabled': this.disabled,
+          'gux-active': this.active
         }}
         aria-current={this.status.toString() === 'active'}
         aria-disabled={this.disabled.toString()}
       >
         <gux-icon
           size="small"
-          icon-name={this.getStatusIcon(this.status)}
+          icon-name={
+            this.active ? 'fa/ban-regular' : this.getStatusIcon(this.status)
+          } // active icon to be replaced with fa/circle-half-stroke-regular.
           decorative
         ></gux-icon>
         <div class="gux-step-information">

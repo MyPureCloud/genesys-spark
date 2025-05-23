@@ -1,12 +1,24 @@
 <h2>gux-stepper-beta</h2>
 
 <h3>horizontal stepper</h3>
-<gux-stepper-beta>
-  <gux-step-beta disabled status="error">
+<gux-stepper-beta active-step="1">
+  <gux-step-beta step-id="1" status="incomplete">
     <gux-step-title slot="title">Step title</gux-step-title>
     <span slot="helper">Optional helper</span>
   </gux-step-beta>
-  <gux-step-beta status="complete">
+  <gux-step-beta step-id="2" status="completed">
+    <gux-step-title slot="title">Step title</gux-step-title>
+    <span slot="helper">Optional helper</span>
+  </gux-step-beta>
+  <gux-step-beta step-id="3" status="incomplete">
+    <gux-step-title slot="title">Step title</gux-step-title>
+    <span slot="helper">Optional helper</span>
+  </gux-step-beta>
+  <gux-step-beta step-id="4" status="error">
+    <gux-step-title slot="title">Step title</gux-step-title>
+    <span slot="helper">Optional helper</span>
+  </gux-step-beta>
+  <gux-step-beta step-id="5" status="incomplete">
     <gux-step-title slot="title">Step title</gux-step-title>
     <span slot="helper">Optional helper</span>
   </gux-step-beta>
@@ -14,12 +26,20 @@
 
 <h3>vertical stepper</h3>
 
-<gux-stepper-beta orientation="vertical">
-  <gux-step-beta disabled status="error">
+<gux-stepper-beta active-step="1" orientation="vertical">
+  <gux-step-beta step-id="1" status="incomplete">
     <gux-step-title slot="title">Step title</gux-step-title>>
     <span slot="helper">Optional helper</span>
   </gux-step-beta>
-  <gux-step-beta status="complete">
+  <gux-step-beta step-id="2" status="incomplete">
+    <gux-step-title slot="title">Step title</gux-step-title>
+    <span slot="helper">Optional helper</span>
+  </gux-step-beta>
+  <gux-step-beta step-id="3" status="error">
+    <gux-step-title slot="title">Step title</gux-step-title>
+    <span slot="helper">Optional helper</span>
+  </gux-step-beta>
+  <gux-step-beta step-id="4" status="completed">
     <gux-step-title slot="title">Step title</gux-step-title>
     <span slot="helper">Optional helper</span>
   </gux-step-beta>

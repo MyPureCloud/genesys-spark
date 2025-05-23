@@ -23,22 +23,22 @@
       ui.$gse-ui-stepper-bar-incompleted-foregroundColor solid;
   }
 
-  &.gux-step-complete {
+  &.gux-step-completed {
     color: ui.$gse-ui-stepper-icon-completed-selectedForegroundColor;
     border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-icon-completed-selectedForegroundColor solid;
-  }
-
-  &.gux-step-active {
-    color: ui.$gse-ui-stepper-icon-active-foregroundColor;
-    border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
-      ui.$gse-ui-stepper-bar-active-foregroundColor solid;
   }
 
   &.gux-step-error {
     color: ui.$gse-ui-stepper-icon-error-foregroundColor;
     border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-bar-error-foregroundColor solid;
+  }
+
+  &.gux-active {
+    color: ui.$gse-ui-stepper-icon-active-foregroundColor;
+    border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
+      ui.$gse-ui-stepper-bar-active-foregroundColor solid;
   }
 }
 
@@ -65,22 +65,22 @@
       ui.$gse-ui-stepper-bar-incompleted-foregroundColor solid;
   }
 
-  &.gux-step-complete {
+  &.gux-step-completed {
     color: ui.$gse-ui-stepper-icon-completed-selectedForegroundColor;
     border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-icon-completed-selectedForegroundColor solid;
-  }
-
-  &.gux-step-active {
-    color: ui.$gse-ui-stepper-icon-active-foregroundColor;
-    border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
-      ui.$gse-ui-stepper-bar-active-foregroundColor solid;
   }
 
   &.gux-step-error {
     color: ui.$gse-ui-stepper-icon-error-foregroundColor;
     border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
       ui.$gse-ui-stepper-bar-error-foregroundColor solid;
+  }
+
+  &.gux-active {
+    color: ui.$gse-ui-stepper-icon-active-foregroundColor;
+    border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
+      ui.$gse-ui-stepper-bar-active-foregroundColor solid;
   }
 
   > .gux-step-information {

@@ -5,11 +5,11 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
+## Events
 
-| Property      | Attribute      | Description | Type      | Default |
-| ------------- | -------------- | ----------- | --------- | ------- |
-| `isNumerical` | `is-numerical` |             | `boolean` | `false` |
+| Event                      | Description | Type                  |
+| -------------------------- | ----------- | --------------------- |
+| `internalactivestepchange` |             | `CustomEvent<string>` |
 
 
 ## Slots

@@ -1,4 +1,11 @@
-import { Component, Element, Prop, h } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Event,
+  EventEmitter,
+  Listen,
+  h
+} from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 
 /**
@@ -14,10 +21,17 @@ export class GuxStepTitle {
   @Element()
   private root: HTMLElement;
 
-  @Prop()
-  isNumerical: boolean = false;
+  @Event()
+  internalactivestepchange: EventEmitter<string>;
 
-  // Get the disabled state from the closest gux-step element.
+  @Listen('click')
+  onClick() {
+    if (!this.stepDisabledState) {
+      this.internalactivestepchange.emit();
+    }
+  }
+
+  // Get the disabled state from the closest gux-step-beta element.
   get stepDisabledState(): boolean {
     return this.root.closest('gux-step-beta')?.disabled;
   }

@@ -9,6 +9,7 @@
 
 | Property      | Attribute     | Description                                            | Type                         | Default        |
 | ------------- | ------------- | ------------------------------------------------------ | ---------------------------- | -------------- |
+| `activeStep`  | `active-step` | stepId of the currently active step.                   | `string`                     | `undefined`    |
 | `disabled`    | `disabled`    |                                                        | `boolean`                    | `false`        |
 | `orientation` | `orientation` | Specifies horizontal or vertical orientation of steps. | `"horizontal" \| "vertical"` | `'horizontal'` |
 

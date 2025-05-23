@@ -7,10 +7,37 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                                                 | Default        |
-| ---------- | ---------- | ----------- | ---------------------------------------------------- | -------------- |
-| `disabled` | `disabled` |             | `boolean`                                            | `false`        |
-| `status`   | `status`   |             | `"active" \| "completed" \| "error" \| "incomplete"` | `'incomplete'` |
+| Property   | Attribute  | Description          | Type                                     | Default        |
+| ---------- | ---------- | -------------------- | ---------------------------------------- | -------------- |
+| `disabled` | `disabled` |                      | `boolean`                                | `false`        |
+| `status`   | `status`   |                      | `"completed" \| "error" \| "incomplete"` | `'incomplete'` |
+| `stepId`   | `step-id`  | Step id for the step | `string`                                 | `undefined`    |
+
+
+## Events
+
+| Event                  | Description | Type                  |
+| ---------------------- | ----------- | --------------------- |
+| `internalactivatestep` |             | `CustomEvent<string>` |
+
+
+## Methods
+
+### `guxSetActive(active: boolean) => Promise<void>`
+
+
+
+#### Parameters
+
+| Name     | Type      | Description |
+| -------- | --------- | ----------- |
+| `active` | `boolean` |             |
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Slots
