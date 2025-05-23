@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.149.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.149.0...v4.149.1) (2025-05-23)
+
+
+### Bug Fixes
+
+* **tokens:** changed active colour ([0de56af](https://github.com/MyPureCloud/genesys-spark/commit/0de56afb0e071f3ab9dde7573877b857a386b693))
+
 ## [4.149.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.148.0...v4.149.0) (2025-05-22)
 
 
