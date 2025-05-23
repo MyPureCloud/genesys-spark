@@ -33,7 +33,7 @@
       },
       "error": {
         "border": {
-          "color": "#ea0b0b",
+          "color": "#cc0a0a",
           "width": "1px",
           "style": "solid"
         }
@@ -122,7 +122,7 @@
           "fontSize": "12px",
           "lineHeight": "18px"
         },
-        "required_color": "#ea0b0b",
+        "required_color": "#cc0a0a",
         "optional_color": "#3e4a5b"
       },
       "icon_size": "16px",
@@ -152,7 +152,7 @@
       "padding_small": "4px 0 0 0",
       "error_padding": "4px 0 0 0",
       "default_color": "#4c5667",
-      "error_color": "#ea0b0b",
+      "error_color": "#cc0a0a",
       "icon_size": "16px"
     },
     "spin_button": {
@@ -829,7 +829,7 @@
     "error": {
       "background_color": "#fceaea",
       "foreground_color": "#2e394c",
-      "icon_color": "#ea0b0b",
+      "icon_color": "#cc0a0a",
       "border": {
         "color": "#f37a7a",
         "width": "1px",
@@ -988,7 +988,7 @@
     }
   },
   "status_glyph": {
-    "negative": "#ea0b0b",
+    "negative": "#cc0a0a",
     "positive": "#3c8527",
     "neutral": "#ffae00",
     "information": "#2a60c8"
@@ -1021,7 +1021,7 @@
         "foreground_color": "#3c8527"
       },
       "error": {
-        "foreground_color": "#ea0b0b"
+        "foreground_color": "#cc0a0a"
       }
     }
   },
@@ -1290,7 +1290,7 @@
         "foreground_color": "#23478f"
       },
       "error": {
-        "foreground_color": "#ea0b0b"
+        "foreground_color": "#cc0a0a"
       },
       "height": "16px",
       "width": "16px"
@@ -1335,7 +1335,7 @@
         "foreground_color": "#23478f"
       },
       "error": {
-        "foreground_color": "#ea0b0b"
+        "foreground_color": "#cc0a0a"
       },
       "height": "16px",
       "width": "16px"
@@ -1616,7 +1616,7 @@
           "background_color": "#fceaea"
         },
         "on": {
-          "background_color": "#ea0b0b"
+          "background_color": "#cc0a0a"
         }
       },
       "hover": {
@@ -1731,7 +1731,7 @@
         "default": "#2e394c"
       },
       "error": {
-        "error_message": "#ea0b0b",
+        "error_message": "#cc0a0a",
         "error_helper": "#4c5667",
         "text": {
           "fontFamily": "Roboto",
@@ -1782,7 +1782,7 @@
       },
       "status_icon": {
         "success": "#3c8527",
-        "error": "#ea0b0b"
+        "error": "#cc0a0a"
       },
       "foreground_color": "#ffffff"
     },
@@ -1834,7 +1834,7 @@
   },
   "color_picker": {
     "label": {
-      "required_symbol_color": "#ea0b0b",
+      "required_symbol_color": "#cc0a0a",
       "text_color": "#2e394c",
       "text": {
         "fontFamily": "Roboto",
@@ -1849,7 +1849,7 @@
         "default_color": "#6b7585",
         "hover_color": "#2754ac",
         "active_color": "#2a60c8",
-        "error_color": "#ea0b0b"
+        "error_color": "#cc0a0a"
       }
     },
     "input": {
@@ -2016,7 +2016,7 @@
     "error": {
       "background_color": "#fceaea",
       "selected_indicator": {
-        "foreground_color": "#ea0b0b"
+        "foreground_color": "#cc0a0a"
       },
       "border": {
         "color": "#ea0b0b",
@@ -2107,7 +2107,7 @@
         "foreground_color": "#2a60c8"
       },
       "error": {
-        "foreground_color": "#ea0b0b"
+        "foreground_color": "#cc0a0a"
       },
       "incompleted": {
         "foreground_color": "#2e394c"
@@ -2127,7 +2127,7 @@
         "foreground_color": "#2a60c8"
       },
       "error": {
-        "foreground_color": "#ea0b0b"
+        "foreground_color": "#cc0a0a"
       },
       "incompleted": {
         "foreground_color": "#b4bccb"
@@ -3051,7 +3051,7 @@
     "error": {
       "background_color": "#ffffff",
       "foreground_color": "#2e394c",
-      "icon_color": "#ea0b0b"
+      "icon_color": "#cc0a0a"
     },
     "heading": {
       "fontFamily": "Roboto",
@@ -3978,7 +3978,7 @@
     },
     "indicator": {
       "positive": "#3c8527",
-      "negative": "#ea0b0b"
+      "negative": "#cc0a0a"
     }
   },
   "heatmap": {
@@ -4424,7 +4424,7 @@
       },
       "error": {
         "icon": {
-          "default": "#ea0b0b"
+          "default": "#cc0a0a"
         }
       },
       "loading": {
