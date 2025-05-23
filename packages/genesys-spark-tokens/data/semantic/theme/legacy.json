@@ -633,7 +633,7 @@
         },
         "error": {
           "10": {
-            "value": "{color_legacy.red.60}",
+            "value": "{color_legacy.red.50}",
             "type": "color"
           }
         }
@@ -821,7 +821,7 @@
             "type": "color"
           },
           "20": {
-            "value": "{color_legacy.red.60}",
+            "value": "{color_legacy.red.50}",
             "type": "color"
           }
         }
