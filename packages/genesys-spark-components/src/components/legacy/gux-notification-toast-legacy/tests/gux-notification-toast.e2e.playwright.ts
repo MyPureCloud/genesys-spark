@@ -8,7 +8,7 @@ import { renderConfig, renderConfigs } from './gux-notification-toast.common';
 
 test.describe('gux-simple-toast-legacy', () => {
   test.describe('#render', () => {
-    checkRenders(renderConfigs, 'gux-simple-toast-legacy');
+    checkRenders({ renderConfigs, element: 'gux-simple-toast-legacy' });
   });
 
   test.describe('#interactions', () => {

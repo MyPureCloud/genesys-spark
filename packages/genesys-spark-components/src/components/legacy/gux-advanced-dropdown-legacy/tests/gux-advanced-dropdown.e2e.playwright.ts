@@ -9,7 +9,10 @@ import { renderConfig } from './gux-advanced-dropdown.common';
 
 test.describe('gux-advanced-dropdown-legacy', () => {
   test.describe('#render', () => {
-    checkRenders([renderConfig], 'gux-advanced-dropdown-legacy');
+    checkRenders({
+      renderConfigs: [renderConfig],
+      element: 'gux-advanced-dropdown-legacy'
+    });
   });
 
   test.describe('#interactions', () => {

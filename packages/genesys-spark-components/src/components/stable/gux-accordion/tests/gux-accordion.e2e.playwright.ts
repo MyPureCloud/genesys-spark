@@ -1,8 +1,8 @@
 import { checkRenders, test } from '@test/playwrightTestUtils';
 
 test.describe('gux-accordion', () => {
-  checkRenders(
-    [
+  checkRenders({
+    renderConfigs: [
       {
         html: `
     <gux-accordion>
@@ -42,6 +42,6 @@ test.describe('gux-accordion', () => {
     </gux-accordion>`
       }
     ],
-    'gux-accordion'
-  );
+    element: 'gux-accordion'
+  });
 });

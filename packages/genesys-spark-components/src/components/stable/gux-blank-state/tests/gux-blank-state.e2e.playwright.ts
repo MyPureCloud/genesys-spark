@@ -1,8 +1,8 @@
 import { checkRenders, test } from '@test/playwrightTestUtils';
 
 test.describe('gux-blank-state', () => {
-  checkRenders(
-    [
+  checkRenders({
+    renderConfigs: [
       {
         html: `
     <gux-blank-state lang="en">
@@ -16,6 +16,6 @@ test.describe('gux-blank-state', () => {
     `
       }
     ],
-    'gux-blank-state'
-  );
+    element: 'gux-blank-state'
+  });
 });

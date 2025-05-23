@@ -86,12 +86,19 @@ export async function setContent(page: E2EPage, html: string) {
   await setupPage(page);
 }
 
-export async function checkRenders(
-  renderConfigs: RenderConfig[],
-  element?: string,
-  extraActions: ExtraActionsFn = () => Promise.resolve(),
-  performA11yCheck: boolean = true
-) {
+type CheckRendersParams = {
+  renderConfigs: RenderConfig[];
+  element?: string;
+  extraActions?: ExtraActionsFn;
+  performA11yCheck?: boolean;
+};
+
+export async function checkRenders({
+  renderConfigs,
+  element,
+  extraActions = () => Promise.resolve(),
+  performA11yCheck = true
+}: CheckRendersParams) {
   renderConfigs.forEach(({ description, html }, index) => {
     test(
       description || `should render component as expected (${index + 1})`,
