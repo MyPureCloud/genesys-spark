@@ -1,8 +1,8 @@
 import { checkRenders, test } from '@test/playwrightTestUtils';
 
 test.describe('gux-breadcrumbs', () => {
-  checkRenders(
-    [
+  checkRenders({
+    renderConfigs: [
       {
         html: `
       <gux-breadcrumbs lang="en">
@@ -49,6 +49,6 @@ test.describe('gux-breadcrumbs', () => {
     `
       }
     ],
-    'gux-breadcrumbs'
-  );
+    element: 'gux-breadcrumbs'
+  });
 });

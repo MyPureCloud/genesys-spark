@@ -6,8 +6,8 @@ import {
 } from '@test/playwrightTestUtils';
 
 test.describe('gux-button', () => {
-  checkRenders(
-    [
+  checkRenders({
+    renderConfigs: [
       { html: '<gux-button>Button</gux-button>' },
       { html: '<gux-button accent="primary">Button</gux-button>' },
       { html: '<gux-button accent="secondary">Button</gux-button>' },
@@ -25,8 +25,8 @@ test.describe('gux-button', () => {
       { html: '<gux-button accent="inline" disabled>Button</gux-button>' },
       { html: '<gux-button accent="invalid" disabled>Button</gux-button>' }
     ],
-    'gux-button'
-  );
+    element: 'gux-button'
+  });
 
   test('should fire a click event when an enabled button slot content is clicked', async ({
     page

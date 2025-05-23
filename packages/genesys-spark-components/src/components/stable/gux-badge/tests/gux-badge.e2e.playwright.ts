@@ -1,8 +1,8 @@
 import { checkRenders, test } from '@test/playwrightTestUtils';
 
 test.describe('gux-badge', () => {
-  checkRenders(
-    [
+  checkRenders({
+    renderConfigs: [
       { html: '<gux-badge>Badge</gux-badge>' },
       { html: '<gux-badge accent="info">Badge</gux-badge>' },
       { html: '<gux-badge accent="success">Badge</gux-badge>' },
@@ -52,6 +52,6 @@ test.describe('gux-badge', () => {
         html: '<gux-badge bold accent="inherit"><gux-icon icon-name="subtract" decorative></gux-icon>Badge</gux-badge>>'
       }
     ],
-    'gux-badge'
-  );
+    element: 'gux-badge'
+  });
 });

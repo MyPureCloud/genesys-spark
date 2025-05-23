@@ -9,7 +9,7 @@ import { renderConfig, renderConfigs } from './gux-modal-legacy.common';
 
 test.describe('gux-modal-legacy', () => {
   test.describe('#render', () => {
-    checkRenders(renderConfigs, 'gux-modal-legacy');
+    checkRenders({ renderConfigs, element: 'gux-modal-legacy' });
   });
 
   test.describe('#interactions', () => {
