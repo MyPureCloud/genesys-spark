@@ -83,7 +83,9 @@ export class GuxTableToolbar {
   }
 
   get menuActionSlot(): Element | null {
-    return getSlot(this.root, 'menu-actions');
+    const menuActions = getSlot(this.root, 'menu-actions');
+    const menuActionsListItems = getSlot(this.root, 'menu-actions-list-items');
+    return menuActionsListItems ? menuActionsListItems : menuActions;
   }
 
   get permanentSlot(): Element | null {
@@ -279,7 +281,8 @@ export class GuxTableToolbar {
           <div class="gux-permanent-menu-primary-wrapper">
             <slot name="permanent-actions"></slot>
             <gux-table-toolbar-menu-button show-menu={this.renderMenu()}>
-              <slot name="menu-actions"></slot>
+              {/* <slot name="menu-actions"></slot> */}
+              <slot name="menu-actions-list-items"></slot>
             </gux-table-toolbar-menu-button>
             <slot name="primary-action"></slot>
           </div>
