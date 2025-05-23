@@ -83,6 +83,13 @@ export class GuxAvatar {
   @Prop()
   ucIntegration: GuxAvatarUcIntegrationApps = 'none';
 
+  get hasUcIntegration(): boolean {
+    return (
+      ['zoom', 'teams', '8x8'].includes(this.ucIntegration) &&
+      this.size === 'large'
+    );
+  }
+
   private validatingInputs(): void {
     const avatarImage = this.root.querySelector('img');
     if (!this.name) {
@@ -107,6 +114,7 @@ export class GuxAvatar {
     } else if (this.badge && !['idle', 'none'].includes(this.presence)) {
       return (
         <div
+          aria-hidden="true"
           class={{
             'gux-avatar-badge': true,
             [`gux-${this.presence}`]: true,
@@ -125,6 +133,7 @@ export class GuxAvatar {
   private renderNotificationsBadge(): JSX.Element | null {
     return (
       <div
+        aria-hidden="true"
         class={{
           'gux-avatar-badge gux-notifications': true,
           [`gux-${this.size}`]: true
@@ -185,16 +194,10 @@ export class GuxAvatar {
   }
 
   private renderUcIntegrationBadge(): JSX.Element | null {
-    if (
-      ['zoom', 'teams', '8x8'].includes(this.ucIntegration) &&
-      this.size === 'large'
-    ) {
+    if (this.hasUcIntegration) {
       return (
-        <div class="gux-avatar-integration-badge">
+        <div class="gux-avatar-integration-badge" aria-hidden="true">
           {this.renderUcIntegrationsIcon(this.ucIntegration)}
-          <gux-screen-reader-beta>
-            {this.getUcIntegrationText(this.ucIntegration)}
-          </gux-screen-reader-beta>
         </div>
       ) as JSX.Element;
     }
@@ -203,7 +206,11 @@ export class GuxAvatar {
   private renderTooltip(): JSX.Element | null {
     if (['A', 'BUTTON'].includes(this.parentElement.tagName)) {
       return (
-        <gux-tooltip-beta placement="top" ref={el => (this.tooltip = el)}>
+        <gux-tooltip-beta
+          placement="top"
+          ref={el => (this.tooltip = el)}
+          visualOnly
+        >
           <div slot="content">{this.getDescriptionText()}</div>
         </gux-tooltip-beta>
       ) as JSX.Element;
@@ -213,13 +220,21 @@ export class GuxAvatar {
   }
 
   private getDescriptionText(): string {
+    let description = `${this.name}`;
+
     if (this.notifications) {
-      return `${this.name} (${this.i18n('notifications')})`;
+      return (description += ` (${this.i18n('notifications')})`);
     }
     if (this.label && this.presence !== 'none') {
-      return `${this.name} (${this.label})`;
+      description = description += ` (${this.label})`;
     }
-    return `${this.name}`;
+
+    if (this.hasUcIntegration) {
+      description =
+        description += ` (${this.getUcIntegrationText(this.ucIntegration)})`;
+    }
+
+    return description;
   }
 
   /*
@@ -261,9 +276,9 @@ export class GuxAvatar {
       >
         <div class="gux-content">
           <slot name="image">
-            <abbr aria-label={this.getDescriptionText()}>
+            <span role="img" aria-label={this.getDescriptionText()}>
               {generateInitials(this.name)}
-            </abbr>
+            </span>
           </slot>
         </div>
         {this.renderTooltip()}
