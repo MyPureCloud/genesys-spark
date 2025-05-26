@@ -3,6 +3,9 @@ import { renderConfig } from './gux-switch.common';
 
 test.describe('gux-switch-legacy', () => {
   test.describe('#render', () => {
-    checkRenders([renderConfig], 'gux-switch-legacy');
+    checkRenders({
+      renderConfigs: [renderConfig],
+      element: 'gux-switch-legacy'
+    });
   });
 });

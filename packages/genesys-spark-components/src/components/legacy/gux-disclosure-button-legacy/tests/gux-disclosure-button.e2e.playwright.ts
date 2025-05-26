@@ -12,7 +12,7 @@ import {
 
 test.describe('gux-disclosure-button-legacy', () => {
   test.describe('#render', () => {
-    checkRenders(renderConfigs, 'gux-disclosure-button-legacy');
+    checkRenders({ renderConfigs, element: 'gux-disclosure-button-legacy' });
   });
 
   test.describe('#interactions', () => {

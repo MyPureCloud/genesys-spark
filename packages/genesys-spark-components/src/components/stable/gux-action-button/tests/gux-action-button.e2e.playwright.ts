@@ -57,7 +57,10 @@ test.describe('gux-action-button', () => {
       .press(keypress);
   }
 
-  checkRenders([{ html: html }, { html: disabledHtml }], 'gux-action-button');
+  checkRenders({
+    renderConfigs: [{ html: html }, { html: disabledHtml }],
+    element: 'gux-action-button'
+  });
 
   test('should fire actionClick event if not disabled', async ({ page }) => {
     await setContent(page, html);
