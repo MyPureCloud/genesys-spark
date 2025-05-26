@@ -436,6 +436,23 @@
             "description": "The background color of the footer for the mobile global navigation."
           }
         }
+      },
+      "floating": {
+        "default": {
+          "value": "{theme.background.container.floating.10}",
+          "type": "color",
+          "description": "The background color for the default state of an floating surfaces like menu, toast, etc"
+        },
+        "hover": {
+          "value": "{theme.background.container.floating.20}",
+          "type": "color",
+          "description": "The background color for the hover state of an floating surfaces like menu item."
+        },
+        "selected": {
+          "value": "{theme.background.container.floating.30}",
+          "type": "color",
+          "description": "The background color for the selected state of an floating surfaces like menu item."
+        }
       }
     },
     "system": {
@@ -1056,20 +1073,20 @@
       }
     },
     "container": {
-      "high_emphasis": {
-        "value": "{theme.foreground.primary.30}",
+      "low_emphasis": {
+        "value": "{theme.foreground.secondary.30}",
         "type": "color",
-        "description": "The default color for high emphasis content on surfaces, like headings, subheadings, quotes or bold text."
+        "description": "The default color for low emphasis content on surfaces, like captions or fine print."
       },
       "mid_emphasis": {
         "value": "{theme.foreground.primary.10}",
         "type": "color",
         "description": "The default color for medium emphasis content on surfaces, like normal paragraphs."
       },
-      "low_emphasis": {
-        "value": "{theme.foreground.secondary.30}",
+      "high_emphasis": {
+        "value": "{theme.foreground.primary.30}",
         "type": "color",
-        "description": "The default color for low emphasis content on surfaces, like captions or fine print."
+        "description": "The default color for high emphasis content on surfaces, like headings, subheadings, quotes or bold text."
       },
       "high_contrast": {
         "high_emphasis": {

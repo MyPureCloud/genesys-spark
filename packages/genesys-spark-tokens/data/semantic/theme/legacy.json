@@ -126,6 +126,20 @@
               "type": "color"
             }
           }
+        },
+        "floating": {
+          "10": {
+            "value": "{color.white}",
+            "type": "color"
+          },
+          "20": {
+            "value": "{color_legacy.blue.60}",
+            "type": "color"
+          },
+          "30": {
+            "value": "{color.white}",
+            "type": "color"
+          }
         }
       },
       "form_control": {

@@ -425,6 +425,23 @@
             "description": "The background color of the footer for the mobile global navigation."
           }
         }
+      },
+      "floating": {
+        "default": {
+          "value": "{theme.background.container.primary.30d}",
+          "type": "color",
+          "description": "The background color for the default state of an floating surfaces like menu, toast, etc"
+        },
+        "hover": {
+          "value": "{theme.background.container.primary.40d}",
+          "type": "color",
+          "description": "The background color for the hover state of an floating surfaces like menu item."
+        },
+        "selected": {
+          "value": "{theme.background.container.primary.50d}",
+          "type": "color",
+          "description": "The background color for the selected state of an floating surfaces like menu item."
+        }
       }
     },
     "system": {

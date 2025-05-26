@@ -123,6 +123,30 @@
             "type": "color"
           }
         },
+        "floating": {
+          "10": {
+            "value": "{color.white}",
+            "type": "color"
+          },
+          "20": {
+            "value": "{color.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.15",
+                  "space": "lch",
+                  "color": "{color.azure_blue.400}"
+                }
+              }
+            }
+          },
+          "30": {
+            "value": "{color.azure_blue.100}",
+            "type": "color"
+          }
+        },
         "secondary": {
           "10": {
             "value": "{color.azure_blue.600}",
@@ -297,18 +321,6 @@
               }
             }
           }
-        },
-        "25": {
-          "value": "{color.azure_blue.200}",
-          "type": "color"
-        },
-        "30": {
-          "value": "{color.azure_blue.100}",
-          "type": "color"
-        },
-        "40": {
-          "value": "{color.white}",
-          "type": "color"
         },
         "10d": {
           "value": "{color.azure_blue.1000}",
