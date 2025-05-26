@@ -23,7 +23,7 @@ export async function bootstrap() {
             <div class="logo">${sparkLogo}</div>
             <nav id="mode-switcher-section">
               <gux-button accent="secondary" id="mode-switcher">
-                <gux-icon id="mode-action-icon" icon-name="fa/moon-regular"></gux-icon>
+                <gux-icon id="mode-action-icon" icon-name="fa/moon-regular" decorative></gux-icon>
                 <gux-tooltip-beta aria-hidden="true">
                   <span  id="mode-action-tooltip" slot="content">Toggle Dark Mode</span>
                 </gux-tooltip-beta>

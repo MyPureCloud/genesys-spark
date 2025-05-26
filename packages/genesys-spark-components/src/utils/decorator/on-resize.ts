@@ -25,7 +25,11 @@ export function OnResize(): OnResizeDecorator {
 
     proto.connectedCallback = function () {
       const method = this[methodName];
-      const observer = new ResizeObserver(method.bind(this));
+      const observer = new ResizeObserver((entries: ResizeObserverEntry[]) => {
+        requestAnimationFrame(() => {
+          method.apply(this, entries);
+        });
+      });
 
       registerObserver(store, this, observer);
 
