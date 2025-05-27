@@ -103,6 +103,10 @@ export class GuxFlyoutMenu {
 
   @Listen('focusin')
   onFocusin() {
+    if (!this.isShown) {
+      void this.announceElement.guxAnnounce(this.i18n('onTargetFocus'));
+    }
+
     this.show();
   }
 
@@ -112,8 +116,6 @@ export class GuxFlyoutMenu {
   }
 
   private show(): void {
-    void this.announceElement.guxAnnounce(this.i18n('onTargetFocus'));
-
     clearTimeout(this.hideDelayTimeout);
     this.isShown = true;
   }
