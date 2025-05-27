@@ -37,7 +37,7 @@ describe('gux-date', () => {
 
   describe('#render using non regional dates', () => {
     beforeAll(() => {
-      useRegionalDates.mockReturnValue(true);
+      useRegionalDates.mockReturnValue(false);
     });
 
     describe('#render', () => {
