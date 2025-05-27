@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.150.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.149.1...v4.150.0) (2025-05-27)
+
+
+### Features
+
+* **avatar-beta:** improved screenreader accessibility ([#1087](https://github.com/MyPureCloud/genesys-spark/issues/1087)) ([1bfee37](https://github.com/MyPureCloud/genesys-spark/commit/1bfee370244912ed88c97463218eea81b9de6c64))
+
+
+### Bug Fixes
+
+* **button:** Icon examples clickable in NVDA ([#986](https://github.com/MyPureCloud/genesys-spark/issues/986)) ([9d04d46](https://github.com/MyPureCloud/genesys-spark/commit/9d04d4694459b95142508305f9433b0dead53ff3))
+* **calendar:** added labels to month increment buttons ([85a5a65](https://github.com/MyPureCloud/genesys-spark/commit/85a5a652586d28b4f712a441694ed9dbcb937b90))
+* **other:** added requestAnimationFrame into OnResize decorator ([cb56dee](https://github.com/MyPureCloud/genesys-spark/commit/cb56dee8238467184c7b628a16fa88bf1f3a8a90))
+
 ### [4.149.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.149.0...v4.149.1) (2025-05-23)
 
 
