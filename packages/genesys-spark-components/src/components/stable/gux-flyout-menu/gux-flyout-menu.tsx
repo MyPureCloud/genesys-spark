@@ -103,7 +103,6 @@ export class GuxFlyoutMenu {
 
   @Listen('focusin')
   onFocusin() {
-    this.announceElement.guxAnnounce(this.i18n('onTargetFocus'));
     this.show();
   }
 
@@ -113,6 +112,8 @@ export class GuxFlyoutMenu {
   }
 
   private show(): void {
+    void this.announceElement.guxAnnounce(this.i18n('onTargetFocus'));
+
     clearTimeout(this.hideDelayTimeout);
     this.isShown = true;
   }
@@ -204,7 +205,7 @@ export class GuxFlyoutMenu {
     }
 
     this.hideDelayTimeout = afterNextRenderTimeout(() => {
-      this.announceElement.guxAnnounce(this.i18n('onMenuFocus'));
+      void this.announceElement.guxAnnounce(this.i18n('onMenuFocus'));
     });
 
     const menu = this.root.querySelector('gux-menu');
