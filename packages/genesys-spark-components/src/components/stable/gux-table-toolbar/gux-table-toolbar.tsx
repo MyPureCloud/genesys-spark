@@ -87,7 +87,12 @@ export class GuxTableToolbar {
   }
 
   get permanentSlot(): Element | null {
-    return getSlot(this.root, 'permanent-actions');
+    // If permanent actions are not located at the root, then they are assumed to be located within the menu actions.
+    // Permanent actions will be located in the menu actions if the previous display layout was condensed.
+    return (
+      getSlot(this.root, 'permanent-actions') ||
+      getSlot(this.menuActionSlot as HTMLElement, 'permanent-actions')
+    );
   }
 
   get contextualSlot(): Element | null {
@@ -279,7 +284,17 @@ export class GuxTableToolbar {
           <div class="gux-permanent-menu-primary-wrapper">
             <slot name="permanent-actions"></slot>
             <gux-table-toolbar-menu-button show-menu={this.renderMenu()}>
-              <slot name="menu-actions"></slot>
+              {/* <slot name="menu-actions"></slot> */}
+
+              <gux-table-toolbar-custom-action>
+                <span slot="text">Filter</span>
+                <gux-icon slot="icon" icon-name="filter" decorative></gux-icon>
+              </gux-table-toolbar-custom-action>
+
+              <gux-table-toolbar-custom-action>
+                <span slot="text">Filter</span>
+                <gux-icon slot="icon" icon-name="filter" decorative></gux-icon>
+              </gux-table-toolbar-custom-action>
             </gux-table-toolbar-menu-button>
             <slot name="primary-action"></slot>
           </div>
