@@ -11,8 +11,6 @@ import {
 } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxStepperOrientation } from './gux-stepper.types';
-import { buildI18nForComponent, GetI18nValue } from 'i18n';
-import stepperResources from './i18n/en.json';
 
 /**
  * @slot - for gux-step elements
@@ -26,7 +24,6 @@ import stepperResources from './i18n/en.json';
 export class GuxStepper {
   @Element()
   private root: HTMLElement;
-  private i18n: GetI18nValue;
 
   /**
    *  Specifies horizontal or vertical orientation of steps.
@@ -74,10 +71,6 @@ export class GuxStepper {
     }
   }
 
-  async componentWillRender(): Promise<void> {
-    this.i18n = await buildI18nForComponent(this.root, stepperResources);
-  }
-
   private activateStep(
     stepId: string,
     stepList: HTMLGuxStepBetaElement[]
@@ -103,9 +96,6 @@ export class GuxStepper {
           'gux-stepper': true,
           [`gux-stepper-${this.orientation}`]: true
         }}
-        aria-orientation={this.orientation.toString()}
-        aria-label={this.i18n('stepper')}
-        role="group"
       >
         <slot onSlotchange={this.onSlotChange.bind(this)}></slot>
       </div>
