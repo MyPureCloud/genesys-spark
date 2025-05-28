@@ -445,16 +445,32 @@ export class GuxDropdown {
     }
   }
 
+  private getOptionDefaultText(optionElement: HTMLGuxOptionElement) {
+    // TODO: use getOptionDefaultSlot(option)?.textContent.trim() once Stencil fix for assignedNodes test issue is in (v4.27.2) - COMUI-3655
+    let text = '';
+
+    optionElement.childNodes.forEach(node => {
+      // Only include text nodes or elements without slot="subtext"
+      const addTextContent = () => (text += node.textContent);
+
+      if (node.nodeType === Node.TEXT_NODE) {
+        addTextContent();
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        const slot = (node as Element).hasAttribute('slot');
+        const slotValue = (node as Element).getAttribute('slot');
+        if (!slot || slotValue !== 'subtext') {
+          addTextContent();
+        }
+      }
+    });
+
+    return text.trim();
+  }
+
   private renderOption(option: HTMLGuxOptionElement): JSX.Element {
-    let optionText = option.textContent.trim();
-    if (hasSlot(option, 'subtext')) {
-      // TODO: use getOptionDefaultSlot(option)?.textContent.trim() once Stencil fix for assignedNodes test issue is in (v4.27.2) - COMUI-3655
-      const subtext = option.querySelector('[slot=subtext]');
-      optionText = optionText.replace(subtext.textContent.trim(), '');
-    }
     return (
       <gux-truncate ref={el => (this.truncateElement = el)} dir="auto">
-        {optionText}
+        {this.getOptionDefaultText(option)}
       </gux-truncate>
     ) as JSX.Element;
   }
@@ -468,8 +484,7 @@ export class GuxDropdown {
     }
 
     if (hasSlot(iconOption, 'subtext')) {
-      const subtext = iconOption.querySelector('[slot=subtext]');
-      optionText = optionText.replace(subtext.textContent, '');
+      optionText = this.getOptionDefaultText(iconOption);
     }
     return (
       <span
