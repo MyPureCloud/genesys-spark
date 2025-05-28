@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.151.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.150.0...v4.151.0) (2025-05-28)
+
+
+### Features
+
+* **tabs:** apply the correct visual state on newly enabled or disabled tabs ([3232210](https://github.com/MyPureCloud/genesys-spark/commit/3232210274ee28e29c416f373dbec476ea300e6a))
+
 ## [4.150.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.149.1...v4.150.0) (2025-05-27)
 
 
