@@ -763,9 +763,6 @@
     "warning": "Inactive",
     "error": "Deleted"
   },
-  "gux-stepper": {
-    "stepper": "Stepper"
-  },
   "gux-table": {
     "emptyMessage": "No data available",
     "scrollLeft": "Scroll Left",
