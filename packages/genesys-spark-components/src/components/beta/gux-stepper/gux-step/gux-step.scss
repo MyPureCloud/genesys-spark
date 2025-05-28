@@ -1,91 +1,50 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 
-.gux-step-horizontal {
+.gux-stepper {
   display: flex;
   flex-direction: row;
-  gap: ui.$gse-ui-stepper-step-gap;
+  gap: var(--step-gap);
   align-items: flex-start;
   justify-content: flex-start;
-  min-inline-size: ui.$gse-ui-stepper-step-horizontal-minWidth;
-  padding-block: ui.$gse-ui-stepper-step-horizontal-gap 0;
-  padding-inline: 0;
+  min-inline-size: var(--stepper-min-inline-size, 0);
+  min-block-size: var(--stepper-min-block-size, 0);
+  padding-block: var(--stepper-padding-block, 0);
+  padding-inline: var(--stepper-padding-inline, 0);
   background-color: transparent;
   border: none;
 
   gux-icon {
     flex-shrink: 0;
     align-self: flex-start;
+    margin-block-start: var(--stepper-step-body-margin, 0);
   }
 
   &.gux-step-incomplete {
     color: ui.$gse-ui-stepper-icon-incompleted-foregroundColor;
-    border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
-      ui.$gse-ui-stepper-bar-incompleted-foregroundColor solid;
+    border-block-start: var(--stepper-border-block-start-incomplete, none);
+    border-inline-start: var(--stepper-border-inline-start-incomplete);
   }
 
   &.gux-step-completed {
     color: ui.$gse-ui-stepper-icon-completed-selectedForegroundColor;
-    border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
-      ui.$gse-ui-stepper-icon-completed-selectedForegroundColor solid;
+    border-block-start: var(--stepper-border-block-start-completed, none);
+    border-inline-start: var(--stepper-border-inline-start-completed, none);
   }
 
   &.gux-step-error {
     color: ui.$gse-ui-stepper-icon-error-foregroundColor;
-    border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
-      ui.$gse-ui-stepper-bar-error-foregroundColor solid;
+    border-block-start: var(--stepper-border-block-start-error, none);
+    border-inline-start: var(--stepper-border-inline-start-error, none);
   }
 
   &.gux-active {
     color: ui.$gse-ui-stepper-icon-active-foregroundColor;
-    border-block-start: ui.$gse-ui-stepper-bar-horizontal-height
-      ui.$gse-ui-stepper-bar-active-foregroundColor solid;
-  }
-}
-
-.gux-step-vertical {
-  display: flex;
-  flex-direction: row;
-  gap: ui.$gse-ui-stepper-step-vertical-gap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  min-block-size: ui.$gse-ui-stepper-step-vertical-minHeight;
-  padding-block: 0;
-  padding-inline: ui.$gse-ui-stepper-step-vertical-gap 0;
-  background-color: transparent;
-  border: none;
-
-  gux-icon {
-    flex-shrink: 0;
-    align-self: flex-start;
-    margin-block-start: ui.$gse-ui-stepper-step-vertical-body-marginTop;
-  }
-
-  &.gux-step-incomplete {
-    color: ui.$gse-ui-stepper-icon-incompleted-foregroundColor;
-    border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
-      ui.$gse-ui-stepper-bar-incompleted-foregroundColor solid;
-  }
-
-  &.gux-step-completed {
-    color: ui.$gse-ui-stepper-icon-completed-selectedForegroundColor;
-    border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
-      ui.$gse-ui-stepper-icon-completed-selectedForegroundColor solid;
-  }
-
-  &.gux-step-error {
-    color: ui.$gse-ui-stepper-icon-error-foregroundColor;
-    border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
-      ui.$gse-ui-stepper-bar-error-foregroundColor solid;
-  }
-
-  &.gux-active {
-    color: ui.$gse-ui-stepper-icon-active-foregroundColor;
-    border-inline-start: ui.$gse-ui-stepper-bar-horizontal-height
-      ui.$gse-ui-stepper-bar-active-foregroundColor solid;
+    border-block-start: var(--stepper-border-block-start-active, none);
+    border-inline-start: var(--stepper-border-inline-start-active, none);
   }
 
   > .gux-step-information {
-    margin-block-start: ui.$gse-ui-stepper-step-vertical-body-marginTop;
+    margin-block-start: var(--stepper-step-body-margin, 0);
   }
 }
 

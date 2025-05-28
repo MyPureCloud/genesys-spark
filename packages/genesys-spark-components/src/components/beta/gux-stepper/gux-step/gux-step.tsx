@@ -11,7 +11,6 @@ import {
 } from '@stencil/core';
 import { trackComponent } from '@utils/tracking/usage';
 import { GuxStepStatus } from '../gux-stepper.types';
-import { getAttributeFromParent } from '@utils/dom/get-attribute-from-parent';
 
 /**
  * @slot title - Slot for gux-step-title element.
@@ -78,8 +77,7 @@ export class GuxStep {
     return (
       <div
         class={{
-          [`gux-step-${getAttributeFromParent('gux-stepper-beta', this.root, 'orientation') ?? 'horizontal'}`]:
-            true,
+          'gux-stepper': true,
           [`gux-step-${this.status}`]: true,
           'gux-disabled': this.disabled,
           'gux-active': this.active
