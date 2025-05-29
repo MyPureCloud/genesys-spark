@@ -845,6 +845,24 @@
           }
         }
       }
+    },
+    "group": {
+      "gap": {
+        "value": "{container.sm.gap}",
+        "type": "spacing"
+      },
+      "comfy": {
+        "padding": {
+          "value": "{container.xs.padding} {container.sm.padding}",
+          "type": "spacing"
+        }
+      },
+      "compact": {
+        "padding": {
+          "value": "{container.xs.padding}",
+          "type": "spacing"
+        }
+      }
     }
   }
 }
