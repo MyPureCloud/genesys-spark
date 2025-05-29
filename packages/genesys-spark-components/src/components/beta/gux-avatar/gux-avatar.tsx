@@ -60,6 +60,12 @@ export class GuxAvatar {
   label: string;
 
   /**
+   * Controls whether to display a tooltip when the avatar is in a button or link
+   */
+  @Prop()
+  tooltipEnabled: boolean = true;
+
+  /**
    * Shows a ring around the avatar indicating current presence
    */
   @Prop()
@@ -204,7 +210,10 @@ export class GuxAvatar {
   }
 
   private renderTooltip(): JSX.Element | null {
-    if (['A', 'BUTTON'].includes(this.parentElement.tagName)) {
+    if (
+      this.tooltipEnabled &&
+      ['A', 'BUTTON'].includes(this.parentElement.tagName)
+    ) {
       return (
         <gux-tooltip-beta
           placement="top"
