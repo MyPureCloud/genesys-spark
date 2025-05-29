@@ -1,5 +1,10 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 
+:host {
+  inline-size: 100%;
+  max-inline-size: 100%;
+}
+
 .gux-stepper {
   display: flex;
   flex-direction: row;
