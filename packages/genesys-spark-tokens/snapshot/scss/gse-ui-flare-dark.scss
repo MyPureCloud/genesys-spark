@@ -107,6 +107,7 @@
   --gse-ui-calendarMenu-month-headerText-lineHeight: 24px;
   --gse-ui-calendarMenu-month-range-vertical-width: 272px;
   --gse-ui-calendarMenu-month-range-vertical-height: 652px;
+  --gse-ui-calendarMenu-month-range-timePickerOn-height: 72px;
   --gse-ui-calendarMenu-month-focusBorderRadius: 20px;
   --gse-ui-calendarMenu-month-borderRadius: 16px;
   --gse-ui-calendarMenu-month-calendarButton-focusBorderRadius: 4px;
@@ -123,6 +124,8 @@
   --gse-ui-calendarMenu-day-headerText-fontSize: 12px;
   --gse-ui-calendarMenu-day-headerText-lineHeight: 18px;
   --gse-ui-calendarMenu-day-date-size: 32px;
+  --gse-ui-calendarMenu-day-timePickerOn-width: 272px;
+  --gse-ui-calendarMenu-day-timePickerOn-padding: 0px 24px 18px;
   --gse-ui-calendarMenu-height: 234px;
   --gse-ui-calendarMenu-width: 250px;
   --gse-ui-calendarMenu-dateBody-padding: 16px 24px;
@@ -155,10 +158,14 @@
   --gse-ui-calendarMenu-range-body-secondMonth-borderRadius: 0 0 8px 0;
   --gse-ui-calendarMenu-range-date-endDate-borderRadius: 0 16px 16px 0;
   --gse-ui-calendarMenu-range-date-startDate-borderRadius: 16px 0 0 16px;
+  --gse-ui-calendarMenu-range-timePickerOn-padding: 0px 24px 18px;
+  --gse-ui-calendarMenu-range-timePickerOn-gap: 32px;
   --gse-ui-calendarMenu-disabled-opacity: 0.5;
   --gse-ui-calendarMenu-monthBody-padding: 16px 24px;
   --gse-ui-calendarMenu-monthBody-gap: 2px;
   --gse-ui-calendarMenu-boxShadow: 0 0 4px 1px #000000b3;
+  --gse-ui-calendarMenu-ctaGroup-height: 68px;
+  --gse-ui-calendarMenu-ctaGroup-padding: 18px 24px;
   --gse-ui-globalNav-menuOption-selected-backgroundColor: #102251;
   --gse-ui-globalNav-menuOption-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-disabled-backgroundColor: #2a2a2e;
@@ -737,6 +744,13 @@
   --gse-ui-datePicker-focusCalendar-gap: 2px;
   --gse-ui-datePicker-iconHover: #cad1e1;
   --gse-ui-datePicker-iconFocus: #ffffff;
+  --gse-ui-datePicker-dateTime-inputRight-borderRadius: 0px 4px 4px 0px;
+  --gse-ui-datePicker-dateTime-inputRight-focus-borderRadius: 0px 4px 4px 0px;
+  --gse-ui-datePicker-dateTime-inputLeft-borderRadius: 4px 0px 0px 4px;
+  --gse-ui-datePicker-dateTime-inputLeft-focus-borderRadius: 4px 0px 0px 4px;
+  --gse-ui-datePicker-dateTime-gap: -1px;
+  --gse-ui-datePicker-preset-padding: 20px 16px;
+  --gse-ui-datePicker-preset-gap: 4px;
   --gse-ui-toggle-label-fontFamily: 'Noto Sans';
   --gse-ui-toggle-label-fontWeight: 400;
   --gse-ui-toggle-label-fontSize: 12px;
@@ -1001,6 +1015,7 @@
   --gse-ui-stepper-hover-text-fontSize: 14px;
   --gse-ui-stepper-hover-text-lineHeight: 16px;
   --gse-ui-stepper-hover-text-textDecoration: underline;
+  --gse-ui-calendar-ctaGroup-padding: 18px 24px;
   --gse-ui-search-counter-default-foregroundColor: #c1c6d4;
   --gse-ui-search-counter-hover-foregroundColor: #829ce5;
   --gse-ui-search-counter-divider-border-color: #848891;

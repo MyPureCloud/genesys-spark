@@ -207,6 +207,9 @@
         "vertical": {
           "width": "272px",
           "height": "652px"
+        },
+        "time_picker_on": {
+          "height": "72px"
         }
       },
       "focus_border_radius": "20px",
@@ -240,6 +243,10 @@
       },
       "date": {
         "size": "32px"
+      },
+      "time_picker_on": {
+        "width": "272px",
+        "padding": "0px 24px 18px"
       }
     },
     "height": "234px",
@@ -318,6 +325,10 @@
         "start_date": {
           "border_radius": "16px  0 0 16px"
         }
+      },
+      "time_picker_on": {
+        "padding": "0px 24px 18px",
+        "gap": "32px"
       }
     },
     "disabled": {
@@ -334,6 +345,10 @@
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "0"
+    },
+    "cta_group": {
+      "height": "68px",
+      "padding": "18px 24px"
     }
   },
   "global_nav": {
@@ -1547,7 +1562,26 @@
       "gap": "2px"
     },
     "icon_hover": "#cad1e1",
-    "icon_focus": "#ffffff"
+    "icon_focus": "#ffffff",
+    "date_time": {
+      "input_right": {
+        "border_radius": "0px 4px 4px 0px",
+        "focus": {
+          "border_radius": "0px 4px 4px 0px"
+        }
+      },
+      "input_left": {
+        "border_radius": "4px 0px 0px 4px",
+        "focus": {
+          "border_radius": "4px 0px 0px 4px"
+        }
+      },
+      "gap": "-1px"
+    },
+    "preset": {
+      "padding": "20px 16px",
+      "gap": "4px"
+    }
   },
   "toggle": {
     "label": {
@@ -2154,6 +2188,11 @@
         "lineHeight": "16px",
         "textDecoration": "underline"
       }
+    }
+  },
+  "calendar": {
+    "cta_group": {
+      "padding": "18px 24px"
     }
   },
   "search": {
