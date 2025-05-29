@@ -720,7 +720,7 @@
     }
   },
   "tree_view": {
-    "leaf": {
+    "item": {
       "comfy": {
         "parent": {
           "padding": {
@@ -738,7 +738,7 @@
             "type": "spacing"
           }
         },
-        "right_aligned": {
+        "left_aligned": {
           "padding": {
             "value": "{interactive.md.padding} {interactive.sm.padding} {interactive.md.padding} 28px",
             "type": "spacing"
@@ -768,7 +768,13 @@
             "type": "spacing"
           }
         },
-        "left_aligned": {
+        "right_aligned": {
+          "padding": {
+            "value": "{interactive.md.padding} {interactive.sm.padding}",
+            "type": "spacing"
+          }
+        },
+        "header": {
           "padding": {
             "value": "{interactive.md.padding} {interactive.sm.padding}",
             "type": "spacing"
@@ -796,9 +802,9 @@
             "type": "spacing"
           }
         },
-        "right_aligned": {
+        "left_aligned": {
           "padding": {
-            "value": "{interactive.md.padding} {interactive.sm.padding} {interactive.md.padding} 28px",
+            "value": "{interactive.sm.padding} {interactive.sm.padding} {interactive.sm.padding} 28px",
             "type": "spacing"
           }
         },
@@ -826,9 +832,15 @@
             "type": "spacing"
           }
         },
-        "left_aligned": {
+        "right_aligned": {
           "padding": {
-            "value": "{interactive.md.padding} {interactive.sm.padding}",
+            "value": "{interactive.sm.padding}",
+            "type": "spacing"
+          }
+        },
+        "heading": {
+          "padding": {
+            "value": "{interactive.sm.padding}",
             "type": "spacing"
           }
         }
