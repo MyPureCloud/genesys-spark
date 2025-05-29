@@ -863,6 +863,32 @@
           "type": "spacing"
         }
       }
+    },
+    "selection_bookmark": {
+      "comfy": {
+        "height": {
+          "value": "36px",
+          "type": "sizing"
+        },
+        "width": {
+          "value": "6px",
+          "type": "sizing"
+        }
+      },
+      "compact": {
+        "height": {
+          "value": "26px",
+          "type": "sizing"
+        },
+        "width": {
+          "value": "4px",
+          "type": "sizing"
+        }
+      }
+    },
+    "border_radius": {
+      "value": "{interactive.sm.border_radius}",
+      "type": "borderRadius"
     }
   }
 }
