@@ -2742,14 +2742,6 @@ exports[`#render  should render component as expected (1) 1`] = `
               <span class="gux-default-zone"></span>
             </div>
           </gux-option>
-          <gux-option value="Atlantic/Jan_Mayen">
-            <div class="gux-option-wrapper">
-              <div>
-                Jan Mayen, Norway (UTC+02:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
           <gux-option value="Atlantic/Madeira">
             <div class="gux-option-wrapper">
               <div>
@@ -3710,14 +3702,6 @@ exports[`#render  should render component as expected (1) 1`] = `
               <span class="gux-default-zone"></span>
             </div>
           </gux-option>
-          <gux-option value="Iceland">
-            <div class="gux-option-wrapper">
-              <div>
-                Iceland, Iceland (UTC+00:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
           <gux-option value="Indian/Antananarivo">
             <div class="gux-option-wrapper">
               <div>
@@ -4257,14 +4241,6 @@ exports[`#render  should render component as expected (1) 1`] = `
           <gux-option value="Pacific/Truk">
             <div class="gux-option-wrapper">
               <div>
-                Truk, Micronesia (UTC+10:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
-          <gux-option value="Pacific/Truk">
-            <div class="gux-option-wrapper">
-              <div>
                 Truk, Papua New Guinea (UTC+10:00)
               </div>
               <span class="gux-default-zone"></span>
@@ -4282,14 +4258,6 @@ exports[`#render  should render component as expected (1) 1`] = `
             <div class="gux-option-wrapper">
               <div>
                 Wallis, Wallisand Futuna (UTC+12:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
-          <gux-option value="Pacific/Yap">
-            <div class="gux-option-wrapper">
-              <div>
-                Yap, Micronesia (UTC+10:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -7455,14 +7423,6 @@ exports[`#render  should render component as expected (1) 1`] = `
                 <span class="gux-default-zone"></span>
               </div>
             </gux-option>
-            <gux-option value="Atlantic/Jan_Mayen">
-              <div class="gux-option-wrapper">
-                <div>
-                  Jan Mayen, Norway (UTC+02:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
             <gux-option value="Atlantic/Madeira">
               <div class="gux-option-wrapper">
                 <div>
@@ -8423,14 +8383,6 @@ exports[`#render  should render component as expected (1) 1`] = `
                 <span class="gux-default-zone"></span>
               </div>
             </gux-option>
-            <gux-option value="Iceland">
-              <div class="gux-option-wrapper">
-                <div>
-                  Iceland, Iceland (UTC+00:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
             <gux-option value="Indian/Antananarivo">
               <div class="gux-option-wrapper">
                 <div>
@@ -8970,14 +8922,6 @@ exports[`#render  should render component as expected (1) 1`] = `
             <gux-option value="Pacific/Truk">
               <div class="gux-option-wrapper">
                 <div>
-                  Truk, Micronesia (UTC+10:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
-            <gux-option value="Pacific/Truk">
-              <div class="gux-option-wrapper">
-                <div>
                   Truk, Papua New Guinea (UTC+10:00)
                 </div>
                 <span class="gux-default-zone"></span>
@@ -8995,14 +8939,6 @@ exports[`#render  should render component as expected (1) 1`] = `
               <div class="gux-option-wrapper">
                 <div>
                   Wallis, Wallisand Futuna (UTC+12:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
-            <gux-option value="Pacific/Yap">
-              <div class="gux-option-wrapper">
-                <div>
-                  Yap, Micronesia (UTC+10:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -12173,14 +12109,6 @@ exports[`#render  should render component as expected (2) 1`] = `
               <span class="gux-default-zone"></span>
             </div>
           </gux-option>
-          <gux-option value="Atlantic/Jan_Mayen">
-            <div class="gux-option-wrapper">
-              <div>
-                Jan Mayen, Norway (UTC+02:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
           <gux-option value="Atlantic/Madeira">
             <div class="gux-option-wrapper">
               <div>
@@ -13141,14 +13069,6 @@ exports[`#render  should render component as expected (2) 1`] = `
               <span class="gux-default-zone"></span>
             </div>
           </gux-option>
-          <gux-option value="Iceland">
-            <div class="gux-option-wrapper">
-              <div>
-                Iceland, Iceland (UTC+00:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
           <gux-option value="Indian/Antananarivo">
             <div class="gux-option-wrapper">
               <div>
@@ -13688,14 +13608,6 @@ exports[`#render  should render component as expected (2) 1`] = `
           <gux-option value="Pacific/Truk">
             <div class="gux-option-wrapper">
               <div>
-                Truk, Micronesia (UTC+10:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
-          <gux-option value="Pacific/Truk">
-            <div class="gux-option-wrapper">
-              <div>
                 Truk, Papua New Guinea (UTC+10:00)
               </div>
               <span class="gux-default-zone"></span>
@@ -13713,14 +13625,6 @@ exports[`#render  should render component as expected (2) 1`] = `
             <div class="gux-option-wrapper">
               <div>
                 Wallis, Wallisand Futuna (UTC+12:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
-          <gux-option value="Pacific/Yap">
-            <div class="gux-option-wrapper">
-              <div>
-                Yap, Micronesia (UTC+10:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -16886,14 +16790,6 @@ exports[`#render  should render component as expected (2) 1`] = `
                 <span class="gux-default-zone"></span>
               </div>
             </gux-option>
-            <gux-option value="Atlantic/Jan_Mayen">
-              <div class="gux-option-wrapper">
-                <div>
-                  Jan Mayen, Norway (UTC+02:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
             <gux-option value="Atlantic/Madeira">
               <div class="gux-option-wrapper">
                 <div>
@@ -17854,14 +17750,6 @@ exports[`#render  should render component as expected (2) 1`] = `
                 <span class="gux-default-zone"></span>
               </div>
             </gux-option>
-            <gux-option value="Iceland">
-              <div class="gux-option-wrapper">
-                <div>
-                  Iceland, Iceland (UTC+00:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
             <gux-option value="Indian/Antananarivo">
               <div class="gux-option-wrapper">
                 <div>
@@ -18401,14 +18289,6 @@ exports[`#render  should render component as expected (2) 1`] = `
             <gux-option value="Pacific/Truk">
               <div class="gux-option-wrapper">
                 <div>
-                  Truk, Micronesia (UTC+10:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
-            <gux-option value="Pacific/Truk">
-              <div class="gux-option-wrapper">
-                <div>
                   Truk, Papua New Guinea (UTC+10:00)
                 </div>
                 <span class="gux-default-zone"></span>
@@ -18426,14 +18306,6 @@ exports[`#render  should render component as expected (2) 1`] = `
               <div class="gux-option-wrapper">
                 <div>
                   Wallis, Wallisand Futuna (UTC+12:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
-            <gux-option value="Pacific/Yap">
-              <div class="gux-option-wrapper">
-                <div>
-                  Yap, Micronesia (UTC+10:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -21616,14 +21488,6 @@ exports[`#render  should render component as expected (3) 1`] = `
               <span class="gux-default-zone"></span>
             </div>
           </gux-option>
-          <gux-option value="Atlantic/Jan_Mayen">
-            <div class="gux-option-wrapper">
-              <div>
-                Jan Mayen, Norway (UTC+02:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
           <gux-option value="Atlantic/Madeira">
             <div class="gux-option-wrapper">
               <div>
@@ -22584,14 +22448,6 @@ exports[`#render  should render component as expected (3) 1`] = `
               <span class="gux-default-zone"></span>
             </div>
           </gux-option>
-          <gux-option value="Iceland">
-            <div class="gux-option-wrapper">
-              <div>
-                Iceland, Iceland (UTC+00:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
           <gux-option value="Indian/Antananarivo">
             <div class="gux-option-wrapper">
               <div>
@@ -23131,14 +22987,6 @@ exports[`#render  should render component as expected (3) 1`] = `
           <gux-option value="Pacific/Truk">
             <div class="gux-option-wrapper">
               <div>
-                Truk, Micronesia (UTC+10:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
-          <gux-option value="Pacific/Truk">
-            <div class="gux-option-wrapper">
-              <div>
                 Truk, Papua New Guinea (UTC+10:00)
               </div>
               <span class="gux-default-zone"></span>
@@ -23156,14 +23004,6 @@ exports[`#render  should render component as expected (3) 1`] = `
             <div class="gux-option-wrapper">
               <div>
                 Wallis, Wallisand Futuna (UTC+12:00)
-              </div>
-              <span class="gux-default-zone"></span>
-            </div>
-          </gux-option>
-          <gux-option value="Pacific/Yap">
-            <div class="gux-option-wrapper">
-              <div>
-                Yap, Micronesia (UTC+10:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -26329,14 +26169,6 @@ exports[`#render  should render component as expected (3) 1`] = `
                 <span class="gux-default-zone"></span>
               </div>
             </gux-option>
-            <gux-option value="Atlantic/Jan_Mayen">
-              <div class="gux-option-wrapper">
-                <div>
-                  Jan Mayen, Norway (UTC+02:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
             <gux-option value="Atlantic/Madeira">
               <div class="gux-option-wrapper">
                 <div>
@@ -27297,14 +27129,6 @@ exports[`#render  should render component as expected (3) 1`] = `
                 <span class="gux-default-zone"></span>
               </div>
             </gux-option>
-            <gux-option value="Iceland">
-              <div class="gux-option-wrapper">
-                <div>
-                  Iceland, Iceland (UTC+00:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
             <gux-option value="Indian/Antananarivo">
               <div class="gux-option-wrapper">
                 <div>
@@ -27844,14 +27668,6 @@ exports[`#render  should render component as expected (3) 1`] = `
             <gux-option value="Pacific/Truk">
               <div class="gux-option-wrapper">
                 <div>
-                  Truk, Micronesia (UTC+10:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
-            <gux-option value="Pacific/Truk">
-              <div class="gux-option-wrapper">
-                <div>
                   Truk, Papua New Guinea (UTC+10:00)
                 </div>
                 <span class="gux-default-zone"></span>
@@ -27869,14 +27685,6 @@ exports[`#render  should render component as expected (3) 1`] = `
               <div class="gux-option-wrapper">
                 <div>
                   Wallis, Wallisand Futuna (UTC+12:00)
-                </div>
-                <span class="gux-default-zone"></span>
-              </div>
-            </gux-option>
-            <gux-option value="Pacific/Yap">
-              <div class="gux-option-wrapper">
-                <div>
-                  Yap, Micronesia (UTC+10:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>

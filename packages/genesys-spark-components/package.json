@@ -65,8 +65,8 @@
   "dependencies": {
     "@floating-ui/dom": "1.7.0",
     "@js-temporal/polyfill": "0.5.1",
-    "@vvo/tzdb": "6.161.0",
-    "google-libphonenumber": "^3.2.41",
+    "@vvo/tzdb": "6.164.0",
+    "google-libphonenumber": "3.2.41",
     "intl-messageformat": "10.7.16",
     "requestanimationframe-timer": "3.0.3",
     "sortablejs": "1.15.6"
