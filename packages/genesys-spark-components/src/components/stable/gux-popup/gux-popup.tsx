@@ -160,13 +160,10 @@ export class GuxPopup {
     }
   }
 
-  // update position once on load to fix overflow in containers: COMUI-2883
   // do not runUpdatePosition on load unless expanded to avoid performance issues: COMUI-3140
   componentDidLoad(): void {
     if (this.expanded) {
       this.runUpdatePosition();
-    } else {
-      this.updatePosition();
     }
   }
 
