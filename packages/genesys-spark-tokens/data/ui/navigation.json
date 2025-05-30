@@ -889,6 +889,36 @@
     "border_radius": {
       "value": "{interactive.sm.border_radius}",
       "type": "borderRadius"
+    },
+    "comfy": {
+      "label": {
+        "value": "{body.md.regular}",
+        "type": "typography"
+      }
+    },
+    "compact": {
+      "label": {
+        "value": "{body.sm.regular}",
+        "type": "typography"
+      }
+    },
+    "quantity_meter": {
+      "value": "{body.sm.regular}",
+      "type": "typography"
+    },
+    "group_header": {
+      "heading": {
+        "value": "{heading.sm.semi_bold}",
+        "type": "typography"
+      },
+      "meter_title": {
+        "value": "{body.sm.semi_bold}",
+        "type": "typography"
+      }
+    },
+    "disable_opacity": {
+      "value": "{opacity.disabled}",
+      "type": "opacity"
     }
   }
 }
