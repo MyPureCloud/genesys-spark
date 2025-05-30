@@ -884,6 +884,14 @@
           "value": "4px",
           "type": "sizing"
         }
+      },
+      "high_emphasis": {
+        "value": "{background.interactive.primary.default}",
+        "type": "color"
+      },
+      "mid_emphasis": {
+        "value": "{background.container.elevated.active_subtle}",
+        "type": "color"
       }
     },
     "border_radius": {
@@ -919,6 +927,24 @@
     "disable_opacity": {
       "value": "{opacity.disabled}",
       "type": "opacity"
+    },
+    "label": {
+      "value": "{foreground.container.high_emphasis}",
+      "type": "color"
+    },
+    "background": {
+      "hover": {
+        "value": "{background.container.elevated.hover}",
+        "type": "color"
+      },
+      "selected": {
+        "value": "{background.container.elevated.active_subtle}",
+        "type": "color"
+      },
+      "open": {
+        "value": "{background.container.elevated.header}",
+        "type": "color"
+      }
     }
   }
 }
