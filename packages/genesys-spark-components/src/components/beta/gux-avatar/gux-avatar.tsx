@@ -251,7 +251,10 @@ export class GuxAvatar {
    */
   @Method()
   async showTooltip(): Promise<void> {
-    return await this.tooltip.showTooltip();
+    if (this.tooltipEnabled) {
+      return await this.tooltip.showTooltip();
+    }
+    return;
   }
 
   /*
@@ -259,7 +262,10 @@ export class GuxAvatar {
    */
   @Method()
   async hideTooltip(): Promise<void> {
-    return await this.tooltip.hideTooltip();
+    if (this.tooltipEnabled) {
+      return await this.tooltip.hideTooltip();
+    }
+    return;
   }
 
   async componentWillLoad(): Promise<void> {
