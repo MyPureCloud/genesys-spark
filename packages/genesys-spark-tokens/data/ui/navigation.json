@@ -922,6 +922,16 @@
       "meter_title": {
         "value": "{body.sm.semi_bold}",
         "type": "typography"
+      },
+      "gap": {
+        "value": "{container.md.gap}",
+        "type": "spacing"
+      },
+      "sub_heading": {
+        "gap": {
+          "value": "{interactive.lg.gap}",
+          "type": "spacing"
+        }
       }
     },
     "disable_opacity": {
