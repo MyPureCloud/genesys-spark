@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.151.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.151.2...v4.151.3) (2025-05-31)
+
+
+### Bug Fixes
+
+* **popup:** removed position on component load ([d661da1](https://github.com/MyPureCloud/genesys-spark/commit/d661da1d2ec8438accfe9afad12ab0e58efd10bb))
+
 ### [4.151.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.151.1...v4.151.2) (2025-05-30)
 
 ### [4.151.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.151.0...v4.151.1) (2025-05-29)
