@@ -1,5 +1,6 @@
 import { newSpecPage } from '@test/specTestUtils';
 import { GuxTabList } from '../gux-tab-list';
+import { renderConfig } from './gux-tab-list.common';
 
 describe('gux-tab-list', () => {
   let component: GuxTabList;
@@ -7,7 +8,7 @@ describe('gux-tab-list', () => {
   beforeEach(async () => {
     const page = await newSpecPage({
       components: [GuxTabList],
-      html: `<gux-tab-list></gux-tab-list>`,
+      html: renderConfig.html,
       language: 'en'
     });
 
