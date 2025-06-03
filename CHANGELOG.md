@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.152.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.151.3...v4.152.0) (2025-06-03)
+
+
+### Features
+
+* **datepicker:** addition of tokens ([695cad5](https://github.com/MyPureCloud/genesys-spark/commit/695cad5ca1dee9b22b48b0a05a348980869984ce))
+
+
+### Bug Fixes
+
+* **other:** revert OnResize change causing jest issues ([5c7fd08](https://github.com/MyPureCloud/genesys-spark/commit/5c7fd08215d784f7c3bce3d2660c32e47bdabfe2))
+
+### [4.151.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.151.2...v4.151.3) (2025-05-31)
+
+
+### Bug Fixes
+
+* **popup:** removed position on component load ([d661da1](https://github.com/MyPureCloud/genesys-spark/commit/d661da1d2ec8438accfe9afad12ab0e58efd10bb))
+
+### [4.151.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.151.1...v4.151.2) (2025-05-30)
+
+### [4.151.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.151.0...v4.151.1) (2025-05-29)
+
+## [4.151.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.150.0...v4.151.0) (2025-05-28)
+
+
+### Features
+
+* **tabs:** apply the correct visual state on newly enabled or disabled tabs ([3232210](https://github.com/MyPureCloud/genesys-spark/commit/3232210274ee28e29c416f373dbec476ea300e6a))
+
 ## [4.150.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.149.1...v4.150.0) (2025-05-27)
 
 

@@ -147,45 +147,61 @@ describe('gux-avatar', () => {
         expect(page.root).toMatchSnapshot();
       });
     });
+  });
 
-    describe('#render different uc-integration logos', () => {
-      ['zoom', 'teams', '8x8', 'invalid-uc-integration'].forEach(
-        (app: string) => {
-          it(`should work as expected for "${app}"`, async () => {
-            const html = `<gux-avatar-beta name="John Doe" uc-integration=${app}></gux-avatar-beta>`;
-            const page = await newSpecPage({ components: [GuxAvatar], html });
+  describe('#render different uc-integration logos', () => {
+    ['zoom', 'teams', '8x8', 'invalid-uc-integration'].forEach(
+      (app: string) => {
+        it(`should work as expected for "${app}"`, async () => {
+          const html = `<gux-avatar-beta name="John Doe" uc-integration=${app}></gux-avatar-beta>`;
+          const page = await newSpecPage({ components: [GuxAvatar], html });
 
-            expect(page.root).toMatchSnapshot();
-          });
-        }
-      );
+          expect(page.root).toMatchSnapshot();
+        });
+      }
+    );
+  });
+
+  describe('#render notification badge', () => {
+    it('should render notification badge', async () => {
+      const html = `<gux-avatar-beta badge notifications name="John Doe"></gux-avatar-beta>`;
+      const page = await newSpecPage({ components: [GuxAvatar], html });
+
+      expect(page.root).toMatchSnapshot();
+    });
+  });
+
+  describe('#render presence ring', () => {
+    it('should render presence ring', async () => {
+      const html = `<gux-avatar-beta ring name="John Doe" presen></gux-avatar-beta>`;
+      const page = await newSpecPage({ components: [GuxAvatar], html });
+
+      expect(page.root).toMatchSnapshot();
+    });
+  });
+
+  describe('#render label', () => {
+    it('should render label', async () => {
+      const html = `<gux-avatar-beta label="All Hands" name="John Doe" presence="busy" ring></gux-avatar-beta>`;
+      const page = await newSpecPage({ components: [GuxAvatar], html });
+
+      expect(page.root).toMatchSnapshot();
+    });
+  });
+
+  describe('#tooltip', () => {
+    it('should render with tooltip', async () => {
+      const html = `<button><gux-avatar-beta label="All Hands" name="John Doe" presence="busy" ring></gux-avatar-beta></button`;
+      const page = await newSpecPage({ components: [GuxAvatar], html });
+
+      expect(page.root).toMatchSnapshot();
     });
 
-    describe('#render notification badge', () => {
-      it('should render notification badge', async () => {
-        const html = `<gux-avatar-beta badge notifications name="John Doe"></gux-avatar-beta>`;
-        const page = await newSpecPage({ components: [GuxAvatar], html });
+    it('should render without tooltip', async () => {
+      const html = `<button><gux-avatar-beta tooltip-enabled="false" label="All Hands" name="John Doe" presence="busy" ring></gux-avatar-beta></button>`;
+      const page = await newSpecPage({ components: [GuxAvatar], html });
 
-        expect(page.root).toMatchSnapshot();
-      });
-    });
-
-    describe('#render presence ring', () => {
-      it('should render presence ring', async () => {
-        const html = `<gux-avatar-beta ring name="John Doe" presen></gux-avatar-beta>`;
-        const page = await newSpecPage({ components: [GuxAvatar], html });
-
-        expect(page.root).toMatchSnapshot();
-      });
-    });
-
-    describe('#render label', () => {
-      it('should render label', async () => {
-        const html = `<gux-avatar-beta label="All Hands" name="John Doe" presence="busy" ring></gux-avatar-beta>`;
-        const page = await newSpecPage({ components: [GuxAvatar], html });
-
-        expect(page.root).toMatchSnapshot();
-      });
+      expect(page.root).toMatchSnapshot();
     });
   });
 });

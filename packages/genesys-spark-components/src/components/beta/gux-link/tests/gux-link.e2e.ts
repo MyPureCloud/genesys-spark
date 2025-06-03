@@ -1,14 +1,10 @@
 import { newSparkE2EPage, a11yCheck } from '@test/e2eTestUtils';
+import { renderConfigs } from './gux-link.common';
+
 describe('gux-link-beta', () => {
   describe('#render', () => {
-    [
-      `<gux-link-beta><a href="#">Link</a></gux-link-beta>`,
-      `<gux-link-beta size="small"><a href="#">Link</a></gux-link-beta>`,
-      `<gux-link-beta standalone><a href="#">Link</a></gux-link-beta>`,
-      `<gux-link-beta size="small" standalone><a href="#">Link</a></gux-link-beta>`,
-      `<gux-link-beta standalone><a href="#">Link<gux-icon icon-name="external-link" decorative></a></gux-icon></gux-link-beta>`
-    ].forEach((html, index) => {
-      it(`should render component as expected (${index + 1})`, async () => {
+    renderConfigs.forEach(({ description, html }) => {
+      it(description, async () => {
         const page = await newSparkE2EPage({ html });
         await a11yCheck(page);
 

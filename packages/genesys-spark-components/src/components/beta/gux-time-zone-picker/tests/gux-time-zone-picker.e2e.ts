@@ -43,7 +43,7 @@ describe('gux-time-zone-picker-beta', () => {
     await openWithClick(page);
     await a11yCheck(page, axeExclusions);
     let visibleItems = await unfilteredOptions(page);
-    expect(visibleItems.length).toBe(583);
+    expect(visibleItems.length).toBe(579);
 
     await page.keyboard.press('a');
     await page.keyboard.press('d');
@@ -64,7 +64,7 @@ describe('gux-time-zone-picker-beta', () => {
     await openWithClick(page);
     await a11yCheck(page, axeExclusions);
     let visibleItems = await unfilteredOptions(page);
-    expect(visibleItems.length).toBe(583);
+    expect(visibleItems.length).toBe(579);
 
     await page.keyboard.press('e');
     await page.keyboard.press('t');

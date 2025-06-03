@@ -511,6 +511,16 @@
           "value": "{form_control.input.textfield.height}",
           "type": "sizing"
         }
+      },
+      "time_picker_on": {
+        "width": {
+          "value": "272px",
+          "type": "sizing"
+        },
+        "padding": {
+          "value": "0px {container.lg.padding} 18px",
+          "type": "spacing"
+        }
       }
     },
     "height": {
@@ -566,6 +576,12 @@
           },
           "height": {
             "value": "652px",
+            "type": "sizing"
+          }
+        },
+        "time_picker_on": {
+          "height": {
+            "value": "72px",
             "type": "sizing"
           }
         }
@@ -741,6 +757,16 @@
             "type": "borderRadius"
           }
         }
+      },
+      "time_picker_on": {
+        "padding": {
+          "value": "0px {container.lg.padding} 18px",
+          "type": "spacing"
+        },
+        "gap": {
+          "value": "32px",
+          "type": "spacing"
+        }
       }
     },
     "disabled": {
@@ -762,6 +788,16 @@
     "box_shadow": {
       "value": "{container.sm.box_shadow}",
       "type": "boxShadow"
+    },
+    "cta_group": {
+      "height": {
+        "value": "68px",
+        "type": "sizing"
+      },
+      "padding": {
+        "value": "18px {container.lg.padding}",
+        "type": "spacing"
+      }
     }
   },
   "date_picker": {
@@ -806,6 +842,46 @@
     "icon_focus": {
       "value": "{foreground.interactive.subtle.active}",
       "type": "color"
+    },
+    "date_time": {
+      "input_right": {
+        "border_radius": {
+          "value": "0px {container.sm.border_radius} {container.sm.border_radius} 0px",
+          "type": "borderRadius"
+        },
+        "focus": {
+          "border_radius": {
+            "value": "0px {container.sm.border_radius} {container.sm.border_radius} 0px",
+            "type": "borderRadius"
+          }
+        }
+      },
+      "input_left": {
+        "border_radius": {
+          "value": "{container.sm.border_radius} 0px 0px {container.sm.border_radius}",
+          "type": "borderRadius"
+        },
+        "focus": {
+          "border_radius": {
+            "value": "{container.sm.border_radius} 0px 0px {container.sm.border_radius}",
+            "type": "borderRadius"
+          }
+        }
+      },
+      "gap": {
+        "value": "-1px",
+        "type": "spacing"
+      }
+    },
+    "preset": {
+      "padding": {
+        "value": "20px {container.md.padding}",
+        "type": "spacing"
+      },
+      "gap": {
+        "value": "{container.xs.gap}",
+        "type": "spacing"
+      }
     }
   },
   "toggle": {
@@ -1964,6 +2040,14 @@
           "textDecoration": "{text_decoration.underline}"
         },
         "type": "typography"
+      }
+    }
+  },
+    "calendar": {
+    "cta_group": {
+      "padding": {
+        "value": "18px {container.lg.padding}",
+        "type": "spacing"
       }
     }
   }

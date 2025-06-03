@@ -22,6 +22,6 @@ describe('#getTimeZoneList', () => {
     jest.setSystemTime(new Date('2023-09-26'));
     const output = getTimeZoneList();
 
-    expect(output.length).toEqual(588);
+    expect(output.length).toBe(584);
   });
 });
