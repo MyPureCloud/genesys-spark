@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.152.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.151.3...v4.152.0) (2025-06-03)
+
+
+### Features
+
+* **datepicker:** addition of tokens ([695cad5](https://github.com/MyPureCloud/genesys-spark/commit/695cad5ca1dee9b22b48b0a05a348980869984ce))
+
+
+### Bug Fixes
+
+* **other:** revert OnResize change causing jest issues ([5c7fd08](https://github.com/MyPureCloud/genesys-spark/commit/5c7fd08215d784f7c3bce3d2660c32e47bdabfe2))
+
 ### [4.151.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.151.2...v4.151.3) (2025-05-31)
 
 
