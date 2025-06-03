@@ -3,9 +3,9 @@ import { renderConfigs } from './gux-link.common';
 
 describe('gux-link-beta', () => {
   describe('#render', () => {
-    renderConfigs.forEach(config => {
-      it(config.description, async () => {
-        const page = await newSparkE2EPage({ html: config.html });
+    renderConfigs.forEach(({ description, html }) => {
+      it(description, async () => {
+        const page = await newSparkE2EPage({ html });
         await a11yCheck(page);
 
         const element = await page.find('gux-link-beta');
