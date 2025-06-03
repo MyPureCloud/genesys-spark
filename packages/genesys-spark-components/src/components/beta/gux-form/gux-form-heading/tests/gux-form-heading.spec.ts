@@ -7,7 +7,7 @@ const language = 'en';
 
 describe('gux-form-heading', () => {
   it('should build', async () => {
-    const html = `<gux-form-heading><h1 slot="heading">Form Heading</h1></gux-form-heading>`;
+    const html = `<gux-form-heading><h1>Form Heading</h1></gux-form-heading>`;
     const page = await newSpecPage({ components, html, language });
 
     expect(page.rootInstance).toBeInstanceOf(GuxFormHeading);
