@@ -126,6 +126,10 @@
     gap: ui.$gse-ui-selectorCard-descriptive-text-gap;
     align-items: center;
     inline-size: inherit;
+    min-inline-size: ui.$gse-ui-selectorCard-simple-minWidth;
+    max-inline-size: ui.$gse-ui-selectorCard-simple-maxWidth;
+    min-block-size: ui.$gse-ui-selectorCard-simple-minHeight;
+    max-block-size: ui.$gse-ui-selectorCard-simple-maxHeight;
     padding: ui.$gse-ui-selectorCard-simple-padding;
     text-align: center;
     background-color: ui.$gse-ui-selectorCard-default-backgroundColor;
@@ -151,6 +155,10 @@
   &.gux-descriptive {
     .gux-content {
       align-items: flex-start;
+      min-inline-size: ui.$gse-ui-selectorCard-descriptive-minWidth;
+      max-inline-size: ui.$gse-ui-selectorCard-descriptive-maxWidth;
+      min-block-size: ui.$gse-ui-selectorCard-descriptive-minHeight;
+      max-block-size: ui.$gse-ui-selectorCard-descriptive-maxHeight;
       padding: ui.$gse-ui-selectorCard-descriptive-padding;
       text-align: start;
       white-space: normal;
