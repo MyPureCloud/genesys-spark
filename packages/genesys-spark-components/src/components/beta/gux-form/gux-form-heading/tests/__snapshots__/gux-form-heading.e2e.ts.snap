@@ -1,5 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-heading #render should render the gux-form-heading component as expected (1) 1`] = `"<gux-form-heading hydrated=""><template shadowrootmode="open"><slot></slot></template><h1 slot="heading">Form Heading</h1></gux-form-heading>"`;
-
-exports[`gux-form-heading #render should render the gux-form-heading component as expected (2) 1`] = `"<gux-form-heading hydrated=""><template shadowrootmode="open"><slot></slot></template><h2 slot="heading">Form Heading</h2></gux-form-heading>"`;
+exports[`gux-form-heading #render should render as expected for form-heading 1`] = `"<gux-form-heading hydrated=""><template shadowrootmode="open"><slot></slot></template><h1>Form Heading</h1></gux-form-heading>"`;
