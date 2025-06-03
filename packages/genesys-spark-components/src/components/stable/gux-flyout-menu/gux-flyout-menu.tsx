@@ -244,7 +244,7 @@ export class GuxFlyoutMenu {
 
   render(): JSX.Element {
     return (
-      <Host role="menu" tabIndex={0} aria-haspopup="true">
+      <Host tabIndex={0} aria-haspopup="true">
         <gux-announce-beta
           ref={el => (this.announceElement = el)}
         ></gux-announce-beta>
