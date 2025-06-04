@@ -718,5 +718,243 @@
         "type": "color"
       }
     }
+  },
+  "tree_view": {
+    "item": {
+      "comfy": {
+        "parent": {
+          "padding": {
+            "value": "0px 0px 0px {container.xs.padding}",
+            "type": "spacing"
+          }
+        },
+        "child": {
+          "default_padding": {
+            "value": "0px 0px 0px {container.xl.padding}",
+            "type": "spacing"
+          },
+          "selected_padding": {
+            "value": "0px 0px 0px {container.lg.padding}",
+            "type": "spacing"
+          }
+        },
+        "left_aligned": {
+          "padding": {
+            "value": "{interactive.md.padding} {interactive.sm.padding} {interactive.md.padding} 28px",
+            "type": "spacing"
+          }
+        },
+        "outer_gap": {
+          "value": "{interactive.sm.gap}",
+          "type": "spacing"
+        },
+        "grandchild": {
+          "default_padding": {
+            "value": "0px 0px 0px 56px",
+            "type": "spacing"
+          },
+          "selected_padding": {
+            "value": "0px 0px 0px 48px",
+            "type": "spacing"
+          }
+        },
+        "great_grandchild": {
+          "default_padding": {
+            "value": "0px 0px 0px 80px",
+            "type": "spacing"
+          },
+          "selected_padding": {
+            "value": "0px 0px 0px 72px",
+            "type": "spacing"
+          }
+        },
+        "right_aligned": {
+          "padding": {
+            "value": "{interactive.md.padding} {interactive.sm.padding}",
+            "type": "spacing"
+          }
+        },
+        "header": {
+          "padding": {
+            "value": "{interactive.md.padding} {interactive.sm.padding}",
+            "type": "spacing"
+          }
+        }
+      },
+      "internal_gap": {
+        "value": "{interactive.lg.gap}",
+        "type": "spacing"
+      },
+      "compact": {
+        "parent": {
+          "padding": {
+            "value": "0px 0px 0px {container.xs.padding}",
+            "type": "spacing"
+          }
+        },
+        "child": {
+          "default_padding": {
+            "value": "0px 0px 0px {container.xl.padding}",
+            "type": "spacing"
+          },
+          "selected_padding": {
+            "value": "0px 0px 0px {container.lg.padding}",
+            "type": "spacing"
+          }
+        },
+        "left_aligned": {
+          "padding": {
+            "value": "{interactive.sm.padding} {interactive.sm.padding} {interactive.sm.padding} 28px",
+            "type": "spacing"
+          }
+        },
+        "outer_gap": {
+          "value": "{interactive.md.gap}",
+          "type": "spacing"
+        },
+        "grandchild": {
+          "default_padding": {
+            "value": "0px 0px 0px 56px",
+            "type": "spacing"
+          },
+          "selected_padding": {
+            "value": "0px 0px 0px 48px",
+            "type": "spacing"
+          }
+        },
+        "great_grandchild": {
+          "default_padding": {
+            "value": "0px 0px 0px 80px",
+            "type": "spacing"
+          },
+          "selected_padding": {
+            "value": "0px 0px 0px 72px",
+            "type": "spacing"
+          }
+        },
+        "right_aligned": {
+          "padding": {
+            "value": "{interactive.sm.padding}",
+            "type": "spacing"
+          }
+        },
+        "heading": {
+          "padding": {
+            "value": "{interactive.sm.padding}",
+            "type": "spacing"
+          }
+        }
+      }
+    },
+    "group": {
+      "gap": {
+        "value": "{container.sm.gap}",
+        "type": "spacing"
+      },
+      "comfy": {
+        "padding": {
+          "value": "{container.xs.padding} {container.sm.padding}",
+          "type": "spacing"
+        }
+      },
+      "compact": {
+        "padding": {
+          "value": "{container.xs.padding}",
+          "type": "spacing"
+        }
+      }
+    },
+    "selection_bookmark": {
+      "comfy": {
+        "height": {
+          "value": "36px",
+          "type": "sizing"
+        },
+        "width": {
+          "value": "6px",
+          "type": "sizing"
+        }
+      },
+      "compact": {
+        "height": {
+          "value": "26px",
+          "type": "sizing"
+        },
+        "width": {
+          "value": "4px",
+          "type": "sizing"
+        }
+      },
+      "high_emphasis": {
+        "value": "{background.interactive.primary.default}",
+        "type": "color"
+      },
+      "mid_emphasis": {
+        "value": "{background.container.elevated.active}",
+        "type": "color"
+      }
+    },
+    "border_radius": {
+      "value": "{interactive.sm.border_radius}",
+      "type": "borderRadius"
+    },
+    "comfy": {
+      "label": {
+        "value": "{body.md.regular}",
+        "type": "typography"
+      }
+    },
+    "compact": {
+      "label": {
+        "value": "{body.sm.regular}",
+        "type": "typography"
+      }
+    },
+    "quantity_meter": {
+      "value": "{body.sm.regular}",
+      "type": "typography"
+    },
+    "group_header": {
+      "heading": {
+        "value": "{heading.sm.semi_bold}",
+        "type": "typography"
+      },
+      "meter_title": {
+        "value": "{body.sm.semi_bold}",
+        "type": "typography"
+      },
+      "gap": {
+        "value": "{container.md.gap}",
+        "type": "spacing"
+      },
+      "sub_heading": {
+        "gap": {
+          "value": "{interactive.lg.gap}",
+          "type": "spacing"
+        }
+      }
+    },
+    "disable_opacity": {
+      "value": "{opacity.disabled}",
+      "type": "opacity"
+    },
+    "label": {
+      "value": "{foreground.container.high_emphasis}",
+      "type": "color"
+    },
+    "background": {
+      "hover": {
+        "value": "{background.container.elevated.hover}",
+        "type": "color"
+      },
+      "selected": {
+        "value": "{background.container.elevated.active_subtle}",
+        "type": "color"
+      },
+      "open": {
+        "value": "{background.container.elevated.header}",
+        "type": "color"
+      }
+    }
   }
 }
