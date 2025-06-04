@@ -6,6 +6,17 @@
 
 :host {
   display: flex;
+  min-inline-size: ui.$gse-ui-selectorCard-simple-minWidth;
+  max-inline-size: ui.$gse-ui-selectorCard-simple-maxWidth;
+  min-block-size: ui.$gse-ui-selectorCard-simple-minHeight;
+  max-block-size: ui.$gse-ui-selectorCard-simple-maxHeight;
+}
+
+:host([variant='descriptive']) {
+  min-inline-size: ui.$gse-ui-selectorCard-descriptive-minWidth;
+  max-inline-size: ui.$gse-ui-selectorCard-descriptive-maxWidth;
+  min-block-size: ui.$gse-ui-selectorCard-descriptive-minHeight;
+  max-block-size: ui.$gse-ui-selectorCard-descriptive-maxHeight;
 }
 
 ::slotted(*) {
@@ -103,16 +114,18 @@
 
 .gux-selector-card {
   display: flex;
-  flex: 1 0 auto;
-  inline-size: fit-content;
+  flex: 1 1 auto;
+  inline-size: inherit;
 
   .gux-content {
     position: relative;
     box-sizing: border-box;
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     gap: ui.$gse-ui-selectorCard-descriptive-text-gap;
     align-items: center;
+    inline-size: inherit;
     min-inline-size: ui.$gse-ui-selectorCard-simple-minWidth;
     max-inline-size: ui.$gse-ui-selectorCard-simple-maxWidth;
     min-block-size: ui.$gse-ui-selectorCard-simple-minHeight;
