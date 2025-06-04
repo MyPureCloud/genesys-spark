@@ -1,43 +1,5 @@
 <h1>gux-button-slot</h1>
 
-<h2>Gux Button</h2>
-
-<div class="container">
-  <gux-button onclick="notify(event)">Default</gux-button>
-
-  <gux-button accent="primary" onclick="notify(event)">Primary</gux-button>
-
-  <gux-button accent="secondary" onclick="notify(event)">Secondary</gux-button>
-
-  <gux-button accent="tertiary" onclick="notify(event)">Tertiary</gux-button>
-
-  <gux-button accent="ghost" onclick="notify(event)">Ghost</gux-button>
-
-  <gux-button accent="danger" onclick="notify(event)">Danger</gux-button>
-
-  <div>
-    This is an
-    <gux-button accent="inline" onclick="notify(event)"> Inline </gux-button>
-    button.
-  </div>
-
-  <gux-button onclick="notify(event)">
-    <div class="align-content">
-      <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
-      <span>Text in a span element</span>
-    </div>
-  </gux-button>
-
-  <gux-button accent="invalid" onclick="notify(event)">
-    <div class="align-content">
-      <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
-      <span>Text in a span element</span>
-    </div>
-  </gux-button>
-</div>
-
-<h2>Slotted Button Tag</h2>
-
 <h3>Enabled</h3>
 
 <div class="container">
@@ -74,12 +36,11 @@
   </div>
 
   <gux-button-slot icon-only>
-    <button
-      type="button"
-      title="This will be read by a screen reader"
-      onclick="notify(event)"
-    >
+    <button type="button" onclick="notify(event)">
       <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
+      <gux-screen-reader-beta
+        >This will be read by a screen reader</gux-screen-reader-beta
+      >
     </button>
   </gux-button-slot>
 
@@ -138,13 +99,11 @@
   </div>
 
   <gux-button-slot icon-only>
-    <button
-      type="button"
-      disabled
-      title="This will be read by a screen reader"
-      onclick="notify(event)"
-    >
+    <button type="button" disabled onclick="notify(event)">
       <gux-icon icon-name="fa/diamond-regular" decorative></gux-icon>
+      <gux-screen-reader-beta
+        >This will be read by a screen reader</gux-screen-reader-beta
+      >
     </button>
   </gux-button-slot>
 
@@ -260,11 +219,6 @@
     flex: 0 1 auto;
     align-self: auto;
     order: 0;
-  }
-
-  gux-icon {
-    inline-size: 16px;
-    block-size: 16px;
   }
 
   .align-content > gux-icon {
