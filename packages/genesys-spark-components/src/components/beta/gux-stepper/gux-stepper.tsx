@@ -41,7 +41,7 @@ export class GuxStepper {
   disabled: boolean = false;
 
   @State()
-  stepList: HTMLGuxStepBetaElement[] = [];
+  stepList: HTMLGuxStepElement[] = [];
 
   @Event()
   guxactivestepchange: EventEmitter<string>;
@@ -71,10 +71,7 @@ export class GuxStepper {
     }
   }
 
-  private activateStep(
-    stepId: string,
-    stepList: HTMLGuxStepBetaElement[]
-  ): void {
+  private activateStep(stepId: string, stepList: HTMLGuxStepElement[]): void {
     if (stepId) {
       this.activeStepId = stepId;
     }
@@ -86,7 +83,7 @@ export class GuxStepper {
 
   private onSlotChange(): void {
     const slot = this.root.shadowRoot.querySelector('slot');
-    this.stepList = slot.assignedElements() as HTMLGuxStepBetaElement[];
+    this.stepList = slot.assignedElements() as HTMLGuxStepElement[];
   }
 
   render(): JSX.Element {

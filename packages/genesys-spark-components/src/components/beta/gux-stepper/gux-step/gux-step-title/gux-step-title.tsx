@@ -33,7 +33,7 @@ export class GuxStepTitle {
 
   // Get the disabled state from the closest gux-step-beta element.
   get stepDisabledState(): boolean {
-    return this.root.closest('gux-step-beta')?.disabled;
+    return this.root.closest('gux-step')?.disabled;
   }
 
   componentWillLoad(): void {

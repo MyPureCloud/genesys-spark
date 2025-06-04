@@ -63,13 +63,13 @@ export class GuxStep {
   private getStatusIcon(status: GuxStepStatus): string {
     switch (status) {
       case 'incomplete':
-        return 'fa/circle-check-solid'; // to be changed to fa/circle-dashed-regular
+        return 'fa/circle-dashed-regular';
       case 'completed':
         return 'fa/circle-check-solid';
       case 'error':
         return 'fa/hexagon-exclamation-solid';
       default:
-        return 'fa/circle-check-solid';
+        return 'fa/circle-dashed-regular';
     }
   }
 
@@ -88,8 +88,10 @@ export class GuxStep {
         <gux-icon
           size="small"
           icon-name={
-            this.active ? 'fa/ban-regular' : this.getStatusIcon(this.status)
-          } // active icon to be replaced with fa/circle-half-stroke-regular.
+            this.active
+              ? 'fa/circle-half-stroke-regular'
+              : this.getStatusIcon(this.status)
+          }
           decorative
         ></gux-icon>
         <div class="gux-step-information">

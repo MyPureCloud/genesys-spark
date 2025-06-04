@@ -1,4 +1,4 @@
-# gux-step-beta
+# gux-step
 
 
 
