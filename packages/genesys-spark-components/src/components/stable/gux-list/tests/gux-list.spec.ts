@@ -8,15 +8,13 @@ const components = [GuxList, GuxListDivider, GuxListItem];
 const language = 'en';
 
 describe('gux-list', () => {
-  describe('#render', () => {
-    it('should render component as expected', async () => {
-      const page = await newSpecPage({
-        components,
-        html: renderConfig.html,
-        language
-      });
-
-      expect(page.root).toMatchSnapshot();
+  it(renderConfig.description, async () => {
+    const page = await newSpecPage({
+      components,
+      html: renderConfig.html,
+      language
     });
+
+    expect(page.root).toMatchSnapshot();
   });
 });

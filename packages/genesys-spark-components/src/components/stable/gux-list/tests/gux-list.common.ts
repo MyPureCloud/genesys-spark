@@ -1,5 +1,5 @@
 export const renderConfig = {
-  description: 'should render gux-tab',
+  description: 'should render gux-list',
   html: `<gux-list id="list">
     <gux-list-item>Test1</gux-list-item>
     <gux-list-divider></gux-list-divider>
