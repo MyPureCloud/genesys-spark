@@ -72,8 +72,8 @@
     "sortablejs": "1.15.6"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.10.1",
-    "@babel/core": "^7.27.1",
+    "@axe-core/playwright": "^4.10.2",
+    "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
     "@playwright/test": "1.51.0",
     "@stencil/core": "4.23.2",
@@ -87,7 +87,7 @@
     "@types/sortablejs": "^1.15.8",
     "axe-core": "^4.10.3",
     "axe-live": "^1.0.1",
-    "eslint": "^9.27.0",
+    "eslint": "^9.28.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "eslint-plugin-playwright": "^2.2.0",
     "file-loader": "^6.2.0",
@@ -119,7 +119,7 @@
     "smob": "^1.5.0",
     "spritesheet-templates": "^10.5.2",
     "spritesmith": "^3.5.1",
-    "stylelint": "^16.19.1",
+    "stylelint": "^16.20.0",
     "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^6.0.0",
