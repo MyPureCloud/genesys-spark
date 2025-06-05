@@ -10,6 +10,7 @@ Boolean isReleaseBranch = isMainBranch
 
 webappPipeline {
     projectName = 'common-ui-docs/genesys-webcomponents'
+    agentLabel = 'dev_x86_shared'
     team = 'Core UI'
     jiraProjectKey = 'COMUI'
     mailer = 'CoreUI@genesys.com'
