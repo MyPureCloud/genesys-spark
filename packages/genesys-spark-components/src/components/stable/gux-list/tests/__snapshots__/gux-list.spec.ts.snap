@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-list #render should render component as expected 1`] = `
+exports[`gux-list should render gux-list 1`] = `
 <gux-list id="list" role="list" tabindex="-1">
   <template shadowrootmode="open">
     <slot></slot>
