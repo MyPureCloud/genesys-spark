@@ -34,6 +34,7 @@ String charComponentAssetsPath = ''
 
 webappPipeline {
     projectName = 'spark-components'
+    agentLabel = 'dev_x86_shared'
     versionClosure = {
         // If this is a release branch, bump the version before reading it. The conditional is not
         // technically required, as the version closure is ignored for feature branches. However,
