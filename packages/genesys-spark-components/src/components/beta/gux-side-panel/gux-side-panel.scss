@@ -1,5 +1,4 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
-@use 'mixins';
 
 :host {
   display: block;
@@ -32,37 +31,25 @@
     max-inline-size: ui.$gse-ui-sidePanel-widthSize-lg;
   }
 
-  & > header {
-    position: relative;
-    padding: ui.$gse-ui-sidePanel-header-padding;
-    border-block-end: ui.$gse-ui-sidePanel-divider-width
-      ui.$gse-ui-sidePanel-divider-style ui.$gse-ui-sidePanel-divider-color;
-  }
-
-  & .gux-side-panel-description {
-    margin: ui.$gse-ui-sidePanel-description-padding !important;
+  & .gux-side-panel-content-wrapper {
+    flex: 1 1 100%;
+    overflow-y: auto;
   }
 
   & .gux-side-panel-content {
-    flex: 1 1 100%;
     padding: ui.$gse-ui-sidePanel-body-padding;
-    overflow-y: auto;
-    font-family: ui.$gse-ui-sidePanel-description-text-fontFamily;
-    font-size: ui.$gse-ui-sidePanel-description-text-fontSize;
-    font-weight: ui.$gse-ui-sidePanel-description-text-fontWeight;
-    line-height: ui.$gse-ui-sidePanel-description-text-lineHeight;
-    color: ui.$gse-ui-sidePanel-descriptionColor;
-  }
-
-  & > footer {
-    flex: 0 0 auto;
-    padding: ui.$gse-ui-sidePanel-footer-padding;
     border-block-start: ui.$gse-ui-sidePanel-divider-width
       ui.$gse-ui-sidePanel-divider-style ui.$gse-ui-sidePanel-divider-color;
   }
 }
 
-/* Take another look at this */
-.gux-side-panel-description ::slotted(*) {
-  @include mixins.slotted-description;
+::slotted(footer) {
+  flex: 0 0 auto;
+  padding: ui.$gse-ui-sidePanel-footer-padding;
+  border-block-start: ui.$gse-ui-sidePanel-divider-width
+    ui.$gse-ui-sidePanel-divider-style ui.$gse-ui-sidePanel-divider-color;
+}
+
+::slotted(gux-side-panel-header) {
+  border-block-end: none;
 }

@@ -3,7 +3,6 @@ import {
   Event,
   EventEmitter,
   h,
-  Host,
   Element,
   Prop
 } from '@stencil/core';
@@ -41,11 +40,19 @@ export class GuxSidePanel {
     trackComponent(this.root, { variant: this.size });
   }
 
-  private renderDescription(): JSX.Element {
-    if (hasSlot(this.root, 'description')) {
+  private renderHeader(): JSX.Element {
+    if (hasSlot(this.root, 'header')) {
+      return <slot name="header" />;
+    }
+
+    return null;
+  }
+
+  private renderTabs(): JSX.Element {
+    if (hasSlot(this.root, 'tabs')) {
       return (
-        <div class="gux-side-panel-description">
-          <slot name="description" />
+        <div class="gux-side-panel-tabs">
+          <slot name="tabs" />
         </div>
       );
     }
@@ -53,30 +60,44 @@ export class GuxSidePanel {
     return null;
   }
 
+  private renderContent(): JSX.Element {
+    if (hasSlot(this.root, 'content')) {
+      return (
+        <div class="gux-side-panel-content">
+          <slot name="content" />
+        </div>
+      );
+    }
+
+    return null;
+  }
+
+  private renderFooter(): JSX.Element {
+    if (hasSlot(this.root, 'footer')) {
+      return <slot name="footer" />;
+    }
+
+    return null;
+  }
+
   render(): JSX.Element {
     return (
-      <Host role="complementary">
-        <div
-          class={{
-            'gux-side-panel': true,
-            [`gux-side-panel-${this.size}`]: true
-          }}
-        >
-          <header>
-            <slot name="heading" />
-          </header>
-          <gux-dismiss-button
-            onClick={this.onDismissHandler.bind(this)}
-          ></gux-dismiss-button>
-          {this.renderDescription()}
-          <div class="gux-side-panel-content">
-            <slot name="content" />
-          </div>
-          <footer>
-            <slot name="footer" />
-          </footer>
+      <section
+        class={{
+          'gux-side-panel': true,
+          [`gux-side-panel-${this.size}`]: true
+        }}
+      >
+        {this.renderHeader()}
+        <gux-dismiss-button
+          onClick={this.onDismissHandler.bind(this)}
+        ></gux-dismiss-button>
+        <div class="gux-side-panel-content-wrapper">
+          {this.renderTabs()}
+          {this.renderContent()}
         </div>
-      </Host>
+        {this.renderFooter()}
+      </section>
     ) as JSX.Element;
   }
 }
