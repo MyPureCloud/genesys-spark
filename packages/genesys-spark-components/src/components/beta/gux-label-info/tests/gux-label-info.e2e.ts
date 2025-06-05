@@ -1,5 +1,6 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
+import { renderConfigs } from './gux-label-info.common';
 
 const axeExclusions = [];
 
@@ -21,21 +22,15 @@ async function newNonrandomE2EPage({
 
 describe('gux-label-info-beta', () => {
   describe('#render', () => {
-    [
-      `
-      <gux-label-info-beta>
-        <span slot="content">This is an information tooltip</span>
-      </gux-label-info-beta>
-      `
-    ].forEach((html, index) => {
-      it(`should render component as expected (${index + 1})`, async () => {
+    renderConfigs.forEach(({ html, description }) => {
+      it(`should render ${description}`, async () => {
         const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-label-info-beta');
 
         expect(element.outerHTML).toMatchSnapshot();
       });
 
-      it(`should be accessible (${index + 1})`, async () => {
+      it(`should be accessible for ${description}`, async () => {
         const page = await newSparkE2EPage({ html });
 
         await a11yCheck(page, axeExclusions);
