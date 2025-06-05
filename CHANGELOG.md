@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.153.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.152.0...v4.153.0) (2025-06-05)
+
+
+### Features
+
+* **avatar-beta:** Make tooltip optional ([#1128](https://github.com/MyPureCloud/genesys-spark/issues/1128)) ([32535c7](https://github.com/MyPureCloud/genesys-spark/commit/32535c794706ae96f3e8c539ee86eb53917352d3))
+* **icon:** addition of new icons ([57f07ca](https://github.com/MyPureCloud/genesys-spark/commit/57f07ca624eec43c4f6f460af41f826c066f7f78))
+
+
+### Bug Fixes
+
+* **avatar-focusable-beta:** reduce clickable space ([#1143](https://github.com/MyPureCloud/genesys-spark/issues/1143)) ([b3f113d](https://github.com/MyPureCloud/genesys-spark/commit/b3f113df4146bee3cd57390a0855f30814c32ee8))
+* **pagination-cursor:** Make buttons clickable in NVDA ([8bce928](https://github.com/MyPureCloud/genesys-spark/commit/8bce928a076fdceb8326998a18920ac703170505))
+
 ## [4.152.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.151.3...v4.152.0) (2025-06-03)
 
 
