@@ -3,6 +3,7 @@
 exports[`gux-flyout-menu #render should render as expected 1`] = `
 <gux-flyout-menu aria-haspopup="true" tabindex="0">
   <template shadowrootmode="open">
+    <gux-announce-beta></gux-announce-beta>
     <span>
       <slot name="target"></slot>
     </span>
