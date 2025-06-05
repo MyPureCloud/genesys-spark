@@ -5,8 +5,6 @@ import {
   GuxSidePanelHeadingTag
 } from '../../gux-side-panel.types';
 
-import { GuxIconIconName } from '../../../../stable/gux-icon/gux-icon.types';
-
 /**
  * @slot - The heading text
  */
@@ -26,7 +24,7 @@ export class GuxSidePanelHeading {
   level: GuxSidePanelHeadingLevel = 1;
 
   @Prop()
-  iconName: GuxIconIconName;
+  size: 'default' | 'large' = 'default';
 
   private headingTag: GuxSidePanelHeadingTag;
 
@@ -37,10 +35,7 @@ export class GuxSidePanelHeading {
 
   render(): JSX.Element {
     return (
-      <this.headingTag>
-        {this.iconName && (
-          <gux-icon decorative size="medium" icon-name={this.iconName} />
-        )}
+      <this.headingTag class={this.size}>
         <gux-truncate>
           <slot />
         </gux-truncate>
