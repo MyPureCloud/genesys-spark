@@ -12,26 +12,18 @@ import { newSpecPage } from '@test/specTestUtils';
 import * as floatingUi from '@floating-ui/dom';
 
 import { GuxPopover } from '../gux-popover';
+import { renderConfig } from './gux-popover.common';
 
 const components = [GuxPopover];
 const language = 'en';
-const html = `
-  <div>
-    <div id="popover-target">
-      Example Element
-    </div>
-    <gux-popover id="popover-example" position="top" for="popover-target" is-open>
-      <span slot="title">Title</span>
-      <div>popover content</div>
-    </gux-popover>
-  </div>`;
+const html = renderConfig.html;
 
 describe('gux-popover', () => {
   afterEach(async () => {
     jest.spyOn(floatingUi, 'autoUpdate').mockRestore();
   });
 
-  describe('#render', () => {
+  describe(renderConfig.description, () => {
     it('should render popover', async () => {
       jest.spyOn(floatingUi, 'autoUpdate').mockReturnValue(jest.fn());
 
