@@ -6,12 +6,18 @@ exports[`gux-pagination-cursor #render should render as expected (1) 1`] = `
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" disabled="" type="button">
-          <gux-icon iconname="custom/chevron-left-small-regular" screenreader-text="Previous" size="small"></gux-icon>
+          <gux-icon decorative="" iconname="custom/chevron-left-small-regular" size="small"></gux-icon>
+          <gux-screen-reader-beta>
+            Previous
+          </gux-screen-reader-beta>
         </button>
       </gux-button-slot>
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" disabled="" type="button">
-          <gux-icon iconname="custom/chevron-right-small-regular" screenreader-text="Next" size="small"></gux-icon>
+          <gux-icon decorative="" iconname="custom/chevron-right-small-regular" size="small"></gux-icon>
+          <gux-screen-reader-beta>
+            Next
+          </gux-screen-reader-beta>
         </button>
       </gux-button-slot>
     </nav>
@@ -25,12 +31,18 @@ exports[`gux-pagination-cursor #render should render as expected (2) 1`] = `
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" disabled="" type="button">
-          <gux-icon iconname="custom/chevron-left-small-regular" screenreader-text="Previous" size="small"></gux-icon>
+          <gux-icon decorative="" iconname="custom/chevron-left-small-regular" size="small"></gux-icon>
+          <gux-screen-reader-beta>
+            Previous
+          </gux-screen-reader-beta>
         </button>
       </gux-button-slot>
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
-          <gux-icon iconname="custom/chevron-right-small-regular" screenreader-text="Next" size="small"></gux-icon>
+          <gux-icon decorative="" iconname="custom/chevron-right-small-regular" size="small"></gux-icon>
+          <gux-screen-reader-beta>
+            Next
+          </gux-screen-reader-beta>
         </button>
       </gux-button-slot>
     </nav>
@@ -44,12 +56,18 @@ exports[`gux-pagination-cursor #render should render as expected (3) 1`] = `
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
-          <gux-icon iconname="custom/chevron-left-small-regular" screenreader-text="Previous" size="small"></gux-icon>
+          <gux-icon decorative="" iconname="custom/chevron-left-small-regular" size="small"></gux-icon>
+          <gux-screen-reader-beta>
+            Previous
+          </gux-screen-reader-beta>
         </button>
       </gux-button-slot>
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
-          <gux-icon iconname="custom/chevron-right-small-regular" screenreader-text="Next" size="small"></gux-icon>
+          <gux-icon decorative="" iconname="custom/chevron-right-small-regular" size="small"></gux-icon>
+          <gux-screen-reader-beta>
+            Next
+          </gux-screen-reader-beta>
         </button>
       </gux-button-slot>
     </nav>
@@ -63,12 +81,18 @@ exports[`gux-pagination-cursor #render should render as expected (4) 1`] = `
     <nav aria-label="Example label" class="gux-pagination-button-container">
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" type="button">
-          <gux-icon iconname="custom/chevron-left-small-regular" screenreader-text="Previous" size="small"></gux-icon>
+          <gux-icon decorative="" iconname="custom/chevron-left-small-regular" size="small"></gux-icon>
+          <gux-screen-reader-beta>
+            Previous
+          </gux-screen-reader-beta>
         </button>
       </gux-button-slot>
       <gux-button-slot accent="ghost">
         <button class="gux-simple-button" disabled="" type="button">
-          <gux-icon iconname="custom/chevron-right-small-regular" screenreader-text="Next" size="small"></gux-icon>
+          <gux-icon decorative="" iconname="custom/chevron-right-small-regular" size="small"></gux-icon>
+          <gux-screen-reader-beta>
+            Next
+          </gux-screen-reader-beta>
         </button>
       </gux-button-slot>
     </nav>

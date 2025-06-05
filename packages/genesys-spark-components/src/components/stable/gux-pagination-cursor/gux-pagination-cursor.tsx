@@ -82,9 +82,12 @@ export class GuxPaginationCursor {
           >
             <gux-icon
               iconName="custom/chevron-left-small-regular"
-              screenreader-text={this.i18n('previous')}
+              decorative
               size="small"
             ></gux-icon>
+            <gux-screen-reader-beta>
+              {this.i18n('previous')}
+            </gux-screen-reader-beta>
           </button>
         </gux-button-slot>
         <gux-button-slot accent="ghost">
@@ -96,9 +99,10 @@ export class GuxPaginationCursor {
           >
             <gux-icon
               iconName="custom/chevron-right-small-regular"
-              screenreader-text={this.i18n('next')}
+              decorative
               size="small"
             ></gux-icon>
+            <gux-screen-reader-beta>{this.i18n('next')}</gux-screen-reader-beta>
           </button>
         </gux-button-slot>
       </nav>
