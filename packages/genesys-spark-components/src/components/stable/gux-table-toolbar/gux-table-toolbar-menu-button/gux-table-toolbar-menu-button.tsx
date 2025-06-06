@@ -135,10 +135,10 @@ export class GuxTableToolbarMenuButton {
                 <gux-icon
                   icon-name="fa/ellipsis-regular"
                   size="small"
-                  decorative
+                  screenreaderText={this.i18n('additionalActions')}
                 ></gux-icon>
-                {this.renderTooltip()}
               </button>
+              {this.renderTooltip()}
             </gux-button-slot>
           </div>
           <div class="gux-list-container" slot="popup">
