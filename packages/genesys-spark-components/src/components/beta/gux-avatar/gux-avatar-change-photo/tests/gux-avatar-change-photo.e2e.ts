@@ -1,5 +1,6 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../../test/e2eTestUtils';
+import { renderConfig } from './gux-avatar-change-photo.common';
 
 const axeExclusions = [];
 
@@ -19,27 +20,19 @@ async function newNonrandomE2EPage({
   return page;
 }
 
-describe('gux-avatar', () => {
+describe('gux-avatar-change-photo-beta', () => {
   describe('#render', () => {
-    describe('#render', () => {
-      [
-        `<gux-avatar-change-photo-beta>
-          <gux-avatar-beta slot="avatar" name="Conor Darcy"></gux-avatar-beta>
-        </gux-avatar-change-photo-beta>`
-      ].forEach((html, index) => {
-        it(`should render component as expected (${index + 1})`, async () => {
-          const page = await newNonrandomE2EPage({ html });
-          const element = await page.find('gux-avatar-change-photo-beta');
+    it(renderConfig.description, async () => {
+      const page = await newNonrandomE2EPage({ html: renderConfig.html });
+      const element = await page.find('gux-avatar-change-photo-beta');
 
-          expect(element.outerHTML).toMatchSnapshot();
-        });
+      expect(element.outerHTML).toMatchSnapshot();
+    });
 
-        it(`should be accessible (${index + 1})`, async () => {
-          const page = await newSparkE2EPage({ html });
+    it(`should be accessible`, async () => {
+      const page = await newSparkE2EPage({ html: renderConfig.html });
 
-          await a11yCheck(page, axeExclusions);
-        });
-      });
+      await a11yCheck(page, axeExclusions);
     });
   });
 });
