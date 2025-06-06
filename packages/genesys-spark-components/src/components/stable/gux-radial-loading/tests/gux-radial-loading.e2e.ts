@@ -1,5 +1,6 @@
 import { E2EElement } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
+import { renderConfigs } from './gux-radial-loading.common';
 
 function getInternalProgressBar(radialLoadingElement: E2EElement): Element {
   return radialLoadingElement.shadowRoot.querySelector(
@@ -8,18 +9,13 @@ function getInternalProgressBar(radialLoadingElement: E2EElement): Element {
 }
 
 describe('gux-radial-loading', () => {
-  [
-    '<gux-radial-loading lang="en"></gux-radial-loading>',
-    '<gux-radial-loading lang="en" context="modal"></gux-radial-loading>',
-    '<gux-radial-loading lang="en" context="input"></gux-radial-loading>',
-    '<gux-radial-loading lang="en" context="full-page"></gux-radial-loading>'
-  ].forEach((html, index) => {
-    it(`should display component as expected (${index + 1})`, async () => {
+  renderConfigs.forEach(({ description, html }) => {
+    it(description, async () => {
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-radial-loading');
 
       await a11yCheck(page);
-      expect(element.innerHTML).toMatchSnapshot();
+      expect(element.outerHTML).toMatchSnapshot();
     });
   });
 
