@@ -74,7 +74,7 @@ export const config: Config = {
     moduleNameMapper: {
       '@utils/(.*)': '<rootDir>/src/utils/$1'
     },
-    browserHeadless: true,
+    browserHeadless: 'shell',
     collectCoverage: true,
     coverageDirectory: 'build/test-reports/coverage',
     coverageReporters: ['json', 'lcov', 'clover'],

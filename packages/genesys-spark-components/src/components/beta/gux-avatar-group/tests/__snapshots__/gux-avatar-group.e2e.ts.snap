@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gux-avatar-group #interaction should handles tabindex on navigation as expected with overflow 1`] = `
-Page {
+CdpPage {
   "_e2eClose": [Function],
   "_e2eElements": [
     <gux-avatar-group-beta hydrated="" quantity="2" role="menu">
@@ -99,42 +99,11 @@ Page {
   "_e2eEventIds": 0,
   "_e2eEvents": Map {},
   "_e2eGoto": [Function],
+  "_isDragging": false,
+  "_timeoutSettings": TimeoutSettings {},
   "close": [Function],
   "compareScreenshot": [Function],
   "debugger": [Function],
-  "emitter": {
-    "all": Map {
-      "console" => [
-        [Function],
-      ],
-      "pageerror" => [
-        [Function],
-      ],
-      "requestfailed" => [
-        [Function],
-      ],
-      "request" => [
-        [Function],
-      ],
-    },
-    "emit": [Function],
-    "off": [Function],
-    "on": [Function],
-  },
-  "eventsMap": Map {
-    "console" => [
-      [Function],
-    ],
-    "pageerror" => [
-      [Function],
-    ],
-    "requestfailed" => [
-      [Function],
-    ],
-    "request" => [
-      [Function],
-    ],
-  },
   "find": [Function],
   "findAll": [Function],
   "getDiagnostics": [Function],
@@ -147,7 +116,7 @@ Page {
 `;
 
 exports[`gux-avatar-group #interaction should handles tabindex on navigation as expected without overflow 1`] = `
-Page {
+CdpPage {
   "_e2eClose": [Function],
   "_e2eElements": [
     <gux-avatar-group-beta hydrated="" role="menu">
@@ -246,42 +215,11 @@ Page {
   "_e2eEventIds": 0,
   "_e2eEvents": Map {},
   "_e2eGoto": [Function],
+  "_isDragging": false,
+  "_timeoutSettings": TimeoutSettings {},
   "close": [Function],
   "compareScreenshot": [Function],
   "debugger": [Function],
-  "emitter": {
-    "all": Map {
-      "console" => [
-        [Function],
-      ],
-      "pageerror" => [
-        [Function],
-      ],
-      "requestfailed" => [
-        [Function],
-      ],
-      "request" => [
-        [Function],
-      ],
-    },
-    "emit": [Function],
-    "off": [Function],
-    "on": [Function],
-  },
-  "eventsMap": Map {
-    "console" => [
-      [Function],
-    ],
-    "pageerror" => [
-      [Function],
-    ],
-    "requestfailed" => [
-      [Function],
-    ],
-    "request" => [
-      [Function],
-    ],
-  },
   "find": [Function],
   "findAll": [Function],
   "getDiagnostics": [Function],

@@ -2,6 +2,7 @@
 
 exports[`gux-tab should render 1`] = `
 GuxTab {
+  "__stencil__getHostRef": [Function],
   "buttonElement": <button aria-controls="gux-undefined-panel" aria-selected="false" class="gux-tab" id="gux-undefined-tab" role="tab" tabindex="-1" type="button">
   <gux-tooltip-title>
     <span></span>
@@ -18,6 +19,7 @@ GuxTab {
 
 exports[`gux-tab should render disabled 1`] = `
 GuxTab {
+  "__stencil__getHostRef": [Function],
   "buttonElement": <button aria-controls="gux-undefined-panel" aria-selected="false" class="gux-disabled gux-tab" disabled="" id="gux-undefined-tab" role="tab" type="button">
   <gux-tooltip-title>
     <span></span>
