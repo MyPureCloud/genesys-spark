@@ -2,6 +2,10 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
 
+:host {
+  display: inline-block;
+}
+
 .gux-change-photo {
   position: relative;
   padding: 0;

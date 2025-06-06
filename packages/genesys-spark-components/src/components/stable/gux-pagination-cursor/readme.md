@@ -30,6 +30,7 @@
 
 - [gux-button-slot](../gux-button-slot)
 - [gux-icon](../gux-icon)
+- [gux-screen-reader-beta](../../beta/gux-screen-reader)
 - [gux-pagination-items-per-page](../gux-pagination/gux-pagination-items-per-page)
 
 ### Graph
@@ -37,6 +38,7 @@
 graph TD;
   gux-pagination-cursor --> gux-button-slot
   gux-pagination-cursor --> gux-icon
+  gux-pagination-cursor --> gux-screen-reader-beta
   gux-pagination-cursor --> gux-pagination-items-per-page
   gux-pagination-items-per-page --> gux-dropdown
   gux-pagination-items-per-page --> gux-listbox
