@@ -341,21 +341,21 @@
       },
       "error": {
         "high_emphasis": "#2e394c",
-        "accent": "#ea0b0b"
+        "accent": "#cc0a0a"
       },
       "icon": {
         "default": "#2e394c"
       },
       "indicators": {
         "positive": "#3c8527",
-        "negative": "#ea0b0b",
+        "negative": "#cc0a0a",
         "neutral": "#4c5667"
       }
     },
     "form_control": {
       "help_text": {
         "default": "#4c5667",
-        "error": "#ea0b0b"
+        "error": "#cc0a0a"
       },
       "text_input": {
         "placeholder": "#4c5667",
@@ -367,11 +367,11 @@
         "selected": "#2a60c8",
         "hover": "#2754ac",
         "active": "#23478f",
-        "error": "#ea0b0b"
+        "error": "#cc0a0a"
       },
       "label": {
         "default": "#2e394c",
-        "required_accent": "#ea0b0b",
+        "required_accent": "#cc0a0a",
         "optional_accent": "#3e4a5b",
         "tooltip": "#3e4a5b"
       },
@@ -454,7 +454,7 @@
         "default": "#6b7585",
         "hover": "#2754ac",
         "active": "#2a60c8",
-        "error": "#ea0b0b"
+        "error": "#cc0a0a"
       }
     }
   },
