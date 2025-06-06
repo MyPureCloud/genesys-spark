@@ -40,3 +40,7 @@ export async function newSparkE2EPage(
   await page.waitForChanges();
   return page;
 }
+
+export function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}

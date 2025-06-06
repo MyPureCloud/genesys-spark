@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 import { Credentials } from '@stencil/core/internal';
 import { sass } from '@stencil/sass';
 import copy from 'rollup-plugin-copy';
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 import { componentMetadataGenerator } from './scripts/component-metadata-generator';
 import { reactOutputTarget } from '@stencil/react-output-target';
 
@@ -48,6 +49,7 @@ export const config: Config = {
   plugins: [sass()],
   rollupPlugins: {
     after: [
+      nodePolyfills(),
       copy({
         targets: [
           { src: 'build/i18n', dest: 'dist/genesys-chart-webcomponents' }
@@ -62,7 +64,7 @@ export const config: Config = {
     moduleNameMapper: {
       '@utils/(.*)': '<rootDir>/src/utils/$1'
     },
-    browserHeadless: true,
+    browserHeadless: 'shell',
     collectCoverage: true,
     coverageDirectory: 'build/test-reports/coverage',
     coverageReporters: ['json', 'lcov', 'clover'],
