@@ -4,7 +4,7 @@ export const renderConfig = {
         <div id="popover-target">
           Example Element
         </div>
-        <gux-popover position="top" for="popover-target">
+        <gux-popover position="top" for="popover-target" is-open>
           <span slot="title">Title</span>
           <div>popover content</div>
         </gux-popover>

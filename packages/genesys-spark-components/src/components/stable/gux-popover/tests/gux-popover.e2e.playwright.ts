@@ -79,10 +79,6 @@ test.describe('gux-popover', () => {
     </div>`
     );
 
-    const options = page
-      .locator('gux-dismiss-button')
-      .filter({ visible: true });
-
-    await expect(options).toHaveCount(0);
+    await expect(page.locator('gux-dismiss-button')).toBeHidden();
   });
 });
