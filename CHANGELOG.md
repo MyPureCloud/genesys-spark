@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.153.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.153.0...v4.153.1) (2025-06-07)
+
+
+### Bug Fixes
+
+* **other:** improved legacy theme's error color accessibility ([33791ba](https://github.com/MyPureCloud/genesys-spark/commit/33791ba7d8fb4e801623eaf499cc3a98058fdd1c))
+
 ## [4.153.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.152.0...v4.153.0) (2025-06-05)
 
 
