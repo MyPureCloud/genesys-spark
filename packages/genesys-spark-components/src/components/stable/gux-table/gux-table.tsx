@@ -51,10 +51,10 @@ export class GuxTable {
   private tableId: string = randomHTMLId('gux-table');
   private columnsWidths: object = {};
   /**
-   * Indicates that vertical scroll is presented for table
+   * Indicates that vertical or horizontal scroll are presented for table
    */
   @State()
-  private isVerticalScroll: boolean = false;
+  private isScroll: boolean = false;
 
   /**
    * Indicates if the mouse is in a position that supports starting resize
@@ -110,13 +110,13 @@ export class GuxTable {
 
     this.prepareSelectableRows();
     readTask(() => {
-      this.checkVerticalScroll();
+      this.checkScroll();
     });
 
     if (!this.resizeObserver && window.ResizeObserver) {
       this.resizeObserver = new ResizeObserver(() => {
         readTask(() => {
-          this.checkVerticalScroll();
+          this.checkScroll();
         });
       });
     }
@@ -132,10 +132,14 @@ export class GuxTable {
     });
   }
 
-  private checkVerticalScroll(): void {
+  private checkScroll(): void {
     const tableContainerElement = this.tableContainer;
-    this.isVerticalScroll =
+    const isVerticalScroll =
       tableContainerElement.scrollHeight > tableContainerElement.clientHeight;
+    const isHorizontalScroll =
+      tableContainerElement.scrollWidth > tableContainerElement.clientWidth;
+
+    this.isScroll = isVerticalScroll || isHorizontalScroll;
   }
 
   disconnectedCallback(): void {
@@ -436,7 +440,7 @@ export class GuxTable {
       >
         <div class="gux-table">
           <div
-            tabindex={this.isVerticalScroll ? '0' : '-1'}
+            tabindex={this.isScroll ? '0' : '-1'}
             id={this.tableId}
             class={this.tableContainerClasses}
           >
