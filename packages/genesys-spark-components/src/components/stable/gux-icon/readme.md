@@ -78,6 +78,7 @@
  - [gux-rich-text-editor-sub-list](../../beta/gux-rich-text-editor/gux-rich-text-editor-list/gux-rich-text-editor-sub-list)
  - [gux-side-panel-heading](../../beta/gux-side-panel/components/gux-side-panel-heading)
  - [gux-sort-control](../gux-table/gux-sort-control)
+ - [gux-step](../../beta/gux-stepper/gux-step)
  - [gux-submenu](../gux-flyout-menu/gux-menu/gux-submenu)
  - [gux-tab-advanced](../gux-tabs-advanced/gux-tab-advanced)
  - [gux-tab-advanced-list](../gux-tabs-advanced/gux-tab-advanced-list)
@@ -153,6 +154,7 @@ graph TD;
   gux-rich-text-editor-sub-list --> gux-icon
   gux-side-panel-heading --> gux-icon
   gux-sort-control --> gux-icon
+  gux-step --> gux-icon
   gux-submenu --> gux-icon
   gux-tab-advanced --> gux-icon
   gux-tab-advanced-list --> gux-icon

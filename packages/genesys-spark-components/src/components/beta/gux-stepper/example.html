@@ -1,0 +1,39 @@
+<h2>gux-stepper-beta</h2>
+
+<h3>horizontal stepper</h3>
+<gux-stepper-beta active-step-id="account-info">
+  <gux-step step-id="account-info" status="incomplete">
+    <gux-step-title slot="title">Account Info</gux-step-title>
+    <span slot="helper">Please enter account info</span>
+  </gux-step>
+  <gux-step step-id="personal-info" status="incomplete">
+    <gux-step-title slot="title">Personal Info</gux-step-title>
+    <span slot="helper">Please enter personal info</span>
+  </gux-step>
+  <gux-step step-id="maintenance" status="incomplete">
+    <gux-step-title slot="title">Maintenance</gux-step-title>
+  </gux-step>
+  <gux-step step-id="verification" status="incomplete">
+    <gux-step-title slot="title">Verification</gux-step-title>
+  </gux-step>
+</gux-stepper-beta>
+
+<h3>vertical stepper</h3>
+
+<gux-stepper-beta active-step-id="cart" orientation="vertical">
+  <gux-step step-id="cart" status="incomplete">
+    <gux-step-title slot="title">Cart</gux-step-title>>
+  </gux-step>
+  <gux-step step-id="delivery-address" status="incomplete">
+    <gux-step-title slot="title">Delivery Address</gux-step-title>
+  </gux-step>
+  <gux-step step-id="payment-method" status="incomplete">
+    <gux-step-title slot="title">Payment Method</gux-step-title>
+  </gux-step>
+  <gux-step step-id="preview" status="incomplete">
+    <gux-step-title slot="title">Preivew</gux-step-title>
+  </gux-step>
+  <gux-step step-id="finalise-order" status="incomplete">
+    <gux-step-title slot="title">Finalise Order</gux-step-title>
+  </gux-step>
+</gux-stepper-beta>
