@@ -1598,7 +1598,8 @@
             "space": "srgb"
           }
         }
-      }
+      },
+      "description": "[DEPRECATED] Please use the global set shadow styles"
     }
   },
   "charts": {
