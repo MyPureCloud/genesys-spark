@@ -1171,5 +1171,157 @@
         "description": "This typography token is recommended to be used only for code blocks."
       }
     }
+  },
+  "shadow": {
+    "1_card": {
+      "default": {
+        "value": {
+          "x": "0",
+          "y": "2",
+          "blur": "3",
+          "spread": "1",
+          "color": "{effects.shadows.lightest}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "This is the shadow style we use in cards in the default state."
+      },
+      "hover": {
+        "value": {
+          "x": "0",
+          "y": "2",
+          "blur": "4",
+          "spread": "3",
+          "color": "{effects.shadows.middle}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "This is the shadow style we use in cards in the hover state."
+      }
+    },
+    "2_side_panel": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.lighter}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "2",
+          "blur": "3",
+          "spread": "0",
+          "color": "{effects.shadows.middle}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Side Panels."
+    },
+    "5_modal": {
+      "value": [
+        {
+          "x": "0",
+          "y": "2",
+          "blur": "4",
+          "spread": "3",
+          "color": "{effects.shadows.middle}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Modals."
+    },
+    "6_floating_menu": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Floating Menus; like the dropdown or calendar menus."
+    },
+    "7_dragged_items": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "1",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in elements that are currently being dragged by the user."
+    },
+    "8_toast": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Toasts."
+    },
+    "9_tooltip": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Tooltips."
+    }
   }
 }
