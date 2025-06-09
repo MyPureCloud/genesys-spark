@@ -12,7 +12,7 @@ import { trackComponent } from '@utils/tracking/usage';
 @Component({
   styleUrl: 'gux-avatar-change-photo.scss',
   tag: 'gux-avatar-change-photo-beta',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxAvatarChangePhoto {
   private i18n: GetI18nValue;
