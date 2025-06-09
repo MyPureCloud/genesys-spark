@@ -2043,7 +2043,7 @@
       }
     }
   },
-    "calendar": {
+  "calendar": {
     "cta_group": {
       "padding": {
         "value": "18px {container.lg.padding}",
