@@ -113,8 +113,11 @@ export class GuxTag {
           <gux-icon
             class="gux-tag-remove-icon"
             icon-name="fa/xmark-large-regular"
-            screenreader-text={this.i18n('remove-tag', { label: this.label })}
+            decorative
           />
+          <gux-screen-reader-beta>
+            {this.i18n('remove-tag', { label: this.label })}
+          </gux-screen-reader-beta>
         </button>
       ) as JSX.Element;
     }
