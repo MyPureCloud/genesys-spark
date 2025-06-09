@@ -9,37 +9,30 @@
 import { defineCustomElements } from '../dist/loader';
 
 // Value templated out during build process (see scripts/wrap-stencil.js)
-export const CHART_COMPONENT_ASSETS_PATH = '{{chart_component_assets_path}}';
+export const COMPONENT_ASSETS_PATH = '{{component_assets_path}}';
 
-// Default domain to load assets from
-const DEFAULT_DOMAIN = 'app.mypurecloud.com';
-
-// List of Genesys UI domains
 const DOMAIN_LIST = [
-  'apne2.pure.cloud',
-  'apne3.pure.cloud',
-  'aps1.pure.cloud',
-  'cac1.pure.cloud',
-  'euc2.pure.cloud',
-  'euw2.pure.cloud',
-  'inindca.com',
-  'inintca.com',
-  'mec1.pure.cloud',
-  'mypurecloud.com',
-  'mypurecloud.com.au',
-  'mypurecloud.de',
-  'mypurecloud.ie',
-  'mypurecloud.jp',
-  'sae1.pure.cloud',
-  'use2.maximus-pure.cloud',
-  // 'use2.us-gov-pure.cloud', Assets are not currently deployed to FedRAMP and should fallback to the default domain
-  'usw2.pure.cloud'
+  '.inindca.com',
+  '.dev-pure.cloud',
+
+  '.inintca.com',
+  '.test-pure.cloud',
+
+  '.mypurecloud.com',
+  '.mypurecloud.com.au',
+  '.mypurecloud.de',
+  '.mypurecloud.ie',
+  '.mypurecloud.jp',
+
+  '.pure.cloud',
+  '.maximus-pure.cloud'
+  // '.use2.us-gov-pure.cloud', Assets are not currently deployed to FedRAMP and should fallback to the default domain
 ];
 
 export function registerElements() {
-  if (CHART_COMPONENT_ASSETS_PATH) {
+  if (COMPONENT_ASSETS_PATH) {
     defineCustomElements(window, {
-      resourcesUrl: `https://${getDomain() + CHART_COMPONENT_ASSETS_PATH}`
+      resourcesUrl: `https://${getRegionDomain() + COMPONENT_ASSETS_PATH}`
     });
   } else {
     defineCustomElements();
@@ -50,19 +43,19 @@ export function registerElements() {
  * Returns the domain that web component assets should be loaded from.
  * Will use the domain of the current window if it matches a Genesys domain.
  */
-function getDomain(): string {
+function getRegionDomain(): string {
   const hostname = window.location.hostname;
-  const matchedDomain = DOMAIN_LIST.find(regionDomain =>
+  const matchedDomain = DOMAIN_LIST.some(regionDomain =>
     hostname.endsWith(regionDomain)
   );
 
   if (matchedDomain) {
-    return `app.${matchedDomain}`;
+    if (hostname.startsWith('app.') || hostname.startsWith('app-regional.')) {
+      return hostname;
+    } else {
+      return hostname.replace(/^([^.]+)/, 'app');
+    }
+  } else {
+    return 'app.mypurecloud.com';
   }
-
-  if (hostname.endsWith('.pure.cloud')) {
-    return `app.${hostname.split('.').slice(-3).join('.')}`;
-  }
-
-  return DEFAULT_DOMAIN;
 }

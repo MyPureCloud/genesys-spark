@@ -4,19 +4,22 @@ declare global {
   var IS_DEV_MODE: boolean; // eslint-disable-line no-var
 }
 
-// Default domain to load assets from
-const DEFAULT_DOMAIN = 'mypurecloud.com';
+const DOMAIN_LIST = [
+  '.inindca.com',
+  '.dev-pure.cloud',
 
-// List of Genesys UI domains that do not follow the ${region}.pure.cloud format
-const NON_STANDARD_DOMAINS = [
-  'inindca.com',
-  'inintca.com',
-  'mypurecloud.com.au',
-  'mypurecloud.com',
-  'mypurecloud.de',
-  'mypurecloud.ie',
-  'mypurecloud.jp'
-  // 'use2.us-gov-pure.cloud', Assets are not currently deployed to FedRAMP. It should fall back to the default domain.
+  '.inintca.com',
+  '.test-pure.cloud',
+
+  '.mypurecloud.com',
+  '.mypurecloud.com.au',
+  '.mypurecloud.de',
+  '.mypurecloud.ie',
+  '.mypurecloud.jp',
+
+  '.pure.cloud',
+  '.maximus-pure.cloud'
+  // 'use2.us-gov-pure.cloud', Assets are not currently deployed to FedRAMP and should fallback to the default domain
 ];
 
 /**
@@ -44,8 +47,8 @@ export function getChartComponentAssetsOrigin(): string {
 }
 
 export function getAssetsOrigin(): string {
-  const matchedDomain = getRegionDomain();
-  return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
+  const regionDomain = getRegionDomain();
+  return `https://${regionDomain}`;
 }
 
 export function getFontOrigin(): string {
@@ -56,16 +59,23 @@ export function getFontOrigin(): string {
   return getComponentAssetsOrigin();
 }
 
+/**
+ * Returns the domain that web component assets should be loaded from.
+ * Will use the domain of the current window if it matches a Genesys domain.
+ */
 function getRegionDomain() {
-  const pageHost = window.location.hostname;
+  const hostname = window.location.hostname;
+  const matchedDomain = DOMAIN_LIST.some(regionDomain =>
+    hostname.endsWith(regionDomain)
+  );
 
-  // We can automatically handle the standard domain format: ${region}.pure.cloud
-  if (pageHost.endsWith('.pure.cloud')) {
-    return pageHost.split('.').slice(-3).join('.');
+  if (matchedDomain) {
+    if (hostname.startsWith('app.') || hostname.startsWith('app-regional.')) {
+      return hostname;
+    }
+
+    return hostname.replace(/^([^.]+)/, 'app');
   }
 
-  // For older domains, we have to do a lookup
-  return NON_STANDARD_DOMAINS.find(regionDomain =>
-    pageHost.endsWith(regionDomain)
-  );
+  return 'app.mypurecloud.com';
 }

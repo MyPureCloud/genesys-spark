@@ -1,13 +1,16 @@
-const DEFAULT_DOMAIN = "mypurecloud.com";
-const NON_STANDARD_DOMAINS = [
-  "inindca.com",
-  "inintca.com",
-  "mypurecloud.com.au",
-  "mypurecloud.com",
-  "mypurecloud.de",
-  "mypurecloud.ie",
-  "mypurecloud.jp"
-  // 'use2.us-gov-pure.cloud', Assets are not currently deployed to FedRAMP. It should fall back to the default domain.
+const DOMAIN_LIST = [
+  ".inindca.com",
+  ".dev-pure.cloud",
+  ".inintca.com",
+  ".test-pure.cloud",
+  ".mypurecloud.com",
+  ".mypurecloud.com.au",
+  ".mypurecloud.de",
+  ".mypurecloud.ie",
+  ".mypurecloud.jp",
+  ".pure.cloud",
+  ".maximus-pure.cloud"
+  // 'use2.us-gov-pure.cloud', Assets are not currently deployed to FedRAMP and should fallback to the default domain
 ];
 function getComponentAssetsOrigin() {
   return getAssetsOrigin();
@@ -16,20 +19,24 @@ function getChartComponentAssetsOrigin() {
   return getAssetsOrigin();
 }
 function getAssetsOrigin() {
-  const matchedDomain = getRegionDomain();
-  return `https://app.${matchedDomain || DEFAULT_DOMAIN}`;
+  const regionDomain = getRegionDomain();
+  return `https://${regionDomain}`;
 }
 function getFontOrigin() {
   return getComponentAssetsOrigin();
 }
 function getRegionDomain() {
-  const pageHost = window.location.hostname;
-  if (pageHost.endsWith(".pure.cloud")) {
-    return pageHost.split(".").slice(-3).join(".");
-  }
-  return NON_STANDARD_DOMAINS.find(
-    (regionDomain) => pageHost.endsWith(regionDomain)
+  const hostname = window.location.hostname;
+  const matchedDomain = DOMAIN_LIST.some(
+    (regionDomain) => hostname.endsWith(regionDomain)
   );
+  if (matchedDomain) {
+    if (hostname.startsWith("app.") || hostname.startsWith("app-regional.")) {
+      return hostname;
+    }
+    return hostname.replace(/^([^.]+)/, "app");
+  }
+  return "app.mypurecloud.com";
 }
 
 var __defProp = Object.defineProperty;
