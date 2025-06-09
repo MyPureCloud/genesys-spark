@@ -1,3 +1,6 @@
+// https://jenkins.ininica.com/view/Common%20UI/job/cui-web-component-release-multi/
+// https://jenkins.ininica.com/view/Common%20UI/job/cui-web-component-feature-multi/
+
 @Library('pipeline-library')
 import com.genesys.jenkins.Notifications
 
@@ -32,9 +35,30 @@ String publishOptions = getPublishOptions(isMainBranch, isMaintenanceReleaseBran
 String componentAssetsPath = ''
 String charComponentAssetsPath = ''
 
-webappPipeline {
-    projectName = 'spark-components'
+webappPipelineV2 {
+    urlPrefix = 'spark-components'
     agentLabel = 'dev_x86_shared'
+    nodeVersion = '20.x multiarch'
+    mailer = 'CoreUI@genesys.com'
+    chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
+    manifest = customManifest('./dist') {
+        sh('./scripts/create-manifest.js')
+        readJSON(file: './manifest.json')
+    }
+    releasableBranchPrefixes = ['beta/', 'maintenance/']
+    skipDeploy = true
+    checkoutStep = {
+        checkout(scm)
+        sh("git checkout ${env.BRANCH_NAME}")
+        // Make sure we have tags, which are required for version bumps
+        sshagent(credentials: [constants.credentials.github.inin_dev_evangelists]) {
+            sh('git fetch --tags')
+        }
+    }
+    prepareStep = {
+        sh('npm run devops.create.pipeline.assets')
+        sh('npm ci')
+    }
     versionClosure = {
         // If this is a release branch, bump the version before reading it. The conditional is not
         // technically required, as the version closure is ignored for feature branches. However,
@@ -77,39 +101,13 @@ webappPipeline {
 
         return readJSON(file: 'package.json').version
     }
-    team = 'Core UI'
-    jiraProjectKey = 'COMUI'
-    mailer = 'CoreUI@genesys.com'
-    chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
-    nodeVersion = '20.x multiarch'
-    testJob = 'no-tests'
-    deployConfig = [:]
-    manifest = customManifest('./dist') {
-        sh('./scripts/create-manifest.js')
-        readJSON(file: './manifest.json')
-    }
-    buildType = {
-        if (isReleaseBranch) {
-            return 'MAINLINE'
-        }
-
-        return isFeatureBranch ? 'FEATURE' : 'CI'
-    }
-    checkoutStep = {
-        checkout(scm)
-        sh("git checkout ${env.BRANCH_NAME}")
-        // Make sure we have tags, which are required for version bumps
-        sshagent(credentials: [constants.credentials.github.inin_dev_evangelists]) {
-            sh('git fetch --tags')
-        }
-    }
-    prepareStep = {
-        sh('npm ci')
-    }
     ciTests = {
+        // Setup
         sh('npm run build --workspace=packages/genesys-spark-tokens')
         sh('npm run build --workspace=packages/genesys-spark')
         sh('npm run stencil --workspace=packages/genesys-spark-components')
+
+        // Tests
         sh('npm run lint')
         sh('npm run test.ci')
     }
@@ -123,6 +121,11 @@ webappPipeline {
         env.CHART_COMPONENT_ASSETS_PATH = chartComponentAssetsPath
 
         sh('npm run build')
+    }
+    onPromoteSuccess = {
+        sh('printenv')
+
+        currentBuild.description = """<a href="https://grandcentral.ininica.com/#/services/contentsquare-webui/version/${env.SERVICE_VERSION}" target="_blank">version@GrandCentral</a></h2>"""
     }
     onSuccess = {
         if (isReleaseBranch) {

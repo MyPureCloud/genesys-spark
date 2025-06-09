@@ -7,7 +7,7 @@ const {
   generateIconSelectHTML
 } = require('./src/utils/generate-icon-select-html');
 
-const CDN_URL = process.env.CDN_URL || '';
+const ASSET_PREFIX = process.env.ASSET_PREFIX || '';
 
 module.exports = {
   entry: {
@@ -16,7 +16,6 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: CDN_URL,
     filename: '[name].js'
   },
   module: {
@@ -58,7 +57,7 @@ module.exports = {
         {
           from: 'src/index.html',
           to: '[name][ext]',
-          transform: injectCdnUrl
+          transform: injectAssetPrefix
         },
         {
           from: '../../packages/genesys-spark-components/src/components/**/example.html',
@@ -117,7 +116,7 @@ module.exports = {
   devtool: 'source-map'
 };
 
-const componentPageTemplate = injectCdnUrl(
+const componentPageTemplate = injectAssetPrefix(
   fs.readFileSync('src/viewer-template.html').toString()
 );
 
@@ -195,10 +194,10 @@ function generateComponentPage(exampleMarkup) {
   return withHtml;
 }
 
-function injectCdnUrl(content) {
-  let htmlCdnUrl = CDN_URL;
-  if (htmlCdnUrl.length > 0 && !htmlCdnUrl.endsWith('/')) {
-    htmlCdnUrl = htmlCdnUrl + '/';
+function injectAssetPrefix(content) {
+  let htmlAssetPrefix = ASSET_PREFIX;
+  if (htmlAssetPrefix.length > 0 && !htmlAssetPrefix.endsWith('/')) {
+    htmlAssetPrefix = htmlAssetPrefix + '/';
   }
-  return content.toString().replace(/\$\{CDN_URL\}/g, htmlCdnUrl);
+  return content.toString().replace(/\$\{ASSET_PREFIX\}/g, htmlAssetPrefix);
 }
