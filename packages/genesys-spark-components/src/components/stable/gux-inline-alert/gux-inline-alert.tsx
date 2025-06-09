@@ -45,6 +45,7 @@ export class GuxAlert {
   render(): JSX.Element {
     return (
       <div
+        role="alert"
         class={{
           'gux-inline-alert': true,
           [`gux-${this.accent}`]: true
