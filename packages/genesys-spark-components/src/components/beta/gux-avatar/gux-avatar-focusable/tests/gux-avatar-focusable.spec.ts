@@ -6,27 +6,12 @@ jest.mock('../../../../../utils/error/log-error', () => ({
 import { newSpecPage } from '@test/specTestUtils';
 import { GuxAvatarFocusable } from '../gux-avatar-focusable';
 import { logWarn } from '../../../../../utils/error/log-error';
+import { renderConfigs } from './gux-avatar-focusable.common';
 
 describe('gux-avatar-focusable', () => {
   describe('#render', () => {
-    [
-      `<gux-avatar-focusable-beta>
-        <button>
-          <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
-        </button>
-      </gux-avatar-focusable-beta>`,
-      `<gux-avatar-focusable-beta>
-        <a href="#">
-          <gux-avatar-beta name="Conor Darcy"></gux-avatar-beta>
-        </a>
-      </gux-avatar-focusable-beta>`,
-      `<gux-avatar-focusable-beta>
-        <gux-avatar-change-photo-beta>
-          <gux-avatar-beta slot="avatar" name="Conor Darcy"></gux-avatar-beta>
-        </gux-avatar-change-photo-beta>
-      </gux-avatar-focusable-beta>`
-    ].forEach((html, index) => {
-      it(`component type (${index + 1}) with valid markup`, async () => {
+    renderConfigs.forEach(({ description, html }) => {
+      it(description, async () => {
         const page = await newSpecPage({
           components: [GuxAvatarFocusable],
           html

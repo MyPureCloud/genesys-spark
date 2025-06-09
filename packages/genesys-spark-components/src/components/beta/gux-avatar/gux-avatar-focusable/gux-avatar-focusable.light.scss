@@ -1,6 +1,8 @@
 @use '~genesys-spark/dist/scss/focus.scss';
 
 gux-avatar-focusable-beta {
+  display: inline-block;
+
   a {
     display: inline-block;
     line-height: 0px;
