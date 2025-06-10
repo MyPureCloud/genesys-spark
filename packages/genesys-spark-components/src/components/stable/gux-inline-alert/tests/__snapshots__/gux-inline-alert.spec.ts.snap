@@ -3,7 +3,7 @@
 exports[`gux-inline-alert #render "error" accent inline alert 1`] = `
 <gux-inline-alert accent="error">
   <template shadowrootmode="open">
-    <div class="gux-error gux-inline-alert">
+    <div class="gux-error gux-inline-alert" role="alert">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
         <gux-screen-reader-beta>
@@ -26,7 +26,7 @@ exports[`gux-inline-alert #render "error" accent inline alert 1`] = `
 exports[`gux-inline-alert #render "info" accent inline alert 1`] = `
 <gux-inline-alert accent="info">
   <template shadowrootmode="open">
-    <div class="gux-info gux-inline-alert">
+    <div class="gux-info gux-inline-alert" role="alert">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/circle-info-solid" size="small"></gux-icon>
         <gux-screen-reader-beta>
@@ -49,7 +49,7 @@ exports[`gux-inline-alert #render "info" accent inline alert 1`] = `
 exports[`gux-inline-alert #render "success" accent inline alert 1`] = `
 <gux-inline-alert accent="success">
   <template shadowrootmode="open">
-    <div class="gux-inline-alert gux-success">
+    <div class="gux-inline-alert gux-success" role="alert">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/circle-check-solid" size="small"></gux-icon>
         <gux-screen-reader-beta>
@@ -72,7 +72,7 @@ exports[`gux-inline-alert #render "success" accent inline alert 1`] = `
 exports[`gux-inline-alert #render "warning" accent inline alert 1`] = `
 <gux-inline-alert accent="warning">
   <template shadowrootmode="open">
-    <div class="gux-inline-alert gux-warning">
+    <div class="gux-inline-alert gux-warning" role="alert">
       <div class="gux-message-wrapper">
         <gux-icon decorative="" icon-name="fa/triangle-exclamation-solid" size="small"></gux-icon>
         <gux-screen-reader-beta>
