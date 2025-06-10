@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.154.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.153.1...v4.154.0) (2025-06-10)
+
+
+### Features
+
+* **stepper-beta:** addition of stepper component ([eba0ea0](https://github.com/MyPureCloud/genesys-spark/commit/eba0ea0b542130560f4a9be0486b79292522847f))
+
 ### [4.153.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.153.0...v4.153.1) (2025-06-07)
 
 
