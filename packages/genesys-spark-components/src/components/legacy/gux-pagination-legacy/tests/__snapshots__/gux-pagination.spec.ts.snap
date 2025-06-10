@@ -21,7 +21,7 @@ exports[`gux-pagination-legacy #render should render component as expected (1) 1
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
@@ -165,7 +165,7 @@ exports[`gux-pagination-legacy #render should render component as expected (2) 1
               <gux-dropdown aria-label="Items per page dropdown, 50 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
@@ -309,7 +309,7 @@ exports[`gux-pagination-legacy #render should render component as expected (3) 1
               <gux-dropdown aria-label="Items per page dropdown, 75 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
@@ -453,7 +453,7 @@ exports[`gux-pagination-legacy #render should render component as expected (4) 1
               <gux-dropdown aria-label="Items per page dropdown, 100 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
@@ -597,7 +597,7 @@ exports[`gux-pagination-legacy #render should render component as expected (5) 1
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
@@ -741,7 +741,7 @@ exports[`gux-pagination-legacy #render should render component as expected (6) 1
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
@@ -885,7 +885,7 @@ exports[`gux-pagination-legacy #render should render component as expected (7) 1
               <gux-dropdown aria-label="Items per page dropdown, 50 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
@@ -1029,7 +1029,7 @@ exports[`gux-pagination-legacy #render should render component as expected (8) 1
               <gux-dropdown aria-label="Items per page dropdown, 75 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
@@ -1173,7 +1173,7 @@ exports[`gux-pagination-legacy #render should render component as expected (9) 1
               <gux-dropdown aria-label="Items per page dropdown, 100 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
@@ -1434,7 +1434,7 @@ exports[`gux-pagination-legacy #render should render component as expected (12) 
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
@@ -1578,7 +1578,7 @@ exports[`gux-pagination-legacy #render should render component as expected (13) 
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
@@ -1722,7 +1722,7 @@ exports[`gux-pagination-legacy #render should render component as expected (14) 
               <gux-dropdown aria-label="Items per page dropdown, 25 selected">
                 <template shadowrootmode="open" shadowrootdelegatesfocus>
                   <gux-popup>
-                    <div class="gux-target-container-collapsed" slot="target">
+                    <div class="gux-target-container-not-filterable" slot="target">
                       <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                         <div class="gux-field-content">
                           <div class="gux-selected-option">
