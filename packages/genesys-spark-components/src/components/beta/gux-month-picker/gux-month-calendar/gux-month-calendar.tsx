@@ -273,12 +273,15 @@ export class GuxMonthCalendar {
         >
           <gux-icon
             icon-name="custom/chevron-left-small-regular"
-            screenreader-text={this.i18n('changeYear', {
+            decorative
+            size="small"
+          ></gux-icon>
+          <gux-screen-reader-beta>
+            {this.i18n('changeYear', {
               currentYear: parseInt(this.year),
               changeYear: parseInt(this.year) - 1
             })}
-            size="small"
-          ></gux-icon>
+          </gux-screen-reader-beta>
         </button>
         <div>{this.getYearLabel(this.year)}</div>
         <button
@@ -291,12 +294,15 @@ export class GuxMonthCalendar {
         >
           <gux-icon
             icon-name="custom/chevron-right-small-regular"
-            screenreader-text={this.i18n('changeYear', {
+            decorative
+            size="small"
+          ></gux-icon>
+          <gux-screen-reader-beta>
+            {this.i18n('changeYear', {
               currentYear: parseInt(this.year),
               changeYear: parseInt(this.year) + 1
             })}
-            size="small"
-          ></gux-icon>
+          </gux-screen-reader-beta>
         </button>
       </div>
     ) as JSX.Element;
