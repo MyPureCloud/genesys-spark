@@ -1,6 +1,8 @@
 // https://jenkins.ininica.com/view/Common%20UI/job/cui-web-component-release-multi/
 // https://jenkins.ininica.com/view/Common%20UI/job/cui-web-component-feature-multi/
 
+env.NPM_CONFIG_USERCONFIG = "/var/build/npmrc-nexus"
+
 @Library('pipeline-library')
 import com.genesys.jenkins.Notifications
 

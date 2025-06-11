@@ -42,6 +42,7 @@ Type: `Promise<void>`
 ### Depends on
 
 - [gux-icon](../../../stable/gux-icon)
+- [gux-screen-reader-beta](../../gux-screen-reader)
 - [gux-month-list-item](./gux-month-list/gux-month-list-item)
 - [gux-month-list](gux-month-list)
 
@@ -49,6 +50,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   gux-month-calendar --> gux-icon
+  gux-month-calendar --> gux-screen-reader-beta
   gux-month-calendar --> gux-month-list-item
   gux-month-calendar --> gux-month-list
   gux-month-picker-beta --> gux-month-calendar

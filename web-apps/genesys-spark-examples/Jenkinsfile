@@ -1,5 +1,7 @@
 // https://jenkins.ininica.com/view/Common%20UI/job/spark-monorepo-examples/
 
+env.NPM_CONFIG_USERCONFIG = "/var/build/npmrc-nexus"
+
 @Library('pipeline-library')
 
 Boolean isMainBranch = env.BRANCH_NAME == 'main'

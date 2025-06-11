@@ -20,6 +20,7 @@
 ### Depends on
 
 - [gux-icon](../../stable/gux-icon)
+- [gux-screen-reader-beta](../gux-screen-reader)
 - [gux-month-calendar](gux-month-calendar)
 - [gux-popup](../../stable/gux-popup)
 
@@ -27,9 +28,11 @@
 ```mermaid
 graph TD;
   gux-month-picker-beta --> gux-icon
+  gux-month-picker-beta --> gux-screen-reader-beta
   gux-month-picker-beta --> gux-month-calendar
   gux-month-picker-beta --> gux-popup
   gux-month-calendar --> gux-icon
+  gux-month-calendar --> gux-screen-reader-beta
   gux-month-calendar --> gux-month-list-item
   gux-month-calendar --> gux-month-list
   style gux-month-picker-beta fill:#f9f,stroke:#333,stroke-width:4px

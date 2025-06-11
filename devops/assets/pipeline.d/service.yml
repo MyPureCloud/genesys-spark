@@ -15,3 +15,5 @@ costAllocation:
   businessUnit: CX
   consumedBy:
     - CX
+    - DX
+    - EX
