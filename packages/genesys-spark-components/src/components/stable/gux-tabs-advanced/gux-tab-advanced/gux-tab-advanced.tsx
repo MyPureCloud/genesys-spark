@@ -241,10 +241,13 @@ export class GuxTabAdvanced {
             >
               <gux-icon
                 icon-name="fa/ellipsis-vertical-regular"
-                screenreader-text={this.i18n('options', {
+                decorative
+              ></gux-icon>
+              <gux-screen-reader-beta>
+                {this.i18n('options', {
                   tabTitle: this.tabTitle
                 })}
-              ></gux-icon>
+              </gux-screen-reader-beta>
             </button>
           </gux-button-slot>
           <gux-popover-list

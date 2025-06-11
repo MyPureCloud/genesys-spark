@@ -28,7 +28,10 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
                 <div class="gux-tab-options">
                   <gux-button-slot accent="ghost">
                     <button aria-expanded="false" class="gux-tab-options-trigger" id="gux-i" tabindex="-1" type="button">
-                      <gux-icon icon-name="fa/ellipsis-vertical-regular" screenreader-text="Tab Options for "></gux-icon>
+                      <gux-icon decorative="" icon-name="fa/ellipsis-vertical-regular"></gux-icon>
+                      <gux-screen-reader-beta>
+                        Tab Options for
+                      </gux-screen-reader-beta>
                     </button>
                   </gux-button-slot>
                   <gux-popover-list closeonclickoutside="" for="gux-i" position="top-end">
@@ -96,7 +99,10 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
         <gux-button-slot accent="ghost">
           <button>
             <slot-fb hidden="" name="add-tab">
-              <gux-icon icon-name="fa/plus-regular" screenreader-text="Add View" size="small"></gux-icon>
+              <gux-icon decorative="" icon-name="fa/plus-regular" size="small"></gux-icon>
+              <gux-screen-reader-beta>
+                Add View
+              </gux-screen-reader-beta>
             </slot-fb>
             <div slot="add-tab">
               <gux-icon decorative="" icon-name="file-preview"></gux-icon>
