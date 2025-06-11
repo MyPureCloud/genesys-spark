@@ -617,16 +617,17 @@ export class GuxTabAdvancedList {
                 <gux-icon
                   size="small"
                   icon-name="fa/plus-regular"
-                  screenreader-text={
-                    this.disableAddTabButton
-                      ? this.i18n('disableNewTab')
-                      : this.root.querySelector('[slot="add-tab"]')
-                        ? this.root
-                            .querySelector('[slot="add-tab"]')
-                            .textContent.trim()
-                        : this.i18n('createNewTab')
-                  }
+                  decorative
                 ></gux-icon>
+                <gux-screen-reader-beta>
+                  {this.disableAddTabButton
+                    ? this.i18n('disableNewTab')
+                    : this.root.querySelector('[slot="add-tab"]')
+                      ? this.root
+                          .querySelector('[slot="add-tab"]')
+                          .textContent.trim()
+                      : this.i18n('createNewTab')}
+                </gux-screen-reader-beta>
               </slot>
             </button>
           </gux-button-slot>
@@ -648,8 +649,11 @@ export class GuxTabAdvancedList {
               <gux-icon
                 size="small"
                 icon-name={this.getChevronIconName(direction)}
-                screenreader-text={this.i18n(direction)}
+                decorative
               />
+              <gux-screen-reader-beta>
+                {this.i18n(direction)}
+              </gux-screen-reader-beta>
             </button>
           </gux-button-slot>
         ) : null}
