@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.154.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.0...v4.154.1) (2025-06-11)
+
+
+### Bug Fixes
+
+* **month-picker-beta:** Improve NVDA accessibility of buttons ([#1164](https://github.com/MyPureCloud/genesys-spark/issues/1164)) ([bb4f5ff](https://github.com/MyPureCloud/genesys-spark/commit/bb4f5ff872c58ecdfa46298453a15a876bdfe52a))
+* **table:** Added horizontal scroll check for focus ([32f14bc](https://github.com/MyPureCloud/genesys-spark/commit/32f14bc32aaf1786bfeace88c1ffdea9729cb325))
+* **tag:** Improve NVDA accessibility of remove button ([#1160](https://github.com/MyPureCloud/genesys-spark/issues/1160)) ([10f0d9d](https://github.com/MyPureCloud/genesys-spark/commit/10f0d9d1b1f86fecd55349d96a6a8ab6ecc3cf13))
+
 ## [4.154.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.153.1...v4.154.0) (2025-06-10)
 
 
