@@ -135,8 +135,11 @@ export class GuxTableToolbarMenuButton {
                 <gux-icon
                   icon-name="fa/ellipsis-regular"
                   size="small"
-                  screenreaderText={this.i18n('additionalActions')}
+                  decorative
                 ></gux-icon>
+                <gux-screen-reader-beta>
+                  {this.i18n('additionalActions')}
+                </gux-screen-reader-beta>
               </button>
               {this.renderTooltip()}
             </gux-button-slot>
