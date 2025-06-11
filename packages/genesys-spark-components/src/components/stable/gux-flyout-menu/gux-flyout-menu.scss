@@ -22,9 +22,14 @@
   display: none;
   border: none;
   border-radius: ui.$gse-ui-menu-borderRadius;
+  opacity: 0;
 
   &.gux-shown {
     display: flex;
+    animation-name: fade-in;
+    animation-duration: 100ms;
+    animation-delay: 350ms;
+    animation-fill-mode: forwards;
   }
 
   .gux-arrow {
@@ -52,5 +57,15 @@
     filter: drop-shadow(
       0 0 4px #{global.$gse-semantic-effects-boxShadow}
     ); // TODO: COMUI-2993 Replace this token with menu-specific token
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
