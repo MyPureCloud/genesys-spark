@@ -60,18 +60,18 @@ describe('gux-popover-list', () => {
       element.isOpen = true;
       await page.waitForChanges();
       expect(elementWrapper).not.toHaveClass('gux-hidden');
-      expect(autoUpdateSpy).toBeCalledTimes(1);
+      expect(autoUpdateSpy).toHaveBeenCalledTimes(1);
       expect(cleanupSpy).not.toBeCalled();
 
       element.isOpen = false;
       await page.waitForChanges();
       expect(elementWrapper).toHaveClass('gux-hidden');
-      expect(cleanupSpy).toBeCalledTimes(1);
+      expect(cleanupSpy).toHaveBeenCalledTimes(1);
 
       element.isOpen = true;
       await page.waitForChanges();
-      expect(autoUpdateSpy).toBeCalledTimes(2);
-      expect(cleanupSpy).toBeCalledTimes(1);
+      expect(autoUpdateSpy).toHaveBeenCalledTimes(2);
+      expect(cleanupSpy).toHaveBeenCalledTimes(2);
     });
   });
 });

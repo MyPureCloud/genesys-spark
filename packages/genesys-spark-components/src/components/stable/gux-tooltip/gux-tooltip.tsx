@@ -115,6 +115,10 @@ export class GuxTooltip {
   }
 
   private runUpdatePosition(): void {
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
+
     this.cleanupUpdatePosition = autoUpdate(
       this.forElement,
       this.root,
