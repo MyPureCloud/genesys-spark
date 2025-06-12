@@ -93,6 +93,7 @@ export class GuxModalSidePanel {
       <dialog
         ref={el => (this.dialogElement = el as HTMLDialogElement)}
         aria-labelledby={titleID}
+        class={{ open: this.open }}
       >
         <gux-side-panel-beta size={this.size}>
           <div slot="heading" id={titleID}>
