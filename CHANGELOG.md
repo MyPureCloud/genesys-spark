@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.154.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.1...v4.154.3) (2025-06-12)
+
+
+### Bug Fixes
+
+* **flyout-menu:** add animation delay when showing ([2443bbf](https://github.com/MyPureCloud/genesys-spark/commit/2443bbf65091c4d0c33f2fbdccce439aca453bc5))
+* **selector-card-beta:** inherit inline-size ([#1106](https://github.com/MyPureCloud/genesys-spark/issues/1106)) ([3eb3f3e](https://github.com/MyPureCloud/genesys-spark/commit/3eb3f3e3b0d36a7217e3bb3db31b21c54a30f550))
+* **tab-advanced:** Improve NVDA button accessibility ([#1167](https://github.com/MyPureCloud/genesys-spark/issues/1167)) ([6ce97d9](https://github.com/MyPureCloud/genesys-spark/commit/6ce97d9363ebdfa7d06aa039e48f2f05b33c4351))
+
 ### [4.154.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.0...v4.154.1) (2025-06-11)
 
 
