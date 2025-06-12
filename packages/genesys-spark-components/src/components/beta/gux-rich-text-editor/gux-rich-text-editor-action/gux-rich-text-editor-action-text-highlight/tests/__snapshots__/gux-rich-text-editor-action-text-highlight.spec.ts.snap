@@ -6,7 +6,10 @@ exports[`gux-rich-text-editor-action-text-highlight should build and render 1`] 
     <gux-popup exceedtargetwidth="" placement="bottom-start">
       <gux-button-slot accent="ghost" icon-only="" slot="target">
         <button aria-expanded="false" aria-haspopup="true" aria-pressed="false" type="button">
-          <gux-icon icon-name="fa/highlighter-line-regular" screenreader-text="Text Highlight" size="small"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/highlighter-line-regular" size="small"></gux-icon>
+          <gux-screen-reader-beta>
+            Text Highlight
+          </gux-screen-reader-beta>
         </button>
         <gux-tooltip-beta>
           <div slot="content">
