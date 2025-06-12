@@ -21,7 +21,10 @@
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
  - [gux-inline-alert](../../stable/gux-inline-alert)
  - [gux-label-info-beta](../gux-label-info)
+ - [gux-month-calendar](../gux-month-picker/gux-month-calendar)
+ - [gux-month-picker-beta](../gux-month-picker)
  - [gux-pagination-cursor](../../stable/gux-pagination-cursor)
+ - [gux-tag](../../stable/gux-tag)
 
 ### Graph
 ```mermaid
@@ -31,7 +34,10 @@ graph TD;
   gux-icon-tooltip-beta --> gux-screen-reader-beta
   gux-inline-alert --> gux-screen-reader-beta
   gux-label-info-beta --> gux-screen-reader-beta
+  gux-month-calendar --> gux-screen-reader-beta
+  gux-month-picker-beta --> gux-screen-reader-beta
   gux-pagination-cursor --> gux-screen-reader-beta
+  gux-tag --> gux-screen-reader-beta
   style gux-screen-reader-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

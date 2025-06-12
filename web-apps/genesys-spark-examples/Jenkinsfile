@@ -1,3 +1,5 @@
+// https://jenkins.ininica.com/view/Common%20UI/job/spark-monorepo-examples/
+
 @Library('pipeline-library')
 
 Boolean isMainBranch = env.BRANCH_NAME == 'main'
@@ -8,31 +10,22 @@ Boolean isFeatureBranch = env.BRANCH_NAME.startsWith('feature/') || env.BRANCH_N
 
 Boolean isReleaseBranch = isMainBranch
 
-webappPipeline {
-    projectName = 'common-ui-docs/genesys-webcomponents'
+webappPipelineV2 {
+    urlPrefix = 'common-ui-docs/genesys-webcomponents'
     agentLabel = 'dev_x86_shared'
-    team = 'Core UI'
-    jiraProjectKey = 'COMUI'
+    nodeVersion = '20.x multiarch'
     mailer = 'CoreUI@genesys.com'
     chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
-    nodeVersion = '20.x multiarch'
-    testJob = 'no-tests'
-    deployConfig = [dev : 'always']
     manifest = customManifest('./web-apps/genesys-spark-examples/dist') {
         sh('./web-apps/genesys-spark-examples/scripts/generate-manifest.js')
         readJSON(file: './web-apps/genesys-spark-examples/manifest.json')
     }
-    skipCommitsFrom = []
-    buildType = {
-        if (isReleaseBranch) {
-            return 'MAINLINE'
-        }
-
-        return isFeatureBranch ? 'FEATURE' : 'CI'
+    prepareStep = {
+        sh('npm run devops.create.pipeline.examples')
+        sh('npm ci')
     }
     ciTests = {
         sh('printenv')
-        sh('npm ci')
     }
     buildStep = { assetPrefix ->
         if (isReleaseBranch) {
@@ -45,15 +38,7 @@ webappPipeline {
             currentBuild.description = env.BRANCH_NAME
         }
 
-        String cdnUrl = assetPrefix
-        // This is a bit of a kludge, but the build pipeline is intended for apps, which
-        // can use relative URLs to load assets. Because the components are running inside
-        // apps, they have to load their assets from a full URL on the new UI hosting stack.
-        if (assetPrefix.startsWith('/')) {
-            cdnUrl = "https://app.mypurecloud.com${assetPrefix}genesys-webcomponents/"
-        }
-
-        env.CDN_URL = cdnUrl
+        env.ASSET_PREFIX = assetPrefix
 
         sh('npm run build')
     }

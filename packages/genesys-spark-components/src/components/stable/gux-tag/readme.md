@@ -36,12 +36,14 @@
 
 - [gux-tooltip-title](../gux-tooltip-title)
 - [gux-icon](../gux-icon)
+- [gux-screen-reader-beta](../../beta/gux-screen-reader)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-tag --> gux-tooltip-title
   gux-tag --> gux-icon
+  gux-tag --> gux-screen-reader-beta
   gux-tooltip-title --> gux-tooltip
   style gux-tag fill:#f9f,stroke:#333,stroke-width:4px
 ```
