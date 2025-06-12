@@ -137,8 +137,11 @@ export class GuxTableToolbarMenuButton {
                   size="small"
                   decorative
                 ></gux-icon>
-                {this.renderTooltip()}
+                <gux-screen-reader-beta>
+                  {this.i18n('additionalActions')}
+                </gux-screen-reader-beta>
               </button>
+              {this.renderTooltip()}
             </gux-button-slot>
           </div>
           <div class="gux-list-container" slot="popup">

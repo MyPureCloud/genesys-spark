@@ -20,12 +20,15 @@ exports[`gux-table-toolbar #render should render table toolbar as expected 1`] =
                 <gux-button-slot accent="secondary">
                   <button aria-expanded="false" aria-haspopup="true" class="gux-menu-button" type="button">
                     <gux-icon decorative="" icon-name="fa/ellipsis-regular" size="small"></gux-icon>
-                    <gux-tooltip-beta>
-                      <div slot="content">
-                        Additional Actions
-                      </div>
-                    </gux-tooltip-beta>
+                    <gux-screen-reader-beta>
+                      Additional Actions
+                    </gux-screen-reader-beta>
                   </button>
+                  <gux-tooltip-beta>
+                    <div slot="content">
+                      Additional Actions
+                    </div>
+                  </gux-tooltip-beta>
                 </gux-button-slot>
               </div>
               <div class="gux-list-container" slot="popup">
