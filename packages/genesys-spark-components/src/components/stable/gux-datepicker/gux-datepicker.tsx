@@ -689,6 +689,10 @@ export class GuxDatepicker {
   }
 
   private runUpdatePosition(): void {
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
+
     this.cleanupUpdatePosition = autoUpdate(
       this.datepickerElement,
       this.calendarElement,
