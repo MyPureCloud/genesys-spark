@@ -1,9 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-table-toolbar-custom-action #render Should render as expected for "primary" accent 1`] = `
-<gux-table-toolbar-custom-action>
+exports[`gux-table-toolbar-custom-action #render Should render as expected for "ghost" accent 1`] = `
+<gux-table-toolbar-custom-action accent="ghost">
   <template shadowrootmode="open">
-    <gux-button-slot accent="secondary">
+    <gux-button-slot accent="ghost">
+      <button class="gux-action-title" type="button">
+        <slot name="icon"></slot>
+        <span>
+          <slot name="text"></slot>
+        </span>
+      </button>
+    </gux-button-slot>
+  </template>
+  <span slot="text">
+    Filter
+  </span>
+  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+</gux-table-toolbar-custom-action>
+`;
+
+exports[`gux-table-toolbar-custom-action #render Should render as expected for "primary" accent 1`] = `
+<gux-table-toolbar-custom-action accent="primary">
+  <template shadowrootmode="open">
+    <gux-button-slot accent="primary">
       <button class="gux-action-title" type="button">
         <slot name="icon"></slot>
         <span>
@@ -20,7 +39,7 @@ exports[`gux-table-toolbar-custom-action #render Should render as expected for "
 `;
 
 exports[`gux-table-toolbar-custom-action #render Should render as expected for "secondary" accent 1`] = `
-<gux-table-toolbar-custom-action>
+<gux-table-toolbar-custom-action accent="secondary">
   <template shadowrootmode="open">
     <gux-button-slot accent="secondary">
       <button class="gux-action-title" type="button">
