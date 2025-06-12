@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`gux-table-toolbar-custom-action #render Should render as expected for "primary" accent 1`] = `
+<gux-table-toolbar-custom-action>
+  <template shadowrootmode="open">
+    <gux-button-slot accent="secondary">
+      <button class="gux-action-title" type="button">
+        <slot name="icon"></slot>
+        <span>
+          <slot name="text"></slot>
+        </span>
+      </button>
+    </gux-button-slot>
+  </template>
+  <span slot="text">
+    Filter
+  </span>
+  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+</gux-table-toolbar-custom-action>
+`;
+
+exports[`gux-table-toolbar-custom-action #render Should render as expected for "secondary" accent 1`] = `
+<gux-table-toolbar-custom-action>
+  <template shadowrootmode="open">
+    <gux-button-slot accent="secondary">
+      <button class="gux-action-title" type="button">
+        <slot name="icon"></slot>
+        <span>
+          <slot name="text"></slot>
+        </span>
+      </button>
+    </gux-button-slot>
+  </template>
+  <span slot="text">
+    Filter
+  </span>
+  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+</gux-table-toolbar-custom-action>
+`;
+
 exports[`gux-table-toolbar-custom-action #render should render a toolbar-custom-action 1`] = `
 <gux-table-toolbar-custom-action>
   <template shadowrootmode="open">
@@ -29,6 +67,30 @@ exports[`gux-table-toolbar-custom-action #render should render disabled toolbar-
           <slot name="text"></slot>
         </span>
       </button>
+    </gux-button-slot>
+  </template>
+  <span slot="text">
+    Filter
+  </span>
+  <gux-icon decorative="" icon-name="filter" slot="icon"></gux-icon>
+</gux-table-toolbar-custom-action>
+`;
+
+exports[`gux-table-toolbar-custom-action #render should render icon-only toolbar-custom-action 1`] = `
+<gux-table-toolbar-custom-action icon-only="">
+  <template shadowrootmode="open">
+    <gux-button-slot accent="secondary">
+      <button class="gux-action-title" type="button">
+        <slot name="icon"></slot>
+        <span class="gux-sr-only">
+          <slot name="text"></slot>
+        </span>
+      </button>
+      <gux-tooltip>
+        <div slot="content">
+          Filter
+        </div>
+      </gux-tooltip>
     </gux-button-slot>
   </template>
   <span slot="text">
