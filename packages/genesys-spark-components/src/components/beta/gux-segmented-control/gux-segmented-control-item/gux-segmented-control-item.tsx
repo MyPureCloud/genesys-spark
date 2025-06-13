@@ -116,6 +116,7 @@ export class GuxSegmentedControlItem {
           type="button"
           aria-current={this.selected ? 'true' : 'false'}
           disabled={this.disabled || this.hasDisabledParent()}
+          aria-label={getSlotTextContent(this.root, 'text')}
         >
           {this.renderIconSlot()}
           <div
