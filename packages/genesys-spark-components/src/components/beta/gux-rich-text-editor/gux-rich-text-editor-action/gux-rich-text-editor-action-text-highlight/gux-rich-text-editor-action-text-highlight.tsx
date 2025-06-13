@@ -182,8 +182,11 @@ export class GuxRichTextEditorActionTextHighlight {
           <gux-icon
             size="small"
             icon-name="fa/highlighter-line-regular"
-            screenreader-text={this.i18n('textHighlight')}
+            decorative
           ></gux-icon>
+          <gux-screen-reader-beta>
+            {this.i18n('textHighlight')}
+          </gux-screen-reader-beta>
         </button>
         {this.renderTooltip()}
       </gux-button-slot>

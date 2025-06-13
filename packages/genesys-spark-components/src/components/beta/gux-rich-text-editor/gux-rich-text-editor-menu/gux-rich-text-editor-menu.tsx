@@ -136,9 +136,12 @@ export class GuxRichTextEditorMenu {
               >
                 <gux-icon
                   icon-name="fa/ellipsis-vertical-regular"
-                  screenreader-text={this.i18n('additionalActions')}
+                  decorative
                   size="small"
                 ></gux-icon>
+                <gux-screen-reader-beta>
+                  {this.i18n('additionalActions')}
+                </gux-screen-reader-beta>
               </button>
               {this.renderTooltip()}
             </gux-button-slot>
