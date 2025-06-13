@@ -73,6 +73,7 @@ Type: `Promise<void>`
 
 - [gux-button-slot](../../gux-button-slot)
 - [gux-icon](../../gux-icon)
+- [gux-screen-reader-beta](../../../beta/gux-screen-reader)
 - [gux-popover-list](../../gux-popover-list)
 - [gux-tooltip-title](../../gux-tooltip-title)
 
@@ -81,6 +82,7 @@ Type: `Promise<void>`
 graph TD;
   gux-tab-advanced --> gux-button-slot
   gux-tab-advanced --> gux-icon
+  gux-tab-advanced --> gux-screen-reader-beta
   gux-tab-advanced --> gux-popover-list
   gux-tab-advanced --> gux-tooltip-title
   gux-popover-list --> gux-dismiss-button

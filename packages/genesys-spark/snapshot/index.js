@@ -228,10 +228,12 @@ function loadSparkFonts(opts) {
   const fontOrigin = getFontOrigin();
   const flareFonts = {
     Urbanist: `${fontOrigin}/webfonts/urbanist.css`,
-    "Noto Sans": `${fontOrigin}/webfonts/noto-sans.css`
+    "Noto Sans": `${fontOrigin}/webfonts/noto-sans.css`,
+    "Noto Sans Mono": `${fontOrigin}/webfonts/noto-sans-mono.css`
   };
   const legacyFonts = {
-    Roboto: `${fontOrigin}/webfonts/roboto.css`
+    Roboto: `${fontOrigin}/webfonts/roboto.css`,
+    "Noto Sans Mono": `${fontOrigin}/webfonts/noto-sans-mono.css`
   };
   const FONTS = (opts == null ? void 0 : opts.theme) === "legacy" ? legacyFonts : flareFonts;
   return checkAndLoadFonts(FONTS);
