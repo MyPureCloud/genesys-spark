@@ -30,6 +30,7 @@ graph TD;
   gux-table-toolbar-menu-button --> gux-popup
   gux-table-toolbar-menu-button --> gux-button-slot
   gux-table-toolbar-menu-button --> gux-icon
+  gux-table-toolbar-menu-button --> gux-screen-reader-beta
   gux-table-toolbar-menu-button --> gux-list
   gux-tooltip-beta --> gux-tooltip-base-beta
   style gux-table-toolbar fill:#f9f,stroke:#333,stroke-width:4px

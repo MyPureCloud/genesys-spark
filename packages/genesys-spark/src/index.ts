@@ -28,10 +28,12 @@ export function loadSparkFonts(opts?: registerOptions): Promise<void> {
   const fontOrigin = getFontOrigin();
   const flareFonts = {
     Urbanist: `${fontOrigin}/webfonts/urbanist.css`,
-    'Noto Sans': `${fontOrigin}/webfonts/noto-sans.css`
+    'Noto Sans': `${fontOrigin}/webfonts/noto-sans.css`,
+    'Noto Sans Mono': `${fontOrigin}/webfonts/noto-sans-mono.css`
   };
   const legacyFonts = {
-    Roboto: `${fontOrigin}/webfonts/roboto.css`
+    Roboto: `${fontOrigin}/webfonts/roboto.css`,
+    'Noto Sans Mono': `${fontOrigin}/webfonts/noto-sans-mono.css`
   };
 
   const FONTS = opts?.theme === 'legacy' ? legacyFonts : flareFonts;

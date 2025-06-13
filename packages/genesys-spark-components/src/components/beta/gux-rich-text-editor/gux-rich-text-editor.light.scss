@@ -33,16 +33,19 @@
 
   pre {
     padding: ui.$gse-ui-rte-codeBlock-padding;
-    font-family: ui.$gse-ui-rte-codeBlock-sm-regular-fontFamily;
-    font-size: ui.$gse-ui-rte-codeBlock-sm-regular-fontSize;
-    font-weight: ui.$gse-ui-rte-codeBlock-sm-regular-fontWeight;
-    line-height: ui.$gse-ui-rte-codeBlock-sm-regular-lineHeight;
-    color: ui.$gse-ui-rte-codeBlock-foregroundColor;
-    white-space: pre-wrap;
     background-color: ui.$gse-ui-rte-codeBlock-backgroundColor;
     border: ui.$gse-ui-rte-codeBlock-border-width
       ui.$gse-ui-rte-codeBlock-border-style
       ui.$gse-ui-rte-codeBlock-border-color;
     border-radius: ui.$gse-ui-rte-codeBlock-borderRadius;
+
+    code {
+      font-family: ui.$gse-ui-rte-codeBlock-sm-regular-fontFamily;
+      font-size: ui.$gse-ui-rte-codeBlock-sm-regular-fontSize;
+      font-weight: ui.$gse-ui-rte-codeBlock-sm-regular-fontWeight;
+      line-height: ui.$gse-ui-rte-codeBlock-sm-regular-lineHeight;
+      color: ui.$gse-ui-rte-codeBlock-foregroundColor;
+      white-space: pre-wrap;
+    }
   }
 }
