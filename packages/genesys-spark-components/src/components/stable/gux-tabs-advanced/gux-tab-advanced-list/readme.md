@@ -47,12 +47,14 @@ Type: `Promise<void>`
 
 - [gux-button-slot](../../gux-button-slot)
 - [gux-icon](../../gux-icon)
+- [gux-screen-reader-beta](../../../beta/gux-screen-reader)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-tab-advanced-list --> gux-button-slot
   gux-tab-advanced-list --> gux-icon
+  gux-tab-advanced-list --> gux-screen-reader-beta
   style gux-tab-advanced-list fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

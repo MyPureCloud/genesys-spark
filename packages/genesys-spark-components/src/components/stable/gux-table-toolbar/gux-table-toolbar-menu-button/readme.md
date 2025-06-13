@@ -24,6 +24,7 @@
 - [gux-popup](../../gux-popup)
 - [gux-button-slot](../../gux-button-slot)
 - [gux-icon](../../gux-icon)
+- [gux-screen-reader-beta](../../../beta/gux-screen-reader)
 - [gux-list](../../gux-list)
 
 ### Graph
@@ -33,6 +34,7 @@ graph TD;
   gux-table-toolbar-menu-button --> gux-popup
   gux-table-toolbar-menu-button --> gux-button-slot
   gux-table-toolbar-menu-button --> gux-icon
+  gux-table-toolbar-menu-button --> gux-screen-reader-beta
   gux-table-toolbar-menu-button --> gux-list
   gux-tooltip-beta --> gux-tooltip-base-beta
   gux-table-toolbar --> gux-table-toolbar-menu-button
