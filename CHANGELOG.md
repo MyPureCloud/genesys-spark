@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.154.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.4...v4.154.5) (2025-06-14)
+
+
+### Bug Fixes
+
+* **other:** added missing "Noto Sans Mono" font ([524a917](https://github.com/MyPureCloud/genesys-spark/commit/524a9178e7aa9f9b81d171e2eb75642c99b63396))
+* **rich-text-editor-beta:** Update buttons for NVDA accessibility ([#1172](https://github.com/MyPureCloud/genesys-spark/issues/1172)) ([fdd20bb](https://github.com/MyPureCloud/genesys-spark/commit/fdd20bb002e29fc2f7ace69a8e6a47e0b5041400))
+
 ### [4.154.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.3...v4.154.4) (2025-06-13)
 
 ### [4.154.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.1...v4.154.3) (2025-06-12)
