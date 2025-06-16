@@ -255,6 +255,13 @@
     #263b73 0.16%,
     #152550 98.45%
   );
+  --gse-ui-rating-star-gap: 8px;
+  --gse-ui-rating-default-color: #a3a8b5;
+  --gse-ui-rating-active-color: #2143a2;
+  --gse-ui-rating-hover-color: #19327a;
+  --gse-ui-rating-disabled-color: #a3a8b5;
+  --gse-ui-rating-disabled-opacity: 0.5;
+  --gse-ui-rating-size: 16px;
   --gse-ui-card-backgroundColor: #ffffff;
   --gse-ui-card-borderRadius: 8px;
   --gse-ui-card-default-border-color: #c1c6d4;
@@ -413,13 +420,6 @@
   --gse-ui-alert-emphasisText-fontSize: 12px;
   --gse-ui-alert-emphasisText-lineHeight: 18px;
   --gse-ui-alert-borderRadius: 4px;
-  --gse-ui-rating-default-color: #a3a8b5;
-  --gse-ui-rating-active-color: #2143a2;
-  --gse-ui-rating-hover-color: #19327a;
-  --gse-ui-rating-disabled-color: #a3a8b5;
-  --gse-ui-rating-disabled-opacity: 0.5;
-  --gse-ui-rating-size: 16px;
-  --gse-ui-rating-star-gap: 8px;
   --gse-ui-breadcrumbs-primary-height: 20px;
   --gse-ui-breadcrumbs-primary-separator-padding: 0 12px;
   --gse-ui-breadcrumbs-primary-separator-typography-fontFamily: "Noto Sans";
@@ -1016,6 +1016,13 @@
   --gse-ui-stepper-hover-text-lineHeight: 16px;
   --gse-ui-stepper-hover-text-textDecoration: underline;
   --gse-ui-calendar-ctaGroup-padding: 18px 24px;
+  --gse-ui-ratingGroup-gap-md: 4px;
+  --gse-ui-ratingGroup-gap-lg: 8px;
+  --gse-ui-ratingGroup-label: #2a2a2e;
+  --gse-ui-ratingGroup-text-fontFamily: "Noto Sans";
+  --gse-ui-ratingGroup-text-fontWeight: 600;
+  --gse-ui-ratingGroup-text-fontSize: 12px;
+  --gse-ui-ratingGroup-text-lineHeight: 18px;
   --gse-ui-search-counter-default-foregroundColor: #6a6d75;
   --gse-ui-search-counter-hover-foregroundColor: #19327a;
   --gse-ui-search-counter-divider-border-color: #a3a8b5;
@@ -2472,6 +2479,13 @@
     #141929 0.16%,
     #131315 98.45%
   );
+  --gse-ui-rating-star-gap: 8px;
+  --gse-ui-rating-default-color: #848891;
+  --gse-ui-rating-active-color: #5476d5;
+  --gse-ui-rating-hover-color: #829ce5;
+  --gse-ui-rating-disabled-color: #848891;
+  --gse-ui-rating-disabled-opacity: 0.5;
+  --gse-ui-rating-size: 16px;
   --gse-ui-card-backgroundColor: #2a2a2e;
   --gse-ui-card-borderRadius: 8px;
   --gse-ui-card-default-border-color: #4f5157;
@@ -2630,13 +2644,6 @@
   --gse-ui-alert-emphasisText-fontSize: 12px;
   --gse-ui-alert-emphasisText-lineHeight: 18px;
   --gse-ui-alert-borderRadius: 4px;
-  --gse-ui-rating-default-color: #848891;
-  --gse-ui-rating-active-color: #5476d5;
-  --gse-ui-rating-hover-color: #829ce5;
-  --gse-ui-rating-disabled-color: #848891;
-  --gse-ui-rating-disabled-opacity: 0.5;
-  --gse-ui-rating-size: 16px;
-  --gse-ui-rating-star-gap: 8px;
   --gse-ui-breadcrumbs-primary-height: 20px;
   --gse-ui-breadcrumbs-primary-separator-padding: 0 12px;
   --gse-ui-breadcrumbs-primary-separator-typography-fontFamily: "Noto Sans";
@@ -3233,6 +3240,13 @@
   --gse-ui-stepper-hover-text-lineHeight: 16px;
   --gse-ui-stepper-hover-text-textDecoration: underline;
   --gse-ui-calendar-ctaGroup-padding: 18px 24px;
+  --gse-ui-ratingGroup-gap-md: 4px;
+  --gse-ui-ratingGroup-gap-lg: 8px;
+  --gse-ui-ratingGroup-label: #ffffff;
+  --gse-ui-ratingGroup-text-fontFamily: "Noto Sans";
+  --gse-ui-ratingGroup-text-fontWeight: 600;
+  --gse-ui-ratingGroup-text-fontSize: 12px;
+  --gse-ui-ratingGroup-text-lineHeight: 18px;
   --gse-ui-search-counter-default-foregroundColor: #c1c6d4;
   --gse-ui-search-counter-hover-foregroundColor: #829ce5;
   --gse-ui-search-counter-divider-border-color: #848891;

@@ -512,6 +512,25 @@
       "secondary": "linear-gradient(358deg, #263b73 0.16%, #152550 98.45%)"
     }
   },
+  "rating": {
+    "star": {
+      "gap": "8px"
+    },
+    "default": {
+      "color": "#a3a8b5"
+    },
+    "active": {
+      "color": "#2143a2"
+    },
+    "hover": {
+      "color": "#19327a"
+    },
+    "disabled": {
+      "color": "#a3a8b5",
+      "opacity": ".5"
+    },
+    "size": "16px"
+  },
   "card": {
     "background-color": "#ffffff",
     "border_radius": "8px",
@@ -849,25 +868,6 @@
       "lineHeight": "18px"
     },
     "border_radius": "4px"
-  },
-  "rating": {
-    "default": {
-      "color": "#a3a8b5"
-    },
-    "active": {
-      "color": "#2143a2"
-    },
-    "hover": {
-      "color": "#19327a"
-    },
-    "disabled": {
-      "color": "#a3a8b5",
-      "opacity": ".5"
-    },
-    "size": "16px",
-    "star": {
-      "gap": "8px"
-    }
   },
   "breadcrumbs": {
     "primary": {
@@ -2193,6 +2193,19 @@
   "calendar": {
     "cta_group": {
       "padding": "18px 24px"
+    }
+  },
+  "rating_group": {
+    "gap": {
+      "md": "4px",
+      "lg": "8px"
+    },
+    "label": "#2a2a2e",
+    "text": {
+      "fontFamily": "'Noto Sans'",
+      "fontWeight": "600",
+      "fontSize": "12px",
+      "lineHeight": "18px"
     }
   },
   "search": {
