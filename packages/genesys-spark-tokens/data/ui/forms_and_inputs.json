@@ -367,7 +367,7 @@
       "type": "border"
     },
     "box_shadow": {
-      "value": "{container.sm.box_shadow}",
+      "value": "{shadow.6_floating_menu}",
       "type": "boxShadow"
     },
     "padding": {
@@ -786,7 +786,7 @@
       }
     },
     "box_shadow": {
-      "value": "{container.sm.box_shadow}",
+      "value": "{shadow.6_floating_menu}",
       "type": "boxShadow"
     },
     "cta_group": {
@@ -1231,9 +1231,8 @@
         }
       },
       "box_shadow": {
-        "value": "{container.sm.box_shadow}",
-        "type": "boxShadow",
-        "description": "The shadow we used for small-sized components like tooltips."
+        "value": "{shadow.1_card.default}",
+        "type": "boxShadow"
       },
       "status_icon": {
         "success": {
