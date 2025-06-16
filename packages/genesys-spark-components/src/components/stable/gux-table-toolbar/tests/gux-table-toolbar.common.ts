@@ -1,6 +1,6 @@
 export const renderConfigs = [
   {
-    description: 'Should render gux-table-toolbar',
+    description: 'should render gux-table-toolbar',
     html: `<gux-table-toolbar>
                 <div slot="search-and-filter">
                     <gux-form-field-search label-position="screenreader">
