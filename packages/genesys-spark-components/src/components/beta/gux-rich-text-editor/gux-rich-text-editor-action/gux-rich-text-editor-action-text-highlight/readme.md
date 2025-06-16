@@ -36,6 +36,7 @@
 - [gux-truncate](../../../../stable/gux-truncate)
 - [gux-rich-text-editor-list](../../gux-rich-text-editor-list)
 - [gux-icon](../../../../stable/gux-icon)
+- [gux-screen-reader-beta](../../../gux-screen-reader)
 - [gux-popup](../../../../stable/gux-popup)
 
 ### Graph
@@ -46,6 +47,7 @@ graph TD;
   gux-rich-text-editor-action-text-highlight --> gux-truncate
   gux-rich-text-editor-action-text-highlight --> gux-rich-text-editor-list
   gux-rich-text-editor-action-text-highlight --> gux-icon
+  gux-rich-text-editor-action-text-highlight --> gux-screen-reader-beta
   gux-rich-text-editor-action-text-highlight --> gux-popup
   gux-tooltip-beta --> gux-tooltip-base-beta
   gux-truncate --> gux-tooltip

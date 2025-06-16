@@ -17,6 +17,7 @@
 - [gux-popup](../../../stable/gux-popup)
 - [gux-button-slot](../../../stable/gux-button-slot)
 - [gux-icon](../../../stable/gux-icon)
+- [gux-screen-reader-beta](../../gux-screen-reader)
 - [gux-rich-text-editor-list](../gux-rich-text-editor-list)
 
 ### Graph
@@ -26,6 +27,7 @@ graph TD;
   gux-rich-text-editor-menu --> gux-popup
   gux-rich-text-editor-menu --> gux-button-slot
   gux-rich-text-editor-menu --> gux-icon
+  gux-rich-text-editor-menu --> gux-screen-reader-beta
   gux-rich-text-editor-menu --> gux-rich-text-editor-list
   gux-tooltip-beta --> gux-tooltip-base-beta
   gux-rich-text-editor-beta --> gux-rich-text-editor-menu
