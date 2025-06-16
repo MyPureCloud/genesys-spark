@@ -16,7 +16,6 @@ webappPipelineV2 {
     nodeVersion = '20.x multiarch'
     mailer = 'CoreUI@genesys.com'
     chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
-    releasableBranchPrefixes = ['main'] // This is a hack because the pipeline does not work correctly with github repos.
     skipCommitsFrom = [] // This job is triggered after another job has built and promoted assets, published packages and committed a version bump so we can't skip commmits from jenkins.
     manifest = customManifest('./web-apps/genesys-spark-examples/dist') {
         sh('./web-apps/genesys-spark-examples/scripts/generate-manifest.js')

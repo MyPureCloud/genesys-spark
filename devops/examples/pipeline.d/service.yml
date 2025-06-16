@@ -9,7 +9,7 @@ service:
   jiraProjectKey: COMUI
   pmContact: brian.dupuis@genesys.com
   qaContact: yahia.tahat@genesys.com
-  gitDefaultBranch: main
+  gitDefaultBranch: master # This is a hack becasue skynet does not work with github and uses the npm-utils repo instead
 costAllocation:
   productGroup: Platform
   businessUnit: CX
