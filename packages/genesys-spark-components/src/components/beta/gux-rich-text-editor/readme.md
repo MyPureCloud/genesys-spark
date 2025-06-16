@@ -54,6 +54,7 @@ graph TD;
   gux-rich-text-editor-menu --> gux-popup
   gux-rich-text-editor-menu --> gux-button-slot
   gux-rich-text-editor-menu --> gux-icon
+  gux-rich-text-editor-menu --> gux-screen-reader-beta
   gux-rich-text-editor-menu --> gux-rich-text-editor-list
   gux-tooltip-beta --> gux-tooltip-base-beta
   style gux-rich-text-editor-beta fill:#f9f,stroke:#333,stroke-width:4px

@@ -21,6 +21,7 @@
 - [gux-tooltip-beta](../../gux-tooltip-beta)
 - [gux-button-slot](../../../stable/gux-button-slot)
 - [gux-icon](../../../stable/gux-icon)
+- [gux-screen-reader-beta](../../gux-screen-reader)
 
 ### Graph
 ```mermaid
@@ -28,6 +29,7 @@ graph TD;
   gux-rich-text-editor-action --> gux-tooltip-beta
   gux-rich-text-editor-action --> gux-button-slot
   gux-rich-text-editor-action --> gux-icon
+  gux-rich-text-editor-action --> gux-screen-reader-beta
   gux-tooltip-beta --> gux-tooltip-base-beta
   style gux-rich-text-editor-action fill:#f9f,stroke:#333,stroke-width:4px
 ```
