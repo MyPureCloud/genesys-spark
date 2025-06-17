@@ -147,6 +147,10 @@ export class GuxTooltipBase {
   @Watch('offsetX')
   @Watch('offsetY')
   private runUpdatePosition(): void {
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
+
     const ref =
       this.followMouse && this.refElement ? this.refElement : this.forElement;
     this.cleanupUpdatePosition = autoUpdate(

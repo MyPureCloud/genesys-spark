@@ -77,6 +77,10 @@ export class GuxPopup {
   internalcollapsed: EventEmitter<void>;
 
   private runUpdatePosition(): void {
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
+
     this.cleanupUpdatePosition = autoUpdate(
       this.targetElementContainer,
       this.popupElementContainer,

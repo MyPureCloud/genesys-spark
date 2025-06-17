@@ -121,6 +121,10 @@ export class GuxPopover {
   }
 
   private runUpdatePosition(): void {
+    if (this.cleanupUpdatePosition) {
+      this.cleanupUpdatePosition();
+    }
+
     if (this.root.isConnected) {
       this.cleanupUpdatePosition = autoUpdate(
         findElementById(this.root, this.for),
