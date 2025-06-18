@@ -4,6 +4,7 @@ import { renderConfigs } from './gux-radial-loading.common';
 test.describe('gux-radial-loading', () => {
   checkRenders({
     renderConfigs,
-    element: 'gux-radial-loading'
+    element: 'gux-radial-loading',
+    disableAnimations: true
   });
 });
