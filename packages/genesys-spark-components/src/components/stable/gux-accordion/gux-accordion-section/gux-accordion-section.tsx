@@ -87,6 +87,8 @@ export class GuxAccordionSection {
   private handleSlotChange(slotname: 'header' | 'subheader'): void {
     const slot = this.root.querySelector(`[slot="${slotname}"]`);
 
+    slot.role = 'presentation';
+
     if (!slot || !/^H[1-6]$/.test(slot.nodeName)) {
       logError(
         this.root,
