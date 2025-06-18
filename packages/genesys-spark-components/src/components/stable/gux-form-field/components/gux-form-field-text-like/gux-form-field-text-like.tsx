@@ -7,7 +7,11 @@ import {
   Method,
   Prop,
   State,
-  Listen
+  Listen,
+  Watch,
+  Host,
+  Event,
+  EventEmitter
 } from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
@@ -38,6 +42,7 @@ import {
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 import { focusInputElement } from '@utils/dom/focus-input-element';
+import { GuxFormFieldCharacterCount } from '../../functional-components/gux-form-field-character-count/gux-form-field-character-count';
 
 /**
  * @slot input - Required slot for input tag
@@ -81,6 +86,31 @@ export class GuxFormFieldTextLike {
   @Prop()
   indicatorMark: GuxFormFieldIndicatorMark = 'required';
 
+  /**
+   * The showCharacterCount property will display a charcter counter at the top right corner of the form-field indicating how many characters
+   * have been typed into the input.
+   */
+  @Prop()
+  showCharacterCount: boolean = false;
+
+  /**
+   * The characterLimit property defines the max character limit for the input.
+   */
+  @Prop()
+  characterLimit: number = 100;
+
+  /**
+   * A state to track wheter the amount of characters in the input has exceeded the characterLimit.
+   */
+  @State()
+  hasExceededCharacterLimit: boolean = false;
+
+  /**
+   * A state to track the character count on each keypress.
+   */
+  @State()
+  characterCount: number = 0;
+
   @State()
   private hasPrefix: boolean;
 
@@ -104,6 +134,19 @@ export class GuxFormFieldTextLike {
 
   @State()
   private hasHelp: boolean = false;
+
+  @Event() charactersExceeded: EventEmitter<void>;
+
+  @Event() charactersNotExceeded: EventEmitter<void>;
+
+  @Watch('hasExceededCharacterLimit')
+  onExceeded(exceeding: boolean): void {
+    if (exceeding === true) {
+      this.charactersExceeded.emit();
+    } else {
+      this.charactersNotExceeded.emit();
+    }
+  }
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
@@ -192,53 +235,61 @@ export class GuxFormFieldTextLike {
 
   render(): JSX.Element {
     return (
-      <GuxFormFieldContainer labelPosition={this.computedLabelPosition}>
-        <GuxFormFieldLabel
-          required={this.required}
-          position={this.computedLabelPosition}
-        >
-          <slot name="label" onSlotchange={() => this.setLabel()} />
-          <gux-form-field-label-indicator
-            variant={this.indicatorMark}
+      <Host>
+        <GuxFormFieldCharacterCount
+          characterCount={this.characterCount}
+          showCharacterCount={this.showCharacterCount}
+          characterLimit={this.characterLimit}
+          labelPosition={this.computedLabelPosition}
+        ></GuxFormFieldCharacterCount>
+        <GuxFormFieldContainer labelPosition={this.computedLabelPosition}>
+          <GuxFormFieldLabel
             required={this.required}
-          />
-          <slot name="label-info" />
-        </GuxFormFieldLabel>
-        <div class="gux-input-and-error-container">
-          <div
-            class={{
-              'gux-input': true,
-              'gux-input-error': this.hasError
-            }}
+            position={this.computedLabelPosition}
           >
+            <slot name="label" onSlotchange={() => this.setLabel()} />
+            <gux-form-field-label-indicator
+              variant={this.indicatorMark}
+              required={this.required}
+            />
+            <slot name="label-info" />
+          </GuxFormFieldLabel>
+          <div class="gux-input-and-error-container">
             <div
               class={{
-                'gux-input-container': true,
-                'gux-disabled': this.disabled,
-                'gux-has-prefix': this.hasPrefix,
-                'gux-has-suffix': this.hasSuffix
+                'gux-input': true,
+                'gux-input-error': this.hasError
               }}
-              onClick={() => focusInputElement(this.input)}
             >
-              <slot name="prefix" />
-              <slot name="input" />
-              {this.renderRadialLoading()}
-              <slot name="suffix" />
-              {this.clearable && this.hasContent && !this.disabled && (
-                <gux-form-field-input-clear-button
-                  onClick={() => clearInput(this.input)}
-                ></gux-form-field-input-clear-button>
-              )}
+              <div
+                class={{
+                  'gux-input-container': true,
+                  'gux-disabled': this.disabled,
+                  'gux-has-prefix': this.hasPrefix,
+                  'gux-has-suffix': this.hasSuffix
+                }}
+                onClick={() => focusInputElement(this.input)}
+              >
+                <slot name="prefix" />
+                <slot name="input" />
+                {this.renderRadialLoading()}
+                <slot name="suffix" />
+                {this.clearable && this.hasContent && !this.disabled && (
+                  <gux-form-field-input-clear-button
+                    onClick={() => clearInput(this.input)}
+                  ></gux-form-field-input-clear-button>
+                )}
+              </div>
             </div>
+            <GuxFormFieldError show={this.hasError}>
+              <slot name="error" />
+            </GuxFormFieldError>
+            <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
+              <slot name="help" />
+            </GuxFormFieldHelp>
           </div>
-          <GuxFormFieldError show={this.hasError}>
-            <slot name="error" />
-          </GuxFormFieldError>
-          <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
-            <slot name="help" />
-          </GuxFormFieldHelp>
-        </div>
-      </GuxFormFieldContainer>
+        </GuxFormFieldContainer>
+      </Host>
     ) as JSX.Element;
   }
 
@@ -250,6 +301,14 @@ export class GuxFormFieldTextLike {
     const clearableVariant = this.clearable ? 'clearable' : 'unclearable';
 
     return `${typeVariant}-${clearableVariant}-${labelPositionVariant}`;
+  }
+
+  private isCharactersExceeding(): void {
+    if (this.characterCount > this.characterLimit) {
+      this.hasExceededCharacterLimit = true;
+    } else {
+      this.hasExceededCharacterLimit = false;
+    }
   }
 
   private setInput(): void {
@@ -264,6 +323,8 @@ export class GuxFormFieldTextLike {
 
     this.input.addEventListener('input', () => {
       this.hasContent = hasContent(this.input);
+      this.characterCount = this.input.value.length;
+      this.isCharactersExceeding();
     });
 
     this.disabled = calculateInputDisabledState(this.input);
