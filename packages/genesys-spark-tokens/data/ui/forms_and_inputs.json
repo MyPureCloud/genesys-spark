@@ -2043,12 +2043,32 @@
       }
     }
   },
-    "calendar": {
+  "calendar": {
     "cta_group": {
       "padding": {
         "value": "18px {container.lg.padding}",
         "type": "spacing"
       }
+    }
+  },
+  "rating_group": {
+    "gap": {
+      "md": {
+        "value": "{interactive.md.gap}",
+        "type": "spacing"
+      },
+      "lg": {
+        "value": "{interactive.lg.gap}",
+        "type": "spacing"
+      }
+    },
+    "label": {
+      "value": "{foreground.container.high_emphasis}",
+      "type": "color"
+    },
+    "text": {
+      "value": "{body.sm.semi_bold}",
+      "type": "typography"
     }
   }
 }

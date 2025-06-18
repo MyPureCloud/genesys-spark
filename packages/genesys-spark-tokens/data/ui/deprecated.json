@@ -52,5 +52,13 @@
         }
       }
     }
+  },
+  "rating": {
+    "star": {
+      "gap": {
+        "value": "{form_control.field.click_input.gap}",
+        "type": "spacing"
+      }
+    }
   }
 }
