@@ -3,6 +3,9 @@
 exports[`gux-form-field-text-like #render clearable should render component as expected (1) 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -41,6 +44,9 @@ exports[`gux-form-field-text-like #render clearable should render component as e
 exports[`gux-form-field-text-like #render clearable should render component as expected (2) 1`] = `
 <gux-form-field-text-like clearable="">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -80,6 +86,9 @@ exports[`gux-form-field-text-like #render clearable should render component as e
 exports[`gux-form-field-text-like #render clearable should render component as expected (3) 1`] = `
 <gux-form-field-text-like clearable="true">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -119,6 +128,9 @@ exports[`gux-form-field-text-like #render clearable should render component as e
 exports[`gux-form-field-text-like #render clearable should render component as expected (4) 1`] = `
 <gux-form-field-text-like clearable="false">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -157,6 +169,9 @@ exports[`gux-form-field-text-like #render clearable should render component as e
 exports[`gux-form-field-text-like #render clearable should render component as expected (5) 1`] = `
 <gux-form-field-text-like clearable="">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -195,6 +210,9 @@ exports[`gux-form-field-text-like #render clearable should render component as e
 exports[`gux-form-field-text-like #render error should render component as expected 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -236,6 +254,9 @@ exports[`gux-form-field-text-like #render error should render component as expec
 exports[`gux-form-field-text-like #render help should render component as expected 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -277,6 +298,9 @@ exports[`gux-form-field-text-like #render help should render component as expect
 exports[`gux-form-field-text-like #render indicator marks should render component as expected (1) 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -315,6 +339,9 @@ exports[`gux-form-field-text-like #render indicator marks should render componen
 exports[`gux-form-field-text-like #render indicator marks should render component as expected (2) 1`] = `
 <gux-form-field-text-like indicator-mark="optional">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -353,6 +380,9 @@ exports[`gux-form-field-text-like #render indicator marks should render componen
 exports[`gux-form-field-text-like #render indicator marks should render component as expected (3) 1`] = `
 <gux-form-field-text-like indicator-mark="required">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -391,6 +421,9 @@ exports[`gux-form-field-text-like #render indicator marks should render componen
 exports[`gux-form-field-text-like #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -429,6 +462,9 @@ exports[`gux-form-field-text-like #render input attributes should render compone
 exports[`gux-form-field-text-like #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -467,6 +503,9 @@ exports[`gux-form-field-text-like #render input attributes should render compone
 exports[`gux-form-field-text-like #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label gux-required">
         <slot name="label"></slot>
@@ -505,6 +544,9 @@ exports[`gux-form-field-text-like #render input attributes should render compone
 exports[`gux-form-field-text-like #render input type attribute should render component as expected (1) 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -543,6 +585,9 @@ exports[`gux-form-field-text-like #render input type attribute should render com
 exports[`gux-form-field-text-like #render input type attribute should render component as expected (2) 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -581,6 +626,9 @@ exports[`gux-form-field-text-like #render input type attribute should render com
 exports[`gux-form-field-text-like #render input type attribute should render component as expected (3) 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -619,6 +667,9 @@ exports[`gux-form-field-text-like #render input type attribute should render com
 exports[`gux-form-field-text-like #render label-info should render component as expected 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -662,6 +713,9 @@ exports[`gux-form-field-text-like #render label-info should render component as 
 exports[`gux-form-field-text-like #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -700,6 +754,9 @@ exports[`gux-form-field-text-like #render label-position should render component
 exports[`gux-form-field-text-like #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-text-like label-position="above">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -738,6 +795,9 @@ exports[`gux-form-field-text-like #render label-position should render component
 exports[`gux-form-field-text-like #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-text-like label-position="beside">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count">
+      0/100
+    </div>
     <div class="gux-beside gux-form-field-container">
       <div class="gux-beside gux-form-field-label">
         <slot name="label"></slot>
@@ -776,6 +836,9 @@ exports[`gux-form-field-text-like #render label-position should render component
 exports[`gux-form-field-text-like #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-text-like label-position="screenreader">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count">
+      0/100
+    </div>
     <div class="gux-form-field-container gux-screenreader">
       <div class="gux-form-field-label gux-screenreader">
         <slot name="label"></slot>
@@ -814,6 +877,9 @@ exports[`gux-form-field-text-like #render label-position should render component
 exports[`gux-form-field-text-like #render loading should render component as expected (1) 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -852,6 +918,9 @@ exports[`gux-form-field-text-like #render loading should render component as exp
 exports[`gux-form-field-text-like #render loading should render component as expected (2) 1`] = `
 <gux-form-field-text-like loading="">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -893,6 +962,9 @@ exports[`gux-form-field-text-like #render loading should render component as exp
 exports[`gux-form-field-text-like #render loading should render component as expected (3) 1`] = `
 <gux-form-field-text-like loading="true">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -934,6 +1006,9 @@ exports[`gux-form-field-text-like #render loading should render component as exp
 exports[`gux-form-field-text-like #render loading should render component as expected (4) 1`] = `
 <gux-form-field-text-like loading="false">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -972,6 +1047,9 @@ exports[`gux-form-field-text-like #render loading should render component as exp
 exports[`gux-form-field-text-like #render loading should render component as expected (5) 1`] = `
 <gux-form-field-text-like loading="">
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -1013,6 +1091,9 @@ exports[`gux-form-field-text-like #render loading should render component as exp
 exports[`gux-form-field-text-like #render prefix should render component as expected 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -1054,6 +1135,9 @@ exports[`gux-form-field-text-like #render prefix should render component as expe
 exports[`gux-form-field-text-like #render suffix should render component as expected 1`] = `
 <gux-form-field-text-like>
   <template shadowrootmode="open">
+    <div class="gux-form-field-character-count gux-label-above">
+      0/100
+    </div>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>

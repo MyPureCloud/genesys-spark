@@ -139,6 +139,32 @@
   </fieldset>
 
   <fieldset>
+    <legend>Character Count</legend>
+    <gux-form-field-text-like show-character-count="true" character-limit="100">
+      <input slot="input" type="text" name="e-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like
+      label-position="beside"
+      show-character-count="true"
+      character-limit="100"
+    >
+      <input slot="input" type="text" name="e-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like
+      label-position="screenreader"
+      show-character-count="true"
+      character-limit="100"
+    >
+      <input slot="input" type="text" name="e-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-text-like>
+  </fieldset>
+
+  <fieldset>
     <legend>Prefix / Suffix</legend>
 
     <gux-form-field-text-like>
