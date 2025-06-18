@@ -98,6 +98,7 @@ type CheckRendersParams = {
   extraActions?: ExtraActionsFn;
   performA11yCheck?: boolean;
   disableAnimations?: boolean;
+  skip?: boolean;
 };
 
 export async function checkRenders({
@@ -105,10 +106,11 @@ export async function checkRenders({
   element,
   extraActions = () => Promise.resolve(),
   performA11yCheck = true,
-  disableAnimations = false
+  disableAnimations = false,
+  skip = false
 }: CheckRendersParams) {
   renderConfigs.forEach(({ description, html }, index) => {
-    test(
+    (skip ? test.skip : test)(
       description || `should render component as expected (${index + 1})`,
       async ({ page }) => {
         await setContent(page, html);

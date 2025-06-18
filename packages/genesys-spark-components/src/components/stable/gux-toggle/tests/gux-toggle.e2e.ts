@@ -1,14 +1,6 @@
 import { E2EPage, newE2EPage, E2EElement } from '@stencil/core/testing';
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
-
-const axeExclusions = [
-  {
-    issueId: 'color-contrast',
-    target: '#disabledToggle,#gux-toggle-label-i',
-    exclusionReason:
-      'WCAG 1.4.3 Contrast (Minimum), inactive user interface components do not need to meet contrast minimum'
-  }
-];
+import { renderConfigs } from './gux-toggle.common';
 
 async function newNonrandomE2EPage({
   html
@@ -42,61 +34,11 @@ describe('gux-toggle', () => {
   });
 
   describe('#render', () => {
-    [
-      '<gux-toggle lang="en" label="On"></gux-toggle>',
-      '<gux-toggle lang="en" checked label="on"></gux-toggle>',
-      '<gux-toggle lang="en" id="disabledToggle" label="On" disabled></gux-toggle>',
-      '<gux-toggle lang="en" id="disabledToggle" checked label="on" disabled></gux-toggle>',
-      `<gux-toggle lang="en"
-        label="On"
-        label-position="left"
-      ></gux-toggle>`,
-      `<gux-toggle lang="en"
-        checked
-        label="on"
-        label-position="right"
-      ></gux-toggle>`,
-      `<gux-toggle lang="en"
-        label="This is a long label for the toggle to test how it works"
-        label-position="left"
-      ></gux-toggle>`,
-      `<gux-toggle lang="en"
-        checked
-        label="This is a long label for the toggle to test how it works"
-        label-position="right"
-      ></gux-toggle>`,
-      // remove deprecated props COMUI-3368
-      '<gux-toggle lang="en" checked-label="On" unchecked-label="Off"></gux-toggle>',
-      '<gux-toggle lang="en" checked checked-label="on" unchecked-label="off"></gux-toggle>',
-      '<gux-toggle lang="en" id="disabledToggle" checked-label="On" unchecked-label="Off" disabled></gux-toggle>',
-      '<gux-toggle lang="en" id="disabledToggle" checked checked-label="on" unchecked-label="off" disabled></gux-toggle>',
-      `<gux-toggle lang="en"
-        checked-label="On"
-        unchecked-label="Off"
-        label-position="left"
-      ></gux-toggle>`,
-      `<gux-toggle lang="en"
-        checked
-        checked-label="on"
-        unchecked-label="off"
-        label-position="right"
-      ></gux-toggle>`,
-      `<gux-toggle lang="en"
-        checked-label="This is a long label for the toggle to test how it works"
-        unchecked-label="This is another long label for the toggle to test how it works"
-        label-position="left"
-      ></gux-toggle>`,
-      `<gux-toggle lang="en"
-        checked
-        checked-label="This is a long label for the toggle to test how it works"
-        unchecked-label="This is another long label for the toggle to test how it works"
-        label-position="right"
-      ></gux-toggle>`
-    ].forEach((html, index) => {
-      it(`should render component as expected (${index + 1})`, async () => {
+    renderConfigs.forEach(({ description, html }) => {
+      it(description, async () => {
         const page = await newNonrandomE2EPage({ html });
         const element = await page.find('gux-toggle');
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(page);
 
         expect(element.outerHTML).toMatchSnapshot();
       });
