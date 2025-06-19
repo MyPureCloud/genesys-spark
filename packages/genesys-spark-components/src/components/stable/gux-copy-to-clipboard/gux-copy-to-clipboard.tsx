@@ -10,7 +10,7 @@ import { GuxCopyToClipboardContent } from './gux-copy-to-clipboard.types';
 @Component({
   styleUrl: 'gux-copy-to-clipboard.scss',
   tag: 'gux-copy-to-clipboard',
-  shadow: true
+  shadow: { delegatesFocus: true }
 })
 export class GuxCopyToClipboard {
   private i18n: GetI18nValue;
@@ -29,6 +29,17 @@ export class GuxCopyToClipboard {
   @Listen('focusout')
   onFocusout() {
     this.resetTooltip();
+  }
+
+  @Listen('keydown')
+  onKeydown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Enter':
+      case ' ':
+        event.preventDefault();
+        this.onCopyToClipboard();
+        break;
+    }
   }
 
   private resetTooltip() {
@@ -85,6 +96,7 @@ export class GuxCopyToClipboard {
   render(): JSX.Element {
     return (
       <button
+        type="button"
         class="gux-copy-to-clipboard-wrapper"
         onClick={this.onCopyToClipboard.bind(this)}
       >
