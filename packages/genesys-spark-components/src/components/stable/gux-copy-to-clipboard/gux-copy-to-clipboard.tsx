@@ -31,6 +31,17 @@ export class GuxCopyToClipboard {
     this.resetTooltip();
   }
 
+  @Listen('keydown')
+  onKeyDown(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'Escape':
+      case ' ':
+        event.preventDefault();
+        this.onCopyToClipboard();
+        break;
+    }
+  }
+
   private resetTooltip() {
     this.tooltipContent = 'clickToCopy';
   }
