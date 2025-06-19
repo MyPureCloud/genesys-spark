@@ -1793,7 +1793,7 @@ exports[`#render  should render component as expected (1) 1`] = `
           <gux-option value="Antarctica/Casey">
             <div class="gux-option-wrapper">
               <div>
-                Casey, Antarctica (UTC+11:00)
+                Casey, Antarctica (UTC+08:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -6474,7 +6474,7 @@ exports[`#render  should render component as expected (1) 1`] = `
             <gux-option value="Antarctica/Casey">
               <div class="gux-option-wrapper">
                 <div>
-                  Casey, Antarctica (UTC+11:00)
+                  Casey, Antarctica (UTC+08:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -11160,7 +11160,7 @@ exports[`#render  should render component as expected (2) 1`] = `
           <gux-option value="Antarctica/Casey">
             <div class="gux-option-wrapper">
               <div>
-                Casey, Antarctica (UTC+11:00)
+                Casey, Antarctica (UTC+08:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -15841,7 +15841,7 @@ exports[`#render  should render component as expected (2) 1`] = `
             <gux-option value="Antarctica/Casey">
               <div class="gux-option-wrapper">
                 <div>
-                  Casey, Antarctica (UTC+11:00)
+                  Casey, Antarctica (UTC+08:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -20539,7 +20539,7 @@ exports[`#render  should render component as expected (3) 1`] = `
           <gux-option value="Antarctica/Casey">
             <div class="gux-option-wrapper">
               <div>
-                Casey, Antarctica (UTC+11:00)
+                Casey, Antarctica (UTC+08:00)
               </div>
               <span class="gux-default-zone"></span>
             </div>
@@ -25220,7 +25220,7 @@ exports[`#render  should render component as expected (3) 1`] = `
             <gux-option value="Antarctica/Casey">
               <div class="gux-option-wrapper">
                 <div>
-                  Casey, Antarctica (UTC+11:00)
+                  Casey, Antarctica (UTC+08:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>

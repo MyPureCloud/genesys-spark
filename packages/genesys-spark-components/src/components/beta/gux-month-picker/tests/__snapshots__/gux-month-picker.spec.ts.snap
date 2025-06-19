@@ -6,10 +6,10 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
     <gux-popup exceed-target-width="">
       <div class="gux-target" slot="target">
         <span class="gux-display">
-          <div aria-label="Year" aria-valuemin="0" aria-valuenow="2022" aria-valuetext="يناير ٢٠٢٢" class="gux-spinner" role="spinbutton" tabindex="0">
-            ٢٠٢٢
+          <div aria-label="Year" aria-valuemin="0" aria-valuenow="2022" aria-valuetext="يناير 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            2022
           </div>
-          <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="يناير ٢٠٢٢" class="gux-spinner" role="spinbutton" tabindex="0">
+          <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="يناير 2022" class="gux-spinner" role="spinbutton" tabindex="0">
             يناير
           </div>
         </span>
@@ -31,7 +31,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </gux-screen-reader-beta>
               </button>
               <div>
-                ٢٠٢٢
+                2022
               </div>
               <button class="gux-year-change" type="button">
                 <gux-icon decorative="" icon-name="custom/chevron-right-small-regular" size="small"></gux-icon>
@@ -44,7 +44,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
               <template shadowrootmode="open">
                 <slot></slot>
               </template>
-              <gux-month-list-item aria-label="يناير ٢٠٢٢" aria-selected="true" role="listitem" value="2022-01">
+              <gux-month-list-item aria-label="يناير 2022" aria-selected="true" role="listitem" value="2022-01">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button class="gux-selected" tabindex="-1" type="button">
@@ -54,7 +54,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </template>
                 يناير
               </gux-month-list-item>
-              <gux-month-list-item aria-label="فبراير ٢٠٢٢" role="listitem" value="2022-02">
+              <gux-month-list-item aria-label="فبراير 2022" role="listitem" value="2022-02">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -64,7 +64,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </template>
                 فبراير
               </gux-month-list-item>
-              <gux-month-list-item aria-label="مارس ٢٠٢٢" role="listitem" value="2022-03">
+              <gux-month-list-item aria-label="مارس 2022" role="listitem" value="2022-03">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -74,7 +74,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </template>
                 مارس
               </gux-month-list-item>
-              <gux-month-list-item aria-label="أبريل ٢٠٢٢" role="listitem" value="2022-04">
+              <gux-month-list-item aria-label="أبريل 2022" role="listitem" value="2022-04">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -84,7 +84,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </template>
                 أبريل
               </gux-month-list-item>
-              <gux-month-list-item aria-label="مايو ٢٠٢٢" role="listitem" value="2022-05">
+              <gux-month-list-item aria-label="مايو 2022" role="listitem" value="2022-05">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -94,7 +94,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </template>
                 مايو
               </gux-month-list-item>
-              <gux-month-list-item aria-label="يونيو ٢٠٢٢" role="listitem" value="2022-06">
+              <gux-month-list-item aria-label="يونيو 2022" role="listitem" value="2022-06">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -104,7 +104,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </template>
                 يونيو
               </gux-month-list-item>
-              <gux-month-list-item aria-label="يوليو ٢٠٢٢" role="listitem" value="2022-07">
+              <gux-month-list-item aria-label="يوليو 2022" role="listitem" value="2022-07">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -114,7 +114,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </template>
                 يوليو
               </gux-month-list-item>
-              <gux-month-list-item aria-label="أغسطس ٢٠٢٢" role="listitem" value="2022-08">
+              <gux-month-list-item aria-label="أغسطس 2022" role="listitem" value="2022-08">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -124,7 +124,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </template>
                 أغسطس
               </gux-month-list-item>
-              <gux-month-list-item aria-label="سبتمبر ٢٠٢٢" role="listitem" value="2022-09">
+              <gux-month-list-item aria-label="سبتمبر 2022" role="listitem" value="2022-09">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -134,7 +134,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </template>
                 سبتمبر
               </gux-month-list-item>
-              <gux-month-list-item aria-label="أكتوبر ٢٠٢٢" role="listitem" value="2022-10">
+              <gux-month-list-item aria-label="أكتوبر 2022" role="listitem" value="2022-10">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -144,7 +144,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </template>
                 أكتوبر
               </gux-month-list-item>
-              <gux-month-list-item aria-label="نوفمبر ٢٠٢٢" role="listitem" value="2022-11">
+              <gux-month-list-item aria-label="نوفمبر 2022" role="listitem" value="2022-11">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -154,7 +154,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                 </template>
                 نوفمبر
               </gux-month-list-item>
-              <gux-month-list-item aria-label="ديسمبر ٢٠٢٢" role="listitem" value="2022-12">
+              <gux-month-list-item aria-label="ديسمبر 2022" role="listitem" value="2022-12">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -4204,7 +4204,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                січ
+                січ.
               </gux-month-list-item>
               <gux-month-list-item aria-label="лютий 2022 р." role="listitem" value="2022-02">
                 <template shadowrootmode="open">
@@ -4214,7 +4214,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                лют
+                лют.
               </gux-month-list-item>
               <gux-month-list-item aria-label="березень 2022 р." role="listitem" value="2022-03">
                 <template shadowrootmode="open">
@@ -4224,7 +4224,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                бер
+                бер.
               </gux-month-list-item>
               <gux-month-list-item aria-label="квітень 2022 р." role="listitem" value="2022-04">
                 <template shadowrootmode="open">
@@ -4234,7 +4234,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                кві
+                квіт.
               </gux-month-list-item>
               <gux-month-list-item aria-label="травень 2022 р." role="listitem" value="2022-05">
                 <template shadowrootmode="open">
@@ -4244,7 +4244,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                тра
+                трав.
               </gux-month-list-item>
               <gux-month-list-item aria-label="червень 2022 р." role="listitem" value="2022-06">
                 <template shadowrootmode="open">
@@ -4254,7 +4254,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                чер
+                черв.
               </gux-month-list-item>
               <gux-month-list-item aria-label="липень 2022 р." role="listitem" value="2022-07">
                 <template shadowrootmode="open">
@@ -4264,7 +4264,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                лип
+                лип.
               </gux-month-list-item>
               <gux-month-list-item aria-label="серпень 2022 р." role="listitem" value="2022-08">
                 <template shadowrootmode="open">
@@ -4274,7 +4274,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                сер
+                серп.
               </gux-month-list-item>
               <gux-month-list-item aria-label="вересень 2022 р." role="listitem" value="2022-09">
                 <template shadowrootmode="open">
@@ -4284,7 +4284,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                вер
+                вер.
               </gux-month-list-item>
               <gux-month-list-item aria-label="жовтень 2022 р." role="listitem" value="2022-10">
                 <template shadowrootmode="open">
@@ -4294,7 +4294,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                жов
+                жовт.
               </gux-month-list-item>
               <gux-month-list-item aria-label="листопад 2022 р." role="listitem" value="2022-11">
                 <template shadowrootmode="open">
@@ -4304,7 +4304,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                лис
+                лист.
               </gux-month-list-item>
               <gux-month-list-item aria-label="грудень 2022 р." role="listitem" value="2022-12">
                 <template shadowrootmode="open">
@@ -4314,7 +4314,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                     </button>
                   </div>
                 </template>
-                гру
+                груд.
               </gux-month-list-item>
             </gux-month-list>
           </div>
@@ -4677,10 +4677,10 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
     <gux-popup exceed-target-width="">
       <div class="gux-target" slot="target">
         <span class="gux-display">
-          <div aria-label="Year" aria-valuemin="0" aria-valuenow="2022" aria-valuetext="يناير ٢٠٢٢" class="gux-spinner" role="spinbutton" tabindex="0">
-            ٢٠٢٢
+          <div aria-label="Year" aria-valuemin="0" aria-valuenow="2022" aria-valuetext="يناير 2022" class="gux-spinner" role="spinbutton" tabindex="0">
+            2022
           </div>
-          <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="يناير ٢٠٢٢" class="gux-spinner" role="spinbutton" tabindex="0">
+          <div aria-label="Month" aria-valuemax="12" aria-valuemin="1" aria-valuenow="01" aria-valuetext="يناير 2022" class="gux-spinner" role="spinbutton" tabindex="0">
             يناير
           </div>
         </span>
@@ -4702,7 +4702,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </gux-screen-reader-beta>
               </button>
               <div>
-                ٢٠٢٢
+                2022
               </div>
               <button class="gux-year-change" type="button">
                 <gux-icon decorative="" icon-name="custom/chevron-right-small-regular" size="small"></gux-icon>
@@ -4715,7 +4715,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
               <template shadowrootmode="open">
                 <slot></slot>
               </template>
-              <gux-month-list-item aria-label="يناير ٢٠٢٢" aria-selected="true" role="listitem" value="2022-01">
+              <gux-month-list-item aria-label="يناير 2022" aria-selected="true" role="listitem" value="2022-01">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button class="gux-selected" tabindex="-1" type="button">
@@ -4725,7 +4725,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </template>
                 يناير
               </gux-month-list-item>
-              <gux-month-list-item aria-label="فبراير ٢٠٢٢" role="listitem" value="2022-02">
+              <gux-month-list-item aria-label="فبراير 2022" role="listitem" value="2022-02">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -4735,7 +4735,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </template>
                 فبراير
               </gux-month-list-item>
-              <gux-month-list-item aria-label="مارس ٢٠٢٢" role="listitem" value="2022-03">
+              <gux-month-list-item aria-label="مارس 2022" role="listitem" value="2022-03">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -4745,7 +4745,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </template>
                 مارس
               </gux-month-list-item>
-              <gux-month-list-item aria-label="أبريل ٢٠٢٢" role="listitem" value="2022-04">
+              <gux-month-list-item aria-label="أبريل 2022" role="listitem" value="2022-04">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -4755,7 +4755,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </template>
                 أبريل
               </gux-month-list-item>
-              <gux-month-list-item aria-label="مايو ٢٠٢٢" role="listitem" value="2022-05">
+              <gux-month-list-item aria-label="مايو 2022" role="listitem" value="2022-05">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -4765,7 +4765,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </template>
                 مايو
               </gux-month-list-item>
-              <gux-month-list-item aria-label="يونيو ٢٠٢٢" role="listitem" value="2022-06">
+              <gux-month-list-item aria-label="يونيو 2022" role="listitem" value="2022-06">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -4775,7 +4775,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </template>
                 يونيو
               </gux-month-list-item>
-              <gux-month-list-item aria-label="يوليو ٢٠٢٢" role="listitem" value="2022-07">
+              <gux-month-list-item aria-label="يوليو 2022" role="listitem" value="2022-07">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -4785,7 +4785,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </template>
                 يوليو
               </gux-month-list-item>
-              <gux-month-list-item aria-label="أغسطس ٢٠٢٢" role="listitem" value="2022-08">
+              <gux-month-list-item aria-label="أغسطس 2022" role="listitem" value="2022-08">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -4795,7 +4795,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </template>
                 أغسطس
               </gux-month-list-item>
-              <gux-month-list-item aria-label="سبتمبر ٢٠٢٢" role="listitem" value="2022-09">
+              <gux-month-list-item aria-label="سبتمبر 2022" role="listitem" value="2022-09">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -4805,7 +4805,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </template>
                 سبتمبر
               </gux-month-list-item>
-              <gux-month-list-item aria-label="أكتوبر ٢٠٢٢" role="listitem" value="2022-10">
+              <gux-month-list-item aria-label="أكتوبر 2022" role="listitem" value="2022-10">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -4815,7 +4815,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </template>
                 أكتوبر
               </gux-month-list-item>
-              <gux-month-list-item aria-label="نوفمبر ٢٠٢٢" role="listitem" value="2022-11">
+              <gux-month-list-item aria-label="نوفمبر 2022" role="listitem" value="2022-11">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -4825,7 +4825,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                 </template>
                 نوفمبر
               </gux-month-list-item>
-              <gux-month-list-item aria-label="ديسمبر ٢٠٢٢" role="listitem" value="2022-12">
+              <gux-month-list-item aria-label="ديسمبر 2022" role="listitem" value="2022-12">
                 <template shadowrootmode="open">
                   <div class="gux-container">
                     <button tabindex="-1" type="button">
@@ -8875,7 +8875,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                січ
+                січ.
               </gux-month-list-item>
               <gux-month-list-item aria-label="лютий 2022 р." role="listitem" value="2022-02">
                 <template shadowrootmode="open">
@@ -8885,7 +8885,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                лют
+                лют.
               </gux-month-list-item>
               <gux-month-list-item aria-label="березень 2022 р." role="listitem" value="2022-03">
                 <template shadowrootmode="open">
@@ -8895,7 +8895,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                бер
+                бер.
               </gux-month-list-item>
               <gux-month-list-item aria-label="квітень 2022 р." role="listitem" value="2022-04">
                 <template shadowrootmode="open">
@@ -8905,7 +8905,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                кві
+                квіт.
               </gux-month-list-item>
               <gux-month-list-item aria-label="травень 2022 р." role="listitem" value="2022-05">
                 <template shadowrootmode="open">
@@ -8915,7 +8915,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                тра
+                трав.
               </gux-month-list-item>
               <gux-month-list-item aria-label="червень 2022 р." role="listitem" value="2022-06">
                 <template shadowrootmode="open">
@@ -8925,7 +8925,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                чер
+                черв.
               </gux-month-list-item>
               <gux-month-list-item aria-label="липень 2022 р." role="listitem" value="2022-07">
                 <template shadowrootmode="open">
@@ -8935,7 +8935,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                лип
+                лип.
               </gux-month-list-item>
               <gux-month-list-item aria-label="серпень 2022 р." role="listitem" value="2022-08">
                 <template shadowrootmode="open">
@@ -8945,7 +8945,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                сер
+                серп.
               </gux-month-list-item>
               <gux-month-list-item aria-label="вересень 2022 р." role="listitem" value="2022-09">
                 <template shadowrootmode="open">
@@ -8955,7 +8955,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                вер
+                вер.
               </gux-month-list-item>
               <gux-month-list-item aria-label="жовтень 2022 р." role="listitem" value="2022-10">
                 <template shadowrootmode="open">
@@ -8965,7 +8965,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                жов
+                жовт.
               </gux-month-list-item>
               <gux-month-list-item aria-label="листопад 2022 р." role="listitem" value="2022-11">
                 <template shadowrootmode="open">
@@ -8975,7 +8975,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                лис
+                лист.
               </gux-month-list-item>
               <gux-month-list-item aria-label="грудень 2022 р." role="listitem" value="2022-12">
                 <template shadowrootmode="open">
@@ -8985,7 +8985,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                     </button>
                   </div>
                 </template>
-                гру
+                груд.
               </gux-month-list-item>
             </gux-month-list>
           </div>

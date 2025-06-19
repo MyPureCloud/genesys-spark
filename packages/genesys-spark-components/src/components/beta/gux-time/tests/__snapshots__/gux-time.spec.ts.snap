@@ -3,7 +3,7 @@
 exports[`gux-time #render regional dates #render different languages #ar should render as expected for "full" format 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
-    ١٢:٠٠:٠٠ م التوقيت العالمي المنسق
+    12:00:00 م التوقيت العالمي المنسق
   </template>
 </gux-time-beta>
 `;
@@ -11,7 +11,7 @@ exports[`gux-time #render regional dates #render different languages #ar should 
 exports[`gux-time #render regional dates #render different languages #ar should render as expected for "long" format 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="long">
   <template shadowrootmode="open">
-    ١٢:٠٠:٠٠ م UTC
+    12:00:00 م UTC
   </template>
 </gux-time-beta>
 `;
@@ -19,7 +19,7 @@ exports[`gux-time #render regional dates #render different languages #ar should 
 exports[`gux-time #render regional dates #render different languages #ar should render as expected for "medium" format 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="medium">
   <template shadowrootmode="open">
-    ١٢:٠٠:٠٠ م
+    12:00:00 م
   </template>
 </gux-time-beta>
 `;
@@ -27,7 +27,7 @@ exports[`gux-time #render regional dates #render different languages #ar should 
 exports[`gux-time #render regional dates #render different languages #ar should render as expected for "short" format 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="short">
   <template shadowrootmode="open">
-    ١٢:٠٠ م
+    12:00 م
   </template>
 </gux-time-beta>
 `;
@@ -2419,7 +2419,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "Antarctica/Casey" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Casey">
   <template shadowrootmode="open">
-    11:00:00 PM Casey Time
+    8:00:00 PM Australian Western Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -2499,7 +2499,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "Antarctica/Vostok" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Vostok">
   <template shadowrootmode="open">
-    6:00:00 PM Vostok Time
+    7:00:00 PM Vostok Time
   </template>
 </gux-time-beta>
 `;
@@ -3347,7 +3347,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "CET" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="CET">
   <template shadowrootmode="open">
-    2:00:00 PM GMT+02:00
+    2:00:00 PM Central European Summer Time
   </template>
 </gux-time-beta>
 `;
@@ -3363,7 +3363,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "EET" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="EET">
   <template shadowrootmode="open">
-    3:00:00 PM GMT+03:00
+    3:00:00 PM Eastern European Summer Time
   </template>
 </gux-time-beta>
 `;
@@ -3371,7 +3371,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "EST" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="EST">
   <template shadowrootmode="open">
-    7:00:00 AM GMT-05:00
+    7:00:00 AM Eastern Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -4075,7 +4075,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "HST" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="HST">
   <template shadowrootmode="open">
-    2:00:00 AM GMT-10:00
+    2:00:00 AM Hawaii-Aleutian Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -4171,7 +4171,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "MET" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="MET">
   <template shadowrootmode="open">
-    2:00:00 PM GMT+02:00
+    2:00:00 PM Central European Summer Time
   </template>
 </gux-time-beta>
 `;
@@ -4179,7 +4179,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "MST" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="MST">
   <template shadowrootmode="open">
-    5:00:00 AM GMT-07:00
+    5:00:00 AM Mountain Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -4515,7 +4515,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "WET" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="WET">
   <template shadowrootmode="open">
-    1:00:00 PM GMT+01:00
+    1:00:00 PM Western European Summer Time
   </template>
 </gux-time-beta>
 `;
@@ -4555,7 +4555,7 @@ exports[`gux-time #render regional dates #render should render as expected for "
 exports[`gux-time #render using non regional dates #render different languages #ar should render as expected for "full" format 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
-    ١٢:٠٠:٠٠ م التوقيت العالمي المنسق
+    12:00:00 م التوقيت العالمي المنسق
   </template>
 </gux-time-beta>
 `;
@@ -4563,7 +4563,7 @@ exports[`gux-time #render using non regional dates #render different languages #
 exports[`gux-time #render using non regional dates #render different languages #ar should render as expected for "long" format 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="long">
   <template shadowrootmode="open">
-    ١٢:٠٠:٠٠ م UTC
+    12:00:00 م UTC
   </template>
 </gux-time-beta>
 `;
@@ -4571,7 +4571,7 @@ exports[`gux-time #render using non regional dates #render different languages #
 exports[`gux-time #render using non regional dates #render different languages #ar should render as expected for "medium" format 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="medium">
   <template shadowrootmode="open">
-    ١٢:٠٠:٠٠ م
+    12:00:00 م
   </template>
 </gux-time-beta>
 `;
@@ -4579,7 +4579,7 @@ exports[`gux-time #render using non regional dates #render different languages #
 exports[`gux-time #render using non regional dates #render different languages #ar should render as expected for "short" format 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="short">
   <template shadowrootmode="open">
-    ١٢:٠٠ م
+    12:00 م
   </template>
 </gux-time-beta>
 `;
@@ -6971,7 +6971,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "Antarctica/Casey" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Casey">
   <template shadowrootmode="open">
-    11:00:00 PM Casey Time
+    8:00:00 PM Australian Western Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -7051,7 +7051,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "Antarctica/Vostok" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/Vostok">
   <template shadowrootmode="open">
-    6:00:00 PM Vostok Time
+    7:00:00 PM Vostok Time
   </template>
 </gux-time-beta>
 `;
@@ -7899,7 +7899,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "CET" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="CET">
   <template shadowrootmode="open">
-    2:00:00 PM GMT+02:00
+    2:00:00 PM Central European Summer Time
   </template>
 </gux-time-beta>
 `;
@@ -7915,7 +7915,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "EET" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="EET">
   <template shadowrootmode="open">
-    3:00:00 PM GMT+03:00
+    3:00:00 PM Eastern European Summer Time
   </template>
 </gux-time-beta>
 `;
@@ -7923,7 +7923,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "EST" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="EST">
   <template shadowrootmode="open">
-    7:00:00 AM GMT-05:00
+    7:00:00 AM Eastern Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -8627,7 +8627,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "HST" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="HST">
   <template shadowrootmode="open">
-    2:00:00 AM GMT-10:00
+    2:00:00 AM Hawaii-Aleutian Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -8723,7 +8723,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "MET" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="MET">
   <template shadowrootmode="open">
-    2:00:00 PM GMT+02:00
+    2:00:00 PM Central European Summer Time
   </template>
 </gux-time-beta>
 `;
@@ -8731,7 +8731,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "MST" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="MST">
   <template shadowrootmode="open">
-    5:00:00 AM GMT-07:00
+    5:00:00 AM Mountain Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -9067,7 +9067,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "WET" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="WET">
   <template shadowrootmode="open">
-    1:00:00 PM GMT+01:00
+    1:00:00 PM Western European Summer Time
   </template>
 </gux-time-beta>
 `;

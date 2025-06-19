@@ -25,7 +25,7 @@ describe('gux-copy-to-clipboard', () => {
     it('should copy to clipboard successfully', async () => {
       const component = new GuxCopyToClipboard();
 
-      Object.assign(window.navigator, {
+      Object.assign(global.navigator, {
         clipboard: {
           writeText: jest.fn().mockImplementation(() => Promise.resolve())
         }
@@ -34,13 +34,13 @@ describe('gux-copy-to-clipboard', () => {
       await (component as any).onCopyToClipboard();
 
       expect(component.tooltipContent).toEqual('copySuccess');
-      expect(window.navigator.clipboard.writeText).toHaveBeenCalled();
+      expect(global.navigator.clipboard.writeText).toHaveBeenCalled();
     });
 
     it('should copy to clipboard with error', async () => {
       const component = new GuxCopyToClipboard();
 
-      Object.assign(window.navigator, {
+      Object.assign(global.navigator, {
         clipboard: {
           writeText: jest
             .fn()
@@ -51,7 +51,7 @@ describe('gux-copy-to-clipboard', () => {
       await (component as any).onCopyToClipboard();
 
       expect(component.tooltipContent).toEqual('copyFailure');
-      expect(window.navigator.clipboard.writeText).toHaveBeenCalled();
+      expect(global.navigator.clipboard.writeText).toHaveBeenCalled();
     });
   });
 });

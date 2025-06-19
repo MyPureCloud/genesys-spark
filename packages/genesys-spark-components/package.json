@@ -40,19 +40,19 @@
     "stencil.dev": "stencil build --dev --watch --serve --no-open",
     "stylelint": "stylelint --fix \"**/*.{css,html,scss}\"",
     "svgo": "find ./src/components/stable/gux-icon/icons/**/*.svg -type f ! -path '*/legacy/*' ! -path '*/brand/*'  -exec svgo {} +",
-    "test": "TZ=UTC stencil test --spec --e2e",
-    "test.ci": "TZ=UTC npm run test.ci.spec",
-    "test.ci.e2e": "TZ=UTC stencil test --e2e --maxWorkers=1 --workerIdleMemoryLimit=500MB",
-    "test.ci.spec": "TZ=UTC stencil test --spec --maxWorkers=1 --workerIdleMemoryLimit=500MB",
-    "test.e2e": "TZ=UTC stencil test --e2e",
-    "test.e2e.update-snapshot": "TZ=UTC stencil test --e2e --updateSnapshot",
+    "test": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --spec --e2e",
+    "test.ci": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC npm run test.ci.spec",
+    "test.ci.e2e": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --e2e --maxWorkers=1",
+    "test.ci.spec": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --spec --maxWorkers=1",
+    "test.e2e": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --e2e",
+    "test.e2e.update-snapshot": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --e2e --updateSnapshot",
     "test.playwright": "playwright test",
     "test.playwright.ui": "playwright test --ui",
-    "test.screenshot": "TZ=UTC stencil test --e2e --screenshot",
-    "test.unit": "TZ=UTC stencil build dev && stencil test --spec",
-    "test.unit.update-snapshot": "TZ=UTC stencil test --spec --updateSnapshot",
-    "test.update-snapshot": "TZ=UTC stencil test --spec --e2e --updateSnapshot; playwright test --update-snapshots",
-    "test.watch": "TZ=UTC stencil test --spec --e2e --watch",
+    "test.screenshot": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --e2e --screenshot",
+    "test.unit": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil build dev && stencil test --spec",
+    "test.unit.update-snapshot": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --spec --updateSnapshot",
+    "test.update-snapshot": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --spec --e2e --updateSnapshot; playwright test --update-snapshots",
+    "test.watch": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --spec --e2e --watch",
     "update-en-i18n": "./scripts/update-en-i18n.js",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
@@ -107,6 +107,7 @@
     "mutation-observer": "^1.0.3",
     "node-fetch": "^3.3.2",
     "npm-run-all": "^4.1.5",
+    "playwright-core": "1.51.0",
     "postcss-html": "^1.8.0",
     "postcss-less": "^6.0.0",
     "postcss-scss": "^4.0.9",
@@ -139,6 +140,6 @@
   "collection": "dist/collection/collection-manifest.json",
   "prettier": "prettier-config-genesys-spark-components",
   "volta": {
-    "node": "20.9.0"
+    "node": "22.14.0"
   }
 }
