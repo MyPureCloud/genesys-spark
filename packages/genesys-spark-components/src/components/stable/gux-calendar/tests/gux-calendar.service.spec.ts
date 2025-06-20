@@ -138,7 +138,7 @@ describe('calendar.service', () => {
 
   describe('getDateMonthAndYearString', () => {
     [
-      { locale: 'ar', expectedOutput: 'ديسمبر ٢٠٢٢' },
+      { locale: 'ar', expectedOutput: 'ديسمبر 2022' },
       { locale: 'cs', expectedOutput: 'Prosinec 2022' },
       { locale: 'da', expectedOutput: 'December 2022' },
       { locale: 'de', expectedOutput: 'Dezember 2022' },

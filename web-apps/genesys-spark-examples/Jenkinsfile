@@ -13,7 +13,7 @@ Boolean isReleaseBranch = isMainBranch
 webappPipelineV2 {
     urlPrefix = 'common-ui-docs/genesys-webcomponents'
     agentLabel = 'dev_x86_shared'
-    nodeVersion = '20.x multiarch'
+    nodeVersion = '22.x multiarch'
     mailer = 'CoreUI@genesys.com'
     chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
     skipCommitsFrom = [] // This job is triggered after another job has built and promoted assets, published packages and committed a version bump so we can't skip commmits from jenkins.

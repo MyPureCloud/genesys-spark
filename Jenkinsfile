@@ -38,7 +38,7 @@ String charComponentAssetsPath = ''
 webappPipelineV2 {
     urlPrefix = 'spark-components'
     agentLabel = 'dev_x86_shared'
-    nodeVersion = '20.x multiarch'
+    nodeVersion = '22.x multiarch'
     mailer = 'CoreUI@genesys.com'
     chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
     manifest = customManifest('./dist') {
@@ -57,6 +57,7 @@ webappPipelineV2 {
     }
     prepareStep = {
         sh('npm run devops.create.pipeline.assets')
+        sh('node -v')
         sh('npm ci')
     }
     versionClosure = {
@@ -109,6 +110,8 @@ webappPipelineV2 {
 
         // Tests
         sh('npm run lint')
+        sh('node -v')
+        sh('locale')
         sh('npm run test.ci')
     }
     buildStep = { assetPrefix ->
@@ -125,7 +128,7 @@ webappPipelineV2 {
     onPromoteSuccess = {
         sh('printenv')
 
-        currentBuild.description = """<a href="https://grandcentral.ininica.com/#/services/contentsquare-webui/version/${env.SERVICE_VERSION}" target="_blank">version@GrandCentral</a></h2>"""
+        currentBuild.description = """<a href="https://grandcentral.ininica.com/#/services/spark-components-webui/version/${env.SERVICE_VERSION}" target="_blank">version@GrandCentral</a></h2>"""
     }
     onSuccess = {
         if (isReleaseBranch) {

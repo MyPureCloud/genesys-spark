@@ -3,7 +3,7 @@
 exports[`gux-date #render regional dates #render different languages #ar should render as expected for "full" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
-    الخميس، ٧ يوليو ٢٠٢٢
+    الخميس، 7 يوليو 2022
   </template>
 </gux-date-beta>
 `;
@@ -11,7 +11,7 @@ exports[`gux-date #render regional dates #render different languages #ar should 
 exports[`gux-date #render regional dates #render different languages #ar should render as expected for "long" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="long">
   <template shadowrootmode="open">
-    ٧ يوليو ٢٠٢٢
+    7 يوليو 2022
   </template>
 </gux-date-beta>
 `;
@@ -19,7 +19,7 @@ exports[`gux-date #render regional dates #render different languages #ar should 
 exports[`gux-date #render regional dates #render different languages #ar should render as expected for "medium" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="medium">
   <template shadowrootmode="open">
-    ٠٧‏/٠٧‏/٢٠٢٢
+    07‏/07‏/2022
   </template>
 </gux-date-beta>
 `;
@@ -27,7 +27,7 @@ exports[`gux-date #render regional dates #render different languages #ar should 
 exports[`gux-date #render regional dates #render different languages #ar should render as expected for "short" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="short">
   <template shadowrootmode="open">
-    ٧‏/٧‏/٢٠٢٢
+    7‏/7‏/2022
   </template>
 </gux-date-beta>
 `;
@@ -4555,7 +4555,7 @@ exports[`gux-date #render regional dates #render should render as expected for "
 exports[`gux-date #render using non regional dates #render different languages #ar should render as expected for "full" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="full">
   <template shadowrootmode="open">
-    الخميس، ٧ يوليو ٢٠٢٢
+    الخميس، 7 يوليو 2022
   </template>
 </gux-date-beta>
 `;
@@ -4563,7 +4563,7 @@ exports[`gux-date #render using non regional dates #render different languages #
 exports[`gux-date #render using non regional dates #render different languages #ar should render as expected for "long" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="long">
   <template shadowrootmode="open">
-    ٧ يوليو ٢٠٢٢
+    7 يوليو 2022
   </template>
 </gux-date-beta>
 `;
@@ -4571,7 +4571,7 @@ exports[`gux-date #render using non regional dates #render different languages #
 exports[`gux-date #render using non regional dates #render different languages #ar should render as expected for "medium" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="medium">
   <template shadowrootmode="open">
-    ٠٧‏/٠٧‏/٢٠٢٢
+    07‏/07‏/2022
   </template>
 </gux-date-beta>
 `;
@@ -4579,7 +4579,7 @@ exports[`gux-date #render using non regional dates #render different languages #
 exports[`gux-date #render using non regional dates #render different languages #ar should render as expected for "short" format 1`] = `
 <gux-date-beta datetime="2022-07-07T12:00:00.000Z" format="short">
   <template shadowrootmode="open">
-    ٧‏/٧‏/٢٠٢٢
+    7‏/7‏/2022
   </template>
 </gux-date-beta>
 `;
