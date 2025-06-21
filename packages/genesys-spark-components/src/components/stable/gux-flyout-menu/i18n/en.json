@@ -1,0 +1,4 @@
+{
+  "onMenuFocus": "Use the right arrow to enter the submenu, and the left arrow to return to the previous menu",
+  "onTargetFocus": "A popup has appeared. Press the down arrow to enter the menu"
+}
