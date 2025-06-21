@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.154.7](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.6...v4.154.7) (2025-06-21)
+
+
+### Bug Fixes
+
+* **accordion-section:** matched border to Figma design ([8235214](https://github.com/MyPureCloud/genesys-spark/commit/8235214f434034078c693aad625499a166e4a6ed))
+* **tooltip:** fixed memory leak ([a4a62ab](https://github.com/MyPureCloud/genesys-spark/commit/a4a62abde30e4d092cbdc06e6df66a371b35b490))
+
 ### [4.154.6](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.5...v4.154.6) (2025-06-17)
 
 ### [4.154.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.4...v4.154.5) (2025-06-14)
