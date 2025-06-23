@@ -133,7 +133,6 @@ There is no universal migration path away from this component. We expect `gux-fo
 ### gux-button
 
 - `title` property was named to `gux-title`
-
   - This change was made to address an accessibility defect
 
   ```diff

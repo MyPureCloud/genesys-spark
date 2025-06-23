@@ -60,7 +60,6 @@ Completed V4 Migration
 These stable dropdown components have some properties and events that were not available in the legacy version that you should review to see if they are useful to your use case.
 
 - gux-dropdown
-
   - properties
     - disabled
     - filter-type
@@ -75,7 +74,6 @@ These stable dropdown components have some properties and events that were not a
     - guxfilter
 
 - gux-listbox
-
   - properties
     - emptyMessage
     - filter

@@ -25,10 +25,10 @@
   }
 
   ::slotted(
-      input[type='checkbox']:not(:checked):not(:disabled):not(
-          :indeterminate
-        ):hover
-    )::before {
+    input[type='checkbox']:not(:checked):not(:disabled):not(
+        :indeterminate
+      ):hover
+  )::before {
     @include checkbox-icons.unchecked-error;
 
     background: ui.$gse-ui-checkbox-icon-error-foregroundColor;
@@ -95,10 +95,8 @@
 }
 
 ::slotted(
-    input[type='checkbox']:not(:checked):not(:disabled):not(
-        :indeterminate
-      ):hover
-  )::before {
+  input[type='checkbox']:not(:checked):not(:disabled):not(:indeterminate):hover
+)::before {
   @include checkbox-icons.unchecked-hover;
 
   background: ui.$gse-ui-checkbox-icon-hover-foregroundColor;
