@@ -23,9 +23,7 @@ A full migration of the `gux-accordion-legacy` improves the `2.1.1 Keyboard`, `2
 ```
 
 - gux-accordion
-
   - properties
-
     - heading-level
     - arrow-position
 
@@ -67,9 +65,7 @@ Completed V3 Basic Migration:
 ```
 
 - gux-accordion-legacy
-
   - properties
-
     - heading-level
     - arrow-position
 

@@ -279,7 +279,6 @@ If possible, avoid the usage of legacy components that have a migration path and
 ```
 
 - **_Removed Prop_**: The `value` property has been removed.
-
   - This change also effects the `guxdelete` event. The event no longer contains the `value` in the `detail` field.
   - You should now remove the element using the events `target` to get a reference to the element.
 
@@ -294,7 +293,6 @@ If possible, avoid the usage of legacy components that have a migration path and
 #### gux-accordion
 
 - **_Prop Changes_**: The `arrow-position` property has had the following changes:
-
   - The default arrow position is now `end`.
 
   - The `before-text` value has been renamed `start`.
@@ -367,7 +365,6 @@ If possible, avoid the usage of legacy components that have a migration path and
 - **_Style Change_**: Internal margins have been removed from the form field components.
 
   This change was implemented to accommodate layouts that already accounted for spacings between components. In v3, developers could override the component margins with four CSS custom properties:
-
   - --gux-form-field-container-margin-top
   - --gux-form-field-container-margin-bottom
   - --gux-form-field-fieldset-container-margin-top
@@ -382,7 +379,6 @@ If possible, avoid the usage of legacy components that have a migration path and
 #### gux-form-field-checkbox
 
 - **_New Prop_**: The `label-position` property has now been added to `gux-form-field-checkbox`. The property can be used to change the position of the label.
-
   - The positions `beside` and `screenreader` are currently available to use. The default `label-position` is `beside`.
 
   ```diff

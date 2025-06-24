@@ -42,7 +42,6 @@ Writing descriptive and informative commit messages will help both contributors 
 Commit messages
 
 - Use `npm run commit`to ensure correctly formatted commit messages. ([git-cz](https://github.com/streamich/git-cz)). This will run the `git-cz` CLI. There will be various prompts to guide you through the commit writing process.
-
   1. Select the type of change:
 
 ```

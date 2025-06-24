@@ -130,7 +130,6 @@ Steps:
   + </gux-tabs-advanced>
   ```
 - Replace the `gux-tab` tag name with `gux-tab-advanced`.
-
   - The `tab-icon-name` property has been removed. Slot the icon in the `gux-tab-advanced` component instead.
   - The `title` named slot has been removed. Slot the text directly into the `gux-tab-advanced` component.
 

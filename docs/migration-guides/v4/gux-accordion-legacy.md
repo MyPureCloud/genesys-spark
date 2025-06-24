@@ -74,7 +74,6 @@ Steps
 These stable accordion components have some properties that were not available in the legacy version that you should review to see if they are useful to your use case.
 
 - gux-accordion
-
   - properties
     - single-open-section
 
