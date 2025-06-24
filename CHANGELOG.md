@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.155.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.7...v4.155.0) (2025-06-24)
+
+
+### Features
+
+* **tokens:** Sorted id references ([d6e3827](https://github.com/MyPureCloud/genesys-spark/commit/d6e38277c7e64198fae5834f72e642c67f7eb199))
+* **tokens:** Updated style references ([4b5720c](https://github.com/MyPureCloud/genesys-spark/commit/4b5720c838b7a4323c16016a61609a085a174eb2))
+
 ### [4.154.7](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.6...v4.154.7) (2025-06-21)
 
 
