@@ -31,8 +31,7 @@ export class GuxCopyToClipboard {
     this.resetTooltip();
   }
 
-  @Listen('keydown')
-  onKeydown(event: KeyboardEvent): void {
+  private handleKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Enter':
       case ' ':
@@ -99,6 +98,7 @@ export class GuxCopyToClipboard {
         type="button"
         class="gux-copy-to-clipboard-wrapper"
         onClick={this.onCopyToClipboard.bind(this)}
+        onKeyDown={e => this.handleKeyDown(e)}
       >
         <div class="gux-copy-content">
           {/* This is a named slot because we don't want it to be possible to slot a text node.
