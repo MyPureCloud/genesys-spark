@@ -60,5 +60,13 @@
         "type": "spacing"
       }
     }
+  },
+  "menu": {
+    "option": {
+      "padding": {
+        "value": "{container.xs.padding} {container.sm.padding}",
+        "type": "spacing"
+      }
+    }
   }
 }

@@ -187,10 +187,6 @@
   },
   "menu": {
     "option": {
-      "padding": {
-        "value": "{container.xs.padding} {container.sm.padding}",
-        "type": "spacing"
-      },
       "gap": {
         "value": "{container.sm.gap}",
         "type": "spacing"
@@ -347,6 +343,16 @@
         "background_color": {
           "value": "{background.container.elevated.default}",
           "type": "color"
+        }
+      },
+      "padding": {
+        "value": "0px {container.sm.padding}",
+        "type": "spacing"
+      },
+      "subtext": {
+        "padding": {
+          "value": "{container.xs.padding} {container.sm.padding}",
+          "type": "spacing"
         }
       }
     },
