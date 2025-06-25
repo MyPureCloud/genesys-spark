@@ -27,6 +27,11 @@
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "types": "dist/index.d.ts",
+  "dependencies": {
+    "cldr-bcp47": "^47.0.0",
+    "cldr-core": "^47.0.0",
+    "cldr-dates-full": "^47.0.0"
+  },
   "devDependencies": {
     "@rollup/plugin-replace": "^6.0.2",
     "@tsconfig/strictest": "^2.0.5",
