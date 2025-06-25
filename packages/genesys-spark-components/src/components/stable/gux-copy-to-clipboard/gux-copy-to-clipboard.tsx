@@ -100,16 +100,14 @@ export class GuxCopyToClipboard {
         onClick={this.onCopyToClipboard.bind(this)}
         onKeyDown={e => this.handleKeyDown(e)}
       >
-        <div class="gux-copy-content">
-          {/* This is a named slot because we don't want it to be possible to slot a text node.
+        {/* This is a named slot because we don't want it to be possible to slot a text node.
           Slotted text nodes are not targeted by `::slotted(*)` so they are not styled as expected. */}
-          <slot name="content" />
-          <gux-icon
-            icon-name="fa/copy-regular"
-            size="small"
-            decorative
-          ></gux-icon>
-        </div>
+        <slot name="content" />
+        <gux-icon
+          icon-name="fa/copy-regular"
+          size="small"
+          decorative
+        ></gux-icon>
         {this.renderTooltip()}
       </button>
     ) as JSX.Element;
