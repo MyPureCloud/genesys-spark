@@ -40,3 +40,7 @@ export async function newSparkE2EPage(
   await page.waitForChanges();
   return page;
 }
+
+export async function waitForTimeout(duration: number) {
+  return new Promise(r => setTimeout(r, duration));
+}

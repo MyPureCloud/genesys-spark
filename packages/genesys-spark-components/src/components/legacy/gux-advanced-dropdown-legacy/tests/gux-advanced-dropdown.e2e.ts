@@ -1,4 +1,8 @@
-import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
+import {
+  a11yCheck,
+  newSparkE2EPage,
+  waitForTimeout
+} from '../../../../test/e2eTestUtils';
 
 import { asyncFilter } from '@utils/array/async-filter';
 const html = `
@@ -76,7 +80,7 @@ describe('gux-advanced-dropdown-legacy', () => {
     const value = await input.getProperty('value');
     expect(value).toBe('en');
 
-    await page.waitForTimeout(1000);
+    await waitForTimeout(1000);
 
     expect(filterSpy).toHaveReceivedEventDetail('en');
 
@@ -118,7 +122,7 @@ describe('gux-advanced-dropdown-legacy', () => {
     const value = await input.getProperty('value');
     expect(value).toBe('en');
 
-    await page.waitForTimeout(1000);
+    await waitForTimeout(1000);
 
     expect(filterSpy).toHaveReceivedEventDetail('en');
 
