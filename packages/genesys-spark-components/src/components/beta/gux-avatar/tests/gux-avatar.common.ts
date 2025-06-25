@@ -71,6 +71,6 @@ export const renderConfigs = [
   },
   {
     description: 'Should render as expected with image slot',
-    html: '<gux-avatar-beta name="Conor Darcy"><img slot="image" src="https://i.pravatar.cc/300" alt="Conor Darcy" /></gux-avatar-beta>'
+    html: '<gux-avatar-beta name="Conor Darcy"><img slot="image" src="https://i.pravatar.cc/300?img=1" alt="Conor Darcy" /></gux-avatar-beta>'
   }
 ];
