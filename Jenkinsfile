@@ -56,7 +56,11 @@ webappPipelineV2 {
         }
     }
     prepareStep = {
-        sh('npm run devops.create.pipeline.assets')
+        if (isReleaseBranch) {
+            sh('npm run devops.create.pipeline.assets.release')
+        } else {
+            sh('npm run devops.create.pipeline.assets')
+        }
         sh('node -v')
         sh('npm ci')
     }
