@@ -32,16 +32,6 @@ export class GuxCopyToClipboard {
     this.resetTooltip();
   }
 
-  private handleKeyDown(event: KeyboardEvent): void {
-    switch (event.key) {
-      case 'Enter':
-      case ' ':
-        event.preventDefault();
-        this.onCopyToClipboard();
-        break;
-    }
-  }
-
   private resetTooltip() {
     this.tooltipContent = 'clickToCopy';
   }
@@ -99,7 +89,6 @@ export class GuxCopyToClipboard {
         type="button"
         class="gux-copy-to-clipboard-wrapper"
         onClick={this.onCopyToClipboard.bind(this)}
-        onKeyDown={e => this.handleKeyDown(e)}
         aria-label={getSlotTextContent(this.root, 'content')}
       >
         <div class="gux-copy-content">
