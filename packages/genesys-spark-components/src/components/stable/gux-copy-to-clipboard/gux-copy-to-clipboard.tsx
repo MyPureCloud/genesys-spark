@@ -3,6 +3,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
 import { GuxCopyToClipboardContent } from './gux-copy-to-clipboard.types';
+import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 
 /**
  * @slot content - Slot for content
@@ -99,15 +100,18 @@ export class GuxCopyToClipboard {
         class="gux-copy-to-clipboard-wrapper"
         onClick={this.onCopyToClipboard.bind(this)}
         onKeyDown={e => this.handleKeyDown(e)}
+        aria-label={getSlotTextContent(this.root, 'content')}
       >
-        {/* This is a named slot because we don't want it to be possible to slot a text node.
+        <div class="gux-copy-content">
+          {/* This is a named slot because we don't want it to be possible to slot a text node.
           Slotted text nodes are not targeted by `::slotted(*)` so they are not styled as expected. */}
-        <slot name="content" />
-        <gux-icon
-          icon-name="fa/copy-regular"
-          size="small"
-          decorative
-        ></gux-icon>
+          <slot name="content" />
+          <gux-icon
+            icon-name="fa/copy-regular"
+            size="small"
+            decorative
+          ></gux-icon>
+        </div>
         {this.renderTooltip()}
       </button>
     ) as JSX.Element;
