@@ -21,6 +21,7 @@ exports[`gux-accordion renders 1`] = `
         </div>
         <div aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout" id="gux-accordion-section-i" role="region">
           <slot name="content"></slot>
+          <slot></slot>
         </div>
       </section>
     </template>
@@ -47,6 +48,7 @@ exports[`gux-accordion renders 1`] = `
         </div>
         <div aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout" id="gux-accordion-section-i" role="region">
           <slot name="content"></slot>
+          <slot></slot>
         </div>
       </section>
     </template>
@@ -73,6 +75,7 @@ exports[`gux-accordion renders 1`] = `
         </div>
         <div aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout" id="gux-accordion-section-i" role="region">
           <slot name="content"></slot>
+          <slot></slot>
         </div>
       </section>
     </template>
@@ -103,6 +106,7 @@ exports[`gux-accordion renders 1`] = `
         </div>
         <div aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout" id="gux-accordion-section-i" role="region">
           <slot name="content"></slot>
+          <slot></slot>
         </div>
       </section>
     </template>
@@ -134,6 +138,7 @@ exports[`gux-accordion renders 1`] = `
         </div>
         <div aria-labelledby="gux-accordion-header-i" class="gux-content gux-text-content-layout" id="gux-accordion-section-i" role="region">
           <slot name="content"></slot>
+          <slot></slot>
         </div>
       </section>
     </template>

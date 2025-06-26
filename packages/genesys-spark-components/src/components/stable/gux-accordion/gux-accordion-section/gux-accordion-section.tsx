@@ -163,6 +163,7 @@ export class GuxAccordionSection {
           }}
         >
           <slot name="content"></slot>
+          <slot />
         </div>
       </section>
     ) as JSX.Element;
