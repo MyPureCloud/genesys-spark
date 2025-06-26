@@ -44,6 +44,7 @@
 
   &.gux-active {
     color: ui.$gse-ui-stepper-icon-active-foregroundColor;
+    pointer-events: none;
     border-block-start: var(--stepper-border-block-start-active, none);
     border-inline-start: var(--stepper-border-inline-start-active, none);
   }
