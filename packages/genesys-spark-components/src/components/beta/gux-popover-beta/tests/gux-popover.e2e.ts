@@ -37,7 +37,8 @@ describe('gux-popover-beta', () => {
 
     const component = await page.find('gux-popover-beta');
     const guxdismiss = await component.spyOnEvent('guxdismiss');
-    const button = await page.find('pierce/gux-dismiss-button');
+    const dismissButton = await page.find('pierce/gux-dismiss-button');
+    const button = await dismissButton.find('pierce/button');
     await button.click();
     expect(guxdismiss).toHaveReceivedEvent();
   });

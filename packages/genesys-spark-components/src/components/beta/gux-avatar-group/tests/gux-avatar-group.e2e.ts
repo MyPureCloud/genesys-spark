@@ -141,7 +141,7 @@ describe('gux-avatar-group', () => {
       const lastItemButton = await lastAvatarGroupItem.find('pierce/button');
       await element.press('Tab');
       await page.waitForChanges();
-      expect(page).toMatchSnapshot();
+      expect(element.outerHTML).toMatchSnapshot();
       // correct initially
       expect(firstItemButton.getAttribute('tabindex')).toEqual('0');
       expect(secondItemButton.getAttribute('tabindex')).toEqual('-1');
@@ -219,7 +219,7 @@ describe('gux-avatar-group', () => {
       await page.waitForChanges();
       const overflow = await page.find('pierce/gux-avatar-overflow-beta');
       const overflowButton = await overflow.find('pierce/button');
-      expect(page).toMatchSnapshot();
+      expect(element.outerHTML).toMatchSnapshot();
       // correct initially
       expect(firstItemButton.getAttribute('tabindex')).toEqual('0');
       expect(secondItemButton.getAttribute('tabindex')).toEqual('-1');
