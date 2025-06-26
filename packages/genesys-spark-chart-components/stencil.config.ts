@@ -4,7 +4,7 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 import { sass } from '@stencil/sass';
 
 import copy from 'rollup-plugin-copy';
-import nodePolyfills from 'rollup-plugin-node-polyfills';
+import nodePolyfills from 'rollup-plugin-polyfill-node';
 
 import { componentMetadataGenerator } from './scripts/component-metadata-generator';
 
