@@ -1,4 +1,8 @@
-import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
+import {
+  a11yCheck,
+  newSparkE2EPage,
+  waitForTimeout
+} from '../../../../test/e2eTestUtils';
 
 const html = `
   <gux-copy-to-clipboard lang="en">
@@ -19,7 +23,7 @@ describe('gux-copy-to-clipboard', () => {
     const element = await page.find('gux-copy-to-clipboard');
 
     await element.hover();
-    await page.waitForTimeout(2000);
+    await waitForTimeout(2000);
 
     const tooltip = await element.find('pierce/gux-tooltip');
     await a11yCheck(page);

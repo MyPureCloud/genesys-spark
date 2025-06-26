@@ -1,4 +1,8 @@
-import { newSparkE2EPage, a11yCheck } from '../../../../../test/e2eTestUtils';
+import {
+  a11yCheck,
+  newSparkE2EPage,
+  waitForTimeout
+} from '../../../../../test/e2eTestUtils';
 
 describe('gux-avatar-overflow', () => {
   describe('#render', () => {
@@ -38,11 +42,11 @@ describe('gux-avatar-overflow', () => {
 
       await button.click();
       await page.waitForChanges();
-      await page.waitForTimeout(500);
+      await waitForTimeout(500);
       expect(await button.getAttribute('aria-expanded')).toBe('true');
 
       await button.click();
-      await page.waitForTimeout(500);
+      await waitForTimeout(500);
       await page.waitForChanges();
       expect(await button.getAttribute('aria-expanded')).toBe('false');
     });
@@ -95,14 +99,14 @@ describe('gux-avatar-overflow', () => {
 
       // Open menu
       await button.click();
-      await page.waitForTimeout(500);
+      await waitForTimeout(500);
       await page.waitForChanges();
       expect(await button.getAttribute('aria-haspopup')).toBe('true');
       expect(await button.getAttribute('aria-expanded')).toBe('true');
 
       // Press Escape to close menu
       await page.keyboard.press('Escape');
-      await page.waitForTimeout(500);
+      await waitForTimeout(500);
       await page.waitForChanges();
       expect(await button.getAttribute('aria-expanded')).toBe('false');
     });
@@ -121,13 +125,13 @@ describe('gux-avatar-overflow', () => {
 
       // Open menu
       await button.click();
-      await page.waitForTimeout(500);
+      await waitForTimeout(500);
       await page.waitForChanges();
       expect(await button.getAttribute('aria-expanded')).toBe('true');
 
       // Press Tab to close menu
       await page.keyboard.press('Tab');
-      await page.waitForTimeout(500);
+      await waitForTimeout(500);
       await page.waitForChanges();
       expect(await button.getAttribute('aria-expanded')).toBe('false');
     });

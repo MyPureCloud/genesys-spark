@@ -40,12 +40,14 @@ Type: `Promise<void>`
 ### Used by
 
  - [gux-column-manager](../../stable/gux-column-manager)
+ - [gux-flyout-menu](../../stable/gux-flyout-menu)
  - [gux-toggle](../../stable/gux-toggle)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-column-manager --> gux-announce-beta
+  gux-flyout-menu --> gux-announce-beta
   gux-toggle --> gux-announce-beta
   style gux-announce-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```

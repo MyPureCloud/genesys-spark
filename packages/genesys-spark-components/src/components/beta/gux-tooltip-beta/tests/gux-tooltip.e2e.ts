@@ -1,4 +1,8 @@
-import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
+import {
+  a11yCheck,
+  newSparkE2EPage,
+  waitForTimeout
+} from '../../../../test/e2eTestUtils';
 
 describe('gux-tooltip-beta', () => {
   describe('#render', () => {
@@ -32,7 +36,7 @@ describe('gux-tooltip-beta', () => {
         await a11yCheck(page);
 
         await element.hover();
-        await page.waitForTimeout(2000);
+        await waitForTimeout(2000);
 
         await a11yCheck(page);
 

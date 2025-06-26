@@ -17,6 +17,7 @@
     "dev.gscc": "npm run dev --workspace=packages/genesys-spark-chart-components",
     "dev.spark": "npm run dev --workspace=packages/genesys-spark",
     "devops.create.pipeline.assets": "node ./scripts/create-pipeline-d-folder assets",
+    "devops.create.pipeline.assets.release": "node ./scripts/create-pipeline-d-folder assets.release",
     "devops.create.pipeline.examples": "node ./scripts/create-pipeline-d-folder examples",
     "eslint.root": "eslint . --fix",
     "eslint.workspaces": "npm run eslint --workspaces --if-present",
