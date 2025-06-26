@@ -1,4 +1,5 @@
 import { getCldrCanonicalIanaId } from './bcp47timezone';
+import { getTimeZones as getTzdbTimeZones, type TimeZone as TzdbTimeZone } from '@vvo/tzdb';
 
 // Import CLDR data for supported locales at build time
 import enTimeZoneNames from 'cldr-dates-full/main/en/timeZoneNames.json' with { type: 'json' };
@@ -24,6 +25,7 @@ import thTimeZoneNames from 'cldr-dates-full/main/th/timeZoneNames.json' with { 
 import trTimeZoneNames from 'cldr-dates-full/main/tr/timeZoneNames.json' with { type: 'json' };
 import ukTimeZoneNames from 'cldr-dates-full/main/uk/timeZoneNames.json' with { type: 'json' };
 import zhTimeZoneNames from 'cldr-dates-full/main/zh/timeZoneNames.json' with { type: 'json' };
+import { getCldrTerritoryName } from './territories';
 
 // TypeScript interfaces for CLDR data structures
 
@@ -126,4 +128,54 @@ export function getCldrTimezoneExemplarCity(ianaTzId: string, locale: string = '
   }
   // Fallback to last segment of original timezone ID with underscores replaced by spaces
   return cldrCanonicalIanaId.split('/').pop()?.replace(/_/g, ' ');
+}
+
+function getIanaTimezone(ianaTzId: string): TzdbTimeZone | undefined {
+  const exactIanaTimezone = getTzdbTimeZones().find((tz) => tz.name === ianaTzId);
+  if (exactIanaTimezone) {
+    return exactIanaTimezone;
+  }
+  const groupIanaTimezone = getTzdbTimeZones().find((tz) => tz.group.includes(ianaTzId));
+  if (groupIanaTimezone) {
+    return groupIanaTimezone;
+  }
+  return undefined;
+}
+
+export function getCldrTimezoneCountryName(ianaTzId: string, locale: string = 'en'): string | undefined {
+  const ianaTimezone = getIanaTimezone(ianaTzId);
+  if (ianaTimezone) {
+    return getCldrTerritoryName(ianaTimezone.countryCode, locale);
+  }
+  return undefined;
+}
+
+export function getCldrTimezoneLabel(ianaTzId: string, locale: string = 'en'): string {
+  const exemplarCity = getCldrTimezoneExemplarCity(ianaTzId, locale);
+  let utcOffsetMinutes: number = 0;
+  let countryName: string | undefined;
+  const ianaTimezone = getIanaTimezone(ianaTzId);
+  if (ianaTimezone) {
+    countryName = getCldrTerritoryName(ianaTimezone.countryCode, locale);
+    utcOffsetMinutes = ianaTimezone.currentTimeOffsetInMinutes;
+  }
+  const formattedOffsetHours = Math.abs(utcOffsetMinutes / 60).toFixed(0).padStart(2, '0');
+  const formattedOffsetMinutes = Math.abs(utcOffsetMinutes % 60).toFixed(0).padStart(2, '0');
+  const formattedOffsetSign = utcOffsetMinutes >= 0 ? '+' : '-';
+  const formattedOffset = `UTC${formattedOffsetSign}${formattedOffsetHours}:${formattedOffsetMinutes}`;
+  if (countryName && exemplarCity /* && countryName !== exemplarCity */) {
+    return `${exemplarCity}, ${countryName} (${formattedOffset})`;
+  } else if (exemplarCity) {
+    return `${exemplarCity} (${formattedOffset})`;
+  }
+  return `${ianaTzId} (${formattedOffset})`;
+}
+
+export function getAllCldrTimezoneLabels(locale: string = 'en'): [string, string][] {
+  const result: [string, string][] = [];
+  for (const timezoneData of getTzdbTimeZones()) {
+    const label = getCldrTimezoneLabel(timezoneData.name, locale);
+    result.push([timezoneData.name, label]);
+  }
+  return result;
 }
