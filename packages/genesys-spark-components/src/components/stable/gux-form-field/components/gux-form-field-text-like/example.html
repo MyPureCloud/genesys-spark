@@ -140,11 +140,7 @@
 
   <fieldset>
     <legend>Character Count</legend>
-    <gux-form-field-text-like
-      id="character-count-1"
-      show-character-count="true"
-      character-limit="100"
-    >
+    <gux-form-field-text-like id="character-count-1" character-limit="100">
       <input slot="input" type="text" name="e-1" />
       <label slot="label">Default</label>
     </gux-form-field-text-like>
@@ -152,7 +148,6 @@
     <gux-form-field-text-like
       id="character-count-2"
       label-position="beside"
-      show-character-count="true"
       character-limit="100"
     >
       <input slot="input" type="text" name="e-1" />
@@ -162,7 +157,15 @@
     <gux-form-field-text-like
       id="character-count-3"
       label-position="screenreader"
-      show-character-count="true"
+      character-limit="100"
+    >
+      <input slot="input" type="text" name="e-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-text-like>
+
+    <h4>No Error Message</h4>
+    <gux-form-field-text-like
+      label-position="screenreader"
       character-limit="100"
     >
       <input slot="input" type="text" name="e-1" />

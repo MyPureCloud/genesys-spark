@@ -3,7 +3,7 @@
 
 @mixin Style {
   .gux-form-field-character-count {
-    display: none;
+    display: flex;
     justify-content: flex-end;
     padding-block-end: ui.$gse-ui-formControl-formField-gap;
     font-family: ui.$gse-ui-formControl-helper-helperText-fontFamily;
@@ -12,15 +12,15 @@
     line-height: ui.$gse-ui-formControl-helper-helperText-lineHeight;
     color: ui.$gse-ui-formControl-helper-defaultColor;
 
-    &.gux-show-character-count {
-      display: flex;
-    }
-
     &.gux-label-above {
       float: inline-end;
       align-items: flex-start;
       justify-content: flex-end;
       inline-size: 50%;
+    }
+
+    &.gux-exceeded {
+      color: ui.$gse-ui-formControl-helper-errorColor;
     }
   }
 }
