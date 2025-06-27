@@ -14,8 +14,8 @@ testWithOptionType(
   'gux-option',
   `
 <gux-option value="a">Ant</gux-option>
-<gux-option value="b">Bear<span slot="subtext">Large</span></gux-option>
-<gux-option value="be">Bee<span slot="subtext">Small</span></gux-option>
+<gux-option value="b">Bear Large<span slot="subtext">Large</span></gux-option>
+<gux-option value="be">Bee Small<span slot="subtext">Small</span></gux-option>
 <gux-option value="c">Cat</gux-option>
 <gux-option value="">None</gux-option>
 `
@@ -25,8 +25,8 @@ testWithOptionType(
   'gux-option-icon',
   `
 <gux-option-icon icon-name="user" value="a">Ant</gux-option-icon>
-<gux-option-icon icon-name="user" value="b">Bear<span slot="subtext">Large</span></gux-option-icon>
-<gux-option-icon icon-name="user" value="be">Bee<span slot="subtext">Small</span></gux-option-icon>
+<gux-option-icon icon-name="user" value="b">Bear Large<span slot="subtext">Large</span></gux-option-icon>
+<gux-option-icon icon-name="user" value="be"><span slot="subtext">Small</span>Bee Small</gux-option-icon>
 <gux-option-icon icon-name="user" value="c">Cat</gux-option-icon>
 <gux-option-icon icon-name="user" value="">None</gux-option-icon>
 `
@@ -253,6 +253,37 @@ function testWithOptionType(optionType: string, listboxContent: string) {
         expect(dropdownSelectedText.outerHTML).toContain('None');
         expect(selectedItem.length).toBe(1);
         expect(selectedItem[0].outerHTML).toContain(listboxItems[4].outerHTML);
+      });
+    });
+
+    describe('selected option text for options with subtext', () => {
+      it('dropdown selected text is correct for option with subtext slotted after option text', async () => {
+        const { page } = await render(nonFilterableDropdown(listboxContent));
+        const dropdownSelectedText = await page.find(`pierce/.gux-field`);
+        expect(dropdownSelectedText.outerHTML).toContain('Select...');
+        await openWithKeyboard(page);
+
+        await page.keyboard.press('ArrowDown');
+        await page.keyboard.press('Enter');
+        await expectDropdownToBeClosed(page);
+        await openWithKeyboard(page);
+
+        expect(dropdownSelectedText.textContent).toEqual('Bear Large');
+      });
+
+      it('dropdown selected text is correct for option with subtext slotted before option text', async () => {
+        const { page } = await render(nonFilterableDropdown(listboxContent));
+        const dropdownSelectedText = await page.find(`pierce/.gux-field`);
+        expect(dropdownSelectedText.outerHTML).toContain('Select...');
+        await openWithKeyboard(page);
+
+        await page.keyboard.press('ArrowDown');
+        await page.keyboard.press('ArrowDown');
+        await page.keyboard.press('Enter');
+        await expectDropdownToBeClosed(page);
+        await openWithKeyboard(page);
+
+        expect(dropdownSelectedText.textContent).toEqual('Bee Small');
       });
     });
   });
