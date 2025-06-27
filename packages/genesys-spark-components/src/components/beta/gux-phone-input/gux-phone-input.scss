@@ -7,13 +7,10 @@
 }
 
 .gux-phone-text-input {
-  flex: 1 1 auto;
+  display: inline-flex;
+  flex: 1 1 0%;
   align-self: auto;
   order: 0;
-  inline-size: calc(
-    100% - 8px
-  ); /* We want the input width not to carry over past its parent container */
-
   margin-inline-start: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -41,7 +38,6 @@
   inline-size: 100%;
   block-size: ui.$gse-ui-phoneInput-dropdown-height;
   padding-block: 0;
-  // padding-inline: 0 8px; /* Commented this out since having it causes extra space to the right of the child input element */
   font-family: ui.$gse-ui-formControl-input-contentText-fontFamily;
   font-size: ui.$gse-ui-formControl-input-contentText-fontSize;
   font-weight: ui.$gse-ui-formControl-input-contentText-fontWeight;
