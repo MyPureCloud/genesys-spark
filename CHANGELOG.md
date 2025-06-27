@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.156.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.155.1...v4.156.0) (2025-06-27)
+
+
+### Features
+
+* **other:** update stenciljs to v4.35.1 ([07e1889](https://github.com/MyPureCloud/genesys-spark/commit/07e1889e404255eb8c5f8a4b80557172e6ae18a8))
+
+
+### Bug Fixes
+
+* **accordion:** fixed duplicate headers in Voiceover ([aa2a0cc](https://github.com/MyPureCloud/genesys-spark/commit/aa2a0cca2ecbc6433a12e4cb5e6e17514ed82ec8))
+
 ### [4.155.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.155.0...v4.155.1) (2025-06-25)
 
 ## [4.155.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.7...v4.155.0) (2025-06-24)
