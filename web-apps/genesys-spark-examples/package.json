@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-examples",
-  "version": "4.156.0",
+  "version": "4.156.1",
   "license": "MIT",
   "scripts": {
     "prebuild": "npm run clean",
