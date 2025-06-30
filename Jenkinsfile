@@ -132,7 +132,7 @@ webappPipelineV2 {
     onPromoteSuccess = {
         sh('printenv')
 
-        currentBuild.description = """<a href="https://grandcentral.ininica.com/#/services/spark-components-webui/version/${env.SERVICE_VERSION}" target="_blank">version@GrandCentral</a></h2>"""
+        currentBuild.description = """<a href="https://grandcentral.ininica.com/#/services/spark-components-webui/version/${env.SERVICE_VERSION}" target="_blank">${env.VERSION}@GrandCentral</a></h2>"""
     }
     onSuccess = {
         if (isReleaseBranch) {
