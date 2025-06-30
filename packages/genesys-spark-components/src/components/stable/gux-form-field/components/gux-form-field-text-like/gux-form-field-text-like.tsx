@@ -118,9 +118,7 @@ export class GuxFormFieldTextLike {
   @State()
   private wasExceeding: boolean = false;
 
-  @Event() charactersExceeded: EventEmitter<void>;
-
-  @Event() charactersNotExceeded: EventEmitter<void>;
+  @Event() characterLimitChange: EventEmitter<boolean>;
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
@@ -292,12 +290,10 @@ export class GuxFormFieldTextLike {
     const isExceeding = this.characterCount > this.characterLimit;
     // Checking if exceeding state has changes since last checking.
     if (isExceeding !== this.wasExceeding) {
-      //If limit is exceeding we emit the charactersExceed event.
       if (isExceeding) {
-        this.charactersExceeded.emit();
-        //If limit is no longer exceeding we emit charactersNotExceeded.
+        this.characterLimitChange.emit(isExceeding);
       } else {
-        this.charactersNotExceeded.emit();
+        this.characterLimitChange.emit(isExceeding);
       }
       this.wasExceeding = isExceeding;
     }
