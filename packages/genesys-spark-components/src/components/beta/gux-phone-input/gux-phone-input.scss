@@ -7,10 +7,10 @@
 }
 
 .gux-phone-text-input {
-  flex: 1 1 auto;
+  display: inline-flex;
+  flex: 1 1 0%;
   align-self: auto;
   order: 0;
-  inline-size: 100%;
   margin-inline-start: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -38,7 +38,6 @@
   inline-size: 100%;
   block-size: ui.$gse-ui-phoneInput-dropdown-height;
   padding-block: 0;
-  padding-inline: 0 8px;
   font-family: ui.$gse-ui-formControl-input-contentText-fontFamily;
   font-size: ui.$gse-ui-formControl-input-contentText-fontSize;
   font-weight: ui.$gse-ui-formControl-input-contentText-fontWeight;
@@ -56,16 +55,17 @@
     align-content: center;
     block-size: 100%;
     cursor: text;
+    border-radius: ui.$gse-ui-formControl-input-borderRadius;
+
+    &:focus-within {
+      @include focus.gux-focus-ring;
+    }
   }
 
   &.gux-error {
     border: ui.$gse-ui-formControl-input-error-border-width
       ui.$gse-ui-formControl-input-error-border-style
       ui.$gse-ui-formControl-input-error-border-color;
-  }
-
-  &:focus-within {
-    @include focus.gux-focus-ring;
   }
 }
 
