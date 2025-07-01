@@ -11,6 +11,12 @@ const axeExclusions = [
     issueId: 'duplicate-id-active',
     exclusionReason:
       'Test uses seeded value for Math.random, so duplicate ids are expected (option buttons)'
+  },
+  {
+    issueId: 'aria-required-children',
+    target: '.gux-tablist',
+    exclusionReason:
+      'Error: Element has children which are not allowed: [role=list] - this is caused because the popover-list has role=list on it which causes a violation since the top parent element has role=tablist'
   }
 ];
 
