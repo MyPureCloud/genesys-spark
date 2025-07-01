@@ -17,7 +17,7 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
             <!---->
             <div class="gux-dropdown-options gux-tab">
               <div class="gux-buttons">
-                <button aria-controls="gux-1-1-panel" aria-disabled="false" aria-selected="false" class="gux-tab-button" id="gux-1-1-tab" role="tab" tabindex="-1" type="button">
+                <button aria-controls="gux-1-1-panel" aria-disabled="false" aria-selected="false" class="gux-tab-button" id="gux-1-1-tab" role="tab" type="button">
                   <gux-tooltip-title>
                     <span class="gux-tab-button-text">
                       <gux-icon decorative="true" icon-name="lock"></gux-icon>
@@ -27,7 +27,7 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
                 </button>
                 <div class="gux-tab-options">
                   <gux-button-slot accent="ghost">
-                    <button aria-expanded="false" class="gux-tab-options-trigger" id="gux-i" tabindex="-1" type="button">
+                    <button aria-expanded="false" class="gux-tab-options-trigger" id="gux-i" type="button">
                       <gux-icon decorative="" icon-name="fa/ellipsis-vertical-regular"></gux-icon>
                       <gux-screen-reader-beta>
                         Tab Options for
@@ -65,7 +65,7 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
             <!---->
             <div class="gux-tab">
               <div class="gux-buttons">
-                <button aria-controls="gux-1-2-panel" aria-disabled="false" aria-selected="false" class="gux-tab-button" id="gux-1-2-tab" role="tab" tabindex="-1" type="button">
+                <button aria-controls="gux-1-2-panel" aria-disabled="false" aria-selected="false" class="gux-tab-button" id="gux-1-2-tab" role="tab" type="button">
                   <gux-tooltip-title>
                     <span class="gux-tab-button-text">
                       <gux-icon decorative="true" icon-name="user-directory"></gux-icon>
@@ -81,7 +81,7 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
             <!---->
             <div class="gux-disabled gux-tab">
               <div class="gux-buttons">
-                <button aria-controls="gux-1-3-panel" aria-disabled="true" aria-selected="false" class="gux-tab-button" disabled="" id="gux-1-3-tab" role="tab" tabindex="-1" type="button">
+                <button aria-controls="gux-1-3-panel" aria-disabled="true" aria-selected="false" class="gux-tab-button" disabled="" id="gux-1-3-tab" role="tab" type="button">
                   <gux-tooltip-title>
                     <span class="gux-tab-button-text">
                       Hello World 3
