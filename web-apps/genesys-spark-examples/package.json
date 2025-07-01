@@ -29,7 +29,7 @@
     "@stencil/webpack": "0.0.6",
     "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^7.1.2",
-    "eslint": "^9.29.0",
+    "eslint": "^9.30.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
     "file-loader": "^6.2.0",
     "glob": "^11.0.3",
