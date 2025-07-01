@@ -11,12 +11,6 @@ const axeExclusions = [
     issueId: 'duplicate-id-active',
     exclusionReason:
       'Test uses seeded value for Math.random, so duplicate ids are expected (option buttons)'
-  },
-  {
-    issueId: 'aria-required-children',
-    target: '.gux-tablist',
-    exclusionReason:
-      'To be addressed in COMUI-2392. New violation picked up after upgrading from axe-core v4.4.2 to v4.8.2'
   }
 ];
 

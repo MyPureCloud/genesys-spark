@@ -236,7 +236,6 @@ export class GuxTabAdvanced {
               class="gux-tab-options-trigger"
               ref={el => (this.tabOptionsButtonElement = el)}
               onClick={() => this.toggleOptions()}
-              tabIndex={this.active ? 0 : -1}
               disabled={this.guxDisabled}
             >
               <gux-icon
@@ -285,7 +284,6 @@ export class GuxTabAdvanced {
         aria-disabled={this.guxDisabled.toString()}
         aria-controls={`gux-${this.tabId}-panel`}
         ref={el => (this.buttonElement = el)}
-        tabIndex={this.active ? 0 : -1}
         id={`gux-${this.tabId}-tab`}
       >
         <gux-tooltip-title ref={el => (this.tooltipTitleElement = el)}>
