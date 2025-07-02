@@ -33,6 +33,8 @@
   flex-wrap: nowrap;
   place-content: stretch center;
   align-items: center;
+  inline-size: 100%;
+  max-inline-size: 100%;
   block-size: var(--gse-ui-formControl-input-textfield-height);
   font-family: var(--gse-ui-dataTableItems-inlineDropdown-label-fontFamily);
   font-size: var(--gse-ui-dataTableItems-inlineDropdown-label-fontSize);
