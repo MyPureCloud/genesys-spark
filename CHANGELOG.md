@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.156.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.2...v4.156.3) (2025-07-02)
+
+
+### Bug Fixes
+
+* **dropdown:** Exclude subtext from selected option ([#1124](https://github.com/MyPureCloud/genesys-spark/issues/1124)) ([42dae9f](https://github.com/MyPureCloud/genesys-spark/commit/42dae9f3591ae5cb16c0ace8bcfeebe688ce4059))
+
 ### [4.156.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.1...v4.156.2) (2025-07-01)
 
 ### [4.156.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.0...v4.156.1) (2025-06-28)
