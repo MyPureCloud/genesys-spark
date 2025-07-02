@@ -202,7 +202,7 @@ export class GuxFormFieldTextLike {
   }
 
   componentDidLoad(): void {
-    setCharacterCountAriaDescribedBy();
+    setCharacterCountAriaDescribedBy(this.root, this.input);
   }
 
   disconnectedCallback(): void {
