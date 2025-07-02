@@ -164,12 +164,9 @@ export class GuxSortControl {
 
   render(): JSX.Element {
     return (
-      <div class="gux-container">
+      <div class={{ 'gux-container': true, 'gux-active': this.active }}>
         <button
-          class={{
-            'gux-sort-button': true,
-            'gux-active': this.active
-          }}
+          class="gux-sort-button"
           type="button"
           onClick={() => this.onClick()}
           aria-label={this.getSRText(this.sort)}
