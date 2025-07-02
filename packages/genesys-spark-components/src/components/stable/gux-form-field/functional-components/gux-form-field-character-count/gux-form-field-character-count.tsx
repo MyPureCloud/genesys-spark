@@ -12,13 +12,14 @@ export const GuxFormFieldCharacterCount: FunctionalComponent<
 > = ({ characterLimit, characterCount, labelPosition }): VNode => {
   return (
     <div
+      aria-live="polite"
       class={{
         'gux-form-field-character-count': true,
         'gux-label-above': labelPosition === 'above',
         'gux-exceeded': characterCount > characterLimit
       }}
     >
-      {characterCount + '/' + characterLimit}
+      <span>{characterCount + '/' + characterLimit}</span>
     </div>
   ) as VNode;
 };

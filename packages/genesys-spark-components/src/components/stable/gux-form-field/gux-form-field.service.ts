@@ -219,3 +219,35 @@ export function getSlottedInput(
 function hasLabelSlot(root: HTMLElement): boolean {
   return Boolean(root.querySelector('label[slot="label"]'));
 }
+
+export function setCharacterCountAriaDescribedBy(): void {
+  if (this.root.hasAttribute('character-limit')) {
+    const characterlimit = this.root.shadowRoot?.querySelector(
+      '.gux-form-field-character-count'
+    );
+    console.info(characterlimit);
+    if (characterlimit) {
+      const counterId = randomHTMLId('gux-form-field-character-counter');
+      const describedByIds =
+        this.input
+          .getAttribute('aria-describedby')
+          ?.split(' ')
+          .filter(id => !id.startsWith(`gux-form-field-character-counter`)) ||
+        [];
+
+      characterlimit.setAttribute('id', counterId);
+      describedByIds.push(counterId);
+
+      if (describedByIds) {
+        this.input.setAttribute('aria-describedby', describedByIds.join(' '));
+      }
+    }
+  } else if (this.input.getAttribute('aria-describedby')) {
+    const describedByIds =
+      this.input
+        .getAttribute('aria-describedby')
+        ?.split(' ')
+        .filter(id => !id.startsWith(`gux-form-field-character-counter`)) || [];
+    this.input.setAttribute('aria-describedby', describedByIds.join(' '));
+  }
+}

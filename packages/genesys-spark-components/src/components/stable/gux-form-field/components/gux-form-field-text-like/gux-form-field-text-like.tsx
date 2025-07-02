@@ -37,7 +37,8 @@ import {
   getComputedLabelPosition,
   validateFormIds,
   setSlotAriaDescribedby,
-  getSlottedInput
+  getSlottedInput,
+  setCharacterCountAriaDescribedBy
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 import { focusInputElement } from '@utils/dom/focus-input-element';
@@ -198,6 +199,10 @@ export class GuxFormFieldTextLike {
     }
 
     trackComponent(this.root, { variant: this.variant });
+  }
+
+  componentDidLoad(): void {
+    setCharacterCountAriaDescribedBy();
   }
 
   disconnectedCallback(): void {
