@@ -40,6 +40,16 @@ Type: `Promise<void>`
 
 
 
+### `guxFocusPopover() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 
 ## Slots
 
