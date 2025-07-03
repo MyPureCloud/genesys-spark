@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.156.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.3...v4.156.4) (2025-07-03)
+
+
+### Bug Fixes
+
+* **table:** active header for sorting now applying border color ([ca6a6d4](https://github.com/MyPureCloud/genesys-spark/commit/ca6a6d40eac29f0e7df53746bf9662628adc8d74))
+
 ### [4.156.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.2...v4.156.3) (2025-07-02)
 
 
