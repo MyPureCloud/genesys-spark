@@ -98,6 +98,7 @@ export class GuxDropdown {
   watchExpanded(expanded: boolean) {
     if (!expanded) {
       this.filter = '';
+      this.filterElement.value = '';
     }
   }
 
@@ -507,7 +508,7 @@ export class GuxDropdown {
   }
 
   private renderFilterInputField(): JSX.Element {
-    if (this.expanded && this.isFilterable()) {
+    if (this.isFilterable()) {
       return (
         <div class="gux-field gux-input-field" dir="auto">
           <div class="gux-field-content">
@@ -520,7 +521,6 @@ export class GuxDropdown {
               </div>
               <div class="input-and-dropdown-button">
                 <input
-                  onClick={this.fieldButtonClick.bind(this)}
                   class="gux-filter-input"
                   type="text"
                   aria-label={this.i18n('filterResults')}
@@ -528,8 +528,10 @@ export class GuxDropdown {
                   onInput={this.filterInput.bind(this)}
                   onKeyDown={this.filterKeydown.bind(this)}
                   onKeyUp={this.filterKeyup.bind(this)}
+                  onFocus={() => (this.expanded = true)}
                   disabled={this.disabled}
                 ></input>
+                {this.renderTargetContent()}
               </div>
             </div>
           </div>
@@ -546,10 +548,10 @@ export class GuxDropdown {
     return (
       <div
         class={{
-          'gux-target-container-expanded': this.expanded && this.isFilterable(),
-          'gux-target-container-collapsed': !(
-            this.expanded && this.isFilterable()
-          ),
+          'gux-target-container-filterable': this.isFilterable(),
+          'gux-target-container-filterable-active':
+            this.expanded && this.isFilterable(),
+          'gux-target-container-not-filterable': !this.isFilterable(),
           'gux-error': this.hasError,
           'gux-disabled': this.disabled
         }}
@@ -567,7 +569,7 @@ export class GuxDropdown {
           aria-haspopup="listbox"
           aria-expanded={this.expanded.toString()}
         >
-          {this.renderTargetContent()}
+          {!this.isFilterable() && this.renderTargetContent()}
           {this.renderRadialLoading()}
           <gux-icon
             class={{
