@@ -5,6 +5,7 @@ import { GuxBadgeAccent } from './gux-badge.types';
 import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
+import { OnMutation } from '@utils/decorator/on-mutation';
 
 /**
  * @slot - Required slot for label
@@ -29,6 +30,11 @@ export class GuxBadge {
 
   @State()
   label: string;
+
+  @OnMutation({ childList: true, subtree: true, characterData: true })
+  onMutation(): void {
+    this.label = this.root.textContent || '';
+  }
 
   private onSlotChange(event: Event) {
     const slotAssignedNodes = (
