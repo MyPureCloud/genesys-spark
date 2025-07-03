@@ -27,7 +27,7 @@ exports[`gux-tabs-advanced #render should render as expected 1`] = `
                 </button>
                 <div class="gux-tab-options">
                   <gux-button-slot accent="ghost">
-                    <button aria-expanded="false" class="gux-tab-options-trigger" id="gux-i" tabindex="-1" type="button">
+                    <button aria-expanded="false" class="gux-tab-options-trigger" id="gux-i" role="tab" tabindex="-1" type="button">
                       <gux-icon decorative="" icon-name="fa/ellipsis-vertical-regular"></gux-icon>
                       <gux-screen-reader-beta>
                         Tab Options for

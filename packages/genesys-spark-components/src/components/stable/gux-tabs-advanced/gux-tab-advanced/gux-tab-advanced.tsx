@@ -231,6 +231,7 @@ export class GuxTabAdvanced {
           <gux-button-slot accent="ghost">
             <button
               id={this.dropdownOptionsButtonId}
+              role="tab"
               aria-expanded={(!this.popoverHidden).toString()}
               type="button"
               class="gux-tab-options-trigger"
