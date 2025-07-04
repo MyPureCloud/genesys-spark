@@ -30,7 +30,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -203,7 +203,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -376,7 +376,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -549,7 +549,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -722,7 +722,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -895,7 +895,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -1068,7 +1068,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -1241,7 +1241,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -1414,7 +1414,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -1587,7 +1587,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -1760,7 +1760,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -1933,7 +1933,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -2106,7 +2106,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -2279,7 +2279,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022年
               </div>
               <button class="gux-year-change" type="button">
@@ -2452,7 +2452,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022년
               </div>
               <button class="gux-year-change" type="button">
@@ -2625,7 +2625,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -2798,7 +2798,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -2971,7 +2971,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -3144,7 +3144,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -3317,7 +3317,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -3490,7 +3490,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -3663,7 +3663,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -3836,7 +3836,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 พ.ศ. 2565
               </div>
               <button class="gux-year-change" type="button">
@@ -4009,7 +4009,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -4182,7 +4182,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -4355,7 +4355,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022年
               </div>
               <button class="gux-year-change" type="button">
@@ -4528,7 +4528,7 @@ exports[`gux-month-picker-beta #render using non regional dates should render th
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022年
               </div>
               <button class="gux-year-change" type="button">
@@ -4701,7 +4701,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -4874,7 +4874,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -5047,7 +5047,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -5220,7 +5220,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -5393,7 +5393,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -5566,7 +5566,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -5739,7 +5739,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -5912,7 +5912,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -6085,7 +6085,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -6258,7 +6258,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -6431,7 +6431,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -6604,7 +6604,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -6777,7 +6777,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -6950,7 +6950,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022年
               </div>
               <button class="gux-year-change" type="button">
@@ -7123,7 +7123,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022년
               </div>
               <button class="gux-year-change" type="button">
@@ -7296,7 +7296,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -7469,7 +7469,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -7642,7 +7642,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -7815,7 +7815,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -7988,7 +7988,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -8161,7 +8161,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -8334,7 +8334,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -8507,7 +8507,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 พ.ศ. 2565
               </div>
               <button class="gux-year-change" type="button">
@@ -8680,7 +8680,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -8853,7 +8853,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022
               </div>
               <button class="gux-year-change" type="button">
@@ -9026,7 +9026,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022年
               </div>
               <button class="gux-year-change" type="button">
@@ -9199,7 +9199,7 @@ exports[`gux-month-picker-beta #render using regional dates should render the co
                   Current year is 2022, Click to change year to 2021
                 </gux-screen-reader-beta>
               </button>
-              <div>
+              <div data-testid="year-label">
                 2022年
               </div>
               <button class="gux-year-change" type="button">
