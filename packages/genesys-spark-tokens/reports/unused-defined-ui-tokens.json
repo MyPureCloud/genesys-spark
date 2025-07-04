@@ -762,6 +762,7 @@
   "--gse-ui-menu-option-shortcut-text-fontSize",
   "--gse-ui-menu-option-shortcut-text-fontWeight",
   "--gse-ui-menu-option-shortcut-text-lineHeight",
+  "--gse-ui-menu-option-subtext-padding",
   "--gse-ui-modal-closeButtonColor",
   "--gse-ui-modal-dismissButton-paddingRight",
   "--gse-ui-modal-dismissButton-paddingTop",

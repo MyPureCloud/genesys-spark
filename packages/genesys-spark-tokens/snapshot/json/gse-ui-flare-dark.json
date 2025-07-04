@@ -1373,7 +1373,6 @@
   },
   "menu": {
     "option": {
-      "padding": "8px 12px",
       "gap": "8px",
       "height": "32px",
       "start_icon": {
@@ -1468,6 +1467,10 @@
       },
       "default": {
         "background_color": "#2a2a2e"
+      },
+      "padding": "0px 12px",
+      "subtext": {
+        "padding": "8px 12px"
       }
     },
     "max_height": "344px",
