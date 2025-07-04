@@ -3098,7 +3098,9 @@
     "wrapping_width": "320px",
     "stacking": {
       "gap": "4px"
-    }
+    },
+    "title_width": "220px",
+    "message_width": "220px"
   },
   "modal": {
     "close_button_color": "#3e4a5b",
