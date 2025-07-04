@@ -1520,6 +1520,33 @@
       "subtext": {
         "foreground_color": "#3e4a5b"
       }
+    },
+    "select-all": {
+      "padding": "4px 0px 0px 0px",
+      "gap": "8px",
+      "label-container": {
+        "padding": "2px 12px",
+        "gap": "8px"
+      },
+      "label": {
+        "gap": "4px",
+        "foreground_color": "#2e394c"
+      },
+      "background_color": "#ffffff",
+      "divider": {
+        "default": "#b4bccb",
+        "adjacent_selected": "#b4bccb"
+      },
+      "scrolling": {
+        "box_shadow": {
+          "blur": "8px",
+          "spread": "1px",
+          "color": "rgba(35, 57, 92, 0.15)",
+          "type": "dropShadow",
+          "offsetX": "0",
+          "offsetY": "0"
+        }
+      }
     }
   },
   "dropdown": {
@@ -1542,6 +1569,20 @@
             "fontSize": "12px"
           },
           "foreground_color": "#3e4a5b"
+        }
+      },
+      "select-all": {
+        "label_text": {
+          "fontFamily": "Roboto",
+          "fontWeight": "400",
+          "fontSize": "12px",
+          "lineHeight": "18px"
+        },
+        "counter_text": {
+          "fontFamily": "Roboto",
+          "fontWeight": "600",
+          "fontSize": "12px",
+          "lineHeight": "18px"
         }
       }
     },
