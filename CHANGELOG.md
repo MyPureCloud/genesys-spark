@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.156.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.4...v4.156.5) (2025-07-04)
+
+
+### Bug Fixes
+
+* **badge:** Update screenreader text when text altered by JS ([#1212](https://github.com/MyPureCloud/genesys-spark/issues/1212)) ([11e7764](https://github.com/MyPureCloud/genesys-spark/commit/11e77648bb512dd8a0e0459343916ee7295467d1))
+
 ### [4.156.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.3...v4.156.4) (2025-07-03)
 
 
