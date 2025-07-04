@@ -33,7 +33,7 @@
     "prettier": "^3.6.2",
     "prettier-config-genesys-spark-components": "file:../prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
-    "stylelint": "^16.21.0",
+    "stylelint": "^16.21.1",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^7.1.0",
     "stylelint-config-standard": "^38.0.0",

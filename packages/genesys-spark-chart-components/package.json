@@ -55,7 +55,7 @@
   "devDependencies": {
     "@babel/core": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
-    "@stencil/core": "4.35.1",
+    "@stencil/core": "4.35.3",
     "@stencil/react-output-target": "^0.5.3",
     "@stencil/sass": "^3.2.1",
     "@types/jest": "^29.5.14",
@@ -89,7 +89,7 @@
     "rollup-plugin-polyfill-node": "^0.13.0",
     "semver-sort": "^1.0.0",
     "smob": "^1.5.0",
-    "stylelint": "^16.21.0",
+    "stylelint": "^16.21.1",
     "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^7.1.0",
