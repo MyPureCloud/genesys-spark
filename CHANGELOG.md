@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.156.6](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.5...v4.156.6) (2025-07-05)
+
+
+### Bug Fixes
+
+* **month-picker-beta:** add data-testid to year label ([4babffd](https://github.com/MyPureCloud/genesys-spark/commit/4babffdc6ee3db8b725f3307950ea3648238d1fe))
+
 ### [4.156.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.4...v4.156.5) (2025-07-04)
 
 
