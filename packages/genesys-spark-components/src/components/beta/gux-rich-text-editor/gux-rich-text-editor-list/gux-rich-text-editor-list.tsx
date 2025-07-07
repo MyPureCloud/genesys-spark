@@ -72,7 +72,9 @@ export class GuxRichTextEditorList {
       if (firstHighlightItem) {
         const buttonElement =
           firstHighlightItem.shadowRoot.querySelector('button');
-        buttonElement.tabIndex = 0;
+        if (buttonElement) {
+          buttonElement.tabIndex = 0;
+        }
       }
     }
   }

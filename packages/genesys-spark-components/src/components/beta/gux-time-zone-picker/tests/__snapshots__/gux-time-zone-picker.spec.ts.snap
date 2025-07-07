@@ -798,6 +798,14 @@ exports[`#render  should render component as expected (1) 1`] = `
               <span class="gux-default-zone"></span>
             </div>
           </gux-option>
+          <gux-option value="America/Coyhaique">
+            <div class="gux-option-wrapper">
+              <div>
+                Coyhaique, Chile (UTC-03:00)
+              </div>
+              <span class="gux-default-zone"></span>
+            </div>
+          </gux-option>
           <gux-option value="America/Creston">
             <div class="gux-option-wrapper">
               <div>
@@ -5475,6 +5483,14 @@ exports[`#render  should render component as expected (1) 1`] = `
               <div class="gux-option-wrapper">
                 <div>
                   Costa Rica, Costa Rica (UTC-06:00)
+                </div>
+                <span class="gux-default-zone"></span>
+              </div>
+            </gux-option>
+            <gux-option value="America/Coyhaique">
+              <div class="gux-option-wrapper">
+                <div>
+                  Coyhaique, Chile (UTC-03:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -10165,6 +10181,14 @@ exports[`#render  should render component as expected (2) 1`] = `
               <span class="gux-default-zone"></span>
             </div>
           </gux-option>
+          <gux-option value="America/Coyhaique">
+            <div class="gux-option-wrapper">
+              <div>
+                Coyhaique, Chile (UTC-03:00)
+              </div>
+              <span class="gux-default-zone"></span>
+            </div>
+          </gux-option>
           <gux-option value="America/Creston">
             <div class="gux-option-wrapper">
               <div>
@@ -14842,6 +14866,14 @@ exports[`#render  should render component as expected (2) 1`] = `
               <div class="gux-option-wrapper">
                 <div>
                   Costa Rica, Costa Rica (UTC-06:00)
+                </div>
+                <span class="gux-default-zone"></span>
+              </div>
+            </gux-option>
+            <gux-option value="America/Coyhaique">
+              <div class="gux-option-wrapper">
+                <div>
+                  Coyhaique, Chile (UTC-03:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>
@@ -19544,6 +19576,14 @@ exports[`#render  should render component as expected (3) 1`] = `
               <span class="gux-default-zone"></span>
             </div>
           </gux-option>
+          <gux-option value="America/Coyhaique">
+            <div class="gux-option-wrapper">
+              <div>
+                Coyhaique, Chile (UTC-03:00)
+              </div>
+              <span class="gux-default-zone"></span>
+            </div>
+          </gux-option>
           <gux-option value="America/Creston">
             <div class="gux-option-wrapper">
               <div>
@@ -24221,6 +24261,14 @@ exports[`#render  should render component as expected (3) 1`] = `
               <div class="gux-option-wrapper">
                 <div>
                   Costa Rica, Costa Rica (UTC-06:00)
+                </div>
+                <span class="gux-default-zone"></span>
+              </div>
+            </gux-option>
+            <gux-option value="America/Coyhaique">
+              <div class="gux-option-wrapper">
+                <div>
+                  Coyhaique, Chile (UTC-03:00)
                 </div>
                 <span class="gux-default-zone"></span>
               </div>

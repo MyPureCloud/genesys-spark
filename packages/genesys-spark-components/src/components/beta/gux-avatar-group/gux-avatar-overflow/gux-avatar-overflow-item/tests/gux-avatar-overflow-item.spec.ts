@@ -1,40 +1,37 @@
+jest.mock('../../../../../../utils/error/log-error', () => ({
+  __esModule: true,
+  logWarn: jest.fn()
+}));
+
 import { newSpecPage } from '@stencil/core/testing';
+import { logWarn } from '../../../../../../utils/error/log-error';
 import { GuxAvatarOverflowItem } from '../gux-avatar-overflow-item';
 
 const components = [GuxAvatarOverflowItem];
 describe('gux-avatar-overflow-item-beta', () => {
-  let component: GuxAvatarOverflowItem;
-
-  beforeEach(async () => {
-    const page = await newSpecPage({
-      components,
-      html: `<gux-avatar-overflow-item-beta></gux-avatar-overflow-item-beta>`
-    });
-    component = page.rootInstance;
+  afterEach(() => {
+    jest.restoreAllMocks();
   });
 
-  it('should build', () => {
-    expect(component).toBeTruthy();
+  it('should build', async () => {
+    const page = await newSpecPage({
+      components,
+      html: `<gux-avatar-overflow-item-beta name="John Doe"></gux-avatar-overflow-item-beta>`
+    });
+    expect(page.rootInstance).toBeInstanceOf(GuxAvatarOverflowItem);
   });
 
   describe('validatingInputs', () => {
     it('should log warning when name is not provided', async () => {
-      const logWarnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
       await newSpecPage({
         components,
         html: `<gux-avatar-overflow-item-beta></gux-avatar-overflow-item-beta>`
       });
 
-      expect(logWarnSpy).toHaveBeenCalled();
-      logWarnSpy.mockRestore();
+      expect(logWarn).toHaveBeenCalled();
     });
 
     it('should log warning when image has no alt attribute', async () => {
-      const logWarnSpy = jest
-        .spyOn(console, 'warn')
-        .mockImplementation(() => {});
       await newSpecPage({
         components,
         html: `
@@ -44,8 +41,7 @@ describe('gux-avatar-overflow-item-beta', () => {
           `
       });
 
-      expect(logWarnSpy).toHaveBeenCalled();
-      logWarnSpy.mockRestore();
+      expect(logWarn).toHaveBeenCalled();
     });
   });
 
