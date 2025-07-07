@@ -30,6 +30,7 @@ import {
 } from '../gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
+import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 /**
  * @slot - for a gux-listbox-multi containing gux-option-multi children
  */
@@ -604,7 +605,7 @@ export class GuxDropdownMulti {
         <button
           type="button"
           class="gux-field gux-field-button"
-          disabled={this.disabled}
+          disabled={calculateInputDisabledState(this.root)}
           onClick={this.fieldButtonClick.bind(this)}
           ref={el => (this.fieldButtonElement = el)}
           aria-haspopup="listbox"
