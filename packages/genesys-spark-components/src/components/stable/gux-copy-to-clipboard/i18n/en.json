@@ -1,5 +1,5 @@
 {
   "clickToCopy": "Click to Copy",
   "copySuccess": "Copied to Clipboard",
-  "copyFailure": "Error. Please Try Again."
+  "copyFailure": "Copy failed. Please try again."
 }

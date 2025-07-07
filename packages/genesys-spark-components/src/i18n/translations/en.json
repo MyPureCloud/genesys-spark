@@ -62,7 +62,7 @@
   "gux-copy-to-clipboard": {
     "clickToCopy": "Click to Copy",
     "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "copyFailure": "Copy failed. Please try again."
   },
   "gux-create-option": {
     "createCustomOptionInstructions": ", select to create a new custom option",
