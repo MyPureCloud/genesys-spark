@@ -85,7 +85,7 @@
       }
     },
     "box_shadow": {
-      "value": "{shadow.9_tooltip}",
+      "value": "{shadow.10_tooltip}",
       "type": "boxShadow"
     },
     "padding": {

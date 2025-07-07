@@ -373,7 +373,7 @@
       "type": "border"
     },
     "box_shadow": {
-      "value": "{shadow.6_floating_menu}",
+      "value": "{shadow.7_menu}",
       "type": "boxShadow"
     },
     "padding": {
@@ -852,7 +852,7 @@
       }
     },
     "box_shadow": {
-      "value": "{shadow.6_floating_menu}",
+      "value": "{shadow.7_menu}",
       "type": "boxShadow"
     },
     "cta_group": {

@@ -1222,7 +1222,29 @@
       "type": "boxShadow",
       "description": "This is the shadow style we use in Side Panels."
     },
-    "5_modal": {
+    "4_copilot": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.lighter}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "2",
+          "blur": "3",
+          "spread": "0",
+          "color": "{effects.shadows.middle}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Side Panels."
+    },
+    "6_modal": {
       "value": [
         {
           "x": "0",
@@ -1236,7 +1258,7 @@
       "type": "boxShadow",
       "description": "This is the shadow style we use in Modals."
     },
-    "6_floating_menu": {
+    "7_menu": {
       "value": [
         {
           "x": "0",
@@ -1258,7 +1280,7 @@
       "type": "boxShadow",
       "description": "This is the shadow style we use in Floating Menus; like the dropdown or calendar menus."
     },
-    "7_dragged_items": {
+    "8_dragged_item": {
       "value": [
         {
           "x": "0",
@@ -1280,7 +1302,7 @@
       "type": "boxShadow",
       "description": "This is the shadow style we use in elements that are currently being dragged by the user."
     },
-    "8_toast": {
+    "9_toast": {
       "value": [
         {
           "x": "0",
@@ -1302,7 +1324,7 @@
       "type": "boxShadow",
       "description": "This is the shadow style we use in Toasts."
     },
-    "9_tooltip": {
+    "10_tooltip": {
       "value": [
         {
           "x": "0",
@@ -1323,6 +1345,17 @@
       ],
       "type": "boxShadow",
       "description": "This is the shadow style we use in Tooltips."
+    },
+    "scroll_indicator": {
+      "value": {
+        "x": "0",
+        "y": "-4",
+        "blur": "14",
+        "spread": "4",
+        "color": "{effects.shadows.lightest}",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
     }
   },
   "elevation": {
