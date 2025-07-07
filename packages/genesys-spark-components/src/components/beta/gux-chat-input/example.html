@@ -1,8 +1,59 @@
 <h2>Chat Input</h2>
 
-<gux-chat-input>
-  <div slot="caution-message">
-    Genesys AI may provide incorrect information. Double-check AI responses.
-    Genesys AI privacy, terms and conditions
+<div id="component-wrapper">
+  <div id="copilot-text-area" class="gux-hidden">
+    This is the Copilot text that was generated after hitting the CTA button
   </div>
-</gux-chat-input>
+
+  <div>
+    <gux-chat-input id="chat-input-example">
+      <div slot="caution-message">
+        Genesys AI may provide incorrect information. Double-check AI responses.
+        Genesys AI privacy, terms and conditions
+      </div>
+    </gux-chat-input>
+  </div>
+</div>
+
+<style
+  onload="(function () {
+    const chatInput = document.getElementById('chat-input-example');
+    const copilotTextArea = document.getElementById('copilot-text-area');
+
+    chatInput.addEventListener('onchatinputsubmit', (e) => {
+      debugger;
+      console.log('e', e);
+
+      window.setTimeout(function() {
+        copilotTextArea.classList.toggle('gux-hidden');
+        chatInput.guxReset();
+
+        window.setTimeout(function() {
+          copilotTextArea.classList.toggle('gux-hidden');
+        }, 1500);
+      }, 1000);
+    });
+})()"
+>
+  #component-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    inline-size: 424px;
+    block-size: 323px;
+    padding: 20px;
+    background: #e4e5e7;
+  }
+
+  #copilot-text-area {
+    inline-size: 410px;
+    padding: 10px;
+    background: white;
+  }
+
+  .gux-hidden {
+    display: none;
+  }
+</style>

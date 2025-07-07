@@ -6,7 +6,8 @@ import {
   State,
   Host,
   Event,
-  EventEmitter
+  EventEmitter,
+  Method
 } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
@@ -39,7 +40,14 @@ export class GuxChatInput {
    * Triggers when the CTA button is clicked to initiate Copilot text processing.
    */
   @Event()
-  onSubmit: EventEmitter;
+  onchatinputsubmit: EventEmitter;
+
+  @Method()
+  // eslint-disable-next-line @typescript-eslint/require-await
+  async guxReset(): Promise<void> {
+    this.inputText = null;
+    this.isProcessing = false;
+  }
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
@@ -48,7 +56,7 @@ export class GuxChatInput {
 
   submit(): void {
     this.isProcessing = true;
-    this.onSubmit.emit();
+    this.onchatinputsubmit.emit({ inputText: this.inputText });
   }
 
   onInputChange(inputElement: HTMLInputElement): void {
