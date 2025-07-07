@@ -17,20 +17,10 @@
     global.$gse-semantic-border-container-edges-dataTable-default;
   border-radius: ui.$gse-ui-rte-container-borderRadius; // border-radius: global.$rte-container-border_radius, 4px;
 
-  .caution-message {
-    /* semantic/body/xs/regular */
-    font-family: global.$gse-semantic-theme-fontFamily-body; // $theme-font_family-body, "Noto Sans";
-    font-size: global.$gse-core-fontSize-2xs;
-    font-style: normal;
-    font-weight: global.$gse-core-fontWeight-regular;
-    line-height: global.$gse-core-lineHeight-3xs; // ui.$line_height-3xs, 14px;
-    color: global.$gse-semantic-foreground-container-midEmphasis; // ui.$foreground-container-mid_emphasis, #4F5157;
-    text-decoration-line: underline;
-    text-decoration-thickness: auto;
-    text-decoration-style: solid;
-    text-decoration-skip-ink: auto;
-    text-underline-position: from-font;
-    text-underline-offset: auto;
+  &:focus-within {
+    // border: var(--form_control-text_input-edges-border_width, 1px) solid var(--foreground-interactive-secondary-active, #102251);
+    border: global.$gse-semantic-container-edges-borderWidth solid
+      global.$gse-semantic-foreground-interactive-secondary-active;
   }
 
   .gux-input {
@@ -43,6 +33,8 @@
     font-weight: global.$gse-core-fontWeight-regular; // ui.$font_weight-regular, 400;
     line-height: global.$gse-core-lineHeight-sm; // ui.$line_height-sm, 20px; /* 142.857% */
     color: global.$gse-semantic-foreground-formControl-textInput-placeholder;
+    outline: none;
+    border: none;
   }
 
   .gux-cta {
@@ -84,4 +76,23 @@
       padding-inline: 8px;
     }
   }
+}
+
+.caution-message {
+  align-items: center;
+  inline-size: 400px;
+  padding-block: 12px;
+  padding-inline: 16px;
+  font-family: global.$gse-semantic-theme-fontFamily-body; // $theme-font_family-body, "Noto Sans";
+  font-size: global.$gse-core-fontSize-2xs;
+  font-style: normal;
+  font-weight: global.$gse-core-fontWeight-regular;
+  line-height: global.$gse-core-lineHeight-3xs; // ui.$line_height-3xs, 14px;
+  color: global.$gse-semantic-foreground-container-midEmphasis; // ui.$foreground-container-mid_emphasis, #4F5157;
+  // text-decoration-line: underline;
+  text-decoration-thickness: auto;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-underline-position: from-font;
+  text-underline-offset: auto;
 }

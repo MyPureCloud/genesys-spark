@@ -1,14 +1,28 @@
-import { Component, Element, h, JSX, State, Host } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  JSX,
+  State,
+  Host,
+  Event,
+  EventEmitter
+} from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
+import translationResources from './i18n/en.json';
 
+/**
+ * @slot caution-message - slot for caution message text
+ */
 @Component({
   styleUrl: 'gux-chat-input.scss',
   tag: 'gux-chat-input',
   shadow: { delegatesFocus: true }
 })
 export class GuxChatInput {
-  // private i18n: GetI18nValue;
+  private i18n: GetI18nValue;
 
   @Element()
   private root: HTMLElement;
@@ -21,22 +35,20 @@ export class GuxChatInput {
   @State()
   inputText: string;
 
-  // /**
-  //  * Specifies the caution messaging that will be displayed below the chat input
-  //  */
-  // @Prop()
-  // cautionMessage: string;
+  /**
+   * Triggers when the CTA button is clicked to initiate Copilot text processing.
+   */
+  @Event()
+  onSubmit: EventEmitter;
 
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
   }
-
-  // connectedCallback() {
-  //   this.slotChanged();
-  // }
 
   submit(): void {
     this.isProcessing = true;
+    this.onSubmit.emit();
   }
 
   onInputChange(inputElement: HTMLInputElement): void {
@@ -103,13 +115,14 @@ export class GuxChatInput {
             value={this.inputText}
             ref={el => (this.inputElement = el)}
             onKeyUp={this.keyUp.bind(this)}
+            placeholder={this.i18n('inputPlaceholder')}
           ></input>
 
           {this.renderCTA()}
         </div>
-        <span class="caution-message">
+        <div class="caution-message">
           <slot name="caution-message" />
-        </span>
+        </div>
       </Host>
     ) as JSX.Element;
   }
