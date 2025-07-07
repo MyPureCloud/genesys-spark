@@ -17,6 +17,7 @@
 ### Used by
 
  - [gux-context-menu](../../stable/gux-context-menu)
+ - [gux-dropdown-multi](../../stable/gux-dropdown-multi)
  - [gux-file-list-item](../../stable/gux-form-field/components/gux-form-field-file-beta/components/gux-file-list-item)
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
  - [gux-inline-alert](../../stable/gux-inline-alert)
@@ -36,6 +37,7 @@
 ```mermaid
 graph TD;
   gux-context-menu --> gux-screen-reader-beta
+  gux-dropdown-multi --> gux-screen-reader-beta
   gux-file-list-item --> gux-screen-reader-beta
   gux-icon-tooltip-beta --> gux-screen-reader-beta
   gux-inline-alert --> gux-screen-reader-beta

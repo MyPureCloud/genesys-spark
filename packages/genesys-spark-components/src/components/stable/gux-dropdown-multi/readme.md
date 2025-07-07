@@ -12,7 +12,7 @@
 | `filterType`        | `filter-type`         | Override default filtering behavior                                                                                                                       | `"custom" \| "none" \| "starts-with"` | `'none'`    |
 | `hasError`          | `has-error`           |                                                                                                                                                           | `boolean`                             | `false`     |
 | `loading`           | `loading`             |                                                                                                                                                           | `boolean`                             | `false`     |
-| `placeholder`       | `placeholder`         |                                                                                                                                                           | `string`                              | `undefined` |
+| `placeholder`       | `placeholder`         |                                                                                                                                                           | `string`                              | `''`        |
 | `required`          | `required`            |                                                                                                                                                           | `boolean`                             | `false`     |
 | `value`             | `value`               |                                                                                                                                                           | `string`                              | `undefined` |
 
@@ -51,6 +51,7 @@ Type: `Promise<string[]>`
 
 ### Depends on
 
+- [gux-screen-reader-beta](../../beta/gux-screen-reader)
 - [gux-dropdown-multi-tag](gux-dropdown-multi-tag)
 - [gux-icon](../gux-icon)
 - [gux-radial-loading](../gux-radial-loading)
@@ -59,6 +60,7 @@ Type: `Promise<string[]>`
 ### Graph
 ```mermaid
 graph TD;
+  gux-dropdown-multi --> gux-screen-reader-beta
   gux-dropdown-multi --> gux-dropdown-multi-tag
   gux-dropdown-multi --> gux-icon
   gux-dropdown-multi --> gux-radial-loading

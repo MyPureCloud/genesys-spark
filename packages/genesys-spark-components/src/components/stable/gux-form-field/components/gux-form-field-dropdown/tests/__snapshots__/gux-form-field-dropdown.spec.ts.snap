@@ -37,7 +37,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -148,7 +148,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -261,7 +261,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -372,7 +372,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -480,7 +480,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
           <div class="gux-disabled gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -588,7 +588,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -696,7 +696,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -804,7 +804,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -912,7 +912,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -1020,7 +1020,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -1128,7 +1128,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -1236,7 +1236,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -1344,7 +1344,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>
@@ -1452,7 +1452,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi label-info 
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
               <div class="gux-field-content">
-                <div class="gux-placeholder">
+                <div aria-hidden="false" class="gux-placeholder">
                   Select...
                 </div>
               </div>

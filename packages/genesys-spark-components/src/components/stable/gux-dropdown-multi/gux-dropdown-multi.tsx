@@ -30,6 +30,7 @@ import {
 } from '../gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
+import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 /**
  * @slot - for a gux-listbox-multi containing gux-option-multi children
  */
@@ -60,7 +61,7 @@ export class GuxDropdownMulti {
   loading: boolean = false;
 
   @Prop()
-  placeholder: string;
+  placeholder: string = '';
 
   /**
    * Override default filtering behavior
@@ -117,24 +118,6 @@ export class GuxDropdownMulti {
 
     this.listboxElement = this.root?.querySelector('gux-listbox-multi');
     this.applyListboxEventListeners();
-  }
-
-  /**
-   * Listens for expanded event emitted by gux-popup.
-   */
-  @Listen('internalexpanded')
-  onInternalExpanded(event: CustomEvent): void {
-    event.stopPropagation();
-    this.guxexpanded.emit();
-  }
-
-  /**
-   * Listens for collapsed event emitted by gux-popup.
-   */
-  @Listen('internalcollapsed')
-  onInternalCollapsed(event: CustomEvent): void {
-    event.stopPropagation();
-    this.guxcollapsed.emit();
   }
 
   @Watch('expanded')
@@ -279,9 +262,35 @@ export class GuxDropdownMulti {
     this.stopPropagationOfInternalFocusEvents(event);
   }
 
+  /**
+   * Listens for expanded event emitted by gux-popup.
+   */
+  @Listen('internalexpanded')
+  onInternalExpanded(event: CustomEvent): void {
+    event.stopPropagation();
+    this.guxexpanded.emit();
+  }
+
+  /**
+   * Listens for collapsed event emitted by gux-popup.
+   */
+  @Listen('internalcollapsed')
+  onInternalCollapsed(event: CustomEvent): void {
+    event.stopPropagation();
+    this.guxcollapsed.emit();
+  }
+
   @OnClickOutside({ triggerEvents: 'mousedown' })
   onClickOutside() {
     this.collapseListbox('noFocusChange');
+  }
+
+  private get selectedListboxOptionElement(): HTMLGuxOptionElement[] {
+    return this.getOptionElementByValue(this.value);
+  }
+
+  private get hasSelectedOptions(): boolean {
+    return this.selectedListboxOptionElement.length > 0;
   }
 
   connectedCallback(): void {
@@ -312,6 +321,10 @@ export class GuxDropdownMulti {
       this.listboxElement.filterType = this.filterType;
       this.listboxElement.textInput = this.textInput;
     }
+  }
+
+  private getDisabledState(): boolean {
+    return calculateInputDisabledState(this.root);
   }
 
   private validateValue(
@@ -478,49 +491,52 @@ export class GuxDropdownMulti {
     }
   }
 
+  private getSrText(): JSX.Element | null {
+    const selectedText = this.getSrSelectedText();
+    const selectedOptionText = this.getSelectedOptionText();
+
+    const description =
+      selectedOptionText.length > 0
+        ? `${selectedOptionText} ${this.placeholder}`
+        : this.placeholder || this.i18n('noSelection');
+
+    if (this.hasSelectedOptions) {
+      return (
+        <gux-screen-reader-beta>{`${selectedText} ${description}`}</gux-screen-reader-beta>
+      );
+    }
+
+    return null;
+  }
+
   private renderTargetDisplay(): JSX.Element {
-    return (
-      <div class="gux-placeholder">
-        {this.getSrSelectedText()}
+    return [
+      <div
+        class="gux-placeholder"
+        aria-hidden={this.hasSelectedOptions.toString()}
+      >
         {this.getSelectedOptionText() ||
           this.placeholder ||
           this.i18n('noSelection')}
-      </div>
-    ) as JSX.Element;
+      </div>,
+      this.getSrText() // COMUI-3710: Ordered in this way to work around NVDA issue for dropdown disabled on initial render
+    ] as JSX.Element;
   }
 
-  private getSelectedOptionText(): JSX.Element | false {
-    const selectedElementString = this.getSelectedOptionValueString();
-
-    return selectedElementString
-      ? ([
-          selectedElementString,
-          <div class="gux-sr-only">{this.placeholder}</div>
-        ] as JSX.Element)
-      : false;
+  private getSelectedOptionText(): string {
+    return this.getSelectedOptionValueString() || '';
   }
 
   private getSelectedOptionValueString(): string {
     return this.getOptionElementByValue(this.value)
-      .map(option => {
-        return getOptionDefaultSlot(option)?.textContent.trim();
-      })
+      .map(option => getOptionDefaultSlot(option)?.textContent.trim())
       .join(', ');
   }
 
-  private getSrSelectedText(): JSX.Element {
-    const selectedListboxOptionElement = this.getOptionElementByValue(
-      this.value
-    );
-    if (selectedListboxOptionElement.length) {
-      return (
-        <span class="gux-sr-only">
-          {this.i18n('numberSelected', {
-            numberSelected: selectedListboxOptionElement.length.toString()
-          })}
-        </span>
-      ) as JSX.Element;
-    }
+  private getSrSelectedText(): string {
+    return this.i18n('numberSelected', {
+      numberSelected: this.selectedListboxOptionElement.length.toString()
+    });
   }
 
   private getInputAriaLabel(): string {
@@ -534,7 +550,7 @@ export class GuxDropdownMulti {
     if (selectedValues.length) {
       return (
         <gux-dropdown-multi-tag
-          disabled={this.disabled}
+          disabled={this.getDisabledState()}
           number-selected={selectedValues.length}
         ></gux-dropdown-multi-tag>
       ) as JSX.Element;
@@ -568,7 +584,7 @@ export class GuxDropdownMulti {
                   onInput={this.filterInput.bind(this)}
                   onKeyDown={this.filterKeydown.bind(this)}
                   onKeyUp={this.filterKeyup.bind(this)}
-                  disabled={this.disabled}
+                  disabled={this.getDisabledState()}
                 ></input>
               </div>
             </div>
@@ -604,7 +620,7 @@ export class GuxDropdownMulti {
         <button
           type="button"
           class="gux-field gux-field-button"
-          disabled={this.disabled}
+          disabled={this.getDisabledState()}
           onClick={this.fieldButtonClick.bind(this)}
           ref={el => (this.fieldButtonElement = el)}
           aria-haspopup="listbox"
@@ -646,7 +662,9 @@ export class GuxDropdownMulti {
       <div class="gux-dropdown-container">
         <gux-popup
           expanded={this.expanded && (!this.loading || this.isFilterable())}
-          disabled={this.disabled || (this.loading && !this.isFilterable())}
+          disabled={
+            this.getDisabledState() || (this.loading && !this.isFilterable())
+          }
           exceedTargetWidth={this.exceedTargetWidth}
         >
           {this.renderTarget()}
