@@ -1109,11 +1109,13 @@
   --gse-semantic-shadow-1Card-default: 0 2px 3px 1px #0000005c;
   --gse-semantic-shadow-1Card-hover: 0 2px 4px 3px #00000080;
   --gse-semantic-shadow-2SidePanel: 0 6px 10px 4px #0006, 0 2px 3px 0 #00000080;
-  --gse-semantic-shadow-5Modal: 0 2px 4px 3px #00000080;
-  --gse-semantic-shadow-6FloatingMenu: 0 6px 10px 4px #0009, 0 0 2px 0 #0009;
-  --gse-semantic-shadow-7DraggedItems: 0 6px 10px 4px #0009, 0 1px 2px 0 #0009;
-  --gse-semantic-shadow-8Toast: 0 6px 10px 4px #0009, 0 0 2px 0 #0009;
-  --gse-semantic-shadow-9Tooltip: 0 6px 10px 4px #0009, 0 0 2px 0 #0009;
+  --gse-semantic-shadow-4Copilot: 0 6px 10px 4px #0006, 0 2px 3px 0 #00000080;
+  --gse-semantic-shadow-6Modal: 0 2px 4px 3px #00000080;
+  --gse-semantic-shadow-7Menu: 0 6px 10px 4px #0009, 0 0 2px 0 #0009;
+  --gse-semantic-shadow-8DraggedItem: 0 6px 10px 4px #0009, 0 1px 2px 0 #0009;
+  --gse-semantic-shadow-9Toast: 0 6px 10px 4px #0009, 0 0 2px 0 #0009;
+  --gse-semantic-shadow-10Tooltip: 0 6px 10px 4px #0009, 0 0 2px 0 #0009;
+  --gse-semantic-shadow-scrollIndicator: 0 -4px 14px 4px #0000005c;
   --gse-semantic-background-interactive-primary-default: #2143a2;
   --gse-semantic-background-interactive-primary-hover: #19327a;
   --gse-semantic-background-interactive-primary-active: #102251;
