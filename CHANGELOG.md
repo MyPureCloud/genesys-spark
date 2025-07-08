@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.156.7](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.6...v4.156.7) (2025-07-08)
+
+
+### Bug Fixes
+
+* **copy-to-clipboard:** Add longer error message ([#1219](https://github.com/MyPureCloud/genesys-spark/issues/1219)) ([f4060fd](https://github.com/MyPureCloud/genesys-spark/commit/f4060fd66c7eb5cc42eb084a04226e88c161ae03))
+
 ### [4.156.6](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.5...v4.156.6) (2025-07-05)
 
 
