@@ -897,6 +897,7 @@
   "--gse-ui-timePicker-focusTime-borderRadius",
   "--gse-ui-toast-buttonBar-gap",
   "--gse-ui-toast-closeButtonColor",
+  "--gse-ui-toast-messageWidth",
   "--gse-ui-toast-text-fontWeight",
   "--gse-ui-toggle-padding",
   "--gse-ui-tooltip-height",
