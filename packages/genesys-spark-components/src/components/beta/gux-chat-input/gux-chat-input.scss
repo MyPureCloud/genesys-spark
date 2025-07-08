@@ -6,32 +6,28 @@
 .gux-input-container {
   display: flex;
   flex-shrink: 0;
-  gap: 16px;
+  gap: ui.$gse-ui-rte-innerContainer-gap;
   align-items: center;
   inline-size: 400px;
   padding-block: 12px;
   padding-inline: 16px;
-  background: ui.$gse-ui-formControl-input-backgroundColor; // var(--form_control-input-background_color, #FFF);
+  background: ui.$gse-ui-formControl-input-backgroundColor;
   border: global.$gse-semantic-container-edges-borderWidth solid
-    // var(--form_control-text_input-edges-border_width, 1px) solid var(--border-container-edges-data_table-default, #CAD1E1);
     global.$gse-semantic-border-container-edges-dataTable-default;
-  border-radius: ui.$gse-ui-rte-container-borderRadius; // border-radius: global.$rte-container-border_radius, 4px;
+  border-radius: ui.$gse-ui-rte-container-borderRadius;
 
   &:focus-within {
-    // border: var(--form_control-text_input-edges-border_width, 1px) solid var(--foreground-interactive-secondary-active, #102251);
     border: global.$gse-semantic-container-edges-borderWidth solid
       global.$gse-semantic-foreground-interactive-secondary-active;
   }
 
   .gux-input {
     inline-size: 100%;
-
-    /* .ui/rte/paragraph/md/regular */
-    font-family: global.$gse-semantic-theme-fontFamily-body; // ui.$theme-font_family-body, "Noto Sans";
-    font-size: global.$gse-core-fontSize-sm; // ui.$font_size-sm, 14px;
+    font-family: global.$gse-semantic-theme-fontFamily-body;
+    font-size: global.$gse-core-fontSize-sm;
     font-style: normal;
-    font-weight: global.$gse-core-fontWeight-regular; // ui.$font_weight-regular, 400;
-    line-height: global.$gse-core-lineHeight-sm; // ui.$line_height-sm, 20px; /* 142.857% */
+    font-weight: global.$gse-core-fontWeight-regular;
+    line-height: global.$gse-core-lineHeight-sm;
     color: global.$gse-semantic-foreground-formControl-textInput-placeholder;
     outline: none;
     border: none;
@@ -43,13 +39,13 @@
       flex-shrink: 0;
       align-items: center;
       justify-content: center;
-      inline-size: ui.$gse-ui-button-iconOnly-width; // var(--button-icon_only-width, 32px);
-      block-size: ui.$gse-ui-button-default-height; // var(--button-default-height, 32px);
+      inline-size: ui.$gse-ui-button-iconOnly-width;
+      block-size: ui.$gse-ui-button-default-height;
       padding-block: 0;
-      padding-inline: ui.$gse-ui-button-default-paddingIconOnly; // var(--button-default-padding_icon_only, 8px);
-      background: ui.$gse-ui-button-primary-default-backgroundColor; // var(--button-primary-default-background_color, #2143A2);
-      border-radius: ui.$gse-ui-button-borderRadius; // var(--button-border_radius, 4px);
-      opacity: ui.$gse-ui-button-disabled-opacity; // var(--button-disabled-opacity, 0.5);
+      padding-inline: ui.$gse-ui-button-default-paddingIconOnly;
+      background: ui.$gse-ui-button-primary-default-backgroundColor;
+      border-radius: ui.$gse-ui-button-borderRadius;
+      opacity: ui.$gse-ui-button-disabled-opacity;
     }
 
     &-active {
@@ -57,12 +53,12 @@
       flex-shrink: 0;
       align-items: center;
       justify-content: center;
-      inline-size: ui.$gse-ui-button-iconOnly-width; // var(--button-icon_only-width, 32px);
-      block-size: ui.$gse-ui-button-default-height; // var(--button-default-height, 32px);
+      inline-size: ui.$gse-ui-button-iconOnly-width;
+      block-size: ui.$gse-ui-button-default-height;
       padding-block: 0;
-      padding-inline: ui.$gse-ui-button-default-paddingIconOnly; // var(--button-default-padding_icon_only, 8px);
-      background: ui.$gse-ui-button-primary-default-backgroundColor; // var(--button-primary-default-background_color, #2143A2);
-      border-radius: ui.$gse-ui-button-borderRadius; // var(--button-border_radius, 4px);
+      padding-inline: ui.$gse-ui-button-default-paddingIconOnly;
+      background: ui.$gse-ui-button-primary-default-backgroundColor;
+      border-radius: ui.$gse-ui-button-borderRadius;
     }
 
     &-processing {
@@ -70,8 +66,8 @@
       gap: ui.$gse-ui-segmentedControl-button-padding; // TODO: not sure about this mapping // var(--button-padding_icon_only, 8px);
       align-items: center;
       justify-content: center;
-      inline-size: ui.$gse-ui-button-iconOnly-width; // var(--button-icon_only-width, 32px);
-      block-size: ui.$gse-ui-button-default-height; // var(--button-default-height, 32px);
+      inline-size: ui.$gse-ui-button-iconOnly-width;
+      block-size: ui.$gse-ui-button-default-height;
       padding-block: 0;
       padding-inline: 8px;
     }
@@ -83,13 +79,12 @@
   inline-size: 400px;
   padding-block: 12px;
   padding-inline: 16px;
-  font-family: global.$gse-semantic-theme-fontFamily-body; // $theme-font_family-body, "Noto Sans";
+  font-family: global.$gse-semantic-theme-fontFamily-body;
   font-size: global.$gse-core-fontSize-2xs;
   font-style: normal;
   font-weight: global.$gse-core-fontWeight-regular;
-  line-height: global.$gse-core-lineHeight-3xs; // ui.$line_height-3xs, 14px;
-  color: global.$gse-semantic-foreground-container-midEmphasis; // ui.$foreground-container-mid_emphasis, #4F5157;
-  // text-decoration-line: underline;
+  line-height: global.$gse-core-lineHeight-3xs;
+  color: global.$gse-semantic-foreground-container-midEmphasis;
   text-decoration-thickness: auto;
   text-decoration-style: solid;
   text-decoration-skip-ink: auto;
