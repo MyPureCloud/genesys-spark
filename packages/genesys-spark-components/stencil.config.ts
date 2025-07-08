@@ -56,10 +56,13 @@ export const config: Config = {
     after: [
       copy({
         targets: [
-          { src: 'build/i18n', dest: 'dist/genesys-webcomponents' },
+          {
+            src: 'build/i18n',
+            dest: ['dist/genesys-webcomponents', 'public/build']
+          },
           {
             src: 'build/style/*',
-            dest: 'dist/genesys-webcomponents',
+            dest: ['dist/genesys-webcomponents', 'public/build'],
             rename: (name, extension) =>
               `/genesys-webcomponents-${name}.${extension}`
           }

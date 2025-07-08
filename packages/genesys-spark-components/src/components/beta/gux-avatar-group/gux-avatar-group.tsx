@@ -129,7 +129,8 @@ export class GuxAvatarGroup {
 
     const validTagNames = [
       'GUX-AVATAR-GROUP-ITEM-BETA',
-      'GUX-AVATAR-GROUP-ADD-ITEM-BETA'
+      'GUX-AVATAR-GROUP-ADD-ITEM-BETA',
+      'GUX-AVATAR-OVERFLOW-BETA'
     ];
     const invalidElements = childElements.some(
       el => !validTagNames.includes(el.tagName)
