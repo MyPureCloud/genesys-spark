@@ -1,8 +1,34 @@
 # gux-chat-input
 
 
-
 <!-- Auto Generated Below -->
+
+
+## Events
+
+| Event               | Description                                                                  | Type               |
+| ------------------- | ---------------------------------------------------------------------------- | ------------------ |
+| `onchatinputsubmit` | Triggers when the CTA button is clicked to initiate Copilot text processing. | `CustomEvent<any>` |
+
+
+## Methods
+
+### `guxReset() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
+## Slots
+
+| Slot                | Description                   |
+| ------------------- | ----------------------------- |
+| `"caution-message"` | slot for caution message text |
 
 
 ## Dependencies
