@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-skip-navigation-list #render should render the component as expected 1`] = `
+exports[`gux-skip-navigation-list #render should render component as expected (1) 1`] = `
 <gux-skip-navigation-list>
   <template shadowrootmode="open">
     <div class="gux-container">
