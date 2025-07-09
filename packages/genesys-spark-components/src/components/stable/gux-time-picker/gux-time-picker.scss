@@ -82,7 +82,7 @@
       border: none;
 
       &:focus-visible {
-        @include focus.gux-focus-ring-small;
+        @include focus.gux-focus-ring;
 
         border-radius: ui.$gse-ui-timePicker-focusAmpm-borderRadius;
       }
@@ -118,7 +118,7 @@
       }
 
       &:focus-visible {
-        @include focus.gux-focus-ring-small;
+        @include focus.gux-focus-ring;
 
         border-radius: ui.$gse-ui-timePicker-focusClock-borderRadius;
       }
