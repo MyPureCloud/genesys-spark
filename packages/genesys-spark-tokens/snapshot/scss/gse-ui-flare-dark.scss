@@ -726,6 +726,17 @@
   --gse-ui-menu-groupedMenu-divider-padding: 4px 0px 8px;
   --gse-ui-menu-groupedMenu-divider-height: 13px;
   --gse-ui-menu-groupedMenu-subtext-foregroundColor: #b2b7c4;
+  --gse-ui-menu-selectAll-padding: 4px 0px 0px 0px;
+  --gse-ui-menu-selectAll-gap: 8px;
+  --gse-ui-menu-selectAll-labelContainer-padding: 2px 12px;
+  --gse-ui-menu-selectAll-labelContainer-gap: 8px;
+  --gse-ui-menu-selectAll-label-gap: 4px;
+  --gse-ui-menu-selectAll-label-foregroundColor: #ffffff;
+  --gse-ui-menu-selectAll-backgroundColor: #2a2a2e;
+  --gse-ui-menu-selectAll-divider-default: #4f5157;
+  --gse-ui-menu-selectAll-divider-adjacentSelected: #4f5157;
+  --gse-ui-menu-selectAll-scrolling-boxShadow: 0 0 8px 1px
+    rgba(35, 57, 92, 0.15);
   --gse-ui-dropdown-menu-emptyState-header-text-fontFamily: Roboto;
   --gse-ui-dropdown-menu-emptyState-header-text-fontWeight: 700;
   --gse-ui-dropdown-menu-emptyState-header-text-lineHeight: 18px;
@@ -736,6 +747,14 @@
   --gse-ui-dropdown-menu-emptyState-subheader-text-lineHeight: 18px;
   --gse-ui-dropdown-menu-emptyState-subheader-text-fontSize: 12px;
   --gse-ui-dropdown-menu-emptyState-subheader-foregroundColor: #b2b7c4;
+  --gse-ui-dropdown-menu-selectAll-labelText-fontFamily: 'Noto Sans';
+  --gse-ui-dropdown-menu-selectAll-labelText-fontWeight: 400;
+  --gse-ui-dropdown-menu-selectAll-labelText-fontSize: 12px;
+  --gse-ui-dropdown-menu-selectAll-labelText-lineHeight: 18px;
+  --gse-ui-dropdown-menu-selectAll-counterText-fontFamily: 'Noto Sans';
+  --gse-ui-dropdown-menu-selectAll-counterText-fontWeight: 600;
+  --gse-ui-dropdown-menu-selectAll-counterText-fontSize: 12px;
+  --gse-ui-dropdown-menu-selectAll-counterText-lineHeight: 18px;
   --gse-ui-dropdown-gap: 4px;
   --gse-ui-datePicker-range-gap: 24px;
   --gse-ui-datePicker-startEndInput-gap: 8px;
