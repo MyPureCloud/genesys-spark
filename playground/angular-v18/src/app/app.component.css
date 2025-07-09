@@ -1,0 +1,35 @@
+.scroll-container {
+  inline-size: 900px;
+  block-size: 400px;
+  margin: auto;
+  overflow: scroll;
+  border: 1px solid var(--gse-semantic-border-container-edges-default);
+}
+
+.scroll-interior {
+  position: relative;
+  inline-size: 600px;
+  block-size: 600px;
+}
+
+.popover-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.popover-content {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  inline-size: 280px;
+}
+
+#popover-target {
+  position: absolute;
+  inset-block-start: 250px;
+  inset-inline-start: 250px;
+  display: inline-block;
+  padding-block: 10px;
+  padding-inline: 15px;
+}
