@@ -125,6 +125,10 @@
         "value": "{container.xs.gap}",
         "type": "spacing"
       }
+    },
+    "message_width": {
+      "value": "220px",
+      "type": "sizing"
     }
   },
   "modal": {
