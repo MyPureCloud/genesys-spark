@@ -8,9 +8,9 @@
   flex-shrink: 0;
   gap: ui.$gse-ui-rte-innerContainer-gap;
   align-items: center;
-  inline-size: 400px;
-  padding-block: 12px;
-  padding-inline: 16px;
+  inline-size: 400px; // TODO: COMUI-3928 Get token from UX
+  padding-block: 12px; // TODO: COMUI-3928 Get token from UX
+  padding-inline: 16px; // TODO: COMUI-3928 Get token from UX
   background: ui.$gse-ui-formControl-input-backgroundColor;
   border: global.$gse-semantic-container-edges-borderWidth solid
     global.$gse-semantic-border-container-edges-dataTable-default;
@@ -34,19 +34,17 @@
   }
 
   .gux-cta {
-    &-disabled {
-      display: flex;
-      flex-shrink: 0;
-      align-items: center;
-      justify-content: center;
-      inline-size: ui.$gse-ui-button-iconOnly-width;
-      block-size: ui.$gse-ui-button-default-height;
-      padding-block: 0;
-      padding-inline: ui.$gse-ui-button-default-paddingIconOnly;
-      background: ui.$gse-ui-button-primary-default-backgroundColor;
-      border-radius: ui.$gse-ui-button-borderRadius;
-      opacity: ui.$gse-ui-button-disabled-opacity;
-    }
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    inline-size: ui.$gse-ui-button-iconOnly-width;
+    block-size: ui.$gse-ui-button-default-height;
+    padding-block: 0;
+    padding-inline: ui.$gse-ui-button-default-paddingIconOnly;
+    background: ui.$gse-ui-button-primary-default-backgroundColor;
+    border-radius: ui.$gse-ui-button-borderRadius;
+    opacity: ui.$gse-ui-button-disabled-opacity;
 
     &-active {
       display: flex;
@@ -61,24 +59,28 @@
       border-radius: ui.$gse-ui-button-borderRadius;
     }
 
-    &-processing {
+    &-generating {
       display: flex;
-      gap: ui.$gse-ui-segmentedControl-button-padding; // TODO: not sure about this mapping // var(--button-padding_icon_only, 8px);
+      gap: ui.$gse-ui-segmentedControl-button-padding; // TODO: COMUI-3928 not sure about this mapping from what's declared in Figma: var(--button-padding_icon_only, 8px);
       align-items: center;
       justify-content: center;
       inline-size: ui.$gse-ui-button-iconOnly-width;
       block-size: ui.$gse-ui-button-default-height;
       padding-block: 0;
       padding-inline: 8px;
+
+      gux-icon {
+        background: ui.$gse-ui-formControl-input-backgroundColor;
+      }
     }
   }
 }
 
 .caution-message {
   align-items: center;
-  inline-size: 400px;
-  padding-block: 12px;
-  padding-inline: 16px;
+  inline-size: 400px; // TODO: COMUI-3928 Get token from UX
+  padding-block: 12px; // TODO: COMUI-3928 Get token from UX
+  padding-inline: 16px; // TODO: COMUI-3928 Get token from UX
   font-family: global.$gse-semantic-theme-fontFamily-body;
   font-size: global.$gse-core-fontSize-2xs;
   font-style: normal;

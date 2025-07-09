@@ -27,7 +27,7 @@
  - [gux-button-multi](../gux-button-multi)
  - [gux-calendar](../gux-calendar)
  - [gux-calendar-beta](../../beta/gux-calendar-beta)
- - [gux-chat-input](../../beta/gux-chat-input)
+ - [gux-chat-input-beta](../../beta/gux-chat-input)
  - [gux-column-manager-item](../gux-column-manager/gux-column-manager-item)
  - [gux-content-search](../gux-content-search)
  - [gux-context-menu](../gux-context-menu)
@@ -104,7 +104,7 @@ graph TD;
   gux-button-multi --> gux-icon
   gux-calendar --> gux-icon
   gux-calendar-beta --> gux-icon
-  gux-chat-input --> gux-icon
+  gux-chat-input-beta --> gux-icon
   gux-column-manager-item --> gux-icon
   gux-content-search --> gux-icon
   gux-context-menu --> gux-icon

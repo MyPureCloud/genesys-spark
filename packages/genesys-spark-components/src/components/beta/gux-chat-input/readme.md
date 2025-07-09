@@ -4,11 +4,18 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property      | Attribute     | Description | Type     | Default     |
+| ------------- | ------------- | ----------- | -------- | ----------- |
+| `placeholder` | `placeholder` |             | `string` | `undefined` |
+
+
 ## Events
 
 | Event               | Description                                                                  | Type               |
 | ------------------- | ---------------------------------------------------------------------------- | ------------------ |
-| `onchatinputsubmit` | Triggers when the CTA button is clicked to initiate Copilot text processing. | `CustomEvent<any>` |
+| `onchatinputsubmit` | Triggers when the CTA button is clicked to initiate Copilot text generating. | `CustomEvent<any>` |
 
 
 ## Methods
@@ -41,9 +48,9 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  gux-chat-input --> gux-button-slot
-  gux-chat-input --> gux-icon
-  style gux-chat-input fill:#f9f,stroke:#333,stroke-width:4px
+  gux-chat-input-beta --> gux-button-slot
+  gux-chat-input-beta --> gux-icon
+  style gux-chat-input-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -1,78 +1,19 @@
 <h2>Chat Input</h2>
 
-<div id="component-wrapper">
-  <div id="copilot-text-area" class="gux-hidden">
-    <div>
-      This is the Copilot text that was generated after hitting the CTA button
+<div id="chat-input-container">
+  <gux-chat-input-beta id="chat-input-example" placeholder="Ask Genesys AI">
+    <div slot="caution-message">
+      Genesys AI may provide incorrect information. Double-check AI responses.
+      Genesys AI privacy, terms and conditions
     </div>
-    <gux-button>Test button 1</gux-button>
-    <gux-button>Test button 2</gux-button>
-    <div>
-      This is more of the Copilot text that was generated after hitting the CTA
-      button
-    </div>
-    <gux-button>Test button 3</gux-button>
-    <gux-button>Test button 4</gux-button>
-  </div>
-
-  <div id="chat-input-container">
-    <gux-chat-input id="chat-input-example">
-      <div slot="caution-message">
-        Genesys AI may provide incorrect information. Double-check AI responses.
-        Genesys AI privacy, terms and conditions
-      </div>
-    </gux-chat-input>
-  </div>
+  </gux-chat-input-beta>
 </div>
 
-<style
-  onload="(function () {
-    const chatInput = document.getElementById('chat-input-example');
-    const copilotTextArea = document.getElementById('copilot-text-area');
-    const chatInputContainer = document.getElementById('chat-input-container');
-
-    // Show example copilot text after user clicks the submit CTA button, and then 
-    // hide that copilot text after a few seconds
-    chatInput.addEventListener('onchatinputsubmit', (e) => {
-      window.setTimeout(function() {
-        copilotTextArea.classList.toggle('gux-hidden');
-        chatInputContainer.classList.toggle('chat-input-container-copilot-styling');
-        chatInput.guxReset();
-
-        window.setTimeout(function() {
-          copilotTextArea.classList.toggle('gux-hidden');
-          chatInputContainer.classList.toggle('chat-input-container-copilot-styling');
-        }, 3000);
-      }, 1000);
-    });
-})()"
->
-  #component-wrapper {
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    inline-size: 460px;
-    block-size: 323px;
-    padding: 20px;
-    background: #e4e5e7;
-  }
-
+<style>
   #copilot-text-area {
     inline-size: 445px;
     padding: 10px;
     text-align: center;
     background: white;
-  }
-
-  .gux-hidden {
-    display: none;
-  }
-
-  .chat-input-container-copilot-styling {
-    padding: 15px;
-    background: white;
-    box-shadow: 0 0 8px 1px rgb(40 50 67 / 15%);
   }
 </style>

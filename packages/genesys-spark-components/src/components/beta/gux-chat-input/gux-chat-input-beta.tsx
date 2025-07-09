@@ -7,7 +7,9 @@ import {
   Host,
   Event,
   EventEmitter,
-  Method
+  Method,
+  Prop,
+  Listen
 } from '@stencil/core';
 
 import { trackComponent } from '@utils/tracking/usage';
@@ -18,35 +20,50 @@ import translationResources from './i18n/en.json';
  * @slot caution-message - slot for caution message text
  */
 @Component({
-  styleUrl: 'gux-chat-input.scss',
-  tag: 'gux-chat-input',
+  styleUrl: 'gux-chat-input-beta.scss',
+  tag: 'gux-chat-input-beta',
   shadow: { delegatesFocus: true }
 })
 export class GuxChatInput {
-  private i18n: GetI18nValue;
-
   @Element()
   private root: HTMLElement;
 
+  @Prop()
+  placeholder: string;
+
+  @State()
+  isGenerating: boolean = false;
+
+  @State()
+  hasInputText: boolean = false;
+
   private inputElement: HTMLInputElement;
-
-  @State()
-  isProcessing: boolean = false;
-
-  @State()
-  inputText: string;
+  private i18n: GetI18nValue;
 
   /**
-   * Triggers when the CTA button is clicked to initiate Copilot text processing.
+   * Triggers when the CTA button is clicked to initiate Copilot text generating.
    */
   @Event()
   onchatinputsubmit: EventEmitter;
 
+  @Listen('keydown')
+  onKeyDown(event: KeyboardEvent): void {
+    if (!this.inputElement.value) {
+      return;
+    }
+
+    switch (event.key) {
+      case 'Enter':
+        this.submit();
+        break;
+    }
+  }
+
   @Method()
   // eslint-disable-next-line @typescript-eslint/require-await
   async guxReset(): Promise<void> {
-    this.inputText = null;
-    this.isProcessing = false;
+    this.inputElement.value = null;
+    this.isGenerating = false;
   }
 
   async componentWillLoad(): Promise<void> {
@@ -55,43 +72,24 @@ export class GuxChatInput {
   }
 
   submit(): void {
-    this.isProcessing = true;
-    this.onchatinputsubmit.emit({ inputText: this.inputText });
-  }
-
-  onInputChange(inputElement: HTMLInputElement): void {
-    this.inputText = inputElement.value;
-  }
-
-  hasInputText(): boolean {
-    return this.inputText?.length > 0;
+    this.isGenerating = true;
+    this.onchatinputsubmit.emit({ inputText: this.inputElement.value });
   }
 
   keyUp(): void {
-    this.inputText = this.inputElement.value;
+    this.hasInputText = this.inputElement.value ? true : false;
   }
 
   renderCTA(): JSX.Element {
-    if (this.isProcessing) {
+    if (this.isGenerating) {
       return (
         <gux-button-slot accent="danger">
           <button
             type="button"
-            class="gux-cta-processing"
+            class="gux-cta-generating"
             onClick={() => this.submit()}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="15"
-              viewBox="0 0 14 15"
-              fill="none"
-            >
-              <path
-                d="M0 2.5C0 1.39688 0.896875 0.5 2 0.5H12C13.1031 0.5 14 1.39688 14 2.5V12.5C14 13.6031 13.1031 14.5 12 14.5H2C0.896875 14.5 0 13.6031 0 12.5V2.5Z"
-                fill="white"
-              />
-            </svg>
+            <gux-icon icon-name="fa/square-regular"></gux-icon>
           </button>
         </gux-button-slot>
       );
@@ -101,12 +99,13 @@ export class GuxChatInput {
       <gux-button-slot accent="primary">
         <button
           type="button"
-          class={this.hasInputText() ? 'gux-cta-active' : 'gux-cta-disabled'}
+          class={this.hasInputText ? 'gux-cta-active' : 'gux-cta'}
           onClick={() => this.submit()}
-          disabled={!this.hasInputText()}
+          disabled={!this.hasInputText}
         >
           <gux-icon
             icon-name="fa/arrow-up-from-line-regular"
+            size="small"
             decorative
           ></gux-icon>
         </button>
@@ -120,10 +119,9 @@ export class GuxChatInput {
         <div class="gux-input-container">
           <input
             class="gux-input"
-            value={this.inputText}
             ref={el => (this.inputElement = el)}
+            placeholder={this.placeholder || this.i18n('inputPlaceholder')}
             onKeyUp={this.keyUp.bind(this)}
-            placeholder={this.i18n('inputPlaceholder')}
           ></input>
 
           {this.renderCTA()}

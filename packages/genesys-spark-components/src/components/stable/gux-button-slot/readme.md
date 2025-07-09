@@ -24,7 +24,7 @@
  - [gux-action-button](../gux-action-button)
  - [gux-blank-state](../gux-blank-state)
  - [gux-button-multi](../gux-button-multi)
- - [gux-chat-input](../../beta/gux-chat-input)
+ - [gux-chat-input-beta](../../beta/gux-chat-input)
  - [gux-context-menu](../gux-context-menu)
  - [gux-dismiss-button](../gux-dismiss-button)
  - [gux-file-list-item](../gux-form-field/components/gux-form-field-file-beta/components/gux-file-list-item)
@@ -50,7 +50,7 @@ graph TD;
   gux-action-button --> gux-button-slot
   gux-blank-state --> gux-button-slot
   gux-button-multi --> gux-button-slot
-  gux-chat-input --> gux-button-slot
+  gux-chat-input-beta --> gux-button-slot
   gux-context-menu --> gux-button-slot
   gux-dismiss-button --> gux-button-slot
   gux-file-list-item --> gux-button-slot
