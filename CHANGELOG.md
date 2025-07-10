@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.157.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.8...v4.157.0) (2025-07-10)
+
+
+### Features
+
+* **toast:** Alignment change for action toast ([#1214](https://github.com/MyPureCloud/genesys-spark/issues/1214)) ([1629221](https://github.com/MyPureCloud/genesys-spark/commit/16292216e5a6b352e0f640ed3b3769dd28ce8c5d))
+
+
+### Bug Fixes
+
+* **table-toolbar:** Add warning for menu-actions slot ([#1222](https://github.com/MyPureCloud/genesys-spark/issues/1222)) ([3896947](https://github.com/MyPureCloud/genesys-spark/commit/389694793c9f656032cc19f6c6fa03f2f07e6d0b))
+* **time-picker:** Match icon focus ring to Figma ([#1226](https://github.com/MyPureCloud/genesys-spark/issues/1226)) ([4df8515](https://github.com/MyPureCloud/genesys-spark/commit/4df851560ac510f38bb93bfec26cc185ad99c8b1))
+
 ### [4.156.8](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.7...v4.156.8) (2025-07-09)
 
 ### [4.156.7](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.6...v4.156.7) (2025-07-08)
