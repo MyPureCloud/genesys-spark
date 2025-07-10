@@ -86,10 +86,6 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-
-      .gux-sr-only {
-        @include mixins.gux-sr-only-clip;
-      }
     }
 
     .gux-filter {

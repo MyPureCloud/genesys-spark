@@ -519,11 +519,15 @@ export class GuxDropdownMulti {
     );
     if (selectedListboxOptionElement.length) {
       return (
-        <span class="gux-sr-only">
+        <gux-screen-reader-beta
+          class={{
+            'gux-disabled-nvda-workaround': this.getDisabledState() // COMUI-3710: NVDA workaround for disabled on initial render
+          }}
+        >
           {this.i18n('numberSelected', {
             numberSelected: selectedListboxOptionElement.length.toString()
           })}
-        </span>
+        </gux-screen-reader-beta>
       ) as JSX.Element;
     }
   }
