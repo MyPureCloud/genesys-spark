@@ -33,7 +33,11 @@ export class GuxColumnChart {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private baseChartSpec: Record<string, any> = {
     $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
-    mark: { type: 'bar' },
+    mark: {
+      type: 'bar',
+      tooltip: true,
+      cursor: 'pointer'
+    },
     config: {
       axis: {
         ticks: false,
@@ -54,7 +58,11 @@ export class GuxColumnChart {
         symbolType: 'circle'
       },
       bar: {
-        color: VisualizationColorUtil.VISUALIZATION_COLORS[0]
+        color: VisualizationColorUtil.VISUALIZATION_COLORS[0],
+        minBandSize: 24
+      },
+      point: {
+        size: 576 // 24x24 pixels (24^2)
       }
     },
     encoding: {
