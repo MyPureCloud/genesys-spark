@@ -3,7 +3,7 @@
 exports[`gux-copy-to-clipboard #render should render copy to clipboard 1`] = `
 <gux-copy-to-clipboard>
   <template shadowrootmode="open">
-    <button class="gux-copy-to-clipboard-wrapper">
+    <button aria-label="Test" class="gux-copy-to-clipboard-wrapper">
       <div class="gux-copy-content">
         <slot name="content"></slot>
         <gux-icon decorative="" icon-name="fa/copy-regular" size="small"></gux-icon>
