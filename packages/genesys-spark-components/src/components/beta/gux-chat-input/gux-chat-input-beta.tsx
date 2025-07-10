@@ -24,7 +24,7 @@ import translationResources from './i18n/en.json';
   tag: 'gux-chat-input-beta',
   shadow: { delegatesFocus: true }
 })
-export class GuxChatInput {
+export class GuxChatInputBeta {
   @Element()
   private root: HTMLElement;
 
@@ -102,6 +102,7 @@ export class GuxChatInput {
           class={this.hasInputText ? 'gux-cta-active' : 'gux-cta'}
           onClick={() => this.submit()}
           disabled={!this.hasInputText}
+          title={this.i18n('cta')}
         >
           <gux-icon
             icon-name="fa/arrow-up-from-line-regular"
