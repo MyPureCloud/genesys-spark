@@ -37,6 +37,9 @@
     "previousMonth": "Previous month: {localizedPreviousMonthAndYear}",
     "nextMonth": "Next month: {localizedNextMonthAndYear}"
   },
+  "gux-chat-input": {
+    "inputPlaceholder": "Ask Genesys AI"
+  },
   "gux-column-manager": {
     "search": "Search",
     "searchResults": "search results",
