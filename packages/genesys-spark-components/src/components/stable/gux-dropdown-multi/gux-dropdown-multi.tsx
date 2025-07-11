@@ -30,6 +30,7 @@ import {
 } from '../gux-listbox/gux-listbox.service';
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
+import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
 /**
  * @slot - for a gux-listbox-multi containing gux-option-multi children
  */
@@ -314,6 +315,10 @@ export class GuxDropdownMulti {
     }
   }
 
+  private getDisabledState(): boolean {
+    return calculateInputDisabledState(this.root);
+  }
+
   private validateValue(
     newValue: string,
     listboxElement: HTMLGuxListboxMultiElement
@@ -514,11 +519,15 @@ export class GuxDropdownMulti {
     );
     if (selectedListboxOptionElement.length) {
       return (
-        <span class="gux-sr-only">
+        <gux-screen-reader-beta
+          class={{
+            'gux-disabled-nvda-workaround': this.getDisabledState() // COMUI-3710: NVDA workaround for disabled on initial render
+          }}
+        >
           {this.i18n('numberSelected', {
             numberSelected: selectedListboxOptionElement.length.toString()
           })}
-        </span>
+        </gux-screen-reader-beta>
       ) as JSX.Element;
     }
   }
@@ -534,7 +543,7 @@ export class GuxDropdownMulti {
     if (selectedValues.length) {
       return (
         <gux-dropdown-multi-tag
-          disabled={this.disabled}
+          disabled={this.getDisabledState()}
           number-selected={selectedValues.length}
         ></gux-dropdown-multi-tag>
       ) as JSX.Element;
@@ -568,7 +577,7 @@ export class GuxDropdownMulti {
                   onInput={this.filterInput.bind(this)}
                   onKeyDown={this.filterKeydown.bind(this)}
                   onKeyUp={this.filterKeyup.bind(this)}
-                  disabled={this.disabled}
+                  disabled={this.getDisabledState()}
                 ></input>
               </div>
             </div>
@@ -604,7 +613,7 @@ export class GuxDropdownMulti {
         <button
           type="button"
           class="gux-field gux-field-button"
-          disabled={this.disabled}
+          disabled={this.getDisabledState()}
           onClick={this.fieldButtonClick.bind(this)}
           ref={el => (this.fieldButtonElement = el)}
           aria-haspopup="listbox"
@@ -646,7 +655,9 @@ export class GuxDropdownMulti {
       <div class="gux-dropdown-container">
         <gux-popup
           expanded={this.expanded && (!this.loading || this.isFilterable())}
-          disabled={this.disabled || (this.loading && !this.isFilterable())}
+          disabled={
+            this.getDisabledState() || (this.loading && !this.isFilterable())
+          }
           exceedTargetWidth={this.exceedTargetWidth}
         >
           {this.renderTarget()}

@@ -12,5 +12,5 @@ export function calculateInputDisabledState(
 ): boolean {
   const fieldSet = element.closest('fieldset');
 
-  return element.disabled || fieldSet?.disabled;
+  return Boolean(element.disabled || fieldSet?.disabled);
 }
