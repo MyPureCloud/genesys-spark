@@ -1,0 +1,40 @@
+<h1>gux-popover</h1>
+
+<gux-button-slot>
+  <button type="button" (click)="toggle()">Toggle</button>
+</gux-button-slot>
+
+<div>
+  @if (show) {
+    <div class="scroll-interior">
+      <gux-button [attr.id]="id">Example Element</gux-button>
+      <gux-popover-beta id="popover-example" position="top" [attr.for]="id">
+        <span slot="title">Title</span>
+        <div class="popover-content-wrapper">
+          <div>Popover Content</div>
+          <gux-cta-group align="end">
+            <gux-button autofocus slot="primary" onclick="notify(event)"
+              >Action 3</gux-button
+            >
+            <gux-button slot="secondary" onclick="notify(event)"
+              >Action 2</gux-button
+            >
+            <gux-button slot="dismiss" onclick="notify(event)"
+              >Action 1</gux-button
+            >
+          </gux-cta-group>
+        </div>
+      </gux-popover-beta>
+    </div>
+  }
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet />
