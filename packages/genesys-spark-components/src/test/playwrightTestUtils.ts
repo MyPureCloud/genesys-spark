@@ -1,11 +1,19 @@
 import { AxeResults } from 'axe-core';
-import { expect } from '@playwright/test';
+import { expect as baseExpect } from '@playwright/test';
 import { test, E2EPage } from '@stencil/playwright';
 import AxeBuilder from '@axe-core/playwright';
 import { RenderConfig } from './commonTestUtils';
 
+import {
+  toHaveNoViolations,
+  AxeExclusion,
+  AxeScanDetails
+} from './expectToHaveNoViolations';
+
 const modes = ['light', 'dark'] as const;
 type Mode = (typeof modes)[number];
+
+export const expect = baseExpect.extend({ toHaveNoViolations });
 
 async function setMode(page: E2EPage, mode: Mode) {
   const html = page.locator('html');
@@ -33,12 +41,19 @@ export async function analyze(
   element?: string,
   extraActions: ExtraActionsFn = () => Promise.resolve(),
   performA11yCheck: boolean = true,
-  disableAnimations: boolean = false
+  disableAnimations: boolean = false,
+  axeScanDetails: AxeScanDetails = { axeExclusions: [] }
 ) {
   for (const mode of modes) {
     await setMode(page, mode);
     await extraActions(page);
-    await snap(page, element, performA11yCheck, disableAnimations);
+    await snap(
+      page,
+      element,
+      performA11yCheck,
+      disableAnimations,
+      axeScanDetails
+    );
   }
 }
 
@@ -46,10 +61,11 @@ export async function snap(
   page: E2EPage,
   element?: string,
   performA11yCheck: boolean = true,
-  disableAnimations: boolean = false
+  disableAnimations: boolean = false,
+  axeScanDetails: AxeScanDetails = { axeExclusions: [] }
 ) {
   if (performA11yCheck) {
-    expect((await runAxe(page)).violations).toHaveLength(0);
+    expect((await runAxe(page)).violations).toHaveNoViolations(axeScanDetails);
   }
 
   const animations = disableAnimations ? 'disabled' : 'allow';
@@ -102,6 +118,7 @@ type CheckRendersParams = {
   performA11yCheck?: boolean;
   disableAnimations?: boolean;
   skip?: boolean;
+  axeExclusions?: AxeExclusion[];
 };
 
 export async function checkRenders({
@@ -110,7 +127,8 @@ export async function checkRenders({
   extraActions = () => Promise.resolve(),
   performA11yCheck = true,
   disableAnimations = false,
-  skip = false
+  skip = false,
+  axeExclusions = []
 }: CheckRendersParams) {
   renderConfigs.forEach(({ description, html }, index) => {
     (skip ? test.skip : test)(
@@ -122,7 +140,8 @@ export async function checkRenders({
           element,
           extraActions,
           performA11yCheck,
-          disableAnimations
+          disableAnimations,
+          { axeExclusions }
         );
       }
     );
@@ -133,4 +152,4 @@ type ExtraActionsFn = (page: E2EPage) => Promise<void>;
 
 export { RenderConfig } from './commonTestUtils';
 export { test, E2EPage } from '@stencil/playwright';
-export { expect } from '@playwright/test';
+export { AxeExclusion, AxeScanDetails } from './expectToHaveNoViolations';

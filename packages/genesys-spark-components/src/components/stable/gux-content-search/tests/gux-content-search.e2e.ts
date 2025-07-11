@@ -2,18 +2,6 @@ import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
 const axeExclusions = [
   {
-    issueId: 'color-contrast',
-    target: 'gux-content-search,span',
-    exclusionReason:
-      'WCAG 1.4.3 Contrast (Minimum), inactive user interface components do not need to meet contrast minimum'
-  },
-  {
-    issueId: 'target-size',
-    target: 'input',
-    exclusionReason:
-      'COMUI-2945 Fix any of the following: Target has insufficient size (134px by 14px, should be at least 24px by 24px); Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 0px instead of at least 24px.'
-  },
-  {
     issueId: 'target-size',
     target: 'gux-content-search,.gux-previous-button',
     exclusionReason:
