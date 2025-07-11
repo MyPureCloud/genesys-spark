@@ -203,7 +203,7 @@ export class GuxContentSearch {
   }
 
   private showNavigationPanel(): boolean {
-    return this.value !== '' ? true : false;
+    return this.value !== '';
   }
 
   private disableNavigationPanel(): boolean {

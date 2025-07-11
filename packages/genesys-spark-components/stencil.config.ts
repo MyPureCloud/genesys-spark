@@ -82,8 +82,8 @@ export const config: Config = {
     coverageDirectory: 'build/test-reports/coverage',
     coverageReporters: ['json', 'lcov', 'clover'],
     setupFilesAfterEnv: [
-      '<rootDir>/src/test/setupTests.js',
-      '<rootDir>/src/test/setupAxeTests.js'
+      '<rootDir>/src/test/setupTests.ts',
+      '<rootDir>/src/test/setupAxeTests.ts'
     ],
     reporters: [
       testConsoleReporter,
