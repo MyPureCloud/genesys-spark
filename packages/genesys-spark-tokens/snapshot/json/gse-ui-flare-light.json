@@ -2252,6 +2252,98 @@
       "lineHeight": "18px"
     }
   },
+  "prompt_input": {
+    "simple": {
+      "padding": "12px 16px",
+      "gap": "16px",
+      "label": {
+        "max_height": "200px",
+        "min_height": "32px"
+      }
+    },
+    "complex": {
+      "padding": "16px",
+      "gap": "16px",
+      "lower_container": {
+        "left_aligned": {
+          "gap": "4px"
+        },
+        "right_aligned": {
+          "gap": "16px"
+        }
+      },
+      "label": {
+        "max_height": "160px"
+      },
+      "file_container": {
+        "gap": "8px"
+      }
+    },
+    "border": {
+      "default": "#cad1e1",
+      "hover": "#19327a",
+      "active": "#102251"
+    },
+    "background": "#ffffff",
+    "focus": "#5476d5",
+    "border_radius": "4px",
+    "focus_container": {
+      "border": {
+        "color": "#5476d5",
+        "width": "2px",
+        "style": "solid"
+      }
+    },
+    "label": {
+      "placeholder": "#6a6d75",
+      "populated": "#2a2a2e",
+      "text": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "400",
+        "fontSize": "14px",
+        "lineHeight": "20px"
+      }
+    },
+    "divider": "#dce1ed",
+    "caution_message": {
+      "default": "#4f5157",
+      "text": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "400",
+        "fontSize": "10px",
+        "lineHeight": "14px"
+      },
+      "link": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "600",
+        "fontSize": "10px",
+        "lineHeight": "14px",
+        "textDecoration": "underline"
+      }
+    },
+    "default": {
+      "border": {
+        "color": "#cad1e1",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "hover": {
+      "border": {
+        "color": "#19327a",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "active": {
+      "border": {
+        "color": "#102251",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "gap": "12px"
+  },
   "search": {
     "counter": {
       "default": {

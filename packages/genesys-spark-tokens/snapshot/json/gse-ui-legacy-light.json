@@ -2252,6 +2252,98 @@
       "lineHeight": "18px"
     }
   },
+  "prompt_input": {
+    "simple": {
+      "padding": "12px 16px",
+      "gap": "16px",
+      "label": {
+        "max_height": "200px",
+        "min_height": "32px"
+      }
+    },
+    "complex": {
+      "padding": "16px",
+      "gap": "16px",
+      "lower_container": {
+        "left_aligned": {
+          "gap": "4px"
+        },
+        "right_aligned": {
+          "gap": "16px"
+        }
+      },
+      "label": {
+        "max_height": "160px"
+      },
+      "file_container": {
+        "gap": "8px"
+      }
+    },
+    "border": {
+      "default": "#e2e6ee",
+      "hover": "#2754ac",
+      "active": "#2e394c"
+    },
+    "background": "#ffffff",
+    "focus": "#aac9ff",
+    "border_radius": "4px",
+    "focus_container": {
+      "border": {
+        "color": "#aac9ff",
+        "width": "2px",
+        "style": "solid"
+      }
+    },
+    "label": {
+      "placeholder": "#4c5667",
+      "populated": "#2e394c",
+      "text": {
+        "fontFamily": "Roboto",
+        "fontWeight": "400",
+        "fontSize": "14px",
+        "lineHeight": "20px"
+      }
+    },
+    "divider": "#b4bccb",
+    "caution_message": {
+      "default": "#3e4a5b",
+      "text": {
+        "fontFamily": "Roboto",
+        "fontWeight": "400",
+        "fontSize": "10px",
+        "lineHeight": "14px"
+      },
+      "link": {
+        "fontFamily": "Roboto",
+        "fontWeight": "600",
+        "fontSize": "10px",
+        "lineHeight": "14px",
+        "textDecoration": "underline"
+      }
+    },
+    "default": {
+      "border": {
+        "color": "#e2e6ee",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "hover": {
+      "border": {
+        "color": "#2754ac",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "active": {
+      "border": {
+        "color": "#2e394c",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "gap": "12px"
+  },
   "search": {
     "counter": {
       "default": {
