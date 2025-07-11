@@ -27,7 +27,52 @@
   </div>
 </div>
 
-<style>
+<h2>Dynamic Popover with guxFocusPopover()</h2>
+<div>
+  <gux-button id="dynamic-trigger">Show Dynamic Popover</gux-button>
+  <div id="dynamic-popover-container"></div>
+</div>
+
+<style
+  onload="(function () {
+  const dynamicTrigger = document.getElementById('dynamic-trigger');
+  const container = document.getElementById('dynamic-popover-container');
+    
+
+  dynamicTrigger.addEventListener('click', function() {
+      const popover = document.createElement('gux-popover-beta');
+      popover.id = 'dynamic-popover';
+      popover.setAttribute('position', 'bottom');
+      popover.setAttribute('for', 'dynamic-trigger');
+      popover.setAttribute('is-open', '');
+      
+      const title = document.createElement('span');
+      title.setAttribute('slot', 'title');
+      title.textContent = 'Dynamic Popover';
+      
+      const content = document.createElement('div');
+      const text = document.createElement('p');
+      text.textContent = 'This popover was created dynamically and focused using guxFocusPopover()';
+      
+      const button = document.createElement('gux-button');
+      button.setAttribute('autofocus', '');
+      button.textContent = 'Focused Button';
+      
+      content.appendChild(text);
+      content.appendChild(button);
+      popover.appendChild(title);
+      popover.appendChild(content);
+      container.appendChild(popover);
+      
+
+      popover.guxFocusPopover();
+     
+    });
+
+
+
+  })()"
+>
   .scroll-container {
     inline-size: 900px;
     block-size: 400px;
