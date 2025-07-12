@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.157.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.0...v4.157.1) (2025-07-12)
+
+
+### Bug Fixes
+
+* **copy-to-clipboard:** button not clickable via keyboard in nvda ([ca7d139](https://github.com/MyPureCloud/genesys-spark/commit/ca7d1398f4a5bacc38bc70a73e60fa3eead64cd0))
+* **popover-beta:** add method to focus popover ([1c20368](https://github.com/MyPureCloud/genesys-spark/commit/1c203685734ca88b4e4b70d058a68c086a3715af))
+
 ## [4.157.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.8...v4.157.0) (2025-07-10)
 
 
