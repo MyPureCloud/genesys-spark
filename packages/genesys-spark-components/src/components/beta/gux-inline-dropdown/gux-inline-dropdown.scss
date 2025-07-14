@@ -138,6 +138,15 @@
   }
 }
 
+.gux-disabled {
+  &.gux-target-container-collapsed .gux-field-button,
+  &.gux-target-container-expanded {
+    pointer-events: none;
+    cursor: default;
+    opacity: ui.$gse-ui-formControl-input-disabled-opacity;
+  }
+}
+
 .gux-target-container-collapsed .gux-field-button {
   border-radius: var(--gse-ui-dataTableItems-statusIndicator-borderRadius);
 

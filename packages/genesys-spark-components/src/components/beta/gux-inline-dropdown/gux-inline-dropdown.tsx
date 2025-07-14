@@ -15,6 +15,8 @@ import {
 import { OnClickOutside } from '@utils/decorator/on-click-outside';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
+import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
+import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
 import { afterNextRender } from '@utils/dom/after-next-render';
 import { trackComponent } from '@utils/tracking/usage';
 import { OnMutation } from '@utils/decorator/on-mutation';
@@ -58,6 +60,9 @@ export class GuxDropdown {
   value: string;
 
   @Prop()
+  disabled: boolean = false;
+
+  @Prop()
   required: boolean = false;
 
   @Prop()
@@ -69,6 +74,13 @@ export class GuxDropdown {
   @Watch('value')
   watchValue(newValue: string) {
     this.validateValue(newValue, this.listboxElement);
+  }
+
+  @Watch('disabled')
+  watchDisabled(disabled: boolean) {
+    if (disabled) {
+      this.expanded = false;
+    }
   }
 
   @Listen('keydown')
@@ -166,6 +178,10 @@ export class GuxDropdown {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
+
+    onInputDisabledStateChange(this.root, () => {
+      forceUpdate(this.root);
+    });
   }
 
   componentDidLoad(): void {
@@ -372,13 +388,15 @@ export class GuxDropdown {
     return (
       <div
         class={{
-          'gux-target-container-collapsed': true
+          'gux-target-container-collapsed': true,
+          'gux-disabled': this.disabled
         }}
         slot="target"
       >
         <button
           type="button"
           class="gux-field gux-field-button"
+          disabled={calculateInputDisabledState(this.root)}
           onClick={this.fieldButtonClick.bind(this)}
           onFocusin={this.showTooltip.bind(this)}
           onFocusout={this.hideTooltip.bind(this)}
@@ -413,6 +431,7 @@ export class GuxDropdown {
     return (
       <gux-popup
         expanded={this.expanded}
+        disabled={this.disabled}
         inline={true}
         ref={(el: HTMLGuxPopupElement) => (this.popupElement = el)}
       >
