@@ -6,9 +6,9 @@ exports[`gux-dropdown #render should render as expected 1`] = `
     <div class="gux-dropdown-container">
       <gux-popup>
         <div class="gux-target-container gux-target-container-collapsed" slot="target">
-          <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
+          <button aria-describedby="gux-radial-loading-i" aria-expanded="false" aria-haspopup="listbox" aria-label=" Select..." class="gux-field gux-field-button" type="button">
             <div class="gux-field-content">
-              <div aria-hidden="false" class="gux-placeholder">
+              <div class="gux-placeholder">
                 Select...
               </div>
             </div>

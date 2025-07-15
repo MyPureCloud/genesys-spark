@@ -19,6 +19,7 @@ import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import { afterNextRender } from '@utils/dom/after-next-render';
 import { onInputDisabledStateChange } from '@utils/dom/on-input-disabled-state-change';
 import { trackComponent } from '@utils/tracking/usage';
+import { randomHTMLId } from '@utils/dom/random-html-id';
 
 import translationResources from './i18n/en.json';
 
@@ -44,6 +45,7 @@ export class GuxDropdownMulti {
   private fieldButtonElement: HTMLElement;
   private textInputElement: HTMLInputElement;
   private listboxElement: HTMLGuxListboxMultiElement;
+  private loadingSpinnerId: string = randomHTMLId('gux-radial-loading');
 
   @Element()
   private root: HTMLGuxDropdownMultiElement;
@@ -491,8 +493,10 @@ export class GuxDropdownMulti {
     }
   }
 
-  private getSrText(): JSX.Element | null {
-    const selectedText = this.getSrSelectedText();
+  private getButtonAriaLabel(): string {
+    const selectedText = this.hasSelectedOptions
+      ? this.getSrSelectedText()
+      : '';
     const selectedOptionText = this.getSelectedOptionText();
 
     const description =
@@ -500,27 +504,17 @@ export class GuxDropdownMulti {
         ? `${selectedOptionText} ${this.placeholder}`
         : this.placeholder || this.i18n('noSelection');
 
-    if (this.hasSelectedOptions) {
-      return (
-        <gux-screen-reader-beta>{`${selectedText} ${description}`}</gux-screen-reader-beta>
-      );
-    }
-
-    return null;
+    return `${selectedText} ${description}`;
   }
 
   private renderTargetDisplay(): JSX.Element {
-    return [
-      <div
-        class="gux-placeholder"
-        aria-hidden={this.hasSelectedOptions.toString()}
-      >
+    return (
+      <div class="gux-placeholder">
         {this.getSelectedOptionText() ||
           this.placeholder ||
           this.i18n('noSelection')}
-      </div>,
-      this.getSrText() // COMUI-3710: Ordered in this way to work around NVDA issue for dropdown disabled on initial render
-    ] as JSX.Element;
+      </div>
+    ) as JSX.Element;
   }
 
   private getSelectedOptionText(): string {
@@ -625,6 +619,8 @@ export class GuxDropdownMulti {
           ref={el => (this.fieldButtonElement = el)}
           aria-haspopup="listbox"
           aria-expanded={this.expanded.toString()}
+          aria-label={this.getButtonAriaLabel()}
+          aria-describedby={this.loadingSpinnerId}
         >
           {this.renderTargetContent()}
           {this.renderTag()}
@@ -652,7 +648,10 @@ export class GuxDropdownMulti {
   private renderRadialLoading(): JSX.Element {
     if (this.loading && !this.expanded) {
       return (
-        <gux-radial-loading context="input"></gux-radial-loading>
+        <gux-radial-loading
+          id={this.loadingSpinnerId}
+          context="input"
+        ></gux-radial-loading>
       ) as JSX.Element;
     }
   }
