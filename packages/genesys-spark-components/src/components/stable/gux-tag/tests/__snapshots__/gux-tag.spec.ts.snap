@@ -9,9 +9,9 @@ exports[`gux-tag #render should render component as expected (1) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
   </template>
   default
@@ -27,9 +27,9 @@ exports[`gux-tag #render should render component as expected (2) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
   </template>
   default (explicit)
@@ -45,9 +45,9 @@ exports[`gux-tag #render should render component as expected (3) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
   </template>
   Accent 1
@@ -63,9 +63,9 @@ exports[`gux-tag #render should render component as expected (4) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
   </template>
   <gux-icon decorative="true" icon-name="bolt"></gux-icon>
@@ -82,9 +82,9 @@ exports[`gux-tag #render should render component as expected (5) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
       <button class="gux-tag-remove-button" type="button">
         <gux-icon class="gux-tag-remove-icon" decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         <gux-screen-reader-beta>
@@ -107,9 +107,9 @@ exports[`gux-tag #render should render component as expected (6) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         disabled tag with label:
-      </div>
+      </gux-screen-reader-beta>
       <button class="gux-tag-remove-button" disabled="" type="button">
         <gux-icon class="gux-tag-remove-icon" decorative="" icon-name="fa/xmark-large-regular"></gux-icon>
         <gux-screen-reader-beta>
@@ -132,9 +132,9 @@ exports[`gux-tag #render should render component as expected (7) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
   </template>
   Subtle 1
@@ -150,9 +150,9 @@ exports[`gux-tag #render should render component as expected (8) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
   </template>
   Bold 1
@@ -168,9 +168,9 @@ exports[`gux-tag #render should render component as expected (9) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
   </template>
   Small 1
@@ -186,9 +186,9 @@ exports[`gux-tag #render should render component as expected (10) 1`] = `
           <slot aria-hidden="true"></slot>
         </span>
       </gux-tooltip-title>
-      <div class="gux-sr-only">
+      <gux-screen-reader-beta>
         tag with label:
-      </div>
+      </gux-screen-reader-beta>
     </div>
   </template>
   Large 1

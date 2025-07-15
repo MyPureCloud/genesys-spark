@@ -10,6 +10,7 @@ $focus-outline-offset: 5px;
 }
 
 .gux-tag {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -51,10 +52,6 @@ $focus-outline-offset: 5px;
     ::slotted(gux-icon) {
       font-size: ui.$gse-ui-tag-button-size;
     }
-  }
-
-  .gux-sr-only {
-    @include mixins.gux-sr-only-clip;
   }
 
   .gux-tag-remove-button {
