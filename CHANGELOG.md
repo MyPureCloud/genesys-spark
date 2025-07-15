@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.157.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.1...v4.157.2) (2025-07-15)
+
 ### [4.157.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.0...v4.157.1) (2025-07-12)
 
 
