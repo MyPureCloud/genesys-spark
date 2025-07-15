@@ -42,9 +42,9 @@ Type: `Promise<string[]>`
 
 ## Slots
 
-| Slot | Description                                                  |
-| ---- | ------------------------------------------------------------ |
-|      | for a gux-listbox-multi containing gux-option-multi children |
+| Slot | Description                                                                  |
+| ---- | ---------------------------------------------------------------------------- |
+|      | for a gux-listbox-multi containing gux-option-multi, gux-select-all children |
 
 
 ## Dependencies
