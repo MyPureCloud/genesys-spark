@@ -227,6 +227,68 @@ describe('gux-dropdown-multi', () => {
       expect(selectedItems.length).toBe(1);
     });
   });
+
+  describe('gux-select-all', () => {
+    const selectAllHtml = `
+      <gux-dropdown-multi lang="en">
+        <gux-listbox-multi aria-label="Animals">
+          <gux-select-all></gux-select-all>
+          <gux-option-multi value="a">Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi>
+    `;
+
+    it('selects all options when clicked', async () => {
+      const page = await newSparkE2EPage({ html: selectAllHtml });
+      await page.waitForChanges();
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
+      await dropdownButtonElement.click();
+      await page.waitForChanges();
+
+      const selectAll = await page.find('gux-select-all');
+      await selectAll.click();
+      await page.waitForChanges();
+
+      const selectedItems = await page.findAll('.gux-selected');
+      expect(selectedItems.length).toBe(3);
+    });
+
+    it('deselects all options when clicked again', async () => {
+      const page = await newSparkE2EPage({ html: selectAllHtml });
+      await page.waitForChanges();
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
+      await dropdownButtonElement.click();
+      await page.waitForChanges();
+
+      const selectAll = await page.find('gux-select-all');
+      await selectAll.click();
+      await page.waitForChanges();
+      await selectAll.click();
+      await page.waitForChanges();
+
+      const selectedItems = await page.findAll('.gux-selected');
+      expect(selectedItems.length).toBe(0);
+    });
+
+    it('updates counter text correctly', async () => {
+      const page = await newSparkE2EPage({ html: selectAllHtml });
+      await page.waitForChanges();
+      const dropdownButtonElement = await page.find('pierce/.gux-field');
+      await dropdownButtonElement.click();
+      await page.waitForChanges();
+
+      const selectAll = await page.find('gux-select-all');
+      const counterText = await selectAll.find('pierce/.gux-counter-label');
+      expect(counterText.textContent).toContain('(0 of 3)');
+
+      await selectAll.click();
+      await page.waitForChanges();
+      expect(counterText.textContent).toContain('(3 of 3)');
+    });
+  });
+
   describe('filter', () => {
     it('filters dropdown contents (filter-type starts-with)', async () => {
       const filterableDropdown = `

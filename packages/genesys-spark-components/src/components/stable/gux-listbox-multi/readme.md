@@ -39,9 +39,9 @@ Type: `Promise<void>`
 
 ## Slots
 
-| Slot | Description                             |
-| ---- | --------------------------------------- |
-|      | collection of gux-option-multi elements |
+| Slot | Description                                                         |
+| ---- | ------------------------------------------------------------------- |
+|      | collection of gux-option-multi elements and gux-select-all element. |
 
 
 ## Dependencies

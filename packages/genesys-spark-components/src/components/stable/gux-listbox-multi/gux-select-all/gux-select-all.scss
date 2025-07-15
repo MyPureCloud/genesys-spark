@@ -1,0 +1,98 @@
+@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+@use '~genesys-spark/dist/scss/mixins.scss';
+
+:host {
+  z-index: 1;
+}
+
+.gux-select-all-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+  min-block-size: ui.$gse-ui-menu-option-height;
+  padding-block: ui.$gse-ui-menu-selectAll-padding;
+  padding-block-end: ui.$gse-ui-menu-selectAll-gap;
+  font-family: ui.$gse-ui-dropdown-menu-selectAll-labelText-fontFamily;
+  font-size: ui.$gse-ui-dropdown-menu-selectAll-labelText-fontSize;
+  font-weight: ui.$gse-ui-dropdown-menu-selectAll-labelText-fontWeight;
+  line-height: ui.$gse-ui-dropdown-menu-selectAll-labelText-lineHeight;
+  color: ui.$gse-ui-menu-selectAll-label-foregroundColor;
+  word-wrap: break-word;
+  cursor: pointer;
+  background-color: ui.$gse-ui-menu-selectAll-backgroundColor;
+  border-block-end: global.$gse-semantic-container-divider-borderWidth solid
+    global.$gse-semantic-border-container-divider;
+
+  &.gux-has-scrolled {
+    box-shadow: ui.$gse-ui-menu-selectAll-scrolling-boxShadow;
+  }
+
+  &.gux-active {
+    outline: ui.$gse-ui-menu-option-focus-border-width
+      ui.$gse-ui-menu-option-focus-border-style
+      ui.$gse-ui-menu-option-focus-border-color;
+    outline-offset: -2px;
+    border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
+  }
+
+  &.gux-selected {
+    font-family: ui.$gse-ui-menu-option-label-active-text-fontFamily;
+    font-size: ui.$gse-ui-menu-option-label-active-text-fontSize;
+    font-weight: ui.$gse-ui-menu-option-label-active-text-fontWeight;
+    line-height: ui.$gse-ui-menu-option-label-active-text-lineHeight;
+
+    .gux-checkbox-container > path {
+      fill: ui.$gse-ui-menu-option-checkbox-checked-selected-foregroundColor;
+    }
+  }
+
+  &.gux-indeterminate {
+    .gux-checkbox-container > path {
+      fill: ui.$gse-ui-menu-option-checkbox-checked-selected-foregroundColor;
+    }
+  }
+
+  .gux-select-all-content {
+    display: flex;
+    flex-direction: row;
+    gap: ui.$gse-ui-menu-selectAll-labelContainer-gap;
+    inline-size: 100%;
+    padding: ui.$gse-ui-menu-selectAll-labelContainer-padding;
+  }
+}
+
+.gux-option-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: ui.$gse-ui-menu-selectAll-label-gap;
+  align-items: center;
+  inline-size: 100%;
+  min-inline-size: 0;
+
+  .gux-counter-label {
+    inline-size: 100%;
+    font-family: ui.$gse-ui-dropdown-menu-selectAll-counterText-fontFamily;
+    font-size: ui.$gse-ui-dropdown-menu-selectAll-counterText-fontSize;
+    font-weight: ui.$gse-ui-dropdown-menu-selectAll-counterText-fontWeight;
+    line-height: ui.$gse-ui-dropdown-menu-selectAll-counterText-lineHeight;
+  }
+}
+
+.gux-checkbox-container {
+  position: relative;
+  display: inline-block;
+  min-inline-size: ui.$gse-ui-menu-option-startIcon-width;
+  max-inline-size: ui.$gse-ui-menu-option-startIcon-width;
+  block-size: ui.$gse-ui-menu-option-startIcon-height;
+  content: '';
+  background-color: ui.$gse-ui-menu-selectAll-backgroundColor;
+
+  > path {
+    fill: ui.$gse-ui-menu-option-checkbox-unchecked-default-foregroundColor;
+  }
+}
