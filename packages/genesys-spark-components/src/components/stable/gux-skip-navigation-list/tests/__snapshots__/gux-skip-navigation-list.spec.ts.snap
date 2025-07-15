@@ -2,7 +2,7 @@
 
 exports[`gux-skip-navigation-list #render should render component as expected (1) 1`] = `
 <gux-skip-navigation-list>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-container">
       <nav aria-label="Skip links navigation">
         <ul role="list">
@@ -12,7 +12,7 @@ exports[`gux-skip-navigation-list #render should render component as expected (1
     </div>
   </template>
   <gux-skip-navigation-item role="listitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <slot></slot>
     </template>
     <a href="#" onclick="notify(event)">
@@ -20,7 +20,7 @@ exports[`gux-skip-navigation-list #render should render component as expected (1
     </a>
   </gux-skip-navigation-item>
   <gux-skip-navigation-item role="listitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <slot></slot>
     </template>
     <a href="#" onclick="notify(event)">
@@ -28,7 +28,7 @@ exports[`gux-skip-navigation-list #render should render component as expected (1
     </a>
   </gux-skip-navigation-item>
   <gux-skip-navigation-item role="listitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <slot></slot>
     </template>
     <a href="#" onclick="notify(event)">
@@ -36,7 +36,7 @@ exports[`gux-skip-navigation-list #render should render component as expected (1
     </a>
   </gux-skip-navigation-item>
   <gux-skip-navigation-item role="listitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <slot></slot>
     </template>
     <a href="#" onclick="notify(event)">

@@ -2,7 +2,7 @@
 
 exports[`gux-avatar #render component with valid markup 1`] = `
 <gux-avatar-change-photo-beta>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button aria-label="Change profile photo" class="gux-change-photo">
       <gux-icon class="gux-change-photo-icon" decorative="" icon-name="fa/camera-solid" size="small"></gux-icon>
       <slot name="avatar"></slot>

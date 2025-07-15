@@ -31,7 +31,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -142,7 +142,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -255,7 +255,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -366,7 +366,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -474,7 +474,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
     </fieldset>
   </template>
   <gux-dropdown-multi disabled="">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup disabled="">
           <div class="gux-disabled gux-target-container gux-target-container-collapsed" slot="target">
@@ -582,7 +582,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
     </fieldset>
   </template>
   <gux-dropdown-multi required="">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -690,7 +690,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -798,7 +798,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -906,7 +906,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -1014,7 +1014,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -1122,7 +1122,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -1230,7 +1230,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -1338,7 +1338,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -1446,7 +1446,7 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi label-info 
     </fieldset>
   </template>
   <gux-dropdown-multi>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
           <div class="gux-target-container gux-target-container-collapsed" slot="target">
@@ -1559,7 +1559,7 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -1653,7 +1653,7 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -1747,7 +1747,7 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -1841,7 +1841,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -1935,7 +1935,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
     </fieldset>
   </template>
   <gux-dropdown disabled="">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup disabled="">
         <div class="gux-disabled gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
@@ -2029,7 +2029,7 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
     </fieldset>
   </template>
   <gux-dropdown required="">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -2123,7 +2123,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -2217,7 +2217,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -2311,7 +2311,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
@@ -2405,7 +2405,7 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
     </fieldset>
   </template>
   <gux-dropdown>
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <gux-popup>
         <div class="gux-target-container-collapsed" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">

@@ -2,7 +2,7 @@
 
 exports[`gux-context-menu renders 1`] = `
 <gux-context-menu>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup exceed-target-width="" offset="4" placement="bottom-start">
       <div class="gux-button-container" slot="target">
         <gux-button-slot accent="ghost">
@@ -25,7 +25,7 @@ exports[`gux-context-menu renders 1`] = `
     </gux-popup>
   </template>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
@@ -33,7 +33,7 @@ exports[`gux-context-menu renders 1`] = `
     Test 1
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
@@ -41,7 +41,7 @@ exports[`gux-context-menu renders 1`] = `
     Test 2
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>

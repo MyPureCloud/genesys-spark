@@ -2,7 +2,7 @@
 
 exports[`gux-day renders 1`] = `
 <gux-day-beta day="2025-03-05">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button type="button">
       <slot>
         <span aria-hidden="true">
