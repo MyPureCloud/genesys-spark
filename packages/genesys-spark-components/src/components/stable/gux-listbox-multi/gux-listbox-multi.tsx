@@ -202,6 +202,9 @@ export class GuxListboxMulti {
         onClickedOption(option, value => this.updateValue(value));
       }
     );
+    whenEventIsFrom('gux-select-all', event, () => {
+      this.updateSelectAllState(true);
+    });
   }
 
   @Method()
@@ -271,6 +274,38 @@ export class GuxListboxMulti {
     });
   }
 
+  private updateSelectAllState(toggleAll = false): void {
+    const selectAllElement = this.root.querySelector(
+      'gux-select-all'
+    ) as HTMLGuxSelectAllElement;
+    if (!selectAllElement) {
+      return;
+    }
+
+    const allOptions = this.listboxOptions
+      .filter(option => !option.filtered)
+      .map(option => option.value);
+
+    if (this.optionCreateElement && !this.optionCreateElement.filtered) {
+      allOptions.push(this.optionCreateElement.value);
+    }
+
+    if (toggleAll) {
+      this.value = selectAllElement.selected ? undefined : allOptions.join(',');
+      simulateNativeEvent(this.root, 'input');
+      simulateNativeEvent(this.root, 'change');
+    }
+
+    const selectedValues = this.getSelectedValues();
+    const allSelected =
+      allOptions.length > 0 &&
+      allOptions.every(val => selectedValues.includes(val));
+    const someSelected = allOptions.some(val => selectedValues.includes(val));
+
+    selectAllElement.selected = allSelected;
+    selectAllElement.indeterminate = !allSelected && someSelected;
+  }
+
   private updateValue(newValue: string): void {
     if (!this.getSelectedValues().includes(newValue)) {
       const newArray = [...this.getSelectedValues(), newValue];
@@ -281,6 +316,7 @@ export class GuxListboxMulti {
     }
     simulateNativeEvent(this.root, 'input');
     simulateNativeEvent(this.root, 'change');
+    this.updateSelectAllState();
   }
 
   async componentWillLoad(): Promise<void> {
@@ -297,6 +333,8 @@ export class GuxListboxMulti {
     this.allListboxOptionsFiltered =
       this.listboxOptions.filter(listboxOption => !listboxOption.filtered)
         .length === 0;
+
+    this.updateSelectAllState();
   }
 
   // The slot must always be rendered so onSlotchange can be called
