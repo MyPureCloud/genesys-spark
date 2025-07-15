@@ -1,5 +1,21 @@
 <h1>gux-dropdown-multi</h1>
 <form onchange="notify(event)" oninput="notify(event)">
+  <h2>Disabled</h2>
+  <gux-button
+    onclick="(function() {
+      document.getElementById('disabled-state-dropdown').toggleAttribute('disabled');
+  })()"
+    >Toggle disabled state</gux-button
+  >
+  <gux-dropdown-multi id="disabled-state-dropdown" value="a" disabled="true">
+    <gux-listbox-multi aria-label="Animals">
+      <gux-option-multi value="a">Ant</gux-option-multi>
+      <gux-option-multi value="b" disabled>Bat</gux-option-multi>
+      <gux-option-multi value="c">Cat</gux-option-multi>
+      <gux-option-multi value="d">Dog</gux-option-multi>
+    </gux-listbox-multi>
+  </gux-dropdown-multi>
+
   <gux-dropdown-multi filter-type="starts-with" placeholder="Select a country">
     <gux-listbox-multi aria-label="Countries">
       <gux-option-multi value="AFG"> Afghanistan </gux-option-multi>
@@ -365,7 +381,7 @@
     >Remove "Jellyfish" Option</gux-button
   >
 
-  <h2>Disabled</h2>
+  <!-- <h2>Disabled</h2>
   <gux-button
     onclick="(function() {
       document.getElementById('disabled-state-dropdown').toggleAttribute('disabled');
@@ -379,7 +395,7 @@
       <gux-option-multi value="c">Cat</gux-option-multi>
       <gux-option-multi value="d">Dog</gux-option-multi>
     </gux-listbox-multi>
-  </gux-dropdown-multi>
+  </gux-dropdown-multi> -->
 
   <h2>Placeholder</h2>
   <gux-dropdown-multi placeholder="Select an animal">
@@ -526,7 +542,7 @@
           listbox.replaceChildren(...options);
           dropdown.value = 'c';
           dropdown.loading = false;
-      }, 15000);
+      }, 30000);
     }
 
     loadingStaticList('loading-1')
