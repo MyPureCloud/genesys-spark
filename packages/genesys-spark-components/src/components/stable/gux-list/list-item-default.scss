@@ -37,7 +37,9 @@
     word-wrap: break-word;
     cursor: pointer;
     outline: none;
-    outline-offset: calc(#{ui.$gse-ui-menu-option-focus-border-width} * -1);
+    outline-offset: calc(
+      #{ui.$gse-ui-menu-option-focus-border-width} * -1
+    ) !important;
     background-color: ui.$gse-ui-menu-option-default-backgroundColor;
     border: none;
 
