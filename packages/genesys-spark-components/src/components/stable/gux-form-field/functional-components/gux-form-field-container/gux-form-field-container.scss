@@ -1,8 +1,10 @@
 /* stylelint-disable-next-line selector-class-pattern */
 @mixin Style {
   .gux-form-field-container {
+    display: flex;
+    flex-direction: column;
+
     &.gux-beside {
-      display: flex;
       flex-direction: row;
     }
   }
