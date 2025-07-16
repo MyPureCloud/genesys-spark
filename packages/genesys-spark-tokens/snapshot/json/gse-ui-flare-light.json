@@ -2250,6 +2250,12 @@
       "fontWeight": "600",
       "fontSize": "12px",
       "lineHeight": "18px"
+    },
+    "shortened": {
+      "gap": "8px",
+      "edit": {
+        "gap": "4px"
+      }
     }
   },
   "prompt_input": {

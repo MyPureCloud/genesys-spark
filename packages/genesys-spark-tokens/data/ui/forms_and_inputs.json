@@ -2135,6 +2135,18 @@
     "text": {
       "value": "{body.sm.semi_bold}",
       "type": "typography"
+    },
+    "shortened": {
+      "gap": {
+        "value": "{container.sm.gap}",
+        "type": "spacing"
+      },
+      "edit": {
+        "gap": {
+          "value": "{container.xs.gap}",
+          "type": "spacing"
+        }
+      }
     }
   },
   "prompt_input": {
