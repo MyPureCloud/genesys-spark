@@ -1,3 +1,5 @@
+declare function fullLocale(localeBaseName: string): Intl.Locale;
+declare function fullLocaleString(localeBaseName: string): string;
 /**
  * Provides an [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
  * object for formatting dates and times. Unlike the native version, `locale` is
@@ -31,12 +33,16 @@ declare function getFormat(locale: string): string;
 
 declare const intl_dateTimeFormat: typeof dateTimeFormat;
 declare const intl_determineDisplayLocale: typeof determineDisplayLocale;
+declare const intl_fullLocale: typeof fullLocale;
+declare const intl_fullLocaleString: typeof fullLocaleString;
 declare const intl_getFormat: typeof getFormat;
 declare const intl_relativeTimeFormat: typeof relativeTimeFormat;
 declare namespace intl {
   export {
     intl_dateTimeFormat as dateTimeFormat,
     intl_determineDisplayLocale as determineDisplayLocale,
+    intl_fullLocale as fullLocale,
+    intl_fullLocaleString as fullLocaleString,
     intl_getFormat as getFormat,
     intl_relativeTimeFormat as relativeTimeFormat,
   };
