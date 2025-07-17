@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.157.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.2...v4.157.3) (2025-07-17)
+
+
+### Bug Fixes
+
+* **context-menu:** fix cropped outline ([#1239](https://github.com/MyPureCloud/genesys-spark/issues/1239)) ([f675e49](https://github.com/MyPureCloud/genesys-spark/commit/f675e491f8fc6e86c74c1da41f419a5b0d46afae))
+* **form-field:** Improve consistency with visual label ([#1231](https://github.com/MyPureCloud/genesys-spark/issues/1231)) ([7588c28](https://github.com/MyPureCloud/genesys-spark/commit/7588c28e36b25c5880b54c94e48ce004d3edbcf6))
+
 ### [4.157.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.1...v4.157.2) (2025-07-15)
 
 ### [4.157.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.0...v4.157.1) (2025-07-12)
