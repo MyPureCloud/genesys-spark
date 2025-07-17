@@ -118,6 +118,17 @@ sparkIntl.determineDisplayLocale(this.root)
 
 We have made an additional change in the gux-time-picker component to remove hardcoded 24 hour format default for certain languages (AR, KO, zh-CN and zh-TW). The hour format of these locals will now be determined by the Intl date and time utilities COMUI-2890 This change is also behind the enableRegionalDates toggle.
 
+## Potential Browser Inconsistencies
+
+The JavaScript internationalization API (Intl) may produce minor inconsistencies across browsers. These inconsistencies may arise because each browser may use a different version of the internationalization databases. The exact formatting of dates is subject to change as updates to these databases can happen periodically. These minor inconsistences between browsers is not considered a bug.
+
+Example: different display date between browsers (with `en-CA` locale)
+
+- Chrome, Firefox and Edge:
+  `2025-07-16, 4:32 p.m.`
+- Safari:
+  `2025-07-16, 4:32 PM`
+
 ## FAQ
 
 ### Q. What is the purpose behind this effort?
