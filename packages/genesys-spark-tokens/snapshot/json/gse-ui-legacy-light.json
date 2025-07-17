@@ -342,7 +342,7 @@
       "1": {
         "blur": "10px",
         "spread": "4px",
-        "color": "#3d538f4d",
+        "color": "#3d538f40",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "6px"
@@ -350,7 +350,7 @@
       "2": {
         "blur": "2px",
         "spread": "0",
-        "color": "#3d538f4d",
+        "color": "#3d538f40",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
@@ -1504,7 +1504,7 @@
       "1": {
         "blur": "10px",
         "spread": "4px",
-        "color": "#3d538f4d",
+        "color": "#3d538f40",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "6px"
@@ -1512,7 +1512,7 @@
       "2": {
         "blur": "2px",
         "spread": "0",
-        "color": "#3d538f4d",
+        "color": "#3d538f40",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
@@ -3335,7 +3335,7 @@
       "1": {
         "blur": "10px",
         "spread": "4px",
-        "color": "#3d538f4d",
+        "color": "#3d538f40",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "6px"
@@ -3343,7 +3343,7 @@
       "2": {
         "blur": "2px",
         "spread": "0",
-        "color": "#3d538f4d",
+        "color": "#3d538f40",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"

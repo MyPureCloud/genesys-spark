@@ -164,7 +164,7 @@
   --gse-ui-calendarMenu-monthBody-padding: 16px 24px;
   --gse-ui-calendarMenu-monthBody-gap: 2px;
   --gse-ui-calendarMenu-boxShadow:
-    0 6px 10px 4px #3d538f4d, 0 0 2px 0 #3d538f4d;
+    0 6px 10px 4px #3d538f40, 0 0 2px 0 #3d538f40;
   --gse-ui-calendarMenu-ctaGroup-height: 68px;
   --gse-ui-calendarMenu-ctaGroup-padding: 18px 24px;
   --gse-ui-globalNav-menuOption-selected-backgroundColor: #2143a2;
@@ -707,7 +707,7 @@
   --gse-ui-menu-border-color: #b4bccb;
   --gse-ui-menu-border-width: 1px;
   --gse-ui-menu-border-style: solid;
-  --gse-ui-menu-boxShadow: 0 6px 10px 4px #3d538f4d, 0 0 2px 0 #3d538f4d;
+  --gse-ui-menu-boxShadow: 0 6px 10px 4px #3d538f40, 0 0 2px 0 #3d538f40;
   --gse-ui-menu-padding: 8px 0px;
   --gse-ui-menu-backgroundColor: #ffffff;
   --gse-ui-menu-scrollbar-foregroundColor: #3e4a5b;
@@ -1567,7 +1567,7 @@
   --gse-ui-modal-dismissButton-paddingTop: 16px;
   --gse-ui-modal-dismissButton-paddingRight: 8px;
   --gse-ui-popover-borderRadius: 4px;
-  --gse-ui-popover-boxShadow: 0 6px 10px 4px #3d538f4d, 0 0 2px 0 #3d538f4d;
+  --gse-ui-popover-boxShadow: 0 6px 10px 4px #3d538f40, 0 0 2px 0 #3d538f40;
   --gse-ui-popover-closeButtonColor: #3e4a5b;
   --gse-ui-popover-headerColor: #2e394c;
   --gse-ui-popover-backgroundColor: #ffffff;

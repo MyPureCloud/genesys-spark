@@ -492,11 +492,11 @@
   "effects": {
     "box_shadow": "#000000b3",
     "shadows": {
-      "lightest": "#0000005c",
-      "lighter": "#0006",
-      "middle": "#00000080",
-      "darker": "#0009",
-      "darkest": "#000000b3"
+      "lightest": "#0000004d",
+      "lighter": "#00000059",
+      "middle": "#00000073",
+      "darker": "#00000080",
+      "darkest": "#0009"
     }
   },
   "charts": {

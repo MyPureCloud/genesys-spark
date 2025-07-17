@@ -571,7 +571,7 @@
       "default": {
         "blur": "3px",
         "spread": "1px",
-        "color": "#0000005c",
+        "color": "#0000004d",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "2px"
@@ -579,7 +579,7 @@
       "hover": {
         "blur": "4px",
         "spread": "3px",
-        "color": "#00000080",
+        "color": "#00000073",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "2px"
@@ -589,7 +589,7 @@
       "1": {
         "blur": "10px",
         "spread": "4px",
-        "color": "#0006",
+        "color": "#00000059",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "6px"
@@ -597,7 +597,7 @@
       "2": {
         "blur": "3px",
         "spread": "0",
-        "color": "#00000080",
+        "color": "#00000073",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "2px"
@@ -607,7 +607,7 @@
       "1": {
         "blur": "10px",
         "spread": "4px",
-        "color": "#0006",
+        "color": "#00000059",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "6px"
@@ -615,7 +615,7 @@
       "2": {
         "blur": "3px",
         "spread": "0",
-        "color": "#00000080",
+        "color": "#00000073",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "2px"
@@ -624,7 +624,7 @@
     "6_modal": {
       "blur": "4px",
       "spread": "3px",
-      "color": "#00000080",
+      "color": "#00000073",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "2px"
@@ -633,7 +633,7 @@
       "1": {
         "blur": "10px",
         "spread": "4px",
-        "color": "#0009",
+        "color": "#00000073",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "6px"
@@ -641,7 +641,7 @@
       "2": {
         "blur": "2px",
         "spread": "0",
-        "color": "#0009",
+        "color": "#00000073",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
@@ -651,7 +651,7 @@
       "1": {
         "blur": "10px",
         "spread": "4px",
-        "color": "#0009",
+        "color": "#00000080",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "6px"
@@ -659,7 +659,7 @@
       "2": {
         "blur": "2px",
         "spread": "0",
-        "color": "#0009",
+        "color": "#00000080",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "1px"
@@ -669,7 +669,7 @@
       "1": {
         "blur": "10px",
         "spread": "4px",
-        "color": "#0009",
+        "color": "#00000080",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "6px"
@@ -677,7 +677,7 @@
       "2": {
         "blur": "2px",
         "spread": "0",
-        "color": "#0009",
+        "color": "#00000080",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
@@ -687,7 +687,7 @@
       "1": {
         "blur": "10px",
         "spread": "4px",
-        "color": "#0009",
+        "color": "#00000080",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "6px"
@@ -695,7 +695,7 @@
       "2": {
         "blur": "2px",
         "spread": "0",
-        "color": "#0009",
+        "color": "#00000080",
         "type": "dropShadow",
         "offsetX": "0",
         "offsetY": "0"
@@ -704,7 +704,7 @@
     "scroll_indicator": {
       "blur": "14px",
       "spread": "4px",
-      "color": "#0000005c",
+      "color": "#00000059",
       "type": "dropShadow",
       "offsetX": "0",
       "offsetY": "-4px"

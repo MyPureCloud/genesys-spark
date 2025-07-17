@@ -302,14 +302,18 @@
   --gse-semantic-code-sm-regular-fontWeight: 400;
   --gse-semantic-code-sm-regular-fontSize: 12px;
   --gse-semantic-code-sm-regular-lineHeight: 16px;
-  --gse-semantic-shadow-1Card-default: 0 2px 3px 1px #0000005c;
-  --gse-semantic-shadow-1Card-hover: 0 2px 4px 3px #00000080;
-  --gse-semantic-shadow-2SidePanel: 0 6px 10px 4px #0006, 0 2px 3px 0 #00000080;
-  --gse-semantic-shadow-4Copilot: 0 6px 10px 4px #0006, 0 2px 3px 0 #00000080;
-  --gse-semantic-shadow-6Modal: 0 2px 4px 3px #00000080;
-  --gse-semantic-shadow-7Menu: 0 6px 10px 4px #0009, 0 0 2px 0 #0009;
-  --gse-semantic-shadow-8DraggedItem: 0 6px 10px 4px #0009, 0 1px 2px 0 #0009;
-  --gse-semantic-shadow-9Toast: 0 6px 10px 4px #0009, 0 0 2px 0 #0009;
-  --gse-semantic-shadow-10Tooltip: 0 6px 10px 4px #0009, 0 0 2px 0 #0009;
-  --gse-semantic-shadow-scrollIndicator: 0 -4px 14px 4px #0000005c;
+  --gse-semantic-shadow-1Card-default: 0 2px 3px 1px #0000004d;
+  --gse-semantic-shadow-1Card-hover: 0 2px 4px 3px #00000073;
+  --gse-semantic-shadow-2SidePanel:
+    0 6px 10px 4px #00000059, 0 2px 3px 0 #00000073;
+  --gse-semantic-shadow-4Copilot:
+    0 6px 10px 4px #00000059, 0 2px 3px 0 #00000073;
+  --gse-semantic-shadow-6Modal: 0 2px 4px 3px #00000073;
+  --gse-semantic-shadow-7Menu: 0 6px 10px 4px #00000073, 0 0 2px 0 #00000073;
+  --gse-semantic-shadow-8DraggedItem:
+    0 6px 10px 4px #00000080, 0 1px 2px 0 #00000080;
+  --gse-semantic-shadow-9Toast: 0 6px 10px 4px #00000080, 0 0 2px 0 #00000080;
+  --gse-semantic-shadow-10Tooltip:
+    0 6px 10px 4px #00000080, 0 0 2px 0 #00000080;
+  --gse-semantic-shadow-scrollIndicator: 0 -4px 14px 4px #00000059;
 }
