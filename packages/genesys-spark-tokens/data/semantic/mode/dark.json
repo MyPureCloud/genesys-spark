@@ -425,6 +425,12 @@
             "description": "The background color of the footer for the mobile global navigation."
           }
         }
+      },
+      "sunken": {
+        "base": {
+          "value": "{theme.background.container.primary.50d}",
+          "type": "color"
+        }
       }
     },
     "system": {

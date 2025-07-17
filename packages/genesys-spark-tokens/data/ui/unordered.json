@@ -797,21 +797,21 @@
       },
       "hover": {
         "background_color": {
-          "value": "{background.container.elevated.hover}",
+          "value": "{background.container.elevated.active}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.link.active}",
+          "value": "{foreground.interactive.link.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "{background.interactive.secondary.active}",
+          "value": "{background.container.elevated.default}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.link.active}",
+          "value": "{foreground.interactive.link.default}",
           "type": "color"
         }
       }
@@ -850,6 +850,12 @@
       "offset": {
         "value": "0",
         "type": "spacing"
+      }
+    },
+    "container": {
+      "background": {
+        "value": "{background.container.sunken.base}",
+        "type": "color"
       }
     }
   },
