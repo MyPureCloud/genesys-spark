@@ -106,6 +106,13 @@ export class GuxActionButton {
           this.focusFirstItemInPopupList();
         }
         break;
+      case 'ArrowUp':
+        if (composedPath.includes(this.dropdownButton)) {
+          event.preventDefault();
+          this.isOpen = true;
+          this.focusLastItemInPopupList();
+        }
+        break;
     }
   }
 
@@ -166,6 +173,11 @@ export class GuxActionButton {
   private focusFirstItemInPopupList(): void {
     afterNextRenderTimeout(() => {
       void this.listElement.guxFocusFirstItem();
+    });
+  }
+  private focusLastItemInPopupList(): void {
+    afterNextRenderTimeout(() => {
+      void this.listElement.guxFocusLastItem();
     });
   }
 
