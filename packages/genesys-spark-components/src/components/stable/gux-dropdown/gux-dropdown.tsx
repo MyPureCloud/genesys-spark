@@ -566,7 +566,6 @@ export class GuxDropdown {
           ref={el => (this.fieldButtonElement = el)}
           aria-haspopup="listbox"
           aria-expanded={this.expanded.toString()}
-          data-testid="dropdown-button"
         >
           {this.renderTargetContent()}
           {this.renderRadialLoading()}

@@ -237,7 +237,6 @@ export class GuxTimeZonePickerBeta {
         value={this.value}
         hasError={this.hasError}
         disabled={this.disabled}
-        data-testid="dropdown"
       >
         <gux-listbox aria-label={this.i18n('timeZones')}>
           {this.renderDefaultsList()}
