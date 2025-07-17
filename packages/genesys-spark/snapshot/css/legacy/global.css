@@ -358,7 +358,9 @@
   --gse-semantic-theme-background-container-primary-40: #e8ecf2;
   --gse-semantic-theme-background-container-primary-45: #f0f1f5;
   --gse-semantic-theme-background-container-primary-50: #deeaff;
+  --gse-semantic-theme-background-container-primary-55: #ebedf5;
   --gse-semantic-theme-background-container-primary-60: #e2e6ee;
+  --gse-semantic-theme-background-container-primary-65: #cad1e1;
   --gse-semantic-theme-background-container-secondary-10: #2a60c8;
   --gse-semantic-theme-background-container-secondary-20: #2754ac;
   --gse-semantic-theme-background-container-secondary-30: #23478f;
@@ -1063,6 +1065,7 @@
   --gse-semantic-background-container-globalNav-desktop-menuPanel-feedbackContainer: #2143a2;
   --gse-semantic-background-container-globalNav-mobile-header: #1e1e21;
   --gse-semantic-background-container-globalNav-mobile-footer: #dfe3ec;
+  --gse-semantic-background-container-sunken-base: #ebedf5;
   --gse-semantic-background-system-error-tonalMedium: #fceaea;
   --gse-semantic-background-system-error-tonalHigh: #ea0b0b;
   --gse-semantic-background-system-error-tonalSubtle: #fceaea;
@@ -1144,6 +1147,8 @@
   --gse-semantic-background-formControl-textInput-track: #f6f7f9;
   --gse-semantic-background-formControl-search-matchingText-firstLevel: #ffef27;
   --gse-semantic-background-formControl-search-matchingText-subsequentLevel: #fff793;
+  --gse-semantic-background-formControl-segment-active: #ffffff;
+  --gse-semantic-background-formControl-segment-hover: #cad1e1;
   --gse-semantic-foreground-interactive-primary-default: #ffffff;
   --gse-semantic-foreground-interactive-primary-active: #ffffff;
   --gse-semantic-foreground-interactive-primary-hover: #ffffff;
@@ -1233,6 +1238,9 @@
   --gse-semantic-foreground-formControl-label-optionalAccent: #3e4a5b;
   --gse-semantic-foreground-formControl-label-tooltip: #3e4a5b;
   --gse-semantic-foreground-formControl-search-matchingText: #2a2a2e;
+  --gse-semantic-foreground-formControl-segment-active: #2a60c8;
+  --gse-semantic-foreground-formControl-segment-hover: #2754ac;
+  --gse-semantic-foreground-formControl-segment-default: #2a60c8;
   --gse-semantic-border-focus: #aac9ff;
   --gse-semantic-border-container-divider: #b4bccb;
   --gse-semantic-border-container-edges-defaultLight: #b4bccb;

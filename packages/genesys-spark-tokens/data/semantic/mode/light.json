@@ -484,6 +484,13 @@
             "description": "The background color of the footer for the mobile global navigation."
           }
         }
+      },
+      "sunken": {
+        "base": {
+          "value": "{theme.background.container.primary.55}",
+          "type": "color",
+          "description": "background for segmented control"
+        }
       }
     },
     "system": {
@@ -948,6 +955,16 @@
             "type": "color",
             "description": "The color of the highlight of the text that matches a search query on a subsequent level."
           }
+        }
+      },
+      "segment": {
+        "active": {
+          "value": "{theme.background.container.primary.10}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{theme.background.container.primary.65}",
+          "type": "color"
         }
       }
     }
@@ -1464,6 +1481,20 @@
           "value": "{theme.foreground.search.10}",
           "type": "color",
           "description": "The color for text that matches a search query."
+        }
+      },
+      "segment": {
+        "active": {
+          "value": "{theme.foreground.form_control.click_input.10}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{theme.foreground.form_control.click_input.20}",
+          "type": "color"
+        },
+        "default": {
+          "value": "{theme.foreground.form_control.click_input.10}",
+          "type": "color"
         }
       }
     }

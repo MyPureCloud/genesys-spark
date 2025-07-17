@@ -1252,12 +1252,12 @@
         "foreground_color": "#2143a2"
       },
       "hover": {
-        "background_color": "#e7e9f9",
-        "foreground_color": "#102251"
+        "background_color": "#d5def7",
+        "foreground_color": "#19327a"
       },
       "active": {
-        "background_color": "#adbff0",
-        "foreground_color": "#102251"
+        "background_color": "#ffffff",
+        "foreground_color": "#2143a2"
       }
     },
     "border_radius": "4px",
@@ -1277,6 +1277,9 @@
       "color": "#829ce5",
       "width": "1px",
       "style": "solid"
+    },
+    "container": {
+      "background": "#eff3ff"
     }
   },
   "form_footer": {
