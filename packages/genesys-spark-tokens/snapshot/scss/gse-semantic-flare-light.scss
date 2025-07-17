@@ -77,6 +77,7 @@
   --gse-semantic-background-container-globalNav-desktop-menuPanel-feedbackContainer: #2143a2;
   --gse-semantic-background-container-globalNav-mobile-header: #1e1e21;
   --gse-semantic-background-container-globalNav-mobile-footer: #dfe3ec;
+  --gse-semantic-background-container-sunken-base: #eff3ff;
   --gse-semantic-background-system-error-tonalMedium: #f3a7b5;
   --gse-semantic-background-system-error-tonalHigh: #e22245;
   --gse-semantic-background-system-error-tonalSubtle: #f9d3da;
@@ -158,6 +159,8 @@
   --gse-semantic-background-formControl-textInput-track: #ffffff;
   --gse-semantic-background-formControl-search-matchingText-firstLevel: #81cbe5;
   --gse-semantic-background-formControl-search-matchingText-subsequentLevel: #9fd6ea;
+  --gse-semantic-background-formControl-segment-active: #ffffff;
+  --gse-semantic-background-formControl-segment-hover: #d5def7;
   --gse-semantic-foreground-interactive-primary-default: #ffffff;
   --gse-semantic-foreground-interactive-primary-active: #ffffff;
   --gse-semantic-foreground-interactive-primary-hover: #ffffff;
@@ -247,6 +250,9 @@
   --gse-semantic-foreground-formControl-label-optionalAccent: #4f5157;
   --gse-semantic-foreground-formControl-label-tooltip: #4f5157;
   --gse-semantic-foreground-formControl-search-matchingText: #2a2a2e;
+  --gse-semantic-foreground-formControl-segment-active: #2143a2;
+  --gse-semantic-foreground-formControl-segment-hover: #19327a;
+  --gse-semantic-foreground-formControl-segment-default: #2143a2;
   --gse-semantic-border-focus: #5476d5;
   --gse-semantic-border-container-divider: #dce1ed;
   --gse-semantic-border-container-edges-defaultLight: #bfc6d9;
