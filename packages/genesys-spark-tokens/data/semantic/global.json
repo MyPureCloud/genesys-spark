@@ -1265,7 +1265,7 @@
           "y": "6",
           "blur": "10",
           "spread": "4",
-          "color": "{effects.shadows.darker}",
+          "color": "{effects.shadows.middle}",
           "type": "dropShadow"
         },
         {
@@ -1273,7 +1273,7 @@
           "y": "0",
           "blur": "2",
           "spread": "0",
-          "color": "{effects.shadows.darker}",
+          "color": "{effects.shadows.middle}",
           "type": "dropShadow"
         }
       ],
@@ -1352,7 +1352,7 @@
         "y": "-4",
         "blur": "14",
         "spread": "4",
-        "color": "{effects.shadows.lightest}",
+        "color": "{effects.shadows.lighter}",
         "type": "dropShadow"
       },
       "type": "boxShadow"

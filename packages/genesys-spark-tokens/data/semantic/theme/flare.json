@@ -2065,7 +2065,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": ".15",
+                "value": ".10",
                 "space": "srgb"
               }
             }
@@ -2078,7 +2078,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": ".20",
+                "value": ".15",
                 "space": "srgb"
               }
             }
@@ -2091,7 +2091,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": ".25",
+                "value": ".20",
                 "space": "srgb"
               }
             }
@@ -2104,7 +2104,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": ".3",
+                "value": ".25",
                 "space": "srgb"
               }
             }
@@ -2117,7 +2117,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": ".4",
+                "value": ".3",
                 "space": "srgb"
               }
             }
@@ -2130,7 +2130,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": ".36",
+                "value": ".30",
                 "space": "srgb"
               }
             }
@@ -2143,7 +2143,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": ".4",
+                "value": ".35",
                 "space": "srgb"
               }
             }
@@ -2156,7 +2156,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": ".5",
+                "value": ".45",
                 "space": "srgb"
               }
             }
@@ -2169,7 +2169,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": ".6",
+                "value": ".5",
                 "space": "srgb"
               }
             }
@@ -2182,7 +2182,7 @@
             "studio.tokens": {
               "modify": {
                 "type": "alpha",
-                "value": ".7",
+                "value": ".6",
                 "space": "srgb"
               }
             }
