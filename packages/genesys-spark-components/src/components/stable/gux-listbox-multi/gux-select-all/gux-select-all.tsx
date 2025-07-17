@@ -1,6 +1,17 @@
-import { Component, Element, Prop, Host, h } from '@stencil/core';
+import {
+  Component,
+  Element,
+  Prop,
+  h,
+  Listen,
+  forceUpdate
+} from '@stencil/core';
 import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import translationResources from './i18n/en.json';
+
+/**
+ * @slot - slot for text.
+ */
 
 @Component({
   styleUrl: 'gux-select-all.scss',
@@ -19,8 +30,36 @@ export class GuxSelectAll {
   @Prop()
   indeterminate: boolean = false;
 
+  @Prop()
+  active: boolean = false;
+
+  @Listen('internallistboxoptionsupdated', {
+    target: 'window',
+    passive: true,
+    capture: true
+  })
+  onInternallistboxoptionsupdated(): void {
+    forceUpdate(this.root);
+  }
+
   async componentWillLoad(): Promise<void> {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
+  }
+
+  private getCounterText(): string {
+    const listbox = this.root.closest(
+      'gux-listbox-multi'
+    ) as HTMLGuxListboxMultiElement;
+    if (!listbox) {
+      return;
+    }
+
+    const optionsCount = Array.from(
+      listbox.querySelectorAll('gux-option-multi')
+    );
+    const selectedCount = optionsCount.filter(option => option.selected).length;
+
+    return `(${selectedCount} ${this.i18n('of')} ${optionsCount.length})`;
   }
 
   renderSVGCheckbox(): JSX.Element {
@@ -53,19 +92,32 @@ export class GuxSelectAll {
 
   render(): JSX.Element {
     return (
-      <Host
+      <div
         role="option"
-        class={{ 'gux-selected': this.selected }}
         aria-selected={this.selected.toString()}
+        class={{
+          'gux-select-all-container': true,
+          'gux-active': this.active,
+          'gux-selected': this.selected,
+          'gux-indeterminate': this.indeterminate
+        }}
       >
-        <div class="gux-select-all-container">
-          {this.renderSVGCheckbox()}
-          <div class="gux-option-wrapper">
-            <gux-truncate max-lines={1}>{this.i18n('allOptions')}</gux-truncate>
-            <span class="gux-counter-label">(0/14)</span>
-          </div>
+        {this.renderSVGCheckbox()}
+        <div class="gux-option-wrapper">
+          <gux-truncate max-lines={1}>
+            <span>
+              <slot>{this.i18n('allOptions')}</slot>
+            </span>
+          </gux-truncate>
+          <gux-truncate
+            tooltip-placement="right"
+            class="gux-counter-label"
+            max-lines={1}
+          >
+            {this.getCounterText()}
+          </gux-truncate>
         </div>
-      </Host>
+      </div>
     ) as JSX.Element;
   }
 }

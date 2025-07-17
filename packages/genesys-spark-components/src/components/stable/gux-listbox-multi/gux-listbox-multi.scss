@@ -1,10 +1,13 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 
 :host {
+  /* Default custom property for padding */
+  --host-padding: var(--gse-ui-menu-padding);
+
   box-sizing: border-box;
   display: block;
   max-block-size: ui.$gse-ui-menu-maxHeight;
-  padding: ui.$gse-ui-menu-padding;
+  padding: var(--host-padding, 8px);
   overflow: hidden auto;
   outline: none;
   scrollbar-color: ui.$gse-ui-menu-scrollbar-foregroundColor;
@@ -13,6 +16,13 @@
     ui.$gse-ui-menu-border-color;
   border-radius: ui.$gse-ui-menu-borderRadius;
   box-shadow: ui.$gse-ui-menu-boxShadow;
+
+  ::slotted(gux-select-all) {
+    position: sticky;
+    inset-block-start: 0;
+
+    --host-padding: 0;
+  }
 }
 
 .gux-message-container {

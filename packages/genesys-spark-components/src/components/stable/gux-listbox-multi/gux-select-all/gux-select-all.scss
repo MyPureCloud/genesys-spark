@@ -3,10 +3,22 @@
 @use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
+  z-index: 1;
+}
+
+.gux-select-all-container {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: ui.$gse-ui-menu-selectAll-labelContainer-gap;
   gap: ui.$gse-ui-menu-option-gap;
   align-content: stretch;
+  align-items: center;
   min-block-size: ui.$gse-ui-menu-option-height;
+  padding-block: 14px;
+  padding-block-end: ui.$gse-ui-menu-selectAll-gap;
+  padding-inline: 12px; //  ui.$gse-ui-menu-selectAll-labelContainer-padding; <- token needs updated to not be 2px x 12px;
   font-family: ui.$gse-ui-dropdown-menu-selectAll-labelText-fontFamily;
   font-size: ui.$gse-ui-dropdown-menu-selectAll-labelText-fontSize;
   font-weight: ui.$gse-ui-dropdown-menu-selectAll-labelText-fontWeight;
@@ -15,49 +27,18 @@
   word-wrap: break-word;
   cursor: pointer;
   background-color: ui.$gse-ui-menu-selectAll-backgroundColor;
+  border-block-end: 1px solid global.$gse-semantic-border-container-divider;
   box-shadow: ui.$gse-ui-menu-selectAll-scrolling-boxShadow;
 
-  .gux-select-all-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: ui.$gse-ui-menu-selectAll-labelContainer-gap;
-    align-items: center;
-    padding: ui.$gse-ui-menu-selectAll-labelContainer-padding;
-    padding-block-end: ui.$gse-ui-menu-selectAll-gap;
-    border-block-end: 1px solid global.$gse-semantic-border-container-divider;
+  &.gux-active {
+    outline: ui.$gse-ui-menu-option-focus-border-width
+      ui.$gse-ui-menu-option-focus-border-style
+      ui.$gse-ui-menu-option-focus-border-color;
+    outline-offset: -2px;
+    border-radius: global.$gse-semantic-focusOutline-sm-borderRadius;
   }
 
-  .gux-option-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: ui.$gse-ui-menu-selectAll-label-gap;
-    align-items: center;
-    min-inline-size: 0;
-
-    .gux-counter-label {
-      font-family: ui.$gse-ui-dropdown-menu-selectAll-counterText-fontFamily;
-      font-size: ui.$gse-ui-dropdown-menu-selectAll-counterText-fontSize;
-      font-weight: ui.$gse-ui-dropdown-menu-selectAll-counterText-fontWeight;
-      line-height: ui.$gse-ui-dropdown-menu-selectAll-counterText-lineHeight;
-    }
-  }
-
-  .gux-checkbox-container {
-    position: relative;
-    display: inline-block;
-    min-inline-size: ui.$gse-ui-menu-option-startIcon-width;
-    max-inline-size: ui.$gse-ui-menu-option-startIcon-width;
-    block-size: ui.$gse-ui-menu-option-startIcon-height;
-    content: '';
-
-    > path {
-      fill: ui.$gse-ui-menu-option-checkbox-unchecked-default-foregroundColor;
-    }
-  }
-
-  &:host(.gux-selected) {
+  &.gux-selected {
     font-family: ui.$gse-ui-menu-option-label-active-text-fontFamily;
     font-size: ui.$gse-ui-menu-option-label-active-text-fontSize;
     font-weight: ui.$gse-ui-menu-option-label-active-text-fontWeight;
@@ -65,11 +46,49 @@
     background-color: ui.$gse-ui-menu-option-selected-backgroundColor;
 
     .gux-checkbox-container > path {
-      fill: ui.$gse-ui-menu-option-checkbox-checked-default-foregroundColor;
+      fill: ui.$gse-ui-menu-option-checkbox-checked-selected-foregroundColor;
     }
   }
 
-  .gux-screenreader {
-    @include mixins.gux-sr-only;
+  &.gux-indeterminate {
+    .gux-checkbox-container > path {
+      fill: ui.$gse-ui-menu-option-checkbox-checked-selected-foregroundColor;
+    }
   }
+}
+
+.gux-option-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: ui.$gse-ui-menu-selectAll-label-gap;
+  align-items: center;
+  inline-size: 100%;
+  min-inline-size: 0;
+
+  .gux-counter-label {
+    inline-size: 100%;
+    font-family: ui.$gse-ui-dropdown-menu-selectAll-counterText-fontFamily;
+    font-size: ui.$gse-ui-dropdown-menu-selectAll-counterText-fontSize;
+    font-weight: ui.$gse-ui-dropdown-menu-selectAll-counterText-fontWeight;
+    line-height: ui.$gse-ui-dropdown-menu-selectAll-counterText-lineHeight;
+  }
+}
+
+.gux-checkbox-container {
+  position: relative;
+  display: inline-block;
+  min-inline-size: ui.$gse-ui-menu-option-startIcon-width;
+  max-inline-size: ui.$gse-ui-menu-option-startIcon-width;
+  block-size: ui.$gse-ui-menu-option-startIcon-height;
+  content: '';
+  background-color: ui.$gse-ui-menu-selectAll-backgroundColor;
+
+  > path {
+    fill: ui.$gse-ui-menu-option-checkbox-unchecked-default-foregroundColor;
+  }
+}
+
+.gux-screenreader {
+  @include mixins.gux-sr-only;
 }

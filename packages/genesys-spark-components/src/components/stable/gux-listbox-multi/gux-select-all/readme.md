@@ -9,8 +9,16 @@
 
 | Property        | Attribute       | Description | Type      | Default |
 | --------------- | --------------- | ----------- | --------- | ------- |
+| `active`        | `active`        |             | `boolean` | `false` |
 | `indeterminate` | `indeterminate` |             | `boolean` | `false` |
 | `selected`      | `selected`      |             | `boolean` | `false` |
+
+
+## Slots
+
+| Slot | Description    |
+| ---- | -------------- |
+|      | slot for text. |
 
 
 ## Dependencies
