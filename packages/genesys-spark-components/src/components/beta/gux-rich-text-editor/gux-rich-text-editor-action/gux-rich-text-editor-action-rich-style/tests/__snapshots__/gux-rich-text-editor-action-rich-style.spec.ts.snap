@@ -2,7 +2,7 @@
 
 exports[`gux-rich-text-editor-action-rich-style should build and render 1`] = `
 <gux-rich-text-editor-action-rich-style>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup exceedtargetwidth="" placement="bottom-start">
       <gux-button-slot accent="ghost" icon-only="" slot="target">
         <button aria-expanded="false" aria-haspopup="true" type="button">

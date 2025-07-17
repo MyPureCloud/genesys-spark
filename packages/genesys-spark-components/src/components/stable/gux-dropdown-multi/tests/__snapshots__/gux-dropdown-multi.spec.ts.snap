@@ -2,7 +2,7 @@
 
 exports[`gux-dropdown #render should render as expected 1`] = `
 <gux-dropdown-multi>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-dropdown-container">
       <gux-popup>
         <div class="gux-target-container gux-target-container-collapsed" slot="target">

@@ -2,7 +2,7 @@
 
 exports[`gux-button #render should render danger button 1`] = `
 <gux-button accent="danger">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-danger" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -13,7 +13,7 @@ exports[`gux-button #render should render danger button 1`] = `
 
 exports[`gux-button #render should render default button 1`] = `
 <gux-button>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-secondary" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -24,7 +24,7 @@ exports[`gux-button #render should render default button 1`] = `
 
 exports[`gux-button #render should render disabled danger button 1`] = `
 <gux-button accent="danger" disabled="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-danger" disabled="" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -35,7 +35,7 @@ exports[`gux-button #render should render disabled danger button 1`] = `
 
 exports[`gux-button #render should render disabled default button 1`] = `
 <gux-button disabled="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-secondary" disabled="" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -46,7 +46,7 @@ exports[`gux-button #render should render disabled default button 1`] = `
 
 exports[`gux-button #render should render disabled ghost button 1`] = `
 <gux-button accent="ghost" disabled="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-ghost" disabled="" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -57,7 +57,7 @@ exports[`gux-button #render should render disabled ghost button 1`] = `
 
 exports[`gux-button #render should render disabled inline button 1`] = `
 <gux-button accent="inline" disabled="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-inline" disabled="" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -68,7 +68,7 @@ exports[`gux-button #render should render disabled inline button 1`] = `
 
 exports[`gux-button #render should render disabled invalid button 1`] = `
 <gux-button accent="invalid" disabled="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-invalid" disabled="" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -79,7 +79,7 @@ exports[`gux-button #render should render disabled invalid button 1`] = `
 
 exports[`gux-button #render should render disabled primary button 1`] = `
 <gux-button accent="primary" disabled="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-primary" disabled="" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -90,7 +90,7 @@ exports[`gux-button #render should render disabled primary button 1`] = `
 
 exports[`gux-button #render should render disabled secondary button 1`] = `
 <gux-button accent="secondary" disabled="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-secondary" disabled="" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -101,7 +101,7 @@ exports[`gux-button #render should render disabled secondary button 1`] = `
 
 exports[`gux-button #render should render disabled tertiary button 1`] = `
 <gux-button accent="tertiary" disabled="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-tertiary" disabled="" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -112,7 +112,7 @@ exports[`gux-button #render should render disabled tertiary button 1`] = `
 
 exports[`gux-button #render should render ghost button 1`] = `
 <gux-button accent="ghost">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-ghost" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -123,7 +123,7 @@ exports[`gux-button #render should render ghost button 1`] = `
 
 exports[`gux-button #render should render inline button 1`] = `
 <gux-button accent="inline">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-inline" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -134,7 +134,7 @@ exports[`gux-button #render should render inline button 1`] = `
 
 exports[`gux-button #render should render invalid button 1`] = `
 <gux-button accent="invalid">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-invalid" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -145,7 +145,7 @@ exports[`gux-button #render should render invalid button 1`] = `
 
 exports[`gux-button #render should render primary button 1`] = `
 <gux-button accent="primary">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-primary" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -156,7 +156,7 @@ exports[`gux-button #render should render primary button 1`] = `
 
 exports[`gux-button #render should render secondary button 1`] = `
 <gux-button accent="secondary">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-secondary" id="button-i" type="button">
       <slot></slot>
     </button>
@@ -167,7 +167,7 @@ exports[`gux-button #render should render secondary button 1`] = `
 
 exports[`gux-button #render should render tertiary button 1`] = `
 <gux-button accent="tertiary">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <button class="gux-tertiary" id="button-i" type="button">
       <slot></slot>
     </button>

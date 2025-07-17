@@ -2,7 +2,7 @@
 
 exports[`gux-toggle #render should render component as expected (1) 1`] = `
 <gux-toggle>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -23,7 +23,7 @@ exports[`gux-toggle #render should render component as expected (1) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (2) 1`] = `
 <gux-toggle checked="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -44,7 +44,7 @@ exports[`gux-toggle #render should render component as expected (2) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (3) 1`] = `
 <gux-toggle checked="" disabled="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-disabled gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -65,7 +65,7 @@ exports[`gux-toggle #render should render component as expected (3) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (4) 1`] = `
 <gux-toggle label="On">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -97,7 +97,7 @@ exports[`gux-toggle #render should render component as expected (4) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (5) 1`] = `
 <gux-toggle checked="" label="on">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -129,7 +129,7 @@ exports[`gux-toggle #render should render component as expected (5) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (6) 1`] = `
 <gux-toggle label="On" label-position="left">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container gux-toggle-label-left">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -161,7 +161,7 @@ exports[`gux-toggle #render should render component as expected (6) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (7) 1`] = `
 <gux-toggle checked="" label="on" label-position="right">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -193,7 +193,7 @@ exports[`gux-toggle #render should render component as expected (7) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (8) 1`] = `
 <gux-toggle label="This is a long label for the toggle to test how it works" label-position="left">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container gux-toggle-label-left">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -225,7 +225,7 @@ exports[`gux-toggle #render should render component as expected (8) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (9) 1`] = `
 <gux-toggle checked="" label="This is a long label for the toggle to test how it works" label-position="right">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -257,7 +257,7 @@ exports[`gux-toggle #render should render component as expected (9) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (10) 1`] = `
 <gux-toggle>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -278,7 +278,7 @@ exports[`gux-toggle #render should render component as expected (10) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (11) 1`] = `
 <gux-toggle checked="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -299,7 +299,7 @@ exports[`gux-toggle #render should render component as expected (11) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (12) 1`] = `
 <gux-toggle checked="" disabled="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-disabled gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -320,7 +320,7 @@ exports[`gux-toggle #render should render component as expected (12) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (13) 1`] = `
 <gux-toggle checked-label="On" unchecked-label="Off">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -358,7 +358,7 @@ exports[`gux-toggle #render should render component as expected (13) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (14) 1`] = `
 <gux-toggle checked="" checked-label="on" unchecked-label="off">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -396,7 +396,7 @@ exports[`gux-toggle #render should render component as expected (14) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (15) 1`] = `
 <gux-toggle checked-label="On" label-position="left" unchecked-label="Off">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container gux-toggle-label-left">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -434,7 +434,7 @@ exports[`gux-toggle #render should render component as expected (15) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (16) 1`] = `
 <gux-toggle checked="" checked-label="on" label-position="right" unchecked-label="off">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -472,7 +472,7 @@ exports[`gux-toggle #render should render component as expected (16) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (17) 1`] = `
 <gux-toggle checked-label="This is a long label for the toggle to test how it works" label-position="left" unchecked-label="This is another long label for the toggle to test how it works">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container gux-toggle-label-left">
       <div class="gux-toggle-input">
         <gux-toggle-slider>
@@ -510,7 +510,7 @@ exports[`gux-toggle #render should render component as expected (17) 1`] = `
 
 exports[`gux-toggle #render should render component as expected (18) 1`] = `
 <gux-toggle checked="" checked-label="This is a long label for the toggle to test how it works" label-position="right" unchecked-label="This is another long label for the toggle to test how it works">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-toggle-container">
       <div class="gux-toggle-input">
         <gux-toggle-slider>

@@ -13,7 +13,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </gux-avatar-overflow-beta>
   </template>
   <gux-avatar-group-item-beta name="Conor Darcy" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Conor Darcy" class="gux-accent-0 gux-avatar" tabindex="0" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -29,7 +29,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Elliot Fitzgerald" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Elliot Fitzgerald" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -45,7 +45,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Greg Hayes" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Greg Hayes" class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -61,7 +61,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Iseult Jones" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Iseult Jones" class="gux-accent-9 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -77,7 +77,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="John King" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="John King" class="gux-accent-8 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -93,7 +93,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Larissa Mendez" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Larissa Mendez" class="gux-accent-6 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -109,7 +109,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Nancy Omaha" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Nancy Omaha" class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -125,7 +125,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta hidden="" name="Paul Quinn" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Paul Quinn" class="gux-accent-9 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -141,7 +141,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta hidden="" name="Roisin Smyth" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Roisin Smyth" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -157,7 +157,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta hidden="" name="Thomas U." role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Thomas U." class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -173,7 +173,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta hidden="" name="Valerie Wall" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Valerie Wall" class="gux-accent-4 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -189,7 +189,7 @@ exports[`gux-avatar-group component with name type (1) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta hidden="" name="Xavier Yarrow" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Xavier Yarrow" class="gux-accent-3 gux-avatar gux-last-item" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -219,7 +219,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
       <gux-avatar-overflow-item-beta accent="auto" name="Xavier Yarrow"></gux-avatar-overflow-item-beta>
     </gux-avatar-overflow-beta>
     <gux-avatar-group-add-item-beta class="gux-add-item-overflow" role="menuitem">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button aria-label="Add more items to group" class="gux-avatar" tabindex="-1" type="button">
           <span aria-hidden="true">
             +
@@ -234,7 +234,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </gux-avatar-group-add-item-beta>
   </template>
   <gux-avatar-group-item-beta name="Conor Darcy" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Conor Darcy" class="gux-accent-0 gux-avatar" tabindex="0" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -250,7 +250,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Elliot Fitzgerald" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Elliot Fitzgerald" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -266,7 +266,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Greg Hayes" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Greg Hayes" class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -282,7 +282,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Iseult Jones" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Iseult Jones" class="gux-accent-9 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -298,7 +298,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="John King" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="John King" class="gux-accent-8 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -314,7 +314,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Larissa Mendez" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Larissa Mendez" class="gux-accent-6 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -330,7 +330,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta name="Nancy Omaha" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Nancy Omaha" class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -346,7 +346,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta hidden="" name="Paul Quinn" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Paul Quinn" class="gux-accent-9 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -362,7 +362,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta hidden="" name="Roisin Smyth" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Roisin Smyth" class="gux-accent-5 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -378,7 +378,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta hidden="" name="Thomas U." role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Thomas U." class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -394,7 +394,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta hidden="" name="Valerie Wall" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Valerie Wall" class="gux-accent-4 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -410,7 +410,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-item-beta hidden="" name="Xavier Yarrow" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Xavier Yarrow" class="gux-accent-3 gux-avatar" tabindex="-1" type="button">
         <slot name="image">
           <span aria-hidden="true" class="gux-avatar-initials">
@@ -426,7 +426,7 @@ exports[`gux-avatar-group component with name type (2) for valid markup 1`] = `
     </template>
   </gux-avatar-group-item-beta>
   <gux-avatar-group-add-item-beta hidden="" role="menuitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button aria-label="Add more items to group" class="gux-avatar" tabindex="-1" type="button">
         <span aria-hidden="true">
           +

@@ -31,7 +31,7 @@ exports[`gux-action-toast #render should render action toast 1`] = `
     This is the message
   </div>
   <gux-button slot="negative-button">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button class="gux-secondary" id="button-i" type="button">
         <slot></slot>
       </button>
@@ -39,7 +39,7 @@ exports[`gux-action-toast #render should render action toast 1`] = `
     Reject
   </gux-button>
   <gux-button accent="primary" slot="positive-button">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button class="gux-primary" id="button-i" type="button">
         <slot></slot>
       </button>
