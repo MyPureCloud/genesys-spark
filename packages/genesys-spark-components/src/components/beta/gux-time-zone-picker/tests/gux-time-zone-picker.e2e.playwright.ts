@@ -62,10 +62,10 @@ test.describe('gux-time-zone-picker-beta', () => {
     );
     await expect(visibleItems).toHaveCount(585);
 
-    await page.keyboard.press('e');
-    await page.keyboard.press('t');
-    await page.keyboard.press('c');
-    await page.keyboard.press('/');
+    await page.keyboard.type('e');
+    await page.keyboard.type('t');
+    await page.keyboard.type('c');
+    await page.keyboard.type('/');
 
     visibleItems = page.locator(
       'gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
