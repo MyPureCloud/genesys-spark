@@ -943,14 +943,14 @@
       },
       "default": {
         "background_color": "#1e1e21",
-        "foreground_color": "#829ce5"
+        "foreground_color": "#d5def7"
       },
       "hover": {
-        "background_color": "#465066",
+        "background_color": "#354a72",
         "foreground_color": "#d5def7"
       },
       "active": {
-        "background_color": "#354a72",
+        "background_color": "#1e1e21",
         "foreground_color": "#d5def7"
       }
     },
@@ -971,6 +971,9 @@
     },
     "focus": {
       "offset": "0"
+    },
+    "container": {
+      "background": "#475675"
     }
   },
   "form_footer": {
