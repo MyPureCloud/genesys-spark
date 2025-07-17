@@ -1,14 +1,13 @@
 import {
   checkRenders,
   expect,
-  E2EPage,
+  setContent,
   AxeExclusion,
   test
 } from '@test/playwrightTestUtils';
+import { renderConfig } from './gux-time-zone-picker.common';
 
-test.describe('gux-time-zone-picker', () => {
-  const html = `<gux-time-zone-picker-beta></gux-time-zone-picker-beta>`;
-
+test.describe('gux-time-zone-picker-beta', () => {
   const axeExclusions: AxeExclusion[] = [
     {
       issueId: 'target-size',
@@ -19,53 +18,61 @@ test.describe('gux-time-zone-picker', () => {
   ];
 
   checkRenders({
-    renderConfigs: [{ html: html }],
-    element: 'gux-time-zone-picker',
+    renderConfigs: [renderConfig],
+    element: 'gux-time-zone-picker-beta',
     axeExclusions
   });
 
-  async function unfilteredOptions(page: E2EPage) {
-    const element = page.getByTestId('dropdown');
-
-    return element.locator('gux-listbox gux-option:not(.gux-filtered)');
-  }
-
-  async function clickDropdownButton(page: E2EPage): Promise<void> {
+  async function clickDropdownButton(page): Promise<void> {
     // eslint-disable-next-line playwright/no-force-option
-    await page.getByTestId('dropdown-button').click({ force: true }); // https://github.com/microsoft/playwright/issues/13576
+    await page
+      .locator('[data-testid="dropdown-button"]')
+      .click({ force: true }); // https://github.com/microsoft/playwright/issues/13576
   }
 
   test('filters the list', async ({ page }) => {
+    const html =
+      '<gux-time-zone-picker-beta data-testid="test123"></gux-time-zone-picker-beta>';
+    await setContent(page, html);
+
     await clickDropdownButton(page);
-    let visibleItems = await unfilteredOptions(page);
-    expect(visibleItems.all.length).toBe(585);
+
+    await expect(
+      page.locator('gux-dropdown gux-listbox gux-option:not(.gux-filtered)')
+    ).toHaveCount(585);
 
     await page.keyboard.press('a');
     await page.keyboard.press('d');
     await page.keyboard.press('a');
     await page.keyboard.press('k');
 
-    await page.waitForChanges();
-    visibleItems = await unfilteredOptions(page);
-
-    expect(visibleItems.all.length).toBe(1);
+    await expect(
+      page.locator('gux-dropdown gux-listbox gux-option:not(.gux-filtered)')
+    ).toHaveCount(1);
   });
 
   test('includes generic zones', async ({ page }) => {
+    const html =
+      '<gux-time-zone-picker-beta data-testid="test123"></gux-time-zone-picker-beta>';
+    await setContent(page, html);
+
     await clickDropdownButton(page);
-    let visibleItems = await unfilteredOptions(page);
-    expect(visibleItems.all.length).toBe(585);
+    let visibleItems = page.locator(
+      'gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
+    );
+    await expect(visibleItems).toHaveCount(585);
 
     await page.keyboard.press('e');
     await page.keyboard.press('t');
     await page.keyboard.press('c');
     await page.keyboard.press('/');
 
-    await page.waitForChanges();
-    visibleItems = await unfilteredOptions(page);
+    visibleItems = page.locator(
+      'gux-dropdown gux-listbox gux-option:not(.gux-filtered)'
+    );
 
-    expect(visibleItems.all.length).toBe(29);
+    await expect(visibleItems).toHaveCount(29);
 
-    expect(visibleItems[0].textContent).toBe('Etc/GMT (UTC+00:00)');
+    await expect(visibleItems.first()).toContainText('Etc/GMT (UTC+00:00)');
   });
 });
