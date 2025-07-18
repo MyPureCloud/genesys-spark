@@ -803,6 +803,16 @@
             "description": "The color of the highlight of the text that matches a search query on a subsequent level."
           }
         }
+      },
+      "segment": {
+        "active": {
+          "value": "{theme.background.container.primary.20d}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{theme.background.container.primary.50d}",
+          "type": "color"
+        }
       }
     }
   },
@@ -1313,6 +1323,20 @@
           "value": "{theme.foreground.search.10}",
           "type": "color",
           "description": "The color for text that matches a search query."
+        }
+      },
+      "segment": {
+        "active": {
+          "value": "{theme.foreground.link.30d}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{theme.foreground.link.30d}",
+          "type": "color"
+        },
+        "default": {
+          "value": "{theme.foreground.link.30d}",
+          "type": "color"
         }
       }
     }

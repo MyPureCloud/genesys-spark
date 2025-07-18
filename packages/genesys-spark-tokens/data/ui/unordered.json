@@ -791,27 +791,27 @@
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.link.default}",
+          "value": "{foreground.form_control.segment.default}",
           "type": "color"
         }
       },
       "hover": {
         "background_color": {
-          "value": "{background.container.elevated.active}",
+          "value": "{background.form_control.segment.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.link.hover}",
+          "value": "{foreground.form_control.segment.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "{background.container.elevated.default}",
+          "value": "{background.form_control.segment.active}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.link.default}",
+          "value": "{foreground.form_control.segment.active}",
           "type": "color"
         }
       }
