@@ -27,7 +27,8 @@
   word-wrap: break-word;
   cursor: pointer;
   background-color: ui.$gse-ui-menu-selectAll-backgroundColor;
-  border-block-end: 1px solid global.$gse-semantic-border-container-divider;
+  border-block-end: global.$gse-semantic-container-divider-borderWidth solid
+    global.$gse-semantic-border-container-divider;
   box-shadow: ui.$gse-ui-menu-selectAll-scrolling-boxShadow;
 
   &.gux-active {
