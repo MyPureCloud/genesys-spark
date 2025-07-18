@@ -4,16 +4,12 @@ import {
   a11yCheck
 } from '../../../../../../test/e2eTestUtils';
 
+import { renderConfig } from './gux-avatar-overflow-item.common';
+
 describe('gux-avatar-overflow-item-beta', () => {
   describe('#render', () => {
-    it('renders with name', async () => {
-      const html = `
-      <div role="menu">
-        <gux-avatar-overflow-item-beta name="John Doe">
-        </gux-avatar-overflow-item-beta>
-        </div>
-      `;
-      const page = await newSparkE2EPage({ html });
+    it(renderConfig.description, async () => {
+      const page = await newSparkE2EPage({ html: renderConfig.html });
       const element = await page.find('gux-avatar-overflow-item-beta');
 
       await a11yCheck(page);
