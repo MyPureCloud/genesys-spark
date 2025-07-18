@@ -810,7 +810,7 @@
           "type": "color"
         },
         "hover": {
-          "value": "{theme.background.container.primary.50d}",
+          "value": "{theme.background.container.primary.60d}",
           "type": "color"
         }
       }
