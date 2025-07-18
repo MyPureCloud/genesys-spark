@@ -29,8 +29,7 @@ test.describe('gux-time-zone-picker-beta', () => {
   }
 
   test('filters the list', async ({ page }) => {
-    const html =
-      '<gux-time-zone-picker-beta data-testid="test123"></gux-time-zone-picker-beta>';
+    const html = '<gux-time-zone-picker-beta></gux-time-zone-picker-beta>';
     await setContent(page, html);
 
     await clickDropdownButton(page);
@@ -50,8 +49,7 @@ test.describe('gux-time-zone-picker-beta', () => {
   });
 
   test('includes generic zones', async ({ page }) => {
-    const html =
-      '<gux-time-zone-picker-beta data-testid="test123"></gux-time-zone-picker-beta>';
+    const html = '<gux-time-zone-picker-beta></gux-time-zone-picker-beta>';
     await setContent(page, html);
 
     await clickDropdownButton(page);
