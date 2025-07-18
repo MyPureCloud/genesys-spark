@@ -111,6 +111,10 @@
     "target_offset": {
       "value": "{container.lg.gap}",
       "type": "spacing"
+    },
+    "max_width": {
+      "value": "350px",
+      "type": "sizing"
     }
   },
   "tag": {

@@ -296,6 +296,7 @@
   --gse-ui-tooltip-text-fontSize: 12px;
   --gse-ui-tooltip-text-lineHeight: 18px;
   --gse-ui-tooltip-targetOffset: 16px;
+  --gse-ui-tooltip-maxWidth: 350px;
   --gse-ui-tag-borderRadius: 16px;
   --gse-ui-tag-default-bold-backgroundColor: #263b73;
   --gse-ui-tag-default-bold-foregroundColor: #ffffff;
@@ -2589,6 +2590,7 @@
   --gse-ui-tooltip-text-fontSize: 12px;
   --gse-ui-tooltip-text-lineHeight: 18px;
   --gse-ui-tooltip-targetOffset: 16px;
+  --gse-ui-tooltip-maxWidth: 350px;
   --gse-ui-tag-borderRadius: 16px;
   --gse-ui-tag-default-bold-backgroundColor: #3d538f;
   --gse-ui-tag-default-bold-foregroundColor: #ffffff;
