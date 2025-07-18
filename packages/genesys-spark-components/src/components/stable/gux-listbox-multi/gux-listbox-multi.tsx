@@ -41,7 +41,7 @@ import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
 
 /**
- * @slot - collection of gux-option-multi elements
+ * @slot - collection of gux-option-multi elements and gux-select-all element.
  */
 @Component({
   styleUrl: 'gux-listbox-multi.scss',
@@ -51,6 +51,7 @@ import { OnMutation } from '@utils/decorator/on-mutation';
 export class GuxListboxMulti {
   private i18n: GetI18nValue;
   private optionCreateElement: HTMLGuxCreateOptionElement;
+  private selectAllElement: HTMLGuxSelectAllElement;
 
   @Element()
   root: HTMLGuxListboxElement;
@@ -122,6 +123,8 @@ export class GuxListboxMulti {
           afterNextRender(() => {
             setInitialActiveOption(this.root);
           });
+        } else if (this.selectAllElement?.active) {
+          this.updateSelectAllState(true);
         } else {
           actOnActiveOption(this.root, value => this.updateValue(value));
         }
@@ -181,10 +184,12 @@ export class GuxListboxMulti {
           afterNextRender(() => {
             setInitialActiveOption(this.root);
           });
+        } else if (this.selectAllElement?.active) {
+          this.updateSelectAllState(true);
         } else {
           actOnActiveOption(this.root, value => this.updateValue(value));
+          return;
         }
-        return;
     }
   }
 
@@ -249,6 +254,10 @@ export class GuxListboxMulti {
 
   private getOptionCreateElement(): void {
     this.optionCreateElement = this.root.querySelector('gux-create-option');
+  }
+
+  private getSelectAllElement(): void {
+    this.selectAllElement = this.root.querySelector('gux-select-all');
   }
 
   // get list of listbox option elements
@@ -324,6 +333,7 @@ export class GuxListboxMulti {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
     this.setListboxOptions();
     this.getOptionCreateElement();
+    this.getSelectAllElement();
   }
 
   componentWillRender(): void {
@@ -379,7 +389,12 @@ export class GuxListboxMulti {
     }
 
     return (
-      <Host role="listbox" aria-multiselectable="true" tabindex={0}>
+      <Host
+        role="listbox"
+        aria-multiselectable="true"
+        tabindex={0}
+        class={{ 'has-select-all': !!this.selectAllElement }}
+      >
         <slot onSlotchange={() => this.updateOnSlotChange()} />
         {this.renderAllListboxOptionsFiltered()}
         {this.renderCreateOptionSlot()}
