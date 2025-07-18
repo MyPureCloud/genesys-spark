@@ -1,16 +1,16 @@
 import { newSpecPage } from '@test/specTestUtils';
-import { GuxChatInputBeta } from '../gux-chat-input-beta';
-import { renderConfigs } from './gux-chat-input-beta.e2e.common';
+import { GuxPromptInputBeta } from '../gux-prompt-input-beta';
+import { renderConfigs } from './gux-prompt-input-beta.e2e.common';
 
-const components = [GuxChatInputBeta];
+const components = [GuxPromptInputBeta];
 const language = 'en';
 
-describe('gux-chat-input-beta', () => {
+describe('gux-prompt-input-beta', () => {
   renderConfigs.forEach(({ description, html }) => {
     it(description, async () => {
       const page = await newSpecPage({ components, html, language });
 
-      expect(page.rootInstance).toBeInstanceOf(GuxChatInputBeta);
+      expect(page.rootInstance).toBeInstanceOf(GuxPromptInputBeta);
       expect(page.root).toMatchSnapshot();
     });
   });

@@ -1,4 +1,4 @@
-# gux-chat-input
+# gux-prompt-input
 
 
 <!-- Auto Generated Below -->
@@ -13,22 +13,9 @@
 
 ## Events
 
-| Event               | Description                                                                  | Type               |
-| ------------------- | ---------------------------------------------------------------------------- | ------------------ |
-| `onchatinputsubmit` | Triggers when the CTA button is clicked to initiate Copilot text generating. | `CustomEvent<any>` |
-
-
-## Methods
-
-### `guxReset() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
+| Event                 | Description                                                                  | Type                                  |
+| --------------------- | ---------------------------------------------------------------------------- | ------------------------------------- |
+| `onpromptinputsubmit` | Triggers when the CTA button is clicked to initiate Copilot text generating. | `CustomEvent<{ inputText: string; }>` |
 
 
 ## Slots
@@ -48,9 +35,9 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  gux-chat-input-beta --> gux-button-slot
-  gux-chat-input-beta --> gux-icon
-  style gux-chat-input-beta fill:#f9f,stroke:#333,stroke-width:4px
+  gux-prompt-input-beta --> gux-button-slot
+  gux-prompt-input-beta --> gux-icon
+  style gux-prompt-input-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

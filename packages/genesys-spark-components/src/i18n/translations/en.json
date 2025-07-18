@@ -37,9 +37,6 @@
     "previousMonth": "Previous month: {localizedPreviousMonthAndYear}",
     "nextMonth": "Next month: {localizedNextMonthAndYear}"
   },
-  "gux-chat-input": {
-    "inputPlaceholder": "Ask Genesys AI"
-  },
   "gux-column-manager": {
     "search": "Search",
     "searchResults": "search results",
@@ -725,6 +722,10 @@
     "unknownRegion": "Unknown Region",
     "regionDropdown": "Region Dropdown",
     "regionDropdownButton": "Region Dropdown Button"
+  },
+  "gux-prompt-input": {
+    "inputPlaceholder": "Ask Genesys AI",
+    "generateGenesysAIText": "Generate Genesys AI text"
   },
   "gux-radial-loading": {
     "loading": "Loading"

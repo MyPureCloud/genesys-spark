@@ -24,7 +24,6 @@
  - [gux-action-button](../gux-action-button)
  - [gux-blank-state](../gux-blank-state)
  - [gux-button-multi](../gux-button-multi)
- - [gux-chat-input-beta](../../beta/gux-chat-input)
  - [gux-context-menu](../gux-context-menu)
  - [gux-dismiss-button](../gux-dismiss-button)
  - [gux-file-list-item](../gux-form-field/components/gux-form-field-file-beta/components/gux-file-list-item)
@@ -32,6 +31,7 @@
  - [gux-pagination-buttons](../gux-pagination/gux-pagination-buttons)
  - [gux-pagination-buttons-legacy](../../legacy/gux-pagination-legacy/gux-pagination-buttons-legacy)
  - [gux-pagination-cursor](../gux-pagination-cursor)
+ - [gux-prompt-input-beta](../../beta/gux-prompt-input)
  - [gux-rich-text-editor-action](../../beta/gux-rich-text-editor/gux-rich-text-editor-action)
  - [gux-rich-text-editor-action-link](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
  - [gux-rich-text-editor-action-rich-style](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
@@ -50,7 +50,6 @@ graph TD;
   gux-action-button --> gux-button-slot
   gux-blank-state --> gux-button-slot
   gux-button-multi --> gux-button-slot
-  gux-chat-input-beta --> gux-button-slot
   gux-context-menu --> gux-button-slot
   gux-dismiss-button --> gux-button-slot
   gux-file-list-item --> gux-button-slot
@@ -58,6 +57,7 @@ graph TD;
   gux-pagination-buttons --> gux-button-slot
   gux-pagination-buttons-legacy --> gux-button-slot
   gux-pagination-cursor --> gux-button-slot
+  gux-prompt-input-beta --> gux-button-slot
   gux-rich-text-editor-action --> gux-button-slot
   gux-rich-text-editor-action-link --> gux-button-slot
   gux-rich-text-editor-action-rich-style --> gux-button-slot

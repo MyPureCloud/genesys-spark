@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-chat-input-beta should render component as expected 1`] = `
-<gux-chat-input-beta id="chat-input-example" placeholder="Ask Genesys AI">
+exports[`gux-prompt-input-beta should render component as expected 1`] = `
+<gux-prompt-input-beta placeholder="Ask Genesys AI">
   <template shadowrootmode="open">
     <div class="gux-input-container">
       <input class="gux-input" placeholder="Ask Genesys AI">
       <gux-button-slot accent="primary">
         <button class="gux-cta" disabled="" title="Generate Genesys AI text" type="button">
-          <gux-icon decorative="" icon-name="fa/arrow-up-from-line-regular" size="small"></gux-icon>
+          <gux-icon decorative="" icon-name="fa/arrow-up-regular" size="small"></gux-icon>
         </button>
       </gux-button-slot>
     </div>
@@ -18,5 +18,5 @@ exports[`gux-chat-input-beta should render component as expected 1`] = `
   <div slot="caution-message">
     Genesys AI may provide incorrect information. Double-check AI responses. Genesys AI privacy, terms and conditions
   </div>
-</gux-chat-input-beta>
+</gux-prompt-input-beta>
 `;

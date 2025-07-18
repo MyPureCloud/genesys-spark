@@ -7,7 +7,6 @@ import {
   Host,
   Event,
   EventEmitter,
-  Method,
   Prop,
   Listen
 } from '@stencil/core';
@@ -20,11 +19,11 @@ import translationResources from './i18n/en.json';
  * @slot caution-message - slot for caution message text
  */
 @Component({
-  styleUrl: 'gux-chat-input-beta.scss',
-  tag: 'gux-chat-input-beta',
+  styleUrl: 'gux-prompt-input-beta.scss',
+  tag: 'gux-prompt-input-beta',
   shadow: { delegatesFocus: true }
 })
-export class GuxChatInputBeta {
+export class GuxPromptInputBeta {
   @Element()
   private root: HTMLElement;
 
@@ -44,7 +43,7 @@ export class GuxChatInputBeta {
    * Triggers when the CTA button is clicked to initiate Copilot text generating.
    */
   @Event()
-  onchatinputsubmit: EventEmitter;
+  onpromptinputsubmit: EventEmitter<{ inputText: string }>;
 
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
@@ -59,25 +58,22 @@ export class GuxChatInputBeta {
     }
   }
 
-  @Method()
-  // eslint-disable-next-line @typescript-eslint/require-await
-  async guxReset(): Promise<void> {
-    this.inputElement.value = null;
-    this.isGenerating = false;
-  }
-
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
   }
 
   submit(): void {
+    if (this.isGenerating) {
+      return;
+    }
+
     this.isGenerating = true;
-    this.onchatinputsubmit.emit({ inputText: this.inputElement.value });
+    this.onpromptinputsubmit.emit({ inputText: this.inputElement.value });
   }
 
   keyUp(): void {
-    this.hasInputText = this.inputElement.value ? true : false;
+    this.hasInputText = this.inputElement.value?.length > 0;
   }
 
   renderCTA(): JSX.Element {
@@ -89,7 +85,11 @@ export class GuxChatInputBeta {
             class="gux-cta-generating"
             onClick={() => this.submit()}
           >
-            <gux-icon icon-name="fa/square-regular"></gux-icon>
+            <gux-icon
+              icon-name="fa/square-regular"
+              size="small"
+              decorative
+            ></gux-icon>
           </button>
         </gux-button-slot>
       );
@@ -102,10 +102,10 @@ export class GuxChatInputBeta {
           class={this.hasInputText ? 'gux-cta-active' : 'gux-cta'}
           onClick={() => this.submit()}
           disabled={!this.hasInputText}
-          title={this.i18n('cta')}
+          title={this.i18n('generateGenesysAIText')}
         >
           <gux-icon
-            icon-name="fa/arrow-up-from-line-regular"
+            icon-name="fa/arrow-up-regular"
             size="small"
             decorative
           ></gux-icon>
