@@ -603,7 +603,8 @@
       "fontSize": "12px",
       "lineHeight": "18px"
     },
-    "target_offset": "16px"
+    "target_offset": "16px",
+    "max_width": "350px"
   },
   "tag": {
     "border_radius": "16px",
