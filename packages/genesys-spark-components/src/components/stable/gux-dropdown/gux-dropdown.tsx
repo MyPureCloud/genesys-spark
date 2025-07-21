@@ -446,25 +446,7 @@ export class GuxDropdown {
   }
 
   private getOptionDefaultText(optionElement: HTMLGuxOptionElement) {
-    // TODO: use getOptionDefaultSlot(option)?.textContent.trim() once Stencil fix for assignedNodes test issue is in (v4.27.2) - COMUI-3655
-    let text = '';
-
-    optionElement.childNodes.forEach(node => {
-      // Only include text nodes or elements without slot="subtext"
-      const addTextContent = () => (text += node.textContent);
-
-      if (node.nodeType === Node.TEXT_NODE) {
-        addTextContent();
-      } else if (node.nodeType === Node.ELEMENT_NODE) {
-        const slot = (node as Element).hasAttribute('slot');
-        const slotValue = (node as Element).getAttribute('slot');
-        if (!slot || slotValue !== 'subtext') {
-          addTextContent();
-        }
-      }
-    });
-
-    return text.trim();
+    return getOptionDefaultSlot(optionElement)?.textContent.trim();
   }
 
   private renderOption(option: HTMLGuxOptionElement): JSX.Element {
