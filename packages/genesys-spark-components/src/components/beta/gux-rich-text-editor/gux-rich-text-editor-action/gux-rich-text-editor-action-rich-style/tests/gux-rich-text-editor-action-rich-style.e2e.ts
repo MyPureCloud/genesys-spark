@@ -3,7 +3,7 @@ import {
   newSparkE2EPage,
   a11yCheck
 } from '../../../../../../test/e2eTestUtils';
-import { renderConfigs } from './gux-rich-text-editor-action-text-highlight.common';
+import { renderConfigs } from './gux-rich-text-editor-action-rich-style.common';
 
 async function newNonrandomE2EPage({
   html
@@ -11,6 +11,7 @@ async function newNonrandomE2EPage({
   html: string;
 }): Promise<E2EPage> {
   const page = await newE2EPage();
+
   await page.evaluateOnNewDocument(() => {
     Math.random = () => 0.5;
   });
@@ -20,13 +21,13 @@ async function newNonrandomE2EPage({
   return page;
 }
 
-describe('gux-rich-text-editor-action-text-highlight', () => {
+describe('gux-rich-text-editor-action-rich-style', () => {
   describe('#render', () => {
     renderConfigs.forEach(({ html }, index) => {
       it(`should display component as expected (${index + 1})`, async () => {
         const page = await newNonrandomE2EPage({ html });
         const element = await page.find(
-          'gux-rich-text-editor-action-text-highlight'
+          'gux-rich-text-editor-action-rich-style'
         );
 
         expect(element.outerHTML).toMatchSnapshot();

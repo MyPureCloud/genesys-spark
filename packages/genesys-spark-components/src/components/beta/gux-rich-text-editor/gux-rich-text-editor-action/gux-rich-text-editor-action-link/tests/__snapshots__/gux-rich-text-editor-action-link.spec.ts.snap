@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-rich-text-editor-action-link should build and render 1`] = `
+exports[`gux-rich-text-editor-action-link #render should render component as expected (1) 1`] = `
 <gux-rich-text-editor-action-link>
   <template shadowrootmode="open">
     <gux-button-slot accent="ghost" icon-only="">
@@ -12,6 +12,42 @@ exports[`gux-rich-text-editor-action-link should build and render 1`] = `
           Link
         </div>
       </gux-tooltip-beta>
+    </gux-button-slot>
+    <gux-popover for="popover-target">
+      <div class="gux-popover-content-wrapper">
+        <gux-form-field-text-like>
+          <input id="textToDisplay" slot="input" type="text">
+          <label slot="label">
+            Text to display
+          </label>
+        </gux-form-field-text-like>
+        <gux-form-field-text-like>
+          <input slot="input" type="text">
+          <label slot="label">
+            Link Address
+          </label>
+        </gux-form-field-text-like>
+        <gux-cta-group align="end">
+          <gux-button slot="primary">
+            Insert
+          </gux-button>
+          <gux-button slot="dismiss">
+            Cancel
+          </gux-button>
+        </gux-cta-group>
+      </div>
+    </gux-popover>
+  </template>
+</gux-rich-text-editor-action-link>
+`;
+
+exports[`gux-rich-text-editor-action-link #render should render component as expected (2) 1`] = `
+<gux-rich-text-editor-action-link disabled="">
+  <template shadowrootmode="open">
+    <gux-button-slot accent="ghost" icon-only="">
+      <button aria-expanded="false" aria-haspopup="true" aria-label="Link" aria-pressed="false" disabled="" id="popover-target" type="button">
+        <gux-icon decorative="" icon-name="fa/link-simple-regular" size="small"></gux-icon>
+      </button>
     </gux-button-slot>
     <gux-popover for="popover-target">
       <div class="gux-popover-content-wrapper">

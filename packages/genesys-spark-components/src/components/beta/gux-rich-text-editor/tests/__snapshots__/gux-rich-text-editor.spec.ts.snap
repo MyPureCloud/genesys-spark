@@ -1,9 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-rich-text-editor should build and render 1`] = `
+exports[`gux-rich-text-editor #render should render component as expected (1) 1`] = `
 <gux-rich-text-editor-beta>
   <template shadowrootmode="open">
     <div class="gux-rich-text-editor-container">
+      <div class="gux-rich-text-editor-toolbar-container">
+        <div class="gux-typographical-emphasis-container">
+          <slot name="typographical-emphasis"></slot>
+        </div>
+        <div class="gux-text-styling-container">
+          <slot name="text-styling"></slot>
+        </div>
+        <div class="gux-lists-indentation-container">
+          <slot name="lists-indentation"></slot>
+        </div>
+        <div class="gux-inserting-container">
+          <slot name="inserting"></slot>
+        </div>
+        <div class="gux-global-action-container">
+          <slot name="global-action"></slot>
+        </div>
+      </div>
+      <slot name="editor"></slot>
+    </div>
+  </template>
+  <gux-rich-text-editor-action-group slot="typographical-emphasis">
+    <gux-rich-text-editor-action action="bold"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="italic"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="underline"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="strike"></gux-rich-text-editor-action>
+  </gux-rich-text-editor-action-group>
+  <gux-rich-text-editor-action-group slot="text-styling">
+    <gux-rich-text-editor-action action="clearFormatting"></gux-rich-text-editor-action>
+  </gux-rich-text-editor-action-group>
+  <gux-rich-text-editor-action-group slot="lists-indentation">
+    <gux-rich-text-editor-action action="bulletList"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="orderedList"></gux-rich-text-editor-action>
+  </gux-rich-text-editor-action-group>
+  <gux-rich-text-editor-action-group slot="inserting">
+    <gux-rich-text-editor-action action="codeblock"></gux-rich-text-editor-action>
+    <gux-rich-text-editor-action action="blockQuote"></gux-rich-text-editor-action>
+  </gux-rich-text-editor-action-group>
+  <gux-rich-text-editor-action action="delete" slot="global-action"></gux-rich-text-editor-action>
+  <div class="editorElement" slot="editor"></div>
+</gux-rich-text-editor-beta>
+`;
+
+exports[`gux-rich-text-editor #render should render component as expected (2) 1`] = `
+<gux-rich-text-editor-beta disabled="">
+  <template shadowrootmode="open">
+    <div class="gux-disabled gux-rich-text-editor-container">
       <div class="gux-rich-text-editor-toolbar-container">
         <div class="gux-typographical-emphasis-container">
           <slot name="typographical-emphasis"></slot>
