@@ -1105,57 +1105,58 @@
   "z_index": {
     "base": {
       "value": "{z_index.0}",
-      "type": "zindex"
+      "type": "zindex",
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "show-focus": {
       "value": "{z_index.1}",
       "type": "zindex",
-      "description": "The recommended z-index for focus outlines."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "sticky": {
       "value": "{z_index.1}",
       "type": "zindex",
-      "description": "The recommended z-index for sticky elements."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "popup": {
       "value": "{z_index.100}",
       "type": "zindex",
-      "description": "The recommended z-index for popup elements."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "popover": {
       "value": "{z_index.200}",
       "type": "zindex",
-      "description": "The recommended z-index for popover elements."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "tooltip": {
       "value": "{z_index.200}",
       "type": "zindex",
-      "description": "The recommended z-index for tooltips."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "panel": {
       "value": "{z_index.300}",
       "type": "zindex",
-      "description": "The recommended z-index for panel elements."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "navbar": {
       "value": "{z_index.400}",
       "type": "zindex",
-      "description": "The recommended z-index for navbars."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "sidebar": {
       "value": "{z_index.400}",
       "type": "zindex",
-      "description": "The recommended z-index for sidebars."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "toast": {
       "value": "{z_index.500}",
       "type": "zindex",
-      "description": "The recommended z-index for toasts."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     },
     "modal": {
       "value": "{z_index.600}",
       "type": "zindex",
-      "description": "The recommended z-index for modals."
+      "description": "[DEPRECATED] Please use the elevation group z-index tokens."
     }
   },
   "code": {
@@ -1170,6 +1171,248 @@
         "type": "typography",
         "description": "This typography token is recommended to be used only for code blocks."
       }
+    }
+  },
+  "shadow": {
+    "1_card": {
+      "default": {
+        "value": {
+          "x": "0",
+          "y": "2",
+          "blur": "3",
+          "spread": "1",
+          "color": "{effects.shadows.lightest}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "This is the shadow style we use in cards in the default state."
+      },
+      "hover": {
+        "value": {
+          "x": "0",
+          "y": "2",
+          "blur": "4",
+          "spread": "3",
+          "color": "{effects.shadows.middle}",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow",
+        "description": "This is the shadow style we use in cards in the hover state."
+      }
+    },
+    "2_side_panel": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.lighter}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "2",
+          "blur": "3",
+          "spread": "0",
+          "color": "{effects.shadows.middle}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Side Panels."
+    },
+    "4_copilot": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.lighter}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "2",
+          "blur": "3",
+          "spread": "0",
+          "color": "{effects.shadows.middle}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Side Panels."
+    },
+    "6_modal": {
+      "value": [
+        {
+          "x": "0",
+          "y": "2",
+          "blur": "4",
+          "spread": "3",
+          "color": "{effects.shadows.middle}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Modals."
+    },
+    "7_menu": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.middle}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.middle}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Floating Menus; like the dropdown or calendar menus."
+    },
+    "8_dragged_item": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "1",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in elements that are currently being dragged by the user."
+    },
+    "9_toast": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Toasts."
+    },
+    "10_tooltip": {
+      "value": [
+        {
+          "x": "0",
+          "y": "6",
+          "blur": "10",
+          "spread": "4",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        },
+        {
+          "x": "0",
+          "y": "0",
+          "blur": "2",
+          "spread": "0",
+          "color": "{effects.shadows.darker}",
+          "type": "dropShadow"
+        }
+      ],
+      "type": "boxShadow",
+      "description": "This is the shadow style we use in Tooltips."
+    },
+    "scroll_indicator": {
+      "value": {
+        "x": "0",
+        "y": "-4",
+        "blur": "14",
+        "spread": "4",
+        "color": "{effects.shadows.lighter}",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    }
+  },
+  "elevation": {
+    "0_page": {
+      "value": "{z_index.0}",
+      "type": "zindex",
+      "description": "The base token for elevation."
+    },
+    "1_card": {
+      "value": "{z_index.1}",
+      "type": "zindex",
+      "description": "The recommended z-index for cards."
+    },
+    "2_side_panel": {
+      "value": "{z_index.100}",
+      "type": "zindex",
+      "description": "The recommended z-index for side panels."
+    },
+    "3_global_navigation": {
+      "value": "{z_index.200}",
+      "type": "zindex",
+      "description": "The recommended z-index for global navigation."
+    },
+    "4_copilot": {
+      "value": "{z_index.300}",
+      "type": "zindex",
+      "description": "The recommended z-index for the copilot panel."
+    },
+    "5_shroud": {
+      "value": "{z_index.400}",
+      "type": "zindex",
+      "description": "The recommended z-index for shrouds."
+    },
+    "6_modal": {
+      "value": "{z_index.400}+1",
+      "type": "zindex",
+      "description": "The recommended z-index for modals."
+    },
+    "7_menu": {
+      "value": "{z_index.500}",
+      "type": "zindex",
+      "description": "The recommended z-index for menus, like dropdown menus or popovers."
+    },
+    "8_dragged_item": {
+      "value": "{z_index.600}",
+      "type": "zindex",
+      "description": "The recommended z-index for items that are currently being dragged by the user."
+    },
+    "9_toast": {
+      "value": "{z_index.700}",
+      "type": "zindex",
+      "description": "The recommended z-index for toasts."
+    },
+    "10_tooltip": {
+      "value": "{z_index.800}",
+      "type": "zindex",
+      "description": "The recommended z-index for tooltips."
     }
   }
 }

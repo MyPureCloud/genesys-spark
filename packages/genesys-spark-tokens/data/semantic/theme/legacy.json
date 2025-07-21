@@ -1196,6 +1196,140 @@
           "type": "color"
         }
       }
+    },
+    "effects": {
+      "box_shadow": {
+        "5": {
+          "value": "{color.genesys_navy.600}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".15",
+                "space": "srgb"
+              }
+            }
+          }
+        },
+        "10": {
+          "value": "{color.genesys_navy.600}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".20",
+                "space": "srgb"
+              }
+            }
+          }
+        },
+        "20": {
+          "value": "{color.genesys_navy.600}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".25",
+                "space": "srgb"
+              }
+            }
+          }
+        },
+        "30": {
+          "value": "{color.genesys_navy.600}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".3",
+                "space": "srgb"
+              }
+            }
+          }
+        },
+        "40": {
+          "value": "{color.genesys_navy.600}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".4",
+                "space": "srgb"
+              }
+            }
+          }
+        },
+        "5d": {
+          "value": "{color.black}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".36",
+                "space": "srgb"
+              }
+            }
+          }
+        },
+        "10d": {
+          "value": "{color.black}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".4",
+                "space": "srgb"
+              }
+            }
+          }
+        },
+        "20d": {
+          "value": "{color.black}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".5",
+                "space": "srgb"
+              }
+            }
+          }
+        },
+        "30d": {
+          "value": "{color.black}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".6",
+                "space": "srgb"
+              }
+            }
+          }
+        },
+        "40d": {
+          "value": "{color.black}",
+          "type": "color",
+          "$extensions": {
+            "studio.tokens": {
+              "modify": {
+                "type": "alpha",
+                "value": ".7",
+                "space": "srgb"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

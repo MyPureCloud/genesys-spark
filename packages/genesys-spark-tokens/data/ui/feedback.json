@@ -109,7 +109,7 @@
       "type": "borderRadius"
     },
     "box_shadow": {
-      "value": "{container.sm.box_shadow}",
+      "value": "{shadow.9_toast}",
       "type": "boxShadow"
     },
     "icon": {
@@ -195,7 +195,7 @@
       }
     },
     "box_shadow": {
-      "value": "{container.lg.box_shadow}",
+      "value": "{shadow.6_modal}",
       "type": "boxShadow"
     },
     "border_radius": {
@@ -225,7 +225,7 @@
       "type": "borderRadius"
     },
     "box_shadow": {
-      "value": "{container.lg.box_shadow}",
+      "value": "{shadow.7_menu}",
       "type": "boxShadow"
     },
     "close_button_color": {
