@@ -21,7 +21,7 @@
   "dependencies": {
     "genesys-spark": "file:../../packages/genesys-spark",
     "monaco-editor": "^0.52.2",
-    "parse5": "^7.3.0"
+    "parse5": "^8.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.28.0",
@@ -47,7 +47,7 @@
     "sass-loader": "^16.0.5",
     "semver": "^7.7.2",
     "style-loader": "^4.0.0",
-    "stylelint": "^16.21.1",
+    "stylelint": "^16.22.0",
     "stylelint-config-genesys-spark-components": "file:../../shared-configs/stylelint-config-genesys-spark-components",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^7.1.0",
