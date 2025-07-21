@@ -84,7 +84,7 @@
     "prettier": "^3.6.2",
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
-    "puppeteer": "24.11.0",
+    "puppeteer": "^24.14.0",
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-polyfill-node": "^0.13.0",
     "semver-sort": "^1.0.0",
@@ -106,6 +106,6 @@
   "collection": "dist/collection/collection-manifest.json",
   "prettier": "prettier-config-genesys-spark-components",
   "volta": {
-    "node": "22.14.0"
+    "node": "22.16.0"
   }
 }
