@@ -32,7 +32,7 @@
     "lint-staged.workspaces": "npm run lint-staged --workspaces --if-present",
     "new-tokens-data": "npm run lint && npm run build && npm run snapshot",
     "playground.angular": "run-pty playground.angular.json",
-    "playground.angular.start": "cd ./playground/angular-v13 && npm install && npm start",
+    "playground.angular.start": "cd ./playground/angular-v18 && npm install && npm start",
     "playground.ember": "run-pty playground.ember.json",
     "playground.ember.start": "cd ./playground/ember-3 && npm install && npm start",
     "playground.knockout": "run-pty playground.knockout.json",
