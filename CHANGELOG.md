@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.157.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.4...v4.157.5) (2025-07-22)
+
+
+### Bug Fixes
+
+* **button-multi:** open dropdown on enter and arrow key ([3e1af8a](https://github.com/MyPureCloud/genesys-spark/commit/3e1af8a8bc61754e269de8495ac7e89b9e028e59))
+
 ### [4.157.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.3...v4.157.4) (2025-07-18)
 
 ### [4.157.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.2...v4.157.3) (2025-07-17)
