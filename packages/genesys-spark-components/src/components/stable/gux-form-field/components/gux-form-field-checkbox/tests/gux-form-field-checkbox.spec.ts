@@ -1,6 +1,4 @@
-import { newSpecPage } from '@test/specTestUtils';
-
-import { checkRenders } from '@test/specTestUtils';
+import { checkRenders, newSpecPage } from '@test/specTestUtils';
 
 import { GuxFormFieldCheckbox } from '../gux-form-field-checkbox';
 

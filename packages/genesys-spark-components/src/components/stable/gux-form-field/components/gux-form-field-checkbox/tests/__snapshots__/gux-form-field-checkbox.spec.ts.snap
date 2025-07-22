@@ -3,7 +3,7 @@
 exports[`gux-form-field-checkbox #render should render component as expected (1) 1`] = `
 <gux-form-field-checkbox>
   <template shadowrootmode="open">
-    <div class="gux-form-field-container">
+    <div aria-disabled="false" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
           <slot name="input"></slot>
@@ -37,7 +37,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (1)
 exports[`gux-form-field-checkbox #render should render component as expected (2) 1`] = `
 <gux-form-field-checkbox class="gux-disabled">
   <template shadowrootmode="open">
-    <div class="gux-form-field-container">
+    <div aria-disabled="true" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
           <slot name="input"></slot>
@@ -71,7 +71,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (2)
 exports[`gux-form-field-checkbox #render should render component as expected (3) 1`] = `
 <gux-form-field-checkbox class="gux-input-error">
   <template shadowrootmode="open">
-    <div class="gux-form-field-container">
+    <div aria-disabled="false" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
           <slot name="input"></slot>
@@ -108,7 +108,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (3)
 exports[`gux-form-field-checkbox #render should render component as expected (4) 1`] = `
 <gux-form-field-checkbox>
   <template shadowrootmode="open">
-    <div class="gux-form-field-container">
+    <div aria-disabled="false" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
           <slot name="input"></slot>
@@ -142,7 +142,7 @@ exports[`gux-form-field-checkbox #render should render component as expected (4)
 exports[`gux-form-field-checkbox #render should render component as expected (5) 1`] = `
 <gux-form-field-checkbox>
   <template shadowrootmode="open">
-    <div class="gux-form-field-container">
+    <div aria-disabled="false" class="gux-form-field-container">
       <div class="gux-input-label">
         <div class="gux-input">
           <slot name="input"></slot>

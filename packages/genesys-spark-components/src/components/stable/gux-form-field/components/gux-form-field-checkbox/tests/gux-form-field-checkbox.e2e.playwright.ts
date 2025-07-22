@@ -5,20 +5,23 @@ import {
   test,
   expect
 } from '@test/playwrightTestUtils';
+
 import { renderConfigs } from './gux-form-field-checkbox.common';
+
+const axeExclusions = [
+  {
+    issueId: 'color-contrast',
+    exclusionReason:
+      'COMUI-XXXX: Element has insufficient color contrast of 3.89 (foreground color: #e84e6a, background color: #2a2a2e, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1'
+  }
+];
 
 test.describe('gux-form-field-checkbox', () => {
   test.describe('#render', () => {
     checkRenders({
       renderConfigs,
       element: 'gux-form-field-checkbox',
-      axeExclusions: [
-        {
-          issueId: 'color-contrast',
-          exclusionReason:
-            'COMUI-XXXX: Element has insufficient color contrast of 3.89 (foreground color: #e84e6a, background color: #2a2a2e, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1'
-        }
-      ]
+      axeExclusions
     });
   });
 
