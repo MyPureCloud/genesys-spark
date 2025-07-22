@@ -23,7 +23,7 @@ async function setMode(page: E2EPage, mode: Mode) {
   );
 }
 
-async function runAxe(page: E2EPage): Promise<AxeResults> {
+export async function runAxe(page: E2EPage): Promise<AxeResults> {
   return new AxeBuilder({ page })
     .withTags([
       'wcag2a',
