@@ -1523,7 +1523,7 @@
       }
     },
     "select-all": {
-      "padding": "12px 0px 0px 0px",
+      "padding": "12px",
       "gap": "8px",
       "label-container": {
         "padding": "2px 12px",
