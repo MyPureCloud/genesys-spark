@@ -430,7 +430,7 @@
       },
       "sunken": {
         "base": {
-          "value": "{theme.background.container.primary.55}",
+          "value": "{theme.background.container.primary.65}",
           "type": "color",
           "description": "background for segmented control"
         }
