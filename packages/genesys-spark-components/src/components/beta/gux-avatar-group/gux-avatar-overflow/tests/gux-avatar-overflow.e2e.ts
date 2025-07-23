@@ -3,21 +3,12 @@ import {
   newSparkE2EPage,
   waitForTimeout
 } from '../../../../../test/e2eTestUtils';
+import { renderConfig } from './gux-avatar-overflow.common';
 
 describe('gux-avatar-overflow', () => {
   describe('#render', () => {
-    it('should render component as expected', async () => {
-      const html = `
-      <gux-avatar-group-beta>
-        <gux-avatar-group-item-beta name="Valerie Wall"></gux-avatar-group-item-beta>
-        <gux-avatar-group-item-beta name="Xavier Yarrow"></gux-avatar-group-item-beta>
-        <gux-avatar-overflow-beta>
-          <gux-avatar-overflow-item-beta name="John Smith"></gux-avatar-overflow-item-beta>
-          <gux-avatar-overflow-item-beta name="Tom Smith"></gux-avatar-overflow-item-beta>
-          <gux-avatar-overflow-item-beta name="Mary Smith"></gux-avatar-overflow-item-beta>
-        </gux-avatar-overflow-beta>
-      <gux-avatar-group-beta>
-      `;
+    it(renderConfig.description, async () => {
+      const html = renderConfig.html;
       const page = await newSparkE2EPage({ html });
       const element = await page.find('gux-avatar-overflow-beta');
 
