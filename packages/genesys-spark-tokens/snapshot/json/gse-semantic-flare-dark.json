@@ -341,21 +341,21 @@
       },
       "error": {
         "high_emphasis": "#ffffff",
-        "accent": "#e84e6a"
+        "accent": "#ee7a8f"
       },
       "icon": {
         "default": "#b2b7c4"
       },
       "indicators": {
         "positive": "#09b581",
-        "negative": "#e84e6a",
+        "negative": "#ee7a8f",
         "neutral": "#c1c6d4"
       }
     },
     "form_control": {
       "help_text": {
         "default": "#c1c6d4",
-        "error": "#e84e6a"
+        "error": "#ee7a8f"
       },
       "text_input": {
         "placeholder": "#c1c6d4",
@@ -367,11 +367,11 @@
         "selected": "#5476d5",
         "hover": "#829ce5",
         "active": "#adbff0",
-        "error": "#e84e6a"
+        "error": "#ee7a8f"
       },
       "label": {
         "default": "#ffffff",
-        "required_accent": "#e84e6a",
+        "required_accent": "#ee7a8f",
         "optional_accent": "#b2b7c4",
         "tooltip": "#b2b7c4"
       },
@@ -590,7 +590,7 @@
     },
     "sparkline": {
       "mono": "#5476d5",
-      "negative": "#e84e6a",
+      "negative": "#ee7a8f",
       "positive": "#09b581",
       "neutral": "#808db2",
       "trendline": "#6a6d75"

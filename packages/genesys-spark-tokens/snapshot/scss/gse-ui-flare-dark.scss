@@ -63,7 +63,7 @@
   --gse-ui-formControl-label-indicator-text-fontWeight: 400;
   --gse-ui-formControl-label-indicator-text-fontSize: 12px;
   --gse-ui-formControl-label-indicator-text-lineHeight: 18px;
-  --gse-ui-formControl-label-indicator-requiredColor: #e84e6a;
+  --gse-ui-formControl-label-indicator-requiredColor: #ee7a8f;
   --gse-ui-formControl-label-indicator-optionalColor: #b2b7c4;
   --gse-ui-formControl-label-iconSize: 16px;
   --gse-ui-formControl-label-tooltipTrigger-color: #b2b7c4;
@@ -80,7 +80,7 @@
   --gse-ui-formControl-helper-paddingSmall: 4px 0 0 0;
   --gse-ui-formControl-helper-errorPadding: 4px 0 0 0;
   --gse-ui-formControl-helper-defaultColor: #c1c6d4;
-  --gse-ui-formControl-helper-errorColor: #e84e6a;
+  --gse-ui-formControl-helper-errorColor: #ee7a8f;
   --gse-ui-formControl-helper-iconSize: 16px;
   --gse-ui-formControl-spinButton-gap: 8px;
   --gse-ui-formControl-spinner-track: #5476d5;
@@ -408,7 +408,7 @@
   --gse-ui-alert-warning-border-style: solid;
   --gse-ui-alert-error-backgroundColor: #2d070e;
   --gse-ui-alert-error-foregroundColor: #ffffff;
-  --gse-ui-alert-error-iconColor: #e84e6a;
+  --gse-ui-alert-error-iconColor: #ee7a8f;
   --gse-ui-alert-error-border-color: #5a0e1c;
   --gse-ui-alert-error-border-width: 1px;
   --gse-ui-alert-error-border-style: solid;
@@ -479,7 +479,7 @@
   --gse-ui-formFooter-border-color: #5476d5;
   --gse-ui-formFooter-border-width: 1px;
   --gse-ui-formFooter-border-style: solid;
-  --gse-ui-statusGlyph-negative: #e84e6a;
+  --gse-ui-statusGlyph-negative: #ee7a8f;
   --gse-ui-statusGlyph-positive: #09b581;
   --gse-ui-statusGlyph-neutral: #f8c73e;
   --gse-ui-statusGlyph-information: #596ea6;
@@ -496,7 +496,7 @@
   --gse-ui-copyToClipboard-contentContainer-gap: 4px;
   --gse-ui-copyToClipboard-iconContainer-padding: 4px;
   --gse-ui-copyToClipboard-tooltipIcon-success-foregroundColor: #09b581;
-  --gse-ui-copyToClipboard-tooltipIcon-error-foregroundColor: #e84e6a;
+  --gse-ui-copyToClipboard-tooltipIcon-error-foregroundColor: #ee7a8f;
   --gse-ui-dismissButton-foregroundColor: #b2b7c4;
   --gse-ui-button-default-height: 32px;
   --gse-ui-button-default-padding: 0 12px;
@@ -623,7 +623,7 @@
   --gse-ui-radioButton-icon-default-selectedForegroundColor: #5476d5;
   --gse-ui-radioButton-icon-hover-foregroundColor: #829ce5;
   --gse-ui-radioButton-icon-active-foregroundColor: #adbff0;
-  --gse-ui-radioButton-icon-error-foregroundColor: #e84e6a;
+  --gse-ui-radioButton-icon-error-foregroundColor: #ee7a8f;
   --gse-ui-radioButton-icon-height: 16px;
   --gse-ui-radioButton-icon-width: 16px;
   --gse-ui-radioButton-label-foregroundColor: #ffffff;
@@ -644,7 +644,7 @@
   --gse-ui-checkbox-icon-default-selectedForegroundColor: #5476d5;
   --gse-ui-checkbox-icon-hover-foregroundColor: #829ce5;
   --gse-ui-checkbox-icon-active-foregroundColor: #adbff0;
-  --gse-ui-checkbox-icon-error-foregroundColor: #e84e6a;
+  --gse-ui-checkbox-icon-error-foregroundColor: #ee7a8f;
   --gse-ui-checkbox-icon-height: 16px;
   --gse-ui-checkbox-icon-width: 16px;
   --gse-ui-checkbox-label-foregroundColor: #ffffff;
@@ -785,7 +785,7 @@
   --gse-ui-toggle-track-disabled-off-backgroundColor: #848891;
   --gse-ui-toggle-track-disabled-on-backgroundColor: #5476d5;
   --gse-ui-toggle-track-error-off-backgroundColor: #440a15;
-  --gse-ui-toggle-track-error-on-backgroundColor: #e84e6a;
+  --gse-ui-toggle-track-error-on-backgroundColor: #ee7a8f;
   --gse-ui-toggle-track-hover-off-backgroundColor: #465066;
   --gse-ui-toggle-track-hover-on-backgroundColor: #829ce5;
   --gse-ui-toggle-track-borderRadius: 16px;
@@ -837,7 +837,7 @@
   --gse-ui-fileUpload-fileCard-fileName-text-fontSize: 12px;
   --gse-ui-fileUpload-fileCard-fileName-text-lineHeight: 18px;
   --gse-ui-fileUpload-fileCard-fileName-default: #ffffff;
-  --gse-ui-fileUpload-fileCard-error-errorMessage: #e84e6a;
+  --gse-ui-fileUpload-fileCard-error-errorMessage: #ee7a8f;
   --gse-ui-fileUpload-fileCard-error-errorHelper: #c1c6d4;
   --gse-ui-fileUpload-fileCard-error-text-fontFamily: 'Noto Sans';
   --gse-ui-fileUpload-fileCard-error-text-fontWeight: 400;
@@ -857,7 +857,7 @@
   --gse-ui-fileUpload-fileCard-mainContainer-error-border-style: solid;
   --gse-ui-fileUpload-fileCard-boxShadow: 0 0 4px 1px #000000b3;
   --gse-ui-fileUpload-fileCard-statusIcon-success: #09b581;
-  --gse-ui-fileUpload-fileCard-statusIcon-error: #e84e6a;
+  --gse-ui-fileUpload-fileCard-statusIcon-error: #ee7a8f;
   --gse-ui-fileUpload-fileCard-foregroundColor: #1e1e21;
   --gse-ui-fileUpload-dropZone-borderRadius: 4px;
   --gse-ui-fileUpload-labelHelper-gap: 4px;
@@ -876,7 +876,7 @@
   --gse-ui-fileUpload-dragAndDrop-dropZone-background-active: #465066;
   --gse-ui-fileUpload-dragAndDrop-dropZoneText-color: #ffffff;
   --gse-ui-fileUpload-dragDrop-btnText-gap: 12px;
-  --gse-ui-colorPicker-label-requiredSymbolColor: #e84e6a;
+  --gse-ui-colorPicker-label-requiredSymbolColor: #ee7a8f;
   --gse-ui-colorPicker-label-textColor: #ffffff;
   --gse-ui-colorPicker-label-text-fontFamily: 'Noto Sans';
   --gse-ui-colorPicker-label-text-fontWeight: 400;
@@ -955,7 +955,7 @@
   --gse-ui-selectorCard-active-backgroundColor: #475675;
   --gse-ui-selectorCard-active-selectedIndicator-foregroundColor: #adbff0;
   --gse-ui-selectorCard-error-backgroundColor: #440a15;
-  --gse-ui-selectorCard-error-selectedIndicator-foregroundColor: #e84e6a;
+  --gse-ui-selectorCard-error-selectedIndicator-foregroundColor: #ee7a8f;
   --gse-ui-selectorCard-error-border-color: #881429;
   --gse-ui-selectorCard-error-border-width: 1px;
   --gse-ui-selectorCard-error-border-style: solid;
@@ -1002,13 +1002,13 @@
   --gse-ui-stepper-icon-width: 16px;
   --gse-ui-stepper-icon-completed-selectedForegroundColor: #ffffff;
   --gse-ui-stepper-icon-active-foregroundColor: #ffffff;
-  --gse-ui-stepper-icon-error-foregroundColor: #e84e6a;
+  --gse-ui-stepper-icon-error-foregroundColor: #ee7a8f;
   --gse-ui-stepper-icon-incompleted-foregroundColor: #cad1e1;
   --gse-ui-stepper-bar-horizontal-height: 3px;
   --gse-ui-stepper-bar-vertical-width: 3px;
   --gse-ui-stepper-bar-completed-selectedForegroundColor: #ffffff;
   --gse-ui-stepper-bar-active-foregroundColor: #ffffff;
-  --gse-ui-stepper-bar-error-foregroundColor: #e84e6a;
+  --gse-ui-stepper-bar-error-foregroundColor: #ee7a8f;
   --gse-ui-stepper-bar-incompleted-foregroundColor: #c1c6d4;
   --gse-ui-stepper-step-horizontal-minWidth: 128px;
   --gse-ui-stepper-step-horizontal-body-marginRight: 16px;
@@ -1525,7 +1525,7 @@
   --gse-ui-toast-action-iconColor: #2143a2;
   --gse-ui-toast-error-backgroundColor: #2a2a2e;
   --gse-ui-toast-error-foregroundColor: #ffffff;
-  --gse-ui-toast-error-iconColor: #e84e6a;
+  --gse-ui-toast-error-iconColor: #ee7a8f;
   --gse-ui-toast-heading-fontFamily: Urbanist;
   --gse-ui-toast-heading-fontWeight: 700;
   --gse-ui-toast-heading-fontSize: 16px;
@@ -1981,7 +1981,7 @@
   --gse-ui-charts-gaugeChart-segment-track: #3e4044;
   --gse-ui-charts-gaugeChart-segment-chartMessage: #3e4044;
   --gse-ui-charts-gaugeChart-indicator-positive: #09b581;
-  --gse-ui-charts-gaugeChart-indicator-negative: #e84e6a;
+  --gse-ui-charts-gaugeChart-indicator-negative: #ee7a8f;
   --gse-ui-charts-heatmap-numericalTile-level1-default: #e6f4fa;
   --gse-ui-charts-heatmap-numericalTile-level1-reduced: #e6f4fa40;
   --gse-ui-charts-heatmap-numericalTile-level10-default: #003447;
@@ -2171,8 +2171,8 @@
   --gse-ui-charts-sparkline-mono-reduced: #5476d566;
   --gse-ui-charts-sparkline-positive-reduced: #09b58166;
   --gse-ui-charts-sparkline-positive-default: #09b581;
-  --gse-ui-charts-sparkline-negative-reduced: #e84e6a66;
-  --gse-ui-charts-sparkline-negative-default: #e84e6a;
+  --gse-ui-charts-sparkline-negative-reduced: #ee7a8f66;
+  --gse-ui-charts-sparkline-negative-default: #ee7a8f;
   --gse-ui-charts-sparkline-neutral-reduced: #808db266;
   --gse-ui-charts-sparkline-neutral-default: #808db2;
   --gse-ui-charts-sparkline-trendline-default: #6a6d75;
@@ -2183,7 +2183,7 @@
   --gse-ui-charts-chartsShared-chartHeader-spacingBottom: 24px;
   --gse-ui-charts-chartsShared-chartMessages-message-default: #ffffff;
   --gse-ui-charts-chartsShared-chartMessages-empty-icon-default: #f8c73e;
-  --gse-ui-charts-chartsShared-chartMessages-error-icon-default: #e84e6a;
+  --gse-ui-charts-chartsShared-chartMessages-error-icon-default: #ee7a8f;
   --gse-ui-charts-chartsShared-chartMessages-loading-icon-default: #5476d5;
   --gse-ui-charts-chartsShared-chartMessages-loading-icon-track: #465066;
   --gse-ui-charts-chartsShared-chartMessages-icon-spacingBottom: 4px;

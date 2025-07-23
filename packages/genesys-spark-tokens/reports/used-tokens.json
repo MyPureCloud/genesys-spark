@@ -1237,6 +1237,7 @@
   "--gse-ui-tooltip-light-border-style",
   "--gse-ui-tooltip-light-border-width",
   "--gse-ui-tooltip-light-foregroundColor",
+  "--gse-ui-tooltip-maxWidth",
   "--gse-ui-tooltip-padding",
   "--gse-ui-tooltip-text-fontFamily",
   "--gse-ui-tooltip-text-fontSize",

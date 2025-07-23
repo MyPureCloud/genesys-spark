@@ -327,7 +327,7 @@
         },
         "error": {
           "10": "#b51b37",
-          "10d": "#e84e6a"
+          "10d": "#ee7a8f"
         }
       },
       "special_accents": {
@@ -619,7 +619,7 @@
         "mono": "#2143a2",
         "monod": "#5476d5",
         "negative": "#b51b37",
-        "negatived": "#e84e6a",
+        "negatived": "#ee7a8f",
         "positive": "#056d4d",
         "positived": "#09b581",
         "neutral": "#9faac6",
