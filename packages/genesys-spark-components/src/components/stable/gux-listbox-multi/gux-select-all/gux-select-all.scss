@@ -15,9 +15,9 @@
   align-content: stretch;
   align-items: center;
   min-block-size: ui.$gse-ui-menu-option-height;
-  padding-block: 14px;
+  padding-block: 14px; // Token required in progress.
   padding-block-end: ui.$gse-ui-menu-selectAll-gap;
-  padding-inline: 12px; //  ui.$gse-ui-menu-selectAll-labelContainer-padding; <- token needs updated to not be 2px x 12px;
+  padding-inline: ui.$gse-ui-menu-selectAll-padding;
   font-family: ui.$gse-ui-dropdown-menu-selectAll-labelText-fontFamily;
   font-size: ui.$gse-ui-dropdown-menu-selectAll-labelText-fontSize;
   font-weight: ui.$gse-ui-dropdown-menu-selectAll-labelText-fontWeight;
