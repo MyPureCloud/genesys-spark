@@ -34,20 +34,18 @@ describe('gux-form-field-checkbox-group-beta', () => {
   describe('#render', () => {
     renderConfigs.forEach(({ html }, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newNonrandomE2EPage({ html });
-        const element = await page.find('gux-form-field-checkbox');
+        const snapshotPage = await newNonrandomE2EPage({ html });
+        const element = await snapshotPage.find('gux-form-field-checkbox');
         const elementShadowDom = await element.find(
           'pierce/.gux-form-field-container'
         );
 
         expect(element.outerHTML).toMatchSnapshot();
         expect(elementShadowDom).toMatchSnapshot();
-      });
 
-      it(`should be accessible (${index + 1})`, async () => {
-        const page = await newSparkE2EPage({ html });
+        const accessibilityPage = await newSparkE2EPage({ html });
 
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(accessibilityPage, axeExclusions);
       });
     });
   });

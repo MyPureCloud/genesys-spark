@@ -72,6 +72,7 @@ export const config: Config = {
     ]
   },
   testing: {
+    verbose: false,
     browserArgs: ['--no-sandbox'],
     moduleDirectories: ['node_modules', 'src'],
     moduleNameMapper: {
