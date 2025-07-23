@@ -814,7 +814,7 @@
           "type": "color"
         },
         "hover": {
-          "value": "{theme.background.container.primary.50}",
+          "value": "{theme.background.container.primary.65}",
           "type": "color"
         }
       }

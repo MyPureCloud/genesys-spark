@@ -54,6 +54,11 @@
           "60": {
             "value": "{color_legacy.grey.60}",
             "type": "color"
+          },
+          "65": {
+            "value": "{color.haze.200}",
+            "type": "color",
+            "description": "Hover background colour for segmented control legacy theme."
           }
         },
         "secondary": {
