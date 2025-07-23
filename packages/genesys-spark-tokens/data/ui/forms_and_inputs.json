@@ -447,7 +447,7 @@
     },
     "select-all": {
       "padding": {
-        "value": "{interactive.lg.padding} 0px 0px 0px",
+        "value": "{interactive.lg.padding}",
         "type": "spacing"
       },
       "gap": {
