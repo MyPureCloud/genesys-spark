@@ -1040,6 +1040,7 @@ export type GuxIconIconName =
   | 'fa/square-poll-vertical-regular'
   | 'fa/square-regular'
   | 'fa/square-rss-solid'
+  | 'fa/square-solid'
   | 'fa/square-x-regular'
   | 'fa/stamp-regular'
   | 'fa/star-regular'
