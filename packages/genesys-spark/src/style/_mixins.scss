@@ -28,8 +28,8 @@
 @mixin gux-sr-only-clip {
   &:not(:focus):not(:active) {
     position: absolute;
-    width: 0;
-    height: 0;
+    width: 1px;
+    height: 1px;
     overflow: hidden;
     white-space: nowrap;
     clip: rect(0 0 0 0);
