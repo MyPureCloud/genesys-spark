@@ -26,7 +26,8 @@
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "test.ci": "npm run build && npm run tsc && npm run test",
-    "tsc": "tsc -p tsconfig.json"
+    "tsc": "tsc -p tsconfig.json",
+    "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "types": "dist/src/index.d.ts",
   "dependencies": {
