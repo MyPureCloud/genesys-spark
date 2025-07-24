@@ -181,6 +181,9 @@ export class GuxDropdown {
   @Listen('focusin')
   onFocusin(event: FocusEvent): void {
     this.stopPropagationOfInternalFocusEvents(event);
+    if (this.isFilterable()) {
+      this.filterElement.focus();
+    }
   }
 
   @OnClickOutside({ triggerEvents: 'mousedown' })
@@ -215,7 +218,6 @@ export class GuxDropdown {
     if (this.listboxElement) {
       afterNextRender(() => {
         this.listboxElement.focus();
-
         if (this.isFilterable() && this.filterElement) {
           this.filterElement.focus();
         }
