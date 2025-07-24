@@ -57,8 +57,7 @@
           },
           "65": {
             "value": "{color.haze.200}",
-            "type": "color",
-            "description": "Hover background colour for segmented control legacy theme."
+            "type": "color"
           }
         },
         "secondary": {
