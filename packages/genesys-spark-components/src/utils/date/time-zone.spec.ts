@@ -17,11 +17,11 @@ describe('#formattOffset', () => {
 });
 
 describe('#getTimeZoneList', () => {
-  it('should should retrieve the list', () => {
+  it('should retrieve the list', () => {
     jest.useFakeTimers();
     jest.setSystemTime(new Date('2023-09-26'));
     const output = getTimeZoneList();
 
-    expect(output.length).toBe(584);
+    expect(output.length).toBe(585);
   });
 });

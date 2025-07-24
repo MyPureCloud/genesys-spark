@@ -9,30 +9,6 @@ deploy:
       schedule: always
       sequence: parallel
       type: environment
-    - name: test
-      schedule: always
-      type: habitat
-    - filters:
-        family: webui
-      name: test
-      schedule: always
-      sequence: parallel
-      type: environment
-    - name: prod
-      schedule: off_hours
-      type: habitat
-    - filters:
-        family: webui
-      name: prod
-      schedule: off_hours
-      sequence: parallel
-      type: environment
-    - name: fedramp-use2-core
-      schedule: off_hours
-      type: habitat
-    - name: fedramp-use2-webui
-      schedule: off_hours
-      type: habitat
   path:
     - name: dev
       schedule: always

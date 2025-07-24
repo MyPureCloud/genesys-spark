@@ -115,9 +115,28 @@
   }
 
   &.gux-toast-action {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: ui.$gse-ui-icon-medium-size 1fr ui.$gse-ui-button-dismiss-medium-width;
     background-color: ui.$gse-ui-toast-action-backgroundColor;
 
+    .gux-content {
+      grid-row: 1 / 2;
+      grid-column: 2 / 4;
+    }
+
+    .gux-icon {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+    }
+
+    gux-dismiss-button {
+      grid-row: 1 / 2;
+      grid-column: 3 / 4;
+    }
+
     .gux-message {
+      inline-size: ui.$gse-ui-toast-messageWidth;
       color: ui.$gse-ui-toast-action-foregroundColor;
     }
   }

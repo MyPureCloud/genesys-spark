@@ -7,6 +7,10 @@
     display: inline-flex;
     flex: 1 0 auto;
 
+    ::slotted(label) {
+      min-inline-size: 0;
+    }
+
     ::slotted(gux-label-info-beta) {
       padding-inline-start: ui.$gse-ui-formControl-formField-gap;
     }

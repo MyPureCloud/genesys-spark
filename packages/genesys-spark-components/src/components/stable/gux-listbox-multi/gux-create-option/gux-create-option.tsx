@@ -71,6 +71,9 @@ export class GuxCreateOption {
     this.root.id = this.root.id || randomHTMLId('gux-option-multi');
   }
 
+  // COMUI-3905: Without this method the dropdown multi's add option button triggers an infinite loop when it is hidden adter being displayed.
+  async componentWillRender(): Promise<void> {}
+
   renderCustomOptionInstructions(): JSX.Element {
     return (
       <span class="gux-screenreader">

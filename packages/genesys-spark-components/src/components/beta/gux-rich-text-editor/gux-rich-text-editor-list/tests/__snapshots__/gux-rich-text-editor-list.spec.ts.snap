@@ -2,7 +2,7 @@
 
 exports[`gux-rich-text-editor-list should build and render 1`] = `
 <gux-rich-text-editor-list role="list">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <slot></slot>
   </template>
   <gux-rich-style-list-item value="heading-1">

@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-flyout-menu #render should render as expected 1`] = `
+exports[`gux-flyout-menu #render Should render as expected menu with submenus 1`] = `
 <gux-flyout-menu aria-haspopup="true" tabindex="0">
   <template shadowrootmode="open">
+    <gux-announce-beta></gux-announce-beta>
     <span>
       <slot name="target"></slot>
     </span>
@@ -16,7 +17,7 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
   <span slot="target">
     Example Target Element
   </span>
-  <gux-menu role="menu" slot="menu">
+  <gux-menu id="target-menu" role="menu" slot="menu">
     <template shadowrootmode="open">
       <slot></slot>
     </template>
@@ -54,7 +55,7 @@ exports[`gux-flyout-menu #render should render as expected 1`] = `
         </template>
         Option One
       </gux-menu-option>
-      <gux-submenu label="Submenu Two">
+      <gux-submenu id="submenu-two" label="Submenu Two">
         <template shadowrootmode="open">
           <button aria-expanded="false" aria-haspopup="true" class="gux-submenu-button" role="menuitem" tabindex="-1" type="button">
             <span class="gux-submenu-button-text">

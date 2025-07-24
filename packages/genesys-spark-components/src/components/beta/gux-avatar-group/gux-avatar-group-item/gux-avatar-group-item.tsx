@@ -35,7 +35,7 @@ export class GuxAvatarGroupItem {
    * Names without blank space will show first 2 characters of string.
    */
   @Prop()
-  name: string;
+  name!: string;
 
   /**
    * Manually sets avatar accent

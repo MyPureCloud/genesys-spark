@@ -1,19 +1,10 @@
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
+import { renderConfig } from './gux-popover.common';
 
 describe('gux-popover-beta', () => {
-  it('renders', async () => {
+  it(renderConfig.description, async () => {
     const page = await newSparkE2EPage({
-      html: `
-      <div lang="en">
-        <div id="popover-target">
-          Example Element
-        </div>
-        <gux-popover-beta position="top" for="popover-target">
-          <span slot="title">Title</span>
-          <div>popover content</div>
-        </gux-popover-beta>
-      </div>
-      `
+      html: renderConfig.html
     });
 
     const element = await page.find('gux-popover-beta');
@@ -37,7 +28,8 @@ describe('gux-popover-beta', () => {
 
     const component = await page.find('gux-popover-beta');
     const guxdismiss = await component.spyOnEvent('guxdismiss');
-    const button = await page.find('pierce/gux-dismiss-button');
+    const dismissButton = await page.find('pierce/gux-dismiss-button');
+    const button = await dismissButton.find('pierce/button');
     await button.click();
     expect(guxdismiss).toHaveReceivedEvent();
   });

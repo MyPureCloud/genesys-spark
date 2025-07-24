@@ -6,7 +6,7 @@
   z-index: global.$gse-semantic-zIndex-tooltip;
   display: none;
   inline-size: max-content;
-  max-inline-size: 250px;
+  max-inline-size: ui.$gse-ui-tooltip-maxWidth;
   border-radius: ui.$gse-ui-tooltip-borderRadius;
   box-shadow: ui.$gse-ui-tooltip-boxShadow;
   opacity: 0;

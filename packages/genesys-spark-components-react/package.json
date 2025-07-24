@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components-react",
-  "version": "4.155.0",
+  "version": "4.158.0",
   "description": "",
   "license": "MIT",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
   "dependencies": {
-    "genesys-spark-components": "^4.154.6"
+    "genesys-spark-components": "^4.157.3"
   },
   "peerDependencies": {
     "@types/react": "16 - 19",
@@ -29,12 +29,12 @@
   "devDependencies": {
     "@types/react": "17.0.76",
     "@types/react-dom": "^17.0.26",
-    "eslint": "^9.29.0",
+    "eslint": "^9.31.0",
     "eslint-config-genesys-spark-components": "file:../../shared-configs/eslint-config-genesys-spark-components",
-    "globals": "^16.2.0",
+    "globals": "^16.3.0",
     "lint-staged": "^16.1.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.6.0",
+    "prettier": "^3.6.2",
     "prettier-config-genesys-spark-components": "file:../../shared-configs/prettier-config-genesys-spark-components",
     "prettier-package-json": "^2.8.0",
     "react": "^17.0.2",

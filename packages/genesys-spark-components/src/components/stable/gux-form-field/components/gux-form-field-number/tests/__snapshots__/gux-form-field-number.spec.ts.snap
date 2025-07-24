@@ -2,7 +2,7 @@
 
 exports[`gux-form-field-number #render clearable should render component as expected (1) 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -46,7 +46,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
 
 exports[`gux-form-field-number #render clearable should render component as expected (2) 1`] = `
 <gux-form-field-number clearable="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -91,7 +91,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
 
 exports[`gux-form-field-number #render clearable should render component as expected (3) 1`] = `
 <gux-form-field-number clearable="true">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -136,7 +136,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
 
 exports[`gux-form-field-number #render clearable should render component as expected (4) 1`] = `
 <gux-form-field-number clearable="false">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -180,7 +180,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
 
 exports[`gux-form-field-number #render clearable should render component as expected (5) 1`] = `
 <gux-form-field-number clearable="">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -224,7 +224,7 @@ exports[`gux-form-field-number #render clearable should render component as expe
 
 exports[`gux-form-field-number #render error should render component as expected 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -271,7 +271,7 @@ exports[`gux-form-field-number #render error should render component as expected
 
 exports[`gux-form-field-number #render help should render component as expected 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -318,7 +318,7 @@ exports[`gux-form-field-number #render help should render component as expected 
 
 exports[`gux-form-field-number #render indicator marks should render component as expected (1) 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -362,7 +362,7 @@ exports[`gux-form-field-number #render indicator marks should render component a
 
 exports[`gux-form-field-number #render indicator marks should render component as expected (2) 1`] = `
 <gux-form-field-number indicator-mark="optional">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -406,7 +406,7 @@ exports[`gux-form-field-number #render indicator marks should render component a
 
 exports[`gux-form-field-number #render indicator marks should render component as expected (3) 1`] = `
 <gux-form-field-number indicator-mark="required">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -450,7 +450,7 @@ exports[`gux-form-field-number #render indicator marks should render component a
 
 exports[`gux-form-field-number #render input attributes should render component as expected (1) 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -494,7 +494,7 @@ exports[`gux-form-field-number #render input attributes should render component 
 
 exports[`gux-form-field-number #render input attributes should render component as expected (2) 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -538,7 +538,7 @@ exports[`gux-form-field-number #render input attributes should render component 
 
 exports[`gux-form-field-number #render input attributes should render component as expected (3) 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label gux-required">
         <slot name="label"></slot>
@@ -582,7 +582,7 @@ exports[`gux-form-field-number #render input attributes should render component 
 
 exports[`gux-form-field-number #render label-info should render component as expected 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -631,7 +631,7 @@ exports[`gux-form-field-number #render label-info should render component as exp
 
 exports[`gux-form-field-number #render label-position should render component as expected (1) 1`] = `
 <gux-form-field-number>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -675,7 +675,7 @@ exports[`gux-form-field-number #render label-position should render component as
 
 exports[`gux-form-field-number #render label-position should render component as expected (2) 1`] = `
 <gux-form-field-number label-position="above">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
@@ -719,7 +719,7 @@ exports[`gux-form-field-number #render label-position should render component as
 
 exports[`gux-form-field-number #render label-position should render component as expected (3) 1`] = `
 <gux-form-field-number label-position="beside">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-beside gux-form-field-container">
       <div class="gux-beside gux-form-field-label">
         <slot name="label"></slot>
@@ -763,7 +763,7 @@ exports[`gux-form-field-number #render label-position should render component as
 
 exports[`gux-form-field-number #render label-position should render component as expected (4) 1`] = `
 <gux-form-field-number label-position="screenreader">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-form-field-container gux-screenreader">
       <div class="gux-form-field-label gux-screenreader">
         <slot name="label"></slot>

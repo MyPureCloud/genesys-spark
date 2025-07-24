@@ -13,8 +13,8 @@ export async function bootstrap() {
   ]);
 
   const components = Object.values(componentSpecs)
-    .filter(component => component.example)
-    .sort((a, b) => a.tag.localeCompare(b.tag));
+    .filter(component => component.example || !component.tag.includes('gux-'))
+    .sort((a, b) => shortName(a.tag).localeCompare(shortName(b.tag)));
 
   document.body.appendChild(
     toHTML(`

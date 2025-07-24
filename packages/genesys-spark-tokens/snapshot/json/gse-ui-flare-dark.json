@@ -603,7 +603,8 @@
       "fontSize": "12px",
       "lineHeight": "18px"
     },
-    "target_offset": "16px"
+    "target_offset": "16px",
+    "max_width": "350px"
   },
   "tag": {
     "border_radius": "16px",
@@ -1373,7 +1374,6 @@
   },
   "menu": {
     "option": {
-      "padding": "8px 12px",
       "gap": "8px",
       "height": "32px",
       "start_icon": {
@@ -1468,6 +1468,10 @@
       },
       "default": {
         "background_color": "#2a2a2e"
+      },
+      "padding": "0px 12px",
+      "subtext": {
+        "padding": "8px 12px"
       }
     },
     "max_height": "344px",
@@ -1517,6 +1521,33 @@
       "subtext": {
         "foreground_color": "#b2b7c4"
       }
+    },
+    "select-all": {
+      "padding": "12px",
+      "gap": "8px",
+      "label-container": {
+        "padding": "2px 12px",
+        "gap": "8px"
+      },
+      "label": {
+        "gap": "4px",
+        "foreground_color": "#ffffff"
+      },
+      "background_color": "#2a2a2e",
+      "divider": {
+        "default": "#4f5157",
+        "adjacent_selected": "#4f5157"
+      },
+      "scrolling": {
+        "box_shadow": {
+          "blur": "8px",
+          "spread": "1px",
+          "color": "rgba(35, 57, 92, 0.15)",
+          "type": "dropShadow",
+          "offsetX": "0",
+          "offsetY": "0"
+        }
+      }
     }
   },
   "dropdown": {
@@ -1539,6 +1570,20 @@
             "fontSize": "12px"
           },
           "foreground_color": "#b2b7c4"
+        }
+      },
+      "select-all": {
+        "label_text": {
+          "fontFamily": "'Noto Sans'",
+          "fontWeight": "400",
+          "fontSize": "12px",
+          "lineHeight": "18px"
+        },
+        "counter_text": {
+          "fontFamily": "'Noto Sans'",
+          "fontWeight": "600",
+          "fontSize": "12px",
+          "lineHeight": "18px"
         }
       }
     },
@@ -2206,7 +2251,105 @@
       "fontWeight": "600",
       "fontSize": "12px",
       "lineHeight": "18px"
+    },
+    "shortened": {
+      "gap": "8px",
+      "edit": {
+        "gap": "4px"
+      }
     }
+  },
+  "prompt_input": {
+    "simple": {
+      "padding": "12px 16px",
+      "gap": "16px",
+      "label": {
+        "max_height": "200px",
+        "min_height": "32px"
+      }
+    },
+    "complex": {
+      "padding": "16px",
+      "gap": "16px",
+      "lower_container": {
+        "left_aligned": {
+          "gap": "4px"
+        },
+        "right_aligned": {
+          "gap": "16px"
+        }
+      },
+      "label": {
+        "max_height": "160px"
+      },
+      "file_container": {
+        "gap": "8px"
+      }
+    },
+    "border": {
+      "default": "#3e4044",
+      "hover": "#19327a",
+      "active": "#ffffff"
+    },
+    "background": "#2a2a2e",
+    "focus": "#5476d5",
+    "border_radius": "4px",
+    "focus_container": {
+      "border": {
+        "color": "#5476d5",
+        "width": "2px",
+        "style": "solid"
+      }
+    },
+    "label": {
+      "placeholder": "#c1c6d4",
+      "populated": "#ffffff",
+      "text": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "400",
+        "fontSize": "14px",
+        "lineHeight": "20px"
+      }
+    },
+    "divider": "#4f5157",
+    "caution_message": {
+      "default": "#b2b7c4",
+      "text": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "400",
+        "fontSize": "10px",
+        "lineHeight": "14px"
+      },
+      "link": {
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "600",
+        "fontSize": "10px",
+        "lineHeight": "14px",
+        "textDecoration": "underline"
+      }
+    },
+    "default": {
+      "border": {
+        "color": "#3e4044",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "hover": {
+      "border": {
+        "color": "#19327a",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "active": {
+      "border": {
+        "color": "#ffffff",
+        "width": "1px",
+        "style": "solid"
+      }
+    },
+    "gap": "12px"
   },
   "search": {
     "counter": {
@@ -3098,7 +3241,8 @@
     "wrapping_width": "320px",
     "stacking": {
       "gap": "4px"
-    }
+    },
+    "message_width": "220px"
   },
   "modal": {
     "close_button_color": "#b2b7c4",

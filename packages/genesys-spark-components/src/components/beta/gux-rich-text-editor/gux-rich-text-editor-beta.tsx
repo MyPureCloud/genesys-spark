@@ -76,10 +76,10 @@ export class GuxRichTextEditor {
   async componentWillLoad(): Promise<void> {
     trackComponent(this.root);
     this.i18n = await buildI18nForComponent(this.root, translationResources);
+    this.hasToolbar = this.hasToolbarChildren();
   }
 
   componentDidLoad(): void {
-    this.hasToolbar = this.hasToolbarChildren();
     // This timeout is required to calculate the correct size of the containers when the component loads. By including a timeout of 1 second the containers calculate correctly.
     afterNextRenderTimeout(() => {
       this.checkResponsiveLayout();

@@ -15,6 +15,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import { setAccent, setActionsIconOnlyProp } from './gux-table-toolbar.service';
 import { getSlot } from '@utils/dom/get-slot';
 import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
+import { logWarn } from '@utils/error/log-error';
 
 /**
  * @slot search-and-filter - Slot for search and filter.
@@ -91,7 +92,8 @@ export class GuxTableToolbar {
     // Permanent actions will be located in the menu actions if the previous display layout was condensed.
     return (
       getSlot(this.root, 'permanent-actions') ||
-      getSlot(this.menuActionSlot as HTMLElement, 'permanent-actions')
+      (this.menuActionSlot &&
+        getSlot(this.menuActionSlot as HTMLElement, 'permanent-actions'))
     );
   }
 
@@ -215,9 +217,20 @@ export class GuxTableToolbar {
     setAccent(this.menuActionsItems, 'ghost');
   }
 
+  private validateSlot(slotName: string): void {
+    const slottedElement = this.root.querySelector(`[slot=${slotName}]`);
+    if (!slottedElement) {
+      logWarn(this.root, `gux-table-toolbar requires a ${slotName} slot`);
+    }
+  }
+
   componentWillRender(): void {
     trackComponent(this.root);
     this.hasContextDivider = this.needsContextDivider();
+  }
+
+  componentWillLoad(): void {
+    this.validateSlot('menu-actions');
   }
 
   componentDidLoad(): void {

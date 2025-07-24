@@ -13,6 +13,10 @@
   border-block-end: ui.$gse-ui-dataTableItems-header-selectedBar-height solid
     transparent;
 
+  &.gux-active {
+    border-block-end-color: ui.$gse-ui-dataTableItems-header-selectedIndicatorColor;
+  }
+
   &:focus-within {
     border-block-end-color: ui.$gse-ui-dataTableItems-header-selectedIndicatorColor;
   }

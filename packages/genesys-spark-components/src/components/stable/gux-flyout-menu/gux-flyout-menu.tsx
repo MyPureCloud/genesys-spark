@@ -12,6 +12,8 @@ import { afterNextRenderTimeout } from '@utils/dom/after-next-render';
 import { trackComponent } from '@utils/tracking/usage';
 
 import { HTMLGuxMenuItemElement, hideDelay } from './gux-menu/gux-menu.common';
+import translationResources from './i18n/en.json';
+import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 
 /**
  * @slot target - target element
@@ -28,7 +30,9 @@ export class GuxFlyoutMenu {
   private targetElement: HTMLSpanElement;
   private arrowElement: HTMLDivElement;
   private menuContentElement: HTMLDivElement;
+  private announceElement: HTMLGuxAnnounceBetaElement;
   private cleanupUpdatePosition: ReturnType<typeof autoUpdate>;
+  i18n: GetI18nValue;
 
   @Element()
   private root: HTMLElement;
@@ -99,6 +103,10 @@ export class GuxFlyoutMenu {
 
   @Listen('focusin')
   onFocusin() {
+    if (!this.isShown) {
+      void this.announceElement.guxAnnounce(this.i18n('onTargetFocus'));
+    }
+
     this.show();
   }
 
@@ -143,8 +151,8 @@ export class GuxFlyoutMenu {
   }
 
   private updatePosition(): void {
-    // This is 13 because this makes the arrow look aligned
-    const arrowLen = 13;
+    // This is 12 because this makes the arrow look aligned
+    const arrowLen = 12;
 
     if (this.root) {
       void computePosition(this.targetElement, this.menuContentElement, {
@@ -202,6 +210,10 @@ export class GuxFlyoutMenu {
       return;
     }
 
+    this.hideDelayTimeout = afterNextRenderTimeout(() => {
+      void this.announceElement.guxAnnounce(this.i18n('onMenuFocus'));
+    });
+
     const menu = this.root.querySelector('gux-menu');
     const menuItems = Array.from(menu.children);
     const nextFocusableElement = menuItems[0] as HTMLGuxMenuItemElement;
@@ -209,8 +221,9 @@ export class GuxFlyoutMenu {
     void nextFocusableElement.guxFocus();
   }
 
-  componentWillLoad(): void {
+  async componentWillLoad() {
     trackComponent(this.root);
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
   }
 
   componentDidLoad(): void {
@@ -236,6 +249,10 @@ export class GuxFlyoutMenu {
   render(): JSX.Element {
     return (
       <Host tabIndex={0} aria-haspopup="true">
+        <gux-announce-beta
+          ref={el => (this.announceElement = el)}
+        ></gux-announce-beta>
+
         <span ref={el => (this.targetElement = el)}>
           <slot name="target" />
         </span>

@@ -760,7 +760,7 @@ export class GuxDatepicker {
   renderCalendar(): JSX.Element {
     return (
       <gux-calendar
-        tabIndex={-1}
+        tabindex="-1"
         ref={(el: HTMLGuxCalendarElement) => (this.calendarElement = el)}
         value={this.value}
         mode={this.mode}

@@ -283,7 +283,7 @@ export class GuxMonthCalendar {
             })}
           </gux-screen-reader-beta>
         </button>
-        <div>{this.getYearLabel(this.year)}</div>
+        <div data-testid="year-label">{this.getYearLabel(this.year)}</div>
         <button
           type="button"
           class="gux-year-change"

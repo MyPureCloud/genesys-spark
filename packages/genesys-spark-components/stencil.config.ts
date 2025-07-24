@@ -56,10 +56,13 @@ export const config: Config = {
     after: [
       copy({
         targets: [
-          { src: 'build/i18n', dest: 'dist/genesys-webcomponents' },
+          {
+            src: 'build/i18n',
+            dest: ['dist/genesys-webcomponents', 'public/build']
+          },
           {
             src: 'build/style/*',
-            dest: 'dist/genesys-webcomponents',
+            dest: ['dist/genesys-webcomponents', 'public/build'],
             rename: (name, extension) =>
               `/genesys-webcomponents-${name}.${extension}`
           }
@@ -69,18 +72,19 @@ export const config: Config = {
     ]
   },
   testing: {
+    verbose: false,
     browserArgs: ['--no-sandbox'],
     moduleDirectories: ['node_modules', 'src'],
     moduleNameMapper: {
       '@utils/(.*)': '<rootDir>/src/utils/$1'
     },
-    browserHeadless: true,
+    browserHeadless: 'shell',
     collectCoverage: true,
     coverageDirectory: 'build/test-reports/coverage',
     coverageReporters: ['json', 'lcov', 'clover'],
     setupFilesAfterEnv: [
-      '<rootDir>/src/test/setupTests.js',
-      '<rootDir>/src/test/setupAxeTests.js'
+      '<rootDir>/src/test/setupTests.ts',
+      '<rootDir>/src/test/setupAxeTests.ts'
     ],
     reporters: [
       testConsoleReporter,

@@ -2,6 +2,117 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.158.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.6...v4.158.0) (2025-07-24)
+
+
+### Features
+
+* **icon:** Adding square-solid icon ([#1252](https://github.com/MyPureCloud/genesys-spark/issues/1252)) ([fec9d05](https://github.com/MyPureCloud/genesys-spark/commit/fec9d05623ff854e9ae54c656a14c6c69999944a))
+
+
+### Bug Fixes
+
+* **dropdown:** Show drop-shadow in dropdowns ([#1260](https://github.com/MyPureCloud/genesys-spark/issues/1260)) ([297dcc5](https://github.com/MyPureCloud/genesys-spark/commit/297dcc5e9d49ed1ffc8138f3eea057c8a53a9a46))
+* **phone-input-beta:** drop-shadow and playwright test ([#1257](https://github.com/MyPureCloud/genesys-spark/issues/1257)) ([4f13f32](https://github.com/MyPureCloud/genesys-spark/commit/4f13f32889ead1491b73b01e1b4ff2ba09f86da6))
+* **tooltip:** update max-width of tooltips to 350px ([70987fa](https://github.com/MyPureCloud/genesys-spark/commit/70987fa5a0fbe1338dc9eb0bce2cabf0d06e37c5))
+
+### [4.157.6](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.5...v4.157.6) (2025-07-23)
+
+### [4.157.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.4...v4.157.5) (2025-07-22)
+
+
+### Bug Fixes
+
+* **button-multi:** open dropdown on enter and arrow key ([3e1af8a](https://github.com/MyPureCloud/genesys-spark/commit/3e1af8a8bc61754e269de8495ac7e89b9e028e59))
+
+### [4.157.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.3...v4.157.4) (2025-07-18)
+
+### [4.157.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.2...v4.157.3) (2025-07-17)
+
+
+### Bug Fixes
+
+* **context-menu:** fix cropped outline ([#1239](https://github.com/MyPureCloud/genesys-spark/issues/1239)) ([f675e49](https://github.com/MyPureCloud/genesys-spark/commit/f675e491f8fc6e86c74c1da41f419a5b0d46afae))
+* **form-field:** Improve consistency with visual label ([#1231](https://github.com/MyPureCloud/genesys-spark/issues/1231)) ([7588c28](https://github.com/MyPureCloud/genesys-spark/commit/7588c28e36b25c5880b54c94e48ce004d3edbcf6))
+
+### [4.157.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.1...v4.157.2) (2025-07-15)
+
+### [4.157.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.0...v4.157.1) (2025-07-12)
+
+
+### Bug Fixes
+
+* **copy-to-clipboard:** button not clickable via keyboard in nvda ([ca7d139](https://github.com/MyPureCloud/genesys-spark/commit/ca7d1398f4a5bacc38bc70a73e60fa3eead64cd0))
+* **popover-beta:** add method to focus popover ([1c20368](https://github.com/MyPureCloud/genesys-spark/commit/1c203685734ca88b4e4b70d058a68c086a3715af))
+
+## [4.157.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.8...v4.157.0) (2025-07-10)
+
+
+### Features
+
+* **toast:** Alignment change for action toast ([#1214](https://github.com/MyPureCloud/genesys-spark/issues/1214)) ([1629221](https://github.com/MyPureCloud/genesys-spark/commit/16292216e5a6b352e0f640ed3b3769dd28ce8c5d))
+
+
+### Bug Fixes
+
+* **table-toolbar:** Add warning for menu-actions slot ([#1222](https://github.com/MyPureCloud/genesys-spark/issues/1222)) ([3896947](https://github.com/MyPureCloud/genesys-spark/commit/389694793c9f656032cc19f6c6fa03f2f07e6d0b))
+* **time-picker:** Match icon focus ring to Figma ([#1226](https://github.com/MyPureCloud/genesys-spark/issues/1226)) ([4df8515](https://github.com/MyPureCloud/genesys-spark/commit/4df851560ac510f38bb93bfec26cc185ad99c8b1))
+
+### [4.156.8](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.7...v4.156.8) (2025-07-09)
+
+### [4.156.7](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.6...v4.156.7) (2025-07-08)
+
+
+### Bug Fixes
+
+* **copy-to-clipboard:** Add longer error message ([#1219](https://github.com/MyPureCloud/genesys-spark/issues/1219)) ([f4060fd](https://github.com/MyPureCloud/genesys-spark/commit/f4060fd66c7eb5cc42eb084a04226e88c161ae03))
+
+### [4.156.6](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.5...v4.156.6) (2025-07-05)
+
+
+### Bug Fixes
+
+* **month-picker-beta:** add data-testid to year label ([4babffd](https://github.com/MyPureCloud/genesys-spark/commit/4babffdc6ee3db8b725f3307950ea3648238d1fe))
+
+### [4.156.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.4...v4.156.5) (2025-07-04)
+
+
+### Bug Fixes
+
+* **badge:** Update screenreader text when text altered by JS ([#1212](https://github.com/MyPureCloud/genesys-spark/issues/1212)) ([11e7764](https://github.com/MyPureCloud/genesys-spark/commit/11e77648bb512dd8a0e0459343916ee7295467d1))
+
+### [4.156.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.3...v4.156.4) (2025-07-03)
+
+
+### Bug Fixes
+
+* **table:** active header for sorting now applying border color ([ca6a6d4](https://github.com/MyPureCloud/genesys-spark/commit/ca6a6d40eac29f0e7df53746bf9662628adc8d74))
+
+### [4.156.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.2...v4.156.3) (2025-07-02)
+
+
+### Bug Fixes
+
+* **dropdown:** Exclude subtext from selected option ([#1124](https://github.com/MyPureCloud/genesys-spark/issues/1124)) ([42dae9f](https://github.com/MyPureCloud/genesys-spark/commit/42dae9f3591ae5cb16c0ace8bcfeebe688ce4059))
+
+### [4.156.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.1...v4.156.2) (2025-07-01)
+
+### [4.156.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.156.0...v4.156.1) (2025-06-28)
+
+## [4.156.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.155.1...v4.156.0) (2025-06-27)
+
+
+### Features
+
+* **other:** update stenciljs to v4.35.1 ([07e1889](https://github.com/MyPureCloud/genesys-spark/commit/07e1889e404255eb8c5f8a4b80557172e6ae18a8))
+
+
+### Bug Fixes
+
+* **accordion:** fixed duplicate headers in Voiceover ([aa2a0cc](https://github.com/MyPureCloud/genesys-spark/commit/aa2a0cca2ecbc6433a12e4cb5e6e17514ed82ec8))
+
+### [4.155.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.155.0...v4.155.1) (2025-06-25)
+
 ## [4.155.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.154.7...v4.155.0) (2025-06-24)
 
 

@@ -133,6 +133,11 @@ export class GuxPopover {
     this.dismiss();
   }
 
+  @Method()
+  async guxFocusPopover(): Promise<void> {
+    this.focusPopup();
+  }
+
   get titleSlot(): Element | null {
     return getSlot(this.root, 'title');
   }

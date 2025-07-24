@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-checkbox-beta #render should render component as expected (1) 1`] = `
+exports[`gux-form-field-checkbox-group-beta #render should render component as expected (1) 1`] = `
 <gux-form-field-checkbox-group-beta>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -39,7 +39,7 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
 </gux-form-field-checkbox-group-beta>
 `;
 
-exports[`gux-form-field-checkbox-beta #render should render component as expected (2) 1`] = `
+exports[`gux-form-field-checkbox-group-beta #render should render component as expected (2) 1`] = `
 <gux-form-field-checkbox-group-beta>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -96,7 +96,7 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
 </gux-form-field-checkbox-group-beta>
 `;
 
-exports[`gux-form-field-checkbox-beta #render should render component as expected (3) 1`] = `
+exports[`gux-form-field-checkbox-group-beta #render should render component as expected (3) 1`] = `
 <gux-form-field-checkbox-group-beta>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -162,7 +162,7 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
 </gux-form-field-checkbox-group-beta>
 `;
 
-exports[`gux-form-field-checkbox-beta #render should render component as expected (4) 1`] = `
+exports[`gux-form-field-checkbox-group-beta #render should render component as expected (4) 1`] = `
 <gux-form-field-checkbox-group-beta disabled="">
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -225,7 +225,7 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
 </gux-form-field-checkbox-group-beta>
 `;
 
-exports[`gux-form-field-checkbox-beta #render should render component as expected (5) 1`] = `
+exports[`gux-form-field-checkbox-group-beta #render should render component as expected (5) 1`] = `
 <gux-form-field-checkbox-group-beta required="">
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -264,7 +264,7 @@ exports[`gux-form-field-checkbox-beta #render should render component as expecte
 </gux-form-field-checkbox-group-beta>
 `;
 
-exports[`gux-form-field-checkbox-beta #render should render component as expected (6) 1`] = `
+exports[`gux-form-field-checkbox-group-beta #render should render component as expected (6) 1`] = `
 <gux-form-field-checkbox-group-beta indicator-mark="optional">
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">

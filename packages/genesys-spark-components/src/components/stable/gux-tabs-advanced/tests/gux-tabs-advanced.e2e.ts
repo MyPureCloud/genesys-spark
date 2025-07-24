@@ -16,7 +16,7 @@ const axeExclusions = [
     issueId: 'aria-required-children',
     target: '.gux-tablist',
     exclusionReason:
-      'To be addressed in COMUI-2392. New violation picked up after upgrading from axe-core v4.4.2 to v4.8.2'
+      'Error: Element has children which are not allowed: [role=list] - this is caused because the popover-list has role=list on it which causes a violation since the top parent element has role=tablist'
   }
 ];
 

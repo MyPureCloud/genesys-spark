@@ -1172,6 +1172,7 @@
   "--gse-ui-toast-info-foregroundColor",
   "--gse-ui-toast-info-iconColor",
   "--gse-ui-toast-margin",
+  "--gse-ui-toast-messageWidth",
   "--gse-ui-toast-stacking-gap",
   "--gse-ui-toast-success-backgroundColor",
   "--gse-ui-toast-success-foregroundColor",

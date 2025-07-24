@@ -32,7 +32,7 @@ function generateComponentSpec() {
   const styleExamples = globSync(styleExampleGlob);
   const stylesSpec = styleExamples.reduce((spec, examplePath) => {
     const name = path.basename(examplePath, '.html');
-    spec[name] = { styles: true };
+    spec[name] = { tag: name, styles: true };
     return spec;
   }, {});
 

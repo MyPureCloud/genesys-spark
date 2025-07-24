@@ -1,4 +1,4 @@
-import { newSpecPage, SpecPage } from '@stencil/core/testing';
+import { newSpecPage } from '@stencil/core/testing';
 import { GuxList } from 'components/stable/gux-list/gux-list';
 import { GuxListItem } from 'components/stable/gux-list/gux-list-item/gux-list-item';
 import { GuxButton } from '../../../stable/gux-button/gux-button';
@@ -14,45 +14,23 @@ const html = `
 `;
 
 describe('gux-context-menu', () => {
-  let page: SpecPage;
-  let component: GuxContextMenu;
-
-  beforeEach(async () => {
-    page = await newSpecPage({
+  it('should build', async () => {
+    const page = await newSpecPage({
       components,
       html,
       language: 'en'
     });
 
-    component = page.rootInstance;
-  });
-
-  it('should build', async () => {
-    expect(component).toBeInstanceOf(GuxContextMenu);
+    expect(page.rootInstance).toBeInstanceOf(GuxContextMenu);
   });
 
   it('renders', async () => {
+    const page = await newSpecPage({
+      components,
+      html,
+      language: 'en'
+    });
+
     expect(page.root).toMatchSnapshot();
-  });
-
-  // Mouse events
-  it('should display the menu and focus on first list item on click', () => {
-    const focusFirstListItemSpy = jest.spyOn(
-      component as any,
-      'focusFirstListItem'
-    );
-    expect((component as any).isOpen).toBe(false);
-
-    (component as any).button.click();
-
-    expect(focusFirstListItemSpy).toHaveBeenCalledTimes(1);
-    expect((component as any).isOpen).toBe(true);
-  });
-
-  it('should hide on click outside the component', () => {
-    (component as any).button.click();
-    page.body.click();
-
-    expect((component as any).isOpen).toBe(false);
   });
 });

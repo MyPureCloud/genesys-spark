@@ -2,7 +2,7 @@
 
 exports[`gux-action-button renders 1`] = `
 <gux-action-button accent="primary" lang="en">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-action-button-container">
       <gux-popup exceed-target-width="" placement="bottom-end">
         <div class="gux-action-button-container" slot="target">
@@ -32,7 +32,7 @@ exports[`gux-action-button renders 1`] = `
     Primary
   </div>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
@@ -40,7 +40,7 @@ exports[`gux-action-button renders 1`] = `
     Test 1
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
@@ -48,7 +48,7 @@ exports[`gux-action-button renders 1`] = `
     Test 2
   </gux-list-item>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>
@@ -59,7 +59,7 @@ exports[`gux-action-button renders 1`] = `
     <template shadowrootmode="open"></template>
   </gux-list-divider>
   <gux-list-item onclick="notify(event)" role="listitem">
-    <template shadowrootmode="open">
+    <template shadowrootmode="open" shadowrootdelegatesfocus>
       <button data-testid="list-item-button" tabindex="-1" type="button">
         <slot></slot>
       </button>

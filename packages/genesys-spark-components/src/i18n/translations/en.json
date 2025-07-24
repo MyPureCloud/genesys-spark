@@ -62,7 +62,7 @@
   "gux-copy-to-clipboard": {
     "clickToCopy": "Click to Copy",
     "copySuccess": "Copied to Clipboard",
-    "copyFailure": "Error. Please Try Again."
+    "copyFailure": "Copy failed. Please try again."
   },
   "gux-create-option": {
     "createCustomOptionInstructions": ", select to create a new custom option",
@@ -349,6 +349,10 @@
     "ZM": "Zambia",
     "ZW": "Zimbabwe",
     "unknownRegion": "Unknown Region"
+  },
+  "gux-flyout-menu": {
+    "onMenuFocus": "Use the right arrow to enter the submenu, and the left arrow to return to the previous menu",
+    "onTargetFocus": "A popup has appeared. Press the down arrow to enter the menu"
   },
   "gux-form-field-checkbox-group": {
     "required": "Required"
@@ -744,14 +748,18 @@
     "textToDisplay": "Text to display",
     "textHighlight": "Text Highlight",
     "noHighlight": "No Highlight",
-    "orange": "Orange",
-    "coral": "Coral",
-    "pear": "Pear",
-    "mango": "Mango",
-    "raspberry": "Raspberry",
     "blue": "Azure Blue",
-    "mineral": "Mineral",
+    "blueberry": "Blueberry",
+    "coral": "Coral",
+    "inherit": "inherit",
     "island": "Island",
+    "islandaqua": "Islandaqua",
+    "mango": "Mango",
+    "mineral": "Mineral",
+    "orange": "Orange",
+    "pear": "Pear",
+    "raspberry": "Raspberry",
+    "tomato": "Tomato",
     "additionalActions": "Additional Actions"
   },
   "gux-skip-navigation-list": {
@@ -924,6 +932,7 @@
     "America/Coral_Harbour": "America/Coral_Harbour",
     "America/Cordoba": "America/Cordoba",
     "America/Costa_Rica": "America/Costa_Rica",
+    "America/Coyhaique": "America/Coyhaique",
     "America/Creston": "America/Creston",
     "America/Cuiaba": "America/Cuiaba",
     "America/Curacao": "America/Curacao",
