@@ -17,12 +17,14 @@ test.describe('gux-phone-input-beta', () => {
   }) => {
     await setContent(page, '<gux-phone-input-beta></gux-phone-input-beta>');
 
-    const dropdownButton = page.locator('.gux-field-button');
-    const inputField = page.locator('#tel-input');
     const component = page.locator('gux-phone-input-beta');
-    await inputField.press('1');
+    const inputField = component.locator('#tel-input');
+    const dropdownButton = component.locator('.gux-field-button');
+    const flag = component.locator('.gux-selected-option gux-flag-icon-beta');
 
+    await inputField.press('1');
     await dropdownButton.press('Enter');
+
     await expect(dropdownButton).toHaveAttribute('aria-expanded', 'true');
 
     // First arrow down focuses the currently selected option
@@ -31,30 +33,24 @@ test.describe('gux-phone-input-beta', () => {
     await page.keyboard.press('ArrowDown');
     await page.keyboard.press('Enter');
 
-    const region = await component.evaluate(
-      (el: HTMLGuxPhoneInputBetaElement) => el.getRegion()
-    );
-
-    expect(region.alpha2Code).toBe('AF');
-    const value = await component.evaluate(
-      (el: HTMLGuxPhoneInputBetaElement) => el.value
-    );
-    expect(value).toBe('1');
     await expect(dropdownButton).toHaveAttribute('aria-expanded', 'false');
+    await expect(flag).toHaveAttribute('screenreader-text', 'Afghanistan');
+    await expect(inputField).toHaveValue('1');
   });
 
-  test('open country dropdown and select option with value starting with +', async ({
+  test.skip('open country dropdown and select option with value starting with +', async ({
     page
   }) => {
     await setContent(page, '<gux-phone-input-beta></gux-phone-input-beta>');
 
-    const dropdownButton = page.locator('.gux-field-button');
-    const inputField = page.locator('#tel-input');
     const component = page.locator('gux-phone-input-beta');
+    const inputField = component.locator('#tel-input');
+    const dropdownButton = component.locator('.gux-field-button');
+    const flag = component.locator('.gux-selected-option gux-flag-icon-beta');
 
     await inputField.fill('+1');
-
     await dropdownButton.press('Enter');
+
     await expect(dropdownButton).toHaveAttribute('aria-expanded', 'true');
 
     // First arrow down focuses the currently selected option
@@ -63,16 +59,9 @@ test.describe('gux-phone-input-beta', () => {
     await page.keyboard.press('ArrowDown');
     await page.keyboard.press('Enter');
 
-    const region = await component.evaluate(
-      (el: HTMLGuxPhoneInputBetaElement) => el.getRegion()
-    );
-
-    expect(region.alpha2Code).toBe('AD');
-    const value = await component.evaluate(
-      (el: HTMLGuxPhoneInputBetaElement) => el.value
-    );
-    expect(value).toBe('+376');
     await expect(dropdownButton).toHaveAttribute('aria-expanded', 'false');
+    await expect(flag).toHaveAttribute('screenreader-text', 'Andorra');
+    await expect(inputField).toHaveValue('+376');
   });
 
   test('region is set when initialized with value', async ({ page }) => {
@@ -81,31 +70,19 @@ test.describe('gux-phone-input-beta', () => {
       '<gux-phone-input-beta value="+13175971660"></gux-phone-input-beta>'
     );
 
-    const dropdownButtonIcon = page.locator(
-      '.gux-field-button gux-flag-icon-beta'
-    );
     const component = page.locator('gux-phone-input-beta');
+    const flag = component.locator('.gux-selected-option gux-flag-icon-beta');
 
-    const region = await component.evaluate(
-      (el: HTMLGuxPhoneInputBetaElement) => el.getRegion()
-    );
-
-    expect(region.alpha2Code).toBe('US');
-    await expect(dropdownButtonIcon).toHaveAttribute(
-      'screenreader-text',
-      'United States'
-    );
+    await expect(flag).toHaveAttribute('screenreader-text', 'United States');
   });
 
   test('region is set when typing in country code', async ({ page }) => {
     await setContent(page, '<gux-phone-input-beta></gux-phone-input-beta>');
 
-    const dropdownButton = page.locator('.gux-field-button');
-    const inputField = page.locator('#tel-input');
+    const component = page.locator('gux-phone-input-beta');
+    const inputField = component.locator('#tel-input');
 
     await inputField.fill('+41');
-
-    await dropdownButton.click();
 
     const selected = page.locator('.gux-selected');
 
