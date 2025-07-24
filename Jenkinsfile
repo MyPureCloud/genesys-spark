@@ -50,7 +50,7 @@ webappPipelineV2 {
         sh('./scripts/create-manifest.js')
         readJSON(file: './manifest.json')
     }
-    releasableBranchPrefixes = ['beta/', 'maintenance/']
+    releasableBranchPrefixes = ['alpha/', 'beta/', 'maintenance/']
     skipDeploy = true
     checkoutStep = {
         checkout(scm)
@@ -76,11 +76,11 @@ webappPipelineV2 {
         // it may protect against problems if the pipeline behavior changes in the future.
         if (isReleaseBranch) {
             sh('npm ci')
-            
+
             // Get the short commit hash for alpha releases
             String commitShort = sh(script: "git rev-parse --short origin/${env.BRANCH_NAME}", returnStdout: true).trim()
             String releaseOptions = isBetaBranch ? '--prerelease beta' : isAlphaBranch ? "--prerelease alpha.${commitShort}" : ''
-            
+
             sh(
                 label: 'Version bump & changelog generation',
                 script: "npm run release -- ${releaseOptions}"
