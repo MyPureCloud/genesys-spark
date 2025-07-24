@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.159.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.158.0...v4.159.0) (2025-07-24)
+
+
+### Features
+
+* **side panel:** animate modal in from side ([2bef765](https://github.com/MyPureCloud/genesys-spark/commit/2bef76561f919c55ffdcf27692e4891390fe2fca))
+
+
+### Bug Fixes
+
+* **popover:** Arrow alignment ([#1273](https://github.com/MyPureCloud/genesys-spark/issues/1273)) ([dd9a385](https://github.com/MyPureCloud/genesys-spark/commit/dd9a38546cf8ea5707a6c8bd7a975b8afb46fc62))
+
 ## [4.158.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.6...v4.158.0) (2025-07-24)
 
 
