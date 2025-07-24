@@ -4,6 +4,8 @@ import {
   a11yCheck
 } from '../../../../../../test/e2eTestUtils';
 
+import { renderConfigs } from './gux-form-field-checkbox.common';
+
 const axeExclusions = [];
 
 async function newNonrandomE2EPage({
@@ -24,62 +26,20 @@ async function newNonrandomE2EPage({
 
 describe('gux-form-field-checkbox', () => {
   describe('#render', () => {
-    [
-      `
-        <gux-form-field-checkbox>
-          <input slot="input" type="checkbox" name="food-1[]" value="pizza"/>
-          <label slot="label">Pizza</label>
-        </gux-form-field-checkbox>
-      `,
-      `
-        <gux-form-field-checkbox>
-          <input slot="input" type="checkbox" name="food-1[]" value="pizza" disabled/>
-          <label slot="label">Pizza</label>
-        </gux-form-field-checkbox>
-      `,
-      `
-        <gux-form-field-checkbox>
-          <input slot="input" type="checkbox" name="food-1[]" value="pizza"/>
-          <label slot="label">Pizza</label>
-          <span slot="error">This is an error message</span>
-        </gux-form-field-checkbox>
-      `,
-      `
-        <gux-form-field-checkbox>
-          <input slot="input" type="checkbox" name="food-1[]" value="pizza" checked/>
-          <label slot="label">Pizza</label>
-        </gux-form-field-checkbox>
-      `,
-      `
-        <gux-form-field-checkbox>
-          <input slot="input" type="checkbox" name="food-1[]" value="pizza"/>
-          <label slot="label">Pizza</label>
-          <span slot="error">Error message</span>
-        </gux-form-field-checkbox>
-      `,
-      `
-      <gux-form-field-checkbox>
-        <input slot="input" type="checkbox" name="food-1[]" value="pizza"/>
-        <label slot="label">Pizza</label>
-        <span slot="help">This is a help message</span>
-      </gux-form-field-checkbox>
-    `
-    ].forEach((html, index) => {
+    renderConfigs.forEach(({ html }, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newNonrandomE2EPage({ html });
-        const element = await page.find('gux-form-field-checkbox');
+        const snapshotPage = await newNonrandomE2EPage({ html });
+        const element = await snapshotPage.find('gux-form-field-checkbox');
         const elementShadowDom = await element.find(
           'pierce/.gux-form-field-container'
         );
 
         expect(element.outerHTML).toMatchSnapshot();
         expect(elementShadowDom).toMatchSnapshot();
-      });
 
-      it(`should be accessible (${index + 1})`, async () => {
-        const page = await newSparkE2EPage({ html });
+        const accessibilityPage = await newSparkE2EPage({ html });
 
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(accessibilityPage, axeExclusions);
       });
     });
   });
