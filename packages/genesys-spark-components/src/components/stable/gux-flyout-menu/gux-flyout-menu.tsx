@@ -151,8 +151,8 @@ export class GuxFlyoutMenu {
   }
 
   private updatePosition(): void {
-    // This is 13 because this makes the arrow look aligned
-    const arrowLen = 13;
+    // This is 12 because this makes the arrow look aligned
+    const arrowLen = 12;
 
     if (this.root) {
       void computePosition(this.targetElement, this.menuContentElement, {

@@ -179,9 +179,9 @@ export class GuxPopover {
           left: -90
         }[side];
 
-        // This is 13 because this makes the arrow look aligned when horizontal
+        // This is 12 because this makes the arrow look aligned when horizontal
         // or 15 if vertical due to extra padding needed to show the shadow.
-        const arrowLen = side === 'left' || side === 'right' ? 15 : 13;
+        const arrowLen = side === 'left' || side === 'right' ? 15 : 12;
 
         if (middlewareData.arrow) {
           let x = middlewareData.arrow.x;
