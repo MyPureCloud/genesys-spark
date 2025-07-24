@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.158.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.6...v4.158.0) (2025-07-24)
+
+
+### Features
+
+* **icon:** Adding square-solid icon ([#1252](https://github.com/MyPureCloud/genesys-spark/issues/1252)) ([fec9d05](https://github.com/MyPureCloud/genesys-spark/commit/fec9d05623ff854e9ae54c656a14c6c69999944a))
+
+
+### Bug Fixes
+
+* **dropdown:** Show drop-shadow in dropdowns ([#1260](https://github.com/MyPureCloud/genesys-spark/issues/1260)) ([297dcc5](https://github.com/MyPureCloud/genesys-spark/commit/297dcc5e9d49ed1ffc8138f3eea057c8a53a9a46))
+* **phone-input-beta:** drop-shadow and playwright test ([#1257](https://github.com/MyPureCloud/genesys-spark/issues/1257)) ([4f13f32](https://github.com/MyPureCloud/genesys-spark/commit/4f13f32889ead1491b73b01e1b4ff2ba09f86da6))
+* **tooltip:** update max-width of tooltips to 350px ([70987fa](https://github.com/MyPureCloud/genesys-spark/commit/70987fa5a0fbe1338dc9eb0bce2cabf0d06e37c5))
+
 ### [4.157.6](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.5...v4.157.6) (2025-07-23)
 
 ### [4.157.5](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.4...v4.157.5) (2025-07-22)
