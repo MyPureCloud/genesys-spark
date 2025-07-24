@@ -8,6 +8,12 @@ dialog {
   padding: 0;
   margin: unset;
   border: none;
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in-out;
+
+  &.gux-open {
+    transform: translateX(0%);
+  }
 }
 
 dialog::backdrop {
