@@ -2,7 +2,7 @@
 
 Genesys Spark MCP Server is a Model Context Protocol (MCP) server that provides comprehensive information about the Genesys Spark Design System components. It offers detailed component documentation, usage guidelines, examples, and code generation capabilities for building applications with Genesys Spark components.
 
-This project is heavily inspired by [react-design-systems-mcp](https://github.com/agentience/react-design-systems-mcp/tree/develop). 
+This project is inspired by [react-design-systems-mcp](https://github.com/agentience/react-design-systems-mcp/tree/develop).
 `react-design-systems-mcp` has a similar goal, they started by adding MCP tools for AWS Cloudscape Design System components.
 
 ## Features
@@ -10,27 +10,18 @@ This project is heavily inspired by [react-design-systems-mcp](https://github.co
 ### Component Information & Search
 - Search for Spark components with advanced filtering options
 - Get detailed information about components including properties, events, and functions
-- Access component usage guidelines and best practices
-- Search across component usage guidelines by content, section, or specific component
+- Access component usage guidelines
 - Get component examples with detailed code snippets
-- Compare components and their capabilities
-
-### Code Generation
-- Generate code for components with customization options
-- Generate code for common UI patterns and layouts
-- Generate multi-component layouts and compositions
-- Validate component props and configurations
 
 ### Advanced Functionality
 - **Usage Guidelines**: Comprehensive access to component usage guidelines
 - **Events & Functions**: Search and explore component events and function APIs
-- **Pattern Library**: Access to design patterns and architectural guidance
 - **Setup Instructions**: Get frontend setup and configuration guidance
 
 ## Requirements
 
-- **Node.js**: 24.x or higher
-- **npm**: 11.x or higher
+- **Node.js**: 22.x or higher
+- **npm**: 10.x or higher
 
 ## Installation
 
@@ -154,31 +145,14 @@ After adding the configuration:
 #### Component Information
 - `search_components` - Search for components with advanced filtering
 - `get_component_details` - Get detailed component information
-- `get_component_properties` - Get component properties and their specifications
-- `get_component_events` - Get component events and event handling information
-- `get_component_functions` - Get component functions and method APIs
 - `get_component_examples` - Get component examples with optional filtering by example ID
 
 > **Note**: Not all components have events. Components with events include: `gux-accordion-section`, `gux-action-button`, `gux-dropdown`, `gux-modal`, `gux-pagination`, `gux-toggle`, and others. Use `search_components` to find components that emit specific events.
 
 #### Usage Guidelines
 - `get_component_usage` - Get usage guidelines for a specific component with optional section filtering
-- `search_usage_guidelines` - Search across component usage guidelines with query, section, and component filters
-
-#### Code Generation
-- `generate_component_code` - Generate code for components with customization
-- `generate_pattern_code` - Generate code for common UI patterns
-- `validate_component_props` - Validate component properties and configurations
-
-#### Patterns and Search
-- `search_patterns` - Search through design patterns and architectural guidance
-- `search_properties` - Search for component properties across all components
-- `search_events` - Search for component events with filtering options
-- `search_functions` - Search for component functions and methods
 
 #### Utility Tools
-- `compare_components` - Compare multiple components and their capabilities
-- `generate_layout_code` - Generate multi-component layouts
 - `get_frontend_setup` - Get setup instructions for frontend setup
 
 ### Example Usage
@@ -189,32 +163,7 @@ search_components({"query": "button", "category": "actions"})
 
 # Get detailed information about a specific component
 get_component_details({"componentId": "gux-button"})
-
-# Get properties for a component (most components have properties)
-get_component_properties({"componentId": "gux-button"})
-
-# Get events for a component (only some components have events)
-get_component_events({"componentId": "gux-accordion-section"})
-
-# Search for components that have specific events
-search_events({"query": "click"})
-
-# Search across usage guidelines
-search_usage_guidelines({"query": "primary button", "section": "Features"})
-
-# Generate component code
-generate_component_code({"componentId": "gux-button", "props": {"accent": "primary", "type": "button"}})
 ```
-
-### Tips for Using Event-Related Tools
-
-1. **Finding Components with Events**: Use `search_events()` to discover which components emit events
-2. **Common Event-Emitting Components**: 
-   - Form components (dropdowns, toggles, inputs)
-   - Interactive components (buttons, modals, accordions)
-   - Navigation components (pagination, tabs)
-3. **Event Naming Convention**: Most events follow the `gux{action}` pattern (e.g., `guxclick`, `guxchange`, `guxopen`)
-
 ### Component Categories
 
 The Genesys Spark MCP Server provides comprehensive support for all Genesys Spark Design System components, including:

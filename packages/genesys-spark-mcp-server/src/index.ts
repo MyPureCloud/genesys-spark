@@ -18,7 +18,9 @@ function getComponentsVersion(): string {
 let server = createFastMCPServer({
   name: 'genesys-spark-mcp-server',
   description: 'Genesys Spark MCP server',
-  version: getComponentsVersion()
+  version: getComponentsVersion(),
+  port: 3001,
+  bind: '0.0.0.0',
 });
 
 server.start({
