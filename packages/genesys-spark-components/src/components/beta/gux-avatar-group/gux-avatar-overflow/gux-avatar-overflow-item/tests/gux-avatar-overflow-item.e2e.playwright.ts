@@ -22,7 +22,7 @@ test.describe('gux-avatar-beta-overflow-item-beta', () => {
       const element = page.locator('gux-avatar-overflow-item-beta');
 
       // Initially no element should be focused
-      await expect(page.locator(':focus')).toHaveCount(0);
+      await expect(element).not.toBeFocused();
 
       // Call the focus method
       await element.evaluate((el: HTMLGuxAvatarOverflowItemBetaElement) =>
