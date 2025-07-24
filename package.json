@@ -61,6 +61,7 @@
     "./packages/genesys-spark",
     "./packages/genesys-spark-components",
     "./packages/genesys-spark-chart-components",
+    "./packages/genesys-spark-mcp-server",
     "./packages/*",
     "./shared-configs/*",
     "./web-apps/*"

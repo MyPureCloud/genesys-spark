@@ -49,6 +49,10 @@ export const config: Config = {
       dir: 'public',
       serviceWorker: null,
       copy: [{ src: '**/*.html' }, { src: '**/*.css' }]
+    },
+    {
+      type: 'docs-json',
+      file: '../genesys-spark-mcp-server/src/data/json-docs.json'
     }
   ],
   plugins: [sass()],

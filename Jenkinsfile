@@ -4,17 +4,21 @@
 @Library('pipeline-library')
 import com.genesys.jenkins.Notifications
 
-def getPublishOptions(isMainBranch, isMaintenanceReleaseBranch, isBetaBranch) {
+def getPublishOptions(isMainBranch, isMaintenanceReleaseBranch, isBetaBranch, isAlphaBranch) {
     if (isMainBranch) {
         return '--tag latest'
    } else if (isMaintenanceReleaseBranch) {
         return '--tag maintenance'
    } else if (isBetaBranch) {
         return '--tag beta'
-    }
+   } else if (isAlphaBranch) {
+        return '--tag alpha'
+   }
 
     return '--tag error'
 }
+
+
 
 Boolean isMainBranch = env.BRANCH_NAME == 'main'
 
@@ -22,14 +26,15 @@ Boolean isMaintenanceReleaseBranch = env.BRANCH_NAME.startsWith('maintenance/')
 
 Boolean isBetaBranch = env.BRANCH_NAME.startsWith('beta/')
 
+Boolean isAlphaBranch = env.BRANCH_NAME.startsWith('alpha/')
+
 Boolean isFeatureBranch = env.BRANCH_NAME.startsWith('feature/')
 
-Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch || isBetaBranch
+Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch || isBetaBranch || isAlphaBranch
 
 Boolean isPublicBranch = isReleaseBranch || isFeatureBranch
 
-String releaseOptions = isBetaBranch ? '--prerelease beta' : ''
-String publishOptions = getPublishOptions(isMainBranch, isMaintenanceReleaseBranch, isBetaBranch)
+String publishOptions = getPublishOptions(isMainBranch, isMaintenanceReleaseBranch, isBetaBranch, isAlphaBranch)
 
 // We track this globally because it will later be passed to the documentation build
 String componentAssetsPath = ''
@@ -71,6 +76,11 @@ webappPipelineV2 {
         // it may protect against problems if the pipeline behavior changes in the future.
         if (isReleaseBranch) {
             sh('npm ci')
+            
+            // Get the short commit hash for alpha releases
+            String commitShort = sh(script: "git rev-parse --short origin/${env.BRANCH_NAME}", returnStdout: true).trim()
+            String releaseOptions = isBetaBranch ? '--prerelease beta' : isAlphaBranch ? "--prerelease alpha.${commitShort}" : ''
+            
             sh(
                 label: 'Version bump & changelog generation',
                 script: "npm run release -- ${releaseOptions}"
@@ -150,6 +160,15 @@ webappPipelineV2 {
 
                     if (componentStatCode > 0) {
                         failures.add('Publish Components')
+                    }
+
+                    def mcpStatCode = sh(script: "npm publish --workspace=packages/genesys-spark-mcp-server ${publishOptions}",
+                        label: 'Publish MCP Server',
+                        returnStatus: true
+                        )
+
+                    if (mcpStatCode > 0) {
+                        failures.add('MCP Server')
                     }
 
                     def chartStatCode = sh(script: "npm publish --workspace=packages/genesys-spark-chart-components ${publishOptions}",
