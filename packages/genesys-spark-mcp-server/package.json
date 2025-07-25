@@ -1,9 +1,9 @@
 {
   "name": "genesys-spark-mcp-server",
   "version": "4.159.0-alpha.a077ab650.0",
-  "main": "dist/src/index.js",
+  "main": "dist/index.js",
   "bin": {
-    "genesys-spark-mcp-server": "dist/src/index.js"
+    "genesys-spark-mcp-server": "dist/index.js"
   },
   "files": [
     "dist"
@@ -13,15 +13,15 @@
     "assert-base-docs": "node scripts/assert-base-docs.mjs",
     "prebuild": "npm run clean",
     "build": "npm run clean && npm run generate-docs && npm run postbuild",
-    "postbuild": "node -e \"const fs = require('fs'); if (fs.existsSync('dist/src/index.js')) fs.chmodSync('dist/src/index.js', '755');\"",
+    "postbuild": "node -e \"const fs = require('fs'); if (fs.existsSync('dist/index.js')) fs.chmodSync('dist/index.js', '755');\"",
     "clean": "rm -rf dist",
     "clean:pack": "rm -f genesys-spark-mcp-server-*.tgz",
     "enhance-component-metadata": "node scripts/enhance-component-metadata.mjs",
-    "generate-docs": "npm run assert-base-docs && npm run post-process",
+    "generate-docs": "npm run assert-base-docs && npm run post-process && npm run tsc",
     "link:local": "npm run build && npm link && echo '\n✅ Package linked locally! Use with:' && echo 'genesys-spark-mcp-server' && echo '\nUnlink with: npm unlink -g genesys-spark-mcp-server'",
     "post-process": "npm run add-version-metadata && npm run enhance-component-metadata",
     "publish:local": "npm run build && npm pack && echo '\n✅ Local package created! Install with:' && echo 'npm install -g ./genesys-spark-mcp-server-*.tgz' && echo '\nClean up with: npm run clean:pack'",
-    "start": "npm run build && node dist/src/index.js",
+    "start": "npm run build && node dist/index.js",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
@@ -29,7 +29,7 @@
     "tsc": "tsc -p tsconfig.json",
     "version-sync": "npm version --no-git-tag-version --allow-same-version"
   },
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@types/node": "^22.14.0",
     "fastmcp": "^3.10.0",
