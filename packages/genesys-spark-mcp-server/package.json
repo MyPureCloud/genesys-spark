@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-mcp-server",
-  "version": "4.159.0-alpha.55b234ad1.0",
+  "version": "4.159.0-alpha.a077ab650.0",
   "main": "dist/src/index.js",
   "bin": {
     "genesys-spark-mcp-server": "dist/src/index.js"
