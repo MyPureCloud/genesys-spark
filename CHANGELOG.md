@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.159.0-alpha.5b330e6c1.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.159.0-alpha.a077ab650.0...v4.159.0-alpha.5b330e6c1.0) (2025-07-25)
+
+
+### Features
+
+* release alpha version [PLTRES-1635] ([5b330e6](https://github.com/MyPureCloud/genesys-spark/commit/5b330e6c174201564da3fedbc724555416d745b6))
+
 ## [4.159.0-alpha.a077ab650.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.159.0-alpha.55b234ad1.0...v4.159.0-alpha.a077ab650.0) (2025-07-25)
 
 
