@@ -4,7 +4,7 @@ exports[`gux-dropdown #render should render as expected with gux-option 1`] = `
 <gux-dropdown lang="en" value="j">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
-      <div class="gux-target-container-collapsed" slot="target">
+      <div class="gux-target-container-not-filterable" slot="target">
         <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
           <div class="gux-field-content">
             <div class="gux-placeholder">
@@ -134,7 +134,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
 <gux-dropdown lang="en" value="f">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
-      <div class="gux-target-container-collapsed" slot="target">
+      <div class="gux-target-container-not-filterable" slot="target">
         <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
           <div class="gux-field-content">
             <div class="gux-selected-option">
@@ -299,7 +299,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-group an
 <gux-dropdown lang="en" value="f">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
-      <div class="gux-target-container-collapsed" slot="target">
+      <div class="gux-target-container-not-filterable" slot="target">
         <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
           <div class="gux-field-content">
             <div class="gux-placeholder">
@@ -401,7 +401,7 @@ exports[`gux-dropdown #render should render as expected with gux-option-icon 1`]
 <gux-dropdown lang="en" value="j">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <gux-popup>
-      <div class="gux-target-container-collapsed" slot="target">
+      <div class="gux-target-container-not-filterable" slot="target">
         <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
           <div class="gux-field-content">
             <div class="gux-placeholder">
