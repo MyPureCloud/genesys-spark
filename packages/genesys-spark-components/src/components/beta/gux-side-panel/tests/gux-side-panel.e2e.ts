@@ -105,6 +105,7 @@ describe('modal side panel', () => {
 
     element.setAttribute('open', '');
     await page.waitForChanges();
+    await dialog.waitForVisible();
     expect(await dialog.isVisible()).toBe(true);
 
     await innerDismissButton.click();

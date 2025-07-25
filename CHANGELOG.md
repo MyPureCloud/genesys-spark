@@ -2,38 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [4.159.0-alpha.5b330e6c1.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.159.0-alpha.a077ab650.0...v4.159.0-alpha.5b330e6c1.0) (2025-07-25)
+## [4.159.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.158.0...v4.159.0) (2025-07-24)
 
 
 ### Features
 
-* release alpha version [PLTRES-1635] ([5b330e6](https://github.com/MyPureCloud/genesys-spark/commit/5b330e6c174201564da3fedbc724555416d745b6))
-
-## [4.159.0-alpha.a077ab650.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.159.0-alpha.55b234ad1.0...v4.159.0-alpha.a077ab650.0) (2025-07-25)
+* **side panel:** animate modal in from side ([2bef765](https://github.com/MyPureCloud/genesys-spark/commit/2bef76561f919c55ffdcf27692e4891390fe2fca))
 
 
-### Features
+### Bug Fixes
 
-* release alpha version [PLTRES-1635] ([a11a1b6](https://github.com/MyPureCloud/genesys-spark/commit/a11a1b6c7b7bee149b5bc20f01b81d1db805b5d1))
-
-## [4.159.0-alpha.55b234ad1.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.159.0-alpha.77c0eafb5.0...v4.159.0-alpha.55b234ad1.0) (2025-07-24)
-
-
-### Features
-
-* release alpha version [PLTRES-1635] ([55b234a](https://github.com/MyPureCloud/genesys-spark/commit/55b234ad14a02bf0a08c59e955ade7c686bcfb9e))
-* release alpha version [PLTRES-1635] ([6605e20](https://github.com/MyPureCloud/genesys-spark/commit/6605e20c02ec029a59c78693cf2afd959d664176))
-
-## [4.159.0-alpha.77c0eafb5.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.158.0...v4.159.0-alpha.77c0eafb5.0) (2025-07-24)
-
-
-### Features
-
-* fix test [PLTRES-1635] ([f91a499](https://github.com/MyPureCloud/genesys-spark/commit/f91a499218358ebc926f60359a9758da76f451e8))
-* genesys spark mcp server [PLTRES-1635] ([c8514a0](https://github.com/MyPureCloud/genesys-spark/commit/c8514a0147a525bb2c19988961f839c4eb66ba52))
-* release alpha version [PLTRES-1635] ([77c0eaf](https://github.com/MyPureCloud/genesys-spark/commit/77c0eafb569586e73a5f34510c5f6fee1aeda20c))
-* release alpha version [PLTRES-1635] ([6345046](https://github.com/MyPureCloud/genesys-spark/commit/63450466bd74ba2760ef6d8dbbc03f75a218a093))
-* update README.md [PLTRES-1635] ([a6dbbb7](https://github.com/MyPureCloud/genesys-spark/commit/a6dbbb77c230b9cf97bc0d6fcb11f6347dd83b01))
+* **popover:** Arrow alignment ([#1273](https://github.com/MyPureCloud/genesys-spark/issues/1273)) ([dd9a385](https://github.com/MyPureCloud/genesys-spark/commit/dd9a38546cf8ea5707a6c8bd7a975b8afb46fc62))
 
 ## [4.158.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.157.6...v4.158.0) (2025-07-24)
 
