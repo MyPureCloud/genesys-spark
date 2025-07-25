@@ -7,6 +7,7 @@ export const renderConfig = {
         <gux-popover-beta position="top" for="popover-target" is-open>
           <span slot="title">Title</span>
           <div>popover content</div>
+          <div slot="footer">footer content</div>
           </gux-popover-beta>
         </div>`
 };

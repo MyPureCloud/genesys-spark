@@ -13,6 +13,9 @@ exports[`gux-popover-beta #render should render popover 1`] = `
       <div class="gux-popover-content">
         <slot></slot>
       </div>
+      <div>
+        <slot name="footer"></slot>
+      </div>
     </div>
   </template>
   <span slot="title">
