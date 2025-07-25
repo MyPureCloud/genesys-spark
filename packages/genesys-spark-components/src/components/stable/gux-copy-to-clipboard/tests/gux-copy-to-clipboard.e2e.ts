@@ -3,23 +3,18 @@ import {
   newSparkE2EPage,
   waitForTimeout
 } from '../../../../test/e2eTestUtils';
-
-const html = `
-  <gux-copy-to-clipboard lang="en">
-    <div slot="content">Test</div>
-  </gux-copy-to-clipboard>
-`;
+import { renderConfig } from './gux-copy-to-clipboard.common';
 
 describe('gux-copy-to-clipboard', () => {
   it('renders', async () => {
-    const page = await newSparkE2EPage({ html });
+    const page = await newSparkE2EPage({ html: renderConfig.html });
     const element = await page.find('gux-copy-to-clipboard');
     await a11yCheck(page);
     expect(element).toHaveAttribute('hydrated');
   });
 
   it('renders tooltip on hover', async () => {
-    const page = await newSparkE2EPage({ html });
+    const page = await newSparkE2EPage({ html: renderConfig.html });
     const element = await page.find('gux-copy-to-clipboard');
 
     await element.hover();
