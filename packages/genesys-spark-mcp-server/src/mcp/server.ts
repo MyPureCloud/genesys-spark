@@ -614,6 +614,23 @@ const setupInstructions = `
     Once adding the type declaration above, make sure you set typescript to include the added type declarations. In the project's tsconfig file make sure the new declaration is included in the "include" array.
     e.g. if the file name that added the new declaration is gux-types.d.ts in the src/types folder then make sure this file is added to the "include" array.
 
+    React 18 and older versions:
+    For React projects without full web component support, you'll need to install the React wrapper package alongside the main packages:
+    
+    \`\`\`bash
+    npm install genesys-spark genesys-spark-components genesys-spark-components-react
+    \`\`\`
+    
+    The \`genesys-spark-components-react\` package provides React component wrappers for all Spark web components, enabling seamless integration with React's JSX syntax and component lifecycle. Each Spark web component has a corresponding React wrapper - for example, the \`gux-button\` web component becomes the \`GuxButton\` React component.
+    
+    Import and use React wrappers in your JSX code:
+    \`\`\`jsx
+    import { GuxButton } from 'genesys-spark-components-react';
+    
+    function MyComponent() {
+      return <GuxButton variant="primary">Click me</GuxButton>;
+    }
+    \`\`\`
 
     React 19 and onward web component support:
     React 19 added full support for web components. For spark components it means that it's not required to use the react wrapper of spark components to use spark components in a React project.

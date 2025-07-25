@@ -10,7 +10,7 @@ describe('JSON Docs Registry - Integration Tests', () => {
         it('should return usage for gux-button', () => {
             const result = getComponentUsage('gux-button');
             expect(typeof result).toBe('string');
-            expect(result?.length).toBeGreaterThan(0);
+            expect(result).toMatch('<gux-button');
         });
 
         it('should return usage for components with examples', () => {

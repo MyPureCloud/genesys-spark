@@ -2,8 +2,6 @@ import { searchComponents } from './engine';
 import { allComponents } from '../components/json-docs-registry';
 
 describe('Search Engine', () => {
-  const performSearch = (options: any) => searchComponents({ limit: 10, ...options });
-
   const expectValidResults = (result: any, minResults = 1) => {
     expect(result.totalResults).toBeGreaterThanOrEqual(minResults);
     expect(result.results.length).toBeGreaterThanOrEqual(Math.min(minResults, 1));
@@ -44,13 +42,13 @@ describe('Search Engine', () => {
 
         if (buttonComponents.length > 0) {
           const testComponent = buttonComponents[0] as any;
-          const result = performSearch({ query: testComponent.id });
+          const result = searchComponents({ query: testComponent.id });
 
           expectValidResults(result);
           expect(result.results[0].id).toBe(testComponent.id);
         } else {
           const anyComponent = Object.values(allComponents)[0] as any;
-          const result = performSearch({ query: anyComponent.id });
+          const result = searchComponents({ query: anyComponent.id });
           expectValidResults(result);
         }
       });
@@ -64,7 +62,7 @@ describe('Search Engine', () => {
 
       searchTestCases.forEach(({ query, expectedTerms }) => {
         it(`should find components matching "${query}"`, () => {
-          const result = performSearch({ query });
+          const result = searchComponents({ query });
           expectValidResults(result);
           expectRelevanceMatch(result.results, expectedTerms);
           expectValidResultStructure(result.results);
@@ -81,14 +79,14 @@ describe('Search Engine', () => {
 
       multiWordTestCases.forEach(({ query, expectedTerms }) => {
         it(`should find components with multi-word query "${query}"`, () => {
-          const result = performSearch({ query });
+          const result = searchComponents({ query });
           expectValidResults(result);
           expectRelevanceMatch(result.results, expectedTerms);
         });
       });
 
       it('should handle multi-word search with proper relevance scoring', () => {
-        const result = performSearch({ query: 'button action' });
+        const result = searchComponents({ query: 'button action' });
         expectValidResults(result);
 
         // Verify relevance scores are in descending order
@@ -108,7 +106,7 @@ describe('Search Engine', () => {
 
       fuzzyTestCases.forEach(({ query, description, expectedTerms }) => {
         it(`should find components with ${description} when fuzzy search is enabled`, () => {
-          const result = performSearch({
+          const result = searchComponents({
             query,
             fuzzyMatch: true,
             fuzzyThreshold: 0.5
@@ -119,17 +117,17 @@ describe('Search Engine', () => {
       });
 
       it('should not find components with typos when fuzzy search is disabled', () => {
-        const result = performSearch({ query: 'buttton', fuzzyMatch: false });
+        const result = searchComponents({ query: 'buttton', fuzzyMatch: false });
         expect(result.totalResults).toBe(0);
       });
 
       it('should respect fuzzy threshold settings', () => {
-        const strictResult = performSearch({
+        const strictResult = searchComponents({
           query: 'buttton',
           fuzzyMatch: true,
           fuzzyThreshold: 0.9
         });
-        const lenientResult = performSearch({
+        const lenientResult = searchComponents({
           query: 'buttton',
           fuzzyMatch: true,
           fuzzyThreshold: 0.3
@@ -144,7 +142,7 @@ describe('Search Engine', () => {
         const categories = [...new Set(Object.values(allComponents).map((c: any) => c.category))];
         const testCategory = categories[0];
 
-        const result = performSearch({ query: '', category: testCategory });
+        const result = searchComponents({ query: '', category: testCategory });
         expectValidResults(result);
 
         result.results.forEach(component => {
@@ -157,7 +155,7 @@ describe('Search Engine', () => {
 
         if (buttonComponents.length > 0) {
           const testCategory = (buttonComponents[0] as any).category;
-          const result = performSearch({ query: 'button', category: testCategory });
+          const result = searchComponents({ query: 'button', category: testCategory });
           expectValidResults(result);
 
           result.results.forEach(component => {
@@ -167,7 +165,7 @@ describe('Search Engine', () => {
             expect(isButtonRelated).toBe(true);
           });
         } else {
-          const result = performSearch({ query: '', category: 'Actions' });
+          const result = searchComponents({ query: '', category: 'Actions' });
           expect(result.totalResults).toBeGreaterThanOrEqual(0);
         }
       });
@@ -180,7 +178,7 @@ describe('Search Engine', () => {
 
         if (uniqueTags.length > 0) {
           const testTag = uniqueTags[0];
-          const result = performSearch({ query: '', tags: [testTag] });
+          const result = searchComponents({ query: '', tags: [testTag] });
           expectValidResults(result);
 
           result.results.forEach(component => {
@@ -200,7 +198,7 @@ describe('Search Engine', () => {
           const testComponent = componentsWithTags[0] as any;
           const testTags = testComponent.tags.slice(0, 2);
 
-          const result = performSearch({ query: '', tags: testTags });
+          const result = searchComponents({ query: '', tags: testTags });
           expectValidResults(result);
 
           result.results.forEach(component => {
@@ -214,14 +212,14 @@ describe('Search Engine', () => {
 
     describe('Pagination', () => {
       it('should respect limit parameter', () => {
-        const result = performSearch({ query: '', limit: 3 });
+        const result = searchComponents({ query: '', limit: 3 });
         expectValidResults(result, 0);
         expect(result.results.length).toBeLessThanOrEqual(3);
       });
 
       it('should respect offset parameter', () => {
-        const firstResult = performSearch({ query: '', limit: 5, offset: 0 });
-        const secondResult = performSearch({ query: '', limit: 5, offset: 2 });
+        const firstResult = searchComponents({ query: '', limit: 5, offset: 0 });
+        const secondResult = searchComponents({ query: '', limit: 5, offset: 2 });
 
         expectValidResults(firstResult);
         expectValidResults(secondResult);
@@ -231,7 +229,7 @@ describe('Search Engine', () => {
 
     describe('Sorting', () => {
       it('should sort by relevance by default in descending order', () => {
-        const result = performSearch({ query: 'button' });
+        const result = searchComponents({ query: 'button' });
         expectValidResults(result);
 
         for (let i = 0; i < result.results.length - 1; i++) {
@@ -240,7 +238,7 @@ describe('Search Engine', () => {
       });
 
       it('should sort by name when specified', () => {
-        const result = performSearch({ query: '', sortBy: 'name', sortOrder: 'asc', limit: 5 });
+        const result = searchComponents({ query: '', sortBy: 'name', sortOrder: 'asc', limit: 5 });
         expectValidResults(result);
 
         for (let i = 0; i < result.results.length - 1; i++) {
@@ -273,7 +271,7 @@ describe('Search Engine', () => {
 
       edgeCaseTests.forEach(({ name, query, expectResults, expectMaxResults }) => {
         it(`should handle ${name}`, () => {
-          const result = performSearch({ query });
+          const result = searchComponents({ query });
 
           if (typeof expectResults === 'number') {
             expect(result.totalResults).toBe(expectResults);
@@ -291,25 +289,25 @@ describe('Search Engine', () => {
         ) as any;
 
         if (componentWithHyphen) {
-          const result = performSearch({ query: componentWithHyphen.id });
+          const result = searchComponents({ query: componentWithHyphen.id });
           expectValidResults(result);
           expect(result.results[0].id).toBe(componentWithHyphen.id);
         } else {
-          const result = performSearch({ query: 'gux-' });
+          const result = searchComponents({ query: 'gux-' });
           expect(result.totalResults).toBeGreaterThanOrEqual(0);
         }
       });
 
       it('should handle case-insensitive search', () => {
-        const lowerResult = performSearch({ query: 'button' });
-        const upperResult = performSearch({ query: 'BUTTON' });
+        const lowerResult = searchComponents({ query: 'button' });
+        const upperResult = searchComponents({ query: 'BUTTON' });
         expect(lowerResult.totalResults).toBe(upperResult.totalResults);
       });
     });
 
     describe('Return Value Structure', () => {
       it('should return properly structured search results', () => {
-        const result = performSearch({ query: 'button' });
+        const result = searchComponents({ query: 'button' });
 
         expect(result).toHaveProperty('results');
         expect(result).toHaveProperty('totalResults');
@@ -327,7 +325,7 @@ describe('Search Engine', () => {
   describe('Performance', () => {
     it('should complete searches in reasonable time', () => {
       const startTime = Date.now();
-      const result = performSearch({ query: 'form' });
+      const result = searchComponents({ query: 'form' });
       const duration = Date.now() - startTime;
 
       expectValidResults(result);
@@ -335,7 +333,7 @@ describe('Search Engine', () => {
     });
 
     it('should handle large result sets efficiently', () => {
-      const result = performSearch({ query: '', limit: 200 });
+      const result = searchComponents({ query: '', limit: 200 });
       expectValidResults(result, 50); // Expect many results for empty query
       expect(result.results.length).toBeLessThanOrEqual(200);
     });
@@ -343,7 +341,7 @@ describe('Search Engine', () => {
     it('should handle multiple concurrent searches', async () => {
       const queries = ['button', 'form', 'dropdown', 'table', 'list'];
       const promises = queries.map(query =>
-        Promise.resolve(performSearch({ query }))
+        Promise.resolve(searchComponents({ query }))
       );
 
       const results = await Promise.all(promises);
