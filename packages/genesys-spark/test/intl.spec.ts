@@ -95,16 +95,25 @@ describe('The intl module', () => {
     });
     it('Calls through to the browser implementation', () => {
       dateTimeFormat('xx-XX', formatOptions);
-      expect(Intl.DateTimeFormat).toHaveBeenCalledWith('xx-XX', formatOptions);
+      expect(Intl.DateTimeFormat).toHaveBeenCalledWith(
+        'xx-XX-u-ca-gregory',
+        formatOptions
+      );
     });
     it('The locale is optional and will defer to `determineDisplayLocale`', () => {
       document.body.setAttribute('lang', 'xx-XX');
       dateTimeFormat(formatOptions);
-      expect(Intl.DateTimeFormat).toHaveBeenCalledWith('xx-XX', formatOptions);
+      expect(Intl.DateTimeFormat).toHaveBeenCalledWith(
+        'xx-XX-u-ca-gregory',
+        formatOptions
+      );
     });
     it('Maintains optional format options', () => {
       dateTimeFormat('en-US');
-      expect(Intl.DateTimeFormat).toHaveBeenCalledWith('en-US', undefined);
+      expect(Intl.DateTimeFormat).toHaveBeenCalledWith(
+        'en-US-u-ca-gregory',
+        undefined
+      );
     });
   });
 
@@ -121,7 +130,7 @@ describe('The intl module', () => {
     it('Calls through to the browser implementation', () => {
       relativeTimeFormat('xx-XX', formatOptions);
       expect(Intl.RelativeTimeFormat).toHaveBeenCalledWith(
-        'xx-XX',
+        'xx-XX-u-ca-gregory',
         formatOptions
       );
     });
@@ -129,13 +138,16 @@ describe('The intl module', () => {
       document.body.setAttribute('lang', 'xx-XX');
       relativeTimeFormat(formatOptions);
       expect(Intl.RelativeTimeFormat).toHaveBeenCalledWith(
-        'xx-XX',
+        'xx-XX-u-ca-gregory',
         formatOptions
       );
     });
     it('Maintains optional format options', () => {
       relativeTimeFormat('en-US');
-      expect(Intl.RelativeTimeFormat).toHaveBeenCalledWith('en-US', undefined);
+      expect(Intl.RelativeTimeFormat).toHaveBeenCalledWith(
+        'en-US-u-ca-gregory',
+        undefined
+      );
     });
   });
 
