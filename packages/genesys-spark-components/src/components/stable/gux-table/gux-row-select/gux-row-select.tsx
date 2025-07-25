@@ -32,6 +32,9 @@ export class GuxRowSelect {
   @Prop()
   disabled: boolean;
 
+  @Prop()
+  label: string;
+
   @Event()
   internalrowselectchange: EventEmitter;
 
@@ -68,7 +71,7 @@ export class GuxRowSelect {
         />
         <label slot="label" htmlFor={this.id}>
           &#8203;
-          <span>{this.i18n('selectTableRow')}</span>
+          <span>{this.label ? this.label : this.i18n('selectTableRow')}</span>
         </label>
       </gux-form-field-checkbox>
     ) as JSX.Element;
