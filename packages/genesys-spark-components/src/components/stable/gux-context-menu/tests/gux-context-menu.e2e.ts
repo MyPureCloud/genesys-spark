@@ -1,16 +1,8 @@
 import { E2EPage } from '@stencil/core/testing';
-
 import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
+import { renderConfig } from './gux-context-menu.common';
 
 const axeExclusions = [];
-
-const html = `
-<gux-context-menu>
-  <gux-list-item id="list-item-1" onclick="notify(event)">Test 1</gux-list-item>
-  <gux-list-item id="list-item-2" onclick="notify(event)">Test 2</gux-list-item>
-  <gux-list-item id="list-item-3" onclick="notify(event)">Test 3</gux-list-item>
-</gux-context-menu>
-`;
 
 const guxListSelector = 'pierce/gux-list';
 const buttonSelector = 'pierce/gux-button-slot button';
@@ -19,7 +11,7 @@ describe('gux-context-menu', () => {
   let page: E2EPage;
 
   beforeEach(async () => {
-    page = await newSparkE2EPage({ html });
+    page = await newSparkE2EPage({ html: renderConfig.html });
   });
 
   it('renders', async () => {
