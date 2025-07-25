@@ -491,7 +491,14 @@
     }
   },
   "effects": {
-    "box_shadow": "#28324326"
+    "box_shadow": "#28324326",
+    "shadows": {
+      "lightest": "#3d538f26",
+      "lighter": "#3d538f33",
+      "middle": "#3d538f40",
+      "darker": "#3d538f4d",
+      "darkest": "#3d538f66"
+    }
   },
   "charts": {
     "categorical_data": {
