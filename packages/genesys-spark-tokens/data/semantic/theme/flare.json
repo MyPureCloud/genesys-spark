@@ -1172,7 +1172,7 @@
             "type": "color"
           },
           "10d": {
-            "value": "{color.pepper.400}",
+            "value": "{color.pepper.300}",
             "type": "color"
           }
         }

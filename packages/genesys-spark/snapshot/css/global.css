@@ -972,7 +972,7 @@ table a {
   --gse-semantic-theme-foreground-system-warning-10: #9a7b25;
   --gse-semantic-theme-foreground-system-warning-10d: #f8c73e;
   --gse-semantic-theme-foreground-system-error-10: #b51b37;
-  --gse-semantic-theme-foreground-system-error-10d: #e84e6a;
+  --gse-semantic-theme-foreground-system-error-10d: #ee7a8f;
   --gse-semantic-theme-foreground-specialAccents-brand-10: #ff451a;
   --gse-semantic-theme-foreground-specialAccents-brand-20: #141929;
   --gse-semantic-theme-foreground-specialAccents-brand-10d: #ff451a;
@@ -1159,7 +1159,7 @@ table a {
   --gse-semantic-theme-charts-sparkline-mono: #2143a2;
   --gse-semantic-theme-charts-sparkline-monod: #5476d5;
   --gse-semantic-theme-charts-sparkline-negative: #b51b37;
-  --gse-semantic-theme-charts-sparkline-negatived: #e84e6a;
+  --gse-semantic-theme-charts-sparkline-negatived: #ee7a8f;
   --gse-semantic-theme-charts-sparkline-positive: #056d4d;
   --gse-semantic-theme-charts-sparkline-positived: #09b581;
   --gse-semantic-theme-charts-sparkline-neutral: #9faac6;
@@ -1963,13 +1963,13 @@ table a {
   --gse-semantic-foreground-system-warning-highEmphasisInverse: #2a2a2e;
   --gse-semantic-foreground-system-warning-accent: #f8c73e;
   --gse-semantic-foreground-system-error-highEmphasis: #ffffff;
-  --gse-semantic-foreground-system-error-accent: #e84e6a;
+  --gse-semantic-foreground-system-error-accent: #ee7a8f;
   --gse-semantic-foreground-system-icon-default: #b2b7c4;
   --gse-semantic-foreground-system-indicators-positive: #09b581;
-  --gse-semantic-foreground-system-indicators-negative: #e84e6a;
+  --gse-semantic-foreground-system-indicators-negative: #ee7a8f;
   --gse-semantic-foreground-system-indicators-neutral: #c1c6d4;
   --gse-semantic-foreground-formControl-helpText-default: #c1c6d4;
-  --gse-semantic-foreground-formControl-helpText-error: #e84e6a;
+  --gse-semantic-foreground-formControl-helpText-error: #ee7a8f;
   --gse-semantic-foreground-formControl-textInput-placeholder: #c1c6d4;
   --gse-semantic-foreground-formControl-textInput-populated: #ffffff;
   --gse-semantic-foreground-formControl-textInput-icon: #c1c6d4;
@@ -1977,9 +1977,9 @@ table a {
   --gse-semantic-foreground-formControl-clickInput-selected: #5476d5;
   --gse-semantic-foreground-formControl-clickInput-hover: #829ce5;
   --gse-semantic-foreground-formControl-clickInput-active: #adbff0;
-  --gse-semantic-foreground-formControl-clickInput-error: #e84e6a;
+  --gse-semantic-foreground-formControl-clickInput-error: #ee7a8f;
   --gse-semantic-foreground-formControl-label-default: #ffffff;
-  --gse-semantic-foreground-formControl-label-requiredAccent: #e84e6a;
+  --gse-semantic-foreground-formControl-label-requiredAccent: #ee7a8f;
   --gse-semantic-foreground-formControl-label-optionalAccent: #b2b7c4;
   --gse-semantic-foreground-formControl-label-tooltip: #b2b7c4;
   --gse-semantic-foreground-formControl-search-matchingText: #2a2a2e;
@@ -2070,7 +2070,7 @@ table a {
   --gse-semantic-charts-background-placeholder-default: #3e4044;
   --gse-semantic-charts-track-default: #3e4044;
   --gse-semantic-charts-sparkline-mono: #5476d5;
-  --gse-semantic-charts-sparkline-negative: #e84e6a;
+  --gse-semantic-charts-sparkline-negative: #ee7a8f;
   --gse-semantic-charts-sparkline-positive: #09b581;
   --gse-semantic-charts-sparkline-neutral: #808db2;
   --gse-semantic-charts-sparkline-trendline: #6a6d75;

@@ -3054,6 +3054,7 @@
       "menu.select-all.label-container.gap": "3eb63251396b43f22333b79cf5cc5cae64fab377",
       "menu.select-all.label.foreground_color": "d36173b3f1ebd25689d731d9044774a63a642940",
       "menu.select-all.label.gap": "281bbd80e9e8c29686eaa80b5793b36336edb374",
+      "menu.select-all.padding": "a98fe9ec73a1916a5bf7cc16951e82067a55cb12",
       "modal.background_color": "969bf8dba7e1838c653056b87b1bc66ee8500bc7",
       "modal.border_radius": "26662687d329249e721f1d73f5653013c559d08c",
       "modal.button_bar.gap": "bf528745bafb72f420ed0f9bc7f08f36a55c8c87",

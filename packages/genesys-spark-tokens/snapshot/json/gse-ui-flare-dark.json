@@ -122,7 +122,7 @@
           "fontSize": "12px",
           "lineHeight": "18px"
         },
-        "required_color": "#e84e6a",
+        "required_color": "#ee7a8f",
         "optional_color": "#b2b7c4"
       },
       "icon_size": "16px",
@@ -152,7 +152,7 @@
       "padding_small": "4px 0 0 0",
       "error_padding": "4px 0 0 0",
       "default_color": "#c1c6d4",
-      "error_color": "#e84e6a",
+      "error_color": "#ee7a8f",
       "icon_size": "16px"
     },
     "spin_button": {
@@ -849,7 +849,7 @@
     "error": {
       "background_color": "#2d070e",
       "foreground_color": "#ffffff",
-      "icon_color": "#e84e6a",
+      "icon_color": "#ee7a8f",
       "border": {
         "color": "#5a0e1c",
         "width": "1px",
@@ -989,7 +989,7 @@
     }
   },
   "status_glyph": {
-    "negative": "#e84e6a",
+    "negative": "#ee7a8f",
     "positive": "#09b581",
     "neutral": "#f8c73e",
     "information": "#596ea6"
@@ -1022,7 +1022,7 @@
         "foreground_color": "#09b581"
       },
       "error": {
-        "foreground_color": "#e84e6a"
+        "foreground_color": "#ee7a8f"
       }
     }
   },
@@ -1291,7 +1291,7 @@
         "foreground_color": "#adbff0"
       },
       "error": {
-        "foreground_color": "#e84e6a"
+        "foreground_color": "#ee7a8f"
       },
       "height": "16px",
       "width": "16px"
@@ -1336,7 +1336,7 @@
         "foreground_color": "#adbff0"
       },
       "error": {
-        "foreground_color": "#e84e6a"
+        "foreground_color": "#ee7a8f"
       },
       "height": "16px",
       "width": "16px"
@@ -1661,7 +1661,7 @@
           "background_color": "#440a15"
         },
         "on": {
-          "background_color": "#e84e6a"
+          "background_color": "#ee7a8f"
         }
       },
       "hover": {
@@ -1776,7 +1776,7 @@
         "default": "#ffffff"
       },
       "error": {
-        "error_message": "#e84e6a",
+        "error_message": "#ee7a8f",
         "error_helper": "#c1c6d4",
         "text": {
           "fontFamily": "'Noto Sans'",
@@ -1827,7 +1827,7 @@
       },
       "status_icon": {
         "success": "#09b581",
-        "error": "#e84e6a"
+        "error": "#ee7a8f"
       },
       "foreground_color": "#1e1e21"
     },
@@ -1879,7 +1879,7 @@
   },
   "color_picker": {
     "label": {
-      "required_symbol_color": "#e84e6a",
+      "required_symbol_color": "#ee7a8f",
       "text_color": "#ffffff",
       "text": {
         "fontFamily": "'Noto Sans'",
@@ -2061,7 +2061,7 @@
     "error": {
       "background_color": "#440a15",
       "selected_indicator": {
-        "foreground_color": "#e84e6a"
+        "foreground_color": "#ee7a8f"
       },
       "border": {
         "color": "#881429",
@@ -2152,7 +2152,7 @@
         "foreground_color": "#ffffff"
       },
       "error": {
-        "foreground_color": "#e84e6a"
+        "foreground_color": "#ee7a8f"
       },
       "incompleted": {
         "foreground_color": "#cad1e1"
@@ -2172,7 +2172,7 @@
         "foreground_color": "#ffffff"
       },
       "error": {
-        "foreground_color": "#e84e6a"
+        "foreground_color": "#ee7a8f"
       },
       "incompleted": {
         "foreground_color": "#c1c6d4"
@@ -3207,7 +3207,7 @@
     "error": {
       "background_color": "#2a2a2e",
       "foreground_color": "#ffffff",
-      "icon_color": "#e84e6a"
+      "icon_color": "#ee7a8f"
     },
     "heading": {
       "fontFamily": "Urbanist",
@@ -4135,7 +4135,7 @@
     },
     "indicator": {
       "positive": "#09b581",
-      "negative": "#e84e6a"
+      "negative": "#ee7a8f"
     }
   },
   "heatmap": {
@@ -4541,8 +4541,8 @@
       "default": "#09b581"
     },
     "negative": {
-      "reduced": "#e84e6a66",
-      "default": "#e84e6a"
+      "reduced": "#ee7a8f66",
+      "default": "#ee7a8f"
     },
     "neutral": {
       "reduced": "#808db266",
@@ -4581,7 +4581,7 @@
       },
       "error": {
         "icon": {
-          "default": "#e84e6a"
+          "default": "#ee7a8f"
         }
       },
       "loading": {

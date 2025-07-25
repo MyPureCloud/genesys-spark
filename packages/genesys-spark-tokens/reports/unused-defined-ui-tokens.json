@@ -966,7 +966,6 @@
   "--gse-ui-toast-text-fontWeight",
   "--gse-ui-toggle-padding",
   "--gse-ui-tooltip-height",
-  "--gse-ui-tooltip-maxWidth",
   "--gse-ui-tooltip-targetOffset",
   "--gse-ui-treeView-background-hover",
   "--gse-ui-treeView-background-open",
