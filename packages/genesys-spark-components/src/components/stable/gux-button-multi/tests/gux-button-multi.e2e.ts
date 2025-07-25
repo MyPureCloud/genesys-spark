@@ -1,6 +1,7 @@
 import { E2EPage } from '@stencil/core/testing';
 
 import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
+import { renderConfig } from './gux-button-multi.common';
 
 const axeExclusions = [];
 
@@ -26,18 +27,8 @@ async function pressActionItemButton(
 }
 
 describe('gux-button-multi', () => {
-  const html = `
-  <gux-button-multi lang="en" accent="primary">
-    <span slot="title">Primary</span>
-    <gux-list-item>Test 1</gux-list-item>
-    <gux-list-item>Test 2</gux-list-item>
-    <gux-list-item>Test 3</gux-list-item>
-    <gux-list-divider></gux-list-divider>
-    <gux-list-item>Test 4</gux-list-item>
-  </gux-button-multi>
-  `;
   it('renders', async () => {
-    const page = await newSparkE2EPage({ html });
+    const page = await newSparkE2EPage({ html: renderConfig.html });
 
     const element = await page.find('gux-button-multi');
     await a11yCheck(page, axeExclusions);
@@ -45,7 +36,7 @@ describe('gux-button-multi', () => {
   });
 
   it('should fire open and close events if not disabled on click', async () => {
-    const page = await newSparkE2EPage({ html });
+    const page = await newSparkE2EPage({ html: renderConfig.html });
     const onOpen = await page.spyOnEvent('open');
     const onClose = await page.spyOnEvent('close');
 
@@ -60,7 +51,7 @@ describe('gux-button-multi', () => {
   });
 
   it('should fire open and close events if not disabled using the keyboard', async () => {
-    const page = await newSparkE2EPage({ html });
+    const page = await newSparkE2EPage({ html: renderConfig.html });
     const onOpen = await page.spyOnEvent('open');
     const onClose = await page.spyOnEvent('close');
 
@@ -72,7 +63,7 @@ describe('gux-button-multi', () => {
   });
 
   it('should not fire open event if disabled on click', async () => {
-    const page = await newSparkE2EPage({ html });
+    const page = await newSparkE2EPage({ html: renderConfig.html });
     const onOpen = await page.spyOnEvent('open');
     const element = await page.find('gux-button-multi');
     element.setAttribute('disabled', 'disabled');
@@ -86,7 +77,7 @@ describe('gux-button-multi', () => {
   });
 
   it('should not fire open event if disabled using the keyboard', async () => {
-    const page = await newSparkE2EPage({ html });
+    const page = await newSparkE2EPage({ html: renderConfig.html });
     const onOpen = await page.spyOnEvent('open');
     const element = await page.find('gux-button-multi');
     element.setAttribute('disabled', 'disabled');
