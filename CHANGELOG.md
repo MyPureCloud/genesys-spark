@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.160.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.159.0...v4.160.0) (2025-07-26)
+
+
+### Features
+
+* **tokens:** Modified tokens ([9ef28ca](https://github.com/MyPureCloud/genesys-spark/commit/9ef28cab05dd1468cabf9854de72c7b90d68c04f))
+
+
+### Bug Fixes
+
+* **switch-legacy:** add aria-current to selected item ([7272933](https://github.com/MyPureCloud/genesys-spark/commit/72729333f8bb7bd80617eb52c595e0f72d1b1063))
+
 ## [4.159.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.158.0...v4.159.0) (2025-07-24)
 
 
