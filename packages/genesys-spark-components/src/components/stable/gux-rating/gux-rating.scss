@@ -35,4 +35,24 @@
       color: ui.$gse-ui-rating-hover-color;
     }
   }
+
+  .gux-star-rating-shortened {
+    display: flex;
+    flex-direction: column;
+    gap: ui.$gse-ui-ratingGroup-shortened-edit-gap;
+    align-items: flex-start;
+    justify-content: center;
+
+    .gux-star-rating-label-value {
+      display: flex;
+      flex-direction: row;
+      gap: ui.$gse-ui-ratingGroup-shortened-gap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gux-star-rating-value {
+      color: ui.$gse-ui-ratingGroup-label;
+    }
+  }
 }

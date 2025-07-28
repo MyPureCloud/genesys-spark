@@ -4,6 +4,8 @@ import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import clamp from '@utils/number/clamp';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import ratingResources from './i18n/en.json';
 
 @Component({
   styleUrl: 'gux-rating.scss',
@@ -11,7 +13,9 @@ import { logWarn } from '@utils/error/log-error';
   shadow: true
 })
 export class GuxRating {
+  private i18n: GetI18nValue;
   private starContainer: HTMLDivElement;
+  private popoverElement: HTMLGuxPopoverElement;
 
   @Element()
   root: HTMLElement;
@@ -30,6 +34,9 @@ export class GuxRating {
 
   @Prop()
   increment: 'default' | 'half' = 'default';
+
+  @Prop()
+  shortened: boolean = false;
 
   @Listen('click')
   onClick(event: MouseEvent): void {
@@ -134,12 +141,57 @@ export class GuxRating {
       );
   }
 
+  private getShortenedRatingElement(): JSX.Element {
+    let iconName: string;
+
+    if (this.value === this.maxValue) {
+      iconName = 'fa/star-solid';
+    } else if (this.value >= this.maxValue / 2) {
+      iconName = 'fa/star-sharp-half-stroke-regular';
+    } else {
+      iconName = 'fa/star-regular';
+    }
+
+    return (
+      <div class="gux-star-rating-shortened">
+        <div class="gux-star-rating-label-value">
+          <gux-icon icon-name={iconName} decorative size="small"></gux-icon>
+          <span class="gux-star-rating-value">{this.value}</span>
+        </div>
+        <gux-button
+          onClick={this.openPopover.bind(this)}
+          id="popover-target"
+          accent="inline"
+        >
+          <span>{this.i18n('editRating')}</span>
+        </gux-button>
+        <gux-popover
+          position="bottom"
+          for="popover-target"
+          ref={el => (this.popoverElement = el)}
+        >
+          <span slot="title">Title</span>
+        </gux-popover>
+      </div>
+    ) as JSX.Element;
+  }
+
+  private openPopover(): void {
+    if (this.popoverElement) {
+      this.popoverElement.isOpen = true;
+    }
+  }
+
   private getTabIndex(): number {
     return this.disabled ? -1 : 0;
   }
 
   componentWillLoad(): void {
     trackComponent(this.root);
+  }
+
+  async componentWillRender(): Promise<void> {
+    this.i18n = await buildI18nForComponent(this.root, ratingResources);
   }
 
   componentDidLoad(): void {
@@ -173,7 +225,9 @@ export class GuxRating {
             'gux-disabled': this.disabled
           }}
         >
-          {this.getRatingStarElements()}
+          {this.shortened
+            ? this.getShortenedRatingElement()
+            : this.getRatingStarElements()}
         </div>
       </Host>
     ) as JSX.Element;

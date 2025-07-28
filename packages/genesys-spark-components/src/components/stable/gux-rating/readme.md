@@ -18,6 +18,7 @@
 | `increment` | `increment` |             | `"default" \| "half"` | `'default'` |
 | `maxValue`  | `max-value` |             | `number`              | `5`         |
 | `readonly`  | `readonly`  |             | `boolean`             | `false`     |
+| `shortened` | `shortened` |             | `boolean`             | `false`     |
 | `value`     | `value`     |             | `number`              | `0`         |
 
 
@@ -26,11 +27,15 @@
 ### Depends on
 
 - [gux-icon](../gux-icon)
+- [gux-button](../gux-button)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-rating --> gux-icon
+  gux-rating --> gux-button
+  gux-button --> gux-tooltip-beta
+  gux-tooltip-beta --> gux-tooltip-base-beta
   style gux-rating fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
