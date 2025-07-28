@@ -45,7 +45,14 @@ test.describe('gux-rating', () => {
 
   checkRenders({
     renderConfigs,
-    element: 'gux-rating'
+    axeExclusions: [
+      {
+        issueId: 'target-size',
+        target: 'gux-rating[compact=""]',
+        exclusionReason:
+          'The element is only interactable via keyboard so this violation can be excluded.'
+      }
+    ]
   });
 
   test.describe('# count stars', () => {
@@ -469,6 +476,66 @@ test.describe('gux-rating', () => {
       const rating = page.locator('gux-rating');
 
       await expect(rating).toHaveAttribute('tabindex', '-1');
+    });
+  });
+
+  test.describe('# compact mode', () => {
+    test('should display compact rating with value and edit button', async ({
+      page
+    }) => {
+      await setContent(
+        page,
+        '<gux-rating compact value="3" aria-label="Rating"></gux-rating>'
+      );
+
+      const rating = page.locator('gux-rating');
+      await expect(rating.locator('.gux-star-rating-compact')).toBeVisible();
+      await expect(rating.locator('.gux-star-rating-value')).toHaveText('3');
+      await expect(rating.locator('gux-button')).toBeVisible();
+    });
+
+    test('should open popover when edit button is clicked', async ({
+      page
+    }) => {
+      await setContent(
+        page,
+        '<gux-rating compact value="2" aria-label="Rating"></gux-rating>'
+      );
+
+      const editButton = page.locator('gux-rating gux-button');
+      await editButton.click();
+
+      await expect(page.locator('gux-popover-beta')).toHaveAttribute('is-open');
+    });
+
+    test('should not show edit button when readonly', async ({ page }) => {
+      await setContent(
+        page,
+        '<gux-rating compact readonly value="3" aria-label="Rating"></gux-rating>'
+      );
+
+      const rating = page.locator('gux-rating');
+      await expect(rating.locator('gux-button')).toBeHidden();
+    });
+
+    test('should update value when popover rating is clicked', async ({
+      page
+    }) => {
+      await setContent(
+        page,
+        '<gux-rating compact value="2" aria-label="Rating"></gux-rating>'
+      );
+
+      const editButton = page.locator('gux-rating gux-button');
+      await editButton.click();
+
+      const popoverRating = page.locator('gux-popover-beta gux-rating');
+      const fourthStar = popoverRating.locator('gux-icon').nth(3);
+      await fourthStar.locator('.gux-icon-container').click();
+
+      await expect(
+        page.locator('gux-rating .gux-star-rating-value')
+      ).toHaveText('4');
     });
   });
 });
