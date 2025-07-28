@@ -1,4 +1,13 @@
-import { Component, Element, h, Host, Listen, JSX, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Host,
+  Listen,
+  JSX,
+  Prop,
+  State
+} from '@stencil/core';
 
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import clamp from '@utils/number/clamp';
@@ -37,6 +46,9 @@ export class GuxRating {
 
   @Prop()
   shortened: boolean = false;
+
+  @State()
+  isOpen: boolean = false;
 
   @Listen('click')
   onClick(event: MouseEvent): void {
@@ -159,7 +171,7 @@ export class GuxRating {
           <span class="gux-star-rating-value">{this.value}</span>
         </div>
         <gux-button
-          onClick={this.openPopover.bind(this)}
+          onClick={() => this.togglePopover()}
           id="popover-target"
           accent="inline"
         >
@@ -169,6 +181,7 @@ export class GuxRating {
           position="bottom"
           for="popover-target"
           ref={el => (this.popoverElement = el)}
+          is-open={this.isOpen}
         >
           <span slot="title">Title</span>
         </gux-popover>
@@ -176,10 +189,8 @@ export class GuxRating {
     ) as JSX.Element;
   }
 
-  private openPopover(): void {
-    if (this.popoverElement) {
-      this.popoverElement.isOpen = true;
-    }
+  private togglePopover(): void {
+    this.isOpen = !this.isOpen;
   }
 
   private getTabIndex(): number {
