@@ -2007,6 +2007,10 @@
           "value": "128px",
           "type": "sizing"
         },
+        "min_height": {
+          "value": "53px",
+          "type": "sizing"
+        },
         "body": {
           "margin_right": {
             "value": "{progress_and_loading.medium.gap}",
@@ -2021,6 +2025,10 @@
       "vertical": {
         "min_height": {
           "value": "90px",
+          "type": "sizing"
+        },
+        "min_width": {
+          "value": "128px",
           "type": "sizing"
         },
         "body": {
