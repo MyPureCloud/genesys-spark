@@ -2181,6 +2181,7 @@
     "step": {
       "horizontal": {
         "min_width": "128px",
+        "min_height": "53px",
         "body": {
           "margin_right": "16px"
         },
@@ -2188,6 +2189,7 @@
       },
       "vertical": {
         "min_height": "90px",
+        "min_width": "128px",
         "body": {
           "margin_right": "16px",
           "margin_top": "4px"
