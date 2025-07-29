@@ -30,7 +30,9 @@
   gux-icon {
     flex: 0 0 auto;
     color: ui.$gse-ui-rating-default-color;
+  }
 
+  &:not(.gux-shortened) gux-icon {
     &:hover:not(.gux-disabled) {
       color: ui.$gse-ui-rating-hover-color;
     }

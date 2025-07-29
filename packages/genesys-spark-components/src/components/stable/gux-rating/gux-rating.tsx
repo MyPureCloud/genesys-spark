@@ -15,6 +15,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
 import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import ratingResources from './i18n/en.json';
+import { afterNextRender } from '@utils/dom/after-next-render';
 
 @Component({
   styleUrl: 'gux-rating.scss',
@@ -24,6 +25,7 @@ import ratingResources from './i18n/en.json';
 export class GuxRating {
   private i18n: GetI18nValue;
   private starContainer: HTMLDivElement;
+  private ratingElement: HTMLGuxRatingElement;
 
   @Element()
   root: HTMLElement;
@@ -185,13 +187,13 @@ export class GuxRating {
           >
             <span>{this.i18n('editRating')}</span>
           </gux-button>
-          <gux-popover-beta
+          <gux-popover
             position="bottom"
             for="popover-target"
             is-open={this.isOpen}
           >
             <gux-rating
-              autofocus
+              ref={(el: HTMLGuxRatingElement) => (this.ratingElement = el)}
               value={this.value}
               max-value={this.maxValue}
               increment={this.increment}
@@ -199,14 +201,23 @@ export class GuxRating {
               onClick={(e: Event) => this.handlePopoverRatingChange(e)}
               onKeyDown={(e: Event) => this.handlePopoverRatingChange(e)}
             ></gux-rating>
-          </gux-popover-beta>
+          </gux-popover>
         </div>
       ) as JSX.Element;
     }
   }
 
+  private focusRatingElement(): void {
+    afterNextRender(() => {
+      this.ratingElement.focus();
+    });
+  }
+
   private togglePopover(): void {
     this.isOpen = !this.isOpen;
+    if (this.isOpen) {
+      this.focusRatingElement();
+    }
   }
 
   private handlePopoverRatingChange(event: Event): void {
@@ -256,7 +267,8 @@ export class GuxRating {
           ref={(el: HTMLDivElement) => (this.starContainer = el)}
           class={{
             'gux-rating-star-container': true,
-            'gux-disabled': this.disabled
+            'gux-disabled': this.disabled,
+            'gux-shortened': this.shortened
           }}
         >
           {this.shortened
