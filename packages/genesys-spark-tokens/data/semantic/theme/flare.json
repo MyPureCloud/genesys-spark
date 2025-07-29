@@ -52,6 +52,10 @@
             "value": "{color.genesys_navy.50}",
             "type": "color"
           },
+          "50": {
+            "value": "{color.azure_blue.100}",
+            "type": "color"
+          },
           "55": {
             "value": "{color.azure_blue.50}",
             "type": "color"
