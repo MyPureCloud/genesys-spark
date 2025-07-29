@@ -7,7 +7,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
       <gux-dropdown aria-label="Items per page dropdown, 25 items per page selected">
         <template shadowrootmode="open" shadowrootdelegatesfocus>
           <gux-popup>
-            <div class="gux-target-container-collapsed" slot="target">
+            <div class="gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
@@ -87,7 +87,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
       <gux-dropdown aria-label="Items per page dropdown, 50 items per page selected">
         <template shadowrootmode="open" shadowrootdelegatesfocus>
           <gux-popup>
-            <div class="gux-target-container-collapsed" slot="target">
+            <div class="gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
@@ -167,7 +167,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
       <gux-dropdown aria-label="Items per page dropdown, 75 items per page selected">
         <template shadowrootmode="open" shadowrootdelegatesfocus>
           <gux-popup>
-            <div class="gux-target-container-collapsed" slot="target">
+            <div class="gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
@@ -247,7 +247,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
       <gux-dropdown aria-label="Items per page dropdown, 100 items per page selected">
         <template shadowrootmode="open" shadowrootdelegatesfocus>
           <gux-popup>
-            <div class="gux-target-container-collapsed" slot="target">
+            <div class="gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
@@ -327,7 +327,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (5) 1`]
       <gux-dropdown aria-label="Items per page dropdown, 25 items per page selected">
         <template shadowrootmode="open" shadowrootdelegatesfocus>
           <gux-popup disabled="">
-            <div class="gux-disabled gux-target-container-collapsed" slot="target">
+            <div class="gux-disabled gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
@@ -407,7 +407,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (6) 1`]
       <gux-dropdown aria-label="Items per page dropdown, 50 items per page selected">
         <template shadowrootmode="open" shadowrootdelegatesfocus>
           <gux-popup disabled="">
-            <div class="gux-disabled gux-target-container-collapsed" slot="target">
+            <div class="gux-disabled gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
@@ -487,7 +487,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (7) 1`]
       <gux-dropdown aria-label="Items per page dropdown, 75 items per page selected">
         <template shadowrootmode="open" shadowrootdelegatesfocus>
           <gux-popup disabled="">
-            <div class="gux-disabled gux-target-container-collapsed" slot="target">
+            <div class="gux-disabled gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
@@ -567,7 +567,7 @@ exports[`gux-pagination-items-per-page #render should render as expected (8) 1`]
       <gux-dropdown aria-label="Items per page dropdown, 100 items per page selected">
         <template shadowrootmode="open" shadowrootdelegatesfocus>
           <gux-popup disabled="">
-            <div class="gux-disabled gux-target-container-collapsed" slot="target">
+            <div class="gux-disabled gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
                 <div class="gux-field-content">
                   <div class="gux-selected-option">
