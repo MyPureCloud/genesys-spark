@@ -63,7 +63,7 @@ export class GuxPromptInputBeta {
     this.i18n = await buildI18nForComponent(this.root, translationResources);
   }
 
-  submit(): void {
+  private submit(): void {
     if (this.isGenerating) {
       return;
     }
@@ -72,11 +72,11 @@ export class GuxPromptInputBeta {
     this.onpromptinputsubmit.emit({ inputText: this.inputElement.value });
   }
 
-  keyUp(): void {
+  private keyUp(): void {
     this.hasInputText = this.inputElement.value?.length > 0;
   }
 
-  renderCTA(): JSX.Element {
+  private renderCTA(): JSX.Element {
     if (this.isGenerating) {
       return (
         <gux-button-slot accent="danger">

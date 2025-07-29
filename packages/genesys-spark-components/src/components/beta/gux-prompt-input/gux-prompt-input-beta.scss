@@ -67,7 +67,7 @@
       inline-size: ui.$gse-ui-button-iconOnly-width;
       block-size: ui.$gse-ui-button-default-height;
       padding-block: 0;
-      padding-inline: 8px;
+      padding-inline: 8px; // TODO: COMUI-3928 Get token from UX
 
       gux-icon {
         background: ui.$gse-ui-formControl-input-backgroundColor;
