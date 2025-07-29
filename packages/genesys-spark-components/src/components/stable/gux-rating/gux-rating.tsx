@@ -24,7 +24,6 @@ import ratingResources from './i18n/en.json';
 export class GuxRating {
   private i18n: GetI18nValue;
   private starContainer: HTMLDivElement;
-  private popoverElement: HTMLGuxPopoverElement;
 
   @Element()
   root: HTMLElement;
@@ -54,7 +53,7 @@ export class GuxRating {
   onClick(event: MouseEvent): void {
     event.stopPropagation();
 
-    if (this.disabled || this.readonly) {
+    if (this.disabled || this.readonly || this.shortened) {
       return;
     }
 
@@ -84,7 +83,7 @@ export class GuxRating {
   onKeyDown(event: KeyboardEvent): void {
     event.stopPropagation();
 
-    if (this.disabled || this.readonly) {
+    if (this.disabled || this.readonly || this.shortened) {
       return;
     }
 
@@ -170,27 +169,51 @@ export class GuxRating {
           <gux-icon icon-name={iconName} decorative size="small"></gux-icon>
           <span class="gux-star-rating-value">{this.value}</span>
         </div>
-        <gux-button
-          onClick={() => this.togglePopover()}
-          id="popover-target"
-          accent="inline"
-        >
-          <span>{this.i18n('editRating')}</span>
-        </gux-button>
-        <gux-popover
-          position="bottom"
-          for="popover-target"
-          ref={el => (this.popoverElement = el)}
-          is-open={this.isOpen}
-        >
-          <span slot="title">Title</span>
-        </gux-popover>
+        {this.renderEditRatingButton()}
       </div>
     ) as JSX.Element;
   }
 
+  private renderEditRatingButton(): JSX.Element {
+    if (!this.readonly) {
+      return (
+        <div class="gux-edit-rating-button">
+          <gux-button
+            onClick={() => this.togglePopover()}
+            id="popover-target"
+            accent="inline"
+          >
+            <span>{this.i18n('editRating')}</span>
+          </gux-button>
+          <gux-popover-beta
+            position="bottom"
+            for="popover-target"
+            is-open={this.isOpen}
+          >
+            <gux-rating
+              autofocus
+              value={this.value}
+              max-value={this.maxValue}
+              increment={this.increment}
+              readonly={this.readonly}
+              onClick={(e: Event) => this.handlePopoverRatingChange(e)}
+              onKeyDown={(e: Event) => this.handlePopoverRatingChange(e)}
+            ></gux-rating>
+          </gux-popover-beta>
+        </div>
+      ) as JSX.Element;
+    }
+  }
+
   private togglePopover(): void {
     this.isOpen = !this.isOpen;
+  }
+
+  private handlePopoverRatingChange(event: Event): void {
+    const newValue = (event.target as HTMLGuxRatingElement).value;
+    this.value = newValue;
+    simulateNativeEvent(this.root, 'input');
+    simulateNativeEvent(this.root, 'change');
   }
 
   private getTabIndex(): number {

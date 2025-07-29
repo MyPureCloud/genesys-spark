@@ -52,6 +52,10 @@
     }
 
     .gux-star-rating-value {
+      font-family: ui.$gse-ui-ratingGroup-text-fontFamily;
+      font-size: ui.$gse-ui-ratingGroup-text-fontSize;
+      font-weight: ui.$gse-ui-ratingGroup-text-fontWeight;
+      line-height: ui.$gse-ui-ratingGroup-text-lineHeight;
       color: ui.$gse-ui-ratingGroup-label;
     }
   }
