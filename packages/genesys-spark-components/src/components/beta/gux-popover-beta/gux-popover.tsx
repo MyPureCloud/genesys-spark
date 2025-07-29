@@ -30,6 +30,7 @@ import { findElementById } from '@utils/dom/find-element-by-id';
 /**
  * @slot - popover content
  * @slot title - Slot for popover title
+ * @slot footer - Slot for popover footer
  */
 
 @Component({
@@ -140,6 +141,10 @@ export class GuxPopover {
 
   get titleSlot(): Element | null {
     return getSlot(this.root, 'title');
+  }
+
+  get footerSlot(): Element | null {
+    return getSlot(this.root, 'footer');
   }
 
   private getForElement(): HTMLInputElement {
@@ -371,6 +376,9 @@ export class GuxPopover {
         </div>
         <div class="gux-popover-content">
           <slot />
+        </div>
+        <div class={{ 'gux-popover-footer': Boolean(this.footerSlot) }}>
+          <slot name="footer"></slot>
         </div>
       </div>
     ) as JSX.Element;

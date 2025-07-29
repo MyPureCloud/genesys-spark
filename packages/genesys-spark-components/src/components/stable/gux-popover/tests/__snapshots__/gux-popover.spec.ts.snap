@@ -13,6 +13,9 @@ exports[`gux-popover should render popover 1`] = `
       <div class="gux-popover-content">
         <slot></slot>
       </div>
+      <div class="gux-popover-footer">
+        <slot name="footer"></slot>
+      </div>
     </div>
   </template>
   <span slot="title">
@@ -20,6 +23,9 @@ exports[`gux-popover should render popover 1`] = `
   </span>
   <div>
     popover content
+  </div>
+  <div slot="footer">
+    footer content
   </div>
 </gux-popover>
 `;
