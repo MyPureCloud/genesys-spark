@@ -14,16 +14,16 @@
   },
   "elevation": {
     "0_page": "0",
-    "1_card": "1",
-    "2_side_panel": "100",
-    "3_global_navigation": "200",
-    "4_copilot": "300",
-    "5_shroud": "400",
-    "6_modal": 401,
-    "7_menu": "500",
-    "8_dragged_item": "600",
-    "9_toast": "700",
-    "10_tooltip": "800"
+    "1_card": "100",
+    "2_side_panel": "200",
+    "3_global_navigation": "300",
+    "4_copilot": "400",
+    "5_shroud": "500",
+    "6_modal": "550",
+    "7_menu": "600",
+    "8_dragged_item": "700",
+    "9_toast": "800",
+    "10_tooltip": "900"
   },
   "opacity": {
     "disabled": ".5",
