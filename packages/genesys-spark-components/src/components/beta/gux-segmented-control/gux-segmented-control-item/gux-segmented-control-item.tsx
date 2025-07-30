@@ -118,14 +118,14 @@ export class GuxSegmentedControlItem {
           disabled={this.disabled || this.hasDisabledParent()}
         >
           {this.renderIconSlot()}
-          <div
+          <span
             class={{
               'gux-text': true,
               'gux-icon-only': this.iconOnly
             }}
           >
             <slot name="text" />
-          </div>
+          </span>
         </button>
         {this.renderTooltip()}
       </div>
