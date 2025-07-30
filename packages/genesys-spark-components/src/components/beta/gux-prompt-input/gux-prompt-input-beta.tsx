@@ -132,6 +132,7 @@ export class GuxPromptInputBeta {
             ref={el => (this.inputElement = el)}
             placeholder={this.placeholder || this.i18n('inputPlaceholder')}
             onKeyUp={this.keyUp.bind(this)}
+            data-testid="prompt-input"
           ></input>
 
           {this.isGenerating
