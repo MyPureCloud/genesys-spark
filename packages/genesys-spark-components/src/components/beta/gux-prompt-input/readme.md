@@ -1,4 +1,5 @@
-# gux-prompt-input
+# gux-prompt-input-beta
+
 
 
 <!-- Auto Generated Below -->
@@ -13,9 +14,10 @@
 
 ## Events
 
-| Event                 | Description                                                                  | Type                                  |
-| --------------------- | ---------------------------------------------------------------------------- | ------------------------------------- |
-| `onpromptinputsubmit` | Triggers when the CTA button is clicked to initiate Copilot text generating. | `CustomEvent<{ inputText: string; }>` |
+| Event                         | Description                                                                              | Type                                  |
+| ----------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------- |
+| `onpromptinputgenerate`       | Triggers when the submit generate button is clicked to initiate Copilot text generation. | `CustomEvent<{ inputText: string; }>` |
+| `onpromptinputstopgeneration` | Triggers when the stop generate button is clicked to stop Copilot text generation.       | `CustomEvent<void>`                   |
 
 
 ## Slots
