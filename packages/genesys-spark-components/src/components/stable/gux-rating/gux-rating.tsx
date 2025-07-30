@@ -213,7 +213,7 @@ export class GuxRating {
             accent="inline"
             aria-expanded={this.isOpen.toString()}
           >
-            <span>{this.i18n('editRating')}</span>
+            {this.i18n('editRating')}
           </gux-button>
           <gux-popover
             position="bottom"

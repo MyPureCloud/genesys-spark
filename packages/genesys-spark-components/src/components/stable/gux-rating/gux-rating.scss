@@ -35,6 +35,7 @@
   &:not(.gux-shortened) gux-icon {
     &:hover:not(.gux-disabled) {
       color: ui.$gse-ui-rating-hover-color;
+      cursor: pointer;
     }
   }
 
