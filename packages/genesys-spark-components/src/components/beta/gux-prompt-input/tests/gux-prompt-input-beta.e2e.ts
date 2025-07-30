@@ -6,7 +6,7 @@ describe('gux-prompt-input-beta', () => {
     {
       issueId: 'color-contrast',
       exclusionReason:
-        'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds for the CTA button (probably just the disabled button state colors need to be changed)'
+        'COMUI-4091: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds for the CTA button (probably just the disabled button state colors need to be changed)'
     }
   ];
 

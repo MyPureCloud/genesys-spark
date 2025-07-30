@@ -40,10 +40,16 @@ export class GuxPromptInputBeta {
   private i18n: GetI18nValue;
 
   /**
-   * Triggers when the CTA button is clicked to initiate Copilot text generating.
+   * Triggers when the CTA button is clicked to initiate Copilot text generation.
    */
   @Event()
   onpromptinputsubmit: EventEmitter<{ inputText: string }>;
+
+  /**
+   * Triggers when the generating button is clicked to stop Copilot text generation.
+   */
+  @Event()
+  onpromptinputstopgeneration: EventEmitter<void>;
 
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
@@ -64,37 +70,20 @@ export class GuxPromptInputBeta {
   }
 
   private submit(): void {
-    if (this.isGenerating) {
-      return;
-    }
-
-    this.isGenerating = true;
     this.onpromptinputsubmit.emit({ inputText: this.inputElement.value });
+    this.isGenerating = true;
+  }
+
+  private stopGeneration(): void {
+    this.onpromptinputstopgeneration.emit();
+    this.isGenerating = false;
   }
 
   private keyUp(): void {
     this.hasInputText = this.inputElement.value?.length > 0;
   }
 
-  private renderCTA(): JSX.Element {
-    if (this.isGenerating) {
-      return (
-        <gux-button-slot accent="danger">
-          <button
-            type="button"
-            class="gux-cta-generating"
-            onClick={() => this.submit()}
-          >
-            <gux-icon
-              icon-name="fa/square-regular"
-              size="small"
-              decorative
-            ></gux-icon>
-          </button>
-        </gux-button-slot>
-      );
-    }
-
+  private renderSubmitButton(): JSX.Element {
     return (
       <gux-button-slot accent="primary">
         <button
@@ -114,6 +103,24 @@ export class GuxPromptInputBeta {
     );
   }
 
+  private renderStopButton(): JSX.Element {
+    return (
+      <gux-button-slot accent="danger">
+        <button
+          type="button"
+          class="gux-cta-generating"
+          onClick={() => this.stopGeneration()}
+        >
+          <gux-icon
+            icon-name="fa/square-regular"
+            size="small"
+            decorative
+          ></gux-icon>
+        </button>
+      </gux-button-slot>
+    );
+  }
+
   render(): JSX.Element {
     return (
       <Host>
@@ -125,7 +132,9 @@ export class GuxPromptInputBeta {
             onKeyUp={this.keyUp.bind(this)}
           ></input>
 
-          {this.renderCTA()}
+          {this.isGenerating
+            ? this.renderStopButton()
+            : this.renderSubmitButton()}
         </div>
         <div class="caution-message">
           <slot name="caution-message" />
