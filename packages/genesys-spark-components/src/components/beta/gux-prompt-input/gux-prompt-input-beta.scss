@@ -33,7 +33,7 @@
     border: none;
   }
 
-  .gux-cta {
+  .gux-generate {
     display: flex;
     flex-shrink: 0;
     align-items: center;
@@ -59,7 +59,7 @@
       border-radius: ui.$gse-ui-button-borderRadius;
     }
 
-    &-generating {
+    &-cancel {
       display: flex;
       gap: ui.$gse-ui-segmentedControl-button-padding; // TODO: COMUI-3928 not sure about this mapping from what's declared in Figma: var(--button-padding_icon_only, 8px);
       align-items: center;

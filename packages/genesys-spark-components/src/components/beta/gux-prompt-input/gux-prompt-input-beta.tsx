@@ -40,10 +40,10 @@ export class GuxPromptInputBeta {
   private i18n: GetI18nValue;
 
   /**
-   * Triggers when the CTA button is clicked to initiate Copilot text generation.
+   * Triggers when the generate button is clicked to initiate Copilot text generation.
    */
   @Event()
-  onpromptinputsubmit: EventEmitter<{ inputText: string }>;
+  onpromptinputgenerate: EventEmitter<{ inputText: string }>;
 
   /**
    * Triggers when the generating button is clicked to stop Copilot text generation.
@@ -70,7 +70,7 @@ export class GuxPromptInputBeta {
   }
 
   private submit(): void {
-    this.onpromptinputsubmit.emit({ inputText: this.inputElement.value });
+    this.onpromptinputgenerate.emit({ inputText: this.inputElement.value });
     this.isGenerating = true;
   }
 
@@ -88,10 +88,11 @@ export class GuxPromptInputBeta {
       <gux-button-slot accent="primary">
         <button
           type="button"
-          class={this.hasInputText ? 'gux-cta-active' : 'gux-cta'}
+          class={`gux-generate${this.hasInputText ? '-active' : ''}`}
           onClick={() => this.submit()}
           disabled={!this.hasInputText}
           title={this.i18n('generateGenesysAIText')}
+          data-testid="generate-button"
         >
           <gux-icon
             icon-name="fa/arrow-up-regular"
@@ -108,8 +109,9 @@ export class GuxPromptInputBeta {
       <gux-button-slot accent="danger">
         <button
           type="button"
-          class="gux-cta-generating"
+          class="gux-generate-cancel"
           onClick={() => this.stopGeneration()}
+          data-testid="stop-generation"
         >
           <gux-icon
             icon-name="fa/square-regular"
