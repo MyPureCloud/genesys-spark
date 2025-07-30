@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.161.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.160.1...v4.161.0) (2025-07-30)
+
+
+### Features
+
+* **popover:** Add footer slot ([#1263](https://github.com/MyPureCloud/genesys-spark/issues/1263)) ([e6c25e9](https://github.com/MyPureCloud/genesys-spark/commit/e6c25e92d373fead0b21d0133cec12369b815ed8))
+
+
+### Bug Fixes
+
+* **dropdown:** allow to filter dropdown on focus ([4e78409](https://github.com/MyPureCloud/genesys-spark/commit/4e7840916dbd768e44c4200241e450019b602ef8))
+* **other:** Fix for broken links in z-index etc examples ([#1284](https://github.com/MyPureCloud/genesys-spark/issues/1284)) ([7a2fd90](https://github.com/MyPureCloud/genesys-spark/commit/7a2fd90ef34f28091f38ceb7cf1120f3ef6eab59))
+
 ### [4.160.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.160.0...v4.160.1) (2025-07-28)
 
 ## [4.160.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.159.0...v4.160.0) (2025-07-26)
