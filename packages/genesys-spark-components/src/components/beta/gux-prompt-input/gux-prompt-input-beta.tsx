@@ -40,13 +40,13 @@ export class GuxPromptInputBeta {
   private i18n: GetI18nValue;
 
   /**
-   * Triggers when the generate button is clicked to initiate Copilot text generation.
+   * Triggers when the submit generate button is clicked to initiate Copilot text generation.
    */
   @Event()
   onpromptinputgenerate: EventEmitter<{ inputText: string }>;
 
   /**
-   * Triggers when the generating button is clicked to stop Copilot text generation.
+   * Triggers when the stop generate button is clicked to stop Copilot text generation.
    */
   @Event()
   onpromptinputstopgeneration: EventEmitter<void>;
