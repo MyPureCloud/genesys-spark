@@ -32,7 +32,7 @@
 
 - [gux-icon](../gux-icon)
 - [gux-button](../gux-button)
-- [gux-popover-beta](../../beta/gux-popover-beta)
+- [gux-popover](../gux-popover)
 - [gux-rating](.)
 
 ### Graph
@@ -41,7 +41,7 @@ graph TD;
   gux-rating --> gux-rating
   gux-button --> gux-tooltip-beta
   gux-tooltip-beta --> gux-tooltip-base-beta
-  gux-popover-beta --> gux-dismiss-button
+  gux-popover --> gux-dismiss-button
   gux-dismiss-button --> gux-button-slot
   gux-dismiss-button --> gux-icon
   style gux-rating fill:#f9f,stroke:#333,stroke-width:4px

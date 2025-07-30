@@ -16,6 +16,7 @@ import { logWarn } from '@utils/error/log-error';
 import { buildI18nForComponent, GetI18nValue } from 'i18n';
 import ratingResources from './i18n/en.json';
 import { afterNextRender } from '@utils/dom/after-next-render';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
 
 @Component({
   styleUrl: 'gux-rating.scss',
@@ -26,6 +27,7 @@ export class GuxRating {
   private i18n: GetI18nValue;
   private starContainer: HTMLDivElement;
   private ratingElement: HTMLGuxRatingElement;
+  private editRatingButtonElement: HTMLGuxButtonElement;
 
   @Element()
   root: HTMLElement;
@@ -50,6 +52,18 @@ export class GuxRating {
 
   @State()
   isOpen: boolean = false;
+
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside(): void {
+    this.isOpen = false;
+  }
+
+  @Listen('focus')
+  onFocusIn(): void {
+    if (this.shortened) {
+      this.editRatingButtonElement.focus();
+    }
+  }
 
   @Listen('click')
   onClick(event: MouseEvent): void {
@@ -114,6 +128,14 @@ export class GuxRating {
         this.updateRatingValue(-Infinity);
         break;
     }
+  }
+
+  get ariaLabel(): string {
+    return this.root?.getAttribute('aria-label');
+  }
+
+  get ariaLabelledby(): string {
+    return this.root?.getAttribute('aria-labelledby');
   }
 
   private updateRatingValue(newValue: number): void {
@@ -181,9 +203,15 @@ export class GuxRating {
       return (
         <div class="gux-edit-rating-button">
           <gux-button
-            onClick={() => this.togglePopover()}
+            ref={(el: HTMLGuxButtonElement) =>
+              (this.editRatingButtonElement = el)
+            }
+            onClick={() => {
+              this.togglePopover();
+            }}
             id="popover-target"
             accent="inline"
+            aria-expanded={this.isOpen.toString()}
           >
             <span>{this.i18n('editRating')}</span>
           </gux-button>
@@ -200,6 +228,8 @@ export class GuxRating {
               readonly={this.readonly}
               onClick={(e: Event) => this.handlePopoverRatingChange(e)}
               onKeyDown={(e: Event) => this.handlePopoverRatingChange(e)}
+              aria-label={this.ariaLabel}
+              aria-labelledby={this.ariaLabelledby}
             ></gux-rating>
           </gux-popover>
         </div>
@@ -209,7 +239,7 @@ export class GuxRating {
 
   private focusRatingElement(): void {
     afterNextRender(() => {
-      this.ratingElement.focus();
+      this.ratingElement?.focus();
     });
   }
 
