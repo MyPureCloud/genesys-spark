@@ -1365,52 +1365,52 @@
       "description": "The base token for elevation."
     },
     "1_card": {
-      "value": "{z_index.1}",
+      "value": "{z_index.100}",
       "type": "zindex",
       "description": "The recommended z-index for cards."
     },
     "2_side_panel": {
-      "value": "{z_index.100}",
+      "value": "{z_index.200}",
       "type": "zindex",
       "description": "The recommended z-index for side panels."
     },
     "3_global_navigation": {
-      "value": "{z_index.200}",
+      "value": "{z_index.300}",
       "type": "zindex",
       "description": "The recommended z-index for global navigation."
     },
     "4_copilot": {
-      "value": "{z_index.300}",
+      "value": "{z_index.400}",
       "type": "zindex",
       "description": "The recommended z-index for the copilot panel."
     },
     "5_shroud": {
-      "value": "{z_index.400}",
+      "value": "{z_index.500}",
       "type": "zindex",
       "description": "The recommended z-index for shrouds."
     },
     "6_modal": {
-      "value": "{z_index.400}+1",
+      "value": "{z_index.550}",
       "type": "zindex",
       "description": "The recommended z-index for modals."
     },
     "7_menu": {
-      "value": "{z_index.500}",
+      "value": "{z_index.600}",
       "type": "zindex",
       "description": "The recommended z-index for menus, like dropdown menus or popovers."
     },
     "8_dragged_item": {
-      "value": "{z_index.600}",
+      "value": "{z_index.700}",
       "type": "zindex",
       "description": "The recommended z-index for items that are currently being dragged by the user."
     },
     "9_toast": {
-      "value": "{z_index.700}",
+      "value": "{z_index.800}",
       "type": "zindex",
       "description": "The recommended z-index for toasts."
     },
     "10_tooltip": {
-      "value": "{z_index.800}",
+      "value": "{z_index.900}",
       "type": "zindex",
       "description": "The recommended z-index for tooltips."
     }
