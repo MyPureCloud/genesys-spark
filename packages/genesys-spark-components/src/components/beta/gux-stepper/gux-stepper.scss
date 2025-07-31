@@ -12,6 +12,7 @@
       flex-direction: row;
 
       --stepper-min-inline-size: var(--gse-ui-stepper-step-horizontal-minWidth);
+      --stepper-min-block-size: var(--gse-ui-stepper-step-horizontal-minHeight);
       --step-gap: var(--gse-ui-stepper-step-gap);
       --stepper-padding-block: var(--gse-ui-stepper-step-horizontal-gap) 0;
       --stepper-border-block-start-incomplete: var(
@@ -37,6 +38,7 @@
 
       --step-gap: var(--gse-ui-stepper-step-vertical-gap);
       --stepper-min-block-size: var(--gse-ui-stepper-step-vertical-minHeight);
+      --stepper-min-inline-size: var(--gse-ui-stepper-step-vertical-minWidth);
       --stepper-padding-inline: var(--gse-ui-stepper-step-vertical-gap) 0;
       --stepper-border-inline-start-incomplete: var(
           --gse-ui-stepper-bar-horizontal-height

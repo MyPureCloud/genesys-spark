@@ -1011,9 +1011,11 @@
   --gse-ui-stepper-bar-error-foregroundColor: #b51b37;
   --gse-ui-stepper-bar-incompleted-foregroundColor: #c1c6d4;
   --gse-ui-stepper-step-horizontal-minWidth: 128px;
+  --gse-ui-stepper-step-horizontal-minHeight: 53px;
   --gse-ui-stepper-step-horizontal-body-marginRight: 16px;
   --gse-ui-stepper-step-horizontal-gap: 12px;
   --gse-ui-stepper-step-vertical-minHeight: 90px;
+  --gse-ui-stepper-step-vertical-minWidth: 128px;
   --gse-ui-stepper-step-vertical-body-marginRight: 16px;
   --gse-ui-stepper-step-vertical-body-marginTop: 4px;
   --gse-ui-stepper-step-vertical-gap: 12px;
@@ -3305,9 +3307,11 @@
   --gse-ui-stepper-bar-error-foregroundColor: #ee7a8f;
   --gse-ui-stepper-bar-incompleted-foregroundColor: #c1c6d4;
   --gse-ui-stepper-step-horizontal-minWidth: 128px;
+  --gse-ui-stepper-step-horizontal-minHeight: 53px;
   --gse-ui-stepper-step-horizontal-body-marginRight: 16px;
   --gse-ui-stepper-step-horizontal-gap: 12px;
   --gse-ui-stepper-step-vertical-minHeight: 90px;
+  --gse-ui-stepper-step-vertical-minWidth: 128px;
   --gse-ui-stepper-step-vertical-body-marginRight: 16px;
   --gse-ui-stepper-step-vertical-body-marginTop: 4px;
   --gse-ui-stepper-step-vertical-gap: 12px;
