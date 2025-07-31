@@ -1,0 +1,21 @@
+deploy:
+  branchPath:
+    - name: dev
+      schedule: always
+      type: habitat
+    - filters:
+        family: webui
+      name: dev
+      schedule: always
+      sequence: parallel
+      type: environment
+  path:
+    - name: dev
+      schedule: always
+      type: habitat
+    - filters:
+        family: webui
+      name: dev
+      schedule: always
+      sequence: parallel
+      type: environment

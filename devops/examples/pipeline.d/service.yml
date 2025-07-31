@@ -1,0 +1,17 @@
+---
+service:
+  family:
+    - core # Required
+    - webui # UI services are expected to have webui defined as a family
+  name: common-ui-docs--genesys-webcomponents-webui
+  team: Core UI
+  blueprint: webUi
+  jiraProjectKey: COMUI
+  pmContact: brian.dupuis@genesys.com
+  qaContact: yahia.tahat@genesys.com
+  gitDefaultBranch: main
+costAllocation:
+  productGroup: Platform
+  businessUnit: CX
+  consumedBy:
+    - CX

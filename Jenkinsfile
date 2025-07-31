@@ -10,25 +10,18 @@ Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch
 
 Boolean isPublicBranch = isReleaseBranch || isFeatureBranch
 
-webappPipeline {
-    projectName = 'spark-components'
-    team = 'Core UI'
-    mailer = 'matthew.cheely@genesys.com, daragh.king@genesys.com, jordan.stith@genesys.com, thomas.dillon@genesys.com, katie.bobbe@genesys.com, gavin.everett@genesys.com, jason.evans@genesys.com'
-    chatGroupId='adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
+webappPipelineV2 {
+    urlPrefix = 'spark-components'
+    agentLabel = 'dev_x86_shared'
     nodeVersion = '16.18.0'
-    testJob = 'no-tests'
-    deployConfig = [:]
+    mailer = 'CoreUI@genesys.com'
+    chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
     manifest = customManifest('./packages/genesys-spark-components/dist') {
         sh('./packages/genesys-spark-components/scripts/generate-manifest.js')
         readJSON(file: './packages/genesys-spark-components/manifest.json')
     }
-    buildType = {
-        if (isReleaseBranch) {
-            return 'MAINLINE'
-        }
-
-        return isFeatureBranch ? 'FEATURE' : 'CI'
-    }
+    releasableBranchPrefixes = ['beta/', 'maintenance/']
+    skipDeploy = true
     checkoutStep = {
         checkout(scm)
         sh("git checkout ${env.BRANCH_NAME}")
@@ -37,26 +30,39 @@ webappPipeline {
             sh('git fetch --tags')
         }
     }
-    ciTests = {
+    prepareStep = {
+        if (isReleaseBranch) {
+            sh('npm run devops.create.pipeline.assets.release')
+        } else {
+            sh('npm run devops.create.pipeline.assets')
+        }
+        sh('node -v')
+        sh('npm --versions')
         sh('npm ci')
-
-        // Run in CI step so we only run once
-        // (builds happen twice, legacy and FedRAMP)
+    }
+    versionClosure = {
+        // If this is a release branch, bump the version before reading it. The conditional is not
+        // technically required, as the version closure is ignored for feature branches. However,
+        // it may protect against problems if the pipeline behavior changes in the future.
         if (isReleaseBranch) {
             sh('''
-                npm run release --workspace=packages/genesys-spark-components
+               npm run release --workspace=packages/genesys-spark-components
                RELEASE_VERSION="$(npm run --silent current-version --workspace=packages/genesys-spark-components)"
                npm run version-sync $RELEASE_VERSION
                npm install
-               git add . && git commit --amend --no-edit --no-verify
+               git add packages/**/package.json web-apps/**/package.json package-lock.json
+               git commit --amend --no-edit --no-verify
                git tag -a v$RELEASE_VERSION -m "chore(release): $RELEASE_VERSION"
             ''')
         }
 
-        sh('npm run test.ci')
+        return readJSON(file: 'package.json').version
+    }
+    ciTests = {
         sh('npm run build --workspace=packages/genesys-spark-tokens')
         sh('npm run stencil --workspace=packages/genesys-spark-components')
         sh('npm run lint')
+        sh('npm run test.ci')
     }
     buildStep = { assetPrefix ->
         String cdnUrl = assetPrefix
@@ -70,6 +76,11 @@ webappPipeline {
         env.CDN_URL = cdnUrl
 
         sh('npm run build')
+    }
+    onPromoteSuccess = {
+        sh('printenv')
+
+        currentBuild.description = """<a href="https://grandcentral.ininica.com/#/services/spark-components-webui/version/${env.SERVICE_VERSION}" target="_blank">${env.VERSION}@GrandCentral</a></h2>"""
     }
     onSuccess = {
         if (isReleaseBranch) {

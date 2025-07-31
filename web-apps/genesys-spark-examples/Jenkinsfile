@@ -4,33 +4,25 @@ Boolean isMainBranch = env.BRANCH_NAME == 'main'
 
 Boolean isMaintenanceReleaseBranch = env.BRANCH_NAME.startsWith('maintenance/')
 
-Boolean isFeatureBranch = env.BRANCH_NAME.startsWith('feature/')
-
 Boolean isReleaseBranch = isMainBranch || isMaintenanceReleaseBranch
 
-webappPipeline {
-    projectName = 'common-ui-docs/genesys-webcomponents'
-    team = 'Core UI'
-    mailer = 'matthew.cheely@genesys.com, daragh.king@genesys.com, jordan.stith@genesys.com, thomas.dillon@genesys.com, katie.bobbe@genesys.com, gavin.everett@genesys.com, jason.evans@genesys.com'
-    chatGroupId='adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
+webappPipelineV2 {
+    urlPrefix = 'common-ui-docs/genesys-webcomponents'
+    agentLabel = 'dev_x86_shared'
     nodeVersion = '16.18.0'
-    testJob = 'no-tests'
-    deployConfig = [:]
+    mailer = 'CoreUI@genesys.com'
+    chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
+    skipCommitsFrom = [] // This job is triggered after another job has built and promoted assets, published packages and committed a version bump so we can't skip commmits from jenkins.
     manifest = customManifest('./web-apps/genesys-spark-examples/dist') {
         sh('./web-apps/genesys-spark-examples/scripts/generate-manifest.js')
         readJSON(file: './web-apps/genesys-spark-examples/manifest.json')
     }
-    skipCommitsFrom = []
-    buildType = {
-        if (isReleaseBranch) {
-            return 'MAINLINE'
-        }
-
-        return isFeatureBranch ? 'FEATURE' : 'CI'
+    prepareStep = {
+        sh('npm run devops.create.pipeline.examples')
+        sh('npm ci')
     }
     ciTests = {
         sh('printenv')
-        sh('npm ci')
     }
     buildStep = { assetPrefix ->
         if (isReleaseBranch) {
@@ -54,5 +46,10 @@ webappPipeline {
         env.CDN_URL = cdnUrl
 
         sh('npm run build')
+    }
+    onPromoteSuccess = {
+        sh('printenv')
+
+        currentBuild.description = """<a href="https://grandcentral.ininica.com/#/services/spark-components-webui/version/${env.SERVICE_VERSION}" target="_blank">${env.VERSION}@GrandCentral</a></h2>"""
     }
 }
