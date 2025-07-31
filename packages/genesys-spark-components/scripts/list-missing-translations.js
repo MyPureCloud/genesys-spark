@@ -97,6 +97,11 @@ async function listMissingTranslations() {
       'gux-pagination-item-counts-beta': { itemCountDisplay: true },
       'gux-time-picker': { 'time-separator': true }
     },
+    hi: {
+      'gux-pagination-item-counts': { itemCountDisplay: true },
+      'gux-pagination-item-counts-beta': { itemCountDisplay: true },
+      'gux-time-picker': { 'time-separator': true }
+    },
     it: {
       'gux-pagination-item-counts': { itemCountDisplay: true },
       'gux-pagination-item-counts-beta': { itemCountDisplay: true },

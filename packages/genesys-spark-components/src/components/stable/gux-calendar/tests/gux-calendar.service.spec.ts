@@ -149,6 +149,7 @@ describe('calendar.service', () => {
       { locale: 'fr', expectedOutput: 'Décembre 2022' },
       { locale: 'fr-ca', expectedOutput: 'Décembre 2022' },
       { locale: 'he', expectedOutput: 'דצמבר 2022' },
+      { locale: 'hi', expectedOutput: 'दिसंबर 2022' },
       { locale: 'it', expectedOutput: 'Dicembre 2022' },
       { locale: 'ja', expectedOutput: '2022年12月' },
       { locale: 'ko', expectedOutput: '2022년 12월' },

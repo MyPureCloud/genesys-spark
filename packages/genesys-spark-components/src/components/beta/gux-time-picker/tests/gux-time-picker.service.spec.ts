@@ -344,6 +344,7 @@ describe('gux-time-picker.service', () => {
       { locale: 'fr-ca' },
       { locale: 'fr' },
       { locale: 'he' },
+      { locale: 'hi' },
       { locale: 'it' },
       { locale: 'ja' },
       { locale: 'ko' },
