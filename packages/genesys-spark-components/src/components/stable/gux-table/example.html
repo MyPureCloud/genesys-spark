@@ -984,6 +984,50 @@
   </table>
 </gux-table>
 
+<h2>
+  Data table with custom label used in gux-row-select (the custom label will be
+  read by the screenreader)
+</h2>
+<gux-table style="block-size: 150px">
+  <table slot="data">
+    <thead>
+      <tr>
+        <th>
+          <gux-table-select-menu>
+            <gux-all-row-select></gux-all-row-select>
+            <gux-list slot="select-menu-options">
+              <gux-list-item onclick="notify(event)">
+                All on page
+              </gux-list-item>
+              <gux-list-item onclick="notify(event)"> None </gux-list-item>
+              <gux-list-item onclick="notify(event)">
+                Bring selected to top
+              </gux-list-item>
+            </gux-list>
+          </gux-table-select-menu>
+        </th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-row-id="person-id-1">
+        <td>
+          <gux-row-select label="Please select a person"></gux-row-select>
+        </td>
+        <td>John</td>
+      </tr>
+      <tr data-row-id="person-id-2">
+        <td>
+          <gux-row-select
+            label="Please select a second person"
+          ></gux-row-select>
+        </td>
+        <td>Jane</td>
+      </tr>
+    </tbody>
+  </table>
+</gux-table>
+
 <style
   onload="(function () {
     function ascending( a, b ) {
