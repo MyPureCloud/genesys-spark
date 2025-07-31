@@ -114,6 +114,7 @@ test.describe('gux-calendar-beta', () => {
         // First click the selected date to get focus on the calendar
         const selectedDate = await findSelectedDayElement(page);
         await selectedDate.click();
+        await page.waitForChanges();
 
         await page.keyboard.press('ArrowDown');
         await page.waitForChanges();
@@ -129,6 +130,7 @@ test.describe('gux-calendar-beta', () => {
         // First click the selected date to get focus on the calendar
         const selectedDate = await findSelectedDayElement(page);
         await selectedDate.click();
+        await page.waitForChanges();
 
         await page.keyboard.press('ArrowUp');
         await page.waitForChanges();
@@ -144,6 +146,7 @@ test.describe('gux-calendar-beta', () => {
         // First click the selected date to get focus on the calendar
         const selectedDate = await findSelectedDayElement(page);
         await selectedDate.click();
+        await page.waitForChanges();
 
         await page.keyboard.press('ArrowRight');
         await page.waitForChanges();
@@ -159,6 +162,7 @@ test.describe('gux-calendar-beta', () => {
         // First click the selected date to get focus on the calendar
         const selectedDate = await findSelectedDayElement(page);
         await selectedDate.click();
+        await page.waitForChanges();
 
         await page.keyboard.press('ArrowLeft');
         await page.waitForChanges();
@@ -190,6 +194,7 @@ test.describe('gux-calendar-beta', () => {
         // First click the selected date to get focus on the calendar
         const selectedDate = await findSelectedDayElement(page);
         await selectedDate.click();
+        await page.waitForChanges();
 
         await page.keyboard.press('PageUp');
         await page.waitForChanges();
@@ -203,6 +208,7 @@ test.describe('gux-calendar-beta', () => {
         // First click the selected date to get focus on the calendar
         const selectedDate = await findSelectedDayElement(page);
         await selectedDate.click();
+        await page.waitForChanges();
 
         await page.keyboard.press('PageDown');
         await page.waitForChanges();
