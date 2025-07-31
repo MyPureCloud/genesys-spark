@@ -32,14 +32,14 @@
     color: ui.$gse-ui-rating-default-color;
   }
 
-  &:not(.gux-shortened) gux-icon {
+  &:not(.gux-compact) gux-icon {
     &:hover:not(.gux-disabled) {
       color: ui.$gse-ui-rating-hover-color;
       cursor: pointer;
     }
   }
 
-  .gux-star-rating-shortened {
+  .gux-star-rating-compact {
     display: flex;
     flex-direction: column;
     gap: ui.$gse-ui-ratingGroup-shortened-edit-gap;

@@ -48,7 +48,7 @@ export class GuxRating {
   increment: 'default' | 'half' = 'default';
 
   @Prop()
-  shortened: boolean = false;
+  compact: boolean = false;
 
   @State()
   isOpen: boolean = false;
@@ -58,9 +58,9 @@ export class GuxRating {
     this.isOpen = false;
   }
 
-  @Listen('focus')
+  @Listen('focusin')
   onFocusIn(): void {
-    if (this.shortened) {
+    if (this.compact) {
       this.editRatingButtonElement.focus();
     }
   }
@@ -69,7 +69,7 @@ export class GuxRating {
   onClick(event: MouseEvent): void {
     event.stopPropagation();
 
-    if (this.disabled || this.readonly || this.shortened) {
+    if (this.disabled || this.readonly || this.compact) {
       return;
     }
 
@@ -99,7 +99,7 @@ export class GuxRating {
   onKeyDown(event: KeyboardEvent): void {
     event.stopPropagation();
 
-    if (this.disabled || this.readonly || this.shortened) {
+    if (this.disabled || this.readonly || this.compact) {
       return;
     }
 
@@ -176,7 +176,7 @@ export class GuxRating {
       );
   }
 
-  private getShortenedRatingElement(): JSX.Element {
+  private getCompactRatingElement(): JSX.Element {
     let iconName: string;
 
     if (this.value === this.maxValue) {
@@ -188,7 +188,7 @@ export class GuxRating {
     }
 
     return (
-      <div class="gux-star-rating-shortened">
+      <div class="gux-star-rating-compact">
         <div class="gux-star-rating-label-value">
           <gux-icon icon-name={iconName} decorative size="small"></gux-icon>
           <span class="gux-star-rating-value">{this.value}</span>
@@ -216,7 +216,7 @@ export class GuxRating {
             {this.i18n('editRating')}
           </gux-button>
           <gux-popover
-            position="bottom"
+            position="bottom-start"
             for="popover-target"
             is-open={this.isOpen}
           >
@@ -298,11 +298,11 @@ export class GuxRating {
           class={{
             'gux-rating-star-container': true,
             'gux-disabled': this.disabled,
-            'gux-shortened': this.shortened
+            'gux-compact': this.compact
           }}
         >
-          {this.shortened
-            ? this.getShortenedRatingElement()
+          {this.compact
+            ? this.getCompactRatingElement()
             : this.getRatingStarElements()}
         </div>
       </Host>
