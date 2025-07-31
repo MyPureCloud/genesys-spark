@@ -60,5 +60,20 @@
         "type": "spacing"
       }
     }
+  },
+  "side_panel": {
+    "header": {
+      "icon_gap": {
+        "value": "{container.md.gap}",
+        "type": "spacing",
+        "description": "DEPRECATED"
+      }
+    },
+    "heading": {
+      "text": {
+        "value": "{heading.md.semi_bold}",
+        "type": "typography"
+      }
+    }
   }
 }
