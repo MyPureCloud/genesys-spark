@@ -16,7 +16,9 @@ test.describe('gux-tooltip-pointer-beta', () => {
     const tooltip = page.locator('gux-tooltip-pointer-beta');
     const baseTooltip = tooltip.locator('gux-tooltip-base-beta');
 
-    await expect(baseTooltip).not.toHaveClass('gux-show');
+    await expect(baseTooltip).toBeHidden();
+
+    await element.hover();
     await baseTooltip.waitFor({ state: 'visible' });
 
     const tooltipId = await tooltip.getAttribute('id');
