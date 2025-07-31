@@ -710,6 +710,7 @@
   "--gse-ui-focus-color",
   "--gse-ui-focus-style",
   "--gse-ui-focus-width",
+  "--gse-ui-formControl-formStepper-gap",
   "--gse-ui-formControl-helper-icon-padding",
   "--gse-ui-formControl-helper-iconSize",
   "--gse-ui-formControl-helper-padding",
