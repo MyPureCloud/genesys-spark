@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.162.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.161.0...v4.162.0) (2025-07-31)
+
+
+### Features
+
+* **icon:** add laptop, lightbulb and trophy icons ([#1289](https://github.com/MyPureCloud/genesys-spark/issues/1289)) ([62430b9](https://github.com/MyPureCloud/genesys-spark/commit/62430b933fd606e13ccfc4d5a605b9cc61a09a94))
+
+
+### Bug Fixes
+
+* **file-list-item:** fixed icon color token ([1ce1d12](https://github.com/MyPureCloud/genesys-spark/commit/1ce1d12e43f7e9911fb09da97f55c2b228926e2c))
+* **segmented-control-item:** Improve NVDA accessibility ([#1174](https://github.com/MyPureCloud/genesys-spark/issues/1174)) ([73a21cf](https://github.com/MyPureCloud/genesys-spark/commit/73a21cf592abe2175df18b36e088daaae14c57f3))
+
 ## [4.161.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.160.1...v4.161.0) (2025-07-30)
 
 
