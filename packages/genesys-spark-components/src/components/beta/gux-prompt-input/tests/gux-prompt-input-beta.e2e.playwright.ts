@@ -38,7 +38,7 @@ test.describe('gux-prompt-input-beta', () => {
     // eslint-disable-next-line playwright/no-force-option
     await generateButton.click({ force: true });
 
-    await page.waitForChanges();
+    await expect(generateButton).toBeHidden();
 
     expect(onpromptinputstopgeneration).toHaveReceivedEventDetail({
       inputText
@@ -70,12 +70,19 @@ test.describe('gux-prompt-input-beta', () => {
     // eslint-disable-next-line playwright/no-force-option
     await generateButton.click({ force: true });
 
+    await expect(generateButton).toBeHidden();
+
     const stopButton = component.getByTestId('stop-generation');
+
+    await expect(stopButton).toBeVisible();
 
     // eslint-disable-next-line playwright/no-force-option
     await stopButton.click({ force: true });
 
     await page.waitForChanges();
+
+    await expect(stopButton).toBeHidden();
+    await expect(generateButton).toBeVisible();
 
     expect(onpromptinputstopgeneration).toHaveReceivedEvent();
   });
