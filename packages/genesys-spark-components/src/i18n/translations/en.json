@@ -762,6 +762,10 @@
     "tomato": "Tomato",
     "additionalActions": "Additional Actions"
   },
+  "gux-select-all": {
+    "allOptions": "All options",
+    "of": "of"
+  },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"
   },

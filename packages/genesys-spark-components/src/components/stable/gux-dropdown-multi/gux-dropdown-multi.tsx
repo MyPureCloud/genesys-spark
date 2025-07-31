@@ -31,7 +31,7 @@ import {
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
 /**
- * @slot - for a gux-listbox-multi containing gux-option-multi children
+ * @slot - for a gux-listbox-multi containing gux-option-multi, gux-select-all children
  */
 @Component({
   styleUrl: 'gux-dropdown-multi.scss',
@@ -529,9 +529,15 @@ export class GuxDropdownMulti {
       : this.i18n('textInputResults');
   }
 
+  private selectAllPresent(): boolean {
+    return (
+      this.expanded && !!this.listboxElement?.querySelector('gux-select-all')
+    );
+  }
+
   private renderTag(): JSX.Element {
     const selectedValues = convertValueToArray(this.value);
-    if (selectedValues.length) {
+    if (selectedValues.length && !this.selectAllPresent()) {
       return (
         <gux-dropdown-multi-tag
           disabled={this.disabled}
