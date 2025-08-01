@@ -1,9 +1,22 @@
-import { Component, Element, h, Host, Listen, JSX, Prop } from '@stencil/core';
+import {
+  Component,
+  Element,
+  h,
+  Host,
+  Listen,
+  JSX,
+  Prop,
+  State
+} from '@stencil/core';
 
 import simulateNativeEvent from '@utils/dom/simulate-native-event';
 import clamp from '@utils/number/clamp';
 import { trackComponent } from '@utils/tracking/usage';
 import { logWarn } from '@utils/error/log-error';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import ratingResources from './i18n/en.json';
+import { afterNextRender } from '@utils/dom/after-next-render';
+import { OnClickOutside } from '@utils/decorator/on-click-outside';
 
 @Component({
   styleUrl: 'gux-rating.scss',
@@ -11,7 +24,10 @@ import { logWarn } from '@utils/error/log-error';
   shadow: true
 })
 export class GuxRating {
+  private i18n: GetI18nValue;
   private starContainer: HTMLDivElement;
+  private ratingElement: HTMLGuxRatingElement;
+  private editRatingButtonElement: HTMLGuxButtonElement;
 
   @Element()
   root: HTMLElement;
@@ -31,11 +47,29 @@ export class GuxRating {
   @Prop()
   increment: 'default' | 'half' = 'default';
 
+  @Prop()
+  compact: boolean = false;
+
+  @State()
+  isOpen: boolean = false;
+
+  @OnClickOutside({ triggerEvents: 'mousedown' })
+  onClickOutside(): void {
+    this.isOpen = false;
+  }
+
+  @Listen('focusin')
+  onFocusIn(): void {
+    if (this.compact) {
+      this.editRatingButtonElement.focus();
+    }
+  }
+
   @Listen('click')
   onClick(event: MouseEvent): void {
     event.stopPropagation();
 
-    if (this.disabled || this.readonly) {
+    if (this.disabled || this.readonly || this.compact) {
       return;
     }
 
@@ -65,7 +99,7 @@ export class GuxRating {
   onKeyDown(event: KeyboardEvent): void {
     event.stopPropagation();
 
-    if (this.disabled || this.readonly) {
+    if (this.disabled || this.readonly || this.compact) {
       return;
     }
 
@@ -94,6 +128,14 @@ export class GuxRating {
         this.updateRatingValue(-Infinity);
         break;
     }
+  }
+
+  get ariaLabel(): string {
+    return this.root?.getAttribute('aria-label');
+  }
+
+  get ariaLabelledby(): string {
+    return this.root?.getAttribute('aria-labelledby');
   }
 
   private updateRatingValue(newValue: number): void {
@@ -134,12 +176,97 @@ export class GuxRating {
       );
   }
 
+  private getCompactRatingElement(): JSX.Element {
+    let iconName: string;
+
+    if (this.value === this.maxValue) {
+      iconName = 'fa/star-solid';
+    } else if (this.value >= this.maxValue / 2) {
+      iconName = 'fa/star-sharp-half-stroke-regular';
+    } else {
+      iconName = 'fa/star-regular';
+    }
+
+    return (
+      <div class="gux-star-rating-compact">
+        <div class="gux-star-rating-label-value">
+          <gux-icon icon-name={iconName} decorative size="small"></gux-icon>
+          <span class="gux-star-rating-value">{this.value}</span>
+        </div>
+        {this.renderEditRatingButton()}
+      </div>
+    ) as JSX.Element;
+  }
+
+  private renderEditRatingButton(): JSX.Element {
+    if (!this.readonly) {
+      return (
+        <div class="gux-edit-rating-button">
+          <gux-button
+            ref={(el: HTMLGuxButtonElement) =>
+              (this.editRatingButtonElement = el)
+            }
+            onClick={() => {
+              this.togglePopover();
+            }}
+            id="popover-target"
+            accent="inline"
+            aria-expanded={this.isOpen.toString()}
+          >
+            {this.i18n('editRating')}
+          </gux-button>
+          <gux-popover
+            position="bottom-start"
+            for="popover-target"
+            is-open={this.isOpen}
+          >
+            <gux-rating
+              ref={(el: HTMLGuxRatingElement) => (this.ratingElement = el)}
+              value={this.value}
+              max-value={this.maxValue}
+              increment={this.increment}
+              readonly={this.readonly}
+              onClick={(e: Event) => this.handlePopoverRatingChange(e)}
+              onKeyDown={(e: Event) => this.handlePopoverRatingChange(e)}
+              aria-label={this.ariaLabel}
+              aria-labelledby={this.ariaLabelledby}
+            ></gux-rating>
+          </gux-popover>
+        </div>
+      ) as JSX.Element;
+    }
+  }
+
+  private focusRatingElement(): void {
+    afterNextRender(() => {
+      this.ratingElement?.focus();
+    });
+  }
+
+  private togglePopover(): void {
+    this.isOpen = !this.isOpen;
+    if (this.isOpen) {
+      this.focusRatingElement();
+    }
+  }
+
+  private handlePopoverRatingChange(event: Event): void {
+    const newValue = (event.target as HTMLGuxRatingElement).value;
+    this.value = newValue;
+    simulateNativeEvent(this.root, 'input');
+    simulateNativeEvent(this.root, 'change');
+  }
+
   private getTabIndex(): number {
     return this.disabled ? -1 : 0;
   }
 
   componentWillLoad(): void {
     trackComponent(this.root);
+  }
+
+  async componentWillRender(): Promise<void> {
+    this.i18n = await buildI18nForComponent(this.root, ratingResources);
   }
 
   componentDidLoad(): void {
@@ -170,10 +297,13 @@ export class GuxRating {
           ref={(el: HTMLDivElement) => (this.starContainer = el)}
           class={{
             'gux-rating-star-container': true,
-            'gux-disabled': this.disabled
+            'gux-disabled': this.disabled,
+            'gux-compact': this.compact
           }}
         >
-          {this.getRatingStarElements()}
+          {this.compact
+            ? this.getCompactRatingElement()
+            : this.getRatingStarElements()}
         </div>
       </Host>
     ) as JSX.Element;
