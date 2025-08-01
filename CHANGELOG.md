@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.163.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.162.0...v4.163.0) (2025-08-01)
+
+
+### Features
+
+* **row-select:** Added new label prop ([b431ca7](https://github.com/MyPureCloud/genesys-spark/commit/b431ca7d52a17b8d6a0a0e4cc087730fe5d79810))
+* **select-all:** addition of select-all feature ([92069ac](https://github.com/MyPureCloud/genesys-spark/commit/92069ac4692508489c3f2cbdf0f849bfd68e1076))
+* **stepper:** added missing tokens ([#1291](https://github.com/MyPureCloud/genesys-spark/issues/1291)) ([98cbd9a](https://github.com/MyPureCloud/genesys-spark/commit/98cbd9a9bef85fd59e1b7be2109929dd26f52533))
+
 ## [4.162.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.161.0...v4.162.0) (2025-07-31)
 
 
