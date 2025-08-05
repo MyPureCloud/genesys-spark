@@ -487,5 +487,23 @@
       "value": "{foreground.container.high_emphasis}",
       "type": "color"
     }
+  },
+  "notification_badge": {
+    "primary_background_color": {
+      "value": "{background.system.notification.primary}",
+      "type": "color"
+    },
+    "secondary_background_color": {
+      "value": "{background.system.notification.secondary}",
+      "type": "color"
+    },
+    "neutral_background_color": {
+      "value": "{background.system.notification.neutral}",
+      "type": "color"
+    },
+    "subtle_background_color": {
+      "value": "{background.system.notification.subtle}",
+      "type": "color"
+    }
   }
 }
