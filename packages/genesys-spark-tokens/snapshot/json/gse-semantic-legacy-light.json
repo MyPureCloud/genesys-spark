@@ -213,6 +213,14 @@
         "offline_reduced": "#cecfd3",
         "out_of_office_reduced": "#e2b7db",
         "notification": "#ff451a"
+      },
+      "notification": {
+        "primary": "#e22245",
+        "secondary": "#f8c73e",
+        "neutral": "#e7e9f9",
+        "subtle": "#2954cb",
+        "dark_only_content": "#2e394c",
+        "light_only_content": "#ffffff"
       }
     },
     "form_control": {

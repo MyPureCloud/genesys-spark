@@ -598,6 +598,64 @@
             "type": "color"
           }
         },
+        "notification": {
+          "10": {
+            "value": "{color.pepper.500}",
+            "type": "color"
+          },
+          "15": {
+            "value": "{color.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.15",
+                  "space": "lch",
+                  "color": "{color.azure_blue.400}"
+                }
+              }
+            }
+          },
+          "20": {
+            "value": "{color.honey.500}",
+            "type": "color"
+          },
+          "30": {
+            "value": "{color.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.15",
+                  "space": "lch",
+                  "color": "{color.azure_blue.400}"
+                }
+              }
+            }
+          },
+          "40": {
+            "value": "{color.azure_blue.500}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.haze.950}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.genesys_navy.600}",
+            "type": "color"
+          },
+          "40d": {
+            "value": "{color.honey.600}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.pepper.500}",
+            "type": "color"
+          }
+        },
         "global_nav": {
           "10": {
             "value": "{color.azure_blue.700}",
@@ -626,6 +684,10 @@
         },
         "30": {
           "value": "{color_legacy.black.50}",
+          "type": "color"
+        },
+        "30d": {
+          "value": "{color.white}",
           "type": "color"
         }
       },
