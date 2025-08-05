@@ -767,6 +767,24 @@
           "value": "{theme.background.custom_accents.status.70d}",
           "type": "color"
         }
+      },
+      "notification": {
+        "primary": {
+          "value": "{theme.background.custom_accents.notification.10d}",
+          "type": "color"
+        },
+        "secondary": {
+          "value": "{theme.background.custom_accents.notification.20d}",
+          "type": "color"
+        },
+        "neutral": {
+          "value": "{theme.background.custom_accents.notification.30d}",
+          "type": "color"
+        },
+        "subtle": {
+          "value": "{theme.background.custom_accents.notification.40d}",
+          "type": "color"
+        }
       }
     },
     "form_control": {
