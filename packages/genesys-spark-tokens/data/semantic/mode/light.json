@@ -1602,24 +1602,24 @@
       "description": "[DEPRECATED] Please use the global set shadow styles"
     },
     "shadows": {
-      "lightest": {
-        "value": "{theme.effects.box_shadow.5}",
-        "type": "color"
-      },
-      "lighter": {
+      "10": {
         "value": "{theme.effects.box_shadow.10}",
         "type": "color"
       },
-      "middle": {
+      "20": {
         "value": "{theme.effects.box_shadow.20}",
         "type": "color"
       },
-      "darker": {
+      "30": {
         "value": "{theme.effects.box_shadow.30}",
         "type": "color"
       },
-      "darkest": {
+      "40": {
         "value": "{theme.effects.box_shadow.40}",
+        "type": "color"
+      },
+      "50": {
+        "value": "{theme.effects.box_shadow.50}",
         "type": "color"
       }
     }

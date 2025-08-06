@@ -1181,7 +1181,7 @@
           "y": "2",
           "blur": "3",
           "spread": "1",
-          "color": "{effects.shadows.lightest}",
+          "color": "{effects.shadows.10}",
           "type": "dropShadow"
         },
         "type": "boxShadow",
@@ -1193,7 +1193,7 @@
           "y": "2",
           "blur": "4",
           "spread": "3",
-          "color": "{effects.shadows.middle}",
+          "color": "{effects.shadows.30}",
           "type": "dropShadow"
         },
         "type": "boxShadow",
@@ -1207,7 +1207,7 @@
           "y": "6",
           "blur": "10",
           "spread": "4",
-          "color": "{effects.shadows.lighter}",
+          "color": "{effects.shadows.20}",
           "type": "dropShadow"
         },
         {
@@ -1215,7 +1215,7 @@
           "y": "2",
           "blur": "3",
           "spread": "0",
-          "color": "{effects.shadows.middle}",
+          "color": "{effects.shadows.30}",
           "type": "dropShadow"
         }
       ],
@@ -1229,7 +1229,7 @@
           "y": "6",
           "blur": "10",
           "spread": "4",
-          "color": "{effects.shadows.lighter}",
+          "color": "{effects.shadows.20}",
           "type": "dropShadow"
         },
         {
@@ -1237,7 +1237,7 @@
           "y": "2",
           "blur": "3",
           "spread": "0",
-          "color": "{effects.shadows.middle}",
+          "color": "{effects.shadows.30}",
           "type": "dropShadow"
         }
       ],
@@ -1251,7 +1251,7 @@
           "y": "2",
           "blur": "4",
           "spread": "3",
-          "color": "{effects.shadows.middle}",
+          "color": "{effects.shadows.30}",
           "type": "dropShadow"
         }
       ],
@@ -1265,7 +1265,7 @@
           "y": "6",
           "blur": "10",
           "spread": "4",
-          "color": "{effects.shadows.middle}",
+          "color": "{effects.shadows.30}",
           "type": "dropShadow"
         },
         {
@@ -1273,7 +1273,7 @@
           "y": "0",
           "blur": "2",
           "spread": "0",
-          "color": "{effects.shadows.middle}",
+          "color": "{effects.shadows.30}",
           "type": "dropShadow"
         }
       ],
@@ -1287,7 +1287,7 @@
           "y": "6",
           "blur": "10",
           "spread": "4",
-          "color": "{effects.shadows.darker}",
+          "color": "{effects.shadows.40}",
           "type": "dropShadow"
         },
         {
@@ -1295,7 +1295,7 @@
           "y": "1",
           "blur": "2",
           "spread": "0",
-          "color": "{effects.shadows.darker}",
+          "color": "{effects.shadows.40}",
           "type": "dropShadow"
         }
       ],
@@ -1309,7 +1309,7 @@
           "y": "6",
           "blur": "10",
           "spread": "4",
-          "color": "{effects.shadows.darker}",
+          "color": "{effects.shadows.40}",
           "type": "dropShadow"
         },
         {
@@ -1317,7 +1317,7 @@
           "y": "0",
           "blur": "2",
           "spread": "0",
-          "color": "{effects.shadows.darker}",
+          "color": "{effects.shadows.40}",
           "type": "dropShadow"
         }
       ],
@@ -1331,7 +1331,7 @@
           "y": "6",
           "blur": "10",
           "spread": "4",
-          "color": "{effects.shadows.darker}",
+          "color": "{effects.shadows.40}",
           "type": "dropShadow"
         },
         {
@@ -1339,7 +1339,7 @@
           "y": "0",
           "blur": "2",
           "spread": "0",
-          "color": "{effects.shadows.darker}",
+          "color": "{effects.shadows.40}",
           "type": "dropShadow"
         }
       ],
@@ -1352,7 +1352,7 @@
         "y": "-4",
         "blur": "14",
         "spread": "4",
-        "color": "{effects.shadows.lighter}",
+        "color": "{effects.shadows.20}",
         "type": "dropShadow"
       },
       "type": "boxShadow"
