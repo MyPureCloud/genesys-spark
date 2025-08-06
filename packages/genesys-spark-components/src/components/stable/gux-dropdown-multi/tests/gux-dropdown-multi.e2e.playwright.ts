@@ -37,6 +37,17 @@ test.describe('gux-dropdown-multi', () => {
     });
   });
 
+  const creatableDropdown = `
+  <gux-dropdown-multi lang="en">
+    <gux-listbox-multi aria-label="Animals">
+      <gux-create-option slot="create"></gux-create-option>
+      <gux-option-multi value="ant">Ant<span slot="subtext">Small</span></gux-option-multi>
+      <gux-option-multi value="bear">Bear</gux-option-multi>
+      <gux-option-multi value="cat">Cat</gux-option-multi>
+    </gux-listbox-multi>
+  </gux-dropdown-multi>
+  `;
+
   test.describe('click', () => {
     test('opens drop down on click', async ({ page }) => {
       await setContent(page, renderConfig.html);
@@ -288,6 +299,210 @@ test.describe('gux-dropdown-multi', () => {
 
       selectedItems = page.locator('.gux-selected');
       expect(await selectedItems.count()).toBe(1);
+    });
+  });
+
+  test.describe('gux-select-all', () => {
+    const selectAllHtml = `
+      <gux-dropdown-multi lang="en">
+        <gux-listbox-multi aria-label="Animals">
+          <gux-select-all></gux-select-all>
+          <gux-option-multi value="a">Ant</gux-option-multi>
+          <gux-option-multi value="b">Bat</gux-option-multi>
+          <gux-option-multi value="c">Cat</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi>
+    `;
+
+    test('selects all options when clicked', async ({ page }) => {
+      await setContent(page, selectAllHtml);
+      const component = page.locator('gux-dropdown-multi');
+
+      // Expand listbox
+      const dropdownButtonElement = component.locator('.gux-field');
+      await dropdownButtonElement.click({ force: true });
+      await page.waitForChanges();
+
+      const selectAll = page.locator('gux-select-all');
+      await selectAll.click();
+      await page.waitForChanges();
+
+      const listbox = component.locator('gux-listbox-multi');
+      const selectedItems = listbox.locator('gux-option-multi.gux-selected');
+
+      expect(await selectedItems.count()).toBe(3);
+    });
+
+    test('deselects all options when clicked again', async ({ page }) => {
+      await setContent(page, selectAllHtml);
+      const component = page.locator('gux-dropdown-multi');
+
+      // Expand listbox
+      const dropdownButtonElement = component.locator('.gux-field');
+      await dropdownButtonElement.click({ force: true });
+      await page.waitForChanges();
+
+      const selectAll = page.locator('gux-select-all');
+      await selectAll.click();
+      await page.waitForChanges();
+      await selectAll.click();
+      await page.waitForChanges();
+
+      const listbox = component.locator('gux-listbox-multi');
+      const selectedItems = listbox.locator('gux-option-multi.gux-selected');
+      expect(await selectedItems.count()).toBe(0);
+    });
+
+    test('updates counter text correctly', async ({ page }) => {
+      await setContent(page, selectAllHtml);
+      const component = page.locator('gux-dropdown-multi');
+
+      // Expand listbox
+      const dropdownButtonElement = component.locator('.gux-field');
+      await dropdownButtonElement.click({ force: true });
+      await page.waitForChanges();
+
+      const selectAll = page.locator('gux-select-all');
+      const counterText = selectAll.locator('.gux-counter-label');
+      expect(await counterText.textContent()).toContain('(0 of 3)');
+
+      await selectAll.click();
+      await page.waitForChanges();
+      expect(await counterText.textContent()).toContain('(3 of 3)');
+    });
+  });
+
+  test.describe('filter', () => {
+    test('filters dropdown contents (filter-type starts-with)', async ({
+      page
+    }) => {
+      const filterableDropdown = `
+      <gux-dropdown-multi filter-type="starts-with" lang="en">
+        <gux-listbox-multi aria-label="Animals">
+          <gux-option-multi value="ant">Ant</gux-option-multi>
+          <gux-option-multi value="bear">Bear</gux-option-multi>
+          <gux-option-multi value="bat">Bat</gux-option-multi>
+          <gux-option-multi value="cat">Cat</gux-option-multi>
+          <gux-option-multi value="dog">Dog</gux-option-multi>
+        </gux-listbox-multi>
+      </gux-dropdown-multi>
+    `;
+      await setContent(page, filterableDropdown);
+      const component = page.locator('gux-dropdown-multi');
+
+      // Expand listbox
+      const dropdownButtonElement = component.locator('.gux-field');
+      await dropdownButtonElement.click({ force: true });
+      await page.waitForChanges();
+
+      let listboxItems = component.locator(
+        'gux-listbox-multi gux-option-multi:not(.gux-filtered)'
+      );
+
+      expect(await listboxItems.count()).toBe(5);
+      await page.keyboard.press('b');
+      await page.waitForChanges();
+
+      listboxItems = component.locator(
+        'gux-listbox-multi gux-option-multi:not(.gux-filtered)'
+      );
+      expect(await listboxItems.count()).toBe(2);
+      await expect(listboxItems.first()).toHaveText('Bear');
+    });
+
+    test('does not filter dropdown contents (filter-type custom)', async ({
+      page
+    }) => {
+      const filterableDropdown = `
+        <gux-dropdown-multi filter-type="custom" lang="en">
+          <gux-listbox-multi aria-label="Animals">
+            <gux-option-multi value="ant">Ant</gux-option-multi>
+            <gux-option-multi value="bear">Bear</gux-option-multi>
+            <gux-option-multi value="bat">Bat</gux-option-multi>
+            <gux-option-multi value="cat">Cat</gux-option-multi>
+            <gux-option-multi value="dog">Dog</gux-option-multi>
+          </gux-listbox-multi>
+        </gux-dropdown-multi>
+        `;
+
+      await setContent(page, filterableDropdown);
+      const component = page.locator('gux-dropdown-multi');
+
+      // Expand listbox
+      const dropdownButtonElement = component.locator('.gux-field');
+      await dropdownButtonElement.click({ force: true });
+      await page.waitForChanges();
+
+      let listboxItems = component.locator(
+        'gux-listbox-multi gux-option-multi:not(.gux-filtered)'
+      );
+
+      expect(await listboxItems.count()).toBe(5);
+      await page.keyboard.press('b');
+      await page.waitForChanges();
+
+      listboxItems = component.locator(
+        'gux-listbox-multi gux-option-multi:not(.gux-filtered)'
+      );
+      expect(await listboxItems.count()).toBe(5);
+      await expect(listboxItems.first()).toHaveText('Ant');
+    });
+
+    test.describe('with the create option set', () => {
+      test('provides the option to create items', async ({ page }) => {
+        await setContent(page, creatableDropdown);
+        const component = page.locator('gux-dropdown-multi');
+        const text = 'bee';
+
+        const dropdown = component.locator('gux-dropdown-multi');
+        // const listbox = await dropdown.locator('gux-listbox-multi');
+        // const listboxOptions = await listbox.locator('gux-option-multi');
+
+        const dropdownButtonElement = component.locator('.gux-field');
+        await dropdownButtonElement.click({ force: true });
+
+        await page.waitForChanges();
+        const input = dropdown.locator('.gux-filter-input');
+        for (const char of text.split('')) {
+          await input.press(char);
+        }
+
+        const createAction = dropdown.locator('gux-create-option');
+        expect(createAction).not.toBeNull();
+        await expect(createAction).not.toHaveClass('gux-filtered');
+
+        // await inputFilter(page, dropdown, 'bee');
+
+        // const createAction = await getCreateAction(dropdown);
+
+        // await a11yCheck(page, axeExclusions);
+        // expect(createAction).not.toBeNull();
+        // expect(createAction).not.toHaveClass('gux-filtered');
+      });
+
+      // it('does not provide a create option if there is an exact match', async () => {
+      //   const { page, dropdown } = await setupPage(creatableDropdown);
+      //   await inputFilter(page, dropdown, 'cat');
+      //   const createAction = await getCreateAction(dropdown);
+      //   expect(createAction).toHaveClass('gux-filtered');
+      // });
+
+      // it('updates dropdown multi and listbox value when slot changes', async () => {
+      //   const { page, dropdown, listbox } = await setupPage(creatableDropdown);
+      //   let dropdownValue = await dropdown.getProperty('value');
+      //   let listboxValue = await listbox.getProperty('value');
+      //   let selectedItems = await page.findAll('.gux-selected');
+      //   expect(selectedItems.length).toBe(0);
+      //   expect(dropdownValue).toEqual(undefined);
+      //   expect(listboxValue).toEqual(undefined);
+      //   await addNewCustomOption(page);
+      //   selectedItems = await page.findAll('.gux-selected');
+      //   expect(selectedItems.length).toBe(1);
+      //   dropdownValue = await dropdown.getProperty('value');
+      //   listboxValue = await listbox.getProperty('value');
+      //   expect(dropdownValue).toEqual('newoption');
+      //   expect(listboxValue).toEqual('newoption');
+      // });
     });
   });
 });
