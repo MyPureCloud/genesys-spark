@@ -392,7 +392,11 @@ table a {
   --gse-core-zIndex-300: 300;
   --gse-core-zIndex-400: 400;
   --gse-core-zIndex-500: 500;
+  --gse-core-zIndex-550: 550;
   --gse-core-zIndex-600: 600;
+  --gse-core-zIndex-700: 700;
+  --gse-core-zIndex-800: 800;
+  --gse-core-zIndex-900: 900;
   --gse-core-borderRadius-none: 0;
   --gse-core-borderRadius-xs: 2px;
   --gse-core-borderRadius-sm: 4px;
@@ -1166,6 +1170,16 @@ table a {
   --gse-semantic-theme-charts-sparkline-neutrald: #808db2;
   --gse-semantic-theme-charts-sparkline-trendline: #cad1e1;
   --gse-semantic-theme-charts-sparkline-trendlined: #6a6d75;
+  --gse-semantic-theme-effects-boxShadow-10: #3d538f1a;
+  --gse-semantic-theme-effects-boxShadow-20: #3d538f26;
+  --gse-semantic-theme-effects-boxShadow-30: #3d538f33;
+  --gse-semantic-theme-effects-boxShadow-40: #3d538f40;
+  --gse-semantic-theme-effects-boxShadow-50: #3d538f4d;
+  --gse-semantic-theme-effects-boxShadow-10d: #0000004d;
+  --gse-semantic-theme-effects-boxShadow-20d: #00000059;
+  --gse-semantic-theme-effects-boxShadow-30d: #00000073;
+  --gse-semantic-theme-effects-boxShadow-40d: #00000080;
+  --gse-semantic-theme-effects-boxShadow-50d: #0009;
   --gse-semantic-zIndex-base: 0;
   --gse-semantic-zIndex-showFocus: 1;
   --gse-semantic-zIndex-sticky: 1;
@@ -1177,6 +1191,17 @@ table a {
   --gse-semantic-zIndex-sidebar: 400;
   --gse-semantic-zIndex-toast: 500;
   --gse-semantic-zIndex-modal: 600;
+  --gse-semantic-elevation-0Page: 0;
+  --gse-semantic-elevation-1Card: 100;
+  --gse-semantic-elevation-2SidePanel: 200;
+  --gse-semantic-elevation-3GlobalNavigation: 300;
+  --gse-semantic-elevation-4Copilot: 400;
+  --gse-semantic-elevation-5Shroud: 500;
+  --gse-semantic-elevation-6Modal: 550;
+  --gse-semantic-elevation-7Menu: 600;
+  --gse-semantic-elevation-8DraggedItem: 700;
+  --gse-semantic-elevation-9Toast: 800;
+  --gse-semantic-elevation-10Tooltip: 900;
   --gse-semantic-opacity-disabled: 0.5;
   --gse-semantic-opacity-shroud: 0.64;
   --gse-semantic-container-lg-borderRadius: 16px;
@@ -1458,6 +1483,20 @@ table a {
   --gse-semantic-code-sm-regular-fontWeight: 400;
   --gse-semantic-code-sm-regular-fontSize: 12px;
   --gse-semantic-code-sm-regular-lineHeight: 16px;
+  --gse-semantic-shadow-1Card-default: 0 2px 3px 1px #0000004d;
+  --gse-semantic-shadow-1Card-hover: 0 2px 4px 3px #00000073;
+  --gse-semantic-shadow-2SidePanel:
+    0 6px 10px 4px #00000059, 0 2px 3px 0 #00000073;
+  --gse-semantic-shadow-4Copilot:
+    0 6px 10px 4px #00000059, 0 2px 3px 0 #00000073;
+  --gse-semantic-shadow-6Modal: 0 2px 4px 3px #00000073;
+  --gse-semantic-shadow-7Menu: 0 6px 10px 4px #00000073, 0 0 2px 0 #00000073;
+  --gse-semantic-shadow-8DraggedItem:
+    0 6px 10px 4px #00000080, 0 1px 2px 0 #00000080;
+  --gse-semantic-shadow-9Toast: 0 6px 10px 4px #00000080, 0 0 2px 0 #00000080;
+  --gse-semantic-shadow-10Tooltip:
+    0 6px 10px 4px #00000080, 0 0 2px 0 #00000080;
+  --gse-semantic-shadow-scrollIndicator: 0 -4px 14px 4px #00000059;
   --gse-semantic-background-interactive-primary-default: #2143a2;
   --gse-semantic-background-interactive-primary-hover: #19327a;
   --gse-semantic-background-interactive-primary-active: #102251;
@@ -1713,6 +1752,11 @@ table a {
   --gse-semantic-container-md-boxShadow: 0 0 6px 1px #2a2a2e26;
   --gse-semantic-container-sm-boxShadow: 0 0 4px 1px #2a2a2e26;
   --gse-semantic-effects-boxShadow: #2a2a2e26;
+  --gse-semantic-effects-shadows-10: #3d538f1a;
+  --gse-semantic-effects-shadows-20: #3d538f26;
+  --gse-semantic-effects-shadows-30: #3d538f33;
+  --gse-semantic-effects-shadows-40: #3d538f40;
+  --gse-semantic-effects-shadows-50: #3d538f4d;
   --gse-semantic-charts-categoricalData-category1-default: #056385;
   --gse-semantic-charts-categoricalData-category1-shading: #82b1c2;
   --gse-semantic-charts-categoricalData-category2-default: #5798d9;
@@ -2022,6 +2066,11 @@ table a {
   --gse-semantic-container-md-boxShadow: 0 0 6px 1px #000000b3;
   --gse-semantic-container-sm-boxShadow: 0 0 4px 1px #000000b3;
   --gse-semantic-effects-boxShadow: #000000b3;
+  --gse-semantic-effects-shadows-10: #0000004d;
+  --gse-semantic-effects-shadows-20: #00000059;
+  --gse-semantic-effects-shadows-30: #00000073;
+  --gse-semantic-effects-shadows-40: #00000080;
+  --gse-semantic-effects-shadows-50: #0009;
   --gse-semantic-charts-categoricalData-category1-default: #53bee5;
   --gse-semantic-charts-categoricalData-category1-shading: #4793b0;
   --gse-semantic-charts-categoricalData-category2-default: #467aae;

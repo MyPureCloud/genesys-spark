@@ -1537,7 +1537,7 @@
           "type": "dropShadow"
         },
         "type": "boxShadow",
-        "description": "The recommended box shadow for large containers, like modals or popovers."
+        "description": "[DEPRECATED] Please use the global set shadow styles"
       }
     },
     "md": {
@@ -1551,7 +1551,7 @@
           "type": "dropShadow"
         },
         "type": "boxShadow",
-        "description": "The shadow we used for medium-sized components like elevated cards or menus."
+        "description": "[DEPRECATED] Please use the global set shadow styles"
       }
     },
     "sm": {
@@ -1565,7 +1565,7 @@
           "type": "dropShadow"
         },
         "type": "boxShadow",
-        "description": "The shadow we used for small-sized components like tooltips."
+        "description": "[DEPRECATED] Please use the global set shadow styles"
       }
     }
   },
@@ -1581,6 +1581,29 @@
             "space": "srgb"
           }
         }
+      },
+      "description": "[DEPRECATED] Please use the global set shadow styles"
+    },
+    "shadows": {
+      "10": {
+        "value": "{theme.effects.box_shadow.10d}",
+        "type": "color"
+      },
+      "20": {
+        "value": "{theme.effects.box_shadow.20d}",
+        "type": "color"
+      },
+      "30": {
+        "value": "{theme.effects.box_shadow.30d}",
+        "type": "color"
+      },
+      "40": {
+        "value": "{theme.effects.box_shadow.40d}",
+        "type": "color"
+      },
+      "50": {
+        "value": "{theme.effects.box_shadow.50d}",
+        "type": "color"
       }
     }
   },

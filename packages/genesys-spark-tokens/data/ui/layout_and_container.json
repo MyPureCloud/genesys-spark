@@ -577,7 +577,7 @@
       "type": "color"
     },
     "box_shadow": {
-      "value": "{container.md.box_shadow}",
+      "value": "{shadow.2_side_panel}",
       "type": "boxShadow"
     },
     "description_color": {

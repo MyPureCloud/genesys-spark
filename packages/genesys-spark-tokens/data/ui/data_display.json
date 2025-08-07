@@ -995,7 +995,7 @@
   },
   "data_table_composed": {
     "box_shadow": {
-      "value": "{container.sm.box_shadow}",
+      "value": "{shadow.1_card.default}",
       "type": "boxShadow"
     },
     "width": {
