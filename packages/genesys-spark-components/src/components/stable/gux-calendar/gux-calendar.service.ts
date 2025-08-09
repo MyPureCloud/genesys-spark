@@ -1,5 +1,8 @@
 import { capitalizeFirstLetter } from '@utils/string/capitalize-first-letter';
-import * as sparkIntl from '../../../genesys-spark-utils/intl';
+import {
+  dateTimeFormat,
+  fullLocaleString
+} from '../../../genesys-spark-utils/intl';
 // Remove with this ticket https://inindca.atlassian.net/browse/COMUI-2598
 import { useRegionalDates } from '../../../i18n/use-regional-dates';
 
@@ -49,16 +52,17 @@ export function getOffsetMonthDate(baseDate: Date, monthDelta: number) {
 export function getDateMonthAndYearString(date: Date, locale: string) {
   if (useRegionalDates()) {
     return capitalizeFirstLetter(
-      sparkIntl
-        .dateTimeFormat(locale, {
-          year: 'numeric',
-          month: 'long'
-        })
-        .format(date)
+      dateTimeFormat(locale, {
+        year: 'numeric',
+        month: 'long'
+      }).format(date)
     );
   } else {
     return capitalizeFirstLetter(
-      date.toLocaleDateString(locale, { year: 'numeric', month: 'long' })
+      date.toLocaleDateString(fullLocaleString(locale), {
+        year: 'numeric',
+        month: 'long'
+      })
     );
   }
 }
