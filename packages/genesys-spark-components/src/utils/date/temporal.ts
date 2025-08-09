@@ -23,7 +23,9 @@ export function formatPlainDate(
   // would happen if we passed the values in via the Date constructor, where
   // they are interpreted as UTC
   formatDate.setFullYear(date.year);
-  formatDate.setMonth(date.month - 1);
+
+  // Set date to 1 first to avoid rollover issues when changing month
+  formatDate.setMonth(date.month - 1, 1);
   formatDate.setDate(date.day);
   formatDate.setHours(12);
   formatDate.setMinutes(0);
