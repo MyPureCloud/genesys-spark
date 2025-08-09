@@ -69,6 +69,7 @@
  - [gux-pagination-cursor](../gux-pagination-cursor)
  - [gux-pagination-ellipsis-button](../gux-pagination/gux-pagination-buttons/gux-pagination-ellipsis-button)
  - [gux-phone-input-beta](../../beta/gux-phone-input)
+ - [gux-prompt-input-beta](../../beta/gux-prompt-input)
  - [gux-rating](../gux-rating)
  - [gux-rich-text-editor-action](../../beta/gux-rich-text-editor/gux-rich-text-editor-action)
  - [gux-rich-text-editor-action-link](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
@@ -145,6 +146,7 @@ graph TD;
   gux-pagination-cursor --> gux-icon
   gux-pagination-ellipsis-button --> gux-icon
   gux-phone-input-beta --> gux-icon
+  gux-prompt-input-beta --> gux-icon
   gux-rating --> gux-icon
   gux-rich-text-editor-action --> gux-icon
   gux-rich-text-editor-action-link --> gux-icon

@@ -723,6 +723,10 @@
     "regionDropdown": "Region Dropdown",
     "regionDropdownButton": "Region Dropdown Button"
   },
+  "gux-prompt-input": {
+    "inputPlaceholder": "Ask Genesys AI",
+    "generateGenesysAIText": "Generate Genesys AI text"
+  },
   "gux-radial-loading": {
     "loading": "Loading"
   },
