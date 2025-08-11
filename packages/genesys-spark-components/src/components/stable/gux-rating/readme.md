@@ -14,11 +14,11 @@
 
 | Property    | Attribute   | Description | Type                  | Default     |
 | ----------- | ----------- | ----------- | --------------------- | ----------- |
+| `compact`   | `compact`   |             | `boolean`             | `false`     |
 | `disabled`  | `disabled`  |             | `boolean`             | `false`     |
 | `increment` | `increment` |             | `"default" \| "half"` | `'default'` |
 | `maxValue`  | `max-value` |             | `number`              | `5`         |
 | `readonly`  | `readonly`  |             | `boolean`             | `false`     |
-| `shortened` | `shortened` |             | `boolean`             | `false`     |
 | `value`     | `value`     |             | `number`              | `0`         |
 
 

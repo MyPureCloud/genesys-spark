@@ -215,7 +215,7 @@ export class GuxRating {
           >
             {this.i18n('editRating')}
           </gux-button>
-          <gux-popover
+          <gux-popover-beta
             position="bottom-start"
             for="popover-target"
             is-open={this.isOpen}
@@ -231,7 +231,7 @@ export class GuxRating {
               aria-label={this.ariaLabel}
               aria-labelledby={this.ariaLabelledby}
             ></gux-rating>
-          </gux-popover>
+          </gux-popover-beta>
         </div>
       ) as JSX.Element;
     }
