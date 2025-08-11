@@ -91,7 +91,7 @@ test.describe('gux-dropdown-multi', () => {
       selectedItems = component.locator(
         'gux-listbox-multi gux-option-multi.gux-selected'
       );
-      let selectedItemCount = await selectedItems.count();
+      const selectedItemCount = await selectedItems.count();
       expect(selectedItemCount).toBe(1);
 
       // TODO: do we need this a11y check here?
@@ -116,16 +116,14 @@ test.describe('gux-dropdown-multi', () => {
       selectedItems = component.locator(
         'gux-listbox-multi gux-option-multi.gux-selected'
       );
-      selectedItemCount = await selectedItems.count();
-      expect(selectedItemCount).toBe(2);
+      expect(await selectedItems.count()).toBe(2);
 
       // Deselect first item in listbox
       await listboxItems.first().click();
       await page.waitForChanges();
 
       // Check only 1 item is selected in listbox
-      selectedItemCount = await selectedItems.count();
-      expect(selectedItemCount).toBe(1);
+      expect(await selectedItems.count()).toBe(1);
     });
 
     test('clears all selections', async ({ page }) => {
@@ -148,8 +146,7 @@ test.describe('gux-dropdown-multi', () => {
 
       // Check 3 items are selected in listbox
       let selectedItems = component.locator('.gux-selected');
-      const selectedItemCount = await selectedItems.count();
-      expect(selectedItemCount).toBe(3);
+      expect(await selectedItems.count()).toBe(3);
 
       // Click remove button and check all selections are removed
       let removeButton = component.locator('.gux-tag-remove-button');
@@ -222,7 +219,6 @@ test.describe('gux-dropdown-multi', () => {
 
       const listboxHtml = await listbox.innerHTML();
       const focusElementHtml = await focusEl.innerHTML();
-
       expect(listboxHtml).toContain(focusElementHtml);
     });
 
@@ -253,7 +249,6 @@ test.describe('gux-dropdown-multi', () => {
       await page.waitForChanges();
 
       activeItem = listbox.locator('.gux-active');
-
       expect(await activeItem.first().innerHTML()).toContain(
         await listboxItems.nth(1).innerHTML()
       );
