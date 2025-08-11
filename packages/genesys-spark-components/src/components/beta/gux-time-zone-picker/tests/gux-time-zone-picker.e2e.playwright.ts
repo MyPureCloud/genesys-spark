@@ -25,7 +25,7 @@ test.describe('gux-time-zone-picker-beta', () => {
 
   async function clickDropdownButton(page): Promise<void> {
     // eslint-disable-next-line playwright/no-force-option
-    await page.locator('.gux-field').click({ force: true }); // https://github.com/microsoft/playwright/issues/13576
+    await page.locator('.gux-field input').click({ force: true }); // https://github.com/microsoft/playwright/issues/13576
   }
 
   test('filters the list', async ({ page }) => {
