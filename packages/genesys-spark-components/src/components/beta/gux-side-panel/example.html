@@ -205,10 +205,13 @@
 <style
   onload="(function () {
   'use strict';
- 
+  
+  // Panels
   const modalSidePanel = document.getElementById('modal-example');
   const dynamicSidePanel = document.getElementById('dynamic-example');
   const tabsSidePanel = document.getElementById('tabs-example');
+
+  // Buttons
   const modalSmall = document.getElementById('modal-small');
   const modalMedium = document.getElementById('modal-medium');
   const modalLarge = document.getElementById('modal-large');
@@ -217,8 +220,8 @@
   const toggleTabsPanel = document.getElementById('toggle-tabsPanel');
   const toggleHeadingSize = document.getElementById('toggle-headingSize');
 
+  // Utility functions
   function hideAllPanels() {
-    modalSidePanel.style.display = 'none';
     dynamicSidePanel.style.display = 'none';
     tabsSidePanel.style.display = 'none';
   }
@@ -235,12 +238,8 @@
     const isVisible = panel.style.display !== 'none';
     panel.style.display = isVisible ? 'none' : 'block';
   }
-
-  function notify(event) {
-    console.log('Button clicked:', event.target.textContent);
-  }
   
-
+  // Event handlers
   modalSmall.addEventListener('click', function () {
     modalSidePanel.setAttribute('size', 'small');
     modalSidePanel.showModal();
@@ -281,9 +280,6 @@
     togglePanel(dynamicSidePanel);
   });
 
-  modalSidePanel.addEventListener('modalSidePanelDismiss', function(event) {
-    notify(event);
-  });
 
   tabsSidePanel.addEventListener('sidePanelDismiss', function(event) {
     togglePanel(tabsSidePanel);
