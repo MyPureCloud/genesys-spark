@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.164.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.0...v4.164.1) (2025-08-12)
+
+
+### Bug Fixes
+
+* **calendar-beta:** fix rollover issue on screenreader text ([#1295](https://github.com/MyPureCloud/genesys-spark/issues/1295)) ([49df19f](https://github.com/MyPureCloud/genesys-spark/commit/49df19fdf434928bb64fd528182c63ec41ed3256))
+
 ## [4.164.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.163.0...v4.164.0) (2025-08-07)
 
 
