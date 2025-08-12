@@ -222,6 +222,7 @@
 
   // Utility functions
   function hideAllPanels() {
+    modalSidePanel.style.display = 'none';
     dynamicSidePanel.style.display = 'none';
     tabsSidePanel.style.display = 'none';
   }
@@ -240,6 +241,11 @@
   }
   
   // Event handlers
+  function notify(event) {
+    console.log('Button clicked:', event.target.textContent);
+  }
+  
+
   modalSmall.addEventListener('click', function () {
     modalSidePanel.setAttribute('size', 'small');
     modalSidePanel.showModal();
@@ -280,6 +286,9 @@
     togglePanel(dynamicSidePanel);
   });
 
+  modalSidePanel.addEventListener('modalSidePanelDismiss', function(event) {
+    notify(event);
+  });
 
   tabsSidePanel.addEventListener('sidePanelDismiss', function(event) {
     togglePanel(tabsSidePanel);
