@@ -1,3 +1,7 @@
-gux-side-panel-beta gux-tab {
+gux-side-panel-beta gux-tab:first-child {
   margin: var(--gse-ui-sidePanel-header-tabset-leftPadding);
+}
+
+gux-side-panel-beta gux-tab:last-child {
+  margin: var(--gse-ui-sidePanel-header-tabset-rightPadding);
 }
