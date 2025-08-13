@@ -5,6 +5,7 @@ import {
   setContent
 } from '@test/playwrightTestUtils';
 import { renderConfig } from './gux-tabs-advanced.common';
+import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
 
 const axeExclusions = [
   {
@@ -187,21 +188,20 @@ test.describe('gux-tabs-advanced', () => {
       await optionPopoverTarget.click();
       await page.waitForChanges();
 
-      // TODO: should I remove this line?
-      // await a11yCheck(page, axeExclusions, 'options popover expanded');
+      const allyPage = await newSparkE2EPage({ html: htmlExample1 });
+      await a11yCheck(allyPage, axeExclusions, 'options popover expanded');
 
       const optionPopover = page.locator(
         'gux-tab-advanced[tab-id="1-1"] gux-popover-list'
       );
-      let optionPopoverOpen = optionPopover;
 
-      await expect(optionPopoverOpen).toHaveAttribute('is-open', '');
+      await expect(optionPopover).toHaveAttribute('is-open', '');
 
       await optionPopoverTarget.click();
       await page.waitForChanges();
-      optionPopoverOpen = await optionPopover.getAttribute('is-open');
 
-      expect(optionPopoverOpen).toBeNull();
+      const popoverIsOpen = await optionPopover.getAttribute('is-open');
+      expect(popoverIsOpen).toBeNull();
     });
   });
 });
