@@ -27,7 +27,7 @@ export class GuxRating {
   private i18n: GetI18nValue;
   private starContainer: HTMLDivElement;
   private ratingElement: HTMLGuxRatingElement;
-  private editRatingButtonElement: HTMLGuxButtonElement;
+  private compactRatingElement: HTMLGuxIconElement;
 
   @Element()
   root: HTMLElement;
@@ -61,7 +61,7 @@ export class GuxRating {
   @Listen('focusin')
   onFocusIn(): void {
     if (this.compact) {
-      this.editRatingButtonElement.focus();
+      this.compactRatingElement.focus();
     }
   }
 
@@ -99,7 +99,7 @@ export class GuxRating {
   onKeyDown(event: KeyboardEvent): void {
     event.stopPropagation();
 
-    if (this.disabled || this.readonly || this.compact) {
+    if (this.disabled || this.readonly) {
       return;
     }
 
@@ -139,11 +139,7 @@ export class GuxRating {
   }
 
   private updateRatingValue(newValue: number): void {
-    const clampedNewValue = clamp(
-      newValue,
-      0,
-      Array.from(this.starContainer.children).length
-    );
+    const clampedNewValue = clamp(newValue, 0, this.maxValue);
 
     const increment = this.increment === 'half' ? 0.5 : 1;
 
@@ -190,7 +186,13 @@ export class GuxRating {
     return (
       <div class="gux-star-rating-compact">
         <div class="gux-star-rating-label-value">
-          <gux-icon icon-name={iconName} decorative size="small"></gux-icon>
+          <gux-icon
+            tabindex="0"
+            ref={(el: HTMLGuxIconElement) => (this.compactRatingElement = el)}
+            icon-name={iconName}
+            decorative
+            size="small"
+          ></gux-icon>
           <span class="gux-star-rating-value">{this.value}</span>
         </div>
         {this.renderEditRatingButton()}
@@ -203,9 +205,7 @@ export class GuxRating {
       return (
         <div class="gux-edit-rating-button">
           <gux-button
-            ref={(el: HTMLGuxButtonElement) =>
-              (this.editRatingButtonElement = el)
-            }
+            tabindex="-1"
             onClick={() => {
               this.togglePopover();
             }}
@@ -227,7 +227,6 @@ export class GuxRating {
               increment={this.increment}
               readonly={this.readonly}
               onClick={(e: Event) => this.handlePopoverRatingChange(e)}
-              onKeyDown={(e: Event) => this.handlePopoverRatingChange(e)}
               aria-label={this.ariaLabel}
               aria-labelledby={this.ariaLabelledby}
             ></gux-rating>

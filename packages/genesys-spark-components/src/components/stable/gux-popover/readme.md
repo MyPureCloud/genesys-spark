@@ -41,7 +41,6 @@
 ### Used by
 
  - [gux-pagination-ellipsis-button](../gux-pagination/gux-pagination-buttons/gux-pagination-ellipsis-button)
- - [gux-rating](../gux-rating)
  - [gux-rich-text-editor-action-link](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-link)
 
 ### Depends on
@@ -55,7 +54,6 @@ graph TD;
   gux-dismiss-button --> gux-button-slot
   gux-dismiss-button --> gux-icon
   gux-pagination-ellipsis-button --> gux-popover
-  gux-rating --> gux-popover
   gux-rich-text-editor-action-link --> gux-popover
   style gux-popover fill:#f9f,stroke:#333,stroke-width:4px
 ```
