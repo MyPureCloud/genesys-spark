@@ -13,7 +13,7 @@ test.describe('gux-prompt-input-beta', () => {
     performA11yCheck: false
   });
 
-  test('should trigger onpromptinputgenerate event on generate button click', async ({
+  test('should trigger onpromptinputgenerate event correctly on generate button click', async ({
     page
   }) => {
     await setContent(
@@ -22,7 +22,7 @@ test.describe('gux-prompt-input-beta', () => {
     );
 
     const component = page.locator('gux-prompt-input-beta');
-    const onpromptinputstopgeneration = await page.spyOnEvent(
+    const onpromptinputgenerate = await page.spyOnEvent(
       'onpromptinputgenerate'
     );
     const input = component.getByTestId('prompt-input');
@@ -40,12 +40,13 @@ test.describe('gux-prompt-input-beta', () => {
 
     await expect(generateButton).toBeHidden();
 
-    expect(onpromptinputstopgeneration).toHaveReceivedEventDetail({
-      inputText
+    expect(onpromptinputgenerate).toHaveReceivedEventDetail({
+      inputText: inputText,
+      isGenerating: true
     });
   });
 
-  test('should trigger onpromptinputstopgeneration event on stop generation button click', async ({
+  test('should trigger onpromptinputgenerate event correctly on stop generation button click', async ({
     page
   }) => {
     await setContent(
@@ -54,8 +55,8 @@ test.describe('gux-prompt-input-beta', () => {
     );
 
     const component = page.locator('gux-prompt-input-beta');
-    const onpromptinputstopgeneration = await page.spyOnEvent(
-      'onpromptinputstopgeneration'
+    const onpromptinputgenerate = await page.spyOnEvent(
+      'onpromptinputgenerate'
     );
     const generateButton = component.getByTestId('generate-button');
     const input = component.getByTestId('prompt-input');
@@ -84,6 +85,9 @@ test.describe('gux-prompt-input-beta', () => {
     await expect(stopButton).toBeHidden();
     await expect(generateButton).toBeVisible();
 
-    expect(onpromptinputstopgeneration).toHaveReceivedEvent();
+    expect(onpromptinputgenerate).toHaveReceivedEventDetail({
+      inputText: inputText,
+      isGenerating: false
+    });
   });
 });

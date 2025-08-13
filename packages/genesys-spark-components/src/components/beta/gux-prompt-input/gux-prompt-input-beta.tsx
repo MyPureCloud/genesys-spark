@@ -40,16 +40,13 @@ export class GuxPromptInputBeta {
   private i18n: GetI18nValue;
 
   /**
-   * Triggers when the submit generate button is clicked to initiate Copilot text generation.
+   * Triggers when the generate button is clicked to either initiate or stop Copilot text generation.
    */
   @Event()
-  onpromptinputgenerate: EventEmitter<{ inputText: string }>;
-
-  /**
-   * Triggers when the stop generate button is clicked to stop Copilot text generation.
-   */
-  @Event()
-  onpromptinputstopgeneration: EventEmitter<void>;
+  onpromptinputgenerate: EventEmitter<{
+    inputText: string;
+    isGenerating: boolean;
+  }>;
 
   @Listen('keydown')
   onKeyDown(event: KeyboardEvent): void {
@@ -70,12 +67,18 @@ export class GuxPromptInputBeta {
   }
 
   private submit(): void {
-    this.onpromptinputgenerate.emit({ inputText: this.inputElement.value });
+    this.onpromptinputgenerate.emit({
+      inputText: this.inputElement.value,
+      isGenerating: true
+    });
     this.isGenerating = true;
   }
 
   private stopGeneration(): void {
-    this.onpromptinputstopgeneration.emit();
+    this.onpromptinputgenerate.emit({
+      inputText: this.inputElement.value,
+      isGenerating: false
+    });
     this.isGenerating = false;
   }
 

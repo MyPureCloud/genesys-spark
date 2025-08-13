@@ -14,10 +14,9 @@
 
 ## Events
 
-| Event                         | Description                                                                              | Type                                  |
-| ----------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------- |
-| `onpromptinputgenerate`       | Triggers when the submit generate button is clicked to initiate Copilot text generation. | `CustomEvent<{ inputText: string; }>` |
-| `onpromptinputstopgeneration` | Triggers when the stop generate button is clicked to stop Copilot text generation.       | `CustomEvent<void>`                   |
+| Event                   | Description                                                                                      | Type                                                         |
+| ----------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
+| `onpromptinputgenerate` | Triggers when the generate button is clicked to either initiate or stop Copilot text generation. | `CustomEvent<{ inputText: string; isGenerating: boolean; }>` |
 
 
 ## Slots
