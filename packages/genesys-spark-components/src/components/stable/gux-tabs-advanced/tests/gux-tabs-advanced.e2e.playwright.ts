@@ -2,10 +2,10 @@ import {
   checkRenders,
   test,
   expect,
-  setContent
+  setContent,
+  a11yCheck
 } from '@test/playwrightTestUtils';
 import { renderConfig } from './gux-tabs-advanced.common';
-import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
 
 const axeExclusions = [
   {
@@ -188,8 +188,7 @@ test.describe('gux-tabs-advanced', () => {
       await optionPopoverTarget.click();
       await page.waitForChanges();
 
-      const allyPage = await newSparkE2EPage({ html: htmlExample1 });
-      await a11yCheck(allyPage, axeExclusions, 'options popover expanded');
+      await a11yCheck(page, axeExclusions, 'options popover expanded');
 
       const optionPopover = page.locator(
         'gux-tab-advanced[tab-id="1-1"] gux-popover-list'

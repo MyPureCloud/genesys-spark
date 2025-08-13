@@ -10,6 +10,8 @@ import {
   AxeScanDetails
 } from './expectToHaveNoViolations';
 
+import { axeConfig } from './axeConfig';
+
 const modes = ['light', 'dark'] as const;
 type Mode = (typeof modes)[number];
 
@@ -21,6 +23,27 @@ async function setMode(page: E2EPage, mode: Mode) {
     (element, mode) => element.setAttribute('flare-mode', mode),
     mode
   );
+}
+
+export async function a11yCheck(
+  page: E2EPage,
+  axeExclusions: {
+    issueId: string;
+    target?: string;
+    exclusionReason: string;
+  }[] = [],
+  axeScanContext: string = ''
+) {
+  const axeScanDetails = {
+    axeExclusions,
+    axeScanContext
+  };
+  const axeResults = (await page.evaluate(
+    `window.axe.run('body > *', ${JSON.stringify(axeConfig)})`
+  )) as AxeResults;
+
+  // eslint-disable-next-line
+  expect(axeResults.violations).toHaveNoViolations(axeScanDetails);
 }
 
 export async function runAxe(page: E2EPage): Promise<AxeResults> {
@@ -102,6 +125,9 @@ async function setupPage(page: E2EPage) {
           background-color: var(--gse-semantic-background-container-page-default);
         }
       `
+    }),
+    page.addScriptTag({
+      path: '../../node_modules/axe-core/axe.min.js'
     })
   ]);
 }
