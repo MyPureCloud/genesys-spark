@@ -91,6 +91,7 @@
  - [gux-toast](../gux-toast)
  - [gux-toggle](../gux-toggle)
  - [gux-toggle-slider](../gux-toggle/gux-toggle-slider)
+ - [gux-tree-view-branch-beta](../../beta/gux-tree-view/gux-tree-view-branch)
 
 ### Graph
 ```mermaid
@@ -167,6 +168,7 @@ graph TD;
   gux-toast --> gux-icon
   gux-toggle --> gux-icon
   gux-toggle-slider --> gux-icon
+  gux-tree-view-branch-beta --> gux-icon
   style gux-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
