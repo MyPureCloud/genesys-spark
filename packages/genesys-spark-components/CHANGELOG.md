@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.134.0](https://github.com/MyPureCloud/genesys-spark/compare/v3.133.7...v3.134.0) (2025-08-13)
+
+
+### Features
+
+* **locale:** added hindi ([b0be200](https://github.com/MyPureCloud/genesys-spark/commit/b0be2004a64bf33bc47ff8e04b464b80a1898238))
+
 ### [3.133.7](https://github.com/MyPureCloud/genesys-spark/compare/v3.133.6...v3.133.7) (2025-04-05)
 
 
