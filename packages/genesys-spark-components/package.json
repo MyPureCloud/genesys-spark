@@ -57,7 +57,7 @@
     "test.e2e.workaround.gux-r": "npm run test.e2e.workaround -- gux-r",
     "test.e2e.workaround.gux-s": "npm run test.e2e.workaround -- gux-s",
     "test.e2e.workaround.gux-t": "npm run test.e2e.workaround -- gux-t",
-    "test.one": "DEFAULT_TEST_REPORTER=true LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --spec --e2e --maxWorkers=1",
+    "test.one": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --spec --e2e --maxWorkers=1",
     "test.playwright": "playwright test",
     "test.playwright.ui": "playwright test --ui",
     "test.spec": "LANG='C.UTF-8' LC_ALL='C.UTF-8' TZ=UTC stencil test --spec --maxWorkers=1",
