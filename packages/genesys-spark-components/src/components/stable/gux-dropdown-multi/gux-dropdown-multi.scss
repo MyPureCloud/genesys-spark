@@ -12,8 +12,8 @@
 }
 
 .gux-error {
-  &.gux-target-container-collapsed .gux-field-button,
-  &.gux-target-container-expanded {
+  &.gux-target-container-not-filterable .gux-field-button,
+  &.gux-target-container-filterable {
     border: ui.$gse-ui-formControl-input-error-border-width
       ui.$gse-ui-formControl-input-error-border-style
       ui.$gse-ui-formControl-input-error-border-color;
@@ -21,8 +21,8 @@
 }
 
 .gux-disabled {
-  &.gux-target-container-collapsed .gux-field-button,
-  &.gux-target-container-expanded {
+  &.gux-target-container-not-filterable .gux-field-button,
+  &.gux-target-container-filterable {
     user-select: none;
     border: ui.$gse-ui-formControl-input-disabled-border-width
       ui.$gse-ui-formControl-input-disabled-border-style
@@ -31,7 +31,7 @@
 }
 
 .gux-field,
-.gux-target-container-expanded {
+.gux-target-container-filterable {
   all: unset;
   box-sizing: border-box;
   display: flex;
@@ -49,13 +49,13 @@
   background-color: ui.$gse-ui-formControl-input-backgroundColor;
 }
 
-.gux-target-container-expanded,
-.gux-target-container-collapsed .gux-field {
+.gux-target-container-filterable,
+.gux-target-container-not-filterable .gux-field {
   padding: ui.$gse-ui-formControl-input-padding;
 }
 
-.gux-target-container-collapsed .gux-field-button:hover,
-.gux-target-container-expanded:hover {
+.gux-target-container-not-filterable .gux-field-button:hover,
+.gux-target-container-filterable:hover {
   border: ui.$gse-ui-formControl-input-hover-border-width
     ui.$gse-ui-formControl-input-hover-border-style
     ui.$gse-ui-formControl-input-hover-border-color;
@@ -85,7 +85,6 @@
       order: 0;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
 
       .gux-sr-only {
         @include mixins.gux-sr-only-clip;
@@ -140,10 +139,10 @@
   }
 }
 
-.gux-target-container-expanded {
-  border: ui.$gse-ui-formControl-input-active-border-width
-    ui.$gse-ui-formControl-input-active-border-style
-    ui.$gse-ui-formControl-input-active-border-color;
+.gux-target-container-filterable {
+  border: ui.$gse-ui-formControl-input-default-border-width
+    ui.$gse-ui-formControl-input-default-border-style
+    ui.$gse-ui-formControl-input-default-border-color;
   border-radius: ui.$gse-ui-formControl-input-borderRadius;
 
   &:focus-visible {
@@ -152,6 +151,13 @@
 
   &:focus-within:has(:focus-visible) {
     @include focus.gux-focus-ring;
+  }
+
+  &.gux-target-container-filterable-active {
+    border: ui.$gse-ui-formControl-input-active-border-width
+      ui.$gse-ui-formControl-input-active-border-style
+      ui.$gse-ui-formControl-input-active-border-color;
+    border-radius: ui.$gse-ui-formControl-input-borderRadius;
   }
 
   .gux-filter-input {
@@ -179,7 +185,7 @@
   }
 }
 
-.gux-target-container-collapsed .gux-field-button {
+.gux-target-container-not-filterable .gux-field-button {
   border: ui.$gse-ui-formControl-input-default-border-width
     ui.$gse-ui-formControl-input-default-border-style
     ui.$gse-ui-formControl-input-default-border-color;
@@ -192,6 +198,10 @@
   &:focus-within:has(:focus-visible) {
     @include focus.gux-focus-ring;
   }
+}
+
+.gux-target-container-not-filterable .gux-field-content .gux-placeholder {
+  white-space: pre;
 }
 
 .gux-listbox-container {

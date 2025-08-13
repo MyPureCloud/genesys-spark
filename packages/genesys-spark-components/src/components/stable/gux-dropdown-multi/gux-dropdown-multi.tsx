@@ -151,6 +151,7 @@ export class GuxDropdownMulti {
 
     if (!expanded) {
       this.textInput = '';
+      this.textInputElement.value = '';
     }
   }
 
@@ -277,6 +278,13 @@ export class GuxDropdownMulti {
   @Listen('focusin')
   onFocusin(event: FocusEvent): void {
     this.stopPropagationOfInternalFocusEvents(event);
+
+    if (
+      this.isFilterable &&
+      !this.root.contains(event?.relatedTarget as Node)
+    ) {
+      this.textInputElement.focus();
+    }
   }
 
   @OnClickOutside({ triggerEvents: 'mousedown' })
@@ -548,7 +556,7 @@ export class GuxDropdownMulti {
   }
 
   private renderFilterInputField(): JSX.Element {
-    if (this.expanded && this.hasTextInput()) {
+    if (this.hasTextInput()) {
       return (
         <div class="gux-field gux-input-field">
           <div class="gux-field-content">
@@ -574,8 +582,10 @@ export class GuxDropdownMulti {
                   onInput={this.filterInput.bind(this)}
                   onKeyDown={this.filterKeydown.bind(this)}
                   onKeyUp={this.filterKeyup.bind(this)}
+                  onFocus={() => (this.expanded = true)}
                   disabled={this.disabled}
                 ></input>
+                {this.renderTargetContent()}
               </div>
             </div>
           </div>
@@ -597,10 +607,10 @@ export class GuxDropdownMulti {
       <div
         class={{
           'gux-target-container': true,
-          'gux-target-container-expanded': this.expanded && this.hasTextInput(),
-          'gux-target-container-collapsed': !(
-            this.expanded && this.hasTextInput()
-          ),
+          'gux-target-container-filterable': this.hasTextInput(),
+          'gux-target-container-filterable-active':
+            this.expanded && this.hasTextInput(),
+          'gux-target-container-not-filterable': !this.hasTextInput(),
           'gux-error': this.hasError,
           'gux-disabled': this.disabled
         }}
@@ -616,7 +626,7 @@ export class GuxDropdownMulti {
           aria-haspopup="listbox"
           aria-expanded={this.expanded.toString()}
         >
-          {this.renderTargetContent()}
+          {!this.hasTextInput() && this.renderTargetContent()}
           {this.renderTag()}
           {this.renderRadialLoading()}
           <gux-icon
