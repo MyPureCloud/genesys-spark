@@ -32,15 +32,15 @@ const axeExclusions: AxeExclusion[] = [
 const renderConfigs = [
   {
     description: 'should render basic datepicker',
-    html: '<gux-datepicker lang="en"></gux-datepicker>'
+    html: '<gux-datepicker lang="en" value="2025-07-31"></gux-datepicker>'
   },
   {
     description: 'renders a datepicker for range of dates',
     html: `<gux-datepicker
-        mode="range"
-        value="2019-11-25/2019-12-02"
-        number-of-months="2"
-      ></gux-datepicker>`
+      mode="range"
+      value="2019-11-25/2019-12-02"
+      number-of-months="2"
+    ></gux-datepicker>`
   }
 ];
 
