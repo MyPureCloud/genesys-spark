@@ -795,27 +795,27 @@
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.link.default}",
+          "value": "{foreground.form_control.segment.default}",
           "type": "color"
         }
       },
       "hover": {
         "background_color": {
-          "value": "{background.container.elevated.hover}",
+          "value": "{background.form_control.segment.hover}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.link.active}",
+          "value": "{foreground.form_control.segment.hover}",
           "type": "color"
         }
       },
       "active": {
         "background_color": {
-          "value": "{background.interactive.secondary.active}",
+          "value": "{background.form_control.segment.active}",
           "type": "color"
         },
         "foreground_color": {
-          "value": "{foreground.interactive.link.active}",
+          "value": "{foreground.form_control.segment.active}",
           "type": "color"
         }
       }
@@ -854,6 +854,12 @@
       "offset": {
         "value": "0",
         "type": "spacing"
+      }
+    },
+    "container": {
+      "background": {
+        "value": "{background.container.sunken.base}",
+        "type": "color"
       }
     }
   },
