@@ -127,33 +127,33 @@ function getClosestElement(baseElement, selector) {
   return closest(baseElement);
 }
 
+function fullLocale(localeBaseName) {
+  return new Intl.Locale(localeBaseName, {
+    calendar: "gregory"
+  });
+}
+function fullLocaleString(localeBaseName) {
+  return fullLocale(localeBaseName).toString();
+}
 function dateTimeFormat(localeOrOptions, options) {
   let locale = void 0;
   if (typeof localeOrOptions === "string") {
     locale = localeOrOptions;
   } else {
+    locale = determineDisplayLocale();
     options = localeOrOptions;
   }
-  if (locale != void 0) {
-    return new Intl.DateTimeFormat(locale, options);
-  } else {
-    const userLocale = determineDisplayLocale();
-    return new Intl.DateTimeFormat(userLocale, options);
-  }
+  return new Intl.DateTimeFormat(fullLocaleString(locale), options);
 }
 function relativeTimeFormat(localeOrOptions, options) {
   let locale = void 0;
   if (typeof localeOrOptions === "string") {
-    locale = localeOrOptions;
+    locale = fullLocaleString(localeOrOptions);
   } else {
+    locale = determineDisplayLocale();
     options = localeOrOptions;
   }
-  if (locale != void 0) {
-    return new Intl.RelativeTimeFormat(locale, options);
-  } else {
-    const userLocale = determineDisplayLocale();
-    return new Intl.RelativeTimeFormat(userLocale, options);
-  }
+  return new Intl.RelativeTimeFormat(fullLocaleString(locale), options);
 }
 function determineDisplayLocale(element = document.body) {
   var _a;
@@ -218,6 +218,8 @@ var intl = /*#__PURE__*/Object.freeze({
   __proto__: null,
   dateTimeFormat: dateTimeFormat,
   determineDisplayLocale: determineDisplayLocale,
+  fullLocale: fullLocale,
+  fullLocaleString: fullLocaleString,
   getFormat: getFormat,
   relativeTimeFormat: relativeTimeFormat
 });

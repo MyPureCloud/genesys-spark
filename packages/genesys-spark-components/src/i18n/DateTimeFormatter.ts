@@ -1,4 +1,5 @@
 import locales from './locales.json';
+import { fullLocaleString } from '../genesys-spark-utils/intl';
 
 /**
  * Allowed formats for formatting dates and times
@@ -17,12 +18,12 @@ export class DateTimeFormatter {
    */
   constructor(locale: string) {
     if (locales.includes(locale)) {
-      this.locale = locale;
+      this.locale = fullLocaleString(locale);
     } else {
       console.warn(
         `Locale "${locale}" is not supported. Falling back to English translation.`
       );
-      this.locale = 'en';
+      this.locale = fullLocaleString('en');
     }
   }
 
