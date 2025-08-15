@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.164.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.3...v4.164.4) (2025-08-15)
+
+
+### Bug Fixes
+
+* **dropdown-multi:** allow to filter dropdown-multi on focus ([9c18f07](https://github.com/MyPureCloud/genesys-spark/commit/9c18f0721dbb53418aee4fb662d557f5e1fabec8))
+
 ### [4.164.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.2...v4.164.3) (2025-08-14)
 
 ### [4.164.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.1...v4.164.2) (2025-08-13)
