@@ -488,12 +488,12 @@ export class GuxDropdownMulti {
 
   private renderTargetDisplay(): JSX.Element {
     return (
-      <div class="gux-placeholder">
+      <span class="gux-placeholder">
         {this.getSrSelectedText()}
         {this.getSelectedOptionText() ||
           this.placeholder ||
           this.i18n('noSelection')}
-      </div>
+      </span>
     ) as JSX.Element;
   }
 
@@ -503,7 +503,7 @@ export class GuxDropdownMulti {
     return selectedElementString
       ? ([
           selectedElementString,
-          <div class="gux-sr-only">{this.placeholder}</div>
+          <span class="gux-sr-only">{this.placeholder}</span>
         ] as JSX.Element)
       : false;
   }
@@ -644,7 +644,7 @@ export class GuxDropdownMulti {
   private renderTargetContent(): JSX.Element {
     if (!(this.expanded && this.hasTextInput())) {
       return (
-        <div class="gux-field-content">{this.renderTargetDisplay()}</div>
+        <span class="gux-field-content">{this.renderTargetDisplay()}</span>
       ) as JSX.Element;
     }
   }
