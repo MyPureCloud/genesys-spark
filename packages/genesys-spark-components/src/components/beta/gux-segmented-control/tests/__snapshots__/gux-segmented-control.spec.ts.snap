@@ -8,7 +8,7 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
   <gux-segmented-control-item value="month">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-container gux-start">
-        <button aria-current="false" class="gux-segmented-control-item" type="button">
+        <button aria-current="false" aria-label="Month" class="gux-segmented-control-item" type="button">
           <span class="gux-text">
             <slot name="text"></slot>
           </span>
@@ -22,7 +22,7 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
   <gux-segmented-control-item value="week">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-container">
-        <button aria-current="false" class="gux-segmented-control-item" type="button">
+        <button aria-current="false" aria-label="Week" class="gux-segmented-control-item" type="button">
           <span class="gux-text">
             <slot name="text"></slot>
           </span>
@@ -36,7 +36,7 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
   <gux-segmented-control-item value="day">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-container">
-        <button aria-current="false" class="gux-segmented-control-item" type="button">
+        <button aria-current="false" aria-label="Day" class="gux-segmented-control-item" type="button">
           <span class="gux-text">
             <slot name="text"></slot>
           </span>
@@ -50,7 +50,7 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
   <gux-segmented-control-item disabled="" value="hour">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-container">
-        <button aria-current="false" class="gux-segmented-control-item" disabled="" type="button">
+        <button aria-current="false" aria-label="Hour" class="gux-segmented-control-item" disabled="" type="button">
           <span class="gux-text">
             <slot name="text"></slot>
           </span>
@@ -64,7 +64,7 @@ exports[`gux-segmented-control-beta #render should render as expected 1`] = `
   <gux-segmented-control-item value="minute">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-container gux-end">
-        <button aria-current="false" class="gux-segmented-control-item" type="button">
+        <button aria-current="false" aria-label="Minute" class="gux-segmented-control-item" type="button">
           <span class="gux-text">
             <slot name="text"></slot>
           </span>
@@ -86,7 +86,7 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
   <gux-segmented-control-item value="month">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-container gux-start">
-        <button aria-current="false" class="gux-segmented-control-item" type="button">
+        <button aria-current="false" aria-label="Month" class="gux-segmented-control-item" type="button">
           <span class="gux-text">
             <slot name="text"></slot>
           </span>
@@ -100,7 +100,7 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
   <gux-segmented-control-item value="week">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-container">
-        <button aria-current="false" class="gux-segmented-control-item" type="button">
+        <button aria-current="false" aria-label="Week" class="gux-segmented-control-item" type="button">
           <span class="gux-text">
             <slot name="text"></slot>
           </span>
@@ -114,7 +114,7 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
   <gux-segmented-control-item value="day">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-container">
-        <button aria-current="false" class="gux-segmented-control-item" type="button">
+        <button aria-current="false" aria-label="Day" class="gux-segmented-control-item" type="button">
           <span class="gux-text">
             <slot name="text"></slot>
           </span>
@@ -128,7 +128,7 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
   <gux-segmented-control-item disabled="" value="hour">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-container">
-        <button aria-current="false" class="gux-segmented-control-item" disabled="" type="button">
+        <button aria-current="false" aria-label="Hour" class="gux-segmented-control-item" disabled="" type="button">
           <span class="gux-text">
             <slot name="text"></slot>
           </span>
@@ -142,7 +142,7 @@ exports[`gux-segmented-control-beta onSlotchange should set selected items as ex
   <gux-segmented-control-item value="minute">
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-container gux-end">
-        <button aria-current="false" class="gux-segmented-control-item" type="button">
+        <button aria-current="false" aria-label="Minute" class="gux-segmented-control-item" type="button">
           <span class="gux-text">
             <slot name="text"></slot>
           </span>
