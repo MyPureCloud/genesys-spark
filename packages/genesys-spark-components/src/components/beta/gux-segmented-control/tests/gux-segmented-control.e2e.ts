@@ -103,7 +103,7 @@ describe('gux-segmented-control-beta', () => {
     it(`should set selected item as expected`, async () => {
       const page = await newSparkE2EPage({
         html: `
-        <gux-segmented-control-beta lang-"en" value="month">
+        <gux-segmented-control-beta lang="en" value="month">
           <gux-segmented-control-item value="week">
             <div slot="text">Week</div>
           </gux-segmented-control-item>
