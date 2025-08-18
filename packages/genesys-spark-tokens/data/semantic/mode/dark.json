@@ -380,6 +380,40 @@
               },
               "description": "This is the bottom right color that the ai gradient uses for container elements."
             }
+          },
+          "default": {
+            "left_side": {
+              "value": "{theme.background.custom_accents.ai.5d}",
+              "type": "color",
+              "description": "The color used in the left side of the AI background gradient."
+            },
+            "right_side": {
+              "value": "{theme.background.custom_accents.ai.15d}",
+              "type": "color",
+              "description": "The color used in the right side of the AI background gradient."
+            }
+          },
+          "active": {
+            "value": "{theme.background.custom_accents.ai.25d}",
+            "type": "color",
+            "description": "The color used for the active state of the AI backgrounds."
+          },
+          "copilot_launcher": {
+            "top_left": {
+              "value": "{theme.border.custom_accents.ai.30}",
+              "type": "color",
+              "description": "This is the top left color that the ai gradient uses for borders."
+            },
+            "middle": {
+              "value": "{theme.border.custom_accents.ai.40}",
+              "type": "color",
+              "description": "This is the middle color that the ai gradient uses for borders."
+            },
+            "bottom_right": {
+              "value": "{theme.border.custom_accents.ai.50}",
+              "type": "color",
+              "description": "This is the bottom right color that the ai gradient uses for borders."
+            }
           }
         }
       },
@@ -1395,14 +1429,19 @@
       "special_accents": {
         "ai": {
           "top_left": {
-            "value": "{theme.border.custom_accents.ai.10d}",
+            "value": "{theme.border.custom_accents.ai.30d}",
             "type": "color",
             "description": "This is the top left color that the ai gradient uses for borders."
           },
           "bottom_right": {
-            "value": "{theme.border.custom_accents.ai.20d}",
+            "value": "{theme.border.custom_accents.ai.10d}",
             "type": "color",
             "description": "This is the bottom right color that the ai gradient uses for borders."
+          },
+          "middle": {
+            "value": "{theme.border.custom_accents.ai.40}",
+            "type": "color",
+            "description": "This is the middle color that the ai gradient uses for borders."
           }
         }
       },

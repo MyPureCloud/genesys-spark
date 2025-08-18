@@ -109,6 +109,16 @@
           "tonal_subtle": {
             "top_left": "#ebf7fb",
             "bottom_right": "#e8e5fa"
+          },
+          "default": {
+            "left_side": "#ebf6fb",
+            "right_side": "#e7e9f9"
+          },
+          "active": "#d5def7",
+          "copilot_launcher": {
+            "top_left": "#ffc650",
+            "middle": "#ff451a",
+            "bottom_right": "#5476d5"
           }
         }
       },
@@ -406,8 +416,9 @@
       },
       "special_accents": {
         "ai": {
-          "top_left": "#28afe0",
-          "bottom_right": "#8b7de2"
+          "top_left": "#ffc650",
+          "middle": "#ff451a",
+          "bottom_right": "#53bee5"
         }
       },
       "global_nav": {
