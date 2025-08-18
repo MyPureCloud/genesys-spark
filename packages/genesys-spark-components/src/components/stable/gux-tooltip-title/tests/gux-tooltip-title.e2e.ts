@@ -1,5 +1,6 @@
 import { E2EPage, newE2EPage } from '@stencil/core/testing';
 import { a11yCheck } from '../../../../test/e2eTestUtils';
+import { renderConfigs } from './gux-tooltip-title.common';
 
 async function newNonrandomE2EPage(
   {
@@ -26,12 +27,9 @@ async function newNonrandomE2EPage(
 
 describe('gux-tooltip-title', () => {
   describe('#render', () => {
-    [
-      '<div style="max-width: 40px"><gux-tooltip-title><span><slot aria-hidden="true" onSlotchange={this.onSlotChange.bind(this)}>Some long text to truncate and use a tooltip</slot></span></gux-tooltip-title></div>',
-      '<gux-tooltip-title><div style="max-width: 200px">Some short text</div></gux-tooltip-title>'
-    ].forEach((html, index) => {
+    renderConfigs.forEach((renderConfig, index) => {
       it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newNonrandomE2EPage({ html });
+        const page = await newNonrandomE2EPage({ html: renderConfig.html });
         const element = await page.find('gux-tooltip-title');
 
         await a11yCheck(page);
