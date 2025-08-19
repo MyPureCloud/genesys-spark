@@ -3398,7 +3398,9 @@
         "fontWeight": "600",
         "fontSize": "12px",
         "lineHeight": "18px"
-      }
+      },
+      "medium": "30px",
+      "base_light": "#ffffff"
     },
     "text_color": "#2e394c",
     "loading_state": {
@@ -3517,6 +3519,50 @@
     "gap_content": "24px",
     "icon_color": "#4c5667",
     "foreground_color": "#2e394c"
+  },
+  "notification_badge": {
+    "primary_background_color": "#e22245",
+    "secondary_background_color": "#f8c73e",
+    "neutral_background_color": "#e7e9f9",
+    "subtle_background_color": "#2954cb",
+    "light_content_color": "#ffffff",
+    "light_only_content_color": "#ffffff",
+    "dark_content_color": "#2e394c",
+    "dark_only_content_color": "#2e394c",
+    "height": {
+      "large": "24px",
+      "medium": "16px",
+      "small": "8px"
+    },
+    "icon_size": {
+      "large": "16px",
+      "medium": "10px"
+    },
+    "width": {
+      "large": {
+        "default": "24px",
+        "medium": "28px",
+        "large": "32px"
+      },
+      "medium": {
+        "default": "16px",
+        "medium": "20px",
+        "large": "24px"
+      },
+      "small": "8px"
+    },
+    "large": {
+      "fontFamily": "Roboto",
+      "fontWeight": "600",
+      "fontSize": "12px",
+      "lineHeight": "18px"
+    },
+    "medium": {
+      "fontFamily": "Roboto",
+      "fontWeight": "600",
+      "fontSize": "9px",
+      "lineHeight": "16px"
+    }
   },
   "accordion": {
     "header": {

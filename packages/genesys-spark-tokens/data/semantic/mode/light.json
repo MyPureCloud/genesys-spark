@@ -804,6 +804,32 @@
           "value": "{theme.background.custom_accents.status.70}",
           "type": "color"
         }
+      },
+      "notification": {
+        "primary": {
+          "value": "{theme.background.custom_accents.notification.10}",
+          "type": "color"
+        },
+        "secondary": {
+          "value": "{theme.background.custom_accents.notification.20}",
+          "type": "color"
+        },
+        "neutral": {
+          "value": "{theme.background.custom_accents.notification.30}",
+          "type": "color"
+        },
+        "subtle": {
+          "value": "{theme.background.custom_accents.notification.40}",
+          "type": "color"
+        },
+        "dark_only_content": {
+          "value": "{theme.foreground.primary.30}",
+          "type": "color"
+        },
+        "light_only_content": {
+          "value": "{theme.foreground.primary.30d}",
+          "type": "color"
+        }
       }
     },
     "form_control": {
