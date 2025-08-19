@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.165.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.4...v4.165.0) (2025-08-19)
+
+
+### Features
+
+* **tokens:** Added AI colors ([7fe56ad](https://github.com/MyPureCloud/genesys-spark/commit/7fe56adb4df68afd6d81d8083f41ae9b55c0ace4))
+
+
+### Bug Fixes
+
+* **button-slot:** fix icon size ([57823bb](https://github.com/MyPureCloud/genesys-spark/commit/57823bb5a052d0814349d5910d290b82561fbfce))
+* **dropdown-multi:** fix for nvda disabled on initial load ([#1234](https://github.com/MyPureCloud/genesys-spark/issues/1234)) ([747bf8b](https://github.com/MyPureCloud/genesys-spark/commit/747bf8b6dfdf7c309025f51e88382ac227b05b19))
+
 ### [4.164.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.3...v4.164.4) (2025-08-15)
 
 
