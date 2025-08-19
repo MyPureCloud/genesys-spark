@@ -55,6 +55,7 @@ graph TD;
   gux-form-field-number --> gux-form-field-input-clear-button
   gux-form-field-number --> gux-icon
   gux-form-field-input-clear-button --> gux-icon
+  gux-form-field-input-clear-button --> gux-tooltip-beta
   gux-pagination --> gux-pagination-buttons
   style gux-pagination-buttons fill:#f9f,stroke:#333,stroke-width:4px
 ```
