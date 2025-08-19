@@ -532,6 +532,14 @@
         "operation_symbol_color": {
           "value": "{background.system.illustration.operation_symbol}",
           "type": "color"
+        },
+        "width": {
+          "value": "{size.lg}",
+          "type": "sizing"
+        },
+        "height": {
+          "value": "{size.lg}",
+          "type": "sizing"
         }
       },
       "background": {
@@ -543,6 +551,20 @@
           "value": "{background.system.illustration.background_gradient}",
           "type": "color"
         }
+      },
+      "illustration": {
+        "height": {
+          "value": "82px",
+          "type": "sizing"
+        }
+      },
+      "height": {
+        "value": "100px",
+        "type": "sizing"
+      },
+      "width": {
+        "value": "180px",
+        "type": "sizing"
       }
     }
   }
