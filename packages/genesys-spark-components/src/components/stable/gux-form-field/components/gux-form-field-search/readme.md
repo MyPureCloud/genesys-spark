@@ -56,6 +56,8 @@ graph TD;
   gux-form-field-search --> gux-icon
   gux-form-field-search --> gux-form-field-input-clear-button
   gux-form-field-input-clear-button --> gux-icon
+  gux-form-field-input-clear-button --> gux-tooltip-beta
+  gux-tooltip-beta --> gux-tooltip-base-beta
   gux-advanced-dropdown-legacy --> gux-form-field-search
   style gux-form-field-search fill:#f9f,stroke:#333,stroke-width:4px
 ```
