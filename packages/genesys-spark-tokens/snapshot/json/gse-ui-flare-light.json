@@ -3614,10 +3614,12 @@
   "blank_state": {
     "small": {
       "width": "250px",
-      "max_width": "569px"
+      "max_width": "569px",
+      "max_height": "250px"
     },
     "large": {
-      "min_width": "570px"
+      "min_width": "570px",
+      "max_height": "259px"
     },
     "icon": {
       "size": {
@@ -3630,7 +3632,34 @@
     "gap_main": "12px",
     "gap_content": "24px",
     "icon_color": "#6a6d75",
-    "foreground_color": "#2a2a2e"
+    "foreground_color": "#2a2a2e",
+    "main_illustration": {
+      "illustration_color": "#2143a2",
+      "small_icon": {
+        "success_base_color": "#cef0e6",
+        "success_symbol_color": "#056d4d",
+        "error_base_color": "#f9d3da",
+        "error_symbol_color": "#b51b37",
+        "warning_base_color": "#fce9b2",
+        "warning_symbol_color": "#6c5619",
+        "info_base_color": "#ddeaf7",
+        "info_symbol_color": "#345b82",
+        "operation_base_color": "#d5def7",
+        "operation_symbol_color": "#2143a2",
+        "width": "32px",
+        "height": "32px"
+      },
+      "background": {
+        "solid_color": "#bfc6d94d",
+        "gradient": "#bfc6d980",
+        "white": "#ffffff"
+      },
+      "illustration": {
+        "height": "82px"
+      },
+      "height": "100px",
+      "width": "180px"
+    }
   },
   "notification_badge": {
     "primary_background_color": "#e22245",

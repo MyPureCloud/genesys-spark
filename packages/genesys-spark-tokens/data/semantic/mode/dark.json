@@ -824,7 +824,64 @@
           "type": "color"
         },
         "light_only_content": {
-          "value": "{theme.foreground.primary.30d}",
+          "value": "{theme.foreground.primary.30d}"
+        }
+      },
+      "illustration": {
+        "default": {
+          "value": "{theme.foreground.special_accents.illustration.10d}",
+          "type": "color"
+        },
+        "success_base": {
+          "value": "{theme.foreground.special_accents.illustration.20}",
+          "type": "color"
+        },
+        "success_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.30}",
+          "type": "color"
+        },
+        "error_base": {
+          "value": "{theme.foreground.special_accents.illustration.40}",
+          "type": "color"
+        },
+        "error_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.50}",
+          "type": "color"
+        },
+        "warning_base": {
+          "value": "{theme.foreground.special_accents.illustration.60}",
+          "type": "color"
+        },
+        "warning_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.70}",
+          "type": "color"
+        },
+        "info_base": {
+          "value": "{theme.foreground.special_accents.illustration.80}",
+          "type": "color"
+        },
+        "info_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.90}",
+          "type": "color"
+        },
+        "operation_base": {
+          "value": "{theme.foreground.special_accents.illustration.100}",
+          "type": "color"
+        },
+        "operation_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.110}",
+          "type": "color"
+        },
+        "background_solid": {
+          "value": "{theme.foreground.special_accents.illustration.120d}",
+          "type": "color"
+        },
+        "background_gradient": {
+          "value": "{theme.foreground.special_accents.illustration.130d}",
+          "type": "color"
+        },
+        "background_gradient_white": {
+          "value": "{theme.foreground.special_accents.illustration.140d}",
           "type": "color"
         }
       }
