@@ -28,7 +28,7 @@ export const GuxFormFieldCharacterCount: FunctionalComponent<
     >
       <span aria-hidden="true">{characterCount + '/' + characterLimit}</span>
       <gux-screen-reader-beta aria-live="polite">
-        {characterCount} {getI18nText('of')} {characterLimit}{' '}
+        {characterCount} {getI18nText('of')} {characterLimit}
         {getI18nText('charactersRemaining')}
       </gux-screen-reader-beta>
     </div>
