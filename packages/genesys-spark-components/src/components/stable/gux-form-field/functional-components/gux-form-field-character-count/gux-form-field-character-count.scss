@@ -12,13 +12,6 @@
     line-height: ui.$gse-ui-formControl-helper-helperText-lineHeight;
     color: ui.$gse-ui-formControl-helper-defaultColor;
 
-    &.gux-label-above {
-      float: inline-end;
-      align-items: flex-start;
-      justify-content: flex-end;
-      inline-size: 50%;
-    }
-
     &.gux-exceeded {
       color: ui.$gse-ui-formControl-helper-errorColor;
     }

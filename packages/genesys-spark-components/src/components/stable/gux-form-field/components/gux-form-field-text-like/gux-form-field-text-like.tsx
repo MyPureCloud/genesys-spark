@@ -8,7 +8,6 @@ import {
   Prop,
   State,
   Listen,
-  Host,
   Event,
   EventEmitter
 } from '@stencil/core';
@@ -234,56 +233,57 @@ export class GuxFormFieldTextLike {
 
   render(): JSX.Element {
     return (
-      <Host>
+      <GuxFormFieldContainer
+        labelPosition={this.computedLabelPosition}
+        characterLimit={this.characterLimit}
+      >
         {this.renderCharacterCount()}
-        <GuxFormFieldContainer labelPosition={this.computedLabelPosition}>
-          <GuxFormFieldLabel
+        <GuxFormFieldLabel
+          required={this.required}
+          position={this.computedLabelPosition}
+        >
+          <slot name="label" onSlotchange={() => this.setLabel()} />
+          <gux-form-field-label-indicator
+            variant={this.indicatorMark}
             required={this.required}
-            position={this.computedLabelPosition}
+          />
+          <slot name="label-info" />
+        </GuxFormFieldLabel>
+        <div class="gux-input-and-error-container">
+          <div
+            class={{
+              'gux-input': true,
+              'gux-input-error': this.hasError || this.wasExceeding
+            }}
           >
-            <slot name="label" onSlotchange={() => this.setLabel()} />
-            <gux-form-field-label-indicator
-              variant={this.indicatorMark}
-              required={this.required}
-            />
-            <slot name="label-info" />
-          </GuxFormFieldLabel>
-          <div class="gux-input-and-error-container">
             <div
               class={{
-                'gux-input': true,
-                'gux-input-error': this.hasError || this.wasExceeding
+                'gux-input-container': true,
+                'gux-disabled': this.disabled,
+                'gux-has-prefix': this.hasPrefix,
+                'gux-has-suffix': this.hasSuffix
               }}
+              onClick={() => focusInputElement(this.input)}
             >
-              <div
-                class={{
-                  'gux-input-container': true,
-                  'gux-disabled': this.disabled,
-                  'gux-has-prefix': this.hasPrefix,
-                  'gux-has-suffix': this.hasSuffix
-                }}
-                onClick={() => focusInputElement(this.input)}
-              >
-                <slot name="prefix" />
-                <slot name="input" />
-                {this.renderRadialLoading()}
-                <slot name="suffix" />
-                {this.clearable && this.hasContent && !this.disabled && (
-                  <gux-form-field-input-clear-button
-                    onClick={() => clearInput(this.input)}
-                  ></gux-form-field-input-clear-button>
-                )}
-              </div>
+              <slot name="prefix" />
+              <slot name="input" />
+              {this.renderRadialLoading()}
+              <slot name="suffix" />
+              {this.clearable && this.hasContent && !this.disabled && (
+                <gux-form-field-input-clear-button
+                  onClick={() => clearInput(this.input)}
+                ></gux-form-field-input-clear-button>
+              )}
             </div>
-            <GuxFormFieldError show={this.hasError}>
-              <slot name="error" />
-            </GuxFormFieldError>
-            <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
-              <slot name="help" />
-            </GuxFormFieldHelp>
           </div>
-        </GuxFormFieldContainer>
-      </Host>
+          <GuxFormFieldError show={this.hasError}>
+            <slot name="error" />
+          </GuxFormFieldError>
+          <GuxFormFieldHelp show={!this.hasError && this.hasHelp}>
+            <slot name="help" />
+          </GuxFormFieldHelp>
+        </div>
+      </GuxFormFieldContainer>
     ) as JSX.Element;
   }
 
