@@ -767,6 +767,60 @@
           "value": "{theme.background.custom_accents.status.70d}",
           "type": "color"
         }
+      },
+      "illustration": {
+        "default": {
+          "value": "{theme.foreground.special_accents.illustration.10d}",
+          "type": "color"
+        },
+        "success_base": {
+          "value": "{theme.foreground.special_accents.illustration.20d}",
+          "type": "color"
+        },
+        "success_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.30d}",
+          "type": "color"
+        },
+        "error_base": {
+          "value": "{theme.foreground.special_accents.illustration.40d}",
+          "type": "color"
+        },
+        "error_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.50d}",
+          "type": "color"
+        },
+        "warning_base": {
+          "value": "{theme.foreground.special_accents.illustration.60d}",
+          "type": "color"
+        },
+        "warning_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.70d}",
+          "type": "color"
+        },
+        "info_base": {
+          "value": "{theme.foreground.special_accents.illustration.80d}",
+          "type": "color"
+        },
+        "info_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.90d}",
+          "type": "color"
+        },
+        "operation_base": {
+          "value": "{theme.foreground.special_accents.illustration.100d}",
+          "type": "color"
+        },
+        "operation_symbol": {
+          "value": "{theme.foreground.special_accents.illustration.110d}",
+          "type": "color"
+        },
+        "background_solid": {
+          "value": "{theme.foreground.special_accents.illustration.120d}",
+          "type": "color"
+        },
+        "background_gradient": {
+          "value": "{theme.foreground.special_accents.illustration.130d}",
+          "type": "color"
+        }
       }
     },
     "form_control": {
