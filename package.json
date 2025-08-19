@@ -1,6 +1,6 @@
 {
   "name": "genesys-spark-components",
-  "version": "4.163.0",
+  "version": "4.165.0",
   "description": "Common webcomponents",
   "license": "MIT",
   "scripts": {
@@ -70,12 +70,12 @@
     "@commitlint/config-conventional": "^19.8.1",
     "commitizen": "^4.3.1",
     "cross-replace": "^0.2.0",
-    "eslint": "^9.32.0",
+    "eslint": "^9.33.0",
     "eslint-config-genesys-spark-components": "^0.0.1",
     "git-cz": "^4.9.0",
     "globals": "^16.3.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.2",
+    "lint-staged": "^16.1.5",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.6.2",
     "prettier-config-genesys-spark-components": "^0.0.1",

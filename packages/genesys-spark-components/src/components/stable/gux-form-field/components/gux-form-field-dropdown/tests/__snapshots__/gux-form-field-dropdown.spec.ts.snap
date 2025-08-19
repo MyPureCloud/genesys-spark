@@ -34,13 +34,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -145,13 +145,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render help multi select
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -258,13 +258,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render help should rende
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -369,13 +369,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -477,13 +477,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup disabled="">
-          <div class="gux-disabled gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-disabled gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -585,13 +585,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render input attributes 
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -693,13 +693,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -801,13 +801,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -909,13 +909,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -1017,13 +1017,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render label-position sh
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -1125,13 +1125,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -1233,13 +1233,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -1341,13 +1341,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi indicator m
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>
@@ -1449,13 +1449,13 @@ exports[`gux-form-field-dropdown multi select dropdown #render multi label-info 
     <template shadowrootmode="open" shadowrootdelegatesfocus>
       <div class="gux-dropdown-container">
         <gux-popup>
-          <div class="gux-target-container gux-target-container-collapsed" slot="target">
+          <div class="gux-target-container gux-target-container-not-filterable" slot="target">
             <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-              <div class="gux-field-content">
-                <div class="gux-placeholder">
+              <span class="gux-field-content">
+                <span class="gux-placeholder">
                   Select...
-                </div>
-              </div>
+                </span>
+              </span>
               <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
             </button>
           </div>

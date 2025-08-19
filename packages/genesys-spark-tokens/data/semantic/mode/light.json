@@ -382,6 +382,40 @@
               },
               "description": "This is the bottom right color that the ai gradient uses for container elements."
             }
+          },
+          "default": {
+            "left_side": {
+              "value": "{theme.background.custom_accents.ai.5}",
+              "type": "color",
+              "description": "The color used in the left side of the AI background gradient."
+            },
+            "right_side": {
+              "value": "{theme.background.custom_accents.ai.15}",
+              "type": "color",
+              "description": "The color used in the right side of the AI background gradient."
+            }
+          },
+          "active": {
+            "value": "{theme.background.custom_accents.ai.25}",
+            "type": "color",
+            "description": "The color used for the active state of the AI backgrounds."
+          },
+          "copilot_launcher": {
+            "top_left": {
+              "value": "{theme.border.custom_accents.ai.30}",
+              "type": "color",
+              "description": "This is the top left color that the ai gradient uses for borders."
+            },
+            "middle": {
+              "value": "{theme.border.custom_accents.ai.40}",
+              "type": "color",
+              "description": "This is the middle color that the ai gradient uses for borders."
+            },
+            "bottom_right": {
+              "value": "{theme.border.custom_accents.ai.50}",
+              "type": "color",
+              "description": "This is the bottom right color that the ai gradient uses for borders."
+            }
           }
         }
       },
@@ -768,6 +802,32 @@
         },
         "notification": {
           "value": "{theme.background.custom_accents.status.70}",
+          "type": "color"
+        }
+      },
+      "notification": {
+        "primary": {
+          "value": "{theme.background.custom_accents.notification.10}",
+          "type": "color"
+        },
+        "secondary": {
+          "value": "{theme.background.custom_accents.notification.20}",
+          "type": "color"
+        },
+        "neutral": {
+          "value": "{theme.background.custom_accents.notification.30}",
+          "type": "color"
+        },
+        "subtle": {
+          "value": "{theme.background.custom_accents.notification.40}",
+          "type": "color"
+        },
+        "dark_only_content": {
+          "value": "{theme.foreground.primary.30}",
+          "type": "color"
+        },
+        "light_only_content": {
+          "value": "{theme.foreground.primary.30d}",
           "type": "color"
         }
       }
@@ -1403,12 +1463,17 @@
       "special_accents": {
         "ai": {
           "top_left": {
-            "value": "{theme.border.custom_accents.ai.10}",
+            "value": "{theme.border.custom_accents.ai.30}",
             "type": "color",
             "description": "This is the top left color that the ai gradient uses for borders."
           },
+          "middle": {
+            "value": "{theme.border.custom_accents.ai.40}",
+            "type": "color",
+            "description": "This is the middle color that the ai gradient uses for borders."
+          },
           "bottom_right": {
-            "value": "{theme.border.custom_accents.ai.20}",
+            "value": "{theme.border.custom_accents.ai.10}",
             "type": "color",
             "description": "This is the bottom right color that the ai gradient uses for borders."
           }
@@ -1554,7 +1619,7 @@
           "type": "dropShadow"
         },
         "type": "boxShadow",
-        "description": "The recommended box shadow for large containers, like modals or popovers."
+        "description": "[DEPRECATED] Please use the global set shadow styles"
       }
     },
     "md": {
@@ -1568,7 +1633,7 @@
           "type": "dropShadow"
         },
         "type": "boxShadow",
-        "description": "The shadow we used for medium-sized components like elevated cards or menus."
+        "description": "[DEPRECATED] Please use the global set shadow styles"
       }
     },
     "sm": {
@@ -1582,7 +1647,7 @@
           "type": "dropShadow"
         },
         "type": "boxShadow",
-        "description": "The shadow we used for small-sized components like tooltips."
+        "description": "[DEPRECATED] Please use the global set shadow styles"
       }
     }
   },
@@ -1598,6 +1663,29 @@
             "space": "srgb"
           }
         }
+      },
+      "description": "[DEPRECATED] Please use the global set shadow styles"
+    },
+    "shadows": {
+      "10": {
+        "value": "{theme.effects.box_shadow.10}",
+        "type": "color"
+      },
+      "20": {
+        "value": "{theme.effects.box_shadow.20}",
+        "type": "color"
+      },
+      "30": {
+        "value": "{theme.effects.box_shadow.30}",
+        "type": "color"
+      },
+      "40": {
+        "value": "{theme.effects.box_shadow.40}",
+        "type": "color"
+      },
+      "50": {
+        "value": "{theme.effects.box_shadow.50}",
+        "type": "color"
       }
     }
   },

@@ -2,6 +2,49 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.165.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.4...v4.165.0) (2025-08-19)
+
+
+### Features
+
+* **tokens:** Added AI colors ([7fe56ad](https://github.com/MyPureCloud/genesys-spark/commit/7fe56adb4df68afd6d81d8083f41ae9b55c0ace4))
+
+
+### Bug Fixes
+
+* **button-slot:** fix icon size ([57823bb](https://github.com/MyPureCloud/genesys-spark/commit/57823bb5a052d0814349d5910d290b82561fbfce))
+* **dropdown-multi:** fix for nvda disabled on initial load ([#1234](https://github.com/MyPureCloud/genesys-spark/issues/1234)) ([747bf8b](https://github.com/MyPureCloud/genesys-spark/commit/747bf8b6dfdf7c309025f51e88382ac227b05b19))
+
+### [4.164.4](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.3...v4.164.4) (2025-08-15)
+
+
+### Bug Fixes
+
+* **dropdown-multi:** allow to filter dropdown-multi on focus ([9c18f07](https://github.com/MyPureCloud/genesys-spark/commit/9c18f0721dbb53418aee4fb662d557f5e1fabec8))
+
+### [4.164.3](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.2...v4.164.3) (2025-08-14)
+
+### [4.164.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.1...v4.164.2) (2025-08-13)
+
+### [4.164.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.0...v4.164.1) (2025-08-12)
+
+
+### Bug Fixes
+
+* **calendar-beta:** fix rollover issue on screenreader text ([#1295](https://github.com/MyPureCloud/genesys-spark/issues/1295)) ([49df19f](https://github.com/MyPureCloud/genesys-spark/commit/49df19fdf434928bb64fd528182c63ec41ed3256))
+
+## [4.164.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.163.0...v4.164.0) (2025-08-07)
+
+
+### Features
+
+* **tokens:** Generated CSS variables ([7aa7cf3](https://github.com/MyPureCloud/genesys-spark/commit/7aa7cf3617f98e488c844a488b973df6f4681f2b))
+* **tokens:** generated CSS vars ([f1860ba](https://github.com/MyPureCloud/genesys-spark/commit/f1860ba05ebf5bd26fcf4741435d5bb37ca87095))
+* **tokens:** updated elevation tokens ([fb5b57a](https://github.com/MyPureCloud/genesys-spark/commit/fb5b57ac58f0acc1be316dda54ba3a9585560fa3))
+* **tokens:** Updated missing tokens ([4cde7b6](https://github.com/MyPureCloud/genesys-spark/commit/4cde7b63a3f04c566b469d3c3fc17aad38428997))
+* **tokens:** Updated naming based on feedback ([621e724](https://github.com/MyPureCloud/genesys-spark/commit/621e724b8971b9dca3da6875d143e3256caed01c))
+* **tokens:** Updated token names ([89371bd](https://github.com/MyPureCloud/genesys-spark/commit/89371bd7e28f4e04a2a020aa6e600a42e87f260c))
+
 ## [4.163.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.162.0...v4.163.0) (2025-08-01)
 
 

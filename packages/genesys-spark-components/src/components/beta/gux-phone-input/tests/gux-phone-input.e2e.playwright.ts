@@ -38,6 +38,7 @@ test.describe('gux-phone-input-beta', () => {
     await expect(inputField).toHaveValue('1');
   });
 
+  // eslint-disable-next-line playwright/no-skipped-test
   test.skip('open country dropdown and select option with value starting with +', async ({
     page
   }) => {

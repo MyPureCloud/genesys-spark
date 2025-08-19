@@ -2,7 +2,7 @@ import { newSparkE2EPage, a11yCheck } from '../../../../test/e2eTestUtils';
 
 describe('gux-switch-legacy', () => {
   const html = `
-  <gux-switch-legacy lang-"en" layout="small" value="day">
+  <gux-switch-legacy lang="en" layout="small" value="day">
     <gux-switch-item value="month">Month</gux-switch-item>
     <gux-switch-item value="week">Week</gux-switch-item>
     <gux-switch-item value="day">Day</gux-switch-item>
@@ -89,7 +89,7 @@ describe('gux-switch-legacy', () => {
     it(`should set selected item as expected`, async () => {
       const page = await newSparkE2EPage({
         html: `
-        <gux-switch-legacy lang-"en" layout="small" value="month">
+        <gux-switch-legacy lang="en" layout="small" value="month">
           <gux-switch-item value="week">Week</gux-switch-item>
           <gux-switch-item value="day">Day</gux-switch-item>
           <gux-switch-item value="hour" disabled>Hour</gux-switch-item>

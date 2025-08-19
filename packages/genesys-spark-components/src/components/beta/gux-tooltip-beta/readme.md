@@ -72,6 +72,7 @@ Type: `Promise<void>`
  - [gux-avatar-group-add-item-beta](../gux-avatar-group/gux-avatar-group-add-item)
  - [gux-avatar-group-item-beta](../gux-avatar-group/gux-avatar-group-item)
  - [gux-button](../../stable/gux-button)
+ - [gux-form-field-input-clear-button](../../stable/gux-form-field/helper-components/gux-form-field-input-clear-button)
  - [gux-icon-tooltip-beta](../gux-icon-tooltip)
  - [gux-label-info-beta](../gux-label-info)
  - [gux-rich-highlight-list-item](../gux-rich-text-editor/gux-rich-text-editor-list/gux-rich-highlight-list-item)
@@ -95,6 +96,7 @@ graph TD;
   gux-avatar-group-add-item-beta --> gux-tooltip-beta
   gux-avatar-group-item-beta --> gux-tooltip-beta
   gux-button --> gux-tooltip-beta
+  gux-form-field-input-clear-button --> gux-tooltip-beta
   gux-icon-tooltip-beta --> gux-tooltip-beta
   gux-label-info-beta --> gux-tooltip-beta
   gux-rich-highlight-list-item --> gux-tooltip-beta

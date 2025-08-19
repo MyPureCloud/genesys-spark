@@ -16,11 +16,14 @@
 ### Depends on
 
 - [gux-icon](../../../gux-icon)
+- [gux-tooltip-beta](../../../../beta/gux-tooltip-beta)
 
 ### Graph
 ```mermaid
 graph TD;
   gux-form-field-input-clear-button --> gux-icon
+  gux-form-field-input-clear-button --> gux-tooltip-beta
+  gux-tooltip-beta --> gux-tooltip-base-beta
   gux-form-field-number --> gux-form-field-input-clear-button
   gux-form-field-search --> gux-form-field-input-clear-button
   gux-form-field-text-like --> gux-form-field-input-clear-button

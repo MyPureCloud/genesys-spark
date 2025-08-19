@@ -8,11 +8,6 @@ import nodePolyfills from 'rollup-plugin-polyfill-node';
 
 import { componentMetadataGenerator } from './scripts/component-metadata-generator';
 
-const testConsoleReporter =
-  process.env.DEFAULT_TEST_REPORTER === 'true'
-    ? 'default'
-    : ['jest-silent-reporter', { useDots: true }];
-
 // Optionally host the dev server with https if a cert and key are provided via env variables, e.g.
 // for running local dev build within a https app using assetsUrl option of registerSparkComponents.
 let https: Credentials | undefined = undefined;
@@ -75,7 +70,7 @@ export const config: Config = {
       '<rootDir>/src/test/setupAxeTests.js'
     ],
     reporters: [
-      testConsoleReporter,
+      'default',
       [
         'jest-junit',
         {
