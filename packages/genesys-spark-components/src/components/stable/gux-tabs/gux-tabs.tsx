@@ -66,6 +66,11 @@ export class GuxTabs {
     this.guxactivetabchange.emit(newValue);
   }
 
+  @Watch('orientation')
+  watchOrientation(value: string) {
+    this.setOrientation(this.tabList, value);
+  }
+
   @Listen('internalactivatetabpanel')
   onInternalActivateTabPanel(event: CustomEvent): void {
     event.stopPropagation();
@@ -90,6 +95,17 @@ export class GuxTabs {
     this.tabPanels = defaultSlot.assignedElements() as HTMLGuxTabPanelElement[];
 
     this.activateTab(this.activeTab, this.tabList, this.tabPanels);
+    this.setOrientation(this.tabList, this.orientation);
+  }
+
+  private setOrientation(tabList: HTMLGuxTabListElement, orientation) {
+    if (orientation === 'vertical') {
+      tabList.classList.add('gux-vertical');
+      tabList.classList.remove('gux-horizontal');
+    } else {
+      tabList.classList.add('gux-horizontal');
+      tabList.classList.remove('gux-vertical');
+    }
   }
 
   private activateTab(
@@ -115,7 +131,7 @@ export class GuxTabs {
 
   render(): JSX.Element {
     return (
-      <Host>
+      <Host class={`gux-tabs-${this.orientation}`}>
         <div class={`gux-tabs gux-${this.alignment} gux-${this.orientation}`}>
           <slot name="tab-list"></slot>
           <div
