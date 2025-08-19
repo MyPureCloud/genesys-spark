@@ -96,14 +96,12 @@ describe('gux-form-field-dropdown', () => {
             expect(elementShadowDom).toMatchSnapshot();
           });
 
-          it(`should show error style`, async () => {
+          it(`should show error style (${index + 1})`, async () => {
             const page = await newNonrandomE2EPage({ html });
             const element = await page.find('gux-form-field-dropdown');
             const dropdownElement = await element.find('gux-dropdown');
             const popupElement = await dropdownElement.find('pierce/gux-popup');
-            const targetElement = await popupElement.find(
-              '.gux-target-container-collapsed'
-            );
+            const targetElement = await popupElement.find('[slot="target"]');
             expect(targetElement).toHaveClass('gux-error');
           });
 
@@ -141,14 +139,12 @@ describe('gux-form-field-dropdown', () => {
             expect(elementShadowDom).toMatchSnapshot();
           });
 
-          it(`should not show error style`, async () => {
+          it(`should not show error style (${index + 1})`, async () => {
             const page = await newNonrandomE2EPage({ html });
             const element = await page.find('gux-form-field-dropdown');
             const dropdownElement = await element.find('gux-dropdown');
             const popupElement = await dropdownElement.find('pierce/gux-popup');
-            const targetElement = await popupElement.find(
-              '.gux-target-container-collapsed'
-            );
+            const targetElement = await popupElement.find('[slot="target"]');
             expect(targetElement).not.toHaveClass('gux-error');
           });
 
@@ -193,14 +189,12 @@ describe('gux-form-field-dropdown', () => {
             expect(elementShadowDom).toMatchSnapshot();
           });
 
-          it(`should show error style`, async () => {
+          it(`should show error style (${index + 1})`, async () => {
             const page = await newNonrandomE2EPage({ html });
             const element = await page.find('gux-form-field-dropdown');
             const dropdownElement = await element.find('gux-dropdown-multi');
             const popupElement = await dropdownElement.find('pierce/gux-popup');
-            const targetElement = await popupElement.find(
-              '.gux-target-container-collapsed'
-            );
+            const targetElement = await popupElement.find('[slot="target"]');
             expect(targetElement).toHaveClass('gux-error');
           });
 
@@ -236,14 +230,12 @@ describe('gux-form-field-dropdown', () => {
           expect(elementShadowDom).toMatchSnapshot();
         });
 
-        it(`should not show error style`, async () => {
+        it(`should not show error style (${index + 1})`, async () => {
           const page = await newNonrandomE2EPage({ html });
           const element = await page.find('gux-form-field-dropdown');
           const dropdownElement = await element.find('gux-dropdown-multi');
           const popupElement = await dropdownElement.find('pierce/gux-popup');
-          const targetElement = await popupElement.find(
-            '.gux-target-container-collapsed'
-          );
+          const targetElement = await popupElement.find('[slot="target"]');
           expect(targetElement).not.toHaveClass('gux-error');
         });
 
