@@ -43,6 +43,8 @@ import {
 import { trackComponent } from '@utils/tracking/usage';
 import { focusInputElement } from '@utils/dom/focus-input-element';
 import { GuxFormFieldCharacterCount } from '../../functional-components/gux-form-field-character-count/gux-form-field-character-count';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import translationResources from '../../functional-components/gux-form-field-character-count/i18n/en.json';
 
 /**
  * @slot input - Required slot for input tag
@@ -65,6 +67,7 @@ export class GuxFormFieldTextLike {
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
   private hideLabelInfoTimeout: ReturnType<typeof setTimeout>;
+  private i18n: GetI18nValue;
 
   @Element()
   private root: HTMLElement;
@@ -180,7 +183,7 @@ export class GuxFormFieldTextLike {
     }
   }
 
-  componentWillLoad(): void {
+  async componentWillLoad(): Promise<void> {
     this.setInput();
     this.setLabel();
 
@@ -198,11 +201,13 @@ export class GuxFormFieldTextLike {
       setSlotAriaDescribedby(this.root, this.input, 'suffix');
     }
 
-    trackComponent(this.root, { variant: this.variant });
-  }
+    if (this.characterLimit > 0) {
+      setCharacterCountAriaDescribedBy(this.root, this.input);
+    }
 
-  componentDidLoad(): void {
-    setCharacterCountAriaDescribedBy(this.root, this.input);
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
+
+    trackComponent(this.root, { variant: this.variant });
   }
 
   disconnectedCallback(): void {
@@ -218,6 +223,7 @@ export class GuxFormFieldTextLike {
     if (this.characterLimit > 0) {
       return (
         <GuxFormFieldCharacterCount
+          i18n={this.i18n}
           characterCount={this.characterCount}
           characterLimit={this.characterLimit}
           labelPosition={this.computedLabelPosition}

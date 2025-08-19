@@ -18,10 +18,9 @@
 
 ## Events
 
-| Event                   | Description | Type                |
-| ----------------------- | ----------- | ------------------- |
-| `charactersExceeded`    |             | `CustomEvent<void>` |
-| `charactersNotExceeded` |             | `CustomEvent<void>` |
+| Event                  | Description | Type                   |
+| ---------------------- | ----------- | ---------------------- |
+| `characterLimitChange` |             | `CustomEvent<boolean>` |
 
 
 ## Methods
