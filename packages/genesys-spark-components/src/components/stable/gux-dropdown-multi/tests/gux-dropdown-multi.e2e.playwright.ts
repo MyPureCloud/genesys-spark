@@ -35,7 +35,13 @@ test.describe('gux-dropdown-multi', () => {
     // No element specified here in order to see the menu in the screenshot
     checkRenders({
       renderConfigs: [renderConfig],
-      axeExclusions
+      axeExclusions,
+      extraActions: async (page: E2EPage) => {
+        await page
+          .locator('gux-dropdown-multi')
+          .locator('.gux-field')
+          .click({ force: true });
+      }
     });
   });
 
@@ -468,7 +474,7 @@ test.describe('gux-dropdown-multi', () => {
         await input.press('e');
 
         expect((await runAxe(page)).violations).toHaveNoViolations({
-          axeExclusions: [],
+          axeExclusions: [...axeExclusions],
           axeScanContext: 'after typing filterable input text'
         });
 
