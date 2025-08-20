@@ -4,7 +4,8 @@ import {
   expect,
   setContent,
   AxeExclusion,
-  E2EPage
+  E2EPage,
+  runAxe
 } from '@test/playwrightTestUtils';
 import { renderConfig } from './gux-dropdown-multi.common';
 
@@ -54,10 +55,20 @@ test.describe('gux-dropdown-multi', () => {
       await setContent(page, renderConfig.html);
       const component = page.locator('gux-dropdown-multi');
 
+      expect((await runAxe(page)).violations).toHaveNoViolations({
+        axeExclusions: [],
+        axeScanContext: 'before opening dropdown'
+      });
+
       // Expand listbox
       const dropdownButtonElement = component.locator('.gux-field');
       await dropdownButtonElement.click({ force: true });
       await page.waitForChanges();
+
+      expect((await runAxe(page)).violations).toHaveNoViolations({
+        axeExclusions: [],
+        axeScanContext: 'after opening dropdown'
+      });
 
       const dropMenu = component.locator('.gux-popup-container');
 
@@ -94,19 +105,17 @@ test.describe('gux-dropdown-multi', () => {
       const selectedItemCount = await selectedItems.count();
       expect(selectedItemCount).toBe(1);
 
-      // TODO: do we need this a11y check here?
-      // await a11yCheck(
-      //   page,
-      //   [
-      //   {
-      //       issueId: 'color-contrast',
-      //       exclusionReason:
-      //       'COMUI-3533: Subtext on hover fails color contrast requirments'
-      //   },
-      //   ...axeExclusions
-      //   ],
-      //   'after selecting an item'
-      // );
+      expect((await runAxe(page)).violations).toHaveNoViolations({
+        axeExclusions: [
+          ...axeExclusions,
+          {
+            issueId: 'color-contrast',
+            exclusionReason:
+              'COMUI-3533: Subtext on hover fails color contrast requirments'
+          }
+        ],
+        axeScanContext: 'after selecting an item'
+      });
 
       // Click on 2nd item in listbox
       await listboxItems.nth(1).click();
@@ -457,6 +466,11 @@ test.describe('gux-dropdown-multi', () => {
         await input.press('b');
         await input.press('e');
         await input.press('e');
+
+        expect((await runAxe(page)).violations).toHaveNoViolations({
+          axeExclusions: [],
+          axeScanContext: 'after typing filterable input text'
+        });
 
         const createAction = component.locator('gux-create-option');
         expect(createAction).not.toBeNull();
