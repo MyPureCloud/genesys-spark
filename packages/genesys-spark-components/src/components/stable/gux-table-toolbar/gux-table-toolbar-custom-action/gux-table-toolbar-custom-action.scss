@@ -13,6 +13,10 @@ button[disabled] {
   @include mixins.gux-sr-only-clip;
 }
 
+gux-button-slot {
+  inline-size: 100%;
+}
+
 .gux-action-title {
   display: flex;
   flex-direction: row;

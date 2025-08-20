@@ -1,5 +1,6 @@
 :host {
   display: inline-block;
+  inline-size: 100%;
 
   &[disabled] {
     pointer-events: none;
