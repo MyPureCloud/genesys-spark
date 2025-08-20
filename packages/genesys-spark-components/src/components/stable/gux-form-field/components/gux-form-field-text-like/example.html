@@ -139,6 +139,41 @@
   </fieldset>
 
   <fieldset>
+    <legend>Character Count</legend>
+    <gux-form-field-text-like id="character-count-1" character-limit="100">
+      <input slot="input" type="text" name="e-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like
+      id="character-count-2"
+      label-position="beside"
+      character-limit="100"
+    >
+      <input slot="input" type="text" name="e-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-text-like>
+
+    <gux-form-field-text-like
+      id="character-count-3"
+      label-position="screenreader"
+      character-limit="100"
+    >
+      <input slot="input" type="text" name="e-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-text-like>
+
+    <h4>No Error Message</h4>
+    <gux-form-field-text-like
+      label-position="screenreader"
+      character-limit="100"
+    >
+      <input slot="input" type="text" name="e-1" />
+      <label slot="label">Default</label>
+    </gux-form-field-text-like>
+  </fieldset>
+
+  <fieldset>
     <legend>Prefix / Suffix</legend>
 
     <gux-form-field-text-like>
@@ -291,6 +326,53 @@
     }
     isErrorShown = !isErrorShown;
   }, 5000);
+
+  // Examples of listening to the charactersExceeded and charactersNotExceeded events to display an error message.
+
+  const charactercount1 = document.querySelector('#character-count-1');
+  const charactercount2 = document.querySelector('#character-count-2');
+  const charactercount3 = document.querySelector('#character-count-3');
+
+  const errorSpan = document.createElement('span');
+  errorSpan.setAttribute('slot', 'error');
+  errorSpan.textContent = 'Character limit has exceeded';
+
+  const errorSpan1 = document.createElement('span');
+  errorSpan1.setAttribute('slot', 'error');
+  errorSpan1.textContent = 'Text length too long';
+
+  const errorSpan2 = document.createElement('span');
+  errorSpan2.setAttribute('slot', 'error');
+  errorSpan2.textContent = 'Please reduce the amount of characters';
+
+  charactercount1.addEventListener('charactersExceeded', () => {
+    charactercount1.appendChild(errorSpan);
+  });
+
+  charactercount2.addEventListener('charactersExceeded', () => {
+    charactercount2.appendChild(errorSpan1);
+  });
+
+  charactercount3.addEventListener('charactersExceeded', () => {
+    charactercount3.appendChild(errorSpan2);
+  })
+
+  charactercount1.addEventListener('charactersNotExceeded', () => {
+    charactercount1.removeChild(errorSpan);
+  });
+
+  charactercount2.addEventListener('charactersNotExceeded', () => {
+    charactercount2.removeChild(errorSpan1);
+  });
+
+  charactercount3.addEventListener('charactersNotExceeded', () => {
+    charactercount3.removeChild(errorSpan2);
+  })
+
+  
+
+
+
 
 
 })()"

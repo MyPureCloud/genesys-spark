@@ -7,7 +7,9 @@ import {
   Method,
   Prop,
   State,
-  Listen
+  Listen,
+  Event,
+  EventEmitter
 } from '@stencil/core';
 
 import { calculateInputDisabledState } from '@utils/dom/calculate-input-disabled-state';
@@ -34,10 +36,14 @@ import {
   getComputedLabelPosition,
   validateFormIds,
   setSlotAriaDescribedby,
-  getSlottedInput
+  getSlottedInput,
+  setCharacterCountAriaDescribedBy
 } from '../../gux-form-field.service';
 import { trackComponent } from '@utils/tracking/usage';
 import { focusInputElement } from '@utils/dom/focus-input-element';
+import { GuxFormFieldCharacterCount } from '../../functional-components/gux-form-field-character-count/gux-form-field-character-count';
+import { buildI18nForComponent, GetI18nValue } from 'i18n';
+import translationResources from '../../functional-components/gux-form-field-character-count/i18n/en.json';
 
 /**
  * @slot input - Required slot for input tag
@@ -60,6 +66,7 @@ export class GuxFormFieldTextLike {
   private disabledObserver: MutationObserver;
   private requiredObserver: MutationObserver;
   private hideLabelInfoTimeout: ReturnType<typeof setTimeout>;
+  private i18n: GetI18nValue;
 
   @Element()
   private root: HTMLElement;
@@ -80,6 +87,12 @@ export class GuxFormFieldTextLike {
    */
   @Prop()
   indicatorMark: GuxFormFieldIndicatorMark = 'required';
+
+  /**
+   * The characterLimit property defines the max character limit for the input.
+   */
+  @Prop()
+  characterLimit: number = 0;
 
   @State()
   private hasPrefix: boolean;
@@ -104,6 +117,11 @@ export class GuxFormFieldTextLike {
 
   @State()
   private hasHelp: boolean = false;
+
+  @State()
+  private wasExceeding: boolean = false;
+
+  @Event() characterLimitChange: EventEmitter<boolean>;
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
@@ -150,6 +168,10 @@ export class GuxFormFieldTextLike {
     forceUpdate(this.root);
   }
 
+  get characterCount(): number {
+    return this.input.value.length;
+  }
+
   private renderRadialLoading(): JSX.Element {
     if (this.loading) {
       return (
@@ -160,7 +182,7 @@ export class GuxFormFieldTextLike {
     }
   }
 
-  componentWillLoad(): void {
+  async componentWillLoad(): Promise<void> {
     this.setInput();
     this.setLabel();
 
@@ -178,6 +200,12 @@ export class GuxFormFieldTextLike {
       setSlotAriaDescribedby(this.root, this.input, 'suffix');
     }
 
+    if (this.characterLimit > 0) {
+      setCharacterCountAriaDescribedBy(this.root, this.input);
+    }
+
+    this.i18n = await buildI18nForComponent(this.root, translationResources);
+
     trackComponent(this.root, { variant: this.variant });
   }
 
@@ -190,9 +218,26 @@ export class GuxFormFieldTextLike {
     }
   }
 
+  private renderCharacterCount(): JSX.Element {
+    if (this.characterLimit > 0) {
+      return (
+        <GuxFormFieldCharacterCount
+          i18n={this.i18n}
+          characterCount={this.characterCount}
+          characterLimit={this.characterLimit}
+          labelPosition={this.computedLabelPosition}
+        ></GuxFormFieldCharacterCount>
+      ) as JSX.Element;
+    }
+  }
+
   render(): JSX.Element {
     return (
-      <GuxFormFieldContainer labelPosition={this.computedLabelPosition}>
+      <GuxFormFieldContainer
+        labelPosition={this.computedLabelPosition}
+        characterLimit={this.characterLimit}
+      >
+        {this.renderCharacterCount()}
         <GuxFormFieldLabel
           required={this.required}
           position={this.computedLabelPosition}
@@ -208,7 +253,7 @@ export class GuxFormFieldTextLike {
           <div
             class={{
               'gux-input': true,
-              'gux-input-error': this.hasError
+              'gux-input-error': this.hasError || this.wasExceeding
             }}
           >
             <div
@@ -252,6 +297,19 @@ export class GuxFormFieldTextLike {
     return `${typeVariant}-${clearableVariant}-${labelPositionVariant}`;
   }
 
+  private isCharactersExceeding(): void {
+    const isExceeding = this.characterCount > this.characterLimit;
+    // Checking if exceeding state has changes since last checking.
+    if (isExceeding !== this.wasExceeding) {
+      if (isExceeding) {
+        this.characterLimitChange.emit(isExceeding);
+      } else {
+        this.characterLimitChange.emit(isExceeding);
+      }
+      this.wasExceeding = isExceeding;
+    }
+  }
+
   private setInput(): void {
     this.input = getSlottedInput(
       this.root,
@@ -264,6 +322,8 @@ export class GuxFormFieldTextLike {
 
     this.input.addEventListener('input', () => {
       this.hasContent = hasContent(this.input);
+      this.isCharactersExceeding();
+      forceUpdate(this.root);
     });
 
     this.disabled = calculateInputDisabledState(this.input);

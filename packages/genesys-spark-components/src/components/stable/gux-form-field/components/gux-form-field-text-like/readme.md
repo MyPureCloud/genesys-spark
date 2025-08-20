@@ -7,12 +7,20 @@
 
 ## Properties
 
-| Property        | Attribute        | Description                                                                                                                                                                                                                                                                     | Type                                    | Default      |
-| --------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------ |
-| `clearable`     | `clearable`      |                                                                                                                                                                                                                                                                                 | `boolean`                               | `undefined`  |
-| `indicatorMark` | `indicator-mark` | Field indicator mark which can show *, (optional) or blank Defaults to required. When set to required, the component will display * for required fields and blank for optional When set to optional, the component will display (optional) for optional and blank for required. | `"none" \| "optional" \| "required"`    | `'required'` |
-| `labelPosition` | `label-position` |                                                                                                                                                                                                                                                                                 | `"above" \| "beside" \| "screenreader"` | `undefined`  |
-| `loading`       | `loading`        |                                                                                                                                                                                                                                                                                 | `boolean`                               | `false`      |
+| Property         | Attribute         | Description                                                                                                                                                                                                                                                                     | Type                                    | Default      |
+| ---------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------ |
+| `characterLimit` | `character-limit` | The characterLimit property defines the max character limit for the input.                                                                                                                                                                                                      | `number`                                | `0`          |
+| `clearable`      | `clearable`       |                                                                                                                                                                                                                                                                                 | `boolean`                               | `undefined`  |
+| `indicatorMark`  | `indicator-mark`  | Field indicator mark which can show *, (optional) or blank Defaults to required. When set to required, the component will display * for required fields and blank for optional When set to optional, the component will display (optional) for optional and blank for required. | `"none" \| "optional" \| "required"`    | `'required'` |
+| `labelPosition`  | `label-position`  |                                                                                                                                                                                                                                                                                 | `"above" \| "beside" \| "screenreader"` | `undefined`  |
+| `loading`        | `loading`         |                                                                                                                                                                                                                                                                                 | `boolean`                               | `false`      |
+
+
+## Events
+
+| Event                  | Description | Type                   |
+| ---------------------- | ----------- | ---------------------- |
+| `characterLimitChange` |             | `CustomEvent<boolean>` |
 
 
 ## Methods

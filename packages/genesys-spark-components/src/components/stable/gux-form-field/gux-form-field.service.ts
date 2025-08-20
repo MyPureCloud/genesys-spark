@@ -219,3 +219,43 @@ export function getSlottedInput(
 function hasLabelSlot(root: HTMLElement): boolean {
   return Boolean(root.querySelector('label[slot="label"]'));
 }
+
+export function setCharacterCountAriaDescribedBy(
+  root: HTMLElement,
+  input:
+    | HTMLInputElement
+    | HTMLSelectElement
+    | HTMLTextAreaElement
+    | HTMLGuxTimePickerElement
+    | HTMLGuxPhoneInputBetaElement
+    | HTMLGuxTimeZonePickerBetaElement
+): void {
+  if (root.hasAttribute('character-limit')) {
+    const characterlimit = root.shadowRoot?.querySelector(
+      '.gux-form-field-character-count'
+    );
+    if (characterlimit) {
+      const counterId = randomHTMLId('gux-form-field-character-counter');
+      const describedByIds =
+        input
+          .getAttribute('aria-describedby')
+          ?.split(' ')
+          .filter(id => !id.startsWith(`gux-form-field-character-counter`)) ||
+        [];
+
+      characterlimit.setAttribute('id', counterId);
+      describedByIds.push(counterId);
+
+      if (describedByIds) {
+        input.setAttribute('aria-describedby', describedByIds.join(' '));
+      }
+    }
+  } else if (input.getAttribute('aria-describedby')) {
+    const describedByIds =
+      input
+        .getAttribute('aria-describedby')
+        ?.split(' ')
+        .filter(id => !id.startsWith(`gux-form-field-character-counter`)) || [];
+    input.setAttribute('aria-describedby', describedByIds.join(' '));
+  }
+}
