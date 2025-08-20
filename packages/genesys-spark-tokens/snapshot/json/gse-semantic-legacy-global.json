@@ -554,6 +554,9 @@
     },
     "indicator": {
       "width": "2px"
+    },
+    "action": {
+      "height": "12px"
     }
   },
   "code": {
