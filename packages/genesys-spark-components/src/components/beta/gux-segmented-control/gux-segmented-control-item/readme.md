@@ -25,12 +25,13 @@
 
 ### Depends on
 
-- [gux-tooltip](../../../stable/gux-tooltip)
+- [gux-tooltip-beta](../../gux-tooltip-beta)
 
 ### Graph
 ```mermaid
 graph TD;
-  gux-segmented-control-item --> gux-tooltip
+  gux-segmented-control-item --> gux-tooltip-beta
+  gux-tooltip-beta --> gux-tooltip-base-beta
   style gux-segmented-control-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

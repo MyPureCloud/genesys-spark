@@ -1100,6 +1100,13 @@
         "type": "sizing",
         "description": "The recommended divider indicator width, used for the indicators of active tabs, for example"
       }
+    },
+    "action": {
+      "height": {
+        "value": "{size.2xs}",
+        "type": "sizing",
+        "description": "This token was created for the Segmented Control divder line height."
+      }
     }
   },
   "z_index": {

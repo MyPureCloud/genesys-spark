@@ -1,3 +1,5 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
 @mixin gux-hide-offscreen {
   position: absolute;
   top: auto;
@@ -23,6 +25,13 @@
 
 @mixin gux-sr-only {
   @include gux-hide-offscreen;
+}
+
+@mixin button-text {
+  font-family: ui.$gse-ui-button-text-fontFamily;
+  font-size: ui.$gse-ui-button-text-fontSize;
+  font-weight: ui.$gse-ui-button-text-fontWeight;
+  line-height: ui.$gse-ui-button-text-lineHeight;
 }
 
 @mixin gux-sr-only-clip {
