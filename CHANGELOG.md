@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.166.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.165.0...v4.166.0) (2025-08-20)
+
+
+### Features
+
+* **chat-input:** Added initial logic ([75e37f4](https://github.com/MyPureCloud/genesys-spark/commit/75e37f4dcd3771731c780da55a54f4047f57828d))
+* **tokens:** added notification tokens ([188dd59](https://github.com/MyPureCloud/genesys-spark/commit/188dd591e41f56a6f84ba6aaba7e50f96d711626))
+
+
+### Bug Fixes
+
+* **form-field-search:** fixed clear buttons tooltip ([d57e78b](https://github.com/MyPureCloud/genesys-spark/commit/d57e78b628d3b16bd1bd0cf61aef607bf7d445a7))
+
 ## [4.165.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.164.4...v4.165.0) (2025-08-19)
 
 
