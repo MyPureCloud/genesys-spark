@@ -9,13 +9,13 @@ exports[`gux-pagination-items-per-page #render should render as expected (1) 1`]
           <gux-popup>
             <div class="gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-                <div class="gux-field-content">
-                  <div class="gux-selected-option">
+                <span class="gux-field-content">
+                  <span class="gux-selected-option">
                     <gux-truncate dir="auto">
                       25
                     </gux-truncate>
-                  </div>
-                </div>
+                  </span>
+                </span>
                 <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
               </button>
             </div>
@@ -89,13 +89,13 @@ exports[`gux-pagination-items-per-page #render should render as expected (2) 1`]
           <gux-popup>
             <div class="gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-                <div class="gux-field-content">
-                  <div class="gux-selected-option">
+                <span class="gux-field-content">
+                  <span class="gux-selected-option">
                     <gux-truncate dir="auto">
                       50
                     </gux-truncate>
-                  </div>
-                </div>
+                  </span>
+                </span>
                 <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
               </button>
             </div>
@@ -169,13 +169,13 @@ exports[`gux-pagination-items-per-page #render should render as expected (3) 1`]
           <gux-popup>
             <div class="gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-                <div class="gux-field-content">
-                  <div class="gux-selected-option">
+                <span class="gux-field-content">
+                  <span class="gux-selected-option">
                     <gux-truncate dir="auto">
                       75
                     </gux-truncate>
-                  </div>
-                </div>
+                  </span>
+                </span>
                 <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
               </button>
             </div>
@@ -249,13 +249,13 @@ exports[`gux-pagination-items-per-page #render should render as expected (4) 1`]
           <gux-popup>
             <div class="gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-                <div class="gux-field-content">
-                  <div class="gux-selected-option">
+                <span class="gux-field-content">
+                  <span class="gux-selected-option">
                     <gux-truncate dir="auto">
                       100
                     </gux-truncate>
-                  </div>
-                </div>
+                  </span>
+                </span>
                 <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
               </button>
             </div>
@@ -329,13 +329,13 @@ exports[`gux-pagination-items-per-page #render should render as expected (5) 1`]
           <gux-popup disabled="">
             <div class="gux-disabled gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
-                <div class="gux-field-content">
-                  <div class="gux-selected-option">
+                <span class="gux-field-content">
+                  <span class="gux-selected-option">
                     <gux-truncate dir="auto">
                       25
                     </gux-truncate>
-                  </div>
-                </div>
+                  </span>
+                </span>
                 <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
               </button>
             </div>
@@ -409,13 +409,13 @@ exports[`gux-pagination-items-per-page #render should render as expected (6) 1`]
           <gux-popup disabled="">
             <div class="gux-disabled gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
-                <div class="gux-field-content">
-                  <div class="gux-selected-option">
+                <span class="gux-field-content">
+                  <span class="gux-selected-option">
                     <gux-truncate dir="auto">
                       50
                     </gux-truncate>
-                  </div>
-                </div>
+                  </span>
+                </span>
                 <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
               </button>
             </div>
@@ -489,13 +489,13 @@ exports[`gux-pagination-items-per-page #render should render as expected (7) 1`]
           <gux-popup disabled="">
             <div class="gux-disabled gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
-                <div class="gux-field-content">
-                  <div class="gux-selected-option">
+                <span class="gux-field-content">
+                  <span class="gux-selected-option">
                     <gux-truncate dir="auto">
                       75
                     </gux-truncate>
-                  </div>
-                </div>
+                  </span>
+                </span>
                 <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
               </button>
             </div>
@@ -569,13 +569,13 @@ exports[`gux-pagination-items-per-page #render should render as expected (8) 1`]
           <gux-popup disabled="">
             <div class="gux-disabled gux-target-container-not-filterable" slot="target">
               <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
-                <div class="gux-field-content">
-                  <div class="gux-selected-option">
+                <span class="gux-field-content">
+                  <span class="gux-selected-option">
                     <gux-truncate dir="auto">
                       100
                     </gux-truncate>
-                  </div>
-                </div>
+                  </span>
+                </span>
                 <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
               </button>
             </div>
