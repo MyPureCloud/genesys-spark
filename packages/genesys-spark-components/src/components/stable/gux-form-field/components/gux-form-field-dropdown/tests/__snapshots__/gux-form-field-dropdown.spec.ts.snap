@@ -1563,11 +1563,11 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
+            <span class="gux-field-content">
+              <span class="gux-placeholder">
                 Select...
-              </div>
-            </div>
+              </span>
+            </span>
             <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
@@ -1657,11 +1657,11 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
+            <span class="gux-field-content">
+              <span class="gux-placeholder">
                 Select...
-              </div>
-            </div>
+              </span>
+            </span>
             <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
@@ -1751,11 +1751,11 @@ exports[`gux-form-field-dropdown single select dropdown #render indicator marks 
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
+            <span class="gux-field-content">
+              <span class="gux-placeholder">
                 Select...
-              </div>
-            </div>
+              </span>
+            </span>
             <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
@@ -1845,11 +1845,11 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
+            <span class="gux-field-content">
+              <span class="gux-placeholder">
                 Select...
-              </div>
-            </div>
+              </span>
+            </span>
             <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
@@ -1939,11 +1939,11 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
       <gux-popup disabled="">
         <div class="gux-disabled gux-target-container-not-filterable" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" disabled="" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
+            <span class="gux-field-content">
+              <span class="gux-placeholder">
                 Select...
-              </div>
-            </div>
+              </span>
+            </span>
             <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
@@ -2033,11 +2033,11 @@ exports[`gux-form-field-dropdown single select dropdown #render input attributes
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
+            <span class="gux-field-content">
+              <span class="gux-placeholder">
                 Select...
-              </div>
-            </div>
+              </span>
+            </span>
             <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
@@ -2127,11 +2127,11 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
+            <span class="gux-field-content">
+              <span class="gux-placeholder">
                 Select...
-              </div>
-            </div>
+              </span>
+            </span>
             <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
@@ -2221,11 +2221,11 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
+            <span class="gux-field-content">
+              <span class="gux-placeholder">
                 Select...
-              </div>
-            </div>
+              </span>
+            </span>
             <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
@@ -2315,11 +2315,11 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
+            <span class="gux-field-content">
+              <span class="gux-placeholder">
                 Select...
-              </div>
-            </div>
+              </span>
+            </span>
             <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>
@@ -2409,11 +2409,11 @@ exports[`gux-form-field-dropdown single select dropdown #render label-position s
       <gux-popup>
         <div class="gux-target-container-not-filterable" slot="target">
           <button aria-expanded="false" aria-haspopup="listbox" class="gux-field gux-field-button" type="button">
-            <div class="gux-field-content">
-              <div class="gux-placeholder">
+            <span class="gux-field-content">
+              <span class="gux-placeholder">
                 Select...
-              </div>
-            </div>
+              </span>
+            </span>
             <gux-icon class="gux-expand-icon" iconname="custom/chevron-down-small-regular" screenreader-text="Dropdown" size="small"></gux-icon>
           </button>
         </div>

@@ -415,16 +415,16 @@ export class GuxDropdown {
     );
     if (selectedListboxOptionElement) {
       return (
-        <div class="gux-selected-option">
+        <span class="gux-selected-option">
           {this.renderSelectedItem(selectedListboxOptionElement)}
-        </div>
+        </span>
       ) as JSX.Element;
     }
 
     return (
-      <div class="gux-placeholder">
+      <span class="gux-placeholder">
         {this.placeholder || this.i18n('noSelection')}
-      </div>
+      </span>
     ) as JSX.Element;
   }
 
@@ -577,7 +577,7 @@ export class GuxDropdown {
   private renderTargetContent(): JSX.Element {
     if (!(this.expanded && this.isFilterable())) {
       return (
-        <div class="gux-field-content">{this.renderTargetDisplay()}</div>
+        <span class="gux-field-content">{this.renderTargetDisplay()}</span>
       ) as JSX.Element;
     }
   }
