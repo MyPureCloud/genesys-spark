@@ -1,12 +1,6 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use '~genesys-spark/dist/scss/focus.scss';
-
-@mixin button-text {
-  font-family: ui.$gse-ui-button-text-fontFamily;
-  font-size: ui.$gse-ui-button-text-fontSize;
-  font-weight: ui.$gse-ui-button-text-fontWeight;
-  line-height: ui.$gse-ui-button-text-lineHeight;
-}
+@use '~genesys-spark/dist/scss/mixins.scss';
 
 :host {
   display: inline-block;
@@ -16,7 +10,7 @@
 ::slotted(input[type='button']),
 ::slotted(input[type='submit']),
 ::slotted(button) {
-  @include button-text;
+  @include mixins.button-text;
 
   inline-size: 100%;
   min-inline-size: ui.$gse-ui-button-iconOnly-width;
