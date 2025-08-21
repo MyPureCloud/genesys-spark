@@ -22,9 +22,6 @@ export class GuxTreeViewBeta {
   value: string;
 
   @Prop()
-  multiselect: boolean = false;
-
-  @Prop()
   layout: GuxTreeViewLayout = 'comfy';
 
   @Prop()
@@ -33,27 +30,17 @@ export class GuxTreeViewBeta {
   @State()
   selectableElements: Element[] = [];
 
-  /**
-   * Returns an array of the selected values
-   */
-  // @Method()
-  // getSelectedValues(): Promise<string[]> {
-  //   return Promise.resolve(this.convertValueToArray(this.value));
-  // }
-
   @Listen('guxselected')
   onguxselected(event: CustomEvent): void {
-    if (!this.multiselect) {
-      this.selectableElements.forEach(element => {
-        if (element.id !== event.detail) {
-          (
-            element as
-              | HTMLGuxTreeViewBranchBetaElement
-              | HTMLGuxTreeViewLeafBetaElement
-          ).selected = false;
-        }
-      });
-    }
+    this.selectableElements.forEach(element => {
+      if (element.id !== event.detail) {
+        (
+          element as
+            | HTMLGuxTreeViewBranchBetaElement
+            | HTMLGuxTreeViewLeafBetaElement
+        ).selected = false;
+      }
+    });
     this.value = event.detail;
   }
 
@@ -61,18 +48,6 @@ export class GuxTreeViewBeta {
     this.getTreeViewChildren(this.root);
     trackComponent(this.root);
   }
-
-  // private convertValueToArray(value: string): string[] {
-  //   return value ? value.split(',') : [];
-  // }
-
-  // private updateValue(newValue: string): void {
-  //   if (this.value !== newValue) {
-  //     this.value = newValue;
-  //     simulateNativeEvent(this.root, 'input');
-  //     simulateNativeEvent(this.root, 'change');
-  //   }
-  // }
 
   private getSelectableElements(): void {
     this.selectableElements = Array.from(
@@ -88,9 +63,6 @@ export class GuxTreeViewBeta {
         child.nodeName === 'GUX-TREE-VIEW-LEAF-BETA'
       ) {
         child.setAttribute('layout', this.layout);
-        if (this.multiselect) {
-          child.setAttribute('multiselect', this.multiselect.toString());
-        }
         if (depth === 1) {
           child.classList.add('gux-child-node');
         } else if (depth === 2) {

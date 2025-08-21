@@ -24,15 +24,16 @@ import { randomHTMLId } from '@utils/dom/random-html-id';
 export class GuxTreeViewBranchBeta {
   @Element()
   root: HTMLElement;
+
   @Prop({ mutable: true })
   open: boolean = false;
 
   @Prop()
   disabled: boolean = false;
+
   @Prop()
   layout: GuxTreeViewLayout = 'comfy';
-  @Prop()
-  multiselect: boolean = false;
+
   @Event()
   guxselected: EventEmitter<string>;
 
@@ -57,7 +58,6 @@ export class GuxTreeViewBranchBeta {
 
   private toggle() {
     this.open = !this.open;
-    // if multiselect toggle selected
     this.selected = true;
   }
 
@@ -66,7 +66,6 @@ export class GuxTreeViewBranchBeta {
       <div>
         <button
           class={{
-            'gux-multiselect': this.multiselect,
             'gux-tree-view-branch-target': true,
             'gux-selected': this.selected,
             'gux-disabled': this.disabled,
