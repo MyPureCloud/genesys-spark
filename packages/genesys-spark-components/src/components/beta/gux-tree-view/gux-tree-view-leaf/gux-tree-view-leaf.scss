@@ -1,0 +1,114 @@
+gux-tree-view-leaf-beta {
+  -custom-noop: noop;
+}
+
+:host(.gux-child-node) {
+  .gux-comfy {
+    margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
+
+    .gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
+    }
+  }
+
+  .gux-compact {
+    margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
+
+    .gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
+    }
+  }
+}
+
+:host(.gux-grandchild-node) {
+  .gux-comfy {
+    margin: var(--gse-ui-treeView-item-comfy-grandchild-defaultPadding);
+
+    .gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-grandchild-selectedPadding);
+    }
+  }
+
+  .gux-compact {
+    margin: var(--gse-ui-treeView-item-comfy-grandchild-defaultPadding);
+
+    .gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-grandchild-selectedPadding);
+    }
+  }
+}
+
+:host(.gux-greatgrandchild-node) {
+  .gux-comfy {
+    margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-defaultPadding);
+
+    .gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-selectedPadding);
+    }
+  }
+
+  .gux-compact {
+    margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-defaultPadding);
+
+    .gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-selectedPadding);
+    }
+  }
+}
+
+.gux-grandchild-node {
+  .gux-comfy {
+    padding: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
+
+    .gux-selected {
+      padding: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
+    }
+  }
+
+  .gux-compact {
+    padding: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
+
+    .gux-selected {
+      padding: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
+    }
+  }
+}
+
+.gux-tree-view-leaf-target {
+  background-color: transparent;
+  border: none;
+  border-radius: var(--gse-ui-treeView-borderRadius);
+
+  &.gux-selected {
+    background-color: var(--gse-ui-treeView-selectionBookmark-midEmphasis);
+
+    // --gse-ui-treeView-selectionBookmark-compact-height: 26px;
+    // --gse-ui-treeView-selectionBookmark-compact-width: 4px;
+  }
+}
+
+.gux-comfy {
+  font-family: var(--gse-ui-treeView-comfy-label-fontFamily);
+  font-size: var(--gse-ui-treeView-comfy-label-fontSize);
+  font-weight: var(--gse-ui-treeView-comfy-label-fontWeight);
+  line-height: var(--gse-ui-treeView-comfy-label-lineHeight);
+
+  &.gux-selected {
+    background-color: var(--gse-ui-treeView-selectionBookmark-midEmphasis);
+    // --gse-ui-treeView-selectionBookmark-comfy-height: 36px;
+    // --gse-ui-treeView-selectionBookmark-comfy-width: 6px;
+  }
+}
+
+.gux-compact {
+  font-family: var(--gse-ui-treeView-compact-label-fontFamily);
+  font-size: var(--gse-ui-treeView-compact-label-fontSize);
+  font-weight: var(--gse-ui-treeView-compact-label-fontWeight);
+  line-height: var(--gse-ui-treeView-compact-label-lineHeight);
+}
+
+// .gux-selected {
+
+//   --gse-ui-treeView-selectionBookmark-highEmphasis: #2143a2;
+//   --gse-ui-treeView-selectionBookmark-midEmphasis: #d5def7;
+// }
