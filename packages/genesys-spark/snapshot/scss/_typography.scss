@@ -290,6 +290,8 @@
 
 /* Anchor */
 @mixin ui-anchor {
+  // https://github.com/stylelint/stylelint/issues/8728
+  /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
   border-radius: 0;
@@ -309,12 +311,15 @@
   &:focus-visible {
     @include focus.gux-focus-ring;
   }
+  /* stylelint-enable nesting-selector-no-missing-scoping-root */
 }
 
 @mixin ui-anchor-table {
   @include ui-anchor;
 
   // https://sass-lang.com/documentation/breaking-changes/mixed-decls/
+  // https://github.com/stylelint/stylelint/issues/8728
+  /* stylelint-disable-next-line block-no-redundant-nested-style-rules, nesting-selector-no-missing-scoping-root */
   & {
     text-decoration: none;
   }
