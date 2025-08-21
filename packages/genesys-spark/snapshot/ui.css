@@ -1,5 +1,6 @@
 :root {
   --gse-ui-color-focus: #5476d5;
+  --gse-ui-formControl-formStepper-gap: 40px;
   --gse-ui-formControl-input-contentText-fontFamily: "Noto Sans";
   --gse-ui-formControl-input-contentText-fontWeight: 400;
   --gse-ui-formControl-input-contentText-fontSize: 12px;
@@ -2341,6 +2342,7 @@
 
 [flare-mode=dark] {
   --gse-ui-color-focus: #5476d5;
+  --gse-ui-formControl-formStepper-gap: 40px;
   --gse-ui-formControl-input-contentText-fontFamily: "Noto Sans";
   --gse-ui-formControl-input-contentText-fontWeight: 400;
   --gse-ui-formControl-input-contentText-fontSize: 12px;

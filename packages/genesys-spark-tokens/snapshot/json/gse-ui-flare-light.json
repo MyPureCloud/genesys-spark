@@ -3,6 +3,9 @@
     "focus": "#5476d5"
   },
   "form_control": {
+    "form_stepper": {
+      "gap": "40px"
+    },
     "input": {
       "content_text": {
         "fontFamily": "'Noto Sans'",
