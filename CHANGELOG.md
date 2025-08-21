@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.166.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.166.0...v4.166.1) (2025-08-21)
+
+
+### Bug Fixes
+
+* **table-toolbar-action:** focus area narrower than space available ([#1318](https://github.com/MyPureCloud/genesys-spark/issues/1318)) ([c5f4860](https://github.com/MyPureCloud/genesys-spark/commit/c5f486046d5aaaab80f7436f6dd5e3a2c220d48e))
+
 ## [4.166.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.165.0...v4.166.0) (2025-08-20)
 
 
