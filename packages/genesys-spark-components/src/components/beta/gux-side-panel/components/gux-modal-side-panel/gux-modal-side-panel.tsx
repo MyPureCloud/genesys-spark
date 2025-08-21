@@ -11,11 +11,10 @@ import {
 } from '@stencil/core';
 import { GuxSidePanelSize } from '../../gux-side-panel.types';
 import { randomHTMLId } from '@utils/dom/random-html-id';
-import { hasSlot } from '@utils/dom/has-slot';
 import { trackComponent } from '@utils/tracking/usage';
 
 /**
- * @slot heading - The heading of the side panel
+ * @slot header - The header of the side panel
  * @slot description - Optional description of the side panel
  * @slot content - The content of the side panel
  * @slot footer - The footer of the side panel
@@ -96,14 +95,9 @@ export class GuxModalSidePanel {
         class={{ 'gux-open': this.open }}
       >
         <gux-side-panel-beta size={this.size}>
-          <div slot="heading" id={titleID}>
-            <slot name="heading" />
+          <div slot="header" id={titleID}>
+            <slot name="header" />
           </div>
-          {hasSlot(this.root, 'description') && (
-            <div slot="description">
-              <slot name="description" />
-            </div>
-          )}
           <div slot="content">
             <slot name="content" />
           </div>

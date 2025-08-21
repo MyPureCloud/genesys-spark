@@ -1,0 +1,9 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+
+gux-side-panel-beta gux-tab:first-child {
+  margin: ui.$gse-ui-sidePanel-header-tabset-leftPadding;
+}
+
+gux-side-panel-beta gux-tab:last-child {
+  margin: ui.$gse-ui-sidePanel-header-tabset-rightPadding;
+}
