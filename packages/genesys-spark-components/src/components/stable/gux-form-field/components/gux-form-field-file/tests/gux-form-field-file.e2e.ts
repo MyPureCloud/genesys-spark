@@ -4,6 +4,8 @@ import {
   a11yCheck
 } from '../../../../../../test/e2eTestUtils';
 
+import { renderConfigs } from './gux-form-field-file.common';
+
 const axeExclusions = [];
 
 async function newNonrandomE2EPage({
@@ -24,110 +26,20 @@ async function newNonrandomE2EPage({
 
 describe('gux-form-field-file', () => {
   describe('#render', () => {
-    describe('label-position', () => {
-      [
-        '',
-        'label-position="above"',
-        'label-position="beside"',
-        'label-position="screenreader"'
-      ].forEach((componentAttribute, index) => {
-        const html = `
-        <gux-form-field-file ${componentAttribute}>
-        <label slot="label">Upload a profile picture</label>
-        <input
-          type="file"
-          id="avatar"
-          name="avatar"
-          accept="image/png, image/jpeg"
-          slot="input"
-        />
-      </gux-form-field-file>
-        `;
-
-        it(`should render component as expected (${index + 1})`, async () => {
-          const page = await newNonrandomE2EPage({ html });
-          const element = await page.find('gux-form-field-file');
-          const elementShadowDom = await element.find(
-            'pierce/.gux-form-field-container'
-          );
-
-          expect(element.outerHTML).toMatchSnapshot();
-          expect(elementShadowDom).toMatchSnapshot();
-        });
-
-        it(`should be accessible (${index + 1})`, async () => {
-          const page = await newSparkE2EPage({ html });
-
-          await a11yCheck(page, axeExclusions);
-        });
-      });
-    });
-
-    describe('input attributes', () => {
-      ['', 'disabled', 'required'].forEach((inputAttribute, index) => {
-        const html = `
-        <gux-form-field-file>
-        <label slot="label">Upload a profile picture</label>
-        <input
-          slot="input"
-          type="file"
-          id="avatar"
-          name="avatar"
-          accept="image/png, image/jpeg"
-          ${inputAttribute}
-        />
-      </gux-form-field-file>
-        `;
-
-        it(`should render component as expected (${index + 1})`, async () => {
-          const page = await newNonrandomE2EPage({ html });
-          const element = await page.find('gux-form-field-file');
-          const elementShadowDom = await element.find(
-            'pierce/.gux-form-field-container'
-          );
-
-          expect(element.outerHTML).toMatchSnapshot();
-          expect(elementShadowDom).toMatchSnapshot();
-        });
-
-        it(`should be accessible (${index + 1})`, async () => {
-          const page = await newSparkE2EPage({ html });
-
-          await a11yCheck(page, axeExclusions);
-        });
-      });
-    });
-
-    describe('help', () => {
-      const html = `
-      <gux-form-field-file>
-      <label slot="label">Upload a profile picture</label>
-      <input
-        slot="input"
-        type="file"
-        id="avatar"
-        name="avatar"
-        accept="image/png, image/jpeg"
-      />
-      <span slot="help">This is a help message </span>
-    </gux-form-field-file>
-      `;
-
-      it('should render component as expected', async () => {
-        const page = await newNonrandomE2EPage({ html });
-        const element = await page.find('gux-form-field-file');
+    renderConfigs.forEach(({ html, description }) => {
+      it(description, async () => {
+        const snapshotPage = await newNonrandomE2EPage({ html });
+        const element = await snapshotPage.find('gux-form-field-file');
         const elementShadowDom = await element.find(
           'pierce/.gux-form-field-container'
         );
 
         expect(element.outerHTML).toMatchSnapshot();
         expect(elementShadowDom).toMatchSnapshot();
-      });
 
-      it('should be accessible', async () => {
-        const page = await newSparkE2EPage({ html });
+        const accessibilityPage = await newSparkE2EPage({ html });
 
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(accessibilityPage, axeExclusions);
       });
     });
   });
