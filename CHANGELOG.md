@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.167.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.166.1...v4.167.0) (2025-08-22)
+
+
+### Features
+
+* **side_panel:** enhance side panel component ([cea6f4d](https://github.com/MyPureCloud/genesys-spark/commit/cea6f4d589862407f7e2feea46467c8f4434fedc))
+
 ### [4.166.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.166.0...v4.166.1) (2025-08-21)
 
 
