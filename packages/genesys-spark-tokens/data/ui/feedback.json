@@ -550,6 +550,10 @@
         "gradient": {
           "value": "{background.system.illustration.background_gradient}",
           "type": "color"
+        },
+        "white": {
+          "value": "{background.system.illustration.background_gradient_white}",
+          "type": "color"
         }
       },
       "illustration": {

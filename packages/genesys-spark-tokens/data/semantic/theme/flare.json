@@ -1331,6 +1331,10 @@
               }
             }
           },
+          "140": {
+            "value": "{color.white}",
+            "type": "color"
+          },
           "10d": {
             "value": "{color.azure_blue.300}",
             "type": "color"
@@ -1396,6 +1400,19 @@
                 "modify": {
                   "type": "alpha",
                   "value": "0.5",
+                  "space": "lch"
+                }
+              }
+            }
+          },
+          "140d": {
+            "value": "{color.white}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "alpha",
+                  "value": "0.1",
                   "space": "lch"
                 }
               }

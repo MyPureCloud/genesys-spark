@@ -823,6 +823,10 @@
         "background_gradient": {
           "value": "{theme.foreground.special_accents.illustration.130}",
           "type": "color"
+        },
+        "background_gradient_white": {
+          "value": "{theme.foreground.special_accents.illustration.140}",
+          "type": "color"
         }
       }
     },
