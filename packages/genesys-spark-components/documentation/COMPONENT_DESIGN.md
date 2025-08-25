@@ -117,6 +117,4 @@ class may remove it from the list. Instead, add a `gux-` prefixed attribute, and
 
 #### 1. Boolean Attributes
 
-Unlike native elements, Stencil will parse a boolean attribute set to `"false"` as `false` (native elements treat any
-presence of the attribute as true). Unfortunately, there's not much we can do but live with this, as trying to work
-around it would be error-prone and add unnecessary complexity.
+When using boolean attributes on the components, adhere to the HTML specification rather than the Stencil JS specification for setting boolean attributes on components. For example, in Stencil JS, setting `disabled="false"` on a component explicitly sets the property to `false`. However, in the HTML spec, boolean attributes are considered `true` when present, regardless of their string value, which can lead to unexpected behavior in browsers and assistive technologies like NVDA that rely on the HTML spec. To ensure compatibility and correct behavior, omit boolean attributes entirely when they should be `false`, following standard HTML practices.
