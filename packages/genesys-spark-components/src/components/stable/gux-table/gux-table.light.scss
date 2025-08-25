@@ -2,13 +2,13 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 
 gux-table {
-  * {
-    box-sizing: border-box;
-  }
-
   border-color: ui.$gse-ui-dataTable-border-color;
   border-style: ui.$gse-ui-dataTable-border-style;
   border-width: ui.$gse-ui-dataTable-border-width;
+
+  * {
+    box-sizing: border-box;
+  }
 
   table {
     inline-size: 100%;
