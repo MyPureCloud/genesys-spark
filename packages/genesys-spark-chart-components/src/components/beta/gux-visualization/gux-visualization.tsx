@@ -62,6 +62,10 @@ export class GuxVisualization {
   @Prop()
   embedOptions: EmbedOptions;
 
+  // Adds an aria-label to the SVG element for screen readers
+  @Prop()
+  screenreaderDescription: string;
+
   componentWillLoad(): void {
     trackComponent(this.root);
   }
@@ -106,6 +110,14 @@ export class GuxVisualization {
       result.view.addSignalListener('chartClick', (name, value) =>
         this.handleChartClick(name, value)
       );
+
+      // Set aria-label on the SVG if screenreaderDescription is provided
+      if (this.screenreaderDescription) {
+        const svgElement = this.chartContainer.querySelector('svg');
+        if (svgElement) {
+          svgElement.setAttribute('aria-label', this.screenreaderDescription);
+        }
+      }
     });
   }
 
