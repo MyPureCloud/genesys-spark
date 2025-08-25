@@ -1,0 +1,24 @@
+{
+  "logo": {
+    "brand": {
+      "text_color": {
+        "value": "{foreground.container.special_accents.brand_secondary}",
+        "type": "color"
+      },
+      "icon_color": {
+        "value": "{foreground.container.special_accents.brand}",
+        "type": "color"
+      }
+    },
+    "cloud": {
+      "text_color": {
+        "value": "{foreground.container.special_accents.brand_secondary}",
+        "type": "color"
+      },
+      "icon_color": {
+        "value": "{foreground.container.special_accents.brand}",
+        "type": "color"
+      }
+    }
+  }
+}

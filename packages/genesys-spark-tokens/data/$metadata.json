@@ -15,6 +15,7 @@
     "ui/layout_and_container",
     "ui/navigation",
     "ui/feedback",
+    "ui/graphic_assets",
     "ui/deprecated",
     "ui-charts/area_chart",
     "ui-charts/bar_chart",
