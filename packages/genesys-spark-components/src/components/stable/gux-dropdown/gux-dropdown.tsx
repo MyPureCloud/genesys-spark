@@ -96,7 +96,7 @@ export class GuxDropdown {
 
   @Watch('expanded')
   watchExpanded(expanded: boolean) {
-    if (!expanded) {
+    if (!expanded && this.filterElement) {
       this.filter = '';
       this.filterElement.value = '';
     }
