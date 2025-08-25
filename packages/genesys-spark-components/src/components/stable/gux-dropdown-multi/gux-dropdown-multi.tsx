@@ -149,7 +149,7 @@ export class GuxDropdownMulti {
       });
     }
 
-    if (!expanded) {
+    if (!expanded && this.textInputElement) {
       this.textInput = '';
       this.textInputElement.value = '';
     }
