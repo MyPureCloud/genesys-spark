@@ -73,7 +73,7 @@
   },
   "types": "dist/types/index.d.ts",
   "dependencies": {
-    "@floating-ui/dom": "1.7.3",
+    "@floating-ui/dom": "1.7.4",
     "@js-temporal/polyfill": "0.5.1",
     "@vvo/tzdb": "6.183.0",
     "google-libphonenumber": "3.2.42",
@@ -86,7 +86,7 @@
     "@babel/core": "^7.28.3",
     "@babel/preset-env": "^7.28.3",
     "@playwright/test": "1.54.1",
-    "@stencil/core": "4.36.2",
+    "@stencil/core": "4.36.3",
     "@stencil/playwright": "^0.2.1",
     "@stencil/react-output-target": "^0.5.3",
     "@stencil/sass": "^3.2.2",
