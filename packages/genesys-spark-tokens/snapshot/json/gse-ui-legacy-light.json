@@ -3,9 +3,6 @@
     "focus": "#aac9ff"
   },
   "form_control": {
-    "form_stepper": {
-      "gap": "40px"
-    },
     "input": {
       "content_text": {
         "fontFamily": "Roboto",
@@ -170,6 +167,9 @@
     },
     "focus_ring": {
       "border_radius": "4px"
+    },
+    "form_stepper": {
+      "gap": "40px"
     }
   },
   "calendar_menu": {

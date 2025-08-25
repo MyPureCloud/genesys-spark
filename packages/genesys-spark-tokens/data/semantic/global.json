@@ -1004,13 +1004,6 @@
           "description": "This is the recommended spacing for the gap between the fieldset header and its paragraph if it has one."
         }
       }
-    },
-    "form_stepper": {
-      "gap": {
-        "value": "{spacing.xl}",
-        "type": "spacing",
-        "description": "This spacing is used for the gap between the stepper and form."
-      }
     }
   },
   "assets": {
