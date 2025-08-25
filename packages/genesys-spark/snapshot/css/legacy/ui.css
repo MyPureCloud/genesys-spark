@@ -1,6 +1,5 @@
 :root {
   --gse-ui-color-focus: #aac9ff;
-  --gse-ui-formControl-formStepper-gap: 40px;
   --gse-ui-formControl-input-contentText-fontFamily: Roboto;
   --gse-ui-formControl-input-contentText-fontWeight: 400;
   --gse-ui-formControl-input-contentText-fontSize: 12px;
@@ -88,6 +87,7 @@
   --gse-ui-formControl-spinner-errorColor: #deeaff;
   --gse-ui-formControl-textarea-padding: 8px;
   --gse-ui-formControl-focusRing-borderRadius: 4px;
+  --gse-ui-formControl-formStepper-gap: 40px;
   --gse-ui-calendarMenu-month-defaultText-fontFamily: Roboto;
   --gse-ui-calendarMenu-month-defaultText-fontWeight: 400;
   --gse-ui-calendarMenu-month-defaultText-fontSize: 12px;

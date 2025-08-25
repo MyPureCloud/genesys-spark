@@ -1,6 +1,5 @@
 @mixin tokens {
   --gse-ui-color-focus: #5476d5;
-  --gse-ui-formControl-formStepper-gap: 40px;
   --gse-ui-formControl-input-contentText-fontFamily: 'Noto Sans';
   --gse-ui-formControl-input-contentText-fontWeight: 400;
   --gse-ui-formControl-input-contentText-fontSize: 12px;
@@ -88,6 +87,7 @@
   --gse-ui-formControl-spinner-errorColor: #465066;
   --gse-ui-formControl-textarea-padding: 8px;
   --gse-ui-formControl-focusRing-borderRadius: 4px;
+  --gse-ui-formControl-formStepper-gap: 40px;
   --gse-ui-calendarMenu-month-defaultText-fontFamily: 'Noto Sans';
   --gse-ui-calendarMenu-month-defaultText-fontWeight: 400;
   --gse-ui-calendarMenu-month-defaultText-fontSize: 12px;
