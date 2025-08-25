@@ -1,7 +1,7 @@
 {
   "spacing": {
     "5xs": {
-      "value": "2px",
+      "value": "50px",
       "type": "spacing"
     },
     "4xs": {
