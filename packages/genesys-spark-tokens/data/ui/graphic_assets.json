@@ -18,6 +18,18 @@
       "icon_color": {
         "value": "{foreground.container.special_accents.brand}",
         "type": "color"
+      },
+      "logomark": {
+        "inverse": {
+          "background_color": {
+            "value": "{background.container.special_accents.brand.inverse}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.container.special_accents.brand_inverse}",
+            "type": "color"
+          }
+        }
       }
     }
   }
