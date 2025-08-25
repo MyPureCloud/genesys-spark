@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-textarea #render error should render component as expected 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-textarea>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -26,9 +26,9 @@ exports[`gux-form-field-textarea #render error should render component as expect
         </div>
       </div>
     </div>
-  </template><textarea aria-describedby="gux-form-field-error-i" aria-invalid="true" id="gux-form-field-input-i" name="textarea" slot="input"></textarea>
+  </template><textarea aria-describedby="gux-form-field-error-i" aria-invalid="true" id="gux-form-field-input-i" slot="input"></textarea>
   <label for="gux-form-field-input-i" slot="label">
-    Default
+    Label
   </label>
   <span id="gux-form-field-error-i" slot="error">
     This is an error message
@@ -36,7 +36,7 @@ exports[`gux-form-field-textarea #render error should render component as expect
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render help should render component as expected 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when an optional "help" slot is provided 1`] = `
 <gux-form-field-textarea>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -62,9 +62,9 @@ exports[`gux-form-field-textarea #render help should render component as expecte
         </div>
       </div>
     </div>
-  </template><textarea aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" name="textarea" slot="input"></textarea>
+  </template><textarea aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" slot="input"></textarea>
   <label for="gux-form-field-input-i" slot="label">
-    Default
+    Label
   </label>
   <span id="gux-form-field-help-i" slot="help">
     This is a help message
@@ -72,7 +72,7 @@ exports[`gux-form-field-textarea #render help should render component as expecte
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render indicator marks should render component as expected (1) 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-textarea>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -98,14 +98,19 @@ exports[`gux-form-field-textarea #render indicator marks should render component
         </div>
       </div>
     </div>
-  </template><textarea id="gux-form-field-input-i" slot="input"></textarea>
+  </template><textarea aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" slot="input"></textarea>
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
+  <gux-label-info-beta id="gux-label-info-beta-i" slot="label-info">
+    <span slot="content">
+      This is some tooltip text
+    </span>
+  </gux-label-info-beta>
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render indicator marks should render component as expected (2) 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when indicator-mark is "optional" 1`] = `
 <gux-form-field-textarea indicator-mark="optional">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -138,7 +143,7 @@ exports[`gux-form-field-textarea #render indicator marks should render component
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render indicator marks should render component as expected (3) 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when indicator-mark is "required" 1`] = `
 <gux-form-field-textarea indicator-mark="required">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -171,40 +176,7 @@ exports[`gux-form-field-textarea #render indicator marks should render component
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render input attributes should render component as expected (1) 1`] = `
-<gux-form-field-textarea>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input gux-resize-undefined">
-          <slot name="input"></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template><textarea id="gux-form-field-input-i" slot="input"></textarea>
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-textarea>
-`;
-
-exports[`gux-form-field-textarea #render input attributes should render component as expected (2) 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when input attribute is "disabled" 1`] = `
 <gux-form-field-textarea>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -237,7 +209,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render input attributes should render component as expected (3) 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when input attribute is "required" 1`] = `
 <gux-form-field-textarea>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -270,78 +242,7 @@ exports[`gux-form-field-textarea #render input attributes should render componen
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render label-info should render component as expected 1`] = `
-<gux-form-field-textarea>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input gux-resize-undefined">
-          <slot name="input"></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template><textarea aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" name="textarea" slot="input"></textarea>
-  <label for="gux-form-field-input-i" slot="label">
-    Default
-  </label>
-  <gux-label-info-beta id="gux-label-info-beta-i" slot="label-info">
-    <span slot="content">
-      This is some tooltip text
-    </span>
-  </gux-label-info-beta>
-</gux-form-field-textarea>
-`;
-
-exports[`gux-form-field-textarea #render label-position should render component as expected (1) 1`] = `
-<gux-form-field-textarea>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input gux-resize-undefined">
-          <slot name="input"></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template><textarea id="gux-form-field-input-i" slot="input"></textarea>
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-textarea>
-`;
-
-exports[`gux-form-field-textarea #render label-position should render component as expected (2) 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when label-position is above 1`] = `
 <gux-form-field-textarea label-position="above">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -374,7 +275,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render label-position should render component as expected (3) 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when label-position is beside 1`] = `
 <gux-form-field-textarea label-position="beside">
   <template shadowrootmode="open">
     <div class="gux-beside gux-form-field-container">
@@ -407,7 +308,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render label-position should render component as expected (4) 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when label-position is screenreader 1`] = `
 <gux-form-field-textarea label-position="screenreader">
   <template shadowrootmode="open">
     <div class="gux-form-field-container gux-screenreader">
@@ -440,40 +341,7 @@ exports[`gux-form-field-textarea #render label-position should render component 
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render resize should render component as expected (1) 1`] = `
-<gux-form-field-textarea>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input gux-resize-undefined">
-          <slot name="input"></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template><textarea id="gux-form-field-input-i" slot="input"></textarea>
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-textarea>
-`;
-
-exports[`gux-form-field-textarea #render resize should render component as expected (2) 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when resize is auto 1`] = `
 <gux-form-field-textarea resize="auto">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -506,7 +374,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render resize should render component as expected (3) 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when resize is manual 1`] = `
 <gux-form-field-textarea resize="manual">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -539,7 +407,7 @@ exports[`gux-form-field-textarea #render resize should render component as expec
 </gux-form-field-textarea>
 `;
 
-exports[`gux-form-field-textarea #render resize should render component as expected (4) 1`] = `
+exports[`gux-form-field-textarea #render should render component as expected when resize is none 1`] = `
 <gux-form-field-textarea resize="none">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
