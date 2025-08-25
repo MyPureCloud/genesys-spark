@@ -116,6 +116,7 @@
             #{ui.$gse-ui-calendarMenu-day-input-width} -
               #{ui.$gse-ui-icon-small-size}
           );
+          inline-size: 100%;
           padding: 0;
           overflow: hidden;
           font-family: ui.$gse-ui-formControl-input-contentText-fontFamily;
