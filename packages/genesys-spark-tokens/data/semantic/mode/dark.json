@@ -415,6 +415,13 @@
               "description": "This is the bottom right color that the ai gradient uses for borders."
             }
           }
+        },
+        "brand": {
+          "inverse": {
+            "value": "{theme.foreground.special_accents.brand.10}",
+            "type": "color",
+            "description": "This is a background colour for brand logos"
+          }
         }
       },
       "global_nav": {
@@ -1203,6 +1210,11 @@
           "value": "{theme.foreground.special_accents.brand.10d}",
           "type": "color",
           "description": "The brand color, mostly used for logos on surfaces."
+        },
+        "brand_inverse": {
+          "value": "{theme.foreground.high_contrast.10}",
+          "type": "color",
+          "description": "The brand color foreground for inverse logos"
         },
         "ai_gradient": {
           "top_left": {

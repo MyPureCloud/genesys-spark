@@ -5062,5 +5062,72 @@
         }
       }
     }
+  },
+  "logo": {
+    "brand": {
+      "duotone": {
+        "text_color": "#141929",
+        "icon_color": "#ff451a"
+      },
+      "monotone": {
+        "text_color": "#141929",
+        "icon_color": "#141929"
+      },
+      "logomark": {
+        "neutral": "#141929",
+        "primary": "#ff451a",
+        "outlined": "#ff451a"
+      }
+    },
+    "cloud": {
+      "duotone": {
+        "text_color": "#141929",
+        "icon_color": "#ff451a",
+        "dropshadow1": {
+          "blur": "0.29px",
+          "spread": "0",
+          "color": "rgba(21, 37, 80, 0.2)",
+          "type": "dropShadow",
+          "offsetX": "0",
+          "offsetY": "0.29px"
+        },
+        "dropshadow2": {
+          "blur": "2.31px",
+          "spread": "0",
+          "color": "rgba(21, 37, 80, 0.1)",
+          "type": "dropShadow",
+          "offsetX": "0.58px",
+          "offsetY": "0.86px"
+        },
+        "innershadow1": {
+          "blur": "0.58px",
+          "spread": "0",
+          "color": "rgba(255, 255, 255, 0.25)",
+          "type": "innerShadow",
+          "offsetX": "0",
+          "offsetY": "0.43px"
+        },
+        "innershadow2": {
+          "blur": "0.86px",
+          "spread": "0",
+          "color": "rgba(128, 35, 13, 0.3)",
+          "type": "innerShadow",
+          "offsetX": "0",
+          "offsetY": "-0.29px"
+        }
+      },
+      "logomark": {
+        "primary": "#ff451a",
+        "neutral": "#141929",
+        "on_background": {
+          "background_color": "#ff451a",
+          "foreground_color": "#ffffff"
+        }
+      },
+      "monotone": {
+        "text_color": "#141929",
+        "icon_color": "#141929"
+      }
+    }
   }
 }

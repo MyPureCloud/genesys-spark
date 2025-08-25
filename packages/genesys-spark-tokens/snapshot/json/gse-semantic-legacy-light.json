@@ -120,6 +120,9 @@
             "middle": "#ff451a",
             "bottom_right": "#5476d5"
           }
+        },
+        "brand": {
+          "inverse": "#ff451a"
         }
       },
       "global_nav": {
@@ -346,7 +349,8 @@
           "top_left": "#28afe0",
           "bottom_right": "#6e5ddb"
         },
-        "global_nav": "#152550"
+        "global_nav": "#152550",
+        "brand_inverse": "#ffffff"
       }
     },
     "system": {
