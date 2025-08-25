@@ -21,7 +21,7 @@
   font-weight: ui.$gse-ui-dropdown-menu-selectAll-labelText-fontWeight;
   line-height: ui.$gse-ui-dropdown-menu-selectAll-labelText-lineHeight;
   color: ui.$gse-ui-menu-selectAll-label-foregroundColor;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   cursor: pointer;
   background-color: ui.$gse-ui-menu-selectAll-backgroundColor;
   border-block-end: global.$gse-semantic-container-divider-borderWidth solid

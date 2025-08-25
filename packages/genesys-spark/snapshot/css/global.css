@@ -288,9 +288,11 @@ body {
 }
 
 a {
+  /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
   border-radius: 0;
+  /* stylelint-enable nesting-selector-no-missing-scoping-root */
 }
 a:hover {
   color: var(--gse-ui-links-hover-foregroundColor);
@@ -307,9 +309,12 @@ a:focus-visible {
 }
 
 table a {
+  /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
   border-radius: 0;
+  /* stylelint-enable nesting-selector-no-missing-scoping-root */
+  /* stylelint-disable-next-line block-no-redundant-nested-style-rules, nesting-selector-no-missing-scoping-root */
 }
 table a:hover {
   color: var(--gse-ui-links-hover-foregroundColor);
@@ -329,9 +334,11 @@ table a {
 }
 
 .gux-ui-anchor {
+  /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
   border-radius: 0;
+  /* stylelint-enable nesting-selector-no-missing-scoping-root */
 }
 .gux-ui-anchor:hover {
   color: var(--gse-ui-links-hover-foregroundColor);
@@ -348,9 +355,12 @@ table a {
 }
 
 .gux-anchor-table {
+  /* stylelint-disable nesting-selector-no-missing-scoping-root */
   color: var(--gse-ui-links-default-foregroundColor);
   text-decoration: underline;
   border-radius: 0;
+  /* stylelint-enable nesting-selector-no-missing-scoping-root */
+  /* stylelint-disable-next-line block-no-redundant-nested-style-rules, nesting-selector-no-missing-scoping-root */
 }
 .gux-anchor-table:hover {
   color: var(--gse-ui-links-hover-foregroundColor);
