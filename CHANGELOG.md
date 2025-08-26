@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.168.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.167.0...v4.168.0) (2025-08-26)
+
+
+### Features
+
+* **visualization-beta:** Add aria-label support to visualization-beta component ([a8cebdd](https://github.com/MyPureCloud/genesys-spark/commit/a8cebddb70fc002295c8a76d1edc402d858f849c))
+
+
+### Bug Fixes
+
+* **dropdown:** Added a null check for filterElement before setting its value ([d0fde52](https://github.com/MyPureCloud/genesys-spark/commit/d0fde52960febeb930229590a7a4ba5a697c38b1))
+
 ## [4.167.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.166.1...v4.167.0) (2025-08-22)
 
 
