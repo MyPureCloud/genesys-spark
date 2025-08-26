@@ -1,0 +1,27 @@
+gux-tree-view-beta {
+  -custom-noop: noop;
+}
+
+.gux-tree-view-comfy {
+  margin: var(--gse-ui-treeView-group-comfy-padding);
+}
+
+.gux-tree-view-compact {
+  margin: var(--gse-ui-treeView-group-compact-padding);
+}
+
+.gux-tree-view-header {
+  margin-block-end: var(--gse-ui-treeView-groupHeader-gap);
+  font-family: var(--gse-ui-treeView-groupHeader-heading-fontFamily);
+  font-size: var(--gse-ui-treeView-groupHeader-heading-fontSize);
+  font-weight: var(--gse-ui-treeView-groupHeader-heading-fontWeight);
+  line-height: var(--gse-ui-treeView-groupHeader-heading-lineHeight);
+}
+
+.gux-tree-view-meter {
+  margin-block-start: var(--gse-ui-treeView-groupHeader-subHeading-gap);
+  font-family: var(--gse-ui-treeView-groupHeader-meterTitle-fontFamily);
+  font-size: var(--gse-ui-treeView-groupHeader-meterTitle-fontSize);
+  font-weight: var(--gse-ui-treeView-groupHeader-meterTitle-fontWeight);
+  line-height: var(--gse-ui-treeView-groupHeader-meterTitle-lineHeight);
+}
