@@ -1,26 +1,62 @@
 {
   "logo": {
     "brand": {
-      "text_color": {
-        "value": "{foreground.container.special_accents.brand_secondary}",
-        "type": "color"
+      "duotone": {
+        "text_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "icon_color": {
+          "value": "{foreground.container.special_accents.brand}",
+          "type": "color"
+        }
       },
-      "icon_color": {
-        "value": "{foreground.container.special_accents.brand}",
-        "type": "color"
+      "monotone": {
+        "text_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "icon_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        }
+      },
+      "logomark": {
+        "neutral": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "primary": {
+          "value": "{foreground.container.special_accents.brand}",
+          "type": "color"
+        },
+        "outlined": {
+          "value": "{foreground.container.special_accents.brand}",
+          "type": "color"
+        }
       }
     },
     "cloud": {
-      "text_color": {
-        "value": "{foreground.container.special_accents.brand_secondary}",
-        "type": "color"
-      },
-      "icon_color": {
-        "value": "{foreground.container.special_accents.brand}",
-        "type": "color"
+      "duotone": {
+        "text_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "icon_color": {
+          "value": "{foreground.container.special_accents.brand}",
+          "type": "color"
+        }
       },
       "logomark": {
-        "inverse": {
+        "primary": {
+          "value": "{foreground.container.special_accents.brand}",
+          "type": "color"
+        },
+        "neutral": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "on_background": {
           "background_color": {
             "value": "{background.container.special_accents.brand.inverse}",
             "type": "color"
@@ -29,6 +65,16 @@
             "value": "{foreground.container.special_accents.brand_inverse}",
             "type": "color"
           }
+        }
+      },
+      "monotone": {
+        "text_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "icon_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
         }
       }
     }
