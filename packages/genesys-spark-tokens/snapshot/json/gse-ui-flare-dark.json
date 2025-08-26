@@ -558,6 +558,10 @@
       "tabset": {
         "left-padding": "0 0 0 12px",
         "right-padding": "0 12px 0 0"
+      },
+      "nav-based": {
+        "padding": "0 16px 0 24px",
+        "gap": "12px"
       }
     },
     "heading": {
@@ -578,6 +582,12 @@
         "fontWeight": "600",
         "fontSize": "24px",
         "lineHeight": "32px"
+      },
+      "nav-based": {
+        "fontFamily": "Urbanist",
+        "fontWeight": "700",
+        "fontSize": "18px",
+        "lineHeight": "27px"
       }
     },
     "background_color": "#2a2a2e",
@@ -636,6 +646,11 @@
     },
     "title-block": {
       "padding": "0 32px 16px 24px"
+    },
+    "nav-based": {
+      "header": {
+        "max_height": "56px"
+      }
     }
   },
   "card": {

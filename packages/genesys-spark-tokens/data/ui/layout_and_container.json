@@ -592,6 +592,10 @@
       "lg_text": {
         "value": "{heading.lg.semi_bold}",
         "type": "typography"
+      },
+      "nav-based": {
+        "value": "{heading.md.bold}",
+        "type": "typography"
       }
     },
     "description": {
@@ -636,6 +640,16 @@
         },
         "right-padding": {
           "value": "0 {container.sm.padding} 0 0",
+          "type": "spacing"
+        }
+      },
+      "nav-based": {
+        "padding": {
+          "value": "0 {container.md.padding} 0 {container.lg.padding}",
+          "type": "spacing"
+        },
+        "gap": {
+          "value": "{container.md.gap}",
           "type": "spacing"
         }
       }
@@ -694,6 +708,14 @@
       "padding": {
         "value": "0 {container.xl.padding} {container.md.padding} {container.lg.padding}",
         "type": "spacing"
+      }
+    },
+    "nav-based": {
+      "header": {
+        "max_height": {
+          "value": "56px",
+          "type": "sizing"
+        }
       }
     }
   }
