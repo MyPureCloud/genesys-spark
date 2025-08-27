@@ -143,7 +143,7 @@
   &.gux-target-container-expanded {
     pointer-events: none;
     cursor: default;
-    opacity: ui.$gse-ui-formControl-input-disabled-opacity;
+    opacity: var(--gse-ui-formControl-input-disabled-opacity);
   }
 }
 
