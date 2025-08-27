@@ -309,6 +309,38 @@
     "text": {
       "value": "{body.sm.bold}",
       "type": "typography"
+    },
+    "connected": {
+      "default": {
+        "background_color": {
+          "value": "{background.interactive.connected.default}",
+          "type": "color"
+        },
+        "foreground_color": {
+          "value": "{foreground.interactive.connected.default}",
+          "type": "color"
+        }
+      },
+      "hover": {
+        "background_color": {
+          "value": "{background.interactive.connected.hover}",
+          "type": "color"
+        },
+        "foreground_color": {
+          "value": "{foreground.interactive.connected.hover}",
+          "type": "color"
+        }
+      },
+      "active": {
+        "background_color": {
+          "value": "{background.interactive.connected.active}",
+          "type": "color"
+        },
+        "foreground_color": {
+          "value": "{foreground.interactive.connected.active}",
+          "type": "color"
+        }
+      }
     }
   },
   "action_button": {

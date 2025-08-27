@@ -201,6 +201,20 @@
             }
           }
         }
+      },
+      "connected": {
+        "default": {
+          "value": "{theme.background.system.success.40}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{theme.background.system.success.50}",
+          "type": "color"
+        },
+        "active": {
+          "value": "{theme.background.system.success.5d}",
+          "type": "color"
+        }
       }
     },
     "overlay": {
@@ -1103,6 +1117,20 @@
               "description": "The foreground color for the selected state of the return button of the global navigation."
             }
           }
+        }
+      },
+      "connected": {
+        "default": {
+          "value": "{theme.foreground.secondary.10}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{theme.foreground.secondary.10}",
+          "type": "color"
+        },
+        "active": {
+          "value": "{theme.foreground.secondary.10}",
+          "type": "color"
         }
       }
     },
