@@ -1,3 +1,13 @@
+:host(.gux-tabs-vertical) {
+  block-size: 100%;
+}
+
+:host(.gux-tabs-horizontal) {
+  .gux-tabs {
+    flex-direction: column;
+  }
+}
+
 :host {
   display: flex;
   flex-direction: column;
@@ -5,10 +15,6 @@
   .gux-tabs {
     display: flex;
     block-size: 100%;
-
-    &:not(.gux-vertical) {
-      flex-direction: column;
-    }
   }
 
   .gux-panel-container {

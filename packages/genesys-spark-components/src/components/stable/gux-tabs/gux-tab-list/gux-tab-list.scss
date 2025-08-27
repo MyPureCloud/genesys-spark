@@ -1,59 +1,55 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
 @use 'sass:color';
 
-gux-tabs {
-  &[orientation='vertical'] {
+.gux-vertical {
+  .gux-tab-container {
+    display: flex;
+    flex-direction: column;
+    inline-size: ui.$gse-ui-tabs-set-vertical-width;
     block-size: 100%;
+    margin-inline-end: ui.$gse-ui-tabs-set-vertical-marginRight;
+    border-inline-end: ui.$gse-ui-tabs-item-divider-horizontal-height solid
+      ui.$gse-ui-tabs-item-divider-dividerColor;
 
-    > gux-tab-list {
-      .gux-tab-container {
-        display: flex;
-        flex-direction: column;
-        inline-size: ui.$gse-ui-tabs-set-vertical-width;
-        block-size: 100%;
-        margin-inline-end: ui.$gse-ui-tabs-set-vertical-marginRight;
-        border-inline-end: ui.$gse-ui-tabs-item-divider-horizontal-height solid
-          ui.$gse-ui-tabs-item-divider-dividerColor;
+    .gux-scroll-button-container {
+      inline-size: 100%;
 
-        .gux-scroll-button-container {
-          inline-size: 100%;
+      button {
+        inline-size: 100%;
+      }
+    }
 
-          button {
-            inline-size: 100%;
-          }
-        }
+    .gux-scrollable-section {
+      flex-direction: column;
+      block-size: 100%;
+      overflow-y: auto;
+      scrollbar-width: none;
 
-        .gux-scrollable-section {
-          flex-direction: column;
-          block-size: 100%;
-          overflow-y: auto;
-          scrollbar-width: none; /* Firefox */
-          -ms-overflow-style: none; /* Internet Explorer 10+ */
-          scroll-behavior: smooth;
+      /* Firefox */
+      -ms-overflow-style: none;
 
-          &::-webkit-scrollbar {
-            /* WebKit */
-            inline-size: 0;
-            block-size: 0;
-          }
-        }
+      /* Internet Explorer 10+ */
+      scroll-behavior: smooth;
+
+      &::-webkit-scrollbar {
+        /* WebKit */
+        inline-size: 0;
+        block-size: 0;
       }
     }
   }
+}
 
-  &:not([orientation='vertical']) {
-    > gux-tab-list {
-      .gux-tab-container {
-        block-size: ui.$gse-ui-tabs-set-horizontal-height;
-        margin-block-end: ui.$gse-ui-tabs-set-horizontal-marginBottom;
-        border-block-end: ui.$gse-ui-tabs-item-divider-horizontal-height solid
-          ui.$gse-ui-tabs-item-divider-dividerColor;
-      }
+.gux-horizontal {
+  .gux-tab-container {
+    block-size: ui.$gse-ui-tabs-set-horizontal-height;
+    margin-block-end: ui.$gse-ui-tabs-set-horizontal-marginBottom;
+    border-block-end: ui.$gse-ui-tabs-item-divider-horizontal-height solid
+      ui.$gse-ui-tabs-item-divider-dividerColor;
+  }
 
-      .gux-scrollable-section {
-        overflow-x: auto;
-      }
-    }
+  .gux-scrollable-section {
+    overflow-x: auto;
   }
 
   .gux-tab-container {
