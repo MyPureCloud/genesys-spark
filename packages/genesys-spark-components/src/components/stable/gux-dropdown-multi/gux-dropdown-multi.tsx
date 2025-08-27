@@ -31,7 +31,7 @@ import {
 import { GuxFilterTypes } from '../gux-dropdown/gux-dropdown.types';
 import { OnMutation } from '@utils/decorator/on-mutation';
 /**
- * @slot - for a gux-listbox-multi containing gux-option-multi children
+ * @slot - for a gux-listbox-multi containing gux-option-multi, gux-select-all children
  */
 @Component({
   styleUrl: 'gux-dropdown-multi.scss',
@@ -149,8 +149,9 @@ export class GuxDropdownMulti {
       });
     }
 
-    if (!expanded) {
+    if (!expanded && this.textInputElement) {
       this.textInput = '';
+      this.textInputElement.value = '';
     }
   }
 
@@ -277,6 +278,13 @@ export class GuxDropdownMulti {
   @Listen('focusin')
   onFocusin(event: FocusEvent): void {
     this.stopPropagationOfInternalFocusEvents(event);
+
+    if (
+      this.isFilterable &&
+      !this.root.contains(event?.relatedTarget as Node)
+    ) {
+      this.textInputElement.focus();
+    }
   }
 
   @OnClickOutside({ triggerEvents: 'mousedown' })
@@ -480,12 +488,12 @@ export class GuxDropdownMulti {
 
   private renderTargetDisplay(): JSX.Element {
     return (
-      <div class="gux-placeholder">
+      <span class="gux-placeholder">
         {this.getSrSelectedText()}
         {this.getSelectedOptionText() ||
           this.placeholder ||
           this.i18n('noSelection')}
-      </div>
+      </span>
     ) as JSX.Element;
   }
 
@@ -495,7 +503,7 @@ export class GuxDropdownMulti {
     return selectedElementString
       ? ([
           selectedElementString,
-          <div class="gux-sr-only">{this.placeholder}</div>
+          <span class="gux-sr-only">{this.placeholder}</span>
         ] as JSX.Element)
       : false;
   }
@@ -529,9 +537,15 @@ export class GuxDropdownMulti {
       : this.i18n('textInputResults');
   }
 
+  private selectAllPresent(): boolean {
+    return (
+      this.expanded && !!this.listboxElement?.querySelector('gux-select-all')
+    );
+  }
+
   private renderTag(): JSX.Element {
     const selectedValues = convertValueToArray(this.value);
-    if (selectedValues.length) {
+    if (selectedValues.length && !this.selectAllPresent()) {
       return (
         <gux-dropdown-multi-tag
           disabled={this.disabled}
@@ -542,7 +556,7 @@ export class GuxDropdownMulti {
   }
 
   private renderFilterInputField(): JSX.Element {
-    if (this.expanded && this.hasTextInput()) {
+    if (this.hasTextInput()) {
       return (
         <div class="gux-field gux-input-field">
           <div class="gux-field-content">
@@ -568,8 +582,10 @@ export class GuxDropdownMulti {
                   onInput={this.filterInput.bind(this)}
                   onKeyDown={this.filterKeydown.bind(this)}
                   onKeyUp={this.filterKeyup.bind(this)}
+                  onFocus={() => (this.expanded = true)}
                   disabled={this.disabled}
                 ></input>
+                {this.renderTargetContent()}
               </div>
             </div>
           </div>
@@ -591,10 +607,10 @@ export class GuxDropdownMulti {
       <div
         class={{
           'gux-target-container': true,
-          'gux-target-container-expanded': this.expanded && this.hasTextInput(),
-          'gux-target-container-collapsed': !(
-            this.expanded && this.hasTextInput()
-          ),
+          'gux-target-container-filterable': this.hasTextInput(),
+          'gux-target-container-filterable-active':
+            this.expanded && this.hasTextInput(),
+          'gux-target-container-not-filterable': !this.hasTextInput(),
           'gux-error': this.hasError,
           'gux-disabled': this.disabled
         }}
@@ -610,7 +626,7 @@ export class GuxDropdownMulti {
           aria-haspopup="listbox"
           aria-expanded={this.expanded.toString()}
         >
-          {this.renderTargetContent()}
+          {!this.hasTextInput() && this.renderTargetContent()}
           {this.renderTag()}
           {this.renderRadialLoading()}
           <gux-icon
@@ -628,7 +644,7 @@ export class GuxDropdownMulti {
   private renderTargetContent(): JSX.Element {
     if (!(this.expanded && this.hasTextInput())) {
       return (
-        <div class="gux-field-content">{this.renderTargetDisplay()}</div>
+        <span class="gux-field-content">{this.renderTargetDisplay()}</span>
       ) as JSX.Element;
     }
   }

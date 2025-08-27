@@ -59,6 +59,8 @@ Type: `Promise<void>`
  - [gux-rich-text-editor-action-rich-style](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
  - [gux-rich-text-editor-action-text-highlight](../../beta/gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-text-highlight)
  - [gux-rich-text-editor-beta](../../beta/gux-rich-text-editor)
+ - [gux-select-all](../gux-listbox-multi/gux-select-all)
+ - [gux-side-panel-header](../../beta/gux-side-panel/components/gux-side-panel-header)
  - [gux-side-panel-heading](../../beta/gux-side-panel/components/gux-side-panel-heading)
  - [gux-simple-toast-legacy](../../legacy/gux-simple-toast-legacy)
  - [gux-step](../../beta/gux-stepper/gux-step)
@@ -85,6 +87,8 @@ graph TD;
   gux-rich-text-editor-action-rich-style --> gux-truncate
   gux-rich-text-editor-action-text-highlight --> gux-truncate
   gux-rich-text-editor-beta --> gux-truncate
+  gux-select-all --> gux-truncate
+  gux-side-panel-header --> gux-truncate
   gux-side-panel-heading --> gux-truncate
   gux-simple-toast-legacy --> gux-truncate
   gux-step --> gux-truncate

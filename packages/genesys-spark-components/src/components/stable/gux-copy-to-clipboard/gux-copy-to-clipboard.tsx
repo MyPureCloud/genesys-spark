@@ -3,6 +3,7 @@ import { trackComponent } from '@utils/tracking/usage';
 import { buildI18nForComponent, GetI18nValue } from '../../../i18n';
 import translationResources from './i18n/en.json';
 import { GuxCopyToClipboardContent } from './gux-copy-to-clipboard.types';
+import { getSlotTextContent } from '@utils/dom/get-slot-text-content';
 
 /**
  * @slot content - Slot for content
@@ -87,6 +88,7 @@ export class GuxCopyToClipboard {
       <button
         class="gux-copy-to-clipboard-wrapper"
         onClick={this.onCopyToClipboard.bind(this)}
+        aria-label={getSlotTextContent(this.root, 'content')}
       >
         <div class="gux-copy-content">
           {/* This is a named slot because we don't want it to be possible to slot a text node.

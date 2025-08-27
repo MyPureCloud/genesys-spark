@@ -124,8 +124,7 @@ export class GuxPopup {
                   // Everything else is constrained to the width of the target.
                   // Note: if the contents overflow the flip and shift middleware will not detect it
                   Object.assign(elements.floating.style, {
-                    width: `${rects.reference.width}px`,
-                    overflow: 'hidden'
+                    width: `${rects.reference.width}px`
                   });
                 }
               }

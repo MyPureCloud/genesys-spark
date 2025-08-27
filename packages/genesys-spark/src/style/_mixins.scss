@@ -26,13 +26,14 @@
 }
 
 @mixin gux-sr-only-clip {
+  // https://github.com/stylelint/stylelint/issues/8728
+  /* stylelint-disable-next-line nesting-selector-no-missing-scoping-root */
   &:not(:focus):not(:active) {
     position: absolute;
     width: 1px;
     height: 1px;
     overflow: hidden;
     white-space: nowrap;
-    clip: rect(0 0 0 0);
     clip-path: inset(50%);
   }
 }

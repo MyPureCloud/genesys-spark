@@ -38,7 +38,7 @@ String charComponentAssetsPath = ''
 webappPipelineV2 {
     urlPrefix = 'spark-components'
     agentLabel = 'dev_x86_shared'
-    nodeVersion = '22.x multiarch'
+    nodeVersion = '22.x'
     mailer = 'CoreUI@genesys.com'
     chatGroupId = 'adhoc-30ab1aa8-d42e-4590-b2a4-c9f7cef6d51c'
     manifest = customManifest('./dist') {
@@ -62,6 +62,7 @@ webappPipelineV2 {
             sh('npm run devops.create.pipeline.assets')
         }
         sh('node -v')
+        sh('npm --versions')
         sh('npm ci')
     }
     versionClosure = {

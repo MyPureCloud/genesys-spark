@@ -4,6 +4,8 @@ import {
   a11yCheck
 } from '../../../../../../test/e2eTestUtils';
 
+import { renderConfigs } from './gux-form-field-time-picker.common';
+
 const axeExclusions = [];
 
 async function newNonrandomE2EPage({
@@ -24,93 +26,20 @@ async function newNonrandomE2EPage({
 
 describe('gux-form-field-time-picker', () => {
   describe('#render', () => {
-    describe('label-position', () => {
-      [
-        '',
-        'label-position="above"',
-        'label-position="beside"',
-        'label-position="screenreader"'
-      ].forEach((componentAttribute, index) => {
-        const html = `
-        <gux-form-field-time-picker ${componentAttribute}>
-          <gux-time-picker value="07:00"></gux-time-picker>
-          <label slot="label">Label</label>
-        </gux-form-field-time-picker>
-        `;
-
-        it(`should render component as expected (${index + 1})`, async () => {
-          const page = await newNonrandomE2EPage({ html });
-          const element = await page.find('gux-form-field-time-picker');
-          const elementShadowDom = await element.find(
-            'pierce/.gux-form-field-container'
-          );
-
-          expect(element.outerHTML).toMatchSnapshot();
-          expect(elementShadowDom).toMatchSnapshot();
-        });
-
-        it(`should be accessible (${index + 1})`, async () => {
-          const page = await newSparkE2EPage({ html });
-
-          await a11yCheck(page, axeExclusions);
-        });
-      });
-    });
-
-    describe('interval', () => {
-      ['interval="15"', 'interval="30"', 'interval="60"'].forEach(
-        (componentAttribute, index) => {
-          const html = `
-          <gux-form-field-time-picker>
-            <gux-time-picker value="07:00" ${componentAttribute}></gux-time-picker>
-            <label slot="label">Label</label>
-          </gux-form-field-time-picker>
-        `;
-
-          it(`should render component as expected (${index + 1})`, async () => {
-            const page = await newNonrandomE2EPage({ html });
-            const element = await page.find('gux-form-field-time-picker');
-            const elementShadowDom = await element.find(
-              'pierce/.gux-form-field-container'
-            );
-
-            expect(element.outerHTML).toMatchSnapshot();
-            expect(elementShadowDom).toMatchSnapshot();
-          });
-
-          it(`should be accessible (${index + 1})`, async () => {
-            const page = await newSparkE2EPage({ html });
-
-            await a11yCheck(page, axeExclusions);
-          });
-        }
-      );
-    });
-
-    describe('help', () => {
-      const html = `
-      <gux-form-field-time-picker>
-      <gux-time-picker value="09:00"></gux-time-picker>
-      <label slot="label">Select Time</label>
-      <span slot="help">This is a help message</span>
-    </gux-form-field-time-picker>
-      `;
-
-      it('should render component as expected', async () => {
-        const page = await newNonrandomE2EPage({ html });
-        const element = await page.find('gux-form-field-time-picker');
+    renderConfigs.forEach(({ html, description }) => {
+      it(description, async () => {
+        const snapshotPage = await newNonrandomE2EPage({ html });
+        const element = await snapshotPage.find('gux-form-field-time-picker');
         const elementShadowDom = await element.find(
           'pierce/.gux-form-field-container'
         );
 
         expect(element.outerHTML).toMatchSnapshot();
         expect(elementShadowDom).toMatchSnapshot();
-      });
 
-      it('should be accessible', async () => {
-        const page = await newSparkE2EPage({ html });
+        const accessibilityPage = await newSparkE2EPage({ html });
 
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(accessibilityPage, axeExclusions);
       });
     });
   });

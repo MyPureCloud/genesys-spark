@@ -18460,7 +18460,7 @@ exports[`gux-datepicker #render #render using non regional dates should render c
               <div class="gux-date">
                 27
                 <span class="gux-sr-only">
-                  अक्तूबर 2019
+                  अक्टूबर 2019
                 </span>
               </div>
             </td>
@@ -18468,7 +18468,7 @@ exports[`gux-datepicker #render #render using non regional dates should render c
               <div class="gux-date">
                 28
                 <span class="gux-sr-only">
-                  अक्तूबर 2019
+                  अक्टूबर 2019
                 </span>
               </div>
             </td>
@@ -18476,7 +18476,7 @@ exports[`gux-datepicker #render #render using non regional dates should render c
               <div class="gux-date">
                 29
                 <span class="gux-sr-only">
-                  अक्तूबर 2019
+                  अक्टूबर 2019
                 </span>
               </div>
             </td>
@@ -18484,7 +18484,7 @@ exports[`gux-datepicker #render #render using non regional dates should render c
               <div class="gux-date">
                 30
                 <span class="gux-sr-only">
-                  अक्तूबर 2019
+                  अक्टूबर 2019
                 </span>
               </div>
             </td>
@@ -18492,7 +18492,7 @@ exports[`gux-datepicker #render #render using non regional dates should render c
               <div class="gux-date">
                 31
                 <span class="gux-sr-only">
-                  अक्तूबर 2019
+                  अक्टूबर 2019
                 </span>
               </div>
             </td>
@@ -69342,7 +69342,7 @@ exports[`gux-datepicker #render #render using regional dates should render compo
               <div class="gux-date">
                 27
                 <span class="gux-sr-only">
-                  अक्तूबर 2019
+                  अक्टूबर 2019
                 </span>
               </div>
             </td>
@@ -69350,7 +69350,7 @@ exports[`gux-datepicker #render #render using regional dates should render compo
               <div class="gux-date">
                 28
                 <span class="gux-sr-only">
-                  अक्तूबर 2019
+                  अक्टूबर 2019
                 </span>
               </div>
             </td>
@@ -69358,7 +69358,7 @@ exports[`gux-datepicker #render #render using regional dates should render compo
               <div class="gux-date">
                 29
                 <span class="gux-sr-only">
-                  अक्तूबर 2019
+                  अक्टूबर 2019
                 </span>
               </div>
             </td>
@@ -69366,7 +69366,7 @@ exports[`gux-datepicker #render #render using regional dates should render compo
               <div class="gux-date">
                 30
                 <span class="gux-sr-only">
-                  अक्तूबर 2019
+                  अक्टूबर 2019
                 </span>
               </div>
             </td>
@@ -69374,7 +69374,7 @@ exports[`gux-datepicker #render #render using regional dates should render compo
               <div class="gux-date">
                 31
                 <span class="gux-sr-only">
-                  अक्तूबर 2019
+                  अक्टूबर 2019
                 </span>
               </div>
             </td>

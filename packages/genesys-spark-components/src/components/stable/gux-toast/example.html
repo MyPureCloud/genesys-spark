@@ -150,7 +150,7 @@
   onclick="(function() {
     const toastContainer = document.getElementById('toastContainer');
     const toast = document.createElement('gux-toast');
-    toast.setAttribute('alert-type', 'success')
+    toast.setAttribute('toast-type', 'success')
     toast.innerHTML = `<div slot='title'>Success Example</div><div slot='message'>This is an example message</div>`
 
     toastContainer.appendChild(toast);

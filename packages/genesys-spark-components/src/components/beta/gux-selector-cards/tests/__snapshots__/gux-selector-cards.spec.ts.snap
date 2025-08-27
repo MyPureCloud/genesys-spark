@@ -1,61 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-selector-cards #render should render component as expected (1) 1`] = `
-<gux-selector-cards-beta>
+exports[`gux-selector-cards #render renders descriptive checkbox selector cards 1`] = `
+<gux-selector-cards-beta class="example1">
   <template shadowrootmode="open">
     <div class="gux-selector-cards">
       <slot></slot>
     </div>
   </template>
-</gux-selector-cards-beta>
-`;
-
-exports[`gux-selector-cards #render should render component as expected (2) 1`] = `
-<gux-selector-cards-beta>
-  <template shadowrootmode="open">
-    <div class="gux-selector-cards">
-      <slot></slot>
-    </div>
-  </template>
-  <gux-selector-card-beta variant="simple">
-    <label for="first" slot="label">
+  <gux-selector-card-beta variant="descriptive">
+    <label for="1-D" slot="label">
       First
     </label>
-    <input id="first" name="example1" slot="input" type="radio">
+    <input id="1-D" name="example4" slot="input" type="checkbox" value="1-D">
+    <span slot="description">
+      A label for a sample selector card. Used in Spark WCL.
+    </span>
+    <gux-badge bold="" slot="badge">
+      Badge
+    </gux-badge>
     <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
   </gux-selector-card-beta>
-  <gux-selector-card-beta variant="simple">
-    <label for="second" slot="label">
+  <gux-selector-card-beta variant="descriptive">
+    <label for="2-D" slot="label">
       Second
     </label>
-    <input id="second" name="example1" slot="input" type="radio">
+    <input id="2-D" name="example4" slot="input" type="checkbox" value="2-D">
+    <span slot="description">
+      A label for a sample selector card. Used in Spark WCL.
+    </span>
+    <gux-badge bold="" slot="badge">
+      Badge
+    </gux-badge>
     <gux-icon decorative="" icon-name="fa/bell-regular" slot="icon"></gux-icon>
   </gux-selector-card-beta>
-  <gux-selector-card-beta variant="simple">
-    <label for="third" slot="label">
+  <gux-selector-card-beta variant="descriptive">
+    <label for="3-D" slot="label">
       Third
     </label>
-    <input id="third" name="example1" slot="input" type="radio">
+    <input id="3-D" name="example4" slot="input" type="checkbox" value="3-D">
+    <span slot="description">
+      A label for a sample selector card. Used in Spark WCL.
+    </span>
+    <gux-badge bold="" slot="badge">
+      Badge
+    </gux-badge>
     <gux-icon decorative="" icon-name="fa/play-regular" slot="icon"></gux-icon>
   </gux-selector-card-beta>
-  <gux-selector-card-beta variant="simple">
-    <label for="fourth" slot="label">
+  <gux-selector-card-beta variant="descriptive">
+    <label for="4-D" slot="label">
       Fourth
     </label>
-    <input disabled="" id="fourth" name="example1" slot="input" type="radio">
+    <input disabled="" id="4-D" name="example4" slot="input" type="checkbox" value="4-D">
+    <span slot="description">
+      A label for a sample selector card. Used in Spark WCL.
+    </span>
+    <gux-badge bold="" slot="badge">
+      Badge
+    </gux-badge>
     <gux-icon decorative="" icon-name="fa/bell-regular" slot="icon"></gux-icon>
   </gux-selector-card-beta>
-  <gux-selector-card-beta variant="simple">
-    <label for="fifth" slot="label">
+  <gux-selector-card-beta variant="descriptive">
+    <label for="5-D" slot="label">
       Fifth
     </label>
-    <input id="fifth" name="example1" slot="input" type="radio">
+    <input id="5-D" name="example4" slot="input" type="checkbox" value="5-D">
+    <span slot="description">
+      A label for a sample selector card. Used in Spark WCL.
+    </span>
+    <gux-badge bold="" slot="badge">
+      Badge
+    </gux-badge>
     <gux-icon decorative="" icon-name="fa/play-regular" slot="icon"></gux-icon>
   </gux-selector-card-beta>
 </gux-selector-cards-beta>
 `;
 
-exports[`gux-selector-cards #render should render component as expected (3) 1`] = `
+exports[`gux-selector-cards #render renders descriptive radio selector cards 1`] = `
 <gux-selector-cards-beta class="example2">
   <template shadowrootmode="open">
     <div class="gux-selector-cards">
@@ -130,7 +150,7 @@ exports[`gux-selector-cards #render should render component as expected (3) 1`] 
 </gux-selector-cards-beta>
 `;
 
-exports[`gux-selector-cards #render should render component as expected (4) 1`] = `
+exports[`gux-selector-cards #render renders simple checkbox selector cards 1`] = `
 <gux-selector-cards-beta class="example1">
   <template shadowrootmode="open">
     <div class="gux-selector-cards">
@@ -138,38 +158,110 @@ exports[`gux-selector-cards #render should render component as expected (4) 1`] 
     </div>
   </template>
   <gux-selector-card-beta variant="simple">
-    <label for="1-C" slot="label">
+    <label for="1-D" slot="label">
       First
     </label>
-    <input id="1-C" name="example3" slot="input" type="checkbox">
+    <input id="1-D" name="example4" slot="input" type="checkbox" value="1-D">
+    <span slot="description">
+      A label for a sample selector card. Used in Spark WCL.
+    </span>
     <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
   </gux-selector-card-beta>
   <gux-selector-card-beta variant="simple">
-    <label for="2-C" slot="label">
+    <label for="2-D" slot="label">
       Second
     </label>
-    <input id="2-C" name="example3" slot="input" type="checkbox">
+    <input id="2-D" name="example4" slot="input" type="checkbox" value="2-D">
+    <span slot="description">
+      A label for a sample selector card. Used in Spark WCL.
+    </span>
+    <gux-badge bold="" slot="badge">
+      Badge
+    </gux-badge>
     <gux-icon decorative="" icon-name="fa/bell-regular" slot="icon"></gux-icon>
   </gux-selector-card-beta>
   <gux-selector-card-beta variant="simple">
-    <label for="3-C" slot="label">
+    <label for="3-D" slot="label">
       Third
     </label>
-    <input id="3-C" name="example3" slot="input" type="checkbox">
+    <input id="3-D" name="example4" slot="input" type="checkbox" value="3-D">
+    <span slot="description">
+      A label for a sample selector card. Used in Spark WCL.
+    </span>
+    <gux-badge bold="" slot="badge">
+      Badge
+    </gux-badge>
     <gux-icon decorative="" icon-name="fa/play-regular" slot="icon"></gux-icon>
   </gux-selector-card-beta>
   <gux-selector-card-beta variant="simple">
-    <label for="4-C" slot="label">
+    <label for="4-D" slot="label">
       Fourth
     </label>
-    <input disabled="" id="4-C" name="example3" slot="input" type="checkbox">
+    <input disabled="" id="4-D" name="example4" slot="input" type="checkbox" value="4-D">
+    <span slot="description">
+      A label for a sample selector card. Used in Spark WCL.
+    </span>
+    <gux-badge bold="" slot="badge">
+      Badge
+    </gux-badge>
     <gux-icon decorative="" icon-name="fa/bell-regular" slot="icon"></gux-icon>
   </gux-selector-card-beta>
   <gux-selector-card-beta variant="simple">
-    <label for="5-C" slot="label">
+    <label for="5-D" slot="label">
       Fifth
     </label>
-    <input id="5-C" name="example3" slot="input" type="checkbox">
+    <input id="5-D" name="example4" slot="input" type="checkbox" value="5-D">
+    <span slot="description">
+      A label for a sample selector card. Used in Spark WCL.
+    </span>
+    <gux-badge bold="" slot="badge">
+      Badge
+    </gux-badge>
+    <gux-icon decorative="" icon-name="fa/play-regular" slot="icon"></gux-icon>
+  </gux-selector-card-beta>
+</gux-selector-cards-beta>
+`;
+
+exports[`gux-selector-cards #render renders simple radio selector cards 1`] = `
+<gux-selector-cards-beta>
+  <template shadowrootmode="open">
+    <div class="gux-selector-cards">
+      <slot></slot>
+    </div>
+  </template>
+  <gux-selector-card-beta variant="simple">
+    <label for="first" slot="label">
+      First
+    </label>
+    <input id="first" name="example1" slot="input" type="radio">
+    <gux-icon decorative="" icon-name="fa/diamond-regular" slot="icon"></gux-icon>
+  </gux-selector-card-beta>
+  <gux-selector-card-beta variant="simple">
+    <label for="second" slot="label">
+      Second
+    </label>
+    <input id="second" name="example1" slot="input" type="radio">
+    <gux-icon decorative="" icon-name="fa/bell-regular" slot="icon"></gux-icon>
+  </gux-selector-card-beta>
+  <gux-selector-card-beta variant="simple">
+    <label for="third" slot="label">
+      Third
+    </label>
+    <input id="third" name="example1" slot="input" type="radio">
+    <gux-icon decorative="" icon-name="fa/play-regular" slot="icon"></gux-icon>
+  </gux-selector-card-beta>
+  <gux-selector-card-beta variant="simple">
+    <label for="fourth" slot="label">
+      Fourth
+    </label>
+    <input disabled="" id="fourth" name="example1" slot="input" type="radio">
+    <gux-icon decorative="" icon-name="fa/bell-regular" slot="icon"></gux-icon>
+  </gux-selector-card-beta>
+  <gux-selector-card-beta variant="simple">
+    <label for="fifth" slot="label">
+      Fifth
+    </label>
+    <input id="fifth" name="example1" slot="input" type="radio">
     <gux-icon decorative="" icon-name="fa/play-regular" slot="icon"></gux-icon>
   </gux-selector-card-beta>
 </gux-selector-cards-beta>

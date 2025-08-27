@@ -40,13 +40,24 @@ Type: `Promise<void>`
 
 
 
+### `guxFocusPopover() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 
 ## Slots
 
-| Slot      | Description            |
-| --------- | ---------------------- |
-|           | popover content        |
-| `"title"` | Slot for popover title |
+| Slot       | Description             |
+| ---------- | ----------------------- |
+|            | popover content         |
+| `"footer"` | Slot for popover footer |
+| `"title"`  | Slot for popover title  |
 
 
 ## Dependencies

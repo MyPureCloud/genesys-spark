@@ -109,6 +109,16 @@
           "tonal_subtle": {
             "top_left": "#ebf7fb",
             "bottom_right": "#e8e5fa"
+          },
+          "default": {
+            "left_side": "#ebf6fb",
+            "right_side": "#e7e9f9"
+          },
+          "active": "#d5def7",
+          "copilot_launcher": {
+            "top_left": "#ffc650",
+            "middle": "#ff451a",
+            "bottom_right": "#5476d5"
           }
         }
       },
@@ -203,6 +213,14 @@
         "offline_reduced": "#cecfd3",
         "out_of_office_reduced": "#e2b7db",
         "notification": "#ff451a"
+      },
+      "notification": {
+        "primary": "#e22245",
+        "secondary": "#f8c73e",
+        "neutral": "#e7e9f9",
+        "subtle": "#2954cb",
+        "dark_only_content": "#2e394c",
+        "light_only_content": "#ffffff"
       }
     },
     "form_control": {
@@ -406,8 +424,9 @@
       },
       "special_accents": {
         "ai": {
-          "top_left": "#28afe0",
-          "bottom_right": "#8b7de2"
+          "top_left": "#ffc650",
+          "middle": "#ff451a",
+          "bottom_right": "#53bee5"
         }
       },
       "global_nav": {
@@ -491,7 +510,14 @@
     }
   },
   "effects": {
-    "box_shadow": "#28324326"
+    "box_shadow": "#28324326",
+    "shadows": {
+      "10": "#3d538f26",
+      "20": "#3d538f33",
+      "30": "#3d538f40",
+      "40": "#3d538f4d",
+      "50": "#3d538f66"
+    }
   },
   "charts": {
     "categorical_data": {

@@ -50,4 +50,8 @@
     line-height: ui.$gse-ui-popover-title-text-lineHeight;
     color: ui.$gse-ui-popover-headerColor;
   }
+
+  .gux-popover-footer {
+    padding-block-start: ui.$gse-ui-popover-gap;
+  }
 }

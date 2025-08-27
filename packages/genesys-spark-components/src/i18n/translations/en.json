@@ -723,6 +723,10 @@
     "regionDropdown": "Region Dropdown",
     "regionDropdownButton": "Region Dropdown Button"
   },
+  "gux-prompt-input": {
+    "inputPlaceholder": "Ask Genesys AI",
+    "generateGenesysAIText": "Generate Genesys AI text"
+  },
   "gux-radial-loading": {
     "loading": "Loading"
   },
@@ -761,6 +765,10 @@
     "raspberry": "Raspberry",
     "tomato": "Tomato",
     "additionalActions": "Additional Actions"
+  },
+  "gux-select-all": {
+    "allOptions": "All options",
+    "of": "of"
   },
   "gux-skip-navigation-list": {
     "navigationName": "Skip links navigation"

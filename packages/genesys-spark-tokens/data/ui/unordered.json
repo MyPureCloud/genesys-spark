@@ -24,7 +24,7 @@
         "type": "border"
       },
       "box_shadow": {
-        "value": "{container.md.box_shadow}",
+        "value": "{shadow.1_card.default}",
         "type": "boxShadow"
       }
     },
@@ -85,7 +85,7 @@
       }
     },
     "box_shadow": {
-      "value": "{container.md.box_shadow}",
+      "value": "{shadow.10_tooltip}",
       "type": "boxShadow"
     },
     "padding": {
@@ -111,6 +111,10 @@
     "target_offset": {
       "value": "{container.lg.gap}",
       "type": "spacing"
+    },
+    "max_width": {
+      "value": "350px",
+      "type": "sizing"
     }
   },
   "tag": {

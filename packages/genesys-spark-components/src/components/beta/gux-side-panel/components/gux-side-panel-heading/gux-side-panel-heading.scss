@@ -17,9 +17,19 @@ h6 {
   inline-size: 100%;
   padding: 0;
   margin: 0;
-  font-family: ui.$gse-ui-sidePanel-heading-text-fontFamily;
-  font-size: ui.$gse-ui-sidePanel-heading-text-fontSize;
-  font-weight: ui.$gse-ui-sidePanel-heading-text-fontWeight;
-  line-height: ui.$gse-ui-sidePanel-heading-text-lineHeight;
   color: ui.$gse-ui-sidePanel-headerColor;
+
+  &.default {
+    font-family: ui.$gse-ui-sidePanel-heading-mdText-fontFamily;
+    font-size: ui.$gse-ui-sidePanel-heading-mdText-fontSize;
+    font-weight: ui.$gse-ui-sidePanel-heading-mdText-fontWeight;
+    line-height: ui.$gse-ui-sidePanel-heading-mdText-lineHeight;
+  }
+
+  &.large {
+    font-family: ui.$gse-ui-sidePanel-heading-lgText-fontFamily;
+    font-size: ui.$gse-ui-sidePanel-heading-lgText-fontSize;
+    font-weight: ui.$gse-ui-sidePanel-heading-lgText-fontWeight;
+    line-height: ui.$gse-ui-sidePanel-heading-lgText-lineHeight;
+  }
 }

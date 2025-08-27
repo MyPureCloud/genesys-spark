@@ -2435,7 +2435,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "Antarctica/DumontDUrville" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/DumontDUrville">
   <template shadowrootmode="open">
-    10:00:00 PM Dumont-d’Urville Time
+    10:00:00 PM Dumont d’Urville Time
   </template>
 </gux-time-beta>
 `;
@@ -2635,7 +2635,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "Asia/Brunei" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Brunei">
   <template shadowrootmode="open">
-    8:00:00 PM Brunei Darussalam Time
+    8:00:00 PM Brunei Time
   </template>
 </gux-time-beta>
 `;
@@ -2683,7 +2683,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "Asia/Dili" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Dili">
   <template shadowrootmode="open">
-    9:00:00 PM East Timor Time
+    9:00:00 PM Timor-Leste Time
   </template>
 </gux-time-beta>
 `;
@@ -2795,7 +2795,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "Asia/Kamchatka" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Kamchatka">
   <template shadowrootmode="open">
-    12:00:00 AM Petropavlovsk-Kamchatski Standard Time
+    12:00:00 AM Kamchatka Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -3051,7 +3051,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "Asia/Taipei" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Taipei">
   <template shadowrootmode="open">
-    8:00:00 PM Taipei Standard Time
+    8:00:00 PM Taiwan Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -4203,7 +4203,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "Pacific/Apia" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Apia">
   <template shadowrootmode="open">
-    1:00:00 AM Apia Standard Time
+    1:00:00 AM Samoa Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -4371,7 +4371,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "Pacific/Midway" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Midway">
   <template shadowrootmode="open">
-    1:00:00 AM Samoa Standard Time
+    1:00:00 AM American Samoa Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -4411,7 +4411,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "Pacific/Pago_Pago" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Pago_Pago">
   <template shadowrootmode="open">
-    1:00:00 AM Samoa Standard Time
+    1:00:00 AM American Samoa Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -4435,7 +4435,7 @@ exports[`gux-time #render regional dates #render different time zones should ren
 exports[`gux-time #render regional dates #render different time zones should render as expected for "Pacific/Pohnpei" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Pohnpei">
   <template shadowrootmode="open">
-    11:00:00 PM Ponape Time
+    11:00:00 PM Pohnpei Time
   </template>
 </gux-time-beta>
 `;
@@ -6987,7 +6987,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "Antarctica/DumontDUrville" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Antarctica/DumontDUrville">
   <template shadowrootmode="open">
-    10:00:00 PM Dumont-d’Urville Time
+    10:00:00 PM Dumont d’Urville Time
   </template>
 </gux-time-beta>
 `;
@@ -7187,7 +7187,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "Asia/Brunei" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Brunei">
   <template shadowrootmode="open">
-    8:00:00 PM Brunei Darussalam Time
+    8:00:00 PM Brunei Time
   </template>
 </gux-time-beta>
 `;
@@ -7235,7 +7235,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "Asia/Dili" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Dili">
   <template shadowrootmode="open">
-    9:00:00 PM East Timor Time
+    9:00:00 PM Timor-Leste Time
   </template>
 </gux-time-beta>
 `;
@@ -7347,7 +7347,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "Asia/Kamchatka" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Kamchatka">
   <template shadowrootmode="open">
-    12:00:00 AM Petropavlovsk-Kamchatski Standard Time
+    12:00:00 AM Kamchatka Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -7603,7 +7603,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "Asia/Taipei" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Asia/Taipei">
   <template shadowrootmode="open">
-    8:00:00 PM Taipei Standard Time
+    8:00:00 PM Taiwan Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -8755,7 +8755,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "Pacific/Apia" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Apia">
   <template shadowrootmode="open">
-    1:00:00 AM Apia Standard Time
+    1:00:00 AM Samoa Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -8923,7 +8923,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "Pacific/Midway" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Midway">
   <template shadowrootmode="open">
-    1:00:00 AM Samoa Standard Time
+    1:00:00 AM American Samoa Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -8963,7 +8963,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "Pacific/Pago_Pago" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Pago_Pago">
   <template shadowrootmode="open">
-    1:00:00 AM Samoa Standard Time
+    1:00:00 AM American Samoa Standard Time
   </template>
 </gux-time-beta>
 `;
@@ -8987,7 +8987,7 @@ exports[`gux-time #render using non regional dates #render different time zones 
 exports[`gux-time #render using non regional dates #render different time zones should render as expected for "Pacific/Pohnpei" timezone 1`] = `
 <gux-time-beta datetime="2022-07-07T12:00:00.000Z" format="full" time-zone="Pacific/Pohnpei">
   <template shadowrootmode="open">
-    11:00:00 PM Ponape Time
+    11:00:00 PM Pohnpei Time
   </template>
 </gux-time-beta>
 `;

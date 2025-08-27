@@ -22,7 +22,7 @@ button {
   font-weight: ui.$gse-ui-menu-option-label-default-text-fontWeight;
   line-height: ui.$gse-ui-menu-option-label-default-text-lineHeight;
   color: ui.$gse-ui-menu-option-label-foregroundColor;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   cursor: pointer;
   outline: none;
   outline-offset: calc(#{ui.$gse-ui-menu-option-focus-border-width} * -1);

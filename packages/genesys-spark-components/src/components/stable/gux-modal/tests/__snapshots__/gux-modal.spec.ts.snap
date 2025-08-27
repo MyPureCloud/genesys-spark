@@ -2,11 +2,11 @@
 
 exports[`gux-modal #render should render large modal 1`] = `
 <gux-modal size="large">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <dialog aria-labelledby="gux-i">
       <div class="gux-large gux-modal-container">
         <gux-dismiss-button>
-          <template shadowrootmode="open">
+          <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -38,7 +38,7 @@ exports[`gux-modal #render should render large modal 1`] = `
   </div>
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
@@ -46,7 +46,7 @@ exports[`gux-modal #render should render large modal 1`] = `
       Primary
     </gux-button>
     <gux-button slot="dismiss">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
@@ -59,11 +59,11 @@ exports[`gux-modal #render should render large modal 1`] = `
 
 exports[`gux-modal #render should render medium modal 1`] = `
 <gux-modal size="medium">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <dialog aria-labelledby="gux-i">
       <div class="gux-medium gux-modal-container">
         <gux-dismiss-button>
-          <template shadowrootmode="open">
+          <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -95,7 +95,7 @@ exports[`gux-modal #render should render medium modal 1`] = `
   </div>
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
@@ -103,7 +103,7 @@ exports[`gux-modal #render should render medium modal 1`] = `
       Primary
     </gux-button>
     <gux-button slot="dismiss">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
@@ -116,11 +116,11 @@ exports[`gux-modal #render should render medium modal 1`] = `
 
 exports[`gux-modal #render should render modal with a specified initial focus element 1`] = `
 <gux-modal initial-focus="#cancelButton">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <dialog aria-labelledby="gux-i">
       <div class="gux-dynamic gux-modal-container">
         <gux-dismiss-button>
-          <template shadowrootmode="open">
+          <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -152,7 +152,7 @@ exports[`gux-modal #render should render modal with a specified initial focus el
   </div>
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
@@ -160,7 +160,7 @@ exports[`gux-modal #render should render modal with a specified initial focus el
       Primary
     </gux-button>
     <gux-button slot="dismiss">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
@@ -173,11 +173,11 @@ exports[`gux-modal #render should render modal with a specified initial focus el
 
 exports[`gux-modal #render should render modal with just left align buttons (to be deprecated) 1`] = `
 <gux-modal size="small">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <dialog aria-labelledby="gux-i">
       <div class="gux-modal-container gux-small">
         <gux-dismiss-button>
-          <template shadowrootmode="open">
+          <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -224,11 +224,11 @@ exports[`gux-modal #render should render modal with just left align buttons (to 
 
 exports[`gux-modal #render should render modal with just right align buttons (to be deprecated) 1`] = `
 <gux-modal size="small">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <dialog aria-labelledby="gux-i">
       <div class="gux-modal-container gux-small">
         <gux-dismiss-button>
-          <template shadowrootmode="open">
+          <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -275,11 +275,11 @@ exports[`gux-modal #render should render modal with just right align buttons (to
 
 exports[`gux-modal #render should render modal with separate button slots (to be deprecated) 1`] = `
 <gux-modal size="small">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <dialog aria-labelledby="gux-i">
       <div class="gux-modal-container gux-small">
         <gux-dismiss-button>
-          <template shadowrootmode="open">
+          <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -333,11 +333,11 @@ exports[`gux-modal #render should render modal with separate button slots (to be
 
 exports[`gux-modal #render should render modal without a title 1`] = `
 <gux-modal size="large">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <dialog>
       <div class="gux-large gux-modal-container">
         <gux-dismiss-button>
-          <template shadowrootmode="open">
+          <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -363,7 +363,7 @@ exports[`gux-modal #render should render modal without a title 1`] = `
   </div>
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
@@ -371,7 +371,7 @@ exports[`gux-modal #render should render modal without a title 1`] = `
       Primary
     </gux-button>
     <gux-button slot="dismiss">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
@@ -384,11 +384,11 @@ exports[`gux-modal #render should render modal without a title 1`] = `
 
 exports[`gux-modal #render should render modal without buttons 1`] = `
 <gux-modal size="small">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <dialog aria-labelledby="gux-i">
       <div class="gux-modal-container gux-small">
         <gux-dismiss-button>
-          <template shadowrootmode="open">
+          <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -428,11 +428,11 @@ exports[`gux-modal #render should render modal without buttons 1`] = `
 
 exports[`gux-modal #render should render small modal 1`] = `
 <gux-modal size="small">
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <dialog aria-labelledby="gux-i">
       <div class="gux-modal-container gux-small">
         <gux-dismiss-button>
-          <template shadowrootmode="open">
+          <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -464,7 +464,7 @@ exports[`gux-modal #render should render small modal 1`] = `
   </div>
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
@@ -472,7 +472,7 @@ exports[`gux-modal #render should render small modal 1`] = `
       Primary
     </gux-button>
     <gux-button slot="dismiss">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
@@ -485,11 +485,11 @@ exports[`gux-modal #render should render small modal 1`] = `
 
 exports[`gux-modal #render should render small modal by default 1`] = `
 <gux-modal>
-  <template shadowrootmode="open">
+  <template shadowrootmode="open" shadowrootdelegatesfocus>
     <dialog aria-labelledby="gux-i">
       <div class="gux-dynamic gux-modal-container">
         <gux-dismiss-button>
-          <template shadowrootmode="open">
+          <template shadowrootmode="open" shadowrootdelegatesfocus>
             <gux-button-slot accent="ghost">
               <button title="Dismiss" type="button">
                 <div class="gux-icon-container">
@@ -521,7 +521,7 @@ exports[`gux-modal #render should render small modal by default 1`] = `
   </div>
   <gux-cta-group align="end" slot="footer">
     <gux-button slot="primary">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>
@@ -529,7 +529,7 @@ exports[`gux-modal #render should render small modal by default 1`] = `
       Primary
     </gux-button>
     <gux-button slot="dismiss">
-      <template shadowrootmode="open">
+      <template shadowrootmode="open" shadowrootdelegatesfocus>
         <button class="gux-secondary" id="button-i" type="button">
           <slot></slot>
         </button>

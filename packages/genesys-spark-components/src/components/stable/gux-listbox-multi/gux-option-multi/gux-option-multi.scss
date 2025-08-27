@@ -17,7 +17,7 @@
   font-weight: ui.$gse-ui-menu-option-label-default-text-fontWeight;
   line-height: ui.$gse-ui-menu-option-label-default-text-lineHeight;
   color: ui.$gse-ui-menu-option-label-foregroundColor;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   cursor: pointer;
 
   .gux-option-wrapper {
@@ -59,7 +59,7 @@
     background-color: ui.$gse-ui-menu-option-selected-backgroundColor;
 
     .gux-checkbox-container > path {
-      fill: ui.$gse-ui-menu-option-checkbox-checked-default-foregroundColor;
+      fill: ui.$gse-ui-menu-option-checkbox-checked-selected-foregroundColor;
     }
   }
 

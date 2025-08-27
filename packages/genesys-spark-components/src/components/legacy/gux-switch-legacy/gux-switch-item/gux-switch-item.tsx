@@ -29,7 +29,12 @@ export class GuxSwitchItem {
   render(): JSX.Element {
     return (
       <Host class={{ 'gux-selected': this.selected }}>
-        <button type="button" class="gux-switch-item" disabled={this.disabled}>
+        <button
+          aria-current={this.selected.toString()}
+          type="button"
+          class="gux-switch-item"
+          disabled={this.disabled}
+        >
           <slot />
         </button>
       </Host>

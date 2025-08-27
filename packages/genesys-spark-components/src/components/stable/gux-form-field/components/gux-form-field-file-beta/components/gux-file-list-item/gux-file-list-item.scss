@@ -45,11 +45,11 @@
 
     .gux-indicator {
       &[icon-name='fa/circle-check-solid'] {
-        --gse-ui-formControl-label-tooltipTrigger-color: ui.$gse-ui-fileUpload-fileCard-statusIcon-success;
+        --gse-ui-formControl-label-tooltipTrigger-color: #{ui.$gse-ui-fileUpload-fileCard-statusIcon-success};
       }
 
       &[icon-name='fa/hexagon-exclamation-solid'] {
-        --gse-ui-formControl-label-tooltipTrigger-color: ui.$gse-ui-fileUpload-fileCard-statusIcon-error;
+        --gse-ui-formControl-label-tooltipTrigger-color: #{ui.$gse-ui-fileUpload-fileCard-statusIcon-error};
       }
     }
 
