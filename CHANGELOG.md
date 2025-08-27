@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.168.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.168.0...v4.168.1) (2025-08-27)
+
+
+### Bug Fixes
+
+* **datepicker:** allow for a narrower width than the default to be applied ([c71e963](https://github.com/MyPureCloud/genesys-spark/commit/c71e9633feb9ce358dbc74e4a4d0e941014cb4fa))
+
 ## [4.168.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.167.0...v4.168.0) (2025-08-26)
 
 
