@@ -39,8 +39,8 @@ test.describe('gux-dropdown-multi', () => {
       extraActions: async (page: E2EPage) => {
         await page
           .locator('gux-dropdown-multi')
-          .locator('.gux-field')
-          .click({ force: true });
+          .locator('button.gux-field')
+          .click();
       }
     });
   });
@@ -67,8 +67,7 @@ test.describe('gux-dropdown-multi', () => {
       });
 
       // Expand listbox
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.click({ force: true });
+      await component.locator('button.gux-field').click();
       await page.waitForChanges();
 
       expect((await runAxe(page)).violations).toHaveNoViolations({
@@ -87,8 +86,7 @@ test.describe('gux-dropdown-multi', () => {
       const component = page.locator('gux-dropdown-multi');
 
       // Expand listbox
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.click({ force: true });
+      await component.locator('button.gux-field').click();
       await page.waitForChanges();
       const listboxItems = component.locator(
         'gux-listbox-multi gux-option-multi'
@@ -146,9 +144,9 @@ test.describe('gux-dropdown-multi', () => {
       const component = page.locator('gux-dropdown-multi');
 
       // Expand listbox
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.click({ force: true });
+      await component.locator('button.gux-field').click();
       await page.waitForChanges();
+
       const listboxItems = component.locator(
         'gux-listbox-multi gux-option-multi'
       );
@@ -168,6 +166,7 @@ test.describe('gux-dropdown-multi', () => {
       expect(await removeButton.count()).toBe(1);
       await removeButton.first().click();
       await page.waitForChanges();
+
       selectedItems = component.locator('.gux-selected');
       expect(await selectedItems.count()).toBe(0);
 
@@ -183,9 +182,9 @@ test.describe('gux-dropdown-multi', () => {
       const component = page.locator('gux-dropdown-multi');
 
       // Expand listbox
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.click({ force: true });
+      await component.locator('button.gux-field').click();
       await page.waitForChanges();
+
       const listboxItems = component.locator(
         'gux-listbox-multi gux-option-multi'
       );
@@ -205,8 +204,7 @@ test.describe('gux-dropdown-multi', () => {
       const component = page.locator('gux-dropdown-multi');
 
       // Press down arrow
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.press('ArrowDown');
+      await component.locator('button.gux-field').press('ArrowDown');
 
       // Check listbox is expanded
       const dropMenu = component.locator('.gux-popup-container');
@@ -224,9 +222,7 @@ test.describe('gux-dropdown-multi', () => {
       const component = page.locator('gux-dropdown-multi');
 
       // Press down arrow
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.press('ArrowDown');
-
+      await component.locator('button.gux-field').press('ArrowDown');
       await page.waitForChanges();
 
       const listbox = component.locator('gux-listbox-multi');
@@ -243,9 +239,7 @@ test.describe('gux-dropdown-multi', () => {
       await setContent(page, renderConfig.html);
       const component = page.locator('gux-dropdown-multi');
 
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.press('ArrowDown');
-
+      await component.locator('button.gux-field').press('ArrowDown');
       await page.waitForChanges();
 
       const listbox = component.locator('gux-listbox-multi');
@@ -260,7 +254,6 @@ test.describe('gux-dropdown-multi', () => {
       );
 
       await activeItem.first().press('ArrowDown');
-
       await page.waitForChanges();
 
       activeItem = listbox.locator('.gux-active');
@@ -275,9 +268,7 @@ test.describe('gux-dropdown-multi', () => {
       await setContent(page, renderConfig.html);
       const component = page.locator('gux-dropdown-multi');
 
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.press('ArrowDown');
-
+      await component.locator('button.gux-field').press('ArrowDown');
       await page.waitForChanges();
 
       const listbox = component.locator('gux-listbox-multi');
@@ -330,8 +321,7 @@ test.describe('gux-dropdown-multi', () => {
       const component = page.locator('gux-dropdown-multi');
 
       // Expand listbox
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.click({ force: true });
+      await component.locator('button.gux-field').click();
       await page.waitForChanges();
 
       const selectAll = page.locator('gux-select-all');
@@ -349,8 +339,7 @@ test.describe('gux-dropdown-multi', () => {
       const component = page.locator('gux-dropdown-multi');
 
       // Expand listbox
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.click({ force: true });
+      await component.locator('button.gux-field').click();
       await page.waitForChanges();
 
       const selectAll = page.locator('gux-select-all');
@@ -369,8 +358,7 @@ test.describe('gux-dropdown-multi', () => {
       const component = page.locator('gux-dropdown-multi');
 
       // Expand listbox
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.click({ force: true });
+      await component.locator('button.gux-field').click();
       await page.waitForChanges();
 
       const selectAll = page.locator('gux-select-all');
@@ -402,8 +390,7 @@ test.describe('gux-dropdown-multi', () => {
       const component = page.locator('gux-dropdown-multi');
 
       // Expand listbox
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.click({ force: true });
+      await component.locator('button.gux-field').click();
       await page.waitForChanges();
 
       let listboxItems = component.locator(
@@ -440,8 +427,7 @@ test.describe('gux-dropdown-multi', () => {
       const component = page.locator('gux-dropdown-multi');
 
       // Expand listbox
-      const dropdownButtonElement = component.locator('.gux-field');
-      await dropdownButtonElement.click({ force: true });
+      await component.locator('button.gux-field').click();
       await page.waitForChanges();
 
       let listboxItems = component.locator(
@@ -464,10 +450,9 @@ test.describe('gux-dropdown-multi', () => {
         await setContent(page, creatableDropdown);
         const component = page.locator('gux-dropdown-multi');
 
-        const dropdownButtonElement = component.locator('.gux-field');
-        await dropdownButtonElement.click({ force: true });
-
+        await component.locator('button.gux-field').click();
         await page.waitForChanges();
+
         const input = component.locator('.gux-filter-input');
         await input.press('b');
         await input.press('e');
@@ -489,10 +474,9 @@ test.describe('gux-dropdown-multi', () => {
         await setContent(page, creatableDropdown);
         const component = page.locator('gux-dropdown-multi');
 
-        const dropdownButtonElement = component.locator('.gux-field');
-        await dropdownButtonElement.click({ force: true });
-
+        await component.locator('button.gux-field').click();
         await page.waitForChanges();
+
         const input = component.locator('.gux-filter-input');
         await input.press('c');
         await input.press('a');
@@ -508,8 +492,7 @@ test.describe('gux-dropdown-multi', () => {
         await setContent(page, creatableDropdown);
         const component = page.locator('gux-dropdown-multi');
 
-        const dropdownButtonElement = component.locator('.gux-field');
-        await dropdownButtonElement.click({ force: true });
+        await component.locator('button.gux-field').click();
 
         let dropdownValue = await getDropdownValue(page);
         let listboxValue = await getListboxValue(page);
