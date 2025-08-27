@@ -221,6 +221,22 @@
         "subtle": "#3d538f",
         "dark_only_content": "#2a2a2e",
         "light_only_content": "#ffffff"
+      },
+      "illustration": {
+        "default": "#829ce5",
+        "success_base": "#cef0e6",
+        "success_symbol": "#056d4d",
+        "error_base": "#f9d3da",
+        "error_symbol": "#b51b37",
+        "warning_base": "#fce9b2",
+        "warning_symbol": "#6c5619",
+        "info_base": "#ddeaf7",
+        "info_symbol": "#345b82",
+        "operation_base": "#d5def7",
+        "operation_symbol": "#2143a2",
+        "background_solid": "#bfc6d91a",
+        "background_gradient": "#bfc6d933",
+        "background_gradient_white": "#ffffff0d"
       }
     },
     "form_control": {
