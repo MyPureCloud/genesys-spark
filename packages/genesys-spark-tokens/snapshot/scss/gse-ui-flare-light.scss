@@ -271,6 +271,8 @@
   --gse-ui-sidePanel-header-dismiss-padding: 4px;
   --gse-ui-sidePanel-header-tabset-leftPadding: 0 0 0 12px;
   --gse-ui-sidePanel-header-tabset-rightPadding: 0 12px 0 0;
+  --gse-ui-sidePanel-header-navBased-padding: 0 16px 0 24px;
+  --gse-ui-sidePanel-header-navBased-gap: 12px;
   --gse-ui-sidePanel-heading-text-fontFamily: Urbanist;
   --gse-ui-sidePanel-heading-text-fontWeight: 600;
   --gse-ui-sidePanel-heading-text-fontSize: 18px;
@@ -283,6 +285,10 @@
   --gse-ui-sidePanel-heading-lgText-fontWeight: 600;
   --gse-ui-sidePanel-heading-lgText-fontSize: 24px;
   --gse-ui-sidePanel-heading-lgText-lineHeight: 32px;
+  --gse-ui-sidePanel-heading-navBased-fontFamily: Urbanist;
+  --gse-ui-sidePanel-heading-navBased-fontWeight: 700;
+  --gse-ui-sidePanel-heading-navBased-fontSize: 18px;
+  --gse-ui-sidePanel-heading-navBased-lineHeight: 27px;
   --gse-ui-sidePanel-backgroundColor: #ffffff;
   --gse-ui-sidePanel-headerColor: #2a2a2e;
   --gse-ui-sidePanel-boxShadow: 0 6px 10px 4px #3d538f26, 0 2px 3px 0 #3d538f33;
@@ -305,6 +311,7 @@
   --gse-ui-sidePanel-divider-style: solid;
   --gse-ui-sidePanel-shoud-minWidth: 32px;
   --gse-ui-sidePanel-titleBlock-padding: 0 32px 16px 24px;
+  --gse-ui-sidePanel-navBased-header-maxHeight: 56px;
   --gse-ui-card-backgroundColor: #ffffff;
   --gse-ui-card-borderRadius: 8px;
   --gse-ui-card-default-border-color: #c1c6d4;
