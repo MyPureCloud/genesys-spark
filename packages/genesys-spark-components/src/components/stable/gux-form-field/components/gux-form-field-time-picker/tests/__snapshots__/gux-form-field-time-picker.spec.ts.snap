@@ -1,11 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-time-picker #render help should render component as expected 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-time-picker>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
-        Select Time
+        Label This is an error message
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-input-error">
+          <div class="gux-time-picker-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error gux-show" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-time-picker aria-describedby="gux-form-field-error-i" id="gux-form-field-input-i" value="07:00"></gux-time-picker>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+  <span id="gux-form-field-error-i" slot="error">
+    This is an error message
+  </span>
+</gux-form-field-time-picker>
+`;
+
+exports[`gux-form-field-time-picker #render should render component as expected when an optional "help" slot is provided 1`] = `
+<gux-form-field-time-picker>
+  <template shadowrootmode="open">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Label
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="label"></slot>
@@ -32,9 +74,9 @@ exports[`gux-form-field-time-picker #render help should render component as expe
       </div>
     </fieldset>
   </template>
-  <gux-time-picker aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" value="09:00"></gux-time-picker>
+  <gux-time-picker aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
-    Select Time
+    Label
   </label>
   <span id="gux-form-field-help-i" slot="help">
     This is a help message
@@ -42,12 +84,12 @@ exports[`gux-form-field-time-picker #render help should render component as expe
 </gux-form-field-time-picker>
 `;
 
-exports[`gux-form-field-time-picker #render intervals should render component as expected (1) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-time-picker>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
-        Label
+        Label This is some tooltip text
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="label"></slot>
@@ -74,126 +116,9 @@ exports[`gux-form-field-time-picker #render intervals should render component as
       </div>
     </fieldset>
   </template>
-  <gux-time-picker id="gux-form-field-input-i" interval="15" value="07:00"></gux-time-picker>
+  <gux-time-picker aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
-  </label>
-</gux-form-field-time-picker>
-`;
-
-exports[`gux-form-field-time-picker #render intervals should render component as expected (2) 1`] = `
-<gux-form-field-time-picker>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Label
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-time-picker-container">
-            <slot></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-time-picker id="gux-form-field-input-i" interval="30" value="07:00"></gux-time-picker>
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-time-picker>
-`;
-
-exports[`gux-form-field-time-picker #render intervals should render component as expected (3) 1`] = `
-<gux-form-field-time-picker>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Label
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-time-picker-container">
-            <slot></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-time-picker id="gux-form-field-input-i" interval="60" value="07:00"></gux-time-picker>
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-time-picker>
-`;
-
-exports[`gux-form-field-time-picker #render label-info should render component as expected 1`] = `
-<gux-form-field-time-picker>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Select Time This is some tooltip text
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-time-picker-container">
-            <slot></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-time-picker aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" value="09:00"></gux-time-picker>
-  <label for="gux-form-field-input-i" slot="label">
-    Select Time
   </label>
   <gux-label-info-beta id="gux-label-info-beta-i" slot="label-info">
     <span slot="content">
@@ -203,46 +128,7 @@ exports[`gux-form-field-time-picker #render label-info should render component a
 </gux-form-field-time-picker>
 `;
 
-exports[`gux-form-field-time-picker #render label-position indicator marks should render component as expected (1) 1`] = `
-<gux-form-field-time-picker>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Label
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-time-picker-container">
-            <slot></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-time-picker>
-`;
-
-exports[`gux-form-field-time-picker #render label-position indicator marks should render component as expected (2) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when indicator-mark is "optional" 1`] = `
 <gux-form-field-time-picker indicator-mark="optional">
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -281,7 +167,7 @@ exports[`gux-form-field-time-picker #render label-position indicator marks shoul
 </gux-form-field-time-picker>
 `;
 
-exports[`gux-form-field-time-picker #render label-position indicator marks should render component as expected (3) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when indicator-mark is "required" 1`] = `
 <gux-form-field-time-picker indicator-mark="required">
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -320,7 +206,7 @@ exports[`gux-form-field-time-picker #render label-position indicator marks shoul
 </gux-form-field-time-picker>
 `;
 
-exports[`gux-form-field-time-picker #render label-position should render component as expected (1) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when input attribute is "disabled" 1`] = `
 <gux-form-field-time-picker>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -352,14 +238,170 @@ exports[`gux-form-field-time-picker #render label-position should render compone
       </div>
     </fieldset>
   </template>
-  <gux-time-picker id="gux-form-field-input-i" value="07:00"></gux-time-picker>
+  <gux-time-picker disabled="" id="gux-form-field-input-i" value="07:00"></gux-time-picker>
   <label for="gux-form-field-input-i" slot="label">
     Label
   </label>
 </gux-form-field-time-picker>
 `;
 
-exports[`gux-form-field-time-picker #render label-position should render component as expected (2) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when input attribute is "interval="15"" 1`] = `
+<gux-form-field-time-picker>
+  <template shadowrootmode="open">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Label
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-time-picker-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-time-picker id="gux-form-field-input-i" interval="15" value="07:00"></gux-time-picker>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-time-picker>
+`;
+
+exports[`gux-form-field-time-picker #render should render component as expected when input attribute is "interval="30"" 1`] = `
+<gux-form-field-time-picker>
+  <template shadowrootmode="open">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Label
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-time-picker-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-time-picker id="gux-form-field-input-i" interval="30" value="07:00"></gux-time-picker>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-time-picker>
+`;
+
+exports[`gux-form-field-time-picker #render should render component as expected when input attribute is "interval="60"" 1`] = `
+<gux-form-field-time-picker>
+  <template shadowrootmode="open">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Label
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-time-picker-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-time-picker id="gux-form-field-input-i" interval="60" value="07:00"></gux-time-picker>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-time-picker>
+`;
+
+exports[`gux-form-field-time-picker #render should render component as expected when input attribute is "required" 1`] = `
+<gux-form-field-time-picker>
+  <template shadowrootmode="open">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Label
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-time-picker-container">
+            <slot></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-time-picker id="gux-form-field-input-i" required="" value="07:00"></gux-time-picker>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-time-picker>
+`;
+
+exports[`gux-form-field-time-picker #render should render component as expected when label-position is above 1`] = `
 <gux-form-field-time-picker label-position="above">
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
@@ -398,7 +440,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
 </gux-form-field-time-picker>
 `;
 
-exports[`gux-form-field-time-picker #render label-position should render component as expected (3) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when label-position is beside 1`] = `
 <gux-form-field-time-picker label-position="beside">
   <template shadowrootmode="open">
     <fieldset class="gux-beside gux-form-field-fieldset-container">
@@ -437,7 +479,7 @@ exports[`gux-form-field-time-picker #render label-position should render compone
 </gux-form-field-time-picker>
 `;
 
-exports[`gux-form-field-time-picker #render label-position should render component as expected (4) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when label-position is screenreader 1`] = `
 <gux-form-field-time-picker label-position="screenreader">
   <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">

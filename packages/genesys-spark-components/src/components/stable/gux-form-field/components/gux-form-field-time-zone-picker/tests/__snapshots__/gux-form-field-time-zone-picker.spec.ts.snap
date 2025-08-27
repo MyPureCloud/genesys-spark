@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-time-zone-picker #render error should render component as expected 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-time-zone-picker>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
-        Select Time Zone This is an error message
+        Label This is an error message
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="label"></slot>
@@ -33,7 +33,7 @@ exports[`gux-form-field-time-zone-picker #render error should render component a
   </template>
   <gux-time-zone-picker-beta aria-describedby="gux-form-field-error-i" id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
+    Label
   </label>
   <span id="gux-form-field-error-i" slot="error">
     This is an error message
@@ -41,12 +41,12 @@ exports[`gux-form-field-time-zone-picker #render error should render component a
 </gux-form-field-time-zone-picker>
 `;
 
-exports[`gux-form-field-time-zone-picker #render help should render component as expected 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when an optional "help" slot is provided 1`] = `
 <gux-form-field-time-zone-picker>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
-        Select Time Zone
+        Label
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="label"></slot>
@@ -74,7 +74,7 @@ exports[`gux-form-field-time-zone-picker #render help should render component as
   </template>
   <gux-time-zone-picker-beta aria-describedby="gux-form-field-help-i" id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
+    Label
   </label>
   <span id="gux-form-field-help-i" slot="help">
     This is a help message
@@ -82,240 +82,12 @@ exports[`gux-form-field-time-zone-picker #render help should render component as
 </gux-form-field-time-zone-picker>
 `;
 
-exports[`gux-form-field-time-zone-picker #render indicator marks should render component as expected (1) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-time-zone-picker>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
-        Select Time Zone
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <slot name="label-info"></slot>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input gux-time-zone-picker-container">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
-  <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
-  </label>
-</gux-form-field-time-zone-picker>
-`;
-
-exports[`gux-form-field-time-zone-picker #render indicator marks should render component as expected (2) 1`] = `
-<gux-form-field-time-zone-picker indicator-mark="optional">
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Select Time Zone
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <slot name="label-info"></slot>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input gux-time-zone-picker-container">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
-  <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
-  </label>
-</gux-form-field-time-zone-picker>
-`;
-
-exports[`gux-form-field-time-zone-picker #render indicator marks should render component as expected (3) 1`] = `
-<gux-form-field-time-zone-picker indicator-mark="required">
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Select Time Zone
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <slot name="label-info"></slot>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input gux-time-zone-picker-container">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
-  <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
-  </label>
-</gux-form-field-time-zone-picker>
-`;
-
-exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (1) 1`] = `
-<gux-form-field-time-zone-picker>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Select Time Zone
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <slot name="label-info"></slot>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input gux-time-zone-picker-container">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
-  <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
-  </label>
-</gux-form-field-time-zone-picker>
-`;
-
-exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (2) 1`] = `
-<gux-form-field-time-zone-picker>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Select Time Zone
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <slot name="label-info"></slot>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input gux-time-zone-picker-container">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-time-zone-picker-beta disabled="" id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
-  <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
-  </label>
-</gux-form-field-time-zone-picker>
-`;
-
-exports[`gux-form-field-time-zone-picker #render input attributes should render component as expected (3) 1`] = `
-<gux-form-field-time-zone-picker>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Select Time Zone
-      </legend>
-      <div class="gux-above gux-form-field-visual-label" role="presentation">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <slot name="label-info"></slot>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input gux-time-zone-picker-container">
-          <slot></slot>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </template>
-  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" required="" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
-  <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
-  </label>
-</gux-form-field-time-zone-picker>
-`;
-
-exports[`gux-form-field-time-zone-picker #render label-info should render component as expected 1`] = `
-<gux-form-field-time-zone-picker>
-  <template shadowrootmode="open">
-    <fieldset class="gux-above gux-form-field-fieldset-container">
-      <legend class="gux-form-field-screenreader-label">
-        Select Time Zone This is some tooltip text
+        Label This is some tooltip text
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="label"></slot>
@@ -343,7 +115,7 @@ exports[`gux-form-field-time-zone-picker #render label-info should render compon
   </template>
   <gux-time-zone-picker-beta aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
+    Label
   </label>
   <gux-label-info-beta id="gux-label-info-beta-i" slot="label-info">
     <span slot="content">
@@ -353,12 +125,88 @@ exports[`gux-form-field-time-zone-picker #render label-info should render compon
 </gux-form-field-time-zone-picker>
 `;
 
-exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (1) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when indicator-mark is "optional" 1`] = `
+<gux-form-field-time-zone-picker indicator-mark="optional">
+  <template shadowrootmode="open">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Label
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <slot name="label-info"></slot>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-time-zone-picker>
+`;
+
+exports[`gux-form-field-time-picker #render should render component as expected when indicator-mark is "required" 1`] = `
+<gux-form-field-time-zone-picker indicator-mark="required">
+  <template shadowrootmode="open">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Label
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <slot name="label-info"></slot>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-time-zone-picker>
+`;
+
+exports[`gux-form-field-time-picker #render should render component as expected when input attribute is "disabled" 1`] = `
 <gux-form-field-time-zone-picker>
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
-        Select Time Zone
+        Label
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="label"></slot>
@@ -384,19 +232,57 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
       </div>
     </fieldset>
   </template>
-  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+  <gux-time-zone-picker-beta disabled="" id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
+    Label
   </label>
 </gux-form-field-time-zone-picker>
 `;
 
-exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (2) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when input attribute is "required" 1`] = `
+<gux-form-field-time-zone-picker>
+  <template shadowrootmode="open">
+    <fieldset class="gux-above gux-form-field-fieldset-container">
+      <legend class="gux-form-field-screenreader-label">
+        Label
+      </legend>
+      <div class="gux-above gux-form-field-visual-label" role="presentation">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <slot name="label-info"></slot>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input gux-time-zone-picker-container">
+          <slot></slot>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </template>
+  <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" required="" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-time-zone-picker>
+`;
+
+exports[`gux-form-field-time-picker #render should render component as expected when label-position is above 1`] = `
 <gux-form-field-time-zone-picker label-position="above">
   <template shadowrootmode="open">
     <fieldset class="gux-above gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
-        Select Time Zone
+        Label
       </legend>
       <div class="gux-above gux-form-field-visual-label" role="presentation">
         <slot name="label"></slot>
@@ -424,17 +310,17 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
   </template>
   <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
+    Label
   </label>
 </gux-form-field-time-zone-picker>
 `;
 
-exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (3) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when label-position is beside 1`] = `
 <gux-form-field-time-zone-picker label-position="beside">
   <template shadowrootmode="open">
     <fieldset class="gux-beside gux-form-field-fieldset-container">
       <legend class="gux-form-field-screenreader-label">
-        Select Time Zone
+        Label
       </legend>
       <div class="gux-beside gux-form-field-visual-label" role="presentation">
         <slot name="label"></slot>
@@ -462,17 +348,17 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
   </template>
   <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
+    Label
   </label>
 </gux-form-field-time-zone-picker>
 `;
 
-exports[`gux-form-field-time-zone-picker #render label-position should render component as expected (4) 1`] = `
+exports[`gux-form-field-time-picker #render should render component as expected when label-position is screenreader 1`] = `
 <gux-form-field-time-zone-picker label-position="screenreader">
   <template shadowrootmode="open">
     <fieldset class="gux-form-field-fieldset-container gux-screenreader">
       <legend class="gux-form-field-screenreader-label">
-        Select Time Zone
+        Label
       </legend>
       <div class="gux-form-field-visual-label gux-screenreader" role="presentation">
         <slot name="label"></slot>
@@ -500,7 +386,7 @@ exports[`gux-form-field-time-zone-picker #render label-position should render co
   </template>
   <gux-time-zone-picker-beta id="gux-form-field-input-i" local-default="America/Detroit" value="Etc/GMT+1" workspace-default="Etc/GMT"></gux-time-zone-picker-beta>
   <label for="gux-form-field-input-i" slot="label">
-    Select Time Zone
+    Label
   </label>
 </gux-form-field-time-zone-picker>
 `;
