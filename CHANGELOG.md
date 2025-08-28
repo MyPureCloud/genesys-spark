@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.168.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.168.1...v4.168.2) (2025-08-28)
+
+
+### Bug Fixes
+
+* **tabs:** change tab styling so it does not rely on attribute selector ([c76a2be](https://github.com/MyPureCloud/genesys-spark/commit/c76a2be0a3527b8bd791c264ceaa233d40582b92))
+
 ### [4.168.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.168.0...v4.168.1) (2025-08-27)
 
 
