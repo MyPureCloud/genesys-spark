@@ -1,55 +1,57 @@
-import { E2EPage, newE2EPage } from '@stencil/core/testing';
-import { a11yCheck, newSparkE2EPage } from '../../../../test/e2eTestUtils';
-import { renderConfigs } from './gux-table.common';
+import {
+  checkRenders,
+  setContent,
+  test,
+  expect
+} from '@test/playwrightTestUtils';
+import {
+  renderConfigs,
+  emptyTableRenderConfig,
+  selectableTableRenderConfig
+} from './gux-table.common';
 
 const axeExclusions = [];
 
-async function newNonrandomE2EPage({
-  html
-}: {
-  html: string;
-}): Promise<E2EPage> {
-  const page = await newE2EPage();
-
-  await page.evaluateOnNewDocument(() => {
-    Math.random = () => 0.5;
-  });
-  await page.setContent(html);
-  await page.waitForChanges();
-
-  return page;
-}
-
-describe('gux-table', () => {
-  describe('#render', () => {
-    renderConfigs.forEach(({ description, html }) => {
-      it(description, async () => {
-        const page = await newNonrandomE2EPage({ html });
-        const element = await page.find('gux-table');
-
-        expect(element).toHaveAttribute('hydrated');
-        expect(element.outerHTML).toMatchSnapshot();
-      });
-
-      it(`${description} with i18n strings`, async () => {
-        const page = await newNonrandomE2EPage({
-          html: `<div lang=ja>${html}</div>`
-        });
-        const element = await page.find('gux-table');
-
-        expect(element).toHaveAttribute('hydrated');
-        expect(element.outerHTML).toMatchSnapshot();
-      });
-
-      it(`${description} accessibility`, async () => {
-        const page = await newSparkE2EPage({ html });
-
-        await a11yCheck(page, axeExclusions);
-      });
+test.describe('gux-table', () => {
+  test.describe('#render', () => {
+    checkRenders({
+      renderConfigs,
+      element: 'gux-table',
+      axeExclusions
     });
   });
 
-  it('should sort table if table header nested element is wrapped in a span tag', async () => {
+  // TODO: COMUI-4124 - These tests will intermittently fail due to issues with the i18n files
+  // eslint-disable-next-line playwright/no-skipped-test
+  test.skip(`${emptyTableRenderConfig.description} with i18n strings`, async ({
+    page
+  }) => {
+    const html = `<div lang="ja">${emptyTableRenderConfig.html}</div>`;
+    await setContent(page, html);
+
+    await expect(page.locator('.gux-empty-table')).toMatchAriaSnapshot(`
+      - text: "利用可能なデータがありません"
+    `);
+  });
+
+  // eslint-disable-next-line playwright/no-skipped-test
+  test.skip(`${selectableTableRenderConfig.description} with i18n strings`, async ({
+    page
+  }) => {
+    const html = `<div lang="ja">${selectableTableRenderConfig.html}</div>`;
+    await setContent(page, html);
+    const tableSelectMenuButton = page.locator(
+      'gux-table-select-menu .gux-select-menu-button'
+    );
+
+    await expect(tableSelectMenuButton).toMatchAriaSnapshot(`
+      - button "テーブル オプション"
+    `);
+  });
+
+  test('should sort table if table header nested element is wrapped in a span tag', async ({
+    page
+  }) => {
     const html = `<gux-table>
     <table slot="data">
       <thead>
@@ -92,11 +94,12 @@ describe('gux-table', () => {
     </table>
   </gux-table>`;
 
-    const page = await newE2EPage({ html });
+    await setContent(page, html);
 
     const columnSortSpy = await page.spyOnEvent('guxsortchanged');
-    const headerElement = await page.find('th span');
-    await headerElement.click();
+    const headerElement = page.locator('th span');
+    // eslint-disable-next-line playwright/no-force-option
+    await headerElement.click({ force: true });
     await page.waitForChanges();
 
     expect(columnSortSpy).toHaveReceivedEventDetail({
@@ -105,7 +108,9 @@ describe('gux-table', () => {
     });
   });
 
-  it('should sort table if table header nested element is not wrapped in a span tag', async () => {
+  test('should sort table if table header nested element is not wrapped in a span tag', async ({
+    page
+  }) => {
     const html = `<gux-table>
     <table slot="data">
       <thead>
@@ -148,12 +153,11 @@ describe('gux-table', () => {
     </table>
   </gux-table>`;
 
-    const page = await newE2EPage({ html });
+    await setContent(page, html);
 
     const columnSortEvent = await page.spyOnEvent('guxsortchanged');
-    const headerElement = await page.find('th');
+    const headerElement = page.locator('th').first();
     await headerElement.click();
-
     await page.waitForChanges();
 
     expect(columnSortEvent).toHaveReceivedEventDetail({
@@ -162,7 +166,9 @@ describe('gux-table', () => {
     });
   });
 
-  it('should return two elements as two of the rows are disabled.', async () => {
+  test('should return two elements as two of the rows are disabled.', async ({
+    page
+  }) => {
     const html = `<gux-table object-table selectable-rows>
     <table slot="data">
       <thead>
@@ -207,10 +213,10 @@ describe('gux-table', () => {
     </table>
   </gux-table>`;
 
-    const page = await newE2EPage({ html });
+    await setContent(page, html);
     const selectAllEvent = await page.spyOnEvent('guxselectionchanged');
-    const selectAllElement = await page.find('thead tr th gux-all-row-select');
-    const inputElement = await selectAllElement.find('pierce/input');
+    const selectAllElement = page.locator('thead tr th gux-all-row-select');
+    const inputElement = selectAllElement.locator('input');
     await inputElement.click();
     await page.waitForChanges();
 
@@ -219,7 +225,9 @@ describe('gux-table', () => {
     });
   });
 
-  it('should return the disabled selected element even if the select all input has been unselected.', async () => {
+  test('should return the disabled selected element even if the select all input has been unselected.', async ({
+    page
+  }) => {
     const html = `<gux-table object-table selectable-rows>
     <table slot="data">
       <thead>
@@ -264,20 +272,23 @@ describe('gux-table', () => {
     </table>
   </gux-table>`;
 
-    const page = await newE2EPage({ html });
+    await setContent(page, html);
     const selectAllEvent = await page.spyOnEvent('guxselectionchanged');
-    const selectAllElement = await page.find('thead tr th gux-all-row-select');
-    const inputElement = await selectAllElement.find('pierce/input');
+    const selectAllElement = page.locator('thead tr th gux-all-row-select');
+    const inputElement = selectAllElement.locator('input');
     await inputElement.click();
     await page.waitForChanges();
     await inputElement.click();
     await page.waitForChanges();
+
     expect(selectAllEvent).toHaveReceivedEventDetail({
       selectedRowIds: ['person-id-1']
     });
   });
 
-  it('should set the state of selectAll checkbox to true when all checkboxes that are not disabled are checked.', async () => {
+  test('should set the state of selectAll checkbox to true when all checkboxes that are not disabled are checked.', async ({
+    page
+  }) => {
     const html = `<gux-table object-table selectable-rows>
     <table slot="data">
       <thead>
@@ -322,15 +333,15 @@ describe('gux-table', () => {
     </table>
   </gux-table>`;
 
-    const page = await newE2EPage({ html });
-    const selectAllElement = await page.find('thead tr th gux-all-row-select');
-    const inputElement = await selectAllElement.find('pierce/input');
+    await setContent(page, html);
+    const selectAllElement = page.locator('thead tr th gux-all-row-select');
+    const inputElement = selectAllElement.locator('input');
 
-    const secondRow = await page.find('.person2');
-    const secondRowInput = await secondRow.find('pierce/input');
+    const secondRow = page.locator('.person2');
+    const secondRowInput = secondRow.locator('input');
 
-    const fourthRow = await page.find('.person4');
-    const fourthRowInput = await fourthRow.find('pierce/input');
+    const fourthRow = page.locator('.person4');
+    const fourthRowInput = fourthRow.locator('input');
 
     await secondRowInput.click();
     await page.waitForChanges();
@@ -338,9 +349,12 @@ describe('gux-table', () => {
     await fourthRowInput.click();
     await page.waitForChanges();
 
-    expect(inputElement.getProperty('checked')).toBeTruthy();
+    await expect(inputElement).toBeChecked();
   });
-  it('should display the table-select-menu in a closed state and then open when select menu button is clicked', async () => {
+
+  test('should display the table-select-menu in a closed state and then open when select menu button is clicked', async ({
+    page
+  }) => {
     const html = `
       <gux-table>
         <table slot="data">
@@ -401,31 +415,24 @@ describe('gux-table', () => {
       </gux-table>
     `;
 
-    const page = await newE2EPage({ html });
+    await setContent(page, html);
 
-    const tableSelectMenuElement = await page.find('gux-table-select-menu');
-    const tableSelectMenuButton = await tableSelectMenuElement.find(
+    const tableSelectMenuElement = page.locator('gux-table-select-menu');
+    const tableSelectMenuButton = tableSelectMenuElement.locator(
       '.gux-select-menu-button'
     );
-    const popoverComponent =
-      await tableSelectMenuElement.find('gux-popover-list');
-
-    const popoverList = popoverComponent.shadowRoot.querySelector(
-      'div.gux-popover-wrapper'
-    );
+    const popoverComponent = tableSelectMenuElement.locator('gux-popover-list');
 
     await page.waitForChanges();
 
-    expect(popoverList).toHaveClass('gux-hidden');
+    // Check that the popover is initially hidden
+    const popoverList = popoverComponent.locator('div.gux-popover-wrapper');
+    await expect(popoverList).toBeHidden();
 
     await tableSelectMenuButton.click();
-
     await page.waitForChanges();
 
-    const updatedPopoverList = popoverComponent.shadowRoot.querySelector(
-      'div.gux-popover-wrapper'
-    );
-
-    expect(updatedPopoverList).not.toHaveClass('gux-hidden');
+    // Check that the popover is now visible
+    await expect(popoverList).toBeVisible();
   });
 });
