@@ -262,6 +262,16 @@
           "value": "{foreground.interactive.ghost.active}",
           "type": "color"
         }
+      },
+      "connected": {
+        "background_color": {
+          "value": "{background.interactive.connected.default}",
+          "type": "color"
+        },
+        "foreground_color": {
+          "value": "{foreground.interactive.connected.default}",
+          "type": "color"
+        }
       }
     },
     "danger": {

@@ -67,6 +67,10 @@
           "value": "{theme.background.container.primary.60}",
           "type": "color",
           "description": "The background color of dismissal actions in the active state."
+        },
+        "connected": {
+          "value": "{theme.background.system.success.40}",
+          "type": "color"
         }
       },
       "subtle": {
