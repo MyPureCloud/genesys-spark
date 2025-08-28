@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-search #render error should render component as expected 1`] = `
+exports[`gux-form-field-search #render should render component as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-search>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -40,7 +40,7 @@ exports[`gux-form-field-search #render error should render component as expected
 </gux-form-field-search>
 `;
 
-exports[`gux-form-field-search #render help should render component as expected 1`] = `
+exports[`gux-form-field-search #render should render component as expected when an optional "help" slot is provided 1`] = `
 <gux-form-field-search>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -80,234 +80,7 @@ exports[`gux-form-field-search #render help should render component as expected 
 </gux-form-field-search>
 `;
 
-exports[`gux-form-field-search #render indicator marks should render component as expected (1) 1`] = `
-<gux-form-field-search>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
-            <slot name="input"></slot>
-            <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" slot="input" type="search" value="Sample search">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-search>
-`;
-
-exports[`gux-form-field-search #render indicator marks should render component as expected (2) 1`] = `
-<gux-form-field-search indicator-mark="optional">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
-            <slot name="input"></slot>
-            <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" slot="input" type="search" value="Sample search">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-search>
-`;
-
-exports[`gux-form-field-search #render indicator marks should render component as expected (3) 1`] = `
-<gux-form-field-search indicator-mark="required">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
-            <slot name="input"></slot>
-            <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" slot="input" type="search" value="Sample search">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-search>
-`;
-
-exports[`gux-form-field-search #render input attributes should render component as expected (1) 1`] = `
-<gux-form-field-search>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
-            <slot name="input"></slot>
-            <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" slot="input" type="search" value="Sample search">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-search>
-`;
-
-exports[`gux-form-field-search #render input attributes should render component as expected (2) 1`] = `
-<gux-form-field-search>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-disabled gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
-            <slot name="input"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input disabled="" id="gux-form-field-input-i" slot="input" type="search" value="Sample search">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-search>
-`;
-
-exports[`gux-form-field-search #render input attributes should render component as expected (3) 1`] = `
-<gux-form-field-search>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label gux-required">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
-            <slot name="input"></slot>
-            <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" required="" slot="input" type="search" value="Sample search">
-  <label for="gux-form-field-input-i" slot="label">
-    Label
-  </label>
-</gux-form-field-search>
-`;
-
-exports[`gux-form-field-search #render label-info should render component as expected 1`] = `
+exports[`gux-form-field-search #render should render component as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-search>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -349,8 +122,46 @@ exports[`gux-form-field-search #render label-info should render component as exp
 </gux-form-field-search>
 `;
 
-exports[`gux-form-field-search #render label-position should render component as expected (1) 1`] = `
-<gux-form-field-search>
+exports[`gux-form-field-search #render should render component as expected when indicator-mark is "optional" 1`] = `
+<gux-form-field-search indicator-mark="optional">
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+            <slot name="input"></slot>
+            <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
+          </div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input id="gux-form-field-input-i" slot="input" type="search" value="Sample search">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-search>
+`;
+
+exports[`gux-form-field-search #render should render component as expected when indicator-mark is "required" 1`] = `
+<gux-form-field-search indicator-mark="required">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
@@ -387,7 +198,82 @@ exports[`gux-form-field-search #render label-position should render component as
 </gux-form-field-search>
 `;
 
-exports[`gux-form-field-search #render label-position should render component as expected (2) 1`] = `
+exports[`gux-form-field-search #render should render component as expected when input attribute is "disabled" 1`] = `
+<gux-form-field-search>
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-disabled gux-input-container">
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+            <slot name="input"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input disabled="" id="gux-form-field-input-i" slot="input" type="search" value="Sample search">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-search>
+`;
+
+exports[`gux-form-field-search #render should render component as expected when input attribute is "required" 1`] = `
+<gux-form-field-search>
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label gux-required">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <gux-icon decorative="" icon-name="fa/magnifying-glass-regular" size="small"></gux-icon>
+            <slot name="input"></slot>
+            <gux-form-field-input-clear-button></gux-form-field-input-clear-button>
+          </div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input id="gux-form-field-input-i" required="" slot="input" type="search" value="Sample search">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-search>
+`;
+
+exports[`gux-form-field-search #render should render component as expected when label-position is above 1`] = `
 <gux-form-field-search label-position="above">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -425,7 +311,7 @@ exports[`gux-form-field-search #render label-position should render component as
 </gux-form-field-search>
 `;
 
-exports[`gux-form-field-search #render label-position should render component as expected (3) 1`] = `
+exports[`gux-form-field-search #render should render component as expected when label-position is beside 1`] = `
 <gux-form-field-search label-position="beside">
   <template shadowrootmode="open">
     <div class="gux-beside gux-form-field-container">
@@ -463,7 +349,7 @@ exports[`gux-form-field-search #render label-position should render component as
 </gux-form-field-search>
 `;
 
-exports[`gux-form-field-search #render label-position should render component as expected (4) 1`] = `
+exports[`gux-form-field-search #render should render component as expected when label-position is screenreader 1`] = `
 <gux-form-field-search label-position="screenreader">
   <template shadowrootmode="open">
     <div class="gux-form-field-container gux-screenreader">
