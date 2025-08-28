@@ -717,6 +717,172 @@
         "value": "linear-gradient(358deg, {background.container.global_nav.desktop.menu_panel.secondary_top-left_value} 0.16%, {background.container.global_nav.desktop.menu_panel.secondary_bottom-right_value} 98.45%)",
         "type": "color"
       }
+    },
+    "user_settings_window": {
+      "body": {
+        "height": {
+          "value": "400px",
+          "type": "sizing"
+        },
+        "width": {
+          "value": "360px",
+          "type": "sizing"
+        },
+        "gap": {
+          "value": "{interactive.md.gap}",
+          "type": "spacing"
+        },
+        "phone_selection": {
+          "gap": {
+            "value": "{interactive.lg.gap}",
+            "type": "spacing"
+          },
+          "option_list": {
+            "gap": {
+              "value": "{interactive.md.gap}",
+              "type": "spacing"
+            }
+          }
+        },
+        "out_of_office": {
+          "gap": {
+            "value": "{interactive.xl.gap}",
+            "type": "spacing"
+          },
+          "padding": {
+            "value": "0 {interactive.lg.padding}",
+            "type": "spacing"
+          }
+        },
+        "forward_my_calls": {
+          "gap": {
+            "value": "{interactive.xl.gap}",
+            "type": "spacing"
+          },
+          "padding": {
+            "value": "{interactive.lg.padding}",
+            "type": "spacing"
+          },
+          "forwarding_input": {
+            "gap": {
+              "value": "{interactive.lg.gap}",
+              "type": "spacing"
+            },
+            "button": {
+              "padding": {
+                "value": "22px 0 0 0",
+                "type": "spacing"
+              }
+            }
+          }
+        },
+        "emergency_address": {
+          "gap": {
+            "value": "{interactive.xl.gap}",
+            "type": "spacing"
+          },
+          "padding": {
+            "value": "{interactive.lg.padding}",
+            "type": "spacing"
+          }
+        },
+        "back_button": {
+          "text": {
+            "value": "{heading.overline}",
+            "type": "typography"
+          }
+        },
+        "padding": {
+          "value": "{interactive.sm.padding} {interactive.lg.padding}",
+          "type": "spacing"
+        }
+      },
+      "header": {
+        "status_message": {
+          "width": {
+            "value": "288px",
+            "type": "sizing"
+          }
+        },
+        "padding": {
+          "value": "{interactive.lg.padding} {interactive.lg.padding} {interactive.sm.padding} {interactive.lg.padding}",
+          "type": "spacing"
+        },
+        "nested_container": {
+          "padding": {
+            "value": "{container.lg.padding}",
+            "type": "spacing"
+          },
+          "gap": {
+            "value": "{container.md.gap}",
+            "type": "spacing"
+          },
+          "label_container": {
+            "gap": {
+              "value": "{interactive.lg.gap}",
+              "type": "spacing"
+            }
+          },
+          "border_radius": {
+            "value": "{border_radius.sm}",
+            "type": "borderRadius"
+          }
+        },
+        "title": {
+          "text": {
+            "value": "{body.xl.semi_bold}",
+            "type": "typography"
+          }
+        },
+        "description": {
+          "text": {
+            "value": "{body.sm.regular}",
+            "type": "typography"
+          }
+        }
+      },
+      "footer": {
+        "padding": {
+          "value": "{container.sm.padding}",
+          "type": "spacing"
+        },
+        "border": {
+          "value": {
+            "color": "{global_nav.user_settings_window.divider}",
+            "width": "{border_width.1}",
+            "style": "solid"
+          },
+          "type": "border"
+        }
+      },
+      "background_color": {
+        "value": "{background.container.page.default}",
+        "type": "color"
+      },
+      "divider": {
+        "value": "{border.container.divider}",
+        "type": "color"
+      },
+      "nested_container": {
+        "background_color": {
+          "value": "{background.container.page.tonal_subtle}",
+          "type": "color"
+        }
+      },
+      "text": {
+        "title_color": {
+          "value": "{foreground.container.high_emphasis}",
+          "type": "color"
+        },
+        "label_color": {
+          "value": "{foreground.container.mid_emphasis}",
+          "type": "color"
+        }
+      },
+      "border_radius": {
+        "value": "{border_radius.sm}",
+        "type": "borderRadius"
+      }
     }
   },
   "tree_view": {

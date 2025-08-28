@@ -523,6 +523,96 @@
       "panel_title": "#ffffff",
       "primary": "linear-gradient(127deg, #3d538f 3.19%, #263b73 225.06%)",
       "secondary": "linear-gradient(358deg, #263b73 0.16%, #152550 98.45%)"
+    },
+    "user_settings_window": {
+      "body": {
+        "height": "400px",
+        "width": "360px",
+        "gap": "4px",
+        "phone_selection": {
+          "gap": "8px",
+          "option_list": {
+            "gap": "4px"
+          }
+        },
+        "out_of_office": {
+          "gap": "12px",
+          "padding": "0 12px"
+        },
+        "forward_my_calls": {
+          "gap": "12px",
+          "padding": "12px",
+          "forwarding_input": {
+            "gap": "8px",
+            "button": {
+              "padding": "22rem"
+            }
+          }
+        },
+        "emergency_address": {
+          "gap": "12px",
+          "padding": "12px"
+        },
+        "back_button": {
+          "text": {
+            "fontFamily": "Roboto",
+            "fontWeight": "600",
+            "fontSize": "12px",
+            "lineHeight": "16px",
+            "textCase": "uppercase",
+            "letterSpacing": "1px"
+          }
+        },
+        "padding": "4px 12px"
+      },
+      "header": {
+        "status_message": {
+          "width": "288px"
+        },
+        "padding": "12px 12px 4px 12px",
+        "nested_container": {
+          "padding": "24px",
+          "gap": "12px",
+          "label_container": {
+            "gap": "8px"
+          },
+          "border_radius": "4px"
+        },
+        "title": {
+          "text": {
+            "fontFamily": "Roboto",
+            "fontWeight": "600",
+            "fontSize": "18px",
+            "lineHeight": "24px"
+          }
+        },
+        "description": {
+          "text": {
+            "fontFamily": "Roboto",
+            "fontWeight": "400",
+            "fontSize": "12px",
+            "lineHeight": "18px"
+          }
+        }
+      },
+      "footer": {
+        "padding": "12px",
+        "border": {
+          "color": "#b4bccb",
+          "width": "1px",
+          "style": "solid"
+        }
+      },
+      "background_color": "#ffffff",
+      "divider": "#b4bccb",
+      "nested_container": {
+        "background_color": "#fdfdfd"
+      },
+      "text": {
+        "title_color": "#2e394c",
+        "label_color": "#3e4a5b"
+      },
+      "border_radius": "4px"
     }
   },
   "rating": {
