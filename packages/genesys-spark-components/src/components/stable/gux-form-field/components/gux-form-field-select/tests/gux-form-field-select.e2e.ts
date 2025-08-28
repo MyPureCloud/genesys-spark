@@ -4,6 +4,8 @@ import {
   a11yCheck
 } from '../../../../../../test/e2eTestUtils';
 
+import { renderConfigs } from './gux-form-field-select.common';
+
 const axeExclusions = [];
 
 async function newNonrandomE2EPage({
@@ -24,102 +26,20 @@ async function newNonrandomE2EPage({
 
 describe('gux-form-field-select', () => {
   describe('#render', () => {
-    describe('label-position', () => {
-      [
-        '',
-        'label-position="above"',
-        'label-position="beside"',
-        'label-position="screenreader"'
-      ].forEach((componentAttribute, index) => {
-        const html = `
-          <gux-form-field-select ${componentAttribute}>
-            <select slot="input" name="lp-1">
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
-            </select>
-            <label slot="label">Default</label>
-          </gux-form-field-select>
-        `;
-
-        it(`should render component as expected (${index + 1})`, async () => {
-          const page = await newNonrandomE2EPage({ html });
-          const element = await page.find('gux-form-field-select');
-          const elementShadowDom = await element.find(
-            'pierce/.gux-form-field-container'
-          );
-
-          expect(element.outerHTML).toMatchSnapshot();
-          expect(elementShadowDom).toMatchSnapshot();
-        });
-
-        it(`should be accessible (${index + 1})`, async () => {
-          const page = await newSparkE2EPage({ html });
-
-          await a11yCheck(page, axeExclusions);
-        });
-      });
-    });
-
-    describe('input attributes', () => {
-      ['', 'disabled', 'required'].forEach((inputAttribute, index) => {
-        const html = `
-          <gux-form-field-select>
-            <select slot="input" name="lp-1" ${inputAttribute}>
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
-            </select>
-            <label slot="label">Default</label>
-          </gux-form-field-select>
-        `;
-
-        it(`should render component as expected (${index + 1})`, async () => {
-          const page = await newNonrandomE2EPage({ html });
-          const element = await page.find('gux-form-field-select');
-          const elementShadowDom = await element.find(
-            'pierce/.gux-form-field-container'
-          );
-
-          expect(element.outerHTML).toMatchSnapshot();
-          expect(elementShadowDom).toMatchSnapshot();
-        });
-
-        it(`should be accessible (${index + 1})`, async () => {
-          const page = await newSparkE2EPage({ html });
-
-          await a11yCheck(page, axeExclusions);
-        });
-      });
-    });
-    describe('help', () => {
-      const html = `
-      <gux-form-field-select>
-      <select slot="input" name="e-1">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-      </select>
-      <label slot="label">Default</label>
-      <span slot="help">This is a help message</span>
-      </gux-form-field-select>
-      `;
-
-      it('should render component as expected', async () => {
-        const page = await newNonrandomE2EPage({ html });
-        const element = await page.find('gux-form-field-select');
+    renderConfigs.forEach(({ html, description }) => {
+      it(description, async () => {
+        const snapshotPage = await newNonrandomE2EPage({ html });
+        const element = await snapshotPage.find('gux-form-field-select');
         const elementShadowDom = await element.find(
           'pierce/.gux-form-field-container'
         );
 
         expect(element.outerHTML).toMatchSnapshot();
         expect(elementShadowDom).toMatchSnapshot();
-      });
 
-      it('should be accessible', async () => {
-        const page = await newSparkE2EPage({ html });
+        const accessibilityPage = await newSparkE2EPage({ html });
 
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(accessibilityPage, axeExclusions);
       });
     });
   });
