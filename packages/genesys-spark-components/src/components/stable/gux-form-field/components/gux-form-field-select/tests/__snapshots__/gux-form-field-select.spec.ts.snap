@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`gux-form-field-select #render error should render component as expected 1`] = `
+exports[`gux-form-field-select #render should render component as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-select>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -50,7 +50,7 @@ exports[`gux-form-field-select #render error should render component as expected
 </gux-form-field-select>
 `;
 
-exports[`gux-form-field-select #render help should render component as expected 1`] = `
+exports[`gux-form-field-select #render should render component as expected when an optional "help" slot is provided 1`] = `
 <gux-form-field-select>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -100,289 +100,7 @@ exports[`gux-form-field-select #render help should render component as expected 
 </gux-form-field-select>
 `;
 
-exports[`gux-form-field-select #render indicator marks should render component as expected (1) 1`] = `
-<gux-form-field-select>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <select id="gux-form-field-input-i" name="lp-1" slot="input">
-    <option value="option1">
-      Option 1
-    </option>
-    <option value="option2">
-      Option 2
-    </option>
-    <option value="option3">
-      Option 3
-    </option>
-  </select>
-  <label for="gux-form-field-input-i" slot="label">
-    Default
-  </label>
-</gux-form-field-select>
-`;
-
-exports[`gux-form-field-select #render indicator marks should render component as expected (2) 1`] = `
-<gux-form-field-select indicator-mark="optional">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <select id="gux-form-field-input-i" name="lp-1" slot="input">
-    <option value="option1">
-      Option 1
-    </option>
-    <option value="option2">
-      Option 2
-    </option>
-    <option value="option3">
-      Option 3
-    </option>
-  </select>
-  <label for="gux-form-field-input-i" slot="label">
-    Default
-  </label>
-</gux-form-field-select>
-`;
-
-exports[`gux-form-field-select #render indicator marks should render component as expected (3) 1`] = `
-<gux-form-field-select indicator-mark="required">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <select id="gux-form-field-input-i" name="lp-1" slot="input">
-    <option value="option1">
-      Option 1
-    </option>
-    <option value="option2">
-      Option 2
-    </option>
-    <option value="option3">
-      Option 3
-    </option>
-  </select>
-  <label for="gux-form-field-input-i" slot="label">
-    Default
-  </label>
-</gux-form-field-select>
-`;
-
-exports[`gux-form-field-select #render input attributes should render component as expected (1) 1`] = `
-<gux-form-field-select>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <select id="gux-form-field-input-i" name="lp-1" slot="input">
-    <option value="option1">
-      Option 1
-    </option>
-    <option value="option2">
-      Option 2
-    </option>
-    <option value="option3">
-      Option 3
-    </option>
-  </select>
-  <label for="gux-form-field-input-i" slot="label">
-    Default
-  </label>
-</gux-form-field-select>
-`;
-
-exports[`gux-form-field-select #render input attributes should render component as expected (2) 1`] = `
-<gux-form-field-select>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <select disabled="" id="gux-form-field-input-i" name="lp-1" slot="input">
-    <option value="option1">
-      Option 1
-    </option>
-    <option value="option2">
-      Option 2
-    </option>
-    <option value="option3">
-      Option 3
-    </option>
-  </select>
-  <label for="gux-form-field-input-i" slot="label">
-    Default
-  </label>
-</gux-form-field-select>
-`;
-
-exports[`gux-form-field-select #render input attributes should render component as expected (3) 1`] = `
-<gux-form-field-select>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-input">
-          <div class="gux-input-container">
-            <slot name="input"></slot>
-            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <select id="gux-form-field-input-i" name="lp-1" required="" slot="input">
-    <option value="option1">
-      Option 1
-    </option>
-    <option value="option2">
-      Option 2
-    </option>
-    <option value="option3">
-      Option 3
-    </option>
-  </select>
-  <label for="gux-form-field-input-i" slot="label">
-    Default
-  </label>
-</gux-form-field-select>
-`;
-
-exports[`gux-form-field-select #render label-info should render component as expected 1`] = `
+exports[`gux-form-field-select #render should render component as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-select>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -434,8 +152,55 @@ exports[`gux-form-field-select #render label-info should render component as exp
 </gux-form-field-select>
 `;
 
-exports[`gux-form-field-select #render label-position should render component as expected (1) 1`] = `
-<gux-form-field-select>
+exports[`gux-form-field-select #render should render component as expected when indicator-mark is "optional" 1`] = `
+<gux-form-field-select indicator-mark="optional">
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
+          </div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <select id="gux-form-field-input-i" name="lp-1" slot="input">
+    <option value="option1">
+      Option 1
+    </option>
+    <option value="option2">
+      Option 2
+    </option>
+    <option value="option3">
+      Option 3
+    </option>
+  </select>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-select>
+`;
+
+exports[`gux-form-field-select #render should render component as expected when indicator-mark is "required" 1`] = `
+<gux-form-field-select indicator-mark="required">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
       <div class="gux-above gux-form-field-label">
@@ -476,12 +241,106 @@ exports[`gux-form-field-select #render label-position should render component as
     </option>
   </select>
   <label for="gux-form-field-input-i" slot="label">
-    Default
+    Label
   </label>
 </gux-form-field-select>
 `;
 
-exports[`gux-form-field-select #render label-position should render component as expected (2) 1`] = `
+exports[`gux-form-field-select #render should render component as expected when input attribute is "disabled" 1`] = `
+<gux-form-field-select>
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
+          </div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <select disabled="" id="gux-form-field-input-i" name="lp-1" slot="input">
+    <option value="option1">
+      Option 1
+    </option>
+    <option value="option2">
+      Option 2
+    </option>
+    <option value="option3">
+      Option 3
+    </option>
+  </select>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-select>
+`;
+
+exports[`gux-form-field-select #render should render component as expected when input attribute is "required" 1`] = `
+<gux-form-field-select>
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div class="gux-input">
+          <div class="gux-input-container">
+            <slot name="input"></slot>
+            <gux-icon decorative="" icon-name="custom/chevron-down-small-regular" size="small"></gux-icon>
+          </div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <select id="gux-form-field-input-i" name="lp-1" required="" slot="input">
+    <option value="option1">
+      Option 1
+    </option>
+    <option value="option2">
+      Option 2
+    </option>
+    <option value="option3">
+      Option 3
+    </option>
+  </select>
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-select>
+`;
+
+exports[`gux-form-field-select #render should render component as expected when label-position is above 1`] = `
 <gux-form-field-select label-position="above">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -523,12 +382,12 @@ exports[`gux-form-field-select #render label-position should render component as
     </option>
   </select>
   <label for="gux-form-field-input-i" slot="label">
-    Default
+    Label
   </label>
 </gux-form-field-select>
 `;
 
-exports[`gux-form-field-select #render label-position should render component as expected (3) 1`] = `
+exports[`gux-form-field-select #render should render component as expected when label-position is beside 1`] = `
 <gux-form-field-select label-position="beside">
   <template shadowrootmode="open">
     <div class="gux-beside gux-form-field-container">
@@ -570,12 +429,12 @@ exports[`gux-form-field-select #render label-position should render component as
     </option>
   </select>
   <label for="gux-form-field-input-i" slot="label">
-    Default
+    Label
   </label>
 </gux-form-field-select>
 `;
 
-exports[`gux-form-field-select #render label-position should render component as expected (4) 1`] = `
+exports[`gux-form-field-select #render should render component as expected when label-position is screenreader 1`] = `
 <gux-form-field-select label-position="screenreader">
   <template shadowrootmode="open">
     <div class="gux-form-field-container gux-screenreader">
@@ -617,7 +476,7 @@ exports[`gux-form-field-select #render label-position should render component as
     </option>
   </select>
   <label for="gux-form-field-input-i" slot="label">
-    Default
+    Label
   </label>
 </gux-form-field-select>
 `;
