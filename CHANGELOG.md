@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.169.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.168.2...v4.169.0) (2025-08-29)
+
+
+### Features
+
+* **inline-dropdown-beta:** add disabled state ([8eb7b32](https://github.com/MyPureCloud/genesys-spark/commit/8eb7b320e0245d787a1aa3ed55437a9dc3a327db))
+
 ### [4.168.2](https://github.com/MyPureCloud/genesys-spark/compare/v4.168.1...v4.168.2) (2025-08-28)
 
 
