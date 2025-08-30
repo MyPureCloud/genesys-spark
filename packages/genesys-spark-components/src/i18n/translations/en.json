@@ -354,6 +354,10 @@
     "onMenuFocus": "Use the right arrow to enter the submenu, and the left arrow to return to the previous menu",
     "onTargetFocus": "A popup has appeared. Press the down arrow to enter the menu"
   },
+  "gux-form-field-character-count": {
+    "of": "of",
+    "charactersRemaining": "characters remaining"
+  },
   "gux-form-field-checkbox-group": {
     "required": "Required"
   },

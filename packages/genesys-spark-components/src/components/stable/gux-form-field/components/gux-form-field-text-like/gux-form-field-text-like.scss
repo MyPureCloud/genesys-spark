@@ -5,11 +5,13 @@
 @use '../../functional-components/gux-form-field-error/gux-form-field-error.scss';
 @use '../../functional-components/gux-form-field-label/gux-form-field-label.scss';
 @use '../../functional-components/gux-form-field-help/gux-form-field-help.scss';
+@use '../../functional-components/gux-form-field-character-count/gux-form-field-character-count.scss';
 
 @include gux-form-field-container.Style;
 @include gux-form-field-error.Style;
 @include gux-form-field-label.Style;
 @include gux-form-field-help.Style;
+@include gux-form-field-character-count.Style;
 
 :host {
   display: block;

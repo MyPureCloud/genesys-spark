@@ -25,6 +25,8 @@
     }
 
     &.gux-above {
+      display: flex;
+      inline-size: 50%;
       padding-block-end: ui.$gse-ui-formControl-formField-gap;
     }
 

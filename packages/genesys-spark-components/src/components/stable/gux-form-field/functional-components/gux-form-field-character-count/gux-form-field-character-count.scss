@@ -1,0 +1,19 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+@use '~genesys-spark/dist/scss/mixins.scss';
+
+@mixin Style {
+  .gux-form-field-character-count {
+    display: flex;
+    justify-content: flex-end;
+    padding-block-end: ui.$gse-ui-formControl-formField-gap;
+    font-family: ui.$gse-ui-formControl-helper-helperText-fontFamily;
+    font-size: ui.$gse-ui-formControl-helper-helperText-fontSize;
+    font-weight: ui.$gse-ui-formControl-helper-helperText-fontWeight;
+    line-height: ui.$gse-ui-formControl-helper-helperText-lineHeight;
+    color: ui.$gse-ui-formControl-helper-defaultColor;
+
+    &.gux-exceeded {
+      color: ui.$gse-ui-formControl-helper-errorColor;
+    }
+  }
+}
