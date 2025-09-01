@@ -36,7 +36,7 @@ export class GuxPromptInputBeta {
   @State()
   hasInputText: boolean = false;
 
-  private inputElement: HTMLInputElement;
+  private inputElement: HTMLTextAreaElement;
   private i18n: GetI18nValue;
 
   /**
@@ -82,8 +82,10 @@ export class GuxPromptInputBeta {
     this.isGenerating = false;
   }
 
-  private keyUp(): void {
+  private handleInput(): void {
     this.hasInputText = this.inputElement.value?.length > 0;
+    this.inputElement.parentElement.dataset.replicatedValue =
+      this.inputElement.value;
   }
 
   private renderSubmitButton(): JSX.Element {
@@ -130,14 +132,16 @@ export class GuxPromptInputBeta {
     return (
       <Host>
         <div class="gux-input-container">
-          <input
-            class="gux-input"
-            ref={el => (this.inputElement = el)}
-            placeholder={this.placeholder || this.i18n('inputPlaceholder')}
-            onKeyUp={this.keyUp.bind(this)}
-            data-testid="prompt-input"
-          ></input>
-
+          <div class="gux-grow-wrap">
+            <textarea
+              rows={1}
+              class="gux-input"
+              ref={el => (this.inputElement = el)}
+              placeholder={this.placeholder || this.i18n('inputPlaceholder')}
+              onInput={this.handleInput.bind(this)}
+              data-testid="prompt-input"
+            ></textarea>
+          </div>
           {this.isGenerating
             ? this.renderStopButton()
             : this.renderSubmitButton()}
