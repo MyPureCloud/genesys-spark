@@ -10,7 +10,7 @@ exports[`gux-form-field-range #render should render component as expected (1) 1`
         <slot name="label-info"></slot>
       </div>
       <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
+        <div aria-disabled="false" class="gux-range-input-container">
           <div class="gux-range">
             <div class="gux-track">
               <div class="gux-progress" style="width: 0%;"></div>
@@ -33,9 +33,9 @@ exports[`gux-form-field-range #render should render component as expected (1) 1`
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" name="du-1" slot="input" type="range">
+  <input id="gux-form-field-input-i" slot="input" type="range">
   <label for="gux-form-field-input-i" slot="label">
-    Default
+    Label
   </label>
 </gux-form-field-range>
 `;
@@ -50,7 +50,7 @@ exports[`gux-form-field-range #render should render component as expected (2) 1`
         <slot name="label-info"></slot>
       </div>
       <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
+        <div aria-disabled="false" class="gux-range-input-container">
           <div class="gux-range">
             <div class="gux-track">
               <div class="gux-progress" style="width: 0%;"></div>
@@ -75,56 +75,14 @@ exports[`gux-form-field-range #render should render component as expected (2) 1`
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" name="du-2" slot="input" type="range">
+  <input id="gux-form-field-input-i" slot="input" type="range">
   <label for="gux-form-field-input-i" slot="label">
-    Percentage
+    Label
   </label>
 </gux-form-field-range>
 `;
 
 exports[`gux-form-field-range #render should render component as expected (3) 1`] = `
-<gux-form-field-range display-units="px">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-disabled gux-range-input-container">
-          <div class="gux-range">
-            <div class="gux-track">
-              <div class="gux-progress" style="width: 0%;"></div>
-            </div>
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-display">
-            px
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input disabled="" id="gux-form-field-input-i" name="du-3" slot="input" type="range">
-  <label for="gux-form-field-input-i" slot="label">
-    Pixels
-  </label>
-</gux-form-field-range>
-`;
-
-exports[`gux-form-field-range #render should render component as expected (4) 1`] = `
 <gux-form-field-range value-in-tooltip="">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -134,7 +92,7 @@ exports[`gux-form-field-range #render should render component as expected (4) 1`
         <slot name="label-info"></slot>
       </div>
       <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
+        <div aria-disabled="false" class="gux-range-input-container">
           <div class="gux-range">
             <div class="gux-track">
               <div class="gux-progress" style="width: 0%;"></div>
@@ -160,14 +118,14 @@ exports[`gux-form-field-range #render should render component as expected (4) 1`
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" name="du-1" slot="input" type="range">
+  <input id="gux-form-field-input-i" slot="input" type="range">
   <label for="gux-form-field-input-i" slot="label">
-    Default
+    Label
   </label>
 </gux-form-field-range>
 `;
 
-exports[`gux-form-field-range #render should render component as expected (5) 1`] = `
+exports[`gux-form-field-range #render should render component as expected (4) 1`] = `
 <gux-form-field-range display-units="%" value-in-tooltip="">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -177,7 +135,7 @@ exports[`gux-form-field-range #render should render component as expected (5) 1`
         <slot name="label-info"></slot>
       </div>
       <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
+        <div aria-disabled="false" class="gux-range-input-container">
           <div class="gux-range">
             <div class="gux-track">
               <div class="gux-progress" style="width: 0%;"></div>
@@ -207,174 +165,14 @@ exports[`gux-form-field-range #render should render component as expected (5) 1`
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" name="du-2" slot="input" type="range">
+  <input id="gux-form-field-input-i" slot="input" type="range">
   <label for="gux-form-field-input-i" slot="label">
-    Percentage
+    Label
   </label>
 </gux-form-field-range>
 `;
 
-exports[`gux-form-field-range #render should render component as expected (6) 1`] = `
-<gux-form-field-range label-position="above">
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
-          <div class="gux-range">
-            <div class="gux-track">
-              <div class="gux-progress" style="width: 0%;"></div>
-            </div>
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-display"></div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" name="lp-3" slot="input" type="range">
-  <label for="gux-form-field-input-i" slot="label">
-    Above
-  </label>
-</gux-form-field-range>
-`;
-
-exports[`gux-form-field-range #render should render component as expected (7) 1`] = `
-<gux-form-field-range label-position="beside">
-  <template shadowrootmode="open">
-    <div class="gux-beside gux-form-field-container">
-      <div class="gux-beside gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
-          <div class="gux-range">
-            <div class="gux-track">
-              <div class="gux-progress" style="width: 0%;"></div>
-            </div>
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-display"></div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" name="lp-4" slot="input" type="range">
-  <label for="gux-form-field-input-i" slot="label">
-    Beside
-  </label>
-</gux-form-field-range>
-`;
-
-exports[`gux-form-field-range #render should render component as expected (8) 1`] = `
-<gux-form-field-range label-position="screenreader">
-  <template shadowrootmode="open">
-    <div class="gux-form-field-container gux-screenreader">
-      <div class="gux-form-field-label gux-screenreader">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
-          <div class="gux-range">
-            <div class="gux-track">
-              <div class="gux-progress" style="width: 0%;"></div>
-            </div>
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-display"></div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" name="lp-5" slot="input" type="range">
-  <label for="gux-form-field-input-i" slot="label">
-    Screenreader
-  </label>
-</gux-form-field-range>
-`;
-
-exports[`gux-form-field-range #render should render component as expected (9) 1`] = `
-<gux-form-field-range>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label gux-required">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
-          <div class="gux-range">
-            <div class="gux-track">
-              <div class="gux-progress" style="width: 0%;"></div>
-            </div>
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-display"></div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" name="a-2" required="" slot="input" type="range">
-  <label for="gux-form-field-input-i" slot="label">
-    Required
-  </label>
-</gux-form-field-range>
-`;
-
-exports[`gux-form-field-range #render should render component as expected (10) 1`] = `
+exports[`gux-form-field-range #render should render component as expected when an optional "error" slot is provided 1`] = `
 <gux-form-field-range>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -384,49 +182,7 @@ exports[`gux-form-field-range #render should render component as expected (10) 1
         <slot name="label-info"></slot>
       </div>
       <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
-          <div class="gux-range">
-            <div class="gux-track">
-              <div class="gux-progress" style="width: 70%;"></div>
-            </div>
-            <slot name="input"></slot>
-          </div>
-          <div class="gux-display">
-            10
-          </div>
-        </div>
-        <div class="gux-form-field-error" role="alert">
-          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
-          <div class="gux-message">
-            <slot name="error"></slot>
-          </div>
-        </div>
-        <div class="gux-form-field-help">
-          <div class="gux-message">
-            <slot name="help"></slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <input id="gux-form-field-input-i" max="25" min="-25" name="a-2" slot="input" step="5" type="range" value="10">
-  <label for="gux-form-field-input-i" slot="label">
-    Step / Min / Max
-  </label>
-</gux-form-field-range>
-`;
-
-exports[`gux-form-field-range #render should render component as expected (11) 1`] = `
-<gux-form-field-range>
-  <template shadowrootmode="open">
-    <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label">
-        <slot name="label"></slot>
-        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
-        <slot name="label-info"></slot>
-      </div>
-      <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
+        <div aria-disabled="false" class="gux-range-input-container">
           <div class="gux-range">
             <div class="gux-track">
               <div class="gux-progress" style="width: 0%;"></div>
@@ -459,7 +215,7 @@ exports[`gux-form-field-range #render should render component as expected (11) 1
 </gux-form-field-range>
 `;
 
-exports[`gux-form-field-range #render should render component as expected (12) 1`] = `
+exports[`gux-form-field-range #render should render component as expected when an optional "help" slot is provided 1`] = `
 <gux-form-field-range>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -469,7 +225,7 @@ exports[`gux-form-field-range #render should render component as expected (12) 1
         <slot name="label-info"></slot>
       </div>
       <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
+        <div aria-disabled="false" class="gux-range-input-container">
           <div class="gux-range">
             <div class="gux-track">
               <div class="gux-progress" style="width: 0%;"></div>
@@ -502,7 +258,7 @@ exports[`gux-form-field-range #render should render component as expected (12) 1
 </gux-form-field-range>
 `;
 
-exports[`gux-form-field-range #render should render component as expected (13) 1`] = `
+exports[`gux-form-field-range #render should render component as expected when an optional "label-info" slot is provided 1`] = `
 <gux-form-field-range>
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
@@ -512,7 +268,7 @@ exports[`gux-form-field-range #render should render component as expected (13) 1
         <slot name="label-info"></slot>
       </div>
       <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
+        <div aria-disabled="false" class="gux-range-input-container">
           <div class="gux-range">
             <div class="gux-track">
               <div class="gux-progress" style="width: 0%;"></div>
@@ -537,7 +293,7 @@ exports[`gux-form-field-range #render should render component as expected (13) 1
   </template>
   <input aria-describedby="gux-label-info-beta-i" id="gux-form-field-input-i" name="e-1" slot="input" type="range">
   <label for="gux-form-field-input-i" slot="label">
-    Label Info
+    Default
   </label>
   <gux-label-info-beta id="gux-label-info-beta-i" slot="label-info">
     <span slot="content">
@@ -547,17 +303,17 @@ exports[`gux-form-field-range #render should render component as expected (13) 1
 </gux-form-field-range>
 `;
 
-exports[`gux-form-field-range #render should render component as expected (14) 1`] = `
+exports[`gux-form-field-range #render should render component as expected when indicator-mark is "optional" 1`] = `
 <gux-form-field-range indicator-mark="optional">
   <template shadowrootmode="open">
     <div class="gux-above gux-form-field-container">
-      <div class="gux-above gux-form-field-label gux-required">
+      <div class="gux-above gux-form-field-label">
         <slot name="label"></slot>
-        <gux-form-field-label-indicator required="" variant="optional"></gux-form-field-label-indicator>
+        <gux-form-field-label-indicator variant="optional"></gux-form-field-label-indicator>
         <slot name="label-info"></slot>
       </div>
       <div class="gux-input-and-error-container">
-        <div class="gux-range-input-container">
+        <div aria-disabled="false" class="gux-range-input-container">
           <div class="gux-range">
             <div class="gux-track">
               <div class="gux-progress" style="width: 0%;"></div>
@@ -580,9 +336,291 @@ exports[`gux-form-field-range #render should render component as expected (14) 1
       </div>
     </div>
   </template>
-  <input id="gux-form-field-input-i" name="du-1" required="" slot="input" type="range">
+  <input id="gux-form-field-input-i" slot="input" type="range">
   <label for="gux-form-field-input-i" slot="label">
-    Indicator Mark
+    Label
+  </label>
+</gux-form-field-range>
+`;
+
+exports[`gux-form-field-range #render should render component as expected when indicator-mark is "required" 1`] = `
+<gux-form-field-range indicator-mark="required">
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div aria-disabled="false" class="gux-range-input-container">
+          <div class="gux-range">
+            <div class="gux-track">
+              <div class="gux-progress" style="width: 0%;"></div>
+            </div>
+            <slot name="input"></slot>
+          </div>
+          <div class="gux-display"></div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input id="gux-form-field-input-i" slot="input" type="range">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-range>
+`;
+
+exports[`gux-form-field-range #render should render component as expected when input attribute is "disabled" 1`] = `
+<gux-form-field-range>
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div aria-disabled="true" class="gux-disabled gux-range-input-container">
+          <div class="gux-range">
+            <div class="gux-track">
+              <div class="gux-progress" style="width: 0%;"></div>
+            </div>
+            <slot name="input"></slot>
+          </div>
+          <div class="gux-display"></div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input disabled="" id="gux-form-field-input-i" slot="input" type="range">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-range>
+`;
+
+exports[`gux-form-field-range #render should render component as expected when input attribute is "required" 1`] = `
+<gux-form-field-range>
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label gux-required">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator required="" variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div aria-disabled="false" class="gux-range-input-container">
+          <div class="gux-range">
+            <div class="gux-track">
+              <div class="gux-progress" style="width: 0%;"></div>
+            </div>
+            <slot name="input"></slot>
+          </div>
+          <div class="gux-display"></div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input id="gux-form-field-input-i" required="" slot="input" type="range">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-range>
+`;
+
+exports[`gux-form-field-range #render should render component as expected when label-position is above 1`] = `
+<gux-form-field-range label-position="above">
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div aria-disabled="false" class="gux-range-input-container">
+          <div class="gux-range">
+            <div class="gux-track">
+              <div class="gux-progress" style="width: 0%;"></div>
+            </div>
+            <slot name="input"></slot>
+          </div>
+          <div class="gux-display"></div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input id="gux-form-field-input-i" slot="input" type="range">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-range>
+`;
+
+exports[`gux-form-field-range #render should render component as expected when label-position is beside 1`] = `
+<gux-form-field-range label-position="beside">
+  <template shadowrootmode="open">
+    <div class="gux-beside gux-form-field-container">
+      <div class="gux-beside gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div aria-disabled="false" class="gux-range-input-container">
+          <div class="gux-range">
+            <div class="gux-track">
+              <div class="gux-progress" style="width: 0%;"></div>
+            </div>
+            <slot name="input"></slot>
+          </div>
+          <div class="gux-display"></div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input id="gux-form-field-input-i" slot="input" type="range">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-range>
+`;
+
+exports[`gux-form-field-range #render should render component as expected when label-position is screenreader 1`] = `
+<gux-form-field-range label-position="screenreader">
+  <template shadowrootmode="open">
+    <div class="gux-form-field-container gux-screenreader">
+      <div class="gux-form-field-label gux-screenreader">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div aria-disabled="false" class="gux-range-input-container">
+          <div class="gux-range">
+            <div class="gux-track">
+              <div class="gux-progress" style="width: 0%;"></div>
+            </div>
+            <slot name="input"></slot>
+          </div>
+          <div class="gux-display"></div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input id="gux-form-field-input-i" slot="input" type="range">
+  <label for="gux-form-field-input-i" slot="label">
+    Label
+  </label>
+</gux-form-field-range>
+`;
+
+exports[`gux-form-field-range #render should render component as expected with step/min/max attributes 1`] = `
+<gux-form-field-range>
+  <template shadowrootmode="open">
+    <div class="gux-above gux-form-field-container">
+      <div class="gux-above gux-form-field-label">
+        <slot name="label"></slot>
+        <gux-form-field-label-indicator variant="required"></gux-form-field-label-indicator>
+        <slot name="label-info"></slot>
+      </div>
+      <div class="gux-input-and-error-container">
+        <div aria-disabled="false" class="gux-range-input-container">
+          <div class="gux-range">
+            <div class="gux-track">
+              <div class="gux-progress" style="width: 70%;"></div>
+            </div>
+            <slot name="input"></slot>
+          </div>
+          <div class="gux-display">
+            10
+          </div>
+        </div>
+        <div class="gux-form-field-error" role="alert">
+          <gux-icon decorative="" icon-name="fa/hexagon-exclamation-solid" size="small"></gux-icon>
+          <div class="gux-message">
+            <slot name="error"></slot>
+          </div>
+        </div>
+        <div class="gux-form-field-help">
+          <div class="gux-message">
+            <slot name="help"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <input id="gux-form-field-input-i" max="25" min="-25" slot="input" step="5" type="range" value="10">
+  <label for="gux-form-field-input-i" slot="label">
+    Step / Min / Max
   </label>
 </gux-form-field-range>
 `;
