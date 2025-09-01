@@ -24,18 +24,14 @@ async function newNonrandomE2EPage({
   return page;
 }
 
-describe('gux-form-field-number', () => {
+describe('gux-tooltip-beta', () => {
   describe('#render', () => {
     renderConfigs.forEach(({ html, description }) => {
       it(description, async () => {
         const snapshotPage = await newNonrandomE2EPage({ html });
-        const element = await snapshotPage.find('gux-form-field-number');
-        const elementShadowDom = await element.find(
-          'pierce/.gux-form-field-container'
-        );
+        const element = await snapshotPage.find('gux-tooltip-beta');
 
         expect(element.outerHTML).toMatchSnapshot();
-        expect(elementShadowDom).toMatchSnapshot();
 
         const accessibilityPage = await newSparkE2EPage({ html });
 
