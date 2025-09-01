@@ -4,7 +4,8 @@ exports[`gux-prompt-input-beta #render should render component as expected 1`] =
 <gux-prompt-input-beta placeholder="Ask Genesys AI">
   <template shadowrootmode="open" shadowrootdelegatesfocus>
     <div class="gux-input-container">
-      <input class="gux-input" placeholder="Ask Genesys AI" data-testid="prompt-input">
+      <div class="gux-grow-wrap"><textarea class="gux-input" data-testid="prompt-input" placeholder="Ask Genesys AI" rows="1"></textarea>
+      </div>
       <gux-button-slot accent="primary">
         <button type="button" class="gux-generate" disabled="" title="Generate Genesys AI text" data-testid="generate-button">
           <gux-icon icon-name="fa/arrow-up-regular" size="small" decorative="">
