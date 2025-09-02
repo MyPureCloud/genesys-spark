@@ -84,6 +84,14 @@ export class GuxPromptInputBeta {
 
   private handleInput(): void {
     this.hasInputText = this.inputElement.value?.length > 0;
+
+    /**
+     * Sets the data-replicated-value attribute on the gux-grow-wrap div element and sets the value to
+     * whatever the text is currently in the text area.
+     * In the scss file there is a ::after pseudo selector that uses this attribute to display the content
+     * invisibly. The grid container sizes itself based on the pseudo-elements height which makes the text-area
+     * auto-grow vertically.
+     */
     this.inputElement.parentElement.dataset.replicatedValue =
       this.inputElement.value;
   }
