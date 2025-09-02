@@ -14,6 +14,7 @@ gux-dropdown-types.ts, then following the resulting compiler errors.
 
 | Property      | Attribute     | Description | Type      | Default     |
 | ------------- | ------------- | ----------- | --------- | ----------- |
+| `disabled`    | `disabled`    |             | `boolean` | `false`     |
 | `placeholder` | `placeholder` |             | `string`  | `undefined` |
 | `required`    | `required`    |             | `boolean` | `false`     |
 | `value`       | `value`       |             | `string`  | `undefined` |
