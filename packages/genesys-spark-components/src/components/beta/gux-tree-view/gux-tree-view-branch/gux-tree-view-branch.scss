@@ -1,0 +1,123 @@
+@use '~genesys-spark/dist/scss/checkbox-icons.scss';
+$gux-arrow-icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' %3E%3Cdpath='M11.1583 8.84756C11.6139 8.37901 11.6139 7.61807 11.1583 7.14952L6.49349 2.35152C6.15821 2.00666 5.65892 1.90546 5.22159 2.09288C4.78426 2.2803 4.5 2.71512 4.5 3.20241V12.7984C4.5 13.282 4.78426 13.7205 5.22159 13.908C5.65892 14.0954 6.15821 13.9904 6.49349 13.6493L11.1583 8.85131V8.84756Z' fill='#4F5157' /%3E%3C/svg%3E";
+
+:host(.gux-child-node) {
+  .gux-comfy {
+    margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
+
+    &.gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
+    }
+  }
+
+  .gux-compact {
+    margin: var(--gse-ui-treeView-item-comfy-child-defaultPadding);
+
+    &.gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-child-selectedPadding);
+    }
+  }
+}
+
+:host(.gux-grandchild-node) {
+  .gux-comfy {
+    margin: var(--gse-ui-treeView-item-comfy-grandchild-defaultPadding);
+
+    &.gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-grandchild-selectedPadding);
+    }
+  }
+
+  .gux-compact {
+    margin: var(--gse-ui-treeView-item-comfy-grandchild-defaultPadding);
+
+    &.gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-grandchild-selectedPadding);
+    }
+  }
+}
+
+:host(.gux-greatgrandchild-node) {
+  .gux-comfy {
+    margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-defaultPadding);
+
+    .gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-selectedPadding);
+    }
+  }
+
+  .gux-compact {
+    margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-defaultPadding);
+
+    .gux-selected {
+      margin: var(--gse-ui-treeView-item-comfy-greatGrandchild-selectedPadding);
+    }
+  }
+}
+
+.gux-multiselect {
+  display: inline-flex;
+}
+
+.gux-multiselect::before {
+  inline-size: var(--gse-ui-checkbox-icon-width);
+  block-size: var(--gse-ui-checkbox-icon-height);
+  content: '';
+  background: var(--gse-ui-checkbox-icon-default-unselectedForegroundColor);
+  border-radius: 15%;
+
+  @include checkbox-icons.unchecked;
+}
+
+.gux-multiselect.gux-selected::before {
+  @include checkbox-icons.checked;
+}
+
+.gux-tree-view-branch-target {
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--gse-ui-treeView-borderRadius);
+
+  &.gux-selected {
+    background-color: var(--gse-ui-treeView-selectionBookmark-midEmphasis);
+  }
+
+  &.gux-comfy {
+    font-family: var(--gse-ui-treeView-comfy-label-fontFamily);
+    font-size: var(--gse-ui-treeView-comfy-label-fontSize);
+    font-weight: var(--gse-ui-treeView-comfy-label-fontWeight);
+    line-height: var(--gse-ui-treeView-comfy-label-lineHeight);
+  }
+
+  &.gux-compact {
+    font-family: var(--gse-ui-treeView-compact-label-fontFamily);
+    font-size: var(--gse-ui-treeView-compact-label-fontSize);
+    font-weight: var(--gse-ui-treeView-compact-label-fontWeight);
+    line-height: var(--gse-ui-treeView-compact-label-lineHeight);
+  }
+}
+
+.gux-arrow-icon {
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+.gux-expanded {
+  .gux-arrow-icon {
+    transform: rotate(90deg);
+  }
+}
+
+.gux-content {
+  box-sizing: border-box;
+  display: none;
+
+  &.gux-expanded {
+    display: block;
+  }
+
+  ::slotted([slot='content']) {
+    margin: 0;
+  }
+}
