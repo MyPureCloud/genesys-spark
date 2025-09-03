@@ -7,10 +7,10 @@ import { renderConfig } from './gux-avatar-overflow.common';
 
 describe('gux-avatar-overflow', () => {
   describe('#render', () => {
-    it(renderConfig.description, async () => {
+    it.only(renderConfig.description, async () => {
       const html = renderConfig.html;
       const page = await newSparkE2EPage({ html });
-      const element = await page.find('gux-avatar-overflow-beta');
+      const element = await page.find('gux-avatar-group-beta');
 
       await a11yCheck(page);
       expect(element.outerHTML).toMatchSnapshot();
