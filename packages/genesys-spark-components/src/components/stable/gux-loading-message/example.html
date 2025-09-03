@@ -7,13 +7,15 @@
 </h3>
 <div class="resizing">
   <gux-loading-message>
-    <div slot="primary-message">The content is loading...</div>
-    <div slot="additional-guidance">Thank you for waiting.</div>
+    <div slot="primary-message">Processing your data...</div>
+    <div slot="additional-guidance">
+      This may take a few moments. Please stay on this page.
+    </div>
     <gux-radial-progress
       slot="progress"
       value="1"
       max="10"
-      screenreader-text="loading"
+      screenreader-text="Loading is 10% complete"
     ></gux-radial-progress>
   </gux-loading-message>
 </div>
@@ -21,33 +23,39 @@
 <h2>Small</h2>
 
 <gux-loading-message style="inline-size: 200px; border: 1px dashed gainsboro">
-  <div slot="primary-message">The content is loading...</div>
-  <div slot="additional-guidance">Thank you for waiting.</div>
+  <div slot="primary-message">Processing your data...</div>
+  <div slot="additional-guidance">
+    This may take a few moments. Please stay on this page.
+  </div>
   <gux-radial-progress
     slot="progress"
-    screenreader-text="loading"
+    screenreader-text="Loading is 10% complete"
   ></gux-radial-progress>
 </gux-loading-message>
 
 <h2>Medium</h2>
 
 <gux-loading-message style="inline-size: 400px; border: 1px dashed gainsboro">
-  <div slot="primary-message">The content is loading...</div>
-  <div slot="additional-guidance">Thank you for waiting.</div>
+  <div slot="primary-message">Processing your data...</div>
+  <div slot="additional-guidance">
+    This may take a few moments. Please stay on this page.
+  </div>
   <gux-radial-progress
     slot="progress"
-    screenreader-text="loading"
+    screenreader-text="Loading is 10% complete"
   ></gux-radial-progress>
 </gux-loading-message>
 
 <h2>Large</h2>
 
 <gux-loading-message style="inline-size: 600px; border: 1px dashed gainsboro">
-  <div slot="primary-message">The content is loading...</div>
-  <div slot="additional-guidance">Thank you for waiting.</div>
+  <div slot="primary-message">Processing your data...</div>
+  <div slot="additional-guidance">
+    This may take a few moments. Please stay on this page.
+  </div>
   <gux-radial-progress
     slot="progress"
-    screenreader-text="loading"
+    screenreader-text="Loading is 10% complete"
   ></gux-radial-progress>
 </gux-loading-message>
 
@@ -59,13 +67,13 @@
     setInterval(() => {
         const html = window.toHTML(`
         <gux-loading-message>
-          <div slot="primary-message">The content is loading...</div>
-          <div slot="additional-guidance">Thank you for waiting.</div>
+          <div slot="primary-message">Processing your data...</div>
+          <div slot="additional-guidance">This may take a few moments. Please stay on this page.</div>
           <gux-radial-progress
             slot="progress"
             value="1"
             max="10"
-            screenreader-text="loading"
+            screenreader-text="Loading is 10% complete"
           ></gux-radial-progress>
         </gux-loading-message>
         `);
