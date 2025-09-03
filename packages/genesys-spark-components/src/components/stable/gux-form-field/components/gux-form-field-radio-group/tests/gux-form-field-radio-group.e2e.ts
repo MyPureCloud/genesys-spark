@@ -4,6 +4,8 @@ import {
   a11yCheck
 } from '../../../../../../test/e2eTestUtils';
 
+import { renderConfigs } from './gux-form-field-radio-group.common';
+
 const axeExclusions = [];
 
 async function newNonrandomE2EPage({
@@ -24,127 +26,22 @@ async function newNonrandomE2EPage({
 
 describe('gux-form-field-radio-group-beta', () => {
   describe('#render', () => {
-    [
-      `
-        <gux-form-field-radio-group-beta>
-          <label slot="group-label">Food</label>
-          <gux-form-field-radio>
-            <input slot="input" type="radio" name="food-1" value="pizza"/>
-            <label slot="label">Pizza</label>
-          </gux-form-field-radio>
-        </gux-form-field-radio-group-beta>
-      `,
-      `
-        <gux-form-field-radio-group-beta>
-          <label slot="group-label">Food</label>
-
-          <gux-form-field-radio>
-            <input slot="input" type="radio" name="food-1" value="pizza" />
-            <label slot="label">Pizza</label>
-          </gux-form-field-radio>
-
-          <gux-form-field-radio>
-            <input
-              slot="input"
-              type="radio"
-              name="food-1"
-              value="sandwich"
-              disabled
-            />
-            <label slot="label">Sandwich</label>
-          </gux-form-field-radio>
-
-          <gux-form-field-radio>
-            <input slot="input" type="radio" name="food-1" value="spaghetti" />
-            <label slot="label">Spaghetti</label>
-            <span slot="help">This is a help message</span>
-          </gux-form-field-radio>
-          <span slot="group-error">Subject to availibility</span>
-        </gux-form-field-radio-group-beta>
-      `,
-      `
-        <gux-form-field-radio-group-beta>
-          <label slot="group-label">Food</label>
-
-          <gux-form-field-radio>
-            <input slot="input" type="radio" name="food-1" value="pizza" />
-            <label slot="label">Pizza</label>
-          </gux-form-field-radio>
-
-          <gux-form-field-radio>
-            <input
-              slot="input"
-              type="radio"
-              name="food-1"
-              value="sandwich"
-              disabled
-            />
-            <label slot="label">Sandwich</label>
-          </gux-form-field-radio>
-
-          <gux-form-field-radio>
-            <input slot="input" type="radio" name="food-1" value="sushi" />
-            <label slot="label">Sushi</label>
-            <span slot="error">Subject to availibility</span>
-          </gux-form-field-radio>
-
-          <gux-form-field-radio>
-            <input slot="input" type="radio" name="food-1" value="spaghetti" />
-            <label slot="label">Spaghetti</label>
-            <span slot="help">This is a help message</span>
-          </gux-form-field-radio>
-          <span slot="group-help">This is a group help message</span>
-        </gux-form-field-radio-group-beta>
-      `,
-      `
-        <gux-form-field-radio-group-beta disabled>
-          <label slot="group-label">Food</label>
-
-          <gux-form-field-radio>
-            <input slot="input" type="radio" name="food-1" value="pizza" />
-            <label slot="label">Pizza</label>
-          </gux-form-field-radio>
-
-          <gux-form-field-radio>
-            <input
-              slot="input"
-              type="radio"
-              name="food-1"
-              value="sandwich"
-              disabled
-            />
-            <label slot="label">Sandwich</label>
-          </gux-form-field-radio>
-
-          <gux-form-field-radio>
-            <input slot="input" type="radio" name="food-1" value="sushi" />
-            <label slot="label">Sushi</label>
-            <span slot="error">Subject to availibility</span>
-          </gux-form-field-radio>
-
-          <gux-form-field-radio>
-            <input slot="input" type="radio" name="food-1" value="spaghetti" />
-            <label slot="label">Spaghetti</label>
-            <span slot="help">This is a help message</span>
-          </gux-form-field-radio>
-        </gux-form-field-radio-group-beta>
-      `
-    ].forEach((html, index) => {
-      it(`should render component as expected (${index + 1})`, async () => {
-        const page = await newNonrandomE2EPage({ html });
-        const element = await page.find('gux-form-field-radio');
+    renderConfigs.forEach(({ html, description }) => {
+      it(description, async () => {
+        const snapshotPage = await newNonrandomE2EPage({ html });
+        const element = await snapshotPage.find(
+          'gux-form-field-radio-group-beta'
+        );
         const elementShadowDom = await element.find(
           'pierce/.gux-form-field-container'
         );
 
         expect(element.outerHTML).toMatchSnapshot();
         expect(elementShadowDom).toMatchSnapshot();
-      });
 
-      it(`should be accessible (${index + 1})`, async () => {
-        const page = await newSparkE2EPage({ html });
+        const accessibilityPage = await newSparkE2EPage({ html });
 
-        await a11yCheck(page, axeExclusions);
+        await a11yCheck(accessibilityPage, axeExclusions);
       });
     });
   });
