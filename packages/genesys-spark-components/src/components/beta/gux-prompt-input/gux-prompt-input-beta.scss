@@ -21,6 +21,10 @@
       global.$gse-semantic-foreground-interactive-secondary-active;
   }
 
+  gux-button-slot {
+    align-self: flex-end;
+  }
+
   //https://inindca.atlassian.net/browse/COMUI-4148
   .gux-grow-wrap {
     display: grid;
