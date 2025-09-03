@@ -40,7 +40,8 @@
       font-weight: global.$gse-core-fontWeight-regular;
       line-height: global.$gse-core-lineHeight-sm;
       color: global.$gse-semantic-foreground-formControl-textInput-placeholder;
-      overflow-wrap: break-word;
+      word-break: normal;
+      overflow-wrap: anywhere;
       white-space: pre-wrap;
       content: attr(data-replicated-value) ' ';
       border: 0;
@@ -49,7 +50,8 @@
     > textarea {
       grid-area: 1 / 1 / 2 / 2;
       overflow: hidden;
-      overflow-wrap: break-word;
+      word-break: normal;
+      overflow-wrap: anywhere;
       resize: none;
     }
   }
