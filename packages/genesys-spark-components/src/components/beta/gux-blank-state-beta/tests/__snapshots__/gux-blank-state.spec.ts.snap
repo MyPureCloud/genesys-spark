@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`#render should render a gux-blank-state component 1`] = `
+<gux-blank-state-beta>
+  <template shadowrootmode="open">
+    <div class="gux-container">
+      <div class="gux-image">
+        <slot name="image">
+        </slot>
+      </div>
+      <div class="gux-message">
+        <slot name="primary-message">
+        </slot>
+      </div>
+      <div class="gux-guidance">
+        <gux-truncate maxlines="3">
+          <slot name="additional-guidance">
+          </slot>
+        </gux-truncate>
+      </div>
+      <div class="gux-call-to-actions">
+        <gux-button-slot accent="primary">
+          <slot name="call-to-action">
+          </slot>
+        </gux-button-slot>
+      </div>
+    </div>
+  </template>
+  <gux-icon slot="image" icon-name="bot" decorative="true">
+  </gux-icon>
+  <div slot="primary-message">
+    Sorry, something went wrong.
+  </div>
+  <div slot="additional-guidance">
+    Please refresh this page to try again.
+  </div>
+  <button slot="call-to-action" type="button">
+    Call to action
+  </button>
+</gux-blank-state-beta>
+`;
+
+exports[`#render should render component as expected when "additional-guidance" slot is provided 1`] = `
+<gux-blank-state-beta>
+  <template shadowrootmode="open">
+    <div class="gux-container">
+      <div class="gux-image">
+        <slot name="image">
+        </slot>
+      </div>
+      <div class="gux-message">
+        <slot name="primary-message">
+        </slot>
+      </div>
+      <div class="gux-guidance">
+        <gux-truncate maxlines="3">
+          <slot name="additional-guidance">
+          </slot>
+        </gux-truncate>
+      </div>
+      <div class="gux-call-to-actions">
+        <gux-button-slot accent="primary">
+          <slot name="call-to-action">
+          </slot>
+        </gux-button-slot>
+      </div>
+    </div>
+  </template>
+  <div slot="primary-message">
+    Sorry, something went wrong.
+  </div>
+  <button slot="call-to-action" type="button">
+    Call to action
+  </button>
+  <div slot="additional-guidance">
+    Please refresh this page to try again.
+  </div>
+</gux-blank-state-beta>
+`;
+
+exports[`#render should render component as expected when "image" slot is provided 1`] = `
+<gux-blank-state-beta>
+  <template shadowrootmode="open">
+    <div class="gux-container">
+      <div class="gux-image">
+        <slot name="image">
+        </slot>
+      </div>
+      <div class="gux-message">
+        <slot name="primary-message">
+        </slot>
+      </div>
+      <div class="gux-call-to-actions">
+        <gux-button-slot accent="primary">
+          <slot name="call-to-action">
+          </slot>
+        </gux-button-slot>
+      </div>
+    </div>
+  </template>
+  <div slot="primary-message">
+    Sorry, something went wrong.
+  </div>
+  <button slot="call-to-action" type="button">
+    Call to action
+  </button>
+  <gux-illustration-beta slot="image" variant="success" status="success">
+  </gux-illustration-beta>
+</gux-blank-state-beta>
+`;
+
+exports[`#render should render component as expected when "secondary-call-to-action" slot is provided 1`] = `
+<gux-blank-state-beta>
+  <template shadowrootmode="open">
+    <div class="gux-container">
+      <div class="gux-image">
+        <slot name="image">
+        </slot>
+      </div>
+      <div class="gux-message">
+        <slot name="primary-message">
+        </slot>
+      </div>
+      <div class="gux-call-to-actions">
+        <gux-button-slot accent="primary">
+          <slot name="call-to-action">
+          </slot>
+        </gux-button-slot>
+        <gux-button-slot accent="ghost">
+          <slot name="secondary-call-to-action">
+          </slot>
+        </gux-button-slot>
+      </div>
+    </div>
+  </template>
+  <div slot="primary-message">
+    Sorry, something went wrong.
+  </div>
+  <button slot="call-to-action" type="button">
+    Call to action
+  </button>
+  <button slot="secondary-call-to-action" type="button">
+    Call to action
+  </button>
+</gux-blank-state-beta>
+`;
+
+exports[`#render should render component with alignment "center" 1`] = `
+<gux-blank-state-beta alignment="center">
+  <template shadowrootmode="open">
+    <div class="gux-container">
+      <div class="gux-image">
+        <slot name="image">
+        </slot>
+      </div>
+      <div class="gux-message">
+        <slot name="primary-message">
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-icon slot="image" icon-name="bot" decorative="true">
+  </gux-icon>
+  <div slot="primary-message">
+    center aligned blank state
+  </div>
+</gux-blank-state-beta>
+`;
+
+exports[`#render should render component with alignment "left" 1`] = `
+<gux-blank-state-beta alignment="left">
+  <template shadowrootmode="open">
+    <div class="gux-container gux-alignment-left">
+      <div class="gux-image">
+        <slot name="image">
+        </slot>
+      </div>
+      <div class="gux-message">
+        <slot name="primary-message">
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-icon slot="image" icon-name="bot" decorative="true">
+  </gux-icon>
+  <div slot="primary-message">
+    left aligned blank state
+  </div>
+</gux-blank-state-beta>
+`;
+
+exports[`#render should render component with no-padding attribute 1`] = `
+<gux-blank-state-beta no-padding="">
+  <template shadowrootmode="open">
+    <div class="gux-container gux-no-padding">
+      <div class="gux-image">
+        <slot name="image">
+        </slot>
+      </div>
+      <div class="gux-message">
+        <slot name="primary-message">
+        </slot>
+      </div>
+    </div>
+  </template>
+  <gux-icon slot="image" icon-name="bot" decorative="true">
+  </gux-icon>
+  <div slot="primary-message">
+    No padding blank state
+  </div>
+</gux-blank-state-beta>
+`;
