@@ -1,0 +1,126 @@
+{
+  "logo": {
+    "brand": {
+      "duotone": {
+        "text_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "icon_color": {
+          "value": "{foreground.container.special_accents.brand}",
+          "type": "color"
+        }
+      },
+      "monotone": {
+        "text_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "icon_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        }
+      },
+      "logomark": {
+        "neutral": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "primary": {
+          "value": "{foreground.container.special_accents.brand}",
+          "type": "color"
+        },
+        "outlined": {
+          "value": "{foreground.container.special_accents.brand}",
+          "type": "color"
+        }
+      }
+    },
+    "cloud": {
+      "duotone": {
+        "text_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "icon_color": {
+          "value": "{foreground.container.special_accents.brand}",
+          "type": "color"
+        },
+        "dropshadow1": {
+          "value": {
+            "x": "0",
+            "y": "0.29",
+            "blur": "0.29",
+            "spread": "0",
+            "color": "rgba(21, 37, 80, 0.2)",
+            "type": "dropShadow"
+          },
+          "type": "boxShadow"
+        },
+        "dropshadow2": {
+          "value": {
+            "x": "0.58",
+            "y": "0.86",
+            "blur": "2.31",
+            "spread": "0",
+            "color": "rgba(21, 37, 80, 0.1)",
+            "type": "dropShadow"
+          },
+          "type": "boxShadow"
+        },
+        "innershadow1": {
+          "value": {
+            "x": "0",
+            "y": "0.43",
+            "blur": "0.58",
+            "spread": "0",
+            "color": "rgba(255, 255, 255, 0.25)",
+            "type": "innerShadow"
+          },
+          "type": "boxShadow"
+        },
+        "innershadow2": {
+          "value": {
+            "x": "0",
+            "y": "-0.29",
+            "blur": "0.86",
+            "spread": "0",
+            "color": "rgba(128, 35, 13, 0.3)",
+            "type": "innerShadow"
+          },
+          "type": "boxShadow"
+        }
+      },
+      "logomark": {
+        "primary": {
+          "value": "{foreground.container.special_accents.brand}",
+          "type": "color"
+        },
+        "neutral": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "on_background": {
+          "background_color": {
+            "value": "{background.container.special_accents.brand.inverse}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.container.special_accents.brand_inverse}",
+            "type": "color"
+          }
+        }
+      },
+      "monotone": {
+        "text_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        },
+        "icon_color": {
+          "value": "{foreground.container.special_accents.brand_secondary}",
+          "type": "color"
+        }
+      }
+    }
+  }
+}
