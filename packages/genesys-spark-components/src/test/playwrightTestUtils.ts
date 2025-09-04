@@ -72,9 +72,9 @@ export async function snap(
 
   if (await anyVisible(page.locator('gux-tooltip'))) {
     expect(await page.screenshot({ animations })).toMatchSnapshot();
-  } else if (element && (await page.locator(element).isVisible())) {
+  } else if (element && (await page.locator(element).first().isVisible())) {
     expect(
-      await page.locator(element).screenshot({ animations })
+      await page.locator(element).first().screenshot({ animations })
     ).toMatchSnapshot();
   } else {
     expect(await page.screenshot({ animations })).toMatchSnapshot();
