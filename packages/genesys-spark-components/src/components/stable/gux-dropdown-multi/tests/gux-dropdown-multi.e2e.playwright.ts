@@ -37,10 +37,13 @@ test.describe('gux-dropdown-multi', () => {
       renderConfigs: [renderConfig],
       axeExclusions,
       extraActions: async (page: E2EPage) => {
-        await page
+        const button = page
           .locator('gux-dropdown-multi')
-          .locator('button.gux-field')
-          .click();
+          .locator('button.gux-field');
+
+        if ((await button.getAttribute('aria-expanded')) !== 'true') {
+          await button.click();
+        }
       }
     });
   });
