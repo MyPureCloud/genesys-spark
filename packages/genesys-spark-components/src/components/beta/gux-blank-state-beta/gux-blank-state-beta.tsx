@@ -6,7 +6,7 @@ import {
   GuxBlankStateAlignment,
   GuxBlankStateVariant
 } from './gux-blank-state.types';
-import { renderAddSVG } from './svg-utils';
+import { renderVariantIllustration } from './gux-blank-state.service';
 
 /**
  * @slot primary-message - Required slot for primary-message.
@@ -34,7 +34,7 @@ export class GuxBlankStateBeta {
   alignment: GuxBlankStateAlignment = 'center';
 
   @Prop()
-  variant: GuxBlankStateVariant = 'add';
+  variant: GuxBlankStateVariant;
 
   @OnMutation({ childList: true, subtree: true })
   onMutation(): void {
@@ -77,7 +77,13 @@ export class GuxBlankStateBeta {
           [`gux-alignment-left`]: this.alignment === 'left'
         }}
       >
-        <div class="gux-image">{renderAddSVG()}</div>
+        <div class="gux-image">
+          {this.variant ? (
+            renderVariantIllustration(this.variant)
+          ) : (
+            <slot name="image"></slot>
+          )}
+        </div>
         <div class="gux-message">
           <slot name="primary-message"></slot>
         </div>

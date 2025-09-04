@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property    | Attribute   | Description | Type                 | Default    |
-| ----------- | ----------- | ----------- | -------------------- | ---------- |
-| `alignment` | `alignment` |             | `"center" \| "left"` | `'center'` |
-| `variant`   | `variant`   |             | `"add"`              | `'add'`    |
+| Property    | Attribute   | Description | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Default     |
+| ----------- | ----------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `alignment` | `alignment` |             | `"center" \| "left"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | `'center'`  |
+| `variant`   | `variant`   |             | `"success" \| "add" \| "face-smile" \| "calendar" \| "access" \| "recording" \| "data" \| "comments" \| "comment" \| "comment-question" \| "eye" \| "magnifying-glass" \| "magnifying-glass-question" \| "sparkles" \| "triangle-exclamation" \| "face-disappointed" \| "folder-magnifying-glass" \| "folder-open" \| "file" \| "lock" \| "message-bot" \| "robot" \| "message" \| "messages" \| "cloud" \| "article" \| "edit" \| "connection" \| "rectangle-history" \| "setting" \| "square-dashed" \| "square-plus" \| "transcription" \| "table" \| "user" \| "user-message" \| "users"` | `undefined` |
 
 
 ## Slots
