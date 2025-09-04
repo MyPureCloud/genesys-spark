@@ -81,6 +81,7 @@ Type: `Promise<void>`
  - [gux-rich-text-editor-action-rich-style](../gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-rich-style)
  - [gux-rich-text-editor-action-text-highlight](../gux-rich-text-editor/gux-rich-text-editor-action/gux-rich-text-editor-action-text-highlight)
  - [gux-rich-text-editor-menu](../gux-rich-text-editor/gux-rich-text-editor-menu)
+ - [gux-segmented-control-item](../gux-segmented-control/gux-segmented-control-item)
  - [gux-table-toolbar-menu-button](../../stable/gux-table-toolbar/gux-table-toolbar-menu-button)
 
 ### Depends on
@@ -105,6 +106,7 @@ graph TD;
   gux-rich-text-editor-action-rich-style --> gux-tooltip-beta
   gux-rich-text-editor-action-text-highlight --> gux-tooltip-beta
   gux-rich-text-editor-menu --> gux-tooltip-beta
+  gux-segmented-control-item --> gux-tooltip-beta
   gux-table-toolbar-menu-button --> gux-tooltip-beta
   style gux-tooltip-beta fill:#f9f,stroke:#333,stroke-width:4px
 ```
