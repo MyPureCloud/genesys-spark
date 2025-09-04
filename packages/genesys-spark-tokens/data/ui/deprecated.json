@@ -75,5 +75,35 @@
         "type": "typography"
       }
     }
+  },
+  "background": {
+    "container": {
+      "global_nav": {
+        "desktop": {
+          "menu_panel": {
+            "primary_top-left_value": {
+              "value": "{theme.background.container.global_nav.desktop.20}",
+              "type": "color",
+              "description": "The top-left color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            },
+            "primary_bottom-right_value": {
+              "value": "{theme.background.container.global_nav.desktop.40}",
+              "type": "color",
+              "description": "The bottom-right color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            },
+            "secondary_top-left_value": {
+              "value": "{theme.background.container.global_nav.desktop.40}",
+              "type": "color",
+              "description": "The  top-left color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
+            },
+            "secondary_bottom-right_value": {
+              "value": "{theme.background.container.global_nav.desktop.50}",
+              "type": "color",
+              "description": "The bottom-right color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
+            }
+          }
+        }
+      }
+    }
   }
 }

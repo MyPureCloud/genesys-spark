@@ -429,6 +429,12 @@
         "foreground_color": {
           "value": "{foreground.interactive.global_nav.desktop.level2.hover}",
           "type": "color"
+        },
+        "level_2": {
+          "background_color": {
+            "value": "{background.interactive.global_nav.desktop.level_2.option.hover}",
+            "type": "color"
+          }
         }
       },
       "panel_selected": {
@@ -468,6 +474,10 @@
         },
         "foreground_color": {
           "value": "{foreground.interactive.global_nav.desktop.level2.hover}",
+          "type": "color"
+        },
+        "stroke": {
+          "value": "{foreground.container.special_accents.brand}",
           "type": "color"
         }
       },
@@ -698,6 +708,92 @@
             }
           }
         }
+      },
+      "button": {
+        "default": {
+          "background_color": {
+            "value": "{background.interactive.secondary.default}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.secondary.default}",
+            "type": "color"
+          }
+        },
+        "hover": {
+          "background_color": {
+            "value": "{background.interactive.secondary.hover}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.secondary.hover}",
+            "type": "color"
+          }
+        },
+        "active": {
+          "background_color": {
+            "value": "{background.interactive.secondary.active}",
+            "type": "color"
+          },
+          "foreground_color": {
+            "value": "{foreground.interactive.secondary.active}",
+            "type": "color"
+          }
+        },
+        "disconnected": {
+          "default": {
+            "background_color": {
+              "value": "{background.interactive.secondary.default}",
+              "type": "color"
+            },
+            "foreground_color": {
+              "value": "{background.interactive.danger.hover}",
+              "type": "color"
+            }
+          },
+          "hover": {
+            "background_color": {
+              "value": "{background.interactive.secondary.hover}",
+              "type": "color"
+            },
+            "foreground_color": {
+              "value": "{background.interactive.danger.hover}",
+              "type": "color"
+            }
+          }
+        },
+        "connected": {
+          "default": {
+            "background_color": {
+              "value": "{background.interactive.global_nav.desktop.top_nav.connected.default}",
+              "type": "color"
+            },
+            "foreground_color": {
+              "value": "{foreground.interactive.primary.default}",
+              "type": "color"
+            }
+          },
+          "hover": {
+            "background_color": {
+              "value": "{background.interactive.global_nav.desktop.top_nav.connected.hover}",
+              "type": "color"
+            },
+            "foreground_color": {
+              "value": "{foreground.interactive.primary.default}",
+              "type": "color"
+            }
+          },
+          "active": {
+            "background_color": {
+              "value": "{background.interactive.global_nav.desktop.top_nav.connected.active}",
+              "type": "color"
+            },
+            "foreground_color": {
+              "value": "{foreground.interactive.primary.default}",
+              "type": "color"
+            }
+          }
+        }
       }
     },
     "panel": {
@@ -710,12 +806,18 @@
         "type": "color"
       },
       "primary": {
-        "value": "linear-gradient(127deg, {background.container.global_nav.desktop.menu_panel.primary_top-left_value} 3.19%, {background.container.global_nav.desktop.menu_panel.primary_bottom-right_value} 225.06%)",
+        "value": "{background.container.global_nav.desktop.menu_panel.primary}",
         "type": "color"
       },
       "secondary": {
-        "value": "linear-gradient(358deg, {background.container.global_nav.desktop.menu_panel.secondary_top-left_value} 0.16%, {background.container.global_nav.desktop.menu_panel.secondary_bottom-right_value} 98.45%)",
+        "value": "{background.container.global_nav.desktop.menu_panel.secondary}",
         "type": "color"
+      },
+      "feedback_container": {
+        "background_color": {
+          "value": "{background.container.global_nav.desktop.menu_panel.feedback_container}",
+          "type": "color"
+        }
       }
     },
     "user_settings_window": {

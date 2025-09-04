@@ -2,6 +2,20 @@
   "color": {
     "focus": "#5476d5"
   },
+  "background": {
+    "container": {
+      "global_nav": {
+        "desktop": {
+          "menu_panel": {
+            "primary_top-left_value": "#3d538f",
+            "primary_bottom-right_value": "#263b73",
+            "secondary_top-left_value": "#263b73",
+            "secondary_bottom-right_value": "#152550"
+          }
+        }
+      }
+    }
+  },
   "form_control": {
     "input": {
       "content_text": {
@@ -388,7 +402,7 @@
           "foreground_color": "#ffffff"
         },
         "hover": {
-          "background_color": "#2954cb",
+          "background_color": "#19327a",
           "foreground_color": "#ffffff"
         }
       },
@@ -400,8 +414,11 @@
         "foreground_color": "#ffffff"
       },
       "hover": {
-        "background_color": "#19327a",
-        "foreground_color": "#ffffff"
+        "background_color": "#1a2b67",
+        "foreground_color": "#ffffff",
+        "level_2": {
+          "background_color": "#102251"
+        }
       },
       "panel_selected": {
         "background_color": "#2143a2",
@@ -414,7 +431,8 @@
       "disable_opacity": ".5",
       "active_selected": {
         "background_color": "#2954cb",
-        "foreground_color": "#ffffff"
+        "foreground_color": "#ffffff",
+        "stroke": "#ff451a"
       },
       "tree_view": {
         "bar": "#3d538f"
@@ -424,7 +442,7 @@
           "foreground_color": "#ffffff"
         },
         "hover": {
-          "background_color": "#19327a",
+          "background_color": "#1a2b67",
           "foreground_color": "#ffffff"
         },
         "selected": {
@@ -502,7 +520,7 @@
             "foreground_color": "#2143a2"
           },
           "hover": {
-            "background_color": "#19327a",
+            "background_color": "#1a2b67",
             "foreground_color_stroke": "#2143a2",
             "foreground_color": "#ffffff"
           }
@@ -512,8 +530,46 @@
             "foreground_color_stroke": "#ffffff"
           },
           "hover": {
-            "background_color": "#19327a",
+            "background_color": "#1a2b67",
             "foreground_color": "#d5def7"
+          }
+        }
+      },
+      "button": {
+        "default": {
+          "background_color": "#e7e9f9",
+          "foreground_color": "#2143a2"
+        },
+        "hover": {
+          "background_color": "#d5def7",
+          "foreground_color": "#19327a"
+        },
+        "active": {
+          "background_color": "#adbff0",
+          "foreground_color": "#102251"
+        },
+        "disconnected": {
+          "default": {
+            "background_color": "#e7e9f9",
+            "foreground_color": "#881429"
+          },
+          "hover": {
+            "background_color": "#d5def7",
+            "foreground_color": "#881429"
+          }
+        },
+        "connected": {
+          "default": {
+            "background_color": "#079167",
+            "foreground_color": "#ffffff"
+          },
+          "hover": {
+            "background_color": "#0e5c42",
+            "foreground_color": "#ffffff"
+          },
+          "active": {
+            "background_color": "#044834",
+            "foreground_color": "#ffffff"
           }
         }
       }
@@ -521,8 +577,11 @@
     "panel": {
       "stroke": "#cad1e100",
       "panel_title": "#ffffff",
-      "primary": "linear-gradient(127deg, #3d538f 3.19%, #263b73 225.06%)",
-      "secondary": "linear-gradient(358deg, #263b73 0.16%, #152550 98.45%)"
+      "primary": "#19327a",
+      "secondary": "#1a2b67",
+      "feedback_container": {
+        "background_color": "#2143a2"
+      }
     },
     "user_settings_window": {
       "body": {
@@ -674,10 +733,10 @@
         "lineHeight": "32px"
       },
       "nav-based": {
-        "fontFamily": "Urbanist",
-        "fontWeight": "700",
-        "fontSize": "18px",
-        "lineHeight": "27px"
+        "fontFamily": "'Noto Sans'",
+        "fontWeight": "600",
+        "fontSize": "14px",
+        "lineHeight": "20px"
       }
     },
     "background_color": "#ffffff",

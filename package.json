@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build --workspaces --if-present && npm run create-dist-folder",
     "commit": "git-cz",
-    "commitlint": "commitlint --from 81b354d83c18eb6ac0ca925b4694d43c09e588e8",
+    "commitlint": "commitlint --from 5825dd3d6008ea48f19ee12dd36663d196d601c2",
     "copy.chart-components": "cp -R ./packages/genesys-spark-chart-components/dist ./dist/chart",
     "create-dist-folder": "node ./scripts/create-dist-folder.js",
     "create-manifest": "node ./scripts/create-manifest.js",

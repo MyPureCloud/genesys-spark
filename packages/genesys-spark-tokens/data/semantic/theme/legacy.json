@@ -229,6 +229,10 @@
             "value": "{color_legacy.green.30}",
             "type": "color"
           },
+          "45": {
+            "value": "{color_legacy.green.20}",
+            "type": "color"
+          },
           "50": {
             "value": "{color_legacy.green.10}",
             "type": "color"
@@ -657,7 +661,25 @@
           }
         },
         "global_nav": {
+          "5": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
+          },
           "10": {
+            "value": "{color.azure_blue.700}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.15",
+                  "space": "lch",
+                  "color": "{color.black} "
+                }
+              }
+            }
+          },
+          "15": {
             "value": "{color.azure_blue.700}",
             "type": "color"
           },
@@ -667,6 +689,26 @@
           },
           "30": {
             "value": "{color.azure_blue.500}",
+            "type": "color"
+          },
+          "5d": {
+            "value": "{color.azure_blue.950}",
+            "type": "color"
+          },
+          "10d": {
+            "value": "{color.azure_blue.900}",
+            "type": "color"
+          },
+          "15d": {
+            "value": "{color.azure_blue.700}",
+            "type": "color"
+          },
+          "20d": {
+            "value": "{color.azure_blue.700}",
+            "type": "color"
+          },
+          "30d": {
+            "value": "{color.azure_blue.800}",
             "type": "color"
           }
         }
@@ -759,6 +801,10 @@
           "10": {
             "value": "{color_legacy.green.60}",
             "type": "color"
+          },
+          "45": {
+            "value": "{color_legacy.green.90}",
+            "type": "color"
           }
         },
         "warning": {
@@ -833,7 +879,7 @@
             }
           }
         },
-          "illustration": {
+        "illustration": {
           "10": {
             "value": "{color.azure_blue.600}",
             "type": "color"

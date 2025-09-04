@@ -812,7 +812,25 @@
           }
         },
         "global_nav": {
+          "5": {
+            "value": "{color.azure_blue.800}",
+            "type": "color"
+          },
           "10": {
+            "value": "{color.azure_blue.700}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.15",
+                  "space": "lch",
+                  "color": "{color.black} "
+                }
+              }
+            }
+          },
+          "15": {
             "value": "{color.azure_blue.700}",
             "type": "color"
           },
@@ -824,8 +842,16 @@
             "value": "{color.azure_blue.500}",
             "type": "color"
           },
+          "5d": {
+            "value": "{color.azure_blue.950}",
+            "type": "color"
+          },
           "10d": {
             "value": "{color.azure_blue.900}",
+            "type": "color"
+          },
+          "15d": {
+            "value": "{color.azure_blue.700}",
             "type": "color"
           },
           "20d": {
@@ -1004,7 +1030,25 @@
             "value": "{color.emerald.700}",
             "type": "color"
           },
+          "45": {
+            "value": "{color.emerald.700}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.15",
+                  "space": "lch",
+                  "color": "{color.black} "
+                }
+              }
+            }
+          },
           "50": {
+            "value": "{color.emerald.800}",
+            "type": "color"
+          },
+          "60": {
             "value": "{color.emerald.900}",
             "type": "color"
           },
@@ -1032,7 +1076,25 @@
             "value": "{color.emerald.500}",
             "type": "color"
           },
+          "45d": {
+            "value": "{color.emerald.700}",
+            "type": "color",
+            "$extensions": {
+              "studio.tokens": {
+                "modify": {
+                  "type": "mix",
+                  "value": "0.15",
+                  "space": "lch",
+                  "color": "{color.black} "
+                }
+              }
+            }
+          },
           "50d": {
+            "value": "{color.emerald.800}",
+            "type": "color"
+          },
+          "60d": {
             "value": "{color.emerald.900}",
             "type": "color"
           }

@@ -44,21 +44,33 @@
       "global_nav": {
         "desktop": {
           "option": {
-            "hover": "#19327a",
+            "hover": "#1a2b67",
             "active_panel": "#2143a2",
             "active_selected": "#2954cb"
           },
           "return": {
             "default": "#2143a2",
-            "hover": "#2954cb"
+            "hover": "#19327a"
           },
           "menu": {
-            "closed_hover": "#19327a",
-            "open_hover": "#19327a"
+            "closed_hover": "#1a2b67",
+            "open_hover": "#1a2b67"
           },
           "new_tab": {
-            "hover": "#19327a",
+            "hover": "#1a2b67",
             "selected": "#2143a2"
+          },
+          "level_2": {
+            "option": {
+              "hover": "#102251"
+            }
+          },
+          "top_nav": {
+            "connected": {
+              "default": "#3c8527",
+              "hover": "#164b08",
+              "active": "#0d3d00"
+            }
           }
         }
       }
@@ -129,10 +141,9 @@
         "desktop": {
           "top_command_bar": "#ffffff",
           "menu_panel": {
-            "primary_top-left_value": "#3d538f",
-            "primary_bottom-right_value": "#263b73",
-            "secondary_top-left_value": "#263b73",
-            "secondary_bottom-right_value": "#152550"
+            "primary": "#19327a",
+            "secondary": "#1a2b67",
+            "feedback_container": "#2143a2"
           }
         },
         "mobile": {
