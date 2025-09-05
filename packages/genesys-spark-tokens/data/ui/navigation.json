@@ -467,7 +467,7 @@
         "value": "{opacity.disabled}",
         "type": "opacity"
       },
-      "active_selected": {
+      "selected": {
         "background_color": {
           "value": "{background.interactive.global_nav.desktop.option.active_selected}",
           "type": "color"
