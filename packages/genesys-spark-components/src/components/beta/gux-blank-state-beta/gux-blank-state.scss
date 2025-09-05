@@ -57,6 +57,60 @@ $gse-ui-blankState-large-minWidth: 570px; // --gse-ui-blankState-large-minWidth
   &.gux-alignment-left {
     align-items: flex-start;
   }
+
+  .gux-illustration {
+    display: grid;
+
+    .gux-background-shape {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    .gux-illustration-image {
+      position: relative;
+      grid-row: 1;
+      grid-column: 1;
+      margin-block: 0;
+      margin-inline: auto;
+
+      .gux-status-icon {
+        position: absolute;
+        inset-block-end: -8px;
+        inset-inline-end: -8px;
+        z-index: 1;
+
+        .gux-status-success {
+          color: ui.$gse-ui-blankState-mainIllustration-smallIcon-successBaseColor;
+          background-color: ui.$gse-ui-blankState-mainIllustration-smallIcon-successSymbolColor;
+          border-radius: 50%;
+        }
+
+        .gux-status-warning {
+          color: ui.$gse-ui-blankState-mainIllustration-smallIcon-warningBaseColor;
+          background-color: ui.$gse-ui-blankState-mainIllustration-smallIcon-warningSymbolColor;
+          border-radius: 50%;
+        }
+
+        .gux-status-error {
+          color: ui.$gse-ui-blankState-mainIllustration-smallIcon-errorBaseColor;
+          background-color: ui.$gse-ui-blankState-mainIllustration-smallIcon-errorSymbolColor;
+          border-radius: 50%;
+        }
+
+        .gux-status-info {
+          color: ui.$gse-ui-blankState-mainIllustration-smallIcon-infoBaseColor;
+          background-color: ui.$gse-ui-blankState-mainIllustration-smallIcon-infoSymbolColor;
+          border-radius: 50%;
+        }
+
+        .gux-status-add {
+          color: ui.$gse-ui-blankState-mainIllustration-smallIcon-operationBaseColor;
+          background-color: ui.$gse-ui-blankState-mainIllustration-smallIcon-operationSymbolColor;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
 }
 
 // https://bholmes.dev/blog/alternative-to-css-variable-media-queries/

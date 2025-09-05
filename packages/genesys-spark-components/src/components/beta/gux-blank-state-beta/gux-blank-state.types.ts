@@ -1,4 +1,10 @@
 export type GuxBlankStateAlignment = 'left' | 'center';
+export type GuxBlankStateStatus = 'success' | 'error' | 'info' | 'add';
+export type GuxBlankStateBackgroundShape =
+  | 'solid-wide'
+  | 'solid-narrow'
+  | 'gradient-wide'
+  | 'gradient-narrow';
 export type GuxBlankStateVariant =
   | 'add'
   | 'face-smile'

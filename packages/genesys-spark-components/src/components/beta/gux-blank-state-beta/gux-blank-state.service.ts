@@ -1,8 +1,14 @@
 import { JSX } from '@stencil/core';
-import { GuxBlankStateVariant } from './gux-blank-state.types';
+import {
+  GuxBlankStateBackgroundShape,
+  GuxBlankStateVariant
+} from './gux-blank-state.types';
 import * as svgUtils from './svg-utils';
 
-const variantMap: Record<GuxBlankStateVariant, (() => JSX.Element) | null> = {
+const illustrationVariantMap: Record<
+  GuxBlankStateVariant,
+  (() => JSX.Element) | null
+> = {
   add: svgUtils.renderAddSVG,
   'face-smile': svgUtils.renderFaceSmileSVG,
   success: svgUtils.renderSuccessSVG,
@@ -42,9 +48,26 @@ const variantMap: Record<GuxBlankStateVariant, (() => JSX.Element) | null> = {
   users: svgUtils.renderUsersSVG
 };
 
+const backgroundShapeMap: Record<
+  GuxBlankStateBackgroundShape,
+  (() => JSX.Element) | null
+> = {
+  'solid-wide': svgUtils.renderSolidWideSVG,
+  'solid-narrow': svgUtils.renderSolidNarrowSVG,
+  'gradient-wide': svgUtils.renderGradientWideSVG,
+  'gradient-narrow': svgUtils.renderGradientNarrowSVG
+};
+
 export function renderVariantIllustration(
   variant: GuxBlankStateVariant
 ): JSX.Element | null {
-  const renderIllustration = variantMap[variant];
+  const renderIllustration = illustrationVariantMap[variant];
   return renderIllustration ? renderIllustration() : null;
+}
+
+export function renderBackgroundShape(
+  shape: GuxBlankStateBackgroundShape
+): JSX.Element | null {
+  const renderShape = backgroundShapeMap[shape];
+  return renderShape ? renderShape() : null;
 }
