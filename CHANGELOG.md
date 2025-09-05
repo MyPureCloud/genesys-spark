@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.171.0](https://github.com/MyPureCloud/genesys-spark/compare/v4.170.1...v4.171.0) (2025-09-05)
+
+
+### Features
+
+* **icon:** addition of ai icons ([f4e877b](https://github.com/MyPureCloud/genesys-spark/commit/f4e877b3a15cd1f60317276fcb1c8d53e37bfe1c))
+* **tokens:** added logo component tokens ([434c345](https://github.com/MyPureCloud/genesys-spark/commit/434c345a693e815e6b80464a0792e62c142a9cd7))
+
 ### [4.170.1](https://github.com/MyPureCloud/genesys-spark/compare/v4.170.0...v4.170.1) (2025-09-04)
 
 
