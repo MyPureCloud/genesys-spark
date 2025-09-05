@@ -220,13 +220,13 @@ export class GuxFormFieldFileBeta {
     if (this.dragAndDrop) {
       return this.getI18nValue('clickToUpload');
     } else if (this.multiple) {
-      if (this.input.files.length > 0) {
+      if (this.input?.files?.length > 0) {
         return this.getI18nValue('changeFiles');
       }
 
       return this.getI18nValue('uploadFiles');
     } else {
-      if (this.input.files.length > 0) {
+      if (this.input?.files?.length > 0) {
         return this.getI18nValue('changeFile');
       }
       return this.getI18nValue('uploadFile');

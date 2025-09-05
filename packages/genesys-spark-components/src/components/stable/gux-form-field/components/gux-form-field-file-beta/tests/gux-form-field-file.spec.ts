@@ -6,7 +6,7 @@ const components = [GuxFormFieldFileBeta];
 const language = 'en';
 
 // Skipping because DataTransfer is not defined in spec tests environment
-describe.skip('gux-form-field-file-beta', () => {
+describe('gux-form-field-file-beta', () => {
   it('should build', async () => {
     const html = `
     <gux-form-field-file-beta>

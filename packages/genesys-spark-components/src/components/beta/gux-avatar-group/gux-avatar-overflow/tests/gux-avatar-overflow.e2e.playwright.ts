@@ -10,7 +10,7 @@ test.describe('gux-avatar-overflow-beta', () => {
   test.describe('#render', () => {
     checkRenders({
       renderConfigs: [renderConfig],
-      element: 'gux-avatar-overflow-beta'
+      element: 'gux-avatar-group-beta'
     });
   });
 
