@@ -346,6 +346,7 @@ export class GuxFormFieldFileBeta {
           'gux-drop-zone': this.dragAndDrop,
           'gux-disabled': this.disabled
         }}
+        aria-disabled={this.disabled ? 'true' : 'false'}
         onDrop={event => this.onDrop(event)}
         onDragOver={event => this.onDragOver(event)}
         onDragEnter={event => this.onDragOver(event)}
