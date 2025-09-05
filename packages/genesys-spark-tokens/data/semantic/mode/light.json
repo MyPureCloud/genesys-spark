@@ -211,7 +211,7 @@
           "top_nav": {
             "connected": {
               "default": {
-                "value": "{theme.background.system.success.35}",
+                "value": "{theme.background.system.success.40}",
                 "type": "color"
               },
               "hover": {

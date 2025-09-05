@@ -380,10 +380,6 @@
   },
   "global_nav": {
     "menu_option": {
-      "selected": {
-        "background_color": "#102251",
-        "foreground_color": "#ffffff"
-      },
       "disabled": {
         "background_color": "#2a2a2e",
         "foreground_color": "#ffffff"
@@ -429,7 +425,7 @@
       },
       "border_radius": "4px",
       "disable_opacity": ".5",
-      "active_selected": {
+      "selected": {
         "background_color": "#19327a",
         "foreground_color": "#ffffff",
         "stroke": "#ff451a"
