@@ -60,6 +60,8 @@ $gse-ui-blankState-large-minWidth: 570px; // --gse-ui-blankState-large-minWidth
 
   .gux-illustration {
     display: grid;
+    inline-size: ui.$gse-ui-blankState-mainIllustration-width;
+    block-size: ui.$gse-ui-blankState-mainIllustration-height;
 
     .gux-background-shape {
       grid-row: 1;
@@ -70,6 +72,7 @@ $gse-ui-blankState-large-minWidth: 570px; // --gse-ui-blankState-large-minWidth
       position: relative;
       grid-row: 1;
       grid-column: 1;
+      block-size: ui.$gse-ui-blankState-mainIllustration-illustration-height;
       margin-block: 0;
       margin-inline: auto;
 
