@@ -1,0 +1,77 @@
+@use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
+@use '~genesys-spark/dist/scss/mixins.scss';
+
+// Style
+:host {
+  display: inline-block;
+  block-size: fit-content;
+  border-radius: ui.$gse-ui-badge-borderRadius;
+}
+
+.gux-notification-badge {
+  display: flex;
+  flex-direction: row;
+  gap: ui.$gse-ui-badge-gap;
+  align-items: center;
+  justify-content: center;
+  block-size: ui.$gse-ui-badge-height;
+  padding: ui.$gse-ui-badge-padding;
+  font-family: ui.$gse-ui-badge-text-fontFamily;
+  font-size: ui.$gse-ui-badge-text-fontSize;
+  font-weight: ui.$gse-ui-badge-text-fontWeight;
+  line-height: ui.$gse-ui-badge-text-lineHeight;
+  border-radius: ui.$gse-ui-badge-borderRadius;
+
+  gux-tooltip-title {
+    white-space: nowrap;
+  }
+
+  .gux-sr-only {
+    @include mixins.gux-sr-only-clip;
+  }
+
+  &.gux-info {
+    color: ui.$gse-ui-badge-info-regular-foregroundColor;
+    background-color: ui.$gse-ui-badge-info-regular-backgroundColor;
+
+    &.gux-bold {
+      color: ui.$gse-ui-badge-info-bold-foregroundColor;
+      background-color: ui.$gse-ui-badge-info-bold-backgroundColor;
+    }
+  }
+
+  &.gux-error {
+    color: ui.$gse-ui-badge-error-regular-foregroundColor;
+    background-color: ui.$gse-ui-badge-error-regular-backgroundColor;
+
+    &.gux-bold {
+      color: ui.$gse-ui-badge-error-bold-foregroundColor;
+      background-color: ui.$gse-ui-badge-error-bold-backgroundColor;
+    }
+  }
+
+  &.gux-warning {
+    color: ui.$gse-ui-badge-warning-regular-foregroundColor;
+    background-color: ui.$gse-ui-badge-warning-regular-backgroundColor;
+
+    &.gux-bold {
+      color: ui.$gse-ui-badge-warning-bold-foregroundColor;
+      background-color: ui.$gse-ui-badge-warning-bold-backgroundColor;
+    }
+  }
+
+  &.gux-success {
+    color: ui.$gse-ui-badge-success-regular-foregroundColor;
+    background-color: ui.$gse-ui-badge-success-regular-backgroundColor;
+
+    &.gux-bold {
+      color: ui.$gse-ui-badge-success-bold-foregroundColor;
+      background-color: ui.$gse-ui-badge-success-bold-backgroundColor;
+    }
+  }
+
+  &.gux-inherit {
+    color: inherit;
+    background-color: inherit;
+  }
+}
