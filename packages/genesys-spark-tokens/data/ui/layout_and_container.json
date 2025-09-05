@@ -594,7 +594,7 @@
         "type": "typography"
       },
       "nav-based": {
-        "value": "{heading.md.bold}",
+        "value": "{body.md.semi_bold}",
         "type": "typography"
       }
     },

@@ -171,7 +171,7 @@
               "description": "The background color for the default state of the navigation buttons in the return button of the global navigation."
             },
             "hover": {
-              "value": "{theme.background.custom_accents.global_nav.30}",
+              "value": "{theme.background.custom_accents.global_nav.15}",
               "type": "color",
               "description": "The background color for the hover state of the navigation buttons in the return button of the global navigation."
             }
@@ -198,6 +198,30 @@
               "value": "{theme.background.custom_accents.global_nav.20}",
               "type": "color",
               "description": "The background color for the selected state of the navigation buttons in the new tab button of the global navigation."
+            }
+          },
+          "level_2": {
+            "option": {
+              "hover": {
+                "value": "{theme.background.custom_accents.global_nav.5}",
+                "type": "color"
+              }
+            }
+          },
+          "top_nav": {
+            "connected": {
+              "default": {
+                "value": "{theme.background.system.success.35}",
+                "type": "color"
+              },
+              "hover": {
+                "value": "{theme.background.system.success.45}",
+                "type": "color"
+              },
+              "active": {
+                "value": "{theme.background.system.success.50}",
+                "type": "color"
+              }
             }
           }
         }
@@ -434,25 +458,17 @@
             "description": "The background color of the top command bar for the desktop global navigation."
           },
           "menu_panel": {
-            "primary_top-left_value": {
-              "value": "{theme.background.container.global_nav.desktop.20}",
-              "type": "color",
-              "description": "The top-left color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            "primary": {
+              "value": "{theme.background.custom_accents.global_nav.15}",
+              "type": "color"
             },
-            "primary_bottom-right_value": {
-              "value": "{theme.background.container.global_nav.desktop.40}",
-              "type": "color",
-              "description": "The bottom-right color value in the gradient background of our menu panel level 1 for the desktop global navigation."
+            "secondary": {
+              "value": "{theme.background.custom_accents.global_nav.10}",
+              "type": "color"
             },
-            "secondary_top-left_value": {
-              "value": "{theme.background.container.global_nav.desktop.40}",
-              "type": "color",
-              "description": "The  top-left color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
-            },
-            "secondary_bottom-right_value": {
-              "value": "{theme.background.container.global_nav.desktop.50}",
-              "type": "color",
-              "description": "The bottom-right color value in the gradient background of our menu panel levels 2 and 3 for the desktop global navigation."
+            "feedback_container": {
+              "value": "{theme.background.custom_accents.global_nav.20}",
+              "type": "color"
             }
           }
         },
@@ -834,7 +850,8 @@
           "type": "color"
         },
         "light_only_content": {
-          "value": "{theme.foreground.primary.30d}"
+          "value": "{theme.foreground.primary.30d}",
+          "type": "other"
         }
       },
       "illustration": {

@@ -59,6 +59,18 @@
           "new_tab": {
             "hover": "#0c193d",
             "selected": "#102251"
+          },
+          "level_2": {
+            "option": {
+              "hover": "#081129"
+            }
+          },
+          "top_nav": {
+            "connected": {
+              "default": "#079167",
+              "hover": "#0e5c42",
+              "active": "#044834"
+            }
           }
         }
       }
@@ -129,10 +141,9 @@
         "desktop": {
           "top_command_bar": "#1e1e21",
           "menu_panel": {
-            "primary_top-left_value": "#141c34",
-            "primary_bottom-right_value": "#141929",
-            "secondary_top-left_value": "#141929",
-            "secondary_bottom-right_value": "#131315"
+            "primary": "#19327a",
+            "secondary": "#0c193d",
+            "feedback_container": "#19327a"
           }
         },
         "mobile": {

@@ -1,5 +1,9 @@
 @mixin tokens {
   --gse-ui-color-focus: #5476d5;
+  --gse-ui-background-container-globalNav-desktop-menuPanel-primaryTopLeftValue: #3d538f;
+  --gse-ui-background-container-globalNav-desktop-menuPanel-primaryBottomRightValue: #263b73;
+  --gse-ui-background-container-globalNav-desktop-menuPanel-secondaryTopLeftValue: #263b73;
+  --gse-ui-background-container-globalNav-desktop-menuPanel-secondaryBottomRightValue: #152550;
   --gse-ui-formControl-input-contentText-fontFamily: 'Noto Sans';
   --gse-ui-formControl-input-contentText-fontWeight: 400;
   --gse-ui-formControl-input-contentText-fontSize: 12px;
@@ -187,6 +191,7 @@
   --gse-ui-globalNav-menuOption-default-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-hover-backgroundColor: #0c193d;
   --gse-ui-globalNav-menuOption-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-hover-level_2-backgroundColor: #081129;
   --gse-ui-globalNav-menuOption-panelSelected-backgroundColor: #102251;
   --gse-ui-globalNav-menuOption-panelSelected-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-focus-borderRadius: 8px;
@@ -194,6 +199,7 @@
   --gse-ui-globalNav-menuOption-disableOpacity: 0.5;
   --gse-ui-globalNav-menuOption-activeSelected-backgroundColor: #19327a;
   --gse-ui-globalNav-menuOption-activeSelected-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-activeSelected-stroke: #ff451a;
   --gse-ui-globalNav-menuOption-treeView-bar: #263b73;
   --gse-ui-globalNav-menuOption-newTab-default-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-newTab-hover-backgroundColor: #0c193d;
@@ -245,18 +251,27 @@
   --gse-ui-globalNav-topBar-menuButton-open-default-foregroundColorStroke: #ffffff;
   --gse-ui-globalNav-topBar-menuButton-open-hover-backgroundColor: #0c193d;
   --gse-ui-globalNav-topBar-menuButton-open-hover-foregroundColor: #d5def7;
+  --gse-ui-globalNav-topBar-button-default-backgroundColor: #465066;
+  --gse-ui-globalNav-topBar-button-default-foregroundColor: #ffffff;
+  --gse-ui-globalNav-topBar-button-hover-backgroundColor: #475675;
+  --gse-ui-globalNav-topBar-button-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-topBar-button-active-backgroundColor: #354a72;
+  --gse-ui-globalNav-topBar-button-active-foregroundColor: #ffffff;
+  --gse-ui-globalNav-topBar-button-disconnected-default-backgroundColor: #465066;
+  --gse-ui-globalNav-topBar-button-disconnected-default-foregroundColor: #e22245;
+  --gse-ui-globalNav-topBar-button-disconnected-hover-backgroundColor: #475675;
+  --gse-ui-globalNav-topBar-button-disconnected-hover-foregroundColor: #e22245;
+  --gse-ui-globalNav-topBar-button-connected-default-backgroundColor: #079167;
+  --gse-ui-globalNav-topBar-button-connected-default-foregroundColor: #ffffff;
+  --gse-ui-globalNav-topBar-button-connected-hover-backgroundColor: #0e5c42;
+  --gse-ui-globalNav-topBar-button-connected-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-topBar-button-connected-active-backgroundColor: #044834;
+  --gse-ui-globalNav-topBar-button-connected-active-foregroundColor: #ffffff;
   --gse-ui-globalNav-panel-stroke: #3e4044;
   --gse-ui-globalNav-panel-panelTitle: #ffffff;
-  --gse-ui-globalNav-panel-primary: linear-gradient(
-    127deg,
-    #141c34 3.19%,
-    #141929 225.06%
-  );
-  --gse-ui-globalNav-panel-secondary: linear-gradient(
-    358deg,
-    #141929 0.16%,
-    #131315 98.45%
-  );
+  --gse-ui-globalNav-panel-primary: #19327a;
+  --gse-ui-globalNav-panel-secondary: #0c193d;
+  --gse-ui-globalNav-panel-feedbackContainer-backgroundColor: #19327a;
   --gse-ui-globalNav-userSettingsWindow-body-height: 400px;
   --gse-ui-globalNav-userSettingsWindow-body-width: 360px;
   --gse-ui-globalNav-userSettingsWindow-body-gap: 4px;
@@ -329,10 +344,10 @@
   --gse-ui-sidePanel-heading-lgText-fontWeight: 600;
   --gse-ui-sidePanel-heading-lgText-fontSize: 24px;
   --gse-ui-sidePanel-heading-lgText-lineHeight: 32px;
-  --gse-ui-sidePanel-heading-navBased-fontFamily: Urbanist;
-  --gse-ui-sidePanel-heading-navBased-fontWeight: 700;
-  --gse-ui-sidePanel-heading-navBased-fontSize: 18px;
-  --gse-ui-sidePanel-heading-navBased-lineHeight: 27px;
+  --gse-ui-sidePanel-heading-navBased-fontFamily: 'Noto Sans';
+  --gse-ui-sidePanel-heading-navBased-fontWeight: 600;
+  --gse-ui-sidePanel-heading-navBased-fontSize: 14px;
+  --gse-ui-sidePanel-heading-navBased-lineHeight: 20px;
   --gse-ui-sidePanel-backgroundColor: #2a2a2e;
   --gse-ui-sidePanel-headerColor: #ffffff;
   --gse-ui-sidePanel-boxShadow: 0 6px 10px 4px #00000059, 0 2px 3px 0 #00000073;

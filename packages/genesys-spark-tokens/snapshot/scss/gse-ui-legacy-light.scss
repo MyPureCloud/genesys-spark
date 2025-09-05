@@ -1,5 +1,9 @@
 @mixin tokens {
   --gse-ui-color-focus: #aac9ff;
+  --gse-ui-background-container-globalNav-desktop-menuPanel-primaryTopLeftValue: #3d538f;
+  --gse-ui-background-container-globalNav-desktop-menuPanel-primaryBottomRightValue: #263b73;
+  --gse-ui-background-container-globalNav-desktop-menuPanel-secondaryTopLeftValue: #263b73;
+  --gse-ui-background-container-globalNav-desktop-menuPanel-secondaryBottomRightValue: #152550;
   --gse-ui-formControl-input-contentText-fontFamily: Roboto;
   --gse-ui-formControl-input-contentText-fontWeight: 400;
   --gse-ui-formControl-input-contentText-fontSize: 12px;
@@ -178,15 +182,16 @@
   --gse-ui-globalNav-menuOption-return-selected-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-return-default-backgroundColor: #2143a2;
   --gse-ui-globalNav-menuOption-return-default-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-return-hover-backgroundColor: #2954cb;
+  --gse-ui-globalNav-menuOption-return-hover-backgroundColor: #19327a;
   --gse-ui-globalNav-menuOption-return-hover-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-height: 32px;
   --gse-ui-globalNav-menuOption-width: 248px;
   --gse-ui-globalNav-menuOption-padding: 0px 12px;
   --gse-ui-globalNav-menuOption-gap: 8px;
   --gse-ui-globalNav-menuOption-default-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-hover-backgroundColor: #19327a;
+  --gse-ui-globalNav-menuOption-hover-backgroundColor: #1a2b67;
   --gse-ui-globalNav-menuOption-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-hover-level_2-backgroundColor: #102251;
   --gse-ui-globalNav-menuOption-panelSelected-backgroundColor: #2143a2;
   --gse-ui-globalNav-menuOption-panelSelected-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-focus-borderRadius: 8px;
@@ -194,9 +199,10 @@
   --gse-ui-globalNav-menuOption-disableOpacity: 0.5;
   --gse-ui-globalNav-menuOption-activeSelected-backgroundColor: #2954cb;
   --gse-ui-globalNav-menuOption-activeSelected-foregroundColor: #ffffff;
+  --gse-ui-globalNav-menuOption-activeSelected-stroke: #ff451a;
   --gse-ui-globalNav-menuOption-treeView-bar: #3d538f;
   --gse-ui-globalNav-menuOption-newTab-default-foregroundColor: #ffffff;
-  --gse-ui-globalNav-menuOption-newTab-hover-backgroundColor: #19327a;
+  --gse-ui-globalNav-menuOption-newTab-hover-backgroundColor: #1a2b67;
   --gse-ui-globalNav-menuOption-newTab-hover-foregroundColor: #ffffff;
   --gse-ui-globalNav-menuOption-newTab-selected-backgroundColor: #2143a2;
   --gse-ui-globalNav-menuOption-newTab-selected-foregroundColor: #ffffff;
@@ -239,24 +245,33 @@
   --gse-ui-globalNav-topBar-logo: #ff451a;
   --gse-ui-globalNav-topBar-pageTitle: #152550;
   --gse-ui-globalNav-topBar-menuButton-closed-default-foregroundColor: #2143a2;
-  --gse-ui-globalNav-topBar-menuButton-closed-hover-backgroundColor: #19327a;
+  --gse-ui-globalNav-topBar-menuButton-closed-hover-backgroundColor: #1a2b67;
   --gse-ui-globalNav-topBar-menuButton-closed-hover-foregroundColorStroke: #2143a2;
   --gse-ui-globalNav-topBar-menuButton-closed-hover-foregroundColor: #ffffff;
   --gse-ui-globalNav-topBar-menuButton-open-default-foregroundColorStroke: #ffffff;
-  --gse-ui-globalNav-topBar-menuButton-open-hover-backgroundColor: #19327a;
+  --gse-ui-globalNav-topBar-menuButton-open-hover-backgroundColor: #1a2b67;
   --gse-ui-globalNav-topBar-menuButton-open-hover-foregroundColor: #d5def7;
+  --gse-ui-globalNav-topBar-button-default-backgroundColor: #e8ecf2;
+  --gse-ui-globalNav-topBar-button-default-foregroundColor: #2e394c;
+  --gse-ui-globalNav-topBar-button-hover-backgroundColor: #deeaff;
+  --gse-ui-globalNav-topBar-button-hover-foregroundColor: #2e394c;
+  --gse-ui-globalNav-topBar-button-active-backgroundColor: #e2e6ee;
+  --gse-ui-globalNav-topBar-button-active-foregroundColor: #2e394c;
+  --gse-ui-globalNav-topBar-button-disconnected-default-backgroundColor: #e8ecf2;
+  --gse-ui-globalNav-topBar-button-disconnected-default-foregroundColor: #8f0707;
+  --gse-ui-globalNav-topBar-button-disconnected-hover-backgroundColor: #deeaff;
+  --gse-ui-globalNav-topBar-button-disconnected-hover-foregroundColor: #8f0707;
+  --gse-ui-globalNav-topBar-button-connected-default-backgroundColor: #3c8527;
+  --gse-ui-globalNav-topBar-button-connected-default-foregroundColor: #ffffff;
+  --gse-ui-globalNav-topBar-button-connected-hover-backgroundColor: #164b08;
+  --gse-ui-globalNav-topBar-button-connected-hover-foregroundColor: #ffffff;
+  --gse-ui-globalNav-topBar-button-connected-active-backgroundColor: #0d3d00;
+  --gse-ui-globalNav-topBar-button-connected-active-foregroundColor: #ffffff;
   --gse-ui-globalNav-panel-stroke: #cad1e100;
   --gse-ui-globalNav-panel-panelTitle: #ffffff;
-  --gse-ui-globalNav-panel-primary: linear-gradient(
-    127deg,
-    #3d538f 3.19%,
-    #263b73 225.06%
-  );
-  --gse-ui-globalNav-panel-secondary: linear-gradient(
-    358deg,
-    #263b73 0.16%,
-    #152550 98.45%
-  );
+  --gse-ui-globalNav-panel-primary: #19327a;
+  --gse-ui-globalNav-panel-secondary: #1a2b67;
+  --gse-ui-globalNav-panel-feedbackContainer-backgroundColor: #2143a2;
   --gse-ui-globalNav-userSettingsWindow-body-height: 400px;
   --gse-ui-globalNav-userSettingsWindow-body-width: 360px;
   --gse-ui-globalNav-userSettingsWindow-body-gap: 4px;
@@ -330,9 +345,9 @@
   --gse-ui-sidePanel-heading-lgText-fontSize: 24px;
   --gse-ui-sidePanel-heading-lgText-lineHeight: 32px;
   --gse-ui-sidePanel-heading-navBased-fontFamily: Roboto;
-  --gse-ui-sidePanel-heading-navBased-fontWeight: 700;
-  --gse-ui-sidePanel-heading-navBased-fontSize: 18px;
-  --gse-ui-sidePanel-heading-navBased-lineHeight: 27px;
+  --gse-ui-sidePanel-heading-navBased-fontWeight: 600;
+  --gse-ui-sidePanel-heading-navBased-fontSize: 14px;
+  --gse-ui-sidePanel-heading-navBased-lineHeight: 20px;
   --gse-ui-sidePanel-backgroundColor: #ffffff;
   --gse-ui-sidePanel-headerColor: #2e394c;
   --gse-ui-sidePanel-boxShadow: 0 6px 10px 4px #3d538f33, 0 2px 3px 0 #3d538f40;
