@@ -321,6 +321,7 @@ export type GuxIconIconName =
   | 'fa/puzzle-piece-regular'
   | 'fa/question-solid'
   | 'fa/ranking-star-regular'
+  | 'fa/rectangle-history-regular'
   | 'fa/rectangle-list-regular'
   | 'fa/regular-display-slash'
   | 'fa/regular-language-slash'
