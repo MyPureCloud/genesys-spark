@@ -568,6 +568,9 @@
   --gse-ui-segmentedControl-iconOnly-padding: 0 8px;
   --gse-ui-segmentedControl-focus-offset: 0;
   --gse-ui-segmentedControl-container-background: #eff3ff;
+  --gse-ui-segmentedControl-dividerLine: 12px;
+  --gse-ui-segmentedControl-dividerComponent-margin: 4px;
+  --gse-ui-segmentedControl-padding: 2px;
   --gse-ui-formFooter-page-desktop-bottomPadding: 16px;
   --gse-ui-formFooter-page-desktop-topPadding: 16px;
   --gse-ui-formFooter-page-desktop-horizontalPadding: 32px;
@@ -3021,6 +3024,9 @@
   --gse-ui-segmentedControl-iconOnly-padding: 0 8px;
   --gse-ui-segmentedControl-focus-offset: 0;
   --gse-ui-segmentedControl-container-background: #475675;
+  --gse-ui-segmentedControl-dividerLine: 12px;
+  --gse-ui-segmentedControl-dividerComponent-margin: 4px;
+  --gse-ui-segmentedControl-padding: 2px;
   --gse-ui-formFooter-page-desktop-bottomPadding: 16px;
   --gse-ui-formFooter-page-desktop-topPadding: 16px;
   --gse-ui-formFooter-page-desktop-horizontalPadding: 32px;

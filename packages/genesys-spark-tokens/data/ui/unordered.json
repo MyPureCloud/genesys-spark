@@ -878,11 +878,6 @@
       "value": "{container.2xs.padding}",
       "type": "spacing",
       "description": "Padding for the segmented control component."
-    },
-    "box_shadow": {
-      "value": "{interactive.sm.box_shadow}",
-      "type": "boxShadow",
-      "description": "For elevated active button state"
     }
   },
   "form_footer": {

@@ -1,11 +1,10 @@
 @use '~genesys-spark/dist/beta/tokens/flare/ui.scss';
-@use '~genesys-spark/dist/beta/tokens/flare/global.scss';
 
 :host {
   display: inline-flex;
   gap: global.$gse-core-spacing-4xs;
   block-size: ui.$gse-ui-segmentedControl-height;
-  padding: global.$gse-core-spacing-5xs; // TODO: Replace with token COMUI-4151
+  padding: ui.$gse-ui-segmentedControl-padding;
   background-color: ui.$gse-ui-segmentedControl-container-background;
   border: ui.$gse-ui-segmentedControl-border-width
     ui.$gse-ui-segmentedControl-border-style

@@ -1231,7 +1231,12 @@
     },
     "container": {
       "background": "#ebedf5"
-    }
+    },
+    "divider_line": "12px",
+    "divider_component": {
+      "margin": "4px"
+    },
+    "padding": "2px"
   },
   "form_footer": {
     "page": {

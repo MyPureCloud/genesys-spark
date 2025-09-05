@@ -27,7 +27,7 @@ button {
   line-height: 0;
   color: ui.$gse-ui-segmentedControl-button-default-foregroundColor;
   cursor: pointer;
-  border-radius: 4px; // TODO: Replace with token COMUI-4151
+  border-radius: ui.$gse-ui-segmentedControl-borderRadius;
 
   &.gux-icon-only {
     padding: ui.$gse-ui-segmentedControl-iconOnly-padding;
@@ -83,8 +83,8 @@ button {
 
 .gux-divider {
   inline-size: ui.$gse-ui-segmentedControl-divider-width;
-  block-size: 12px; // TODO: Replace with token COMUI-4151
-  margin-inline-start: 4px; // TODO: Replace with token COMUI-4151
+  block-size: ui.$gse-ui-segmentedControl-dividerLine;
+  margin-inline-start: ui.$gse-ui-segmentedControl-dividerComponent-margin;
   background-color: ui.$gse-ui-segmentedControl-divider-color;
-  border-radius: ui.$gse-ui-segmentedControl-divider-width; // TODO: Replace with token COMUI-4151
+  border-radius: ui.$gse-ui-segmentedControl-borderRadius;
 }
