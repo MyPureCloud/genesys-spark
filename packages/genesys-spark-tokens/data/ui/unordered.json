@@ -861,6 +861,28 @@
         "value": "{background.container.sunken.base}",
         "type": "color"
       }
+    },
+    "divider_line": {
+      "value": "{divider.action.height}",
+      "type": "sizing",
+      "description": "This token refers to the height of the divider line component within the segmented component."
+    },
+    "divider_component": {
+      "margin": {
+        "value": "{interactive.md.gap}",
+        "type": "spacing",
+        "description": "This is a token for the divider margin within the segmented control."
+      }
+    },
+    "padding": {
+      "value": "{container.2xs.padding}",
+      "type": "spacing",
+      "description": "Padding for the segmented control component."
+    },
+    "box_shadow": {
+      "value": "{interactive.sm.box_shadow}",
+      "type": "boxShadow",
+      "description": "For elevated active button state"
     }
   },
   "form_footer": {
